@@ -1,0 +1,145 @@
+info: fullstack info
+basic_info:
+  slug: fullstack
+## Texto en el banner
+banner:
+  headertext: 4Geeks Academy Miami Coding Bootcamp
+  title: Become a Full-Stack Software Developer
+  time: 16 weeks (Part-time)
+## Description del bootcamp
+description:
+  description: A Premiun Program designed to launch your web developer career
+  time: 300+ hours of lessons 3 times a week for a 16-week period.
+  menu:
+    ## Titulo de menu
+    - title: Program Detail
+      ## Detalle de esa opcion
+      detail:
+        - title: Real "Senior" Mentoring
+          text: All of our staff has 10+ years coding and holds senior possitions in Miamis tech industry.
+        - title: Top-notch Technology Stack
+          text: the world of Coding grows and changes EVERY DAY. Learn the newest and most demanded languages and frameworks in the current market. Your potential employers will LOVE IT.
+        - title: Really Part-time
+          text: This course is meant for employed professionals. We have designes the perfect method for both flexible and blended learning in an "after-hours" setting.
+    - title: Course Modules
+      detail:
+        - title: Real "Senior" Mentoring
+          text: All of our staff has 10+ years coding and holds senior possitions in Miamis tech industry.
+        - title: Top-notch Technology Stack
+          text: the world of Coding grows and changes EVERY DAY. Learn the newest and most demanded languages and frameworks in the current market. Your potential employers will LOVE IT.
+        - title: Really Part-time
+          text: This course is meant for employed professionals. We have designes the perfect method for both flexible and blended learning in an "after-hours" setting.
+    - title: Mentors
+      detail:
+        - title: Real "Senior" Mentoring
+          text: All of our staff has 10+ years coding and holds senior possitions in Miamis tech industry.
+        - title: Top-notch Technology Stack
+          text: the world of Coding grows and changes EVERY DAY. Learn the newest and most demanded languages and frameworks in the current market. Your potential employers will LOVE IT.
+        - title: Really Part-time
+          text: This course is meant for employed professionals. We have designes the perfect method for both flexible and blended learning in an "after-hours" setting.
+    - title: Skills
+      detail:
+        - title: Real "Senior" Mentoring
+          text: All of our staff has 10+ years coding and holds senior possitions in Miamis tech industry.
+        - title: Top-notch Technology Stack
+          text: the world of Coding grows and changes EVERY DAY. Learn the newest and most demanded languages and frameworks in the current market. Your potential employers will LOVE IT.
+        - title: Really Part-time
+          text: This course is meant for employed professionals. We have designes the perfect method for both flexible and blended learning in an "after-hours" setting.
+    - title: Technologies
+      detail:
+        - title: Real "Senior" Mentoring
+          text: All of our staff has 10+ years coding and holds senior possitions in Miamis tech industry.
+        - title: Top-notch Technology Stack
+          text: the world of Coding grows and changes EVERY DAY. Learn the newest and most demanded languages and frameworks in the current market. Your potential employers will LOVE IT.
+        - title: Really Part-time
+          text: This course is meant for employed professionals. We have designes the perfect method for both flexible and blended learning in an "after-hours" setting.
+    - title: Price & Financing
+      detail:
+        - title: Real "Senior" Mentoring
+          text: All of our staff has 10+ years coding and holds senior possitions in Miamis tech industry.
+        - title: Top-notch Technology Stack
+          text: the world of Coding grows and changes EVERY DAY. Learn the newest and most demanded languages and frameworks in the current market. Your potential employers will LOVE IT.
+        - title: Really Part-time
+          text: This course is meant for employed professionals. We have designes the perfect method for both flexible and blended learning in an "after-hours" setting.
+course_structure:
+  menu_structure:
+    - title: Pre-Work
+      detail:
+        - title: 2wks
+          description: Starting with basics HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page.
+          possible_projects: CSS Postcard, Minimal Instagram Version, etc.
+    - title: Learng To Code
+      detail:
+        - title: 2wks
+          description: Starting with basics HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page.
+          possible_projects: CSS Postcard, Minimal Instagram Version, etc.
+    - title: Junior Application
+      detail:
+        - title: 2wks
+          description: Starting with basics HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page.
+          possible_projects: CSS Postcard, Minimal Instagram Version, etc.
+    - title: Advanced Applications
+      detail:
+        - title: 2wks
+          description: Starting with basics HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page.
+          possible_projects: CSS Postcard, Minimal Instagram Version, etc.
+pricing:
+  description: Choose the payment plan that is most convenient for yout. No extra fees or hidden cost. EVERYTHING is included.
+  price: Pay Up-Front $6000
+  description_price: Prices will raise $1000 from January 2019. Apply now and take advantage of the current price.
+  extend_plan: "Extended Plan From $135/month"
+  extend_plan_description: "This was the most challenging part... our program was designed from the ground up aiming to make coding education universal."
+  per_month:
+    - duration: "6 mo."
+      title_description_extended: Extended Payment Plan $1000 deposit + $853 / month
+      description_extensed: Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town
+    - duration: "12 mo."
+      title_description_extended: Extended Payment Plan $1000 deposit + $853 / month
+      description_extensed: Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town
+    - duration: "24 mo."
+      title_description_extended: Extended Payment Plan $1000 deposit + $853 / month
+      description_extensed: Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town
+    - duration: "36 mo."
+      title_description_extended: Extended Payment Plan $1000 deposit + $853 / month
+      description_extensed: Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town
+    - duration: "60 mo."
+      title_description_extended: Extended Payment Plan $1000 deposit + $853 / month
+      description_extensed: Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town
+training:
+  - title: Receive training from only senior mentors
+    subtitle: Meet our team of highly trained developers, that currently hold senior positions in Miami's top tech industry companies.
+    description:
+      - trainer: Angel Lacret
+        img: ../../img/trainer/TEAMILLUSTRATION_05.png
+        description: Angel has a unique way of both explaining and teaching. He always finds the best way to explain complex concepts. With more than 12 years the experience, Angel has become the CEO of one of the biggest software companies in Venezuela. He has developed over 200 projects, and he also has more than 3 years of teaching experience
+      - trainer: Ignacio Cordoba
+        img: ../../img/trainer/TEAMILLUSTRATION_03.png
+        description: The great Nacho Nacho is not only a great developer, but an amazing team builder as well. For several years, he has been both writing and developing software as well as leading teams. Nacho is going on 12 years of experience and has now become a Master Mentor. Students are ecstactic to hace him as an Instructor because he absolutely understands what it takes to become a great developer
+      - trainer: Patricia Ayuso
+        img: ../../img/trainer/TEAMILLUSTRATION_01.png
+        description: Patricia is not the usual geek She loves to code, but she also enjoys spending time with her family and doing yoga. She is a Software Enginner (UCAB) and hes been coding for the last 8 years. Patricia has a Masters degree in Management Information Systems with special focus in Business Intelligence. She is passionate about programming and teaching, and she has joined 4Geeks Academy to help every student to become as skillful a developer as possible
+      - trainer: Marco Gomez
+        img: ../../img/trainer/TEAMILLUSTRATION_04.png
+        description: Marco is just a Geek He has been developing software since 2008, but he has also led several software teams to accomplish a veriety of challenging products. Marco is both a proven software enginner (UCV Enginner Diploma), and also an amazing teacher (he was in charge of the Academy at its inception). Every task he assumes will be completed perfectly - no matter the complexity attached
+      - trainer: James Walters
+        img: ../../img/trainer/TEAMILLUSTRATION_02.png
+        description: The new geek in the team. A commited and passionate developer. Executive lever director with 14 years of Information Technology and business management experience in the private sector with key emphasis in software development (SDLC), system implementation, vendor management, and business intelligence analytics
+skills:
+  - titleTechnology: Be prepared for the next decade
+    subtitle: Develop the following essential skills needed to become a successful Senior Developer
+    description:
+      - icon: ../../img/iconSkill/webArchitect.png
+        title: Web Architect
+        description: "When people search for Senior Developers they are really looking for Web Architects: Understand HTTP properly, Ajax APIs, POST, GET, HTTPS, Client vs Server, etc."
+      - icon: ../../img/iconSkill/dynamicWebsite.png
+        title: Dynamic Websites
+        description: HTML5 and CSS are only the top of the iceberg, todays websites use JS, React, Webpack, Python, django, Mongo and hundreds of technologies.
+      - icon: ../../img/iconSkill/dataMaster.png
+        title: Data Master
+        description: "There is more data and information every day, being able to manipulate that data its mandatory to create today's products."
+      - icon: ../../img/iconSkill/logicalThinking.png
+        title: LogicalThinker
+        description: "Think like a computer and create top-quality algorithms: Loops, conditionals, functions, variable, etc."
+      - icon: ../../img/iconSkill/researchReading.png
+        title: Search and Research
+        description: "Most of the specs are poor and lack details. Sometines the best developers are those that find examples faster than anyone. Learning to search key to success!"
