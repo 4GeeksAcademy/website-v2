@@ -1,0 +1,22 @@
+name: "Alejandro"
+last-name: "Sanchez"
+nick-name: "Alesanchezr"
+age: 34
+interests:
+  - Soccer
+  - Music
+  - Movies
+  - Travel
+coding-skills:
+  - Javascript
+  - Python
+  - React.js
+  - Gatsby.js
+  - HTML 5
+  - CSS 3
+  - Jest
+  - Pytest
+  - Storybook
+  - Flask
+  - Django
+  - Node.js
