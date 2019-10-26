@@ -1,6 +1,6 @@
 city: "Miami"
 address: "Starthub. 66 W Flaggle, #900."
-zip-code: 33130
+zip_code: "33130"
 state: "Florida"
 country: "United States"
 images:

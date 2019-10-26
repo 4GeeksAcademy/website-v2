@@ -1,6 +1,6 @@
 city: "Caracas"
 address: "Sede Principal de El Nacional."
-zip-code: ""
+zip_code: ""
 state: "Los Cortijos de Lourdes"
 country: "Venezuela"
 images:
