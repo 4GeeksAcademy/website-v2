@@ -1,8 +1,9 @@
 city: "Miami"
-address: "Starthub. 66 W Flaggle, #900."
+address: "Starthub. 66 W Flagler, #900."
 zip_code: "33130"
 state: "Florida"
 country: "United States"
+
 images:
   - ""
   - ""
