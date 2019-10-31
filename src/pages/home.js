@@ -33,7 +33,12 @@ const Label = styled.p`
 const Home = ({data}) => (
   <Layout>
     <Page>
-      <Credentials rating={data.allCredentialsDataYaml.edges[0].node.rating} googleImage={data.allCredentialsDataYaml.edges[0].node.images.googleImage} />
+      <Credentials
+        rating={data.allCredentialsDataYaml.edges[0].node.rating}
+        googleImage={data.allCredentialsDataYaml.edges[0].node.images.googleImage}
+        switchImage={data.allCredentialsDataYaml.edges[0].node.images.switchImage}
+        reportImage={data.allCredentialsDataYaml.edges[0].node.images.reportImage}
+      />
       <div className="btn btn-success">Test</div>
       <Heading>Home Page</Heading>
       <Label>Starter</Label>

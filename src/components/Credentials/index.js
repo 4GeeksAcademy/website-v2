@@ -19,23 +19,24 @@ const Credentials = (props) => (
       </div>
       <div className="row">
         <div className="col-3">
-          <div className="row">
-            <span>Rated </span>{props.rating}
+          <div className="row justify-content-center">
+            <span className="mr-3 ">Rated </span>{props.rating}
           </div>
           <div className="row">
             <div className="col-4">
-              <img src={props.googleImage} width="72" />
+              <img src={props.googleImage} width="32" />
             </div>
             <div className="col-4">
-              {props.switchImage}
+              <img src={props.switchImage} width="32" />
             </div>
             <div className="col-4">
-              {props.reportImage}
+              <img src={props.reportImage} width="32" />
             </div>
           </div>
         </div>
         <div className="col-3">
-
+          <div className="row">{props.hired}<span className="ml-3">Hired</span></div>
+          <div className="row">Students</div>
         </div>
         <div className="col-3">
 
