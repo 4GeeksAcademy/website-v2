@@ -35,6 +35,9 @@ const Home = ({data}) => (
     <Page>
       <Credentials
         rating={data.allCredentialsDataYaml.edges[0].node.rating}
+        hired={data.allCredentialsDataYaml.edges[0].node.alumni_number}
+        campuses={data.allCredentialsDataYaml.edges[0].node.hired_students}
+        alumni={data.allCredentialsDataYaml.edges[0].node.campuses}
         googleImage={data.allCredentialsDataYaml.edges[0].node.images.googleImage}
         switchImage={data.allCredentialsDataYaml.edges[0].node.images.switchImage}
         reportImage={data.allCredentialsDataYaml.edges[0].node.images.reportImage}

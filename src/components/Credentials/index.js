@@ -34,15 +34,17 @@ const Credentials = (props) => (
             </div>
           </div>
         </div>
-        <div className="col-3">
-          <div className="row">{props.hired}<span className="ml-3">Hired</span></div>
-          <div className="row">Students</div>
+        <div className="col-3 ">
+          <div className="row justify-content-center">{props.hired}<span className="ml-3">Hired</span></div>
+          <div className="row justify-content-center">Students</div>
         </div>
         <div className="col-3">
-
+          <div className="row justify-content-center">{props.alumni}</div>
+          <div className="row justify-content-center">Alumni</div>
         </div>
         <div className="col-3">
-
+          <div className="row justify-content-center">{props.campuses}</div>
+          <div className="row justify-content-center">Campuses</div>
         </div>
       </div>
     </div>
@@ -56,4 +58,7 @@ Credentials.propTypes = {
   googleImage: PropTypes.string,
   switchImage: PropTypes.string,
   reportImage: PropTypes.string,
+  alumni: PropTypes.string,
+  campuses: PropTypes.string,
+  hired: PropTypes.string,
 };
