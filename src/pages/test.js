@@ -43,16 +43,21 @@ const Test = ({data}) => (
 
 export const my = graphql`
     query myQuery{
-        allCredentialsDataYaml {
-            edges {
-              node {
-                rating
-                hired_students
-                alumni_number
-                campuses
-              }
+      allCredentialsDataYaml {
+        edges {
+          node {
+            rating
+            hired_students
+            alumni_number
+            campuses
+            images {
+              googleImage
+              switchImage
+              reportImage
             }
           }
+        }
+      }
     }
 `;
 export default Test;

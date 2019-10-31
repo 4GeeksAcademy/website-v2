@@ -33,7 +33,7 @@ const Label = styled.p`
 const Home = ({data}) => (
   <Layout>
     <Page>
-      <Credentials test={data.allCredentialsDataYaml.edges[0].node.rating} />
+      <Credentials rating={data.allCredentialsDataYaml.edges[0].node.rating} googleImage={data.allCredentialsDataYaml.edges[0].node.images.googleImage} />
       <div className="btn btn-success">Test</div>
       <Heading>Home Page</Heading>
       <Label>Starter</Label>
@@ -50,6 +50,11 @@ query myQueryy{
           hired_students
           alumni_number
           campuses
+          images{
+            googleImage
+            switchImage
+            reportImage
+          }
         }
       }
     }
