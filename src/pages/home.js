@@ -30,18 +30,18 @@ const Label = styled.p`
   text-transform: uppercase;
 `;
 
-const Home = (props) => (
+const Home = ({data}) => (
   <Layout>
     <Page>
-      <Credentials test="paolo" />
-
+      <Credentials test={data.allCredentialsDataYaml.edges[0].node.rating} />
+      <div className="btn btn-success">Test</div>
       <Heading>Home Page</Heading>
       <Label>Starter</Label>
     </Page>
   </Layout>
 );
 
-export const myQuery = graphql`
+export const myQuer = graphql`
 query myQueryy{
   allCredentialsDataYaml {
       edges {

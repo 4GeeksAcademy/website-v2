@@ -29,19 +29,19 @@ const Label = styled.p`
 `;
 
 const Test = ({data}) => (
-    <Layout>
-        <Page>
-            <Image />
-            <Heading>Test Page</Heading>
-            <Label>Starter</Label>
-            {data.allCredentialsDataYaml.edges.map((item) => (
-                <div key={item.node.id}>{item.node.rating}</div>
-            ))}
-        </Page>
-    </Layout>
+  <Layout>
+    <Page>
+      <Image />
+      <Heading>Test Page</Heading>
+      <Label>Starter</Label>
+      {data.allCredentialsDataYaml.edges.map((item) => (
+        <div key={item.node.id}>{item.node.rating}</div>
+      ))}
+    </Page>
+  </Layout>
 );
 
-export const myQueryTest = graphql`
+export const my = graphql`
     query myQuery{
         allCredentialsDataYaml {
             edges {

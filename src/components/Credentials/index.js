@@ -14,21 +14,7 @@ const Credentials = (props) => (
   </>
 );
 
-export const myQueryTest = graphql`
-    query myQueryT{
-        allMarkdownRemark {
-            edges {
-              node {
-                frontmatter {
-                  title
-                  name
-                  info
-                }
-              }
-            }
-          }
-    }
-`;
+
 export default Credentials;
 Credentials.propTypes = {
   test: PropTypes.string.isRequired,
