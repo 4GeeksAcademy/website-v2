@@ -52,7 +52,6 @@ const Credentials = (props) => (
 );
 
 
-export default Credentials;
 Credentials.propTypes = {
   rating: PropTypes.string.isRequired,
   googleImage: PropTypes.string,
@@ -62,3 +61,4 @@ Credentials.propTypes = {
   campuses: PropTypes.string,
   hired: PropTypes.string,
 };
+export default Credentials;

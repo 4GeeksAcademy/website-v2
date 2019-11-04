@@ -4,6 +4,7 @@ import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
 import Image from '../components/Image';
 import Credentials from '../components/Credentials';
+import Alumni from '../components/Alumni';
 
 
 const Page = styled.div`
@@ -34,24 +35,52 @@ const Home = ({data}) => (
   <Layout>
     <Page>
       <Credentials
-        rating={data.allCredentialsDataYaml.edges[0].node.rating}
-        hired={data.allCredentialsDataYaml.edges[0].node.alumni_number}
-        campuses={data.allCredentialsDataYaml.edges[0].node.hired_students}
-        alumni={data.allCredentialsDataYaml.edges[0].node.campuses}
-        googleImage={data.allCredentialsDataYaml.edges[0].node.images.googleImage}
-        switchImage={data.allCredentialsDataYaml.edges[0].node.images.switchImage}
-        reportImage={data.allCredentialsDataYaml.edges[0].node.images.reportImage}
+        rating={data.credentials.edges[0].node.rating}
+        hired={data.credentials.edges[0].node.alumni_number}
+        campuses={data.credentials.edges[0].node.hired_students}
+        alumni={data.credentials.edges[0].node.campuses}
+        googleImage={data.credentials.edges[0].node.images.googleImage}
+        switchImage={data.credentials.edges[0].node.images.switchImage}
+        reportImage={data.credentials.edges[0].node.images.reportImage}
       />
-      <div className="btn btn-success">Test</div>
+      <Alumni
+        name={data.alumni.edges[0].node.name}
+        content={data.alumni.edges[0].node.content}
+        alumniImage={data.alumni.edges[0].node.image}
+
+      />
+      <Credentials
+        rating={data.credentials.edges[0].node.rating}
+        hired={data.credentials.edges[0].node.alumni_number}
+        campuses={data.credentials.edges[0].node.hired_students}
+        alumni={data.credentials.edges[0].node.campuses}
+        googleImage={data.credentials.edges[0].node.images.googleImage}
+        switchImage={data.credentials.edges[0].node.images.switchImage}
+        reportImage={data.credentials.edges[0].node.images.reportImage}
+      />
       <Heading>Home Page</Heading>
       <Label>Starter</Label>
     </Page>
   </Layout>
 );
 
+// export const alumniQuery = graphql`
+//   query myAlumniQuery{
+// allAlumniYaml{
+//   edges{
+//     node{
+//       name
+//       image
+//       content
+//     }
+//   }
+// }
+//   }
+// `
+
 export const myQuer = graphql`
 query myQueryy{
-  allCredentialsDataYaml {
+  credentials: allCredentialsDataYaml {
       edges {
         node {
           rating
@@ -66,6 +95,15 @@ query myQueryy{
         }
       }
     }
+  alumni:   allAlumniYaml{
+    edges{
+      node{
+        name
+        image
+        content
+      }
+    }
+  }
 }
 `
 export default Home;
