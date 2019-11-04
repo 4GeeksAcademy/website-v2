@@ -5,6 +5,7 @@ import Layout from '../global/Layout';
 import Image from '../components/Image';
 import Credentials from '../components/Credentials';
 import Alumni from '../components/Alumni';
+import TestCom from '../components/TestCom';
 
 
 const Page = styled.div`
@@ -61,6 +62,7 @@ const Home = ({data}) => (
         switchImage={data.credentials.edges[0].node.images.switchImage}
         reportImage={data.credentials.edges[0].node.images.reportImage}
       />
+      <TestCom />
       <Heading>Home Page</Heading>
       <Label>Starter</Label>
     </Page>
