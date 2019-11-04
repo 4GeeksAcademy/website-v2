@@ -47,6 +47,9 @@ const Home = ({data}) => (
         name={data.alumni.edges[0].node.name}
         content={data.alumni.edges[0].node.content}
         alumniImage={data.alumni.edges[0].node.image}
+        nextName={data.alumni.edges[1].node.name}
+        nextTitle={data.alumni.edges[1].node.title}
+
 
       />
       <Credentials
@@ -101,6 +104,7 @@ query myQueryy{
         name
         image
         content
+        title
       }
     }
   }
