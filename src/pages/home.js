@@ -6,6 +6,7 @@ import Image from '../components/Image';
 import Credentials from '../components/Credentials';
 import Alumni from '../components/Alumni';
 import TestCom from '../components/TestCom';
+import Mentors from '../components/Mentors';
 
 
 const Page = styled.div`
@@ -107,6 +108,13 @@ query myQueryy{
         image
         content
         title
+      }
+    }
+  }
+  mentors: allTeachersYaml{
+    edges{
+      node{
+        name
       }
     }
   }
