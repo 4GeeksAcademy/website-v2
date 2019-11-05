@@ -36,15 +36,6 @@ const Label = styled.p`
 const Home = ({data}) => (
   <Layout>
     <Page>
-      <Credentials
-        rating={data.credentials.edges[0].node.rating}
-        hired={data.credentials.edges[0].node.alumni_number}
-        campuses={data.credentials.edges[0].node.hired_students}
-        alumni={data.credentials.edges[0].node.campuses}
-        googleImage={data.credentials.edges[0].node.images.googleImage}
-        switchImage={data.credentials.edges[0].node.images.switchImage}
-        reportImage={data.credentials.edges[0].node.images.reportImage}
-      />
       <Alumni
         name={data.alumni.edges[0].node.name}
         content={data.alumni.edges[0].node.content}
@@ -57,6 +48,17 @@ const Home = ({data}) => (
       <Mentors
 
         mentorsArray={data.mentors.edges}
+        column={3}
+
+      />
+      <Credentials
+        rating={data.credentials.edges[0].node.rating}
+        hired={data.credentials.edges[0].node.alumni_number}
+        campuses={data.credentials.edges[0].node.hired_students}
+        alumni={data.credentials.edges[0].node.campuses}
+        googleImage={data.credentials.edges[0].node.images.googleImage}
+        switchImage={data.credentials.edges[0].node.images.switchImage}
+        reportImage={data.credentials.edges[0].node.images.reportImage}
       />
       <Credentials
         rating={data.credentials.edges[0].node.rating}
@@ -122,6 +124,7 @@ query myQueryy{
         image
         last_name
         nick_name
+        coding_skills
       }
     }
   }

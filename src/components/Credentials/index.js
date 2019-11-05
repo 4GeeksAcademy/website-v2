@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import {graphql} from 'gatsby';
 import PropTypes from 'prop-types';
 import '../../assets/css/bootstrap.min.css';
 
-
+// const {useCounter, setCounter} = useState(props.hired)
 
 const Credentials = (props) => (
   <>
