@@ -11,10 +11,10 @@ const Mentors = props => (
                 {props.mentorsArray.map((item, index) => {
                     return (
                         <div className="col-md-3" key={index}>
-                            <div className="row">{item.node.name}</div>
                             <div className="row"><img src={item.node.image} width="200" /></div>
-                            <div className="row">{item.node.last - name}</div>
-                            <div className="row">{item.node.nick - name}</div>
+                            <div className="row">{item.node.name}<span className="ml-2">{item.node.last_name}</span></div>
+
+                            <div className="row">{item.node.nick_name}</div>
                             <div className="row">{item.node.name}</div>
                         </div>)
                 })}

@@ -120,6 +120,8 @@ query myQueryy{
       node{
         name
         image
+        last_name
+        nick_name
       }
     }
   }
