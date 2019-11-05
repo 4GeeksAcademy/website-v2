@@ -1,17 +1,18 @@
 name: "Colby"
-last-name: "Taylor"
-nick-name: "Spicy"
+last_name: "Taylor"
+nick_name: "Spicy"
 github: ""
 linkdin: ""
 twitter: ""
 website: ""
+image: "https://www.4geeksacademy.co/wp-content/uploads/2017/09/Jose-Cirigliano-1.jpg"
 age: 35
 interests:
   - Spicy Sauces
   - Extra Spicy Sauces
   - Movies
   - Travel
-coding-skills:
+coding_skills:
   - Javascript
   - Python
   - React.js

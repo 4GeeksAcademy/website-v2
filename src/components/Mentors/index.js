@@ -8,7 +8,16 @@ const Mentors = props => (
         <div className="container">Mentors</div>
         <div className="container">
             <div className="row">
-                {props.mentorsArray.map((item, index) => <div key={index}>{item.node.name}</div>)}
+                {props.mentorsArray.map((item, index) => {
+                    return (
+                        <div className="col-md-3" key={index}>
+                            <div className="row">{item.node.name}</div>
+                            <div className="row"><img src={item.node.image} width="200" /></div>
+                            <div className="row">{item.node.last - name}</div>
+                            <div className="row">{item.node.nick - name}</div>
+                            <div className="row">{item.node.name}</div>
+                        </div>)
+                })}
 
             </div>
 

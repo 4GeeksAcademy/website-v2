@@ -119,6 +119,7 @@ query myQueryy{
     edges{
       node{
         name
+        image
       }
     }
   }
