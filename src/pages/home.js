@@ -54,6 +54,10 @@ const Home = ({data}) => (
 
 
       />
+      <Mentors
+
+        mentorsArray={data.mentors.edges}
+      />
       <Credentials
         rating={data.credentials.edges[0].node.rating}
         hired={data.credentials.edges[0].node.alumni_number}

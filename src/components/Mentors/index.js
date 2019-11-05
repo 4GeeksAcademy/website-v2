@@ -8,15 +8,7 @@ const Mentors = props => (
         <div className="container">Mentors</div>
         <div className="container">
             <div className="row">
-                {props.mentorsArray.map((item, index) => {
-                    return (
-                        <div key={index}>{item.name}</div>
-
-                    );
-                })
-
-
-                }
+                {props.mentorsArray.map((item, index) => <div key={index}>{item.node.name}</div>)}
 
             </div>
 
@@ -26,7 +18,7 @@ const Mentors = props => (
     </>
 );
 Mentors.propTypes = {
-    name: PropTypes.string.isRequired,
+    mentorsArray: PropTypes.array,
 
 };
 export default Mentors;
