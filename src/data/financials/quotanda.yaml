@@ -1,2 +1,10 @@
 name: "Quotanda"
-months: [12, 24, 36, 48, 60]
+options:
+  - months: "6"
+    payment: "$1000 deposit + $1023.29 / month"
+  - months: "12"
+    payment: "$1000 deposit + $533 / month"
+  - months: "24"
+    payment: "$1000 deposit + $288.03 / month"
+logo: "https://accessventure.imgix.net/wp-content/uploads/2018/09/Quotanda-HD-Logo-1280x400.png"
+description: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
