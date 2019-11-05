@@ -1,2 +1,8 @@
 name: "Climb"
-months: [12, 24, 36, 48, 60]
+options:
+  - months: "42"
+    payment: "No deposit + $204.63 / month"
+  - months: "60"
+    payment: "No deposit + $152.55 / month"
+logo: "https://growthx.com/wp-content/uploads/2017/02/Climb_Blog2.jpg"
+description: "Thanks to our partnership with Climb we have managed to create a new special payment plant starting at $135/mo"
