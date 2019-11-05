@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {StaticQuery, graphql} from 'gatsby';
 const PricesAndPayment = () => (
     <StaticQuery
         query={
@@ -23,7 +23,10 @@ const PricesAndPayment = () => (
             `
         }
         render={data => (
-            <div>{data.financial.edges[1].node.name}</div>
+            data.financial.edges.map((item, index) => {
+                return (<div key={index}>{item.node.name}</div>)
+            })
+
         )}
     />
 );

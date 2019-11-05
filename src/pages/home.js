@@ -7,6 +7,7 @@ import Credentials from '../components/Credentials';
 import Alumni from '../components/Alumni';
 import TestCom from '../components/TestCom';
 import Mentors from '../components/Mentors';
+import PricesAndPayment from '../components/PricesAndPayment';
 
 
 const Page = styled.div`
@@ -69,6 +70,7 @@ const Home = ({data}) => (
         switchImage={data.credentials.edges[0].node.images.switchImage}
         reportImage={data.credentials.edges[0].node.images.reportImage}
       />
+      <PricesAndPayment />
       <TestCom />
       <Heading>Home Page</Heading>
       <Label>Starter</Label>
