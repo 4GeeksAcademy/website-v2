@@ -139,11 +139,21 @@ export default function TestCom () {
               <Button onClick={handleReset}>Reset</Button>
             </div>
           ) : (
-              <div>
-                <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
-                <Typography className={classes.instructions}>{getStepContents(activeStep)}</Typography>
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-4">
+                    <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+                  </div>
+                  <div className="col-md-4">
+                  </div>
+                  <div className="col-md-4">
+
+                    <Typography className={classes.instructions}>{getStepContents(activeStep)}</Typography>
+
+                  </div>
+                </div>
                 <div>
-                  <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
+                  {/* <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
                     Back
               </Button>
                   <Button
@@ -153,8 +163,8 @@ export default function TestCom () {
                     className={classes.button}
                   >
                     Next
-              </Button>
-                  {activeStep !== steps.length &&
+              </Button> */}
+                  {/* {activeStep !== steps.length &&
                     (completed[activeStep] ? (
                       <Typography variant="caption" className={classes.completed}>
                         Step {activeStep + 1} already completed
@@ -163,7 +173,7 @@ export default function TestCom () {
                         <Button variant="contained" color="primary" onClick={handleComplete}>
                           {completedSteps() === totalSteps() - 1 ? 'Finish' : 'Complete Step'}
                         </Button>
-                      ))}
+                      ))} */}
                 </div>
               </div>
             )}
