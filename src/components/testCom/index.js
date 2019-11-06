@@ -65,6 +65,24 @@ function getStepContents (step) {
       return 'Unknown step';
   }
 }
+function getStepLogo (step) {
+  switch (step) {
+    case 0:
+      return <img src='https://accessventure.imgix.net/wp-content/uploads/2018/09/Quotanda-HD-Logo-1280x400.png' width="256" />;
+    case 1:
+      return <img src='https://accessventure.imgix.net/wp-content/uploads/2018/09/Quotanda-HD-Logo-1280x400.png' width="256" />;
+    case 2:
+      return <img src='https://accessventure.imgix.net/wp-content/uploads/2018/09/Quotanda-HD-Logo-1280x400.png' width="256" />;
+    case 3:
+      return <img src='https://s3-us-west-2.amazonaws.com/supermoney-reviews/businesses/5/skills-fund_toe.png' width="256" />;
+    case 4:
+      return <img src='https://www.4geeksacademy.co/wp-content/themes/the-fastest/assets/img/skillfund-climb.png' width="256" />;
+    case 5:
+      return <img src='https://growthx.com/wp-content/uploads/2017/02/Climb_Blog2.jpg' width="256" />;
+    default:
+      return 'Unknown step';
+  }
+}
 
 export default function TestCom () {
   const classes = useStyles();
@@ -145,6 +163,7 @@ export default function TestCom () {
                     <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
                   </div>
                   <div className="col-md-4">
+                    <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
                   </div>
                   <div className="col-md-4">
 
