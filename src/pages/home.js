@@ -5,7 +5,7 @@ import Layout from '../global/Layout';
 import Image from '../components/Image';
 import Credentials from '../components/Credentials';
 import Alumni from '../components/Alumni';
-import TestCom from '../components/TestCom';
+import TestCom from '../components/testCom';
 import Mentors from '../components/Mentors';
 import PricesAndPayment from '../components/PricesAndPayment';
 
