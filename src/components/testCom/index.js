@@ -7,6 +7,7 @@ import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import '../../assets/css/style.css';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,17 +26,41 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps () {
-  return ['6', '12', '24', '36', '42', '60'];
+  return ['6 months', '12 months', '24 months', '36 months', '42 months', '60 months'];
 }
 
 function getStepContent (step) {
   switch (step) {
     case 0:
-      return 'Step 1: Select ';
+      return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town ';
     case 1:
-      return 'Step 2: What is an ad group anyways?';
+      return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town';
     case 2:
-      return 'Step 3: This is the bit I really care about!';
+      return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town';
+    case 3:
+      return 'Thanks to our partnership with Skills Fund we have managed to create a new special payment plant starting at $135/mo';
+    case 4:
+      return 'Thanks to our partnership with Climb we have managed to create a new special payment plant starting at $135/mo';
+    case 5:
+      return 'We have partened with Skills Fund and Climb in order to offer you the best payment options in Town';
+    default:
+      return 'Unknown step';
+  }
+}
+function getStepContents (step) {
+  switch (step) {
+    case 0:
+      return '$1,000 deposit + $1,023.29 / month';
+    case 1:
+      return '$1,000 deposit + $533 / month';
+    case 2:
+      return '$1,000 deposit + $288.03 / month';
+    case 3:
+      return 'NO deposit + $231.44 / month';
+    case 4:
+      return 'NO deposit + $204.63 / month';
+    case 5:
+      return 'NO deposit + $152.55 / month';
     default:
       return 'Unknown step';
   }
@@ -94,52 +119,55 @@ export default function TestCom () {
   };
 
   return (
-    <div className={classes.root}>
-      <Stepper nonLinear activeStep={activeStep}>
-        {steps.map((label, index) => (
-          <Step key={label}>
-            <StepButton onClick={handleStep(index)} completed={completed[index]}>
-              {label}
-            </StepButton>
-          </Step>
-        ))}
-      </Stepper>
-      <div>
-        {allStepsCompleted() ? (
-          <div>
-            <Typography className={classes.instructions}>
-              All steps completed - you&apos;re finished
-            </Typography>
-            <Button onClick={handleReset}>Reset</Button>
-          </div>
-        ) : (
+    <div className="container">
+      <div className={classes.root}>
+        <Stepper nonLinear activeStep={activeStep}>
+          {steps.map((label, index) => (
+            <Step key={label}>
+              <StepButton onClick={handleStep(index)} completed={completed[index]}>
+                {label}
+              </StepButton>
+            </Step>
+          ))}
+        </Stepper>
+        <div>
+          {allStepsCompleted() ? (
             <div>
-              <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
-              <div>
-                <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
-                  Back
-              </Button>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={handleNext}
-                  className={classes.button}
-                >
-                  Next
-              </Button>
-                {activeStep !== steps.length &&
-                  (completed[activeStep] ? (
-                    <Typography variant="caption" className={classes.completed}>
-                      Step {activeStep + 1} already completed
-                  </Typography>
-                  ) : (
-                      <Button variant="contained" color="primary" onClick={handleComplete}>
-                        {completedSteps() === totalSteps() - 1 ? 'Finish' : 'Complete Step'}
-                      </Button>
-                    ))}
-              </div>
+              <Typography className={classes.instructions}>
+                All steps completed - you&apos;re finished
+            </Typography>
+              <Button onClick={handleReset}>Reset</Button>
             </div>
-          )}
+          ) : (
+              <div>
+                <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+                <Typography className={classes.instructions}>{getStepContents(activeStep)}</Typography>
+                <div>
+                  <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
+                    Back
+              </Button>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={handleNext}
+                    className={classes.button}
+                  >
+                    Next
+              </Button>
+                  {activeStep !== steps.length &&
+                    (completed[activeStep] ? (
+                      <Typography variant="caption" className={classes.completed}>
+                        Step {activeStep + 1} already completed
+                  </Typography>
+                    ) : (
+                        <Button variant="contained" color="primary" onClick={handleComplete}>
+                          {completedSteps() === totalSteps() - 1 ? 'Finish' : 'Complete Step'}
+                        </Button>
+                      ))}
+                </div>
+              </div>
+            )}
+        </div>
       </div>
     </div>
   );
