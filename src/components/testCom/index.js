@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps () {
-  return ['6', 'Create an ad group', 'Create an ad'];
+  return ['6', '12', '24', '36', '42', '60'];
 }
 
 function getStepContent (step) {
