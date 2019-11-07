@@ -72,8 +72,8 @@ const Home = ({data}) => (
         reportImage={data.credentials.edges[0].node.images.reportImage}
       />
       <PricesAndPayment />
-      <TestCom />
-      <Test />
+      {/* <TestCom />
+      <Test /> */}
       <Heading>Home Page</Heading>
       <Label>Starter</Label>
     </Page>

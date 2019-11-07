@@ -166,7 +166,10 @@ export default () => {
     //     <h1>{data.alumni.edges[1].node.name}</h1>
     // </header>
     <div className="container">
-      <div className={classes.root}>
+      <div className="row justify-content-center mb-3"><h1 >Pricing and Financing</h1></div>
+      <div className="row justify-content-center"><h5 >Prices can vary depending on the location.</h5></div>
+      <div className="row justify-content-center mb-5"><h5 >Currently revewing prices for: Miami</h5></div>
+      <div className="{classes.root}">
         <Stepper nonLinear activeStep={activeStep}>
           {steps.map((label, index) => (
             <Step key={label}>
@@ -186,6 +189,7 @@ export default () => {
             </div>
           ) : (
               <div className="container mt-3">
+
                 <div className="row col-img">
                   <div className="col-md-4 bg-light rounded">
                     <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
