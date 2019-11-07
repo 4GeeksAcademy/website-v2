@@ -86,6 +86,16 @@ export default () => {
             }
           }
         }
+        cred: allCredentialsYaml{
+            edges{
+                node{
+                    name
+                    options
+                    logo
+                    description
+                }
+            }
+        }
       }
     `)
     return (
