@@ -103,21 +103,23 @@ export default () => {
     }}
     `)
     function getStepContent (step) {
-        let temp = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
-        console.log("Q:", temp)
+        let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
+        let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
+        let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
+        console.log("Q:", tempQ)
         switch (step) {
             case 0:
-                return `${data.cred.edges[temp].node.description}`
+                return `${data.cred.edges[tempQ].node.description}`
             case 1:
-                return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town';
+                return `${data.cred.edges[tempQ].node.description}`
             case 2:
-                return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town';
+                return `${data.cred.edges[tempQ].node.description}`
             case 3:
-                return 'Thanks to our partnership with Skills Fund we have managed to create a new special payment plant starting at $135/mo';
+                return `${data.cred.edges[tempS].node.description}`
             case 4:
-                return 'Thanks to our partnership with Climb we have managed to create a new special payment plant starting at $135/mo';
+                return `${data.cred.edges[tempC].node.description}`
             case 5:
-                return 'We have partened with Skills Fund and Climb in order to offer you the best payment options in Town';
+                return `${data.cred.edges[tempC].node.description}`
             default:
                 return 'Unknown step';
         }
