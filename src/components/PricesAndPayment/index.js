@@ -128,17 +128,17 @@ export default () => {
 
     switch (step) {
       case 0:
-        return <img src={data.cred.edges[tempQ].node.logo} width="256" />;
+        return <img src={data.cred.edges[tempQ].node.logo} width="256" height="100%" />;
       case 1:
-        return <img src={data.cred.edges[tempQ].node.logo} width="256" />;
+        return <img src={data.cred.edges[tempQ].node.logo} width="256" height="100%" />;
       case 2:
-        return <img src={data.cred.edges[tempQ].node.logo} width="256" />;
+        return <img src={data.cred.edges[tempQ].node.logo} width="256" height="100%" />;
       case 3:
-        return <img src={data.cred.edges[tempS].node.logo} width="256" />;
+        return <img src={data.cred.edges[tempS].node.logo} width="256" height="100%" />;
       case 4:
-        return <img src={data.cred.edges[tempC].node.logo} width="256" />;
+        return <img src={data.cred.edges[tempC].node.logo} width="256" height="100%" />;
       case 5:
-        return <img src={data.cred.edges[tempC].node.logo} width="256" />;
+        return <img src={data.cred.edges[tempC].node.logo} width="256" height="100%" />;
       default:
         return 'Unknown step';
     }
@@ -185,15 +185,15 @@ export default () => {
               <Button onClick={handleReset}>Reset</Button>
             </div>
           ) : (
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-4">
+              <div className="container mt-3">
+                <div className="row col-img">
+                  <div className="col-md-4 bg-light rounded">
                     <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-4 ">
                     <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-4 bg-light rounded">
 
                     <Typography className={classes.instructions}>{getStepContents(activeStep)}</Typography>
 
