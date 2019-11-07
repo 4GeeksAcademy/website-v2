@@ -60,7 +60,7 @@ export default () => {
         setCompleted({});
     };
     const data = useStaticQuery(graphql`
-    query myQueryTest{
+    query myQueryTestTest{
         credentials: allCredentialsDataYaml {
             edges {
               node {
