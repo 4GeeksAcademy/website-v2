@@ -6,6 +6,7 @@ import Image from '../components/Image';
 import Credentials from '../components/Credentials';
 import Alumni from '../components/Alumni';
 import TestCom from '../components/testCom';
+import Test from '../components/Test';
 import Mentors from '../components/Mentors';
 import PricesAndPayment from '../components/PricesAndPayment';
 
@@ -72,6 +73,7 @@ const Home = ({data}) => (
       />
       <PricesAndPayment />
       <TestCom />
+      <Test />
       <Heading>Home Page</Heading>
       <Label>Starter</Label>
     </Page>
