@@ -102,11 +102,11 @@ export default () => {
         }
     }}
     `)
+    let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
+    let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
+    let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
+    console.log("Q:", tempQ)
     function getStepContent (step) {
-        let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
-        let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
-        let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
-        console.log("Q:", tempQ)
         switch (step) {
             case 0:
                 return `${data.cred.edges[tempQ].node.description}`
@@ -120,6 +120,43 @@ export default () => {
                 return `${data.cred.edges[tempC].node.description}`
             case 5:
                 return `${data.cred.edges[tempC].node.description}`
+            default:
+                return 'Unknown step';
+        }
+    }
+    function getStepLogo (step) {
+
+        switch (step) {
+            case 0:
+                return <img src={data.cred.edges[tempQ].node.logo} width="256" />;
+            case 1:
+                return <img src={data.cred.edges[tempQ].node.logo} width="256" />;
+            case 2:
+                return <img src={data.cred.edges[tempQ].node.logo} width="256" />;
+            case 3:
+                return <img src={data.cred.edges[tempS].node.logo} width="256" />;
+            case 4:
+                return <img src={data.cred.edges[tempC].node.logo} width="256" />;
+            case 5:
+                return <img src={data.cred.edges[tempC].node.logo} width="256" />;
+            default:
+                return 'Unknown step';
+        }
+    }
+    function getStepContents (step) {
+        switch (step) {
+            case 0:
+                return `${data.cred.edges[tempQ].node.options[0].payment}`
+            case 1:
+                return `${data.cred.edges[tempQ].node.options[1].payment}`
+            case 2:
+                return `${data.cred.edges[tempQ].node.options[2].payment}`
+            case 3:
+                return `${data.cred.edges[tempS].node.options[0].payment}`
+            case 4:
+                return `${data.cred.edges[tempC].node.options[0].payment}`
+            case 5:
+                return `${data.cred.edges[tempC].node.options[1].payment}`
             default:
                 return 'Unknown step';
         }
@@ -214,42 +251,8 @@ function getSteps () {
 }
 
 
-function getStepContents (step) {
-    switch (step) {
-        case 0:
-            return '$1,000 deposit + $1,023.29 / month';
-        case 1:
-            return '$1,000 deposit + $533 / month';
-        case 2:
-            return '$1,000 deposit + $288.03 / month';
-        case 3:
-            return 'NO deposit + $231.44 / month';
-        case 4:
-            return 'NO deposit + $204.63 / month';
-        case 5:
-            return 'NO deposit + $152.55 / month';
-        default:
-            return 'Unknown step';
-    }
-}
-function getStepLogo (step) {
-    switch (step) {
-        case 0:
-            return <img src='https://accessventure.imgix.net/wp-content/uploads/2018/09/Quotanda-HD-Logo-1280x400.png' width="256" />;
-        case 1:
-            return <img src='https://accessventure.imgix.net/wp-content/uploads/2018/09/Quotanda-HD-Logo-1280x400.png' width="256" />;
-        case 2:
-            return <img src='https://accessventure.imgix.net/wp-content/uploads/2018/09/Quotanda-HD-Logo-1280x400.png' width="256" />;
-        case 3:
-            return <img src='https://s3-us-west-2.amazonaws.com/supermoney-reviews/businesses/5/skills-fund_toe.png' width="256" />;
-        case 4:
-            return <img src='https://www.4geeksacademy.co/wp-content/themes/the-fastest/assets/img/skillfund-climb.png' width="256" />;
-        case 5:
-            return <img src='https://growthx.com/wp-content/uploads/2017/02/Climb_Blog2.jpg' width="256" />;
-        default:
-            return 'Unknown step';
-    }
-}
+
+
 
 // export default function TestCom () {
 //   const classes = useStyles();
