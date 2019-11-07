@@ -75,7 +75,7 @@ export default () => {
                 }
               }
             }
-          }
+        }
         alumni:   allAlumniYaml{
           edges{
             node{
@@ -86,18 +86,42 @@ export default () => {
             }
           }
         }
-        cred: allCredentialsYaml{
-            edges{
-                node{
-                    name
-                    options
-                    logo
-                    description
+        
+      
+      cred: allFinancialsYaml{
+        edges{
+            node{
+                name
+                options{
+                    months
+                    payment
                 }
+                logo
+                description
             }
         }
-      }
+    }}
     `)
+    function getStepContent (step) {
+        let temp = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
+        console.log("Q:", temp)
+        switch (step) {
+            case 0:
+                return `${data.cred.edges[temp].node.description}`
+            case 1:
+                return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town';
+            case 2:
+                return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town';
+            case 3:
+                return 'Thanks to our partnership with Skills Fund we have managed to create a new special payment plant starting at $135/mo';
+            case 4:
+                return 'Thanks to our partnership with Climb we have managed to create a new special payment plant starting at $135/mo';
+            case 5:
+                return 'We have partened with Skills Fund and Climb in order to offer you the best payment options in Town';
+            default:
+                return 'Unknown step';
+        }
+    }
     return (
         // <header>
         //     <h1>{data.alumni.edges[1].node.name}</h1>
@@ -187,24 +211,7 @@ function getSteps () {
     return ['6 months', '12 months', '24 months', '36 months', '42 months', '60 months'];
 }
 
-function getStepContent (step) {
-    switch (step) {
-        case 0:
-            return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town ';
-        case 1:
-            return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town';
-        case 2:
-            return 'Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town';
-        case 3:
-            return 'Thanks to our partnership with Skills Fund we have managed to create a new special payment plant starting at $135/mo';
-        case 4:
-            return 'Thanks to our partnership with Climb we have managed to create a new special payment plant starting at $135/mo';
-        case 5:
-            return 'We have partened with Skills Fund and Climb in order to offer you the best payment options in Town';
-        default:
-            return 'Unknown step';
-    }
-}
+
 function getStepContents (step) {
     switch (step) {
         case 0:
