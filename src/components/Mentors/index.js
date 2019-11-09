@@ -11,7 +11,7 @@ const Round = styled.div`
 
 const Mentors = props => (
     <>
-        <div className="container">Mentors</div>
+        <div className="container">Mentor</div>
         <div className="container">
             <div className="row ">
                 {props.mentorsArray.map((item, index) => {
