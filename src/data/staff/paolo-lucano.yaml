@@ -1,0 +1,27 @@
+name: "Paolo"
+last_name: "Lucano"
+nick_name: "Pluco"
+github: ""
+linkdin: ""
+twitter: ""
+website: ""
+image: "https://www.4geeksacademy.co/wp-content/uploads/2017/09/Jose-Cirigliano-1.jpg"
+age: 42
+interests:
+  - Soccer
+  - Music
+  - Movies
+  - Travel
+coding_skills:
+  - Javascript
+  - Python
+  - React.js
+  - Gatsby.js
+  - HTML 5
+  - CSS 3
+  - Jest
+  - Pytest
+  - Storybook
+  - Flask
+  - Django
+  - Node.js
