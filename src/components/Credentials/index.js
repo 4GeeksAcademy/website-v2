@@ -8,7 +8,8 @@ import '../../assets/css/bootstrap.min.css';
 // const {useCounter, setCounter} = useState(props.hired)
 
 const Credentials = (props) => {
-  const {countUp} = useCountUp({end: props.hired});
+  // const {countUp} = useCountUp({end: props.hired});
+  const {countUp} = useCountUp({end: props.hired})
   // const {countUp, start, pauseResume, reset, update} = useCountUp({
   //   start: 0,
   //   end: 550,
