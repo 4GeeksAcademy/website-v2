@@ -5,10 +5,13 @@ import {graphql} from 'gatsby';
 import PropTypes from 'prop-types';
 import '../../assets/css/bootstrap.min.css';
 import '../../assets/css/style.css'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faCoffee} from '@fortawesome/free-solid-svg-icons'
 
 // const {useCounter, setCounter} = useState(props.hired)
 
 const Credentials = (props) => {
+  const element = <FontAwesomeIcon icon={faCoffee} size="3x" />
   // const {countUp} = useCountUp({end: props.hired});
   const {countUp} = useCountUp({end: props.hired})
   // const {countUp, start, pauseResume, reset, update} = useCountUp({
@@ -36,28 +39,25 @@ const Credentials = (props) => {
           </div>
         </div>
         <div className="row no-gutter">
-          <div className="col-md border rounded credentials">
-            <div className="row justify-content-center">
-              <div>{countUp}</div>
-              <span className="mr-3 ">Rated </span>{props.rating}
+          <div className="col-md border rounded credentials mr-2">
+            <div className="row justify-content-center cred-row">
+              <div className="icons">{element}</div>
+
             </div>
-            <div className="row ">
-              <div className="col-4">
-                <img src={props.googleImage} width="32" />
-              </div>
-              <div className="col-4">
-                <img src={props.switchImage} width="32" />
-              </div>
-              <div className="col-4">
-                <img src={props.reportImage} width="32" />
-              </div>
+            <div className="row justify-content-center cred-row">
+              <div><h1>{props.rating}</h1></div>
+
+            </div>
+            <div className="row justify-content-center cred-row">
+
+              <div className="mr-3 "><h1>Ratings</h1> </div>
             </div>
           </div>
-          <div className="col-md border rounded credentials">
+          <div className="col-md border rounded credentials mr-2">
             <div className="row justify-content-center">+{countUp}<span className="ml-3">Hired</span></div>
             <div className="row justify-content-center">Students</div>
           </div>
-          <div className="col-md border rounded credentials">
+          <div className="col-md border rounded credentials mr-2">
             <div className="row justify-content-center">{props.alumni}</div>
             <div className="row justify-content-center">Alumni</div>
           </div>
