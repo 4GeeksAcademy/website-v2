@@ -29,7 +29,7 @@ const Credentials = (props) => {
         <div key={item.node.id}>{item.node.frontmatter.name}</div>
       ))}
     </div> */}
-      <div className="container">
+      <div className="container ">
         <div className="row">
           <div className="col">
             <h2>Credentials</h2>
@@ -41,7 +41,7 @@ const Credentials = (props) => {
               <div>{countUp}</div>
               <span className="mr-3 ">Rated </span>{props.rating}
             </div>
-            <div className="row">
+            <div className="row ">
               <div className="col-4">
                 <img src={props.googleImage} width="32" />
               </div>
@@ -53,15 +53,15 @@ const Credentials = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-3 ">
+          <div className="col-3 border rounded credentials">
             <div className="row justify-content-center">+{countUp}<span className="ml-3">Hired</span></div>
             <div className="row justify-content-center">Students</div>
           </div>
-          <div className="col-3">
+          <div className="col-3 border rounded credentials">
             <div className="row justify-content-center">{props.alumni}</div>
             <div className="row justify-content-center">Alumni</div>
           </div>
-          <div className="col-3">
+          <div className="col-3 border rounded credentials">
             <div className="row justify-content-center">{props.campuses}</div>
             <div className="row justify-content-center">Campuses</div>
           </div>
