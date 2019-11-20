@@ -6,12 +6,15 @@ import PropTypes from 'prop-types';
 import '../../assets/css/bootstrap.min.css';
 import '../../assets/css/style.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faCoffee} from '@fortawesome/free-solid-svg-icons'
+import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/free-solid-svg-icons'
 
 // const {useCounter, setCounter} = useState(props.hired)
 
 const Credentials = (props) => {
-  const element = <FontAwesomeIcon icon={faCoffee} size="3x" />
+  const graduation = <FontAwesomeIcon icon={faGraduationCap} size="3x" />
+  const rating = <FontAwesomeIcon icon={faTrophy} size="3x" />
+  const campuses = <FontAwesomeIcon icon={faBookOpen} size="3x" />
+  const hired = <FontAwesomeIcon icon={faHandshake} size="3x" />
   // const {countUp} = useCountUp({end: props.hired});
   const {countUp} = useCountUp({end: props.hired})
   // const {countUp, start, pauseResume, reset, update} = useCountUp({
@@ -32,7 +35,7 @@ const Credentials = (props) => {
         <div key={item.node.id}>{item.node.frontmatter.name}</div>
       ))}
     </div> */}
-      <div className="container ">
+      <div className="container mb-5">
         <div className="row no-gutter">
           <div className="col">
             <h2>Credentials</h2>
@@ -41,29 +44,62 @@ const Credentials = (props) => {
         <div className="row no-gutter">
           <div className="col-md border rounded credentials mr-2">
             <div className="row justify-content-center cred-row">
-              <div className="icons">{element}</div>
+              <div className="icons">{rating}</div>
 
             </div>
             <div className="row justify-content-center cred-row">
-              <div><h1>{props.rating}</h1></div>
+              <div><h1 className="mb-0">{props.rating}</h1></div>
 
             </div>
             <div className="row justify-content-center cred-row">
 
-              <div className="mr-3 "><h1>Ratings</h1> </div>
+              <div className="mr-3 "><h1 className="mb-0">Ratings</h1> </div>
             </div>
           </div>
           <div className="col-md border rounded credentials mr-2">
-            <div className="row justify-content-center">+{countUp}<span className="ml-3">Hired</span></div>
-            <div className="row justify-content-center">Students</div>
+
+            <div className="row justify-content-center cred-row">
+              <div className="icons">{graduation}</div>
+
+            </div>
+            <div className="row justify-content-center cred-row">
+              <div><h1 className="mb-0">+{countUp}</h1></div>
+
+            </div>
+            <div className="row justify-content-center cred-row">
+
+              <div className="mr-3 "><h1 className="mb-0">Alumni</h1> </div>
+            </div>
           </div>
           <div className="col-md border rounded credentials mr-2">
-            <div className="row justify-content-center">{props.alumni}</div>
-            <div className="row justify-content-center">Alumni</div>
+            <div className="row justify-content-center cred-row">
+              <div className="icons">{campuses}</div>
+
+            </div>
+            <div className="row justify-content-center cred-row">
+              <div><h1 className="mb-0">{props.alumni}</h1></div>
+
+            </div>
+            <div className="row justify-content-center cred-row">
+
+              <div className="mr-3 "><h1 className="mb-0">Campuses</h1> </div>
+            </div>
+
           </div>
           <div className="col-md border rounded credentials">
-            <div className="row justify-content-center">{props.campuses}</div>
-            <div className="row justify-content-center">Campuses</div>
+            <div className="row justify-content-center cred-row">
+              <div className="icons">{hired}</div>
+
+            </div>
+            <div className="row justify-content-center cred-row">
+              <div><h1 className="mb-0">{props.campuses}</h1></div>
+
+            </div>
+            <div className="row justify-content-center cred-row">
+
+              <div className="mr-3 "><h1 className="mb-0">Campuses</h1> </div>
+            </div>
+
           </div>
         </div>
       </div>
