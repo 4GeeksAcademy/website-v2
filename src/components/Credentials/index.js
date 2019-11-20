@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {graphql} from 'gatsby';
 import PropTypes from 'prop-types';
 import '../../assets/css/bootstrap.min.css';
+import '../../assets/css/style.css'
 
 // const {useCounter, setCounter} = useState(props.hired)
 
@@ -35,7 +36,7 @@ const Credentials = (props) => {
           </div>
         </div>
         <div className="row">
-          <div className="col-3">
+          <div className="col-3 border rounded credentials">
             <div className="row justify-content-center">
               <div>{countUp}</div>
               <span className="mr-3 ">Rated </span>{props.rating}
