@@ -30,12 +30,12 @@ const Credentials = (props) => {
       ))}
     </div> */}
       <div className="container ">
-        <div className="row">
+        <div className="row no-gutter">
           <div className="col">
             <h2>Credentials</h2>
           </div>
         </div>
-        <div className="row">
+        <div className="row no-gutter">
           <div className="col-md border rounded credentials">
             <div className="row justify-content-center">
               <div>{countUp}</div>
