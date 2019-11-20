@@ -36,7 +36,7 @@ const Credentials = (props) => {
           </div>
         </div>
         <div className="row">
-          <div className="col-3 border rounded credentials">
+          <div className="col-md border rounded credentials">
             <div className="row justify-content-center">
               <div>{countUp}</div>
               <span className="mr-3 ">Rated </span>{props.rating}
@@ -53,15 +53,15 @@ const Credentials = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-3 border rounded credentials">
+          <div className="col-md border rounded credentials">
             <div className="row justify-content-center">+{countUp}<span className="ml-3">Hired</span></div>
             <div className="row justify-content-center">Students</div>
           </div>
-          <div className="col-3 border rounded credentials">
+          <div className="col-md border rounded credentials">
             <div className="row justify-content-center">{props.alumni}</div>
             <div className="row justify-content-center">Alumni</div>
           </div>
-          <div className="col-3 border rounded credentials">
+          <div className="col-md border rounded credentials">
             <div className="row justify-content-center">{props.campuses}</div>
             <div className="row justify-content-center">Campuses</div>
           </div>
