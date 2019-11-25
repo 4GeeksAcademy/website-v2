@@ -8,6 +8,7 @@ import Alumni from '../components/Alumni';
 import TestCom from '../components/testCom';
 import Test from '../components/Test';
 import Mentors from '../components/Mentors';
+import Footer from '../components/Footer'
 import PricesAndPayment from '../components/PricesAndPayment';
 
 
@@ -71,6 +72,7 @@ const Home = ({data}) => (
         switchImage={data.credentials.edges[0].node.images.switchImage}
         reportImage={data.credentials.edges[0].node.images.reportImage}
       /> */}
+      <Footer />
       <PricesAndPayment />
       {/* <TestCom />
       <Test /> */}
