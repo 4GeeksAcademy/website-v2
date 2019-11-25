@@ -38,7 +38,7 @@ const Credentials = (props) => {
       <div className="container mb-5">
         <div className="row no-gutter">
           <div className="col">
-            <h2>Credential</h2>
+            <h2>Credentials</h2>
           </div>
         </div>
         <div className="row no-gutter">
