@@ -4,11 +4,14 @@ import {Link} from 'gatsby';
 
 const Footer = () => (
 
-    <div>
-        <Link>
-            <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="" />
-        </Link>
-    </div>
+    <>
+        <div className="jumbotron jumbotron-fluid">
+            <div className="container">
+                <h1 className="display-4">Fluid jumbotron</h1>
+                <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+    </>
 
 );
 
