@@ -3,13 +3,21 @@ module.exports = {
     title: 'Gatsby Storybook Starter',
     menuLinks: [
       {
-        name: 'home',
-        link: '/'
+        name: 'WHY 4GEEKS',
+        link: '/why'
       },
       {
-        name: 'blog',
-        link: '/blog'
-      }
+        name: 'THE PROGRAM',
+        link: '/program'
+      },
+      {
+        name: 'PRICING',
+        link: '/pricing'
+      },
+      {
+        name: 'FOR COMPANIES',
+        link: '/partners'
+      },
     ]
   },
   plugins: [
