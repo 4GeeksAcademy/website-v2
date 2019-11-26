@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import Navbar from '../components/Navbar'
 import {StaticQuery, graphql} from 'gatsby';
 
 import GlobalStyle from './GlobalStyle';
@@ -30,6 +31,7 @@ const Layout = ({children}) => (
             content="default"
           />
         </Helmet>
+        <Navbar menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
         <GlobalStyle />
         <>
           {children}
