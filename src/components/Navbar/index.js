@@ -13,7 +13,7 @@ const Navbar = ({siteTitle, menuLinks}) => (
     >
         <div
             style={{
-                background: "rebeccapurple",
+                background: "white",
                 marginBottom: "1.45rem",
             }}
         >
@@ -22,7 +22,7 @@ const Navbar = ({siteTitle, menuLinks}) => (
                     margin: "0 auto",
                     maxWidth: 960,
                     // padding: "1.45rem 1.0875rem",
-                    display: "flex",
+                    // display: "flex",
                     justifyItems: "space-between",
                     alignItems: "center",
                 }}
@@ -31,7 +31,7 @@ const Navbar = ({siteTitle, menuLinks}) => (
                     <Link
                         to="/"
                         style={{
-                            color: "white",
+                            color: "black",
                             textDecoration: "none",
                         }}
                     >
@@ -45,11 +45,12 @@ const Navbar = ({siteTitle, menuLinks}) => (
                                 <li
                                     key={link.name}
                                     style={{
+
                                         listStyleType: `none`,
                                         padding: `1rem`,
                                     }}
                                 >
-                                    <Link style={{color: `white`}} to={link.link}>
+                                    <Link style={{color: `black`}} to={link.link}>
                                         {link.name}
                                     </Link>
                                 </li>
@@ -59,7 +60,7 @@ const Navbar = ({siteTitle, menuLinks}) => (
                 </div>
             </div>
         </div>
-    </header>
+    </header >
 )
 Navbar.propTypes = {
     siteTitle: PropTypes.string,
