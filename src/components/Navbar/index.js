@@ -35,7 +35,7 @@ const Navbar = ({siteTitle, menuLinks}) => (
                             textDecoration: "none",
                         }}
                     >
-                        {siteTitle}
+                        {/* {siteTitle} */}
                     </Link>
                 </h1>
                 <div>
