@@ -3,6 +3,10 @@ module.exports = {
     title: 'Gatsby Storybook Starter',
     menuLinks: [
       {
+        name: 'HOME',
+        link: '/home'
+      },
+      {
         name: 'WHY 4GEEKS',
         link: '/why'
       },
