@@ -20,7 +20,7 @@ const Navbar = ({siteTitle, menuLinks}) => (
             <div
                 style={{
                     margin: "0 auto",
-                    maxWidth: 960,
+                    // width: "100%",
                     // padding: "1.45rem 1.0875rem",
                     // display: "flex",
                     justifyItems: "space-between",
@@ -50,7 +50,7 @@ const Navbar = ({siteTitle, menuLinks}) => (
                                         padding: `1rem`,
                                     }}
                                 >
-                                    <Link style={{color: `black`}} to={link.link}>
+                                    <Link style={{color: `black`, fontSize: 14, textAlign: `center`}} to={link.link}>
                                         {link.name}
                                     </Link>
                                 </li>
