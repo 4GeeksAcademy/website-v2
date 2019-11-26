@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'gatsby';
+import PropTypes from 'prop-types';
 
 const Navbar = ({siteTitle, menuLinks}) => (
 
