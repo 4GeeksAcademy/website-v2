@@ -9,6 +9,7 @@ import TestCom from '../components/testCom';
 import Test from '../components/Test';
 import Mentors from '../components/Mentors';
 import Footer from '../components/Footer'
+import Spring from '../components/spring'
 import PricesAndPayment from '../components/PricesAndPayment';
 
 
@@ -83,6 +84,7 @@ const Home = ({data}) => (
       /> */}
       <Footer />
       <PricesAndPayment />
+      <Spring />
       {/* <TestCom />
       <Test /> */}
       <Heading>Home Page</Heading>

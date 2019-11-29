@@ -22,3 +22,15 @@ div h5{
 .cred-row{
     height: 33%;
 }
+.script-bf-box {
+    width: 100px;
+    height: 300px;
+    background: black;
+    margin: 5px;
+    will-change: transform;
+  }
+  
+  .script-bf-box:hover {
+    background: hotpink;
+  }
+  
