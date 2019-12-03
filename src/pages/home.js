@@ -9,7 +9,7 @@ import TestCom from '../components/testCom';
 import Test from '../components/Test';
 import Mentors from '../components/Mentors';
 import Footer from '../components/Footer'
-import Spring from '../components/spring'
+import {Spring} from '../components/spring'
 import PricesAndPayment from '../components/PricesAndPayment';
 
 

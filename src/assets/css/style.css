@@ -33,4 +33,14 @@ div h5{
   .script-bf-box:hover {
     background: hotpink;
   }
-  
+  .test{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: black;
+    background: #f0f0f0;
+  }
