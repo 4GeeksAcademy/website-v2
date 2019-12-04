@@ -1,9 +1,9 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
-import GeeksVsOthers from '.';
+import Why4Geeks from '.';
 
-storiesOf('GeeksVsOthers', module)
+storiesOf('Why4Geeks', module)
     .add('Default', () => (
-        <GeeksVsOthers />
+        <Why4Geeks />
     ));
