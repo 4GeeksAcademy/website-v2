@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {useCountUp} from 'react-countup';
 import styled from 'styled-components';
-import {graphql} from 'gatsby';
+import {useStaticQuery, graphql} from 'gatsby';
 import PropTypes from 'prop-types';
+import {useSpring, animated} from 'react-spring'
+import range from 'lodash-es/range'
 import '../../assets/css/bootstrap.min.css';
 import '../../assets/css/style.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -10,7 +12,60 @@ import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/f
 
 // const {useCounter, setCounter} = useState(props.hired)
 
+const items = range(4);
+const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
 const Credentials = (props) => {
+  const data = useStaticQuery(graphql`
+    query myQueryCred{
+        credentials: allCredentialsDataYaml {
+            edges {
+              node {
+                rating
+                hired_students
+                alumni_number
+                campuses
+                images{
+                  googleImage
+                  switchImage
+                  reportImage
+                }
+              }
+            }
+        }
+        alumni:   allAlumniYaml{
+          edges{
+            node{
+              name
+              image
+              content
+              title
+            }
+          }
+        }
+        
+      
+      cred: allFinancialsYaml{
+        edges{
+            node{
+                name
+                options{
+                    months
+                    payment
+                }
+                logo
+                description
+            }
+        }
+    }}
+    `)
+  const {radians} = useSpring({
+    to: async next => {
+      while (1) await next({radians: 2 * Math.PI});
+    },
+    from: {radians: 0},
+    config: {duration: 3500},
+    reset: true
+  });
   const graduation = <FontAwesomeIcon icon={faGraduationCap} size="3x" />
   const rating = <FontAwesomeIcon icon={faTrophy} size="3x" />
   const campuses = <FontAwesomeIcon icon={faBookOpen} size="3x" />
@@ -34,8 +89,30 @@ const Credentials = (props) => {
       {data.allMarkdownRemark.edges.map((item) => (
         <div key={item.node.id}>{item.node.frontmatter.name}</div>
       ))}
-    </div> */}
-      <div className="container mb-5">
+    </div> */}{data.credentials.edges.map(i => (
+
+        <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
+          <div className="container test">
+            <div className="col-md border rounded credentials mr-2">
+              <div className="row justify-content-center cred-row">
+                <div className="icons">{i.node.rating}</div>
+
+              </div>
+              <div className="row justify-content-center cred-row">
+                <div><h1 className="mb-0">{i.node.rating}</h1></div>
+
+              </div>
+              <div className="row justify-content-center cred-row">
+
+                <div className="mr-3 "><h1 className="mb-0">Ratings</h1> </div>
+              </div>
+            </div>
+
+          </div>
+        </animated.div>
+      ))
+      }
+      {/* <div className="container mb-5">
         <div className="row no-gutter">
           <div className="col">
             <h2>Credentials</h2>
@@ -102,7 +179,7 @@ const Credentials = (props) => {
 
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

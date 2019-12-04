@@ -73,7 +73,16 @@ const Home = ({data}) => (
         switchImage={data.credentials.edges[0].node.images.switchImage}
         reportImage={data.credentials.edges[0].node.images.reportImage}
       /> */}
-      {/* <Credentials
+      <Footer />
+      {/* <PricesAndPayment />
+      <Spring /> */}
+
+
+      {/* <TestCom />
+      <Test /> */}
+      <Heading>Home Page</Heading>
+      <Label>Starter</Label>
+      <Credentials
         rating={data.credentials.edges[0].node.rating}
         hired={data.credentials.edges[0].node.alumni_number}
         campuses={data.credentials.edges[0].node.hired_students}
@@ -81,14 +90,7 @@ const Home = ({data}) => (
         googleImage={data.credentials.edges[0].node.images.googleImage}
         switchImage={data.credentials.edges[0].node.images.switchImage}
         reportImage={data.credentials.edges[0].node.images.reportImage}
-      /> */}
-      <Footer />
-      <PricesAndPayment />
-      <Spring />
-      {/* <TestCom />
-      <Test /> */}
-      <Heading>Home Page</Heading>
-      <Label>Starter</Label>
+      />
     </Page>
   </Layout>
 );
