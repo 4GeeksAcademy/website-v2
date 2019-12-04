@@ -4,6 +4,8 @@ import {useStaticQuery, graphql} from 'gatsby';
 import {useSpring, animated} from 'react-spring'
 import range from 'lodash-es/range'
 import '../../assets/css/style.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/free-solid-svg-icons'
 
 const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
 
@@ -18,7 +20,10 @@ export default () => {
     //     config: {duration: 3500},
     //     reset: true
     // });
-
+    const graduation = <FontAwesomeIcon icon={faGraduationCap} size="3x" />
+    const rating = <FontAwesomeIcon icon={faTrophy} size="3x" />
+    const campuses = <FontAwesomeIcon icon={faBookOpen} size="3x" />
+    const hired = <FontAwesomeIcon icon={faHandshake} size="3x" />
 
     const data = useStaticQuery(graphql`
       query myQueryTest2{
@@ -65,8 +70,10 @@ export default () => {
 
                 {data.credentials.edges.map(i => (
                     <div className="col-md-3">
-                        <div className="card-credential p-3 text-center">
-                            {i.node.credential}
+                        <div className="card-credential p-3 text-center test">
+                            <div className="icons mb-3">{graduation}</div>
+                            <div><h3>{i.node.credential}</h3></div>
+                            <div><h3>{i.node.cred_value}</h3></div>
                         </div>
                     </div>
                     // <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
