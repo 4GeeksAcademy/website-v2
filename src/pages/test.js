@@ -34,30 +34,23 @@ const Test = ({data}) => (
       <Image />
       <Heading>Test Page</Heading>
       <Label>Starter</Label>
-      {data.allCredentialsDataYaml.edges.map((item) => (
+      {/* {data.allCredentialsDataYaml.edges.map((item) => (
         <div key={item.node.id}>{item.node.rating}</div>
-      ))}
+      ))} */}
     </Page>
   </Layout>
 );
 
-export const my = graphql`
-    query myQuery{
-      allCredentialsDataYaml {
-        edges {
-          node {
-            rating
-            hired_students
-            alumni_number
-            campuses
-            images {
-              googleImage
-              switchImage
-              reportImage
-            }
-          }
-        }
-      }
-    }
-`;
+// export const my = graphql`
+//     query myQuery{
+//       allCredentialsDataYaml {
+//         edges {
+//           node {
+//             credentials
+//             }
+//           }
+//         }
+//       }
+//     }
+// `;
 export default Test;

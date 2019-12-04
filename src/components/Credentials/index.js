@@ -20,15 +20,7 @@ const Credentials = (props) => {
         credentials: allCredentialsDataYaml {
             edges {
               node {
-                rating
-                hired_students
-                alumni_number
-                campuses
-                images{
-                  googleImage
-                  switchImage
-                  reportImage
-                }
+                credential
               }
             }
         }

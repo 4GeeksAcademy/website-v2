@@ -10,7 +10,9 @@ import Test from '../components/Test';
 import Mentors from '../components/Mentors';
 import Footer from '../components/Footer'
 import {Spring} from '../components/spring'
+
 import PricesAndPayment from '../components/PricesAndPayment';
+import QueryTest from '../components/QueryTest';
 
 
 const Page = styled.div`
@@ -48,6 +50,8 @@ const Home = ({data}) => (
         <p>It uses utility classNamees for typography and spacing to space content out within the larger container.</p>
         <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
+      <QueryTest />
+      {/* <Spring /> */}
 
       {/* <Alumni
         name={data.alumni.edges[0].node.name}
@@ -74,15 +78,14 @@ const Home = ({data}) => (
         reportImage={data.credentials.edges[0].node.images.reportImage}
       /> */}
       <Footer />
-      {/* <PricesAndPayment />
-      <Spring /> */}
+      {/* <PricesAndPayment /> */}
 
 
       {/* <TestCom />
       <Test /> */}
       <Heading>Home Page</Heading>
       <Label>Starter</Label>
-      <Credentials
+      {/* <Credentials
         rating={data.credentials.edges[0].node.rating}
         hired={data.credentials.edges[0].node.alumni_number}
         campuses={data.credentials.edges[0].node.hired_students}
@@ -90,7 +93,7 @@ const Home = ({data}) => (
         googleImage={data.credentials.edges[0].node.images.googleImage}
         switchImage={data.credentials.edges[0].node.images.switchImage}
         reportImage={data.credentials.edges[0].node.images.reportImage}
-      />
+      /> */}
     </Page>
   </Layout>
 );
@@ -111,21 +114,7 @@ const Home = ({data}) => (
 
 export const myQuer = graphql`
 query myQueryy{
-  credentials: allCredentialsDataYaml {
-      edges {
-        node {
-          rating
-          hired_students
-          alumni_number
-          campuses
-          images{
-            googleImage
-            switchImage
-            reportImage
-          }
-        }
-      }
-    }
+ 
   alumni:   allAlumniYaml{
     edges{
       node{

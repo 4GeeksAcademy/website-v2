@@ -1,14 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useStaticQuery, graphql} from 'gatsby';
+import {useSpring, animated} from 'react-spring'
+import range from 'lodash-es/range'
 
-// const QueryTest = () => (
-//     <div>Query Test</div>
-// );
+const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
 
-// export default QueryTest;
 export default () => {
-    const classes = useStyles();
+    // const classes = useStyles();
 
+    const {radians} = useSpring({
+        to: async next => {
+            while (1) await next({radians: 2 * Math.PI});
+        },
+        from: {radians: 0},
+        config: {duration: 3500},
+        reset: true
+    });
 
 
     const data = useStaticQuery(graphql`
@@ -16,15 +24,8 @@ export default () => {
           credentials: allCredentialsDataYaml {
               edges {
                 node {
-                  rating
-                  hired_students
-                  alumni_number
-                  campuses
-                  images{
-                    googleImage
-                    switchImage
-                    reportImage
-                  }
+                  credential
+                  cred_value
                 }
               }
           }
@@ -57,29 +58,27 @@ export default () => {
 
 
     return (
-        // <header>
-        //     <h1>{data.alumni.edges[1].node.name}</h1>
-        // </header>
-        <div className="container">
-            Query Test
-      </div>
+
+        <div className="container ">
+            {data.credentials.edges.map(i => (
+                <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
+                    <div className="card">
+
+                        <div className="card-body">
+                            <h5 className="card-title">{i.node.credentials}</h5>
+                            <p className="card-text">
+                                {i.node.cred_value}
+                            </p>
+
+                        </div>
+                    </div>
+                </animated.div>
+            ))}
+
+        </div>
     )
 }
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        width: '90%',
-    },
-    button: {
-        marginRight: theme.spacing(1),
-    },
-    completed: {
-        display: 'inline-block',
-    },
-    instructions: {
-        marginTop: theme.spacing(1),
-        marginBottom: theme.spacing(1),
-    },
-}));
+
 
 
