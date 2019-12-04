@@ -61,24 +61,28 @@ export default () => {
     return (
 
         <div className="container ">
-            {data.credentials.edges.map(i => (
-                <div className="card">
-                    {i.node.credential}
-                </div>
-                // <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
-                //     <div className="card">
+            <div className="row my-4">
 
-                //         <div className="card-body">
-                //             <h5 className="card-title">{i.node.credentials}</h5>
-                //             <p className="card-text">
-                //                 {i.node.cred_value}
-                //             </p>
+                {data.credentials.edges.map(i => (
+                    <div className="col-md-3">
+                        <div className="card-credential p-3 text-center">
+                            {i.node.credential}
+                        </div>
+                    </div>
+                    // <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
+                    //     <div className="card">
 
-                //         </div>
-                //     </div>
-                // </animated.div>
-            ))}
+                    //         <div className="card-body">
+                    //             <h5 className="card-title">{i.node.credentials}</h5>
+                    //             <p className="card-text">
+                    //                 {i.node.cred_value}
+                    //             </p>
 
+                    //         </div>
+                    //     </div>
+                    // </animated.div>
+                ))}
+            </div>
         </div>
     )
 }

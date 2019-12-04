@@ -44,3 +44,9 @@ div h5{
     color: black;
     background: #f0f0f0;
   }
+  .card-credential{
+      width: 220px;
+      height: 270px;
+      box-shadow: 10px 10px 30px grey;
+      border-radius: 1.25rem;
+  }
