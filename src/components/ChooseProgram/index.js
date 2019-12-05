@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const GeeksVsOthers = () => (
-    <div>GeeksVsOthers</div>
+const ChooseProgram = () => (
+    <div>ChooseProgram</div>
 );
 
-export default GeeksVsOthers;
+export default ChooseProgram;
