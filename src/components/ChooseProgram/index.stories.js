@@ -1,9 +1,9 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
-import Why4Geeks from '.';
+import ChooseProgram from '.';
 
-storiesOf('Why4Geeks', module)
+storiesOf('ChooseProgram', module)
     .add('Default', () => (
-        <Why4Geeks />
+        <ChooseProgram />
     ));
