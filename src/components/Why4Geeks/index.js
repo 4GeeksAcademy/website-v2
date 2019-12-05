@@ -27,7 +27,8 @@ export default () => {
   return (
 
     <div className="container ">
-      <div className="row my-4">
+      <div className="row justify-content-center why-title">WHY 4 GEEKS ?</div>
+      <div className="row my-4 justify-content-center">
 
         {data.why.edges.map(i => (
           <div className="col-md-3">
