@@ -50,6 +50,12 @@ div h5{
       box-shadow: 10px 10px 30px grey;
       border-radius: 1.25rem;
   }
+  .card-why4 img{
+    /* width: 220px; */
+    /* height: 270px; */
+    /* box-shadow: 10px 10px 30px grey; */
+    border-radius: 1.25rem;
+}
   .test:hover{
       transform:translateY(-20px);
       background: #dedede;

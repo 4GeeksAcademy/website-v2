@@ -13,6 +13,7 @@ import {Spring} from '../components/spring'
 
 import PricesAndPayment from '../components/PricesAndPayment';
 import QueryTest from '../components/QueryTest';
+import Why4Geeks from '../components/Why4Geeks';
 
 
 const Page = styled.div`
@@ -51,6 +52,7 @@ const Home = ({data}) => (
         <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
       <QueryTest />
+      <Why4Geeks />
       {/* <Spring /> */}
 
       {/* <Alumni
