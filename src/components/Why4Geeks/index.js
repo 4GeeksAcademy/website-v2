@@ -30,13 +30,15 @@ export default () => {
         {data.why.edges.map(i => (
           <div className="col-md-3">
 
-            <div className="card-why4 p-3 text-center ">
+            <div className="card-why4 p-3 text-center row">
               {/* <div className="icons mb-3">{graduation}</div> */}
               <img src={i.node.image} width="100%" height="150" />
             </div>
-            <div className=" p-3 text-center ">
+            <div className=" p-3 text-center row">
               {/* <div className="icons mb-3">{graduation}</div> */}
               <div><h3>{i.node.title}</h3></div>
+            </div>
+            <div className=" p-3 text-center row">
               <div><h6>{i.node.description}</h6></div>
             </div>
           </div>
