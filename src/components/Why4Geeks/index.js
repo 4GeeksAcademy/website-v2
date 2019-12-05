@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/free-solid-svg-icons'
 
 export default () => {
 
@@ -21,7 +23,7 @@ export default () => {
       
       `)
 
-
+  const graduation = <FontAwesomeIcon icon={faGraduationCap} size="2x" />
   return (
 
     <div className="container ">
@@ -35,8 +37,9 @@ export default () => {
               <img src={i.node.image} width="100%" height="150" />
             </div>
             <div className=" p-3 text-center row">
-              {/* <div className="icons mb-3">{graduation}</div> */}
-              <div><h3>{i.node.title}</h3></div>
+              <div className="col-md-2 icons">{graduation}</div>
+              <div className="col-md-10">{i.node.title}</div>
+
             </div>
             <div className=" p-3 text-center row">
               <div><h6>{i.node.description}</h6></div>
