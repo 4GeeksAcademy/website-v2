@@ -28,6 +28,10 @@ export default () => {
 
     <div className="container ">
       <div className="row justify-content-center why-title">WHY 4 GEEKS ?</div>
+      <div className="row justify-content-center why-title">
+
+
+      </div>
       <div className="row my-4 justify-content-center">
 
         {data.why.edges.map(i => (
