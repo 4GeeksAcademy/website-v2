@@ -60,3 +60,13 @@ div h5{
       transform:translateY(-20px);
       background: #dedede;
   }
+  .text-why{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .text-why-p{
+      color: #bebebe;
+      font-weight: light;
+      font-size: 16px;
+  }

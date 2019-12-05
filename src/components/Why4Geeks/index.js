@@ -36,13 +36,13 @@ export default () => {
               {/* <div className="icons mb-3">{graduation}</div> */}
               <img src={i.node.image} width="100%" height="150" />
             </div>
-            <div className=" p-3 text-center row">
-              <div className="col-md-2 icons">{graduation}</div>
-              <div className="col-md-10">{i.node.title}</div>
+            <div className=" px-3 row">
+              <div className="col-md-3 icons">{graduation}</div>
+              <div className="col-md-9 text-why pr-0">{i.node.title}</div>
 
             </div>
-            <div className=" p-3 text-center row">
-              <div><h6>{i.node.description}</h6></div>
+            <div className=" text-center row">
+              <div className="text-why-p">{i.node.description}</div>
             </div>
           </div>
           // <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
