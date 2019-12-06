@@ -45,16 +45,20 @@ div h5{
     background: #f0f0f0;
   } */
   .card-credential{
-      width: 220px;
-      height: 270px;
+      width: 195px;
+      height: 250px;
       box-shadow: 10px 10px 30px grey;
       border-radius: 1.25rem;
+      background: white;
   }
   .card-why4 img{
     /* width: 220px; */
     /* height: 270px; */
     /* box-shadow: 10px 10px 30px grey; */
     border-radius: 1.25rem;
+}
+.prova .test:nth-child(odd){
+  transform:translateY(50px);
 }
   .test:hover{
       transform:translateY(-20px);
@@ -109,3 +113,6 @@ div h5{
   .cred-container{
     background: #bebebe
   } */
+  .jumbo-container{
+    height:500px;
+  }

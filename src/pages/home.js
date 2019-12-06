@@ -43,12 +43,12 @@ const Label = styled.p`
 
 const Home = ({data}) => (
   <Layout>
-    <Page>
+    {/* <Page> */}
 
 
-      {/* <Spring /> */}
+    {/* <Spring /> */}
 
-      {/* <Alumni
+    {/* <Alumni
         name={data.alumni.edges[0].node.name}
         content={data.alumni.edges[0].node.content}
         alumniImage={data.alumni.edges[0].node.image}
@@ -72,15 +72,15 @@ const Home = ({data}) => (
         switchImage={data.credentials.edges[0].node.images.switchImage}
         reportImage={data.credentials.edges[0].node.images.reportImage}
       /> */}
-      {/* <Footer /> */}
-      {/* <PricesAndPayment /> */}
+    {/* <Footer /> */}
+    {/* <PricesAndPayment /> */}
 
 
-      {/* <TestCom />
+    {/* <TestCom />
       <Test /> */}
-      <Heading>Home Page</Heading>
-      <Label>Starter</Label>
-      {/* <Credentials
+    {/* <Heading>Home Page</Heading>
+      <Label>Starter</Label> */}
+    {/* <Credentials
         rating={data.credentials.edges[0].node.rating}
         hired={data.credentials.edges[0].node.alumni_number}
         campuses={data.credentials.edges[0].node.hired_students}
@@ -89,8 +89,8 @@ const Home = ({data}) => (
         switchImage={data.credentials.edges[0].node.images.switchImage}
         reportImage={data.credentials.edges[0].node.images.reportImage}
       /> */}
-    </Page>
-    <div className="jumbotron bg-white">
+    {/* </Page> */}
+    <div className="jumbotron bg-white jumbo-container">
       <div class="container">
         <div className="row">
           <div className="col-md-6 px-5">
