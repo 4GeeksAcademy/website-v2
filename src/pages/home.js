@@ -106,8 +106,8 @@ const Home = ({data}) => (
             <div className="row jumbo-paragraph px-5 mt-3">
               Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
               </div>
-            <div className="row jumbo-button px-5 mt-3">
-              <a className="btn btn-primary btn-md rounded-pill jumbo-button" href="#" role="button">CHOOSE YOUR PROGRAM </a>
+            <div className="row px-5 mt-3">
+              <a className="btn text-white btn-md rounded-pill jumbo-button" href="#" role="button">CHOOSE YOUR PROGRAM </a>
 
             </div>
           </div>
