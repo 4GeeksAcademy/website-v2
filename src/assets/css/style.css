@@ -84,7 +84,7 @@ div h5{
       font-weight: light;
       font-size: 16px;
   }
-  .why-title{
+  .why-title, .program-title{
     font-weight: 800;
     font-size: 2rem;;
   }
@@ -126,3 +126,9 @@ div h5{
   .jumbo-container{
     height:500px;
   }
+  .program-container{
+    height: 1000px;
+    background: #0097CE;
+    border-radius: 1.25rem 0px 0px 0px;
+  }
+  
