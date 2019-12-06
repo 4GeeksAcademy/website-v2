@@ -65,7 +65,7 @@ export default () => {
 
   return (
 
-    <div className="container ">
+    <div className="container cred-container">
       <div className="row my-4">
 
         {data.credentials.edges.map((i, index) => {

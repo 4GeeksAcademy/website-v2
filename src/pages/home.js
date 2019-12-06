@@ -10,7 +10,7 @@ import Test from '../components/Test';
 import Mentors from '../components/Mentors';
 import Footer from '../components/Footer'
 import {Spring} from '../components/spring'
-
+import ReactPlayer from 'react-player'
 import PricesAndPayment from '../components/PricesAndPayment';
 import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
@@ -112,7 +112,7 @@ const Home = ({data}) => (
             </div>
           </div>
           <div className="col-md-6">
-
+            <ReactPlayer className="jumbo-video" url='https://www.youtube.com/watch?v=ysz5S6PUM-U' width="100%" height="500px" playIcon controls="false" />
 
           </div>
         </div>

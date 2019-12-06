@@ -102,3 +102,10 @@ div h5{
   .jumbo-button{
     background-color: #0097CE;;
   }
+  .jumbo-video{
+    border-bottom-left-radius: 20px;
+  }
+/*   
+  .cred-container{
+    background: #bebebe
+  } */
