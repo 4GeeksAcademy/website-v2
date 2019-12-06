@@ -149,6 +149,14 @@ div h5{
   .program-stand-features-body .row{
     height: 20%;
   }
+  .program-icon{
+    color: #e5ba1d;
+  }
+  .program-body-title{
+    font-size: 22px;
+      font-weight: 800;
+      line-height: 26px;
+  }
   
   .jumbo-button{
     background-color: #0097CE;;

@@ -16,7 +16,8 @@ import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
 import Jobs from '../components/Jobs';
 import '../assets/css/style.css'
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faUserFriends, faGlasses, faClock, faChalkboardTeacher, faCommentAlt} from '@fortawesome/free-solid-svg-icons'
 const Page = styled.div`
   width: 100%;
   height: 100vh;
@@ -40,8 +41,13 @@ const Label = styled.p`
   letter-spacing: 10px;
   text-transform: uppercase;
 `;
-
+const friend = <FontAwesomeIcon icon={faUserFriends} size="2x" />
+const glasses = <FontAwesomeIcon icon={faGlasses} size="2x" />
+const clock = <FontAwesomeIcon icon={faClock} size="2x" />
+const teacher = <FontAwesomeIcon icon={faChalkboardTeacher} size="2x" />
+const comment = <FontAwesomeIcon icon={faCommentAlt} size="2x" />
 const Home = ({data}) => (
+
   <Layout>
     {/* <Page> */}
 
@@ -147,12 +153,27 @@ const Home = ({data}) => (
             <div className="col-md-6"></div>
           </div>
           <div className="row program-stand-row-body">
-            <div className="col-md-6 program-stand-features-body">
-              <div className="row ">one</div>
-              <div className="row ">two</div>
-              <div className="row">three</div>
-              <div className="row">4</div>
-              <div className="row">5</div>
+            <div className="col-md-6 program-stand-features-body pl-5 pt-3">
+              <div className="row ">
+                <div className="col-md-3 program-icon">{teacher}</div>
+                <div className="col-md-9 text-white program-body-title">ONE TEACHER EVERY FIVE</div>
+              </div>
+              <div className="row ">
+                <div className="col-md-3 program-icon">{glasses}</div>
+                <div className="col-md-9 text-white program-body-title">SENIOR TEACHERS PER STUDENT</div>
+              </div>
+              <div className="row">
+                <div className="col-md-3 program-icon">{clock}</div>
+                <div className="col-md-9 text-white program-body-title">AVERAGE TIME TO GET HELP</div>
+              </div>
+              <div className="row">
+                <div className="col-md-3 program-icon">{friend}</div>
+                <div className="col-md-9 text-white program-body-title">ONE-ON-ONE MENTORING</div>
+              </div>
+              <div className="row">
+                <div className="col-md-3 program-icon">{comment}</div>
+                <div className="col-md-9 text-white program-body-title">INTERVIEW PREPARATION</div>
+              </div>
             </div>
             <div className="col-md-6"></div>
           </div>
