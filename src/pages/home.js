@@ -14,6 +14,7 @@ import {Spring} from '../components/spring'
 import PricesAndPayment from '../components/PricesAndPayment';
 import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
+import Jobs from '../components/Jobs';
 
 
 const Page = styled.div`
@@ -98,6 +99,7 @@ const Home = ({data}) => (
     </div>
     <QueryTest />
     <Why4Geeks />
+    <Jobs />
   </Layout>
 );
 

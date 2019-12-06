@@ -58,7 +58,7 @@ div h5{
 }
   .test:hover{
       transform:translateY(-20px);
-      background: #dedede;
+      /* background: #bebebe; */
   }
   .text-why{
     text-transform: uppercase;
@@ -73,4 +73,19 @@ div h5{
   .why-title{
     font-weight: bold;
     font-size: 2rem;;
+  }
+  
+  .jobs-left{
+      font-size: 10px;
+      color: #bebebe;
+
+  }
+  .jobs-value{
+      font-size: 36px;
+      font-weight: bold;
+      
+  }
+  .job-container{
+    box-shadow: 10px 10px 30px grey;
+    border-radius: 1.25rem;
   }

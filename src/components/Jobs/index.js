@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/free-solid-svg-icons'
-
+import graphic from "../../assets/images/graphic.png"
 export default () => {
 
 
@@ -36,21 +36,28 @@ export default () => {
       </div> */}
             <div className="row my-4 justify-content-center">
 
-                {data.why.edges.map(i => (
-                    <div className="col-md-3">
+                {data.job.edges.map(i => (
+                    <div className="col-md-3 ">
 
-                        <div className="card-why4 p-3 text-center row">
-                            {/* <div className="icons mb-3">{graduation}</div> */}
-                            <img src={i.node.image} width="100%" height="150" />
-                        </div>
-                        <div className=" px-3 row">
-                            <div className="col-md-3 icons">{graduation}</div>
-                            <div className="col-md-9 text-why pr-0">{i.node.title}</div>
+
+                        <div className=" px-3 row job-container text-center">
+                            <div className="col-md-5 ">
+                                <div className="row jobs-left">
+                                    {i.node.title}
+                                </div>
+                                <div className="row jobs-value">
+                                    {i.node.value}<span>{i.node.value_type}</span>
+                                </div>
+                                <div className="row jobs-left">
+                                    {i.node.sub_title}
+                                </div>
+
+
+                            </div>
+                            <div className="col-md-5 text-why pr-0"><img src={graphic} width="100%" /></div>
 
                         </div>
-                        <div className=" text-center row">
-                            <div className="text-why-p">{i.node.description}</div>
-                        </div>
+
                     </div>
 
                 ))}
