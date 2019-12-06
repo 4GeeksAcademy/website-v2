@@ -89,3 +89,9 @@ div h5{
     box-shadow: 10px 10px 30px grey;
     border-radius: 1.25rem;
   }
+  
+  .jumbo-slogan{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 40px;
+  }

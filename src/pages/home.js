@@ -15,7 +15,7 @@ import PricesAndPayment from '../components/PricesAndPayment';
 import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
 import Jobs from '../components/Jobs';
-
+import '../assets/css/style.css'
 
 const Page = styled.div`
   width: 100%;
@@ -93,20 +93,23 @@ const Home = ({data}) => (
     <div className="jumbotron bg-white">
       <div class="container">
         <div className="row">
-          <div className="col-md-6">
-            <div className="row">
+          <div className="col-md-6 px-5">
+            <div className="row jumbo-lead">
               Miami Coding Bootcamp
           </div>
-            <div className="row"><hr className="my-4" /></div>
-            <div className="row">
-              <h1 className="display-4">LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</h1>
+            <div className="row jumbo-divider"><hr className="my-4" /></div>
+            <div className="row jumbo-slogan px-5">
+              <div>LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</div>
             </div>
-            <div className="row">
+            <div className="row jumbo-paragraph">
               Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
           </div>
 
           </div>
-          <div className="col-md-6"></div>
+          <div className="col-md-6">
+
+
+          </div>
         </div>
 
 
