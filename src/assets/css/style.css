@@ -89,8 +89,8 @@ div h5{
     font-size: 2rem;;
   }
   
-  .jobs-left, .jumbo-paragraph, .jumbo-lead{
-      font-size: 10px;
+  .jobs-left, .jumbo-paragraph, .jumbo-lead {
+      font-size: 12px;
       color: #bebebe;
 
   }
@@ -109,9 +109,19 @@ div h5{
     font-size: 36px;
     line-height: 40px;
   }
-  .jumbo-divider{
+  .jumbo-divider {
     height: 1rem;
     border-bottom: 2px solid #0097CE;
+  }
+  .program-divider{
+    height: 1rem;
+    border-bottom: 2px solid #baeafc;
+    width: 2.5rem
+    
+  }
+  .program-lead{
+    font-size: 12px;
+      color: #baeafc;
   }
   .jumbo-button{
     background-color: #0097CE;;

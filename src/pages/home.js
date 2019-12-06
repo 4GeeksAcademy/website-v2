@@ -124,20 +124,23 @@ const Home = ({data}) => (
     <Why4Geeks />
     <Jobs />
 
+    {/* WHAT MAKES PROGRAM STAND OUT? */}
     <div className="container program-container mt-5">
       <div className="row pt-5">
         <div class="col-md-6 offset-md-3 program-title text-white text-center">
           WHAT MAKES THIS PROGRAM STAND OUT?
         </div>
       </div>
+      <div className="row justify-content-center mb-3">
+        <div className=" program-divider"></div></div>
       <div className="row">
         <div class="col-md-6 offset-md-3 program-lead text-white text-center">
           View full comparison table >
         </div>
       </div>
-
-
     </div>
+
+
   </Layout>
 );
 
