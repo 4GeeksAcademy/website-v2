@@ -94,17 +94,22 @@ const Home = ({data}) => (
       <div class="container">
         <div className="row">
           <div className="col-md-6 px-5">
-            <div className="row jumbo-lead">
+            <div className="row jumbo-lead px-5">
               Miami Coding Bootcamp
-          </div>
-            <div className="row jumbo-divider"><hr className="my-4" /></div>
+              </div>
+            <div className="row px-5 mb-3">
+              <div className="col-md-1 jumbo-divider "></div>
+            </div>
             <div className="row jumbo-slogan px-5">
               <div>LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</div>
             </div>
-            <div className="row jumbo-paragraph">
+            <div className="row jumbo-paragraph px-5 mt-3">
               Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
-          </div>
+              </div>
+            <div className="row jumbo-button px-5 mt-3">
+              <a className="btn btn-primary btn-md rounded-pill jumbo-button" href="#" role="button">CHOOSE YOUR PROGRAM </a>
 
+            </div>
           </div>
           <div className="col-md-6">
 
@@ -113,7 +118,6 @@ const Home = ({data}) => (
         </div>
 
 
-        <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
     </div>
     <QueryTest />

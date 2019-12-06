@@ -75,7 +75,7 @@ div h5{
     font-size: 2rem;;
   }
   
-  .jobs-left{
+  .jobs-left, .jumbo-paragraph, .jumbo-lead{
       font-size: 10px;
       color: #bebebe;
 
@@ -94,4 +94,8 @@ div h5{
     font-weight: 900;
     font-size: 36px;
     line-height: 40px;
+  }
+  .jumbo-divider{
+    height: 1rem;
+    border-bottom: 2px solid #0097CE;
   }
