@@ -90,12 +90,28 @@ const Home = ({data}) => (
         reportImage={data.credentials.edges[0].node.images.reportImage}
       /> */}
     </Page>
-    <div className="jumbotron">
-      <h1 className="display-4">Hello, world!</h1>
-      <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr className="my-4" />
-      <p>It uses utility classNamees for typography and spacing to space content out within the larger container.</p>
-      <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <div className="jumbotron bg-white">
+      <div class="container">
+        <div className="row">
+          <div className="col-md-6">
+            <div className="row">
+              Miami Coding Bootcamp
+          </div>
+            <div className="row"><hr className="my-4" /></div>
+            <div className="row">
+              <h1 className="display-4">LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</h1>
+            </div>
+            <div className="row">
+              Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
+          </div>
+
+          </div>
+          <div className="col-md-6"></div>
+        </div>
+
+
+        <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
     </div>
     <QueryTest />
     <Why4Geeks />
