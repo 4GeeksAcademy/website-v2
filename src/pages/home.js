@@ -138,6 +138,27 @@ const Home = ({data}) => (
           View full comparison table >
         </div>
       </div>
+      <div className="row program-features justify-content-center mt-5">
+        <div className="col-md-8 program-stand">
+          <div className="row program-stand-row-header">
+            <div className="col-md-6 program-stand-features-header pt-4 pl-5">
+              FEATURES
+            </div>
+            <div className="col-md-6"></div>
+          </div>
+          <div className="row program-stand-row-body">
+            <div className="col-md-6 program-stand-features-body">
+              <div className="row ">one</div>
+              <div className="row ">two</div>
+              <div className="row">three</div>
+              <div className="row">4</div>
+              <div className="row">5</div>
+            </div>
+            <div className="col-md-6"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 

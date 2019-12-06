@@ -123,6 +123,33 @@ div h5{
     font-size: 12px;
       color: #baeafc;
   }
+  .program-stand{
+    height: 500px;
+    background: white;
+    border-radius: 1.25rem;
+  }
+  .program-stand-row-header{
+    height: 15%;
+  }
+  .program-stand-row-body{
+    height: 85%;
+  }
+  .program-stand-features-header{
+    background: black;
+    border-bottom: 1px solid #bebebe;
+    font-size: 12px;
+    color: white;
+    border-radius: 1.25rem 0 0 0;
+  }
+  .program-stand-features-body{
+    background: black;
+    
+    border-radius: 0 0 0 1.25rem;
+  }
+  .program-stand-features-body .row{
+    height: 20%;
+  }
+  
   .jumbo-button{
     background-color: #0097CE;;
   }
