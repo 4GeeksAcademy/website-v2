@@ -39,24 +39,24 @@ export default () => {
                 {data.job.edges.map(i => (
                     <div className="col-md-3 ">
 
+                        <div className=" p-3 ">
+                            <div className=" px-3 py-1 row job-container text-center">
+                                <div className="col-md-6 ">
+                                    <div className="row jobs-left">
+                                        {i.node.title}
+                                    </div>
+                                    <div className="row jobs-value">
+                                        {i.node.value}<span>{i.node.value_type}</span>
+                                    </div>
+                                    <div className="row jobs-left">
+                                        {i.node.sub_title}
+                                    </div>
 
-                        <div className=" px-3 row job-container text-center">
-                            <div className="col-md-5 ">
-                                <div className="row jobs-left">
-                                    {i.node.title}
+
                                 </div>
-                                <div className="row jobs-value">
-                                    {i.node.value}<span>{i.node.value_type}</span>
-                                </div>
-                                <div className="row jobs-left">
-                                    {i.node.sub_title}
-                                </div>
+                                <div className="col-md-5 text-why pr-0"><img src={graphic} width="100%" /></div>
 
-
-                            </div>
-                            <div className="col-md-5 text-why pr-0"><img src={graphic} width="100%" /></div>
-
-                        </div>
+                            </div></div>
 
                     </div>
 

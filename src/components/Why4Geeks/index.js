@@ -26,8 +26,8 @@ export default () => {
   const graduation = <FontAwesomeIcon icon={faGraduationCap} size="2x" />
   return (
 
-    <div className="container ">
-      <div className="row justify-content-center why-title">WHY 4 GEEKS ?</div>
+    <div className="container mt-5 pt-3">
+      <div className="row justify-content-center why-title mt-5">WHY 4 GEEKS ?</div>
       <div className="row justify-content-center why-title">
 
 
@@ -46,7 +46,7 @@ export default () => {
               <div className="col-md-9 text-why pr-0">{i.node.title}</div>
 
             </div>
-            <div className=" text-center row">
+            <div className=" text-center row mt-2">
               <div className="text-why-p">{i.node.description}</div>
             </div>
           </div>

@@ -44,12 +44,21 @@ div h5{
     color: black;
     background: #f0f0f0;
   } */
+  .cred-container{
+    background: #f9f9f9;
+    border-radius: 1.25rem 0px 0px 0px;
+  }
   .card-credential{
-      width: 195px;
-      height: 250px;
-      box-shadow: 10px 10px 30px grey;
+      width: 160px;
+      height: 200px;
+      box-shadow: 5px 5px 15px #dedede;
       border-radius: 1.25rem;
       background: white;
+  }
+  .cred-title{
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 22px;
   }
   .card-why4 img{
     /* width: 220px; */
@@ -66,8 +75,9 @@ div h5{
   }
   .text-why{
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 22px;
+    line-height: 22px;;
   }
   .text-why-p{
       color: #bebebe;
@@ -75,7 +85,7 @@ div h5{
       font-size: 16px;
   }
   .why-title{
-    font-weight: bold;
+    font-weight: 800;
     font-size: 2rem;;
   }
   
@@ -90,7 +100,7 @@ div h5{
       
   }
   .job-container{
-    box-shadow: 10px 10px 30px grey;
+    box-shadow: 10px 10px 30px #dedede;
     border-radius: 1.25rem;
   }
   

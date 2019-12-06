@@ -65,9 +65,9 @@ export default () => {
 
   return (
 
-    <div className="container cred-container">
+    <div className="container cred-container px-5">
 
-      <div className="row my-4">
+      <div className="row px-5">
         <div className="col-md-9">
           <div className="row prova">
             {data.credentials.edges.map((i, index) => {
@@ -77,7 +77,7 @@ export default () => {
                 <div key={index} className="col-md-3 test">
                   <div className="card-credential p-3 text-center ">
                     <div className="icons mb-3">{graduation}</div>
-                    <div><h3>{i.node.credential}</h3></div>
+                    <div className="cred-title">{i.node.credential}</div>
                     <div><h3>{i.node.cred_value}</h3></div>
                   </div>
                 </div>
