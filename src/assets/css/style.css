@@ -136,18 +136,32 @@ div h5{
   }
   .program-stand-features-header{
     background: black;
-    border-bottom: 1px solid #bebebe;
+    border-bottom: 1px solid #5d6163;
     font-size: 12px;
-    color: white;
+    color: #5d6163;
     border-radius: 1.25rem 0 0 0;
+  }
+  .program-stand-features-header-right{
+    font-size: 12px;
+    color: #5d6163;
+    border-bottom: 1px solid #5d6163;
+
   }
   .program-stand-features-body{
     background: black;
     
     border-radius: 0 0 0 1.25rem;
   }
-  .program-stand-features-body .row{
+  .program-stand-features-body-right{
+  font-weight: 800;
+  font-size: 20px;
+  color:#5d6163;
+  
+  }
+  .program-stand-features-body .row, .program-stand-features-body-right .row{
     height: 20%;
+    border-bottom: 1px solid #5d6163;
+
   }
   .program-icon{
     color: #e5ba1d;

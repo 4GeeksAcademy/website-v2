@@ -150,10 +150,16 @@ const Home = ({data}) => (
             <div className="col-md-6 program-stand-features-header pt-4 pl-5">
               FEATURES
             </div>
-            <div className="col-md-6"></div>
+            <div className="col-md-6 program-stand-features-header-right pt-4 pl-5">
+              <div className="row">
+                <div className="col-md-6">AT 4GEEKS</div>
+                <div className="col-md-6"> INDUSTRY AVERAGE</div>
+              </div>
+
+            </div>
           </div>
           <div className="row program-stand-row-body">
-            <div className="col-md-6 program-stand-features-body pl-5 pt-3">
+            <div className="col-md-6 program-stand-features-body  pt-3">
               <div className="row ">
                 <div className="col-md-3 program-icon">{teacher}</div>
                 <div className="col-md-9 text-white program-body-title">ONE TEACHER EVERY FIVE</div>
@@ -175,7 +181,28 @@ const Home = ({data}) => (
                 <div className="col-md-9 text-white program-body-title">INTERVIEW PREPARATION</div>
               </div>
             </div>
-            <div className="col-md-6"></div>
+            <div className="col-md-6 program-stand-features-body-right pt-3 ">
+              <div className="row">
+                <div className="col-md-6">1:5</div>
+                <div className="col-md-6">1:7</div>
+              </div>
+              <div className="row">
+                <div className="col-md-6">1:10</div>
+                <div className="col-md-6">1:30</div>
+              </div>
+              <div className="row">
+                <div className="col-md-6">15 MIN</div>
+                <div className="col-md-6">NOT MEASURED</div>
+              </div>
+              <div className="row">
+                <div className="col-md-6">UNLIMITED</div>
+                <div className="col-md-6">LIMITED</div>
+              </div>
+              <div className="row">
+                <div className="col-md-6">TARGETED</div>
+                <div className="col-md-6">GENERAL</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
