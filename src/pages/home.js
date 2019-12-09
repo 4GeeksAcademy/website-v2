@@ -19,6 +19,7 @@ import Why4Geeks from '../components/Why4Geeks';
 import Locations from '../components/Locations';
 import Jobs from '../components/Jobs';
 import '../assets/css/style.css'
+import Link from 'gatsby-link'
 import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUserFriends, faGlasses, faClock, faChalkboardTeacher, faCommentAlt} from '@fortawesome/free-solid-svg-icons'
@@ -117,8 +118,9 @@ const Home = ({data}) => (
               Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
               </div>
             <div className="row px-5 mt-3">
-              <a className="btn text-white btn-md rounded-pill jumbo-button" href="#" role="button">CHOOSE YOUR PROGRAM </a>
-
+              <Link to="/program">
+                <div className="btn text-white btn-md rounded-pill jumbo-button" role="button">CHOOSE YOUR PROGRAM </div>
+              </Link>
             </div>
           </div>
           <div className="col-md-6">
@@ -258,6 +260,8 @@ const Home = ({data}) => (
     <Section height="200px" />
 
     <Locations />
+    <Section height="100px" />
+    <Footer />
 
 
   </Layout>

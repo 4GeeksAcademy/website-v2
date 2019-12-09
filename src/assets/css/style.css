@@ -47,6 +47,7 @@ div h5{
   .cred-container{
     background: #f9f9f9;
     border-radius: 1.25rem 0px 0px 0px;
+    height: 600px;
   }
   .card-credential{
       width: 160px;
@@ -186,7 +187,7 @@ div h5{
     background: #bebebe
   } */
   .jumbo-container{
-    height:500px;
+    height:400px;
   }
   .program-container{
     height: 1225px;
@@ -236,6 +237,12 @@ div h5{
     background: #f5f8fb;
     border-radius: 1.25rem 0px 0px 0px;
   }
+  .why-container, .job-container{
+    transform:translateY(-180px);
+  }
+  /* .why-title, .why{
+    transform:translateY(-180px);
+  } */
   .who-boxes .col-md-2{
     background: white;
     width: 250px;
@@ -272,4 +279,8 @@ div h5{
   }
   .section-divider{
     height: 200px;
+  }
+  .footer{
+    background: black;
+    height: 400px;
   }

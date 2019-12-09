@@ -22,6 +22,8 @@ module.exports = {
         name: 'FOR COMPANIES',
         link: '/partners'
       },
+
+
     ]
   },
   plugins: [

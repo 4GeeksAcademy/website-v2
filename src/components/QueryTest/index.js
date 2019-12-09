@@ -65,10 +65,10 @@ export default () => {
 
   return (
 
-    <div className="container cred-container px-5">
+    <div className="container cred-container px-5 pt-5">
 
-      <div className="row px-5">
-        <div className="col-md-9">
+      <div className="row px-5 mt-5">
+        <div className="col-md-10">
           <div className="row prova">
             {data.credentials.edges.map((i, index) => {
               // const props = useSpring({number: i.node.cred_value, from: {number: 0}})
