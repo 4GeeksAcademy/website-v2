@@ -221,15 +221,15 @@ const Home = ({data}) => (
         <div className=" program-divider"></div>
       </div>
       <div className="row">
-        <div class="col-md-6 offset-md-3 program-lead text-white text-center">
+        <div class="col-md-6 offset-md-3 program-lead text-white text-center mb-5">
           Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </div>
       </div>
       <div className="row">
-        <div class="col-md-4 offset-md-3 program-box text-white text-center">
+        <div class="col-md-4 offset-md-2 program-box bg-white text-center">
 
         </div>
-        <div class="col-md-4 offset-md-3 program-box text-white text-center">
+        <div class="col-md-4 program-box bg-white text-center">
 
         </div>
       </div>

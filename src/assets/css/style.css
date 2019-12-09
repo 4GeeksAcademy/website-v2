@@ -193,4 +193,8 @@ div h5{
   .button-program {
     font-size: 12px;
   }
-  
+  .program-box{
+    border-radius: 1.25rem;
+    box-shadow: 10px 10px 30px #dedede;
+    height: 200px;
+  }
