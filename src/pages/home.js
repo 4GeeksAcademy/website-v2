@@ -209,12 +209,12 @@ const Home = ({data}) => (
       </div>
 
       <div className="row">
-        <div class="col-md-6 offset-md-3 program-lead text-white text-center">
-          View full comparison table >
+        <div class="col-md-6 offset-md-3 program-lead text-white text-center my-5">
+          <div className="btn text-white btn-md rounded-pill  btn-outline-light">COMPARE 4GEEKS WITH OTHER SCHOOLS</div>
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6 offset-md-3 program-title text-white text-center">JOIN 4GEEKS</div>
+        <div className="col-md-6 offset-md-3 program-title text-white text-center ">JOIN 4GEEKS</div>
 
       </div>
 
