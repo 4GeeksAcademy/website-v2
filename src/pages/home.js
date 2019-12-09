@@ -210,12 +210,28 @@ const Home = ({data}) => (
 
       <div className="row">
         <div class="col-md-6 offset-md-3 program-lead text-white text-center my-5">
-          <div className="btn text-white btn-md rounded-pill  btn-outline-light">COMPARE 4GEEKS WITH OTHER SCHOOLS</div>
+          <div className="btn text-white btn-md rounded-pill  btn-outline-light button-program">COMPARE 4GEEKS WITH OTHER SCHOOLS</div>
         </div>
       </div>
       <div className="row">
         <div className="col-md-6 offset-md-3 program-title text-white text-center ">JOIN 4GEEKS</div>
 
+      </div>
+      <div className="row justify-content-center mb-3">
+        <div className=" program-divider"></div>
+      </div>
+      <div className="row">
+        <div class="col-md-6 offset-md-3 program-lead text-white text-center">
+          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </div>
+      </div>
+      <div className="row">
+        <div class="col-md-4 offset-md-3 program-box text-white text-center">
+
+        </div>
+        <div class="col-md-4 offset-md-3 program-box text-white text-center">
+
+        </div>
       </div>
 
 

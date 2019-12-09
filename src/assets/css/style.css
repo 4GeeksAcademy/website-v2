@@ -186,8 +186,11 @@ div h5{
     height:500px;
   }
   .program-container{
-    height: 1000px;
+    height: 1200px;
     background: #0097CE;
     border-radius: 1.25rem 0px 0px 0px;
+  }
+  .button-program {
+    font-size: 12px;
   }
   
