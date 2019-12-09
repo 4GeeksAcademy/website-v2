@@ -224,3 +224,12 @@ div h5{
     color: #0097CE;
     
   }
+  .who-one{
+    height: 300px;
+    background: white;
+  }
+  .who-two{
+    height: 500px;
+    background: #f5f8fb;
+    border-radius: 1.25rem 0px 0px 0px;
+  }

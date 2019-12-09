@@ -8,6 +8,7 @@ import Alumni from '../components/Alumni';
 import TestCom from '../components/testCom';
 import Test from '../components/Test';
 import Mentors from '../components/Mentors';
+import WhoIsHiring from '../components/WhoIsHiring'
 import Footer from '../components/Footer'
 import {Spring} from '../components/spring'
 import ReactPlayer from 'react-player'
@@ -132,7 +133,7 @@ const Home = ({data}) => (
     <Jobs />
 
     {/* WHAT MAKES PROGRAM STAND OUT? */}
-    <div className="container program-container mt-5">
+    <div className="container program-container my-5">
       <div className="row pt-5">
         <div class="col-md-6 offset-md-3 program-title text-white text-center">
           WHAT MAKES THIS PROGRAM STAND OUT?
@@ -239,7 +240,7 @@ const Home = ({data}) => (
           <div className="row box-title">GEEK<span>FORCE</span></div>
           <div className="row box-lead">FOR Career Empowerment</div>
           <div className="row box-content mt-2">
-            <div className="col-md-6 p-0">We'll do everything in our hands to help you get a jobin the field. Includes CAreer Support Track. GeekPAL and GeekTALK.</div>
+            <div className="col-md-6 p-0">We'll do everything in our hands to help you get a jobin the field. Includes Career Support Track. GeekPAL and GeekTALK.</div>
             <div className="col-md-6 text-right"><ArrowRightIcon className="custom-icon" />
 
             </div>
@@ -249,6 +250,8 @@ const Home = ({data}) => (
 
 
     </div>
+    {/* WHAT MAKES PROGRAM STAND OUT?  END SECTION*/}
+    <WhoIsHiring />
 
 
   </Layout>
