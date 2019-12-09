@@ -16,6 +16,7 @@ import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
 import Jobs from '../components/Jobs';
 import '../assets/css/style.css'
+import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUserFriends, faGlasses, faClock, faChalkboardTeacher, faCommentAlt} from '@fortawesome/free-solid-svg-icons'
 const Page = styled.div`
@@ -226,11 +227,23 @@ const Home = ({data}) => (
         </div>
       </div>
       <div className="row">
-        <div class="col-md-4 offset-md-2 program-box bg-white text-center">
-
+        <div class="col-md-4 offset-md-2 program-box bg-white p-4 mr-3">
+          <div className="row box-title">GEEK<span>PAL</span></div>
+          <div className="row box-lead">Programming - Always - Limitless</div>
+          <div className="row box-content mt-2">
+            <div className="col-md-6 p-0">Never code on your own again. We will be with lalong side your journey and for as long as you want us to be.</div>
+            <div className="col-md-6 text-right"><ArrowRightIcon className="custom-icon" /></div>
+          </div>
         </div>
-        <div class="col-md-4 program-box bg-white text-center">
+        <div class="col-md-4 program-box bg-white p-4">
+          <div className="row box-title">GEEK<span>FORCE</span></div>
+          <div className="row box-lead">FOR Career Empowerment</div>
+          <div className="row box-content mt-2">
+            <div className="col-md-6 p-0">We'll do everything in our hands to help you get a jobin the field. Includes CAreer Support Track. GeekPAL and GeekTALK.</div>
+            <div className="col-md-6 text-right"><ArrowRightIcon className="custom-icon" />
 
+            </div>
+          </div>
         </div>
       </div>
 

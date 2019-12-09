@@ -186,7 +186,7 @@ div h5{
     height:500px;
   }
   .program-container{
-    height: 1200px;
+    height: 1225px;
     background: #0097CE;
     border-radius: 1.25rem 0px 0px 0px;
   }
@@ -197,4 +197,30 @@ div h5{
     border-radius: 1.25rem;
     box-shadow: 10px 10px 30px #dedede;
     height: 200px;
+  
+  }
+  .program-box .row span{
+    color: #0097CE;
+    
+  }
+  .box-title{
+    font-weight: 800;
+    font-size:28px;
+    height: 30%;
+  }
+  .box-lead{
+    font-size: 14px;
+    color:#5d6163;
+    font-weight: bold;
+    height: 20%;
+  }
+  .box-content{
+    color:#5d6163;
+    font-size: 12px;
+    height: 50%;
+  }
+  .custom-icon{
+    font-size: 30px;
+    color: #0097CE;
+    
   }
