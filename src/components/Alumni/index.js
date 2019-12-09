@@ -23,24 +23,23 @@ const NextName = styled.h6`
 `
 
 const Alumni = props => (
-    <div className="container mt-5">
+    <div className="container  alumni-container">
+        <div className="row mb-3">
+            <div class="col-md-12  program-title text-white text-center">
+
+                <div className="row justify-content-center mt-5 who-title">MEET THE ALUMNI AND PROJECTS</div>
+                <div className="row justify-content-center mb-3">
+                    <div className=" program-divider"></div>
+                </div>
+                <div className="row justify-content-center who-lead ">
+                Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+    
+                </div>
+            </div>
+        </div>
         <div className="row">
             <div className="col-md-6">
-                <div className="row"><h1>Meet </h1> <Heading>{props.name}</Heading></div>
-                <div className="row"></div>
-                <div className="row">{props.content}</div>
-                <div className="row mt-5">
-                    <div className="col-md-4 pl-0 ">
-                        <div className="btn btn-danger">Prev</div>
-                        <div className="btn btn-danger">Next</div>
-                    </div>
-                    <div className="col-md-8">
-                        <div className="ml-5"><Next>Next:</Next></div>
-                        <div className="ml-5"><NextName>Meet <span>{props.nextName}</span></NextName> </div>
-                        <div className="ml-5"><NextName>Now <span>{props.nextTitle}</span></NextName></div>
-                    </div>
-
-                </div>
+                
             </div>
             <div className="col-md-6">
                 <img src={props.alumniImage} width="100%"></img>

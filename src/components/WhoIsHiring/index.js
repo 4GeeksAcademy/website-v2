@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const WhoIsHiring = () => (
-    <div className="container my-5">
+    <div className="container mt-5">
         <div className="row who-one mb-3">
             <div class="col-md-6 offset-md-3 program-title text-white text-center">
 

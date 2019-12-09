@@ -252,6 +252,7 @@ const Home = ({data}) => (
     </div>
     {/* WHAT MAKES PROGRAM STAND OUT?  END SECTION*/}
     <WhoIsHiring />
+    <Alumni />
 
 
   </Layout>

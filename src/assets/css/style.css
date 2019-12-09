@@ -93,6 +93,7 @@ div h5{
   .jobs-left, .jumbo-paragraph, .jumbo-lead, .who-lead{
       font-size: 12px;
       color: #bebebe;
+      font-weight: 500;
 
   }
   .jobs-value{
@@ -250,4 +251,8 @@ div h5{
     font-size: 12px;
     color: #0097CE;
     
+  }
+  .alumni-container{
+    background:#f5f8fb ;
+    height: 600px;
   }
