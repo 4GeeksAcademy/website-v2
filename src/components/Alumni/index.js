@@ -32,14 +32,15 @@ const Alumni = props => (
                     <div className=" program-divider"></div>
                 </div>
                 <div className="row justify-content-center who-lead ">
-                Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-    
+                    <div className="col-md-6">
+                        Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                    </div>
                 </div>
             </div>
         </div>
         <div className="row">
             <div className="col-md-6">
-                
+
             </div>
             <div className="col-md-6">
                 <img src={props.alumniImage} width="100%"></img>
