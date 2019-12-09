@@ -90,7 +90,7 @@ div h5{
     color: black;
   }
   
-  .jobs-left, .jumbo-paragraph, .jumbo-lead, .who-lead{
+  .jobs-left, .jumbo-paragraph, .jumbo-lead, .who-lead, .alumni-left-lead{
       font-size: 12px;
       color: #bebebe;
       font-weight: 500;
@@ -168,10 +168,11 @@ div h5{
   .program-icon{
     color: #e5ba1d;
   }
-  .program-body-title{
+  .program-body-title, .alumni-left-title{
     font-size: 22px;
-      font-weight: 800;
+      font-weight: 900;
       line-height: 26px;
+      text-transform: uppercase;
   }
   
   .jumbo-button{
@@ -269,3 +270,4 @@ div h5{
     
     box-shadow: 10px 10px 30px #dedede;
   }
+  
