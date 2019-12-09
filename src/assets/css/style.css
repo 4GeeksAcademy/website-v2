@@ -261,13 +261,15 @@ div h5{
     height: 400px;
     background: white;
   }
-  .alumni-left{
+  .alumni-left, .location-left, .location-left img{
     border-radius: 1.25rem 0px  0px 1.25rem;
     box-shadow: 10px 10px 30px #dedede;
   }
-  .alumni-right, .alumni-right img{
+  .alumni-right, .alumni-right img, .location-right{
     border-radius: 0px 1.25rem 1.25rem  0px;
     
     box-shadow: 10px 10px 30px #dedede;
   }
-  
+  .section-divider{
+    height: 200px;
+  }

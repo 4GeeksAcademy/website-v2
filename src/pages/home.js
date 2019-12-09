@@ -15,6 +15,7 @@ import ReactPlayer from 'react-player'
 import PricesAndPayment from '../components/PricesAndPayment';
 import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
+import Locations from '../components/Locations';
 import Jobs from '../components/Jobs';
 import '../assets/css/style.css'
 import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
@@ -253,6 +254,8 @@ const Home = ({data}) => (
     {/* WHAT MAKES PROGRAM STAND OUT?  END SECTION*/}
     <WhoIsHiring />
     <Alumni />
+    <div className="container section-divider"></div>
+    <Locations />
 
 
   </Layout>
