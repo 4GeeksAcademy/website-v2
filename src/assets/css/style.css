@@ -254,5 +254,18 @@ div h5{
   }
   .alumni-container{
     background:#f5f8fb ;
-    height: 600px;
+    height: 500px;
+  }
+  .alumni-left, .alumni-right{
+    height: 400px;
+    background: white;
+  }
+  .alumni-left{
+    border-radius: 1.25rem 0px  0px 1.25rem;
+    box-shadow: 10px 10px 30px #dedede;
+  }
+  .alumni-right, .alumni-right img{
+    border-radius: 0px 1.25rem 1.25rem  0px;
+    
+    box-shadow: 10px 10px 30px #dedede;
   }

@@ -38,13 +38,14 @@ const Alumni = props => (
                 </div>
             </div>
         </div>
-        <div className="row">
-            <div className="col-md-6">
+        <div className="row ">
+            <div className="col-md-12">
+                <div className="row justify-content-center">
+                    <div className="col-md-5 alumni-left">left</div>
+                    <div className="col-md-5 alumni-right p-0"><img src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" width="100%" height="100%" /></div>
+                </div>
+            </div>
 
-            </div>
-            <div className="col-md-6">
-                <img src={props.alumniImage} width="100%"></img>
-            </div>
         </div>
         <div className="row"></div>
     </div>
