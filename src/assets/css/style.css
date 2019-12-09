@@ -284,3 +284,7 @@ div h5{
     background: black;
     height: 400px;
   }
+  .footer-title{
+    font-weight: bold;
+    font-size: 16px;
+  }
