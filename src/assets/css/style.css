@@ -226,11 +226,28 @@ div h5{
     
   }
   .who-one{
-    height: 300px;
+    height: 400px;
     background: white;
   }
   .who-two{
     height: 500px;
     background: #f5f8fb;
     border-radius: 1.25rem 0px 0px 0px;
+  }
+  .who-boxes .col-md-2{
+    background: white;
+    width: 250px;
+    height: 100px;
+    transform:translateY(-80px);
+    
+  }
+  .who-title-small{
+    font-size: 24px;
+    color: black;
+  }
+  .who-lead-small{
+    
+    font-size: 12px;
+    color: #0097CE;
+    
   }
