@@ -144,6 +144,7 @@ const Home = ({data}) => (
           View full comparison table >
         </div>
       </div>
+
       <div className="row program-features justify-content-center mt-5">
         <div className="col-md-8 program-stand">
           <div className="row program-stand-row-header">
@@ -206,6 +207,17 @@ const Home = ({data}) => (
           </div>
         </div>
       </div>
+
+      <div className="row">
+        <div class="col-md-6 offset-md-3 program-lead text-white text-center">
+          View full comparison table >
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-6 offset-md-3 program-title text-white text-center">JOIN 4GEEKS</div>
+
+      </div>
+
 
     </div>
 
