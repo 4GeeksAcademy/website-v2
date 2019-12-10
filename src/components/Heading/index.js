@@ -10,7 +10,7 @@ export const H2 = styled.h2`
   text-transform: uppercase;
   font-weight: 700;
   font-family: futura-pt, sans-serif;
-  color: ${props => props.primary ? "white" : "palevioletred"};
+  color: ${props => props.primary ? "black" : "palevioletred"};
 
 `;
 export const H3 = styled.h3`
