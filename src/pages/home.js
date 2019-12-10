@@ -55,53 +55,6 @@ const comment = <FontAwesomeIcon icon={faCommentAlt} size="2x" />
 const Home = ({data}) => (
 
   <Layout>
-    {/* <Page> */}
-
-
-    {/* <Spring /> */}
-
-    {/* <Alumni
-        name={data.alumni.edges[0].node.name}
-        content={data.alumni.edges[0].node.content}
-        alumniImage={data.alumni.edges[0].node.image}
-        nextName={data.alumni.edges[1].node.name}
-        nextTitle={data.alumni.edges[1].node.title}
-
-
-      />
-      <Mentors
-
-        mentorsArray={data.mentors.edges}
-        column={3}
-
-      />
-      <Credentials
-        rating={data.credentials.edges[0].node.rating}
-        hired={data.credentials.edges[0].node.alumni_number}
-        campuses={data.credentials.edges[0].node.hired_students}
-        alumni={data.credentials.edges[0].node.campuses}
-        googleImage={data.credentials.edges[0].node.images.googleImage}
-        switchImage={data.credentials.edges[0].node.images.switchImage}
-        reportImage={data.credentials.edges[0].node.images.reportImage}
-      /> */}
-    {/* <Footer /> */}
-    {/* <PricesAndPayment /> */}
-
-
-    {/* <TestCom />
-      <Test /> */}
-    {/* <Heading>Home Page</Heading>
-      <Label>Starter</Label> */}
-    {/* <Credentials
-        rating={data.credentials.edges[0].node.rating}
-        hired={data.credentials.edges[0].node.alumni_number}
-        campuses={data.credentials.edges[0].node.hired_students}
-        alumni={data.credentials.edges[0].node.campuses}
-        googleImage={data.credentials.edges[0].node.images.googleImage}
-        switchImage={data.credentials.edges[0].node.images.switchImage}
-        reportImage={data.credentials.edges[0].node.images.reportImage}
-      /> */}
-    {/* </Page> */}
     <div className="jumbotron bg-white jumbo-container">
       <div class="container">
         <div className="row">
@@ -126,11 +79,8 @@ const Home = ({data}) => (
           </div>
           <div className="col-md-6">
             <ReactPlayer className="jumbo-video" url='https://www.youtube.com/watch?v=ysz5S6PUM-U' width="100%" height="500px" playIcon controls="false" />
-
           </div>
         </div>
-
-
       </div>
     </div>
     <QueryTest />
@@ -163,7 +113,6 @@ const Home = ({data}) => (
                 <div className="col-md-6">AT 4GEEKS</div>
                 <div className="col-md-6"> INDUSTRY AVERAGE</div>
               </div>
-
             </div>
           </div>
           <div className="row program-stand-row-body">
@@ -214,7 +163,6 @@ const Home = ({data}) => (
           </div>
         </div>
       </div>
-
       <div className="row">
         <div class="col-md-6 offset-md-3 program-lead text-white text-center my-5">
           <div className="btn text-white btn-md rounded-pill  btn-outline-light button-program">COMPARE 4GEEKS WITH OTHER SCHOOLS</div>
@@ -246,45 +194,22 @@ const Home = ({data}) => (
           <div className="row box-lead">FOR Career Empowerment</div>
           <div className="row box-content mt-2">
             <div className="col-md-6 p-0">We'll do everything in our hands to help you get a jobin the field. Includes Career Support Track. GeekPAL and GeekTALK.</div>
-            <div className="col-md-6 text-right"><ArrowRightIcon className="custom-icon" />
-
-            </div>
+            <div className="col-md-6 text-right"><ArrowRightIcon className="custom-icon" /></div>
           </div>
         </div>
       </div>
-
-
     </div>
     {/* WHAT MAKES PROGRAM STAND OUT?  END SECTION*/}
     <WhoIsHiring />
     <Alumni />
     <Section height="200px" />
-
     <Locations />
     <Section height="100px" />
     <Footer />
-
-
   </Layout>
 );
-
-// export const alumniQuery = graphql`
-//   query myAlumniQuery{
-// allAlumniYaml{
-//   edges{
-//     node{
-//       name
-//       image
-//       content
-//     }
-//   }
-// }
-//   }
-// `
-
 export const myQuer = graphql`
 query myQueryy{
- 
   alumni:   allAlumniYaml{
     edges{
       node{
