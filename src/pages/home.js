@@ -21,7 +21,7 @@ import Locations from '../components/Locations';
 import Jobs from '../components/Jobs';
 import '../assets/css/style.scss'
 import Link from 'gatsby-link'
-import {H1} from '../components/Heading'
+import {H1, H2, Title} from '../components/Heading'
 import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUserFriends, faGlasses, faClock, faChalkboardTeacher, faCommentAlt} from '@fortawesome/free-solid-svg-icons'
@@ -61,13 +61,13 @@ const Home = ({data}) => (
         <div className="row">
           <div className="col-md-6 px-5">
             <div className="row jumbo-lead px-5">
-              Miami Coding Bootcamp
-              </div>
+              <H2>Miami Coding Bootcamp</H2>
+            </div>
             <div className="row px-5 mb-3">
               <div className="col-md-1 jumbo-divider "></div>
             </div>
             <div className="row jumbo-slogan px-5">
-              <H1>LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</H1>
+              <div>LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</div>
             </div>
             <div className="row jumbo-paragraph px-5 mt-3">
               Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
@@ -78,8 +78,9 @@ const Home = ({data}) => (
               </Link>
             </div>
           </div>
-          <div className="col-md-6">
-            <ReactPlayer className="jumbo-video" url='https://www.youtube.com/watch?v=ysz5S6PUM-U' width="100%" height="500px" playIcon controls="false" />
+          <div className="col-md-1"></div>
+          <div className="col-md-5 img-top">
+            <img src="https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80" width="100%" height="500px%" />
           </div>
         </div>
       </div>
