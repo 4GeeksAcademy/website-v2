@@ -20,6 +20,7 @@ import Locations from '../components/Locations';
 import Jobs from '../components/Jobs';
 import '../assets/css/style.scss'
 import Link from 'gatsby-link'
+import {H1} from '../components/Heading'
 import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUserFriends, faGlasses, faClock, faChalkboardTeacher, faCommentAlt} from '@fortawesome/free-solid-svg-icons'
