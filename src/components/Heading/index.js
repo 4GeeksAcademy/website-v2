@@ -10,7 +10,8 @@ export const H2 = styled.h2`
   text-transform: uppercase;
   font-weight: 700;
   font-family: futura-pt, sans-serif;
-  color: ${props => props.primary ? "black" : "palevioletred"};
+  color: ${props => props.primary ? "green" : "black"};
+  color: ${props => props.primar ? "red" : "black"};
 
 `;
 export const H3 = styled.h3`
@@ -25,14 +26,15 @@ export const Sep = styled.div`
 export const Title = props => {
   return (
     <>
-      <><div className="row px-5"><H2>{props.title}</H2></div>
-        <div className="row"><Sep /></div>
-        <div className="row"></div></>
+      <div className="row px-5">{props.style == "light" ? <H2 primar>{props.title}</H2> : <H2>{props.title}</H2>}</div>
+      <div className="row"><Sep /></div>
+      <div className="row"></div>
     </>
   )
 }
 Title.propTypes = {
   title: PropTypes.string.isRequired,
+  style: PropTypes.string.isRequired,
 
 
 };
