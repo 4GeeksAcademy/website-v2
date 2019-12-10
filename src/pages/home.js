@@ -13,6 +13,7 @@ import Section from '../components/SectionDivider'
 import Footer from '../components/Footer'
 import {Spring} from '../components/spring'
 import ReactPlayer from 'react-player'
+import Icon from '../components/Icon'
 import PricesAndPayment from '../components/PricesAndPayment';
 import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
@@ -122,7 +123,7 @@ const Home = ({data}) => (
                 <div className="col-md-9 text-white program-body-title">ONE TEACHER EVERY FIVE</div>
               </div>
               <div className="row ">
-                <div className="col-md-3 .icon-glasses"></div>
+                <div className="col-md-3 "><Icon icon="trash" /></div>
                 <div className="col-md-9 text-white program-body-title">SENIOR TEACHERS PER STUDENT</div>
               </div>
               <div className="row">

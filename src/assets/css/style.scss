@@ -20,7 +20,6 @@
 }
 
 .MuiStepIcon-text {
-    
     display: none;
 }
 .col-img{
@@ -54,17 +53,6 @@ div h5{
   .script-bf-box:hover {
     background: hotpink;
   }
-  /* .test{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    color: black;
-    background: #f0f0f0;
-  } */
   .cred-container{
     background: #f9f9f9;
     border-radius: 1.25rem 0px 0px 0px;
@@ -83,17 +71,13 @@ div h5{
     font-size: 22px;
   }
   .card-why4 img{
-    /* width: 220px; */
-    /* height: 270px; */
-    /* box-shadow: 10px 10px 30px grey; */
     border-radius: 1.25rem;
 }
-.prova .test:nth-child(odd){
+  .prova .test:nth-child(odd){
   transform:translateY(50px);
 }
   .test:hover{
       transform:translateY(-20px);
-      /* background: #bebebe; */
   }
   .text-why{
     text-transform: uppercase;
@@ -106,28 +90,30 @@ div h5{
       font-weight: light;
       font-size: 16px;
   }
-  .why-title, .program-title, .who-title{
+  .why-title, 
+  .program-title, 
+  .who-title{
     font-weight: 800;
     font-size: 2rem;
     color: black;
   }
-  
-  .jobs-left, .jumbo-paragraph, .jumbo-lead, .who-lead, .alumni-left-lead, .location-left-lead{
+  .jobs-left, 
+  .jumbo-paragraph, 
+  .jumbo-lead, .who-lead, 
+  .alumni-left-lead, 
+  .location-left-lead{
       font-size: 12px;
       color: #bebebe;
       font-weight: 500;
-
   }
   .jobs-value{
       font-size: 36px;
-      font-weight: bold;
-      
+      font-weight: bold;  
   }
   .job-container{
     box-shadow: 10px 10px 30px #dedede;
     border-radius: 1.25rem;
   }
-  
   .jumbo-slogan{
     font-weight: 900;
     font-size: 36px;
@@ -140,8 +126,7 @@ div h5{
   .program-divider{
     height: 1rem;
     border-bottom: 2px solid #baeafc;
-    width: 2.5rem
-    
+    width: 2.5rem 
   }
   .program-lead{
     font-size: 12px;
@@ -169,44 +154,38 @@ div h5{
     font-size: 12px;
     color: #5d6163;
     border-bottom: 1px solid #5d6163;
-
   }
   .program-stand-features-body{
     background: black;
-    
     border-radius: 0 0 0 1.25rem;
   }
   .program-stand-features-body-right{
   font-weight: 800;
   font-size: 20px;
   color:#5d6163;
-  
   }
-  .program-stand-features-body .row, .program-stand-features-body-right .row{
+  .program-stand-features-body .row, 
+  .program-stand-features-body-right .row{
     height: 20%;
     border-bottom: 1px solid #5d6163;
-
   }
   .program-icon{
     color: #e5ba1d;
   }
-  .program-body-title, .alumni-left-title, .location-left-title{
+  .program-body-title, 
+  .alumni-left-title, 
+  .location-left-title{
     font-size: 22px;
       font-weight: 900;
       line-height: 26px;
       text-transform: uppercase;
   }
-  
   .jumbo-button{
     background-color: #0097CE;;
   }
   .jumbo-video{
     border-bottom-left-radius: 20px;
   }
-/*   
-  .cred-container{
-    background: #bebebe
-  } */
   .jumbo-container{
     height:400px;
   }
@@ -222,11 +201,9 @@ div h5{
     border-radius: 1.25rem;
     box-shadow: 10px 10px 30px #dedede;
     height: 200px;
-  
   }
   .program-box .row span{
     color: #0097CE;
-    
   }
   .box-title{
     font-weight: 800;
@@ -247,7 +224,6 @@ div h5{
   .custom-icon{
     font-size: 30px;
     color: #0097CE;
-    
   }
   .who-one{
     height: 400px;
@@ -258,28 +234,23 @@ div h5{
     background: #f5f8fb;
     border-radius: 1.25rem 0px 0px 0px;
   }
-  .why-container, .job-container{
+  .why-container, 
+  .job-container{
     transform:translateY(-180px);
   }
-  /* .why-title, .why{
-    transform:translateY(-180px);
-  } */
   .who-boxes .col-md-2{
     background: white;
     width: 250px;
     height: 100px;
     transform:translateY(-80px);
-    
   }
   .who-title-small{
     font-size: 24px;
     color: black;
   }
   .who-lead-small{
-    
     font-size: 12px;
     color: #0097CE;
-    
   }
   .alumni-container{
     background:#f5f8fb ;
@@ -289,13 +260,16 @@ div h5{
     height: 400px;
     background: white;
   }
-  .alumni-left, .location-left, .location-left img{
+  .alumni-left, 
+  .location-left, 
+  .location-left img{
     border-radius: 1.25rem 0px  0px 1.25rem;
     box-shadow: 10px 10px 30px #dedede;
   }
-  .alumni-right, .alumni-right img, .location-right{
+  .alumni-right, 
+  .alumni-right img, 
+  .location-right{
     border-radius: 0px 1.25rem 1.25rem  0px;
-    
     box-shadow: 10px 10px 30px #dedede;
   }
   .section-divider{
