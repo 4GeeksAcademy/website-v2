@@ -122,7 +122,7 @@ const Home = ({data}) => (
                 <div className="col-md-9 text-white program-body-title">ONE TEACHER EVERY FIVE</div>
               </div>
               <div className="row ">
-                <div className="col-md-3 program-icon">{glasses}</div>
+                <div className="col-md-3 .icon-glasses"></div>
                 <div className="col-md-9 text-white program-body-title">SENIOR TEACHERS PER STUDENT</div>
               </div>
               <div className="row">
