@@ -2,6 +2,21 @@
 @import '_colors';
 @import '_fonts.scss';
 
+//Desktop
+@media only screen and (min-width: 992px){
+  @import "./responsive/desktop.scss";
+}
+
+//Tablets
+@media only screen and (min-width: 768px) and (max-width: 992px){
+@import "./responsive/tablet.scss";
+}
+
+//Mobile
+@media only screen and (max-width: 768px){
+@import "./responsive/mobile.scss";
+}
+
 .MuiStepIcon-text {
     
     display: none;
