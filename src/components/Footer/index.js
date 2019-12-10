@@ -10,6 +10,7 @@ const Footer = () => (
                 <div className="row">
                     <div className="col-md-3">
                         <div className="row footer-title text-white">CONTACT</div>
+
                     </div>
                     <div className="col-md-3">
                         <div className="row footer-title text-white">COMPANY</div>

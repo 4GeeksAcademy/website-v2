@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../../assets/css/bootstrap.min.css';
-import '../../assets/css/fontawesome.css';
+// import '../../assets/css/bootstrap.min.css';
+// import '../../assets/css/fontawesome.css';
 import PropTypes from 'prop-types';
 
 const Heading = styled.h1`

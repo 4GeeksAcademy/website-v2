@@ -7,7 +7,7 @@ import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import '../../assets/css/style.css';
+import '../../assets/css/style.scss';
 // export default () => {
 //     const classes = useStyles();
 //     const [activeStep, setActiveStep] = React.useState(0);

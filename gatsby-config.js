@@ -50,6 +50,7 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
     'gatsby-transformer-yaml', {

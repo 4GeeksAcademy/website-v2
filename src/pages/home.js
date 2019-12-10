@@ -18,7 +18,7 @@ import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
 import Locations from '../components/Locations';
 import Jobs from '../components/Jobs';
-import '../assets/css/style.css'
+import '../assets/css/style.scss'
 import Link from 'gatsby-link'
 import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -112,7 +112,7 @@ const Home = ({data}) => (
               <div className="col-md-1 jumbo-divider "></div>
             </div>
             <div className="row jumbo-slogan px-5">
-              <div>LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</div>
+              <H1>LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</H1>
             </div>
             <div className="row jumbo-paragraph px-5 mt-3">
               Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useSpring, animated} from 'react-spring'
 import range from 'lodash-es/range'
 // import './styles.css'
-import '../../assets/css/style.css'
+import '../../assets/css/style.scss'
 
 
 const items = range(4);

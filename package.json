@@ -45,6 +45,7 @@
     "gatsby-transformer-sharp": "^2.2.13",
     "gatsby-transformer-yaml": "^2.2.15",
     "lodash-es": "^4.17.15",
+    "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-countup": "^4.2.3",

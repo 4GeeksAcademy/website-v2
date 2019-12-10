@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {useSpring, animated} from 'react-spring'
 import range from 'lodash-es/range'
-import '../../assets/css/style.css';
+import '../../assets/css/style.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/free-solid-svg-icons'
 
