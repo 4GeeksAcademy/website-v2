@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import '../../assets/css/bootstrap.min.css';
-// import '../../assets/css/fontawesome.css';
+import {Title} from '../Heading'
 import PropTypes from 'prop-types';
 
 const Heading = styled.h1`
@@ -24,7 +23,12 @@ const NextName = styled.h6`
 
 const Alumni = props => (
     <div className="container  alumni-container ">
-        <div className="row mb-3">
+        <Title
+            title="MEET THE ALUMNI AND PROJECTS"
+            style="light"
+            paragraph="View full comparison table >"
+        />
+        {/* <div className="row mb-3">
             <div class="col-md-12  program-title text-white text-center">
 
                 <div className="row justify-content-center mt-5 who-title">MEET THE ALUMNI AND PROJECTS</div>
@@ -37,7 +41,7 @@ const Alumni = props => (
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
         <div className="row ">
             <div className="col-md-12">
                 <div className="row justify-content-center">
