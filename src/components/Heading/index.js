@@ -10,9 +10,7 @@ export const H2 = styled.h2`
   text-transform: uppercase;
   font-weight: 700;
   font-family: futura-pt, sans-serif;
-  color: ${props => props.primary ? "green" : "black"};
-  color: ${props => props.primar ? "red" : "black"};
-
+  color: ${props => props.primary ? "white" : "black"};
 `;
 export const H3 = styled.h3`
   font-size: 18px;
@@ -21,13 +19,13 @@ export const H4 = styled.h4`
   font-size: 16px;
 `;
 export const Sep = styled.div`
-  border-bottom: 1px solid black;
+  border-bottom: ${props => props.primary ? "1px solid black" : "1px solid black"};
 `
 export const Title = props => {
   return (
     <>
-      <div className="row px-5">{props.style == "light" ? <H2 primar>{props.title}</H2> : <H2>{props.title}</H2>}</div>
-      <div className="row"><Sep /></div>
+      <div className="row px-5">{props.style == "light" ? <H2 primary>{props.title}</H2> : <H2>{props.title}</H2>}</div>
+      <div className="row">{props.style == "light" ? <Sep primary>{props.title}</Sep> : <Sep>{props.title}</Sep>}</div>
       <div className="row"></div>
     </>
   )
