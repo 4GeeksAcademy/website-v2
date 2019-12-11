@@ -21,7 +21,7 @@ import Locations from '../components/Locations';
 import Jobs from '../components/Jobs';
 import '../assets/css/style.scss'
 import Link from 'gatsby-link'
-import {H1, H2, Title} from '../components/Heading'
+import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
 import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUserFriends, faGlasses, faClock, faChalkboardTeacher, faCommentAlt} from '@fortawesome/free-solid-svg-icons'
@@ -63,11 +63,15 @@ const Home = ({data}) => (
             <div className="row jumbo-lead px-5">
               <H1>Miami Coding Bootcamp</H1>
             </div>
-            <Title
-              title="LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE"
-              style="light"
-              paragraph="Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community."
-            />
+            <div className="row px-5">
+              <Separator primary />
+            </div>
+            <div className="row px-5">
+              <H2 primary>LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</H2>
+            </div>
+            <div className="row px-5">
+              <Paragraph primary>Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.</Paragraph>
+            </div>
             <div className="row px-5 mt-3">
               <Link to="/program">
                 <div className="btn text-white btn-md rounded-pill jumbo-button" role="button">CHOOSE YOUR PROGRAM </div>
