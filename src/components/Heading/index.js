@@ -20,10 +20,13 @@ export const H4 = styled.h4`
   font-size: 16px;
 `;
 export const Separator = styled.div`
-  border-bottom: ${props => props.primary ? "1px solid #0097CE" : "1px solid black"};
+  height: 5px;
+  width: 30px;
+  
+  border-bottom: ${props => props.primary ? "2px solid #0097CE" : "1px solid #DEDEDE"};
 `
 export const Paragraph = styled.div`
-  text-align: center;
+  text-align: left;
   font-size: 12px;
   color: ${props => props.primary ? "#0097CE" : "black"};
 `
@@ -31,8 +34,8 @@ export const Title = props => {
   return (
     <>
       <div className="row px-5">{props.style == "light" ? <H2 primary>{props.title}</H2> : <H2>{props.title}</H2>}</div>
-      <div className="row ">{props.style == "dark" ? <Separator primary>{props.title}</Separator> : <Separator>{props.title}</Separator>}</div>
-      <div className="row">{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
+      <div className="row px-5 mb-3">{props.style == "light" ? <Separator primary /> : <Separator />}</div>
+      <div className="row px-5">{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
     </>
   )
 }

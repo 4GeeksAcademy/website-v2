@@ -63,7 +63,7 @@ const Home = ({data}) => (
             <div className="row jumbo-lead px-5">
               <H1>Miami Coding Bootcamp</H1>
             </div>
-            <Title title="test" style="light" />
+            <Title title="test" style="light" paragraph="Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community." />
             <div className="row px-5 mb-3">
               <div className="col-md-1 jumbo-divider "></div>
             </div>
