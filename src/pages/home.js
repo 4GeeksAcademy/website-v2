@@ -59,20 +59,15 @@ const Home = ({data}) => (
     <div className="jumbotron bg-white jumbo-container">
       <div class="container">
         <div className="row">
-          <div className="col-md-6 px-5">
+          <div className="col-md-6 px-0">
             <div className="row jumbo-lead px-5">
               <H1>Miami Coding Bootcamp</H1>
             </div>
-            <Title title="test" style="light" paragraph="Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community." />
-            <div className="row px-5 mb-3">
-              <div className="col-md-1 jumbo-divider "></div>
-            </div>
-            <div className="row jumbo-slogan px-5">
-              <div>LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</div>
-            </div>
-            <div className="row jumbo-paragraph px-5 mt-3">
-              Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
-              </div>
+            <Title
+              title="LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE"
+              style="light"
+              paragraph="Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community."
+            />
             <div className="row px-5 mt-3">
               <Link to="/program">
                 <div className="btn text-white btn-md rounded-pill jumbo-button" role="button">CHOOSE YOUR PROGRAM </div>
@@ -92,7 +87,14 @@ const Home = ({data}) => (
 
     {/* WHAT MAKES PROGRAM STAND OUT? */}
     <div className="container program-container my-5">
-      <div className="row pt-5">
+      <div class="col-md-6 offset-md-3 program-title text-white text-center">
+        <Title
+          title="WHAT MAKES THIS PROGRAM STAND OUT?"
+          style=""
+          paragraph="View full comparison table >"
+        />
+      </div>
+      {/* <div className="row pt-5">
         <div class="col-md-6 offset-md-3 program-title text-white text-center">
           WHAT MAKES THIS PROGRAM STAND OUT?
         </div>
@@ -103,7 +105,7 @@ const Home = ({data}) => (
         <div class="col-md-6 offset-md-3 program-lead text-white text-center">
           View full comparison table >
         </div>
-      </div>
+      </div> */}
 
       <div className="row program-features justify-content-center mt-5">
         <div className="col-md-8 program-stand">
