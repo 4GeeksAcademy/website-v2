@@ -61,7 +61,7 @@ const Home = ({data}) => (
         <div className="row">
           <div className="col-md-6 px-5">
             <div className="row jumbo-lead px-5">
-              <H2 primary>Miami Coding Bootcamp</H2>
+              <H1>Miami Coding Bootcamp</H1>
             </div>
             <Title title="test" style="light" />
             <div className="row px-5 mb-3">
