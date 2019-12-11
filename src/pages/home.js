@@ -84,29 +84,13 @@ const Home = ({data}) => (
     <QueryTest />
     <Why4Geeks />
     <Jobs />
-
     {/* WHAT MAKES PROGRAM STAND OUT? */}
     <div className="container program-container my-5">
-      <div class="col-md-6 offset-md-3 program-title text-white text-center">
-        <Title
-          title="WHAT MAKES THIS PROGRAM STAND OUT?"
-          style=""
-          paragraph="View full comparison table >"
-        />
-      </div>
-      {/* <div className="row pt-5">
-        <div class="col-md-6 offset-md-3 program-title text-white text-center">
-          WHAT MAKES THIS PROGRAM STAND OUT?
-        </div>
-      </div>
-      <div className="row justify-content-center mb-3">
-        <div className=" program-divider"></div></div>
-      <div className="row">
-        <div class="col-md-6 offset-md-3 program-lead text-white text-center">
-          View full comparison table >
-        </div>
-      </div> */}
-
+      <Title
+        title="WHAT MAKES THIS PROGRAM STAND OUT?"
+        style=""
+        paragraph="View full comparison table >"
+      />
       <div className="row program-features justify-content-center mt-5">
         <div className="col-md-8 program-stand">
           <div className="row program-stand-row-header">
@@ -174,16 +158,11 @@ const Home = ({data}) => (
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6 offset-md-3 program-title text-white text-center ">JOIN 4GEEKS</div>
-
-      </div>
-      <div className="row justify-content-center mb-3">
-        <div className=" program-divider"></div>
-      </div>
-      <div className="row">
-        <div class="col-md-6 offset-md-3 program-lead text-white text-center mb-5">
-          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        </div>
+        <Title
+          title="JOIN 4GEEKS"
+          style=""
+          paragraph="Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum."
+        />
       </div>
       <div className="row">
         <div class="col-md-4 offset-md-2 program-box bg-white p-4 mr-3">

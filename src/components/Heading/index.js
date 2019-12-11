@@ -37,9 +37,11 @@ export const Title = props => {
   }
   return (
     <>
-      <div className="row px-5">{props.style == "light" ? <H2 primary>{props.title}</H2> : <H2>{props.title}</H2>}</div>
-      <div className={"row px-5 mb-3 " + temp}>{props.style == "light" ? <Separator primary /> : <Separator />}</div>
-      <div className={"row px-5 " + temp}>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
+      <div class="col-md-6 offset-md-3 text-center">
+        <div className={"row px-5 " + temp}>{props.style == "light" ? <H2 primary>{props.title}</H2> : <H2>{props.title}</H2>}</div>
+        <div className={"row px-5 mb-3 " + temp}>{props.style == "light" ? <Separator primary /> : <Separator />}</div>
+        <div className={"row px-5 " + temp}>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
+      </div>
     </>
   )
 }
