@@ -22,6 +22,7 @@ import Jobs from '../components/Jobs';
 import '../assets/css/style.scss'
 import Link from 'gatsby-link'
 import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
+import {Container} from '../components/Sections'
 import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUserFriends, faGlasses, faClock, faChalkboardTeacher, faCommentAlt} from '@fortawesome/free-solid-svg-icons'
@@ -161,13 +162,13 @@ const Home = ({data}) => (
           <div className="btn text-white btn-md rounded-pill  btn-outline-light button-program">COMPARE 4GEEKS WITH OTHER SCHOOLS</div>
         </div>
       </div>
-      <div className="row">
-        <Title
-          title="JOIN 4GEEKS"
-          style=""
-          paragraph="Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum."
-        />
-      </div>
+
+      <Title
+        title="JOIN 4GEEKS"
+        style="d"
+        paragraph="Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum."
+      />
+
       <div className="row">
         <div class="col-md-4 offset-md-2 program-box bg-white p-4 mr-3">
           <div className="row box-title">GEEK<span>PAL</span></div>
@@ -187,6 +188,7 @@ const Home = ({data}) => (
         </div>
       </div>
     </div>
+    {/* kkk */}
     {/* WHAT MAKES PROGRAM STAND OUT?  END SECTION*/}
     <WhoIsHiring />
     <Alumni />

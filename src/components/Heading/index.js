@@ -12,7 +12,7 @@ export const H2 = styled.h2`
   font-style: normal;
   font-family: futura-pt, sans-serif;
   letter-spacing: 0px;
-  color: black}
+  color: black
 `;
 export const H3 = styled.h3`
 font-size: 36px;
@@ -27,7 +27,7 @@ export const H4 = styled.h4`
   font-size: 16px;
 `;
 export const Separator = styled.div`
-  margin: 1rem 0px;
+  margin: .5rem 0px;
   height: 5px;
   width: 30px;
   border-bottom: ${props => props.primary ? "2px solid #0097CE" : "2px solid #BBEAFC"};
@@ -44,10 +44,12 @@ export const Title = props => {
   }
   return (
     <>
-      <div class="col-md-6 offset-md-3 text-center">
-        <div className={"row px-5 " + temp}>{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</div>
-        <div className={"row px-5 mb-3 " + temp}>{props.style == "light" ? <Separator primary /> : <Separator />}</div>
-        <div className={"row px-5 " + temp}>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
+      <div className="row py-4">
+        <div className="col-md-6 offset-md-3 text-center">
+          <div className={"row px-5 " + temp}>{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</div>
+          <div className={"row px-5 mb-3 " + temp}>{props.style == "light" ? <Separator primary /> : <Separator />}</div>
+          <div className={"row px-5 " + temp}>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
+        </div>
       </div>
     </>
   )
