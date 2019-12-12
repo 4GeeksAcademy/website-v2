@@ -1,20 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import {Colors, Icons} from '../../components/Styling'
 
 export const H1 = styled.h1`
   font-size: 12px;
 `;
 export const H2 = styled.h2`
-  font-size: 40px;
-  
+  font-size: 40px;  
   font-family: vortice-concept, sans-serif;
-
-font-weight: 400;
-
-font-style: normal;
+  font-weight: 400;
+  font-style: normal;
   letter-spacing: 0px;
-  color: $blue
+  color: ${Colors.black}
 `;
 export const H3 = styled.h3`
 font-size: 36px;
@@ -23,7 +21,7 @@ font-weight: 800;
 font-style: normal;
 font-family: futura-pt, sans-serif;
 letter-spacing: 0px;
-color: ${props => props.primary ? "black" : "white"}
+color: ${props => props.primary ? `${Colors.black}` : `${Colors.white}`}
 `;
 export const H4 = styled.h4`
   font-size: 16px;
@@ -32,12 +30,11 @@ export const Separator = styled.div`
   margin: .5rem 0px;
   height: 5px;
   width: 30px;
-  border-bottom: ${props => props.primary ? "2px solid #0097CE" : "2px solid #BBEAFC"};
+  border-bottom: ${props => props.primary ? `2px solid ${Colors.blue} ` : `2px solid ${Colors.lightBlue}`};
 `
 export const Paragraph = styled.div`
-  text-align: left;
   font-size: 12px;
-  color: ${props => props.primary ? "#0097CE" : "#BBEAFC"};
+  color: ${props => props.primary ? `${Colors.gray}` : `${Colors.lightBlue}`};
 `
 export const Title = props => {
   let temp = ""

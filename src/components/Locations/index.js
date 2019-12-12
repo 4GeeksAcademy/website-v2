@@ -1,22 +1,14 @@
 import React from 'react';
+import {Title} from '../Heading'
 import styled from 'styled-components';
 
 const Locations = props => (
     <div className="container  location-container mt-5">
-        <div className="row mb-3">
-            <div class="col-md-12  program-title text-white text-center">
-
-                <div className="row justify-content-center mt-5">OUR LOCATIONS</div>
-                <div className="row justify-content-center mb-3">
-                    <div className=" program-divider"></div>
-                </div>
-                <div className="row justify-content-center who-lead ">
-                    <div className="col-md-6">
-                        Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Title
+            title="OUR LOCATIONS"
+            style="light"
+            paragraph="Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+        />
         <div className="row ">
             <div className="col-md-12">
                 <div className="row justify-content-center">
