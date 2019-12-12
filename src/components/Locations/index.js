@@ -6,7 +6,7 @@ const Locations = props => (
         <div className="row mb-3">
             <div class="col-md-12  program-title text-white text-center">
 
-                <div className="row justify-content-center mt-5 who-title">OUR LOCATIONS</div>
+                <div className="row justify-content-center mt-5">OUR LOCATIONS</div>
                 <div className="row justify-content-center mb-3">
                     <div className=" program-divider"></div>
                 </div>

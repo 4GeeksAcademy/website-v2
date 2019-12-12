@@ -1,18 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import '../../assets/css/_colors.scss'
 
 export const H1 = styled.h1`
   font-size: 12px;
 `;
 export const H2 = styled.h2`
   font-size: 40px;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-style: normal;
-  font-family: futura-pt, sans-serif;
+  
+  font-family: vortice-concept, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
   letter-spacing: 0px;
-  color: black
+  color: $blue
 `;
 export const H3 = styled.h3`
 font-size: 36px;
