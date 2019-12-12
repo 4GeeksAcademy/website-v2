@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import '../../assets/css/_colors.scss'
 
 export const H1 = styled.h1`
   font-size: 12px;
