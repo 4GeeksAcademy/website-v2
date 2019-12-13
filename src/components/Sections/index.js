@@ -6,6 +6,8 @@ import {Colors} from '../../components/Styling'
 const color = props => props.color;
 const height = props => props.height;
 const marginLeft = props => props.marginLeft;
+const borderTopLeft = props => props.borderTopLeft;
+const borderBottomLeft = props => props.borderBottomLeft;
 
 export const Container = styled.div`
     width: 100%;
@@ -18,13 +20,14 @@ export const Container = styled.div`
         :
         `${Colors.lightGray}`
     };
-    border-radius: 1.25rem 0px 0px ${test};
+    border-radius: ${borderTopLeft} 0px 0px ${borderBottomLeft};
 `;
-
 Container.propTypes = {
     primary: PropTypes.string.isRequired,
     color: PropTypes.string,
     height: PropTypes.string,
     marginLeft: PropTypes.string,
+    borderTopLeft: PropTypes.string,
+    borderBottomLeft: PropTypes.string,
 
 }
