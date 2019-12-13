@@ -3,24 +3,18 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
 
-const color = props => props.color;
-const height = props => props.height;
-const marginLeft = props => props.marginLeft;
-const borderTopLeft = props => props.borderTopLeft;
-const borderBottomLeft = props => props.borderBottomLeft;
-
 export const Container = styled.div`
     width: 100%;
-    height: ${height};
+    height: ${props => props.height};
     vertical-align: baseline;
-    margin-left: ${marginLeft};
+    margin-left: ${props.marginLeft};
     background: ${props => props.primary
         ?
         `${Colors.blue}`
         :
         `${Colors.lightGray}`
     };
-    border-radius: ${borderTopLeft} 0px 0px ${borderBottomLeft};
+    border-radius: ${props => props.borderTopLeft} 0px 0px ${props => props.borderBottomLeft};
 `;
 Container.propTypes = {
     primary: PropTypes.string.isRequired,
