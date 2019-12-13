@@ -22,8 +22,8 @@ const WhoIsHiring = () => {
     data.who.edges[0].node.partners.map((partner, i) => {
         if ((i + 1) % 4 == 0) {
             content.push(
-                <div className="row" key={i}>
-                    <div key={i} className="col-md-3">
+                <div className="row">
+                    <div key={i} className="col-md-3 test">
                         <img src={partner.image} width="128px" alt={partner.name} />
                     </div>
                 </div>
@@ -33,7 +33,7 @@ const WhoIsHiring = () => {
         }
     });
     return (
-        <div className="row">
+        <div>
             {content}
         </div>
     );
