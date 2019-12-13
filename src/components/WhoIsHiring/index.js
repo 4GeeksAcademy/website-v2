@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import {Container} from '../../components/Sections'
 
 const WhoIsHiring = () => (
-    <div className="container mt-5">
+    <Container>
         <div className="row who-one mb-3">
             <div class="col-md-6 offset-md-3 program-title text-white text-center">
 
@@ -46,8 +46,7 @@ const WhoIsHiring = () => (
             </div>
 
         </div>
-
-    </div>
+    </Container>
 );
 
 export default WhoIsHiring;
