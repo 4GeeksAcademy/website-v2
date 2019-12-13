@@ -90,7 +90,7 @@ const Home = ({data}) => (
     <Why4Geeks />
     <Jobs />
     {/* WHAT MAKES PROGRAM STAND OUT? */}
-    <Container primary>
+    <Container primary test="10px">
       <Title
         title="WHAT MAKES THIS PROGRAM STAND OUT?"
         style=""
