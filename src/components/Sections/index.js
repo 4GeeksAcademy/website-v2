@@ -7,7 +7,7 @@ export const Container = styled.div`
     width: 100%;
     height: ${props => props.height};
     vertical-align: baseline;
-    margin-left: ${props.marginLeft};
+    margin-left: ${props => props.marginLeft};
     background: ${props => props.primary
         ?
         `${Colors.blue}`
