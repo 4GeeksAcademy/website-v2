@@ -29,5 +29,4 @@ Container.propTypes = {
     marginLeft: PropTypes.string,
     borderTopLeft: PropTypes.string,
     borderBottomLeft: PropTypes.string,
-
 }

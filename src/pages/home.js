@@ -90,6 +90,12 @@ const Home = ({data}) => (
     <Why4Geeks />
     <Jobs />
     {/* WHAT MAKES PROGRAM STAND OUT? */}
+    <Container
+      primary
+      height="300px"
+      marginLeft="60px"
+      borderTopLeft="1.25rem"
+    />
     <Container primary test="10px">
       <Title
         title="WHAT MAKES THIS PROGRAM STAND OUT?"
