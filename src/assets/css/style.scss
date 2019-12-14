@@ -295,3 +295,16 @@ div h5{
   .location-right{
     background: white;
   }
+  .partner-card {
+    text-align: center;
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,.1);
+    padding: 20px;
+    height: 130px;
+    margin-bottom: 20px;
+}
+.partner-card img {
+  margin: auto;
+  width: inherit;
+  max-height: 100%;
+  max-width: 100%;
+}

@@ -31,34 +31,21 @@ const WhoIsHiring = () => {
                 </div>
                 </div>
             </div>
-            <div className="row who-two">
-                <div class="col-md-12  program-title text-white text-center">
-                    <div className="row  mt-5 who-boxes justify-content-center">
-                        <div className="col-md-2 mr-3"></div>
-                        <div className="col-md-2 mr-3"></div>
-                        <div className="col-md-2 mr-3"></div>
-                        <div className="col-md-2"></div>
+            <div className="row  mt-5 p-3">
+                {data.who.edges[0].node.partners.map((partner, index) => (
+                    <div key={index} className="col-6 col-xs-6 col-sm-3">
+                        <div className="card partner-card ">
+                            <img src={partner.image} width="100%" height="150" />
+                        </div>
                     </div>
-                    <div className="row justify-content-center mt-3 who-boxes">
-                        <div className="col-md-2 mr-3"></div>
-                        <div className="col-md-2 mr-3"></div>
-                        <div className="col-md-2 mr-3"></div>
-                        <div className="col-md-2"></div>
-                    </div>
-                    <div className="row justify-content-center mt-3 who-boxes">
-                        <div className="col-md-2 mr-3"></div>
-                        <div className="col-md-2 mr-3"></div>
-                        <div className="col-md-2 mr-3"></div>
-                        <div className="col-md-2"></div>
-                    </div>
-                    <div className="row justify-content-center mb1 who-title-small">
-                        438 COMPANIES
-                </div>
-                    <div className="row justify-content-center who-lead-small ">
-                        Review our latest hirings
-                </div>
-                </div>
+                ))}
             </div>
+            <div className="row justify-content-center mb1 who-title-small">
+                438 COMPANIES
+                </div>
+            <div className="row justify-content-center who-lead-small ">
+                Review our latest hirings
+                </div>
         </Container>
     )
 };
