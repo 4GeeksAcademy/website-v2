@@ -24,12 +24,13 @@ Container.propTypes = {
     borderTopLeft: PropTypes.string,
     borderBottomLeft: PropTypes.string,
 }
-
+Container.defaultProps = {
+    marginLeft: '100px',
+    borderBottomLeft: '1.25rem'
+};
 export const Section = props => {
     const Height = styled.div`
-        
         height: ${props.height}
-      
     `;
     return (
         <Height></Height>
@@ -37,6 +38,4 @@ export const Section = props => {
 };
 Section.propTypes = {
     height: PropTypes.string
-
-
 };

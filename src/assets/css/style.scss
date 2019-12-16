@@ -15,7 +15,7 @@
 }
 
 //Mobile
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 576px){
 @import "./responsive/mobile.scss";
 }
 
@@ -311,4 +311,5 @@ div h5{
 
 .tt{
   height: 300px;
+  margin-left: 100px;
 }

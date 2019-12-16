@@ -57,10 +57,7 @@ Title.propTypes = {
   title: PropTypes.string.isRequired,
   paragraph: PropTypes.string,
   style: PropTypes.string.isRequired,
-
-
 };
-
 H2.propTypes = {
   primary: PropTypes.string.isRequired,
 }
