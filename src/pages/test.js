@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
 import Image from '../components/Image';
+import {Container, Section} from '../components/Sections'
 
 const Page = styled.div`
   width: 100%;
@@ -30,14 +31,20 @@ const Label = styled.p`
 
 const Test = ({data}) => (
   <Layout>
-    <Page>
-      <Image />
-      <Heading>Test Page</Heading>
-      <Label>Starter</Label>
-      {/* {data.allCredentialsDataYaml.edges.map((item) => (
-        <div key={item.node.id}>{item.node.rating}</div>
-      ))} */}
-    </Page>
+    <Container
+
+      height="500px"
+      marginLeft="100px"
+      borderTopLeft="1.25rem"
+    />
+    <Section height="300px" />
+    <Container
+      primary
+      height="1225px"
+      marginLeft="100px"
+      borderTopLeft="1.25rem"
+    />
+
   </Layout>
 );
 

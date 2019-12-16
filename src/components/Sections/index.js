@@ -24,3 +24,19 @@ Container.propTypes = {
     borderTopLeft: PropTypes.string,
     borderBottomLeft: PropTypes.string,
 }
+
+export const Section = props => {
+    const Height = styled.div`
+        
+        height: ${props.height}
+      
+    `;
+    return (
+        <Height></Height>
+    )
+};
+Section.propTypes = {
+    height: PropTypes.string
+
+
+};
