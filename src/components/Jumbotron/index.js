@@ -2,8 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Jumbotron = () => (
-    <div className="jumbotron bg-white jumbo-container">
-        <div class="container">
+    <div className="d-lg-flex flex-lg-row flex-sm-column bg-dark tt">
+        <div className="flex-lg-fill align-self-center flex-sm-fill bg-primary">One
+            {/* <div className="align-self-center">One</div> */}
+        </div>
+        <div className="flex-lg-fill  flex-sm-fill bg-info">Two</div>
+    </div>
+);
+
+export default Jumbotron;
+
+
+{/* <div class="container">
             <div className="row">
                 <div className="col-md-6 px-0">
                     <div className="row jumbo-lead px-5">
@@ -29,8 +39,4 @@ const Jumbotron = () => (
                     <img src="https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80" width="100%" height="500px%" />
                 </div>
             </div>
-        </div>
-    </div>
-);
-
-export default Jumbotron;
+        </div> */}

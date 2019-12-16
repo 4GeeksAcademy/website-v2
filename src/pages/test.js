@@ -4,6 +4,7 @@ import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
 import Image from '../components/Image';
 import {Container, Section} from '../components/Sections'
+import Jumbotron from '../components/Jumbotron'
 
 const Page = styled.div`
   width: 100%;
@@ -31,6 +32,7 @@ const Label = styled.p`
 
 const Test = ({data}) => (
   <Layout>
+    <Jumbotron />
     <Container
 
       height="500px"
