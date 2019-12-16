@@ -65,13 +65,18 @@ const Test = ({data}) => (
       </div>
     </Jumbo>
     <Container
+      color="grey"
       height="600px"
       marginLeft="100px"
       borderTopLeft="1.25rem"
     />
-    <Section height="300px" />
     <Container
-      primary
+
+      height="500px"
+      marginLeft="100px"
+    />
+    <Container
+
       height="1225px"
       marginLeft="100px"
       borderTopLeft="1.25rem"

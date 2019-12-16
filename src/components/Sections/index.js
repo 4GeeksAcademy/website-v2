@@ -8,16 +8,16 @@ export const Container = styled.div`
     height: ${props => props.height};
     vertical-align: baseline;
     margin-left: ${props => props.marginLeft};
-    background: ${props => props.primary
+    background: ${props => props.color === "blue"
         ?
         `${Colors.blue}`
-        :
-        `${Colors.lightGray}`
+        : props.color === "grey"
+            ? `${Colors.lightGray}`
+            : `${Colors.white}`
     };
     border-radius: ${props => props.borderTopLeft} 0px 0px ${props => props.borderBottomLeft};
 `;
 Container.propTypes = {
-    primary: PropTypes.string.isRequired,
     color: PropTypes.string,
     height: PropTypes.string,
     marginLeft: PropTypes.string,
