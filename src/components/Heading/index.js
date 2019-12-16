@@ -24,7 +24,7 @@ letter-spacing: 0px;
 color: ${props => props.primary ? `${Colors.black}` : `${Colors.white}`}
 `;
 export const H4 = styled.h4`
-  font-size: 16px;
+  font-size: 24px;
 `;
 export const Separator = styled.div`
   margin: .5rem 0px;

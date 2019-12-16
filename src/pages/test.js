@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
-import Image from '../components/Image';
 import Link from 'gatsby-link'
-import {Container, Section} from '../components/Sections'
+import {Container, Divider} from '../components/Sections'
 import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
 import {Jumbo} from '../components/Jumbotron'
+import QueryTest from '../components/QueryTest'
 
 const Page = styled.div`
   width: 100%;
@@ -35,7 +35,7 @@ const Test = ({data}) => (
       <div class="container-fluid">
         <div className="row ">
           <div className="col-md-6  px-0 ">
-            <Section height="100px" />
+            <Divider height="100px" />
             <div className="row">
               <div className="col-md-6 mx-auto">
                 <div className="row">
@@ -71,10 +71,10 @@ const Test = ({data}) => (
       borderTopLeft="1.25rem"
     />
     <Container
-
+      color=""
       height="500px"
       marginLeft="100px"
-    />
+    ><QueryTest /></Container>
     <Container
 
       height="1225px"
@@ -85,16 +85,4 @@ const Test = ({data}) => (
   </Layout>
 );
 
-// export const my = graphql`
-//     query myQuery{
-//       allCredentialsDataYaml {
-//         edges {
-//           node {
-//             credentials
-//             }
-//           }
-//         }
-//       }
-//     }
-// `;
 export default Test;

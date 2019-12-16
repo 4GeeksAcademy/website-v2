@@ -29,7 +29,7 @@ Container.defaultProps = {
     borderBottomLeft: '1.25rem',
     height: '400px'
 };
-export const Section = props => {
+export const Divider = props => {
     const Height = styled.div`
         height: ${props.height}
     `;
@@ -37,6 +37,6 @@ export const Section = props => {
         <Height></Height>
     )
 };
-Section.propTypes = {
+Divider.propTypes = {
     height: PropTypes.string
 };
