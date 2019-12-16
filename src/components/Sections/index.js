@@ -26,7 +26,8 @@ Container.propTypes = {
 }
 Container.defaultProps = {
     marginLeft: '100px',
-    borderBottomLeft: '1.25rem'
+    borderBottomLeft: '1.25rem',
+    height: '400px'
 };
 export const Section = props => {
     const Height = styled.div`
