@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {H4} from '../Heading'
+import {Card} from '../Card'
 import {useSpring, animated} from 'react-spring'
 import '../../assets/css/style.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -34,12 +35,17 @@ export default () => {
       {data.credentials.edges.map((i, index) => {
         console.log(i.node.cred_value)
         return (
-          <div key={index} className="col-md-3 test">
-            <div className="card p-3 text-center ">
+          <div key={index} className="col-md-2">
+            <Card
+              height="275px"
+              width="200px"
+              color="white"
+              shadow
+            >
               <div className="icons mb-3">{graduation}</div>
               <div className="cred-title">{i.node.credential}</div>
               <div><H4>{i.node.cred_symbol}{i.node.cred_value}</H4></div>
-            </div>
+            </Card>
           </div>
         )
       })}

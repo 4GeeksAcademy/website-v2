@@ -69,12 +69,15 @@ const Test = ({data}) => (
       height="600px"
       marginLeft="100px"
       borderTopLeft="1.25rem"
-    />
+    >
+      <Divider height="150px"></Divider>
+      <QueryTest />
+    </Container>
     <Container
       color=""
       height="500px"
       marginLeft="100px"
-    ><QueryTest /></Container>
+    ></Container>
     <Container
 
       height="1225px"
