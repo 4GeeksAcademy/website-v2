@@ -65,7 +65,7 @@ const Test = ({data}) => (
       </div>
     </Jumbo>
     <Container
-      height="500px"
+      height="600px"
       marginLeft="100px"
       borderTopLeft="1.25rem"
     />
