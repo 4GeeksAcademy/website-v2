@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
 
 export const Card = styled.div`
+    flex-direction: column;
     width: ${props => props.width};
     height: ${props => props.height};
     background: ${props => props.color === "blue"
@@ -23,6 +24,7 @@ export const Card = styled.div`
         : props.move === "down"
         && `translateY(${props.down})`
     }
+    
 `;
 Card.propTypes = {
     color: PropTypes.string,

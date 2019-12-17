@@ -8,23 +8,28 @@ export const H1 = styled.h1`
 `;
 export const H2 = styled.h2`
   font-size: 40px;  
-  font-family: vortice-concept, sans-serif;
-  font-weight: 400;
+  font-family: lato, sans-serif;
+  font-weight: 800;
   font-style: normal;
   letter-spacing: 0px;
+  text-transform: ${props => props.up && "uppercase"};
   color: ${Colors.black}
 `;
 export const H3 = styled.h3`
 font-size: 36px;
-text-transform: uppercase;
 font-weight: 800;
 font-style: normal;
-font-family: futura-pt, sans-serif;
+font-family: lato, sans-serif;
 letter-spacing: 0px;
+text-transform: ${props => props.up && "uppercase"};
 color: ${props => props.primary ? `${Colors.black}` : `${Colors.white}`}
 `;
 export const H4 = styled.h4`
-  font-size: 24px;
+  font-size: 30px;
+  text-transform: ${props => props.up && "uppercase"};
+  font-style: normal;
+  font-family: lato, sans-serif;
+  font-weight: 800;
 `;
 export const Separator = styled.div`
   margin: .5rem 0px;
