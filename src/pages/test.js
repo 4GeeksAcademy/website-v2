@@ -5,6 +5,7 @@ import Layout from '../global/Layout';
 import Link from 'gatsby-link'
 import {Container, Divider} from '../components/Sections'
 import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
+import {Colors} from '../components/Styling'
 import {Jumbo} from '../components/Jumbotron'
 import QueryTest from '../components/QueryTest'
 import {Pencil} from '../components/Styling'
@@ -79,7 +80,7 @@ const Test = ({data}) => (
       height="500px"
       marginLeft="100px"
     ></Container>
-    <Pencil />
+    <Pencil height="48px" color={Colors.yellow} fill={Colors.yellow} />
     <Container
 
       height="1225px"
