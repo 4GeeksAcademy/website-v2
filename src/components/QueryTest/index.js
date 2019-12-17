@@ -40,14 +40,14 @@ export default () => {
               color="white"
               shadow
             >
-              <div className="">
+              <div className="py-4">
                 {(i.node.credential === "Campuses") && <Trophy width="48" color={Colors.blue} fill={Colors.blue} />}
                 {(i.node.credential === "Alumni") && <Graduation width="48" color={Colors.blue} fill={Colors.blue} />}
                 {(i.node.credential === "Rating") && <Book width="48" color={Colors.blue} fill={Colors.blue} />}
                 {(i.node.credential === "Hired") && <Hand width="48" color={Colors.blue} fill={Colors.blue} />}
               </div>
-              <div className="card-body"><H4 up>{i.node.credential}</H4></div>
-              <div className="card-footer bg-white border-0">
+              <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
+              <div className="card-footer bg-white border-0 p-0">
                 {(i.node.credential === "Hired") ? <H2>{i.node.cred_value}{i.node.cred_symbol}</H2> : <H2>{i.node.cred_symbol}{i.node.cred_value}</H2>}
               </div>
             </Card>
