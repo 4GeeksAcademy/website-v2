@@ -59,5 +59,5 @@ Title.propTypes = {
   style: PropTypes.string.isRequired,
 };
 H2.propTypes = {
-  primary: PropTypes.string.isRequired,
+  primary: PropTypes.bool.isRequired,
 }

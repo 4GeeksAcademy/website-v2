@@ -34,7 +34,7 @@ const Label = styled.p`
 const Test = ({data}) => (
   <Layout>
     <Jumbo height="400px" marginLeft="100px">
-      <div class="container-fluid">
+      <div className="container-fluid">
         <div className="row ">
           <div className="col-md-6  px-0 ">
             <Divider height="100px" />

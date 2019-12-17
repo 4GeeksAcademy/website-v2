@@ -29,7 +29,7 @@ Card.propTypes = {
     width: PropTypes.string,
     height: PropTypes.string,
     borders: PropTypes.string,
-    shadow: PropTypes.string,
+    shadow: PropTypes.bool,
     move: PropTypes.string,
     up: PropTypes.string,
     down: PropTypes.string,
