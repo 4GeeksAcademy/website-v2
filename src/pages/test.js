@@ -7,6 +7,7 @@ import {Container, Divider} from '../components/Sections'
 import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
 import {Jumbo} from '../components/Jumbotron'
 import QueryTest from '../components/QueryTest'
+import {Pencil} from '../components/Styling'
 
 const Page = styled.div`
   width: 100%;
@@ -78,6 +79,7 @@ const Test = ({data}) => (
       height="500px"
       marginLeft="100px"
     ></Container>
+    <Pencil />
     <Container
 
       height="1225px"
