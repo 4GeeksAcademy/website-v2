@@ -42,9 +42,19 @@ export const Wrapper = props => {
     )
 }
 export const Row = styled.div`
+
 `
 export const Col = styled.div`
-
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    border-radius: ${props => props.borderTopLeft} 0px 0px 0px;
+    background: ${props => props.color === "blue"
+        ?
+        `${Colors.blue}`
+        : props.color === "grey"
+            ? `${Colors.lightGray}`
+            : `${Colors.white}`
+    };
 `
 export const Container = styled.div`
     width: 100%;
