@@ -7,11 +7,9 @@ import styled from 'styled-components';
 
 export const Jumbo = styled.div`
   width: 100%;
-  margin-left: ${props => props.marginLeft};
   height: ${props => props.height};
 `;
 Jumbo.propTypes = {
-    marginLeft: PropTypes.string.isRequired,
-    height: PropTypes.string,
+  height: PropTypes.string,
 };
 
