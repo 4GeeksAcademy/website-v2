@@ -36,11 +36,16 @@ export const Wrapper = props => {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-2 p-0 m-0"></div>
-                <div style={contStyle} className="col-lg-10 p-0 m-0" >x</div>
+                <div style={contStyle} className="col-lg-10 p-0 m-0" ></div>
             </div>
         </div>
     )
 }
+export const Row = styled.div`
+`
+export const Col = styled.div`
+
+`
 export const Container = styled.div`
     width: 100%;
     height: ${props => props.height};
@@ -58,6 +63,7 @@ export const Container = styled.div`
 Wrapper.propTypes = {
     color: PropTypes.string,
     height: PropTypes.string,
+    content: PropTypes.object
 }
 Container.propTypes = {
     color: PropTypes.string,
