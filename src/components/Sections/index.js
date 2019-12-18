@@ -41,8 +41,18 @@ export const Wrapper = props => {
         </div>
     )
 }
+export const Cont = styled.div`
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+`
 export const Row = styled.div`
-
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 `
 export const Col = styled.div`
     flex: 0 0 83.33333%;
@@ -70,6 +80,12 @@ export const Container = styled.div`
     };
     border-radius: ${props => props.borderTopLeft} 0px 0px ${props => props.borderBottomLeft};
 `;
+Col.propTypes = {
+    color: PropTypes.string,
+    height: PropTypes.string,
+    borderTopLeft: PropTypes.string,
+}
+
 Wrapper.propTypes = {
     color: PropTypes.string,
     height: PropTypes.string,
