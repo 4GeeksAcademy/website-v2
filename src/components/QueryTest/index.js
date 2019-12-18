@@ -31,9 +31,13 @@ export default () => {
   return (
     <div className="row">
       {data.credentials.edges.map((i, index) => {
+        let offset = "";
+        if (index === 0) {
+          offset = "offset-1"
+        }
         console.log(i.node.cred_value)
         return (
-          <div key={index} className="col-md-2 text-center">
+          <div key={index} className={"col-lg-2 text-center " + offset}>
             <Card
               height="275px"
               width="200px"

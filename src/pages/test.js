@@ -43,7 +43,7 @@ const Test = ({data}) => (
                 <div className="col-md-7  px-0 ">
                   <Divider height="100px" />
                   <div className="row">
-                    <div className="col-md-7 mx-auto">
+                    <div className="col-md-7 offset-2">
                       <div className="row">
                         <H1>Miami Coding Bootcamp</H1>
                       </div>
@@ -77,7 +77,8 @@ const Test = ({data}) => (
       <Row>
         <div className="col-lg-1"></div>
         <Col color="grey" height="500px" borderTopLeft="1.25rem">
-
+          <Divider height="150px" />
+          <QueryTest />
         </Col>
       </Row>
     </Cont>
