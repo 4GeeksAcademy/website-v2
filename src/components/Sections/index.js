@@ -20,17 +20,23 @@ export const Title = props => {
         </>
     )
 }
-export const Wrapper = () => {
-    const color =
-        (props => props.color === "blue")
-            ? " bg-dark"
-            : " bg-primary"
-
+export const Wrapper = props => {
+    const contStyle = {
+        background: (props.color === "blue")
+            ?
+            `${Colors.blue}`
+            : props.color === "grey"
+                ? `${Colors.lightGray}`
+                : `${Colors.white}`
+        ,
+        borderRadius: `${props => props.borderTopLeft} 0px 0px ${props => props.borderBottomLeft};`,
+        height: `${props.height}`
+    }
     return (
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-2 p-0 m-0"></div>
-                <div className={"col-lg-10 p-0 m-0" + color}>x</div>
+                <div style={contStyle} className="col-lg-10 p-0 m-0" >x</div>
             </div>
         </div>
     )
@@ -51,6 +57,9 @@ export const Container = styled.div`
 `;
 Wrapper.propTypes = {
     color: PropTypes.string,
+    borderTopLeft: PropTypes.string,
+    borderBottomLeft: PropTypes.string,
+    height: PropTypes.string,
 }
 Container.propTypes = {
     color: PropTypes.string,
