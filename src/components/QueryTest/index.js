@@ -8,12 +8,6 @@ import '../../assets/css/style.scss';
 
 const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
 
-export const Icon = props => (
-  (props.credential === "Campuses") &&
-  console.log(props.credential)
-
-
-)
 export default () => {
   const data = useStaticQuery(graphql`
       query myQueryTest2{
@@ -33,11 +27,14 @@ export default () => {
       {data.credentials.edges.map((i, index) => {
         let offset = "";
         if (index === 0) {
-          offset = "offset-1"
+          offset += " offset-1 "
+        }
+        if (index % 2 == 0) {
+          offset += " credentials-transform "
         }
         console.log(i.node.cred_value)
         return (
-          <div key={index} className={"col-lg-2 text-center " + offset}>
+          <div key={index} className={"col-lg-2 text-center" + offset}>
             <Card
               height="275px"
               width="200px"

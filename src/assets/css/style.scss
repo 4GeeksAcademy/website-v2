@@ -19,7 +19,9 @@
 @import "./responsive/mobile.scss";
 }
 
-
+.credentials-transform{
+  transform:translateY(50px);
+}
 
 .MuiStepIcon-text {
     display: none;
