@@ -19,7 +19,7 @@ export default () => {
                   cred_symbol
                 }
               }
-          }
+            }
           }
       `)
   return (
@@ -32,7 +32,6 @@ export default () => {
         if (index % 2 == 0) {
           offset += " credentials-transform "
         }
-        console.log(i.node.cred_value)
         return (
           <div key={index} className={"col-lg-2 text-center" + offset}>
             <Card

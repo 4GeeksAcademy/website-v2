@@ -76,7 +76,7 @@ const Test = ({data}) => (
     <Cont>
       <Row>
         <div className="col-lg-1"></div>
-        <Col color="grey" height="500px" borderTopLeft="1.25rem">
+        <Col color="grey" height="800px" borderTopLeft="1.25rem">
           <Divider height="150px" />
           <QueryTest />
         </Col>
