@@ -93,7 +93,7 @@ const Test = ({data}) => (
         <div className="col-lg-10">3</div>
       </div>
     </Container>
-    <Wrapper color="blue" borderTopLeft height="500px">s</Wrapper>
+    <Wrapper color="blue" height="500px">s</Wrapper>
   </Layout>
 );
 

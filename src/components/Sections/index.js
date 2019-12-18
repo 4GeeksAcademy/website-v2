@@ -29,7 +29,7 @@ export const Wrapper = props => {
                 ? `${Colors.lightGray}`
                 : `${Colors.white}`
         ,
-        borderRadius: `${props => props.borderTopLeft} 0px 0px ${props => props.borderBottomLeft};`,
+        borderRadius: '1.25rem 0px 0px 0px',
         height: `${props.height}`
     }
     return (
@@ -57,8 +57,6 @@ export const Container = styled.div`
 `;
 Wrapper.propTypes = {
     color: PropTypes.string,
-    borderTopLeft: PropTypes.string,
-    borderBottomLeft: PropTypes.string,
     height: PropTypes.string,
 }
 Container.propTypes = {
