@@ -62,6 +62,7 @@ Title.propTypes = {
   title: PropTypes.string.isRequired,
   paragraph: PropTypes.string,
   style: PropTypes.string.isRequired,
+  content: PropTypes.func,
 };
 H2.propTypes = {
   primary: PropTypes.bool.isRequired,

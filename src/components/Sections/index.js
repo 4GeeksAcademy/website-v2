@@ -3,6 +3,38 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
 
+export const Title = props => {
+    let temp = ""
+    if (props.style != "light") {
+        temp = ""
+    }
+    return (
+        <>
+            <div className="row py-4">
+                <div className="col-md-6 offset-md-3 text-center">
+                    <div className="row px-5 justify-content-center" >{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</div>
+                    <div className="row px-5 mb-3 justify-content-center">{props.style == "light" ? <Separator primary /> : <Separator />}</div>
+                    <div className="row px-5 justify-content-center" >{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
+                </div>
+            </div>
+        </>
+    )
+}
+export const Wrapper = () => {
+    const color =
+        (props => props.color === "blue")
+            ? " bg-dark"
+            : " bg-primary"
+
+    return (
+        <div className="container-fluid">
+            <div className="row">
+                <div className="col-lg-2 p-0 m-0"></div>
+                <div className={"col-lg-10 p-0 m-0" + color}>x</div>
+            </div>
+        </div>
+    )
+}
 export const Container = styled.div`
     width: 100%;
     height: ${props => props.height};
@@ -17,6 +49,9 @@ export const Container = styled.div`
     };
     border-radius: ${props => props.borderTopLeft} 0px 0px ${props => props.borderBottomLeft};
 `;
+Wrapper.propTypes = {
+    color: PropTypes.string,
+}
 Container.propTypes = {
     color: PropTypes.string,
     height: PropTypes.string,
@@ -25,7 +60,7 @@ Container.propTypes = {
     borderBottomLeft: PropTypes.string,
 }
 Container.defaultProps = {
-    marginLeft: '100px',
+    // marginLeft: '100px',
     borderBottomLeft: '1.25rem',
     height: '400px'
 };

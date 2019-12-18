@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
 import Link from 'gatsby-link'
-import {Container, Divider} from '../components/Sections'
+import {Container, Divider, Wrapper} from '../components/Sections'
 import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors} from '../components/Styling'
 import {Jumbo} from '../components/Jumbotron'
@@ -82,12 +82,18 @@ const Test = ({data}) => (
     ></Container>
     <Pencil height="48px" color={Colors.yellow} fill={Colors.yellow} />
     <Container
-
       height="1225px"
       marginLeft="100px"
       borderTopLeft="1.25rem"
     />
     <Container />
+    <Container>
+      <div className="row">
+        <div className="col-lg-2">3</div>
+        <div className="col-lg-10">3</div>
+      </div>
+    </Container>
+    <Wrapper color="blue">s</Wrapper>
   </Layout>
 );
 
