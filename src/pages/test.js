@@ -9,7 +9,7 @@ import {Colors} from '../components/Styling'
 import {Jumbo} from '../components/Jumbotron'
 import QueryTest from '../components/QueryTest'
 import Why4Geeks from '../components/Why4Geeks'
-import {Pencil} from '../components/Styling'
+import Jobs from '../components/Jobs'
 
 const Test = ({data}) => (
   <Layout>
@@ -61,6 +61,8 @@ const Test = ({data}) => (
           <QueryTest />
           <Divider height="150px" />
           <Why4Geeks />
+          <Divider height="50px" />
+          <Jobs />
         </Col>
       </Row>
     </Cont>

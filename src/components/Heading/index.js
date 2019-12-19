@@ -25,7 +25,8 @@ text-transform: ${props => props.up && "uppercase"};
 color: ${props => props.primary ? `${Colors.black}` : `${Colors.white}`}
 `;
 export const H4 = styled.h4`
-  font-size: 30px;
+  font-size: 29px;
+  line-height: 29px;
   text-transform: ${props => props.up && "uppercase"};
   font-style: normal;
   font-family: lato, sans-serif;

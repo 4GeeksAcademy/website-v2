@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
-import {Title} from '../Heading'
+import {Title, H3, H4} from '../Heading'
 import {Container, Cont, Col, Row, Divider} from '../Sections'
 import {Address, HandMoney, Laptop, Colors, Rounded} from '../Styling'
 
@@ -35,12 +35,12 @@ export default () => {
                   <img src={i.node.image} width="100%" height="180" />
                 </Rounded>
                 <div className=" px-3 row">
-                  <div className="col-md-3 col-sm-2">
+                  <div className="col-md-2 col-sm-2">
                     {(i.node.slug === "job-in-tech") && <Address width="48" color={Colors.blue} fill={Colors.blue} />}
                     {(i.node.slug === "finance-your-career") && <HandMoney width="48" color={Colors.blue} fill={Colors.blue} />}
                     {(i.node.slug === "never-code-alone-again") && <Laptop width="48" color={Colors.blue} fill={Colors.blue} />}
                   </div>
-                  <div className="col-md-9 col-sm-10 text-why pr-0">{i.node.title}</div>
+                  <div className="col-md-10 col-sm-10  pr-0"><H4 up>{i.node.title}</H4></div>
                 </div>
                 <div className=" text-center row mt-2">
                   <div className="text-why-p">{i.node.description}</div>
