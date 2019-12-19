@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styled from 'styled-components';
 // COLORS SET
 export const Colors = {
     blue: "#0097CE",
@@ -29,3 +29,7 @@ export const AngleDown = props => <svg width={props.width} height={props.height}
 export const AngleLeft = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 19.03125 4.28125 L 8.03125 15.28125 L 7.34375 16 L 8.03125 16.71875 L 19.03125 27.71875 L 20.46875 26.28125 L 10.1875 16 L 20.46875 5.71875 Z" /></svg>;
 export const AngleRight = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z" /></svg>;
 export const AngleUp = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 16 6.59375 L 15.28125 7.28125 L 2.78125 19.78125 L 4.21875 21.21875 L 16 9.4375 L 27.78125 21.21875 L 29.21875 19.78125 L 16.71875 7.28125 Z" /></svg>;
+
+export const Rounded = styled.div`
+    border-radius: 1.25rem;
+`
