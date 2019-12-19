@@ -1,0 +1,7 @@
+news:
+  - name: "Education"
+    image: "../education.jpg"
+  - name: "Newsweek"
+    image: "../newsweek.jpg"
+  - name: "News"
+    image: "../news.jpg"
