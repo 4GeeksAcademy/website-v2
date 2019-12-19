@@ -85,12 +85,6 @@ const Test = ({data}) => (
         </Col>
       </Row>
     </Cont>
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-1">1</div>
-        <div className="col-lg-11">2</div>
-      </div>
-    </div>
   </Layout >
 );
 
