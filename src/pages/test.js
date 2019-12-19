@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
 import Link from 'gatsby-link'
-import {Container, Divider, Wrapper, Col, Cont, Row} from '../components/Sections'
+import {Container, Divider, Col, Cont, Row} from '../components/Sections'
 import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors} from '../components/Styling'
 import {Jumbo} from '../components/Jumbotron'
 import QueryTest from '../components/QueryTest'
+import Why4Geeks from '../components/Why4Geeks'
 import {Pencil} from '../components/Styling'
 
 const Page = styled.div`
@@ -79,6 +80,8 @@ const Test = ({data}) => (
         <Col color="grey" height="800px" borderTopLeft="1.25rem">
           <Divider height="150px" />
           <QueryTest />
+          <Divider height="150px" />
+          <Why4Geeks />
         </Col>
       </Row>
     </Cont>

@@ -49,7 +49,7 @@ export const Title = props => {
   return (
     <>
       <div className="row py-4">
-        <div className="col-md-6 offset-md-3 text-center">
+        <div className="col-lg-8 offset-lg-1 text-center">
           <div className="row px-5 justify-content-center" >{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</div>
           <div className="row px-5 mb-3 justify-content-center">{props.style == "light" ? <Separator primary /> : <Separator />}</div>
           <div className="row px-5 justify-content-center" >{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
