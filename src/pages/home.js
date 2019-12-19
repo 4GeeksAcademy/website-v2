@@ -9,7 +9,6 @@ import TestCom from '../components/testCom';
 import Test from '../components/Test';
 import Mentors from '../components/Mentors';
 import WhoIsHiring from '../components/WhoIsHiring'
-import Section from '../components/SectionDivider'
 import Footer from '../components/Footer'
 import {Spring} from '../components/spring'
 import ReactPlayer from 'react-player'
