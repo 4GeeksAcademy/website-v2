@@ -26,6 +26,17 @@ const Test = ({data}) => (
         </div>
       </div>
     </div>
+    <Container height="600px">
+      <div className="row">
+        <div className="col-12 col-lg-1 col-md-1 col-sm-12 bg-info">1</div>
+        <div className="col-12 col-lg-11 col-md-11 col-sm-12 bg-primary">
+          <div className="row">
+            <div className="col-12 col-lg-1 col-md-1 col-sm-12 bg-primary">2</div>
+            <div className="col-12 col-lg-9 col-md-9 col-sm-12 bg-success">3</div>
+          </div>
+        </div>
+      </div>
+    </Container>
 
     <Container height="400px">
       <Row>
