@@ -10,6 +10,8 @@ import {Jumbo} from '../components/Jumbotron'
 import QueryTest from '../components/QueryTest'
 import Why4Geeks from '../components/Why4Geeks'
 import Jobs from '../components/Jobs'
+import News from '../components/News'
+import Locations from '../components/Locations'
 
 const Test = ({data}) => (
   <Layout>
@@ -63,6 +65,8 @@ const Test = ({data}) => (
           <Why4Geeks />
           <Divider height="50px" />
           <Jobs />
+          <News />
+          <Locations />
         </Col>
       </Row>
     </Cont>
