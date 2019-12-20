@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
+import {Device} from '../Responsive'
 
 export const Title = props => {
     let temp = ""
@@ -50,8 +51,15 @@ export const Row = styled.div`
     flex-wrap: wrap;
 `
 export const Col = styled.div`
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
+    @media ${Device.laptop} {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%;
+    }
+    @media ${Device.mobileL}{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
     height: ${props => props.height};
     border-radius: ${props => props.borderTopLeft} 0px 0px 0px;
     background: ${props => props.color === "blue"
@@ -61,6 +69,23 @@ export const Col = styled.div`
             ? `${Colors.lightGray}`
             : `${Colors.white}`
     };
+`
+export const Column = styled.div`
+@media ${Device.desktop} {
+   
+}
+@media ${Device.laptop} {
+   
+}
+@media ${Device.laptopL}{
+  
+}
+@media ${Device.mobileL}{
+  
+}
+@media ${Device.tablet}{
+  
+}
 `
 export const Cont = styled.div`
     width: 100%;
