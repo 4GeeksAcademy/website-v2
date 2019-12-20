@@ -13,12 +13,13 @@ const Locations = props => {
             edges {
               node {
                 courses
+                images
               }
             }
           }
         }
       `)
-    console.log("loc", data.loc.edges)
+    console.log("loc", data.loc.edges[0].images)
     return (
         <div className="container  mt-5">
             <Title
@@ -31,7 +32,7 @@ const Locations = props => {
                     <Carousel>
                         {data.loc.edges.map((loc, i) => (
                             <div key={i} className="col-md-4 ">
-                                <img src={loc.node.courses} width="100%" height="150" />
+                                <img src={loc.node.images[0]} width="100%" height="150" />
                             </div>
                         ))}
                     </Carousel>
