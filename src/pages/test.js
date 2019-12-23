@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
 import Link from 'gatsby-link'
-import {Container, Divider, Col, Cont, Row} from '../components/Sections'
+import {Container, Divider, Col, Cont, Row, Column} from '../components/Sections'
 import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors} from '../components/Styling'
 import {Jumbo} from '../components/Jumbotron'
@@ -17,10 +17,10 @@ const Test = ({data}) => (
   <Layout>
     <div className="container-fluid">
       <div className="row">
-        <div className="col-12 col-lg-1 col-md-1 col-sm-12 bg-info">1</div>
+        <div className="col-12 col-lg-1 col-md-1 col-sm-12 ">1</div>
         <div className="col-12 col-lg-11 col-md-11 col-sm-12 bg-primary">
           <div className="row">
-            <div className="col-12 col-lg-1 col-md-1 col-sm-12 bg-primary">2</div>
+            <div className="col-12 col-lg-1 col-md-1 col-sm-12 bg-light">2</div>
             <div className="col-12 col-lg-9 col-md-9 col-sm-12 bg-success">3</div>
           </div>
         </div>
@@ -28,7 +28,7 @@ const Test = ({data}) => (
     </div>
     <Container height="600px">
       <div className="row">
-        <div className="col-12 col-lg-1 col-md-1 col-sm-12 bg-info">1</div>
+        <Col>1</Col>
         <div className="col-12 col-lg-11 col-md-11 col-sm-12 bg-primary">
           <div className="row">
             <div className="col-12 col-lg-1 col-md-1 col-sm-12 bg-primary">2</div>

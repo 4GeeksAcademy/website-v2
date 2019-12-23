@@ -51,40 +51,41 @@ export const Row = styled.div`
     flex-wrap: wrap;
 `
 export const Col = styled.div`
-    @media ${Device.laptop} {
-        flex: 0 0 91.66667%;
-        max-width: 91.66667%;
+    @media ${Device.laptop}  {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%;
+        background: red;
+    }
+    @media ${Device.tablet}{
+        flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+    background: yellow;
     }
     @media ${Device.mobileL}{
         flex: 0 0 100%;
         max-width: 100%;
+        background: purple;
+        
     }
     
-    height: ${props => props.height};
-    border-radius: ${props => props.borderTopLeft} 0px 0px 0px;
-    background: ${props => props.color === "blue"
-        ?
-        `${Colors.blue}`
-        : props.color === "grey"
-            ? `${Colors.lightGray}`
-            : `${Colors.white}`
-    };
+    
 `
 export const Column = styled.div`
-@media ${Device.desktop} {
-   
-}
 @media ${Device.laptop} {
-   
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
 }
 @media ${Device.laptopL}{
-  
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
 }
 @media ${Device.mobileL}{
-  
+    flex: 0 0 100%;
+    max-width: 100%;
 }
 @media ${Device.tablet}{
-  
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
 }
 `
 export const Cont = styled.div`
