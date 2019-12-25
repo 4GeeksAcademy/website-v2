@@ -56,17 +56,7 @@ export const Col = styled.div`
         max-width: 8.33333%;
         background: red;
     }
-    @media ${Device.tablet}{
-        flex: 0 0 8.33333%;
-    max-width: 8.33333%;
-    background: yellow;
-    }
-    @media ${Device.mobileL}{
-        flex: 0 0 100%;
-        max-width: 100%;
-        background: purple;
-        
-    }
+    
     
     
 `
@@ -136,3 +126,5 @@ export const Divider = props => {
 Divider.propTypes = {
     height: PropTypes.string
 };
+
+
