@@ -62,7 +62,7 @@ const Test = ({data}) => (
     </div>
     <Divider height="1000px" />
 
-    {/* <Container height="600px">
+    <Container height="600px">
       <div className="row">
         <Col>1</Col>
         <div className="col-12 col-lg-11 col-md-11 col-sm-12 bg-primary">
@@ -72,7 +72,7 @@ const Test = ({data}) => (
           </div>
         </div>
       </div>
-    </Container> */}
+    </Container>
 
     <Container height="400px">
       <Row>
