@@ -12,6 +12,7 @@ import Why4Geeks from '../components/Why4Geeks'
 import Jobs from '../components/Jobs'
 import News from '../components/News'
 import Locations from '../components/Locations'
+import ChooseProgram from '../components/ChooseProgram'
 
 const Test = ({data}) => (
   <Layout>
@@ -39,7 +40,7 @@ const Test = ({data}) => (
                   </div>
                   <div className="row mt-3">
                     <Link to="/program">
-                      <div className="btn text-white btn-md rounded-pill jumbo-button" role="button">CHOOSE YOUR PROGRAM </div>
+                      <ChooseProgram />
                     </Link>
                   </div>
                 </div>

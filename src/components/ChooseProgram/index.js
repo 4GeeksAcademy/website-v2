@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Select from 'react-select';
 import styled from 'styled-components';
 
 const ChooseProgram = () => {
@@ -8,7 +9,11 @@ const ChooseProgram = () => {
         {value: 'vanilla', label: 'Vanilla'},
     ])
     return (
-        <div>ChooseProgram</div>
+        <div className="btn btn-success">  <Select
+            value={selectedOption}
+            onChange={this.handleChange}
+            options={options}
+        /></div>
     )
 };
 
