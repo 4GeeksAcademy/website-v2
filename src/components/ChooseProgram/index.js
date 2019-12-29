@@ -16,23 +16,26 @@ const ChooseProgram = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">
+                <Dropdown.Item >
                     <Dropdown>
                         <Dropdown.Toggle variant="light" id="dropdown-basic">
                             Program
             </Dropdown.Toggle>
 
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Program</Dropdown.Item>
-                            <Dropdown.Divider />
-                            <Dropdown.Item href="#/action-2">Location</Dropdown.Item>
-                            <Dropdown.Divider />
-                            <Dropdown.Item href="#/action-3">Payment</Dropdown.Item>
-                        </Dropdown.Menu>
+                        {option.map((item, index) => {
+                            return (
+                                <Dropdown.Menu key={index}>
+                                    <Dropdown.Item href="#/action-1">{item.value}</Dropdown.Item>
+                                    <Dropdown.Divider />
+                                    <Dropdown.Item href="#/action-2">{item.value}</Dropdown.Item>
+                                    <Dropdown.Divider />
+                                    <Dropdown.Item href="#/action-3">{item.value}</Dropdown.Item>
+                                </Dropdown.Menu>)
+                        })}
                     </Dropdown>
                 </Dropdown.Item>
                 <Dropdown.Divider />
-                <Dropdown.Item href="#/action-2">
+                <Dropdown.Item >
                     <Dropdown>
                         <Dropdown.Toggle variant="light" id="dropdown-basic">
                             Location
