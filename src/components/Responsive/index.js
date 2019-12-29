@@ -1,20 +1,14 @@
 const Size = {
-    mobileS: '320px',
-    mobileM: '375px',
+    mobileS: '576px',
     mobileL: '576px',
     tablet: '768px',
     laptop: '992px',
-    laptopL: '1440px',
-    desktop: '2560px'
+    laptopL: '1140px',
 }
-
 export const Device = {
-    mobileS: `(min-width: ${Size.mobileS})`,
-    mobileM: `(min-width: ${Size.mobileM})`,
-    mobileL: `(max-width: ${Size.mobileL})`,
-    tablet: `(max-width: ${Size.tablet})`,
-    laptop: `(min-width: ${Size.laptop})`,
-    laptopL: `(min-width: ${Size.laptopL})`,
-    desktop: `(min-width: ${Size.desktop})`,
-    desktopL: `(min-width: ${Size.desktop})`
+    xs: `(max-width: ${Size.mobileS})`,
+    sm: `(min-width: ${Size.mobileL})`,
+    md: `(min-width: ${Size.tablet})`,
+    lg: `(min-width: ${Size.laptop})`,
+    xl: `(min-width: ${Size.laptopL})`,
 };
