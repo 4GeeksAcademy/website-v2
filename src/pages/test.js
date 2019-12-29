@@ -15,8 +15,8 @@ import Locations from '../components/Locations'
 
 const Test = ({data}) => (
   <Layout>
-    <div className="container-fluid mb-5">
-      <div className="row">
+    <div className="container-fluid">
+      <div className="row tt">
         <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
         <div className="col-12 col-lg-11 col-md-11 col-sm-12 col-xl-11">
           <div className="row">
@@ -54,6 +54,22 @@ const Test = ({data}) => (
       </div>
     </div>
 
+    <div className="container-fluid bg-light">
+      <div className="row">
+        <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
+        <div className="col-12 col-lg-11 col-md-11 col-sm-12 col-xl-11">
+          <div className="row">
+            <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
+            <div className="col-12 col-lg-9 col-md-9 col-sm-12 col-xl-9 ">
+              <Divider height="100px" />
+              <QueryTest />
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <div className="container-fluid">

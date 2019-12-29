@@ -26,14 +26,14 @@ export default () => {
     <div className="row">
       {data.credentials.edges.map((i, index) => {
         let offset = "";
-        if (index === 0) {
-          offset += " offset-1 "
-        }
-        if (index % 2 == 0) {
-          offset += " credentials-transform "
-        }
+        // if (index === 0) {
+        //   offset += " offset-1 "
+        // }
+        // if (index % 2 == 0) {
+        //   offset += " credentials-transform "
+        // }
         return (
-          <div key={index} className={"col-lg-2 text-center" + offset}>
+          <div key={index} className={"col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 text-center mb-2" + offset}>
             <Card
               height="275px"
               width="200px"
