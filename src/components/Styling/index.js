@@ -30,9 +30,6 @@ export const AngleLeft = props => <svg width={props.width} height={props.height}
 export const AngleRight = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z" /></svg>;
 export const AngleUp = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 16 6.59375 L 15.28125 7.28125 L 2.78125 19.78125 L 4.21875 21.21875 L 16 9.4375 L 27.78125 21.21875 L 29.21875 19.78125 L 16.71875 7.28125 Z" /></svg>;
 
-export const RoundedImage = styled.img`
-    border-radius: 1.25rem;
-`
 export const RoundImage = styled.div`
     background-image: url(${props => props.url});
     margin-bottom: ${props => props.mb};
