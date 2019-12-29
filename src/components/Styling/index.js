@@ -35,6 +35,7 @@ export const RoundedImage = styled.img`
 `
 export const RoundImage = styled.div`
     background-image: url(${props => props.url});
+    margin-bottom: ${props => props.mb};
     background-repeat: no-repeat;
     background-size:cover;
     border-radius: 1.25rem;

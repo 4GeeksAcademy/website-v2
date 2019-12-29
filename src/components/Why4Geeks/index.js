@@ -33,7 +33,7 @@ export default () => {
             {/* <Rounded className="card card-why4 p-3 text-center  border-0 bg-transparent">
               <img src={i.node.image} width="100%" height="180" />
             </Rounded> */}
-            <RoundImage url={i.node.image}></RoundImage>
+            <RoundImage url={i.node.image} mb="10px"></RoundImage>
             <div className=" px-3 row">
               <div className="col-md-2 col-sm-2">
                 {(i.node.slug === "job-in-tech") && <Address width="48" color={Colors.blue} fill={Colors.blue} />}
