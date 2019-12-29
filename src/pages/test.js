@@ -39,9 +39,7 @@ const Test = ({data}) => (
                     <Paragraph primary>Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.</Paragraph>
                   </div>
                   <div className="row mt-3">
-                    <Link to="/program">
-                      <ChooseProgram />
-                    </Link>
+                    <ChooseProgram />
                   </div>
                 </div>
               </div>
