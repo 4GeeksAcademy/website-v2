@@ -16,14 +16,15 @@ import Locations from '../components/Locations'
 const Test = ({data}) => (
   <Layout>
     <div className="container-fluid mb-5">
-      <div className="row bg-primary">
-        <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1">A</div>
+      <div className="row">
+        <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
         <div className="col-12 col-lg-11 col-md-11 col-sm-12 col-xl-11">
           <div className="row">
-            <div className="col-12 col-lg-7 col-md-7 col-sm-12 col-xl-7 bg-light">
+            <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
+            <div className="col-12 col-lg-5 col-md-5 col-sm-12 col-xl-5 ">
               <Divider height="100px" />
-              <div className="row">
-                <div className="col-md-7 offset-2">
+              <div className="row justify-content-center">
+                <div className="col-md-7">
                   <div className="row">
                     <H1>Miami Coding Bootcamp</H1>
                   </div>
@@ -44,7 +45,8 @@ const Test = ({data}) => (
                 </div>
               </div>
             </div>
-            <div className="col-12 col-lg-5 col-md-5 col-sm-5 p-0">
+            <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
+            <div className="col-12 col-lg-5 col-md-5 col-sm-12 col-xl-5 p-0">
               <img src="https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80" width="100%" height="600px" />
             </div>
           </div>
