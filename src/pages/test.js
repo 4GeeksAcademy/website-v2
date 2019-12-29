@@ -79,11 +79,16 @@ const Test = ({data}) => (
             <div className="col-12 col-lg-9 col-md-9 col-sm-12 col-xl-9 ">
               <Divider height="100px" />
               <Why4Geeks />
+              <Divider height="100px" />
+              <Jobs />
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
+
 
 
 
