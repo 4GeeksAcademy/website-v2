@@ -1,7 +1,7 @@
 import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row} from '../Sections'
-import {H3} from '../Heading'
+import {H3, H4, Paragraph} from '../Heading'
 import graphic from "../../assets/images/graphic.png"
 
 export default () => {
@@ -31,10 +31,10 @@ export default () => {
                                     {i.node.title}
                                 </div>
                                 <div className="row">
-                                    <H3 primary>{i.node.value}</H3><span><H3 primary>{i.node.value_type}</H3></span>
+                                    <H3 primary>{i.node.value}</H3><span><Paragraph primary>{i.node.value_type}</Paragraph></span>
                                 </div>
                                 <div className="row">
-                                    {i.node.sub_title}
+                                    <H4>{i.node.sub_title}</H4>
                                 </div>
                             </div>
                             <div className="col-md-5 text-why pr-0"><img src={graphic} width="100%" /></div>
