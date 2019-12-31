@@ -3,7 +3,7 @@ const Size = {
     mobileL: '576px',
     tablet: '768px',
     laptop: '992px',
-    laptopL: '1140px',
+    laptopL: '1200px',
 }
 export const Device = {
     xs: `(max-width: ${Size.mobileS})`,
