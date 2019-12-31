@@ -61,6 +61,10 @@ export const Col = styled.div`
     
 `
 export const Column = styled.div`
+background-image: url(${props => props.url});
+background-size: cover;
+background-repeat: no-repeat;
+height: ${props => props.height};
 position: relative;
 width: 100%;
 padding-right: 15px;
@@ -74,16 +78,19 @@ padding-left: 15px;
     max-width: 100%;
 }
 @media ${Device.md}{
-    flex: 0 0 75%;
-    max-width: 75%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+    border-radius: 0 0 0 1.25rem;
 }
 @media ${Device.lg}{
-    flex: 0 0 75%;
-    max-width: 75%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+    border-radius: 0 0 0 1.25rem;
 }
 @media ${Device.xl} {
-    flex: 0 0 75%;
-    max-width: 75%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+    border-radius: 0 0 0 1.25rem;
 }
 `
 export const Cont = styled.div`
