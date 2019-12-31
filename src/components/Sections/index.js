@@ -61,21 +61,29 @@ export const Col = styled.div`
     
 `
 export const Column = styled.div`
-@media ${Device.laptop} {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
-}
-@media ${Device.laptopL}{
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
-}
-@media ${Device.mobileL}{
+position: relative;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+@media ${Device.xs}{
     flex: 0 0 100%;
     max-width: 100%;
 }
-@media ${Device.tablet}{
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
+@media ${Device.sm}{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+@media ${Device.md}{
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+@media ${Device.lg}{
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+@media ${Device.xl} {
+    flex: 0 0 75%;
+    max-width: 75%;
 }
 `
 export const Cont = styled.div`
