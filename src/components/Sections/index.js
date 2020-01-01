@@ -4,23 +4,6 @@ import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
 import {Device} from '../Responsive'
 
-export const Title = props => {
-    let temp = ""
-    if (props.style != "light") {
-        temp = ""
-    }
-    return (
-        <>
-            <div className="row py-4">
-                <div className="col-md-6 offset-md-3 text-center">
-                    <div className="row px-5 justify-content-center" >{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</div>
-                    <div className="row px-5 mb-3 justify-content-center">{props.style == "light" ? <Separator primary /> : <Separator />}</div>
-                    <div className="row px-5 justify-content-center" >{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
-                </div>
-            </div>
-        </>
-    )
-}
 export const Wrapper = props => {
     const contStyle = {
         background: (props.color === "blue")
@@ -50,22 +33,13 @@ export const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
 `
-export const Col = styled.div`
-    @media ${Device.laptop}  {
-        flex: 0 0 8.33333%;
-        max-width: 8.33333%;
-        background: red;
-    }
-    
-    
-    
-`
 export const Column = styled.div`
 height: 600px;
 position: relative;
 width: 100%;
 padding-right: 15px;
 padding-left: 15px;
+border-radius: 0 0 0 1.25rem;
 ${props =>
         props.image
             ?
@@ -84,27 +58,26 @@ ${props =>
             @media ${Device.md}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
                 max-width: ${(props.size / 12) * 100}%;
-                border-radius: 0 0 0 1.25rem;
             }
             @media ${Device.xs}{
                 flex: 0 0 100%;
                 max-width: 100%;
                 height: 300px;
+                border-radius: 0 0 0 0;
             }
             @media screen ${Device.sm}{
                 flex: 0 0 100%;
                 max-width: 100%;
                 height: 300px;
+                border-radius: 0 0 0 0;
             }
             @media ${Device.lg}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
                 max-width: ${(props.size / 12) * 100}%;
-                border-radius: 0 0 0 1.25rem;
             }
             @media ${Device.xl} {
                 flex: 0 0 ${(props.size / 12) * 100}%;
                 max-width: ${(props.size / 12) * 100}%;
-                border-radius: 0 0 0 1.25rem;
             }
 `}
 `
@@ -122,11 +95,6 @@ export const Cont = styled.div`
     };
     border-radius: ${props => props.borderTopLeft} 0px 0px ${props => props.borderBottomLeft};
 `;
-Col.propTypes = {
-    color: PropTypes.string,
-    height: PropTypes.string,
-    borderTopLeft: PropTypes.string,
-}
 
 Wrapper.propTypes = {
     color: PropTypes.string,
