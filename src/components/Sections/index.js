@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
 import {Device} from '../Responsive'
@@ -61,9 +61,19 @@ export const Col = styled.div`
     
 `
 export const Column = styled.div`
-background-image: url(${props => props.url});
-background-size: cover;
-background-repeat: no-repeat;
+${props =>
+        props.image
+            ?
+            css`
+        background-image: url(${props => props.url});
+        background-size: cover;
+        background-repeat: no-repeat;
+    `
+            :
+            css`
+        background: ${props => props.color};
+`}
+
 height: 600px;
 position: relative;
 width: 100%;
