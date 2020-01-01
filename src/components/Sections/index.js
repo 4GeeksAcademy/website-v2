@@ -64,7 +64,7 @@ export const Column = styled.div`
 background-image: url(${props => props.url});
 background-size: cover;
 background-repeat: no-repeat;
-height: ${props => props.height};
+height: 600px;
 position: relative;
 width: 100%;
 padding-right: 15px;
@@ -72,10 +72,12 @@ padding-left: 15px;
 @media ${Device.xs}{
     flex: 0 0 100%;
     max-width: 100%;
+    height: 300px;
 }
-@media ${Device.sm}{
+@media screen ${Device.sm}{
     flex: 0 0 100%;
     max-width: 100%;
+    height: 300px;
 }
 @media ${Device.md}{
     flex: 0 0 91.66667%;
