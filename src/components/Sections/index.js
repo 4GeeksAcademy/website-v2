@@ -61,49 +61,52 @@ export const Col = styled.div`
     
 `
 export const Column = styled.div`
-${props =>
-        props.image
-            ?
-            css`
-        background-image: url(${props => props.url});
-        background-size: cover;
-        background-repeat: no-repeat;
-    `
-            :
-            css`
-        background: ${props => props.color};
-`}
-
 height: 600px;
 position: relative;
 width: 100%;
 padding-right: 15px;
 padding-left: 15px;
-@media ${Device.xs}{
-    flex: 0 0 100%;
-    max-width: 100%;
-    height: 300px;
-}
-@media screen ${Device.sm}{
-    flex: 0 0 100%;
-    max-width: 100%;
-    height: 300px;
-}
-@media ${Device.md}{
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
-    border-radius: 0 0 0 1.25rem;
-}
-@media ${Device.lg}{
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
-    border-radius: 0 0 0 1.25rem;
-}
-@media ${Device.xl} {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
-    border-radius: 0 0 0 1.25rem;
-}
+${props =>
+        props.image
+            ?
+            css`
+                background-image: url(${props => props.url});
+                background-size: cover;
+                background-repeat: no-repeat;
+    `
+            :
+            css`
+                background: ${props => props.color};
+`}
+${props =>
+        props.size
+        && css`
+            @media ${Device.md}{
+                flex: 0 0 ${(props.size / 12) * 100}%;
+                max-width: ${(props.size / 12) * 100}%;
+                border-radius: 0 0 0 1.25rem;
+            }
+            @media ${Device.xs}{
+                flex: 0 0 100%;
+                max-width: 100%;
+                height: 300px;
+            }
+            @media screen ${Device.sm}{
+                flex: 0 0 100%;
+                max-width: 100%;
+                height: 300px;
+            }
+            @media ${Device.lg}{
+                flex: 0 0 ${(props.size / 12) * 100}%;
+                max-width: ${(props.size / 12) * 100}%;
+                border-radius: 0 0 0 1.25rem;
+            }
+            @media ${Device.xl} {
+                flex: 0 0 ${(props.size / 12) * 100}%;
+                max-width: ${(props.size / 12) * 100}%;
+                border-radius: 0 0 0 1.25rem;
+            }
+`}
 `
 export const Cont = styled.div`
     width: 100%;
