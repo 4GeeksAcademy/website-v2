@@ -34,7 +34,8 @@ export const Row = styled.div`
     flex-wrap: wrap;
 `
 export const Column = styled.div`
-height: 600px;
+// height: 600px;
+padding: ${props => props.padding};
 position: relative;
 width: 100%;
 padding-right: 15px;
@@ -43,11 +44,11 @@ ${props =>
         props.border
             ?
             css`
-        border-radius: 0 0 0 1.25rem;
+                border-radius: 0 0 0 1.25rem;
         `
             :
             css`
-        border-radius: 0 0 0 0;
+                border-radius: 0 0 0 0;
         `
     }
 
@@ -73,13 +74,13 @@ ${props =>
             @media ${Device.xs}{
                 flex: 0 0 100%;
                 max-width: 100%;
-                height: 300px;
+                // height: 300px;
                 border-radius: 0 0 0 0;
             }
             @media screen ${Device.sm}{
                 flex: 0 0 100%;
                 max-width: 100%;
-                height: 300px;
+                // height: 300px;
                 border-radius: 0 0 0 0;
             }
             @media ${Device.lg}{
