@@ -39,7 +39,18 @@ position: relative;
 width: 100%;
 padding-right: 15px;
 padding-left: 15px;
-border-radius: 0 0 0 1.25rem;
+${props =>
+        props.border
+            ?
+            css`
+        border-radius: 0 0 0 1.25rem;
+        `
+            :
+            css`
+        border-radius: 0 0 0 0;
+        `
+    }
+
 ${props =>
         props.image
             ?

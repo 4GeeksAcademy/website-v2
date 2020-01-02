@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors, Icons} from '../../components/Styling'
+import {Column} from '../Sections'
 
 export const H1 = styled.h1`
   font-size: 12px;
@@ -49,8 +50,8 @@ export const Title = props => {
   }
   return (
     <>
-      <div className="row align-items-center h-100">
-        <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+      <div className="row align-items-center h-100 justify-content-center">
+        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
           <div className="row justify-content-center" >{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</div>
           <div className="row mb-3 justify-content-center">{props.style == "light" ? <Separator primary /> : <Separator />}</div>
           <div className="row justify-content-center" >{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
