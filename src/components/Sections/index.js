@@ -4,27 +4,6 @@ import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
 import {Device} from '../Responsive'
 
-export const Wrapper = props => {
-    const contStyle = {
-        background: (props.color === "blue")
-            ?
-            `${Colors.blue}`
-            : props.color === "grey"
-                ? `${Colors.lightGray}`
-                : `${Colors.white}`
-        ,
-        borderRadius: '1.25rem 0px 0px 0px',
-        height: `${props.height}`
-    }
-    return (
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-lg-2 p-0 m-0"></div>
-                <div style={contStyle} className="col-lg-10 p-0 m-0" ></div>
-            </div>
-        </div>
-    )
-}
 export const Container = styled.div`
     ${props =>
         props.fluid
@@ -125,20 +104,35 @@ ${props =>
             }
 `}
 `
-export const Cont = styled.div`
-    width: 100%;
-    height: ${props => props.height};
-    vertical-align: baseline;
-    margin-left: ${props => props.marginLeft};
-    background: ${props => props.color === "blue"
-        ?
-        `${Colors.blue}`
-        : props.color === "grey"
-            ? `${Colors.lightGray}`
-            : `${Colors.white}`
-    };
-    border-radius: ${props => props.borderTopLeft} 0px 0px ${props => props.borderBottomLeft};
-`;
+export const Wrapper = props => {
+    const contStyle = {
+        background: (props.color === "blue")
+            ?
+            `${Colors.blue}`
+            : props.color === "grey"
+                ? `${Colors.lightGray}`
+                : `${Colors.white}`
+        ,
+        borderRadius: '1.25rem 0px 0px 0px',
+        height: `${props.height}`
+    }
+    return (
+        <div className="container-fluid">
+            <div className="row">
+                <div className="col-lg-2 p-0 m-0"></div>
+                <div style={contStyle} className="col-lg-10 p-0 m-0" ></div>
+            </div>
+        </div>
+    )
+}
+export const Divider = props => {
+    const Height = styled.div`
+        height: ${props.height}
+    `;
+    return (
+        <Height></Height>
+    )
+};
 
 Wrapper.propTypes = {
     color: PropTypes.string,
@@ -153,18 +147,10 @@ Container.propTypes = {
     borderBottomLeft: PropTypes.string,
 }
 Container.defaultProps = {
-    // marginLeft: '100px',
     borderBottomLeft: '1.25rem',
     height: '400px'
 };
-export const Divider = props => {
-    const Height = styled.div`
-        height: ${props.height}
-    `;
-    return (
-        <Height></Height>
-    )
-};
+
 Divider.propTypes = {
     height: PropTypes.string
 };
