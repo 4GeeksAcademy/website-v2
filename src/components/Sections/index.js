@@ -31,11 +31,25 @@ export const Container = styled.div`
             ?
             css`
                 width: 100%;
-        `
+            `
             :
             css`
-                border-radius: 0 0 0 0;
-        `
+            @media ${Device.md}{
+                max-width: 540px;
+            }
+            @media ${Device.xs}{
+                max-width: 540px;
+            }
+            @media screen ${Device.sm}{
+                max-width: 720px;
+            }
+            @media ${Device.lg}{
+                max-width: 960px;
+            }
+            @media ${Device.xl} {
+                max-width: 1140px;
+            }
+            `
     }
     
     height: ${props => props.height};
@@ -66,21 +80,7 @@ ${props =>
         `
             :
             css`
-            @media ${Device.md}{
-                max-width: 540px;
-            }
-            @media ${Device.xs}{
-                max-width: 540px;
-            }
-            @media screen ${Device.sm}{
-                max-width: 720px;
-            }
-            @media ${Device.lg}{
-                max-width: 960px;
-            }
-            @media ${Device.xl} {
-                max-width: 1140px;
-            }
+                border-radius: 0 0 0 0;
         `
     }
 
