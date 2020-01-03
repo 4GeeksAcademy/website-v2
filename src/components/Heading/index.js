@@ -50,12 +50,14 @@ export const Title = props => {
   }
   return (
     <>
-      <div className="row align-items-center justify-content-center">
+      <div className="row">
+        <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 text-center"></div>
         <div className="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 text-center">
           <div className="row justify-content-center" >{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</div>
           <div className="row mb-3 justify-content-center">{props.style == "light" ? <Separator primary /> : <Separator />}</div>
           <div className="row justify-content-center" >{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
         </div>
+        {/* <div className="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 text-center"></div> */}
       </div>
     </>
   )

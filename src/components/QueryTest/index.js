@@ -6,8 +6,6 @@ import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
 import {useSpring, animated} from 'react-spring'
 import '../../assets/css/style.scss';
 
-const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
-
 export default () => {
   const data = useStaticQuery(graphql`
       query myQueryTest2{
@@ -25,15 +23,8 @@ export default () => {
   return (
     <div className="row">
       {data.credentials.edges.map((i, index) => {
-        let offset = "";
-        // if (index === 0) {
-        //   offset += " offset-1 "
-        // }
-        // if (index % 2 == 0) {
-        //   offset += " credentials-transform "
-        // }
         return (
-          <div key={index} className={"col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 text-center mb-2" + offset}>
+          <div key={index} className={"col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 text-center mb-2"}>
             <Card
               height="275px"
               width="200px"
