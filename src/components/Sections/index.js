@@ -32,6 +32,8 @@ export const Container = styled.div`
 export const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 `
 export const Column = styled.div`
 // height: 600px;
