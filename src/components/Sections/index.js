@@ -35,6 +35,7 @@ export const Row = styled.div`
 `
 export const Column = styled.div`
 // height: 600px;
+text-align: center;
 padding: ${props => props.padding};
 position: relative;
 width: 100%;

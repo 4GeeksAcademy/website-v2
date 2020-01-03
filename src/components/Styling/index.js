@@ -39,3 +39,17 @@ export const RoundImage = styled.div`
     width: 100%;  
     height: 190px;
 `
+export const Button = styled.div`
+    border-radius: 50rem;
+    background-color: ${props => props.color};
+    color: ${props => props.textColor};
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0.5rem 0.85rem;
+    font-size: .5rem;
+    line-height: 1.5;
+    margin: 1.5rem;
+    font-weight: 500;
+`
