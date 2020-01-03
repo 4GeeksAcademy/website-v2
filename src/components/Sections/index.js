@@ -26,8 +26,23 @@ export const Wrapper = props => {
     )
 }
 export const Container = styled.div`
-    width: 100%;
+    ${props =>
+        props.fluid
+            ?
+            css`
+                width: 100%;
+        `
+            :
+            css`
+                border-radius: 0 0 0 0;
+        `
+    }
+    
     height: ${props => props.height};
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 `
 export const Row = styled.div`
     display: flex;
@@ -51,7 +66,21 @@ ${props =>
         `
             :
             css`
-                border-radius: 0 0 0 0;
+            @media ${Device.md}{
+                max-width: 540px;
+            }
+            @media ${Device.xs}{
+                max-width: 540px;
+            }
+            @media screen ${Device.sm}{
+                max-width: 720px;
+            }
+            @media ${Device.lg}{
+                max-width: 960px;
+            }
+            @media ${Device.xl} {
+                max-width: 1140px;
+            }
         `
     }
 

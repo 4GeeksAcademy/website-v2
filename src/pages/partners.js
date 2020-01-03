@@ -1,12 +1,13 @@
 import React from 'react';
 import Layout from '../global/Layout';
-import {Column, Row} from "../components/Sections"
+import {Column, Row, Container} from "../components/Sections"
 import {Title} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 
 const Partners = () => (
   <Layout>
-    <div className="container-fluid">
+    {/* <div className="container-fluid"> */}
+    <Container fluid>
       <Row>
         <Column size="1" />
         <Column size="11">
@@ -23,7 +24,8 @@ const Partners = () => (
           </Row>
         </Column>
       </Row>
-    </div>
+    </Container>
+    {/* </div> */}
   </Layout>
 );
 
