@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../global/Layout';
-import {Column, Row, Container} from "../components/Sections"
+import {Column, Row, Container, Block} from "../components/Sections"
 import {Title} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 import QueryTest from '../components/QueryTest';
@@ -53,6 +53,7 @@ const Partners = () => (
       </Row>
 
     </Container>
+    <Block content={"Ciao"}></Block>
   </Layout>
 );
 

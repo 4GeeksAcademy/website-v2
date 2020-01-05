@@ -105,27 +105,6 @@ ${props =>
 `}
 `
 
-export const Wrapper = props => {
-    const contStyle = {
-        background: (props.color === "blue")
-            ?
-            `${Colors.blue}`
-            : props.color === "grey"
-                ? `${Colors.lightGray}`
-                : `${Colors.white}`
-        ,
-        borderRadius: '1.25rem 0px 0px 0px',
-        height: `${props.height}`
-    }
-    return (
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-lg-2 p-0 m-0"></div>
-                <div style={contStyle} className="col-lg-10 p-0 m-0" ></div>
-            </div>
-        </div>
-    )
-}
 export const Divider = props => {
     const Height = styled.div`
         height: ${props.height}
@@ -135,11 +114,6 @@ export const Divider = props => {
     )
 };
 
-Wrapper.propTypes = {
-    color: PropTypes.string,
-    height: PropTypes.string,
-    content: PropTypes.object
-}
 Container.propTypes = {
     color: PropTypes.string,
     height: PropTypes.string,
