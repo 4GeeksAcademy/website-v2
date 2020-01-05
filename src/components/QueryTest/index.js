@@ -24,7 +24,7 @@ export default () => {
     <div className="row">
       {data.credentials.edges.map((i, index) => {
         return (
-          <div key={index} className={"col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 text-center mb-2"}>
+          <div key={index} className={"col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 text-center mb-2"}>
 
             {(index % 2 == 0) ?
               (<Card

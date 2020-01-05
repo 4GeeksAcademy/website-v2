@@ -50,9 +50,25 @@ export const Title = props => {
   }
   return (
     <>
-      <Row center>{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
-      <Row center>{props.style == "light" ? <Separator primary /> : <Separator />}</Row>
-      <Row center>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
+      {props.fluid ?
+        (
+          <>
+            <Row center>{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
+            <Row center>{props.style == "light" ? <Separator primary /> : <Separator />}</Row>
+            <Row center>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
+          </>
+        )
+        :
+        (
+          <Row center>
+            <Column size={props.size}>
+              <Row center>{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
+              <Row center>{props.style == "light" ? <Separator primary /> : <Separator />}</Row>
+              <Row center>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
+            </Column>
+          </Row>
+        )
+      }
     </>
   )
 }
@@ -61,6 +77,7 @@ Title.propTypes = {
   paragraph: PropTypes.string,
   style: PropTypes.string.isRequired,
   content: PropTypes.func,
+  size: PropTypes.string
 };
 H2.propTypes = {
   primary: PropTypes.bool.isRequired,
