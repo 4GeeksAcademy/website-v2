@@ -104,6 +104,7 @@ ${props =>
             }
 `}
 `
+
 export const Wrapper = props => {
     const contStyle = {
         background: (props.color === "blue")
