@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors, Icons} from '../../components/Styling'
-import {Column} from '../Sections'
+import {Column, Row} from '../Sections'
 
 export const H1 = styled.h1`
   font-size: 12px;
@@ -41,7 +41,7 @@ export const Separator = styled.div`
 `
 export const Paragraph = styled.div`
   font-size: 12px;
-  color: ${props => props.primary ? `${Colors.gray}` : `${Colors.lightBlue}`};
+  color: ${props => props.primary ? `${Colors.gray}` : `${Colors.blue}`};
 `
 export const Title = props => {
   let temp = ""
@@ -50,15 +50,15 @@ export const Title = props => {
   }
   return (
     <>
-      <div className="row">
-        <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 text-center"></div>
-        <div className="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 text-center">
-          <div className="row justify-content-center" >{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</div>
-          <div className="row mb-3 justify-content-center">{props.style == "light" ? <Separator primary /> : <Separator />}</div>
-          <div className="row justify-content-center" >{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</div>
+      <Row center>
+        {/* <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 text-center"></div> */}
+        <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <Row center>{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
+          <Row center>{props.style == "light" ? <Separator primary /> : <Separator />}</Row>
+          <Row center>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
         </div>
         {/* <div className="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 text-center"></div> */}
-      </div>
+      </Row>
     </>
   )
 }
