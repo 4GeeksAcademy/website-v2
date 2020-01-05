@@ -50,15 +50,9 @@ export const Title = props => {
   }
   return (
     <>
-      <Row center>
-        {/* <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 text-center"></div> */}
-        <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-          <Row center>{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
-          <Row center>{props.style == "light" ? <Separator primary /> : <Separator />}</Row>
-          <Row center>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
-        </div>
-        {/* <div className="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 text-center"></div> */}
-      </Row>
+      <Row center>{props.style == "light" ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
+      <Row center>{props.style == "light" ? <Separator primary /> : <Separator />}</Row>
+      <Row center>{props.style == "light" ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
     </>
   )
 }

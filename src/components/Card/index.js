@@ -2,6 +2,7 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
+import {Device} from '../Responsive'
 
 export const Card = styled.div`
     flex-direction: column;
@@ -18,11 +19,42 @@ export const Card = styled.div`
     box-shadow: ${props => props.shadow
         && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
     }
-    transform: ${props => props.move === "up"
-        ?
-        `translateY(-${props.up})`
-        : props.move === "down"
-        && `translateY(${props.down})`
+    ${props =>
+        props.move === "up"
+            ? css`
+            @media ${Device.md}{
+                transform: translateY(-${props.up})
+            }
+            @media ${Device.xs}{
+                transform: translateY(0px)    
+            }
+            @media screen ${Device.sm}{  
+            }
+            @media ${Device.lg}{
+                transform: translateY(-${props.up})
+            }  
+            }
+            @media ${Device.xl} {
+                transform: translateY(-${props.up})
+            }`
+            :
+            props.move === "down"
+            && css`
+            @media ${Device.md}{
+                transform: translateY(${props.down})
+            }
+            @media ${Device.xs}{    
+            }
+            @media screen ${Device.sm}{
+            }
+            @media ${Device.lg}{
+                transform: translateY(${props.down})
+            }    
+            }
+            @media ${Device.xl} {
+                transform: translateY(${props.down})
+            }`
+
     }
     
 `;

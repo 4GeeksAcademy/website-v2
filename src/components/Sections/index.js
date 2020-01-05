@@ -126,7 +126,6 @@ Container.propTypes = {
 }
 Container.defaultProps = {
     borderBottomLeft: '1.25rem',
-    height: '400px'
 };
 
 Divider.propTypes = {
