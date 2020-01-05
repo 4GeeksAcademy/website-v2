@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 // COLORS SET
 export const Colors = {
     blue: "#0097CE",
@@ -31,13 +31,19 @@ export const AngleRight = props => <svg width={props.width} height={props.height
 export const AngleUp = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 16 6.59375 L 15.28125 7.28125 L 2.78125 19.78125 L 4.21875 21.21875 L 16 9.4375 L 27.78125 21.21875 L 29.21875 19.78125 L 16.71875 7.28125 Z" /></svg>;
 
 export const RoundImage = styled.div`
-    background-image: url(${props => props.url});
+    background-image: url(${props => props.url} );
     margin-bottom: ${props => props.mb};
     background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 1.25rem;
+    background-size:${props => props.bsize};
+    border-radius: ${props => props.border};
+    background-position: 95% 50%;
+    background-color: white;
     width: 100%;  
-    height: 190px;
+    height: ${props => props.height};
+    ${props => props.move &&
+        css`
+        transform: translateY(-${props => props.up});
+    `}
 `
 export const Button = styled.div`
     border-radius: 50rem;
