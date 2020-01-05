@@ -25,23 +25,45 @@ export default () => {
       {data.credentials.edges.map((i, index) => {
         return (
           <div key={index} className={"col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 text-center mb-2"}>
-            <Card
-              height="275px"
-              width="200px"
-              color="white"
-              shadow
-            >
-              <div className="py-4">
-                {(i.node.credential === "Campuses") && <Trophy width="48" color={Colors.blue} fill={Colors.blue} />}
-                {(i.node.credential === "Alumni") && <Graduation width="48" color={Colors.blue} fill={Colors.blue} />}
-                {(i.node.credential === "Rating") && <Book width="48" color={Colors.blue} fill={Colors.blue} />}
-                {(i.node.credential === "Hired") && <Hand width="48" color={Colors.blue} fill={Colors.blue} />}
-              </div>
-              <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
-              <div className="card-footer bg-white border-0 p-0">
-                {(i.node.credential === "Hired") ? <H2>{i.node.cred_value}{i.node.cred_symbol}</H2> : <H2>{i.node.cred_symbol}{i.node.cred_value}</H2>}
-              </div>
-            </Card>
+
+            {(index % 2 == 0) ?
+              (<Card
+                height="275px"
+                width="200px"
+                color="white"
+                shadow
+                move="down"
+                down="40px"
+              >
+                <div className="py-4">
+                  {(i.node.credential === "Campuses") && <Trophy width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Alumni") && <Graduation width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Rating") && <Book width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Hired") && <Hand width="48" color={Colors.blue} fill={Colors.blue} />}
+                </div>
+                <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
+                <div className="card-footer bg-white border-0 p-0">
+                  {(i.node.credential === "Hired") ? <H2>{i.node.cred_value}{i.node.cred_symbol}</H2> : <H2>{i.node.cred_symbol}{i.node.cred_value}</H2>}
+                </div>
+              </Card>)
+              :
+              <Card
+                height="275px"
+                width="200px"
+                color="white"
+                shadow
+              >
+                <div className="py-4">
+                  {(i.node.credential === "Campuses") && <Trophy width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Alumni") && <Graduation width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Rating") && <Book width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Hired") && <Hand width="48" color={Colors.blue} fill={Colors.blue} />}
+                </div>
+                <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
+                <div className="card-footer bg-white border-0 p-0">
+                  {(i.node.credential === "Hired") ? <H2>{i.node.cred_value}{i.node.cred_symbol}</H2> : <H2>{i.node.cred_symbol}{i.node.cred_value}</H2>}
+                </div>
+              </Card>}
           </div>
         )
       })}
