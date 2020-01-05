@@ -105,6 +105,7 @@ ${props =>
 `}
 `
 
+
 export const Divider = props => {
     const Height = styled.div`
         height: ${props.height}
@@ -113,6 +114,7 @@ export const Divider = props => {
         <Height></Height>
     )
 };
+
 
 Container.propTypes = {
     color: PropTypes.string,
