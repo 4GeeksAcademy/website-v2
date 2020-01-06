@@ -54,10 +54,15 @@ padding-right: 15px;
 padding-left: 15px;
 ${props =>
         props.border
-            ?
-            css`
-                border-radius: 0 0 0 1.25rem;
-        `
+            ? props.bottom
+                ?
+                css`
+                    border-radius: 0 0 0 1.25rem;
+                `
+                : props.top &&
+                css`
+                    border-radius: 1.25rem 0 0 0;
+                `
             :
             css`
                 border-radius: 0 0 0 0;

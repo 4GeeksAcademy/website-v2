@@ -9,7 +9,7 @@ const Pricing = () => (
     <Container fluid >
       <Row>
         <Column size="1" />
-        <Column border size="11" padding="7% 0" image url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="100%">
+        <Column border bottom size="11" padding="7% 0" image url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="100%">
           <Row>
             <Column size="2" />
             <Column size="6">
@@ -34,7 +34,7 @@ const Pricing = () => (
             <Column size="10">
               <Row>
                 <Column size="5" height="300px">
-                  <RoundImage url="../pricing.png" height="400px" size="100% 100%" />
+                  <RoundImage url="../pricing.png" height="400px" bsize="contain" />
                 </Column>
                 <Column size="4">
                   <Divider height="100px" />
@@ -50,7 +50,7 @@ const Pricing = () => (
     <Container fluid >
       <Row>
         <Column size="1" />
-        <Column size="11" color={Colors.lightGray}>
+        <Column size="11" color={Colors.lightGray} border top>
           <Row>
             <Column size="1" />
             <Column size="8">
@@ -58,7 +58,7 @@ const Pricing = () => (
               <Divider height="50px" />
               <Title
                 title="PRICING AND FINANCING"
-                paragraph="Do you have any question on financing or our extended payment plans?"
+                paragraph="Currently review prices for Miami"
                 style=""
               />
               <Divider height="50px" />
