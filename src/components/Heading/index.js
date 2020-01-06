@@ -73,7 +73,7 @@ export const Separator = styled.div`
 `
 export const Paragraph = styled.div`
   font-size: 12px;
-  color: ${props => props.primary ? `${Colors.Gray}` : `${Colors.lightGray}`};
+  color: ${props => props.primary ? `${Colors.Gray}` : `${props.color}`};
 `
 export const Title = props => {
   return (
@@ -110,3 +110,6 @@ Title.propTypes = {
 H2.propTypes = {
   primary: PropTypes.bool.isRequired,
 }
+Paragraph.defaultProps = {
+  color: Colors.blue,
+};
