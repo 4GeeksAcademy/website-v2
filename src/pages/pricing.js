@@ -18,7 +18,6 @@ const Pricing = () => (
                 size="7"
                 title="CELEBRATE THE BEST PRICE IN TOWN"
                 paragraph="We never stop trying until we mastered a real premium affordable program. Our philosophy is rooted in making coding education available to everyone."
-                style="light"
               />
             </Column>
           </Row>
@@ -58,9 +57,9 @@ const Pricing = () => (
 
               <Divider height="50px" />
               <Title
+                primary
                 title="PRICING AND FINANCING"
                 paragraph="Currently review prices for Miami"
-                primary
               />
               <Divider height="50px" />
             </Column>

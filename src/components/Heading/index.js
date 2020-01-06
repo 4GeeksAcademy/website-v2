@@ -83,7 +83,7 @@ export const Title = props => {
           <>
             <Row center>{props.primary ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
             <Row center>{props.primary ? <Separator primary /> : <Separator />}</Row>
-            <Row center>{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
+            <Row center>{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Row>
           </>
         )
         :
@@ -105,11 +105,12 @@ Title.propTypes = {
   paragraph: PropTypes.string,
   style: PropTypes.string.isRequired,
   content: PropTypes.func,
-  size: PropTypes.string
+  size: PropTypes.string,
+  paragraphColor: PropTypes.string
 };
 H2.propTypes = {
   primary: PropTypes.bool.isRequired,
 }
 Paragraph.defaultProps = {
-  color: Colors.blue,
+  color: Colors.lightGray,
 };

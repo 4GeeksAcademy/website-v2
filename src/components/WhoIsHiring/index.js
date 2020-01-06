@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Row} from '../../components/Sections'
 import {useStaticQuery, graphql} from 'gatsby';
-import {RoundImage} from '../Styling';
+import {RoundImage, Colors} from '../Styling';
 import {H2, H3, Paragraph} from '../Heading'
 
 const WhoIsHiring = () => {
@@ -50,7 +50,7 @@ const WhoIsHiring = () => {
         <H3 primary>438 COMPANIES</H3>
       </Row>
       <Row center>
-        <Paragraph>Review our latest hirings</Paragraph>
+        <Paragraph color={Colors.blue}>Review our latest hirings</Paragraph>
       </Row>
     </>
   )
