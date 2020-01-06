@@ -13,8 +13,8 @@ export const H2 = styled.h2`
   font-weight: 800;
   font-style: normal;
   letter-spacing: 0px;
-  text-transform: ${props => props.up && "uppercase"};
-  color: ${Colors.black}
+  text-transform: ${props => props.uppercase && "uppercase"};
+  color: ${props => props.color}
 `;
 export const H3 = styled.h3`
 font-size: 36px;
@@ -22,13 +22,13 @@ font-weight: 800;
 font-style: normal;
 font-family: lato, sans-serif;
 letter-spacing: 0px;
-text-transform: ${props => props.up && "uppercase"};
+text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.primary ? `${Colors.black}` : `${Colors.white}`}
 `;
 export const H4 = styled.h4`
   font-size: 29px;
   line-height: 29px;
-  text-transform: ${props => props.up && "uppercase"};
+  text-transform: ${props => props.uppercase && "uppercase"};
   font-style: normal;
   font-family: lato, sans-serif;
   font-weight: 800;
