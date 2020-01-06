@@ -60,7 +60,7 @@ const Pricing = () => (
               <Title
                 title="PRICING AND FINANCING"
                 paragraph="Currently review prices for Miami"
-                style=""
+                primary
               />
               <Divider height="50px" />
             </Column>

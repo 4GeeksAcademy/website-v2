@@ -51,7 +51,7 @@ const Partners = () => (
               <Title
                 title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
                 paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
-                style="light"
+                primary
               />
             </Column>
           </Row>
@@ -71,7 +71,7 @@ const Partners = () => (
               <Title
                 title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
                 paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
-                style="light"
+                primary
               />
               <Divider height="50px" />
             </Column>

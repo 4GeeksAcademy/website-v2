@@ -18,7 +18,6 @@ const Program = () => (
                 size="6"
                 title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
                 paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
-                style=""
               />
             </Column>
           </Row>
