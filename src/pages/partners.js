@@ -49,8 +49,9 @@ const Partners = () => (
             <Column size="1" />
             <Column size="8">
               <Title
-                title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
-                paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+                size="10"
+                title="SOME OF OUR PARTNERS AND EMPLOYERS"
+                paragraph="To ensure that our students are getting hired, we work closely with both our hiring partners as well as industry leaders constantly refreshing and optimizing our program and syllabus."
                 primary
               />
             </Column>

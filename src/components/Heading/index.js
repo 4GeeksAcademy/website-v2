@@ -13,7 +13,7 @@ export const H2 = styled.h2`
   font-family: lato, sans-serif;
   font-weight: 800;
   font-style: normal;
-  letter-spacing: 0px;
+  letter-spacing: -1px;
   text-transform: ${props => props.uppercase && "uppercase"};
   color: ${props => props.color}
 `;
@@ -24,7 +24,7 @@ font-height: 36px;
 font-weight: 800;
 font-style: normal;
 font-family: lato, sans-serif;
-letter-spacing: 0px;
+letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.primary ? `${Colors.black}` : `${Colors.white}`}
 `;
