@@ -23,7 +23,15 @@ const Partners = () => (
               />
             </Column>
           </Row>
-          <Button color="red" textColor="white">BE A HIRING PARTNER</Button>
+          <Row>
+            <Column size="1" />
+            <Column size="8">
+              <Row center>
+                <Button color="red" textColor="white">BE A HIRING PARTNER</Button>
+              </Row>
+            </Column>
+          </Row>
+
         </Column>
       </Row>
     </Container>
