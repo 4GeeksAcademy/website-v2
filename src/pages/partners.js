@@ -11,7 +11,7 @@ const Partners = () => (
     <Container fluid height="400px">
       <Row>
         <Column size="1" />
-        <Column border size="11" padding="10%" image url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="600px">
+        <Column border bottom size="11" padding="10%" image url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="600px">
           <Row>
             <Column size="1" />
             <Column size="8">
@@ -62,7 +62,7 @@ const Partners = () => (
     <Container fluid height="100%">
       <Row>
         <Column size="1" />
-        <Column size="11" color={Colors.lightGray}>
+        <Column size="11" color={Colors.lightGray} border top>
           <Row>
             <Column size="1" />
             <Column size="8">

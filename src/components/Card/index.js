@@ -8,6 +8,7 @@ export const Card = styled.div`
     flex-direction: column;
     width: ${props => props.width};
     height: ${props => props.height};
+    margin: ${props => props.margin};
     background: ${props => props.color === "blue"
         ?
         `${Colors.blue}`

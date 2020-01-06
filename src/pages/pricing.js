@@ -3,6 +3,7 @@ import Layout from '../global/Layout';
 import {Column, Row, Container, Divider} from "../components/Sections"
 import {Title, H5} from '../components/Heading'
 import {Button, Colors, RoundImage} from '../components/Styling'
+import PricesAndPayment from '../components/PricesAndPayment';
 
 const Pricing = () => (
   <Layout>
@@ -64,9 +65,11 @@ const Pricing = () => (
               <Divider height="50px" />
             </Column>
           </Row>
+          <PricesAndPayment />
         </Column>
       </Row>
     </Container>
+
   </Layout >
 );
 
