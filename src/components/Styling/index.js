@@ -34,7 +34,7 @@ export const RoundImage = styled.div`
     background-image: url(${props => props.url} );
     margin-bottom: ${props => props.mb};
     background-repeat: no-repeat;
-    background-size:${props => props.bsize};
+    background-size:${props => props.size};
     border-radius: ${props => props.border};
     background-position: center;
     background-color: white;
