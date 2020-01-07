@@ -111,7 +111,7 @@ ${props =>
 `}
 `
 export const Wrapper = props => {
-    if (props.style === "defaul") {
+    if (props.style === "default") {
         return (
             <Container fluid>
                 <Row>

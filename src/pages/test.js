@@ -17,6 +17,7 @@ import ChooseProgram from '../components/ChooseProgram'
 const Test = ({data}) => (
   <Layout>
     <Wrapper
+    style="default"
       border="bottom"
       image="yes"
       url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80">
