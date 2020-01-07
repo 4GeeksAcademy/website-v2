@@ -6,12 +6,14 @@ import {Device} from '../Responsive'
 
 export const Container = styled.div`
     ${props =>
-        props.fluid
+        props.width === "fluid"
             ?
             css`
                 width: 100%;
             `
             :
+            props.width === "fixed"
+            &&
             css`
             @media ${Device.md}{
                 max-width: 540px;
@@ -135,7 +137,7 @@ export const Wrapper = props => {
     }
     if (props.style === "custom") {
         return (
-            <Container fluid>
+            <Container width={props.width}>
                 <Row>
                     <Column size={props.outerLeftCol} />
                     <Column
