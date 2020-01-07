@@ -6,18 +6,29 @@ import {Column, Row} from '../Sections'
 import {Device} from '../Responsive'
 
 export const H1 = styled.h1`
+<<<<<<< HEAD
 font-family: lato, sans-serif;
   font-size: 12px;
 `;
 export const H2 = styled.h2`
   font-size: 50px;  
+=======
+  font-size: 12px;
+`;
+export const H2 = styled.h2`
+  font-size: 40px;  
+>>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
   font-family: lato, sans-serif;
   font-weight: 800;
   font-style: normal;
   letter-spacing: -1px;
   text-transform: ${props => props.uppercase && "uppercase"};
+<<<<<<< HEAD
   color: ${props => props.color};
   text-align: ${props => props.align};
+=======
+  color: ${props => props.color}
+>>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
 `;
 export const H3 = styled.h3`
 margin:0px;
@@ -64,10 +75,16 @@ export const H5 = styled.h5`
         text-align: ${props => props.align};
       }
       `} 
+<<<<<<< HEAD
 `;
 export const Span = styled.span`
       ${props => props.color}
 `
+=======
+      
+  
+`;
+>>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
 export const Separator = styled.div`
   margin: .5rem 0px;
   height: 5px;
@@ -75,10 +92,14 @@ export const Separator = styled.div`
   border-bottom: ${props => props.primary ? `2px solid ${Colors.blue} ` : `2px solid ${Colors.lightBlue}`};
 `
 export const Paragraph = styled.div`
+<<<<<<< HEAD
   margin: ${props => props.margin};
   font-family: lato, sans-serif;
   text-align: ${props => props.align};
   font-size: ${props => props.fontSize};
+=======
+  font-size: 12px;
+>>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
   color: ${props => props.primary ? `${Colors.Gray}` : `${props.color}`};
 `
 export const Title = props => {
@@ -119,5 +140,8 @@ H2.propTypes = {
 }
 Paragraph.defaultProps = {
   color: Colors.lightGray,
+<<<<<<< HEAD
   fontSize: "12px"
+=======
+>>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
 };

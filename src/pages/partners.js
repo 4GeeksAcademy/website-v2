@@ -5,6 +5,7 @@ import {Title} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 import QueryTest from '../components/QueryTest';
 import WhoIsHiring from '../components/WhoIsHiring';
+<<<<<<< HEAD
 
 const Partners = () => (
   <Layout>
@@ -35,6 +36,39 @@ const Partners = () => (
       </Row>
     </Container>
     <Container fluid >
+=======
+
+const Partners = () => (
+  <Layout>
+    <Container fluid height="400px">
+      <Row>
+        <Column size="1" />
+        <Column border bottom size="11" padding="10%" image url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="600px">
+          <Row>
+            <Column size="1" />
+            <Column size="8">
+              <Title
+                size="6"
+                title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
+                paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+                style=""
+              />
+            </Column>
+          </Row>
+          <Row>
+            <Column size="1" />
+            <Column size="8">
+              <Row center>
+                <Button color="red" textColor="white">BE A HIRING PARTNER</Button>
+              </Row>
+            </Column>
+          </Row>
+
+        </Column>
+      </Row>
+    </Container>
+    <Container fluid height="100%">
+>>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
       <Row>
         <Column size="1" />
         <Column size="11">

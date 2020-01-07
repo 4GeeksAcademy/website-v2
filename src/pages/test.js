@@ -3,9 +3,15 @@ import styled from 'styled-components';
 import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
 import Link from 'gatsby-link'
+<<<<<<< HEAD
 import {Container, Divider, Col, Cont, Row, Column, Wrapper} from '../components/Sections'
 import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
+=======
+import {Container, Divider, Col, Cont, Row, Column} from '../components/Sections'
+import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
+import {Colors} from '../components/Styling'
+>>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
 import {Jumbo} from '../components/Jumbotron'
 import QueryTest from '../components/QueryTest'
 import Why4Geeks from '../components/Why4Geeks'
@@ -16,6 +22,7 @@ import ChooseProgram from '../components/ChooseProgram'
 
 const Test = ({data}) => (
   <Layout>
+<<<<<<< HEAD
     <Wrapper
     style="default"
       border="bottom"
@@ -23,6 +30,8 @@ const Test = ({data}) => (
       url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80">
       <Button color="blue">Ciao</Button>
     </Wrapper>
+=======
+>>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
     <div className="container-fluid">
       <div className="row tt">
         <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
