@@ -17,7 +17,25 @@ import ChooseProgram from '../components/ChooseProgram'
 const Test = ({data}) => (
   <Layout>
     <Wrapper
-    style="default"
+      style="custom"
+      outerLeftCol="1"
+      outerRightCol="11"
+      full>full
+    </Wrapper>
+    <Wrapper
+      style="custom"
+      outerLeftCol="1"
+      outerRightCol="11">
+      empty
+    </Wrapper>
+    <Wrapper
+      style="default"
+      outerLeftCol="1"
+      outerRightCol="11"
+    >
+    </Wrapper>
+    <Wrapper
+      style="custom"
       border="bottom"
       image="yes"
       url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80">

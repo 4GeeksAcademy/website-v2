@@ -137,19 +137,24 @@ export const Wrapper = props => {
         return (
             <Container fluid>
                 <Row>
-                    <Column size="1" />
+                    <Column size={props.outerLeftCol} />
                     <Column
-                        size="11"
+                        size={props.outerRightCol}
                         image={props.image}
                         url={props.url}
                         border={props.border}
                         color={props.color}>
-                        <Row>
-                            <Column size="1" />
-                            <Column size="8">
-                                {props.children}
-                            </Column>
-                        </Row>
+                        {props.full
+                            ?
+                            <Row>
+                                <Column size={props.innerLeftCol} />
+                                <Column size={props.innerRightCol}>
+                                    {props.children}
+                                </Column>
+                            </Row>
+                            :
+                            props.children
+                        }
                     </Column>
                 </Row>
             </Container>
@@ -179,6 +184,13 @@ Container.defaultProps = {
 };
 Column.defaultProps = {
     align: 'center',
+};
+Wrapper.defaultProps = {
+    outerLeftCol: '1',
+    outerRightCol: '11',
+    innerLeftCol: '1',
+    innerRightCol: '8',
+
 };
 
 Divider.propTypes = {
