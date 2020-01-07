@@ -1,30 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
-import {useSpring, animated} from 'react-spring'
-import range from 'lodash-es/range'
+import {H2, H3, H4} from '../Heading'
+import {Card} from '../Card'
+import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
+import {Row, Column, Container} from '../Sections'
 import '../../assets/css/style.scss';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/free-solid-svg-icons'
-
-const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
 
 export default () => {
-  // const classes = useStyles();
-
-  // const {radians} = useSpring({
-  //     to: async next => {
-  //         while (1) await next({radians: 2 * Math.PI});
-  //     },
-  //     from: {radians: 0},
-  //     config: {duration: 3500},
-  //     reset: true
-  // });
-  const graduation = <FontAwesomeIcon icon={faGraduationCap} size="3x" />
-  const rating = <FontAwesomeIcon icon={faTrophy} size="3x" />
-  const campuses = <FontAwesomeIcon icon={faBookOpen} size="3x" />
-  const hired = <FontAwesomeIcon icon={faHandshake} size="3x" />
-
   const data = useStaticQuery(graphql`
       query myQueryTest2{
           credentials: allCredentialsDataYaml {
@@ -32,76 +14,60 @@ export default () => {
                 node {
                   credential
                   cred_value
+                  cred_symbol
                 }
-              }
-          }
-          alumni:   allAlumniYaml{
-            edges{
-              node{
-                name
-                image
-                content
-                title
               }
             }
           }
-          
-        
-        cred: allFinancialsYaml{
-          edges{
-              node{
-                  name
-                  options{
-                      months
-                      payment
-                  }
-                  logo
-                  description
-              }
-          }
-      }}
       `)
-
-
   return (
+    <Row>
+      {data.credentials.edges.map((i, index) => {
+        return (
+          <div key={index} className={"col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 text-center mb-2"}>
 
-    <div className="container cred-container px-5 pt-5">
-
-      <div className="row px-5 mt-5">
-        <div className="col-md-10">
-          <div className="row prova">
-            {data.credentials.edges.map((i, index) => {
-              // const props = useSpring({number: i.node.cred_value, from: {number: 0}})
-              console.log(i.node.cred_value)
-              return (
-                <div key={index} className="col-md-3 test">
-                  <div className="card-credential p-3 text-center ">
-                    <div className="icons mb-3">{graduation}</div>
-                    <div className="cred-title">{i.node.credential}</div>
-                    <div><h3>{i.node.cred_value}</h3></div>
-                  </div>
+            {(index % 2 == 0) ?
+              (<Card
+                height="275px"
+                width="200px"
+                color="white"
+                shadow
+                move="down"
+                down="40px"
+              >
+                <div className="py-4">
+                  {(i.node.credential === "Campuses") && <Trophy width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Alumni") && <Graduation width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Rating") && <Book width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Hired") && <Hand width="48" color={Colors.blue} fill={Colors.blue} />}
                 </div>
-                // <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
-                //     <div className="card">
-
-                //         <div className="card-body">
-                //             <h5 className="card-title">{i.node.credentials}</h5>
-                //             <p className="card-text">
-                //                 {i.node.cred_value}
-                //             </p>
-
-                //         </div>
-                //     </div>
-                // </animated.div>
-              )
-            })}
-
+                <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
+                <div className="card-footer bg-white border-0 p-0">
+                  {(i.node.credential === "Hired") ? <H2>{i.node.cred_value}{i.node.cred_symbol}</H2> : <H2>{i.node.cred_symbol}{i.node.cred_value}</H2>}
+                </div>
+              </Card>)
+              :
+              <Card
+                height="275px"
+                width="200px"
+                color="white"
+                shadow
+              >
+                <div className="py-4">
+                  {(i.node.credential === "Campuses") && <Trophy width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Alumni") && <Graduation width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Rating") && <Book width="48" color={Colors.blue} fill={Colors.blue} />}
+                  {(i.node.credential === "Hired") && <Hand width="48" color={Colors.blue} fill={Colors.blue} />}
+                </div>
+                <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
+                <div className="card-footer bg-white border-0 p-0">
+                  {(i.node.credential === "Hired") ? <H2>{i.node.cred_value}{i.node.cred_symbol}</H2> : <H2>{i.node.cred_symbol}{i.node.cred_value}</H2>}
+                </div>
+              </Card>}
           </div>
-        </div>
-
-
-      </div>
-    </div>
+        )
+      })}
+    </Row>
   )
 }
 

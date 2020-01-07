@@ -5,7 +5,6 @@ import {useStaticQuery, graphql} from 'gatsby';
 import PropTypes from 'prop-types';
 import {useSpring, animated} from 'react-spring'
 import range from 'lodash-es/range'
-// import '../../assets/css/bootstrap.min.css';
 import '../../assets/css/style.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/free-solid-svg-icons'
@@ -24,31 +23,7 @@ const Credentials = (props) => {
               }
             }
         }
-        alumni:   allAlumniYaml{
-          edges{
-            node{
-              name
-              image
-              content
-              title
-            }
-          }
         }
-        
-      
-      cred: allFinancialsYaml{
-        edges{
-            node{
-                name
-                options{
-                    months
-                    payment
-                }
-                logo
-                description
-            }
-        }
-    }}
     `)
   const {radians} = useSpring({
     to: async next => {
@@ -77,12 +52,7 @@ const Credentials = (props) => {
   // });
   return (
     <>
-      {/* <div>
-      {data.allMarkdownRemark.edges.map((item) => (
-        <div key={item.node.id}>{item.node.frontmatter.name}</div>
-      ))}
-    </div> */}{data.credentials.edges.map(i => (
-
+      {data.credentials.edges.map(i => (
         <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
           <div className="container test">
             <div className="col-md border rounded credentials mr-2">

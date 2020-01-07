@@ -4,7 +4,7 @@ zip_code: ""
 state: "Los Cortijos de Lourdes"
 country: "Venezuela"
 images:
-  - ""
+  - "../affinity-logo.png"
   - ""
   - ""
 courses:

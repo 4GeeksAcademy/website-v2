@@ -1,41 +1,60 @@
 import React from 'react';
-import styled from 'styled-components';
-
 import Layout from '../global/Layout';
-import Image from '../components/Image';
-
-const Page = styled.div`
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Heading = styled.h1`
-  font-size: 24px;
-  color: #555;
-  margin-top: 60px;
-`;
-
-const Label = styled.p`
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 12px;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-`;
+import {Card} from '../components/Card'
+import {Container, Row, Column} from '../components/Sections'
+import {Title, H2, H3, Span} from '../components/Heading'
+import {Button, Colors} from '../components/Styling'
 
 const Program = () => (
   <Layout>
-    <Page>
-      <Image />
-      <Heading>Program Page</Heading>
-      <Label>Starter</Label>
-    </Page>
-    <div className="btn btn-primary">Test</div>
+    <Container fluid>
+      <Row>
+        <Column size="1" />
+        <Column border bottom size="11" padding="10%" image url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="600px">
+          <Row>
+            <Column size="1" />
+            <Column size="8">
+              <Title
+                size="6"
+                title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
+                paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+              />
+            </Column>
+          </Row>
+          <Row>
+            <Column size="1" />
+            <Column size="8">
+              <Row>
+                <Column align="right" size="6"><Button color={Colors.white} margin="15px 0" textColor={Colors.black}>REQUEST SYLLABUS</Button></Column>
+                <Column align="left" size="6"><Button color="red" margin="15px 0" textColor=" white">APPLY NOW</Button></Column>
+              </Row>
+            </Column>
+          </Row>
+        </Column>
+      </Row>
+    </Container>
+    <Container fluid height="400px">
+      <Row>
+        <Column size="1" />
+        <Column size="11" >
+          <Row>
+            <Column size="1" />
+            <Column size="8">
+              <Row>
+                <Column size="1" />
+                <Column size="11">
+                  <Row>
+                    <Column size="6"><Card shadow height="400px" width="400px" move="up" up="100px" margin="10px 0"><H3 primary>GEEK<Span color={Colors.blue}>PAL</Span></H3></Card></Column>
+                    <Column size="6"><Card shadow height="400px" width="400px" move="up" up="100px" margin="10px 0"><H3 primary>GEEKTALK</H3></Card></Column>
+                  </Row>
+                </Column>
+              </Row>
+            </Column>
+          </Row>
+        </Column>
+      </Row>
+    </Container>
+
   </Layout>
 );
 

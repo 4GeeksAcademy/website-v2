@@ -157,7 +157,8 @@ export default () => {
     // <header>
     //     <h1>{data.alumni.edges[1].node.name}</h1>
     // </header>
-    <div className="container">
+    // <div className="container">
+    <>
       <div className="row justify-content-center mb-3"><h1 >Pricing and Financing</h1></div>
       <div className="row justify-content-center"><h5 >Prices can vary depending on the location.</h5></div>
       <div className="row justify-content-center mb-5"><h5 >Currently revewing prices for: Miami</h5></div>
@@ -222,7 +223,8 @@ export default () => {
             )}
         </div>
       </div>
-    </div>
+
+    </>
   )
 }
 
