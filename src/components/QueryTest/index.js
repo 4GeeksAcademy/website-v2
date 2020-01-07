@@ -3,11 +3,7 @@ import {useStaticQuery, graphql} from 'gatsby';
 import {H2, H3, H4} from '../Heading'
 import {Card} from '../Card'
 import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
-<<<<<<< HEAD
 import {Row, Column, Container} from '../Sections'
-=======
-import {useSpring, animated} from 'react-spring'
->>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
 import '../../assets/css/style.scss';
 
 export default () => {
@@ -25,11 +21,7 @@ export default () => {
           }
       `)
   return (
-<<<<<<< HEAD
     <Row>
-=======
-    <div className="row">
->>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
       {data.credentials.edges.map((i, index) => {
         return (
           <div key={index} className={"col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 text-center mb-2"}>
@@ -75,11 +67,7 @@ export default () => {
           </div>
         )
       })}
-<<<<<<< HEAD
     </Row>
-=======
-    </div>
->>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
   )
 }
 

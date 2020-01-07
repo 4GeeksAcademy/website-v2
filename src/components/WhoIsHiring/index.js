@@ -39,11 +39,7 @@ const WhoIsHiring = () => {
       <Row>
         {data.who.edges[0].node.partners.map((partner, index) => (
           <div key={index} className="col-6 col-xs-6 col-sm-3">
-<<<<<<< HEAD
             <RoundImage url={partner.image} border=".75rem" bsize="contain" height="150px" move up="80px" mb="1.25rem" />
-=======
-            <RoundImage url={partner.image} border=".75rem" bsize="70% 50%" height="150px" move up="80px" mb="1.25rem" />
->>>>>>> e83afba14acaf91624362aa4de2103f6e6ad1b7c
             {/* <div className="card">
               <img src={partner.image} width="100%" height="150" />
             </div> */}
