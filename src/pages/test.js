@@ -26,11 +26,10 @@ const Test = ({data}) => (
           size="7"
           align="left"
         >
-          <Row
-            margin="10px"
-          >
+          <Row          >
             <H1>Miami Coding Bootcamp</H1>
           </Row>
+          <Row><Separator primary /></Row>
           <Row>
             <H2>LEARN TO CODE_</H2>
           </Row>

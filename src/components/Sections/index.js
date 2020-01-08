@@ -44,7 +44,8 @@ export const Row = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    margin-top: ${props => props.margin}
+    margin-top: ${props => props.marginTop};
+    margin-bottom: ${props => props.marginBottom};
     ${props => props.center && css`justify-content:center;`}
 `
 export const Column = styled.div`
