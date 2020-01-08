@@ -44,6 +44,7 @@ export const Row = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    margin-top: ${props => props.margin}
     ${props => props.center && css`justify-content:center;`}
 `
 export const Column = styled.div`
@@ -70,8 +71,9 @@ ${props =>
             ?
             css`
                 background-image: url(${props => props.url});
-                background-size: cover;
+                background-size: ${props => props.backgroundSize};
                 background-repeat: no-repeat;
+                height: ${props => props.height};
     `
             : props.image === "no"
             &&
@@ -124,10 +126,19 @@ export const Wrapper = props => {
                         url={props.url}
                         border={props.border}
                         color={props.color}
-                        align={props.align}>
+                        align={props.align}
+                        height={props.height}>
                         <Row>
                             <Column size="1" />
-                            <Column size="8">
+                            <Column
+                                size="8"
+                                image={props.outerImage}
+                                url={props.outerUrl}
+                                border={props.outerBorder}
+                                color={props.outerColor}
+                                align={props.outerAlign}
+                                height={props.height}
+                            >
                                 {props.children}
                             </Column>
                         </Row>
@@ -190,6 +201,7 @@ Column.defaultProps = {
     align: 'center',
 };
 Wrapper.defaultProps = {
+    width: 'fluid',
     outerLeftCol: '1',
     outerRightCol: '11',
     innerLeftCol: '1',

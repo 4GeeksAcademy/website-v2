@@ -10,14 +10,9 @@ export const H1 = styled.h1`
   font-size: 12px;
 `;
 export const H2 = styled.h2`
-@font-face {
-  font-family: "Futura";
-  src: url("../../static/fonts/futura/Lato-Regular.woff")   format("woff");
-} 
-  
   font-size: 50px;  
-  // font-family: lato, sans-serif;
-  font-weight: 800;
+  font-family: lato, sans-serif;
+  font-weight: 900;
   font-style: normal;
   letter-spacing: -1px;
   text-transform: ${props => props.uppercase && "uppercase"};
@@ -48,7 +43,7 @@ export const H5 = styled.h5`
   line-height: ${props => props.fontHeight};
   text-transform: ${props => props.uppercase && "uppercase"};
   font-style: normal;
-  font-family: lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: 800;
   ${props =>
     props.align === "left" &&

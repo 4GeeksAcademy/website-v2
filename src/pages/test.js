@@ -18,6 +18,52 @@ const Test = ({data}) => (
   <Layout>
     <Wrapper
       style="custom"
+      full
+      innerRightCol="11"
+    >
+      <Row>
+        <Column
+          size="7"
+          align="left"
+        >
+          <Row
+            margin="10px"
+          >
+            <H1>Miami Coding Bootcamp</H1>
+          </Row>
+          <Row>
+            <H2>LEARN TO CODE_</H2>
+          </Row>
+          <Row>
+            <H2>AND GET CAREER</H2>
+          </Row>
+          <Row>
+            <H2>SUPPORT FOR LIFE</H2>
+          </Row>
+
+        </Column>
+        <Column
+          size="5"
+          image="yes"
+          url="../localImage.png"
+          height="500px"
+          backgroundSize="cover"
+          border="bottom"
+        >
+        </Column>
+      </Row>
+    </Wrapper>
+    <Wrapper
+      style="default"
+      image="yes"
+      url="../localImage.png"
+      border="bottom"
+      outerUrl="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80"
+      outerImage="yes"
+      outerBorder="bottom"
+    >ciao</Wrapper>
+    <Wrapper
+      style="custom"
       outerLeftCol="1"
       outerRightCol="11"
       full>full
