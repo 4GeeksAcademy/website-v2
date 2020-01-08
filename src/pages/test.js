@@ -4,7 +4,7 @@ import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
 import Link from 'gatsby-link'
 import {Container, Divider, Col, Cont, Row, Column, Wrapper} from '../components/Sections'
-import {H1, H2, Title, Separator, Paragraph} from '../components/Heading'
+import {H1, H2, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Jumbo} from '../components/Jumbotron'
 import QueryTest from '../components/QueryTest'
@@ -31,7 +31,7 @@ const Test = ({data}) => (
           </Row>
           <Row><Separator primary /></Row>
           <Row>
-            <H2>LEARN TO CODE_</H2>
+            <H2>LEARN TO CODE<Span color={Colors.blue}>_</Span></H2>
           </Row>
           <Row>
             <H2>AND GET CAREER</H2>

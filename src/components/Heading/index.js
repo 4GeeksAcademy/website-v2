@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {css} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors, Icons} from '../../components/Styling'
 import {Column, Row} from '../Sections'
@@ -65,8 +65,15 @@ export const H5 = styled.h5`
       }
       `} 
 `;
+const blink = keyframes`
+      0%{     color: ${props => props.color};    }
+      50%{    color: transparent; }
+      100%{   color: ${props => props.color};    }
+`
 export const Span = styled.span`
-      ${props => props.color}
+      animation:${blink} 1.2s infinite;
+      color: ${props => props.color};
+      
 `
 export const Separator = styled.div`
   margin: .5rem 0px;
