@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 // COLORS SET
+
 export const Colors = {
     blue: "#0097CE",
     lightBlue: "#BBEAFC",

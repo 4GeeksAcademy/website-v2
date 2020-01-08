@@ -6,12 +6,17 @@ import {Column, Row} from '../Sections'
 import {Device} from '../Responsive'
 
 export const H1 = styled.h1`
-font-family: lato, sans-serif;
+  font-family: lato, sans-serif;
   font-size: 12px;
 `;
 export const H2 = styled.h2`
+@font-face {
+  font-family: "Futura";
+  src: url("../../static/fonts/futura/Lato-Regular.woff")   format("woff");
+} 
+  
   font-size: 50px;  
-  font-family: lato, sans-serif;
+  // font-family: lato, sans-serif;
   font-weight: 800;
   font-style: normal;
   letter-spacing: -1px;

@@ -56,12 +56,12 @@ ${props =>
         props.border === "bottom"
             ?
             css`
-                    border-radius: 0 0 0 1.25rem;
+                border-radius: 0 0 0 1.25rem;
                 `
             : props.border === "top"
             &&
             css`
-                    border-radius: 1.25rem 0 0 0;
+                border-radius: 1.25rem 0 0 0;
                 `
     }
 
@@ -123,7 +123,8 @@ export const Wrapper = props => {
                         image={props.image}
                         url={props.url}
                         border={props.border}
-                        color={props.color}>
+                        color={props.color}
+                        align={props.align}>
                         <Row>
                             <Column size="1" />
                             <Column size="8">
@@ -145,7 +146,8 @@ export const Wrapper = props => {
                         image={props.image}
                         url={props.url}
                         border={props.border}
-                        color={props.color}>
+                        color={props.color}
+                        props>
                         {props.full
                             ?
                             <Row>
