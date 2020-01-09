@@ -10,6 +10,7 @@ import {Jumbo} from '../components/Jumbotron'
 import QueryTest from '../components/QueryTest'
 import Why4Geeks from '../components/Why4Geeks'
 import Jobs from '../components/Jobs'
+import GeeksVsOthers from '../components/GeeksVsOthers'
 import News from '../components/News'
 import Locations from '../components/Locations'
 import ChooseProgram from '../components/ChooseProgram'
@@ -58,7 +59,10 @@ const Test = ({data}) => (
         </Column>
       </Row>
     </Wrapper>
-
+    <Wrapper
+      style="default">
+      <GeeksVsOthers />
+    </Wrapper>
 
     {/* QUERY TEST */}
     <div className="container-fluid bg-light">

@@ -5,9 +5,8 @@ import {Colors} from '../../components/Styling'
 import {Device} from '../Responsive'
 import {FadeIn} from '../Animations'
 
-
 export const Card = styled.div`
-animation: 2s ${FadeIn} ease-out;
+    animation: 2s ${FadeIn} ease-out;
     flex-direction: column;
     width: ${props => props.width};
     height: ${props => props.height};
