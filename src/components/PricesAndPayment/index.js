@@ -7,6 +7,7 @@ import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import {Row, Column} from '../Sections'
 import '../../assets/css/style.scss';
 export default () => {
   const classes = useStyles();
@@ -159,10 +160,21 @@ export default () => {
     // </header>
     // <div className="container">
     <>
-      <div className="row justify-content-center mb-3"><h1 >Pricing and Financing</h1></div>
-      <div className="row justify-content-center"><h5 >Prices can vary depending on the location.</h5></div>
-      <div className="row justify-content-center mb-5"><h5 >Currently revewing prices for: Miami</h5></div>
-      <div className="{classes.root}">
+      <Row>
+        <Column size="6">
+          <Row>PAY UPFRONT OR MONTHLY</Row>
+          <Row>and enjoy the best pricing in town.</Row>
+          <Row></Row>
+          <Row></Row>
+          <Row></Row>
+          <Row></Row>
+        </Column>
+      </Row>
+
+      <Row><h1 >Pricing and Financing</h1></Row>
+      <Row><h5 >Prices can vary depending on the location.</h5></Row>
+      <Row><h5 >Currently revewing prices for: Miami</h5></Row>
+      <div >
         <Stepper nonLinear activeStep={activeStep}>
           {steps.map((label, index) => (
             <Step key={label}>
@@ -245,6 +257,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps () {
-  return ['6 months', '12 months', '24 months', '36 months', '42 months', '60 months'];
+  return ['6 mo', '12 mo', '24 mo', '36 mo', '42 mo', '60 mo'];
 }
 
