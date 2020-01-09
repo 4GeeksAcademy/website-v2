@@ -3,17 +3,11 @@ import styled, {css, keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
 import {Device} from '../Responsive'
+import {FadeIn} from '../Animations'
 
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`
+
 export const Card = styled.div`
-animation: 2s ${fadeIn} ease-out;
+animation: 2s ${FadeIn} ease-out;
     flex-direction: column;
     width: ${props => props.width};
     height: ${props => props.height};

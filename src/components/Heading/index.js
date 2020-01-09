@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {Colors, Icons} from '../../components/Styling'
 import {Column, Row} from '../Sections'
 import {Device} from '../Responsive'
+import {Blink} from '../Animations'
 
 export const H1 = styled.h1`
   font-family: lato, sans-serif;
@@ -65,13 +66,9 @@ export const H5 = styled.h5`
       }
       `} 
 `;
-const blink = keyframes`
-      0%{     color: ${props => props.color};    }
-      50%{    color: transparent; }
-      100%{   color: ${props => props.color};    }
-`
+
 export const Span = styled.span`
-      animation:${blink} 1.2s infinite;
+      animation:${Blink} 1.2s infinite;
       color: ${props => props.color};
       
 `

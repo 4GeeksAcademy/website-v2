@@ -26,20 +26,26 @@ const Test = ({data}) => (
           size="7"
           align="left"
         >
-          <Row          >
-            <H1>Miami Coding Bootcamp</H1>
-          </Row>
-          <Row><Separator primary /></Row>
           <Row>
-            <H2>LEARN TO CODE<Span color={Colors.blue}>_</Span></H2>
+            <Column size="8">
+              <Row          >
+                <H1>Miami Coding Bootcamp</H1>
+              </Row>
+              <Row><Separator primary /></Row>
+              <Row>
+                <H2>LEARN TO CODE<Span color={Colors.blue}>_</Span></H2>
+              </Row>
+              <Row>
+                <H2>AND GET CAREER</H2>
+              </Row>
+              <Row>
+                <H2>SUPPORT FOR LIFE</H2>
+              </Row>
+              <Paragraph primary align="left" margin="15px 0px">
+                Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
+              </Paragraph>
+            </Column>
           </Row>
-          <Row>
-            <H2>AND GET CAREER</H2>
-          </Row>
-          <Row>
-            <H2>SUPPORT FOR LIFE</H2>
-          </Row>
-
         </Column>
         <Column
           size="5"
@@ -52,76 +58,7 @@ const Test = ({data}) => (
         </Column>
       </Row>
     </Wrapper>
-    <Wrapper
-      style="default"
-      image="yes"
-      url="../localImage.png"
-      border="bottom"
-      outerUrl="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80"
-      outerImage="yes"
-      outerBorder="bottom"
-    >ciao</Wrapper>
-    <Wrapper
-      style="custom"
-      outerLeftCol="1"
-      outerRightCol="11"
-      full>full
-    </Wrapper>
-    <Wrapper
-      style="custom"
-      outerLeftCol="1"
-      outerRightCol="11">
-      empty
-    </Wrapper>
-    <Wrapper
-      style="default"
-      outerLeftCol="1"
-      outerRightCol="11"
-    >
-    </Wrapper>
-    <Wrapper
-      style="custom"
-      border="bottom"
-      image="yes"
-      url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80">
-      <Button color="blue">Ciao</Button>
-    </Wrapper>
-    <div className="container-fluid">
-      <div className="row tt">
-        <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
-        <div className="col-12 col-lg-11 col-md-11 col-sm-12 col-xl-11">
-          <div className="row">
-            <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
-            <div className="col-12 col-lg-5 col-md-5 col-sm-12 col-xl-5 ">
-              <Divider height="100px" />
-              <div className="row justify-content-center">
-                <div className="col-md-7">
-                  <div className="row">
-                    <H1>Miami Coding Bootcamp</H1>
-                  </div>
-                  <div className="row">
-                    <Separator primary />
-                  </div>
-                  <div className="row">
-                    <H2 primary>LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</H2>
-                  </div>
-                  <div className="row">
-                    <Paragraph primary>Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.</Paragraph>
-                  </div>
-                  <div className="row mt-3">
-                    <ChooseProgram />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
-            <div className="col-12 col-lg-5 col-md-5 col-sm-12 col-xl-5 p-0">
-              <img src="https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80" width="100%" height="600px" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     {/* QUERY TEST */}
     <div className="container-fluid bg-light">

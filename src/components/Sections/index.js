@@ -46,6 +46,7 @@ export const Row = styled.div`
     margin-left: -15px;
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
+    
     ${props => props.center && css`justify-content:center;`}
 `
 export const Column = styled.div`
@@ -198,9 +199,9 @@ Container.propTypes = {
 Container.defaultProps = {
     borderBottomLeft: '1.25rem',
 };
-Column.defaultProps = {
-    align: 'center',
-};
+// Column.defaultProps = {
+//     align: 'center',
+// };
 Wrapper.defaultProps = {
     width: 'fluid',
     outerLeftCol: '1',
