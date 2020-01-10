@@ -154,13 +154,7 @@ export default () => {
             <Row center><H5 fontSize="20px">PAY UPFRONT</H5></Row>
             <Row center marginBottom="10px"><H5 fontSize="20px">OR MONTHLY</H5></Row>
             <Row center marginBottom="20px"><Paragraph primary>and enjoy the best pricing in town.</Paragraph></Row>
-            <Row></Row>
-
-            <Row center>
-              <H5 fontSize="28px">{getStepContents(activeStep)}
-                {/* <Typography >{getStepContents(activeStep)}</Typography> */}
-              </H5>
-            </Row>
+            <Row center><H5 fontSize="28px">{getStepContents(activeStep)}</H5></Row>
             <Row marginBottom="20px">
               <Stepper nonLinear activeStep={activeStep} alternativeLabel>
                 {steps.map((label, index) => (
@@ -179,12 +173,17 @@ export default () => {
         </Column>
         <Column size="4">
           <Card shadow width="100%" height="400px" padding="1.5rem">
+            <Row center><H5 fontSize="20px">PAY ONLY AFTER</H5></Row>
+            <Row center marginBottom="10px"><H5 fontSize="20px">YOU GET A JOB</H5></Row>
+            <Row center marginBottom="20px"><Paragraph primary>and talk about the income share agreement.</Paragraph></Row>
+            <Row center><H5 fontSize="28px">{getStepContents(activeStep)}</H5></Row>
+            <Row center><H5 fontSize="28px">FULL TUITION</H5></Row>
+            <Row center>
+              <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
+            </Row>
           </Card>
         </Column>
       </Row>
-      <Row><h1 >Pricing and Financing</h1></Row>
-      <Row><h5 >Prices can vary depending on the location.</h5></Row>
-      <Row><h5 >Currently revewing prices for: Miami</h5></Row>
     </>
   )
 }
