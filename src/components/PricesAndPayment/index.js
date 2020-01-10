@@ -5,11 +5,11 @@ import {makeStyles} from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import {Row, Column} from '../Sections'
-import {Card} from '../Card'
-import {H2, H4, H5, Paragraph} from '../Heading'
+import {Row, Column} from '../Sections';
+import {Card} from '../Card';
+import {H2, H4, H5, Paragraph} from '../Heading';
+import {Button, Colors} from '../Styling';
 import '../../assets/css/style.scss';
 
 export default () => {
@@ -155,8 +155,13 @@ export default () => {
             <Row center marginBottom="10px"><H5 fontSize="20px">OR MONTHLY</H5></Row>
             <Row center marginBottom="20px"><Paragraph primary>and enjoy the best pricing in town.</Paragraph></Row>
             <Row></Row>
-            <Row></Row>
-            <Row >
+
+            <Row center>
+              <H5 fontSize="28px">{getStepContents(activeStep)}
+                {/* <Typography >{getStepContents(activeStep)}</Typography> */}
+              </H5>
+            </Row>
+            <Row marginBottom="20px">
               <Stepper nonLinear activeStep={activeStep} alternativeLabel>
                 {steps.map((label, index) => (
                   <Step key={label}>
@@ -167,8 +172,8 @@ export default () => {
                 ))}
               </Stepper>
             </Row>
-            <Row>
-              <Typography >{getStepContents(activeStep)}</Typography>
+            <Row center>
+              <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
             </Row>
           </Card>
         </Column>

@@ -6,7 +6,7 @@ import Image from '../components/Image';
 import Credentials from '../components/Credentials';
 import Alumni from '../components/Alumni';
 import TestCom from '../components/testCom';
-import Test from '../components/Test';
+// import Test from '../components/Test';
 import Mentors from '../components/Mentors';
 import WhoIsHiring from '../components/WhoIsHiring'
 import Footer from '../components/Footer'
