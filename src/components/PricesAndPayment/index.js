@@ -8,6 +8,7 @@ import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {Row, Column} from '../Sections'
+import {Card} from '../Card'
 import {H2, H4, Paragraph} from '../Heading'
 import '../../assets/css/style.scss';
 export default () => {
@@ -158,21 +159,26 @@ export default () => {
   return (
     <>
       <Row>
-        <Column size="6">
-          <Row><H4>PAY UPFRONT OR MONTHLY</H4></Row>
-          <Row><Paragraph primary>and enjoy the best pricing in town.</Paragraph></Row>
-          <Row></Row>
-          <Row></Row>
-          <Row><Stepper nonLinear activeStep={activeStep} alternativeLabel>
-            {steps.map((label, index) => (
-              <Step key={label}>
-                <StepButton onClick={handleStep(index)} completed={completed[index]}>
-                  {label}
-                </StepButton>
-              </Step>
-            ))}
-          </Stepper></Row>
-          <Row></Row>
+        <Column size="4" >
+          <Card shadow width="100%" height="400px" padding="1.5rem">
+            <Row><H4>PAY UPFRONT OR MONTHLY</H4></Row>
+            <Row><Paragraph primary>and enjoy the best pricing in town.</Paragraph></Row>
+            <Row></Row>
+            <Row></Row>
+            <Row><Stepper nonLinear activeStep={activeStep} alternativeLabel>
+              {steps.map((label, index) => (
+                <Step key={label}>
+                  <StepButton onClick={handleStep(index)} completed={completed[index]}>
+                    {label}
+                  </StepButton>
+                </Step>
+              ))}
+            </Stepper></Row>
+            <Row></Row>
+          </Card>
+        </Column>
+        <Column size="4">
+          <Card shadow width="100%" height="400px" padding="1.5rem"></Card>
         </Column>
       </Row>
       <Row><h1 >Pricing and Financing</h1></Row>

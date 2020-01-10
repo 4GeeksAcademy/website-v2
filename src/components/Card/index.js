@@ -11,6 +11,7 @@ export const Card = styled.div`
     width: ${props => props.width};
     height: ${props => props.height};
     margin: ${props => props.margin};
+    padding: ${props => props.padding};
     background: ${props => props.color === "blue"
         ?
         `${Colors.blue}`
