@@ -9,30 +9,26 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {Row, Column} from '../Sections'
 import {Card} from '../Card'
-import {H2, H4, Paragraph} from '../Heading'
+import {H2, H4, H5, Paragraph} from '../Heading'
 import '../../assets/css/style.scss';
+
 export default () => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
   const steps = getSteps();
-
   const totalSteps = () => {
     return steps.length;
   };
-
   const completedSteps = () => {
     return Object.keys(completed).length;
   };
-
   const isLastStep = () => {
     return activeStep === totalSteps() - 1;
   };
-
   const allStepsCompleted = () => {
     return completedSteps() === totalSteps();
   };
-
   const handleNext = () => {
     const newActiveStep =
       isLastStep() && !allStepsCompleted()
@@ -42,22 +38,18 @@ export default () => {
         : activeStep + 1;
     setActiveStep(newActiveStep);
   };
-
   const handleBack = () => {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
-
   const handleStep = step => () => {
     setActiveStep(step);
   };
-
   const handleComplete = () => {
     const newCompleted = completed;
     newCompleted[activeStep] = true;
     setCompleted(newCompleted);
     handleNext();
   };
-
   const handleReset = () => {
     setActiveStep(0);
     setCompleted({});
@@ -81,8 +73,6 @@ export default () => {
             }
           }
         }
-        
-      
       cred: allFinancialsYaml{
         edges{
             node{
@@ -120,7 +110,6 @@ export default () => {
     }
   }
   function getStepLogo (step) {
-
     switch (step) {
       case 0:
         return <img src={data.cred.edges[tempQ].node.logo} width="256" height="100%" />;
@@ -158,27 +147,34 @@ export default () => {
   }
   return (
     <>
-      <Row>
+      {/* <div> */}
+      <Row center>
         <Column size="4" >
           <Card shadow width="100%" height="400px" padding="1.5rem">
-            <Row><H4>PAY UPFRONT OR MONTHLY</H4></Row>
-            <Row><Paragraph primary>and enjoy the best pricing in town.</Paragraph></Row>
+            <Row center><H5 fontSize="20px">PAY UPFRONT</H5></Row>
+            <Row center marginBottom="10px"><H5 fontSize="20px">OR MONTHLY</H5></Row>
+            <Row center marginBottom="20px"><Paragraph primary>and enjoy the best pricing in town.</Paragraph></Row>
             <Row></Row>
             <Row></Row>
-            <Row><Stepper nonLinear activeStep={activeStep} alternativeLabel>
-              {steps.map((label, index) => (
-                <Step key={label}>
-                  <StepButton onClick={handleStep(index)} completed={completed[index]}>
-                    {label}
-                  </StepButton>
-                </Step>
-              ))}
-            </Stepper></Row>
-            <Row></Row>
+            <Row >
+              <Stepper nonLinear activeStep={activeStep} alternativeLabel>
+                {steps.map((label, index) => (
+                  <Step key={label}>
+                    <StepButton onClick={handleStep(index)} completed={completed[index]}>
+                      {label}
+                    </StepButton>
+                  </Step>
+                ))}
+              </Stepper>
+            </Row>
+            <Row>
+              <Typography >{getStepContents(activeStep)}</Typography>
+            </Row>
           </Card>
         </Column>
         <Column size="4">
-          <Card shadow width="100%" height="400px" padding="1.5rem"></Card>
+          <Card shadow width="100%" height="400px" padding="1.5rem">
+          </Card>
         </Column>
       </Row>
       <Row><h1 >Pricing and Financing</h1></Row>
@@ -190,7 +186,7 @@ export default () => {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '90%',
+    width: '80%',
   },
   button: {
     marginRight: theme.spacing(1),
