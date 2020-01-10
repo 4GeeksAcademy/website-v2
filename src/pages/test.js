@@ -14,9 +14,11 @@ import GeeksVsOthers from '../components/GeeksVsOthers'
 import News from '../components/News'
 import Locations from '../components/Locations'
 import ChooseProgram from '../components/ChooseProgram'
+import TestC from '../components/TestC'
 
 const Test = ({data}) => (
   <Layout>
+    <TestC />
     <Wrapper
       style="custom"
       full

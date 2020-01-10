@@ -8,6 +8,7 @@ import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {Row, Column} from '../Sections'
+import {H2, H4, Paragraph} from '../Heading'
 import '../../assets/css/style.scss';
 export default () => {
   const classes = useStyles();
@@ -155,87 +156,28 @@ export default () => {
     }
   }
   return (
-    // <header>
-    //     <h1>{data.alumni.edges[1].node.name}</h1>
-    // </header>
-    // <div className="container">
     <>
       <Row>
         <Column size="6">
-          <Row>PAY UPFRONT OR MONTHLY</Row>
-          <Row>and enjoy the best pricing in town.</Row>
+          <Row><H4>PAY UPFRONT OR MONTHLY</H4></Row>
+          <Row><Paragraph primary>and enjoy the best pricing in town.</Paragraph></Row>
           <Row></Row>
           <Row></Row>
-          <Row></Row>
+          <Row><Stepper nonLinear activeStep={activeStep} alternativeLabel>
+            {steps.map((label, index) => (
+              <Step key={label}>
+                <StepButton onClick={handleStep(index)} completed={completed[index]}>
+                  {label}
+                </StepButton>
+              </Step>
+            ))}
+          </Stepper></Row>
           <Row></Row>
         </Column>
       </Row>
-
       <Row><h1 >Pricing and Financing</h1></Row>
       <Row><h5 >Prices can vary depending on the location.</h5></Row>
       <Row><h5 >Currently revewing prices for: Miami</h5></Row>
-      <div >
-        <Stepper nonLinear activeStep={activeStep}>
-          {steps.map((label, index) => (
-            <Step key={label}>
-              <StepButton onClick={handleStep(index)} completed={completed[index]}>
-                {label}
-              </StepButton>
-            </Step>
-          ))}
-        </Stepper>
-        <div>
-          {allStepsCompleted() ? (
-            <div>
-              <Typography className={classes.instructions}>
-                All steps completed - you&apos;re finished
-            </Typography>
-              <Button onClick={handleReset}>Reset</Button>
-            </div>
-          ) : (
-              <div className="container mt-3">
-
-                <div className="row col-img">
-                  <div className="col-md-4 bg-light rounded">
-                    <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
-                  </div>
-                  <div className="col-md-4 ">
-                    <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
-                  </div>
-                  <div className="col-md-4 bg-light rounded">
-
-                    <Typography className={classes.instructions}>{getStepContents(activeStep)}</Typography>
-
-                  </div>
-                </div>
-                <div>
-                  {/* <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
-                    Back
-              </Button>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    Next
-              </Button> */}
-                  {/* {activeStep !== steps.length &&
-                    (completed[activeStep] ? (
-                      <Typography variant="caption" className={classes.completed}>
-                        Step {activeStep + 1} already completed
-                  </Typography>
-                    ) : (
-                        <Button variant="contained" color="primary" onClick={handleComplete}>
-                          {completedSteps() === totalSteps() - 1 ? 'Finish' : 'Complete Step'}
-                        </Button>
-                      ))} */}
-                </div>
-              </div>
-            )}
-        </div>
-      </div>
-
     </>
   )
 }
