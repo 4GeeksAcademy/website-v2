@@ -40,6 +40,7 @@ export const Container = styled.div`
     margin-left: auto;
 `
 export const Row = styled.div`
+    height: ${props => props.height};
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -198,6 +199,10 @@ Container.propTypes = {
 }
 Container.defaultProps = {
     borderBottomLeft: '1.25rem',
+};
+Row.defaultProps = {
+    marginLeft: '-15px',
+    marginRight: '-15px',
 };
 // Column.defaultProps = {
 //     align: 'center',
