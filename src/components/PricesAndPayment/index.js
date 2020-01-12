@@ -187,7 +187,7 @@ export default () => {
             </Row> */}
           </Card>
         </Column>
-        <Column size="4">
+        <Column size="3">
           <Card shadow width="100%" height="400px" >
             {/* <div className="card-header h-25"></div> */}
             <div className="card-body h-75">
@@ -195,21 +195,27 @@ export default () => {
               <Row center marginBottom="10px"><H5 fontSize="20px">YOU GET A JOB</H5></Row>
               <Row center marginBottom="20px"><Paragraph primary>and talk about the income share agreement.</Paragraph></Row>
               <Row center><H5 fontSize="28px">{getStepContents(activeStep)}</H5></Row>
-              <Row center><Paragraph primary>FULL TUITION</Paragraph><Switch
-                onChange={handleChange}
-                checked={checked}
-                onColor="#86d3ff"
-                onHandleColor={Colors.blue}
-                handleDiameter={30}
-                uncheckedIcon={false}
-                checkedIcon={false}
-                boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-                height={20}
-                width={48}
-                className="react-switch"
-                id="material-switch"
-              /></Row>
+              <Row center>
+                <Column size="4"><Paragraph color={!checked ? Colors.blue : Colors.gray}>FULL TUITION</Paragraph></Column>
+                <Column size="4">
+                  <Switch
+                    onChange={handleChange}
+                    checked={checked}
+                    onColor="#86d3ff"
+                    onHandleColor={Colors.blue}
+                    handleDiameter={30}
+                    uncheckedIcon={false}
+                    checkedIcon={false}
+                    boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                    activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                    height={20}
+                    width={48}
+                    className="react-switch"
+                    id="material-switch"
+                  />
+                </Column>
+                <Column size="4"><Paragraph color={!checked ? Colors.gray : Colors.blue}>FULL TUITION</Paragraph></Column>
+              </Row>
             </div>
             <div className="card-footer h-25 text-center bg-white border-0">
 
