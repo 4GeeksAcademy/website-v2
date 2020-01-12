@@ -194,7 +194,7 @@ export default () => {
               <Row center><H5 fontSize="20px">PAY ONLY AFTER</H5></Row>
               <Row center marginBottom="10px"><H5 fontSize="20px">YOU GET A JOB</H5></Row>
               <Row center marginBottom="20px"><Paragraph primary>and talk about the income share agreement.</Paragraph></Row>
-              <Row center><H5 fontSize="28px">{getStepContents(activeStep)}</H5></Row>
+              <Row center><H5 fontSize="28px">{!checked ? "$7000" : "$134.99"}</H5></Row>
               <Row center>
                 <Column size="4"><Paragraph color={!checked ? Colors.blue : Colors.gray}>FULL TUITION</Paragraph></Column>
                 <Column size="4">
@@ -207,14 +207,14 @@ export default () => {
                     uncheckedIcon={false}
                     checkedIcon={false}
                     boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                    activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                    // activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
                     height={20}
                     width={48}
                     className="react-switch"
                     id="material-switch"
                   />
                 </Column>
-                <Column size="4"><Paragraph color={!checked ? Colors.gray : Colors.blue}>FULL TUITION</Paragraph></Column>
+                <Column size="4"><Paragraph color={!checked ? Colors.gray : Colors.blue}>FINANCING</Paragraph></Column>
               </Row>
             </div>
             <div className="card-footer h-25 text-center bg-white border-0">
