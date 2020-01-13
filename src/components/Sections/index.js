@@ -43,8 +43,8 @@ export const Row = styled.div`
     height: ${props => props.height};
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: ${props => props.marginRight};
+    margin-left: ${props => props.marginLeft};
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
     
