@@ -44,8 +44,8 @@ const Program = () => (
                 <Column size="1" />
                 <Column size="11">
                   <Row>
-                    <Column size="6"><Card shadow height="400px" width="400px" move="up" up="100px" margin="10px 0"><H3 primary>GEEK<Span color={Colors.blue}>PAL</Span></H3></Card></Column>
-                    <Column size="6"><Card shadow height="400px" width="400px" move="up" up="100px" margin="10px 0"><H3 primary>GEEKTALK</H3></Card></Column>
+                    <Column size="6"><Card shadow height="300px" width="300px" move="up" up="100px" ><H3 primary>GEEK<Span color={Colors.blue}>PAL</Span></H3></Card></Column>
+                    <Column size="6"><Card shadow height="300px" width="300px" move="up" up="100px" ><H3 primary>GEEKTALK</H3></Card></Column>
                   </Row>
                 </Column>
               </Row>
