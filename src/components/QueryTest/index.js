@@ -28,8 +28,8 @@ export default () => {
 
             {(index % 2 == 0) ?
               (<Card
-                height="275px"
-                width="200px"
+                height="250px"
+                width="180px"
                 color="white"
                 shadow
                 move="down"
@@ -48,8 +48,8 @@ export default () => {
               </Card>)
               :
               <Card
-                height="275px"
-                width="200px"
+                height="250px"
+                width="180px"
                 color="white"
                 shadow
               >
