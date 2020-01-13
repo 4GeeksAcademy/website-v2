@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import {Card} from '../components/Card'
 import {Container, Row, Column} from '../components/Sections'
 import {Title, H2, H3, Span, Paragraph} from '../components/Heading'
-import {Button, Colors} from '../components/Styling'
+import {Button, Colors, Check, ArrowRight} from '../components/Styling'
 
 const Program = ({data}) => {
   return (
@@ -42,22 +42,57 @@ const Program = ({data}) => {
               <Column size="1" />
               <Column size="8">
                 <Row>
-                  <Column size="1" />
-                  <Column size="11">
-                    <Row>
-                      <Column size="6">
-                        <Card padding="15px" shadow height="300px" width="300px" move="up" up="100px" >
+                  <Column size="6">
+                    <Card padding="15px" shadow height="330px" width="330px" move="up" up="100px" >
+                      <Row height="300px">
+                        <Column size="10">
                           <Row marginLeft="0px" marginBottom="15px"><H3 primary>GEEK<Span color={Colors.blue}>PAL</Span></H3></Row>
                           <Row marginLeft="0px" marginBottom="15px"><Paragraph primary>Get a job in tech</Paragraph></Row>
-                          <ul>
-                            {data.geek.edges[0].node.geek_pal.map((pal, index) => {
-                              return (<li key={index}><Paragraph color={Colors.gray}>{pal}</Paragraph></li>)
-                            })}
-                          </ul>
-                        </Card>
-                      </Column>
-                      <Column size="6"><Card shadow height="300px" width="300px" move="up" up="100px" ><H3 primary>GEEKTALK</H3></Card></Column>
-                    </Row>
+                          <Row >
+                            <Column size="12">
+                              {data.geek.edges[0].node.geek_pal.map((pal, index) => {
+                                return (
+                                  <Row key={index} marginBottom="4px">
+                                    <Column size="1">
+                                      <Check width="12px" color={Colors.blue} fill={Colors.blue} />
+                                    </Column>
+                                    <Column size="8" paddingRight="0px" paddingLeft="5px">
+                                      <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
+                                    </Column>
+                                  </Row>)
+                              })}
+                            </Column>
+                          </Row>
+                        </Column>
+                        <Column size="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+                      </Row>
+                    </Card>
+                  </Column>
+                  <Column size="6">
+                    <Card padding="15px" shadow height="330px" width="330px" move="up" up="100px" >
+                      <Row height="300px">
+                        <Column size="10">
+                          <Row marginLeft="0px" marginBottom="15px"><H3 primary>GEEK<Span color={Colors.blue}>FORCE</Span></H3></Row>
+                          <Row marginLeft="0px" marginBottom="15px"><Paragraph primary>Never code on your own again</Paragraph></Row>
+                          <Row >
+                            <Column size="12">
+                              {data.geek.edges[0].node.geek_force.map((pal, index) => {
+                                return (
+                                  <Row key={index} marginBottom="2px" >
+                                    <Column size="1">
+                                      <Check width="12px" color={Colors.blue} fill={Colors.blue} />
+                                    </Column>
+                                    <Column size="8" paddingRight="0px" paddingLeft="5px">
+                                      <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
+                                    </Column>
+                                  </Row>)
+                              })}
+                            </Column>
+                          </Row>
+                        </Column>
+                        <Column size="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+                      </Row>
+                    </Card>
                   </Column>
                 </Row>
               </Column>
@@ -72,14 +107,14 @@ const Program = ({data}) => {
 
 export const geekQuery = graphql`
 query geekQuery{
-  geek: allGeekPalYaml {
-    edges {
-      node {
+        geek: allGeekPalYaml {
+        edges {
+        node {
         geek_pal
         geek_force
-      }
     }
   }
+}
 }
 `
 

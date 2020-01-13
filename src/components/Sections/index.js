@@ -54,8 +54,9 @@ export const Column = styled.div`
 padding: ${props => props.padding};
 position: relative;
 width: 100%;
-padding-right: 15px;
-padding-left: 15px;
+align-self: ${props => props.alignSelf};
+padding-right: ${props => props.paddingRight};
+padding-left: ${props => props.paddingLeft};
 ${props =>
         props.border === "bottom"
             ?
@@ -203,6 +204,10 @@ Container.defaultProps = {
 Row.defaultProps = {
     marginLeft: '-15px',
     marginRight: '-15px',
+};
+Column.defaultProps = {
+    paddingLeft: '15px',
+    paddingRight: '15px',
 };
 // Column.defaultProps = {
 //     align: 'center',

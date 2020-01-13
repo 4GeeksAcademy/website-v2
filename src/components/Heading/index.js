@@ -68,9 +68,8 @@ export const H5 = styled.h5`
 `;
 
 export const Span = styled.span`
-      animation:${Blink} 1.2s infinite;
+      ${props => props.animated && `css animation:${Blink} 1.2s infinite;`}
       color: ${props => props.color};
-      
 `
 export const Separator = styled.div`
   margin: .5rem 0px;
@@ -83,6 +82,7 @@ export const Paragraph = styled.div`
   font-family: lato, sans-serif;
   text-align: ${props => props.align};
   font-size: ${props => props.fontSize};
+  line-height: "${props => props.fontSize}";
   color: ${props => props.primary ? `${Colors.Gray}` : `${props.color}`};
 `
 export const Title = props => {
