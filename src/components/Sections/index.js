@@ -86,14 +86,49 @@ ${props =>
 `}
 ${props =>
         props.size
-        && css`
+            &&
+            props.customRespSize
+            ?
+            css`
             @media ${Device.md}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
                 max-width: ${(props.size / 12) * 100}%;
                 text-align: ${props => props.align};
             }
             @media ${Device.xs}{
-                flex: 0 0 100%;
+                flex: 0 0 ${(props.respSize / 12) * 100}%;
+                max-width: ${(props.respSize / 12) * 100};
+                // height: 300px;
+                border-radius: 0 0 0 0;
+                text-align: center;
+            }
+            @media screen ${Device.sm}{
+                flex: 0 0 ${(props.respSize / 12) * 100};
+                max-width: ${(props.respSize / 12) * 100};
+                // height: 300px;
+                border-radius: 0 0 0 0;
+                text-align: center;
+            }
+            @media ${Device.lg}{
+                flex: 0 0 ${(props.size / 12) * 100}%;
+                max-width: ${(props.size / 12) * 100}%;
+                text-align: ${props => props.align};
+            }
+            @media ${Device.xl} {
+                flex: 0 0 ${(props.size / 12) * 100}%;
+                max-width: ${(props.size / 12) * 100}%;
+                text-align: ${props => props.align};
+            }
+            `
+            :
+            css`
+            @media ${Device.md}{
+                flex: 0 0 ${(props.size / 12) * 100}%;
+                max-width: ${(props.size / 12) * 100}%;
+                text-align: ${props => props.align};
+            }
+            @media ${Device.xs}{
+                flex: 0 0 '100%';
                 max-width: 100%;
                 // height: 300px;
                 border-radius: 0 0 0 0;
@@ -116,7 +151,8 @@ ${props =>
                 max-width: ${(props.size / 12) * 100}%;
                 text-align: ${props => props.align};
             }
-`}
+`
+    }
 `
 export const Wrapper = props => {
     if (props.style === "default") {

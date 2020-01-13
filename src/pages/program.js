@@ -41,9 +41,9 @@ const Program = ({data}) => {
             <Row>
               <Column size="1" />
               <Column size="8">
-                <Row>
+                <Row >
                   <Column size="6">
-                    <Card padding="15px" shadow height="330px" width="330px" move="up" up="100px" >
+                    <Card padding="15px" shadow height="330px" width="100%" move="up" up="100px" margin="10px 0px">
                       <Row height="300px">
                         <Column size="10">
                           <Row marginLeft="0px" marginBottom="15px"><H3 primary>GEEK<Span color={Colors.blue}>PAL</Span></H3></Row>
@@ -53,10 +53,10 @@ const Program = ({data}) => {
                               {data.geek.edges[0].node.geek_pal.map((pal, index) => {
                                 return (
                                   <Row key={index} marginBottom="4px">
-                                    <Column size="1">
+                                    <Column size="1" customRespSize respSize="1">
                                       <Check width="12px" color={Colors.blue} fill={Colors.blue} />
                                     </Column>
-                                    <Column size="8" paddingRight="0px" paddingLeft="5px">
+                                    <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px">
                                       <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
                                     </Column>
                                   </Row>)
@@ -69,7 +69,7 @@ const Program = ({data}) => {
                     </Card>
                   </Column>
                   <Column size="6">
-                    <Card padding="15px" shadow height="330px" width="330px" move="up" up="100px" >
+                    <Card padding="15px" shadow height="330px" width="100%" move="up" up="100px" margin="10px 0px">
                       <Row height="300px">
                         <Column size="10">
                           <Row marginLeft="0px" marginBottom="15px"><H3 primary>GEEK<Span color={Colors.blue}>FORCE</Span></H3></Row>
@@ -79,10 +79,10 @@ const Program = ({data}) => {
                               {data.geek.edges[0].node.geek_force.map((pal, index) => {
                                 return (
                                   <Row key={index} marginBottom="2px" >
-                                    <Column size="1">
+                                    <Column size="1" customRespSize respSize="1">
                                       <Check width="12px" color={Colors.blue} fill={Colors.blue} />
                                     </Column>
-                                    <Column size="8" paddingRight="0px" paddingLeft="5px">
+                                    <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px">
                                       <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
                                     </Column>
                                   </Row>)
