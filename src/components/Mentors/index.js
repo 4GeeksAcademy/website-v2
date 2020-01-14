@@ -26,7 +26,7 @@ export default () => {
                 {data.staff.edges.map((item, index) => {
                     return (
                         <Column size="3" >
-                            <RoundImage move up="175px" mb="20px" url={item.node.image} bsize="cover" moveborder="10px" width="250px" height="250px"> </RoundImage>
+                            <RoundImage move up="175px" mb="20px" url={item.node.image} bsize="cover" border="10px" width="250px" height="250px"> </RoundImage>
                         </Column>)
                 })}
             </Row>

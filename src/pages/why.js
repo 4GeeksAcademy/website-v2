@@ -147,6 +147,16 @@ const Why = () => (
     <Wrapper style="default">
       <Mentors />
     </Wrapper>
+    <Wrapper style="default" image="no" color={Colors.lightGray}>
+      <Row>
+        <Card width="100%" height="500px">
+          <Row height="100%">
+            <Column size="6" image="no" color={Colors.white}>d</Column>
+            <Column size="6" image="yes" url="../our-story.png" backgroundSize="contain"></Column>
+          </Row>
+        </Card>
+      </Row>
+    </Wrapper>
   </Layout>
 );
 
