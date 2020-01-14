@@ -21,7 +21,7 @@ export default () => {
           }
       `)
   return (
-    <Row>
+    <Row >
       {data.credentials.edges.map((i, index) => {
         return (
           <div key={index} className={"col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 text-center mb-2"}>

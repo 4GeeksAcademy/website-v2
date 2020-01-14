@@ -156,8 +156,8 @@ export default () => {
 
   return (
     <>
-      <Row center>
-        <Column size="3" >
+      <Row>
+        <Column size="4" >
           <Card shadow width="100%" height="400px" >
             {/* <div className="card-header h-25"></div> */}
             <div className="card-body h-75">
@@ -187,7 +187,7 @@ export default () => {
             </Row> */}
           </Card>
         </Column>
-        <Column size="3">
+        <Column size="4">
           <Card shadow width="100%" height="400px" >
             {/* <div className="card-header h-25"></div> */}
             <div className="card-body h-75">

@@ -10,12 +10,12 @@ const Pricing = () => (
     <Container fluid >
       <Row>
         <Column size="1" />
-        <Column border bottom size="11" padding="7% 0" image url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="100%">
+        <Column border="bottom" bottom size="11" padding="7% 0" image="yes" url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="400px">
           <Row>
             <Column size="2" />
             <Column size="6">
               <Title
-                size="7"
+                size="8"
                 title="CELEBRATE THE BEST PRICE IN TOWN"
                 paragraph="We never stop trying until we mastered a real premium affordable program. Our philosophy is rooted in making coding education available to everyone."
               />
@@ -53,18 +53,18 @@ const Pricing = () => (
         <Column size="11" color={Colors.lightGray} border top>
           <Row>
             <Column size="1" />
-            <Column size="8">
-
+            <Column size="10">
               <Divider height="50px" />
               <Title
                 primary
                 title="PRICING AND FINANCING"
                 paragraph="Currently review prices for Miami"
               />
+              <PricesAndPayment />
               <Divider height="50px" />
             </Column>
           </Row>
-          <PricesAndPayment />
+
         </Column>
       </Row>
     </Container>

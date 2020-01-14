@@ -1,40 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
-
 import Layout from '../global/Layout';
-import Image from '../components/Image';
+import {Container, Column, Row, Wrapper, Divider} from '../components/Sections';
+import QueryTest from '../components/QueryTest';
+import {Title} from '../components/Heading'
 
-const Page=styled.div`
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
-const Heading=styled.h1`
-  font-size: 24px;
-  color: #555;
-  margin-top: 60px;
-`;
-
-const Label=styled.p`
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 12px;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-`;
-
-const Why=() => (
+const Why = () => (
   <Layout>
-    <Page>
-      <Image />
-      <Heading>Why 4Geeks Page</Heading>
-      <Label>Starter</Label>
-    </Page>
+    <Wrapper style="default" image="yes" height="400px" border="bottom" url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80">
+      <Title size="8" title="ENABLING FUTURE AND CURRENT SOFTWARE BUILDERS TO ADAPT TO THE NEEDS OF THE REAL WORLD" />
+    </Wrapper>
+    <Wrapper style="default"><QueryTest /></Wrapper>
+    <Divider height="100px" />
+    <Wrapper style="default">
+      <Title size="8" title="OUR FOUR CORNERSTONES" primary />
+    </Wrapper>
   </Layout>
 );
 
