@@ -17,9 +17,12 @@ const Why = () => (
     <Wrapper style="default">
       <Title size="8" title="OUR FOUR CORNERSTONES" primary />
     </Wrapper>
-    <Divider height="50px" />
+    <Divider height="150px" />
     <Wrapper
       style="default"
+      image="no"
+      color={Colors.lightGray}
+      border="top"
     >
       <Row marginBottom="30px">
         <Column size="6">
@@ -28,6 +31,8 @@ const Why = () => (
             height="200px"
             color="black"
             padding="30px"
+            move="up"
+            up="100px"
           >
             <Row>
               <Column size="3"><Book width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
@@ -48,6 +53,8 @@ const Why = () => (
             height="200px"
             color="black"
             padding="30px"
+            move="up"
+            up="100px"
           >
             <Row>
               <Column size="3"><Teacher width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
@@ -70,6 +77,8 @@ const Why = () => (
             height="200px"
             color="black"
             padding="30px"
+            move="up"
+            up="100px"
           >
             <Row>
               <Column size="3"><Users width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
@@ -90,6 +99,8 @@ const Why = () => (
             height="200px"
             color="black"
             padding="30px"
+            move="up"
+            up="100px"
           >
             <Row>
               <Column size="3"><Sitemap width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
@@ -105,6 +116,16 @@ const Why = () => (
           </Card>
         </Column>
       </Row>
+      <Divider height="50px" />
+      <Title size="8" title="MEET THE TEAM" primary />
+      <Divider height="150px" />
+    </Wrapper>
+    <Divider height="100px" />
+
+
+    <Wrapper
+      style="default">
+
     </Wrapper>
   </Layout>
 );
