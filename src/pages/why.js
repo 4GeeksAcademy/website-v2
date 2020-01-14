@@ -5,7 +5,7 @@ import QueryTest from '../components/QueryTest';
 import {Title, H2, H4, Paragraph} from '../components/Heading'
 import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button} from '../components/Styling'
-
+import Mentors from '../components/Mentors'
 
 const Why = () => (
   <Layout>
@@ -144,11 +144,8 @@ const Why = () => (
       <Divider height="150px" />
     </Wrapper>
     <Divider height="100px" />
-
-
-    <Wrapper
-      style="default">
-
+    <Wrapper style="default">
+      <Mentors />
     </Wrapper>
   </Layout>
 );

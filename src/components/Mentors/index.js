@@ -1,41 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-// import '../../assets/css/bootstrap.min.css';
-import PropTypes from 'prop-types';
+import {useStaticQuery, graphql} from 'gatsby';
+import {RoundImage} from '../Styling';
+import {Row, Column} from '../Sections'
+import {Card} from '../Card'
 
-const Round = styled.div`
-    
-    border-radius: 50%;
-  
-`;
+export default () => {
+    const data = useStaticQuery(graphql`
+        query myStaffQuery{
+            staff: allStaffYaml {
+                edges {
+                  node {
+                    name
+                    last_name
+                    image
+                  }
+                }
+              }
+            }
+        `)
 
-
-const Mentors = props => (
-    <>
-        <div className="container">Mentors</div>
-        <div className="container">
-            <div className="row ">
-                {props.mentorsArray.map((item, index) => {
+    return (
+        <>
+            <Row>
+                {data.staff.edges.map((item, index) => {
                     return (
-                        <div className={`col-md-${props.column} mb-3`} key={index}>
-                            <div className="row"><Round><img src={item.node.image} width="200" height="200" /></Round></div>
-                            <div className="row">{item.node.name}<span className="ml-2">{item.node.last_name}</span></div>
-                            <div className="row">{item.node.nick_name}</div>
-                            <div className="row"><ol>{item.node.coding_skills.map((skill, index) => {
-                                return (
-                                    <li key={index}>{skill}</li>
-                                )
-                            })}</ol></div>
-                        </div>)
+                        <Column size="3">
+                            <RoundImage url={item.node.image} bsize="cover" border="10px" width="250px" height="250px"> </RoundImage>
+
+                        </Column>)
                 })}
-            </div>
-        </div>
-    </>
-);
-Mentors.propTypes = {
-    mentorsArray: PropTypes.array,
-    column: PropTypes.integer,
+            </Row>
+        </>
+    )
+}
 
-
-};
-export default Mentors;
