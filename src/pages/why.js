@@ -2,17 +2,40 @@ import React from 'react';
 import Layout from '../global/Layout';
 import {Container, Column, Row, Wrapper, Divider} from '../components/Sections';
 import QueryTest from '../components/QueryTest';
-import {Title, H3, H4, Paragraph} from '../components/Heading'
+import {Title, H2, H4, Paragraph} from '../components/Heading'
 import {Card} from '../components/Card'
-import {Colors, Book, Teacher, Users, Sitemap} from '../components/Styling'
+import {Colors, Book, Teacher, Users, Sitemap, Button} from '../components/Styling'
 
 
 const Why = () => (
   <Layout>
-    <Wrapper style="default" image="yes" height="400px" border="bottom" url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80">
-      <Title size="8" title="ENABLING FUTURE AND CURRENT SOFTWARE BUILDERS TO ADAPT TO THE NEEDS OF THE REAL WORLD" />
-    </Wrapper>
-    <Wrapper style="default"><QueryTest /></Wrapper>
+    <Container fluid height="450px">
+      <Row>
+        <Column size="1" />
+        <Column border="bottom" size="11" padding="10%" image="yes" url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="600px">
+          <Row>
+            <Column size="1" />
+            <Column size="9">
+              <H2 color={Colors.white}>ENABLING FUTURE AND CURRENT SOFTWARE BUILDERS TO ADAPT TO THE NEEDS OF THE REAL WORLD</H2>
+            </Column>
+          </Row>
+
+        </Column>
+      </Row>
+    </Container>
+    <Container fluid >
+      <Row>
+        <Column size="1" />
+        <Column size="11">
+          <Row>
+            <Column size="1" />
+            <Column size="9">
+              <QueryTest />
+            </Column>
+          </Row>
+        </Column>
+      </Row>
+    </Container>
     <Divider height="100px" />
     <Wrapper style="default">
       <Title size="8" title="OUR FOUR CORNERSTONES" primary />

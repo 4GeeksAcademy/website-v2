@@ -47,6 +47,7 @@ export const H5 = styled.h5`
   font-style: normal;
   font-family: Lato, sans-serif;
   font-weight: 800;
+  color: ${props => props.color};
   ${props =>
     props.align === "left" &&
     css`

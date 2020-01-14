@@ -38,6 +38,7 @@ export const Container = styled.div`
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    background: ${props => props.color}
 `
 export const Row = styled.div`
     height: ${props => props.height};
@@ -171,7 +172,7 @@ export const Wrapper = props => {
                         <Row>
                             <Column size="1" />
                             <Column
-                                size="8"
+                                size="9"
                                 image={props.outerImage}
                                 url={props.outerUrl}
                                 border={props.outerBorder}
@@ -234,9 +235,9 @@ Container.propTypes = {
     borderTopLeft: PropTypes.string,
     borderBottomLeft: PropTypes.string,
 }
-Container.defaultProps = {
-    borderBottomLeft: '1.25rem',
-};
+// Container.defaultProps = {
+//     borderBottomLeft: '1.25rem',
+// };
 Row.defaultProps = {
     marginLeft: '-15px',
     marginRight: '-15px',

@@ -1,31 +1,30 @@
 import React from 'react';
-import styled from 'styled-components';
 import {Link} from 'gatsby';
+import {Container, Row, Column, Divider} from '../Sections'
+import {Colors} from '../Styling'
+import {H5} from '../Heading'
 
 const Footer = () => (
-
     <>
-        <div className="jumbotron jumbotron-fluid footer mb-0">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-3">
-                        <div className="row footer-title text-white">CONTACT</div>
+        <Container width="fluid" height="400px" color={Colors.black}>
+            <Divider height="100px" />
+            <Row center >
+                <Column size="2">
+                    <Row><H5 fontSize="16px" color={Colors.gray}>CONTACT</H5></Row>
+                </Column>
+                <Column size="3">
+                    <Row><H5 fontSize="16px" color={Colors.gray}>COMPANY</H5></Row>
+                </Column>
+                <Column size="2">
+                    <Row><H5 fontSize="16px" color={Colors.gray}>LOCATION</H5></Row>
+                </Column>
+                <Column size="2">
+                    <Row><H5 fontSize="16px" color={Colors.gray}>FOLLOW</H5></Row>
+                </Column>
 
-                    </div>
-                    <div className="col-md-3">
-                        <div className="row footer-title text-white">COMPANY</div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="row footer-title text-white">LOCATIONS</div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="row footer-title text-white">FOLLOW</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </Row>
+        </Container>
     </>
-
 );
 
 export default Footer;
