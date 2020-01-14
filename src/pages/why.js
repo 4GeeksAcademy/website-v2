@@ -149,10 +149,31 @@ const Why = () => (
     </Wrapper>
     <Wrapper style="default" image="no" color={Colors.lightGray}>
       <Row>
-        <Card width="100%" height="500px">
+        <Card height="500px" width="100%" shadow move="up" up="100px">
           <Row height="100%">
-            <Column size="6" image="no" color={Colors.white}>d</Column>
-            <Column size="6" image="yes" url="../our-story.png" backgroundSize="contain"></Column>
+            <Column size="6" image="no" color={Colors.white}>
+              <Title
+                title="OUR STORY"
+                primary
+              />
+              <Row>
+                <Paragraph primary>
+                  4Geeks Academy was founded in 2015. What began as an internal project to train new developers has flourished into a full-time passion.
+                </Paragraph>
+              </Row>
+              <Row>
+                <Paragraph primary>
+                  Today, 4Geeks is now based in the U.S. As coding has become an essential part of society, the mission of our Coding Bootcamp is to instill a new framework for Coding Education universally.
+                </Paragraph>
+              </Row>
+              <Row>
+                <Paragraph primary>
+                  4Geeks Academy now offers locations in 3 cities, with 5 campuses, and over 300 graduates.
+                </Paragraph>
+              </Row>
+
+            </Column>
+            <Column paddingLeft="0px" size="6" image="yes" url="../our-story.png" backgroundSize="cover"></Column>
           </Row>
         </Card>
       </Row>
