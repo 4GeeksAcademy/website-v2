@@ -32,12 +32,13 @@ text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.primary ? `${Colors.black}` : `${Colors.white}`}
 `;
 export const H4 = styled.h4`
-  font-size: 29px;
+  font-size: 26px;
   line-height: 29px;
   text-transform: ${props => props.uppercase && "uppercase"};
   font-style: normal;
   font-family: lato, sans-serif;
   font-weight: 800;
+  color: ${props => props.color};
 `;
 export const H5 = styled.h5`
   font-size: ${props => props.fontSize};
@@ -82,7 +83,7 @@ export const Paragraph = styled.div`
   font-family: lato, sans-serif;
   text-align: ${props => props.align};
   font-size: ${props => props.fontSize};
-  line-height: "${props => props.fontSize}";
+  line-height: ${props => props.lineHeight};
   color: ${props => props.primary ? `${Colors.Gray}` : `${props.color}`};
 `
 export const Title = props => {

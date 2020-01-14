@@ -12,9 +12,9 @@ export const Card = styled.div`
     height: ${props => props.height};
     margin: ${props => props.margin};
     padding: ${props => props.padding};
-    background: ${props => props.color === "blue"
+    background: ${props => props.color === "black"
         ?
-        `${Colors.blue}`
+        `${Colors.black}`
         : props.color === "grey"
             ? `${Colors.lightGray}`
             : `${Colors.white}`
