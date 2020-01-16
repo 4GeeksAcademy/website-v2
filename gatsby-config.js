@@ -28,14 +28,19 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          `Lato`,
-          `source sans pro\:300,400,400i,700, 900` // you can also specify font weights and styles
+          {
+            family: `Oswald`,
+            subsets: [`latin`],
+          },
+          {
+            family: `kanit`,
+            variants: [`400`, `700`, `800`, `900`]
+          },
         ],
-        display: 'swap'
-      }
+      },
     },
     {
       resolve: 'gatsby-plugin-manifest',

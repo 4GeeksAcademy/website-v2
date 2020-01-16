@@ -12,9 +12,8 @@ export const H1 = styled.h1`
 `;
 export const H2 = styled.h2`
   font-size: 50px;  
-  font-family: lato, sans-serif;
+  font-family: 'kanit', sans-serif;
   font-weight: 900;
-  font-style: normal;
   letter-spacing: -1px;
   text-transform: ${props => props.uppercase && "uppercase"};
   color: ${props => props.color};
