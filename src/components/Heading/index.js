@@ -11,8 +11,8 @@ export const H1 = styled.h1`
   font-size: 12px;
 `;
 export const H2 = styled.h2`
-  font-size: 50px;  
-  font-family: 'kanit', sans-serif;
+  font-size: 54px;  
+  font-family: 'Futura', sans-serif;
   font-weight: 900;
   letter-spacing: -1px;
   text-transform: ${props => props.uppercase && "uppercase"};
