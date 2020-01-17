@@ -27,21 +27,7 @@ module.exports = {
     ]
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Oswald`,
-            subsets: [`latin`],
-          },
-          {
-            family: `kanit`,
-            variants: [`400`, `700`, `800`, `900`]
-          },
-        ],
-      },
-    },
+
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

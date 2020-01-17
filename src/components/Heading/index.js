@@ -84,7 +84,7 @@ export const Paragraph = styled.div`
   text-align: ${props => props.align};
   font-size: ${props => props.fontSize};
   line-height: ${props => props.lineHeight};
-  color: ${props => props.primary ? `${Colors.Gray}` : `${props.color}`};
+  color: ${props => props.primary ? `${Colors.gray}` : `${props.color}`};
 `
 export const Title = props => {
   return (

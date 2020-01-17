@@ -15,10 +15,20 @@ import News from '../components/News'
 import Locations from '../components/Locations'
 import ChooseProgram from '../components/ChooseProgram'
 import TestC from '../components/TestC'
+import Scrollspy from 'react-scrollspy'
+import ProgramDescription from '../components/ProgramDescription'
+
 
 const Test = ({data}) => (
   <Layout>
-    <TestC />
+    <Scrollspy items={['section-1', 'section-2', 'section-3']} currentClassName="is-current">
+      <li><a href="#section-1">section 1</a></li>
+      <li><a href="#section-2">section 2</a></li>
+      <li><a href="#section-3">section 3</a></li>
+    </Scrollspy>
+    <Wrapper
+      style="default"
+    ><ProgramDescription /></Wrapper>
     <Wrapper
       style="custom"
       full
@@ -67,7 +77,7 @@ const Test = ({data}) => (
     </Wrapper>
 
     {/* QUERY TEST */}
-    <div className="container-fluid bg-light">
+    <div className="container-fluid bg-light" id="section-1">
       <div className="row">
         <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
         <div className="col-12 col-lg-11 col-md-11 col-sm-12 col-xl-11">
@@ -83,7 +93,7 @@ const Test = ({data}) => (
     </div>
 
     {/* WHY 4GEEKS */}
-    <div className="container-fluid">
+    <div className="container-fluid" id="section-2">
       <div className="row">
         <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
         <div className="col-12 col-lg-11 col-md-11 col-sm-12 col-xl-11">
@@ -101,7 +111,7 @@ const Test = ({data}) => (
     </div>
 
     {/* TEST */}
-    <div className="container-fluid">
+    <div className="container-fluid" id="section-3">
       <div className="row">
         <div className="col-12 col-lg-1 col-md-1 col-sm-12 col-xl-1"></div>
         <div className="col-12 col-lg-11 col-md-11 col-sm-12 col-xl-11 bg-info">
