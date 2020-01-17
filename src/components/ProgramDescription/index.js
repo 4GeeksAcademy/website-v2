@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import {Card} from '../Card'
 import {Row} from '../Sections'
 import {H5, Paragraph} from '../Heading'
+import {Button, Colors} from '../Styling'
 
 const Header = styled.div`
     background: black;
     border-radius: 1.25rem 1.25rem 0 0;
-    height: 75px;
+    height: 85px;
     color: white;
     font-family: 'lato', sans-serif;
     font-size: 14px;
@@ -37,25 +38,25 @@ const ProgramDescription = () => (
                     <a className="nav-link" href="#">MODULE 2</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">MODULE 3</a>
+                    <a className="nav-link" href="#" tabindex="-1" aria-disabled="true">MODULE 3</a>
                 </li>
             </ul>
         </Header>
         <Body>
             <H5 fontSize="20px">PREWORK</H5>
-            <Paragraph primary margin="35px 0 15px">
+            <Paragraph primary margin="35px 0 15px" fontSize="14px" lineHeight="18px">
                 Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod.
                 Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
             </Paragraph>
-            <Paragraph primary>
+            <Paragraph primary fontSize="14px" lineHeight="18px">
                 Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod.
                 Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod.
-                Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
             </Paragraph>
+            <Button color={Colors.blue} textColor={Colors.white} margin="15px 0">DOWNLOAD SYLLABUS</Button>
         </Body>
 
         {/* </Row> */}
-    </Card>
+    </Card >
 );
 
 export default ProgramDescription;
