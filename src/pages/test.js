@@ -27,8 +27,11 @@ const Test = ({data}) => (
       <li><a href="#section-3">section 3</a></li>
     </Scrollspy>
     <Wrapper
-      style="default"
-    ><ProgramDescription /></Wrapper>
+      style="custom"
+      full
+    >
+      <ProgramDescription />
+    </Wrapper>
     <Wrapper
       style="custom"
       full
