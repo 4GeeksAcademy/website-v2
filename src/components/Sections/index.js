@@ -50,6 +50,7 @@ export const Row = styled.div`
     margin-bottom: ${props => props.marginBottom};
     background: ${props => props.background};
     border-radius: 1.25rem 1.25rem 0 0;
+    ${props => props.align === "center" && css`justify-content: center;`}
     @media ${Device.xs}{
         justify-content: center;
         margin-top: 5px;

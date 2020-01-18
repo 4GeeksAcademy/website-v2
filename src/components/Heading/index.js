@@ -57,15 +57,31 @@ export const H2 = styled.h2`
     color: ${props => props.color};
 `;
 export const H3 = styled.h3`
-margin:0px;
-font-size: 40px;
-font-height: 36px;
-font-weight: 800;
-font-style: normal;
+@media ${Device.xs}{
+  text-align: center;
+  font-size: 6vw;
+}
+@media screen ${Device.sm}{
+  text-align: center;
+  font-size: 6vw;
+}
+@media ${Device.md}{
+  text-align: ${props => props.align};
+  font-size: 3vw;
+}
+@media ${Device.lg}{
+  text-align: ${props => props.align};
+  font-size: 3vw;
+}
+@media ${Device.xl} {
+  text-align: ${props => props.align};
+  font-size: 2vw;
+}   
 font-family: 'Futura', sans-serif;
+font-weight: 800;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
-color: ${props => props.primary ? `${Colors.black}` : `${Colors.white}`}
+color: ${props => props.color};
 `;
 export const H4 = styled.h4`
   font-size: 26px;
@@ -114,7 +130,7 @@ export const Separator = styled.div`
   margin: .5rem 0px;
   height: 5px;
   width: 30px;
-  border-bottom: ${props => props.primary ? `2px solid ${Colors.blue} ` : `2px solid ${Colors.lightBlue}`};
+  border-bottom: ${props => props.primary ? `2px solid ${Colors.yellow} ` : `2px solid ${Colors.lightBlue}`};
 `
 export const Paragraph = styled.div`
   margin: ${props => props.margin};
@@ -134,18 +150,18 @@ export const Title = props => {
       {props.fluid ?
         (
           <>
-            <Row center>{props.primary ? <H1 primary>{props.title}</H1> : <H1>{props.title}</H1>}</Row>
-            <Row center>{props.primary ? <Separator primary /> : <Separator />}</Row>
-            <Row center>{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Row>
+            <Row align="center">{props.primary ? <H1 primary>{props.title}</H1> : <H1>{props.title}</H1>}</Row>
+            <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
+            <Row align="center">{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Row>
           </>
         )
         :
         (
-          <Row center>
+          <Row align="center">
             <Column size={props.size}>
-              <Row center>{props.primary ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
-              <Row center>{props.primary ? <Separator primary /> : <Separator />}</Row>
-              <Row center>{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
+              <Row align="center">{props.primary ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
+              <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
+              <Row align="center">{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
             </Column>
           </Row>
         )

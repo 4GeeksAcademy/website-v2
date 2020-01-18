@@ -43,7 +43,7 @@ export default props => {
                 </div>
                 <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
                 <div className="card-footer bg-white border-0 p-0">
-                  {(i.node.credential === "Hired") ? <H2>{i.node.cred_value}{i.node.cred_symbol}</H2> : <H2>{i.node.cred_symbol}{i.node.cred_value}</H2>}
+                  {(i.node.credential === "Hired") ? <H3>{i.node.cred_value}{i.node.cred_symbol}</H3> : <H3>{i.node.cred_symbol}{i.node.cred_value}</H3>}
                 </div>
               </Card>)
               :
@@ -61,7 +61,7 @@ export default props => {
                 </div>
                 <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
                 <div className="card-footer bg-white border-0 p-0">
-                  {(i.node.credential === "Hired") ? <H2>{i.node.cred_value}{i.node.cred_symbol}</H2> : <H2>{i.node.cred_symbol}{i.node.cred_value}</H2>}
+                  {(i.node.credential === "Hired") ? <H3>{i.node.cred_value}{i.node.cred_symbol}</H3> : <H3>{i.node.cred_symbol}{i.node.cred_value}</H3>}
                 </div>
               </Card>}
           </div>

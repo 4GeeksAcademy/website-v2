@@ -93,6 +93,7 @@ const Home = ({data}) => {
           </Column>
         </Row>
       </Container>
+
       <Container fluid >
         <Row>
           <Column size="1" />
