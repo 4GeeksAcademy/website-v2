@@ -5,6 +5,7 @@ import {H3, H4, Paragraph} from '../Heading'
 import graphic from "../../assets/images/graphic.png"
 import Trend from 'react-trend';
 import {Colors} from '../Styling'
+import {Card} from '../Card'
 
 export default () => {
     const data = useStaticQuery(graphql`
@@ -17,6 +18,7 @@ export default () => {
                 graph
                 value
                 value_type
+                data
               }
             }
           }
@@ -25,36 +27,48 @@ export default () => {
     return (
         <Row>
             {data.job.edges.map(i => (
-                <div className="col-md-4 col-sm-12 ">
-                    <div className=" p-3 ">
-                        <div className=" px-3 py-1 row job-container text-center">
-                            <div className="col-md-6 ">
-                                <div className="row">
-                                    {i.node.title}
-                                </div>
-                                <div className="row">
-                                    <H3 primary>{i.node.value}</H3><span><Paragraph primary>{i.node.value_type}</Paragraph></span>
-                                </div>
-                                <div className="row">
-                                    <H4>{i.node.sub_title}</H4>
-                                </div>
-                            </div>
-                            <div className="col-md-5 text-why pr-0"><Trend
+                <Column size="4">
+                    <Card
+                        width="100%"
+                        height="125px"
+                        shadow
+                        padding="15px"
+                        margin="5px 0"
+                    >
+                        <Row align="around">
+                            <Column size size="5" customRespSize respSize="5" >
+                                <Row>
+                                    <Paragraph color="gray" align="left" margin="0 0 10px 0" fontSize="13px">
+                                        {i.node.title}
+                                    </Paragraph>
+                                </Row>
+                                <Row>
+                                    <H3 primary>{i.node.value}</H3><span><H3 primary>{i.node.value_type}</H3></span>
+                                </Row>
+                                <Row>
+                                    <Paragraph color="gray" align="left" margin="10px 0 0 0" fontSize="13px">
+                                        {i.node.sub_title}
+                                    </Paragraph>
+
+                                </Row>
+                            </Column>
+                            <Column size size="5" customRespSize respSize="5" alignSelf="center"><Trend
                                 smooth
                                 autoDraw
                                 autoDrawDuration={5000}
                                 autoDrawEasing="ease-out"
-                                data={[0, 2, 5, 9, 5, 10, 3, 5, 2, 3, 5, 8, 2, 9, 10]}
+                                data={i.node.data}
                                 gradient={[`${Colors.blue}`]}
                                 radius={25}
                                 strokeWidth={5}
                                 strokeLinecap={'butt'}
-                            /></div>
-                        </div>
-                    </div>
-                </div>
-            ))}
-        </Row>
+                            /></Column>
+                        </Row>
+                    </Card>
+                </Column>
+            ))
+            }
+        </Row >
     )
 }
 

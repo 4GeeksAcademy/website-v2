@@ -109,6 +109,21 @@ const Home = ({data}) => {
           </Column>
         </Row>
       </Container>
+      <Container fluid >
+        <Row>
+          <Column size="1" />
+          <Column size="11">
+            <Row>
+              <Column size="1" />
+              <Column size="8">
+
+                <Jobs />
+
+              </Column>
+            </Row>
+          </Column>
+        </Row>
+      </Container>
     </Layout>
   )
 };

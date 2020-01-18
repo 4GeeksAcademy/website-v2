@@ -3,3 +3,4 @@ sub_title: "Coding Bootcamp"
 graph: ""
 value: 171
 value_type: "%"
+data: [0, 2, 5, 4, 5, 10, 3, 5, 1, 9, 6, 8, 6, 9, 10]
