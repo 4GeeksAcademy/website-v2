@@ -7,13 +7,32 @@ import {Device} from '../Responsive'
 import {Blink} from '../Animations'
 
 export const H1 = styled.h1`
-  font-family: lato, sans-serif;
-  font-size: 12px;
+${props => props.lato ?
+    css`
+      font-family: 'Lato-Bold', sans-serif;
+      font-size: ${props => props.fontSize};
+      font-weight: 500;
+      letter-spacing: 0px;
+      color: ${props => props.color};
+  `
+    :
+    css`
+      font-family: 'Futura', 'sans-serif';
+      font-size: ${props => props.fontSize};
+      font-weight: 800;
+      letter-spacing: 0px;
+      color: ${props => props.color};
+`};
+
+
+text-transform: ${props => props.uppercase && "uppercase"};
+
+text-align: ${props => props.align};
 `;
 export const H2 = styled.h2`
-  font-size: 54px;  
+  font-size: ${props => props.fontSize};  
   font-family: 'Futura', sans-serif;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -1px;
   text-transform: ${props => props.uppercase && "uppercase"};
   color: ${props => props.color};
@@ -21,11 +40,11 @@ export const H2 = styled.h2`
 `;
 export const H3 = styled.h3`
 margin:0px;
-font-size: 36px;
+font-size: 40px;
 font-height: 36px;
 font-weight: 800;
 font-style: normal;
-font-family: lato, sans-serif;
+font-family: 'Futura', sans-serif;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.primary ? `${Colors.black}` : `${Colors.white}`}
@@ -92,7 +111,7 @@ export const Title = props => {
       {props.fluid ?
         (
           <>
-            <Row center>{props.primary ? <H3 primary>{props.title}</H3> : <H3>{props.title}</H3>}</Row>
+            <Row center>{props.primary ? <H1 primary>{props.title}</H1> : <H1>{props.title}</H1>}</Row>
             <Row center>{props.primary ? <Separator primary /> : <Separator />}</Row>
             <Row center>{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Row>
           </>
@@ -125,4 +144,8 @@ H2.propTypes = {
 Paragraph.defaultProps = {
   color: Colors.lightGray,
   fontSize: "12px"
+};
+H1.defaultProps = {
+  color: Colors.black,
+  fontSize: "42px"
 };

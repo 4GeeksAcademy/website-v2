@@ -40,13 +40,19 @@ const Home = ({data}) => {
               <Column size="5">
                 <Divider height="100px" />
                 <Row>
-                  <H1>Miami Coding Bootcamp</H1>
+                  <H1 fontSize="13px" color={Colors.gray} lato>Miami Coding Bootcamp</H1>
                 </Row>
                 <Row>
                   <Separator primary />
                 </Row>
                 <Row>
-                  <H2 primary align="left" fontSize="50px">LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE</H2>
+                  <H2 primary align="left" fontSize="50px">LEARN TO CODE </H2>
+                </Row>
+                <Row>
+                  <H2 primary align="left" fontSize="50px">AND GET CAREER</H2>
+                </Row>
+                <Row>
+                  <H2 primary align="left" fontSize="50px">SUPPORT FOR LIFE</H2>
                 </Row>
                 <Row>
                   <Paragraph color={Colors.gray} margin="10px 0px" align="left">Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.</Paragraph>
