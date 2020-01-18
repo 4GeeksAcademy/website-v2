@@ -50,8 +50,23 @@ export const Row = styled.div`
     margin-bottom: ${props => props.marginBottom};
     background: ${props => props.background};
     border-radius: 1.25rem 1.25rem 0 0;
+@media ${Device.xs}{
+    justify-content: center;
     
-    ${props => props.center && css`justify-content:center;`}
+  }
+  @media screen ${Device.sm}{
+    justify-content: center;
+  }
+  @media ${Device.md}{
+    
+  }
+  @media ${Device.lg}{
+    
+  }
+  @media ${Device.xl} {
+    
+  } 
+    
 `
 export const Column = styled.div`
 padding: ${props => props.padding};
