@@ -31,7 +31,7 @@ const Home = ({data}) => {
   return (
 
     <Layout>
-      <Container fluid height="480px">
+      <Container fluid >
         <Row>
           <Column size="1" />
           <Column size="11" >
@@ -73,7 +73,7 @@ const Home = ({data}) => {
                 padding="20%"
                 image="yes"
                 url="../localImage.png"
-                height="600px"
+                height="500px"
                 backgroundSize="cover">
               </Column>
             </Row>
