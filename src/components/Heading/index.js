@@ -23,10 +23,7 @@ ${props => props.lato ?
       letter-spacing: 0px;
       color: ${props => props.color};
 `};
-
-
 text-transform: ${props => props.uppercase && "uppercase"};
-
 text-align: ${props => props.align};
 `;
 export const H2 = styled.h2`

@@ -29,40 +29,40 @@ export default props => {
             {(index % 2 !== 0) ?
               (<Card
                 height="250px"
-                width="180px"
+                width="200px"
                 color="white"
                 shadow
                 move="up"
                 up={props.up}
               >
                 <div className="py-4">
-                  {(i.node.credential === "Campuses") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.node.credential === "Campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.node.credential === "Alumni") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                  {(i.node.credential === "Rating") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.node.credential === "Rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.node.credential === "Hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
                 </div>
-                <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
-                <div className="card-footer bg-white border-0 p-0">
+                <div className="card-footer bg-white border-0 p-0 mb-4">
                   {(i.node.credential === "Hired") ? <H3>{i.node.cred_value}{i.node.cred_symbol}</H3> : <H3>{i.node.cred_symbol}{i.node.cred_value}</H3>}
                 </div>
+                <div className="card-body p-0"><H4 uppercase>{i.node.credential}</H4></div>
               </Card>)
               :
               <Card
                 height="250px"
-                width="180px"
+                width="200px"
                 color="white"
                 shadow
               >
                 <div className="py-4">
-                  {(i.node.credential === "Campuses") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.node.credential === "Campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.node.credential === "Alumni") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                  {(i.node.credential === "Rating") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.node.credential === "Rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.node.credential === "Hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
                 </div>
-                <div className="card-body p-0"><H4 up>{i.node.credential}</H4></div>
-                <div className="card-footer bg-white border-0 p-0">
+                <div className="card-footer bg-white border-0 p-0 mb-4">
                   {(i.node.credential === "Hired") ? <H3>{i.node.cred_value}{i.node.cred_symbol}</H3> : <H3>{i.node.cred_symbol}{i.node.cred_value}</H3>}
                 </div>
+                <div className="card-body p-0"><H4 uppercase>{i.node.credential}</H4></div>
               </Card>}
           </div>
         )
