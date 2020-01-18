@@ -87,7 +87,7 @@ const Home = ({data}) => {
             <Row>
               <Column size="1" />
               <Column size="8">
-                <QueryTest />
+                <QueryTest up="40px" />
               </Column>
             </Row>
           </Column>

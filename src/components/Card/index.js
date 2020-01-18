@@ -27,10 +27,11 @@ export const Card = styled.div`
         props.move === "up"
             ? css`
             @media ${Device.md}{
-                transform: translateY(-${props.up})
+                transform: translateY(-${props.up});
+                
             }
             @media ${Device.xs}{
-                transform: translateY(0px)    
+                transform: translateY(0px);  
             }
             @media screen ${Device.sm}{  
             }
