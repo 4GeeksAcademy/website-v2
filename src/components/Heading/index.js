@@ -88,7 +88,8 @@ export const H5 = styled.h5`
 `;
 
 export const Span = styled.span`
-      ${props => props.animated && `css animation:${Blink} 1.2s infinite;`}
+      // ${props => props.animated && `css animation:${Blink} 1.2s infinite;`}
+      animation:${Blink} 1.2s infinite;
       color: ${props => props.color};
 `
 export const Separator = styled.div`
@@ -99,9 +100,13 @@ export const Separator = styled.div`
 `
 export const Paragraph = styled.div`
   margin: ${props => props.margin};
-  font-family: lato, sans-serif;
+  font-family: 'Lato-Regular', sans-serif;
+      font-size: ${props => props.fontSize};
+      font-weight: 300;
+      letter-spacing: 0px;
+      
   text-align: ${props => props.align};
-  font-size: ${props => props.fontSize};
+  
   line-height: ${props => props.lineHeight};
   color: ${props => props.primary ? `${Colors.gray}` : `${props.color}`};
 `

@@ -20,7 +20,7 @@ import Locations from '../components/Locations';
 import Jobs from '../components/Jobs';
 import '../assets/css/style.scss'
 import Link from 'gatsby-link'
-import {H1, H2, H5, Title, Separator, Paragraph} from '../components/Heading'
+import {H1, H2, H5, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider} from '../components/Sections'
 import {RoundImage, Colors} from '../components/Styling'
 import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
@@ -46,7 +46,7 @@ const Home = ({data}) => {
                   <Separator primary />
                 </Row>
                 <Row>
-                  <H2 primary align="left" fontSize="50px">LEARN TO CODE </H2>
+                  <H2 primary align="left" fontSize="50px">LEARN TO CODE<Span animated color={Colors.yellow}>_</Span></H2>
                 </Row>
                 <Row>
                   <H2 primary align="left" fontSize="50px">AND GET CAREER</H2>
@@ -55,7 +55,10 @@ const Home = ({data}) => {
                   <H2 primary align="left" fontSize="50px">SUPPORT FOR LIFE</H2>
                 </Row>
                 <Row>
-                  <Paragraph color={Colors.gray} margin="10px 0px" align="left">Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.</Paragraph>
+                  <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">Join more than 500 graduates already working as coders </Paragraph>
+                </Row>
+                <Row>
+                  <Paragraph color={Colors.gray} margin="5px 0 0 0" align="left" fontSize="13px">and become a part of one of the world's biggest coding community.</Paragraph>
                 </Row>
                 <Row center>
                   <Link to="/program">
