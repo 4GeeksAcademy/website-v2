@@ -46,13 +46,13 @@ const Home = ({data}) => {
                   <Separator primary />
                 </Row>
                 <Row>
-                  <H2 primary align="left" fontSize="4vw">LEARN TO CODE<Span animated color={Colors.yellow}>_</Span></H2>
+                  <H2 primary align="left" >LEARN TO CODE<Span animated color={Colors.yellow}>_</Span></H2>
                 </Row>
                 <Row>
-                  <H2 primary align="left" fontSize="4vw">AND GET CAREER</H2>
+                  <H2 primary align="left" >AND GET CAREER</H2>
                 </Row>
                 <Row>
-                  <H2 primary align="left" fontSize="4vw">SUPPORT FOR LIFE</H2>
+                  <H2 primary align="left" >SUPPORT FOR LIFE</H2>
                 </Row>
                 <Row>
                   <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">Join more than 500 graduates already working as coders </Paragraph>

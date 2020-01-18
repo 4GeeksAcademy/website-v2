@@ -32,30 +32,29 @@ text-align: ${props => props.align};
 export const H2 = styled.h2`
     @media ${Device.xs}{
       text-align: center;
+      font-size: 7vw;
     }
     @media screen ${Device.sm}{
       text-align: center;
+      font-size: 7vw;
     }
     @media ${Device.md}{
       text-align: ${props => props.align};
-      font-size: ${props => props.fontSize};
+      font-size: 7vw;
     }
     @media ${Device.lg}{
       text-align: ${props => props.align};
-      font-size: ${props => props.fontSize};
+      font-size: 4vw;
     }
     @media ${Device.xl} {
       text-align: ${props => props.align};
-      font-size: ${props => props.fontSize};
+      font-size: 3vw;
     }   
-
-    
-  font-family: 'Futura', sans-serif;
-  font-weight: 800;
-  letter-spacing: -1px;
-  text-transform: ${props => props.uppercase && "uppercase"};
-  color: ${props => props.color};
-  
+    font-family: 'Futura', sans-serif;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: ${props => props.uppercase && "uppercase"};
+    color: ${props => props.color};
 `;
 export const H3 = styled.h3`
 margin:0px;
