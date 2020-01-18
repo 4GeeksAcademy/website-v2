@@ -76,6 +76,7 @@ export const Row = styled.div`
     `
 export const Column = styled.div`
 padding: ${props => props.padding};
+margin: ${props => props.margin};
 position: relative;
 width: 100%;
 align-self: ${props => props.alignSelf};
@@ -195,7 +196,7 @@ export const Wrapper = props => {
                         <Row>
                             <Column size="1" />
                             <Column
-                                size="9"
+                                size="8"
                                 image={props.outerImage}
                                 url={props.outerUrl}
                                 border={props.outerBorder}

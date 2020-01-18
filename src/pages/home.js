@@ -1,35 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
 import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
-import Image from '../components/Image';
-import Credentials from '../components/Credentials';
-import Alumni from '../components/Alumni';
-import TestCom from '../components/testCom';
-// import Test from '../components/Test';
-import Mentors from '../components/Mentors';
-import WhoIsHiring from '../components/WhoIsHiring'
-import Footer from '../components/Footer'
-import {Spring} from '../components/spring'
-import ReactPlayer from 'react-player'
-import Icon from '../components/Icon'
-import PricesAndPayment from '../components/PricesAndPayment';
 import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
-import Locations from '../components/Locations';
+import GeeksVsOthers from '../components/GeeksVsOthers'
 import Jobs from '../components/Jobs';
-import '../assets/css/style.scss'
 import Link from 'gatsby-link'
 import {H1, H2, H5, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Container, Row, Column, Divider} from '../components/Sections'
+import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
 import {RoundImage, Colors} from '../components/Styling'
-import {ThumbsUpIcon, ArrowRightIcon} from 'react-line-awesome'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faUserFriends, faGlasses, faClock, faChalkboardTeacher, faCommentAlt} from '@fortawesome/free-solid-svg-icons'
-const Home = ({data}) => {
-  console.log(data.partners.edges[0].node.partners[0].image)
-  return (
 
+const Home = ({data}) => {
+  return (
     <Layout>
       <Container fluid >
         <Row>
@@ -80,50 +62,43 @@ const Home = ({data}) => {
           </Column>
         </Row>
       </Container>
-      <Container fluid >
+      <Wrapper
+        style="default">
+        <QueryTest up="40px" />
+      </Wrapper>
+      <Wrapper
+        style="default">
+        <Divider height="100px" />
+        <Why4Geeks />
+        <Divider height="100px" />
+      </Wrapper>
+      <Wrapper
+        style="default">
+        <Jobs />
+      </Wrapper>
+      <Divider height="100px" />
+      <Wrapper
+        style="default">
         <Row>
-          <Column size="1" />
-          <Column size="11">
-            <Row>
-              <Column size="1" />
-              <Column size="8">
-                <QueryTest up="40px" />
-              </Column>
-            </Row>
+          <Column size="4" margin="5px 0">
+            <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">LICENSED BY</Paragraph>
+            <RoundImage url="../images/florida-logo.png" height="100px" bsize="contain"></RoundImage>
+          </Column>
+          <Column size="4" margin="5px 0">
+            <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">TOP CODING SCHOOL</Paragraph>
+            <RoundImage url="../images/newsweek-logo.png" height="100px" bsize="contain"></RoundImage>
+          </Column>
+          <Column size="4" margin="5px 0">
+            <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">4GEEKS IN THE NEWS</Paragraph>
+            <RoundImage url="../images/cnn-bbc-logo.png" height="100px" bsize="contain"></RoundImage>
           </Column>
         </Row>
-      </Container>
-
-      <Container fluid >
-        <Row>
-          <Column size="1" />
-          <Column size="11">
-            <Row>
-              <Column size="1" />
-              <Column size="8">
-                <Divider height="100px" />
-                <Why4Geeks />
-                <Divider height="100px" />
-              </Column>
-            </Row>
-          </Column>
-        </Row>
-      </Container>
-      <Container fluid >
-        <Row>
-          <Column size="1" />
-          <Column size="11">
-            <Row>
-              <Column size="1" />
-              <Column size="8">
-
-                <Jobs />
-
-              </Column>
-            </Row>
-          </Column>
-        </Row>
-      </Container>
+      </Wrapper>
+      <Divider height="100px" />
+      <Wrapper
+        style="default">
+        <GeeksVsOthers />
+      </Wrapper>
     </Layout>
   )
 };
