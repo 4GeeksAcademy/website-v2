@@ -42,7 +42,9 @@ export default () => {
               </Column>
             </Row>
             <Row>
-              <Paragraph color="gray" align="center" margin="10px 0" fontSize="14px">{i.node.description}</Paragraph>
+              <Column size="12">
+                <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.node.description}</Paragraph>
+              </Column>
             </Row>
           </Column>
         ))}

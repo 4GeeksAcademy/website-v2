@@ -152,14 +152,26 @@ export const Separator = styled.div`
   border-bottom: ${props => props.primary ? `2px solid ${Colors.yellow} ` : `2px solid ${Colors.lightBlue}`};
 `
 export const Paragraph = styled.div`
+  @media ${Device.xs}{
+    text-align: center;
+  }
+  @media screen ${Device.sm}{
+    text-align: center;
+  }
+  @media ${Device.md}{
+    text-align: ${props => props.align};
+  }
+  @media ${Device.lg}{
+    text-align: ${props => props.align};
+  }
+  @media ${Device.xl} {
+    text-align: ${props => props.align};
+  }   
   margin: ${props => props.margin};
   font-family: 'Lato-Regular', sans-serif;
-      font-size: ${props => props.fontSize};
-      font-weight: 300;
-      letter-spacing: 0px;
-      
-  text-align: ${props => props.align};
-  
+  font-size: ${props => props.fontSize};
+  font-weight: 300;
+  letter-spacing: 0px;
   line-height: ${props => props.lineHeight};
   color: ${props => props.primary ? `${Colors.gray}` : `${props.color}`};
 `
