@@ -99,6 +99,7 @@ const Home = ({data}) => {
         style="default">
         <GeeksVsOthers />
       </Wrapper>
+      <Divider height="100px" />
     </Layout>
   )
 };

@@ -42,6 +42,7 @@ export const Container = styled.div`
 `
 export const Row = styled.div`
     height: ${props => props.height};
+    border-bottom: ${props => props.borderBottom};
     display: flex;
     flex-wrap: wrap;
     margin-right: ${props => props.marginRight};
@@ -49,7 +50,7 @@ export const Row = styled.div`
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
     background: ${props => props.background};
-    border-radius: 1.25rem 1.25rem 0 0;
+    // border-radius: 1.25rem 1.25rem 0 0;
     ${props => props.align === "around"
         ? css`justify-content: space-around;`
         : props => props.align === "center"
@@ -57,11 +58,11 @@ export const Row = styled.div`
             : css`justify-content: left;`}
     @media ${Device.xs}{
         justify-content: center;
-        margin-top: 5px;
+        // margin-top: 5px;
     }
     @media screen ${Device.sm}{
         justify-content: center;
-        margin-top: 5px;
+        // margin-top: 5px;
     }
     @media ${Device.md}{
         
@@ -89,9 +90,14 @@ ${props =>
                 border-radius: 0 0 0 1.25rem;
                 `
             : props.border === "top"
-            &&
-            css`
-                border-radius: 1.25rem 0 0 0;
+                ?
+                css`
+                    border-radius: 1.25rem 0 0 0;
+                `
+                : props.border === "custom"
+                &&
+                css`
+                    border-radius: ${props.customBorderRadius};
                 `
     }
 

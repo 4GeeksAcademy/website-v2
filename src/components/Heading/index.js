@@ -187,7 +187,7 @@ export const Title = props => {
         (
           <Row align="center">
             <Column size={props.size}>
-              <Row align="center">{props.primary ? <H2 primary>{props.title}</H2> : <H2>{props.title}</H2>}</Row>
+              <Row align="center">{props.primary ? <H2 primary align="center">{props.title} </H2> : <H2>{props.title}</H2>}</Row>
               <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
               <Row align="center">{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
             </Column>

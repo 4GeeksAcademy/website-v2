@@ -8,7 +8,7 @@ import {Colors, Button} from '../Styling'
 const Navbar = ({siteTitle, menuLinks}) => (
     <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-white py-0 px-3">
         <a className="navbar-brand" href="#">
-            <img src="../logo.png" width="40" height="40" alt="" />
+            <img src="../images/logo.png" width="50" height="40" alt="" />
         </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
