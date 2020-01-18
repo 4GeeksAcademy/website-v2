@@ -67,7 +67,15 @@ const Home = ({data}) => {
                 </Row>
               </Column>
               <Column size="1" />
-              <Column size="5" border bottom padding="20%" image url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="600px" ></Column>
+              <Column
+                size="5"
+                border="bottom"
+                padding="20%"
+                image="yes"
+                url="../localImage.png"
+                height="600px"
+                backgroundSize="cover">
+              </Column>
             </Row>
           </Column>
         </Row>
