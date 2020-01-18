@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H3, H4, H5, Title} from '../Heading';
-import {Colors} from '../Styling';
+import {Colors, Address} from '../Styling';
 import {Card} from '../Card';
 
 const GeeksVsOthers = () => {
@@ -56,7 +56,19 @@ const GeeksVsOthers = () => {
                       marginLeft="0"
                       marginRight="0px"
                     >
-                      <Column size="6" customRespSize respSize="6" alignSelf="center" image="no" border="bottom"><H4>{item.features} </H4></Column>
+                      <Column size="6" customRespSize respSize="6" alignSelf="center" image="no" border="bottom">
+
+                        <Row align="around">
+                          <Column size size="2" customRespSize respSize="2" alignSelf="center">
+                            <Address width="48" color={Colors.yellow} fill={Colors.yellow} />
+
+                          </Column>
+                          <Column size size="8" customRespSize respSize="8" alignSelf="center">
+                            <H4>{item.features} </H4>
+                          </Column>
+                        </Row>
+
+                      </Column>
                       <Column size="3" customRespSize respSize="2" alignSelf="center" image="no" ><H4>{item.at4_Geeks}</H4></Column>
                       <Column size="3" customRespSize respSize="2" alignSelf="center"><H4>{item.industry_average}</H4></Column>
                     </Row>
