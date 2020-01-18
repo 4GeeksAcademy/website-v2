@@ -31,13 +31,15 @@ export default () => {
         {data.why.edges.map(i => (
           <Column size="4">
             <RoundImage url={i.node.image} bsize="cover" mb="10px" height="200px" border="1.25rem"></RoundImage>
-            <Row>
-              <Column sizes size="2" customRespSize respSize="2">
+            <Row align="around">
+              <Column size size="2" customRespSize respSize="2" alignSelf="center">
                 {(i.node.slug === "job-in-tech") && <Address width="48" color={Colors.blue} fill={Colors.blue} />}
                 {(i.node.slug === "finance-your-career") && <HandMoney width="48" color={Colors.blue} fill={Colors.blue} />}
                 {(i.node.slug === "never-code-alone-again") && <Laptop width="48" color={Colors.blue} fill={Colors.blue} />}
               </Column>
-              <Column sizes size="10" customRespSize respSize="8"><H4 up>{i.node.title}</H4></Column>
+              <Column size size="8" customRespSize respSize="8" alignSelf="center">
+                <H4 uppercase>{i.node.title}</H4>
+              </Column>
             </Row>
             <Row>
               <Paragraph color="gray" align="center" margin="10px 0" fontSize="14px">{i.node.description}</Paragraph>

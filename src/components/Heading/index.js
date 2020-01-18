@@ -84,13 +84,32 @@ text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
 `;
 export const H4 = styled.h4`
-  font-size: 26px;
-  line-height: 29px;
-  text-transform: ${props => props.uppercase && "uppercase"};
-  font-style: normal;
-  font-family: lato, sans-serif;
-  font-weight: 800;
-  color: ${props => props.color};
+@media ${Device.xs}{
+  text-align: center;
+  font-size: 5vw;
+}
+@media screen ${Device.sm}{
+  text-align: center;
+  font-size: 5vw;
+}
+@media ${Device.md}{
+  text-align: ${props => props.align};
+  font-size: 14px;
+}
+@media ${Device.lg}{
+  text-align: ${props => props.align};
+  font-size: 16px;
+}
+@media ${Device.xl} {
+  text-align: ${props => props.align};
+  font-size: 22px;
+}   
+font-family: 'Futura', sans-serif;
+font-weight: 800;
+letter-spacing: -1px;
+text-transform: ${props => props.uppercase && "uppercase"};
+color: ${props => props.color};
+font-style: normal;
 `;
 export const H5 = styled.h5`
   font-size: ${props => props.fontSize};
