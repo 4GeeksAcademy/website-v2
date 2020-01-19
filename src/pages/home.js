@@ -10,6 +10,7 @@ import {H1, H2, H3, Title, Separator, Paragraph, Span} from '../components/Headi
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
 import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
 import {Card} from '../components/Card'
+import WhoIsHiring from '../components/WhoIsHiring';
 
 const Home = ({data}) => {
   return (
@@ -223,6 +224,18 @@ const Home = ({data}) => {
         </Row>
       </Wrapper>
       <Divider height="100px" />
+      <Wrapper
+        style="default">
+        <Title
+          title="WHO IS HIRING OUR STUDENTS"
+          paragraph="Our hiring partners are growing everyday, and our students have been hired from dozens of companies in the U.S. and worldwide."
+          primary
+          customParagraphSize="8"
+        >
+        </Title>
+        <Divider height="50px" />
+        <WhoIsHiring />
+      </Wrapper>
     </Layout>
   )
 };

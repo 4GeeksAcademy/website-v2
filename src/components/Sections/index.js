@@ -50,7 +50,6 @@ export const Row = styled.div`
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
     background: ${props => props.background};
-    // border-radius: 1.25rem 1.25rem 0 0;
     ${props => props.align === "around"
         ? css`justify-content: space-around;`
         : props => props.align === "center"

@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../global/Layout';
-import {Column, Row, Container, Divider} from "../components/Sections"
+import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
 import {Title} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 import QueryTest from '../components/QueryTest';
@@ -48,45 +48,43 @@ const Partners = () => (
       </Row>
     </Container>
     <Divider height="100px" />
-    <Container fluid height="100px">
-      <Row>
-        <Column size="1" />
-        <Column size="11">
-          <Row>
-            <Column size="1" />
-            <Column size="8">
-              <Title
-                size="10"
-                title="SOME OF OUR PARTNERS AND EMPLOYERS"
-                paragraph="To ensure that our students are getting hired, we work closely with both our hiring partners as well as industry leaders constantly refreshing and optimizing our program and syllabus."
-                primary
-              />
-            </Column>
-          </Row>
-        </Column>
-      </Row>
-    </Container>
-    <Divider height="150px" />
-    <Container fluid height="100%">
-      <Row>
-        <Column size="1" />
-        <Column size="11" color={Colors.lightGray} border top>
-          <Row>
-            <Column size="1" />
-            <Column size="8">
-              <WhoIsHiring />
-              <Divider height="50px" />
-              <Title
-                title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
-                paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
-                primary
-              />
-              <Divider height="50px" />
-            </Column>
-          </Row>
-        </Column>
-      </Row>
-    </Container>
+    <Wrapper
+      style="default"
+    >
+      <Title
+        size="10"
+        title="SOME OF OUR PARTNERS AND EMPLOYERS"
+        paragraph="To ensure that our students are getting hired, we work closely with both our hiring partners as well as industry leaders constantly refreshing and optimizing our program and syllabus."
+        primary
+        customParagraphSize="8"
+      />
+      <Divider height="20px" />
+      <WhoIsHiring />
+    </Wrapper>
+    <Wrapper
+      style="default"
+    >
+      <Divider height="50px" />
+      <Title
+        title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
+        paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+        primary
+      />
+      <Divider height="20px" />
+      <WhoIsHiring />
+    </Wrapper>
+    <Wrapper
+      style="default"
+    >
+      <Divider height="50px" />
+      <Title
+        title="IN PARTNERSHIP WITH THE CITY'S BIGGEST INFLUENCERS"
+        paragraph="We actively organize and/or participate in the biggest coding initiatives."
+        primary
+      />
+      <Divider height="20px" />
+      <WhoIsHiring />
+    </Wrapper>
   </Layout>
 );
 

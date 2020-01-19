@@ -44,8 +44,9 @@ export const RoundImage = styled.div`
     border-radius: ${props => props.border};
     background-position: ${props => props.position};
     background-color: white;
-    width: 100%;  
+    width: ${props => props.width};
     height: ${props => props.height};
+    margin: auto;
     ${props => props.move &&
         css`
         transform: translateY(-${props => props.up});
@@ -92,4 +93,8 @@ export const Button = styled.div`
 Button.defaultProps = {
     padding: '.5rem .85rem',
     fontSize: '12px'
+};
+RoundImage.defaultProps = {
+    width: '100%',
+
 };

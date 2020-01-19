@@ -41,15 +41,15 @@ export const H2 = styled.h2`
     }
     @media ${Device.lg}{
       text-align: ${props => props.align};
-      font-size: 5vw;
+      font-size: 4vw;
     }
     @media ${Device.xl} {
       text-align: ${props => props.align};
-      font-size: 3vw;
+      font-size: 2.5vw;
     }   
     font-family: 'Futura', sans-serif;
     font-weight: 800;
-    letter-spacing: -1px;
+    letter-spacing: -4px;
     text-transform: ${props => props.uppercase && "uppercase"};
     color: ${props => props.color};
 `;
@@ -198,7 +198,16 @@ export const Title = props => {
             <Column size={props.size}>
               <Row align="center">{props.primary ? <H2 primary align="center">{props.title} </H2> : <H2>{props.title}</H2>}</Row>
               <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
-              <Row align="center">{props.primary ? <Paragraph primary margin="10px 0">{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
+              <Row align="center">
+                {props.primary
+                  ? <Column size={props.customParagraphSize}>
+                    <Row align="center">
+                      <Paragraph primary margin="10px 0" align="center">{props.paragraph}</Paragraph>
+                    </Row>
+                  </Column>
+                  : <Paragraph>{props.paragraph}</Paragraph>
+                }
+              </Row>
             </Column>
           </Row>
         )
@@ -219,7 +228,8 @@ H2.propTypes = {
 }
 Paragraph.defaultProps = {
   color: Colors.lightGray,
-  fontSize: "12px"
+  fontSize: "12px",
+  customParagraphSize: "12",
 };
 H1.defaultProps = {
   color: Colors.black,
