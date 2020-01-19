@@ -129,14 +129,14 @@ ${props =>
                 flex: 0 0 ${(props.respSize / 12) * 100}%;
                 max-width: ${(props.respSize / 12) * 100};
                 // height: 300px;
-                border-radius: 0 0 0 0;
+                // border-radius: 0 0 0 0;
                 text-align: center;
             }
             @media screen ${Device.sm}{
                 flex: 0 0 ${(props.respSize / 12) * 100};
                 max-width: ${(props.respSize / 12) * 100};
                 // height: 300px;
-                border-radius: 0 0 0 0;
+                // border-radius: 0 0 0 0;
                 text-align: center;
             }
             @media ${Device.lg}{
