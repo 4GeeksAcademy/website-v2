@@ -1,105 +1,141 @@
 import React from 'react';
 import Layout from '../global/Layout';
 import {Card} from '../components/Card'
-import {Container, Row, Column} from '../components/Sections'
+import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
 import {Title, H2, H3, Span, Paragraph} from '../components/Heading'
-import {Button, Colors, Check, ArrowRight} from '../components/Styling'
-
+import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
+import QueryTest from '../components/QueryTest'
 const Program = ({data}) => {
   return (
     <Layout>
-      <Container fluid>
-        <Row>
-          <Column size="1" />
-          <Column border="bottom" bottom size="11" padding="10%" image="yes" url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="450px">
-            <Row>
-              <Column size="1" />
-              <Column size="8">
-                <Title
-                  size="7"
-                  title="FULL-STACK DEVELOPER"
-                  paragraph="with payments made after you get a job"
-                />
-              </Column>
-            </Row>
-            <Row>
-              <Column size="1" />
-              <Column size="8">
-                <Row>
-                  <Column align="right" size="6"><Button color={Colors.white} margin="15px 0" textColor={Colors.black}>REQUEST SYLLABUS</Button></Column>
-                  <Column align="left" size="6"><Button color="red" margin="15px 0" textColor=" white">APPLY NOW</Button></Column>
-                </Row>
-              </Column>
-            </Row>
+      <Wrapper
+        style="default"
+        image="yes"
+        url="../images/program-bg.png"
+        border="bottom"
+        height="500px"
+        backgroundSize="cover"
+      >
+        <Divider height="100px" />
+
+        <Title
+          size="5"
+          title="FULL STACK DEVELOPER"
+          paragraph="I'm impressed with the level of understanding 4Geeks students have, my hire eneded becoming team leader -CuevaSocial Marketing Agency"
+          main
+          color={Colors.white}
+          fontSize="46px"
+          textAlign="center"
+
+        />
+        <Row align="center">
+          <Column align="right" size="6"><Button color={Colors.white} margin="15px 0" textColor={Colors.black}>REQUEST SYLLABUS</Button></Column>
+          <Column align="left" size="6"><Button color="red" margin="15px 0" textColor=" white">APPLY NOW</Button></Column>
+        </Row>
+      </Wrapper>
+      <Wrapper
+        style="default">
+        <QueryTest up="80" />
+      </Wrapper>
+      <Wrapper
+        style="default"
+      >
+        <Title
+          size="10"
+          title="4GEEKS OUTCOMES"
+          paragraph="out of our total students, 76% are looking to get a job right after and 24% are pursuing to improve their skills or launch startups"
+          primary
+          customParagraphSize="8"
+        />
+        <Divider height="20px" />
+        <Row height="380px">
+          <RoundImage url="../images/program-charts.png" height="100%" width="100%" bsize="contain" />
+        </Row>
+      </Wrapper>
+      <Wrapper
+        style="default"
+      >
+        <Divider height="40px" />
+        <Row >
+          <Column size="6" >
+            <Card padding="20px" shadow height="350px" width="100%" margin="10px 0px">
+              <Row height="100%">
+                <Column size="10" customRespSize respSize="10">
+                  <Row marginLeft="0px" marginBottom="15px" height="15%">
+                    <RoundImage url="../images/geekpal.png" bsize="contain" height="100%" position="left" />
+                  </Row>
+                  <Row marginTop="15px">
+                    <Column size="12">
+                      <Paragraph color={Colors.black} customTextAlignSmall
+                        alignXs="left">Get a job in tech</Paragraph>
+                    </Column>
+                  </Row>
+                  <Row marginTop="15px">
+                    <Column size="12">
+
+                      {data.geek.edges[0].node.geek_pal.map((pal, index) => {
+                        return (
+                          <Row key={index} marginBottom="4px">
+                            <Column size="1" customRespSize respSize="1">
+                              <Check width="12px" color={Colors.blue} fill={Colors.blue} />
+                            </Column>
+                            <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px">
+                              <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
+                            </Column>
+                          </Row>)
+                      })}
+                    </Column>
+                  </Row>
+
+                </Column>
+                <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+              </Row>
+            </Card>
+          </Column>
+          <Column size="6">
+            <Card padding="20px" shadow height="350px" width="100%" margin="10px 0px">
+              <Row height="100%">
+                <Column size="10" customRespSize respSize="10">
+                  <Row marginLeft="0px" marginBottom="15px" height="15%">
+                    <RoundImage url="../images/geekforce.png" bsize="contain" height="100%" position="left" />
+                  </Row>
+                  <Row >
+                    <Column size="12">
+                      <Paragraph color={Colors.black} customTextAlignSmall
+                        alignXs="left">FOR Career Empowerment</Paragraph>
+                    </Column>
+                  </Row>
+                  <Row marginTop="15px">
+                    <Column size="12">
+                      {data.geek.edges[0].node.geek_force.map((pal, index) => {
+                        return (
+                          <Row key={index} marginBottom="2px" >
+                            <Column size="1" customRespSize respSize="1">
+                              <Check width="12px" color={Colors.blue} fill={Colors.blue} />
+                            </Column>
+                            <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px">
+                              <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
+                            </Column>
+                          </Row>)
+                      })}
+                    </Column>
+                  </Row>
+                </Column>
+                <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+              </Row>
+            </Card>
           </Column>
         </Row>
-      </Container>
-      <Container fluid height="400px">
-        <Row>
-          <Column size="1" />
-          <Column size="11" >
-            <Row>
-              <Column size="1" />
-              <Column size="8">
-                <Row >
-                  <Column size="6">
-                    <Card padding="15px" shadow height="330px" width="100%" move="up" up="100px" margin="10px 0px">
-                      <Row height="300px">
-                        <Column size="10">
-                          <Row marginLeft="0px" marginBottom="15px"><H3 primary>GEEK<Span color={Colors.blue}>PAL</Span></H3></Row>
-                          <Row marginLeft="0px" marginBottom="15px"><Paragraph primary>Get a job in tech</Paragraph></Row>
-                          <Row >
-                            <Column size="12">
-                              {data.geek.edges[0].node.geek_pal.map((pal, index) => {
-                                return (
-                                  <Row key={index} marginBottom="4px">
-                                    <Column size="1" customRespSize respSize="1">
-                                      <Check width="12px" color={Colors.blue} fill={Colors.blue} />
-                                    </Column>
-                                    <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px">
-                                      <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
-                                    </Column>
-                                  </Row>)
-                              })}
-                            </Column>
-                          </Row>
-                        </Column>
-                        <Column size="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
-                      </Row>
-                    </Card>
-                  </Column>
-                  <Column size="6">
-                    <Card padding="15px" shadow height="330px" width="100%" move="up" up="100px" margin="10px 0px">
-                      <Row height="300px">
-                        <Column size="10">
-                          <Row marginLeft="0px" marginBottom="15px"><H3 primary>GEEK<Span color={Colors.blue}>FORCE</Span></H3></Row>
-                          <Row marginLeft="0px" marginBottom="15px"><Paragraph primary>Never code on your own again</Paragraph></Row>
-                          <Row >
-                            <Column size="12">
-                              {data.geek.edges[0].node.geek_force.map((pal, index) => {
-                                return (
-                                  <Row key={index} marginBottom="2px" >
-                                    <Column size="1" customRespSize respSize="1">
-                                      <Check width="12px" color={Colors.blue} fill={Colors.blue} />
-                                    </Column>
-                                    <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px">
-                                      <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
-                                    </Column>
-                                  </Row>)
-                              })}
-                            </Column>
-                          </Row>
-                        </Column>
-                        <Column size="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
-                      </Row>
-                    </Card>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-          </Column>
-        </Row>
-      </Container>
+      </Wrapper>
+
+
+
+
+
+
+
+
+
 
     </Layout >
   )

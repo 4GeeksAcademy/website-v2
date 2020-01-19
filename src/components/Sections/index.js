@@ -196,7 +196,8 @@ export const Wrapper = props => {
                         border={props.border}
                         color={props.color}
                         align={props.align}
-                        height={props.height}>
+                        height={props.height}
+                        backgroundSize={props.backgroundSize}>
                         <Row>
                             <Column size="1" />
                             <Column
