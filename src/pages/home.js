@@ -66,7 +66,7 @@ const Home = ({data}) => {
       </Container>
       <Wrapper
         style="default">
-        <QueryTest up="40px" />
+        <QueryTest up="80" />
       </Wrapper>
       <Wrapper
         style="default">

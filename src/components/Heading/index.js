@@ -184,10 +184,10 @@ export const Paragraph = styled.div`
 export const Title = props => {
   return (
     <>
-      {props.fluid ?
+      {props.main ?
         (
           <>
-            <Row align="center">{props.primary ? <H1 primary>{props.title}</H1> : <H1>{props.title}</H1>}</Row>
+            <Row align="center">{<H1 color={props.color} fontSize={props.fontSize} align={props.textAlign}>{props.title}</H1>}</Row>
             <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
             <Row align="center">{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Row>
           </>

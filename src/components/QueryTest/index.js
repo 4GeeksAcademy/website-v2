@@ -33,7 +33,7 @@ export default props => {
                 color="white"
                 shadow
                 move="up"
-                up={props.up}
+                up={props.up + "px"}
               >
                 <div className="py-4">
                   {(i.node.credential === "Campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
@@ -52,6 +52,8 @@ export default props => {
                 width="200px"
                 color="white"
                 shadow
+                move="up"
+                up={props.up - ((props.up * 20) / 100) + "px"}
               >
                 <div className="py-4">
                   {(i.node.credential === "Campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}

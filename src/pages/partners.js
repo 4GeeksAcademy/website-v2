@@ -8,46 +8,34 @@ import WhoIsHiring from '../components/WhoIsHiring';
 
 const Partners = () => (
   <Layout>
-    <Container fluid height="350px">
-      <Row>
-        <Column size="1" />
-        <Column border="bottom" size="11" padding="10%" image url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="600px">
-          <Row>
-            <Column size="1" />
-            <Column size="8">
-              <Title
-                size="6"
-                title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
-                paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
-                style=""
-              />
-            </Column>
-          </Row>
-          <Row>
-            <Column size="1" />
-            <Column size="8">
-              <Row center>
-                <Button margin="15px 0px" color="red" textColor="white">BE A HIRING PARTNER</Button>
-              </Row>
-            </Column>
-          </Row>
-        </Column>
+    <Wrapper
+      style="default"
+      image="yes"
+      url="../images/companies-bg.png"
+      border="bottom"
+      height="500px"
+    >
+      <Divider height="100px" />
+
+      <Title
+        size="5"
+        title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
+        paragraph="I'm impressed with the level of understanding 4Geeks students have, my hire eneded becoming team leader -CuevaSocial Marketing Agency"
+        main
+        color={Colors.white}
+        fontSize="46px"
+        textAlign="center"
+
+      />
+      <Row align="center">
+        <Button margin="15px 0px" color="red" textColor="white">BE A HIRING PARTNER</Button>
       </Row>
-    </Container>
-    <Container fluid >
-      <Row>
-        <Column size="1" />
-        <Column size="11">
-          <Row>
-            <Column size="1" />
-            <Column size="8">
-              <QueryTest />
-            </Column>
-          </Row>
-        </Column>
-      </Row>
-    </Container>
-    <Divider height="100px" />
+    </Wrapper>
+    <Wrapper
+      style="default">
+      <QueryTest up="150" />
+    </Wrapper>
+    <Divider height="50px" />
     <Wrapper
       style="default"
     >
@@ -59,20 +47,22 @@ const Partners = () => (
         customParagraphSize="8"
       />
       <Divider height="20px" />
-      <WhoIsHiring />
+      <WhoIsHiring source="partners" />
     </Wrapper>
+    <Divider height="100px" />
     <Wrapper
       style="default"
     >
       <Divider height="50px" />
       <Title
         title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
-        paragraph="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+        paragraph="We actively organize and/or participate in the biggest coding initiatives."
         primary
       />
       <Divider height="20px" />
-      <WhoIsHiring />
+      <WhoIsHiring source="coding" />
     </Wrapper>
+    <Divider height="100px" />
     <Wrapper
       style="default"
     >
@@ -83,7 +73,10 @@ const Partners = () => (
         primary
       />
       <Divider height="20px" />
-      <WhoIsHiring />
+      <WhoIsHiring source="influencers" />
+      <Row align="center">
+        <Button color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">BE A HIRING PARTNER</Button>
+      </Row>
     </Wrapper>
   </Layout>
 );
