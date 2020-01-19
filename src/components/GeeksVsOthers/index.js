@@ -18,6 +18,7 @@ const GeeksVsOthers = () => {
                   icon
                   tooltip
                   at4_Geeks
+                  slug
                 }
               }
             }
@@ -60,7 +61,7 @@ const GeeksVsOthers = () => {
 
                         <Row align="around">
                           <Column size size="2" customRespSize respSize="2" alignSelf="center">
-                            <Address width="48" color={Colors.yellow} fill={Colors.yellow} />
+                            {(item.slug === "one-teacher-every-five") && <Address width="48" color={Colors.yellow} fill={Colors.yellow} />}
 
                           </Column>
                           <Column size size="8" customRespSize respSize="8" alignSelf="center">
@@ -78,8 +79,19 @@ const GeeksVsOthers = () => {
                       height="80px"
                       borderBottom={"1px solid " + Colors.gray}
                       marginLeft="0" marginRight="0px"
+
                     >
-                      <Column size="6" customRespSize respSize="6" alignSelf="center" image="no" ><H4>{item.features}</H4></Column>
+                      <Column size="6" customRespSize respSize="6" alignSelf="center" image="no" >
+                        <Row align="around">
+                          <Column size size="2" customRespSize respSize="2" alignSelf="center">
+                            {(item.slug === "one-teacher-every-five") && <Address width="48" color={Colors.yellow} fill={Colors.yellow} />}
+
+                          </Column>
+                          <Column size size="8" customRespSize respSize="8" alignSelf="center">
+                            <H4>{item.features} </H4>
+                          </Column>
+                        </Row>
+                      </Column>
                       <Column size="3" customRespSize respSize="2" alignSelf="center" image="no" ><H4>{item.at4_Geeks}</H4></Column>
                       <Column size="3" customRespSize respSize="2" alignSelf="center"><H4>{item.industry_average}</H4></Column>
                     </Row>}
