@@ -41,15 +41,15 @@ const GeeksVsOthers = () => {
           color={Colors.white}
         >
           <Card shadow borders="1.25rem" height="480px">
-            <Row height="80px" borderBottom={"1px solid " + Colors.gray} marginLeft="0" marginRight="0">
+            <Row height="80px" marginLeft="0" marginRight="0">
               <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" >
-                <Row height="100%"><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>FEATURED</H5></Column></Row>
+                <Row height="100%" borderBottom={"1px solid " + Colors.darkGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>FEATURED</H5></Column></Row>
               </Column>
               <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
-                <Row height="100%"><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>AT 4GEEKS</H5></Column></Row>
+                <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>AT 4GEEKS</H5></Column></Row>
               </Column>
               <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0">
-                <Row height="100%"><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>INDUSTRY AVERAGE</H5></Column></Row>
+                <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>INDUSTRY AVERAGE</H5></Column></Row>
               </Column>
             </Row>
             {data.geeks.edges[0].node.miami.map((item, index) => {
@@ -66,7 +66,7 @@ const GeeksVsOthers = () => {
                       alignResp="end"
                     >
                       <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="bottom">
-                        <Row align="around" height="100%">
+                        <Row align="around" height="100%" >
                           <Column size size="2" customRespSize respSize="2" alignSelf="center">
                             {(item.slug === "one-teacher-every-five") && <Teacher width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "senior-teacher-per-student") && <Glasses width="48" color={Colors.yellow} fill={Colors.yellow} />}
@@ -80,23 +80,22 @@ const GeeksVsOthers = () => {
                         </Row>
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%"><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center">
-                        <Row height="100%"><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.industry_average}</H4></Column></Row>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.industry_average}</H4></Column></Row>
                       </Column>
                     </Row>
                     :
                     <Row
                       key={index}
                       height="80px"
-                      borderBottom={"1px solid " + Colors.gray}
                       marginLeft="0" marginRight="0"
                       customRespSize
                       alignResp="end"
                     >
                       <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
-                        <Row align="around" height="100%">
+                        <Row align="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
                           <Column size size="2" customRespSize respSize="2" alignSelf="center" >
                             {(item.slug === "one-teacher-every-five") && <Teacher width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "senior-teacher-per-student") && <Glasses width="48" color={Colors.yellow} fill={Colors.yellow} />}
@@ -110,10 +109,10 @@ const GeeksVsOthers = () => {
                         </Row>
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%"><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center">
-                        <Row height="100%"><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.industry_average}</H4></Column></Row>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.industry_average}</H4></Column></Row>
                       </Column>
                     </Row>}
                 </>
