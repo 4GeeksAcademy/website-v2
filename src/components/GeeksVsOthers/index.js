@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H3, H4, H5, Title} from '../Heading';
-import {Colors, Address, Teacher, Glasses, Clock, Users, Comments} from '../Styling';
+import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button} from '../Styling';
 import {Card} from '../Card';
 
 const GeeksVsOthers = () => {
@@ -122,6 +122,9 @@ const GeeksVsOthers = () => {
             )}
           </Card>
         </Column>
+      </Row>
+      <Row align="center">
+        <Button color={Colors.blue} textColor={Colors.white} margin="2rem 0">COMPARE 4GEEKS WITH OTHER SCHOOLS</Button>
       </Row>
     </>
   )
