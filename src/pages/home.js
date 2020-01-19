@@ -100,7 +100,7 @@ const Home = ({data}) => {
       <Wrapper
         style="default"
       >
-        <GeeksVsOthers />
+        <GeeksVsOthers hasTitle />
         <Divider height="100px" />
         <Title
           title="JOIN 4GEEKS"

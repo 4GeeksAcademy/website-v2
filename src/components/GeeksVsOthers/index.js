@@ -6,7 +6,7 @@ import {H3, H4, H5, Title} from '../Heading';
 import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button} from '../Styling';
 import {Card} from '../Card';
 
-const GeeksVsOthers = () => {
+const GeeksVsOthers = props => {
   const data = useStaticQuery(graphql`
       query my4GeeksDataQuery{
         geeks: allGeeksDataYaml {
@@ -27,12 +27,15 @@ const GeeksVsOthers = () => {
       `)
   return (
     <>
-      <Title
-        title="WHAT MAKES THIS PROGRAM STAND OUT?"
-        primary
-        size="8"
-      />
-      <Divider height="100px" />
+      {props.hasTitle &&
+        <>
+          <Title
+            title="WHAT MAKES THIS PROGRAM STAND OUT?"
+            primary
+            size="8"
+          />
+          <Divider height="100px" />
+        </>}
       <Row>
         <Column
           size="12"

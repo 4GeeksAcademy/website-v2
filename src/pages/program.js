@@ -5,6 +5,10 @@ import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
 import {Title, H2, H3, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
 import QueryTest from '../components/QueryTest'
+import ProgramDescription from '../components/ProgramDescription'
+import GeeksVsOthers from '../components/GeeksVsOthers'
+import Mentors from '../components/Mentors'
+
 const Program = ({data}) => {
   return (
     <Layout>
@@ -17,7 +21,6 @@ const Program = ({data}) => {
         backgroundSize="cover"
       >
         <Divider height="100px" />
-
         <Title
           size="5"
           title="FULL STACK DEVELOPER"
@@ -86,7 +89,6 @@ const Program = ({data}) => {
                       })}
                     </Column>
                   </Row>
-
                 </Column>
                 <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
               </Row>
@@ -127,16 +129,45 @@ const Program = ({data}) => {
           </Column>
         </Row>
       </Wrapper>
-
-
-
-
-
-
-
-
-
-
+      <Divider height="100px" />
+      <Wrapper
+        style="custom"
+        full
+      >
+        <Title
+          size="10"
+          title="PROGRAM DETAILS"
+          primary
+        />
+        <Divider height="50px" />
+        <ProgramDescription />
+      </Wrapper>
+      <Divider height="100px" />
+      <Wrapper
+        style="default"
+      >
+        <Title
+          size="10"
+          title="4GEEKS VS OTHER IN NUMBERS"
+          paragraph="View full comparison table >"
+          primary
+        />
+        <Divider height="50px" />
+        <GeeksVsOthers />
+        <Divider height="100px" />
+      </Wrapper>
+      <Wrapper
+        style="default"
+      >
+        <Title
+          size="10"
+          title="GET TRAINED BY SENIOR MENTORS"
+          primary
+        />
+        <Divider height="50px" />
+        <Mentors />
+        <Divider height="100px" />
+      </Wrapper>
     </Layout >
   )
 };
