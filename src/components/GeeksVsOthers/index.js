@@ -42,9 +42,15 @@ const GeeksVsOthers = () => {
         >
           <Card shadow borders="1.25rem" height="480px">
             <Row height="80px" borderBottom={"1px solid " + Colors.gray} marginLeft="0" marginRight="0">
-              <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" ><H5 fontSize="12px">FEATURED</H5></Column>
-              <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}><H5 fontSize="12px">AT 4GEEKS</H5></Column>
-              <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0"><H5 fontSize="12px">INDUSTRY AVERAGE</H5></Column>
+              <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" >
+                <Row height="100%"><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>FEATURED</H5></Column></Row>
+              </Column>
+              <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
+                <Row height="100%"><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>AT 4GEEKS</H5></Column></Row>
+              </Column>
+              <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0">
+                <Row height="100%"><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>INDUSTRY AVERAGE</H5></Column></Row>
+              </Column>
             </Row>
             {data.geeks.edges[0].node.miami.map((item, index) => {
               return (

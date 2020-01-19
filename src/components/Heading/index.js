@@ -116,9 +116,8 @@ export const H5 = styled.h5`
   font-family: Lato, sans-serif;
   font-weight: 800;
   color: ${props => props.color};
-  ${props =>
-    props.align === "left" &&
-    css`
+  
+    
       @media ${Device.md}{
         text-align: ${props => props.align};
       }
@@ -134,7 +133,7 @@ export const H5 = styled.h5`
       @media ${Device.xl} {
         text-align: ${props => props.align};
       }
-      `} 
+      
 `;
 
 export const Span = styled.span`
