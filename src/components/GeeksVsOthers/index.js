@@ -42,9 +42,9 @@ const GeeksVsOthers = () => {
         >
           <Card shadow borders="1.25rem" height="480px">
             <Row height="80px" borderBottom={"1px solid " + Colors.gray} marginLeft="0" marginRight="0">
-              <Column size="6" customRespSize respSize="6" image="no" color={Colors.black} border="top" ><H5 fontSize="12px">FEATURED</H5></Column>
-              <Column size="3" customRespSize respSize="3" image="no" color={Colors.lightGray}></Column>
-              <Column size="3" customRespSize respSize="3" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0"></Column>
+              <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" ><H5 fontSize="12px">FEATURED</H5></Column>
+              <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}><H5 fontSize="12px">AT 4GEEKS</H5></Column>
+              <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0"><H5 fontSize="12px">INDUSTRY AVERAGE</H5></Column>
             </Row>
             {data.geeks.edges[0].node.miami.map((item, index) => {
               return (
@@ -69,12 +69,16 @@ const GeeksVsOthers = () => {
                             {(item.slug === "interview-preparation") && <Comments width="48" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
                           <Column size size="8" customRespSize respSize="6" alignSelf="center">
-                            <H4 fontSizeXs="12px">{item.features} </H4>
+                            <H4 fontSizeXs="12px" color={Colors.white}>{item.features} </H4>
                           </Column>
                         </Row>
                       </Column>
-                      <Column size="3" customRespSize respSize="2" height="100%" alignSelf="center" image="no" color={Colors.lightGray}><H4 fontSizeXs="12px">{item.at4_Geeks}</H4></Column>
-                      <Column size="3" customRespSize respSize="2" height="100%" alignSelf="center"><H4 fontSizeXs="12px">{item.industry_average}</H4></Column>
+                      <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
+                        <Row height="100%"><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
+                      </Column>
+                      <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center">
+                        <Row height="100%"><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.industry_average}</H4></Column></Row>
+                      </Column>
                     </Row>
                     :
                     <Row
@@ -95,12 +99,16 @@ const GeeksVsOthers = () => {
                             {(item.slug === "interview-preparation") && <Comments width="48" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
                           <Column size size="8" customRespSize respSize="6" alignSelf="center" >
-                            <H4 fontSizeXs="12px">{item.features} </H4>
+                            <H4 fontSizeXs="12px" color={Colors.white}>{item.features} </H4>
                           </Column>
                         </Row>
                       </Column>
-                      <Column size="3" customRespSize respSize="2" height="100%" alignSelf="center" image="no" color={Colors.lightGray}><H4 fontSizeXs="12px">{item.at4_Geeks}</H4></Column>
-                      <Column size="3" customRespSize respSize="2" height="100%" alignSelf="center"><H4 fontSizeXs="12px">{item.industry_average}</H4></Column>
+                      <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
+                        <Row height="100%"><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
+                      </Column>
+                      <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center">
+                        <Row height="100%"><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.industry_average}</H4></Column></Row>
+                      </Column>
                     </Row>}
                 </>
               )
