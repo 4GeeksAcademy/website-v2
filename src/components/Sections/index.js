@@ -57,26 +57,25 @@ export const Row = styled.div`
             ? css`justify-content: center;`
             : css`justify-content: left;`}
     @media ${Device.xs}{
-        justify-content: center;
-        // margin-top: 5px;
+        ${props => props.customRespSize
+        ? css`justify-content: ${props => props.alignResp};`
+        : css`justify-content: center;`};
     }
     @media screen ${Device.sm}{
-        justify-content: center;
-        // margin-top: 5px;
+        ${props => props.customRespSize
+        ? css`justify-content: ${props => props.alignResp};`
+        : css`justify-content: center;`};
     }
     @media ${Device.md}{
-        
     }
     @media ${Device.lg}{
-        
     }
     @media ${Device.xl} {
-        
     } 
-        
     `
 export const Column = styled.div`
 padding: ${props => props.padding};
+height: ${props => props.height};
 margin: ${props => props.margin};
 position: relative;
 width: 100%;

@@ -41,7 +41,7 @@ const GeeksVsOthers = () => {
           color={Colors.white}
         >
           <Card shadow borders="1.25rem" height="480px">
-            <Row height="80px" borderBottom={"1px solid " + Colors.gray} marginLeft="0" marginRight="0px">
+            <Row height="80px" borderBottom={"1px solid " + Colors.gray} marginLeft="0" marginRight="0">
               <Column size="6" customRespSize respSize="6" image="no" color={Colors.black} border="top" ><H5 fontSize="12px">FEATURED</H5></Column>
               <Column size="3" customRespSize respSize="3" image="no" color={Colors.lightGray}></Column>
               <Column size="3" customRespSize respSize="3" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0"></Column>
@@ -55,53 +55,52 @@ const GeeksVsOthers = () => {
                       key={index}
                       height="80px"
                       marginLeft="0"
-                      marginRight="0px"
+                      marginRight="0"
+                      customRespSize
+                      alignResp="end"
                     >
-                      <Column size="6" customRespSize respSize="6" alignSelf="center" image="no" border="bottom">
-
-                        <Row align="around">
+                      <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="bottom">
+                        <Row align="around" height="100%">
                           <Column size size="2" customRespSize respSize="2" alignSelf="center">
                             {(item.slug === "one-teacher-every-five") && <Teacher width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "senior-teacher-per-student") && <Glasses width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "average-time-to-get-help") && <Clock width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "one-on-one-mentoring") && <Users width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "interview-preparation") && <Comments width="48" color={Colors.yellow} fill={Colors.yellow} />}
-
-
                           </Column>
-                          <Column size size="8" customRespSize respSize="8" alignSelf="center">
-                            <H4>{item.features} </H4>
+                          <Column size size="8" customRespSize respSize="6" alignSelf="center">
+                            <H4 fontSizeXs="12px">{item.features} </H4>
                           </Column>
                         </Row>
-
                       </Column>
-                      <Column size="3" customRespSize respSize="2" alignSelf="center" image="no" ><H4>{item.at4_Geeks}</H4></Column>
-                      <Column size="3" customRespSize respSize="2" alignSelf="center"><H4>{item.industry_average}</H4></Column>
+                      <Column size="3" customRespSize respSize="2" height="100%" alignSelf="center" image="no" color={Colors.lightGray}><H4 fontSizeXs="12px">{item.at4_Geeks}</H4></Column>
+                      <Column size="3" customRespSize respSize="2" height="100%" alignSelf="center"><H4 fontSizeXs="12px">{item.industry_average}</H4></Column>
                     </Row>
                     :
                     <Row
                       key={index}
                       height="80px"
                       borderBottom={"1px solid " + Colors.gray}
-                      marginLeft="0" marginRight="0px"
-
+                      marginLeft="0" marginRight="0"
+                      customRespSize
+                      alignResp="end"
                     >
-                      <Column size="6" customRespSize respSize="6" alignSelf="center" image="no" >
-                        <Row align="around">
-                          <Column size size="2" customRespSize respSize="2" alignSelf="center">
+                      <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
+                        <Row align="around" height="100%">
+                          <Column size size="2" customRespSize respSize="2" alignSelf="center" >
                             {(item.slug === "one-teacher-every-five") && <Teacher width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "senior-teacher-per-student") && <Glasses width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "average-time-to-get-help") && <Clock width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "one-on-one-mentoring") && <Users width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "interview-preparation") && <Comments width="48" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
-                          <Column size size="8" customRespSize respSize="8" alignSelf="center">
-                            <H4>{item.features} </H4>
+                          <Column size size="8" customRespSize respSize="6" alignSelf="center" >
+                            <H4 fontSizeXs="12px">{item.features} </H4>
                           </Column>
                         </Row>
                       </Column>
-                      <Column size="3" customRespSize respSize="2" alignSelf="center" image="no" ><H4>{item.at4_Geeks}</H4></Column>
-                      <Column size="3" customRespSize respSize="2" alignSelf="center"><H4>{item.industry_average}</H4></Column>
+                      <Column size="3" customRespSize respSize="2" height="100%" alignSelf="center" image="no" color={Colors.lightGray}><H4 fontSizeXs="12px">{item.at4_Geeks}</H4></Column>
+                      <Column size="3" customRespSize respSize="2" height="100%" alignSelf="center"><H4 fontSizeXs="12px">{item.industry_average}</H4></Column>
                     </Row>}
                 </>
               )

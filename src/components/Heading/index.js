@@ -83,7 +83,7 @@ color: ${props => props.color};
 export const H4 = styled.h4`
 @media ${Device.xs}{
   text-align: center;
-  font-size: 5vw;
+  font-size: ${props => props.fontSizeXs};
 }
 @media screen ${Device.sm}{
   text-align: center;
@@ -215,4 +215,7 @@ Paragraph.defaultProps = {
 H1.defaultProps = {
   color: Colors.black,
   fontSize: "42px"
+};
+H4.defaultProps = {
+  fontSizeXs: '5vw',
 };
