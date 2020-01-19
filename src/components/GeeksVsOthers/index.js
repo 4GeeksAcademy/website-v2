@@ -61,7 +61,11 @@ const GeeksVsOthers = () => {
 
                         <Row align="around">
                           <Column size size="2" customRespSize respSize="2" alignSelf="center">
-                            {(item.slug === "one-teacher-every-five") && <Address width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "one-teacher-every-five") && <Teacher width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "senior-teacher-per-student") && <Glasses width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "average-time-to-get-help") && <Clock width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "one-on-one-mentoring") && <Users width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "interview-preparation") && <Comments width="48" color={Colors.yellow} fill={Colors.yellow} />}
 
 
                           </Column>
@@ -89,8 +93,7 @@ const GeeksVsOthers = () => {
                             {(item.slug === "senior-teacher-per-student") && <Glasses width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "average-time-to-get-help") && <Clock width="48" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "one-on-one-mentoring") && <Users width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "career-support") && <Teacher width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "backend-language") && <Teacher width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "interview-preparation") && <Comments width="48" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
                           <Column size size="8" customRespSize respSize="8" alignSelf="center">
                             <H4>{item.features} </H4>
