@@ -6,9 +6,10 @@ import Why4Geeks from '../components/Why4Geeks';
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import Jobs from '../components/Jobs';
 import Link from 'gatsby-link'
-import {H1, H2, H5, Title, Separator, Paragraph, Span} from '../components/Heading'
+import {H1, H2, H3, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
-import {RoundImage, Colors} from '../components/Styling'
+import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
+import {Card} from '../components/Card'
 
 const Home = ({data}) => {
   return (
@@ -96,8 +97,130 @@ const Home = ({data}) => {
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
-        style="default">
+        style="default"
+      >
         <GeeksVsOthers />
+        <Divider height="100px" />
+        <Title
+          title="JOIN 4GEEKS"
+          paragraph="Duis mollis, est non commodo luctus, nisi erat porttitor ."
+          primary
+        />
+        <Divider height="40px" />
+        <Row >
+          <Column size="6" >
+            <Card padding="20px" shadow height="200px" width="100%" margin="10px 0px">
+              <Row height="100%">
+                <Column size="10" customRespSize respSize="10">
+                  <Row marginLeft="0px" marginBottom="15px" height="25%">
+                    <RoundImage url="../images/geekpal.png" bsize="contain" height="100%" position="left" />
+                  </Row>
+                  <Row >
+                    <Column size="12">
+                      <Paragraph
+                        color={Colors.black}
+                        customTextAlignSmall
+                        alignXs="left">
+                        Programming - Always - Limitles
+                      </Paragraph>
+                    </Column>
+                  </Row>
+                  <Row marginTop="15px">
+                    <Column size="12">
+                      <Paragraph
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        Never code on your own again.
+                      </Paragraph>
+                      <Paragraph
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        We will be along with lalong side your
+                      </Paragraph>
+                      <Paragraph
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        journey and for as long as you
+                      </Paragraph>
+                      <Paragraph
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        want us to be.
+                      </Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+                <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+              </Row>
+            </Card>
+          </Column>
+          <Column size="6">
+            <Card padding="20px" shadow height="200px" width="100%" margin="10px 0px">
+              <Row height="100%">
+                <Column size="10" customRespSize respSize="10">
+                  <Row marginLeft="0px" marginBottom="15px" height="25%">
+                    <RoundImage url="../images/geekforce.png" bsize="contain" height="100%" position="left" />
+                  </Row>
+                  <Row >
+                    <Column size="12">
+                      <Paragraph color={Colors.black} customTextAlignSmall
+                        alignXs="left">FOR Career Empowerment</Paragraph>
+                    </Column>
+                  </Row>
+                  <Row marginTop="15px">
+                    <Column size="12">
+                      <Paragraph
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        We'll do everything in our hands
+                      </Paragraph>
+                      <Paragraph
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        to help you get a job in the field.
+                      </Paragraph>
+                      <Paragraph
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        Includes Career Support Track,
+                      </Paragraph>
+                      <Paragraph
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        GeekPAL, and GeekTALK.
+                      </Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+                <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+              </Row>
+            </Card>
+          </Column>
+        </Row>
       </Wrapper>
       <Divider height="100px" />
     </Layout>
@@ -105,6 +228,14 @@ const Home = ({data}) => {
 };
 export const myQuer = graphql`
 query myQueryy{
+  geek: allGeekPalYaml {
+    edges {
+    node {
+    geek_pal
+    geek_force
+}
+}
+}
   alumni:   allAlumniYaml{
     edges{
       node{

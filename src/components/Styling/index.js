@@ -6,7 +6,7 @@ export const Colors = {
     blue: "#0097CE",
     lightBlue: "#BBEAFC",
     gray: "#898a8b",
-    lightGray: "#F5F5F5",
+    lightGray: "#F9F9F9",
     darkGray: '#2e2e2e',
     borderGray: '#ececec',
     yellow: "#E6BA1F",
@@ -42,7 +42,7 @@ export const RoundImage = styled.div`
     background-repeat: no-repeat;
     background-size:${props => props.bsize};
     border-radius: ${props => props.border};
-    background-position: center;
+    background-position: ${props => props.position};
     background-color: white;
     width: 100%;  
     height: ${props => props.height};

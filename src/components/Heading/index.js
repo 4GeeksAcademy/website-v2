@@ -149,10 +149,20 @@ export const Separator = styled.div`
 `
 export const Paragraph = styled.div`
   @media ${Device.xs}{
-    text-align: center;
+    ${props => props.customTextAlignSmall
+    ?
+    css`text-align: ${props => props.alignXs}`
+    :
+    css`text-align: text-align: center;`
+  }
   }
   @media screen ${Device.sm}{
-    text-align: center;
+    ${props => props.customTextAlignSmall
+    ?
+    css`text-align: ${props => props.alignXs}`
+    :
+    css`text-align: text-align: center;`
+  }
   }
   @media ${Device.md}{
     text-align: ${props => props.align};
@@ -188,7 +198,7 @@ export const Title = props => {
             <Column size={props.size}>
               <Row align="center">{props.primary ? <H2 primary align="center">{props.title} </H2> : <H2>{props.title}</H2>}</Row>
               <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
-              <Row align="center">{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
+              <Row align="center">{props.primary ? <Paragraph primary margin="10px 0">{props.paragraph}</Paragraph> : <Paragraph>{props.paragraph}</Paragraph>}</Row>
             </Column>
           </Row>
         )
