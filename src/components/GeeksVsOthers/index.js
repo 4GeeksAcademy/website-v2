@@ -123,7 +123,7 @@ const GeeksVsOthers = () => {
         </Column>
       </Row>
       <Row align="center">
-        <Button color={Colors.blue} textColor={Colors.white} margin="2rem 0">COMPARE 4GEEKS WITH OTHER SCHOOLS</Button>
+        <Button color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">COMPARE 4GEEKS WITH OTHER SCHOOLS</Button>
       </Row>
     </>
   )

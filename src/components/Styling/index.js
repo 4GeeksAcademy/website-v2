@@ -64,7 +64,7 @@ export const Button = styled.div`
             text-align: center;
             vertical-align: middle;
             display: inline-block;
-            padding: 0.5rem 0.85rem;
+            padding: ${props => props.padding};
             font-size: .5rem;
             line-height: 1.5;
             margin: ${props => props.margin};
@@ -72,7 +72,11 @@ export const Button = styled.div`
         `
         :
         css`
-            font-family: lato, sans-serif;
+            font-family: 'Lato-Bold', sans-serif;
+            font-size: ${props => props.fontSize};
+            font-weight: 500;
+            letter-spacing: 0px;
+            line-height: 1.5;
             border-radius: 50rem;
             background-color: ${props => props.color};
             color: ${props => props.textColor};
@@ -80,10 +84,12 @@ export const Button = styled.div`
             text-align: center;
             vertical-align: middle;
             display: inline-block;
-            padding: 0.5rem 0.85rem;
-            font-size: .5rem;
-            line-height: 1.5;
+            padding: ${props => props.padding};
             margin: ${props => props.margin};
-            font-weight: 500;`}
+            `}
                 
 `
+Button.defaultProps = {
+    padding: '.5rem .85rem',
+    fontSize: '12px'
+};
