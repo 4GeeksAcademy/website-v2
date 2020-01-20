@@ -45,6 +45,7 @@ export const Row = styled.div`
     border-bottom: ${props => props.borderBottom};
     display: flex;
     flex-wrap: wrap;
+    align-items:${props => props.alignItems};
     margin-right: ${props => props.marginRight};
     margin-left: ${props => props.marginLeft};
     margin-top: ${props => props.marginTop};

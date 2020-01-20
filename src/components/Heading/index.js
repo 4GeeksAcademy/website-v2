@@ -109,13 +109,14 @@ color: ${props => props.color};
 font-style: normal;
 `;
 export const H5 = styled.h5`
-  font-size: ${props => props.fontSize};
-  line-height: ${props => props.fontHeight};
-  text-transform: ${props => props.uppercase && "uppercase"};
-  font-style: normal;
-  font-family: Lato, sans-serif;
-  font-weight: 800;
-  color: ${props => props.color};
+      font-family: 'Lato-Bold', sans-serif;
+      font-size: ${props => props.fontSize};
+      font-weight: 500;
+      letter-spacing: 0px;
+      line-height: ${props => props.fontHeight};
+      text-transform: ${props => props.uppercase && "uppercase"};
+      font-style: normal;
+      color: ${props => props.color};
   
     
       @media ${Device.md}{

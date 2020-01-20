@@ -159,8 +159,7 @@ export default () => {
       <Row>
         <Column size="6" customRespSize respSize="12">
           <Card shadow width="100%" height="400px" >
-            {/* <div className="card-body h-75"> */}
-            <Row height="80px" >
+            <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" >
@@ -183,14 +182,14 @@ export default () => {
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" >
-                    <H2 fontSize="28px" align="center" >{getStepContents(activeStep)}</H2>                  </Column>
+                    <H3 align="center" >{getStepContents(activeStep)}</H3>                  </Column>
                 </Row>
               </Column>
             </Row>
-            <Row height="60px" >
+            <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" align="center">
-                  <Stepper nonLinear activeStep={activeStep} alternativeLabel>
+                  <Stepper activeStep={activeStep} alternativeLabel>
                     {steps.map((label, index) => (
                       <Step key={label}>
                         <StepButton onClick={handleStep(index)} completed={completed[index]}>
@@ -202,61 +201,79 @@ export default () => {
                 </Row>
               </Column>
             </Row>
-            <Row height="50px" >
+            <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
+                  <Column size="12" alignSelf="center" align="center">
                     <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
                   </Column>
                 </Row>
               </Column>
             </Row>
-
-
-            {/* </div> */}
-            <div className="card-footer h-25 text-center bg-white border-0">
-
-              <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
-            </div>
-            {/* <Row center>
-            </Row> */}
           </Card>
         </Column>
+
         <Column size="6" customRespSize respSize="12">
           <Card shadow width="100%" height="400px" >
-            {/* <div className="card-header h-25"></div> */}
-            <div className="card-body h-75">
-              <Row center><H5 fontSize="20px">PAY ONLY AFTER</H5></Row>
-              <Row center marginBottom="10px"><H5 fontSize="20px">YOU GET A JOB</H5></Row>
-              <Row center marginBottom="20px"><Paragraph primary>and talk about the income share agreement.</Paragraph></Row>
-              <Row center><H5 fontSize="28px">{!checked ? "$7000" : "$134.99"}</H5></Row>
-              <Row center>
-                <Column size="4"><Paragraph color={!checked ? Colors.blue : Colors.gray}>FULL TUITION</Paragraph></Column>
-                <Column size="4">
-                  <Switch
-                    onChange={handleChange}
-                    checked={checked}
-                    onColor="#86d3ff"
-                    onHandleColor={Colors.blue}
-                    handleDiameter={30}
-                    uncheckedIcon={false}
-                    checkedIcon={false}
-                    boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                    // activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-                    height={20}
-                    width={48}
-                    className="react-switch"
-                    id="material-switch"
-                  />
-                </Column>
-                <Column size="4"><Paragraph color={!checked ? Colors.gray : Colors.blue}>FINANCING</Paragraph></Column>
-              </Row>
-            </div>
-            <div className="card-footer h-25 text-center bg-white border-0">
-
-              <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
-            </div>
+            <Row height="100px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <Row align="center" height="100%" ><H5 fontSize="22px" align="center">PAY ONLY AFTER</H5></Row>
+                    <Row align="center" height="100%" ><H5 fontSize="22px" align="center">YOU GET A JOB</H5></Row>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="50px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <Paragraph align="center" fontSize="14px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="50px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <H3 align="center" >{!checked ? "$7000" : "$134.99"}</H3>                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="100px" alignItems="center">
+              <Column size="4" align="center"><Paragraph color={!checked ? Colors.blue : Colors.gray}>FULL TUITION</Paragraph></Column>
+              <Column size="4" align="center">
+                <Switch
+                  onChange={handleChange}
+                  checked={checked}
+                  onColor="#86d3ff"
+                  onHandleColor={Colors.blue}
+                  handleDiameter={30}
+                  uncheckedIcon={false}
+                  checkedIcon={false}
+                  boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                  // activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                  height={20}
+                  width={48}
+                  className="react-switch"
+                  id="material-switch"
+                />
+              </Column>
+              <Column size="4" align="center"><Paragraph color={!checked ? Colors.gray : Colors.blue}>FINANCING</Paragraph></Column>
+            </Row>
+            <Row height="100px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" align="center">
+                    <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
           </Card>
+
         </Column>
       </Row>
     </>
