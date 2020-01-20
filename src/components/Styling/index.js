@@ -70,6 +70,15 @@ export const Button = styled.div`
             line-height: 1.5;
             margin: ${props => props.margin};
             font-weight: 500;
+            ${props => props.move === "up" ?
+                css`
+                transform: translateY(-${props => props.up});
+            `
+                : props.move === "down" &&
+                css`
+                transform: translateY(${props => props.down});
+            `
+            }
         `
         :
         css`
@@ -87,6 +96,15 @@ export const Button = styled.div`
             display: inline-block;
             padding: ${props => props.padding};
             margin: ${props => props.margin};
+            ${props => props.move === "up" ?
+                css`
+                transform: translateY(-${props => props.up});
+            `
+                : props.move === "down" &&
+                css`
+                transform: translateY(${props => props.down});
+            `
+            }
             `}
                 
 `

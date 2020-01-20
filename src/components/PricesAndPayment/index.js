@@ -189,7 +189,7 @@ export default () => {
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" align="center">
-                  <Stepper activeStep={activeStep} alternativeLabel>
+                  <Stepper nonLinear activeStep={activeStep} alternativeLabel>
                     {steps.map((label, index) => (
                       <Step key={label}>
                         <StepButton onClick={handleStep(index)} completed={completed[index]}>
@@ -272,10 +272,8 @@ export default () => {
               </Column>
             </Row>
           </Card>
-
         </Column>
       </Row>
-
     </>
   )
 }

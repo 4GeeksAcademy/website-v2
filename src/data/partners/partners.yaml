@@ -67,3 +67,10 @@ influencers:
     image: "../bod-logo.jpg"
   - name: "Coinet"
     image: "../coinet-logo.jpg"
+financials:
+  - name: "Quotanda"
+    image: "../quotanda-logo.png"
+  - name: "Climb"
+    image: "../climb-logo.png"
+  - name: "Skill Fund"
+    image: "../skill-logo.png"

@@ -11,6 +11,7 @@ import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
 import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
 import {Card} from '../components/Card'
 import WhoIsHiring from '../components/WhoIsHiring';
+import Alumni from '../components/Alumni'
 
 const Home = ({data}) => {
   return (
@@ -234,8 +235,17 @@ const Home = ({data}) => {
         >
         </Title>
         <Divider height="50px" />
-        <WhoIsHiring />
+        <WhoIsHiring source="partners" />
       </Wrapper>
+      <Divider height="100px" />
+      <Wrapper
+        style="default">
+
+        <Divider height="50px" />
+        <Alumni hasTitle />
+      </Wrapper>
+      <Divider height="100px" />
+
     </Layout>
   )
 };

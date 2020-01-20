@@ -9,6 +9,7 @@ import ProgramDescription from '../components/ProgramDescription'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
+import Alumni from '../components/Alumni'
 
 const Program = ({data}) => {
   return (
@@ -181,6 +182,33 @@ const Program = ({data}) => {
         <PricesAndPayment />
         <Divider height="100px" />
       </Wrapper>
+      <Wrapper
+        style="default"
+      >
+        <Title
+          size="10"
+          title="TYPICAL DAY AT THE ACADEMY"
+          paragraph="Venenatis Ligula Ullamcorper Nibh Tellus"
+          primary
+        />
+        <Divider height="50px" />
+
+        <Divider height="100px" />
+      </Wrapper>
+      <Wrapper
+        style="default"
+      >
+        <Title
+          size="10"
+          title="MEET THE ALUMNI AND PROJECTS"
+          paragraph="Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          primary
+        />
+        <Divider height="50px" />
+        <Alumni />
+        <Divider height="100px" />
+      </Wrapper>
+
     </Layout >
   )
 };

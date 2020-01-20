@@ -56,11 +56,13 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
 @media ${Device.xs}{
   text-align: center;
-  font-size: 6vw;
+  font-size: 5vw;
+  padding: 0 5px;
 }
 @media screen ${Device.sm}{
   text-align: center;
-  font-size: 6vw;
+  font-size: 5vw;
+  padding: 0 5px;
 }
 @media ${Device.md}{
   text-align: ${props => props.align};

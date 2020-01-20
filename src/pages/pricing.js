@@ -1,29 +1,37 @@
 import React from 'react';
 import Layout from '../global/Layout';
-import {Column, Row, Container, Divider} from "../components/Sections"
+import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
 import {Title, H5} from '../components/Heading'
 import {Button, Colors, RoundImage} from '../components/Styling'
 import PricesAndPayment from '../components/PricesAndPayment';
+import QueryTest from '../components/QueryTest'
 
 const Pricing = () => (
   <Layout>
-    <Container fluid >
-      <Row>
-        <Column size="1" />
-        <Column border="bottom" bottom size="11" padding="7% 0" image="yes" url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="400px">
-          <Row>
-            <Column size="2" />
-            <Column size="6">
-              <Title
-                size="8"
-                title="CELEBRATE THE BEST PRICE IN TOWN"
-                paragraph="We never stop trying until we mastered a real premium affordable program. Our philosophy is rooted in making coding education available to everyone."
-              />
-            </Column>
-          </Row>
-        </Column>
-      </Row>
-    </Container>
+    <Wrapper
+      style="default"
+      image="yes"
+      url="../images/pricing-bg.png"
+      border="bottom"
+      height="500px"
+      backgroundSize="cover"
+    >
+      <Divider height="100px" />
+      <Title
+        size="5"
+        title="CELEBRATE THE BEST PRICE IN TOWN"
+        paragraph="We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone."
+        main
+        color={Colors.white}
+        fontSize="46px"
+        textAlign="center"
+
+      />
+    </Wrapper>
+    <Wrapper
+      style="default">
+      <QueryTest up="80" />
+    </Wrapper>
     <Divider height="100px" />
     <Container fluid >
       <Row>
@@ -46,28 +54,40 @@ const Pricing = () => (
         </Column>
       </Row>
     </Container>
-    <Divider height="150px" />
-    <Container fluid >
-      <Row>
-        <Column size="1" />
-        <Column size="11" color={Colors.lightGray} border top>
-          <Row>
-            <Column size="1" />
-            <Column size="10">
-              <Divider height="50px" />
-              <Title
-                primary
-                title="PRICING AND FINANCING"
-                paragraph="Currently review prices for Miami"
-              />
-              <PricesAndPayment />
-              <Divider height="50px" />
-            </Column>
-          </Row>
-
-        </Column>
+    <Divider height="200px" />
+    <Wrapper
+      style="default"
+      image="no"
+      color={Colors.lightGray}
+      border="top"
+    >
+      <Divider height="100px" />
+      <Title
+        size="10"
+        title="PRICING AND FINANCING"
+        primary
+      />
+      <Divider height="50px" />
+      <PricesAndPayment />
+    </Wrapper>
+    <Divider height="100px" />
+    <Wrapper
+      style="custom"
+      full
+    >
+      <Title
+        size="10"
+        title="PAYMENT GUIDE"
+        paragraph="Do you have any questions on financing or our extended payment plans?"
+        primary
+      />
+      <Divider height="30px" />
+      <Row align="center">
+        <Button outline color={Colors.blue}>REVIEW GUIDEBOOK</Button>
       </Row>
-    </Container>
+      <Divider height="50px" />
+
+    </Wrapper>
 
   </Layout >
 );
