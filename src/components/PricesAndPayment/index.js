@@ -158,7 +158,7 @@ export default () => {
     <>
       <Row>
         <Column size="6" customRespSize respSize="12">
-          <Card shadow width="100%" height="400px" >
+          <Card shadow width="100%" height="400px" margin="5px 0">
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
@@ -214,7 +214,7 @@ export default () => {
         </Column>
 
         <Column size="6" customRespSize respSize="12">
-          <Card shadow width="100%" height="400px" >
+          <Card shadow width="100%" height="400px" margin="5px 0">
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
@@ -243,25 +243,24 @@ export default () => {
               </Column>
             </Row>
             <Row height="100px" alignItems="center">
-              <Column size="4" align="center"><Paragraph color={!checked ? Colors.blue : Colors.gray}>FULL TUITION</Paragraph></Column>
-              <Column size="4" align="center">
+              <Column size="4" customRespSize respSize="4" align="center"><Paragraph color={!checked ? Colors.yellow : Colors.gray}>FULL TUITION</Paragraph></Column>
+              <Column size="4" customRespSize respSize="4" align="center">
                 <Switch
                   onChange={handleChange}
                   checked={checked}
                   onColor="#86d3ff"
-                  onHandleColor={Colors.blue}
+                  onHandleColor={Colors.yellow}
                   handleDiameter={30}
                   uncheckedIcon={false}
                   checkedIcon={false}
                   boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                  // activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
                   height={20}
                   width={48}
                   className="react-switch"
                   id="material-switch"
                 />
               </Column>
-              <Column size="4" align="center"><Paragraph color={!checked ? Colors.gray : Colors.blue}>FINANCING</Paragraph></Column>
+              <Column size="4" customRespSize respSize="4" align="center"><Paragraph color={!checked ? Colors.gray : Colors.yellow}>FINANCING</Paragraph></Column>
             </Row>
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
@@ -276,6 +275,7 @@ export default () => {
 
         </Column>
       </Row>
+
     </>
   )
 }
