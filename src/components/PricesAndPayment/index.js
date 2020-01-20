@@ -8,7 +8,7 @@ import StepButton from '@material-ui/core/StepButton';
 import Typography from '@material-ui/core/Typography';
 import {Row, Column} from '../Sections';
 import {Card} from '../Card';
-import {H2, H4, H5, Paragraph} from '../Heading';
+import {H2, H3, H4, H5, Paragraph} from '../Heading';
 import {Button, Colors} from '../Styling';
 import '../../assets/css/style.scss';
 import Switch from "react-switch";
@@ -157,28 +157,63 @@ export default () => {
   return (
     <>
       <Row>
-        <Column size="4" >
+        <Column size="6" customRespSize respSize="12">
           <Card shadow width="100%" height="400px" >
-            {/* <div className="card-header h-25"></div> */}
-            <div className="card-body h-75">
-              <Row center ><H5 fontSize="20px">PAY UPFRONT</H5></Row>
-              <Row center marginBottom="10px"><H5 fontSize="20px">OR MONTHLY</H5></Row>
-              <Row center marginBottom="20px"><Paragraph primary>and enjoy the best pricing in town.</Paragraph></Row>
-              <Row center  ><H5 fontSize="28px">{getStepContents(activeStep)}</H5></Row>
-              <Row marginBottom="20px">
-                <Stepper nonLinear activeStep={activeStep} alternativeLabel>
-                  {steps.map((label, index) => (
-                    <Step key={label}>
-                      <StepButton onClick={handleStep(index)} completed={completed[index]}>
-                        {label}
-                      </StepButton>
-                    </Step>
-                  ))}
-                </Stepper>
-              </Row>
+            {/* <div className="card-body h-75"> */}
+            <Row height="80px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <Row align="center" height="100%" ><H5 fontSize="22px" align="center">PAY UPFRONT</H5></Row>
+                    <Row align="center" height="100%" ><H5 fontSize="22px" align="center">OR MONTHLY</H5></Row>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="50px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="50px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <H2 fontSize="28px" align="center" >{getStepContents(activeStep)}</H2>                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="60px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" align="center">
+                  <Stepper nonLinear activeStep={activeStep} alternativeLabel>
+                    {steps.map((label, index) => (
+                      <Step key={label}>
+                        <StepButton onClick={handleStep(index)} completed={completed[index]}>
+                          {label}
+                        </StepButton>
+                      </Step>
+                    ))}
+                  </Stepper>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="50px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
 
 
-            </div>
+            {/* </div> */}
             <div className="card-footer h-25 text-center bg-white border-0">
 
               <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
@@ -187,7 +222,7 @@ export default () => {
             </Row> */}
           </Card>
         </Column>
-        <Column size="4">
+        <Column size="6" customRespSize respSize="12">
           <Card shadow width="100%" height="400px" >
             {/* <div className="card-header h-25"></div> */}
             <div className="card-body h-75">

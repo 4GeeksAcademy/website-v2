@@ -8,6 +8,7 @@ import QueryTest from '../components/QueryTest'
 import ProgramDescription from '../components/ProgramDescription'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import Mentors from '../components/Mentors'
+import PricesAndPayment from '../components/PricesAndPayment'
 
 const Program = ({data}) => {
   return (
@@ -166,6 +167,18 @@ const Program = ({data}) => {
         />
         <Divider height="50px" />
         <Mentors />
+        <Divider height="100px" />
+      </Wrapper>
+      <Wrapper
+        style="default"
+      >
+        <Title
+          size="10"
+          title="PRICING AND FINANCING"
+          primary
+        />
+        <Divider height="50px" />
+        <PricesAndPayment />
         <Divider height="100px" />
       </Wrapper>
     </Layout >
