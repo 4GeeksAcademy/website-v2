@@ -5,6 +5,7 @@ import {Title, H5} from '../components/Heading'
 import {Button, Colors, RoundImage} from '../components/Styling'
 import PricesAndPayment from '../components/PricesAndPayment';
 import QueryTest from '../components/QueryTest'
+import WhoIsHiring from '../components/WhoIsHiring'
 
 const Pricing = () => (
   <Layout>
@@ -86,9 +87,22 @@ const Pricing = () => (
         <Button outline color={Colors.blue}>REVIEW GUIDEBOOK</Button>
       </Row>
       <Divider height="50px" />
-
     </Wrapper>
-
+    <Wrapper
+      style="default"
+      image="no"
+      color={Colors.lightGray}
+      border="top"
+    ><Title
+        size="10"
+        title="IMMERSED IN MIAMI'S CODING ECOSYSTEM"
+        paragraph="We actively organize and/or participate in the biggest coding initiatives."
+        primary
+      />
+      <Divider height="20px" />
+      <WhoIsHiring source="financials" />
+      <Divider height="150px" />
+    </Wrapper>
   </Layout >
 );
 

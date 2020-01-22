@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Column, Row, Divider} from '../../components/Sections'
 import {useStaticQuery, graphql} from 'gatsby';
 import {RoundImage, Colors} from '../Styling';
@@ -22,6 +22,10 @@ const WhoIsHiring = props => {
                   name
                   image
                 }
+                financials {
+                  name
+                  image
+                }
               }
             }
           }
@@ -35,7 +39,7 @@ const WhoIsHiring = props => {
           <Row>
             {data.who.edges[0].node.partners.map((partner, index) => (
               <Column size="3" customRespSize respSize="3" key={index}>
-                <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="100px" mb="1.25rem" />
+                <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
               </Column>
             ))}
           </Row>
@@ -50,20 +54,29 @@ const WhoIsHiring = props => {
         : props.source === "coding"
           ?
           <Row>
-            {data.who.edges[0].node.partners.map((partner, index) => (
+            {data.who.edges[0].node.coding.map((partner, index) => (
               <Column size="3" customRespSize respSize="3" key={index}>
-                <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="100px" mb="1.25rem" />
+                <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
               </Column>
             ))}
           </Row>
-          : props.source === "influencers" &&
-          <Row>
-            {data.who.edges[0].node.partners.map((partner, index) => (
-              <Column size="3" customRespSize respSize="3" key={index}>
-                <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="100px" mb="1.25rem" />
-              </Column>
-            ))}
-          </Row>
+          : props.source === "influencers"
+            ?
+            <Row>
+              {data.who.edges[0].node.influencers.map((partner, index) => (
+                <Column size="3" customRespSize respSize="3" key={index}>
+                  <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
+                </Column>
+              ))}
+            </Row>
+            : props.source === "financials" &&
+            <Row>
+              {data.who.edges[0].node.financials.map((partner, index) => (
+                <Column size="4" customRespSize respSize="4" key={index}>
+                  <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
+                </Column>
+              ))}
+            </Row>
       }
     </>
   )
