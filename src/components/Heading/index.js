@@ -74,7 +74,7 @@ export const H3 = styled.h3`
 }
 @media ${Device.xl} {
   text-align: ${props => props.align};
-  font-size: 2vw;
+  font-size: 1.5vw;
 }   
 font-family: 'Futura', sans-serif;
 font-weight: 800;

@@ -33,7 +33,7 @@ const Navbar = ({siteTitle, menuLinks}) => (
                 ))}
             </ul>
             <form className="form-inline my-2 my-lg-0">
-                <Button color={Colors.red} textColor={Colors.white}>APPLY NOW</Button>
+                <Link to="/apply"><Button color={Colors.red} textColor={Colors.white}>APPLY NOW</Button></Link>
                 {/* <button className="btn btn-outline-primary rounded-pill my-2 my-sm-0" type="submit">APPLY NOW</button> */}
             </form>
         </div>
