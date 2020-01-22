@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Card} from '../components/Card'
+import Grid from '@material-ui/core/Grid';
+import ToggleButton from '@material-ui/lab/ToggleButton';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import {makeStyles} from '@material-ui/core/styles';
 
 const Input = styled.input`
     background-color:${Colors.lightGray};
@@ -13,10 +17,63 @@ const Input = styled.input`
     border: none;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
-    color: ${Colors.black};
+    font-color: ${Colors.black};
 `
+const useStyles = makeStyles({
+    root: {
+        background: Colors.white,
+        fontSize: '10px',
+        borderRadius: 3,
+        border: 0,
+        color: 'white',
+        padding: '0 10px',
+        '&$selected': {background: Colors.yellow},
 
+    },
+
+    label: {
+        textTransform: 'capitalize',
+    },
+});
 const Apply = () => {
+    const classes = useStyles();
+    const [alignment, setAlignment] = useState('left');
+    const handleChange = (event, newAlignment) => {
+        setAlignment(newAlignment);
+    };
+
+    const children = [
+        <ToggleButton key={1} value="left" classes={{
+            root: classes.root, // class name, e.g. `classes-nesting-root-x`
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
+            <Paragraph color={Colors.gray}>Santiago, Chile</Paragraph>
+        </ToggleButton>,
+        <ToggleButton key={2} value="center" classes={{
+            root: classes.root, // class name, e.g. `classes-nesting-root-x`
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
+            <Paragraph color={Colors.gray}>Caracas, Vzla</Paragraph>
+        </ToggleButton>,
+        <ToggleButton key={3} value="right" classes={{
+            root: classes.root, // class name, e.g. `classes-nesting-root-x`
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
+            <Paragraph color={Colors.gray}>Miami, Usa</Paragraph>
+        </ToggleButton>,
+        <ToggleButton key={4} value="justify" classes={{
+            root: classes.root, // class name, e.g. `classes-nesting-root-x`
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
+            <Paragraph color={Colors.gray}>Maracaibo, Vzla</Paragraph>
+        </ToggleButton>,
+        <ToggleButton key={5} value="justif" classes={{
+            root: classes.root, // class name, e.g. `classes-nesting-root-x`
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
+            <Paragraph color={Colors.gray}>Madrid, Spain</Paragraph>
+        </ToggleButton>,
+    ];
     return (
         <Layout>
             <Divider height="100px" />
@@ -36,7 +93,7 @@ const Apply = () => {
                         image="no"
                         color={Colors.white}
                     >
-                        <Card shadow borders="1.25rem" height="426px">
+                        <Card shadow borders="1.25rem" height="500px">
                             <Row
                                 height="100%"
                                 marginLeft="0"
@@ -63,11 +120,26 @@ const Apply = () => {
                                             <Row height="50px">
                                                 <Input type="text" className="form-control" placeholder="Phone *" />
                                             </Row>
-                                            <Row height="50px">
-                                                <Input type="text" className="form-control" placeholder="Phone *" />
+                                            <Row height="30px">
+                                                <Paragraph padding="0.375rem 0.75rem" fontSize="13px" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
+                                            </Row>
+                                            <Row height="70px">
+                                                <Grid container spacing={2} direction="column" alignItems="center">
+                                                    <Grid item>
+                                                        <ToggleButtonGroup size="large" value={alignment} exclusive onChange={handleChange}>
+                                                            {children}
+                                                        </ToggleButtonGroup>
+                                                    </Grid>
+                                                </Grid>
+                                            </Row>
+                                            <Row height="40px">
+                                                <Input type="text" className="form-control" placeholder="Referral key" />
+                                            </Row>
+                                            <Row height="20px">
+                                                <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>If you were referred by any current or past student, use your referral code for extra credit or discount.</Paragraph>
                                             </Row>
                                             <Row >
-                                                <Button move="down" down="70px" outline color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".85rem">COMPARE 4GEEKS WITH OTHER SCHOOLS</Button>
+                                                <Button move="up" up="15px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".45rem 3rem">APPLY</Button>
                                             </Row>
                                         </Column>
                                     </Row>
@@ -97,9 +169,7 @@ const Apply = () => {
                                             <Row height="50px">
 
                                             </Row>
-                                            <Row >
-                                                <Button move="down" down="70px" outline color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".85rem">COMPARE 4GEEKS WITH OTHER SCHOOLS</Button>
-                                            </Row>
+
                                         </Column>
                                     </Row>
                                 </Column>

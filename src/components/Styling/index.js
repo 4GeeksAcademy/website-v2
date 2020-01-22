@@ -109,7 +109,7 @@ export const Button = styled.div`
                 
 `
 Button.defaultProps = {
-    padding: '.5rem .85rem',
+    padding: '.5rem .45rem',
     fontSize: '12px'
 };
 RoundImage.defaultProps = {

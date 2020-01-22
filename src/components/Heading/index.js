@@ -180,6 +180,7 @@ export const Paragraph = styled.div`
   font-family: 'Lato-Regular', sans-serif;
   font-size: ${props => props.fontSize};
   font-weight: 300;
+  padding: ${props => props.padding};
   letter-spacing: 0px;
   line-height: ${props => props.lineHeight};
   color: ${props => props.primary ? `${Colors.gray}` : `${props.color}`};
