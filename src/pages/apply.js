@@ -43,34 +43,19 @@ const Apply = () => {
     };
 
     const children = [
-        <ToggleButton key={1} value="left" classes={{
-            root: classes.root, // class name, e.g. `classes-nesting-root-x`
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
+        <ToggleButton key={1} value="left" >
             <Paragraph color={Colors.gray}>Santiago, Chile</Paragraph>
         </ToggleButton>,
-        <ToggleButton key={2} value="center" classes={{
-            root: classes.root, // class name, e.g. `classes-nesting-root-x`
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
+        <ToggleButton key={2} value="center" >
             <Paragraph color={Colors.gray}>Caracas, Vzla</Paragraph>
         </ToggleButton>,
-        <ToggleButton key={3} value="right" classes={{
-            root: classes.root, // class name, e.g. `classes-nesting-root-x`
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
+        <ToggleButton key={3} value="right" >
             <Paragraph color={Colors.gray}>Miami, Usa</Paragraph>
         </ToggleButton>,
-        <ToggleButton key={4} value="justify" classes={{
-            root: classes.root, // class name, e.g. `classes-nesting-root-x`
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
+        <ToggleButton key={4} value="justify" >
             <Paragraph color={Colors.gray}>Maracaibo, Vzla</Paragraph>
         </ToggleButton>,
-        <ToggleButton key={5} value="justif" classes={{
-            root: classes.root, // class name, e.g. `classes-nesting-root-x`
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
+        <ToggleButton key={5} value="justif" >
             <Paragraph color={Colors.gray}>Madrid, Spain</Paragraph>
         </ToggleButton>,
     ];
