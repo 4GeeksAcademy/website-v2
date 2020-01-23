@@ -17,7 +17,7 @@ import ChooseProgram from '../components/ChooseProgram'
 import TestC from '../components/TestC'
 import Scrollspy from 'react-scrollspy'
 import ProgramDescription from '../components/ProgramDescription'
-
+import ProgramSelector from '../components/ProgramSelector'
 
 const Test = ({data}) => (
   <Layout>
@@ -26,6 +26,7 @@ const Test = ({data}) => (
       <li><a href="#section-2">section 2</a></li>
       <li><a href="#section-3">section 3</a></li>
     </Scrollspy>
+    <ProgramSelector />
     <Wrapper
       style="custom"
       full
