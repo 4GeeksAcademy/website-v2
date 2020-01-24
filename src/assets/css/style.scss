@@ -4,23 +4,45 @@
 @import '_icons.scss';
 
 
-.MuiStepButton-root {
-    width: 100%;
-    // margin: 0!important;
-    // padding: 24px 16px!important;
-    box-sizing: content-box;
+// .MuiStepButton-root {
+//     width: 100%;
+//     // margin: 0!important;
+//     // padding: 24px 16px!important;
+//     box-sizing: content-box;
+// }
+// .MuiStepper-root {
+//     display: flex;
+//     // padding: 0!important;
+// }
+// .MuiPaper-root {
+//     background: transparent!important
+// }
+// .MuiTypography-body2 {
+//     font-size: 0.5rem!important;
+//     font-family: "Lato", sans-serif!important;
+//     font-weight: 300!important;
+//     line-height: 1.43!important;
+//     letter-spacing: 0.01071em!important;
+// }
+// .MuiStepIcon-root.MuiStepIcon-active {
+//     color: #E6BA1F!important;
+// }
+// .MuiStepIcon-text {
+//     fill: #E6BA1F!important;
+//     font-size: 0.75rem;
+//     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+// }
+// .MuiStepLabel-label.MuiStepLabel-alternativeLabel {
+//     margin-top: 8px!important;
+//     text-align: center;
+//     color: #ffffff!important;
+// }
+.css-yk16xz-control {
+    width: 130px!important;
 }
-.MuiStepper-root {
-    display: flex;
-    // padding: 0!important;
-}
-.MuiPaper-root {
-    background: transparent!important
-}
-.MuiTypography-body2 {
-    font-size: 0.5rem!important;
-    font-family: "Lato", sans-serif!important;
-    font-weight: 300!important;
-    line-height: 1.43!important;
-    letter-spacing: 0.01071em!important;
+
+.MuiToggleButton-root.Mui-selected {
+    color:#ffffff!important;
+    background-color: #E6BA1F!important;
+    
 }
