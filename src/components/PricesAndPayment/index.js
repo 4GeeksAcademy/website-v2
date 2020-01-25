@@ -1,10 +1,19 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles, withStyles} from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
+import StepConnector from '@material-ui/core/StepConnector';
+import StepLabel from '@material-ui/core/StepLabel';
+import clsx from 'clsx';
+import SettingsIcon from '@material-ui/icons/Settings';
+import GroupAddIcon from '@material-ui/icons/GroupAdd';
+import VideoLabelIcon from '@material-ui/icons/VideoLabel';
+import Check from '@material-ui/icons/Check';
+
+
 import Typography from '@material-ui/core/Typography';
 import {Row, Column} from '../Sections';
 import {Card} from '../Card';
@@ -18,8 +27,8 @@ import Switch from "react-switch";
 export default () => {
   const [checked, setChecked] = useState(false)
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [completed, setCompleted] = React.useState({});
+  const [activeStep, setActiveStep] = useState(0);
+  const [completed, setCompleted] = useState({});
   const steps = getSteps();
   const handleChange = (checked) => {
     setChecked(checked)
@@ -98,7 +107,6 @@ export default () => {
   let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
   let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
   let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
-  console.log("Q:", tempQ)
   function getStepContent (step) {
     switch (step) {
       case 0:
@@ -156,33 +164,79 @@ export default () => {
 
   return (
     <>
-      <Row>
-        <Column size="6" customRespSize respSize="12">
-          <Card shadow width="100%" height="400px" margin="5px 0">
+
+      {/* 3 COLUMNS LAYOUT */}
+      <Row align="center">
+        <Column size="4" customRespSize respSize="12">
+          <Card shadow width="100%" height="350px" margin="5px 0">
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" >
-                    <Row align="center" height="100%" ><H5 fontSize="22px" align="center">PAY UPFRONT</H5></Row>
-                    <Row align="center" height="100%" ><H5 fontSize="22px" align="center">OR MONTHLY</H5></Row>
+                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
+                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row>
                   </Column>
                 </Row>
               </Column>
             </Row>
-            <Row height="50px" >
+            <Row height="40px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
+                <Row height="100%" align="center">
+                  <Column size="8" alignSelf="center" >
                     <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
                   </Column>
                 </Row>
               </Column>
             </Row>
+            <Row height="110px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <H3 align="center" >$6,999</H3>
+                    <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+
+            <Row height="100px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" align="center">
+                    <Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+          </Card>
+        </Column>
+
+        <Column size="4" customRespSize respSize="12">
+          <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
+            <Row height="100px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>EXTENDED</H4></Row>
+                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>PAYMENT PLAN</H4></Row>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="50px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" align="center">
+                  <Column size="8" alignSelf="center" >
+                    <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
             <Row height="50px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" >
-                    <H3 align="center" >{getStepContents(activeStep)}</H3>                  </Column>
+                    <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>                  </Column>
                 </Row>
               </Column>
             </Row>
@@ -192,7 +246,7 @@ export default () => {
                   <Stepper nonLinear activeStep={activeStep} alternativeLabel>
                     {steps.map((label, index) => (
                       <Step key={label}>
-                        <StepButton onClick={handleStep(index)} completed={completed[index]}>
+                        <StepButton onMouseOver={handleStep(index)} completed={completed[index]}>
                           {label}
                         </StepButton>
                       </Step>
@@ -205,7 +259,7 @@ export default () => {
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" align="center">
-                    <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
+                    <Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button>
                   </Column>
                 </Row>
               </Column>
@@ -213,60 +267,43 @@ export default () => {
           </Card>
         </Column>
 
-        <Column size="6" customRespSize respSize="12">
-          <Card shadow width="100%" height="400px" margin="5px 0">
+        <Column size="4" customRespSize respSize="12">
+          <Card shadow width="100%" height="350px" margin="5px 0">
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" >
-                    <Row align="center" height="100%" ><H5 fontSize="22px" align="center">PAY ONLY AFTER</H5></Row>
-                    <Row align="center" height="100%" ><H5 fontSize="22px" align="center">YOU GET A JOB</H5></Row>
+                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY ONLY AFTER</H4></Row>
+                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
                   </Column>
                 </Row>
               </Column>
             </Row>
-            <Row height="50px" >
+            <Row height="40px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <Paragraph align="center" fontSize="14px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
+                <Row height="100%" align="center">
+                  <Column size="8" alignSelf="center" >
+                    <Paragraph align="center" fontSize="13px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
                   </Column>
                 </Row>
               </Column>
             </Row>
-            <Row height="50px" >
+            <Row height="110px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" >
-                    <H3 align="center" >{!checked ? "$7000" : "$134.99"}</H3>                  </Column>
+                    <H3 align="center" >$134.99</H3>
+                    <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>per month</Paragraph>
+                  </Column>
                 </Row>
               </Column>
             </Row>
-            <Row height="100px" alignItems="center">
-              <Column size="4" customRespSize respSize="4" align="center"><Paragraph color={!checked ? Colors.yellow : Colors.gray}>FULL TUITION</Paragraph></Column>
-              <Column size="4" customRespSize respSize="4" align="center">
-                <Switch
-                  onChange={handleChange}
-                  checked={checked}
-                  onColor="#86d3ff"
-                  onHandleColor={Colors.yellow}
-                  handleDiameter={30}
-                  uncheckedIcon={false}
-                  checkedIcon={false}
-                  boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                  height={20}
-                  width={48}
-                  className="react-switch"
-                  id="material-switch"
-                />
-              </Column>
-              <Column size="4" customRespSize respSize="4" align="center"><Paragraph color={!checked ? Colors.gray : Colors.yellow}>FINANCING</Paragraph></Column>
-            </Row>
+
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" align="center">
-                    <Button color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button>
+                    <Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button>
                   </Column>
                 </Row>
               </Column>
@@ -274,10 +311,222 @@ export default () => {
           </Card>
         </Column>
       </Row>
+
+      {/* TEST CUSTOMIZATION */}
+      <Row align="center">
+
+
+        <Column size="4" customRespSize respSize="12">
+          <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
+            <Row height="100px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>EXTENDED</H4></Row>
+                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>PAYMENT PLAN</H4></Row>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="50px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" align="center">
+                  <Column size="8" alignSelf="center" >
+                    <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="50px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" >
+                    <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>                  </Column>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="100px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" align="center">
+                  <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
+                    {steps.map((label, index) => (
+                      <Step key={label}>
+                        <StepButton onMouseOver={handleStep(index)} completed={completed[index]}>
+                          {label}
+                        </StepButton>
+                      </Step>
+                    ))}
+                  </Stepper>
+                  {/* <Stepper alternativeLabel activeStep={activeStep} connector={<QontoConnector />}>
+                    {steps.map(label => (
+                      <Step key={label}>
+                        <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
+                      </Step>
+                    ))}
+                  </Stepper> */}
+                  <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
+                    {steps.map((label, index) => (
+                      <Step key={label}>
+
+                        <StepButton onMouseOver={handleStep(index)} completed={completed[index]}>
+                          <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+                        </StepButton>
+                      </Step>
+                    ))}
+                  </Stepper>
+                </Row>
+              </Column>
+            </Row>
+            <Row height="100px" >
+              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" >
+                  <Column size="12" alignSelf="center" align="center">
+                    <Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button>
+                  </Column>
+                </Row>
+              </Column>
+            </Row>
+          </Card>
+        </Column>
+
+
+      </Row>
     </>
   )
 }
 
+const QontoConnector = withStyles({
+  alternativeLabel: {
+    top: 10,
+    left: 'calc(-50% + 16px)',
+    right: 'calc(50% + 16px)',
+  },
+  active: {
+    '& $line': {
+      borderColor: Colors.yellow,
+    },
+  },
+  completed: {
+    '& $line': {
+      borderColor: Colors.yellow,
+    },
+  },
+  circle: {
+    width: 4,
+    height: 4,
+    borderRadius: '50%',
+    backgroundColor: Colors.blue,
+  },
+  line: {
+    borderColor: '#eaeaf0',
+    borderTopWidth: 3,
+    borderRadius: 1,
+  },
+})(StepConnector);
+const useQontoStepIconStyles = makeStyles({
+  root: {
+    color: '#eaeaf0',
+    display: 'flex',
+    height: 22,
+    alignItems: 'center',
+  },
+  active: {
+    color: '#784af4',
+  },
+  circle: {
+    width: 4,
+    height: 4,
+    borderRadius: '50%',
+    backgroundColor: Colors.blue,
+  },
+  completed: {
+    color: '#784af4',
+    zIndex: 1,
+    fontSize: 18,
+  },
+});
+function QontoStepIcon (props) {
+  const classes = useQontoStepIconStyles();
+  const {active, completed} = props;
+
+  return (
+    <div
+      className={clsx(classes.root, {
+        [classes.active]: active,
+      })}
+    >
+      {completed ? <Check className={classes.completed} /> : <div className={classes.circle} />}
+    </div>
+  );
+}
+const ColorlibConnector = withStyles({
+  alternativeLabel: {
+    top: 22,
+  },
+  active: {
+    '& $line': {
+      backgroundImage:
+        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)',
+    },
+  },
+  completed: {
+    '& $line': {
+      backgroundImage:
+        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)',
+    },
+  },
+  line: {
+    height: 3,
+    border: 0,
+    backgroundColor: '#eaeaf0',
+    borderRadius: 1,
+  },
+})(StepConnector);
+
+const useColorlibStepIconStyles = makeStyles({
+  root: {
+    backgroundColor: '#ccc',
+    zIndex: 1,
+    color: '#fff',
+    width: 50,
+    height: 50,
+    display: 'flex',
+    borderRadius: '50%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  active: {
+    backgroundImage:
+      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)',
+    boxShadow: '0 4px 10px 0 rgba(0,0,0,.25)',
+  },
+  completed: {
+    backgroundImage:
+      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)',
+  },
+});
+
+function ColorlibStepIcon (props) {
+  const classes = useColorlibStepIconStyles();
+  const {active, completed} = props;
+
+  const icons = {
+    1: <SettingsIcon />,
+    2: <GroupAddIcon />,
+    3: <VideoLabelIcon />,
+  };
+
+  return (
+    <div
+      className={clsx(classes.root, {
+        [classes.active]: active,
+        [classes.completed]: completed,
+      })}
+    >
+      {icons[String(props.icon)]}
+    </div>
+  );
+}
 const useStyles = makeStyles(theme => ({
   root: {
     width: '80%',
@@ -291,6 +540,12 @@ const useStyles = makeStyles(theme => ({
   instructions: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
+  },
+  circle: {
+    width: 4,
+    height: 4,
+    borderRadius: '50%',
+    backgroundColor: Colors.blue,
   },
 }));
 
