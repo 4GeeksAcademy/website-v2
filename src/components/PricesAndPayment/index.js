@@ -18,7 +18,7 @@ import Typography from '@material-ui/core/Typography';
 import {Row, Column} from '../Sections';
 import {Card} from '../Card';
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
-import {Button, Colors} from '../Styling';
+import {Button, Colors, Circle} from '../Styling';
 import '../../assets/css/style.scss';
 import Switch from "react-switch";
 
@@ -243,11 +243,11 @@ export default () => {
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" align="center">
-                  <Stepper nonLinear activeStep={activeStep} alternativeLabel>
+                  <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
                     {steps.map((label, index) => (
                       <Step key={label}>
-                        <StepButton onMouseOver={handleStep(index)} completed={completed[index]}>
-                          {label}
+                        <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
+                          <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
                         </StepButton>
                       </Step>
                     ))}
@@ -312,94 +312,16 @@ export default () => {
         </Column>
       </Row>
 
-      {/* TEST CUSTOMIZATION */}
-      <Row align="center">
 
-
-        <Column size="4" customRespSize respSize="12">
-          <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>EXTENDED</H4></Row>
-                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>PAYMENT PLAN</H4></Row>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="50px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Column size="8" alignSelf="center" >
-                    <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="50px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
-                    {steps.map((label, index) => (
-                      <Step key={label}>
-                        <StepButton onMouseOver={handleStep(index)} completed={completed[index]}>
-                          {label}
-                        </StepButton>
-                      </Step>
-                    ))}
-                  </Stepper>
-                  {/* <Stepper alternativeLabel activeStep={activeStep} connector={<QontoConnector />}>
-                    {steps.map(label => (
-                      <Step key={label}>
-                        <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
-                      </Step>
-                    ))}
-                  </Stepper> */}
-                  <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
-                    {steps.map((label, index) => (
-                      <Step key={label}>
-
-                        <StepButton onMouseOver={handleStep(index)} completed={completed[index]}>
-                          <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
-                        </StepButton>
-                      </Step>
-                    ))}
-                  </Stepper>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" align="center">
-                    <Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-          </Card>
-        </Column>
-
-
-      </Row>
     </>
   )
 }
 
 const QontoConnector = withStyles({
   alternativeLabel: {
-    top: 10,
-    left: 'calc(-50% + 16px)',
-    right: 'calc(50% + 16px)',
+    top: 5,
+    left: 'calc(-50% + 5px)',
+    right: 'calc(50% + 5px)',
   },
   active: {
     '& $line': {
@@ -418,8 +340,8 @@ const QontoConnector = withStyles({
     backgroundColor: Colors.blue,
   },
   line: {
-    borderColor: '#eaeaf0',
-    borderTopWidth: 3,
+    borderColor: 'white',
+    borderTopWidth: 1,
     borderRadius: 1,
   },
 })(StepConnector);
@@ -461,18 +383,16 @@ function QontoStepIcon (props) {
 }
 const ColorlibConnector = withStyles({
   alternativeLabel: {
-    top: 22,
+    top: 4.5,
   },
   active: {
     '& $line': {
-      backgroundImage:
-        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)',
+      color: 'white',
     },
   },
   completed: {
     '& $line': {
-      backgroundImage:
-        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)',
+      color: 'yellow',
     },
   },
   line: {
@@ -487,18 +407,16 @@ const useColorlibStepIconStyles = makeStyles({
   root: {
     backgroundColor: '#ccc',
     zIndex: 1,
-    color: '#fff',
-    width: 50,
-    height: 50,
+    color: Colors.yellow,
+    width: 12,
+    height: 12,
     display: 'flex',
     borderRadius: '50%',
     justifyContent: 'center',
     alignItems: 'center',
   },
   active: {
-    backgroundImage:
-      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)',
-    boxShadow: '0 4px 10px 0 rgba(0,0,0,.25)',
+    backgroundColor: Colors.yellow
   },
   completed: {
     backgroundImage:
