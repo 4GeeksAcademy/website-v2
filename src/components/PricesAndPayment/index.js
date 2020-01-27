@@ -18,7 +18,7 @@ import Typography from '@material-ui/core/Typography';
 import {Row, Column} from '../Sections';
 import {Card} from '../Card';
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
-import {Button, Colors, Circle} from '../Styling';
+import {Button, Colors, Circle, RoundImage} from '../Styling';
 import '../../assets/css/style.scss';
 import Switch from "react-switch";
 
@@ -107,6 +107,7 @@ export default () => {
   let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
   let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
   let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
+  console.log("tempQ", tempQ)
   function getStepContent (step) {
     switch (step) {
       case 0:
@@ -128,17 +129,17 @@ export default () => {
   function getStepLogo (step) {
     switch (step) {
       case 0:
-        return <img src={data.cred.edges[tempQ].node.logo} width="256" height="100%" />;
+        return <img src={data.cred.edges[tempQ].node.logo} height="20px" />;
       case 1:
-        return <img src={data.cred.edges[tempQ].node.logo} width="256" height="100%" />;
+        return <img src={data.cred.edges[tempQ].node.logo} height="20px" />;
       case 2:
-        return <img src={data.cred.edges[tempQ].node.logo} width="256" height="100%" />;
+        return <img src={data.cred.edges[tempQ].node.logo} height="20px" />;
       case 3:
-        return <img src={data.cred.edges[tempS].node.logo} width="256" height="100%" />;
+        return <img src={data.cred.edges[tempS].node.logo} height="20px" />;
       case 4:
-        return <img src={data.cred.edges[tempC].node.logo} width="256" height="100%" />;
+        return <img src={data.cred.edges[tempC].node.logo} height="20px" />;
       case 5:
-        return <img src={data.cred.edges[tempC].node.logo} width="256" height="100%" />;
+        return <img src={data.cred.edges[tempC].node.logo} height="20px" />;
       default:
         return 'Unknown step';
     }
@@ -240,7 +241,7 @@ export default () => {
                 </Row>
               </Column>
             </Row>
-            <Row height="100px" >
+            <Row height="80px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" align="center">
                   <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
@@ -253,9 +254,15 @@ export default () => {
                     ))}
                   </Stepper>
                 </Row>
+                <Row align="center" height="40px">
+
+                  <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
+
+                  {/* {<RoundImage height="10px"></RoundImage>} */}
+                </Row>
               </Column>
             </Row>
-            <Row height="100px" >
+            <Row height="120px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" align="center">

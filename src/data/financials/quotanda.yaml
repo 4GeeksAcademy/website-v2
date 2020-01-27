@@ -9,5 +9,5 @@ options:
   - months: "24"
     payment: "$288.03"
     paymentParagraph: "per month + $1000 deposit"
-logo: "https://accessventure.imgix.net/wp-content/uploads/2018/09/Quotanda-HD-Logo-1280x400.png"
+logo: "../images/quotanda-logo.png"
 description: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
