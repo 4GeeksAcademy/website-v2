@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     },
 
     label: {
-        textTransform: 'capitalize',
+        textTransform: 'lowercase',
     },
 });
 const Apply = () => {
@@ -43,19 +43,29 @@ const Apply = () => {
     };
 
     const children = [
-        <ToggleButton key={1} value="left" >
+        <ToggleButton key={1} value="left" classes={{
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
             <Paragraph color={Colors.gray}>Santiago, Chile</Paragraph>
         </ToggleButton>,
-        <ToggleButton key={2} value="center" >
+        <ToggleButton key={2} value="center" classes={{
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
             <Paragraph color={Colors.gray}>Caracas, Vzla</Paragraph>
         </ToggleButton>,
-        <ToggleButton key={3} value="right" >
+        <ToggleButton key={3} value="right" classes={{
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
             <Paragraph color={Colors.gray}>Miami, Usa</Paragraph>
         </ToggleButton>,
-        <ToggleButton key={4} value="justify" >
+        <ToggleButton key={4} value="justify" classes={{
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
             <Paragraph color={Colors.gray}>Maracaibo, Vzla</Paragraph>
         </ToggleButton>,
-        <ToggleButton key={5} value="justif" >
+        <ToggleButton key={5} value="justif" classes={{
+            label: classes.label, // class name, e.g. `classes-nesting-label-x`
+        }}>
             <Paragraph color={Colors.gray}>Madrid, Spain</Paragraph>
         </ToggleButton>,
     ];

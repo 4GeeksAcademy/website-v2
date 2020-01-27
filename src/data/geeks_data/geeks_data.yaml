@@ -1,7 +1,7 @@
 miami:
-  - features: "ONE TEACHER EVERY FIVE"
-    at4_Geeks: "1:5"
-    industry_average: "1:7"
+  - features: "CAREER SUPPORT"
+    at4_Geeks: "LIFETIME"
+    industry_average: "UNTIL YOU GET A JOB"
     tooltip: ""
     icon: ""
     slug: "one-teacher-every-five"

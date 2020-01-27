@@ -46,3 +46,11 @@
     background-color: #E6BA1F!important;
     
 }
+
+.nav__item--active {
+    border-left: 6px solid #0097CE;
+    color: #0097CE;
+}
+a.nav-item.nav-link.side {
+    height: 60px;
+}

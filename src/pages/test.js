@@ -18,13 +18,16 @@ import TestC from '../components/TestC'
 import Scrollspy from 'react-scrollspy'
 import ProgramDescription from '../components/ProgramDescription'
 import ProgramSelector from '../components/ProgramSelector'
+import '../assets/css/style.scss'
 
 const Test = ({data}) => (
   <Layout>
-    <Scrollspy items={['section-1', 'section-2', 'section-3']} currentClassName="is-current">
-      <li><a href="#section-1">section 1</a></li>
-      <li><a href="#section-2">section 2</a></li>
-      <li><a href="#section-3">section 3</a></li>
+
+
+    <Scrollspy items={['section-1', 'section-2', 'section-3']} currentClassName="nav__item--active">
+      <li><a className="nav-item nav-link" href="#section-1" >section 1</a></li>
+      <li><a className="nav-item nav-link" href="#section-2">section 2</a></li>
+      <li><a className="nav-item nav-link" href="#section-3">section 3</a></li>
     </Scrollspy>
     <ProgramSelector />
     <Wrapper
@@ -34,6 +37,7 @@ const Test = ({data}) => (
       <ProgramDescription />
     </Wrapper>
     <Wrapper
+      id="section-2"
       style="custom"
       full
       innerRightCol="11"
@@ -75,6 +79,9 @@ const Test = ({data}) => (
         </Column>
       </Row>
     </Wrapper>
+    <Row align="center">
+      <section className="section" id="section-2">section 1</section>
+    </Row>
     <Wrapper
       style="default">
       <GeeksVsOthers />

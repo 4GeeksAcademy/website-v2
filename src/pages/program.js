@@ -100,14 +100,18 @@ const Program = ({data}) => {
         style="default">
         <QueryTest up="80" />
       </Wrapper>
-      <Scrollspy items={['section-1', 'section-2', 'section-3']} currentClassName="nav__item--active">
-        <li><a className="nav-item nav-link" href="#section-1" >4GEEKS VS ></a></li>
-        <li><a className="nav-item nav-link" href="#section-2">section 2</a></li>
-        <li><a className="nav-item nav-link" href="#section-3">THE PROGRAM</a></li>
+      <Scrollspy style={{fontSize: "10px", position: "sticky", top: "15%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
+        <li><a className="nav-item nav-link side" href="#section-1" >MEMBERSHIPS</a></li>
+        <li><a className="nav-item nav-link side" href="#section-2">PROGRAM</a></li>
+        <li><a className="nav-item nav-link side" href="#section-3">4GEEKS vs OTHERS</a></li>
+        <li><a className="nav-item nav-link side" href="#section-4">MENTORS</a></li>
+        <li><a className="nav-item nav-link side" href="#section-5">PRICING</a></li>
+        <li><a className="nav-item nav-link side" href="#section-6">TYPICAL DAY</a></li>
+        <li><a className="nav-item nav-link side" href="#section-7">THE ALUMNI</a></li>
       </Scrollspy>
 
 
-      <Wrapper
+      {/* <Wrapper
         style="default"
       >
         <Title
@@ -121,11 +125,12 @@ const Program = ({data}) => {
         <Row height="380px">
           <RoundImage url="../images/program-charts.png" height="100%" width="100%" bsize="contain" />
         </Row>
-      </Wrapper>
+      </Wrapper> */}
       <Wrapper
         style="default"
       >
         <Divider height="40px" />
+        <section className="section" id="section-1"></section>
         <Row >
           <Column size="6" >
             <Card padding="20px" shadow height="350px" width="100%" margin="10px 0px">
@@ -208,15 +213,15 @@ const Program = ({data}) => {
 
         />
         <Divider height="50px" />
+        <section className="section" id="section-2"></section>
         <ProgramDescription />
-
-        <section className="section" id="section-1"></section>
 
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
         style="default"
       >
+        <section className="section" id="section-3"></section>
         <Title
           size="10"
           title="4GEEKS VS OTHER IN NUMBERS"
@@ -225,12 +230,13 @@ const Program = ({data}) => {
         />
         <Divider height="50px" />
         <GeeksVsOthers />
-        <section className="section" id="section-2"></section>
         <Divider height="100px" />
       </Wrapper>
       <Wrapper
         style="default"
+
       >
+        <section className="section" id="section-3"></section>
         <Title
           size="10"
           title="GET TRAINED BY SENIOR MENTORS"
@@ -249,6 +255,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
+        <section className="section" id="section-4"></section>
         <PricesAndPayment />
         <Divider height="100px" />
       </Wrapper>
@@ -262,7 +269,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
-
+        <section className="section" id="section-5"></section>
         <Divider height="100px" />
       </Wrapper>
       <Wrapper
@@ -275,6 +282,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
+        <section className="section" id="section-6"></section>
         <Alumni />
         <Divider height="100px" />
       </Wrapper>

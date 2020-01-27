@@ -51,7 +51,7 @@ const Alumni = props => {
                                             <Paragraph color={Colors.blue} margin="20px 0 0 0" align="left" fontSize="13px">Ligula Vulputate Sem ></Paragraph>
                                         </Row>
                                         <Row >
-                                            <Button move="down" down="70px" outline color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".85rem">COMPARE 4GEEKS WITH OTHER SCHOOLS</Button>
+                                            <Button move="down" down="75px" outline color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">VIEW ALL PROJECTS</Button>
                                         </Row>
                                     </Column>
                                 </Row>
