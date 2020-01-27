@@ -100,7 +100,7 @@ const Program = ({data}) => {
         style="default">
         <QueryTest up="80" />
       </Wrapper>
-      <Scrollspy style={{fontSize: "10px", position: "sticky", top: "15%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
+      <Scrollspy style={{fontSize: "10px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
         <li><a className="nav-item nav-link side" href="#section-1" >MEMBERSHIPS</a></li>
         <li><a className="nav-item nav-link side" href="#section-2">PROGRAM</a></li>
         <li><a className="nav-item nav-link side" href="#section-3">4GEEKS vs OTHERS</a></li>
