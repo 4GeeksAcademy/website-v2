@@ -139,7 +139,7 @@ export default () => {
       case 4:
         return <img src={data.cred.edges[tempC].node.logo} height="20px" />;
       case 5:
-        return <img src={data.cred.edges[tempC].node.logo} height="20px" />;
+        return <><img src={data.cred.edges[tempC].node.logo} height="20px" /> <img src={data.cred.edges[tempS].node.logo} height="20px" /></>;
       default:
         return 'Unknown step';
     }
@@ -162,10 +162,8 @@ export default () => {
         return 'Unknown step';
     }
   }
-
   return (
     <>
-
       {/* 3 COLUMNS LAYOUT */}
       <Row align="center">
         <Column size="4" customRespSize respSize="12">
@@ -199,7 +197,6 @@ export default () => {
                 </Row>
               </Column>
             </Row>
-
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
@@ -211,7 +208,6 @@ export default () => {
             </Row>
           </Card>
         </Column>
-
         <Column size="4" customRespSize respSize="12">
           <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
             <Row height="100px" >
@@ -255,10 +251,7 @@ export default () => {
                   </Stepper>
                 </Row>
                 <Row align="center" height="40px">
-
                   <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
-
-                  {/* {<RoundImage height="10px"></RoundImage>} */}
                 </Row>
               </Column>
             </Row>
@@ -273,7 +266,6 @@ export default () => {
             </Row>
           </Card>
         </Column>
-
         <Column size="4" customRespSize respSize="12">
           <Card shadow width="100%" height="350px" margin="5px 0">
             <Row height="100px" >
@@ -305,7 +297,6 @@ export default () => {
                 </Row>
               </Column>
             </Row>
-
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
@@ -318,8 +309,6 @@ export default () => {
           </Card>
         </Column>
       </Row>
-
-
     </>
   )
 }
