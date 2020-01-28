@@ -44,18 +44,27 @@ const Events = () => {
                                                 <Row height="60px">
                                                     <H3 primary align="left" >{item.title}</H3>
                                                 </Row>
-                                                <Row height="50px">
+                                                <Row height="30px">
                                                     <Separator primary />
                                                 </Row>
-                                                <Row height="30px">
-                                                    <Paragraph color={Colors.gray} fontSize="14px" align="left" >Date:{date.getMonth()}/{date.getDay()}/{date.getFullYear()}</Paragraph>
-                                                    {/* <Paragraph color={Colors.blue} margin="20px 0 0 0" align="left" fontSize="13px">{item.event_date}</Paragraph> */}
+                                                <Row height="20px">
+                                                    <Column size="2" customRespSize respSize="4" paddingLeft="0px">
+                                                        <Paragraph color={Colors.gray} fontSize="14px" align="left" >Date:</Paragraph>
+                                                    </Column>
+                                                    <Column size="6" customRespSize respSize="6">
+                                                        <Paragraph color={Colors.gray} fontSize="14px" align="left" >{date.getMonth()}/{date.getDay()}/{date.getFullYear()}</Paragraph>
+                                                    </Column>
                                                 </Row>
-                                                <Row height="30px">
-                                                    <Paragraph color={Colors.gray} fontSize="14px" align="left" >City:{item.city_slug}</Paragraph>
-                                                    {/* <Paragraph color={Colors.blue} margin="20px 0 0 0" align="left" fontSize="13px">{item.event_date}</Paragraph> */}
+                                                <Row height="50px">
+                                                    <Column size="2" customRespSize respSize="4" paddingLeft="0px">
+                                                        <Paragraph color={Colors.gray} fontSize="14px" align="left" >City:</Paragraph>
+                                                    </Column>
+                                                    <Column size="5" customRespSize respSize="6" >
+                                                        <Paragraph color={Colors.gray} fontSize="14px" align="left" >{item.city_slug}</Paragraph>
+                                                    </Column>
+
                                                 </Row>
-                                                <Row height="60px">
+                                                <Row height="100px">
                                                     <a href={item.url} target="_blank">
                                                         <Button outline color={Colors.blue} textColor={Colors.black} padding=".35rem.85rem">APPLY NOW</Button>
                                                     </a>
