@@ -54,3 +54,17 @@
 a.nav-item.nav-link.side {
     height: 40px;
 }
+.carousel .slide {
+    min-width: 100%;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    background: #fff!important;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    border-radius: 1.25rem;
+    // border: 1px solid black;
+   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
