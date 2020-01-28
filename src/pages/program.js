@@ -11,6 +11,7 @@ import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
 import Alumni from '../components/Alumni'
 import Select from 'react-select';
+import Events from '../components/Events'
 import Scrollspy from 'react-scrollspy'
 import '../assets/css/style.scss'
 
@@ -286,6 +287,18 @@ const Program = ({data}) => {
         <Alumni />
         <Divider height="100px" />
       </Wrapper>
+      <Divider height="100px" />
+      <Wrapper
+        style="default">
+        <Title
+          size="10"
+          title="UPCOMING EVENTS"
+          primary
+        />
+        <Events />
+      </Wrapper>
+      <Divider height="100px" />
+
 
     </Layout >
   )

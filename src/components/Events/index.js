@@ -55,6 +55,14 @@ const Events = () => {
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >{date.getMonth()}/{date.getDay()}/{date.getFullYear()}</Paragraph>
                                                     </Column>
                                                 </Row>
+                                                <Row height="20px">
+                                                    <Column size="2" customRespSize respSize="4" paddingLeft="0px">
+                                                        <Paragraph color={Colors.gray} fontSize="14px" align="left" >Time:</Paragraph>
+                                                    </Column>
+                                                    <Column size="6" customRespSize respSize="6">
+                                                        <Paragraph color={Colors.gray} fontSize="14px" align="left" >{date.getHours()}pm</Paragraph>
+                                                    </Column>
+                                                </Row>
                                                 <Row height="50px">
                                                     <Column size="2" customRespSize respSize="4" paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >City:</Paragraph>
@@ -73,7 +81,7 @@ const Events = () => {
                                         </Row>
 
                                     </Column>
-                                    <Column size="7" customRespSize respSize="6" alignSelf="center" height="100%" border="custom" customBorderRadius="0 1.25rem 1.25rem 0" image="yes" url={item.banner_url} backgroundSize="contain" >
+                                    <Column size="7" customRespSize respSize="6" alignSelf="center" width="100%" height="100%" border="custom" customBorderRadius="0 1.25rem 1.25rem 0" image="yes" url={item.banner_url} backgroundSize="cover" >
 
                                     </Column>
                                 </Row>
