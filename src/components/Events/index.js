@@ -18,28 +18,18 @@ const Events = () => {
             .then(response => response.json())
             .then(data => setEvent(data))
     }, []);
-
-
     let today = new Date();
+    let newEventArray = event.filter((item) => new Date(item.event_date).getTime() >= today.getTime())
 
-    console.log("today", today.getTime())
-    {
-        if (event != undefined) {
-            let test = new Date(event[0].event_date)
-            console.log("test", test.getTime())
-        }
-    }
-    let newArray = event.filter((item) => new Date(item.event_date).getTime() >= today.getTime())
-    console.log("newArray", newArray)
     return (
         <>
-            <Carousel showIndicators={false} showThumbs={false} >
+            <Carousel showIndicators={false} showThumbs={false} showStatus={false}>
 
                 {event &&
-                    newArray.map((item, index) => {
-
+                    newEventArray.map((item, index) => {
+                        let date = new Date(item.event_date)
                         return (
-                            <Card key={index} borders="1.25rem" height="426px">
+                            <Card key={index} borders="1.25rem" height="260px">
                                 <Row
                                     height="100%"
                                     marginLeft="0"
@@ -50,21 +40,24 @@ const Events = () => {
                                     <Column size="5" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                                         <Row align="center" height="100%">
                                             <Column size="8" height="100%">
-                                                <Divider height="50px" />
-                                                <Row height="100px">
+                                                <Divider height="30px" />
+                                                <Row height="60px">
                                                     <H3 primary align="left" >{item.title}</H3>
                                                 </Row>
-                                                <Row>
+                                                <Row height="50px">
                                                     <Separator primary />
                                                 </Row>
-
-                                                <Row>
-                                                    <H3 primary align="left" >{item.event_date}</H3>
+                                                <Row height="30px">
+                                                    <Paragraph color={Colors.gray} fontSize="14px" align="left" >Date:{date.getMonth()}/{date.getDay()}/{date.getFullYear()}</Paragraph>
                                                     {/* <Paragraph color={Colors.blue} margin="20px 0 0 0" align="left" fontSize="13px">{item.event_date}</Paragraph> */}
                                                 </Row>
-                                                <Row >
+                                                <Row height="30px">
+                                                    <Paragraph color={Colors.gray} fontSize="14px" align="left" >City:{item.city_slug}</Paragraph>
+                                                    {/* <Paragraph color={Colors.blue} margin="20px 0 0 0" align="left" fontSize="13px">{item.event_date}</Paragraph> */}
+                                                </Row>
+                                                <Row height="60px">
                                                     <a href={item.url} target="_blank">
-                                                        <Button move="down" down="75px" outline color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">APPLY NOW</Button>
+                                                        <Button outline color={Colors.blue} textColor={Colors.black} padding=".35rem.85rem">APPLY NOW</Button>
                                                     </a>
                                                 </Row>
                                             </Column>
