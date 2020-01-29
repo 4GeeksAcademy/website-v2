@@ -73,6 +73,17 @@ export default () => {
     };
     const data = useStaticQuery(graphql`
     query myQueryTypical{
+        typical: allTypicalDayYaml {
+            edges {
+              node {
+                miami {
+                  time
+                  slug
+                  info
+                }
+              }
+            }
+          }
         credentials: allCredentialsDataYaml {
             edges {
               node {
