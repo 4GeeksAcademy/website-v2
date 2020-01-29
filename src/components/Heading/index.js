@@ -152,6 +152,7 @@ export const Separator = styled.div`
 `
 export const Paragraph = styled.div`
   @media ${Device.xs}{
+    font-size: 10px;
     ${props => props.customTextAlignSmall
     ?
     css`text-align: ${props => props.alignXs}`

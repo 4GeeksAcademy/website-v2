@@ -8,7 +8,29 @@ import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button, Round
 import {Card} from '../Card';
 import Link from 'gatsby-link'
 
-
+const days = [
+    'Sun',
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat'
+]
+const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec'
+]
 const Events = () => {
     const [event, setEvent] = useState([])
     useEffect(() => {
@@ -28,6 +50,7 @@ const Events = () => {
                 {event &&
                     newEventArray.map((item, index) => {
                         let date = new Date(item.event_date)
+                        console.log("item", date.getMonth())
                         return (
                             <Card key={index} borders="1.25rem" height="260px">
                                 <Row
@@ -39,7 +62,7 @@ const Events = () => {
                                 >
                                     <Column size="5" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                                         <Row align="center" height="100%">
-                                            <Column size="8" height="100%">
+                                            <Column size="9" height="100%">
                                                 <Divider height="30px" />
                                                 <Row height="60px">
                                                     <H3 primary align="left" >{item.title}</H3>
@@ -52,7 +75,7 @@ const Events = () => {
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >Date:</Paragraph>
                                                     </Column>
                                                     <Column size="6" customRespSize respSize="6">
-                                                        <Paragraph color={Colors.gray} fontSize="14px" align="left" >{date.getMonth()}/{date.getDay()}/{date.getFullYear()}</Paragraph>
+                                                        <Paragraph color={Colors.gray} fontSize="14px" align="left" >{days[date.getDay()]}, {date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</Paragraph>
                                                     </Column>
                                                 </Row>
                                                 <Row height="20px">
