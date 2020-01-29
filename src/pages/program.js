@@ -24,16 +24,16 @@ const options = [
   {value: 'maracaibo', label: 'Maracaibo'},
 ];
 const Program = ({data}) => {
-  const [ip, setIp] = useState("ciao");
+  const [ip, setIp] = useState();
   const [location, setLocation] = useState();
   const [weeks, setWeeks] = useState();
   const publicIp = require("public-ip");
 
   (async () => {
-    console.log(await publicIp.v4());
+    setIp(await publicIp.v4());
     //=> '46.5.21.123'
 
-    setIp(await publicIp.v6());
+    // setIp(await publicIp.v6());
     //=> 'fe80::200:f8ff:fe21:67cf'
   })();
   useEffect(async () => {
@@ -288,16 +288,7 @@ const Program = ({data}) => {
         <Divider height="100px" />
       </Wrapper>
       <Divider height="100px" />
-      <Wrapper
-        style="default">
-        <Title
-          size="10"
-          title="UPCOMING EVENTS"
-          primary
-        />
-        <Events />
-      </Wrapper>
-      <Divider height="100px" />
+
 
 
     </Layout >

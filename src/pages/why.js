@@ -6,6 +6,7 @@ import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading
 import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage} from '../components/Styling'
 import Mentors from '../components/Mentors'
+import Events from '../components/Events'
 
 const Why = () => (
   <Layout>
@@ -213,7 +214,17 @@ const Why = () => (
         </Column>
       </Row>
     </Wrapper>
-    <Divider height="150px" />
+    <Divider height="100px" />
+    <Wrapper
+      style="default">
+      <Title
+        size="10"
+        title="UPCOMING EVENTS"
+        primary
+      />
+      <Events />
+    </Wrapper>
+    <Divider height="100px" />
   </Layout >
 );
 
