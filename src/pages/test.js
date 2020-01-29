@@ -20,13 +20,14 @@ import ProgramDescription from '../components/ProgramDescription'
 import ProgramSelector from '../components/ProgramSelector'
 import '../assets/css/style.scss'
 import Events from '../components/Events'
+import TypicalDay from '../components/TypicalDay'
 
 const Test = ({data}) => (
   <Layout>
 
     <Wrapper
       style="default">
-      <Events />
+      <TypicalDay />
     </Wrapper>
 
     <ProgramSelector />

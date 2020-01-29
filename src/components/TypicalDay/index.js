@@ -177,50 +177,9 @@ export default () => {
         <>
             {/* 3 COLUMNS LAYOUT */}
             <Row align="center">
-                <Column size="4" customRespSize respSize="12">
-                    <Card shadow width="100%" height="350px" margin="5px 0">
-                        <Row height="100px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" >
-                                    <Column size="12" alignSelf="center" >
-                                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
-                                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="40px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" align="center">
-                                    <Column size="8" alignSelf="center" >
-                                        <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="110px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" >
-                                    <Column size="12" alignSelf="center" >
-                                        <H3 align="center" >$6,999</H3>
-                                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="100px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" >
-                                    <Column size="12" alignSelf="center" align="center">
-                                        <Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                    </Card>
-                </Column>
-                <Column size="4" customRespSize respSize="12">
-                    <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
+
+                <Column size="8" customRespSize respSize="12">
+                    <Card shadow width="100%" height="400px" margin="5px 0" color="black">
                         <Row height="100px" >
                             <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                                 <Row height="100%" >
@@ -255,7 +214,7 @@ export default () => {
                                         {steps.map((label, index) => (
                                             <Step key={label}>
                                                 <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
-                                                    <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+                                                    <StepLabel StepIconComponent={ColorlibStepIcon}>{label.icon}{label.time}</StepLabel>
                                                 </StepButton>
                                             </Step>
                                         ))}
@@ -277,48 +236,7 @@ export default () => {
                         </Row>
                     </Card>
                 </Column>
-                <Column size="4" customRespSize respSize="12">
-                    <Card shadow width="100%" height="350px" margin="5px 0">
-                        <Row height="100px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" >
-                                    <Column size="12" alignSelf="center" >
-                                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY ONLY AFTER</H4></Row>
-                                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="40px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" align="center">
-                                    <Column size="8" alignSelf="center" >
-                                        <Paragraph align="center" fontSize="13px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="110px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" >
-                                    <Column size="12" alignSelf="center" >
-                                        <H3 align="center" >$134.99</H3>
-                                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>per month</Paragraph>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="100px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" >
-                                    <Column size="12" alignSelf="center" align="center">
-                                        <Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                    </Card>
-                </Column>
+
             </Row>
         </>
     )
@@ -475,6 +393,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps () {
-    return ['6 mo', '12 mo', '24 mo', '36 mo', '42 mo', '60 mo'];
+    return [
+        {icon: <Circle width="24" color={Colors.yellow} fill={Colors.yellow} />, time: '8:00PM'},
+        '12 mo',
+        '24 mo',
+        '36 mo',
+        '42 mo',
+        '60 mo'];
 }
 
