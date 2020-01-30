@@ -79,6 +79,7 @@ height: ${props => props.height};
 margin: ${props => props.margin};
 position: relative;
 width: 100%;
+border: ${props => props.borderStyle};
 align-self: ${props => props.alignSelf};
 padding-right: ${props => props.paddingRight};
 padding-left: ${props => props.paddingLeft};

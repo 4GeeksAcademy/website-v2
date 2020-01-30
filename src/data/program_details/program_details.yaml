@@ -1,6 +1,6 @@
 part_time:
   - module_name: "PREWORK"
-    title: "PREWORK"
+    title: "Prework"
     description: "Starting with the basics: HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page."
     projects: "CSS Postcard, Minimal Instagram Version, etc."
     slug: "prework"

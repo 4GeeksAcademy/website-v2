@@ -37,6 +37,7 @@ const Test = ({data}) => (
     >
       <ProgramDescription />
     </Wrapper>
+    <Divider height="100px" />
     <Wrapper
       id="section-2"
       style="custom"

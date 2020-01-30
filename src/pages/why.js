@@ -166,7 +166,7 @@ const Why = () => (
       <Mentors up="200px" />
     </Wrapper>
     <Divider height="150px" />
-    <Wrapper style="default" image="no" color={Colors.lightGray}>
+    <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
       <Row>
         <Column
           size="12"
