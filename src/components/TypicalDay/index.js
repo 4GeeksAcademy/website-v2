@@ -218,10 +218,12 @@ export default () => {
                     <Row height="120px" align="center">
                         <Column size="9" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                             <Row height="100%" align="center">
-                                <Stepper alternativeLabel connector={<ColorlibConnector />}>
+                                <Stepper alternativeLabel activeStep={activeStep} connector={<QontoConnector />}>
                                     {steps.map(label => (
                                         <Step key={label}>
-                                            <StepLabel StepIconComponent={ColorlibStepIcon}>{label.icon}</StepLabel>
+                                            <StepLabel classes={{
+                                                alternativeLabel: classes.alternativeLabel
+                                            }} StepIconComponent={QontoStepIcon}>{label.icon}{label.time}</StepLabel>
                                         </Step>
                                     ))}
                                 </Stepper>
@@ -237,10 +239,8 @@ export default () => {
                             <Row height="100%" align="center">
                                 {activeStep === steps.length ? (
                                     <div>
-                                        <Typography className={classes.instructions}>
-                                            All steps completed - you&apos;re finished
-            </Typography>
-                                        <Button onClick={handleReset} className={classes.button}>
+
+                                        <Button onMouseOver={handleReset} className={classes.button}>
                                             Reset
             </Button>
                                     </div>
@@ -254,7 +254,7 @@ export default () => {
                                                 <Button
                                                     variant="contained"
                                                     color="primary"
-                                                    onClick={handleNext}
+                                                    onMouseOver={handleNext}
                                                     className={classes.button}
                                                 >
                                                     {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
@@ -280,6 +280,7 @@ const QontoConnector = withStyles({
         top: 5,
         left: 'calc(-50% + 5px)',
         right: 'calc(50% + 5px)',
+        color: 'black'
     },
     active: {
         '& $line': {
@@ -305,7 +306,7 @@ const QontoConnector = withStyles({
 })(StepConnector);
 const useQontoStepIconStyles = makeStyles({
     root: {
-        color: '#eaeaf0',
+        color: 'black',
         display: 'flex',
         height: 22,
         alignItems: 'center',
@@ -418,7 +419,7 @@ const useStyles = makeStyles(theme => ({
         marginBottom: theme.spacing(1),
     },
     test: {
-        color: Colors.white
+        color: Colors.black
     },
     circle: {
         width: 4,
