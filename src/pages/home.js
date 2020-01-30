@@ -57,7 +57,7 @@ const Home = ({data}) => {
                 border="bottom"
                 padding="20%"
                 image="yes"
-                url="../localImage.png"
+                url="../home-bg.png"
                 height="500px"
                 backgroundSize="cover">
               </Column>

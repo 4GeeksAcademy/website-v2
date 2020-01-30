@@ -260,7 +260,7 @@ const Program = ({data}) => {
         <PricesAndPayment />
         <Divider height="100px" />
       </Wrapper>
-      <Wrapper
+      {/* <Wrapper
         style="default"
       >
         <Title
@@ -272,7 +272,7 @@ const Program = ({data}) => {
         <Divider height="50px" />
         <section className="section" id="section-5"></section>
         <Divider height="100px" />
-      </Wrapper>
+      </Wrapper> */}
       <Wrapper
         style="default"
       >

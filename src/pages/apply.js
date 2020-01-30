@@ -27,7 +27,10 @@ const useStyles = makeStyles({
         border: 0,
         color: 'white',
         padding: '0 10px',
-        '&$selected': {background: Colors.yellow},
+        '&$selected': {
+            background: Colors.yellow,
+            color: Colors.white
+        },
 
     },
 

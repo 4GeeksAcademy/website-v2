@@ -37,9 +37,9 @@ const Alumni = props => {
                                     <Column size="8" height="100%">
                                         <Divider height="50px" />
                                         <Row height="100px">
-                                            <H3 primary align="left" >LEOREM IPSUM</H3>
-                                            <H3 primary align="left" >AND GET CAREER</H3>
-                                            <H3 primary align="left" >SUPPORT FOR LIFE</H3>
+                                            <H3 primary align="left" >COMING SOON</H3>
+                                            <H3 primary align="left" >IN DEVELOPMENT</H3>
+                                            {/* <H3 primary align="left" >SUPPORT FOR LIFE</H3> */}
                                         </Row>
                                         <Row>
                                             <Separator primary />

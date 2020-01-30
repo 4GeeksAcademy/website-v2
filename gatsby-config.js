@@ -4,7 +4,7 @@ module.exports = {
     menuLinks: [
       {
         name: 'HOME',
-        link: '/home'
+        link: '/'
       },
       {
         name: 'WHY 4GEEKS',
