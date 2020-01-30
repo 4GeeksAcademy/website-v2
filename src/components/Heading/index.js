@@ -148,7 +148,11 @@ export const Separator = styled.div`
   margin: .5rem 0px;
   height: 5px;
   width: 50px;
-  border-bottom: ${props => props.primary ? `2px solid ${Colors.yellow} ` : `2px solid ${Colors.lightBlue}`};
+  border-bottom: ${props => props.primary
+    ? `2px solid ${Colors.yellow} `
+    : `2px solid ${Colors.lightBlue}`
+
+  };
 `
 export const Paragraph = styled.div`
   @media ${Device.xs}{

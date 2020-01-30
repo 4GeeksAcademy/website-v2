@@ -17,8 +17,8 @@ import Check from '@material-ui/icons/Check';
 import Typography from '@material-ui/core/Typography';
 import {Row, Column} from '../Sections';
 import {Card} from '../Card';
-import {H2, H3, H4, H5, Paragraph} from '../Heading';
-import {Button, Colors, Circle, RoundImage} from '../Styling';
+import {H2, H3, H4, H5, Paragraph, Title, Divider} from '../Heading';
+import {Button, Colors, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../Styling';
 import '../../assets/css/style.scss';
 import Switch from "react-switch";
 
@@ -118,21 +118,21 @@ export default () => {
     let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
     let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
     let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
-    console.log("tempQ", tempQ)
+    console.log("tempQ", data.typical.edges[0].node.miami)
     function getStepContent (step) {
         switch (step) {
             case 0:
-                return `${data.cred.edges[tempQ].node.description}`
+                return `${data.typical.edges[0].node.miami[0].info}`
             case 1:
-                return `${data.cred.edges[tempQ].node.description}`
+                return `${data.typical.edges[0].node.miami[1].info}`
             case 2:
-                return `${data.cred.edges[tempQ].node.description}`
+                return `${data.typical.edges[0].node.miami[2].info}`
             case 3:
-                return `${data.cred.edges[tempS].node.description}`
+                return `${data.typical.edges[0].node.miami[3].info}`
             case 4:
-                return `${data.cred.edges[tempC].node.description}`
+                return `${data.typical.edges[0].node.miami[4].info}`
             case 5:
-                return `${data.cred.edges[tempC].node.description}`
+                return `${data.typical.edges[0].node.miami[5].info}`
             default:
                 return 'Unknown step';
         }
@@ -175,68 +175,101 @@ export default () => {
     }
     return (
         <>
-            {/* 3 COLUMNS LAYOUT */}
+
+
             <Row align="center">
-
+                <Title
+                    size="10"
+                    title="TYPICAL DAY AT THE ACADEMY"
+                    paragraph="Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio"
+                    primary
+                />
+                {/* <Divider height="50px" /> */}
                 <Column size="8" customRespSize respSize="12">
-                    <Card shadow width="100%" height="400px" margin="5px 0" color="black">
-                        <Row height="100px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" >
-                                    <Column size="12" alignSelf="center" >
-                                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>EXTENDED</H4></Row>
-                                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>PAYMENT PLAN</H4></Row>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="50px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" align="center">
-                                    <Column size="8" alignSelf="center" >
-                                        <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="50px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" >
-                                    <Column size="12" alignSelf="center" >
-                                        <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>                  </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="80px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" align="center">
-                                    <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
-                                        {steps.map((label, index) => (
-                                            <Step key={label}>
-                                                <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
-                                                    <StepLabel StepIconComponent={ColorlibStepIcon}>{label.icon}{label.time}</StepLabel>
-                                                </StepButton>
-                                            </Step>
-                                        ))}
-                                    </Stepper>
-                                </Row>
-                                <Row align="center" height="40px">
-                                    <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="120px" >
-                            <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                                <Row height="100%" >
-                                    <Column size="12" alignSelf="center" align="center">
-                                        <Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                    </Card>
+                    <Row height="120px" align="center">
+                        <Column size="9" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                            <Row height="100%" align="center">
+                                <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
+                                    {steps.map((label, index) => (
+                                        <Step key={label}>
+                                            <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
+                                                <StepLabel StepIconComponent={ColorlibStepIcon}>{label.icon}{label.time}</StepLabel>
+                                            </StepButton>
+                                        </Step>
+                                    ))}
+                                </Stepper>
+                            </Row>
+                            <Row align="center" height="120px">
+                                <Typography className={classes.test}>{getStepContent(activeStep)}</Typography>
+                            </Row>
+                        </Column>
+                    </Row>
                 </Column>
+            </Row>
+            <Row align="center">
+                <Title
+                    size="10"
+                    title="TYPICAL DAY AT THE ACADEMY"
+                    paragraph="Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio"
+                    primary
+                />
+                {/* <Divider height="50px" /> */}
+                <Column size="8" customRespSize respSize="12">
+                    <Row height="120px" align="center">
+                        <Column size="9" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                            <Row height="100%" align="center">
+                                <Stepper alternativeLabel connector={<ColorlibConnector />}>
+                                    {steps.map(label => (
+                                        <Step key={label}>
+                                            <StepLabel StepIconComponent={ColorlibStepIcon}>{label.icon}</StepLabel>
+                                        </Step>
+                                    ))}
+                                </Stepper>
+                            </Row>
+                            <Row align="center" height="120px">
+                                <Typography className={classes.test}>{getStepContent(activeStep)}</Typography>
+                            </Row>
 
+                        </Column>
+                    </Row>
+                    <Row height="120px" align="center">
+                        <Column size="9" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                            <Row height="100%" align="center">
+                                {activeStep === steps.length ? (
+                                    <div>
+                                        <Typography className={classes.instructions}>
+                                            All steps completed - you&apos;re finished
+            </Typography>
+                                        <Button onClick={handleReset} className={classes.button}>
+                                            Reset
+            </Button>
+                                    </div>
+                                ) : (
+                                        <div>
+                                            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+                                            <div>
+                                                <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
+                                                    Back
+              </Button>
+                                                <Button
+                                                    variant="contained"
+                                                    color="primary"
+                                                    onClick={handleNext}
+                                                    className={classes.button}
+                                                >
+                                                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    )}
+                            </Row>
+                            <Row align="center" height="120px">
+                                <Typography className={classes.test}>{getStepContent(activeStep)}</Typography>
+                            </Row>
+
+                        </Column>
+                    </Row>
+                </Column>
             </Row>
         </>
     )
@@ -354,9 +387,9 @@ function ColorlibStepIcon (props) {
     const {active, completed} = props;
 
     const icons = {
-        1: <SettingsIcon />,
-        2: <GroupAddIcon />,
-        3: <VideoLabelIcon />,
+        // 1: <SettingsIcon />,
+        // 2: <GroupAddIcon />,
+        // 3: <VideoLabelIcon />,
     };
 
     return (
@@ -384,6 +417,9 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(1),
         marginBottom: theme.spacing(1),
     },
+    test: {
+        color: Colors.white
+    },
     circle: {
         width: 4,
         height: 4,
@@ -394,11 +430,12 @@ const useStyles = makeStyles(theme => ({
 
 function getSteps () {
     return [
-        {icon: <Circle width="24" color={Colors.yellow} fill={Colors.yellow} />, time: '8:00PM'},
-        '12 mo',
-        '24 mo',
-        '36 mo',
-        '42 mo',
-        '60 mo'];
+        {icon: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '8:00AM'},
+        {icon: <Coffee width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '8:45AM'},
+        {icon: <FileCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '09:00AM'},
+        {icon: <LaptopCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '10:00AM'},
+        {icon: <Utensils width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '01:00PM'},
+        {icon: <Dumbbell width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '02:00PM'},
+    ];
 }
 

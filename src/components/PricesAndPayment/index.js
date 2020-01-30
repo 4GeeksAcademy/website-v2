@@ -97,6 +97,7 @@ export default () => {
                 options{
                     months
                     payment
+                    paymentParagraph
                 }
                 logo
                 description
@@ -158,6 +159,24 @@ export default () => {
         return `${data.cred.edges[tempC].node.options[0].payment}`
       case 5:
         return `${data.cred.edges[tempC].node.options[1].payment}`
+      default:
+        return 'Unknown step';
+    }
+  }
+  function getStepPayments (step) {
+    switch (step) {
+      case 0:
+        return `${data.cred.edges[tempQ].node.options[0].paymentParagraph}`
+      case 1:
+        return `${data.cred.edges[tempQ].node.options[1].paymentParagraph}`
+      case 2:
+        return `${data.cred.edges[tempQ].node.options[2].paymentParagraph}`
+      case 3:
+        return `${data.cred.edges[tempS].node.options[0].paymentParagraph}`
+      case 4:
+        return `${data.cred.edges[tempC].node.options[0].paymentParagraph}`
+      case 5:
+        return `${data.cred.edges[tempC].node.options[1].paymentParagraph}`
       default:
         return 'Unknown step';
     }
@@ -233,7 +252,9 @@ export default () => {
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                 <Row height="100%" >
                   <Column size="12" alignSelf="center" >
-                    <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>                  </Column>
+                    <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>
+                    <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep)}</Paragraph>
+                  </Column>
                 </Row>
               </Column>
             </Row>
