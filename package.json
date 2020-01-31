@@ -35,6 +35,7 @@
     "@material-ui/lab": "^4.0.0-alpha.40",
     "bootstrap": "^4.4.1",
     "bootstrap-scss": "^4.4.1",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.15.6",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-manifest": "^2.2.14",

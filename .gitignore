@@ -7,3 +7,10 @@ yarn-error.log
 /public
 /storybook
 .DS_Store
+
+# dotenv environment variables file
+.env
+
+# gatsby files
+.cache/
+public
