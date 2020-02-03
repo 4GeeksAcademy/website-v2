@@ -27,10 +27,10 @@ const Footer = () => (
                         <Column size="3" customRespSize respSize="6" margin="5px 0">
                             <Row marginBottom="20px"><H5 fontSize="16px" color={Colors.gray}>LOCATIONS</H5></Row>
                             <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Santiago de Chile</Paragraph></Row>
-                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Miami, Brickell</Paragraph></Row>
-                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Impact Hub, CCS, Vzla</Paragraph></Row>
-                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Maracaibo, Vzla</Paragraph></Row>
-                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Madrid, Spain</Paragraph></Row>
+                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Miami</Paragraph></Row>
+                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Caracas</Paragraph></Row>
+                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Maracaibo</Paragraph></Row>
+                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Madrid</Paragraph></Row>
                         </Column>
                         <Column size="3" customRespSize respSize="6" margin="5px 0">
                             <Row marginBottom="20px"> <H5 fontSize="16px" color={Colors.gray}>FOLLOW</H5></Row>
