@@ -31,7 +31,7 @@ export default () => {
         {data.why.edges.map(i => (
           <Column size="4">
             <RoundImage url={i.node.image} bsize="cover" mb="10px" height="200px" border="1.25rem"></RoundImage>
-            <Row align="around">
+            <Row align="around" marginTop="20px">
               <Column size size="2" customRespSize respSize="2" alignSelf="center">
                 {(i.node.slug === "job-in-tech") && <Address width="48" color={Colors.yellow} fill={Colors.yellow} />}
                 {(i.node.slug === "finance-your-career") && <HandMoney width="48" color={Colors.yellow} fill={Colors.yellow} />}

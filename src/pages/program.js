@@ -144,7 +144,7 @@ const Program = ({data}) => {
                             return (
                               <Row key={index} marginBottom="4px">
                                 <Column size="1" customRespSize respSize="1" alignSelf="center">
-                                  <Check width="12px" color={Colors.blue} fill={Colors.blue} />
+                                  <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
                                 </Column>
                                 <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
                                   <Paragraph color={Colors.gray}>{pal}</Paragraph>
@@ -177,10 +177,10 @@ const Program = ({data}) => {
                             return (
                               <Row key={index} marginBottom="2px" >
                                 <Column size="1" customRespSize respSize="1" alignSelf="center">
-                                  <Check width="12px" color={Colors.blue} fill={Colors.blue} />
+                                  <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
                                 </Column>
                                 <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                                  <Paragraph color={Colors.gray}>{pal}</Paragraph>
+                                  <Paragraph fontSize="13px" color={Colors.gray}>{pal}</Paragraph>
                                 </Column>
                               </Row>)
                           })}
