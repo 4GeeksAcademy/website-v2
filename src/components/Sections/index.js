@@ -163,14 +163,14 @@ ${props =>
                 max-width: 100%;
                 // height: 300px;
                 border-radius: 0 0 0 0;
-                text-align: center;
+                text-align: ${props => props.alignXs};
             }
             @media screen ${Device.sm}{
                 flex: 0 0 100%;
                 max-width: 100%;
                 // height: 300px;
                 border-radius: 0 0 0 0;
-                text-align: center;
+                text-align: ${props => props.alignSm};
             }
             @media ${Device.lg}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
@@ -276,6 +276,8 @@ Row.defaultProps = {
 Column.defaultProps = {
     paddingLeft: '15px',
     paddingRight: '15px',
+    alignXs: 'center',
+    alignSm: 'center',
 };
 // Column.defaultProps = {
 //     align: 'center',
