@@ -40,10 +40,10 @@ const Home = ({data}) => {
                   <H2 primary align="left" >SUPPORT FOR LIFE</H2>
                 </Row>
                 <Row>
-                  <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">Join more than 500 graduates already working as coders </Paragraph>
+                  <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" >Join more than 500 graduates already working as coders </Paragraph>
                 </Row>
                 <Row>
-                  <Paragraph color={Colors.gray} margin="5px 0 0 0" align="left" fontSize="13px">and become a part of one of the world's biggest coding community.</Paragraph>
+                  <Paragraph color={Colors.gray} margin="5px 0 0 0" align="left" >and become a part of one of the world's biggest coding community.</Paragraph>
                 </Row>
                 <Row center>
                   <Link to="/program">

@@ -42,7 +42,7 @@ const Events = () => {
     }, []);
     let today = new Date();
     let newEventArray = event.filter((item) => new Date(item.event_date).getTime() >= today.getTime())
-    console.log("####", process.env.GATSBY_BREATHE)
+    console.log("####", newEventArray)
     return (
         <>
             <Carousel showIndicators={false} showThumbs={false} showStatus={false}>

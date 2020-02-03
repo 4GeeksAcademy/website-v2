@@ -35,7 +35,9 @@ const Test = ({data}) => (
       style="custom"
       full
     >
-      <ProgramDescription />
+      <svg>
+        <circle cx={50} cy={50} r={10} fill="red" />
+      </svg>
     </Wrapper>
     <Divider height="100px" />
     <Wrapper

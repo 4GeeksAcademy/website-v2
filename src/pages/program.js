@@ -101,7 +101,7 @@ const Program = ({data}) => {
         style="default">
         <QueryTest up="80" />
       </Wrapper>
-      <Scrollspy style={{fontSize: "10px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
+      <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
         <li><a className="nav-item nav-link side" href="#section-1" >MEMBERSHIPS</a></li>
         <li><a className="nav-item nav-link side" href="#section-2">PROGRAM</a></li>
         <li><a className="nav-item nav-link side" href="#section-3">4GEEKS vs OTHERS</a></li>
@@ -110,103 +110,99 @@ const Program = ({data}) => {
         <li><a className="nav-item nav-link side" href="#section-6">TYPICAL DAY</a></li>
         <li><a className="nav-item nav-link side" href="#section-7">THE ALUMNI</a></li>
       </Scrollspy>
-
-
       {/* <Wrapper
         style="default"
       >
-        <Title
-          size="10"
-          title="4GEEKS OUTCOMES"
-          paragraph="out of our total students, 76% are looking to get a job right after and 24% are pursuing to improve their skills or launch startups"
-          primary
-          customParagraphSize="8"
-        />
-        <Divider height="20px" />
-        <Row height="380px">
-          <RoundImage url="../images/program-charts.png" height="100%" width="100%" bsize="contain" />
-        </Row>
-      </Wrapper> */}
-      <Wrapper
-        style="default"
-      >
         <Divider height="40px" />
-        <section className="section" id="section-1"></section>
-        <Row >
-          <Column size="6" >
-            <Card padding="20px" shadow height="350px" width="100%" margin="10px 0px">
-              <Row height="100%">
-                <Column size="10" customRespSize respSize="10">
-                  <Row marginLeft="0px" marginBottom="15px" height="15%">
-                    <RoundImage url="../images/geekpal.png" bsize="contain" height="100%" position="left" />
-                  </Row>
-                  <Row marginTop="15px">
-                    <Column size="12">
-                      <Paragraph color={Colors.black} customTextAlignSmall
-                        alignXs="left">Get a job in tech</Paragraph>
-                    </Column>
-                  </Row>
-                  <Row marginTop="15px">
-                    <Column size="12">
+        <section className="section" id="section-1"></section> */}
+      <section className="section" id="section-1"></section>
+      <Container fluid>
+        <Row>
+          <Column size="2">
 
-                      {data.geek.edges[0].node.geek_pal.map((pal, index) => {
-                        return (
-                          <Row key={index} marginBottom="4px">
-                            <Column size="1" customRespSize respSize="1">
-                              <Check width="12px" color={Colors.blue} fill={Colors.blue} />
-                            </Column>
-                            <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px">
-                              <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
-                            </Column>
-                          </Row>)
-                      })}
-                    </Column>
-                  </Row>
-                </Column>
-                <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
-              </Row>
-            </Card>
           </Column>
-          <Column size="6">
-            <Card padding="20px" shadow height="350px" width="100%" margin="10px 0px">
-              <Row height="100%">
-                <Column size="10" customRespSize respSize="10">
-                  <Row marginLeft="0px" marginBottom="15px" height="15%">
-                    <RoundImage url="../images/geekforce.png" bsize="contain" height="100%" position="left" />
-                  </Row>
-                  <Row >
-                    <Column size="12">
-                      <Paragraph color={Colors.black} customTextAlignSmall
-                        alignXs="left">FOR Career Empowerment</Paragraph>
+          <Column size="7">
+            <Row >
+
+              <Column size="6" >
+                <Card padding="20px" shadow height="350px" width="100%" margin="10px 0px" move="up" up="100px">
+                  <Row height="100%">
+                    <Column size="10" customRespSize respSize="10">
+                      <Row marginLeft="0px" marginBottom="15px" height="15%">
+                        <RoundImage url="../images/geekpal.png" bsize="contain" height="100%" position="left" />
+                      </Row>
+                      <Row marginTop="15px">
+                        <Column size="12">
+                          <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
+                            alignXs="left">Get a job in tech</Paragraph>
+                        </Column>
+                      </Row>
+                      <Row marginTop="15px">
+                        <Column size="12">
+
+                          {data.geek.edges[0].node.geek_pal.map((pal, index) => {
+                            return (
+                              <Row key={index} marginBottom="4px">
+                                <Column size="1" customRespSize respSize="1" alignSelf="center">
+                                  <Check width="12px" color={Colors.blue} fill={Colors.blue} />
+                                </Column>
+                                <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                                  <Paragraph color={Colors.gray}>{pal}</Paragraph>
+                                </Column>
+                              </Row>)
+                          })}
+                        </Column>
+                      </Row>
                     </Column>
+                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
                   </Row>
-                  <Row marginTop="15px">
-                    <Column size="12">
-                      {data.geek.edges[0].node.geek_force.map((pal, index) => {
-                        return (
-                          <Row key={index} marginBottom="2px" >
-                            <Column size="1" customRespSize respSize="1">
-                              <Check width="12px" color={Colors.blue} fill={Colors.blue} />
-                            </Column>
-                            <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px">
-                              <Paragraph fontSize="11px" color={Colors.gray}>{pal}</Paragraph>
-                            </Column>
-                          </Row>)
-                      })}
+                </Card>
+              </Column>
+              <Column size="6">
+                <Card padding="20px" shadow height="350px" width="100%" margin="10px 0px" move="up" up="100px">
+                  <Row height="100%">
+                    <Column size="10" customRespSize respSize="10">
+                      <Row marginLeft="0px" marginBottom="15px" height="15%">
+                        <RoundImage url="../images/geekforce.png" bsize="contain" height="100%" position="left" />
+                      </Row>
+                      <Row >
+                        <Column size="12">
+                          <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
+                            alignXs="left">FOR Career Empowerment</Paragraph>
+                        </Column>
+                      </Row>
+                      <Row marginTop="15px">
+                        <Column size="12">
+                          {data.geek.edges[0].node.geek_force.map((pal, index) => {
+                            return (
+                              <Row key={index} marginBottom="2px" >
+                                <Column size="1" customRespSize respSize="1" alignSelf="center">
+                                  <Check width="12px" color={Colors.blue} fill={Colors.blue} />
+                                </Column>
+                                <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                                  <Paragraph color={Colors.gray}>{pal}</Paragraph>
+                                </Column>
+                              </Row>)
+                          })}
+                        </Column>
+                      </Row>
                     </Column>
+                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
                   </Row>
-                </Column>
-                <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
-              </Row>
-            </Card>
+                </Card>
+              </Column>
+            </Row>
           </Column>
         </Row>
-      </Wrapper>
+
+      </Container>
+      {/* </Wrapper> */}
       <Divider height="100px" />
+
       <Wrapper
         style="custom"
         full
-      >
+      ><section className="section" id="section-2"></section>
         <Title
           size="10"
           title="PROGRAM DETAILS"
@@ -214,7 +210,7 @@ const Program = ({data}) => {
 
         />
         <Divider height="50px" />
-        <section className="section" id="section-2"></section>
+
         <ProgramDescription />
 
       </Wrapper>
@@ -237,12 +233,13 @@ const Program = ({data}) => {
         style="default"
 
       >
-        <section className="section" id="section-3"></section>
+
         <Title
           size="10"
           title="GET TRAINED BY SENIOR MENTORS"
           primary
         />
+        <section className="section" id="section-4"></section>
         <Divider height="50px" />
         <Mentors />
         <Divider height="100px" />
@@ -256,7 +253,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
-        <section className="section" id="section-4"></section>
+        <section className="section" id="section-5"></section>
         <PricesAndPayment />
         <Divider height="100px" />
       </Wrapper>
@@ -270,7 +267,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
-        <section className="section" id="section-5"></section>
+        <section className="section" id="section-6"></section>
         <Divider height="100px" />
       </Wrapper> */}
       <Wrapper
@@ -283,7 +280,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
-        <section className="section" id="section-6"></section>
+        <section className="section" id="section-7"></section>
         <Alumni />
         <Divider height="100px" />
       </Wrapper>

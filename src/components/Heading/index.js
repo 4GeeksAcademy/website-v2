@@ -156,7 +156,7 @@ export const Separator = styled.div`
 `
 export const Paragraph = styled.div`
   @media ${Device.xs}{
-    font-size: 10px;
+    font-size: 14px;
     ${props => props.customTextAlignSmall
     ?
     css`text-align: ${props => props.alignXs}`
@@ -165,6 +165,7 @@ export const Paragraph = styled.div`
   }
   }
   @media screen ${Device.sm}{
+    font-size: 14px;
     ${props => props.customTextAlignSmall
     ?
     css`text-align: ${props => props.alignXs}`
@@ -174,16 +175,18 @@ export const Paragraph = styled.div`
   }
   @media ${Device.md}{
     text-align: ${props => props.align};
+    font-size: ${props => props.fontSize};
   }
   @media ${Device.lg}{
     text-align: ${props => props.align};
+    font-size: ${props => props.fontSize};
   }
   @media ${Device.xl} {
     text-align: ${props => props.align};
+    font-size: ${props => props.fontSize};
   }   
   margin: ${props => props.margin};
   font-family: 'Lato-Regular', sans-serif;
-  font-size: ${props => props.fontSize};
   font-weight: 300;
   padding: ${props => props.padding};
   letter-spacing: 0px;
@@ -237,7 +240,7 @@ H2.propTypes = {
 }
 Paragraph.defaultProps = {
   color: Colors.lightGray,
-  fontSize: "12px",
+  fontSize: "14px",
   customParagraphSize: "12",
 };
 H1.defaultProps = {
