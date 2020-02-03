@@ -26,6 +26,8 @@ const Body = styled.div`
     
 `
 const ProgramDescription = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [ind, setInd] = useState(0)
     const data = useStaticQuery(graphql`
     query myQueryDetails{
         program: allProgramDetailsYaml {
@@ -61,15 +63,16 @@ const ProgramDescription = () => {
                     <Header>
                         <TabList >
                             {program.full_time.map((item, index) => {
-                                return (<Tab key={index}>{item.module_name}</Tab>)
+                                return (<Tab key={index} onClick={() => setCurrentIndex(index)}>{item.module_name}</Tab>)
                             })
                             }
                         </TabList>
                     </Header>
                     <Body>
-                        {program.full_time.map((item, index) => {
+                        {program.full_time.map((item, i) => {
+
                             return (
-                                <TabPanel key={index}>
+                                <TabPanel key={i} onChange={() => setInd(i)}>
                                     <Container width="fluid">
                                         <Row height="75px">
                                             <Column size="3" paddingLeft="20px" padding="15px 0">
@@ -100,37 +103,79 @@ const ProgramDescription = () => {
                                                 <Paragraph color={Colors.gray} fontSize="14px">{item.duration}</Paragraph>
                                             </Column>
                                         </Row>
+
                                         <Row height="70px">
-                                            <Column size="3" paddingLeft="20px" padding="15px 0" image="no" color={Colors.lightGray} border="custom" customBorderRadius="0 0 0 1.25rem">
-                                                <Paragraph color={Colors.gray} fontSize="16px">Skills / Weeks:</Paragraph>
+                                            <Column size="3" customRespSize respSize="3" padding="15px 0" image="no" color={Colors.lightGray} border="custom" customBorderRadius="0 0 0 1.25rem">
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} fontSize="16px">Skills / Weeks:</Paragraph>
+                                                    </Column>
+                                                </Row>
                                             </Column>
-                                            <Column size="1" image="no" color={Colors.lightGray}>
-                                                <Paragraph color={Colors.gray} fontSize="14px">1</Paragraph>
+                                            <Column size="1" image="no" color={Colors.lightGray} customRespSize respSize="1" >
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} >1</Paragraph>
+                                                    </Column>
+                                                </Row>
+
                                             </Column>
-                                            <Column size="1" image="no" color={Colors.lightGray}>
-                                                <Paragraph color={Colors.gray} fontSize="14px">2</Paragraph>
+                                            <Column size="1" image="no" color={Colors.lightGray} customRespSize respSize="1">
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} >2</Paragraph>
+                                                    </Column>
+                                                </Row>
                                             </Column>
 
-                                            <Column size="1" >
-                                                <Paragraph color={Colors.gray} fontSize="14px">3</Paragraph>
+                                            <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 0 && Colors.lightGray}>
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} >3</Paragraph>
+                                                    </Column>
+                                                </Row>
                                             </Column>
-                                            <Column size="1" >
-                                                <Paragraph color={Colors.gray} fontSize="14px">4</Paragraph>
+                                            <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 0 && Colors.lightGray}>
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} >4</Paragraph>
+                                                    </Column>
+                                                </Row>
                                             </Column>
-                                            <Column size="1" >
-                                                <Paragraph color={Colors.gray} fontSize="14px">5</Paragraph>
+                                            <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 1 && Colors.lightGray}>
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} >5</Paragraph>
+                                                    </Column>
+                                                </Row>
                                             </Column>
-                                            <Column size="1" >
-                                                <Paragraph color={Colors.gray} fontSize="14px">6</Paragraph>
+                                            <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 1 && Colors.lightGray}>
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} >6</Paragraph>
+                                                    </Column>
+                                                </Row>
                                             </Column>
-                                            <Column size="1" >
-                                                <Paragraph color={Colors.gray} fontSize="14px">7</Paragraph>
+                                            <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 2 && Colors.lightGray}>
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} >7</Paragraph>
+                                                    </Column>
+                                                </Row>
                                             </Column>
-                                            <Column size="1" >
-                                                <Paragraph color={Colors.gray} fontSize="14px">8</Paragraph>
+                                            <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 2 && Colors.lightGray}>
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} >8</Paragraph>
+                                                    </Column>
+                                                </Row>
                                             </Column>
-                                            <Column size="1" border="custom" customBorderRadius="0 0 1.25rem 0">
-                                                <Paragraph color={Colors.gray} fontSize="14px">9</Paragraph>
+                                            <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 2 && Colors.lightGray} border="custom" customBorderRadius="0 0 1.25rem 0">
+                                                <Row align="around" height="100%">
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph color={Colors.gray} >9</Paragraph>
+                                                    </Column>
+                                                </Row>
                                             </Column>
                                         </Row>
 

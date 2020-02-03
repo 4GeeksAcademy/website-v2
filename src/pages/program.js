@@ -125,7 +125,7 @@ const Program = ({data}) => {
             <Row >
 
               <Column size="6" >
-                <Card padding="20px" shadow height="350px" width="100%" margin="10px 0px" move="up" up="100px">
+                <Card padding="20px" shadow height="400px" width="100%" margin="10px 0px" move="up" up="100px">
                   <Row height="100%">
                     <Column size="10" customRespSize respSize="10">
                       <Row marginLeft="0px" marginBottom="15px" height="15%">
@@ -159,7 +159,7 @@ const Program = ({data}) => {
                 </Card>
               </Column>
               <Column size="6">
-                <Card padding="20px" shadow height="350px" width="100%" margin="10px 0px" move="up" up="100px">
+                <Card padding="20px" shadow height="400px" width="100%" margin="10px 0px" move="up" up="100px">
                   <Row height="100%">
                     <Column size="10" customRespSize respSize="10">
                       <Row marginLeft="0px" marginBottom="15px" height="15%">
