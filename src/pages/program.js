@@ -123,7 +123,6 @@ const Program = ({data}) => {
           </Column>
           <Column size="7">
             <Row >
-
               <Column size="6" >
                 <Card padding="20px" shadow height="400px" width="100%" margin="10px 0px" move="up" up="100px">
                   <Row height="100%">
@@ -139,7 +138,6 @@ const Program = ({data}) => {
                       </Row>
                       <Row marginTop="15px">
                         <Column size="12">
-
                           {data.geek.edges[0].node.geek_pal.map((pal, index) => {
                             return (
                               <Row key={index} marginBottom="4px">
@@ -154,7 +152,7 @@ const Program = ({data}) => {
                         </Column>
                       </Row>
                     </Column>
-                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} /></Column>
                   </Row>
                 </Card>
               </Column>
@@ -187,32 +185,28 @@ const Program = ({data}) => {
                         </Column>
                       </Row>
                     </Column>
-                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} /></Column>
                   </Row>
                 </Card>
               </Column>
             </Row>
           </Column>
         </Row>
-
       </Container>
       {/* </Wrapper> */}
       <Divider height="100px" />
-
       <Wrapper
         style="custom"
         full
-      ><section className="section" id="section-2"></section>
+      >
+        <section className="section" id="section-2"></section>
         <Title
           size="10"
           title="PROGRAM DETAILS"
           primary
-
         />
         <Divider height="50px" />
-
         <ProgramDescription />
-
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
@@ -231,9 +225,7 @@ const Program = ({data}) => {
       </Wrapper>
       <Wrapper
         style="default"
-
       >
-
         <Title
           size="10"
           title="GET TRAINED BY SENIOR MENTORS"
@@ -285,9 +277,6 @@ const Program = ({data}) => {
         <Divider height="100px" />
       </Wrapper>
       <Divider height="100px" />
-
-
-
     </Layout >
   )
 };
