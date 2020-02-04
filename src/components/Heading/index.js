@@ -230,7 +230,6 @@ export const Title = props => {
 Title.propTypes = {
   title: PropTypes.string.isRequired,
   paragraph: PropTypes.string,
-  style: PropTypes.string.isRequired,
   content: PropTypes.func,
   size: PropTypes.string,
   paragraphColor: PropTypes.string

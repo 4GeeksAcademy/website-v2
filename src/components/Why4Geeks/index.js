@@ -28,8 +28,8 @@ export default () => {
       />
       <Divider height="50px" />
       <Row>
-        {data.why.edges.map(i => (
-          <Column size="4">
+        {data.why.edges.map((i, index) => (
+          <Column size="4" key={index}>
             <RoundImage url={i.node.image} bsize="cover" mb="10px" height="200px" border="1.25rem"></RoundImage>
             <Row align="around" marginTop="20px">
               <Column size size="2" customRespSize respSize="2" alignSelf="center">

@@ -26,8 +26,8 @@ export default () => {
       `)
     return (
         <Row>
-            {data.job.edges.map(i => (
-                <Column size="4">
+            {data.job.edges.map((i, index) => (
+                <Column size="4" key={index}>
                     <Card
                         width="100%"
                         height="125px"
