@@ -1,8 +1,8 @@
 import React, {createContext, useState, useEffect} from "react";
 import publicIp from 'public-ip';
-const ip = require('ip');
+// const ip = require('ip');
 // import Address6 from 'ip-address'
-const Address4 = require('ip-address').Address4;
+// const Address4 = require('ip-address').Address4;
 // const publicIp = require('public-ip');
 const defaultSession = {
     v6: null,
