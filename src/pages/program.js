@@ -24,26 +24,26 @@ const options = [
   {value: 'maracaibo', label: 'Maracaibo'},
 ];
 const Program = ({data}) => {
-  const [ip, setIp] = useState();
-  const [location, setLocation] = useState();
+  // const [ip, setIp] = useState();
+  // const [location, setLocation] = useState();
   const [weeks, setWeeks] = useState();
-  const publicIp = require("public-ip");
+  // const publicIp = require("public-ip");
 
-  (async () => {
-    setIp(await publicIp.v4());
-    //=> '46.5.21.123'
+  // (async () => {
+  //   setIp(await publicIp.v4());
+  //   //=> '46.5.21.123'
 
-    // setIp(await publicIp.v6());
-    //=> 'fe80::200:f8ff:fe21:67cf'
-  })();
-  useEffect(async () => {
-    await fetch(
-      'http://api.ipstack.com/' + ip + '?access_key=9b1771a432a0ca7c933a9a641b63bb00',
-    )
-      .then(response => response.json())
-      .then(data => setLocation(data))
-    // console.log("ghfhg", location.region_name)
-  }, []);
+  //   // setIp(await publicIp.v6());
+  //   //=> 'fe80::200:f8ff:fe21:67cf'
+  // })();
+  // useEffect(async () => {
+  //   await fetch(
+  //     'http://api.ipstack.com/' + ip + '?access_key=9b1771a432a0ca7c933a9a641b63bb00',
+  //   )
+  //     .then(response => response.json())
+  //     .then(data => setLocation(data))
+  //   // console.log("ghfhg", location.region_name)
+  // }, []);
   return (
     <Layout>
 

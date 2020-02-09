@@ -37,12 +37,12 @@ export const withSession = Component => {
                 // const latitude = "lat"
                 // const v6 = await publicIp.v6();
                 setSession({...session, v6, v4});
-                const response = await fetch(`http://api.ipstack.com/${session.v4}?access_key=9b1771a432a0ca7c933a9a641b63bb00`);
-                const data = await response.json();
-                console.log("data", data.latitude)
-                const latitude = data.latitude;
-                const longitude = data.longitude;
-                setSession({...session, latitude, longitude})
+                // const response = await fetch(`http://api.ipstack.com/${session.v4}?access_key=9b1771a432a0ca7c933a9a641b63bb00`);
+                // const data = await response.json();
+                // console.log("data", data.latitude)
+                // const latitude = data.latitude;
+                // const longitude = data.longitude;
+                // setSession({...session, latitude, longitude})
             };
             loadIp();
         }, []);
