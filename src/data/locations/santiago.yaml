@@ -1,0 +1,19 @@
+city: "Santiago de Chile"
+slug: "santiago-chile"
+name: "Santiago"
+latitude: "-33.408837"
+longitude: "-70.567958"
+address: "Apoquindo 5950 las condes."
+zip_code: ""
+state: ""
+country: "Chile"
+images:
+  - ""
+  - ""
+  - ""
+courses:
+  - "Full-Time"
+  - "Part-Time"
+contacts:
+  - ""
+  - ""

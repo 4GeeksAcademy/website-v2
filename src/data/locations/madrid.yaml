@@ -1,0 +1,19 @@
+city: "Madrid"
+slug: "madrid"
+name: "Madrid"
+latitude: "40.439769"
+longitude: "-3680207"
+address: "Calle López de Hoyos 42"
+zip_code: ""
+state: ""
+country: "Spain"
+images:
+  - ""
+  - ""
+  - ""
+courses:
+  - "Full-Time"
+  - "Part-Time"
+contacts:
+  - ""
+  - ""

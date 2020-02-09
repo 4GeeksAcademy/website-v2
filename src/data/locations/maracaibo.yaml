@@ -1,0 +1,19 @@
+city: "Maracaibo"
+slug: "maracaibo"
+name: "Maracaibo"
+latitude: "10.664500"
+longitude: "-71.617705"
+address: ""
+zip_code: ""
+state: ""
+country: "Venezuela"
+images:
+  - ""
+  - ""
+  - ""
+courses:
+  - "Full-Time"
+  - "Part-Time"
+contacts:
+  - ""
+  - ""

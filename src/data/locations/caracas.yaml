@@ -1,10 +1,14 @@
 city: "Caracas"
+slug: "impact-hub"
+name: "Impact Hub"
+latitude: "10.484845"
+longitude: "-66.826593"
 address: "Sede Principal de El Nacional."
 zip_code: ""
 state: "Los Cortijos de Lourdes"
 country: "Venezuela"
 images:
-  - "../affinity-logo.png"
+  - ""
   - ""
   - ""
 courses:
