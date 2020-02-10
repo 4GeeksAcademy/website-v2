@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Column} from '../Sections';
 import {Paragraph} from '../Heading';
 import {Colors} from '../Styling';
 import Select from 'react-select';
+import {SessionContext} from '../../session'
 
 const options = [
     {value: 'chocolate', label: 'Chocolate'},
@@ -13,28 +14,28 @@ const options = [
 ];
 
 const ProgramSelector = () => {
+
     const data = useStaticQuery(graphql`
       query myQueryProgram{
           loc: allLocationsYaml{
             edges{
               node{
-                state
+                city
+                slug
+                name
+                latitude
+                longitude
+                country
               }
             }
           }
         }
       `)
-    const [ip, setIp] = useState("ciao");
+    const {session, setSession} = useContext(SessionContext);
     const [location, setLocation] = useState();
     const [weeks, setWeeks] = useState();
 
-    useEffect(() => {
-        fetch(
-            'http://api.ipstack.com/99.159.57.33?access_key=9b1771a432a0ca7c933a9a641b63bb00',
-        )
-            .then(response => response.json())
-            .then(data => setLocation(data))
-    }, []);
+    console.log(data.loc.edges)
     return (
         <Row>
             <Column size="12">
@@ -42,16 +43,21 @@ const ProgramSelector = () => {
                     <Column size="1" align="center"><Paragraph color={Colors.black} >It takes just </Paragraph></Column>
                     <Column size="1" align="center">
                         <Select
-                            value={weeks}
+
+                            value={session.location}
                             onChange={e => setWeeks(e.target.value)}
-                            options={options}
+                            options={data.loc.edges}
                         />
                     </Column>
                     <Column size="1" align="center"><Paragraph color={Colors.black} >weeks in</Paragraph></Column>
-                    <Column size="1" align="center">
-                        <Paragraph color={Colors.black} >
-
-                        </Paragraph></Column>
+                    <Column size="2" align="center">
+                        <Select
+                            defaultInputValue={session.location}
+                            className="testy"
+                            onChange={e => setWeeks(e.target.value)}
+                            // value={location != undefined && location.region_name === "Florida" && "Miami"}
+                            options={options}
+                        /></Column>
                     <Column size="1" align="center"><Paragraph color={Colors.black} >to become a</Paragraph></Column>
                 </Row>
                 <Row></Row>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import Layout from '../global/Layout';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
@@ -14,7 +14,8 @@ import Select from 'react-select';
 import Events from '../components/Events'
 import Scrollspy from 'react-scrollspy'
 import '../assets/css/style.scss'
-
+import {SessionContext} from '../session.js'
+import ProgramSelector from '../components/ProgramSelector'
 
 const options = [
   {value: 'miami', label: 'Miami'},
@@ -24,29 +25,12 @@ const options = [
   {value: 'maracaibo', label: 'Maracaibo'},
 ];
 const Program = ({data}) => {
-  // const [ip, setIp] = useState();
-  // const [location, setLocation] = useState();
+  // const {session, setSession} = useContext(SessionContext);
+  const [test, setTest] = useState()
   const [weeks, setWeeks] = useState();
-  // const publicIp = require("public-ip");
-
-  // (async () => {
-  //   setIp(await publicIp.v4());
-  //   //=> '46.5.21.123'
-
-  //   // setIp(await publicIp.v6());
-  //   //=> 'fe80::200:f8ff:fe21:67cf'
-  // })();
-  // useEffect(async () => {
-  //   await fetch(
-  //     'http://api.ipstack.com/' + ip + '?access_key=9b1771a432a0ca7c933a9a641b63bb00',
-  //   )
-  //     .then(response => response.json())
-  //     .then(data => setLocation(data))
-  //   // console.log("ghfhg", location.region_name)
-  // }, []);
   return (
     <Layout>
-
+      <ProgramSelector />
       <Wrapper
         style="default"
         image="yes"
@@ -57,30 +41,30 @@ const Program = ({data}) => {
       >
         <Divider height="100px" />
 
-        {location != undefined &&
-          <Row align="center" >
-            <Column size="9" alignSelf="center">
-              <Row>
-                <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px"> It takes just</Paragraph></Column>
-                <Column size="3" alignSelf="center">
-                  <Paragraph color={Colors.white} fontSize="16px">
-                    <Select
-                      defaultInputValue="9"
-                    />
-                  </Paragraph>
-                </Column>
-                <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px">weeks in</Paragraph></Column>
-                <Column size="3" alignSelf="center"><Select
-                  defaultInputValue={"Miami"}
-                  className="testy"
-                  onChange={e => setWeeks(e.target.value)}
-                  // value={location != undefined && location.region_name === "Florida" && "Miami"}
-                  options={options}
-                /></Column>
-                <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px">to become a</Paragraph></Column>
-              </Row>
-            </Column>
-          </Row>}
+
+        <Row align="center" >
+          <Column size="9" alignSelf="center">
+            <Row>
+              <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px"> hhhhh</Paragraph></Column>
+              <Column size="3" alignSelf="center">
+                <Paragraph color={Colors.white} fontSize="16px">
+                  <Select
+                    defaultInputValue="9"
+                  />
+                </Paragraph>
+              </Column>
+              <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px">weeks in</Paragraph></Column>
+              <Column size="3" alignSelf="center"><Select
+                defaultInputValue={"Miami"}
+                className="testy"
+                onChange={e => setWeeks(e.target.value)}
+                // value={location != undefined && location.region_name === "Florida" && "Miami"}
+                options={options}
+              /></Column>
+              <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px">to become a</Paragraph></Column>
+            </Row>
+          </Column>
+        </Row>
         <Divider height="20px" />
         <Title
           size="5"

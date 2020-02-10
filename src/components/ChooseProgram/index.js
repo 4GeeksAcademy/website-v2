@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import Dropdown from 'react-bootstrap/Dropdown'
 import styled from 'styled-components';
+import {SessionContext} from '../../session';
 
 const ChooseProgram = () => {
+    const {session, setSession} = useContext(SessionContext)
     const [option, setOption] = useState([
         {value: 'chocolate', label: 'Chocolate'},
         {value: 'strawberry', label: 'Strawberry'},

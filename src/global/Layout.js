@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import NavB from '../components/Navbar'
 import Footer from '../components/Footer'
 import {StaticQuery, graphql} from 'gatsby';
-import {withSession} from "../session";
+import {withSession} from "../session.js";
 
 import GlobalStyle from './GlobalStyle';
 
@@ -50,4 +50,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default withSession(Layout);
