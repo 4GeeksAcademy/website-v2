@@ -1,61 +1,89 @@
 partners:
   - name: "Razz"
     image: "../razz-logo.png"
+    featured: false
   - name: "Boats Group"
     image: "../boats-logo.jpg"
+    featured: false
   - name: "Gaisce Group "
     image: "../gaisce-logo.jpg"
+    featured: false
   - name: "Tcg"
     image: "../tcg-logo.png"
+    featured: false
   - name: "Launch Potato"
     image: "../launch-logo.png"
+    featured: false
   - name: "DS9"
     image: "../ds9-logo.png"
+    featured: false
   - name: "Overseas"
     image: "../overseas-logo.png"
+    featured: false
   - name: "Affinity"
     image: "../affinity-logo.png"
+    featured: false
   - name: "Digitel"
     image: "../digitel-logo.png"
+    featured: false
   - name: "Bod"
     image: "../bod-logo.jpg"
+    featured: false
   - name: "Coinet"
     image: "../coinet-logo.jpg"
+    featured: false
 coding:
   - name: "Beacon"
     image: "../images/coding/beacon.png"
+    featured: false
   - name: "Boats Group"
     image: "../images/coding/blockchain.png"
+    featured: false
   - name: "Gaisce Group "
     image: "../images/coding/bloktech.png"
+    featured: false
   - name: "Tcg"
     image: "../images/coding/startup.png"
+    featured: false
   - name: "Launch Potato"
     image: "../images/coding/shell-hacks.png"
+    featured: false
   - name: "DS9"
     image: "../images/coding/wegacha.png"
+    featured: false
   - name: "Overseas"
     image: "../images/coding/worldcamp.png"
+    featured: false
 
 influencers:
   - name: "Razz"
     image: "../images/quotanda-logo.png"
+    featured: false
   - name: "Boats Group"
     image: "../images/climb-logo.png"
+    featured: false
   - name: "Gaisce Group "
     image: "../images/skill-logo.png"
+    featured: false
   - name: "Tcg"
     image: "../images/influencers/dda.png"
+    featured: false
   - name: "Launch Potato"
     image: "../images/influencers/miami-dade.png"
+    featured: false
   - name: "DS9"
     image: "../images/influencers/starhub.png"
+    featured: false
   - name: "Overseas"
     image: "../images/influencers/career-score.png"
+    featured: false
 financials:
   - name: "Quotanda"
     image: "../images/quotanda-logo.png"
+    featured: false
   - name: "Climb"
     image: "../images/climb-logo.png"
+    featured: false
   - name: "Skill Fund"
     image: "../images/skill-logo.png"
+    featured: false

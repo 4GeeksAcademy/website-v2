@@ -37,11 +37,11 @@ const ProgramSelector = () => {
 
     console.log(data.loc.edges)
     return (
-        <Row>
-            <Column size="12">
+        <Row align="" center>
+            <Column size="12" alignSelf="center">
                 <Row>
-                    <Column size="1" align="center"><Paragraph color={Colors.black} >It takes just </Paragraph></Column>
-                    <Column size="1" align="center">
+                    <Column size="2" align="center"><Paragraph color={Colors.black} >It takes just </Paragraph></Column>
+                    <Column size="3" align="center">
                         <Select
 
                             value={session.location}
@@ -49,8 +49,8 @@ const ProgramSelector = () => {
                             options={data.loc.edges}
                         />
                     </Column>
-                    <Column size="1" align="center"><Paragraph color={Colors.black} >weeks in</Paragraph></Column>
-                    <Column size="2" align="center">
+                    <Column size="2" align="center"><Paragraph color={Colors.black} >weeks in</Paragraph></Column>
+                    <Column size="3" align="center">
                         <Select
                             defaultInputValue={session.location}
                             className="testy"
@@ -58,7 +58,7 @@ const ProgramSelector = () => {
                             // value={location != undefined && location.region_name === "Florida" && "Miami"}
                             options={options}
                         /></Column>
-                    <Column size="1" align="center"><Paragraph color={Colors.black} >to become a</Paragraph></Column>
+                    <Column size="2" align="center"><Paragraph color={Colors.black} >to become a</Paragraph></Column>
                 </Row>
                 <Row></Row>
                 <Row></Row>

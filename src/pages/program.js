@@ -30,7 +30,6 @@ const Program = ({data}) => {
   const [weeks, setWeeks] = useState();
   return (
     <Layout>
-      <ProgramSelector />
       <Wrapper
         style="default"
         image="yes"
@@ -42,7 +41,8 @@ const Program = ({data}) => {
         <Divider height="100px" />
 
 
-        <Row align="center" >
+        <ProgramSelector />
+        {/* <Row align="center" >
           <Column size="9" alignSelf="center">
             <Row>
               <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px"> hhhhh</Paragraph></Column>
@@ -64,7 +64,7 @@ const Program = ({data}) => {
               <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px">to become a</Paragraph></Column>
             </Row>
           </Column>
-        </Row>
+        </Row> */}
         <Divider height="20px" />
         <Title
           size="5"

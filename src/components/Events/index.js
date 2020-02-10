@@ -42,7 +42,6 @@ const Events = () => {
     }, []);
     let today = new Date();
     let newEventArray = event.filter((item) => new Date(item.event_date).getTime() >= today.getTime())
-    console.log("####", newEventArray)
     return (
         <>
             <Carousel showIndicators={false} showThumbs={false} showStatus={false}>
@@ -58,7 +57,6 @@ const Events = () => {
                                     marginLeft="0"
                                     marginRight="0"
                                     customRespSize
-
                                 >
                                     <Column size="5" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                                         <Row align="center" height="100%">
