@@ -107,6 +107,7 @@ export const withSession = Component => {
                 const response = await fetch(`http://api.ipstack.com/${session.v4}?access_key=9b1771a432a0ca7c933a9a641b63bb00`);
                 const data = response.status === 200 && await response.json();
                 const location = closestLoc(locationsArray, data.latitude, data.longitude)
+                console.log("location: ", location)
                 setSession({...session, v4, v6, location})
             };
             loadIp();
