@@ -25,7 +25,7 @@ const NavB = ({siteTitle, menuLinks}) => {
     const toggle = () => setIsOpen(!isOpen);
     return (
         <Navbar color="light" className="navbar sticky-top navbar-expand-lg navbar-light bg-white py-0 px-3" light expand="md">
-            <NavbarBrand href="/"><img src="../images/logo.png" width="50" height="40" alt="" /></NavbarBrand>
+            <NavbarBrand href="/"><img src="../images/4G_logo_negro.png" width="70" alt="" /></NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} className="mb-2 text-center" navbar>
                 <Nav className="mr-auto" style={{display: "flex", justifyContent: "center", flex: 1}} navbar>
