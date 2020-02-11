@@ -19,3 +19,15 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
+value: "Maracaibo"
+defaultLanguage: "es"
+hasFinancialsOption: false
+prices:
+  - full-time:
+    upfront: ""
+    message: "Pay upfront and get a discount or ask for a 2 payment options"
+    duration: "9 Weeks"
+  - part-time:
+    upfront: ""
+    message: "Pay upfront and get a discount or ask for a 2 payment options"
+    duration: "16 Weeks"

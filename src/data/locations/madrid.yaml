@@ -2,7 +2,7 @@ city: "Madrid"
 slug: "madrid"
 name: "Madrid"
 latitude: "40.439769"
-longitude: "-3680207"
+longitude: "-3.680207"
 address: "Calle López de Hoyos 42"
 zip_code: ""
 state: ""
@@ -19,3 +19,59 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
+value: "Madrid"
+defaultLanguage: "es"
+hasFinancialsOption: false
+prices:
+  - full-time:
+    upfront: "5.999,00€"
+    slug: ""
+    message: ""
+    duration: "9 Weeks"
+    financed:
+      - months: "6"
+        payment: ""
+        paymentInfo:
+          - en: "per month + € deposit"
+            es: "al mes + € depósito"
+        provider: "Quotanda"
+        logo: "../images/quotanda-logo.png"
+        message:
+          - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+      - months: "12"
+        payment: ""
+        paymentInfo:
+          - en: "per month + € deposit"
+            es: "al mes + € depósito"
+        provider: "Quotanda"
+        logo: "../images/quotanda-logo.png"
+        message:
+          - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+  - part-time:
+    upfront: "5.499,00€"
+    slug: ""
+    message: ""
+    duration: "16 Weeks"
+    financed:
+      - months: "6"
+        payment: "€"
+        paymentInfo:
+          - en: "per month + € deposit"
+            es: "al mes +  depósito"
+        provider: "Quotanda"
+        logo: "../images/quotanda-logo.png"
+        message:
+          - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+      - months: "12"
+        payment: "€"
+        paymentInfo:
+          - en: "per month + € deposit"
+            es: "al mes + € depósito"
+        provider: "Quotanda"
+        logo: "../images/quotanda-logo.png"
+        message:
+          - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
