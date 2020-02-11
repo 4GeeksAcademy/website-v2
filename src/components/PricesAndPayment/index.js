@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
@@ -13,25 +13,24 @@ import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import VideoLabelIcon from '@material-ui/icons/VideoLabel';
 import Check from '@material-ui/icons/Check';
 import {Link} from 'gatsby';
-
-
-
 import Typography from '@material-ui/core/Typography';
-import {Row, Column} from '../Sections';
+import {Row, Column, Divider} from '../Sections';
 import {Card} from '../Card';
-import {H2, H3, H4, H5, Paragraph} from '../Heading';
+import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage} from '../Styling';
 import '../../assets/css/style.scss';
-import Switch from "react-switch";
+import {SessionContext} from '../../session'
 
 
 
 export default () => {
+  const {session, setSession} = useContext(SessionContext);
   const [checked, setChecked] = useState(false)
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
   const steps = getSteps();
+
   const handleChange = (checked) => {
     setChecked(checked)
   }
@@ -82,16 +81,6 @@ export default () => {
               }
             }
         }
-        alumni:   allAlumniYaml{
-          edges{
-            node{
-              name
-              image
-              content
-              title
-            }
-          }
-        }
       cred: allFinancialsYaml{
         edges{
             node{
@@ -105,12 +94,44 @@ export default () => {
                 description
             }
         }
-    }}
+    }
+    test: allLocationsYaml{
+      edges{
+        node{
+          city
+          slug
+          latitude
+          longitude
+          country
+          defaultLanguage
+          hasFinancialsOption
+          prices{
+            upfront
+            message
+            slug
+            duration
+            financed{
+              provider
+              message{
+                en
+                es
+              }
+              payment
+              paymentInfo{
+                en
+                es
+              }
+              logo
+            }
+          }
+        }
+      }
+    }
+  }
     `)
   let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
   let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
   let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
-  console.log("tempQ", tempQ)
   function getStepContent (step) {
     switch (step) {
       case 0:
@@ -186,152 +207,248 @@ export default () => {
   return (
     <>
       {/* 3 COLUMNS LAYOUT */}
-      <Row align="center">
-        <Column size="4" customRespSize respSize="12">
-          <Card shadow width="100%" height="350px" margin="5px 0">
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
-                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="40px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Column size="8" alignSelf="center" >
-                    <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="110px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <H3 align="center" >$6,999</H3>
-                    <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" align="center">
-                    <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-          </Card>
-        </Column>
-        <Column size="4" customRespSize respSize="12">
-          <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>EXTENDED</H4></Row>
-                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>PAYMENT PLAN</H4></Row>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="50px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Column size="8" alignSelf="center" >
-                    <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="50px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>
-                    <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep)}</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="80px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
-                    {steps.map((label, index) => (
-                      <Step key={label}>
-                        <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
-                          <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
-                        </StepButton>
-                      </Step>
-                    ))}
-                  </Stepper>
-                </Row>
-                <Row align="center" height="40px">
-                  <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="120px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" align="center">
-                    <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-          </Card>
-        </Column>
-        <Column size="4" customRespSize respSize="12">
-          <Card shadow width="100%" height="350px" margin="5px 0">
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY ONLY AFTER</H4></Row>
-                    <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="40px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Column size="8" alignSelf="center" >
-                    <Paragraph align="center" fontSize="13px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="110px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <H3 align="center" >$134.99</H3>
-                    <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>per month</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" align="center">
-                    <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-          </Card>
-        </Column>
-      </Row>
+      <Title
+        size="10"
+        title="PRICING AND FINANCING"
+        paragraph={session.location}
+        primary
+      />
+      <Divider height="50px" />
+      {session.location === "Miami" ?
+        <Row align="center">
+          <Column size="4" customRespSize respSize="12">
+            <Card shadow width="100%" height="350px" margin="5px 0">
+              <Row height="100px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="40px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" align="center">
+                    <Column size="8" alignSelf="center" >
+                      <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="110px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <H3 align="center" >$6,999</H3>
+                      <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="100px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" align="center">
+                      <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+            </Card>
+          </Column>
+          <Column size="4" customRespSize respSize="12">
+            <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
+              <Row height="100px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>EXTENDED</H4></Row>
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>PAYMENT PLAN</H4></Row>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="50px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" align="center">
+                    <Column size="8" alignSelf="center" >
+                      <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="50px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>
+                      <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep)}</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="80px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" align="center">
+                    <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
+                      {steps.map((label, index) => (
+                        <Step key={label}>
+                          <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
+                            <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+                          </StepButton>
+                        </Step>
+                      ))}
+                    </Stepper>
+                  </Row>
+                  <Row align="center" height="40px">
+                    <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="120px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" align="center">
+                      <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+            </Card>
+          </Column>
+          <Column size="4" customRespSize respSize="12">
+            <Card shadow width="100%" height="350px" margin="5px 0">
+              <Row height="100px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY ONLY AFTER</H4></Row>
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="40px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" align="center">
+                    <Column size="8" alignSelf="center" >
+                      <Paragraph align="center" fontSize="13px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="110px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <H3 align="center" >$134.99</H3>
+                      <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>per month</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="100px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" align="center">
+                      <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+            </Card>
+          </Column>
+        </Row>
+        :
+        <Row align="center">
+          <Column size="4" customRespSize respSize="12">
+            <Card shadow width="100%" height="350px" margin="5px 0">
+              <Row height="100px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="40px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" align="center">
+                    <Column size="8" alignSelf="center" >
+                      <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="110px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <H3 align="center" >$6,999</H3>
+                      <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="100px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" align="center">
+                      <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+            </Card>
+          </Column>
+
+          <Column size="4" customRespSize respSize="12">
+            <Card shadow width="100%" height="350px" margin="5px 0">
+              <Row height="100px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY ONLY AFTER</H4></Row>
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="40px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" align="center">
+                    <Column size="8" alignSelf="center" >
+                      <Paragraph align="center" fontSize="13px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="110px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" >
+                      <H3 align="center" >$134.99</H3>
+                      <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>per month</Paragraph>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+              <Row height="100px" >
+                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                  <Row height="100%" >
+                    <Column size="12" alignSelf="center" align="center">
+                      <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
+                    </Column>
+                  </Row>
+                </Column>
+              </Row>
+            </Card>
+          </Column>
+        </Row>}
     </>
   )
 }
@@ -344,7 +461,7 @@ const QontoConnector = withStyles({
   },
   active: {
     '& $line': {
-      borderColor: Colors.yellow,
+      borderColor: Colors.yelwhitelow,
     },
   },
   completed: {

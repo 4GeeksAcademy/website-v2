@@ -14,7 +14,7 @@ const Locations = props => {
             edges {
               node {
                 courses
-                images
+                
               }
             }
           }
@@ -33,7 +33,7 @@ const Locations = props => {
           <Carousel>
             {data.loc.edges.map((loc, i) => (
               <div key={i} className="col-md-4 ">
-                <img src={loc.node.images[0]} width="100%" height="150" />
+                <img src={loc.node.location_office_image} width="100%" height="150" />
               </div>
             ))}
           </Carousel>

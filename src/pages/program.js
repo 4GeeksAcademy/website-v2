@@ -25,11 +25,15 @@ const options = [
   {value: 'maracaibo', label: 'Maracaibo'},
 ];
 const Program = ({data}) => {
-  // const {session, setSession} = useContext(SessionContext);
+
+  // const _cont = useContext(SessionContext);
+  // console.log("sadasdasd ", _cont);
+
   const [test, setTest] = useState()
   const [weeks, setWeeks] = useState();
   return (
     <Layout>
+      {/* {session.location} */}
       <Wrapper
         style="default"
         image="yes"
@@ -39,32 +43,7 @@ const Program = ({data}) => {
         backgroundSize="cover"
       >
         <Divider height="100px" />
-
-
         <ProgramSelector />
-        {/* <Row align="center" >
-          <Column size="9" alignSelf="center">
-            <Row>
-              <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px"> hhhhh</Paragraph></Column>
-              <Column size="3" alignSelf="center">
-                <Paragraph color={Colors.white} fontSize="16px">
-                  <Select
-                    defaultInputValue="9"
-                  />
-                </Paragraph>
-              </Column>
-              <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px">weeks in</Paragraph></Column>
-              <Column size="3" alignSelf="center"><Select
-                defaultInputValue={"Miami"}
-                className="testy"
-                onChange={e => setWeeks(e.target.value)}
-                // value={location != undefined && location.region_name === "Florida" && "Miami"}
-                options={options}
-              /></Column>
-              <Column size="2" alignSelf="center"><Paragraph color={Colors.white} fontSize="14px">to become a</Paragraph></Column>
-            </Row>
-          </Column>
-        </Row> */}
         <Divider height="20px" />
         <Title
           size="5"
@@ -89,21 +68,14 @@ const Program = ({data}) => {
         <li><a className="nav-item nav-link side" href="#section-1" >MEMBERSHIPS</a></li>
         <li><a className="nav-item nav-link side" href="#section-2">PROGRAM</a></li>
         <li><a className="nav-item nav-link side" href="#section-3">4GEEKS vs OTHERS</a></li>
-        <li><a className="nav-item nav-link side" href="#section-4">MENTORS</a></li>
-        <li><a className="nav-item nav-link side" href="#section-5">PRICING</a></li>
-        <li><a className="nav-item nav-link side" href="#section-6">TYPICAL DAY</a></li>
-        <li><a className="nav-item nav-link side" href="#section-7">THE ALUMNI</a></li>
+        <li><a className="nav-item nav-link side" href="#section-4">PRICING</a></li>
+        {/* <li><a className="nav-item nav-link side" href="#section-5">TYPICAL DAY</a></li> */}
+        <li><a className="nav-item nav-link side" href="#section-6">THE ALUMNI</a></li>
       </Scrollspy>
-      {/* <Wrapper
-        style="default"
-      >
-        <Divider height="40px" />
-        <section className="section" id="section-1"></section> */}
       <section className="section" id="section-1"></section>
       <Container fluid>
         <Row>
           <Column size="2">
-
           </Column>
           <Column size="7">
             <Row >
@@ -183,7 +155,6 @@ const Program = ({data}) => {
         style="custom"
         full
       >
-        <section className="section" id="section-2"></section>
         <Title
           size="10"
           title="PROGRAM DETAILS"
@@ -191,6 +162,7 @@ const Program = ({data}) => {
         />
         <Divider height="50px" />
         <ProgramDescription />
+        <section className="section" id="section-2"></section>
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
@@ -207,29 +179,17 @@ const Program = ({data}) => {
         <GeeksVsOthers />
         <Divider height="100px" />
       </Wrapper>
+
       <Wrapper
         style="default"
       >
-        <Title
-          size="10"
-          title="GET TRAINED BY SENIOR MENTORS"
-          primary
-        />
-        <section className="section" id="section-4"></section>
-        <Divider height="50px" />
-        <Mentors />
-        <Divider height="100px" />
-      </Wrapper>
-      <Wrapper
-        style="default"
-      >
-        <Title
+        {/* <Title
           size="10"
           title="PRICING AND FINANCING"
           primary
         />
-        <Divider height="50px" />
-        <section className="section" id="section-5"></section>
+        <Divider height="50px" /> */}
+        <section className="section" id="section-4"></section>
         <PricesAndPayment />
         <Divider height="100px" />
       </Wrapper>
@@ -243,7 +203,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
-        <section className="section" id="section-6"></section>
+        <section className="section" id="section-5"></section>
         <Divider height="100px" />
       </Wrapper> */}
       <Wrapper
@@ -256,7 +216,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
-        <section className="section" id="section-7"></section>
+        <section className="section" id="section-6"></section>
         <Alumni />
         <Divider height="100px" />
       </Wrapper>

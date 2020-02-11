@@ -63,12 +63,7 @@ const Pricing = () => (
       border="top"
     >
       <Divider height="100px" />
-      <Title
-        size="10"
-        title="PRICING AND FINANCING"
-        primary
-      />
-      <Divider height="50px" />
+
       <PricesAndPayment />
     </Wrapper>
     <Divider height="100px" />

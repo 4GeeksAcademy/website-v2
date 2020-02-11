@@ -6,5 +6,5 @@ options:
   - months: "60"
     payment: "$152.55"
     paymentParagraph: "per month + $0 deposit"
-logo: "../images/climb-logo.png"
+logo: "../images/climb_logo.png"
 description: "Thanks to our partnership with Climb we have managed to create a new special payment plant starting at $135/mo"
