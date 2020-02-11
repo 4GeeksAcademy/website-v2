@@ -7,13 +7,15 @@ address: "1801 SW 18th Road"
 zip_code: "33130"
 state: "Florida"
 country: "usa"
-images:
-  - ""
-  - ""
-  - ""
 courses:
   - "Full-Time"
   - "Part-Time"
-contacts:
-  - "(786) 808-5655"
-  - info@4geeksacademy.com
+active_campaign_location_slug: ""
+flag_icon: ""
+breathecode_location_slug: ""
+location_map: ""
+location_phone_number: ""
+location_office_image: ""
+location_office_image2: ""
+location_office_image3: ""
+should_know: ""
