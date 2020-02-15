@@ -23,11 +23,15 @@ value: "Maracaibo"
 defaultLanguage: "es"
 hasFinancialsOption: false
 prices:
-  - full-time:
-    upfront: ""
-    message: "Pay upfront and get a discount or ask for a 2 payment options"
-    duration: "9 Weeks"
-  - part-time:
-    upfront: ""
-    message: "Pay upfront and get a discount or ask for a 2 payment options"
-    duration: "16 Weeks"
+  full-time:
+    - full-time:
+      slug: "full-time"
+      upfront: ""
+      message: "Pay upfront and get a discount or ask for a 2 payment options"
+      duration: "9 Weeks"
+  part-time:
+    - part-time:
+      slug: "part-time"
+      upfront: ""
+      message: "Pay upfront and get a discount or ask for a 2 payment options"
+      duration: "16 Weeks"

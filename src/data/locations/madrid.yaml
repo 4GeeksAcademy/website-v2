@@ -23,55 +23,57 @@ value: "Madrid"
 defaultLanguage: "es"
 hasFinancialsOption: false
 prices:
-  - full-time:
-    upfront: "5.999,00€"
-    slug: ""
-    message: ""
-    duration: "9 Weeks"
-    financed:
-      - months: "6"
-        payment: ""
-        paymentInfo:
-          - en: "per month + € deposit"
-            es: "al mes + € depósito"
-        provider: "Quotanda"
-        logo: "../images/quotanda-logo.png"
-        message:
-          - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
-      - months: "12"
-        payment: ""
-        paymentInfo:
-          - en: "per month + € deposit"
-            es: "al mes + € depósito"
-        provider: "Quotanda"
-        logo: "../images/quotanda-logo.png"
-        message:
-          - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
-  - part-time:
-    upfront: "5.499,00€"
-    slug: ""
-    message: ""
-    duration: "16 Weeks"
-    financed:
-      - months: "6"
-        payment: "€"
-        paymentInfo:
-          - en: "per month + € deposit"
-            es: "al mes +  depósito"
-        provider: "Quotanda"
-        logo: "../images/quotanda-logo.png"
-        message:
-          - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
-      - months: "12"
-        payment: "€"
-        paymentInfo:
-          - en: "per month + € deposit"
-            es: "al mes + € depósito"
-        provider: "Quotanda"
-        logo: "../images/quotanda-logo.png"
-        message:
-          - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+  full-time:
+    - full-time:
+      upfront: "5.999,00€"
+      slug: "full-time"
+      message: ""
+      duration: "9 Weeks"
+      financed:
+        - months: "6"
+          payment: ""
+          paymentInfo:
+            - en: "per month + € deposit"
+              es: "al mes + € depósito"
+          provider: "Quotanda"
+          logo: "../images/quotanda-logo.png"
+          message:
+            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+        - months: "12"
+          payment: ""
+          paymentInfo:
+            - en: "per month + € deposit"
+              es: "al mes + € depósito"
+          provider: "Quotanda"
+          logo: "../images/quotanda-logo.png"
+          message:
+            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+  part-time:
+    - part-time:
+      upfront: "5.499,00€"
+      slug: "part-time"
+      message: ""
+      duration: "16 Weeks"
+      financed:
+        - months: "6"
+          payment: "€"
+          paymentInfo:
+            - en: "per month + € deposit"
+              es: "al mes +  depósito"
+          provider: "Quotanda"
+          logo: "../images/quotanda-logo.png"
+          message:
+            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+        - months: "12"
+          payment: "€"
+          paymentInfo:
+            - en: "per month + € deposit"
+              es: "al mes + € depósito"
+          provider: "Quotanda"
+          logo: "../images/quotanda-logo.png"
+          message:
+            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
