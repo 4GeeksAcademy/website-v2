@@ -80,9 +80,6 @@ export const withSession = Component => {
                 const data = response.status === 200 ? await response.json() : null;
                 // const location = data ? closestLoc(locationsArray, data.latitude, data.longitude) : null;
                 const location = "Miami"
-                console.log(
-                    "fff"
-                );
                 // const language = browserLang ? browserLang : location.defaultLanguage;
                 setSession({...session, v4, v6, location})
             };

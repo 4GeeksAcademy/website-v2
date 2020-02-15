@@ -32,8 +32,10 @@ export const Card = styled.div`
             }
             @media ${Device.xs}{
                 transform: translateY(0px);  
+                margin: ${props => props.marginXs}
             }
             @media screen ${Device.sm}{  
+                margin: ${props => props.marginSm}
             }
             @media ${Device.lg}{
                 transform: translateY(-${props.up})
