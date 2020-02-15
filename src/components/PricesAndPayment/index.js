@@ -241,7 +241,7 @@ export default () => {
       <Title
         size="10"
         title="PRICING AND FINANCING"
-        paragraph={session.location + " - " + session.default_course_type}
+        paragraph={session.location}
         primary
       />
       <Divider height="50px" />
@@ -355,7 +355,7 @@ export default () => {
                 <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                   <Row height="100%" >
                     <Column size="12" alignSelf="center" >
-                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY ONLY AFTER</H4></Row>
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].slug}</H4></Row>
                       <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
                     </Column>
                   </Row>
@@ -444,15 +444,15 @@ export default () => {
             </Column>
           </Row>
           : session.location === "Maracaibo" ?
-            <Row align="center">
+            < Row align="center">
               <Column size="4" customRespSize respSize="12">
                 <Card shadow width="100%" height="350px" margin="5px 0">
                   <Row height="100px" >
                     <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                       <Row height="100%" >
                         <Column size="12" alignSelf="center" >
-                          <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
-                          <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row>
+                          <Row align="center" height="100%" ><H4 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].slug}</H4></Row>
+                          <Row align="center" height="100%" ><H4 fontSize="22px" align="center"></H4></Row>
                         </Column>
                       </Row>
                     </Column>
@@ -461,7 +461,7 @@ export default () => {
                     <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                       <Row height="100%" align="center">
                         <Column size="8" alignSelf="center" >
-                          <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
+                          <Paragraph align="center" fontSize="14px" color={Colors.gray}></Paragraph>
                         </Column>
                       </Row>
                     </Column>
@@ -470,8 +470,8 @@ export default () => {
                     <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                       <Row height="100%" >
                         <Column size="12" alignSelf="center" >
-                          <H3 align="center" >$6,999</H3>
-                          <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
+                          <H3 align="center" >{currentCityInfo[0].node.prices.part_time[0].message}</H3>
+                          <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}></Paragraph>
                         </Column>
                       </Row>
                     </Column>
@@ -494,8 +494,8 @@ export default () => {
                     <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                       <Row height="100%" >
                         <Column size="12" alignSelf="center" >
-                          <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY ONLY AFTER</H4></Row>
-                          <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
+                          <Row align="center" height="100%" ><H4 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.full_time[0].slug}</H4></Row>
+                          <Row align="center" height="100%" ><H4 fontSize="22px" align="center"></H4></Row>
                         </Column>
                       </Row>
                     </Column>
@@ -504,7 +504,7 @@ export default () => {
                     <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                       <Row height="100%" align="center">
                         <Column size="8" alignSelf="center" >
-                          <Paragraph align="center" fontSize="13px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
+                          <Paragraph align="center" fontSize="13px" color={Colors.gray}></Paragraph>
                         </Column>
                       </Row>
                     </Column>
@@ -513,8 +513,8 @@ export default () => {
                     <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                       <Row height="100%" >
                         <Column size="12" alignSelf="center" >
-                          <H3 align="center" >$134.99</H3>
-                          <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>per month</Paragraph>
+                          <H3 align="center" >{currentCityInfo[0].node.prices.part_time[0].message}</H3>
+                          <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}></Paragraph>
                         </Column>
                       </Row>
                     </Column>
@@ -540,7 +540,7 @@ export default () => {
                         <Row height="100%" >
                           <Column size="12" alignSelf="center" >
                             <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row>
+                            <Row align="center" height="100%" ><H4 uppercase color={Colors.yellow} fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].slug}</H4></Row>
                           </Column>
                         </Row>
                       </Column>
@@ -558,7 +558,7 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" >
                           <Column size="12" alignSelf="center" >
-                            <H3 align="center" >$6,999</H3>
+                            <H3 align="center" >{currentCityInfo[0].node.prices.part_time[0].upfront}</H3>
                             <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
                           </Column>
                         </Row>
@@ -641,8 +641,8 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" >
                           <Column size="12" alignSelf="center" >
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY ONLY AFTER</H4></Row>
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
+                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
+                            <Row align="center" height="100%" ><H4 uppercase color={Colors.yellow} fontSize="22px" align="center">{currentCityInfo[0].node.prices.full_time[0].slug}</H4></Row>
                           </Column>
                         </Row>
                       </Column>
@@ -651,7 +651,7 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" align="center">
                           <Column size="8" alignSelf="center" >
-                            <Paragraph align="center" fontSize="13px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
+                            <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best price in town.</Paragraph>
                           </Column>
                         </Row>
                       </Column>
@@ -660,8 +660,8 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" >
                           <Column size="12" alignSelf="center" >
-                            <H3 align="center" >$134.99</H3>
-                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>per month</Paragraph>
+                            <H3 align="center" >{currentCityInfo[0].node.prices.full_time[0].upfront}</H3>
+                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
                           </Column>
                         </Row>
                       </Column>
@@ -686,8 +686,8 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" >
                           <Column size="12" alignSelf="center" >
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row>
+                            <Row align="center" height="100%" ><H4 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].slug}</H4></Row>
+                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center"></H4></Row>
                           </Column>
                         </Row>
                       </Column>
@@ -696,7 +696,7 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" align="center">
                           <Column size="8" alignSelf="center" >
-                            <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
+                            <Paragraph align="center" fontSize="14px" color={Colors.gray}></Paragraph>
                           </Column>
                         </Row>
                       </Column>
@@ -705,8 +705,8 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" >
                           <Column size="12" alignSelf="center" >
-                            <H3 align="center" >$6,999</H3>
-                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
+                            <H3 align="center" >{currentCityInfo[0].node.prices.part_time[0].upfront}</H3>
+                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}></Paragraph>
                           </Column>
                         </Row>
                       </Column>
@@ -729,8 +729,8 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" >
                           <Column size="12" alignSelf="center" >
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY ONLY AFTER</H4></Row>
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
+                            <Row align="center" height="100%" ><H4 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.full_time[0].slug}</H4></Row>
+                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center"></H4></Row>
                           </Column>
                         </Row>
                       </Column>
@@ -739,7 +739,7 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" align="center">
                           <Column size="8" alignSelf="center" >
-                            <Paragraph align="center" fontSize="13px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
+                            <Paragraph align="center" fontSize="13px" color={Colors.gray}></Paragraph>
                           </Column>
                         </Row>
                       </Column>
@@ -748,8 +748,8 @@ export default () => {
                       <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                         <Row height="100%" >
                           <Column size="12" alignSelf="center" >
-                            <H3 align="center" >$134.99</H3>
-                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>per month</Paragraph>
+                            <H3 align="center" >{currentCityInfo[0].node.prices.full_time[0].upfront}</H3>
+                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}></Paragraph>
                           </Column>
                         </Row>
                       </Column>
