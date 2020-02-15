@@ -217,15 +217,10 @@ const Why = () => (
       </Row>
     </Wrapper>
     <Divider height="100px" />
-    <Wrapper
-      style="default">
-      <Title
-        size="10"
-        title="UPCOMING EVENTS"
-        primary
-      />
-      <Events />
-    </Wrapper>
+
+    <Events />
+
+
     <Divider height="100px" />
   </Layout >
 );
