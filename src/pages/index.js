@@ -4,6 +4,7 @@ import Layout from '../global/Layout';
 import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
 import GeeksVsOthers from '../components/GeeksVsOthers'
+import ChooseProgram from '../components/ChooseProgram'
 import Jobs from '../components/Jobs';
 import Link from 'gatsby-link'
 import {H1, H2, H3, Title, Separator, Paragraph, Span} from '../components/Heading'
@@ -46,9 +47,7 @@ const Home = ({data}) => {
                   <Paragraph color={Colors.gray} margin="5px 0 0 0" align="left" fontSize="13px">and become a part of one of the world's biggest coding community.</Paragraph>
                 </Row>
                 <Row center>
-                  <Link to="/program">
-                    <div className="btn text-white btn-md rounded-pill jumbo-button" role="button">CHOOSE YOUR PROGRAM </div>
-                  </Link>
+                  <ChooseProgram />
                 </Row>
               </Column>
               <Column size="1" />
