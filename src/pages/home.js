@@ -47,7 +47,7 @@ const Home = ({data}) => {
                 </Row>
                 <Row center>
                   <Link to="/program">
-                    <div className="btn text-white btn-md rounded-pill jumbo-button" role="button">CHOOSE YOUR PROGRAM </div>
+                    <div className="btn btn-info btn-md rounded-pill" role="button">CHOOSE YOUR PROGRAM </div>
                   </Link>
                 </Row>
               </Column>

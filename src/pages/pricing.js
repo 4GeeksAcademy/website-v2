@@ -61,12 +61,13 @@ const Pricing = () => (
       image="no"
       color={Colors.lightGray}
       border="top"
+      height="430px"
     >
       <Divider height="100px" />
 
       <PricesAndPayment />
     </Wrapper>
-    <Divider height="100px" />
+    <Divider height="230px" />
     <Wrapper
       style="custom"
       full
