@@ -74,8 +74,9 @@ const Why = () => (
             padding="30px"
             move="up"
             up="100px"
+            marginXs="0 0 30px 0"
           >
-            <Row>
+            <Row >
               <Column size="3"><Book width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
               <Column size="8" >
                 <Row><H4 color={Colors.white}>FLIPPED CLASSROOM</H4></Row>
@@ -120,6 +121,7 @@ const Why = () => (
             padding="30px"
             move="up"
             up="100px"
+            marginXs="0 0 30px 0"
           >
             <Row>
               <Column size="3"><Users width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
