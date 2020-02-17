@@ -67,8 +67,9 @@ export const Button = styled.div`
             color:${props => props.color};
             background-color:white;
             font-family: lato, sans-serif;
-            border-radius: 50rem;
+            border-radius: ${props => props.borderRadius};
             cursor: pointer;
+            width: ${props => props.width};
             text-align: center;
             vertical-align: middle;
             display: inline-block;
@@ -94,10 +95,11 @@ export const Button = styled.div`
             font-weight: 500;
             letter-spacing: 0px;
             line-height: 1.5;
-            border-radius: 50rem;
+            border-radius: ${props => props.borderRadius};
             background-color: ${props => props.color};
             color: ${props => props.textColor};
             cursor: pointer;
+            width: ${props => props.width};
             text-align: center;
             vertical-align: middle;
             display: inline-block;
@@ -117,7 +119,9 @@ export const Button = styled.div`
 `
 Button.defaultProps = {
     padding: '.5rem .45rem',
-    fontSize: '12px'
+    fontSize: '12px',
+    width: '100%',
+    borderRadius: '50rem',
 };
 RoundImage.defaultProps = {
     width: '100%',
