@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Column} from '../Sections';
 import {Paragraph} from '../Heading';
-import {Colors, Select} from '../Styling';
+import {Colors, Select, Option, Button} from '../Styling';
 // import Select from 'react-select';
 import {SessionContext} from '../../session'
 import {makeStyles} from '@material-ui/core/styles';
@@ -11,7 +11,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 // import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import {Card} from '../Card'
 
 const useStyles = makeStyles(theme => ({
@@ -49,7 +49,11 @@ export const colourOptions = [
 ];
 
 const ProgramSelector = () => {
-
+  const {session, setSession} = useContext(SessionContext);
+  const [toggles, setToggles] = useState(false)
+  const [toggle, setToggle] = useState(false)
+  const [loc, setLoc] = useState(false);
+  const classes = useStyles();
   const data = useStaticQuery(graphql`
       query myQueryProgram{
           loc: allLocationsYaml{
@@ -114,45 +118,47 @@ const ProgramSelector = () => {
           }
         }
       `)
-  const classes = useStyles();
-  const [age, setAge] = React.useState('');
-  const [open, setOpen] = React.useState(false);
-  const {session, setSession} = useContext(SessionContext);
-  const [location, setLocation] = useState();
-  const [weeks, setWeeks] = useState(false);
-  const handleChange = event => {
-    setAge(event.target.value);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
   const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
-  console.log("$$$", currentCityInfo)
+  console.log("$$$", data.loc.edges)
   return (
     <Row align="center" >
       <Column size="8" alignSelf="center">
         <Row align="around">
           <Column size="2" alignSelf="center" margin="5px 0"><Paragraph color={Colors.white} >It takes just </Paragraph></Column>
           <Column size="1" alignSelf="center" >
-            <Select width="40px">
-              <option value="16">16</option>
-              <option value="9">9</option>
-            </Select>
+            <Card index="1" borders=".25rem" shadow width="50px" padding={toggles === false ? "0px" : "0 0 10px 0"}>
+              <Row marginRight="0" marginLeft="0" align="center"><Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} color={Colors.white} textColor={Colors.gray}>16</Button></Row>
+              {toggles == true
+                ?
+                <>
+                  <Row marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="center">
+                    <Paragraph fontSize="14px" color={Colors.gray} >9</Paragraph>
+                  </Row>
+                </>
+                :
+                null
+              }
+            </Card>
           </Column>
           <Column size="2" alignSelf="center" margin="5px 0"><Paragraph fontSize="12px" color={Colors.white} >weeks in</Paragraph></Column>
           <Column size="4" alignSelf="center">
-            <Select width="200px">
-              <option value={session.location}>{session.location}</option>
-              <option value="Madrid">Madrid</option>
-              <option value="Caracas">Caracas</option>
-              <option value="Maracibo">Maracaibo</option>
-              <option value="Santiago">Santiago de Chile</option>
-            </Select>
+            <Card index="1" borders=".25rem" shadow width="230px" padding={toggle === false ? "0px" : "0 0 10px 0"}>
+              {toggle == true ? null : <Row marginRight="0" marginLeft="0" align="center"><Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>{session.location}</Button></Row>}
+              {toggle == true
+                ?
+                <>
+                  {data.loc.edges.map((item, index) => {
+                    return (
+                      <Row onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.blue} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="center">
+                        <Paragraph fontSize="14px" color={Colors.gray} >{item.node.city}</Paragraph>
+                      </Row>
+                    )
+                  })}
+                </>
+                :
+                null
+              }
+            </Card>
           </Column>
           <Column size="2" alignSelf="center" margin="5px 0"><Paragraph color={Colors.white} >to become a</Paragraph></Column>
         </Row>
