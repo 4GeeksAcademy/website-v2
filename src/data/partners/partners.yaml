@@ -71,9 +71,6 @@ influencers:
   - name: "Launch Potato"
     image: "../images/influencers/miami-dade.png"
     featured: false
-  - name: "DS9"
-    image: "../images/influencers/starhub.png"
-    featured: false
   - name: "Overseas"
     image: "../images/influencers/career-score.png"
     featured: false

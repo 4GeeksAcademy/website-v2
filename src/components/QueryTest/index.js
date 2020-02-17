@@ -29,11 +29,14 @@ export default props => {
             {(index % 2 !== 0) ?
               (<Card
                 height="250px"
+                heightLg="200px"
                 width="200px"
+                widthLg="150px"
                 color="white"
                 shadow
                 move="up"
                 up={props.up + "px"}
+
               >
                 <div className="py-4">
                   {(i.node.credential === "Campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
@@ -49,7 +52,9 @@ export default props => {
               :
               <Card
                 height="250px"
+                heightLg="200px"
                 width="200px"
+                widthLg="150px"
                 color="white"
                 shadow
                 move="up"

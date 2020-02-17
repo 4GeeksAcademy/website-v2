@@ -37,12 +37,12 @@ const Program = ({data}) => {
       <Wrapper
         style="default"
         image="yes"
-        url="../images/program-bg.png"
+        url="../bg/program-bg.png"
         border="bottom"
         height="500px"
         backgroundSize="cover"
       >
-        <Divider height="100px" />
+        <Divider height="140px" />
         <ProgramSelector />
         <Divider height="20px" />
         <Title
@@ -56,8 +56,8 @@ const Program = ({data}) => {
 
         />
         <Row align="center">
-          <Column align="right" size="6"><Button color={Colors.white} margin="15px 0" textColor={Colors.black}>REQUEST SYLLABUS</Button></Column>
-          <Column align="left" size="6"><Button color="red" margin="15px 0" textColor=" white">APPLY NOW</Button></Column>
+          <Column align="right" size="6"><Button width="200px" color={Colors.white} margin="15px 0" textColor={Colors.black}>REQUEST SYLLABUS</Button></Column>
+          <Column align="left" size="6"><Button width="200px" color="red" margin="15px 0" textColor=" white">APPLY NOW</Button></Column>
         </Row>
       </Wrapper>
       <Wrapper
@@ -161,7 +161,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
-        <ProgramDescription />
+        {/* <ProgramDescription /> */}
         <section className="section" id="section-2"></section>
       </Wrapper>
       <Divider height="100px" />

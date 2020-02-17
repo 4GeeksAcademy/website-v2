@@ -60,6 +60,7 @@ const ProgramDescription = (props) => {
     `)
 
     let program = data.program.edges[0].node
+    console.log("program", program)
     return (
         <>
             {props.type === "part_time" ? <Card width="100%" height="400px" color="white" shadow >

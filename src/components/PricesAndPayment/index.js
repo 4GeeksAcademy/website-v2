@@ -282,7 +282,7 @@ export default () => {
                 <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                   <Row height="100%" >
                     <Column size="12" alignSelf="center" align="center">
-                      <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
+                      <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
                     </Column>
                   </Row>
                 </Column>
@@ -342,7 +342,7 @@ export default () => {
                 <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                   <Row height="100%" >
                     <Column size="12" alignSelf="center" align="center">
-                      <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
+                      <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
                     </Column>
                   </Row>
                 </Column>
@@ -384,7 +384,7 @@ export default () => {
                 <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                   <Row height="100%" >
                     <Column size="12" alignSelf="center" align="center">
-                      <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
+                      <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
                     </Column>
                   </Row>
                 </Column>

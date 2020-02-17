@@ -10,6 +10,23 @@ export const Container = styled.div`
             ?
             css`
                 width: 100%;
+                @media ${Device.md}{
+                    
+                }
+                @media ${Device.xs}{
+                    height: auto;
+                    
+                }
+                @media screen ${Device.sm}{
+                    
+                    
+                }
+                @media ${Device.lg}{
+                    
+                }
+                @media ${Device.xl} {
+                   
+                }
             `
             :
             props.width === "fixed"
@@ -20,9 +37,11 @@ export const Container = styled.div`
             }
             @media ${Device.xs}{
                 max-width: 540px;
+                
             }
             @media screen ${Device.sm}{
                 max-width: 720px;
+                
             }
             @media ${Device.lg}{
                 max-width: 960px;
