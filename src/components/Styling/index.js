@@ -50,6 +50,8 @@ export const Select = styled.select`
     width: ${props => props.width};
     text-align-last: center;
     border: ${props => props.border};
+    font-family: lato, sans-serif;
+    padding: 5px;
 `
 export const RoundImage = styled.div`
     background-image: url(${props => props.url} );
@@ -58,7 +60,7 @@ export const RoundImage = styled.div`
     background-size:${props => props.bsize};
     border-radius: ${props => props.border};
     background-position: ${props => props.position};
-    background-color: white;
+    background-color: ${props => props.backgroundColor};
     width: ${props => props.width};
     height: ${props => props.height};
     margin: auto;
@@ -133,6 +135,7 @@ Button.defaultProps = {
 };
 RoundImage.defaultProps = {
     width: '100%',
+    backgroundColor: Colors.white
 };
 Select.defaultProps = {
     background: Colors.white,
