@@ -24,6 +24,24 @@ export const Card = styled.div`
     box-shadow: ${props => props.shadow
         && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
     }
+    @media ${Device.xs}{
+        height: auto;
+        
+    }
+    @media screen ${Device.sm}{
+        
+        
+    }
+    @media ${Device.md}{
+           
+    }
+    @media ${Device.lg}{
+        width: ${props => props.widthLg};
+        height: ${props => props.heightLg};
+    }
+    @media ${Device.xl} {
+       
+    }
     ${props =>
         props.move === "up"
             ? css`
