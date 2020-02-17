@@ -53,6 +53,10 @@ export const Select = styled.select`
     font-family: lato, sans-serif;
     padding: 5px;
 `
+export const Option = styled.option`
+    background: green;
+    color: black;
+`
 export const RoundImage = styled.div`
     background-image: url(${props => props.url} );
     margin-bottom: ${props => props.mb};
