@@ -46,9 +46,11 @@ const Home = ({data}) => {
                 <Row>
                   <Paragraph color={Colors.gray} margin="5px 0 0 0" align="left" fontSize="13px">and become a part of one of the world's biggest coding community.</Paragraph>
                 </Row>
+                <Divider height="20px" />
                 <Row center>
                   <ChooseProgram />
                 </Row>
+                <Divider height="20px" />
               </Column>
               <Column size="1" />
               <Column
@@ -64,6 +66,7 @@ const Home = ({data}) => {
           </Column>
         </Row>
       </Container>
+      <Divider height="45px" />
       <Wrapper
         style="default">
         <QueryTest up="80" />
