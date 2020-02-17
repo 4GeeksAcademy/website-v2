@@ -19,7 +19,7 @@ const ChooseProgram = () => {
     return (
         <>
             <Card index="1" shadow width="230px" padding={toggle === false ? "0px" : "0 0 10px 0"}>
-                <Row marginRight="0" marginLeft="0" align="center"><Button onClick={() => setToggle(!toggle)} color={Colors.blue} textColor={Colors.white}>Choose Program</Button></Row>
+                <Row marginRight="0" marginLeft="0" align="center"><Button onClick={() => setToggle(!toggle)} color={Colors.blue} textColor={Colors.white}>CHOOSE YOUR PROGRAM</Button></Row>
 
                 {toggle == true
                     ?
