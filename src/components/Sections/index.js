@@ -15,6 +15,7 @@ export const Container = styled.div`
                 }
                 @media ${Device.xs}{
                     height: auto;
+                    padding: 30px 0;
                     
                 }
                 @media screen ${Device.sm}{
