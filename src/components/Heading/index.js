@@ -25,6 +25,20 @@ ${props => props.lato ?
 `};
 text-transform: ${props => props.uppercase && "uppercase"};
 text-align: ${props => props.align};
+@media ${Device.xs}{
+  font-size: ${props => props.fontSizeXs}
+}
+@media screen ${Device.sm}{
+}
+@media ${Device.md}{
+  text-align: ${props => props.align};
+}
+@media ${Device.lg}{
+  text-align: ${props => props.align};
+}
+@media ${Device.xl} {
+  text-align: ${props => props.align};
+}   
 `;
 export const H2 = styled.h2`
     @media ${Device.xs}{

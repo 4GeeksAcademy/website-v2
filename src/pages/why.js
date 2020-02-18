@@ -17,7 +17,7 @@ const Why = () => (
           <Row>
             <Column size="1" />
             <Column size="8" align="center">
-              <H1 fontSize="50px" color={Colors.white}>ENABLING FUTURE AND CURRENT SOFTWARE BUILDERS TO ADAPT TO THE NEEDS OF THE REAL WORLD</H1>
+              <H1 fontSize="50px" fontSizeXs="40px" color={Colors.white}>ENABLING FUTURE AND CURRENT SOFTWARE BUILDERS TO ADAPT TO THE NEEDS OF THE REAL WORLD</H1>
             </Column>
           </Row>
 
