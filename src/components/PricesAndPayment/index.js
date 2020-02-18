@@ -355,7 +355,7 @@ export default () => {
                 <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                   <Row height="100%" >
                     <Column size="12" alignSelf="center" >
-                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].slug}</H4></Row>
+                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY WHEN </H4></Row>
                       <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
                     </Column>
                   </Row>
