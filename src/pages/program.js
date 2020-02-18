@@ -10,12 +10,16 @@ import GeeksVsOthers from '../components/GeeksVsOthers'
 import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
 import Alumni from '../components/Alumni'
-import Select from 'react-select';
-import Events from '../components/Events'
 import Scrollspy from 'react-scrollspy'
 import '../assets/css/style.scss'
 import {SessionContext} from '../session.js'
 import ProgramSelector from '../components/ProgramSelector'
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile
+} from "react-device-detect";
 
 const options = [
   {value: 'miami', label: 'Miami'},
@@ -63,14 +67,16 @@ const Program = ({data}) => {
         style="default">
         <QueryTest up="80" />
       </Wrapper>
-      <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
-        <li><a className="nav-item nav-link side" href="#section-1" >MEMBERSHIPS</a></li>
-        <li><a className="nav-item nav-link side" href="#section-2">PROGRAM</a></li>
-        <li><a className="nav-item nav-link side" href="#section-3">4GEEKS vs OTHERS</a></li>
-        <li><a className="nav-item nav-link side" href="#section-4">PRICING</a></li>
-        {/* <li><a className="nav-item nav-link side" href="#section-5">TYPICAL DAY</a></li> */}
-        <li><a className="nav-item nav-link side" href="#section-6">THE ALUMNI</a></li>
-      </Scrollspy>
+      <BrowserView>
+        <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
+          <li><a className="nav-item nav-link side" href="#section-1" >MEMBERSHIPS</a></li>
+          <li><a className="nav-item nav-link side" href="#section-2">PROGRAM</a></li>
+          <li><a className="nav-item nav-link side" href="#section-3">4GEEKS vs OTHERS</a></li>
+          <li><a className="nav-item nav-link side" href="#section-4">PRICING</a></li>
+          {/* <li><a className="nav-item nav-link side" href="#section-5">TYPICAL DAY</a></li> */}
+          <li><a className="nav-item nav-link side" href="#section-6">THE ALUMNI</a></li>
+        </Scrollspy>
+      </BrowserView>
       <section className="section" id="section-1"></section>
       <Container fluid>
         <Row>

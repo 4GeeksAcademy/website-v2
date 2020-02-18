@@ -129,6 +129,7 @@ ${props =>
                 background-size: ${props => props.backgroundSize};
                 background-repeat: no-repeat;
                 height: ${props => props.height};
+                
     `
             : props.image === "no"
             &&
