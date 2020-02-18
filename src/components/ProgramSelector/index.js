@@ -131,7 +131,7 @@ const ProgramSelector = () => {
               {toggles == true
                 ?
                 <>
-                  <Row marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="center">
+                  <Row marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="center" backgroundHover={Colors.blue}>
                     <Column size="12"><Paragraph fontSize="14px" color={Colors.gray} >9</Paragraph></Column>
                   </Row>
                 </>
@@ -149,8 +149,8 @@ const ProgramSelector = () => {
                 <>
                   {data.loc.edges.map((item, index) => {
                     return (
-                      <Row height="15px" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.blue} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="center">
-                        <Column size="12"><Paragraph fontSize="14px" color={Colors.gray} >{item.node.city}</Paragraph></Column>
+                      <Row height="25px" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.blue} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                        <Column size="12" alignSelf="center"><Paragraph fontSize="14px" color={Colors.gray} >{item.node.city}</Paragraph></Column>
                       </Row>
                     )
                   })}
