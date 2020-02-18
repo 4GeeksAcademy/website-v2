@@ -3,6 +3,7 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
 import {Device} from '../Responsive'
+import {Paragraph} from '../Heading'
 
 export const Container = styled.div`
     ${props =>
@@ -71,7 +72,12 @@ export const Row = styled.div`
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
     background: ${props => props.background};
-    &:hover { background: ${props => props.backgroundHover}}
+    &:hover { 
+        background: ${props => props.backgroundHover};
+    }
+    ${Paragraph}:hover{
+        color:${Colors.lightBlue};
+    }
     ${props => props.align === "around"
         ? css`justify-content: space-around;`
         : props => props.align === "center"
