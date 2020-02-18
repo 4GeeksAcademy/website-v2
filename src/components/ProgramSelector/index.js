@@ -122,10 +122,10 @@ const ProgramSelector = () => {
   console.log("$$$", data.loc.edges)
   return (
     <Row align="center" >
-      <Column size="8" alignSelf="center">
+      <Column size="12" alignSelf="center">
         <Row align="around">
-          <Column size="2" alignSelf="center" margin="5px 0"><Paragraph color={Colors.white} >It takes just </Paragraph></Column>
-          <Column size="1" alignSelf="center" >
+          <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph color={Colors.white} >It takes just </Paragraph></Column>
+          <Column size="1" alignSelf="center" align="center">
             <Card index="1" borders=".25rem" shadow width="50px" padding={toggles === false ? "0px" : "0 0 10px 0"}>
               <Row marginRight="0" marginLeft="0" align="center"><Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} color={Colors.white} textColor={Colors.gray}>16</Button></Row>
               {toggles == true
@@ -140,16 +140,16 @@ const ProgramSelector = () => {
               }
             </Card>
           </Column>
-          <Column size="2" alignSelf="center" margin="5px 0"><Paragraph fontSize="12px" color={Colors.white} >weeks in</Paragraph></Column>
-          <Column size="4" alignSelf="center">
-            <Card index="1" borders=".25rem" shadow width="230px" padding={toggle === false ? "0px" : "0 0 10px 0"}>
+          <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph fontSize="12px" color={Colors.white} >weeks in</Paragraph></Column>
+          <Column size="3" alignSelf="center" align="center" >
+            <Card index="1" borders=".25rem" shadow width="200px" >
               {toggle == true ? null : <Row marginRight="0" marginLeft="0" align="center"><Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>{session.location}</Button></Row>}
               {toggle == true
                 ?
                 <>
                   {data.loc.edges.map((item, index) => {
                     return (
-                      <Row onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.blue} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="center">
+                      <Row height="15px" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.blue} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="center">
                         <Paragraph fontSize="14px" color={Colors.gray} >{item.node.city}</Paragraph>
                       </Row>
                     )
@@ -160,7 +160,7 @@ const ProgramSelector = () => {
               }
             </Card>
           </Column>
-          <Column size="2" alignSelf="center" margin="5px 0"><Paragraph color={Colors.white} >to become a</Paragraph></Column>
+          <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph color={Colors.white} >to become a</Paragraph></Column>
         </Row>
         <Row></Row>
         <Row></Row>
