@@ -37,18 +37,17 @@ const Program = ({data}) => {
       <Wrapper
         style="default"
         image="yes"
-        url="../bg/program-bg.png"
+        url="../bg/bg-pr.jpg"
         border="bottom"
-        height="500px"
+        height="700px"
         backgroundSize="cover"
       >
-        <Divider height="140px" />
+        <Divider height="240px" />
         <ProgramSelector />
         <Divider height="20px" />
         <Title
           size="5"
           title="FULL STACK DEVELOPER"
-          paragraph="I'm impressed with the level of understanding 4Geeks students have, my hire eneded becoming team leader -CuevaSocial Marketing Agency"
           main
           color={Colors.white}
           fontSize="46px"
