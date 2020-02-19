@@ -1,6 +1,8 @@
-info: fullstack info
 basic_info:
   slug: full-stack-web-development-bootcamp-full-time
+  redirects: [
+    '/course/full-time'
+  ]
 ## Texto en el banner
 banner:
   headertext: 4Geeks Academy Miami Coding Bootcamp

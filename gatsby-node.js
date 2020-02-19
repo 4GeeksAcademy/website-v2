@@ -4,7 +4,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   const types = ['PageYaml', 'CourseYaml'];
-//   const types = ['CourseYaml'];
   if (types.includes(node.internal.type)) {
     const url = createFilePath({ node, getNode })
     const meta = getMetaFromPath({ url, ...node });
@@ -58,7 +57,7 @@ const createBlog = async ({ actions, graphql }) => {
     return true;
 }
 const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
-    const { createPage } = actions;
+    const { createPage, createRedirect } = actions;
     const result = await graphql(`
         {
           all${entity}Yaml {
@@ -66,6 +65,7 @@ const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
               node {
                 basic_info {
                     slug
+                    redirects
                 }
                 fields{
                     lang
@@ -95,7 +95,7 @@ const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
 };
 
 const createPagesfromYml = async ({ graphql, actions }) => {
-    const { createPage } = actions;
+    const { createPage, createRedirect } = actions;
     const result = await graphql(`
         {
           allPageYaml {
@@ -103,6 +103,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
               node {
                 basic_info {
                     slug
+                    redirects
                 }
                 fields{
                     lang
@@ -119,13 +120,26 @@ const createPagesfromYml = async ({ graphql, actions }) => {
     if (result.errors) throw new Error(result.errors);
 
     result.data[`allPageYaml`].edges.forEach(({ node }) => {
+
+        const pagePath = `${node.fields.lang}/${node.fields.slug}`;
         createPage({
-            path: `${node.fields.lang}/${node.fields.slug}`,
+            path: pagePath,
             component: path.resolve(`./src/templates/${node.fields.template}.js`),
             context: {
                 ...node.fields
             }
         });
+
+        if (node.basic_info && node.basic_info.redirects) {
+            node.basic_info.redirects.forEach(path => {
+                createRedirect({
+                    fromPath: path,
+                    toPath: pagePath,
+                    redirectInBrowser: true,
+                    isPermanent: true
+                })
+            })
+        }
     });
 
     return true;
