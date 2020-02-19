@@ -3,6 +3,7 @@ import Layout from '../global/Layout';
 import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
 import {Title} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
+import Credentials from '../components/Credentials'
 
 
 const Partners = () => (
@@ -15,7 +16,6 @@ const Partners = () => (
             height="500px"
         >
             <Divider height="100px" />
-
             <Title
                 size="5"
                 title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
@@ -24,7 +24,6 @@ const Partners = () => (
                 color={Colors.white}
                 fontSize="46px"
                 textAlign="center"
-
             />
             <Row align="center">
                 <Button margin="15px 0px" color="red" textColor="white">BE A HIRING PARTNER</Button>
@@ -32,7 +31,7 @@ const Partners = () => (
         </Wrapper>
         <Wrapper
             style="default">
-            {/* <QueryTest up="150" /> */}
+            <Credentials move="up" up="100" />
         </Wrapper>
         <Divider height="50px" />
         <Wrapper
