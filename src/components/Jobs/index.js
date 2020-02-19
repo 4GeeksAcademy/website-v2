@@ -8,22 +8,22 @@ import {Colors} from '../Styling'
 import {Card} from '../Card'
 
 export default () => {
-    const data = useStaticQuery(graphql`
-      query myQueryJobs{
-          job: allJobsYaml {
-            edges {
-              node {
-                title
-                sub_title
-                graph
-                value
-                value_type
-                data
-              }
-            }
-          }
-        }
-      `)
+    // const data = useStaticQuery(graphql`
+    //   query myQueryJobs{
+    //       job: allJobsYaml {
+    //         edges {
+    //           node {
+    //             title
+    //             sub_title
+    //             graph
+    //             value
+    //             value_type
+    //             data
+    //           }
+    //         }
+    //       }
+    //     }
+    //   `)
     return (
         <Row>
             {data.job.edges.map((i, index) => (

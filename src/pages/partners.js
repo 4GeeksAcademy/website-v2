@@ -33,7 +33,7 @@ const Partners = () => (
     </Wrapper>
     <Wrapper
       style="default">
-      <QueryTest up="150" />
+      {/* <QueryTest up="150" /> */}
     </Wrapper>
     <Divider height="50px" />
     <Wrapper
@@ -47,7 +47,7 @@ const Partners = () => (
         customParagraphSize="8"
       />
       <Divider height="20px" />
-      <WhoIsHiring source="partners" />
+      {/* <WhoIsHiring source="partners" /> */}
     </Wrapper>
     <Divider height="100px" />
     <Wrapper
@@ -60,7 +60,7 @@ const Partners = () => (
         primary
       />
       <Divider height="20px" />
-      <WhoIsHiring source="coding" />
+      {/* <WhoIsHiring source="coding" /> */}
     </Wrapper>
     <Divider height="100px" />
     <Wrapper
@@ -73,7 +73,7 @@ const Partners = () => (
         primary
       />
       <Divider height="20px" />
-      <WhoIsHiring source="influencers" />
+      {/* <WhoIsHiring source="influencers" /> */}
       <Row align="center">
         <Button color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">BE A HIRING PARTNER</Button>
       </Row>

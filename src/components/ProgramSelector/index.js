@@ -54,70 +54,70 @@ const ProgramSelector = () => {
   const [toggle, setToggle] = useState(false)
   const [loc, setLoc] = useState(false);
   const classes = useStyles();
-  const data = useStaticQuery(graphql`
-      query myQueryProgram{
-          loc: allLocationsYaml{
-            edges{
-              node{
-                city
-                slug
-                latitude
-                longitude
-                country
-                defaultLanguage
-                hasFinancialsOption
-                courses
-              prices{
-                full_time{
-                  slug
-                  upfront
-                  message
-                  duration
-                  financed{
-                    provider
-                    message{
-                      en
-                      es
-                    }
-                    payment
-                    months
-                    paymentInfo{
-                      en
-                      es
-                    }
-                    logo
-                    
-                  }
-                }
-                part_time{
-                  slug
-                  upfront
-                  message
-                  duration
-                  financed{
-                    provider
-                    message{
-                      en
-                      es
-                    }
-                    payment
-                    months
-                    paymentInfo{
-                      en
-                      es
-                    }
-                    logo
-                    
-                  }
-                }
-              }
-                  
-                
-              }
-            }
-          }
-        }
-      `)
+  // const data = useStaticQuery(graphql`
+  //     query myQueryProgram{
+  //         loc: allLocationsYaml{
+  //           edges{
+  //             node{
+  //               city
+  //               slug
+  //               latitude
+  //               longitude
+  //               country
+  //               defaultLanguage
+  //               hasFinancialsOption
+  //               courses
+  //             prices{
+  //               full_time{
+  //                 slug
+  //                 upfront
+  //                 message
+  //                 duration
+  //                 financed{
+  //                   provider
+  //                   message{
+  //                     en
+  //                     es
+  //                   }
+  //                   payment
+  //                   months
+  //                   paymentInfo{
+  //                     en
+  //                     es
+  //                   }
+  //                   logo
+
+  //                 }
+  //               }
+  //               part_time{
+  //                 slug
+  //                 upfront
+  //                 message
+  //                 duration
+  //                 financed{
+  //                   provider
+  //                   message{
+  //                     en
+  //                     es
+  //                   }
+  //                   payment
+  //                   months
+  //                   paymentInfo{
+  //                     en
+  //                     es
+  //                   }
+  //                   logo
+
+  //                 }
+  //               }
+  //             }
+
+
+  //             }
+  //           }
+  //         }
+  //       }
+  //     `)
   const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
   console.log("$$$", data.loc.edges)
   return (

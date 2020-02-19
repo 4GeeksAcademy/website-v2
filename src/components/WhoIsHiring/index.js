@@ -5,32 +5,32 @@ import {RoundImage, Colors} from '../Styling';
 import {H2, H3, H4, Paragraph} from '../Heading'
 
 const WhoIsHiring = props => {
-  const data = useStaticQuery(graphql`
-      query myQueryWhoIsHiring{
-          who: allPartnersYaml {
-            edges {
-              node {
-                partners {
-                  name
-                  image
-                }
-                coding {
-                  name
-                  image
-                }
-                influencers {
-                  name
-                  image
-                }
-                financials {
-                  name
-                  image
-                }
-              }
-            }
-          }
-        }
-      `)
+  // const data = useStaticQuery(graphql`
+  //     query myQueryWhoIsHiring{
+  //         who: allPartnersYaml {
+  //           edges {
+  //             node {
+  //               partners {
+  //                 name
+  //                 image
+  //               }
+  //               coding {
+  //                 name
+  //                 image
+  //               }
+  //               influencers {
+  //                 name
+  //                 image
+  //               }
+  //               financials {
+  //                 name
+  //                 image
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     `)
   return (
     <>
       {props.source === "partners"

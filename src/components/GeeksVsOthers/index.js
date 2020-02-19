@@ -7,27 +7,27 @@ import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button} from 
 import {Card} from '../Card';
 
 const GeeksVsOthers = props => {
-  const data = useStaticQuery(graphql`
-      query my4GeeksDataQuery{
-        geeks: allGeeksDataYaml {
-            edges {
-              node {
-                miami {
-                  features
-                  industry_average
-                  icon
-                  tooltip
-                  at4_Geeks
-                  slug
-                }
-              }
-            }
-          }
-        }
-      `)
+  // const data = useStaticQuery(graphql`
+  //     query my4GeeksDataQuery{
+  //       geeks: allGeeksDataYaml {
+  //           edges {
+  //             node {
+  //               miami {
+  //                 features
+  //                 industry_average
+  //                 icon
+  //                 tooltip
+  //                 at4_Geeks
+  //                 slug
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     `)
   return (
     <>
-      {props.hasTitle &&
+      {/* {props.hasTitle &&
         <>
           <Title
             title="WHAT MAKES THIS PROGRAM STAND OUT?"
@@ -127,7 +127,7 @@ const GeeksVsOthers = props => {
       </Row>
       <Row align="center">
         <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">COMPARE 4GEEKS WITH OTHER SCHOOLS</Button>
-      </Row>
+      </Row> */}
     </>
   )
 };

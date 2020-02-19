@@ -32,32 +32,32 @@ const ProgramDescription = (props) => {
     useEffect(() => {
         setType(props.type)
     }, [])
-    const data = useStaticQuery(graphql`
-    query myQueryDetails{
-        program: allProgramDetailsYaml {
-            edges {
-              node {
-                part_time {
-                  module_name
-                  title
-                  description
-                  duration
-                  slug
-                  projects
-                }
-                full_time {
-                  module_name
-                  title
-                  description
-                  duration
-                  slug
-                  projects
-                }
-              }
-            }
-          }
-      }
-    `)
+    // const data = useStaticQuery(graphql`
+    // query myQueryDetails{
+    //     program: allProgramDetailsYaml {
+    //         edges {
+    //           node {
+    //             part_time {
+    //               module_name
+    //               title
+    //               description
+    //               duration
+    //               slug
+    //               projects
+    //             }
+    //             full_time {
+    //               module_name
+    //               title
+    //               description
+    //               duration
+    //               slug
+    //               projects
+    //             }
+    //           }
+    //         }
+    //       }
+    //   }
+    // `)
 
     let program = data.program.edges[0].node
     console.log("program", program)

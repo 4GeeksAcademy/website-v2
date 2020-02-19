@@ -72,90 +72,84 @@ export default () => {
     setActiveStep(0);
     setCompleted({});
   };
-  const data = useStaticQuery(graphql`
-    query myQueryTest{
-        credentials: allCredentialsDataYaml {
-            edges {
-              node {
-                credential
-              }
-            }
-        }
-      cred: allFinancialsYaml{
-        edges{
-            node{
-                name
-                options{
-                    months
-                    payment
-                    paymentParagraph
-                }
-                logo
-                description
-            }
-        }
-    }
-    cities: allLocationsYaml{
-      edges{
-        node{
-          city
-          slug
-          latitude
-          longitude
-          country
-          defaultLanguage
-          hasFinancialsOption
-        prices{
-          full_time{
-            slug
-            upfront
-            message
-            duration
-            financed{
-              provider
-              message{
-                en
-                es
-              }
-              payment
-              months
-              paymentInfo{
-                en
-                es
-              }
-              logo
-              
-            }
-          }
-          part_time{
-            slug
-            upfront
-            message
-            duration
-            financed{
-              provider
-              message{
-                en
-                es
-              }
-              payment
-              months
-              paymentInfo{
-                en
-                es
-              }
-              logo
-              
-            }
-          }
-        }
-            
-          
-        }
-      }
-    }
-  }
-    `)
+  // const data = useStaticQuery(graphql`
+  //   query myQueryTest{
+
+  //     cred: allFinancialsYaml{
+  //       edges{
+  //           node{
+  //               name
+  //               options{
+  //                   months
+  //                   payment
+  //                   paymentParagraph
+  //               }
+  //               logo
+  //               description
+  //           }
+  //       }
+  //   }
+  //   cities: allLocationsYaml{
+  //     edges{
+  //       node{
+  //         city
+  //         slug
+  //         latitude
+  //         longitude
+  //         country
+  //         defaultLanguage
+  //         hasFinancialsOption
+  //       prices{
+  //         full_time{
+  //           slug
+  //           upfront
+  //           message
+  //           duration
+  //           financed{
+  //             provider
+  //             message{
+  //               en
+  //               es
+  //             }
+  //             payment
+  //             months
+  //             paymentInfo{
+  //               en
+  //               es
+  //             }
+  //             logo
+
+  //           }
+  //         }
+  //         part_time{
+  //           slug
+  //           upfront
+  //           message
+  //           duration
+  //           financed{
+  //             provider
+  //             message{
+  //               en
+  //               es
+  //             }
+  //             payment
+  //             months
+  //             paymentInfo{
+  //               en
+  //               es
+  //             }
+  //             logo
+
+  //           }
+  //         }
+  //       }
+
+
+  //       }
+  //     }
+  //   }
+  // }
+  //   `)
   const currentCityInfo = data.cities.edges.filter((item) => item.node.city === session.location)
   console.log("currentCityInfo: ", currentCityInfo)
   let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")

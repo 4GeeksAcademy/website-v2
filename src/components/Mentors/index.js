@@ -10,19 +10,19 @@ import ReactCardFlip from 'react-card-flip';
 const Mentors = props => {
     const [isFlipped, setIsFlipped] = useState(false);
 
-    const data = useStaticQuery(graphql`
-        query myStaffQuery{
-            staff: allStaffYaml {
-                edges {
-                  node {
-                    name
-                    last_name
-                    image
-                  }
-                }
-              }
-            }
-        `)
+    // const data = useStaticQuery(graphql`
+    //     query myStaffQuery{
+    //         staff: allStaffYaml {
+    //             edges {
+    //               node {
+    //                 name
+    //                 last_name
+    //                 image
+    //               }
+    //             }
+    //           }
+    //         }
+    //     `)
 
     return (
         <>

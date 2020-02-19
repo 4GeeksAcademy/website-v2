@@ -1,0 +1,65 @@
+staff:
+  - name: "Alejandro"
+    last_name: "Sanchez"
+    nick_name: "Alesanchezr"
+    slug: "alejandro-sanchez"
+    job_title: "co-founder"
+    github: ""
+    linkdin: ""
+    twitter: ""
+    website: ""
+    image: "../alejandro.png"
+    age: 34
+    interests:
+      - Soccer
+    coding_skills:
+      - Javascript
+  - name: "Marcelo"
+    last_name: "Ricigliano"
+    nick_name: ""
+    slug: marcelo-ricigliano
+    job_title: "CEO - co-founder"
+    github: ""
+    linkdin: ""
+    twitter: ""
+    website: ""
+    image: "../marcelo.png"
+    age: 33
+    interests:
+      - Soccer
+      - Juventus
+    coding_skills:
+      - Javascript
+  - name: "Paolo"
+    last_name: "Lucano"
+    nick_name: "Pluco"
+    slug: "paolo-lucano"
+    job_title: "mentor and instructor"
+    github: ""
+    linkdin: ""
+    twitter: ""
+    website: ""
+    image: "../jane.png"
+    age: 42
+    interests:
+      - Soccer
+      - Music
+      - Movies
+      - Travel
+    coding_skills:
+      - Javascript
+  - name: "Bridget"
+    last_name: "Schraeder"
+    nick_name: ""
+    slug: "bridget-schraeder"
+    job_title: "Career Support "
+    github: ""
+    linkdin: ""
+    twitter: ""
+    website: ""
+    image: "../colby.png"
+    age: 33
+    interests:
+      - Music
+    coding_skills:
+      - Excel

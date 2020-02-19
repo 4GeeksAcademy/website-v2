@@ -1,7 +1,10 @@
 news:
   - name: "Education"
+    slug: "education"
     image: "../education.jpg"
   - name: "Newsweek"
+    slug: "newsweek"
     image: "../newsweek.png"
   - name: "News"
+    slug: "news"
     image: "../news.jpg"
