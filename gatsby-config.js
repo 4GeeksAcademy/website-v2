@@ -65,12 +65,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
-    'gatsby-transformer-yaml', {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: './src',
-        name: 'src',
-      },
-    },
+    'gatsby-transformer-yaml',
   ],
 };
