@@ -62,6 +62,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-line-awesome": "^0.1.4",
+    "react-minimal-pie-chart": "^6.0.1",
     "react-player": "^1.14.2",
     "react-responsive-carousel": "^3.1.51",
     "react-scrollspy": "^3.4.2",

@@ -14,6 +14,7 @@ import Scrollspy from 'react-scrollspy'
 import '../assets/css/style.scss'
 import {SessionContext} from '../session.js'
 import ProgramSelector from '../components/ProgramSelector'
+import {Chart} from '../components/Chart'
 import {
   BrowserView,
   MobileView,
@@ -21,6 +22,17 @@ import {
   isMobile
 } from "react-device-detect";
 
+const dataMock = [
+  {title: 'One', value: 10, color: '#E38627'},
+  {title: 'Two', value: 15, color: '#C13C37'},
+  {title: 'Three', value: 20, color: '#6A2135'},
+];
+
+const defaultLabelStyle = {
+  fontSize: '5px',
+  fontFamily: 'sans-serif',
+  fill: '#121212',
+};
 const options = [
   {value: 'miami', label: 'Miami'},
   {value: 'santiago', label: 'Santiago'},
@@ -37,6 +49,7 @@ const Program = ({data}) => {
   const [weeks, setWeeks] = useState();
   return (
     <Layout>
+
       {/* {session.location} */}
       <Wrapper
         style="default"
