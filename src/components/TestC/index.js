@@ -65,41 +65,41 @@ export default () => {
         setActiveStep(0);
         setCompleted({});
     };
-    const data = useStaticQuery(graphql`
-      query myQueryTestC{
-          credentials: allCredentialsDataYaml {
-              edges {
-                node {
-                  credential
-                }
-              }
-          }
-          alumni:   allAlumniYaml{
-            edges{
-              node{
-                name
-                image
-                content
-                title
-              }
-            }
-          }
-          
-        
-        cred: allFinancialsYaml{
-          edges{
-              node{
-                  name
-                  options{
-                      months
-                      payment
-                  }
-                  logo
-                  description
-              }
-          }
-      }}
-      `)
+    // const data = useStaticQuery(graphql`
+    //   query myQueryTestC{
+    //       credentials: allCredentialsDataYaml {
+    //           edges {
+    //             node {
+    //               credential
+    //             }
+    //           }
+    //       }
+    //       alumni:   allAlumniYaml{
+    //         edges{
+    //           node{
+    //             name
+    //             image
+    //             content
+    //             title
+    //           }
+    //         }
+    //       }
+
+
+    //     cred: allFinancialsYaml{
+    //       edges{
+    //           node{
+    //               name
+    //               options{
+    //                   months
+    //                   payment
+    //               }
+    //               logo
+    //               description
+    //           }
+    //       }
+    //   }}
+    //   `)
     let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
     let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
     let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")

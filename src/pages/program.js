@@ -60,7 +60,7 @@ const Program = ({data}) => {
         backgroundSize="cover"
       >
         <Divider height="240px" />
-        <ProgramSelector />
+        {/* <ProgramSelector /> */}
         <Divider height="20px" />
         <Title
           size="5"
@@ -78,7 +78,7 @@ const Program = ({data}) => {
       </Wrapper>
       <Wrapper
         style="default">
-        <QueryTest up="80" />
+        {/* <QueryTest up="80" /> */}
       </Wrapper>
       <BrowserView>
         <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
@@ -91,7 +91,7 @@ const Program = ({data}) => {
         </Scrollspy>
       </BrowserView>
       <section className="section" id="section-1"></section>
-      <Container fluid>
+      {/* <Container fluid>
         <Row>
           <Column size="2">
           </Column>
@@ -166,7 +166,7 @@ const Program = ({data}) => {
             </Row>
           </Column>
         </Row>
-      </Container>
+      </Container> */}
       {/* </Wrapper> */}
       <Divider height="100px" />
       <Wrapper
@@ -194,7 +194,7 @@ const Program = ({data}) => {
           primary
         />
         <Divider height="50px" />
-        <GeeksVsOthers />
+        {/* <GeeksVsOthers /> */}
         <Divider height="100px" />
       </Wrapper>
 
@@ -208,7 +208,7 @@ const Program = ({data}) => {
         />
         <Divider height="50px" /> */}
         <section className="section" id="section-4"></section>
-        <PricesAndPayment />
+        {/* <PricesAndPayment /> */}
         <Divider height="100px" />
       </Wrapper>
       {/* <Wrapper
@@ -235,7 +235,7 @@ const Program = ({data}) => {
         />
         <Divider height="50px" />
         <section className="section" id="section-6"></section>
-        <Alumni />
+        {/* <Alumni /> */}
         <Divider height="100px" />
       </Wrapper>
       <Divider height="100px" />
@@ -243,17 +243,17 @@ const Program = ({data}) => {
   )
 };
 
-export const geekQuery = graphql`
-query geekQuery{
-        geek: allGeekPalYaml {
-        edges {
-        node {
-        geek_pal
-        geek_force
-    }
-  }
-}
-}
-`
+// export const geekQuery = graphql`
+// query geekQuery{
+//         geek: allGeekPalYaml {
+//         edges {
+//         node {
+//         geek_pal
+//         geek_force
+//     }
+//   }
+// }
+// }
+// `
 
 export default Program;

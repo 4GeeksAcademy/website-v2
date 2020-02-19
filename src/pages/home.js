@@ -67,17 +67,17 @@ const Home = ({data}) => {
       </Container>
       <Wrapper
         style="default">
-        <QueryTest up="80" />
+        {/* <QueryTest up="80" /> */}
       </Wrapper>
       <Wrapper
         style="default">
         <Divider height="100px" />
-        <Why4Geeks />
+        {/* <Why4Geeks /> */}
         <Divider height="100px" />
       </Wrapper>
       <Wrapper
         style="default">
-        <Jobs />
+        {/* <Jobs /> */}
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
@@ -101,7 +101,7 @@ const Home = ({data}) => {
       <Wrapper
         style="default"
       >
-        <GeeksVsOthers hasTitle />
+        {/* <GeeksVsOthers hasTitle /> */}
         <Divider height="100px" />
         <Title
           title="JOIN 4GEEKS"
@@ -235,61 +235,61 @@ const Home = ({data}) => {
         >
         </Title>
         <Divider height="50px" />
-        <WhoIsHiring source="partners" />
+        {/* <WhoIsHiring source="partners" /> */}
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
         style="default">
 
         <Divider height="50px" />
-        <Alumni hasTitle />
+        {/* <Alumni hasTitle /> */}
       </Wrapper>
       <Divider height="100px" />
 
     </Layout>
   )
 };
-export const myQuer = graphql`
-query myQueryy{
-  geek: allGeekPalYaml {
-    edges {
-    node {
-    geek_pal
-    geek_force
-}
-}
-}
-  alumni:   allAlumniYaml{
-    edges{
-      node{
-        name
-        image
-        content
-        title
-      }
-    }
-  }
-  partners: allPartnersYaml{
-    edges{
-      node{
-        partners{
-          name
-          image
-        }
-      }
-    }
-  }
-  mentors: allTeachersYaml{
-    edges{
-      node{
-        name
-        image
-        last_name
-        nick_name
-        coding_skills
-      }
-    }
-  }
-}
-`
+// export const myQuer = graphql`
+// query myQueryy{
+//   geek: allGeekPalYaml {
+//     edges {
+//     node {
+//     geek_pal
+//     geek_force
+// }
+// }
+// }
+//   alumni:   allAlumniYaml{
+//     edges{
+//       node{
+//         name
+//         image
+//         content
+//         title
+//       }
+//     }
+//   }
+//   partners: allPartnersYaml{
+//     edges{
+//       node{
+//         partners{
+//           name
+//           image
+//         }
+//       }
+//     }
+//   }
+//   mentors: allTeachersYaml{
+//     edges{
+//       node{
+//         name
+//         image
+//         last_name
+//         nick_name
+//         coding_skills
+//       }
+//     }
+//   }
+// }
+// `
 export default Home;

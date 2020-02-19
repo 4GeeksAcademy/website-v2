@@ -32,7 +32,7 @@ const Why = () => (
           <Row>
             <Column size="1" />
             <Column size="9">
-              <QueryTest />
+              {/* <QueryTest /> */}
             </Column>
           </Row>
         </Column>
@@ -165,7 +165,7 @@ const Why = () => (
     </Wrapper>
     <Divider height="100px" />
     <Wrapper style="default">
-      <Mentors up="200px" />
+      {/* <Mentors up="200px" /> */}
     </Wrapper>
     <Divider height="150px" />
     <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
@@ -218,7 +218,7 @@ const Why = () => (
     </Wrapper>
     <Divider height="100px" />
 
-    <Events />
+    {/* <Events /> */}
 
 
     <Divider height="100px" />

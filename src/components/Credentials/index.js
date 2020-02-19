@@ -11,34 +11,34 @@ import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/f
 
 // const {useCounter, setCounter} = useState(props.hired)
 
-const items = range(4);
-const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
+// const items = range(4);
+// const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
 const Credentials = (props) => {
-  const data = useStaticQuery(graphql`
-    query myQueryCred{
-        credentials: allCredentialsDataYaml {
-            edges {
-              node {
-                credential
-              }
-            }
-        }
-        }
-    `)
-  const {radians} = useSpring({
-    to: async next => {
-      while (1) await next({radians: 2 * Math.PI});
-    },
-    from: {radians: 0},
-    config: {duration: 3500},
-    reset: true
-  });
-  const graduation = <FontAwesomeIcon icon={faGraduationCap} size="3x" />
-  const rating = <FontAwesomeIcon icon={faTrophy} size="3x" />
-  const campuses = <FontAwesomeIcon icon={faBookOpen} size="3x" />
-  const hired = <FontAwesomeIcon icon={faHandshake} size="3x" />
-  // const {countUp} = useCountUp({end: props.hired});
-  const {countUp} = useCountUp({end: props.hired})
+  //   const data = useStaticQuery(graphql`
+  //     query myQueryCred{
+  //         credentials: allCredentialsDataYaml {
+  //             edges {
+  //               node {
+  //                 credential
+  //               }
+  //             }
+  //         }
+  //         }
+  //     `)
+  //   const {radians} = useSpring({
+  //     to: async next => {
+  //       while (1) await next({radians: 2 * Math.PI});
+  //     },
+  //     from: {radians: 0},
+  //     config: {duration: 3500},
+  //     reset: true
+  //   });
+  //   const graduation = <FontAwesomeIcon icon={faGraduationCap} size="3x" />
+  //   const rating = <FontAwesomeIcon icon={faTrophy} size="3x" />
+  //   const campuses = <FontAwesomeIcon icon={faBookOpen} size="3x" />
+  //   const hired = <FontAwesomeIcon icon={faHandshake} size="3x" />
+  //   // const {countUp} = useCountUp({end: props.hired});
+  //   const {countUp} = useCountUp({end: props.hired})
   // const {countUp, start, pauseResume, reset, update} = useCountUp({
   //   start: 0,
   //   end: 550,
@@ -52,7 +52,7 @@ const Credentials = (props) => {
   // });
   return (
     <>
-      {data.credentials.edges.map(i => (
+      {/* {data.credentials.edges.map(i => (
         <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
           <div className="container test">
             <div className="col-md border rounded credentials mr-2">
@@ -73,7 +73,7 @@ const Credentials = (props) => {
           </div>
         </animated.div>
       ))
-      }
+      } */}
       {/* <div className="container mb-5">
         <div className="row no-gutter">
           <div className="col">

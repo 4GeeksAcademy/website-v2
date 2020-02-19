@@ -6,20 +6,20 @@ import {Container, Cont, Column, Row, Divider} from '../Sections'
 import {Address, HandMoney, Laptop, Colors, RoundImage} from '../Styling'
 
 export default () => {
-  const data = useStaticQuery(graphql`
-      query myQueryWhy{
-          why: allWhy4GeeksYaml {
-            edges {
-              node {
-                title
-                description
-                image
-                slug
-              }
-            }
-          }
-        }
-      `)
+  // const data = useStaticQuery(graphql`
+  //     query myQueryWhy{
+  //         why: allWhy4GeeksYaml {
+  //           edges {
+  //             node {
+  //               title
+  //               description
+  //               image
+  //               slug
+  //             }
+  //           }
+  //         }
+  //       }
+  //     `)
   return (
     <>
       <Title

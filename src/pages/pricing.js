@@ -31,7 +31,7 @@ const Pricing = () => (
     </Wrapper>
     <Wrapper
       style="default">
-      <QueryTest up="80" />
+      {/* <QueryTest up="80" /> */}
     </Wrapper>
     <Divider height="100px" />
     <Container fluid >
@@ -65,7 +65,7 @@ const Pricing = () => (
     >
       <Divider height="100px" />
 
-      <PricesAndPayment />
+      {/* <PricesAndPayment /> */}
     </Wrapper>
     <Divider height="230px" />
     <Wrapper
@@ -96,7 +96,7 @@ const Pricing = () => (
         primary
       />
       <Divider height="20px" />
-      <WhoIsHiring source="financials" />
+      {/* <WhoIsHiring source="financials" /> */}
       <Divider height="150px" />
     </Wrapper>
   </Layout >
