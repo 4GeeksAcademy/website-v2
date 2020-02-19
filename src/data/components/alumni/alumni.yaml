@@ -1,6 +1,7 @@
 alumni:
   - name: "Fernando"
     last_name: "Funez"
+    slug: "fernando-funez"
     job_title: "Teacher Assistant"
     job_name: "4Geeks Academy"
     image: "https://www.usnews.com/dims4/USNEWS/2637d7f/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F2e%2F31%2F5dd9df66478e8a991e97ee9840da%2F140527thinkingatdesk-stock.jpg"
@@ -8,6 +9,7 @@ alumni:
     video: ""
   - name: "George"
     last_name: "Mihov"
+    slug: "george-mihov"
     job_title: "Intern"
     job_name: "4Geeks Academy"
     image: "https://www.usnews.com/dims4/USNEWS/2637d7f/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F2e%2F31%2F5dd9df66478e8a991e97ee9840da%2F140527thinkingatdesk-stock.jpg"
