@@ -4,7 +4,6 @@ import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
 import {Title, H2, H3, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
-import QueryTest from '../components/QueryTest'
 import ProgramDescription from '../components/ProgramDescription'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import Mentors from '../components/Mentors'
@@ -29,7 +28,7 @@ const options = [
   {value: 'maracaibo', label: 'Maracaibo'},
 ];
 const Program = () => {
-    const data = { banner: { title: "bobo" } };
+  const data = {banner: {title: "bobo"}};
   // const _cont = useContext(SessionContext);
   // console.log("sadasdasd ", _cont);
 
@@ -65,7 +64,7 @@ const Program = () => {
       </Wrapper>
       <Wrapper
         style="default">
-        <QueryTest up="80" />
+
       </Wrapper>
       <BrowserView>
         <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
@@ -100,16 +99,16 @@ const Program = () => {
                       <Row marginTop="15px">
                         <Column size="12">
                           {/* {data.geek.edges[0].node.geek_pal.map((pal, index) => { */}
-                            {/* return ( */}
-                              <Row key={1} marginBottom="4px">
-                                <Column size="1" customRespSize respSize="1" alignSelf="center">
-                                  <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
-                                </Column>
-                                <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                                  <Paragraph color={Colors.gray}>{"wiwliwli"}</Paragraph>
-                                </Column>
-                              </Row>
-                              {/* ) */}
+                          {/* return ( */}
+                          <Row key={1} marginBottom="4px">
+                            <Column size="1" customRespSize respSize="1" alignSelf="center">
+                              <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                            </Column>
+                            <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                              <Paragraph color={Colors.gray}>{"wiwliwli"}</Paragraph>
+                            </Column>
+                          </Row>
+                          {/* ) */}
                           {/* })} */}
                         </Column>
                       </Row>
@@ -135,15 +134,15 @@ const Program = () => {
                         <Column size="12">
                           {/* {data.geek.edges[0].node.geek_force.map((pal, index) => {
                             return ( */}
-                              <Row key={1} marginBottom="2px" >
-                                <Column size="1" customRespSize respSize="1" alignSelf="center">
-                                  <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
-                                </Column>
-                                <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                                  <Paragraph fontSize="13px" color={Colors.gray}>{"Welelele"}</Paragraph>
-                                </Column>
-                              </Row>
-                            {/* ) */}
+                          <Row key={1} marginBottom="2px" >
+                            <Column size="1" customRespSize respSize="1" alignSelf="center">
+                              <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                            </Column>
+                            <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                              <Paragraph fontSize="13px" color={Colors.gray}>{"Welelele"}</Paragraph>
+                            </Column>
+                          </Row>
+                          {/* ) */}
                           {/* })} */}
                         </Column>
                       </Row>

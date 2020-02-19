@@ -3,7 +3,6 @@ import Layout from '../global/Layout';
 import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
 import {Title} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
-import QueryTest from '../components/QueryTest';
 import WhoIsHiring from '../components/WhoIsHiring';
 
 const Partners = () => (

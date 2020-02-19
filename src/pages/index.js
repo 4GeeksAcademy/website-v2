@@ -1,7 +1,6 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
-import QueryTest from '../components/QueryTest';
 import Why4Geeks from '../components/Why4Geeks';
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import ChooseProgram from '../components/ChooseProgram'
@@ -13,6 +12,7 @@ import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
 import {Card} from '../components/Card'
 import WhoIsHiring from '../components/WhoIsHiring';
 import Alumni from '../components/Alumni'
+import Credentials from '../components/Credentials'
 
 const Home = ({data}) => {
   return (
