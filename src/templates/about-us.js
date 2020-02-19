@@ -8,15 +8,17 @@ import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage} from '../comp
 import Mentors from '../components/Mentors'
 import Events from '../components/Events'
 
-const Why = ({ data }) => {
+const Why = ({ data, pageContext }) => {
     let yml = null;
     try{
-        yml = data.allPagesYaml.edges[0].node;
+        yml = data.allPageYaml.edges[0].node;
     }
     catch(err){
         console.error("There was a problem loading the data", data);
+        console.error(err);
         return <div className="alert alert-danger">There was a problem loading the data</div>
     }
+    console.log("Page context:", pageContext);
     return (
     <Layout>
         <Container fluid height="450px">
@@ -174,7 +176,7 @@ const Why = ({ data }) => {
         </Wrapper>
         <Divider height="100px" />
         <Wrapper style="default">
-        <Mentors up="200px" />
+        {/* <Mentors up="200px" /> */}
         </Wrapper>
         <Divider height="150px" />
         <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
