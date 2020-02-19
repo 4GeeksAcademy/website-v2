@@ -1,15 +1,18 @@
 jobs:
   - title: "Growth Rate"
+    slug: "growt-rate"
     sub_title: "Coding Bootcamp"
     value: 171
     value_symbol: "%"
     chart_data: [0, 2, 5, 4, 5, 10, 3, 5, 1, 9, 6, 8, 6, 9, 10]
   - title: "Open Positions"
+    slug: "open-positions"
     sub_title: "Developer Jobs"
     value: 1.3
     value_symbol: "M"
     chart_data: [0, 3, 6, 9, 3, 10, 8, 5, 7, 8, 5, 8, 2, 9, 10]
   - title: "Avg Salary"
+    slug: "avg-salary"
     sub_title: "Jr Developer"
     value: 61
     value_symbol: "k"
