@@ -4,17 +4,17 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   const types = ['PageYaml', 'CourseYaml'];
-//   const types = ['CourseYaml'];
   if (types.includes(node.internal.type)) {
     const url = createFilePath({ node, getNode })
     const meta = getMetaFromPath({ url, ...node });
-    console.log("meta!! ", meta);
     if(meta){
       createNodeField({ node, name: `lang`, value: meta.lang });
       createNodeField({ node, name: `slug`, value: meta.slug });
       createNodeField({ node, name: `file_name`, value: meta.file_name });
       createNodeField({ node, name: `template`, value: meta.template });
       createNodeField({ node, name: `type`, value: meta.type });
+      createNodeField({ node, name: `pagePath`, value: meta.pagePath });
+      createNodeField({ node, name: `filePath`, value: url });
     }
   }
 };
@@ -58,7 +58,7 @@ const createBlog = async ({ actions, graphql }) => {
     return true;
 }
 const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
-    const { createPage } = actions;
+    const { createPage, createRedirect } = actions;
     const result = await graphql(`
         {
           all${entity}Yaml {
@@ -66,6 +66,7 @@ const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
               node {
                 basic_info {
                     slug
+                    redirects
                 }
                 fields{
                     lang
@@ -73,6 +74,8 @@ const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
                     file_name
                     template
                     type
+                    pagePath
+                    filePath
                 }
               }
             }
@@ -81,21 +84,51 @@ const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
     );
     if (result.errors) throw new Error(result.errors);
 
+    const translations = buildTranslations(result.data[`all${entity}Yaml`]);
     result.data[`all${entity}Yaml`].edges.forEach(({ node }) => {
         createPage({
-            path: `${node.fields.lang}/${node.fields.template}/${node.fields.slug}`,
+            path: node.fields.pagePath,
             component: path.resolve(`./src/templates/${node.fields.template}.js`),
             context: {
-                ...node.fields
+                ...node.fields,
+                translations: translations[node.fields.template]
             }
         });
+
+        if(node.fields.lang === "us"){
+            createRedirect({
+                fromPath: `/${node.fields.template}/${node.fields.slug}`,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+
+            createRedirect({
+                fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+        }
+
+        if (node.basic_info && node.basic_info.redirects) {
+            node.basic_info.redirects.forEach(path => {
+                path = path[0] !== '/' ? '/'+path : path;
+                createRedirect({
+                    fromPath: path,
+                    toPath: node.fields.pagePath,
+                    redirectInBrowser: true,
+                    isPermanent: true
+                });
+            })
+        }
     });
 
     return true;
 };
 
 const createPagesfromYml = async ({ graphql, actions }) => {
-    const { createPage } = actions;
+    const { createPage, createRedirect } = actions;
     const result = await graphql(`
         {
           allPageYaml {
@@ -103,6 +136,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
               node {
                 basic_info {
                     slug
+                    redirects
                 }
                 fields{
                     lang
@@ -110,6 +144,8 @@ const createPagesfromYml = async ({ graphql, actions }) => {
                     file_name
                     template
                     type
+                    pagePath
+                    filePath
                 }
               }
             }
@@ -118,14 +154,44 @@ const createPagesfromYml = async ({ graphql, actions }) => {
     );
     if (result.errors) throw new Error(result.errors);
 
+    const translations = buildTranslations(result.data[`allPageYaml`]);
     result.data[`allPageYaml`].edges.forEach(({ node }) => {
         createPage({
-            path: `${node.fields.lang}/${node.fields.slug}`,
+            path: node.fields.pagePath,
             component: path.resolve(`./src/templates/${node.fields.template}.js`),
             context: {
-                ...node.fields
+                ...node.fields,
+                translations: translations[node.fields.template]
             }
         });
+
+        if(node.fields.lang === "us"){
+            createRedirect({
+                fromPath: "/"+node.fields.slug,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+
+            createRedirect({
+                fromPath: "/en/"+node.fields.slug,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+        }
+
+        if (node.basic_info && node.basic_info.redirects) {
+            node.basic_info.redirects.forEach(path => {
+                path = path[0] !== '/' ? '/'+path : path;
+                createRedirect({
+                    fromPath: path,
+                    toPath: node.fields.pagePath,
+                    redirectInBrowser: true,
+                    isPermanent: true
+                });
+            })
+        }
     });
 
     return true;
@@ -142,5 +208,20 @@ const getMetaFromPath = ({ url, basic_info }) => {
   const customSlug = (typeof basic_info.slug === "string");
   const file_name = m[2];// + (lang == "es" ? "-es": "");
   const slug = (customSlug) ? basic_info.slug : file_name;
-  return { lang, slug, file_name: `${file_name}.${lang}`, template: type === "page" ? file_name : type, type, url };
+  const template = type === "page" ? file_name : type;
+
+  const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${template}/${slug}`;
+
+  return { lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath };
+};
+
+const buildTranslations = ({ edges }) => {
+    let translations = {};
+    edges.forEach(({ node }) => {
+        const meta = getMetaFromPath({ url: node.fields.filePath, ...node });
+        if(typeof translations[meta.template] === 'undefined') translations[meta.template] = {};
+        translations[meta.template][meta.lang] = meta.pagePath;
+    });
+    console.log("Translations", translations);
+    return translations;
 };

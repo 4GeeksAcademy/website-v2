@@ -1,6 +1,9 @@
-info: fullstack info
 basic_info:
   slug: coding-introduction
+  redirects: [
+    '/coding-introduction'
+  ]
+  
 ## Texto en el banner
 banner:
   headertext: 4Geeks Academy Miami Coding Bootcamp
