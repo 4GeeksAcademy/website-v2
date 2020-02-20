@@ -7,7 +7,6 @@ import {Container, Divider, Col, Cont, Row, Column, Wrapper} from '../components
 import {H1, H2, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Jumbo} from '../components/Jumbotron'
-import QueryTest from '../components/QueryTest'
 import Why4Geeks from '../components/Why4Geeks'
 import Jobs from '../components/Jobs'
 import GeeksVsOthers from '../components/GeeksVsOthers'

@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../global/Layout';
 import {Container, Column, Row, Wrapper, Divider} from '../components/Sections';
-import QueryTest from '../components/QueryTest';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
 import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage} from '../components/Styling'

@@ -4,7 +4,6 @@ import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
 import {Title, H5} from '../components/Heading'
 import {Button, Colors, RoundImage} from '../components/Styling'
 import PricesAndPayment from '../components/PricesAndPayment';
-import QueryTest from '../components/QueryTest'
 import WhoIsHiring from '../components/WhoIsHiring'
 
 const Pricing = () => (
