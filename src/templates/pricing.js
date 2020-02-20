@@ -30,7 +30,7 @@ const Pricing = ({data, pageContext}) => {
                 <Title
                     size="5"
                     title={yml.tagline}
-                    paragraph="We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone."
+                    paragraph={yml.sub_heading}
                     main
                     color={Colors.white}
                     fontSize="46px"
@@ -118,6 +118,7 @@ export const query = graphql`
         node{
             tagline
             image
+            sub_heading
         }
       }
     }

@@ -20,13 +20,6 @@ import {
   isMobile
 } from "react-device-detect";
 
-const options = [
-  {value: 'miami', label: 'Miami'},
-  {value: 'santiago', label: 'Santiago'},
-  {value: 'caracas', label: 'Caracas'},
-  {value: 'madrid', label: 'Madrid'},
-  {value: 'maracaibo', label: 'Maracaibo'},
-];
 const Program = () => {
   const data = {banner: {title: "bobo"}};
   const [test, setTest] = useState()
