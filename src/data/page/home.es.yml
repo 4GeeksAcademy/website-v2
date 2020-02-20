@@ -1,0 +1,5 @@
+basic_info:
+  slug: home
+  redirects: ["/inicio"]
+
+tagline: INICIO
