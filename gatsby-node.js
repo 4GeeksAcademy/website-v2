@@ -116,6 +116,9 @@ const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
 
         if (node.basic_info && node.basic_info.redirects) {
             node.basic_info.redirects.forEach(path => {
+                if(typeof(path)!== "string"){
+                    throw new Error(`The path in ${node.basic_info.slug} its not a string: ${path}`);
+                }
                 path = path[0] !== '/' ? '/'+path : path;
                 createRedirect({
                     fromPath: path,
@@ -186,6 +189,9 @@ const createPagesfromYml = async ({ graphql, actions }) => {
 
         if (node.basic_info && node.basic_info.redirects) {
             node.basic_info.redirects.forEach(path => {
+                if(typeof(path)!== "string"){
+                    throw new Error(`The path in ${node.basic_info.slug} its not a string: ${path}`);
+                }
                 path = path[0] !== '/' ? '/'+path : path;
                 createRedirect({
                     fromPath: path,

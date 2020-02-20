@@ -3,11 +3,14 @@ basic_info:
     title: null
     description: null
     image: null
-    keywords: none
+    keywords: null
     redirects: [
-        '/course/full-time'
+        '/course/full-time', "full-time"
     ]
 ## Texto en el banner
+
+tagline: "Some Tagline"
+
 banner:
   headertext: 4Geeks Academy Miami Coding Bootcamp
   title: Become a Full-Stack Software Developer

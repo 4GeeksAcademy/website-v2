@@ -1,13 +1,15 @@
 basic_info:
-    slug: coding-introduction
-    title: null
-    description: null
-    image: null
-    keywords: none
-    redirects: [
-    '/coding-introduction'
-    ]
-  
+  slug: "coding-introduction"
+  title: "Coding Introduction Course - 4Geeks Academy"
+  description: "Learn to code in just a couple of weeks. Ideal get you introduced in the world of coding."
+  image: ""
+  keywords: ["coding introduction", "learn to code"]
+  redirects: [
+    '/coding-introduction-programming'
+  ]
+
+tagline: "Some Tagline"
+
 ## Texto en el banner
 banner:
   headertext: 4Geeks Academy Miami Coding Bootcamp

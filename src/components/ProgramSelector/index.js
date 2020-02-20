@@ -118,8 +118,8 @@ const ProgramSelector = () => {
   //         }
   //       }
   //     `)
-  const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
-  console.log("$$$", data.loc.edges)
+  // const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
+  // console.log("$$$", data.loc.edges)
   return (
     <Row align="center" >
       <Column size="12" alignSelf="center">

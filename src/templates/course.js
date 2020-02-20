@@ -10,6 +10,7 @@ import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
 import Alumni from '../components/Alumni'
 import Scrollspy from 'react-scrollspy'
+import BasePage from './_basePage'
 import {SessionContext} from '../session.js'
 import ProgramSelector from '../components/ProgramSelector'
 import {
@@ -19,23 +20,8 @@ import {
   isMobile
 } from "react-device-detect";
 
-const options = [
-  {value: 'miami', label: 'Miami'},
-  {value: 'santiago', label: 'Santiago'},
-  {value: 'caracas', label: 'Caracas'},
-  {value: 'madrid', label: 'Madrid'},
-  {value: 'maracaibo', label: 'Maracaibo'},
-];
-const Program = () => {
-  const data = {banner: {title: "bobo"}};
-  // const _cont = useContext(SessionContext);
-  // console.log("sadasdasd ", _cont);
-
-  const [test, setTest] = useState()
-  const [weeks, setWeeks] = useState();
-  return (
-    <Layout>
-      {/* {session.location} */}
+const Program = ({ data, pageContext, yml}) => {
+  return (<>
       <Wrapper
         style="default"
         image="yes"
@@ -49,7 +35,7 @@ const Program = () => {
         <Divider height="20px" />
         <Title
           size="5"
-          title={data.banner.title}
+          title={yml.tagline}
           main
           color={Colors.white}
           fontSize="46px"
@@ -181,7 +167,7 @@ const Program = () => {
           primary
         />
         <Divider height="50px" />
-        <GeeksVsOthers />
+        {/* <GeeksVsOthers /> */}
         <Divider height="100px" />
       </Wrapper>
 
@@ -195,7 +181,7 @@ const Program = () => {
         />
         <Divider height="50px" /> */}
         <section className="section" id="section-4"></section>
-        <PricesAndPayment />
+        {/* <PricesAndPayment /> */}
         <Divider height="100px" />
       </Wrapper>
       {/* <Wrapper
@@ -226,21 +212,26 @@ const Program = () => {
         <Divider height="100px" />
       </Wrapper>
       <Divider height="100px" />
-    </Layout >
+    </>
   )
 };
 
-// export const geekQuery = graphql`
-//     query geekQuery{
-//             geek: allGeekPalYaml {
-//             edges {
-//             node {
-//             geek_pal
-//             geek_force
-//         }
-//     }
-//     }
-// }
-// `
+export const query = graphql`
+  query CourseQuery($file_name: String!, $lang: String!) {
+    allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+      edges{
+        node{
+            tagline
+            basic_info{
+                title
+                description
+                image
+                keywords
+            }
+        }
+      }
+    }
+  }
+`;
 
-export default Program;
+export default BasePage(Program);

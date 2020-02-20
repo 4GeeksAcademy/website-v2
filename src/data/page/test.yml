@@ -5,5 +5,5 @@ basic_info:
     image: "https://do_not_delete_me.png"
     keywords: ["codign bootcamp"]
     redirects: [
-        "testing"
+        "/testing"
     ]

@@ -26,6 +26,7 @@ const Footer = () => (
                             <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>The Academy</Paragraph></Row>
                             <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Partners</Paragraph></Row>
                             <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Pricing</Paragraph></Row>
+                            <Row marginBottom="5px"><Link to="/jobs"><Paragraph fontSize="12px" color={Colors.white}>Careers</Paragraph></Link></Row>
                         </Column>
                         <Column size="3" margin="0 0 20px 0">
                             <Row ><H5 fontSize="16px" color={Colors.gray}>LOCATIONS</H5></Row>

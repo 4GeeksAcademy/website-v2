@@ -80,8 +80,8 @@ export const withSession = Component => {
                 const v6 = "v6";
                 const response = await fetch(`http://api.ipstack.com/${v4}?access_key=9b1771a432a0ca7c933a9a641b63bb00`);
                 const data = response.status === 200 ? await response.json() : null;
-                // const location = data ? closestLoc(locationsArray, data.latitude, data.longitude) : null;
-                const location = "Miami"
+                const location = data ? closestLoc(locationsArray, data.latitude, data.longitude) : null;
+                // const location = "Miami"
                 // const language = browserLang ? browserLang : location.defaultLanguage;
                 setSession({...session, v4, v6, location})
             };

@@ -8,25 +8,28 @@ import {Colors} from '../Styling'
 import {Card} from '../Card'
 
 export default () => {
-    // const data = useStaticQuery(graphql`
-    //   query myQueryJobs{
-    //       job: allJobsYaml {
-    //         edges {
-    //           node {
-    //             title
-    //             sub_title
-    //             graph
-    //             value
-    //             value_type
-    //             data
-    //           }
-    //         }
-    //       }
-    //     }
-    //   `)
+    const data = useStaticQuery(graphql`
+      query myQueryJobs{
+          job: allJobsStatisticsYaml {
+            edges {
+              node {
+                jobs {
+                  title
+                  slug
+                  sub_title
+                  value
+                  value_symbol
+                  chart_data
+                }
+              }
+            }
+          }
+        }
+      `)
+    const jobs = data.job.edges[0].node.jobs
     return (
         <Row>
-            {data.job.edges.map((i, index) => (
+            {jobs.map((i, index) => (
                 <Column size="4" key={index}>
                     <Card
                         width="100%"
@@ -39,30 +42,31 @@ export default () => {
                             <Column size size="5" customRespSize respSize="5" >
                                 <Row>
                                     <Paragraph color="gray" align="left" margin="0 0 10px 0" fontSize="13px">
-                                        {i.node.title}
+                                        {i.title}
                                     </Paragraph>
                                 </Row>
                                 <Row>
-                                    <H3 primary>{i.node.value}</H3><span><H3 primary>{i.node.value_type}</H3></span>
+                                    <H3 primary>{i.value}</H3><span><H3 primary>{i.value_type}</H3></span>
                                 </Row>
                                 <Row>
                                     <Paragraph color="gray" align="left" margin="10px 0 0 0" fontSize="13px">
-                                        {i.node.sub_title}
+                                        {i.sub_title}
                                     </Paragraph>
-
                                 </Row>
                             </Column>
-                            <Column size size="5" customRespSize respSize="5" alignSelf="center"><Trend
-                                smooth
-                                autoDraw
-                                autoDrawDuration={5000}
-                                autoDrawEasing="ease-out"
-                                data={i.node.data}
-                                gradient={[`${Colors.blue}`]}
-                                radius={25}
-                                strokeWidth={5}
-                                strokeLinecap={'butt'}
-                            /></Column>
+                            <Column size size="5" customRespSize respSize="5" alignSelf="center">
+                                <Trend
+                                    smooth
+                                    autoDraw
+                                    autoDrawDuration={5000}
+                                    autoDrawEasing="ease-out"
+                                    data={i.chart_data}
+                                    gradient={[`${Colors.blue}`]}
+                                    radius={25}
+                                    strokeWidth={5}
+                                    strokeLinecap={'butt'}
+                                />
+                            </Column>
                         </Row>
                     </Card>
                 </Column>
