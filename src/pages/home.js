@@ -3,7 +3,7 @@ import {graphql} from 'gatsby';
 import Layout from '../global/Layout';
 import Why4Geeks from '../components/Why4Geeks';
 import GeeksVsOthers from '../components/GeeksVsOthers'
-import Jobs from '../components/Jobs';
+import JobsStatistics from '../components/JobsStatistics';
 import Link from 'gatsby-link'
 import {H1, H2, H3, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
