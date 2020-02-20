@@ -72,7 +72,6 @@ coding:
     slug: "worldcamp"
     image: "../images/coding/worldcamp.png"
     featured: false
-
 influencers:
   - name: "Quotanda"
     slug: "quotanda"

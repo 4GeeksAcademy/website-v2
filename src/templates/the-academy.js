@@ -6,6 +6,7 @@ import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage} from '../components/Styling'
 import Mentors from '../components/Mentors'
 import Events from '../components/Events'
+import Credentials from '../components/Credentials'
 
 const Why = ({data, pageContext}) => {
     let yml = null;
@@ -18,6 +19,8 @@ const Why = ({data, pageContext}) => {
         return <div className="alert alert-danger">There was a problem loading the data</div>
     }
     console.log("Page context:", pageContext);
+    const cornerstone = yml.cornerstones[0]
+    console.log("cornerstone", cornerstone)
     return (
         <Layout>
             <Container fluid height="450px">
@@ -34,7 +37,7 @@ const Why = ({data, pageContext}) => {
                     </Column>
                 </Row>
             </Container>
-
+            <Divider height="100px" />
             <Container fluid >
                 <Row>
                     <Column size="1" />
@@ -42,7 +45,7 @@ const Why = ({data, pageContext}) => {
                         <Row>
                             <Column size="1" />
                             <Column size="9">
-
+                                <Credentials up="80" />
                             </Column>
                         </Row>
                     </Column>
@@ -66,7 +69,7 @@ const Why = ({data, pageContext}) => {
             </Wrapper>
             <Divider height="100px" />
             <Wrapper style="default">
-                <Title size="8" title="OUR FOUR CORNERSTONES" primary />
+                <Title size="8" title={cornerstone.heading} primary />
             </Wrapper>
             <Divider height="150px" />
             <Wrapper
@@ -76,98 +79,41 @@ const Why = ({data, pageContext}) => {
                 border="top"
             >
                 <Row marginBottom="30px">
-                    <Column size="6">
-                        <Card
-                            width="100%"
-                            height="200px"
-                            color="black"
-                            padding="30px"
-                            move="up"
-                            up="100px"
-                            marginXs="0 0 30px 0"
-                        >
-                            <Row >
-                                <Column size="3"><Book width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
-                                <Column size="8" >
-                                    <Row><H4 color={Colors.white}>FLIPPED CLASSROOM</H4></Row>
-                                    <Row marginTop="15px">
-                                        <Paragraph fontSize="14px" lineHeight="18px">
-                                            Theory is delivered trough video, animation, images and infographics. Class time is then used to debate, create and build projects, and mentor over practicalexercises.
-                    </Paragraph>
+                    {cornerstone.cornerstones_list.map((item, index) => {
+                        return (
+                            <Column size="6" margin="0 0 10px 0">
+                                <Card
+                                    width="100%"
+                                    height="200px"
+                                    color="black"
+                                    padding="30px"
+                                    move="up"
+                                    up="100px"
+                                    marginXs="0 0 30px 0"
+                                >
+                                    <Row >
+                                        <Column size="3">
+
+                                            {item.icon === "Book" && <Book width="72px" color={Colors.yellow} fill={Colors.yellow} />}
+                                            {item.icon === "Teacher" && <Teacher width="72px" color={Colors.yellow} fill={Colors.yellow} />}
+                                            {item.icon === "Users" && <Users width="72px" color={Colors.yellow} fill={Colors.yellow} />}
+                                            {item.icon === "Sitemap" && <Sitemap width="72px" color={Colors.yellow} fill={Colors.yellow} />}
+
+                                        </Column>
+                                        <Column size="8" >
+                                            <Row><H4 color={Colors.white}>{item.title}</H4></Row>
+                                            <Row marginTop="15px">
+                                                <Paragraph fontSize="14px" lineHeight="18px">
+                                                    {item.content}
+                                                </Paragraph>
+                                            </Row>
+                                        </Column>
                                     </Row>
-                                </Column>
-                            </Row>
-                        </Card>
-                    </Column>
-                    <Column size="6">
-                        <Card
-                            width="100%"
-                            height="200px"
-                            color="black"
-                            padding="30px"
-                            move="up"
-                            up="100px"
-                        >
-                            <Row>
-                                <Column size="3"><Teacher width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
-                                <Column size="8" >
-                                    <Row><H4 color={Colors.white}>1:7 MENTOR-STUDENT RATIO</H4></Row>
-                                    <Row marginTop="15px">
-                                        <Paragraph fontSize="14px" lineHeight="18px">
-                                            An intimate setting provides the faculty with the opportunity to adapt to each student's particular pace.
-                    </Paragraph>
-                                    </Row>
-                                </Column>
-                            </Row>
-                        </Card>
-                    </Column>
-                </Row>
-                <Row>
-                    <Column size="6">
-                        <Card
-                            width="100%"
-                            height="200px"
-                            color="black"
-                            padding="30px"
-                            move="up"
-                            up="100px"
-                            marginXs="0 0 30px 0"
-                        >
-                            <Row>
-                                <Column size="3"><Users width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
-                                <Column size="8" >
-                                    <Row><H4 color={Colors.white}>1:1 MENTORSHIP</H4></Row>
-                                    <Row marginTop="15px">
-                                        <Paragraph fontSize="14px" lineHeight="18px">
-                                            Every student has the opportunity to have regular conversations with a mentor.
-                    </Paragraph>
-                                    </Row>
-                                </Column>
-                            </Row>
-                        </Card>
-                    </Column>
-                    <Column size="6">
-                        <Card
-                            width="100%"
-                            height="200px"
-                            color="black"
-                            padding="30px"
-                            move="up"
-                            up="100px"
-                        >
-                            <Row>
-                                <Column size="3"><Sitemap width="72px" color={Colors.yellow} fill={Colors.yellow} /></Column>
-                                <Column size="8" >
-                                    <Row><H4 color={Colors.white}>TALENT TREE</H4></Row>
-                                    <Row marginTop="15px">
-                                        <Paragraph fontSize="14px" lineHeight="18px">
-                                            The syllabus maps out 44 skills; students earn points towards each skill in a gamified fashion..
-                    </Paragraph>
-                                    </Row>
-                                </Column>
-                            </Row>
-                        </Card>
-                    </Column>
+                                </Card>
+                            </Column>
+                        )
+                    })}
+
                 </Row>
                 <Divider height="50px" />
                 <Title size="8" title="MEET THE TEAM" primary />
@@ -237,11 +183,20 @@ const Why = ({data, pageContext}) => {
 }
 
 export const query = graphql`
-  query PageQuery($file_name: String!, $lang: String!) {
+  query AboutQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
             tagline
+            cornerstones {
+                cornerstones_list {
+                  content
+                  icon
+                  title
+                }
+                heading
+                sub_heading
+              }
         }
       }
     }

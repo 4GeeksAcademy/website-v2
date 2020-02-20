@@ -21,7 +21,19 @@ import {Button, Colors, Circle, RoundImage} from '../Styling';
 import '../../assets/css/style.scss';
 import {SessionContext} from '../../session'
 
-
+export const query = graphql`
+  query PricesQuery($file_name: String!, $lang: String!) {
+    allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+      edges{
+        node{
+            banner{
+              headertext
+            }
+        }
+      }
+    }
+  }
+`;
 
 export default () => {
   const {session, setSession} = useContext(SessionContext);
@@ -150,11 +162,11 @@ export default () => {
   //   }
   // }
   //   `)
-  const currentCityInfo = data.cities.edges.filter((item) => item.node.city === session.location)
-  console.log("currentCityInfo: ", currentCityInfo)
-  let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
-  let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
-  let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
+  // const currentCityInfo = data.cities.edges.filter((item) => item.node.city === session.location)
+  // console.log("currentCityInfo: ", currentCityInfo)
+  // let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
+  // let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
+  // let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
   function getStepContent (step) {
     switch (step) {
       case 0:

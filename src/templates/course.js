@@ -20,18 +20,8 @@ import {
   isMobile
 } from "react-device-detect";
 
-const options = [
-  {value: 'miami', label: 'Miami'},
-  {value: 'santiago', label: 'Santiago'},
-  {value: 'caracas', label: 'Caracas'},
-  {value: 'madrid', label: 'Madrid'},
-  {value: 'maracaibo', label: 'Maracaibo'},
-];
 const Program = () => {
   const data = {banner: {title: "bobo"}};
-  // const _cont = useContext(SessionContext);
-  // console.log("sadasdasd ", _cont);
-
   const [test, setTest] = useState()
   const [weeks, setWeeks] = useState();
   return (
@@ -182,7 +172,7 @@ const Program = () => {
           primary
         />
         <Divider height="50px" />
-        <GeeksVsOthers />
+        {/* <GeeksVsOthers /> */}
         <Divider height="100px" />
       </Wrapper>
 
@@ -196,7 +186,7 @@ const Program = () => {
         />
         <Divider height="50px" /> */}
         <section className="section" id="section-4"></section>
-        <PricesAndPayment />
+        {/* <PricesAndPayment /> */}
         <Divider height="100px" />
       </Wrapper>
       {/* <Wrapper

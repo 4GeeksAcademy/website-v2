@@ -12,11 +12,11 @@ module.exports = {
       },
       {
         name: 'WHY 4GEEKS',
-        link: '/why'
+        link: '/the-academy'
       },
       {
         name: 'THE PROGRAM',
-        link: '/program'
+        link: '/part-time'
       },
       {
         name: 'PRICING',
