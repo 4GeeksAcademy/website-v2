@@ -5,39 +5,43 @@ import {RoundImage, Colors} from '../Styling';
 import {H2, H3, H4, Paragraph} from '../Heading'
 
 const WhoIsHiring = props => {
-  // const data = useStaticQuery(graphql`
-  //     query myQueryWhoIsHiring{
-  //         who: allPartnersYaml {
-  //           edges {
-  //             node {
-  //               partners {
-  //                 name
-  //                 image
-  //               }
-  //               coding {
-  //                 name
-  //                 image
-  //               }
-  //               influencers {
-  //                 name
-  //                 image
-  //               }
-  //               financials {
-  //                 name
-  //                 image
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     `)
+  const data = useStaticQuery(graphql`
+      query myQueryWhoIsHiring{
+        allPartnersYaml {
+          edges {
+            node {
+              partners {
+                featured
+                image
+                name
+                slug
+              }
+              influencers {
+                name
+                slug
+                image
+                featured
+              }
+              financials {
+                name
+                slug
+                image
+                featured
+              }
+            }
+          }
+        }
+        }
+      `)
+  const partners = data.allPartnersYaml.edges[0].node
+  console.log("partners", data.allPartnersYaml.edges[0].node)
   return (
     <>
       {props.source === "partners"
         ?
         <>
           <Row>
-            {data.who.edges[0].node.partners.map((partner, index) => (
+            {partners.partners.map((partner, index) => (
               <Column size="3" customRespSize respSize="3" key={index}>
                 <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
               </Column>
@@ -54,7 +58,7 @@ const WhoIsHiring = props => {
         : props.source === "coding"
           ?
           <Row>
-            {data.who.edges[0].node.coding.map((partner, index) => (
+            {partners.coding.map((partner, index) => (
               <Column size="3" customRespSize respSize="3" key={index}>
                 <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
               </Column>
@@ -63,7 +67,7 @@ const WhoIsHiring = props => {
           : props.source === "influencers"
             ?
             <Row>
-              {data.who.edges[0].node.influencers.map((partner, index) => (
+              {partners.influencers.map((partner, index) => (
                 <Column size="3" customRespSize respSize="3" key={index}>
                   <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
                 </Column>
@@ -71,7 +75,7 @@ const WhoIsHiring = props => {
             </Row>
             : props.source === "financials" &&
             <Row>
-              {data.who.edges[0].node.financials.map((partner, index) => (
+              {partners.financials.map((partner, index) => (
                 <Column size="4" customRespSize respSize="4" key={index}>
                   <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
                 </Column>

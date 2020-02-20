@@ -4,6 +4,7 @@ import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
 import {Title} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 import Credentials from '../components/Credentials'
+import WhoIsHiring from '../components/WhoIsHiring'
 
 
 const Partners = ({data, pageContext}) => {
@@ -28,7 +29,7 @@ const Partners = ({data, pageContext}) => {
                     textAlign="center"
                 />
                 <Row align="center">
-                    <Button margin="15px 0px" color="red" textColor="white">BE A HIRING PARTNER</Button>
+                    <Button width="300px" margin="15px 0px" color="red" textColor="white">BE A HIRING PARTNER</Button>
                 </Row>
             </Wrapper>
             <Wrapper
@@ -47,7 +48,7 @@ const Partners = ({data, pageContext}) => {
                     customParagraphSize="8"
                 />
                 <Divider height="20px" />
-                {/* <WhoIsHiring source="partners" /> */}
+                <WhoIsHiring source="partners" />
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
@@ -75,7 +76,7 @@ const Partners = ({data, pageContext}) => {
                 <Divider height="20px" />
                 {/* <WhoIsHiring source="influencers" /> */}
                 <Row align="center">
-                    <Button color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">BE A HIRING PARTNER</Button>
+                    <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">BE A HIRING PARTNER</Button>
                 </Row>
             </Wrapper>
         </Layout>
