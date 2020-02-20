@@ -8,7 +8,15 @@ import WhoIsHiring from '../components/WhoIsHiring'
 
 
 const Partners = ({data, pageContext}) => {
-
+    let yml = null;
+    try {
+        yml = data.allPageYaml.edges[0].node;
+    }
+    catch (err) {
+        console.error("There was a problem loading the data", data);
+        console.error(err);
+        return <div className="alert alert-danger">There was a problem loading the data</div>
+    }
     return (
         <Layout>
             <Wrapper
@@ -21,7 +29,7 @@ const Partners = ({data, pageContext}) => {
                 <Divider height="100px" />
                 <Title
                     size="5"
-                    title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
+                    title={yml.tagline}
                     paragraph="I'm impressed with the level of understanding 4Geeks students have, my hire eneded becoming team leader -CuevaSocial Marketing Agency"
                     main
                     color={Colors.white}
@@ -82,5 +90,15 @@ const Partners = ({data, pageContext}) => {
         </Layout>
     )
 };
-
+export const query = graphql`
+  query PartnersQuery($file_name: String!, $lang: String!) {
+    allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+      edges{
+        node{
+            tagline
+        }
+      }
+    }
+  }
+`;
 export default Partners;

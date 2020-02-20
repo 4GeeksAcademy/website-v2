@@ -237,7 +237,7 @@ const Why = ({data, pageContext}) => {
 }
 
 export const query = graphql`
-  query PageQuery($file_name: String!, $lang: String!) {
+  query AboutQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
