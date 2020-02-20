@@ -6,6 +6,7 @@ import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage} from '../components/Styling'
 import Mentors from '../components/Mentors'
 import Events from '../components/Events'
+import Credentials from '../components/Credentials'
 
 const Why = ({data, pageContext}) => {
     let yml = null;
@@ -34,7 +35,7 @@ const Why = ({data, pageContext}) => {
                     </Column>
                 </Row>
             </Container>
-
+            <Divider height="100px" />
             <Container fluid >
                 <Row>
                     <Column size="1" />
@@ -42,7 +43,7 @@ const Why = ({data, pageContext}) => {
                         <Row>
                             <Column size="1" />
                             <Column size="9">
-
+                                <Credentials up="80" />
                             </Column>
                         </Row>
                     </Column>

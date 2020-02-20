@@ -4,7 +4,7 @@ import Layout from '../global/Layout';
 import Why4Geeks from '../components/Why4Geeks';
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import ChooseProgram from '../components/ChooseProgram'
-import Jobs from '../components/Jobs';
+import JobsStatistics from '../components/JobsStatistics';
 import Link from 'gatsby-link'
 import {H1, H2, H3, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
@@ -81,12 +81,12 @@ const Home = ({data, pageContext}) => {
             <Wrapper
                 style="default">
                 <Divider height="100px" />
-                {/* <Why4Geeks /> */}
+                <Why4Geeks />
                 <Divider height="100px" />
             </Wrapper>
             <Wrapper
                 style="default">
-                {/* <Jobs /> */}
+                <JobsStatistics />
             </Wrapper>
             <Divider height="100px" />
             <Wrapper

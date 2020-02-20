@@ -29,9 +29,6 @@ const options = [
 ];
 const Program = () => {
   const data = {banner: {title: "bobo"}};
-  // const _cont = useContext(SessionContext);
-  // console.log("sadasdasd ", _cont);
-
   const [test, setTest] = useState()
   const [weeks, setWeeks] = useState();
   return (
@@ -182,7 +179,7 @@ const Program = () => {
           primary
         />
         <Divider height="50px" />
-        <GeeksVsOthers />
+        {/* <GeeksVsOthers /> */}
         <Divider height="100px" />
       </Wrapper>
 
@@ -196,7 +193,7 @@ const Program = () => {
         />
         <Divider height="50px" /> */}
         <section className="section" id="section-4"></section>
-        <PricesAndPayment />
+        {/* <PricesAndPayment /> */}
         <Divider height="100px" />
       </Wrapper>
       {/* <Wrapper
