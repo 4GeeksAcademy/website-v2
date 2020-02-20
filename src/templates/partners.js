@@ -30,14 +30,14 @@ const Partners = ({data, pageContext}) => {
                 <Title
                     size="5"
                     title={yml.tagline}
-                    paragraph="I'm impressed with the level of understanding 4Geeks students have, my hire eneded becoming team leader -CuevaSocial Marketing Agency"
+                    paragraph={yml.sub_heading}
                     main
                     color={Colors.white}
                     fontSize="46px"
                     textAlign="center"
                 />
                 <Row align="center">
-                    <Button width="300px" margin="15px 0px" color="red" textColor="white">BE A HIRING PARTNER</Button>
+                    <Button width="300px" margin="15px 0px" color="red" textColor="white">{yml.button}</Button>
                 </Row>
             </Wrapper>
             <Wrapper
@@ -96,6 +96,8 @@ export const query = graphql`
       edges{
         node{
             tagline
+            sub_heading
+            button
         }
       }
     }
