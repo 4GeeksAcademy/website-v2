@@ -1,4 +1,6 @@
 const path = require('path');
+const fs = require('fs');
+const YAML = require('yaml');
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -23,6 +25,7 @@ exports.createPages = async (params) =>
     await createBlog(params) && 
     await createPagesfromYml(params) &&
     await createEntityPagesfromYml('Course', params) &&
+    await addAdditionalRedirects(params) &&
     true;
 
 const createBlog = async ({ actions, graphql }) => {
@@ -197,6 +200,31 @@ const createPagesfromYml = async ({ graphql, actions }) => {
     return true;
 };
 
+const addAdditionalRedirects = async ({ graphql, actions }) => {
+    const { createRedirect } = actions;
+    const URL = './src/data/additional-redirects.yml';
+    try{
+        const contents = fs.readFileSync(URL, 'utf8');
+        if(!contents) throw Error("Error reading the redirect file");
+        const file = YAML.parse(contents);
+        if(!file) throw Error("Error persing the "+URL);
+
+        file.redirects.forEach(r => {
+            createRedirect({
+                fromPath: r.fromPath,
+                toPath: r.toPath,
+                redirectInBrowser: r.redirectInBrowser,
+                isPermanent: r.redirectInBrowser
+            });
+        });
+    }
+    catch(error){
+        throw Error(error);
+    }
+
+    return true;
+};
+
 const getMetaFromPath = ({ url, basic_info }) => {
   const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
   let m = regex.exec(url);
@@ -222,6 +250,5 @@ const buildTranslations = ({ edges }) => {
         if(typeof translations[meta.template] === 'undefined') translations[meta.template] = {};
         translations[meta.template][meta.lang] = meta.pagePath;
     });
-    console.log("Translations", translations);
     return translations;
 };

@@ -38,12 +38,14 @@
     "dotenv": "^8.2.0",
     "gatsby": "^2.19.18",
     "gatsby-image": "^2.2.17",
+    "gatsby-plugin-google-tagmanager": "^2.1.25",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-offline": "^3.0.2",
     "gatsby-plugin-react-helmet": "^3.1.6",
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-plugin-sass": "^2.1.26",
     "gatsby-plugin-sharp": "^2.2.19",
+    "gatsby-plugin-sitemap": "^2.2.27",
     "gatsby-plugin-styled-components": "^3.1.4",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.21",
@@ -88,6 +90,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
+    "yaml": "^1.7.2",
     "yarn-run-all": "^3.1.1"
   }
 }

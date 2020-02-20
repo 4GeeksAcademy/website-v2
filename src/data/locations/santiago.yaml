@@ -1,5 +1,9 @@
+basic_info:
+    slug: "santiago-chile"
+    redirects: []
+
+
 city: "Santiago de Chile"
-slug: "santiago-chile"
 name: "Santiago"
 latitude: "-33.408837"
 longitude: "-70.567958"

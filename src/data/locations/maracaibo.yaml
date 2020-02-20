@@ -1,5 +1,8 @@
+basic_info:
+    slug: "maracaibo"
+    redirects: []
+    
 city: "Maracaibo"
-slug: "maracaibo"
 name: "Maracaibo"
 latitude: "10.664500"
 longitude: "-71.617705"

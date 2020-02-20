@@ -1,5 +1,8 @@
+basic_info:
+    slug: "downtown-miami"
+    redirects: []
+
 city: "Miami"
-slug: "downtown-miami"
 name: "Downtown Miami"
 latitude: "25.760158"
 longitude: "-80.200154"

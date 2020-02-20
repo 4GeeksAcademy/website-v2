@@ -1,5 +1,8 @@
+basic_info:
+    slug: "impact-hub"
+    redirects: []
+
 city: "Caracas"
-slug: "impact-hub"
 name: "Impact Hub"
 latitude: "10.484845"
 longitude: "-66.826593"

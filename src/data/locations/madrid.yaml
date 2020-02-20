@@ -1,5 +1,8 @@
+basic_info:
+    slug: "madrid"
+    redirects: []
+
 city: "Madrid"
-slug: "madrid"
 name: "Madrid"
 latitude: "40.439769"
 longitude: "-3.680207"
