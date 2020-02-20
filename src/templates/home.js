@@ -76,7 +76,7 @@ const Home = ({data, pageContext}) => {
             <Divider height="45px" />
             <Wrapper
                 style="default">
-                {/* <QueryTest up="80" /> */}
+                <Credentials up="80" />
             </Wrapper>
             <Wrapper
                 style="default">
