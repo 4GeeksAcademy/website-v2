@@ -21,7 +21,7 @@ const Pricing = ({data, pageContext}) => {
             <Wrapper
                 style="default"
                 image="yes"
-                url="../images/pricing-bg.png"
+                url={yml.image}
                 border="bottom"
                 height="500px"
                 backgroundSize="cover"
@@ -117,6 +117,7 @@ export const query = graphql`
       edges{
         node{
             tagline
+            image
         }
       }
     }
