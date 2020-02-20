@@ -1,159 +1,86 @@
-import React, {useState, useEffect} from 'react';
-import {useCountUp} from 'react-countup';
-import styled from 'styled-components';
+import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
-import PropTypes from 'prop-types';
-import {useSpring, animated} from 'react-spring'
-import range from 'lodash-es/range'
-import '../../assets/css/style.scss'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faGraduationCap, faTrophy, faHandshake, faBookOpen} from '@fortawesome/free-solid-svg-icons'
+import {H2, H3, H4} from '../Heading'
+import {Card} from '../Card'
+import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
+import {Row, Column, Container} from '../Sections'
+import '../../assets/css/style.scss';
 
-// const {useCounter, setCounter} = useState(props.hired)
-
-// const items = range(4);
-// const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
-const Credentials = (props) => {
-  //   const data = useStaticQuery(graphql`
-  //     query myQueryCred{
-  //         credentials: allCredentialsDataYaml {
-  //             edges {
-  //               node {
-  //                 credential
-  //               }
-  //             }
-  //         }
-  //         }
-  //     `)
-  //   const {radians} = useSpring({
-  //     to: async next => {
-  //       while (1) await next({radians: 2 * Math.PI});
-  //     },
-  //     from: {radians: 0},
-  //     config: {duration: 3500},
-  //     reset: true
-  //   });
-  //   const graduation = <FontAwesomeIcon icon={faGraduationCap} size="3x" />
-  //   const rating = <FontAwesomeIcon icon={faTrophy} size="3x" />
-  //   const campuses = <FontAwesomeIcon icon={faBookOpen} size="3x" />
-  //   const hired = <FontAwesomeIcon icon={faHandshake} size="3x" />
-  //   // const {countUp} = useCountUp({end: props.hired});
-  //   const {countUp} = useCountUp({end: props.hired})
-  // const {countUp, start, pauseResume, reset, update} = useCountUp({
-  //   start: 0,
-  //   end: 550,
-  //   delay: 1000,
-  //   duration: 5,
-  //   onReset: () => console.log('Resetted!'),
-  //   onUpdate: () => console.log('Updated!'),
-  //   onPauseResume: () => console.log('Paused or resumed!'),
-  //   onStart: ({pauseResume}) => console.log(pauseResume),
-  //   onEnd: ({pauseResume}) => console.log(pauseResume),
-  // });
+export default props => {
+  const data = useStaticQuery(graphql`
+      query myCredentialsQuery{
+        allCredentialsYaml {
+          edges {
+            node {
+              credentials {
+                title
+                slug
+                value
+                symbol
+                symbol_position
+              }
+            }
+          }
+        }
+          }
+      `)
+  const credentials = data.allCredentialsYaml.edges[0].node.credentials
   return (
-    <>
-      {/* {data.credentials.edges.map(i => (
-        <animated.div key={i} className="script-bf-box " style={{transform: radians.interpolate(interp(i))}}>
-          <div className="container test">
-            <div className="col-md border rounded credentials mr-2">
-              <div className="row justify-content-center cred-row">
-                <div className="icons">{i.node.rating}</div>
-
-              </div>
-              <div className="row justify-content-center cred-row">
-                <div><h1 className="mb-0">{i.node.rating}</h1></div>
-
-              </div>
-              <div className="row justify-content-center cred-row">
-
-                <div className="mr-3 "><h1 className="mb-0">Ratings</h1> </div>
-              </div>
-            </div>
-
+    <Row >
+      {credentials.map((i, index) => {
+        return (
+          <div key={index} className={"col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 text-center mb-2"}>
+            {(index % 2 !== 0) ?
+              (<Card
+                height="250px"
+                heightLg="200px"
+                width="200px"
+                widthLg="150px"
+                color="white"
+                shadow
+                move="up"
+                up={props.up + "px"}
+              >
+                <div className="py-4">
+                  {(i.slug === "campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "alumni") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                </div>
+                <div className="card-footer bg-white border-0 p-0 mb-4">
+                  {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
+                </div>
+                <div className="card-body p-0"><H4 uppercase>{i.title}</H4></div>
+              </Card>)
+              :
+              <Card
+                height="250px"
+                heightLg="200px"
+                width="200px"
+                widthLg="150px"
+                color="white"
+                shadow
+                move="up"
+                up={props.up - ((props.up * 20) / 100) + "px"}
+              >
+                <div className="py-4">
+                  {(i.slug === "campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "alumni") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                </div>
+                <div className="card-footer bg-white border-0 p-0 mb-4">
+                  {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
+                </div>
+                <div className="card-body p-0"><H4 uppercase>{i.title}</H4></div>
+              </Card>}
           </div>
-        </animated.div>
-      ))
-      } */}
-      {/* <div className="container mb-5">
-        <div className="row no-gutter">
-          <div className="col">
-            <h2>Credentials</h2>
-          </div>
-        </div>
-        <div className="row no-gutter">
-          <div className="col-md border rounded credentials mr-2">
-            <div className="row justify-content-center cred-row">
-              <div className="icons">{rating}</div>
-
-            </div>
-            <div className="row justify-content-center cred-row">
-              <div><h1 className="mb-0">{props.rating}</h1></div>
-
-            </div>
-            <div className="row justify-content-center cred-row">
-
-              <div className="mr-3 "><h1 className="mb-0">Ratings</h1> </div>
-            </div>
-          </div>
-          <div className="col-md border rounded credentials mr-2">
-
-            <div className="row justify-content-center cred-row">
-              <div className="icons">{graduation}</div>
-
-            </div>
-            <div className="row justify-content-center cred-row">
-              <div><h1 className="mb-0">+{countUp}</h1></div>
-
-            </div>
-            <div className="row justify-content-center cred-row">
-
-              <div className="mr-3 "><h1 className="mb-0">Alumni</h1> </div>
-            </div>
-          </div>
-          <div className="col-md border rounded credentials mr-2">
-            <div className="row justify-content-center cred-row">
-              <div className="icons">{campuses}</div>
-
-            </div>
-            <div className="row justify-content-center cred-row">
-              <div><h1 className="mb-0">{props.alumni}</h1></div>
-
-            </div>
-            <div className="row justify-content-center cred-row">
-
-              <div className="mr-3 "><h1 className="mb-0">Campuses</h1> </div>
-            </div>
-
-          </div>
-          <div className="col-md border rounded credentials">
-            <div className="row justify-content-center cred-row">
-              <div className="icons">{hired}</div>
-
-            </div>
-            <div className="row justify-content-center cred-row">
-              <div><h1 className="mb-0">{props.campuses}</h1></div>
-
-            </div>
-            <div className="row justify-content-center cred-row">
-
-              <div className="mr-3 "><h1 className="mb-0">Campuses</h1> </div>
-            </div>
-
-          </div>
-        </div>
-      </div> */}
-    </>
+        )
+      })}
+    </Row>
   )
 }
 
 
-Credentials.propTypes = {
-  rating: PropTypes.string.isRequired,
-  googleImage: PropTypes.string,
-  switchImage: PropTypes.string,
-  reportImage: PropTypes.string,
-  alumni: PropTypes.string,
-  campuses: PropTypes.string,
-  hired: PropTypes.string,
-};
-export default Credentials;
+
+
