@@ -24,6 +24,7 @@ const Home = ({data, pageContext}) => {
         console.error(err);
         return <div className="alert alert-danger">There was a problem loading the data</div>
     }
+    console.log("yml", yml.join_4geeks[0])
     return (
         <Layout>
             <Container fluid >
@@ -65,7 +66,7 @@ const Home = ({data, pageContext}) => {
                                 border="bottom"
                                 padding="20%"
                                 image="yes"
-                                url="../home-bg.png"
+                                url={yml.image}
                                 height="500px"
                                 backgroundSize="cover">
                             </Column>
@@ -132,44 +133,28 @@ const Home = ({data, pageContext}) => {
                                                 color={Colors.black}
                                                 customTextAlignSmall
                                                 alignXs="left">
-                                                Programming - Always - Limitles
-                      </Paragraph>
+                                                {yml.join_4geeks[0].geek_data.geek_pal_heading}
+                                            </Paragraph>
                                         </Column>
                                     </Row>
                                     <Row marginTop="15px">
                                         <Column size="12">
-                                            <Paragraph
-                                                color={Colors.gray}
-                                                fontSize="14px"
-                                                lineHeight="18px"
-                                                customTextAlignSmall
-                                                alignXs="left">
-                                                Never code on your own again.
-                      </Paragraph>
-                                            <Paragraph
-                                                color={Colors.gray}
-                                                fontSize="14px"
-                                                lineHeight="18px"
-                                                customTextAlignSmall
-                                                alignXs="left">
-                                                We will be along with lalong side your
-                      </Paragraph>
-                                            <Paragraph
-                                                color={Colors.gray}
-                                                fontSize="14px"
-                                                lineHeight="18px"
-                                                customTextAlignSmall
-                                                alignXs="left">
-                                                journey and for as long as you
-                      </Paragraph>
-                                            <Paragraph
-                                                color={Colors.gray}
-                                                fontSize="14px"
-                                                lineHeight="18px"
-                                                customTextAlignSmall
-                                                alignXs="left">
-                                                want us to be.
-                      </Paragraph>
+
+
+                                            {yml.join_4geeks[0].geek_data.geek_pal_data.map((item, index) => {
+                                                return (
+                                                    <Paragraph
+                                                        key={index}
+                                                        color={Colors.gray}
+                                                        fontSize="14px"
+                                                        lineHeight="18px"
+                                                        customTextAlignSmall
+                                                        alignXs="left">
+                                                        {item}
+                                                    </Paragraph>
+                                                )
+                                            })}
+
                                         </Column>
                                     </Row>
                                 </Column>
@@ -187,43 +172,25 @@ const Home = ({data, pageContext}) => {
                                     <Row >
                                         <Column size="12">
                                             <Paragraph color={Colors.black} customTextAlignSmall
-                                                alignXs="left">FOR Career Empowerment</Paragraph>
+                                                alignXs="left">{yml.join_4geeks[0].geek_data.geek_force_heading}</Paragraph>
                                         </Column>
                                     </Row>
                                     <Row marginTop="15px">
                                         <Column size="12">
-                                            <Paragraph
-                                                color={Colors.gray}
-                                                fontSize="14px"
-                                                lineHeight="18px"
-                                                customTextAlignSmall
-                                                alignXs="left">
-                                                We'll do everything in our hands
-                      </Paragraph>
-                                            <Paragraph
-                                                color={Colors.gray}
-                                                fontSize="14px"
-                                                lineHeight="18px"
-                                                customTextAlignSmall
-                                                alignXs="left">
-                                                to help you get a job in the field.
-                      </Paragraph>
-                                            <Paragraph
-                                                color={Colors.gray}
-                                                fontSize="14px"
-                                                lineHeight="18px"
-                                                customTextAlignSmall
-                                                alignXs="left">
-                                                Includes Career Support Track,
-                      </Paragraph>
-                                            <Paragraph
-                                                color={Colors.gray}
-                                                fontSize="14px"
-                                                lineHeight="18px"
-                                                customTextAlignSmall
-                                                alignXs="left">
-                                                GeekPAL, and GeekTALK.
-                      </Paragraph>
+                                            {yml.join_4geeks[0].geek_data.geek_force_data.map((item, index) => {
+                                                return (
+                                                    <Paragraph
+                                                        key="index"
+                                                        color={Colors.gray}
+                                                        fontSize="14px"
+                                                        lineHeight="18px"
+                                                        customTextAlignSmall
+                                                        alignXs="left">
+                                                        {item}
+                                                    </Paragraph>
+                                                )
+                                            })}
+
                                         </Column>
                                     </Row>
                                 </Column>
@@ -268,6 +235,17 @@ export const query = graphql`
             title_second_line
             title_thir_line
             sub_heading
+            image
+            join_4geeks {
+                heading
+                sub_heading
+                geek_data {
+                  geek_force_data
+                  geek_pal_data
+                  geek_force_heading
+                  geek_pal_heading
+                }
+              }
         }
       }
     }
