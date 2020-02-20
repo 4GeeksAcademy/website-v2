@@ -1,5 +1,9 @@
 basic_info:
     slug: "maracaibo"
+    title: null
+    description: null
+    image: null
+    keywords: none
     redirects: []
     
 city: "Maracaibo"

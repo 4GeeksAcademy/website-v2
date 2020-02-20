@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import {Link} from 'gatsby';
 import PropTypes from 'prop-types';
-import '../../assets/css/style.scss'
 import {Colors, Button} from '../Styling';
 import {
     Collapse,
@@ -20,7 +19,7 @@ import {
 } from 'reactstrap';
 
 
-const NavB = ({siteTitle, menuLinks}) => {
+const NavB = ({ menuLinks}) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     return (
@@ -85,9 +84,9 @@ const NavB = ({siteTitle, menuLinks}) => {
     )
 }
 NavB.propTypes = {
-    siteTitle: PropTypes.string,
+    // siteTitle: PropTypes.string,
 }
 NavB.defaultProps = {
-    siteTitle: ``,
+    // siteTitle: ``,
 }
 export default NavB

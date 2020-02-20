@@ -1,7 +1,11 @@
 basic_info:
-  slug: about-us
-  redirects: [
-    "the-academy"
-  ]
+    slug: about-us
+    title: "About The Academy"
+    description: "About 4Geeks Academy"
+    image: none
+    keywords: []
+    redirects: [
+        "the-academy"
+    ]
 
 tagline: HABILITANDO A LOS ALKSJDNILJDNSJN ASDLKJ

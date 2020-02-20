@@ -1,8 +1,12 @@
 basic_info:
-  slug: full-stack-web-development-bootcamp-part-time
-  redirects: [
-    'part-time'
-  ]
+    slug: full-stack-web-development-bootcamp-part-time
+    title: null
+    description: null
+    image: null
+    keywords: none
+    redirects: [
+        'part-time'
+    ]
   
 ## Texto en el banner
 banner:

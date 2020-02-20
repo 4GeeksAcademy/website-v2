@@ -17,9 +17,9 @@ const Why = ({data, pageContext}) => {
         console.error(err);
         return <div className="alert alert-danger">There was a problem loading the data</div>
     }
-    console.log("Page context:", pageContext);
+
     return (
-        <Layout>
+        <Layout type="page" seo={yml.basic_info} context={pageContext}>
             <Container fluid height="450px">
                 <Row>
                     <Column size="1" />
@@ -242,6 +242,12 @@ export const query = graphql`
       edges{
         node{
             tagline
+            basic_info{
+                title
+                description
+                image
+                keywords
+            }
         }
       }
     }

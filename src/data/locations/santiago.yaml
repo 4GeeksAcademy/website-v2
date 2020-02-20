@@ -1,5 +1,9 @@
 basic_info:
     slug: "santiago-chile"
+    title: null
+    description: null
+    image: null
+    keywords: none
     redirects: []
 
 

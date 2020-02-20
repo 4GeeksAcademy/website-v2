@@ -19,7 +19,6 @@ import {Row, Column} from '../Sections';
 import {Card} from '../Card';
 import {H2, H3, H4, H5, Paragraph, Title, Divider} from '../Heading';
 import {Button, Colors, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../Styling';
-import '../../assets/css/style.scss';
 import Switch from "react-switch";
 
 

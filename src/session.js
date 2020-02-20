@@ -58,17 +58,19 @@ export const withSession = Component => {
             edges{
               node{
                 city
-                slug
                 name
                 latitude
                 longitude
                 country
+                basic_info{
+                    slug
+                }
               }
             }
           }
           
         }
-      `)
+      `);
         const locationsArray = data.loc.edges;
         const [session, setSession] = useState(defaultSession);
         //get ip address

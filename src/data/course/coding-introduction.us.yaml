@@ -1,8 +1,12 @@
 basic_info:
-  slug: coding-introduction
-  redirects: [
+    slug: coding-introduction
+    title: null
+    description: null
+    image: null
+    keywords: none
+    redirects: [
     '/coding-introduction'
-  ]
+    ]
   
 ## Texto en el banner
 banner:

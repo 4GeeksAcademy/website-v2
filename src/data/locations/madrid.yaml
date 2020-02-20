@@ -1,5 +1,9 @@
 basic_info:
     slug: "madrid"
+    title: null
+    description: null
+    image: null
+    keywords: none
     redirects: []
 
 city: "Madrid"

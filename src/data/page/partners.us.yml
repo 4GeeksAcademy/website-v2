@@ -1,5 +1,9 @@
 basic_info:
-  slug: partners
-  redirects: ["/partners"]
+    slug: partners
+    title: "About The Academy"
+    description: "About 4Geeks Academy"
+    image: ""
+    keywords: []
+    redirects: ["/partners"]
 
 tagline: COMPANY TRUST US AND HIRE OUR STUDENTS

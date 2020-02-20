@@ -1,0 +1,9 @@
+basic_info:
+    slug: test
+    title: "Just a dummy test, do not delete it!!!"
+    description: "Do not delete me"
+    image: "https://do_not_delete_me.png"
+    keywords: ["codign bootcamp"]
+    redirects: [
+        "testing"
+    ]

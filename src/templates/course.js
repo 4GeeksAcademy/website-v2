@@ -10,7 +10,6 @@ import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
 import Alumni from '../components/Alumni'
 import Scrollspy from 'react-scrollspy'
-import '../assets/css/style.scss'
 import {SessionContext} from '../session.js'
 import ProgramSelector from '../components/ProgramSelector'
 import {

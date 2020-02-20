@@ -4,7 +4,6 @@ import {H2, H3, H4} from '../Heading'
 import {Card} from '../Card'
 import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
 import {Row, Column, Container} from '../Sections'
-import '../../assets/css/style.scss';
 
 export default props => {
   const data = useStaticQuery(graphql`

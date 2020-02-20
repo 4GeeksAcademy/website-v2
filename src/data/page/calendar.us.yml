@@ -1,5 +1,9 @@
 basic_info:
-  slug: calendar
-  redirects: ["calendar"]
+    slug: calendar
+    title: "About The Academy"
+    description: "About 4Geeks Academy"
+    image: ""
+    keywords: []
+    redirects: ["calendar"]
 
 tagline: CALENDAR

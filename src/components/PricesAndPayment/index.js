@@ -18,7 +18,6 @@ import {Row, Column, Divider} from '../Sections';
 import {Card} from '../Card';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage} from '../Styling';
-import '../../assets/css/style.scss';
 import {SessionContext} from '../../session'
 
 
