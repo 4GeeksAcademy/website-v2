@@ -22,7 +22,7 @@ const Partners = ({data, pageContext}) => {
             <Wrapper
                 style="default"
                 image="yes"
-                url="../images/companies-bg.png"
+                url={yml.image}
                 border="bottom"
                 height="500px"
             >
@@ -98,6 +98,7 @@ export const query = graphql`
             tagline
             sub_heading
             button
+            image
         }
       }
     }
