@@ -28,6 +28,12 @@ const WhoIsHiring = props => {
                 image
                 featured
               }
+              coding {
+                name
+                slug
+                image
+                featured
+              }
             }
           }
         }

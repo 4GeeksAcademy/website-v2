@@ -61,7 +61,7 @@ const Partners = ({data, pageContext}) => {
                     primary
                 />
                 <Divider height="20px" />
-                {/* <WhoIsHiring source="coding" /> */}
+                <WhoIsHiring source="coding" />
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
@@ -74,7 +74,7 @@ const Partners = ({data, pageContext}) => {
                     primary
                 />
                 <Divider height="20px" />
-                {/* <WhoIsHiring source="influencers" /> */}
+                <WhoIsHiring source="influencers" />
                 <Row align="center">
                     <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">BE A HIRING PARTNER</Button>
                 </Row>
