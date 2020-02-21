@@ -78,7 +78,7 @@ export const withSession = Component => {
             const loadIp = async () => {
                 const v4 = await publicIp.v4();
                 const v6 = "v6";
-                const response = await fetch(`http://api.ipstack.com/${v4}?access_key=9b1771a432a0ca7c933a9a641b63bb00`);
+                const response = await fetch(`https://api.ipstack.com/${v4}?access_key=73822e5a584c041268f0e78a3253cf0d`);
                 const data = response.status === 200 ? await response.json() : null;
                 const location = data ? closestLoc(locationsArray, data.latitude, data.longitude) : null;
                 // const location = "Miami"
