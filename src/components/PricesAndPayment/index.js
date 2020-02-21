@@ -20,19 +20,19 @@ import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage} from '../Styling';
 import {SessionContext} from '../../session'
 
-export const query = graphql`
-  query PricesQuery($file_name: String!, $lang: String!) {
-    allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
-            banner{
-              headertext
-            }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query PricesQuery($file_name: String!, $lang: String!) {
+//     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+//       edges{
+//         node{
+//             banner{
+//               headertext
+//             }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export default () => {
   const {session, setSession} = useContext(SessionContext);

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Container, Column, Row, Wrapper, Divider} from '../components/Sections';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
 import {Card} from '../components/Card'
@@ -55,7 +54,7 @@ const Why = (props) => {
                 />
                 <Divider height="20px" />
                 <Row height="380px">
-                    <RoundImage url="../images/program-charts.png" height="100%" width="100%" bsize="contain" />
+                    <RoundImage url="/images/program-charts.png" height="100%" width="100%" bsize="contain" />
                 </Row>
             </Wrapper>
             <Divider height="100px" />
