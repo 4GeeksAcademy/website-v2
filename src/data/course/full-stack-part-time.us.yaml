@@ -2,11 +2,11 @@ basic_info:
   slug: full-stack-web-development-bootcamp-part-time
   title: null
   description: null
-  image: "../home-bg.png"
+  image: "/bg/bg-pr.jpg"
   keywords: null
   redirects: ["part-time", "program"]
 
-tagline: "Part Time"
+tagline: "FULL STACK DEVELOPER"
 
 ## PROGRAM DETAILS
 details:

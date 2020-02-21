@@ -19,20 +19,30 @@ import ProgramSelector from '../components/ProgramSelector'
 import {BrowserView} from "react-device-detect";
 
 const Program = ({data, pageContext, yml}) => {
+  const [weeks, setWeeks] = useState(week)
   const [currentIndex, setCurrentIndex] = useState(0);
   const geek = data.allCourseYaml.edges[0].node;
   const details = data.allCourseYaml.edges[0].node.details[0];
+  let week = "";
+  {
+    pageContext.slug === "full-stack-web-development-bootcamp-full-time"
+      ? week = 9
+      : pageContext.slug === "full-stack-web-development-bootcamp-part-time"
+        ? week = 16
+        : pageContext.slug === "coding-introduction"
+        && null
+  }
   return (<>
     <Wrapper
       style="default"
       image="yes"
-      url={yml.image}
+      url={yml.basic_info.image}
       border="bottom"
       height="700px"
       backgroundSize="cover"
     >
       <Divider height="240px" />
-      <ProgramSelector />
+      <ProgramSelector week={week} />
       <Divider height="20px" />
       <Title
         size="5"
@@ -74,7 +84,7 @@ const Program = ({data, pageContext, yml}) => {
                 <Row height="100%">
                   <Column size="10" customRespSize respSize="10">
                     <Row marginLeft="0px" marginBottom="15px" height="15%">
-                      <RoundImage url="../images/geekpal.png" bsize="contain" height="100%" position="left" />
+                      <RoundImage url="/images/geekpal.png" bsize="contain" height="100%" position="left" />
                     </Row>
                     <Row marginTop="15px">
                       <Column size="12">
@@ -108,7 +118,7 @@ const Program = ({data, pageContext, yml}) => {
                 <Row height="100%">
                   <Column size="10" customRespSize respSize="10">
                     <Row marginLeft="0px" marginBottom="15px" height="15%">
-                      <RoundImage url="../images/geekforce.png" bsize="contain" height="100%" position="left" />
+                      <RoundImage url="/images/geekforce.png" bsize="contain" height="100%" position="left" />
                     </Row>
                     <Row >
                       <Column size="12">

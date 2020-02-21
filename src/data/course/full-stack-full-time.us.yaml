@@ -2,11 +2,11 @@ basic_info:
   slug: full-stack-web-development-bootcamp-full-time
   title: null
   description: null
-  image: "../home-bg.png"
+  image: "/images/program-bg.png"
   keywords: null
   redirects: ["/course/full-time", "full-time"]
 
-tagline: "Full-time"
+tagline: "FULL STACK DEVELOPER"
 
 ## PROGRAM DETAILS
 details:
