@@ -83,6 +83,7 @@ module.exports = {
         'gatsby-plugin-styled-components',
         'gatsby-transformer-remark',
         'gatsby-transformer-yaml',
+        'gatsby-plugin-zeit-now',
         {
         resolve: `gatsby-plugin-sitemap`,
             options: {
