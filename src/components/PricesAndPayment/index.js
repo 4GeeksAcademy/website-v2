@@ -83,86 +83,88 @@ export default () => {
     setActiveStep(0);
     setCompleted({});
   };
-  // const data = useStaticQuery(graphql`
-  //   query myQueryTest{
-
-  //     cred: allFinancialsYaml{
-  //       edges{
-  //           node{
-  //               name
-  //               options{
-  //                   months
-  //                   payment
-  //                   paymentParagraph
-  //               }
-  //               logo
-  //               description
-  //           }
-  //       }
-  //   }
-  //   cities: allLocationsYaml{
-  //     edges{
-  //       node{
-  //         city
-  //         slug
-  //         latitude
-  //         longitude
-  //         country
-  //         defaultLanguage
-  //         hasFinancialsOption
-  //       prices{
-  //         full_time{
-  //           slug
-  //           upfront
-  //           message
-  //           duration
-  //           financed{
-  //             provider
-  //             message{
-  //               en
-  //               es
-  //             }
-  //             payment
-  //             months
-  //             paymentInfo{
-  //               en
-  //               es
-  //             }
-  //             logo
-
-  //           }
-  //         }
-  //         part_time{
-  //           slug
-  //           upfront
-  //           message
-  //           duration
-  //           financed{
-  //             provider
-  //             message{
-  //               en
-  //               es
-  //             }
-  //             payment
-  //             months
-  //             paymentInfo{
-  //               en
-  //               es
-  //             }
-  //             logo
-
-  //           }
-  //         }
-  //       }
-
-
-  //       }
-  //     }
-  //   }
-  // }
-  //   `)
-  // const currentCityInfo = data.cities.edges.filter((item) => item.node.city === session.location)
-  // console.log("currentCityInfo: ", currentCityInfo)
+  const data = useStaticQuery(graphql`
+    query myQueryTest{
+      allLocationsYaml {
+        edges {
+          node {
+            id
+            active_campaign_location_slug
+            address
+            meta_info {
+              keywords
+              slug
+            }
+            breathecode_location_slug
+            city
+            country
+            courses
+            defaultLanguage
+            flag_icon
+            hasFinancialsOption
+            latitude
+            location_map
+            location_office_image
+            location_office_image2
+            location_office_image3
+            location_phone_number
+            longitude
+            name
+            prices {
+              part_time {
+                duration
+                financed {
+                  logo
+                  message {
+                    en
+                    es
+                  }
+                  months
+                  payment
+                  paymentInfo {
+                    en
+                    es
+                  }
+                  provider
+                }
+                message
+                slug
+                upfront
+              }
+              full_time {
+                financed {
+                  months
+                  payment
+                  provider
+                  logo
+                  paymentInfo {
+                    en
+                    es
+                  }
+                  message {
+                    en
+                    es
+                  }
+                }
+                duration
+                slug
+                message
+                upfront
+              }
+            }
+            should_know
+            state
+            value
+            zip_code
+          }
+        }
+      }
+  }
+    `)
+  let locationsArray = data.allLocationsYaml.edges;
+  // let currentCityInfo = locationsArray.filter((item) => item.node.city === session.location)
+  // console.log("session: ", session)
+  // console.log("currentCityInfo: ", locationsArray)
   // let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
   // let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
   // let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")

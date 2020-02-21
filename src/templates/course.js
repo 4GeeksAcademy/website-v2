@@ -19,7 +19,6 @@ import ProgramSelector from '../components/ProgramSelector'
 import {BrowserView} from "react-device-detect";
 
 const Program = ({data, pageContext, yml}) => {
-  const [weeks, setWeeks] = useState(week)
   const [currentIndex, setCurrentIndex] = useState(0);
   const geek = data.allCourseYaml.edges[0].node;
   const details = data.allCourseYaml.edges[0].node.details[0];
@@ -310,12 +309,12 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       style="default"
     >
-      {/* <Title
-          size="10"
-          title="PRICING AND FINANCING"
-          primary
-        />
-        <Divider height="50px" /> */}
+      <Title
+        size="10"
+        title="PRICING AND FINANCING"
+        primary
+      />
+      <Divider height="50px" />
       <section className="section" id="section-4"></section>
       {/* <PricesAndPayment /> */}
       <Divider height="100px" />
