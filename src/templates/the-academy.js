@@ -7,11 +7,10 @@ import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage} from '../comp
 import Mentors from '../components/Mentors'
 import Events from '../components/Events'
 import Credentials from '../components/Credentials'
-import BasePage from './_basePage'
+import BaseRender from './_baseRender'
 
 const Why = (props) => {
-    const { data, pageContext, yml } = props;
-    console.log("Why props", props);
+    const {data, pageContext, yml} = props;
     const cornerstone = yml.cornerstones[0];
     return (
         <>
@@ -73,7 +72,7 @@ const Why = (props) => {
                 <Row marginBottom="30px">
                     {cornerstone.cornerstones_list.map((item, index) => {
                         return (
-                            <Column size="6" margin="0 0 10px 0">
+                            <Column key={index} size="6" margin="0 0 10px 0">
                                 <Card
                                     width="100%"
                                     height="200px"
@@ -122,7 +121,6 @@ const Why = (props) => {
                         size="12"
                         border="bottom"
                         image="no"
-
                     >
                         <Card shadow borders="1.25rem" height="426px" move="up" up="50%">
                             <Row
@@ -130,7 +128,6 @@ const Why = (props) => {
                                 marginLeft="0"
                                 marginRight="0"
                                 customRespSize
-
                             >
                                 <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                                     <Row align="center" height="100%">
@@ -165,10 +162,7 @@ const Why = (props) => {
                 </Row>
             </Wrapper>
             <Divider height="100px" />
-
             <Events />
-
-
             <Divider height="100px" />
         </>
     )
@@ -201,4 +195,4 @@ export const query = graphql`
   }
 `;
 
-export default BasePage(Why);
+export default BaseRender(Why);

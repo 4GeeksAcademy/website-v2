@@ -5,20 +5,15 @@ import {Title} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 import Credentials from '../components/Credentials'
 import WhoIsHiring from '../components/WhoIsHiring'
+import BaseRender from './_baseRender'
 
 
-const Partners = ({data, pageContext}) => {
-    let yml = null;
-    try {
-        yml = data.allPageYaml.edges[0].node;
-    }
-    catch (err) {
-        console.error("There was a problem loading the data", data);
-        console.error(err);
-        return <div className="alert alert-danger">There was a problem loading the data</div>
-    }
+const Partners = (props) => {
+    const {data, pageContext, yml} = props;
+
+
     return (
-        <Layout type="page" seo={yml.basic_info} context={pageContext}>
+        <>
             <Wrapper
                 style="default"
                 image="yes"
@@ -87,7 +82,7 @@ const Partners = ({data, pageContext}) => {
                     <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">BE A HIRING PARTNER</Button>
                 </Row>
             </Wrapper>
-        </Layout>
+        </>
     )
 };
 export const query = graphql`
@@ -99,9 +94,15 @@ export const query = graphql`
             sub_heading
             button
             image
+            basic_info{
+                title
+                description
+                image
+                keywords
+            }
         }
       }
     }
   }
 `;
-export default Partners;
+export default BaseRender(Partners);

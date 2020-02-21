@@ -7,27 +7,28 @@ import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button} from 
 import {Card} from '../Card';
 
 const GeeksVsOthers = props => {
-  // const data = useStaticQuery(graphql`
-  //     query my4GeeksDataQuery{
-  //       geeks: allGeeksDataYaml {
-  //           edges {
-  //             node {
-  //               miami {
-  //                 features
-  //                 industry_average
-  //                 icon
-  //                 tooltip
-  //                 at4_Geeks
-  //                 slug
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     `)
+  const data = useStaticQuery(graphql`
+      query my4GeeksDataQuery{
+        allGeeksVsOthersYaml {
+          edges {
+            node {
+              miami {
+                features
+                at4_Geeks
+                industry_average
+                tooltip
+                icon
+                slug
+              }
+            }
+          }
+        }
+        }
+      `)
+  const geeks = data.allGeeksVsOthersYaml.edges[0].node;
   return (
     <>
-      {/* {props.hasTitle &&
+      {props.hasTitle &&
         <>
           <Title
             title="WHAT MAKES THIS PROGRAM STAND OUT?"
@@ -55,10 +56,10 @@ const GeeksVsOthers = props => {
                 <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>INDUSTRY AVERAGE</H5></Column></Row>
               </Column>
             </Row>
-            {data.geeks.edges[0].node.miami.map((item, index) => {
+            {geeks.miami.map((item, index) => {
               return (
                 <>
-                  {index == data.geeks.edges[0].node.miami.length - 1
+                  {index == geeks.miami.length - 1
                     ?
                     <Row
                       key={index}
@@ -127,7 +128,7 @@ const GeeksVsOthers = props => {
       </Row>
       <Row align="center">
         <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">COMPARE 4GEEKS WITH OTHER SCHOOLS</Button>
-      </Row> */}
+      </Row>
     </>
   )
 };

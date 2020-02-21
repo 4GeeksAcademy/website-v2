@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
+import BaseRender from './_baseRender'
 
 const Input = styled.input`
     background-color:${Colors.lightGray};
@@ -38,17 +39,8 @@ const useStyles = makeStyles({
         textTransform: 'lowercase',
     },
 });
-const Apply = ({data, pageContext}) => {
-    let yml = null;
-    try {
-        yml = data.allPageYaml.edges[0].node;
-    }
-    catch (err) {
-        console.error("There was a problem loading the data", data);
-        console.error(err);
-        return <div className="alert alert-danger">There was a problem loading the data</div>
-    }
-    console.log("Page context:", pageContext);
+const Apply = (props) => {
+    const {data, pageContext, yml} = props;
     const classes = useStyles();
     const [alignment, setAlignment] = useState('left');
     const handleChange = (event, newAlignment) => {
@@ -83,7 +75,7 @@ const Apply = ({data, pageContext}) => {
         </ToggleButton>,
     ];
     return (
-        <Layout type="page" seo={yml.basic_info} context={pageContext}>
+        <>
             <Divider height="100px" />
             <Wrapper
                 style="default">
@@ -187,7 +179,7 @@ const Apply = ({data, pageContext}) => {
                 </Row>
             </Wrapper>
             <Divider height="100px" />
-        </Layout>
+        </>
     )
 };
 export const query = graphql`
@@ -196,9 +188,15 @@ export const query = graphql`
       edges{
         node{
             tagline
+            basic_info{
+                title
+                description
+                image
+                keywords
+            }
         }
       }
     }
   }
 `;
-export default Apply;
+export default BaseRender(Apply);
