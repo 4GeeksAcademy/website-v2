@@ -6,4 +6,16 @@ meta_info:
   keywords: []
   redirects: []
 
-tagline: JOBS
+tagline: "OPEN JOBS AT 4GEEKS ACADEMY"
+sub_heading: ""
+image: "../images/pricing-bg.png"
+
+## MORE ABOUT 4GEEKS ACADEMY SECTION
+## 
+about:
+  - heading: "MORE ABOUT 4GEEKS ACADEMY"
+    sub_heading: "Curabitur blandit tempus porttitor."
+    image: ""
+    content: "4Geeks Academy was founded in 2015. What started as an internal project to train more developers has now become our full-time passion.
+    4Geeks is today a USA based Coding Bootcamp pursuing to build a new framework for Coding Education, because coding is becoming an essentials part of our society.
+    4Geeks Academy has now Locations in 3 cities, 5 on-going campuses, and more than 600 graduates."
