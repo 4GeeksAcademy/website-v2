@@ -1,31 +1,32 @@
 import React, {useState, useEffect, useContext} from 'react';
 import Layout from '../global/Layout';
+import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
 import {Title, H2, H3, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
-import ProgramDescription from '../components/ProgramDescription'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
 import Alumni from '../components/Alumni'
+import Credentials from '../components/Credentials'
 import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
+import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 import {SessionContext} from '../session.js'
 import ProgramSelector from '../components/ProgramSelector'
-import {
-  BrowserView,
-  MobileView,
-  isBrowser,
-  isMobile
-} from "react-device-detect";
+import {BrowserView} from "react-device-detect";
+
 const Program = ({data, pageContext, yml}) => {
-  console.log("image:", yml)
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const geek = data.allCourseYaml.edges[0].node;
+  const details = data.allCourseYaml.edges[0].node.details[0];
   return (<>
     <Wrapper
       style="default"
       image="yes"
-      url={yml.basic_info.image}
+      url={yml.image}
       border="bottom"
       height="700px"
       backgroundSize="cover"
@@ -49,7 +50,7 @@ const Program = ({data, pageContext, yml}) => {
     </Wrapper>
     <Wrapper
       style="default">
-
+      <Credentials up="80" />
     </Wrapper>
     <BrowserView>
       <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
@@ -78,23 +79,23 @@ const Program = ({data, pageContext, yml}) => {
                     <Row marginTop="15px">
                       <Column size="12">
                         <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
-                          alignXs="left">Get a job in tech</Paragraph>
+                          alignXs="left">{geek.geek_data.geek_pal_heading}</Paragraph>
                       </Column>
                     </Row>
                     <Row marginTop="15px">
                       <Column size="12">
-                        {/* {data.geek.edges[0].node.geek_pal.map((pal, index) => { */}
-                        {/* return ( */}
-                        <Row key={1} marginBottom="4px">
-                          <Column size="1" customRespSize respSize="1" alignSelf="center">
-                            <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
-                          </Column>
-                          <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                            <Paragraph color={Colors.gray}>{"wiwliwli"}</Paragraph>
-                          </Column>
-                        </Row>
-                        {/* ) */}
-                        {/* })} */}
+                        {geek.geek_data.geek_pal.map((pal, index) => {
+                          return (
+                            <Row key={1} marginBottom="4px">
+                              <Column size="1" customRespSize respSize="1" alignSelf="center">
+                                <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                              </Column>
+                              <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                                <Paragraph color={Colors.gray}>{pal}</Paragraph>
+                              </Column>
+                            </Row>
+                          )
+                        })}
                       </Column>
                     </Row>
                   </Column>
@@ -112,23 +113,23 @@ const Program = ({data, pageContext, yml}) => {
                     <Row >
                       <Column size="12">
                         <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
-                          alignXs="left">FOR Career Empowerment</Paragraph>
+                          alignXs="left">{geek.geek_data.geek_force_heading}</Paragraph>
                       </Column>
                     </Row>
                     <Row marginTop="15px">
                       <Column size="12">
-                        {/* {data.geek.edges[0].node.geek_force.map((pal, index) => {
-                            return ( */}
-                        <Row key={1} marginBottom="2px" >
-                          <Column size="1" customRespSize respSize="1" alignSelf="center">
-                            <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
-                          </Column>
-                          <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                            <Paragraph fontSize="13px" color={Colors.gray}>{"Welelele"}</Paragraph>
-                          </Column>
-                        </Row>
-                        {/* ) */}
-                        {/* })} */}
+                        {geek.geek_data.geek_force.map((pal, index) => {
+                          return (
+                            <Row key={1} marginBottom="2px" >
+                              <Column size="1" customRespSize respSize="1" alignSelf="center">
+                                <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                              </Column>
+                              <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                                <Paragraph fontSize="13px" color={Colors.gray}>{pal}</Paragraph>
+                              </Column>
+                            </Row>
+                          )
+                        })}
                       </Column>
                     </Row>
                   </Column>
@@ -142,17 +143,143 @@ const Program = ({data, pageContext, yml}) => {
     </Container>
     {/* </Wrapper> */}
     <Divider height="100px" />
+
+    {/* PROGRAM DETAILS */}
     <Wrapper
       style="custom"
       full
     >
       <Title
         size="10"
-        title="PROGRAM DETAILS"
+        title={details.heading}
+        paragraph={details.sub_heading}
         primary
       />
       <Divider height="50px" />
-      {/* <ProgramDescription /> */}
+      <Card width="100%" height="400px" color="white" shadow >
+        <Tabs className="testy">
+          <Header>
+            <TabList >
+              {details.details_modules.map((item, index) => {
+                return (<Tab key={index} onClick={() => setCurrentIndex(index)}>{item.module_name}</Tab>)
+              })
+              }
+            </TabList>
+          </Header>
+          <Body>
+            {details.details_modules.map((item, i) => {
+              return (
+                <TabPanel key={i + 1} onChange={() => setInd(i)}>
+                  <Container width="fluid">
+                    <Row height="75px">
+                      <Column size="3" paddingLeft="20px" padding="15px 0" alignXs="left">
+                        <Paragraph color={Colors.black} fontSize="20px">{item.title}</Paragraph>
+                      </Column>
+                    </Row>
+                    <Row height="45px">
+                      <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
+                        <Paragraph color={Colors.gray} fontSize="14px">DESCRIPTION:</Paragraph>
+                      </Column>
+                      <Column size="6" customRespSize respSize="6" alignXs="left">
+                        <Paragraph color={Colors.gray} fontSize="14px">{item.description}</Paragraph>
+                      </Column>
+                    </Row>
+                    <Row height="45px">
+                      <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
+                        <Paragraph color={Colors.gray} fontSize="14px">PROJECTS:</Paragraph>
+                      </Column>
+                      <Column size="6" customRespSize respSize="6" alignXs="left">
+                        <Paragraph color={Colors.gray} fontSize="14px">{item.projects}</Paragraph>
+                      </Column>
+                    </Row>
+                    <Row height="65px">
+                      <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
+                        <Paragraph color={Colors.gray} fontSize="14px">DURATION:</Paragraph>
+                      </Column>
+                      <Column size="6" customRespSize respSize="6" alignXs="left">
+                        <Paragraph color={Colors.gray} fontSize="14px">{item.duration}</Paragraph>
+                      </Column>
+                    </Row>
+                    <Row height="70px">
+                      <Column size="3" customRespSize respSize="3" padding="15px 0" image="no" color={Colors.lightGray} border="custom" customBorderRadius="0 0 0 1.25rem">
+                        <Row align="around" height="100%">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} fontSize="16px">Skills / Weeks:</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                      <Column size="1" image="no" color={Colors.lightGray} customRespSize respSize="1" >
+                        <Row align="around" height="100%">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} >1</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                      <Column size="1" image="no" color={Colors.lightGray} customRespSize respSize="1">
+                        <Row align="around" height="100%">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} >2</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                      <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 0 ? Colors.lightGray : undefined}>
+                        <Row align="around" height="100%">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} >3</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                      <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 0 ? Colors.lightGray : undefined}>
+                        <Row align="around" height="100%">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} >4</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                      <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 1 ? Colors.lightGray : undefined}>
+                        <Row align="around" height="100%">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} >5</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                      <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 1 ? Colors.lightGray : undefined}>
+                        <Row align="around" height="100%">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} >6</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                      <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 2 ? Colors.lightGray : undefined}>
+                        <Row align="around" height="100%" align="center">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} >7</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                      <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 2 ? Colors.lightGray : undefined}>
+                        <Row align="around" height="100%">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} >8</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                      <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 2 ? Colors.lightGray : undefined} border="custom" customBorderRadius="0 0 1.25rem 0">
+                        <Row align="around" height="100%">
+                          <Column size="12" alignSelf="center">
+                            <Paragraph align="center" color={Colors.gray} >9</Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+                    </Row>
+                  </Container>
+                </TabPanel>
+              )
+            })
+            }
+          </Body>
+        </Tabs>
+      </Card >
       <section className="section" id="section-2"></section>
     </Wrapper>
     <Divider height="100px" />
@@ -170,7 +297,6 @@ const Program = ({data, pageContext, yml}) => {
       <GeeksVsOthers />
       <Divider height="100px" />
     </Wrapper>
-
     <Wrapper
       style="default"
     >
@@ -228,6 +354,24 @@ export const query = graphql`
                 image
                 keywords
             }
+            geek_data {
+              geek_force
+              geek_pal
+              geek_pal_heading
+              geek_force_heading
+            }
+            details {
+              heading
+              sub_heading
+              details_modules {
+                title
+                projects
+                slug
+                module_name
+                duration
+                description
+              }
+            }
         }
       }
     }
@@ -235,3 +379,18 @@ export const query = graphql`
 `;
 
 export default BaseRender(Program);
+
+const Header = styled.div`
+    background: black;
+    border-radius: 1.25rem 1.25rem 0 0;
+    height: 100px;
+    color: white;
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    align-items: center;
+`;
+const Body = styled.div`
+    background: white;
+    height:300px;
+    border-radius: 0 0 1.25rem 1.25rem;`
