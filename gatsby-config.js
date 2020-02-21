@@ -84,6 +84,7 @@ module.exports = {
         'gatsby-transformer-remark',
         'gatsby-transformer-yaml',
         'gatsby-plugin-zeit-now',
+        ' gatsby-plugin-meta-redirect',
         {
         resolve: `gatsby-plugin-sitemap`,
             options: {
