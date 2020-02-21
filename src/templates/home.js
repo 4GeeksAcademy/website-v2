@@ -87,15 +87,15 @@ const Home = (props) => {
                 <Row>
                     <Column size="4" margin="5px 0">
                         <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">LICENSED BY</Paragraph>
-                        <RoundImage url="../images/florida-logo.png" height="100px" bsize="contain"></RoundImage>
+                        <RoundImage url="/images/florida-logo.png" height="100px" bsize="contain"></RoundImage>
                     </Column>
                     <Column size="4" margin="5px 0">
                         <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">TOP CODING SCHOOL</Paragraph>
-                        <RoundImage url="../images/newsweek-logo.png" height="100px" bsize="contain"></RoundImage>
+                        <RoundImage url="/images/newsweek-logo.png" height="100px" bsize="contain"></RoundImage>
                     </Column>
                     <Column size="4" margin="5px 0">
                         <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">4GEEKS IN THE NEWS</Paragraph>
-                        <RoundImage url="../images/cnn-bbc-logo.png" height="100px" bsize="contain"></RoundImage>
+                        <RoundImage url="/images/cnn-bbc-logo.png" height="100px" bsize="contain"></RoundImage>
                     </Column>
                 </Row>
             </Wrapper>
@@ -117,7 +117,7 @@ const Home = (props) => {
                             <Row height="100%">
                                 <Column size="10" customRespSize respSize="10">
                                     <Row marginLeft="0px" marginBottom="15px" height="25%">
-                                        <RoundImage url="../images/geekpal.png" bsize="contain" height="100%" position="left" />
+                                        <RoundImage url="/images/geekpal.png" bsize="contain" height="100%" position="left" />
                                     </Row>
                                     <Row >
                                         <Column size="12">
@@ -159,7 +159,7 @@ const Home = (props) => {
                             <Row height="100%">
                                 <Column size="10" customRespSize respSize="10">
                                     <Row marginLeft="0px" marginBottom="15px" height="25%">
-                                        <RoundImage url="../images/geekforce.png" bsize="contain" height="100%" position="left" />
+                                        <RoundImage url="/images/geekforce.png" bsize="contain" height="100%" position="left" />
                                     </Row>
                                     <Row >
                                         <Column size="12">

@@ -59,10 +59,10 @@ const Footer = () => (
                         <Column size="3" margin="5px 0" customRespSize respSize="6">
                             <Row>
                                 <Column size="6" customRespSize respSize="6">
-                                    <RoundImage url="../images/bitcoin.png" height="12px" backgroundColor="transparent" position="center" bsize="contain" />
+                                    <RoundImage url="/images/bitcoin.png" height="12px" backgroundColor="transparent" position="center" bsize="contain" />
                                 </Column>
                                 <Column size="6" customRespSize respSize="6">
-                                    <RoundImage url="../images/ethereum.png" height="14px" backgroundColor="transparent" position="center" bsize="contain" />
+                                    <RoundImage url="/images/ethereum.png" height="14px" backgroundColor="transparent" position="center" bsize="contain" />
                                 </Column>
                             </Row>
                         </Column>
