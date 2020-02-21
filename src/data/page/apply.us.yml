@@ -6,4 +6,33 @@ meta_info:
   keywords: []
   redirects: ["/apply"]
 
+## APPLY HEADING
 tagline: APPLY TO 4GEEKS
+sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+
+## APPLY LEFT SECTION
+left_side:
+  - heading: "TELL US ABOUT YOU"
+    form_section:
+      form_placeholders:
+        - first_name: "First Name"
+          last_name: "Last Name"
+          email: "Email"
+          phone: "Phone"
+    locations_title: "Select a location"
+    referral_section:
+      - placeholder: "Refferral Key"
+        content: "If you were referred by any current or past student, use your referral code for extra credit or discount."
+    button:
+      - button_text: "APPLY"
+        button_link: ""
+
+## APPLY RIGHT SECTION
+
+right_side:
+  - heading: "ONCE YOU CLICK ON APPLY, YOU WILL"
+    content_section:
+      - "1- Receive an email from your City Advisor"
+      - "2- Receive info related to the options you have to finance your tuition."
+      - "3- An explanation on how the process works to get the best deal in the City, respectively."
+      - "4- A syllabus of your program and regular coaching assistance from our advisors to help you take the best decision for your career."
