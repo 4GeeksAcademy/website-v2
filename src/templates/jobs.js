@@ -9,19 +9,11 @@ import Grid from '@material-ui/core/Grid';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
+import BaseRender from './_baseRender'
 
-const Jobs = ({data, pageContext}) => {
-    let yml = null;
-    try {
-        yml = data.allPageYaml.edges[0].node;
-    }
-    catch (err) {
-        console.error("There was a problem loading the data", data);
-        console.error(err);
-        return <div className="alert alert-danger">There was a problem loading the data</div>
-    }
+const Jobs = ({data, pageContext, yml}) => {
     return (
-        <Layout type="page" seo={yml.meta_info} context={pageContext}>
+        <>
             <Wrapper
                 style="default">
                 <Title
@@ -31,7 +23,7 @@ const Jobs = ({data, pageContext}) => {
                     size="8"
                 />
             </Wrapper>
-        </Layout>
+        </>
     )
 };
 export const query = graphql`
@@ -40,9 +32,16 @@ export const query = graphql`
       edges{
         node{
             tagline
+            meta_info{
+              slug
+              title
+              description
+              image
+              keywords
+          }
         }
       }
     }
   }
 `;
-export default Jobs;
+export default BaseRender(Jobs);

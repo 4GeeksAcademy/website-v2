@@ -2,13 +2,11 @@
 
 .MuiStepButton-root {
     width: 100%;
-    // margin: 0!important;
     padding: 24px 17px!important;
     box-sizing: content-box;
 }
 .MuiStepper-root {
     display: flex;
-    // padding: 0!important;
 }
 .MuiPaper-root {
     background: transparent!important
@@ -66,9 +64,6 @@ a.nav-item.nav-link.side {
 
 .react-tabs__tab-list {
     border-bottom: none!important;
-    // height: 100%!important;
-    // margin: 0 0 10px;
-    // padding: 0;
     display: flex!important;
     -ms-flex-wrap: wrap!important;
     flex-wrap: wrap!important;
@@ -90,7 +85,6 @@ a.nav-item.nav-link.side {
 }
 .react-tabs__tab--selected {
     background: black!important;
-    // border-color: #aaa;
     color: #E6BA1F!important;
     border-radius: 1.25rem 1.25rem 0 0!important;
 }

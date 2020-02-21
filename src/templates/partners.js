@@ -95,6 +95,7 @@ export const query = graphql`
             button
             image
             meta_info{
+                slug
                 title
                 description
                 image

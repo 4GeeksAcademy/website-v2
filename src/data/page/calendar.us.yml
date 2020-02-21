@@ -4,6 +4,6 @@ meta_info:
     description: "About 4Geeks Academy"
     image: ""
     keywords: []
-    redirects: ["/calendar"]
+    redirects: []
 
 tagline: CALENDAR

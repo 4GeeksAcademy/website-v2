@@ -1,12 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import {graphql} from 'gatsby';
-import Layout from '../global/Layout';
+import BaseRender from './_baseRender'
 
-const Test = ({ data, pageContext}) => (
-  <Layout type="page" seo={yml.meta_info} context={pageContext}>
+const Test = (props) => (
     <p>Do not delete me!!</p>
-  </Layout >
 );
-
 export default Test;
