@@ -5,19 +5,12 @@ import {Title, H5} from '../components/Heading'
 import {Button, Colors, RoundImage} from '../components/Styling'
 import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring'
+import BaseRender from './_baseRender'
 
-const Pricing = ({data, pageContext}) => {
-    let yml = null;
-    try {
-        yml = data.allPageYaml.edges[0].node;
-    }
-    catch (err) {
-        console.error("There was a problem loading the data", data);
-        console.error(err);
-        return <div className="alert alert-danger">There was a problem loading the data</div>
-    }
+const Pricing = (props) => {
+    const {data, pageContext, yml} = props;
     return (
-        <Layout type="page" seo={yml.basic_info} context={pageContext}>
+        <>
             <Wrapper
                 style="default"
                 image="yes"
@@ -108,7 +101,7 @@ const Pricing = ({data, pageContext}) => {
                 {/* <WhoIsHiring source="financials" /> */}
                 <Divider height="150px" />
             </Wrapper>
-        </Layout >
+        </ >
     )
 };
 export const query = graphql`
@@ -119,9 +112,15 @@ export const query = graphql`
             tagline
             image
             sub_heading
+            basic_info{
+                title
+                description
+                image
+                keywords
+            }
         }
       }
     }
   }
 `;
-export default Pricing;
+export default BaseRender(Pricing);

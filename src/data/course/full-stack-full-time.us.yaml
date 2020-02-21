@@ -1,12 +1,10 @@
 basic_info:
-    slug: full-stack-web-development-bootcamp-full-time
-    title: null
-    description: null
-    image: null
-    keywords: null
-    redirects: [
-        '/course/full-time', "full-time"
-    ]
+  slug: full-stack-web-development-bootcamp-full-time
+  title: null
+  description: null
+  image: null
+  keywords: null
+  redirects: ["/course/full-time", "full-time"]
 ## Texto en el banner
 
 tagline: "Some Tagline"
@@ -153,7 +151,6 @@ skills:
         title: Search and Research
         description: "Most of the specs are poor and lack details. Sometines the best developers are those that find examples faster than anyone. Learning to search key to success!"
 
-        
 typical_day:
   - time: "8:00 AM"
     icon: ""

@@ -13,20 +13,12 @@ import {Card} from '../components/Card'
 import WhoIsHiring from '../components/WhoIsHiring';
 import Alumni from '../components/Alumni'
 import Credentials from '../components/Credentials'
+import BaseRender from './_baseRender'
 
-const Home = ({data, pageContext}) => {
-    let yml = null;
-    try {
-        yml = data.allPageYaml.edges[0].node;
-    }
-    catch (err) {
-        console.error("There was a problem loading the data", data);
-        console.error(err);
-        return <div className="alert alert-danger">There was a problem loading the data</div>
-    }
-    console.log("yml", yml.join_4geeks[0])
+const Home = (props) => {
+    const {data, pageContext, yml} = props;
     return (
-        <Layout type="page" seo={yml.basic_info} context={pageContext}>
+        <>
             <Container fluid >
                 <Row>
                     <Column size="1" />
@@ -222,7 +214,7 @@ const Home = ({data, pageContext}) => {
             </Wrapper>
             <Divider height="100px" />
 
-        </Layout>
+        </>
     )
 };
 export const query = graphql`
@@ -230,6 +222,12 @@ export const query = graphql`
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
+            basic_info{
+                title
+                description
+                image
+                keywords
+            }
             tagline
             title_first_line
             title_second_line
@@ -252,4 +250,4 @@ export const query = graphql`
   }
 `;
 
-export default Home;
+export default BaseRender(Home);
