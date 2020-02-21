@@ -112,7 +112,7 @@ export const query = graphql`
             tagline
             image
             sub_heading
-            basic_info{
+            meta_info{
                 title
                 description
                 image

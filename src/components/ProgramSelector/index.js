@@ -61,7 +61,7 @@ const ProgramSelector = (props) => {
                 id
                 active_campaign_location_slug
                 address
-                basic_info {
+                meta_info {
                   keywords
                   slug
                 }

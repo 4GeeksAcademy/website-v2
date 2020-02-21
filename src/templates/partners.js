@@ -94,7 +94,7 @@ export const query = graphql`
             sub_heading
             button
             image
-            basic_info{
+            meta_info{
                 title
                 description
                 image

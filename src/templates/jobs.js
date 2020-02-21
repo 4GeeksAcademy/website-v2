@@ -21,7 +21,7 @@ const Jobs = ({data, pageContext}) => {
         return <div className="alert alert-danger">There was a problem loading the data</div>
     }
     return (
-        <Layout type="page" seo={yml.basic_info} context={pageContext}>
+        <Layout type="page" seo={yml.meta_info} context={pageContext}>
             <Wrapper
                 style="default">
                 <Title

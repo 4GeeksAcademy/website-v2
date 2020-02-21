@@ -18,7 +18,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       createNodeField({ node, name: `type`, value: meta.type });
       createNodeField({ node, name: `pagePath`, value: meta.pagePath });
       createNodeField({ node, name: `filePath`, value: url });
-      createNodeField({ node, name: `ctas`, value: ctas });
+    //   createNodeField({ node, name: `ctas`, value: ctas });
     }
   }
 };
@@ -69,7 +69,7 @@ const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
           all${entity}Yaml {
             edges {
               node {
-                basic_info {
+                meta_info {
                     slug
                     redirects
                 }
@@ -116,10 +116,10 @@ const createEntityPagesfromYml = async (entity, { graphql, actions }) => {
             });
         }
 
-        if (node.basic_info && node.basic_info.redirects) {
-            node.basic_info.redirects.forEach(path => {
+        if (node.meta_info && node.meta_info.redirects) {
+            node.meta_info.redirects.forEach(path => {
                 if(typeof(path)!== "string"){
-                    throw new Error(`The path in ${node.basic_info.slug} its not a string: ${path}`);
+                    throw new Error(`The path in ${node.meta_info.slug} its not a string: ${path}`);
                 }
                 path = path[0] !== '/' ? '/'+path : path;
                 createRedirect({
@@ -142,7 +142,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
           allPageYaml {
             edges {
               node {
-                basic_info {
+                meta_info {
                     slug
                     redirects
                 }
@@ -203,10 +203,10 @@ const createPagesfromYml = async ({ graphql, actions }) => {
             }
         }
 
-        if (node.basic_info && node.basic_info.redirects) {
-            node.basic_info.redirects.forEach(path => {
+        if (node.meta_info && node.meta_info.redirects) {
+            node.meta_info.redirects.forEach(path => {
                 if(typeof(path)!== "string"){
-                    throw new Error(`The path in ${node.basic_info.slug} its not a string: ${path}`);
+                    throw new Error(`The path in ${node.meta_info.slug} its not a string: ${path}`);
                 }
                 path = path[0] !== '/' ? '/'+path : path;
                 createRedirect({
@@ -276,7 +276,7 @@ const addAdditionalRedirects = ({ graphql, actions }) => {
 //     return true;
 // };
 
-const getMetaFromPath = ({ url, basic_info }) => {
+const getMetaFromPath = ({ url, meta_info }) => {
   const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
   let m = regex.exec(url);
   if(!m) return false;
@@ -284,9 +284,9 @@ const getMetaFromPath = ({ url, basic_info }) => {
   const type = m[1];
 
   const lang = m[3] || "en-us";
-  const customSlug = (typeof basic_info.slug === "string");
+  const customSlug = (typeof meta_info.slug === "string");
   const file_name = m[2];// + (lang == "es" ? "-es": "");
-  const slug = (customSlug) ? basic_info.slug : file_name;
+  const slug = (customSlug) ? meta_info.slug : file_name;
   const template = type === "page" ? file_name : type;
 
   const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${template}/${slug}`;

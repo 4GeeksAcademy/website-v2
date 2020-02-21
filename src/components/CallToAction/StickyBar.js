@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 
 const Stickybar = () => {
   return (
-    <div className="alert alert-danger">I a a call to action</div>
+    <div className="sticky-top alert alert-danger">I a a call to action</div>
   );
 };
 

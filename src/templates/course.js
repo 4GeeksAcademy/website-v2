@@ -36,7 +36,7 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       style="default"
       image="yes"
-      url={yml.basic_info.image}
+      url={yml.meta_info.image}
       border="bottom"
       height="700px"
       backgroundSize="cover"
@@ -358,7 +358,7 @@ export const query = graphql`
       edges{
         node{
             tagline
-            basic_info{
+            meta_info{
                 title
                 description
                 image

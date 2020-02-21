@@ -18,8 +18,8 @@ const BaseRender = (Page) => (props) => {
         return <div className="alert alert-danger">There was a problem loading the data</div>
     }
 
-    return <Layout type="page" seo={yml.basic_info} context={pageContext}>
-        <StickyBar />
+    return <Layout type="page" seo={yml.meta_info} context={pageContext}>
+        {/* <StickyBar /> */}
         <Page {...props} yml={yml} />
     </Layout>
 };

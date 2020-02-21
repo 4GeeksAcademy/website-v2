@@ -2,10 +2,10 @@
 # These redirect are just the aditional ones, this file should not grow that much
 
 # 1. If you are planning to redirect to the page go to data/page/<page-name>.yml instead 
-#    and look for the basic_info.redirects array
+#    and look for the meta_info.redirects array
 
 # 2. If you are planning to redirect to an entity like courses, locations, events, etc. 
-#    Go to data/<entity-type>/<file>.<lang>.yml instead and look for the basic_info.redirects
+#    Go to data/<entity-type>/<file>.<lang>.yml instead and look for the meta_info.redirects
 
 # 3. If none of your redirects apply to entities or pages you can put them here:
 

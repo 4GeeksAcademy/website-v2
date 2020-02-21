@@ -222,7 +222,7 @@ export const query = graphql`
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            basic_info{
+            meta_info{
                 title
                 description
                 image

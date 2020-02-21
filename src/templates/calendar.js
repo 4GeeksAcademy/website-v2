@@ -20,7 +20,7 @@ export const query = graphql`
       edges{
         node{
             tagline
-            basic_info{
+            meta_info{
               title
               description
               image

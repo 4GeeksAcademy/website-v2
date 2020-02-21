@@ -62,7 +62,7 @@ export const withSession = Component => {
                 latitude
                 longitude
                 country
-                basic_info{
+                meta_info{
                     slug
                 }
               }
