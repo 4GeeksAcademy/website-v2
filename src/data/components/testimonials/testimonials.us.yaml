@@ -1,4 +1,13 @@
-student_name: ""
-testimonial_date: ""
-student_thumb: ""
-starts: 1
+testimonials:
+  - student_name: ""
+    testimonial_date: ""
+    student_thumb: ""
+    starts: 1
+  - student_name: ""
+    testimonial_date: ""
+    student_thumb: ""
+    starts: 1
+  - student_name: ""
+    testimonial_date: ""
+    student_thumb: ""
+    starts: 1
