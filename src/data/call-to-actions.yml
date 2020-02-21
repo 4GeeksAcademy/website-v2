@@ -1,0 +1,10 @@
+# WARNING!!!!
+# This YML is still under development, does not work now
+# The idea is to define/manage here the website call to actions from here
+
+
+
+# call_to_actions:
+#   - type: "next-cohort"
+#     excludes: []
+#     includes: []

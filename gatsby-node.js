@@ -9,6 +9,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   if (types.includes(node.internal.type)) {
     const url = createFilePath({ node, getNode })
     const meta = getMetaFromPath({ url, ...node });
+    // const ctas = callToActions();
     if(meta){
       createNodeField({ node, name: `lang`, value: meta.lang });
       createNodeField({ node, name: `slug`, value: meta.slug });
@@ -17,6 +18,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       createNodeField({ node, name: `type`, value: meta.type });
       createNodeField({ node, name: `pagePath`, value: meta.pagePath });
       createNodeField({ node, name: `filePath`, value: url });
+      createNodeField({ node, name: `ctas`, value: ctas });
     }
   }
 };
@@ -162,8 +164,10 @@ const createPagesfromYml = async ({ graphql, actions }) => {
 
     const translations = buildTranslations(result.data[`allPageYaml`]);
     result.data[`allPageYaml`].edges.forEach(({ node }) => {
+        const _targetPath = node.fields.slug === "index" ? "/" : node.fields.pagePath;
+        console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath}`);
         createPage({
-            path: node.fields.pagePath,
+            path: _targetPath,
             component: path.resolve(`./src/templates/${node.fields.template}.js`),
             context: {
                 ...node.fields,
@@ -172,19 +176,31 @@ const createPagesfromYml = async ({ graphql, actions }) => {
         });
 
         if(node.fields.lang === "us"){
+            console.log(`Redirect from /${node.fields.slug} to ${_targetPath}`);
             createRedirect({
                 fromPath: "/"+node.fields.slug,
-                toPath: node.fields.pagePath,
+                toPath: _targetPath,
                 redirectInBrowser: true,
                 isPermanent: true
             });
 
+            console.log(`Redirect from /en/${node.fields.slug} to ${_targetPath}`);
             createRedirect({
                 fromPath: "/en/"+node.fields.slug,
-                toPath: node.fields.pagePath,
+                toPath: _targetPath,
                 redirectInBrowser: true,
                 isPermanent: true
             });
+
+            if(node.fields.slug === "index"){
+                console.log("Redirect from /en to "+_targetPath);
+                createRedirect({
+                    fromPath: "/en",
+                    toPath: _targetPath,
+                    redirectInBrowser: true,
+                    isPermanent: true
+                });
+            }
         }
 
         if (node.basic_info && node.basic_info.redirects) {
@@ -195,7 +211,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
                 path = path[0] !== '/' ? '/'+path : path;
                 createRedirect({
                     fromPath: path,
-                    toPath: node.fields.pagePath,
+                    toPath: _targetPath,
                     redirectInBrowser: true,
                     isPermanent: true
                 });
@@ -206,7 +222,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
     return true;
 };
 
-const addAdditionalRedirects = async ({ graphql, actions }) => {
+const addAdditionalRedirects = ({ graphql, actions }) => {
     const { createRedirect } = actions;
     const URL = './src/data/additional-redirects.yml';
     try{
@@ -231,6 +247,35 @@ const addAdditionalRedirects = async ({ graphql, actions }) => {
     return true;
 };
 
+// const callToActions = () => {
+//     const URL = './src/data/call-to-actions.yml';
+//     try{
+//         const contents = fs.readFileSync(URL, 'utf8');
+//         if(!contents) throw Error("Error reading the redirect file");
+//         const config = YAML.parse(contents);
+//         if(!config) throw Error("Error parsing the "+URL);
+
+
+//         return {
+//             getFromSlug: (slug) => config.call_to_actions.filter(cta => {
+//                 if(cta.excludes && cta.excludes.excludes > 0){
+//                     const isExcluded = cta.excludes.find(s => s === slug);
+//                     if(isExcluded) return false;
+//                 } 
+//                 if(isExcluded)
+//                 const isIncluded = cta.includes
+//             }).map().concat(config.excludes),
+//             includes: [].concat(config.includes),
+//             type: config.type || "next-cohort"
+//         }
+//     }
+//     catch(error){
+//         throw Error(error);
+//     }
+
+//     return true;
+// };
+
 const getMetaFromPath = ({ url, basic_info }) => {
   const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
   let m = regex.exec(url);
@@ -246,7 +291,9 @@ const getMetaFromPath = ({ url, basic_info }) => {
 
   const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${template}/${slug}`;
 
-  return { lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath };
+  const meta = { lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath };
+//   console.log("meta: ", meta);
+  return meta;
 };
 
 const buildTranslations = ({ edges }) => {

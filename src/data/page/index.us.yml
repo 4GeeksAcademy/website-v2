@@ -1,10 +1,10 @@
 basic_info:
-  slug: home
+  slug: index
   title: null
   description: null
   image: null
   keywords: []
-  redirects: ["/"]
+  redirects: ["/home", "/us/home"]
 
 tagline: Miami Coding Bootcamp
 title_first_line: LEARN TO CODE

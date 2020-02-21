@@ -1,8 +1,10 @@
 import React from "react";
 import Layout from '../global/Layout';
+import StickyBar from "../components/CallToAction/StickyBar.js";
 
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 const BaseRender = (Page) => (props) => {
+    console.log("Rending: ", props);
     const {data, pageContext} = props;
     let yml = null;
     try {
@@ -17,6 +19,7 @@ const BaseRender = (Page) => (props) => {
     }
 
     return <Layout type="page" seo={yml.basic_info} context={pageContext}>
+        <StickyBar />
         <Page {...props} yml={yml} />
     </Layout>
 };
