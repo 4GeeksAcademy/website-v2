@@ -1,0 +1,39 @@
+meta_info:
+  slug: senior-mentor
+  title: null
+  description: null
+  image: null
+  keywords: none
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Lead Instructor"
+banner_sub_heading: ""
+banner_image: ""
+cities:
+  - Miami
+  - Santiago de Chile
+  - Caracas
+  - Maracaibo
+button_text: "APPLY NOW"
+## JOB MAIN SECTION INFO
+title: "What could be more important for a coding academy than having great teachers?"
+description: "The brightest minds have always taken time taught what they know, it's a great way to give back and also keep learning new developments or event create new ways of doing things. At 4Geeks we want to have the best minds mentoring to our students. That is why we are committed to supporting our teachers in their professional life, promoting their personal branding and projects in any space that the academy has available."
+
+content:
+  - label: "responsabilities"
+    list:
+      - "1. Establish a one-to-one relationship with students to monitor and detect career or profile development opportunities."
+      - "2. Conduct student interviews training and help organize training & development initiatives."
+  - label: "Technical Requirements"
+    list:
+      - "1. Establish a one-to-one relationship with students to monitor and detect career or profile development opportunities."
+      - "2. Conduct student interviews training and help organize training & development initiatives."
+  - label: "Teaching experience required"
+    list:
+      - "1. Establish a one-to-one relationship with students to monitor and detect career or profile development opportunities."
+      - "2. Conduct student interviews training and help organize training & development initiatives."
+  - label: "Perks about the Job"
+    list:
+      - "1. Establish a one-to-one relationship with students to monitor and detect career or profile development opportunities."
+      - "2. Conduct student interviews training and help organize training & development initiatives."
