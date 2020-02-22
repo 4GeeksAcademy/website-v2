@@ -4,7 +4,8 @@ const HOST = `${process.env.ACP_HOST}/api/3/`;
 let HEADERS = {
     'Api-Token': process.env.ACP_TOKEN
 };
-const ACP_CONSTANTS = {
+
+const acp_constants = {
     soft_leads_list: 8,
     newsletter_list: 3,
     utm_url: 15,
@@ -37,7 +38,11 @@ const test = async () => {
 const validate = (keys, data) => items.forEach((key) => {
     if(Array.isArray(key)) validate(key, data);
     else if(typeof(data[key]) !== 'string' || data[key] === '') throw new Error('Invalid email');
-})
+});
+const setOptional = (original, key, data) => {
+    if(typeof(data[key])) original["field["+acp_constants[key]+",0]"] = data[key];
+    return original;
+}
 export const addContact = async (contact) => {
 
     validate(contact, ['email', 'first_name','url','lang','country_name','gclid',['utm_location','city_slug'], 'referral_key']);
@@ -46,30 +51,23 @@ export const addContact = async (contact) => {
         "email": contact['email'],
         "first_name": contact['first_name'],
         "tags": ['download_syllabus, request_more_info'],
-        `field[${ACP_CONSTANTS['utm_url']},0]`: $utmURLValue,
-        "field[".$utmLanguageId.",0]" => $utmLanguageValue,
-        "field[".$utmCountryId.",0]" => $utmCountryValue,
-        "field[".$utmLocationId.",0]" => $utmLocationValue,
-        "field[".$gclid.",0]" => $gclidValue,
-    }
-    if(!empty($referralId)) $contact["field[".$referralId.",0]"] = $referralValue;
+    };
+    payload = setOptional("last_name");
+    payload = setOptional("utm_url");
+    payload = setOptional("utm_location");
+    payload = setOptional("utm_course");
+    payload = setOptional("utm_language");
+    payload = setOptional("utm_country");
+    payload = setOptional("gclid");
+    payload = setOptional("referral_key");
 
-    $coursesField = \TF\ActiveCampaign\ACAPI::subscribeToList($contact, $listId);
-
-    if($coursesField){
-        return [
-            "status" => "ok",
-            "code" => 200,
-            "data" => "Check your email! In the next minutes your should receive what you asked for :)"
-        ];
-    }
-    else return [
-        "status" => "error",
-        "code" => 500,
-        "data" => "Something went wrong"
-    ];
-
-    const result = await fetch(`${HOST}/contacts`);
-    if(result.status === 2000) return await result.json();
+    const result = await fetch(`${HOST}/contacts`, {
+        method: "POST",
+        headers : HEADERS,
+        body: JSON.stringify({ contact: payload })
+    });
+    if(result.status >= 200 && result.status < 400){
+        return await result.json();
+    } 
     else return false;
 }
