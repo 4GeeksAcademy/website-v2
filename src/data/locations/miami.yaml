@@ -1,10 +1,10 @@
 meta_info:
-    slug: "downtown-miami"
-    title: null
-    description: null
-    image: null
-    keywords: none
-    redirects: []
+  slug: "downtown-miami"
+  title: null
+  description: null
+  image: null
+  keywords: none
+  redirects: []
 
 city: "Miami"
 name: "Downtown Miami"
@@ -27,140 +27,258 @@ location_office_image2: ""
 location_office_image3: ""
 should_know: ""
 value: "Miami"
-defaultLanguage: "en"
+defaultLanguage: "us"
 hasFinancialsOption: true
+
+## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+## HEADING SECTION
+heading_section:
+  heading:
+    - us: "PRICING AND FINANCING"
+      es: "PRECIOS"
+  sub_heading:
+    - us: ""
+      es: ""
+
+## PRICES SECTION
+## MIAMI HAS 3 BOXES:
+## LEFT     BOX => UPFRONT OPTION
+## CENTER   BOX => FINANCIAL SLIDER OPTIONS
+## RIGHT    BOX => ISA - INCOMING SHARING AGREEMENT
 prices:
+  ## *****************
+  ## FULL-TIME SECTION
+  ## *****************
+
   full-time:
-    - full-time:
-      upfront: "$9,499.00"
-      slug: "full-time"
-      message: ""
-      duration: "9 Weeks"
-      financed:
-        - months: "6"
-          payment: "$1,449.73"
-          paymentInfo:
-            - en: "per month + 1,500 deposit"
-              es: "al mes + 1,500 depósito"
-          provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
-          message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
-        - months: "12"
-          payment: "$755.13"
-          paymentInfo:
-            - en: "per month + 1,500 deposit"
-              es: "al mes + 1,500 depósito"
-          provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
-          message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
-        - months: "24"
-          payment: "$408.06"
-          paymentInfo:
-            - en: "per month + 1,500 deposit"
-              es: "al mes + 1,500 depósito"
-          provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
-          message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
-        - months: "36"
-          payment: "$314.10"
-          paymentInfo:
-            - en: "per month + $0 deposit"
-              es: "al mes + $0 depósito"
-          provider: "Skill Fund"
-          logo: "../images/skill-logo.png"
-          message:
-            - en: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
-              es: "Gracias a nuestro partnership con Skill Fund tenemos el plan de pago mas flexible de la ciudad"
-        - months: "42"
-          payment: "$314.10"
-          paymentInfo:
-            - en: "per month + $0 deposit"
-              es: "al mes + $0 depósito"
-          provider: "Climb"
-          logo: "../images/climb_logo.png"
-          message:
-            - en: "Thanks to our partnership with Climb we have managed to create the most flexible placement plan in town"
-              es: "Gracias a nuestro partnership con Climb tenemos el plan de pago mas flexible de la ciudad"
-        - months: "60"
-          payment: "$214.74"
-          paymentInfo:
-            - en: "per month + $0 deposit"
-              es: "al mes + $0 depósito"
-          provider: "Skill Fund - Climb"
-          logo: "../images/skill-logo.png"
-          message:
-            - en: "We have partened with Skills Fund and Climb in order to offer you the best payment options in Town"
-              es: "Gracias a nuestro partnership con Skill Fund y Climb tenemos el plan de pago mas flexible de la ciudad"
+    ## GENERAL INFO
+    slug: "full-time"
+    duration:
+      - us: "9 Weeks"
+        es: "9 semanas"
+
+    ## LEFT BOX SECTION FULL-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one:
+          - us: "PAY UPFRONT"
+            es: ""
+        heading_two:
+          - us: "(OUT OF POCKET)"
+            es: ""
+        sub_heading:
+          - us: "and enjoy the best pricing in town"
+            es:
+      content:
+        upfront_price: "$9,499.00"
+        upfront_info:
+          - us: "single payment"
+            es: ""
+      button:
+        button_text:
+          - us: "APPLY NOW"
+            es: "APLICA ORA"
+
+    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+    center_section:
+      - months: "6"
+        payment: "$1,449.73"
+        paymentInfo:
+          - us: "per month + 1,500 deposit"
+            es: "al mes + 1,500 depósito"
+        provider: "Quotanda"
+        logo: "/images/quotanda-logo.png"
+        message:
+          - us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+      - months: "12"
+        payment: "$755.13"
+        paymentInfo:
+          - us: "per month + 1,500 deposit"
+            es: "al mes + 1,500 depósito"
+        provider: "Quotanda"
+        logo: "/images/quotanda-logo.png"
+        message:
+          - us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+      - months: "24"
+        payment: "$408.06"
+        paymentInfo:
+          - us: "per month + 1,500 deposit"
+            es: "al mes + 1,500 depósito"
+        provider: "Quotanda"
+        logo: "/images/quotanda-logo.png"
+        message:
+          - us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+      - months: "36"
+        payment: "$314.10"
+        paymentInfo:
+          - us: "per month + $0 deposit"
+            es: "al mes + $0 depósito"
+        provider: "Skill Fund"
+        logo: "/images/skill-logo.png"
+        message:
+          - us: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
+            es: "Gracias a nuestro partnership con Skill Fund tenemos el plan de pago mas flexible de la ciudad"
+      - months: "42"
+        payment: "$314.10"
+        paymentInfo:
+          - us: "per month + $0 deposit"
+            es: "al mes + $0 depósito"
+        provider: "Climb"
+        logo: "/images/climb_logo.png"
+        message:
+          - us: "Thanks to our partnership with Climb we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Climb tenemos el plan de pago mas flexible de la ciudad"
+      - months: "60"
+        payment: "$214.74"
+        paymentInfo:
+          - us: "per month + $0 deposit"
+            es: "al mes + $0 depósito"
+        provider: "Skill Fund - Climb"
+        logo: "/images/skill-logo.png"
+        message:
+          - us: "We have partened with Skills Fund and Climb in order to offer you the best payment options in Town"
+            es: "Gracias a nuestro partnership con Skill Fund y Climb tenemos el plan de pago mas flexible de la ciudad"
+
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one:
+          - us: "PAY ONLY AFTER"
+            es: ""
+        heading_two:
+          - us: "YOU GET A JOB"
+            es: ""
+        sub_heading:
+          - us: "and talk about the income share agreement"
+            es: ""
+      content:
+        upfront_price: "$134.99"
+        upfront_info:
+          - us: "per month"
+            es: "al mes"
+      button:
+        button_text:
+          - us: "APPLY NOW"
+            es: "APLICA ORA"
+
+  ## *****************
+  ## PART-TIME SECTION
+  ## *****************
   part-time:
-    - part-time:
-      upfront: "$7,499.00"
-      slug: "part-time"
-      message: ""
-      duration: "16 Weeks"
-      financed:
-        - months: "6"
-          payment: "$1,108.58"
-          paymentInfo:
-            - en: "per month + 1,500 deposit"
-              es: "al mes + 1,500 depósito"
-          provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
-          message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: ""
-        - months: "12"
-          payment: "$577.43"
-          paymentInfo:
-            - en: "per month + 1,500 deposit"
-              es: "al mes + 1,500 depósito"
-          provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
-          message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: ""
-        - months: "24"
-          payment: "$312.04"
-          paymentInfo:
-            - en: "per month + 1,500 deposit"
-              es: "al mes + 1,500 depósito"
-          provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
-          message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: ""
-        - months: "36"
-          payment: "$247.97"
-          paymentInfo:
-            - en: "per month + $0 deposit"
-              es: "al mes + $0 depósito"
-          provider: "Skill Fund"
-          logo: "../images/skill-logo.png"
-          message:
-            - en: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
-              es: ""
-        - months: "42"
-          payment: "$314.10"
-          paymentInfo:
-            - en: "per month + $0 deposit"
-              es: "al mes + $0 depósito"
-          provider: "Climb"
-          logo: "../images/climb_logo.png"
-          message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: ""
-        - months: "60"
-          payment: "$169.53"
-          paymentInfo:
-            - en: "per month + $0 deposit"
-              es: "al mes + $0 depósito"
-          provider: "Skill Fund - Climb"
-          logo: "../images/skill-logo.png"
-          message:
-            - en: "We have partened with Skills Fund and Climb in order to offer you the best payment options in Town"
-              es: ""
+    slug: "part-time"
+    duration:
+      - us: "16 Weeks"
+        es: "16 semanas"
+
+    ## LEFT BOX SECTION PART-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one:
+          - us: "PAY UPFRONT"
+            es: ""
+        heading_two:
+          - us: "(OUT OF POCKET)"
+            es: ""
+        sub_heading:
+          - us: "and enjoy the best pricing in town"
+            es:
+      content:
+        upfront_price: "$7,499.00"
+        upfront_info:
+          - us: "single payment"
+            es: ""
+      button:
+        button_text:
+          - us: "APPLY NOW"
+            es: "APLICA ORA"
+
+    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+    center_section:
+      - months: "6"
+        payment: "$1,108.58"
+        paymentInfo:
+          - us: "per month + 1,500 deposit"
+            es: "al mes + 1,500 depósito"
+        provider: "Quotanda"
+        logo: "/images/quotanda-logo.png"
+        message:
+          - us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: ""
+      - months: "12"
+        payment: "$577.43"
+        paymentInfo:
+          - us: "per month + 1,500 deposit"
+            es: "al mes + 1,500 depósito"
+        provider: "Quotanda"
+        logo: "/images/quotanda-logo.png"
+        message:
+          - us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: ""
+      - months: "24"
+        payment: "$312.04"
+        paymentInfo:
+          - us: "per month + 1,500 deposit"
+            es: "al mes + 1,500 depósito"
+        provider: "Quotanda"
+        logo: "/images/quotanda-logo.png"
+        message:
+          - us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: ""
+      - months: "36"
+        payment: "$247.97"
+        paymentInfo:
+          - us: "per month + $0 deposit"
+            es: "al mes + $0 depósito"
+        provider: "Skill Fund"
+        logo: "/images/skill-logo.png"
+        message:
+          - us: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
+            es: ""
+      - months: "42"
+        payment: "$314.10"
+        paymentInfo:
+          - us: "per month + $0 deposit"
+            es: "al mes + $0 depósito"
+        provider: "Climb"
+        logo: "/images/climb_logo.png"
+        message:
+          - us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: ""
+      - months: "60"
+        payment: "$169.53"
+        paymentInfo:
+          - us: "per month + $0 deposit"
+            es: "al mes + $0 depósito"
+        provider: "Skill Fund - Climb"
+        logo: "/images/skill-logo.png"
+        message:
+          - us: "We have partened with Skills Fund and Climb in order to offer you the best payment options in Town"
+            es: ""
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one:
+          - us: "PAY ONLY AFTER"
+            es: ""
+        heading_two:
+          - us: "YOU GET A JOB"
+            es: ""
+        sub_heading:
+          - us: "and talk about the income share agreement"
+            es: ""
+      content:
+        upfront_price: "$134.99"
+        upfront_info:
+          - us: "per month"
+            es: "al mes"
+      button:
+        button_text:
+          - us: "APPLY NOW"
+            es: "APLICA ORA"
