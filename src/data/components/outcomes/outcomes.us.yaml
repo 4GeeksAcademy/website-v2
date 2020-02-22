@@ -1,6 +1,40 @@
+## OUTCOME SECTION
+## THIS COMPONENT IS USED IN "/the-academy"
+## NOT READY YET
+
+heading: "4 GEEKS OUTCOMES"
+sub_heading: "out of our total students, 76% are looking to get a job right after and 24% are pursuing to improve their skills or launch startups"
 outcomes:
-  - title: "AGES"
-    slug: "ages"
+  - title: "Demographics"
+    content: ""
     data:
-      - value: ""
-        color:
+      chart_one:
+        - title: "ONE"
+          value: 10
+          color: ""
+        - title: "TWO"
+          value: 10
+          color: ""
+        - title: "THREE"
+          value: 10
+          color: ""
+      chart_two:
+        - title: "ONE"
+          value: 10
+          color: ""
+        - title: "TWO"
+          value: 10
+          color: ""
+        - title: "THREE"
+          value: 10
+          color: ""
+      chart_three:
+        - title: "ONE"
+          value: 10
+          color: ""
+        - title: "TWO"
+          value: 10
+          color: ""
+        - title: "THREE"
+          value: 10
+          color: ""

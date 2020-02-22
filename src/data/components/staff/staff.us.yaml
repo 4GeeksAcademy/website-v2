@@ -1,3 +1,4 @@
+## STAFF MEMEBERS INFO
 staff:
   - name: "Alejandro"
     last_name: "Sanchez"
@@ -14,6 +15,7 @@ staff:
       - Soccer
     coding_skills:
       - Javascript
+    location: ""
   - name: "Marcelo"
     last_name: "Ricigliano"
     nick_name: ""
@@ -30,6 +32,7 @@ staff:
       - Juventus
     coding_skills:
       - Javascript
+    location: ""
   - name: "Paolo"
     last_name: "Lucano"
     nick_name: "Pluco"
@@ -48,6 +51,7 @@ staff:
       - Travel
     coding_skills:
       - Javascript
+    location: ""
   - name: "Bridget"
     last_name: "Schraeder"
     nick_name: ""
@@ -63,3 +67,4 @@ staff:
       - Music
     coding_skills:
       - Excel
+    location: ""
