@@ -1,3 +1,6 @@
+## JOBS CHARTS DATA - HOME PAGE
+## THE NUMBERS IN THE chart_data FIELD, CREATE THE CHART
+## THE FIRST NUMBER IS THE STARTING OF THE CHART IN THE BOTTOM - LEFT
 jobs:
   - title: "Growth Rate"
     slug: "growt-rate"

@@ -1,15 +1,18 @@
+## WHY 4GEEKS SECTION
+## THIS COMPONENT IS USED IN "/home"
+
 heading: WHY 4GEEKS?
 sub_heading: ""
 why:
   - title: "Get a job in Tech"
     description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
-    image: "https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1866&q=80"
+    image: "/images/why1.png"
     slug: job-in-tech
   - title: "We finance your career"
     description: "Don't pay anything from day one until you finally get a coding job with our Income Sharing Agreement(ISA)."
-    image: "https://images.unsplash.com/photo-1452830978618-d6feae7d0ffa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+    image: "/images/why2.png"
     slug: finance-your-career
   - title: "Never code alone again"
     description: "Limitless and forever: Mentorships, exercises, permanent chatroom, real classrooms, even after you get your job."
-    image: "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+    image: "/images/why3.png"
     slug: never-code-alone-again

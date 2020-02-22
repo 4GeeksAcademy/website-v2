@@ -1,4 +1,14 @@
-miami:
+## GEEKS VS OTHERS COMPONENT
+## THIS COMPONENT IS USED IN "/home" AND "/course/..."
+## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
+headings:
+  - heading_home: "WHAT MAKES THIS PROGRAM STAND OUT?"
+    sub_heading_home: ""
+    sub_heading_home_link: ""
+  - heading_program: "4 GEEKS VS OTHERS IN NUMBERS"
+    sub_heading_program: "out of our total students, 76% are l"
+    sub_heading_program_link: ""
+info:
   - features: "CAREER SUPPORT"
     at4_Geeks: "LIFETIME"
     industry_average: "UNTIL YOU GET A JOB"

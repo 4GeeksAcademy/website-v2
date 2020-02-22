@@ -12,7 +12,7 @@ const GeeksVsOthers = props => {
         allGeeksVsOthersYaml {
           edges {
             node {
-              miami {
+              info {
                 features
                 at4_Geeks
                 industry_average
@@ -56,10 +56,10 @@ const GeeksVsOthers = props => {
                 <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>INDUSTRY AVERAGE</H5></Column></Row>
               </Column>
             </Row>
-            {geeks.miami.map((item, index) => {
+            {geeks.info.map((item, index) => {
               return (
                 <>
-                  {index == geeks.miami.length - 1
+                  {index == geeks.info.length - 1
                     ?
                     <Row
                       key={index}

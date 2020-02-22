@@ -106,7 +106,7 @@ const Contact = (props) => {
                                         <Column size="11" height="100%">
                                             <Divider height="50px" />
                                             <Row height="50px">
-                                                <H3>TELL US ABOUT YOU</H3>
+                                                <H3>CONTACT US</H3>
                                             </Row>
                                             <Row height="50px">
                                                 <Input type="text" className="form-control" placeholder="First name *" />
@@ -132,12 +132,10 @@ const Contact = (props) => {
                                                     </Grid>
                                                 </Grid>
                                             </Row>
-                                            <Row height="40px">
-                                                <Input type="text" className="form-control" placeholder="Referral key" />
+                                            <Row height="60px">
+                                                <Input type="text" className="form-control" placeholder="Your message" />
                                             </Row>
-                                            <Row height="20px">
-                                                <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>If you were referred by any current or past student, use your referral code for extra credit or discount.</Paragraph>
-                                            </Row>
+
                                             <Row >
                                                 <Button move="up" up="15px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".45rem 3rem">APPLY</Button>
                                             </Row>
@@ -147,30 +145,7 @@ const Contact = (props) => {
                                 </Column>
                                 <Column size="4" alignSelf="center" height="100%" image="no" color={Colors.black} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" >
                                     <Row align="center" height="100%">
-                                        <Column size="10" height="100%">
-                                            <Divider height="50px" />
-                                            <Row height="60px">
-                                                <H3 color={Colors.yellow}>ONCE YOU CLICK ON</H3>
-                                                <H3 color={Colors.yellow}>APPLY, YOU WILL</H3>
-                                            </Row>
-                                            <Divider height="30px" />
-                                            <Row height="50px">
-                                                <Paragraph fontSize="13px" lineHeight="16px" color={Colors.lightGray}>1- Receive an email from your City Advisor</Paragraph>
-                                            </Row>
-                                            <Row height="50px">
-                                                <Paragraph fontSize="13px" lineHeight="16px" color={Colors.lightGray}>2- Receive info related to the options you have to finance your tuition.</Paragraph>
-                                            </Row>
-                                            <Row height="50px">
-                                                <Paragraph fontSize="13px" lineHeight="16px" color={Colors.lightGray}>3- An explanation on how the process works to get the best deal in the City, respectively. </Paragraph>
-                                            </Row>
-                                            <Row height="50px">
-                                                <Paragraph fontSize="13px" lineHeight="16px" color={Colors.lightGray}>4- A syllabus of your program and regular coaching assistance from our advisors to help you take the best decision for your career. </Paragraph>
-                                            </Row>
-                                            <Row height="50px">
 
-                                            </Row>
-
-                                        </Column>
                                     </Row>
                                 </Column>
                             </Row>
