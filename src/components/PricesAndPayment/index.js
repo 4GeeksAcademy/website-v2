@@ -152,14 +152,10 @@ export default () => {
                 upfront
               }
             }
-            should_know
-            state
-            value
-            zip_code
           }
         }
       }
-  }
+    }
     `)
   let locationsArray = data.allLocationsYaml.edges;
   // let currentCityInfo = locationsArray.filter((item) => item.node.city === session.location)

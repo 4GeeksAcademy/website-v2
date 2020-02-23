@@ -160,8 +160,8 @@ const Program = ({data, pageContext, yml}) => {
     >
       <Title
         size="10"
-        title={details.heading}
-        paragraph={details.sub_heading}
+        title={yml.details.heading}
+        paragraph={yml.details.sub_heading}
         primary
       />
       <Divider height="50px" />
@@ -169,14 +169,14 @@ const Program = ({data, pageContext, yml}) => {
         <Tabs className="testy">
           <Header>
             <TabList >
-              {details.details_modules.map((item, index) => {
+              {yml.details.details_modules.map((item, index) => {
                 return (<Tab key={index} onClick={() => setCurrentIndex(index)}>{item.module_name}</Tab>)
               })
               }
             </TabList>
           </Header>
           <Body>
-            {details.details_modules.map((item, i) => {
+            {yml.details.details_modules.map((item, i) => {
               return (
                 <TabPanel key={i + 1} onChange={() => setInd(i)}>
                   <Container width="fluid">
@@ -309,14 +309,10 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       style="default"
     >
-      <Title
-        size="10"
-        title="PRICING AND FINANCING"
-        primary
-      />
+
       <Divider height="50px" />
       <section className="section" id="section-4"></section>
-      {/* <PricesAndPayment /> */}
+      <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
       <Divider height="100px" />
     </Wrapper>
     {/* <Wrapper
