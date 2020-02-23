@@ -25,7 +25,7 @@ payment_guide:
   button_link: ""
 
 ## IMMERSED IN ECOSYSTEM SECTION
-ecosysyem:
+ecosystem:
   heading: "IMMERSED IN MIAMI'S CODING ECOSYSTEM"
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
   partners_name: "financials" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)
