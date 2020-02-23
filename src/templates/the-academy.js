@@ -10,17 +10,17 @@ import BaseRender from './_baseRender'
 
 const Why = (props) => {
     const {data, pageContext, yml} = props;
-    const cornerstone = yml.cornerstones[0];
+    const cornerstone = yml.cornerstones;
     return (
         <>
             <Container fluid height="450px">
                 <Row>
                     <Column size="1" />
-                    <Column border="bottom" size="11" padding="10%" image="yes" url="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80" height="600px">
+                    <Column border="bottom" size="11" padding="10%" image="yes" url={yml.banner.image} height="600px">
                         <Row>
                             <Column size="1" />
                             <Column size="8" align="center">
-                                <H1 fontSize="50px" fontSizeXs="40px" color={Colors.white}>{yml.tagline}</H1>
+                                <H1 fontSize="50px" fontSizeXs="40px" color={Colors.white}>{yml.banner.tagline}</H1>
                             </Column>
                         </Row>
 
@@ -59,7 +59,7 @@ const Why = (props) => {
             </Wrapper>
             <Divider height="100px" />
             <Wrapper style="default">
-                <Title size="8" title={cornerstone.heading} primary />
+                <Title size="8" title={yml.cornerstones.heading} primary />
             </Wrapper>
             <Divider height="150px" />
             <Wrapper
@@ -111,7 +111,7 @@ const Why = (props) => {
             </Wrapper>
             <Divider height="100px" />
             <Wrapper style="default">
-                {/* <Mentors up="200px" /> */}
+                <Mentors up="200px" />
             </Wrapper>
             <Divider height="150px" />
             <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
@@ -133,22 +133,22 @@ const Why = (props) => {
                                         <Column size="8" height="100%">
                                             <Divider height="50px" />
                                             <Row height="50px">
-                                                <H2 primary align="left" >OUR STORY</H2>
+                                                <H2 primary align="left" >{yml.story.heading}</H2>
                                             </Row>
                                             <Row>
                                                 <Separator primary />
                                             </Row>
                                             <Row height="">
-                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">4Geeks Academy was founded in 2015. What began as an internal project to train new developers has flourished into a full-time passion.</Paragraph>
+                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.story.sub_heading_one}</Paragraph>
                                             </Row>
                                             <Row height="">
-                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">Today, 4Geeks is now based in the U.S. As coding has become an essential part of society, the mission of our Coding Bootcamp is to instill a new framework for Coding Education universally.</Paragraph>
+                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.story.sub_heading_two}</Paragraph>
                                             </Row>
                                             <Row height="">
-                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">4Geeks Academy now offers locations in 3 cities, with 5 campuses, and over 300 graduates.</Paragraph>
+                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.story.sub_heading_three}</Paragraph>
                                             </Row>
                                             <Row>
-                                                <Paragraph color={Colors.blue} margin="20px 0 0 0" align="left" fontSize="13px">Learn more about 4Geeks Academy ></Paragraph>
+                                                <Paragraph color={Colors.blue} margin="20px 0 0 0" align="left" fontSize="13px">{yml.story.sub_heading_link}</Paragraph>
                                             </Row>
 
                                         </Column>
@@ -172,22 +172,33 @@ export const query = graphql`
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            tagline
             meta_info{
                 title
                 description
                 image
                 keywords
             }
+            banner{
+                tagline
+                sub_heading
+                image
+            }
             cornerstones {
+                heading
+                sub_heading
                 cornerstones_list {
                   content
                   icon
                   title
                 }
+            }
+            story{
                 heading
-                sub_heading
-              }
+                sub_heading_one
+                sub_heading_two
+                sub_heading_three
+                sub_heading_link
+            }
         }
       }
     }
