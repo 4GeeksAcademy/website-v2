@@ -20,28 +20,21 @@ import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage} from '../Styling';
 import {SessionContext} from '../../session'
 
-// export const query = graphql`
-//   query PricesQuery($file_name: String!, $lang: String!) {
-//     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-//       edges{
-//         node{
-//             banner{
-//               headertext
-//             }
-//         }
-//       }
-//     }
-//   }
-// `;
-
-export default () => {
+export default (props) => {
   const {session, setSession} = useContext(SessionContext);
   const [checked, setChecked] = useState(false)
+  const [test, setTest] = useState()
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(session.location);
-
+  // useEffect(() => {
+  //   const loadInfo = async () => {
+  //     let t = data.allLocationsYaml.edges.filter((item) => item.node.city === session.location)
+  //     await setTest(t)
+  //   };
+  //   loadInfo();
+  // }, [])
   const handleChange = (checked) => {
     setChecked(checked)
   }
@@ -88,79 +81,285 @@ export default () => {
       allLocationsYaml {
         edges {
           node {
-            id
-            active_campaign_location_slug
-            address
+            city
+            defaultLanguage
+            hasFinancialsOption
             meta_info {
-              keywords
               slug
             }
-            breathecode_location_slug
-            city
-            country
-            courses
-            defaultLanguage
-            flag_icon
-            hasFinancialsOption
-            latitude
-            location_map
-            location_office_image
-            location_office_image2
-            location_office_image3
-            location_phone_number
-            longitude
-            name
             prices {
-              part_time {
-                duration
-                financed {
-                  logo
-                  message {
-                    en
-                    es
-                  }
-                  months
-                  payment
-                  paymentInfo {
-                    en
-                    es
-                  }
-                  provider
-                }
-                message
-                slug
-                upfront
-              }
               full_time {
-                financed {
-                  months
-                  payment
-                  provider
-                  logo
-                  paymentInfo {
-                    en
-                    es
+                slug
+                duration {
+                  us
+                  es
+                }
+                left_section {
+                  button {
+                    button_text {
+                      us
+                      es
+                    }
                   }
-                  message {
-                    en
-                    es
+                  content {
+                    price
+                    price_info {
+                      us
+                      es
+                    }
+                  }
+                  header {
+                    heading_one {
+                      us
+                      es
+                    }
+                    heading_two {
+                      us
+                      es
+                    }
+                    sub_heading {
+                      us
+                      es
+                    }
                   }
                 }
-                duration
+                center_section {
+                  header {
+                    heading_one {
+                      us
+                      es
+                    }
+                    heading_two {
+                      us
+                      es
+                    }
+                    sub_heading {
+                      us
+                      es
+                    }
+                  }
+                  button {
+                    button_text {
+                      us
+                      es
+                    }
+                  }
+                  plans {
+                    message {
+                      us
+                      es
+                    }
+                    paymentInfo {
+                      us
+                      es
+                    }
+                    payment
+                    months
+                    logo
+                    provider
+                  }
+                }
+                right_section {
+                  button {
+                    button_text {
+                      us
+                      es
+                    }
+                  }
+                  content {
+                    price
+                    price_info {
+                      us
+                      es
+                    }
+                  }
+                  header {
+                    heading_one {
+                      us
+                      es
+                    }
+                    heading_two {
+                      us
+                      es
+                    }
+                    sub_heading {
+                      us
+                      es
+                    }
+                  }
+                }
+                
+              }
+              part_time {
                 slug
-                message
-                upfront
+                duration {
+                  es
+                  us
+                }
+                left_section {
+                  header {
+                    heading_one {
+                      us
+                      es
+                    }
+                    heading_two {
+                      us
+                      es
+                    }
+                    sub_heading {
+                      us
+                    }
+                  }
+                  content {
+                    price_info {
+                      us
+                      es
+                    }
+                    price
+                  }
+                  button {
+                    button_text {
+                      us
+                      es
+                    }
+                  }
+                }
+                right_section {
+                  header {
+                    heading_one {
+                      us
+                      es
+                    }
+                    heading_two {
+                      us
+                      es
+                    }
+                    sub_heading {
+                      us
+                      es
+                    }
+                  }
+                  content {
+                    price_info {
+                      us
+                      es
+                    }
+                    price
+                  }
+                  button {
+                    button_text {
+                      us
+                      es
+                    }
+                  }
+                }
+                center_section {
+                  header {
+                    heading_one {
+                      us
+                      es
+                    }
+                    heading_two {
+                      us
+                      es
+                    }
+                    sub_heading {
+                      us
+                      es
+                    }
+                  }
+                  button {
+                    button_text {
+                      us
+                      es
+                    }
+                  }
+                  plans {
+                    logo
+                    message {
+                      us
+                      es
+                    }
+                    months
+                    payment
+                    paymentInfo {
+                      us
+                      es
+                    }
+                    provider
+                  }
+                }
+              }
+            }
+            heading_section {
+              heading {
+                es
+                us
+              }
+              sub_heading {
+                es
+                us
               }
             }
           }
         }
       }
-    }
+  }
     `)
-  let locationsArray = data.allLocationsYaml.edges;
-  // let currentCityInfo = locationsArray.filter((item) => item.node.city === session.location)
-  // console.log("session: ", session)
-  // console.log("currentCityInfo: ", locationsArray)
+  // function getLocationInfo (type) {
+  //   let locInfo = null
+  //   let info = null
+  //   let currentCityInfo = null;
+  //   currentCityInfo = data.allLocationsYaml.edges.filter((item) => item.node.city === session.location)
+  //   info = currentCityInfo[0].node
+  //   if (type === "full-time") {
+  //     locInfo = info.prices.full_time
+  //     return locInfo
+  //   }
+  //   if (type === "part-time") {
+  //     locInfo = info.prices.part_time
+  //     return locInfo
+  //   }
+
+
+  //   }
+  let currentCityInfo = null;
+  let info = null;
+  currentCityInfo = data.allLocationsYaml.edges.filter((item) => {return item.node.city === session.location})
+  {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
+
+  console.log("####", currentCityInfo)
+  console.log("$$$$", info)
+  function getProgramInfo () {
+    let program = "";
+    {
+      props.type === "full-stack-web-development-bootcamp-part-time"
+        ? program = "part-time"
+        : props.type === "full-stack-web-development-bootcamp-full-time"
+          ? program = "full-time"
+          : program = "part-time"
+    }
+    return program
+  }
+  function getLocationProgramInfo (infoCity, courseType) {
+    let cityProgramInfo = "";
+    if (courseType === "full-time") {
+      cityProgramInfo = infoCity.prices.full_time
+      return cityProgramInfo
+    }
+    if (courseType === "part-time") {
+      cityProgramInfo = infoCity.prices.part_time
+      return cityProgramInfo
+    }
+  }
+  let locInfo = null;
+  {info != null ? locInfo = getLocationProgramInfo(info, getProgramInfo()) : null}
+
+  console.log("TYPE:", locInfo)
+  // console.log("get:", getLocationProgramInfo(info, getProgramInfo()))
+  // console.log("session$$: ", getLocationProgramInfo(currentCityInfo[0].node, getProgramInfo()))
+  // console.log("currentCityInfo: ", getLocationInfo(getProgramInfo()))
+  // console.log("locations: ", locationsArray)
   // let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
   // let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
   // let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
@@ -204,7 +403,7 @@ export default () => {
   function getStepContents (step) {
     switch (step) {
       case 0:
-        return `${data.cred.edges[tempQ].node.options[0].payment}`
+        return `${currentCityInfo}`
       case 1:
         return `${data.cred.edges[tempQ].node.options[1].payment}`
       case 2:
@@ -237,208 +436,159 @@ export default () => {
         return 'Unknown step';
     }
   }
-  console.log("data", data.cities.edges[1].node.prices.part_time[0].message)
+  // console.log("data", data.cities.edges[1].node.prices.part_time[0].message)
   return (
     <>
       {/* 3 COLUMNS LAYOUT */}
-      <Title
-        size="10"
-        title="PRICING AND FINANCING"
-        paragraph={session.location}
-        primary
-      />
-      <Divider height="50px" />
-      {session.location === "Miami" ?
-        <Row align="center">
-          <Column size="4" customRespSize respSize="12">
-            <Card shadow width="100%" height="350px" margin="5px 0">
-              <Row height="100px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" >
-                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
-                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="40px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" align="center">
-                    <Column size="8" alignSelf="center" >
-                      <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="110px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" >
-                      <H3 align="center" >$6,999</H3>
-                      <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="100px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" align="center">
-                      <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-            </Card>
-          </Column>
-          <Column size="4" customRespSize respSize="12">
-            <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
-              <Row height="100px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" >
-                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>EXTENDED</H4></Row>
-                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>PAYMENT PLAN</H4></Row>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="50px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" align="center">
-                    <Column size="8" alignSelf="center" >
-                      <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="50px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" >
-                      <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>
-                      <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep)}</Paragraph>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="80px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" align="center">
-                    <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
-                      {steps.map((label, index) => (
-                        <Step key={label}>
-                          <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
-                            <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
-                          </StepButton>
-                        </Step>
-                      ))}
-                    </Stepper>
-                  </Row>
-                  <Row align="center" height="40px">
-                    <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="120px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" align="center">
-                      <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-            </Card>
-          </Column>
-          <Column size="4" customRespSize respSize="12">
-            <Card shadow width="100%" height="350px" margin="5px 0">
-              <Row height="100px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" >
-                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY WHEN </H4></Row>
-                      <Row align="center" height="100%" ><H4 fontSize="22px" align="center">YOU GET A JOB</H4></Row>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="40px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" align="center">
-                    <Column size="8" alignSelf="center" >
-                      <Paragraph align="center" fontSize="13px" color={Colors.gray}>and talk about the income share agreement.</Paragraph>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="110px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" >
-                      <H3 align="center" >$134.99</H3>
-                      <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>per month</Paragraph>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="100px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" align="center">
-                      <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-            </Card>
-          </Column>
-        </Row>
-        // ********* CARACAS ***********
-        : session.location === "Caracas" ?
+      {info != null &&
+        <>
+          <Title
+            size="10"
+            title={props.lang === "es" ? info.heading_section.heading.es : info.heading_section.heading.us}
+            paragraph={session.location}
+            primary
+          />
+          <Divider height="50px" />
           <Row align="center">
             <Column size="4" customRespSize respSize="12">
-              <Card shadow width="100%" height="350px" margin="5px 0" >
-                <Row height="30%" >
+              <Card shadow width="100%" height="350px" margin="5px 0">
+                <Row height="100px" >
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                    <Row height="100%" align="center">
-                      <Column size="9" alignSelf="center" >
-                        <Row align="center" height="100%" ><H3 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.full_time[0].slug}</H3></Row>
+                    <Row height="100%" >
+                      <Column size="12" alignSelf="center" >
+                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.left_section.header.heading_one.es : locInfo.left_section.header.heading_one.us}</H4></Row>
+                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.left_section.header.heading_two.es : locInfo.left_section.header.heading_two.us}</H4></Row>
                       </Column>
                     </Row>
                   </Column>
                 </Row>
-                <Row height="70%" >
+                <Row height="40px" >
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
-                      <Column size="9" alignSelf="center" >
-                        <Row align="center" height="100%" ><H3 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.full_time[0].message}</H3></Row>
+                      <Column size="8" alignSelf="center" >
+                        <Paragraph align="center" fontSize="14px" color={Colors.gray}>{props.lang === "es" ? locInfo.left_section.header.sub_heading.es : locInfo.left_section.header.sub_heading.us}</Paragraph>
+                      </Column>
+                    </Row>
+                  </Column>
+                </Row>
+                <Row height="110px" >
+                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                    <Row height="100%" >
+                      <Column size="12" alignSelf="center" >
+                        <H3 align="center" >{props.lang === "es" ? locInfo.left_section.content.price : locInfo.left_section.content.price}</H3>
+                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{props.lang === "es" ? locInfo.left_section.content.price_info.es : locInfo.left_section.content.price_info.us}</Paragraph>
+                      </Column>
+                    </Row>
+                  </Column>
+                </Row>
+                <Row height="100px" >
+                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                    <Row height="100%" >
+                      <Column size="12" alignSelf="center" align="center">
+                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{props.lang === "es" ? locInfo.left_section.button.button_text.es : locInfo.left_section.button.button_text.us}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
                 </Row>
               </Card>
             </Column>
-
-            <Column size="4" customRespSize respSize="12">
-              <Card shadow width="100%" height="350px" margin="5px 0">
-                <Row height="30%" >
+            {info.hasFinancialsOption === true ? <Column size="4" customRespSize respSize="12">
+              <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
+                <Row height="100px" >
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                    <Row height="100%" align="center">
-                      <Column size="9" alignSelf="center" >
-                        <Row align="center" height="100%" ><H3 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].slug}</H3></Row>
-                        {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row> */}
+                    <Row height="100%" >
+                      <Column size="12" alignSelf="center" >
+                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{props.lang === "es" ? locInfo.center_section.header.heading_one.es : locInfo.center_section.header.heading_one.us}</H4></Row>
+                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{props.lang === "es" ? locInfo.center_section.header.heading_two.es : locInfo.center_section.header.heading_two.us}</H4></Row>
                       </Column>
                     </Row>
                   </Column>
                 </Row>
-                <Row height="70%" >
+                <Row height="50px" >
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
-                      <Column size="9" alignSelf="center" >
-                        <Row align="center" height="100%" ><H3 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].message}</H3></Row>
-                        {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">(OUT OF POCKET)</H4></Row> */}
+                      <Column size="8" alignSelf="center" >
+                        <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
+                      </Column>
+                    </Row>
+                  </Column>
+                </Row>
+                <Row height="50px" >
+                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                    <Row height="100%" >
+                      <Column size="12" alignSelf="center" >
+                        {/* <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3> */}
+                        {/* <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep)}</Paragraph> */}
+                      </Column>
+                    </Row>
+                  </Column>
+                </Row>
+                <Row height="80px" >
+                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                    <Row height="100%" align="center">
+                      <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
+                        {steps.map((label, index) => (
+                          <Step key={label}>
+                            <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
+                              <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+                            </StepButton>
+                          </Step>
+                        ))}
+                      </Stepper>
+                    </Row>
+                    <Row align="center" height="40px">
+                      {/* <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography> */}
+                    </Row>
+                  </Column>
+                </Row>
+                <Row height="120px" >
+                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                    <Row height="100%" >
+                      <Column size="12" alignSelf="center" align="center">
+                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{props.lang === "es" ? locInfo.center_section.button.button_text.es : locInfo.center_section.button.button_text.us}</Button></Link>
+                      </Column>
+                    </Row>
+                  </Column>
+                </Row>
+              </Card>
+            </Column>
+              : null}
+            <Column size="4" customRespSize respSize="12">
+              <Card shadow width="100%" height="350px" margin="5px 0">
+                <Row height="100px" >
+                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                    <Row height="100%" >
+                      <Column size="12" alignSelf="center" >
+                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.right_section.header.heading_one.es : locInfo.right_section.header.heading_one.us}</H4></Row>
+                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.right_section.header.heading_two.es : locInfo.right_section.header.heading_two.us}</H4></Row>
+                      </Column>
+                    </Row>
+                  </Column>
+                </Row>
+                <Row height="40px" >
+                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                    <Row height="100%" align="center">
+                      <Column size="8" alignSelf="center" >
+                        <Paragraph align="center" fontSize="13px" color={Colors.gray}>{props.lang === "es" ? locInfo.right_section.header.sub_heading.es : locInfo.right_section.header.sub_heading.us}</Paragraph>
+                      </Column>
+                    </Row>
+                  </Column>
+                </Row>
+                <Row height="110px" >
+                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                    <Row height="100%" >
+                      <Column size="12" alignSelf="center" >
+                        <H3 align="center" >{locInfo.right_section.content.price}</H3>
+                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{props.lang === "es" ? locInfo.right_section.content.price_info.es : locInfo.right_section.content.price_info.us}</Paragraph>
+                      </Column>
+                    </Row>
+                  </Column>
+                </Row>
+                <Row height="100px" >
+                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                    <Row height="100%" >
+                      <Column size="12" alignSelf="center" align="center">
+                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{props.lang === "es" ? locInfo.right_section.button.button_text.es : locInfo.right_section.button.button_text.us}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
@@ -446,330 +596,7 @@ export default () => {
               </Card>
             </Column>
           </Row>
-          : session.location === "Maracaibo" ?
-            < Row align="center">
-              <Column size="4" customRespSize respSize="12">
-                <Card shadow width="100%" height="350px" margin="5px 0">
-                  <Row height="100px" >
-                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                      <Row height="100%" >
-                        <Column size="12" alignSelf="center" >
-                          <Row align="center" height="100%" ><H4 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].slug}</H4></Row>
-                          <Row align="center" height="100%" ><H4 fontSize="22px" align="center"></H4></Row>
-                        </Column>
-                      </Row>
-                    </Column>
-                  </Row>
-                  <Row height="40px" >
-                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                      <Row height="100%" align="center">
-                        <Column size="8" alignSelf="center" >
-                          <Paragraph align="center" fontSize="14px" color={Colors.gray}></Paragraph>
-                        </Column>
-                      </Row>
-                    </Column>
-                  </Row>
-                  <Row height="110px" >
-                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                      <Row height="100%" >
-                        <Column size="12" alignSelf="center" >
-                          <H3 align="center" >{currentCityInfo[0].node.prices.part_time[0].message}</H3>
-                          <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}></Paragraph>
-                        </Column>
-                      </Row>
-                    </Column>
-                  </Row>
-                  <Row height="100px" >
-                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                      <Row height="100%" >
-                        <Column size="12" alignSelf="center" align="center">
-                          <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                        </Column>
-                      </Row>
-                    </Column>
-                  </Row>
-                </Card>
-              </Column>
-
-              <Column size="4" customRespSize respSize="12">
-                <Card shadow width="100%" height="350px" margin="5px 0">
-                  <Row height="100px" >
-                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                      <Row height="100%" >
-                        <Column size="12" alignSelf="center" >
-                          <Row align="center" height="100%" ><H4 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.full_time[0].slug}</H4></Row>
-                          <Row align="center" height="100%" ><H4 fontSize="22px" align="center"></H4></Row>
-                        </Column>
-                      </Row>
-                    </Column>
-                  </Row>
-                  <Row height="40px" >
-                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                      <Row height="100%" align="center">
-                        <Column size="8" alignSelf="center" >
-                          <Paragraph align="center" fontSize="13px" color={Colors.gray}></Paragraph>
-                        </Column>
-                      </Row>
-                    </Column>
-                  </Row>
-                  <Row height="110px" >
-                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                      <Row height="100%" >
-                        <Column size="12" alignSelf="center" >
-                          <H3 align="center" >{currentCityInfo[0].node.prices.part_time[0].message}</H3>
-                          <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}></Paragraph>
-                        </Column>
-                      </Row>
-                    </Column>
-                  </Row>
-                  <Row height="100px" >
-                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                      <Row height="100%" >
-                        <Column size="12" alignSelf="center" align="center">
-                          <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                        </Column>
-                      </Row>
-                    </Column>
-                  </Row>
-                </Card>
-              </Column>
-            </Row>
-            : session.location === "Santiago de Chile" ?
-              <Row align="center">
-                <Column size="4" customRespSize respSize="12">
-                  <Card shadow width="100%" height="350px" margin="5px 0">
-                    <Row height="100px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
-                            <Row align="center" height="100%" ><H4 uppercase color={Colors.yellow} fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].slug}</H4></Row>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="40px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" align="center">
-                          <Column size="8" alignSelf="center" >
-                            <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best pricing in town.</Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="110px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <H3 align="center" >{currentCityInfo[0].node.prices.part_time[0].upfront}</H3>
-                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="100px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" align="center">
-                            <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                  </Card>
-                </Column>
-                <Column size="4" customRespSize respSize="12">
-                  <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
-                    <Row height="100px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>EXTENDED</H4></Row>
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>PAYMENT PLAN</H4></Row>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="50px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" align="center">
-                          <Column size="8" alignSelf="center" >
-                            <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="50px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>
-                            <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep)}</Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="80px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" align="center">
-                          <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
-                            {steps.map((label, index) => (
-                              <Step key={label}>
-                                <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
-                                  <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
-                                </StepButton>
-                              </Step>
-                            ))}
-                          </Stepper>
-                        </Row>
-                        <Row align="center" height="40px">
-                          <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="120px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" align="center">
-                            <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                  </Card>
-                </Column>
-                <Column size="4" customRespSize respSize="12">
-                  <Card shadow width="100%" height="350px" margin="5px 0">
-                    <Row height="100px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center">PAY UPFRONT</H4></Row>
-                            <Row align="center" height="100%" ><H4 uppercase color={Colors.yellow} fontSize="22px" align="center">{currentCityInfo[0].node.prices.full_time[0].slug}</H4></Row>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="40px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" align="center">
-                          <Column size="8" alignSelf="center" >
-                            <Paragraph align="center" fontSize="14px" color={Colors.gray}>and enjoy the best price in town.</Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="110px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <H3 align="center" >{currentCityInfo[0].node.prices.full_time[0].upfront}</H3>
-                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>single payment</Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="100px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" align="center">
-                            <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                  </Card>
-                </Column>
-              </Row>
-              : session.location === "Madrid" &&
-              <Row align="center">
-                <Column size="4" customRespSize respSize="12">
-                  <Card shadow width="100%" height="350px" margin="5px 0">
-                    <Row height="100px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <Row align="center" height="100%" ><H4 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.part_time[0].slug}</H4></Row>
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center"></H4></Row>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="40px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" align="center">
-                          <Column size="8" alignSelf="center" >
-                            <Paragraph align="center" fontSize="14px" color={Colors.gray}></Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="110px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <H3 align="center" >{currentCityInfo[0].node.prices.part_time[0].upfront}</H3>
-                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}></Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="100px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" align="center">
-                            <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                  </Card>
-                </Column>
-
-                <Column size="4" customRespSize respSize="12">
-                  <Card shadow width="100%" height="350px" margin="5px 0">
-                    <Row height="100px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <Row align="center" height="100%" ><H4 uppercase fontSize="22px" align="center">{currentCityInfo[0].node.prices.full_time[0].slug}</H4></Row>
-                            <Row align="center" height="100%" ><H4 fontSize="22px" align="center"></H4></Row>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="40px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" align="center">
-                          <Column size="8" alignSelf="center" >
-                            <Paragraph align="center" fontSize="13px" color={Colors.gray}></Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="110px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" >
-                            <H3 align="center" >{currentCityInfo[0].node.prices.full_time[0].upfront}</H3>
-                            <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}></Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                    <Row height="100px" >
-                      <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                        <Row height="100%" >
-                          <Column size="12" alignSelf="center" align="center">
-                            <Link to="/apply"><Button padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">APPLY NOW</Button></Link>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                  </Card>
-                </Column>
-              </Row>
-      }
+        </>}
     </>
   )
 }
@@ -929,5 +756,5 @@ function getSteps (location) {
   if (location === "Santiago de Chile") {return ['6 mo', '12 mo'];}
   if (location === "Caracas" || location === "Maracaibo") {return null;}
   if (location === "Madrid") {return [];}
+  if (location === null) {return [];}
 }
-
