@@ -5,7 +5,7 @@ const {createFilePath} = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions;
-    const types = ['PageYaml', 'CourseYaml', 'JobsYaml'];
+    const types = ['PageYaml', 'CourseYaml'];
     if (types.includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});
@@ -27,7 +27,6 @@ exports.createPages = async (params) =>
     await createBlog(params) &&
     await createPagesfromYml(params) &&
     await createEntityPagesfromYml('Course', params) &&
-    // await createEntityPagesfromYml('Jobs', params) &&
     await addAdditionalRedirects(params) &&
     true;
 
@@ -135,7 +134,6 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
 
     return true;
 };
-
 
 const createPagesfromYml = async ({graphql, actions}) => {
     const {createPage, createRedirect} = actions;

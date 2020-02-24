@@ -227,12 +227,12 @@ export const Title = props => {
               <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
               <Row align="center">
                 {props.primary
-                  ? <Column size={props.customParagraphSize}>
+                  ? <Column size={props.customParagraphSize} customRespSize respSize="10">
                     <Row align="center">
                       <Paragraph primary margin="10px 0" align="center">{props.paragraph}</Paragraph>
                     </Row>
                   </Column>
-                  : <Paragraph>{props.paragraph}</Paragraph>
+                  : <Column size="12"><Paragraph>{props.paragraph}</Paragraph></Column>
                 }
               </Row>
             </Column>

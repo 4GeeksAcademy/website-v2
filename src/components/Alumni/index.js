@@ -47,6 +47,7 @@ const Alumni = props => {
                         primary
                         size="8"
                         paragraph={alumni.header.sub_heading}
+                        customParagraphSize="8"
                     />
                     <Divider height="50px" />
                 </>}
@@ -61,7 +62,7 @@ const Alumni = props => {
                         {alumni != null &&
                             alumni.alumni.map((item, index) => {
                                 return (
-                                    <Card shadow borders="1.25rem" height="500px">
+                                    <Card key={index} shadow borders="1.25rem" height="500px">
                                         <Row
                                             height="100%"
                                             marginLeft="0"

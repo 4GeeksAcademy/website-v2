@@ -67,6 +67,7 @@ const WhoIsHiring = props => {
             primary
             size="8"
             paragraph={partners.partners.sub_heading}
+            customParagraphSize="8"
           />
           <Divider height="50px" />
           <Row >

@@ -114,7 +114,7 @@ const Why = (props) => {
             </Wrapper>
             <Divider height="100px" />
             <Wrapper style="default">
-                <Mentors up="200px" />
+                <Mentors />
             </Wrapper>
             <Divider height="150px" />
             <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
