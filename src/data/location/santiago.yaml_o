@@ -1,0 +1,224 @@
+meta_info:
+  slug: "santiago-chile"
+  title: null
+  description: null
+  image: null
+  keywords: none
+  redirects: []
+
+city: "Santiago de Chile"
+name: "Santiago"
+latitude: "-33.408837"
+longitude: "-70.567958"
+address: "Apoquindo 5950 las condes."
+zip_code: ""
+state: ""
+country: "Chile"
+courses:
+  - "Full-Time"
+  - "Part-Time"
+active_campaign_location_slug: ""
+flag_icon: ""
+breathecode_location_slug: ""
+location_map: ""
+location_phone_number: ""
+location_office_image: ""
+location_office_image2: ""
+location_office_image3: ""
+should_know: ""
+value: "Santiago de Chile"
+defaultLanguage: "es"
+hasFinancialsOption: true
+
+## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+## HEADING SECTION
+heading_section:
+  heading:
+    us: "PRICING AND FINANCING"
+    es: "PRECIOS"
+  sub_heading:
+    us: ""
+    es: ""
+
+prices:
+  full_time:
+    ## GENERAL INFO
+    slug: "full-time"
+    duration:
+      us: "9 Weeks"
+      es: "9 semanas"
+
+    ## LEFT BOX SECTION FULL-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one:
+          us: "PAY UPFRONT"
+          es: "PAGA"
+        heading_two:
+          us: "(OUT OF POCKET)"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es: ""
+      content:
+        price: "2.7650.000 CLP"
+        price_info:
+          us: "single payment"
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+
+    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+    center_section:
+      header:
+        heading_one:
+          us: "EXTENDED"
+          es: ""
+        heading_two:
+          us: "PAYMENT PLAN"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es: ""
+      plans:
+        - months: "6"
+          payment: "407.121 CLP"
+          paymentInfo:
+            us: "per month + 410.000 deposit"
+            es: "al mes + 410.000 depósito"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message:
+            us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+        - months: "12"
+          payment: "210.641 CLP"
+          paymentInfo:
+            us: "per month + 410.000 deposit"
+            es: "al mes + 410.000 depósito"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message:
+            us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one:
+          us: ""
+          es: ""
+        heading_two:
+          us: ""
+          es: ""
+        sub_heading:
+          us: ""
+          es: ""
+      content:
+        price: ""
+        price_info:
+          us: ""
+          es: ""
+      button:
+        button_text:
+          us: ""
+          es: ""
+  ## *****************
+  ## PART-TIME SECTION
+  ## *****************
+  part_time:
+    slug: "part-time"
+    duration:
+      us: "16 Weeks"
+      es: "16 semanas"
+
+    ## LEFT BOX SECTION PART-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one:
+          us: "PAY UPFRONT"
+          es: ""
+        heading_two:
+          us: "(OUT OF POCKET)"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es:
+      content:
+        price: "2.415.000 CLP"
+        price_info:
+          us: "single payment"
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+
+    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+    center_section:
+      header:
+        heading_one:
+          us: "EXTENDED"
+          es: ""
+        heading_two:
+          us: "PAYMENT PLAN"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es: ""
+      plans:
+        - months: "6 mo"
+          payment: "356.231 CLP"
+          paymentInfo:
+            us: "per month + 362.250 deposit"
+            es: "al mes + 362.250 depósito"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message:
+            us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: ""
+        - months: "12 mo"
+          payment: "184.311 CLP"
+          paymentInfo:
+            us: "per month + 362.250 deposit"
+            es: "al mes + 362.250 depósito"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message:
+            us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: ""
+
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one:
+          us: ""
+          es: ""
+        heading_two:
+          us: ""
+          es: ""
+        sub_heading:
+          us: ""
+          es: ""
+      content:
+        price: ""
+        price_info:
+          us: ""
+          es: ""
+      button:
+        button_text:
+          us: ""
+          es: ""
