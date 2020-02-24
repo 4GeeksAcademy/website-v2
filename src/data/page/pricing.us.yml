@@ -6,24 +6,26 @@ meta_info:
   keywords: []
   redirects: []
 
-tagline: CELEBRATE THE BEST PRICE IN TOWN
-sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
-image: "../images/pricing-bg.png"
+## BANNER - HEADER
+banner:
+  tagline: CELEBRATE THE BEST PRICE IN TOWN
+  sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
+  image: "/bg/pricing-bg.png"
 
-## FIRST SECTION AFTER THE JUMBOTRON
+## FIRST SECTION AFTER THE BANNER
 intro:
-  - image: ""
-    content: "Our program was specifically built to efficiently deliver the most current and essential  tech knowledge and skills while remaining affordable."
+  image: "/images/pricing.png"
+  content: "Our program was specifically built to efficiently deliver the most current and essential  tech knowledge and skills while remaining affordable."
 
 ## PAYMENT GUIDE SECTION
 payment_guide:
-  - heading: "PAYMENT GUIDE"
-    sub_heading: "Do you have any questions on financing or our extended payment plans?"
-    button_text: "REVIEW GUIDEBOOK"
-    button_link: ""
+  heading: "PAYMENT GUIDE"
+  sub_heading: "Do you have any questions on financing or our extended payment plans?"
+  button_text: "REVIEW GUIDEBOOK"
+  button_link: ""
 
 ## IMMERSED IN ECOSYSTEM SECTION
-ecosysyem:
-  - heading: "IMMERSED IN MIAMI'S CODING ECOSYSTEM"
-    sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
-    partners_name: "financials" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)
+ecosystem:
+  heading: "IMMERSED IN MIAMI'S CODING ECOSYSTEM"
+  sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
+  partners_name: "financials" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)

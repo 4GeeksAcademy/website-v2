@@ -3,18 +3,21 @@ import Layout from '../global/Layout';
 import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
 import {Title, H5} from '../components/Heading'
 import {Button, Colors, RoundImage} from '../components/Styling'
+import Credentials from '../components/Credentials'
 import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring'
 import BaseRender from './_baseRender'
 
 const Pricing = (props) => {
     const {data, pageContext, yml} = props;
+    console.log("yml", yml)
     return (
         <>
+            {/* HEADER SECTION */}
             <Wrapper
                 style="default"
                 image="yes"
-                url={yml.image}
+                url={yml.banner.image}
                 border="bottom"
                 height="500px"
                 backgroundSize="cover"
@@ -22,20 +25,21 @@ const Pricing = (props) => {
                 <Divider height="100px" />
                 <Title
                     size="5"
-                    title={yml.tagline}
-                    paragraph={yml.sub_heading}
+                    title={yml.banner.tagline}
+                    paragraph={yml.banner.sub_heading}
                     main
                     color={Colors.white}
                     fontSize="46px"
                     textAlign="center"
-
                 />
             </Wrapper>
+            {/* CREDENTIALS SECTION */}
             <Wrapper
                 style="default">
-                {/* <QueryTest up="80" /> */}
+                <Credentials up="80" />
             </Wrapper>
             <Divider height="100px" />
+            {/*  */}
             <Container fluid >
                 <Row>
                     <Column size="1" />
@@ -45,11 +49,11 @@ const Pricing = (props) => {
                             <Column size="10">
                                 <Row>
                                     <Column size="5" height="300px">
-                                        <RoundImage url="../pricing.png" height="400px" bsize="contain" />
+                                        <RoundImage url={yml.intro.image} height="400px" bsize="contain" />
                                     </Column>
                                     <Column size="4">
                                         <Divider height="100px" />
-                                        <H5 uppercase align="left" fontSize="20px" fontHeight="30px">Our program was specifically built to efficiently deliver the most current and essential  tech knowledge and skills while remaining affordable. </H5>
+                                        <H5 uppercase align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
                                     </Column>
                                 </Row>
                             </Column>
@@ -66,39 +70,33 @@ const Pricing = (props) => {
                 height="430px"
             >
                 <Divider height="100px" />
-
-                {/* <PricesAndPayment /> */}
+                <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
             </Wrapper>
-            <Divider height="230px" />
+            <Divider height="260px" />
             <Wrapper
                 style="custom"
                 full
             >
                 <Title
                     size="10"
-                    title="PAYMENT GUIDE"
-                    paragraph="Do you have any questions on financing or our extended payment plans?"
+                    title={yml.payment_guide.heading}
+                    paragraph={yml.payment_guide.sub_heading}
                     primary
                 />
                 <Divider height="30px" />
                 <Row align="center">
-                    <Button outline color={Colors.blue}>REVIEW GUIDEBOOK</Button>
+                    <Button outline width="300px" color={Colors.blue}>{yml.payment_guide.button_text}</Button>
                 </Row>
-                <Divider height="50px" />
+                <Divider height="100px" />
             </Wrapper>
             <Wrapper
                 style="default"
                 image="no"
                 color={Colors.lightGray}
                 border="top"
-            ><Title
-                    size="10"
-                    title="IMMERSED IN MIAMI'S CODING ECOSYSTEM"
-                    paragraph="We actively organize and/or participate in the biggest coding initiatives."
-                    primary
-                />
+            >
                 <Divider height="20px" />
-                {/* <WhoIsHiring source="financials" /> */}
+                <WhoIsHiring source={yml.ecosystem.partners_name} />
                 <Divider height="150px" />
             </Wrapper>
         </ >
@@ -109,14 +107,31 @@ export const query = graphql`
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            tagline
-            image
-            sub_heading
             meta_info{
                 title
                 description
                 image
                 keywords
+            }
+            banner{
+                tagline
+                image
+                sub_heading
+            }
+            intro{
+                image
+                content
+            }
+            payment_guide{
+                heading
+                sub_heading
+                button_text
+                button_link
+            }
+            ecosystem{
+                heading
+                sub_heading
+                partners_name
             }
         }
       }

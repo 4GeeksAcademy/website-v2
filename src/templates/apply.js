@@ -10,8 +10,8 @@ import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
-import {  apply } from "../actions";
-import { addContact } from '../../api/_utils';
+import {apply} from "../actions";
+import {addContact} from '../../api/_utils';
 
 const Input = styled.input`
     background-color:${Colors.lightGray};
@@ -48,7 +48,7 @@ const Apply = (props) => {
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     };
-    const [ formData, setVal ] = useState({
+    const [formData, setVal] = useState({
         first_name: '',
         last_name: '',
         phone: '',
@@ -106,10 +106,10 @@ const Apply = (props) => {
                                 height="100%"
                                 marginLeft="0"
                                 marginRight="0"
-                                customRespSize
+
 
                             >
-                                <Column size="8" alignSelf="center" height="100%" image="no" border="bottom">
+                                <Column size="8" customRespSize respSize="8" alignSelf="center" height="100%" image="no" border="bottom">
                                     <Row align="center" height="100%">
                                         <Column size="11" height="100%">
                                             <Divider height="50px" />
@@ -117,28 +117,28 @@ const Apply = (props) => {
                                                 <H3>TELL US ABOUT YOU</H3>
                                             </Row>
                                             <Row height="50px">
-                                                <Input 
-                                                    type="text" className="form-control" placeholder="First name *" 
-                                                    onChange={(e) => setVal({ ...formData, first_name: e.target.value })} 
+                                                <Input
+                                                    type="text" className="form-control" placeholder="First name *"
+                                                    onChange={(e) => setVal({...formData, first_name: e.target.value})}
                                                     value={formData.firstName}
                                                 />
                                             </Row>
                                             <Row height="50px">
-                                                <Input type="text" className="form-control" placeholder="Last Name *" 
-                                                    onChange={(e) => setVal({ ...formData, last_name: e.target.value })} 
+                                                <Input type="text" className="form-control" placeholder="Last Name *"
+                                                    onChange={(e) => setVal({...formData, last_name: e.target.value})}
                                                     value={formData.lastName}
                                                 />
                                             </Row>
                                             <Row height="50px">
-                                                <Input type="email" className="form-control" placeholder="Email *" 
-                                                onChange={(e) => setVal({ ...formData, email: e.target.value })} 
-                                                value={formData.email}
-                                            />
+                                                <Input type="email" className="form-control" placeholder="Email *"
+                                                    onChange={(e) => setVal({...formData, email: e.target.value})}
+                                                    value={formData.email}
+                                                />
                                             </Row>
                                             <Row height="50px">
-                                                <Input 
-                                                    type="number" className="form-control" placeholder="Phone *" 
-                                                    onChange={(e) => setVal({ ...formData, phone: e.target.value })} 
+                                                <Input
+                                                    type="number" className="form-control" placeholder="Phone *"
+                                                    onChange={(e) => setVal({...formData, phone: e.target.value})}
                                                     value={formData.phone}
                                                 />
                                             </Row>
@@ -161,8 +161,8 @@ const Apply = (props) => {
                                                 <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>If you were referred by any current or past student, use your referral code for extra credit or discount.</Paragraph>
                                             </Row>
                                             <Row >
-                                                <Button 
-                                                    move="up" up="15px" color={Colors.blue} textColor={Colors.white} 
+                                                <Button
+                                                    move="up" up="15px" color={Colors.blue} textColor={Colors.white}
                                                     margin="2rem 0" padding=".45rem 3rem"
                                                     onClick={() => apply(formData)
                                                         .then(() => {
@@ -211,7 +211,7 @@ const Apply = (props) => {
                     </Column>
                 </Row>
             </Wrapper>
-            <Divider height="100px" />
+            <Divider height="600px" />
         </>
     )
 };

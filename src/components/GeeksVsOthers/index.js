@@ -32,6 +32,7 @@ const GeeksVsOthers = props => {
         <>
           <Title
             title="WHAT MAKES THIS PROGRAM STAND OUT?"
+            paragraph="View comparison table >"
             primary
             size="8"
           />
@@ -62,7 +63,7 @@ const GeeksVsOthers = props => {
                   {index == geeks.info.length - 1
                     ?
                     <Row
-                      key={index}
+                      key={item.slug}
                       height="80px"
                       marginLeft="0"
                       marginRight="0"
@@ -92,7 +93,7 @@ const GeeksVsOthers = props => {
                     </Row>
                     :
                     <Row
-                      key={index}
+                      key={item.slug}
                       height="80px"
                       marginLeft="0" marginRight="0"
                       customRespSize

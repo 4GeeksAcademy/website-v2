@@ -10,21 +10,21 @@ tagline: "Coding Introduction Course - 4Geeks Academy"
 
 ## PROGRAM DETAILS
 details:
-  - heading: PROGRAM DETAILS
-    sub_heading: "Coding Introduction"
-    details_modules:
-      - module_name: "Your first website"
-        title: "Your First Website"
-        description: "Start coding right away. Use HTML5 & CSS3 to build a couple of small websites including an Instagram simulation. Understand the workflow of coding websites, learn best practices and master the most important Layout, CSS and HTML skills."
-        projects: ""
-        slug: "tour-first-website"
-        duration: "1 wk"
-      - module_name: "Learn to code"
-        title: "Learn To Code"
-        description: "Think like a computer: Control the flow of your code, create algorithms, loop, use conditionals, and use/mix JavaScript with both HTML5 & CSS3 to launch your first interactive website."
-        projects: "Small interactive websites and games."
-        slug: "learn-to-code"
-        duration: "1 wk"
+  heading: PROGRAM DETAILS
+  sub_heading: "Coding Introduction"
+  details_modules:
+    - module_name: "Your first website"
+      title: "Your First Website"
+      description: "Start coding right away. Use HTML5 & CSS3 to build a couple of small websites including an Instagram simulation. Understand the workflow of coding websites, learn best practices and master the most important Layout, CSS and HTML skills."
+      projects: ""
+      slug: "tour-first-website"
+      duration: "1 wk"
+    - module_name: "Learn to code"
+      title: "Learn To Code"
+      description: "Think like a computer: Control the flow of your code, create algorithms, loop, use conditionals, and use/mix JavaScript with both HTML5 & CSS3 to launch your first interactive website."
+      projects: "Small interactive websites and games."
+      slug: "learn-to-code"
+      duration: "1 wk"
 
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:

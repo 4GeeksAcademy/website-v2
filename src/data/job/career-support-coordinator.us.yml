@@ -1,10 +1,14 @@
 meta_info:
     slug: career-support-coordinator
-    title: null
-    description: null
-    image: null
-    keywords: none
-    redirects: []
+    title: ""
+    description: ""
+    image: ""
+    keywords: ""
+    redirects: ["/career"]
+
+seo_title: "4Geeks Academy Miami"
+tagline: "4GEEKS ACADEMY IN MIAMI"
+sub_heading: ""
 
 ## BANNER INFO
 banner_heading: "Career Support Coordinator"

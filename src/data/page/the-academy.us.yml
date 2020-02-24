@@ -6,23 +6,35 @@ meta_info:
   keywords: []
   redirects: []
 
-tagline: ENABLING FUTURE AND CURRENT SOFTWARE BUILDERS TO ADAPT TO THE NEEDS OF THE REAL WORLD
-image: ""
+## BANNER - HEADER
+banner:
+  tagline: ENABLING FUTURE AND CURRENT SOFTWARE BUILDERS TO ADAPT TO THE NEEDS OF THE REAL WORLD
+  sub_heading: ""
+  image: "/bg/the-academy-bg.png"
 
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:
-  - heading: OUR FOUR CORNERSTONES
-    sub_heading: ""
-    cornerstones_list:
-      - title: FLIPPED CLASSROOM
-        content: Theory is delivered trough video, animation, images and infographics. Class time is then used to debate, create and build projects, and mentor over practicalexercises.
-        icon: Book
-      - title: 1:7 MENTOR-STUDENT RATIO
-        content: An intimate setting provides the faculty with the opportunity to adapt to each student's particular pace.
-        icon: Teacher
-      - title: 1:1 MENTORSHIP
-        content: Every student has the opportunity to have regular conversations with a mentor.
-        icon: Users
-      - title: TALENT TREE
-        content: The syllabus maps out 44 skills; students earn points towards each skill in a gamified fashion.
-        icon: Sitemap
+  heading: OUR FOUR CORNERSTONES
+  sub_heading: ""
+  cornerstones_list:
+    - title: FLIPPED CLASSROOM
+      content: Theory is delivered trough video, animation, images and infographics. Class time is then used to debate, create and build projects, and mentor over practicalexercises.
+      icon: Book
+    - title: 1:7 MENTOR-STUDENT RATIO
+      content: An intimate setting provides the faculty with the opportunity to adapt to each student's particular pace.
+      icon: Teacher
+    - title: 1:1 MENTORSHIP
+      content: Every student has the opportunity to have regular conversations with a mentor.
+      icon: Users
+    - title: TALENT TREE
+      content: The syllabus maps out 44 skills; students earn points towards each skill in a gamified fashion.
+      icon: Sitemap
+
+## OUR STORY SECTION
+story:
+  heading: OUR STORY
+  sub_heading_one: "4Geeks Academy was founded in 2015. What began as an internal project to train new developers has flourished into a full-time passion."
+  sub_heading_two: "Today, 4Geeks is now based in the U.S. As coding has become an essential part of society, the mission of our Coding Bootcamp is to instill a new framework for Coding Education universally."
+  sub_heading_three: "4Geeks Academy now offers locations in 3 cities, with 5 campuses, and over 300 graduates."
+  sub_heading_link: "Learn more about 4Geeks Academy >"
+  image: "/images/our-story.png"

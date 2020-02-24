@@ -10,7 +10,7 @@ import {Carousel} from 'react-responsive-carousel';
 const Locations = props => {
   const data = useStaticQuery(graphql`
       query myQueryLocation{
-          loc:     allLocationsYaml {
+          loc:     allLocationYaml {
             edges {
               node {
                 courses

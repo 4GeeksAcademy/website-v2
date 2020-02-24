@@ -63,7 +63,7 @@ export const H2 = styled.h2`
     }   
     font-family: 'Futura', sans-serif;
     font-weight: 800;
-    letter-spacing: -4px;
+    letter-spacing: -2px;
     text-transform: ${props => props.uppercase && "uppercase"};
     color: ${props => props.color};
 `;
@@ -162,6 +162,18 @@ export const Separator = styled.div`
   margin: .5rem 0px;
   height: 5px;
   width: 50px;
+  @media ${Device.xs}{
+    
+  }
+  @media screen ${Device.sm}{
+ 
+  }
+  @media ${Device.md}{
+  }
+  @media ${Device.lg}{
+  }
+  @media ${Device.xl} {
+  }   
   
   border-bottom: ${props => props.primary
     ? `2px solid ${Colors.yellow} `
@@ -216,7 +228,7 @@ export const Title = props => {
           <>
             <Row align="center">{<H1 color={props.color} fontSize={props.fontSize} align={props.textAlign}>{props.title}</H1>}</Row>
             <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
-            <Row align="center">{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Row>
+            <Row align="center"><Column size="12">{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Column></Row>
           </>
         )
         :
@@ -227,12 +239,12 @@ export const Title = props => {
               <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
               <Row align="center">
                 {props.primary
-                  ? <Column size={props.customParagraphSize}>
+                  ? <Column size={props.customParagraphSize} customRespSize respSize="10">
                     <Row align="center">
                       <Paragraph primary margin="10px 0" align="center">{props.paragraph}</Paragraph>
                     </Row>
                   </Column>
-                  : <Paragraph>{props.paragraph}</Paragraph>
+                  : <Column size="12"><Paragraph>{props.paragraph}</Paragraph></Column>
                 }
               </Row>
             </Column>
