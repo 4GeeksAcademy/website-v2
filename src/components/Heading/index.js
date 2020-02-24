@@ -162,6 +162,18 @@ export const Separator = styled.div`
   margin: .5rem 0px;
   height: 5px;
   width: 50px;
+  @media ${Device.xs}{
+    
+  }
+  @media screen ${Device.sm}{
+ 
+  }
+  @media ${Device.md}{
+  }
+  @media ${Device.lg}{
+  }
+  @media ${Device.xl} {
+  }   
   
   border-bottom: ${props => props.primary
     ? `2px solid ${Colors.yellow} `

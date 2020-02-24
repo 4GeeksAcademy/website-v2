@@ -322,7 +322,7 @@ const Program = ({data, pageContext, yml}) => {
 
       <Divider height="50px" />
       <section className="section" id="section-4"></section>
-      <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
+      {/* <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} /> */}
       <Divider height="100px" />
     </Wrapper>
     {/* <Wrapper
