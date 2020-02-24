@@ -1,10 +1,10 @@
 meta_info:
-    slug: "madrid"
-    title: null
-    description: null
-    image: null
-    keywords: none
-    redirects: []
+  slug: "madrid"
+  title: null
+  description: null
+  image: null
+  keywords: none
+  redirects: []
 
 city: "Madrid"
 name: "Madrid"
@@ -29,58 +29,201 @@ should_know: ""
 value: "Madrid"
 defaultLanguage: "es"
 hasFinancialsOption: false
+
+## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+## HEADING SECTION
+heading_section:
+  heading:
+    us: "PRICING AND FINANCING"
+    es: "PRECIOS"
+  sub_heading:
+    us: ""
+    es: ""
+
+## PRICES SECTION
+## MADRID HAS 3 BOXES:
+## LEFT     BOX => PART-TIME
+## CENTER   BOX => FINANCIAL SLIDER OPTIONS
+## RIGHT    BOX => FULL-TIME
 prices:
-  full-time:
-    - full-time:
-      upfront: "5.999,00€"
-      slug: "full-time"
-      message: ""
-      duration: "9 Weeks"
-      financed:
+  full_time:
+    ## GENERAL INFO
+    slug: "full-time"
+    duration:
+      us: "9 Weeks"
+      es: "9 semanas"
+
+    ## LEFT BOX SECTION FULL-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one:
+          us: "FULL-TIME"
+          es: "PAGA"
+        heading_two:
+          us: "PAY UPFRONT"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es: ""
+      content:
+        price: "5.999,00€"
+        price_info:
+          us: "single payment"
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+
+    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+    center_section:
+      header:
+        heading_one:
+          us: "EXTENDED"
+          es: ""
+        heading_two:
+          us: "PAYMENT PLAN"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es: ""
+      plans:
         - months: "6"
           payment: ""
           paymentInfo:
-            - en: "per month + € deposit"
-              es: "al mes + € depósito"
+            us: "per month"
+            es: "al mes "
           provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
+          logo: "/images/quotanda-logo.png"
           message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+            us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
         - months: "12"
           payment: ""
           paymentInfo:
-            - en: "per month + € deposit"
-              es: "al mes + € depósito"
+            us: "per month"
+            es: "al mes "
           provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
+          logo: "/images/quotanda-logo.png"
           message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
-  part-time:
-    - part-time:
-      upfront: "5.499,00€"
-      slug: "part-time"
-      message: ""
-      duration: "16 Weeks"
-      financed:
-        - months: "6"
-          payment: "€"
+            us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one:
+          us: "PART-TIME"
+          es: ""
+        heading_two:
+          us: "PAY UPFRONT"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es: ""
+      content:
+        price: "5.499,00€"
+        price_info:
+          us: "single payment"
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: ""
+  ## *****************
+  ## PART-TIME SECTION
+  ## *****************
+  part_time:
+    slug: "part-time"
+    duration:
+      us: "16 Weeks"
+      es: "16 semanas"
+
+    ## LEFT BOX SECTION PART-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one:
+          us: "PART-TIME"
+          es: ""
+        heading_two:
+          us: "PAY UPFRONT"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es:
+      content:
+        price: "5.499,00€"
+        price_info:
+          us: "single payment"
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+
+    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+    center_section:
+      header:
+        heading_one:
+          us: "EXTENDED"
+          es: ""
+        heading_two:
+          us: "PAYMENT PLAN"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es: ""
+      plans:
+        - months: "6 mo"
+          payment: ""
           paymentInfo:
-            - en: "per month + € deposit"
-              es: "al mes +  depósito"
+            us: "per month "
+            es: "al mes"
           provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
+          logo: "/images/quotanda-logo.png"
           message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
-        - months: "12"
-          payment: "€"
+            us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: ""
+        - months: "12 mo"
+          payment: ""
           paymentInfo:
-            - en: "per month + € deposit"
-              es: "al mes + € depósito"
+            us: "per month "
+            es: "al mes "
           provider: "Quotanda"
-          logo: "../images/quotanda-logo.png"
+          logo: "/images/quotanda-logo.png"
           message:
-            - en: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-              es: "Gracias a nuestro partnership con Quotanda tenemos el plan de pago mas flexible de la ciudad"
+            us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+            es: ""
+
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one:
+          us: "FULL-TIME"
+          es: ""
+        heading_two:
+          us: "PAY UPFRONT"
+          es: ""
+        sub_heading:
+          us: "and enjoy the best pricing in town"
+          es: ""
+      content:
+        price: "5.999,00€"
+        price_info:
+          us: "single payment"
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: ""

@@ -135,7 +135,7 @@ prices:
             us: "per month + $0 deposit"
             es: "al mes + $0 depósito"
           provider: "Climb"
-          logo: "/images/climb_logo.png"
+          logo: "/images/climb-logo.png"
           message:
             us: "Thanks to our partnership with Climb we have managed to create the most flexible placement plan in town"
             es: "Gracias a nuestro partnership con Climb tenemos el plan de pago mas flexible de la ciudad"
@@ -266,7 +266,7 @@ prices:
             us: "per month + $0 deposit"
             es: "al mes + $0 depósito"
           provider: "Climb"
-          logo: "/images/climb_logo.png"
+          logo: "/images/climb-logo.png"
           message:
             us: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
             es: ""

@@ -306,30 +306,12 @@ export default (props) => {
       }
   }
     `)
-  // function getLocationInfo (type) {
-  //   let locInfo = null
-  //   let info = null
-  //   let currentCityInfo = null;
-  //   currentCityInfo = data.allLocationsYaml.edges.filter((item) => item.node.city === session.location)
-  //   info = currentCityInfo[0].node
-  //   if (type === "full-time") {
-  //     locInfo = info.prices.full_time
-  //     return locInfo
-  //   }
-  //   if (type === "part-time") {
-  //     locInfo = info.prices.part_time
-  //     return locInfo
-  //   }
 
-
-  //   }
   let currentCityInfo = null;
   let info = null;
   currentCityInfo = data.allLocationsYaml.edges.filter((item) => {return item.node.city === session.location})
   {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
 
-  console.log("####", currentCityInfo)
-  console.log("$$$$", info)
   function getProgramInfo () {
     let program = "";
     {
@@ -355,46 +337,23 @@ export default (props) => {
   let locInfo = null;
   {info != null ? locInfo = getLocationProgramInfo(info, getProgramInfo()) : null}
 
-  console.log("TYPE:", locInfo)
-  // console.log("get:", getLocationProgramInfo(info, getProgramInfo()))
-  // console.log("session$$: ", getLocationProgramInfo(currentCityInfo[0].node, getProgramInfo()))
-  // console.log("currentCityInfo: ", getLocationInfo(getProgramInfo()))
-  // console.log("locations: ", locationsArray)
-  // let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
-  // let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
-  // let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
-  function getStepContent (step) {
-    switch (step) {
-      case 0:
-        return `${data.cred.edges[tempQ].node.description}`
-      case 1:
-        return `${data.cred.edges[tempQ].node.description}`
-      case 2:
-        return `${data.cred.edges[tempQ].node.description}`
-      case 3:
-        return `${data.cred.edges[tempS].node.description}`
-      case 4:
-        return `${data.cred.edges[tempC].node.description}`
-      case 5:
-        return `${data.cred.edges[tempC].node.description}`
-      default:
-        return 'Unknown step';
-    }
-  }
+  let planData = null;
+  {locInfo != null ? planData = locInfo.center_section.plans : null}
+
   function getStepLogo (step) {
     switch (step) {
       case 0:
-        return <img src={data.cred.edges[tempQ].node.logo} height="20px" />;
+        return <img src={planData[0].logo} height="20px" />;
       case 1:
-        return <img src={data.cred.edges[tempQ].node.logo} height="20px" />;
+        return <img src={planData[1].logo} height="20px" />;
       case 2:
-        return <img src={data.cred.edges[tempQ].node.logo} height="20px" />;
+        return <img src={planData[2].logo} height="20px" />;
       case 3:
-        return <img src={data.cred.edges[tempS].node.logo} height="20px" />;
+        return <img src={planData[3].logo} height="20px" />;
       case 4:
-        return <img src={data.cred.edges[tempC].node.logo} height="20px" />;
+        return <img src={planData[4].logo} height="20px" />;
       case 5:
-        return <><img src={data.cred.edges[tempC].node.logo} height="20px" /> <img src={data.cred.edges[tempS].node.logo} height="20px" /></>;
+        return <><img src={planData[5].logo} height="20px" /> <img src={planData[4].logo} height="20px" /></>;
       default:
         return 'Unknown step';
     }
@@ -403,40 +362,41 @@ export default (props) => {
   function getStepContents (step) {
     switch (step) {
       case 0:
-        return `${currentCityInfo}`
+        return `${planData[0].payment}`
       case 1:
-        return `${data.cred.edges[tempQ].node.options[1].payment}`
+        return `${planData[1].payment}`
       case 2:
-        return `${data.cred.edges[tempQ].node.options[2].payment}`
+        return `${planData[2].payment}`
       case 3:
-        return `${data.cred.edges[tempS].node.options[0].payment}`
+        return `${planData[3].payment}`
       case 4:
-        return `${data.cred.edges[tempC].node.options[0].payment}`
+        return `${planData[4].payment}`
       case 5:
-        return `${data.cred.edges[tempC].node.options[1].payment}`
+        return `${planData[5].payment}`
       default:
         return 'Unknown step';
     }
   }
-  function getStepPayments (step) {
+
+  function getStepPayments (step, language) {
     switch (step) {
       case 0:
-        return `${data.cred.edges[tempQ].node.options[0].paymentParagraph}`
+        if (language === 'es') {return `${planData[0].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
       case 1:
-        return `${data.cred.edges[tempQ].node.options[1].paymentParagraph}`
+        if (language === 'es') {return `${planData[1].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
       case 2:
-        return `${data.cred.edges[tempQ].node.options[2].paymentParagraph}`
+        if (language === 'es') {return `${planData[2].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
       case 3:
-        return `${data.cred.edges[tempS].node.options[0].paymentParagraph}`
+        if (language === 'es') {return `${planData[3].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
       case 4:
-        return `${data.cred.edges[tempC].node.options[0].paymentParagraph}`
+        if (language === 'es') {return `${planData[4].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
       case 5:
-        return `${data.cred.edges[tempC].node.options[1].paymentParagraph}`
+        if (language === 'es') {return `${planData[5].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
       default:
         return 'Unknown step';
     }
   }
-  // console.log("data", data.cities.edges[1].node.prices.part_time[0].message)
+
   return (
     <>
       {/* 3 COLUMNS LAYOUT */}
@@ -517,8 +477,8 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        {/* <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3> */}
-                        {/* <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep)}</Paragraph> */}
+                        <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>
+                        <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep, props.lang)}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -537,7 +497,7 @@ export default (props) => {
                       </Stepper>
                     </Row>
                     <Row align="center" height="40px">
-                      {/* <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography> */}
+                      <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
                     </Row>
                   </Column>
                 </Row>

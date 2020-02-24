@@ -1,10 +1,10 @@
 meta_info:
-    slug: "impact-hub"
-    title: null
-    description: null
-    image: null
-    keywords: none
-    redirects: []
+  slug: "impact-hub"
+  title: null
+  description: null
+  image: null
+  keywords: none
+  redirects: []
 
 city: "Caracas"
 name: "Impact Hub"
@@ -29,16 +29,178 @@ should_know: ""
 value: "Caracas"
 defaultLanguage: "es"
 hasFinancialsOption: false
+
+## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+## HEADING SECTION
+heading_section:
+  heading:
+    us: "PRICING AND FINANCING"
+    es: "PRECIOS"
+  sub_heading:
+    us: ""
+    es: ""
+
+## PRICES SECTION
+## CARACAS HAS JUST 2 BOXES:
+## LEFT  BOX => PART-TIME
+## RIGHT BOX => FULL-TIME
+## CARACAS AT THE MOMENT HAS NO FINANCIAL OPTIONS SET
 prices:
-  full-time:
-    - full-time:
-      slug: "full-time"
-      upfront: ""
-      message: "Pay upfront and get a discount or ask for a 2 payment options"
-      duration: "9 Weeks"
-  part-time:
-    - part-time:
-      slug: "part-time"
-      upfront: ""
-      message: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
-      duration: "16 Weeks"
+  full_time:
+    ## GENERAL INFO
+    slug: "full-time"
+    duration:
+      us: "9 Weeks"
+      es: "9 semanas"
+
+    ## LEFT BOX SECTION FULL-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one:
+          us: "FULL-TIME"
+          es: "TIEMPO COMPLETO"
+        heading_two:
+          us: ""
+          es: ""
+        sub_heading:
+          us: ""
+          es: ""
+      content:
+        price: "Pay upfront and get a discount or ask for a 2 payment options"
+        price_info:
+          us: ""
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+
+    center_section:
+      header:
+        heading_one:
+          us: ""
+          es: ""
+        heading_two:
+          us: ""
+          es: ""
+        sub_heading:
+          us: ""
+          es: ""
+      plans:
+        - months: ""
+          payment: ""
+          paymentInfo:
+            us: ""
+            es: ""
+          provider: ""
+          logo: ""
+          message:
+            us: ""
+            es: ""
+      button:
+        button_text:
+          us: ""
+          es: ""
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one:
+          us: "PART-TIME"
+          es: "TIEMPO PARCIAL"
+        heading_two:
+          us: ""
+          es: ""
+        sub_heading:
+          us: ""
+          es: ""
+      content:
+        price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
+        price_info:
+          us: ""
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+  ## *****************
+  ## PART-TIME SECTION
+  ## *****************
+  part_time:
+    slug: "part-time"
+    duration:
+      us: "16 Weeks"
+      es: "16 semanas"
+
+    ## LEFT BOX SECTION PART-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one:
+          us: "FULL-TIME"
+          es: "TIEMPO COMPLETO"
+        heading_two:
+          us: ""
+          es: ""
+        sub_heading:
+          us: ""
+          es: ""
+      content:
+        price: "Pay upfront and get a discount or ask for a 2 payment options"
+        price_info:
+          us: ""
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
+
+    center_section:
+      header:
+        heading_one:
+          us: ""
+          es: ""
+        heading_two:
+          us: ""
+          es: ""
+        sub_heading:
+          us: ""
+          es: ""
+      plans:
+        - months: ""
+          payment: ""
+          paymentInfo:
+            us: ""
+            es: ""
+          provider: ""
+          logo: ""
+          message:
+            us: ""
+            es: ""
+      button:
+        button_text:
+          us: ""
+          es: ""
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one:
+          us: "PART-TIME"
+          es: "TIEMPO PARCIAL"
+        heading_two:
+          us: ""
+          es: ""
+        sub_heading:
+          us: ""
+          es: ""
+      content:
+        price: "ay upfront and get a discount or ask for a 3 - 4 payment options"
+        price_info:
+          us: ""
+          es: ""
+      button:
+        button_text:
+          us: "APPLY NOW"
+          es: "APLICA ORA"
