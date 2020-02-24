@@ -1,7 +1,7 @@
 {
   "build": {
     "env": {
-      "ACP_KEY": "@acp_key",
+      "ACP_TOKEN": "@acp_token",
       "ACP_HOST": "@acp_host"
     }
   }
