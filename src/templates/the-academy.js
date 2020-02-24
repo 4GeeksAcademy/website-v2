@@ -7,6 +7,7 @@ import Mentors from '../components/Mentors'
 import Events from '../components/Events'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
+import WhoIsHiring from '../components/WhoIsHiring';
 
 const Why = (props) => {
     const {data, pageContext, yml} = props;
@@ -54,7 +55,9 @@ const Why = (props) => {
                 />
                 <Divider height="20px" />
                 <Row height="380px">
-                    <RoundImage url="/images/program-charts.png" height="100%" width="100%" bsize="contain" />
+                    <Column size="12" customRespSize respSize="11">
+                        <RoundImage url="/images/program-charts.png" height="100%" width="100%" bsize="contain" />
+                    </Column>
                 </Row>
             </Wrapper>
             <Divider height="100px" />
@@ -161,8 +164,15 @@ const Why = (props) => {
                 </Row>
             </Wrapper>
             <Divider height="100px" />
-            <Events />
-            <Divider height="100px" />
+            <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
+                <Divider height="100px" />
+                <WhoIsHiring source="partners" />
+                <Divider height="100px" />
+                <WhoIsHiring source="influencers" />
+                <Divider height="100px" />
+            </Wrapper>
+
+
         </>
     )
 };

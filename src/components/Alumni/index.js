@@ -1,19 +1,52 @@
 import React from 'react';
+import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button} from '../Styling';
+import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button, RoundImage} from '../Styling';
 import {Card} from '../Card';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {Carousel} from 'react-responsive-carousel';
 
 const Alumni = props => {
+    const data = useStaticQuery(graphql`
+      query myQueryAlumni{
+        allAlumniYaml {
+            edges {
+              node {
+                header{
+                  tagline
+                  sub_heading
+                  button_text
+                }
+                alumni {
+                  name
+                  last_name
+                  slug
+                  job_title
+                  job_name
+                  image
+                  content
+                  video
+                }
+                button_section{
+                  button_text
+                }
+              }
+            }
+          }
+        }
+      `)
+    let alumni = data.allAlumniYaml.edges[0].node
+    console.log("alumni", alumni)
     return (
         <>
             {props.hasTitle &&
                 <>
                     <Title
-                        title="MEET THE ALUMNI AND PROJECTS"
+                        title={alumni.header.tagline}
                         primary
                         size="8"
-                        paragraph="Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue."
+                        paragraph={alumni.header.sub_heading}
                     />
                     <Divider height="50px" />
                 </>}
@@ -23,44 +56,75 @@ const Alumni = props => {
                     border="bottom"
                     image="no"
                     color={Colors.white}
-                >
-                    <Card shadow borders="1.25rem" height="426px">
-                        <Row
-                            height="100%"
-                            marginLeft="0"
-                            marginRight="0"
-                            customRespSize
+                ><Carousel showIndicators={false} showThumbs={false} showStatus={false}>
 
-                        >
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
-                                <Row align="center" height="100%">
-                                    <Column size="8" height="100%">
-                                        <Divider height="50px" />
-                                        <Row height="100px">
-                                            <H3 primary align="left" >COMING SOON</H3>
-                                            <H3 primary align="left" >IN DEVELOPMENT</H3>
-                                            {/* <H3 primary align="left" >SUPPORT FOR LIFE</H3> */}
-                                        </Row>
-                                        <Row>
-                                            <Separator primary />
-                                        </Row>
-                                        <Row height="20%">
-                                            <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.</Paragraph>
-                                        </Row>
-                                        <Row>
-                                            <Paragraph color={Colors.blue} margin="20px 0 0 0" align="left" fontSize="13px">Ligula Vulputate Sem ></Paragraph>
-                                        </Row>
-                                        <Row >
-                                            <Button move="down" down="75px" outline color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">VIEW ALL PROJECTS</Button>
-                                        </Row>
-                                    </Column>
-                                </Row>
+                        {alumni != null &&
+                            alumni.alumni.map((item, index) => {
+                                return (
+                                    <Card shadow borders="1.25rem" height="500px">
+                                        <Row
+                                            height="100%"
+                                            marginLeft="0"
+                                            marginRight="0"
+                                            customRespSize
 
-                            </Column>
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="yes" url="../images/alumni-bg.png" border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
-                        </Row>
-                    </Card>
+                                        >
+                                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
+                                                <Row align="center" height="100%">
+                                                    <Column size="9" height="100%">
+                                                        <Divider height="10%" />
+                                                        <Row height="10%">
+                                                            <Column size="12">
+                                                                <H3 primary align="left" >{`Meet ${item.name} `}</H3>
+                                                                <Paragraph primary margin="5px 0" align="left" >{`Now ${item.job_title} at ${item.job_name}`}</Paragraph>
+                                                            </Column>
+                                                            {/* <H3 primary align="left" >SUPPORT FOR LIFE</H3> */}
+                                                        </Row>
+                                                        <Row height="10%" align="around">
+                                                            <Column size="12" alignSelf="center">
+                                                                <Separator primary />
+                                                            </Column>
+                                                        </Row>
+                                                        <Row height="30%">
+                                                            <Column size="12">
+                                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{item.content}</Paragraph>
+                                                            </Column>
+                                                        </Row>
+                                                        <Row height="20%">
+                                                            <Column size="12">
+                                                                <Row height="100%" align="around">
+                                                                    <Column size="2" alignSelf="center">
+                                                                        <RoundImage border="100%" width="30px" height="30px" bsize="contain" url="/staff/marcelo.png" />
+                                                                    </Column>
+                                                                    <Column size="10" alignSelf="center">
+                                                                        <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${item.name} ${item.last_name}, ${item.job_title}`}</Paragraph>
+                                                                    </Column>
+                                                                </Row>
+                                                            </Column>
+                                                        </Row>
+
+                                                        <Row height="20%">
+                                                            <Column size="12">
+                                                                <Paragraph color={Colors.blue} align="left" fontSize="14px" lineHeight="20px">{alumni.header.button_text}</Paragraph>
+                                                            </Column>
+                                                        </Row>
+                                                    </Column>
+                                                </Row>
+
+
+                                            </Column>
+                                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="yes" url="/images/alumni-bg.png" border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
+                                        </Row>
+                                    </Card>
+                                )
+                            })
+
+                        }
+                    </Carousel>
                 </Column>
+            </Row>
+            <Row height="10%">
+                <Column size="6"><Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{alumni.button_section.button_text}</Button></Column>
             </Row>
 
         </>)

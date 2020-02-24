@@ -42,73 +42,8 @@ const ProgramSelector = (props) => {
             edges {
               node {
                 id
-                active_campaign_location_slug
-                address
-                meta_info {
-                  keywords
-                  slug
-                }
-                breathecode_location_slug
                 city
-                country
-                courses
-                defaultLanguage
-                flag_icon
-                hasFinancialsOption
-                latitude
-                location_map
-                location_office_image
-                location_office_image2
-                location_office_image3
-                location_phone_number
-                longitude
-                name
-                prices {
-                  part_time {
-                    duration
-                    financed {
-                      logo
-                      message {
-                        en
-                        es
-                      }
-                      months
-                      payment
-                      paymentInfo {
-                        en
-                        es
-                      }
-                      provider
-                    }
-                    message
-                    slug
-                    upfront
-                  }
-                  full_time {
-                    financed {
-                      months
-                      payment
-                      provider
-                      logo
-                      paymentInfo {
-                        en
-                        es
-                      }
-                      message {
-                        en
-                        es
-                      }
-                    }
-                    duration
-                    slug
-                    message
-                    upfront
-                  }
-                }
-                should_know
-                state
-                value
-                zip_code
+                
               }
             }
           }
@@ -116,6 +51,8 @@ const ProgramSelector = (props) => {
       `)
   // const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
   let locArray = data.loc.edges;
+  let weekArray = ["16", "9"]
+  console.log("loc", locArray)
   let link = "";
   {props.week === 16 ? link = "full-time" : link = "part-time"}
   return (
@@ -124,14 +61,18 @@ const ProgramSelector = (props) => {
         <Row align="around">
           <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph fontSize="16px" color={Colors.white} >It takes just </Paragraph></Column>
           <Column size="1" alignSelf="center" align="center" customRespSize respSize="2" >
-            <Card index="1" borders=".25rem" shadow width="100%" padding={toggles === false ? "0px" : "0 0 10px 0"}>
+            <Card index="1" borders=".25rem" shadow width="100%" padding={toggles === false && "0px"}>
               {toggles == true ? null : <Row marginRight="0" marginLeft="0" align="center"><Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} color={Colors.white} textColor={Colors.gray}>{props.week}</Button></Row>}
               {toggles == true
                 ?
                 <>
-                  <Row height="25px" marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" backgroundHover={Colors.blue} align="around">
-                    <Link to={link}><Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{props.week === 16 ? 9 : 16}</Paragraph></Column></Link>
-                  </Row>
+                  {weekArray.map((item, index) => {
+                    return (
+                      <Row key={index} height="25px" marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" backgroundHover={Colors.blue} colorHover={Colors.white} align="around">
+                        <Link to={link}><Column border="custom" customBorderRadius=".25rem" size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column></Link>
+                      </Row>
+                    )
+                  })}
                 </>
                 :
                 null
@@ -140,14 +81,14 @@ const ProgramSelector = (props) => {
           </Column>
           <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph fontSize="16px" color={Colors.white} >weeks in</Paragraph></Column>
           <Column size="3" alignSelf="center" align="center" customRespSize respSize="4">
-            <Card index="1" borders=".25rem" shadow width="100%" padding={toggle === false ? "0px" : "0 0 10px 0"}>
+            <Card index="1" borders=".25rem" shadow width="100%" padding={toggle === false && "0px"}>
               {toggle == true ? null : <Row align="center"><Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>{session.location}</Button></Row>}
               {toggle == true
                 ?
                 <>
                   {locArray.map((item, index) => {
                     return (
-                      <Row height="25px" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.blue} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                      <Row height="25px" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.blue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
                         <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item.node.city}</Paragraph></Column>
                       </Row>
                     )

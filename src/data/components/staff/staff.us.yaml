@@ -9,7 +9,7 @@ staff:
     linkdin: ""
     twitter: ""
     website: ""
-    image: "../alejandro.png"
+    image: "/staff/alejandro.png"
     age: 34
     interests:
       - Soccer
@@ -25,7 +25,7 @@ staff:
     linkdin: ""
     twitter: ""
     website: ""
-    image: "../marcelo.png"
+    image: "/staff/marcelo.png"
     age: 33
     interests:
       - Soccer
@@ -42,7 +42,7 @@ staff:
     linkdin: ""
     twitter: ""
     website: ""
-    image: "../jane.png"
+    image: "/staff/jane.png"
     age: 42
     interests:
       - Soccer
@@ -61,7 +61,7 @@ staff:
     linkdin: ""
     twitter: ""
     website: ""
-    image: "../colby.png"
+    image: "/staff/colby.png"
     age: 33
     interests:
       - Music

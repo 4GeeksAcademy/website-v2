@@ -103,7 +103,7 @@ const Home = (props) => {
             <Wrapper
                 style="default"
             >
-                {/* <GeeksVsOthers hasTitle /> */}
+                <GeeksVsOthers hasTitle />
                 <Divider height="100px" />
                 <Title
                     title="JOIN 4GEEKS"
@@ -195,22 +195,16 @@ const Home = (props) => {
             <Divider height="100px" />
             <Wrapper
                 style="default">
-                <Title
-                    title="WHO IS HIRING OUR STUDENTS"
-                    paragraph="Our hiring partners are growing everyday, and our students have been hired from dozens of companies in the U.S. and worldwide."
-                    primary
-                    customParagraphSize="8"
-                >
-                </Title>
+
                 <Divider height="50px" />
-                {/* <WhoIsHiring source="partners" /> */}
+                <WhoIsHiring source="partners" />
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
                 style="default">
 
                 <Divider height="50px" />
-                {/* <Alumni hasTitle /> */}
+                <Alumni hasTitle />
             </Wrapper>
             <Divider height="100px" />
 

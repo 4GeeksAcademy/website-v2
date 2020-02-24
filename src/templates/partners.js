@@ -10,7 +10,7 @@ import BaseRender from './_baseRender'
 
 const Partners = (props) => {
     const {data, pageContext, yml} = props;
-
+    console.log(yml)
 
     return (
         <>
@@ -43,13 +43,7 @@ const Partners = (props) => {
             <Wrapper
                 style="default"
             >
-                <Title
-                    size="10"
-                    title="SOME OF OUR PARTNERS AND EMPLOYERS"
-                    paragraph="To ensure that our students are getting hired, we work closely with both our hiring partners as well as industry leaders constantly refreshing and optimizing our program and syllabus."
-                    primary
-                    customParagraphSize="8"
-                />
+
                 <Divider height="20px" />
                 <WhoIsHiring source="partners" />
             </Wrapper>
@@ -58,12 +52,8 @@ const Partners = (props) => {
                 style="default"
             >
                 <Divider height="50px" />
-                <Title
-                    title="COMPANIES TRUST US AND HIRE OUR STUDENTS"
-                    paragraph="We actively organize and/or participate in the biggest coding initiatives."
-                    primary
-                />
-                <Divider height="20px" />
+
+
                 <WhoIsHiring source="coding" />
             </Wrapper>
             <Divider height="100px" />
@@ -71,15 +61,11 @@ const Partners = (props) => {
                 style="default"
             >
                 <Divider height="50px" />
-                <Title
-                    title="IN PARTNERSHIP WITH THE CITY'S BIGGEST INFLUENCERS"
-                    paragraph="We actively organize and/or participate in the biggest coding initiatives."
-                    primary
-                />
-                <Divider height="20px" />
+
+
                 <WhoIsHiring source="influencers" />
                 <Row align="center">
-                    <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">BE A HIRING PARTNER</Button>
+                    <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">{yml.button_section.button_text}</Button>
                 </Row>
             </Wrapper>
         </>
@@ -100,6 +86,9 @@ export const query = graphql`
                 description
                 image
                 keywords
+            }
+            button_section{
+                button_text
             }
         }
       }

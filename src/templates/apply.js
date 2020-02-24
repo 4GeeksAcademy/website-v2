@@ -98,10 +98,10 @@ const Apply = (props) => {
                                 height="100%"
                                 marginLeft="0"
                                 marginRight="0"
-                                customRespSize
+
 
                             >
-                                <Column size="8" alignSelf="center" height="100%" image="no" border="bottom">
+                                <Column size="8" customRespSize respSize="8" alignSelf="center" height="100%" image="no" border="bottom">
                                     <Row align="center" height="100%">
                                         <Column size="11" height="100%">
                                             <Divider height="50px" />
@@ -139,7 +139,7 @@ const Apply = (props) => {
                                                 <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>If you were referred by any current or past student, use your referral code for extra credit or discount.</Paragraph>
                                             </Row>
                                             <Row >
-                                                <Button move="up" up="15px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".45rem 3rem">APPLY</Button>
+                                                <Button width="300px" move="up" up="15px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".45rem 3rem">APPLY</Button>
                                             </Row>
                                         </Column>
                                     </Row>
@@ -178,7 +178,7 @@ const Apply = (props) => {
                     </Column>
                 </Row>
             </Wrapper>
-            <Divider height="100px" />
+            <Divider height="600px" />
         </>
     )
 };

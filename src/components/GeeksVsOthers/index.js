@@ -32,6 +32,7 @@ const GeeksVsOthers = props => {
         <>
           <Title
             title="WHAT MAKES THIS PROGRAM STAND OUT?"
+            paragraph="View comparison table >"
             primary
             size="8"
           />

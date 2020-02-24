@@ -70,10 +70,9 @@ const Pricing = (props) => {
                 height="430px"
             >
                 <Divider height="100px" />
-
                 <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
             </Wrapper>
-            <Divider height="230px" />
+            <Divider height="260px" />
             <Wrapper
                 style="custom"
                 full
@@ -88,7 +87,7 @@ const Pricing = (props) => {
                 <Row align="center">
                     <Button outline width="300px" color={Colors.blue}>{yml.payment_guide.button_text}</Button>
                 </Row>
-                <Divider height="50px" />
+                <Divider height="100px" />
             </Wrapper>
             <Wrapper
                 style="default"
