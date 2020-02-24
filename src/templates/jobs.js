@@ -10,6 +10,7 @@ import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
+import JobInfo from '../components/JobInfo'
 
 const Jobs = ({data, pageContext, yml}) => {
   console.log("jo", yml)
@@ -33,7 +34,11 @@ const Jobs = ({data, pageContext, yml}) => {
           textAlign="center"
         />
       </Wrapper>
-      <Divider height="300px" />
+      <Wrapper
+        style="default">
+        <JobInfo />
+      </Wrapper>
+      <Divider height="50px" />
       <Wrapper
         style="default"
         height="400px"
@@ -45,7 +50,7 @@ const Jobs = ({data, pageContext, yml}) => {
           size="8"
           paragraph={yml.about.sub_heading}
         />
-        <Divider height="100px" />
+        <Divider height="50px" />
         <Row>
           <Column
             size="12"
@@ -81,8 +86,9 @@ const Jobs = ({data, pageContext, yml}) => {
           </Column>
         </Row>
       </Wrapper>
-      <Divider height="100px" />
-      <Divider height="100px" />
+
+      <Divider height="250px" />
+
     </>
   )
 };
