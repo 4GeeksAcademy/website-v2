@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const HOST = `${process.env.ACP_HOST}/api/3/`;
+const HOST = process.env.ACP_HOST;
 let HEADERS = {
     'Api-Token': process.env.ACP_TOKEN
 };
@@ -8,6 +8,7 @@ let HEADERS = {
 const acp_constants = {
     soft_leads_list: 8,
     newsletter_list: 3,
+
     utm_url: 15,
     utm_location: 18,
     utm_course: 2,
@@ -51,7 +52,7 @@ const setOptional = (original, data, key) => {
     } 
     return original;
 }
-export const addContact = async (contact) => {
+export const addorUpdateContact = async (contact) => {
 
     validate(contact, ['email', 'tags', 'first_name','url','lang','country_name','gclid', 'utm_location', 'referral_key']);
     mandatory(contact, ['email', 'tags', 'lang', 'utm_location']);
