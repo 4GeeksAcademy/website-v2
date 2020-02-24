@@ -14,3 +14,4 @@ yarn-error.log
 # gatsby files
 .cache/
 public
+.now
