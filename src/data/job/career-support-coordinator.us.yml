@@ -1,0 +1,38 @@
+meta_info:
+    slug: career-support-coordinator
+    title: ""
+    description: ""
+    image: ""
+    keywords: ""
+    redirects: ["/career"]
+
+seo_title: "4Geeks Academy Miami"
+tagline: "4GEEKS ACADEMY IN MIAMI"
+sub_heading: ""
+
+## BANNER INFO
+banner_heading: "Career Support Coordinator"
+banner_sub_heading: ""
+banner_image: ""
+cities:
+    - Miami
+    - Santiago de Chile
+    - Caracas
+button_text: "APPLY NOW"
+## JOB MAIN SECTION INFO
+title: "Human Resources & Recruiting"
+description: "We are revolutionizing the coding education industry be graduating thriving junior software developers 10x faster than the universities, 91% of our graduates have been hired in coding-related positions with at least 30% increase in their salary. We are looking for someone to help use rise those numbers, by engaging with our students and alumni and potential employers.  What kind of person are we looking for?"
+
+content:
+    - label: "responsabilities"
+      list:
+          - "1. "
+          - "2. "
+    - label: "requirements"
+      list:
+          - "1. "
+          - "2. "
+    - label: "benefits"
+      list:
+          - "1. "
+          - "2. "
