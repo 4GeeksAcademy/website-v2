@@ -78,229 +78,10 @@ export default (props) => {
   };
   const data = useStaticQuery(graphql`
     query myQueryTest{
-      allLocationsYaml {
+      allLocationYaml {
         edges {
           node {
-            city
-            defaultLanguage
-            hasFinancialsOption
-            meta_info {
-              slug
-            }
-            prices {
-              full_time {
-                slug
-                duration {
-                  us
-                  es
-                }
-                left_section {
-                  button {
-                    button_text {
-                      us
-                      es
-                    }
-                  }
-                  content {
-                    price
-                    price_info {
-                      us
-                      es
-                    }
-                  }
-                  header {
-                    heading_one {
-                      us
-                      es
-                    }
-                    heading_two {
-                      us
-                      es
-                    }
-                    sub_heading {
-                      us
-                      es
-                    }
-                  }
-                }
-                center_section {
-                  header {
-                    heading_one {
-                      us
-                      es
-                    }
-                    heading_two {
-                      us
-                      es
-                    }
-                    sub_heading {
-                      us
-                      es
-                    }
-                  }
-                  button {
-                    button_text {
-                      us
-                      es
-                    }
-                  }
-                  plans {
-                    message {
-                      us
-                      es
-                    }
-                    paymentInfo {
-                      us
-                      es
-                    }
-                    payment
-                    months
-                    logo
-                    provider
-                  }
-                }
-                right_section {
-                  button {
-                    button_text {
-                      us
-                      es
-                    }
-                  }
-                  content {
-                    price
-                    price_info {
-                      us
-                      es
-                    }
-                  }
-                  header {
-                    heading_one {
-                      us
-                      es
-                    }
-                    heading_two {
-                      us
-                      es
-                    }
-                    sub_heading {
-                      us
-                      es
-                    }
-                  }
-                }
-                
-              }
-              part_time {
-                slug
-                duration {
-                  es
-                  us
-                }
-                left_section {
-                  header {
-                    heading_one {
-                      us
-                      es
-                    }
-                    heading_two {
-                      us
-                      es
-                    }
-                    sub_heading {
-                      us
-                    }
-                  }
-                  content {
-                    price_info {
-                      us
-                      es
-                    }
-                    price
-                  }
-                  button {
-                    button_text {
-                      us
-                      es
-                    }
-                  }
-                }
-                right_section {
-                  header {
-                    heading_one {
-                      us
-                      es
-                    }
-                    heading_two {
-                      us
-                      es
-                    }
-                    sub_heading {
-                      us
-                      es
-                    }
-                  }
-                  content {
-                    price_info {
-                      us
-                      es
-                    }
-                    price
-                  }
-                  button {
-                    button_text {
-                      us
-                      es
-                    }
-                  }
-                }
-                center_section {
-                  header {
-                    heading_one {
-                      us
-                      es
-                    }
-                    heading_two {
-                      us
-                      es
-                    }
-                    sub_heading {
-                      us
-                      es
-                    }
-                  }
-                  button {
-                    button_text {
-                      us
-                      es
-                    }
-                  }
-                  plans {
-                    logo
-                    message {
-                      us
-                      es
-                    }
-                    months
-                    payment
-                    paymentInfo {
-                      us
-                      es
-                    }
-                    provider
-                  }
-                }
-              }
-            }
-            heading_section {
-              heading {
-                es
-                us
-              }
-              sub_heading {
-                es
-                us
-              }
-            }
+            id
           }
         }
       }
@@ -309,7 +90,7 @@ export default (props) => {
 
   let currentCityInfo = null;
   let info = null;
-  currentCityInfo = data.allLocationsYaml.edges.filter((item) => {return item.node.city === session.location})
+  currentCityInfo = data.allLocationYaml.edges.filter((item) => {return item.node.city === session.location})
   {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
 
   function getProgramInfo () {
@@ -468,7 +249,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
                       <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="14px" color={Colors.yellow}>and enjoy the best pricing in town.</Paragraph>
+                        <Paragraph align="center" fontSize="14px" color={Colors.yellow}>{props.lang === "es" ? locInfo.center_section.header.sub_heading.es : locInfo.center_section.header.sub_heading.us}</Paragraph>
                       </Column>
                     </Row>
                   </Column>

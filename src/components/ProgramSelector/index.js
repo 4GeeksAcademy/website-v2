@@ -38,7 +38,7 @@ const ProgramSelector = (props) => {
   const classes = useStyles();
   const data = useStaticQuery(graphql`
       query myQueryProgram{
-          loc: allLocationsYaml {
+          loc: allLocationYaml {
             edges {
               node {
                 id
