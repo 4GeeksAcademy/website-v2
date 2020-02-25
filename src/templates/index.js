@@ -112,7 +112,7 @@ const Home = (props) => {
                     primary
                 />
                 <Divider height="40px" />
-                <Row >
+                <Row>
                     <Column size="6" >
                         <Card padding="20px" shadow height="200px" width="100%" margin="10px 0px">
                             <Row height="100%">

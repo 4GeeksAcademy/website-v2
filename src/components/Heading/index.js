@@ -214,8 +214,8 @@ export const Paragraph = styled.div`
     font-size: ${props => props.fontSize};
   }   
   margin: ${props => props.margin};
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   padding: ${props => props.padding};
   letter-spacing: 0px;
   line-height: ${props => props.lineHeight};
