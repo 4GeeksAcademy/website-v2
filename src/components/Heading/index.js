@@ -159,6 +159,7 @@ export const Span = styled.span`
       color: ${props => props.color};
 `
 export const Separator = styled.div`
+  text-align: ${props => props.align};
   margin: .5rem 0px;
   height: 5px;
   width: 50px;
@@ -213,8 +214,8 @@ export const Paragraph = styled.div`
     font-size: ${props => props.fontSize};
   }   
   margin: ${props => props.margin};
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   padding: ${props => props.padding};
   letter-spacing: 0px;
   line-height: ${props => props.lineHeight};

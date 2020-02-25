@@ -1,11 +1,11 @@
 ---
-path: "/post-one"
+path: "/post-two"
 date: "2018-11-19"
-title: "Pay once you get a Job"
-author: "Marcelo Ricigliano"
+title: "Post Two Example"
+author: "Paolo Lucano"
 avatar: "/staff/marcelo.png"
-read_time: "10 min"
-image: "/images/why3.png"
+read_time: "2 min"
+image: "/images/why1.png"
 ---
 
 ### This is a test for the blog section

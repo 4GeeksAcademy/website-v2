@@ -112,7 +112,7 @@ const Location = ({data, pageContext, yml}) => {
                                     </Column>
                                 </Row>
                             </Column>
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image="yes" url='/images/our-story.png' border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
+                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image="yes" url={yml.info_box.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
                         </Row>
                     </Card>
                 </Column>
@@ -134,7 +134,7 @@ const Location = ({data, pageContext, yml}) => {
                             customRespSize
                         >
                             <Column size="6" customRespSize respSize="6" paddingLeft="0" alignSelf="center" height="100%" backgroundSize="cover" border="custom" customBorderRadius="1.25rem 0 0 1.25rem" >
-                                <Carousel showIndicators={false} showThumbs={false} showStatus={false}>
+                                <Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
 
                                     {yml.carousel_box.images.map((item, index) => {
                                         console.log(item.path)
@@ -200,6 +200,7 @@ export const query = graphql`
                 phone
                 email
                 contact_heading
+                image
             }
             meta_info{
                 title

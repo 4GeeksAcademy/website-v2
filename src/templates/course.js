@@ -319,10 +319,13 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       style="default"
     >
-
-      <Divider height="50px" />
+      <Title
+        size="10"
+        title={yml.prices.heading}
+        primary
+      />
       <section className="section" id="section-4"></section>
-      {/* <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} /> */}
+      <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
       <Divider height="100px" />
     </Wrapper>
     {/* <Wrapper
@@ -381,6 +384,9 @@ export const query = graphql`
                 duration
                 description
               }
+            }
+            prices{
+              heading
             }
         }
       }

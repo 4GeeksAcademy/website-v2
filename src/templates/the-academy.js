@@ -8,6 +8,7 @@ import Events from '../components/Events'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import WhoIsHiring from '../components/WhoIsHiring';
+import RecentPosts from '../components/RecentPosts'
 
 const Why = (props) => {
     const {data, pageContext, yml} = props;
@@ -110,11 +111,11 @@ const Why = (props) => {
                 </Row>
                 <Divider height="50px" />
                 <Title size="8" title="MEET THE TEAM" primary />
-                <Divider height="150px" />
-            </Wrapper>
+                <Mentors />
+
+                <Divider height="150px" /></Wrapper>
             <Divider height="100px" />
             <Wrapper style="default">
-                <Mentors />
             </Wrapper>
             <Divider height="150px" />
             <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
@@ -164,6 +165,20 @@ const Why = (props) => {
                 </Row>
             </Wrapper>
             <Divider height="100px" />
+            <Wrapper
+                style="default">
+                <Title
+                    primary
+                    title={yml.posts.heading}
+                    paragraph={yml.posts.sub_heading}
+                    customParagraphSize="8"
+                // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+                />
+
+                <Divider height="50px" />
+                <RecentPosts />
+            </Wrapper>
+            <Divider height="100px" />
             <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
                 <Divider height="100px" />
                 <WhoIsHiring source="partners" />
@@ -209,6 +224,10 @@ export const query = graphql`
                 sub_heading_three
                 sub_heading_link
                 image
+            }
+            posts{
+                heading
+                sub_heading
             }
         }
       }

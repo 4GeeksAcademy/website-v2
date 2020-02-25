@@ -69,7 +69,11 @@ const Pricing = (props) => {
                 border="top"
                 height="430px"
             >
-                <Divider height="100px" />
+                <Title
+                    size="10"
+                    title={yml.prices.heading}
+                    primary
+                />
                 <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
             </Wrapper>
             <Divider height="260px" />
@@ -121,6 +125,9 @@ export const query = graphql`
             intro{
                 image
                 content
+            }
+            prices{
+                heading
             }
             payment_guide{
                 heading

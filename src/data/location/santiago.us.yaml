@@ -9,7 +9,7 @@ meta_info:
 seo_title: "4Geeks Academy Santiago deChile"
 tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
 sub_heading: ""
-image: "/images/miami-sunset.jpeg"
+image: "/images/santiago-loc.jpg"
 
 info_box:
   heading: "Find us in Miami"
@@ -17,15 +17,16 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
+  image: "/images/santiago-map.png"
 
 carousel_box:
   heading: "What you should know about this location: "
   content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
-    - path: "/images/miami-sunset.jpeg"
-      alt: "miami-sunset"
-    - path: "/images/loc-miami-one.jpg"
-      alt: "4Geeeks miami location"
+    - path: "/images/santiago-loc.jpg"
+      alt: "Santiago Location Image"
+    - path: "/images/santiago-loc-2.jpg"
+      alt: "Santiago Location Image"
     - path: "/images/loc-miami-two.jpg"
       alt: "4Geeeks miami lab"
 
