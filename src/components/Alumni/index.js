@@ -57,7 +57,7 @@ const Alumni = props => {
                     border="bottom"
                     image="no"
                     color={Colors.white}
-                ><Carousel showIndicators={false} showThumbs={false} showStatus={false}>
+                ><Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
 
                         {alumni != null &&
                             alumni.alumni.map((item, index) => {
