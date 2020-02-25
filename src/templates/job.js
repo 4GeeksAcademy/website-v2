@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
+import {Button, Colors, Check, ArrowLeft, RoundImage} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
@@ -19,8 +19,25 @@ import ProgramSelector from '../components/ProgramSelector'
 import {BrowserView} from "react-device-detect";
 import {Link} from 'gatsby';
 
+const Input = styled.input`
+    background-color:${Colors.lightGray};
+    height: 40px;
+    width: 100%;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-color: ${Colors.black};
+`
 const Job = ({data, pageContext, yml}) => {
+    const [form, setForm] = useState(false);
+    const [buttonToggle, setButtonToggle] = useState();
     console.log(yml)
+    const [formData, setVal] = useState({
+        first_name: '',
+        last_name: '',
+        phone: '',
+        email: ''
+    });
     return (<>
         <Wrapper
             style="default"
@@ -102,10 +119,76 @@ const Job = ({data, pageContext, yml}) => {
                 }
                 <Row align="center">
                     <Column size="12" align="center">
-                        <Link to="/apply"><Button width="200px" color={Colors.red} textColor={Colors.white}>APPLY NOW</Button></Link>
+                        {
+                            form === false
+                                ? <Button onClick={() => {setForm(!form), setButtonToggle(!buttonToggle)}} width="200px" color={Colors.red} textColor={Colors.white}>APPLY NOW</Button>
+                                : null
+                        }
                     </Column>
                 </Row>
+                {form === true
+                    ?
+
+                    <Row align="center" height="100%">
+                        <Column size="8" height="100%">
+                            <Divider height="50px" />
+                            <Row height="50px">
+                                <H3>APPLY FOR THIS JOB</H3>
+                            </Row>
+                            <Row height="50px">
+                                <Input
+                                    type="text" className="form-control" placeholder="First name *"
+                                    onChange={(e) => setVal({...formData, first_name: e.target.value})}
+                                    value={formData.firstName}
+                                />
+                            </Row>
+                            <Row height="50px">
+                                <Input type="text" className="form-control" placeholder="Last Name *"
+                                    onChange={(e) => setVal({...formData, last_name: e.target.value})}
+                                    value={formData.lastName}
+                                />
+                            </Row>
+                            <Row height="50px">
+                                <Input type="email" className="form-control" placeholder="Email *"
+                                    onChange={(e) => setVal({...formData, email: e.target.value})}
+                                    value={formData.email}
+                                />
+                            </Row>
+                            <Row height="50px">
+                                <Input
+                                    type="number" className="form-control" placeholder="Phone *"
+                                    onChange={(e) => setVal({...formData, phone: e.target.value})}
+                                    value={formData.phone}
+                                />
+                            </Row>
+                            <Row align="center">
+                                <Button
+                                    move="up" up="15px" color={Colors.blue} width="300px" textColor={Colors.white}
+                                    margin="2rem 0" padding=".45rem 3rem"
+                                    onClick={() => apply(formData)
+                                        .then(() => {
+                                            console.log("Thank you");
+                                        })
+                                        .catch(() => {
+                                            console.log("error");
+                                        })
+                                    }
+                                >APPLY FOR THIS JOB</Button>
+                            </Row>
+                        </Column>
+                    </Row>
+
+                    :
+                    null}
             </Card>
+        </Wrapper>
+        <Wrapper style="default">
+
+            <Row align="around" height="100%" >
+                <Column size="12" alignSelf="center" >
+                    <Link to="/jobs"><ArrowLeft width="32" color={Colors.blue} fill={Colors.blue} /></Link>
+                </Column>
+            </Row>
         </Wrapper>
         <Divider height="100px" />
     </>
