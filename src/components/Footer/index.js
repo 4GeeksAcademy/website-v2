@@ -31,11 +31,11 @@ const Footer = () => (
                         <Column size="3" margin="0 0 20px 0">
                             <Row ><H5 fontSize="16px" color={Colors.gray}>LOCATIONS</H5></Row>
                             <Row marginBottom="10px"><Separator primary></Separator></Row>
-                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Santiago de Chile</Paragraph></Row>
-                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Miami</Paragraph></Row>
-                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Caracas</Paragraph></Row>
-                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Maracaibo</Paragraph></Row>
-                            <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Madrid</Paragraph></Row>
+                            <Row marginBottom="5px"><Link to="/location/santiago-chile"><Paragraph fontSize="12px" color={Colors.white}>Santiago de Chile</Paragraph></Link></Row>
+                            <Row marginBottom="5px"><Link to="/location/downtown-miami"><Paragraph fontSize="12px" color={Colors.white}>Miami</Paragraph></Link></Row>
+                            <Row marginBottom="5px"><Link to="/location/impact-hub"><Paragraph fontSize="12px" color={Colors.white}>Caracas</Paragraph></Link></Row>
+                            <Row marginBottom="5px"><Link to="/location/maracaibo"><Paragraph fontSize="12px" color={Colors.white}>Maracaibo</Paragraph></Link></Row>
+                            <Row marginBottom="5px"><Link to="/location/madrid"><Paragraph fontSize="12px" color={Colors.white}>Madrid</Paragraph></Link></Row>
                         </Column>
                         <Column size="3" margin="0 0 20px 0">
                             <Row> <H5 fontSize="16px" color={Colors.gray}>FOLLOW</H5></Row>
