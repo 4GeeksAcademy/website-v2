@@ -17,6 +17,10 @@ intro:
   image: "/images/pricing.png"
   content: "Our program was specifically built to efficiently deliver the most current and essential  tech knowledge and skills while remaining affordable."
 
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRICES AND PAYMENTS"
+
 ## PAYMENT GUIDE SECTION
 payment_guide:
   heading: "PAYMENT GUIDE"
