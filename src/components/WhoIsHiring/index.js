@@ -3,6 +3,7 @@ import {Column, Row, Divider} from '../../components/Sections'
 import {useStaticQuery, graphql} from 'gatsby';
 import {RoundImage, Colors} from '../Styling';
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
+import Link from 'gatsby-link'
 
 const WhoIsHiring = props => {
   const data = useStaticQuery(graphql`

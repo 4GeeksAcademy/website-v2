@@ -30,3 +30,8 @@ join_4geeks:
         - to help you get a job in the field.
         - Includes Career Support Track,
         - GeekPAL, and GeekTALK.
+
+## LOCATIONS SECTION
+locations:
+  heading: "OUR LOCATIONS"
+  sub_heading: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
