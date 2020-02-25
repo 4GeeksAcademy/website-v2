@@ -159,6 +159,7 @@ export const Span = styled.span`
       color: ${props => props.color};
 `
 export const Separator = styled.div`
+  text-align: ${props => props.align};
   margin: .5rem 0px;
   height: 5px;
   width: 50px;

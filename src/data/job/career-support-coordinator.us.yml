@@ -6,14 +6,14 @@ meta_info:
     keywords: ""
     redirects: ["/career"]
 
-seo_title: "4Geeks Academy Miami"
-tagline: "4GEEKS ACADEMY IN MIAMI"
+seo_title: ""
+tagline: ""
 sub_heading: ""
 
 ## BANNER INFO
 banner_heading: "Career Support Coordinator"
 banner_sub_heading: ""
-banner_image: ""
+banner_image: "/images/pricing-bg.png"
 cities:
     - Miami
     - Santiago de Chile
@@ -24,15 +24,15 @@ title: "Human Resources & Recruiting"
 description: "We are revolutionizing the coding education industry be graduating thriving junior software developers 10x faster than the universities, 91% of our graduates have been hired in coding-related positions with at least 30% increase in their salary. We are looking for someone to help use rise those numbers, by engaging with our students and alumni and potential employers.  What kind of person are we looking for?"
 
 content:
-    - label: "responsabilities"
+    - label: "Responsabilities"
       list:
-          - "1. "
-          - "2. "
-    - label: "requirements"
+          - "1. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          - "2. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. "
+    - label: "Requirements"
       list:
-          - "1. "
-          - "2. "
-    - label: "benefits"
+          - "1. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          - "2. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+    - label: "Benefits"
       list:
-          - "1. "
-          - "2. "
+          - "1. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          - "2. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
