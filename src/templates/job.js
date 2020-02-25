@@ -1,22 +1,10 @@
 import React, {useState, useEffect, useContext} from 'react';
-import Layout from '../global/Layout';
 import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors, Check, ArrowLeft, RoundImage} from '../components/Styling'
-import GeeksVsOthers from '../components/GeeksVsOthers'
-import Mentors from '../components/Mentors'
-import PricesAndPayment from '../components/PricesAndPayment'
-import Alumni from '../components/Alumni'
-import Credentials from '../components/Credentials'
-import Scrollspy from 'react-scrollspy'
+import {Button, Colors, Check, ArrowLeft, ArrowUp} from '../components/Styling'
 import BaseRender from './_baseRender'
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import {SessionContext} from '../session.js'
-import ProgramSelector from '../components/ProgramSelector'
-import {BrowserView} from "react-device-detect";
 import {Link} from 'gatsby';
 
 const Input = styled.input`
@@ -81,8 +69,8 @@ const Job = ({data, pageContext, yml}) => {
                 </Row>
                 <Divider height="20px" />
                 <Row align="center">
-                    <Column size="12">
-                        <Paragraph color={Colors.gray} align="center" fontSize="12px">{yml.description}</Paragraph>
+                    <Column size="8">
+                        <Paragraph color={Colors.gray} align="center" fontSize="16px">{yml.description}</Paragraph>
                     </Column>
                 </Row>
                 <Divider height="30px" />
@@ -105,7 +93,7 @@ const Job = ({data, pageContext, yml}) => {
                                     <ul>
                                         {item.list.map((item) => {
                                             return (
-                                                <li key={index}><Paragraph margin="10px 0" color={Colors.gray} align="left" fontSize="12px">{item}</Paragraph></li>
+                                                <li key={index}><Paragraph margin="10px 0" color={Colors.gray} align="left" fontSize="14px">{item}</Paragraph></li>
                                             )
                                         })}
                                     </ul>
@@ -161,19 +149,35 @@ const Job = ({data, pageContext, yml}) => {
                                     value={formData.phone}
                                 />
                             </Row>
-                            <Row align="center">
-                                <Button
-                                    move="up" up="15px" color={Colors.blue} width="300px" textColor={Colors.white}
-                                    margin="2rem 0" padding=".45rem 3rem"
-                                    onClick={() => apply(formData)
-                                        .then(() => {
-                                            console.log("Thank you");
-                                        })
-                                        .catch(() => {
-                                            console.log("error");
-                                        })
-                                    }
-                                >APPLY FOR THIS JOB</Button>
+                            <Row align="center" height="100%">
+                                <Column size="3"></Column>
+                                <Column size="6">
+                                    <Row align="around" height="100%">
+                                        <Column size="12" alignSelf="center">
+                                            <Button
+                                                color={Colors.blue} width="auto" textColor={Colors.white}
+                                                margin="2rem 0" padding=".45rem 3rem"
+                                                onClick={() => apply(formData)
+                                                    .then(() => {
+                                                        console.log("Thank you");
+                                                    })
+                                                    .catch(() => {
+                                                        console.log("error");
+                                                    })
+                                                }
+                                            >APPLY FOR THIS JOB</Button>
+                                        </Column>
+                                    </Row>
+                                </Column>
+                                <Column size="3" align="right">
+                                    <Row align="around" height="100%">
+                                        <Column size="12" alignSelf="center">
+                                            <Paragraph onClick={() => setForm(!form)} margin="10px 0" color={Colors.gray} align="right" fontSize="14px">Close</Paragraph>
+                                            {/* <ArrowUp width="24" color={Colors.red} fill={Colors.red} /> */}
+                                        </Column>
+                                    </Row>
+                                </Column>
+
                             </Row>
                         </Column>
                     </Row>
