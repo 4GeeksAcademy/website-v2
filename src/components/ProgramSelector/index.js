@@ -68,7 +68,7 @@ const ProgramSelector = (props) => {
                 <>
                   {weekArray.map((item, index) => {
                     return (
-                      <Row key={index} height="25px" marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" backgroundHover={Colors.blue} colorHover={Colors.white} align="around">
+                      <Row key={index} height="25px" marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" backgroundHover={Colors.lightBlue} colorHover={Colors.white} align="around">
                         <Link to={link}><Column border="custom" customBorderRadius=".25rem" size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column></Link>
                       </Row>
                     )
@@ -88,7 +88,7 @@ const ProgramSelector = (props) => {
                 <>
                   {locArray.map((item, index) => {
                     return (
-                      <Row height="25px" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.blue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                      <Row height="25px" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
                         <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item.node.city}</Paragraph></Column>
                       </Row>
                     )

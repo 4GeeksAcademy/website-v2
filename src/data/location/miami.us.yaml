@@ -36,6 +36,7 @@ carousel_box:
 ## LEFT     BOX => UPFRONT OPTION
 ## CENTER   BOX => FINANCIAL SLIDER OPTIONS
 ## RIGHT    BOX => ISA - INCOMING SHARING AGREEMENT
+hasFinancialsOption: true
 prices:
   full_time:
     ## GENERAL INFO
@@ -214,4 +215,3 @@ location_office_image3: ""
 should_know: ""
 value: "Miami"
 defaultLanguage: "us"
-hasFinancialsOption: true

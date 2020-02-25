@@ -81,7 +81,118 @@ export default (props) => {
       allLocationYaml {
         edges {
           node {
-            id
+            city
+            hasFinancialsOption
+            meta_info {
+              slug
+              description
+              image
+              keywords
+              redirects
+            }
+            image
+            prices {
+              full_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    sub_heading
+                    heading_one
+                    heading_two
+                  }
+                  plans {
+                    months
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
+                }
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    heading_two
+                    sub_heading
+                  }
+                }
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading
+                    sub_heading
+                    heading_one
+                    heading_two
+                  }
+                }
+              }
+              part_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    heading_two
+                    sub_heading
+                    heading_one
+                  }
+                  plans {
+                    months
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
+                }
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                }
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                }
+              }
+            }
+            seo_title
+            sub_heading
+            tagline
           }
         }
       }
@@ -162,33 +273,29 @@ export default (props) => {
   function getStepPayments (step, language) {
     switch (step) {
       case 0:
-        if (language === 'es') {return `${planData[0].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
+        return planData[0].paymentInfo
       case 1:
-        if (language === 'es') {return `${planData[1].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
+        return planData[0].paymentInfo
       case 2:
-        if (language === 'es') {return `${planData[2].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
+        return planData[0].paymentInfo
       case 3:
-        if (language === 'es') {return `${planData[3].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
+        return planData[0].paymentInfo
       case 4:
-        if (language === 'es') {return `${planData[4].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
+        return planData[0].paymentInfo
       case 5:
-        if (language === 'es') {return `${planData[5].paymentInfo.es}`} else {return `${planData[0].paymentInfo.us}`}
+        return planData[0].paymentInfo
       default:
         return 'Unknown step';
     }
   }
-
+  console.log("info", info)
   return (
     <>
       {/* 3 COLUMNS LAYOUT */}
-      {info != null &&
+      {info != null ?
         <>
-          <Title
-            size="10"
-            title={props.lang === "es" ? info.heading_section.heading.es : info.heading_section.heading.us}
-            paragraph={session.location}
-            primary
-          />
+
+          <Row align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{session.location}</Paragraph></Row>
           <Divider height="50px" />
           <Row align="center">
             <Column size="4" customRespSize respSize="12">
@@ -197,8 +304,8 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.left_section.header.heading_one.es : locInfo.left_section.header.heading_one.us}</H4></Row>
-                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.left_section.header.heading_two.es : locInfo.left_section.header.heading_two.us}</H4></Row>
+                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{locInfo.left_section.header.heading_one}</H4></Row>
+                        {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">locInfo.left_section.header.heading_two.es : locInfo.left_section.header.heading_two.us}</H4></Row> */}
                       </Column>
                     </Row>
                   </Column>
@@ -207,7 +314,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
                       <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="14px" color={Colors.gray}>{props.lang === "es" ? locInfo.left_section.header.sub_heading.es : locInfo.left_section.header.sub_heading.us}</Paragraph>
+                        <Paragraph align="center" fontSize="14px" color={Colors.gray}>{locInfo.left_section.header.sub_heading}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -216,8 +323,8 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <H3 align="center" >{props.lang === "es" ? locInfo.left_section.content.price : locInfo.left_section.content.price}</H3>
-                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{props.lang === "es" ? locInfo.left_section.content.price_info.es : locInfo.left_section.content.price_info.us}</Paragraph>
+                        <H3 align="center" >{locInfo.left_section.content.price}</H3>
+                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{locInfo.left_section.content.price_info}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -226,7 +333,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{props.lang === "es" ? locInfo.left_section.button.button_text.es : locInfo.left_section.button.button_text.us}</Button></Link>
+                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.left_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
@@ -239,8 +346,8 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{props.lang === "es" ? locInfo.center_section.header.heading_one.es : locInfo.center_section.header.heading_one.us}</H4></Row>
-                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{props.lang === "es" ? locInfo.center_section.header.heading_two.es : locInfo.center_section.header.heading_two.us}</H4></Row>
+                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{locInfo.center_section.header.heading_one}</H4></Row>
+                        {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{props.lang === "es" ? locInfo.center_section.header.heading_two.es : locInfo.center_section.header.heading_two.us}</H4></Row> */}
                       </Column>
                     </Row>
                   </Column>
@@ -249,7 +356,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
                       <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="14px" color={Colors.yellow}>{props.lang === "es" ? locInfo.center_section.header.sub_heading.es : locInfo.center_section.header.sub_heading.us}</Paragraph>
+                        <Paragraph align="center" fontSize="14px" color={Colors.yellow}>{locInfo.center_section.header.sub_heading}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -286,7 +393,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{props.lang === "es" ? locInfo.center_section.button.button_text.es : locInfo.center_section.button.button_text.us}</Button></Link>
+                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.center_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
@@ -300,8 +407,8 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.right_section.header.heading_one.es : locInfo.right_section.header.heading_one.us}</H4></Row>
-                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.right_section.header.heading_two.es : locInfo.right_section.header.heading_two.us}</H4></Row>
+                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{locInfo.right_section.header.heading_one}</H4></Row>
+                        {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.right_section.header.heading_two.es : locInfo.right_section.header.heading_two.us}</H4></Row> */}
                       </Column>
                     </Row>
                   </Column>
@@ -310,7 +417,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
                       <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="13px" color={Colors.gray}>{props.lang === "es" ? locInfo.right_section.header.sub_heading.es : locInfo.right_section.header.sub_heading.us}</Paragraph>
+                        <Paragraph align="center" fontSize="13px" color={Colors.gray}>{locInfo.right_section.header.sub_heading}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -320,7 +427,7 @@ export default (props) => {
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
                         <H3 align="center" >{locInfo.right_section.content.price}</H3>
-                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{props.lang === "es" ? locInfo.right_section.content.price_info.es : locInfo.right_section.content.price_info.us}</Paragraph>
+                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{locInfo.right_section.content.price_info}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -329,7 +436,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{props.lang === "es" ? locInfo.right_section.button.button_text.es : locInfo.right_section.button.button_text.us}</Button></Link>
+                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.right_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
@@ -337,7 +444,7 @@ export default (props) => {
               </Card>
             </Column>
           </Row>
-        </>}
+        </> : <Row>Loading ...</Row>}
     </>
   )
 }
