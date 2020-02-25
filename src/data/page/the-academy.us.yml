@@ -38,3 +38,7 @@ story:
   sub_heading_three: "4Geeks Academy now offers locations in 3 cities, with 5 campuses, and over 300 graduates."
   sub_heading_link: "Learn more about 4Geeks Academy >"
   image: "/images/our-story.png"
+## RECENT BLOG POSTS  SECTION
+posts:
+  heading: "RECENT POSTS"
+  sub_heading: "Vivamus sagittis lacus vel augue laoreet rutrum ."

@@ -16,6 +16,7 @@ import BaseRender from './_baseRender'
 import Events from '../components/Events'
 import Loc from '../components/Loc'
 
+
 const Home = (props) => {
     const {data, pageContext, yml} = props;
     return (
