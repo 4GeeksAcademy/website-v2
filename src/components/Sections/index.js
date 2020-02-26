@@ -19,7 +19,7 @@ export const Container = styled.div`
                     padding: 30px 0;
                     
                 }
-                @media screen ${Device.sm}{
+                @media  ${Device.sm}{
                     
                     
                 }
@@ -41,7 +41,7 @@ export const Container = styled.div`
                 max-width: 540px;
                 
             }
-            @media screen ${Device.sm}{
+            @media  ${Device.sm}{
                 max-width: 720px;
                 
             }
@@ -89,10 +89,16 @@ export const Row = styled.div`
         ? css`justify-content: ${props => props.alignResp};`
         : css`justify-content: center;`};
     }
-    @media screen ${Device.sm}{
+    @media  ${Device.sm}{
         ${props => props.customRespSize
         ? css`justify-content: ${props => props.alignResp};`
         : css`justify-content: center;`};
+        ${props => props.RespSm
+        && css`
+            padding-left: 15px;
+            padding-right: 15px;`
+    }
+        
     }
     @media ${Device.md}{
     }
@@ -161,13 +167,16 @@ ${props =>
                 // height: 300px;
                 // border-radius: 0 0 0 0;
                 text-align: center;
+               
             }
-            @media screen ${Device.sm}{
+            @media  ${Device.sm}{
                 flex: 0 0 ${(props.respSize / 12) * 100};
                 max-width: ${(props.respSize / 12) * 100};
                 // height: 300px;
                 // border-radius: 0 0 0 0;
                 text-align: center;
+               
+                
             }
             @media ${Device.lg}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
@@ -186,6 +195,7 @@ ${props =>
                 flex: 0 0 ${(props.size / 12) * 100}%;
                 max-width: ${(props.size / 12) * 100}%;
                 text-align: ${props => props.align};
+                
             }
             @media ${Device.xs}{
                 flex: 0 0 '100%';
@@ -193,13 +203,15 @@ ${props =>
                 // height: 300px;
                 border-radius: 0 0 0 0;
                 text-align: ${props => props.alignXs};
+                
             }
-            @media screen ${Device.sm}{
+            @media  ${Device.sm}{
                 flex: 0 0 100%;
                 max-width: 100%;
                 // height: 300px;
                 border-radius: 0 0 0 0;
                 text-align: ${props => props.alignSm};
+                
             }
             @media ${Device.lg}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
