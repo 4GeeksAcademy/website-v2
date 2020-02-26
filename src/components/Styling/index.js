@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
+import {Device} from '../Responsive'
 // COLORS SET
 
 export const Colors = {
@@ -94,6 +95,31 @@ export const RoundImage = styled.div`
         css`
         transform: translateY(-${props => props.up});
     `}
+    @media ${Device.xs}{
+        height: ${props => props.h_xs};
+        width: ${props => props.w_xs};
+        
+    }
+    @media ${Device.sm}{
+        width: 100%;
+        height: ${props => props.h_sm};
+        width: ${props => props.w_sm};
+        background-position: center;
+        background-size: cover;
+    }
+    @media ${Device.md}{
+        height: ${props => props.h_md};
+        width: ${props => props.w_md};
+           
+    }
+    @media ${Device.lg}{
+        width: ${props => props.w_lg};
+        height: ${props => props.h_lg};
+    }
+    @media ${Device.xl} {
+        width: ${props => props.w_xl};
+        height: ${props => props.h_xl};
+    }
 `
 export const Button = styled.div`
     ${props => props.outline

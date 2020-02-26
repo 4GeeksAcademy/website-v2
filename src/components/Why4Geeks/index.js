@@ -35,7 +35,18 @@ export default () => {
       <Row>
         {info.why.map((i, index) => (
           <Column size="4" key={index}>
-            <RoundImage url={i.image} bsize="cover" mb="10px" height="200px" border="1.25rem"></RoundImage>
+            <RoundImage
+              url={i.image}
+              bsize="cover"
+              mb="10px"
+              border="1.25rem"
+              position="center"
+              h_xs="150px"
+              h_sm="200px"
+              h_md="140px"
+              h_lg="170px"
+              h_xl="180px"
+            />
             <Row align="around" marginTop="20px">
               <Column size size="2" customRespSize respSize="2" alignSelf="center">
                 {(i.slug === "job-in-tech") && <Address width="48" color={Colors.yellow} fill={Colors.yellow} />}
