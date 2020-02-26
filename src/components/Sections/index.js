@@ -76,9 +76,9 @@ export const Row = styled.div`
         background: ${props => props.backgroundHover};
         border-radius: .25rem;
     }
-    ${Paragraph}:hover{
-        color:${props => props.colorHover};
-    }
+    // ${Paragraph}:hover{
+    //     color:${props => props.colorHover};
+    // }
     ${props => props.align === "around"
         ? css`justify-content: space-around;`
         : props => props.align === "center"
