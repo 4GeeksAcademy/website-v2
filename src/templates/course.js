@@ -67,8 +67,7 @@ const Program = ({data, pageContext, yml}) => {
       <li><a className="nav-item nav-link side" href="#section-2">PROGRAM</a></li>
       <li><a className="nav-item nav-link side" href="#section-3">4GEEKS vs OTHERS</a></li>
       <li><a className="nav-item nav-link side" href="#section-4">PRICING</a></li>
-      {/* <li><a className="nav-item nav-link side" href="#section-5">TYPICAL DAY</a></li> */}
-      <li><a className="nav-item nav-link side" href="#section-6">THE ALUMNI</a></li>
+      <li><a className="nav-item nav-link side" href="#section-5">THE ALUMNI</a></li>
     </Scrollspy>
     {/* </BrowserView> */}
     <section className="section" id="section-1"></section>
@@ -171,7 +170,7 @@ const Program = ({data, pageContext, yml}) => {
             <Column size="11" customRespSize respSize="11">
 
               <Card width="100%" height="430px" color="white" shadow >
-                <Tabs className="testy">
+                <Tabs >
                   <Header>
                     <TabList >
                       {yml.details.details_modules.map((item, index) => {
@@ -328,25 +327,11 @@ const Program = ({data, pageContext, yml}) => {
       <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
       <Divider height="100px" />
     </Wrapper>
-    {/* <Wrapper
-        style="default"
-      >
-        <Title
-          size="10"
-          title="TYPICAL DAY AT THE ACADEMY"
-          paragraph="Venenatis Ligula Ullamcorper Nibh Tellus"
-          primary
-        />
-        <Divider height="50px" />
-        <section className="section" id="section-5"></section>
-        <Divider height="100px" />
-      </Wrapper> */}
     <Wrapper
       style="default"
     >
-
       <Divider height="50px" />
-      <section className="section" id="section-6"></section>
+      <section className="section" id="section-5"></section>
       <Alumni hasTitle />
       <Divider height="100px" />
     </Wrapper>
