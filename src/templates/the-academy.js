@@ -187,7 +187,7 @@ const Why = (props) => {
                 <Divider height="100px" />
             </Wrapper>
 
-
+            <Divider height="100px" />
         </>
     )
 };
