@@ -75,12 +75,13 @@ const RecentPosts = () => {
                     <Column size="4" key={index}>
                         <Card shadow height="500px" width="auto" padding="0 0 10px 0">
                             <RoundImage url={i.node.frontmatter.image} bsize="cover" mb="10px" height="40%" border="1.25rem 1.25rem 0 0 "></RoundImage>
+                            <Divider height="5%" />
                             <Row align="center" height="10%">
                                 <Column size size="10" customRespSize respSize="10" >
                                     <H4 uppercase align="center">{i.node.frontmatter.title}</H4>
                                 </Column>
                             </Row>
-                            <Row align="center" height="45%">
+                            <Row align="center" height="40%">
                                 <Column size="10">
                                     <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.node.rawMarkdownBody}</Paragraph>
                                 </Column>

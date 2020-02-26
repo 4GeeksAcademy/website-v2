@@ -42,6 +42,9 @@ const Partners = (props) => {
             <Divider height="50px" />
             <Wrapper
                 style="default"
+                image="no"
+                color={Colors.lightGray}
+                border="top"
             >
 
                 <Divider height="20px" />
