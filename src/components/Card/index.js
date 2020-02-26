@@ -25,22 +25,27 @@ export const Card = styled.div`
         && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
     }
     @media ${Device.xs}{
-        // height: auto;
+        height: ${props => props.h_xs};
+        width: ${props => props.w_xs};
         
     }
-    @media screen ${Device.sm}{
-        
-        
+    @media ${Device.sm}{
+        width: 100%;
+        height: ${props => props.h_sm};
+        width: ${props => props.w_sm};
     }
     @media ${Device.md}{
+        height: ${props => props.h_md};
+        width: ${props => props.w_md};
            
     }
     @media ${Device.lg}{
-        width: ${props => props.widthLg};
-        height: ${props => props.heightLg};
+        width: ${props => props.w_lg};
+        height: ${props => props.h_lg};
     }
     @media ${Device.xl} {
-       
+        width: ${props => props.w_xl};
+        height: ${props => props.h_xl};
     }
     ${props =>
         props.move === "up"

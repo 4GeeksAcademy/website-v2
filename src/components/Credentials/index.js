@@ -3,7 +3,7 @@ import {useStaticQuery, graphql} from 'gatsby';
 import {H2, H3, H4} from '../Heading'
 import {Card} from '../Card'
 import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
-import {Row, Column, Container} from '../Sections'
+import {Row, Column, Container, Divider} from '../Sections'
 
 export default props => {
   const data = useStaticQuery(graphql`
@@ -28,52 +28,65 @@ export default props => {
     <Row >
       {credentials.map((i, index) => {
         return (
-          <div key={index} className={"col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 text-center mb-2"}>
+          <Column key={index} size="3" customRespSize respSize="6" respSizeMargin="10px">
             {(index % 2 !== 0) ?
               (<Card
-                height="250px"
-                heightLg="200px"
-                width="200px"
-                widthLg="150px"
+
+                h_xs="150px"
+                h_sm="190px"
+                h_md="150px"
+                h_lg="200px"
+                h_xl="250px"
+                width="100%"
                 color="white"
+                padding="15px"
                 shadow
                 move="up"
                 up={props.up + "px"}
+
               >
-                <div className="py-4">
+                <Row align="center" height="30%">
                   {(i.slug === "campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.slug === "alumni") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.slug === "rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.slug === "hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                </div>
-                <div className="card-footer bg-white border-0 p-0 mb-4">
+                </Row>
+                <Divider height="10%" />
+                <Row align="center" height="30%">
                   {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
-                </div>
-                <div className="card-body p-0"><H4 uppercase>{i.title}</H4></div>
+                </Row>
+                <Divider height="5%" />
+                <Row align="center" height="25%"><H4 uppercase>{i.title}</H4></Row>
               </Card>)
               :
               <Card
-                height="250px"
-                heightLg="200px"
-                width="200px"
-                widthLg="150px"
+
+                h_xs="150px"
+                h_sm="190px"
+                h_md="150px"
+                h_lg="200px"
+                h_xl="250px"
+                width="100%"
                 color="white"
+                padding="15px"
                 shadow
                 move="up"
                 up={props.up - ((props.up * 20) / 100) + "px"}
               >
-                <div className="py-4">
+                <Row align="center" height="30%">
                   {(i.slug === "campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.slug === "alumni") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.slug === "rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.slug === "hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                </div>
-                <div className="card-footer bg-white border-0 p-0 mb-4">
+                </Row>
+                <Divider height="10%" />
+                <Row align="center" height="30%">
                   {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
-                </div>
-                <div className="card-body p-0"><H4 uppercase>{i.title}</H4></div>
+                </Row>
+                <Divider height="5%" />
+                <Row align="center" height="25%"><H4 uppercase>{i.title}</H4></Row>
               </Card>}
-          </div>
+          </Column>
         )
       })}
     </Row>

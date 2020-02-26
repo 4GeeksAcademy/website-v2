@@ -29,22 +29,16 @@ const Home = (props) => {
                             <Column size="1" />
                             <Column size="5">
                                 <Divider height="100px" />
-                                <Row>
+                                <Row RespSm>
                                     <H1 fontSize="13px" color={Colors.gray} lato>{yml.tagline}</H1>
                                 </Row>
                                 <Row>
                                     <Separator primary />
                                 </Row>
-                                <Row>
-                                    <H2 primary align="left" >{yml.title_first_line}<Span animated color={Colors.yellow}>_</Span></H2>
+                                <Row >
+                                    <H2 primary align="left" >{yml.title}<Span animated color={Colors.yellow}>_</Span></H2>
                                 </Row>
-                                <Row>
-                                    <H2 primary align="left" >{yml.title_second_line}</H2>
-                                </Row>
-                                <Row>
-                                    <H2 primary align="left" >{yml.title_thir_line}</H2>
-                                </Row>
-                                <Row>
+                                <Row RespSm>
                                     <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.sub_heading}</Paragraph>
                                 </Row>
 
@@ -77,7 +71,7 @@ const Home = (props) => {
                 style="default">
                 <Divider height="100px" />
                 <Why4Geeks />
-                <Divider height="100px" />
+                <Divider height="50px" />
             </Wrapper>
             <Wrapper
                 style="default">
@@ -86,18 +80,43 @@ const Home = (props) => {
             <Divider height="100px" />
             <Wrapper
                 style="default">
-                <Row>
-                    <Column size="4" margin="5px 0">
+                <Row align="center">
+                    <Column size="4" customRespSize respSize="4" margin="5px 0">
                         <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">LICENSED BY</Paragraph>
-                        <RoundImage url="/images/florida-logo.png" height="100px" bsize="contain"></RoundImage>
+                        <RoundImage
+                            h_xs="40px"
+                            h_sm="60px"
+                            h_md="50px"
+                            h_lg="70px"
+                            h_xl="90px"
+                            width="100%"
+                            url="/images/florida-logo.png"
+                            bsize="contain"
+                            position="center" />
                     </Column>
-                    <Column size="4" margin="5px 0">
+                    <Column size="4" customRespSize respSize="4" margin="5px 0">
                         <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">TOP CODING SCHOOL</Paragraph>
-                        <RoundImage url="/images/newsweek-logo.png" height="100px" bsize="contain"></RoundImage>
+                        <RoundImage
+                            h_xs="50px"
+                            h_sm="50px"
+                            h_md="50px"
+                            h_lg="70px"
+                            h_xl="100px"
+                            width="100%"
+                            url="/images/newsweek-logo.png"
+                            bsize="contain" />
                     </Column>
-                    <Column size="4" margin="5px 0">
+                    <Column size="4" customRespSize respSize="4" margin="5px 0">
                         <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">4GEEKS IN THE NEWS</Paragraph>
-                        <RoundImage url="/images/cnn-bbc-logo.png" height="100px" bsize="contain"></RoundImage>
+                        <RoundImage
+                            h_xs="50px"
+                            h_sm="90px"
+                            h_md="50px"
+                            h_lg="70px"
+                            h_xl="100px"
+                            width="100%"
+                            url="/images/cnn-bbc-logo.png"
+                            bsize="contain" />
                     </Column>
                 </Row>
             </Wrapper>
@@ -115,7 +134,17 @@ const Home = (props) => {
                 <Divider height="40px" />
                 <Row>
                     <Column size="6" >
-                        <Card padding="20px" shadow height="200px" width="100%" margin="10px 0px">
+                        <Card
+                            padding="20px"
+                            shadow
+                            width="100%"
+                            margin="10px 0px"
+                            h_xs="180px"
+                            h_sm="190px"
+                            h_md="300px"
+                            h_lg="200px"
+                            h_xl="210px"
+                        >
                             <Row height="100%">
                                 <Column size="10" customRespSize respSize="10">
                                     <Row marginLeft="0px" marginBottom="15px" height="25%">
@@ -157,7 +186,18 @@ const Home = (props) => {
                         </Card>
                     </Column>
                     <Column size="6">
-                        <Card padding="20px" shadow height="200px" width="100%" margin="10px 0px">
+                        <Card
+                            padding="20px"
+                            shadow
+                            h_xs="180px"
+                            h_sm="190px"
+                            h_md="300px"
+                            h_lg="200px"
+                            h_xl="210px"
+                            width="100%"
+                            margin="10px 0px"
+
+                        >
                             <Row height="100%">
                                 <Column size="10" customRespSize respSize="10">
                                     <Row marginLeft="0px" marginBottom="15px" height="25%">
@@ -239,9 +279,7 @@ export const query = graphql`
                 keywords
             }
             tagline
-            title_first_line
-            title_second_line
-            title_thir_line
+            title
             sub_heading
             image
             join_4geeks {

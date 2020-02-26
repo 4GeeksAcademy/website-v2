@@ -73,11 +73,11 @@ const GeeksVsOthers = props => {
                       <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="bottom">
                         <Row align="around" height="100%" >
                           <Column size size="2" customRespSize respSize="2" alignSelf="center">
-                            {(item.slug === "one-teacher-every-five") && <Teacher width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "senior-teacher-per-student") && <Glasses width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "average-time-to-get-help") && <Clock width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "one-on-one-mentoring") && <Users width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "interview-preparation") && <Comments width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "one-teacher-every-five") && <Teacher width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "senior-teacher-per-student") && <Glasses width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "average-time-to-get-help") && <Clock width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "one-on-one-mentoring") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "interview-preparation") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
                           <Column size size="8" customRespSize respSize="6" alignSelf="center">
                             <H4 fontSizeXs="12px" color={Colors.white}>{item.features} </H4>
@@ -102,11 +102,11 @@ const GeeksVsOthers = props => {
                       <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
                         <Row align="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
                           <Column size size="2" customRespSize respSize="2" alignSelf="center" >
-                            {(item.slug === "one-teacher-every-five") && <Teacher width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "senior-teacher-per-student") && <Glasses width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "average-time-to-get-help") && <Clock width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "one-on-one-mentoring") && <Users width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                            {(item.slug === "interview-preparation") && <Comments width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "one-teacher-every-five") && <Teacher width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "senior-teacher-per-student") && <Glasses width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "average-time-to-get-help") && <Clock width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "one-on-one-mentoring") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                            {(item.slug === "interview-preparation") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
                           <Column size size="8" customRespSize respSize="6" alignSelf="center" >
                             <H4 fontSizeXs="12px" color={Colors.white}>{item.features} </H4>

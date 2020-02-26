@@ -28,7 +28,7 @@ text-align: ${props => props.align};
 @media ${Device.xs}{
   font-size: ${props => props.fontSizeXs}
 }
-@media screen ${Device.sm}{
+@media  ${Device.sm}{
 }
 @media ${Device.md}{
   text-align: ${props => props.align};
@@ -43,15 +43,15 @@ text-align: ${props => props.align};
 export const H2 = styled.h2`
     @media ${Device.xs}{
       text-align: center;
-      font-size: 8vw;
+      font-size: 7.5vw;
     }
-    @media screen ${Device.sm}{
+    @media  ${Device.sm}{
       text-align: center;
-      font-size: 8vw;
+      font-size: 6vw;
     }
     @media ${Device.md}{
       text-align: ${props => props.align};
-      font-size: 5vw;
+      font-size: 4vw;
     }
     @media ${Device.lg}{
       text-align: ${props => props.align};
@@ -59,7 +59,7 @@ export const H2 = styled.h2`
     }
     @media ${Device.xl} {
       text-align: ${props => props.align};
-      font-size: 2.5vw;
+      font-size: 3vw;
     }   
     font-family: 'Futura', sans-serif;
     font-weight: 800;
@@ -70,12 +70,12 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
 @media ${Device.xs}{
   text-align: center;
-  font-size: 5vw;
+  font-size: 3.5vw;
   padding: 0 5px;
 }
-@media screen ${Device.sm}{
+@media  ${Device.sm}{
   text-align: center;
-  font-size: 5vw;
+  font-size: 4vw;
   padding: 0 5px;
 }
 @media ${Device.md}{
@@ -88,7 +88,7 @@ export const H3 = styled.h3`
 }
 @media ${Device.xl} {
   text-align: ${props => props.align};
-  font-size: 1.5vw;
+  font-size: 2.5vw;
 }   
 font-family: 'Futura', sans-serif;
 font-weight: 800;
@@ -99,11 +99,11 @@ color: ${props => props.color};
 export const H4 = styled.h4`
 @media ${Device.xs}{
   text-align: center;
-  font-size: ${props => props.fontSizeXs};
+  font-size: 14px;
 }
-@media screen ${Device.sm}{
+@media  ${Device.sm}{
   text-align: center;
-  font-size: 5vw;
+  font-size: 16px;
 }
 @media ${Device.md}{
   text-align: ${props => props.align};
@@ -141,7 +141,7 @@ export const H5 = styled.h5`
       @media ${Device.xs}{
         text-align: center;
       }
-      @media screen ${Device.sm}{
+      @media  ${Device.sm}{
         text-align: center;
       }
       @media ${Device.lg}{
@@ -166,7 +166,7 @@ export const Separator = styled.div`
   @media ${Device.xs}{
     
   }
-  @media screen ${Device.sm}{
+  @media  ${Device.sm}{
  
   }
   @media ${Device.md}{
@@ -192,7 +192,7 @@ export const Paragraph = styled.div`
     css`text-align: text-align: center;`
   }
   }
-  @media screen ${Device.sm}{
+  @media  ${Device.sm}{
     font-size: 12px;
     ${props => props.customTextAlignSmall
     ?

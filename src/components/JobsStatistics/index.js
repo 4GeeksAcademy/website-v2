@@ -30,23 +30,27 @@ export default () => {
     return (
         <Row>
             {jobs.map((i, index) => (
-                <Column size="4" key={index}>
+                <Column size="4" customRespSize respSize="4" key={index} >
                     <Card
                         width="100%"
-                        height="125px"
+                        h_xs="120px"
+                        h_sm="140px"
+                        h_md="170px"
+                        h_lg="160px"
+                        h_xl="130px"
                         shadow
                         padding="15px"
                         margin="5px 0"
                     >
                         <Row align="around">
-                            <Column size size="5" customRespSize respSize="5" >
+                            <Column size size="6" customRespSize respSize="6" >
                                 <Row>
                                     <Paragraph color="gray" align="left" margin="0 0 10px 0" fontSize="13px">
                                         {i.title}
                                     </Paragraph>
                                 </Row>
                                 <Row>
-                                    <H3 primary>{i.value}</H3><span><H3 primary>{i.value_type}</H3></span>
+                                    <H3 primary>{i.value}</H3><span><H3 primary>{i.value_symbol}</H3></span>
                                 </Row>
                                 <Row>
                                     <Paragraph color="gray" align="left" margin="10px 0 0 0" fontSize="13px">
@@ -54,7 +58,7 @@ export default () => {
                                     </Paragraph>
                                 </Row>
                             </Column>
-                            <Column size size="5" customRespSize respSize="5" alignSelf="center">
+                            <Column size size="4" customRespSize respSize="6" alignSelf="center">
                                 <Trend
                                     smooth
                                     autoDraw

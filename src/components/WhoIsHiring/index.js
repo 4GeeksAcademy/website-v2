@@ -74,7 +74,19 @@ const WhoIsHiring = props => {
           <Row >
             {partners.partners.images.map((partner, index) => (
               <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
-                <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
+                <RoundImage
+                  h_xs="50px"
+                  h_sm="70px"
+                  h_md="80px"
+                  h_lg="90px"
+                  h_xl="80px"
+                  width="100%"
+                  url={partner.image}
+                  border=".75rem"
+                  bsize="contain"
+                  position="center"
+                  mb="1.25rem"
+                />
               </Column>
             ))}
           </Row>
@@ -98,7 +110,18 @@ const WhoIsHiring = props => {
             <Row>
               {partners.coding.images.map((partner, index) => (
                 <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
-                  <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
+                  <RoundImage
+                    h_xs="50px"
+                    h_sm="50px"
+                    h_md="80px"
+                    h_lg="90px"
+                    h_xl="80px"
+                    width="100%"
+                    url={partner.image}
+                    border=".75rem"
+                    bsize="contain"
+                    position="center"
+                    mb="1.25rem" />
                 </Column>
               ))}
             </Row>
@@ -115,7 +138,18 @@ const WhoIsHiring = props => {
               <Row>
                 {partners.influencers.images.map((partner, index) => (
                   <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
-                    <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
+                    <RoundImage
+                      h_xs="50px"
+                      h_sm="50px"
+                      h_md="80px"
+                      h_lg="90px"
+                      h_xl="80px"
+                      width="100%"
+                      url={partner.image}
+                      border=".75rem"
+                      bsize="contain"
+                      position="center"
+                      mb="1.25rem" />
                   </Column>
                 ))}
               </Row>
@@ -131,7 +165,18 @@ const WhoIsHiring = props => {
               <Row>
                 {partners.financials.images.map((partner, index) => (
                   <Column size="4" customRespSize respSize="4" key={index} margin="5px 0">
-                    <RoundImage url={partner.image} border=".75rem" bsize="contain" position="center" height="100px" width="150px" mb="1.25rem" />
+                    <RoundImage
+                      h_xs="50px"
+                      h_sm="50px"
+                      h_md="80px"
+                      h_lg="90px"
+                      h_xl="80px"
+                      width="100%"
+                      url={partner.image}
+                      border=".75rem"
+                      bsize="contain"
+                      position="center"
+                      mb="1.25rem" />
                   </Column>
                 ))}
               </Row>
