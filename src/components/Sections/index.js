@@ -156,27 +156,29 @@ ${props =>
             props.customRespSize
             ?
             css`
+            @media ${Device.xs}{
+                flex: 0 0 ${(props.respSize / 12) * 100}%;
+                max-width: ${(props.respSize / 12) * 100}%;
+                // height: 300px;
+                // border-radius: 0 0 0 0;
+                text-align: center;
+                margin-bottom: ${props => props.respSizeMargin};
+            }
+            @media ${Device.sm}{
+                flex: 0 0 ${(props.respSize / 12) * 100}%;
+                max-width: ${(props.respSize / 12) * 100}%;
+                // height: 300px;
+                // border-radius: 0 0 0 0;
+                text-align: center;
+                margin-bottom: ${props => props.respSizeMargin};
+               
+                
+            }
             @media ${Device.md}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
                 max-width: ${(props.size / 12) * 100}%;
                 text-align: ${props => props.align};
-            }
-            @media ${Device.xs}{
-                flex: 0 0 ${(props.respSize / 12) * 100}%;
-                max-width: ${(props.respSize / 12) * 100};
-                // height: 300px;
-                // border-radius: 0 0 0 0;
-                text-align: center;
-               
-            }
-            @media  ${Device.sm}{
-                flex: 0 0 ${(props.respSize / 12) * 100};
-                max-width: ${(props.respSize / 12) * 100};
-                // height: 300px;
-                // border-radius: 0 0 0 0;
-                text-align: center;
-               
-                
+                margin-bottom: ${props => props.respSizeMargin};
             }
             @media ${Device.lg}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
@@ -244,7 +246,7 @@ export const Wrapper = props => {
                         <Row>
                             <Column size="1" />
                             <Column
-                                size="8"
+                                size="9"
                                 image={props.outerImage}
                                 url={props.outerUrl}
                                 border={props.outerBorder}

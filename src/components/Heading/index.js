@@ -59,7 +59,7 @@ export const H2 = styled.h2`
     }
     @media ${Device.xl} {
       text-align: ${props => props.align};
-      font-size: 4vw;
+      font-size: 3vw;
     }   
     font-family: 'Futura', sans-serif;
     font-weight: 800;
@@ -70,12 +70,12 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
 @media ${Device.xs}{
   text-align: center;
-  font-size: 5vw;
+  font-size: 3.5vw;
   padding: 0 5px;
 }
 @media  ${Device.sm}{
   text-align: center;
-  font-size: 5vw;
+  font-size: 4vw;
   padding: 0 5px;
 }
 @media ${Device.md}{
@@ -88,7 +88,7 @@ export const H3 = styled.h3`
 }
 @media ${Device.xl} {
   text-align: ${props => props.align};
-  font-size: 1.5vw;
+  font-size: 2.5vw;
 }   
 font-family: 'Futura', sans-serif;
 font-weight: 800;
@@ -99,11 +99,11 @@ color: ${props => props.color};
 export const H4 = styled.h4`
 @media ${Device.xs}{
   text-align: center;
-  font-size: ${props => props.fontSizeXs};
+  font-size: 14px;
 }
 @media  ${Device.sm}{
   text-align: center;
-  font-size: 5vw;
+  font-size: 16px;
 }
 @media ${Device.md}{
   text-align: ${props => props.align};

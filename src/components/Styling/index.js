@@ -101,15 +101,15 @@ export const RoundImage = styled.div`
         
     }
     @media ${Device.sm}{
-        width: 100%;
+        
         height: ${props => props.h_sm};
         width: ${props => props.w_sm};
-        background-position: center;
-        background-size: cover;
+       
     }
     @media ${Device.md}{
         height: ${props => props.h_md};
         width: ${props => props.w_md};
+        
            
     }
     @media ${Device.lg}{

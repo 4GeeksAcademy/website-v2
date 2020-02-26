@@ -7,9 +7,7 @@ meta_info:
   redirects: ["/home", "/us/home"]
 
 tagline: Miami Coding Bootcamp
-title_first_line: LEARN TO CODE
-title_second_line: AND GET CAREER
-title_thir_line: SUPPORT FOR LIFE
+title: LEARN TO CODE   AND GET CAREER SUPPORT FOR LIFE
 sub_heading: Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
 image: "../home-bg.png"
 

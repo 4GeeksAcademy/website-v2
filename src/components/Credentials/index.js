@@ -35,8 +35,8 @@ export default props => {
                 h_xs="150px"
                 h_sm="190px"
                 h_md="150px"
-                h_lg="190px"
-                h_xl="210px"
+                h_lg="200px"
+                h_xl="250px"
                 width="100%"
                 color="white"
                 padding="15px"
@@ -51,12 +51,12 @@ export default props => {
                   {(i.slug === "rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.slug === "hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
                 </Row>
-                <Divider height="5%" />
+                <Divider height="10%" />
                 <Row align="center" height="30%">
                   {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
                 </Row>
                 <Divider height="5%" />
-                <Row align="center" height="30%"><H4 uppercase>{i.title}</H4></Row>
+                <Row align="center" height="25%"><H4 uppercase>{i.title}</H4></Row>
               </Card>)
               :
               <Card
@@ -64,8 +64,8 @@ export default props => {
                 h_xs="150px"
                 h_sm="190px"
                 h_md="150px"
-                h_lg="190px"
-                h_xl="210px"
+                h_lg="200px"
+                h_xl="250px"
                 width="100%"
                 color="white"
                 padding="15px"
@@ -79,12 +79,12 @@ export default props => {
                   {(i.slug === "rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
                   {(i.slug === "hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
                 </Row>
-                <Divider height="5%" />
+                <Divider height="10%" />
                 <Row align="center" height="30%">
                   {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
                 </Row>
                 <Divider height="5%" />
-                <Row align="center" height="30%"><H4 uppercase>{i.title}</H4></Row>
+                <Row align="center" height="25%"><H4 uppercase>{i.title}</H4></Row>
               </Card>}
           </Column>
         )
