@@ -80,15 +80,37 @@ const GeeksVsOthers = props => {
                             {(item.slug === "interview-preparation") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
                           <Column size size="8" customRespSize respSize="6" alignSelf="center">
-                            <H4 fontSizeXs="12px" color={Colors.white}>{item.features} </H4>
+                            <H4
+                              fs_xs="12px"
+                              fs_sm="16px"
+                              fs_md="16px"
+                              fs_lg="18px"
+                              fs_xl="24px"
+                              color={Colors.white}
+                            >{item.features} </H4>
                           </Column>
                         </Row>
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
+                          <H4 align="center"
+                            fs_xs="12px"
+                            fs_sm="16px"
+                            fs_md="16px"
+                            fs_lg="18px"
+                            fs_xl="24px"
+                            color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center">
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.industry_average}</H4></Column></Row>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
+                          <H4
+                            align="center"
+                            fs_xs="12px"
+                            fs_sm="16px"
+                            fs_md="16px"
+                            fs_lg="18px"
+                            fs_xl="24px"
+                            color={Colors.gray}>{item.industry_average}</H4></Column></Row>
                       </Column>
                     </Row>
                     :
@@ -109,15 +131,36 @@ const GeeksVsOthers = props => {
                             {(item.slug === "interview-preparation") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
                           <Column size size="8" customRespSize respSize="6" alignSelf="center" >
-                            <H4 fontSizeXs="12px" color={Colors.white}>{item.features} </H4>
+                            <H4
+                              fs_xs="12px"
+                              fs_sm="16px"
+                              fs_md="16px"
+                              fs_lg="18px"
+                              fs_xl="24px"
+                              color={Colors.white}>{item.features} </H4>
                           </Column>
                         </Row>
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
+                          <H4
+                            align="center"
+                            fs_xs="12px"
+                            fs_sm="16px"
+                            fs_md="16px"
+                            fs_lg="18px"
+                            fs_xl="24px"
+                            color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center">
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H4 align="center" fontSizeXs="12px" color={Colors.gray}>{item.industry_average}</H4></Column></Row>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
+                          <H4 align="center"
+                            fs_xs="12px"
+                            fs_sm="16px"
+                            fs_md="16px"
+                            fs_lg="18px"
+                            fs_xl="24px"
+                            color={Colors.gray}>{item.industry_average}</H4></Column></Row>
                       </Column>
                     </Row>}
                 </>

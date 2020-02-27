@@ -99,27 +99,32 @@ export const RoundImage = styled.div`
     @media ${Device.xs}{
         height: ${props => props.h_xs};
         width: ${props => props.w_xs};
+        border-radius: ${props => props.br_xs};
         
     }
     @media ${Device.sm}{
         
         height: ${props => props.h_sm};
         width: ${props => props.w_sm};
+        border-radius: ${props => props.br_sm};
        
     }
     @media ${Device.md}{
         height: ${props => props.h_md};
         width: ${props => props.w_md};
+        border-radius: ${props => props.br_md};
         
            
     }
     @media ${Device.lg}{
         width: ${props => props.w_lg};
         height: ${props => props.h_lg};
+        border-radius: ${props => props.br_lg};
     }
     @media ${Device.xl} {
         width: ${props => props.w_xl};
         height: ${props => props.h_xl};
+        border-radius: ${props => props.br_xl};
     }
 `
 export const Button = styled.div`

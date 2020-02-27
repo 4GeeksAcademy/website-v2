@@ -86,12 +86,12 @@ const Why = (props) => {
                                     marginXs="0 0 30px 0"
                                 >
                                     <Row >
-                                        <Column size="3">
+                                        <Column size="3" pl_lg="0">
 
-                                            {item.icon === "Book" && <Book width="72px" color={Colors.yellow} fill={Colors.yellow} />}
-                                            {item.icon === "Teacher" && <Teacher width="72px" color={Colors.yellow} fill={Colors.yellow} />}
-                                            {item.icon === "Users" && <Users width="72px" color={Colors.yellow} fill={Colors.yellow} />}
-                                            {item.icon === "Sitemap" && <Sitemap width="72px" color={Colors.yellow} fill={Colors.yellow} />}
+                                            {item.icon === "Book" && <Book width="48px" color={Colors.yellow} fill={Colors.yellow} />}
+                                            {item.icon === "Teacher" && <Teacher width="48px" color={Colors.yellow} fill={Colors.yellow} />}
+                                            {item.icon === "Users" && <Users width="48px" color={Colors.yellow} fill={Colors.yellow} />}
+                                            {item.icon === "Sitemap" && <Sitemap width="48px" color={Colors.yellow} fill={Colors.yellow} />}
 
                                         </Column>
                                         <Column size="8" >

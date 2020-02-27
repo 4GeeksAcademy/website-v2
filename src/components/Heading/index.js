@@ -99,25 +99,26 @@ color: ${props => props.color};
 export const H4 = styled.h4`
 @media ${Device.xs}{
   text-align: center;
-  font-size: 14px;
+  font-size: ${props => props.fs_xs};
 }
 @media  ${Device.sm}{
   text-align: center;
-  font-size: 16px;
+  font-size: ${props => props.fs_sm};;
 }
 @media ${Device.md}{
   text-align: ${props => props.align};
-  font-size: 14px;
+  font-size: ${props => props.fs_md};
 }
 @media ${Device.lg}{
   text-align: ${props => props.align};
-  font-size: 16px;
+  font-size: ${props => props.fs_lg};
 }
 @media ${Device.xl} {
   text-align: ${props => props.align};
-  font-size: 22px;
+  font-size: ${props => props.fs_xl};
 }   
 font-family: 'Futura', sans-serif;
+margin-bottom: 0px;
 font-weight: 800;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
@@ -164,10 +165,10 @@ export const Separator = styled.div`
   height: 5px;
   width: 50px;
   @media ${Device.xs}{
-    
+    text-align: ${props => props.al_xs};
   }
   @media  ${Device.sm}{
- 
+    text-align: ${props => props.al_sm};
   }
   @media ${Device.md}{
   }
@@ -184,7 +185,7 @@ export const Separator = styled.div`
 `
 export const Paragraph = styled.div`
   @media ${Device.xs}{
-    font-size: 10px;
+    font-size: ${props => props.fs_xs};
     ${props => props.customTextAlignSmall
     ?
     css`text-align: ${props => props.alignXs}`
@@ -193,7 +194,7 @@ export const Paragraph = styled.div`
   }
   }
   @media  ${Device.sm}{
-    font-size: 12px;
+    font-size: ${props => props.fs_sm};
     ${props => props.customTextAlignSmall
     ?
     css`text-align: ${props => props.alignXs}`
@@ -203,17 +204,18 @@ export const Paragraph = styled.div`
   }
   @media ${Device.md}{
     text-align: ${props => props.align};
-    font-size: ${props => props.fontSize};
+    font-size: ${props => props.fs_md};
   }
   @media ${Device.lg}{
     text-align: ${props => props.align};
-    font-size: ${props => props.fontSize};
+    font-size: ${props => props.fs_lg};
   }
   @media ${Device.xl} {
     text-align: ${props => props.align};
-    font-size: ${props => props.fontSize};
+    font-size: ${props => props.fs_xl};
   }   
   margin: ${props => props.margin};
+  font-size: ${props => props.fontSize};
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   padding: ${props => props.padding};

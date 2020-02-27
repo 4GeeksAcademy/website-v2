@@ -74,17 +74,17 @@ const Alumni = props => {
                                                 <Row align="center" height="100%">
                                                     <Column size="9" height="100%">
                                                         <Divider height="10%" />
-                                                        <Row height="10%">
+                                                        <Row height="20%">
                                                             <Column size="12">
                                                                 <H3 primary align="left" >{`Meet ${item.name} `}</H3>
-                                                                <Paragraph primary margin="5px 0" align="left" >{`Now ${item.job_title} at ${item.job_name}`}</Paragraph>
+                                                                <Paragraph primary fs_md="10px" margin="5px 0" align="left" >{`Now ${item.job_title} at ${item.job_name}`}</Paragraph>
                                                             </Column>
                                                             {/* <H3 primary align="left" >SUPPORT FOR LIFE</H3> */}
                                                         </Row>
                                                         <Row height="10%" align="around">
-                                                            <Column size="12" alignSelf="center">
-                                                                <Separator primary />
-                                                            </Column>
+
+                                                            <Separator primary al_xs="center" />
+
                                                         </Row>
                                                         <Row height="30%">
                                                             <Column size="12">
@@ -104,7 +104,7 @@ const Alumni = props => {
                                                             </Column>
                                                         </Row>
 
-                                                        <Row height="20%">
+                                                        <Row height="10%">
                                                             <Column size="12">
                                                                 <Paragraph color={Colors.blue} align="left" fontSize="14px" lineHeight="20px">{alumni.header.button_text}</Paragraph>
                                                             </Column>
