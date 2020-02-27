@@ -33,10 +33,7 @@ cornerstones:
 ## OUR STORY SECTION
 story:
   heading: OUR STORY
-  sub_heading_one: "4Geeks Academy was founded in 2015. What began as an internal project to train new developers has flourished into a full-time passion."
-  sub_heading_two: "Today, 4Geeks is now based in the U.S. As coding has become an essential part of society, the mission of our Coding Bootcamp is to instill a new framework for Coding Education universally."
-  sub_heading_three: "4Geeks Academy now offers locations in 3 cities, with 5 campuses, and over 300 graduates."
-  sub_heading_link: "Learn more about 4Geeks Academy >"
+  sub_heading_one: "4Geeks Academy was founded in 2015. What began as an internal project to train new developers has flourished into a full-time passion.Today, 4Geeks is now based in the U.S. As coding has become an essential part of society, the mission of our Coding Bootcamp is to instill a new framework for Coding Education universally."
   image: "/images/our-story.png"
 ## RECENT BLOG POSTS  SECTION
 posts:

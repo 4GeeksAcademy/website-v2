@@ -56,7 +56,16 @@ export default props => {
                   {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
                 </Row>
                 <Divider height="5%" />
-                <Row align="center" height="25%"><H4 uppercase>{i.title}</H4></Row>
+                <Row align="center" height="25%">
+                  <H4
+                    fs_xs="20px"
+                    fs_sm="24px"
+                    fs_md="24px"
+                    fs_lg="20px"
+                    fs_xl="24px"
+                    uppercase>{i.title}
+                  </H4>
+                </Row>
               </Card>)
               :
               <Card
@@ -84,7 +93,16 @@ export default props => {
                   {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
                 </Row>
                 <Divider height="5%" />
-                <Row align="center" height="25%"><H4 uppercase>{i.title}</H4></Row>
+                <Row align="center" height="25%">
+                  <H4
+                    fs_xs="20px"
+                    fs_sm="24px"
+                    fs_md="24px"
+                    fs_lg="20px"
+                    fs_xl="24px"
+                    uppercase
+                  >{i.title}</H4>
+                </Row>
               </Card>}
           </Column>
         )
