@@ -28,7 +28,7 @@ export default props => {
     <Row >
       {credentials.map((i, index) => {
         return (
-          <Column key={index} size="3" customRespSize respSize="6" respSizeMargin="10px">
+          <Column key={index} size="3" customRespSize respSize="6" respSizeMargin="10px" m_xs="5px 0" m_sm="5px 0" m_md="5px 0">
             {(index % 2 !== 0) ?
               (<Card
 
