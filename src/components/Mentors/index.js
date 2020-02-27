@@ -44,7 +44,8 @@ const Mentors = props => {
                         <>
                             <Column key={index} size="3" customRespSize respSize="6">
                                 <RoundImage opacity="1" mb="20px" url={item.image} bsize="cover" border="10px" width="100%" height="250px" move up={props.up}>
-                                    <Over>
+
+                                    <Over width="100%" height="250px">
                                         <Divider height="20px" />
                                         <H3 uppercase color={Colors.yellow}>{item.name}</H3>
                                         <H3 uppercase color={Colors.yellow}>{item.last_name}</H3>
@@ -52,6 +53,7 @@ const Mentors = props => {
                                         <Divider height="50px" />
                                         <ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} />
                                     </Over>
+
                                 </RoundImage>
                             </Column>
                         </>

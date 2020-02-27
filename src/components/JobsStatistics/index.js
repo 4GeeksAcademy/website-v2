@@ -30,7 +30,7 @@ export default () => {
     return (
         <Row>
             {jobs.map((i, index) => (
-                <Column size="4" customRespSize respSize="4" key={index} >
+                <Column size="4" key={index} >
                     <Card
                         width="100%"
                         h_xs="120px"

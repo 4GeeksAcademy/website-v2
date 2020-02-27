@@ -66,15 +66,16 @@ export const Over = styled.div`
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.8); /* Black see-through */
     color: #f1f1f1;
-    width: 204px;
-    height: 250px;
+    width: ${props => props.width};
+    height: ${props => props.height};
     border-radius: 10px;
     transition: .5s ease;
     opacity:0;
-    padding: 10px;
+    padding: 10px 15px;
     color: white;
     font-size: 20px;
     text-align: center;
+    
 
 `
 export const RoundImage = styled.div`
