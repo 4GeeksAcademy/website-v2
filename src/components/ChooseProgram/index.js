@@ -55,9 +55,9 @@ const ChooseProgram = () => {
                     ?
                     <>
                         <Row marginBottom="5px" marginRight="0" marginLeft="0" align="center">
-                            <Button width="90%" color={Colors.lightGray} textColor={Colors.gray} borderRadius=".25rem">
-                                <Card index="1" borders=".25rem" shadow width="100%" color="transparent" padding={toggles === false && "0px"}>
-                                    {toggles == true ? null : <Row align="center"><Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} color={Colors.white} textColor={Colors.gray}>{program}</Button></Row>}
+                            <Button width="95%" color={Colors.lightGray} textColor={Colors.gray} borderRadius=".25rem">
+                                <Card index="1" borders=".25rem" shadow width="100%" padding={toggles === false && "0px"}>
+                                    {toggles == true ? null : <Row align="center"><Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} textColor={Colors.gray}>{`${program}`}</Button></Row>}
                                     {toggles == true
                                         ?
                                         <>

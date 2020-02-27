@@ -27,7 +27,7 @@ export const Card = styled.div`
     @media ${Device.xs}{
         height: ${props => props.h_xs};
         width: ${props => props.w_xs};
-        
+        padding: ${props => props.p_xs}
     }
     @media ${Device.sm}{
         width: 100%;
