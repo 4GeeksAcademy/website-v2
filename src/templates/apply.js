@@ -104,7 +104,7 @@ const Apply = (props) => {
                         color={Colors.white}
                     >
 
-                        <Card shadow borders="1.25rem" height="500px" p_xs="0 10px">
+                        <Card shadow borders="1.25rem" height="500px" p_xs="0 10px" p_sm="0 15px" p_md="0 20px">
                             <Row
                                 height="100%"
                                 marginLeft="0"
@@ -149,13 +149,15 @@ const Apply = (props) => {
                                                 <Paragraph padding="0.375rem 0.75rem" fontSize="13px" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
                                             </Row>
                                             <Row height="70px">
-                                                <Grid container spacing={2} direction="column" alignItems="center">
-                                                    <Grid item>
-                                                        <ToggleButtonGroup size="large" value={alignment} exclusive onChange={handleChange}>
-                                                            {children}
-                                                        </ToggleButtonGroup>
+                                                <Column size="12">
+                                                    <Grid container spacing={2} direction="column" alignItems="center">
+                                                        <Grid item>
+                                                            <ToggleButtonGroup size="large" value={alignment} exclusive onChange={handleChange}>
+                                                                {children}
+                                                            </ToggleButtonGroup>
+                                                        </Grid>
                                                     </Grid>
-                                                </Grid>
+                                                </Column>
                                             </Row>
                                             <Row height="40px">
                                                 <Input type="text" className="form-control" placeholder="Referral key" />
@@ -165,6 +167,7 @@ const Apply = (props) => {
                                             </Row>
                                             <Row >
                                                 <Button
+
                                                     width="150px"
                                                     move="up" up="15px" color={Colors.blue} textColor={Colors.white}
                                                     margin="2rem 0" padding=".45rem 3rem"

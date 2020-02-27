@@ -141,6 +141,7 @@ export const Button = styled.div`
             text-align: center;
             vertical-align: middle;
             display: inline-block;
+            position: ${props => props.position};
             padding: ${props => props.padding};
             font-size: .5rem;
             line-height: 1.5;
@@ -163,6 +164,7 @@ export const Button = styled.div`
             font-weight: 500;
             letter-spacing: 0px;
             line-height: 1.5;
+            position: ${props => props.position};
             border-radius: ${props => props.borderRadius};
             background-color: ${props => props.color};
             color: ${props => props.textColor};

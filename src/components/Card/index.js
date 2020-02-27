@@ -7,6 +7,7 @@ import {FadeIn} from '../Animations'
 
 export const Card = styled.div`
     animation: 2s ${FadeIn} ease-out;
+    position: ${props => props.position};
     z-index: ${props => props.index};
     flex-direction: column;
     width: ${props => props.width};
@@ -33,10 +34,12 @@ export const Card = styled.div`
         width: 100%;
         height: ${props => props.h_sm};
         width: ${props => props.w_sm};
+        padding: ${props => props.p_sm}
     }
     @media ${Device.md}{
         height: ${props => props.h_md};
         width: ${props => props.w_md};
+        padding: ${props => props.p_md}
            
     }
     @media ${Device.lg}{
