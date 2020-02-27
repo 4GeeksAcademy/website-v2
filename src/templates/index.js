@@ -29,8 +29,10 @@ const Home = (props) => {
                             <Column size="1" />
                             <Column size="5">
                                 <Divider height="100px" />
-                                <Row RespSm>
-                                    <H1 fontSize="13px" color={Colors.gray} lato>{yml.tagline}</H1>
+                                <Row  >
+                                    <Column size="10" customRespSize respSize="10">
+                                        <H1 fontSize="13px" color={Colors.gray} lato>{yml.tagline}</H1>
+                                    </Column>
                                 </Row>
                                 <Row>
                                     <Separator primary />
