@@ -70,8 +70,8 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
 @media ${Device.xs}{
   text-align: center;
-  font-size: 3.5vw;
-  padding: 0 5px;
+  font-size: 4.5vw;
+  padding: 0.5px;
 }
 @media  ${Device.sm}{
   text-align: center;
@@ -80,7 +80,7 @@ export const H3 = styled.h3`
 }
 @media ${Device.md}{
   text-align: ${props => props.align};
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 @media ${Device.lg}{
   text-align: ${props => props.align};
