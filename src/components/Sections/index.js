@@ -172,14 +172,16 @@ ${props =>
                 // border-radius: 0 0 0 0;
                 text-align: center;
                 margin-bottom: ${props => props.respSizeMargin};
+                
                
                 
             }
             @media ${Device.md}{
-                flex: 0 0 ${(props.size / 12) * 100}%;
-                max-width: ${(props.size / 12) * 100}%;
+                flex: 0 0 ${(props.respSize / 12) * 100}%;
+                max-width: ${(props.respSize / 12) * 100}%;
                 text-align: ${props => props.align};
                 margin-bottom: ${props => props.respSizeMargin};
+                
             }
             @media ${Device.lg}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
@@ -198,6 +200,7 @@ ${props =>
                 flex: 0 0 ${(props.size / 12) * 100}%;
                 max-width: ${(props.size / 12) * 100}%;
                 text-align: ${props => props.align};
+                padding-left: ${props => props.pl_md};
                 
             }
             @media ${Device.xs}{
@@ -214,12 +217,14 @@ ${props =>
                 // height: 300px;
                 border-radius: 0 0 0 0;
                 text-align: ${props => props.alignSm};
+                padding-left: ${props => props.pl_sm};
                 
             }
             @media ${Device.lg}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
                 max-width: ${(props.size / 12) * 100}%;
                 text-align: ${props => props.align};
+                padding-left: ${props => props.pl_lg};
             }
             @media ${Device.xl} {
                 flex: 0 0 ${(props.size / 12) * 100}%;

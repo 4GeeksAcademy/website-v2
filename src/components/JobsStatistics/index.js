@@ -30,22 +30,30 @@ export default () => {
     return (
         <Row>
             {jobs.map((i, index) => (
-                <Column size="4" customRespSize respSize="4" key={index} >
+                <Column size="4" key={index} >
                     <Card
                         width="100%"
                         h_xs="120px"
                         h_sm="140px"
-                        h_md="170px"
-                        h_lg="160px"
-                        h_xl="130px"
+                        h_md="130px"
+                        h_lg="150px"
+                        h_xl="160px"
                         shadow
                         padding="15px"
                         margin="5px 0"
                     >
-                        <Row align="around">
+                        <Row align="around" marginLeft="10px">
                             <Column size size="6" customRespSize respSize="6" >
                                 <Row>
-                                    <Paragraph color="gray" align="left" margin="0 0 10px 0" fontSize="13px">
+                                    <Paragraph
+                                        color="gray"
+                                        align="left"
+                                        margin="0 0 10px 0"
+                                        fs_xs="10px"
+                                        fs_sm="12px"
+                                        fs_md="10px"
+                                        fs_lg="12px"
+                                        fs_xl="16px">
                                         {i.title}
                                     </Paragraph>
                                 </Row>
@@ -53,7 +61,15 @@ export default () => {
                                     <H3 primary>{i.value}</H3><span><H3 primary>{i.value_symbol}</H3></span>
                                 </Row>
                                 <Row>
-                                    <Paragraph color="gray" align="left" margin="10px 0 0 0" fontSize="13px">
+                                    <Paragraph
+                                        color="gray"
+                                        align="left"
+                                        margin="10px 0 0 0"
+                                        fs_xs="10px"
+                                        fs_sm="12px"
+                                        fs_md="10px"
+                                        fs_lg="12px"
+                                        fs_xl="16px">
                                         {i.sub_title}
                                     </Paragraph>
                                 </Row>

@@ -54,7 +54,14 @@ export default () => {
                 {(i.slug === "never-code-alone-again") && <Laptop width="32" color={Colors.yellow} fill={Colors.yellow} />}
               </Column>
               <Column size size="8" customRespSize respSize="8" alignSelf="center">
-                <H4 uppercase>{i.title}</H4>
+                <H4
+                  uppercase
+                  fs_xs="20px"
+                  fs_sm="24px"
+                  fs_md="16px"
+                  fs_lg="18px"
+                  fs_xl="20px"
+                >{i.title}</H4>
               </Column>
             </Row>
             <Row>

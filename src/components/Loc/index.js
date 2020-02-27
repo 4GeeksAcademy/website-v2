@@ -67,14 +67,14 @@ const Loc = (props) => {
                         <Row align="center" height="100%">
                           <Column size="9" height="100%">
                             <Divider height="10%" />
-                            <Row height="5%">
+                            <Row height="10%">
                               <Column size="12">
                                 <H3 primary align="left" >{item.node.city}</H3>
                               </Column>
                             </Row>
                             <Row height="5%" align="left">
                               <Column size="12">
-                                <Separator />
+                                <Separator al_xs="center" />
                               </Column>
                             </Row>
                             <Row height="auto" marginBottom="10px">
@@ -117,10 +117,38 @@ const Loc = (props) => {
 
             <Column key={i} size="2" customRespSize respSize="2">
               <Link to={`/location/${pic.node.meta_info.slug}`}>
-                <RoundImage url={pic.node.carousel_box.images[randLocImgIndex].path} border=".75rem" bsize="cover" position="center" height="100%" width="auto" mb="1.25rem">
-                  <Row height="100%" align="center">
+                <RoundImage
+                  h_xs="30px"
+                  h_sm="30px"
+                  h_md="40px"
+                  h_lg="40px"
+                  h_xl="40px"
+                  width="100%"
+                  br_xs=".25rem"
+                  br_sm=".25rem"
+                  br_md=".25rem"
+                  br_lg=".25rem"
+                  br_xl=".25rem"
+                  url={pic.node.carousel_box.images[randLocImgIndex].path}
+                  border=".75rem"
+                  bsize="cover"
+                  position="center"
+                  height="100%"
+                  // width="auto"
+                  mb="1.25rem">
+                  <Row height="100%" align="around">
                     <Column size="12" alignSelf="center" align="center">
-                      <H4 color={Colors.white}>{pic.node.city}</H4>
+                      <H4
+                        color={Colors.white}
+                        fs_xs="10px"
+                        fs_sm="12px"
+                        fs_md="12px"
+                        fs_lg="14px"
+                        fs_xl="16px"
+
+                      >
+                        {pic.node.city}
+                      </H4>
                     </Column>
                   </Row>
                 </RoundImage>
