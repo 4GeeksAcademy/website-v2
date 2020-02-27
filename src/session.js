@@ -8,7 +8,7 @@ const defaultSession = {
     v4: null,
     latitude: null,
     longitude: null,
-    default_course_type: "Part-Time",
+    course_type: "Part-Time",
     email: null,
     location: null,
     language: null,
