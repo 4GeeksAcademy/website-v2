@@ -160,18 +160,20 @@ ${props =>
             @media ${Device.xs}{
                 flex: 0 0 ${(props.respSize / 12) * 100}%;
                 max-width: ${(props.respSize / 12) * 100}%;
-                // height: 300px;
-                // border-radius: 0 0 0 0;
+                height: ${props => props.h_xs};
+                border-radius: ${props => props.br_xs};
                 text-align: center;
-                margin-bottom: ${props => props.respSizeMargin};
+                margin: ${props => props.m_xs}
+                
             }
             @media ${Device.sm}{
                 flex: 0 0 ${(props.respSize / 12) * 100}%;
                 max-width: ${(props.respSize / 12) * 100}%;
                 // height: 300px;
-                // border-radius: 0 0 0 0;
+                border-radius: ${props => props.br_sm};
                 text-align: center;
                 margin-bottom: ${props => props.respSizeMargin};
+                margin: ${props => props.m_sm}
                 
                
                 
@@ -181,6 +183,7 @@ ${props =>
                 max-width: ${(props.respSize / 12) * 100}%;
                 text-align: ${props => props.align};
                 margin-bottom: ${props => props.respSizeMargin};
+                border-radius: ${props => props.br_md};
                 
             }
             @media ${Device.lg}{
