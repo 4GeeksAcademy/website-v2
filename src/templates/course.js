@@ -37,10 +37,10 @@ const Program = ({data, pageContext, yml}) => {
       image="yes"
       url={yml.meta_info.image}
       border="bottom"
-      height="700px"
+      height="600px"
       backgroundSize="cover"
     >
-      <Divider height="240px" />
+      <Divider height="10%" />
       <ProgramSelector week={week} />
       <Divider height="20px" />
       <Title
@@ -138,7 +138,7 @@ const Program = ({data, pageContext, yml}) => {
             <Column size="6">
               <Card
                 h_xs="400px"
-                h_sm="370px"
+                h_sm="400px"
                 h_md="470px"
                 h_lg="470px"
                 h_xl="470px"
@@ -194,8 +194,8 @@ const Program = ({data, pageContext, yml}) => {
 
     {/* PROGRAM DETAILS */}
     <Wrapper
-      style="custom"
-      full
+      style="default"
+
     >
       <Title
         size="10"
@@ -207,7 +207,7 @@ const Program = ({data, pageContext, yml}) => {
       <Row>
         <Column size="12" customRespSize respSize="12">
           <Row>
-            <Column size="11" customRespSize respSize="11">
+            <Column size="12" customRespSize respSize="11">
 
               <Card width="100%" height="450px" color="white" shadow >
                 <Tabs >
@@ -230,7 +230,7 @@ const Program = ({data, pageContext, yml}) => {
                               </Column>
                             </Row>
                             <Row height="20%">
-                              <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
+                              <Column size="3" paddingLeft="20px" customRespSize respSize="3" >
                                 <Paragraph color={Colors.gray} fontSize="14px">DESCRIPTION:</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">

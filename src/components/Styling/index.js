@@ -91,7 +91,7 @@ export const RoundImage = styled.div`
     ${Over}:hover {
         opacity: ${props => props.opacity};
       }
-    margin: auto;
+    
     ${props => props.move &&
         css`
         transform: translateY(-${props => props.up});

@@ -6,7 +6,7 @@ import {H5, Separator, Paragraph} from '../Heading'
 
 const Footer = () => (
     <>
-        <Container width="fluid" height="350px" color={Colors.black}>
+        <Container width="fluid" height="auto" color={Colors.black} p_top="15px" p_bottom="15px">
             <Divider height="20%" />
             <Row height="60%">
                 <Column size="2"></Column>

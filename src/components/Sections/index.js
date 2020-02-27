@@ -15,7 +15,7 @@ export const Container = styled.div`
                     
                 }
                 @media ${Device.xs}{
-                    height: auto;
+                    // height: auto;
                     padding: ${props => props.p_xs};
                     
                 }
@@ -59,7 +59,9 @@ export const Container = styled.div`
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    background: ${props => props.color}
+    padding-top: ${props => props.p_top};
+    padding-bottom: ${props => props.p_bottom};
+    background: ${props => props.color};
 `
 export const Row = styled.div`
     height: ${props => props.height};
