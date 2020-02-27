@@ -51,14 +51,15 @@ export const Card = styled.div`
         props.move === "up"
             ? css`
             @media ${Device.md}{
-                transform: translateY(-${props.up});
-                
+                // transform: translateY(-${props.up});
+                transform: translateY(0px); 
             }
             @media ${Device.xs}{
                 transform: translateY(0px);  
                 margin: ${props => props.marginXs}
             }
             @media screen ${Device.sm}{  
+                transform: translateY(0px); 
                 margin: ${props => props.marginSm}
             }
             @media ${Device.lg}{
@@ -66,6 +67,7 @@ export const Card = styled.div`
             }  
             }
             @media ${Device.xl} {
+                
                 transform: translateY(-${props.up})
             }`
             :

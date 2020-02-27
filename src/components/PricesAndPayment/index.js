@@ -299,12 +299,25 @@ export default (props) => {
           <Divider height="50px" />
           <Row align="center">
             <Column size="4" customRespSize respSize="12">
-              <Card shadow width="100%" height="350px" margin="5px 0">
+              <Card
+                shadow
+                width="100%"
+                height="350px"
+                margin="5px 0"
+              >
                 <Row height="100px" >
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{locInfo.left_section.header.heading_one}</H4></Row>
+                        <Row align="center" height="100%" >
+                          <H4
+                            fs_xs="20px"
+                            fs_sm="24px"
+                            fs_md="24px"
+                            fs_lg="20px"
+                            fs_xl="16px"
+                            align="center">{locInfo.left_section.header.heading_one}</H4>
+                        </Row>
                         {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">locInfo.left_section.header.heading_two.es : locInfo.left_section.header.heading_two.us}</H4></Row> */}
                       </Column>
                     </Row>
@@ -323,7 +336,13 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <H3 align="center" >{locInfo.left_section.content.price}</H3>
+                        <H3
+                          fs_xs="20px"
+                          fs_sm="24px"
+                          fs_md="24px"
+                          fs_lg="20px"
+                          fs_xl="24px"
+                          align="center" >{locInfo.left_section.content.price}</H3>
                         <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{locInfo.left_section.content.price_info}</Paragraph>
                       </Column>
                     </Row>
@@ -333,7 +352,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.left_section.button.button_text}</Button></Link>
+                        <Link to="/apply"><Button width="150px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.left_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
@@ -346,7 +365,12 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{locInfo.center_section.header.heading_one}</H4></Row>
+                        <Row align="center" height="100%" >
+                          <H4 fs_xs="16px"
+                            fs_sm="24px"
+                            fs_md="24px"
+                            fs_lg="20px"
+                            fs_xl="16px" align="center" color={Colors.white}>{locInfo.center_section.header.heading_one}</H4></Row>
                         {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{props.lang === "es" ? locInfo.center_section.header.heading_two.es : locInfo.center_section.header.heading_two.us}</H4></Row> */}
                       </Column>
                     </Row>
@@ -365,7 +389,14 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <H3 align="center" color={Colors.white}>{getStepContents(activeStep)}</H3>
+                        <H3
+                          fs_xs="20px"
+                          fs_sm="24px"
+                          fs_md="24px"
+                          fs_lg="20px"
+                          fs_xl="24px"
+                          align="center"
+                          color={Colors.white}>{getStepContents(activeStep)}</H3>
                         <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep, props.lang)}</Paragraph>
                       </Column>
                     </Row>
@@ -393,7 +424,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.center_section.button.button_text}</Button></Link>
+                        <Link to="/apply"><Button width="150px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.center_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
@@ -407,7 +438,12 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{locInfo.right_section.header.heading_one}</H4></Row>
+                        <Row align="center" height="100%" >
+                          <H4 fs_xs="20px"
+                            fs_sm="24px"
+                            fs_md="24px"
+                            fs_lg="20px"
+                            fs_xl="16px" align="center">{locInfo.right_section.header.heading_one}</H4></Row>
                         {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.right_section.header.heading_two.es : locInfo.right_section.header.heading_two.us}</H4></Row> */}
                       </Column>
                     </Row>
@@ -426,7 +462,13 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" >
-                        <H3 align="center" >{locInfo.right_section.content.price}</H3>
+                        <H3
+                          fs_xs="20px"
+                          fs_sm="24px"
+                          fs_md="24px"
+                          fs_lg="20px"
+                          fs_xl="24px"
+                          align="center" >{locInfo.right_section.content.price}</H3>
                         <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{locInfo.right_section.content.price_info}</Paragraph>
                       </Column>
                     </Row>
@@ -436,7 +478,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="200px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.right_section.button.button_text}</Button></Link>
+                        <Link to="/apply"><Button width="150px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.right_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>

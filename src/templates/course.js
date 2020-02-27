@@ -75,10 +75,21 @@ const Program = ({data, pageContext, yml}) => {
       <Row>
         <Column size="2">
         </Column>
-        <Column size="7">
+        <Column size="8">
           <Row >
             <Column size="6" >
-              <Card padding="20px" shadow height="400px" width="100%" margin="10px 0px" move="up" up="100px">
+              <Card
+                h_xs="400px"
+                h_sm="370px"
+                h_md="470px"
+                h_lg="470px"
+                h_xl="470px"
+                padding="20px"
+                shadow height="400px"
+                width="100%"
+                margin="10px 0px"
+                move="up"
+                up="100px">
                 <Row height="100%">
                   <Column size="10" customRespSize respSize="10">
                     <Row marginLeft="0px" marginBottom="15px" height="15%">
@@ -86,7 +97,14 @@ const Program = ({data, pageContext, yml}) => {
                     </Row>
                     <Row marginTop="15px">
                       <Column size="12">
-                        <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
+                        <Paragraph
+                          fs_xs="10px"
+                          fs_sm="10px"
+                          fs_md="11px"
+                          fs_lg="12px"
+                          fs_xl="16px"
+                          color={Colors.black}
+                          customTextAlignSmall
                           alignXs="left">{geek.geek_data.geek_pal_heading}</Paragraph>
                       </Column>
                     </Row>
@@ -99,7 +117,13 @@ const Program = ({data, pageContext, yml}) => {
                                 <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
                               </Column>
                               <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                                <Paragraph color={Colors.gray}>{pal}</Paragraph>
+                                <Paragraph
+                                  fs_xs="10px"
+                                  fs_sm="10px"
+                                  fs_md="12px"
+                                  fs_lg="12px"
+                                  fs_xl="14px"
+                                  color={Colors.gray}>{pal}</Paragraph>
                               </Column>
                             </Row>
                           )
@@ -112,7 +136,19 @@ const Program = ({data, pageContext, yml}) => {
               </Card>
             </Column>
             <Column size="6">
-              <Card padding="20px" shadow height="400px" width="100%" margin="10px 0px" move="up" up="100px">
+              <Card
+                h_xs="400px"
+                h_sm="370px"
+                h_md="470px"
+                h_lg="470px"
+                h_xl="470px"
+                padding="20px"
+                shadow
+                height="400px"
+                width="100%"
+                margin="10px 0px"
+                move="up"
+                up="100px">
                 <Row height="100%">
                   <Column size="10" customRespSize respSize="10">
                     <Row marginLeft="0px" marginBottom="15px" height="15%">
@@ -133,7 +169,11 @@ const Program = ({data, pageContext, yml}) => {
                                 <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
                               </Column>
                               <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                                <Paragraph fontSize="13px" color={Colors.gray}>{pal}</Paragraph>
+                                <Paragraph fs_xs="10px"
+                                  fs_sm="10px"
+                                  fs_md="11px"
+                                  fs_lg="12px"
+                                  fs_xl="14px" color={Colors.gray}>{pal}</Paragraph>
                               </Column>
                             </Row>
                           )
@@ -169,9 +209,9 @@ const Program = ({data, pageContext, yml}) => {
           <Row>
             <Column size="11" customRespSize respSize="11">
 
-              <Card width="100%" height="430px" color="white" shadow >
+              <Card width="100%" height="450px" color="white" shadow >
                 <Tabs >
-                  <Header>
+                  <Header height="25%">
                     <TabList >
                       {yml.details.details_modules.map((item, index) => {
                         return (<Tab key={item.module_name} onClick={() => setCurrentIndex(index)}>{item.module_name}</Tab>)
@@ -179,45 +219,73 @@ const Program = ({data, pageContext, yml}) => {
                       }
                     </TabList>
                   </Header>
-                  <Body>
+                  <Body height="75%">
                     {yml.details.details_modules.map((item, i) => {
                       return (
                         <TabPanel key={item.title} onChange={() => setInd(i)}>
-                          <Container width="fluid">
-                            <Row height="75px">
-                              <Column size="3" paddingLeft="20px" padding="15px 0" alignXs="left">
+                          <Container width="fluid" p_xs="0" height="100%">
+                            <Row height="20%">
+                              <Column size="6" paddingLeft="20px" padding="15px 0" alignXs="left">
                                 <Paragraph color={Colors.black} fontSize="20px">{item.title}</Paragraph>
                               </Column>
                             </Row>
-                            <Row height="45px">
+                            <Row height="20%">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
                                 <Paragraph color={Colors.gray} fontSize="14px">DESCRIPTION:</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">
-                                <Paragraph color={Colors.gray} fontSize="14px">{item.description}</Paragraph>
+                                <Paragraph
+                                  color={Colors.gray}
+                                  fs_xs="10px"
+                                  fs_sm="12px"
+                                  fs_md="10px"
+                                  fs_lg="12px"
+                                  fs_xl="16px"
+                                >{item.description}</Paragraph>
                               </Column>
                             </Row>
-                            <Row height="45px">
+                            <Row height="20%">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
                                 <Paragraph color={Colors.gray} fontSize="14px">PROJECTS:</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">
-                                <Paragraph color={Colors.gray} fontSize="14px">{item.projects}</Paragraph>
+                                <Paragraph
+                                  color={Colors.gray}
+                                  fs_xs="10px"
+                                  fs_sm="12px"
+                                  fs_md="10px"
+                                  fs_lg="12px"
+                                  fs_xl="16px"
+                                >{item.projects}</Paragraph>
                               </Column>
                             </Row>
-                            <Row height="65px">
+                            <Row height="20%">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
                                 <Paragraph color={Colors.gray} fontSize="14px">DURATION:</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">
-                                <Paragraph color={Colors.gray} fontSize="14px">{item.duration}</Paragraph>
+                                <Paragraph
+                                  color={Colors.gray}
+                                  fs_xs="10px"
+                                  fs_sm="12px"
+                                  fs_md="10px"
+                                  fs_lg="12px"
+                                  fs_xl="16px"
+                                >{item.duration}</Paragraph>
                               </Column>
                             </Row>
-                            <Row height="70px">
+                            <Row height="20%" >
                               <Column size="3" customRespSize respSize="2" padding="15px 0" image="no" color={Colors.lightGray} border="custom" customBorderRadius="0 0 0 1.25rem">
                                 <Row align="around" height="100%">
                                   <Column size="12" alignSelf="center">
-                                    <Paragraph align="center" color={Colors.gray} fontSize="16px">Skills / Weeks:</Paragraph>
+                                    <Paragraph
+                                      align="center"
+                                      color={Colors.gray}
+                                      fs_xs="10px"
+                                      fs_sm="12px"
+                                      fs_md="10px"
+                                      fs_lg="12px"
+                                      fs_xl="16px">Skills / Weeks:</Paragraph>
                                   </Column>
                                 </Row>
                               </Column>
@@ -384,7 +452,7 @@ export default BaseRender(Program);
 const Header = styled.div`
     background: black;
     border-radius: 1.25rem 1.25rem 0 0;
-    height: 100px;
+    height: ${props => props.height};
     color: white;
     font-family: 'lato', sans-serif;
     font-size: 14px;
@@ -393,5 +461,5 @@ const Header = styled.div`
 `;
 const Body = styled.div`
     background: white;
-    height:300px;
+    height: ${props => props.height};
     border-radius: 0 0 1.25rem 1.25rem;`
