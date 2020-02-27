@@ -70,25 +70,25 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
 @media ${Device.xs}{
   text-align: center;
-  font-size: 4.5vw;
+  font-size: ${props => props.fs_xs};
   padding: 0.5px;
 }
 @media  ${Device.sm}{
   text-align: center;
-  font-size: 4vw;
+  font-size: ${props => props.fs_sm};
   padding: 0 5px;
 }
 @media ${Device.md}{
   text-align: ${props => props.align};
-  font-size: 2.5vw;
+  font-size: ${props => props.fs_md};
 }
 @media ${Device.lg}{
   text-align: ${props => props.align};
-  font-size: 3vw;
+  font-size: ${props => props.fs_lg};
 }
 @media ${Device.xl} {
   text-align: ${props => props.align};
-  font-size: 2.5vw;
+  font-size: ${props => props.fs_xl};
 }   
 font-family: 'Futura', sans-serif;
 font-weight: 800;
@@ -103,7 +103,7 @@ export const H4 = styled.h4`
 }
 @media  ${Device.sm}{
   text-align: center;
-  font-size: ${props => props.fs_sm};;
+  font-size: ${props => props.fs_sm};
 }
 @media ${Device.md}{
   text-align: ${props => props.align};
@@ -278,4 +278,12 @@ H1.defaultProps = {
 };
 H4.defaultProps = {
   fontSizeXs: '5vw',
+};
+H3.defaultProps = {
+  fs_xs: '4.5vw',
+  fs_sm: '4vw',
+  fs_md: '2.5vw',
+  fs_lg: '3vw',
+  fs_xl: '2.5vw'
+
 };

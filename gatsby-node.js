@@ -48,6 +48,7 @@ const createBlog = async ({actions, graphql}) => {
                         author
                         date        
                     }
+                    excerpt
                 }
             }
         }

@@ -61,7 +61,9 @@ a.nav-item.nav-link.side {
     border-radius: 1.25rem;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+.react-tabs, .react-tabs__tab-panel{
+    height: 100%!important;
+}
 .react-tabs__tab-list {
     border-bottom: none!important;
     display: flex!important;

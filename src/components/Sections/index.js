@@ -16,7 +16,7 @@ export const Container = styled.div`
                 }
                 @media ${Device.xs}{
                     height: auto;
-                    padding: 30px 0;
+                    padding: ${props => props.p_xs};
                     
                 }
                 @media  ${Device.sm}{
@@ -318,6 +318,9 @@ Container.propTypes = {
 // Container.defaultProps = {
 //     borderBottomLeft: '1.25rem',
 // };
+Container.defaultProps = {
+    p_xs: '30px 0',
+};
 Row.defaultProps = {
     marginLeft: '-15px',
     marginRight: '-15px',
