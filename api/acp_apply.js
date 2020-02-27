@@ -5,7 +5,7 @@ const { addContact } = require('./_utils.js');
 module.exports = (req, res) => {
     const contact = req.body;
     console.log("body", req.body);
-    addContact(contact)
+    addorUpdateContact(contact)
         .then((result) => {
             res.status(200).json({
                 success: true,
