@@ -55,11 +55,11 @@ export const H2 = styled.h2`
     }
     @media ${Device.lg}{
       text-align: ${props => props.align};
-      font-size: 4vw;
+      font-size: vw;
     }
     @media ${Device.xl} {
       text-align: ${props => props.align};
-      font-size: 3vw;
+      font-size: 2.5vw;
     }   
     font-family: 'Futura', sans-serif;
     font-weight: 800;
@@ -74,7 +74,7 @@ export const H3 = styled.h3`
   padding: 0.5px;
 }
 @media  ${Device.sm}{
-  text-align: center;
+  // text-align: center;
   font-size: ${props => props.fs_sm};
   padding: 0 5px;
 }

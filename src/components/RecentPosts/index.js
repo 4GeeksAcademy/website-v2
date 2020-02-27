@@ -99,7 +99,13 @@ const RecentPosts = () => {
                             <Divider height="3%" />
                             <Row align="center" height="10%">
                                 <Column size size="12" customRespSize respSize="10" >
-                                    <H4 uppercase align="center">{i.node.frontmatter.title}</H4>
+                                    <H4
+                                        fs_xs="20px"
+                                        fs_sm="24px"
+                                        fs_md="24px"
+                                        fs_lg="20px"
+                                        fs_xl="20px"
+                                        uppercase align="center">{i.node.frontmatter.title}</H4>
                                 </Column>
                             </Row>
                             <Row align="center" height="30%">

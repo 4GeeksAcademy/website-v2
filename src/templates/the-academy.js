@@ -125,7 +125,7 @@ const Why = (props) => {
                         border="bottom"
                         image="no"
                     >
-                        <Card shadow borders="1.25rem" height="426px" move="up" up="50%">
+                        <Card shadow borders="1.25rem" height="450px" move="up" up="50%">
                             <Row
                                 height="100%"
                                 marginLeft="0"
@@ -134,26 +134,35 @@ const Why = (props) => {
                             >
                                 <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                                     <Row align="center" height="100%">
-                                        <Column size="8" height="100%">
-                                            <Divider height="50px" />
-                                            <Row height="50px">
-                                                <H2 primary align="left" >{yml.story.heading}</H2>
+                                        <Column size="10" height="100%">
+                                            <Divider height="10%" />
+                                            <Row height="10%">
+                                                <Column size="10">
+                                                    <H3 primary align="left" >{yml.story.heading}</H3>
+                                                </Column>
                                             </Row>
-                                            <Row>
-                                                <Separator primary />
+                                            <Row height="10%">
+                                                <Column size="12">
+                                                    <Separator primary />
+                                                </Column>
                                             </Row>
-                                            <Row height="">
-                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.story.sub_heading_one}</Paragraph>
+                                            <Row height="60%">
+                                                <Column size="10">
+                                                    <Paragraph
+                                                        color={Colors.gray}
+                                                        margin="20px 0 0 0"
+                                                        align="left"
+                                                        fs_xs="10px"
+                                                        fs_sm="10px"
+                                                        fs_md="10px"
+                                                        fs_lg="10px"
+                                                        fs_xl="14px">
+                                                        {yml.story.sub_heading_one}
+                                                    </Paragraph>
+                                                </Column>
                                             </Row>
-                                            <Row height="">
-                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.story.sub_heading_two}</Paragraph>
-                                            </Row>
-                                            <Row height="">
-                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.story.sub_heading_three}</Paragraph>
-                                            </Row>
-                                            <Row>
-                                                <Paragraph color={Colors.blue} margin="20px 0 0 0" align="left" fontSize="13px">{yml.story.sub_heading_link}</Paragraph>
-                                            </Row>
+                                            <Divider height="10%" />
+
 
                                         </Column>
                                     </Row>
@@ -220,9 +229,7 @@ export const query = graphql`
             story{
                 heading
                 sub_heading_one
-                sub_heading_two
-                sub_heading_three
-                sub_heading_link
+        
                 image
             }
             posts{
