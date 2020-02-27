@@ -34,7 +34,7 @@ export default () => {
       <Divider height="50px" />
       <Row>
         {info.why.map((i, index) => (
-          <Column size="4" customRespSize respSize="4" key={index}>
+          <Column size="4" key={index}>
             <RoundImage
               url={i.image}
               bsize="cover"
