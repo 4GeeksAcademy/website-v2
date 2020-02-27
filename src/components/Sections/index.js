@@ -169,7 +169,7 @@ ${props =>
             @media ${Device.sm}{
                 flex: 0 0 ${(props.respSize / 12) * 100}%;
                 max-width: ${(props.respSize / 12) * 100}%;
-                // height: 300px;
+                height: ${props => props.h_sm};
                 border-radius: ${props => props.br_sm};
                 text-align: center;
                 margin-bottom: ${props => props.respSizeMargin};
@@ -184,6 +184,8 @@ ${props =>
                 text-align: ${props => props.align};
                 margin-bottom: ${props => props.respSizeMargin};
                 border-radius: ${props => props.br_md};
+                margin: ${props => props.m_md};
+                height: ${props => props.h_md};
                 
             }
             @media ${Device.lg}{

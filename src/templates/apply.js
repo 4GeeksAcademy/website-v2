@@ -104,17 +104,17 @@ const Apply = (props) => {
                         color={Colors.white}
                     >
 
-                        <Card shadow borders="1.25rem" height="500px">
+                        <Card shadow borders="1.25rem" height="500px" p_xs="0 10px">
                             <Row
                                 height="100%"
                                 marginLeft="0"
                                 marginRight="0"
-
+                                align="center"
 
                             >
                                 <Column size="8" alignSelf="center" height="100%" image="no" border="bottom">
                                     <Row align="center" height="100%">
-                                        <Column size="11" height="100%">
+                                        <Column size="10" height="100%">
                                             <Divider height="50px" />
                                             <Row height="50px">
                                                 <H3>TELL US ABOUT YOU</H3>
@@ -183,7 +183,7 @@ const Apply = (props) => {
 
                                 </Column>
 
-                                <Column size="4" customRespSize respSize="12" br_xs="1.25rem" h_xs="auto" m_xs="35px 0" alignSelf="center" height="100%" image="no" color={Colors.black} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" >
+                                <Column size="4" customRespSize respSize="12" br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="center" height="100%" image="no" color={Colors.black} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" >
                                     <Row align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
