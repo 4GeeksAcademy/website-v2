@@ -63,11 +63,11 @@ const Program = ({data, pageContext, yml}) => {
     </Wrapper>
     {/* <BrowserView> */}
     <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
-      <li><a className="nav-item nav-link side" href="#section-1" >MEMBERSHIPS</a></li>
-      <li><a className="nav-item nav-link side" href="#section-2">PROGRAM</a></li>
-      <li><a className="nav-item nav-link side" href="#section-3">4GEEKS vs OTHERS</a></li>
-      <li><a className="nav-item nav-link side" href="#section-4">PRICING</a></li>
-      <li><a className="nav-item nav-link side" href="#section-5">THE ALUMNI</a></li>
+      <li><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
+      <li><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
+      <li><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
+      <li><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
+      <li><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
     </Scrollspy>
     {/* </BrowserView> */}
     <section className="section" id="section-1"></section>
@@ -231,7 +231,7 @@ const Program = ({data, pageContext, yml}) => {
                             </Row>
                             <Row height="20%">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" >
-                                <Paragraph color={Colors.gray} fontSize="14px">DESCRIPTION:</Paragraph>
+                                <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.description}</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">
                                 <Paragraph
@@ -246,7 +246,7 @@ const Program = ({data, pageContext, yml}) => {
                             </Row>
                             <Row height="20%">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
-                                <Paragraph color={Colors.gray} fontSize="14px">PROJECTS:</Paragraph>
+                                <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.projects}</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">
                                 <Paragraph
@@ -261,7 +261,7 @@ const Program = ({data, pageContext, yml}) => {
                             </Row>
                             <Row height="20%">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
-                                <Paragraph color={Colors.gray} fontSize="14px">DURATION:</Paragraph>
+                                <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.duration}</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">
                                 <Paragraph
@@ -285,7 +285,7 @@ const Program = ({data, pageContext, yml}) => {
                                       fs_sm="12px"
                                       fs_md="10px"
                                       fs_lg="12px"
-                                      fs_xl="16px">Skills / Weeks:</Paragraph>
+                                      fs_xl="16px">{yml.details.left_labels.skills}</Paragraph>
                                   </Column>
                                 </Row>
                               </Column>
@@ -375,8 +375,8 @@ const Program = ({data, pageContext, yml}) => {
       <section className="section" id="section-3"></section>
       <Title
         size="10"
-        title="4GEEKS VS OTHER IN NUMBERS"
-        paragraph="View full comparison table >"
+        title={yml.geeksVsOthers.heading}
+        paragraph={yml.geeksVsOthers.sub_heading}
         primary
       />
       <Divider height="50px" />
@@ -389,6 +389,7 @@ const Program = ({data, pageContext, yml}) => {
       <Title
         size="10"
         title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
         primary
       />
       <section className="section" id="section-4"></section>
@@ -436,6 +437,12 @@ export const query = graphql`
             details {
               heading
               sub_heading
+              left_labels{
+                description
+                projects
+                duration
+                skills
+              }
               details_modules {
                 title
                 projects
@@ -445,12 +452,24 @@ export const query = graphql`
                 description
               }
             }
+            geeksVsOthers{
+              heading
+              sub_heading
+            }
             prices{
               heading
+              sub_heading
             }
             alumni{
               heading
               sub_heading
+            }
+            sidebar{
+              membership
+              program
+              geeks_vs_other
+              pricing
+              alumni
             }
         }
       }

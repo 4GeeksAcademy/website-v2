@@ -11,23 +11,38 @@ title: LEARN TO CODE   AND GET CAREER SUPPORT FOR LIFE
 sub_heading: Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
 image: "../home-bg.png"
 
+## EDUCATION SECTION
+education:
+  left_box:
+    heading: "LICENSED BY"
+    image: "/images/florida-logo.png"
+    alt: ""
+  center_box:
+    heading: "TOP CODING SCHOOL"
+    image: "/images/newsweek-logo.png"
+    alt: ""
+  right_box:
+    heading: "4GEEKS IN THE NEWS"
+    image: "/images/cnn-bbc-logo.png"
+    alt: "CNN and BCC Logo"
+
 ## JOIN 4GEEKS SECTION DATA
-join_4geeks:
-  - heading: JOIN 4GEEKS
-    sub_heading: Duis mollis, est non commodo luctus, nisi erat porttitor .
-    geek_data:
-      geek_pal_heading: Programming - Always - Limitles
-      geek_pal_data:
-        - Never code on your own again.
-        - We will be along with lalong side your
-        - journey and for as long as you
-        - want us to be.
-      geek_force_heading: FOR Career Empowerment
-      geek_force_data:
-        - We'll do everything in our hands
-        - to help you get a job in the field.
-        - Includes Career Support Track,
-        - GeekPAL, and GeekTALK.
+join_geeks:
+  heading: JOIN 4GEEKS
+  sub_heading: Duis mollis, est non commodo luctus, nisi erat porttitor .
+  geek_data:
+    geek_pal_heading: Programming - Always - Limitles
+    geek_pal_data:
+      - Never code on your own again.
+      - We will be along with lalong side your
+      - journey and for as long as you
+      - want us to be.
+    geek_force_heading: FOR Career Empowerment
+    geek_force_data:
+      - We'll do everything in our hands
+      - to help you get a job in the field.
+      - Includes Career Support Track,
+      - GeekPAL, and GeekTALK.
 
 ## LOCATIONS SECTION
 locations:

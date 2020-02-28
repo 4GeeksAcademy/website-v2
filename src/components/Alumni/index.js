@@ -79,16 +79,16 @@ const Alumni = props => {
                                                         </Row>
                                                         <Row height="30%">
                                                             <Column size="12">
-                                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{item.content}</Paragraph>
+                                                                <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.content}</Paragraph>
                                                             </Column>
                                                         </Row>
                                                         <Row height="20%">
                                                             <Column size="12">
                                                                 <Row height="100%" align="around">
-                                                                    <Column size="2" alignSelf="center">
+                                                                    <Column size="2" customRespSize respSize="2" alignSelf="center">
                                                                         <RoundImage border="100%" width="30px" height="30px" bsize="contain" url="/staff/marcelo.png" />
                                                                     </Column>
-                                                                    <Column size="10" alignSelf="center">
+                                                                    <Column size="10" customRespSize respSize="10" alignSelf="center">
                                                                         <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${item.name} ${item.last_name}, ${item.job_title}`}</Paragraph>
                                                                     </Column>
                                                                 </Row>
@@ -97,7 +97,7 @@ const Alumni = props => {
 
                                                         <Row height="10%">
                                                             <Column size="12">
-                                                                <Paragraph color={Colors.blue} align="left" fontSize="14px" lineHeight="20px">{alumni.header.button_text}</Paragraph>
+                                                                {/* <Paragraph color={Colors.blue} align="left" fontSize="14px" lineHeight="20px">{alumni.header.button_text}</Paragraph> */}
                                                             </Column>
                                                         </Row>
                                                     </Column>
