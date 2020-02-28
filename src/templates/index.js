@@ -36,13 +36,26 @@ const Home = (props) => {
                                     </Column>
                                 </Row>
                                 <Row>
-                                    <Separator primary />
+                                    <Column size="10" customRespSize respSize="10">
+                                        <Separator primary />
+                                    </Column>
                                 </Row>
                                 <Row >
-                                    <H2 primary align="left" >{yml.title}<Span animated color={Colors.yellow}>_</Span></H2>
+                                    <Column size="10" customRespSize respSize="10">
+                                        <H2
+                                            fs_xs="38px"
+                                            fs_sm="38px"
+                                            fs_md="30px"
+                                            fs_lg="32px"
+                                            fs_xl="38px"
+                                            // primary
+                                            align="left" >{yml.title}<Span animated color={Colors.yellow}>_</Span></H2>
+                                    </Column>
                                 </Row>
                                 <Row RespSm>
-                                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.sub_heading}</Paragraph>
+                                    <Column size="10" customRespSize respSize="10">
+                                        <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.sub_heading}</Paragraph>
+                                    </Column>
                                 </Row>
 
                                 <Divider height="20px" />
