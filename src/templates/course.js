@@ -398,6 +398,13 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       style="default"
     >
+      <Title
+        size="10"
+        title={yml.alumni.heading}
+        paragraph={yml.alumni.sub_heading}
+        customParagraphSize="8"
+        primary
+      />
       <Divider height="50px" />
       <section className="section" id="section-5"></section>
       <Alumni hasTitle />
@@ -440,6 +447,10 @@ export const query = graphql`
             }
             prices{
               heading
+            }
+            alumni{
+              heading
+              sub_heading
             }
         }
       }

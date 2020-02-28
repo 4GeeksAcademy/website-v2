@@ -10,9 +10,9 @@ import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
-import JobInfo from '../components/JobInfo'
+import Alumni from '../components/Alumni'
 
-const Alumni = ({data, pageContext, yml}) => {
+const Graduates = ({data, pageContext, yml}) => {
     console.log("jo", yml)
     return (
         <>
@@ -34,9 +34,10 @@ const Alumni = ({data, pageContext, yml}) => {
                     textAlign="center"
                 />
             </Wrapper>
+            <Divider height="100px" />
             <Wrapper
                 style="default">
-                <JobInfo />
+                <Alumni />
             </Wrapper>
             <Divider height="50px" />
             <Wrapper
@@ -132,4 +133,4 @@ export const query = graphql`
     }
   }
 `;
-export default BaseRender(Alumni);
+export default BaseRender(Graduates);

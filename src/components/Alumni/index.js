@@ -6,6 +6,7 @@ import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button, Round
 import {Card} from '../Card';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
+import {Link} from 'gatsby';
 
 const Alumni = props => {
     const data = useStaticQuery(graphql`
@@ -40,17 +41,7 @@ const Alumni = props => {
     console.log("alumni", alumni)
     return (
         <>
-            {props.hasTitle &&
-                <>
-                    <Title
-                        title={alumni.header.tagline}
-                        primary
-                        size="8"
-                        paragraph={alumni.header.sub_heading}
-                        customParagraphSize="8"
-                    />
-                    <Divider height="50px" />
-                </>}
+
             <Row>
                 <Column
                     size="12"
@@ -125,7 +116,7 @@ const Alumni = props => {
                 </Column>
             </Row>
             <Row height="10%">
-                <Column size="6"><Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{alumni.button_section.button_text}</Button></Column>
+                <Column size="6"><Link to="/graduates"><Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{alumni.button_section.button_text}</Button></Link></Column>
             </Row>
 
         </>)
