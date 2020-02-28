@@ -1,9 +1,53 @@
-# column_one:
-#   heading: "CONTACT"
-#   items:
-#     - "Monday to Friday"
-#     - "9:00am - 6:00pm"
-# column_two:
-#   heading: "COMPANY"
-#   items:
-#     - "Programs"
+footer:
+  - column_one:
+    heading: "CONTACT"
+    items:
+      - name: "Monday to Friday"
+        link: ""
+      - name: "9:00am - 6:00pm"
+        link: ""
+  - column_two:
+    heading: "COMPANY"
+    items:
+      - name: "Program"
+        link: ""
+      - name: "The Academy"
+        link: ""
+      - name: "Partners"
+        link: ""
+      - name: "Pricing"
+        link: ""
+  - column_three:
+    items:
+      - name: "Blog"
+        link: ""
+      - name: "Contact"
+        link: ""
+      - name: "Careers"
+        link: ""
+  - column_four:
+    heading: "LOCATIONS"
+    items:
+      - name: "Santiago de Chile"
+        link: ""
+      - name: "Miami"
+        link: ""
+      - name: "Madrid"
+        link: ""
+      - name: "Caracas"
+        link: ""
+      - name: "Maracaibo"
+        link: ""
+  - column_five:
+    heading: "FOLLOW"
+    items:
+      - name: "Github"
+        link: ""
+      - name: "Facebook"
+        link: ""
+      - name: "Twitter"
+        link: ""
+      - name: "Instagram"
+        link: ""
+      - name: "Youtube"
+        link: ""
