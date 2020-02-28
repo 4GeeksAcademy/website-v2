@@ -69,7 +69,13 @@ const Loc = (props) => {
                             <Divider height="10%" />
                             <Row height="10%">
                               <Column size="12">
-                                <H3 primary align="left" >{item.node.city}</H3>
+                                <H3
+
+                                  primary
+                                  align="left"
+                                >
+                                  {item.node.city}
+                                </H3>
                               </Column>
                             </Row>
                             <Row height="5%" align="left">

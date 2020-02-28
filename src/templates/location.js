@@ -65,11 +65,16 @@ const Location = ({data, pageContext, yml}) => {
                         >
                             <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                                 <Row align="center" height="100%">
-                                    <Column size="8" height="100%">
+                                    <Column size="10" height="100%">
                                         <Divider height="50px" />
                                         <Row height="5%">
                                             <Column size="12">
-                                                <H3 primary align="left" >{yml.info_box.heading}</H3>
+                                                <H3 fs_xs="20px"
+                                                    fs_sm="20px"
+                                                    fs_md="18px"
+                                                    fs_lg="20px"
+                                                    fs_xl="24px"
+                                                    primary align="left" >{yml.info_box.heading}</H3>
                                                 <Paragraph primary margin="5px 0" align="left" ></Paragraph>
                                             </Column>
                                         </Row>
@@ -85,7 +90,13 @@ const Location = ({data, pageContext, yml}) => {
                                         </Row>
                                         <Row height="5%">
                                             <Column size="12">
-                                                <H3 primary align="left" >{yml.info_box.contact_heading}</H3>
+                                                <H3
+                                                    fs_xs="20px"
+                                                    fs_sm="24px"
+                                                    fs_md="18px"
+                                                    fs_lg="20px"
+                                                    fs_xl="24px"
+                                                    primary align="left" >{yml.info_box.contact_heading}</H3>
                                                 <Paragraph primary margin="5px 0" align="left" ></Paragraph>
                                             </Column>
                                         </Row>
@@ -149,11 +160,15 @@ const Location = ({data, pageContext, yml}) => {
                             </Column>
                             <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                                 <Row align="center" height="100%">
-                                    <Column size="8" height="100%">
+                                    <Column size="10" height="100%">
                                         <Divider height="50px" />
                                         <Row height="15%">
                                             <Column size="12">
-                                                <H3 primary align="left" >{yml.carousel_box.heading}</H3>
+                                                <H3 fs_xs="18px"
+                                                    fs_sm="20px"
+                                                    fs_md="18px"
+                                                    fs_lg="20px"
+                                                    fs_xl="24px" primary align="left" >{yml.carousel_box.heading}</H3>
                                                 <Paragraph primary margin="5px 0" align="left" ></Paragraph>
                                             </Column>
                                         </Row>
@@ -164,7 +179,12 @@ const Location = ({data, pageContext, yml}) => {
                                         </Row>
                                         <Row height="30%">
                                             <Column size="12">
-                                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{yml.carousel_box.content}</Paragraph>
+                                                <Paragraph
+                                                    fs_xs="12px"
+                                                    fs_sm="12px"
+                                                    fs_md="12px"
+                                                    fs_lg="14px"
+                                                    fs_xl="14px" color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{yml.carousel_box.content}</Paragraph>
                                             </Column>
                                         </Row>
 
