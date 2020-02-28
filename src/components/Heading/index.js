@@ -43,23 +43,23 @@ text-align: ${props => props.align};
 export const H2 = styled.h2`
     @media ${Device.xs}{
       text-align: center;
-      font-size: 7.5vw;
+      font-size: ${props => props.fs_xs};
     }
     @media  ${Device.sm}{
       text-align: center;
-      font-size: 6vw;
+      font-size: ${props => props.fs_sm};
     }
     @media ${Device.md}{
       text-align: ${props => props.align};
-      font-size: 5vw;
+      font-size: ${props => props.fs_md};
     }
     @media ${Device.lg}{
       text-align: ${props => props.align};
-      font-size: 4vw;
+      font-size: ${props => props.fs_lg};
     }
     @media ${Device.xl} {
       text-align: ${props => props.align};
-      font-size: 2.5vw;
+      font-size: ${props => props.fs_xl};
     }   
     font-family: 'Futura', sans-serif;
     font-weight: 800;
@@ -264,9 +264,9 @@ Title.propTypes = {
   size: PropTypes.string,
   paragraphColor: PropTypes.string
 };
-H2.propTypes = {
-  primary: PropTypes.bool.isRequired,
-}
+// H2.propTypes = {
+//   primary: PropTypes.bool.isRequired,
+// }
 Paragraph.defaultProps = {
   color: Colors.lightGray,
   fontSize: "14px",
@@ -276,8 +276,13 @@ H1.defaultProps = {
   color: Colors.black,
   fontSize: "42px"
 };
-H4.defaultProps = {
-  fontSizeXs: '5vw',
+H2.defaultProps = {
+  fs_xs: '7.5vw',
+  fs_sm: '6vw',
+  fs_md: '5vw',
+  fs_lg: '4vw',
+  fs_xl: '2.5vw'
+
 };
 H3.defaultProps = {
   fs_xs: '4.5vw',
@@ -286,4 +291,7 @@ H3.defaultProps = {
   fs_lg: '3vw',
   fs_xl: '2.5vw'
 
+};
+H4.defaultProps = {
+  fontSizeXs: '5vw',
 };
