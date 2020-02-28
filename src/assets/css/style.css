@@ -11,6 +11,9 @@
 .MuiPaper-root {
     background: transparent!important
 }
+.MuiToggleButtonGroup-groupedSizeLarge {
+    padding: 0px 5px 0px 10px!important;
+}
 .MuiTypography-body2 {
     font-size: 0.5rem!important;
     font-family: "Lato", sans-serif!important;
@@ -89,4 +92,7 @@ a.nav-item.nav-link.side {
     background: black!important;
     color: #E6BA1F!important;
     border-radius: 1.25rem 1.25rem 0 0!important;
+}
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+    padding: 0px!important;
 }

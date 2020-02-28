@@ -55,9 +55,18 @@ const Why = (props) => {
                     customParagraphSize="8"
                 />
                 <Divider height="20px" />
-                <Row height="380px">
+                <Row height="auto" align="center">
                     <Column size="12" customRespSize respSize="11">
-                        <RoundImage url="/images/program-charts.png" height="100%" width="100%" bsize="contain" />
+                        <RoundImage
+                            h_xs="200px"
+                            h_sm="200px"
+                            h_md="200px"
+                            h_lg="400px"
+                            h_xl="400px"
+                            url="/images/program-charts.png"
+                            height="400px"
+                            width="100%"
+                            bsize="contain" />
                     </Column>
                 </Row>
             </Wrapper>
