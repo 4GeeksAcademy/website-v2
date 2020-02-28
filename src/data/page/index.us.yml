@@ -33,3 +33,8 @@ join_4geeks:
 locations:
   heading: "OUR LOCATIONS"
   sub_heading: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+
+## ALUMNI SECTION
+alumni_header:
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."

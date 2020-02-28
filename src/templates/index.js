@@ -246,7 +246,13 @@ const Home = (props) => {
             <Divider height="100px" />
             <Wrapper
                 style="default">
-
+                <Title
+                    size="10"
+                    title={yml.alumni_header.heading}
+                    paragraph={yml.alumni_header.sub_heading}
+                    customParagraphSize="8"
+                    primary
+                />
                 <Divider height="50px" />
                 <Alumni hasTitle />
             </Wrapper>
@@ -295,6 +301,10 @@ export const query = graphql`
                 }
             }
             locations{
+                heading
+                sub_heading
+            }
+            alumni_header{
                 heading
                 sub_heading
             }
