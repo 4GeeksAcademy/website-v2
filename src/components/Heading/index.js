@@ -51,11 +51,11 @@ export const H2 = styled.h2`
     }
     @media ${Device.md}{
       text-align: ${props => props.align};
-      font-size: 4vw;
+      font-size: 5vw;
     }
     @media ${Device.lg}{
       text-align: ${props => props.align};
-      font-size: vw;
+      font-size: 4vw;
     }
     @media ${Device.xl} {
       text-align: ${props => props.align};

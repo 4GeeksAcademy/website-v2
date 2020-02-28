@@ -34,7 +34,7 @@ const GeeksVsOthers = props => {
             title="WHAT MAKES THIS PROGRAM STAND OUT?"
             paragraph="View comparison table >"
             primary
-            size="8"
+            size="10"
           />
           <Divider height="100px" />
         </>}
