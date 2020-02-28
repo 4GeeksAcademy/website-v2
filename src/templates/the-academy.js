@@ -49,8 +49,8 @@ const Why = (props) => {
             >
                 <Title
                     size="10"
-                    title="4GEEKS OUTCOMES"
-                    paragraph="out of our total students, 76% are looking to get a job right after and 24% are pursuing to improve their skills or launch startups"
+                    title={yml.outcomes.heading}
+                    paragraph={yml.outcomes.sub_heading}
                     primary
                     customParagraphSize="8"
                 />
@@ -63,7 +63,7 @@ const Why = (props) => {
                             h_md="200px"
                             h_lg="400px"
                             h_xl="400px"
-                            url="/images/program-charts.png"
+                            url={yml.outcomes.image}
                             height="400px"
                             width="100%"
                             bsize="contain" />
@@ -72,7 +72,7 @@ const Why = (props) => {
             </Wrapper>
             <Divider height="100px" />
             <Wrapper style="default">
-                <Title size="8" title={yml.cornerstones.heading} primary />
+                <Title size="8" title={yml.cornerstones.heading} paragraph={yml.cornerstones.sub_heading} primary />
             </Wrapper>
             <Divider height="150px" />
             <Wrapper
@@ -119,7 +119,7 @@ const Why = (props) => {
 
                 </Row>
                 <Divider height="50px" />
-                <Title size="8" title="MEET THE TEAM" primary />
+                <Title size="8" title={yml.staff.heading} paragraph={yml.staff.sub_heading} primary />
                 <Mentors />
 
                 <Divider height="150px" /></Wrapper>
@@ -226,6 +226,11 @@ export const query = graphql`
                 sub_heading
                 image
             }
+            outcomes{
+                heading
+                sub_heading
+                image
+            }
             cornerstones {
                 heading
                 sub_heading
@@ -234,6 +239,10 @@ export const query = graphql`
                   icon
                   title
                 }
+            }
+            staff{
+                heading
+                sub_heading
             }
             story{
                 heading
