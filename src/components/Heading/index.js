@@ -161,7 +161,7 @@ export const Span = styled.span`
 `
 export const Separator = styled.div`
   text-align: ${props => props.align};
-  margin: .5rem 0px;
+  margin: .5rem 15px;
   height: 5px;
   width: 50px;
   @media ${Device.xs}{
