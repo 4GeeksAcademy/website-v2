@@ -43,17 +43,54 @@ const Mentors = props => {
                     return (
                         <>
                             <Column key={index} size="3" customRespSize respSize="6">
-                                <RoundImage opacity="1" mb="20px" url={item.image} bsize="cover" border="10px" width="100%" height="250px" move up={props.up}>
+                                <RoundImage
+                                    opacity="1"
+                                    mb="20px"
+                                    url={item.image}
+                                    bsize="cover"
+                                    border="10px"
+                                    h_xs="250px"
+                                    h_sm="250px"
+                                    h_md="250px"
+                                    h_lg="250px"
+                                    h_xl="250px"
+                                    w_xs="100"
+                                    w_sm="100"
+                                    w_md="100"
+                                    w_lg="100"
+                                    w_xl="100"
+                                    move up={props.up}>
 
-                                    <Over width="100%" height="250px">
+
+                                    <Over
+                                        h_xs="250px"
+                                        h_sm="250px"
+                                        h_md="250px"
+                                        h_lg="250px"
+                                        h_xl="250px"
+                                        w_xs="100"
+                                        w_sm="100"
+                                        w_md="100"
+                                        w_lg="100"
+                                        w_xl="100">
                                         <Divider height="20px" />
-                                        <H3 uppercase color={Colors.yellow}>{item.name}</H3>
-                                        <H3 uppercase color={Colors.yellow}>{item.last_name}</H3>
+                                        <H3 fs_xs="14px"
+                                            fs_sm="14px"
+                                            fs_md="14px"
+                                            fs_lg="14px"
+                                            fs_xl="18px"
+                                            uppercase
+                                            color={Colors.yellow}
+                                        >{item.name}</H3>
+                                        <H3 fs_xs="14px"
+                                            fs_sm="14px"
+                                            fs_md="14px"
+                                            fs_lg="14px"
+                                            fs_xl="18px" uppercase color={Colors.yellow}>{item.last_name}</H3>
                                         <Paragraph color={Colors.lightGray}>{item.job_title}</Paragraph>
                                         <Divider height="50px" />
-                                        <ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} />
+                                        <a href={item.linkdin != '' ? `http://${item.linkdin}` : "#"} target="_blank"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
                                     </Over>
-
                                 </RoundImage>
                             </Column>
                         </>
