@@ -42,6 +42,7 @@ const RecentPosts = () => {
                       date
                       author
                       image
+                      intro
                     }
                     rawMarkdownBody
                     html
@@ -110,7 +111,7 @@ const RecentPosts = () => {
                             </Row>
                             <Row align="center" height="30%">
                                 <Column size="10" customRespSize respSize="10">
-                                    <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.node.rawMarkdownBody}</Paragraph>
+                                    <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.node.frontmatter.intro}</Paragraph>
                                 </Column>
                             </Row>
                             <Row height="5%" align="center">
