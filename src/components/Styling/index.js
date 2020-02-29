@@ -62,12 +62,12 @@ export const Option = styled.option`
 `
 export const Over = styled.div`
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
+    right: 15px;
+    left: 15px;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.8); /* Black see-through */
     color: #f1f1f1;
-    width: ${props => props.width};
-    height: ${props => props.height};
     border-radius: 10px;
     transition: .5s ease;
     opacity:0;
@@ -75,6 +75,36 @@ export const Over = styled.div`
     color: white;
     font-size: 20px;
     text-align: center;
+    @media ${Device.xs}{
+        height: ${props => props.h_xs};
+        width: ${props => props.w_xs};
+        border-radius: ${props => props.br_xs};
+        
+    }
+    @media ${Device.sm}{
+        
+        height: ${props => props.h_sm};
+        width: ${props => props.w_sm};
+        border-radius: ${props => props.br_sm};
+       
+    }
+    @media ${Device.md}{
+        height: ${props => props.h_md};
+        width: ${props => props.w_md};
+        border-radius: ${props => props.br_md};
+        
+           
+    }
+    @media ${Device.lg}{
+        width: ${props => props.w_lg};
+        height: ${props => props.h_lg};
+        border-radius: ${props => props.br_lg};
+    }
+    @media ${Device.xl} {
+        width: ${props => props.w_xl};
+        height: ${props => props.h_xl};
+        border-radius: ${props => props.br_xl};
+    }
     
 
 `
