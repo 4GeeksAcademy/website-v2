@@ -6,6 +6,7 @@ author: "Marcelo Ricigliano"
 avatar: "/staff/marcelo.png"
 read_time: "10 min"
 image: "/images/why3.png"
+intro: "Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
 ---
 
 ### This is a test for the blog section

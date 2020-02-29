@@ -6,6 +6,7 @@ author: "Alejandro Sanchez"
 avatar: "../staff/alejandro.png"
 read_time: "2 min"
 image: "/images/why2.png"
+intro: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui."
 ---
 
 ### This is a test for the blog section
