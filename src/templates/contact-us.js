@@ -142,10 +142,10 @@ const Contact = (props) => {
                                                     value={formData.phone}
                                                 />
                                             </Row>
-                                            <Row height="30px">
+                                            <Row height="40px">
                                                 <Paragraph padding="0.375rem 0.75rem" fontSize="13px" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
                                             </Row>
-                                            <Row height="70px">
+                                            <Row height="60px">
                                                 <Column size="12">
                                                     <Grid container spacing={2} direction="column" alignItems="center">
                                                         <Grid item>

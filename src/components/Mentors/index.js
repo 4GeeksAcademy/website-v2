@@ -73,7 +73,7 @@ const Mentors = props => {
                                         w_md="100"
                                         w_lg="100"
                                         w_xl="100">
-                                        <Divider height="20px" />
+                                        <Divider height="20%" />
                                         <H3 fs_xs="14px"
                                             fs_sm="14px"
                                             fs_md="14px"
@@ -86,9 +86,11 @@ const Mentors = props => {
                                             fs_sm="14px"
                                             fs_md="14px"
                                             fs_lg="14px"
-                                            fs_xl="18px" uppercase color={Colors.yellow}>{item.last_name}</H3>
-                                        <Paragraph color={Colors.lightGray}>{item.job_title}</Paragraph>
-                                        <Divider height="50px" />
+                                            fs_xl="18px"
+                                            uppercase
+                                            color={Colors.yellow}>{item.last_name}</H3>
+                                        <Paragraph margin="5px 0" color={Colors.lightGray}>{item.job_title}</Paragraph>
+                                        <Divider height="10%" />
                                         <a href={item.linkdin != '' ? `http://${item.linkdin}` : "#"} target="_blank"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
                                     </Over>
                                 </RoundImage>
