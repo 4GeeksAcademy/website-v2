@@ -43,7 +43,7 @@ const Footer = () => {
                                         {item.heading != null
                                             ? <Row height="20px" marginBottom="10px"><Separator primary></Separator></Row>
                                             : <Row height="20px" marginBottom="10px"></Row>}
-                                        {item.items.map((items, i) => {
+                                        {item.items.map((items) => {
                                             return (
                                                 <Link to={items.link} key={item.name}><Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>{items.name}</Paragraph></Row></Link>
                                             )
@@ -81,50 +81,3 @@ const Footer = () => {
 
 export default Footer;
 
-
-
-{/* <Column size="2" margin="0 0 20px 0">
-                                <Row height="20px"><H5 fontSize="16px" color={Colors.gray}>CONTACT</H5></Row>
-                                <Row height="20px" marginBottom="10px"><Separator primary></Separator></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.gray}>Monday to Friday</Paragraph></Row>
-                                <Row><Paragraph fontSize="12px" color={Colors.gray}>9::00am - 6:00pm </Paragraph></Row>
-                            </Column>
-                            <Column size="2" margin="0 0 20px 0">
-                                <Row height="20px"><H5 fontSize="16px" color={Colors.gray}>COMPANY</H5></Row>
-                                <Row height="20px" marginBottom="10px"><Separator primary></Separator></Row>
-                                {col.map((item, index) => {
-                                    console.log("colu", item)
-                                    return (
-                                        <Row key={index} marginBottom="5px"><Link to="/jobs"><Paragraph fontSize="12px" color={Colors.white}>{item.node.column_two.name}</Paragraph></Link></Row>
-                                    )
-                                })}
-
-
-                            </Column>
-                            <Column size="2" margin="0 0 20px 0">
-                                <Row height="20px"><H5 fontSize="16px" color={Colors.gray}></H5></Row>
-                                <Row height="20px" marginBottom="10px"></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Program</Paragraph></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>The Academy</Paragraph></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Partners</Paragraph></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Pricing</Paragraph></Row>
-                                <Row marginBottom="5px"><Link to="/jobs"><Paragraph fontSize="12px" color={Colors.white}>Careers</Paragraph></Link></Row>
-                            </Column>
-                            <Column size="2" margin="0 0 20px 0">
-                                <Row height="20px"><H5 fontSize="16px" color={Colors.gray}>LOCATIONS</H5></Row>
-                                <Row height="20px" marginBottom="10px"><Separator primary></Separator></Row>
-                                <Row marginBottom="5px"><Link to="/location/santiago-chile"><Paragraph fontSize="12px" color={Colors.white}>Santiago de Chile</Paragraph></Link></Row>
-                                <Row marginBottom="5px"><Link to="/location/downtown-miami"><Paragraph fontSize="12px" color={Colors.white}>Miami</Paragraph></Link></Row>
-                                <Row marginBottom="5px"><Link to="/location/impact-hub"><Paragraph fontSize="12px" color={Colors.white}>Caracas</Paragraph></Link></Row>
-                                <Row marginBottom="5px"><Link to="/location/maracaibo"><Paragraph fontSize="12px" color={Colors.white}>Maracaibo</Paragraph></Link></Row>
-                                <Row marginBottom="5px"><Link to="/location/madrid"><Paragraph fontSize="12px" color={Colors.white}>Madrid</Paragraph></Link></Row>
-                            </Column>
-                            <Column size="2" margin="0 0 20px 0">
-                                <Row height="20px"> <H5 fontSize="16px" color={Colors.gray}>FOLLOW</H5></Row>
-                                <Row height="20px" marginBottom="10px"><Separator primary></Separator></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Github</Paragraph></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Facebook</Paragraph></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Instagram</Paragraph></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Twitter</Paragraph></Row>
-                                <Row marginBottom="5px"><Paragraph fontSize="12px" color={Colors.white}>Youtube</Paragraph></Row>
-                            </Column> */}
