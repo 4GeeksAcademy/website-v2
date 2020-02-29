@@ -24,7 +24,7 @@ footer:
       - name: "Contact"
         link: "contact-us"
       - name: "Careers"
-        link: "/careers"
+        link: "/jobs"
   - column_four:
     heading: "LOCATIONS"
     items:
