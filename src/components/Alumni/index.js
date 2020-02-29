@@ -72,7 +72,7 @@ const Alumni = props => {
                                                             </Column>
                                                             {/* <H3 primary align="left" >SUPPORT FOR LIFE</H3> */}
                                                         </Row>
-                                                        <Row height="10%" align="around">
+                                                        <Row height="10%" >
 
                                                             <Separator primary al_xs="center" />
 

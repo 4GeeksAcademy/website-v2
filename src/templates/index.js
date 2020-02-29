@@ -36,9 +36,9 @@ const Home = (props) => {
                                     </Column>
                                 </Row>
                                 <Row>
-                                    <Column size="10" customRespSize respSize="10">
-                                        <Separator primary />
-                                    </Column>
+
+                                    <Separator primary />
+
                                 </Row>
                                 <Row >
                                     <Column size="10" customRespSize respSize="10">

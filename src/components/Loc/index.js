@@ -70,7 +70,11 @@ const Loc = (props) => {
                             <Row height="10%">
                               <Column size="12">
                                 <H3
-
+                                  fs_xs="20px"
+                                  fs_sm="22px"
+                                  fs_md="20px"
+                                  fs_lg="20px"
+                                  fs_xl="20px"
                                   primary
                                   align="left"
                                 >
@@ -79,9 +83,9 @@ const Loc = (props) => {
                               </Column>
                             </Row>
                             <Row height="5%" align="left">
-                              <Column size="12">
-                                <Separator al_xs="center" />
-                              </Column>
+
+                              <Separator al_xs="center" />
+
                             </Row>
                             <Row height="auto" marginBottom="10px">
                               <Column size="12">
