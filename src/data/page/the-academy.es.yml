@@ -1,0 +1,41 @@
+meta_info:
+  slug: la-academia
+  title: null
+  description: "Acerca de 4Geeks Academy"
+  image: ""
+  keywords: []
+  redirects: []
+
+## BANNER - HEADER
+banner:
+  tagline: PERMITIENDO A LOS CONSTRUCTORES DE SOFTWARE FUTUROS Y ACTUALES ADAPTARSE A LAS NECESIDADES DEL MUNDO REAL
+  sub_heading: ""
+  image: "/bg/the-academy-bg.png"
+
+## OUR FOUR CORNERSTONES SECTION DATA
+cornerstones:
+  heading: NUESTRAS PIEDRAS ANGULARES
+  sub_heading: ""
+  cornerstones_list:
+    - title: SALÓN DE CLASES INVERTIDO
+      content: La teoría se entrega a través de vídeos, animación, imágenes e infografías. El tiempo en clase se utiliza para debatir, crear y construir proyectos, y orientar sobre ejercicios prácticos.
+      icon: Book
+    - title: 1 MENTOR POR CADA 7 ESTUDIANTES
+      content: Un ambiente cercano proporciona la oportunidad de adaptarse al ritmo particular de cada estudiante.
+      icon: Teacher
+    - title: MENTORÍA 1:1
+      content: Cada estudiante tiene la oportunidad de tener conversaciones regulares con un mentor.
+      icon: Users
+    - title: ÁRBOL DE TALENTOS
+      content: El programa de estudios establece 44 habilidades; los estudiantes ganan puntos por cada una de ellas de forma lúdica.
+      icon: Sitemap
+
+## OUR STORY SECTION
+story:
+  heading: NUESTRA HISTORIA
+  sub_heading_one: "4Geeks Academy fue fundada en 2015. Lo que comenzó como un proyecto interno para entrenar a más desarrolladores, se ha convertido en nuestra pasión a tiempo completo. 4Geeks es hoy un Coding Bootcamp con sede en EE.UU., que persigue construir un nuevo marco de trabajo para la Educación en Programación porque la programación se está convirtiendo en una parte esencial de nuestra sociedad. 4Geeks Academy tiene ahora sedes en 4 ciudades, 6 campus en curso, y más de 600 personas graduadas."
+  image: "/images/our-story.png"
+## RECENT BLOG POSTS  SECTION
+posts:
+  heading: "PUBLICACIONES RECIENTES"
+  sub_heading: "Vivamus sagittis lacus vel augue laoreet rutrum ."

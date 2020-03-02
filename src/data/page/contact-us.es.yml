@@ -1,0 +1,27 @@
+meta_info:
+  slug: contactanos
+  title: null
+  description: null
+  image: null
+  keywords: []
+  redirects: []
+
+## CONTACT-US HEADING
+tagline: CONTÁCTANOS
+sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+
+## CONTACT-US LEFT SECTION
+left_side:
+  - heading: "CONTÁCTANOS"
+    form_section:
+      form_placeholders:
+        - first_name: "Nombres"
+          last_name: "Apellidos"
+          email: "Email"
+          phone: "Móvil"
+    locations_title: "Selecciona una sede"
+    message_section:
+      - placeholder: "Escribe tu mensaje aquí"
+    button:
+      - button_text: "ENVIAR"
+        button_link: ""

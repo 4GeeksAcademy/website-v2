@@ -1,0 +1,162 @@
+meta_info:
+  slug: "madrid"
+  title: 4Geeks Academy Madrid
+  description: null
+  image: ""
+  keywords: none
+  redirects: []
+
+seo_title: "4Geeks Academy Madrid"
+tagline: "4GEEKS ACADEMY IN MADRID"
+sub_heading: ""
+image: "/images/miami-sunset.jpeg"
+
+info_box:
+  heading: "Encuéntranos en Madrid"
+  address: "Edison 3, 28006, Madrid."
+  contact_heading: "Contacts"
+  phone: "910 86 69 83"
+  email: "es@4geeksacademy.com"
+  image: "/images/madrid-map.png"
+
+carousel_box:
+  heading: "Qué deberías saber sobre esta ubicación: "
+  content: "A 5 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada al edificio y en las cercanías."
+  images:
+    - path: "/images/madrid-loc.jpeg"
+      alt: "madrid-location"
+    - path: "/images/madrid-loc-1.jpg"
+      alt: "4Geeks Academy Madrid location"
+    - path: "/images/madrid-loc-2.jpg"
+      alt: "4Geeks Madrid location"
+
+## PRICES SECTION
+## MADRID HAS 3 BOXES:
+## LEFT     BOX => PART-TIME
+## CENTER   BOX => FINANCIAL SLIDER OPTIONS
+## RIGHT    BOX => FULL-TIME
+prices:
+  full_time:
+    ## GENERAL INFO
+    slug: "full-time"
+    duration: "9 semanas"
+
+    ## LEFT BOX SECTION FULL-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one: "FULL-TIME"
+        heading_two: "PAGO ADELANTADO"
+        sub_heading: "y disfruta de mejores precios"
+      content:
+        price: "5.999,00 €"
+        price_info: "pago de contado"
+      button:
+        button_text: "APLICA YA"
+
+    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+    center_section:
+      header:
+        heading:
+        sub_heading:
+      plans:
+        - months: "6"
+          payment: ""
+          paymentInfo: ""
+          provider: ""
+          logo: ""
+          message: ""
+        - months: "12"
+          payment: ""
+          paymentInfo: ""
+          provider: ""
+          logo: ""
+          message:
+      button:
+        button_text:
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading: ""
+        sub_heading: ""
+      content:
+        price: "5.499,00 €"
+        price_info: "pago de contado"
+      button:
+        button_text: "APLICA YA"
+  ## *****************
+  ## PART-TIME SECTION
+  ## *****************
+  part_time:
+    slug: "part-time"
+    duration: "16 semanas"
+
+    ## LEFT BOX SECTION PART-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one: "PART-TIME"
+        sub_heading: "y disfruta de mejores precios"
+      content:
+        price: "5.499,00 €"
+        price_info: "pago de contado"
+      button:
+        button_text: "APLICA YA"
+
+    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+    center_section:
+      header:
+        heading_two:
+        sub_heading:
+      plans:
+        - months: " 6 mo"
+          payment: ""
+          paymentInfo: ""
+          provider: ""
+          logo: ""
+          message: ""
+        - months: "12 mo"
+          payment: ""
+          paymentInfo: ""
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: ""
+
+      button:
+        button_text: "APLICA YA"
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one: "FULL-TIME"
+        sub_heading: "y disfruta de mejores precios"
+      content:
+        price: "5.999,00 €"
+        price_info: "pago de contado"
+      button:
+        button_text: "APLICA YA"
+
+city: "Madrid"
+name: "Madrid"
+latitude: "40.439769"
+longitude: "-3.680207"
+address: "Calle de Edison 3"
+zip_code: "28006"
+state: "Madrid"
+country: "España"
+courses:
+  - "Full-Time"
+  - "Part-Time"
+active_campaign_location_slug: ""
+flag_icon: ""
+breathecode_location_slug: ""
+location_map: ""
+location_phone_number: ""
+location_office_image: ""
+location_office_image2: ""
+location_office_image3: ""
+should_know: ""
+value: "Madrid"
+defaultLanguage: "es"
+hasFinancialsOption: true
