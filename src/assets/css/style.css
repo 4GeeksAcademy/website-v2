@@ -100,3 +100,7 @@ a.nav-item.nav-link.side {
 .MuiGrid-spacing-xs-2 > .MuiGrid-item {
     padding: 0px!important;
 }
+
+a:hover {
+    text-decoration: none;
+  }
