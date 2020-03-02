@@ -44,12 +44,16 @@
     
 }
 
+.nav__item--active a.nav-item.nav-link.side {
+    color: #E6BA1F;
+}
 .nav__item--active {
-    border-left: 6px solid #0097CE;
-    color: #0097CE;
+    border-left: 6px solid #E6BA1F;
+    
 }
 a.nav-item.nav-link.side {
     height: 40px;
+    color: #0097CE;
 }
 .carousel .slide {
     min-width: 100%;

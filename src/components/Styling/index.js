@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
-import {Device} from '../Responsive'
+import {Device} from '../Responsive';
+import {Paragraph} from '../Heading';
 // COLORS SET
 
 export const Colors = {
@@ -79,6 +80,8 @@ export const Over = styled.div`
         height: ${props => props.h_xs};
         width: ${props => props.w_xs};
         border-radius: ${props => props.br_xs};
+    
+     
         
     }
     @media ${Device.sm}{
