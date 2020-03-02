@@ -1,0 +1,53 @@
+footer:
+  - column_one:
+    heading: "CONTACT"
+    items:
+      - name: "Monday to Friday"
+        link: ""
+      - name: "9:00am - 6:00pm"
+        link: ""
+  - column_two:
+    heading: "COMPANY"
+    items:
+      - name: "Program"
+        link: "/course/full-stack-web-development-bootcamp-part-time"
+      - name: "The Academy"
+        link: "/the-academy"
+      - name: "Partners"
+        link: "/partners"
+      - name: "Pricing"
+        link: "/pricing"
+  - column_three:
+    items:
+      - name: "Blog"
+        link: "/blog"
+      - name: "Contact"
+        link: "contact-us"
+      - name: "Careers"
+        link: "/jobs"
+  - column_four:
+    heading: "LOCATIONS"
+    items:
+      - name: "Santiago de Chile"
+        link: "/location/santiago-chile"
+      - name: "Miami"
+        link: "/location/downtown-miami"
+      - name: "Madrid"
+        link: "/location/madrid"
+      - name: "Caracas"
+        link: "/location/impact-hub"
+      - name: "Maracaibo"
+        link: "/location/maracaibo"
+  - column_five:
+    heading: "FOLLOW"
+    items:
+      - name: "Github"
+        link: ""
+      - name: "Facebook"
+        link: ""
+      - name: "Twitter"
+        link: ""
+      - name: "Instagram"
+        link: ""
+      - name: "Youtube"
+        link: ""

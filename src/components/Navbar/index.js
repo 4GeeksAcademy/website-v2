@@ -18,7 +18,7 @@ import {
 } from 'reactstrap';
 
 
-const NavB = ({ menuLinks}) => {
+const NavB = ({menuLinks}) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     return (
@@ -44,7 +44,7 @@ const NavB = ({ menuLinks}) => {
                         </NavItem>
                     ))}
                 </Nav>
-                <Link to="/apply"><Button width="200px" color={Colors.red} textColor={Colors.white}>APPLY NOW</Button></Link>
+                <Link to="/apply"><Button width="130px" color={Colors.red} textColor={Colors.white}>APPLY NOW</Button></Link>
             </Collapse>
         </Navbar>
     )

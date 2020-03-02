@@ -19,6 +19,7 @@ import Loc from '../components/Loc'
 
 const Home = (props) => {
     const {data, pageContext, yml} = props;
+    console.log("4geeks", yml)
     return (
         <>
             <Container fluid >
@@ -35,13 +36,26 @@ const Home = (props) => {
                                     </Column>
                                 </Row>
                                 <Row>
+
                                     <Separator primary />
+
                                 </Row>
                                 <Row >
-                                    <H2 primary align="left" >{yml.title}<Span animated color={Colors.yellow}>_</Span></H2>
+                                    <Column size="10" customRespSize respSize="10">
+                                        <H2
+                                            fs_xs="38px"
+                                            fs_sm="38px"
+                                            fs_md="30px"
+                                            fs_lg="32px"
+                                            fs_xl="38px"
+                                            // primary
+                                            align="left" >{yml.title}<Span animated color={Colors.yellow}>_</Span></H2>
+                                    </Column>
                                 </Row>
                                 <Row RespSm>
-                                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.sub_heading}</Paragraph>
+                                    <Column size="10" customRespSize respSize="10">
+                                        <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.sub_heading}</Paragraph>
+                                    </Column>
                                 </Row>
 
                                 <Divider height="20px" />
@@ -65,26 +79,38 @@ const Home = (props) => {
                 </Row>
             </Container>
             <Divider height="45px" />
+
+            {/* CREDENTIALS CARDS */}
+
             <Wrapper
                 style="default">
                 <Credentials up="80" />
             </Wrapper>
+
+            {/* WHY 4GEEKS SECTION */}
+
             <Wrapper
                 style="default">
                 <Divider height="100px" />
                 <Why4Geeks />
                 <Divider height="50px" />
             </Wrapper>
+
+            {/* JOBS STATISTICS SECTION */}
+
             <Wrapper
                 style="default">
                 <JobsStatistics />
             </Wrapper>
             <Divider height="100px" />
+
+
+
             <Wrapper
                 style="default">
                 <Row align="center">
                     <Column size="4" customRespSize respSize="4" margin="5px 0">
-                        <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">LICENSED BY</Paragraph>
+                        <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">{yml.education.left_box.heading}</Paragraph>
                         <RoundImage
                             h_xs="40px"
                             h_sm="60px"
@@ -92,12 +118,12 @@ const Home = (props) => {
                             h_lg="70px"
                             h_xl="90px"
                             width="100%"
-                            url="/images/florida-logo.png"
+                            url={yml.education.left_box.image}
                             bsize="contain"
                             position="center" />
                     </Column>
                     <Column size="4" customRespSize respSize="4" margin="5px 0">
-                        <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">TOP CODING SCHOOL</Paragraph>
+                        <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">{yml.education.center_box.heading}</Paragraph>
                         <RoundImage
                             h_xs="50px"
                             h_sm="50px"
@@ -105,11 +131,11 @@ const Home = (props) => {
                             h_lg="70px"
                             h_xl="100px"
                             width="100%"
-                            url="/images/newsweek-logo.png"
+                            url={yml.education.center_box.image}
                             bsize="contain" />
                     </Column>
                     <Column size="4" customRespSize respSize="4" margin="5px 0">
-                        <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">4GEEKS IN THE NEWS</Paragraph>
+                        <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">{yml.education.right_box.heading}</Paragraph>
                         <RoundImage
                             h_xs="50px"
                             h_sm="90px"
@@ -117,7 +143,7 @@ const Home = (props) => {
                             h_lg="70px"
                             h_xl="100px"
                             width="100%"
-                            url="/images/cnn-bbc-logo.png"
+                            url={yml.education.right_box.image}
                             bsize="contain" />
                     </Column>
                 </Row>
@@ -129,8 +155,8 @@ const Home = (props) => {
                 <GeeksVsOthers hasTitle />
                 <Divider height="100px" />
                 <Title
-                    title="JOIN 4GEEKS"
-                    paragraph="Duis mollis, est non commodo luctus, nisi erat porttitor ."
+                    title={yml.join_geeks.heading}
+                    paragraph={yml.join_geeks.sub_heading}
                     primary
                 />
                 <Divider height="40px" />
@@ -158,15 +184,13 @@ const Home = (props) => {
                                                 color={Colors.black}
                                                 customTextAlignSmall
                                                 alignXs="left">
-                                                {yml.join_4geeks[0].geek_data.geek_pal_heading}
+                                                {yml.join_geeks.geek_data.geek_pal_heading}
                                             </Paragraph>
                                         </Column>
                                     </Row>
                                     <Row marginTop="15px">
                                         <Column size="12">
-
-
-                                            {yml.join_4geeks[0].geek_data.geek_pal_data.map((item, index) => {
+                                            {yml.join_geeks.geek_data.geek_pal_data.map((item, index) => {
                                                 return (
                                                     <Paragraph
                                                         key={index}
@@ -179,7 +203,6 @@ const Home = (props) => {
                                                     </Paragraph>
                                                 )
                                             })}
-
                                         </Column>
                                     </Row>
                                 </Column>
@@ -208,12 +231,12 @@ const Home = (props) => {
                                     <Row >
                                         <Column size="12">
                                             <Paragraph color={Colors.black} customTextAlignSmall
-                                                alignXs="left">{yml.join_4geeks[0].geek_data.geek_force_heading}</Paragraph>
+                                                alignXs="left">{yml.join_geeks.geek_data.geek_force_heading}</Paragraph>
                                         </Column>
                                     </Row>
                                     <Row marginTop="15px">
                                         <Column size="12">
-                                            {yml.join_4geeks[0].geek_data.geek_force_data.map((item, index) => {
+                                            {yml.join_geeks.geek_data.geek_force_data.map((item, index) => {
                                                 return (
                                                     <Paragraph
                                                         key="index"
@@ -246,7 +269,13 @@ const Home = (props) => {
             <Divider height="100px" />
             <Wrapper
                 style="default">
-
+                <Title
+                    size="10"
+                    title={yml.alumni_header.heading}
+                    paragraph={yml.alumni_header.sub_heading}
+                    customParagraphSize="8"
+                    primary
+                />
                 <Divider height="50px" />
                 <Alumni hasTitle />
             </Wrapper>
@@ -260,12 +289,10 @@ const Home = (props) => {
                     customParagraphSize="8"
                 // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
                 />
-
                 <Divider height="50px" />
                 <Loc />
             </Wrapper>
             <Divider height="100px" />
-
         </>
     )
 };
@@ -284,7 +311,7 @@ export const query = graphql`
             title
             sub_heading
             image
-            join_4geeks {
+            join_geeks {
                 heading
                 sub_heading
                 geek_data {
@@ -294,7 +321,28 @@ export const query = graphql`
                   geek_pal_heading
                 }
             }
+            education{
+                left_box{
+                    heading
+                    image
+                    alt
+                }
+                center_box{
+                    heading
+                    image
+                    alt
+                }
+                right_box{
+                    heading
+                    image
+                    alt
+                }
+            }
             locations{
+                heading
+                sub_heading
+            }
+            alumni_header{
                 heading
                 sub_heading
             }

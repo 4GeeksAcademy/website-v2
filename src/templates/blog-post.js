@@ -46,7 +46,7 @@ export default function Template ({data}) {
                 <Divider height="30px" />
                 <Row height="10%" align="around">
                     <Column size="8" alignSelf="center">
-                        <Paragraph color={Colors.gray} align="left" fontSize="12px" lineHeight="20px">{post.rawMarkdownBody}</Paragraph>
+                        <Paragraph color={Colors.gray} align="left" fontSize="12px" lineHeight="20px">{post.excerpt}</Paragraph>
                     </Column>
                 </Row>
                 {/* <Row align="center">
@@ -81,7 +81,7 @@ export const postQuery = graphql`
                 avatar
                 read_time
         }
-        rawMarkdownBody
+        excerpt
         
     }
 }

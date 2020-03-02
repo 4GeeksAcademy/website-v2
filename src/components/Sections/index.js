@@ -15,7 +15,7 @@ export const Container = styled.div`
                     
                 }
                 @media ${Device.xs}{
-                    height: auto;
+                    // height: auto;
                     padding: ${props => props.p_xs};
                     
                 }
@@ -59,7 +59,9 @@ export const Container = styled.div`
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    background: ${props => props.color}
+    padding-top: ${props => props.p_top};
+    padding-bottom: ${props => props.p_bottom};
+    background: ${props => props.color};
 `
 export const Row = styled.div`
     height: ${props => props.height};
@@ -108,6 +110,43 @@ export const Row = styled.div`
     @media ${Device.xl} {
     } 
     `
+
+export const Sidebar = styled.div`
+position: absolute;
+left: 40px;
+box-shadow: ${props => props.shadow
+        && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
+    }
+
+border-radius: ${props => props.borders};
+
+@media ${Device.xs}{
+    display: ${props => props.display_xs};
+}
+@media  ${Device.sm}{
+    display: ${props => props.display_sm};
+}
+@media ${Device.md}{
+    display: ${props => props.display_md};
+    
+}
+@media ${Device.lg}{
+    position: sticky;
+    top: 12%;
+    width: 160px;
+    left:15px;
+    padding: 15px 0 1px 0;
+}
+@media ${Device.xl} {
+    position: sticky;
+    top: 12%;
+    width: 180px;
+    left: 20px;
+    padding: 15px 0 1px 0;
+} 
+
+`
+
 export const Column = styled.div`
 padding: ${props => props.padding};
 height: ${props => props.height};
@@ -151,6 +190,7 @@ ${props =>
             css`
                 background: ${props => props.color};
 `}
+
 ${props =>
         props.size
             &&
@@ -160,28 +200,32 @@ ${props =>
             @media ${Device.xs}{
                 flex: 0 0 ${(props.respSize / 12) * 100}%;
                 max-width: ${(props.respSize / 12) * 100}%;
-                // height: 300px;
-                // border-radius: 0 0 0 0;
+                height: ${props => props.h_xs};
+                border-radius: ${props => props.br_xs};
                 text-align: center;
-                margin-bottom: ${props => props.respSizeMargin};
+                margin: ${props => props.m_xs};
+                display: ${props => props.disp_xs};
+                
             }
             @media ${Device.sm}{
                 flex: 0 0 ${(props.respSize / 12) * 100}%;
                 max-width: ${(props.respSize / 12) * 100}%;
-                // height: 300px;
-                // border-radius: 0 0 0 0;
+                height: ${props => props.h_sm};
+                border-radius: ${props => props.br_sm};
                 text-align: center;
                 margin-bottom: ${props => props.respSizeMargin};
-                
-               
-                
+                margin: ${props => props.m_sm};
+                display: ${props => props.disp_sm};
             }
             @media ${Device.md}{
                 flex: 0 0 ${(props.respSize / 12) * 100}%;
                 max-width: ${(props.respSize / 12) * 100}%;
                 text-align: ${props => props.align};
                 margin-bottom: ${props => props.respSizeMargin};
-                
+                border-radius: ${props => props.br_md};
+                margin: ${props => props.m_md};
+                height: ${props => props.h_md};
+                display: ${props => props.disp_md};
             }
             @media ${Device.lg}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
@@ -234,6 +278,7 @@ ${props =>
 `
     }
 `
+
 export const Wrapper = props => {
     if (props.style === "default") {
         return (
@@ -339,7 +384,7 @@ Wrapper.defaultProps = {
     outerLeftCol: '1',
     outerRightCol: '11',
     innerLeftCol: '1',
-    innerRightCol: '8',
+    innerRightCol: '10',
 
 };
 

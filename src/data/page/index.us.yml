@@ -7,9 +7,24 @@ meta_info:
   redirects: ["/home", "/us/home"]
 
 tagline: Miami Coding Bootcamp
-title: LEARN TO CODE   AND GET CAREER SUPPORT FOR LIFE
+title: LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE
 sub_heading: Join more than 600 graduates already working as coders and become a part of one of the world's biggest coding community.
 image: "../home-bg.png"
+
+## EDUCATION SECTION
+education:
+  left_box:
+    heading: "LICENSED BY"
+    image: "/images/florida-logo.png"
+    alt: ""
+  center_box:
+    heading: "TOP CODING SCHOOL"
+    image: "/images/newsweek-logo.png"
+    alt: ""
+  right_box:
+    heading: "4GEEKS IN THE NEWS"
+    image: "/images/cnn-bbc-logo.png"
+    alt: "CNN and BCC Logo"
 
 ## JOIN 4GEEKS SECTION DATA
 join_4geeks:
@@ -27,9 +42,14 @@ join_4geeks:
         - We'll do everything in our hands
         - to help you get a job in the field.
         - Includes Career Support Track,
-        - GeekPAL, and GeekTALK.
+        - GeekPAL and GeekTALK.
 
 ## LOCATIONS SECTION
 locations:
   heading: "OUR LOCATIONS"
   sub_heading: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+
+## ALUMNI SECTION
+alumni_header:
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."

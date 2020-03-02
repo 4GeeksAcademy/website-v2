@@ -12,6 +12,11 @@ tagline: "Coding Introduction Course - 4Geeks Academy"
 details:
   heading: PROGRAM DETAILS
   sub_heading: "Coding Introduction"
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
   details_modules:
     - module_name: "Your first website"
       title: "Your First Website"
@@ -47,6 +52,25 @@ geek_data:
     - Online support chat 12 hours a day
     - Online streaming of classes
     - Recording of classes for later review
+
+## GEEKS VS OTHERS SECTION
+geeksVsOthers:
+  heading: "4GEEKS VS OTHER IN NUMBERS"
+  sub_heading: "View full comparison table >"
+
 ## PRICES AND PAYMENTS SECTION
 prices:
   heading: "PRICES AND PAYMENTS"
+
+## ALUMNI SECTION
+alumni:
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBERSHIPS"
+  program: "PROGRAM"
+  geeks_vs_other: "4GEEKS vs OTHERS"
+  pricing: "PRICING"
+  alumni: "THE ALUMNI"

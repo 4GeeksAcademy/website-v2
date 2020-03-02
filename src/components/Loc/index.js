@@ -69,13 +69,23 @@ const Loc = (props) => {
                             <Divider height="10%" />
                             <Row height="10%">
                               <Column size="12">
-                                <H3 primary align="left" >{item.node.city}</H3>
+                                <H3
+                                  fs_xs="20px"
+                                  fs_sm="22px"
+                                  fs_md="20px"
+                                  fs_lg="20px"
+                                  fs_xl="20px"
+                                  primary
+                                  align="left"
+                                >
+                                  {item.node.city}
+                                </H3>
                               </Column>
                             </Row>
                             <Row height="5%" align="left">
-                              <Column size="12">
-                                <Separator al_xs="center" />
-                              </Column>
+
+                              <Separator al_xs="center" />
+
                             </Row>
                             <Row height="auto" marginBottom="10px">
                               <Column size="12">
@@ -115,7 +125,7 @@ const Loc = (props) => {
           console.log(randLocImgIndex)
           return (
 
-            <Column key={i} size="2" customRespSize respSize="2">
+            <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               <Link to={`/location/${pic.node.meta_info.slug}`}>
                 <RoundImage
                   h_xs="30px"
@@ -140,7 +150,7 @@ const Loc = (props) => {
                     <Column size="12" alignSelf="center" align="center">
                       <H4
                         color={Colors.white}
-                        fs_xs="10px"
+                        fs_xs="12px"
                         fs_sm="12px"
                         fs_md="12px"
                         fs_lg="14px"

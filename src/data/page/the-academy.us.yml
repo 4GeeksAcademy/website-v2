@@ -12,6 +12,13 @@ banner:
   sub_heading: ""
   image: "/bg/the-academy-bg.png"
 
+## 4GEEKS OUTCOMES
+outcomes:
+  heading: "4GEEKS OUTCOMES"
+  sub_heading: "out of our total students, 76% are looking to get a job right after and 24% are pursuing to improve their skills or launch startups"
+  ## The field image is gonna be replaced from a dinamic chart generator
+  image: "/images/program-charts.png"
+
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:
   heading: OUR FOUR CORNERSTONES
@@ -29,6 +36,11 @@ cornerstones:
     - title: TALENT TREE
       content: The syllabus maps out 44 skills; students earn points towards each skill in a gamified fashion.
       icon: Sitemap
+
+## STAFF SECTION
+staff:
+  heading: "MEET THE TEAM"
+  sub_heading: ""
 
 ## OUR STORY SECTION
 story:

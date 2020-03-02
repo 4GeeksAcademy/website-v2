@@ -2,11 +2,10 @@ import React, {useState, useEffect, useContext} from 'react';
 import Layout from '../global/Layout';
 import styled from 'styled-components';
 import {Card} from '../components/Card'
-import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
+import {Container, Row, Column, Wrapper, Divider, Sidebar} from '../components/Sections'
 import {Title, H2, H3, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
-import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
 import Alumni from '../components/Alumni'
 import Credentials from '../components/Credentials'
@@ -14,9 +13,9 @@ import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import {SessionContext} from '../session.js'
 import ProgramSelector from '../components/ProgramSelector'
-import {BrowserView} from "react-device-detect";
+
+
 
 const Program = ({data, pageContext, yml}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,10 +36,10 @@ const Program = ({data, pageContext, yml}) => {
       image="yes"
       url={yml.meta_info.image}
       border="bottom"
-      height="700px"
+      height="600px"
       backgroundSize="cover"
     >
-      <Divider height="240px" />
+      <Divider height="10%" />
       <ProgramSelector week={week} />
       <Divider height="20px" />
       <Title
@@ -61,15 +60,21 @@ const Program = ({data, pageContext, yml}) => {
       style="default">
       <Credentials up="80" />
     </Wrapper>
-    {/* <BrowserView> */}
-    <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
-      <li><a className="nav-item nav-link side" href="#section-1" >MEMBERSHIPS</a></li>
-      <li><a className="nav-item nav-link side" href="#section-2">PROGRAM</a></li>
-      <li><a className="nav-item nav-link side" href="#section-3">4GEEKS vs OTHERS</a></li>
-      <li><a className="nav-item nav-link side" href="#section-4">PRICING</a></li>
-      <li><a className="nav-item nav-link side" href="#section-5">THE ALUMNI</a></li>
-    </Scrollspy>
-    {/* </BrowserView> */}
+    <Sidebar
+      shadow
+      borders="1.25rem"
+      display_xs="none"
+      display_sm="none"
+      display_md="none"
+    >
+      <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
+        <li><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
+        <li><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
+        <li><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
+        <li><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
+        <li><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
+      </Scrollspy>
+    </Sidebar>
     <section className="section" id="section-1"></section>
     <Container fluid>
       <Row>
@@ -138,7 +143,7 @@ const Program = ({data, pageContext, yml}) => {
             <Column size="6">
               <Card
                 h_xs="400px"
-                h_sm="370px"
+                h_sm="400px"
                 h_md="470px"
                 h_lg="470px"
                 h_xl="470px"
@@ -194,8 +199,8 @@ const Program = ({data, pageContext, yml}) => {
 
     {/* PROGRAM DETAILS */}
     <Wrapper
-      style="custom"
-      full
+      style="default"
+
     >
       <Title
         size="10"
@@ -207,7 +212,7 @@ const Program = ({data, pageContext, yml}) => {
       <Row>
         <Column size="12" customRespSize respSize="12">
           <Row>
-            <Column size="11" customRespSize respSize="11">
+            <Column size="12" customRespSize respSize="11">
 
               <Card width="100%" height="450px" color="white" shadow >
                 <Tabs >
@@ -230,8 +235,8 @@ const Program = ({data, pageContext, yml}) => {
                               </Column>
                             </Row>
                             <Row height="20%">
-                              <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
-                                <Paragraph color={Colors.gray} fontSize="14px">DESCRIPTION:</Paragraph>
+                              <Column size="3" paddingLeft="20px" customRespSize respSize="3" >
+                                <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.description}</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">
                                 <Paragraph
@@ -246,7 +251,7 @@ const Program = ({data, pageContext, yml}) => {
                             </Row>
                             <Row height="20%">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
-                                <Paragraph color={Colors.gray} fontSize="14px">PROJECTS:</Paragraph>
+                                <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.projects}</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">
                                 <Paragraph
@@ -261,7 +266,7 @@ const Program = ({data, pageContext, yml}) => {
                             </Row>
                             <Row height="20%">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
-                                <Paragraph color={Colors.gray} fontSize="14px">DURATION:</Paragraph>
+                                <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.duration}</Paragraph>
                               </Column>
                               <Column size="6" customRespSize respSize="6" alignXs="left">
                                 <Paragraph
@@ -285,7 +290,7 @@ const Program = ({data, pageContext, yml}) => {
                                       fs_sm="12px"
                                       fs_md="10px"
                                       fs_lg="12px"
-                                      fs_xl="16px">Skills / Weeks:</Paragraph>
+                                      fs_xl="16px">{yml.details.left_labels.skills}</Paragraph>
                                   </Column>
                                 </Row>
                               </Column>
@@ -375,8 +380,8 @@ const Program = ({data, pageContext, yml}) => {
       <section className="section" id="section-3"></section>
       <Title
         size="10"
-        title="4GEEKS VS OTHER IN NUMBERS"
-        paragraph="View full comparison table >"
+        title={yml.geeksVsOthers.heading}
+        paragraph={yml.geeksVsOthers.sub_heading}
         primary
       />
       <Divider height="50px" />
@@ -389,6 +394,7 @@ const Program = ({data, pageContext, yml}) => {
       <Title
         size="10"
         title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
         primary
       />
       <section className="section" id="section-4"></section>
@@ -398,6 +404,13 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       style="default"
     >
+      <Title
+        size="10"
+        title={yml.alumni.heading}
+        paragraph={yml.alumni.sub_heading}
+        customParagraphSize="8"
+        primary
+      />
       <Divider height="50px" />
       <section className="section" id="section-5"></section>
       <Alumni hasTitle />
@@ -429,6 +442,12 @@ export const query = graphql`
             details {
               heading
               sub_heading
+              left_labels{
+                description
+                projects
+                duration
+                skills
+              }
               details_modules {
                 title
                 projects
@@ -438,8 +457,24 @@ export const query = graphql`
                 description
               }
             }
+            geeksVsOthers{
+              heading
+              sub_heading
+            }
             prices{
               heading
+              sub_heading
+            }
+            alumni{
+              heading
+              sub_heading
+            }
+            sidebar{
+              membership
+              program
+              geeks_vs_other
+              pricing
+              alumni
             }
         }
       }

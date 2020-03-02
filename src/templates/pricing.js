@@ -61,13 +61,13 @@ const Pricing = (props) => {
                     </Column>
                 </Row>
             </Container>
-            <Divider height="200px" />
+            <Divider height="100px" />
             <Wrapper
                 style="default"
                 image="no"
                 color={Colors.lightGray}
                 border="top"
-                height="430px"
+
             >
                 <Title
                     size="10"
@@ -76,7 +76,7 @@ const Pricing = (props) => {
                 />
                 <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
             </Wrapper>
-            <Divider height="260px" />
+            <Divider height="100px" />
             <Wrapper
                 style="custom"
                 full

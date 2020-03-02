@@ -67,14 +67,25 @@ const Jobs = ({data, pageContext, yml}) => {
                 <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                   <Row align="center" height="100%">
                     <Column size="8" height="100%">
-                      <Divider height="50px" />
-                      <Row height="50px">
-                        <H2 primary align="left" ></H2>
+                      <Row height="5%" />
+                      <Row height="90%" align="around">
+                        <Column size="12" alignSelf="center">
+                          <Paragraph
+                            color={Colors.gray}
+                            fs_xs="12px"
+                            fs_sm="12px"
+                            fs_md="12px"
+                            fs_lg="12px"
+                            fs_xl="12px"
+                            lineHeight="20px"
+                            margin="20px 0 0 0"
+                            align="left"
+                          >
+                            {yml.about.content}
+                          </Paragraph>
+                        </Column>
                       </Row>
-
-                      <Row height="">
-                        <Paragraph color={Colors.gray} fontSize="14px" lineHeight="20px" margin="20px 0 0 0" align="left" >{yml.about.content}</Paragraph>
-                      </Row>
+                      <Row height="5%" />
 
 
                     </Column>

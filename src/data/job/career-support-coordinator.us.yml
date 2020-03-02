@@ -13,7 +13,7 @@ sub_heading: ""
 ## BANNER INFO
 banner_heading: "Career Support Coordinator"
 banner_sub_heading: ""
-banner_image: "/images/pricing-bg.png"
+banner_image: "/bg/pricing-bg.png"
 cities:
     - Miami
     - Santiago de Chile
