@@ -8,7 +8,7 @@ meta_info:
 
 tagline: Miami Coding Bootcamp
 title: LEARN TO CODE   AND GET CAREER SUPPORT FOR LIFE
-sub_heading: Join more than 500 graduates already working as coders and become a part of one of the world's biggest coding community.
+sub_heading: Join more than 600 graduates already working as coders and become a part of one of the world's biggest coding community.
 image: "../home-bg.png"
 
 ## JOIN 4GEEKS SECTION DATA
@@ -16,7 +16,7 @@ join_4geeks:
   - heading: JOIN 4GEEKS
     sub_heading: Duis mollis, est non commodo luctus, nisi erat porttitor .
     geek_data:
-      geek_pal_heading: Programming - Always - Limitles
+      geek_pal_heading: Programming - Always - Limitless
       geek_pal_data:
         - Never code on your own again.
         - We will be along with lalong side your
