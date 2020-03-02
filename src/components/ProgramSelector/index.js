@@ -60,7 +60,7 @@ const ProgramSelector = (props) => {
       <Column size="12" alignSelf="center">
         <Row align="around">
           <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph fontSize="16px" color={Colors.white} >It takes just </Paragraph></Column>
-          <Column size="1" alignSelf="center" align="center" customRespSize respSize="2" >
+          <Column size="1" alignSelf="center" align="center" customRespSize respSize="" >
             <Card index="1" borders=".25rem" shadow width="100%" padding={toggles === false && "0px"}>
               {toggles == true ? null : <Row marginRight="0" marginLeft="0" align="center"><Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} color={Colors.white} textColor={Colors.gray}>{props.week}</Button></Row>}
               {toggles == true
@@ -80,7 +80,7 @@ const ProgramSelector = (props) => {
             </Card>
           </Column>
           <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph fontSize="16px" color={Colors.white} >weeks in</Paragraph></Column>
-          <Column size="3" alignSelf="center" align="center" customRespSize respSize="4">
+          <Column size="3" alignSelf="center" align="center" customRespSize respSize="6">
             <Card index="1" borders=".25rem" shadow width="100%" padding={toggle === false && "0px"}>
               {toggle == true ? null : <Row align="center"><Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>{session.location}</Button></Row>}
               {toggle == true
