@@ -203,6 +203,7 @@ export default (props) => {
   let info = null;
   currentCityInfo = data.allLocationYaml.edges.filter((item) => {return item.node.city === session.location})
   {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
+  console.log("info:", info)
 
   function getProgramInfo () {
     let program = "";
@@ -334,8 +335,8 @@ export default (props) => {
                 </Row>
                 <Row height="110px" >
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                    <Row height="100%" >
-                      <Column size="12" alignSelf="center" >
+                    <Row height="100%" align="center">
+                      <Column size="10" alignSelf="center" align="center">
                         <H3
                           fs_xs="20px"
                           fs_sm="24px"
@@ -432,7 +433,7 @@ export default (props) => {
               </Card>
             </Column>
               : null}
-            <Column size="4" customRespSize respSize="12">
+            {info.meta_info.slug != "madrid" && info.meta_info.slug != "santiago-chile" ? <Column size="4" customRespSize respSize="12">
               <Card shadow width="100%" height="350px" margin="5px 0">
                 <Row height="100px" >
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
@@ -460,8 +461,8 @@ export default (props) => {
                 </Row>
                 <Row height="110px" >
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                    <Row height="100%" >
-                      <Column size="12" alignSelf="center" >
+                    <Row height="100%" align="center">
+                      <Column size="10" alignSelf="center" align="center">
                         <H3
                           fs_xs="20px"
                           fs_sm="24px"
@@ -484,7 +485,7 @@ export default (props) => {
                   </Column>
                 </Row>
               </Card>
-            </Column>
+            </Column> : null}
           </Row>
         </> : <Row>Loading ...</Row>}
     </>
