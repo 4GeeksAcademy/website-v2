@@ -112,6 +112,14 @@ export const Row = styled.div`
     `
 
 export const Sidebar = styled.div`
+position: absolute;
+left: 40px;
+box-shadow: ${props => props.shadow
+        && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
+    }
+
+border-radius: ${props => props.borders};
+
 @media ${Device.xs}{
     display: ${props => props.display_xs};
 }
@@ -124,11 +132,17 @@ export const Sidebar = styled.div`
 }
 @media ${Device.lg}{
     position: sticky;
-    top: 10%;
+    top: 12%;
+    width: 160px;
+    left:15px;
+    padding: 15px 0 1px 0;
 }
 @media ${Device.xl} {
     position: sticky;
-    top: 10%;
+    top: 12%;
+    width: 180px;
+    left: 20px;
+    padding: 15px 0 1px 0;
 } 
 
 `
