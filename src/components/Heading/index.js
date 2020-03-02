@@ -273,7 +273,7 @@ Paragraph.defaultProps = {
   customParagraphSize: "12",
 };
 H1.defaultProps = {
-  color: Colors.black,
+  // color: Colors.black,
   fontSize: "42px"
 };
 H2.defaultProps = {
