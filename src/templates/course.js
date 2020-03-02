@@ -39,7 +39,7 @@ const Program = ({data, pageContext, yml}) => {
       height="600px"
       backgroundSize="cover"
     >
-      <Divider height="10%" />
+      <Divider height="20%" />
       <ProgramSelector week={week} />
       <Divider height="20px" />
       <Title
