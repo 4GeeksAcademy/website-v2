@@ -384,7 +384,7 @@ Wrapper.defaultProps = {
     outerLeftCol: '1',
     outerRightCol: '11',
     innerLeftCol: '1',
-    innerRightCol: '8',
+    innerRightCol: '10',
 
 };
 

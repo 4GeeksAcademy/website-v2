@@ -28,7 +28,7 @@ const Footer = () => {
     let col = data.allFooterYaml.edges;
     return (
         <>
-            <Container width="fluid" height="auto" color={Colors.black} p_top="15px" p_bottom="15px">
+            <Container width="fluid" height="auto" color={Colors.black} p_top="25px" p_bottom="15px">
                 <Divider height="20%" />
                 <Row height="60%">
                     <Column size="2"></Column>
