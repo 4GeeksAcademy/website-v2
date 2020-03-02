@@ -269,7 +269,6 @@ Title.propTypes = {
 //   primary: PropTypes.bool.isRequired,
 // }
 Paragraph.defaultProps = {
-  color: Colors.lightGray,
   fontSize: "14px",
   customParagraphSize: "12",
 };
