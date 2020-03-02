@@ -125,7 +125,7 @@ const Loc = (props) => {
           console.log(randLocImgIndex)
           return (
 
-            <Column key={i} size="2" customRespSize respSize="2">
+            <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               <Link to={`/location/${pic.node.meta_info.slug}`}>
                 <RoundImage
                   h_xs="30px"
@@ -150,7 +150,7 @@ const Loc = (props) => {
                     <Column size="12" alignSelf="center" align="center">
                       <H4
                         color={Colors.white}
-                        fs_xs="10px"
+                        fs_xs="12px"
                         fs_sm="12px"
                         fs_md="12px"
                         fs_lg="14px"

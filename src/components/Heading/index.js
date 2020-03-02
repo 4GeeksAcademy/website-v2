@@ -91,6 +91,7 @@ export const H3 = styled.h3`
   font-size: ${props => props.fs_xl};
 }   
 font-family: 'Futura', sans-serif;
+margin: ${props => props.margin};
 font-weight: 800;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
@@ -231,7 +232,7 @@ export const Title = props => {
           <>
             <Row align="center">{<H1 color={props.color} fontSize={props.fontSize} align={props.textAlign}>{props.title}</H1>}</Row>
             <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
-            <Row align="center"><Column size="12">{props.primary ? <Paragraph primary>{props.paragraph}</Paragraph> : <Paragraph color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Column></Row>
+            <Row align="center"><Column size="8">{props.primary ? <Paragraph align="center" primary>{props.paragraph}</Paragraph> : <Paragraph align="center" color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Column></Row>
           </>
         )
         :

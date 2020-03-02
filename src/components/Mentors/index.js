@@ -79,6 +79,7 @@ const Mentors = props => {
                                             fs_md="14px"
                                             fs_lg="14px"
                                             fs_xl="18px"
+                                            margin="0"
                                             uppercase
                                             color={Colors.yellow}
                                         >{item.name}</H3>
@@ -87,6 +88,7 @@ const Mentors = props => {
                                             fs_md="14px"
                                             fs_lg="14px"
                                             fs_xl="18px"
+                                            margin="0"
                                             uppercase
                                             color={Colors.yellow}>{item.last_name}</H3>
                                         <Paragraph margin="5px 0" color={Colors.lightGray}>{item.job_title}</Paragraph>

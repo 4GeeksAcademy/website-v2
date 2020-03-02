@@ -190,6 +190,7 @@ ${props =>
             css`
                 background: ${props => props.color};
 `}
+
 ${props =>
         props.size
             &&
