@@ -1,0 +1,34 @@
+meta_info:
+  slug: aliados
+  title: "Sobre la Academia"
+  description: "Acerca de 4Geeks Academy"
+  image: ""
+  keywords: []
+  redirects: []
+
+tagline: COMPAÑÍAS QUE CONFIAN EN NOSOTROS Y CONTRATAN A NUESTRAS ESTUDIANTES
+sub_heading: Estoy impresionada con el nivel de comprensión que las estudiantes de 4Geeks tienen, mi contratación evolucionó a lider del equipo de la Agencia de Marketing Cueva Social.
+button: HAZTE HIRING PARTNER
+image: "/bg/companies-bg.png"
+button_section:
+  button_text: "HAZTE HIRING PARTNER"
+  button_link: ""
+# ## PARTNERS SECTION
+# partners:
+#     - heading: "SOME OF OUR PARTNERS AND EMPLOYERS"
+#       sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
+#       partners_name: "partners" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)
+
+# ## CODING SECTION
+# coding:
+#     - heading: "COMPANIES TRUST US AND HIRE OUR STUDENTS"
+#       sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
+#       partners_name: "coding" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)
+
+# ## INFLUENCERS SECTION
+# influencers:
+#     - heading: "IN PARTNERSHIP WITH THE CITY'S BIGGEST INFLUENCERS"
+#       sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
+#       partners_name: "influencers" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)
+
+## BUTTON BE A HIRING PARTNER

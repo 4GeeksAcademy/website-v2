@@ -1,0 +1,65 @@
+meta_info:
+  slug: desarrollo-web-full-stack-bootcamp-full-time
+  title: null
+  description: null
+  image: "/images/program-bg.png"
+  keywords: null
+  redirects: ["/curso/full-time", "full-time"]
+
+tagline: "FULL STACK DEVELOPER"
+
+## PROGRAM DETAILS
+details:
+  heading: DETALLES DEL PROGRAMA
+  sub_heading: "Full Time"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "PREWORK"
+      description: "Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página."
+      projects: "CSS Postcard, Versión mínima de Instagram, etc."
+      slug: "prework"
+      duration: "1 sem"
+    - module_name: "FUNDAMENTOS"
+      title: "Aprende a programar"
+      description: "Piensa como un ordenador: Controla el flujo de tu código, crea algoritmos, haz un bucle, usa condicionales y usa/mezcla JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
+      projects: "Pequeños juegos y sitios web interactivos."
+      slug: "fundamentos"
+      duration: "2 sem"
+    - module_name: "DESARROLLO WEB"
+      title: "Desarrollo web"
+      description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bunding, Babel JS, el DOM, Eventos"
+      projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."
+      slug: "desarrollo-web"
+      duration: "4 sem"
+    - module_name: "APLICACIÓN AVANZADA"
+      title: "Aplicación avanzada"
+      description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publicando tu sitio web, etc."
+      projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
+      slug: "aplicacion-avanzada"
+      duration: "2 sem"
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  geek_pal_heading: Trabaja en tecnología
+  geek_pal:
+      - Construcción de CV
+      - Construcción del perfil de Github
+      - Preparación de simulación de entrevistas
+      - Sesión de preparación de entrevistas personalizadas para trabajos específicos
+      - Entrenamiento de marca personal
+      - Prácticas y ejercicios de programación posteriores a la graduación
+geek_force_heading: ""
+  geek_force:
+      - Un profesor cada cuatro estudiantes (1:4)
+      - Un profesor principal cada doce estudiantes (1:12)
+      - Sesiones ilimitadas de tutoría por demanda, en persona o en línea.
+      - Miles de ejercicios autoevaluados
+      - Tutoriales interactivos y autoevaluados
+      - Soluciones en video para una retroalimentación instantánea
+      - Chat de apoyo en línea 12 horas al día
+      - Transmisión en línea de las clases
+      - Grabación de las clases para su posterior revisión
+
+prices:
+  heading: "PRECIOS Y PAGOS"
+  

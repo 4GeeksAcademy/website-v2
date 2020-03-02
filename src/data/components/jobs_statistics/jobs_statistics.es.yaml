@@ -1,0 +1,22 @@
+## JOBS CHARTS DATA - HOME PAGE
+## THE NUMBERS IN THE chart_data FIELD, CREATE THE CHART
+## THE FIRST NUMBER IS THE STARTING OF THE CHART IN THE BOTTOM - LEFT
+jobs:
+  - title: "Ratio de crecimiento"
+    slug: "ratio-de-crecimiento"
+    sub_title: "Bootcamp de programación"
+    value: 171
+    value_symbol: "%"
+    chart_data: [0, 2, 5, 4, 5, 10, 3, 5, 1, 9, 6, 8, 6, 9, 10]
+  - title: "Plazas abiertas"
+    slug: "plazas abiertas"
+    sub_title: "Trabajos para programadores"
+    value: 300
+    value_symbol: "K"
+    chart_data: [0, 3, 6, 9, 3, 10, 8, 5, 7, 8, 5, 8, 2, 9, 10]
+  - title: "Salario promedio"
+    slug: "salario-promedio"
+    sub_title: "Desarrollador Jr"
+    value: 22
+    value_symbol: "K €"
+    chart_data: [0, 2, 5, 9, 5, 10, 3, 5, 2, 3, 5, 8, 2, 9, 10]

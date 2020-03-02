@@ -1,0 +1,21 @@
+## CAREERS - JOBS TEMPLATE
+## YOU CAN CHANGE THE MAIN HEADER AND THE MORE ABOUT 4GEEKS SECTION
+
+meta_info:
+  slug: empleo
+  title: null
+  description: null
+  image: null
+  keywords: []
+  redirects: []
+
+banner:
+  tagline: "TRABAJA EN 4GEEKS ACADEMY"
+  sub_heading: ""
+  image: "/images/pricing-bg.png"
+
+about:
+  heading: "MÁS SOBRE 4GEEKS ACADEMY"
+  sub_heading: "Curabitur blandit tempus porttitor."
+  image: "/images/our-story.png"
+  content: "4Geeks Academy fue fundada en 2015. Lo que comenzó como un proyecto interno para entrenar a más desarrolladores, se ha convertido en nuestra pasión a tiempo completo. 4Geeks es hoy un Coding Bootcamp con sede en EE.UU., que persigue construir un nuevo marco de trabajo para la Educación en Programación porque la programación se está convirtiendo en una parte esencial de nuestra sociedad. 4Geeks Academy tiene ahora sedes en 4 ciudades, 6 campus en curso, y más de 600 personas graduadas."
