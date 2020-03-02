@@ -6,7 +6,6 @@ import {Container, Row, Column, Wrapper, Divider, Sidebar} from '../components/S
 import {Title, H2, H3, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
-import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
 import Alumni from '../components/Alumni'
 import Credentials from '../components/Credentials'
@@ -14,9 +13,8 @@ import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import {SessionContext} from '../session.js'
 import ProgramSelector from '../components/ProgramSelector'
-import {BrowserView} from "react-device-detect";
+
 
 
 const Program = ({data, pageContext, yml}) => {
@@ -63,6 +61,8 @@ const Program = ({data, pageContext, yml}) => {
       <Credentials up="80" />
     </Wrapper>
     <Sidebar
+      shadow
+      borders="1.25rem"
       display_xs="none"
       display_sm="none"
       display_md="none"
