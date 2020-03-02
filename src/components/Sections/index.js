@@ -110,6 +110,29 @@ export const Row = styled.div`
     @media ${Device.xl} {
     } 
     `
+
+export const Sidebar = styled.div`
+@media ${Device.xs}{
+    display: ${props => props.display_xs};
+}
+@media  ${Device.sm}{
+    display: ${props => props.display_sm};
+}
+@media ${Device.md}{
+    display: ${props => props.display_md};
+    
+}
+@media ${Device.lg}{
+    position: sticky;
+    top: 10%;
+}
+@media ${Device.xl} {
+    position: sticky;
+    top: 10%;
+} 
+
+`
+
 export const Column = styled.div`
 padding: ${props => props.padding};
 height: ${props => props.height};
@@ -165,7 +188,8 @@ ${props =>
                 height: ${props => props.h_xs};
                 border-radius: ${props => props.br_xs};
                 text-align: center;
-                margin: ${props => props.m_xs}
+                margin: ${props => props.m_xs};
+                display: ${props => props.disp_xs};
                 
             }
             @media ${Device.sm}{
@@ -175,10 +199,8 @@ ${props =>
                 border-radius: ${props => props.br_sm};
                 text-align: center;
                 margin-bottom: ${props => props.respSizeMargin};
-                margin: ${props => props.m_sm}
-                
-               
-                
+                margin: ${props => props.m_sm};
+                display: ${props => props.disp_sm};
             }
             @media ${Device.md}{
                 flex: 0 0 ${(props.respSize / 12) * 100}%;
@@ -188,7 +210,7 @@ ${props =>
                 border-radius: ${props => props.br_md};
                 margin: ${props => props.m_md};
                 height: ${props => props.h_md};
-                
+                display: ${props => props.disp_md};
             }
             @media ${Device.lg}{
                 flex: 0 0 ${(props.size / 12) * 100}%;
@@ -241,6 +263,7 @@ ${props =>
 `
     }
 `
+
 export const Wrapper = props => {
     if (props.style === "default") {
         return (
