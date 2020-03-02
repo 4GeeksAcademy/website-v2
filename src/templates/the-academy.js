@@ -95,7 +95,7 @@ const Why = (props) => {
                                     marginXs="0 0 30px 0"
                                 >
                                     <Row >
-                                        <Column size="3" pl_lg="0">
+                                        <Column size="4" pl_lg="0">
 
                                             {item.icon === "Book" && <Book width="48px" color={Colors.yellow} fill={Colors.yellow} />}
                                             {item.icon === "Teacher" && <Teacher width="48px" color={Colors.yellow} fill={Colors.yellow} />}
@@ -104,9 +104,26 @@ const Why = (props) => {
 
                                         </Column>
                                         <Column size="8" >
-                                            <Row><H4 color={Colors.white}>{item.title}</H4></Row>
+                                            <Row>
+                                                <H4
+                                                    fs_xs="18px"
+                                                    fs_sm="20px"
+                                                    fs_md="18px"
+                                                    fs_lg="20px"
+                                                    fs_xl="22px"
+                                                    color={Colors.white}
+                                                >
+                                                    {item.title}
+                                                </H4>
+                                            </Row>
                                             <Row marginTop="15px">
-                                                <Paragraph fontSize="14px" lineHeight="18px">
+                                                <Paragraph
+                                                    fs_xs="16px"
+                                                    fs_sm="16px"
+                                                    fs_md="10px"
+                                                    fs_lg="13px"
+                                                    fs_xl="14px"
+                                                    lineHeight="18px">
                                                     {item.content}
                                                 </Paragraph>
                                             </Row>
