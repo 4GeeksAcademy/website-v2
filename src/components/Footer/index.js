@@ -24,7 +24,6 @@ const Footer = () => {
           }
         }
       `)
-    console.log("footer", data.allFooterYaml.edges)
     let col = data.allFooterYaml.edges;
     return (
         <>

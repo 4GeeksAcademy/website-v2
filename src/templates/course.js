@@ -39,7 +39,7 @@ const Program = ({data, pageContext, yml}) => {
       height="600px"
       backgroundSize="cover"
     >
-      <Divider height="10%" />
+      <Divider height="20%" />
       <ProgramSelector week={week} />
       <Divider height="20px" />
       <Title
@@ -234,7 +234,7 @@ const Program = ({data, pageContext, yml}) => {
                                 <Paragraph color={Colors.black} fontSize="20px">{item.title}</Paragraph>
                               </Column>
                             </Row>
-                            <Row height="20%">
+                            <Row height="20%" alignResp="left">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" >
                                 <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.description}</Paragraph>
                               </Column>
@@ -249,7 +249,7 @@ const Program = ({data, pageContext, yml}) => {
                                 >{item.description}</Paragraph>
                               </Column>
                             </Row>
-                            <Row height="20%">
+                            <Row height="20%" alignResp="left">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
                                 <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.projects}</Paragraph>
                               </Column>
@@ -264,7 +264,7 @@ const Program = ({data, pageContext, yml}) => {
                                 >{item.projects}</Paragraph>
                               </Column>
                             </Row>
-                            <Row height="20%">
+                            <Row height="20%" alignResp="left">
                               <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
                                 <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.duration}</Paragraph>
                               </Column>

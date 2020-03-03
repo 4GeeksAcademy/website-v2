@@ -123,7 +123,8 @@ const Why = (props) => {
                                                     fs_md="10px"
                                                     fs_lg="13px"
                                                     fs_xl="14px"
-                                                    lineHeight="18px">
+                                                    lineHeight="18px"
+                                                    color={Colors.lightGray}>
                                                     {item.content}
                                                 </Paragraph>
                                             </Row>
