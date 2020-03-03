@@ -40,8 +40,11 @@ const Footer = () => {
                                     <Column key={index} size="2" margin="0 0 20px 0">
                                         <Row height="20px"><H5 fontSize="16px" color={Colors.gray}>{item.heading}</H5></Row>
                                         {item.heading != null
-                                            ? <Row height="20px" marginBottom="10px"><Separator primary></Separator></Row>
-                                            : <Row height="20px" marginBottom="10px"></Row>}
+                                            ? item.heading === "COMPANY"
+                                                ? <Row height="20px" marginBottom="10px"><Separator margin=".5rem 0" width="100%" primary></Separator></Row>
+                                                : <Row height="20px" marginBottom="10px" ><Separator primary></Separator></Row>
+                                            : <Row height="20px" marginBottom="10px"><Separator margin=".5rem 0" primary></Separator></Row>
+                                        }
                                         {item.items.map((items) => {
                                             return (
                                                 <Link to={items.link} key={item.name}>

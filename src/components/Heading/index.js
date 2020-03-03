@@ -162,14 +162,16 @@ export const Span = styled.span`
 `
 export const Separator = styled.div`
   text-align: ${props => props.align};
-  margin: .5rem 15px;
+  margin: ${props => props.margin};
   height: 5px;
-  width: 50px;
+  width: ${props => props.width};
   @media ${Device.xs}{
     text-align: ${props => props.al_xs};
+    width: 50px;
   }
   @media  ${Device.sm}{
     text-align: ${props => props.al_sm};
+    width: 50px;
   }
   @media ${Device.md}{
   }
@@ -271,6 +273,10 @@ Title.propTypes = {
 Paragraph.defaultProps = {
   fontSize: "14px",
   customParagraphSize: "12",
+};
+Separator.defaultProps = {
+  width: "50px",
+  margin: ".5rem 15px"
 };
 H1.defaultProps = {
   // color: Colors.black,
