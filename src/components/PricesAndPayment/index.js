@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext, useEffect, useRef} from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
@@ -28,13 +28,24 @@ export default (props) => {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(session.location);
-  // useEffect(() => {
-  //   const loadInfo = async () => {
-  //     let t = data.allLocationsYaml.edges.filter((item) => item.node.city === session.location)
-  //     await setTest(t)
-  //   };
-  //   loadInfo();
-  // }, [])
+  console.log("steps", steps)
+  const intervalRef = useRef(null);
+  let maxSteps = 0;
+  const start = () => {
+    getSteps(session.location);
+    intervalRef.current = setInterval(() => {
+      maxSteps += 1;
+      console.log("maxSteps", totalSteps())
+      setActiveStep(activeStep => activeStep + 1);
+      if (maxSteps === 5) {setActiveStep(0); maxSteps = 0;}
+    }, 5000);
+  };
+  const stop = () => {
+    clearInterval(intervalRef.current);
+  };
+  useEffect(() => {
+    start()
+  }, [])
   const handleChange = (checked) => {
     setChecked(checked)
   }
@@ -64,6 +75,7 @@ export default (props) => {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
   const handleStep = step => () => {
+    stop()
     setActiveStep(step);
   };
   const handleComplete = () => {
@@ -289,7 +301,10 @@ export default (props) => {
         return 'Unknown step';
     }
   }
-  console.log("info", info)
+  // const handleClick = (index) => {
+  //   handleStep(index);
+  //   stop();
+  // }
   return (
     <>
       {/* 3 COLUMNS LAYOUT */}
@@ -487,7 +502,8 @@ export default (props) => {
               </Card>
             </Column> : null}
           </Row>
-        </> : <Row>Loading ...</Row>}
+        </> : <Row>Loading ...</Row>
+      }
     </>
   )
 }
