@@ -87,6 +87,7 @@ export const Row = styled.div`
             ? css`justify-content: center;`
             : css`justify-content: left;`}
     @media ${Device.xs}{
+        display: ${props => props.display_xs};
         ${props => props.customRespSize
         ? css`justify-content: ${props => props.alignResp};`
         : css`justify-content: center;`};

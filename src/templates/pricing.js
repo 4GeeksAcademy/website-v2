@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../global/Layout';
+import styled, {css} from 'styled-components';
 import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
 import {Title, H5} from '../components/Heading'
 import {Button, Colors, RoundImage} from '../components/Styling'
@@ -7,10 +8,21 @@ import Credentials from '../components/Credentials'
 import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring'
 import BaseRender from './_baseRender'
+import {Card} from '../components/Card'
+import ToggleButton from '../components/ToggleButton'
+
+const Input = styled.input`
+    background-color:${Colors.lightGray};
+    height: 40px;
+    width: 100%;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-color: ${Colors.black};
+`
 
 const Pricing = (props) => {
     const {data, pageContext, yml} = props;
-    console.log("yml", yml)
     return (
         <>
             {/* HEADER SECTION */}
@@ -25,12 +37,14 @@ const Pricing = (props) => {
                 <Divider height="100px" />
                 <Title
                     size="5"
+                    color={Colors.white}
                     title={yml.banner.tagline}
                     paragraph={yml.banner.sub_heading}
                     main
-                    color={Colors.white}
+                    paragraphColor={Colors.white}
                     fontSize="46px"
                     textAlign="center"
+
                 />
             </Wrapper>
             {/* CREDENTIALS SECTION */}
@@ -78,8 +92,8 @@ const Pricing = (props) => {
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
-                style="custom"
-                full
+                style="default"
+
             >
                 <Title
                     size="10"
@@ -88,8 +102,17 @@ const Pricing = (props) => {
                     primary
                 />
                 <Divider height="30px" />
+
+
                 <Row align="center">
-                    <Button outline width="300px" color={Colors.blue}>{yml.payment_guide.button_text}</Button>
+                    <Column size="6" align="center">
+                        <ToggleButton
+                            text={yml.payment_guide.button_text}
+
+                            sub_text={yml.payment_guide.submit_button_text}
+                        />
+                    </Column>
+                    {/* <Button outline width="300px" color={Colors.blue}>{yml.payment_guide.button_text}</Button> */}
                 </Row>
                 <Divider height="100px" />
             </Wrapper>
@@ -134,6 +157,8 @@ export const query = graphql`
                 sub_heading
                 button_text
                 button_link
+                submit_button_text
+                submit_button_link
             }
             ecosystem{
                 heading

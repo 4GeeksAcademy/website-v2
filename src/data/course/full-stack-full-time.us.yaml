@@ -8,6 +8,11 @@ meta_info:
 
 tagline: "FULL STACK DEVELOPER"
 
+button:
+  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_submit_text: "SUBMIT"
+  apply_button_text: "APPLY NOW"
+
 ## PROGRAM DETAILS
 details:
   heading: PROGRAM DETAILS
