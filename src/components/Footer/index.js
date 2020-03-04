@@ -37,13 +37,15 @@ const Footer = () => {
                             {col[0].node.footer.map((item, index) => {
                                 console.log("footer", item)
                                 return (
-                                    <Column key={index} size="2" margin="0 0 20px 0">
-                                        <Row height="20px"><H5 fontSize="16px" color={Colors.gray}>{item.heading}</H5></Row>
+                                    <Column key={index} size="2" margin={item.heading === "COMPANY" ? "0" : "0 0 20px 0"}>
+                                        {item.heading === null
+                                            ? <Row height="20px" display_xs="none" display_sm="none"><H5 fontSize="16px" color={Colors.gray}>{item.heading}</H5></Row>
+                                            : <Row height="20px"><H5 fontSize="16px" color={Colors.gray}>{item.heading}</H5></Row>}
                                         {item.heading != null
                                             ? item.heading === "COMPANY"
                                                 ? <Row height="20px" marginBottom="10px"><Separator margin=".5rem 0" width="100%" primary></Separator></Row>
-                                                : <Row height="20px" marginBottom="10px" ><Separator primary></Separator></Row>
-                                            : <Row height="20px" marginBottom="10px"><Separator margin=".5rem 0" primary></Separator></Row>
+                                                : <Row height="20px" marginBottom="10px" ><Separator margin=".5rem 0" primary></Separator></Row>
+                                            : <Row height="20px" marginBottom="10px" display_xs="none" display_sm="none"><Separator margin=".5rem 0" primary></Separator></Row>
                                         }
                                         {item.items.map((items) => {
                                             return (
