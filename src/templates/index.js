@@ -293,6 +293,7 @@ const Home = (props) => {
                 <Loc />
             </Wrapper>
             <Divider height="100px" />
+
         </>
     )
 };

@@ -30,6 +30,7 @@ const Partners = (props) => {
                     color={Colors.white}
                     fontSize="46px"
                     textAlign="center"
+                    paragraphColor={Colors.white}
                 />
                 <Row align="center">
                     <Button width="300px" margin="15px 0px" color="red" textColor="white">{yml.button}</Button>

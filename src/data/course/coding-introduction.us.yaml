@@ -7,7 +7,10 @@ meta_info:
   redirects: ["/coding-introduction-programming"]
 
 tagline: "Coding Introduction Course - 4Geeks Academy"
-
+button:
+  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_submit_text: "SUBMIT"
+  apply_button_text: "APPLY NOW"
 ## PROGRAM DETAILS
 details:
   heading: PROGRAM DETAILS
