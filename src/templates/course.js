@@ -14,6 +14,7 @@ import BaseRender from './_baseRender'
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ProgramSelector from '../components/ProgramSelector'
+import ToggleButton from '../components/ToggleButton'
 
 
 
@@ -52,13 +53,16 @@ const Program = ({data, pageContext, yml}) => {
 
       />
       <Row align="center">
-        <Column align="right" size="6"><Button width="200px" color={Colors.white} margin="15px 0" textColor={Colors.black}>REQUEST SYLLABUS</Button></Column>
-        <Column align="left" size="6"><Button width="200px" color="red" margin="15px 0" textColor=" white">APPLY NOW</Button></Column>
+        <Column align="right" size="6"><Button width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button></Column>
+        <Column align="left" size="6">
+          <ToggleButton margin="15px 0" text={yml.button.syllabus_button_text} sub_text={yml.button.syllabus_submit_text}></ToggleButton>
+          {/* <Button width="200px" color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button> */}
+        </Column>
       </Row>
     </Wrapper>
     <Wrapper
       style="default">
-      <Credentials up="80" />
+      <Credentials up="60" />
     </Wrapper>
     <Sidebar
       shadow
@@ -216,15 +220,26 @@ const Program = ({data, pageContext, yml}) => {
 
               <Card width="100%" height="450px" color="white" shadow >
                 <Tabs >
-                  <Header height="25%">
+                  <Header height="8%">
                     <TabList >
                       {yml.details.details_modules.map((item, index) => {
-                        return (<Tab key={item.module_name} onClick={() => setCurrentIndex(index)}>{item.module_name}</Tab>)
+                        return (<Tab key={item.module_name} onClick={() => setCurrentIndex(index)}>
+                          <Paragraph
+                            color={Colors.white}
+                            fs_xs="8px"
+                            fs_sm="12px"
+                            fs_md="12px"
+                            fs_lg="14px"
+                            fs_xl="16px"
+                          >
+                            {item.module_name}
+                          </Paragraph>
+                        </Tab>)
                       })
                       }
                     </TabList>
                   </Header>
-                  <Body height="75%">
+                  <Body height="92%">
                     {yml.details.details_modules.map((item, i) => {
                       return (
                         <TabPanel key={item.title} onChange={() => setInd(i)}>
@@ -427,6 +442,11 @@ export const query = graphql`
       edges{
         node{
             tagline
+            button{
+              syllabus_button_text
+              syllabus_submit_text
+              apply_button_text
+            }
             meta_info{
                 title
                 description
