@@ -84,7 +84,7 @@ const ToggleButton = (props) => {
                             <Divider height="20px" />
                             <Row height="30px" align="center">
                                 <Column size="11" align="center">
-                                    <Button margin={props.margin} width="90%" onClick={() => {setToggle(!toggle); console.log(formData)}} color={props.sub_color} textColor={props.sub_textColor}>{props.sub_text}</Button>
+                                    <Button margin={props.margin} width="90%" onClick={() => setToggle(!toggle)} color={props.sub_color} textColor={props.sub_textColor}>{props.sub_text}</Button>
                                 </Column>
                             </Row>
                         </Card>
