@@ -38,7 +38,7 @@ const RecentPosts = () => {
                   node {
                     frontmatter {
                       title
-                      path
+                      slug
                       date
                       author
                       image

@@ -1,10 +1,9 @@
 ---
-path: "/post-three"
+slug: "post-threee"
 date: "2018-11-19"
 title: "Post Three Example"
 author: "Alejandro Sanchez"
 avatar: "../staff/alejandro.png"
-read_time: "2 min"
 image: "/images/why2.png"
 intro: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui."
 ---
