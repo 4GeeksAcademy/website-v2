@@ -46,13 +46,11 @@ const ChooseProgram = () => {
                 w_md="200px"
                 w_lg="200px"
                 w_xl="200px"
-
                 shadow width="230px"
                 padding={toggle === false ? "0px" : "0 0 10px 0"}>
                 <Row marginRight="0" marginLeft="0" align="center"><Button width="100%" onClick={() => setToggle(!toggle)} color={Colors.blue} textColor={Colors.white}>{toggle === true ? "Close" : "CHOOSE YOUR PROGRAM"}</Button></Row>
                 {toggle == true
                     ?
-
                     <Row marginBottom="5px" marginRight="0" marginLeft="0" align="center">
                         <>
                             {locPrograms.map((item, index) => {
