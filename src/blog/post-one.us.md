@@ -1,5 +1,5 @@
 ---
-path: "/post-one"
+slug: "post-onee"
 date: "2018-11-19"
 title: "Pay once you get a Job"
 author: "Marcelo Ricigliano"

@@ -1,5 +1,5 @@
 ---
-path: "/post-three"
+slug: "post-threee"
 date: "2018-11-19"
 title: "Post Three Example"
 author: "Alejandro Sanchez"

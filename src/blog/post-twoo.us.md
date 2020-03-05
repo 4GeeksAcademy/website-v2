@@ -1,5 +1,5 @@
 ---
-path: "/post-two"
+slug: "post-twoo"
 date: "2018-11-19"
 title: "Post Two Example"
 author: "Paolo Lucano"

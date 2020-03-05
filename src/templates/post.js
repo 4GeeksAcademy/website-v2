@@ -4,8 +4,10 @@ import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/H
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
 import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
 
-export default function Template ({data}) {
-    const post = data.markdownRemark
+export default function Template (props) {
+    console.log("props", props);
+    const {data, pageContext, yml} = props;
+    const post = data.markdownRemark;
 
     return (
 
@@ -70,11 +72,11 @@ export default function Template ({data}) {
     )
 }
 export const postQuery = graphql`
-    query BlogPostByPath($path: String!){
-                markdownRemark(frontmatter: {path: {eq: $path}}){
+    query BlogPostBySlug($slug: String!){
+                markdownRemark(frontmatter: {slug: {eq: $slug}}){
                 html
             frontmatter{
-                path
+                slug
                 title
                 author
                 date

@@ -5,11 +5,11 @@ const {createFilePath} = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions;
-    const types = ['PageYaml', 'CourseYaml', 'LocationYaml', 'JobYaml'];
+    const types = ['MarkdownRemark', 'PageYaml', 'CourseYaml', 'LocationYaml', 'JobYaml'];
+    // const types = ['MarkdownRemark'];
     if (types.includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});
-        // const ctas = callToActions();
         if (meta) {
             createNodeField({node, name: `lang`, value: meta.lang});
             createNodeField({node, name: `slug`, value: meta.slug});
@@ -33,8 +33,8 @@ exports.createPages = async (params) =>
     true;
 
 const createBlog = async ({actions, graphql}) => {
-    const {createPage} = actions;
-    const postTemplate = path.resolve('src/templates/blog-post.js');
+    const {createPage, createRedirect} = actions;
+    const postTemplate = path.resolve('src/templates/post.js');
     const result = await graphql(`
     {
         allMarkdownRemark{
@@ -44,11 +44,20 @@ const createBlog = async ({actions, graphql}) => {
                     id
                     frontmatter{
                         title
-                        path
+                        slug
                         author
-                        date        
+                        date
                     }
-                    excerpt
+                    excerpt,
+                    fields{
+                        lang
+                        slug
+                        file_name
+                        template
+                        type
+                        pagePath
+                        filePath
+                    }
                 }
             }
         }
@@ -58,9 +67,28 @@ const createBlog = async ({actions, graphql}) => {
 
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
         createPage({
-            path: node.frontmatter.path,
-            component: postTemplate
-        })
+            path: node.fields.pagePath,
+            component: postTemplate,
+            context: {
+                ...node.fields,
+            }
+        });
+
+        // the old website had the blog posts with this path '/post-name' and we want now '/en/post/post-name'
+        createRedirect({
+            fromPath: `/${node.fields.slug}`,
+            toPath: node.fields.pagePath,
+            redirectInBrowser: true,
+            isPermanent: true
+        });
+
+        // if now lang specified, we forward to english
+        createRedirect({
+            fromPath: node.fields.pagePath,
+            toPath: `/en/${node.fields.template}/${node.fields.slug}`,
+            redirectInBrowser: true,
+            isPermanent: true
+        });
     });
 
     return true;
@@ -279,12 +307,16 @@ const addAdditionalRedirects = ({graphql, actions}) => {
 //     return true;
 // };
 
-const getMetaFromPath = ({url, meta_info}) => {
+const getMetaFromPath = ({url, meta_info, frontmatter}) => {
+    
+    //if its a blog post the meta_info comes from the front-matter
+    if(typeof(meta_info) == 'undefined') meta_info = frontmatter;
+    
     const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
     let m = regex.exec(url);
     if (!m) return false;
 
-    const type = m[1];
+    const type = frontmatter ? "post" : m[1];
 
     const lang = m[3] || "en-us";
     const customSlug = (typeof meta_info.slug === "string");
