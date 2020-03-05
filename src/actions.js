@@ -36,3 +36,15 @@ export const reviewGuidebook = (data) => {
     //         throw Error('Unexpected error');
     //     });
 }
+export const beHiringPartner = (data) => {
+    console.log("Succesfully requested Be Hiring Partner", data)
+    // return fetch('/api/acp_apply', {
+    //     headers: new Headers({'content-type': 'application/json'}),
+    //     method: "POST",
+    //     body: JSON.stringify({ ...data, tags: ['hiring_partner] }),
+    // })
+    //     .then(resp => {
+    //         if( resp.status >= 200 && resp.status < 400) return resp.json();
+    //         throw Error('Unexpected error');
+    //     });
+}

@@ -1,15 +1,32 @@
-import React from 'react';
-import Layout from '../global/Layout';
+import React, {useState} from 'react';
+import styled, {css} from 'styled-components';
 import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
-import {Title} from '../components/Heading'
+import {Title, H4, Paragraph} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 import Credentials from '../components/Credentials'
 import WhoIsHiring from '../components/WhoIsHiring'
 import BaseRender from './_baseRender'
+import Modal from '../components/Modal';
+import {beHiringPartner} from "../actions";
 
-
+const Input = styled.input`
+    background-color:${Colors.lightGray};
+    height: 40px;
+    width: 100%;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-color: ${Colors.black};
+`
 const Partners = (props) => {
     const {data, pageContext, yml} = props;
+    const [formMessage, setFormMessage] = useState()
+    const [showModal, setShowModal] = useState(false)
+    const [formData, setVal] = useState({
+        first_name: '',
+        last_name: '',
+        email: ''
+    });
     return (
         <>
             <Wrapper
@@ -31,7 +48,65 @@ const Partners = (props) => {
                     paragraphColor={Colors.white}
                 />
                 <Row align="center">
-                    <Button width="300px" margin="15px 0px" color="red" textColor="white">{yml.button}</Button>
+                    <Modal showModal={showModal} shadow >
+                        <Row height="20%" align="center">
+                            <Column size="12" align="center"><H4>REVIEW GUIDEBOOK</H4></Column>
+                        </Row>
+                        <Row height="70%">
+                            <Column size="12">
+                                <Row height="30%" align="center">
+                                    <Column size="11" >
+                                        <Input
+                                            type="text" className="form-control" placeholder="First name *"
+                                            onChange={(e) => setVal({...formData, first_name: e.target.value})}
+                                            value={formData.firstName}
+                                        />
+                                    </Column>
+                                </Row>
+                                <Row height="30%" align="center">
+                                    <Column size="11">
+                                        <Input type="text" className="form-control" placeholder="Last Name *"
+                                            onChange={(e) => setVal({...formData, last_name: e.target.value})}
+                                            value={formData.lastName}
+                                        />
+                                    </Column>
+                                </Row>
+                                <Row height="30%" align="center">
+                                    <Column size="11">
+                                        <Input type="email" className="form-control" placeholder="Email *"
+                                            onChange={(e) => setVal({...formData, email: e.target.value})}
+                                            value={formData.email}
+                                        />
+                                    </Column>
+                                </Row>
+                            </Column>
+                        </Row>
+                        <Row height="10%" padding="5px 0 0 0" borderTop={`1px solid ${Colors.blue}`}>
+
+                            <Column size="6" customRespSize respSize="6">
+                                <Paragraph>{formMessage}</Paragraph>
+                            </Column>
+                            <Column size="3" customRespSize respSize="3" align="right">
+                                <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
+                                    onClick={() => {
+                                        beHiringPartner(formData)
+                                            .then(() => {
+                                                setFormMessage("Thank you");
+                                            })
+                                            .catch(() => {
+                                                setFormMessage("error");
+                                            })
+                                    }}>Submit</Button>
+                            </Column>
+                            <Column size="3" customRespSize respSize="3" align="right">
+                                <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={() => setShowModal(!showModal)}>Close</Button>
+                            </Column>
+                        </Row>
+
+
+
+                    </Modal>
+                    <Button width="300px" margin="15px 0px" onClick={() => setShowModal(!showModal)} color="red" textColor="white">{yml.button}</Button>
                 </Row>
             </Wrapper>
             <Wrapper
