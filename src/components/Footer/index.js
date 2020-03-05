@@ -35,7 +35,7 @@ const Footer = () => {
 
                         <Row align="center">
                             {col[0].node.footer.map((item, index) => {
-                                console.log("footer", item)
+
                                 return (
                                     <Column key={index} size="2" margin={item.heading === "COMPANY" ? "0" : "0 0 20px 0"}>
                                         {item.heading === null
