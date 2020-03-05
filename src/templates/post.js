@@ -3,15 +3,14 @@ import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
 import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
+import Layout from '../global/Layout'
 
 export default function Template (props) {
     console.log("props", props);
-    const {data, pageContext, yml} = props;
+    const {data, pageContext} = props;
     const post = data.markdownRemark;
 
-    return (
-
-        <>
+    return (<Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Wrapper
                 style="default">
                 <Title
@@ -35,7 +34,7 @@ export default function Template (props) {
                             </Column>
                             <Column size="10" alignSelf="center">
                                 <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.frontmatter.date} ${post.frontmatter.author}`}</Paragraph>
-                                <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.frontmatter.read_time} read`}</Paragraph>
+                                <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph>
                             </Column>
                         </Row>
                     </Column>
@@ -68,23 +67,25 @@ export default function Template (props) {
 
 
             </div> */}
-        </>
-    )
+    </Layout>)
 }
 export const postQuery = graphql`
-    query BlogPostBySlug($slug: String!){
-                markdownRemark(frontmatter: {slug: {eq: $slug}}){
-                html
-            frontmatter{
-                slug
-                title
-                author
-                date
-                avatar
-                read_time
+query BlogPostBySlug($slug: String!){
+    markdownRemark(frontmatter: {slug: {eq: $slug}}){
+        html
+        frontmatter{
+            slug
+            title
+            author
+            date
+            avatar
+        }
+        fields{
+            readingTime {
+              text
+            }
         }
         excerpt
-        
     }
 }
 

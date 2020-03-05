@@ -66,6 +66,8 @@ const createBlog = async ({actions, graphql}) => {
     if (result.errors) throw new Error(result.errors);
 
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
+
+        console.log(`Creating post ${node.fields.pagePath}`);
         createPage({
             path: node.fields.pagePath,
             component: postTemplate,
@@ -75,17 +77,28 @@ const createBlog = async ({actions, graphql}) => {
         });
 
         // the old website had the blog posts with this path '/post-name' and we want now '/en/post/post-name'
+        console.log(`Redirect from /${node.fields.slug} to ${node.fields.pagePath}`);
         createRedirect({
             fromPath: `/${node.fields.slug}`,
             toPath: node.fields.pagePath,
             redirectInBrowser: true,
             isPermanent: true
         });
+        
+        if (node.fields.lang === "us") {
+            console.log(`Redirect from /en/${node.fields.template}/${node.fields.slug} to ${node.fields.pagePath}`);
+            createRedirect({
+                fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+        }
 
-        // if now lang specified, we forward to english
+        console.log(`Redirect from /${node.fields.template}/${node.fields.slug} to ${node.fields.pagePath}`);
         createRedirect({
-            fromPath: node.fields.pagePath,
-            toPath: `/en/${node.fields.template}/${node.fields.slug}`,
+            fromPath: `/${node.fields.template}/${node.fields.slug}`,
+            toPath: node.fields.pagePath,
             redirectInBrowser: true,
             isPermanent: true
         });
