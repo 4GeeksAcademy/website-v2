@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider, Sidebar} from '../components/Sections'
-import {Title, H2, H3, Span, Paragraph} from '../components/Heading'
+import {Title, H2, H3, H4, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import PricesAndPayment from '../components/PricesAndPayment'
@@ -14,13 +14,31 @@ import BaseRender from './_baseRender'
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ProgramSelector from '../components/ProgramSelector'
+import ToggleButton from '../components/ToggleButton'
+import {requestSyllabus} from "../actions";
+import Modal from '../components/Modal';
 
 
-
+const Input = styled.input`
+    background-color:${Colors.lightGray};
+    height: 40px;
+    width: 100%;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-color: ${Colors.black};
+`
 const Program = ({data, pageContext, yml}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const geek = data.allCourseYaml.edges[0].node;
+  const [showModal, setShowModal] = useState(false);
+  const [formMessage, setFormMessage] = useState();
   const details = data.allCourseYaml.edges[0].node.details[0];
+  const [formData, setVal] = useState({
+    first_name: '',
+    last_name: '',
+    email: ''
+  });
   let week = "";
   {
     pageContext.slug === "full-stack-web-development-bootcamp-full-time"
@@ -52,13 +70,75 @@ const Program = ({data, pageContext, yml}) => {
 
       />
       <Row align="center">
-        <Column align="right" size="6"><Button width="200px" color={Colors.white} margin="15px 0" textColor={Colors.black}>REQUEST SYLLABUS</Button></Column>
-        <Column align="left" size="6"><Button width="200px" color="red" margin="15px 0" textColor=" white">APPLY NOW</Button></Column>
+        <Column align="right" size="6"><Button width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button></Column>
+        <Column align="left" size="6">
+          {/* <ToggleButton margin="15px 0" text={yml.button.syllabus_button_text} sub_text={yml.button.syllabus_submit_text}></ToggleButton> */}
+          <Button width="200px" onClick={() => setShowModal(!showModal)} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
+        </Column>
       </Row>
+      <Modal showModal={showModal} shadow >
+        <Row height="20%" align="center">
+          <Column size="12" align="center"><H4>REQUEST SYLLABUS</H4></Column>
+        </Row>
+        <Row height="70%">
+          <Column size="12">
+            <Row height="30%" align="center">
+              <Column size="11" >
+                <Input
+                  type="text" className="form-control" placeholder="First name *"
+                  onChange={(e) => setVal({...formData, first_name: e.target.value})}
+                  value={formData.firstName}
+                />
+              </Column>
+            </Row>
+            <Row height="30%" align="center">
+              <Column size="11">
+                <Input type="text" className="form-control" placeholder="Last Name *"
+                  onChange={(e) => setVal({...formData, last_name: e.target.value})}
+                  value={formData.lastName}
+                />
+              </Column>
+            </Row>
+            <Row height="30%" align="center">
+              <Column size="11">
+                <Input type="email" className="form-control" placeholder="Email *"
+                  onChange={(e) => setVal({...formData, email: e.target.value})}
+                  value={formData.email}
+                />
+              </Column>
+            </Row>
+          </Column>
+        </Row>
+        <Row height="10%" padding="5px 0 0 0" borderTop={`1px solid ${Colors.blue}`}>
+
+          <Column size="6" customRespSize respSize="6">
+            <Paragraph>{formMessage}</Paragraph>
+          </Column>
+          <Column size="3" customRespSize respSize="3" align="right">
+            <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
+              onClick={() => {
+                requestSyllabus(formData)
+                  .then(() => {
+                    setFormMessage("Thank you");
+                    console.log("Thank You")
+                  })
+                  .catch(() => {
+                    setFormMessage("error");
+                  })
+              }}>Submit</Button>
+          </Column>
+          <Column size="3" customRespSize respSize="3" align="right">
+            <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={() => setShowModal(!showModal)}>Close</Button>
+          </Column>
+        </Row>
+
+
+
+      </Modal>
     </Wrapper>
     <Wrapper
       style="default">
-      <Credentials up="80" />
+      <Credentials up="60" />
     </Wrapper>
     <Sidebar
       shadow
@@ -216,15 +296,26 @@ const Program = ({data, pageContext, yml}) => {
 
               <Card width="100%" height="450px" color="white" shadow >
                 <Tabs >
-                  <Header height="25%">
+                  <Header height="8%">
                     <TabList >
                       {yml.details.details_modules.map((item, index) => {
-                        return (<Tab key={item.module_name} onClick={() => setCurrentIndex(index)}>{item.module_name}</Tab>)
+                        return (<Tab key={item.module_name} onClick={() => setCurrentIndex(index)}>
+                          <Paragraph
+                            color={Colors.white}
+                            fs_xs="8px"
+                            fs_sm="12px"
+                            fs_md="12px"
+                            fs_lg="14px"
+                            fs_xl="16px"
+                          >
+                            {item.module_name}
+                          </Paragraph>
+                        </Tab>)
                       })
                       }
                     </TabList>
                   </Header>
-                  <Body height="75%">
+                  <Body height="92%">
                     {yml.details.details_modules.map((item, i) => {
                       return (
                         <TabPanel key={item.title} onChange={() => setInd(i)}>
@@ -427,6 +518,11 @@ export const query = graphql`
       edges{
         node{
             tagline
+            button{
+              syllabus_button_text
+              syllabus_submit_text
+              apply_button_text
+            }
             meta_info{
                 title
                 description

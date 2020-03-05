@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Layout from '../global/Layout';
 import styled, {css} from 'styled-components';
-import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
-import {Title, H5} from '../components/Heading'
-import {Button, Colors, RoundImage} from '../components/Styling'
-import Credentials from '../components/Credentials'
+import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
+import {Title, H3, H4, H5, Paragraph} from '../components/Heading';
+import {Button, Colors, RoundImage} from '../components/Styling';
+import Credentials from '../components/Credentials';
 import PricesAndPayment from '../components/PricesAndPayment';
-import WhoIsHiring from '../components/WhoIsHiring'
-import BaseRender from './_baseRender'
-import {Card} from '../components/Card'
-import ToggleButton from '../components/ToggleButton'
+import WhoIsHiring from '../components/WhoIsHiring';
+import BaseRender from './_baseRender';
+import {Card} from '../components/Card';
+import ToggleButton from '../components/ToggleButton';
+import Modal from '../components/Modal';
+import {reviewGuidebook} from "../actions";
 
 const Input = styled.input`
     background-color:${Colors.lightGray};
@@ -23,6 +25,13 @@ const Input = styled.input`
 
 const Pricing = (props) => {
     const {data, pageContext, yml} = props;
+    const [showModal, setShowModal] = useState(false)
+    const [formMessage, setFormMessage] = useState()
+    const [formData, setVal] = useState({
+        first_name: '',
+        last_name: '',
+        email: ''
+    });
     return (
         <>
             {/* HEADER SECTION */}
@@ -102,17 +111,66 @@ const Pricing = (props) => {
                     primary
                 />
                 <Divider height="30px" />
-
-
                 <Row align="center">
-                    <Column size="6" align="center">
-                        <ToggleButton
-                            text={yml.payment_guide.button_text}
+                    <Modal showModal={showModal} shadow >
+                        <Row height="20%" align="center">
+                            <Column size="12" align="center"><H4>REVIEW GUIDEBOOK</H4></Column>
+                        </Row>
+                        <Row height="70%">
+                            <Column size="12">
+                                <Row height="30%" align="center">
+                                    <Column size="11" >
+                                        <Input
+                                            type="text" className="form-control" placeholder="First name *"
+                                            onChange={(e) => setVal({...formData, first_name: e.target.value})}
+                                            value={formData.firstName}
+                                        />
+                                    </Column>
+                                </Row>
+                                <Row height="30%" align="center">
+                                    <Column size="11">
+                                        <Input type="text" className="form-control" placeholder="Last Name *"
+                                            onChange={(e) => setVal({...formData, last_name: e.target.value})}
+                                            value={formData.lastName}
+                                        />
+                                    </Column>
+                                </Row>
+                                <Row height="30%" align="center">
+                                    <Column size="11">
+                                        <Input type="email" className="form-control" placeholder="Email *"
+                                            onChange={(e) => setVal({...formData, email: e.target.value})}
+                                            value={formData.email}
+                                        />
+                                    </Column>
+                                </Row>
+                            </Column>
+                        </Row>
+                        <Row height="10%" padding="5px 0 0 0" borderTop={`1px solid ${Colors.blue}`}>
 
-                            sub_text={yml.payment_guide.submit_button_text}
-                        />
-                    </Column>
-                    {/* <Button outline width="300px" color={Colors.blue}>{yml.payment_guide.button_text}</Button> */}
+                            <Column size="6" customRespSize respSize="6">
+                                <Paragraph>{formMessage}</Paragraph>
+                            </Column>
+                            <Column size="3" customRespSize respSize="3" align="right">
+                                <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
+                                    onClick={() => {
+                                        reviewGuidebook(formData)
+                                            .then(() => {
+                                                setFormMessage("Thank you");
+                                            })
+                                            .catch(() => {
+                                                setFormMessage("error");
+                                            })
+                                    }}>Submit</Button>
+                            </Column>
+                            <Column size="3" customRespSize respSize="3" align="right">
+                                <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={() => setShowModal(!showModal)}>Close</Button>
+                            </Column>
+                        </Row>
+
+
+
+                    </Modal>
+                    <Button outline position="relative" width="300px" onClick={() => setShowModal(!showModal)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
                 </Row>
                 <Divider height="100px" />
             </Wrapper>
@@ -126,6 +184,7 @@ const Pricing = (props) => {
                 <WhoIsHiring source={yml.ecosystem.partners_name} />
                 <Divider height="150px" />
             </Wrapper>
+
         </ >
     )
 };

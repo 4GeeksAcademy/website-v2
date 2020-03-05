@@ -25,26 +25,30 @@ export default (props) => {
   const [checked, setChecked] = useState(false)
   const [test, setTest] = useState()
   const classes = useStyles();
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStep, setActiveStep] = useState(5);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(session.location);
-  console.log("steps", steps)
+
   const intervalRef = useRef(null);
-  let maxSteps = 0;
-  const start = () => {
-    getSteps(session.location);
+  let maxSteps = 5;
+  let paolo;
+  const start = (stepArray) => {
+
+    // if (stepArray != null) {console.log("stepArray", stepArray)}
+    // getSteps(session.location);
+
     intervalRef.current = setInterval(() => {
-      maxSteps += 1;
-      console.log("maxSteps", totalSteps())
-      setActiveStep(activeStep => activeStep + 1);
-      if (maxSteps === 5) {setActiveStep(0); maxSteps = 0;}
+      maxSteps -= 1;
+      setActiveStep(activeStep => activeStep - 1);
+      if (maxSteps === -1) {setActiveStep(5); maxSteps = 5;}
     }, 5000);
-  };
+
+  }
   const stop = () => {
     clearInterval(intervalRef.current);
   };
   useEffect(() => {
-    start()
+    start(steps)
   }, [])
   const handleChange = (checked) => {
     setChecked(checked)
@@ -215,7 +219,7 @@ export default (props) => {
   let info = null;
   currentCityInfo = data.allLocationYaml.edges.filter((item) => {return item.node.city === session.location})
   {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
-  console.log("info:", info)
+
 
   function getProgramInfo () {
     let program = "";

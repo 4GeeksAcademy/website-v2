@@ -10,8 +10,6 @@ import BaseRender from './_baseRender'
 
 const Partners = (props) => {
     const {data, pageContext, yml} = props;
-    console.log(yml)
-
     return (
         <>
             <Wrapper
