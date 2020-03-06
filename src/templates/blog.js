@@ -35,7 +35,7 @@ const Blog = ({data, pageContext, yml}) => {
                 <Row>
                     {data.posts.edges.map((item, i) => {
                         return (
-                            <Column size="4" key={i} height="auto" margin="0 0 20px 0">
+                            <Column size="4" key={i} height="auto" margin="0 0 30px 0">
                                 <RoundImage
                                     url={item.node.frontmatter.image}
                                     bsize="cover"
@@ -66,8 +66,15 @@ const Blog = ({data, pageContext, yml}) => {
                                         <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{item.node.frontmatter.intro}</Paragraph>
                                     </Column>
                                 </Row>
-                                <Row height="auto">
-                                    <Column size="12" align="end">
+                                <Row height="auto" align="around">
+                                    <Column size="1" customRespSize respSize="2" alignSelf="center">
+                                        <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
+                                    </Column>
+                                    <Column size="8" customRespSize respSize="8" alignSelf="center">
+                                        <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${item.node.frontmatter.author} - ${item.node.frontmatter.date}`}</Paragraph>
+                                        {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
+                                    </Column>
+                                    <Column size="2" customRespSize respSize="2" align="end">
                                         <Link to={`/post/${item.node.frontmatter.slug}`}><ArrowRight width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                     </Column>
                                 </Row>
