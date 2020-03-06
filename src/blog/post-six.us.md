@@ -1,5 +1,5 @@
 ---
-slug: "post-twoo"
+slug: "post-sixx"
 date: "2018-11-19"
 title: "Miami coding bootcamps | 2018 reports"
 author: "Paolo Lucano"
