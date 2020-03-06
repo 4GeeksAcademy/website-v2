@@ -32,7 +32,7 @@ const Program = ({data, pageContext, yml}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const geek = data.allCourseYaml.edges[0].node;
   const [showModal, setShowModal] = useState(false);
-  const [formMessage, setFormMessage] = useState();
+  const [formMessage, setFormMessage] = useState("Fill the form to submit");
   const details = data.allCourseYaml.edges[0].node.details[0];
   const [formData, setVal] = useState({
     first_name: '',
@@ -115,17 +115,17 @@ const Program = ({data, pageContext, yml}) => {
             <Paragraph>{formMessage}</Paragraph>
           </Column>
           <Column size="3" customRespSize respSize="3" align="right">
-            <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
-              onClick={() => {
-                requestSyllabus(formData)
-                  .then(() => {
-                    setFormMessage("Thank you");
-                    console.log("Thank You")
-                  })
-                  .catch(() => {
-                    setFormMessage("error");
-                  })
-              }}>Submit</Button>
+            {
+              formData.first_name &&
+                formData.last_name &&
+                formData.email ?
+                <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
+                  onClick={() => {
+                    requestSyllabus(formData)
+                    setFormMessage("")
+                  }}>Submit</Button>
+                : null
+            }
           </Column>
           <Column size="3" customRespSize respSize="3" align="right">
             <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={() => setShowModal(!showModal)}>Close</Button>

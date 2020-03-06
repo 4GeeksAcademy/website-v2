@@ -26,7 +26,7 @@ const Input = styled.input`
 const Pricing = (props) => {
     const {data, pageContext, yml} = props;
     const [showModal, setShowModal] = useState(false)
-    const [formMessage, setFormMessage] = useState()
+    const [formMessage, setFormMessage] = useState("Fill the form to submit")
     const [formData, setVal] = useState({
         first_name: '',
         last_name: '',
@@ -151,16 +151,15 @@ const Pricing = (props) => {
                                 <Paragraph>{formMessage}</Paragraph>
                             </Column>
                             <Column size="3" customRespSize respSize="3" align="right">
-                                <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
-                                    onClick={() => {
-                                        reviewGuidebook(formData)
-                                            .then(() => {
-                                                setFormMessage("Thank you");
-                                            })
-                                            .catch(() => {
-                                                setFormMessage("error");
-                                            })
-                                    }}>Submit</Button>
+                                {
+                                    formData.first_name &&
+                                        formData.last_name &&
+                                        formData.email ?
+                                        <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
+                                            onClick={() => {
+                                                reviewGuidebook(formData)
+
+                                            }}>Submit</Button> : null}
                             </Column>
                             <Column size="3" customRespSize respSize="3" align="right">
                                 <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={() => setShowModal(!showModal)}>Close</Button>

@@ -98,7 +98,7 @@ const Jobs = ({data, pageContext, yml}) => {
         </Row>
       </Wrapper>
 
-      <Divider height="250px" />
+      <Divider height="350px" />
 
     </>
   )
