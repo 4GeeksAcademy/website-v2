@@ -20,7 +20,7 @@ const Input = styled.input`
 `
 const Partners = (props) => {
     const {data, pageContext, yml} = props;
-    const [formMessage, setFormMessage] = useState()
+    const [formMessage, setFormMessage] = useState("Fill the form to submit")
     const [showModal, setShowModal] = useState(false)
     const [formData, setVal] = useState({
         first_name: '',
@@ -87,16 +87,15 @@ const Partners = (props) => {
                                 <Paragraph>{formMessage}</Paragraph>
                             </Column>
                             <Column size="3" customRespSize respSize="3" align="right">
-                                <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
-                                    onClick={() => {
-                                        beHiringPartner(formData)
-                                            .then(() => {
-                                                setFormMessage("Thank you");
-                                            })
-                                            .catch(() => {
-                                                setFormMessage("error");
-                                            })
-                                    }}>Submit</Button>
+                                {formData.first_name &&
+                                    formData.last_name &&
+                                    formData.email ?
+                                    <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
+                                        onClick={() => {
+                                            beHiringPartner(formData)
+                                            setFormMessage("")
+                                        }}>Submit</Button>
+                                    : null}
                             </Column>
                             <Column size="3" customRespSize respSize="3" align="right">
                                 <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={() => setShowModal(!showModal)}>Close</Button>
@@ -141,10 +140,11 @@ const Partners = (props) => {
 
 
                 <WhoIsHiring source="influencers" />
-                <Row align="center">
-                    <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">{yml.button_section.button_text}</Button>
-                </Row>
+                {/* <Row align="center">
+                    <Button width="300px" color={Colors.blue} onClick={() => setShowModal(!showModal)} textColor={Colors.white} margin="2rem 0" padding=".85rem">{yml.button_section.button_text}</Button>
+                </Row> */}
             </Wrapper>
+
         </>
     )
 };
