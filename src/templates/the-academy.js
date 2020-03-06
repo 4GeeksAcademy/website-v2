@@ -5,6 +5,7 @@ import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage} from '../components/Styling'
 import Mentors from '../components/Mentors'
 import Events from '../components/Events'
+import {Chart} from '../components/Chart'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import WhoIsHiring from '../components/WhoIsHiring';
@@ -13,6 +14,7 @@ import RecentPosts from '../components/RecentPosts'
 const Why = (props) => {
     const {data, pageContext, yml} = props;
     const cornerstone = yml.cornerstones;
+    console.log("yml", yml)
     return (
         <>
             <Container fluid height="450px">
@@ -55,7 +57,109 @@ const Why = (props) => {
                     customParagraphSize="8"
                 />
                 <Divider height="20px" />
-                <Row height="auto" align="center">
+                <Row align='center'>
+                    <Column size="3" customRespSize respSize="12" padding="20px 0">
+                        <Divider height="50px" />
+                        <Row>
+                            <Column size="12"><H4
+
+                                fs_xs="20px"
+                                fs_sm="24px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fs_xl="20px"
+                            >{yml.outcomes.left.title}</H4></Column>
+                        </Row>
+                        <Divider height="30px" />
+                        <Row>
+                            <Column size="12" align="left"><Paragraph
+
+                                fs_xs="12px"
+                                fs_sm="13px"
+                                fs_md="12px"
+                                fs_lg="12px"
+                                fs_xl="14px"
+                            >{yml.outcomes.left.content}</Paragraph></Column>
+                        </Row>
+                        <Row marginTop="15px">
+                            <Column size="12" align="left">
+                                <Paragraph
+                                    color={Colors.blue}
+                                    fs_xs="12px"
+                                    fs_sm="13px"
+                                    fs_md="12px"
+                                    fs_lg="12px"
+                                    fs_xl="14px"
+                                >{yml.outcomes.left.sub_content}</Paragraph></Column>
+                        </Row>
+                    </Column>
+                    <Column size="9" customRespSize respSize="12">
+                        <Row align="center">
+                            <Column size="4" customRespSize respSize="4" padding="20px 0" align="center"><H4
+                                uppercase
+                                fs_xs="16px"
+                                fs_sm="18px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fs_xl="20px"
+                            >AGES</H4></Column>
+                            <Column size="4" customRespSize respSize="4" padding="20px 0" align="center"><H4
+                                uppercase
+                                fs_xs="16px"
+                                fs_sm="18px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fs_xl="20px"
+                            >GENDER</H4></Column>
+                            <Column size="4" customRespSize respSize="4" padding="20px 0" align="center"><H4
+                                uppercase
+                                fs_xs="16px"
+                                fs_sm="18px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fs_xl="20px"
+                            >NATIONALITIES</H4></Column>
+                        </Row>
+                        <Row>
+                            <Column size="4" customRespSize respSize="4" padding="30px" align="center">
+                                <Row align="center">
+
+                                    <Column size="10" >
+                                        <Chart
+                                            dataArray={yml.outcomes.right.chart_one.data} />
+                                    </Column>
+                                </Row>
+                            </Column>
+                            <Column size="4" customRespSize respSize="4" padding="30px">
+                                <Row align="center">
+
+                                    <Column size="8" >
+                                        <Chart dataArray={yml.outcomes.right.chart_two.data} /></Column>
+                                </Row>
+
+                            </Column>
+                            <Column size="4" customRespSize respSize="4" padding="30px">
+
+                                <Chart
+                                    dataArray={yml.outcomes.right.chart_three.data} />
+                            </Column>
+                        </Row>
+                    </Column>
+                </Row>
+                <Row align='center'>
+                    <Column size="8" customRespSize respSize="8" align="center">
+                        <Paragraph
+                            color={Colors.blue}
+                            fs_xs="14px"
+                            fs_sm="14px"
+                            fs_md="16px"
+                            fs_lg="16px"
+                            fs_xl="14px"
+                        >{yml.outcomes.left.bottom_message}
+                        </Paragraph>
+                    </Column>
+                </Row>
+                {/* <Row height="auto" align="center">
                     <Column size="12" customRespSize respSize="11">
                         <RoundImage
                             h_xs="200px"
@@ -68,7 +172,7 @@ const Why = (props) => {
                             width="100%"
                             bsize="contain" />
                     </Column>
-                </Row>
+                </Row> */}
             </Wrapper>
             <Divider height="100px" />
             <Wrapper style="default">
@@ -248,6 +352,39 @@ export const query = graphql`
                 heading
                 sub_heading
                 image
+                left{
+                    title
+                    content
+                    sub_content
+                    bottom_message
+                }
+                right{
+                    chart_one{
+                        title
+                        data{
+                            color
+                            title
+                            value
+                        }
+                    }
+                    chart_two{
+                        title
+                        data{
+                            color
+                            title
+                            value
+                        }
+                    }
+                    chart_three{
+                        title
+                        data{
+                            color
+                            title
+                            value
+                        }
+                    }
+                    
+                }
             }
             cornerstones {
                 heading
