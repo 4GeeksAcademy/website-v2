@@ -6,8 +6,9 @@ import {Button, Colors} from '../components/Styling'
 import Credentials from '../components/Credentials'
 import WhoIsHiring from '../components/WhoIsHiring'
 import BaseRender from './_baseRender'
-import Modal from '../components/Modal';
 import {beHiringPartner} from "../actions";
+import {makeStyles} from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
 
 const Input = styled.input`
     background-color:${Colors.lightGray};
@@ -18,15 +19,51 @@ const Input = styled.input`
     font-size: 14px;
     font-color: ${Colors.black};
 `
+function rand () {
+    return Math.round(Math.random() * 20) - 10;
+}
+
+function getModalStyle () {
+    const top = 50 + rand();
+    const left = 50 + rand();
+
+    return {
+        top: `${50}%`,
+        left: `${50}%`,
+        transform: `translate(-${50}%, -${50}%)`,
+    };
+}
+
+const useStyles = makeStyles(theme => ({
+    paper: {
+        position: 'absolute',
+        width: 400,
+        height: 300,
+        backgroundColor: theme.palette.background.paper,
+        borderRadius: '1.25rem',
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(2, 4, 3),
+    },
+}));
 const Partners = (props) => {
     const {data, pageContext, yml} = props;
     const [formMessage, setFormMessage] = useState("Fill the form to submit")
     const [showModal, setShowModal] = useState(false)
+    const [modalStyle] = React.useState(getModalStyle);
+    const [open, setOpen] = React.useState(false);
+    const classes = useStyles();
     const [formData, setVal] = useState({
         first_name: '',
         last_name: '',
         email: ''
     });
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
     return (
         <>
             <Wrapper
@@ -48,64 +85,69 @@ const Partners = (props) => {
                     paragraphColor={Colors.white}
                 />
                 <Row align="center">
-                    <Modal showModal={showModal} shadow >
-                        <Row height="20%" align="center">
-                            <Column size="12" align="center"><H4>REVIEW GUIDEBOOK</H4></Column>
-                        </Row>
-                        <Row height="70%">
-                            <Column size="12">
-                                <Row height="30%" align="center">
-                                    <Column size="11" >
-                                        <Input
-                                            type="text" className="form-control" placeholder="First name *"
-                                            onChange={(e) => setVal({...formData, first_name: e.target.value})}
-                                            value={formData.firstName}
-                                        />
-                                    </Column>
-                                </Row>
-                                <Row height="30%" align="center">
-                                    <Column size="11">
-                                        <Input type="text" className="form-control" placeholder="Last Name *"
-                                            onChange={(e) => setVal({...formData, last_name: e.target.value})}
-                                            value={formData.lastName}
-                                        />
-                                    </Column>
-                                </Row>
-                                <Row height="30%" align="center">
-                                    <Column size="11">
-                                        <Input type="email" className="form-control" placeholder="Email *"
-                                            onChange={(e) => setVal({...formData, email: e.target.value})}
-                                            value={formData.email}
-                                        />
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                        <Row height="10%" padding="5px 0 0 0" borderTop={`1px solid ${Colors.blue}`}>
+                    <Modal
+                        aria-labelledby="simple-modal-title"
+                        aria-describedby="simple-modal-description"
+                        open={open}
+                        onClose={handleClose}
+                    ><div style={modalStyle} className={classes.paper}>
+                            <Row height="20%" align="center">
+                                <Column size="12" align="center"><H4>REVIEW GUIDEBOOK</H4></Column>
+                            </Row>
+                            <Row height="70%">
+                                <Column size="12">
+                                    <Row height="30%" align="center">
+                                        <Column size="11" >
+                                            <Input
+                                                type="text" className="form-control" placeholder="First name *"
+                                                onChange={(e) => setVal({...formData, first_name: e.target.value})}
+                                                value={formData.firstName}
+                                            />
+                                        </Column>
+                                    </Row>
+                                    <Row height="30%" align="center">
+                                        <Column size="11">
+                                            <Input type="text" className="form-control" placeholder="Last Name *"
+                                                onChange={(e) => setVal({...formData, last_name: e.target.value})}
+                                                value={formData.lastName}
+                                            />
+                                        </Column>
+                                    </Row>
+                                    <Row height="30%" align="center">
+                                        <Column size="11">
+                                            <Input type="email" className="form-control" placeholder="Email *"
+                                                onChange={(e) => setVal({...formData, email: e.target.value})}
+                                                value={formData.email}
+                                            />
+                                        </Column>
+                                    </Row>
+                                </Column>
+                            </Row>
+                            <Row height="10%" padding="5px 0 0 0" borderTop={`1px solid ${Colors.blue}`}>
 
-                            <Column size="6" customRespSize respSize="6">
-                                <Paragraph>{formMessage}</Paragraph>
-                            </Column>
-                            <Column size="3" customRespSize respSize="3" align="right">
-                                {formData.first_name &&
-                                    formData.last_name &&
-                                    formData.email ?
-                                    <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
-                                        onClick={() => {
-                                            beHiringPartner(formData)
-                                            setFormMessage("")
-                                        }}>Submit</Button>
-                                    : null}
-                            </Column>
-                            <Column size="3" customRespSize respSize="3" align="right">
-                                <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={() => setShowModal(!showModal)}>Close</Button>
-                            </Column>
-                        </Row>
+                                <Column size="6" customRespSize respSize="6">
+                                    <Paragraph>{formMessage}</Paragraph>
+                                </Column>
+                                <Column size="3" customRespSize respSize="3" align="right">
+                                    {formData.first_name &&
+                                        formData.last_name &&
+                                        formData.email ?
+                                        <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
+                                            onClick={() => {
+                                                beHiringPartner(formData)
+                                                setFormMessage("")
+                                            }}>Submit</Button>
+                                        : null}
+                                </Column>
+                                <Column size="3" customRespSize respSize="3" align="right">
+                                    <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={handleClose}>Close</Button>
+                                </Column>
+                            </Row>
 
 
-
+                        </div>
                     </Modal>
-                    <Button width="300px" margin="15px 0px" onClick={() => setShowModal(!showModal)} color="red" textColor="white">{yml.button}</Button>
+                    <Button width="300px" margin="15px 0px" onClick={handleOpen} color="red" textColor="white">{yml.button}</Button>
                 </Row>
             </Wrapper>
             <Wrapper
