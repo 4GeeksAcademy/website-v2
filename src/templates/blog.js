@@ -21,7 +21,7 @@ const Blog = ({data, pageContext, yml}) => {
                 height="300px">
                 <Divider height="100px" />
                 <Title
-                    title="Blog"
+                    title={yml.banner.tagline}
                     main
                     size="8"
                     color={Colors.white}
@@ -71,7 +71,17 @@ const Blog = ({data, pageContext, yml}) => {
                                         <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
                                     </Column>
                                     <Column size="8" customRespSize respSize="8" alignSelf="center">
-                                        <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${item.node.frontmatter.author} - ${item.node.frontmatter.date}`}</Paragraph>
+                                        <Paragraph color={Colors.gray} align="left"
+                                            fs_xs="12px"
+                                            fs_sm="12px"
+                                            fs_md="10px"
+                                            fs_lg="12px"
+                                            fs_xl="12px" lineHeight="20px">{`${item.node.frontmatter.author} `}</Paragraph>
+                                        <Paragraph color={Colors.gray} align="left" fs_xs="12px"
+                                            fs_sm="12px"
+                                            fs_md="10px"
+                                            fs_lg="12px"
+                                            fs_xl="12px" lineHeight="20px">{`${item.node.frontmatter.date}`}</Paragraph>
                                         {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
                                     </Column>
                                     <Column size="2" customRespSize respSize="2" align="end">
