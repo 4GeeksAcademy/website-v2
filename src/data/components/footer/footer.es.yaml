@@ -29,15 +29,15 @@ footer:
     heading: "SEDES"
     items:
       - name: "Santiago de Chile"
-        link: "/sede/santiago-chile"
+        link: "/location/santiago-chile"
       - name: "Miami"
-        link: "/sede/downtown-miami"
+        link: "/location/downtown-miami"
       - name: "Madrid"
-        link: "/sede/madrid"
+        link: "/location/madrid"
       - name: "Caracas"
-        link: "/sede/impact-hub"
+        link: "/location/impact-hub"
       - name: "Maracaibo"
-        link: "/sede/maracaibo"
+        link: "/location/maracaibo"
   - column_five:
     heading: "SÍGUENOS"
     items:

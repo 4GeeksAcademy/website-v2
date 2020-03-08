@@ -4,7 +4,7 @@ meta_info:
   description: null
   image: null
   keywords: []
-  redirects: ["/home", "/es/home"]
+  redirects: ["/home", "/es/home", "/es/inicio"]
 
 tagline: Madrid Coding Bootcamp
 title: APRENDE A PROGRAMAR Y OBTÉN APOYO PROFESIONAL DE POR VIDA
@@ -27,24 +27,29 @@ education:
       alt: "CNN and BCC Logo"
 
 ## JOIN 4GEEKS SECTION DATA
-join_4geeks:
-  - heading: APLICA A 4GEEKS
-    sub_heading: Programa tu historia.
-    geek_data:
-      geek_pal_heading: Programming - Always - Limitless
-      geek_pal_data:
-        - Nunca programes sol@ otra vez.
-        - Estaremos junto a ti, a lo largo de tu
-        - viaje y durante todo el tiempo que
-        - quieras que lo estemos.
-      geek_force_heading: FOR Career Empowerment
-      geek_force_data:
-        - Haremos todo lo que esté en nuestras manos
-        - para ayudarte a conseguir un trabajo en el sector.
-        - Incluye el programa de Career Support,
-        - GeekPAL, y GeekTALK.
+join_geeks:
+  heading: APLICA A 4GEEKS
+  sub_heading: Programa tu historia.
+  geek_data:
+    geek_pal_heading: Programming - Always - Limitless
+    geek_pal_data:
+      - Nunca programes sol@ otra vez.
+      - Estaremos junto a ti, a lo largo de tu
+      - viaje y durante todo el tiempo que
+      - quieras que lo estemos.
+    geek_force_heading: FOR Career Empowerment
+    geek_force_data:
+      - Haremos todo lo que esté en nuestras manos
+      - para ayudarte a conseguir un trabajo en el sector.
+      - Incluye el programa de Career Support,
+      - GeekPAL, y GeekTALK.
 
 ## LOCATIONS SECTION
 locations:
   heading: "NUESTRAS SEDES"
   sub_heading: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+
+## ALUMNI SECTION
+alumni_header:
+  heading: "CONOCE A NUESTROS GRADUADOS Y SUS PROYECTOS"
+  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."

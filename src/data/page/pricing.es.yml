@@ -27,6 +27,8 @@ payment_guide:
   sub_heading: "¿Tienes preguntas sobre la financiación o planes de pago extendido?"
   button_text: "VER LA GUÍA"
   button_link: ""
+  submit_button_text: "Enviar"
+  submit_button_link: ""
 
 ## IMMERSED IN ECOSYSTEM SECTION
 ecosystem:

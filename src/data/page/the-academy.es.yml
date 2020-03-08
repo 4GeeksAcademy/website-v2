@@ -12,6 +12,59 @@ banner:
   sub_heading: ""
   image: "/bg/the-academy-bg.png"
 
+## 4GEEKS OUTCOMES
+outcomes:
+  heading: "RESULTADOS DE 4GEEKS"
+  sub_heading: "El 76% de nuestros estudiantes busca un trabajo justo después de graduarse y el 24% busca mejorar sus habilidades o lanzar empresas."
+  ## The field image is gonna be replaced from a dinamic chart generator
+  image: "/images/program-charts.png"
+  left:
+    title: "Demográficos"
+    content: "Los estudiantes de la 4Geeks Academy tienen principalmente entre 26 y 32 años. Hemos elegido 3 segmentos principales para mostrar la edad media de nuestros graduados."
+    sub_content: "La gente que se gradua en 4Geeks Academy tiene una edad promedio de 30,6 años."
+    bottom_message: "Nuestros estudiantes incrementan un 24% sus salarios, después de completar nuestros programas."
+  right:
+    chart_one:
+      title: "edades"
+      ## EACH DONUTCHART NEEDS AN ARRAY OF OBJECTS WITH COLOR, TITLE AND VALUE
+      ## THE COLOR COULD BE HEX, DEC, TEXT, RGB, ETC...
+      ## THE VALUE NEED TO BE A NUMBER, NOT A STRING
+      data:
+        - color: "grey"
+          title: "26-32"
+          value: 44
+        - color: "lightGrey"
+          title: "22-25"
+          value: 30
+        - color: "#000000"
+          title: "33-42"
+          value: 26
+    chart_two:
+      title: "género"
+      data:
+        - color: "lightGreen"
+          title: "Femenino"
+          value: 21
+        - color: "green"
+          title: "Masculino"
+          value: 79
+
+    chart_three:
+      title: "Nacionalidad"
+      data:
+        - color: "orange"
+          title: "América del norte"
+          value: 60
+        - color: "yellow"
+          title: "Asia"
+          value: 1
+        - color: "brown"
+          title: "Europa"
+          value: 5
+        - color: "red"
+          title: "América Latina"
+          value: 34
+
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:
   heading: NUESTRAS PIEDRAS ANGULARES
@@ -29,6 +82,11 @@ cornerstones:
     - title: ÁRBOL DE TALENTOS
       content: El programa de estudios establece 44 habilidades; los estudiantes ganan puntos por cada una de ellas de forma lúdica.
       icon: Sitemap
+
+## STAFF SECTION
+staff:
+  heading: "CONOCE AL EQUIPO"
+  sub_heading: ""
 
 ## OUR STORY SECTION
 story:
