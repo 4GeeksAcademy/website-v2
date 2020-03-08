@@ -70,54 +70,129 @@ export default () => {
         setActiveStep(0);
         setCompleted({});
     };
-    // const data = useStaticQuery(graphql`
-    // query myQueryTypical{
-    //     typical: allTypicalDayYaml {
-    //         edges {
-    //           node {
-    //             miami {
-    //               time
-    //               slug
-    //               info
-    //             }
-    //           }
-    //         }
-    //       }
-    //     credentials: allCredentialsDataYaml {
-    //         edges {
-    //           node {
-    //             credential
-    //           }
-    //         }
-    //     }
-    //     alumni:   allAlumniYaml{
-    //       edges{
-    //         node{
-    //           name
-    //           image
-    //           content
-    //           title
-    //         }
-    //       }
-    //     }
-    //   cred: allFinancialsYaml{
-    //     edges{
-    //         node{
-    //             name
-    //             options{
-    //                 months
-    //                 payment
-    //             }
-    //             logo
-    //             description
-    //         }
-    //     }
-    // }}
-    // `)
-    let tempQ = data.cred.edges.findIndex(item => item.node.name === "Quotanda")
-    let tempS = data.cred.edges.findIndex(item => item.node.name === "Skill Fund")
-    let tempC = data.cred.edges.findIndex(item => item.node.name === "Climb")
-    console.log("tempQ", data.typical.edges[0].node.miami)
+    const data = useStaticQuery(graphql`
+    query myQueryTypical{
+        allLocationYaml {
+            edges {
+              node {
+                city
+                hasFinancialsOption
+                meta_info {
+                  slug
+                  description
+                  image
+                  keywords
+                  redirects
+                }
+                image
+                prices {
+                  full_time {
+                    center_section {
+                      button {
+                        button_text
+                      }
+                      header {
+                        sub_heading
+                        heading_one
+                        heading_two
+                      }
+                      plans {
+                        months
+                        payment
+                        paymentInfo
+                        provider
+                        logo
+                        message
+                      }
+                    }
+                    left_section {
+                      button {
+                        button_text
+                      }
+                      content {
+                        price
+                        price_info
+                      }
+                      header {
+                        heading_one
+                        heading_two
+                        sub_heading
+                      }
+                    }
+                    right_section {
+                      button {
+                        button_text
+                      }
+                      content {
+                        price
+                        price_info
+                      }
+                      header {
+                        heading
+                        sub_heading
+                        heading_one
+                        heading_two
+                      }
+                    }
+                  }
+                  part_time {
+                    center_section {
+                      button {
+                        button_text
+                      }
+                      header {
+                        heading_two
+                        sub_heading
+                        heading_one
+                      }
+                      plans {
+                        months
+                        payment
+                        paymentInfo
+                        provider
+                        logo
+                        message
+                      }
+                    }
+                    left_section {
+                      button {
+                        button_text
+                      }
+                      content {
+                        price
+                        price_info
+                      }
+                      header {
+                        heading_one
+                        sub_heading
+                        heading_two
+                      }
+                    }
+                    right_section {
+                      button {
+                        button_text
+                      }
+                      content {
+                        price
+                        price_info
+                      }
+                      header {
+                        heading_one
+                        sub_heading
+                        heading_two
+                      }
+                    }
+                  }
+                }
+                seo_title
+                sub_heading
+                tagline
+              }
+            }
+          }}
+    `)
+
+    console.log("tempQ", data.allLocationYaml.edges)
     function getStepContent (step) {
         switch (step) {
             case 0:
