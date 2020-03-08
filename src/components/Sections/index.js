@@ -64,7 +64,9 @@ export const Container = styled.div`
     background: ${props => props.color};
 `
 export const Row = styled.div`
+    padding: ${props => props.padding};
     height: ${props => props.height};
+    border-top: ${props => props.borderTop};
     border-bottom: ${props => props.borderBottom};
     display: flex;
     flex-wrap: wrap;
@@ -87,12 +89,14 @@ export const Row = styled.div`
             ? css`justify-content: center;`
             : css`justify-content: left;`}
     @media ${Device.xs}{
+        display: ${props => props.display_xs};
         ${props => props.customRespSize
         ? css`justify-content: ${props => props.alignResp};`
         : css`justify-content: center;`};
     }
         padding: ${props => props.p_xs};
     @media  ${Device.sm}{
+        display: ${props => props.display_sm};
         ${props => props.customRespSize
         ? css`justify-content: ${props => props.alignResp};`
         : css`justify-content: center;`};
@@ -218,8 +222,8 @@ ${props =>
                 display: ${props => props.disp_sm};
             }
             @media ${Device.md}{
-                flex: 0 0 ${(props.respSize / 12) * 100}%;
-                max-width: ${(props.respSize / 12) * 100}%;
+                flex: 0 0 ${(props.size / 12) * 100}%;
+                max-width: ${(props.size / 12) * 100}%;
                 text-align: ${props => props.align};
                 margin-bottom: ${props => props.respSizeMargin};
                 border-radius: ${props => props.br_md};
@@ -240,13 +244,6 @@ ${props =>
             `
             :
             css`
-            @media ${Device.md}{
-                flex: 0 0 ${(props.size / 12) * 100}%;
-                max-width: ${(props.size / 12) * 100}%;
-                text-align: ${props => props.align};
-                padding-left: ${props => props.pl_md};
-                
-            }
             @media ${Device.xs}{
                 flex: 0 0 '100%';
                 max-width: 100%;
@@ -262,6 +259,16 @@ ${props =>
                 border-radius: 0 0 0 0;
                 text-align: ${props => props.alignSm};
                 padding-left: ${props => props.pl_sm};
+                
+            }
+            @media ${Device.md}{
+                // flex: 0 0 100%;
+                // max-width: 100%;
+                flex: 0 0 ${(props.size / 12) * 100}%;
+                max-width: ${(props.size / 12) * 100}%;
+                // text-align: center;
+                text-align: ${props => props.align};
+                padding-left: ${props => props.pl_md};
                 
             }
             @media ${Device.lg}{

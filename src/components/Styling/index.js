@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
 import {Device} from '../Responsive';
 import {Paragraph} from '../Heading';
@@ -12,6 +12,7 @@ export const Colors = {
     darkGray: '#2e2e2e',
     borderGray: '#ececec',
     yellow: "#E6BA1F",
+    lightYellow: "#f3df98",
     black: "#000000",
     white: "#FFFFFF",
     red: "red"
@@ -217,9 +218,22 @@ export const Button = styled.div`
                 transform: translateY(${props => props.down});
             `
             }
-            `}
-                
+            `}  
 `
+export const Toggle = styled.div`
+    width: ${props => props.width};
+    height: ${props => props.height};
+    background: ${props => props.bg};
+    color: ${props => props.color};
+    border-radius: ${props => props.b_radius};
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: lato, sans-serif;
+    
+`
+
+
 Button.defaultProps = {
     padding: '.5rem .45rem',
     fontSize: '12px',

@@ -52,23 +52,22 @@ const ProgramSelector = (props) => {
   // const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
   let locArray = data.loc.edges;
   let weekArray = ["16", "9"]
-  console.log("loc", locArray)
   let link = "";
   {props.week === 16 ? link = "full-time" : link = "part-time"}
   return (
     <Row align="center" >
       <Column size="12" alignSelf="center">
         <Row align="around">
-          <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph fontSize="16px" color={Colors.white} >It takes just </Paragraph></Column>
-          <Column size="1" alignSelf="center" align="center" customRespSize respSize="4" >
-            <Card index="1" borders=".25rem" shadow width="100%" padding={toggles === false && "0px"}>
+          <Column size="2" alignSelf="center" paddingRight="0" align="right" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >It takes just </Paragraph></Column>
+          <Column size="2" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" customRespSize respSize="4" >
+            <Card index="1" borders=".25rem" height="auto" shadow width="100%" padding={toggles === false && "0px"}>
               {toggles == true ? null : <Row marginRight="0" marginLeft="0" align="center"><Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} color={Colors.white} textColor={Colors.gray}>{props.week}</Button></Row>}
               {toggles == true
                 ?
                 <>
                   {weekArray.map((item, index) => {
                     return (
-                      <Row key={index} height="25px" marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" backgroundHover={Colors.lightBlue} colorHover={Colors.white} align="around">
+                      <Row key={index} height="50%" marginRight="0" marginLeft="0" backgroundHover={Colors.lightBlue} colorHover={Colors.white} align="around">
                         <Link to={link}><Column border="custom" customBorderRadius=".25rem" size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column></Link>
                       </Row>
                     )
@@ -79,8 +78,8 @@ const ProgramSelector = (props) => {
               }
             </Card>
           </Column>
-          <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph fontSize="16px" color={Colors.white} >weeks in</Paragraph></Column>
-          <Column size="3" alignSelf="center" align="center" customRespSize respSize="6">
+          <Column size="1" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >weeks in</Paragraph></Column>
+          <Column size="2" alignSelf="center" align="center" paddingLeft="0" paddingRight="0" customRespSize respSize="5">
             <Card index="1" borders=".25rem" shadow width="100%" padding={toggle === false && "0px"}>
               {toggle == true ? null : <Row align="center"><Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>{session.location}</Button></Row>}
               {toggle == true
@@ -88,8 +87,8 @@ const ProgramSelector = (props) => {
                 <>
                   {locArray.map((item, index) => {
                     return (
-                      <Row height="25px" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
-                        <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item.node.city}</Paragraph></Column>
+                      <Row height="20%" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                        <Column size="12" alignSelf="center"><Paragraph fontSize="20px" color={Colors.gray} >{item.node.city}</Paragraph></Column>
                       </Row>
                     )
                   })}
@@ -99,7 +98,7 @@ const ProgramSelector = (props) => {
               }
             </Card>
           </Column>
-          <Column size="2" alignSelf="center" align="center" margin="5px 0"><Paragraph fontSize="16px" color={Colors.white} >to become a</Paragraph></Column>
+          <Column size="2" alignSelf="center" align="left" paddingLeft="0" paddingRight="0" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >to become a</Paragraph></Column>
         </Row>
         <Row></Row>
         <Row></Row>

@@ -1,12 +1,11 @@
 ---
-path: "/post-three"
+slug: "post-fivee"
 date: "2018-11-19"
-title: "Post Three Example"
+title: "the coding bootcamp syllabus matters"
 author: "Alejandro Sanchez"
 avatar: "../staff/alejandro.png"
-read_time: "2 min"
 image: "/images/why2.png"
-intro: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui."
+intro: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui."
 ---
 
 ### This is a test for the blog section

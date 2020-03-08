@@ -19,7 +19,7 @@ import Loc from '../components/Loc'
 
 const Home = (props) => {
     const {data, pageContext, yml} = props;
-    console.log("4geeks", yml)
+
     return (
         <>
             <Container fluid >
@@ -293,6 +293,7 @@ const Home = (props) => {
                 <Loc />
             </Wrapper>
             <Divider height="100px" />
+
         </>
     )
 };

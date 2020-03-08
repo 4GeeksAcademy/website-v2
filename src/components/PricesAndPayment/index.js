@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext, useEffect, useRef} from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
@@ -25,16 +25,31 @@ export default (props) => {
   const [checked, setChecked] = useState(false)
   const [test, setTest] = useState()
   const classes = useStyles();
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStep, setActiveStep] = useState(5);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(session.location);
-  // useEffect(() => {
-  //   const loadInfo = async () => {
-  //     let t = data.allLocationsYaml.edges.filter((item) => item.node.city === session.location)
-  //     await setTest(t)
-  //   };
-  //   loadInfo();
-  // }, [])
+
+  const intervalRef = useRef(null);
+  let maxSteps = 5;
+  let paolo;
+  const start = (stepArray) => {
+
+    // if (stepArray != null) {console.log("stepArray", stepArray)}
+    // getSteps(session.location);
+
+    intervalRef.current = setInterval(() => {
+      maxSteps -= 1;
+      setActiveStep(activeStep => activeStep - 1);
+      if (maxSteps === -1) {setActiveStep(5); maxSteps = 5;}
+    }, 5000);
+
+  }
+  const stop = () => {
+    clearInterval(intervalRef.current);
+  };
+  useEffect(() => {
+    start(steps)
+  }, [])
   const handleChange = (checked) => {
     setChecked(checked)
   }
@@ -64,6 +79,7 @@ export default (props) => {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
   const handleStep = step => () => {
+    stop()
     setActiveStep(step);
   };
   const handleComplete = () => {
@@ -203,7 +219,7 @@ export default (props) => {
   let info = null;
   currentCityInfo = data.allLocationYaml.edges.filter((item) => {return item.node.city === session.location})
   {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
-  console.log("info:", info)
+
 
   function getProgramInfo () {
     let program = "";
@@ -289,7 +305,10 @@ export default (props) => {
         return 'Unknown step';
     }
   }
-  console.log("info", info)
+  // const handleClick = (index) => {
+  //   handleStep(index);
+  //   stop();
+  // }
   return (
     <>
       {/* 3 COLUMNS LAYOUT */}
@@ -487,7 +506,8 @@ export default (props) => {
               </Card>
             </Column> : null}
           </Row>
-        </> : <Row>Loading ...</Row>}
+        </> : <Row>Loading ...</Row>
+      }
     </>
   )
 }

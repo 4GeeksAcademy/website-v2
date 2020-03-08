@@ -85,7 +85,7 @@ a.nav-item.nav-link.side {
     display: inline-block;
     border: none!important;
     border-bottom: none;
-    bottom: -1px;
+    bottom: 0!important;
     list-style: none;
     padding: 6px 12px;
     cursor: pointer;
@@ -100,3 +100,7 @@ a.nav-item.nav-link.side {
 .MuiGrid-spacing-xs-2 > .MuiGrid-item {
     padding: 0px!important;
 }
+
+a:hover {
+    text-decoration: none;
+  }

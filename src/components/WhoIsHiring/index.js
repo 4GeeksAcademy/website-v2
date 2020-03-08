@@ -170,7 +170,7 @@ const WhoIsHiring = props => {
                       h_sm="50px"
                       h_md="80px"
                       h_lg="90px"
-                      h_xl="80px"
+                      h_xl="40px"
                       width="100%"
                       url={partner.image}
                       border=".75rem"
