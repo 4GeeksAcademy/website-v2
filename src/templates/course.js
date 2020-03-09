@@ -541,6 +541,37 @@ const Program = ({data, pageContext, yml}) => {
         <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
         <Divider height="100px" />
       </Wrapper>
+      <Wrapper style="default">
+        <Row align="center">
+          <Title
+            size="10"
+            title={yml.typical.heading}
+            paragraph={yml.typical.sub_heading}
+            primary
+          />
+          {/* <Divider height="50px" /> */}
+          <Column size="8" customRespSize respSize="12">
+            <Row height="120px" align="center">
+              <Column size="9" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                <Row height="100%" align="center">
+                  {/* <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
+                                    {steps.map((label, index) => (
+                                        <Step key={label}>
+                                            <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
+                                                <StepLabel StepIconComponent={ColorlibStepIcon}>{label.icon}{label.time}</StepLabel>
+                                            </StepButton>
+                                        </Step>
+                                    ))}
+                                </Stepper> */}
+                </Row>
+                <Row align="center" height="120px">
+                  {/* <Typography className={classes.test}>{getStepContent(activeStep)}</Typography> */}
+                </Row>
+              </Column>
+            </Row>
+          </Column>
+        </Row>
+      </Wrapper>
       <Wrapper
         style="default"
       >
@@ -608,6 +639,10 @@ export const query = graphql`
               sub_heading
             }
             prices{
+              heading
+              sub_heading
+            }
+            typical{
               heading
               sub_heading
             }
