@@ -159,4 +159,4 @@ location_office_image3: ""
 should_know: ""
 value: "Madrid"
 defaultLanguage: "es"
-hasFinancialsOption: true
+hasFinancialsOption: false

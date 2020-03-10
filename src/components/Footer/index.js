@@ -5,7 +5,7 @@ import {Container, Row, Column, Divider} from '../Sections'
 import {Colors, RoundImage} from '../Styling'
 import {H5, Separator, Paragraph} from '../Heading'
 
-const Footer = () => {
+const Footer = (props) => {
     const data = useStaticQuery(graphql`
       query myQueryFooter{
         allFooterYaml {
@@ -24,7 +24,9 @@ const Footer = () => {
           }
         }
       `)
-    let col = data.allFooterYaml.edges;
+    let col = props;
+    console.log("col", col)
+    // let col = data.allFooterYaml.edges;
     return (
         <>
             <Container width="fluid" height="auto" color={Colors.black} p_top="25px" p_bottom="15px">
@@ -34,7 +36,7 @@ const Footer = () => {
                     <Column size="8">
 
                         <Row align="center">
-                            {col[0].node.footer.map((item, index) => {
+                            {col.lang[0].node.footer.map((item, index) => {
 
                                 return (
                                     <Column key={index} size="2" margin={item.heading === "COMPANY" ? "0" : "0 0 20px 0"}>

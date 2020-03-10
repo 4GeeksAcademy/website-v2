@@ -102,7 +102,7 @@ const Why = (props) => {
                                 fs_md="16px"
                                 fs_lg="18px"
                                 fs_xl="20px"
-                            >AGES</H4></Column>
+                            >{yml.outcomes.right.chart_one.title}</H4></Column>
                             <Column size="4" customRespSize respSize="4" padding="20px 0" align="center"><H4
                                 uppercase
                                 fs_xs="16px"
@@ -110,7 +110,7 @@ const Why = (props) => {
                                 fs_md="16px"
                                 fs_lg="18px"
                                 fs_xl="20px"
-                            >GENDER</H4></Column>
+                            >{yml.outcomes.right.chart_two.title}</H4></Column>
                             <Column size="4" customRespSize respSize="4" padding="20px 0" align="center"><H4
                                 uppercase
                                 fs_xs="16px"
@@ -118,7 +118,7 @@ const Why = (props) => {
                                 fs_md="16px"
                                 fs_lg="18px"
                                 fs_xl="20px"
-                            >NATIONALITIES</H4></Column>
+                            >{yml.outcomes.right.chart_three.title}</H4></Column>
                         </Row>
                         <Row>
                             <Column size="4" customRespSize respSize="4" padding="30px" align="center">
