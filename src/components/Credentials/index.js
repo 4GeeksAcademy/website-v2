@@ -29,14 +29,14 @@ export default props => {
 
               >
                 <Row align="center" height="30%">
-                  {(i.slug === "campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                  {(i.slug === "alumni") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                  {(i.slug === "rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                  {(i.slug === "hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "campuses" || i.slug === "campus") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "alumni" || i.slug === "graduados") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "rating" || i.slug === "valoracion") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "hired" || i.slug === "contratados") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
                 </Row>
                 <Divider height="10%" />
                 <Row align="center" height="30%">
-                  {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
+                  {(i.slug === "hired" || i.slug === "contratados") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
                 </Row>
                 <Divider height="5%" />
                 <Row align="center" height="25%">
@@ -66,14 +66,14 @@ export default props => {
                 up={props.up - ((props.up * 20) / 100) + "px"}
               >
                 <Row align="center" height="30%">
-                  {(i.slug === "campuses") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                  {(i.slug === "alumni") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                  {(i.slug === "rating") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                  {(i.slug === "hired") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "campuses" || i.slug === "campus") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "alumni" || i.slug === "graduados") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "rating" || i.slug === "valoracion") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                  {(i.slug === "hired" || i.slug === "contratados") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
                 </Row>
                 <Divider height="10%" />
                 <Row align="center" height="30%">
-                  {(i.slug === "hired") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
+                  {(i.slug === "hired" || i.slug === "contratados") ? <H3>{i.value}{i.symbol}</H3> : <H3>{i.symbol}{i.value}</H3>}
                 </Row>
                 <Divider height="5%" />
                 <Row align="center" height="25%">

@@ -1,5 +1,5 @@
 meta_info:
-  slug: index
+  slug: indexo
   title: null
   description: null
   image: null
@@ -13,18 +13,18 @@ image: "../home-bg.png"
 
 ## EDUCATION SECTION
 education:
-    left_box:
-      heading: "AVALADO POR"
-      image: "/images/florida-logo.png"
-      alt: ""
-    center_box:
-      heading: "TOP CODING SCHOOL"
-      image: "/images/newsweek-logo.png"
-      alt: ""
-    right_box:
-      heading: "4GEEKS IN LOS MEDIOS"
-      image: "/images/cnn-bbc-logo.png"
-      alt: "CNN and BCC Logo"
+  left_box:
+    heading: "AVALADO POR"
+    image: "/images/florida-logo.png"
+    alt: ""
+  center_box:
+    heading: "TOP CODING SCHOOL"
+    image: "/images/newsweek-logo.png"
+    alt: ""
+  right_box:
+    heading: "4GEEKS IN LOS MEDIOS"
+    image: "/images/cnn-bbc-logo.png"
+    alt: "CNN and BCC Logo"
 
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:
