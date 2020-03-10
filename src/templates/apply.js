@@ -90,7 +90,7 @@ const Apply = (props) => {
                 style="default">
                 <Title
                     title={yml.tagline}
-                    paragraph="Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+                    paragraph={yml.sub_heading}
                     primary
                     size="8"
                 />
@@ -117,30 +117,30 @@ const Apply = (props) => {
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
                                             <Row height="50px">
-                                                <H3>TELL US ABOUT YOU</H3>
+                                                <H3>{yml.left.heading}</H3>
                                             </Row>
                                             <Row height="50px">
                                                 <Input
-                                                    type="text" className="form-control" placeholder="First name *"
+                                                    type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                                     onChange={(e) => setVal({...formData, first_name: e.target.value})}
                                                     value={formData.firstName}
                                                 />
                                             </Row>
                                             <Row height="50px">
-                                                <Input type="text" className="form-control" placeholder="Last Name *"
+                                                <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                                     onChange={(e) => setVal({...formData, last_name: e.target.value})}
                                                     value={formData.lastName}
                                                 />
                                             </Row>
                                             <Row height="50px">
-                                                <Input type="email" className="form-control" placeholder="Email *"
+                                                <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
                                                     onChange={(e) => setVal({...formData, email: e.target.value})}
                                                     value={formData.email}
                                                 />
                                             </Row>
                                             <Row height="50px">
                                                 <Input
-                                                    type="number" className="form-control" placeholder="Phone *"
+                                                    type="number" className="form-control" placeholder={yml.left.form_section.phone}
                                                     onChange={(e) => setVal({...formData, phone: e.target.value})}
                                                     value={formData.phone}
                                                 />
@@ -160,10 +160,10 @@ const Apply = (props) => {
                                                 </Column>
                                             </Row>
                                             <Row height="40px">
-                                                <Input type="text" className="form-control" placeholder="Referral key" />
+                                                <Input type="text" className="form-control" placeholder={yml.left.referral_section.placeholder} />
                                             </Row>
                                             <Row height="20px">
-                                                <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>If you were referred by any current or past student, use your referral code for extra credit or discount.</Paragraph>
+                                                <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.referral_section.content}</Paragraph>
                                             </Row>
                                             <Row >
                                                 <Button
@@ -179,7 +179,7 @@ const Apply = (props) => {
                                                             console.log("error");
                                                         })
                                                     }
-                                                >APPLY</Button>
+                                                >{yml.left.button.button_text}</Button>
                                             </Row>
                                         </Column>
                                     </Row>
@@ -193,28 +193,34 @@ const Apply = (props) => {
                                             <Row height="60px">
                                                 <H3
                                                     fs_xs="20px"
-                                                    fs_sm="24px"
-                                                    fs_md="24px"
+                                                    fs_sm="18px"
+                                                    fs_md="18px"
                                                     fs_lg="20px"
-                                                    fs_xl="28px"
+                                                    fs_xl="24px"
                                                     color={Colors.yellow}
                                                 >
-                                                    ONCE YOU CLICK ON APPLY YOU WILL:
+                                                    {yml.right.heading}
                                                 </H3>
                                             </Row>
                                             <Divider height="30px" />
-                                            <Row height="50px">
-                                                <Paragraph
-                                                    fs_xs="10px"
-                                                    fs_sm="14px"
-                                                    fs_md="14px"
-                                                    fs_lg="14px"
-                                                    fs_xl="14px"
-                                                    lineHeight="16px"
-                                                    color={Colors.lightGray}
-                                                >1- Receive an email from your City Advisor
-                                                </Paragraph>
-                                            </Row>
+
+                                            {yml.right.content_section.map((item, i) => {
+                                                return (<>
+                                                    <Row key={i} height="50px">
+                                                        <Paragraph
+
+                                                            fs_xs="12px"
+                                                            fs_sm="14px"
+                                                            fs_md="10px"
+                                                            fs_lg="12px"
+                                                            fs_xl="14px"
+                                                            lineHeight="16px"
+                                                            color={Colors.lightGray}
+                                                        >{item}
+                                                        </Paragraph>
+                                                    </Row></>)
+                                            })}
+
 
 
                                         </Column>
@@ -237,11 +243,36 @@ export const query = graphql`
       edges{
         node{
             tagline
+            sub_heading
             meta_info{
                 title
                 description
                 image
                 keywords
+            }
+            left {
+                heading
+                locations_title
+                button {
+                  button_text
+                  button_link
+                }
+                form_section {
+                  
+                    first_name
+                    last_name
+                    email
+                    phone
+                  
+                }
+                referral_section {
+                  placeholder
+                  content
+                }
+              }
+            right{
+                heading
+                content_section
             }
         }
       }
