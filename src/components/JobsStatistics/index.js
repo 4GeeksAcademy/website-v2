@@ -7,26 +7,9 @@ import Trend from 'react-trend';
 import {Colors} from '../Styling'
 import {Card} from '../Card'
 
-export default () => {
-    const data = useStaticQuery(graphql`
-      query myQueryJobs{
-          job: allJobsStatisticsYaml {
-            edges {
-              node {
-                jobs {
-                  title
-                  slug
-                  sub_title
-                  value
-                  value_symbol
-                  chart_data
-                }
-              }
-            }
-          }
-        }
-      `)
-    const jobs = data.job.edges[0].node.jobs
+export default (props) => {
+    const jobs = props.lang[0].node.jobs
+    console.log("jobs", jobs)
     return (
         <Row>
             {jobs.map((i, index) => (
@@ -53,7 +36,7 @@ export default () => {
                                         fs_sm="12px"
                                         fs_md="10px"
                                         fs_lg="12px"
-                                        fs_xl="16px">
+                                        fs_xl="12px">
                                         {i.title}
                                     </Paragraph>
                                 </Row>
@@ -69,7 +52,7 @@ export default () => {
                                         fs_sm="12px"
                                         fs_md="10px"
                                         fs_lg="12px"
-                                        fs_xl="16px">
+                                        fs_xl="12px">
                                         {i.sub_title}
                                     </Paragraph>
                                 </Row>
@@ -83,7 +66,7 @@ export default () => {
                                     data={i.chart_data}
                                     gradient={[`${Colors.blue}`]}
                                     radius={25}
-                                    strokeWidth={5}
+                                    strokeWidth={10}
                                     strokeLinecap={'butt'}
                                 />
                             </Column>

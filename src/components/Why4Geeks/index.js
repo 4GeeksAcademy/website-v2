@@ -6,26 +6,7 @@ import {Container, Cont, Column, Row, Divider} from '../Sections'
 import {Address, HandMoney, Laptop, Colors, RoundImage} from '../Styling'
 
 export default (props) => {
-  const data = useStaticQuery(graphql`
-      query myQueryWhy{
-          why: allWhy4GeeksYaml {
-            edges {
-              node {
-                heading
-                sub_heading
-                why {
-                  title
-                  description
-                  image
-                  slug
-                }
-              }
-            }
-          }
-        }
-      `)
   const info = props.lang[0].node;
-  console.log("GGG", props)
   return (
     <>
       <Title
@@ -50,7 +31,7 @@ export default (props) => {
             />
             <Row align="around" marginTop="20px">
               <Column size size="2" customRespSize respSize="2" alignSelf="center">
-                {(i.slug === "job-in-tech") && <Address width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                {(i.slug === "job-in-tech" || i.slug === "trabaja-en-tecnologia") && <Address width="32" color={Colors.yellow} fill={Colors.yellow} />}
                 {(i.slug === "finance-your-career") && <HandMoney width="32" color={Colors.yellow} fill={Colors.yellow} />}
                 {(i.slug === "never-code-alone-again") && <Laptop width="32" color={Colors.yellow} fill={Colors.yellow} />}
               </Column>

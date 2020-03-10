@@ -84,7 +84,7 @@ const Home = (props) => {
 
             <Wrapper
                 style="default">
-                <Credentials up="80" />
+                <Credentials up="80" lang={data.allCredentialsYaml.edges} />
             </Wrapper>
 
             {/* WHY 4GEEKS SECTION */}
@@ -92,7 +92,7 @@ const Home = (props) => {
             <Wrapper
                 style="default">
                 <Divider height="100px" />
-                <Why4Geeks />
+                <Why4Geeks lang={data.allWhy4GeeksYaml.edges} />
                 <Divider height="50px" />
             </Wrapper>
 
@@ -100,7 +100,7 @@ const Home = (props) => {
 
             <Wrapper
                 style="default">
-                <JobsStatistics />
+                <JobsStatistics lang={data.allJobsStatisticsYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
 
@@ -350,6 +350,50 @@ export const query = graphql`
         }
       }
     }
+    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+          node {
+            lang
+            credentials {
+              title
+              slug
+              value
+              symbol
+              symbol_position
+            }
+          }
+        }
+      }
+      allWhy4GeeksYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+          node {
+            lang
+            heading
+            sub_heading
+            why {
+              title
+              description
+              image
+              slug
+            }
+          }
+        }
+      }
+      allJobsStatisticsYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+          node {
+            id
+            lang
+            jobs {
+              title
+              slug
+              sub_title
+              value
+              value_symbol
+              chart_data
+            }
+          }
+        }}
   }
 `;
 
