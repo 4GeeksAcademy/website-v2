@@ -81,6 +81,7 @@ const Contact = (props) => {
             <Paragraph color={Colors.gray}>Madrid, Spain</Paragraph>
         </ToggleButton>,
     ];
+    console.log("@@", yml)
     return (
         <>
             <Divider height="100px" />
@@ -88,7 +89,7 @@ const Contact = (props) => {
                 style="default">
                 <Title
                     title={yml.tagline}
-                    paragraph="Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+                    paragraph={yml.sub_heading}
                     primary
                     size="8"
                 />
@@ -114,36 +115,36 @@ const Contact = (props) => {
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
                                             <Row height="50px">
-                                                <H3>TELL US ABOUT YOU</H3>
+                                                <H3>{yml.left.heading}</H3>
                                             </Row>
                                             <Row height="50px">
                                                 <Input
-                                                    type="text" className="form-control" placeholder="First name *"
+                                                    type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                                     onChange={(e) => setVal({...formData, first_name: e.target.value})}
                                                     value={formData.firstName}
                                                 />
                                             </Row>
                                             <Row height="50px">
-                                                <Input type="text" className="form-control" placeholder="Last Name *"
+                                                <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                                     onChange={(e) => setVal({...formData, last_name: e.target.value})}
                                                     value={formData.lastName}
                                                 />
                                             </Row>
                                             <Row height="50px">
-                                                <Input type="email" className="form-control" placeholder="Email *"
+                                                <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
                                                     onChange={(e) => setVal({...formData, email: e.target.value})}
                                                     value={formData.email}
                                                 />
                                             </Row>
                                             <Row height="50px">
                                                 <Input
-                                                    type="number" className="form-control" placeholder="Phone *"
+                                                    type="number" className="form-control" placeholder={yml.left.form_section.phone}
                                                     onChange={(e) => setVal({...formData, phone: e.target.value})}
                                                     value={formData.phone}
                                                 />
                                             </Row>
                                             <Row height="40px">
-                                                <Paragraph padding="0.375rem 0.75rem" fontSize="13px" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
+                                                <Paragraph padding="0.375rem 0.75rem" fontSize="13px" lineHeight="16px" color={Colors.black}>{yml.left.locations_title}</Paragraph>
                                             </Row>
                                             <Row height="60px">
                                                 <Column size="12">
@@ -157,10 +158,10 @@ const Contact = (props) => {
                                                 </Column>
                                             </Row>
                                             <Row height="40px">
-                                                <Input type="text" className="form-control" placeholder="Referral key" />
+                                                <Input type="text" className="form-control" placeholder={yml.left.message_section.placeholder} />
                                             </Row>
                                             <Row height="20px">
-                                                <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>If you were referred by any current or past student, use your referral code for extra credit or discount.</Paragraph>
+                                                <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.message_section.note}</Paragraph>
                                             </Row>
                                             <Row >
                                                 <Button
@@ -176,7 +177,7 @@ const Contact = (props) => {
                                                             console.log("error");
                                                         })
                                                     }
-                                                >APPLY</Button>
+                                                >{yml.left.button.button_text}</Button>
                                             </Row>
                                         </Column>
                                     </Row>
@@ -215,12 +216,33 @@ export const query = graphql`
       edges{
         node{
             tagline
+            sub_heading
             meta_info{
                 title
                 description
                 image
                 keywords
             }
+            left {
+                heading
+                locations_title
+                button {
+                  button_text
+                  button_link
+                }
+                form_section {
+                  
+                    first_name
+                    last_name
+                    email
+                    phone
+                  
+                }
+                message_section {
+                  placeholder
+                  note
+                }
+              }
         }
       }
     }
