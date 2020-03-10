@@ -1,0 +1,52 @@
+meta_info:
+  slug: "introduccion-programacion"
+  title: "Curso de introducción a la programación - 4Geeks Academy"
+  description: "Learn to code in just a couple of weeks. Ideal get you introduced in the world of coding."
+  image: "/images/program-bg.png"
+  keywords: ["introducción a la programación", "aprender a programar"]
+  redirects: ["/introduccion-programacion-codigo"]
+
+tagline: "Curso de introducción a la programación - 4Geeks Academy"
+
+## PROGRAM DETAILS
+details:
+  heading: DETALLES DEL PROGRAMA
+  sub_heading: "Introducción a la programación"
+  details_modules:
+    - module_name: "Tu primer sitio web"
+      title: "Tu primer sitio web"
+      description: "Empieza a programar de inmediato. Usa HTML5 y CSS3 para construir un par de pequeños sitios web, incluyendo una simulación de Instagram. Comprende el flujo de trabajo de la programación de sitios web, aprende las mejores prácticas y domina las habilidades de diseño, CSS y HTML más importantes."
+      projects: ""
+      slug: "tu-primer-sitio-web"
+      duration: "1 sem"
+    - module_name: "Aprende a programar"
+      title: "Aprende a programar"
+      description: "Piensa como un ordenador: Controla el flujo de tu código, crea algoritmos, haz un bucle, usa condicionales y usa/mezcla JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
+      projects: "Pequeños juegos y sitios web interactivos."
+      slug: "aprende-a-programar"
+      duration: "1 sem"
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  geek_pal_heading: Trabaja en tecnología
+  geek_pal:
+    - Construcción de CV
+    - Construcción del perfil de Github
+    - Preparación de simulación de entrevistas
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos
+    - Entrenamiento de marca personal
+    - Prácticas y ejercicios de programación posteriores a la graduación
+  geek_force_heading: ""
+  geek_force:
+    - Un profesor cada cuatro estudiantes (1:4)
+    - Un profesor principal cada doce estudiantes (1:12)
+    - Sesiones ilimitadas de tutoría por demanda, en persona o en línea.
+    - Miles de ejercicios autoevaluados
+    - Tutoriales interactivos y autoevaluados
+    - Soluciones en video para una retroalimentación instantánea
+    - Chat de apoyo en línea 12 horas al día
+    - Transmisión en línea de las clases
+    - Grabación de las clases para su posterior revisión
+
+prices:
+  heading: "PRECIOS Y PAGOS"

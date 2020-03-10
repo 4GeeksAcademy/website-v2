@@ -1,0 +1,70 @@
+## STAFF MEMEBERS INFO
+staff:
+  - name: "Alejandro"
+    last_name: "Sanchez"
+    nick_name: "Alesanchezr"
+    slug: "alejandro-sanchez"
+    job_title: "cofundador"
+    github: ""
+    linkdin: ""
+    twitter: ""
+    website: ""
+    image: "/staff/alejandro.png"
+    age: 34
+    interests:
+      - Fútbols
+    coding_skills:
+      - Javascript
+    location: ""
+  - name: "Marcelo"
+    last_name: "Ricigliano"
+    nick_name: ""
+    slug: marcelo-ricigliano
+    job_title: "CEO - cofundador"
+    github: ""
+    linkdin: ""
+    twitter: ""
+    website: ""
+    image: "/staff/marcelo.png"
+    age: 33
+    interests:
+      - Fútbol
+      - Juventus
+    coding_skills:
+      - Javascript
+    location: ""
+  - name: "Paolo"
+    last_name: "Lucano"
+    nick_name: "Pluco"
+    slug: "paolo-lucano"
+    job_title: "mentor e instructor"
+    github: ""
+    linkdin: ""
+    twitter: ""
+    website: ""
+    image: "/staff/jane.png"
+    age: 42
+    interests:
+      - Fútbol
+      - Música
+      - Películas
+      - Viajar
+    coding_skills:
+      - Javascript
+    location: ""
+  - name: "Bridget"
+    last_name: "Schraeder"
+    nick_name: ""
+    slug: "bridget-schraeder"
+    job_title: "Career Support"
+    github: ""
+    linkdin: ""
+    twitter: ""
+    website: ""
+    image: "/staff/colby.png"
+    age: 33
+    interests:
+      - Música
+    coding_skills:
+      - Excel
+    location: ""
