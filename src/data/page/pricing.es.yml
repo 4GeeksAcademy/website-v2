@@ -1,0 +1,37 @@
+meta_info:
+  slug: precios
+  title: null
+  description: null
+  image: null
+  keywords: []
+  redirects: []
+
+## BANNER - HEADER
+banner:
+  tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
+  sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
+  image: "/bg/pricing-bg.png"
+
+## FIRST SECTION AFTER THE BANNER
+intro:
+  image: "/images/pricing.png"
+  content: "Nuestro programa ha sido construido específicamente para entregar eficientemente el conocimiento y las habilidades tecnológicas más actuales y esenciales, sin dejar de ser asequibles."
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRECIOS Y PAGOS"
+
+## PAYMENT GUIDE SECTION
+payment_guide:
+  heading: "GUÍA DE PAGOS"
+  sub_heading: "¿Tienes preguntas sobre la financiación o planes de pago extendido?"
+  button_text: "VER LA GUÍA"
+  button_link: ""
+  submit_button_text: "Enviar"
+  submit_button_link: ""
+
+## IMMERSED IN ECOSYSTEM SECTION
+ecosystem:
+  heading: "INMERSO EN EL ECOSISTEMA DE PROGRAMACIÓN DE MADRID"
+  sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
+  partners_name: "financials" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)

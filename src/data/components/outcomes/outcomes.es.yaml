@@ -1,0 +1,40 @@
+## OUTCOME SECTION
+## THIS COMPONENT IS USED IN "/the-academy"
+## NOT READY YET
+
+heading: "RESULTADOS DE 4GEEKS"
+sub_heading: "De nuestros estudiantes, el 76% busca un trabajo justo después y el 24% busca mejorar sus habilidades o lanzar empresas."
+outcomes:
+  - title: "Demográficas"
+    content: ""
+    data:
+      chart_one:
+        - title: "UNO"
+          value: 10
+          color: ""
+        - title: "DOS"
+          value: 10
+          color: ""
+        - title: "TRES"
+          value: 10
+          color: ""
+      chart_two:
+        - title: "UNO"
+          value: 10
+          color: ""
+        - title: "DOS"
+          value: 10
+          color: ""
+        - title: "TRES"
+          value: 10
+          color: ""
+      chart_three:
+        - title: "UNO"
+          value: 10
+          color: ""
+        - title: "DOS"
+          value: 10
+          color: ""
+        - title: "TRES"
+          value: 10
+          color: ""

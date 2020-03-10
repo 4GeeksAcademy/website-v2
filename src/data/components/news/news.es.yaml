@@ -1,0 +1,11 @@
+## DATA TO CHANGE THE IMAGES IN THE NEWS SECTION IN THE HOME PAGE
+news:
+  - name: "Educación"
+    slug: "educacion"
+    image: "../education.jpg"
+  - name: "Newsweek"
+    slug: "newsweek"
+    image: "../newsweek.png"
+  - name: "News"
+    slug: "news"
+    image: "../news.jpg"

@@ -1,0 +1,38 @@
+meta_info:
+    slug: coordinador-career-support
+    title: ""
+    description: ""
+    image: ""
+    keywords: ""
+    redirects: ["/career"]
+
+seo_title: ""
+tagline: ""
+sub_heading: ""
+
+## BANNER INFO
+banner_heading: "Coordinador de Career Support"
+banner_sub_heading: ""
+banner_image: "/images/pricing-bg.png"
+cities:
+    - Miami
+    - Santiago de Chile
+    - Caracas
+button_text: "APLICA YA"
+## JOB MAIN SECTION INFO
+title: "Admisión y Recursos Humanos"
+description: "Estamos revolucionando la industria de la educación de la programación al graduar prósperos desarrolladores de software junior 10 veces más rápido que las universidades, el 90% de nuestros graduados han sido contratados en puestos relacionados con la programación con al menos un 30% de aumento en su salario. Estamos buscando a alguien que nos ayude a aumentar esos números, comprometiéndose con nuestros estudiantes y ex-alumnos y con empleadores potenciales.  ¿Qué tipo de persona estamos buscando?"
+
+content:
+    - label: "Responsabilidades"
+      list:
+          - "1. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          - "2. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. "
+    - label: "Requirements"
+      list:
+          - "1. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          - "2. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+    - label: "Benefits"
+      list:
+          - "1. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+          - "2. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."

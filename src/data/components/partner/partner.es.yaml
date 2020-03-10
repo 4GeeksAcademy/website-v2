@@ -1,0 +1,128 @@
+## THE PARTNERS ARE DIVIDED IN 4 CATEGORIES:
+## PARTNERS - CODING - INFLUENCERS - FINANCIALS
+## THIS COMPONENT IS USED IN "/partners" and "/pricing"
+
+partners:
+  tagline: "QUIÉN CONTRATA A NUESTROS ESTUDIANTES"
+  sub_heading: "Nuestros 'hiring partners' crecen cada día, y nuestros estudiantes han sido contratados por docenas de empresas en los EE.UU. y en todo el mundo."
+  images:
+    - name: "Razz"
+      slug: "razz"
+      image: "/razz-logo.png"
+      featured: false
+    - name: "Boats Group"
+      slug: "boats-group"
+      image: "/boats-logo.jpg"
+      featured: false
+    - name: "Gaisce Group "
+      slug: "gaisce-group"
+      image: "/gaisce-logo.jpg"
+      featured: false
+    - name: "Tcg"
+      slug: "tcg"
+      image: "/tcg-logo.png"
+      featured: false
+    - name: "Launch Potato"
+      slug: "launch-potato"
+      image: "/launch-logo.png"
+      featured: false
+    - name: "DS9"
+      slug: "ds9"
+      image: "/ds9-logo.png"
+      featured: false
+    - name: "Overseas"
+      slug: "overseas"
+      image: "/overseas-logo.png"
+      featured: false
+    - name: "Affinity"
+      slug: "affinity"
+      image: "/affinity-logo.png"
+      featured: false
+    - name: "Digitel"
+      slug: "digitel"
+      image: "/digitel-logo.png"
+      featured: false
+    - name: "Bod"
+      slug: "bod"
+      image: "/bod-logo.jpg"
+      featured: false
+    - name: "Coinet"
+      slug: "coinet"
+      image: "/coinet-logo.jpg"
+      featured: false
+coding:
+  tagline: "LAS COMPAÑÍAS CONFÍAN Y CONTRATAN A NUESTROS ESTUDIANTES"
+  sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
+  images:
+    - name: "Beacon"
+      slug: "beacon"
+      image: "/images/coding/beacon.png"
+      featured: false
+    - name: "Blockchain"
+      slug: "blockchain"
+      image: "/images/coding/blockchain.png"
+      featured: false
+    - name: "Bloktech"
+      slug: "bloktech"
+      image: "/images/coding/bloktech.png"
+      featured: false
+    - name: "Startup"
+      slug: "startup"
+      image: "/images/coding/startup.png"
+      featured: false
+    - name: "Shell Hacks"
+      slug: "shell-hacks"
+      image: "/images/coding/shell-hacks.png"
+      featured: false
+    - name: "Wegacha"
+      slug: "wegacha"
+      image: "/images/coding/wegacha.png"
+      featured: false
+    - name: "Worldcamp"
+      slug: "worldcamp"
+      image: "/images/coding/worldcamp.png"
+      featured: false
+influencers:
+  tagline: "EN ASOCIACIÓN CON LOS MÁS INFLUYENTES DE LA CIUDAD"
+  sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
+  images:
+    - name: "Quotanda"
+      slug: "quotanda"
+      image: "/images/quotanda-logo.png"
+      featured: false
+    - name: "Climb"
+      slug: "climb"
+      image: "/images/climb-logo.png"
+      featured: false
+    - name: "Skill Fund"
+      slug: "skill-fund"
+      image: "/images/skill-logo.png"
+      featured: false
+    - name: "Dda"
+      slug: "dda"
+      image: "/images/influencers/dda.png"
+      featured: false
+    - name: "Miami Dade"
+      slug: "miami-dade"
+      image: "/images/influencers/miami-dade.png"
+      featured: false
+    - name: "Career Score"
+      slug: "career-score"
+      image: "/images/influencers/career-score.png"
+      featured: false
+financials:
+  tagline: "INMERSOS EN EL ECOSISTEMA DE PROGRAMACIÓN DE LA CIUDAD"
+  sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
+  images:
+    - name: "Quotanda"
+      slug: "quotanda"
+      image: "/images/quotanda-logo.png"
+      featured: false
+    - name: "Climb"
+      slug: "climb"
+      image: "/images/climb-logo.png"
+      featured: false
+    - name: "Skill Fund"
+      slug: "skill-fund"
+      image: "/images/skill-logo.png"
+      featured: false
