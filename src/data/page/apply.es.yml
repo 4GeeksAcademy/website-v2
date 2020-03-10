@@ -11,28 +11,27 @@ tagline: APLICA A 4GEEKS
 sub_heading: ""
 
 ## APPLY LEFT SECTION
-left_side:
-  - heading: "CUÉNTANOS SOBRE TI"
-    form_section:
-      form_placeholders:
-        - first_name: Nombres""
-          last_name: "Apellidos"
-          email: "Email"
-          phone: "Móvil"
-    locations_title: "Selecciona una sede"
-    referral_section:
-      - placeholder: "Código de invitación"
-        content: "Si te ha referido alguien que estudia o ha estudiado en 4Geeks, tendrás un beneficio adicional usando su código de invitación."
-    button:
-      - button_text: "APLICA"
-        button_link: ""
+left:
+  heading: "CUÉNTANOS SOBRE TI"
+  form_section:
+    first_name: Nombres""
+    last_name: "Apellidos"
+    email: "Email"
+    phone: "Móvil"
+  locations_title: "Selecciona una sede"
+  referral_section:
+    placeholder: "Código de invitación"
+    content: "Si te ha referido alguien que estudia o ha estudiado en 4Geeks, tendrás un beneficio adicional usando su código de invitación."
+  button:
+    button_text: "APLICA"
+    button_link: ""
 
 ## APPLY RIGHT SECTION
 
-right_side:
-  - heading: "UNA VEZ HAYAS APLICADO, TÚ RECIBIRÁS"
-    content_section:
-      - "1- Un correo electrónico de nuestro equipo local."
-      - "2- Información sobre las opciones de financiación de tu matrícula."
-      - "3- Una explicación de cómo funciona el proceso para conseguir la mejor opción en la ciudad."
-      - "4- El syllabus del programa y la asistencia de nuestros asesores para ayudarte a tomar la mejor decisión para tu carrera."
+right:
+  heading: "UNA VEZ HAYAS APLICADO, TÚ RECIBIRÁS"
+  content_section:
+    - "1- Un correo electrónico de nuestro equipo local."
+    - "2- Información sobre las opciones de financiación de tu matrícula."
+    - "3- Una explicación de cómo funciona el proceso para conseguir la mejor opción en la ciudad."
+    - "4- El syllabus del programa y la asistencia de nuestros asesores para ayudarte a tomar la mejor decisión para tu carrera."
