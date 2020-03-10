@@ -11,17 +11,17 @@ tagline: CONTÁCTANOS
 sub_heading: "Si tienes dudas, sugerencias o simplemente quieres comentarnos algo, no dudes en contactarnos."
 
 ## CONTACT-US LEFT SECTION
-left_side:
-  - heading: "CONTÁCTANOS"
-    form_section:
-      form_placeholders:
-        - first_name: "Nombres"
-          last_name: "Apellidos"
-          email: "Email"
-          phone: "Móvil"
-    locations_title: "Selecciona una sede"
-    message_section:
-      - placeholder: "Escribe tu mensaje aquí"
-    button:
-      - button_text: "ENVIAR"
-        button_link: ""
+left:
+  heading: "CONTÁCTANOS"
+  form_section:
+    first_name: "Nombres"
+    last_name: "Apellidos"
+    email: "Email"
+    phone: "Móvil"
+  locations_title: "Selecciona una sede"
+  message_section:
+    placeholder: "Escribe tu mensaje aquí"
+    note: ""
+  button:
+    button_text: "ENVIAR"
+    button_link: ""
