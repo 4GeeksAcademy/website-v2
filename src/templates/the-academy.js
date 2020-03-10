@@ -14,7 +14,7 @@ import RecentPosts from '../components/RecentPosts'
 const Why = (props) => {
     const {data, pageContext, yml} = props;
     const cornerstone = yml.cornerstones;
-    console.log("yml", yml)
+    console.log("yml", data)
     return (
         <>
             <Container fluid height="450px">
@@ -39,7 +39,7 @@ const Why = (props) => {
                         <Row>
                             <Column size="1" />
                             <Column size="9">
-                                <Credentials up="80" />
+                                <Credentials up="80" lang={data.allCredentialsYaml.edges} />
                             </Column>
                         </Row>
                     </Column>
@@ -412,6 +412,20 @@ export const query = graphql`
         }
       }
     }
+    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+          node {
+            lang
+            credentials {
+              title
+              slug
+              value
+              symbol
+              symbol_position
+            }
+          }
+        }
+      }
   }
 `;
 

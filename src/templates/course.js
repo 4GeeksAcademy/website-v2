@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider, Sidebar} from '../components/Sections'
 import {Title, H2, H3, H4, Span, Paragraph} from '../components/Heading'
-import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
+import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import PricesAndPayment from '../components/PricesAndPayment'
 import Alumni from '../components/Alumni'
@@ -16,8 +16,16 @@ import 'react-tabs/style/react-tabs.css';
 import ProgramSelector from '../components/ProgramSelector'
 import ToggleButton from '../components/ToggleButton'
 import {requestSyllabus} from "../actions";
-import {makeStyles} from '@material-ui/core/styles';
+// import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import {makeStyles, withStyles} from '@material-ui/core/styles';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepButton from '@material-ui/core/StepButton';
+import StepConnector from '@material-ui/core/StepConnector';
+import StepLabel from '@material-ui/core/StepLabel';
+import clsx from 'clsx';
+import Typography from '@material-ui/core/Typography';
 
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
@@ -34,6 +42,7 @@ const Input = styled.input`
 function rand () {
   return Math.round(Math.random() * 20) - 10;
 }
+
 
 function getModalStyle () {
   const top = 50 + rand();
@@ -71,6 +80,9 @@ const Program = ({data, pageContext, yml}) => {
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
   const classes = useStyles();
+  const [activeStep, setActiveStep] = useState(0);
+  const [completed, setCompleted] = useState({});
+  const steps = getSteps(yml);
   const [formData, setVal] = useState({
     first_name: '',
     last_name: '',
@@ -84,6 +96,66 @@ const Program = ({data, pageContext, yml}) => {
     setOpen(false);
   };
 
+  const totalSteps = () => {
+    return steps.length;
+  };
+  const completedSteps = () => {
+    return Object.keys(completed).length;
+  };
+  const isLastStep = () => {
+    return activeStep === totalSteps() - 1;
+  };
+  const allStepsCompleted = () => {
+    return completedSteps() === totalSteps();
+  };
+  const handleNext = () => {
+    const newActiveStep =
+      isLastStep() && !allStepsCompleted()
+        ? // It's the last step, but not all steps have been completed,
+        // find the first step that has been completed
+        steps.findIndex((step, i) => !(i in completed))
+        : activeStep + 1;
+    setActiveStep(newActiveStep);
+  };
+  const handleBack = () => {
+    setActiveStep(prevActiveStep => prevActiveStep - 1);
+  };
+  const handleStep = step => () => {
+    setActiveStep(step);
+  };
+  const handleComplete = () => {
+    const newCompleted = completed;
+    newCompleted[activeStep] = true;
+    setCompleted(newCompleted);
+    handleNext();
+  };
+  const handleReset = () => {
+    setActiveStep(0);
+    setCompleted({});
+  };
+
+
+  // console.log("tempQ", data.allTypicalDayYaml)
+  function getStepContent (step) {
+    switch (step) {
+      case 0:
+        return `${yml.typical.schedule[0].content}`
+      case 1:
+        return `${yml.typical.schedule[1].content}`
+      case 2:
+        return `${yml.typical.schedule[2].content}`
+      case 3:
+        return `${yml.typical.schedule[3].content}`
+      case 4:
+        return `${yml.typical.schedule[4].content}`
+      case 5:
+        return `${yml.typical.schedule[5].content}`
+      default:
+        return 'Unknown step';
+    }
+  }
+
+
   let week = "";
   {
     pageContext.slug === "full-stack-web-development-bootcamp-full-time"
@@ -93,7 +165,8 @@ const Program = ({data, pageContext, yml}) => {
         : pageContext.slug === "coding-introduction"
         && null
   }
-
+  console.log('sched', yml.typical.schedule)
+  console.log('steps', getSteps(yml))
   return (<>
     <div className={test}
     >
@@ -187,7 +260,7 @@ const Program = ({data, pageContext, yml}) => {
       </Wrapper>
       <Wrapper
         style="default">
-        <Credentials up="60" />
+        <Credentials up="60" lang={data.allCredentialsYaml.edges} />
       </Wrapper>
       <Sidebar
         shadow
@@ -541,7 +614,8 @@ const Program = ({data, pageContext, yml}) => {
         <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
         <Divider height="100px" />
       </Wrapper>
-      <Wrapper style="default">
+
+      {/* <Wrapper style="default">
         <Row align="center">
           <Title
             size="10"
@@ -549,29 +623,32 @@ const Program = ({data, pageContext, yml}) => {
             paragraph={yml.typical.sub_heading}
             primary
           />
-          {/* <Divider height="50px" /> */}
+          <Divider height="50px" />
           <Column size="8" customRespSize respSize="12">
             <Row height="120px" align="center">
               <Column size="9" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  {/* <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
-                                    {steps.map((label, index) => (
-                                        <Step key={label}>
-                                            <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
-                                                <StepLabel StepIconComponent={ColorlibStepIcon}>{label.icon}{label.time}</StepLabel>
-                                            </StepButton>
-                                        </Step>
-                                    ))}
-                                </Stepper> */}
+                <Row height="50%" align="center">
+                  <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
+                    {steps.map((label, index) => (
+                      <Step key={label}>
+                        <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
+                          <StepLabel StepIconComponent={ColorlibStepIcon}>{label.time}</StepLabel>
+                        </StepButton>
+                      </Step>
+                    ))}
+                  </Stepper>
+
                 </Row>
-                <Row align="center" height="120px">
-                  {/* <Typography className={classes.test}>{getStepContent(activeStep)}</Typography> */}
+                <Divider height="10%" />
+                <Row align="left" height="40%">
+                  <Typography className={classes.test}>{getStepContent(activeStep)}</Typography>
                 </Row>
               </Column>
             </Row>
           </Column>
         </Row>
-      </Wrapper>
+      </Wrapper> */}
+      <Divider height="100px" />
       <Wrapper
         style="default"
       >
@@ -645,6 +722,12 @@ export const query = graphql`
             typical{
               heading
               sub_heading
+              schedule{
+                title
+                time
+                icon
+                content
+              }
             }
             alumni{
               heading
@@ -660,10 +743,24 @@ export const query = graphql`
         }
       }
     }
+    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+      edges {
+        node {
+          lang
+          credentials {
+            title
+            slug
+            value
+            symbol
+            symbol_position
+          }
+        }
+      }
+    }
   }
 `;
 
-export default BaseRender(Program);
+
 
 const Header = styled.div`
     background: black;
@@ -679,3 +776,147 @@ const Body = styled.div`
     background: white;
     height: ${props => props.height};
     border-radius: 0 0 1.25rem 1.25rem;`
+
+const QontoConnector = withStyles({
+  alternativeLabel: {
+    top: 5,
+    left: 'calc(-50% + 5px)',
+    right: 'calc(50% + 5px)',
+    color: 'black'
+  },
+  active: {
+    '& $line': {
+      borderColor: Colors.yellow,
+    },
+  },
+  completed: {
+    '& $line': {
+      borderColor: Colors.yellow,
+    },
+  },
+  circle: {
+    width: 4,
+    height: 4,
+    borderRadius: '50%',
+    backgroundColor: Colors.blue,
+  },
+  line: {
+    borderColor: 'white',
+    borderTopWidth: 1,
+    borderRadius: 1,
+  },
+})(StepConnector);
+const useQontoStepIconStyles = makeStyles({
+  root: {
+    color: 'black',
+    display: 'flex',
+    height: 22,
+    alignItems: 'center',
+  },
+  active: {
+    color: '#784af4',
+  },
+  circle: {
+    width: 4,
+    height: 4,
+    borderRadius: '50%',
+    backgroundColor: Colors.blue,
+  },
+  completed: {
+    color: '#784af4',
+    zIndex: 1,
+    fontSize: 18,
+  },
+});
+function QontoStepIcon (props) {
+  const classes = useQontoStepIconStyles();
+  const {active, completed} = props;
+
+  return (
+    <div
+      className={clsx(classes.root, {
+        [classes.active]: active,
+      })}
+    >
+      {completed ? <Check className={classes.completed} /> : <div className={classes.circle} />}
+    </div>
+  );
+}
+
+const useColorlibStepIconStyles = makeStyles({
+  root: {
+    backgroundColor: '#ccc',
+    zIndex: 1,
+    color: Colors.yellow,
+    width: 12,
+    height: 12,
+    display: 'flex',
+    borderRadius: '50%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  active: {
+    backgroundColor: Colors.yellow
+  },
+  completed: {
+    backgroundImage:
+      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)',
+  },
+});
+
+function ColorlibStepIcon (props) {
+  const classes = useColorlibStepIconStyles();
+  const {active, completed} = props;
+
+  const icons = {
+    1: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />,
+    2: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />,
+    3: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />,
+  };
+
+  return (
+    <div
+      className={clsx(classes.root, {
+        [classes.active]: active,
+        [classes.completed]: completed,
+      })}
+    >
+      {icons[String(props.icon)]}
+    </div>
+  );
+}
+// const useStyles = makeStyles(theme => ({
+//   root: {
+//     width: '80%',
+//   },
+//   button: {
+//     marginRight: theme.spacing(1),
+//   },
+//   completed: {
+//     display: 'inline-block',
+//   },
+//   instructions: {
+//     marginTop: theme.spacing(1),
+//     marginBottom: theme.spacing(1),
+//   },
+//   test: {
+//     color: Colors.black
+//   },
+//   circle: {
+//     width: 4,
+//     height: 4,
+//     borderRadius: '50%',
+//     backgroundColor: Colors.blue,
+//   },
+// }));
+function getSteps (day) {
+  return [
+    {icon: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[0].time},
+    {icon: <Coffee width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '8:45AM'},
+    {icon: <FileCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '09:00AM'},
+    {icon: <LaptopCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '10:00AM'},
+    {icon: <Utensils width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '01:00PM'},
+    {icon: <Dumbbell width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '02:00PM'},
+  ];
+}
+export default BaseRender(Program);
