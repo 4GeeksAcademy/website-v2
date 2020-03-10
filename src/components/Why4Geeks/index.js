@@ -5,7 +5,7 @@ import {Title, H3, H4, Paragraph} from '../Heading'
 import {Container, Cont, Column, Row, Divider} from '../Sections'
 import {Address, HandMoney, Laptop, Colors, RoundImage} from '../Styling'
 
-export default () => {
+export default (props) => {
   const data = useStaticQuery(graphql`
       query myQueryWhy{
           why: allWhy4GeeksYaml {
@@ -24,7 +24,8 @@ export default () => {
           }
         }
       `)
-  const info = data.why.edges[0].node;
+  const info = props.lang[0].node;
+  console.log("GGG", props)
   return (
     <>
       <Title
