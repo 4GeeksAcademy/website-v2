@@ -152,7 +152,7 @@ const Partners = (props) => {
             </Wrapper>
             <Wrapper
                 style="default">
-                <Credentials move="up" up="100" />
+                <Credentials move="up" up="100" lang={data.allCredentialsYaml.edges} />
             </Wrapper>
             <Divider height="50px" />
             <Wrapper
@@ -212,6 +212,20 @@ export const query = graphql`
         }
       }
     }
+    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+          node {
+            lang
+            credentials {
+              title
+              slug
+              value
+              symbol
+              symbol_position
+            }
+          }
+        }
+      }
   }
 `;
 export default BaseRender(Partners);

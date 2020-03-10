@@ -6,24 +6,7 @@ import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
 import {Row, Column, Container, Divider} from '../Sections'
 
 export default props => {
-  const data = useStaticQuery(graphql`
-      query myCredentialsQuery{
-        allCredentialsYaml {
-          edges {
-            node {
-              credentials {
-                title
-                slug
-                value
-                symbol
-                symbol_position
-              }
-            }
-          }
-        }
-          }
-      `)
-  const credentials = data.allCredentialsYaml.edges[0].node.credentials
+  const credentials = props.lang[0].node.credentials
   return (
     <Row >
       {credentials.map((i, index) => {

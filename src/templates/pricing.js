@@ -95,7 +95,7 @@ const Pricing = (props) => {
             {/* CREDENTIALS SECTION */}
             <Wrapper
                 style="default">
-                <Credentials up="80" />
+                <Credentials up="80" lang={data.allCredentialsYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
             {/*  */}
@@ -267,6 +267,20 @@ export const query = graphql`
         }
       }
     }
+    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+          node {
+            lang
+            credentials {
+              title
+              slug
+              value
+              symbol
+              symbol_position
+            }
+          }
+        }
+      }
   }
 `;
 export default BaseRender(Pricing);
