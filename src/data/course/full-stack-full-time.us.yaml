@@ -79,6 +79,36 @@ geeksVsOthers:
 prices:
   heading: "PRICES AND PAYMENTS"
 
+## TYPICAL DAY SECTION
+typical:
+  heading: "TYPICAL DAY AT THE ACADEMY"
+  sub_heading: ""
+  schedule:
+    - title: ""
+      time: "8:30 AM"
+      icon: Circle
+      content: "sss"
+    - title: ""
+      time: ""
+      icon: Coffee
+      content: "ddd"
+    - title: ""
+      time: ""
+      icon: Coffee
+      content: "ggg"
+    - title: ""
+      time: ""
+      icon: Coffee
+      content: "rrr"
+    - title: ""
+      time: ""
+      icon: Coffee
+      content: "nmm"
+    - title: ""
+      time: ""
+      icon: Coffee
+      content: "uuu"
+
 ## ALUMNI SECTION
 alumni:
   heading: "MEET THE ALUMNI AND PROJECTS"

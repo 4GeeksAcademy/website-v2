@@ -133,7 +133,7 @@ const Pricing = (props) => {
                     title={yml.prices.heading}
                     primary
                 />
-                <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
+                {/* <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} /> */}
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
