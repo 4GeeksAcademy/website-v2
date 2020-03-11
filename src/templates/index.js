@@ -264,7 +264,7 @@ const Home = (props) => {
                 style="default">
 
                 <Divider height="50px" />
-                <WhoIsHiring source="partners" />
+                <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
@@ -427,7 +427,53 @@ export const query = graphql`
           }
         }
       }
-     
+      allPartnerYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+            node {
+              lang
+              partners {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              coding {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              influencers {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              financials {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+            }
+          }
+        }
   }
 `;
 

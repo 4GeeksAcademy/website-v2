@@ -221,7 +221,7 @@ const Pricing = (props) => {
                 border="top"
             >
                 <Divider height="20px" />
-                <WhoIsHiring source={yml.ecosystem.partners_name} />
+                <WhoIsHiring source={yml.ecosystem.partners_name} lang={data.allPartnerYaml.edges} />
                 <Divider height="150px" />
             </Wrapper>
 
@@ -281,6 +281,53 @@ export const query = graphql`
           }
         }
       }
+      allPartnerYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+            node {
+              lang
+              partners {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              coding {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              influencers {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              financials {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+            }
+          }
+        }
   }
 `;
 export default BaseRender(Pricing);

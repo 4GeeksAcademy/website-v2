@@ -56,8 +56,8 @@ const WhoIsHiring = props => {
         }
         }
       `)
-  const partners = data.allPartnerYaml.edges[0].node
-  console.log("partners", data.allPartnerYaml.edges[0].node)
+  const partners = props.lang[0].node
+  console.log("partners", partners)
   return (
     <>
       {props.source === "partners"
@@ -70,7 +70,7 @@ const WhoIsHiring = props => {
             paragraph={partners.partners.sub_heading}
             customParagraphSize="8"
           />
-          <Divider height="50px" />
+          <Divider height="100px" />
           <Row >
             {partners.partners.images.map((partner, index) => (
               <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
@@ -107,6 +107,7 @@ const WhoIsHiring = props => {
               size="8"
               paragraph={partners.coding.sub_heading}
             />
+            <Divider height="100px" />
             <Row>
               {partners.coding.images.map((partner, index) => (
                 <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
@@ -135,6 +136,7 @@ const WhoIsHiring = props => {
                 size="8"
                 paragraph={partners.influencers.sub_heading}
               />
+              <Divider height="100px" />
               <Row>
                 {partners.influencers.images.map((partner, index) => (
                   <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
@@ -162,6 +164,7 @@ const WhoIsHiring = props => {
                 size="8"
                 paragraph={partners.financials.sub_heading}
               />
+              <Divider height="100px" />
               <Row>
                 {partners.financials.images.map((partner, index) => (
                   <Column size="4" customRespSize respSize="4" key={index} margin="5px 0">
