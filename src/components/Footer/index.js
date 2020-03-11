@@ -1,31 +1,11 @@
 import React from 'react';
 import {Link} from 'gatsby';
-import {useStaticQuery, graphql} from 'gatsby';
 import {Container, Row, Column, Divider} from '../Sections'
 import {Colors, RoundImage} from '../Styling'
 import {H5, Separator, Paragraph} from '../Heading'
 
 const Footer = (props) => {
-    const data = useStaticQuery(graphql`
-      query myQueryFooter{
-        allFooterYaml {
-            edges {
-              node {
-                id
-                footer {
-                  heading
-                  items {
-                    name
-                    link
-                  }
-                }
-              }
-            }
-          }
-        }
-      `)
     let col = props;
-    console.log("col", col)
     // let col = data.allFooterYaml.edges;
     return (
         <>
@@ -39,12 +19,12 @@ const Footer = (props) => {
                             {col.lang[0].node.footer.map((item, index) => {
 
                                 return (
-                                    <Column key={index} size="2" margin={item.heading === "COMPANY" ? "0" : "0 0 20px 0"}>
+                                    <Column key={index} size="2" margin={item.heading === "COMPANY" || item.heading === "COMPAÑÍA" ? "0" : "0 0 20px 0"}>
                                         {item.heading === null
                                             ? <Row height="20px" display_xs="none" display_sm="none"><H5 fontSize="16px" color={Colors.gray}>{item.heading}</H5></Row>
                                             : <Row height="20px"><H5 fontSize="16px" color={Colors.gray}>{item.heading}</H5></Row>}
                                         {item.heading != null
-                                            ? item.heading === "COMPANY"
+                                            ? item.heading === "COMPANY" || item.heading === "COMPAÑÍA"
                                                 ? <Row height="20px" marginBottom="10px"><Separator margin=".5rem 0" width="100%" primary></Separator></Row>
                                                 : <Row height="20px" marginBottom="10px" ><Separator margin=".5rem 0" primary></Separator></Row>
                                             : <Row height="20px" marginBottom="10px" display_xs="none" display_sm="none"><Separator margin=".5rem 0" primary></Separator></Row>
