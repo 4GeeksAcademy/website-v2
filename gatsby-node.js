@@ -261,6 +261,16 @@ const createPagesfromYml = async ({graphql, actions}) => {
                 });
             }
         }
+        if (node.fields.lang === "es") {
+            console.log(`Redirect from /${node.fields.slug} to ${_targetPath}`);
+            createRedirect({
+                fromPath: "/" + node.fields.slug,
+                toPath: _targetPath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+
+        }
 
         if (node.meta_info && node.meta_info.redirects) {
             node.meta_info.redirects.forEach(path => {
