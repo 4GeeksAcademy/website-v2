@@ -84,7 +84,7 @@ const createBlog = async ({actions, graphql}) => {
             redirectInBrowser: true,
             isPermanent: true
         });
-        
+
         if (node.fields.lang === "us") {
             console.log(`Redirect from /en/${node.fields.template}/${node.fields.slug} to ${node.fields.pagePath}`);
             createRedirect({
@@ -158,6 +158,21 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
                 redirectInBrowser: true,
                 isPermanent: true
             });
+        }
+        if (node.fields.lang === "es") {
+            createRedirect({
+                fromPath: `/${node.fields.template}/${node.fields.slug}`,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+
+            // createRedirect({
+            //     fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
+            //     toPath: node.fields.pagePath,
+            //     redirectInBrowser: true,
+            //     isPermanent: true
+            // });
         }
 
         if (node.meta_info && node.meta_info.redirects) {
@@ -246,6 +261,16 @@ const createPagesfromYml = async ({graphql, actions}) => {
                 });
             }
         }
+        if (node.fields.lang === "es") {
+            console.log(`Redirect from /${node.fields.slug} to ${_targetPath}`);
+            createRedirect({
+                fromPath: "/" + node.fields.slug,
+                toPath: _targetPath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+
+        }
 
         if (node.meta_info && node.meta_info.redirects) {
             node.meta_info.redirects.forEach(path => {
@@ -321,10 +346,10 @@ const addAdditionalRedirects = ({graphql, actions}) => {
 // };
 
 const getMetaFromPath = ({url, meta_info, frontmatter}) => {
-    
+
     //if its a blog post the meta_info comes from the front-matter
-    if(typeof(meta_info) == 'undefined') meta_info = frontmatter;
-    
+    if (typeof (meta_info) == 'undefined') meta_info = frontmatter;
+
     const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
     let m = regex.exec(url);
     if (!m) return false;
