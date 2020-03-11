@@ -25,70 +25,71 @@ module.exports = {
       bing: ""
     },
 
-    plugins: [
-      {
-        resolve: "gatsby-plugin-web-font-loader",
-        options: {
-          custom: {
-            families: ["Futura, Lato"],
-            urls: ["/fonts/fonts.css"],
-          },
+  },
+  plugins: [
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Futura, Lato"],
+          urls: ["/fonts/fonts.css"],
         },
       },
-      {
-        resolve: 'gatsby-plugin-manifest',
-        options: {
-          name: '4Geeks Academy - Coding Bootcamp, Academia de programacion: Miami, Madrid, Santiago de Chile y Venezuela',
-          short_name: '4Geeks Academy - Coding Bootcamp',
-          start_url: '/',
-          background_color: '#ffffff',
-          theme_color: '#744C9E',
-          display: 'standalone',
-          icon: 'src/assets/logos/icon.png',
-        },
-      }, {
-        resolve: 'gatsby-source-filesystem',
-        options: {
-          path: `${__dirname}/src`,
-          name: 'src',
-        },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: '4Geeks Academy - Coding Bootcamp, Academia de programacion: Miami, Madrid, Santiago de Chile y Venezuela',
+        short_name: '4Geeks Academy - Coding Bootcamp',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#744C9E',
+        display: 'standalone',
+        icon: 'src/assets/logos/icon.png',
       },
-      'gatsby-plugin-root-import',
-      'gatsby-plugin-react-helmet',
-      'gatsby-plugin-offline',
-      'gatsby-transformer-sharp',
-      'gatsby-plugin-sharp',
-      'gatsby-plugin-styled-components',
-      'gatsby-transformer-remark',
-      'gatsby-transformer-yaml',
-      'gatsby-plugin-zeit-now',
-      'gatsby-plugin-meta-redirect',
-      'gatsby-remark-reading-time',
-      {
-        resolve: `gatsby-plugin-sitemap`,
-        options: {
-          exclude: [`/admin`, `/tags/links`]
-        }
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src`,
+        name: 'src',
       },
-      {
-        resolve: 'gatsby-plugin-robots-txt',
-        options: {
-          policy: [{userAgent: '*', allow: '/'}]
-        }
-      },
-      {
-        resolve: "gatsby-plugin-google-tagmanager",
-        options: {
-          id: "GTM-PGGRR6",
-          // Include GTM in development.
-          // Defaults to false meaning GTM will only be loaded in production.
-          includeInDevelopment: false,
-
-          // datalayer to be set before GTM is loaded
-          // should be an object or a function that is executed in the browser
-          // Defaults to null
-          defaultDataLayer: {platform: "gatsby"}
-        }
+    },
+    'gatsby-plugin-root-import',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-offline',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-styled-components',
+    'gatsby-transformer-remark',
+    'gatsby-transformer-yaml',
+    'gatsby-plugin-zeit-now',
+    'gatsby-plugin-meta-redirect',
+    'gatsby-remark-reading-time',
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/admin`, `/tags/links`]
       }
-    ],
-  };
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-PGGRR6",
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: {platform: "gatsby"}
+      }
+    }
+  ],
+};

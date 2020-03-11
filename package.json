@@ -65,6 +65,7 @@
     "react-device-detect": "^1.11.14",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0-beta",
+    "react-intersection-observer": "^8.26.1",
     "react-line-awesome": "^0.1.4",
     "react-minimal-pie-chart": "^6.0.1",
     "react-player": "^1.14.2",

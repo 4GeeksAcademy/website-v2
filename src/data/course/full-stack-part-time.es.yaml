@@ -7,11 +7,19 @@ meta_info:
   redirects: ["part-time", "programa"]
 
 tagline: "FULL STACK DEVELOPER"
-
+button:
+  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_submit_text: "SUBMIT"
+  apply_button_text: "APPLY NOW"
 ## PROGRAM DETAILS
 details:
   heading: DETALLES DEL PROGRAMA
   sub_heading: "Part Time"
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
   details_modules:
     - module_name: "PREWORK"
       title: "Prework"
@@ -60,6 +68,35 @@ geek_data:
     - Transmisión en línea de las clases
     - Grabación de las clases para su posterior revisión
 
+## GEEKS VS OTHERS SECTION
+geeksVsOthers:
+  heading: "4GEEKS VS OTHER IN NUMBERS"
+  sub_heading: "View full comparison table >"
+
 ## PRICES AND PAYMENTS SECTION
 prices:
   heading: "PRECIOS Y PAGOS"
+  sub_heading: ""
+
+## TYPICAL DAY SECTION
+typical:
+  heading: ""
+  sub_heading: ""
+  schedule:
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBERSHIPS"
+  program: "PROGRAM"
+  geeks_vs_other: "4GEEKS vs OTHERS"
+  pricing: "PRICING"
+  alumni: "THE ALUMNI"

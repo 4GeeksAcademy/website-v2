@@ -1,3 +1,4 @@
+lang: "us"
 ## GEEKS VS OTHERS COMPONENT
 ## THIS COMPONENT IS USED IN "/home" AND "/course/..."
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
@@ -8,6 +9,10 @@ headings:
   - heading_program: "4 GEEKS VS OTHERS IN NUMBERS"
     sub_heading_program: "out of our total students, 76% are l"
     sub_heading_program_link: ""
+titles:
+  featured: "FEATURED"
+  at_geeks: "AT 4GEEKS"
+  average: "INDUSTRY AVERAGE"
 info:
   - features: "CAREER SUPPORT"
     at4_Geeks: "LIFETIME"
@@ -39,3 +44,6 @@ info:
     tooltip: ""
     icon: ""
     slug: "interview-preparation"
+button:
+  button_text: "COMPARE 4GEEKS WITH OTHER SCHOOLS"
+  button_link: ""

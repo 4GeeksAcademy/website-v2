@@ -152,7 +152,7 @@ const Home = (props) => {
             <Wrapper
                 style="default"
             >
-                <GeeksVsOthers hasTitle />
+                <GeeksVsOthers hasTitle lang={data.allGeeksVsOthersYaml.edges} />
                 <Divider height="100px" />
                 <Title
                     title={yml.join_geeks.heading}
@@ -393,7 +393,41 @@ export const query = graphql`
               chart_data
             }
           }
-        }}
+        }
+     }
+     allGeeksVsOthersYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+          node {
+            lang
+            headings {
+              heading_home
+              sub_heading_home
+              sub_heading_home_link
+              heading_program
+              sub_heading_program
+              sub_heading_program_link
+            }
+            info {
+              features
+              at4_Geeks
+              industry_average
+              tooltip
+              icon
+              slug
+            }
+            titles{
+                featured
+                at_geeks
+                average
+            }
+            button{
+                button_text
+                button_link
+            }
+          }
+        }
+      }
+     
   }
 `;
 

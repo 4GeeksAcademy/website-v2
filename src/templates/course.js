@@ -598,7 +598,7 @@ const Program = ({data, pageContext, yml}) => {
           primary
         />
         <Divider height="50px" />
-        <GeeksVsOthers />
+        <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
         <Divider height="100px" />
       </Wrapper>
       <Wrapper
@@ -611,7 +611,7 @@ const Program = ({data, pageContext, yml}) => {
           primary
         />
         <section className="section" id="section-4"></section>
-        <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
+        {/* <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} /> */}
         <Divider height="100px" />
       </Wrapper>
 
@@ -753,6 +753,38 @@ export const query = graphql`
             value
             symbol
             symbol_position
+          }
+        }
+      }
+    }
+    allGeeksVsOthersYaml(filter: {lang: {eq: $lang}}) {
+      edges {
+        node {
+          lang
+          headings {
+            heading_home
+            sub_heading_home
+            sub_heading_home_link
+            heading_program
+            sub_heading_program
+            sub_heading_program_link
+          }
+          info {
+            features
+            at4_Geeks
+            industry_average
+            tooltip
+            icon
+            slug
+          }
+          titles{
+              featured
+              at_geeks
+              average
+          }
+          button{
+              button_text
+              button_link
           }
         }
       }

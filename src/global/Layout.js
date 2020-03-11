@@ -21,14 +21,7 @@ const Layout = ({children, seo, context}) => {
     <StaticQuery
       query={graphql`
       query SiteTitleQuery {
-        site {
-          siteMetadata {
-            menuLinks{
-                name
-                link
-            }
-          }
-        }
+        
         allFooterYaml {
           edges {
             node {
