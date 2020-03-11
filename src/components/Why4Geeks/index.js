@@ -32,8 +32,8 @@ export default (props) => {
             <Row align="around" marginTop="20px">
               <Column size size="2" customRespSize respSize="2" alignSelf="center">
                 {(i.slug === "job-in-tech" || i.slug === "trabaja-en-tecnologia") && <Address width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                {(i.slug === "finance-your-career") && <HandMoney width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                {(i.slug === "never-code-alone-again") && <Laptop width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                {(i.slug === "finance-your-career" || i.slug === "financiamos-tu-carrera") && <HandMoney width="32" color={Colors.yellow} fill={Colors.yellow} />}
+                {(i.slug === "never-code-alone-again" || i.slug === "nunca-programes-solo-otra-vez") && <Laptop width="32" color={Colors.yellow} fill={Colors.yellow} />}
               </Column>
               <Column size size="8" customRespSize respSize="8" alignSelf="center">
                 <H4

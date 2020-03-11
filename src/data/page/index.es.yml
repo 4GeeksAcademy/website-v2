@@ -26,6 +26,12 @@ education:
     image: "/images/cnn-bbc-logo.png"
     alt: "CNN and BCC Logo"
 
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "¿QUÉ HACE QUE ESTE PROGRAMA DESTAQUE?"
+  sub_heading: "Ver tabla comparativa completa >"
+  sub_heading_link: ""
+
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:
   heading: APLICA A 4GEEKS
