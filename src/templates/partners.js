@@ -163,7 +163,7 @@ const Partners = (props) => {
             >
 
                 <Divider height="20px" />
-                <WhoIsHiring source="partners" />
+                <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
@@ -172,7 +172,7 @@ const Partners = (props) => {
                 <Divider height="50px" />
 
 
-                <WhoIsHiring source="coding" />
+                <WhoIsHiring source="coding" lang={data.allPartnerYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
@@ -181,7 +181,7 @@ const Partners = (props) => {
                 <Divider height="50px" />
 
 
-                <WhoIsHiring source="influencers" />
+                <WhoIsHiring source="influencers" lang={data.allPartnerYaml.edges} />
                 {/* <Row align="center">
                     <Button width="300px" color={Colors.blue} onClick={() => setShowModal(!showModal)} textColor={Colors.white} margin="2rem 0" padding=".85rem">{yml.button_section.button_text}</Button>
                 </Row> */}
@@ -226,6 +226,53 @@ export const query = graphql`
           }
         }
       }
+      allPartnerYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+            node {
+              lang
+              partners {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              coding {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              influencers {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              financials {
+                images {
+                  name
+                  slug
+                  image
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+            }
+          }
+        }
   }
 `;
 export default BaseRender(Partners);
