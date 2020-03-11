@@ -2,13 +2,7 @@ lang: "es"
 ## GEEKS VS OTHERS COMPONENT
 ## THIS COMPONENT IS USED IN "/home" AND "/course/..."
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
-headings:
-  - heading_home: "¿QUÉ HACE QUE ESTE PROGRAMA DESTAQUE?"
-    sub_heading_home: "Ver tabla comparativa completa >"
-    sub_heading_home_link: ""
-  - heading_program: "EN NÚMEROS: 4 GEEKS VS OTROS"
-    sub_heading_program: ""
-    sub_heading_program_link: ""
+
 titles:
   featured: "FEATURED"
   at_geeks: "AT 4GEEKS"

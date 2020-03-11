@@ -149,10 +149,19 @@ const Home = (props) => {
                 </Row>
             </Wrapper>
             <Divider height="100px" />
+
+            {/* GEEKS VS OTHERS SECTION */}
+
             <Wrapper
                 style="default"
-            >
-                <GeeksVsOthers hasTitle lang={data.allGeeksVsOthersYaml.edges} />
+            ><Title
+                    title={yml.geeks_vs_others.heading}
+                    paragraph={yml.geeks_vs_others.sub_heading}
+                    primary
+                    size="10"
+                />
+                <Divider height="100px" />
+                <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
                 <Divider height="100px" />
                 <Title
                     title={yml.join_geeks.heading}
@@ -312,6 +321,11 @@ export const query = graphql`
             title
             sub_heading
             image
+            geeks_vs_others{
+                heading
+                sub_heading
+                sub_heading_link
+            }
             join_geeks {
                 heading
                 sub_heading
@@ -399,14 +413,7 @@ export const query = graphql`
         edges {
           node {
             lang
-            headings {
-              heading_home
-              sub_heading_home
-              sub_heading_home_link
-              heading_program
-              sub_heading_program
-              sub_heading_program_link
-            }
+            
             info {
               features
               at4_Geeks
@@ -415,6 +422,7 @@ export const query = graphql`
               icon
               slug
             }
+            
             titles{
                 featured
                 at_geeks

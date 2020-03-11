@@ -46,6 +46,11 @@ details:
       slug: "advanced-application"
       duration: "6 wks"
 
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
+  sub_heading: "View full comparison table >"
+  sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
   geek_pal_heading: Get a job in tech
@@ -67,11 +72,6 @@ geek_data:
     - Online support chat 12 hours a day
     - Online streaming of classes
     - Recording of classes for later review
-
-## GEEKS VS OTHERS SECTION
-geeksVsOthers:
-  heading: "4GEEKS VS OTHER IN NUMBERS"
-  sub_heading: "View full comparison table >"
 
 ## PRICES AND PAYMENTS SECTION
 prices:

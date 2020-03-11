@@ -593,8 +593,8 @@ const Program = ({data, pageContext, yml}) => {
         <section className="section" id="section-3"></section>
         <Title
           size="10"
-          title={yml.geeksVsOthers.heading}
-          paragraph={yml.geeksVsOthers.sub_heading}
+          title={yml.geeks_vs_others.heading}
+          paragraph={yml.geeks_vs_others.sub_heading}
           primary
         />
         <Divider height="50px" />
@@ -711,10 +711,11 @@ export const query = graphql`
                 description
               }
             }
-            geeksVsOthers{
+            geeks_vs_others{
               heading
               sub_heading
-            }
+              sub_heading_link
+          }
             prices{
               heading
               sub_heading
@@ -761,14 +762,7 @@ export const query = graphql`
       edges {
         node {
           lang
-          headings {
-            heading_home
-            sub_heading_home
-            sub_heading_home_link
-            heading_program
-            sub_heading_program
-            sub_heading_program_link
-          }
+          
           info {
             features
             at4_Geeks

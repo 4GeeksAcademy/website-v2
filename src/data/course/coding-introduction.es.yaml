@@ -34,6 +34,12 @@ details:
       slug: "aprende-a-programar"
       duration: "1 sem"
 
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "EN NÚMEROS: 4 GEEKS VS OTROS"
+  sub_heading: ""
+  sub_heading_link: ""
+
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
   geek_pal_heading: Trabaja en tecnología
@@ -55,11 +61,6 @@ geek_data:
     - Chat de apoyo en línea 12 horas al día
     - Transmisión en línea de las clases
     - Grabación de las clases para su posterior revisión
-
-## GEEKS VS OTHERS SECTION
-geeksVsOthers:
-  heading: "4GEEKS VS OTHER IN NUMBERS"
-  sub_heading: "View full comparison table >"
 
 ## PRICES AND PAYMENTS SECTION
 prices:

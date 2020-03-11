@@ -11,16 +11,7 @@ const GeeksVsOthers = props => {
   const geeks = props.lang[0].node;
   return (
     <>
-      {props.hasTitle &&
-        <>
-          <Title
-            title="WHAT MAKES THIS PROGRAM STAND OUT?"
-            paragraph="View comparison table >"
-            primary
-            size="10"
-          />
-          <Divider height="100px" />
-        </>}
+
       <Row>
         <Column
           size="12"
