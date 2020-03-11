@@ -1,0 +1,18 @@
+lang: "us"
+navbar:
+  - name: "Home"
+    link: "/"
+  - name: "Why 4Geeks"
+    link: "/the-academy"
+  - name: "The Program"
+    link: "/course/full-stack-web-development-bootcamp-part-time"
+  - name: "Pricing"
+    link: "/pricing"
+  - name: "for companies"
+    link: "/partners"
+button:
+  button_text: "APPLY NOW"
+  button_link: "/apply"
+  button_type: ""
+  button_color_text: ""
+  button_background_color: ""
