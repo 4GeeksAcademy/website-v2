@@ -31,20 +31,39 @@ const Footer = (props) => {
                                         }
                                         {item.items.map((items) => {
                                             return (
-                                                <Link to={items.link} key={item.name}>
-                                                    <Row marginBottom="5px">
-                                                        <Paragraph
-                                                            fs_xs="16px"
-                                                            fs_sm="16px"
-                                                            fs_md="12px"
-                                                            fs_lg="14px"
-                                                            fs_xl="16px"
-                                                            color={Colors.white}
-                                                        >
-                                                            {items.name}
-                                                        </Paragraph>
-                                                    </Row>
-                                                </Link>
+                                                <>
+
+                                                    {item.heading === 'FOLLOW' || item.heading === 'SÍGUENOS' ?
+                                                        <a href={items.link} key={item.name}>
+                                                            <Row marginBottom="5px">
+                                                                <Paragraph
+                                                                    fs_xs="16px"
+                                                                    fs_sm="16px"
+                                                                    fs_md="12px"
+                                                                    fs_lg="14px"
+                                                                    fs_xl="16px"
+                                                                    color={Colors.white}
+                                                                >
+                                                                    {items.name}
+                                                                </Paragraph>
+                                                            </Row>
+                                                        </a>
+                                                        :
+                                                        <Link to={items.link} key={item.name}>
+                                                            <Row marginBottom="5px">
+                                                                <Paragraph
+                                                                    fs_xs="16px"
+                                                                    fs_sm="16px"
+                                                                    fs_md="12px"
+                                                                    fs_lg="14px"
+                                                                    fs_xl="16px"
+                                                                    color={Colors.white}
+                                                                >
+                                                                    {items.name}
+                                                                </Paragraph>
+                                                            </Row>
+                                                        </Link>}
+                                                </>
                                             )
                                         })}
                                     </Column>
