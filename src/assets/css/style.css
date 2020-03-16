@@ -104,3 +104,46 @@ a.nav-item.nav-link.side {
 a:hover {
     text-decoration: none;
   }
+  
+.single-post{
+    margin-bottom: 100px;
+}
+.single-post p img{
+    margin: auto;
+    max-height: 350px;
+    display: inherit;
+}
+.single-post h1{
+    font-size: 42px;
+    color: black;
+    font-family: 'Futura';
+    text-align: center;
+}
+.single-post h2{
+    font-size: 36px;
+    color: black;
+    font-family: 'Lato';
+    margin: 45px 0;
+    text-align: center;
+}
+
+.single-post p img{
+    margin: auto;
+    max-height: 350px;
+    display: inherit;
+}
+.single-post strong{
+    font-weight: bold;
+}
+
+.single-post p{
+    font-size: 22px;
+    color: black;
+    font-family: 'Lato';
+    line-height: 40px;
+    margin: 25px 0;
+}
+.single-post p a{
+    color: #0097CE;
+}
+
