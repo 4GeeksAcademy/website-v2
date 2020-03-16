@@ -299,7 +299,7 @@ const Home = (props) => {
                 // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
                 />
                 <Divider height="50px" />
-                <Loc />
+                <Loc lang={data.allLocationYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
 
@@ -482,6 +482,38 @@ export const query = graphql`
             }
           }
         }
+        allLocationYaml(filter: {lang: {eq: $lang}}) {
+            edges {
+              node {
+                lang
+                city
+                meta_info {
+                  slug
+                  title
+                  description
+                  image
+                  keywords
+                }
+                info_box {
+                  heading
+                  address
+                  contact_heading
+                  phone
+                  email
+                  image
+                }
+                image
+                carousel_box {
+                  images {
+                    path
+                    alt
+                  }
+                  content
+                  heading
+                }
+              }
+            }
+          }
   }
 `;
 

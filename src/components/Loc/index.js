@@ -11,36 +11,7 @@ import Link from 'gatsby-link'
 
 
 const Loc = (props) => {
-  const data = useStaticQuery(graphql`
-      query myQueryLoc{
-        allLocationYaml {
-          edges {
-            node {
-              city
-              meta_info {
-                slug
-              }
-              info_box {
-                heading
-                address
-                contact_heading
-                phone
-                email
-              }
-              image
-              carousel_box {
-                content
-                images {
-                  path
-                  alt
-                }
-              }
-            }
-          }
-        }
-        }
-      `)
-  let loc = data.allLocationYaml.edges
+  let loc = props.lang
   return (
     <>
       <Row>
@@ -122,7 +93,7 @@ const Loc = (props) => {
 
         {loc.map((pic, i) => {
           let randLocImgIndex = Math.floor(Math.random() * pic.node.carousel_box.images.length)
-          console.log(randLocImgIndex)
+          console.log("****", randLocImgIndex)
           return (
 
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
