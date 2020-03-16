@@ -21,7 +21,6 @@ import {
 const NavB = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
-    console.log("propsss", props)
     return (
         <Navbar color="light" className="navbar sticky-top navbar-expand-lg navbar-light bg-white py-0 px-3" light expand="md">
             <NavbarBrand href="/"><img src="/images/4G_logo_negro.png" width="70" alt="" /></NavbarBrand>

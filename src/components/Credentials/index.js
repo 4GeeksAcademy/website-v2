@@ -42,10 +42,10 @@ export default props => {
                 <Row align="center" height="25%">
                   <H4
                     fs_xs="20px"
-                    fs_sm="24px"
-                    fs_md="24px"
-                    fs_lg="20px"
-                    fs_xl="24px"
+                    fs_sm="18px"
+                    fs_md="16px"
+                    fs_lg="18px"
+                    fs_xl="20px"
                     uppercase>{i.title}
                   </H4>
                 </Row>
@@ -79,10 +79,10 @@ export default props => {
                 <Row align="center" height="25%">
                   <H4
                     fs_xs="20px"
-                    fs_sm="24px"
-                    fs_md="24px"
-                    fs_lg="20px"
-                    fs_xl="24px"
+                    fs_sm="18px"
+                    fs_md="16px"
+                    fs_lg="18px"
+                    fs_xl="20px"
                     uppercase
                   >{i.title}</H4>
                 </Row>
