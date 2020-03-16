@@ -7,6 +7,8 @@ layout: post
 link: https://www.4geeksacademy.co/miami-coding-programs-report/
 slug: miami-coding-programs-report
 title: Miami Coding Bootcamps | 2018 Report
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/efe51240-5abd-45d3-be57-14759bb92f28/MIAMICODING04.jpg"
 wordpress_id: 3293
 categories:
 - Learning to code

@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/7-hacks-to-land-a-job/
 slug: 7-hacks-to-land-a-job
 title: 7 tips to land a job as a Software Developer ASAP
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/f6d43569-e64d-4e73-b442-c59b3b0f3407/GUENSE01.jpg"
 wordpress_id: 3570
 categories:
 - Sin categoría
@@ -48,7 +50,7 @@ Knowing your goals will boost your productivity as a developer because all your 
 ## Getting the skills
 
 
-What do you want to learn? “We live in the information age, there are so many resources, probably if you search ‘How to become a Web Developer’ right now on Google you will have millions and millions of results (...) So one really good way of knowing is to do some research in terms of jobs and figuring out what the most popular languages are” because numbers don’t lie: ![](https://www.4geeksacademy.co/wp-content/uploads/2019/06/Screen-Shot-2019-06-24-at-4.30.38-PM.png)
+What do you want to learn? “We live in the information age, there are so many resources, probably if you search ‘How to become a Web Developer’ right now on Google you will have millions and millions of results (...) So one really good way of knowing is to do some research in terms of jobs and figuring out what the most popular languages are” because numbers don’t lie: ![](https://ucarecdn.com/a006771d-7c2c-4dc4-a80a-ed8391acb187/ScreenShot20190624at43038PM.png)
 
 Python and Javascript are -by far- controlling the programming world. We know it and that’s why we align [our curriculum](https://www.4geeksacademy.co/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf) with the most popular languages and frameworks. We recognize that the stack of technologies included in a Syllabus [actually matters](https://www.4geeksacademy.co/coding-bootcamp-syllabus-matters/), and having an up-to-date Syllabus increase our student’s success and put us ahead of the competition at the same time.
 
@@ -89,7 +91,7 @@ Guensie provides great tips about networking (we added the last one):
 
 She also states the following: Do not wait to start networking when you're ready to apply to a job. Start networking when you're learning. Build strong relationships so by the time that you're ready to apply for the job, you already have strong relationships with different people that might help you get in the industry or that you can also learn from.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2019/06/Networking-1024x356.jpg)
+![](https://ucarecdn.com/1e2e9fa1-26a5-4e14-96ef-a24bc8ec02a8/Networking768x267.jpg)
 
 
 

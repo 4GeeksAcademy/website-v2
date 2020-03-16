@@ -7,6 +7,8 @@ link: https://www.4geeksacademy.co/4geeks-academy-at-emerge-americas-2016/
 published: false
 slug: 4geeks-academy-at-emerge-americas-2016
 title: 4Geeks Academy at eMerge Americas 2016
+avatar: "../staff/alejandro.png"
+image: "/images/why2.png"
 wordpress_id: 897
 categories:
 - Sin categoría

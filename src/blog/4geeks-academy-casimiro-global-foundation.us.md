@@ -11,7 +11,8 @@ layout: post
 link: https://www.4geeksacademy.co/4geeks-academy-casimiro-global-foundation/
 slug: 4geeks-academy-casimiro-global-foundation
 title: 4Geeks Academy + Casimiro Global Foundation
-
+avatar: "/staff/alejandro.png"
+image: "https://ucarecdn.com/9f40d73a-3720-47c4-a71d-979101d4bd35/CGFINFOGRAPHIC232x3001.jpg"
 categories:
 - Sin categoría
 - Why learn to code?
@@ -33,11 +34,11 @@ As passionate educators, we aim to impact the educational ecosystem of Miami by 
 
 
 
-Our partnership with Casimiro Global Foundation seeks to empower young entrepreneurs by teaching them coding skills which they implement in their pitch day in the [Biznovator Camp](http://www.casimiroglobalfoundation.org/biznovator-camp/).  This 1-3 week international camp trains youth, ages 13 to 20, in a FUN and inspiring format.  They learn entrepreneurship, social innovation, leadership, coding skills and much more!  While working in teams, they learn to create a social enterprise - a tech savvy venture or a passion-driven project.  Visits to corporations, high tech start-ups and non-profit organizations allow students to network and further their learning directly from experts.
+Our partnership with Casimiro Global Foundation seeks to empower young entrepreneurs by teaching them coding skills which they implement in their pitch day in the [Biznovator Camp](https://ucarecdn.com/9f40d73a-3720-47c4-a71d-979101d4bd35/CGFINFOGRAPHIC232x3001.jpg).  This 1-3 week international camp trains youth, ages 13 to 20, in a FUN and inspiring format.  They learn entrepreneurship, social innovation, leadership, coding skills and much more!  While working in teams, they learn to create a social enterprise - a tech savvy venture or a passion-driven project.  Visits to corporations, high tech start-ups and non-profit organizations allow students to network and further their learning directly from experts.
 
 
 
-[![CGF INFOGRAPHIC](https://4geeksacademy.co/wp-content/uploads/2016/02/CGF-INFOGRAPHIC-232x300-1.jpg)](https://4geeksacademy.co/app/uploads/2016/02/CGF-INFOGRAPHIC.jpg)
+[![CGF INFOGRAPHIC](https://ucarecdn.com/9f40d73a-3720-47c4-a71d-979101d4bd35/CGFINFOGRAPHIC232x3001.jpg)](https://ucarecdn.com/9f40d73a-3720-47c4-a71d-979101d4bd35/CGFINFOGRAPHIC232x3001.jpg)
 
 
 

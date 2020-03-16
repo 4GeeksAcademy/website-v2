@@ -9,6 +9,7 @@ link: https://www.4geeksacademy.co/web-salaries-2017-coding-bootcamp/
 slug: web-salaries-2017-coding-bootcamp
 title: 'Web development Bootcamp graduates salary: 2017 edition'
 wordpress_id: 2055
+image: "/images/why2.png"
 categories:
 - Learning to code
 
