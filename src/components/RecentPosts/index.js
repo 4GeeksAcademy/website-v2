@@ -97,7 +97,7 @@ const RecentPosts = () => {
                                 bsize="cover"
                                 position="top"
                                 mb="10px"
-                                height="50%"
+                                height="39%"
                                 border="1.25rem 1.25rem 0 0 "
                             // h_xs="auto"
                             // h_sm="auto"
@@ -106,20 +106,27 @@ const RecentPosts = () => {
                             // h_xl="130px"
                             />
                             <Divider height="3%" />
-                            <Row align="center" height="10%">
-                                <Column size size="12" customRespSize respSize="10" >
+                            <Row align="center" height="20%">
+                                <Column size size="11" customRespSize respSize="10" >
                                     <H4
                                         fs_xs="20px"
-                                        fs_sm="24px"
-                                        fs_md="24px"
+                                        fs_sm="16px"
+                                        fs_md="14px"
                                         fs_lg="20px"
                                         fs_xl="20px"
                                         uppercase align="center">{i.node.frontmatter.title}</H4>
                                 </Column>
                             </Row>
+                            <Divider height="1%" />
                             <Row align="center" height="30%">
                                 <Column size="10" customRespSize respSize="10">
-                                    <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.node.frontmatter.excerpt}</Paragraph>
+                                    <Paragraph
+                                        fs_xs="20px"
+                                        fs_sm="18px"
+                                        fs_md="10px"
+                                        fs_lg="10px"
+                                        fs_xl="12px"
+                                        color="gray" align="left" margin="10px 0" fontSize="12px">{i.node.frontmatter.excerpt}</Paragraph>
                                 </Column>
                             </Row>
                             <Row height="5%" align="center">
