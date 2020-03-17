@@ -14,7 +14,7 @@ wordpress_id: 2752
 categories:
 - Living and working as a developer
 - Why learn to code?
-
+lang: "us"
 ---
 
 ## Great news! Skills Fund & 4Geeks Academy are finally together

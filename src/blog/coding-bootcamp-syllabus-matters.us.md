@@ -11,7 +11,7 @@ title: The coding bootcamp syllabus matters
 avatar: "/staff/alejandro.png"
 image: "https://ucarecdn.com/bf210f06-bc84-4dd9-b6e8-28ea423c5402/POSTTECNOLOGIA01.jpg"
 wordpress_id: 2600
-
+lang: "us"
 ---
 
 If you look at the Full-Stack Web Development Bootcamp industry, you rapidly realize that they have been teaching the same programming languages since the beginning.  When potential students ask about that, the academies quickly start undermining the role of the language by saying that it does not really matter - that you can switch fast from one to the other.

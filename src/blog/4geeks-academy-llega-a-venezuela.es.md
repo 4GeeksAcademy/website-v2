@@ -10,6 +10,7 @@ wordpress_id: 1156
 categories:
 - Aprendiendo a desarrollar
 - Por qué aprender a programar
+lang: "es"
 ---
 
 _Entrenamos a futuros súper desarrolladores con los conocimientos más avanzados para convertirse en excelentes programadores._

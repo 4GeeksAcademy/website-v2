@@ -11,8 +11,7 @@ image: "https://ucarecdn.com/cd496d1e-172d-4cbd-bfda-c82f6d633b83/ISABlogCover.p
 wordpress_id: 2061
 categories:
 - Aprendiendo a desarrollar
-language:
-- Español
+lang: "es"
 ---
 
 El pasado mes de junio se celebró la tercera edición del [**TechCamp**](https://techcamp.america.gov/)** Caracas**. El evento contó con 60 proyectos de emprendedores sociales y líderes de Organizaciones No Gubernamentales (ONG’s), que se fueron a casa con herramientas tecnológicas innovadoras que facilitarán el cumplimiento de sus desafíos.

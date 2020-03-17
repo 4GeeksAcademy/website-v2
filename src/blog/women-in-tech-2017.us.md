@@ -15,7 +15,7 @@ wordpress_id: 2661
 categories:
 - Living and working as a developer
 - Why learn to code?
-
+lang: "us"
 ---
 
 Women in tech still represent a small share of the workforce.  Not only are gender gaps a concern, but also the roles they have in the industry.  According to the [World Bank](https://data.worldbank.org/indicator/SL.TLF.TOTL.FE.ZS), women are 40% workforce in the world, and in some countries that number can go up to 59%. However, [Payscale reports](https://www.payscale.com/data-packages/gender-pay-gap/women-in-tech) that the industry is mostly occupied by men at all levels[.](https://www.payscale.com/data-packages/gender-pay-gap/women-in-tech)

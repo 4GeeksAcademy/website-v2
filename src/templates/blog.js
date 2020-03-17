@@ -35,7 +35,7 @@ const Blog = ({data, pageContext, yml}) => {
                 <Row>
                     {data.posts.edges.map((item, i) => {
                         return (
-                            <Column size="4" key={i} height="auto" margin="0 0 30px 0">
+                            <Column size="4" key={i} height="auto" margin="0 0 40px 0">
                                 <RoundImage
                                     url={item.node.frontmatter.image}
                                     bsize="cover"
@@ -121,7 +121,7 @@ query BlogQuery($file_name: String!, $lang: String!) {
         }
       }
     }
-    posts: allMarkdownRemark {
+    posts: allMarkdownRemark (filter: {frontmatter: {lang: {eq: $lang}}}){
         edges {
           node {
             frontmatter {
@@ -132,6 +132,7 @@ query BlogQuery($file_name: String!, $lang: String!) {
               slug
               title
               excerpt
+              lang
             }
           }
         }

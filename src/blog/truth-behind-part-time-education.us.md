@@ -14,7 +14,7 @@ wordpress_id: 2642
 categories:
 - Learning to code
 - Living and working as a developer
-
+lang: "us"
 ---
 
 At 4Geeks we take very seriously the whole deal about how to become a software developer.  There are plenty of options, I know, and there are plenty of opinions, I know. But we have found a lack of argument when talking about the schedule and the methodology brought by the coding program.

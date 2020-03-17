@@ -66,7 +66,6 @@ const RecentPosts = () => {
         }
         return newArray;
     }
-    console.log("post", randomArray())
     // const [event, setEvent] = useState([])
     // useEffect(() => {
     //     fetch(

@@ -81,7 +81,7 @@ const Contact = (props) => {
             <Paragraph color={Colors.gray}>Madrid, Spain</Paragraph>
         </ToggleButton>,
     ];
-    console.log("@@", yml)
+
     return (
         <>
             <Divider height="100px" />

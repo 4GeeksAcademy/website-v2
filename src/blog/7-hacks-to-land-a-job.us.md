@@ -19,6 +19,7 @@ tags:
 - coding
 - Jobs in Miami
 - Python
+lang: "us"
 ---
 
 # 7 tips to land a job as a Software Developer ASAP

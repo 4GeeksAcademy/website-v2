@@ -22,6 +22,7 @@ tags:
 - 4geeks academy
 - financing education
 - Miami Dade College
+lang: "us"
 ---
 
 One of the main concerns for those trying to join a Coding Program is how to pay the tuition costs.  The answer to this question may vary, but we have a simple path to recommend.

@@ -19,6 +19,7 @@ tags:
 - 4geeks academy
 - coding education
 - Education
+lang: "us"
 ---
 
 Education needs a change. It’s been changing, but probably not enough. Why? There are, in STEM at least, more open jobs than postulations. Either the Economy is saying that working as an employee is bad, or the education methods and standards are way behind the real needs. Let’s just focus on the educational problem and forget -for a bit- about the economic trend of becoming an entrepreneur.

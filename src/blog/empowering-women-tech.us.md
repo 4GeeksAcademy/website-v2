@@ -14,7 +14,7 @@ wordpress_id: 2849
 categories:
 - Living and working as a developer
 - Why learn to code?
-
+lang: "us"
 ---
 
 We’ve all seen the statistics about [women in tech](https://www.4geeksacademy.co/women-in-tech-2017).  Gender gaps is a reality, but we are not going to talk about those gaps anymore; we are celebrating gender diversity at 4Geeks Academy.  That’s why we are so proud and happy to announce that our Cohort III at Downtown Miami has a **60% female enrollment**!

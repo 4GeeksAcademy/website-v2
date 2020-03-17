@@ -23,6 +23,7 @@ tags:
 - miami
 - Web Developer
 - web developer salary
+lang: "us"
 ---
 
 ### Web Developer: Earn the Salary You Deserve

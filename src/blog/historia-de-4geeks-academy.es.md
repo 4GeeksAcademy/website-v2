@@ -11,8 +11,7 @@ image: ""
 wordpress_id: 1124
 categories:
 - Aprendiendo a desarrollar
-language:
-- Español
+lang: "es"
 ---
 
 En el año 2009, junto con dos amigos, comenzamos una pequeña empresa de desarrollo de Software con grandes ambiciones. Como cualquier otra StartUp, no teníamos dinero y nuestra oficina era la casa de Gustavo.

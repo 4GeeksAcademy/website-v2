@@ -11,7 +11,7 @@ image: "https://ucarecdn.com/c35d7835-719d-44ec-9f0e-e5a44e65b0b9/adminajax1.jpe
 wordpress_id: 1226
 categories:
 - Learning to code
-
+lang: "us"
 ---
 
 I recall that when I was about to start a new course, I asked myself if the new instructor would be an easy-going person or a conversely one; If s/he would be able to teach all the information that is required to become a good professional.  It makes me think about how important the person is whom can transform clay into a beautiful sculpture.

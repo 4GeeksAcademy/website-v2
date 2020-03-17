@@ -14,7 +14,7 @@ wordpress_id: 2656
 categories:
 - Living and working as a developer
 - Why learn to code?
-
+lang: "us"
 ---
 
 At 4Geeks Academy we have two main goals with our students:

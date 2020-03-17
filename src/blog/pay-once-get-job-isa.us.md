@@ -18,6 +18,7 @@ tags:
 - 4geeks
 - coding
 - Python
+lang: "us"
 ---
 
 # **Pay once you get a Job**
