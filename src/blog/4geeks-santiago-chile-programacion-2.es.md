@@ -8,6 +8,9 @@ layout: post
 link: https://www.4geeksacademy.co/4geeks-santiago-chile-programacion-2/
 slug: 4geeks-santiago-chile-programacion-2
 title: 4Geeks en Santiago de Chile
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/cc843171-bbeb-45ce-817d-f8b3feed8967/BANNERCHILEcopia3APRENDEAPROGRAMARCHL3.png"
+
 wordpress_id: 3333
 categories:
 - Sin categoría

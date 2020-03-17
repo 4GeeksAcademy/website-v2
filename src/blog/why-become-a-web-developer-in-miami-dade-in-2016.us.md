@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/why-become-a-web-developer-in-miami-dade-in-2016/
 slug: why-become-a-web-developer-in-miami-dade-in-2016
 title: Why Become A Web Developer In Miami Dade In 2016
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/813493e2-3b18-4e34-b7cd-0443c4fcdcc3/Martes1.png"
 wordpress_id: 626
 categories:
 - Sin categoría

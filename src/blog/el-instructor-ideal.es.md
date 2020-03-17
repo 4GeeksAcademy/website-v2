@@ -7,6 +7,8 @@ link: https://www.4geeksacademy.co/es/el-instructor-ideal/
 published: false
 slug: el-instructor-ideal
 title: EL INSTRUCTOR IDEAL...
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/c35d7835-719d-44ec-9f0e-e5a44e65b0b9/adminajax1.jpeg"
 wordpress_id: 1217
 categories:
 - Aprendiendo a desarrollar

@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/pay-once-get-job-isa/
 slug: pay-once-get-job-isa
 title: Pay once you get a Job
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/cd496d1e-172d-4cbd-bfda-c82f6d633b83/ISABlogCover.png"
 wordpress_id: 3519
 categories:
 - Sin categoría
@@ -36,11 +38,11 @@ The ISA payment option will be offered to full-time students under certain condi
 
 It’s not only about finding a job, but it’s also about finding the right path. The ISA program launched by 4Geeks will let our students waive their tuition until you find a job with the option to start payments only if that position is offering them at least $35k per year. If it’s less, there is still no payment commitment. It’s about you, your career and the way education shall work.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2019/04/Screen-Shot-2019-04-09-at-6.52.16-PM.png)
+![](https://ucarecdn.com/49732e0e-8dd9-4f86-abab-1fc735fd661b/ScreenShot20190409at65216PM.png)
 
 At 4Geeks we are serious about building a new framework on education. The ISA program is aiming to provide a new way to become a software developer. Here is a brief description of how it works:
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2019/04/infografia-01-1024x436.jpg)
+![](https://ucarecdn.com/a31fbf93-f11c-432d-910b-7c98cfb161ed/infografia01768x327.jpg)
 
 Our Full-Time program is meant for those who are putting everything at stake in order to achieve a career in Coding. Our Career Support team will be helping you throughout the program and after classes are completed. After finishing your 9 weeks immersed in Coding, our team will work together with you towards having everything ready for your new Career.
 

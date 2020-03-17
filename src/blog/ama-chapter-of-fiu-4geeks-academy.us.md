@@ -6,6 +6,8 @@ layout: post
 link: https://www.4geeksacademy.co/ama-chapter-of-fiu-4geeks-academy/
 slug: ama-chapter-of-fiu-4geeks-academy
 title: AMA Chapter of FIU + 4Geeks Academy - Getting Students Closer To A Coding Education
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 792
 categories:
 - Sin categoría

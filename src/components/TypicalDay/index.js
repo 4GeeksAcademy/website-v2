@@ -70,143 +70,23 @@ export default () => {
         setActiveStep(0);
         setCompleted({});
     };
-    const data = useStaticQuery(graphql`
-    query myQueryTypical{
-        allLocationYaml {
-            edges {
-              node {
-                city
-                hasFinancialsOption
-                meta_info {
-                  slug
-                  description
-                  image
-                  keywords
-                  redirects
-                }
-                image
-                prices {
-                  full_time {
-                    center_section {
-                      button {
-                        button_text
-                      }
-                      header {
-                        sub_heading
-                        heading_one
-                        heading_two
-                      }
-                      plans {
-                        months
-                        payment
-                        paymentInfo
-                        provider
-                        logo
-                        message
-                      }
-                    }
-                    left_section {
-                      button {
-                        button_text
-                      }
-                      content {
-                        price
-                        price_info
-                      }
-                      header {
-                        heading_one
-                        heading_two
-                        sub_heading
-                      }
-                    }
-                    right_section {
-                      button {
-                        button_text
-                      }
-                      content {
-                        price
-                        price_info
-                      }
-                      header {
-                        heading
-                        sub_heading
-                        heading_one
-                        heading_two
-                      }
-                    }
-                  }
-                  part_time {
-                    center_section {
-                      button {
-                        button_text
-                      }
-                      header {
-                        heading_two
-                        sub_heading
-                        heading_one
-                      }
-                      plans {
-                        months
-                        payment
-                        paymentInfo
-                        provider
-                        logo
-                        message
-                      }
-                    }
-                    left_section {
-                      button {
-                        button_text
-                      }
-                      content {
-                        price
-                        price_info
-                      }
-                      header {
-                        heading_one
-                        sub_heading
-                        heading_two
-                      }
-                    }
-                    right_section {
-                      button {
-                        button_text
-                      }
-                      content {
-                        price
-                        price_info
-                      }
-                      header {
-                        heading_one
-                        sub_heading
-                        heading_two
-                      }
-                    }
-                  }
-                }
-                seo_title
-                sub_heading
-                tagline
-              }
-            }
-          }}
-    `)
 
-    console.log("tempQ", data.allLocationYaml.edges)
+
+    // console.log("tempQ", data.allTypicalDayYaml)
     function getStepContent (step) {
         switch (step) {
             case 0:
-                return `${data.typical.edges[0].node.miami[0].info}`
+                return `${data.allLocationYaml.edges[0].node.miami[0].info}`
             case 1:
-                return `${data.typical.edges[0].node.miami[1].info}`
+                return `${data.allLocationYaml.edges[0].node.miami[1].info}`
             case 2:
-                return `${data.typical.edges[0].node.miami[2].info}`
+                return `${data.allLocationYaml.edges[0].node.miami[2].info}`
             case 3:
-                return `${data.typical.edges[0].node.miami[3].info}`
+                return `${data.allLocationYaml.edges[0].node.miami[3].info}`
             case 4:
-                return `${data.typical.edges[0].node.miami[4].info}`
+                return `${data.allLocationYaml.edges[0].node.miami[4].info}`
             case 5:
-                return `${data.typical.edges[0].node.miami[5].info}`
+                return `${data.allLocationYaml.edges[0].node.miami[5].info}`
             default:
                 return 'Unknown step';
         }

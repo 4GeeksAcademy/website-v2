@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/4geeks-academy-teaches-php-backend-language/
 slug: 4geeks-academy-teaches-php-backend-language
 title: Why 4Geeks Academy teaches PHP as Backend Language
+avatar: "/staff/alejandro.png"
+image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/language.jpeg"
 wordpress_id: 508
 categories:
 - Sin categoría

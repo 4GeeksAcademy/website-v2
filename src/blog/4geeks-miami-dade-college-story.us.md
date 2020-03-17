@@ -7,6 +7,8 @@ layout: post
 link: https://www.4geeksacademy.co/4geeks-miami-dade-college-story/
 slug: 4geeks-miami-dade-college-story
 title: 4Geeks Academy & Miami Dade College |  A Story of Success
+avatar: "/staff/marcelo.png"
+image: "https://www.4geeksacademy.co/wp-content/uploads/2018/11/Massive-Cyber-Monday-Sale-1.png"
 wordpress_id: 3315
 categories:
 - Learning to code

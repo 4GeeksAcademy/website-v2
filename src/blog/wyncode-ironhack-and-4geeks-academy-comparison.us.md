@@ -7,6 +7,8 @@ layout: post
 link: https://www.4geeksacademy.co/wyncode-ironhack-and-4geeks-academy-comparison/
 slug: wyncode-ironhack-and-4geeks-academy-comparison
 title: Wyncode, Ironhack and 4Geeks Academy comparison
+avatar: "/staff/marcelo.png"
+image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/wyncode4geeksironhack.jpeg"
 wordpress_id: 476
 categories:
 - Learning to code

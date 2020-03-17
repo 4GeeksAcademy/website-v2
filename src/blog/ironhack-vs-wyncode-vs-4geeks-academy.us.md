@@ -6,6 +6,8 @@ layout: post
 link: https://www.4geeksacademy.co/ironhack-vs-wyncode-vs-4geeks-academy/
 slug: ironhack-vs-wyncode-vs-4geeks-academy
 title: 4Geeks Academy and LaunchCode.org
+avatar: "/staff/marcelo.png"
+image: "https://4geeksacademy.co/wp-content/uploads/2016/01/launchcode-button-300x89.png"
 wordpress_id: 471
 categories:
 - Learning to code

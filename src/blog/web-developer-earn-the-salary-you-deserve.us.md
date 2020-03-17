@@ -10,6 +10,8 @@ layout: post
 link: https://www.4geeksacademy.co/web-developer-earn-the-salary-you-deserve/
 slug: web-developer-earn-the-salary-you-deserve
 title: 'Web Developer: Earn the Salary You Deserve'
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 316
 categories:
 - Living and working as a developer

@@ -11,6 +11,8 @@ link: https://www.4geeksacademy.co/pre-work-phase-free-open-everybody/
 published: false
 slug: pre-work-phase-free-open-everybody
 title: Why our pre-work phase is free and open for everybody
+avatar: "/staff/marcelo.png"
+image: "https://4geeksacademy.co/wp-content/uploads/2016/01/welcome-1.jpg"
 wordpress_id: 516
 categories:
 - Sin categoría
@@ -22,7 +24,7 @@ tags:
 - part-time studies
 ---
 
-[![welcome](https://4geeksacademy.co/wp-content/uploads/2016/01/welcome-1.jpg)](https://4geeksacademy.co/wp-content/uploads/2016/01/welcome-1.jpg)
+
 
 
 Do you want to become a developer? You have 3 choices: College, bootcamps or learn by yourself. But how to decide? You don't even know if you are going to be a good developer, maybe is not for you. Is only fair that we let you test it out first.

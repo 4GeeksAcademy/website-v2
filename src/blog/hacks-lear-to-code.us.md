@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/hacks-lear-to-code/
 slug: hacks-lear-to-code
 title: 'Hacks for learning to code: Read Less and Learn Better'
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/70fb2a78-2fa3-4725-85db-cc75268c26ff/StudyHacks03.jpg"
 wordpress_id: 3651
 categories:
 - Sin categoría
