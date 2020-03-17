@@ -14,7 +14,7 @@ import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
 const Layout = ({children, seo, context}) => {
-  console.log("&&&", context)
+
   const {slug, title, description, image, keywords} = seo;
 
   return (

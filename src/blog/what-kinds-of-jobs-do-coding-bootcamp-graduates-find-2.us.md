@@ -20,6 +20,7 @@ tags:
 - coding education
 - Jobs in Miami
 - Web Developer
+lang: "us"
 ---
 
 It seems that companies today need more people who know coding faster than a college or university can put out into the professional market.  The real world has been seeking experts in areas where the business climate is constantly changing and the formal traditional education is lagging.

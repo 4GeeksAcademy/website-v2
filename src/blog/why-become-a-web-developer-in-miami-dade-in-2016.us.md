@@ -21,6 +21,7 @@ tags:
 - miami
 - salary
 - web developer salary
+lang: "us"
 ---
 
 ## **Why Become A Web Developer In Miami Dade?**

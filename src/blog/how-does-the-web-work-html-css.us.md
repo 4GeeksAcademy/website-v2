@@ -22,6 +22,7 @@ tags:
 - Facilcloud
 - HTML
 - Web Developer
+lang: "us"
 ---
 
 The #IntroToCoding Workshop Level 2 sponsored by Facilcloud and lead by our instructor Jose Cirigliano was held on December 17th at WeWork Lincoln Road.

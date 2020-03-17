@@ -19,6 +19,7 @@ tags:
 - coding bootcamps
 - investment
 - Jobs in Miami
+lang: "us"
 ---
 
 Coding Bootcamps are the solution to traditional education institutions’ lack of perspective. Tech talent is needed and Coding Bootcamps are graduating skillful students to address complex software challenges. 

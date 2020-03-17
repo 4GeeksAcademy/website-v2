@@ -22,6 +22,7 @@ tags:
 - learn to code
 - miami
 - Python
+lang: "us"
 ---
 
 # **JavaScript and Python: A-must for any coder**

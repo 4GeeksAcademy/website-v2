@@ -3,6 +3,7 @@ author: 4GeeksAcademy
 comments: true
 date: 2016-03-04 04:48:24+00:00
 layout: post
+excerpt: Why do I feel so nervous when I plan to go to a job interview?  The truth is that these kinds of emotions keep me alert, and make me do my task.
 link: https://www.4geeksacademy.co/how-to-prepare-for-a-typical-interview-for-web-development-position/
 slug: how-to-prepare-for-a-typical-interview-for-web-development-position
 title: My Job Interview
@@ -16,6 +17,7 @@ tags:
 - career path
 - Job Interview
 - Jobs in Miami
+lang: "us"
 ---
 
 Why do I feel so nervous when I plan to go to a job interview?  The truth is that these kinds of emotions keep me alert, and make me do my task.

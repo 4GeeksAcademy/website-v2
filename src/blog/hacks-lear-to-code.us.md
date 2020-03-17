@@ -19,6 +19,7 @@ tags:
 - coding
 - Jobs in Miami
 - Python
+lang: "us"
 ---
 
 # **Hacks for learning to code: Read Less and Learn Better**

@@ -12,8 +12,7 @@ wordpress_id: 1184
 categories:
 - Aprendiendo a desarrollar
 - Por qué aprender a programar
-language:
-- Español
+lang: "es"
 ---
 
 No hay una sola manera de definir a los **desarrolladores**. Podríamos decir a modo general, que son personas que aplican la lógica de programación y, por medio de lenguajes y códigos, crean sitios o aplicaciones web.

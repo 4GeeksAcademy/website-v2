@@ -13,7 +13,7 @@ image: "https://ucarecdn.com/10f9e707-9062-43a4-81c4-c6eb070535e4/MAINBLOG.jpg"
 wordpress_id: 3481
 categories:
 - Sin categoría
-
+lang: "us"
 ---
 
 # BOOTCAMP GRADUATES SALARIES 2019 EDITION

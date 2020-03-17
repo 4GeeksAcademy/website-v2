@@ -20,6 +20,7 @@ tags:
 - coding bootcamps
 - investment
 - Jobs in Miami
+lang: "us"
 ---
 
 As we’ve stated before, at 4Geeks Academy we offer Part-Time coding programs. If you’re thinking about enrolling in a coding Bootcamp, there are many options you need to consider.

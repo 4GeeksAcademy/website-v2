@@ -22,6 +22,7 @@ tags:
 - miami
 - Miami Dade College
 - wages
+lang: "us"
 ---
 
 ## **Real data addressing real questions. **

@@ -19,6 +19,7 @@ tags:
 - ironhack
 - learn to code
 - wyncode
+lang: "us"
 ---
 
 We are sure that every potential student is asking the same question:  Which is the best coding academy (development bootcamp) in Miami?

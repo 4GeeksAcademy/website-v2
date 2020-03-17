@@ -14,7 +14,7 @@ image: "https://ucarecdn.com/cc843171-bbeb-45ce-817d-f8b3feed8967/BANNERCHILEcop
 wordpress_id: 3333
 categories:
 - Sin categoría
-
+lang: "es"
 ---
 
 # **Uno de los Top 10 Bootcamp de Programación llega a Chile**

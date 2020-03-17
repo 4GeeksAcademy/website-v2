@@ -19,6 +19,7 @@ tags:
 - 4geeks
 - coding
 - Python
+lang: "us"
 ---
 
 # **Why 4Geeks Academy teaches Python as Backend Language?**

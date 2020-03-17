@@ -12,8 +12,7 @@ image: "https://ucarecdn.com/c35d7835-719d-44ec-9f0e-e5a44e65b0b9/adminajax1.jpe
 wordpress_id: 1217
 categories:
 - Aprendiendo a desarrollar
-language:
-- Español
+lang: "es"
 ---
 
 __Recuerdo que cuando estaba por comenzar algún curso, siempre cruzaba por mi mente ¿qué tipo de facilitador voy a tener?, si sería una persona accesible o por el contrario, una persona difícil, ya sea por trato o porque no fuese capaz de trasmitir la información. Esto me lleva a pensar cuán importante es esa persona que va a estar a cargo de transformar un molde en una escultura apreciada.

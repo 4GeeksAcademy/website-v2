@@ -19,6 +19,7 @@ tags:
 - challenges of a web developer
 - coding bootcamp
 - coding education
+lang: "us"
 ---
 
 Education has always been a matter of “How to Pay?”, “Do I qualify?”, “Am I going to be accepted?”, and then, again, “How do I Pay that tuition?”

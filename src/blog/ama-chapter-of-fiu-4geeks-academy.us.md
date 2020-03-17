@@ -19,6 +19,7 @@ tags:
 - coding education
 - FIU
 - Florida International University
+lang: "us"
 ---
 
 # AMA Chapter of FIU + 4Geeks Academy - Getting Students Closer To A Coding Education

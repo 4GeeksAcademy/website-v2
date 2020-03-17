@@ -84,7 +84,7 @@ export const withSession = Component => {
                 // const location = "Madrid"
                 // const language = browserLang ? browserLang : location.defaultLanguage;
                 setSession({...session, v4, v6, location})
-                console.log("http")
+
             };
             loadIp();
         }, []);

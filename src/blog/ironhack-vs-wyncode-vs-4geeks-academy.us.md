@@ -11,7 +11,7 @@ image: "https://4geeksacademy.co/wp-content/uploads/2016/01/launchcode-button-30
 wordpress_id: 471
 categories:
 - Learning to code
-
+lang: "us"
 ---
 
 Yes, we are exited!  We are proud to say that we have partnered with LaunchCode.org

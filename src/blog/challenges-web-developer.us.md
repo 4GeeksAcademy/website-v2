@@ -20,6 +20,7 @@ tags:
 - salary
 - Web Developer
 - web developer salary
+lang: "us"
 ---
 
 To be a web developer, we must be able to handle the language perfectly, and that means always staying up to date.  Let’s not forget that technology moves in giant paces and we have to be both fit and agile in order to keep up with all the novelties.

@@ -14,7 +14,7 @@ wordpress_id: 2807
 categories:
 - Living and working as a developer
 - Why learn to code?
-
+lang: "us"
 ---
 
 It’s time to update our numbers.  Every 6 months we take the task to update the current trends and data related to Developer’s wages.  The question we want to answer with updated data remains the same: What is the average wage for a Software or Web Developer in the US?
