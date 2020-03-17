@@ -15,7 +15,7 @@ export default function Template (props) {
 
         <Wrapper
             style="default">
-            <Row height="150px" align="center">
+            <Row align="center">
                 <Column size="8">
                     <Row height="100%" align="around">
                         <Column size="2" alignSelf="center">
@@ -29,7 +29,7 @@ export default function Template (props) {
                 </Column>
             </Row>
 
-            <Row align="center" height="300px">
+            <Row align="center" >
                 <Column size="8" align="center">
                     <RoundImage border="1.25rem" width="100%" height="100%" bsize="contain" position="center" url={post.frontmatter.image} />
                 </Column>
@@ -37,7 +37,7 @@ export default function Template (props) {
 
 
             <Divider height="30px" />
-            <Row height="10%" align="around">
+            <Row height="auto" align="around">
                 <Column size="8" alignSelf="center">
                     <div className="single-post" dangerouslySetInnerHTML={{__html: post.html}}></div>
                     {/* <Paragraph color={Colors.gray} align="left" fontSize="12px" lineHeight="20px"></Paragraph> */}
