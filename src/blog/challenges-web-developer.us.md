@@ -6,7 +6,7 @@ layout: post
 link: https://www.4geeksacademy.co/challenges-web-developer/
 slug: challenges-web-developer
 title: The Challenges of a Web Developer
-avatar: "/staff/marcelo.png"
+avatar: "/staff/alejandro.png"
 image: ""
 wordpress_id: 315
 categories:

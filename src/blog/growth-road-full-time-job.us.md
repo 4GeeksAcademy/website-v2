@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/growth-road-full-time-job/
 slug: growth-road-full-time-job
 title: The Growth Road
 avatar: "/staff/marcelo.png"
-image: ""
+image: "https://ucarecdn.com/483ae429-092c-4790-8da9-b4978667dcd7/BLOG01.jpg"
 wordpress_id: 3628
 categories:
 - Sin categoría

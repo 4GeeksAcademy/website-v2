@@ -42,7 +42,6 @@ const RecentPosts = () => {
                       date
                       author
                       image
-                      intro
                       avatar
                       excerpt
                     }

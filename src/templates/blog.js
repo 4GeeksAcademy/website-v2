@@ -129,7 +129,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
               avatar
               date
               image
-              intro
               slug
               title
               excerpt
