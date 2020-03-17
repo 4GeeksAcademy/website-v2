@@ -7,6 +7,8 @@ link: https://www.4geeksacademy.co/?p=583
 published: false
 slug: ironhack-vs-4geeks-academy-which-programming-bootcamp-is-a-better-investment
 title: 'IronHack vs 4Geeks Academy: Which Programming Bootcamp is a Better Investment?'
+avatar: "/staff/alejandro.png"
+image: ""
 wordpress_id: 583
 categories:
 - Learning to code

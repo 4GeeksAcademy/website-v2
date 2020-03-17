@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/new-year-new-hiring-partners-launch-potato-us/
 slug: new-year-new-hiring-partners-launch-potato-us
 title: 'New year, New Hiring Partners: Launch Potato & Us'
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 2656
 categories:
 - Living and working as a developer

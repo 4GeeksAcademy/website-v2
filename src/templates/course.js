@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
+import {useInView} from "react-intersection-observer";
 import Layout from '../global/Layout';
 import styled from 'styled-components';
 import {Card} from '../components/Card'
@@ -69,6 +70,9 @@ const useStyles = makeStyles(theme => ({
 
 
 const Program = ({data, pageContext, yml}) => {
+  const [ref, inView] = useInView({
+    threshold: 0
+  });
   const scrollRef = useRef();
   const [test, setTest] = useState("")
   const [oldScrollPos, setOldScrollPos] = useState(0)
@@ -165,7 +169,7 @@ const Program = ({data, pageContext, yml}) => {
         : pageContext.slug === "coding-introduction"
         && null
   }
-  console.log('sched', yml.typical.schedule)
+  console.log('sched', pageContext)
   console.log('steps', getSteps(yml))
   return (<>
     <div className={test}
@@ -260,6 +264,7 @@ const Program = ({data, pageContext, yml}) => {
       </Wrapper>
       <Wrapper
         style="default">
+
         <Credentials up="60" lang={data.allCredentialsYaml.edges} />
       </Wrapper>
       <Sidebar
@@ -604,6 +609,8 @@ const Program = ({data, pageContext, yml}) => {
       <Wrapper
         style="default"
       >
+
+
         <Title
           size="10"
           title={yml.prices.heading}
@@ -611,7 +618,7 @@ const Program = ({data, pageContext, yml}) => {
           primary
         />
         <section className="section" id="section-4"></section>
-        {/* <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} /> */}
+        <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
         <Divider height="100px" />
       </Wrapper>
 
@@ -779,6 +786,56 @@ export const query = graphql`
           button{
               button_text
               button_link
+          }
+        }
+      }
+    }
+    allLocationYaml(filter: {meta_info: {slug: {eq: $lang}}}) {
+      edges {
+        node {
+          id
+          hasFinancialsOption
+          prices {
+            full_time {
+              center_section {
+                button {
+                  button_text
+                }
+                header {
+                  heading_one
+                  sub_heading
+                  heading_two
+                }
+                plans {
+                  months
+                  payment
+                  paymentInfo
+                  provider
+                  logo
+                  message
+                }
+              }
+            }
+            part_time {
+              center_section {
+                button {
+                  button_text
+                }
+                header {
+                  heading_one
+                  sub_heading
+                  heading_two
+                }
+                plans {
+                  months
+                  payment
+                  paymentInfo
+                  provider
+                  logo
+                  message
+                }
+              }
+            }
           }
         }
       }

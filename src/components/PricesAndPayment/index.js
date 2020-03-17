@@ -19,6 +19,9 @@ import {Card} from '../Card';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage} from '../Styling';
 import {SessionContext} from '../../session'
+import {InView} from 'react-intersection-observer'
+
+
 
 export default (props) => {
   const {session, setSession} = useContext(SessionContext);
@@ -28,70 +31,6 @@ export default (props) => {
   const [activeStep, setActiveStep] = useState(5);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(session.location);
-
-  const intervalRef = useRef(null);
-  let maxSteps = 5;
-  let paolo;
-  const start = (stepArray) => {
-
-    // if (stepArray != null) {console.log("stepArray", stepArray)}
-    // getSteps(session.location);
-
-    intervalRef.current = setInterval(() => {
-      maxSteps -= 1;
-      setActiveStep(activeStep => activeStep - 1);
-      if (maxSteps === -1) {setActiveStep(5); maxSteps = 5;}
-    }, 5000);
-
-  }
-  const stop = () => {
-    clearInterval(intervalRef.current);
-  };
-  useEffect(() => {
-    start(steps)
-  }, [])
-  const handleChange = (checked) => {
-    setChecked(checked)
-  }
-
-  const totalSteps = () => {
-    return steps.length;
-  };
-  const completedSteps = () => {
-    return Object.keys(completed).length;
-  };
-  const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
-  };
-  const allStepsCompleted = () => {
-    return completedSteps() === totalSteps();
-  };
-  const handleNext = () => {
-    const newActiveStep =
-      isLastStep() && !allStepsCompleted()
-        ? // It's the last step, but not all steps have been completed,
-        // find the first step that has been completed
-        steps.findIndex((step, i) => !(i in completed))
-        : activeStep + 1;
-    setActiveStep(newActiveStep);
-  };
-  const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
-  };
-  const handleStep = step => () => {
-    stop()
-    setActiveStep(step);
-  };
-  const handleComplete = () => {
-    const newCompleted = completed;
-    newCompleted[activeStep] = true;
-    setCompleted(newCompleted);
-    handleNext();
-  };
-  const handleReset = () => {
-    setActiveStep(0);
-    setCompleted({});
-  };
   const data = useStaticQuery(graphql`
     query myQueryTest{
       allLocationYaml {
@@ -214,19 +153,18 @@ export default (props) => {
       }
   }
     `)
-
+  console.log("prices$$", props)
   let currentCityInfo = null;
   let info = null;
   currentCityInfo = data.allLocationYaml.edges.filter((item) => {return item.node.city === session.location})
   {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
 
-
   function getProgramInfo () {
     let program = "";
     {
-      props.type === "full-stack-web-development-bootcamp-part-time"
+      props.type === "full-stack-web-development-bootcamp-part-time" || props.type === "desarrollo-web-full-stack-bootcamp-part-time"
         ? program = "part-time"
-        : props.type === "full-stack-web-development-bootcamp-full-time"
+        : props.type === "full-stack-web-development-bootcamp-full-time" || props.type === "desarrollo-web-full-stack-bootcamp-full-time"
           ? program = "full-time"
           : program = "part-time"
     }
@@ -248,6 +186,78 @@ export default (props) => {
 
   let planData = null;
   {locInfo != null ? planData = locInfo.center_section.plans : null}
+  let planDataLength = null;
+  const intervalRef = useRef(null);
+  if (planData != null) {planDataLength = planData.length - 1}
+  console.log("planData", locInfo)
+  // const start = () => {
+  //   let maxSteps = planDataLength;
+  //   // if (stepArray != null) {console.log("stepArray", stepArray)}
+  //   // getSteps(session.location);
+  //   // if (stepArray.length > 0) {console.log("stepsArray", stepArray)}
+  //   intervalRef.current = setInterval(() => {
+  //     console.log("Paolo", maxSteps)
+  //     setActiveStep(activeStep => activeStep - 1);
+  //     // if (maxSteps != null) {setActiveStep(planDataLength); maxSteps = planDataLength;}
+  //     // maxSteps -= 1;
+  //   }, 1000);
+
+  // }
+  const stop = () => {
+    clearInterval(intervalRef.current);
+  };
+  // useEffect(() => {
+
+  //   start()
+
+  // }, [])
+  const handleChange = (checked) => {
+    setChecked(checked)
+  }
+
+  const totalSteps = () => {
+    return steps.length;
+  };
+  const completedSteps = () => {
+    return Object.keys(completed).length;
+  };
+  const isLastStep = () => {
+    return activeStep === totalSteps() - 1;
+  };
+  const allStepsCompleted = () => {
+    return completedSteps() === totalSteps();
+  };
+  const handleNext = () => {
+    const newActiveStep =
+      isLastStep() && !allStepsCompleted()
+        ? // It's the last step, but not all steps have been completed,
+        // find the first step that has been completed
+        steps.findIndex((step, i) => !(i in completed))
+        : activeStep + 1;
+    setActiveStep(newActiveStep);
+  };
+  const handleBack = () => {
+    setActiveStep(prevActiveStep => prevActiveStep - 1);
+  };
+  const handleStep = step => () => {
+    stop()
+    setActiveStep(step);
+  };
+  const handleComplete = () => {
+    const newCompleted = completed;
+    newCompleted[activeStep] = true;
+    setCompleted(newCompleted);
+    handleNext();
+  };
+  const handleReset = () => {
+    setActiveStep(0);
+    setCompleted({});
+  };
+
+
+
+
+
 
   function getStepLogo (step) {
     switch (step) {
@@ -264,26 +274,26 @@ export default (props) => {
       case 5:
         return <><img src={planData[5].logo} height="20px" /> <img src={planData[4].logo} height="20px" /></>;
       default:
-        return 'Unknown step';
+        return 'Loading Data';
     }
   }
 
   function getStepContents (step) {
     switch (step) {
       case 0:
-        return `${planData[0].payment}`
+        return planData[0].payment
       case 1:
-        return `${planData[1].payment}`
+        return planData[1].payment
       case 2:
-        return `${planData[2].payment}`
+        return planData[2].payment
       case 3:
-        return `${planData[3].payment}`
+        return planData[3].payment
       case 4:
-        return `${planData[4].payment}`
+        return planData[4].payment
       case 5:
-        return `${planData[5].payment}`
+        return planData[5].payment
       default:
-        return 'Unknown step';
+        return 'Loading Data';
     }
   }
 
@@ -292,25 +302,28 @@ export default (props) => {
       case 0:
         return planData[0].paymentInfo
       case 1:
-        return planData[0].paymentInfo
+        return planData[1].paymentInfo
       case 2:
-        return planData[0].paymentInfo
+        return planData[2].paymentInfo
       case 3:
-        return planData[0].paymentInfo
+        return planData[3].paymentInfo
       case 4:
-        return planData[0].paymentInfo
+        return planData[4].paymentInfo
       case 5:
-        return planData[0].paymentInfo
+        return planData[5].paymentInfo
       default:
-        return 'Unknown step';
+        return 'Loading Data';
     }
   }
   // const handleClick = (index) => {
   //   handleStep(index);
   //   stop();
   // }
+
   return (
+
     <>
+
       {/* 3 COLUMNS LAYOUT */}
       {info != null ?
         <>
@@ -666,6 +679,6 @@ function getSteps (location) {
   if (location === "Miami") {return ['6 mo', '12 mo', '24 mo', '36 mo', '42 mo', '60 mo'];}
   if (location === "Santiago de Chile") {return ['6 mo', '12 mo'];}
   if (location === "Caracas" || location === "Maracaibo") {return null;}
-  if (location === "Madrid") {return [];}
+  if (location === "Madrid") {return ['6 mo', '12 mo'];}
   if (location === null) {return [];}
 }

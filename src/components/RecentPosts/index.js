@@ -43,6 +43,8 @@ const RecentPosts = () => {
                       author
                       image
                       intro
+                      avatar
+                      excerpt
                     }
                     rawMarkdownBody
                     html
@@ -57,8 +59,15 @@ const RecentPosts = () => {
             }
         `)
     let post = data.allMarkdownRemark.edges;
-
-    console.log("post", data)
+    function randomArray () {
+        let newArray = [];
+        let tempIndex = ""
+        for (let i = 0; i < 3; i++) {
+            newArray.push(post[Math.floor(Math.random() * post.length)]);
+        }
+        return newArray;
+    }
+    console.log("post", randomArray())
     // const [event, setEvent] = useState([])
     // useEffect(() => {
     //     fetch(
@@ -72,7 +81,7 @@ const RecentPosts = () => {
     return (
         <>
             <Row>
-                {post.map((i, index) => (
+                {randomArray().map((i, index) => (
                     <Column size="4" customRespSize respSize="12" key={index} margin="10px 0">
                         <Card
                             shadow
@@ -111,14 +120,14 @@ const RecentPosts = () => {
                             </Row>
                             <Row align="center" height="30%">
                                 <Column size="10" customRespSize respSize="10">
-                                    <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.node.frontmatter.intro}</Paragraph>
+                                    <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.node.frontmatter.excerpt}</Paragraph>
                                 </Column>
                             </Row>
                             <Row height="5%" align="center">
                                 <Column size="10" >
                                     <Row>
                                         <Column size="7"></Column>
-                                        <Column size="3"> <Link to={`${i.node.frontmatter.path}`}><ArrowRight width="32" color={Colors.blue} fill={Colors.blue} /></Link></Column>
+                                        <Column size="5" align="right"> <Link to={`${i.node.frontmatter.slug}`}><ArrowRight width="32" color={Colors.blue} fill={Colors.blue} /></Link></Column>
 
                                     </Row>
                                 </Column>

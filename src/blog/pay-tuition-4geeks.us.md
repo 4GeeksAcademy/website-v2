@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/pay-tuition-4geeks/
 slug: pay-tuition-4geeks
 title: How to Pay your tuition at 4Geeks
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 2573
 categories:
 - Learning to code

@@ -9,6 +9,8 @@ layout: post
 link: https://www.4geeksacademy.co/what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2/
 slug: what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2
 title: What kinds of jobs do coding bootcamp graduates find?
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 708
 categories:
 - Living and working as a developer

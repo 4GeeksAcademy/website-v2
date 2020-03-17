@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/part-time-future-education/
 slug: part-time-future-education
 title: Part-time is the future of education
+avatar: "/staff/alejandro.png"
+image: ""
 wordpress_id: 491
 categories:
 - Sin categoría

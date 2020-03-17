@@ -7,6 +7,8 @@ link: https://www.4geeksacademy.co/the-ideal-development-bootcamp-instructor/
 published: false
 slug: the-ideal-development-bootcamp-instructor
 title: The ideal development bootcamp Instructor
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/cd496d1e-172d-4cbd-bfda-c82f6d633b83/ISABlogCover.png"
 wordpress_id: 1141
 categories:
 - Learning to code

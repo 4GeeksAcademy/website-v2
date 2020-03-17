@@ -9,6 +9,8 @@ layout: post
 link: https://www.4geeksacademy.co/women-in-tech-2017/
 slug: women-in-tech-2017
 title: Women in Tech 2017
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 2661
 categories:
 - Living and working as a developer

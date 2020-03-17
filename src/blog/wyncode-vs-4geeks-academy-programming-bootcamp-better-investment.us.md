@@ -6,6 +6,8 @@ layout: post
 link: https://www.4geeksacademy.co/wyncode-vs-4geeks-academy-programming-bootcamp-better-investment/
 slug: wyncode-vs-4geeks-academy-programming-bootcamp-better-investment
 title: 'Wyncode vs 4Geeks Academy: Which Programming Bootcamp is a Better Investment?'
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 460
 categories:
 - Learning to code

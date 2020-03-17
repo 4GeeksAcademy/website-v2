@@ -6,6 +6,8 @@ layout: post
 link: https://www.4geeksacademy.co/the-ideal-instructor/
 slug: the-ideal-instructor
 title: THE IDEAL INSTRUCTOR
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/cd496d1e-172d-4cbd-bfda-c82f6d633b83/ISABlogCover.png"
 wordpress_id: 1226
 categories:
 - Learning to code

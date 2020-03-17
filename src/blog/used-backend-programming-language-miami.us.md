@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/used-backend-programming-language-miami/
 slug: used-backend-programming-language-miami
 title: What is the most used back-end programming language in Miami?
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 571
 categories:
 - Learning to code

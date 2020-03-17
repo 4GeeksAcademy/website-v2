@@ -6,6 +6,8 @@ layout: post
 link: https://www.4geeksacademy.co/es/ser-programador-entre-las-profesiones-con-mayor-demanda/
 slug: ser-programador-entre-las-profesiones-con-mayor-demanda
 title: Ser Programador… Entre las profesiones con mayor demanda
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 1184
 categories:
 - Aprendiendo a desarrollar

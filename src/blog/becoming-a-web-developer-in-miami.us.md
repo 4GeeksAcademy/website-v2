@@ -8,6 +8,9 @@ layout: post
 link: https://www.4geeksacademy.co/becoming-a-web-developer-in-miami/
 slug: becoming-a-web-developer-in-miami
 title: Learning to code in Miami
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/f0f7ec75-3cb9-4ed2-927b-a8688b9b3805/adminajax41010PM.jpeg"
+
 wordpress_id: 501
 categories:
 - Learning to code

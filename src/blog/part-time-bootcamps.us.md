@@ -8,6 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/part-time-bootcamps/
 slug: part-time-bootcamps
 title: Why is a Part-Time Coding Bootcamp  Best for You
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 3156
 categories:
 - Learning to code

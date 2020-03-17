@@ -63,7 +63,7 @@ const Blog = ({data, pageContext, yml}) => {
                                 </Row>
                                 <Row height="auto">
                                     <Column size="12" align="center">
-                                        <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{item.node.frontmatter.intro}</Paragraph>
+                                        <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{item.node.frontmatter.excerpt}</Paragraph>
                                     </Column>
                                 </Row>
                                 <Row height="auto" align="around">
@@ -132,6 +132,7 @@ query BlogQuery($file_name: String!, $lang: String!) {
               intro
               slug
               title
+              excerpt
             }
           }
         }

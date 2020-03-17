@@ -10,6 +10,8 @@ layout: post
 link: https://www.4geeksacademy.co/choosing-coding-bootcamp/
 slug: choosing-coding-bootcamp
 title: How to choose the best coding Bootcamp?
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 3147
 categories:
 - Learning to code

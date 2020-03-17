@@ -6,6 +6,8 @@ layout: post
 link: https://www.4geeksacademy.co/introtocoding-for-growth-hackers/
 slug: introtocoding-for-growth-hackers
 title: '#IntroToCoding for Growth-Hackers'
+avatar: "/staff/marcelo.png"
+image: ""
 wordpress_id: 725
 categories:
 - Sin categoría

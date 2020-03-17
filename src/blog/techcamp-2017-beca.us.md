@@ -5,7 +5,10 @@ date: 2017-07-18 20:38:51+00:00
 layout: post
 link: https://www.4geeksacademy.co/es/techcamp-2017-beca/
 slug: techcamp-2017-beca
-title: ¡4Geeks Academy becó a 4 emprendedores del TechCamp Caracas 2017!
+title: ¡4Geeks Academy becó a 4 emprendedores del TechCamp 
+Caracas 2017!
+avatar: "/staff/marcelo.png"
+image: "https://ucarecdn.com/cd496d1e-172d-4cbd-bfda-c82f6d633b83/ISABlogCover.png"
 wordpress_id: 2061
 categories:
 - Aprendiendo a desarrollar
