@@ -49,7 +49,7 @@ const createBlog = async ({actions, graphql}) => {
                         date
                         status
                         featured
-                        twitter_username
+                        
                     }
                     excerpt,
                     fields{
