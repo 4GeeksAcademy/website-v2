@@ -26,7 +26,7 @@ export default function Template (props) {
             return obj;
         }, {});
 
-
+    console.log("filt", filtered)
     function GetFormattedDate (date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -41,7 +41,6 @@ export default function Template (props) {
         return [year, month, day].join('-');
     }
     let postDate = GetFormattedDate(post.frontmatter.date)
-    console.log("date", postDate)
     return (
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Wrapper
@@ -53,11 +52,13 @@ export default function Template (props) {
                                 <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
                             </Column>
                             <Column size="6" customRespSize respSize="10" alignSelf="center">
-                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${postDate} - ${filtered.name}`}</Paragraph></Row>
+                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${postDate} - ${filtered.name != undefined || filtered.name != null ? filtered.name : '4Geeks Academy'}`}</Paragraph></Row>
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph></Row>
-                                <Row><TwitterFollowButton
-                                    screenName={filtered.username}
-                                /></Row>
+                                <Row>
+                                    <TwitterFollowButton
+                                        screenName={filtered.username}
+                                    />
+                                </Row>
 
                             </Column>
                             <Column size="" customRespSize respSize="10" alignSelf="center">

@@ -7,6 +7,19 @@ import BaseRender from './_baseRender'
 
 
 const Blog = ({data, pageContext, yml}) => {
+    function GetFormattedDate (date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2)
+            month = '0' + month;
+        if (day.length < 2)
+            day = '0' + day;
+
+        return [year, month, day].join('-');
+    }
 
     return (
 
@@ -50,6 +63,7 @@ const Blog = ({data, pageContext, yml}) => {
                     <div className="card-columns">
                         {data.posts.edges.filter(post => post.node.frontmatter.featured === true).map((item, i) => {
                             console.log("item", data)
+
                             return (
                                 <Column size="12" masonry key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
@@ -98,7 +112,7 @@ const Blog = ({data, pageContext, yml}) => {
                                                 fs_sm="12px"
                                                 fs_md="10px"
                                                 fs_lg="12px"
-                                                fs_xl="12px" lineHeight="20px">{`${item.node.frontmatter.date}`}</Paragraph>
+                                                fs_xl="12px" lineHeight="20px">{`${GetFormattedDate(item.node.frontmatter.date)}`}</Paragraph>
                                             {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
                                         </Column>
                                         <Column size="2" customRespSize respSize="2" align="end">
@@ -181,7 +195,7 @@ const Blog = ({data, pageContext, yml}) => {
                                                 fs_sm="12px"
                                                 fs_md="10px"
                                                 fs_lg="12px"
-                                                fs_xl="12px" lineHeight="20px">{`${item.node.frontmatter.date}`}</Paragraph>
+                                                fs_xl="12px" lineHeight="20px">{`${GetFormattedDate(item.node.frontmatter.date)}`}</Paragraph>
                                             {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
                                         </Column>
                                         <Column size="2" customRespSize respSize="2" align="end">
