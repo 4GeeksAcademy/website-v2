@@ -20,6 +20,8 @@ tags:
 - coding
 - Python
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 # **Why 4Geeks Academy teaches Python as Backend Language?**

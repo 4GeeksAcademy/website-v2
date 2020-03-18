@@ -15,6 +15,8 @@ categories:
 tags:
 - 4geeks
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: true
 ---
 
 In 2009, together with two friends, we started a small software company with very big ambitions.  Just like any other startup story, we had no money (we didn't raise any funding), and our main office was our garage.

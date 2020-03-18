@@ -13,6 +13,8 @@ categories:
 - Aprendiendo a desarrollar
 - Por qué aprender a programar
 lang: "es"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 En la toma de decisión sobre qué profesión escoger o cuándo se piensa mejorar un área de nuestra carrera, miramos las ofertas de diversas instituciones educativas y de acuerdo a nuestra actitud y las oportunidades que brinden, seleccionamos la que mejor nos convenga.

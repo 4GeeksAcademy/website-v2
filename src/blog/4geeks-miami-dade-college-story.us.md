@@ -20,6 +20,8 @@ tags:
 - investment
 - Jobs in Miami
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: true
 ---
 
 Long are the days since we had to enroll in higher education just to have the chance to get access to the best job positions in the market. Coding and the activities around it are in dire need of talent. Miami Dade College has always looked further and offered students the best choices in career paths, that’s why MDC and 4Geeks Academy have been working together for more than 2 years already, in order to take students on a coding journey that won’t make them break the bank and will take them to excellent jobs.

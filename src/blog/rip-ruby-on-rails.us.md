@@ -21,6 +21,8 @@ tags:
 - ruby
 - Web Developer
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 I’ve been a developer since I was 13 years old.  I’ve used almost every web framework out there, from PHP 3.1 to Node.js, React, etc.  People around me know that I’m not one of those people that starts endless fights like: Mac vs PC, Metallica vs Megadeth, etc.

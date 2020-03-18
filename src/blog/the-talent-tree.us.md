@@ -21,6 +21,8 @@ tags:
 - coding bootcamp
 - coding education
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 Have you ever played Sims, League Of Legends, Zelda or Civilization?  If you have, you are very familiar with the concept of “earning skills.”  The** Talent Tree ®** is one of the things that makes us very proud – it is the foundation on which the entire academic experience is built on.  Here is why:

@@ -23,6 +23,8 @@ tags:
 - financing education
 - Miami Dade College
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 One of the main concerns for those trying to join a Coding Program is how to pay the tuition costs.  The answer to this question may vary, but we have a simple path to recommend.

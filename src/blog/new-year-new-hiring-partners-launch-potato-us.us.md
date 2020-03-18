@@ -15,6 +15,8 @@ categories:
 - Living and working as a developer
 - Why learn to code?
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 At 4Geeks Academy we have two main goals with our students:

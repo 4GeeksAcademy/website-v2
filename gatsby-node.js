@@ -47,6 +47,9 @@ const createBlog = async ({actions, graphql}) => {
                         slug
                         author
                         date
+                        status
+                        featured
+                        twitter_username
                     }
                     excerpt,
                     fields{

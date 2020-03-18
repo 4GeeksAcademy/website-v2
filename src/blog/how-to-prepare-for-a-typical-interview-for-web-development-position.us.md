@@ -18,6 +18,8 @@ tags:
 - Job Interview
 - Jobs in Miami
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 Why do I feel so nervous when I plan to go to a job interview?  The truth is that these kinds of emotions keep me alert, and make me do my task.

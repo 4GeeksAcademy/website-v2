@@ -22,6 +22,8 @@ tags:
 - miami
 - programmers
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 # **Digital marketing in the coding world**

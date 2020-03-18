@@ -22,6 +22,8 @@ tags:
 - salary
 - web developer salary
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: true
 ---
 
 If you want to learn how to swim, you use baby floats, not neoprene wet-suits (witch are obviously better for professional swimming).  This post is not about what programming language is better (it is impossible to answer that), this post is about choosing the best language to learn how to code - the language that gives the most opportunities to our students in Miami.

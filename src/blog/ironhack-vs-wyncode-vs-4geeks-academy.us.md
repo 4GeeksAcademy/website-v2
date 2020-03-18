@@ -12,6 +12,8 @@ wordpress_id: 471
 categories:
 - Learning to code
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 Yes, we are exited!  We are proud to say that we have partnered with LaunchCode.org

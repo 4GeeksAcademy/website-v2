@@ -14,6 +14,8 @@ wordpress_id: 3481
 categories:
 - Sin categoría
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: true
 ---
 
 # BOOTCAMP GRADUATES SALARIES 2019 EDITION

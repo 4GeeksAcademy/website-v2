@@ -20,6 +20,8 @@ tags:
 - Jobs in Miami
 - Python
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: true
 ---
 
 # 7 tips to land a job as a Software Developer ASAP

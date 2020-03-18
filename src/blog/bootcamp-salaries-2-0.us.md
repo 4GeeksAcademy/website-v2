@@ -20,6 +20,8 @@ tags:
 - coding bootcamp
 - coding education
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 When someone takes the decision to enroll into a Coding Bootcamp, they are doing it because of three – among others - main reasons: (1) higher income; (2) more job opportunities than other careers; (3) launching a Startup.  We have the commitment of analyzing - based on current data - these reasons twice a year.  Here is the recent outcome.

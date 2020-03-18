@@ -22,6 +22,8 @@ tags:
 - salary
 - web developer salary
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 ## **Why Become A Web Developer In Miami Dade?**

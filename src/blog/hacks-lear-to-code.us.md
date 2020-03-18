@@ -20,6 +20,8 @@ tags:
 - Jobs in Miami
 - Python
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 # **Hacks for learning to code: Read Less and Learn Better**

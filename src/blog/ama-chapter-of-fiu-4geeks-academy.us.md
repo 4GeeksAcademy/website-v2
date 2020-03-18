@@ -7,7 +7,7 @@ link: https://www.4geeksacademy.co/ama-chapter-of-fiu-4geeks-academy/
 slug: ama-chapter-of-fiu-4geeks-academy
 title: AMA Chapter of FIU + 4Geeks Academy - Getting Students Closer To A Coding Education
 avatar: "/staff/marcelo.png"
-image: ""
+image: null
 wordpress_id: 792
 categories:
 - Sin categoría
@@ -20,6 +20,8 @@ tags:
 - FIU
 - Florida International University
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 # AMA Chapter of FIU + 4Geeks Academy - Getting Students Closer To A Coding Education
