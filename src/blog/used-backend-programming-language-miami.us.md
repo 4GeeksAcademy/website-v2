@@ -23,6 +23,8 @@ tags:
 - Python
 - ruby
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 To begin, we need to know in what area we are going to specialize in, or what the language is being used by the business or organization.  In this article we are going to talk about the three most used languages in the last two years, which are: PHP, Python and Ruby.

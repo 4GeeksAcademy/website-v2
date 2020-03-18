@@ -19,6 +19,8 @@ tags:
 - Web Design
 - Web Developer
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 It has been said that designers work on front-end (what users interact with) and developers with back-end (writing code to make the site function).  While this is a known approach, we think this is not that simple.  Both of them need to be familiar with languages and code.  The point relies on what the purpose of programming is and what would be the final result.

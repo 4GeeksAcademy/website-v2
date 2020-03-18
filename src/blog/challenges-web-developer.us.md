@@ -7,7 +7,7 @@ link: https://www.4geeksacademy.co/challenges-web-developer/
 slug: challenges-web-developer
 title: The Challenges of a Web Developer
 avatar: "/staff/alejandro.png"
-image: ""
+image: null
 wordpress_id: 315
 categories:
 - Living and working as a developer
@@ -21,6 +21,8 @@ tags:
 - Web Developer
 - web developer salary
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 To be a web developer, we must be able to handle the language perfectly, and that means always staying up to date.  Let’s not forget that technology moves in giant paces and we have to be both fit and agile in order to keep up with all the novelties.

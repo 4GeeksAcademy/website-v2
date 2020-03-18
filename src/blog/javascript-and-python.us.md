@@ -23,6 +23,8 @@ tags:
 - miami
 - Python
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 # **JavaScript and Python: A-must for any coder**

@@ -161,6 +161,11 @@ border: ${props => props.borderStyle};
 align-self: ${props => props.alignSelf};
 padding-right: ${props => props.paddingRight};
 padding-left: ${props => props.paddingLeft};
+${props => props.masonry &&
+        css`
+display: inline-block;
+`
+    }
 ${props =>
         props.border === "bottom"
             ?

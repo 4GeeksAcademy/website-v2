@@ -21,6 +21,8 @@ tags:
 - miami
 - Miami Dade College
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 ### **What to believe when speaking about coding program in Miami.**

@@ -20,6 +20,8 @@ tags:
 - investment
 - Jobs in Miami
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 Coding is a unique experience for everyone involved. “Software is eating the world,” shares a Quora contributor[ on the Forbes website](https://www.forbes.com/sites/quora/2017/01/20/will-the-demand-for-developers-continue-to-increase/#7090450433ee). Even if dated for internet standards, the article remains current. Companies are doing the same things and users are still relying on apps to make their lives easier. More and more people are joining the internet world daily and the need for more robust technology is imperative.

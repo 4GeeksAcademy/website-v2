@@ -15,6 +15,8 @@ wordpress_id: 3333
 categories:
 - Sin categoría
 lang: "es"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: true
 ---
 
 # **Uno de los Top 10 Bootcamp de Programación llega a Chile**

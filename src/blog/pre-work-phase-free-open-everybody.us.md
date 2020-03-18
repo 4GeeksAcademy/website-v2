@@ -23,6 +23,8 @@ tags:
 - learn to code
 - part-time studies
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 

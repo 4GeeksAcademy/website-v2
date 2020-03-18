@@ -11,7 +11,7 @@ link: https://www.4geeksacademy.co/web-developer-earn-the-salary-you-deserve/
 slug: web-developer-earn-the-salary-you-deserve
 title: 'Web Developer: Earn the Salary You Deserve'
 avatar: "/staff/marcelo.png"
-image: ""
+image: null
 wordpress_id: 316
 categories:
 - Living and working as a developer
@@ -24,6 +24,8 @@ tags:
 - Web Developer
 - web developer salary
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 ### Web Developer: Earn the Salary You Deserve

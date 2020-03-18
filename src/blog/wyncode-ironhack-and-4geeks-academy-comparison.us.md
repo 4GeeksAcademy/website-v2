@@ -20,6 +20,8 @@ tags:
 - learn to code
 - wyncode
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 We are sure that every potential student is asking the same question:  Which is the best coding academy (development bootcamp) in Miami?

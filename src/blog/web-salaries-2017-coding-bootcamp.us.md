@@ -23,6 +23,8 @@ tags:
 - Miami Dade College
 - wages
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 ## **Real data addressing real questions. **

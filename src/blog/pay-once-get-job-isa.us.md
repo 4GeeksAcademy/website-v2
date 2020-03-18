@@ -19,6 +19,8 @@ tags:
 - coding
 - Python
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 # **Pay once you get a Job**

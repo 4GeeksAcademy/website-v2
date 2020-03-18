@@ -15,6 +15,8 @@ categories:
 - Living and working as a developer
 - Why learn to code?
 lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
 ---
 
 ## Great news! Skills Fund & 4Geeks Academy are finally together
