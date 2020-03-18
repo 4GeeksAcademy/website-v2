@@ -147,3 +147,6 @@ a:hover {
     color: #0097CE;
 }
 
+.count-o {
+    display: none!important;
+}
