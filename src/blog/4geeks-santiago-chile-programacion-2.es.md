@@ -1,5 +1,5 @@
 ---
-author: MarceloRicigliano
+author: MRiciglianoC
 comments: true
 date: 2018-12-17 15:09:53+00:00
 excerpt: La sexta sede de 4Geeks ya es una realidad. En WeWork, en Santiago, ya se

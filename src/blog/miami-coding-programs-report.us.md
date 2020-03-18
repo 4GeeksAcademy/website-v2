@@ -1,5 +1,5 @@
 ---
-author: MarceloRicigliano
+author: MRiciglianoC
 comments: true
 date: 2018-11-06 20:24:41+00:00
 excerpt: Everything you need to know about Miami Coding Programs

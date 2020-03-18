@@ -1,5 +1,5 @@
 ---
-author: MarceloRicigliano
+author: MRiciglianoC
 comments: true
 date: 2019-08-27 14:37:28+00:00
 excerpt: Working Full-Time During a Part-Time Bootcamp might be hard, but we have

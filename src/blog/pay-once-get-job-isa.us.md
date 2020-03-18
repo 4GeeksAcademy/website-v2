@@ -1,5 +1,5 @@
 ---
-author: MarceloRicigliano
+author: MRiciglianoC
 comments: true
 date: 2019-04-10 17:57:47+00:00
 excerpt: 4Geeks is now offering an ISA (Income Sharing Agreement) for anyone looking

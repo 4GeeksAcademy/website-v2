@@ -10,7 +10,7 @@ layout: post
 link: https://www.4geeksacademy.co/how-does-the-web-work-html-css/
 slug: how-does-the-web-work-html-css
 title: HTML + CSS - Understanding How The Web Works
-avatar: "/staff/marcelo.png"
+avatar: "/staff/alejandro.png"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2015/12/htmlcss.png"
 wordpress_id: 402
 categories:
