@@ -5,16 +5,16 @@ export default {
         "avatar": "/staff/alejandro.png",
         "username": "alesanchezr"
     },
-    "mricigliano": {
+    "MRiciglianoC": {
         "bio": "Amazing dksaflkhadsfglkasklgbkjlgsafbkjlgfsbklgfadsbklj",
         "name": "Marcelo Ricigliano",
         "avatar": "/staff/marcelo.png",
-        "username": "mricigliano"
+        "username": "MRiciglianoC"
     },
     "4GeeksAcademy": {
         "bio": "Amazing dksaflkhadsfglkasklgbkjlgsafbkjlgfsbklgfadsbklj",
         "name": "4Geeks Academy",
-        "avatar": "/staff/alejandro.png",
-        "username": "4geeksacademy"
+        "avatar": "/4geeks-logo.png",
+        "username": "4GeeksAcademy"
     }
 }

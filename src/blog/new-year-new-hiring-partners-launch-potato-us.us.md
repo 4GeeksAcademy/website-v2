@@ -1,5 +1,5 @@
 ---
-author: MarceloRicigliano
+author: MRiciglianoC
 comments: true
 date: 2017-12-12 21:22:15+00:00
 excerpt: 'We are so pleased to announce that we have partnered with the startup technology

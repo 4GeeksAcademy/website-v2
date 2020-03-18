@@ -1,5 +1,5 @@
 ---
-author: MarceloRicigliano
+author: MRiciglianoC
 comments: true
 date: 2018-02-28 20:41:26+00:00
 excerpt: 4Geeks Academy has partnered with Skills Fund to remove all barriers to enrolling

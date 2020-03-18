@@ -1,5 +1,5 @@
 ---
-author: MarceloRicigliano
+author: MRiciglianoC
 comments: true
 date: 2017-01-21 00:38:45+00:00
 excerpt: 'The Miami Dade College tuition fee for the Full Stack program is already

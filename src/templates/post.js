@@ -53,7 +53,7 @@ export default function Template (props) {
                             </Column>
                             <Column size="6" customRespSize respSize="10" alignSelf="center">
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${postDate} - ${filtered.name != undefined || filtered.name != null ? filtered.name : '4Geeks Academy'}`}</Paragraph></Row>
-                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph></Row>
+                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text}`}</Paragraph></Row>
                                 <Row>
                                     <TwitterFollowButton
                                         screenName={filtered.username}

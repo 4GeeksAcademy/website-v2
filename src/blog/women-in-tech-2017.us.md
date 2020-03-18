@@ -1,5 +1,5 @@
 ---
-author: MarceloRicigliano
+author: MRiciglianoC
 comments: true
 date: 2018-01-17 04:01:12+00:00
 excerpt: Among the tech community, women are only taking 31% of the total workspace,

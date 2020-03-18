@@ -1,5 +1,5 @@
 ---
-author: MarceloRicigliano
+author: MRiciglianoC
 comments: true
 date: 2018-11-14 03:22:14+00:00
 excerpt: MDC and 4Geeks Academy have been working together for more than 2 years already.
