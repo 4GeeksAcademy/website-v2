@@ -24,11 +24,12 @@ import {InView} from 'react-intersection-observer'
 
 
 export default (props) => {
+  console.log("props", props)
   const {session, setSession} = useContext(SessionContext);
   const [checked, setChecked] = useState(false)
   const [test, setTest] = useState()
   const classes = useStyles();
-  const [activeStep, setActiveStep] = useState(5);
+  const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(session.location);
   const data = useStaticQuery(graphql`
@@ -153,6 +154,9 @@ export default (props) => {
       }
   }
     `)
+  function infos (test) {
+    console.log("info####", test)
+  }
   console.log("prices$$", props)
   let currentCityInfo = null;
   let info = null;
@@ -465,7 +469,7 @@ export default (props) => {
               </Card>
             </Column>
               : null}
-            {info.meta_info.slug != "madrid" && info.meta_info.slug != "santiago-chile" ? <Column size="4" customRespSize respSize="12">
+            <Column size="4" customRespSize respSize="12">
               <Card shadow width="100%" height="350px" margin="5px 0">
                 <Row height="100px" >
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
@@ -517,7 +521,7 @@ export default (props) => {
                   </Column>
                 </Row>
               </Card>
-            </Column> : null}
+            </Column>
           </Row>
         </> : <Row>Loading ...</Row>
       }
