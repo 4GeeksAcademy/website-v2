@@ -19,7 +19,9 @@ export const Card = styled.div`
         `${Colors.black}`
         : props.color === "grey"
             ? `${Colors.lightGray}`
-            : `${Colors.white}`
+            : props.color === "darkGray"
+                ? `${Colors.borderGray}`
+                : `${Colors.white}`
     };
     border-radius: ${props => props.borders};
     box-shadow: ${props => props.shadow

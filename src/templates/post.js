@@ -4,6 +4,7 @@ import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/H
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
 import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
 import Layout from '../global/Layout'
+import {Card} from '../components/Card'
 import twitterUser from '../utils/twitter'
 import {TwitterFollowButton} from 'react-twitter-embed';
 import {
@@ -26,7 +27,7 @@ export default function Template (props) {
             return obj;
         }, {});
 
-    console.log("filt", filtered)
+    console.log("filt", props)
     function GetFormattedDate (date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -95,10 +96,19 @@ export default function Template (props) {
                         {/* <FacebookShareCount url={"shareUrl"} /> */}
                     </Column>
                 </Row>
-
+                <Divider height="30px" />
                 <Row align="left" >
                     <Column size="8" align="center">
-                        <RoundImage border="1.25rem" width="100%" height="100%" bsize="contain" position="center" url={post.frontmatter.image} />
+                        <Row>
+
+
+                            {post.frontmatter.tags.map((tag, i) => {
+                                return (
+                                    <Card key={i} color="darkGray" padding="2px 5px" borders=".2rem" margin="0 3px"><Paragraph color={Colors.darkGray}>{tag}</Paragraph></Card>
+                                )
+                            })}
+
+                        </Row>
                     </Column>
                 </Row>
                 <Divider height="30px" />
@@ -107,6 +117,21 @@ export default function Template (props) {
                         <div className="single-post" dangerouslySetInnerHTML={{__html: post.html}}></div>
                     </Column>
                 </Row>
+                <Row align="left" >
+                    <Column size="8" align="left">
+                        <Row>
+
+
+                            {post.frontmatter.tags.map((tag, i) => {
+                                return (
+                                    <Card key={i} color="darkGray" padding="2px 5px" borders=".2rem" margin="0 3px"><Paragraph color={Colors.darkGray}>{tag}</Paragraph></Card>
+                                )
+                            })}
+
+                        </Row>
+                    </Column>
+                </Row>
+                <Divider height="100px" />
 
             </Wrapper>
 

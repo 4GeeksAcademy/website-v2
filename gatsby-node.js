@@ -49,6 +49,7 @@ const createBlog = async ({actions, graphql}) => {
                         date
                         status
                         featured
+                        tags
                         
                     }
                     excerpt,
