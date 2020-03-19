@@ -70,6 +70,7 @@ export const Row = styled.div`
     border-bottom: ${props => props.borderBottom};
     display: flex;
     flex-wrap: wrap;
+    // justify-content: ${props => props.justify};
     align-items:${props => props.alignItems};
     margin-right: ${props => props.marginRight};
     margin-left: ${props => props.marginLeft};
@@ -87,7 +88,9 @@ export const Row = styled.div`
         ? css`justify-content: space-around;`
         : props => props.align === "center"
             ? css`justify-content: center;`
-            : css`justify-content: left;`}
+            : props => props.align === "end"
+                ? css`justify-content: flex-end;`
+                : css`justify-content: left;`}
     @media ${Device.xs}{
         display: ${props => props.display_xs};
         ${props => props.customRespSize
@@ -325,11 +328,12 @@ export const Wrapper = props => {
             </Container>
         )
     }
+
     if (props.style === "custom") {
         return (
             <Container width={props.width}>
                 <Row>
-                    <Column size={props.outerLeftCol} />
+                    <Column size={props.outerLeftCol} ></Column>
                     <Column
                         size={props.outerRightCol}
                         image={props.image}
@@ -339,8 +343,8 @@ export const Wrapper = props => {
                         props>
                         {props.full
                             ?
-                            <Row>
-                                <Column size={props.innerLeftCol} />
+                            <Row align={props.innerLeftRowAlign}>
+                                <Column size={props.innerLeftCol} >{props.content}</Column>
                                 <Column size={props.innerRightCol}>
                                     {props.children}
                                 </Column>

@@ -44,8 +44,37 @@ export default function Template (props) {
     return (
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Wrapper
-                style="default">
-                <Row align="center">
+                style="custom"
+                innerLeftCol="3"
+                innerRightCol="8"
+                full
+
+                content={<Row align="end" padding="0 20px 0 0" style={{position: "sticky", top: "12%"}}>
+                    <Column size="" customRespSize respSize="10" >
+                        <Row>
+
+                            <TwitterShareButton
+                                className="network__share-button"
+                                url={`https://www.twitter.com/${filtered.username}`}
+                                title={"share"}
+                            >
+                                <TwitterIcon
+                                    size={24} round={true}
+                                />
+                            </TwitterShareButton>
+                            <FacebookShareButton
+                                className="network__share-button"
+                                url={`https://www.facebook.com/${filtered.username}`}
+                                title={"share"}
+                            >
+                                <FacebookIcon
+                                    size={24} round={true}
+                                />
+                            </FacebookShareButton>
+
+                        </Row>
+                    </Column></Row>}>
+                <Row align="left">
                     <Column size="8">
                         <Row height="100%" align="around">
                             <Column size="2" customRespSize respSize="2" alignSelf="center">
@@ -61,42 +90,19 @@ export default function Template (props) {
                                 </Row>
 
                             </Column>
-                            <Column size="" customRespSize respSize="10" alignSelf="center">
-                                <Row>
 
-                                    <TwitterShareButton
-                                        className="network__share-button"
-                                        url={`https://www.twitter.com/${filtered.username}`}
-                                        title={"share"}
-                                    >
-                                        <TwitterIcon
-                                            size={24} round={true}
-                                        />
-                                    </TwitterShareButton>
-                                    <FacebookShareButton
-                                        className="network__share-button"
-                                        url={`https://www.facebook.com/${filtered.username}`}
-                                        title={"share"}
-                                    >
-                                        <FacebookIcon
-                                            size={24} round={true}
-                                        />
-                                    </FacebookShareButton>
-
-                                </Row>
-                            </Column>
                         </Row>
                         {/* <FacebookShareCount url={"shareUrl"} /> */}
                     </Column>
                 </Row>
 
-                <Row align="center" >
+                <Row align="left" >
                     <Column size="8" align="center">
                         <RoundImage border="1.25rem" width="100%" height="100%" bsize="contain" position="center" url={post.frontmatter.image} />
                     </Column>
                 </Row>
                 <Divider height="30px" />
-                <Row height="auto" align="around">
+                <Row height="auto" align="left">
                     <Column size="8" alignSelf="center">
                         <div className="single-post" dangerouslySetInnerHTML={{__html: post.html}}></div>
                     </Column>
