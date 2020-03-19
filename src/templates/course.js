@@ -170,7 +170,7 @@ const Program = ({data, pageContext, yml}) => {
         && null
   }
   console.log('sched', pageContext)
-  console.log('steps', getSteps(yml))
+  console.log('data', data)
   return (<>
     <div className={test}
     >
