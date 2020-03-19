@@ -72,13 +72,13 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: ""
-        sub_heading:
+        heading_one: "PAY UPFRONT"
+        sub_heading: "and enjoy the best pricing in town"
       content:
-        price: ""
-        price_info: ""
+        price: "2.415.000 CLP"
+        price_info: "single payment"
       button:
-        button_text: ""
+        button_text: "APPLY NOW"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -147,13 +147,13 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: ""
-        sub_heading: ""
+        heading_one: "PAY UPFRONT"
+        sub_heading: "and enjoy the best pricing in town"
       content:
-        price: ""
-        price_info: ""
+        price: "2.760.000 CLP"
+        price_info: "single payment"
       button:
-        button_text: ""
+        button_text: "APPLY NOW"
 
 city: "Santiago de Chile"
 name: "Santiago"

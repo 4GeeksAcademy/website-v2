@@ -109,15 +109,23 @@ a:hover {
     margin-bottom: 100px;
 }
 .single-post p img{
-    margin: auto;
+    /* margin: auto;
+    max-height: 350px;
+    display: inherit; */
     max-height: 350px;
     display: inherit;
+    
+    margin: 5px auto;
+    /* position: absolute;
+            left: -30px; */
 }
 .single-post h1{
     font-size: 42px;
     color: black;
     font-family: 'Futura';
     text-align: center;
+    position: relative;
+    margin: 30px 0px;
 }
 .single-post h2{
     font-size: 36px;
@@ -125,15 +133,24 @@ a:hover {
     font-family: 'Lato';
     margin: 45px 0;
     text-align: center;
+    position: relative;
+    margin: 30px 0px;
 }
 
-.single-post p img{
-    margin: auto;
+/* .single-post p img{
+   
     max-height: 350px;
     display: inherit;
-}
+    display: block;
+    margin: 5px auto;
+    position: absolute;
+            left: -30px;
+} */
 .single-post strong{
     font-weight: bold;
+}
+.single-post table{
+    width: 100%;
 }
 
 .single-post p{
@@ -149,4 +166,7 @@ a:hover {
 
 .count-o {
     display: none!important;
+}
+a {
+    color: black;
 }
