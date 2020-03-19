@@ -44,12 +44,12 @@ Learning the PHP language is not about the syntax - that is easy.  The challen
 
 <td >
 
-[caption id="attachment_528" align="aligncenter" width="210"][![PHP and Ruby interest in google worldwide](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.49.23-PM-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.49.23-PM-1.png) Worldwide PHP vs Ruby Interest over time.[/caption]
+[![PHP and Ruby interest in google worldwide](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.49.23-PM-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.49.23-PM-1.png) Worldwide PHP vs Ruby Interest over time.
 </td>
 
 <td >
 
-[caption id="attachment_529" align="aligncenter" width="211"][![Miami PHP vs Ruby interest over time](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.54.45-PM-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.54.45-PM-1.png) Florida-Miami PHP vs Ruby interest.[/caption]
+[![Miami PHP vs Ruby interest over time](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.54.45-PM-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.54.45-PM-1.png) Florida-Miami PHP vs Ruby interest.
 </td>
 </tr>
 </tbody>

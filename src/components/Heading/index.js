@@ -90,6 +90,7 @@ export const H3 = styled.h3`
   text-align: ${props => props.align};
   font-size: ${props => props.fs_xl};
 }   
+
 font-family: 'Futura', sans-serif;
 margin: ${props => props.margin};
 font-weight: 800;

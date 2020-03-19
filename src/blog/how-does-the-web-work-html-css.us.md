@@ -55,7 +55,7 @@ Because we know it is hard to remember all of them we have created a cheat sheet
 
 We hope you enjoyed learning with Nacho.  He is very passionate for teaching and has several years of experience as a developer with a Bachelors Degree in Computer Sciences.  His extensive knowledge positioned him as Project Leader in **4Geeks**, our parent company, developing 250+ currently active software.
 
-[gallery columns="2" ids="456,457"]
+
 
 
 <blockquote>The tip of the night
