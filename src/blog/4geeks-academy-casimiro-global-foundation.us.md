@@ -28,7 +28,7 @@ status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
 ---
 
-# 4Geeks Academy + Casimiro Global Foundation
+
 
 
 

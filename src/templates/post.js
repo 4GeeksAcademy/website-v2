@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
+import {RoundImage, Colors, Check, ArrowLeft} from '../components/Styling'
 import Layout from '../global/Layout'
 import {Card} from '../components/Card'
 import twitterUser from '../utils/twitter'
@@ -72,7 +72,7 @@ export default function Template (props) {
                                     size={24} round={true}
                                 />
                             </FacebookShareButton>
-
+                            <Link to="/blog"><ArrowLeft width="24px" color={Colors.yellow} fill={Colors.yellow} /></Link>
                         </Row>
                     </Column></Row>}>
                 <Row align="left">
@@ -131,7 +131,7 @@ export default function Template (props) {
                     </Column>
                 </Row>
                 <Row height="auto" align="left">
-                    <Column size="8" alignSelf="center">
+                    <Column size="8" >
                         <div className="single-post" dangerouslySetInnerHTML={{__html: post.html}}></div>
                     </Column>
                 </Row>

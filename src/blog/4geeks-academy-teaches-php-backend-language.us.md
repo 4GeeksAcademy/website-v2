@@ -38,7 +38,7 @@ Learning the PHP language is not about the syntax - that is easy.  The challen
 ### Active developers community
 
 
-<table style="float: right;" >
+<table class="table table-striped" >
 <tbody >
 <tr >
 
