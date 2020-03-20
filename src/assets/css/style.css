@@ -113,9 +113,11 @@ a:hover {
     max-height: 350px;
     display: inherit; */
     max-height: 350px;
+    /* height: auto; */
     display: inherit;
-    
+    width: 100%;
     margin: 5px auto;
+    border-radius: .3rem;;
     /* position: absolute;
             left: -30px; */
 }

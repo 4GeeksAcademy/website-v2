@@ -60,7 +60,7 @@ Recommended reading: [Why MIT Chooses Python as the main language to teach how t
 
 
 
-[caption id="attachment_2440" align="alignleft" width="149"]![](https://www.4geeksacademy.co/wp-content/uploads/2017/09/brain-august2013.jpg) Student Brain[/caption]
+![](https://www.4geeksacademy.co/wp-content/uploads/2017/09/brain-august2013.jpg) Student Brain
 
 
 
@@ -73,7 +73,7 @@ Our biggest challenge has always been finding ways to teach more with less, beca
 ## Node growth rate is declining
 
 
-[caption id="attachment_2438" align="aligncenter" width="300"]![](https://www.4geeksacademy.co/wp-content/uploads/2017/09/node-downloads-1-300x150.png) Node.js Decrease in Adoption[/caption]
+![](https://www.4geeksacademy.co/wp-content/uploads/2017/09/node-downloads-1-300x150.png) Node.js Decrease in Adoption
 
 Node grew like crazy in 2015-2016, but if you keep reading about Node you will see how -throughout the last few months - more articles like [this one](https://blog.geekforbrains.com/after-a-year-of-using-nodejs-in-production-78eecef1f65a) or [this one](https://medium.com/@tjholowaychuk/farewell-node-js-4ba9e7f3e52b) started showing up.  Like it always happens with amazing new technologies, there was a bubble at the beginning that supported most of the Node growth, but that bubble has burst and now is the right time to start analyzing where the heck is Node going to be positioned in the future market.
 

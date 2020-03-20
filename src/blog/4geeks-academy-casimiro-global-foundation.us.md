@@ -25,7 +25,7 @@ tags:
 - young entrepreneurs
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+featured: false
 ---
 
 
