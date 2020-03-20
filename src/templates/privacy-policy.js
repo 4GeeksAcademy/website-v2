@@ -17,8 +17,7 @@ const Privacy = (props) => {
         <>
             <Wrapper
                 style="default"
-                image="yes"
-                url={yml.banner.image}
+
                 border="bottom"
                 height="auto"
                 backgroundSize="cover"
@@ -26,11 +25,11 @@ const Privacy = (props) => {
                 <Divider height="100px" />
                 <Title
                     size="5"
-                    color={Colors.white}
+                    color={Colors.black}
                     title={yml.banner.tagline}
                     paragraph={yml.banner.sub_heading}
                     main
-                    paragraphColor={Colors.white}
+                    paragraphColor={Colors.black}
                     fontSize="46px"
                     textAlign="center"
 
