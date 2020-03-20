@@ -17,6 +17,8 @@ lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
 tags: 
+- report
+- salary
 ---
 
 # BOOTCAMP GRADUATES SALARIES 2019 EDITION

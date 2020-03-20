@@ -113,9 +113,11 @@ a:hover {
     max-height: 350px;
     display: inherit; */
     max-height: 350px;
+    /* height: auto; */
     display: inherit;
-    
+    width: 100%;
     margin: 5px auto;
+    border-radius: .3rem;;
     /* position: absolute;
             left: -30px; */
 }
@@ -151,6 +153,8 @@ a:hover {
 }
 .single-post table{
     width: 100%;
+    float: right;
+    margin: 5px 0 20px 20px;
 }
 
 .single-post p{
