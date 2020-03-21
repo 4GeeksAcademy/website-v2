@@ -26,6 +26,8 @@ footer:
         link: "/contact-us"
       - name: "Careers"
         link: "/jobs"
+      - name: "Legal"
+        link: "/privacy-policy"
   - column_four:
     heading: "LOCATIONS"
     items:
