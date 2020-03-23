@@ -85,29 +85,33 @@ typical:
   sub_heading: ""
   schedule:
     - title: ""
-      time: "8:30 AM"
+      time: "8:00 AM"
       icon: Circle
-      content: "sss"
+      content: "Meditation"
     - title: ""
-      time: ""
-      icon: Coffee
-      content: "ddd"
+      time: "8:45 AM"
+      icon:
+      content: "Setup and Coffee"
     - title: ""
-      time: ""
-      icon: Coffee
-      content: "ggg"
+      time: "9:00 AM"
+      icon:
+      content: "Review Last Day"
     - title: ""
-      time: ""
+      time: "10:00 AM"
       icon: Coffee
-      content: "rrr"
+      content: "Lesson Time"
     - title: ""
-      time: ""
+      time: "12:40 PM"
       icon: Coffee
-      content: "nmm"
+      content: "Lunch Time"
     - title: ""
-      time: ""
+      time: "2:00 PM"
       icon: Coffee
-      content: "uuu"
+      content: "Projects and Exercises"
+    - title: ""
+      time: "5:00 PM"
+      icon: Coffee
+      content: "Collaborative Coding"
 
 ## ALUMNI SECTION
 alumni:
