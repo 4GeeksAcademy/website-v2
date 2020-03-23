@@ -140,6 +140,24 @@ const Program = ({data, pageContext, yml}) => {
 
 
   // console.log("tempQ", data.allTypicalDayYaml)
+  function getStepTitle (step) {
+    switch (step) {
+      case 0:
+        return `${yml.typical.schedule[0].title}`
+      case 1:
+        return `${yml.typical.schedule[1].title}`
+      case 2:
+        return `${yml.typical.schedule[2].title}`
+      case 3:
+        return `${yml.typical.schedule[3].title}`
+      case 4:
+        return `${yml.typical.schedule[4].title}`
+      case 5:
+        return `${yml.typical.schedule[5].title}`
+      default:
+        return 'Unknown step';
+    }
+  }
   function getStepContent (step) {
     switch (step) {
       case 0:
@@ -632,9 +650,9 @@ const Program = ({data, pageContext, yml}) => {
           />
           <Divider height="50px" />
           <Column size="8" customRespSize respSize="12">
-            <Row height="120px" align="center">
+            <Row height="250px" align="center">
               <Column size="9" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="60%" align="center">
+                <Row height="30%" align="center">
                   <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
                     {steps.map((label, index) => (
                       <Step key={label}>
@@ -644,7 +662,7 @@ const Program = ({data, pageContext, yml}) => {
                               fs_xs="10px"
                               fs_sm="10px"
                               fs_md="8px"
-                              fs_lg="10px"
+                              fs_lg="8px"
                               fs_xl="10px"
                               color={Colors.gray}>{label.time}</Paragraph>{label.icon}
                           </StepLabel>
@@ -654,15 +672,27 @@ const Program = ({data, pageContext, yml}) => {
                   </Stepper>
 
                 </Row>
-                <Divider height="40%" />
-                <Row align="center" height="40%">
+                <Divider height="20%" />
+                <Row align="center" height="10%">
                   <H4 uppercase className={classes.test}
-                    fs_xs="12px"
-                    fs_sm="12px"
-                    fs_md="12px"
+                    fs_xs="16px"
+                    fs_sm="16px"
+                    fs_md="16px"
                     fs_lg="16px"
                     fs_xl="24px"
-                  >{getStepContent(activeStep)}</H4>
+                  >{getStepTitle(activeStep)}</H4>
+                </Row>
+                <Divider height="5%" />
+                <Row align="center" height="35%">
+                  <Column size="8" customRespSize respSize="8">
+                    <Paragraph align="center" uppercase color={Colors.gray} className={classes.test}
+                      fs_xs="14px"
+                      fs_sm="14px"
+                      fs_md="14px"
+                      fs_lg="16px"
+                      fs_xl="14px"
+                    >{getStepContent(activeStep)}</Paragraph>
+                  </Column>
                 </Row>
               </Column>
             </Row>
