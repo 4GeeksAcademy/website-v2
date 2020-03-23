@@ -43,6 +43,7 @@ prices:
     ## GENERAL INFO
     slug: "full-time"
     duration: "9 Weeks"
+
     ## LEFT BOX SECTION FULL-TIME
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:

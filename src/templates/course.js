@@ -170,7 +170,7 @@ const Program = ({data, pageContext, yml}) => {
         && null
   }
   console.log('sched', pageContext)
-  console.log('data', data)
+  console.log('data', yml)
   return (<>
     <div className={test}
     >
@@ -622,7 +622,7 @@ const Program = ({data, pageContext, yml}) => {
         <Divider height="100px" />
       </Wrapper>
 
-      {/* <Wrapper style="default">
+      {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ? <Wrapper style="default">
         <Row align="center">
           <Title
             size="10"
@@ -634,27 +634,41 @@ const Program = ({data, pageContext, yml}) => {
           <Column size="8" customRespSize respSize="12">
             <Row height="120px" align="center">
               <Column size="9" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="50%" align="center">
+                <Row height="60%" align="center">
                   <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
                     {steps.map((label, index) => (
                       <Step key={label}>
                         <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
-                          <StepLabel StepIconComponent={ColorlibStepIcon}>{label.time}</StepLabel>
+                          <StepLabel StepIconComponent={ColorlibStepIcon}>
+                            <Paragraph
+                              fs_xs="10px"
+                              fs_sm="10px"
+                              fs_md="8px"
+                              fs_lg="10px"
+                              fs_xl="10px"
+                              color={Colors.gray}>{label.time}</Paragraph>{label.icon}
+                          </StepLabel>
                         </StepButton>
                       </Step>
                     ))}
                   </Stepper>
 
                 </Row>
-                <Divider height="10%" />
-                <Row align="left" height="40%">
-                  <Typography className={classes.test}>{getStepContent(activeStep)}</Typography>
+                <Divider height="40%" />
+                <Row align="center" height="40%">
+                  <H4 uppercase className={classes.test}
+                    fs_xs="12px"
+                    fs_sm="12px"
+                    fs_md="12px"
+                    fs_lg="16px"
+                    fs_xl="24px"
+                  >{getStepContent(activeStep)}</H4>
                 </Row>
               </Column>
             </Row>
           </Column>
         </Row>
-      </Wrapper> */}
+      </Wrapper> : null}
       <Divider height="100px" />
       <Wrapper
         style="default"
@@ -693,6 +707,7 @@ export const query = graphql`
                 description
                 image
                 keywords
+                slug
             }
             geek_data {
               geek_force
@@ -869,7 +884,7 @@ const QontoConnector = withStyles({
   },
   active: {
     '& $line': {
-      borderColor: Colors.yellow,
+      borderColor: Colors.white,
     },
   },
   completed: {
@@ -995,11 +1010,11 @@ function ColorlibStepIcon (props) {
 function getSteps (day) {
   return [
     {icon: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[0].time},
-    {icon: <Coffee width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '8:45AM'},
-    {icon: <FileCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '09:00AM'},
-    {icon: <LaptopCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '10:00AM'},
-    {icon: <Utensils width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '01:00PM'},
-    {icon: <Dumbbell width="32" color={Colors.yellow} fill={Colors.yellow} />, time: '02:00PM'},
+    {icon: <Coffee width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[1].time},
+    {icon: <FileCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[2].time},
+    {icon: <LaptopCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[3].time},
+    {icon: <Utensils width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[4].time},
+    {icon: <Dumbbell width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[5].time},
   ];
 }
 export default BaseRender(Program);
