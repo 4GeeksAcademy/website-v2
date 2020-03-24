@@ -525,7 +525,12 @@ export const query = graphql`
             edges {
               node {
                 lang
-                programs
+                programs{
+                    text
+                    link
+                }
+                open_button_text
+                close_button_text
               }
             }
           }
