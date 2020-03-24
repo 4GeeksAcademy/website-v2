@@ -7,7 +7,7 @@ import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {useStaticQuery, graphql} from 'gatsby';
 import Link from 'gatsby-link'
 
-const ChooseProgram = () => {
+const ChooseProgram = (props) => {
     const {session, setSession} = useContext(SessionContext)
     const [toggle, setToggle] = useState(false)
     const [toggles, setToggles] = useState(false)
@@ -36,6 +36,7 @@ const ChooseProgram = () => {
           }
         }
       `)
+    console.log("Choose", props)
     let locArray = data.loc.edges;
     let locPrograms = ["16 Weeks", "9 Weeks"]
     return (
@@ -53,7 +54,7 @@ const ChooseProgram = () => {
                     ?
                     <Row marginBottom="5px" marginRight="0" marginLeft="0" align="center">
                         <>
-                            {locPrograms.map((item, index) => {
+                            {props.lang[0].node.programs.map((item, index) => {
                                 return (
                                     <Button width="95%" color={Colors.lightGray} textColor={Colors.gray} borderRadius=".25rem" padding="0">
                                         <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"}>

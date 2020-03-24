@@ -19,7 +19,6 @@ import Loc from '../components/Loc'
 
 const Home = (props) => {
     const {data, pageContext, yml} = props;
-
     return (
         <>
             <Container fluid >
@@ -60,7 +59,7 @@ const Home = (props) => {
 
                                 <Divider height="20px" />
                                 <Row center>
-                                    <ChooseProgram />
+                                    <ChooseProgram lang={data.allChooseProgramYaml.edges} />
                                 </Row>
                                 <Divider height="20px" />
                             </Column>
@@ -494,6 +493,14 @@ export const query = graphql`
                   image
                   keywords
                 }
+                prices {
+                    full_time {
+                      slug
+                    }
+                    part_time {
+                      slug
+                    }
+                  }
                 info_box {
                   heading
                   address
@@ -511,6 +518,14 @@ export const query = graphql`
                   content
                   heading
                 }
+              }
+            }
+          }
+          allChooseProgramYaml(filter: {lang: {eq: $lang}}) {
+            edges {
+              node {
+                lang
+                programs
               }
             }
           }
