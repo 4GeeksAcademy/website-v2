@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import {useInView} from "react-intersection-observer";
+import Link from 'gatsby-link'
 import Layout from '../global/Layout';
 import styled from 'styled-components';
 import {Card} from '../components/Card'
@@ -180,15 +181,16 @@ const Program = ({data, pageContext, yml}) => {
 
   let week = "";
   {
-    pageContext.slug === "full-stack-web-development-bootcamp-full-time"
+    pageContext.slug === "full-stack-web-development-bootcamp-full-time" || pageContext.slug === "desarrollo-web-full-stack-bootcamp-full-time"
       ? week = 9
-      : pageContext.slug === "full-stack-web-development-bootcamp-part-time"
+      : pageContext.slug === "full-stack-web-development-bootcamp-part-time" || pageContext.slug === "desarrollo-web-full-stack-bootcamp-part-time"
         ? week = 16
-        : pageContext.slug === "coding-introduction"
+        : pageContext.slug === "coding-introduction" || pageContext.slug === "introduccion-programacion"
         && null
   }
-  console.log('sched', pageContext)
-  console.log('data', yml)
+  console.log('pageContext', pageContext)
+  console.log('yml', yml)
+  console.log('data', data)
   return (<>
     <div className={test}
     >
@@ -213,7 +215,7 @@ const Program = ({data, pageContext, yml}) => {
 
         />
         <Row align="center">
-          <Column align="right" size="6"><Button width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button></Column>
+          <Column align="right" size="6"><Link to={yml.button.apply_button_link}><Button width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button></Link></Column>
           <Column align="left" size="6">
             <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
           </Column>
@@ -636,7 +638,7 @@ const Program = ({data, pageContext, yml}) => {
           primary
         />
         <section className="section" id="section-4"></section>
-        <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
+        <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} slug={"downtown-miami"} />
         <Divider height="100px" />
       </Wrapper>
 
@@ -722,7 +724,7 @@ const Program = ({data, pageContext, yml}) => {
 };
 
 export const query = graphql`
-  query CourseQuery($file_name: String!, $lang: String!) {
+  query CourseQuery($file_name: String!, $lang: String!, $slug: String!) {
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
@@ -731,6 +733,7 @@ export const query = graphql`
               syllabus_button_text
               syllabus_submit_text
               apply_button_text
+              apply_button_link
             }
             meta_info{
                 title
@@ -835,22 +838,15 @@ export const query = graphql`
         }
       }
     }
-    allLocationYaml(filter: {meta_info: {slug: {eq: $lang}}}) {
+    allLocationYaml(filter: {meta_info: {slug: {eq: $slug}}}) {
       edges {
         node {
           id
+          city
           hasFinancialsOption
           prices {
             full_time {
               center_section {
-                button {
-                  button_text
-                }
-                header {
-                  heading_one
-                  sub_heading
-                  heading_two
-                }
                 plans {
                   months
                   payment
@@ -862,15 +858,9 @@ export const query = graphql`
               }
             }
             part_time {
+              slug
+              duration
               center_section {
-                button {
-                  button_text
-                }
-                header {
-                  heading_one
-                  sub_heading
-                  heading_two
-                }
                 plans {
                   months
                   payment

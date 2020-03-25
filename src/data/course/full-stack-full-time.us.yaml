@@ -12,6 +12,7 @@ button:
   syllabus_button_text: "REQUEST SYLLABUS"
   syllabus_submit_text: "SUBMIT"
   apply_button_text: "APPLY NOW"
+  apply_button_link: "/apply"
 
 ## PROGRAM DETAILS
 details:

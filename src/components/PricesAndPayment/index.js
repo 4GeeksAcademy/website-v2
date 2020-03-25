@@ -26,12 +26,15 @@ import {InView} from 'react-intersection-observer'
 export default (props) => {
   console.log("props", props)
   const {session, setSession} = useContext(SessionContext);
+  // const [steps, setSteps] = useState(() => getSteps(session.location));
   const [checked, setChecked] = useState(false)
-  const [test, setTest] = useState()
+
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(session.location);
+  const [test, setTest] = useState(() => planData)
+  console.log("session", session)
   const data = useStaticQuery(graphql`
     query myQueryTest{
       allLocationYaml {
@@ -154,10 +157,8 @@ export default (props) => {
       }
   }
     `)
-  function infos (test) {
-    console.log("info####", test)
-  }
-  console.log("prices$$", props)
+
+
   let currentCityInfo = null;
   let info = null;
   currentCityInfo = data.allLocationYaml.edges.filter((item) => {return item.node.city === session.location})
@@ -193,9 +194,9 @@ export default (props) => {
   let planDataLength = null;
   const intervalRef = useRef(null);
   if (planData != null) {planDataLength = planData.length - 1}
-  console.log("planData", locInfo)
+  console.log("planData", test)
   // const start = () => {
-  //   let maxSteps = planDataLength;
+  //   let maxSteps = steps.length
   //   // if (stepArray != null) {console.log("stepArray", stepArray)}
   //   // getSteps(session.location);
   //   // if (stepArray.length > 0) {console.log("stepsArray", stepArray)}
@@ -282,7 +283,17 @@ export default (props) => {
     }
   }
 
+  function getStepContent (item) {
+    let myStep;
+    for (let i = 0; i < item.length; i++) {
+      myStep = item[i]
+
+    }
+    return myStep
+  }
+  console.log("meeeee", getStepContent(steps))
   function getStepContents (step) {
+    console.log("stepeeeeee", step)
     switch (step) {
       case 0:
         return planData[0].payment

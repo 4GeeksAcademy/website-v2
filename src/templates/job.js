@@ -29,10 +29,10 @@ const Job = ({data, pageContext, yml}) => {
     return (<>
         <Wrapper
             style="default"
-            image="yes"
+            image="no"
             url={yml.banner_image}
             border="bottom"
-            height="300px"
+            height="200px"
             backgroundSize="cover"
         >
             <Divider height="50px" />
@@ -48,7 +48,7 @@ const Job = ({data, pageContext, yml}) => {
                 size="5"
                 title={yml.banner_heading}
                 main
-                color={Colors.white}
+                color={Colors.black}
                 fontSize="46px"
                 textAlign="center"
             // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
