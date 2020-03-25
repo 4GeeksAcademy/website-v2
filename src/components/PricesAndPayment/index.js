@@ -33,7 +33,7 @@ export default (props) => {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(session.location);
-  const [test, setTest] = useState(() => planData)
+  // const [test, setTest] = useState(() => planData)
   console.log("session", session)
   const data = useStaticQuery(graphql`
     query myQueryTest{
@@ -194,7 +194,7 @@ export default (props) => {
   let planDataLength = null;
   const intervalRef = useRef(null);
   if (planData != null) {planDataLength = planData.length - 1}
-  console.log("planData", test)
+  // console.log("planData", test)
   // const start = () => {
   //   let maxSteps = steps.length
   //   // if (stepArray != null) {console.log("stepArray", stepArray)}

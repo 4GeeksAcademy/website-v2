@@ -14,6 +14,8 @@ categories:
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
+tags:
+- 4geeks
 ---
 
 En el año 2009, junto con dos amigos, comenzamos una pequeña empresa de desarrollo de Software con grandes ambiciones. Como cualquier otra StartUp, no teníamos dinero y nuestra oficina era la casa de Gustavo.

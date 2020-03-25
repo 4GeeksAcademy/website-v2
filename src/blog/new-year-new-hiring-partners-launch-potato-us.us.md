@@ -17,6 +17,8 @@ categories:
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
+tags:
+- 4geeks
 ---
 
 At 4Geeks Academy we have two main goals with our students:

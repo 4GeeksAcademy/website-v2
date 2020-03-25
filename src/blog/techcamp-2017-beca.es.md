@@ -14,6 +14,8 @@ categories:
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
+tags:
+- 4geeks
 ---
 
 El pasado mes de junio se celebró la tercera edición del [**TechCamp**](https://techcamp.america.gov/)** Caracas**. El evento contó con 60 proyectos de emprendedores sociales y líderes de Organizaciones No Gubernamentales (ONG’s), que se fueron a casa con herramientas tecnológicas innovadoras que facilitarán el cumplimiento de sus desafíos.
