@@ -15,6 +15,8 @@ categories:
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
+tags:
+- 4geeks
 ---
 
 __Recuerdo que cuando estaba por comenzar algún curso, siempre cruzaba por mi mente ¿qué tipo de facilitador voy a tener?, si sería una persona accesible o por el contrario, una persona difícil, ya sea por trato o porque no fuese capaz de trasmitir la información. Esto me lleva a pensar cuán importante es esa persona que va a estar a cargo de transformar un molde en una escultura apreciada.

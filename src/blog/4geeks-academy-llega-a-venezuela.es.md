@@ -13,6 +13,8 @@ categories:
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
+tags:
+- 4geeks
 ---
 
 _Entrenamos a futuros súper desarrolladores con los conocimientos más avanzados para convertirse en excelentes programadores._

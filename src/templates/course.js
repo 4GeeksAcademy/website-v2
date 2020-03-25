@@ -638,7 +638,7 @@ const Program = ({data, pageContext, yml}) => {
           primary
         />
         <section className="section" id="section-4"></section>
-        <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} slug={"downtown-miami"} />
+        <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
         <Divider height="100px" />
       </Wrapper>
 
@@ -724,7 +724,7 @@ const Program = ({data, pageContext, yml}) => {
 };
 
 export const query = graphql`
-  query CourseQuery($file_name: String!, $lang: String!, $slug: String!) {
+  query CourseQuery($file_name: String!, $lang: String!) {
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
@@ -838,7 +838,7 @@ export const query = graphql`
         }
       }
     }
-    allLocationYaml(filter: {meta_info: {slug: {eq: $slug}}}) {
+    allLocationYaml{
       edges {
         node {
           id

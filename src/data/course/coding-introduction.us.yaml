@@ -68,12 +68,32 @@ prices:
 
 ## TYPICAL DAY SECTION
 typical:
-  heading: "TYPICAL DAY AT THE ACADEMY"
+  heading: ""
   sub_heading: ""
   schedule:
     - title: ""
       time: ""
-      icon: Circle
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
       content: ""
 
 ## ALUMNI SECTION

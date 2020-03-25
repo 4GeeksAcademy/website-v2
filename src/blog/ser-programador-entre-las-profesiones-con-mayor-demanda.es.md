@@ -15,6 +15,8 @@ categories:
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
+tags:
+- 4geeks
 ---
 
 No hay una sola manera de definir a los **desarrolladores**. Podríamos decir a modo general, que son personas que aplican la lógica de programación y, por medio de lenguajes y códigos, crean sitios o aplicaciones web.

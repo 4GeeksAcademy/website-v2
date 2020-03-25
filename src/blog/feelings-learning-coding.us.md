@@ -17,6 +17,8 @@ categories:
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
+tags:
+- 4geeks
 ---
 
 Have you decided to learn to code? Great! But that’s just the beginning. Whether you already had some experience or have never typed a line of code before, the feelings when learning to code are normally the same: a mixture of nervousness and frustration with a very strong motivation pushing you to overcome all barriers in your path.

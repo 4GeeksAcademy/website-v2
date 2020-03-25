@@ -17,6 +17,8 @@ categories:
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
+tags:
+- 4geeks
 ---
 
 It’s time to update our numbers.  Every 6 months we take the task to update the current trends and data related to Developer’s wages.  The question we want to answer with updated data remains the same: What is the average wage for a Software or Web Developer in the US?

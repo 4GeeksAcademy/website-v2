@@ -17,8 +17,9 @@ categories:
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
+tags:
+- 4geeks
 ---
-
 # **Uno de los Top 10 Bootcamp de Programación llega a Chile**
 
 

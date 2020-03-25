@@ -17,6 +17,8 @@ categories:
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
+tags:
+- 4geeks
 ---
 
 ## Great news! Skills Fund & 4Geeks Academy are finally together

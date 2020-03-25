@@ -17,6 +17,8 @@ categories:
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
+tags:
+- 4geeks
 ---
 
 At 4Geeks we take very seriously the whole deal about how to become a software developer.  There are plenty of options, I know, and there are plenty of opinions, I know. But we have found a lack of argument when talking about the schedule and the methodology brought by the coding program.
