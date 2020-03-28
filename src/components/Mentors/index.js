@@ -49,11 +49,7 @@ const Mentors = props => {
                                     url={item.image}
                                     bsize="cover"
                                     border="10px"
-                                    h_xs="250px"
-                                    h_sm="250px"
-                                    h_md="250px"
-                                    h_lg="250px"
-                                    h_xl="250px"
+                                    height="250px"
                                     w_xs="100"
                                     w_sm="100"
                                     w_md="100"
