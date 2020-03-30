@@ -361,7 +361,7 @@ export default (props) => {
                           <H4
                             fs_xs="20px"
                             fs_sm="24px"
-                            fs_md="24px"
+                            fs_md="18px"
                             fs_lg="20px"
                             fs_xl="16px"
                             align="center">{locInfo.left_section.header.heading_one}</H4>
@@ -375,7 +375,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
                       <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="14px" color={Colors.gray}>{locInfo.left_section.header.sub_heading}</Paragraph>
+                        <Paragraph align="center" fontSize="12px" color={Colors.gray}>{locInfo.left_section.header.sub_heading}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -400,7 +400,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="150px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.left_section.button.button_text}</Button></Link>
+                        <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.left_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
@@ -416,7 +416,7 @@ export default (props) => {
                         <Row align="center" height="100%" >
                           <H4 fs_xs="16px"
                             fs_sm="24px"
-                            fs_md="24px"
+                            fs_md="18px"
                             fs_lg="20px"
                             fs_xl="16px" align="center" color={Colors.white}>{locInfo.center_section.header.heading_one}</H4></Row>
                         {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{props.lang === "es" ? locInfo.center_section.header.heading_two.es : locInfo.center_section.header.heading_two.us}</H4></Row> */}
@@ -428,7 +428,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
                       <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="14px" color={Colors.yellow}>{locInfo.center_section.header.sub_heading}</Paragraph>
+                        <Paragraph align="center" fontSize="12px" color={Colors.yellow}>{locInfo.center_section.header.sub_heading}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -464,7 +464,9 @@ export default (props) => {
                       </Stepper>
                     </Row>
                     <Row align="center" height="40px">
-                      <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
+                      <Column size="12" align="center">
+                        <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
+                      </Column>
                     </Row>
                   </Column>
                 </Row>
@@ -472,7 +474,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="150px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.center_section.button.button_text}</Button></Link>
+                        <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.center_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
@@ -489,7 +491,7 @@ export default (props) => {
                         <Row align="center" height="100%" >
                           <H4 fs_xs="20px"
                             fs_sm="24px"
-                            fs_md="24px"
+                            fs_md="18px"
                             fs_lg="20px"
                             fs_xl="16px" align="center">{locInfo.right_section.header.heading_one}</H4></Row>
                         {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.right_section.header.heading_two.es : locInfo.right_section.header.heading_two.us}</H4></Row> */}
@@ -501,7 +503,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
                       <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="13px" color={Colors.gray}>{locInfo.right_section.header.sub_heading}</Paragraph>
+                        <Paragraph align="center" fontSize="12px" color={Colors.gray}>{locInfo.right_section.header.sub_heading}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -526,7 +528,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="150px" padding=".6rem 2rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.right_section.button.button_text}</Button></Link>
+                        <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.right_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>

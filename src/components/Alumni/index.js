@@ -148,8 +148,8 @@ const Alumni = props => {
                     </Carousel>
                 </Column>
             </Row>
-            <Row height="10%">
-                <Column size="6"><Link to="/graduates"><Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{alumni.button_section.button_text}</Button></Link></Column>
+            <Row height="10%" align="center">
+                <Column size="6" align="center"><Link to="/graduates"><Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{alumni.button_section.button_text}</Button></Link></Column>
             </Row>
 
         </>)
