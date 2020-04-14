@@ -10,8 +10,8 @@ import Link from 'gatsby-link'
 
 
 const GeeksVsOthers = props => {
-  const [test, setTest] = useState(false)
-  const [pe, setPe] = useState(0)
+  const [tooltip, setTooltip] = useState(false)
+  const [tooltipOpacity, setTooltipOpacity] = useState(0)
   const [tooltipIndex, setTooltipIndex] = useState()
   const geeks = props.lang[0].node;
   return (
@@ -59,7 +59,7 @@ const GeeksVsOthers = props => {
                             {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
                           <Column size size="8" customRespSize respSize="6" alignSelf="center" paddingRight="0" paddingLeft="0">
-                            {test === true && index === tooltipIndex ? <Tooltip opacity={pe}>{item.tooltip}</Tooltip> : null}
+                            {tooltip === true && index === tooltipIndex ? <Tooltip opacity={tooltipOpacity}>{item.tooltip}</Tooltip> : null}
                             <H4
                               fs_xs="12px"
                               fs_sm="16px"
@@ -67,7 +67,7 @@ const GeeksVsOthers = props => {
                               fs_lg="18px"
                               fs_xl="24px"
                               color={Colors.white}
-                            >{item.features} <span onMouseOver={() => {setTest(!test), setTooltipIndex(index), setPe(1)}} onMouseOut={() => {setTest(!test), setTooltipIndex(null), setPe(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
+                            >{item.features} <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
                           </Column>
                         </Row>
                       </Column>
@@ -111,14 +111,14 @@ const GeeksVsOthers = props => {
                             {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
                           <Column size size="8" customRespSize respSize="6" alignSelf="center" paddingRight="0" paddingLeft="0">
-                            {test === true && index === tooltipIndex ? <Tooltip opacity={pe}>{item.tooltip}</Tooltip> : null}
+                            {tooltip === true && index === tooltipIndex ? <Tooltip opacity={tooltipOpacity}>{item.tooltip}</Tooltip> : null}
                             <H4
                               fs_xs="12px"
                               fs_sm="16px"
                               fs_md="16px"
                               fs_lg="18px"
                               fs_xl="24px"
-                              color={Colors.white}>{item.features} <span onMouseOver={() => {setTest(!test), setTooltipIndex(index), setPe(1)}} onMouseOut={() => {setTest(!test), setTooltipIndex(null), setPe(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
+                              color={Colors.white}>{item.features} <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
 
                           </Column>
                         </Row>
