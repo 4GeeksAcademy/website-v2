@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H3, H4, H5, Title} from '../Heading';
-import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button} from '../Styling';
+import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button, Question, Tooltip, Span} from '../Styling';
 import {Card} from '../Card';
 import Link from 'gatsby-link'
 
+
+
 const GeeksVsOthers = props => {
+  const [test, setTest] = useState(false)
+  const [pe, setPe] = useState(0)
+  const [tooltipIndex, setTooltipIndex] = useState()
   const geeks = props.lang[0].node;
   return (
     <>
@@ -53,7 +58,8 @@ const GeeksVsOthers = props => {
                             {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
-                          <Column size size="8" customRespSize respSize="6" alignSelf="center">
+                          <Column size size="8" customRespSize respSize="6" alignSelf="center" paddingRight="0" paddingLeft="0">
+                            {test === true && index === tooltipIndex ? <Tooltip opacity={pe}>{item.tooltip}</Tooltip> : null}
                             <H4
                               fs_xs="12px"
                               fs_sm="16px"
@@ -61,7 +67,7 @@ const GeeksVsOthers = props => {
                               fs_lg="18px"
                               fs_xl="24px"
                               color={Colors.white}
-                            >{item.features} </H4>
+                            >{item.features} <span onMouseOver={() => {setTest(!test), setTooltipIndex(index), setPe(1)}} onMouseOut={() => {setTest(!test), setTooltipIndex(null), setPe(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
                           </Column>
                         </Row>
                       </Column>
@@ -104,14 +110,16 @@ const GeeksVsOthers = props => {
                             {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
-                          <Column size size="8" customRespSize respSize="6" alignSelf="center" >
+                          <Column size size="8" customRespSize respSize="6" alignSelf="center" paddingRight="0" paddingLeft="0">
+                            {test === true && index === tooltipIndex ? <Tooltip opacity={pe}>{item.tooltip}</Tooltip> : null}
                             <H4
                               fs_xs="12px"
                               fs_sm="16px"
                               fs_md="16px"
                               fs_lg="18px"
                               fs_xl="24px"
-                              color={Colors.white}>{item.features} </H4>
+                              color={Colors.white}>{item.features} <span onMouseOver={() => {setTest(!test), setTooltipIndex(index), setPe(1)}} onMouseOut={() => {setTest(!test), setTooltipIndex(null), setPe(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
+
                           </Column>
                         </Row>
                       </Column>
