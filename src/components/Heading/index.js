@@ -101,11 +101,11 @@ color: ${props => props.color};
 `;
 export const H4 = styled.h4`
 @media ${Device.xs}{
-  text-align: center;
+  text-align: ${props => props.align === "left" ? "left" : props.align === "right" ? "right" : "center"};
   font-size: ${props => props.fs_xs};
 }
 @media  ${Device.sm}{
-  text-align: center;
+  text-align: ${props => props.align === "left" ? "left" : props.align === "right" ? "right" : "center"};
   font-size: ${props => props.fs_sm};
 }
 @media ${Device.md}{
@@ -304,4 +304,5 @@ H3.defaultProps = {
 };
 H4.defaultProps = {
   fontSizeXs: '5vw',
+
 };

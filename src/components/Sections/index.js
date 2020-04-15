@@ -69,7 +69,7 @@ export const Row = styled.div`
     border-top: ${props => props.borderTop};
     border-bottom: ${props => props.borderBottom};
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     // justify-content: ${props => props.justify};
     align-items:${props => props.alignItems};
     margin-right: ${props => props.marginRight};
@@ -214,8 +214,9 @@ ${props =>
                 max-width: ${(props.respSize / 12) * 100}%;
                 height: ${props => props.h_xs};
                 border-radius: ${props => props.br_xs};
-                text-align: center;
+                text-align: ${props => props.t_align === "left" ? "left" : props.t_align === "right" ? "right" : "center"};
                 margin: ${props => props.m_xs};
+                padding: ${props => props.p_xs};
                 display: ${props => props.disp_xs};
                 
             }
@@ -224,9 +225,10 @@ ${props =>
                 max-width: ${(props.respSize / 12) * 100}%;
                 height: ${props => props.h_sm};
                 border-radius: ${props => props.br_sm};
-                text-align: center;
+                text-align: ${props => props.t_align === "left" ? "left" : props.t_align === "right" ? "right" : "center"};
                 margin-bottom: ${props => props.respSizeMargin};
                 margin: ${props => props.m_sm};
+                padding: ${props => props.p_sm};
                 display: ${props => props.disp_sm};
             }
             @media ${Device.md}{
@@ -236,6 +238,7 @@ ${props =>
                 margin-bottom: ${props => props.respSizeMargin};
                 border-radius: ${props => props.br_md};
                 margin: ${props => props.m_md};
+                padding: ${props => props.p_md};
                 height: ${props => props.h_md};
                 display: ${props => props.disp_md};
             }
