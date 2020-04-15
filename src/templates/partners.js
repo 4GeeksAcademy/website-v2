@@ -197,7 +197,7 @@ export const query = graphql`
         node{
             tagline
             sub_heading
-            button
+            
             image
             meta_info{
                 slug
