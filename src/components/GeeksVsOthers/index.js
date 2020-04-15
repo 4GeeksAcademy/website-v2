@@ -51,21 +51,21 @@ const GeeksVsOthers = props => {
                     >
                       <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="bottom">
                         <Row align="around" height="100%" >
-                          <Column size size="2" customRespSize respSize="2" alignSelf="center">
+                          <Column size size="2" customRespSize respSize="2" alignSelf="center" p_xs="0" align="right">
                             {(item.slug === "one-teacher-every-five" || item.slug === "apoyo-profesional") && <Teacher width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "senior-teacher-per-student" || item.slug === "mentores-senior-por-estudiante") && <Glasses width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "average-time-to-get-help" || item.slug === "tiempo-promedio-para-recibir-ayuda") && <Clock width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
-                          <Column size size="8" customRespSize respSize="6" alignSelf="center" paddingRight="0" paddingLeft="0">
+                          <Column size size="10" customRespSize respSize="8" alignSelf="center" paddingRight="0" paddingLeft="0">
                             {tooltip === true && index === tooltipIndex ? <Tooltip opacity={tooltipOpacity}>{item.tooltip}</Tooltip> : null}
                             <H4
                               fs_xs="12px"
                               fs_sm="16px"
                               fs_md="16px"
                               fs_lg="18px"
-                              fs_xl="24px"
+                              fs_xl="20px"
                               color={Colors.white}
                             >{item.features} <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
                           </Column>
@@ -103,21 +103,22 @@ const GeeksVsOthers = props => {
                     >
                       <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
                         <Row align="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
-                          <Column size size="2" customRespSize respSize="2" alignSelf="center" >
+                          <Column size size="2" customRespSize respSize="2" alignSelf="center" p_xs="0" align="right">
                             {(item.slug === "one-teacher-every-five" || item.slug === "apoyo-profesional") && <Teacher width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "senior-teacher-per-student" || item.slug === "mentores-senior-por-estudiante") && <Glasses width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "average-time-to-get-help" || item.slug === "tiempo-promedio-para-recibir-ayuda") && <Clock width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                           </Column>
-                          <Column size size="8" customRespSize respSize="6" alignSelf="center" paddingRight="0" paddingLeft="0">
+                          <Column size size="10" customRespSize respSize="8" alignSelf="center" >
                             {tooltip === true && index === tooltipIndex ? <Tooltip opacity={tooltipOpacity}>{item.tooltip}</Tooltip> : null}
                             <H4
+
                               fs_xs="12px"
                               fs_sm="16px"
                               fs_md="16px"
                               fs_lg="18px"
-                              fs_xl="24px"
+                              fs_xl="20px"
                               color={Colors.white}>{item.features} <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
 
                           </Column>

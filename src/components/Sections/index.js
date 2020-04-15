@@ -238,6 +238,7 @@ ${props =>
                 margin-bottom: ${props => props.respSizeMargin};
                 border-radius: ${props => props.br_md};
                 margin: ${props => props.m_md};
+                padding: ${props => props.p_md};
                 height: ${props => props.h_md};
                 display: ${props => props.disp_md};
             }
