@@ -5,6 +5,7 @@ import {Colors, Icons} from '../../components/Styling'
 import {Column, Row} from '../Sections'
 import {Device} from '../Responsive'
 import {Blink} from '../Animations'
+import Link from 'gatsby-link'
 
 export const H1 = styled.h1`
 ${props => props.lato ?
@@ -235,7 +236,7 @@ export const Title = props => {
           <>
             <Row align="center">{<H1 color={props.color} fontSize={props.fontSize} align={props.textAlign}>{props.title}</H1>}</Row>
             <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
-            <Row align="center"><Column size="8">{props.primary ? <Paragraph align="center" primary>{props.paragraph}</Paragraph> : <Paragraph align="center" color={props.paragraphColor}>{props.paragraph}</Paragraph>}</Column></Row>
+            <Row align="center"><Column size="8">{props.primary ? <Link to={props.link}><Paragraph align="center" primary>{props.paragraph}</Paragraph></Link> : <Link to={props.link}><Paragraph align="center" color={props.paragraphColor}>{props.paragraph}</Paragraph></Link>}</Column></Row>
           </>
         )
         :
@@ -248,10 +249,10 @@ export const Title = props => {
                 {props.primary
                   ? <Column size={props.customParagraphSize} customRespSize respSize="10">
                     <Row align="center">
-                      <Paragraph primary margin="10px 0" align="center">{props.paragraph}</Paragraph>
+                      <Link to={props.link}><Paragraph primary margin="10px 0" align="center">{props.paragraph}</Paragraph></Link>
                     </Row>
                   </Column>
-                  : <Column size="12"><Paragraph>{props.paragraph}</Paragraph></Column>
+                  : <Column size="12"><Link to={props.link}><Paragraph>{props.paragraph}</Paragraph></Link></Column>
                 }
               </Row>
             </Column>

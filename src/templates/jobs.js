@@ -11,6 +11,7 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
 import JobInfo from '../components/JobInfo'
+import Link from 'gatsby-link'
 
 const Jobs = ({data, pageContext, yml}) => {
   console.log("jo", yml)
@@ -68,7 +69,7 @@ const Jobs = ({data, pageContext, yml}) => {
                   <Row align="center" height="100%">
                     <Column size="8" height="100%">
                       <Row height="5%" />
-                      <Row height="90%" align="around">
+                      <Row height="70%" align="around">
                         <Column size="12" alignSelf="center">
                           <Paragraph
                             color={Colors.gray}
@@ -83,6 +84,24 @@ const Jobs = ({data, pageContext, yml}) => {
                           >
                             {yml.about.content}
                           </Paragraph>
+                        </Column>
+                      </Row>
+                      <Row height="20%" align="around">
+                        <Column size="12" alignSelf="center">
+                          <Link to={yml.about.button_link}>
+                            <Paragraph
+                              color={Colors.blue}
+                              fs_xs="12px"
+                              fs_sm="12px"
+                              fs_md="12px"
+                              fs_lg="12px"
+                              fs_xl="12px"
+                              lineHeight="20px"
+                              margin="20px 0 0 0"
+                              align="left"
+                            >
+                              {yml.about.button}
+                            </Paragraph></Link>
                         </Column>
                       </Row>
                       <Row height="5%" />
@@ -126,6 +145,8 @@ export const query = graphql`
             sub_heading
             image
             content
+            button
+            button_link
           }
         }
       }

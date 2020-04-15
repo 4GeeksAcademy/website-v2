@@ -30,7 +30,7 @@ education:
 geeks_vs_others:
   heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
   sub_heading: "View full comparison table >"
-  sub_heading_link: ""
+  sub_heading_link: "/geeks-vs-others"
 
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:

@@ -10,6 +10,7 @@ import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import WhoIsHiring from '../components/WhoIsHiring';
 import RecentPosts from '../components/RecentPosts'
+import Link from 'gatsby-link'
 
 const Why = (props) => {
     const {data, pageContext, yml} = props;
@@ -277,7 +278,7 @@ const Why = (props) => {
                                                     <Separator primary />
                                                 </Column>
                                             </Row>
-                                            <Row height="60%">
+                                            <Row height="50%">
                                                 <Column size="10">
                                                     <Paragraph
                                                         color={Colors.gray}
@@ -290,6 +291,23 @@ const Why = (props) => {
                                                         fs_xl="14px">
                                                         {yml.story.sub_heading_one}
                                                     </Paragraph>
+                                                </Column>
+                                            </Row>
+                                            <Row height="10%">
+                                                <Column size="10">
+                                                    <Link to={yml.story.button_link}>
+                                                        <Paragraph
+                                                            color={Colors.blue}
+                                                            margin="20px 0 0 0"
+                                                            align="left"
+                                                            fs_xs="10px"
+                                                            fs_sm="10px"
+                                                            fs_md="10px"
+                                                            fs_lg="10px"
+                                                            fs_xl="14px">
+                                                            {yml.story.button}
+                                                        </Paragraph>
+                                                    </Link>
                                                 </Column>
                                             </Row>
                                             <Divider height="10%" />
@@ -402,7 +420,8 @@ export const query = graphql`
             story{
                 heading
                 sub_heading_one
-        
+                button
+                button_link
                 image
             }
             posts{
