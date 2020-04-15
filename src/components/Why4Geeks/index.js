@@ -30,17 +30,18 @@ export default (props) => {
               h_xl="180px"
             />
             <Row align="around" marginTop="20px">
-              <Column size size="2" customRespSize respSize="2" alignSelf="center">
+              <Column size size="2" p_xs="0 5px 0 0" p_sm="0 5px 0 0" customRespSize respSize="2" t_align="right" alignSelf="center">
                 {(i.slug === "job-in-tech" || i.slug === "trabaja-en-tecnologia") && <Address width="32" color={Colors.yellow} fill={Colors.yellow} />}
                 {(i.slug === "finance-your-career" || i.slug === "financiamos-tu-carrera") && <HandMoney width="32" color={Colors.yellow} fill={Colors.yellow} />}
                 {(i.slug === "never-code-alone-again" || i.slug === "nunca-programes-solo-otra-vez") && <Laptop width="32" color={Colors.yellow} fill={Colors.yellow} />}
               </Column>
-              <Column size size="8" customRespSize respSize="8" alignSelf="center">
+              <Column size size="8" p_xs="0" p_sm="0" customRespSize respSize="10" alignSelf="center" >
                 <H4
+                  align="left"
                   uppercase
                   fs_xs="20px"
                   fs_sm="24px"
-                  fs_md="16px"
+                  fs_md="14px"
                   fs_lg="18px"
                   fs_xl="20px"
                 >{i.title}</H4>
