@@ -70,7 +70,7 @@ const GeeksVsOthers = (props) => {
                               {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
                               {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             </Column> */}
-                            <Column size size="8" customRespSize respSize="6" alignSelf="center" paddingRight="0" paddingLeft="0">
+                            <Column size size="8" customRespSize respSize="10" alignSelf="center" paddingRight="0" paddingLeft="0">
                               {tooltip === true && index === tooltipIndex ? <Tooltip opacity={tooltipOpacity}>{item.tooltip}</Tooltip> : null}
                               <H4
                                 fs_xs="12px"
@@ -132,7 +132,7 @@ const GeeksVsOthers = (props) => {
                               {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
                               {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
                             </Column> */}
-                            <Column size size="8" customRespSize respSize="6" alignSelf="center" paddingRight="0" paddingLeft="0">
+                            <Column size size="8" customRespSize respSize="10" alignSelf="center" paddingRight="0" paddingLeft="0">
                               {tooltip === true && index === tooltipIndex ? <Tooltip opacity={tooltipOpacity}>{item.tooltip}</Tooltip> : null}
                               <H4
                                 fs_xs="12px"
