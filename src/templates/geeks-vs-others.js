@@ -36,16 +36,68 @@ const GeeksVsOthers = (props) => {
             <Card shadow borders="1.25rem" height="auto">
               <Row height="80px" marginLeft="0" marginRight="0">
                 <Column size="4" customRespSize respSize="4" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" >
-                  <Row height="100%" borderBottom={"1px solid " + Colors.darkGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{yml.titles.featured}</H5></Column></Row>
+                  <Row height="100%" borderBottom={"1px solid " + Colors.darkGray}>
+                    <Column size size="12" alignSelf="center" >
+                      <H5
+                        fs_xs="10px"
+                        fs_sm="12px"
+                        fs_md="12px"
+                        fs_lg="12px"
+                        fs_xl="14px"
+                        m="0"
+                        align="center"
+                        color={Colors.gray}>{yml.titles.featured}
+                      </H5>
+                    </Column>
+                  </Row>
                 </Column>
                 <Column size="2" customRespSize respSize="2" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
-                  <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{yml.titles.at_geeks}</H5></Column></Row>
+                  <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
+                    <Column size size="12" alignSelf="center" >
+                      <H5
+                        fs_xs="10px"
+                        fs_sm="12px"
+                        fs_md="12px"
+                        fs_lg="12px"
+                        fs_xl="14px"
+                        m="0"
+                        align="center"
+                        color={Colors.gray}>{yml.titles.at_geeks}
+                      </H5>
+                    </Column>
+                  </Row>
                 </Column>
                 <Column size="2" customRespSize respSize="2" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
-                  <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{yml.titles.average}</H5></Column></Row>
+                  <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
+                    <Column size size="12" alignSelf="center" >
+                      <H5
+                        fs_xs="10px"
+                        fs_sm="12px"
+                        fs_md="12px"
+                        fs_lg="12px"
+                        fs_xl="14px"
+                        m="0"
+                        align="center"
+                        color={Colors.gray}>{yml.titles.average}
+                      </H5>
+                    </Column>
+                  </Row>
                 </Column>
                 <Column size="4" customRespSize respSize="4" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0">
-                  <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{yml.titles.why}</H5></Column></Row>
+                  <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
+                    <Column size size="12" alignSelf="center" >
+                      <H5
+                        fs_xs="10px"
+                        fs_sm="12px"
+                        fs_md="12px"
+                        fs_lg="12px"
+                        fs_xl="14px"
+                        m="0"
+                        align="center"
+                        color={Colors.gray}>{yml.titles.why}
+                      </H5>
+                    </Column>
+                  </Row>
                 </Column>
               </Row>
               {yml.info.map((item, index) => {
