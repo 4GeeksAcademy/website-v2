@@ -24,7 +24,7 @@ const GeeksVsOthers = (props) => {
           primary
           size="8"
         />
-        <Divider height="100px" />
+        <Divider height="50px" />
         <Row>
           <Column
             size="12"
