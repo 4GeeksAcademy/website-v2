@@ -35,7 +35,7 @@ geeks_vs_others:
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:
   heading: JOIN 4GEEKS
-  sub_heading: Duis mollis, est non commodo luctus, nisi erat porttitor .
+  sub_heading: By becoming part of 4Geeks you get access to the memberships that will boost your learning process and your professional careers
   geek_data:
     geek_pal_heading: Programming - Always - Limitles
     geek_pal_data:
