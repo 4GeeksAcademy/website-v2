@@ -137,22 +137,28 @@ export const H5 = styled.h5`
       text-transform: ${props => props.uppercase && "uppercase"};
       font-style: normal;
       color: ${props => props.color};
+      margin: ${props => props.m};
   
     
-      @media ${Device.md}{
-        text-align: ${props => props.align};
-      }
       @media ${Device.xs}{
         text-align: center;
+        font-size: ${props => props.fs_xs};
       }
       @media  ${Device.sm}{
         text-align: center;
+        font-size: ${props => props.fs_sm};
       }
+      @media ${Device.md}{
+        text-align: ${props => props.align};
+        font-size: ${props => props.fs_md};
+                      }
       @media ${Device.lg}{
         text-align: ${props => props.align};
+        font-size: ${props => props.fs_lg};
       }
       @media ${Device.xl} {
         text-align: ${props => props.align};
+        font-size: ${props => props.fs_xl};
       }
       
 `;
