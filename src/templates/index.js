@@ -186,14 +186,14 @@ const Home = (props) => {
           <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
           <Column size="4" customRespSize respSize="4" margin="5px 0">
             <Paragraph
-              margin="5px 0"
+
               color={Colors.gray}
               fs_xs="10px"
               fs_sm="12px"
               fs_md="12px"
               fs_lg="12px"
               fs_xl="12px"
-              align="center">2017 REPORT
+              align="center">2017 Report
             </Paragraph>
           </Column>
           <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
