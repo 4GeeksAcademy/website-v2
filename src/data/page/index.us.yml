@@ -39,16 +39,12 @@ join_geeks:
   geek_data:
     geek_pal_heading: Programming - Always - Limitles
     geek_pal_data:
-      - Never code on your own again.
-      - We will be along with lalong side your
-      - journey and for as long as you
-      - want us to be.
+      content: Never code on your own again. We will be along with lalong side your journey and for as long as you want us to be.
+      icon_link: "/us/geekpal"
     geek_force_heading: FOR Career Empowerment
     geek_force_data:
-      - We'll do everything in our hands
-      - to help you get a job in the field.
-      - Includes Career Support Track,
-      - GeekPAL, and GeekTALK.
+      content: We'll do everything in our hands to help you get a job in the field. Includes Career Support Track, GeekPAL, and GeekTALK.
+      icon_link: "/us/geekforce"
 
 ## LOCATIONS SECTION
 locations:
