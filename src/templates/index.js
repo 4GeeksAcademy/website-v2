@@ -107,44 +107,96 @@ const Home = (props) => {
 
       <Wrapper
         style="default">
-        <Row align="center">
+        <Row align="center" >
           <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">{yml.education.left_box.heading}</Paragraph>
+            <Paragraph
+              margin="5px 0"
+              color={Colors.gray}
+              fs_xs="10px"
+              fs_sm="12px"
+              fs_md="12px"
+              fs_lg="12px"
+              fs_xl="12px"
+              align="center">{yml.education.left_box.heading}
+            </Paragraph>
+            {/* <Card width="100%" padding="20px"> */}
             <RoundImage
               h_xs="40px"
-              h_sm="60px"
-              h_md="50px"
-              h_lg="70px"
-              h_xl="90px"
+              h_sm="40px"
+              h_md="60px"
+              h_lg="60px"
+              h_xl="60px"
               width="100%"
               url={yml.education.left_box.image}
               bsize="contain"
-              position="center" />
+              position="50% 50%" />
+            {/* </Card> */}
           </Column>
           <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">{yml.education.center_box.heading}</Paragraph>
+            <Paragraph
+              margin="5px 0"
+              color={Colors.gray}
+              fs_xs="10px"
+              fs_sm="12px"
+              fs_md="12px"
+              fs_lg="12px"
+              fs_xl="12px"
+              align="center">{yml.education.center_box.heading}
+            </Paragraph>
+            {/* <Card width="100%" padding="20px"> */}
             <RoundImage
-              h_xs="50px"
-              h_sm="50px"
-              h_md="50px"
-              h_lg="70px"
-              h_xl="100px"
+              h_xs="40px"
+              h_sm="40px"
+              h_md="60px"
+              h_lg="60px"
+              h_xl="60px"
               width="100%"
               url={yml.education.center_box.image}
-              bsize="contain" />
+              bsize="contain"
+              position="50% 50%" />
+
+            {/* </Card> */}
           </Column>
           <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph margin="5px 0" color={Colors.gray} fontSize="12px" align="center">{yml.education.right_box.heading}</Paragraph>
+            <Paragraph
+              margin="5px 0"
+              color={Colors.gray}
+              fs_xs="10px"
+              fs_sm="12px"
+              fs_md="12px"
+              fs_lg="12px"
+              fs_xl="12px"
+              align="center">{yml.education.right_box.heading}
+            </Paragraph>
+            {/* <Card width="100%" padding="20px"> */}
             <RoundImage
-              h_xs="50px"
-              h_sm="90px"
-              h_md="50px"
-              h_lg="70px"
-              h_xl="100px"
+              h_xs="40px"
+              h_sm="40px"
+              h_md="60px"
+              h_lg="60px"
+              h_xl="60px"
               width="100%"
               url={yml.education.right_box.image}
-              bsize="contain" />
+              bsize="contain"
+              position="50% 50%" />
+            {/* </Card> */}
           </Column>
+        </Row>
+        <Row>
+          <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
+          <Column size="4" customRespSize respSize="4" margin="5px 0">
+            <Paragraph
+
+              color={Colors.gray}
+              fs_xs="10px"
+              fs_sm="12px"
+              fs_md="12px"
+              fs_lg="12px"
+              fs_xl="12px"
+              align="center">2017 Report
+            </Paragraph>
+          </Column>
+          <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
         </Row>
       </Wrapper>
       <Divider height="100px" />
