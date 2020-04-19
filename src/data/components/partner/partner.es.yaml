@@ -7,6 +7,9 @@ lang: "es"
 partners:
   tagline: "QUIÉN CONTRATA A NUESTROS ESTUDIANTES"
   sub_heading: "Nuestros 'hiring partners' crecen cada día, y nuestros estudiantes han sido contratados por docenas de empresas en los EE.UU. y en todo el mundo."
+  footer_tagline: 438 COMPANIES
+  footer_button: Review our latest hirings
+  footer_link: "/geekforce"
   images:
     - name: "Razz"
       slug: "razz"

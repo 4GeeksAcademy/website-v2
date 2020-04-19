@@ -513,14 +513,17 @@ export const query = graphql`
             node {
               lang
               partners {
+                tagline
+                sub_heading
+                footer_tagline
+                footer_button
+                footer_link
                 images {
                   name
                   slug
                   image
                   featured
                 }
-                tagline
-                sub_heading
               }
               coding {
                 images {
