@@ -13,8 +13,11 @@ const WhoIsHiring = props => {
           edges {
             node {
               partners {
-                sub_heading
                 tagline
+                sub_heading
+                footer_tagline
+                footer_button
+                footer_link
                 images {
                   name
                   slug
@@ -96,10 +99,12 @@ const WhoIsHiring = props => {
           </Row>
           <Divider height="50px" />
           <Row align="center">
-            <H4 primary>438 COMPANIES</H4>
+            <H4 primary>{partners.partners.footer_tagline}</H4>
           </Row>
           <Row align="center" marginTop="15px">
-            <Paragraph color={Colors.blue}>Review our latest hirings</Paragraph>
+            <Link to={partners.partners.footer_link}>
+              <Paragraph color={Colors.blue}>{partners.partners.footer_button}</Paragraph>
+            </Link>
           </Row>
         </>
         : props.source === "coding"
