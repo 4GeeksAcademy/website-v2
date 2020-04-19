@@ -15,6 +15,7 @@ import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import Events from '../components/Events'
 import Loc from '../components/Loc'
+import {Link} from 'gatsby';
 
 
 const Home = (props) => {
@@ -221,6 +222,11 @@ const Home = (props) => {
           primary
         />
         <Divider height="40px" />
+
+        {/* ******************* */}
+        {/* JOIN 4GEEKS SECTION */}
+        {/* ******************* */}
+
         <Row>
           <Column size="6" >
             <Card
@@ -251,23 +257,27 @@ const Home = (props) => {
                   </Row>
                   <Row marginTop="15px">
                     <Column size="12">
-                      {yml.join_geeks.geek_data.geek_pal_data.map((item, index) => {
-                        return (
-                          <Paragraph
-                            key={index}
-                            color={Colors.gray}
-                            fontSize="14px"
-                            lineHeight="18px"
-                            customTextAlignSmall
-                            alignXs="left">
-                            {item}
-                          </Paragraph>
-                        )
-                      })}
+                      {/* {yml.join_geeks.geek_data.geek_pal_data.map((item, index) => {
+                        return ( */}
+                      <Paragraph
+                        // key={index}
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        {yml.join_geeks.geek_data.geek_pal_data.content}
+                      </Paragraph>
+                      {/* )
+                      })} */}
                     </Column>
                   </Row>
                 </Column>
-                <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+                <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
+                  <Link to={yml.join_geeks.geek_data.geek_pal_data.icon_link}>
+                    <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
+                  </Link>
+                </Column>
               </Row>
             </Card>
           </Column>
@@ -297,24 +307,28 @@ const Home = (props) => {
                   </Row>
                   <Row marginTop="15px">
                     <Column size="12">
-                      {yml.join_geeks.geek_data.geek_force_data.map((item, index) => {
-                        return (
-                          <Paragraph
-                            key="index"
-                            color={Colors.gray}
-                            fontSize="14px"
-                            lineHeight="18px"
-                            customTextAlignSmall
-                            alignXs="left">
-                            {item}
-                          </Paragraph>
-                        )
-                      })}
+                      {/* {yml.join_geeks.geek_data.geek_force_data.map((item, index) => {
+                        return ( */}
+                      <Paragraph
+                        key="index"
+                        color={Colors.gray}
+                        fontSize="14px"
+                        lineHeight="18px"
+                        customTextAlignSmall
+                        alignXs="left">
+                        {yml.join_geeks.geek_data.geek_force_data.content}
+                      </Paragraph>
+                      {/* )
+                      })} */}
 
                     </Column>
                   </Row>
                 </Column>
-                <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} /></Column>
+                <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
+                  <Link to={yml.join_geeks.geek_data.geek_force_data.icon_link}>
+                    <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
+                  </Link>
+                </Column>
               </Row>
             </Card>
           </Column>
@@ -382,8 +396,15 @@ export const query = graphql`
                 heading
                 sub_heading
                 geek_data {
-                  geek_force_data
-                  geek_pal_data
+                  geek_force_data{
+                    content
+                    icon_link
+                  }
+                  geek_pal_data{
+                    content
+                    icon_link
+                  }
+                    
                   geek_force_heading
                   geek_pal_heading
                 }

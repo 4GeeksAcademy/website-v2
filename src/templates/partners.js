@@ -92,7 +92,7 @@ const Partners = (props) => {
                         onClose={handleClose}
                     ><div style={modalStyle} className={classes.paper}>
                             <Row height="20%" align="center">
-                                <Column size="12" align="center"><H4>REVIEW GUIDEBOOK</H4></Column>
+                                <Column size="12" align="center"><H4>BE A HIRING PARTNER</H4></Column>
                             </Row>
                             <Row height="70%">
                                 <Column size="12">
@@ -147,7 +147,7 @@ const Partners = (props) => {
 
                         </div>
                     </Modal>
-                    <Button width="300px" margin="15px 0px" onClick={handleOpen} color="red" textColor="white">{yml.button}</Button>
+                    <Button width="200px" margin="15px 0px" onClick={handleOpen} color="red" textColor="white">{yml.button_section.button_text}</Button>
                 </Row>
             </Wrapper>
             <Wrapper
@@ -165,7 +165,7 @@ const Partners = (props) => {
                 <Divider height="20px" />
                 <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
             </Wrapper>
-            <Divider height="100px" />
+            <Divider height="50px" />
             <Wrapper
                 style="default"
             >
@@ -174,7 +174,7 @@ const Partners = (props) => {
 
                 <WhoIsHiring source="coding" lang={data.allPartnerYaml.edges} />
             </Wrapper>
-            <Divider height="100px" />
+            <Divider height="50px" />
             <Wrapper
                 style="default"
             >
