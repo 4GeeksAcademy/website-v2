@@ -13,7 +13,27 @@ const GeekPal = (props) => {
 
   return (
     <>
-      <H3>GeekPal</H3>
+      <Wrapper
+        style="default"
+        image="yes"
+        url={yml.image}
+        border="bottom"
+        height="auto"
+      >
+        <Divider height="50px" />
+        <Title
+          size="5"
+          title={yml.tagline}
+          paragraph={yml.sub_heading}
+          main
+          color={Colors.white}
+          fontSize="46px"
+          textAlign="center"
+          paragraphColor={Colors.white}
+        />
+        <Divider height="100px" />
+      </Wrapper>
+      <Divider height="100px" />
     </>
   )
 };
@@ -28,9 +48,10 @@ export const query = graphql`
                 image
                 keywords
                 slug
-                
             }
-            
+            tagline
+            sub_heading
+            image
         }
       }
     }
