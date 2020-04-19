@@ -9,13 +9,33 @@ import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
 
 const GeekForce = (props) => {
-    const {data, pageContext, yml} = props;
+  const {data, pageContext, yml} = props;
 
-    return (
-        <>
-            <H3>GeekForce</H3>
-        </>
-    )
+  return (
+    <>
+      <Wrapper
+        style="default"
+        image="yes"
+        url={yml.image}
+        border="bottom"
+        height="auto"
+      >
+        <Divider height="50px" />
+        <Title
+          size="5"
+          title={yml.tagline}
+          paragraph={yml.sub_heading}
+          main
+          color={Colors.white}
+          fontSize="46px"
+          textAlign="center"
+          paragraphColor={Colors.white}
+        />
+        <Divider height="100px" />
+      </Wrapper>
+      <Divider height="100px" />
+    </>
+  )
 };
 export const query = graphql`
   query GeekForceQuery($file_name: String!, $lang: String!) {
@@ -28,9 +48,10 @@ export const query = graphql`
                 image
                 keywords
                 slug
-                
             }
-            
+            tagline
+            sub_heading
+            image
         }
       }
     }
