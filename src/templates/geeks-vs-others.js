@@ -131,7 +131,7 @@ const GeeksVsOthers = (props) => {
                                 fs_lg="18px"
                                 fs_xl="24px"
                                 color={Colors.white}
-                              >{item.features} <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
+                              >{item.features} <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} ><Question width="16" color={Colors.lightBlue} fill={Colors.lightBlue} /></span></H4>
                             </Column>
                           </Row>
                         </Column>
@@ -192,7 +192,7 @@ const GeeksVsOthers = (props) => {
                                 fs_md="16px"
                                 fs_lg="18px"
                                 fs_xl="24px"
-                                color={Colors.white}>{item.features} <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} ><Question width="16" color={Colors.gray} fill={Colors.gray} /></span></H4>
+                                color={Colors.white}>{item.features} <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} ><Question width="16" color={Colors.lightBlue} fill={Colors.lightBlue} /></span></H4>
 
                             </Column>
                           </Row>
