@@ -1,13 +1,10 @@
 testimonials:
-  - student_name: ""
+  - student_name: "Samir Benzada"
     testimonial_date: ""
-    student_thumb: ""
+    student_thumb: "/testimonials/samir-benzada.jpg"
     starts: 1
-  - student_name: ""
-    testimonial_date: ""
-    student_thumb: ""
-    starts: 1
-  - student_name: ""
-    testimonial_date: ""
-    student_thumb: ""
-    starts: 1
+    content: |
+      I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP. 
+      I've been struggling a lot trying to make a dynamic website, so I started to look 
+      for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to 
+      the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job"
