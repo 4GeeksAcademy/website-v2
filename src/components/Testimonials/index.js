@@ -30,11 +30,11 @@ const Testimonials = (props) => {
 
     return (
         <>
-            <Carousel showThumbs={false}>
+            <Carousel showThumbs={false} showStatus={false} stopOnHover={true} autoPlay={true} className="custom">
                 {testimonialsArray.map((item, i) => {
                     console.log("item", item)
                     return (
-                        <Row height="auto" align="center">
+                        <Row height="auto" align="center" padding="30px">
                             <Card width="600px" key={i}>
                                 <Row align="center">
                                     <RoundImage
@@ -46,16 +46,21 @@ const Testimonials = (props) => {
                                         border="50%"
                                     />
                                 </Row>
+                                <Divider height="10px" />
                                 <Row align="center">
                                     <H4>
                                         {item.student_name}
                                     </H4>
                                 </Row>
+                                <Divider height="10px" />
                                 <Row align="center" >
-                                    <Paragraph>
-                                        {item.content}
-                                    </Paragraph>
+                                    <Column size="12">
+                                        <Paragraph>
+                                            {item.content}
+                                        </Paragraph>
+                                    </Column>
                                 </Row>
+                                <Divider height="10px" />
                             </Card>
                         </Row>
 
