@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Card} from "../Card"
-import {H2, H3, H4, Title, Separator, Paragraph} from '../Heading'
+import {H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {Row, Column, Wrapper, Divider} from '../Sections'
 import {Colors, RoundImage} from '../Styling'
 
 const Testimonials = (props) => {
+    const [carouselHeight, setCarouselHeight] = useState("500px")
     const data = useStaticQuery(graphql`
               query myQueryTestimonials{
                 allTestimonialsYaml {
@@ -30,12 +31,20 @@ const Testimonials = (props) => {
 
     return (
         <>
-            <Carousel showThumbs={false} showStatus={false} stopOnHover={true} autoPlay={true} className="custom">
+            <Carousel
+                showThumbs={false}
+                showStatus={false}
+                stopOnHover={true}
+                autoPlay={true}
+                infiniteLoop={true}
+                swipeable={true}
+                dynamicHeight={true}
+            >
                 {testimonialsArray.map((item, i) => {
                     console.log("item", item)
                     return (
-                        <Row height="auto" align="center" padding="30px">
-                            <Card width="600px" key={i}>
+                        <Row align="center" padding="30px" >
+                            <Card width="700px" key={i}>
                                 <Row align="center">
                                     <RoundImage
                                         url={item.student_thumb}
@@ -47,20 +56,25 @@ const Testimonials = (props) => {
                                     />
                                 </Row>
                                 <Divider height="10px" />
-                                <Row align="center">
-                                    <H4>
-                                        {item.student_name}
-                                    </H4>
-                                </Row>
-                                <Divider height="10px" />
                                 <Row align="center" >
-                                    <Column size="12">
+                                    <Column size="12" >
                                         <Paragraph>
+                                            <Span color={Colors.blue} >"</Span>
                                             {item.content}
+                                            <Span color={Colors.blue} >"</Span>
                                         </Paragraph>
                                     </Column>
                                 </Row>
                                 <Divider height="10px" />
+                                <Row align="center">
+                                    <Column size="12" >
+                                        <H4>
+                                            {item.student_name}
+                                        </H4>
+                                    </Column>
+                                </Row>
+                                <Divider height="10px" />
+
                             </Card>
                         </Row>
 
