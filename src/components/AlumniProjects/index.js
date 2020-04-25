@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
@@ -8,10 +8,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 
-const Alumni = props => {
+const AlumniProjects = props => {
     const data = useStaticQuery(graphql`
       query myQueryAlumni{
-        allAlumniYaml {
+        allAlumniProjectsYaml {
             edges {
               node {
                 header{
@@ -19,26 +19,34 @@ const Alumni = props => {
                   sub_heading
                   button_text
                 }
-                alumni {
-                  name
-                  last_name
-                  project_name
-                  slug
-                  job_title
-                  job_name
-                  image
-                  content
-                  video
-                }
+                projects {
+                    project_name
+                    slug
+                    image
+                    image_alt
+                    project_content
+                    project_video
+                    github_repo
+                    alumni {
+                      first_name
+                      last_name
+                      job_title
+                      github
+                      linkedin
+                      twitter
+                    }
+                  }
                 button_section{
                   button_text
+                  button_link
                 }
               }
             }
           }
         }
       `)
-    let alumni = data.allAlumniYaml.edges[0].node
+    let alumniData = data.allAlumniProjectsYaml.edges[0].node
+    console.log("alumni###", alumniData)
     return (
         <>
 
@@ -48,10 +56,12 @@ const Alumni = props => {
                     border="bottom"
                     image="no"
                     color={Colors.white}
-                ><Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
+                >
+                    <Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
 
-                        {alumni != null &&
-                            alumni.alumni.map((item, index) => {
+                        {alumniData != null &&
+                            alumniData.projects.map((item, index) => {
+                                console.log("$%$%", item)
                                 return (
                                     <Card key={index} shadow borders="1.25rem" height="500px">
                                         <Row
@@ -65,32 +75,46 @@ const Alumni = props => {
                                                 <Row align="center" height="100%">
                                                     <Column size="9" height="100%">
                                                         <Divider height="10%" />
-                                                        <Row height="20%">
-                                                            <Column size="12">
+                                                        <Row height="30%">
+                                                            <Column size="12" customRespSize respSize="12">
                                                                 <H3 primary color={Colors.blue} align="left" >{`Meet  `}</H3>
-                                                                <H4
-                                                                    fs_xs="12px"
-                                                                    fs_sm="13px"
-                                                                    fs_md="14px"
-                                                                    fs_lg="16px"
-                                                                    fs_xl="20px"
-                                                                    primary align="left" >{`${item.name} `}</H4>
-                                                                <Paragraph
-                                                                    primary
-                                                                    fs_xs="10px"
-                                                                    fs_sm="11px"
-                                                                    fs_md="11px"
-                                                                    fs_lg="11px"
-                                                                    fs_xl="12px"
-                                                                    margin="5px 0"
-                                                                    align="left" >{`Now ${item.job_title} at ${item.job_name}`}</Paragraph>
+                                                                {item.alumni.map((alumni, index) => {
+                                                                    return (
+                                                                        <>
+                                                                            <Row key={index} >
+                                                                                <Column size="12">
+                                                                                    <H4
+                                                                                        fs_xs="12px"
+                                                                                        fs_sm="13px"
+                                                                                        fs_md="14px"
+                                                                                        fs_lg="16px"
+                                                                                        fs_xl="16px"
+                                                                                        primary align_xs="center" align="left">{`${alumni.first_name} ${alumni.last_name}`}
+                                                                                    </H4>
+                                                                                </Column>
+                                                                            </Row>
+                                                                            <Row marginBottom="5px">
+                                                                                <Column size="12" alignSm="center">
+                                                                                    <Paragraph
+                                                                                        primary
+                                                                                        fs_xs="10px"
+                                                                                        fs_sm="11px"
+                                                                                        fs_md="11px"
+                                                                                        fs_lg="11px"
+                                                                                        fs_xl="11px"
+                                                                                        // margin="5px 0"
+                                                                                        align="left" >{`${alumni.job_title}`}
+                                                                                    </Paragraph>
+                                                                                </Column>
+                                                                            </Row>
+                                                                        </>
+                                                                    )
+                                                                })}
                                                             </Column>
                                                             {/* <H3 primary align="left" >SUPPORT FOR LIFE</H3> */}
                                                         </Row>
-                                                        <Row height="10%" >
-
+                                                        <Row height="5%" >
                                                             <Separator primary al_xs="center" />
-
                                                         </Row>
                                                         <Row height="10%">
                                                             <Column size="12">
@@ -105,14 +129,14 @@ const Alumni = props => {
                                                                 </Row>
                                                             </Column>
                                                         </Row>
-                                                        <Row height="40%">
+                                                        <Row height="35%">
                                                             <Column size="12">
                                                                 <Paragraph
                                                                     fs_xs="10px"
                                                                     fs_sm="11px"
                                                                     fs_md="13px"
                                                                     fs_lg="11px"
-                                                                    fs_xl="12px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.content}</Paragraph>
+                                                                    fs_xl="12px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.project_content}</Paragraph>
                                                             </Column>
                                                         </Row>
                                                         {/* <Row height="10%">
@@ -149,11 +173,11 @@ const Alumni = props => {
                 </Column>
             </Row>
             <Row height="10%" align="center">
-                <Column size="6" align="center"><Link to="/graduates"><Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{alumni.button_section.button_text}</Button></Link></Column>
+                <Column size="6" align="center"><Link to={alumniData.button_section.button_link}><Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{alumniData.button_section.button_text}</Button></Link></Column>
             </Row>
 
         </>)
 
 };
 
-export default Alumni;
+export default AlumniProjects;

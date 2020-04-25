@@ -1,9 +1,9 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
-import Alumni from '.';
+import AlumniProjects from '.';
 
-storiesOf('Alumni', module)
+storiesOf('AlumniProjects', module)
     .add('Default', () => (
-        <Alumni />
+        <AlumniProjects />
     ));
