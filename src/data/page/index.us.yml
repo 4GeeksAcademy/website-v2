@@ -55,3 +55,8 @@ locations:
 alumni_header:
   heading: "MEET THE ALUMNI AND PROJECTS"
   sub_heading: "We want to introduce you just a few examples of the amazing people that belong to our Alumni Community"
+
+## TESTIMONIAL SECTION
+testimonial_header:
+  heading: "TESTIMONIALS"
+  sub_heading: ""
