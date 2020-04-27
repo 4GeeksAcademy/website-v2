@@ -8,7 +8,7 @@ import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styli
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
-import Alumni from '../components/Alumni'
+import AlumniProjects from '../components/AlumniProjects'
 import Credentials from '../components/Credentials'
 import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
