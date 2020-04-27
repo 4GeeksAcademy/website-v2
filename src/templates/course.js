@@ -9,7 +9,7 @@ import {Title, H2, H3, H4, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import PricesAndPayment from '../components/PricesAndPayment'
-import Alumni from '../components/Alumni'
+import AlumniProjects from '../components/AlumniProjects'
 import Credentials from '../components/Credentials'
 import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
@@ -714,7 +714,7 @@ const Program = ({data, pageContext, yml}) => {
         />
         <Divider height="50px" />
         <section className="section" id="section-5"></section>
-        <Alumni hasTitle />
+        <AlumniProjects hasTitle />
         <Divider height="100px" />
       </Wrapper>
       <Divider height="100px" />
