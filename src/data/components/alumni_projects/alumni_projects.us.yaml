@@ -5,7 +5,7 @@ header:
 projects:
   - project_name: "Rocket App"
     slug: "rocket-app"
-    image: "/staff/marcelo.png"
+    image: "/projects/rocket-app.jpg"
     image_alt: ""
     project_content: "Platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track your places (where you have been), and gather information that you thought it was important and save for as long as you want it in just one place."
     project_video: ""
@@ -25,7 +25,7 @@ projects:
         twitter: ""
   - project_name: "iWash"
     slug: "i-wash"
-    image: "/staff/marcelo.png"
+    image: "/projects/i-wash.jpg"
     image_alt: ""
     project_content: "iWash is an application integrating hardware and software towards building a platform capable of setting and launching Smart Laundry machines from your mobile, pay the cost of the service and set time, speed, process, and get notifications about status of your laundry."
     project_video: ""

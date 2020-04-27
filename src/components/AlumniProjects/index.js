@@ -57,12 +57,19 @@ const AlumniProjects = props => {
                     image="no"
                     color={Colors.white}
                 >
-                    <Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
+                    <Carousel
+                        showIndicators={false}
+                        showThumbs={props.showThumbs ? true : false}
+                        showStatus={false}
+                        autoPlay={true}
+                        infiniteLoop={true}
+                        showArrow={false}>
 
                         {alumniData != null &&
                             alumniData.projects.map((item, index) => {
                                 console.log("$%$%", item)
                                 return (
+
                                     <Card key={index} shadow borders="1.25rem" height="500px">
                                         <Row
                                             height="100%"
@@ -162,7 +169,22 @@ const AlumniProjects = props => {
 
 
                                             </Column>
-                                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="yes" url="/images/alumni-bg.png" border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
+                                            {/* <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="yes" url="/images/alumni-bg.png" border="custom" customBorderRadius="0 1.25rem 1.25rem 0" /> */}
+                                            <Column
+                                                size="6"
+                                                customRespSize
+                                                respSize="6"
+                                                alignSelf="center"
+                                                image="yes"
+                                                url={item.image}
+                                                backgroundSize="cover"
+                                                bg_position="center center"
+                                                height="100%"
+                                                border="custom"
+                                                customBorderRadius="0 1.25rem 1.25rem 0" >
+                                                {/* <img src={item.image} /> */}
+                                            </Column>
+
                                         </Row>
                                     </Card>
                                 )
@@ -172,9 +194,10 @@ const AlumniProjects = props => {
                     </Carousel>
                 </Column>
             </Row>
-            <Row height="10%" align="center">
-                <Column size="6" align="center"><Link to={alumniData.button_section.button_link}><Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{alumniData.button_section.button_text}</Button></Link></Column>
-            </Row>
+            {props.showThumbs ? null :
+                <Row height="10%" align="center">
+                    <Column size="6" align="center"><Link to={alumniData.button_section.button_link}><Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{alumniData.button_section.button_text}</Button></Link></Column>
+                </Row>}
 
         </>)
 
