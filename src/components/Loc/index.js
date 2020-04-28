@@ -98,12 +98,13 @@ const Loc = (props) => {
 
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               <Link to={`/location/${pic.node.meta_info.slug}`}>
+                {/* <Card width="100%" > */}
                 <RoundImage
-                  h_xs="30px"
-                  h_sm="30px"
-                  h_md="40px"
-                  h_lg="40px"
-                  h_xl="40px"
+                  h_xs="40px"
+                  h_sm="70px"
+                  h_md="60px"
+                  h_lg="80px"
+                  h_xl="90px"
                   width="100%"
                   br_xs=".25rem"
                   br_sm=".25rem"
@@ -121,7 +122,7 @@ const Loc = (props) => {
                     <Column size="12" alignSelf="center" align="center">
                       <H4
                         color={Colors.white}
-                        fs_xs="12px"
+                        fs_xs="9px"
                         fs_sm="12px"
                         fs_md="12px"
                         fs_lg="14px"
@@ -133,6 +134,7 @@ const Loc = (props) => {
                     </Column>
                   </Row>
                 </RoundImage>
+                {/* </Card> */}
               </Link>
             </Column>
           )

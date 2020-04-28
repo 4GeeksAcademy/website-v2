@@ -101,11 +101,13 @@ color: ${props => props.color};
 `;
 export const H4 = styled.h4`
 @media ${Device.xs}{
-  text-align: ${props => props.align === "left" ? "left" : props.align === "right" ? "right" : "center"};
+  // text-align: ${props => props.align === "left" ? "left" : props.align === "right" ? "right" : "center"};
+  text-align: ${props => props.align_xs};
   font-size: ${props => props.fs_xs};
 }
 @media  ${Device.sm}{
-  text-align: ${props => props.align === "left" ? "left" : props.align === "right" ? "right" : "center"};
+  // text-align: ${props => props.align === "left" ? "left" : props.align === "right" ? "right" : "center"};
+  text-align: ${props => props.align_sm};
   font-size: ${props => props.fs_sm};
 }
 @media ${Device.md}{
@@ -167,6 +169,7 @@ export const Span = styled.span`
       // ${props => props.animated && `css animation:${Blink} 1.2s infinite;`}
       animation:${Blink} 1.2s infinite;
       color: ${props => props.color};
+      font-size: ${props => props.fs}
 `
 export const Separator = styled.div`
   text-align: ${props => props.align};

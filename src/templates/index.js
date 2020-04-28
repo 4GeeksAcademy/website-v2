@@ -10,9 +10,10 @@ import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
 import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
 import {Card} from '../components/Card'
 import WhoIsHiring from '../components/WhoIsHiring';
-import Alumni from '../components/Alumni'
+import AlumniProjects from '../components/AlumniProjects'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
+import Testimonials from '../components/Testimonials'
 import Events from '../components/Events'
 import Loc from '../components/Loc'
 import {Link} from 'gatsby';
@@ -352,7 +353,7 @@ const Home = (props) => {
           primary
         />
         <Divider height="50px" />
-        <Alumni hasTitle />
+        <AlumniProjects hasTitle />
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
@@ -367,6 +368,17 @@ const Home = (props) => {
         <Divider height="50px" />
         <Loc lang={data.allLocationYaml.edges} />
       </Wrapper>
+      <Divider height="150px" />
+      <Wrapper style="default">
+        <Title
+          primary
+          title={yml.testimonial_header.heading}
+          paragraph={yml.testimonial_header.sub_heading}
+          customParagraphSize="8"
+        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+        />
+        <Divider height="20px" />
+        <Testimonials /></Wrapper>
       <Divider height="100px" />
 
     </>
@@ -431,6 +443,10 @@ export const query = graphql`
                 sub_heading
             }
             alumni_header{
+                heading
+                sub_heading
+            }
+            testimonial_header{
                 heading
                 sub_heading
             }

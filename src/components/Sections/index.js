@@ -193,6 +193,7 @@ ${props =>
             css`
                 background-image: url(${props => props.url});
                 background-size: ${props => props.backgroundSize};
+                background-position: ${props => props.bg_position};
                 background-repeat: no-repeat;
                 height: ${props => props.height};
                 

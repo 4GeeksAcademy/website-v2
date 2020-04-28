@@ -114,9 +114,9 @@ export const Over = styled.div`
 
 `
 export const Tooltip = styled.div`
-position: absolute;
-    
+    position: absolute;
     left: 50%;
+    height: auto;
     z-index: 1;
     width: 200px;
     opacity: 1;
@@ -127,8 +127,8 @@ position: absolute;
     padding: 1em;
     background-color: rgba(137,138,139,1);
     color: white;
-    font-size: .6em;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.2;
     text-align: center;
     -webkit-transition: all .15s ease-in-out;
 // white-space: nowrap;

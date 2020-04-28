@@ -10,34 +10,37 @@ import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
-import Alumni from '../components/Alumni'
+import AlumniProjects from '../components/AlumniProjects'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {Carousel} from 'react-responsive-carousel';
+
+
 
 const Graduates = ({data, pageContext, yml}) => {
-    console.log("jo", yml)
+    const [array, setArray] = useState(
+        [
+            "/images/alumni-bg.png",
+            "/images/bitcoin.png"
+        ]
+    )
+    console.log("jo", array)
     return (
         <>
-            <Wrapper
-                style="default"
-                image="yes"
-                url={yml.banner.image}
-                border="bottom"
-                height="300px"
-                backgroundSize="cover"
-            >
-                <Divider height="100px" />
-                <Title
-                    size="5"
-                    title={yml.banner.tagline}
-                    main
-                    color={Colors.white}
-                    fontSize="46px"
-                    textAlign="center"
-                />
-            </Wrapper>
+
             <Divider height="100px" />
             <Wrapper
                 style="default">
-                <Alumni />
+                <AlumniProjects />
+                {/* <Carousel>
+                    {array.map((item, i) => {
+                        return (
+                            <div key={i}>
+                                <img src={item} />
+                                <p className="legend">Legend 1</p>
+                            </div>
+                        );
+                    })}
+                </Carousel> */}
             </Wrapper>
             <Divider height="50px" />
             <Wrapper

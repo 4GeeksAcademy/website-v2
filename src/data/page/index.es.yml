@@ -55,3 +55,8 @@ locations:
 alumni_header:
   heading: "CONOCE A NUESTROS GRADUADOS Y SUS PROYECTOS"
   sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+
+  ## TESTIMONIAL SECTION
+testimonial_header:
+  heading: "TESTIMONIAL"
+  sub_heading: ""

@@ -112,7 +112,7 @@ const Pricing = (props) => {
                                     </Column>
                                     <Column size="4">
                                         <Divider height="100px" />
-                                        <H5 uppercase align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
+                                        <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
                                     </Column>
                                 </Row>
                             </Column>
