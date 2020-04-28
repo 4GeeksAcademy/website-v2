@@ -46,8 +46,8 @@ export default function Template (props) {
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Wrapper
                 style="custom"
-                innerLeftCol="3"
-                innerRightCol="8"
+                innerLeftCol="2"
+                innerRightCol="9"
                 full
 
                 content={<Row align="end" padding="0 20px 0 0" style={{position: "sticky", top: "12%"}}>
@@ -76,7 +76,7 @@ export default function Template (props) {
                         </Row>
                     </Column></Row>}>
                 <Row align="left">
-                    <Column size="8">
+                    <Column size="10">
                         <Row height="100%" align="around">
                             <Column size="2" customRespSize respSize="2" alignSelf="center">
                                 <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
@@ -99,13 +99,20 @@ export default function Template (props) {
                 </Row>
                 <Divider height="30px" />
                 <Row align="left" >
-                    <Column size="8" align="center">
+                    <Column size="10" align="center">
                         <Row>
 
 
                             {post.frontmatter.tags != null ? post.frontmatter.tags.map((tag, i) => {
                                 return (<>
-                                    <Card key={i} color="darkGray" padding="2px 5px" borders=".2rem" margin="5px 3px"><Paragraph color={Colors.darkGray}>{tag}</Paragraph></Card>
+                                    <Card
+                                        key={i}
+                                        color="darkGray"
+                                        padding="2px 5px"
+                                        borders=".2rem"
+                                        margin="5px 3px">
+                                        <Paragraph color={Colors.darkGray}>{tag}</Paragraph>
+                                    </Card>
                                 </>
                                 )
                             }) : null}
@@ -115,7 +122,7 @@ export default function Template (props) {
                 </Row>
                 <Divider height="30px" />
                 <Row>
-                    <Column size="8" alignSelf="center">
+                    <Column size="10" alignSelf="center">
                         <H4
                             fs_xs="30px"
                             fs_sm="30px"
@@ -126,17 +133,17 @@ export default function Template (props) {
                 </Row>
                 <Divider height="30px" />
                 <Row>
-                    <Column size="8" customRespSize respSize="10" alignSelf="center">
+                    <Column size="10" customRespSize respSize="10" alignSelf="center">
                         <RoundImage border="1.25rem" width="100%" height="200px" bsize="cover" position="center" url={post.frontmatter.image} />
                     </Column>
                 </Row>
                 <Row height="auto" align="left">
-                    <Column size="8" >
+                    <Column size="10" >
                         <div className="single-post" dangerouslySetInnerHTML={{__html: post.html}}></div>
                     </Column>
                 </Row>
                 <Row align="left" >
-                    <Column size="8" align="left">
+                    <Column size="10" align="left">
                         <Row>
 
 
