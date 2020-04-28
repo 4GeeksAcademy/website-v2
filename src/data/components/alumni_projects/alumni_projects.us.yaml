@@ -43,6 +43,53 @@ projects:
         github: ""
         linkedin: ""
         twitter: ""
+  - project_name: "reMindful"
+    slug: "re-mindful"
+    image: "/projects/re-mindful.jpg"
+    image_alt: ""
+    project_content: |
+      Generating awareness about Recycling considering all the steps that need to be covered. 
+      They have created an application, integrating software and Hardware that allows to weight 
+      the amount of plastic, glass or garbage there is within a container and how much it will 
+      that affect the recycling process and the environment.
+    project_video: ""
+    github_repo: ""
+    alumni:
+      - first_name: "Jordan"
+        last_name: "Aguiriano"
+        job_title: "Web Developer"
+        github: ""
+        linkedin: ""
+        twitter: ""
+      - first_name: "Gabriela"
+        last_name: "Rodriguez"
+        job_title: "Web Developer"
+        github: ""
+        linkedin: ""
+        twitter: ""
+  - project_name: "WonderTracker"
+    slug: "wonder-tracker"
+    image: "/projects/wonder-tracker.jpg"
+    image_alt: ""
+    project_content: |
+      Platform capable of keeping your travel information and documents saved in an absolute secure system. 
+      It also lets you track your places (where you have been), and gather information that you thought was 
+      important and save for as long as you want it in just one place.
+    project_video: ""
+    github_repo: ""
+    alumni:
+      - first_name: "Fernando"
+        last_name: "Funez"
+        job_title: "Teacher Assistant"
+        github: ""
+        linkedin: ""
+        twitter: ""
+      - first_name: "George"
+        last_name: "Mihov"
+        job_title: "Teacher Assistant"
+        github: ""
+        linkedin: ""
+        twitter: ""
 button_section:
   button_text: "VIEW ALL PROJECTS"
   button_link: "/graduates"
