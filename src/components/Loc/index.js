@@ -2,7 +2,7 @@ import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../Heading';
 import {Container, Row, Column, Wrapper, Divider} from '../Sections'
-import {Button, Colors, Check, ArrowRight, RoundImage} from '../Styling'
+import {Button, Colors, Check, ArrowRight, RoundImage, Over} from '../Styling'
 import styled from 'styled-components';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -12,6 +12,7 @@ import Link from 'gatsby-link'
 
 const Loc = (props) => {
   let loc = props.lang
+  console.log("loc####", loc)
   return (
     <>
       <Row>
@@ -89,7 +90,7 @@ const Loc = (props) => {
         </Column>
       </Row>
       <Divider height="10px" />
-      <Row height="75px" align="center">
+      <Row height="auto" align="center">
 
         {loc.map((pic, i) => {
           let randLocImgIndex = Math.floor(Math.random() * pic.node.carousel_box.images.length)
@@ -97,29 +98,31 @@ const Loc = (props) => {
           return (
 
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
-              <Link to={`/location/${pic.node.meta_info.slug}`}>
-                {/* <Card width="100%" > */}
-                <RoundImage
-                  h_xs="40px"
-                  h_sm="70px"
-                  h_md="60px"
-                  h_lg="80px"
-                  h_xl="90px"
-                  width="100%"
-                  br_xs=".25rem"
-                  br_sm=".25rem"
-                  br_md=".25rem"
-                  br_lg=".25rem"
-                  br_xl=".25rem"
-                  url={pic.node.carousel_box.images[randLocImgIndex].path}
-                  border=".75rem"
-                  bsize="cover"
-                  position="center"
-                  height="100%"
-                  // width="auto"
-                  mb="1.25rem">
-                  <Row height="100%" align="around">
-                    <Column size="12" alignSelf="center" align="center">
+
+              {/* <Card width="100%" > */}
+              <RoundImage
+                h_xs="40px"
+                h_sm="70px"
+                h_md="60px"
+                h_lg="80px"
+                h_xl="90px"
+                width="100%"
+                br_xs=".25rem"
+                br_sm=".25rem"
+                br_md=".25rem"
+                br_lg=".25rem"
+                br_xl=".25rem"
+                url={pic.node.carousel_box.images[randLocImgIndex].path}
+                border=".75rem"
+                bsize="cover"
+                position="center"
+                height="100%"
+                // width="auto"
+                mb="1.25rem">
+
+                <Row height="100%" align="around">
+                  <Column size="12" alignSelf="center" align="center">
+                    <Link to={`/${pic.node.lang}/location/${pic.node.meta_info.slug}`}>
                       <H4
                         color={Colors.white}
                         fs_xs="9px"
@@ -131,11 +134,12 @@ const Loc = (props) => {
                       >
                         {pic.node.city}
                       </H4>
-                    </Column>
-                  </Row>
-                </RoundImage>
-                {/* </Card> */}
-              </Link>
+                    </Link>
+                  </Column>
+                </Row>
+
+              </RoundImage>
+              {/* </Card> */}
             </Column>
           )
         })}
