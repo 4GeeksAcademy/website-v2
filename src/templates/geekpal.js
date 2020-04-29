@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
 import {H3, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button} from '../components/Styling'
+import {Colors, Button, Check} from '../components/Styling'
 import {Card} from '../components/Card'
 import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
@@ -34,24 +34,15 @@ const GeekPal = (props) => {
         <Divider height="100px" />
       </Wrapper>
       <Divider height="100px" />
-      <Container fluid >
-                <Row>
-                    <Column size="1" />
-                    <Column size="11" >
-                        <Row>
-                            <Column size="1" />
-                            <Column size="10">
-                                <Row>
-                                    <Column size="4">
-                                        <Divider height="100px" />
-                                        <H5 uppercase align="left" fontSize="20px" fontHeight="30px">asdasd sdad</H5>
-                                    </Column>
-                                </Row>
-                            </Column>
-                        </Row>
-                    </Column>
-                </Row>
-            </Container>
+      <Wrapper
+        style="default"
+        border="bottom"
+        height="auto"
+      >
+        <H5 align="center" uppercase={true} fontSize="20px" fontHeight="30px">asdasd sdad</H5>
+        <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+        <Divider height="100px" />
+      </Wrapper>
     </>
   )
 };
