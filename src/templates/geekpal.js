@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
-import {Row, Column, Wrapper, Divider} from '../components/Sections'
-import {H3, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button} from '../components/Styling'
+import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
+import {H3, H5, Title, Separator, Paragraph} from '../components/Heading'
+import {Colors, Button, Check} from '../components/Styling'
 import {Card} from '../components/Card'
 import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
@@ -34,6 +34,15 @@ const GeekPal = (props) => {
         <Divider height="100px" />
       </Wrapper>
       <Divider height="100px" />
+      <Wrapper
+        style="default"
+        border="bottom"
+        height="auto"
+      >
+        <H5 align="center" uppercase={true} fontSize="20px" fontHeight="30px">asdasd sdad</H5>
+        <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+        <Divider height="100px" />
+      </Wrapper>
     </>
   )
 };

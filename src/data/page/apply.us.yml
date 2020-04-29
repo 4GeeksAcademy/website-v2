@@ -1,9 +1,9 @@
 meta_info:
   slug: apply
-  title: null
-  description: null
-  image: null
-  keywords: []
+  title: "Apply to 4Geeks Academy"
+  description: "Apply to one of the top coding bootcamps in the world with locations in Miami, Santiago de Chile, Madrid Spain and Caracas Venezuela."
+  image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
+  keywords: ["apply", "4geeks academy", "apply to 4geeks academy", "apply to coding bootcamp", "coding bootcamp", "coding school", "apply to coding school", "apply to coding institution"]
   redirects: ["/apply"]
 
 ## APPLY HEADING
