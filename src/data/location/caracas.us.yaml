@@ -4,7 +4,7 @@ meta_info:
   description: null
   image: ""
   keywords: none
-  redirects: []
+  redirects: ["/impact-hub"]
 lang: "us"
 seo_title: "4Geeks Academy Caracas"
 tagline: "4GEEKS ACADEMY IN CARACAS"
@@ -17,18 +17,16 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "/images/caracas-map.png"
+  image: "/images/locations/caracas-map.png"
 
 carousel_box:
   heading: "What you should know about this location: "
   content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
-    - path: "/images/caracas-loc.jpeg"
+    - path: "/images/locations/caracas-loc.jpg"
       alt: "miami-sunset"
-    - path: "/images/lcaracas-loc2.jpg"
+    - path: "/images/locations/caracas-loc-2.jpeg"
       alt: "4Geeeks miami location"
-    - path: "/images/loc-miami-two.jpg"
-      alt: "4Geeeks miami lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
