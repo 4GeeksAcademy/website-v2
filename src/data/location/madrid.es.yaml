@@ -9,7 +9,7 @@ lang: "es"
 seo_title: "4Geeks Academy Madrid"
 tagline: "4GEEKS ACADEMY IN MADRID"
 sub_heading: ""
-image: "/images/miami-sunset.jpeg"
+image: "/images/locations/madrid-loc.jpeg"
 
 info_box:
   heading: "Encuéntranos en Madrid"
@@ -17,7 +17,7 @@ info_box:
   contact_heading: "Contacts"
   phone: "910 86 69 83"
   email: "es@4geeksacademy.com"
-  image: "/images/madrid-map.png"
+  image: "/images/locations/madrid-map.png"
 
 carousel_box:
   heading: "Qué deberías saber sobre esta ubicación: "
