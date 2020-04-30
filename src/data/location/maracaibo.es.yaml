@@ -9,7 +9,7 @@ lang: "es"
 seo_title: "4Geeks Academy Maracaibo"
 tagline: "4GEEKS ACADEMY IN Maracaibo"
 sub_heading: ""
-image: "/images/miami-sunset.jpeg"
+image: "/images/locations/mcbo-loc-2.png"
 
 info_box:
   heading: "Find us in Caracas"
@@ -17,7 +17,7 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "/images/maracaibo-map.png"
+  image: "/images/locations/maracaibo-map.png"
 
 carousel_box:
   heading: "What you should know about this location: "

@@ -9,7 +9,7 @@ lang: "us"
 seo_title: "4Geeks Academy Madrid"
 tagline: "4GEEKS ACADEMY IN MADRID"
 sub_heading: ""
-image: "/images/miami-sunset.jpeg"
+image: "/images/locations/madrid-loc-2.jpg"
 
 info_box:
   heading: "Find us in Miami"
@@ -17,7 +17,7 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "/images/madrid-map.png"
+  image: "/images/locations/madrid-map.png"
 
 carousel_box:
   heading: "What you should know about this location: "
