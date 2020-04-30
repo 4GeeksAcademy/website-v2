@@ -23,11 +23,11 @@ carousel_box:
   heading: "What you should know about this location: "
   content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and at walking distance to the most prominent restorants, cofee shops and business center. 140 metters of innovation, curious people and very good vibe to learn."
   images:
-    - path: "/images/location/mcbo-chinita.jpeg"
+    - path: "/images/locations/mcbo-chinita.jpeg"
       alt: "mcbo-chinita"
-    - path: "/images/location/mcbo-loc.jpg"
+    - path: "/images/locations/mcbo-loc.jpg"
       alt: "4Geeeks Maracaibo Location"
-    - path: "/images/location/mcbo-loc-2.png"
+    - path: "/images/locations/mcbo-loc-2.png"
       alt: "4Geeeks Maracaibo lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
