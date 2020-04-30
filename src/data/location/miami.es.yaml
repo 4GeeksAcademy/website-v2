@@ -23,11 +23,11 @@ carousel_box:
   heading: "What you should know about this location: "
   content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
-    - path: "/images/miami-sunset.jpeg"
+    - path: "/images/locations/miami-sunset.jpeg"
       alt: "miami-sunset"
-    - path: "/images/loc-miami-one.jpg"
+    - path: "/images/locations/loc-miami-one.jpg"
       alt: "4Geeeks miami location"
-    - path: "/images/loc-miami-two.jpg"
+    - path: "/images/locations/loc-miami-two.jpg"
       alt: "4Geeeks miami lab"
 
 ## HEADING SECTION
