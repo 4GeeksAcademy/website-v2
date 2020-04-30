@@ -25,9 +25,9 @@ carousel_box:
   images:
     - path: "/images/madrid-loc.jpeg"
       alt: "miami-sunset"
-    - path: "/images/madrid-loc-1.jpg"
-      alt: "4Geeeks miami location"
     - path: "/images/madrid-loc-2.jpg"
+      alt: "4Geeeks miami location"
+    - path: "/images/madrid-loc-3.jpg"
       alt: "4Geeeks miami lab"
 
 ## PRICES SECTION

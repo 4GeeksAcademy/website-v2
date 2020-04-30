@@ -176,7 +176,7 @@ a:hover {
     margin: 5px 0 20px 20px;
 }
 
-.single-post p{
+.single-post p , ul, ol{
     font-size: 22px;
     color: black;
     font-family: 'Lato';

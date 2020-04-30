@@ -40,7 +40,7 @@ const NavB = (props) => {
                                 textAlign: `center`,
                             }}
                         >
-                            <NavLink href={link.link}>{link.name}</NavLink>
+                            <Link to={link.link}>{link.name}</Link>
                         </NavItem>
                     ))}
                 </Nav>

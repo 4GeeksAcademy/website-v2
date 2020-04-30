@@ -1,8 +1,10 @@
 lang: "us"
 programs:
-  - text: "16 Weeks"
+  - text: "Part-time"
     link: "/course/full-stack-web-development-bootcamp-part-time"
-  - text: "9 Weeks"
+  - text: "Full-time"
     link: "/course/full-stack-web-development-bootcamp-full-time"
+  - text: "Online"
+    link: ""
 open_button_text: "CHOOSE PROGRAM"
 close_button_text: "Close"
