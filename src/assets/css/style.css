@@ -131,10 +131,11 @@ a:hover {
     /* margin: auto;
     max-height: 350px;
     display: inherit; */
-    max-height: 350px;
+    /* max-height: 350px; */
     /* height: auto; */
     display: inherit;
-    width: 100%;
+    max-width: 100%;
+    height: 100%;
     margin: 5px auto;
     border-radius: .3rem;;
     /* position: absolute;
@@ -176,7 +177,7 @@ a:hover {
     margin: 5px 0 20px 20px;
 }
 
-.single-post p , ul, ol{
+.single-post p , ul, ol, blockquote{
     font-size: 22px;
     color: black;
     font-family: 'Lato';
