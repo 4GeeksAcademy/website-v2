@@ -30,15 +30,19 @@ text-align: ${props => props.align};
   font-size: ${props => props.fontSizeXs}
 }
 @media  ${Device.sm}{
+  font-size: ${props => props.fs_sm};
 }
 @media ${Device.md}{
   text-align: ${props => props.align};
+  font-size: ${props => props.fs_md};
 }
 @media ${Device.lg}{
   text-align: ${props => props.align};
+  font-size: ${props => props.fs_lg};
 }
 @media ${Device.xl} {
   text-align: ${props => props.align};
+  font-size: ${props => props.fs_xl};
 }   
 `;
 export const H2 = styled.h2`
