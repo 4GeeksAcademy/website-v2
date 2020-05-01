@@ -82,7 +82,7 @@ export default function Template (props) {
                             <Column size="2" customRespSize respSize="2" alignSelf="center" >
                                 <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
                             </Column>
-                            <Column size="8" customRespSize respSize="10" alignSelf="center">
+                            <Column size="8" customRespSize respSize="8" alignSelf="center">
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px"><a href={`https://twitter.com/${filtered.name || "4GeeksAcademy"}`} rel="author noopener noreferrer nofollow">{`${postDate} - ${filtered.name || '4Geeks Academy'}`}</a></Paragraph></Row>
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${filtered.bio}`}</Paragraph></Row>
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text}`}</Paragraph></Row>
@@ -111,7 +111,9 @@ export default function Template (props) {
                                         color="darkGray"
                                         padding="2px 5px"
                                         borders=".2rem"
-                                        margin="5px 3px">
+                                        margin="5px 3px"
+                                        w_xs="20px"
+                                    >
                                         <Paragraph color={Colors.darkGray}>{tag}</Paragraph>
                                     </Card>
                                 </>
@@ -123,13 +125,13 @@ export default function Template (props) {
                 </Row>
                 <Divider height="30px" />
                 <Row>
-                    <Column size="10" alignSelf="center">
-                        <H4
-                            fs_xs="30px"
+                    <Column size="10" align="center">
+                        <H1
+
                             fs_sm="30px"
                             fs_md="30px"
                             fs_lg="30px"
-                            fs_xl="36px">{post.frontmatter.title}</H4>
+                            fs_xl="36px">{post.frontmatter.title}</H1>
                     </Column>
                 </Row>
                 <Divider height="30px" />
@@ -148,7 +150,14 @@ export default function Template (props) {
                         {post.frontmatter.tags && <Row>
                             {post.frontmatter.tags.map((tag, i) => {
                                 return (
-                                    <Card key={i} color="darkGray" padding="2px 5px" borders=".2rem" margin="5px 3px"><Paragraph color={Colors.darkGray}>{tag}</Paragraph></Card>
+                                    <Card
+                                        key={i}
+                                        color="darkGray"
+                                        padding="2px 5px"
+                                        borders=".2rem"
+                                        margin="5px 3px">
+                                        <Paragraph color={Colors.darkGray}>{tag}</Paragraph>
+                                    </Card>
                                 )
                             })}
                         </Row>}
