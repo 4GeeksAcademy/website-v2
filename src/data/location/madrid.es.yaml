@@ -35,6 +35,8 @@ carousel_box:
 ## LEFT     BOX => PART-TIME
 ## CENTER   BOX => FINANCIAL SLIDER OPTIONS
 ## RIGHT    BOX => FULL-TIME
+hasFinancialsOption: true
+financials_max_months: ["6 mo", "12 mo"]
 prices:
   full_time:
     ## GENERAL INFO
@@ -159,4 +161,3 @@ location_office_image3: ""
 should_know: ""
 value: "Madrid"
 defaultLanguage: "es"
-hasFinancialsOption: false
