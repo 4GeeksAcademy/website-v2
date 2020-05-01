@@ -50,7 +50,7 @@ Another option you could explore is the IRS [Employer Education Assistance prog
 
 Family loans are a good option, too, for those who count on their relatives’ support.
 
-If none of these options are appealing to you, and, you have either a private loan or another financing option that we have not explored in this article, please feel free to contact us at:
+If null of these options are appealing to you, and, you have either a private loan or another financing option that we have not explored in this article, please feel free to contact us at:
 
 +1 (786) 808.5655
 

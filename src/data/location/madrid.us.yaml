@@ -3,13 +3,13 @@ meta_info:
   title: 4Geeks Academy Madrid
   description: null
   image: ""
-  keywords: none
+  keywords: ""
   redirects: []
 lang: "us"
 seo_title: "4Geeks Academy Madrid"
 tagline: "4GEEKS ACADEMY IN MADRID"
 sub_heading: ""
-image: "/images/miami-sunset.jpeg"
+image: "/images/locations/madrid-loc-2.jpg"
 
 info_box:
   heading: "Find us in Miami"
@@ -17,17 +17,17 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "/images/madrid-map.png"
+  image: "/images/locations/madrid-map.png"
 
 carousel_box:
   heading: "What you should know about this location: "
   content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
-    - path: "/images/madrid-loc.jpeg"
+    - path: "/images/locations/madrid-loc.jpeg"
       alt: "miami-sunset"
-    - path: "/images/madrid-loc-1.jpg"
+    - path: "/images/locations/madrid-loc-2.jpg"
       alt: "4Geeeks miami location"
-    - path: "/images/madrid-loc-2.jpg"
+    - path: "/images/locations/madrid-loc-3.jpg"
       alt: "4Geeeks miami lab"
 
 ## PRICES SECTION

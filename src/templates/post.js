@@ -41,13 +41,14 @@ export default function Template (props) {
 
         return [year, month, day].join('-');
     }
-    let postDate = GetFormattedDate(post.frontmatter.date)
+    let postDate = GetFormattedDate(post.frontmatter.date);
+    console.log("Frontmatter", data.markdownRemark.frontmatter);
     return (
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Wrapper
                 style="custom"
-                innerLeftCol="3"
-                innerRightCol="8"
+                innerLeftCol="2"
+                innerRightCol="9"
                 full
 
                 content={<Row align="end" padding="0 20px 0 0" style={{position: "sticky", top: "12%"}}>
@@ -76,20 +77,20 @@ export default function Template (props) {
                         </Row>
                     </Column></Row>}>
                 <Row align="left">
-                    <Column size="8">
+                    <Column size="10">
                         <Row height="100%" align="around">
                             <Column size="2" customRespSize respSize="2" alignSelf="center">
                                 <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
                             </Column>
                             <Column size="6" customRespSize respSize="10" alignSelf="center">
-                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${postDate} - ${filtered.name != undefined || filtered.name != null ? filtered.name : '4Geeks Academy'}`}</Paragraph></Row>
+                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px"><a href={`https://twitter.com/${filtered.name || "4GeeksAcademy"}`} rel="author noopener noreferrer nofollow">{`${postDate} - ${filtered.name || '4Geeks Academy'}`}</a></Paragraph></Row>
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${filtered.bio}`}</Paragraph></Row>
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text}`}</Paragraph></Row>
-                                <Row>
+                                {filtered.username && <Row>
                                     <TwitterFollowButton
                                         screenName={filtered.username}
                                     />
-                                </Row>
+                                </Row>}
 
                             </Column>
 
@@ -99,13 +100,20 @@ export default function Template (props) {
                 </Row>
                 <Divider height="30px" />
                 <Row align="left" >
-                    <Column size="8" align="center">
+                    <Column size="10" align="center">
                         <Row>
 
 
                             {post.frontmatter.tags != null ? post.frontmatter.tags.map((tag, i) => {
                                 return (<>
-                                    <Card key={i} color="darkGray" padding="2px 5px" borders=".2rem" margin="5px 3px"><Paragraph color={Colors.darkGray}>{tag}</Paragraph></Card>
+                                    <Card
+                                        key={i}
+                                        color="darkGray"
+                                        padding="2px 5px"
+                                        borders=".2rem"
+                                        margin="5px 3px">
+                                        <Paragraph color={Colors.darkGray}>{tag}</Paragraph>
+                                    </Card>
                                 </>
                                 )
                             }) : null}
@@ -115,7 +123,7 @@ export default function Template (props) {
                 </Row>
                 <Divider height="30px" />
                 <Row>
-                    <Column size="8" alignSelf="center">
+                    <Column size="10" alignSelf="center">
                         <H4
                             fs_xs="30px"
                             fs_sm="30px"
@@ -126,27 +134,24 @@ export default function Template (props) {
                 </Row>
                 <Divider height="30px" />
                 <Row>
-                    <Column size="8" customRespSize respSize="10" alignSelf="center">
+                    <Column size="10" customRespSize respSize="10" alignSelf="center">
                         <RoundImage border="1.25rem" width="100%" height="200px" bsize="cover" position="center" url={post.frontmatter.image} />
                     </Column>
                 </Row>
                 <Row height="auto" align="left">
-                    <Column size="8" >
+                    <Column size="10" >
                         <div className="single-post" dangerouslySetInnerHTML={{__html: post.html}}></div>
                     </Column>
                 </Row>
                 <Row align="left" >
-                    <Column size="8" align="left">
-                        <Row>
-
-
+                    <Column size="10" align="left">
+                        { post.frontmatter.tags && <Row>
                             {post.frontmatter.tags.map((tag, i) => {
                                 return (
                                     <Card key={i} color="darkGray" padding="2px 5px" borders=".2rem" margin="5px 3px"><Paragraph color={Colors.darkGray}>{tag}</Paragraph></Card>
                                 )
                             })}
-
-                        </Row>
+                        </Row>}
                     </Column>
                 </Row>
                 <Divider height="100px" />
@@ -166,6 +171,7 @@ query BlogPostBySlug($slug: String!){
             date
             avatar
             excerpt
+            unlisted
             image
             tags
         }

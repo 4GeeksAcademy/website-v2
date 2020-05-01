@@ -378,7 +378,7 @@ const Home = (props) => {
         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
         />
         <Divider height="20px" />
-        <Testimonials /></Wrapper>
+        <Testimonials lang={data.allTestimonialsYaml.edges} /></Wrapper>
       <Divider height="100px" />
 
     </>
@@ -610,6 +610,22 @@ export const query = graphql`
                   }
                   content
                   heading
+                }
+              }
+            }
+          }
+          allTestimonialsYaml(filter: {lang: {eq: $lang}}) {
+            edges {
+              node {
+                lang
+                testimonials {
+                  student_name
+                  testimonial_date
+                  student_thumb
+                  starts
+                  content
+                  source_url
+                  source_url_text
                 }
               }
             }

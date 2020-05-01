@@ -1,8 +1,11 @@
+lang: "es"
 testimonials:
   - student_name: "Azul Botaya"
     testimonial_date: ""
     student_thumb: "/testimonials/azul-botaya.jpg"
     starts: 1
+    source_url: ""
+    source_url_text: ""
     content: |
       I was almost leaving my career behind, not even seeing clear goals for me, and then 
       I had this great opportunity to join this community of knowledge and on top of anything 
@@ -16,6 +19,8 @@ testimonials:
     source_link: ""
     student_thumb: "/testimonials/naila-kaliyeva.jpg"
     starts: 1
+    source_url: ""
+    source_url_text: ""
     content: |
       I love 4Geeks Academy's approach to teaching students. There are always 3 tutors who will 
       make sure you master your skills and will not give up on you if there's something 
@@ -27,6 +32,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "/testimonials/samir-benzada.jpg"
     starts: 1
+    source_url: ""
+    source_url_text: ""
     content: |
       I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP. 
       I've been struggling a lot trying to make a dynamic website, so I started to look 
@@ -36,6 +43,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "/testimonials/charles-fabricius.jpg"
     starts: 1
+    source_url: ""
+    source_url_text: ""
     content: |
       Overall just a great group of people with a common goal. I came into 4Geeks with little 
       to no knowledge about coding and after 16 weeks I was building projects I could have never 
@@ -48,6 +57,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "/testimonials/fernando-funez.jpg"
     starts: 1
+    source_url: ""
+    source_url_text: ""
     content: |
       I highly recommend this coding boot camp!!!! Before 4Geeks I never had any experience with 
       code I didn't know where to start and within 10 weeks I was able to grasp the core concepts 
@@ -57,6 +68,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "/testimonials/salvador-desravines.jpg"
     starts: 1
+    source_url: ""
+    source_url_text: ""
     content: |
       This program was definitely one of the hardest things I've done in my life. It was 16 weeks of 
       constant work and practice. All things in life worth having is not going to be easily obtained. 
@@ -65,6 +78,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "/testimonials/jorge-montes.jpg"
     starts: 1
+    source_url: ""
+    source_url_text: ""
     content: |
       Now I think that I can actually know how to solve the issues that I face when I’m coding and 
       the professors have been a great help along the process. I would recommend this Bootcamp to 
@@ -73,6 +88,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "/testimonials/fidel-rosell.jpg"
     starts: 1
+    source_url: ""
+    source_url_text: ""
     content: |
       My experience on 4Geeks Academy was and is the best. The instructors and TAs will help you in 
       a blink. 4Geeks' Slack should be renamed to 4Geeks Overflow. The response time is fast. The 

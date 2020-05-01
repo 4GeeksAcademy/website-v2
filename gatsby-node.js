@@ -5,11 +5,15 @@ const {createFilePath} = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions;
+
+    // curstom post types for the website
     const types = ['MarkdownRemark', 'PageYaml', 'CourseYaml', 'LocationYaml', 'JobYaml'];
-    // const types = ['MarkdownRemark'];
+    
     if (types.includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});
+
+        // add properties to the graph
         if (meta) {
             createNodeField({node, name: `lang`, value: meta.lang});
             createNodeField({node, name: `slug`, value: meta.slug});
@@ -23,9 +27,12 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     }
 };
 
+// Create all the apges needed
 exports.createPages = async (params) =>
     await createBlog(params) &&
     await createPagesfromYml(params) &&
+
+    //also for the custom post types
     await createEntityPagesfromYml('Course', params) &&
     await createEntityPagesfromYml('Location', params) &&
     await createEntityPagesfromYml('Job', params) &&
@@ -226,6 +233,8 @@ const createPagesfromYml = async ({graphql, actions}) => {
     if (result.errors) throw new Error(result.errors);
 
     const translations = buildTranslations(result.data[`allPageYaml`]);
+
+    //for each page found on the YML
     result.data[`allPageYaml`].edges.forEach(({node}) => {
         const _targetPath = node.fields.slug === "index" ? "/" : node.fields.pagePath;
         console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath}`);

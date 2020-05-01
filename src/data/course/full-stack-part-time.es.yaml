@@ -3,7 +3,7 @@ meta_info:
   title: null
   description: null
   image: "/bg/bg-pr.jpg"
-  keywords: null
+  keywords: ""
   redirects: ["part-time", "programa"]
 
 tagline: "FULL STACK DEVELOPER"

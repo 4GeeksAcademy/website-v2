@@ -6,6 +6,8 @@ import {Card} from "../Card"
 import {H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {Row, Column, Wrapper, Divider} from '../Sections'
 import {Colors, RoundImage} from '../Styling'
+import {Link} from 'gatsby';
+
 
 const Testimonials = (props) => {
     const [carouselHeight, setCarouselHeight] = useState("500px")
@@ -20,14 +22,16 @@ const Testimonials = (props) => {
                           student_thumb
                           starts
                           content
+                          source_url
+                          source_url_text
                         }
                       }
                     }
                   }
                 }
               `)
-    console.log("Testimonials: ", data.allTestimonialsYaml.edges)
-    let testimonialsArray = data.allTestimonialsYaml.edges[0].node.testimonials;
+    let testimonialsArray = props.lang[0].node.testimonials;
+    console.log("Testimonials: ", props.lang[0].node.testimonials)
 
     return (
         <>
@@ -41,7 +45,7 @@ const Testimonials = (props) => {
                 dynamicHeight={true}
             >
                 {testimonialsArray.map((item, i) => {
-                    console.log("item", item)
+                    console.log("item", item.source_url_text)
                     return (
                         <Row align="center" padding="30px" >
                             <Card width="700px" key={i}>
@@ -58,7 +62,7 @@ const Testimonials = (props) => {
                                 <Divider height="10px" />
                                 <Row align="center" >
                                     <Column size="12" >
-                                        <Paragraph>
+                                        <Paragraph lineHeight="24px">
                                             <Span color={Colors.blue} >"</Span>
                                             {item.content}
                                             <Span color={Colors.blue} >"</Span>
@@ -73,6 +77,24 @@ const Testimonials = (props) => {
                                         </H4>
                                     </Column>
                                 </Row>
+                                <Row align="center">
+                                    {item.source_url_text === "" && item.source_url === "" ? null :
+                                        <Column size="12" >
+                                            <Link to={item.source_url}>
+                                                <Paragraph
+                                                    fs_xs="12px"
+                                                    fs_sm="12px"
+                                                    fs_md="14px"
+                                                    fs_lg="14px"
+                                                    fs_xl="14px"
+                                                    color={Colors.yellow}
+                                                >
+                                                    {item.source_url_text}
+                                                </Paragraph>
+                                            </Link>
+                                        </Column>}
+                                </Row>
+
                                 <Divider height="10px" />
 
                             </Card>
