@@ -41,6 +41,8 @@ heading_section:
 ## LEFT  BOX => PART-TIME
 ## RIGHT BOX => FULL-TIME
 ## CARACAS AT THE MOMENT HAS NO FINANCIAL OPTIONS SET
+hasFinancialsOption: false
+financials_max_months:
 prices:
   full_time:
     ## GENERAL INFO
@@ -149,4 +151,3 @@ location_office_image3: ""
 should_know: ""
 value: "Maracaibo"
 defaultLanguage: "es"
-hasFinancialsOption: false

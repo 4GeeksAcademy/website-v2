@@ -28,6 +28,8 @@ carousel_box:
     - path: "/images/locations/santiago-loc-2.jpg"
       alt: "Santiago Location Image"
 
+hasFinancialsOption: true
+financials_max_months: ["6 mo", "12 mo"]
 prices:
   full_time:
     ## GENERAL INFO
@@ -38,7 +40,7 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PAY UPFRONT"
+        heading_one: "FULL TIME"
         sub_heading: "and enjoy the best pricing in town"
       content:
         price: "2.760.000 CLP"
@@ -70,7 +72,7 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAY UPFRONT"
+        heading_one: "PART TIME"
         sub_heading: "and enjoy the best pricing in town"
       content:
         price: "2.415.000 CLP"
@@ -88,7 +90,7 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PAY UPFRONT"
+        heading_one: "PART TIME"
         sub_heading: "and enjoy the best pricing in town"
       content:
         price: "2.415.000 CLP"
@@ -114,38 +116,13 @@ prices:
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
-        - months: ""
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-        - months: ""
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-        - months: ""
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-        - months: ""
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-
       button:
         button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAY UPFRONT"
+        heading_one: "FULL TIME"
         sub_heading: "and enjoy the best pricing in town"
       content:
         price: "2.760.000 CLP"
@@ -175,4 +152,3 @@ location_office_image3: ""
 should_know: ""
 value: "Santiago de Chile"
 defaultLanguage: "es"
-hasFinancialsOption: true

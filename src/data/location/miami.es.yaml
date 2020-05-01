@@ -38,6 +38,7 @@ carousel_box:
 ## CENTER   BOX => FINANCIAL SLIDER OPTIONS
 ## RIGHT    BOX => ISA - INCOMING SHARING AGREEMENT
 hasFinancialsOption: true
+financials_max_months: ["6 mo", "12 mo", "24 mo", "36 mo", "42 mo", "60 mo"]
 prices:
   full_time:
     ## GENERAL INFO
