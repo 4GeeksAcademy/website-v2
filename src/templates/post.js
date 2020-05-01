@@ -79,10 +79,10 @@ export default function Template (props) {
                 <Row align="left">
                     <Column size="10">
                         <Row height="100%" align="around">
-                            <Column size="2" customRespSize respSize="2" alignSelf="center">
+                            <Column size="2" customRespSize respSize="2" alignSelf="center" >
                                 <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
                             </Column>
-                            <Column size="6" customRespSize respSize="10" alignSelf="center">
+                            <Column size="8" customRespSize respSize="10" alignSelf="center">
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px"><a href={`https://twitter.com/${filtered.name || "4GeeksAcademy"}`} rel="author noopener noreferrer nofollow">{`${postDate} - ${filtered.name || '4Geeks Academy'}`}</a></Paragraph></Row>
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${filtered.bio}`}</Paragraph></Row>
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text}`}</Paragraph></Row>
@@ -135,7 +135,7 @@ export default function Template (props) {
                 <Divider height="30px" />
                 <Row>
                     <Column size="10" customRespSize respSize="10" alignSelf="center">
-                        <RoundImage border="1.25rem" width="100%" height="200px" bsize="cover" position="center" url={post.frontmatter.image} />
+                        <RoundImage border="1.25rem" width="100%" height="300px" bsize="contain" position="center" url={post.frontmatter.image} />
                     </Column>
                 </Row>
                 <Row height="auto" align="left">
@@ -145,7 +145,7 @@ export default function Template (props) {
                 </Row>
                 <Row align="left" >
                     <Column size="10" align="left">
-                        { post.frontmatter.tags && <Row>
+                        {post.frontmatter.tags && <Row>
                             {post.frontmatter.tags.map((tag, i) => {
                                 return (
                                     <Card key={i} color="darkGray" padding="2px 5px" borders=".2rem" margin="5px 3px"><Paragraph color={Colors.darkGray}>{tag}</Paragraph></Card>

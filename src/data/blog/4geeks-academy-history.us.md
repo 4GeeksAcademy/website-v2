@@ -21,7 +21,7 @@ featured: true
 
 In 2009, together with two friends, we started a small software company with very big ambitions.  Just like any other startup story, we had no money (we didn't raise any funding), and our main office was our garage.
 
-[caption id="attachment_439" align="alignright" width="191"]![comunidad-rigos-300x274](https://4geeksacademy.co/wp-content/uploads/2015/12/comunidad-rigos-300x274-1.png) Developers Community Members[/caption]
+![comunidad-rigos-300x274](https://4geeksacademy.co/wp-content/uploads/2015/12/comunidad-rigos-300x274-1.png) Developers Community Members
 
 After lots of sleepless nights and lots of lines of code, we managed to start earning some money.  We had enough to hire our first three employees: a software designer (Santiago Perez) and  two developers: Ignacio Córdoba and Alex Milano.
 
