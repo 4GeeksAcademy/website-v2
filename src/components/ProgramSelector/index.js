@@ -36,21 +36,11 @@ const ProgramSelector = (props) => {
   const [toggles, setToggles] = useState(false)
   const [toggle, setToggle] = useState(false)
   const classes = useStyles();
-  const data = useStaticQuery(graphql`
-      query myQueryProgram{
-          loc: allLocationYaml {
-            edges {
-              node {
-                id
-                city
-                
-              }
-            }
-          }
-        }
-      `)
+
   // const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
-  let locArray = data.loc.edges;
+  console.log("pselect:", props.lang)
+  let locArray = props.lang;
+  // let locArray = data.loc.edges;
   let weekArray = ["16", "9"]
   let link = "";
   {props.week === 16 ? link = "full-time" : link = "part-time"}
@@ -67,9 +57,13 @@ const ProgramSelector = (props) => {
                 <>
                   {weekArray.map((item, index) => {
                     return (
-                      <Row key={index} height="50%" marginRight="0" marginLeft="0" backgroundHover={Colors.lightBlue} colorHover={Colors.white} align="around">
-                        <Link to={link}><Column border="custom" customBorderRadius=".25rem" size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column></Link>
-                      </Row>
+                      <Link to={link}>
+                        <Row key={index} height="50%" marginRight="0" marginLeft="0" backgroundHover={Colors.lightBlue} colorHover={Colors.white} align="around">
+                          <Column border="custom" customBorderRadius=".25rem" size="12" alignSelf="center">
+                            <Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph>
+                          </Column>
+                        </Row>
+                      </Link>
                     )
                   })}
                 </>
