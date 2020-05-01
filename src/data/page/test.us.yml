@@ -3,7 +3,7 @@ meta_info:
     title: "Just a dummy test, do not delete it!!!"
     description: "Do not delete me"
     image: "https://do_not_delete_me.png"
-    keywords: ["codign bootcamp"]
+    keywords: "codign bootcamp"
     redirects: [
         "/testing"
     ]

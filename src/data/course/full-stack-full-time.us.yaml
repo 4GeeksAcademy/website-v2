@@ -3,8 +3,8 @@ meta_info:
   title: null
   description: null
   image: "/images/program-bg.png"
-  keywords: null
-  redirects: ["/course/full-time", "/full-time"]
+  keywords: ""
+  redirects: ["/course/full-time", "full-time"]
 
 tagline: "FULL STACK DEVELOPER"
 

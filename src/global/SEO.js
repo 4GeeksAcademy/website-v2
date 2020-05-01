@@ -13,6 +13,7 @@ const SEO = (props) => (
             defaultTitle,
             titleTemplate,
             defaultDescription,
+            defaultKeywords,
             siteUrl,
             defaultImage,
             social:{
@@ -28,9 +29,10 @@ const SEO = (props) => (
         },
       },
     }) => {
-      const { title, description, image, article, social, author, context } = props;
+      const { title, description, image, article, social, author, context, keywords, unlisted } = props;
       const { lang, type, pagePath } = context;
       const url = `${siteUrl}${pagePath || "/"}`;
+      const _keywords = keywords ? (keywords + [].join(",")) : defaultKeywords[lang].join(",");
       console.log("Seo: ", props);
       console.log("Context: ", context);
       return (
@@ -38,19 +40,21 @@ const SEO = (props) => (
             <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
                 <html lang={langCountries[lang]} />
                 <link rel="canonical" href={`${siteUrl}${pagePath}`} />
-                <meta name="description" content={description || defaultDescription} />
+                <meta name="description" content={description || defaultDescription[lang]} />
+                <meta name="keywords" content={_keywords} />
+                { unlisted === true && <meta name="robots" content="noindex" /> }
                 <meta name="image" content={image || defaultImage} />
                 {(type === "blog" ) ? <meta property="og:type" content="article" />
                     : <meta property="og:type" content="website" />
                 }
                 <meta name="og:title" content={title || defaultTitle} />
                 <meta name="og:url" content={url} />
-                <meta property="og:description" content={description || defaultDescription} />
+                <meta property="og:description" content={description || defaultDescription[lang]} />
                 <meta property="og:image" content={`${siteUrl}${image || defaultImage}`} />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:creator" content={social.twitterUsername || defaultTwitterUsername} />
                 <meta name="twitter:title" content={title || defaultTitle} />
-                <meta name="twitter:description" content={description || defaultDescription} />
+                <meta name="twitter:description" content={description || defaultDescription[lang]} />
                 <meta name="twitter:image" content={`${siteUrl}${image || defaultImage}`} />
             </Helmet>
             <SchemaOrg
@@ -82,6 +86,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   lang: PropTypes.string,
+  keywords: PropTypes.string,
   social: PropTypes.object,
   pathname: PropTypes.string,
   author: PropTypes.string,
@@ -93,6 +98,7 @@ SEO.defaultProps = {
   author: '',
   lang: 'us',
   description: null,
+  keywords: null,
   image: null,
   social: {},
   pathname: null,
@@ -105,7 +111,14 @@ const query = graphql`
       siteMetadata {
         defaultTitle
         titleTemplate
-        defaultDescription
+        defaultDescription{
+          es
+          us
+        }
+        defaultKeywords{
+          es
+          us
+        }
         siteUrl
         defaultImage
         social{

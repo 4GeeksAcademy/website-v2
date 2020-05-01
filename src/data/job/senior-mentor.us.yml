@@ -1,10 +1,10 @@
 meta_info:
-  slug: senior-mentor
-  title: null
+  slug: "lead-instructor"
+  title: "Lead Instructor"
   description: null
   image: null
-  keywords: none
-  redirects: []
+  keywords: ""
+  redirects: [ "senior-mentor"]
 
 ## BANNER INFO
 banner_heading: "Lead Instructor"

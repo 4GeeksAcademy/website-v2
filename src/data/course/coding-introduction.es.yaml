@@ -3,7 +3,7 @@ meta_info:
   title: "Curso de introducción a la programación - 4Geeks Academy"
   description: "Learn to code in just a couple of weeks. Ideal get you introduced in the world of coding."
   image: "/images/program-bg.png"
-  keywords: ["introducción a la programación", "aprender a programar"]
+  keywords: "introducción a la programación, aprender a programar"
   redirects: ["/introduccion-programacion-codigo"]
 
 tagline: "Curso de introducción a la programación - 4Geeks Academy"

@@ -41,7 +41,8 @@ export default function Template (props) {
 
         return [year, month, day].join('-');
     }
-    let postDate = GetFormattedDate(post.frontmatter.date)
+    let postDate = GetFormattedDate(post.frontmatter.date);
+    console.log("Frontmatter", data.markdownRemark.frontmatter);
     return (
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Wrapper
@@ -82,14 +83,14 @@ export default function Template (props) {
                                 <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
                             </Column>
                             <Column size="6" customRespSize respSize="10" alignSelf="center">
-                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${postDate} - ${filtered.name != undefined || filtered.name != null ? filtered.name : '4Geeks Academy'}`}</Paragraph></Row>
+                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px"><a href={`https://twitter.com/${filtered.name || "4GeeksAcademy"}`} rel="author noopener noreferrer nofollow">{`${postDate} - ${filtered.name || '4Geeks Academy'}`}</a></Paragraph></Row>
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${filtered.bio}`}</Paragraph></Row>
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text}`}</Paragraph></Row>
-                                <Row>
+                                {filtered.username && <Row>
                                     <TwitterFollowButton
                                         screenName={filtered.username}
                                     />
-                                </Row>
+                                </Row>}
 
                             </Column>
 
@@ -144,16 +145,13 @@ export default function Template (props) {
                 </Row>
                 <Row align="left" >
                     <Column size="10" align="left">
-                        <Row>
-
-
+                        { post.frontmatter.tags && <Row>
                             {post.frontmatter.tags.map((tag, i) => {
                                 return (
                                     <Card key={i} color="darkGray" padding="2px 5px" borders=".2rem" margin="5px 3px"><Paragraph color={Colors.darkGray}>{tag}</Paragraph></Card>
                                 )
                             })}
-
-                        </Row>
+                        </Row>}
                     </Column>
                 </Row>
                 <Divider height="100px" />
@@ -173,6 +171,7 @@ query BlogPostBySlug($slug: String!){
             date
             avatar
             excerpt
+            unlisted
             image
             tags
         }

@@ -3,11 +3,17 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    defaultTitle: 'Gatsby Storybook Starter',
+    defaultTitle: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
     titleTemplate: "%s · 4Geeks Academy",
-    siteUrl: `https://www.4geeksacademy.com`,
-    defaultDescription: "4Geeks Academy is a world-wide leading coding bootcamp/academy focused specially part-time studies, you don't have to quite your job to become a web developer. Career support for life, coding mentoring for life.",
-    defaultKeywords: ["coding bootcamp", "coding classes", "learn to code", "programing classes", "curso de programacion", "curso de informatica", "escuela de codigo", "escuela de programacion"],
+    siteUrl: `https://www.4geeksacademy.co`,
+    defaultDescription: {
+      "us": "4Geeks Academy is a world-wide leading coding school focused specially in part-time studies, you don't have to quite your job to become a web developer. Career support for life, coding mentoring for life. We have Miami Coding bootcamps; in Madrid, Spain; Santiago de Chile and Caracas, Venezuela. ",
+      "es": "4Geeks Academy es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, en estudios principalmente part-time donde no tienes que dejar tu trabajo para aprender a programar.",
+    },
+    defaultKeywords: {
+      "us": ["coding bootcamp", "coding classes", "learn to code", "programming classes", "miami coding bootcamp", "soding school", "learn python", "python classes", "learn javascript", "learn node", "learn programming", "become a developer", "time to code", "4geeks academy", "coding bootcamp online"],
+      "es": ["coding bootcamp", "curso de programacion", "curso de informatica", "escuela de codigo", "miami coding bootcamp", "escuela de programacion", "grado medio informatica", "grado medio progamacion", "informatica", "bootcamp de informatica", "estudios de informatica", "estudios de programacion", "coding bootcamp online", "aprender a programar online", "cursos de programción online"],
+    },
     defaultImage: "/images/4geeks-main.jpg",
     social: {
       defaultTwitterUsername: "@4geeksacademy",
@@ -39,8 +45,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: '4Geeks Academy - Coding Bootcamp, Academia de programacion: Miami, Madrid, Santiago de Chile y Venezuela',
-        short_name: '4Geeks Academy - Coding Bootcamp',
+        name: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
+        short_name: '4Geeks Academy - Miami Coding Bootcamp and worldwide',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#744C9E',
