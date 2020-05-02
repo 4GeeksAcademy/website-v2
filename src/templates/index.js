@@ -478,6 +478,7 @@ export const query = graphql`
               description
               image
               slug
+              video
             }
           }
         }
