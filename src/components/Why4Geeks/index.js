@@ -36,14 +36,31 @@ export default (props) => {
       <Row height="auto">
         {info.why.map((i, index) => (
           <Column size="4" key={index}>
-            <ReactPlayer
-              className='react-player'
-              light={i.image}
-              controls={true}
-              url={i.video}
-              width='100%'
-              height='100%'
-            />
+            {i.video != "" ?
+              <ReactPlayer
+                className='react-player'
+                light={i.image}
+                controls={true}
+                url={i.video}
+                width='100%'
+                height='100%'
+              />
+              :
+
+              <RoundImage
+                url={i.image}
+                bsize="cover"
+                mb="10px"
+                border="1.25rem"
+                position="center center"
+                h_xs="230px"
+                h_sm="230px"
+                h_md="230px"
+                h_lg="230px"
+                h_xl="230px"
+              />
+
+            }
             {/* <RoundImage
               url={i.image}
               bsize="cover"
