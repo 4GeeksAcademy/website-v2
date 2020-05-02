@@ -9,12 +9,15 @@ why:
   - title: "Get a job in Tech"
     description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
     image: "/images/why1.png"
+    video: "https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
     slug: job-in-tech
   - title: "We finance your career"
     description: "Don't pay anything from day one until you finally get a coding job with our Income Sharing Agreement(ISA)."
     image: "/images/why2.png"
+    video: "https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
     slug: finance-your-career
   - title: "Never code alone again"
     description: "Limitless and forever: Mentorships, exercises, permanent chatroom, real classrooms, even after you get your job."
     image: "/images/why3.png"
+    video: "https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
     slug: never-code-alone-again

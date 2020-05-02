@@ -82,7 +82,8 @@
     "react-twitter-embed": "^3.0.3",
     "reactstrap": "^8.4.0",
     "styled-components": "^4.3.2",
-    "styled-reset-advanced": "^1.0.1"
+    "styled-reset-advanced": "^1.0.1",
+    "video-react": "^0.14.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.11",
