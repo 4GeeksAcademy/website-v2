@@ -194,3 +194,13 @@ a:hover {
 a {
     color: black;
 }
+.react-player video, .react-player__preview{
+    border-radius: 1.25rem!important;
+    
+}
+.react-player{
+    height: auto!important;
+}
+.react-player__preview{
+    height: 230px!important;
+}

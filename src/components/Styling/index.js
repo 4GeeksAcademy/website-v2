@@ -65,13 +65,14 @@ export const Option = styled.option`
 `
 export const Over = styled.div`
     position: absolute;
-    bottom: 20px;
-    right: 15px;
-    left: 15px;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.8); /* Black see-through */
+    top: ${props => props.top};
+    bottom: ${props => props.bottom};
+    right: ${props => props.right};
+    left: ${props => props.left};
+    // background: rgb(0, 0, 0);
+    background: ${props => props.bg};
     color: #f1f1f1;
-    border-radius: 10px;
+    border-radius: ${props => props.b_radius};
     transition: .5s ease;
     opacity:0;
     padding: 10px 15px;
@@ -312,4 +313,11 @@ Select.defaultProps = {
     background: Colors.white,
     color: Colors.black,
     border: 'none',
+};
+Over.defaultProps = {
+    b_radius: '10px',
+    bg: 'rgba(0, 0, 0, 0.8)',
+    bottom: '20px',
+    right: '15px',
+    left: '15px'
 };
