@@ -27,7 +27,7 @@ export default function Template (props) {
             return obj;
         }, {});
 
-    console.log("filt", props)
+    console.log("filt", filtered)
     function GetFormattedDate (date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
