@@ -23,146 +23,60 @@ import {InView} from 'react-intersection-observer'
 
 
 
-export default (props) => {
-  console.log("props", props)
+const PricesAndPayments = (props) => {
   const {session, setSession} = useContext(SessionContext);
-  // const [steps, setSteps] = useState(() => getSteps(session.location));
   const [checked, setChecked] = useState(false)
-
   const classes = useStyles();
-  const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
-  const steps = getSteps(session.location);
-  // const [test, setTest] = useState(() => planData)
-  console.log("session", session)
-  const data = useStaticQuery(graphql`
-    query myQueryTest{
-      allLocationYaml {
-        edges {
-          node {
-            city
-            hasFinancialsOption
-            meta_info {
-              slug
-              description
-              image
-              keywords
-              redirects
-            }
-            image
-            prices {
-              full_time {
-                center_section {
-                  button {
-                    button_text
-                  }
-                  header {
-                    sub_heading
-                    heading_one
-                    heading_two
-                  }
-                  plans {
-                    months
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                }
-                left_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    heading_two
-                    sub_heading
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading
-                    sub_heading
-                    heading_one
-                    heading_two
-                  }
-                }
-              }
-              part_time {
-                center_section {
-                  button {
-                    button_text
-                  }
-                  header {
-                    heading_two
-                    sub_heading
-                    heading_one
-                  }
-                  plans {
-                    months
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                }
-                left_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-              }
-            }
-            seo_title
-            sub_heading
-            tagline
-          }
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [currentCourseType, setCurrentCourseType] = useState()
+
+  useEffect(() => {
+    const programType = async () => {
+      const type = await getProgramInfo()
+      setCurrentCourseType(type)
+    }
+    programType()
+  }, [])
+  const [prova, setProva] = useState({
+    currentCityLocation: "",
+    activeStep: 0,
+    steps: [],
+    currentFilteredCourse: ""
+  })
+  useEffect(() => {
+    const loadCurrentCity = async () => {
+      const city = await session.location;
+      const myLocation = await getCurrentCity(city)
+      if (myLocation != null) {
+        setProva({...prova, currentCityLocation: myLocation})
+      }
+    }
+    loadCurrentCity();
+  }, [session.location])
+  useEffect(() => {
+    const loadCurrentProgramSteps = async () => {
+      if (currentCourseType === "part-time") {
+        if (prova.currentCityLocation.hasFinancialsOption === true) {
+          setProva({
+            ...prova,
+            steps: prova.currentCityLocation.financials_max_months,
+            activeStep: prova.currentCityLocation.financials_max_months.length - 1,
+            currentFilteredCourse: prova.currentCityLocation.prices.part_time
+          })
+        }
+        else {
+          setProva({
+            ...prova,
+            steps: null,
+            activeStep: null,
+            currentFilteredCourse: prova.currentCityLocation.prices.part_time
+          })
         }
       }
-  }
-    `)
-
-
-  let currentCityInfo = null;
-  let info = null;
-  currentCityInfo = data.allLocationYaml.edges.filter((item) => {return item.node.city === session.location})
-  {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
+    }
+    loadCurrentProgramSteps();
+  }, [prova.currentCityLocation])
 
   function getProgramInfo () {
     let program = "";
@@ -175,47 +89,15 @@ export default (props) => {
     }
     return program
   }
-  function getLocationProgramInfo (infoCity, courseType) {
-    let cityProgramInfo = "";
-    if (courseType === "full-time") {
-      cityProgramInfo = infoCity.prices.full_time
-      return cityProgramInfo
-    }
-    if (courseType === "part-time") {
-      cityProgramInfo = infoCity.prices.part_time
-      return cityProgramInfo
-    }
+
+  function getCurrentCity (needALocation) {
+    let currentCityInfo = null;
+    let info = null;
+    currentCityInfo = props.lang.filter((item) => {return item.node.city === needALocation})
+    {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
+    return info
   }
-  let locInfo = null;
-  {info != null ? locInfo = getLocationProgramInfo(info, getProgramInfo()) : null}
 
-  let planData = null;
-  {locInfo != null ? planData = locInfo.center_section.plans : null}
-  let planDataLength = null;
-  const intervalRef = useRef(null);
-  if (planData != null) {planDataLength = planData.length - 1}
-  // console.log("planData", test)
-  // const start = () => {
-  //   let maxSteps = steps.length
-  //   // if (stepArray != null) {console.log("stepArray", stepArray)}
-  //   // getSteps(session.location);
-  //   // if (stepArray.length > 0) {console.log("stepsArray", stepArray)}
-  //   intervalRef.current = setInterval(() => {
-  //     console.log("Paolo", maxSteps)
-  //     setActiveStep(activeStep => activeStep - 1);
-  //     // if (maxSteps != null) {setActiveStep(planDataLength); maxSteps = planDataLength;}
-  //     // maxSteps -= 1;
-  //   }, 1000);
-
-  // }
-  const stop = () => {
-    clearInterval(intervalRef.current);
-  };
-  // useEffect(() => {
-
-  //   start()
-
-  // }, [])
   const handleChange = (checked) => {
     setChecked(checked)
   }
@@ -245,8 +127,9 @@ export default (props) => {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
   const handleStep = step => () => {
-    stop()
-    setActiveStep(step);
+    // stop()
+    // setActiveStep(step);
+    setProva({...prova, activeStep: step});
   };
   const handleComplete = () => {
     const newCompleted = completed;
@@ -260,53 +143,46 @@ export default (props) => {
   };
 
 
-
-
-
-
   function getStepLogo (step) {
     switch (step) {
       case 0:
-        return <img src={planData[0].logo} height="20px" />;
+        return <img src={prova.currentFilteredCourse.center_section.plans[0].logo} height="20px" />;
       case 1:
-        return <img src={planData[1].logo} height="20px" />;
+        return <img src={prova.currentFilteredCourse.center_section.plans[1].logo} height="20px" />;
       case 2:
-        return <img src={planData[2].logo} height="20px" />;
+        return <img src={prova.currentFilteredCourse.center_section.plans[2].logo} height="20px" />;
       case 3:
-        return <img src={planData[3].logo} height="20px" />;
+        return <img src={prova.currentFilteredCourse.center_section.plans[3].logo} height="20px" />;
       case 4:
-        return <img src={planData[4].logo} height="20px" />;
+        return <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" />;
       case 5:
-        return <><img src={planData[5].logo} height="20px" /> <img src={planData[4].logo} height="20px" /></>;
+        return <><img src={prova.currentFilteredCourse.center_section.plans[5].logo} height="20px" /> <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" /></>;
       default:
         return 'Loading Data';
     }
   }
 
-  function getStepContent (item) {
-    let myStep;
-    for (let i = 0; i < item.length; i++) {
-      myStep = item[i]
 
-    }
-    return myStep
-  }
-  console.log("meeeee", getStepContent(steps))
   function getStepContents (step) {
-    console.log("stepeeeeee", step)
     switch (step) {
       case 0:
-        return planData[0].payment
+        return prova.currentFilteredCourse.center_section.plans[0].payment
+        break
       case 1:
-        return planData[1].payment
+        return prova.currentFilteredCourse.center_section.plans[1].payment
+        break
       case 2:
-        return planData[2].payment
+        return prova.currentFilteredCourse.center_section.plans[2].payment
+        break
       case 3:
-        return planData[3].payment
+        return prova.currentFilteredCourse.center_section.plans[3].payment
+        break
       case 4:
-        return planData[4].payment
+        return prova.currentFilteredCourse.center_section.plans[4].payment
+        break
       case 5:
-        return planData[5].payment
+        return prova.currentFilteredCourse.center_section.plans[5].payment
+        break
       default:
         return 'Loading Data';
     }
@@ -315,34 +191,33 @@ export default (props) => {
   function getStepPayments (step, language) {
     switch (step) {
       case 0:
-        return planData[0].paymentInfo
+        return prova.currentFilteredCourse.center_section.plans[0].paymentInfo
       case 1:
-        return planData[1].paymentInfo
+        return prova.currentFilteredCourse.center_section.plans[1].paymentInfo
       case 2:
-        return planData[2].paymentInfo
+        return prova.currentFilteredCourse.center_section.plans[2].paymentInfo
       case 3:
-        return planData[3].paymentInfo
+        return prova.currentFilteredCourse.center_section.plans[3].paymentInfo
       case 4:
-        return planData[4].paymentInfo
+        return prova.currentFilteredCourse.center_section.plans[4].paymentInfo
       case 5:
-        return planData[5].paymentInfo
+        return prova.currentFilteredCourse.center_section.plans[5].paymentInfo
       default:
         return 'Loading Data';
     }
   }
-  // const handleClick = (index) => {
-  //   handleStep(index);
-  //   stop();
-  // }
+
+  if (scrollPosition == 2741) {
+    console.log("started")
+    // start()
+  }
 
   return (
 
     <>
-
       {/* 3 COLUMNS LAYOUT */}
-      {info != null ?
+      {prova.currentFilteredCourse &&
         <>
-
           <Row align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{session.location}</Paragraph></Row>
           <Divider height="50px" />
           <Row align="center">
@@ -364,9 +239,9 @@ export default (props) => {
                             fs_md="18px"
                             fs_lg="20px"
                             fs_xl="16px"
-                            align="center">{locInfo.left_section.header.heading_one}</H4>
+                            align="center">{prova.currentFilteredCourse.left_section.header.heading_one}
+                          </H4>
                         </Row>
-                        {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">locInfo.left_section.header.heading_two.es : locInfo.left_section.header.heading_two.us}</H4></Row> */}
                       </Column>
                     </Row>
                   </Column>
@@ -375,7 +250,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
                       <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="12px" color={Colors.gray}>{locInfo.left_section.header.sub_heading}</Paragraph>
+                        <Paragraph align="center" fontSize="12px" color={Colors.gray}>{prova.currentFilteredCourse.left_section.header.sub_heading}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -390,8 +265,8 @@ export default (props) => {
                           fs_md="24px"
                           fs_lg="20px"
                           fs_xl="24px"
-                          align="center" >{locInfo.left_section.content.price}</H3>
-                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{locInfo.left_section.content.price_info}</Paragraph>
+                          align="center" >{prova.currentFilteredCourse.left_section.content.price}</H3>
+                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{prova.currentFilteredCourse.left_section.content.price_info}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -400,87 +275,89 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.left_section.button.button_text}</Button></Link>
+                        <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{prova.currentFilteredCourse.left_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
                 </Row>
               </Card>
             </Column>
-            {info.hasFinancialsOption === true ? <Column size="4" customRespSize respSize="12">
-              <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
-                <Row height="100px" >
-                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                    <Row height="100%" >
-                      <Column size="12" alignSelf="center" >
-                        <Row align="center" height="100%" >
-                          <H4 fs_xs="16px"
+            {prova.currentCityLocation.hasFinancialsOption === true ?
+              <Column size="4" customRespSize respSize="12">
+                <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
+                  <Row height="100px" >
+                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                      <Row height="100%" >
+                        <Column size="12" alignSelf="center" >
+                          <Row align="center" height="100%" >
+                            <H4 fs_xs="16px"
+                              fs_sm="24px"
+                              fs_md="18px"
+                              fs_lg="20px"
+                              fs_xl="16px" align="center" color={Colors.white}>{prova.currentFilteredCourse.center_section.header.heading_one}</H4></Row>
+                        </Column>
+                      </Row>
+                    </Column>
+                  </Row>
+                  <Row height="50px" >
+                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                      <Row height="100%" align="center">
+                        <Column size="8" alignSelf="center" >
+                          <Paragraph align="center" fontSize="12px" color={Colors.yellow}>{prova.currentFilteredCourse.center_section.header.sub_heading}</Paragraph>
+                        </Column>
+                      </Row>
+                    </Column>
+                  </Row>
+                  <Row height="50px" >
+                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                      <Row height="100%" >
+                        <Column size="12" alignSelf="center" >
+                          <H3
+                            fs_xs="20px"
                             fs_sm="24px"
-                            fs_md="18px"
+                            fs_md="24px"
                             fs_lg="20px"
-                            fs_xl="16px" align="center" color={Colors.white}>{locInfo.center_section.header.heading_one}</H4></Row>
-                        {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center" color={Colors.white}>{props.lang === "es" ? locInfo.center_section.header.heading_two.es : locInfo.center_section.header.heading_two.us}</H4></Row> */}
-                      </Column>
-                    </Row>
-                  </Column>
-                </Row>
-                <Row height="50px" >
-                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                    <Row height="100%" align="center">
-                      <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="12px" color={Colors.yellow}>{locInfo.center_section.header.sub_heading}</Paragraph>
-                      </Column>
-                    </Row>
-                  </Column>
-                </Row>
-                <Row height="50px" >
-                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                    <Row height="100%" >
-                      <Column size="12" alignSelf="center" >
-                        <H3
-                          fs_xs="20px"
-                          fs_sm="24px"
-                          fs_md="24px"
-                          fs_lg="20px"
-                          fs_xl="24px"
-                          align="center"
-                          color={Colors.white}>{getStepContents(activeStep)}</H3>
-                        <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(activeStep, props.lang)}</Paragraph>
-                      </Column>
-                    </Row>
-                  </Column>
-                </Row>
-                <Row height="80px" >
-                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                    <Row height="100%" align="center">
-                      <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
-                        {steps.map((label, index) => (
-                          <Step key={label}>
-                            <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
-                              <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
-                            </StepButton>
-                          </Step>
-                        ))}
-                      </Stepper>
-                    </Row>
-                    <Row align="center" height="40px">
-                      <Column size="12" align="center">
-                        <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
-                      </Column>
-                    </Row>
-                  </Column>
-                </Row>
-                <Row height="120px" >
-                  <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                    <Row height="100%" >
-                      <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.center_section.button.button_text}</Button></Link>
-                      </Column>
-                    </Row>
-                  </Column>
-                </Row>
-              </Card>
-            </Column>
+                            fs_xl="24px"
+                            align="center"
+                            color={Colors.white}>
+                            {getStepContents(prova.activeStep)}
+                          </H3>
+                          <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(prova.activeStep, props.lang)}</Paragraph>
+                        </Column>
+                      </Row>
+                    </Column>
+                  </Row>
+                  <Row height="80px" >
+                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                      <Row height="100%" align="center">
+                        <Stepper nonLinear activeStep={prova.activeStep} alternativeLabel connector={<QontoConnector />}>
+                          {prova.steps != null && prova.steps.map((label, index) => (
+                            <Step key={label}>
+                              <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
+                                <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+                              </StepButton>
+                            </Step>
+                          ))}
+                        </Stepper>
+                      </Row>
+                      <Row align="center" height="40px">
+                        <Column size="12" align="center">
+                          <Typography className={classes.instructions}>{getStepLogo(prova.activeStep)}</Typography>
+                        </Column>
+                      </Row>
+                    </Column>
+                  </Row>
+                  <Row height="120px" >
+                    <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
+                      <Row height="100%" >
+                        <Column size="12" alignSelf="center" align="center">
+                          <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{prova.currentFilteredCourse.center_section.button.button_text}</Button></Link>
+                        </Column>
+                      </Row>
+                    </Column>
+                  </Row>
+                </Card>
+              </Column>
               : null}
             <Column size="4" customRespSize respSize="12">
               <Card shadow width="100%" height="350px" margin="5px 0">
@@ -493,7 +370,7 @@ export default (props) => {
                             fs_sm="24px"
                             fs_md="18px"
                             fs_lg="20px"
-                            fs_xl="16px" align="center">{locInfo.right_section.header.heading_one}</H4></Row>
+                            fs_xl="16px" align="center">{prova.currentFilteredCourse.right_section.header.heading_one}</H4></Row>
                         {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.right_section.header.heading_two.es : locInfo.right_section.header.heading_two.us}</H4></Row> */}
                       </Column>
                     </Row>
@@ -503,7 +380,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" align="center">
                       <Column size="8" alignSelf="center" >
-                        <Paragraph align="center" fontSize="12px" color={Colors.gray}>{locInfo.right_section.header.sub_heading}</Paragraph>
+                        <Paragraph align="center" fontSize="12px" color={Colors.gray}>{prova.currentFilteredCourse.right_section.header.sub_heading}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -518,8 +395,8 @@ export default (props) => {
                           fs_md="24px"
                           fs_lg="20px"
                           fs_xl="24px"
-                          align="center" >{locInfo.right_section.content.price}</H3>
-                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{locInfo.right_section.content.price_info}</Paragraph>
+                          align="center" >{prova.currentFilteredCourse.right_section.content.price}</H3>
+                        <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{prova.currentFilteredCourse.right_section.content.price_info}</Paragraph>
                       </Column>
                     </Row>
                   </Column>
@@ -528,7 +405,7 @@ export default (props) => {
                   <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                     <Row height="100%" >
                       <Column size="12" alignSelf="center" align="center">
-                        <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{locInfo.right_section.button.button_text}</Button></Link>
+                        <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{prova.currentFilteredCourse.right_section.button.button_text}</Button></Link>
                       </Column>
                     </Row>
                   </Column>
@@ -536,11 +413,13 @@ export default (props) => {
               </Card>
             </Column>
           </Row>
-        </> : <Row>Loading ...</Row>
+        </>
+
       }
     </>
   )
 }
+export default (PricesAndPayments)
 
 const QontoConnector = withStyles({
   alternativeLabel: {
@@ -691,11 +570,3 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: Colors.blue,
   },
 }));
-
-function getSteps (location) {
-  if (location === "Miami") {return ['6 mo', '12 mo', '24 mo', '36 mo', '42 mo', '60 mo'];}
-  if (location === "Santiago de Chile") {return ['6 mo', '12 mo'];}
-  if (location === "Caracas" || location === "Maracaibo") {return null;}
-  if (location === "Madrid") {return ['6 mo', '12 mo'];}
-  if (location === null) {return [];}
-}
