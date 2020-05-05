@@ -208,7 +208,6 @@ const PricesAndPayments = (props) => {
   }
 
   if (scrollPosition == 2741) {
-    console.log("started")
     // start()
   }
 

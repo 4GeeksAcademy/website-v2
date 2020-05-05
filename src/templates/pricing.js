@@ -133,7 +133,7 @@ const Pricing = (props) => {
                     title={yml.prices.heading}
                     primary
                 />
-                <PricesAndPayment type={pageContext.slug} lang={pageContext.lang} />
+                <PricesAndPayment type={pageContext.slug} lang={data.allLocationYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
@@ -278,6 +278,128 @@ export const query = graphql`
               symbol
               symbol_position
             }
+          }
+        }
+      }
+      allLocationYaml(filter: {lang: {eq: $lang}}){
+        edges {
+          node {
+            id
+            city
+            hasFinancialsOption
+            financials_max_months
+            
+            meta_info {
+              slug
+              description
+              image
+              keywords
+              redirects
+            }
+            image
+            lang
+            prices {
+              full_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    sub_heading
+                    heading_one
+                    heading_two
+                  }
+                  plans {
+                    months
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
+                }
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    heading_two
+                    sub_heading
+                  }
+                }
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading
+                    sub_heading
+                    heading_one
+                    heading_two
+                  }
+                }
+              }
+              part_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    heading_two
+                    sub_heading
+                    heading_one
+                  }
+                  plans {
+                    months
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
+                }
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                }
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                }
+              }
+            }
+            seo_title
+            sub_heading
+            tagline
           }
         }
       }
