@@ -353,7 +353,7 @@ const Home = (props) => {
           primary
         />
         <Divider height="50px" />
-        <AlumniProjects hasTitle />
+        <AlumniProjects hasTitle showThumbs="false" />
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
