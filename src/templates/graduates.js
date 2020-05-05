@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
-import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
+import {H2, H3, H4, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Card} from '../components/Card'
 import Grid from '@material-ui/core/Grid';
@@ -14,39 +14,18 @@ import AlumniProjects from '../components/AlumniProjects'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 
-
-
 const Graduates = ({data, pageContext, yml}) => {
-    const [array, setArray] = useState(
-        [
-            "/images/alumni-bg.png",
-            "/images/bitcoin.png"
-        ]
-    )
-    console.log("jo", array)
     return (
         <>
-
             <Divider height="100px" />
             <Wrapper
                 style="default">
-                <AlumniProjects />
-                {/* <Carousel>
-                    {array.map((item, i) => {
-                        return (
-                            <div key={i}>
-                                <img src={item} />
-                                <p className="legend">Legend 1</p>
-                            </div>
-                        );
-                    })}
-                </Carousel> */}
+                <AlumniProjects showThumbs="true" changeIndex={() => setSlideIndex()} />
             </Wrapper>
             <Divider height="50px" />
             <Wrapper
                 style="default"
                 height="400px"
-
             >
                 <Title
                     title={yml.about.heading}
@@ -90,8 +69,6 @@ const Graduates = ({data, pageContext, yml}) => {
                                                 </Column>
                                             </Row>
                                             <Row height="5%" />
-
-
                                         </Column>
                                     </Row>
                                 </Column>
@@ -101,9 +78,7 @@ const Graduates = ({data, pageContext, yml}) => {
                     </Column>
                 </Row>
             </Wrapper>
-
             <Divider height="250px" />
-
         </>
     )
 };
