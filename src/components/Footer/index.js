@@ -80,11 +80,14 @@ const Footer = (props) => {
                                 <Paragraph fontSize="12px" color={Colors.gray}>@ 4Geeks Academy LLC 2019 </Paragraph>
                             </Column>
                             <Column size="3" margin="5px 0" customRespSize respSize="6">
-                                <Row>
-                                    <Column size="6" customRespSize respSize="6">
+                                <Row align="around">
+                                    <Column size="4" customRespSize respSize="6" selfAlign="center">
+                                        <Paragraph fontSize="12px" color={Colors.gray}>We accept: </Paragraph>
+                                    </Column>
+                                    <Column size="4" customRespSize respSize="6">
                                         <RoundImage url="/images/bitcoin.png" height="12px" backgroundColor="transparent" position="center" bsize="contain" />
                                     </Column>
-                                    <Column size="6" customRespSize respSize="6">
+                                    <Column size="4" customRespSize respSize="6">
                                         <RoundImage url="/images/ethereum.png" height="14px" backgroundColor="transparent" position="center" bsize="contain" />
                                     </Column>
                                 </Row>

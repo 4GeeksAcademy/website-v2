@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
-import Layout from '../global/Layout';
-import styled, {css, keyframes} from 'styled-components';
 import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'
-import {Card} from '../components/Card'
-import {makeStyles} from '@material-ui/core/styles';
+import Testimonials from '../components/Testimonials'
 import BaseRender from './_baseRender'
 
 function splitTitleString (string) {
@@ -124,6 +121,18 @@ const GeekPal = (props) => {
           })}
         </Row>
       </Wrapper>
+      <Divider height="50px" />
+      <Wrapper style="default">
+        {/* <Title
+          primary
+          title={yml.testimonial_header.heading}
+          paragraph={yml.testimonial_header.sub_heading}
+          customParagraphSize="8"
+        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+        /> */}
+        <Divider height="20px" />
+        <Testimonials lang={data.allTestimonialsYaml.edges} />
+      </Wrapper>
       <Divider height="100px" />
     </>
   )
@@ -150,7 +159,24 @@ export const query = graphql`
                 title
                 sub_title
               }
-            }
+            } 
+              
+        } 
+      }
+    }
+    allTestimonialsYaml(filter: {lang: {eq: $lang}}) {
+      edges {
+        node {
+          lang
+          testimonials {
+            student_name
+            testimonial_date
+            student_thumb
+            starts
+            content
+            source_url
+            source_url_text
+          }
         }
       }
     }

@@ -36,7 +36,7 @@ export default (props) => {
                 h_sm="230px"
                 h_md="230px"
                 h_lg="230px"
-                h_xl="230px"
+                h_xl="150px"
               />
 
             }
