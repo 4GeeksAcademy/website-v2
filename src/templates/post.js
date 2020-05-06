@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
@@ -57,7 +57,7 @@ export default function Template (props) {
 
                             <TwitterShareButton
                                 className="network__share-button"
-                                url={`https://www.twitter.com/${filtered.username}`}
+                                url={`https://www.4geeksacademy.co/${pageContext.slug}`}
                                 title={"share"}
                             >
                                 <TwitterIcon
@@ -66,7 +66,7 @@ export default function Template (props) {
                             </TwitterShareButton>
                             <FacebookShareButton
                                 className="network__share-button"
-                                url={`https://www.facebook.com/${filtered.username}`}
+                                url={`https://www.4geeksacademy.co/${pageContext.slug}`}
                                 title={"share"}
                             >
                                 <FacebookIcon
