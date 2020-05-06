@@ -22,7 +22,6 @@ const Blog = ({data, pageContext, yml}) => {
     }
 
     return (
-
         <>
             <Wrapper
                 style="default"
