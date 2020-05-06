@@ -215,6 +215,7 @@ export const RoundImage = styled.div`
     }
 `
 export const Span = styled.div`
+    color: ${props => props.color};
     margin: 0;
     padding: 0;
     border: 0;

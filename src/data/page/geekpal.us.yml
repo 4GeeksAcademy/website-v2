@@ -1,19 +1,45 @@
 meta_info:
   slug: geekpal
-  title: null
+  title: ""
   description: null
   image: null
   keywords: ""
   redirects: []
-
 tagline: NEVER BE STUCK AGAIN
 sub_heading: "LEARN FASTER THAN ANYONE ON EARTH"
 image: "/bg/companies-bg.png"
 image_logo: "/images/geekpal.png"
 benefits:
-  - Unlimited one-on-one mentoring: The moment you signup you have the possibility to schedule 1-on-1 mentoring sessions.
-  - Study groups: Every day we have a room for group study, the room is leaded by one mentor and you can come in an follow the study or do some practice of your own.
-  - 15 minutes to get answers: Our teams works very hard to ensure a 15min response time to your questions, nevery feel alone again.
-  - 9am-9pm support chat: Students and teachers belong to an online community were you can ask questions in real time, any time.
-  - For life: Even after you graduate you can continue having access to the support, come and resolve your work related assignments with the help of our mentors.
-  - Content: Hundreds of video tutorials, hundreds of exercises (auto-graded), online lessons, the online platform with tasks and daily follow up.
+  - p:
+    heading: "Personal"
+    items:
+      - title: Exclusive classes
+        sub_title: (up to 8 students per class)
+      - title: 1:4 teacher-student-ratio
+        sub_title: (one mentor every 8 students)
+      - title: Mentoring 1-1
+        sub_title: (unlimited sessions)
+      - title: Tallored career support
+        sub_title: (based on each job opportunity)
+  - a:
+    heading: "Anywhere & time"
+    items:
+      - title: Adjusted to your schedule
+        sub_title: (on demand session w/appointment)
+      - title: Permanent mentor schedule
+        sub_title: (Always on mentorship & chat support)
+      - title: Online or in-person
+        sub_title: (Locations around the world)
+      - title: Tallored careere support
+        sub_title: (based on each job opportunity)
+  - l:
+    heading: "Limitless"
+    items:
+      - title: All the mentoring you need
+        sub_title: (on demand session w/appointment)
+      - title: Mentoring after you graduate
+        sub_title: (even after you get the job, to keep the job)
+      - title: Mentoring for life
+        sub_title: (Keep coming, scheduling or attending)
+      - title: Tallored careere support
+        sub_title: (based on each job opportunity)

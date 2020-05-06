@@ -74,6 +74,24 @@ const PricesAndPayments = (props) => {
           })
         }
       }
+      else if (currentCourseType === "full-time") {
+        if (prova.currentCityLocation.hasFinancialsOption === true) {
+          setProva({
+            ...prova,
+            steps: prova.currentCityLocation.financials_max_months,
+            activeStep: prova.currentCityLocation.financials_max_months.length - 1,
+            currentFilteredCourse: prova.currentCityLocation.prices.full_time
+          })
+        }
+        else {
+          setProva({
+            ...prova,
+            steps: null,
+            activeStep: null,
+            currentFilteredCourse: prova.currentCityLocation.prices.full_time
+          })
+        }
+      }
     }
     loadCurrentProgramSteps();
   }, [prova.currentCityLocation])
