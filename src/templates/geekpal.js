@@ -85,16 +85,20 @@ const GeekPal = (props) => {
                 {col.items.map((item, index) => {
                   return (
                     <Row key={index} marginBottom="15px">
-                      <Column size="2">
+                      <Column size="2" customRespSize respSize="3">
                         <Check width="24px" color={Colors.yellow} fill={Colors.yellow} />
 
                       </Column>
-                      <Column size="10">
+                      <Column size="10" customRespSize respSize="9">
                         <Row>
                           <Column size="12">
                             <H5
                               m="0px"
-                              fs_xl="20px"
+                              fs_xl="16px"
+                              fs_lg="16px"
+                              fs_md="14px"
+                              fs_sm="16px"
+                              fs_xs="20px"
                             >{item.title}
                             </H5>
                           </Column>
@@ -102,6 +106,11 @@ const GeekPal = (props) => {
                         <Row>
                           <Column size="12">
                             <Paragraph
+                              fs_xl="14px"
+                              fs_lg="14px"
+                              fs_md="12px"
+                              fs_sm="16px"
+                              fs_xs="14px"
                             >{item.sub_title}
                             </Paragraph>
                           </Column>
