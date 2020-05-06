@@ -85,11 +85,11 @@ const GeekPal = (props) => {
                 {col.items.map((item, index) => {
                   return (
                     <Row key={index} marginBottom="15px">
-                      <Column size="2" customRespSize respSize="3">
+                      <Column size="2" customRespSize respSize="3" passingRight="0" >
                         <Check width="24px" color={Colors.yellow} fill={Colors.yellow} />
 
                       </Column>
-                      <Column size="10" customRespSize respSize="9">
+                      <Column size="10" customRespSize respSize="9" >
                         <Row>
                           <Column size="12">
                             <H5
