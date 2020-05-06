@@ -135,7 +135,7 @@ color: ${props => props.color};
 font-style: normal;
 `;
 export const H5 = styled.h5`
-      font-family: 'Lato-Bold', sans-serif;
+      font-family: 'Lato', sans-serif;
       font-size: ${props => props.fontSize};
       font-weight: 500;
       letter-spacing: 0px;
