@@ -116,7 +116,7 @@ export const Over = styled.div`
 `
 export const Tooltip = styled.div`
     position: absolute;
-    left: 50%;
+    left: 30%;
     height: auto;
     z-index: 1;
     width: 200px;
