@@ -93,7 +93,7 @@ const Home = (props) => {
       <Wrapper
         style="default">
         <Divider height="100px" />
-        <Why4Geeks lang={data.allWhy4GeeksYaml.edges} playerHeight="250px" />
+        <Why4Geeks lang={data.allWhy4GeeksYaml.edges} />
         <Divider height="50px" />
       </Wrapper>
 

@@ -7,7 +7,6 @@ import {Card} from '../Card';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
-import ReactPlayer from 'react-player'
 
 const AlumniProjects = props => {
     const [slideIndex, setSlideIndex] = useState()
@@ -154,32 +153,19 @@ const AlumniProjects = props => {
                                                     </Column>
                                                 </Row>
                                             </Column>
-                                            {item.project_video === "" ?
-                                                <Column
-                                                    size="6"
-                                                    customRespSize
-                                                    respSize="6"
-                                                    alignSelf="center"
-                                                    image="yes"
-                                                    url={item.image}
-                                                    backgroundSize="cover"
-                                                    bg_position="center center"
-                                                    height="100%"
-                                                    border="custom"
-                                                    customBorderRadius="0 1.25rem 1.25rem 0" >
-                                                </Column>
-                                                :
-                                                <Column size="6">
-                                                    <ReactPlayer
-                                                        className='react-player alumni-player'
-                                                        file={{forceVideo: true}}
-                                                        style={{height: props.playerHeight}}
-                                                        light={item.image}
-                                                        controls={true}
-                                                        url={item.project_video}
-                                                        width='100%'
-                                                        height='100%'
-                                                    /></Column>}
+                                            <Column
+                                                size="6"
+                                                customRespSize
+                                                respSize="6"
+                                                alignSelf="center"
+                                                image="yes"
+                                                url={item.image}
+                                                backgroundSize="cover"
+                                                bg_position="center center"
+                                                height="100%"
+                                                border="custom"
+                                                customBorderRadius="0 1.25rem 1.25rem 0" >
+                                            </Column>
 
                                         </Row>
                                     </Card>

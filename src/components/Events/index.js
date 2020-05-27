@@ -59,6 +59,7 @@ const Events = () => {
                         let date = new Date(item.event_date)
                         console.log("item", date.getMonth())
                         return (
+                            // STARTED NEW LAYOUT
                             <Card key={index} borders="1.25rem" height="260px">
                                 <Row
                                     height="100%"

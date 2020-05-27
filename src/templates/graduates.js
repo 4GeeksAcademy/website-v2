@@ -20,7 +20,7 @@ const Graduates = ({data, pageContext, yml}) => {
             <Divider height="100px" />
             <Wrapper
                 style="default">
-                <AlumniProjects showThumbs="true" changeIndex={() => setSlideIndex()} playerHeight="500px" />
+                <AlumniProjects showThumbs="true" changeIndex={() => setSlideIndex()} />
             </Wrapper>
             <Divider height="50px" />
             <Wrapper
