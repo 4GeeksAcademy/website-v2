@@ -20,10 +20,11 @@ export default (props) => {
               <ReactPlayer
                 className='react-player'
                 light={i.image}
+                style={{height: props.playerHeight}}
                 controls={true}
                 url={i.video}
                 width='100%'
-                height='100%'
+                height='250px'
               />
               :
               <RoundImage
