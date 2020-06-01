@@ -8,7 +8,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
 
     // curstom post types for the website
     const types = ['MarkdownRemark', 'PageYaml', 'CourseYaml', 'LocationYaml', 'JobYaml'];
-    
+
     if (types.includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});

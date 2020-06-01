@@ -34,11 +34,14 @@ const months = [
 const Events = () => {
     const [event, setEvent] = useState([])
     useEffect(() => {
-        fetch(
-            'https://assets.breatheco.de/apis/event/all',
-        )
-            .then(response => response.json())
-            .then(data => setEvent(data))
+        const loadEvents = async () => {
+            fetch(
+                'https://assets.breatheco.de/apis/event/all',
+            )
+                .then(response => response.json())
+                .then(data => setEvent(data))
+        }
+        loadEvents();
     }, []);
     let today = new Date();
     let newEventArray = event.filter((item) => new Date(item.event_date).getTime() >= today.getTime())
