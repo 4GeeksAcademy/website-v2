@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, RoundImage, Address} from '../components/Styling'
+import {Colors, Button, RoundImage, Address, Marker, Clock, Question} from '../components/Styling'
 import {Card} from '../components/Card'
 import Grid from '@material-ui/core/Grid';
 import ToggleButton from '@material-ui/lab/ToggleButton';
@@ -52,6 +52,7 @@ const Events = ({data, pageContext, yml}) => {
         border="top"
         color={Colors.lightGray}
       >
+        <Divider height="50px" />
         <Row align="left">
           <Column size="12">
             <H4
@@ -61,69 +62,111 @@ const Events = ({data, pageContext, yml}) => {
               fs_md="30px"
               fs_lg="30px"
               fs_xl="30px"
-            >Featured</H4>
+            >Our Events</H4>
           </Column>
         </Row>
         <Row>
           <Separator primary />
         </Row>
-        <Divider height="50px" />
+        <Row>
+          <Column size="8">
+            <Row>
+              <Column size="4">
+                <Button width="100%" color={Colors.gray} textColor={Colors.white} margin="1rem 0 2rem 0" padding=".35rem.85rem">Campuses</Button>
+              </Column>
+              <Column size="4">
+                <Button width="100%" color={Colors.gray} textColor={Colors.white} margin="1rem 0 2rem 0" padding=".35rem.85rem">Event's Type</Button>
+              </Column>
+            </Row>
+          </Column>
+        </Row>
+
         <Row>
           {event.map((i, index) => (
-            <Column size="4" key={index}>
+            <Column size="4" key={index} margin="0 0 1rem 0">
+              <Card
+                h_xs="auto"
+                h_sm="auto"
+                h_md="auto"
+                h_lg="auto"
+                h_xl="auto"
+                width="100%"
+                color="white"
 
-              <RoundImage
-                url={i.banner_url}
-                bsize="cover"
-                mb="10px"
-                border="1.25rem 1.25rem 0 0"
-                position="center center"
-                h_xs="230px"
-                h_sm="230px"
-                h_md="230px"
-                h_lg="230px"
-                h_xl="230px"
-              />
-              <Row marginBottom="1rem" >
-                <Column size="12">
-                  <Paragraph>{i.type}</Paragraph>
-                </Column>
-              </Row>
-              <Row marginBottom="1rem">
-                <Column size="12">
-                  <H4
-                    fs_xs="18px"
-                    fs_sm="18px"
-                    fs_md="18px"
-                    fs_lg="18px"
-                    fs_xl="18px"
-                  >{i.title}
-                  </H4>
-                </Column>
-              </Row>
-              <Row marginBottom=".2rem" >
-                <Column size="12">
-                  <Paragraph><Address width="24" color={Colors.blue} fill={Colors.blue} />{i.event_date}</Paragraph>
-                </Column>
-              </Row>
-              <Row marginBottom=".2rem" >
-                <Column size="12">
-                  <Paragraph>{i.city_slug}</Paragraph>
-                </Column>
-              </Row>
-              <Row marginBottom=".2rem" >
-                <Column size="12">
-                  <Paragraph>{i.type}</Paragraph>
-                </Column>
-              </Row>
+                shadow
+                move="up">
+
+                <RoundImage
+                  url={i.banner_url}
+                  bsize="cover"
+                  mb="10px"
+                  border="1.25rem 1.25rem 0 0"
+                  position="center center"
+                  h_xs="230px"
+                  h_sm="230px"
+                  h_md="230px"
+                  h_lg="230px"
+                  h_xl="230px"
+                />
+                <Row marginLeft="0" marginRight="0">
+                  <Column size="12">
+                    <Row marginBottom="1rem" >
+                      <Column size="12">
+                        <Paragraph>{i.type}</Paragraph>
+                      </Column>
+                    </Row>
+                    <Row marginBottom="1rem" height="70px">
+                      <Column size="12">
+                        <H4
+                          fs_xs="18px"
+                          fs_sm="18px"
+                          fs_md="18px"
+                          fs_lg="18px"
+                          fs_xl="18px"
+                        >{i.title}
+                        </H4>
+                      </Column>
+                    </Row>
+                    <Row marginBottom=".2rem" >
+                      <Column size="12">
+                        <Paragraph><Clock width="24" color={Colors.blue} fill={Colors.blue} />{i.event_date}</Paragraph>
+                      </Column>
+                    </Row>
+                    <Row marginBottom=".2rem" >
+                      <Column size="12">
+                        <Paragraph><Marker width="24" color={Colors.blue} fill={Colors.blue} />{i.city_slug}</Paragraph>
+                      </Column>
+                    </Row>
+                    <Row marginBottom=".2rem" >
+                      <Column size="12">
+                        <Paragraph><Question width="24" color={Colors.blue} fill={Colors.blue} />{i.type}</Paragraph>
+                      </Column>
+                    </Row>
+                    <Row marginBottom=".2rem" >
+                      <Column size="6" align="center">
+                        <a href={i.url}>
+                          <Button outline width="100%" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Join Our Community</Button>
+                        </a>
+                      </Column>
+                      <Column size="6" align="center">
+                        <a href={i.url} target="_blank">
+                          <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register</Button>
+                        </a>
+                      </Column>
+                    </Row>
+
+                  </Column>
+                </Row>
 
 
-              {/* <Row>
+
+                {/* <Row>
                 <Column size="12">
 
                   <div className="single-post" dangerouslySetInnerHTML={{__html: i.description}}></div>
                 </Column>
               </Row> */}
+              </Card>
             </Column>
           ))}
         </Row>
