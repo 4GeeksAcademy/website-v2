@@ -34,11 +34,14 @@ const months = [
 const Events = () => {
     const [event, setEvent] = useState([])
     useEffect(() => {
-        fetch(
-            'https://assets.breatheco.de/apis/event/all',
-        )
-            .then(response => response.json())
-            .then(data => setEvent(data))
+        const loadEvents = async () => {
+            fetch(
+                'https://assets.breatheco.de/apis/event/all',
+            )
+                .then(response => response.json())
+                .then(data => setEvent(data))
+        }
+        loadEvents();
     }, []);
     let today = new Date();
     let newEventArray = event.filter((item) => new Date(item.event_date).getTime() >= today.getTime())
@@ -59,6 +62,7 @@ const Events = () => {
                         let date = new Date(item.event_date)
                         console.log("item", date.getMonth())
                         return (
+                            // STARTED NEW LAYOUT
                             <Card key={index} borders="1.25rem" height="260px">
                                 <Row
                                     height="100%"

@@ -196,14 +196,13 @@ a {
 }
 .react-player video, .react-player__preview{
     border-radius: 1.25rem!important;
-    
 }
 .react-player{
     height: auto!important;
 }
 .react-player__preview{
     height: 150px!important;
-}
+} 
 .split{
     font-size: 55px;
 }

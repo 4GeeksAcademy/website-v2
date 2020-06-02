@@ -1,0 +1,16 @@
+## EVENTS - EVENTS TEMPLATE
+## YOU CAN CHANGE THE MAIN HEADER AND THE MORE ABOUT 4GEEKS SECTION
+
+meta_info:
+  slug: events
+  title: ""
+  description: null
+  image: null
+  keywords: ""
+  redirects: []
+
+## EVENTS HEADING
+banner:
+  tagline: UPCOMING EVENTS AT 4GEKKS ACADEMY
+  sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+  image: "/bg/pricing-bg.png"

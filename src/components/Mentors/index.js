@@ -6,7 +6,6 @@ import {RoundImage, Colors, Over, ArrowRight} from '../Styling';
 import {Row, Column, Divider} from '../Sections'
 import {Card} from '../Card'
 
-
 const Mentors = props => {
     const data = useStaticQuery(graphql`
         query myStaffQuery{
@@ -56,8 +55,6 @@ const Mentors = props => {
                                     w_lg="100"
                                     w_xl="100"
                                     move up={props.up}>
-
-
                                     <Over
                                         h_xs="250px"
                                         h_sm="250px"
