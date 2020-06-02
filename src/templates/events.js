@@ -139,7 +139,7 @@ const Events = ({data, pageContext, yml}) => {
                     </Row>
                     <Row marginBottom=".2rem" >
                       <Column size="12">
-                        <Paragraph><Question width="24" color={Colors.blue} fill={Colors.blue} />{i.type}</Paragraph>
+                        <Paragraph><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
                       </Column>
                     </Row>
                     <Row marginBottom=".2rem" >
