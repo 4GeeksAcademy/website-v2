@@ -244,7 +244,7 @@ const Events = ({data, pageContext, yml}) => {
                     <>
                       {filterCity.map((item, index) => {
                         return (
-                          <Button width="95%" color={Colors.lightGray} textColor={Colors.gray} borderRadius=".25rem" padding="0">
+                          <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
                             <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={togglesCity === false && "0px"}>
                               <Link to="#">
                                 <Row height="25px" onClick={() => {setProgram(item), setTogglesCity(!togglesCity)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
@@ -404,6 +404,7 @@ const Events = ({data, pageContext, yml}) => {
 
       {test.length > 0 ?
         <Modal
+          className="test-prova"
           disableScrollLock={true}
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
