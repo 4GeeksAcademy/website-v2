@@ -122,9 +122,8 @@ export const withSession = Component => {
                 const location = data ? closestLoc(locationsArray, data.latitude, data.longitude) : null;
                 // const location = "Santiago de Chile"
                 const browserLang = getFirstBrowserLanguage();
-                const language = browserLang ? browserLang : location.defaultLanguage;
                 let repeated = [];
-                const _session = {...session, v4, v6, location, language: language.substring(0,2),
+                const _session = {...session, v4, v6, location, browserLang, language: location.defaultLanguage,
                     locations: locationsArray.map(l => l.node).filter(l => {
                         if(repeated.includes(l.meta_info.slug)) return false;
                         
