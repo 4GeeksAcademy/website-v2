@@ -175,6 +175,9 @@ a:hover {
     position: absolute;
             left: -30px;
 } */
+.test-prova{
+    border: none;
+}
 .single-post strong, .single-event strong{
     font-weight: bold;
 }
