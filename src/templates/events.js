@@ -192,10 +192,10 @@ const Events = ({data, pageContext, yml}) => {
         image="yes"
         url={yml.banner.image}
         border="bottom"
-        height="300px"
+        height="700px"
         backgroundSize="cover"
       >
-        <Divider height="100px" />
+        <Divider height="300px" />
         <Title
           size="5"
           title={yml.banner.tagline}
@@ -328,7 +328,7 @@ const Events = ({data, pageContext, yml}) => {
                     move="up">
 
                     <RoundImage
-                      url={i.banner_url}
+                      url={`${i.banner_url.includes('placehold') || i.banner_url.includes('hola') || i.banner_url == "" ? '/images/events-alt.jpg' : i.banner_url}`}
                       bsize="cover"
                       mb="10px"
                       border="1.25rem 1.25rem 0 0"
@@ -423,7 +423,7 @@ const Events = ({data, pageContext, yml}) => {
             shadow
             move="up">
             <RoundImage
-              url={test[0].banner_url}
+              url={`${test[0].banner_url.includes('placehold') || test[0].banner_url.includes('hola') || test[0].banner_url == "" ? '/images/events-alt.jpg' : test[0].banner_url}`}
               bsize="cover"
               mb="10px"
               border="1.25rem 1.25rem 0 0"
