@@ -1,4 +1,6 @@
-
+* :focus{
+    outline:none!important;
+}
 
 .MuiStepButton-root {
     width: 100%;
@@ -149,7 +151,7 @@ a:hover {
     position: relative;
     margin: 30px 0px;
 }
-.single-post h2{
+.single-post h2, .single-event h2{
     font-size: 36px;
     color: black;
     font-family: 'Lato';
@@ -157,6 +159,13 @@ a:hover {
     text-align: center;
     position: relative;
     margin: 30px 0px;
+}
+.single-event p{
+    font-size: 16px;
+    color: black;
+    font-family: 'Lato';
+    line-height: 20px;
+    margin: 15px 10px;
 }
 
 /* .single-post p img{
@@ -168,7 +177,10 @@ a:hover {
     position: absolute;
             left: -30px;
 } */
-.single-post strong{
+.test-prova{
+    border: none;
+}
+.single-post strong, .single-event strong{
     font-weight: bold;
 }
 .single-post table{
@@ -206,3 +218,8 @@ a {
 .split{
     font-size: 55px;
 }
+/* :-webkit-direct-focus {
+    outline-color: none!important;
+    outline-style: auto;
+    outline-width: 3px;
+    } */

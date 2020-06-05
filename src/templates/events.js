@@ -11,8 +11,52 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import BaseRender from './_baseRender'
-import JobInfo from '../components/JobInfo'
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 import Link from 'gatsby-link'
+
+const Main = styled("div")`
+  font-family: sans-serif;
+  background: #f0f0f0;
+  height: 100vh;
+`;
+
+const DropDownContainer = styled("div")`
+  width: 10.5em;
+  margin: 0 auto;
+`;
+
+const DropDownHeader = styled("div")`
+  margin-bottom: 0.8em;
+  padding: 0.4em 2em 0.4em 1em;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #3faffa;
+  background: #ffffff;
+`;
+
+const DropDownListContainer = styled("div")``;
+
+const DropDownList = styled("ul")`
+  padding: 0;
+  margin: 0;
+  padding-left: 1em;
+  background: #ffffff;
+  border: 2px solid #e5e5e5;
+  box-sizing: border-box;
+  color: #3faffa;
+  font-size: 1.3rem;
+  font-weight: 500;
+  &:first-child {
+    padding-top: 0.8em;
+  }
+`;
+
+const ListItem = styled("li")`
+  list-style: none;
+  margin-bottom: 0.8em;
+`;
 
 const days = [
   'Sun',
@@ -59,6 +103,7 @@ const useStyles = makeStyles(theme => ({
     height: '90%',
     backgroundColor: theme.palette.background.paper,
     borderRadius: '1.25rem',
+    border: 'none',
     boxShadow: theme.shadows[5],
     // padding: theme.spacing(2, 4, 3),
 
@@ -72,8 +117,17 @@ const Events = ({data, pageContext, yml}) => {
   const [event, setEvent] = useState([]);
   const [single, setSingle] = useState();
   const [test, setTest] = useState([]);
+  const [anchorEl, setAnchorEl] = useState(null);
   const [filter, setFilter] = useState();
+  const [toggleCity, setToggleCity] = useState();
+  const [togglesCity, setTogglesCity] = useState();
+  const [toggle, setToggle] = useState();
+  const [toggles, setToggles] = useState();
+  const [filterType, setFilterType] = useState();
+  const [filterCity, setFilterCity] = useState();
+  const [cities, setCities] = useState([]);
   const classes = useStyles();
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -81,6 +135,39 @@ const Events = ({data, pageContext, yml}) => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseDropdown = () => {
+    setAnchorEl(null);
+  };
+  useEffect(() => {
+    const loadFilterType = async () => {
+      let filterCityArray = [];
+      let filterTypeArray = [];
+      for (let i = 0; i < event.length; i++) {
+        if (filterTypeArray.includes(event[i].type)) {
+          console.log("####", event[i].type)
+        }
+        else {
+          filterTypeArray.push(event[i].type)
+        }
+        if (filterCityArray.includes(event[i].city_slug)) {
+          console.log("####", event[i].city_slug)
+        }
+        else {
+          filterCityArray.push(event[i].city_slug)
+        }
+      }
+      setFilterType(filterTypeArray);
+      setFilterCity(filterCityArray);
+    }
+    loadFilterType();
+
+  }, [event])
+
   useEffect(() => {
     const loadEvents = async () => {
       fetch(
@@ -94,7 +181,7 @@ const Events = ({data, pageContext, yml}) => {
   useEffect(() => {
     const loadModal = async () => {
       let prova = event.filter((item, index) => index === single)
-      await setTest(prova)
+      setTest(prova)
 
     }
     loadModal();
@@ -106,10 +193,10 @@ const Events = ({data, pageContext, yml}) => {
         image="yes"
         url={yml.banner.image}
         border="bottom"
-        height="300px"
+        height="700px"
         backgroundSize="cover"
       >
-        <Divider height="100px" />
+        <Divider height="300px" />
         <Title
           size="5"
           title={yml.banner.tagline}
@@ -126,8 +213,8 @@ const Events = ({data, pageContext, yml}) => {
         color={Colors.white}
       >
         <Divider height="50px" />
-        <Row align="left">
-          <Column size="12">
+        <Row align="around">
+          <Column size="10" alignSelf="center">
             <H4
 
               fs_xs="30px"
@@ -137,6 +224,9 @@ const Events = ({data, pageContext, yml}) => {
               fs_xl="30px"
             >Our Events</H4>
           </Column>
+          <Column size="2" alignSelf="center" align="right">
+            <Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Join Our Meetup</Button>
+          </Column>
         </Row>
         <Row>
           <Separator primary />
@@ -145,10 +235,62 @@ const Events = ({data, pageContext, yml}) => {
           <Column size="12">
             <Row >
               <Column size="3" >
-                <Button width="100%" color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 2rem 0" padding=".35rem.85rem">Campuses</Button>
+                {/* <Button width="100%" aria-controls="simple-menu" aria-haspopup="true" color={Colors.lightGray} onClick={handleClick} textColor={Colors.gray} margin="1rem 0 2rem 0" padding=".35rem.85rem">
+                  Campuses
+                </Button> */}
+
+                <Button width="200px" onClick={() => toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Campuses</Button>
+                {/* <Button width="100%" onClick={handleClick} color={Colors.blue} textColor={Colors.white}>Campuses</Button> */}
+                {toggleCity == true
+                  ?
+                  <Row marginBottom="5px" width="200px" marginRight="0" marginLeft="0" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius="0 0 .25rem .25rem">
+                    <>
+                      {filterCity.map((item, index) => {
+                        return (
+                          <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
+                            <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={togglesCity === false && "0px"}>
+                              <Link to="#">
+                                <Row height="25px" onClick={() => {setTogglesCity(!togglesCity)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                                  <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column>
+                                </Row>
+                              </Link>
+                            </Card>
+                          </Button>
+                        )
+                      })}
+                    </>
+                  </Row>
+
+                  :
+                  null
+                }
+
               </Column>
               <Column size="3" >
-                <Button width="100%" color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 2rem 0" padding=".35rem.85rem">Event's Type</Button>
+                <Button width="200px" onClick={() => toggleCity == false ? setToggle(!toggle) : (setToggle(!toggle), setToggleCity(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Event's Type</Button>
+                {toggle == true
+                  ?
+                  <Row marginBottom="5px" width="200px" marginRight="0" marginLeft="0" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius="0 0 .25rem .25rem">
+                    <>
+                      {filterType.map((item, index) => {
+                        return (
+                          <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
+                            <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"}>
+                              <Link to="#">
+                                <Row height="25px" onClick={() => {setToggles(!toggles)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                                  <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column>
+                                </Row>
+                              </Link>
+                            </Card>
+                          </Button>
+                        )
+                      })}
+                    </>
+                  </Row>
+
+                  :
+                  null
+                }
               </Column>
               {/* <Column size="3">
 
@@ -190,7 +332,7 @@ const Events = ({data, pageContext, yml}) => {
                     move="up">
 
                     <RoundImage
-                      url={i.banner_url}
+                      url={`${i.banner_url.includes('placehold') || i.banner_url.includes('hola') || i.banner_url == "" ? '/images/events-alt.jpg' : i.banner_url}`}
                       bsize="cover"
                       mb="10px"
                       border="1.25rem 1.25rem 0 0"
@@ -213,8 +355,8 @@ const Events = ({data, pageContext, yml}) => {
                             <H4
                               fs_xs="18px"
                               fs_sm="18px"
-                              fs_md="18px"
-                              fs_lg="18px"
+                              fs_md="16px"
+                              fs_lg="16px"
                               fs_xl="18px"
                             >{i.title}
                             </H4>
@@ -232,7 +374,7 @@ const Events = ({data, pageContext, yml}) => {
                         </Row>
                         <Row marginBottom=".2rem" >
                           <Column size="12">
-                            <Paragraph onClick={() => {setOpen(!open), setSingle(index)}}><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
+                            <Paragraph onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer"><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
                           </Column>
                         </Row>
                         <Row marginBottom=".2rem" >
@@ -265,6 +407,7 @@ const Events = ({data, pageContext, yml}) => {
 
       {test.length > 0 ?
         <Modal
+          className="test-prova"
           disableScrollLock={true}
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
@@ -285,7 +428,7 @@ const Events = ({data, pageContext, yml}) => {
             shadow
             move="up">
             <RoundImage
-              url={test[0].banner_url}
+              url={`${test[0].banner_url.includes('placehold') || test[0].banner_url.includes('hola') || test[0].banner_url == "" ? '/images/events-alt.jpg' : test[0].banner_url}`}
               bsize="cover"
               mb="10px"
               border="1.25rem 1.25rem 0 0"
@@ -333,7 +476,7 @@ const Events = ({data, pageContext, yml}) => {
                 <Row>
                   <Column size="12">
 
-                    <div className="single-post" dangerouslySetInnerHTML={{__html: test[0].description}}></div>
+                    <div className="single-event" dangerouslySetInnerHTML={{__html: test[0].description}}></div>
                   </Column>
                 </Row>
                 <Row marginBottom=".2rem" align="center">

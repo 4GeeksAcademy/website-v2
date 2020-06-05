@@ -7,6 +7,7 @@ import {FadeIn} from '../Animations'
 
 export const Card = styled.div`
     animation: 2s ${FadeIn} ease-out;
+    :focus {outline: none;};
     position: ${props => props.position};
     z-index: ${props => props.index};
     flex-direction: column;
