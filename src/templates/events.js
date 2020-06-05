@@ -213,8 +213,8 @@ const Events = ({data, pageContext, yml}) => {
         color={Colors.white}
       >
         <Divider height="50px" />
-        <Row align="left">
-          <Column size="12">
+        <Row align="around">
+          <Column size="10" alignSelf="center">
             <H4
 
               fs_xs="30px"
@@ -223,6 +223,9 @@ const Events = ({data, pageContext, yml}) => {
               fs_lg="30px"
               fs_xl="30px"
             >Our Events</H4>
+          </Column>
+          <Column size="2" alignSelf="center" align="right">
+            <Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Join Our Meetup</Button>
           </Column>
         </Row>
         <Row>
@@ -271,7 +274,7 @@ const Events = ({data, pageContext, yml}) => {
                     <>
                       {filterType.map((item, index) => {
                         return (
-                          <Button width="95%" color={Colors.lightGray} textColor={Colors.gray} borderRadius=".25rem" padding="0">
+                          <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
                             <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"}>
                               <Link to="#">
                                 <Row height="25px" onClick={() => {setProgram(item), setToggles(!toggles)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
