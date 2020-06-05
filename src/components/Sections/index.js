@@ -66,8 +66,12 @@ export const Container = styled.div`
 export const Row = styled.div`
     padding: ${props => props.padding};
     height: ${props => props.height};
+    width: ${props => props.width};
     border-top: ${props => props.borderTop};
     border-bottom: ${props => props.borderBottom};
+    border-radius: ${props => props.borderRadius};
+    position: ${props => props.position === "absolute" ? "absolute" : props.position === "relative" && "relative"};
+    z-index: ${props => props.zIndex};
     display: flex;
     flex-wrap: wrap; 
     // justify-content: ${props => props.justify};
