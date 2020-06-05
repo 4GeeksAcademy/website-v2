@@ -239,18 +239,18 @@ const Events = ({data, pageContext, yml}) => {
                   Campuses
                 </Button> */}
 
-                <Button width="100%" onClick={() => toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Campuses</Button>
+                <Button width="200px" onClick={() => toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Campuses</Button>
                 {/* <Button width="100%" onClick={handleClick} color={Colors.blue} textColor={Colors.white}>Campuses</Button> */}
                 {toggleCity == true
                   ?
-                  <Row marginBottom="5px" marginRight="0" marginLeft="0" align="center">
+                  <Row marginBottom="5px" width="200px" marginRight="0" marginLeft="0" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius="0 0 .25rem .25rem">
                     <>
                       {filterCity.map((item, index) => {
                         return (
                           <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
                             <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={togglesCity === false && "0px"}>
                               <Link to="#">
-                                <Row height="25px" onClick={() => {setProgram(item), setTogglesCity(!togglesCity)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                                <Row height="25px" onClick={() => {setTogglesCity(!togglesCity)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
                                   <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column>
                                 </Row>
                               </Link>
@@ -267,17 +267,17 @@ const Events = ({data, pageContext, yml}) => {
 
               </Column>
               <Column size="3" >
-                <Button width="100%" onClick={() => toggleCity == false ? setToggle(!toggle) : (setToggle(!toggle), setToggleCity(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Event's Type</Button>
+                <Button width="200px" onClick={() => toggleCity == false ? setToggle(!toggle) : (setToggle(!toggle), setToggleCity(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Event's Type</Button>
                 {toggle == true
                   ?
-                  <Row marginBottom="5px" marginRight="0" marginLeft="0" align="center" >
+                  <Row marginBottom="5px" width="200px" marginRight="0" marginLeft="0" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius="0 0 .25rem .25rem">
                     <>
                       {filterType.map((item, index) => {
                         return (
                           <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
                             <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"}>
                               <Link to="#">
-                                <Row height="25px" onClick={() => {setProgram(item), setToggles(!toggles)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                                <Row height="25px" onClick={() => {setToggles(!toggles)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
                                   <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column>
                                 </Row>
                               </Link>
@@ -355,8 +355,8 @@ const Events = ({data, pageContext, yml}) => {
                             <H4
                               fs_xs="18px"
                               fs_sm="18px"
-                              fs_md="18px"
-                              fs_lg="18px"
+                              fs_md="16px"
+                              fs_lg="16px"
                               fs_xl="18px"
                             >{i.title}
                             </H4>
