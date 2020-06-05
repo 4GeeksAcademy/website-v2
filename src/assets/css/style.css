@@ -1,4 +1,6 @@
-
+* :focus{
+    outline:none!important;
+}
 
 .MuiStepButton-root {
     width: 100%;
