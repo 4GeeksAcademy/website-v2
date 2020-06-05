@@ -216,8 +216,8 @@ a {
 .split{
     font-size: 55px;
 }
-:-webkit-direct-focus {
+/* :-webkit-direct-focus {
     outline-color: none!important;
     outline-style: auto;
     outline-width: 3px;
-    }
+    } */
