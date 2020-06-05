@@ -371,7 +371,7 @@ const Events = ({data, pageContext, yml}) => {
                         </Row>
                         <Row marginBottom=".2rem" >
                           <Column size="12">
-                            <Paragraph onClick={() => {setOpen(!open), setSingle(index)}}><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
+                            <Paragraph onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer"><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
                           </Column>
                         </Row>
                         <Row marginBottom=".2rem" >
