@@ -5,7 +5,7 @@ meta_info:
   image: ""
   keywords: ""
   redirects: []
-lang: "us"
+
 seo_title: "4Geeks Academy Maracaibo"
 tagline: "4GEEKS ACADEMY IN Maracaibo"
 sub_heading: ""
@@ -150,4 +150,4 @@ location_office_image2: ""
 location_office_image3: ""
 should_know: ""
 value: "Maracaibo"
-defaultLanguage: "es"
+defaultLanguage: "es" # All lead marketing communications will arrive on this language

@@ -5,7 +5,7 @@ meta_info:
   image: ""
   keywords: ""
   redirects: []
-lang: "es"
+
 seo_title: "4Geeks Academy Santiago deChile"
 tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
 sub_heading: ""
@@ -151,4 +151,4 @@ location_office_image2: ""
 location_office_image3: ""
 should_know: ""
 value: "Santiago de Chile"
-defaultLanguage: "es"
+defaultLanguage: "es" # All lead marketing communications will arrive on this language

@@ -575,10 +575,9 @@ export const query = graphql`
             }
           }
         }
-        allLocationYaml(filter: {lang: {eq: $lang}}) {
+        allLocationYaml(filter: {fields: { lang: {eq: $lang}}}) {
             edges {
               node {
-                lang
                 city
                 meta_info {
                   slug

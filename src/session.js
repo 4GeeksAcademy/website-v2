@@ -2,6 +2,44 @@ import React, {createContext, useState, useEffect} from "react";
 import publicIp from 'public-ip';
 import {useStaticQuery, graphql} from 'gatsby';
 
+function getFirstBrowserLanguage() {
+    var nav = window.navigator,
+        browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
+        i,
+        language,
+        len,
+        shortLanguage = null;
+
+    // support for HTML 5.1 "navigator.languages"
+    if (Array.isArray(nav.languages)) {
+        for (i = 0; i < nav.languages.length; i++) {
+            language = nav.languages[i];
+            len = language.length;
+            if (!shortLanguage && len) {
+                shortLanguage = language;
+            }
+            if (language && len>2) {
+                return language;
+            }
+        }
+    }
+
+    // support for other well known properties in browsers
+    for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+        language = nav[browserLanguagePropertyKeys[i]];
+        //skip this loop iteration if property is null/undefined.  IE11 fix.
+        if (language == null) { continue; } 
+        len = language.length;
+        if (!shortLanguage && len) {
+            shortLanguage = language;
+        }
+        if (language && len > 2) {
+            return language;
+        }
+    }
+
+    return shortLanguage;
+}
 
 const defaultSession = {
     v6: null,
@@ -11,7 +49,7 @@ const defaultSession = {
     course_type: "Part-Time",
     email: null,
     location: null,
-    language: null,
+    language: "en",
     gclid: null,
     utm_campaign: null,
     utm_source: null,
@@ -62,6 +100,7 @@ export const withSession = Component => {
                 latitude
                 longitude
                 country
+                defaultLanguage
                 meta_info{
                     slug
                 }
@@ -82,8 +121,19 @@ export const withSession = Component => {
                 const data = response.status === 200 ? await response.json() : null;
                 const location = data ? closestLoc(locationsArray, data.latitude, data.longitude) : null;
                 // const location = "Santiago de Chile"
-                // const language = browserLang ? browserLang : location.defaultLanguage;
-                setSession({...session, v4, v6, location})
+                const browserLang = getFirstBrowserLanguage();
+                const language = browserLang ? browserLang : location.defaultLanguage;
+                let repeated = [];
+                const _session = {...session, v4, v6, location, language: language.substring(0,2),
+                    locations: locationsArray.map(l => l.node).filter(l => {
+                        if(repeated.includes(l.meta_info.slug)) return false;
+                        
+                        repeated.push(l.meta_info.slug);
+                        return true;
+                    })
+                };
+                console.log("Reset session with: ",_session);
+                setSession(_session);
 
             };
             loadIp();

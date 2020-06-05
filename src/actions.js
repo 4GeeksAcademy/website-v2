@@ -1,15 +1,33 @@
+function tagManager(eventName){
+    console.log(window.dataLayer);
+    if(typeof dataLayer != 'undefined'){
+        dataLayer.push({'event': eventName});
+        console.log('Event successfully triggered: '+eventName);
+    }
+    else console.log('TagManager:dataLayer not found to trigger event '+eventName);
+}
 
+export const apply = async (data, session) => {
+    tagManager('student_application');
+    let body = {};
+    for(let key in data) body[key] = data[key].value;
 
-export const apply = (data) => {
-    return fetch('/api/acp_apply', {
+    console.log("session", session);
+    const resp = await fetch('/api/acp_apply', {
         headers: new Headers({'content-type': 'application/json'}),
         method: "POST",
-        body: JSON.stringify({...data, tags: ['website_lead']}),
+        body: JSON.stringify({...body, tags: ['website_lead'], lang: session.lang }),
     })
-        .then(resp => {
-            if (resp.status >= 200 && resp.status < 400) return resp.json();
-            throw Error('Unexpected error');
-        });
+    if (resp.status >= 200 && resp.status < 400){
+        return await resp.json();
+    } 
+    else if(resp.status === 400){
+        const error = await resp.json();
+        let msg = Array.isArray(error) ? error.json(", ") : error;
+        throw Error(msg);
+    }
+    
+    throw Error('Unexpected error');
 }
 
 export const requestSyllabus = (data) => {

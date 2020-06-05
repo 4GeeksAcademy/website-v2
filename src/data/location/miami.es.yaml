@@ -5,7 +5,7 @@ meta_info:
   image: ""
   keywords: "null"
   redirects: ["/locations"]
-lang: "es"
+
 seo_title: "4Geeks Academy Miami"
 tagline: "4GEEKS ACADEMY IN MIAMI"
 sub_heading: ""
@@ -217,4 +217,4 @@ location_office_image2: ""
 location_office_image3: ""
 should_know: ""
 value: "Miami"
-defaultLanguage: "us"
+defaultLanguage: "us" # All lead marketing communications will arrive on this language

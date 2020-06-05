@@ -29,12 +29,11 @@ const Footer = (props) => {
                                                 : <Row height="20px" marginBottom="10px" ><Separator margin=".5rem 0" primary></Separator></Row>
                                             : <Row height="20px" marginBottom="10px" display_xs="none" display_sm="none"><Separator margin=".5rem 0" primary></Separator></Row>
                                         }
-                                        {item.items.map((items) => {
+                                        {item.items.map((ln) => {
                                             return (
                                                 <>
-
-                                                    {item.heading === 'FOLLOW' || item.heading === 'SÍGUENOS' ?
-                                                        <a href={items.link} key={item.name}>
+                                                    {ln.link.indexOf("http") > -1 ?
+                                                        <a href={ln.link} key={ln.name}>
                                                             <Row marginBottom="5px">
                                                                 <Paragraph
                                                                     fs_xs="16px"
@@ -44,12 +43,12 @@ const Footer = (props) => {
                                                                     fs_xl="16px"
                                                                     color={Colors.white}
                                                                 >
-                                                                    {items.name}
+                                                                    {ln.name}
                                                                 </Paragraph>
                                                             </Row>
                                                         </a>
                                                         :
-                                                        <Link to={items.link} key={item.name}>
+                                                        <Link to={ln.link} key={ln.name}>
                                                             <Row marginBottom="5px">
                                                                 <Paragraph
                                                                     fs_xs="16px"
@@ -59,7 +58,7 @@ const Footer = (props) => {
                                                                     fs_xl="16px"
                                                                     color={Colors.white}
                                                                 >
-                                                                    {items.name}
+                                                                    {ln.name}
                                                                 </Paragraph>
                                                             </Row>
                                                         </Link>}

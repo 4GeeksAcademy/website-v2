@@ -53,7 +53,7 @@ const setOptional = (original, data, key) => {
     return original;
 }
 export const addorUpdateContact = async (contact) => {
-
+    console.log("contact", contact);
     validate(contact, ['email', 'tags', 'first_name','url','lang','country_name','gclid', 'utm_location', 'referral_key']);
     mandatory(contact, ['email', 'tags', 'lang', 'utm_location']);
 

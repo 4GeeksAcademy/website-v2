@@ -5,7 +5,7 @@ meta_info:
   image: ""
   keywords: ""
   redirects: []
-lang: "es"
+
 seo_title: "4Geeks Academy Caracas"
 tagline: "4GEEKS ACADEMY IN CARACAS"
 sub_heading: ""
@@ -148,4 +148,4 @@ location_office_image2: ""
 location_office_image3: ""
 should_know: ""
 value: "Caracas"
-defaultLanguage: "es"
+defaultLanguage: "es" # All lead marketing communications will arrive on this language
