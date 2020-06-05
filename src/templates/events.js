@@ -236,7 +236,7 @@ const Events = ({data, pageContext, yml}) => {
                   Campuses
                 </Button> */}
 
-                <Button width="100%" onClick={() => setToggleCity(!toggleCity)} color={Colors.blue} textColor={Colors.white}>Campuses</Button>
+                <Button width="100%" onClick={() => setToggleCity(!toggleCity)} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Campuses</Button>
                 {/* <Button width="100%" onClick={handleClick} color={Colors.blue} textColor={Colors.white}>Campuses</Button> */}
                 {toggleCity == true
                   ?
@@ -264,10 +264,10 @@ const Events = ({data, pageContext, yml}) => {
 
               </Column>
               <Column size="3" >
-                <Button width="100%" onClick={() => setToggle(!toggle)} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 2rem 0" padding=".35rem.85rem">Event's Type</Button>
+                <Button width="100%" onClick={() => setToggle(!toggle)} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Event's Type</Button>
                 {toggle == true
                   ?
-                  <Row marginBottom="5px" marginRight="0" marginLeft="0" align="center">
+                  <Row marginBottom="5px" marginRight="0" marginLeft="0" align="center" >
                     <>
                       {filterType.map((item, index) => {
                         return (
