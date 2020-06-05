@@ -103,7 +103,8 @@ const useStyles = makeStyles(theme => ({
     height: '90%',
     backgroundColor: theme.palette.background.paper,
     borderRadius: '1.25rem',
-    // boxShadow: theme.shadows[5],
+    border: 'none',
+    boxShadow: theme.shadows[5],
     // padding: theme.spacing(2, 4, 3),
 
   },
