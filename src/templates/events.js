@@ -471,7 +471,7 @@ const Events = ({data, pageContext, yml}) => {
                 <Row>
                   <Column size="12">
 
-                    <div className="single-post" dangerouslySetInnerHTML={{__html: test[0].description}}></div>
+                    <div className="single-event" dangerouslySetInnerHTML={{__html: test[0].description}}></div>
                   </Column>
                 </Row>
                 <Row marginBottom=".2rem" align="center">
