@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, RoundImage, Address, Marker, Clock, Question, Filter} from '../components/Styling'
+import {Colors, Button, RoundImage, Address, Marker, Clock, Question, Filter, Cross} from '../components/Styling'
 import {Card} from '../components/Card'
 import Grid from '@material-ui/core/Grid';
 import ToggleButton from '@material-ui/lab/ToggleButton';
@@ -14,49 +14,6 @@ import BaseRender from './_baseRender'
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from 'gatsby-link'
-
-const Main = styled("div")`
-  font-family: sans-serif;
-  background: #f0f0f0;
-  height: 100vh;
-`;
-
-const DropDownContainer = styled("div")`
-  width: 10.5em;
-  margin: 0 auto;
-`;
-
-const DropDownHeader = styled("div")`
-  margin-bottom: 0.8em;
-  padding: 0.4em 2em 0.4em 1em;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
-  font-weight: 500;
-  font-size: 1.3rem;
-  color: #3faffa;
-  background: #ffffff;
-`;
-
-const DropDownListContainer = styled("div")``;
-
-const DropDownList = styled("ul")`
-  padding: 0;
-  margin: 0;
-  padding-left: 1em;
-  background: #ffffff;
-  border: 2px solid #e5e5e5;
-  box-sizing: border-box;
-  color: #3faffa;
-  font-size: 1.3rem;
-  font-weight: 500;
-  &:first-child {
-    padding-top: 0.8em;
-  }
-`;
-
-const ListItem = styled("li")`
-  list-style: none;
-  margin-bottom: 0.8em;
-`;
 
 const days = [
   'Sun',
@@ -118,7 +75,6 @@ const Events = ({data, pageContext, yml}) => {
   const [single, setSingle] = useState();
   const [test, setTest] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [filter, setFilter] = useState();
   const [toggleCity, setToggleCity] = useState();
   const [togglesCity, setTogglesCity] = useState();
   const [toggle, setToggle] = useState();
@@ -126,6 +82,8 @@ const Events = ({data, pageContext, yml}) => {
   const [filterType, setFilterType] = useState();
   const [filterCity, setFilterCity] = useState();
   const [cities, setCities] = useState([]);
+  const [filter, setFilter] = useState([]);
+  const [filteredEvents, setFilteredEvents] = useState([]);
   const classes = useStyles();
 
   const handleOpen = () => {
@@ -140,9 +98,6 @@ const Events = ({data, pageContext, yml}) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleCloseDropdown = () => {
-    setAnchorEl(null);
-  };
   useEffect(() => {
     const loadFilterType = async () => {
       let filterCityArray = [];
@@ -186,6 +141,14 @@ const Events = ({data, pageContext, yml}) => {
     }
     loadModal();
   }, [single]);
+  useEffect(() => {
+    const handleFilters = async (params) => {
+      let test = event.filter(item => params.includes(item.city_slug))
+      console.log("test: ", test)
+      setFilteredEvents(test)
+    }
+    handleFilters(filter);
+  }, [filter])
   return (
     <>
       <Wrapper
@@ -245,15 +208,15 @@ const Events = ({data, pageContext, yml}) => {
                   ?
                   <Row marginBottom="5px" width="200px" marginRight="0" marginLeft="0" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius="0 0 .25rem .25rem">
                     <>
-                      {filterCity.map((item, index) => {
+                      {filterCity.map((city, index) => {
                         return (
                           <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
                             <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={togglesCity === false && "0px"}>
-                              <Link to="#">
-                                <Row height="25px" onClick={() => {setTogglesCity(!togglesCity)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
-                                  <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column>
-                                </Row>
-                              </Link>
+                              <Row height="25px" onClick={() => {setTogglesCity(!togglesCity)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                                <Column size="12" alignSelf="center">
+                                  <Paragraph onClick={() => {setFilter([...filter, city]), setToggleCity(!toggleCity)}} fontSize="16px" color={Colors.gray} >{city}</Paragraph>
+                                </Column>
+                              </Row>
                             </Card>
                           </Button>
                         )
@@ -272,15 +235,15 @@ const Events = ({data, pageContext, yml}) => {
                   ?
                   <Row marginBottom="5px" width="200px" marginRight="0" marginLeft="0" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius="0 0 .25rem .25rem">
                     <>
-                      {filterType.map((item, index) => {
+                      {filterType.map((type, index) => {
                         return (
                           <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
                             <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"}>
-                              <Link to="#">
-                                <Row height="25px" onClick={() => {setToggles(!toggles)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
-                                  <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph></Column>
-                                </Row>
-                              </Link>
+                              <Row height="25px" onClick={() => {setToggles(!toggles)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                                <Column size="12" alignSelf="center">
+                                  <Paragraph onClick={() => {setFilter([...filter, type]), setToggle(!toggle)}} fontSize="16px" color={Colors.gray} >{type}</Paragraph>
+                                </Column>
+                              </Row>
                             </Card>
                           </Button>
                         )
@@ -298,6 +261,20 @@ const Events = ({data, pageContext, yml}) => {
               <Column size="3" alignSelf="center" align="right">
                 <Filter width="24" color={Colors.blue} fill={Colors.blue} />
               </Column> */}
+              <Column size="6">
+                <Row>
+                  {filter.length > 0
+                    ? filter.map((filterItem, i) => {
+                      return (
+                        <Column size="12" key={i} >
+                          {filterItem}
+                          <span onClick={() => setFilter(filter.filter(item => item != filterItem))}><Cross width="16" color={Colors.blue} fill={Colors.blue} /></span>
+                        </Column>
+                      )
+                    })
+                    : null}
+                </Row>
+              </Column>
             </Row>
           </Column>
         </Row>
@@ -312,95 +289,186 @@ const Events = ({data, pageContext, yml}) => {
 
 
         <Row>
-          {event && event.map((i, index) => {
-            let date = new Date(i.event_date)
-            return (
-              <>
-                <Column size="4" key={index} margin="0 0 1rem 0">
-                  <Card
-                    move="up"
-                    up="30%"
-                    h_xs="auto"
-                    h_sm="auto"
-                    h_md="auto"
-                    h_lg="auto"
-                    h_xl="auto"
-                    width="100%"
-                    color="white"
+          {filteredEvents.length > 1
+            ?
+            filteredEvents.map((i, index) => {
+              let date = new Date(i.event_date)
+              return (
+                <>
+                  <Column size="4" key={index} margin="0 0 1rem 0">
+                    <Card
+                      move="up"
+                      up="30%"
+                      h_xs="auto"
+                      h_sm="auto"
+                      h_md="auto"
+                      h_lg="auto"
+                      h_xl="auto"
+                      width="100%"
+                      color="white"
 
-                    shadow
-                    move="up">
+                      shadow
+                      move="up">
 
-                    <RoundImage
-                      url={`${i.banner_url.includes('placehold') || i.banner_url.includes('hola') || i.banner_url == "" ? '/images/events-alt.jpg' : i.banner_url}`}
-                      bsize="cover"
-                      mb="10px"
-                      border="1.25rem 1.25rem 0 0"
-                      position="center center"
-                      h_xs="230px"
-                      h_sm="230px"
-                      h_md="230px"
-                      h_lg="230px"
-                      h_xl="230px"
-                    />
-                    <Row marginLeft="0" marginRight="0">
-                      <Column size="12">
-                        <Row marginBottom="1rem" >
-                          <Column size="12">
-                            <Paragraph>{i.type}</Paragraph>
-                          </Column>
-                        </Row>
-                        <Row marginBottom="1rem" height="70px">
-                          <Column size="12">
-                            <H4
-                              fs_xs="18px"
-                              fs_sm="18px"
-                              fs_md="16px"
-                              fs_lg="16px"
-                              fs_xl="18px"
-                            >{i.title}
-                            </H4>
-                          </Column>
-                        </Row>
-                        <Row marginBottom=".2rem" >
-                          <Column size="12">
-                            <Paragraph><Clock width="24" color={Colors.blue} fill={Colors.blue} />{days[date.getDay()]}, {date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</Paragraph>
-                          </Column>
-                        </Row>
-                        <Row marginBottom=".2rem" >
-                          <Column size="12">
-                            <Paragraph><Marker width="24" color={Colors.blue} fill={Colors.blue} />{i.city_slug}</Paragraph>
-                          </Column>
-                        </Row>
-                        <Row marginBottom=".2rem" >
-                          <Column size="12">
-                            <Paragraph onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer"><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
-                          </Column>
-                        </Row>
-                        <Row marginBottom=".2rem" >
-                          <Column size="6" align="center">
-                            <a href={i.url}>
-                              <Button outline width="100%" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Join Our Community</Button>
-                            </a>
-                          </Column>
-                          <Column size="6" align="center">
-                            <a href={i.url} target="_blank">
-                              <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
-                            </a>
-                          </Column>
-                        </Row>
+                      <RoundImage
+                        url={`${i.banner_url.includes('placehold') || i.banner_url.includes('hola') || i.banner_url == "" ? '/images/events-alt.jpg' : i.banner_url}`}
+                        bsize="cover"
+                        mb="10px"
+                        border="1.25rem 1.25rem 0 0"
+                        position="center center"
+                        h_xs="230px"
+                        h_sm="230px"
+                        h_md="230px"
+                        h_lg="230px"
+                        h_xl="230px"
+                      />
+                      <Row marginLeft="0" marginRight="0">
+                        <Column size="12">
+                          <Row marginBottom="1rem" >
+                            <Column size="12">
+                              <Paragraph>{i.type}</Paragraph>
+                            </Column>
+                          </Row>
+                          <Row marginBottom="1rem" height="70px">
+                            <Column size="12">
+                              <H4
+                                fs_xs="18px"
+                                fs_sm="18px"
+                                fs_md="16px"
+                                fs_lg="16px"
+                                fs_xl="18px"
+                              >{i.title}
+                              </H4>
+                            </Column>
+                          </Row>
+                          <Row marginBottom=".2rem" >
+                            <Column size="12">
+                              <Paragraph><Clock width="24" color={Colors.blue} fill={Colors.blue} />{days[date.getDay()]}, {date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</Paragraph>
+                            </Column>
+                          </Row>
+                          <Row marginBottom=".2rem" >
+                            <Column size="12">
+                              <Paragraph><Marker width="24" color={Colors.blue} fill={Colors.blue} />{i.city_slug}</Paragraph>
+                            </Column>
+                          </Row>
+                          <Row marginBottom=".2rem" >
+                            <Column size="12">
+                              <Paragraph onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer"><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
+                            </Column>
+                          </Row>
+                          <Row marginBottom=".2rem" >
+                            <Column size="6" align="center">
+                              <a href={i.url}>
+                                <Button outline width="100%" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Join Our Community</Button>
+                              </a>
+                            </Column>
+                            <Column size="6" align="center">
+                              <a href={i.url} target="_blank">
+                                <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
+                              </a>
+                            </Column>
+                          </Row>
 
-                      </Column>
-                    </Row>
-
-
+                        </Column>
+                      </Row>
 
 
-                  </Card>
-                </Column>
-              </>
-            )
-          })}
+
+
+                    </Card>
+                  </Column>
+                </>
+              )
+            })
+            : event.map((i, index) => {
+              let date = new Date(i.event_date)
+              return (
+                <>
+                  <Column size="4" key={index} margin="0 0 1rem 0">
+                    <Card
+                      move="up"
+                      up="30%"
+                      h_xs="auto"
+                      h_sm="auto"
+                      h_md="auto"
+                      h_lg="auto"
+                      h_xl="auto"
+                      width="100%"
+                      color="white"
+
+                      shadow
+                      move="up">
+
+                      <RoundImage
+                        url={`${i.banner_url.includes('placehold') || i.banner_url.includes('hola') || i.banner_url == "" ? '/images/events-alt.jpg' : i.banner_url}`}
+                        bsize="cover"
+                        mb="10px"
+                        border="1.25rem 1.25rem 0 0"
+                        position="center center"
+                        h_xs="230px"
+                        h_sm="230px"
+                        h_md="230px"
+                        h_lg="230px"
+                        h_xl="230px"
+                      />
+                      <Row marginLeft="0" marginRight="0">
+                        <Column size="12">
+                          <Row marginBottom="1rem" >
+                            <Column size="12">
+                              <Paragraph>{i.type}</Paragraph>
+                            </Column>
+                          </Row>
+                          <Row marginBottom="1rem" height="70px">
+                            <Column size="12">
+                              <H4
+                                fs_xs="18px"
+                                fs_sm="18px"
+                                fs_md="16px"
+                                fs_lg="16px"
+                                fs_xl="18px"
+                              >{i.title}
+                              </H4>
+                            </Column>
+                          </Row>
+                          <Row marginBottom=".2rem" >
+                            <Column size="12">
+                              <Paragraph><Clock width="24" color={Colors.blue} fill={Colors.blue} />{days[date.getDay()]}, {date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</Paragraph>
+                            </Column>
+                          </Row>
+                          <Row marginBottom=".2rem" >
+                            <Column size="12">
+                              <Paragraph><Marker width="24" color={Colors.blue} fill={Colors.blue} />{i.city_slug}</Paragraph>
+                            </Column>
+                          </Row>
+                          <Row marginBottom=".2rem" >
+                            <Column size="12">
+                              <Paragraph onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer"><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
+                            </Column>
+                          </Row>
+                          <Row marginBottom=".2rem" >
+                            <Column size="6" align="center">
+                              <a href={i.url}>
+                                <Button outline width="100%" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Join Our Community</Button>
+                              </a>
+                            </Column>
+                            <Column size="6" align="center">
+                              <a href={i.url} target="_blank">
+                                <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
+                              </a>
+                            </Column>
+                          </Row>
+
+                        </Column>
+                      </Row>
+
+
+
+
+                    </Card>
+                  </Column>
+                </>
+              )
+            })}
         </Row>
       </Wrapper>
       <Divider height="50px" />
