@@ -61,8 +61,6 @@ const Blog = ({data, pageContext, yml}) => {
                 <Row>
                     <div className="card-columns">
                         {data.posts.edges.filter(post => post.node.frontmatter.featured === true).map((item, i) => {
-                            console.log("item", data)
-
                             return (
                                 <Column size="12" masonry key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
