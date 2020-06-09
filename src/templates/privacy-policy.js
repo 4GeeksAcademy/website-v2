@@ -39,26 +39,24 @@ const Privacy = (props) => {
             <Wrapper style="default">
                 {yml.sections.map((section, i) => {
                     return (
-                        <>
-                            <Row key={i} align="center" marginBottom="30px">
-                                <Column size="10">
-                                    <H2
-                                        fs_xs="24px"
-                                        fs_sm="24px"
-                                        fs_md="24px"
-                                        fs_lg="24px"
-                                        fs_xl="24px"
-                                    >{section.title}</H2>
-                                    <Paragraph
-                                        fs_xs="12px"
-                                        fs_sm="12px"
-                                        fs_md="12px"
-                                        fs_lg="12px"
-                                        fs_xl="12px"
-                                    >{section.text}</Paragraph>
-                                </Column>
-                            </Row>
-                        </>
+                        <Row key={i} align="center" marginBottom="30px">
+                            <Column size="10">
+                                <H2
+                                    fs_xs="24px"
+                                    fs_sm="24px"
+                                    fs_md="24px"
+                                    fs_lg="24px"
+                                    fs_xl="24px"
+                                >{section.title}</H2>
+                                <Paragraph
+                                    fs_xs="12px"
+                                    fs_sm="12px"
+                                    fs_md="12px"
+                                    fs_lg="12px"
+                                    fs_xl="12px"
+                                >{section.text}</Paragraph>
+                            </Column>
+                        </Row>
                     )
                 })}
             </Wrapper>

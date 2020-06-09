@@ -102,9 +102,12 @@ const WhoIsHiring = props => {
             <H4 primary>{partners.partners.footer_tagline}</H4>
           </Row>
           <Row align="center" marginTop="15px">
-            <Link to={partners.partners.footer_link}>
-              <Paragraph color={Colors.blue}>{partners.partners.footer_button}</Paragraph>
-            </Link>
+            {partners.partners.footer_link != undefined
+              ?
+              <Link to={partners.partners.footer_link}>
+                <Paragraph color={Colors.blue}>{partners.partners.footer_button}</Paragraph>
+              </Link> :
+              <Paragraph color={Colors.blue}>{partners.partners.footer_button}</Paragraph>}
           </Row>
         </>
         : props.source === "coding"
