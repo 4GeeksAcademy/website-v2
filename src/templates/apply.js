@@ -6,35 +6,11 @@ import {H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Card} from '../components/Card'
 import {Input, Alert} from '../components/Form'
-import Grid from '@material-ui/core/Grid';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
 import {SessionContext} from '../session.js'
 import {apply} from "../actions";
 import {addContact} from '../../api/_utils';
 import {BrowserView, MObileView, isBrowser, isMobile} from "react-device-detect";
-
-const useStyles = makeStyles({
-    root: {
-        background: Colors.white,
-        fontSize: '10px',
-        borderRadius: 3,
-        border: 0,
-        color: 'white',
-        padding: '0 10px',
-        '&$selected': {
-            background: Colors.yellow,
-            color: Colors.white
-        },
-
-    },
-
-    label: {
-        textTransform: 'lowercase',
-    },
-});
 
 const formIsValid = (formData=null) => {
     if(!formData) return null;
@@ -47,7 +23,6 @@ const Apply = (props) => {
     const {data, pageContext, yml} = props;
     const { session } = useContext(SessionContext);
     const [ formStatus, setFormStatus ] = useState({ status: "idle", msg: "Apply"});
-    const classes = useStyles();
     const [formData, setVal] = useState({
         first_name: { value: '', valid: false },
         last_name: { value: '', valid: false },
@@ -56,6 +31,7 @@ const Apply = (props) => {
         location: { value: '', valid: false },
         referral_key: { value: '', valid: true }
     });
+    console.log("formData", formData)
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
@@ -97,15 +73,17 @@ const Apply = (props) => {
                         color={Colors.white}
                     >
 
-                        <Card shadow borders="1.25rem" height="500px" p_xs="0 10px" p_sm="0 15px" p_md="0 20px">
+                        <Card shadow borders="1.25rem" p_xs="0 10px" p_sm="0 15px" p_md="0 20px">
                             <Row
+                                background="#000000"
                                 height="100%"
                                 marginLeft="0"
                                 marginRight="0"
                                 align="center"
+                                borderRadius="0 1.25rem 1.25rem 1.25rem"
 
                             >
-                                <Column size="8" alignSelf="center" height="100%" image="no" border="bottom">
+                                <Column size="8" alignSelf="center" height="100%" image="no" border="bottom" color="white">
                                     <Row align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
@@ -150,25 +128,20 @@ const Apply = (props) => {
                                             <Row height="40px">
                                                 <Paragraph padding="0.375rem 0.75rem" fontSize="13px" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
                                             </Row>
-                                            <Row height="60px">
-                                                <Column size="12">
-                                                    <Grid container spacing={2} direction="column" alignItems="center">
-                                                        <Grid item>
-                                                            {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
-                                                            <ToggleButtonGroup size="large" value={formData.location.value} exclusive 
-                                                                onChange={(e) => setVal({...formData, location: { value: e.target.value, valid: true }})}
-                                                            >
-                                                                {session.locations && session.locations.map(l => <ToggleButton key={l.meta_info.slug} value={l.meta_info.slug} classes={{
-                                                                    label: classes.label, // class name, e.g. `classes-nesting-label-x`
-                                                                }}>
-                                                                    <Paragraph color={Colors.gray}>{l.city}, {l.country}</Paragraph>
-                                                                </ToggleButton>)}
-                                                            </ToggleButtonGroup>
-                                                        </Grid>
-                                                    </Grid>
-                                                </Column>
+                                            <Row>
+                                                {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
+                                                { session.locations && session.locations.map(l => 
+                                                    <Button key={l.meta_info.slug} width="50%" 
+                                                        color={l.meta_info.slug === formData.location.value ? Colors.lightYellow : Colors.lightGray} 
+                                                        borderRadius="0" 
+                                                        colorHover={Colors.verylightGray}
+                                                        onClick={(e) => setVal({...formData, location: { value: l.meta_info.slug, valid: true }})}
+                                                    >
+                                                        <Paragraph color={Colors.gray}>{l.city}, {l.country}</Paragraph>
+                                                    </Button>
+                                                )}
                                             </Row>
-                                            <Row height="40px">
+                                            <Row marginTop="10px">
                                                 <Input type="text" className="form-control" placeholder={yml.left.referral_section.placeholder} 
                                                     value={formData.referral_key.value}
                                                     onChange={(value, valid) => setVal({...formData, referral_key: { value, valid }})}
@@ -178,7 +151,7 @@ const Apply = (props) => {
                                                 <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.referral_section.content}</Paragraph>
                                             </Row>
                                             <Row >
-                                                <Button
+                                                <Button type="submit"
                                                     width="150px"
                                                     move="up" up="15px" color={Colors.blue} textColor={Colors.white}
                                                     margin="2rem 0" padding=".45rem 3rem"
@@ -189,7 +162,7 @@ const Apply = (props) => {
 
                                 </Column>
 
-                                <Column size="4" customRespSize respSize="12" br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="center" height="100%" image="no" color={Colors.black} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" >
+                                <Column size="4" customRespSize respSize="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="center" height="100%" image="no" >
                                     <Row align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
@@ -208,8 +181,7 @@ const Apply = (props) => {
                                             <Divider height="30px" />
 
                                             {yml.right.content_section.map((item, i) => {
-                                                return (<>
-                                                    <Row key={i} height="50px">
+                                                return (<Row key={i} height="50px">
                                                         <Paragraph
 
                                                             fs_xs="12px"
@@ -221,7 +193,7 @@ const Apply = (props) => {
                                                             color={Colors.lightGray}
                                                         >{item}
                                                         </Paragraph>
-                                                    </Row></>)
+                                                    </Row>)
                                             })}
 
 

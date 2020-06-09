@@ -24,6 +24,11 @@ const registration = new Schema({
       required: true,
       use: val => /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/.test(val)
     },
+    email: {
+      type: String,
+      required: true,
+      use: val => /^[a-z][a-z]\W])$/.test(val)
+    },
     tags: {
       type: Array,
       required: true

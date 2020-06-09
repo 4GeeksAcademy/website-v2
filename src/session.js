@@ -80,12 +80,15 @@ function distance (lat1, lon1, lat2, lon2, unit) {
 function closestLoc (locations, lat, lon) {
     let lowerDistance = 10000000;
     let tempLocation = 0;
-    let city = ""
+    let location = null;
     for (var i = 0; i < locations.length; i++) {
         tempLocation = distance(locations[i].node.latitude, locations[i].node.longitude, lat, lon)
-        if (tempLocation <= lowerDistance) {lowerDistance = tempLocation, city = locations[i].node.city}
+        if (tempLocation <= lowerDistance) {
+            lowerDistance = tempLocation;
+            location = locations[i].node
+        }
     }
-    return city;
+    return location;
 }
 export const SessionContext = createContext(null);
 export const withSession = Component => {
@@ -123,7 +126,16 @@ export const withSession = Component => {
                 // const location = "Santiago de Chile"
                 const browserLang = getFirstBrowserLanguage();
                 let repeated = [];
-                const _session = {...session, v4, v6, location, browserLang, language: location.defaultLanguage,
+
+                // get the language
+                let language = null;
+                if(location) language = location.defaultLanguage;
+                else{
+                    console.log("Location could not be loaded, using browserlanguage as default language");
+                    language = browserLang.substring(0,2);
+                }
+
+                const _session = {...session, v4, v6, location, browserLang, language,
                     locations: locationsArray.map(l => l.node).filter(l => {
                         if(repeated.includes(l.meta_info.slug)) return false;
                         
@@ -133,8 +145,9 @@ export const withSession = Component => {
                 };
                 console.log("Reset session with: ",_session);
                 setSession(_session);
-
+                
             };
+            console.log("Loading session...");
             loadIp();
         }, []);
 

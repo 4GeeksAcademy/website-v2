@@ -29,11 +29,11 @@ const Footer = (props) => {
                                                 : <Row height="20px" marginBottom="10px" ><Separator margin=".5rem 0" primary></Separator></Row>
                                             : <Row height="20px" marginBottom="10px" display_xs="none" display_sm="none"><Separator margin=".5rem 0" primary></Separator></Row>
                                         }
-                                        {item.items.map((ln) => {
+                                        {item.items.map((ln, i) => {
                                             return (
-                                                <>
+                                                <div key={i}>
                                                     {ln.link.indexOf("http") > -1 ?
-                                                        <a href={ln.link} key={ln.name}>
+                                                        <a href={ln.link} key={i}>
                                                             <Row marginBottom="5px">
                                                                 <Paragraph
                                                                     fs_xs="16px"
@@ -48,7 +48,7 @@ const Footer = (props) => {
                                                             </Row>
                                                         </a>
                                                         :
-                                                        <Link to={ln.link} key={ln.name}>
+                                                        <Link to={ln.link} key={i}>
                                                             <Row marginBottom="5px">
                                                                 <Paragraph
                                                                     fs_xs="16px"
@@ -62,7 +62,7 @@ const Footer = (props) => {
                                                                 </Paragraph>
                                                             </Row>
                                                         </Link>}
-                                                </>
+                                                </div>
                                             )
                                         })}
                                     </Column>

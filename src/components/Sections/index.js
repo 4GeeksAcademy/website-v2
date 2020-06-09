@@ -68,6 +68,7 @@ export const Row = styled.div`
     height: ${props => props.height};
     width: ${props => props.width};
     border-top: ${props => props.borderTop};
+    ${props => props.border && css`border: ${props.border};`};
     border-bottom: ${props => props.borderBottom};
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position === "absolute" ? "absolute" : props.position === "relative" && "relative"};
@@ -83,7 +84,6 @@ export const Row = styled.div`
     background: ${props => props.background};
     &:hover { 
         background: ${props => props.backgroundHover};
-        border-radius: .25rem;
     }
     // ${Paragraph}:hover{
     //     color:${props => props.colorHover};

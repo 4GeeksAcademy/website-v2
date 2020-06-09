@@ -8,6 +8,7 @@ function tagManager(eventName){
 }
 
 export const apply = async (data, session) => {
+    console.log("Apply action called with session: ", session);
     tagManager('student_application');
     let body = {};
     for(let key in data) body[key] = data[key].value;
@@ -16,7 +17,7 @@ export const apply = async (data, session) => {
     const resp = await fetch('/api/acp_apply', {
         headers: new Headers({'content-type': 'application/json'}),
         method: "POST",
-        body: JSON.stringify({...body, tags: ['website_lead'], lang: session.lang }),
+        body: JSON.stringify({...body, tags: ['website_lead'], lang: session.language }),
     })
     if (resp.status >= 200 && resp.status < 400){
         return await resp.json();

@@ -59,6 +59,7 @@ const Pricing = (props) => {
   const [formData, setVal] = useState({
     first_name: '',
     last_name: '',
+    location: '',
     email: ''
   });
   const handleOpen = () => {
@@ -199,15 +200,12 @@ const Pricing = (props) => {
                       <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
                         onClick={() => {
                           reviewGuidebook(formData)
-
                         }}>Submit</Button> : null}
                 </Column>
                 <Column size="3" customRespSize respSize="3" align="right">
                   <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={handleClose}>Close</Button>
                 </Column>
               </Row>
-
-
             </div>
           </Modal>
           <Button outline position="relative" width="300px" onClick={handleOpen} color={Colors.blue}>{yml.payment_guide.button_text}</Button>

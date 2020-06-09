@@ -8,7 +8,8 @@ export const Colors = {
     blue: "#0097CE",
     lightBlue: "#BBEAFC",
     gray: "#898a8b",
-    lightGray: "#F9F9F9",
+    verylightGray: "#fafafa",
+    lightGray: "#ededed",
     darkGray: '#2e2e2e',
     borderGray: '#ececec',
     yellow: "#E6BA1F",
@@ -231,7 +232,10 @@ export const Span = styled.div`
         opacity: ${props => props.opacity};
       }
 `
-export const Button = styled.button`
+
+
+const SmartButton = ({ children, colorHover, textColor, borderRadius, ...rest }) => <button {...rest}>{children}</button>;
+export const Button = styled(SmartButton)`
     ${props => props.outline
         ?
         css`
@@ -288,8 +292,22 @@ export const Button = styled.button`
                 transform: translateY(${props => props.down});
             `
             }
+            ${props => props.colorHover && 
+                css`&:hover {
+                    background-color: ${props => props.colorHover};
+                }
             `}  
-`
+        `}  
+`;
+Button.defaultProps = {
+    padding: '.5rem .45rem',
+    fontSize: '12px',
+    width: '100%',
+    type: 'button',
+    colorHover: null,
+    borderRadius: '50rem',
+};
+
 export const Toggle = styled.div`
     width: ${props => props.width};
     height: ${props => props.height};
@@ -303,13 +321,6 @@ export const Toggle = styled.div`
     
 `
 
-
-Button.defaultProps = {
-    padding: '.5rem .45rem',
-    fontSize: '12px',
-    width: '100%',
-    borderRadius: '50rem',
-};
 RoundImage.defaultProps = {
     width: '100%',
     backgroundColor: Colors.white
