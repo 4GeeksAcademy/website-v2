@@ -85,7 +85,7 @@ const Mentors = props => {
                                         color={Colors.yellow}>{item.last_name}</H3>
                                     <Paragraph margin="5px 0" color={Colors.lightGray}>{item.job_title}</Paragraph>
                                     <Divider height="10%" />
-                                    <a href={item.linkdin != '' ? `http://${item.linkdin}` : "#"} target="_blank"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
+                                    <a href={item.linkdin != '' ? `http://${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
                                 </Over>
                             </RoundImage>
                         </Column>
