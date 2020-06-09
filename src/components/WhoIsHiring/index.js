@@ -8,7 +8,6 @@ import {Card} from '../Card';
 
 const WhoIsHiring = props => {
   const partners = props.lang[0].node
-  // console.log("partners", partners)
   return (
     <>
       {props.source === "partners"
