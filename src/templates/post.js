@@ -27,7 +27,7 @@ export default function Template (props) {
             return obj;
         }, {});
 
-    console.log("filt", filtered)
+    // console.log("filt", filtered)
     function GetFormattedDate (date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -42,7 +42,7 @@ export default function Template (props) {
         return [year, month, day].join('-');
     }
     let postDate = GetFormattedDate(post.frontmatter.date);
-    console.log("Frontmatter", data.markdownRemark.frontmatter);
+    // console.log("Frontmatter", data.markdownRemark.frontmatter);
     return (
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Wrapper

@@ -38,7 +38,7 @@ const ProgramSelector = (props) => {
   const classes = useStyles();
 
   // const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
-  console.log("pselect:", props.lang)
+  // console.log("pselect:", props.lang)
   let locArray = props.lang;
   // let locArray = data.loc.edges;
   let weekArray = ["16", "9"]

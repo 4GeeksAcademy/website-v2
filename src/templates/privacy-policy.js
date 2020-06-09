@@ -12,7 +12,7 @@ import BaseRender from './_baseRender';
 
 const Privacy = (props) => {
     const {data, pageContext, yml} = props;
-    console.log("privacy", yml)
+    // console.log("privacy", yml)
     return (
         <>
             <Wrapper
