@@ -14,7 +14,6 @@ const GeeksVsOthers = (props) => {
   const [tooltipOpacity, setTooltipOpacity] = useState(0)
   const [tooltipIndex, setTooltipIndex] = useState()
   let info_len = yml.info.length
-  // console.log("yml", info_len)
   return (
     <>
       <Wrapper style="default">
