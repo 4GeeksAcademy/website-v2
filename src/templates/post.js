@@ -102,10 +102,8 @@ export default function Template (props) {
                 <Row align="left" >
                     <Column size="10" align="center">
                         <Row>
-
-
                             {post.frontmatter.tags != null ? post.frontmatter.tags.map((tag, i) => {
-                                return (<>
+                                return (
                                     <Card
                                         key={i}
                                         color="darkGray"
@@ -116,7 +114,6 @@ export default function Template (props) {
                                     >
                                         <Paragraph color={Colors.darkGray}>{tag}</Paragraph>
                                     </Card>
-                                </>
                                 )
                             }) : null}
 
@@ -164,9 +161,7 @@ export default function Template (props) {
                     </Column>
                 </Row>
                 <Divider height="100px" />
-
             </Wrapper>
-
         </Layout>)
 }
 export const postQuery = graphql`

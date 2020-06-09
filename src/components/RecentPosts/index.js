@@ -132,7 +132,9 @@ const RecentPosts = () => {
                                 <Column size="10" >
                                     <Row>
                                         <Column size="7"></Column>
-                                        <Column size="5" align="right"> <Link to={`${i.node.frontmatter.slug}`}><ArrowRight width="32" color={Colors.blue} fill={Colors.blue} /></Link></Column>
+                                        <Column size="5" align="right">
+                                            <Link to={`/${i.node.frontmatter.slug}`}><ArrowRight width="32" color={Colors.blue} fill={Colors.blue} /></Link>
+                                        </Column>
 
                                     </Row>
                                 </Column>
