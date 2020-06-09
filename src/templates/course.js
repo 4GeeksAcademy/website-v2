@@ -845,7 +845,9 @@ export const query = graphql`
           city
           hasFinancialsOption
           financials_max_months
-          
+          fields{
+            lang
+          }
           meta_info {
             slug
             description
@@ -854,7 +856,7 @@ export const query = graphql`
             redirects
           }
           image
-          lang
+          
           prices {
             full_time {
               center_section {
