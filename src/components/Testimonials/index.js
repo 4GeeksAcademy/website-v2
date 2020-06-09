@@ -45,10 +45,9 @@ const Testimonials = (props) => {
                 dynamicHeight={true}
             >
                 {testimonialsArray.map((item, i) => {
-                    console.log("item", item.source_url_text)
                     return (
-                        <Row align="center" padding="30px" >
-                            <Card width="700px" key={i}>
+                        <Row align="center" padding="30px" key={i}>
+                            <Card width="700px" >
                                 <Row align="center">
                                     <RoundImage
                                         url={item.student_thumb}

@@ -38,11 +38,11 @@ const GeeksVsOthers = props => {
             </Row>
             {geeks.info.map((item, index) => {
               return (
-                <>
+                <div key={item.slug}>
                   {index == geeks.info.length - 1
                     ?
                     <Row
-                      key={item.slug}
+
                       height="80px"
                       marginLeft="0"
                       marginRight="0"
@@ -147,7 +147,7 @@ const GeeksVsOthers = props => {
                             color={Colors.gray}>{item.industry_average}</H4></Column></Row>
                       </Column>
                     </Row>}
-                </>
+                </div>
               )
             }
             )}

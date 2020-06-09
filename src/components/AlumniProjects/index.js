@@ -48,7 +48,6 @@ const AlumniProjects = props => {
         }
       `)
     let alumniData = data.allAlumniProjectsYaml.edges[0].node
-    console.log("alumni###", alumniData)
     return (
         <>
             <Row>
@@ -69,7 +68,6 @@ const AlumniProjects = props => {
                     >
                         {alumniData != null &&
                             alumniData.projects.map((item, index) => {
-                                console.log("$%$%", item)
                                 return (
                                     <Card key={index} shadow borders="1.25rem" height="500px">
                                         <Row
@@ -87,8 +85,8 @@ const AlumniProjects = props => {
                                                                 <H3 primary color={Colors.blue} align="left" >{`Meet  `}</H3>
                                                                 {item.alumni.map((alumni, i) => {
                                                                     return (
-                                                                        <>
-                                                                            <Row key={i} >
+                                                                        <div key={i}>
+                                                                            <Row >
                                                                                 <Column size="12">
                                                                                     <H4
                                                                                         fs_xs="12px"
@@ -115,7 +113,7 @@ const AlumniProjects = props => {
                                                                                     </Paragraph>
                                                                                 </Column>
                                                                             </Row>
-                                                                        </>
+                                                                        </div>
                                                                     )
                                                                 })}
                                                             </Column>
