@@ -14,7 +14,7 @@ import JobInfo from '../components/JobInfo'
 import Link from 'gatsby-link'
 
 const Jobs = ({data, pageContext, yml}) => {
-  console.log("jo", yml)
+  // console.log("jo", yml)
   return (
     <>
       <Wrapper

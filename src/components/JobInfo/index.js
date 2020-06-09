@@ -26,13 +26,13 @@ const JobInfo = () => {
         }
       `)
   let jobs = data.allJobYaml.edges
-  console.log(jobs)
+  // console.log(jobs)
   return (
     <>
       {jobs
         ?
         jobs.map((item, index) => {
-          console.log("item", item)
+          // console.log("item", item)
           return (
             <Row key={index}>
               <Column>

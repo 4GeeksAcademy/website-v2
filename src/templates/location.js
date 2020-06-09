@@ -148,7 +148,7 @@ const Location = ({data, pageContext, yml}) => {
                                 <Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
 
                                     {yml.carousel_box.images.map((item, index) => {
-                                        console.log(item.path)
+                                        // console.log(item.path)
                                         return (
                                             <Column key={index} size="12" customRespSize respSize="12" alignSelf="center" height="426px" backgroundSize="cover" image="yes" url={item.path} border="custom" customBorderRadius="1.25rem 0 0 1.25rem" >
 

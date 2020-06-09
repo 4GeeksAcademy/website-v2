@@ -31,7 +31,7 @@ const Testimonials = (props) => {
                 }
               `)
     let testimonialsArray = props.lang[0].node.testimonials;
-    console.log("Testimonials: ", props.lang[0].node.testimonials)
+    // console.log("Testimonials: ", props.lang[0].node.testimonials)
 
     return (
         <>

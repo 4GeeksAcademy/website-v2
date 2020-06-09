@@ -7,61 +7,8 @@ import Link from 'gatsby-link'
 import {Card} from '../Card';
 
 const WhoIsHiring = props => {
-  const data = useStaticQuery(graphql`
-      query myQueryWhoIsHiring{
-        allPartnerYaml {
-          edges {
-            node {
-              partners {
-                tagline
-                sub_heading
-                footer_tagline
-                footer_button
-                footer_link
-                images {
-                  name
-                  slug
-                  image
-                  featured
-                }
-              }
-              influencers {
-                sub_heading
-                tagline
-                images {
-                  name
-                  slug
-                  image
-                  featured
-              }
-            }
-              financials {
-                sub_heading
-                tagline
-                images {
-                  name
-                  slug
-                  image
-                  featured
-              }
-            }
-              coding {
-                sub_heading
-                tagline
-                images {
-                  name
-                  slug
-                  image
-                  featured
-              }
-            }
-            }
-          }
-        }
-        }
-      `)
   const partners = props.lang[0].node
-  console.log("partners", partners)
+  // console.log("partners", partners)
   return (
     <>
       {props.source === "partners"

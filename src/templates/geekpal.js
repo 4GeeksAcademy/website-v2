@@ -23,7 +23,7 @@ function splitTitleString (string) {
 
 const GeekPal = (props) => {
   const {data, pageContext, yml} = props;
-  console.log("GEEKPAL", yml)
+  // console.log("GEEKPAL", yml)
 
   return (
     <>
