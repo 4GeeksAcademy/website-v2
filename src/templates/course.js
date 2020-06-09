@@ -188,9 +188,6 @@ const Program = ({data, pageContext, yml}) => {
         : pageContext.slug === "coding-introduction" || pageContext.slug === "introduccion-programacion"
         && null
   }
-  console.log('pageContext', pageContext)
-  console.log('yml', yml)
-  console.log('data', data)
   return (<>
     <div className={test}
     >

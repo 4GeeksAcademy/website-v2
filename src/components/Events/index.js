@@ -106,7 +106,7 @@ const Events = () => {
 
                                                 </Row>
                                                 <Row height="100px">
-                                                    <a href={item.url} target="_blank">
+                                                    <a href={item.url} target="_blank" rel="noopener noreferrer">
                                                         <Button outline color={Colors.blue} textColor={Colors.black} padding=".35rem.85rem">APPLY NOW</Button>
                                                     </a>
                                                 </Row>
