@@ -29,10 +29,11 @@ const Footer = (props) => {
                                                 : <Row height="20px" marginBottom="10px" ><Separator margin=".5rem 0" primary></Separator></Row>
                                             : <Row height="20px" marginBottom="10px" display_xs="none" display_sm="none"><Separator margin=".5rem 0" primary></Separator></Row>
                                         }
-                                        {item.items.map((ln) => {
+                                        {item.items.map((ln, i) => {
                                             return (
-                                                <>
-                                                    {ln.link.indexOf("http") > -1 ?
+                                                <div key={i}>
+                                                    {ln.link.indexOf("http") > -1
+                                                        ?
                                                         <a href={ln.link} key={ln.name}>
                                                             <Row marginBottom="5px">
                                                                 <Paragraph
@@ -48,7 +49,8 @@ const Footer = (props) => {
                                                             </Row>
                                                         </a>
                                                         :
-                                                        <Link to={ln.link} key={ln.name}>
+                                                        ln.link == ""
+                                                            ?
                                                             <Row marginBottom="5px">
                                                                 <Paragraph
                                                                     fs_xs="16px"
@@ -61,8 +63,23 @@ const Footer = (props) => {
                                                                     {ln.name}
                                                                 </Paragraph>
                                                             </Row>
-                                                        </Link>}
-                                                </>
+                                                            :
+                                                            <Link to={ln.link} key={ln.name}>
+                                                                <Row marginBottom="5px">
+                                                                    <Paragraph
+                                                                        fs_xs="16px"
+                                                                        fs_sm="16px"
+                                                                        fs_md="12px"
+                                                                        fs_lg="14px"
+                                                                        fs_xl="16px"
+                                                                        color={Colors.white}
+                                                                    >
+                                                                        {ln.name}
+                                                                    </Paragraph>
+                                                                </Row>
+                                                            </Link>
+                                                    }
+                                                </div>
                                             )
                                         })}
                                     </Column>

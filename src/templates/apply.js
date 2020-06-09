@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import { navigate } from 'gatsby';
+import {navigate} from 'gatsby';
 import Layout from '../global/Layout';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H3, Title, Separator, Paragraph} from '../components/Heading'
@@ -36,47 +36,47 @@ const useStyles = makeStyles({
     },
 });
 
-const formIsValid = (formData=null) => {
-    if(!formData) return null;
-    for(let key in formData){
-        if(!formData[key].valid) return false;
+const formIsValid = (formData = null) => {
+    if (!formData) return null;
+    for (let key in formData) {
+        if (!formData[key].valid) return false;
     }
     return true;
 }
 const Apply = (props) => {
     const {data, pageContext, yml} = props;
-    const { session } = useContext(SessionContext);
-    const [ formStatus, setFormStatus ] = useState({ status: "idle", msg: "Apply"});
+    const {session} = useContext(SessionContext);
+    const [formStatus, setFormStatus] = useState({status: "idle", msg: "Apply"});
     const classes = useStyles();
     const [formData, setVal] = useState({
-        first_name: { value: '', valid: false },
-        last_name: { value: '', valid: false },
-        phone: { value: '', valid: false },
-        email: { value: '', valid: false },
-        location: { value: '', valid: false },
-        referral_key: { value: '', valid: true }
+        first_name: {value: '', valid: false},
+        last_name: {value: '', valid: false},
+        phone: {value: '', valid: false},
+        email: {value: '', valid: false},
+        location: {value: '', valid: false},
+        referral_key: {value: '', valid: true}
     });
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
-            if(!formIsValid(formData)) setFormStatus({ status: "error", msg: "There are some errors in your form" });
-            else{
-                setFormStatus({ status: "loading", msg: "Loading..." });
+            if (!formIsValid(formData)) setFormStatus({status: "error", msg: "There are some errors in your form"});
+            else {
+                setFormStatus({status: "loading", msg: "Loading..."});
                 apply(formData, session)
                     .then(data => {
-                            if(data.error !== false){
-                                setFormStatus({ status: "error", msg: "Fix errors" });
-                            }
-                            else{
-                                setFormStatus({ status: "thank-you", msg: "Thank you" });
-                                console.log("Thank you");
-                                navigate('/thank-you/apply');
-                            }
-                        })
-                        .catch(error => {
-                            console.log("error", error);
-                        })
-            } 
+                        if (data.error !== false) {
+                            setFormStatus({status: "error", msg: "Fix errors"});
+                        }
+                        else {
+                            setFormStatus({status: "thank-you", msg: "Thank you"});
+                            console.log("Thank you");
+                            navigate('/thank-you/apply');
+                        }
+                    })
+                    .catch(error => {
+                        console.log("error", error);
+                    })
+            }
         }}>
             <Divider height="100px" />
             <Wrapper
@@ -111,14 +111,14 @@ const Apply = (props) => {
                                             <Divider height="50px" />
                                             <Row height="50px">
                                                 <H3>{yml.left.heading}</H3>
-                                                { formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
+                                                {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                             </Row>
                                             <Row height="50px">
                                                 <Input
                                                     type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                                     errorMsg="Please specify a valid first name"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, first_name: { value, valid }})}
+                                                    onChange={(value, valid) => setVal({...formData, first_name: {value, valid}})}
                                                     value={formData.first_name.value}
                                                 />
                                             </Row>
@@ -126,7 +126,7 @@ const Apply = (props) => {
                                                 <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                                     errorMsg="Please specify a valid last name"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, last_name: { value, valid }})}
+                                                    onChange={(value, valid) => setVal({...formData, last_name: {value, valid}})}
                                                     value={formData.last_name.value}
                                                 />
                                             </Row>
@@ -134,7 +134,7 @@ const Apply = (props) => {
                                                 <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
                                                     errorMsg="Please specify a valid email"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, email: { value, valid }})}
+                                                    onChange={(value, valid) => setVal({...formData, email: {value, valid}})}
                                                     value={formData.email.value}
                                                 />
                                             </Row>
@@ -143,7 +143,7 @@ const Apply = (props) => {
                                                     type="phone" className="form-control" placeholder={yml.left.form_section.phone}
                                                     errorMsg="Please specify a valid phone number"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, phone: { value, valid }})}
+                                                    onChange={(value, valid) => setVal({...formData, phone: {value, valid}})}
                                                     value={formData.phone.value}
                                                 />
                                             </Row>
@@ -155,8 +155,8 @@ const Apply = (props) => {
                                                     <Grid container spacing={2} direction="column" alignItems="center">
                                                         <Grid item>
                                                             {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
-                                                            <ToggleButtonGroup size="large" value={formData.location.value} exclusive 
-                                                                onChange={(e) => setVal({...formData, location: { value: e.target.value, valid: true }})}
+                                                            <ToggleButtonGroup size="large" value={formData.location.value} exclusive
+                                                                onChange={(e) => setVal({...formData, location: {value: e.target.value, valid: true}})}
                                                             >
                                                                 {session.locations && session.locations.map(l => <ToggleButton key={l.meta_info.slug} value={l.meta_info.slug} classes={{
                                                                     label: classes.label, // class name, e.g. `classes-nesting-label-x`
@@ -169,9 +169,9 @@ const Apply = (props) => {
                                                 </Column>
                                             </Row>
                                             <Row height="40px">
-                                                <Input type="text" className="form-control" placeholder={yml.left.referral_section.placeholder} 
+                                                <Input type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
                                                     value={formData.referral_key.value}
-                                                    onChange={(value, valid) => setVal({...formData, referral_key: { value, valid }})}
+                                                    onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
                                                 />
                                             </Row>
                                             <Row height="20px">
@@ -208,7 +208,7 @@ const Apply = (props) => {
                                             <Divider height="30px" />
 
                                             {yml.right.content_section.map((item, i) => {
-                                                return (<>
+                                                return (
                                                     <Row key={i} height="50px">
                                                         <Paragraph
 
@@ -221,7 +221,8 @@ const Apply = (props) => {
                                                             color={Colors.lightGray}
                                                         >{item}
                                                         </Paragraph>
-                                                    </Row></>)
+                                                    </Row>
+                                                )
                                             })}
 
 
