@@ -138,9 +138,6 @@ const Program = ({data, pageContext, yml}) => {
     setActiveStep(0);
     setCompleted({});
   };
-
-
-  // console.log("tempQ", data.allTypicalDayYaml)
   function getStepTitle (step) {
     switch (step) {
       case 0:
