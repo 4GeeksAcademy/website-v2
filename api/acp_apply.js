@@ -1,49 +1,39 @@
-// const path = require('path');
-const Schema = require('validate');
-const { addorUpdateContact } = require('./_utils.js');
-// require('dotenv').config({ path: path.resolve(process.cwd(), '.env') });
+const { addorUpdateContact, addContactToAutomation } = require('./_utils.js');
 
-const registration = new Schema({
-    first_name: {
-      type: String,
-      required: true,
-      length: { min: 2, max: 20 }
-    },
-    last_name: {
-      type: String,
-      required: true,
-      length: { min: 2, max: 20 }
-    },
-    phone: {
-      type: String,
-      required: true,
-      use: val => /\+(\d{1,3})(\d{10})$/.test(val)
-    },
-    email: {
-      type: String,
-      required: true,
-      use: val => /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/.test(val)
-    },
-    email: {
-      type: String,
-      required: true,
-      use: val => /^[a-z][a-z]\W])$/.test(val)
-    },
-    tags: {
-      type: Array,
-      required: true
-    }
-});
+const validate = (data) => {
+
+    if(typeof(data['first_name']) !== "string") throw new Error('Missing or invalid first name');
+    else if(data['first_name'].length > 50) throw new Error('First name too long');
+
+    if(typeof(data['last_name']) !== "string") throw new Error('Missing or invalid last name');
+    else if(data['last_name'].length > 50) throw new Error('Last name too long');
+    
+    if(typeof(data['last_name']) !== "string") throw new Error('Missing or invalid phone');
+    else if(/\+(\d{1,3})(\d{10})$/.test(val)) throw new Error('Invalid phone');
+    
+    if(typeof(data['email']) !== "string") throw new Error('Missing or invalid email');
+    else if(/^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/.test(val)) throw new Error('Invalid email');
+    
+    if(typeof(data['lang']) !== "string") throw new Error('Missing or invalid language');
+    else if(/^[a-z][a-z]\W])$/.test(val)) throw new Error('Invalid language');
+
+    if(Array.isArray(data['tags'])) throw new Error('Missing or invalid tags');
+  };
 
 module.exports = (req, res) => {
 
-  const errors = registration.validate(req.body);
-  if(errors.length > 0){
-    console.log("Errors", errors.map(e => e.message));
-    res.status(400).json({ message: errors.map(e => e.message) });
+  try{
+    validate(req.body);
   }
+  catch(error){
+    res.status(400).json({ message: error.message });
+  }
+
   const contact = req.body;
   addorUpdateContact(contact)
+      .then((result) => {
+          return addContactToAutomation(contact.email, "49"); //add to strong lead automation, soft lead will be 48
+      })
       .then((result) => {
           res.status(200).json({
               success: true,

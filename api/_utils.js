@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 
 const HOST = process.env.ACP_HOST;
+const HOST_OLD = 'https://4geeks.api-us1.com';
 let HEADERS = {
     'Api-Token': process.env.ACP_TOKEN
 };
@@ -52,7 +53,7 @@ const setOptional = (original, data, key) => {
     } 
     return original;
 }
-export const addorUpdateContact = async (contact) => {
+const addorUpdateContact = async (contact) => {
     console.log("contact", contact);
     validate(contact, ['email', 'tags', 'first_name','url','lang','country_name','gclid', 'utm_location', 'referral_key']);
     mandatory(contact, ['email', 'tags', 'lang', 'utm_location']);
@@ -89,3 +90,31 @@ export const addorUpdateContact = async (contact) => {
         throw new Error(msg ? msg.title : "Uknown error");
     }
 }
+
+const addContactToAutomation = async (email, automations) => {
+
+    const formData = new FormData();
+    formData.append('contact_email', email);
+    formData.append('automation', automations.toString().join(","));
+    formData.append('api_action', "automation_contact_add");
+    formData.append('api_key', HEADERS['Api-Token']);
+    formData.append('api_output', "json");
+    
+    const result = await fetch(`${HOST_OLD}/admin/api.php?api_action=automation_contact_add`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formData
+    });
+    if(result.status >= 200 && result.status < 400){
+        return await result.json();
+    } 
+    else{
+        const err = await result.json();
+        const msg = err.errors.pop();
+        throw new Error(msg ? msg.title : "Uknown error");
+    }
+}
+
+module.exports = { addorUpdateContact, addContactToAutomation };
