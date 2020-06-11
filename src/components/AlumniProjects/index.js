@@ -64,7 +64,7 @@ const AlumniProjects = props => {
                         showStatus={false}
                         autoPlay={false}
                         infiniteLoop={true}
-                        showArrows={false}
+                        showArrows={true}
                     >
                         {alumniData != null &&
                             alumniData.projects.map((item, index) => {

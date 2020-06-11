@@ -20,8 +20,14 @@ const Loc = (props) => {
           border="bottom"
           image="no"
           color={Colors.white}
-        ><Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
-
+        ><Carousel
+          showIndicators={false}
+          showThumbs={false}
+          showStatus={false}
+          autoPlay={true}
+          infiniteLoop={true}
+          showArrows={true}
+        >
             {loc != null &&
               loc.map((item, index) => {
                 return (
