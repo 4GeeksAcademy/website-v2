@@ -1,9 +1,25 @@
 {
   "builds": [
-    { "src": "src/api/*/index.js", "use": "@now/node" }
+    { "src": "src/api/*/index.js", "use": "@now/node" },
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "public" } }
   ],
   "routes": [
-      { "src": "/api/(.*)", "dest": "src/api/$1/index.js" }
+      { "src": "/api/(.*)", "dest": "src/api/$1/index.js" },
+      {
+        "src":"/(.*).png",
+        "headers": { "cache-control": "s-maxage=31536000,immutable" },
+        "dest":"/$1.png"
+      },
+      {
+        "src":"/(.*).bundle.js",
+        "headers": { "cache-control": "s-maxage=31536000,immutable" },
+        "dest":"/$1.bundle.js"
+      },
+      {
+        "src": "/(.*)",
+        "headers": { "cache-control": "s-maxage=0" },
+        "dest": "/index.html"
+      }
   ],
   "build": {
     "env": {
