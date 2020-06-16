@@ -9,7 +9,6 @@ import {Input, Alert} from '../components/Form'
 import BaseRender from './_baseRender'
 import {SessionContext} from '../session.js'
 import {apply} from "../actions";
-import {addContact} from '../../api/_utils';
 import {BrowserView, MObileView, isBrowser, isMobile} from "react-device-detect";
 
 const formIsValid = (formData=null) => {
