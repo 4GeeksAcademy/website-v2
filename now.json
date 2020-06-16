@@ -1,4 +1,10 @@
 {
+  "builds": [
+    { "src": "src/api/*/index.js", "use": "@now/node" }
+  ],
+  "routes": [
+      { "src": "/api/(.*)", "dest": "src/api/$1/index.js" }
+  ],
   "build": {
     "env": {
       "ACP_TOKEN": "@acp_token",

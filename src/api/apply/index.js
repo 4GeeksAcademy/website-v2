@@ -1,4 +1,4 @@
-const { addorUpdateContact, addContactToAutomation } = require('./_utils.js');
+const { addorUpdateContact, addContactToAutomation } = require('../utils.js');
 
 const validate = (data) => {
 

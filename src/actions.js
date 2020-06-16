@@ -14,7 +14,7 @@ export const apply = async (data, session) => {
     for(let key in data) body[key] = data[key].value;
 
     console.log("session", session);
-    const resp = await fetch('/api/acp_apply', {
+    const resp = await fetch('/api/apply', {
         headers: new Headers({'content-type': 'application/json'}),
         method: "POST",
         body: JSON.stringify({...body, tags: ['website_lead'], lang: session.language }),
