@@ -188,9 +188,6 @@ const Program = ({data, pageContext, yml}) => {
         : pageContext.slug === "coding-introduction" || pageContext.slug === "introduccion-programacion"
         && null
   }
-  console.log('pageContext', pageContext)
-  console.log('yml', yml)
-  console.log('data', data)
   return (<>
     <div className={test}
     >
@@ -344,7 +341,7 @@ const Program = ({data, pageContext, yml}) => {
                         <Column size="12">
                           {geek.geek_data.geek_pal.map((pal, index) => {
                             return (
-                              <Row key={1} marginBottom="4px">
+                              <Row key={index} marginBottom="4px">
                                 <Column size="1" customRespSize respSize="1" alignSelf="center">
                                   <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
                                 </Column>
@@ -396,7 +393,7 @@ const Program = ({data, pageContext, yml}) => {
                         <Column size="12">
                           {geek.geek_data.geek_force.map((pal, index) => {
                             return (
-                              <Row key={1} marginBottom="2px" >
+                              <Row key={index} marginBottom="2px" >
                                 <Column size="1" customRespSize respSize="1" alignSelf="center">
                                   <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
                                 </Column>

@@ -12,7 +12,6 @@ import Link from 'gatsby-link'
 
 const Loc = (props) => {
   let loc = props.lang
-  console.log("loc####", loc)
   return (
     <>
       <Row>
@@ -94,11 +93,8 @@ const Loc = (props) => {
 
         {loc.map((pic, i) => {
           let randLocImgIndex = Math.floor(Math.random() * pic.node.carousel_box.images.length)
-          console.log("****", randLocImgIndex)
           return (
-
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
-
               {/* <Card width="100%" > */}
               <RoundImage
                 h_xs="40px"

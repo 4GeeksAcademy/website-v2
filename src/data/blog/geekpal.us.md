@@ -1,6 +1,7 @@
 ---
 author: alesanchezr
 date: 2020-04-29 05:31:23+00:00
+link: https://www.4geeksacademy.co/geekpal
 slug: geekpal
 title: Never Code Alone Again
 avatar: "/staff/alejandro.png"

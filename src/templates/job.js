@@ -19,7 +19,6 @@ const Input = styled.input`
 const Job = ({data, pageContext, yml}) => {
     const [form, setForm] = useState(false);
     const [buttonToggle, setButtonToggle] = useState();
-    console.log(yml)
     const [formData, setVal] = useState({
         first_name: '',
         last_name: '',

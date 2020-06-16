@@ -15,7 +15,6 @@ import Link from 'gatsby-link'
 const Why = (props) => {
     const {data, pageContext, yml} = props;
     const cornerstone = yml.cornerstones;
-    console.log("yml", data)
     return (
         <>
             <Container fluid height="450px">

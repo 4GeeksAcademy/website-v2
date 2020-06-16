@@ -70,9 +70,6 @@ export default () => {
         setActiveStep(0);
         setCompleted({});
     };
-
-
-    // console.log("tempQ", data.allTypicalDayYaml)
     function getStepContent (step) {
         switch (step) {
             case 0:

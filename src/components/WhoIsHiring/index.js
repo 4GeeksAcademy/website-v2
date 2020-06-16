@@ -7,61 +7,7 @@ import Link from 'gatsby-link'
 import {Card} from '../Card';
 
 const WhoIsHiring = props => {
-  const data = useStaticQuery(graphql`
-      query myQueryWhoIsHiring{
-        allPartnerYaml {
-          edges {
-            node {
-              partners {
-                tagline
-                sub_heading
-                footer_tagline
-                footer_button
-                footer_link
-                images {
-                  name
-                  slug
-                  image
-                  featured
-                }
-              }
-              influencers {
-                sub_heading
-                tagline
-                images {
-                  name
-                  slug
-                  image
-                  featured
-              }
-            }
-              financials {
-                sub_heading
-                tagline
-                images {
-                  name
-                  slug
-                  image
-                  featured
-              }
-            }
-              coding {
-                sub_heading
-                tagline
-                images {
-                  name
-                  slug
-                  image
-                  featured
-              }
-            }
-            }
-          }
-        }
-        }
-      `)
   const partners = props.lang[0].node
-  console.log("partners", partners)
   return (
     <>
       {props.source === "partners"
@@ -102,9 +48,12 @@ const WhoIsHiring = props => {
             <H4 primary>{partners.partners.footer_tagline}</H4>
           </Row>
           <Row align="center" marginTop="15px">
-            <Link to={partners.partners.footer_link}>
-              <Paragraph color={Colors.blue}>{partners.partners.footer_button}</Paragraph>
-            </Link>
+            {partners.partners.footer_link != undefined
+              ?
+              <Link to={partners.partners.footer_link}>
+                <Paragraph color={Colors.blue}>{partners.partners.footer_button}</Paragraph>
+              </Link> :
+              <Paragraph color={Colors.blue}>{partners.partners.footer_button}</Paragraph>}
           </Row>
         </>
         : props.source === "coding"

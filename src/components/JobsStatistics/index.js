@@ -9,7 +9,6 @@ import {Card} from '../Card'
 
 export default (props) => {
     const jobs = props.lang[0].node.jobs
-    console.log("jobs", jobs)
     return (
         <Row>
             {jobs.map((i, index) => (

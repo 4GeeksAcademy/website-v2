@@ -26,8 +26,6 @@ export default function Template (props) {
             obj = twitterUser[key];
             return obj;
         }, {});
-
-    console.log("filt", filtered)
     function GetFormattedDate (date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -42,7 +40,6 @@ export default function Template (props) {
         return [year, month, day].join('-');
     }
     let postDate = GetFormattedDate(post.frontmatter.date);
-    console.log("Frontmatter", data.markdownRemark.frontmatter);
     return (
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Wrapper
@@ -102,10 +99,8 @@ export default function Template (props) {
                 <Row align="left" >
                     <Column size="10" align="center">
                         <Row>
-
-
                             {post.frontmatter.tags != null ? post.frontmatter.tags.map((tag, i) => {
-                                return (<>
+                                return (
                                     <Card
                                         key={i}
                                         color="darkGray"
@@ -116,7 +111,6 @@ export default function Template (props) {
                                     >
                                         <Paragraph color={Colors.darkGray}>{tag}</Paragraph>
                                     </Card>
-                                </>
                                 )
                             }) : null}
 
@@ -164,9 +158,7 @@ export default function Template (props) {
                     </Column>
                 </Row>
                 <Divider height="100px" />
-
             </Wrapper>
-
         </Layout>)
 }
 export const postQuery = graphql`
