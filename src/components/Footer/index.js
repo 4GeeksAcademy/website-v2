@@ -32,9 +32,8 @@ const Footer = (props) => {
                                         {item.items.map((ln, i) => {
                                             return (
                                                 <div key={i}>
-                                                    {ln.link.indexOf("http") > -1
-                                                        ?
-                                                        <a href={ln.link} key={ln.name}>
+                                                    {ln.link.indexOf("http") > -1 ?
+                                                        <a href={ln.link} key={i}>
                                                             <Row marginBottom="5px">
                                                                 <Paragraph
                                                                     fs_xs="16px"
@@ -49,8 +48,7 @@ const Footer = (props) => {
                                                             </Row>
                                                         </a>
                                                         :
-                                                        ln.link == ""
-                                                            ?
+                                                        <Link to={ln.link} key={i}>
                                                             <Row marginBottom="5px">
                                                                 <Paragraph
                                                                     fs_xs="16px"
@@ -63,22 +61,7 @@ const Footer = (props) => {
                                                                     {ln.name}
                                                                 </Paragraph>
                                                             </Row>
-                                                            :
-                                                            <Link to={ln.link} key={ln.name}>
-                                                                <Row marginBottom="5px">
-                                                                    <Paragraph
-                                                                        fs_xs="16px"
-                                                                        fs_sm="16px"
-                                                                        fs_md="12px"
-                                                                        fs_lg="14px"
-                                                                        fs_xl="16px"
-                                                                        color={Colors.white}
-                                                                    >
-                                                                        {ln.name}
-                                                                    </Paragraph>
-                                                                </Row>
-                                                            </Link>
-                                                    }
+                                                        </Link>}
                                                 </div>
                                             )
                                         })}

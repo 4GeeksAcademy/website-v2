@@ -13,6 +13,7 @@ const StyledInput = styled.input`
     background-color: ${props => props.valid ? Colors.lightGray : Colors.lightRed};
     height: 40px;
     width: 100%;
+    padding: 5px 10px;
     border: none;
     font-family: 'Lato', sans-serif;
     font-size: 14px;

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Helmet} from 'react-helmet';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/style.css';
 
 import NavB from '../components/Navbar'
