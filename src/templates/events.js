@@ -107,7 +107,7 @@ const Events = ({data, pageContext, yml}) => {
       let filterTypeArray = [];
       for (let i = 0; i < event.length; i++) {
         if (filterTypeArray.includes(event[i].type)) {
-          console.log("####", event[i].type)
+          // console.log("####", event[i].type)
         }
         else {
           filterTypeArray.push(event[i].type)
