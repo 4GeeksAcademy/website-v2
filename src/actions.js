@@ -1,3 +1,5 @@
+const API_HOST = 'http://127.0.0.1:8000/v1'
+
 function tagManager (eventName) {
     console.log(window.dataLayer);
     if (typeof dataLayer != 'undefined') {
@@ -14,18 +16,26 @@ export const apply = async (data, session) => {
     for (let key in data) body[key] = data[key].value;
 
     console.log("session", session);
-    const resp = await fetch('/api/apply', {
+    const resp = await fetch(`${API_HOST}/marketing/lead`, {
         headers: new Headers({'content-type': 'application/json'}),
         method: "POST",
-        body: JSON.stringify({...body, tags: ['website_lead'], lang: session.language }),
+        body: JSON.stringify({...body, 
+            tags: ['website-lead'].join(","), 
+            language: session.language,
+            city: session.location.city, 
+            country: session.location.country, 
+            utm_url: window.location.href 
+        }),
     })
     if (resp.status >= 200 && resp.status < 400) {
         return await resp.json();
     }
     else if (resp.status === 400) {
         const error = await resp.json();
-        let msg = Array.isArray(error) ? error.json(", ") : error;
-        throw Error(msg);
+        if(typeof(error.details) === 'string') throw Error(error.details);
+        for(let key in error){
+            throw Error(error[key][0]);
+        }
     }
 
     throw Error('Unexpected error');
