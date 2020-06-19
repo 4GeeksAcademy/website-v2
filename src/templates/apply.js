@@ -73,7 +73,7 @@ const Apply = (props) => {
                         color={Colors.white}
                     >
 
-                        <Card shadow borders="1.25rem" p_xs="0 10px" p_sm="0 15px" p_md="0 20px">
+                        <Card shadow borders="1.25rem" p_xs="0 10px" p_sm="0" p_md="0">
                             <Row
                                 background="#000000"
                                 height="100%"
