@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import {Helmet} from 'react-helmet';
 
 import '../assets/css/style.css';
-
+import Navbar from '../components/Navbar';
+import {Nav} from '../components/Navbar';
 import NavB from '../components/Navbar'
 import Footer from '../components/Footer'
 import {StaticQuery, graphql} from 'gatsby';
@@ -61,7 +62,8 @@ const Layout = ({children, seo, context}) => {
         return (
           <>
             <SEO {...seo} context={context} />
-            <NavB lang={myNavbar} />
+            {/* <NavB lang={myNavbar} /> */}
+            <Navbar lang={myNavbar} />
             <GlobalStyle />
             <>
               {children}
