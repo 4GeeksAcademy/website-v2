@@ -9,8 +9,8 @@ export const NavBar = styled.nav`
     background-color: white;
     padding: 0 2rem;
     // position: fixed;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     align-items: center;
 `
 export const Nav = styled.ul`
@@ -96,38 +96,47 @@ const StyledBurger = styled.div`
 `;
 
 export const Burger = (props) => {
-    const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
-    return (
-        <>
-            <StyledBurger open={open} onClick={() => setOpen(!open)}>
-                <div />
-                <div />
-                <div />
-            </StyledBurger>
-            <RightNav open={open} />
-            {/* <NavButton open={open} /> */}
-            <Link to="/apply"><Button width="130px" color={Colors.red} textColor={Colors.white}>{props.test}</Button></Link>
-        </>
-    )
+  return (
+    <>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
+      <RightNav open={open} />
+      {/* <NavButton open={open} /> */}
+
+    </>
+  )
 }
 const ButtonStyle = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
     border: 1px solid;
     background-color:white;
     color: black;
     @media ${Device.sm} {
-        
-        z-index: 19;
-        transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
-        
-      }
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 19;
+      transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+    }
 `
-export const NavButton = (props) => {
-    return (
-        <ButtonStyle>Apply</ButtonStyle>
-    )
+export const NavButton = ({open}) => {
+  return (
+    <ButtonStyle open={open}>Apply</ButtonStyle>
+  )
 }
-
+const Div = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+`
 const Ul = styled.ul`
   list-style: none;
   display: flex;
@@ -144,7 +153,7 @@ const Ul = styled.ul`
     top: 0;
     right: 0;
     height: 50vh;
-    width: 300px;
+    width: 50%;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     li {
@@ -170,28 +179,31 @@ const Ul = styled.ul`
 `;
 
 export const RightNav = ({open}) => {
-    return (
+  return (
+    <Div>
+      <Link to={'/'}><img src="/images/4G_logo_negro.png" width="70" alt=""></img></Link>
+      <Ul open={open}>
+        <NavItem>Why 4Geeks</NavItem>
+        <NavItem>The Program</NavItem>
+        <NavItem>Pricing</NavItem>
+        <NavItem>For Companies</NavItem>
+      </Ul>
+      <Link to="/apply"><Button width="130px" color={Colors.red} textColor={Colors.white}>Apply</Button></Link>
+    </Div>
 
-        <Ul open={open}>
-            <NavItem>Why 4Geeks</NavItem>
-            <NavItem>The Program</NavItem>
-            <NavItem>Pricing</NavItem>
-            <NavItem>For Companies</NavItem>
-        </Ul>
 
-
-    )
+  )
 }
 
 
 const Navbar = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
-    return (
-        <NavBar>
-            <Link to={'/'}><img src="/images/4G_logo_negro.png" width="70" alt=""></img></Link>
-            <Burger test={props.lang[0].node.button.button_text} />
-        </NavBar>
-    )
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+  return (
+    <NavBar>
+      {/* <Link to={'/'}><img src="/images/4G_logo_negro.png" width="70" alt=""></img></Link> */}
+      <Burger test={props.lang[0].node.button.button_text} />
+    </NavBar>
+  )
 }
 export default Navbar;
