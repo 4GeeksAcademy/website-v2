@@ -149,14 +149,14 @@ border-radius: ${props => props.borders};
     top: 12%;
     width: 160px;
     left:15px;
-    padding: 15px 0 1px 0;
+    padding: 15px;
 }
 @media ${Device.xl} {
     position: sticky;
     top: 12%;
     width: 180px;
     left: 20px;
-    padding: 15px 0 1px 0;
+    padding: 15px;
 } 
 
 `

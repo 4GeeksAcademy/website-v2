@@ -288,12 +288,12 @@ const Program = ({data, pageContext, yml}) => {
         display_sm="none"
         display_md="none"
       >
-        <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active">
-          <li><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
-          <li><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
-          <li><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
-          <li><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
-          <li><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
+        <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active ">
+          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
+          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
+          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
+          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
+          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
         </Scrollspy>
       </Sidebar>
       <section className="section" id="section-1"></section>
