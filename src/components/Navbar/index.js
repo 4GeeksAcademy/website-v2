@@ -183,6 +183,7 @@ const Ul = styled.ul`
     align-items: center;
     li {
       color: black;
+      
     }
   }
   @media ${Device.sm} {
@@ -190,6 +191,14 @@ const Ul = styled.ul`
     align-items: center;
     li {
       color: black;
+      font-size: 10px;
+    }
+  }
+  @media ${Device.md} {
+    
+    li {
+      color: black;
+      font-size: 10px;
     }
   }
 `;
