@@ -105,7 +105,7 @@ export const Burger = (props) => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open} />
+      <RightNav open={open} menu={props} />
       {/* <NavButton open={open} /> */}
 
     </>
@@ -136,6 +136,40 @@ const Div = styled.div`
   justify-content: space-between;
   padding: 0 2rem;
   align-items: center;
+  @media ${Device.xs} {
+    flex-flow: column nowrap;
+    background-color: white;
+    // background-color: #0D2538;
+    position: sticky;
+    z-index: 19;
+    transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+    top: 0;
+    right: 0;
+    height: ${({open}) => open ? '50vh' : '0'};
+    width: 100%;
+    padding: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+    li {
+      color: #fff;
+    }
+  }
+  @media ${Device.sm} {
+    flex-flow: column nowrap;
+    background-color: white;
+    // background-color: #0D2538;
+    position: sticky;
+    z-index: 19;
+    transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+    top: 0;
+    right: 0;
+    height: ${({open}) => open ? '50vh' : '0'};
+    width: 100%;
+    padding: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+    li {
+      color: #fff;
+    }
+  }
 `
 const Ul = styled.ul`
   list-style: none;
@@ -146,47 +180,31 @@ const Ul = styled.ul`
   }
   @media ${Device.xs} {
     flex-flow: column nowrap;
-    background-color: #0D2538;
-    position: fixed;
-    z-index: 19;
-    transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
-    top: 0;
-    right: 0;
-    height: 50vh;
-    width: 50%;
-    padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
+    align-items: center;
     li {
-      color: #fff;
+      color: black;
     }
   }
   @media ${Device.sm} {
     flex-flow: column nowrap;
-    background-color: #0D2538;
-    position: fixed;
-    z-index: 19;
-    transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
-    top: 0;
-    right: 0;
-    height: 50vh;
-    width: 300px;
-    padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
+    align-items: center;
     li {
-      color: #fff;
+      color: black;
     }
   }
 `;
 
-export const RightNav = ({open}) => {
+export const RightNav = ({open, menu}) => {
+  console.log("Right:", menu.menu)
   return (
-    <Div>
+    <Div open={open}>
       <Link to={'/'}><img src="/images/4G_logo_negro.png" width="70" alt=""></img></Link>
       <Ul open={open}>
-        <NavItem>Why 4Geeks</NavItem>
-        <NavItem>The Program</NavItem>
-        <NavItem>Pricing</NavItem>
-        <NavItem>For Companies</NavItem>
+        {menu.menu.navbar && menu.menu.navbar.map((item, index) => {
+          return (
+            <Link to={item.link} key={index}><NavItem>{item.name}</NavItem></Link>
+          )
+        })}
       </Ul>
       <Link to="/apply"><Button width="130px" color={Colors.red} textColor={Colors.white}>Apply</Button></Link>
     </Div>
@@ -197,12 +215,13 @@ export const RightNav = ({open}) => {
 
 
 const Navbar = (props) => {
+  console.log("navbar props:", props)
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
     <NavBar>
       {/* <Link to={'/'}><img src="/images/4G_logo_negro.png" width="70" alt=""></img></Link> */}
-      <Burger test={props.lang[0].node.button.button_text} />
+      <Burger menu={props.lang[0].node} />
     </NavBar>
   )
 }
