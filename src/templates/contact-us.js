@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
@@ -9,17 +9,12 @@ import Grid from '@material-ui/core/Grid';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
-import BaseRender from './_baseRender'
+import BaseRender from './_baseRender';
+import {SessionContext} from '../session.js';
+import {contactUs} from '../actions.js';
+import {Input, Alert} from '../components/Form';
 
-const Input = styled.input`
-    background-color:${Colors.lightGray};
-    height: 40px;
-    width: 100%;
-    border: none;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    font-color: ${Colors.black};
-`
+
 const useStyles = makeStyles({
     root: {
         background: Colors.white,
@@ -42,17 +37,26 @@ const useStyles = makeStyles({
 const Contact = (props) => {
     const {data, pageContext, yml} = props;
     const classes = useStyles();
+    const { session } = useContext(SessionContext);
     const [alignment, setAlignment] = useState('left');
+    const [ formStatus, setFormStatus ] = useState({ status: "idle", msg: "Contact Us"});
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     };
     const [formData, setVal] = useState({
-        first_name: '',
-        last_name: '',
-        phone: '',
-        email: ''
+        first_name: {value: '', valid: false},
+        last_name: {value: '', valid: false},
+        phone: {value: '', valid: false},
+        email: {value: '', valid: false},
     });
-
+    const formIsValid = (formData=null) => {
+    if(!formData) return null;
+    for(let key in formData){
+        if(!formData[key].valid) return false;
+    }
+    return true;
+    }
+    console.log(formData);
 
     const children = [
         <ToggleButton key={1} value="left" classes={{
@@ -84,6 +88,28 @@ const Contact = (props) => {
 
     return (
         <>
+        <form onSubmit={(e) => {
+            e.preventDefault();
+            if(!formIsValid(formData)){
+                setFormStatus({status: "error", msg: "There are some errors in your form"});
+            } else {
+                setFormStatus({status: "loading", msg: "Loading..."});
+                contactUs(formData, session)
+                .then((data) => {
+                    if(data.error !== false){
+                        setFormStatus({status: "error", msg: "Fix errors"});
+                        console.log("submit error")
+                    }else {
+                        setFormStatus({status: "thank-you", msg: "Thank you"});
+                        console.log("Thank you");
+                    }
+                })
+                .catch(error => {
+                      console.log("error", error);
+                    setFormStatus({status: "error", msg: error.message || error});
+                })
+            }
+        }}>
             <Divider height="100px" />
             <Wrapper
                 style="default">
@@ -116,31 +142,38 @@ const Contact = (props) => {
                                             <Divider height="50px" />
                                             <Row height="50px">
                                                 <H3>{yml.left.heading}</H3>
+                                                {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                             </Row>
                                             <Row height="50px">
                                                 <Input
                                                     type="text" className="form-control" placeholder={yml.left.form_section.first_name}
-                                                    onChange={(e) => setVal({...formData, first_name: e.target.value})}
-                                                    value={formData.firstName}
+                                                    errorMsg="Please specify a valid first name"
+                                                    required
+                                                    onChange={(value, valid) => setVal({...formData, first_name: {value, valid}})}
+                                                    value={formData.first_name.value}
                                                 />
                                             </Row>
                                             <Row height="50px">
                                                 <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
-                                                    onChange={(e) => setVal({...formData, last_name: e.target.value})}
-                                                    value={formData.lastName}
+                                                    onChange={(value, valid) => setVal({...formData, last_name: {value,valid}})}
+                                                    errorMsg="Please specify a valid last name"
+                                                    required
+                                                    value={formData.last_name.value}
                                                 />
                                             </Row>
                                             <Row height="50px">
-                                                <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
-                                                    onChange={(e) => setVal({...formData, email: e.target.value})}
-                                                    value={formData.email}
+                                                <Input type="text" className="form-control" placeholder={yml.left.form_section.email}
+                                                    onChange={(value,valid) => setVal({...formData, email: {value, valid }})}
+                                                    errorMsg="Please specify a valid email"
+                                                    required
+                                                    value={formData.email.value}
                                                 />
                                             </Row>
                                             <Row height="50px">
                                                 <Input
                                                     type="number" className="form-control" placeholder={yml.left.form_section.phone}
-                                                    onChange={(e) => setVal({...formData, phone: e.target.value})}
-                                                    value={formData.phone}
+                                                    onChange={(value,valid) => setVal({...formData, phone: {value,valid}})}
+                                                    value={formData.phone.value}
                                                 />
                                             </Row>
                                             <Row height="40px">
@@ -165,18 +198,10 @@ const Contact = (props) => {
                                             </Row>
                                             <Row >
                                                 <Button
-
                                                     width="150px"
-                                                    move="up" up="15px" color={Colors.blue} textColor={Colors.white}
+                                                    move="up" up="15px" color={formStatus.status === "error" ? Colors.lightRed : Colors.blue} textColor={Colors.white}
                                                     margin="2rem 0" padding=".45rem 3rem"
-                                                    onClick={() => apply(formData)
-                                                        .then(() => {
-                                                            console.log("Thank you");
-                                                        })
-                                                        .catch(() => {
-                                                            console.log("error");
-                                                        })
-                                                    }
+                                                    type="submit"
                                                 >{yml.left.button.button_text}</Button>
                                             </Row>
                                         </Column>
@@ -207,6 +232,7 @@ const Contact = (props) => {
                 </Row>
             </Wrapper>
             <Divider height="300px" />
+        </form>
         </>
     )
 };

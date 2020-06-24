@@ -16,7 +16,7 @@ export const apply = async (data, session) => {
     for (let key in data) body[key] = data[key].value;
 
     console.log("session", session);
-    return await save_form(body, ['website-lead'], ['hard'], session)
+    return await save_form(body, ['website-lead'], ['hard'], session);
 
     throw Error('Unexpected error');
 }
@@ -57,9 +57,13 @@ export const beHiringPartner = (data) => {
     //         throw Error('Unexpected error');
     //     });
 }
-export const contactUs = (data) => {
+export const contactUs = async (data,session) => {
     console.log("Succesfully contact us", data)
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
 
+    console.log("session", session);
+    return await save_form(body, ['contact us'], ['soft'], session);
     // console.log("session", session);
     // return await save_form(body, ['contact us'], ['soft'], session)
 }
