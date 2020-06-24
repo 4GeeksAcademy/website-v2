@@ -218,6 +218,9 @@ a {
 .split{
     font-size: 55px;
 }
+.scroll_li{
+    margin: 5px 0;
+}
 /* :-webkit-direct-focus {
     outline-color: none!important;
     outline-style: auto;

@@ -38,7 +38,7 @@ const ProgramSelector = (props) => {
   const classes = useStyles();
 
   // const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
-  // console.log("pselect:", props.lang)
+  console.log("pselect:", props)
   let locArray = props.lang;
   // let locArray = data.loc.edges;
   let weekArray = ["16", "9"]
@@ -75,13 +75,14 @@ const ProgramSelector = (props) => {
           <Column size="1" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >weeks in</Paragraph></Column>
           <Column size="2" alignSelf="center" align="center" paddingLeft="0" paddingRight="0" customRespSize respSize="5">
             <Card index="1" borders=".25rem" shadow width="100%" padding={toggle === false && "0px"}>
-              {toggle == true ? null : <Row align="center"><Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>{session.location}</Button></Row>}
+              {toggle == true ? null : <Row align="center"><Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>{session.location && session.location.city}</Button></Row>}
               {toggle == true
                 ?
                 <>
                   {locArray.map((item, index) => {
                     return (
-                      <Row height="20%" onClick={() => setSession({location: item.node.city}, setToggle(!toggle))} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
+                      <Row height="20%" onClick={() => setSession({...session, location: {...location, city: item.node.city}}, setToggle(!toggle))
+                      } backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around" >
                         <Column size="12" alignSelf="center"><Paragraph fontSize="20px" color={Colors.gray} >{item.node.city}</Paragraph></Column>
                       </Row>
                     )

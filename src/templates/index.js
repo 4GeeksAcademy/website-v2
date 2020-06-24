@@ -337,10 +337,14 @@ const Home = (props) => {
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
-        style="default">
+        style="default"
+        image="no"
+        color={Colors.lightGray}
+        border="top">
 
         <Divider height="50px" />
         <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
+        <Divider height="50px" />
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
