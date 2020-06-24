@@ -30,7 +30,7 @@ const PricesAndPayments = (props) => {
   const [completed, setCompleted] = useState({});
   const [scrollPosition, setScrollPosition] = useState(0);
   const [currentCourseType, setCurrentCourseType] = useState()
-
+  console.log("session_price", session)
   useEffect(() => {
     const programType = async () => {
       const type = await getProgramInfo()
@@ -46,7 +46,8 @@ const PricesAndPayments = (props) => {
   })
   useEffect(() => {
     const loadCurrentCity = async () => {
-      const city = await session.location;
+      // const city = await session.location;
+      const city = "Miami";
       const myLocation = await getCurrentCity(city)
       if (myLocation != null) {
         setProva({...prova, currentCityLocation: myLocation})
@@ -235,7 +236,7 @@ const PricesAndPayments = (props) => {
       {/* 3 COLUMNS LAYOUT */}
       {prova.currentFilteredCourse &&
         <>
-          <Row align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{session.location}</Paragraph></Row>
+          <Row align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{'session.location.city'}</Paragraph></Row>
           <Divider height="50px" />
           <Row align="center">
             <Column size="4" customRespSize respSize="12">
