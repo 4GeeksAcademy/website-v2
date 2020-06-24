@@ -50,6 +50,7 @@ const Apply = (props) => {
                     })
                     .catch(error => {
                         console.log("error", error);
+                        setFormStatus({status: "error", msg: error.message || error});
                     })
             }
         }}>
@@ -72,7 +73,7 @@ const Apply = (props) => {
                         color={Colors.white}
                     >
 
-                        <Card shadow borders="1.25rem" p_xs="0 10px" p_sm="0 15px" p_md="0 20px">
+                        <Card shadow borders="1.25rem" p_xs="0 10px" p_sm="0" p_md="0">
                             <Row
                                 background="#000000"
                                 height="100%"
@@ -150,9 +151,10 @@ const Apply = (props) => {
                                                 <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.referral_section.content}</Paragraph>
                                             </Row>
                                             <Row >
+                                                {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                                 <Button type="submit"
                                                     width="150px"
-                                                    move="up" up="15px" color={Colors.blue} textColor={Colors.white}
+                                                    move="up" up="15px" color={formStatus.status === "error" ? Colors.lightRed : Colors.blue} textColor={Colors.white}
                                                     margin="2rem 0" padding=".45rem 3rem"
                                                 >{yml.left.button.button_text}</Button>
                                             </Row>
@@ -232,12 +234,10 @@ export const query = graphql`
                   button_link
                 }
                 form_section {
-                  
                     first_name
                     last_name
                     email
                     phone
-                  
                 }
                 referral_section {
                   placeholder
