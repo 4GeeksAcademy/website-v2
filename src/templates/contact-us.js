@@ -46,8 +46,8 @@ const Contact = (props) => {
     const [formData, setVal] = useState({
         first_name: {value: '', valid: false},
         last_name: {value: '', valid: false},
-        phone: {value: '', valid: false},
         email: {value: '', valid: false},
+        message: {value: '', valid: true}
     });
     const formIsValid = (formData=null) => {
     if(!formData) return null;
@@ -57,34 +57,6 @@ const Contact = (props) => {
     return true;
     }
     console.log(formData);
-
-    const children = [
-        <ToggleButton key={1} value="left" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Santiago, Chile</Paragraph>
-        </ToggleButton>,
-        <ToggleButton key={2} value="center" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Caracas, Vzla</Paragraph>
-        </ToggleButton>,
-        <ToggleButton key={3} value="right" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Miami, Usa</Paragraph>
-        </ToggleButton>,
-        <ToggleButton key={4} value="justify" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Maracaibo, Vzla</Paragraph>
-        </ToggleButton>,
-        <ToggleButton key={5} value="justif" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Madrid, Spain</Paragraph>
-        </ToggleButton>,
-    ];
 
     return (
         <>
@@ -128,15 +100,16 @@ const Contact = (props) => {
                         color={Colors.white}
                     >
 
-                        <Card shadow borders="1.25rem" height="500px" p_xs="0 10px" p_sm="0 15px" p_md="0 20px">
+                        <Card shadow borders="1.25rem" p_xs="0 10px" p_sm="0" p_md="0">
                             <Row
+                                background="#000000"
                                 height="100%"
                                 marginLeft="0"
                                 marginRight="0"
                                 align="center"
-
+                                borderRadius="0 1.25rem 1.25rem 1.25rem"
                             >
-                                <Column size="8" alignSelf="center" height="100%" image="no" border="bottom">
+                                <Column size="8" alignSelf="center" height="100%" image="no" border="bottom" color="white">
                                     <Row align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
@@ -169,32 +142,8 @@ const Contact = (props) => {
                                                     value={formData.email.value}
                                                 />
                                             </Row>
-                                            <Row height="50px">
-                                                <Input
-                                                    type="number" className="form-control" placeholder={yml.left.form_section.phone}
-                                                    onChange={(value,valid) => setVal({...formData, phone: {value,valid}})}
-                                                    value={formData.phone.value}
-                                                />
-                                            </Row>
                                             <Row height="40px">
-                                                <Paragraph padding="0.375rem 0.75rem" fontSize="13px" lineHeight="16px" color={Colors.black}>{yml.left.locations_title}</Paragraph>
-                                            </Row>
-                                            <Row height="60px">
-                                                <Column size="12">
-                                                    <Grid container spacing={2} direction="column" alignItems="center">
-                                                        <Grid item>
-                                                            <ToggleButtonGroup size="large" value={alignment} exclusive onChange={handleChange}>
-                                                                {children}
-                                                            </ToggleButtonGroup>
-                                                        </Grid>
-                                                    </Grid>
-                                                </Column>
-                                            </Row>
-                                            <Row height="40px">
-                                                <Input type="text" className="form-control" placeholder={yml.left.message_section.placeholder} />
-                                            </Row>
-                                            <Row height="20px">
-                                                <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.message_section.note}</Paragraph>
+                                                <Input type="text" className="form-control" value={formData.message.value} placeholder={yml.left.message_section.placeholder} onChange={(value,valid) => setVal({...formData, message: {value,valid}})}/>
                                             </Row>
                                             <Row >
                                                 <Button
@@ -209,19 +158,38 @@ const Contact = (props) => {
 
                                 </Column>
 
-                                <Column size="4" customRespSize respSize="12" br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="center" height="100%" image="no" color={Colors.black} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" >
+                                <Column size="4" customRespSize respSize="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="center" height="100%" image="no" >
                                     <Row align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
                                             <Row height="60px">
-
+                                                <H3
+                                                    fs_xs="20px"
+                                                    fs_sm="18px"
+                                                    fs_md="18px"
+                                                    fs_lg="20px"
+                                                    fs_xl="24px"
+                                                    color={Colors.yellow}
+                                                >
+                                                    {yml.right.heading}
+                                                </H3>
                                             </Row>
                                             <Divider height="30px" />
-                                            <Row height="50px">
+                                            {yml.right.content_section.map((item, i) => {
+                                                return (<Row key={i} height="50px">
+                                                        <Paragraph
 
-                                            </Row>
-
-
+                                                            fs_xs="12px"
+                                                            fs_sm="14px"
+                                                            fs_md="10px"
+                                                            fs_lg="12px"
+                                                            fs_xl="14px"
+                                                            lineHeight="16px"
+                                                            color={Colors.lightGray}
+                                                        >{item}
+                                                        </Paragraph>
+                                                    </Row>)
+                                            })}
                                         </Column>
                                     </Row>
                                 </Column>
@@ -269,6 +237,10 @@ export const query = graphql`
                   note
                 }
               }
+            right{
+                heading
+                content_section
+            }
         }
       }
     }

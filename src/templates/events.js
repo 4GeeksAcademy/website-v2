@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, RoundImage, Address, Marker, Clock, Question, Filter, Cross} from '../components/Styling'
+import {Colors, Button, RoundImage, Address, Marker, Clock, Question, Filter, Cross, AngleDown} from '../components/Styling'
 import {Card} from '../components/Card'
 import Grid from '@material-ui/core/Grid';
 import ToggleButton from '@material-ui/lab/ToggleButton';
@@ -82,8 +82,11 @@ const Events = ({data, pageContext, yml}) => {
   const [filterType, setFilterType] = useState();
   const [filterCity, setFilterCity] = useState();
   const [cities, setCities] = useState([]);
+  const [filterByCity, setFilterByCity] = useState([]);
+  const [filterByType, setFilterByType] = useState([]);
   const [filter, setFilter] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
+  const [filteredArray, setFilteredArray] = useState([]);
   const classes = useStyles();
 
   const handleOpen = () => {
@@ -104,7 +107,7 @@ const Events = ({data, pageContext, yml}) => {
       let filterTypeArray = [];
       for (let i = 0; i < event.length; i++) {
         if (filterTypeArray.includes(event[i].type)) {
-          console.log("####", event[i].type)
+          // console.log("####", event[i].type)
         }
         else {
           filterTypeArray.push(event[i].type)
@@ -142,13 +145,26 @@ const Events = ({data, pageContext, yml}) => {
     loadModal();
   }, [single]);
   useEffect(() => {
-    const handleFilters = async (params) => {
-      let test = event.filter(item => params.includes(item.city_slug))
-      console.log("test: ", test)
-      setFilteredEvents(test)
+    const handleFilters = async () => {
+      // var filteredArray = [];
+      if (filterByCity.length > 0) {
+        // setFilteredArray([...filteredArray, event.filter(item => filterByCity.includes(item.city_slug))])
+        let test = event.filter(item => filterByCity.includes(item.city_slug))
+        setFilteredArray(test)
+      }
+      if (filterByType.length > 0) {
+        // setFilteredArray([...filteredArray, event.filter(item => filterByCity.includes(item.city_slug))])
+        let test = event.filter(item => filterByType.includes(item.type))
+        setFilteredArray(test)
+      }
+
+      // console.log("filteredArray", filteredArray)
+      // let test = event.filter(item => params.includes(item.city_slug) || params.includes(item.type))
+      // console.log("test: ", test)
+      // setFilteredEvents(test)
     }
-    handleFilters(filter);
-  }, [filter])
+    handleFilters();
+  }, [filterByCity])
   return (
     <>
       <Wrapper
@@ -202,7 +218,7 @@ const Events = ({data, pageContext, yml}) => {
                   Campuses
                 </Button> */}
 
-                <Button width="200px" onClick={() => toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Campuses</Button>
+                <Button width="200px" onClick={() => toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Campuses<span><AngleDown width="12" color={Colors.darkGray} fill={Colors.darkGray} /></span></Button>
                 {/* <Button width="100%" onClick={handleClick} color={Colors.blue} textColor={Colors.white}>Campuses</Button> */}
                 {toggleCity == true
                   ?
@@ -214,7 +230,7 @@ const Events = ({data, pageContext, yml}) => {
                             <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={togglesCity === false && "0px"}>
                               <Row height="25px" onClick={() => {setTogglesCity(!togglesCity)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
                                 <Column size="12" alignSelf="center">
-                                  <Paragraph onClick={() => {setFilter([...filter, city]), setToggleCity(!toggleCity)}} fontSize="16px" color={Colors.gray} >{city}</Paragraph>
+                                  <Paragraph onClick={() => {setFilterByCity([...filterByCity, city]), setToggleCity(!toggleCity)}} fontSize="16px" color={Colors.gray} >{city}</Paragraph>
                                 </Column>
                               </Row>
                             </Card>
@@ -230,7 +246,7 @@ const Events = ({data, pageContext, yml}) => {
 
               </Column>
               <Column size="3" >
-                <Button width="200px" onClick={() => toggleCity == false ? setToggle(!toggle) : (setToggle(!toggle), setToggleCity(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Event's Type</Button>
+                <Button width="200px" onClick={() => toggleCity == false ? setToggle(!toggle) : (setToggle(!toggle), setToggleCity(false))} color={Colors.lightGray} textColor={Colors.gray} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Event's Type<span><AngleDown width="12" color={Colors.darkGray} fill={Colors.darkGray} /></span></Button>
                 {toggle == true
                   ?
                   <Row marginBottom="5px" width="200px" marginRight="0" marginLeft="0" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius="0 0 .25rem .25rem">
@@ -241,7 +257,7 @@ const Events = ({data, pageContext, yml}) => {
                             <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"}>
                               <Row height="25px" onClick={() => {setToggles(!toggles)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
                                 <Column size="12" alignSelf="center">
-                                  <Paragraph onClick={() => {setFilter([...filter, type]), setToggle(!toggle)}} fontSize="16px" color={Colors.gray} >{type}</Paragraph>
+                                  <Paragraph onClick={() => {setFilterByType([...filterByType, type]), setToggle(!toggle)}} fontSize="16px" color={Colors.gray} >{type}</Paragraph>
                                 </Column>
                               </Row>
                             </Card>
@@ -363,7 +379,7 @@ const Events = ({data, pageContext, yml}) => {
                               </a>
                             </Column>
                             <Column size="6" align="center">
-                              <a href={i.url} target="_blank">
+                              <a href={i.url} target="_blank" rel="noopener noreferrer">
                                 <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
                               </a>
                             </Column>
@@ -452,7 +468,7 @@ const Events = ({data, pageContext, yml}) => {
                               </a>
                             </Column>
                             <Column size="6" align="center">
-                              <a href={i.url} target="_blank">
+                              <a href={i.url} target="_blank" rel="noopener noreferrer">
                                 <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
                               </a>
                             </Column>
@@ -554,7 +570,7 @@ const Events = ({data, pageContext, yml}) => {
                   </a>
                 </Column> */}
                   <Column size="6" align="center">
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                       <Button width="100%" color={Colors.red} textColor={Colors.white} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
                     </a>
                   </Column>

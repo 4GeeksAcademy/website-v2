@@ -25,3 +25,10 @@ left:
   button:
     button_text: "SEND"
     button_link: ""
+
+right:
+  heading: "We are available Monday to Friday:
+09:00am - 06:30pm"
+  content_section: 
+  - "4Geeks Academy 1801 SW 3rd Av, Miami, FL 33129 P: +1 (786) 416-6640 info@4GeeksAcademy.com"
+
