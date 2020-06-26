@@ -31,7 +31,9 @@ export const save_form = async (formData=null, tags='', automations='', session=
     }
     else if (resp.status === 400) {
         const error = await resp.json();
+        console.log(error);
         if(typeof(error.details) === 'string') throw Error(error.details);
+        console.log(error);
         for(let key in error){
             throw Error(error[key][0]);
         }

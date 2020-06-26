@@ -53,6 +53,8 @@ export const Input = ({ onChange, type, required, validate, errorMsg, ...rest}) 
         />
     </Rel>
 }
+
+
 Input.propTypes = {
     onChange: PropTypes.func,
     type: PropTypes.string,
@@ -81,3 +83,37 @@ export const Alert = styled.div`
     font-size: 14px;
     font-color: ${props => colors[props.color][1]};
 `;
+
+//TextArea Styled Component
+const StyledTextArea = styled.textarea`
+    background-color: ${Colors.lightGray};
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-color: ${Colors.black};
+`
+
+export const TextArea = ({ onChange, type, ...rest}) => {
+    return (
+        <Rel>
+        <StyledTextArea 
+            {...rest}
+            type={type}
+            onChange= {(e) => { onChange(e.target.value); }}
+        />
+        </Rel>
+    )
+}
+
+TextArea.propTypes = {
+    onChange: PropTypes.func,
+    type: PropTypes.string,
+}
+
+TextArea.defaultProps = {
+    onChange: null,
+    type: "text",
+};
+

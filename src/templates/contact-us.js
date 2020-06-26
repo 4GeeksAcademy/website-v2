@@ -12,7 +12,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
-import {Input, Alert} from '../components/Form';
+import {Input, Alert, TextArea} from '../components/Form';
 
 
 const useStyles = makeStyles({
@@ -68,7 +68,8 @@ const Contact = (props) => {
                 setFormStatus({status: "loading", msg: "Loading..."});
                 contactUs(formData, session)
                 .then((data) => {
-                    if(data.error !== false){
+                    console.log(data.error);
+                    if(data.error !== false && data.error !== undefined){    
                         setFormStatus({status: "error", msg: "Fix errors"});
                         console.log("submit error")
                     }else {
@@ -107,7 +108,7 @@ const Contact = (props) => {
                                 marginLeft="0"
                                 marginRight="0"
                                 align="center"
-                                borderRadius="0 1.25rem 1.25rem 1.25rem"
+                                borderRadius="1.25rem 1.25rem 1.25rem 1.25rem"
                             >
                                 <Column size="8" alignSelf="center" height="100%" image="no" border="bottom" color="white">
                                     <Row align="center" height="100%">
@@ -142,8 +143,8 @@ const Contact = (props) => {
                                                     value={formData.email.value}
                                                 />
                                             </Row>
-                                            <Row height="40px">
-                                                <Input type="text" className="form-control" value={formData.message.value} placeholder={yml.left.message_section.placeholder} onChange={(value,valid) => setVal({...formData, message: {value,valid}})}/>
+                                            <Row height="200px">
+                                                <TextArea type="text" rows="10" cols="50" className="form-control" value={formData.message.value} placeholder={yml.left.message_section.placeholder} onChange={(value,valid) => setVal({...formData, message: {value,valid:true}})}/>
                                             </Row>
                                             <Row >
                                                 <Button
@@ -158,8 +159,8 @@ const Contact = (props) => {
 
                                 </Column>
 
-                                <Column size="4" customRespSize respSize="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="center" height="100%" image="no" >
-                                    <Row align="center" height="100%">
+                                <Column size="4" customRespSize respSize="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="unset" height="100%" image="no" >
+                                    <Row align="center" height="100%" borderRadius="0 1.25rem 1.25rem 1.25rem">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
                                             <Row height="60px">
@@ -174,7 +175,7 @@ const Contact = (props) => {
                                                     {yml.right.heading}
                                                 </H3>
                                             </Row>
-                                            <Divider height="30px" />
+                                            <Divider height="40px" />
                                             {yml.right.content_section.map((item, i) => {
                                                 return (<Row key={i} height="50px">
                                                         <Paragraph

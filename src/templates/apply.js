@@ -196,9 +196,6 @@ const Apply = (props) => {
                                                         </Paragraph>
                                                     </Row>)
                                             })}
-
-
-
                                         </Column>
                                     </Row>
                                 </Column>
