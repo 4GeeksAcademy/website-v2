@@ -21,8 +21,13 @@ export const apply = async (data, session) => {
     throw Error('Unexpected error');
 }
 
-export const requestSyllabus = (data) => {
+export const requestSyllabus = async (data,session) => {
     console.log("Succesfully requested Syllabus", data)
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    console.log("session", session);
+    return await save_form(body, ['download_syllabus'], ['soft'], session);
     // return fetch('/api/acp_apply', {
     //     headers: new Headers({'content-type': 'application/json'}),
     //     method: "POST",

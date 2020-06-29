@@ -150,6 +150,7 @@ const Contact = (props) => {
                                                 />
                                             </Row>
                                             <Row >
+                                                {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                                 <Button
                                                     width="150px"
                                                     move="up" up="15px" color={formStatus.status === "error" ? Colors.lightRed : Colors.blue} textColor={Colors.white}
