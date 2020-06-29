@@ -27,9 +27,7 @@ const useStyles = makeStyles({
             background: Colors.yellow,
             color: Colors.white
         },
-
     },
-
     label: {
         textTransform: 'lowercase',
     },
@@ -47,7 +45,7 @@ const Contact = (props) => {
         first_name: {value: '', valid: false},
         last_name: {value: '', valid: false},
         email: {value: '', valid: false},
-        message: {value: '', valid: true}
+        client_comment: {value: '', valid: false}
     });
     const formIsValid = (formData=null) => {
     if(!formData) return null;
@@ -68,7 +66,6 @@ const Contact = (props) => {
                 setFormStatus({status: "loading", msg: "Loading..."});
                 contactUs(formData, session)
                 .then((data) => {
-                    console.log(data.error);
                     if(data.error !== false && data.error !== undefined){    
                         setFormStatus({status: "error", msg: "Fix errors"});
                         console.log("submit error")
@@ -144,7 +141,13 @@ const Contact = (props) => {
                                                 />
                                             </Row>
                                             <Row height="200px">
-                                                <TextArea type="text" rows="10" cols="50" className="form-control" value={formData.message.value} placeholder={yml.left.message_section.placeholder} onChange={(value,valid) => setVal({...formData, message: {value,valid:true}})}/>
+                                                <TextArea type="text" rows="10" cols="50" className="form-control" 
+                                                    value={formData.client_comment.value} 
+                                                    placeholder={yml.left.message_section.placeholder} 
+                                                    onChange={(value,valid) => setVal({...formData, client_comment: {value,valid}})} 
+                                                    errorMsg="Please leave us a comment" 
+                                                    required
+                                                />
                                             </Row>
                                             <Row >
                                                 <Button

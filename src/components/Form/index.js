@@ -86,7 +86,7 @@ export const Alert = styled.div`
 
 //TextArea Styled Component
 const StyledTextArea = styled.textarea`
-    background-color: ${Colors.lightGray};
+    background-color: ${props => props.valid ? Colors.lightGray : Colors.lightRed};
     width: 100%;
     padding: 5px 10px;
     border: none;
@@ -95,13 +95,26 @@ const StyledTextArea = styled.textarea`
     font-color: ${Colors.black};
 `
 
-export const TextArea = ({ onChange, type, ...rest}) => {
+export const TextArea = ({ onChange, type,errorMsg, required, validate, ...rest}) => {
+    const [ validStatus, setValidStatus ] = useState({ valid: true });
     return (
         <Rel>
+        { !validStatus.valid && <Msg>{errorMsg}</Msg>}
         <StyledTextArea 
             {...rest}
             type={type}
-            onChange= {(e) => { onChange(e.target.value); }}
+            required={required} valid={validStatus.valid}
+            onChange= {(e) => {
+                let isValid = true;
+                if(required === false && e.target.value.length === 0) isValid = true;
+                else isValid = regex[type].test(e.target.value);
+                
+                if(isValid != validStatus) setValidStatus({ 
+                    valid: isValid,
+                    msg: isValid ? "Ok" : errorMsg
+                });
+                if(onChange) onChange(e.target.value, isValid);
+         }}
         />
         </Rel>
     )
@@ -110,10 +123,16 @@ export const TextArea = ({ onChange, type, ...rest}) => {
 TextArea.propTypes = {
     onChange: PropTypes.func,
     type: PropTypes.string,
+    errorMsg: PropTypes.string,
+    required: PropTypes.bool,
+    validate: PropTypes.object,
 }
 
 TextArea.defaultProps = {
     onChange: null,
     type: "text",
+    validate: null,
+    errorMsg: "Missing Comment",
+    required: false,
 };
 
