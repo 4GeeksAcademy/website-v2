@@ -275,8 +275,14 @@ export const Title = props => {
                 {props.primary
                   ? <Column size={props.customParagraphSize} customRespSize respSize="10">
                     <Row align="center">
-                      {props.link ? <Link to={props.link}><Paragraph color={props.paragraphColor} margin="10px 0" align="center">{props.paragraph}</Paragraph></Link>
-                        : <Paragraph color={props.paragraphColor} margin="10px 0" align="center">{props.paragraph}</Paragraph>}
+                      {props.link === true
+                        ?
+                        <Link to={props.linkTo}>
+                          <Paragraph color={props.paragraphColor} margin="10px 0" align="center">{props.paragraph}</Paragraph>
+                        </Link>
+                        :
+                        <Paragraph color={props.paragraphColor} margin="10px 0" align="center">{props.paragraph}</Paragraph>
+                      }
                     </Row>
                   </Column>
                   : <Column size="12">
