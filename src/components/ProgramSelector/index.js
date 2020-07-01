@@ -57,13 +57,17 @@ const ProgramSelector = (props) => {
                 <>
                   {weekArray.map((item, index) => {
                     return (
-                      <Link to={link}>
-                        <Row key={index} height="50%" marginRight="0" marginLeft="0" backgroundHover={Colors.lightBlue} colorHover={Colors.white} align="around">
-                          <Column border="custom" customBorderRadius=".25rem" size="12" alignSelf="center">
-                            <Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph>
-                          </Column>
-                        </Row>
-                      </Link>
+                      <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
+                        <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"} >
+                          <Link to={link}>
+                            <Row key={index} height="50%" marginRight="0" marginLeft="0" backgroundHover={Colors.lightBlue} colorHover={Colors.white} align="around">
+                              <Column border="custom" customBorderRadius=".25rem" size="12" alignSelf="center">
+                                <Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph>
+                              </Column>
+                            </Row>
+                          </Link>
+                        </Card>
+                      </Button>
                     )
                   })}
                 </>
@@ -81,10 +85,16 @@ const ProgramSelector = (props) => {
                 <>
                   {locArray.map((item, index) => {
                     return (
-                      <Row height="20%" onClick={() => setSession({...session, location: {...location, city: item.node.city}}, setToggle(!toggle))
-                      } backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around" >
-                        <Column size="12" alignSelf="center"><Paragraph fontSize="20px" color={Colors.gray} >{item.node.city}</Paragraph></Column>
-                      </Row>
+                      <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
+                        <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"} >
+                          <Row height="20%" onClick={() => setSession({...session, location: {...location, city: item.node.city}}, setToggle(!toggle))
+                          } backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around" >
+                            <Column size="12" alignSelf="center">
+                              <Paragraph fontSize="20px" color={Colors.gray} >{item.node.city}</Paragraph>
+                            </Column>
+                          </Row>
+                        </Card>
+                      </Button>
                     )
                   })}
                 </>
