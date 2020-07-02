@@ -299,7 +299,7 @@ const Program = ({ data, pageContext, yml }) => {
                                     >Submit</Button>
                                 </Column>
                                 <Column size="3" customRespSize respSize="3" align="right">
-                                    <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={handleClose}>Close</Button>
+                                    <Button  width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={handleClose}>Close</Button>
                                 </Column>
                             </Row></div>
                     </form>

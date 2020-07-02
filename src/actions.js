@@ -27,7 +27,7 @@ export const requestSyllabus = async (data,session) => {
     for (let key in data) body[key] = data[key].value;
 
     console.log("session", session);
-    return await save_form(body, ['download_syllabus'], ['soft'], session);
+    return await save_form(body, ['request_more_info'], ['soft'], session);
     // return fetch('/api/acp_apply', {
     //     headers: new Headers({'content-type': 'application/json'}),
     //     method: "POST",
