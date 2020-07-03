@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
+import {navigate} from 'gatsby';
 import { useInView } from "react-intersection-observer";
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
@@ -238,6 +239,8 @@ const Program = ({ data, pageContext, yml }) => {
                                     else {
                                         setFormStatus({ status: "thank-you", msg: "Thank you" });
                                         console.log("Thank you");
+                                        navigate('/thank-you/apply');
+                                        console.log("Thank you");
                                     }
                                 })
                                 .catch(error => {
@@ -296,7 +299,7 @@ const Program = ({ data, pageContext, yml }) => {
                                         type="submit"
                                         color={formStatus.status === "error" ? Colors.lightRed : Colors.blue}
                                         textColor={Colors.white}
-                                    >Submit</Button>
+                                    >{formStatus.status === "loading" ? "Loading...": "Submit"}</Button>
                                 </Column>
                                 <Column size="3" customRespSize respSize="3" align="right">
                                     <Button  width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={handleClose}>Close</Button>
