@@ -38,8 +38,13 @@ export const requestSyllabus = async (data,session) => {
     //         throw Error('Unexpected error');
     //     });
 }
-export const reviewGuidebook = (data) => {
+export const reviewGuidebook = async (data,session) => {
     console.log("Succesfully requested Guidebook", data)
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    console.log("session", session);
+    return await save_form(body, ['review_guidebook'], [''], session);
     // return fetch('/api/acp_apply', {
     //     headers: new Headers({'content-type': 'application/json'}),
     //     method: "POST",
