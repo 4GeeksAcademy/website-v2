@@ -130,6 +130,7 @@ const Pricing = (props) => {
         border="top"
 
       >
+        <Divider height="50px" />
         <Title
           size="10"
           title={yml.prices.heading}
