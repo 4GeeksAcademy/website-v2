@@ -165,20 +165,20 @@ const Partners = (props) => {
 
                 <Divider height="20px" />
                 <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
-            </Wrapper>
-            <Divider height="50px" />
-            <Wrapper
-                style="default"
-            >
+                {/* </Wrapper> */}
+                <Divider height="50px" />
+                {/* <Wrapper
+                    style="default"
+                > */}
                 <Divider height="50px" />
 
 
                 <WhoIsHiring source="coding" lang={data.allPartnerYaml.edges} />
-            </Wrapper>
-            <Divider height="50px" />
-            <Wrapper
-                style="default"
-            >
+                {/* </Wrapper> */}
+                <Divider height="50px" />
+                {/* <Wrapper
+                    style="default"
+                > */}
                 <Divider height="50px" />
 
 
@@ -186,7 +186,10 @@ const Partners = (props) => {
                 {/* <Row align="center">
                     <Button width="300px" color={Colors.blue} onClick={() => setShowModal(!showModal)} textColor={Colors.white} margin="2rem 0" padding=".85rem">{yml.button_section.button_text}</Button>
                 </Row> */}
+                <Divider height="100px" />
+                {/* </Wrapper> */}
             </Wrapper>
+            <Divider height="100px" />
 
         </>
     )
