@@ -89,6 +89,7 @@ const Pricing = (props) => {
           main
           paragraphColor={Colors.white}
           fontSize="46px"
+          fontFamily="Lato-bold, sans-serif"
           textAlign="center"
 
         />

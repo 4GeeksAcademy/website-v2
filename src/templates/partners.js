@@ -77,12 +77,13 @@ const Partners = (props) => {
                 <Title
                     size="5"
                     title={yml.tagline}
-                    paragraph={yml.sub_heading}
                     main
                     color={Colors.white}
                     fontSize="46px"
                     textAlign="center"
+                    paragraph={yml.sub_heading}
                     paragraphColor={Colors.white}
+                    fontFamily="Lato-bold, sans-serif"
                 />
                 <Row align="center">
                     <Modal
