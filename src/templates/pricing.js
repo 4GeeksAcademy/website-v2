@@ -122,12 +122,13 @@ const Pricing = (props) => {
           </Column>
         </Row>
       </Container>
-      <Divider height="100px" />
+      <Divider height="150px" />
       <Wrapper
         style="default"
         image="no"
         color={Colors.lightGray}
-        border="top"
+        border="custom"
+        customBorderRadius="1.25rem 0 0 1.25rem"
 
       >
         <Divider height="50px" />
@@ -137,6 +138,7 @@ const Pricing = (props) => {
           primary
         />
         <PricesAndPayment type={pageContext.slug} lang={data.allLocationYaml.edges} />
+        <Divider height="50px" />
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
