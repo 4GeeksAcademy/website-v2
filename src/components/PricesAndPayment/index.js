@@ -46,15 +46,39 @@ const PricesAndPayments = (props) => {
   })
   useEffect(() => {
     const loadCurrentCity = async () => {
-      // const city = await session.location;
-      const city = "Miami";
+      try {
+        let response = await session.location;
+        if (response) {
+          var city = await response.city;
+        } else if (response.city == undefined) {
+          alert("no city found!!");
+        }
+      } catch (error) {
+        console.log("something failed");
+        console.log(error);
+      }
       const myLocation = await getCurrentCity(city)
       if (myLocation != null) {
         setProva({...prova, currentCityLocation: myLocation})
       }
+
     }
     loadCurrentCity();
   }, [session.location])
+  // useEffect(() => {
+  //   const loadCurrentCity = async () => {
+  //     const t = await session.location;
+  //     const city = await t.city;
+  //     console.log("CITY :", city);
+  //     // let city = session && session.location.city;
+  //     // const city = "Miami";
+  //     const myLocation = await getCurrentCity(city)
+  //     if (myLocation != null) {
+  //       setProva({...prova, currentCityLocation: myLocation})
+  //     }
+  //   }
+  //   loadCurrentCity();
+  // }, [session.location])
   useEffect(() => {
     const loadCurrentProgramSteps = async () => {
       if (currentCourseType === "part-time") {
@@ -236,7 +260,7 @@ const PricesAndPayments = (props) => {
       {/* 3 COLUMNS LAYOUT */}
       {prova.currentFilteredCourse &&
         <>
-          <Row align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{'session.location.city'}</Paragraph></Row>
+          <Row align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{session.location && session.location.city}</Paragraph></Row>
           <Divider height="50px" />
           <Row align="center">
             <Column size="4" customRespSize respSize="12">
