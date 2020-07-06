@@ -69,6 +69,7 @@ const useStyles = makeStyles(theme => ({
 
 const Events = ({data, pageContext, yml}) => {
   console.log("jo", yml);
+  const [cohorts, setCohorts] = useState();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
   const [event, setEvent] = useState([]);
@@ -126,6 +127,16 @@ const Events = ({data, pageContext, yml}) => {
 
   }, [event])
 
+  useEffect(() => {
+    const loadCohorts = async () => {
+      fetch(
+        'https://api.breatheco.de/cohorts/',
+      )
+        .then(response => response.json())
+        .then(data => setCohorts(data))
+    }
+    loadCohorts();
+  }, []);
   useEffect(() => {
     const loadEvents = async () => {
       fetch(
