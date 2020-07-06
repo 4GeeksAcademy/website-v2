@@ -52,13 +52,13 @@ outcomes:
     chart_three:
       title: "nationality"
       data:
-        - color: "orange"
+        - color: "#36A2EB"
           title: "North America"
           value: 60
-        - color: "yellow"
+        - color: "#FFCE56"
           title: "Asia"
           value: 1
-        - color: "brown"
+        - color: "#FF6384"
           title: "Europe"
           value: 5
         - color: "red"
