@@ -59,7 +59,8 @@ const ProgramSelector = (props) => {
                     return (
                       <Button width="95%" textColor={Colors.gray} borderRadius=".25rem" padding="0">
                         <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"} >
-                          <Link to={link}>
+                          {/* <Link to={link}> */}
+                          <Link to={`/${session.language}/course/${link}`}>
                             <Row key={index} height="50%" marginRight="0" marginLeft="0" backgroundHover={Colors.lightBlue} colorHover={Colors.white} align="around">
                               <Column border="custom" customBorderRadius=".25rem" size="12" alignSelf="center">
                                 <Paragraph

@@ -4,7 +4,8 @@ meta_info:
   description: null
   image: "/bg/bg-pr.jpg"
   keywords: ""
-  redirects: ["part-time", "programa"]
+  redirects:
+    ["/part-time", "/programa", "/es/part-time", "/es/course/part-time"]
 
 tagline: "FULL STACK DEVELOPER"
 button:
