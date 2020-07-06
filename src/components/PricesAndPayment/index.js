@@ -345,7 +345,14 @@ const PricesAndPayments = (props) => {
                     <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                       <Row height="100%" align="center">
                         <Column size="8" alignSelf="center" >
-                          <Paragraph align="center" fontSize="12px" color={Colors.yellow}>{prova.currentFilteredCourse.center_section.header.sub_heading}</Paragraph>
+                          <Paragraph
+                            align="center"
+                            fontSize="12px"
+                            fontFamily="Lato-bold, sans-serif"
+                            color={Colors.yellow}
+                          >
+                            {prova.currentFilteredCourse.center_section.header.sub_heading}
+                          </Paragraph>
                         </Column>
                       </Row>
                     </Column>
@@ -364,7 +371,15 @@ const PricesAndPayments = (props) => {
                             color={Colors.white}>
                             {getStepContents(prova.activeStep)}
                           </H3>
-                          <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(prova.activeStep, props.lang)}</Paragraph>
+                          <Paragraph
+                            align="center"
+                            margin="5px 0"
+                            fontSize="12px"
+                            fontFamily="Lato-bold, sans-serif"
+                            color={Colors.gray}
+                          >
+                            {getStepPayments(prova.activeStep, props.lang)}
+                          </Paragraph>
                         </Column>
                       </Row>
                     </Column>
