@@ -175,7 +175,7 @@ const PricesAndPayments = (props) => {
       case 4:
         return <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" />;
       case 5:
-        return <><img src={prova.currentFilteredCourse.center_section.plans[5].logo} height="20px" /> <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" /></>;
+        return <><img src={prova.currentFilteredCourse.center_section.plans[5].logo} height="20px" />  <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" /></>;
       default:
         return 'Loading Data';
     }
