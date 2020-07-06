@@ -129,7 +129,13 @@ const Loc = (props) => {
                   // width="auto"
                   mb="1.25rem">
 
-                  <Row height="100%" align="around">
+                  <Row
+                    height="100%"
+                    align="around"
+                    backgroundHover={Colors.blue}
+                    marginHover="0"
+                    borderRadiusHover=".25rem"
+                  >
                     <Column size="12" alignSelf="center" align="center">
 
                       <H4

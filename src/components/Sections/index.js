@@ -87,6 +87,8 @@ export const Row = styled.div`
     };
     &:hover { 
         background: ${props => props.backgroundHover};
+        margin: ${props => props.marginHover};
+        border-radius: ${props => props.borderRadiusHover};
     }
     // ${Paragraph}:hover{
     //     color:${props => props.colorHover};
