@@ -71,6 +71,7 @@ const useStyles = makeStyles(theme => ({
 
 
 const Program = ({data, pageContext, yml}) => {
+  console.log("PAGECONTEXT: ", pageContext)
   const [ref, inView] = useInView({
     threshold: 0
   });
@@ -283,7 +284,7 @@ const Program = ({data, pageContext, yml}) => {
       </Wrapper>
       <Sidebar
         shadow
-        borders="1.25rem"
+        borders=".5rem"
         display_xs="none"
         display_sm="none"
         display_md="none"
@@ -357,7 +358,11 @@ const Program = ({data, pageContext, yml}) => {
                         </Column>
                       </Row>
                     </Column>
-                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} /></Column>
+                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
+                      <Link to={`/${pageContext.lang}/geekpal`}>
+                        <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                      </Link>
+                    </Column>
                   </Row>
                 </Card>
               </Column>
@@ -407,7 +412,11 @@ const Program = ({data, pageContext, yml}) => {
                         </Column>
                       </Row>
                     </Column>
-                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end"><ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} /></Column>
+                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
+                      <Link to={`/${pageContext.lang}/geekforce`}>
+                        <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                      </Link>
+                    </Column>
                   </Row>
                 </Card>
               </Column>
