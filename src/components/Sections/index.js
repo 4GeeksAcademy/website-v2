@@ -316,6 +316,7 @@ export const Wrapper = props => {
                         image={props.image}
                         url={props.url}
                         border={props.border}
+                        customBorderRadius={props.customBorderRadius}
                         color={props.color}
                         align={props.align}
                         height={props.height}
@@ -350,6 +351,7 @@ export const Wrapper = props => {
                         image={props.image}
                         url={props.url}
                         border={props.border}
+                        customBorderRadius={props.customBorderRadius}
                         color={props.color}
                         props>
                         {props.full
