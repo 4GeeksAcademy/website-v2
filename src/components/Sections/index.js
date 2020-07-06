@@ -87,6 +87,8 @@ export const Row = styled.div`
     };
     &:hover { 
         background: ${props => props.backgroundHover};
+        margin: ${props => props.marginHover};
+        border-radius: ${props => props.borderRadiusHover};
     }
     // ${Paragraph}:hover{
     //     color:${props => props.colorHover};
@@ -316,6 +318,7 @@ export const Wrapper = props => {
                         image={props.image}
                         url={props.url}
                         border={props.border}
+                        customBorderRadius={props.customBorderRadius}
                         color={props.color}
                         align={props.align}
                         height={props.height}
@@ -350,6 +353,7 @@ export const Wrapper = props => {
                         image={props.image}
                         url={props.url}
                         border={props.border}
+                        customBorderRadius={props.customBorderRadius}
                         color={props.color}
                         props>
                         {props.full

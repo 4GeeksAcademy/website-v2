@@ -2,7 +2,7 @@ import React, {createContext, useState, useEffect} from "react";
 import publicIp from 'public-ip';
 import {useStaticQuery, graphql} from 'gatsby';
 
-function getFirstBrowserLanguage() {
+function getFirstBrowserLanguage () {
     var nav = window.navigator,
         browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
         i,
@@ -18,7 +18,7 @@ function getFirstBrowserLanguage() {
             if (!shortLanguage && len) {
                 shortLanguage = language;
             }
-            if (language && len>2) {
+            if (language && len > 2) {
                 return language;
             }
         }
@@ -28,7 +28,7 @@ function getFirstBrowserLanguage() {
     for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
         language = nav[browserLanguagePropertyKeys[i]];
         //skip this loop iteration if property is null/undefined.  IE11 fix.
-        if (language == null) { continue; } 
+        if (language == null) {continue;}
         len = language.length;
         if (!shortLanguage && len) {
             shortLanguage = language;
@@ -129,23 +129,24 @@ export const withSession = Component => {
 
                 // get the language
                 let language = null;
-                if(location) language = location.defaultLanguage;
-                else{
+                if (location) language = location.defaultLanguage;
+                else {
                     console.log("Location could not be loaded, using browserlanguage as default language");
-                    language = browserLang.substring(0,2);
+                    language = browserLang.substring(0, 2);
                 }
 
-                const _session = {...session, v4, v6, location, browserLang, language,
+                const _session = {
+                    ...session, v4, v6, location, browserLang, language,
                     locations: locationsArray.map(l => l.node).filter(l => {
-                        if(repeated.includes(l.meta_info.slug)) return false;
-                        
+                        if (repeated.includes(l.meta_info.slug)) return false;
+
                         repeated.push(l.meta_info.slug);
                         return true;
                     })
                 };
-                console.log("Reset session with: ",_session);
+                console.log("Reset session with: ", _session);
                 setSession(_session);
-                
+
             };
             console.log("Loading session...");
             loadIp();

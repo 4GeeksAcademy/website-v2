@@ -234,7 +234,7 @@ export const Paragraph = styled.div`
   }   
   margin: ${props => props.margin};
   font-size: ${props => props.fontSize};
-  font-family: 'Lato', sans-serif;
+  font-family: ${props => props.fontFamily};
   font-weight: 300;
   padding: ${props => props.padding};
   letter-spacing: 0px;
@@ -251,14 +251,25 @@ export const Title = props => {
           <>
             <Row align="center">{<H1 color={props.color} fontSize={props.fontSize} align={props.textAlign}>{props.title}</H1>}</Row>
             <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
-            <Row align="center"><Column size="8">{props.primary
-              ?
-              // <Link to={props.link}>
-              <Paragraph align="center" color={props.paragraphColor}>{props.paragraph}</Paragraph>
-              // </Link>
-              :
-              // <Link to={props.link}>
-              <Paragraph align="center" color={props.paragraphColor}>{props.paragraph}</Paragraph>
+            <Row align="center"><Column size="8">{
+              props.primary
+                ?
+                // <Link to={props.link}>
+                <Paragraph
+                  align="center"
+                  color={props.paragraphColor}
+                  fontFamily={props.fontFamily}
+                >{props.paragraph}
+                </Paragraph>
+                // </Link>
+                :
+                // <Link to={props.link}>
+                <Paragraph
+                  align="center"
+                  color={props.paragraphColor}
+                  fontFamily={props.fontFamily}>
+                  {props.paragraph}
+                </Paragraph>
               // </Link>
             }
             </Column>
@@ -275,8 +286,27 @@ export const Title = props => {
                 {props.primary
                   ? <Column size={props.customParagraphSize} customRespSize respSize="10">
                     <Row align="center">
-                      {props.link ? <Link to={props.link}><Paragraph color={props.paragraphColor} margin="10px 0" align="center">{props.paragraph}</Paragraph></Link>
-                        : <Paragraph color={props.paragraphColor} margin="10px 0" align="center">{props.paragraph}</Paragraph>}
+                      {
+                        props.link === true
+                          ?
+                          <Link to={props.linkTo}>
+                            <Paragraph
+                              color={props.paragraphColor}
+                              margin="10px 0"
+                              align="center"
+                              fontFamily={props.fontFamily}>
+                              {props.paragraph}
+                            </Paragraph>
+                          </Link>
+                          :
+                          <Paragraph
+                            color={props.paragraphColor}
+                            margin="10px 0"
+                            align="center"
+                            fontFamily={props.fontFamily}>
+                            {props.paragraph}
+                          </Paragraph>
+                      }
                     </Row>
                   </Column>
                   : <Column size="12">
@@ -305,6 +335,7 @@ Title.propTypes = {
 // }
 Paragraph.defaultProps = {
   fontSize: "14px",
+  fontFamily: "Lato, sans-serif",
   customParagraphSize: "12",
   color: "#898a8b"
 };

@@ -209,7 +209,8 @@ const Home = (props) => {
         <Title
           title={yml.geeks_vs_others.heading}
           paragraph={yml.geeks_vs_others.sub_heading}
-          link={yml.geeks_vs_others.sub_heading_link}
+          link={true}
+          linkTo={yml.geeks_vs_others.sub_heading_link}
           paragraphColor={Colors.blue}
           primary
           size="10"

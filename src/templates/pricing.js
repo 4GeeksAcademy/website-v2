@@ -89,6 +89,7 @@ const Pricing = (props) => {
           main
           paragraphColor={Colors.white}
           fontSize="46px"
+          fontFamily="Lato-bold, sans-serif"
           textAlign="center"
 
         />
@@ -121,20 +122,23 @@ const Pricing = (props) => {
           </Column>
         </Row>
       </Container>
-      <Divider height="100px" />
+      <Divider height="150px" />
       <Wrapper
         style="default"
         image="no"
         color={Colors.lightGray}
-        border="top"
+        border="custom"
+        customBorderRadius="1.25rem 0 0 1.25rem"
 
       >
+        <Divider height="50px" />
         <Title
           size="10"
           title={yml.prices.heading}
           primary
         />
         <PricesAndPayment type={pageContext.slug} lang={data.allLocationYaml.edges} />
+        <Divider height="50px" />
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
@@ -219,7 +223,8 @@ const Pricing = (props) => {
         border="top"
       >
         <Divider height="20px" />
-        <WhoIsHiring source={yml.ecosystem.partners_name} lang={data.allPartnerYaml.edges} />
+        <WhoIsHiring source="coding" lang={data.allPartnerYaml.edges} />
+        {/* <WhoIsHiring source={yml.ecosystem.partners_name} lang={data.allPartnerYaml.edges} /> */}
         <Divider height="150px" />
       </Wrapper>
 

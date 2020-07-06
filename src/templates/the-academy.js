@@ -183,7 +183,8 @@ const Why = (props) => {
                 style="default"
                 image="no"
                 color={Colors.lightGray}
-                border="top"
+                border="custom"
+                customBorderRadius="1.25rem 0 0 1.25rem"
             >
                 <Row marginBottom="30px">
                     {cornerstone.cornerstones_list.map((item, index) => {
@@ -199,7 +200,7 @@ const Why = (props) => {
                                     marginXs="0 0 30px 0"
                                 >
                                     <Row >
-                                        <Column size="4" pl_lg="0">
+                                        <Column size="3" pl_lg="0">
 
                                             {item.icon === "Book" && <Book width="48px" color={Colors.yellow} fill={Colors.yellow} />}
                                             {item.icon === "Teacher" && <Teacher width="48px" color={Colors.yellow} fill={Colors.yellow} />}
@@ -244,12 +245,19 @@ const Why = (props) => {
                 <Title size="8" title={yml.staff.heading} paragraph={yml.staff.sub_heading} primary />
                 <Mentors />
 
-                <Divider height="150px" /></Wrapper>
-            <Divider height="100px" />
+                <Divider height="150px" />
+            </Wrapper>
+            <Divider height="200px" />
             <Wrapper style="default">
             </Wrapper>
             <Divider height="150px" />
-            <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
+            <Wrapper
+                style="default"
+                image="no"
+                color={Colors.lightGray}
+                border="custom"
+                customBorderRadius="1.25rem 0 0 1.25rem"
+            >
                 <Row>
                     <Column
                         size="12"

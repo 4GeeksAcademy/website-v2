@@ -39,7 +39,9 @@ const ChooseProgram = (props) => {
                                         <Card index="1" borders=".25rem" margin="2px 0" width="100%" padding={toggles === false && "0px"} >
                                             <Link to={item.link}>
                                                 <Row height="25px" onClick={() => {setProgram(item), setToggles(!toggles)}} backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around">
-                                                    <Column size="12" alignSelf="center"><Paragraph fontSize="16px" color={Colors.gray} >{item.text}</Paragraph></Column>
+                                                    <Column size="12" alignSelf="center">
+                                                        <Paragraph fontSize="16px" color={Colors.gray} >{item.text}</Paragraph>
+                                                    </Column>
                                                 </Row>
                                             </Link>
                                         </Card>
