@@ -65,6 +65,8 @@ const AlumniProjects = props => {
                         autoPlay={false}
                         infiniteLoop={true}
                         showArrows={true}
+                        interval={5000}
+                        transitionTime={1000}
                     >
                         {alumniData != null &&
                             alumniData.projects.map((item, index) => {
