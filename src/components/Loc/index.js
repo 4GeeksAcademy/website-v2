@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../Heading';
 import {Container, Row, Column, Wrapper, Divider} from '../Sections'
@@ -8,9 +8,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Card} from '../Card';
 import Link from 'gatsby-link'
+import {SessionContext} from '../../session'
 
 
 const Loc = (props) => {
+  const {session, setSession} = useContext(SessionContext);
+  console.log("LOCSESSION: ", session)
   let loc = props.lang
   return (
     <>
@@ -27,6 +30,8 @@ const Loc = (props) => {
           autoPlay={true}
           infiniteLoop={true}
           showArrows={true}
+          interval={5000}
+          transitionTime={1000}
         >
             {loc != null &&
               loc.map((item, index) => {
@@ -98,33 +103,35 @@ const Loc = (props) => {
       <Row height="auto" align="center">
 
         {loc.map((pic, i) => {
+          console.log("PIC", pic)
           let randLocImgIndex = Math.floor(Math.random() * pic.node.carousel_box.images.length)
           return (
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               {/* <Card width="100%" > */}
-              <RoundImage
-                h_xs="40px"
-                h_sm="70px"
-                h_md="60px"
-                h_lg="80px"
-                h_xl="90px"
-                width="100%"
-                br_xs=".25rem"
-                br_sm=".25rem"
-                br_md=".25rem"
-                br_lg=".25rem"
-                br_xl=".25rem"
-                url={pic.node.carousel_box.images[randLocImgIndex].path}
-                border=".75rem"
-                bsize="cover"
-                position="center"
-                height="100%"
-                // width="auto"
-                mb="1.25rem">
+              <Link to={`/${session.language}/location/${pic.node.meta_info.slug}`}>
+                <RoundImage
+                  h_xs="40px"
+                  h_sm="70px"
+                  h_md="60px"
+                  h_lg="80px"
+                  h_xl="90px"
+                  width="100%"
+                  br_xs=".25rem"
+                  br_sm=".25rem"
+                  br_md=".25rem"
+                  br_lg=".25rem"
+                  br_xl=".25rem"
+                  url={pic.node.carousel_box.images[randLocImgIndex].path}
+                  border=".75rem"
+                  bsize="cover"
+                  position="center"
+                  height="100%"
+                  // width="auto"
+                  mb="1.25rem">
 
-                <Row height="100%" align="around">
-                  <Column size="12" alignSelf="center" align="center">
-                    <Link to={`/${pic.node.lang}/location/${pic.node.meta_info.slug}`}>
+                  <Row height="100%" align="around">
+                    <Column size="12" alignSelf="center" align="center">
+
                       <H4
                         color={Colors.white}
                         fs_xs="9px"
@@ -136,11 +143,12 @@ const Loc = (props) => {
                       >
                         {pic.node.city}
                       </H4>
-                    </Link>
-                  </Column>
-                </Row>
 
-              </RoundImage>
+                    </Column>
+                  </Row>
+
+                </RoundImage>
+              </Link>
               {/* </Card> */}
             </Column>
           )

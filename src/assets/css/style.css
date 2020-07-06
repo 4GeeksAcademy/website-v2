@@ -85,7 +85,21 @@ a.nav-item.nav-link.side {
     display: inline-block;
     margin: 0 8px;
 }
-.carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover {
+.carousel 
+.control-next.control-arrow:before 
+{
+    border-left: 8px solid #0097CE!important;
+}
+.carousel 
+.control-prev.control-arrow:before {
+    border-right: 8px solid #0097CE!important;
+}
+.carousel 
+.control-dots 
+.dot.selected, 
+.carousel 
+.control-dots 
+.dot:hover {
     opacity: 1;
     background: #0097CE;
 }
