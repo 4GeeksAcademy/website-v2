@@ -62,7 +62,16 @@ const ProgramSelector = (props) => {
                           <Link to={link}>
                             <Row key={index} height="50%" marginRight="0" marginLeft="0" backgroundHover={Colors.lightBlue} colorHover={Colors.white} align="around">
                               <Column border="custom" customBorderRadius=".25rem" size="12" alignSelf="center">
-                                <Paragraph fontSize="16px" color={Colors.gray} >{item}</Paragraph>
+                                <Paragraph
+                                  fs_xs="14px"
+                                  fs_sm="14px"
+                                  fs_md="10px"
+                                  fs_lg="12px"
+                                  fs_xl="16px"
+                                  color={Colors.gray}
+                                >
+                                  {item}
+                                </Paragraph>
                               </Column>
                             </Row>
                           </Link>
@@ -90,7 +99,16 @@ const ProgramSelector = (props) => {
                           <Row height="20%" onClick={() => setSession({...session, location: {...location, city: item.node.city}}, setToggle(!toggle))
                           } backgroundHover={Colors.lightBlue} colorHover={Colors.white} key={index} marginBottom="5px" marginTop="5px" marginRight="0" marginLeft="0" align="around" >
                             <Column size="12" alignSelf="center">
-                              <Paragraph fontSize="20px" color={Colors.gray} >{item.node.city}</Paragraph>
+                              <Paragraph
+                                fs_xs="14px"
+                                fs_sm="14px"
+                                fs_md="10px"
+                                fs_lg="12px"
+                                fs_xl="16px"
+                                color={Colors.gray}
+                              >
+                                {item.node.city}
+                              </Paragraph>
                             </Column>
                           </Row>
                         </Card>
