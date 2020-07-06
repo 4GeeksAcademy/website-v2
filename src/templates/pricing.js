@@ -221,7 +221,8 @@ const Pricing = (props) => {
         border="top"
       >
         <Divider height="20px" />
-        <WhoIsHiring source={yml.ecosystem.partners_name} lang={data.allPartnerYaml.edges} />
+        <WhoIsHiring source="coding" lang={data.allPartnerYaml.edges} />
+        {/* <WhoIsHiring source={yml.ecosystem.partners_name} lang={data.allPartnerYaml.edges} /> */}
         <Divider height="150px" />
       </Wrapper>
 
