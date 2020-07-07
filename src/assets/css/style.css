@@ -235,6 +235,11 @@ a {
 .scroll_li{
     margin: 5px 0;
 }
+.card-columns{
+    display: inline-block;
+    column-count: 3;
+    column-gap: 1.25rem;
+}
 /* :-webkit-direct-focus {
     outline-color: none!important;
     outline-style: auto;
