@@ -175,7 +175,8 @@ padding-right: ${props => props.paddingRight};
 padding-left: ${props => props.paddingLeft};
 ${props => props.masonry &&
         css`
-display: inline-block;
+        display: inline-block;
+        
 `
     }
 ${props =>
