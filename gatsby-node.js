@@ -3,6 +3,19 @@ const fs = require('fs');
 const YAML = require('yaml');
 const {createFilePath} = require(`gatsby-source-filesystem`)
 
+var redirects = [];
+const saveRedirectLogs = () => {
+    
+    console.log('Saving redirect log');
+
+    fs.writeFile('./static/redirects.log', JSON.stringify(redirects, null, 1), function (err) {
+        if (err) return console.log(err);
+        console.log('Created redirects file');
+    });
+
+    return true;
+}
+
 exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions;
 
@@ -37,10 +50,14 @@ exports.createPages = async (params) =>
     await createEntityPagesfromYml('Location', params) &&
     await createEntityPagesfromYml('Job', params) &&
     await addAdditionalRedirects(params) &&
-    true;
+    saveRedirectLogs();
 
 const createBlog = async ({actions, graphql}) => {
     const {createPage, createRedirect} = actions;
+    const _createRedirect = (args) => {
+        redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
+        createRedirect(args);
+    }
     const postTemplate = path.resolve('src/templates/post.js');
     const result = await graphql(`
     {
@@ -88,8 +105,7 @@ const createBlog = async ({actions, graphql}) => {
         });
 
         // the old website had the blog posts with this path '/post-name' and we want now '/en/post/post-name'
-        console.log(`Redirect from /${node.fields.slug} to ${node.fields.pagePath}`);
-        createRedirect({
+        _createRedirect({
             fromPath: `/${node.fields.slug}`,
             toPath: node.fields.pagePath,
             redirectInBrowser: true,
@@ -97,8 +113,7 @@ const createBlog = async ({actions, graphql}) => {
         });
 
         if (node.fields.lang === "us") {
-            console.log(`Redirect from /en/${node.fields.template}/${node.fields.slug} to ${node.fields.pagePath}`);
-            createRedirect({
+            _createRedirect({
                 fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
@@ -106,8 +121,7 @@ const createBlog = async ({actions, graphql}) => {
             });
         }
 
-        console.log(`Redirect from /${node.fields.template}/${node.fields.slug} to ${node.fields.pagePath}`);
-        createRedirect({
+        _createRedirect({
             fromPath: `/${node.fields.template}/${node.fields.slug}`,
             toPath: node.fields.pagePath,
             redirectInBrowser: true,
@@ -119,6 +133,10 @@ const createBlog = async ({actions, graphql}) => {
 }
 const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
     const {createPage, createRedirect} = actions;
+    const _createRedirect = (args) => {
+        redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
+        createRedirect(args);
+    }
     const result = await graphql(`
         {
           all${entity}Yaml {
@@ -156,14 +174,14 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
         });
 
         if (node.fields.lang === "us") {
-            createRedirect({
+            _createRedirect({
                 fromPath: `/${node.fields.template}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
             });
 
-            createRedirect({
+            _createRedirect({
                 fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
@@ -171,14 +189,14 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
             });
         }
         if (node.fields.lang === "es") {
-            createRedirect({
+            _createRedirect({
                 fromPath: `/${node.fields.template}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
             });
 
-            // createRedirect({
+            // _createRedirect({
             //     fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
             //     toPath: node.fields.pagePath,
             //     redirectInBrowser: true,
@@ -192,7 +210,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
                     throw new Error(`The path in ${node.meta_info.slug} its not a string: ${path}`);
                 }
                 path = path[0] !== '/' ? '/' + path : path;
-                createRedirect({
+                _createRedirect({
                     fromPath: path,
                     toPath: node.fields.pagePath,
                     redirectInBrowser: true,
@@ -207,6 +225,10 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
 
 const createPagesfromYml = async ({graphql, actions}) => {
     const {createPage, createRedirect} = actions;
+    const _createRedirect = (args) => {
+        redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
+        createRedirect(args);
+    }
     const result = await graphql(`
         {
           allPageYaml {
@@ -248,16 +270,14 @@ const createPagesfromYml = async ({graphql, actions}) => {
         });
 
         if (node.fields.lang === "us") {
-            console.log(`Redirect from /${node.fields.slug} to ${_targetPath}`);
-            createRedirect({
+            _createRedirect({
                 fromPath: "/" + node.fields.slug,
                 toPath: _targetPath,
                 redirectInBrowser: true,
                 isPermanent: true
             });
 
-            console.log(`Redirect from /en/${node.fields.slug} to ${_targetPath}`);
-            createRedirect({
+            _createRedirect({
                 fromPath: "/en/" + node.fields.slug,
                 toPath: _targetPath,
                 redirectInBrowser: true,
@@ -265,8 +285,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
             });
 
             if (node.fields.slug === "index") {
-                console.log("Redirect from /en to " + _targetPath);
-                createRedirect({
+                _createRedirect({
                     fromPath: "/en",
                     toPath: _targetPath,
                     redirectInBrowser: true,
@@ -275,8 +294,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
             }
         }
         if (node.fields.lang === "es") {
-            console.log(`Redirect from /${node.fields.slug} to ${_targetPath}`);
-            createRedirect({
+            _createRedirect({
                 fromPath: "/" + node.fields.slug,
                 toPath: _targetPath,
                 redirectInBrowser: true,
@@ -291,7 +309,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                     throw new Error(`The path in ${node.meta_info.slug} its not a string: ${path}`);
                 }
                 path = path[0] !== '/' ? '/' + path : path;
-                createRedirect({
+                _createRedirect({
                     fromPath: path,
                     toPath: _targetPath,
                     redirectInBrowser: true,
@@ -306,6 +324,10 @@ const createPagesfromYml = async ({graphql, actions}) => {
 
 const addAdditionalRedirects = ({graphql, actions}) => {
     const {createRedirect} = actions;
+    const _createRedirect = (args) => {
+        redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
+        createRedirect(args);
+    }
     const URL = './src/data/additional-redirects.yml';
     try {
         const contents = fs.readFileSync(URL, 'utf8');
@@ -314,7 +336,7 @@ const addAdditionalRedirects = ({graphql, actions}) => {
         if (!file) throw Error("Error persing the " + URL);
 
         file.redirects.forEach(r => {
-            createRedirect({
+            _createRedirect({
                 fromPath: r.fromPath,
                 toPath: r.toPath,
                 redirectInBrowser: r.redirectInBrowser,

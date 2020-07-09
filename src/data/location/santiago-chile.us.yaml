@@ -1,15 +1,15 @@
 meta_info:
-  slug: "madrid"
-  title: 4Geeks Academy Madrid
+  slug: "santiago-chile"
+  title: ""
   description: null
   image: ""
   keywords: ""
-  redirects: []
+  redirects: ["/location/santiago", "/location/santiago-de-chile"]
 
-seo_title: "4Geeks Academy Madrid"
-tagline: "4GEEKS ACADEMY IN MADRID"
+seo_title: "4Geeks Academy Santiago deChile"
+tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
 sub_heading: ""
-image: "/images/locations/madrid-loc-2.jpg"
+image: "/images/locations/santiago-loc.jpg"
 
 info_box:
   heading: "Find us in Miami"
@@ -17,24 +17,17 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "/images/locations/madrid-map.png"
+  image: "/images/locations/santiago-map.png"
 
 carousel_box:
   heading: "What you should know about this location: "
   content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
-    - path: "/images/locations/madrid-loc.jpeg"
-      alt: "miami-sunset"
-    - path: "/images/locations/madrid-loc-2.jpg"
-      alt: "4Geeeks miami location"
-    - path: "/images/locations/madrid-loc-3.jpg"
-      alt: "4Geeeks miami lab"
+    - path: "/images/locations/santiago-loc.jpg"
+      alt: "Santiago Location Image"
+    - path: "/images/locations/santiago-loc-2.jpg"
+      alt: "Santiago Location Image"
 
-## PRICES SECTION
-## MADRID HAS 3 BOXES:
-## LEFT     BOX => PART-TIME
-## CENTER   BOX => FINANCIAL SLIDER OPTIONS
-## RIGHT    BOX => FULL-TIME
 hasFinancialsOption: true
 financials_max_months: ["6 mo", "12 mo"]
 prices:
@@ -47,11 +40,10 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "FULL-TIME"
-        heading_two: "PAY UPFRONT"
+        heading_one: "FULL TIME"
         sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "5.999,00€"
+        price: "2.760.000 CLP"
         price_info: "single payment"
       button:
         button_text: "APPLY NOW"
@@ -59,31 +51,31 @@ prices:
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
       header:
-        heading: "EXTENDED"
-        sub_heading:
+        heading_one: "EXTENDED"
+        sub_heading: "and enjoy the best pricing in town"
       plans:
         - months: "6"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
+          payment: "407.121 CLP"
+          paymentInfo: "per month + 410.000 deposit"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
           message: ""
         - months: "12"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message:
+          payment: "210.641 CLP"
+          paymentInfo: "per month + 410.000 deposit"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: ""
       button:
-        button_text:
+        button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading: ""
-        sub_heading: ""
+        heading_one: "PART TIME"
+        sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "5.499,00€"
+        price: "2.415.000 CLP"
         price_info: "single payment"
       button:
         button_text: "APPLY NOW"
@@ -98,10 +90,10 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PART-TIME"
+        heading_one: "PART TIME"
         sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "5.499,00€"
+        price: "2.415.000 CLP"
         price_info: "single payment"
       button:
         button_text: "APPLY NOW"
@@ -109,44 +101,43 @@ prices:
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
       header:
-        heading_two:
-        sub_heading:
+        heading_one: "EXTENDED"
+        sub_heading: "and enjoy the best pricing in town"
       plans:
-        - months: " 6 mo"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-        - months: "12 mo"
-          payment: ""
-          paymentInfo: ""
+        - months: "6 mo"
+          payment: "356.231 CLP"
+          paymentInfo: "per month + 362.250 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
-
+        - months: "12 mo"
+          payment: "184.311 CLP"
+          paymentInfo: "per month + 362.250 deposit"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: ""
       button:
         button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "FULL-TIME"
+        heading_one: "FULL TIME"
         sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "5.999,00€"
+        price: "2.760.000 CLP"
         price_info: "single payment"
       button:
         button_text: "APPLY NOW"
 
-city: "Madrid"
-name: "Madrid"
-latitude: "40.439769"
-longitude: "-3.680207"
-address: "Edison 3"
-zip_code: "28006"
-state: "Madrid"
-country: "Spain"
+city: "Santiago de Chile"
+name: "Santiago"
+latitude: "-33.408837"
+longitude: "-70.567958"
+address: "Apoquindo 5950 las condes."
+zip_code: ""
+state: ""
+country: "Chile"
 courses:
   - "Full-Time"
   - "Part-Time"
@@ -159,5 +150,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Madrid"
+value: "Santiago de Chile"
 defaultLanguage: "es" # All lead marketing communications will arrive on this language
