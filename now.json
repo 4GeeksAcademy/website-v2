@@ -1,10 +1,4 @@
 {
-  "builds": [
-    { "src": "api/apply/index.js", "use": "@now/node" }
-  ],
-  "routes": [
-      { "src": "/api/apply", "dest": "api/apply/index.js" }
-  ],
   "build": {
     "env": {
       "ACP_TOKEN": "@acp_token",
