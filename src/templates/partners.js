@@ -9,6 +9,7 @@ import BaseRender from './_baseRender'
 import {beHiringPartner} from "../actions";
 import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import LeadForm from "../components/LeadForm/index.js";
 
 const Input = styled.input`
     background-color:${Colors.lightGray};
@@ -52,11 +53,6 @@ const Partners = (props) => {
     const [modalStyle] = React.useState(getModalStyle);
     const [open, setOpen] = React.useState(false);
     const classes = useStyles();
-    const [formData, setVal] = useState({
-        first_name: '',
-        last_name: '',
-        email: ''
-    });
     const handleOpen = () => {
         setOpen(true);
     };
@@ -90,62 +86,8 @@ const Partners = (props) => {
                         aria-describedby="simple-modal-description"
                         open={open}
                         onClose={handleClose}
-                    ><div style={modalStyle} className={classes.paper}>
-                            <Row height="20%" align="center">
-                                <Column size="12" align="center"><H4>BE A HIRING PARTNER</H4></Column>
-                            </Row>
-                            <Row height="70%">
-                                <Column size="12">
-                                    <Row height="30%" align="center">
-                                        <Column size="11" >
-                                            <Input
-                                                type="text" className="form-control" placeholder="First name *"
-                                                onChange={(e) => setVal({...formData, first_name: e.target.value})}
-                                                value={formData.firstName}
-                                            />
-                                        </Column>
-                                    </Row>
-                                    <Row height="30%" align="center">
-                                        <Column size="11">
-                                            <Input type="text" className="form-control" placeholder="Last Name *"
-                                                onChange={(e) => setVal({...formData, last_name: e.target.value})}
-                                                value={formData.lastName}
-                                            />
-                                        </Column>
-                                    </Row>
-                                    <Row height="30%" align="center">
-                                        <Column size="11">
-                                            <Input type="email" className="form-control" placeholder="Email *"
-                                                onChange={(e) => setVal({...formData, email: e.target.value})}
-                                                value={formData.email}
-                                            />
-                                        </Column>
-                                    </Row>
-                                </Column>
-                            </Row>
-                            <Row height="10%" padding="5px 0 0 0" borderTop={`1px solid ${Colors.blue}`}>
-
-                                <Column size="6" customRespSize respSize="6">
-                                    <Paragraph>{formMessage}</Paragraph>
-                                </Column>
-                                <Column size="3" customRespSize respSize="3" align="right">
-                                    {formData.first_name &&
-                                        formData.last_name &&
-                                        formData.email ?
-                                        <Button width="100%" padding=".2rem .45rem" color={Colors.blue} textColor={Colors.white}
-                                            onClick={() => {
-                                                beHiringPartner(formData)
-                                                setFormMessage("")
-                                            }}>Submit</Button>
-                                        : null}
-                                </Column>
-                                <Column size="3" customRespSize respSize="3" align="right">
-                                    <Button outline width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={handleClose}>Close</Button>
-                                </Column>
-                            </Row>
-
-
-                        </div>
+                    >
+                        <LeadForm heading="BE A HIRING PARTNER" formHandler={beHiringPartner} handleClose={handleClose}/>
                     </Modal>
                     <Button width="200px" margin="15px 0px" onClick={handleOpen} color="red" textColor="white">{yml.button_section.button_text}</Button>
                 </Row>

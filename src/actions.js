@@ -44,7 +44,7 @@ export const reviewGuidebook = async (data,session) => {
     for (let key in data) body[key] = data[key].value;
 
     console.log("session", session);
-    return await save_form(body, ['review_guidebook'], [''], session);
+    return await save_form(body, ['download-guidebook'], ['soft'], session);
     // return fetch('/api/acp_apply', {
     //     headers: new Headers({'content-type': 'application/json'}),
     //     method: "POST",
@@ -55,17 +55,14 @@ export const reviewGuidebook = async (data,session) => {
     //         throw Error('Unexpected error');
     //     });
 }
-export const beHiringPartner = (data) => {
-    console.log("Succesfully requested Be Hiring Partner", data)
-    // return fetch('/api/acp_apply', {
-    //     headers: new Headers({'content-type': 'application/json'}),
-    //     method: "POST",
-    //     body: JSON.stringify({ ...data, tags: ['hiring_partner] }),
-    // })
-    //     .then(resp => {
-    //         if( resp.status >= 200 && resp.status < 400) return resp.json();
-    //         throw Error('Unexpected error');
-    //     });
+export const beHiringPartner = async (data,session) => {
+    console.log("Succesfully requested Be Hiring Partner", data);
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    console.log("session", session);
+    return await save_form(body, ['hiring-partner'], ['soft'], session);
+    
 }
 export const contactUs = async (data,session) => {
     console.log("Succesfully contact us", data)

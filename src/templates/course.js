@@ -27,10 +27,10 @@ import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import StepConnector from '@material-ui/core/StepConnector';
 import StepLabel from '@material-ui/core/StepLabel';
-import {SessionContext} from '../session.js'
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 import { Input, Alert } from '../components/Form';
+import LeadForm from "../components/LeadForm/index.js";
 
 
 // import Modal from '../components/Modal';
@@ -39,15 +39,6 @@ import { Input, Alert } from '../components/Form';
 function rand() {
     return Math.round(Math.random() * 20) - 10;
 }
-
-const formIsValid = (formData = null) => {
-    if (!formData) return null;
-    for (let key in formData) {
-        if (!formData[key].valid) return false;
-    }
-    return true;
-}
-
 function getModalStyle() {
     const top = 50 + rand();
     const left = 50 + rand();
@@ -82,21 +73,13 @@ const Program = ({ data, pageContext, yml }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const geek = data.allCourseYaml.edges[0].node;
     const [showModal, setShowModal] = useState(false);
-    const [formMessage, setFormMessage] = useState("Fill the form to submit");
     const details = data.allCourseYaml.edges[0].node.details[0];
-    const [modalStyle] = React.useState(getModalStyle);
     const [open, setOpen] = React.useState(false);
     const classes = useStyles();
     const [activeStep, setActiveStep] = useState(0);
     const [completed, setCompleted] = useState({});
     const steps = getSteps(yml);
-    const [formStatus, setFormStatus] = useState({ status: "idle", msg: "Resquest Syllabus" });
-    const [formData, setVal] = useState({
-        first_name: { value: '', valid: false },
-        last_name: { value: '', valid: false },
-        email: { value: '', valid: false },
-    });
-    const { session } = useContext(SessionContext);
+
     const handleOpen = () => {
         setOpen(true);
     };
@@ -224,88 +207,8 @@ const Program = ({ data, pageContext, yml }) => {
                     aria-describedby="simple-modal-description"
                     open={open}
                     onClose={handleClose}
-                >
-                    <form onSubmit={(e) => {
-                        console.log("executedeeedd")
-                        e.preventDefault();
-                        if (!formIsValid(formData)) setFormStatus({ status: "error", msg: "There are some errors in your form" });
-                        else {
-                            setFormStatus({ status: "loading", msg: "Loading..." });
-                            requestSyllabus(formData, session)
-                                .then(data => {
-                                    if (data.error !== false && data.error !== undefined) {
-                                        setFormStatus({ status: "error", msg: "Fix errors" });
-                                    }
-                                    else {
-                                        setFormStatus({ status: "thank-you", msg: "Thank you" });
-                                        console.log("Thank you");
-                                        navigate('/thank-you/apply');
-                                        console.log("Thank you");
-                                    }
-                                })
-                                .catch(error => {
-                                    console.log("error", error);
-                                    setFormStatus({ status: "error", msg: error.message || error });
-                                })
-                        }
-                    }}>
-                        <div style={modalStyle} className={classes.paper}>
-                            <Row height="20%" align="center">
-                                <Column size="12" align="center"><H4>REQUEST SYLLABUS</H4></Column>
-                            </Row>
-                            <Row height="70%">
-                                <Column size="12">
-                                    <Row height="30%" align="center">
-                                        <Column size="11" >
-                                            <Input
-                                                type="text" className="form-control" placeholder="First name *"
-                                                onChange={(value, valid) => setVal({ ...formData, first_name: { value, valid } })}
-                                                value={formData.first_name.value}
-                                                errorMsg="Please specify a valid first name"
-                                                required
-                                            />
-                                        </Column>
-                                    </Row>
-                                    <Row height="30%" align="center">
-                                        <Column size="11">
-                                            <Input type="text" className="form-control" placeholder="Last Name *"
-                                                onChange={(value, valid) => setVal({ ...formData, last_name: { value, valid } })}
-                                                value={formData.last_name.value}
-                                                errorMsg="Please specify a valid last name"
-                                                required
-                                            />
-                                        </Column>
-                                    </Row>
-                                    <Row height="30%" align="center">
-                                        <Column size="11">
-                                            <Input type="email" className="form-control" placeholder="Email *"
-                                                onChange={(value, valid) => setVal({ ...formData, email: { value, valid } })}
-                                                value={formData.email.value}
-                                                errorMsg="Please specify a valid email"
-                                                required
-                                            />
-                                        </Column>
-                                    </Row>
-                                </Column>
-                            </Row>
-                            <Row height="10%" padding="5px 0 0 0" borderTop={`1px solid ${Colors.blue}`}>
-
-                                <Column size="6" customRespSize respSize="6">
-                                    <Paragraph>{formMessage}</Paragraph>
-                                </Column>
-                                <Column size="3" customRespSize respSize="3" align="right">
-                                    {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
-                                    <Button width="100%" padding=".2rem .45rem"
-                                        type="submit"
-                                        color={formStatus.status === "error" ? Colors.lightRed : Colors.blue}
-                                        textColor={Colors.white}
-                                    >{formStatus.status === "loading" ? "Loading...": "Submit"}</Button>
-                                </Column>
-                                <Column size="3" customRespSize respSize="3" align="right">
-                                    <Button  width="100%" padding=".2rem .45rem" color={Colors.red} textColor={Colors.white} onClick={handleClose}>Close</Button>
-                                </Column>
-                            </Row></div>
-                    </form>
+                >      
+                    <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose}/> 
                 </Modal>
             </Wrapper>
             <Wrapper

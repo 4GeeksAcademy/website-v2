@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
@@ -13,7 +13,7 @@ import BaseRender from './_baseRender';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
 import {Input, Alert, TextArea} from '../components/Form';
-
+import {useDebounce} from "../utils/debounce";
 
 const useStyles = makeStyles({
     root: {
@@ -32,6 +32,8 @@ const useStyles = makeStyles({
         textTransform: 'lowercase',
     },
 });
+
+
 const Contact = (props) => {
     const {data, pageContext, yml} = props;
     const classes = useStyles();
@@ -47,6 +49,7 @@ const Contact = (props) => {
         email: {value: '', valid: false},
         client_comment: {value: '', valid: false}
     });
+    
     const formIsValid = (formData=null) => {
     if(!formData) return null;
     for(let key in formData){
@@ -153,8 +156,9 @@ const Contact = (props) => {
                                                 {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                                 <Button
                                                     width="150px"
-                                                    move="up" up="15px" color={formStatus.status === "error" ? Colors.lightRed : Colors.blue} textColor={Colors.white}
+                                                    move="up" up="15px" color={formStatus.status === "error" ? Colors.lightRed : formStatus.status === "loading" ? Colors.darkGray:  Colors.blue} textColor={Colors.white}
                                                     margin="2rem 0" padding=".45rem 3rem"
+                                                    disabled={formStatus.status === "loading" ? true: false}
                                                     type="submit"
                                                 >{yml.left.button.button_text}</Button>
                                             </Row>
