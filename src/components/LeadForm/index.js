@@ -53,6 +53,7 @@ const LeadForm = ({heading, formHandler, handleClose}) => {
     const { session } = useContext(SessionContext);
     const classes = useStyles();
     const [modalStyle] = useState(getModalStyle);
+    const [focus, setFocus] = useState("");
     console.log(formData);
     return (
         <>
@@ -90,17 +91,28 @@ const LeadForm = ({heading, formHandler, handleClose}) => {
                                         <Column size="11" >
                                             <Input
                                                 type="text" className="form-control" placeholder="First name *"
-                                                onChange={(value,valid) => setVal({ ...formData, first_name: { value,valid } })}
+                                                onChange={(value,valid) => {
+                                                    setVal({ ...formData, first_name: { value,valid } });
+                                                    if(formStatus.status === "error"){
+                                                        setFormStatus({ status: "idle", msg: "Resquest" })
+                                                    }
+                                                }}
                                                 value={formData.first_name.value}
                                                 errorMsg="Please specify a valid first name"
                                                 required
+                                                on
                                             />
                                         </Column>
                                     </Row>
                                     <Row height="30%" align="center">
                                         <Column size="11">
                                             <Input type="text" className="form-control" placeholder="Last Name *"
-                                                onChange={(value,valid) => setVal({ ...formData, last_name: {value,valid} })}
+                                                onChange={(value,valid) =>{ 
+                                                setVal({ ...formData, last_name: {value,valid} })
+                                                if(formStatus.status === "error"){
+                                                        setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                            }}
                                                 value={formData.last_name.value}
                                                 errorMsg="Please specify a valid last name"
                                                 required
@@ -110,7 +122,12 @@ const LeadForm = ({heading, formHandler, handleClose}) => {
                                     <Row height="30%" align="center">
                                         <Column size="11">
                                             <Input type="email" className="form-control" placeholder="Email *"
-                                                onChange={(value,valid) => setVal({ ...formData, email: {value,valid} })}
+                                                onChange={(value,valid) => {
+                                                setVal({ ...formData, email: {value,valid} })
+                                                if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                            }}
                                                 value={formData.email.value}
                                                 errorMsg="Please specify a valid email"
                                                 required
@@ -124,7 +141,7 @@ const LeadForm = ({heading, formHandler, handleClose}) => {
                             </Row>
                             <Row height="10%" padding="5px 0 0 0" >
                                 <Column size="6" customRespSize respSize="3" align="right" paddingRight="25px" paddingLeft="25px">
-                                    <Button width="100%" padding=".2rem .45rem"
+                                    <Button width="100%" padding=".3rem .45rem"
                                         type="submit"
                                         color={formStatus.status === "error" ? Colors.lightRed : formStatus.status === "loading" ? Colors.darkGray:  Colors.blue}
                                         textColor={Colors.white}

@@ -123,13 +123,21 @@ const Contact = (props) => {
                                                     type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                                     errorMsg="Please specify a valid first name"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, first_name: {value, valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, first_name: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     value={formData.first_name.value}
                                                 />
                                             </Row>
                                             <Row height="50px">
                                                 <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
-                                                    onChange={(value, valid) => setVal({...formData, last_name: {value,valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, last_name: {value,valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     errorMsg="Please specify a valid last name"
                                                     required
                                                     value={formData.last_name.value}
@@ -137,7 +145,11 @@ const Contact = (props) => {
                                             </Row>
                                             <Row height="50px">
                                                 <Input type="text" className="form-control" placeholder={yml.left.form_section.email}
-                                                    onChange={(value,valid) => setVal({...formData, email: {value, valid }})}
+                                                    onChange={(value,valid) => {setVal({...formData, email: {value, valid }})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     errorMsg="Please specify a valid email"
                                                     required
                                                     value={formData.email.value}
@@ -147,7 +159,11 @@ const Contact = (props) => {
                                                 <TextArea type="text" rows="10" cols="50" className="form-control" 
                                                     value={formData.client_comment.value} 
                                                     placeholder={yml.left.message_section.placeholder} 
-                                                    onChange={(value,valid) => setVal({...formData, client_comment: {value,valid}})} 
+                                                    onChange={(value,valid) => {setVal({...formData, client_comment: {value,valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }} 
                                                     errorMsg="Please leave us a comment" 
                                                     required
                                                 />

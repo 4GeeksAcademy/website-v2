@@ -96,7 +96,11 @@ const Apply = (props) => {
                                                     type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                                     errorMsg="Please specify a valid first name"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, first_name: {value, valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, first_name: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     value={formData.first_name.value}
                                                 />
                                             </Row>
@@ -104,7 +108,11 @@ const Apply = (props) => {
                                                 <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                                     errorMsg="Please specify a valid last name"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, last_name: {value, valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, last_name: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     value={formData.last_name.value}
                                                 />
                                             </Row>
@@ -112,7 +120,11 @@ const Apply = (props) => {
                                                 <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
                                                     errorMsg="Please specify a valid email"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, email: {value, valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, email: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     value={formData.email.value}
                                                 />
                                             </Row>
@@ -121,7 +133,11 @@ const Apply = (props) => {
                                                     type="phone" className="form-control" placeholder={yml.left.form_section.phone}
                                                     errorMsg="Please specify a valid phone number"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, phone: {value, valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, phone: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     value={formData.phone.value}
                                                 />
                                             </Row>
