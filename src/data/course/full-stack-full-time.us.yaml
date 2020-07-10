@@ -5,7 +5,7 @@ meta_info:
   image: "/images/program-bg.png"
   keywords: ""
   redirects:
-    ["/course/full-time", "full-time", "/us/full-time", "/us/course/full-time"]
+    ["/course/full-time", "full-time", "/us/full-time", "/us/course/full-time", "/the-program"]
 
 tagline: "FULL STACK DEVELOPER"
 
