@@ -1,10 +1,48 @@
 meta_info:
-  slug: geekforce
+  slug: geekforce-career-support
   title: ""
   description: null
   image: null
   keywords: ""
-  redirects: []
-tagline: GEEKFORCE
-sub_heading: ""
+  redirects: ["/career-support", "/geekforce"]
+
+tagline: FIND A GREAT JOB
+sub_heading: "Job hunting will never be a problem again"
 image: "/bg/companies-bg.png"
+image_logo: "/images/geekforce.png"
+benefits:
+  - p:
+    heading: "Get Interviews"
+    items:
+      - title: Resume Preparation
+        sub_title: (up to 8 students per class)
+      - title: Linked In Preparation
+        sub_title: (one mentor every 8 students)
+      - title: Github Preparation
+        sub_title: (unlimited sessions)
+      - title: Personal Portfolio
+        sub_title: (based on each job opportunity)
+      - title: Final Project
+        sub_title: (based on each job opportunity)
+  - a:
+    heading: "Get Job Offers"
+    items:
+      - title: Get Job offers from our partners
+        sub_title: Referrals comming from our oun network of hundreds of partners
+      - title: Mock interview Trainings
+        sub_title: Several fake interviews that to assess your weaknesses and train before the real interviews.
+      - title: Target Coaching per Interview 
+        sub_title: Intensive personal coaching each of the most important interviews, on different technologies.
+      - title: Thousands of tailored exercises
+        sub_title: Our very own pool of thousands of auto-graded exercises will let you practice until mastery.
+  - l:
+    heading: "Keep your job forever"
+    items:
+      - title: The coaching never ends
+        sub_title: Once you land the job, you get help to keep at it.
+      - title: Change job
+        sub_title: Our referral system never ends, you can always come back to look for better jobs.
+      - title: Continue Growing
+        sub_title: Private invites to career fares, events and networking sessions.
+      - title: Become a mentor
+        sub_title: Get paid to help other students, become a part of the mentoring network forever.

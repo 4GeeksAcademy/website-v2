@@ -46,15 +46,39 @@ const PricesAndPayments = (props) => {
   })
   useEffect(() => {
     const loadCurrentCity = async () => {
-      // const city = await session.location;
-      const city = "Miami";
+      try {
+        let response = await session.location;
+        if (response) {
+          var city = await response.city;
+        } else if (response.city == undefined) {
+          alert("no city found!!");
+        }
+      } catch (error) {
+        console.log("something failed");
+        console.log(error);
+      }
       const myLocation = await getCurrentCity(city)
       if (myLocation != null) {
         setProva({...prova, currentCityLocation: myLocation})
       }
+
     }
     loadCurrentCity();
   }, [session.location])
+  // useEffect(() => {
+  //   const loadCurrentCity = async () => {
+  //     const t = await session.location;
+  //     const city = await t.city;
+  //     console.log("CITY :", city);
+  //     // let city = session && session.location.city;
+  //     // const city = "Miami";
+  //     const myLocation = await getCurrentCity(city)
+  //     if (myLocation != null) {
+  //       setProva({...prova, currentCityLocation: myLocation})
+  //     }
+  //   }
+  //   loadCurrentCity();
+  // }, [session.location])
   useEffect(() => {
     const loadCurrentProgramSteps = async () => {
       if (currentCourseType === "part-time") {
@@ -175,7 +199,7 @@ const PricesAndPayments = (props) => {
       case 4:
         return <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" />;
       case 5:
-        return <><img src={prova.currentFilteredCourse.center_section.plans[5].logo} height="20px" /> <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" /></>;
+        return <><img src={prova.currentFilteredCourse.center_section.plans[5].logo} height="20px" />  <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" /></>;
       default:
         return 'Loading Data';
     }
@@ -236,7 +260,7 @@ const PricesAndPayments = (props) => {
       {/* 3 COLUMNS LAYOUT */}
       {prova.currentFilteredCourse &&
         <>
-          <Row align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{'session.location.city'}</Paragraph></Row>
+          <Row align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{session.location && session.location.city}</Paragraph></Row>
           <Divider height="50px" />
           <Row align="center">
             <Column size="4" customRespSize respSize="12">
@@ -321,7 +345,14 @@ const PricesAndPayments = (props) => {
                     <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                       <Row height="100%" align="center">
                         <Column size="8" alignSelf="center" >
-                          <Paragraph align="center" fontSize="12px" color={Colors.yellow}>{prova.currentFilteredCourse.center_section.header.sub_heading}</Paragraph>
+                          <Paragraph
+                            align="center"
+                            fontSize="12px"
+                            fontFamily="Lato-bold, sans-serif"
+                            color={Colors.yellow}
+                          >
+                            {prova.currentFilteredCourse.center_section.header.sub_heading}
+                          </Paragraph>
                         </Column>
                       </Row>
                     </Column>
@@ -340,7 +371,15 @@ const PricesAndPayments = (props) => {
                             color={Colors.white}>
                             {getStepContents(prova.activeStep)}
                           </H3>
-                          <Paragraph align="center" margin="5px 0" fontSize="12px" color={Colors.gray}>{getStepPayments(prova.activeStep, props.lang)}</Paragraph>
+                          <Paragraph
+                            align="center"
+                            margin="5px 0"
+                            fontSize="12px"
+                            fontFamily="Lato-bold, sans-serif"
+                            color={Colors.gray}
+                          >
+                            {getStepPayments(prova.activeStep, props.lang)}
+                          </Paragraph>
                         </Column>
                       </Row>
                     </Column>

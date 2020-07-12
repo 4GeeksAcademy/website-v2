@@ -102,75 +102,11 @@ const GeeksVsOthers = (props) => {
               {yml.info.map((item, index) => {
                 return (
                   <>
-                    {index == yml.info.length - 1
-                      ?
                       <Row
                         key={item.slug}
                         height="120px"
                         marginLeft="0"
                         marginRight="0"
-                        customRespSize
-                        alignResp="end"
-                      >
-                        <Column size="4" customRespSize respSize="4" alignSelf="center" height="100%" image="no" color={Colors.black} border="bottom">
-                          <Row align="around" height="100%" >
-                            {/* <Column size size="2" customRespSize respSize="2" alignSelf="center">
-                              {(item.slug === "one-teacher-every-five" || item.slug === "apoyo-profesional") && <Teacher width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              {(item.slug === "senior-teacher-per-student" || item.slug === "mentores-senior-por-estudiante") && <Glasses width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              {(item.slug === "average-time-to-get-help" || item.slug === "tiempo-promedio-para-recibir-ayuda") && <Clock width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                            </Column> */}
-                            <Column size size="8" customRespSize respSize="10" alignSelf="center" paddingRight="0" paddingLeft="0">
-                              {tooltip === true && index === tooltipIndex ? <Tooltip opacity={tooltipOpacity}>{item.tooltip}</Tooltip> : null}
-                              <H4
-                                fs_xs="12px"
-                                fs_sm="16px"
-                                fs_md="16px"
-                                fs_lg="18px"
-                                fs_xl="24px"
-                                color={Colors.white}
-                              >{item.features} <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} ><Question width="16" color={Colors.lightBlue} fill={Colors.lightBlue} /></span></H4>
-                            </Column>
-                          </Row>
-                        </Column>
-                        <Column size="2" customRespSize respSize="2" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                          <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
-                            <H4 align="center"
-                              fs_xs="12px"
-                              fs_sm="16px"
-                              fs_md="16px"
-                              fs_lg="18px"
-                              fs_xl="16px"
-                              color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
-                        </Column>
-                        <Column size="2" customRespSize respSize="2" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                          <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
-                            <H4 align="center"
-                              fs_xs="12px"
-                              fs_sm="16px"
-                              fs_md="16px"
-                              fs_lg="18px"
-                              fs_xl="16px"
-                              color={Colors.gray}>{item.industry_average}</H4></Column></Row>
-                        </Column>
-                        <Column size="4" customRespSize respSize="4" width="100%" height="100%" alignSelf="center">
-                          <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
-                            <Paragraph
-                              align="center"
-                              fs_xs="6px"
-                              fs_sm="8px"
-                              fs_md="8px"
-                              fs_lg="8px"
-                              fs_xl="10px"
-                              color={Colors.gray}>{item.why_important}</Paragraph></Column></Row>
-                        </Column>
-                      </Row>
-                      :
-                      <Row
-                        key={item.slug}
-                        height="120px"
-                        marginLeft="0" marginRight="0"
                         customRespSize
                         alignResp="end"
                       >
@@ -223,12 +159,12 @@ const GeeksVsOthers = (props) => {
                             <Paragraph align="center"
                               fs_xs="6px"
                               fs_sm="8px"
-                              fs_md="8px"
-                              fs_lg="8px"
-                              fs_xl="10px"
+                              fs_md="10px"
+                              fs_lg="12px"
+                              fs_xl="12px"
                               color={Colors.gray}>{item.why_important}</Paragraph></Column></Row>
                         </Column>
-                      </Row>}
+                      </Row>
                   </>
                 )
               }

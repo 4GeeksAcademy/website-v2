@@ -1,34 +1,34 @@
 meta_info:
-  slug: "madrid"
+  slug: "madrid-spain"
   title: 4Geeks Academy Madrid
   description: null
   image: ""
   keywords: ""
-  redirects: []
+  redirects: ["/madrid"]
 
 seo_title: "4Geeks Academy Madrid"
 tagline: "4GEEKS ACADEMY IN MADRID"
 sub_heading: ""
-image: "/images/locations/madrid-loc.jpeg"
+image: "/images/locations/madrid-loc-2.jpg"
 
 info_box:
-  heading: "Encuéntranos en Madrid"
-  address: "Edison 3, 28006, Madrid."
+  heading: "Find us in Miami"
+  address: "1801 SW 3rd Ave #100, Miami, FL 33129"
   contact_heading: "Contacts"
-  phone: "910 86 69 83"
-  email: "es@4geeksacademy.com"
+  phone: "(786) 416-6640"
+  email: "info@4GeeksAcademy.com"
   image: "/images/locations/madrid-map.png"
 
 carousel_box:
-  heading: "Qué deberías saber sobre esta ubicación: "
-  content: "A 5 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
+  heading: "What you should know about this location: "
+  content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
     - path: "/images/locations/madrid-loc.jpeg"
-      alt: "madrid-location"
-    - path: "/images/locations/madrid-loc-1.jpg"
-      alt: "4Geeks Academy Madrid location"
+      alt: "miami-sunset"
     - path: "/images/locations/madrid-loc-2.jpg"
-      alt: "4Geeks Madrid location"
+      alt: "4Geeeks miami location"
+    - path: "/images/locations/madrid-loc-3.jpg"
+      alt: "4Geeeks miami lab"
 
 ## PRICES SECTION
 ## MADRID HAS 3 BOXES:
@@ -41,25 +41,25 @@ prices:
   full_time:
     ## GENERAL INFO
     slug: "full-time"
-    duration: "9 semanas"
+    duration: "9 Weeks"
 
     ## LEFT BOX SECTION FULL-TIME
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
         heading_one: "FULL-TIME"
-        heading_two: "PAGO ADELANTADO"
-        sub_heading: "y disfruta de mejores precios"
+        heading_two: "PAY UPFRONT"
+        sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "5.999,00 €"
-        price_info: "pago de contado"
+        price: "5.999,00€"
+        price_info: "single payment"
       button:
-        button_text: "APLICA YA"
+        button_text: "APPLY NOW"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
       header:
-        heading:
+        heading: "EXTENDED"
         sub_heading:
       plans:
         - months: "6"
@@ -83,28 +83,28 @@ prices:
         heading: ""
         sub_heading: ""
       content:
-        price: "5.499,00 €"
-        price_info: "pago de contado"
+        price: "5.499,00€"
+        price_info: "single payment"
       button:
-        button_text: "APLICA YA"
+        button_text: "APPLY NOW"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
   part_time:
     slug: "part-time"
-    duration: "16 semanas"
+    duration: "16 Weeks"
 
     ## LEFT BOX SECTION PART-TIME
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
         heading_one: "PART-TIME"
-        sub_heading: "y disfruta de mejores precios"
+        sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "5.499,00 €"
-        price_info: "pago de contado"
+        price: "5.499,00€"
+        price_info: "single payment"
       button:
-        button_text: "APLICA YA"
+        button_text: "APPLY NOW"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -126,27 +126,27 @@ prices:
           message: ""
 
       button:
-        button_text: "APLICA YA"
+        button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
         heading_one: "FULL-TIME"
-        sub_heading: "y disfruta de mejores precios"
+        sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "5.999,00 €"
-        price_info: "pago de contado"
+        price: "5.999,00€"
+        price_info: "single payment"
       button:
-        button_text: "APLICA YA"
+        button_text: "APPLY NOW"
 
 city: "Madrid"
 name: "Madrid"
 latitude: "40.439769"
 longitude: "-3.680207"
-address: "Calle de Edison 3"
+address: "Edison 3"
 zip_code: "28006"
 state: "Madrid"
-country: "España"
+country: "Spain"
 courses:
   - "Full-Time"
   - "Part-Time"

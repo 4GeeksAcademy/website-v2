@@ -1,11 +1,4 @@
 {
-  "builds": [
-    { "src": "src/api/*/index.js", "use": "@now/node" },
-    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "public" } }
-  ],
-  "routes": [
-      { "src": "/api/(.*)", "dest": "src/api/$1/index.js" }
-  ],
   "build": {
     "env": {
       "ACP_TOKEN": "@acp_token",

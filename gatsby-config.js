@@ -33,6 +33,7 @@ module.exports = {
 
   },
   plugins: [
+    'gatsby-plugin-force-trailing-slashes',
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {

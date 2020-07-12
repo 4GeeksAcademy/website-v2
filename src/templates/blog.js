@@ -59,10 +59,10 @@ const Blog = ({data, pageContext, yml}) => {
                 </Row>
                 <Divider height="50px" />
                 <Row>
-                    <div className="card-columns">
+                    <div className="card-columns" >
                         {data.posts.edges.filter(post => post.node.frontmatter.featured === true).map((item, i) => {
                             return (
-                                <Column size="12" masonry key={i} height="auto" margin="0 0 40px 0">
+                                <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
                                         <Link to={`/post/${item.node.frontmatter.slug}`}><RoundImage
                                             url={item.node.frontmatter.image}
@@ -141,10 +141,10 @@ const Blog = ({data, pageContext, yml}) => {
                 </Row>
                 <Divider height="50px" />
                 <Row>
-                    <div className="card-columns">
+                    <div className="card-columns" >
                         {data.posts.edges.filter(post => post.node.frontmatter.status === "published").map((item, i) => {
                             return (
-                                <Column size="12" masonry key={i} height="auto" margin="0 0 40px 0">
+                                <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
                                         <Link to={`/post/${item.node.frontmatter.slug}`}><RoundImage
                                             url={item.node.frontmatter.image}
