@@ -63,6 +63,9 @@ const Contact = (props) => {
         <>
         <form onSubmit={(e) => {
             e.preventDefault();
+            if(formStatus.status === "error"){
+                            setFormStatus({ status: "idle", msg: "Resquest" })
+                            }
             if(!formIsValid(formData)){
                 setFormStatus({status: "error", msg: "There are some errors in your form"});
             } else {
@@ -172,7 +175,7 @@ const Contact = (props) => {
                                                 {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                                 <Button
                                                     width="150px"
-                                                    move="up" up="15px" color={formStatus.status === "error" ? Colors.lightRed : formStatus.status === "loading" ? Colors.darkGray:  Colors.blue} textColor={Colors.white}
+                                                    move="up" up="15px" color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue} textColor={Colors.white}
                                                     margin="2rem 0" padding=".45rem 3rem"
                                                     disabled={formStatus.status === "loading" ? true: false}
                                                     type="submit"

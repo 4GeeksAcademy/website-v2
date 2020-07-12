@@ -61,6 +61,9 @@ const LeadForm = ({heading, formHandler, handleClose}) => {
             <form onSubmit={(e) => {
                         console.log("executedeeedd");
                         e.preventDefault();
+                        if(formStatus.status === "error"){
+                            setFormStatus({ status: "idle", msg: "Resquest" })
+                            }
                         if (!formIsValid(formData)) setFormStatus({ status: "error", msg: "There are some errors in your form" });
                         else {
                             setFormStatus({ status: "loading", msg: "Loading..." });
@@ -143,7 +146,7 @@ const LeadForm = ({heading, formHandler, handleClose}) => {
                                 <Column size="6" customRespSize respSize="3" align="right" paddingRight="25px" paddingLeft="25px">
                                     <Button width="100%" padding=".3rem .45rem"
                                         type="submit"
-                                        color={formStatus.status === "error" ? Colors.lightRed : formStatus.status === "loading" ? Colors.darkGray:  Colors.blue}
+                                        color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue}
                                         textColor={Colors.white}
                                         disabled={formStatus.status === "loading" ? true: false}
                                     >{formStatus.status === "loading" ? "Loading...": "Submit"}</Button>
