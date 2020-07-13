@@ -241,6 +241,7 @@ export const Paragraph = styled.div`
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};
   cursor: ${props => props.cursor === "pointer" && "pointer"};
+  // display: flex;
   `
 // color: ${props => props.primary ? `${Colors.gray}` : `${props.color}`};
 export const Title = props => {
