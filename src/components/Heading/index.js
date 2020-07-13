@@ -170,10 +170,11 @@ export const H5 = styled.h5`
 `;
 
 export const Span = styled.span`
-      // ${props => props.animated && `css animation:${Blink} 1.2s infinite;`}
+
       animation:${Blink} 1.2s infinite;
       color: ${props => props.color};
-      font-size: ${props => props.fs}
+      font-size: ${props => props.fs};
+      margin: ${props => props.margin};
 `
 export const Separator = styled.div`
   text-align: ${props => props.align};
