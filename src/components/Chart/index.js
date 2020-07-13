@@ -18,7 +18,6 @@ export const Charts = (props) => {
 
     useEffect(() => {
         const loadChartData = async (propData) => {
-            console.log("PROPDATA: ", propData)
             var dataArray = [];
             if (propData) {
                 for (let i of propData.dataArray) {
