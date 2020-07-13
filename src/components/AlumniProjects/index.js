@@ -113,9 +113,9 @@ const AlumniProjects = props => {
                                                                                         // margin="5px 0"
                                                                                         align="left" >
                                                                                         {alumni.job_title}
-                                                                                        {alumni.github != "" && <a href={alumni.github}><Github width="14" color={Colors.blue} fill={Colors.blue} /></a>}
+                                                                                        {alumni.github != "" && <Span margin="0 5px" ><a target="_blank" href={alumni.github}><Github width="14" color={Colors.gray} fill={Colors.gray} /></a></Span>}
                                                                                         {/* {alumni.github != "" && <Github width="14" color={Colors.blue} fill={Colors.blue} />} */}
-                                                                                        {alumni.linkedin != "" && <a href={alumni.linkedin}><Linkedin width="16" color={Colors.blue} fill={Colors.blue} /></a>}
+                                                                                        {alumni.linkedin != "" && <Span ><a target="_blank" href={alumni.linkedin}><Linkedin width="16" color={Colors.gray} fill={Colors.gray} /></a></Span>}
 
                                                                                     </Paragraph>
                                                                                 </Column>
