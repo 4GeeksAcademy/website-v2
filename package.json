@@ -68,6 +68,7 @@
     "react-countup": "^4.2.3",
     "react-device-detect": "^1.11.14",
     "react-dom": "^16.12.0",
+    "react-google-charts": "^3.0.15",
     "react-helmet": "^6.0.0-beta",
     "react-intersection-observer": "^8.26.1",
     "react-line-awesome": "^0.1.4",

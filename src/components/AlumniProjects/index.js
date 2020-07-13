@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button, RoundImage} from '../Styling';
+import {Colors, Address, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage} from '../Styling';
 import {Card} from '../Card';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -111,7 +111,12 @@ const AlumniProjects = props => {
                                                                                         fs_xl="11px"
                                                                                         lineHeight="24px"
                                                                                         // margin="5px 0"
-                                                                                        align="left" >{`${alumni.job_title}`}
+                                                                                        align="left" >
+                                                                                        {alumni.job_title}
+                                                                                        {alumni.github != "" && <a href={alumni.github}><Github width="14" color={Colors.blue} fill={Colors.blue} /></a>}
+                                                                                        {/* {alumni.github != "" && <Github width="14" color={Colors.blue} fill={Colors.blue} />} */}
+                                                                                        {alumni.linkedin != "" && <a href={alumni.linkedin}><Linkedin width="16" color={Colors.blue} fill={Colors.blue} /></a>}
+
                                                                                     </Paragraph>
                                                                                 </Column>
                                                                             </Row>
