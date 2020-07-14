@@ -5,7 +5,7 @@ import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage} from '../components/Styling'
 import Mentors from '../components/Mentors'
 import Events from '../components/Events'
-import {Chart} from '../components/Chart'
+import {Charts} from '../components/Chart'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import WhoIsHiring from '../components/WhoIsHiring';
@@ -124,8 +124,8 @@ const Why = (props) => {
                             <Column size="4" customRespSize respSize="4" padding="30px" align="center">
                                 <Row align="center">
 
-                                    <Column size="10" >
-                                        <Chart
+                                    <Column size="12" >
+                                        <Charts
                                             dataArray={yml.outcomes.right.chart_one.data} />
                                     </Column>
                                 </Row>
@@ -133,14 +133,14 @@ const Why = (props) => {
                             <Column size="4" customRespSize respSize="4" padding="30px">
                                 <Row align="center">
 
-                                    <Column size="8" >
-                                        <Chart dataArray={yml.outcomes.right.chart_two.data} /></Column>
+                                    <Column size="12" >
+                                        <Charts dataArray={yml.outcomes.right.chart_two.data} /></Column>
                                 </Row>
 
                             </Column>
                             <Column size="4" customRespSize respSize="4" padding="30px">
 
-                                <Chart
+                                <Charts
                                     dataArray={yml.outcomes.right.chart_three.data} />
                             </Column>
                         </Row>
@@ -386,27 +386,15 @@ export const query = graphql`
                 right{
                     chart_one{
                         title
-                        data{
-                            color
-                            title
-                            value
-                        }
+                        data
                     }
                     chart_two{
                         title
-                        data{
-                            color
-                            title
-                            value
-                        }
+                        data
                     }
                     chart_three{
                         title
-                        data{
-                            color
-                            title
-                            value
-                        }
+                        data
                     }
                     
                 }

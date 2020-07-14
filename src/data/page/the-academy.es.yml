@@ -25,45 +25,28 @@ outcomes:
     bottom_message: "Nuestros estudiantes incrementan un 24% sus salarios, después de completar nuestros programas."
   right:
     chart_one:
-      title: "edades"
-      ## EACH DONUTCHART NEEDS AN ARRAY OF OBJECTS WITH COLOR, TITLE AND VALUE
-      ## THE COLOR COULD BE HEX, DEC, TEXT, RGB, ETC...
-      ## THE VALUE NEED TO BE A NUMBER, NOT A STRING
+      ## EACH DONUTCHART NEEDS AN ARRAY OF ARRAYS WITH  LABEL AND VALUE
+      ## THE VALUE NEED TO BE A STRING, NOT A NUMBER
+      title: "ages"
       data:
-        - color: "grey"
-          title: "26-32"
-          value: 44
-        - color: "lightGrey"
-          title: "22-25"
-          value: 30
-        - color: "#000000"
-          title: "33-42"
-          value: 26
+        - [Task, Ages]
+        - [26-32, "44"] ## EACH ARRAY NEEDS LABEL AND VALUE
+        - [22-25, "30"]
+        - [33-42, "26"]
     chart_two:
-      title: "género"
+      title: "gender"
       data:
-        - color: "lightGreen"
-          title: "Femenino"
-          value: 21
-        - color: "green"
-          title: "Masculino"
-          value: 79
-
+        - [Task, Gender]
+        - [Female, "21"]
+        - [Male, "79"]
     chart_three:
-      title: "Nacionalidad"
+      title: "nationality"
       data:
-        - color: "orange"
-          title: "América del norte"
-          value: 60
-        - color: "yellow"
-          title: "Asia"
-          value: 1
-        - color: "brown"
-          title: "Europa"
-          value: 5
-        - color: "red"
-          title: "América Latina"
-          value: 34
+        - [Task, Nationality]
+        - [North America, "60"]
+        - [Asia, "1"]
+        - [Europe, "5"]
+        - [Lat.Am., "34"]
 
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:

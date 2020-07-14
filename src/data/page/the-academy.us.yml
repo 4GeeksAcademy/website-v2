@@ -25,45 +25,28 @@ outcomes:
     bottom_message: "Our students make 24% more money after comnpleting our programs."
   right:
     chart_one:
+      ## EACH DONUTCHART NEEDS AN ARRAY OF ARRAYS WITH  LABEL AND VALUE
+      ## THE VALUE NEED TO BE A STRING, NOT A NUMBER
       title: "ages"
-      ## EACH DONUTCHART NEEDS AN ARRAY OF OBJECTS WITH COLOR, TITLE AND VALUE
-      ## THE COLOR COULD BE HEX, DEC, TEXT, RGB, ETC...
-      ## THE VALUE NEED TO BE A NUMBER, NOT A STRING
       data:
-        - color: "grey"
-          title: "26-32"
-          value: 44
-        - color: "lightGrey"
-          title: "22-25"
-          value: 30
-        - color: "#000000"
-          title: "33-42"
-          value: 26
+        - [Task, Ages]
+        - [26-32, "44"] ## EACH ARRAY NEEDS LABEL AND VALUE
+        - [22-25, "30"]
+        - [33-42, "26"]
     chart_two:
       title: "gender"
       data:
-        - color: "lightGreen"
-          title: "Female"
-          value: 21
-        - color: "green"
-          title: "Male"
-          value: 79
-
+        - [Task, Gender]
+        - [Female, "21"]
+        - [Male, "79"]
     chart_three:
       title: "nationality"
       data:
-        - color: "#36A2EB"
-          title: "North America"
-          value: 60
-        - color: "#FFCE56"
-          title: "Asia"
-          value: 1
-        - color: "#FF6384"
-          title: "Europe"
-          value: 5
-        - color: "red"
-          title: "Lat.Am."
-          value: 34
+        - [Task, Nationality]
+        - [North America, "60"]
+        - [Asia, "1"]
+        - [Europe, "5"]
+        - [Lat.Am., "34"]
 
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:
