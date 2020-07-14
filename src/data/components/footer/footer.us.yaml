@@ -18,6 +18,8 @@ footer:
         link: "/partners"
       - name: "Pricing"
         link: "/pricing"
+      - name: "Events"
+        link: "/calendar"
   - column_three:
     items:
       - name: "Blog"
@@ -28,6 +30,8 @@ footer:
         link: "/jobs"
       - name: "Legal"
         link: "/privacy-policy"
+      - name: "FAQ"
+        link: "/faq"
   - column_four:
     heading: "LOCATIONS"
     items:
