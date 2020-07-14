@@ -105,7 +105,9 @@ const Faq = (props) => {
                                             {buttonToggle === true && toggleIndex === index &&
                                                 <Row height="auto" marginTop="10px">
                                                     <Column size="10" align="left">
-                                                        <Paragraph lineHeight="1rem">
+                                                        <Paragraph
+                                                            fontFamily="Lato-bold, sans-serif"
+                                                            lineHeight="1rem">
                                                             {item.answer}
                                                         </Paragraph>
                                                     </Column>
