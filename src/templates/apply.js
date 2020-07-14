@@ -34,6 +34,9 @@ const Apply = (props) => {
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
+            if(formStatus.status === "error"){
+                            setFormStatus({ status: "idle", msg: "Resquest" })
+                            }
             if (!formIsValid(formData)) setFormStatus({status: "error", msg: "There are some errors in your form"});
             else {
                 setFormStatus({status: "loading", msg: "Loading..."});
@@ -96,7 +99,11 @@ const Apply = (props) => {
                                                     type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                                     errorMsg="Please specify a valid first name"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, first_name: {value, valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, first_name: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     value={formData.first_name.value}
                                                 />
                                             </Row>
@@ -104,7 +111,11 @@ const Apply = (props) => {
                                                 <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                                     errorMsg="Please specify a valid last name"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, last_name: {value, valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, last_name: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     value={formData.last_name.value}
                                                 />
                                             </Row>
@@ -112,7 +123,11 @@ const Apply = (props) => {
                                                 <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
                                                     errorMsg="Please specify a valid email"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, email: {value, valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, email: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     value={formData.email.value}
                                                 />
                                             </Row>
@@ -121,7 +136,11 @@ const Apply = (props) => {
                                                     type="phone" className="form-control" placeholder={yml.left.form_section.phone}
                                                     errorMsg="Please specify a valid phone number"
                                                     required
-                                                    onChange={(value, valid) => setVal({...formData, phone: {value, valid}})}
+                                                    onChange={(value, valid) => {setVal({...formData, phone: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
                                                     value={formData.phone.value}
                                                 />
                                             </Row>
@@ -154,8 +173,9 @@ const Apply = (props) => {
                                                 {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                                 <Button type="submit"
                                                     width="150px"
-                                                    move="up" up="15px" color={formStatus.status === "error" ? Colors.lightRed : Colors.blue} textColor={Colors.white}
+                                                    move="up" up="15px" color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue} textColor={Colors.white}
                                                     margin="2rem 0" padding=".45rem 3rem"
+                                                    disabled={formStatus.status === "loading" ? true: false}
                                                 >{yml.left.button.button_text}</Button>
                                             </Row>
                                         </Column>
@@ -196,9 +216,6 @@ const Apply = (props) => {
                                                         </Paragraph>
                                                     </Row>)
                                             })}
-
-
-
                                         </Column>
                                     </Row>
                                 </Column>
