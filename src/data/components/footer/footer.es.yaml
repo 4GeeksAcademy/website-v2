@@ -18,6 +18,8 @@ footer:
         link: "/aliados"
       - name: "Precios"
         link: "/precios"
+      - name: "Eventos"
+        link: "/calendario"
   - column_three:
     items:
       - name: "Blog"
@@ -26,6 +28,8 @@ footer:
         link: "/contactanos"
       - name: "Empleo"
         link: "/empleo"
+      - name: "FAQ"
+        link: "/faqs"
   - column_four:
     heading: "SEDES"
     items:
