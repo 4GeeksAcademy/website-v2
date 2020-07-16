@@ -100,7 +100,7 @@ const UpcomingProgram = ({ date, title, upcomingPath, applyPath, position, showO
                 <P2 fontSize="18px">{title}</P2>
         </Center>
         <Right>
-                <Button color={Colors.red} to={applyPath} textColor={Colors.white}>Apply now</Button>
+                <Link to={applyPath}><Button color={Colors.red} textColor={Colors.white}>Apply now</Button></Link>
                 <p style={{ textAlign: "center"}}>or <Anchor to={upcomingPath}>review other dates</Anchor></p>
         </Right>
       </Centered>
