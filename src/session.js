@@ -135,6 +135,8 @@ export const withSession = Component => {
                     language = browserLang.substring(0, 2);
                 }
 
+                // const cohorts = 
+
                 const _session = {
                     ...session, v4, v6, location, browserLang, language,
                     locations: locationsArray.map(l => l.node).filter(l => {
