@@ -24,6 +24,7 @@ ${props => props.lato ?
       letter-spacing: 0px;
       color: ${props => props.color};
 `};
+text-shadow: ${props => props.textShadow}; 
 text-transform: ${props => props.uppercase && "uppercase"};
 text-align: ${props => props.align};
 @media ${Device.xs}{
@@ -347,7 +348,8 @@ Separator.defaultProps = {
 };
 H1.defaultProps = {
   // color: Colors.black,
-  fontSize: "42px"
+  fontSize: "42px",
+  textShadow: "2px 1px #898a8b"
 };
 H2.defaultProps = {
   fs_xs: '7.5vw',
