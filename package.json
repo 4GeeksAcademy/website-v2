@@ -19,6 +19,9 @@
     "eslint",
     "netlify"
   ],
+  "pre-commit": [
+    "test"
+  ],
   "scripts": {
     "start": "run-p start:**",
     "test": "node ./src/test/test.seo.js",
@@ -37,9 +40,8 @@
     "@material-ui/icons": "^4.5.1",
     "@material-ui/lab": "^4.0.0-alpha.40",
     "activecampaign": "^1.2.5",
-    "bootstrap": "^4.4.1",
-    "dotenv": "^8.2.0",
-    "gatsby": "^2.20.24",
+    "dayjs": "^1.8.29",
+    "gatsby": "^2.24.2",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-google-tagmanager": "^2.1.25",
     "gatsby-plugin-manifest": "^2.2.14",
@@ -84,13 +86,12 @@
     "react-toggle": "^4.1.1",
     "react-trend": "^1.2.5",
     "react-twitter-embed": "^3.0.3",
-    "reactstrap": "^8.4.0",
     "styled-components": "^4.3.2",
     "styled-reset-advanced": "^1.0.1",
-    "validate": "^5.1.0",
     "video-react": "^0.14.1"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-links": "^5.1.11",

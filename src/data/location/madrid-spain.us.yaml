@@ -21,7 +21,7 @@ info_box:
 
 carousel_box:
   heading: "What you should know about this location: "
-  content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "Just 3 min. away from the subway, the office is located in one of Madrid's most active areas. Open to students 12 hrs a day and with the out famous 'Coding Weekends' on Saturdays were students come to receive senior coaching, hangout and eat pizza!"
   images:
     - path: "/images/locations/madrid-loc.jpeg"
       alt: "miami-sunset"

@@ -9,6 +9,7 @@ import NavB from '../components/Navbar'
 import Footer from '../components/Footer'
 import {StaticQuery, graphql} from 'gatsby';
 import {withSession} from "../session.js";
+import UpcomingProgram from "../components/UpcomingProgram"
 
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
@@ -16,7 +17,6 @@ import SEO from './SEO';
 const Layout = ({children, seo, context}) => {
 
   const {slug, title, description, image, keywords} = seo;
-
   return (
     <StaticQuery
       query={graphql`
@@ -68,6 +68,7 @@ const Layout = ({children, seo, context}) => {
             <>
               {children}
             </>
+            <UpcomingProgram position="bottom" showOnScrollPosition={400} />
             <Footer lang={myFooter} />
           </>
         )

@@ -29,12 +29,15 @@ const walk = function(dir, done) {
 const load = (pathToFile) => {
     const content = fs.readFileSync(pathToFile, 'utf8');
     try{
+        console.log("Loading "+pathToFile);
         const yaml = jsyaml.load(content);
+        
         const fileName = pathToFile.replace(/^.*[\\\/]/, '').split('.').slice(0, -1).join('.').toLowerCase();
         if(typeof yaml == 'undefined' || !yaml) throw new Error(`The file ${fileName}.yml was impossible to parse`.red);
         return yaml;
     }
-    catch{
+    catch(error){
+        console.error(error);
         return null;
     }
     

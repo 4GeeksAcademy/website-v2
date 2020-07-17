@@ -1,4 +1,4 @@
-const API_HOST = 'http://127.0.0.1:8000/v1'
+const API_HOST = 'https://breathecode.herokuapp.com/v1'
 
 /**
  * 
@@ -7,8 +7,8 @@ const API_HOST = 'http://127.0.0.1:8000/v1'
  * @param {hard, soft, newsletter, etc} automations 
  * @param {session information object} session 
  */
-const save_form = async (formData=null, tags='', automations='', session=null) => {
-
+export const save_form = async (formData=null, tags='', automations='', session=null) => {
+    console.log("pupusito");
     if(!Array.isArray(tags)) throw Error("Tags must be an array");
     if(typeof(session) !== 'object') throw Error("Missing session");
     if(typeof(formData) !== 'object') throw Error("Missing formData");
@@ -31,7 +31,9 @@ const save_form = async (formData=null, tags='', automations='', session=null) =
     }
     else if (resp.status === 400) {
         const error = await resp.json();
+        console.log(error);
         if(typeof(error.details) === 'string') throw Error(error.details);
+        console.log(error);
         for(let key in error){
             throw Error(error[key][0]);
         }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
@@ -9,17 +9,12 @@ import Grid from '@material-ui/core/Grid';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import {makeStyles} from '@material-ui/core/styles';
-import BaseRender from './_baseRender'
+import BaseRender from './_baseRender';
+import {SessionContext} from '../session.js';
+import {contactUs} from '../actions.js';
+import {Input, Alert, TextArea} from '../components/Form';
+import {useDebounce} from "../utils/debounce";
 
-const Input = styled.input`
-    background-color:${Colors.lightGray};
-    height: 40px;
-    width: 100%;
-    border: none;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    font-color: ${Colors.black};
-`
 const useStyles = makeStyles({
     root: {
         background: Colors.white,
@@ -32,58 +27,65 @@ const useStyles = makeStyles({
             background: Colors.yellow,
             color: Colors.white
         },
-
     },
-
     label: {
         textTransform: 'lowercase',
     },
 });
+
+
 const Contact = (props) => {
     const {data, pageContext, yml} = props;
     const classes = useStyles();
+    const { session } = useContext(SessionContext);
     const [alignment, setAlignment] = useState('left');
+    const [ formStatus, setFormStatus ] = useState({ status: "idle", msg: "Contact Us"});
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     };
     const [formData, setVal] = useState({
-        first_name: '',
-        last_name: '',
-        phone: '',
-        email: ''
+        first_name: {value: '', valid: false},
+        last_name: {value: '', valid: false},
+        email: {value: '', valid: false},
+        client_comment: {value: '', valid: false}
     });
-
-
-    const children = [
-        <ToggleButton key={1} value="left" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Santiago, Chile</Paragraph>
-        </ToggleButton>,
-        <ToggleButton key={2} value="center" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Caracas, Vzla</Paragraph>
-        </ToggleButton>,
-        <ToggleButton key={3} value="right" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Miami, Usa</Paragraph>
-        </ToggleButton>,
-        <ToggleButton key={4} value="justify" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Maracaibo, Vzla</Paragraph>
-        </ToggleButton>,
-        <ToggleButton key={5} value="justif" classes={{
-            label: classes.label, // class name, e.g. `classes-nesting-label-x`
-        }}>
-            <Paragraph color={Colors.gray}>Madrid, Spain</Paragraph>
-        </ToggleButton>,
-    ];
+    
+    const formIsValid = (formData=null) => {
+    if(!formData) return null;
+    for(let key in formData){
+        if(!formData[key].valid) return false;
+    }
+    return true;
+    }
+    console.log(formData);
 
     return (
         <>
+        <form onSubmit={(e) => {
+            e.preventDefault();
+            if(formStatus.status === "error"){
+                            setFormStatus({ status: "idle", msg: "Resquest" })
+                            }
+            if(!formIsValid(formData)){
+                setFormStatus({status: "error", msg: "There are some errors in your form"});
+            } else {
+                setFormStatus({status: "loading", msg: "Loading..."});
+                contactUs(formData, session)
+                .then((data) => {
+                    if(data.error !== false && data.error !== undefined){    
+                        setFormStatus({status: "error", msg: "Fix errors"});
+                        console.log("submit error")
+                    }else {
+                        setFormStatus({status: "thank-you", msg: "Thank you"});
+                        console.log("Thank you");
+                    }
+                })
+                .catch(error => {
+                      console.log("error", error);
+                    setFormStatus({status: "error", msg: error.message || error});
+                })
+            }
+        }}>
             <Divider height="100px" />
             <Wrapper
                 style="default">
@@ -102,81 +104,81 @@ const Contact = (props) => {
                         color={Colors.white}
                     >
 
-                        <Card shadow borders="1.25rem" height="500px" p_xs="0 10px" p_sm="0 15px" p_md="0 20px">
+                        <Card shadow borders="1.25rem" p_xs="0 10px" p_sm="0" p_md="0">
                             <Row
+                                background="#000000"
                                 height="100%"
                                 marginLeft="0"
                                 marginRight="0"
                                 align="center"
-
+                                borderRadius="1.25rem 1.25rem 1.25rem 1.25rem"
                             >
-                                <Column size="8" alignSelf="center" height="100%" image="no" border="bottom">
+                                <Column size="8" alignSelf="center" height="100%" image="no" border="bottom" color="white">
                                     <Row align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
                                             <Row height="50px">
                                                 <H3>{yml.left.heading}</H3>
+                                                {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                             </Row>
                                             <Row height="50px">
                                                 <Input
                                                     type="text" className="form-control" placeholder={yml.left.form_section.first_name}
-                                                    onChange={(e) => setVal({...formData, first_name: e.target.value})}
-                                                    value={formData.firstName}
+                                                    errorMsg="Please specify a valid first name"
+                                                    required
+                                                    onChange={(value, valid) => {setVal({...formData, first_name: {value, valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
+                                                    value={formData.first_name.value}
                                                 />
                                             </Row>
                                             <Row height="50px">
                                                 <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
-                                                    onChange={(e) => setVal({...formData, last_name: e.target.value})}
-                                                    value={formData.lastName}
+                                                    onChange={(value, valid) => {setVal({...formData, last_name: {value,valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
+                                                    errorMsg="Please specify a valid last name"
+                                                    required
+                                                    value={formData.last_name.value}
                                                 />
                                             </Row>
                                             <Row height="50px">
-                                                <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
-                                                    onChange={(e) => setVal({...formData, email: e.target.value})}
-                                                    value={formData.email}
+                                                <Input type="text" className="form-control" placeholder={yml.left.form_section.email}
+                                                    onChange={(value,valid) => {setVal({...formData, email: {value, valid }})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }}
+                                                    errorMsg="Please specify a valid email"
+                                                    required
+                                                    value={formData.email.value}
                                                 />
                                             </Row>
-                                            <Row height="50px">
-                                                <Input
-                                                    type="number" className="form-control" placeholder={yml.left.form_section.phone}
-                                                    onChange={(e) => setVal({...formData, phone: e.target.value})}
-                                                    value={formData.phone}
+                                            <Row height="200px">
+                                                <TextArea type="text" rows="10" cols="50" className="form-control" 
+                                                    value={formData.client_comment.value} 
+                                                    placeholder={yml.left.message_section.placeholder} 
+                                                    onChange={(value,valid) => {setVal({...formData, client_comment: {value,valid}})
+                                                    if(formStatus.status === "error"){
+                                                    setFormStatus({ status: "idle", msg: "Resquest" })
+                                                }
+                                                }} 
+                                                    errorMsg="Please leave us a comment" 
+                                                    required
                                                 />
-                                            </Row>
-                                            <Row height="40px">
-                                                <Paragraph padding="0.375rem 0.75rem" fontSize="13px" lineHeight="16px" color={Colors.black}>{yml.left.locations_title}</Paragraph>
-                                            </Row>
-                                            <Row height="60px">
-                                                <Column size="12">
-                                                    <Grid container spacing={2} direction="column" alignItems="center">
-                                                        <Grid item>
-                                                            <ToggleButtonGroup size="large" value={alignment} exclusive onChange={handleChange}>
-                                                                {children}
-                                                            </ToggleButtonGroup>
-                                                        </Grid>
-                                                    </Grid>
-                                                </Column>
-                                            </Row>
-                                            <Row height="40px">
-                                                <Input type="text" className="form-control" placeholder={yml.left.message_section.placeholder} />
-                                            </Row>
-                                            <Row height="20px">
-                                                <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.message_section.note}</Paragraph>
                                             </Row>
                                             <Row >
+                                                {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                                 <Button
-
                                                     width="150px"
-                                                    move="up" up="15px" color={Colors.blue} textColor={Colors.white}
+                                                    move="up" up="15px" color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue} textColor={Colors.white}
                                                     margin="2rem 0" padding=".45rem 3rem"
-                                                    onClick={() => apply(formData)
-                                                        .then(() => {
-                                                            console.log("Thank you");
-                                                        })
-                                                        .catch(() => {
-                                                            console.log("error");
-                                                        })
-                                                    }
+                                                    disabled={formStatus.status === "loading" ? true: false}
+                                                    type="submit"
                                                 >{yml.left.button.button_text}</Button>
                                             </Row>
                                         </Column>
@@ -184,19 +186,38 @@ const Contact = (props) => {
 
                                 </Column>
 
-                                <Column size="4" customRespSize respSize="12" br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="center" height="100%" image="no" color={Colors.black} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" >
-                                    <Row align="center" height="100%">
+                                <Column size="4" customRespSize respSize="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="unset" height="100%" image="no" >
+                                    <Row align="center" height="100%" borderRadius="0 1.25rem 1.25rem 1.25rem">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
                                             <Row height="60px">
-
+                                                <H3
+                                                    fs_xs="20px"
+                                                    fs_sm="18px"
+                                                    fs_md="18px"
+                                                    fs_lg="20px"
+                                                    fs_xl="24px"
+                                                    color={Colors.yellow}
+                                                >
+                                                    {yml.right.heading}
+                                                </H3>
                                             </Row>
-                                            <Divider height="30px" />
-                                            <Row height="50px">
+                                            <Divider height="40px" />
+                                            {yml.right.content_section.map((item, i) => {
+                                                return (<Row key={i} height="50px">
+                                                        <Paragraph
 
-                                            </Row>
-
-
+                                                            fs_xs="12px"
+                                                            fs_sm="14px"
+                                                            fs_md="10px"
+                                                            fs_lg="12px"
+                                                            fs_xl="14px"
+                                                            lineHeight="16px"
+                                                            color={Colors.lightGray}
+                                                        >{item}
+                                                        </Paragraph>
+                                                    </Row>)
+                                            })}
                                         </Column>
                                     </Row>
                                 </Column>
@@ -207,6 +228,7 @@ const Contact = (props) => {
                 </Row>
             </Wrapper>
             <Divider height="300px" />
+        </form>
         </>
     )
 };
@@ -243,6 +265,10 @@ export const query = graphql`
                   note
                 }
               }
+            right{
+                heading
+                content_section
+            }
         }
       }
     }

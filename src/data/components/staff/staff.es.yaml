@@ -37,12 +37,12 @@ staff:
     last_name: "Lucano"
     nick_name: "Pluco"
     slug: "paolo-lucano"
-    job_title: "mentor e instructor"
-    github: ""
-    linkdin: ""
+    job_title: "Lider de instructores"
+    github: "https://github.com/plucodev"
+    linkdin: "https://www.linkedin.com/in/paolo-lucano/"
     twitter: ""
     website: ""
-    image: "/staff/jane.png"
+    image: "/staff/paolo.jpeg"
     age: 42
     interests:
       - Fútbol

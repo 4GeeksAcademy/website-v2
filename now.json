@@ -2,7 +2,8 @@
   "build": {
     "env": {
       "ACP_TOKEN": "@acp_token",
-      "ACP_HOST": "@acp_host"
+      "ACP_HOST": "@acp_host",
+      "BREATHECODE_HOST": "@heroku_api"
     }
   }
 }

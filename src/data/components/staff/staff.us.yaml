@@ -5,10 +5,10 @@ staff:
     nick_name: "Alesanchezr"
     slug: "alejandro-sanchez"
     job_title: "co-founder"
-    github: ""
-    linkdin: ""
-    twitter: ""
-    website: ""
+    github: "https://github.com/alesanchezr"
+    linkdin: "https://www.linkedin.com/in/alesanchezr/"
+    twitter: "https://twitter.com/alesanchezr"
+    website: "https://alesanchezr.com"
     image: "/staff/alejandro.png"
     age: 34
     interests:
@@ -22,8 +22,8 @@ staff:
     slug: marcelo-ricigliano
     job_title: "CEO - co-founder"
     github: ""
-    linkdin: ""
-    twitter: ""
+    linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
+    twitter: "https://twitter.com/MRiciglianoC"
     website: ""
     image: "/staff/marcelo.png"
     age: 33
@@ -37,12 +37,12 @@ staff:
     last_name: "Lucano"
     nick_name: "Pluco"
     slug: "paolo-lucano"
-    job_title: "mentor and instructor"
-    github: ""
-    linkdin: ""
+    job_title: "Lead of Instructors"
+    github: "https://github.com/plucodev"
+    linkdin: "https://www.linkedin.com/in/paolo-lucano/"
     twitter: ""
     website: ""
-    image: "/staff/jane.png"
+    image: "/staff/paolo.jpeg"
     age: 42
     interests:
       - Soccer
@@ -58,8 +58,8 @@ staff:
     slug: "bridget-schraeder"
     job_title: "Career Support "
     github: ""
-    linkdin: ""
-    twitter: ""
+    linkdin: "https://linkedin.com/in/bridget-schraeder-625657195"
+    twitter: "https://twitter.com/BridgetAlexys"
     website: ""
     image: "/staff/colby.png"
     age: 33

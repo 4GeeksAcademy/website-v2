@@ -16,13 +16,18 @@ export const apply = async (data, session) => {
     for (let key in data) body[key] = data[key].value;
 
     console.log("session", session);
-    return await save_form(body, ['website-lead'], ['hard'], session)
+    return await save_form(body, ['website-lead'], ['hard'], session);
 
     throw Error('Unexpected error');
 }
 
-export const requestSyllabus = (data) => {
+export const requestSyllabus = async (data,session) => {
     console.log("Succesfully requested Syllabus", data)
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    console.log("session", session);
+    return await save_form(body, ['request_more_info'], ['soft'], session);
     // return fetch('/api/acp_apply', {
     //     headers: new Headers({'content-type': 'application/json'}),
     //     method: "POST",
@@ -33,8 +38,13 @@ export const requestSyllabus = (data) => {
     //         throw Error('Unexpected error');
     //     });
 }
-export const reviewGuidebook = (data) => {
+export const reviewGuidebook = async (data,session) => {
     console.log("Succesfully requested Guidebook", data)
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    console.log("session", session);
+    return await save_form(body, ['download-guidebook'], ['soft'], session);
     // return fetch('/api/acp_apply', {
     //     headers: new Headers({'content-type': 'application/json'}),
     //     method: "POST",
@@ -45,21 +55,22 @@ export const reviewGuidebook = (data) => {
     //         throw Error('Unexpected error');
     //     });
 }
-export const beHiringPartner = (data) => {
-    console.log("Succesfully requested Be Hiring Partner", data)
-    // return fetch('/api/acp_apply', {
-    //     headers: new Headers({'content-type': 'application/json'}),
-    //     method: "POST",
-    //     body: JSON.stringify({ ...data, tags: ['hiring_partner] }),
-    // })
-    //     .then(resp => {
-    //         if( resp.status >= 200 && resp.status < 400) return resp.json();
-    //         throw Error('Unexpected error');
-    //     });
-}
-export const contactUs = (data) => {
-    console.log("Succesfully contact us", data)
+export const beHiringPartner = async (data,session) => {
+    console.log("Succesfully requested Be Hiring Partner", data);
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
 
+    console.log("session", session);
+    return await save_form(body, ['hiring-partner'], ['soft'], session);
+    
+}
+export const contactUs = async (data,session) => {
+    console.log("Succesfully contact us", data)
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    console.log("session", session);
+    return await save_form(body, ['contact us'], ['soft'], session);
     // console.log("session", session);
     // return await save_form(body, ['contact us'], ['soft'], session)
 }

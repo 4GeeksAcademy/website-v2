@@ -46,6 +46,7 @@ const defaultSession = {
     v4: null,
     latitude: null,
     longitude: null,
+    upcoming: [], //upcoming cohorts
     course_type: "Part-Time",
     email: null,
     location: null,
@@ -137,6 +138,7 @@ export const withSession = Component => {
 
                 const _session = {
                     ...session, v4, v6, location, browserLang, language,
+                    upcoming: [],
                     locations: locationsArray.map(l => l.node).filter(l => {
                         if (repeated.includes(l.meta_info.slug)) return false;
 
@@ -146,10 +148,17 @@ export const withSession = Component => {
                 };
                 console.log("Reset session with: ", _session);
                 setSession(_session);
+                return _session
 
             };
             console.log("Loading session...");
-            loadIp();
+            loadIp()
+                .then(_session => {
+                    fetch(`${process.env.BREATHECODE_HOST}/admissions/cohort/?upcoming=true&academy=${_session.location.meta_info.slug}`)
+                        .then(resp => resp.json())
+                        .then(cohorts => setSession({ ...session, upcoming }))
+                        .catch(error => console.error("Error loading cohorts", error))
+                })
         }, []);
 
         return <SessionContext.Provider value={{session, setSession}}>
