@@ -17,7 +17,6 @@ import SEO from './SEO';
 const Layout = ({children, seo, context}) => {
 
   const {slug, title, description, image, keywords} = seo;
-
   return (
     <StaticQuery
       query={graphql`
@@ -69,7 +68,7 @@ const Layout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            <UpcomingProgram position="bottom" title="Full Stack Web Development (part-time)" showOnScrollPosition={400} />
+            <UpcomingProgram position="bottom" showOnScrollPosition={400} />
             <Footer lang={myFooter} />
           </>
         )

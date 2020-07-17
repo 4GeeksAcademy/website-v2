@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import styled from 'styled-components';
 import PropTypes from "prop-types"
 import dayjs from "dayjs";
@@ -8,9 +8,11 @@ import {Paragraph} from '../Heading'
 import Link from 'gatsby-link'
 import {Card} from '../Card';
 import  { useScrollPosition } from "./useScrollPosition"
+import {SessionContext} from '../../session.js'
 
 const ShadowedRow = styled.div`
     background: #ececec;
+    font-family: 'Lato-Bold', sans-serif;
     box-shadow: 0 0 16px 0 rgba(50,50,50,.3);
     height: 80px;
     padding: 10px;
@@ -55,6 +57,7 @@ const Center = styled.div`
 `;
 const P1 = styled.p`
     font-size: 28px;
+    font-weight: 900;
     @media ${Device.xs}{
         padding-top: 10px;
         font-size: 18px;
@@ -78,8 +81,17 @@ const Right = styled.div`
     padding-top: 5px;
 `;
 
-const UpcomingProgram = ({ date, title, upcomingPath, applyPath, position, showOnScrollPosition }) => {
+const UpcomingProgram = ({ upcomingPath, applyPath, position, showOnScrollPosition }) => {
     const [show, setShow] = useState(showOnScrollPosition == null)
+
+    const { session } = useContext(SessionContext);
+    
+    let title = "Full Stack Development"
+    let date = new Date()
+    if(session && session.upcoming.length > 0){
+        date = new Date(session.upcoming[0].kickoff_date)
+        title = dayjs(session.upcoming[0].certificate.name)
+    }
 
     useScrollPosition(({ prevPos, currPos }) => {
         if(showOnScrollPosition && showOnScrollPosition + currPos.y < 0){
