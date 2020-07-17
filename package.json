@@ -19,6 +19,9 @@
     "eslint",
     "netlify"
   ],
+  "pre-commit": [
+    "test"
+  ],
   "scripts": {
     "start": "run-p start:**",
     "test": "node ./src/test/test.seo.js",

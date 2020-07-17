@@ -13,7 +13,7 @@ const metas = [
 walk(`${__dirname}/../data/`, function(err, files) {
     if (err) fail("Error reding the YML files: ", err)
     const _files = files.filter(f => 
-        f.indexOf('.yml') > 1 &&
+        (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1)&&
         f.indexOf('additional-redirects.yml') === -1 &&
         f.indexOf('call-to-actions.yml') === -1
     )
@@ -21,7 +21,8 @@ walk(`${__dirname}/../data/`, function(err, files) {
     let slugs = {};
     _files.forEach(_path => {
         const yml = load(_path);
-        if(!yml || empty(yml.meta_info)) fail("Missing meta for "+_path)
+        if(!yml) fail("Invalid YML syntax for "+_path)
+        else if(empty(yml.meta_info)) fail("Missing meta for "+_path)
         else{
             
             // look for duplicated slugs
