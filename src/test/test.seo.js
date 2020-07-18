@@ -15,6 +15,7 @@ walk(`${__dirname}/../data/`, function(err, files) {
     const _files = files.filter(f => 
         (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1)&&
         f.indexOf('additional-redirects.yml') === -1 &&
+        f.indexOf('/components/') === -1 && // ignore components
         f.indexOf('call-to-actions.yml') === -1
     )
 

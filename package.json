@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "start": "run-p start:**",
-    "test": "node ./src/test/test.seo.js",
+    "test": "node ./src/test/test.yml.js && node ./src/test/test.seo.js",
     "start:gatsby": "gatsby develop -H 0.0.0.0 -o",
     "start:storybook": "start-storybook -p 9000 -c .storybook",
     "build": "gatsby build",
