@@ -13,6 +13,7 @@ titles:
   at_geeks: "AT 4GEEKS"
   average: "INDUSTRY AVERAGE"
   why: "WHY IS IMPORTANT?"
+globe_text: Click me for details
 info:
   - features: "% Hiring Rate"
     at4_Geeks: "~90%"
