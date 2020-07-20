@@ -2,8 +2,8 @@ import React, {useState, useEffect, useContext} from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Column} from '../Sections';
-import {Paragraph} from '../Heading';
-import {Colors, Select, Option, Button} from '../Styling';
+import {Paragraph, Span} from '../Heading';
+import {Colors, Select, Option, Button, TriangleDown} from '../Styling';
 import Link from 'gatsby-link'
 import {SessionContext} from '../../session'
 import {makeStyles} from '@material-ui/core/styles';
@@ -51,7 +51,13 @@ const ProgramSelector = (props) => {
           <Column size="2" alignSelf="center" paddingRight="0" align="right" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >It takes just </Paragraph></Column>
           <Column size="2" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" customRespSize respSize="4" >
             <Card index="1" borders=".25rem" height="auto" shadow width="100%" padding={toggles === false && "0px"}>
-              {toggles == true ? null : <Row marginRight="0" marginLeft="0" align="center"><Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} color={Colors.white} textColor={Colors.gray}>{props.week}</Button></Row>}
+              {toggles == true ? null : <Row marginRight="0" marginLeft="0" align="center">
+                <Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} color={Colors.white} textColor={Colors.gray}>{props.week}
+                  <Span margin="0 5px" >
+                    <TriangleDown width="12" color={Colors.blue} fill={Colors.blue} />
+                  </Span>
+                </Button>
+              </Row>}
               {toggles == true
                 ?
                 <>
@@ -77,6 +83,7 @@ const ProgramSelector = (props) => {
                             </Row>
                           </Link>
                         </Card>
+
                       </Button>
                     )
                   })}
@@ -89,7 +96,13 @@ const ProgramSelector = (props) => {
           <Column size="1" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >weeks in</Paragraph></Column>
           <Column size="2" alignSelf="center" align="center" paddingLeft="0" paddingRight="0" customRespSize respSize="5">
             <Card index="1" borders=".25rem" shadow width="100%" padding={toggle === false && "0px"}>
-              {toggle == true ? null : <Row align="center"><Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>{session.location && session.location.city}</Button></Row>}
+              {toggle == true ? null : <Row align="center">
+                <Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>{session.location && session.location.city}
+                  <Span margin="0 5px" >
+                    <TriangleDown width="12" color={Colors.blue} fill={Colors.blue} />
+                  </Span>
+                </Button>
+              </Row>}
               {toggle == true
                 ?
                 <>
