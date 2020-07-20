@@ -40,11 +40,11 @@ join_geeks:
     geek_pal_heading: Programming - Always - Limitless
     geek_pal_data:
       content: Nunca programes sol@ otra vez. Estaremos junto a ti, a lo largo de tu viaje y durante todo el tiempo que quieras que lo estemos.
-      icon_link: "/es/geekpals"
+      icon_link: "/es/geekpal-soporte"
     geek_force_heading: FOR Career Empowerment
     geek_force_data:
       content: Haremos todo lo que esté en nuestras manos para ayudarte a conseguir un trabajo en el sector. Incluye el programa de Career Support, GeekPAL, y GeekTALK.
-      icon_link: "/es/geekforce-es"
+      icon_link: "/es/geekforce-soporte-a-tu-carrera"
 
 ## LOCATIONS SECTION
 locations:
