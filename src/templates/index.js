@@ -20,7 +20,7 @@ import {Link} from 'gatsby';
 import {SessionContext} from '../session.js'
 
 const Home = (props) => {
-  const { session } = React.useContext(SessionContext);
+  const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   return (
     <>
@@ -34,7 +34,7 @@ const Home = (props) => {
                 <Divider height="100px" />
                 <Row  >
                   <Column size="10" customRespSize respSize="10">
-                    <H1 fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.tagline}</H1>
+                    <H1 textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.tagline}</H1>
                   </Column>
                 </Row>
                 <Row>
