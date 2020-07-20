@@ -162,7 +162,16 @@ border-radius: ${props => props.borders};
 } 
 
 `
-
+export const Div = styled.div`
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: ${props => props.flexDirection === 'column' ? 'column' : 'row'};
+    justify-content: ${props => props.justifyContent};
+    align-items: ${props => props.alignItems};
+    align-content: ${props => props.alignContent};
+    height: ${props => props.height};
+    
+`
 export const Column = styled.div`
 padding: ${props => props.padding};
 height: ${props => props.height};
@@ -173,6 +182,9 @@ border: ${props => props.borderStyle};
 align-self: ${props => props.alignSelf};
 padding-right: ${props => props.paddingRight};
 padding-left: ${props => props.paddingLeft};
+display: ${props => props.display};
+flex-direction: ${props => props.flexDirection};
+justify-content: ${props => props.justifyContent};
 ${props => props.masonry &&
         css`
         display: inline-block;
