@@ -125,7 +125,8 @@ export default function Template (props) {
                             fs_sm="30px"
                             fs_md="30px"
                             fs_lg="30px"
-                            fs_xl="36px">{post.frontmatter.title}</H1>
+                            fs_xl="36px"
+                            textShadow="none">{post.frontmatter.title}</H1>
                     </Column>
                 </Row>
                 <Divider height="30px" />
