@@ -133,6 +133,8 @@ font-weight: 800;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
+background-color: ${props => props.bg};
+text-shadow: ${props => props.textShadow};
 font-style: normal;
 `;
 export const H5 = styled.h5`

@@ -139,6 +139,8 @@ const Loc = (props) => {
                     <Column size="12" alignSelf="center" align="center">
 
                       <H4
+                        bg={`rgba(0,0,0,0.1)`}
+                        textShadow={`2px 1px ${Colors.gray}`}
                         color={Colors.white}
                         fs_xs="9px"
                         fs_sm="12px"
