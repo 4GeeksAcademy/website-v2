@@ -114,6 +114,7 @@ const ProgramDetails = (props) => {
                                                 <Div onClick={() => {setSelected(index); setCompleted((item.step * 100) / (Slider().length - 1))}} alignItems={`center`} margin={`0 0 5px 0`}>
                                                     <Paragraph
                                                         color={Colors.darkGray}
+                                                        cursor={`pointer`}
                                                         fs_xs="8px"
                                                         fs_sm="12px"
                                                         fs_md="12px"
