@@ -5,7 +5,13 @@ meta_info:
   image: "/images/program-bg.png"
   keywords: ""
   redirects:
-    ["/course/full-time", "full-time", "/us/full-time", "/us/course/full-time", "/the-program"]
+    [
+      "/course/full-time",
+      "full-time",
+      "/us/full-time",
+      "/us/course/full-time",
+      "/the-program",
+    ]
 
 tagline: "FULL STACK DEVELOPER"
 
@@ -26,29 +32,40 @@ details:
     skills: "Skills / Weeks:"
   details_modules:
     - module_name: "PREWORK"
-      title: "PREWORK"
+      title: "Prework"
       description: "Starting with the basics: HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page."
       projects: "CSS Postcard, Minimal Instagram Version, etc."
       slug: "prework"
-      duration: "1 wk"
+      duration: "~60 hours"
+      step: .5
     - module_name: "FOUNDATIONS"
       title: "Learn To Code"
       description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
       projects: "Instagram Application, Memory Card Game, Tic Tac Toe, Flappy Bird, etc."
       slug: "foundations"
-      duration: "2 wks"
+      duration: "3.5 weeks"
+      step: 3.5
     - module_name: "WEB DEVELOPMENT"
       title: "Web Development"
       description: "Create your first React.js application, MVC Pattern, JS Modules, Bunding, Babel JS, The DOM, Events"
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."
       slug: "web-development"
-      duration: "4 wks"
-    - module_name: "ADVANCED APPLICATION"
-      title: "Advanced Application"
+      duration: "3.5 weeks"
+      step: 7
+    - module_name: "PROJECTS"
+      title: "Projects"
       description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
-      slug: "advanced-application"
+      slug: "projects"
       duration: "2 wks"
+      step: 9
+    - module_name: "LIFELONG LEARNING"
+      title: "Lifelong Learning"
+      description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
+      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
+      slug: "lifelong-learning"
+      duration: "1+ week"
+      step: 10
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

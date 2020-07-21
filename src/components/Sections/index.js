@@ -75,7 +75,7 @@ export const Row = styled.div`
     z-index: ${props => props.zIndex};
     display: flex;
     flex-wrap: wrap; 
-    // justify-content: ${props => props.justify};
+    // justify-content: ${props => props.justifyContent};
     align-items:${props => props.alignItems};
     margin-right: ${props => props.marginRight};
     margin-left: ${props => props.marginLeft};
@@ -97,9 +97,13 @@ export const Row = styled.div`
         ? css`justify-content: space-around;`
         : props => props.align === "center"
             ? css`justify-content: center;`
-            : props => props.align === "end"
-                ? css`justify-content: flex-end;`
-                : css`justify-content: left;`}
+            : props => props.align === "between"
+                ? css`justify-content: space-between;`
+                : props => props.align === "evenly"
+                    ? css`justify-content: space-evenly;`
+                    : props => props.align === "end"
+                        ? css`justify-content: flex-end;`
+                        : css`justify-content: left;`}
     @media ${Device.xs}{
         display: ${props => props.display_xs};
         ${props => props.customRespSize
@@ -170,6 +174,7 @@ export const Div = styled.div`
     align-items: ${props => props.alignItems};
     align-content: ${props => props.alignContent};
     height: ${props => props.height};
+    margin: ${props => props.margin};
     
 `
 export const Column = styled.div`

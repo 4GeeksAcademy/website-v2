@@ -29,24 +29,35 @@ details:
       projects: "CSS Postcard, Versión mínima de Instagram, etc."
       slug: "prework"
       duration: "2 sem"
+      step: .5
     - module_name: "FUNDAMENTOS"
       title: "Aprende a programar"
       description: "Piensa como un ordenador: Controla el flujo de tu código, crea algoritmos, haz un bucle, usa condicionales y usa/mezcla JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
       projects: "Aplicación de Instagram, Juego de cartas de memoria, Tic Tac Toe, Flappy Bird, etc."
       slug: "fundamentos"
       duration: "2 sem"
+      step: 2
     - module_name: "DESARROLLO WEB"
       title: "Desarrollo web"
       description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bunding, Babel JS, el DOM, Eventos"
       projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."
       slug: "desarrollo-web"
       duration: "6 sem"
+      step: 8
     - module_name: "APLICACIÓN AVANZADA"
       title: "Aplicación avanzada"
       description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publicando tu sitio web, etc."
       projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
       slug: "aplicacion-avanzada"
       duration: "6 wks"
+      step: 8
+    - module_name: "LIFELONG LEARNING"
+      title: "Lifelong Learning"
+      description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
+      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
+      slug: "lifelong-learning"
+      duration: "2+ week"
+      step: 17
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

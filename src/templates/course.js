@@ -31,6 +31,7 @@ import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 import {Input, Alert} from '../components/Form';
 import LeadForm from "../components/LeadForm/index.js";
+import ProgramDetails from '../components/ProgramDetails';
 
 
 // import Modal from '../components/Modal';
@@ -385,192 +386,9 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
 
       {/* PROGRAM DETAILS */}
-      <Wrapper
-        style="default"
+      {/* --------------- */}
+      <ProgramDetails details={yml.details} />
 
-      >
-        <Title
-          size="10"
-          title={yml.details.heading}
-          paragraph={yml.details.sub_heading}
-          primary
-        />
-        <Divider height="50px" />
-        <Row>
-          <Column size="12" customRespSize respSize="12">
-            <Row>
-              <Column size="12" customRespSize respSize="11">
-
-                <Card width="100%" height="450px" color="white" shadow >
-                  <Tabs >
-                    <Header height="8%">
-                      <TabList >
-                        {yml.details.details_modules.map((item, index) => {
-                          return (<Tab key={item.module_name} onClick={() => setCurrentIndex(index)}>
-                            <Paragraph
-                              color={Colors.white}
-                              fs_xs="8px"
-                              fs_sm="12px"
-                              fs_md="12px"
-                              fs_lg="14px"
-                              fs_xl="16px"
-                            >
-                              {item.module_name}
-                            </Paragraph>
-                          </Tab>)
-                        })
-                        }
-                      </TabList>
-                    </Header>
-                    <Body height="92%">
-                      {yml.details.details_modules.map((item, i) => {
-                        return (
-                          <TabPanel key={item.title} onChange={() => setInd(i)}>
-                            <Container width="fluid" p_xs="0" height="100%">
-                              <Row height="20%">
-                                <Column size="6" paddingLeft="20px" padding="15px 0" alignXs="left">
-                                  <Paragraph color={Colors.black} fontSize="20px">{item.title}</Paragraph>
-                                </Column>
-                              </Row>
-                              <Row height="20%" alignResp="left">
-                                <Column size="3" paddingLeft="20px" customRespSize respSize="3" >
-                                  <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.description}</Paragraph>
-                                </Column>
-                                <Column size="6" customRespSize respSize="6" alignXs="left">
-                                  <Paragraph
-                                    color={Colors.gray}
-                                    fs_xs="10px"
-                                    fs_sm="12px"
-                                    fs_md="10px"
-                                    fs_lg="12px"
-                                    fs_xl="16px"
-                                  >{item.description}</Paragraph>
-                                </Column>
-                              </Row>
-                              <Row height="20%" alignResp="left">
-                                <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
-                                  <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.projects}</Paragraph>
-                                </Column>
-                                <Column size="6" customRespSize respSize="6" alignXs="left">
-                                  <Paragraph
-                                    color={Colors.gray}
-                                    fs_xs="10px"
-                                    fs_sm="12px"
-                                    fs_md="10px"
-                                    fs_lg="12px"
-                                    fs_xl="16px"
-                                  >{item.projects}</Paragraph>
-                                </Column>
-                              </Row>
-                              <Row height="20%" alignResp="left">
-                                <Column size="3" paddingLeft="20px" customRespSize respSize="3" alignXs="left">
-                                  <Paragraph color={Colors.gray} fontSize="14px">{yml.details.left_labels.duration}</Paragraph>
-                                </Column>
-                                <Column size="6" customRespSize respSize="6" alignXs="left">
-                                  <Paragraph
-                                    color={Colors.gray}
-                                    fs_xs="10px"
-                                    fs_sm="12px"
-                                    fs_md="10px"
-                                    fs_lg="12px"
-                                    fs_xl="16px"
-                                  >{item.duration}</Paragraph>
-                                </Column>
-                              </Row>
-                              <Row height="20%" >
-                                <Column size="3" customRespSize respSize="2" padding="15px 0" image="no" color={Colors.lightGray} border="custom" customBorderRadius="0 0 0 1.25rem">
-                                  <Row align="around" height="100%">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph
-                                        align="center"
-                                        color={Colors.gray}
-                                        fs_xs="10px"
-                                        fs_sm="12px"
-                                        fs_md="10px"
-                                        fs_lg="12px"
-                                        fs_xl="16px">{yml.details.left_labels.skills}</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                                <Column size="1" image="no" color={Colors.lightGray} customRespSize respSize="1" >
-                                  <Row align="around" height="100%">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph align="center" color={Colors.gray} >1</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                                <Column size="1" image="no" color={Colors.lightGray} customRespSize respSize="1">
-                                  <Row align="around" height="100%">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph align="center" color={Colors.gray} >2</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                                <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 0 ? Colors.lightGray : undefined}>
-                                  <Row align="around" height="100%">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph align="center" color={Colors.gray} >3</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                                <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 0 ? Colors.lightGray : undefined}>
-                                  <Row align="around" height="100%">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph align="center" color={Colors.gray} >4</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                                <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 1 ? Colors.lightGray : undefined}>
-                                  <Row align="around" height="100%">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph align="center" color={Colors.gray} >5</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                                <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 1 ? Colors.lightGray : undefined}>
-                                  <Row align="around" height="100%">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph align="center" color={Colors.gray} >6</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                                <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 2 ? Colors.lightGray : undefined}>
-                                  <Row align="around" height="100%" align="center">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph align="center" color={Colors.gray} >7</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                                <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 2 ? Colors.lightGray : undefined}>
-                                  <Row align="around" height="100%">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph align="center" color={Colors.gray} >8</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                                <Column size="1" customRespSize respSize="1" image="no" color={currentIndex > 2 ? Colors.lightGray : undefined} border="custom" customBorderRadius="0 0 1.25rem 0">
-                                  <Row align="around" height="100%">
-                                    <Column size="12" alignSelf="center">
-                                      <Paragraph align="center" color={Colors.gray} >9</Paragraph>
-                                    </Column>
-                                  </Row>
-                                </Column>
-                              </Row>
-                            </Container>
-                          </TabPanel>
-                        )
-                      })
-                      }
-                    </Body>
-                  </Tabs>
-                </Card >
-              </Column>
-            </Row>
-          </Column>
-        </Row>
-
-        <section className="section" id="section-2"></section>
-      </Wrapper>
       <Divider height="100px" />
       <Wrapper
         style="default"
@@ -724,6 +542,7 @@ export const query = graphql`
                 module_name
                 duration
                 description
+                step
               }
             }
             geeks_vs_others{
