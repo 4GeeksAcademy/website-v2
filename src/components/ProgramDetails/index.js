@@ -63,7 +63,7 @@ const FillerStyles = styled.div`
 
 const ProgramDetails = (props) => {
     const [selected, setSelected] = useState(0)
-    const [completed, setCompleted] = useState(30)
+    const [completed, setCompleted] = useState(0)
     console.log("PROGRAMDETAILS: ", props)
     const Slider = () => {
         let sliderArray = [];
@@ -73,7 +73,7 @@ const ProgramDetails = (props) => {
             }
         }
         if (props.props.sub_heading === "Part Time") {
-            for (let i = 0; i < 17; i++) {
+            for (let i = 0; i < 18; i++) {
                 sliderArray.push(i)
             }
         }
@@ -122,12 +122,12 @@ const ProgramDetails = (props) => {
                         margin="10px 0px"
                     >
                         <Row height="100%">
-                            <Column size="12" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                                <Row height={`15%`} align={`around`} alignItems={`center`}>
+                            <Column size="12" customRespSize respSize="12" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
+                                <Row height={`15%`} align={`around`} alignItems={`center`} marginBottom={`10px`}>
                                     {props.props.details_modules.map((item, index) => {
                                         return (
                                             <Div key={index} flexDirection={`column`} alignItems={`center`} >
-                                                <Div onClick={() => {setSelected(index); setCompleted(30)}} alignItems={`center`} margin={`0 0 5px 0`}>
+                                                <Div onClick={() => {setSelected(index); setCompleted((item.step * 100) / (Slider().length - 1))}} alignItems={`center`} margin={`0 0 5px 0`}>
                                                     <Paragraph
                                                         color={Colors.darkGray}
                                                         fs_xs="8px"
@@ -159,33 +159,37 @@ const ProgramDetails = (props) => {
 
                                 </Row>
                                 <Row align={`around`} alignItems={`center`}>
-                                    <ContainerStyle>
-                                        <FillerStyles completed={completed} />
-                                    </ContainerStyle>
+                                    <Column size={`11`}>
+                                        <ContainerStyle>
+                                            <FillerStyles completed={completed} />
+                                        </ContainerStyle>
+                                    </Column>
                                 </Row>
-                                <Row align={`between`} alignItems={`center`} >
-                                    {Slider().map((item, index) => {
-                                        return (
-                                            <Div key={index}>
-                                                {index === Slider().length - 1 ?
-                                                    <Infinity width="24px" fill={Colors.darkGray} />
-                                                    :
-                                                    <Paragraph
-                                                        color={Colors.darkGray}
+                                <Row align={`center`} alignItems={`center`} marginTop={`10px`}>
+                                    <Column size="11" display={`flex`} justifyContent={`space-between`}>
+                                        {/* <Column size={`12`}> */}
+                                        {Slider().map((item, index) => {
+                                            return (
+                                                <Div key={index}>
+                                                    {index === Slider().length - 1 ?
+                                                        <Infinity width="24px" fill={Colors.darkGray} />
+                                                        :
+                                                        <Paragraph
+                                                            color={Colors.darkGray}
 
-                                                        fs_xs="8px"
-                                                        fs_sm="10px"
-                                                        fs_md="10px"
-                                                        fs_lg="12px"
-                                                        fs_xl="14px"
-                                                    >
-                                                        {item}
-                                                    </Paragraph>
-                                                }
-                                            </Div>
-                                        )
-                                    })}
-
+                                                            fs_xs="8px"
+                                                            fs_sm="10px"
+                                                            fs_md="10px"
+                                                            fs_lg="12px"
+                                                            fs_xl="14px"
+                                                        >
+                                                            {item}
+                                                        </Paragraph>
+                                                    }
+                                                </Div>
+                                            )
+                                        })}
+                                    </Column>
                                 </Row>
 
                                 <Row height={`75%`}>

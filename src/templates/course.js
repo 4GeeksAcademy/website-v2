@@ -31,6 +31,7 @@ import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 import {Input, Alert} from '../components/Form';
 import LeadForm from "../components/LeadForm/index.js";
+import ProgramDetails from '../components/ProgramDetails';
 
 
 // import Modal from '../components/Modal';
@@ -385,9 +386,10 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
 
       {/* PROGRAM DETAILS */}
-      <Wrapper
+      {/* --------------- */}
+      <ProgramDetails props={yml.details} />
+      {/* <Wrapper
         style="default"
-
       >
         <Title
           size="10"
@@ -570,7 +572,7 @@ const Program = ({data, pageContext, yml}) => {
         </Row>
 
         <section className="section" id="section-2"></section>
-      </Wrapper>
+      </Wrapper> */}
       <Divider height="100px" />
       <Wrapper
         style="default"
@@ -724,6 +726,7 @@ export const query = graphql`
                 module_name
                 duration
                 description
+                step
               }
             }
             geeks_vs_others{
