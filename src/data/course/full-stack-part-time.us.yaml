@@ -23,12 +23,12 @@ details:
     skills: "Skills / Weeks:"
   details_modules:
     - module_name: "PREWORK"
-      title: "Prework"
+      title: "Get Ready for the Prework"
       description: "Starting with the basics: HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page."
       projects: "CSS Postcard, Minimal Instagram Version, etc."
       slug: "prework"
       duration: "~ 60 hours"
-      step: 0
+      step: .5
     - module_name: "FOUNDATIONS"
       title: "Learn To Code"
       description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."

@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Row, Container, Column, Divider, Wrapper, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, ArrowRight, Teacher, Glasses, Clock, Users, Comments, Button, RoundImage, Infinity} from '../Styling';
+import {Colors, ArrowRight, Teacher, Glasses, Clock, Users, Rocket, Button, Laptop, Infinity} from '../Styling';
 import {Card} from '../Card';
 import Link from 'gatsby-link'
 
@@ -62,17 +62,17 @@ const FillerStyles = styled.div`
 `
 
 const ProgramDetails = (props) => {
-    const [selected, setSelected] = useState(0)
-    const [completed, setCompleted] = useState(0)
-    console.log("PROGRAMDETAILS: ", props)
+    const [selected, setSelected] = useState(0);
+    const [completed, setCompleted] = useState(0.5);
+
     const Slider = () => {
         let sliderArray = [];
-        if (props.props.sub_heading === "Full Time") {
+        if (props.details.sub_heading === "Full Time") {
             for (let i = 0; i < 11; i++) {
                 sliderArray.push(i)
             }
         }
-        if (props.props.sub_heading === "Part Time") {
+        if (props.details.sub_heading === "Part Time") {
             for (let i = 0; i < 18; i++) {
                 sliderArray.push(i)
             }
@@ -80,22 +80,6 @@ const ProgramDetails = (props) => {
 
         return sliderArray
     }
-    console.log("$$$$$:", Slider())
-    //   const data = useStaticQuery(graphql`
-    //       query myProgramDetailsQuery{
-    //         allJobYaml {
-    //           edges {
-    //             node {
-    //               banner_heading
-    //               cities
-    //               meta_info{
-    //                 slug
-    //               }
-    //             }
-    //           }
-    //         }
-    //         }
-    //       `)
 
     return (
         <Wrapper
@@ -103,8 +87,8 @@ const ProgramDetails = (props) => {
         >
             <Title
                 size="10"
-                title={"yml.details.heading"}
-                paragraph={"yml.details.sub_heading"}
+                title={props.details.heading && props.details.heading}
+                paragraph={props.details.sub_heading}
                 primary
             />
             <Divider height="50px" />
@@ -123,8 +107,8 @@ const ProgramDetails = (props) => {
                     >
                         <Row height="100%">
                             <Column size="12" customRespSize respSize="12" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                                <Row height={`15%`} align={`around`} alignItems={`center`} marginBottom={`10px`}>
-                                    {props.props.details_modules.map((item, index) => {
+                                <Row height={`15%`} align={`around`} alignItems={`center`} marginBottom={`10px`} customRespSize alignResp={`space-around`}>
+                                    {props.details.details_modules.map((item, index) => {
                                         return (
                                             <Div key={index} flexDirection={`column`} alignItems={`center`} >
                                                 <Div onClick={() => {setSelected(index); setCompleted((item.step * 100) / (Slider().length - 1))}} alignItems={`center`} margin={`0 0 5px 0`}>
@@ -170,9 +154,9 @@ const ProgramDetails = (props) => {
                                         {/* <Column size={`12`}> */}
                                         {Slider().map((item, index) => {
                                             return (
-                                                <Div key={index}>
+                                                <Div key={index} alignItems={`center`}>
                                                     {index === Slider().length - 1 ?
-                                                        <Infinity width="24px" fill={Colors.darkGray} />
+                                                        <Infinity width="16px" fill={Colors.darkGray} />
                                                         :
                                                         <Paragraph
                                                             color={Colors.darkGray}
@@ -192,9 +176,97 @@ const ProgramDetails = (props) => {
                                     </Column>
                                 </Row>
 
-                                <Row height={`75%`}>
-                                    <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
-                                        <Div >{props.props.details_modules[selected].description}</Div>
+                                <Row height={`75%`} >
+                                    <Column size="6" customRespSize respSize="8" margin={`0 25px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+
+                                        <Div flexDirection={`column`} >
+                                            <Div alignItems={`center`} margin={`5px 0`}>
+                                                <Div margin={`0 10px 0 0`}><Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} /> </Div>
+                                                <Div>
+                                                    <H3
+                                                        fs_xs="18px"
+                                                        fs_sm="18px"
+                                                        fs_md="20px"
+                                                        fs_lg="18px"
+                                                        fs_xl="22px">
+                                                        {props.details.details_modules[selected].title}
+                                                    </H3>
+                                                </Div>
+                                            </Div>
+                                            <Div >
+                                                <Paragraph
+                                                    color={Colors.darkGray}
+                                                    fs_xs="12px"
+                                                    fs_sm="16px"
+                                                    fs_md="16px"
+                                                    fs_lg="18px"
+                                                    fs_xl="18px"
+                                                    customTextAlignSmall
+                                                    alignXs={`start`}
+                                                >
+                                                    {props.details.details_modules[selected].description}
+                                                </Paragraph>
+                                            </Div>
+                                        </Div>
+                                        <Div flexDirection={`column`} >
+                                            <Div alignItems={`center`} margin={`5px 0`}>
+                                                <Div margin={`0 10px 0 0`}><Rocket width="36px" fill={Colors.blue} stroke={Colors.blue} /> </Div>
+                                                <Div>
+                                                    <H3
+                                                        fs_xs="18px"
+                                                        fs_sm="18px"
+                                                        fs_md="20px"
+                                                        fs_lg="18px"
+                                                        fs_xl="22px">
+                                                        {`Projects`}
+                                                    </H3>
+                                                </Div>
+                                            </Div>
+                                            <Div >
+                                                <Paragraph
+                                                    color={Colors.darkGray}
+                                                    fs_xs="12px"
+                                                    fs_sm="16px"
+                                                    fs_md="16px"
+                                                    fs_lg="18px"
+                                                    fs_xl="18px"
+                                                    customTextAlignSmall
+                                                    alignXs={`start`}
+                                                >
+                                                    {props.details.details_modules[selected].projects}
+                                                </Paragraph>
+                                            </Div>
+                                        </Div>
+                                        <Div flexDirection={`column`} >
+                                            <Div alignItems={`center`} margin={`5px 0`}>
+                                                <Div margin={`0 10px 0 0`}><Clock width="36px" fill={Colors.blue} stroke={Colors.blue} /> </Div>
+                                                <Div>
+                                                    <H3
+                                                        fs_xs="18px"
+                                                        fs_sm="18px"
+                                                        fs_md="20px"
+                                                        fs_lg="18px"
+                                                        fs_xl="22px">
+                                                        {`Duration`}
+                                                    </H3>
+                                                </Div>
+                                            </Div>
+                                            <Div >
+                                                <Paragraph
+                                                    color={Colors.darkGray}
+                                                    fs_xs="12px"
+                                                    fs_sm="16px"
+                                                    fs_md="16px"
+                                                    fs_lg="18px"
+                                                    fs_xl="18px"
+                                                    customTextAlignSmall
+                                                    alignXs={`start`}
+                                                >
+                                                    {props.details.details_modules[selected].duration}
+                                                </Paragraph>
+                                            </Div>
+                                        </Div>
+
                                     </Column>
                                 </Row>
                             </Column>
