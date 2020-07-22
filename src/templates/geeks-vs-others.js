@@ -48,6 +48,8 @@ const GeeksVsOthers = (props) => {
   const [tooltipIndex, setTooltipIndex] = useState()
   const [globeTooltip, setGlobeTooltip] = useState(true)
   const [globeTooltipOpacity, setGlobeTooltipOpacity] = useState(0)
+  const [columnDisplay, setColumnDisplay] = useState(false)
+  const [columnDisplayIndex, setColumnDisplayIndex] = useState()
   let info_len = yml.info.length
   return (
     <>
@@ -118,8 +120,8 @@ const GeeksVsOthers = (props) => {
                   </Row>
                 </Column>
                 <Column size="4" customRespSize respSize="4" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0">
-                  <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
-                    <Column size size="12" alignSelf="center" >
+                  <Row height="100%" borderBottom={columnDisplay === true ? "1px solid " + Colors.borderGray : "none"}>
+                    <Column display={columnDisplay === false && "none"} size size="12" alignSelf="center" >
                       <H5
                         fs_xs="10px"
                         fs_sm="12px"
@@ -199,7 +201,7 @@ const GeeksVsOthers = (props) => {
                         </Row>
                       </Column>
                       <Column size="2" customRespSize respSize="2" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray} onMouseOver={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}} onMouseOut={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(null)}}>
                           <Column size size="12" alignSelf="center" >
                             <H4
                               align="center"
@@ -216,7 +218,7 @@ const GeeksVsOthers = (props) => {
                         </Row>
                       </Column>
                       <Column size="2" customRespSize respSize="2" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
+                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray} onMouseOver={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}} onMouseOut={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(null)}}>
                           <Column size size="12" alignSelf="center" >
                             <H4
                               align="center"
@@ -232,7 +234,7 @@ const GeeksVsOthers = (props) => {
                           </Column>
                         </Row>
                       </Column>
-                      <Column size="4" customRespSize respSize="4" width="100%" height="100%" alignSelf="center">
+                      <Column size="4" display={columnDisplay === false && "none"} customRespSize respSize="4" width="100%" height="100%" alignSelf="center">
                         <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
                           <Column size size="12" alignSelf="center" >
                             <Paragraph align="center"
@@ -243,7 +245,7 @@ const GeeksVsOthers = (props) => {
                               fs_xl="12px"
                               color={Colors.gray}
                             >
-                              {item.why_important}
+                              {columnDisplay === true && columnDisplayIndex === index ? item.why_important : null}
                             </Paragraph>
                           </Column>
                         </Row>
