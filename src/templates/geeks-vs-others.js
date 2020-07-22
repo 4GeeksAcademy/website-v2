@@ -43,9 +43,11 @@ text-align: center;
 
 const GeeksVsOthers = (props) => {
   const {data, pageContext, yml} = props;
-  const [tooltip, setTooltip] = useState(true)
+  const [tooltip, setTooltip] = useState(false)
   const [tooltipOpacity, setTooltipOpacity] = useState(1)
-  const [tooltipIndex, setTooltipIndex] = useState(0)
+  const [tooltipIndex, setTooltipIndex] = useState()
+  const [globeTooltip, setGlobeTooltip] = useState(true)
+  const [globeTooltipOpacity, setGlobeTooltipOpacity] = useState(0)
   let info_len = yml.info.length
   return (
     <>
@@ -145,19 +147,9 @@ const GeeksVsOthers = (props) => {
                     >
                       <Column size="4" customRespSize respSize="4" alignSelf="center" height="100%" image="no" color={Colors.black}>
                         <Row align="center" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
-                          {/* <Column size size="2" customRespSize respSize="2" alignSelf="center" >
-                              {(item.slug === "one-teacher-every-five" || item.slug === "apoyo-profesional") && <Teacher width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              {(item.slug === "senior-teacher-per-student" || item.slug === "mentores-senior-por-estudiante") && <Glasses width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              {(item.slug === "average-time-to-get-help" || item.slug === "tiempo-promedio-para-recibir-ayuda") && <Clock width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                            </Column> */}
                           <Div flexDirection={`column`} justifyContent={`center`} >
                             <Div alignItems={`baseline`}>
                               <Div margin={`0 3px`}>
-                                {/* <Column size size="8" customRespSize respSize="10" alignSelf="center" paddingRight="0" paddingLeft="0"> */}
-                                {/* {tooltip === true && index === tooltipIndex ? <Globe opacity={tooltipOpacity}>{yml.globe_text}</Globe> : null} */}
-
                                 <H4
                                   fs_xs="12px"
                                   fs_sm="16px"
@@ -170,17 +162,34 @@ const GeeksVsOthers = (props) => {
                                 </H4>
                               </Div>
                               <Div position={`relative`}>
-                                {tooltip === true && index === tooltipIndex ? <Globe opacity={tooltipOpacity}><Paragraph align="center"
-                                  fs_xs="16px"
-                                  fs_sm="16px"
-                                  fs_md="16px"
-                                  fs_lg="16px"
-                                  fs_xl="16px"
-                                  color={Colors.black}
-                                >
-                                  {yml.globe_text}
-                                </Paragraph></Globe> : null}
-                                <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0)}} >
+                                {tooltip === true && index === tooltipIndex ?
+                                  <Tooltip opacity={tooltipOpacity}>
+                                    <Paragraph align="center"
+                                      fs_xs="16px"
+                                      fs_sm="16px"
+                                      fs_md="16px"
+                                      fs_lg="16px"
+                                      fs_xl="16px"
+                                      color={Colors.white}
+                                    >
+                                      {item.tooltip}
+                                    </Paragraph>
+                                  </Tooltip>
+                                  : null}
+                                {globeTooltip === true && index === 0 ?
+                                  <Globe opacity={globeTooltipOpacity}>
+                                    <Paragraph align="center"
+                                      fs_xs="16px"
+                                      fs_sm="16px"
+                                      fs_md="16px"
+                                      fs_lg="16px"
+                                      fs_xl="16px"
+                                      color={Colors.black}
+                                    >
+                                      {yml.globe_text}
+                                    </Paragraph>
+                                  </Globe> : null}
+                                <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0), setGlobeTooltip(false)}} >
                                   <Question width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
                                 </span>
                               </Div>
