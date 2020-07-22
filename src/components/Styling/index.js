@@ -128,13 +128,13 @@ export const Over = styled.div`
 `
 export const Tooltip = styled.div`
     position: absolute;
-    left: 30%;
+    left: 10px;
+    bottom: 10px;
     height: auto;
     z-index: 1;
     width: 200px;
     opacity: 1;
-    bottom: 100%;
-    right: -277px;
+    // right: -277px;
     border-radius: .25rem;
     margin-bottom: 1em;
     padding: 1em;
