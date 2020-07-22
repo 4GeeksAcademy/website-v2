@@ -176,6 +176,9 @@ export const Div = styled.div`
     height: ${props => props.height};
     margin: ${props => props.margin};
     position: ${props => props.position};
+    background: ${props => props.background};
+    border-radius: ${props => props.borderRadius};
+    padding: ${props => props.padding};
     @media ${Device.xs}{
         align-items: ${props => props.alignItems_xs};
     }

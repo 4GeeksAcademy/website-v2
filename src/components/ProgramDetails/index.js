@@ -9,42 +9,6 @@ import {Colors, ArrowRight, Teacher, Glasses, Clock, Users, Rocket, Button, Lapt
 import {Card} from '../Card';
 import Link from 'gatsby-link'
 
-const ProgressBar = (props) => {
-    console.log("PROGRESS:", props)
-    const {bgcolor, completed} = props;
-
-    const containerStyles = {
-        height: 5,
-        width: '100%',
-        backgroundColor: "#e0e0de",
-        borderRadius: 50,
-    }
-
-    const fillerStyles = {
-        height: '10',
-        width: `${completed}%`,
-        backgroundColor: bgcolor,
-        borderRadius: 'inherit',
-        textAlign: 'right'
-    }
-
-    const labelStyles = {
-        padding: 5,
-        color: 'white',
-        fontWeight: 'bold'
-    }
-    return (
-        <div style={containerStyles}>
-            <div style={fillerStyles}>
-                {/* <span style={labelStyles}>{`${completed}%`}</span> */}
-            </div>
-        </div>
-    );
-};
-const testData = [
-    {bgcolor: "#6a1b9a", completed: 60}
-];
-
 const ContainerStyle = styled.div`
     height: 1px;
     width: 100%;
@@ -107,11 +71,23 @@ const ProgramDetails = (props) => {
                     >
                         <Row height="100%">
                             <Column size="12" customRespSize respSize="12" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                                <Row height={`15%`} align={`around`} alignItems={`center`} marginBottom={`10px`} customRespSize alignResp={`space-around`}>
+                                <Row height={`15%`} align={`around`} alignItems={`center`} marginBottom={`15px`} customRespSize alignResp={`space-around`}>
                                     {props.details.details_modules.map((item, index) => {
                                         return (
-                                            <Div key={index} flexDirection={`column`} alignItems={`center`} >
-                                                <Div onClick={() => {setSelected(index); setCompleted((item.step * 100) / (Slider().length - 1))}} alignItems={`center`} margin={`0 0 5px 0`}>
+                                            <Div
+                                                key={index}
+                                                flexDirection={`column`}
+                                                alignItems={`center`}
+                                                background={selected === index ? "#ededed" : null}
+                                                padding={selected === index ? "1rem" : null}
+                                                borderRadius={selected === index ? ".75rem" : null}
+                                            >
+                                                <Div
+                                                    onClick={() => {setSelected(index); setCompleted((item.step * 100) / (Slider().length - 1))}}
+                                                    alignItems={`center`}
+                                                    margin={`0 0 5px 0`}
+
+                                                >
                                                     <Paragraph
                                                         color={Colors.darkGray}
                                                         cursor={`pointer`}
@@ -184,14 +160,16 @@ const ProgramDetails = (props) => {
                                             <Div alignItems={`center`} margin={`5px 0`}>
                                                 <Div margin={`0 10px 0 0`}><Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} /> </Div>
                                                 <Div>
-                                                    <H3
+                                                    <H4
                                                         fs_xs="18px"
                                                         fs_sm="18px"
                                                         fs_md="20px"
                                                         fs_lg="18px"
-                                                        fs_xl="22px">
+                                                        fs_xl="22px"
+                                                        fontWeight={`400`}
+                                                    >
                                                         {props.details.details_modules[selected].title}
-                                                    </H3>
+                                                    </H4>
                                                 </Div>
                                             </Div>
                                             <Div >
@@ -213,14 +191,16 @@ const ProgramDetails = (props) => {
                                             <Div alignItems={`center`} margin={`5px 0`}>
                                                 <Div margin={`0 10px 0 0`}><Rocket width="36px" fill={Colors.blue} stroke={Colors.blue} /> </Div>
                                                 <Div>
-                                                    <H3
+                                                    <H4
                                                         fs_xs="18px"
                                                         fs_sm="18px"
                                                         fs_md="20px"
                                                         fs_lg="18px"
-                                                        fs_xl="22px">
+                                                        fs_xl="22px"
+                                                        fontWeight={`400`}
+                                                    >
                                                         {`Projects`}
-                                                    </H3>
+                                                    </H4>
                                                 </Div>
                                             </Div>
                                             <Div >
@@ -242,14 +222,16 @@ const ProgramDetails = (props) => {
                                             <Div alignItems={`center`} margin={`5px 0`}>
                                                 <Div margin={`0 10px 0 0`}><Clock width="36px" fill={Colors.blue} stroke={Colors.blue} /> </Div>
                                                 <Div>
-                                                    <H3
+                                                    <H4
                                                         fs_xs="18px"
                                                         fs_sm="18px"
                                                         fs_md="20px"
                                                         fs_lg="18px"
-                                                        fs_xl="22px">
+                                                        fs_xl="22px"
+                                                        fontWeight={`400`}
+                                                    >
                                                         {`Duration`}
-                                                    </H3>
+                                                    </H4>
                                                 </Div>
                                             </Div>
                                             <Div >
