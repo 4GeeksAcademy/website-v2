@@ -175,7 +175,18 @@ export const Div = styled.div`
     align-content: ${props => props.alignContent};
     height: ${props => props.height};
     margin: ${props => props.margin};
-    
+    @media ${Device.xs}{
+        align-items: ${props => props.alignItems_xs};
+    }
+    @media  ${Device.sm}{
+        align-items: ${props => props.alignItems_sm};
+    }
+    @media ${Device.md}{        
+    }
+    @media ${Device.lg}{
+    }
+    @media ${Device.xl} {
+    } 
 `
 export const Column = styled.div`
 padding: ${props => props.padding};
@@ -190,6 +201,7 @@ padding-left: ${props => props.paddingLeft};
 display: ${props => props.display};
 flex-direction: ${props => props.flexDirection};
 justify-content: ${props => props.justifyContent};
+align-items: ${props => props.alignItems};
 ${props => props.masonry &&
         css`
         display: inline-block;

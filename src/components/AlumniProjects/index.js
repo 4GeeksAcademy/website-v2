@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
-import {Row, Container, Column, Divider} from '../Sections'
+import {Row, Container, Column, Divider, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors, Address, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage} from '../Styling';
 import {Card} from '../Card';
@@ -28,6 +28,7 @@ const AlumniProjects = props => {
                     image_alt
                     project_content
                     project_video
+                    live_link
                     github_repo
                     alumni {
                       first_name
@@ -78,86 +79,118 @@ const AlumniProjects = props => {
                                             marginRight="0"
                                             customRespSize
                                         >
-                                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
-                                                <Row align="center" height="100%">
-                                                    <Column size="9" height="100%">
-                                                        <Divider height="10%" />
-                                                        <Row height="30%">
-                                                            <Column size="12" customRespSize respSize="12">
-                                                                <H3 primary color={Colors.blue} align="left" >{`Meet  `}</H3>
-                                                                {item.alumni.map((alumni, i) => {
-                                                                    return (
-                                                                        <div key={i}>
-                                                                            <Row >
-                                                                                <Column size="12">
-                                                                                    <H4
-                                                                                        fs_xs="12px"
-                                                                                        fs_sm="13px"
-                                                                                        fs_md="14px"
-                                                                                        fs_lg="16px"
-                                                                                        fs_xl="16px"
-                                                                                        primary align_xs="center" align="left">{`${alumni.first_name} ${alumni.last_name}`}
-                                                                                    </H4>
-                                                                                </Column>
-                                                                            </Row>
-                                                                            <Row marginBottom="5px">
-                                                                                <Column size="12" alignSm="center">
-                                                                                    <Paragraph
-                                                                                        primary
-                                                                                        fs_xs="10px"
-                                                                                        fs_sm="11px"
-                                                                                        fs_md="11px"
-                                                                                        fs_lg="11px"
-                                                                                        fs_xl="11px"
-                                                                                        lineHeight="24px"
-                                                                                        // margin="5px 0"
-                                                                                        align="left" >
-                                                                                        {alumni.job_title}
-                                                                                        {alumni.github != "" && <Span margin="0 5px" ><a target="_blank" href={alumni.github}><Github width="14" color={Colors.gray} fill={Colors.gray} /></a></Span>}
-                                                                                        {/* {alumni.github != "" && <Github width="14" color={Colors.blue} fill={Colors.blue} />} */}
-                                                                                        {alumni.linkedin != "" && <Span ><a target="_blank" href={alumni.linkedin}><Linkedin width="16" color={Colors.gray} fill={Colors.gray} /></a></Span>}
-
-                                                                                    </Paragraph>
-                                                                                </Column>
-                                                                            </Row>
-                                                                        </div>
-                                                                    )
-                                                                })}
-                                                            </Column>
-                                                        </Row>
-                                                        <Row height="5%" >
-                                                            <Separator primary al_xs="center" />
-                                                        </Row>
-                                                        <Row height="10%">
-                                                            <Column size="12">
-                                                                <Row height="100%" align="left">
-                                                                    <Column size="10" customRespSize respSize="10" alignSelf="center">
-                                                                        <H4 color={Colors.gray} align="left" fs_xs="14px"
-                                                                            fs_sm="14px"
-                                                                            fs_md="16px"
-                                                                            fs_lg="16px"
-                                                                            fs_xl="16px" lineHeight="20px">{`${item.project_name}`}</H4>
+                                            <Column
+                                                size="6"
+                                                display={`flex`}
+                                                flexDirection={`column`}
+                                                justifyContent={`space-between`}
+                                                customRespSize
+                                                respSize="6"
+                                                alignSelf="center"
+                                                height="100%"
+                                                image="no"
+                                                border="bottom"
+                                                padding={`25px`}
+                                                paddingLeft={`30px`}
+                                                paddingRight={`25px`}
+                                            >
+                                                <Div flexDirection={`column`} alignItems={`start`} alignItems_xs={`center`} alignItems_sm={`center`}>
+                                                    <H3 primary color={Colors.blue} align="left" >{`Meet  `}</H3>
+                                                    {item.alumni.map((alumni, i) => {
+                                                        return (
+                                                            <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
+                                                                <Row >
+                                                                    <Column size="12">
+                                                                        <H4
+                                                                            fs_xs="16px"
+                                                                            fs_sm="16px"
+                                                                            fs_md="18px"
+                                                                            fs_lg="20px"
+                                                                            fs_xl="20px"
+                                                                            primary align_xs="center" align="left">{`${alumni.first_name} ${alumni.last_name}`}
+                                                                        </H4>
                                                                     </Column>
                                                                 </Row>
-                                                            </Column>
-                                                        </Row>
-                                                        <Row height="35%">
-                                                            <Column size="12">
-                                                                <Paragraph
-                                                                    fs_xs="10px"
-                                                                    fs_sm="11px"
-                                                                    fs_md="13px"
-                                                                    fs_lg="11px"
-                                                                    fs_xl="12px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.project_content}</Paragraph>
-                                                            </Column>
-                                                        </Row>
-                                                        <Row height="10%">
-                                                            <Column size="12">
-                                                                {/* <Paragraph color={Colors.blue} align="left" fontSize="14px" lineHeight="20px">{alumni.header.button_text}</Paragraph> */}
+                                                                <Row marginBottom="5px">
+                                                                    <Column size="12" alignSm="center" display={`flex`} flexDirection={`row`} alignItems={`end`}>
+                                                                        <Paragraph
+                                                                            primary
+                                                                            fs_xs="12px"
+                                                                            fs_sm="12px"
+                                                                            fs_md="14px"
+                                                                            fs_lg="16px"
+                                                                            fs_xl="16px"
+                                                                            lineHeight="24px"
+                                                                            // margin="5px 0"
+                                                                            align="left" >
+                                                                            {alumni.job_title}
+
+
+                                                                        </Paragraph>
+                                                                        {alumni.github != "" && <Span margin="0 5px" ><a target="_blank" href={alumni.github}><Github width="14" color={Colors.gray} fill={Colors.gray} /></a></Span>}
+                                                                        {/* {alumni.github != "" && <Github width="14" color={Colors.blue} fill={Colors.blue} />} */}
+                                                                        {alumni.linkedin != "" && <Span ><a target="_blank" href={alumni.linkedin}><Linkedin width="16" color={Colors.gray} fill={Colors.gray} /></a></Span>}
+                                                                    </Column>
+                                                                </Row>
+                                                            </Div>
+                                                        )
+                                                    })}
+                                                </Div>
+                                                <Row flexDirection={`column`} >
+                                                    <Column size="12">
+                                                        <Row align="left" marginBottom={`10px`}>
+                                                            <Column size="10" customRespSize respSize="10" alignSelf="center">
+                                                                <H4 color={Colors.gray} align="left" fs_xs="16px"
+                                                                    fs_sm="16px"
+                                                                    fs_md="16px"
+                                                                    fs_lg="16px"
+                                                                    fs_xl="24px" lineHeight="20px">{`${item.project_name}`}</H4>
                                                             </Column>
                                                         </Row>
                                                     </Column>
+                                                    <Column size="12">
+                                                        <Paragraph
+                                                            fs_xs="10px"
+                                                            fs_sm="11px"
+                                                            fs_md="13px"
+                                                            fs_lg="11px"
+                                                            fs_xl="16px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.project_content}</Paragraph>
+                                                    </Column>
                                                 </Row>
+                                                <Row >
+                                                    <Column size="4">
+                                                        {item.live_link != "" || undefined || null ?
+                                                            <a href={`${item.live_link}`} target="_blank">
+                                                                <Card
+
+                                                                    color="darkGray"
+                                                                    padding="5px 5px"
+                                                                    borders=".75rem"
+                                                                    margin="5px 3px"
+                                                                    w_xs="20px"
+                                                                >
+                                                                    <Paragraph
+                                                                        cursor={`pointer`}
+                                                                        fs_xs="14px"
+                                                                        fs_sm="14px"
+                                                                        fs_md="10px"
+                                                                        fs_lg="14px"
+                                                                        fs_xl="16px"
+                                                                        color={Colors.darkGray}
+                                                                        align="center"
+                                                                    // lineHeight="20px"
+                                                                    >
+                                                                        Live Link
+                                                            </Paragraph>
+                                                                </Card>
+                                                            </a>
+                                                            : null}
+                                                    </Column>
+                                                </Row>
+
+
+
+
                                             </Column>
                                             {item.project_video === "" ?
                                                 <Column
@@ -174,7 +207,7 @@ const AlumniProjects = props => {
                                                     customBorderRadius="0 1.25rem 1.25rem 0" >
                                                 </Column>
                                                 :
-                                                <Column size="6">
+                                                <Column size="6" paddingRight={`0`}>
                                                     <ReactPlayer
                                                         className='react-player alumni-player'
                                                         file={{forceVideo: true}}
@@ -253,3 +286,7 @@ const AlumniProjects = props => {
         </>)
 };
 export default AlumniProjects;
+
+
+
+
