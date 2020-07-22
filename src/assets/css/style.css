@@ -224,10 +224,10 @@ a {
     border-radius: 1.25rem!important;
 }
 .react-player{
-    height: auto!important;
+    height: 100%!important;
 }
 .react-player__preview{
-    height: 150px!important;
+    height: 100%!important;
 } 
 .split{
     font-size: 55px;

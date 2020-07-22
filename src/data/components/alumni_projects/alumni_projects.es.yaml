@@ -10,6 +10,7 @@ projects:
     project_content: "Platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track your places (where you have been), and gather information that you thought it was important and save for as long as you want it in just one place."
     project_video: ""
     github_repo: ""
+    live_link: ""
     alumni:
       - first_name: "Luis"
         last_name: "Rivera"
