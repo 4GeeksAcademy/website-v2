@@ -10,7 +10,7 @@ import BaseRender from './_baseRender'
 
 const Globe = styled.div`
 opacity: 1;
-width: 120px;
+width: 170px;
 height: 120px;
 background: #ffffff;
 font-family: "Lato, sans-serif";
