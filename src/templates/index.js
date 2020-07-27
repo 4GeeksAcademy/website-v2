@@ -518,7 +518,7 @@ export const query = graphql`
               icon
               slug
             }
-            
+            globe_text
             titles{
                 featured
                 at_geeks

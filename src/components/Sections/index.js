@@ -168,14 +168,18 @@ border-radius: ${props => props.borders};
 `
 export const Div = styled.div`
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: nowrap; 
     flex-direction: ${props => props.flexDirection === 'column' ? 'column' : 'row'};
     justify-content: ${props => props.justifyContent};
     align-items: ${props => props.alignItems};
     align-content: ${props => props.alignContent};
     height: ${props => props.height};
+    width: ${props => props.width};
     margin: ${props => props.margin};
     position: ${props => props.position};
+    background: ${props => props.background};
+    border-radius: ${props => props.borderRadius};
+    padding: ${props => props.padding};
     @media ${Device.xs}{
         align-items: ${props => props.alignItems_xs};
     }
