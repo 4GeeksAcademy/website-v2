@@ -32,7 +32,7 @@ import Typography from '@material-ui/core/Typography';
 import {Input, Alert} from '../components/Form';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
-
+import Svg from "../components/Svg/index";
 
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
@@ -384,11 +384,18 @@ const Program = ({data, pageContext, yml}) => {
       </Container>
       {/* </Wrapper> */}
       <Divider height="100px" />
-
+      
       {/* PROGRAM DETAILS */}
       {/* --------------- */}
       <ProgramDetails details={yml.details} />
-
+      {/* SVG  START*/}
+      <Divider height="100px" />
+      <Row height="100%">
+          <Column size="12">
+            <Svg/>
+          </Column>
+      </Row>
+      {/* SVG  END*/}
       <Divider height="100px" />
       <Wrapper
         style="default"
