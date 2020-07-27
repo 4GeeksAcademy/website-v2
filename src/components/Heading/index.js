@@ -99,7 +99,7 @@ export const H3 = styled.h3`
 
 font-family: 'Futura', sans-serif;
 margin: ${props => props.margin};
-font-weight: 800;
+font-weight: 400;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
@@ -129,7 +129,7 @@ export const H4 = styled.h4`
 }   
 font-family: 'Futura', sans-serif;
 margin-bottom: 0px;
-font-weight: 800;
+font-weight: ${props => props.fontWeight};
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
@@ -371,5 +371,5 @@ H3.defaultProps = {
 };
 H4.defaultProps = {
   fontSizeXs: '5vw',
-
+  fontWeight: '400',
 };

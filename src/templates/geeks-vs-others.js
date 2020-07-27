@@ -132,6 +132,7 @@ const GeeksVsOthers = (props) => {
                         marginRight="0"
                         customRespSize
                         alignResp="end"
+
                       >
                         <Column size size="12" alignSelf="center" >
                           <Paragraph align="center"
@@ -157,7 +158,14 @@ const GeeksVsOthers = (props) => {
                         customRespSize
                         alignResp="end"
                       >
-                        <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
+                        <Column
+                          size="6"
+                          customRespSize
+                          respSize="6"
+                          alignSelf="center"
+                          height="100%"
+                          image="no"
+                          color={Colors.black}>
                           <Row
                             align="center"
                             height="100%"

@@ -7,6 +7,7 @@ titles:
   featured: "FEATURED"
   at_geeks: "AT 4GEEKS"
   average: "INDUSTRY AVERAGE"
+globe_text: Click me for details
 info:
   - features: "CAREER SUPPORT"
     at4_Geeks: "DE POR VIDA"
@@ -39,5 +40,5 @@ info:
     icon: ""
     slug: "preparacion-para-entrevistas"
 button:
-  button_text: ""
-  button_link: ""
+  button_text: "/"
+  button_link: "/"
