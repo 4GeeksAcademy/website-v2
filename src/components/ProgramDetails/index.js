@@ -154,74 +154,52 @@ const ProgramDetails = (props) => {
                                 </Row>
 
                                 <Row height={`75%`} >
-                                    <Column size="6" customRespSize respSize="8" margin={`0 25px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+                                    <Column size="12" customRespSize respSize="12" paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+                                        <Div flexDirection={`row`} >
+                                            <Div width={`50%`}>
+                                                <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
+                                                    <Rocket width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                                </Div>
+                                                <Div flexDirection={`column`} >
+                                                    <Div alignItems={`center`} margin={`5px 0`}>
+                                                        {/* <Div> */}
+                                                        <H4
+                                                            fs_xs="18px"
+                                                            fs_sm="18px"
+                                                            fs_md="20px"
+                                                            fs_lg="18px"
+                                                            fs_xl="22px"
+                                                            fontWeight={`400`}
+                                                        >
+                                                            {`Projects`}
+                                                        </H4>
+                                                        {/* </Div> */}
+                                                    </Div>
 
-                                        <Div flexDirection={`column`} >
-                                            <Div alignItems={`center`} margin={`5px 0`}>
-                                                <Div margin={`0 10px 0 0`}><Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} /> </Div>
-                                                <Div>
-                                                    <H4
-                                                        fs_xs="18px"
-                                                        fs_sm="18px"
-                                                        fs_md="20px"
-                                                        fs_lg="18px"
-                                                        fs_xl="22px"
-                                                        fontWeight={`400`}
-                                                    >
-                                                        {props.details.details_modules[selected].title}
-                                                    </H4>
+                                                    <Div >
+                                                        <Paragraph
+                                                            color={Colors.darkGray}
+                                                            fs_xs="12px"
+                                                            fs_sm="16px"
+                                                            fs_md="16px"
+                                                            fs_lg="18px"
+                                                            fs_xl="18px"
+                                                            customTextAlignSmall
+                                                            alignXs={`start`}
+                                                        >
+                                                            {props.details.details_modules[selected].projects}
+                                                        </Paragraph>
+                                                    </Div>
                                                 </Div>
                                             </Div>
-                                            <Div >
-                                                <Paragraph
-                                                    color={Colors.darkGray}
-                                                    fs_xs="12px"
-                                                    fs_sm="16px"
-                                                    fs_md="16px"
-                                                    fs_lg="18px"
-                                                    fs_xl="18px"
-                                                    customTextAlignSmall
-                                                    alignXs={`start`}
-                                                >
-                                                    {props.details.details_modules[selected].description}
-                                                </Paragraph>
+                                            {/* </Div>
+                                        <Div flexDirection={`column`} > */}
+                                            <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
+                                                <Clock width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                             </Div>
-                                        </Div>
-                                        <Div flexDirection={`column`} >
-                                            <Div alignItems={`center`} margin={`5px 0`}>
-                                                <Div margin={`0 10px 0 0`}><Rocket width="36px" fill={Colors.blue} stroke={Colors.blue} /> </Div>
-                                                <Div>
-                                                    <H4
-                                                        fs_xs="18px"
-                                                        fs_sm="18px"
-                                                        fs_md="20px"
-                                                        fs_lg="18px"
-                                                        fs_xl="22px"
-                                                        fontWeight={`400`}
-                                                    >
-                                                        {`Projects`}
-                                                    </H4>
-                                                </Div>
-                                            </Div>
-                                            <Div >
-                                                <Paragraph
-                                                    color={Colors.darkGray}
-                                                    fs_xs="12px"
-                                                    fs_sm="16px"
-                                                    fs_md="16px"
-                                                    fs_lg="18px"
-                                                    fs_xl="18px"
-                                                    customTextAlignSmall
-                                                    alignXs={`start`}
-                                                >
-                                                    {props.details.details_modules[selected].projects}
-                                                </Paragraph>
-                                            </Div>
-                                        </Div>
-                                        <Div flexDirection={`column`} >
-                                            <Div alignItems={`center`} margin={`5px 0`}>
-                                                <Div margin={`0 10px 0 0`}><Clock width="36px" fill={Colors.blue} stroke={Colors.blue} /> </Div>
-                                                <Div>
+                                            <Div flexDirection={`column`}>
+                                                <Div alignItems={`center`} margin={`5px 0`}>
+
                                                     <H4
                                                         fs_xs="18px"
                                                         fs_sm="18px"
@@ -232,24 +210,61 @@ const ProgramDetails = (props) => {
                                                     >
                                                         {`Duration`}
                                                     </H4>
+
+                                                </Div>
+                                                <Div >
+                                                    <Paragraph
+                                                        color={Colors.darkGray}
+                                                        fs_xs="12px"
+                                                        fs_sm="16px"
+                                                        fs_md="16px"
+                                                        fs_lg="18px"
+                                                        fs_xl="18px"
+                                                        customTextAlignSmall
+                                                        alignXs={`start`}
+                                                    >
+                                                        {props.details.details_modules[selected].duration}
+                                                    </Paragraph>
                                                 </Div>
                                             </Div>
-                                            <Div >
-                                                <Paragraph
-                                                    color={Colors.darkGray}
-                                                    fs_xs="12px"
-                                                    fs_sm="16px"
-                                                    fs_md="16px"
-                                                    fs_lg="18px"
-                                                    fs_xl="18px"
-                                                    customTextAlignSmall
-                                                    alignXs={`start`}
-                                                >
-                                                    {props.details.details_modules[selected].duration}
-                                                </Paragraph>
+                                        </Div>
+                                        <Div flexDirection={`row`} >
+                                            {/* <Div width={`100%`}> */}
+                                            <Div margin={`0 5px 0 0`} flexDirection={`column`} alignContent={`start`}>
+                                                <Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                            </Div>
+                                            <Div flexDirection={`column`} >
+                                                <Div alignItems={`center`} margin={`5px 0`}>
+
+                                                    <H4
+                                                        fs_xs="18px"
+                                                        fs_sm="18px"
+                                                        fs_md="20px"
+                                                        fs_lg="18px"
+                                                        fs_xl="22px"
+                                                        fontWeight={`400`}
+                                                    >
+                                                        {props.details.details_modules[selected].title}
+                                                    </H4>
+
+                                                </Div>
+                                                <Div >
+                                                    <Paragraph
+                                                        color={Colors.darkGray}
+                                                        fs_xs="12px"
+                                                        fs_sm="16px"
+                                                        fs_md="16px"
+                                                        fs_lg="18px"
+                                                        fs_xl="18px"
+                                                        customTextAlignSmall
+                                                        alignXs={`start`}
+                                                    >
+                                                        {props.details.details_modules[selected].description}
+                                                    </Paragraph>
+                                                </Div>
+                                                {/* </Div> */}
                                             </Div>
                                         </Div>
-
                                     </Column>
                                 </Row>
                             </Column>
