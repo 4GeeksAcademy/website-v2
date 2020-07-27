@@ -107,7 +107,10 @@ const AlumniProjects = props => {
                                                                             fs_md="18px"
                                                                             fs_lg="20px"
                                                                             fs_xl="20px"
-                                                                            primary align_xs="center" align="left">{`${alumni.first_name} ${alumni.last_name}`}
+                                                                            primary align_xs="center"
+                                                                            align="left"
+                                                                            fontWeight={`400`}
+                                                                        >{`${alumni.first_name} ${alumni.last_name}`}
                                                                         </H4>
                                                                     </Column>
                                                                 </Row>
@@ -144,7 +147,10 @@ const AlumniProjects = props => {
                                                                     fs_sm="16px"
                                                                     fs_md="16px"
                                                                     fs_lg="16px"
-                                                                    fs_xl="24px" lineHeight="20px">{`${item.project_name}`}</H4>
+                                                                    fs_xl="24px"
+                                                                    lineHeight="20px"
+                                                                    fontWeight={`400`}
+                                                                >{`${item.project_name}`}</H4>
                                                             </Column>
                                                         </Row>
                                                     </Column>
