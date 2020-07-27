@@ -193,7 +193,7 @@ const Program = ({data, pageContext, yml}) => {
         backgroundSize="cover"
       >
         <Divider height="20%" />
-        <ProgramSelector week={week} lang={data.allLocationYaml.edges} />
+        <ProgramSelector week={week} lang={data.allLocationYaml.edges} context={pageContext} />
         <Divider height="20px" />
         <Title
           size="5"
