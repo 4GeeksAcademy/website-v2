@@ -71,7 +71,7 @@ const GeeksVsOthers = (props) => {
             {/* <Card shadow borders="1.25rem" height={`${info_len * 80}px`}> */}
             <Card shadow borders="1.25rem" height="auto">
               <Row height="80px" marginLeft="0" marginRight="0">
-                <Column size="4" customRespSize respSize="4" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" >
+                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" >
                   <Row height="100%" borderBottom={"1px solid " + Colors.darkGray}>
                     <Column size size="12" alignSelf="center" >
                       <H5
@@ -87,7 +87,7 @@ const GeeksVsOthers = (props) => {
                     </Column>
                   </Row>
                 </Column>
-                <Column size="2" customRespSize respSize="2" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
+                <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
                   <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
                     <Column size size="12" alignSelf="center" >
                       <H5
@@ -103,7 +103,7 @@ const GeeksVsOthers = (props) => {
                     </Column>
                   </Row>
                 </Column>
-                <Column size="2" customRespSize respSize="2" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
+                <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
                   <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
                     <Column size size="12" alignSelf="center" >
                       <H5
@@ -119,138 +119,154 @@ const GeeksVsOthers = (props) => {
                     </Column>
                   </Row>
                 </Column>
-                <Column size="4" customRespSize respSize="4" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0">
-                  <Row height="100%" borderBottom={columnDisplay === true ? "1px solid " + Colors.borderGray : "none"}>
-                    <Column display={columnDisplay === false && "none"} size size="12" alignSelf="center" >
-                      <H5
-                        fs_xs="10px"
-                        fs_sm="12px"
-                        fs_md="12px"
-                        fs_lg="12px"
-                        fs_xl="14px"
-                        m="0"
-                        align="center"
-                        color={Colors.gray}>{yml.titles.why}
-                      </H5>
-                    </Column>
-                  </Row>
-                </Column>
               </Row>
               {yml.info.map((item, index) => {
                 return (
                   <>
-                    <Row
-                      key={item.slug}
-                      height="120px"
-                      marginLeft="0"
-                      marginRight="0"
-                      customRespSize
-                      alignResp="end"
-                    >
-                      <Column size="4" customRespSize respSize="4" alignSelf="center" height="100%" image="no" color={Colors.black}>
-                        <Row align="center" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
-                          <Div flexDirection={`column`} justifyContent={`center`} >
-                            <Div alignItems={`baseline`}>
-                              <Div margin={`0 3px`}>
-                                <H4
-                                  fs_xs="12px"
-                                  fs_sm="16px"
-                                  fs_md="16px"
-                                  fs_lg="18px"
-                                  fs_xl="24px"
-                                  color={Colors.white}
-                                >
-                                  {item.features}
-                                </H4>
-                              </Div>
-                              <Div position={`relative`}>
-                                {tooltip === true && index === tooltipIndex ?
-                                  <Tooltip opacity={tooltipOpacity}>
-                                    <Paragraph align="center"
-                                      fs_xs="16px"
-                                      fs_sm="16px"
-                                      fs_md="16px"
-                                      fs_lg="16px"
-                                      fs_xl="16px"
-                                      color={Colors.white}
-                                    >
-                                      {item.tooltip}
-                                    </Paragraph>
-                                  </Tooltip>
-                                  : null}
-                                {globeTooltip === true && index === 0 ?
-                                  <Globe opacity={globeTooltipOpacity}>
-                                    <Paragraph align="center"
-                                      fs_xs="16px"
-                                      fs_sm="16px"
-                                      fs_md="16px"
-                                      fs_lg="16px"
-                                      fs_xl="16px"
-                                      color={Colors.black}
-                                    >
-                                      {yml.globe_text}
-                                    </Paragraph>
-                                  </Globe> : null}
-                                <span onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false)}} onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0), setGlobeTooltip(false)}} >
-                                  <Question width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
-                                </span>
+                    {columnDisplay === true && columnDisplayIndex === index ?
+                      <Row
+                        onMouseOut={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(null)}}
+                        key={item.slug}
+                        height="120px"
+                        marginLeft="0"
+                        marginRight="0"
+                        customRespSize
+                        alignResp="end"
+                      >
+                        <Column size size="12" alignSelf="center" >
+                          <Paragraph align="center"
+                            fs_xs="16px"
+                            fs_sm="16px"
+                            fs_md="16px"
+                            fs_lg="18px"
+                            fs_xl="22px"
+                            color={Colors.gray}
+                          >
+                            {item.why_important}
+                            {/* {columnDisplay === true && columnDisplayIndex === index ? item.why_important : null} */}
+                          </Paragraph>
+                        </Column>
+
+                      </Row>
+                      :
+                      <Row
+                        key={item.slug}
+                        height="120px"
+                        marginLeft="0"
+                        marginRight="0"
+                        customRespSize
+                        alignResp="end"
+                      >
+                        <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
+                          <Row
+                            align="center"
+                            height="100%"
+                            borderBottom={"1px solid " + Colors.darkGray}
+                            // onClick={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}}
+                            onMouseOver={() => {setColumnDisplay(false), setColumnDisplayIndex(index)}}
+                          >
+                            <Div flexDirection={`column`} justifyContent={`center`} >
+                              <Div alignItems={`baseline`}>
+                                <Div margin={`0 3px`}>
+                                  <H4
+                                    fs_xs="12px"
+                                    fs_sm="16px"
+                                    fs_md="16px"
+                                    fs_lg="18px"
+                                    fs_xl="24px"
+                                    color={Colors.white}
+                                  >
+                                    {item.features}
+                                  </H4>
+                                </Div>
+                                <Div position={`relative`}>
+                                  {tooltip === true && index === tooltipIndex ?
+                                    <Tooltip opacity={tooltipOpacity}>
+                                      <Paragraph align="center"
+                                        fs_xs="16px"
+                                        fs_sm="16px"
+                                        fs_md="16px"
+                                        fs_lg="16px"
+                                        fs_xl="16px"
+                                        color={Colors.white}
+                                      >
+                                        {item.tooltip}
+                                      </Paragraph>
+                                    </Tooltip>
+                                    : null}
+                                  {globeTooltip === true && index === 0 ?
+                                    <Globe opacity={globeTooltipOpacity}>
+                                      <Paragraph align="center"
+                                        fs_xs="16px"
+                                        fs_sm="16px"
+                                        fs_md="16px"
+                                        fs_lg="16px"
+                                        fs_xl="16px"
+                                        color={Colors.black}
+                                      >
+                                        {yml.globe_text}
+                                      </Paragraph>
+                                    </Globe> : null}
+                                  <span
+                                    onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false)}}
+                                    onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0), setGlobeTooltip(false)}}
+                                    onClick={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(0), setGlobeTooltip(false)}}
+
+                                  >
+                                    <Question width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
+                                  </span>
+                                </Div>
                               </Div>
                             </Div>
-                          </Div>
-                          {/* </Column> */}
-                        </Row>
-                      </Column>
-                      <Column size="2" customRespSize respSize="2" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray} onMouseOver={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}} onMouseOut={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(null)}}>
-                          <Column size size="12" alignSelf="center" >
-                            <H4
-                              align="center"
-                              fs_xs="12px"
-                              fs_sm="16px"
-                              fs_md="16px"
-                              fs_lg="18px"
-                              fs_xl="16px"
-                              color={Colors.gray}
-                            >
-                              {item.at4_Geeks}
-                            </H4>
-                          </Column>
-                        </Row>
-                      </Column>
-                      <Column size="2" customRespSize respSize="2" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray} onMouseOver={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}} onMouseOut={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(null)}}>
-                          <Column size size="12" alignSelf="center" >
-                            <H4
-                              align="center"
-                              fs_xs="12px"
-                              fs_sm="16px"
-                              fs_md="16px"
-                              fs_lg="18px"
-                              fs_xl="16px"
-                              color={Colors.gray}
-                            >
-                              {item.industry_average}
-                            </H4>
-                          </Column>
-                        </Row>
-                      </Column>
-                      <Column size="4" display={columnDisplay === false && "none"} customRespSize respSize="4" width="100%" height="100%" alignSelf="center">
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
-                          <Column size size="12" alignSelf="center" >
-                            <Paragraph align="center"
-                              fs_xs="6px"
-                              fs_sm="8px"
-                              fs_md="10px"
-                              fs_lg="12px"
-                              fs_xl="12px"
-                              color={Colors.gray}
-                            >
-                              {columnDisplay === true && columnDisplayIndex === index ? item.why_important : null}
-                            </Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
+                            {/* </Column> */}
+                          </Row>
+                        </Column>
+                        <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
+                          <Row
+                            height="100%"
+                            borderBottom={"1px solid " + Colors.borderGray}
+                            onClick={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}}
+                            onMouseOver={() => {setColumnDisplay(true), setColumnDisplayIndex(index)}}
+                            onMouseOut={() => {setColumnDisplay(false), setColumnDisplayIndex(null)}}
+                          >
+                            <Column size size="12" alignSelf="center" >
+                              <H4
+                                align="center"
+                                fs_xs="12px"
+                                fs_sm="16px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fs_xl="16px"
+                                color={Colors.gray}
+                              >
+                                {item.at4_Geeks}
+                              </H4>
+                            </Column>
+                          </Row>
+                        </Column>
+                        <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
+                          <Row
+                            height="100%"
+                            borderBottom={"1px solid " + Colors.borderGray}
+                            onClick={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}}
+                            onMouseOver={() => {setColumnDisplay(true), setColumnDisplayIndex(index)}}
+                            onMouseOut={() => {setColumnDisplay(false), setColumnDisplayIndex(null)}}>
+                            <Column size size="12" alignSelf="center" >
+                              <H4
+                                align="center"
+                                fs_xs="12px"
+                                fs_sm="16px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fs_xl="16px"
+                                color={Colors.gray}
+                              >
+                                {item.industry_average}
+                              </H4>
+                            </Column>
+                          </Row>
+                        </Column>
+                      </Row>}
                   </>
                 )
               }
