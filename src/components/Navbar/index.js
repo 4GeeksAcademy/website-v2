@@ -8,10 +8,28 @@ import {Colors, Button} from '../Styling';
 export const NavBar = styled.nav`
     background-color: white;
     padding: 0 2rem;
-    // position: fixed;
     // display: flex;
     // justify-content: space-between;
     align-items: center;
+    height: 55px;
+    z-index: 10000;
+@media ${Device.xs}{
+  position: fixed;
+  width: 100%;
+}
+@media ${Device.sm}{
+  position: fixed;
+  width: 100%;
+}
+@media ${Device.md}{
+
+}
+@media ${Device.lg}{
+
+}
+@media ${Device.xl} {
+
+}
 `
 export const Nav = styled.ul`
     display: flex;
@@ -106,6 +124,7 @@ export const Burger = (props) => {
         <div />
       </StyledBurger>
       <RightNav open={open} menu={props} />
+      {/* {open === true ? <RightNav open={open} menu={props} /> : null} */}
       {/* <NavButton open={open} /> */}
 
     </>
@@ -137,6 +156,7 @@ const Div = styled.div`
   padding: 0 2rem;
   align-items: center;
   @media ${Device.xs} {
+    display:${({open}) => open ? '' : 'none'};
     flex-flow: column nowrap;
     background-color: white;
     // background-color: #0D2538;
@@ -154,6 +174,7 @@ const Div = styled.div`
     }
   }
   @media ${Device.sm} {
+    display:${({open}) => open ? '' : 'none'};
     flex-flow: column nowrap;
     background-color: white;
     // background-color: #0D2538;
@@ -204,20 +225,24 @@ const Ul = styled.ul`
 `;
 
 export const RightNav = ({open, menu}) => {
-  console.log("Right:", menu.menu)
+  console.log("Right:", open)
   return (
-    <Div open={open}>
-      <Link to={'/'}><img src="/images/4G_logo_negro.png" width="70" alt=""></img></Link>
-      <Ul open={open}>
-        {menu.menu.navbar && menu.menu.navbar.map((item, index) => {
-          return (
-            <Link to={item.link} key={index}><NavItem>{item.name}</NavItem></Link>
-          )
-        })}
-      </Ul>
-      <Link to="/apply"><Button width="130px" color={Colors.red} textColor={Colors.white}>Apply</Button></Link>
-    </Div>
+    <>
 
+      <Div open={open}>
+        <Link to={'/'}><img src="/images/4G_logo_negro.png" width="70" alt=""></img></Link>
+        <Ul open={open}>
+          {menu.menu.navbar && menu.menu.navbar.map((item, index) => {
+            return (
+              <Link to={item.link} key={index}><NavItem>{item.name}</NavItem></Link>
+            )
+          })}
+        </Ul>
+        <Link to="/apply"><Button width="130px" color={Colors.red} textColor={Colors.white}>Apply</Button></Link>
+      </Div>
+
+
+    </>
 
   )
 }
