@@ -223,9 +223,9 @@ a {
 .react-player video, .react-player__preview{
     border-radius: 1.25rem!important;
 }
-.react-player{
+/* .react-player{
     height: 100%!important;
-}
+} */
 .react-player__preview{
     height: 100%!important;
 } 
