@@ -20,7 +20,7 @@ const Why = (props) => {
             <Container fluid height="450px">
                 <Row>
                     <Column size="1" />
-                    <Column border="bottom" size="11" padding="10%" image="yes" url={yml.banner.image} height="600px">
+                    <Column border="bottom" size="11" padding="10%" image="yes" url={yml.banner.image} height="600px" display={`flex`}>
                         <Row>
                             <Column size="1" />
                             <Column size="8" align="center">
