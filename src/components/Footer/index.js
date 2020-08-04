@@ -95,6 +95,7 @@ const Footer = (props) => {
                     </Column>
                 </Row>
             </Container>
+            <Divider height="80px" />
         </>
     )
 };
