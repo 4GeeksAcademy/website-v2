@@ -254,7 +254,9 @@ export const Title = props => {
       {props.main ?
         (
           <>
-            <Row align="center">{<H1 color={props.color} fontSize={props.fontSize} align={props.textAlign}>{props.title}</H1>}</Row>
+            <Row align="center"
+              marginRight={`0px`}
+              marginLeft={`0px`}>{<H1 color={props.color} fontSize={props.fontSize} align={props.textAlign}>{props.title}</H1>}</Row>
             <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
             <Row align="center"><Column size="8">{
               props.primary

@@ -357,7 +357,8 @@ export const Wrapper = props => {
                         color={props.color}
                         align={props.align}
                         height={props.height}
-                        backgroundSize={props.backgroundSize}>
+                        backgroundSize={props.backgroundSize}
+                    >
                         <Row>
                             <Column size="1" />
                             <Column
@@ -390,6 +391,7 @@ export const Wrapper = props => {
                         border={props.border}
                         customBorderRadius={props.customBorderRadius}
                         color={props.color}
+
                         props>
                         {props.full
                             ?
