@@ -7,7 +7,7 @@ import {Colors, Button} from '../Styling';
 
 export const NavBar = styled.nav`
     background-color: white;
-    padding: 0 2rem;
+    // padding: 0 2rem;
     // display: flex;
     // justify-content: space-between;
     align-items: center;
