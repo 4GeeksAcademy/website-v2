@@ -110,35 +110,6 @@ a.nav-item.nav-link.side {
     opacity: 1;
     background: #0097CE;
 }
-.react-tabs, .react-tabs__tab-panel{
-    height: 100%!important;
-}
-.react-tabs__tab-list {
-    border-bottom: none!important;
-    display: flex!important;
-    -ms-flex-wrap: wrap!important;
-    flex-wrap: wrap!important;
-    padding-left: 0!important;
-    margin-bottom: 0!important;
-    list-style: none!important;
-    height: 100%!important;
-}
-.react-tabs__tab {
-    display: inline-block;
-    border: none!important;
-    border-bottom: none;
-    bottom: 0!important;
-    list-style: none;
-    padding: 6px 12px;
-    cursor: pointer;
-    flex: 1 1 auto!important;
-    text-align: center!important;
-}
-.react-tabs__tab--selected {
-    background: black!important;
-    color: #E6BA1F!important;
-    border-radius: 1.25rem 1.25rem 0 0!important;
-}
 .MuiGrid-spacing-xs-2 > .MuiGrid-item {
     padding: 0px!important;
 }

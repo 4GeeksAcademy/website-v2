@@ -14,8 +14,6 @@ import AlumniProjects from '../components/AlumniProjects'
 import Credentials from '../components/Credentials'
 import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import ProgramSelector from '../components/ProgramSelector'
 import ToggleButton from '../components/ToggleButton'
 import {requestSyllabus} from "../actions";
@@ -384,16 +382,16 @@ const Program = ({data, pageContext, yml}) => {
       </Container>
       {/* </Wrapper> */}
       <Divider height="100px" />
-      
+
       {/* PROGRAM DETAILS */}
       {/* --------------- */}
       <ProgramDetails details={yml.details} />
       {/* SVG  START*/}
       <Divider height="100px" />
       <Row height="100%">
-          <Column size="12">
-            <Svg/>
-          </Column>
+        <Column size="12">
+          <Svg />
+        </Column>
       </Row>
       {/* SVG  END*/}
       <Divider height="100px" />
