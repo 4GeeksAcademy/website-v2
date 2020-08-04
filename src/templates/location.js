@@ -12,8 +12,6 @@ import AlumniProjects from '../components/AlumniProjects'
 import Credentials from '../components/Credentials'
 import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import {SessionContext} from '../session.js'
 import ProgramSelector from '../components/ProgramSelector'
 import "react-responsive-carousel/lib/styles/carousel.min.css";

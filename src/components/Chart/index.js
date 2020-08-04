@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import PieChart from 'react-minimal-pie-chart';
 import styled, {css} from 'styled-components';
 import Chart from "react-google-charts";
 const labelCustom = styled.div`

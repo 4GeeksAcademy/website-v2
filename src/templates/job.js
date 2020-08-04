@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
+import {graphql} from 'gatsby'
 import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
