@@ -8,7 +8,9 @@ html, body
     padding: 0px!important;
     overflow-x: hidden!important; 
 }
-
+.image{
+    width: 100%;
+}
 .MuiStepButton-root {
     width: 100%;
     padding: 24px 17px!important;

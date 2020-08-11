@@ -126,6 +126,7 @@ const GeeksVsOthers = (props) => {
                     {columnDisplay === true && columnDisplayIndex === index ?
                       <Row
                         onMouseOut={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(null)}}
+                        onClick={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}}
                         key={item.slug}
                         height="120px"
                         marginLeft="0"
@@ -170,7 +171,7 @@ const GeeksVsOthers = (props) => {
                             align="center"
                             height="100%"
                             borderBottom={"1px solid " + Colors.darkGray}
-                            // onClick={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}}
+                            onClick={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}}
                             onMouseOver={() => {setColumnDisplay(false), setColumnDisplayIndex(index)}}
                           >
                             <Div flexDirection={`column`} justifyContent={`center`} >
