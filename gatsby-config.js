@@ -1,6 +1,7 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
 module.exports = {
   siteMetadata: {
     defaultTitle: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
@@ -60,6 +61,12 @@ module.exports = {
         path: `${__dirname}/src`,
         name: 'src',
       },
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static`,
+        name: 'static',
+      },
     },
     'gatsby-plugin-root-import',
     'gatsby-plugin-react-helmet',
@@ -95,7 +102,7 @@ module.exports = {
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         // Defaults to null
-        defaultDataLayer: { platform: "gatsby" }
+        defaultDataLayer: {platform: "gatsby"}
       }
     }
   ],

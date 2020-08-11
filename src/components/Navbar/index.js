@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
-import {Link} from 'gatsby';
+import Img from "gatsby-image"
+import {Link, useStaticQuery, graphql} from 'gatsby';
 import {Device} from '../Responsive';
 import PropTypes from 'prop-types';
 import {Colors, Button} from '../Styling';
@@ -224,13 +225,30 @@ const Ul = styled.ul`
   }
 `;
 
-export const RightNav = ({open, menu}) => {
-  console.log("Right:", open)
+export const RightNav = ({menu, open}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "images/4G_logo_negro.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
+            ...GatsbyImageSharpFluid
+          }
+          fixed(width: 75) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+  console.log("Right:", data)
   return (
     <>
 
       <Div open={open}>
-        <Link to={'/'}><img src="/images/4G_logo_negro.png" width="70" alt=""></img></Link>
+        <Link to={'/'}>
+          <Img fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo"></Img>
+          {/* <img src="/images/4G_logo_negro.png" width="70" alt=""></img> */}
+        </Link>
         <Ul open={open}>
           {menu.menu.navbar && menu.menu.navbar.map((item, index) => {
             return (
