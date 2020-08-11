@@ -30,7 +30,7 @@ import Typography from '@material-ui/core/Typography';
 import {Input, Alert} from '../components/Form';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
-import Svg from "../components/Svg/index";
+import SyllabusSVG from "../components/Svg/index";
 
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
@@ -238,9 +238,37 @@ const Program = ({data, pageContext, yml}) => {
         </Scrollspy>
       </Sidebar>
 
+      <Wrapper
+        style="default"
+      >
+        <section className="section" id="section-3"></section>
+        <Title
+          size="10"
+          title={yml.geeks_vs_others.heading}
+          paragraph={yml.geeks_vs_others.sub_heading}
+          primary
+        />
+        <Divider height="50px" />
+        <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
+        <Divider height="100px" />
+      </Wrapper>
+
+      <Divider height="100px" />
+      {/* PROGRAM DETAILS */}
+      {/* --------------- */}
+      <ProgramDetails details={yml.details} />
+      {/* SVG  START*/}
+      {/* <Divider height="100px" />
+      <Row height="100%">
+        <Column size="12">
+          <SyllabusSVG />
+        </Column>
+      </Row> */}
+      {/* SVG  END*/}
+      <Divider height="100px" />
+
       {/* GEEKPAL && GEEKFORCE SECTION */}
       {/* ---------------------------- */}
-
       <section className="section" id="section-1"></section>
       <Container fluid>
         <Row>
@@ -383,32 +411,6 @@ const Program = ({data, pageContext, yml}) => {
       {/* </Wrapper> */}
       <Divider height="100px" />
 
-      {/* PROGRAM DETAILS */}
-      {/* --------------- */}
-      <ProgramDetails details={yml.details} />
-      {/* SVG  START*/}
-      <Divider height="100px" />
-      <Row height="100%">
-        <Column size="12">
-          <Svg />
-        </Column>
-      </Row>
-      {/* SVG  END*/}
-      <Divider height="100px" />
-      <Wrapper
-        style="default"
-      >
-        <section className="section" id="section-3"></section>
-        <Title
-          size="10"
-          title={yml.geeks_vs_others.heading}
-          paragraph={yml.geeks_vs_others.sub_heading}
-          primary
-        />
-        <Divider height="50px" />
-        <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
-        <Divider height="100px" />
-      </Wrapper>
       <Wrapper
         style="default"
       >
