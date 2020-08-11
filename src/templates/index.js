@@ -7,7 +7,7 @@ import ChooseProgram from '../components/ChooseProgram'
 import JobsStatistics from '../components/JobsStatistics';
 import {H1, H2, H3, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
+import {RoundImage, Colors, Check, ArrowRight, BackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
 import WhoIsHiring from '../components/WhoIsHiring';
 import AlumniProjects from '../components/AlumniProjects'
@@ -18,10 +18,12 @@ import Events from '../components/Events'
 import Loc from '../components/Loc'
 import {Link} from 'gatsby';
 import {SessionContext} from '../session.js'
+import Img from "gatsby-image"
 
 const Home = (props) => {
   const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
+  console.log("YML IMAGE:", yml)
   return (
     <>
       <Container fluid >
@@ -123,7 +125,10 @@ const Home = (props) => {
               align="center">{yml.education.left_box.heading}
             </Paragraph>
             {/* <Card width="100%" padding="20px"> */}
-            <RoundImage
+            <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="Florida Education Logo"></Img>
+            {/* <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="4Geeks Logo"></Img> */}
+            {/* <Img fixed={yml.education.left_box.image.childImageSharp.fixed} alt="4Geeks Logo"></Img> */}
+            {/* <RoundImage
               h_xs="40px"
               h_sm="40px"
               h_md="60px"
@@ -132,7 +137,7 @@ const Home = (props) => {
               width="100%"
               url={yml.education.left_box.image}
               bsize="contain"
-              position="50% 50%" />
+              position="50% 50%" /> */}
             {/* </Card> */}
           </Column>
           <Column size="4" customRespSize respSize="4" margin="5px 0">
@@ -147,7 +152,8 @@ const Home = (props) => {
               align="center">{yml.education.center_box.heading}
             </Paragraph>
             {/* <Card width="100%" padding="20px"> */}
-            <RoundImage
+            <Img className={`image`} fluid={yml.education.center_box.image.childImageSharp.fluid} alt="Newsweek Logo"></Img>
+            {/* <RoundImage
               h_xs="40px"
               h_sm="40px"
               h_md="60px"
@@ -156,7 +162,7 @@ const Home = (props) => {
               width="100%"
               url={yml.education.center_box.image}
               bsize="contain"
-              position="50% 50%" />
+              position="50% 50%" /> */}
 
             {/* </Card> */}
           </Column>
@@ -172,7 +178,9 @@ const Home = (props) => {
               align="center">{yml.education.right_box.heading}
             </Paragraph>
             {/* <Card width="100%" padding="20px"> */}
-            <RoundImage
+            {/* <BackgroundSection className={`image`} fluid={yml.education.right_box.image.childImageSharp.fluid} alt="Cnn Logo"></BackgroundSection> */}
+            <Img className={`image`} fluid={yml.education.right_box.image.childImageSharp.fluid} alt="Cnn Logo"></Img>
+            {/* <RoundImage
               h_xs="40px"
               h_sm="40px"
               h_md="60px"
@@ -181,7 +189,7 @@ const Home = (props) => {
               width="100%"
               url={yml.education.right_box.image}
               bsize="contain"
-              position="50% 50%" />
+              position="50% 50%" /> */}
             {/* </Card> */}
           </Column>
         </Row>
@@ -430,17 +438,44 @@ export const query = graphql`
             education{
                 left_box{
                     heading
-                    image
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 200){
+                          ...GatsbyImageSharpFluid
+                        }
+                        fixed(width: 300, height: 60) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
                     alt
                 }
                 center_box{
                     heading
-                    image
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 200){
+                          ...GatsbyImageSharpFluid
+                        }
+                        fixed(width: 300, height: 60) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
                     alt
                 }
                 right_box{
                     heading
-                    image
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 200){
+                          ...GatsbyImageSharpFluid
+                        }
+                        fixed(width: 300, height: 60) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
                     alt
                 }
             }
@@ -482,7 +517,7 @@ export const query = graphql`
             why {
               title
               description
-              image
+              image 
               slug
               video
             }
