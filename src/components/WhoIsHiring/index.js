@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import {Column, Row, Divider} from '../../components/Sections'
 import {useStaticQuery, graphql} from 'gatsby';
-import {RoundImage, Colors} from '../Styling';
+import {RoundImage, Colors, BackgroundSection} from '../Styling';
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
 import {Card} from '../Card';
+import Img from "gatsby-image"
 
 const WhoIsHiring = props => {
   const partners = props.lang[0].node
@@ -25,7 +26,15 @@ const WhoIsHiring = props => {
             {partners.partners.images.map((partner, index) => (
               <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
                 <Card width="100%" padding="20px">
-                  <RoundImage
+                  {/* <Img className={`image`} fluid={partner.image.childImageSharp.fluid} alt="Cnn Logo"></Img> */}
+                  <BackgroundSection
+                    data={partner.image.childImageSharp.fluid}
+                    alt={partner.alt}
+                    height={`60px`}
+                    bgSize={`contain`}
+                    margin={`1rem`}
+                  ></BackgroundSection>
+                  {/* <RoundImage
                     h_xs="50px"
                     h_sm="70px"
                     h_md="80px"
@@ -38,7 +47,7 @@ const WhoIsHiring = props => {
                     position="center center"
 
                     backgroundColor="transparent"
-                  />
+                  /> */}
                 </Card>
               </Column>
             ))}
@@ -70,7 +79,14 @@ const WhoIsHiring = props => {
               {partners.coding.images.map((partner, index) => (
                 <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
                   <Card width="100%" padding="20px">
-                    <RoundImage
+                    <BackgroundSection
+                      data={partner.image.childImageSharp.fluid}
+                      alt={partner.alt}
+                      height={`60px`}
+                      margin={`1rem`}
+                      bgSize={`contain`}
+                    ></BackgroundSection>
+                    {/* <RoundImage
                       h_xs="50px"
                       h_sm="50px"
                       h_md="80px"
@@ -82,7 +98,7 @@ const WhoIsHiring = props => {
                       bsize="contain"
                       position="center"
                       backgroundColor="transparent"
-                    />
+                    /> */}
                   </Card>
                 </Column>
               ))}
@@ -102,7 +118,14 @@ const WhoIsHiring = props => {
                 {partners.influencers.images.map((partner, index) => (
                   <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
                     <Card width="100%" padding="20px">
-                      <RoundImage
+                      <BackgroundSection
+                        data={partner.image.childImageSharp.fluid}
+                        alt={partner.alt}
+                        height={`60px`}
+                        margin={`1rem`}
+                        bgSize={`contain`}
+                      ></BackgroundSection>
+                      {/* <RoundImage
                         h_xs="50px"
                         h_sm="50px"
                         h_md="80px"
@@ -113,7 +136,7 @@ const WhoIsHiring = props => {
                         border=".75rem"
                         bsize="contain"
                         position="center"
-                        backgroundColor="transparent" />
+                        backgroundColor="transparent" /> */}
                     </Card>
                   </Column>
                 ))}
@@ -132,7 +155,14 @@ const WhoIsHiring = props => {
                 {partners.financials.images.map((partner, index) => (
                   <Column size="4" customRespSize respSize="4" key={index} margin="5px 0">
                     <Card width="100%" padding="20px">
-                      <RoundImage
+                      <BackgroundSection
+                        data={partner.image.childImageSharp.fluid}
+                        alt={partner.alt}
+                        height={`60px`}
+                        margin={`1rem`}
+                        bgSize={`contain`}
+                      ></BackgroundSection>
+                      {/* <RoundImage
                         h_xs="50px"
                         h_sm="50px"
                         h_md="80px"
@@ -143,7 +173,7 @@ const WhoIsHiring = props => {
                         border=".75rem"
                         bsize="contain"
                         position="center"
-                        backgroundColor="transparent" />
+                        backgroundColor="transparent" /> */}
                     </Card>
                   </Column>
                 ))}

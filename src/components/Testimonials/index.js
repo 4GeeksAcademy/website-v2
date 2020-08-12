@@ -5,11 +5,13 @@ import {Carousel} from 'react-responsive-carousel';
 import {Card} from "../Card"
 import {H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {Row, Column, Wrapper, Divider} from '../Sections'
-import {Colors, RoundImage} from '../Styling'
+import {Colors, BackgroundSection} from '../Styling'
 import {Link} from 'gatsby';
+import Img from "gatsby-image"
 
 
 const Testimonials = (props) => {
+    console.log("PROPSTESTIMONIALS:", props)
     const [carouselHeight, setCarouselHeight] = useState("500px")
     const data = useStaticQuery(graphql`
               query myQueryTestimonials{
@@ -19,7 +21,17 @@ const Testimonials = (props) => {
                         testimonials {
                           student_name
                           testimonial_date
-                          student_thumb
+                          student_thumb{
+                            childImageSharp {
+                              fluid(maxWidth: 200){
+                                ...GatsbyImageSharpFluid
+                              }
+                              fixed(width: 200, height: 200) {
+                                ...GatsbyImageSharpFixed
+                              }
+                            }
+                          }
+                          alt
                           starts
                           content
                           source_url
@@ -48,14 +60,28 @@ const Testimonials = (props) => {
                         <Row align="center" padding="30px" key={i}>
                             <Card width="700px" >
                                 <Row align="center">
-                                    <RoundImage
+                                    {/* <Img
+                                        fixed={item.student_thumb.childImageSharp.fixed}
+                                        alt={item.alt}
+                                    >
+
+                                    </Img> */}
+                                    <BackgroundSection
+                                        data={item.student_thumb.childImageSharp.fluid}
+                                        alt={item.alt}
+                                        height={`200px`}
+                                        width={`200px`}
+                                        bgSize={`cover`}
+                                        className={`img-testimonials`}
+                                    ></BackgroundSection>
+                                    {/* <RoundImage
                                         url={item.student_thumb}
                                         bsize="cover"
                                         position="center center"
                                         width="200px"
                                         height="200px"
                                         border="50%"
-                                    />
+                                    /> */}
                                 </Row>
                                 <Divider height="10px" />
                                 <Row align="center" >

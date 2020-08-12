@@ -169,7 +169,16 @@ export const query = graphql`
           testimonials {
             student_name
             testimonial_date
-            student_thumb
+            student_thumb{
+              childImageSharp {
+                fluid(maxWidth: 200){
+                  ...GatsbyImageSharpFluid
+                }
+                fixed(width: 200, height: 200) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
             starts
             content
             source_url

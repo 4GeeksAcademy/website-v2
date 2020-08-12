@@ -10,17 +10,20 @@ sub_heading: ""
 why:
   - title: "Get a job in Tech"
     description: "Únete a cientos de personas graduadas trabajando en compañías tecnológicas top: Construcción de perfil, Marca personal, Simulacros de entrevistas, etc."
-    image: "/images/why1.png"
+    image: ../../../../static/images/why1.png
+    alt: ""
     video: "https://www.youtube.com/watch?v=sJrH4f7Df8g" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     slug: trabaja-en-tecnologia
   - title: "Financiamos tu carrera"
     description: "No pagues nada desde el día uno hasta conseguir curro como programador con Income Sharing Agreement(ISA)."
-    image: "/images/why2.png"
+    image: "../../../../static/images/why2.png"
+    alt: ""
     video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     slug: financiamos-tu-carrera
   - title: "Nunca programes solo otra vez"
     description: "Ilimitado y para siempre: Mentorías, ejercicios, chatroom permanente, salones de clase reales, incluso luego de conseguir trabajo."
-    image: "/images/why3.png"
+    image: "../../../../static/images/why3.png"
+    alt: ""
     video: "https://www.youtube.com/watch?v=oeX_ocy6zv4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     slug: nunca-programes-solo-otra-vez
 ## ***************************

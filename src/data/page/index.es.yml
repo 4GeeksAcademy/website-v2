@@ -6,10 +6,11 @@ meta_info:
   keywords: ""
   redirects: ["/home", "/es/home", "/es/inicio"]
 
-tagline: Coding Bootcamp
-title: APRENDE A PROGRAMAR Y OBTÉN APOYO PROFESIONAL DE POR VIDA
-sub_heading: Únete a más de 600 graduados que ya trabajan como programadores y forma parte de una de las comunidades de programación más grandes del mundo.
-image: "/home-bg.jpg"
+header:
+  tagline: Coding Bootcamp
+  title: APRENDE A PROGRAMAR Y OBTÉN APOYO PROFESIONAL DE POR VIDA
+  sub_heading: Únete a más de 600 graduados que ya trabajan como programadores y forma parte de una de las comunidades de programación más grandes del mundo.
+  image: "../../../static/images/main-bg.jpg"
 
 ## EDUCATION SECTION
 education:

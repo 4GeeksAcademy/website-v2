@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
-import {Colors} from '../../components/Styling'
+import {Colors, BackgroundSection} from '../../components/Styling'
 import {Device} from '../Responsive'
 import {Paragraph} from '../Heading'
 
@@ -230,23 +230,14 @@ ${props =>
                     border-radius: ${props.customBorderRadius};
                 `
     }
+    ${props =>
 
-${props =>
-        props.image === "yes"
-            ?
-            css`
-                background-image: url(${props => props.url});
-                background-size: ${props => props.backgroundSize};
-                background-position: ${props => props.bg_position};
-                background-repeat: no-repeat;
-                height: ${props => props.height};
-                
-    `
-            : props.image === "no"
-            &&
-            css`
+        props.image === "no"
+        &&
+        css`
                 background: ${props => props.color};
 `}
+
 
 ${props =>
         props.size
@@ -348,32 +339,68 @@ export const Wrapper = props => {
             <Container fluid>
                 <Row>
                     <Column size="1" />
-                    <Column
-                        size="11"
-                        image={props.image}
-                        url={props.url}
-                        border={props.border}
-                        customBorderRadius={props.customBorderRadius}
-                        color={props.color}
-                        align={props.align}
-                        height={props.height}
-                        backgroundSize={props.backgroundSize}
-                    >
-                        <Row>
-                            <Column size="1" />
-                            <Column
-                                size="9"
-                                image={props.outerImage}
-                                url={props.outerUrl}
-                                border={props.outerBorder}
-                                color={props.outerColor}
-                                align={props.outerAlign}
-                                height={props.height}
-                            >
-                                {props.children}
-                            </Column>
-                        </Row>
-                    </Column>
+                    {props.image === "yes" ?
+                        <Column
+                            size="11"
+                            image={props.image}
+                            url={props.url}
+                            border={props.border}
+                            customBorderRadius={props.customBorderRadius}
+                            color={props.color}
+                            align={props.align}
+                            height={props.height}
+                            backgroundSize={props.backgroundSize}
+                        ><BackgroundSection
+                            className={props.className}
+                            height={props.height}
+                            data={props.data}
+                            bgSize={props.bgSize}
+                            alt={props.alt}
+                        >
+                                <Row>
+                                    <Column size="1" />
+                                    <Column
+                                        size="9"
+                                        image={props.outerImage}
+                                        url={props.outerUrl}
+                                        border={props.outerBorder}
+                                        color={props.outerColor}
+                                        align={props.outerAlign}
+                                        height={props.height}
+                                    >
+                                        {props.children}
+                                    </Column>
+                                </Row>
+                            </BackgroundSection>
+                        </Column>
+                        :
+                        <Column
+                            size="11"
+                            image={props.image}
+                            url={props.url}
+                            border={props.border}
+                            customBorderRadius={props.customBorderRadius}
+                            color={props.color}
+                            align={props.align}
+                            height={props.height}
+                            backgroundSize={props.backgroundSize}
+                        >
+                            <Row>
+                                <Column size="1" />
+                                <Column
+                                    size="9"
+                                    image={props.outerImage}
+                                    url={props.outerUrl}
+                                    border={props.outerBorder}
+                                    color={props.outerColor}
+                                    align={props.outerAlign}
+                                    height={props.height}
+                                >
+                                    {props.children}
+                                </Column>
+                            </Row>
+                        </Column>
+                    }
                 </Row>
             </Container>
         )

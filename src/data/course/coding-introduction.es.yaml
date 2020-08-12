@@ -2,11 +2,15 @@ meta_info:
   slug: "introduccion-programacion"
   title: "Curso de introducción a la programación - 4Geeks Academy"
   description: "Learn to code in just a couple of weeks. Ideal get you introduced in the world of coding."
-  image: "/images/program-bg.png"
+  image: ""
   keywords: "introducción a la programación, aprender a programar"
   redirects: ["/introduccion-programacion-codigo"]
 
-tagline: "Curso de introducción a la programación - 4Geeks Academy"
+header:
+  tagline: "Curso de introducción a la programación - 4Geeks Academy"
+  image: "../../../static/images/program-bg.png"
+  alt: ""
+
 button:
   syllabus_button_text: "REQUEST SYLLABUS"
   syllabus_submit_text: "SUBMIT"

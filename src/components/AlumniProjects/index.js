@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, Address, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage} from '../Styling';
+import {Colors, Address, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage, BackgroundSection} from '../Styling';
 import {Card} from '../Card';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -24,8 +24,16 @@ const AlumniProjects = props => {
                 projects {
                     project_name
                     slug
-                    image
-                    image_alt
+                    project_image{
+                        image {
+                            childImageSharp {
+                              fluid(maxWidth: 800){
+                                ...GatsbyImageSharpFluid
+                              }
+                            }
+                          } 
+                        image_alt
+                    }
                     project_content
                     project_video
                     live_link
@@ -203,14 +211,24 @@ const AlumniProjects = props => {
                                                     size="6"
                                                     customRespSize
                                                     respSize="6"
-                                                    alignSelf="center"
-                                                    image="yes"
-                                                    url={item.image}
-                                                    backgroundSize="cover"
-                                                    bg_position="center center"
-                                                    height="100%"
-                                                    border="custom"
-                                                    customBorderRadius="0 1.25rem 1.25rem 0" >
+                                                    paddingRight={`0`}
+                                                // alignSelf="center"
+                                                // image="yes"
+                                                // url={item.project_image.image}
+                                                // backgroundSize="cover"
+                                                // bg_position="center center"
+                                                // height="100%"
+                                                // border="custom"
+                                                // customBorderRadius="0 1.25rem 1.25rem 0" 
+                                                >
+                                                    <BackgroundSection
+                                                        className={`image`}
+                                                        height={`500px`}
+                                                        data={item.project_image.image.childImageSharp.fluid}
+                                                        bgSize={`cover`}
+                                                        alt="Cnn Logo"
+                                                        borderRadius={`0 0 0 1.25rem`}
+                                                    />
                                                 </Column>
                                                 :
                                                 <Column size="6" paddingRight={`0`}>
@@ -218,7 +236,7 @@ const AlumniProjects = props => {
                                                         className='react-player alumni-player'
                                                         file={{forceVideo: true}}
                                                         style={{height: props.playerHeight}}
-                                                        light={item.image}
+                                                        light={item.project_image.image}
                                                         controls={true}
                                                         url={item.project_video}
                                                         width='100%'
@@ -241,25 +259,13 @@ const AlumniProjects = props => {
                         alumniData.projects.map((project, i) => {
                             return (
                                 <Column key={i} size="2" customRespSize respSize="2" padding="0 25px" onClick={() => setSlideIndex(i)}>
-                                    <RoundImage
-                                        h_xs="40px"
-                                        h_sm="70px"
-                                        h_md="60px"
-                                        h_lg="80px"
-                                        h_xl="90px"
-                                        width="100%"
-                                        br_xs=".25rem"
-                                        br_sm=".25rem"
-                                        br_md=".25rem"
-                                        br_lg=".25rem"
-                                        br_xl=".25rem"
-                                        url={project.image}
-                                        border=".75rem"
-                                        bsize="cover"
-                                        position="center"
-                                        height="100%"
-                                        // width="auto"
-                                        mb="1.25rem">
+                                    <BackgroundSection
+                                        className={`img-thumbs`}
+                                        height={`40px`}
+                                        data={project.project_image.image.childImageSharp.fluid}
+                                        bgSize={`cover`}
+                                        alt={project.project_image.image_alt}
+                                    >
                                         <Row height="100%" align="around">
                                             <Column size="12" alignSelf="center" align="center">
                                                 <H4
@@ -274,8 +280,7 @@ const AlumniProjects = props => {
                                                 </H4>
                                             </Column>
                                         </Row>
-
-                                    </RoundImage>
+                                    </BackgroundSection>
                                 </Column>
                             )
                         })}

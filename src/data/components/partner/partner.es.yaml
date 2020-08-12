@@ -13,47 +13,58 @@ partners:
   images:
     - name: "Razz"
       slug: "razz"
-      image: "/razz-logo.png"
+      image: "../../../../static/razz-logo.png"
+      alt: ""
       featured: false
     - name: "Boats Group"
       slug: "boats-group"
-      image: "/boats-logo.jpg"
+      image: "../../../../static/boats-logo.jpg"
+      alt: ""
       featured: false
     - name: "Gaisce Group "
       slug: "gaisce-group"
-      image: "/gaisce-logo.jpg"
+      image: "../../../../static/gaisce-logo.jpg"
+      alt: ""
       featured: false
     - name: "Tcg"
       slug: "tcg"
-      image: "/tcg-logo.png"
+      image: "../../../../static/tcg-logo.png"
+      alt: ""
       featured: false
     - name: "Launch Potato"
       slug: "launch-potato"
-      image: "/launch-logo.png"
+      image: "../../../../static/launch-logo.png"
+      alt: ""
       featured: false
     - name: "DS9"
       slug: "ds9"
-      image: "/ds9-logo.png"
+      image: "../../../../static/ds9-logo.png"
+      alt: ""
       featured: false
     - name: "Overseas"
       slug: "overseas"
-      image: "/overseas-logo.png"
+      image: "../../../../static/overseas-logo.png"
+      alt: ""
       featured: false
     - name: "Affinity"
       slug: "affinity"
-      image: "/affinity-logo.png"
+      image: "../../../../static/affinity-logo.png"
+      alt: ""
       featured: false
     - name: "Digitel"
       slug: "digitel"
-      image: "/digitel-logo.png"
+      image: "../../../../static/digitel-logo.png"
+      alt: ""
       featured: false
     - name: "Bod"
       slug: "bod"
-      image: "/bod-logo.jpg"
+      image: "../../../../static/bod-logo.jpg"
+      alt: ""
       featured: false
     - name: "Coinet"
       slug: "coinet"
-      image: "/coinet-logo.jpg"
+      image: "../../../../static/coinet-logo.jpg"
+      alt: ""
       featured: false
 coding:
   tagline: "LAS COMPAÑÍAS CONFÍAN Y CONTRATAN A NUESTROS ESTUDIANTES"
@@ -61,31 +72,38 @@ coding:
   images:
     - name: "Beacon"
       slug: "beacon"
-      image: "/images/coding/beacon.png"
+      image: "../../../../static/images/coding/beacon.png"
+      alt: ""
       featured: false
     - name: "Blockchain"
       slug: "blockchain"
-      image: "/images/coding/blockchain.png"
+      image: "../../../../static/images/coding/blockchain.png"
+      alt: ""
       featured: false
     - name: "Bloktech"
       slug: "bloktech"
-      image: "/images/coding/bloktech.png"
+      image: "../../../../static/images/coding/bloktech.png"
+      alt: ""
       featured: false
     - name: "Startup"
       slug: "startup"
-      image: "/images/coding/startup.png"
+      image: "../../../../static/images/coding/startup.png"
+      alt: ""
       featured: false
     - name: "Shell Hacks"
       slug: "shell-hacks"
-      image: "/images/coding/shell-hacks.png"
+      image: "../../../../static/images/coding/shell-hacks.png"
+      alt: ""
       featured: false
     - name: "Wegacha"
       slug: "wegacha"
-      image: "/images/coding/wegacha.png"
+      image: "../../../../static/images/coding/wegacha.png"
+      alt: ""
       featured: false
     - name: "Worldcamp"
       slug: "worldcamp"
-      image: "/images/coding/worldcamp.png"
+      image: "../../../../static/images/coding/worldcamp.png"
+      alt: ""
       featured: false
 influencers:
   tagline: "EN ASOCIACIÓN CON LOS MÁS INFLUYENTES DE LA CIUDAD"
@@ -93,27 +111,33 @@ influencers:
   images:
     - name: "Quotanda"
       slug: "quotanda"
-      image: "/images/quotanda-logo.png"
+      image: "../../../../static/images/quotanda-logo.png"
+      alt: ""
       featured: false
     - name: "Climb"
       slug: "climb"
-      image: "/images/climb-logo.png"
+      image: "../../../../static/images/climb-logo.png"
+      alt: ""
       featured: false
     - name: "Skill Fund"
       slug: "skill-fund"
-      image: "/images/skill-logo.png"
+      image: "../../../../static/images/skill-logo.png"
+      alt: ""
       featured: false
     - name: "Dda"
       slug: "dda"
-      image: "/images/influencers/dda.png"
+      image: "../../../../static/images/influencers/dda.png"
+      alt: ""
       featured: false
     - name: "Miami Dade"
       slug: "miami-dade"
-      image: "/images/influencers/miami-dade.png"
+      image: "../../../../static/images/influencers/miami-dade.png"
+      alt: ""
       featured: false
     - name: "Career Score"
       slug: "career-score"
-      image: "/images/influencers/career-score.png"
+      image: "../../../../static/images/influencers/career-score.png"
+      alt: ""
       featured: false
 financials:
   tagline: "INMERSOS EN EL ECOSISTEMA DE PROGRAMACIÓN DE LA CIUDAD"
@@ -121,13 +145,16 @@ financials:
   images:
     - name: "Quotanda"
       slug: "quotanda"
-      image: "/images/quotanda-logo.png"
+      image: "../../../../static/images/quotanda-logo.png"
+      alt: ""
       featured: false
     - name: "Climb"
       slug: "climb"
-      image: "/images/climb-logo.png"
+      image: "../../../../static/images/climb-logo.png"
+      alt: ""
       featured: false
     - name: "Skill Fund"
       slug: "skill-fund"
-      image: "/images/skill-logo.png"
+      image: "../../../../static/images/skill-logo.png"
+      alt: ""
       featured: false

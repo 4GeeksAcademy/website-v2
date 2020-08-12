@@ -1,11 +1,13 @@
 import React from 'react';
 import {Title, H4, Paragraph} from '../Heading'
 import {Column, Row, Divider} from '../Sections'
-import {Address, HandMoney, Laptop, Colors, RoundImage} from '../Styling'
+import {Address, HandMoney, Laptop, Colors, BackgroundSection} from '../Styling'
 import ReactPlayer from 'react-player'
+import StyledBackgroundSection from '../Styling'
 
 export default (props) => {
   const info = props.lang[0].node;
+  console.log("**INFO:", info)
   return (
     <>
       <Title
@@ -27,18 +29,26 @@ export default (props) => {
                 height='250px'
               />
               :
-              <RoundImage
-                url={i.image}
-                bsize="cover"
-                mb="10px"
-                border="1.25rem"
-                position="center center"
-                h_xs="230px"
-                h_sm="230px"
-                h_md="230px"
-                h_lg="230px"
-                h_xl="230px"
-              />
+              <BackgroundSection
+                data={i.image.childImageSharp.fluid}
+                alt={i.alt}
+                height={`250px`}
+                bgSize={`cover`}
+                borderRadius={`1.25rem`}
+                className={`img-border`}
+              ></BackgroundSection>
+              // <RoundImage
+              //   url={i.image}
+              //   bsize="cover"
+              //   mb="10px"
+              //   border="1.25rem"
+              //   position="center center"
+              //   h_xs="230px"
+              //   h_sm="230px"
+              //   h_md="230px"
+              //   h_lg="230px"
+              //   h_xl="230px"
+              // />
 
             }
             <Row align="around" marginTop="20px">
@@ -67,6 +77,7 @@ export default (props) => {
           </Column>
         ))}
       </Row>
+      {/* <StyledBackgroundSection test={info.why[0].image} /> */}
     </>
   )
 }

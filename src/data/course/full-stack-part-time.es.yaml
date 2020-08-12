@@ -2,12 +2,15 @@ meta_info:
   slug: desarrollo-web-full-stack-bootcamp-part-time
   title: ""
   description: null
-  image: "/bg/bg-pr.jpg"
+  image: ""
   keywords: ""
   redirects:
     ["/part-time", "/programa", "/es/part-time", "/es/course/part-time"]
 
-tagline: "FULL STACK DEVELOPER"
+header:
+  tagline: "FULL STACK DEVELOPER"
+  image: "../../../static/bg/bg-pr.jpg"
+  alt: ""
 button:
   syllabus_button_text: "REQUEST SYLLABUS"
   syllabus_submit_text: "SUBMIT"

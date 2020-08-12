@@ -10,6 +10,7 @@ import {beHiringPartner} from "../actions";
 import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import LeadForm from "../components/LeadForm/index.js";
+import Img from "gatsby-image"
 
 const Input = styled.input`
     background-color:${Colors.lightGray};
@@ -62,22 +63,26 @@ const Partners = (props) => {
   };
   return (
     <>
+      {/* <Img className={`image`} fluid={yml.image.childImageSharp.fluid} alt="Florida Education Logo"></Img> */}
+
       <Wrapper
         style="default"
+        data={yml.header.image.childImageSharp.fluid}
         image="yes"
-        url={yml.image}
-        border="bottom"
-        height="500px"
+        className={`img-header`}
+        height={`500px`}
+        bgSize={`cover`}
+        alt={yml.header.alt}
       >
         <Divider height="100px" />
         <Title
           size="5"
-          title={yml.tagline}
+          title={yml.header.tagline}
           main
           color={Colors.white}
           fontSize="46px"
           textAlign="center"
-          paragraph={yml.sub_heading}
+          paragraph={yml.header.sub_heading}
           paragraphColor={Colors.white}
           fontFamily="Lato-bold, sans-serif"
         />
@@ -143,16 +148,24 @@ export const query = graphql`
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            tagline
-            sub_heading
-            
-            image
             meta_info{
                 slug
                 title
                 description
                 image
                 keywords
+            }
+            header{
+              tagline
+              sub_heading
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 1200){
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              alt
             }
             button_section{
                 button_text
@@ -182,7 +195,14 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline
@@ -192,7 +212,14 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline
@@ -202,7 +229,14 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline
@@ -212,7 +246,14 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline

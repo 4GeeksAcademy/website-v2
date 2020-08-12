@@ -27,6 +27,7 @@ const Home = (props) => {
   return (
     <>
       <Container fluid >
+        {/* <Img className={`image`} fluid={yml.image.childImageSharp.fluid} alt="Florida Education Logo"></Img> */}
         <Row>
           <Column size="1" />
           <Column size="11" >
@@ -36,7 +37,7 @@ const Home = (props) => {
                 <Divider height="100px" />
                 <Row  >
                   <Column size="10" customRespSize respSize="10">
-                    <H1 textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.tagline}</H1>
+                    <H1 textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header.tagline}</H1>
                   </Column>
                 </Row>
                 <Row>
@@ -53,12 +54,12 @@ const Home = (props) => {
                       fs_lg="32px"
                       fs_xl="38px"
                       // primary
-                      align="left" >{yml.title}<Span animated color={Colors.yellow}>_</Span></H2>
+                      align="left" >{yml.header.title}<Span animated color={Colors.yellow}>_</Span></H2>
                   </Column>
                 </Row>
                 <Row RespSm>
                   <Column size="10" customRespSize respSize="10">
-                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.sub_heading}</Paragraph>
+                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.header.sub_heading}</Paragraph>
                   </Column>
                 </Row>
 
@@ -72,11 +73,20 @@ const Home = (props) => {
               <Column
                 size="5"
                 border="bottom"
-                padding="20%"
-                image="yes"
-                url={yml.image}
+                // padding="20%"
+                // image="yes"
+                // url={yml.header.image}
                 height="500px"
-                backgroundSize="cover">
+              // backgroundSize="cover"
+              >
+                <BackgroundSection
+                  className={`image`}
+                  height={`500px`}
+                  data={yml.header.image.childImageSharp.fluid}
+                  bgSize={`cover`}
+                  alt="Cnn Logo"
+                  borderRadius={`0 0 0 1.25rem`}
+                />
               </Column>
             </Row>
           </Column>
@@ -409,10 +419,22 @@ export const query = graphql`
                 image
                 keywords
             }
-            tagline
-            title
-            sub_heading
-            image
+            header{
+              tagline
+              title
+              sub_heading
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 1200){
+                    ...GatsbyImageSharpFluid
+                  }
+                  fixed(width: 300, height: 60) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
+            }
+            
             geeks_vs_others{
                 heading
                 sub_heading
@@ -440,7 +462,7 @@ export const query = graphql`
                     heading
                     image {
                       childImageSharp {
-                        fluid(maxWidth: 200){
+                        fluid(maxWidth: 300){
                           ...GatsbyImageSharpFluid
                         }
                         fixed(width: 300, height: 60) {
@@ -454,7 +476,7 @@ export const query = graphql`
                     heading
                     image {
                       childImageSharp {
-                        fluid(maxWidth: 200){
+                        fluid(maxWidth: 300){
                           ...GatsbyImageSharpFluid
                         }
                         fixed(width: 300, height: 60) {
@@ -468,7 +490,7 @@ export const query = graphql`
                     heading
                     image {
                       childImageSharp {
-                        fluid(maxWidth: 200){
+                        fluid(maxWidth: 300){
                           ...GatsbyImageSharpFluid
                         }
                         fixed(width: 300, height: 60) {
@@ -517,7 +539,17 @@ export const query = graphql`
             why {
               title
               description
-              image 
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 300){
+                    ...GatsbyImageSharpFluid
+                  }
+                  fixed(width: 300, height: 60) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
+              alt
               slug
               video
             }
@@ -579,7 +611,14 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
               }
@@ -587,7 +626,14 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline
@@ -597,7 +643,14 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline
@@ -607,7 +660,14 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline
@@ -662,7 +722,16 @@ export const query = graphql`
                 testimonials {
                   student_name
                   testimonial_date
-                  student_thumb
+                  student_thumb{
+                    childImageSharp {
+                      fluid(maxWidth: 200){
+                        ...GatsbyImageSharpFluid
+                      }
+                      fixed(width: 200, height: 200) {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
                   starts
                   content
                   source_url

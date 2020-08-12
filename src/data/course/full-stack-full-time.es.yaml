@@ -2,12 +2,16 @@ meta_info:
   slug: desarrollo-web-full-stack-bootcamp-full-time
   title: ""
   description: null
-  image: "/images/program-bg.png"
+  image: ""
   keywords: ""
   redirects:
     ["/curso/full-time", "full-time", "/es/full-time", "/es/course/full-time"]
 
-tagline: "FULL STACK DEVELOPER"
+header:
+  tagline: "FULL STACK DEVELOPER"
+  image: "../../../static/images/program-bg.png"
+  alt: ""
+
 button:
   syllabus_button_text: "REQUEST SYLLABUS"
   syllabus_submit_text: "SUBMIT"
@@ -99,31 +103,31 @@ typical:
   schedule:
     - title: "Meditation"
       time: "8:00 AM"
-      icon: Circle
+      icon: circle
       content: "You will spend hundreds of hours coding; your body needs to relax, stretch and get ready for a thrilling day!"
-    - title: "Setup and Coffee"
+    - title: "Setup and coffee"
       time: "8:45 AM"
-      icon:
+      icon: circle
       content: "The bootcamp starts at 9 am, take some coffee to recharge your energies and get ready to learn!"
     - title: "Review Last Day"
       time: "9:00 AM"
-      icon:
+      icon: circle
       content: "Review last day & weekend activities, Q&A. And brief overall of what we have addressed."
     - title: "Lesson Time"
       time: "10:00 AM"
-      icon: Coffee
+      icon: LaptopCode
       content: "Incremental: Each morning mentors will introduce a small set of new concepts and techniques that will help you along the way."
     - title: "Lunch Time"
       time: "12:40 PM"
-      icon: Coffee
+      icon: coffee
       content: "Recharge your batteries, get ready to spend the rest of the day practicing, solving challenges and projects."
     - title: "Projects and Exercises"
       time: "2:00 PM"
-      icon: Coffee
+      icon: coffee
       content: "You will be continuously challenged with real-life projects and exercises to deliver."
     - title: "Collaborative Coding"
       time: "5:00 PM"
-      icon: Coffee
+      icon: coffee
       content: "All students will code in a single screen, discuss approaches, strategies and deliver the projects."
 
 ## ALUMNI SECTION

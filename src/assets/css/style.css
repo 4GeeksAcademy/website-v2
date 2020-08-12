@@ -11,6 +11,18 @@ html, body
 .image{
     width: 100%;
 }
+.img-border::before{
+    border-radius: 1.25rem;
+}
+.img-testimonials::before{
+    border-radius: 50%;
+}
+.img-header::before{
+    border-radius: 0 0 0 1.25rem;
+}
+.img-thumbs::before{
+    border-radius: .25rem;
+}
 .MuiStepButton-root {
     width: 100%;
     padding: 24px 17px!important;
