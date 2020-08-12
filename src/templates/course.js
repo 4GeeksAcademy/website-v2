@@ -15,6 +15,7 @@ import Credentials from '../components/Credentials'
 import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
 import ProgramSelector from '../components/ProgramSelector'
+import TypicalDay from '../components/TypicalDay';
 import ToggleButton from '../components/ToggleButton'
 import {requestSyllabus} from "../actions";
 // import {makeStyles} from '@material-ui/core/styles';
