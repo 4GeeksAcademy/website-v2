@@ -2,7 +2,8 @@ lang: "us"
 testimonials:
   - student_name: "Azul Botaya"
     testimonial_date: ""
-    student_thumb: "/testimonials/azul-botaya.jpg"
+    student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
+    alt: ""
     starts: 1
     source_url: ""
     source_url_text: ""
@@ -17,7 +18,8 @@ testimonials:
   - student_name: "Naila Kaliyeva"
     testimonial_date: ""
     source_link: ""
-    student_thumb: "/testimonials/naila-kaliyeva.jpg"
+    student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
+    alt: ""
     starts: 1
     source_url: ""
     source_url_text: ""
@@ -30,7 +32,8 @@ testimonials:
       so we can work any time that is convenient for us. Thank you, 4Geeks!!
   - student_name: "Samir Benzada"
     testimonial_date: ""
-    student_thumb: "/testimonials/samir-benzada.jpg"
+    student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
+    alt: ""
     starts: 1
     source_url: ""
     source_url_text: ""
@@ -41,7 +44,8 @@ testimonials:
       the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
   - student_name: "Charles Fabricius"
     testimonial_date: ""
-    student_thumb: "/testimonials/charles-fabricius.jpg"
+    student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
+    alt: ""
     starts: 1
     source_url: ""
     source_url_text: ""
@@ -55,7 +59,8 @@ testimonials:
 
   - student_name: "Fernando Funez"
     testimonial_date: ""
-    student_thumb: "/testimonials/fernando-funez.jpg"
+    student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
+    alt: ""
     starts: 1
     source_url: ""
     source_url_text: ""
@@ -66,7 +71,8 @@ testimonials:
       zero to hero in 10 weeks and start developing your own apps.
   - student_name: "Salvador Desravines"
     testimonial_date: ""
-    student_thumb: "/testimonials/salvador-desravines.jpg"
+    student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
+    alt: ""
     starts: 1
     source_url: ""
     source_url_text: ""
@@ -76,7 +82,8 @@ testimonials:
       If you can stick with it and follow what the teachers are teaching you, you will succeed.
   - student_name: "Jorge Montes"
     testimonial_date: ""
-    student_thumb: "/testimonials/jorge-montes.jpg"
+    student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
+    alt: ""
     starts: 1
     source_url: ""
     source_url_text: ""
@@ -86,7 +93,8 @@ testimonials:
       everyone.
   - student_name: "Fidel Rosell"
     testimonial_date: ""
-    student_thumb: "/testimonials/fidel-rosell.jpg"
+    student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
+    alt: ""
     starts: 1
     source_url: ""
     source_url_text: ""
