@@ -10,20 +10,23 @@ sub_heading: ""
 why:
   - title: "Get a job in Tech"
     description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
-    image: "/images/why1.png"
-    video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    image: ../../../../static/images/why1.png
+    alt: ""
+    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     slug: job-in-tech
   - title: "We finance your career"
     description: "Don't pay anything from day one until you finally get a coding job with our Income Sharing Agreement(ISA)."
-    image: "/images/why2.png"
+    image: "../../../../static/images/why2.png"
+    alt: ""
     video: "https://www.youtube.com/watch?v=sJrH4f7Df8g" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     slug: finance-your-career
   - title: "Never code alone again"
     description: "Limitless and forever: Mentorships, exercises, permanent chatroom, real classrooms, even after you get your job."
-    image: "/images/why3.png"
+    image: "../../../../static/images/why3.png"
+    alt: ""
     video: "https://www.youtube.com/watch?v=mYgJ6cOxgJs" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     slug: never-code-alone-again
-
 ## ***************************
 ## BELOW SOME AVAILABLE VIDEOS
 ## ***************************
