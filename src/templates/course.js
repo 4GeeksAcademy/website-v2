@@ -409,10 +409,10 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
     </Wrapper>
 
-    {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
+    {/* {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
       <TypicalDay data={yml.typical} />
 
-      : null}
+      : null} */}
 
     <Divider height="100px" />
     <Wrapper
