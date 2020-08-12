@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
 import {Device} from '../Responsive';
 import {Paragraph} from '../Heading';
+import BackgroundImage from 'gatsby-background-image'
+import {graphql, StaticQuery} from 'gatsby'
 // COLORS SET
 
 export const Colors = {
@@ -239,7 +241,71 @@ export const Span = styled.div`
         opacity: ${props => props.opacity};
       }
 `
+export const BackgroundSection = ({children, className, data, height, width, bgSize, borderRadius, margin}) => {
+    console.log("TTTTTT: ", data)
+    return (
+        <BackgroundImage
+            Tag="div"
+            className={className}
+            fluid={data}
+            style={{
+                // Defaults are overwrite-able by setting one or each of the following:
+                backgroundSize: bgSize,
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat',
+                height: height,
+                width: width,
+                margin: margin,
+            }}
 
+        >
+            {children}
+        </BackgroundImage>
+    )
+
+
+}
+const StyledBackgroundSection = styled(BackgroundSection)`
+
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+  `
+// const BackgroundSection = ({className, test}) => (
+
+//     < StaticQuery
+//         query={graphql`
+//         query {
+//           desktop: file(relativePath: { eq: "images/alumni-bg.png" }) {
+//             childImageSharp {
+//               fluid(quality: 90, maxWidth: 1920) {
+//                 ...GatsbyImageSharpFluid_withWebp
+//               }
+//             }
+//           }
+//         }
+//       `}
+//         render={data => {
+//             // Set ImageData.
+//             const imageData = data.desktop.childImageSharp.fluid
+//             return (
+//                 <BackgroundImage
+//                     Tag="section"
+//                     className={className}
+//                     fluid={test}
+//                     backgroundColor={`#040e18`}
+//                 >
+//                     <h2>gatsby-background-image</h2>
+//                 </BackgroundImage>
+//             )
+//         }}
+//     />
+// )
+
+
+export default StyledBackgroundSection
 
 const SmartButton = ({children, colorHover, textColor, borderRadius, ...rest}) => <button {...rest}>{children}</button>;
 export const Button = styled(SmartButton)`
