@@ -31,6 +31,7 @@ import {Input, Alert} from '../components/Form';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
 import Svg from "../components/Svg/index";
+import TypicalDay from '../components/TypicalDay';
 
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
@@ -179,329 +180,275 @@ const Program = ({data, pageContext, yml}) => {
         && null
   }
   return (<>
-    <div className={test}
+    {/* <div className={test}> */}
+
+    <Wrapper
+      style="default"
+      data={yml.header.image.childImageSharp.fluid}
+      image="yes"
+      className={`img-header`}
+      height={`600px`}
+      bgSize={`cover`}
+      alt={yml.header.alt}
     >
+      <Divider height="20%" />
+      <ProgramSelector week={week} lang={data.allLocationYaml.edges} context={pageContext} />
+      <Divider height="20px" />
+      <Title
+        size="5"
+        title={yml.header.tagline}
+        main
+        color={Colors.white}
+        fontSize="46px"
+        textAlign="center"
 
-      <Wrapper
-        style="default"
-        image="yes"
-        url={yml.meta_info.image}
-        border="bottom"
-        height="600px"
-        backgroundSize="cover"
-      >
-        <Divider height="20%" />
-        <ProgramSelector week={week} lang={data.allLocationYaml.edges} context={pageContext} />
-        <Divider height="20px" />
-        <Title
-          size="5"
-          title={yml.tagline}
-          main
-          color={Colors.white}
-          fontSize="46px"
-          textAlign="center"
-
-        />
-        <Row align="center">
-          <Column align="right" size="6"><Link to={yml.button.apply_button_link}><Button width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button></Link></Column>
-          <Column align="left" size="6">
-            <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
-          </Column>
-        </Row>
-        <Modal
-          aria-labelledby="simple-modal-title"
-          aria-describedby="simple-modal-description"
-          open={open}
-          onClose={handleClose}
-        >
-          <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
-        </Modal>
-      </Wrapper>
-      <Wrapper
-        style="default">
-
-        <Credentials up="60" lang={data.allCredentialsYaml.edges} />
-      </Wrapper>
-      <Sidebar
-        shadow
-        borders=".5rem"
-        display_xs="none"
-        display_sm="none"
-        display_md="none"
-      >
-        <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active ">
-          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
-          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
-          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
-          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
-          <li className="scroll_li"><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
-        </Scrollspy>
-      </Sidebar>
-
-      {/* GEEKPAL && GEEKFORCE SECTION */}
-      {/* ---------------------------- */}
-
-      <section className="section" id="section-1"></section>
-      <Container fluid>
-        <Row>
-          <Column size="2">
-          </Column>
-          <Column size="8">
-            <Row >
-              <Column size="6" >
-                <Card
-                  h_xs="400px"
-                  h_sm="370px"
-                  h_md="470px"
-                  h_lg="470px"
-                  h_xl="470px"
-                  padding="20px"
-                  shadow height="400px"
-                  width="100%"
-                  margin="10px 0px"
-                  move="up"
-                  up="100px">
-                  <Row height="100%">
-                    <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                      <Div flexDirection={`column`} height={`20%`} justifyContent={`space-between`}>
-                        <Row marginLeft="0px" height={`70%`} >
-                          <RoundImage url="/images/geekpal.png" bsize="contain" height="100%" position="left" />
-                        </Row>
-                        <Row height={`20%`}>
-                          <Column size="12">
-                            <Paragraph
-                              fs_xs="10px"
-                              fs_sm="10px"
-                              fs_md="11px"
-                              fs_lg="12px"
-                              fs_xl="16px"
-                              color={Colors.black}
-                              customTextAlignSmall
-                              alignXs="left">
-                              {geek.geek_data.geek_pal_heading}
-                            </Paragraph>
-                          </Column>
-                        </Row>
-                      </Div>
-                      <Div flexDirection={`column`} height={`80%`} justifyContent={`space-between`}>
-                        <Row marginTop="15px" height={`100%`}>
-                          <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
-                            {geek.geek_data.geek_pal.map((pal, index) => {
-                              return (
-                                <Row key={index} marginBottom="4px">
-                                  <Column size="1" customRespSize respSize="1" alignSelf="center">
-                                    <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
-                                  </Column>
-                                  <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                                    <Paragraph
-                                      fs_xs="10px"
-                                      fs_sm="10px"
-                                      fs_md="12px"
-                                      fs_lg="12px"
-                                      fs_xl="14px"
-                                      color={Colors.gray}>{pal}</Paragraph>
-                                  </Column>
-                                </Row>
-                              )
-                            })}
-                          </Column>
-                        </Row>
-                      </Div>
-                    </Column>
-                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
-                      <Link to={`/${pageContext.lang}/geekpal`}>
-                        <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
-                      </Link>
-                    </Column>
-                  </Row>
-                </Card>
-              </Column>
-              <Column size="6">
-                <Card
-                  h_xs="400px"
-                  h_sm="400px"
-                  h_md="470px"
-                  h_lg="470px"
-                  h_xl="470px"
-                  padding="20px"
-                  shadow
-                  height="400px"
-                  width="100%"
-                  margin="10px 0px"
-                  move="up"
-                  up="100px">
-                  <Row height="100%">
-                    <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                      <Div flexDirection={`column`} height={`20%`}>
-                        <Row marginLeft="0px" height={`70%`}>
-                          <RoundImage url="/images/geekforce.png" bsize="contain" height="100%" position="left" />
-                        </Row>
-                        <Row height={`20%`}>
-                          <Column size="12">
-                            <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
-                              alignXs="left">
-                              {geek.geek_data.geek_force_heading}
-                            </Paragraph>
-                          </Column>
-                        </Row>
-                      </Div>
-                      <Div flexDirection={`column`} height={`80%`} justifyContent={`space-between`}>
-                        <Row marginTop="15px" height={`100%`}>
-                          <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
-                            {geek.geek_data.geek_force.map((pal, index) => {
-                              return (
-                                <Row key={index} marginBottom="2px" >
-                                  <Column size="1" customRespSize respSize="1" alignSelf="center">
-                                    <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
-                                  </Column>
-                                  <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                                    <Paragraph fs_xs="10px"
-                                      fs_sm="10px"
-                                      fs_md="11px"
-                                      fs_lg="12px"
-                                      fs_xl="14px" color={Colors.gray}>{pal}</Paragraph>
-                                  </Column>
-                                </Row>
-                              )
-                            })}
-                          </Column>
-                        </Row>
-                      </Div>
-                    </Column>
-                    <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
-                      <Link to={`/${pageContext.lang}/geekforce`}>
-                        <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
-                      </Link>
-                    </Column>
-                  </Row>
-                </Card>
-              </Column>
-            </Row>
-          </Column>
-        </Row>
-      </Container>
-      {/* </Wrapper> */}
-      <Divider height="100px" />
-
-      {/* PROGRAM DETAILS */}
-      {/* --------------- */}
-      <ProgramDetails details={yml.details} />
-      {/* SVG  START*/}
-      <Divider height="100px" />
-      <Row height="100%">
-        <Column size="12">
-          <Svg />
+      />
+      <Row align="center">
+        <Column align="right" size="6"><Link to={yml.button.apply_button_link}><Button width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button></Link></Column>
+        <Column align="left" size="6">
+          <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
         </Column>
       </Row>
-      {/* SVG  END*/}
-      <Divider height="100px" />
-      <Wrapper
-        style="default"
+      <Modal
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        open={open}
+        onClose={handleClose}
       >
-        <section className="section" id="section-3"></section>
-        <Title
-          size="10"
-          title={yml.geeks_vs_others.heading}
-          paragraph={yml.geeks_vs_others.sub_heading}
-          primary
-        />
-        <Divider height="50px" />
-        <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
-        <Divider height="100px" />
-      </Wrapper>
-      <Wrapper
-        style="default"
-      >
+        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
+      </Modal>
+    </Wrapper>
+    <Wrapper
+      style="default">
 
+      <Credentials up="60" lang={data.allCredentialsYaml.edges} />
+    </Wrapper>
+    <Sidebar
+      shadow
+      borders=".5rem"
+      display_xs="none"
+      display_sm="none"
+      display_md="none"
+    >
+      <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active ">
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
+      </Scrollspy>
+    </Sidebar>
 
-        <Title
-          size="10"
-          title={yml.prices.heading}
-          paragraph={yml.prices.sub_heading}
-          primary
-        />
-        <section className="section" id="section-4"></section>
-        <PricesAndPayment type={pageContext.slug} lang={data.allLocationYaml.edges} />
-        <Divider height="100px" />
-      </Wrapper>
+    {/* GEEKPAL && GEEKFORCE SECTION */}
+    {/* ---------------------------- */}
 
-      {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ? <Wrapper style="default">
-        <Row align="center">
-          <Title
-            size="10"
-            title={yml.typical.heading}
-            paragraph={yml.typical.sub_heading}
-            primary
-          />
-          <Divider height="50px" />
-          <Column size="8" customRespSize respSize="12">
-            <Row height="250px" align="center">
-              <Column size="9" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="30%" align="center">
-                  <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
-                    {steps.map((label, index) => (
-                      <Step key={label}>
-                        <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
-                          <StepLabel StepIconComponent={ColorlibStepIcon}>
-                            <Paragraph
-                              fs_xs="10px"
-                              fs_sm="10px"
-                              fs_md="8px"
-                              fs_lg="8px"
-                              fs_xl="10px"
-                              color={Colors.gray}>{label.time}</Paragraph>{label.icon}
-                          </StepLabel>
-                        </StepButton>
-                      </Step>
-                    ))}
-                  </Stepper>
-
-                </Row>
-                <Divider height="20%" />
-                <Row align="center" height="10%">
-                  <H4 uppercase className={classes.test}
-                    fs_xs="16px"
-                    fs_sm="16px"
-                    fs_md="16px"
-                    fs_lg="16px"
-                    fs_xl="24px"
-                  >{getStepTitle(activeStep)}</H4>
-                </Row>
-                <Divider height="5%" />
-                <Row align="center" height="35%">
-                  <Column size="8" customRespSize respSize="8">
-                    <Paragraph align="center" uppercase color={Colors.gray} className={classes.test}
-                      fs_xs="14px"
-                      fs_sm="14px"
-                      fs_md="14px"
-                      fs_lg="16px"
-                      fs_xl="14px"
-                    >{getStepContent(activeStep)}</Paragraph>
+    <section className="section" id="section-1"></section>
+    <Container fluid>
+      <Row>
+        <Column size="2">
+        </Column>
+        <Column size="8">
+          <Row >
+            <Column size="6" >
+              <Card
+                h_xs="400px"
+                h_sm="370px"
+                h_md="470px"
+                h_lg="470px"
+                h_xl="470px"
+                padding="20px"
+                shadow height="400px"
+                width="100%"
+                margin="10px 0px"
+                move="up"
+                up="100px">
+                <Row height="100%">
+                  <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
+                    <Div flexDirection={`column`} height={`20%`} justifyContent={`space-between`}>
+                      <Row marginLeft="0px" height={`70%`} >
+                        <RoundImage url="/images/geekpal.png" bsize="contain" height="100%" position="left" />
+                      </Row>
+                      <Row height={`20%`}>
+                        <Column size="12">
+                          <Paragraph
+                            fs_xs="10px"
+                            fs_sm="10px"
+                            fs_md="11px"
+                            fs_lg="12px"
+                            fs_xl="16px"
+                            color={Colors.black}
+                            customTextAlignSmall
+                            alignXs="left">
+                            {geek.geek_data.geek_pal_heading}
+                          </Paragraph>
+                        </Column>
+                      </Row>
+                    </Div>
+                    <Div flexDirection={`column`} height={`80%`} justifyContent={`space-between`}>
+                      <Row marginTop="15px" height={`100%`}>
+                        <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+                          {geek.geek_data.geek_pal.map((pal, index) => {
+                            return (
+                              <Row key={index} marginBottom="4px">
+                                <Column size="1" customRespSize respSize="1" alignSelf="center">
+                                  <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                                </Column>
+                                <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                                  <Paragraph
+                                    fs_xs="10px"
+                                    fs_sm="10px"
+                                    fs_md="12px"
+                                    fs_lg="12px"
+                                    fs_xl="14px"
+                                    color={Colors.gray}>{pal}</Paragraph>
+                                </Column>
+                              </Row>
+                            )
+                          })}
+                        </Column>
+                      </Row>
+                    </Div>
+                  </Column>
+                  <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
+                    <Link to={`/${pageContext.lang}/geekpal`}>
+                      <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                    </Link>
                   </Column>
                 </Row>
-              </Column>
-            </Row>
-          </Column>
-        </Row>
-      </Wrapper> : null}
+              </Card>
+            </Column>
+            <Column size="6">
+              <Card
+                h_xs="400px"
+                h_sm="400px"
+                h_md="470px"
+                h_lg="470px"
+                h_xl="470px"
+                padding="20px"
+                shadow
+                height="400px"
+                width="100%"
+                margin="10px 0px"
+                move="up"
+                up="100px">
+                <Row height="100%">
+                  <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
+                    <Div flexDirection={`column`} height={`20%`}>
+                      <Row marginLeft="0px" height={`70%`}>
+                        <RoundImage url="/images/geekforce.png" bsize="contain" height="100%" position="left" />
+                      </Row>
+                      <Row height={`20%`}>
+                        <Column size="12">
+                          <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
+                            alignXs="left">
+                            {geek.geek_data.geek_force_heading}
+                          </Paragraph>
+                        </Column>
+                      </Row>
+                    </Div>
+                    <Div flexDirection={`column`} height={`80%`} justifyContent={`space-between`}>
+                      <Row marginTop="15px" height={`100%`}>
+                        <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+                          {geek.geek_data.geek_force.map((pal, index) => {
+                            return (
+                              <Row key={index} marginBottom="2px" >
+                                <Column size="1" customRespSize respSize="1" alignSelf="center">
+                                  <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                                </Column>
+                                <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                                  <Paragraph fs_xs="10px"
+                                    fs_sm="10px"
+                                    fs_md="11px"
+                                    fs_lg="12px"
+                                    fs_xl="14px" color={Colors.gray}>{pal}</Paragraph>
+                                </Column>
+                              </Row>
+                            )
+                          })}
+                        </Column>
+                      </Row>
+                    </Div>
+                  </Column>
+                  <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
+                    <Link to={`/${pageContext.lang}/geekforce`}>
+                      <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                    </Link>
+                  </Column>
+                </Row>
+              </Card>
+            </Column>
+          </Row>
+        </Column>
+      </Row>
+    </Container>
+    {/* </Wrapper> */}
+    <Divider height="100px" />
+
+    {/* PROGRAM DETAILS */}
+    {/* --------------- */}
+    <ProgramDetails details={yml.details} />
+    {/* SVG  START*/}
+    <Divider height="100px" />
+    <Row height="100%">
+      <Column size="12">
+        <Svg />
+      </Column>
+    </Row>
+    {/* SVG  END*/}
+    <Divider height="100px" />
+    <Wrapper
+      style="default"
+    >
+      <section className="section" id="section-3"></section>
+      <Title
+        size="10"
+        title={yml.geeks_vs_others.heading}
+        paragraph={yml.geeks_vs_others.sub_heading}
+        primary
+      />
+      <Divider height="50px" />
+      <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
       <Divider height="100px" />
-      <Wrapper
-        style="default"
-      >
-        <Title
-          size="10"
-          title={yml.alumni.heading}
-          paragraph={yml.alumni.sub_heading}
-          customParagraphSize="8"
-          primary
-        />
-        <Divider height="50px" />
-        <section className="section" id="section-5"></section>
-        <AlumniProjects hasTitle />
-        <Divider height="100px" />
-      </Wrapper>
+    </Wrapper>
+    <Wrapper
+      style="default"
+    >
+
+
+      <Title
+        size="10"
+        title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
+        primary
+      />
+      <section className="section" id="section-4"></section>
+      <PricesAndPayment type={pageContext.slug} lang={data.allLocationYaml.edges} />
       <Divider height="100px" />
-    </div>
+    </Wrapper>
+
+    {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
+      <TypicalDay data={yml.typical} />
+
+      : null}
+
+    <Divider height="100px" />
+    <Wrapper
+      style="default"
+    >
+      <Title
+        size="10"
+        title={yml.alumni.heading}
+        paragraph={yml.alumni.sub_heading}
+        customParagraphSize="8"
+        primary
+      />
+      <Divider height="50px" />
+      <section className="section" id="section-5"></section>
+      <AlumniProjects hasTitle />
+      <Divider height="100px" />
+    </Wrapper>
+    <Divider height="100px" />
+    {/* </div> */}
   </>
   )
 };
@@ -511,7 +458,17 @@ export const query = graphql`
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            tagline
+            header{
+              tagline
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 1200){
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            alt
+            }
             button{
               syllabus_button_text
               syllabus_submit_text

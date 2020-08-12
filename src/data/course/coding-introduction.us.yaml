@@ -6,7 +6,10 @@ meta_info:
   keywords: "coding introduction, learn to code"
   redirects: ["/coding-introduction-programming"]
 
-tagline: "Coding Introduction Course - 4Geeks Academy"
+header:
+  tagline: "Coding Introduction Course - 4Geeks Academy"
+  image: "../../../static/images/program-bg.png"
+  alt: ""
 button:
   syllabus_button_text: "REQUEST SYLLABUS"
   syllabus_submit_text: "SUBMIT"
