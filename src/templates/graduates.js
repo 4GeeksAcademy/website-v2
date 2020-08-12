@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {graphql} from 'gatsby'
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
@@ -20,7 +21,7 @@ const Graduates = ({data, pageContext, yml}) => {
             <Divider height="100px" />
             <Wrapper
                 style="default">
-                <AlumniProjects showThumbs="true" changeIndex={() => setSlideIndex()} playerHeight="500px" />
+                <AlumniProjects lang={data.allAlumniProjectsYaml.edges} showThumbs="true" changeIndex={() => setSlideIndex()} playerHeight="500px" />
             </Wrapper>
             <Divider height="50px" />
             <Wrapper
@@ -109,6 +110,47 @@ export const query = graphql`
         }
       }
     }
+    allAlumniProjectsYaml(filter: {lang: {eq: $lang}}){
+        edges {
+          node {
+            header{
+              tagline
+              sub_heading
+              button_text
+            }
+            projects {
+                project_name
+                slug
+                project_image{
+                    image {
+                        childImageSharp {
+                          fluid(maxWidth: 800){
+                            ...GatsbyImageSharpFluid
+                          }
+                        }
+                      } 
+                    image_alt
+                }
+                project_content
+                project_video
+                live_link
+                github_repo
+                alumni {
+                  first_name
+                  last_name
+                  job_title
+                  github
+                  linkedin
+                  twitter
+                }
+              }
+            button_section{
+              button_text
+              button_link
+            }
+          }
+        }
+      }
   }
 `;
 export default BaseRender(Graduates);

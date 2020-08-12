@@ -11,52 +11,7 @@ import ReactPlayer from 'react-player'
 
 const AlumniProjects = props => {
     const [slideIndex, setSlideIndex] = useState()
-    const data = useStaticQuery(graphql`
-      query myQueryAlumni{
-        allAlumniProjectsYaml {
-            edges {
-              node {
-                header{
-                  tagline
-                  sub_heading
-                  button_text
-                }
-                projects {
-                    project_name
-                    slug
-                    project_image{
-                        image {
-                            childImageSharp {
-                              fluid(maxWidth: 800){
-                                ...GatsbyImageSharpFluid
-                              }
-                            }
-                          } 
-                        image_alt
-                    }
-                    project_content
-                    project_video
-                    live_link
-                    github_repo
-                    alumni {
-                      first_name
-                      last_name
-                      job_title
-                      github
-                      linkedin
-                      twitter
-                    }
-                  }
-                button_section{
-                  button_text
-                  button_link
-                }
-              }
-            }
-          }
-        }
-      `)
-    let alumniData = data.allAlumniProjectsYaml.edges[0].node
+    let alumniData = props.lang[0].node
     return (
         <>
             <Row>

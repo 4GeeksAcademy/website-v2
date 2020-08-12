@@ -427,7 +427,7 @@ const Program = ({data, pageContext, yml}) => {
       />
       <Divider height="50px" />
       <section className="section" id="section-5"></section>
-      <AlumniProjects hasTitle />
+      <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} />
       <Divider height="100px" />
     </Wrapper>
     <Divider height="100px" />
@@ -520,6 +520,47 @@ export const query = graphql`
               pricing
               alumni
             }
+        }
+      }
+    }
+    allAlumniProjectsYaml(filter: {lang: {eq: $lang}}){
+      edges {
+        node {
+          header{
+            tagline
+            sub_heading
+            button_text
+          }
+          projects {
+              project_name
+              slug
+              project_image{
+                  image {
+                      childImageSharp {
+                        fluid(maxWidth: 800){
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    } 
+                  image_alt
+              }
+              project_content
+              project_video
+              live_link
+              github_repo
+              alumni {
+                first_name
+                last_name
+                job_title
+                github
+                linkedin
+                twitter
+              }
+            }
+          button_section{
+            button_text
+            button_link
+          }
         }
       }
     }

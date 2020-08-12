@@ -1,3 +1,4 @@
+lang: "es"
 header:
   tagline: "MEET THE ALUMNI AND PROJECTS"
   sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
@@ -6,7 +7,7 @@ projects:
   - project_name: "Rocket App"
     slug: "rocket-app"
     project_image:
-      image: "../../../../static/images/projects/projects/rocket-app.jpg"
+      image: "../../../../static/images/projects/rocket-app.jpg"
       image_alt: ""
     project_content: "Platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track your places (where you have been), and gather information that you thought it was important and save for as long as you want it in just one place."
     project_video: ""
@@ -28,7 +29,7 @@ projects:
   - project_name: "WonderTracker"
     slug: "wondertracker"
     project_image:
-      image: "../../../../static/images/projects/projects/fernando-funez.jpg"
+      image: "../../../../static/images/projects/fernando-funez.jpg"
       image_alt: ""
     project_content: "Platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track your places (where you have been), and gather information that you thought was important and save for as long as you want it in just one place."
     project_video: ""
@@ -51,7 +52,7 @@ projects:
   - project_name: "iWash"
     slug: "i-wash"
     project_image:
-      image: "../../../../static/images/projects/projects/i-wash.jpg"
+      image: "../../../../static/images/projects/i-wash.jpg"
       image_alt: ""
     project_content: "iWash is an application integrating hardware and software towards building a platform capable of setting and launching Smart Laundry machines from your mobile, pay the cost of the service and set time, speed, process, and get notifications about status of your laundry."
     project_video: ""
@@ -73,7 +74,7 @@ projects:
   - project_name: "reMindful"
     slug: "re-mindful"
     project_image:
-      image: "../../../../static/images/projects/projects/re-mindful.jpg"
+      image: "../../../../static/images/projects/re-mindful.jpg"
       image_alt: ""
     project_content: |
       Generating awareness about Recycling considering all the steps that need to be covered. 

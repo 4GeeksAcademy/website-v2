@@ -377,7 +377,7 @@ const Home = (props) => {
           primary
         />
         <Divider height="50px" />
-        <AlumniProjects hasTitle showThumbs="false" />
+        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" />
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
@@ -736,6 +736,47 @@ export const query = graphql`
                   content
                   source_url
                   source_url_text
+                }
+              }
+            }
+          }
+          allAlumniProjectsYaml(filter: {lang: {eq: $lang}}){
+            edges {
+              node {
+                header{
+                  tagline
+                  sub_heading
+                  button_text
+                }
+                projects {
+                    project_name
+                    slug
+                    project_image{
+                        image {
+                            childImageSharp {
+                              fluid(maxWidth: 800){
+                                ...GatsbyImageSharpFluid
+                              }
+                            }
+                          } 
+                        image_alt
+                    }
+                    project_content
+                    project_video
+                    live_link
+                    github_repo
+                    alumni {
+                      first_name
+                      last_name
+                      job_title
+                      github
+                      linkedin
+                      twitter
+                    }
+                  }
+                button_section{
+                  button_text
+                  button_link
                 }
               }
             }
