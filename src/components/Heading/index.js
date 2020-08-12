@@ -239,7 +239,7 @@ export const Paragraph = styled.div`
   margin: ${props => props.margin};
   font-size: ${props => props.fontSize};
   font-family: ${props => props.fontFamily};
-  font-weight: 300;
+  font-weight: ${props => props.fontWeight};
   padding: ${props => props.padding};
   letter-spacing: 0px;
   line-height: ${props => props.lineHeight};
@@ -274,7 +274,10 @@ export const Title = props => {
                 <Paragraph
                   align="center"
                   color={props.paragraphColor}
-                  fontFamily={props.fontFamily}>
+                  fontFamily={props.fontFamily}
+                  fontSize={`20px`}
+                  fontWeight={`500`}
+                >
                   {props.paragraph}
                 </Paragraph>
               // </Link>
@@ -343,6 +346,7 @@ Title.propTypes = {
 Paragraph.defaultProps = {
   fontSize: "14px",
   fontFamily: "Lato, sans-serif",
+  fontWeight: "300",
   customParagraphSize: "12",
   color: "#898a8b"
 };
