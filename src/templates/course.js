@@ -30,8 +30,7 @@ import Typography from '@material-ui/core/Typography';
 import {Input, Alert} from '../components/Form';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
-import Svg from "../components/Svg/index";
-import TypicalDay from '../components/TypicalDay';
+import SyllabusSVG from "../components/Svg/index";
 
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
@@ -218,30 +217,39 @@ const Program = ({data, pageContext, yml}) => {
         <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
       </Modal>
     </Wrapper>
-    <Wrapper
-      style="default">
 
-      <Credentials up="60" lang={data.allCredentialsYaml.edges} />
-    </Wrapper>
-    <Sidebar
-      shadow
-      borders=".5rem"
-      display_xs="none"
-      display_sm="none"
-      display_md="none"
+    <Divider height="100px" />
+    <Wrapper
+      style="default"
     >
-      <Scrollspy style={{fontSize: "12px", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active ">
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
-      </Scrollspy>
-    </Sidebar>
+      <section className="section" id="section-3"></section>
+      <Title
+        size="10"
+        title={yml.geeks_vs_others.heading}
+        paragraph={yml.geeks_vs_others.sub_heading}
+        primary
+      />
+      <Divider height="50px" />
+      <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
+      <Divider height="100px" />
+    </Wrapper>
+
+    <Divider height="100px" />
+    {/* PROGRAM DETAILS */}
+    {/* --------------- */}
+    <ProgramDetails details={yml.details} />
+    {/* SVG  START*/}
+    {/* <Divider height="100px" />
+      <Row height="100%">
+        <Column size="12">
+          <SyllabusSVG />
+        </Column>
+      </Row> */}
+    {/* SVG  END*/}
+    <Divider height="100px" />
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
     {/* ---------------------------- */}
-
     <section className="section" id="section-1"></section>
     <Container fluid>
       <Row>
@@ -249,7 +257,7 @@ const Program = ({data, pageContext, yml}) => {
         </Column>
         <Column size="8">
           <Row >
-            <Column size="6" >
+            <Column size="6" paddingLeft={`0`}>
               <Card
                 h_xs="400px"
                 h_sm="370px"
@@ -317,7 +325,7 @@ const Program = ({data, pageContext, yml}) => {
                 </Row>
               </Card>
             </Column>
-            <Column size="6">
+            <Column size="6" paddingRight={`0`}>
               <Card
                 h_xs="400px"
                 h_sm="400px"
@@ -384,32 +392,6 @@ const Program = ({data, pageContext, yml}) => {
     {/* </Wrapper> */}
     <Divider height="100px" />
 
-    {/* PROGRAM DETAILS */}
-    {/* --------------- */}
-    <ProgramDetails details={yml.details} />
-    {/* SVG  START*/}
-    <Divider height="100px" />
-    <Row height="100%">
-      <Column size="12">
-        <Svg />
-      </Column>
-    </Row>
-    {/* SVG  END*/}
-    <Divider height="100px" />
-    <Wrapper
-      style="default"
-    >
-      <section className="section" id="section-3"></section>
-      <Title
-        size="10"
-        title={yml.geeks_vs_others.heading}
-        paragraph={yml.geeks_vs_others.sub_heading}
-        primary
-      />
-      <Divider height="50px" />
-      <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
-      <Divider height="100px" />
-    </Wrapper>
     <Wrapper
       style="default"
     >

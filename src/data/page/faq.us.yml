@@ -58,7 +58,7 @@ faq:
       Talent Tree:  The syllabus maps out 44 skills in which students earn points towards each skill learned in a gamified fashion."
   - question: "How do I pay for my tuition?"
     answer: |-
-      "You have several options.  Our tuition fee for the Full Stack Development program is $7499.  There are no other fees, hidden charges, or anything else.  Just $7499 for a 16-week coding program in Miami. Or $9499 for a 09 weeks Full-time program.
+      "You have several options.  Our tuition fee for the Full Stack Development program (Part-Time) is $7499 or (Full-Time) is $9499.  There are no other fees, hidden charges, or anything else.  Just $7499 for a 16-week coding program in Miami. Or $9499 for a 09 weeks Full-time program.
       Furthermore, we have also worked (together with amazing partners) on offering you an Extended Payment Plan as an option.  You can now apply for either a 6, 12, or 24-month plan in order to lower the up-front cost and, most importantly, get the education that you need.  There is no other offer like this in Miami.
       Here you can also find the 4Geeks Academy Guidebook:
       Financing is available for those who qualify wherever financing is available. 
@@ -71,8 +71,8 @@ faq:
       Now, the Full Stack Development program is designed in four seasons:
       Pre-Work + Learn to Code + Build Websites + Build Web Applications
       It also has additional features:
-      It is 16 weeks long at includes over 300 hours of learning
-      The stack of technologies here are: JavaScript, React, MongoDB, Python, Django, API’s, AJAX, SASS, HTML, CSS, and more
+      It is 16 weeks long at includes over 320 hours of learning or a Full-Time with over 260 hours of coding.
+      The stack of technologies here are: JavaScript, React, Python, Flask, API’s, AJAX, SASS, HTML, CSS, Bootstrap and more
       There are plenty of payment opportunities with our Extended Payment Plan
       We will guide you and help you find a job after the course though our Placement Program
       You will have access for one year to both our academic and exercises platforms (4Geeks Academy LMS: Breath Code Platform
@@ -84,7 +84,7 @@ faq:
   - question: "Extended Payment Plan? How does it work? What does that mean?"
     answer: |-
       "The Extended Payment Plan has been designed specifically for OUR students.  The average tuition fee for a coding program in the U.S. is about $11,000.  YES, that is $5,000 more than what we charge.  Again, YES, that is 83% more expensive than us.
-      But, wait…not only do we offer the best price in town ($6,000 for the entire course), we ALSO offer the best payment plan in Miami.  You can apply for either a 6, 12, or 24-month extended payment plan.  You can pay only $240 per month (plus a $1,000 deposit) for 24 months, and you will become a developer in 16 weeks.
+      But, wait…not only do we offer the best price in town ($7499 or 9499 for the entire program!), we ALSO offer the best payment plan in Miami.  You can apply for either a 6, 12, or 24-month extended payment plan.  You can pay only $240 per month (plus a $1,000 deposit) for 24 months, and you will become a developer in 16 weeks.
       If you want to get to know more about this plan, click here and go to page 4.
       Now, if you wish to begin your application, click here."
   - question: "Do I graduate as a 'Senior Developer?'"
@@ -94,7 +94,7 @@ faq:
   - question: "What is your schedule? "
     answer: |-
       "It’s actually really easy:
-      Mondays, Wednesdays & Fridays
+      Part-time goes: Mondays, Wednesdays & Fridays or Tuesday-Thursday (6pm-9pm) and Saturday from 9:30am to 12:30pm.
       From 6:00 pm to 9:00 pm
       Mandatory attendance (To graduate you will need to have a minimum 80% attendance)
       16 weeks
