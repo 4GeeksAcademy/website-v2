@@ -17,34 +17,32 @@ const Why = (props) => {
     const cornerstone = yml.cornerstones;
     return (
         <>
-            <Container fluid height="450px">
-                <Row>
-                    <Column size="1" />
-                    <Column border="bottom" size="11" padding="10%" image="yes" url={yml.banner.image} height="600px" display={`flex`}>
-                        <Row>
-                            <Column size="1" />
-                            <Column size="8" align="center">
-                                <H1 fontSize="50px" fontSizeXs="40px" color={Colors.white}>{yml.banner.tagline}</H1>
-                            </Column>
-                        </Row>
+            <Wrapper
+                style="default"
+                data={yml.header.image.childImageSharp.fluid}
+                image="yes"
+                className={`img-header`}
+                height={`500px`}
+                bgSize={`cover`}
+                alt={yml.header.alt}
+            >
+                <Divider height="100px" />
+                <Title
+                    size="5"
+                    color={Colors.white}
+                    title={yml.header.tagline}
+                    paragraph={yml.header.sub_heading}
+                    main
+                    paragraphColor={Colors.white}
+                    fontSize="46px"
+                    textAlign="center"
 
-                    </Column>
-                </Row>
-            </Container>
-            <Divider height="100px" />
-            <Container fluid >
-                <Row>
-                    <Column size="1" />
-                    <Column size="11">
-                        <Row>
-                            <Column size="1" />
-                            <Column size="9">
-                                <Credentials up="80" lang={data.allCredentialsYaml.edges} />
-                            </Column>
-                        </Row>
-                    </Column>
-                </Row>
-            </Container>
+                />
+            </Wrapper>
+            <Wrapper
+                style="default">
+                <Credentials move="up" up="100" lang={data.allCredentialsYaml.edges} />
+            </Wrapper>
             <Divider height="100px" />
             <Wrapper
                 style="default"
@@ -368,10 +366,17 @@ export const query = graphql`
                 image
                 keywords
             }
-            banner{
+            header{
                 tagline
                 sub_heading
-                image
+                image {
+                    childImageSharp {
+                      fluid(maxWidth: 1200){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                alt
             }
             outcomes{
                 heading
@@ -448,7 +453,17 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                      fixed(width: 300, height: 60) {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline
@@ -458,7 +473,17 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                      fixed(width: 300, height: 60) {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline
@@ -468,7 +493,17 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                      fixed(width: 300, height: 60) {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline
@@ -478,7 +513,17 @@ export const query = graphql`
                 images {
                   name
                   slug
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid
+                      }
+                      fixed(width: 300, height: 60) {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
+                  alt
                   featured
                 }
                 tagline

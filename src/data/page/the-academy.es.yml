@@ -7,10 +7,11 @@ meta_info:
   redirects: []
 
 ## BANNER - HEADER
-banner:
+header:
   tagline: PERMITIENDO A LOS CONSTRUCTORES DE SOFTWARE FUTUROS Y ACTUALES ADAPTARSE A LAS NECESIDADES DEL MUNDO REAL
   sub_heading: ""
-  image: "/bg/the-academy-bg.jpg"
+  image: "../../../static/bg/the-academy-bg.jpg"
+  alt: ""
 
 ## 4GEEKS OUTCOMES
 outcomes:
