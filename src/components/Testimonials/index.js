@@ -11,37 +11,7 @@ import Img from "gatsby-image"
 
 
 const Testimonials = (props) => {
-    console.log("PROPSTESTIMONIALS:", props)
     const [carouselHeight, setCarouselHeight] = useState("500px")
-    const data = useStaticQuery(graphql`
-              query myQueryTestimonials{
-                allTestimonialsYaml {
-                    edges {
-                      node {
-                        testimonials {
-                          student_name
-                          testimonial_date
-                          student_thumb{
-                            childImageSharp {
-                              fluid(maxWidth: 200){
-                                ...GatsbyImageSharpFluid_withWebp
-                              }
-                              fixed(width: 200, height: 200) {
-                                ...GatsbyImageSharpFixed
-                              }
-                            }
-                          }
-                          alt
-                          starts
-                          content
-                          source_url
-                          source_url_text
-                        }
-                      }
-                    }
-                  }
-                }
-              `)
     let testimonialsArray = props.lang[0].node.testimonials;
 
     return (
@@ -60,12 +30,6 @@ const Testimonials = (props) => {
                         <Row align="center" padding="30px" key={i}>
                             <Card width="700px" >
                                 <Row align="center">
-                                    {/* <Img
-                                        fixed={item.student_thumb.childImageSharp.fixed}
-                                        alt={item.alt}
-                                    >
-
-                                    </Img> */}
                                     <BackgroundSection
                                         data={item.student_thumb.childImageSharp.fluid}
                                         alt={item.alt}
@@ -74,14 +38,6 @@ const Testimonials = (props) => {
                                         bgSize={`cover`}
                                         className={`img-testimonials`}
                                     ></BackgroundSection>
-                                    {/* <RoundImage
-                                        url={item.student_thumb}
-                                        bsize="cover"
-                                        position="center center"
-                                        width="200px"
-                                        height="200px"
-                                        border="50%"
-                                    /> */}
                                 </Row>
                                 <Divider height="10px" />
                                 <Row align="center" >
