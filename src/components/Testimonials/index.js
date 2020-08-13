@@ -24,7 +24,7 @@ const Testimonials = (props) => {
                           student_thumb{
                             childImageSharp {
                               fluid(maxWidth: 200){
-                                ...GatsbyImageSharpFluid
+                                ...GatsbyImageSharpFluid_withWebp
                               }
                               fixed(width: 200, height: 200) {
                                 ...GatsbyImageSharpFixed
