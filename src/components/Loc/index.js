@@ -35,7 +35,6 @@ const Loc = (props) => {
         >
             {loc != null &&
               loc.map((item, index) => {
-                console.log("ITEMLOC:", item)
                 return (
                   <Card key={index} shadow borders="1.25rem" height="500px">
                     <Row
