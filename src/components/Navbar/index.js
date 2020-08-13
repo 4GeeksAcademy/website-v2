@@ -231,7 +231,7 @@ export const RightNav = ({menu, open}) => {
       file(relativePath: { eq: "images/4G_logo_negro.png" }) {
         childImageSharp {
           fluid(maxWidth: 225) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
           fixed(width: 75) {
             ...GatsbyImageSharpFixed

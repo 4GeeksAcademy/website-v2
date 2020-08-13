@@ -244,7 +244,7 @@ export const Span = styled.div`
 export const BackgroundSection = ({children, className, data, height, width, bgSize, borderRadius, margin}) => {
     return (
         <BackgroundImage
-            Tag="div"
+            Tag="section"
             className={className}
             fluid={data}
             style={{
@@ -280,7 +280,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 //           desktop: file(relativePath: { eq: "images/alumni-bg.png" }) {
 //             childImageSharp {
 //               fluid(quality: 90, maxWidth: 1920) {
-//                 ...GatsbyImageSharpFluid_withWebp
+//                 ...GatsbyImageSharpFluid_withWebp_withWebp
 //               }
 //             }
 //           }
