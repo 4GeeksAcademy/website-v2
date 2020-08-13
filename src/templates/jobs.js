@@ -18,16 +18,17 @@ const Jobs = ({data, pageContext, yml}) => {
     <>
       <Wrapper
         style="default"
+        data={yml.header.image.childImageSharp.fluid}
         image="yes"
-        url={yml.banner.image}
-        border="bottom"
-        height="300px"
-        backgroundSize="cover"
+        className={`img-header`}
+        height={`300px`}
+        bgSize={`cover`}
+
       >
         <Divider height="100px" />
         <Title
           size="5"
-          title={yml.banner.tagline}
+          title={yml.header.tagline}
           main
           color={Colors.white}
           fontSize="46px"
@@ -134,10 +135,16 @@ export const query = graphql`
             image
             keywords
           }
-          banner{
+          header{
             tagline
             sub_heading
-            image 
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200){
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            } 
           }
           about{
             heading
