@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button} from '../components/Styling'
+import {Colors, Button, BackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
 import Grid from '@material-ui/core/Grid';
 import ToggleButton from '@material-ui/lab/ToggleButton';
@@ -18,16 +18,17 @@ const Jobs = ({data, pageContext, yml}) => {
     <>
       <Wrapper
         style="default"
+        data={yml.header.image.childImageSharp.fluid}
         image="yes"
-        url={yml.banner.image}
-        border="bottom"
-        height="300px"
-        backgroundSize="cover"
+        className={`img-header`}
+        height={`300px`}
+        bgSize={`cover`}
+
       >
         <Divider height="100px" />
         <Title
           size="5"
-          title={yml.banner.tagline}
+          title={yml.header.tagline}
           main
           color={Colors.white}
           fontSize="46px"
@@ -109,7 +110,28 @@ const Jobs = ({data, pageContext, yml}) => {
                     </Column>
                   </Row>
                 </Column>
-                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image="yes" url={yml.about.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
+                <Column
+                  size="6"
+                  customRespSize
+                  respSize="6"
+                  paddingRight={`0`}
+                  // alignSelf="center"
+                  // height="100%"
+                  // backgroundSize="cover"
+                  // image="yes"
+                  // url={yml.about.image}
+                  // border="custom"
+                  customBorderRadius="0 1.25rem 1.25rem 0"
+                >
+                  <BackgroundSection
+                    className={`img-right`}
+                    height={`426px`}
+                    data={yml.about.about_image.image.childImageSharp.fluid}
+                    bgSize={`cover`}
+                    alt={yml.about.about_image.alt}
+                    borderRadius={`0 0 0 1.25rem`}
+                  />
+                </Column>
               </Row>
             </Card>
           </Column>
@@ -134,15 +156,30 @@ export const query = graphql`
             image
             keywords
           }
-          banner{
+          header{
             tagline
             sub_heading
-            image 
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200){
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            } 
           }
           about{
             heading
             sub_heading
-            image
+            about_image{
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 800){
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              } 
+              alt
+            } 
             content
             button
             button_link

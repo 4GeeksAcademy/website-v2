@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
 import {Title, H1, H2, H3, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
+import {Button, Colors, Check, ArrowRight, RoundImage, BackgroundSection} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import Mentors from '../components/Mentors'
 import PricesAndPayment from '../components/PricesAndPayment'
@@ -22,16 +22,17 @@ const Location = ({data, pageContext, yml}) => {
     return (<>
         <Wrapper
             style="default"
+            data={yml.header.image.childImageSharp.fluid}
             image="yes"
-            url={yml.image}
-            border="bottom"
-            height="300px"
-            backgroundSize="cover"
+            className={`img-header`}
+            height={`300px`}
+            bgSize={`cover`}
+            alt={yml.header.alt}
         >
             <Divider height="50px" />
             <Row>
                 <Column size="12">
-                    <H1 color={Colors.white} fontSize="12px" align="center">{yml.seo_title}</H1>
+                    <H1 color={Colors.white} fontSize="24px" align="center">{yml.seo_title}</H1>
                 </Column>
             </Row>
             {/* <ProgramSelector week={week} /> */}
@@ -121,7 +122,27 @@ const Location = ({data, pageContext, yml}) => {
                                     </Column>
                                 </Row>
                             </Column>
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image="yes" url={yml.info_box.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
+                            <Column
+                                size="6"
+                                customRespSize
+                                respSize="6"
+                                paddingRight={`0`}
+                                // alignSelf="center" 
+                                // height="100%" 
+                                // backgroundSize="cover" 
+                                // image="yes" 
+                                // url={yml.info_box.image} 
+                                border="custom"
+                                customBorderRadius="0 1.25rem 1.25rem 0"
+                            >
+                                <BackgroundSection
+                                    className={`img-right`}
+                                    height={`426px`}
+                                    data={yml.info_box.image.childImageSharp.fluid}
+                                    bgSize={`cover`}
+                                    alt="Cnn Logo"
+                                />
+                            </Column>
                         </Row>
                     </Card>
                 </Column>
@@ -147,8 +168,27 @@ const Location = ({data, pageContext, yml}) => {
 
                                     {yml.carousel_box.images.map((item, index) => {
                                         return (
-                                            <Column key={index} size="12" customRespSize respSize="12" alignSelf="center" height="426px" backgroundSize="cover" image="yes" url={item.path} border="custom" customBorderRadius="1.25rem 0 0 1.25rem" >
-
+                                            <Column
+                                                key={index}
+                                                size="12"
+                                                customRespSize
+                                                respSize="12"
+                                                paddingLeft={`0`}
+                                                // alignSelf="center"
+                                                // height="426px"
+                                                // backgroundSize="cover"
+                                                // image="yes"
+                                                // url={item.path}
+                                                border="custom"
+                                                customBorderRadius="1.25rem 0 0 1.25rem"
+                                            >
+                                                <BackgroundSection
+                                                    className={`img-left`}
+                                                    height={`426px`}
+                                                    data={item.path.childImageSharp.fluid}
+                                                    bgSize={`cover`}
+                                                    alt="Cnn Logo"
+                                                />
                                             </Column>
                                         )
                                     })}
@@ -207,17 +247,33 @@ export const query = graphql`
     allLocationYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            tagline
             seo_title
-            sub_heading
-            image
+            header{
+                tagline
+                sub_heading
+                image {
+                    childImageSharp {
+                    fluid(maxWidth: 800){
+                        ...GatsbyImageSharpFluid
+                    }
+                    }
+                } 
+                alt
+            }
             info_box{
                 heading
                 address
                 phone
                 email
                 contact_heading
-                image
+                image {
+                    childImageSharp {
+                      fluid(maxWidth: 800){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                alt 
             }
             meta_info{
                 title
@@ -229,7 +285,13 @@ export const query = graphql`
                 heading
                 content
                 images{
-                    path
+                    path{
+                        childImageSharp {
+                          fluid(maxWidth: 300){
+                            ...GatsbyImageSharpFluid
+                          }
+                        }
+                      } 
                     alt
                 }
                 

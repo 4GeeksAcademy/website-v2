@@ -7,27 +7,28 @@ meta_info:
   redirects: []
 
 seo_title: "4Geeks Academy Madrid"
-tagline: "4GEEKS ACADEMY IN MADRID"
-sub_heading: ""
-image: "/images/locations/madrid-loc.jpeg"
-
+header:
+  tagline: "4GEEKS ACADEMY IN MADRID"
+  sub_heading: ""
+  image: "../../../static/images/locations/madrid-loc.jpeg"
+  alt: ""
 info_box:
   heading: "Encuéntranos en Madrid"
   address: "Edison 3, 28006, Madrid."
   contact_heading: "Contacts"
   phone: "910 86 69 83"
   email: "es@4geeksacademy.com"
-  image: "/images/locations/madrid-map.png"
-
+  image: "../../../static/images/locations/madrid-map.png"
+  alt: ""
 carousel_box:
   heading: "Qué deberías saber sobre esta ubicación: "
   content: "A 5 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
   images:
-    - path: "/images/locations/madrid-loc.jpeg"
+    - path: "../../../static/images/locations/madrid-loc.jpeg"
       alt: "madrid-location"
-    - path: "/images/locations/madrid-loc-1.jpg"
+    - path: "../../../static/images/locations/madrid-loc-2.jpg"
       alt: "4Geeks Academy Madrid location"
-    - path: "/images/locations/madrid-loc-2.jpg"
+    - path: "../../../static/images/locations/madrid-loc-3.jpg"
       alt: "4Geeks Madrid location"
 
 ## PRICES SECTION

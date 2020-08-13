@@ -687,6 +687,19 @@ export const query = graphql`
                   image
                   keywords
                 }
+                seo_title
+                header{
+                  sub_heading
+                  tagline
+                  alt
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 800){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  } 
+                }
                 prices {
                     full_time {
                       slug
@@ -701,12 +714,23 @@ export const query = graphql`
                   contact_heading
                   phone
                   email
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 800){
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  } 
                 }
-                image
                 carousel_box {
                   images {
-                    path
+                    path{
+                      childImageSharp {
+                        fluid(maxWidth: 100){
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    } 
                     alt
                   }
                   content

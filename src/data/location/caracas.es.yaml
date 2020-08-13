@@ -7,25 +7,26 @@ meta_info:
   redirects: ["/venezuela"]
 
 seo_title: "4Geeks Academy Caracas"
-tagline: "4GEEKS ACADEMY IN CARACAS"
-sub_heading: ""
-image: "/images/locations/caracas-loc-2jpeg"
-
+header:
+  tagline: "4GEEKS ACADEMY IN CARACAS"
+  sub_heading: ""
+  image: "../../../static/images/locations/caracas-loc-2.jpeg"
+  alt: ""
 info_box:
   heading: "Find us in Caracas"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "/images/locations/caracas-map.png"
-
+  image: "../../../static/images/locations/caracas-map.png"
+  alt: ""
 carousel_box:
   heading: "What you should know about this location: "
   content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
-    - path: "/images/locations/caracas-loc.jpg"
+    - path: "../../../static/images/locations/caracas-loc.jpg"
       alt: "caracas-loc"
-    - path: "/images/locations/caracas-loc-2.jpeg"
+    - path: "../../../static/images/locations/caracas-loc-2.jpeg"
       alt: "caracas-loc2"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE

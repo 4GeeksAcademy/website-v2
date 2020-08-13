@@ -242,7 +242,6 @@ export const Span = styled.div`
       }
 `
 export const BackgroundSection = ({children, className, data, height, width, bgSize, borderRadius, margin}) => {
-    console.log("TTTTTT: ", data)
     return (
         <BackgroundImage
             Tag="div"

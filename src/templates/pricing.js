@@ -242,7 +242,18 @@ export const query = graphql`
               keywords
               redirects
             }
-            image
+            header{
+              sub_heading
+              tagline
+              alt
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 800){
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              } 
+            }
             prices {
               full_time {
                 center_section {
@@ -286,7 +297,6 @@ export const query = graphql`
                     price_info
                   }
                   header {
-                    heading
                     sub_heading
                     heading_one
                     heading_two
@@ -342,9 +352,7 @@ export const query = graphql`
                 }
               }
             }
-            seo_title
-            sub_heading
-            tagline
+            
           }
         }
       }
