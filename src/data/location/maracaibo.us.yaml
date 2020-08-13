@@ -7,9 +7,11 @@ meta_info:
   redirects: []
 
 seo_title: "4Geeks Academy Maracaibo"
-tagline: "4GEEKS ACADEMY IN Maracaibo"
-sub_heading: ""
-image: "/images/locations/mcbo-loc-2.png"
+header:
+  tagline: "4GEEKS ACADEMY IN Maracaibo"
+  sub_heading: ""
+  image: "../../../static/images/locations/mcbo-loc-2.png"
+  alt: ""
 
 info_box:
   heading: "Find us in Maracaibo"
@@ -17,17 +19,17 @@ info_box:
   contact_heading: "Contacts"
   phone: "+58 412-7372341"
   email: "ve@4GeeksAcademy.com"
-  image: "/images/locations/maracaibo-map.png"
-
+  image: "../../../static/images/locations/maracaibo-map.png"
+  alt: ""
 carousel_box:
   heading: "What you should know about this location: "
   content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and at walking distance to the most prominent restorants, cofee shops and business center. 140 metters of innovation, curious people and very good vibe to learn."
   images:
-    - path: "/images/locations/mcbo-chinita.jpeg"
+    - path: "../../../static/images/locations/mcbo-chinita.jpeg"
       alt: "mcbo-chinita"
-    - path: "/images/locations/mcbo-loc.jpg"
+    - path: "../../../static/images/locations/mcbo-loc.jpg"
       alt: "4Geeeks Maracaibo Location"
-    - path: "/images/locations/mcbo-loc-2.png"
+    - path: "../../../static/images/locations/mcbo-loc-2.png"
       alt: "4Geeeks Maracaibo lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE

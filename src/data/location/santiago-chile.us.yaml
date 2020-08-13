@@ -7,9 +7,11 @@ meta_info:
   redirects: ["/location/santiago", "/location/santiago-de-chile"]
 
 seo_title: "4Geeks Academy Santiago deChile"
-tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
-sub_heading: ""
-image: "/images/locations/santiago-loc.jpg"
+header:
+  tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
+  sub_heading: ""
+  image: "../../../static/images/locations/santiago-loc.jpg"
+  alt: ""
 
 info_box:
   heading: "Find us in Miami"
@@ -17,15 +19,15 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "/images/locations/santiago-map.png"
-
+  image: "../../../static/images/locations/santiago-map.png"
+  alt: ""
 carousel_box:
   heading: "What you should know about this location: "
   content: "Located at in one the best areas of the city, the financial district. Walking distance from the subway station. The office is open to the students 24/7 every day of the week. On Saturdays we have the famous 'Coding Weekends' were students gather to practice and code during the entire day with mentors available. Pizzas and drinks are on the house!"
   images:
-    - path: "/images/locations/santiago-loc.jpg"
+    - path: "../../../static/images/locations/santiago-loc.jpg"
       alt: "Santiago Location Image"
-    - path: "/images/locations/santiago-loc-2.jpg"
+    - path: "../../../static/images/locations/santiago-loc-2.jpg"
       alt: "Santiago Location Image"
 
 hasFinancialsOption: true

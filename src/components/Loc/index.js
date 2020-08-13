@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../Heading';
 import {Container, Row, Column, Wrapper, Divider} from '../Sections'
-import {Button, Colors, Check, ArrowRight, RoundImage, Over} from '../Styling'
+import {Button, Colors, Check, ArrowRight, RoundImage, Over, BackgroundSection} from '../Styling'
 import styled from 'styled-components';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -35,6 +35,7 @@ const Loc = (props) => {
         >
             {loc != null &&
               loc.map((item, index) => {
+                console.log("ITEMLOC:", item)
                 return (
                   <Card key={index} shadow borders="1.25rem" height="500px">
                     <Row
@@ -44,7 +45,26 @@ const Loc = (props) => {
                       customRespSize
 
                     >
-                      <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="yes" url={item.node.image} border="custom" customBorderRadius="1.25rem 0 0 1.25rem" />
+                      <Column
+                        size="6"
+                        customRespSize
+                        respSize="6"
+                        alignSelf="center"
+                        height="100%"
+                        paddingLeft={`0`}
+                      // image="yes" 
+                      // url={item.node.image} 
+                      // border="custom" 
+                      // customBorderRadius="1.25rem 0 0 1.25rem" 
+                      >
+                        <BackgroundSection
+                          className={`image`}
+                          height={`500px`}
+                          data={item.node.header.image.childImageSharp.fluid}
+                          bgSize={`cover`}
+                          alt="Cnn Logo"
+                        />
+                      </Column>
                       <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                         <Row align="center" height="100%">
                           <Column size="9" height="100%">
@@ -101,15 +121,20 @@ const Loc = (props) => {
       </Row>
       <Divider height="10px" />
       <Row height="auto" align="center">
-
         {loc.map((pic, i) => {
-          console.log("PIC", pic)
           let randLocImgIndex = Math.floor(Math.random() * pic.node.carousel_box.images.length)
           return (
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               {/* <Card width="100%" > */}
               <Link to={`/${session.language}/location/${pic.node.meta_info.slug}`}>
-                <RoundImage
+                <BackgroundSection
+                  className={`img-thumbs`}
+                  height={`60px`}
+                  data={pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
+                  bgSize={`cover`}
+                  alt={pic.node.carousel_box.images[randLocImgIndex].alt}
+                >
+                  {/* <RoundImage
                   h_xs="40px"
                   h_sm="70px"
                   h_md="60px"
@@ -127,7 +152,7 @@ const Loc = (props) => {
                   position="center"
                   height="100%"
                   // width="auto"
-                  mb="1.25rem">
+                  mb="1.25rem"> */}
 
                   <Row
                     height="100%"
@@ -154,8 +179,8 @@ const Loc = (props) => {
 
                     </Column>
                   </Row>
-
-                </RoundImage>
+                </BackgroundSection>
+                {/* </RoundImage> */}
               </Link>
               {/* </Card> */}
             </Column>
