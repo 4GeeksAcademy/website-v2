@@ -78,7 +78,7 @@ const P2 = styled.p`
     }
 `
 const Right = styled.div`
-    width: 220px;
+    width: 270px;
     padding-top: 5px;
 `;
 

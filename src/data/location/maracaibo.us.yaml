@@ -4,6 +4,8 @@ meta_info:
   description: null
   image: ""
   keywords: ""
+  # it will not show up on the applications forms
+  unlisted: false
   redirects: []
 
 seo_title: "4Geeks Academy Maracaibo"

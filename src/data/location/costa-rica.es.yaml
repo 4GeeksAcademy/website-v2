@@ -1,5 +1,5 @@
 meta_info:
-  slug: "maracaibo-venezuela"
+  slug: "costa-rica-es"
   title: ""
   description: null
   image: ""
@@ -8,18 +8,18 @@ meta_info:
   keywords: ""
   redirects: []
 
-seo_title: "4Geeks Academy Maracaibo"
+seo_title: "4Geeks Academy Costa Rica"
 header:
-  tagline: "4GEEKS ACADEMY IN Maracaibo"
+  tagline: "4GEEKS ACADEMY EN COSTA RICA"
   sub_heading: ""
   image: "../../../static/images/locations/mcbo-loc-2.png"
   alt: ""
 info_box:
-  heading: "Find us in Caracas"
+  heading: "Encuentranos en Costa Rica"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
-  email: "ve@4GeeksAcademy.com"
+  email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/maracaibo-map.png"
   alt: ""
 carousel_box:

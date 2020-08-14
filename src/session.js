@@ -111,11 +111,16 @@ export const withSession = Component => {
                 }
               }
             }
+            nodes{
+                fields {
+                    file_name
+                    slug
+                }
+            }
           }
-          
         }
       `);
-        const locationsArray = data.loc.edges;
+        const locationsArray = data.loc;
         const [session, setSession] = useState(defaultSession);
         //get ip address
         useEffect(() => {
@@ -124,15 +129,14 @@ export const withSession = Component => {
                 const v6 = "v6";
                 const response = await fetch(`https://api.ipstack.com/${v4}?access_key=73822e5a584c041268f0e78a3253cf0d`);
                 
-                let location = locationsArray.find(({ node }) => node.defaultLanguage == "us").node;
+                let location = locationsArray.edges.find(({ node }) => node.defaultLanguage == "us").node;
                 try{
                     let data = response.status === 200 ? await response.json() : null;
-                    if(data) location = closestLoc(locationsArray, data.latitude, data.longitude)
+                    if(data) location = closestLoc(locationsArray.edges, data.latitude, data.longitude)
                 }catch(e){}
                 // const location = "Santiago de Chile"
                 const browserLang = getFirstBrowserLanguage();
-                let repeated = [];
-
+                
                 // get the language
                 let language = null;
                 if (location) language = location.defaultLanguage;
@@ -140,16 +144,17 @@ export const withSession = Component => {
                     console.log("Location could not be loaded, using browserlanguage as default language");
                     language = browserLang.substring(0, 2);
                 }
-
+                
+                let repeated = [];
                 const _session = {
                     ...session, v4, v6, location, browserLang, language,
                     upcoming: [],
-                    locations: locationsArray.map(l => l.node).filter(l => {
-                        if (repeated.includes(l.meta_info.slug)) return false;
-
-                        repeated.push(l.meta_info.slug);
+                    locations: locationsArray.nodes.filter(l => {
+                        const [ name, lang ] = l.fields.file_name.split(".");
+                        if(lang !== "us" || repeated.includes(name)) return false;
+                        repeated.push(name);
                         return true;
-                    })
+                    }).map(l => locationsArray.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node)
                 };
                 console.log("Reset session with: ", _session);
                 setSession(_session);

@@ -7,8 +7,8 @@ meta_info:
   redirects: ["/home", "/us/home"]
 header:
   tagline: Coding Bootcamp
-  title: LEARN TO CODE AND GET CAREER SUPPORT FOR LIFE
-  sub_heading: Join a community of hundreds of graduates already working as coders and become a part of one of the world's biggest coding community.
+  title: EMPOWER YOU LIFE WITH CODE
+  sub_heading: Join a community of hundreds of graduates already training and working as coders in top companies, one of the world's biggest coding communities.
   image: "../../../static/images/main-bg.jpg"
 
 ## EDUCATION SECTION
