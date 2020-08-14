@@ -9,7 +9,7 @@ meta_info:
 ## BANNER - HEADER
 header:
   #Empowering talent with code by providing flexible educational experiences
-  tagline: EMPOWERING TALENTS WITH AMAZING CODING CAREERS
+  tagline: EMPOWERING TALENT WITH CODING CAREERS
   sub_heading: ""
   image: "../../../static/bg/the-academy-bg.jpg"
   alt: ""
