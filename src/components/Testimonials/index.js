@@ -8,14 +8,14 @@ import {Row, Column, Wrapper, Divider} from '../Sections'
 import {Colors, BackgroundSection} from '../Styling'
 import {Link} from 'gatsby';
 import Img from "gatsby-image"
-
+import Fragment from "../Fragment"
 
 const Testimonials = (props) => {
     const [carouselHeight, setCarouselHeight] = useState("500px")
     let testimonialsArray = props.lang[0].node.testimonials;
 
     return (
-        <>
+        <Fragment github="/components/testimonials">
             <Carousel
                 showThumbs={false}
                 showStatus={false}
@@ -83,7 +83,7 @@ const Testimonials = (props) => {
                     )
                 })}
             </Carousel>
-        </>
+        </Fragment>
     )
 };
 

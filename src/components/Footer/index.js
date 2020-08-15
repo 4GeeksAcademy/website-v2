@@ -3,12 +3,13 @@ import {Link} from 'gatsby';
 import {Container, Row, Column, Divider} from '../Sections'
 import {Colors, RoundImage} from '../Styling'
 import {H5, Separator, Paragraph} from '../Heading'
+import Fragment from "../Fragment"
 
 const Footer = (props) => {
     let col = props;
     // let col = data.allFooterYaml.edges;
     return (
-        <>
+        <Fragment github="/components/footer">
             <Container width="fluid" height="auto" color={Colors.black} p_top="25px" p_bottom="15px">
                 <Divider height="20%" />
                 <Row height="60%">
@@ -96,7 +97,7 @@ const Footer = (props) => {
                 </Row>
             </Container>
             <Divider height="80px" />
-        </>
+        </Fragment>
     )
 };
 

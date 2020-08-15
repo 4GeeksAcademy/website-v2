@@ -6,6 +6,7 @@ import {H3, H4, H5, Title, Paragraph} from '../Heading';
 import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button, Question, Tooltip, Span} from '../Styling';
 import {Card} from '../Card';
 import Link from 'gatsby-link'
+import Fragment from "../Fragment"
 
 const Globe = styled.div`
 opacity: 1;
@@ -49,8 +50,7 @@ const GeeksVsOthers = props => {
   const [globeTooltipOpacity, setGlobeTooltipOpacity] = useState(0)
   const geeks = props.lang[0].node;
   return (
-    <>
-
+    <Fragment github="/components/geeks_vs_others">
       <Row>
         <Column
           size="12"
@@ -330,7 +330,7 @@ const GeeksVsOthers = props => {
       <Row align="center">
         {geeks.button.button_link != "" ? <Link to={geeks.button.button_link}><Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">{geeks.button.button_text}</Button></Link> : null}
       </Row>
-    </>
+    </Fragment>
   )
 };
 

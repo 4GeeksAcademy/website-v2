@@ -108,6 +108,8 @@ export const withSession = Component => {
                 defaultLanguage
                 meta_info{
                     slug
+                    unlisted
+                    position
                 }
               }
             }
@@ -151,10 +153,18 @@ export const withSession = Component => {
                     upcoming: [],
                     locations: locationsArray.nodes.filter(l => {
                         const [ name, lang ] = l.fields.file_name.split(".");
+                        //filter repetead and only english locations
                         if(lang !== "us" || repeated.includes(name)) return false;
                         repeated.push(name);
                         return true;
-                    }).map(l => locationsArray.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node)
+                    })
+                    .map(l => locationsArray.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node)
+                    .filter(l => {
+                        // filter inlisted locations
+                        if(l.meta_info.unlisted) return false;
+                        return true;
+                    })
+                    .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
                 };
                 console.log("Reset session with: ", _session);
                 setSession(_session);

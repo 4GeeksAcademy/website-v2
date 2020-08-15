@@ -10,6 +10,7 @@ import BaseRender from './_baseRender'
 import {SessionContext} from '../session.js'
 import {apply} from "../actions";
 import {BrowserView, MObileView, isBrowser, isMobile} from "react-device-detect";
+import Testimonials from '../components/Testimonials'
 
 const formIsValid = (formData=null) => {
     if(!formData) return null;
@@ -59,6 +60,7 @@ const Apply = (props) => {
         }}>
             <Divider height="100px" />
             <Wrapper
+                github={`/page/apply.${pageContext.lang}.yml`}
                 style="default">
                 <Title
                     title={yml.tagline}
@@ -226,7 +228,18 @@ const Apply = (props) => {
                 </Row>
 
             </Wrapper>
-            <Divider height="600px" />
+            <Divider height="150px" />
+                <Wrapper style="default">
+                    <Title
+                        primary
+                        title={yml.testimonial_header.heading}
+                        paragraph={yml.testimonial_header.sub_heading}
+                        customParagraphSize="8"
+                        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+                    />
+                <Divider height="20px" />
+                <Testimonials lang={data.allTestimonialsYaml.edges} /></Wrapper>
+            <Divider height="100px" />
         </form>
     )
 };
@@ -265,8 +278,37 @@ export const query = graphql`
                 heading
                 content_section
             }
+            testimonial_header{
+                heading
+                sub_heading
+            }
         }
       }
+    }
+    allTestimonialsYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+          node {
+            lang
+            testimonials {
+              student_name
+              testimonial_date
+              student_thumb{
+                childImageSharp {
+                  fluid(maxWidth: 200){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                  fixed(width: 200, height: 200) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
+              starts
+              content
+              source_url
+              source_url_text
+            }
+          }
+        }
     }
   }
 `;

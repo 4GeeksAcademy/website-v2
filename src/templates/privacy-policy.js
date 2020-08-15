@@ -15,6 +15,7 @@ const Privacy = (props) => {
     return (
         <>
             <Wrapper
+                github="/components/privacy"
                 style="default"
 
                 border="bottom"

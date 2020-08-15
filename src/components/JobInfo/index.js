@@ -8,6 +8,7 @@ import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading'
 import {Colors, ArrowRight, Teacher, Glasses, Clock, Users, Comments, Button, RoundImage} from '../Styling';
 import {Card} from '../Card';
 import Link from 'gatsby-link'
+import Fragment from "../Fragment"
 
 const JobInfo = () => {
   const data = useStaticQuery(graphql`
@@ -27,7 +28,7 @@ const JobInfo = () => {
       `)
   let jobs = data.allJobYaml.edges
   return (
-    <>
+    <Fragment github="/job">
       {jobs
         ?
         jobs.map((item, index) => {
@@ -114,7 +115,7 @@ const JobInfo = () => {
         })
         : "Loading"
       }
-    </>
+    </Fragment>
   )
 };
 

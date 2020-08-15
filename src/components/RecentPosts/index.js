@@ -78,7 +78,7 @@ const RecentPosts = () => {
     // let newEventArray = event.filter((item) => new Date(item.event_date).getTime() >= today.getTime())
     return (
         <>
-            <Row>
+            <Row github="/blog">
                 {randomArray().map((i, index) => (
                     <Column size="4" customRespSize respSize="12" key={index} margin="10px 0">
                         <Card

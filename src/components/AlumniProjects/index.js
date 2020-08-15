@@ -7,13 +7,14 @@ import {Card} from '../Card';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
+import Fragment from "../Fragment"
 import ReactPlayer from 'react-player'
 
 const AlumniProjects = props => {
     const [slideIndex, setSlideIndex] = useState()
     let alumniData = props.lang[0].node
     return (
-        <>
+        <Fragment github="/components/alumni_projects">
             <Row>
                 <Column
                     size="12"
@@ -249,7 +250,7 @@ const AlumniProjects = props => {
                     </Column>
                 </Row>
             }
-        </>)
+        </Fragment>)
 };
 export default AlumniProjects;
 

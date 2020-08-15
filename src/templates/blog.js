@@ -24,8 +24,8 @@ const Blog = ({data, pageContext, yml}) => {
     return (
         <>
             <Wrapper
+                github={`/page/blog.${pageContext.lang}.yml`}
                 style="default"
-
                 border="bottom"
             >
                 <Divider height="50px" />
@@ -58,7 +58,7 @@ const Blog = ({data, pageContext, yml}) => {
                     <Separator primary />
                 </Row>
                 <Divider height="50px" />
-                <Row>
+                <Row github={`/blog`}>
                     <div className="card-columns" >
                         {data.posts.edges.filter(post => post.node.frontmatter.featured === true).map((item, i) => {
                             return (

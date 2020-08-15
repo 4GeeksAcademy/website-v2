@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import {Colors, BackgroundSection} from '../../components/Styling'
 import {Device} from '../Responsive'
 import {Paragraph} from '../Heading'
+import Fragment from "../Fragment"
 
-export const Container = styled.div`
+export const Container = styled(Fragment)`
     ${props =>
         props.width === "fluid"
             ?
@@ -63,7 +64,7 @@ export const Container = styled.div`
     padding-bottom: ${props => props.p_bottom};
     background: ${props => props.color};
 `
-export const Row = styled.div`
+export const Row = styled(Fragment)`
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};
@@ -336,7 +337,7 @@ ${props =>
 export const Wrapper = props => {
     if (props.style === "default") {
         return (
-            <Container fluid>
+            <Container github={props.github} fluid>
                 <Row>
                     <Column size="1" />
                     {props.image === "yes" ?

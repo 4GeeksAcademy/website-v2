@@ -45,6 +45,7 @@ const Why = (props) => {
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
+                github="/components/outcomes"
                 style="default"
             >
                 <Title
@@ -184,7 +185,7 @@ const Why = (props) => {
                 border="custom"
                 customBorderRadius="1.25rem 0 0 1.25rem"
             >
-                <Row marginBottom="30px">
+                <Row github="/page/the-academy.us.yml" marginBottom="30px">
                     {cornerstone.cornerstones_list.map((item, index) => {
                         return (
                             <Column key={index} size="6" margin="0 0 10px 0">
@@ -241,6 +242,8 @@ const Why = (props) => {
                 </Row>
                 <Divider height="50px" />
                 <Title size="8" title={yml.staff.heading} paragraph={yml.staff.sub_heading} primary />
+                
+                {/* MEET THE TEAM */}
                 <Mentors />
 
                 <Divider height="150px" />
@@ -270,7 +273,7 @@ const Why = (props) => {
                                 customRespSize
                             >
                                 <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
-                                    <Row align="center" height="100%">
+                                    <Row github="/page/the-academy.us.yml#L77" align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="10%" />
                                             <Row height="10%">

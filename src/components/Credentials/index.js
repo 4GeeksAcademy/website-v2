@@ -4,11 +4,12 @@ import {H2, H3, H4} from '../Heading'
 import {Card} from '../Card'
 import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
 import {Row, Column, Container, Divider} from '../Sections'
+import Fragment from "../Fragment"
 
 export default props => {
   const credentials = props.lang[0].node.credentials
-  return (
-    <Row >
+  return (<Fragment github="/components/credentials">
+    <Row>
       {credentials.map((i, index) => {
         return (
           <Column key={index} size="3" customRespSize respSize="6" respSizeMargin="10px" m_xs="35px 0 5px 0" m_sm="35px 0 5px 0" m_md="35px 0 5px 0">
@@ -91,6 +92,7 @@ export default props => {
         )
       })}
     </Row>
+    </Fragment>
   )
 }
 

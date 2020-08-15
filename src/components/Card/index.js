@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import {Colors} from '../../components/Styling'
 import {Device} from '../Responsive'
 import {FadeIn} from '../Animations'
+import Fragment from "../Fragment"
 
-export const Card = styled.div`
+export const Card = styled(Fragment)`
     animation: 2s ${FadeIn} ease-out;
     :focus {outline: none;};
     position: ${props => props.position};

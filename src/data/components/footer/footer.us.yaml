@@ -25,7 +25,7 @@ footer:
       - name: "Blog"
         link: "/blog"
       - name: "Contact"
-        link: "/contact-us"
+        link: "/contact"
       - name: "Careers"
         link: "/jobs"
       - name: "Legal"
