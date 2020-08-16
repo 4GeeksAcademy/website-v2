@@ -5,6 +5,7 @@ import {Link, useStaticQuery, graphql} from 'gatsby';
 import {Device} from '../Responsive';
 import PropTypes from 'prop-types';
 import {Colors, Button} from '../Styling';
+import Fragment from "../Fragment"
 
 export const NavBar = styled.nav`
     background-color: white;
@@ -118,7 +119,7 @@ export const Burger = (props) => {
   const [open, setOpen] = useState(false)
 
   return (
-    <>
+    <Fragment github="/components/alumni_projects">
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />
@@ -128,7 +129,7 @@ export const Burger = (props) => {
       {/* {open === true ? <RightNav open={open} menu={props} /> : null} */}
       {/* <NavButton open={open} /> */}
 
-    </>
+    </Fragment>
   )
 }
 const ButtonStyle = styled.div`

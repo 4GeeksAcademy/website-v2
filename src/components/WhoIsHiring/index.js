@@ -6,11 +6,11 @@ import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
 import {Card} from '../Card';
 import Img from "gatsby-image"
-
+import Fragment from "../Fragment"
 const WhoIsHiring = props => {
   const partners = props.lang[0].node
   return (
-    <>
+    <Fragment github="/components/partner">
       {props.source === "partners"
         ?
         <>
@@ -203,7 +203,7 @@ const WhoIsHiring = props => {
               </Row>
             </>
       }
-    </>
+    </Fragment>
   )
 };
 

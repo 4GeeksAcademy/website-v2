@@ -6,10 +6,10 @@ import graphic from "../../assets/images/graphic.png"
 import Trend from 'react-trend';
 import {Colors} from '../Styling'
 import {Card} from '../Card'
-
+import Fragment from "../Fragment"
 export default (props) => {
     const jobs = props.lang[0].node.jobs
-    return (
+    return (<Fragment github="/components/jobs_statistics">
         <Row>
             {jobs.map((i, index) => (
                 <Column size="4" key={index} >
@@ -75,6 +75,7 @@ export default (props) => {
             ))
             }
         </Row >
+        </Fragment>
     )
 }
 

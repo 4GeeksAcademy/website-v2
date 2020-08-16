@@ -30,7 +30,7 @@ const Location = ({data, pageContext, yml}) => {
             alt={yml.header.alt}
         >
             <Divider height="50px" />
-            <Row>
+            <Row github={`/location`}>
                 <Column size="12">
                     <H1 color={Colors.white} fontSize="24px" align="center">{yml.seo_title}</H1>
                 </Column>

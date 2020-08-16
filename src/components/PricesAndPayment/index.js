@@ -260,7 +260,7 @@ const PricesAndPayments = (props) => {
       {/* 3 COLUMNS LAYOUT */}
       {prova.currentFilteredCourse &&
         <>
-          <Row align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{session.location && session.location.city}</Paragraph></Row>
+          <Row github="/location" align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{session.location && session.location.city}</Paragraph></Row>
           <Divider height="50px" />
           <Row align="center">
             <Column size="4" customRespSize respSize="12">

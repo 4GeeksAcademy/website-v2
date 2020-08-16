@@ -23,7 +23,8 @@ const Faq = (props) => {
     console.log("FAQ: ", yml)
     const {session, setSession} = useContext(SessionContext);
     return (
-        <><Wrapper
+        <>
+        <Wrapper
             style="default"
             image="yes"
             url={yml.banner.image}
@@ -43,6 +44,7 @@ const Faq = (props) => {
         </Wrapper>
             <Divider height="50px" />
             <Wrapper
+                github={`/page/faq.${pageContext.lang}.yml`}
                 style="default">
                 {yml.faq.map((item, index) => {
                     return (

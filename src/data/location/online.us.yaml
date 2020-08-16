@@ -1,15 +1,15 @@
 meta_info:
-  slug: "downtown-miami"
-  title: "4Geeks Academy Miami"
-  position: 1
+  slug: "online-remote"
+  title: "4Geeks Academy Online"
+  position: 0
   description: "null"
   image: ""
   keywords: "null"
-  redirects: ["/locations"]
+  redirects: ["/online", "/remote"]
 
-seo_title: "4Geeks Academy Miami"
+seo_title: "4Geeks Academy Online Coding Bootcamp"
 header:
-  tagline: "4GEEKS ACADEMY IN MIAMI"
+  tagline: "4GEEKS ACADEMY ONLINE"
   sub_heading: ""
   image: "../../../static/images/locations/miami-sunset.jpeg"
   alt: ""
@@ -23,7 +23,7 @@ info_box:
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "Online that feels like offline: You have unlimited one-on-one mentoring, chat support 12 hrs a day, hundreds of interactive exercises and videos, real time streaming classes and our very own social network were our thousands of graduates are actively engaged around the world."
   images:
     - path: "../../../static/images/locations/miami-sunset.jpeg"
       alt: "miami-sunset"
@@ -198,14 +198,14 @@ prices:
 # upcoming_courses:
 #   -
 
-city: "Miami"
-name: "Downtown Miami"
+city: "Online"
+name: ""
 latitude: "25.760158"
 longitude: "-80.200154"
 address: "1801 SW 18th Road"
 zip_code: "33130"
-state: "Florida"
-country: "usa"
+state: ""
+country: "Remote"
 courses:
   - "Full-Time"
   - "Part-Time"

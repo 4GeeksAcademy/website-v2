@@ -43,7 +43,7 @@ const Jobs = ({data, pageContext, yml}) => {
       <Wrapper
         style="default"
         height="400px"
-
+        github={`/page/jobs.${pageContext.lang}.yml`}
       >
         <Title
           title={yml.about.heading}

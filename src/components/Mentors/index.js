@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
+
 import {useStaticQuery, graphql} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {RoundImage, Colors, Over, ArrowRight} from '../Styling';
@@ -36,8 +36,7 @@ const Mentors = props => {
     let staff = data.allStaffYaml.edges;
 
     return (
-        <>
-            <Row>
+            <Row github="/components/staff">
                 {staff[0].node.staff.map((item, index) => {
                     return (
                         <Column key={index} size="3" customRespSize respSize="6">
@@ -92,7 +91,6 @@ const Mentors = props => {
                     )
                 })}
             </Row>
-        </>
     )
 }
 

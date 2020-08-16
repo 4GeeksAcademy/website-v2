@@ -1,18 +1,19 @@
 meta_info:
-  slug: "downtown-miami"
+  slug: "enlinea-remoto"
   title: "4Geeks Academy Miami"
-  position: 1
   description: "null"
+  position: 0
   image: ""
   keywords: "null"
-  redirects: ["/locations"]
+  redirects: ["/remoto"]
 
-seo_title: "4Geeks Academy Miami"
+seo_title: "4Geeks Academy Remoto"
 header:
   tagline: "4GEEKS ACADEMY IN MIAMI"
   sub_heading: ""
   image: "../../../static/images/locations/miami-sunset.jpeg"
   alt: ""
+
 info_box:
   heading: "Find us in Miami"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"
@@ -198,14 +199,14 @@ prices:
 # upcoming_courses:
 #   -
 
-city: "Miami"
-name: "Downtown Miami"
+city: "Online"
+name: "Online Remoto"
 latitude: "25.760158"
 longitude: "-80.200154"
 address: "1801 SW 18th Road"
 zip_code: "33130"
 state: "Florida"
-country: "usa"
+country: "Remoto"
 courses:
   - "Full-Time"
   - "Part-Time"

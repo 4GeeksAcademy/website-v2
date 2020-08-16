@@ -19,16 +19,16 @@ export default () => {
   //     }
   //   `)
   return (
-    <Row>
-      <div className="col-lg-8 offset-lg-1 text-center">
-        <Row>
-          {data.news.edges[0].node.news.map(i => (
-            <div className="col-md-4 ">
-              <img src={i.image} width="100%" height="150" />
-            </div>
-          ))}
-        </Row>
-      </div>
-    </Row>
+      <Row github="/components/news">
+        <div className="col-lg-8 offset-lg-1 text-center">
+          <Row>
+            {data.news.edges[0].node.news.map(i => (
+              <div className="col-md-4 ">
+                <img src={i.image} width="100%" height="150" />
+              </div>
+            ))}
+          </Row>
+        </div>
+      </Row>
   )
 }

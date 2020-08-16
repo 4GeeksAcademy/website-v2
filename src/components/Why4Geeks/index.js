@@ -4,12 +4,12 @@ import {Column, Row, Divider} from '../Sections'
 import {Address, HandMoney, Laptop, Colors, BackgroundSection} from '../Styling'
 import ReactPlayer from 'react-player'
 import StyledBackgroundSection from '../Styling'
+import Fragment from "../Fragment"
 
 export default (props) => {
   const info = props.lang[0].node;
   console.log("**INFO:", info)
-  return (
-    <>
+  return (<Fragment github="/components/4geeks_vs_others">
       <Title
         title={info.heading}
         primary
@@ -78,6 +78,6 @@ export default (props) => {
         ))}
       </Row>
       {/* <StyledBackgroundSection test={info.why[0].image} /> */}
-    </>
+    </Fragment>
   )
 }

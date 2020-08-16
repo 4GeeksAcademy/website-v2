@@ -183,6 +183,7 @@ const Program = ({data, pageContext, yml}) => {
     {/* <div className={test}> */}
 
     <Wrapper
+      github="/course"
       style="default"
       data={yml.header.image.childImageSharp.fluid}
       image="yes"
@@ -395,6 +396,7 @@ const Program = ({data, pageContext, yml}) => {
 
     <Wrapper
       style="default"
+      github="/course"
     >
 
 
