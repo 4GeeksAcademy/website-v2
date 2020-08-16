@@ -25,7 +25,12 @@ const WhoIsHiring = props => {
           <Row >
             {partners.partners.images.map((partner, index) => (
               <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
-                <Card width="100%" padding="20px">
+                <Card width="100%"
+                  p_xs="0"
+                  p_sm="0"
+                  p_md="20px"
+                  p_lg="20px"
+                  p_xl="20px">
                   {/* <Img className={`image`} fluid={partner.image.childImageSharp.fluid} alt="Cnn Logo"></Img> */}
                   <BackgroundSection
                     data={partner.image.childImageSharp.fluid}
@@ -78,7 +83,12 @@ const WhoIsHiring = props => {
             <Row>
               {partners.coding.images.map((partner, index) => (
                 <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
-                  <Card width="100%" padding="20px">
+                  <Card width="100%"
+                    p_xs="0px"
+                    p_sm="0px"
+                    p_md="20px"
+                    p_lg="20px"
+                    p_xl="20px">
                     <BackgroundSection
                       data={partner.image.childImageSharp.fluid}
                       alt={partner.alt}
@@ -117,7 +127,14 @@ const WhoIsHiring = props => {
               <Row>
                 {partners.influencers.images.map((partner, index) => (
                   <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
-                    <Card width="100%" padding="20px">
+                    <Card
+                      width="100%"
+                      p_xs="0"
+                      p_sm="0"
+                      p_md="20px"
+                      p_lg="20px"
+                      p_xl="20px"
+                    >
                       <BackgroundSection
                         data={partner.image.childImageSharp.fluid}
                         alt={partner.alt}
@@ -154,7 +171,13 @@ const WhoIsHiring = props => {
               <Row>
                 {partners.financials.images.map((partner, index) => (
                   <Column size="4" customRespSize respSize="4" key={index} margin="5px 0">
-                    <Card width="100%" padding="20px">
+                    <Card width="100%"
+                      p_xs="0"
+                      p_sm="0"
+                      p_md="20px"
+                      p_lg="20px"
+                      p_xl="20px"
+                    >
                       <BackgroundSection
                         data={partner.image.childImageSharp.fluid}
                         alt={partner.alt}

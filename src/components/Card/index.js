@@ -31,26 +31,28 @@ export const Card = styled.div`
     @media ${Device.xs}{
         height: ${props => props.h_xs};
         width: ${props => props.w_xs};
-        padding: ${props => props.p_xs}
+        padding: ${props => props.p_xs};
     }
     @media ${Device.sm}{
         height: ${props => props.h_sm};
         width: ${props => props.w_sm};
-        padding: ${props => props.p_sm}
+        padding: ${props => props.p_sm};
     }
     @media ${Device.md}{
         height: ${props => props.h_md};
         width: ${props => props.w_md};
-        padding: ${props => props.p_md}
+        padding: ${props => props.p_md};
            
     }
     @media ${Device.lg}{
         width: ${props => props.w_lg};
         height: ${props => props.h_lg};
+        padding: ${props => props.p_lg};
     }
     @media ${Device.xl} {
         width: ${props => props.w_xl};
         height: ${props => props.h_xl};
+        padding: ${props => props.p_xl};
     }
     ${props =>
         props.move === "up"

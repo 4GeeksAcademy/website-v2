@@ -31,7 +31,18 @@ const ChooseProgram = (props) => {
                 </Row>
                 {toggle == true
                     ?
-                    <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="200px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".75rem" shadow>
+                    <Row
+                        marginBottom="5px"
+                        marginTop="3px"
+                        marginRight="0"
+                        marginLeft="0"
+                        width="200px"
+                        align="center"
+                        position="absolute"
+                        zIndex="1000"
+                        background={Colors.white}
+                        borderRadius=".75rem"
+                        shadow>
                         <>
                             {props.lang[0].node.programs.map((item, index) => {
                                 return (
