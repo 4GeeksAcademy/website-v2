@@ -8,8 +8,8 @@ import Fragment from "../Fragment"
 
 export default (props) => {
   const info = props.lang[0].node;
-  console.log("**INFO:", info)
-  return (<Fragment github="/components/4geeks_vs_others">
+
+return (<Fragment github="/components/4geeks_vs_others">
       <Title
         title={info.heading}
         primary

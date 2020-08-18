@@ -126,6 +126,7 @@ const Loc = (props) => {
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               {/* <Card width="100%" > */}
               <Link to={`/${session.language}/location/${pic.node.meta_info.slug}`}>
+                {console.log("childImageSharp", pic.node.carousel_box.images[randLocImgIndex])}
                 <BackgroundSection
                   className={`img-thumbs`}
                   height={`60px`}
