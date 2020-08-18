@@ -59,7 +59,7 @@ const Home = (props) => {
                 </Row>
                 <Row RespSm>
                   <Column size="10" customRespSize respSize="10">
-                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="13px">{yml.header.sub_heading}</Paragraph>
+                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="15px">{yml.header.sub_heading}</Paragraph>
                   </Column>
                 </Row>
 

@@ -134,6 +134,9 @@ letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
 background-color: ${props => props.bg};
+&:hover{
+  background-color: ${props => props.bgHover || props.bg};
+}
 text-shadow: ${props => props.textShadow};
 font-style: normal;
 `;
@@ -344,7 +347,7 @@ Title.propTypes = {
 //   primary: PropTypes.bool.isRequired,
 // }
 Paragraph.defaultProps = {
-  fontSize: "14px",
+  fontSize: "16px",
   fontFamily: "Lato, sans-serif",
   fontWeight: "300",
   customParagraphSize: "12",

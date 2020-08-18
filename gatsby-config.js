@@ -36,6 +36,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-force-trailing-slashes',
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets\/images\/*\.svg/ // See below to configure properly
+        }
+      }
+    },
+    {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {

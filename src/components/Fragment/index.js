@@ -17,6 +17,7 @@ export const An = styled.a`
     z-index: 2000;
 `
 
+const GITHUB_REPO = "https://github.com/4GeeksAcademy/website-v2/tree/master/src/data";
 const Fragment = ({ github, ...rest }) => {
     let { edit } = parseQueryString(useLocation().search)
     const [ editMode, setEditMode ] = React.useState(false)
@@ -28,7 +29,7 @@ const Fragment = ({ github, ...rest }) => {
         else setEditMode(localStorage.getItem("edit-mode") === "true")
     }, [])
     if(editMode && github) return <div style={{ position: "relative" }} {...rest}>
-        <An href={`${process.env.GITHUB_REPO}${github}`} target="blank" rel="noopener noreferrer">edit</An>
+        <An href={`${GITHUB_REPO}${github}`} target="blank" rel="noopener noreferrer">edit</An>
         {rest.children}
     </div>
     else return <div {...rest}>{rest.children}</div>;
