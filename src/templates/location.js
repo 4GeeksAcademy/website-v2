@@ -138,7 +138,7 @@ const Location = ({data, pageContext, yml}) => {
                                 <BackgroundSection
                                     className={`img-right`}
                                     height={`426px`}
-                                    data={yml.info_box.image.childImageSharp.fluid}
+                                    data={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
                                     bgSize={`cover`}
                                     alt="Cnn Logo"
                                 />

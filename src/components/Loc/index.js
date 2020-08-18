@@ -17,7 +17,9 @@ const Loc = (props) => {
   let loc = props.lang.filter(l => l.node.meta_info.unlisted != true).sort((a,b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
   return (
     <>
-      <Row>
+      <Row
+        github={"/location"}
+      >
         <Column
           size="12"
           border="bottom"
@@ -59,7 +61,7 @@ const Loc = (props) => {
                         <BackgroundSection
                           className={`image`}
                           height={`500px`}
-                          data={item.node.header.image.childImageSharp.fluid}
+                          data={item.node.header.image && item.node.header.image.childImageSharp.fluid}
                           bgSize={`cover`}
                           alt="Cnn Logo"
                         />
@@ -130,7 +132,7 @@ const Loc = (props) => {
                 <BackgroundSection
                   className={`img-thumbs`}
                   height={`60px`}
-                  data={pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
+                  data={pic.node.carousel_box.images[randLocImgIndex].path && pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
                   bgSize={`cover`}
                   alt={pic.node.carousel_box.images[randLocImgIndex].alt}
                 >
