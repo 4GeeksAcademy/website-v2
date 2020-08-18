@@ -30,7 +30,7 @@ const PricesAndPayments = (props) => {
   const [completed, setCompleted] = useState({});
   const [scrollPosition, setScrollPosition] = useState(0);
   const [currentCourseType, setCurrentCourseType] = useState()
-  console.log("session_price", session)
+
   useEffect(() => {
     const programType = async () => {
       const type = await getProgramInfo()
@@ -54,8 +54,7 @@ const PricesAndPayments = (props) => {
           alert("no city found!!");
         }
       } catch (error) {
-        console.log("something failed");
-        console.log(error);
+        console.log("Something failed", error);
       }
       const myLocation = await getCurrentCity(city)
       if (myLocation != null) {
@@ -65,20 +64,7 @@ const PricesAndPayments = (props) => {
     }
     loadCurrentCity();
   }, [session.location])
-  // useEffect(() => {
-  //   const loadCurrentCity = async () => {
-  //     const t = await session.location;
-  //     const city = await t.city;
-  //     console.log("CITY :", city);
-  //     // let city = session && session.location.city;
-  //     // const city = "Miami";
-  //     const myLocation = await getCurrentCity(city)
-  //     if (myLocation != null) {
-  //       setProva({...prova, currentCityLocation: myLocation})
-  //     }
-  //   }
-  //   loadCurrentCity();
-  // }, [session.location])
+
   useEffect(() => {
     const loadCurrentProgramSteps = async () => {
       if (currentCourseType === "part-time") {

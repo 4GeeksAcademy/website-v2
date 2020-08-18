@@ -54,12 +54,10 @@ const LeadForm = ({heading, formHandler, handleClose}) => {
     const classes = useStyles();
     const [modalStyle] = useState(getModalStyle);
     const [focus, setFocus] = useState("");
-    console.log(formData);
     return (
         <>
         
             <form onSubmit={(e) => {
-                        console.log("executedeeedd");
                         e.preventDefault();
                         if(formStatus.status === "error"){
                             setFormStatus({ status: "idle", msg: "Resquest" })
@@ -74,7 +72,6 @@ const LeadForm = ({heading, formHandler, handleClose}) => {
                                     }
                                     else {
                                         setFormStatus({ status: "thank-you", msg: "Thank you" });
-                                        console.log("Thank you");
                                         navigate('/thank-you/apply');
                                     }
                                 })

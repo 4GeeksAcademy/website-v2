@@ -37,15 +37,12 @@ const ProgramSelector = (props) => {
   const [toggle, setToggle] = useState(false)
   const [weeks, setWeeks] = useState("16");
   const classes = useStyles();
-  console.log("WEEKS: ", weeks)
-  // const currentCityInfo = data.loc.edges.filter((item) => item.node.city === session.location)
-  console.log("pselect:", props)
+
   let locArray = props.lang;
   // let locArray = data.loc.edges;
   let weekArray = ["16", "9", "2"]
   let link = "";
   {props.week === 16 ? link = "full-time" : link = "part-time"}
-  console.log("LINK: ", link)
   return (
     <>
       {props.context.slug !== "coding-introduction" ?

@@ -64,7 +64,6 @@ const useStyles = makeStyles(theme => ({
 
 
 const Program = ({data, pageContext, yml}) => {
-  console.log("PAGECONTEXT: ", pageContext)
   const [ref, inView] = useInView({
     threshold: 0
   });

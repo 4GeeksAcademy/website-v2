@@ -23,7 +23,6 @@ import Img from "gatsby-image"
 const Home = (props) => {
   const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
-  console.log("YML IMAGE:", yml)
   return (
     <>
       <Container fluid >

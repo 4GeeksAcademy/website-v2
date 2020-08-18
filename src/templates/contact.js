@@ -57,7 +57,6 @@ const Contact = (props) => {
     }
     return true;
     }
-    console.log(formData);
 
     return (
         <>

@@ -166,12 +166,12 @@ export const withSession = Component => {
                     })
                     .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
                 };
-                console.log("Reset session with: ", _session);
+                console.log("Session: ", _session);
                 setSession(_session);
                 return _session
 
             };
-            console.log("Loading session...");
+
             loadIp()
                 .then(_session => {
                     fetch(`${process.env.BREATHECODE_HOST}/admissions/cohort/?upcoming=true&academy=${_session.location.meta_info.slug}`)

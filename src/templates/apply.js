@@ -31,7 +31,6 @@ const Apply = (props) => {
         location: {value: '', valid: false},
         referral_key: {value: '', valid: true}
     });
-    console.log("formData", formData)
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
@@ -48,7 +47,7 @@ const Apply = (props) => {
                         }
                         else {
                             setFormStatus({status: "thank-you", msg: "Thank you"});
-                            console.log("Thank you");
+                            // console.log("Thank you");
                             navigate('/thank-you/apply');
                         }
                     })

@@ -20,7 +20,6 @@ const Faq = (props) => {
     const {data, pageContext, yml} = props;
     const [buttonToggle, setButtonToggle] = useState(false);
     const [toggleIndex, setToggleIndex] = useState();
-    console.log("FAQ: ", yml)
     const {session, setSession} = useContext(SessionContext);
     return (
         <>

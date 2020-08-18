@@ -72,7 +72,6 @@ const Calendar = (props) => {
   const {data, pageContext, yml} = props;
   const {session, setSession} = useContext(SessionContext);
 
-  console.log("jo", session);
   const [cohorts, setCohorts] = useState([]);
   const [events, setEvent] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
@@ -132,7 +131,6 @@ const Calendar = (props) => {
   useEffect(() => {
     const mergeEventsAndCohorts = async () => {
       let mergeArrays = await [...cohorts, ...events]
-      console.log("MERGE", mergeArrays)
     }
     mergeEventsAndCohorts();
   }, [cohorts, events])
@@ -169,10 +167,7 @@ const Calendar = (props) => {
     const loadFilterType = async () => {
       let filterTypeArray = ['All', 'courses'];
       for (let i = 0; i < events.length; i++) {
-        if (filterTypeArray.includes(events[i].type)) {
-          console.log("####", events[i].type)
-        }
-        else {
+        if (!filterTypeArray.includes(events[i].type)) {
           filterTypeArray.push(events[i].type)
         }
       }

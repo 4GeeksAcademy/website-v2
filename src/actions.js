@@ -1,7 +1,6 @@
 import { save_form } from "./utils/leads";
 
 function tagManager (eventName) {
-    console.log(window.dataLayer);
     if (typeof dataLayer != 'undefined') {
         dataLayer.push({'event': eventName});
         console.log('Event successfully triggered: ' + eventName);
@@ -15,7 +14,6 @@ export const apply = async (data, session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    console.log("session", session);
     return await save_form(body, ['website-lead'], ['hard'], session);
 
     throw Error('Unexpected error');
@@ -26,7 +24,6 @@ export const requestSyllabus = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    console.log("session", session);
     return await save_form(body, ['request_more_info'], ['soft'], session);
     // return fetch('/api/acp_apply', {
     //     headers: new Headers({'content-type': 'application/json'}),
@@ -43,7 +40,6 @@ export const reviewGuidebook = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    console.log("session", session);
     return await save_form(body, ['download-guidebook'], ['soft'], session);
     // return fetch('/api/acp_apply', {
     //     headers: new Headers({'content-type': 'application/json'}),
@@ -60,7 +56,6 @@ export const beHiringPartner = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    console.log("session", session);
     return await save_form(body, ['hiring-partner'], ['soft'], session);
     
 }
@@ -69,8 +64,5 @@ export const contactUs = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    console.log("session", session);
     return await save_form(body, ['contact us'], ['soft'], session);
-    // console.log("session", session);
-    // return await save_form(body, ['contact us'], ['soft'], session)
 }
