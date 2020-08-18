@@ -13,8 +13,8 @@ import {SessionContext} from '../../session'
 
 const Loc = (props) => {
   const {session, setSession} = useContext(SessionContext);
-  console.log("LOCSESSION: ", session)
-  let loc = props.lang
+  console.log("LOC: ", props.lang)
+  let loc = props.lang.filter(l => l.node.meta_info.unlisted != true).sort((a,b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
   return (
     <>
       <Row>

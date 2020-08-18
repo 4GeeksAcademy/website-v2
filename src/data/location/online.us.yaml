@@ -11,7 +11,7 @@ seo_title: "4Geeks Academy Online Coding Bootcamp"
 header:
   tagline: "4GEEKS ACADEMY ONLINE"
   sub_heading: ""
-  image: "../../../static/images/locations/miami-sunset.jpeg"
+  image: "../../../static/images/locations/remote.jpeg"
   alt: ""
 info_box:
   heading: "Find us in Miami"
@@ -19,18 +19,15 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "../../../static/images/locations/miami-map.png"
+  image: "../../../static/images/locations/remote.jpeg"
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "Online that feels like offline: You have unlimited one-on-one mentoring, chat support 12 hrs a day, hundreds of interactive exercises and videos, real time streaming classes and our very own social network were our thousands of graduates are actively engaged around the world."
+  content: > 
+    Online experience that feels like in-person: You have unlimited One-on-One mentoring, chat support 12 hrs a day, hundreds of interactive exercises and videos, real time streaming classes and our very own social network were our thousands of graduates are actively engaged around the world."
   images:
-    - path: "../../../static/images/locations/miami-sunset.jpeg"
-      alt: "miami-sunset"
-    - path: "../../../static/images/locations/loc-miami-one.jpg"
-      alt: "4Geeeks miami location"
-    - path: "../../../static/images/locations/loc-miami-two.jpg"
-      alt: "4Geeeks miami lab"
+    - path: "../../../static/images/locations/remote.jpeg"
+      alt: "Remote Coding Bootcamp"
 
 ## HEADING SECTION
 

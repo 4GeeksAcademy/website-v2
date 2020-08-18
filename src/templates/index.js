@@ -684,6 +684,8 @@ export const query = graphql`
                   slug
                   title
                   description
+                  unlisted
+                  position
                   image
                   keywords
                 }

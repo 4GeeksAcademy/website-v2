@@ -241,7 +241,7 @@ export const Span = styled.div`
         opacity: ${props => props.opacity};
       }
 `
-export const BackgroundSection = ({children, className, data, height, width, bgSize, borderRadius, margin}) => {
+export const BackgroundSection = ({children, className, data, height, width, bgSize, borderRadius, margin, withOverlay}) => {
     return (
         <BackgroundImage
             Tag="section"
