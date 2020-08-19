@@ -9,7 +9,7 @@ meta_info:
 ## BANNER INFO
 banner_heading: "Lead Instructor"
 banner_sub_heading: ""
-banner_image: ""
+banner_image: "/images/bg/pricing-bg.jpg"
 cities:
   - Miami
   - Santiago de Chile

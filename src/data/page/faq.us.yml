@@ -9,7 +9,7 @@ meta_info:
 banner:
   tagline: FREQUENTLY ASKED QUESTIONS
   sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
-  image: "/bg/4Geeks-events-bg.jpg"
+  image: "../../../static/images/bg/4Geeks-events-bg.jpg"
 
 faq:
   - question: "Do I HAVE to bring my own laptop?"

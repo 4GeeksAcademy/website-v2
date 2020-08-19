@@ -69,6 +69,12 @@ module.exports = {
         path: `${__dirname}/src`,
         name: 'src',
       },
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/`,
+        name: 'static',
+      },
     },
     'gatsby-plugin-root-import',
     'gatsby-plugin-react-helmet',

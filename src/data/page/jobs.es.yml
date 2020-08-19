@@ -12,7 +12,7 @@ meta_info:
 header:
   tagline: "TRABAJA EN 4GEEKS ACADEMY"
   sub_heading: ""
-  image: "../../../static/bg/pricing-bg.jpg"
+  image: "../../../static/images/bg/pricing-bg.jpg"
 
 about:
   heading: "MÁS SOBRE 4GEEKS ACADEMY"

@@ -9,7 +9,7 @@ meta_info:
 
 header:
   tagline: "INGENIERO DE SOFTWARE"
-  image: "../../../static/bg/bg-pr.jpg"
+  image: "../../../static/images/bg/bg-pr.jpg"
   alt: ""
 button:
   syllabus_button_text: "REQUEST SYLLABUS"
