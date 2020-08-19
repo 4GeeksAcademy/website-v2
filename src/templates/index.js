@@ -81,7 +81,7 @@ const Home = (props) => {
                 <BackgroundSection
                   className={`image`}
                   height={`500px`}
-                  data={yml.header.image.childImageSharp.fluid}
+                  data={yml.header.image && yml.header.image.childImageSharp.fluid}
                   bgSize={`cover`}
                   alt="Cnn Logo"
                   borderRadius={`0 0 0 1.25rem`}

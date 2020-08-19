@@ -22,7 +22,7 @@ const Location = ({data, pageContext, yml}) => {
     return (<>
         <Wrapper
             style="default"
-            data={yml.header.image.childImageSharp.fluid}
+            data={yml.header.image && yml.header.image.childImageSharp.fluid}
             image="yes"
             className={`img-header`}
             height={`300px`}
