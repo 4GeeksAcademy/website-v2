@@ -31,7 +31,7 @@ import Typography from '@material-ui/core/Typography';
 import {Input, Alert} from '../components/Form';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
-import SyllabusSVG from "../assets/images/syllabus.svg";
+import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
