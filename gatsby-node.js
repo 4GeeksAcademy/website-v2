@@ -31,7 +31,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
             createNodeField({node, name: `lang`, value: meta.lang});
             createNodeField({node, name: `slug`, value: meta.slug});
             createNodeField({node, name: `file_name`, value: meta.file_name});
-            createNodeField({node, name: `template`, value: meta.template});
+            createNodeField({node, name: `defaultTemplate`, value: meta.template});
             createNodeField({node, name: `type`, value: meta.type});
             createNodeField({node, name: `pagePath`, value: meta.pagePath});
             createNodeField({node, name: `filePath`, value: url});
@@ -81,7 +81,7 @@ const createBlog = async ({actions, graphql}) => {
                         lang
                         slug
                         file_name
-                        template
+                        defaultTemplate
                         type
                         pagePath
                         filePath
@@ -150,6 +150,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
                     lang
                     slug
                     file_name
+                    defaultTemplate
                     template
                     type
                     pagePath
@@ -166,7 +167,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
     result.data[`all${entity}Yaml`].edges.forEach(({node}) => {
         createPage({
             path: node.fields.pagePath,
-            component: path.resolve(`./src/templates/${node.fields.template}.js`),
+            component: path.resolve(`./src/templates/${node.fields.template || node.fields.defaultTemplate}.js`),
             context: {
                 ...node.fields,
                 translations: translations[node.fields.template]
@@ -175,14 +176,14 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
 
         if (node.fields.lang === "us") {
             _createRedirect({
-                fromPath: `/${node.fields.template}/${node.fields.slug}`,
+                fromPath: `/${node.fields.defaultTemplate}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
             });
 
             _createRedirect({
-                fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
+                fromPath: `/en/${node.fields.defaultTemplate}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
@@ -190,7 +191,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
         }
         if (node.fields.lang === "es") {
             _createRedirect({
-                fromPath: `/${node.fields.template}/${node.fields.slug}`,
+                fromPath: `/${node.fields.defaultTemplate}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
