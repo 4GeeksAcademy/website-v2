@@ -56,6 +56,7 @@ export const Container = styled(Fragment)`
     }
     
     height: ${props => props.height};
+    margin: ${props => props.margin || "initial"};
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -198,6 +199,7 @@ export const Column = styled.div`
     padding: ${props => props.padding};
     height: ${props => props.height};
     margin: ${props => props.margin};
+    text-align: ${props => props.align || "left"}
     position: relative;
     width: 100%;
     border: ${props => props.borderStyle};
@@ -327,7 +329,7 @@ ${props =>
 export const Wrapper = props => {
     if (props.style === "default") {
         return (
-            <Container github={props.github} fluid>
+            <Container margin={props.margin} github={props.github} fluid>
                 <Row>
                     <Column size="1" />
                     {props.imageData ?
@@ -429,6 +431,7 @@ export const Divider = props => {
 Container.propTypes = {
     color: PropTypes.string,
     height: PropTypes.string,
+    margin: PropTypes.string,
     marginLeft: PropTypes.string,
     borderTopLeft: PropTypes.string,
     borderBottomLeft: PropTypes.string,

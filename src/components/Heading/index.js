@@ -231,6 +231,7 @@ export const Paragraph = styled.div`
   font-family: ${props => props.fontFamily};
   font-weight: ${props => props.fontWeight};
   padding: ${props => props.padding};
+  padding-right: ${props => props.paddingRight || "innitial"};
   letter-spacing: 0px;
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};

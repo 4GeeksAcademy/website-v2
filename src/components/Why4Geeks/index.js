@@ -14,8 +14,7 @@ return (<Fragment github="/components/4geeks_vs_others">
         title={info.heading}
         primary
       />
-      <Divider height="50px" />
-      <Row height="auto">
+      <Row height="auto" marginTop="50px">
         {info.why.map((i, index) => (
           <Column size="4" key={index}>
             {i.video != "" ?
@@ -30,26 +29,13 @@ return (<Fragment github="/components/4geeks_vs_others">
               />
               :
               <BackgroundSection
-                data={i.image.childImageSharp.fluid}
+                image={i.image.childImageSharp.fluid}
                 alt={i.alt}
                 height={`250px`}
                 bgSize={`cover`}
                 borderRadius={`1.25rem`}
                 className={`img-border`}
               ></BackgroundSection>
-              // <RoundImage
-              //   url={i.image}
-              //   bsize="cover"
-              //   mb="10px"
-              //   border="1.25rem"
-              //   position="center center"
-              //   h_xs="230px"
-              //   h_sm="230px"
-              //   h_md="230px"
-              //   h_lg="230px"
-              //   h_xl="230px"
-              // />
-
             }
             <Row align="around" marginTop="20px">
               <Column size size="2" p_xs="0 5px 0 0" p_sm="0 5px 0 0" customRespSize respSize="2" t_align="right" alignSelf="center">

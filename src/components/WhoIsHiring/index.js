@@ -10,7 +10,7 @@ import Fragment from "../Fragment"
 const WhoIsHiring = props => {
   const partners = props.lang[0].node
   return (
-    <Fragment github="/components/partner">
+    <Fragment margin={props.margin} padding="20px 0" github="/components/partner">
       {props.source === "partners"
         ?
         <>
@@ -26,28 +26,14 @@ const WhoIsHiring = props => {
             {partners.partners.images.map((partner, index) => (
               <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
                 <Card width="100%" padding="20px">
-                  {/* <Img className={`image`} fluid={partner.image.childImageSharp.fluid} alt="Cnn Logo"></Img> */}
                   <BackgroundSection
-                    data={partner.image.childImageSharp.fluid}
+                    image={partner.image.childImageSharp.fluid}
                     alt={partner.alt}
                     height={`60px`}
                     bgSize={`contain`}
                     margin={`1rem`}
                   ></BackgroundSection>
-                  {/* <RoundImage
-                    h_xs="50px"
-                    h_sm="70px"
-                    h_md="80px"
-                    h_lg="90px"
-                    h_xl="80px"
-                    width="100%"
-                    url={partner.image}
-                    border=".75rem"
-                    bsize="contain"
-                    position="center center"
-
-                    backgroundColor="transparent"
-                  /> */}
+                
                 </Card>
               </Column>
             ))}
@@ -86,19 +72,6 @@ const WhoIsHiring = props => {
                       margin={`1rem`}
                       bgSize={`contain`}
                     ></BackgroundSection>
-                    {/* <RoundImage
-                      h_xs="50px"
-                      h_sm="50px"
-                      h_md="80px"
-                      h_lg="90px"
-                      h_xl="80px"
-                      width="100%"
-                      url={partner.image}
-                      border=".75rem"
-                      bsize="contain"
-                      position="center"
-                      backgroundColor="transparent"
-                    /> */}
                   </Card>
                 </Column>
               ))}

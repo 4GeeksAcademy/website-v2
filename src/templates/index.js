@@ -188,11 +188,10 @@ const Home = (props) => {
           <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
         </Row>
       </Wrapper>
-      <Divider height="100px" />
 
       {/* GEEKS VS OTHERS SECTION */}
 
-      <Wrapper style="default">
+      <Wrapper style="default" margin="100px">
         <Title
           title={yml.geeks_vs_others.heading}
           paragraph={yml.geeks_vs_others.sub_heading}
@@ -202,15 +201,15 @@ const Home = (props) => {
           primary
           size="10"
         />
-        <Divider height="100px" />
         <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
-        <Divider height="100px" />
+      </Wrapper>
+        
+      <Wrapper style="default" margin="100px">
         <Title
           title={yml.join_geeks.heading}
           paragraph={yml.join_geeks.sub_heading}
           primary
         />
-        <Divider height="40px" />
 
         {/* ******************* */}
         {/* JOIN 4GEEKS SECTION */}
@@ -221,121 +220,74 @@ const Home = (props) => {
             <Card
               padding="20px"
               shadow
-              width="100%"
               margin="10px 0px"
-              h_xs="180px"
-              h_sm="190px"
-              h_md="300px"
-              h_lg="200px"
-              h_xl="210px"
             >
-              <Row height="100%">
-                <Column size="10" customRespSize respSize="10">
-                  <Row marginLeft="0px" marginBottom="15px" height="25%">
-                    <RoundImage url="/images/geekpal.png" bsize="contain" height="100%" position="left" />
-                  </Row>
-                  <Row >
-                    <Column size="12">
-                      <Paragraph
-                        color={Colors.black}
-                        customTextAlignSmall
-                        alignXs="left">
-                        {yml.join_geeks.geek_data.geek_pal_heading}
-                      </Paragraph>
-                    </Column>
-                  </Row>
-                  <Row marginTop="15px">
-                    <Column size="12">
-                      {/* {yml.join_geeks.geek_data.geek_pal_data.map((item, index) => {
-                        return ( */}
-                      <Paragraph
-                        // key={index}
-                        color={Colors.gray}
-                        fontSize="14px"
-                        lineHeight="18px"
-                        customTextAlignSmall
-                        alignXs="left">
-                        {yml.join_geeks.geek_data.geek_pal_data.content}
-                      </Paragraph>
-                      {/* )
-                      })} */}
-                    </Column>
-                  </Row>
-                </Column>
-                <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
-                  <Link to={yml.join_geeks.geek_data.geek_pal_data.icon_link}>
-                    <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
-                  </Link>
-                </Column>
-              </Row>
+              <RoundImage url="/images/geekpal.png" bsize="contain" height="40px" position="left" />
+              <Paragraph
+                color={Colors.black}
+                margin="15px 0px 15px 0px"
+                customTextAlignSmall
+                alignXs="left">
+                {yml.join_geeks.geek_data.geek_pal_heading}
+              </Paragraph>
+              <Paragraph
+                // key={index}
+                paddingRight="30px"
+                color={Colors.gray}
+                fontSize="14px"
+                lineHeight="18px"
+                customTextAlignSmall
+                alignXs="left">
+                {yml.join_geeks.geek_data.geek_pal_data.content}
+              </Paragraph>
+              <Column size="2" margin="0 0 0 auto" customRespSize align="right"  paddingRight="0" respSize="2" alignSelf="flex-end">
+                <Link to={yml.join_geeks.geek_data.geek_pal_data.icon_link}>
+                  <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
+                </Link>
+              </Column>
             </Card>
           </Column>
           <Column size="6">
             <Card
               padding="20px"
               shadow
-              h_xs="180px"
-              h_sm="190px"
-              h_md="300px"
-              h_lg="200px"
-              h_xl="210px"
-              width="100%"
               margin="10px 0px"
 
             >
-              <Row height="100%">
-                <Column size="10" customRespSize respSize="10">
-                  <Row marginLeft="0px" marginBottom="15px" height="25%">
-                    <RoundImage url="/images/geekforce.png" bsize="contain" height="100%" position="left" />
-                  </Row>
-                  <Row >
-                    <Column size="12">
-                      <Paragraph color={Colors.black} customTextAlignSmall
-                        alignXs="left">{yml.join_geeks.geek_data.geek_force_heading}</Paragraph>
-                    </Column>
-                  </Row>
-                  <Row marginTop="15px">
-                    <Column size="12">
-                      {/* {yml.join_geeks.geek_data.geek_force_data.map((item, index) => {
-                        return ( */}
-                      <Paragraph
-                        key="index"
-                        color={Colors.gray}
-                        fontSize="14px"
-                        lineHeight="18px"
-                        customTextAlignSmall
-                        alignXs="left">
-                        {yml.join_geeks.geek_data.geek_force_data.content}
-                      </Paragraph>
-                      {/* )
-                      })} */}
-
-                    </Column>
-                  </Row>
-                </Column>
-                <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
+                <RoundImage url="/images/geekforce.png" bsize="contain" height="40px" position="left" />
+                <Paragraph color={Colors.black} customTextAlignSmall
+                  margin="15px 0px 15px 0px"
+                  alignXs="left">{yml.join_geeks.geek_data.geek_force_heading}</Paragraph>
+                <Paragraph
+                  key="index"
+                  color={Colors.gray}
+                  fontSize="14px"
+                  paddingRight="30px"
+                  lineHeight="18px"
+                  customTextAlignSmall
+                  alignXs="left">
+                  {yml.join_geeks.geek_data.geek_force_data.content}
+                </Paragraph>
+                <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right" customRespSize respSize="2" alignSelf="flex-end">
                   <Link to={yml.join_geeks.geek_data.geek_force_data.icon_link}>
                     <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
                   </Link>
                 </Column>
-              </Row>
             </Card>
           </Column>
         </Row>
       </Wrapper>
-      <Divider height="100px" />
+
       <Wrapper
         style="default"
-        
+        margin="100px"
         color={Colors.lightGray}
         border="top">
-
-        <Divider height="50px" />
-        <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
-        <Divider height="50px" />
+        <WhoIsHiring margin="50px" source="partners" lang={data.allPartnerYaml.edges} />
       </Wrapper>
-      <Divider height="100px" />
+
       <Wrapper
+        margin="100px"
         style="default">
         <Title
           size="10"
@@ -344,11 +296,11 @@ const Home = (props) => {
           customParagraphSize="8"
           primary
         />
-        <Divider height="50px" />
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" />
       </Wrapper>
-      <Divider height="100px" />
+
       <Wrapper
+        margin="100px"
         style="default">
         <Title
           primary
@@ -357,11 +309,9 @@ const Home = (props) => {
           customParagraphSize="8"
         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
         />
-        <Divider height="50px" />
         <Loc lang={data.allLocationYaml.edges} />
       </Wrapper>
-      <Divider height="150px" />
-      <Wrapper style="default">
+      <Wrapper style="default" margin="100px">
         <Title
           primary
           title={yml.testimonial_header.heading}
@@ -369,9 +319,8 @@ const Home = (props) => {
           customParagraphSize="8"
         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
         />
-        <Divider height="20px" />
-        <Testimonials lang={data.allTestimonialsYaml.edges} /></Wrapper>
-      <Divider height="100px" />
+        <Testimonials lang={data.allTestimonialsYaml.edges} />
+      </Wrapper>
 
     </>
   )

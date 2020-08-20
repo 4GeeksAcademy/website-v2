@@ -61,7 +61,7 @@ const Loc = (props) => {
                         <BackgroundSection
                           className={`image`}
                           height={`500px`}
-                          data={item.node.header.image && item.node.header.image.childImageSharp.fluid}
+                          image={item.node.header.image && item.node.header.image.childImageSharp.fluid}
                           bgSize={`cover`}
                           alt="Cnn Logo"
                         />
