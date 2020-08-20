@@ -34,6 +34,7 @@ const Fragment = ({ github, style, className, children }) => {
     </div>
     else return <div style={{ ...style }} className={className}>{children}</div>;
 }
+const FakeFragment = ({ style, className, children }) => <div style={{ ...style }} className={className}>{children}</div>;
 Fragment.propTypes = {
     github: PropTypes.string,
     children: PropTypes.node,
@@ -46,4 +47,5 @@ Fragment.defaultValues = {
     className: "",
     children: null
 }
-export default Fragment;
+
+export default (process.env.GATSBY_EDIT_MODE === "TRUE") ? Fragment : FakeFragment;
