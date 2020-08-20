@@ -99,7 +99,7 @@ const Contact = (props) => {
                     <Column
                         size="12"
                         border="bottom"
-                        image="no"
+                        
                         color={Colors.white}
                     >
 
@@ -112,7 +112,7 @@ const Contact = (props) => {
                                 align="center"
                                 borderRadius="1.25rem 1.25rem 1.25rem 1.25rem"
                             >
-                                <Column size="8" alignSelf="center" height="100%" image="no" border="bottom" color="white">
+                                <Column size="8" alignSelf="center" height="100%"  border="bottom" color="white">
                                     <Row align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
@@ -185,7 +185,7 @@ const Contact = (props) => {
 
                                 </Column>
 
-                                <Column size="4" customRespSize respSize="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="unset" height="100%" image="no" >
+                                <Column size="4" customRespSize respSize="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="unset" height="100%"  >
                                     <Row align="center" height="100%" borderRadius="0 1.25rem 1.25rem 1.25rem">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />

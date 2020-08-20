@@ -243,8 +243,7 @@ const Calendar = (props) => {
     <>
       <Wrapper
         style="default"
-        image="yes"
-        url={yml.banner.image}
+        image={yml.banner.image}
         border="bottom"
         height="700px"
         backgroundSize="cover"
@@ -261,7 +260,7 @@ const Calendar = (props) => {
       </Wrapper>
       <Wrapper
         style="default"
-        image="no"
+        
         border="top"
         color={Colors.white}
       >
@@ -503,7 +502,7 @@ const Calendar = (props) => {
       <Divider height="200px" />
       <Wrapper
         style="default"
-        image="no"
+        
         border="top"
         color={Colors.lightGray}
       >

@@ -26,9 +26,9 @@ const Footer = (props) => {
                                             : <Row height="20px"><H5 fontSize="16px" color={Colors.gray}>{item.heading}</H5></Row>}
                                         {item.heading != null
                                             ? item.heading === "COMPANY" || item.heading === "COMPAÑÍA"
-                                                ? <Row height="20px" marginBottom="10px"><Separator margin=".5rem 0" width="100%" primary></Separator></Row>
-                                                : <Row height="20px" marginBottom="10px" ><Separator margin=".5rem 0" primary></Separator></Row>
-                                            : <Row height="20px" marginBottom="10px" display_xs="none" display_sm="none"><Separator margin=".5rem 0" primary></Separator></Row>
+                                                ? <Row height="20px" marginBottom="10px"><Separator left width="100%" primary></Separator></Row>
+                                                : <Row height="20px" marginBottom="10px" ><Separator left primary></Separator></Row>
+                                            : <Row height="20px" marginBottom="10px" display_xs="none" display_sm="none"><Separator left primary></Separator></Row>
                                         }
                                         {item.items.map((ln, i) => {
                                             return (

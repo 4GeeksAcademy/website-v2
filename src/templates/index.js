@@ -25,73 +25,43 @@ const Home = (props) => {
   const {data, pageContext, yml} = props;
   return (
     <>
-      <Container fluid >
-        {/* <Img className={`image`} fluid={yml.image.childImageSharp.fluid} alt="Florida Education Logo"></Img> */}
         <Row>
-          <Column size="1" />
-          <Column size="11" >
-            <Row>
-              <Column size="1" />
-              <Column size="5">
-                <Divider height="100px" />
-                <Row  >
-                  <Column size="10" customRespSize respSize="10">
-                    <H1 textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header.tagline}</H1>
-                  </Column>
-                </Row>
-                <Row>
-
-                  <Separator primary />
-
-                </Row>
-                <Row >
-                  <Column size="10" customRespSize respSize="10">
-                    <H2
-                      fs_xs="38px"
-                      fs_sm="38px"
-                      fs_md="30px"
-                      fs_lg="32px"
-                      fs_xl="38px"
-                      // primary
-                      align="left" >{yml.header.title}<Span animated color={Colors.yellow}>_</Span></H2>
-                  </Column>
-                </Row>
-                <Row RespSm>
-                  <Column size="10" customRespSize respSize="10">
-                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="15px">{yml.header.sub_heading}</Paragraph>
-                  </Column>
-                </Row>
-
-                <Divider height="20px" />
-                <Row center>
-                  <ChooseProgram lang={data.allChooseProgramYaml.edges} />
-                </Row>
-                <Divider height="20px" />
-              </Column>
-              <Column size="1" />
-              <Column
-                size="5"
-                border="bottom"
-                // padding="20%"
-                // image="yes"
-                // url={yml.header.image}
-                height="500px"
-              // backgroundSize="cover"
-              >
-                <BackgroundSection
-                  className={`image`}
-                  height={`500px`}
-                  data={yml.header.image && yml.header.image.childImageSharp.fluid}
-                  bgSize={`cover`}
-                  alt="Cnn Logo"
-                  borderRadius={`0 0 0 1.25rem`}
-                />
-              </Column>
-            </Row>
+          <Column size="4" margin="0 0 0 auto" padding="100px 10px 0 10px">
+            <H1 textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header.tagline}</H1>
+            <Separator primary left />
+            <H2
+              fs_sm="38px"
+              fs_md="30px"
+              fs_lg="32px"
+              fs_xl="38px"
+              // primary
+              align="left" >{yml.header.title}<Span animated color={Colors.yellow}>_</Span>
+            </H2>
+            <Paragraph color={Colors.gray} margin="20px 0px" padding="0px 20px" align="left" fontSize="15px">{yml.header.sub_heading}</Paragraph>
+            <ChooseProgram 
+              programs={data.allChooseProgramYaml.edges[0].node.programs} 
+              openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text} 
+              closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text} 
+            />
+          </Column>
+          <Column
+            size="6"
+            border="bottom"
+            height="500px"
+            customRespSize
+            disp_sm={"none"}
+            disp_xs={"none"}
+          >
+            <BackgroundSection
+              className={`image`}
+              height={`500px`}
+              image={yml.header.image && yml.header.image.childImageSharp.fluid}
+              bgSize={`cover`}
+              alt="Cnn Logo"
+              borderRadius={`0 0 0 1.25rem`}
+            />
           </Column>
         </Row>
-      </Container>
-      <Divider height="45px" />
 
       {/* CREDENTIALS CARDS */}
 
@@ -115,12 +85,11 @@ const Home = (props) => {
         style="default">
         <JobsStatistics lang={data.allJobsStatisticsYaml.edges} />
       </Wrapper>
-      <Divider height="100px" />
-
-
 
       <Wrapper
-        style="default">
+        margin="30px"
+        style="default"
+      >
         <Row align="center" >
           <Column size="4" customRespSize respSize="4" margin="5px 0">
             <Paragraph
@@ -357,7 +326,7 @@ const Home = (props) => {
       <Divider height="100px" />
       <Wrapper
         style="default"
-        image="no"
+        
         color={Colors.lightGray}
         border="top">
 

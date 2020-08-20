@@ -145,13 +145,13 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
                 meta_info {
                     slug
                     redirects
+                    template
                 }
                 fields{
                     lang
                     slug
                     file_name
                     defaultTemplate
-                    template
                     type
                     pagePath
                     filePath
@@ -165,12 +165,13 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
 
     const translations = buildTranslations(result.data[`all${entity}Yaml`]);
     result.data[`all${entity}Yaml`].edges.forEach(({node}) => {
+        console.log(`Creating entity page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} with template ${node.meta_info.template || node.fields.defaultTemplate}.js`);
         createPage({
             path: node.fields.pagePath,
-            component: path.resolve(`./src/templates/${node.fields.template || node.fields.defaultTemplate}.js`),
+            component: path.resolve(`./src/templates/${node.meta_info.template || node.fields.defaultTemplate}.js`),
             context: {
                 ...node.fields,
-                translations: translations[node.fields.template]
+                translations: translations[node.fields.defaultTemplate]
             }
         });
 
@@ -243,7 +244,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                     lang
                     slug
                     file_name
-                    template
+                    defaultTemplate
                     type
                     pagePath
                     filePath
@@ -263,10 +264,10 @@ const createPagesfromYml = async ({graphql, actions}) => {
         console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath}`);
         createPage({
             path: _targetPath,
-            component: path.resolve(`./src/templates/${node.fields.template}.js`),
+            component: path.resolve(`./src/templates/${node.fields.defaultTemplate}.js`),
             context: {
                 ...node.fields,
-                translations: translations[node.fields.template]
+                translations: translations[node.fields.defaultTemplate]
             }
         });
 

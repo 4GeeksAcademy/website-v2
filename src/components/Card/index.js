@@ -14,7 +14,6 @@ export const Card = styled(Fragment)`
     flex-direction: column;
     width: ${props => props.width};
     height: ${props => props.height};
-    margin: ${props => props.margin};
     padding: ${props => props.padding};
     background: ${props => props.color === "black"
         ?
@@ -32,26 +31,31 @@ export const Card = styled(Fragment)`
     @media ${Device.xs}{
         height: ${props => props.h_xs};
         width: ${props => props.w_xs};
-        padding: ${props => props.p_xs}
+        padding: ${props => props.p_xs};
+        margin: ${props => props.margin_xs || props.margin};
     }
     @media ${Device.sm}{
         height: ${props => props.h_sm};
         width: ${props => props.w_sm};
-        padding: ${props => props.p_sm}
+        margin: ${props => props.margin_sm || props.margin};
+        padding: ${props => props.p_sm};
     }
     @media ${Device.md}{
         height: ${props => props.h_md};
         width: ${props => props.w_md};
-        padding: ${props => props.p_md}
-           
+        padding: ${props => props.p_md};
+        margin: ${props => props.margin_md || props.margin};
+        
     }
     @media ${Device.lg}{
         width: ${props => props.w_lg};
         height: ${props => props.h_lg};
+        margin: ${props => props.margin_lg || props.margin};
     }
     @media ${Device.xl} {
         width: ${props => props.w_xl};
         height: ${props => props.h_xl};
+        margin: ${props => props.margin_xl || props.margin};
     }
     ${props =>
         props.move === "up"
@@ -107,4 +111,6 @@ Card.propTypes = {
 }
 Card.defaultProps = {
     borders: '1.25rem',
+    margin_sm: null,
+    margin_xs: null,
 };

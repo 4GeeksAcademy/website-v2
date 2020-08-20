@@ -67,8 +67,7 @@ const Partners = (props) => {
 
       <Wrapper
         style="default"
-        data={yml.header.image && yml.header.image.childImageSharp.fluid}
-        image="yes"
+        imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         className={`img-header`}
         height={`500px`}
         bgSize={`cover`}
@@ -107,7 +106,7 @@ const Partners = (props) => {
       <Divider height="50px" />
       <Wrapper
         style="default"
-        image="no"
+        
         color={Colors.lightGray}
         border="top"
       >

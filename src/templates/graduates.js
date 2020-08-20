@@ -39,7 +39,7 @@ const Graduates = ({data, pageContext, yml}) => {
           <Column
             size="12"
             border="bottom"
-            image="no"
+            
           >
             <Card shadow borders="1.25rem" height="426px" >
               <Row
@@ -48,7 +48,7 @@ const Graduates = ({data, pageContext, yml}) => {
                 marginRight="0"
                 customRespSize
               >
-                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
+                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%"  border="bottom">
                   <Row align="center" height="100%">
                     <Column size="8" height="100%">
                       <Row height="5%" />
@@ -73,7 +73,7 @@ const Graduates = ({data, pageContext, yml}) => {
                     </Column>
                   </Row>
                 </Column>
-                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image="yes" url={yml.about.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
+                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image={yml.about.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
               </Row>
             </Card>
           </Column>

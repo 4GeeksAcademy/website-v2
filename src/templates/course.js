@@ -153,8 +153,7 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       github="/course"
       style="default"
-      data={yml.header.image && yml.header.image.childImageSharp.fluid}
-      image="yes"
+      imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       className={`img-header`}
       height={`600px`}
       bgSize={`cover`}

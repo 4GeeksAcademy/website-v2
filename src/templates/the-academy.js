@@ -19,8 +19,7 @@ const Why = (props) => {
         <>
             <Wrapper
                 style="default"
-                data={yml.header.image && yml.header.image.childImageSharp.fluid}
-                image="yes"
+                image={yml.header.image && yml.header.image.childImageSharp.fluid}
                 className={`img-header`}
                 height={`500px`}
                 bgSize={`cover`}
@@ -180,7 +179,7 @@ const Why = (props) => {
             <Divider height="150px" />
             <Wrapper
                 style="default"
-                image="no"
+                
                 color={Colors.lightGray}
                 border="custom"
                 customBorderRadius="1.25rem 0 0 1.25rem"
@@ -254,7 +253,7 @@ const Why = (props) => {
             <Divider height="150px" />
             <Wrapper
                 style="default"
-                image="no"
+                
                 color={Colors.lightGray}
                 border="custom"
                 customBorderRadius="1.25rem 0 0 1.25rem"
@@ -263,7 +262,7 @@ const Why = (props) => {
                     <Column
                         size="12"
                         border="bottom"
-                        image="no"
+                        
                     >
                         <Card shadow borders="1.25rem" height="450px" move="up" up="50%">
                             <Row
@@ -272,7 +271,7 @@ const Why = (props) => {
                                 marginRight="0"
                                 customRespSize
                             >
-                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
+                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%"  border="bottom">
                                     <Row github="/page/the-academy.us.yml#L77" align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="10%" />
@@ -324,7 +323,7 @@ const Why = (props) => {
                                         </Column>
                                     </Row>
                                 </Column>
-                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image="yes" url={yml.story.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
+                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image={yml.story.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
                             </Row>
                         </Card>
                     </Column>
@@ -345,7 +344,7 @@ const Why = (props) => {
                 <RecentPosts />
             </Wrapper>
             <Divider height="100px" />
-            <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
+            <Wrapper style="default"  color={Colors.lightGray} border="top">
                 <Divider height="100px" />
                 <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
                 <Divider height="100px" />

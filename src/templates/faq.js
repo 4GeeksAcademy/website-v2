@@ -25,8 +25,7 @@ const Faq = (props) => {
         <>
         <Wrapper
             style="default"
-            image="yes"
-            url={yml.banner.image}
+            image={yml.banner.image}
             border="bottom"
             height="300px"
             backgroundSize="cover"

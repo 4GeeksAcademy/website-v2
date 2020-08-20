@@ -3,7 +3,7 @@ meta_info:
   title: ""
   description: null
   image: ""
-  template: "course-online"
+  template: "course-online" # js component that will be handling the rendering
   keywords: ""
   redirects: []
 

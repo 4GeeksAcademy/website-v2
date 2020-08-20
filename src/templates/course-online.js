@@ -1,14 +1,12 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
-import {navigate} from 'gatsby';
-import {useInView} from "react-intersection-observer";
 import Link from 'gatsby-link'
-import Layout from '../global/Layout';
 import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider, Sidebar, Div} from '../components/Sections'
-import {Title, H2, H3, H4, Span, Paragraph} from '../components/Heading'
+import {Title, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
+import { navigate } from "@reach/router"
 import PricesAndPayment from '../components/PricesAndPayment'
 import AlumniProjects from '../components/AlumniProjects'
 import BaseRender from './_baseRender'
@@ -26,107 +24,54 @@ import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
 
-function rand () {
-  return Math.round(Math.random() * 20) - 10;
-}
-
-const useStyles = makeStyles(theme => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    height: 300,
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '1.25rem',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
-
-
 const Program = ({data, pageContext, yml}) => {
-  const [ref, inView] = useInView({
-    threshold: 0
-  });
-  const scrollRef = useRef();
+
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const [activeStep, setActiveStep] = useState(0);
-  const [completed, setCompleted] = useState({});
-  const steps = getSteps(yml);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const totalSteps = () => {
-    return steps.length;
-  };
-  const completedSteps = () => {
-    return Object.keys(completed).length;
-  };
-  const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
-  };
-  const allStepsCompleted = () => {
-    return completedSteps() === totalSteps();
-  };
-
-  let week = "";
-  {
-    pageContext.slug === "full-stack-web-development-bootcamp-full-time" || pageContext.slug === "desarrollo-web-full-stack-bootcamp-full-time"
-      ? week = 9
-      : pageContext.slug === "full-stack-web-development-bootcamp-part-time" || pageContext.slug === "desarrollo-web-full-stack-bootcamp-part-time"
-        ? week = 16
-        : pageContext.slug === "coding-introduction" || pageContext.slug === "introduccion-programacion"
-        && null
-  }
   return (<>
-    {/* <div className={test}> */}
 
     <Wrapper
       github="/course"
       style="default"
-      data={yml.header.image && yml.header.image.childImageSharp.fluid}
-      image="yes"
+      imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       className={`img-header`}
       height={`600px`}
       bgSize={`cover`}
       alt={yml.header.alt}
     >
-      <Divider height="20%" />
-      <ProgramSelector week={week} locations={data.allLocationYaml.edges} context={pageContext} />
-      <Divider height="20px" />
       <Title
         size="5"
         title={yml.header.tagline}
         main
+        marginTop="170px"
         color={Colors.white}
         fontSize="46px"
         textAlign="center"
 
       />
       <Row align="center">
-        <Column align="right" size="6"><Link to={yml.button.apply_button_link}><Button width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button></Link></Column>
+        <Column align="right" size="6">
+          <Button
+            onClick={() => navigate(yml.button.apply_button_link)}
+           width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button>
+          </Column>
         <Column align="left" size="6">
-          <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
+          <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
         </Column>
       </Row>
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
         open={open}
-        onClose={handleClose}
+        onClose={() => setOpen(false)}
       >
-        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
+        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={() => setOpen(false)} />
       </Modal>
     </Wrapper>
 
-    <Divider height="100px" />
+    <ProgramDetails details={yml.details} />
+
     <Wrapper
       style="default"
     >
@@ -142,12 +87,8 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
     </Wrapper>
 
-    <Divider height="100px" />
-    {/* PROGRAM DETAILS */}
-    {/* --------------- */}
-    <ProgramDetails details={yml.details} />
-    {/* SVG  START*/}
-    <Divider height="100px" />
+    
+
       <Row height="100%">
         <Column size="12">
           <SyllabusSVG />
@@ -345,7 +286,7 @@ const Program = ({data, pageContext, yml}) => {
 };
 
 export const query = graphql`
-  query CourseQuery($file_name: String!, $lang: String!) {
+  query CourseOnlineQuery($file_name: String!, $lang: String!) {
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{

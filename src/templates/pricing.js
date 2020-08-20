@@ -62,8 +62,7 @@ const Pricing = (props) => {
       {/* HEADER SECTION */}
       <Wrapper
         style="default"
-        data={yml.header.image && yml.header.image.childImageSharp.fluid}
-        image="yes"
+        imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         className={`img-header`}
         height={`500px`}
         bgSize={`cover`}
@@ -113,7 +112,7 @@ const Pricing = (props) => {
       <Divider height="100px" />
       <Wrapper
         style="default"
-        image="no"
+        
         color={Colors.lightGray}
         border="top"
 
@@ -152,7 +151,7 @@ const Pricing = (props) => {
       </Wrapper>
       <Wrapper
         style="default"
-        image="no"
+        
         color={Colors.lightGray}
         border="top"
       >

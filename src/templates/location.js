@@ -22,8 +22,7 @@ const Location = ({data, pageContext, yml}) => {
     return (<>
         <Wrapper
             style="default"
-            data={yml.header.image && yml.header.image.childImageSharp.fluid}
-            image="yes"
+            imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
             className={`img-header`}
             height={`300px`}
             bgSize={`cover`}
@@ -53,7 +52,7 @@ const Location = ({data, pageContext, yml}) => {
                 <Column
                     size="12"
                     border="bottom"
-                    image="no"
+                    
                 >
                     <Card shadow borders="1.25rem" height="426px" >
                         <Row
@@ -62,7 +61,7 @@ const Location = ({data, pageContext, yml}) => {
                             marginRight="0"
                             customRespSize
                         >
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
+                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%"  border="bottom">
                                 <Row align="center" height="100%">
                                     <Column size="10" height="100%">
                                         <Divider height="50px" />
@@ -127,11 +126,6 @@ const Location = ({data, pageContext, yml}) => {
                                 customRespSize
                                 respSize="6"
                                 paddingRight={`0`}
-                                // alignSelf="center" 
-                                // height="100%" 
-                                // backgroundSize="cover" 
-                                // image="yes" 
-                                // url={yml.info_box.image} 
                                 border="custom"
                                 customBorderRadius="0 1.25rem 1.25rem 0"
                             >
@@ -154,7 +148,7 @@ const Location = ({data, pageContext, yml}) => {
                 <Column
                     size="12"
                     border="bottom"
-                    image="no"
+                    
                 >
                     <Card shadow borders="1.25rem" height="426px" >
                         <Row
@@ -174,11 +168,6 @@ const Location = ({data, pageContext, yml}) => {
                                                 customRespSize
                                                 respSize="12"
                                                 paddingLeft={`0`}
-                                                // alignSelf="center"
-                                                // height="426px"
-                                                // backgroundSize="cover"
-                                                // image="yes"
-                                                // url={item.path}
                                                 border="custom"
                                                 customBorderRadius="1.25rem 0 0 1.25rem"
                                             >
@@ -195,7 +184,7 @@ const Location = ({data, pageContext, yml}) => {
                                 </Carousel>
 
                             </Column>
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
+                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%"  border="bottom">
                                 <Row align="center" height="100%">
                                     <Column size="10" height="100%">
                                         <Divider height="50px" />

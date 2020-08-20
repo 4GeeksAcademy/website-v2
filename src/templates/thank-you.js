@@ -10,8 +10,7 @@ const ThankYou = (props) => {
     return (
         <>
             <Wrapper style="default"
-                image="yes"
-                url={yml.banner.image}
+                image={yml.banner.image}
                 height="300px"
                 border="bottom"
             >

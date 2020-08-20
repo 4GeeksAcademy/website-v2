@@ -6,6 +6,7 @@ import {Column, Row} from '../Sections'
 import {Device} from '../Responsive'
 import {Blink} from '../Animations'
 import Link from 'gatsby-link'
+import { redirectTo } from "@reach/router"
 
 export const H1 = styled.h1`
 ${props => props.lato ?
@@ -25,12 +26,14 @@ ${props => props.lato ?
       color: ${props => props.color};
 `};
 text-shadow: ${props => props.textShadow}; 
+margin-top: ${props => props.marginTop || "initial"}; 
 text-transform: ${props => props.uppercase && "uppercase"};
 text-align: ${props => props.align};
 @media ${Device.xs}{
   font-size: ${props => props.fontSizeXs}
 }
 @media  ${Device.sm}{
+  text-align: center;
   font-size: ${props => props.fs_sm};
 }
 @media ${Device.md}{
@@ -47,6 +50,12 @@ text-align: ${props => props.align};
 }   
 `;
 export const H2 = styled.h2`
+    text-align: ${props => props.align || "center"};
+    font-family: 'Futura', sans-serif;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-transform: ${props => props.uppercase && "uppercase"};
+    color: ${props => props.color};
     @media ${Device.xs}{
       text-align: center;
       font-size: ${props => props.fs_xs};
@@ -56,77 +65,44 @@ export const H2 = styled.h2`
       font-size: ${props => props.fs_sm};
     }
     @media ${Device.md}{
-      text-align: ${props => props.align};
       font-size: ${props => props.fs_md};
     }
     @media ${Device.lg}{
-      text-align: ${props => props.align};
       font-size: ${props => props.fs_lg};
     }
     @media ${Device.xl} {
-      text-align: ${props => props.align};
       font-size: ${props => props.fs_xl};
     }   
-    font-family: 'Futura', sans-serif;
-    font-weight: 800;
-    letter-spacing: -2px;
-    text-transform: ${props => props.uppercase && "uppercase"};
-    color: ${props => props.color};
-`;
+    `;
 export const H3 = styled.h3`
-@media ${Device.xs}{
-  text-align: center;
-  font-size: ${props => props.fs_xs};
-  padding: 0.5px;
-}
-@media  ${Device.sm}{
-  // text-align: center;
-  font-size: ${props => props.fs_sm};
-  padding: 0 5px;
-}
-@media ${Device.md}{
-  text-align: ${props => props.align};
-  font-size: ${props => props.fs_md};
-}
-@media ${Device.lg}{
-  text-align: ${props => props.align};
-  font-size: ${props => props.fs_lg};
-}
-@media ${Device.xl} {
-  text-align: ${props => props.align};
-  font-size: ${props => props.fs_xl};
-}   
-
+text-align: ${props => props.align || "center"};
 font-family: 'Futura', sans-serif;
 margin: ${props => props.margin};
 font-weight: 400;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
-`;
-export const H4 = styled.h4`
 @media ${Device.xs}{
-  // text-align: ${props => props.align === "left" ? "left" : props.align === "right" ? "right" : "center"};
-  text-align: ${props => props.align_xs};
   font-size: ${props => props.fs_xs};
+  padding: 0.5px;
 }
 @media  ${Device.sm}{
-  // text-align: ${props => props.align === "left" ? "left" : props.align === "right" ? "right" : "center"};
-  text-align: ${props => props.align_sm};
   font-size: ${props => props.fs_sm};
+  padding: 0 5px;
 }
 @media ${Device.md}{
-  text-align: ${props => props.align};
   font-size: ${props => props.fs_md};
 }
 @media ${Device.lg}{
-  text-align: ${props => props.align};
   font-size: ${props => props.fs_lg};
 }
 @media ${Device.xl} {
-  text-align: ${props => props.align};
   font-size: ${props => props.fs_xl};
 }   
+
+`;
+export const H4 = styled.h4`
+text-align: ${props => props.align || "center"};
 font-family: 'Futura', sans-serif;
 margin-bottom: 0px;
 font-weight: ${props => props.fontWeight};
@@ -139,6 +115,21 @@ background-color: ${props => props.bg};
 }
 text-shadow: ${props => props.textShadow};
 font-style: normal;
+@media ${Device.xs}{
+  font-size: ${props => props.fs_xs};
+}
+@media  ${Device.sm}{
+  font-size: ${props => props.fs_sm};
+}
+@media ${Device.md}{
+  font-size: ${props => props.fs_md};
+}
+@media ${Device.lg}{
+  font-size: ${props => props.fs_lg};
+}
+@media ${Device.xl} {
+  font-size: ${props => props.fs_xl};
+}   
 `;
 export const H5 = styled.h5`
       font-family: 'Lato', sans-serif;
@@ -150,26 +141,22 @@ export const H5 = styled.h5`
       font-style: normal;
       color: ${props => props.color};
       margin: ${props => props.m};
+      text-align: ${props => props.align || "center"};
   
     
       @media ${Device.xs}{
-        text-align: center;
         font-size: ${props => props.fs_xs};
       }
       @media  ${Device.sm}{
-        text-align: center;
         font-size: ${props => props.fs_sm};
       }
       @media ${Device.md}{
-        text-align: ${props => props.align};
         font-size: ${props => props.fs_md};
                       }
       @media ${Device.lg}{
-        text-align: ${props => props.align};
         font-size: ${props => props.fs_lg};
       }
       @media ${Device.xl} {
-        text-align: ${props => props.align};
         font-size: ${props => props.fs_xl};
       }
       
@@ -183,25 +170,25 @@ export const Span = styled.span`
       margin: ${props => props.margin};
 `
 export const Separator = styled.div`
-  text-align: ${props => props.align};
-  margin: ${props => props.margin};
+  text-align: ${props => props.align || "center"};
+  margin: ${props => props.left ? props.margin : "auto"};
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 5px;
   width: ${props => props.width};
-  @media ${Device.xs}{
-    text-align: ${props => props.al_xs};
+
+  @media  ${Device.xs}{
+    margin-left: auto;
+    margin-right: auto;
     width: 50px;
   }
+
   @media  ${Device.sm}{
-    text-align: ${props => props.al_sm};
+    margin-left: auto;
+    margin-right: auto;
     width: 50px;
   }
-  @media ${Device.md}{
-  }
-  @media ${Device.lg}{
-  }
-  @media ${Device.xl} {
-  }   
-  
+
   border-bottom: ${props => props.primary
     ? `2px solid ${Colors.yellow} `
     : `2px solid ${Colors.lightBlue}`
@@ -252,87 +239,22 @@ export const Paragraph = styled.div`
   `
 // color: ${props => props.primary ? `${Colors.gray}` : `${props.color}`};
 export const Title = props => {
+  const HeadingType = props.main ? H1 : H2;
   return (
     <>
-      {props.main ?
-        (
-          <>
-            <Row align="center"
-              marginRight={`0px`}
-              marginLeft={`0px`}>{<H1 color={props.color} fontSize={props.fontSize} align={props.textAlign}>{props.title}</H1>}</Row>
-            <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
-            <Row align="center"><Column size="8">{
-              props.primary
-                ?
-                // <Link to={props.link}>
-                <Paragraph
-                  align="center"
-                  color={props.paragraphColor}
-                  fontFamily={props.fontFamily}
-                >{props.paragraph}
-                </Paragraph>
-                // </Link>
-                :
-                // <Link to={props.link}>
-                <Paragraph
-                  align="center"
-                  color={props.paragraphColor}
-                  fontFamily={props.fontFamily}
-                  fontSize={`20px`}
-                  fontWeight={`500`}
-                >
-                  {props.paragraph}
-                </Paragraph>
-              // </Link>
-            }
-            </Column>
-            </Row>
-          </>
-        )
-        :
-        (
-          <Row align="center">
-            <Column size={props.size}>
-              <Row align="center"><Column size="12">{props.primary ? <H2 primary align="center">{props.title} </H2> : <H2>{props.title}</H2>}</Column></Row>
-              <Row align="center">{props.primary ? <Separator primary /> : <Separator />}</Row>
-              <Row align="center">
-                {props.primary
-                  ? <Column size={props.customParagraphSize} customRespSize respSize="10">
-                    <Row align="center">
-                      {
-                        props.link === true
-                          ?
-                          <Link to={props.linkTo}>
-                            <Paragraph
-                              color={props.paragraphColor}
-                              margin="10px 0"
-                              align="center"
-                              fontFamily={props.fontFamily}>
-                              {props.paragraph}
-                            </Paragraph>
-                          </Link>
-                          :
-                          <Paragraph
-                            color={props.paragraphColor}
-                            margin="10px 0"
-                            align="center"
-                            fontFamily={props.fontFamily}>
-                            {props.paragraph}
-                          </Paragraph>
-                      }
-                    </Row>
-                  </Column>
-                  : <Column size="12">
-                    {/* <Link to={props.link}> */}
-                    <Paragraph color={props.paragraphColor}>{props.paragraph}</Paragraph>
-                    {/* </Link> */}
-                  </Column>
-                }
-              </Row>
-            </Column>
-          </Row>
-        )
-      }
+      <HeadingType align="center" color={props.color} marginTop={props.marginTop} fontSize={props.fontSize} align={props.textAlign}>{props.title}</HeadingType>
+      <Separator align="center" primary={props.primary} />
+      <Paragraph
+        align="center"
+        onClick={() => props.linkTo && redirectTo(props.linkTo)}
+        color={props.paragraphColor}
+        fontFamily={props.fontFamily}
+        size={props.customParagraphSize}
+        fontSize={props.primary ? `20px`: null}
+        fontWeight={props.primary ? `500`: null}
+      >
+        {props.paragraph}
+      </Paragraph>
     </>
   )
 }
@@ -350,12 +272,13 @@ Paragraph.defaultProps = {
   fontSize: "16px",
   fontFamily: "Lato, sans-serif",
   fontWeight: "300",
+  marginTop: "40px",
   customParagraphSize: "12",
   color: "#898a8b"
 };
 Separator.defaultProps = {
   width: "50px",
-  margin: ".5rem 15px"
+  margin: ""
 };
 H1.defaultProps = {
   // color: Colors.black,

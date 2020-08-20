@@ -180,7 +180,7 @@ const AlumniProjects = props => {
                                                     <BackgroundSection
                                                         className={`image`}
                                                         height={`500px`}
-                                                        data={item.project_image.image.childImageSharp.fluid}
+                                                        image={item.project_image.image.childImageSharp.fluid}
                                                         bgSize={`cover`}
                                                         alt="Cnn Logo"
                                                         borderRadius={`0 0 0 1.25rem`}

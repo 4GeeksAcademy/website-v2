@@ -29,7 +29,7 @@ const Job = ({data, pageContext, yml}) => {
     return (<>
         <Wrapper
             style="default"
-            image="no"
+            
             url={yml.banner_image}
             border="bottom"
             height="200px"

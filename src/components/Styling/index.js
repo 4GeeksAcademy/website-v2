@@ -241,12 +241,12 @@ export const Span = styled.div`
         opacity: ${props => props.opacity};
       }
 `
-export const BackgroundSection = ({children, className, data, height, width, bgSize, borderRadius, margin, withOverlay}) => {
+export const BackgroundSection = ({children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
     return (
         <BackgroundImage
             Tag="section"
             className={className}
-            fluid={data}
+            fluid={image}
             style={{
                 // Defaults are overwrite-able by setting one or each of the following:
                 backgroundSize: bgSize,
@@ -265,45 +265,11 @@ export const BackgroundSection = ({children, className, data, height, width, bgS
 
 }
 const StyledBackgroundSection = styled(BackgroundSection)`
-
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    
   `
-// const BackgroundSection = ({className, test}) => (
-
-//     < StaticQuery
-//         query={graphql`
-//         query {
-//           desktop: file(relativePath: { eq: "images/alumni-bg.png" }) {
-//             childImageSharp {
-//               fluid(quality: 90, maxWidth: 1920) {
-//                 ...GatsbyImageSharpFluid_withWebp_withWebp
-//               }
-//             }
-//           }
-//         }
-//       `}
-//         render={data => {
-//             // Set ImageData.
-//             const imageData = data.desktop.childImageSharp.fluid
-//             return (
-//                 <BackgroundImage
-//                     Tag="section"
-//                     className={className}
-//                     fluid={test}
-//                     backgroundColor={`#040e18`}
-//                 >
-//                     <h2>gatsby-background-image</h2>
-//                 </BackgroundImage>
-//             )
-//         }}
-//     />
-// )
-
-
 export default StyledBackgroundSection
 
 const SmartButton = ({children, colorHover, textColor, borderRadius, outline, ...rest}) => <button {...rest}>{children}</button>;

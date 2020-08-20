@@ -2,6 +2,7 @@ meta_info:
   slug: "lead-instructor"
   title: "Lead Instructor"
   description: null
+  template: "job" # js component that will be handling the rendering
   image: null
   keywords: ""
   redirects: [ "senior-mentor"]
