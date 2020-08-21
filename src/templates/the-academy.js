@@ -15,6 +15,7 @@ import Link from 'gatsby-link'
 const Why = (props) => {
     const {data, pageContext, yml} = props;
     const cornerstone = yml.cornerstones;
+    const hiring = data.allPartnerYaml.edges[0].node;
     return (
         <>
             <Wrapper
@@ -157,20 +158,6 @@ const Why = (props) => {
                         </Paragraph>
                     </Column>
                 </Row>
-                {/* <Row height="auto" align="center">
-                    <Column size="12" customRespSize respSize="11">
-                        <RoundImage
-                            h_xs="200px"
-                            h_sm="200px"
-                            h_md="200px"
-                            h_lg="400px"
-                            h_xl="400px"
-                            url={yml.outcomes.image}
-                            height="400px"
-                            width="100%"
-                            bsize="contain" />
-                    </Column>
-                </Row> */}
             </Wrapper>
             <Divider height="100px" />
             <Wrapper style="default">
@@ -346,9 +333,25 @@ const Why = (props) => {
             <Divider height="100px" />
             <Wrapper style="default"  color={Colors.lightGray} border="top">
                 <Divider height="100px" />
-                <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
+                <WhoIsHiring 
+                    margin="50px"
+                    tagline={hiring.partners.tagline}
+                    subheading={hiring.partners.sub_heading}
+                    images={hiring.partners.images}
+                    footerTagline={hiring.partners.footer_tagline}
+                    footerLink={hiring.partners.footer_link}
+                    footerButton={hiring.partners.footer_button}
+                />
                 <Divider height="100px" />
-                <WhoIsHiring source="influencers" lang={data.allPartnerYaml.edges} />
+                <WhoIsHiring 
+                    margin="50px"
+                    tagline={hiring.influencers.tagline}
+                    subheading={hiring.influencers.sub_heading}
+                    images={hiring.influencers.images}
+                    footerTagline={hiring.influencers.footer_tagline}
+                    footerLink={hiring.influencers.footer_link}
+                    footerButton={hiring.influencers.footer_button}
+                />
                 <Divider height="100px" />
             </Wrapper>
 

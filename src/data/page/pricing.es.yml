@@ -35,4 +35,3 @@ payment_guide:
 ecosystem:
   heading: "INMERSO EN EL ECOSISTEMA DE PROGRAMACIÓN DE MADRID"
   sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
-  partners_name: "financials" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)
