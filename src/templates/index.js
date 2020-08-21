@@ -23,6 +23,8 @@ import Img from "gatsby-image"
 const Home = (props) => {
   const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
+
+  const hiring = data.allPartnerYaml.edges[0].node;
   return (
     <>
         <Row>
@@ -283,7 +285,15 @@ const Home = (props) => {
         margin="100px"
         color={Colors.lightGray}
         border="top">
-        <WhoIsHiring margin="50px" source="partners" lang={data.allPartnerYaml.edges} />
+        <WhoIsHiring 
+          margin="50px"
+          tagline={hiring.partners.tagline}
+          subheading={hiring.partners.sub_heading}
+          images={hiring.partners.images}
+          footerTagline={hiring.partners.footer_tagline}
+          footerLink={hiring.partners.footer_link}
+          footerButton={hiring.partners.footer_button}
+        />
       </Wrapper>
 
       <Wrapper

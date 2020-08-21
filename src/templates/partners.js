@@ -61,6 +61,7 @@ const Partners = (props) => {
   const handleClose = () => {
     setOpen(false);
   };
+  const hiring = data.allPartnerYaml.edges[0].node;
   return (
     <>
       {/* <Img className={`image`} fluid={yml.image.childImageSharp.fluid} alt="Florida Education Logo"></Img> */}
@@ -112,7 +113,14 @@ const Partners = (props) => {
       >
 
         <Divider height="20px" />
-        <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
+        <WhoIsHiring 
+          tagline={hiring.partners.tagline}
+          subheading={hiring.partners.sub_heading}
+          images={hiring.partners.images}
+          footerTagline={hiring.partners.footer_tagline}
+          footerLink={hiring.partners.footer_link}
+          footerButton={hiring.partners.footer_button}
+        />
         {/* </Wrapper> */}
         <Divider height="50px" />
         {/* <Wrapper
@@ -121,7 +129,14 @@ const Partners = (props) => {
         <Divider height="50px" />
 
 
-        <WhoIsHiring source="coding" lang={data.allPartnerYaml.edges} />
+        <WhoIsHiring 
+          tagline={hiring.coding.tagline}
+          subheading={hiring.coding.sub_heading}
+          images={hiring.coding.images}
+          footerTagline={hiring.coding.footer_tagline}
+          footerLink={hiring.coding.footer_link}
+          footerButton={hiring.coding.footer_button}
+        />
         {/* </Wrapper> */}
         <Divider height="50px" />
         {/* <Wrapper
@@ -129,8 +144,14 @@ const Partners = (props) => {
                 > */}
         <Divider height="50px" />
 
-
-        <WhoIsHiring source="influencers" lang={data.allPartnerYaml.edges} />
+        <WhoIsHiring 
+          tagline={hiring.influencers.tagline}
+          subheading={hiring.influencers.sub_heading}
+          images={hiring.influencers.images}
+          footerTagline={hiring.influencers.footer_tagline}
+          footerLink={hiring.influencers.footer_link}
+          footerButton={hiring.influencers.footer_button}
+        />
         {/* <Row align="center">
                     <Button width="300px" color={Colors.blue} onClick={() => setShowModal(!showModal)} textColor={Colors.white} margin="2rem 0" padding=".85rem">{yml.button_section.button_text}</Button>
                 </Row> */}

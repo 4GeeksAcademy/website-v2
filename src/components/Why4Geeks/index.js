@@ -55,11 +55,7 @@ return (<Fragment github="/components/4geeks_vs_others">
                 >{i.title}</H4>
               </Column>
             </Row>
-            <Row>
-              <Column size="12">
-                <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.description}</Paragraph>
-              </Column>
-            </Row>
+            <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.description}</Paragraph>
           </Column>
         ))}
       </Row>

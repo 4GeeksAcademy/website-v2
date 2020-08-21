@@ -11,6 +11,7 @@ export const Card = styled(Fragment)`
     :focus {outline: none;};
     position: ${props => props.position};
     z-index: ${props => props.index};
+    text-align: ${props => props.align || "initial"};
     flex-direction: column;
     width: ${props => props.width};
     height: ${props => props.height};
