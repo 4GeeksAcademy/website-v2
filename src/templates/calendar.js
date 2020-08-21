@@ -75,29 +75,23 @@ const Calendar = (props) => {
   console.log("jo", session);
   const [cohorts, setCohorts] = useState([]);
   const [events, setEvent] = useState([]);
+  const [single, setSingle] = useState()
   const [filteredEvents, setFilteredEvents] = useState([]);
-  const [futureCohorts, setFutureCohorts] = useState();
+  const [filteredCohorts, setFilteredCohorts] = useState([]);
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-  // const [single, setSingle] = useState();
-  // const [test, setTest] = useState([]);
-  // const [anchorEl, setAnchorEl] = useState(null);
   const [toggleCity, setToggleCity] = useState();
   const [togglesCity, setTogglesCity] = useState();
   const [toggle, setToggle] = useState();
   const [toggles, setToggles] = useState();
   const [filterType, setFilterType] = useState();
   const [filterCity, setFilterCity] = useState();
-  // const [cities, setCities] = useState([]);
   const [filters, setFilters] = useState({
     cityFilter: [],
     typeFilter: []
   })
   const [filterByCity, setFilterByCity] = useState([]);
   const [filterByType, setFilterByType] = useState([]);
-  // const [filter, setFilter] = useState([]);
-  // const [filteredEvents, setFilteredEvents] = useState([]);
-  // const [filteredArray, setFilteredArray] = useState([]);
   const classes = useStyles();
   useEffect(() => {
     const loadCohorts = async () => {
@@ -117,17 +111,43 @@ const Calendar = (props) => {
   useEffect(() => {
     const loadEvents = async () => {
       await fetch(
-        'https://assets.breatheco.de/apis/event/all',
+        // 'https://assets.breatheco.de/apis/event/all',
+        'https://breathecode.herokuapp.com/v1/events/',
       )
         .then(response => response.json())
-        .then(data => {
-          let today = new Date();
-          let newEventsArray = data.filter((item) => new Date(item.event_date).getTime() >= today.getTime())
-          setEvent(newEventsArray)
-        })
+        .then(data => setEvent(data))
+      // .then(data => {
+      //   let today = new Date();
+      //   let newEventsArray = data.filter((item) => new Date(item.event_date).getTime() >= today.getTime())
+      //   setEvent(newEventsArray)
+      // })
     }
     loadEvents();
   }, []);
+
+  useEffect(() => {
+    const filterEvents = async () => {
+      let filteredEventsArray = []
+      let filteredCohortsArray = []
+      console.log("filteredEventsArray", filteredEventsArray)
+      if (filterByCity.length > 0) {
+        const filteredCohortByCity = cohorts.filter(item => item.slug.includes(filterByCity[0].toLowerCase()))
+        if (filteredCohortByCity.length > 0) {
+          setFilteredCohorts(filteredCohortByCity)
+        }
+        else {
+          setFilteredCohorts([])
+        }
+      }
+      else {
+        setFilteredCohorts([])
+      }
+
+    }
+    filterEvents();
+  }, [filterByCity, filterByType])
+
+
 
   useEffect(() => {
     const mergeEventsAndCohorts = async () => {
@@ -152,7 +172,9 @@ const Calendar = (props) => {
         let response = await session.location;
         if (response) {
           for (let i of session.locations) {
-            filterCityArray.push(i.city)
+            if (!filterCityArray.includes(i.city)) {
+              filterCityArray.push(i.city)
+            }
           }
           setFilterCity(filterCityArray);
         }
@@ -249,7 +271,7 @@ const Calendar = (props) => {
       <Wrapper
         style="default"
         image="yes"
-        url={yml.banner.image}
+        url={yml.header.image}
         border="bottom"
         height="700px"
         backgroundSize="cover"
@@ -257,7 +279,7 @@ const Calendar = (props) => {
         <Divider height="300px" />
         <Title
           size="5"
-          title={yml.banner.tagline}
+          title={yml.header.tagline}
           main
           color={Colors.white}
           fontSize="46px"
@@ -307,6 +329,7 @@ const Calendar = (props) => {
                   <span onClick={() => {
                         setFilterByCity([]);
                         setFilterByType([]);
+                        setFilteredCohorts([]);
                       }}
                       >
                         <Cross width="16" color={Colors.blue} fill={Colors.blue} />
@@ -513,14 +536,15 @@ const Calendar = (props) => {
         color={Colors.lightGray}
       >
         <Row>
-          {filterByType[0] !== 'courses' ?
+          {events.length > 0 &&
+            filterByType[0] !== 'courses' ?
             events.map((i, index) => {
               let date = new Date(i.event_date)
 
               return (
                 <>
-                  <Column size="4" key={index} margin="0 0 1rem 0">
-                    <Card
+                  <Column size="4" key={index} margin="0 0 1rem 0">test
+                    {/* <Card
                       move="up"
                       up="30%"
                       h_xs="auto"
@@ -599,102 +623,193 @@ const Calendar = (props) => {
 
 
 
-                    </Card>
+                    </Card> */}
                   </Column>
                 </>
 
               )
             })
             :
-            cohorts.map((cohort, index) => {
-              let cohortDate = new Date(cohort.kickoff_date)
-              return (
-                <>
-                  <Column size="4" key={index} margin="0 0 1rem 0">
-                    <Card
-                      move="up"
-                      up="30%"
-                      h_xs="auto"
-                      h_sm="auto"
-                      h_md="auto"
-                      h_lg="auto"
-                      h_xl="auto"
-                      width="100%"
-                      color="white"
+            filteredCohorts.length > 0 ?
+              filteredCohorts.map((cohort, index) => {
+                let cohortDate = new Date(cohort.kickoff_date)
+                return (
+                  <>
+                    <Column size="4" key={index} margin="0 0 1rem 0">
+                      <Card
+                        move="up"
+                        up="30%"
+                        h_xs="auto"
+                        h_sm="auto"
+                        h_md="auto"
+                        h_lg="auto"
+                        h_xl="auto"
+                        width="100%"
+                        color="white"
 
-                      shadow
-                      move="up">
+                        shadow
+                        move="up">
 
-                      <RoundImage
-                        url={`/images/events-alt.jpg`}
-                        bsize="cover"
-                        mb="10px"
-                        border="1.25rem 1.25rem 0 0"
-                        position="center center"
-                        h_xs="230px"
-                        h_sm="230px"
-                        h_md="230px"
-                        h_lg="230px"
-                        h_xl="230px"
-                      />
-                      <Row marginLeft="0" marginRight="0">
-                        <Column size="12">
-                          <Row marginBottom="1rem" >
-                            <Column size="12">
-                              <Paragraph>{cohort.profile_slug}</Paragraph>
-                            </Column>
-                          </Row>
-                          <Row marginBottom="1rem" height="70px">
-                            <Column size="12">
-                              <H4
-                                fs_xs="18px"
-                                fs_sm="18px"
-                                fs_md="16px"
-                                fs_lg="16px"
-                                fs_xl="18px"
-                              >{cohort.profile.name}
-                              </H4>
-                            </Column>
-                          </Row>
-                          <Row marginBottom=".2rem" >
-                            <Column size="12">
-                              <Paragraph><Clock width="24" color={Colors.blue} fill={Colors.blue} />{days[cohortDate.getDay()]}, {cohortDate.getDate()} {months[cohortDate.getMonth()]} {cohortDate.getFullYear()}</Paragraph>
-                            </Column>
-                          </Row>
-                          <Row marginBottom=".2rem" >
-                            <Column size="12">
-                              <Paragraph><Marker width="24" color={Colors.blue} fill={Colors.blue} />{cohort.name}</Paragraph>
-                            </Column>
-                          </Row>
-                          <Row marginBottom=".2rem" >
-                            <Column size="12">
-                              <Paragraph onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer"><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
-                            </Column>
-                          </Row>
-                          <Row marginBottom=".2rem" >
-                            <Column size="6" align="center">
-                              <a href={"i.url"}>
-                                <Button outline width="100%" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Join Our Community</Button>
-                              </a>
-                            </Column>
-                            <Column size="6" align="center">
-                              <a href={"i.url"} target="_blank" rel="noopener noreferrer">
-                                <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
-                              </a>
-                            </Column>
-                          </Row>
+                        <RoundImage
+                          url={`/images/events-alt.jpg`}
+                          bsize="cover"
+                          mb="10px"
+                          border="1.25rem 1.25rem 0 0"
+                          position="center center"
+                          h_xs="230px"
+                          h_sm="230px"
+                          h_md="230px"
+                          h_lg="230px"
+                          h_xl="230px"
+                        />
+                        <Row marginLeft="0" marginRight="0">
+                          <Column size="12">
+                            <Row marginBottom="1rem" >
+                              <Column size="12">
+                                <Paragraph>{cohort.profile_slug}</Paragraph>
+                              </Column>
+                            </Row>
+                            <Row marginBottom="1rem" height="70px">
+                              <Column size="12">
+                                <H4
+                                  fs_xs="18px"
+                                  fs_sm="18px"
+                                  fs_md="16px"
+                                  fs_lg="16px"
+                                  fs_xl="18px"
+                                >{cohort.profile.name}
+                                </H4>
+                              </Column>
+                            </Row>
+                            <Row marginBottom=".2rem" >
+                              <Column size="12">
+                                <Paragraph><Clock width="24" color={Colors.blue} fill={Colors.blue} />{days[cohortDate.getDay()]}, {cohortDate.getDate()} {months[cohortDate.getMonth()]} {cohortDate.getFullYear()}</Paragraph>
+                              </Column>
+                            </Row>
+                            <Row marginBottom=".2rem" >
+                              <Column size="12">
+                                <Paragraph><Marker width="24" color={Colors.blue} fill={Colors.blue} />{cohort.name}</Paragraph>
+                              </Column>
+                            </Row>
+                            <Row marginBottom=".2rem" >
+                              <Column size="12">
+                                <Paragraph onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer"><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
+                              </Column>
+                            </Row>
+                            <Row marginBottom=".2rem" >
+                              <Column size="6" align="center">
+                                <a href={"i.url"}>
+                                  <Button outline width="100%" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Join Our Community</Button>
+                                </a>
+                              </Column>
+                              <Column size="6" align="center">
+                                <a href={"i.url"} target="_blank" rel="noopener noreferrer">
+                                  <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
+                                </a>
+                              </Column>
+                            </Row>
 
-                        </Column>
-                      </Row>
-
-
+                          </Column>
+                        </Row>
 
 
-                    </Card>
-                  </Column>
-                </>
-              )
-            })}
+
+
+                      </Card>
+                    </Column>
+                  </>
+                )
+              }) :
+              cohorts.map((cohort, index) => {
+                let cohortDate = new Date(cohort.kickoff_date)
+                return (
+                  <>
+                    <Column size="4" key={index} margin="0 0 1rem 0">
+                      <Card
+                        move="up"
+                        up="30%"
+                        h_xs="auto"
+                        h_sm="auto"
+                        h_md="auto"
+                        h_lg="auto"
+                        h_xl="auto"
+                        width="100%"
+                        color="white"
+
+                        shadow
+                        move="up">
+
+                        <RoundImage
+                          url={`/images/events-alt.jpg`}
+                          bsize="cover"
+                          mb="10px"
+                          border="1.25rem 1.25rem 0 0"
+                          position="center center"
+                          h_xs="230px"
+                          h_sm="230px"
+                          h_md="230px"
+                          h_lg="230px"
+                          h_xl="230px"
+                        />
+                        <Row marginLeft="0" marginRight="0">
+                          <Column size="12">
+                            <Row marginBottom="1rem" >
+                              <Column size="12">
+                                <Paragraph>{cohort.profile_slug}</Paragraph>
+                              </Column>
+                            </Row>
+                            <Row marginBottom="1rem" height="70px">
+                              <Column size="12">
+                                <H4
+                                  fs_xs="18px"
+                                  fs_sm="18px"
+                                  fs_md="16px"
+                                  fs_lg="16px"
+                                  fs_xl="18px"
+                                >{cohort.profile.name}
+                                </H4>
+                              </Column>
+                            </Row>
+                            <Row marginBottom=".2rem" >
+                              <Column size="12">
+                                <Paragraph><Clock width="24" color={Colors.blue} fill={Colors.blue} />{days[cohortDate.getDay()]}, {cohortDate.getDate()} {months[cohortDate.getMonth()]} {cohortDate.getFullYear()}</Paragraph>
+                              </Column>
+                            </Row>
+                            <Row marginBottom=".2rem" >
+                              <Column size="12">
+                                <Paragraph><Marker width="24" color={Colors.blue} fill={Colors.blue} />{cohort.name}</Paragraph>
+                              </Column>
+                            </Row>
+                            <Row marginBottom=".2rem" >
+                              <Column size="12">
+                                <Paragraph onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer"><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
+                              </Column>
+                            </Row>
+                            <Row marginBottom=".2rem" >
+                              <Column size="6" align="center">
+                                <a href={"i.url"}>
+                                  <Button outline width="100%" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Join Our Community</Button>
+                                </a>
+                              </Column>
+                              <Column size="6" align="center">
+                                <a href={"i.url"} target="_blank" rel="noopener noreferrer">
+                                  <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
+                                </a>
+                              </Column>
+                            </Row>
+
+                          </Column>
+                        </Row>
+
+
+
+
+                      </Card>
+                    </Column>
+                  </>
+                )
+              })
+          }
         </Row>
 
 
@@ -721,10 +836,19 @@ export const query = graphql`
             image
             keywords
           }
-          banner{
+          header{
             tagline
             sub_heading
-            image 
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200){
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+                fixed(width: 300, height: 60) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            } 
           }
           about{
             heading
