@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from '../global/Layout';
-import StickyBar from "../components/CallToAction/StickyBar.js";
+
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 const BaseRender = (Page) => (props) => {
     // console.log("Rending: ", props);
