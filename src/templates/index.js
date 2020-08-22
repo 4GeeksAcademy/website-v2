@@ -191,7 +191,7 @@ const Home = (props) => {
         </Row>
       </Wrapper>
 
-      {/* GEEKS VS OTHERS SECTION */}
+      {/* GEEKS VS OTHERS SECTION 
 
       <Wrapper style="default" margin="100px">
         <Title
@@ -204,7 +204,7 @@ const Home = (props) => {
           size="10"
         />
         <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
-      </Wrapper>
+      </Wrapper>*/}
         
       <Wrapper style="default" margin="100px">
         <Title
@@ -296,11 +296,47 @@ const Home = (props) => {
         />
       </Wrapper>
 
+      <Wrapper
+        margin="100px"
+        style="default">
+        <Title
+          size="10"
+          title={yml.alumni_header.heading}
+          paragraph={yml.alumni_header.sub_heading}
+          customParagraphSize="8"
+          primary
+        />
+        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" />
+      </Wrapper>
+
+      <Wrapper
+        margin="100px"
+        style="default">
+        <Title
+          primary
+          title={yml.locations.heading}
+          paragraph={yml.locations.sub_heading}
+          customParagraphSize="8"
+        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+        />
+        <Loc lang={data.allLocationYaml.edges} />
+      </Wrapper>
+      <Wrapper style="default" margin="100px">
+        <Title
+          primary
+          title={yml.testimonial_header.heading}
+          paragraph={yml.testimonial_header.sub_heading}
+          customParagraphSize="8"
+        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+        />
+        <Testimonials lang={data.allTestimonialsYaml.edges} />
+      </Wrapper>
+
     </>
   )
 };
 export const query = graphql`
-  query HomeQuery($file_name: String!, $lang: String!) {
+  query HomeBackupQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
