@@ -15,7 +15,6 @@ const WhoIsHiring = props => {
         paragraph={props.subheading}
         customParagraphSize="12"
       />
-      <Divider height="100px" />
       <Row >
         {props.images.map((item, index) => (
           <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
@@ -33,12 +32,12 @@ const WhoIsHiring = props => {
         ))}
       </Row>
       {props.footerTagline &&
-        <Row align="center">
+        <div>
           <H4 primary>{props.footerTagline}</H4>
           <Link to={props.footerLink}>
             <Paragraph color={Colors.blue}>{props.footerButton}</Paragraph>
           </Link>
-        </Row>
+        </div>
       }
     </Fragment>
   )

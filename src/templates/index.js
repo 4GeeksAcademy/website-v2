@@ -191,7 +191,7 @@ const Home = (props) => {
         </Row>
       </Wrapper>
 
-      {/* GEEKS VS OTHERS SECTION */}
+      {/* GEEKS VS OTHERS SECTION 
 
       <Wrapper style="default" margin="100px">
         <Title
@@ -204,7 +204,7 @@ const Home = (props) => {
           size="10"
         />
         <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
-      </Wrapper>
+      </Wrapper>*/}
         
       <Wrapper style="default" margin="100px">
         <Title
@@ -336,7 +336,7 @@ const Home = (props) => {
   )
 };
 export const query = graphql`
-  query HomeQuery($file_name: String!, $lang: String!) {
+  query HomeBackupQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
