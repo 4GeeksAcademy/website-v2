@@ -212,24 +212,24 @@ export const Column = styled.div`
     align-items: ${props => props.alignItems};
     ${props => props.masonry && 'display: inline-block;'}
     ${props =>
-            props.border === "bottom"
-                ?
-                css`
+        props.border === "bottom"
+            ?
+            css`
                     border-radius: 0 0 0 1.25rem;
                     `
-                : props.border === "top"
-                    ?
-                    css`
+            : props.border === "top"
+                ?
+                css`
                         border-radius: 1.25rem 0 0 0;
                     `
-                    : props.border === "custom"
-                    &&
-                    css`
+                : props.border === "custom"
+                &&
+                css`
                         border-radius: ${props.customBorderRadius};
                     `
-        }
+    }
         ${props => !props.imageData && css`background: ${props => props.color};`
-}
+    }
 
 
 ${props =>
@@ -371,7 +371,7 @@ export const Wrapper = props => {
                             height={props.height}
                             backgroundSize={props.backgroundSize}
                         >
-                            <Row>
+                            <Row padding={`20px 0`}>
                                 <Column size="1" />
                                 <Column
                                     size="9"
