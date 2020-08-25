@@ -6,7 +6,7 @@ import {Column, Row} from '../Sections'
 import {Device} from '../Responsive'
 import {Blink} from '../Animations'
 import Link from 'gatsby-link'
-import { redirectTo } from "@reach/router"
+import {redirectTo} from "@reach/router"
 
 export const H1 = styled.h1`
 ${props => props.lato ?
@@ -251,8 +251,9 @@ export const Title = props => {
         color={props.paragraphColor}
         fontFamily={props.fontFamily}
         size={props.customParagraphSize}
-        fontSize={props.primary ? `20px`: null}
-        fontWeight={props.primary ? `500`: null}
+        fontSize={props.primary ? `20px` : null}
+        fontWeight={props.primary ? `500` : null}
+        margin={`0 0 30px 0`}
       >
         {props.paragraph}
       </Paragraph>
