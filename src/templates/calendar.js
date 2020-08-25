@@ -72,7 +72,6 @@ const Calendar = (props) => {
   const {data, pageContext, yml} = props;
   const {session, setSession} = useContext(SessionContext);
 
-  console.log("jo", session);
   const [cohorts, setCohorts] = useState([]);
   const [events, setEvent] = useState([]);
   const [single, setSingle] = useState()
@@ -152,7 +151,6 @@ const Calendar = (props) => {
   useEffect(() => {
     const mergeEventsAndCohorts = async () => {
       let mergeArrays = await [...cohorts, ...events]
-      console.log("MERGE", mergeArrays)
     }
     mergeEventsAndCohorts();
   }, [cohorts, events])
@@ -191,10 +189,7 @@ const Calendar = (props) => {
     const loadFilterType = async () => {
       let filterTypeArray = ['All', 'courses'];
       for (let i = 0; i < events.length; i++) {
-        if (filterTypeArray.includes(events[i].type)) {
-          console.log("####", events[i].type)
-        }
-        else {
+        if (!filterTypeArray.includes(events[i].type)) {
           filterTypeArray.push(events[i].type)
         }
       }
@@ -270,8 +265,7 @@ const Calendar = (props) => {
     <>
       <Wrapper
         style="default"
-        image="yes"
-        url={yml.header.image}
+        image={yml.banner.image}
         border="bottom"
         height="700px"
         backgroundSize="cover"
@@ -288,7 +282,7 @@ const Calendar = (props) => {
       </Wrapper>
       <Wrapper
         style="default"
-        image="no"
+
         border="top"
         color={Colors.white}
       >
@@ -531,7 +525,7 @@ const Calendar = (props) => {
       <Divider height="200px" />
       <Wrapper
         style="default"
-        image="no"
+
         border="top"
         color={Colors.lightGray}
       >

@@ -13,11 +13,13 @@ import {SessionContext} from '../../session'
 
 const Loc = (props) => {
   const {session, setSession} = useContext(SessionContext);
-  console.log("LOCSESSION: ", session)
-  let loc = props.lang
+
+  let loc = props.lang.filter(l => l.node.meta_info.unlisted != true).sort((a,b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
   return (
     <>
-      <Row>
+      <Row
+        github={"/location"}
+      >
         <Column
           size="12"
           border="bottom"
@@ -59,7 +61,7 @@ const Loc = (props) => {
                         <BackgroundSection
                           className={`image`}
                           height={`500px`}
-                          data={item.node.header.image.childImageSharp.fluid}
+                          image={item.node.header.image && item.node.header.image.childImageSharp.fluid}
                           bgSize={`cover`}
                           alt="Cnn Logo"
                         />
@@ -126,10 +128,11 @@ const Loc = (props) => {
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               {/* <Card width="100%" > */}
               <Link to={`/${session.language}/location/${pic.node.meta_info.slug}`}>
+                {console.log("childImageSharp", pic.node.carousel_box.images[randLocImgIndex])}
                 <BackgroundSection
                   className={`img-thumbs`}
                   height={`60px`}
-                  data={pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
+                  data={pic.node.carousel_box.images[randLocImgIndex].path && pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
                   bgSize={`cover`}
                   alt={pic.node.carousel_box.images[randLocImgIndex].alt}
                 >
@@ -163,8 +166,8 @@ const Loc = (props) => {
                     <Column size="12" alignSelf="center" align="center">
 
                       <H4
-                        bg={`rgba(0,0,0,0.1)`}
-                        textShadow={`2px 1px ${Colors.gray}`}
+                        bg={`rgba(0,0,0,0.4)`}
+                        bgHover={`initial`}
                         color={Colors.white}
                         fs_xs="9px"
                         fs_sm="12px"

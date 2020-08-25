@@ -241,7 +241,6 @@ export const RightNav = ({menu, open}) => {
       }
     }
   `)
-  console.log("Right:", data)
   return (
     <>
 

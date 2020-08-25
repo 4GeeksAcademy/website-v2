@@ -2,6 +2,7 @@ meta_info:
   slug: "lead-instructor"
   title: "Lead Instructor"
   description: null
+  template: "job" # js component that will be handling the rendering
   image: null
   keywords: ""
   redirects: [ "senior-mentor"]
@@ -9,7 +10,7 @@ meta_info:
 ## BANNER INFO
 banner_heading: "Lead Instructor"
 banner_sub_heading: ""
-banner_image: ""
+banner_image: "/images/bg/pricing-bg.jpg"
 cities:
   - Miami
   - Santiago de Chile

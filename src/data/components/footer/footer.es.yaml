@@ -33,14 +33,18 @@ footer:
   - column_four:
     heading: "SEDES"
     items:
-      - name: "Santiago de Chile"
-        link: "/location/santiago-chile"
+      - name: "Online"
+        link: "/location/online"
       - name: "Miami"
         link: "/location/downtown-miami"
       - name: "Madrid"
         link: "/location/madrid"
+      - name: "Santiago de Chile"
+        link: "/location/santiago-chile"
+      - name: "Costa Rica"
+        link: "/location/costa-rica"
       - name: "Caracas"
-        link: "/location/impact-hub"
+        link: "/location/caracas"
       - name: "Maracaibo"
         link: "/location/maracaibo"
   - column_five:

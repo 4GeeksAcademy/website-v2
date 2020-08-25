@@ -1,0 +1,139 @@
+meta_info:
+  slug: online-remote-coding-bootcamp
+  title: ""
+  description: null
+  image: ""
+  template: "course-online"
+  keywords: ""
+  redirects: []
+
+header:
+  tagline: "FULL STACK DEVELOPER (ONLINE)"
+  image: "../../../static/images/bg/bg-pr.jpg"
+  alt: ""
+
+button:
+  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_submit_text: "SUBMIT"
+  apply_button_text: "APPLY NOW"
+  apply_button_link: "/apply"
+## PROGRAM DETAILS
+details:
+  heading: PROGRAM DETAILS
+  sub_heading: "Part Time"
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Get Ready for the Prework"
+      description: "Starting with the basics: HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page."
+      projects: "CSS Postcard, Minimal Instagram Version, etc."
+      slug: "prework"
+      duration: "~ 60 hours"
+      step: .5
+    - module_name: "FOUNDATIONS"
+      title: "Learn To Code"
+      description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
+      projects: "Instagram Application, Memory Card Game, Tic Tac Toe, Flappy Bird, etc."
+      slug: "foundations"
+      duration: "2 weeks"
+      step: 2
+    - module_name: "WEB DEVELOPMENT"
+      title: "Web Development"
+      description: "Create your first React.js application, MVC Pattern, JS Modules, Bunding, Babel JS, The DOM, Events"
+      projects: "Coursera clone, Instagram clone, Youtube clone, etc."
+      slug: "web-development"
+      duration: "6 weeks"
+      step: 8
+    - module_name: "ADVANCED APPLICATION"
+      title: "Advanced Application"
+      description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
+      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
+      slug: "advanced-application"
+      duration: "6 wks"
+      step: 14
+    - module_name: "LIFELONG LEARNING"
+      title: "Lifelong Learning"
+      description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
+      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
+      slug: "lifelong-learning"
+      duration: "2+ week"
+      step: 17
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
+  sub_heading: "View full comparison table >"
+  sub_heading_link: ""
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  geek_pal_heading: Get a job in tech
+  geek_pal:
+    - Resume building
+    - Github profile building
+    - Mock interview preparation
+    - Customized interview preparation session for targeted jobs
+    - Personal Branding coaching
+    - Post-graduation coding practices and exercises
+  geek_force_heading: ""
+  geek_force:
+    - One teacher every four students (1:4)
+    - One senior teacher every twelve students (1:12)
+    - Unlimited on-demand in-person or online mentoring sessions
+    - Thousands of auto-graded exercises
+    - Interactive and auto-graded tutorials
+    - Video solutions for instant feedback
+    - Online support chat 12 hours a day
+    - Online streaming of classes
+    - Recording of classes for later review
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRICES AND PAYMENTS"
+  sub_heading: ""
+
+## TYPICAL DAY SECTION
+typical:
+  heading: ""
+  sub_heading: ""
+  schedule:
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBERSHIPS"
+  program: "PROGRAM"
+  geeks_vs_other: "4GEEKS vs OTHERS"
+  pricing: "PRICING"
+  alumni: "THE ALUMNI"

@@ -15,7 +15,7 @@ meta_info:
 
 header:
   tagline: "FULL STACK DEVELOPER"
-  image: "../../../static/images/program-bg.png"
+  image: "../../../static/images/bg/program-bg.png"
   alt: ""
 
 button:

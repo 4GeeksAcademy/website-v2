@@ -57,13 +57,14 @@ const Pricing = (props) => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const hiring = data.allPartnerYaml.edges[0].node;
   return (
     <>
       {/* HEADER SECTION */}
       <Wrapper
         style="default"
-        data={yml.header.image.childImageSharp.fluid}
-        image="yes"
+        imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         className={`img-header`}
         height={`500px`}
         bgSize={`cover`}
@@ -113,7 +114,7 @@ const Pricing = (props) => {
       <Divider height="100px" />
       <Wrapper
         style="default"
-        image="no"
+        
         color={Colors.lightGray}
         border="top"
 
@@ -152,12 +153,20 @@ const Pricing = (props) => {
       </Wrapper>
       <Wrapper
         style="default"
-        image="no"
+        
         color={Colors.lightGray}
         border="top"
       >
         <Divider height="20px" />
-        <WhoIsHiring source={yml.ecosystem.partners_name} lang={data.allPartnerYaml.edges} />
+        <WhoIsHiring 
+          margin="50px"
+          tagline={hiring.financials.tagline}
+          subheading={hiring.financials.sub_heading}
+          images={hiring.financials.images}
+          footerTagline={hiring.financials.footer_tagline}
+          footerLink={hiring.financials.footer_link}
+          footerButton={hiring.financials.footer_button}
+        />
         <Divider height="150px" />
       </Wrapper>
 
@@ -205,7 +214,6 @@ export const query = graphql`
             ecosystem{
                 heading
                 sub_heading
-                partners_name
             }
         }
       }

@@ -10,7 +10,7 @@ meta_info:
 header:
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
-  image: "../../../static/bg/pricing-bg.jpg"
+  image: "../../../static/images/bg/pricing-bg.jpg"
   alt: ""
 
 ## FIRST SECTION AFTER THE BANNER
@@ -35,4 +35,3 @@ payment_guide:
 ecosystem:
   heading: "INMERSO EN EL ECOSISTEMA DE PROGRAMACIÓN DE MADRID"
   sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
-  partners_name: "financials" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)

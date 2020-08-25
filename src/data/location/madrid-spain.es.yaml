@@ -11,7 +11,7 @@ seo_title: "4Geeks Academy Madrid"
 header:
   tagline: "4GEEKS ACADEMY IN MADRID"
   sub_heading: ""
-  image: "../../../static/images/locations/madrid-loc.jpeg"
+  image: "../../../static/images/locations/madrid-loc.jpg"
   alt: ""
 info_box:
   heading: "Encuéntranos en Madrid"
@@ -25,7 +25,7 @@ carousel_box:
   heading: "Qué deberías saber sobre esta ubicación: "
   content: "A 5 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
   images:
-    - path: "../../../static/images/locations/madrid-loc.jpeg"
+    - path: "../../../static/images/locations/madrid-loc.jpg"
       alt: "madrid-location"
     - path: "../../../static/images/locations/madrid-loc-2.jpg"
       alt: "4Geeks Academy Madrid location"

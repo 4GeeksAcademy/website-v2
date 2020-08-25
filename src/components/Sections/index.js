@@ -56,6 +56,7 @@ export const Container = styled(Fragment)`
     }
     
     height: ${props => props.height};
+    margin: ${props => props.margin || "initial"};
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -195,49 +196,40 @@ export const Div = styled.div`
     } 
 `
 export const Column = styled.div`
-padding: ${props => props.padding};
-height: ${props => props.height};
-margin: ${props => props.margin};
-position: relative;
-width: 100%;
-border: ${props => props.borderStyle};
-align-self: ${props => props.alignSelf};
-padding-right: ${props => props.paddingRight};
-padding-left: ${props => props.paddingLeft};
-display: ${props => props.display};
-flex-direction: ${props => props.flexDirection};
-justify-content: ${props => props.justifyContent};
-align-items: ${props => props.alignItems};
-${props => props.masonry &&
-        css`
-        display: inline-block;
-        
-`
-    }
-${props =>
-        props.border === "bottom"
-            ?
-            css`
-                border-radius: 0 0 0 1.25rem;
-                `
-            : props.border === "top"
+    padding: ${props => props.padding};
+    height: ${props => props.height};
+    margin: ${props => props.margin};
+    text-align: ${props => props.align || "left"}
+    position: relative;
+    width: 100%;
+    border: ${props => props.borderStyle};
+    align-self: ${props => props.alignSelf};
+    padding-right: ${props => props.paddingRight};
+    padding-left: ${props => props.paddingLeft};
+    display: ${props => props.display};
+    flex-direction: ${props => props.flexDirection};
+    justify-content: ${props => props.justifyContent};
+    align-items: ${props => props.alignItems};
+    ${props => props.masonry && 'display: inline-block;'}
+    ${props =>
+            props.border === "bottom"
                 ?
                 css`
-                    border-radius: 1.25rem 0 0 0;
-                `
-                : props.border === "custom"
-                &&
-                css`
-                    border-radius: ${props.customBorderRadius};
-                `
-    }
-    ${props =>
-
-        props.image === "no"
-        &&
-        css`
-                background: ${props => props.color};
-`}
+                    border-radius: 0 0 0 1.25rem;
+                    `
+                : props.border === "top"
+                    ?
+                    css`
+                        border-radius: 1.25rem 0 0 0;
+                    `
+                    : props.border === "custom"
+                    &&
+                    css`
+                        border-radius: ${props.customBorderRadius};
+                    `
+        }
+        ${props => !props.imageData && css`background: ${props => props.color};`
+}
 
 
 ${props =>
@@ -337,14 +329,13 @@ ${props =>
 export const Wrapper = props => {
     if (props.style === "default") {
         return (
-            <Container github={props.github} fluid>
+            <Container margin={props.margin} github={props.github} fluid>
                 <Row>
                     <Column size="1" />
-                    {props.image === "yes" ?
+                    {props.imageData ?
                         <Column
                             size="11"
-                            image={props.image}
-                            url={props.url}
+                            url={props.image}
                             border={props.border}
                             customBorderRadius={props.customBorderRadius}
                             color={props.color}
@@ -354,19 +345,14 @@ export const Wrapper = props => {
                         ><BackgroundSection
                             className={props.className}
                             height={props.height}
-                            data={props.data}
+                            image={props.imageData}
                             bgSize={props.bgSize}
                             alt={props.alt}
                         >
                                 <Row>
-                                    <Column size="1" />
                                     <Column
                                         size="9"
-                                        image={props.outerImage}
-                                        url={props.outerUrl}
-                                        border={props.outerBorder}
-                                        color={props.outerColor}
-                                        align={props.outerAlign}
+                                        margin="0 auto"
                                         height={props.height}
                                     >
                                         {props.children}
@@ -377,8 +363,7 @@ export const Wrapper = props => {
                         :
                         <Column
                             size="11"
-                            image={props.image}
-                            url={props.url}
+                            url={props.image}
                             border={props.border}
                             customBorderRadius={props.customBorderRadius}
                             color={props.color}
@@ -390,11 +375,6 @@ export const Wrapper = props => {
                                 <Column size="1" />
                                 <Column
                                     size="9"
-                                    image={props.outerImage}
-                                    url={props.outerUrl}
-                                    border={props.outerBorder}
-                                    color={props.outerColor}
-                                    align={props.outerAlign}
                                     height={props.height}
                                 >
                                     {props.children}
@@ -414,8 +394,7 @@ export const Wrapper = props => {
                     <Column size={props.outerLeftCol} ></Column>
                     <Column
                         size={props.outerRightCol}
-                        image={props.image}
-                        url={props.url}
+                        url={props.image}
                         border={props.border}
                         customBorderRadius={props.customBorderRadius}
                         color={props.color}
@@ -452,6 +431,7 @@ export const Divider = props => {
 Container.propTypes = {
     color: PropTypes.string,
     height: PropTypes.string,
+    margin: PropTypes.string,
     marginLeft: PropTypes.string,
     borderTopLeft: PropTypes.string,
     borderBottomLeft: PropTypes.string,

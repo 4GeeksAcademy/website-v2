@@ -65,13 +65,13 @@ const GeeksVsOthers = (props) => {
           <Column
             size="12"
             border="bottom"
-            image="no"
+            
             color={Colors.white}
           >
             {/* <Card shadow borders="1.25rem" height={`${info_len * 80}px`}> */}
             <Card shadow borders="1.25rem" height="auto">
               <Row height="80px" marginLeft="0" marginRight="0">
-                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" >
+                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%"  color={Colors.black} border="top" >
                   <Row height="100%" borderBottom={"1px solid " + Colors.darkGray}>
                     <Column size size="12" alignSelf="center" >
                       <H5
@@ -87,7 +87,7 @@ const GeeksVsOthers = (props) => {
                     </Column>
                   </Row>
                 </Column>
-                <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
+                <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%"  color={Colors.lightGray}>
                   <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
                     <Column size size="12" alignSelf="center" >
                       <H5
@@ -103,7 +103,7 @@ const GeeksVsOthers = (props) => {
                     </Column>
                   </Row>
                 </Column>
-                <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
+                <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%"  color={Colors.lightGray}>
                   <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}>
                     <Column size size="12" alignSelf="center" >
                       <H5
@@ -165,7 +165,7 @@ const GeeksVsOthers = (props) => {
                           respSize="6"
                           alignSelf="center"
                           height="100%"
-                          image="no"
+                          
                           color={Colors.black}>
                           <Row
                             align="center"
@@ -230,7 +230,7 @@ const GeeksVsOthers = (props) => {
                             {/* </Column> */}
                           </Row>
                         </Column>
-                        <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
+                        <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center"  color={Colors.lightGray}>
                           <Row
                             height="100%"
                             borderBottom={"1px solid " + Colors.borderGray}
@@ -253,7 +253,7 @@ const GeeksVsOthers = (props) => {
                             </Column>
                           </Row>
                         </Column>
-                        <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
+                        <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center"  color={Colors.lightGray}>
                           <Row
                             height="100%"
                             borderBottom={"1px solid " + Colors.borderGray}

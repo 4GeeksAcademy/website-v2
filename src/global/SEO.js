@@ -33,8 +33,8 @@ const SEO = (props) => (
       const { lang, type, pagePath } = context;
       const url = `${siteUrl}${pagePath || "/"}`;
       const _keywords = keywords ? (keywords + [].join(",")) : defaultKeywords[lang].join(",");
-      console.log("Seo: ", props);
-      console.log("Context: ", context);
+      // console.log("Seo: ", props);
+      // console.log("Context: ", context);
       return (
         <>
             <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>

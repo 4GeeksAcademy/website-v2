@@ -17,6 +17,7 @@ const Testimonials = (props) => {
     return (
         <Fragment github="/components/testimonials">
             <Carousel
+                style={{ margin: props.margin || 0 }}
                 showThumbs={false}
                 showStatus={false}
                 stopOnHover={true}
@@ -31,7 +32,7 @@ const Testimonials = (props) => {
                             <Card width="700px" >
                                 <Row align="center">
                                     <BackgroundSection
-                                        data={item.student_thumb.childImageSharp.fluid}
+                                        image={item.student_thumb.childImageSharp.fluid}
                                         alt={item.alt}
                                         height={`200px`}
                                         width={`200px`}

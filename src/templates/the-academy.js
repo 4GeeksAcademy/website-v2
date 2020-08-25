@@ -15,12 +15,12 @@ import Link from 'gatsby-link'
 const Why = (props) => {
     const {data, pageContext, yml} = props;
     const cornerstone = yml.cornerstones;
+    const hiring = data.allPartnerYaml.edges[0].node;
     return (
         <>
             <Wrapper
                 style="default"
-                data={yml.header.image.childImageSharp.fluid}
-                image="yes"
+                image={yml.header.image && yml.header.image.childImageSharp.fluid}
                 className={`img-header`}
                 height={`500px`}
                 bgSize={`cover`}
@@ -158,20 +158,6 @@ const Why = (props) => {
                         </Paragraph>
                     </Column>
                 </Row>
-                {/* <Row height="auto" align="center">
-                    <Column size="12" customRespSize respSize="11">
-                        <RoundImage
-                            h_xs="200px"
-                            h_sm="200px"
-                            h_md="200px"
-                            h_lg="400px"
-                            h_xl="400px"
-                            url={yml.outcomes.image}
-                            height="400px"
-                            width="100%"
-                            bsize="contain" />
-                    </Column>
-                </Row> */}
             </Wrapper>
             <Divider height="100px" />
             <Wrapper style="default">
@@ -180,7 +166,7 @@ const Why = (props) => {
             <Divider height="150px" />
             <Wrapper
                 style="default"
-                image="no"
+                
                 color={Colors.lightGray}
                 border="custom"
                 customBorderRadius="1.25rem 0 0 1.25rem"
@@ -254,7 +240,7 @@ const Why = (props) => {
             <Divider height="150px" />
             <Wrapper
                 style="default"
-                image="no"
+                
                 color={Colors.lightGray}
                 border="custom"
                 customBorderRadius="1.25rem 0 0 1.25rem"
@@ -263,7 +249,7 @@ const Why = (props) => {
                     <Column
                         size="12"
                         border="bottom"
-                        image="no"
+                        
                     >
                         <Card shadow borders="1.25rem" height="450px" move="up" up="50%">
                             <Row
@@ -272,7 +258,7 @@ const Why = (props) => {
                                 marginRight="0"
                                 customRespSize
                             >
-                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
+                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%"  border="bottom">
                                     <Row github="/page/the-academy.us.yml#L77" align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="10%" />
@@ -324,7 +310,7 @@ const Why = (props) => {
                                         </Column>
                                     </Row>
                                 </Column>
-                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image="yes" url={yml.story.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
+                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image={yml.story.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
                             </Row>
                         </Card>
                     </Column>
@@ -345,11 +331,27 @@ const Why = (props) => {
                 <RecentPosts />
             </Wrapper>
             <Divider height="100px" />
-            <Wrapper style="default" image="no" color={Colors.lightGray} border="top">
+            <Wrapper style="default"  color={Colors.lightGray} border="top">
                 <Divider height="100px" />
-                <WhoIsHiring source="partners" lang={data.allPartnerYaml.edges} />
+                <WhoIsHiring 
+                    margin="50px"
+                    tagline={hiring.partners.tagline}
+                    subheading={hiring.partners.sub_heading}
+                    images={hiring.partners.images}
+                    footerTagline={hiring.partners.footer_tagline}
+                    footerLink={hiring.partners.footer_link}
+                    footerButton={hiring.partners.footer_button}
+                />
                 <Divider height="100px" />
-                <WhoIsHiring source="influencers" lang={data.allPartnerYaml.edges} />
+                <WhoIsHiring 
+                    margin="50px"
+                    tagline={hiring.influencers.tagline}
+                    subheading={hiring.influencers.sub_heading}
+                    images={hiring.influencers.images}
+                    footerTagline={hiring.influencers.footer_tagline}
+                    footerLink={hiring.influencers.footer_link}
+                    footerButton={hiring.influencers.footer_button}
+                />
                 <Divider height="100px" />
             </Wrapper>
 

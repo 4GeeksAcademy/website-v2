@@ -72,8 +72,8 @@ const Layout = ({children, seo, context}) => {
                 <button 
                   style={{ border: "1px solid black", float: "right", padding: "5px" }}
                   onClick={() => {
-                    setEditMode(false);
                     localStorage.setItem("edit-mode", "false");
+                    setEditMode(false);
                   }}
                 > ❌ Clear edit mode</button>
             </div>}

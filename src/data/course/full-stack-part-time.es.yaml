@@ -9,8 +9,9 @@ meta_info:
 
 header:
   tagline: "FULL STACK DEVELOPER"
-  image: "../../../static/bg/bg-pr.jpg"
+  image: "../../../static/images/bg/bg-pr.jpg"
   alt: ""
+
 button:
   syllabus_button_text: "REQUEST SYLLABUS"
   syllabus_submit_text: "SUBMIT"

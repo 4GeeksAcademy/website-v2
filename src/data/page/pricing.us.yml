@@ -10,7 +10,7 @@ meta_info:
 header:
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
-  image: "../../../static/bg/pricing-bg.jpg"
+  image: "../../../static/images/bg/pricing-bg.jpg"
   alt: ""
 
 ## FIRST SECTION AFTER THE BANNER
@@ -35,4 +35,3 @@ payment_guide:
 ecosystem:
   heading: "IMMERSED IN MIAMI'S CODING ECOSYSTEM"
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
-  partners_name: "financials" ## TO LOAD THE IMAGES FROM PARTNERS YML (OPTIONS: partners, influencers, coding, financials)

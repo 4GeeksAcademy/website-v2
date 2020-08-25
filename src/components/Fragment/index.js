@@ -17,7 +17,8 @@ export const An = styled.a`
     z-index: 2000;
 `
 
-const Fragment = ({ github, ...rest }) => {
+const GITHUB_REPO = "https://github.com/4GeeksAcademy/website-v2/tree/master/src/data";
+const Fragment = ({ github, style, className, children }) => {
     let { edit } = parseQueryString(useLocation().search)
     const [ editMode, setEditMode ] = React.useState(false)
     React.useEffect(() => {
@@ -27,18 +28,24 @@ const Fragment = ({ github, ...rest }) => {
         } 
         else setEditMode(localStorage.getItem("edit-mode") === "true")
     }, [])
-    if(editMode && github) return <div style={{ position: "relative" }} {...rest}>
-        <An href={`${process.env.GITHUB_REPO}${github}`} target="blank" rel="noopener noreferrer">edit</An>
-        {rest.children}
+    if(editMode && github) return <div style={{ ...style, position: "relative" }} className={className}>
+        <An href={`${GITHUB_REPO}${github}`} target="blank" rel="noopener noreferrer">edit</An>
+        {children}
     </div>
-    else return <div {...rest}>{rest.children}</div>;
+    else return <div style={{ ...style }} className={className}>{children}</div>;
 }
+const FakeFragment = ({ style, className, children }) => <div style={{ ...style }} className={className}>{children}</div>;
 Fragment.propTypes = {
     github: PropTypes.string,
-    children: PropTypes.node
+    children: PropTypes.node,
+    style: PropTypes.object,
+    className: PropTypes.string,
 }
 Fragment.defaultValues = {
     github: null,
+    style: {},
+    className: "",
     children: null
 }
-export default Fragment;
+
+export default (process.env.GATSBY_EDIT_MODE === "TRUE") ? Fragment : FakeFragment;

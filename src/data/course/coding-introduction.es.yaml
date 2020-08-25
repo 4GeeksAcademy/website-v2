@@ -8,7 +8,7 @@ meta_info:
 
 header:
   tagline: "Curso de introducción a la programación - 4Geeks Academy"
-  image: "../../../static/images/program-bg.png"
+  image: "../../../static/images/bg/program-bg.png"
   alt: ""
 
 button:

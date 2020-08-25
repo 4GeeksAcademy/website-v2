@@ -11,7 +11,7 @@ seo_title: "4Geeks Academy Madrid"
 header:
   tagline: "4GEEKS ACADEMY IN MADRID"
   sub_heading: ""
-  image: "../../../static/images/locations/madrid-loc-2.jpg"
+  image: "../../../static/images/locations/madrid-loc.jpg"
   alt: ""
 
 info_box:
@@ -26,7 +26,7 @@ carousel_box:
   heading: "What you should know about this location: "
   content: "Just 3 min. away from the subway, the office is located in one of Madrid's most active areas. Open to students 12 hrs a day and with the out famous 'Coding Weekends' on Saturdays were students come to receive senior coaching, hangout and eat pizza!"
   images:
-    - path: "../../../static/images/locations/madrid-loc.jpeg"
+    - path: "../../../static/images/locations/madrid-loc.jpg"
       alt: "miami-sunset"
     - path: "../../../static/images/locations/madrid-loc-2.jpg"
       alt: "4Geeeks miami location"

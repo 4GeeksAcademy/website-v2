@@ -9,7 +9,7 @@ header:
   tagline: Coding Bootcamp
   title: EMPOWER YOUR LIFE WITH CODING SKILLS
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers. 
-  image: "../../../static/images/main-bg.jpg"
+  image: "../../../static/images/bg/main-bg.jpg"
 
 ## EDUCATION SECTION
 education:

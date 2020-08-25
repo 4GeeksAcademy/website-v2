@@ -27,8 +27,7 @@ const GeekPal = (props) => {
     <>
       <Wrapper
         style="default"
-        image="yes"
-        url={yml.image}
+        image={yml.image}
         border="bottom"
         height="auto"
       >

@@ -31,7 +31,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
             createNodeField({node, name: `lang`, value: meta.lang});
             createNodeField({node, name: `slug`, value: meta.slug});
             createNodeField({node, name: `file_name`, value: meta.file_name});
-            createNodeField({node, name: `template`, value: meta.template});
+            createNodeField({node, name: `defaultTemplate`, value: meta.template});
             createNodeField({node, name: `type`, value: meta.type});
             createNodeField({node, name: `pagePath`, value: meta.pagePath});
             createNodeField({node, name: `filePath`, value: url});
@@ -81,7 +81,7 @@ const createBlog = async ({actions, graphql}) => {
                         lang
                         slug
                         file_name
-                        template
+                        defaultTemplate
                         type
                         pagePath
                         filePath
@@ -145,12 +145,13 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
                 meta_info {
                     slug
                     redirects
+                    template
                 }
                 fields{
                     lang
                     slug
                     file_name
-                    template
+                    defaultTemplate
                     type
                     pagePath
                     filePath
@@ -164,25 +165,26 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
 
     const translations = buildTranslations(result.data[`all${entity}Yaml`]);
     result.data[`all${entity}Yaml`].edges.forEach(({node}) => {
+        console.log(`Creating entity page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} with template ${node.meta_info.template || node.fields.defaultTemplate}.js`);
         createPage({
             path: node.fields.pagePath,
-            component: path.resolve(`./src/templates/${node.fields.template}.js`),
+            component: path.resolve(`./src/templates/${node.meta_info.template || node.fields.defaultTemplate}.js`),
             context: {
                 ...node.fields,
-                translations: translations[node.fields.template]
+                translations: translations[node.fields.defaultTemplate]
             }
         });
 
         if (node.fields.lang === "us") {
             _createRedirect({
-                fromPath: `/${node.fields.template}/${node.fields.slug}`,
+                fromPath: `/${node.fields.defaultTemplate}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
             });
 
             _createRedirect({
-                fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
+                fromPath: `/en/${node.fields.defaultTemplate}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
@@ -190,7 +192,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
         }
         if (node.fields.lang === "es") {
             _createRedirect({
-                fromPath: `/${node.fields.template}/${node.fields.slug}`,
+                fromPath: `/${node.fields.defaultTemplate}/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
@@ -242,7 +244,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                     lang
                     slug
                     file_name
-                    template
+                    defaultTemplate
                     type
                     pagePath
                     filePath
@@ -262,10 +264,10 @@ const createPagesfromYml = async ({graphql, actions}) => {
         console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath}`);
         createPage({
             path: _targetPath,
-            component: path.resolve(`./src/templates/${node.fields.template}.js`),
+            component: path.resolve(`./src/templates/${node.fields.defaultTemplate}.js`),
             context: {
                 ...node.fields,
-                translations: translations[node.fields.template]
+                translations: translations[node.fields.defaultTemplate]
             }
         });
 

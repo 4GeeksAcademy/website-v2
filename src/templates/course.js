@@ -11,43 +11,23 @@ import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee,
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import PricesAndPayment from '../components/PricesAndPayment'
 import AlumniProjects from '../components/AlumniProjects'
-import Credentials from '../components/Credentials'
-import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
 import ProgramSelector from '../components/ProgramSelector'
-import TypicalDay from '../components/TypicalDay';
-import ToggleButton from '../components/ToggleButton'
 import {requestSyllabus} from "../actions";
 // import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepButton from '@material-ui/core/StepButton';
 import StepConnector from '@material-ui/core/StepConnector';
-import StepLabel from '@material-ui/core/StepLabel';
 import clsx from 'clsx';
-import Typography from '@material-ui/core/Typography';
-import {Input, Alert} from '../components/Form';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
-import SyllabusSVG from "../components/Svg/index";
+import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
 
 function rand () {
   return Math.round(Math.random() * 20) - 10;
-}
-function getModalStyle () {
-  const top = 50 + rand();
-  const left = 50 + rand();
-
-  return {
-    top: `${50}%`,
-    left: `${50}%`,
-    transform: `translate(-${50}%, -${50}%)`,
-  };
 }
 
 const useStyles = makeStyles(theme => ({
@@ -64,29 +44,17 @@ const useStyles = makeStyles(theme => ({
 
 
 const Program = ({data, pageContext, yml}) => {
-  console.log("PAGECONTEXT: ", pageContext)
   const [ref, inView] = useInView({
     threshold: 0
   });
   const scrollRef = useRef();
-  const [test, setTest] = useState("")
-  const [oldScrollPos, setOldScrollPos] = useState(0)
-  const [currentIndex, setCurrentIndex] = useState(0);
   const geek = data.allCourseYaml.edges[0].node;
-  const [showModal, setShowModal] = useState(false);
-  const [formMessage, setFormMessage] = useState("Fill the form to submit");
-  const details = data.allCourseYaml.edges[0].node.details[0];
-  const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-  const classes = useStyles();
+
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(yml);
-  const [formData, setVal] = useState({
-    first_name: '',
-    last_name: '',
-    email: ''
-  });
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -185,15 +153,14 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       github="/course"
       style="default"
-      data={yml.header.image.childImageSharp.fluid}
-      image="yes"
+      imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       className={`img-header`}
       height={`600px`}
       bgSize={`cover`}
       alt={yml.header.alt}
     >
       <Divider height="20%" />
-      <ProgramSelector week={week} lang={data.allLocationYaml.edges} context={pageContext} />
+      <ProgramSelector week={week} locations={data.allLocationYaml.edges} context={pageContext} />
       <Divider height="20px" />
       <Title
         size="5"
@@ -241,12 +208,12 @@ const Program = ({data, pageContext, yml}) => {
     {/* --------------- */}
     <ProgramDetails details={yml.details} />
     {/* SVG  START*/}
-    {/* <Divider height="100px" />
+    <Divider height="100px" />
       <Row height="100%">
         <Column size="12">
           <SyllabusSVG />
         </Column>
-      </Row> */}
+      </Row>
     {/* SVG  END*/}
     <Divider height="100px" />
 
@@ -606,7 +573,7 @@ export const query = graphql`
         }
       }
     }
-    allLocationYaml(filter: {fields: { lang: {eq: $lang}}}){
+    allLocationYaml(filter: {fields: { lang: {eq: $lang}}, meta_info: { unlisted: {ne: true }}}){
       edges {
         node {
           id
@@ -620,6 +587,8 @@ export const query = graphql`
             slug
             description
             image
+            position
+            unlisted
             keywords
             redirects
           }
@@ -866,30 +835,7 @@ function ColorlibStepIcon (props) {
     </div>
   );
 }
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     width: '80%',
-//   },
-//   button: {
-//     marginRight: theme.spacing(1),
-//   },
-//   completed: {
-//     display: 'inline-block',
-//   },
-//   instructions: {
-//     marginTop: theme.spacing(1),
-//     marginBottom: theme.spacing(1),
-//   },
-//   test: {
-//     color: Colors.black
-//   },
-//   circle: {
-//     width: 4,
-//     height: 4,
-//     borderRadius: '50%',
-//     backgroundColor: Colors.blue,
-//   },
-// }));
+
 function getSteps (day) {
   return [
     {icon: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[0].time},

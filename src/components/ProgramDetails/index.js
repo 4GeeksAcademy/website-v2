@@ -51,6 +51,7 @@ const ProgramDetails = (props) => {
         >
             <Title
                 size="10"
+                marginTop="40px"
                 title={props.details.heading && props.details.heading}
                 paragraph={props.details.sub_heading}
                 primary
