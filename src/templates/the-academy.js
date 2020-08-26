@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Column, Row, Wrapper, Divider} from '../components/Sections';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
 import {Card} from '../components/Card'
-import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage} from '../components/Styling'
+import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage, BackgroundSection} from '../components/Styling'
 import Mentors from '../components/Mentors'
 import Events from '../components/Events'
 import {Charts} from '../components/Chart'
@@ -317,10 +317,19 @@ const Why = (props) => {
                                     alignSelf="center"
                                     height="100%"
                                     backgroundSize="cover"
-                                    image={yml.story.image}
+                                    paddingRight={`0`}
                                     border="custom"
                                     customBorderRadius="0 1.25rem 1.25rem 0"
-                                />
+                                >
+                                    <BackgroundSection
+                                        className={`img-right`}
+                                        height={`450px`}
+                                        image={yml.story.image.childImageSharp.fluid}
+                                        bgSize={`cover`}
+                                        // alt={yml.about.about_image.alt}
+                                        borderRadius={`0 1.25rem 1.25rem 0`}
+                                    />
+                                </Column>
                             </Row>
                         </Card>
                     </Column>
@@ -437,7 +446,13 @@ export const query = graphql`
                 sub_heading_one
                 button
                 button_link
-                image
+                image{
+                    childImageSharp {
+                      fluid(maxWidth: 800){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  } 
             }
             posts{
                 heading

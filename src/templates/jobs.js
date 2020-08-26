@@ -119,7 +119,7 @@ const Jobs = ({data, pageContext, yml}) => {
                   <BackgroundSection
                     className={`img-right`}
                     height={`426px`}
-                    data={yml.about.about_image.image.childImageSharp.fluid}
+                    image={yml.about.about_image.image.childImageSharp.fluid}
                     bgSize={`cover`}
                     alt={yml.about.about_image.alt}
                     borderRadius={`0 0 0 1.25rem`}
