@@ -7,7 +7,6 @@ import {FadeIn} from '../Animations'
 import Fragment from "../Fragment"
 
 export const Card = styled(Fragment)`
-    animation: 2s ${FadeIn} ease-out;
     :focus {outline: none;};
     position: ${props => props.position};
     z-index: ${props => props.index};

@@ -9,7 +9,8 @@ staff:
     linkdin: ""
     twitter: ""
     website: ""
-    image: "/staff/alejandro.png"
+    image: "/images/staff/alejandro.png"
+    # image: "../../../../static/images/staff/alejandro.png"
     age: 34
     interests:
       - Fútbols
@@ -25,7 +26,8 @@ staff:
     linkdin: ""
     twitter: ""
     website: ""
-    image: "/staff/marcelo.png"
+    image: "/images/staff/marcelo.png"
+    # image: "../../../../static/images/staff/marcelo.png"
     age: 33
     interests:
       - Fútbol
@@ -42,7 +44,8 @@ staff:
     linkdin: "https://www.linkedin.com/in/paolo-lucano/"
     twitter: ""
     website: ""
-    image: "/staff/paolo.jpeg"
+    image: "/images/staff/paolo.jpeg"
+    # image: "../../../../static/images/staff/paolo.jpeg"
     age: 42
     interests:
       - Fútbol
@@ -61,7 +64,8 @@ staff:
     linkdin: ""
     twitter: ""
     website: ""
-    image: "/staff/colby.png"
+    image: "/images/staff/bridget.jpg"
+    # image: "../../../../static/images/staff/colby.png"
     age: 33
     interests:
       - Música

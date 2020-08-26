@@ -79,7 +79,7 @@ story:
   sub_heading_one: "4Geeks Academy was founded in 2015. What began as an internal project to train new developers has flourished into a full-time passion.Today, 4Geeks is now based in the U.S. As coding has become an essential part of society, the mission of our Coding Bootcamp is to instill a new framework for Coding Education universally."
   button: "Read More >"
   button_link: "/us/post/4geeks-academy-history"
-  image: "/images/our-story.png"
+  image: "../../../static/images/our-story.png"
 ## RECENT BLOG POSTS  SECTION
 posts:
   heading: "RECENT POSTS"

@@ -183,6 +183,7 @@ export const Div = styled.div`
     background: ${props => props.background};
     border-radius: ${props => props.borderRadius};
     padding: ${props => props.padding};
+    cursor: ${props => props.cursor};
     @media ${Device.xs}{
         align-items: ${props => props.alignItems_xs};
     }
