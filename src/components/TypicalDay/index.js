@@ -76,7 +76,7 @@ const TypicalDay = (props) => {
                                             key={index}
                                             cursor={`pointer`}
                                             flexDirection={`column`}
-                                            onClick={() => {setSelected(index); setCompleted((item.step * 100) / (Slider().length - 1))}}
+                                            onClick={() => {setSelected(index); setCompleted((index * 100) / (Slider().length - 1))}}
                                         >
                                             <Div justifyContent={`center`}>
                                                 <Icon width="28" stroke={Colors.gray} fill={Colors.gray} />
