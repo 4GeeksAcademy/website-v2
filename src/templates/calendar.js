@@ -70,6 +70,7 @@ const useStyles = makeStyles(theme => ({
 
 const Calendar = (props) => {
   const {data, pageContext, yml} = props;
+  console.log("DATA:", data)
   const {session, setSession} = useContext(SessionContext);
 
   const [cohorts, setCohorts] = useState([]);
@@ -761,16 +762,15 @@ const Calendar = (props) => {
 
                         shadow
                         move="up">
-                        {/* <BackgroundSection
-                          image={i.image.childImageSharp.fluid}
-                          alt={i.alt}
-                          height={`250px`}
+                        <BackgroundSection
+                          image={data.cohort_img.childImageSharp.fluid}
+                          // alt={i.alt}
+                          height={`230px`}
                           bgSize={`cover`}
-                          borderRadius={`1.25rem`}
-                          className={`img-border`}
-                        ></BackgroundSection> */}
-                        <RoundImage
-                          url={`/images/events-alt.jpg`}
+                          className={`img-event`}
+                        ></BackgroundSection>
+                        {/* <RoundImage
+                          url={data.cohort_img.childImageSharp.fluid}
                           bsize="cover"
                           mb="10px"
                           border="1.25rem 1.25rem 0 0"
@@ -780,7 +780,7 @@ const Calendar = (props) => {
                           h_md="230px"
                           h_lg="230px"
                           h_xl="230px"
-                        />
+                        /> */}
                         <Row marginLeft="0" marginRight="0" padding={`5px`}>
                           <Column size="12">
                             <Row marginBottom="1rem" align={`center`}>
@@ -914,6 +914,13 @@ export const query = graphql`
             button
             button_link
           }
+        }
+      }
+    }
+    cohort_img: file(relativePath: { eq: "images/events-alt.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
