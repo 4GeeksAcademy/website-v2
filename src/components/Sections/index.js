@@ -160,6 +160,7 @@ border-radius: ${props => props.borders};
     padding: 15px;
 }
 @media ${Device.xl} {
+    position: -webkit-sticky;
     position: sticky;
     top: 12%;
     width: 180px;

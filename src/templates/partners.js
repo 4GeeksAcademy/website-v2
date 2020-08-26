@@ -68,21 +68,21 @@ const Partners = (props) => {
 
       <Wrapper
         style="default"
-        imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
+        imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
         className={`img-header`}
         height={`500px`}
         bgSize={`cover`}
-        alt={yml.header.alt}
+        alt={yml.header_data.alt}
       >
         <Divider height="100px" />
         <Title
           size="5"
-          title={yml.header.tagline}
+          title={yml.header - data.tagline}
           main
           color={Colors.white}
           fontSize="46px"
           textAlign="center"
-          paragraph={yml.header.sub_heading}
+          paragraph={yml.header_data.sub_heading}
           paragraphColor={Colors.white}
           fontFamily="Lato-bold, sans-serif"
         />
@@ -107,13 +107,13 @@ const Partners = (props) => {
       <Divider height="50px" />
       <Wrapper
         style="default"
-        
+
         color={Colors.lightGray}
         border="top"
       >
 
         <Divider height="20px" />
-        <WhoIsHiring 
+        <WhoIsHiring
           tagline={hiring.partners.tagline}
           subheading={hiring.partners.sub_heading}
           images={hiring.partners.images}
@@ -129,7 +129,7 @@ const Partners = (props) => {
         <Divider height="50px" />
 
 
-        <WhoIsHiring 
+        <WhoIsHiring
           tagline={hiring.coding.tagline}
           subheading={hiring.coding.sub_heading}
           images={hiring.coding.images}
@@ -144,7 +144,7 @@ const Partners = (props) => {
                 > */}
         <Divider height="50px" />
 
-        <WhoIsHiring 
+        <WhoIsHiring
           tagline={hiring.influencers.tagline}
           subheading={hiring.influencers.sub_heading}
           images={hiring.influencers.images}
@@ -175,10 +175,19 @@ export const query = graphql`
                 image
                 keywords
             }
-            header{
+            test{
+              image{
+                childImageSharp {
+                  fluid(maxWidth: 1200){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+            header_data{
               tagline
               sub_heading
-              image {
+              image{
                 childImageSharp {
                   fluid(maxWidth: 1200){
                     ...GatsbyImageSharpFluid_withWebp

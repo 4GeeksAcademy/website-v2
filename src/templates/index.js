@@ -27,43 +27,43 @@ const Home = (props) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   return (
     <>
-        <Row>
-          <Column size="4" margin="0 0 0 auto" padding="100px 10px 0 10px">
-            <H1 textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header.tagline}</H1>
-            <Separator primary left />
-            <H2
-              fs_sm="38px"
-              fs_md="30px"
-              fs_lg="32px"
-              fs_xl="38px"
-              // primary
-              align="left" >{yml.header.title}<Span animated color={Colors.yellow}>_</Span>
-            </H2>
-            <Paragraph color={Colors.gray} margin="20px 0px" padding="0px 20px" align="left" fontSize="15px">{yml.header.sub_heading}</Paragraph>
-            <ChooseProgram 
-              programs={data.allChooseProgramYaml.edges[0].node.programs} 
-              openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text} 
-              closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text} 
-            />
-          </Column>
-          <Column
-            size="6"
-            border="bottom"
-            height="500px"
-            customRespSize
-            disp_sm={"none"}
-            disp_xs={"none"}
-          >
-            <BackgroundSection
-              className={`image`}
-              height={`500px`}
-              image={yml.header.image && yml.header.image.childImageSharp.fluid}
-              bgSize={`cover`}
-              alt="Cnn Logo"
-              borderRadius={`0 0 0 1.25rem`}
-            />
-          </Column>
-        </Row>
+      <Row>
+        <Column size="4" margin="0 0 0 auto" padding="100px 10px 0 10px">
+          <H1 textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header_data.tagline}</H1>
+          <Separator primary left />
+          <H2
+            fs_sm="38px"
+            fs_md="30px"
+            fs_lg="32px"
+            fs_xl="38px"
+            // primary
+            align="left" >{yml.header_data.title}<Span animated color={Colors.yellow}>_</Span>
+          </H2>
+          <Paragraph color={Colors.gray} margin="20px 0px" padding="0px 20px" align="left" fontSize="15px">{yml.header_data.sub_heading}</Paragraph>
+          <ChooseProgram
+            programs={data.allChooseProgramYaml.edges[0].node.programs}
+            openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+            closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+          />
+        </Column>
+        <Column
+          size="6"
+          border="bottom"
+          height="500px"
+          customRespSize
+          disp_sm={"none"}
+          disp_xs={"none"}
+        >
+          <BackgroundSection
+            className={`image`}
+            height={`500px`}
+            image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
+            bgSize={`cover`}
+            alt="4Geeks Academy"
+            borderRadius={`0 0 0 1.25rem`}
+          />
+        </Column>
+      </Row>
 
       {/* CREDENTIALS CARDS */}
 
@@ -205,7 +205,7 @@ const Home = (props) => {
         />
         <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
       </Wrapper>*/}
-        
+
       <Wrapper style="default" margin="100px">
         <Title
           title={yml.join_geeks.heading}
@@ -242,7 +242,7 @@ const Home = (props) => {
                 alignXs="left">
                 {yml.join_geeks.geek_data.geek_pal_data.content}
               </Paragraph>
-              <Column size="2" margin="0 0 0 auto" customRespSize align="right"  paddingRight="0" respSize="2" alignSelf="flex-end">
+              <Column size="2" margin="0 0 0 auto" customRespSize align="right" paddingRight="0" respSize="2" alignSelf="flex-end">
                 <Link to={yml.join_geeks.geek_data.geek_pal_data.icon_link}>
                   <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
                 </Link>
@@ -256,25 +256,25 @@ const Home = (props) => {
               margin="10px 0px"
 
             >
-                <RoundImage url="/images/geekforce.png" bsize="contain" height="40px" position="left" />
-                <Paragraph color={Colors.black} customTextAlignSmall
-                  margin="15px 0px 15px 0px"
-                  alignXs="left">{yml.join_geeks.geek_data.geek_force_heading}</Paragraph>
-                <Paragraph
-                  key="index"
-                  color={Colors.gray}
-                  fontSize="14px"
-                  paddingRight="30px"
-                  lineHeight="18px"
-                  customTextAlignSmall
-                  alignXs="left">
-                  {yml.join_geeks.geek_data.geek_force_data.content}
-                </Paragraph>
-                <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right" customRespSize respSize="2" alignSelf="flex-end">
-                  <Link to={yml.join_geeks.geek_data.geek_force_data.icon_link}>
-                    <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
-                  </Link>
-                </Column>
+              <RoundImage url="/images/geekforce.png" bsize="contain" height="40px" position="left" />
+              <Paragraph color={Colors.black} customTextAlignSmall
+                margin="15px 0px 15px 0px"
+                alignXs="left">{yml.join_geeks.geek_data.geek_force_heading}</Paragraph>
+              <Paragraph
+                key="index"
+                color={Colors.gray}
+                fontSize="14px"
+                paddingRight="30px"
+                lineHeight="18px"
+                customTextAlignSmall
+                alignXs="left">
+                {yml.join_geeks.geek_data.geek_force_data.content}
+              </Paragraph>
+              <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right" customRespSize respSize="2" alignSelf="flex-end">
+                <Link to={yml.join_geeks.geek_data.geek_force_data.icon_link}>
+                  <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
+                </Link>
+              </Column>
             </Card>
           </Column>
         </Row>
@@ -285,7 +285,7 @@ const Home = (props) => {
         margin="100px"
         color={Colors.lightGray}
         border="top">
-        <WhoIsHiring 
+        <WhoIsHiring
           margin="50px"
           tagline={hiring.partners.tagline}
           subheading={hiring.partners.sub_heading}
@@ -346,20 +346,18 @@ export const query = graphql`
                 image
                 keywords
             }
-            header{
+            header_data{
               tagline
               title
               sub_heading
-              image {
+              image{
                 childImageSharp {
-                  fluid(maxWidth: 1200){
+                  fluid(maxWidth: 800){
                     ...GatsbyImageSharpFluid_withWebp
-                  }
-                  fixed(width: 300, height: 60) {
-                    ...GatsbyImageSharpFixed
                   }
                 }
               }
+           
             }
             
             geeks_vs_others{

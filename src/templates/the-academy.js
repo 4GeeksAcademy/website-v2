@@ -20,18 +20,18 @@ const Why = (props) => {
         <>
             <Wrapper
                 style="default"
-                imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
+                imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
                 className={`img-header`}
                 height={`500px`}
                 bgSize={`cover`}
-                alt={yml.header.alt}
+                alt={yml.header_data.alt}
             >
                 <Divider height="100px" />
                 <Title
                     size="5"
                     color={Colors.white}
-                    title={yml.header.tagline}
-                    paragraph={yml.header.sub_heading}
+                    title={yml.header_data.tagline}
+                    paragraph={yml.header_data.sub_heading}
                     main
                     paragraphColor={Colors.white}
                     fontSize="46px"
@@ -371,16 +371,16 @@ export const query = graphql`
                 image
                 keywords
             }
-            header{
+            header_data{
                 tagline
                 sub_heading
-                image {
+                image{
                     childImageSharp {
                       fluid(maxWidth: 1200){
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }
-                  }
+                  } 
                 alt
             }
             outcomes{

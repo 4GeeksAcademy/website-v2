@@ -833,16 +833,7 @@ export const query = graphql`
           header{
             tagline
             sub_heading
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1200){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-                fixed(width: 300, height: 60) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            } 
+            image 
           }
           about{
             heading

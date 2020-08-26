@@ -14,7 +14,7 @@ import {SessionContext} from '../../session'
 const Loc = (props) => {
   const {session, setSession} = useContext(SessionContext);
 
-  let loc = props.lang.filter(l => l.node.meta_info.unlisted != true).sort((a,b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
+  let loc = props.lang.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
   return (
     <>
       <Row
@@ -132,7 +132,7 @@ const Loc = (props) => {
                 <BackgroundSection
                   className={`img-thumbs`}
                   height={`60px`}
-                  data={pic.node.carousel_box.images[randLocImgIndex].path && pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
+                  image={pic.node.carousel_box.images[randLocImgIndex].path && pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
                   bgSize={`cover`}
                   alt={pic.node.carousel_box.images[randLocImgIndex].alt}
                 >
