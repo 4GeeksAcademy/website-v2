@@ -6,7 +6,7 @@ meta_info:
   keywords: ""
   redirects: ["/home", "/es/home", "/es/inicio"]
 
-header:
+header_data:
   tagline: Coding Bootcamp
   title: APRENDE Y MEJORA TUS HABILIDADES COMO PROGRAMADOR
   sub_heading: Únete a miles graduados que viven como programadores, trabajan en grandes empresa y forman parte de una de las comunidades de programación más grandes del mundo.

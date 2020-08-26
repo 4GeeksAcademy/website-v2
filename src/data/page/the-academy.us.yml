@@ -7,7 +7,7 @@ meta_info:
   redirects: []
 
 ## BANNER - HEADER
-header:
+header_data:
   #Empowering talent with code by providing flexible educational experiences
   tagline: EMPOWERING TALENT WITH CODING CAREERS
   sub_heading: ""
@@ -65,7 +65,7 @@ cornerstones:
       content: Every student has the opportunity to have regular conversations with a mentor.
       icon: Users
     - title: PART-TIME
-      content: We have mastered our programs to be a Premium Education Experience through a part-time schedule. 
+      content: We have mastered our programs to be a Premium Education Experience through a part-time schedule.
       icon: Sitemap
 
 ## STAFF SECTION

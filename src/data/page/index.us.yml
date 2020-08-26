@@ -5,10 +5,10 @@ meta_info:
   image: null
   keywords: ""
   redirects: ["/home", "/us/home"]
-header:
+header_data:
   tagline: Coding Bootcamp
   title: EMPOWER YOUR LIFE WITH CODING SKILLS
-  sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers. 
+  sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
   image: "../../../static/images/bg/main-bg.jpg"
 
 ## EDUCATION SECTION

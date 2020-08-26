@@ -7,7 +7,7 @@ meta_info:
   redirects: []
 
 ## BANNER - HEADER
-header:
+header_data:
   tagline: EMPODERANDO TALENTOS IMPULSANDO SUS CARRERAS PROFESIONALES EN PROGRAMACION
   sub_heading: ""
   image: "../../../static/images/bg/the-academy-bg.jpg"

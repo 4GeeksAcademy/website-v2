@@ -265,7 +265,7 @@ const Calendar = (props) => {
     <>
       <Wrapper
         style="default"
-        image={yml.banner.image}
+        image={yml.header.image}
         border="bottom"
         height="700px"
         backgroundSize="cover"
@@ -833,7 +833,13 @@ export const query = graphql`
           header{
             tagline
             sub_heading
-            image 
+            image{
+              childImageSharp {
+                fluid(maxWidth: 800){
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            } 
           }
           about{
             heading
