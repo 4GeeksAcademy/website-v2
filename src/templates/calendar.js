@@ -656,51 +656,80 @@ const Calendar = (props) => {
                           h_lg="230px"
                           h_xl="230px"
                         />
-                        <Row marginLeft="0" marginRight="0">
+                        <Row marginLeft="0" marginRight="0" padding={`5px`}>
                           <Column size="12">
-                            <Row marginBottom="1rem" >
-                              <Column size="12">
-                                <Paragraph>{cohort.profile_slug}</Paragraph>
-                              </Column>
+                            <Row marginBottom="1rem" align={`center`}>
+                              <Paragraph>{cohort.profile_slug}</Paragraph>
                             </Row>
-                            <Row marginBottom="1rem" height="70px">
-                              <Column size="12">
-                                <H4
-                                  fs_xs="18px"
-                                  fs_sm="18px"
-                                  fs_md="16px"
-                                  fs_lg="16px"
-                                  fs_xl="18px"
-                                >{cohort.profile.name}
-                                </H4>
-                              </Column>
+                            <Row marginBottom="1rem" align={`center`}>
+                              <H4
+                                fs_xs="18px"
+                                fs_sm="18px"
+                                fs_md="16px"
+                                fs_lg="16px"
+                                fs_xl="18px"
+                              >{cohort.profile.name}
+                              </H4>
                             </Row>
-                            <Row marginBottom=".2rem" >
-                              <Column size="12">
-                                <Paragraph><Clock width="24" color={Colors.blue} fill={Colors.blue} />{days[cohortDate.getDay()]}, {cohortDate.getDate()} {months[cohortDate.getMonth()]} {cohortDate.getFullYear()}</Paragraph>
-                              </Column>
+                            <Row marginBottom=".2rem" padding={`5px`} alignItems={`center`} >
+                              <Clock width="24" color={Colors.blue} fill={Colors.blue} />
+                              <Paragraph
+                                margin={`0 0 0 10px`}
+                                fs_xs="18px"
+                                fs_sm="18px"
+                                fs_md="9px"
+                                fs_lg="11px"
+                                fs_xl="14px">
+                                {days[cohortDate.getDay()]}, {cohortDate.getDate()} {months[cohortDate.getMonth()]} {cohortDate.getFullYear()}
+                              </Paragraph>
                             </Row>
-                            <Row marginBottom=".2rem" >
-                              <Column size="12">
-                                <Paragraph><Marker width="24" color={Colors.blue} fill={Colors.blue} />{cohort.name}</Paragraph>
-                              </Column>
+                            <Row marginBottom=".2rem" padding={`5px`} alignItems={`center`} >
+                              <Marker width="24" color={Colors.blue} fill={Colors.blue} />
+                              <Paragraph
+                                margin={`0 0 0 10px`}
+                                fs_xs="18px"
+                                fs_sm="18px"
+                                fs_md="9px"
+                                fs_lg="11px"
+                                fs_xl="14px">
+                                {cohort.name}
+                              </Paragraph>
                             </Row>
-                            <Row marginBottom=".2rem" >
-                              <Column size="12">
-                                <Paragraph onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer"><Question width="24" color={Colors.blue} fill={Colors.blue} />info</Paragraph>
-                              </Column>
+                            <Row marginBottom=".2rem" padding={`5px`} alignItems={`center`}>
+                              <Question width="24" color={Colors.blue} fill={Colors.blue} />
+                              <Paragraph
+                                margin={`0 0 0 10px`}
+                                fs_xs="18px"
+                                fs_sm="18px"
+                                fs_md="9px"
+                                fs_lg="11px"
+                                fs_xl="14px"
+                                onClick={() => {setOpen(!open), setSingle(index)}} cursor="pointer">
+                                info
+                                </Paragraph>
                             </Row>
-                            <Row marginBottom=".2rem" >
-                              <Column size="6" align="center">
-                                <a href={"i.url"}>
-                                  <Button outline width="100%" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Join Our Community</Button>
-                                </a>
-                              </Column>
-                              <Column size="6" align="center">
-                                <a href={"i.url"} target="_blank" rel="noopener noreferrer">
-                                  <Button outline width="100%" color={Colors.red} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">Register Now</Button>
-                                </a>
-                              </Column>
+                            <Row marginBottom=".2rem" align={`evenly`} customRespSize alignResp={`space-evenly`}>
+                              <a href={"i.url"}>
+                                <Button
+                                  outline
+                                  color={Colors.gray}
+                                  textColor={Colors.black}
+                                  margin=".5rem 0"
+                                  padding=".35rem.85rem">
+                                  Join Our Community
+                                  </Button>
+                              </a>
+                              <a href={"i.url"} target="_blank" rel="noopener noreferrer">
+                                <Button
+                                  outline
+                                  color={Colors.red}
+                                  textColor={Colors.black}
+                                  margin=".5rem 0"
+                                  padding=".35rem.85rem"
+                                >
+                                  Register Now
+                                  </Button>
+                              </a>
                             </Row>
 
                           </Column>
