@@ -14,6 +14,7 @@ import AlumniProjects from '../components/AlumniProjects'
 import BaseRender from './_baseRender'
 import ProgramSelector from '../components/ProgramSelector'
 import {requestSyllabus} from "../actions";
+import Scrollspy from 'react-scrollspy'
 // import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
@@ -22,7 +23,7 @@ import clsx from 'clsx';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
-
+import TypicalDay from "../components/TypicalDay"
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
 
@@ -186,7 +187,21 @@ const Program = ({data, pageContext, yml}) => {
         <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
       </Modal>
     </Wrapper>
-
+    <Sidebar
+      shadow
+      borders="1.25rem"
+      display_xs="none"
+      display_sm="none"
+      display_md="none"
+    >
+      <Scrollspy style={{fontSize: "12px", position: "-webkit-sticky", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active ">
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
+        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
+      </Scrollspy>
+    </Sidebar>
     <Divider height="100px" />
     <Wrapper
       style="default"
@@ -209,11 +224,11 @@ const Program = ({data, pageContext, yml}) => {
     <ProgramDetails details={yml.details} />
     {/* SVG  START*/}
     <Divider height="100px" />
-      <Row height="100%">
-        <Column size="12">
-          <SyllabusSVG />
-        </Column>
-      </Row>
+    <Row height="100%">
+      <Column size="12">
+        <SyllabusSVG />
+      </Column>
+    </Row>
     {/* SVG  END*/}
     <Divider height="100px" />
 
@@ -378,10 +393,10 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
     </Wrapper>
 
-    {/* {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
+    {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
       <TypicalDay data={yml.typical} />
 
-      : null} */}
+      : null}
 
     <Divider height="100px" />
     <Wrapper

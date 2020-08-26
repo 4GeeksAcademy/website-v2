@@ -64,18 +64,18 @@ const Pricing = (props) => {
       {/* HEADER SECTION */}
       <Wrapper
         style="default"
-        imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
+        imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
         className={`img-header`}
         height={`500px`}
         bgSize={`cover`}
-        alt={yml.header.alt}
+        alt={yml.header_data.alt}
       >
         <Divider height="100px" />
         <Title
           size="5"
           color={Colors.white}
-          title={yml.header.tagline}
-          paragraph={yml.header.sub_heading}
+          title={yml.header_data.tagline}
+          paragraph={yml.header_data.sub_heading}
           main
           paragraphColor={Colors.white}
           fontSize="46px"
@@ -114,7 +114,7 @@ const Pricing = (props) => {
       <Divider height="100px" />
       <Wrapper
         style="default"
-        
+
         color={Colors.lightGray}
         border="top"
 
@@ -153,12 +153,12 @@ const Pricing = (props) => {
       </Wrapper>
       <Wrapper
         style="default"
-        
+
         color={Colors.lightGray}
         border="top"
       >
         <Divider height="20px" />
-        <WhoIsHiring 
+        <WhoIsHiring
           margin="50px"
           tagline={hiring.financials.tagline}
           subheading={hiring.financials.sub_heading}
@@ -184,9 +184,9 @@ export const query = graphql`
                 image
                 keywords
             }
-            header{
+            header_data{
                 tagline
-                image {
+                image{
                   childImageSharp {
                     fluid(maxWidth: 1200){
                       ...GatsbyImageSharpFluid_withWebp

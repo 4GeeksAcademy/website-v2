@@ -6,13 +6,18 @@ meta_info:
   keywords: ""
   redirects: []
 ## BANNER - HEADER
-banner:
-  tagline: Privacy Policy for 4Geeks Academy
-  sub_heading: ""
-  image: "/images/bg/pricing-bg.jpg"
+# banner:
+#   tagline: Privacy Policy for 4Geeks Academy
+#   sub_heading: ""
+#   image: "/images/bg/pricing-bg.jpg"
 header:
-  title: "Privacy Policy for 4Geeks Academy"
-  text: "At 4Geeks Academy, accessible from https://www.4geeksacademy.co , one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by 4Geeks Academy and how we use it.If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us."
+  tagline: Privacy Policy for 4Geeks Academy
+  sub_heading: At 4Geeks Academy, accessible from https://www.4geeksacademy.co , one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by 4Geeks Academy and how we use it.If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
+  image: ../../../static/images/bg/companies-bg.jpg
+  alt: ""
+# header:
+#   title: "Privacy Policy for 4Geeks Academy"
+#   text: "At 4Geeks Academy, accessible from https://www.4geeksacademy.co , one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by 4Geeks Academy and how we use it.If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us."
 sections:
   - title: "Log Files"
     text: "4Geeks Academy follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information."

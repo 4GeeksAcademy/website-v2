@@ -13,7 +13,7 @@ header:
   tagline: "TRABAJA EN 4GEEKS ACADEMY"
   sub_heading: ""
   image: "../../../static/images/bg/pricing-bg.jpg"
-
+  alt: ""
 about:
   heading: "MÁS SOBRE 4GEEKS ACADEMY"
   sub_heading: "Curabitur blandit tempus porttitor."

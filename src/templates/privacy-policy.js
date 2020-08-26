@@ -26,8 +26,8 @@ const Privacy = (props) => {
                 <Title
                     size="5"
                     color={Colors.black}
-                    title={yml.banner.tagline}
-                    paragraph={yml.banner.sub_heading}
+                    title={yml.header.tagline}
+                    paragraph={yml.header.sub_heading}
                     main
                     paragraphColor={Colors.black}
                     fontSize="46px"
@@ -77,15 +77,19 @@ export const query = graphql`
                 image
                 keywords
             }
-            banner{
-                tagline
-                image
-                sub_heading
-            }
             header{
-                title
-                text
+                tagline
+                sub_heading
+                image{
+                    childImageSharp {
+                      fluid(maxWidth: 800){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  } 
+                alt
             }
+           
             sections{
                 title
                 text

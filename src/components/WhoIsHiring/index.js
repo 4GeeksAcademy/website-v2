@@ -26,12 +26,12 @@ const WhoIsHiring = props => {
                 bgSize={`contain`}
                 margin={`1rem`}
               ></BackgroundSection>
-            
+
             </Card>
           </Column>
         ))}
       </Row>
-      { props.footerTagline &&
+      {props.footerTagline &&
         <div>
           <H4 primary>{props.footerTagline}</H4>
           <Link to={props.footerLink}>

@@ -52,7 +52,7 @@ const Location = ({data, pageContext, yml}) => {
                 <Column
                     size="12"
                     border="bottom"
-                    
+
                 >
                     <Card shadow borders="1.25rem" height="426px" >
                         <Row
@@ -61,7 +61,7 @@ const Location = ({data, pageContext, yml}) => {
                             marginRight="0"
                             customRespSize
                         >
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%"  border="bottom">
+                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" border="bottom">
                                 <Row align="center" height="100%">
                                     <Column size="10" height="100%">
                                         <Divider height="50px" />
@@ -132,7 +132,7 @@ const Location = ({data, pageContext, yml}) => {
                                 <BackgroundSection
                                     className={`img-right`}
                                     height={`426px`}
-                                    data={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
+                                    image={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
                                     bgSize={`cover`}
                                     alt="Cnn Logo"
                                 />
@@ -148,7 +148,7 @@ const Location = ({data, pageContext, yml}) => {
                 <Column
                     size="12"
                     border="bottom"
-                    
+
                 >
                     <Card shadow borders="1.25rem" height="426px" >
                         <Row
@@ -174,7 +174,7 @@ const Location = ({data, pageContext, yml}) => {
                                                 <BackgroundSection
                                                     className={`img-left`}
                                                     height={`426px`}
-                                                    data={item.path.childImageSharp.fluid}
+                                                    image={item.path.childImageSharp.fluid}
                                                     bgSize={`cover`}
                                                     alt="Cnn Logo"
                                                 />
@@ -184,7 +184,7 @@ const Location = ({data, pageContext, yml}) => {
                                 </Carousel>
 
                             </Column>
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%"  border="bottom">
+                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" border="bottom">
                                 <Row align="center" height="100%">
                                     <Column size="10" height="100%">
                                         <Divider height="50px" />

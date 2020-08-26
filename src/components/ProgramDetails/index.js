@@ -25,6 +25,7 @@ const FillerStyles = styled.div`
     transform: translateY(-50%);
 `
 
+
 const ProgramDetails = (props) => {
     const [selected, setSelected] = useState(0);
     const [completed, setCompleted] = useState(0.5);
