@@ -1,25 +1,10 @@
 import React, {useState} from 'react';
 import {Row, Column, Wrapper, Divider, Div} from '../Sections';
 import styled from 'styled-components';
-// import {useStaticQuery, graphql} from 'gatsby';
-// import {makeStyles, withStyles} from '@material-ui/core/styles';
-// import Stepper from '@material-ui/core/Stepper';
-// import Step from '@material-ui/core/Step';
-// import StepButton from '@material-ui/core/StepButton';
-// import StepConnector from '@material-ui/core/StepConnector';
-// import StepLabel from '@material-ui/core/StepLabel';
-// import clsx from 'clsx';
-// import SettingsIcon from '@material-ui/icons/Settings';
-// import GroupAddIcon from '@material-ui/icons/GroupAdd';
-// import VideoLabelIcon from '@material-ui/icons/VideoLabel';
-// import Check from '@material-ui/icons/Check';
-
-
-// import Typography from '@material-ui/core/Typography';
 import {Card} from '../Card';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage, UserGroup, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../Styling';
-// import Switch from "react-switch";
+
 const icons = {
     coffee: Coffee,
     circle: Circle,
