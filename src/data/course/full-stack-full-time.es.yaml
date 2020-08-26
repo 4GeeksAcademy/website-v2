@@ -103,33 +103,39 @@ typical:
   schedule:
     - title: "Meditation"
       time: "8:00 AM"
-      icon: circle
+      icon: users
       content: "You will spend hundreds of hours coding; your body needs to relax, stretch and get ready for a thrilling day!"
+      step: 0
     - title: "Setup and coffee"
       time: "8:45 AM"
       icon: circle
       content: "The bootcamp starts at 9 am, take some coffee to recharge your energies and get ready to learn!"
+      step: 1
     - title: "Review Last Day"
       time: "9:00 AM"
       icon: circle
       content: "Review last day & weekend activities, Q&A. And brief overall of what we have addressed."
+      step: 2
     - title: "Lesson Time"
       time: "10:00 AM"
       icon: LaptopCode
       content: "Incremental: Each morning mentors will introduce a small set of new concepts and techniques that will help you along the way."
+      step: 3
     - title: "Lunch Time"
       time: "12:40 PM"
-      icon: coffee
+      icon: utensils
       content: "Recharge your batteries, get ready to spend the rest of the day practicing, solving challenges and projects."
+      step: 4
     - title: "Projects and Exercises"
       time: "2:00 PM"
       icon: coffee
       content: "You will be continuously challenged with real-life projects and exercises to deliver."
+      step: 5
     - title: "Collaborative Coding"
       time: "5:00 PM"
       icon: coffee
       content: "All students will code in a single screen, discuss approaches, strategies and deliver the projects."
-
+      step: 6
 ## ALUMNI SECTION
 alumni:
   heading: "MEET THE ALUMNI AND PROJECTS"

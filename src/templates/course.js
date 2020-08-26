@@ -491,6 +491,7 @@ export const query = graphql`
                 time
                 icon
                 content
+                step
               }
             }
             alumni{
