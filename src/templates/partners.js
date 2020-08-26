@@ -77,7 +77,7 @@ const Partners = (props) => {
         <Divider height="100px" />
         <Title
           size="5"
-          title={yml.header - data.tagline}
+          title={yml.header_data.tagline}
           main
           color={Colors.white}
           fontSize="46px"
@@ -175,15 +175,7 @@ export const query = graphql`
                 image
                 keywords
             }
-            test{
-              image{
-                childImageSharp {
-                  fluid(maxWidth: 1200){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-            }
+            
             header_data{
               tagline
               sub_heading
