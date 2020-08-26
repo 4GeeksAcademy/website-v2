@@ -180,6 +180,7 @@ transition: all .15s ease-in-out;
 
 `
 export const RoundImage = styled.div`
+    position: ${props => props.pos};
     background-image: url(${props => props.url} );
     margin-bottom: ${props => props.mb};
     background-repeat: no-repeat;

@@ -310,7 +310,17 @@ const Why = (props) => {
                                         </Column>
                                     </Row>
                                 </Column>
-                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" backgroundSize="cover" image={yml.story.image} border="custom" customBorderRadius="0 1.25rem 1.25rem 0" />
+                                <Column
+                                    size="6"
+                                    customRespSize
+                                    respSize="6"
+                                    alignSelf="center"
+                                    height="100%"
+                                    backgroundSize="cover"
+                                    image={yml.story.image}
+                                    border="custom"
+                                    customBorderRadius="0 1.25rem 1.25rem 0"
+                                />
                             </Row>
                         </Card>
                     </Column>

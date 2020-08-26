@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import {useStaticQuery, graphql} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
-import {RoundImage, Colors, Over, ArrowRight} from '../Styling';
+import {RoundImage, Colors, Over, ArrowRight, BackgroundSection} from '../Styling';
 import {Row, Column, Divider} from '../Sections'
 import {Card} from '../Card'
 
@@ -34,63 +34,68 @@ const Mentors = props => {
             }
         `)
     let staff = data.allStaffYaml.edges;
+    console.log("STAFF:", staff)
 
     return (
-            <Row github="/components/staff">
-                {staff[0].node.staff.map((item, index) => {
-                    return (
-                        <Column key={index} size="3" customRespSize respSize="6">
-                            <RoundImage
-                                opacity="1"
-                                mb="20px"
-                                url={item.image}
-                                bsize="cover"
-                                border="10px"
-                                height="250px"
-                                w_xs="100"
-                                w_sm="100"
-                                w_md="100"
-                                w_lg="100"
-                                w_xl="100"
-                                move up={props.up}>
-                                <Over
-                                    h_xs="250px"
-                                    h_sm="250px"
-                                    h_md="250px"
-                                    h_lg="250px"
-                                    h_xl="250px"
-                                    w_xs="100"
-                                    w_sm="100"
-                                    w_md="100"
-                                    w_lg="100"
-                                    w_xl="100">
-                                    <Divider height="20%" />
-                                    <H3 fs_xs="14px"
-                                        fs_sm="14px"
-                                        fs_md="14px"
-                                        fs_lg="14px"
-                                        fs_xl="18px"
-                                        margin="0"
-                                        uppercase
-                                        color={Colors.yellow}
-                                    >{item.name}</H3>
-                                    <H3 fs_xs="14px"
-                                        fs_sm="14px"
-                                        fs_md="14px"
-                                        fs_lg="14px"
-                                        fs_xl="18px"
-                                        margin="0"
-                                        uppercase
-                                        color={Colors.yellow}>{item.last_name}</H3>
-                                    <Paragraph margin="5px 0" color={Colors.lightGray}>{item.job_title}</Paragraph>
-                                    <Divider height="10%" />
-                                    <a href={item.linkdin != '' ? `http://${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
-                                </Over>
-                            </RoundImage>
-                        </Column>
-                    )
-                })}
-            </Row>
+        <Row github="/components/staff">
+            {staff[0].node.staff.map((item, index) => {
+                return (
+                    <Column key={index} size="3" customRespSize respSize="6">
+                        <RoundImage
+                            pos={`relative`}
+                            opacity="1"
+                            mb="20px"
+                            url={item.image}
+                            bsize="cover"
+                            border="10px"
+                            height="250px"
+                            w_xs="100"
+                            w_sm="100"
+                            w_md="100"
+                            w_lg="100"
+                            w_xl="100"
+                            move up={props.up}>
+                            <Over
+                                h_xs="250px"
+                                h_sm="250px"
+                                h_md="250px"
+                                h_lg="250px"
+                                h_xl="250px"
+                                w_xs="100%"
+                                w_sm="100%"
+                                w_md="100%"
+                                w_lg="100%"
+                                w_xl="100%"
+                                bottom={`0`}
+                                left={`0`}
+                            >
+                                <Divider height="20%" />
+                                <H3 fs_xs="14px"
+                                    fs_sm="14px"
+                                    fs_md="14px"
+                                    fs_lg="14px"
+                                    fs_xl="18px"
+                                    margin="0"
+                                    uppercase
+                                    color={Colors.yellow}
+                                >{item.name}</H3>
+                                <H3 fs_xs="14px"
+                                    fs_sm="14px"
+                                    fs_md="14px"
+                                    fs_lg="14px"
+                                    fs_xl="18px"
+                                    margin="0"
+                                    uppercase
+                                    color={Colors.yellow}>{item.last_name}</H3>
+                                <Paragraph margin="5px 0" color={Colors.lightGray}>{item.job_title}</Paragraph>
+                                <Divider height="10%" />
+                                <a href={item.linkdin != '' ? `http://${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
+                            </Over>
+                        </RoundImage>
+                    </Column>
+                )
+            })}
+        </Row>
     )
 }
 
