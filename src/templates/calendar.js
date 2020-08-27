@@ -268,7 +268,7 @@ const Calendar = (props) => {
         style="default"
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         border="bottom"
-        height="700px"
+        height="500px"
         backgroundSize="cover"
       >
         <Divider height="300px" />
@@ -900,7 +900,7 @@ export const query = graphql`
             sub_heading
             image{
               childImageSharp {
-                fluid(maxWidth: 800){
+                fluid(maxWidth: 1500){
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -919,7 +919,7 @@ export const query = graphql`
     }
     cohort_img: file(relativePath: { eq: "images/events-alt.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 200) {
+        fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
