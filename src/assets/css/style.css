@@ -26,6 +26,9 @@ html, body
 .img-right::before{
     border-radius: 0 1.25rem 1.25rem 0;
 }
+.img-event::before, .img-event::after{
+    border-radius: 1.25rem 1.25rem 0 0;
+}
 .MuiStepButton-root {
     width: 100%;
     padding: 24px 17px!important;

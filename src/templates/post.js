@@ -5,6 +5,7 @@ import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
 import {RoundImage, Colors, Check, ArrowLeft} from '../components/Styling'
 import Layout from '../global/Layout'
 import {Card} from '../components/Card'
+import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
 import {TwitterFollowButton} from 'react-twitter-embed';
 import {
@@ -19,6 +20,7 @@ import {
 export default function Template (props) {
     const {data, pageContext} = props;
     const post = props.data.markdownRemark;
+    console.log("POSTHTML", post.html)
     const allowed = [`${post.frontmatter.author}`];
     const filtered = Object.keys(twitterUser)
         .filter(key => allowed.includes(key))
@@ -77,7 +79,9 @@ export default function Template (props) {
                     <Column size="10">
                         <Row height="100%" align="around">
                             <Column size="2" customRespSize respSize="2" alignSelf="center" >
-                                <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
+                                <LazyLoad throttle={200} height={300}>
+                                    <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
+                                </LazyLoad>
                             </Column>
                             <Column size="8" customRespSize respSize="8" alignSelf="center">
                                 <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px"><a href={`https://twitter.com/${filtered.name || "4GeeksAcademy"}`} rel="author noopener noreferrer nofollow">{`${postDate} - ${filtered.name || '4Geeks Academy'}`}</a></Paragraph></Row>
@@ -132,7 +136,9 @@ export default function Template (props) {
                 <Divider height="30px" />
                 <Row>
                     <Column size="10" customRespSize respSize="10" alignSelf="center">
-                        <RoundImage border="1.25rem" width="100%" height="300px" bsize="contain" position="center" url={post.frontmatter.image} />
+                        <LazyLoad throttle={200} height={300}>
+                            <RoundImage border="1.25rem" width="100%" height="300px" bsize="contain" position="center" url={post.frontmatter.image} />
+                        </LazyLoad>
                     </Column>
                 </Row>
                 <Row height="auto" align="left">

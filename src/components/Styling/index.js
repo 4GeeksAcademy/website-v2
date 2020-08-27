@@ -290,7 +290,7 @@ export const Button = styled(SmartButton)`
             display: inline-block;
             position: ${props => props.position};
             padding: ${props => props.padding};
-            font-size: .5rem;
+            font-size: .75rem;
             line-height: 1.5;
             margin: ${props => props.margin};
             font-weight: 500;
