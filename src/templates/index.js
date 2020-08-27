@@ -217,7 +217,7 @@ const Home = (props) => {
         {/* JOIN 4GEEKS SECTION */}
         {/* ******************* */}
 
-        <Row>
+        <Row github="/page/index.us.yml">
           <Column size="6" >
             <Card
               padding="20px"

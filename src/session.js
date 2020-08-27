@@ -121,21 +121,29 @@ export const withSession = Component => {
             }
           }
         }
-      `);
+        `);
         const locationsArray = data.loc;
         const [session, setSession] = useState(defaultSession);
         //get ip address
         useEffect(() => {
-            const loadIp = async () => {
-                const v4 = await publicIp.v4();
-                const v6 = "v6";
-                const response = await fetch(`https://api.ipstack.com/${v4}?access_key=73822e5a584c041268f0e78a3253cf0d`);
-                
-                let location = locationsArray.edges.find(({ node }) => node.defaultLanguage == "us").node;
-                try{
-                    let data = response.status === 200 ? await response.json() : null;
-                    if(data) location = closestLoc(locationsArray.edges, data.latitude, data.longitude)
-                }catch(e){}
+            const loadIp = async (location=null) => {
+                let v4 = null;
+                let storedSession = JSON.parse(localStorage.getItem("academy_session"));
+
+                if(location!==null) location = locationsArray.edges.find(({ node }) => node.meta_info.slug === location).node;
+                else if(storedSession && storedSession.location != null) location = storedSession.location;
+                else if(location === null){
+
+                    const v4 = await publicIp.v4();
+                    const response = await fetch(`https://api.ipstack.com/${v4}?access_key=73822e5a584c041268f0e78a3253cf0d`);
+                    
+                    location = locationsArray.edges.find(({ node }) => node.defaultLanguage == "us").node;
+                    try{
+                        let data = response.status === 200 ? await response.json() : null;
+                        if(data) location = closestLoc(locationsArray.edges, data.latitude, data.longitude)
+                    }catch(e){}
+                }
+                console.log("New updated location", location)
                 // const location = "Santiago de Chile"
                 const browserLang = getFirstBrowserLanguage();
                 
@@ -149,7 +157,7 @@ export const withSession = Component => {
                 
                 let repeated = [];
                 const _session = {
-                    ...session, v4, v6, location, browserLang, language,
+                    ...session, v4, location, browserLang, language,
                     upcoming: [],
                     locations: locationsArray.nodes.filter(l => {
                         const [ name, lang ] = l.fields.file_name.split(".");
@@ -167,12 +175,15 @@ export const withSession = Component => {
                     .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
                 };
                 console.log("Session: ", _session);
+                
                 setSession(_session);
+                localStorage.setItem("academy_session", JSON.stringify(_session));
                 return _session
 
             };
 
-            loadIp()
+            const urlParams = new URLSearchParams(window.location.search);
+            loadIp(urlParams.get('location') || null)
                 .then(_session => {
                     fetch(`${process.env.BREATHECODE_HOST}/admissions/cohort/?upcoming=true&academy=${_session.location.meta_info.slug}`)
                         .then(resp => resp.json())

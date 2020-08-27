@@ -16,6 +16,7 @@ const Mentors = props => {
                       name
                       last_name
                       nick_name
+                      bio
                       slug
                       job_title
                       github
@@ -69,7 +70,7 @@ const Mentors = props => {
                                 bottom={`0`}
                                 left={`0`}
                             >
-                                <Divider height="20%" />
+                                <Divider height="10%" />
                                 <H3 fs_xs="14px"
                                     fs_sm="14px"
                                     fs_md="14px"
@@ -87,7 +88,8 @@ const Mentors = props => {
                                     margin="0"
                                     uppercase
                                     color={Colors.yellow}>{item.last_name}</H3>
-                                <Paragraph margin="5px 0" color={Colors.lightGray}>{item.job_title}</Paragraph>
+                                <Paragraph margin="5px 0" color={Colors.verylightGray}>{item.job_title}</Paragraph>
+                                <Paragraph margin="15px 0" color={Colors.lightGray}>{item.bio}</Paragraph>
                                 <Divider height="10%" />
                                 <a href={item.linkdin != '' ? `http://${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
                             </Over>
