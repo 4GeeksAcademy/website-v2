@@ -268,10 +268,10 @@ const Calendar = (props) => {
         style="default"
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         border="bottom"
-        height="500px"
-        backgroundSize="cover"
+        height="300px"
+        bgSize="cover"
       >
-        <Divider height="300px" />
+        <Divider height="100px" />
         <Title
           size="5"
           title={yml.header.tagline}

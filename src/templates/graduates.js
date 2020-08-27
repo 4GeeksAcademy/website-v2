@@ -39,7 +39,7 @@ const Graduates = ({data, pageContext, yml}) => {
           <Column
             size="12"
             border="bottom"
-            
+
           >
             <Card shadow borders="1.25rem" height="426px" >
               <Row
@@ -48,7 +48,7 @@ const Graduates = ({data, pageContext, yml}) => {
                 marginRight="0"
                 customRespSize
               >
-                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%"  border="bottom">
+                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" border="bottom">
                   <Row align="center" height="100%">
                     <Column size="8" height="100%">
                       <Row height="5%" />
@@ -99,7 +99,13 @@ export const query = graphql`
           banner{
             tagline
             sub_heading
-            image 
+            image{
+              childImageSharp {
+                fluid(maxWidth: 1200){
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }  
           }
           about{
             heading

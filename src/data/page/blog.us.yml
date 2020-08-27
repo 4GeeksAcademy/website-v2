@@ -9,7 +9,7 @@ meta_info:
 banner:
   tagline: "4GEEKS ACADEMY BLOG"
   sub_heading: "Resources and news for both potential and current software builders."
-  image: "/images/bg/pricing-bg.jpg"
+  image: "../../../static/images/bg/pricing-bg.jpg"
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."

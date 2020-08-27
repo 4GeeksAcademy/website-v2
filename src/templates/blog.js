@@ -28,15 +28,20 @@ const Blog = ({data, pageContext, yml}) => {
                 github={`/page/blog.${pageContext.lang}.yml`}
                 style="default"
                 border="bottom"
+                imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
+                bgSize="cover"
+                className={`img-header`}
+                height={`300px`}
             >
-                <Divider height="50px" />
+                <Divider height="100px" />
                 <Title
                     title={yml.banner.tagline}
                     main
                     size="8"
-                    color={Colors.black}
+                    color={Colors.white}
                     paragraph={yml.banner.sub_heading}
                     paragraphColor={Colors.white}
+                    textAlign="center"
 
                 />
             </Wrapper>
@@ -66,7 +71,7 @@ const Blog = ({data, pageContext, yml}) => {
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
                                         <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
-                                            <LazyLoad throttle={200} height={300}>
+                                            <LazyLoad height={200} scroll={true}>
                                                 <RoundImage
                                                     url={item.node.frontmatter.image}
                                                     bsize="cover"
@@ -100,7 +105,9 @@ const Blog = ({data, pageContext, yml}) => {
                                     </Row>
                                     <Row height="auto" align="around">
                                         <Column size="1" customRespSize respSize="2" alignSelf="center">
-                                            <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
+                                            <LazyLoad scroll={true} height={30}>
+                                                <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
+                                            </LazyLoad>
                                         </Column>
                                         <Column size="8" customRespSize respSize="8" alignSelf="center">
                                             <Paragraph color={Colors.gray} align="left"
@@ -151,7 +158,7 @@ const Blog = ({data, pageContext, yml}) => {
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
                                         <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
-                                            <LazyLoad throttle={200} height={300}>
+                                            <LazyLoad scroll={true} height={200}>
                                                 <RoundImage
                                                     url={item.node.frontmatter.image}
                                                     bsize="cover"
@@ -186,7 +193,7 @@ const Blog = ({data, pageContext, yml}) => {
                                     </Row>
                                     <Row height="auto" align="around">
                                         <Column size="1" customRespSize respSize="2" alignSelf="center">
-                                            <LazyLoad throttle={200} height={300}>
+                                            <LazyLoad scroll={true} height={30}>
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
                                             </LazyLoad>
                                         </Column>
@@ -235,7 +242,13 @@ query BlogQuery($file_name: String!, $lang: String!) {
           banner{
             tagline
             sub_heading
-            image 
+            image{
+                childImageSharp {
+                  fluid(maxWidth: 1500){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }  
           }
         
         }

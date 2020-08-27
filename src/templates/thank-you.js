@@ -65,7 +65,13 @@ export const query = graphql`
             banner{
                 tagline
                 sub_heading
-                image
+                image{
+                    childImageSharp {
+                      fluid(maxWidth: 1200){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  } 
             }
             content{
                 title
