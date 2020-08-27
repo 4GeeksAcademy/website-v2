@@ -11,78 +11,78 @@ partners:
   footer_button: "Review our latest hirings"
   footer_link: "/geekforce"
   images:
-    - name: "Razz"
-      slug: "razz"
-      image: "../../../../static/razz-logo.png"
+    - name: "Microsoft"
+      slug: "microsoft"
+      image: "../../../../static/images/partner/microsoft.png"
       alt: ""
-      featured: false
+      featured: true
     - name: "Boats Group"
       slug: "boats-group"
-      image: "../../../../static/boats-logo.jpg"
+      image: "../../../../static/images/partner/boats.jpg"
       alt: ""
-      featured: false
-    - name: "Gaisce Group "
-      slug: "gaisce-group"
-      image: "../../../../static/gaisce-logo.jpg"
+      featured: true
+    - name: "Facebook"
+      slug: "facebook"
+      image: "../../../../static/images/partner/facebook.png"
       alt: ""
-      featured: false
-    - name: "Tcg"
+      featured: true
+    - name: "National Geographic"
+      slug: "natgeo"
+      image: "../../../../static/images/partner/natgeo.png"
+      alt: ""
+      featured: true
+    - name: "Evernote"
+      slug: "evernote"
+      image: "../../../../static/images/partner/evernote.png"
+      alt: ""
+      featured: true
+    - name: "Ultimate Software"
+      slug: "ultimate-software"
+      image: "../../../../static/images/partner/ultimate.png"
+      alt: ""
+      featured: true
+    - name: "TCG Group"
       slug: "tcg"
-      image: "../../../../static/tcg-logo.png"
+      image: "../../../../static/images/partner/tcg.png"
       alt: ""
-      featured: false
-    - name: "Launch Potato"
-      slug: "launch-potato"
-      image: "../../../../static/launch-logo.png"
+      featured: true
+    - name: "Razz"
+      slug: "razz"
+      image: "../../../../static/images/partner/razz.png"
       alt: ""
-      featured: false
-    - name: "DS9"
-      slug: "ds9"
-      image: "../../../../static/ds9-logo.png"
-      alt: ""
-      featured: false
+      featured: true
     - name: "Overseas"
       slug: "overseas"
-      image: "../../../../static/overseas-logo.png"
+      image: "../../../../static/images/partner/overseas.png"
       alt: ""
-      featured: false
-    - name: "Affinity"
-      slug: "affinity"
-      image: "../../../../static/affinity-logo.png"
+      featured: true
+    - name: "DS9"
+      slug: "ds9"
+      image: "../../../../static/images/partner/ds9.png"
       alt: ""
-      featured: false
-    - name: "Digitel"
-      slug: "digitel"
-      image: "../../../../static/digitel-logo.png"
-      alt: ""
-      featured: false
-    - name: "Bod"
-      slug: "bod"
-      image: "../../../../static/bod-logo.jpg"
-      alt: ""
-      featured: false
+      featured: true
     - name: "Coinet"
       slug: "coinet"
-      image: "../../../../static/coinet-logo.jpg"
+      image: "../../../../static/images/partner/coinet.jpg"
       alt: ""
-      featured: false
+      featured: true
 coding:
-  tagline: "IMMERSED IN MIAMI'S CODING ECOSYSTEM"
+  tagline: "IMMERSED IN THE CODING ECOSYSTEM"
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
   images:
-    - name: "Beacon"
-      slug: "beacon"
-      image: "../../../../static/images/coding/beacon.png"
+    - name: "Google Developers"
+      slug: "google-developers"
+      image: "../../../../static/images/coding/google-developers.png"
       alt: ""
       featured: false
-    - name: "Blockchain"
-      slug: "blockchain"
-      image: "../../../../static/images/coding/blockchain.png"
+    - name: "Facebook Developer Circle"
+      slug: "facebook-developer-circle"
+      image: "../../../../static/images/coding/developer-circles.png"
       alt: ""
       featured: false
     - name: "Bloktech"
       slug: "bloktech"
-      image: "../../../../static/images/coding/bloktech.png"
+      image: "../../../../static/images/coding/blockchain-center.png"
       alt: ""
       featured: false
     - name: "Startup"
@@ -95,9 +95,9 @@ coding:
       image: "../../../../static/images/coding/shell-hacks.png"
       alt: ""
       featured: false
-    - name: "Wegacha"
-      slug: "wegacha"
-      image: "../../../../static/images/coding/wegacha.png"
+    - name: "Womans Who Code"
+      slug: "woman-who-code"
+      image: "../../../../static/images/coding/woman-who-code.jpeg"
       alt: ""
       featured: false
     - name: "Worldcamp"
@@ -134,14 +134,14 @@ influencers:
       image: "../../../../static/images/influencers/miami-dade.png"
       alt: ""
       featured: false
-    - name: "Career Score"
-      slug: "career-score"
-      image: "../../../../static/images/influencers/career-score.png"
+    - name: "Beacon Council"
+      slug: "beacon-council"
+      image: "../../../../static/images/influencers/beacon.png"
       alt: ""
       featured: false
 financials:
-  tagline: "IMMERSED IN MIAMI'S CODING ECOSYSTEM"
-  sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
+  tagline: "FINANCIAL PARTNERS"
+  sub_heading: "In a big effort to create the most accessible education.."
   images:
     - name: "Quotanda"
       slug: "quotanda"

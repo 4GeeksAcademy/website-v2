@@ -226,18 +226,12 @@ const Why = (props) => {
                     })}
 
                 </Row>
-                <Divider height="50px" />
-                <Title size="8" title={yml.staff.heading} paragraph={yml.staff.sub_heading} primary />
-
+            </Wrapper>
+            <Wrapper margin="50px 0 150px 0" style="default">
                 {/* MEET THE TEAM */}
+                <Title size="8" title={yml.staff.heading} paragraph={yml.staff.sub_heading} primary />
                 <Mentors />
-
-                <Divider height="150px" />
             </Wrapper>
-            <Divider height="200px" />
-            <Wrapper style="default">
-            </Wrapper>
-            <Divider height="150px" />
             <Wrapper
                 style="default"
 
@@ -245,95 +239,85 @@ const Why = (props) => {
                 border="custom"
                 customBorderRadius="1.25rem 0 0 1.25rem"
             >
-                <Row>
-                    <Column
-                        size="12"
-                        border="bottom"
-
+                <Card shadow borders="1.25rem" height="450px" move="up" up="20%">
+                    <Row
+                        height="100%"
+                        marginLeft="0"
+                        marginRight="0"
+                        customRespSize
                     >
-                        <Card shadow borders="1.25rem" height="450px" move="up" up="50%">
-                            <Row
-                                height="100%"
-                                marginLeft="0"
-                                marginRight="0"
-                                customRespSize
-                            >
-                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" border="bottom">
-                                    <Row github="/page/the-academy.us.yml#L77" align="center" height="100%">
-                                        <Column size="10" height="100%">
-                                            <Divider height="10%" />
-                                            <Row height="10%">
-                                                <Column size="10">
-                                                    <H3 primary align="left" >{yml.story.heading}</H3>
-                                                </Column>
-                                            </Row>
-                                            <Row height="10%">
-                                                <Column size="12">
-                                                    <Separator primary />
-                                                </Column>
-                                            </Row>
-                                            <Row height="50%">
-                                                <Column size="10">
-                                                    <Paragraph
-                                                        color={Colors.gray}
-                                                        margin="20px 0 0 0"
-                                                        align="left"
-                                                        fs_xs="10px"
-                                                        fs_sm="10px"
-                                                        fs_md="10px"
-                                                        fs_lg="10px"
-                                                        fs_xl="14px">
-                                                        {yml.story.sub_heading_one}
-                                                    </Paragraph>
-                                                </Column>
-                                            </Row>
-                                            <Row height="10%">
-                                                <Column size="10">
-                                                    <Link to={yml.story.button_link}>
-                                                        <Paragraph
-                                                            color={Colors.blue}
-                                                            margin="20px 0 0 0"
-                                                            align="left"
-                                                            fs_xs="10px"
-                                                            fs_sm="10px"
-                                                            fs_md="10px"
-                                                            fs_lg="10px"
-                                                            fs_xl="14px">
-                                                            {yml.story.button}
-                                                        </Paragraph>
-                                                    </Link>
-                                                </Column>
-                                            </Row>
-                                            <Divider height="10%" />
-
-
+                        <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" border="bottom">
+                            <Row github="/page/the-academy.us.yml#L77" align="center" height="100%">
+                                <Column size="10" height="100%">
+                                    <Divider height="10%" />
+                                    <Row height="10%">
+                                        <Column size="10">
+                                            <H3 primary align="left" >{yml.story.heading}</H3>
                                         </Column>
                                     </Row>
-                                </Column>
-                                <Column
-                                    size="6"
-                                    customRespSize
-                                    respSize="6"
-                                    alignSelf="center"
-                                    height="100%"
-                                    backgroundSize="cover"
-                                    paddingRight={`0`}
-                                    border="custom"
-                                    customBorderRadius="0 1.25rem 1.25rem 0"
-                                >
-                                    <BackgroundSection
-                                        className={`img-right`}
-                                        height={`450px`}
-                                        image={yml.story.image.childImageSharp.fluid}
-                                        bgSize={`cover`}
-                                        // alt={yml.about.about_image.alt}
-                                        borderRadius={`0 1.25rem 1.25rem 0`}
-                                    />
+                                    <Row height="10%">
+                                        <Column size="12">
+                                            <Separator primary />
+                                        </Column>
+                                    </Row>
+                                    <Row height="50%">
+                                        <Column size="10">
+                                            <Paragraph
+                                                color={Colors.gray}
+                                                margin="20px 0 0 0"
+                                                align="left"
+                                                fs_xs="10px"
+                                                fs_sm="10px"
+                                                fs_md="10px"
+                                                fs_lg="10px"
+                                                fs_xl="14px">
+                                                {yml.story.sub_heading_one}
+                                            </Paragraph>
+                                        </Column>
+                                    </Row>
+                                    <Row height="10%">
+                                        <Column size="10">
+                                            <Link to={yml.story.button_link}>
+                                                <Paragraph
+                                                    color={Colors.blue}
+                                                    margin="20px 0 0 0"
+                                                    align="left"
+                                                    fs_xs="10px"
+                                                    fs_sm="10px"
+                                                    fs_md="10px"
+                                                    fs_lg="10px"
+                                                    fs_xl="14px">
+                                                    {yml.story.button}
+                                                </Paragraph>
+                                            </Link>
+                                        </Column>
+                                    </Row>
+                                    <Divider height="10%" />
                                 </Column>
                             </Row>
-                        </Card>
-                    </Column>
-                </Row>
+                        </Column>
+                        <Column
+                            size="6"
+                            customRespSize
+                            respSize="6"
+                            alignSelf="center"
+                            height="100%"
+                            backgroundSize="cover"
+                            paddingRight={`0`}
+                            border="custom"
+                            customBorderRadius="0 1.25rem 1.25rem 0"
+                        >
+                            <BackgroundSection
+                                className={`img-right`}
+                                height={`450px`}
+                                image={yml.story.image.childImageSharp.fluid}
+                                bgSize={`cover`}
+                                // alt={yml.about.about_image.alt}
+                                borderRadius={`0 1.25rem 1.25rem 0`}
+                            />
+                        </Column>
+                    </Row>
+                </Card>
             </Wrapper>
             <Divider height="100px" />
             <Wrapper

@@ -104,7 +104,7 @@ color: ${props => props.color};
 export const H4 = styled.h4`
 text-align: ${props => props.align || "center"};
 font-family: 'Futura', sans-serif;
-margin-bottom: 0px;
+margin: ${props => props.m};
 font-weight: ${props => props.fontWeight};
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};

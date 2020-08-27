@@ -201,7 +201,7 @@ export const Column = styled.div`
     padding: ${props => props.padding};
     height: ${props => props.height};
     margin: ${props => props.margin};
-    text-align: ${props => props.align || "left"}
+    text-align: ${props => props.align || "left"};
     position: relative;
     width: 100%;
     border: ${props => props.borderStyle};
