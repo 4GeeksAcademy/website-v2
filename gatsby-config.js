@@ -82,7 +82,12 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-lazy-image-url`]
+      }
+    },
     'gatsby-transformer-yaml',
     'gatsby-plugin-zeit-now',
     'gatsby-plugin-meta-redirect',
