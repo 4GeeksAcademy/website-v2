@@ -23,23 +23,23 @@ const Faq = (props) => {
     const {session, setSession} = useContext(SessionContext);
     return (
         <>
-        <Wrapper
-            style="default"
-            image={yml.banner.image}
-            border="bottom"
-            height="300px"
-            backgroundSize="cover"
-        >
-            <Divider height="100px" />
-            <Title
-                size="5"
-                title={yml.banner.tagline}
-                main
-                color={Colors.white}
-                fontSize="46px"
-                textAlign="center"
-            />
-        </Wrapper>
+            <Wrapper
+                style="default"
+                image={yml.banner.image}
+                border="bottom"
+                height="300px"
+                backgroundSize="cover"
+            >
+                <Divider height="100px" />
+                <Title
+                    size="5"
+                    title={yml.banner.tagline}
+                    main
+                    color={Colors.white}
+                    fontSize="46px"
+                    textAlign="center"
+                />
+            </Wrapper>
             <Divider height="50px" />
             <Wrapper
                 github={`/page/faq.${pageContext.lang}.yml`}
@@ -142,7 +142,13 @@ export const query = graphql`
           banner{
             tagline
             sub_heading
-            image 
+            image{
+                childImageSharp {
+                  fluid(maxWidth: 1200){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }  
           }
           faq{
               question
