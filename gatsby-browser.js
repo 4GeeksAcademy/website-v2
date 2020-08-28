@@ -12,3 +12,4 @@
 // export const wrapRootElement = ({element}) => (
 //     <ThemeProvider>{element}</ThemeProvider>
 // );
+import 'lazysizes'
