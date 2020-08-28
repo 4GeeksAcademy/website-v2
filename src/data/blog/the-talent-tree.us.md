@@ -9,7 +9,7 @@ layout: post
 link: https://www.4geeksacademy.co/the-talent-tree/
 slug: the-talent-tree
 title: The Talent Tree
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/0fdbf00a-89ad-48d5-869e-aa2f0ed48185/Talents_for_Paladins.jpg"
 wordpress_id: 2539
 categories:

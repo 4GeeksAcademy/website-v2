@@ -9,7 +9,7 @@ layout: post
 link: https://www.4geeksacademy.co/dont-teach-nodejs-full-stack-development-program/
 slug: dont-teach-nodejs-full-stack-development-program
 title: Why we don't teach NodeJS in our Full-Stack Development program
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/49c3e21d-b752-4a48-b89b-5519f48de227/ScreenShot20170925at105452PM.png"
 wordpress_id: 2436
 categories:

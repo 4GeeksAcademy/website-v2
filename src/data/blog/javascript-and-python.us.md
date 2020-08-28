@@ -8,7 +8,7 @@ layout: post
 link: https://www.4geeksacademy.co/javascript-and-python/
 slug: javascript-and-python
 title: 'JavaScript and Python: A-must for any coder'
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/652e1456-b752-4006-9268-935f080e1ad8/JSandPython.jpg"
 wordpress_id: 3755
 categories:

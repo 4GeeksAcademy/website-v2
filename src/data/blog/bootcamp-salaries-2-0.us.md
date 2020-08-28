@@ -8,7 +8,7 @@ layout: post
 link: https://www.4geeksacademy.co/bootcamp-salaries-2-0/
 slug: bootcamp-salaries-2-0
 title: "Bootcamp Graduates Salary 2017: 2.0 edition"
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/776c553c-ff4a-43ab-8393-bba06f2c67af/portadabootcamp021.jpg"
 wordpress_id: 2580
 categories:

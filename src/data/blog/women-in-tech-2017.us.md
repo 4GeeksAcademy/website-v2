@@ -9,7 +9,7 @@ layout: post
 link: https://www.4geeksacademy.co/women-in-tech-2017/
 slug: women-in-tech-2017
 title: Women in Tech 2017
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/f6797449-fd52-49a7-9cb5-6b9407f5891e/ScreenShot20180116at115832PM.png"
 wordpress_id: 2661
 categories:

@@ -8,7 +8,7 @@ layout: post
 link: https://www.4geeksacademy.co/digital-marketing-in-the-coding-world/
 slug: digital-marketing-in-the-coding-world
 title: Digital Marketing in the Coding World
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/f3cc13ee-a13b-4b5e-b275-7f83517afb97/BLOG041scaled.jpg"
 wordpress_id: 3796
 categories:
