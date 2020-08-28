@@ -45,6 +45,7 @@ const Calendar = (props) => {
   const [cohorts, setCohorts] = useState([]);
   const [events, setEvent] = useState([]);
   const [academy, setAcademy] = useState(null);
+  const [selected, setSelected] = useState(0)
   const [single, setSingle] = useState()
   const [filteredEvents, setFilteredEvents] = useState([]);
   const [filteredCohorts, setFilteredCohorts] = useState([]);
@@ -381,6 +382,8 @@ const Calendar = (props) => {
                     <>
                       <Column size="4" key={index} margin="0 0 1rem 0">
                         <Card
+                          onMouseOver={() => setSelected(index)}
+                          onClick={() => setSelected(index)}
                           move="up"
                           up="30%"
                           h_xs="auto"
@@ -389,7 +392,7 @@ const Calendar = (props) => {
                           h_lg="auto"
                           h_xl="auto"
                           width="100%"
-                          color="white"
+                          color={index === selected ? 'grey' : 'white'}
 
                           shadow
                           move="up">
@@ -412,8 +415,16 @@ const Calendar = (props) => {
                           h_lg="230px"
                           h_xl="230px"
                         /> */}
-                          <Row marginLeft="0" marginRight="0" padding={`15px`}>
-                            <Column size="12" >
+                          <Row
+
+                            // background={Colors.lightGray}
+                            marginLeft="0"
+                            marginRight="0"
+                            padding={`15px`}>
+                            <Column size="12"
+                              onMouseOver={() => setSelected(index)}
+                              onMouseOut={() => setSelected()}
+                              onClick={() => setSelected(index)}>
                               <Row marginBottom="1rem" align={`center`}>
                                 <Paragraph>{cohort.slug}</Paragraph>
                               </Row>
@@ -548,7 +559,11 @@ const Calendar = (props) => {
                               />
                             </LazyLoad>}
                           <Row marginLeft="0" marginRight="0" padding={`15px`}>
-                            <Column size="12" >
+                            <Column
+                              onMouseOver={() => setSelected(index)}
+                              onMouseOut={() => setSelected()}
+                              onClick={() => setSelected(index)}
+                              size="12" >
                               <Row marginBottom="1rem" align={`center`}>
                                 <Paragraph>{event.event_type.name}</Paragraph>
                               </Row>
