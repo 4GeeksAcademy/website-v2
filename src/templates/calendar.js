@@ -69,6 +69,7 @@ const Calendar = (props) => {
 
   // https://breathecode.herokuapp.com/v1/events/all
   // https://breathecode.herokuapp.com/v1/events/all?upcoming=true
+  // https://breathecode.herokuapp.com/v1/events/all?academy=downtown-miami&type=workshop
 
   useEffect(() => {
     const loadCohorts = async () => {
@@ -208,7 +209,7 @@ const Calendar = (props) => {
               fs_md="30px"
               fs_lg="30px"
               fs_xl="30px"
-            >Our Events</H4>
+            >Check for upcoming courses, workshops and events</H4>
           </Column>
         </Row>
         <Row marginBottom={`10px`}>
@@ -378,32 +379,35 @@ const Calendar = (props) => {
               cohorts.length > 0 ?
                 cohorts.map((cohort, index) => {
                   let cohortDate = new Date(cohort.kickoff_date)
+                  console.log("%%%%%", cohortDate.getDay())
                   return (
                     <>
                       <Column size="4" key={index} margin="0 0 1rem 0">
-                        <Card
-                          onMouseOver={() => setSelected(index)}
-                          onClick={() => setSelected(index)}
-                          move="up"
-                          up="30%"
-                          h_xs="auto"
-                          h_sm="auto"
-                          h_md="auto"
-                          h_lg="auto"
-                          h_xl="auto"
-                          width="100%"
-                          color={index === selected ? 'grey' : 'white'}
+                        <Link to={`/${session.language}/${cohort.certificate.slug}`}>
+                          <Card
+                            overflow={`hidden`}
+                            onMouseOver={() => setSelected(index)}
+                            onClick={() => setSelected(index)}
+                            move="up"
+                            up="30%"
+                            h_xs="auto"
+                            h_sm="auto"
+                            h_md="auto"
+                            h_lg="auto"
+                            h_xl="auto"
+                            width="100%"
+                            color={index === selected ? 'grey' : 'white'}
 
-                          shadow
-                          move="up">
-                          <BackgroundSection
-                            image={data.cohort_img.childImageSharp.fluid}
-                            // alt={i.alt}
-                            height={`230px`}
-                            bgSize={`cover`}
-                            className={`img-event`}
-                          ></BackgroundSection>
-                          {/* <RoundImage
+                            shadow
+                            move="up">
+                            <BackgroundSection
+                              image={data.cohort_img.childImageSharp.fluid}
+                              // alt={i.alt}
+                              height={`230px`}
+                              bgSize={`cover`}
+                              className={`img-event`}
+                            ></BackgroundSection>
+                            {/* <RoundImage
                           url={data.cohort_img.childImageSharp.fluid}
                           bsize="cover"
                           mb="10px"
@@ -415,93 +419,65 @@ const Calendar = (props) => {
                           h_lg="230px"
                           h_xl="230px"
                         /> */}
-                          <Row
+                            <Row
 
-                            // background={Colors.lightGray}
-                            marginLeft="0"
-                            marginRight="0"
-                            padding={`15px`}>
-                            <Column size="12"
-                              onMouseOver={() => setSelected(index)}
-                              onMouseOut={() => setSelected()}
-                              onClick={() => setSelected(index)}>
-                              <Row marginBottom="1rem" align={`center`}>
-                                <Paragraph>{cohort.slug}</Paragraph>
-                              </Row>
-                              <Row marginBottom="1rem" >
-                                <H4
-                                  fs_xs="18px"
-                                  fs_sm="18px"
-                                  fs_md="16px"
-                                  fs_lg="16px"
-                                  fs_xl="20px"
-                                >{cohort.certificate.name}
-                                </H4>
-                              </Row>
-                              <Row marginBottom=".2rem" alignItems={`center`} >
-                                <Clock width="24" color={Colors.blue} fill={Colors.blue} />
-                                <Paragraph
-                                  margin={`0 0 0 10px`}
-                                  fs_xs="18px"
-                                  fs_sm="18px"
-                                  fs_md="9px"
-                                  fs_lg="11px"
-                                  fs_xl="14px">
-                                  {days[cohortDate.getDay()]}, {cohortDate.getDate()} {months[cohortDate.getMonth()]} {cohortDate.getFullYear()}
-                                </Paragraph>
-                              </Row>
-                              <Row marginBottom=".2rem" alignItems={`center`} >
-                                <Marker width="24" color={Colors.blue} fill={Colors.blue} />
-                                <Paragraph
-                                  margin={`0 0 0 10px`}
-                                  fs_xs="18px"
-                                  fs_sm="18px"
-                                  fs_md="9px"
-                                  fs_lg="11px"
-                                  fs_xl="14px">
-                                  {cohort.academy.name}
-                                </Paragraph>
-                              </Row>
-                              <Row height="5%" align="end">
-                                <a href={`#`} target="_blank" rel="noopener noreferrer">
-                                  <ArrowRight
-                                    width="32"
-                                    color={Colors.blue}
-                                    fill={Colors.blue} />
-                                </a>
-                              </Row>
-
-                              {/* <Row marginBottom=".2rem" align={`evenly`} customRespSize alignResp={`space-evenly`}>
-                      <a href={"i.url"}>
-                        <Button
-                          outline
-                          color={Colors.gray}
-                          textColor={Colors.black}
-                          margin=".5rem 0"
-                          padding=".35rem.85rem">
-                          Join Our Community
-                                  </Button>
-                      </a>
-                      <a href={"i.url"} target="_blank" rel="noopener noreferrer">
-                        <Button
-                          outline
-                          color={Colors.red}
-                          textColor={Colors.black}
-                          margin=".5rem 0"
-                          padding=".35rem.85rem"
-                        >
-                          Register Now
-                                  </Button>
-                      </a>
-                    </Row> */}
-
-                            </Column>
-                          </Row>
-
-
-
-
-                        </Card>
+                              // background={Colors.lightGray}
+                              marginLeft="0"
+                              marginRight="0"
+                              padding={`15px`}>
+                              <Column size="12"
+                                onMouseOver={() => setSelected(index)}
+                                onMouseOut={() => setSelected()}
+                                onClick={() => setSelected(index)}>
+                                <Row marginBottom="1rem" align={`center`}>
+                                  <Paragraph>{cohort.slug}</Paragraph>
+                                </Row>
+                                <Row marginBottom="1rem" >
+                                  <H4
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="16px"
+                                    fs_lg="16px"
+                                    fs_xl="20px"
+                                  >{cohort.certificate.name}
+                                  </H4>
+                                </Row>
+                                <Row marginBottom=".2rem" alignItems={`center`} >
+                                  <Clock width="24" color={Colors.blue} fill={Colors.blue} />
+                                  <Paragraph
+                                    margin={`0 0 0 10px`}
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="9px"
+                                    fs_lg="11px"
+                                    fs_xl="14px">
+                                    {days[cohortDate.getDay()]}, {cohortDate.getDate()} {months[cohortDate.getMonth()]} {cohortDate.getFullYear()}
+                                  </Paragraph>
+                                </Row>
+                                <Row marginBottom=".2rem" alignItems={`center`} >
+                                  <Marker width="24" color={Colors.blue} fill={Colors.blue} />
+                                  <Paragraph
+                                    margin={`0 0 0 10px`}
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="9px"
+                                    fs_lg="11px"
+                                    fs_xl="14px">
+                                    {cohort.academy.name}
+                                  </Paragraph>
+                                </Row>
+                                <Row height="5%" align="end">
+                                  <a href={`#`} target="_blank" rel="noopener noreferrer">
+                                    <ArrowRight
+                                      width="32"
+                                      color={Colors.blue}
+                                      fill={Colors.blue} />
+                                  </a>
+                                </Row>
+                              </Column>
+                            </Row>
+                          </Card>
+                        </Link>
                       </Column>
                     </>
                   )
@@ -520,116 +496,119 @@ const Calendar = (props) => {
               events.length ?
                 events.map((event, index) => {
                   let eventDate = new Date(event.starting_at)
+                  console.log("*****", eventDate.getDay())
                   return (
                     <>
                       <Column size="4" key={index} margin="0 0 1rem 0">
-                        <Card
-                          move="up"
-                          up="30%"
-                          h_xs="auto"
-                          h_sm="auto"
-                          h_md="auto"
-                          h_lg="auto"
-                          h_xl="auto"
-                          width="100%"
-                          color="white"
+                        <a href={event.url} target="_blank" rel="noopener noreferrer">
+                          <Card
+                            overflow={`hidden`}
+                            move="up"
+                            up="30%"
+                            h_xs="auto"
+                            h_sm="auto"
+                            h_md="auto"
+                            h_lg="auto"
+                            h_xl="auto"
+                            width="100%"
+                            color={index === selected ? 'grey' : 'white'}
 
-                          shadow
-                          move="up">
-                          {!event.banner.indexOf("http") ?
-                            <BackgroundSection
-                              image={data.cohort_img.childImageSharp.fluid}
-                              height={`230px`}
-                              bgSize={`cover`}
-                              className={`img-event`}
-                            ></BackgroundSection>
-                            :
-                            <LazyLoad scroll={true} height={230}>
-                              <RoundImage
-                                url={event.banner}
-                                bsize="cover"
-                                mb="10px"
-                                border="1.25rem 1.25rem 0 0"
-                                position="center center"
-                                h_xs="230px"
-                                h_sm="230px"
-                                h_md="230px"
-                                h_lg="230px"
-                                h_xl="230px"
-                              />
-                            </LazyLoad>}
-                          <Row marginLeft="0" marginRight="0" padding={`15px`}>
-                            <Column
-                              onMouseOver={() => setSelected(index)}
-                              onMouseOut={() => setSelected()}
-                              onClick={() => setSelected(index)}
-                              size="12" >
-                              <Row marginBottom="1rem" align={`center`}>
-                                <Paragraph>{event.event_type.name}</Paragraph>
-                              </Row>
-                              <Row marginBottom="1.25rem" >
-                                <H4
-                                  fs_xs="18px"
-                                  fs_sm="18px"
-                                  fs_md="16px"
-                                  fs_lg="16px"
-                                  fs_xl="20px"
-                                >{event.title}
-                                </H4>
-                              </Row>
-                              <Row marginBottom=".2rem" alignItems={`center`} >
-                                <Clock width="24" color={Colors.blue} fill={Colors.blue} />
-                                <Paragraph
-                                  margin={`0 0 0 10px`}
-                                  fs_xs="18px"
-                                  fs_sm="18px"
-                                  fs_md="9px"
-                                  fs_lg="11px"
-                                  fs_xl="14px">
-                                  {days[eventDate.getDay()]}, {eventDate.getDate()} {months[eventDate.getMonth()]} {eventDate.getFullYear()}
-                                </Paragraph>
-                              </Row>
-                              <Row marginBottom="1.25rem" alignItems={`center`} >
-                                <Marker width="24" color={Colors.blue} fill={Colors.blue} />
-                                <Paragraph
-                                  margin={`0 0 0 10px`}
-                                  fs_xs="18px"
-                                  fs_sm="18px"
-                                  fs_md="12px"
-                                  fs_lg="14px"
-                                  fs_xl="16px">
-                                  {event.academy.name}
-                                </Paragraph>
-                              </Row>
-                              <Row marginBottom=".2rem" alignItems={`center`} >
-                                <H3
-                                  fs_xs="18px"
-                                  fs_sm="18px"
-                                  fs_md="16px"
-                                  fs_lg="14px"
-                                  fs_xl="16px"
-                                >Description:
+                            shadow
+                            move="up">
+                            {!event.banner.indexOf("http") ?
+                              <BackgroundSection
+                                image={data.cohort_img.childImageSharp.fluid}
+                                height={`230px`}
+                                bgSize={`cover`}
+                                className={`img-event`}
+                              ></BackgroundSection>
+                              :
+                              <LazyLoad scroll={true} height={230}>
+                                <RoundImage
+                                  url={event.banner}
+                                  bsize="cover"
+                                  mb="10px"
+                                  border="1.25rem 1.25rem 0 0"
+                                  position="center center"
+                                  h_xs="230px"
+                                  h_sm="230px"
+                                  h_md="230px"
+                                  h_lg="230px"
+                                  h_xl="230px"
+                                />
+                              </LazyLoad>}
+                            <Row marginLeft="0" marginRight="0" padding={`15px`}>
+                              <Column
+                                onMouseOver={() => setSelected(index)}
+                                onMouseOut={() => setSelected()}
+                                onClick={() => setSelected(index)}
+                                size="12" >
+                                <Row marginBottom="1rem" align={`center`}>
+                                  <Paragraph>{event.event_type.name}</Paragraph>
+                                </Row>
+                                <Row marginBottom="1.25rem" >
+                                  <H4
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="16px"
+                                    fs_lg="16px"
+                                    fs_xl="20px"
+                                  >{event.title}
+                                  </H4>
+                                </Row>
+                                <Row marginBottom=".2rem" alignItems={`center`} >
+                                  <Clock width="24" color={Colors.blue} fill={Colors.blue} />
+                                  <Paragraph
+                                    margin={`0 0 0 10px`}
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="9px"
+                                    fs_lg="11px"
+                                    fs_xl="14px">
+                                    {days[eventDate.getDay()]}, {eventDate.getDate()} {months[eventDate.getMonth()]} {eventDate.getFullYear()}
+                                  </Paragraph>
+                                </Row>
+                                <Row marginBottom="1.25rem" alignItems={`center`} >
+                                  <Marker width="24" color={Colors.blue} fill={Colors.blue} />
+                                  <Paragraph
+                                    margin={`0 0 0 10px`}
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="12px"
+                                    fs_lg="14px"
+                                    fs_xl="16px">
+                                    {event.academy.name}
+                                  </Paragraph>
+                                </Row>
+                                <Row marginBottom=".2rem" alignItems={`center`} >
+                                  <H3
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="16px"
+                                    fs_lg="14px"
+                                    fs_xl="16px"
+                                  >Description:
                             </H3>
-                                <Paragraph
-                                  margin={`10px 0 0 0`}
-                                  fs_xs="18px"
-                                  fs_sm="18px"
-                                  fs_md="12px"
-                                  fs_lg="14px"
-                                  fs_xl="16px">
-                                  {event.exerpt}
-                                </Paragraph>
-                              </Row>
-                              <Row height="5%" align="end">
-                                <a href={event.url} target="_blank" rel="noopener noreferrer">
-                                  <ArrowRight
-                                    width="32"
-                                    color={Colors.blue}
-                                    fill={Colors.blue} />
-                                </a>
-                              </Row>
+                                  <Paragraph
+                                    margin={`10px 0 0 0`}
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="12px"
+                                    fs_lg="14px"
+                                    fs_xl="16px">
+                                    {event.exerpt}
+                                  </Paragraph>
+                                </Row>
+                                <Row height="5%" align="end">
+                                  <a href={event.url} target="_blank" rel="noopener noreferrer">
+                                    <ArrowRight
+                                      width="32"
+                                      color={Colors.blue}
+                                      fill={Colors.blue} />
+                                  </a>
+                                </Row>
 
-                              {/* <Row marginBottom=".2rem" align={`evenly`} customRespSize alignResp={`space-evenly`}>
+                                {/* <Row marginBottom=".2rem" align={`evenly`} customRespSize alignResp={`space-evenly`}>
                       <a href={"i.url"}>
                         <Button
                           outline
@@ -653,13 +632,14 @@ const Calendar = (props) => {
                       </a>
                     </Row> */}
 
-                            </Column>
-                          </Row>
+                              </Column>
+                            </Row>
 
 
 
 
-                        </Card>
+                          </Card>
+                        </a>
                       </Column>
                     </>
                   )

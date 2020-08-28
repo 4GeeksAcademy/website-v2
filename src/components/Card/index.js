@@ -8,6 +8,7 @@ import Fragment from "../Fragment"
 
 export const Card = styled(Fragment)`
     :focus {outline: none;};
+    overflow: ${props => props.overflow};
     position: ${props => props.position};
     z-index: ${props => props.index};
     text-align: ${props => props.align || "initial"};
