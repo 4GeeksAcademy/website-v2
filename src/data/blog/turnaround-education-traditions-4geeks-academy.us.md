@@ -8,7 +8,7 @@ layout: post
 link: https://www.4geeksacademy.co/turnaround-education-traditions-4geeks-academy/
 slug: turnaround-education-traditions-4geeks-academy
 title: Turnaround on Education Traditions | Part I
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/cd496d1e-172d-4cbd-bfda-c82f6d633b83/ISABlogCover.png"
 wordpress_id: 1889
 

@@ -8,7 +8,7 @@ layout: post
 link: https://www.4geeksacademy.co/7-hacks-to-land-a-job/
 slug: 7-hacks-to-land-a-job
 title: 7 tips to land a job as a Software Developer ASAP
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/f6d43569-e64d-4e73-b442-c59b3b0f3407/GUENSE01.jpg"
 wordpress_id: 3570
 categories:

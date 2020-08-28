@@ -11,7 +11,7 @@ layout: post
 link: https://www.4geeksacademy.co/4geeks-academy-casimiro-global-foundation/
 slug: 4geeks-academy-casimiro-global-foundation
 title: 4Geeks Academy + Casimiro Global Foundation
-avatar: "/staff/alejandro.png"
+avatar: "/4geeks-logo.png"
 image: "https://ucarecdn.com/9f40d73a-3720-47c4-a71d-979101d4bd35/CGFINFOGRAPHIC232x3001.jpg"
 categories:
 - Sin categoría

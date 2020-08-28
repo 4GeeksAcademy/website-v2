@@ -6,7 +6,7 @@ layout: post
 link: https://www.4geeksacademy.co/es/historia-de-4geeks-academy/
 slug: historia-de-4geeks-academy
 title: Historia de 4Geeks Academy
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: ""
 wordpress_id: 1124
 categories:
