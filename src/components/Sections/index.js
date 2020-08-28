@@ -105,7 +105,7 @@ export const Row = styled(Fragment)`
                     ? css`justify-content: space-evenly;`
                     : props => props.align === "end"
                         ? css`justify-content: flex-end;`
-                        : css`justify-content: left;`}
+                        : css`justify-content: flex-start;`}
     @media ${Device.xs}{
         display: ${props => props.display_xs};
         ${props => props.customRespSize

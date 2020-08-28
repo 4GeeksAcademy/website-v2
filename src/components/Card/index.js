@@ -22,7 +22,9 @@ export const Card = styled(Fragment)`
             ? `${Colors.lightGray}`
             : props.color === "darkGray"
                 ? `${Colors.borderGray}`
-                : `${Colors.white}`
+                : props.color === "blue"
+                    ? `${Colors.blue}`
+                    : `${Colors.white}`
     };
     border-radius: ${props => props.borders};
     box-shadow: ${props => props.shadow
@@ -61,8 +63,8 @@ export const Card = styled(Fragment)`
         props.move === "up"
             ? css`
             @media ${Device.md}{
-                // transform: translateY(-${props.up});
-                transform: translateY(0px); 
+                transform: translateY(-${props.up});
+                // transform: translateY(0px); 
             }
             @media ${Device.xs}{
                 transform: translateY(0px);  

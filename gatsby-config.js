@@ -85,7 +85,16 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-lazy-image-url`]
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              loading: 'lazy'
+            },
+          },
+          `gatsby-remark-lazy-load`,
+        ]
       }
     },
     'gatsby-transformer-yaml',
