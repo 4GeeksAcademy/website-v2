@@ -3,12 +3,16 @@ meta_info:
   title: ""
   description: null
   image: ""
+  template: "course-engineering"
   keywords: ""
   redirects:
     ["ingenieria-software"]
 
 header:
+  tagline_top: "CONVIERTETE EN"
   tagline: "INGENIERO DE SOFTWARE"
+  sub_heading: "Work at a great company, make a great living and help build tomorrows software."
+  subsub_heading: "(Previous coding experience required)"
   image: "../../../static/images/bg/bg-pr.jpg"
   alt: ""
 button:

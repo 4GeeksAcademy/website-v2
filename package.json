@@ -99,7 +99,6 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
-    "gatsby-plugin-force-trailing-slashes": "^1.0.4",
     "jest": "^25.5.3",
     "js-yaml": "^3.13.1",
     "pre-commit": "^1.2.2",

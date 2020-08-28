@@ -39,7 +39,7 @@ const ProgramSelector = (props) => {
   const [weeks, setWeeks] = useState("16");
   const classes = useStyles();
 
-  let locArray = props.locations;
+  let locArray = session.locations;
   console.log("Locations", locArray)
   // let locArray = data.loc.edges;
   let weekArray = ["16", "9"]
@@ -55,24 +55,28 @@ const ProgramSelector = (props) => {
                 <TriangleDown style={{ marginLeft: "5px"}} width="12" color={Colors.blue} fill={Colors.blue} />
             </Button>
           }
-          {toggles == true && weekArray.map((item, index) => {
-                return (
-                  <Button 
-                    width="95%" 
-                    color={item === weeks ? Colors.lightGray : Colors.white} 
-                    textColor={Colors.gray} 
-                    borderRadius=".25rem" 
-                    padding="5px"
-                    onClick={() => {
-                      setWeeks(item);
-                      setToggles(!toggles);
-                      redirectTo(`/${session.language}/course/${link}`);
-                    }}
-                  >
-                    {item}
-                  </Button>
-                )
-              })}
+          
+          {toggles == true && <Card borders=".25rem"  color="grey">
+            {weekArray.map((item, index) => {
+              return (
+                <Button 
+                width="95%" 
+                color={item === weeks ? Colors.lightGray : Colors.white} 
+                textColor={Colors.gray} 
+                borderRadius=".25rem" 
+                padding="5px"
+                onClick={() => {
+                  setWeeks(item);
+                  setToggles(!toggles);
+                  redirectTo(`/${session.language}/course/${link}`);
+                }}
+                >
+                      {item}
+                    </Button>
+                  )
+                })}
+          </Card>
+        }
       </Column>
       <Column size="1" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >weeks in</Paragraph></Column>
       <Column size="2" alignSelf="center" align="center" paddingLeft="0" paddingRight="0" customRespSize respSize="5">
@@ -82,23 +86,26 @@ const ProgramSelector = (props) => {
                 <TriangleDown style={{ marginLeft: "5px"}} width="12" color={Colors.blue} fill={Colors.blue} />
             </Button>
           }
-          {toggle == true && locArray.map((item, index) => {
+          {toggle == true && <Card borders=".25rem" color="grey">
+            {locArray.map((item, index) => {
                 return (
                   <Button 
                     onClick={() => {
-                      setSession({ ...session, location: { ...item.node }})
+                      setSession({ ...session, location: { ...item }})
                       setToggle(!toggle)
                     }} 
                     colorHover={Colors.lightBlue}
-                    textColor={Colors.gray} 
-                    color={item.node.city === session.location.city}
+                    textColor={item.city === session.location.city ? Colors.darkGray : Colors.gray} 
+                    color={item.city === session.location.city ? Colors.lightBlue : null}
                     borderRadius=".25rem" 
                     padding="5px"
                   >
-                    {item.node.city}
+                    {item.city}
                   </Button>
                 )
               })}
+          </Card>
+          }
       </Column>
       <Column size="2" alignSelf="center" align="left" paddingLeft="0" paddingRight="0" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >to become a</Paragraph></Column>
     </Row>

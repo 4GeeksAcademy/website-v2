@@ -30,18 +30,18 @@ testimonials:
       they may seem. And just the atmosphere in the school is very warm.
       I'm grateful to you guys for providing 24 hour access to school, 
       so we can work any time that is convenient for us. Thank you, 4Geeks!!
-  - student_name: "Samir Benzada"
-    testimonial_date: ""
-    student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
-    alt: ""
-    starts: 1
-    source_url: ""
-    source_url_text: ""
-    content: |
-      I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP. 
-      I've been struggling a lot trying to make a dynamic website, so I started to look 
-      for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to 
-      the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
+  # - student_name: "Samir Benzada"
+  #   testimonial_date: ""
+  #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
+  #   alt: ""
+  #   starts: 1
+  #   source_url: ""
+  #   source_url_text: ""
+  #   content: |
+  #     I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP. 
+  #     I've been struggling a lot trying to make a dynamic website, so I started to look 
+  #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to 
+  #     the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
   - student_name: "Charles Fabricius"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"

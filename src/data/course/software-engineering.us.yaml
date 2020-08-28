@@ -3,12 +3,16 @@ meta_info:
   title: ""
   description: null
   image: ""
+  template: "course-engineering"
   keywords: ""
   redirects: ["/software-engineering"]
 
 header:
+  tagline_top: "BECOME A"
   tagline: "SENIOR SOFTWARE ENGINEER"
-  image: "../../../static/images/bg/bg-pr.jpg"
+  sub_heading: "Work at a great company, make a great living and help build tomorrows software."
+  subsub_heading: "(Previous coding experience is required)"
+  image: "../../../static/images/bg/apple-building.jpg"
   alt: ""
 
 button:
@@ -19,7 +23,7 @@ button:
 ## PROGRAM DETAILS
 details:
   heading: PROGRAM DETAILS
-  sub_heading: "Part Time"
+  sub_heading: "Learn exactly what its required to be a real engineer"
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -27,9 +31,9 @@ details:
     skills: "Skills / Weeks:"
   details_modules:
     - module_name: "PREWORK"
-      title: "Get Ready for the Prework"
-      description: "Starting with the basics: HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page."
-      projects: "CSS Postcard, Minimal Instagram Version, etc."
+      title: "From programming to engineering"
+      description: "During this phase we will make sure you know you are ready for the course: Solidify algorithm concepts, get familizarized with Java Programming Language, Object Oriented Programing, Javascript, React.js and web development."
+      projects: "Queue Managment System using React, Java and MySQL"
       slug: "prework"
       duration: "~ 60 hours"
       step: .5
