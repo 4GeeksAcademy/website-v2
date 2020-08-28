@@ -253,7 +253,7 @@ export const Title = props => {
         size={props.customParagraphSize}
         fontSize={props.primary ? `20px` : null}
         fontWeight={props.primary ? `500` : null}
-        margin={`0 0 30px 0`}
+        margin={props.margin ? props.margin : `0 0 30px 0`}
       >
         {props.paragraph}
       </Paragraph>

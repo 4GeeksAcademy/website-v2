@@ -1,20 +1,17 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
-import {navigate} from 'gatsby';
-import {useInView} from "react-intersection-observer";
 import Link from 'gatsby-link'
-import Layout from '../global/Layout';
 import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, Divider, Sidebar, Div} from '../components/Sections'
-import {Title, H2, H3, H4, Span, Paragraph} from '../components/Heading'
+import {H1, Title, Paragraph, H5} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
+import { navigate } from "@reach/router"
 import PricesAndPayment from '../components/PricesAndPayment'
 import AlumniProjects from '../components/AlumniProjects'
 import BaseRender from './_baseRender'
 import ProgramSelector from '../components/ProgramSelector'
 import {requestSyllabus} from "../actions";
-import Scrollspy from 'react-scrollspy'
 // import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
@@ -23,135 +20,18 @@ import clsx from 'clsx';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
-import TypicalDay from "../components/TypicalDay"
+
 // import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
 
-function rand () {
-  return Math.round(Math.random() * 20) - 10;
-}
-
-const useStyles = makeStyles(theme => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    height: 300,
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '1.25rem',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
-
-
 const Program = ({data, pageContext, yml}) => {
-  const [ref, inView] = useInView({
-    threshold: 0
-  });
-  const scrollRef = useRef();
+
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const [activeStep, setActiveStep] = useState(0);
-  const [completed, setCompleted] = useState({});
-  const steps = getSteps(yml);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const totalSteps = () => {
-    return steps.length;
-  };
-  const completedSteps = () => {
-    return Object.keys(completed).length;
-  };
-  const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
-  };
-  const allStepsCompleted = () => {
-    return completedSteps() === totalSteps();
-  };
-  const handleNext = () => {
-    const newActiveStep =
-      isLastStep() && !allStepsCompleted()
-        ? // It's the last step, but not all steps have been completed,
-        // find the first step that has been completed
-        steps.findIndex((step, i) => !(i in completed))
-        : activeStep + 1;
-    setActiveStep(newActiveStep);
-  };
-  const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
-  };
-  const handleStep = step => () => {
-    setActiveStep(step);
-  };
-  const handleComplete = () => {
-    const newCompleted = completed;
-    newCompleted[activeStep] = true;
-    setCompleted(newCompleted);
-    handleNext();
-  };
-  const handleReset = () => {
-    setActiveStep(0);
-    setCompleted({});
-  };
-  function getStepTitle (step) {
-    switch (step) {
-      case 0:
-        return `${yml.typical.schedule[0].title}`
-      case 1:
-        return `${yml.typical.schedule[1].title}`
-      case 2:
-        return `${yml.typical.schedule[2].title}`
-      case 3:
-        return `${yml.typical.schedule[3].title}`
-      case 4:
-        return `${yml.typical.schedule[4].title}`
-      case 5:
-        return `${yml.typical.schedule[5].title}`
-      default:
-        return 'Unknown step';
-    }
-  }
-  function getStepContent (step) {
-    switch (step) {
-      case 0:
-        return `${yml.typical.schedule[0].content}`
-      case 1:
-        return `${yml.typical.schedule[1].content}`
-      case 2:
-        return `${yml.typical.schedule[2].content}`
-      case 3:
-        return `${yml.typical.schedule[3].content}`
-      case 4:
-        return `${yml.typical.schedule[4].content}`
-      case 5:
-        return `${yml.typical.schedule[5].content}`
-      default:
-        return 'Unknown step';
-    }
-  }
-
-
-  let week = "";
-  {
-    pageContext.slug === "full-stack-web-development-bootcamp-full-time" || pageContext.slug === "desarrollo-web-full-stack-bootcamp-full-time"
-      ? week = 9
-      : pageContext.slug === "full-stack-web-development-bootcamp-part-time" || pageContext.slug === "desarrollo-web-full-stack-bootcamp-part-time"
-        ? week = 16
-        : pageContext.slug === "coding-introduction" || pageContext.slug === "introduccion-programacion"
-        && null
-  }
+  console.log("Software Engineering")
 
   return (<>
-    {/* <div className={test}> */}
-
     <Wrapper
       github="/course"
       style="default"
@@ -161,49 +41,50 @@ const Program = ({data, pageContext, yml}) => {
       bgSize={`cover`}
       alt={yml.header.alt}
     >
-      <Divider height="20%" />
-      <ProgramSelector week={week} context={pageContext} />
-      <Divider height="20px" />
+      <H1
+        size="5"
+        main
+        marginTop="140px"
+        color={Colors.white}
+        fontSize="46px"
+        align="center"
+
+      >{yml.header.tagline_top}</H1>
       <Title
         size="5"
         title={yml.header.tagline}
-        main
+        primary
+        marginTop="0"
         color={Colors.white}
         fontSize="46px"
         textAlign="center"
-
+        paragraph={yml.header.sub_heading}
+        paragraphColor={Colors.white}
+        margin="0"
       />
-      <Row align="center">
-        <Column align="right" size="6"><Link to={yml.button.apply_button_link}><Button width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button></Link></Column>
+      <H5 color={Colors.white} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
+      <Row align="center" marginTop="20px">
+        <Column align="right" size="6">
+          <Button
+            onClick={() => navigate(yml.button.apply_button_link)}
+           width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button>
+          </Column>
         <Column align="left" size="6">
-          <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
+          <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
         </Column>
       </Row>
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
         open={open}
-        onClose={handleClose}
+        onClose={() => setOpen(false)}
       >
-        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
+        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={() => setOpen(false)} />
       </Modal>
     </Wrapper>
-    <Sidebar
-      shadow
-      borders="1.25rem"
-      display_xs="none"
-      display_sm="none"
-      display_md="none"
-    >
-      <Scrollspy style={{fontSize: "12px", position: "-webkit-sticky", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active ">
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
-      </Scrollspy>
-    </Sidebar>
-    <Divider height="100px" />
+
+    <ProgramDetails details={yml.details} />
+
     <Wrapper
       style="default"
     >
@@ -219,17 +100,13 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
     </Wrapper>
 
-    <Divider height="100px" />
-    {/* PROGRAM DETAILS */}
-    {/* --------------- */}
-    <ProgramDetails details={yml.details} />
-    {/* SVG  START*/}
-    <Divider height="100px" />
-    <Row height="100%">
-      <Column size="12">
-        <SyllabusSVG />
-      </Column>
-    </Row>
+    
+
+      <Row height="100%">
+        <Column size="12">
+          <SyllabusSVG />
+        </Column>
+      </Row>
     {/* SVG  END*/}
     <Divider height="100px" />
 
@@ -394,10 +271,10 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
     </Wrapper>
 
-    {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
+    {/* {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
       <TypicalDay data={yml.typical} />
 
-      : null}
+      : null} */}
 
     <Divider height="100px" />
     <Wrapper
@@ -422,12 +299,15 @@ const Program = ({data, pageContext, yml}) => {
 };
 
 export const query = graphql`
-  query CourseQuery($file_name: String!, $lang: String!) {
+  query CourseEngineeringQuery($file_name: String!, $lang: String!) {
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
             header{
+              tagline_top
               tagline
+              sub_heading
+              subsub_heading
               image {
                 childImageSharp {
                   fluid(maxWidth: 1200){
@@ -435,7 +315,7 @@ export const query = graphql`
                   }
                 }
               }
-            alt
+              alt
             }
             button{
               syllabus_button_text
@@ -492,7 +372,6 @@ export const query = graphql`
                 time
                 icon
                 content
-                step
               }
             }
             alumni{
