@@ -6,7 +6,7 @@ layout: post
 link: https://www.4geeksacademy.co/es/disyuntiva-para-futuros-programadores-universidad-o-bootcamp/
 slug: disyuntiva-para-futuros-programadores-universidad-o-bootcamp
 title: 'Disyuntiva para futuros programadores:  ¿Universidad o Bootcamp?'
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: ""
 wordpress_id: 1159
 categories:

@@ -5,7 +5,13 @@ meta_info:
   image: ""
   keywords: ""
   redirects:
-    ["/curso/full-time", "full-time", "/es/full-time", "/es/course/full-time"]
+    [
+      "/curso/full-time",
+      "full-time",
+      "/es/full-time",
+      "/es/course/full-time",
+      "es/full-stack-ft",
+    ]
 
 header:
   tagline: "FULL STACK DEVELOPER"

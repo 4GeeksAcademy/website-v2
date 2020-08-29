@@ -8,7 +8,7 @@ layout: post
 link: https://www.4geeksacademy.co/full-stack-web-development-at-miami-dade-college/
 slug: full-stack-web-development-at-miami-dade-college
 title: Learn to Code at Miami Dade College
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/Miami-Dade.jpg"
 wordpress_id: 1996
 

@@ -71,7 +71,7 @@ const Blog = ({data, pageContext, yml}) => {
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
                                         <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
-                                            <LazyLoad height={200} scroll={true}>
+                                            <LazyLoad height={10} scroll={true} once={true}>
                                                 <RoundImage
                                                     url={item.node.frontmatter.image}
                                                     bsize="cover"
@@ -83,7 +83,8 @@ const Blog = ({data, pageContext, yml}) => {
                                                     h_md="120px"
                                                     h_lg="140px"
                                                     h_xl="180px"
-                                                /></LazyLoad>
+                                                />
+                                            </LazyLoad>
                                         </Link> : null}
                                     <Row align="around" >
 
@@ -105,7 +106,8 @@ const Blog = ({data, pageContext, yml}) => {
                                     </Row>
                                     <Row height="auto" align="around">
                                         <Column size="1" customRespSize respSize="2" alignSelf="center">
-                                            <LazyLoad scroll={true} height={30}>
+                                            <LazyLoad scroll={true} height={30} once={true}>
+                                                {/* <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={`/images/staff/alejandro.png`} /> */}
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
                                             </LazyLoad>
                                         </Column>
@@ -158,7 +160,7 @@ const Blog = ({data, pageContext, yml}) => {
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
                                         <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
-                                            <LazyLoad scroll={true} height={200}>
+                                            <LazyLoad scroll={true} height={200} once={true}>
                                                 <RoundImage
                                                     url={item.node.frontmatter.image}
                                                     bsize="cover"
@@ -193,7 +195,7 @@ const Blog = ({data, pageContext, yml}) => {
                                     </Row>
                                     <Row height="auto" align="around">
                                         <Column size="1" customRespSize respSize="2" alignSelf="center">
-                                            <LazyLoad scroll={true} height={30}>
+                                            <LazyLoad scroll={true} height={30} once={true}>
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
                                             </LazyLoad>
                                         </Column>

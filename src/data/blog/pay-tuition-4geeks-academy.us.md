@@ -8,7 +8,7 @@ layout: post
 link: https://www.4geeksacademy.co/pay-tuition-4geeks-academy/
 slug: pay-tuition-4geeks-academy
 title: 'Miami Dade College Coding Program: How To Pay Your Tuition?'
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/fc74befe-c116-40e4-96a4-d51872ad3b2c/ScreenShot20170508at115952PM.png"
 wordpress_id: 649
 categories:

@@ -2,13 +2,13 @@ export default {
     "alesanchezr": {
         "bio": "Amazing dksaflkhadsfglkasklgbkjlgsafbkjlgfsbklgfadsbklj",
         "name": "Alejandro Sanchez",
-        "avatar": "/staff/alejandro.png",
+        "avatar": "/images/staff/alejandro.png",
         "username": "alesanchezr"
     },
     "MRiciglianoC": {
         "bio": "Amazing dksaflkhadsfglkasklgbkjlgsafbkjlgfsbklgfadsbklj",
         "name": "Marcelo Ricigliano",
-        "avatar": "/staff/marcelo.png",
+        "avatar": "/images/staff/marcelo.png",
         "username": "MRiciglianoC"
     },
     "4GeeksAcademy": {

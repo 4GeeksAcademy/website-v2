@@ -8,7 +8,7 @@ layout: post
 link: https://www.4geeksacademy.co/wages-report-2018-1/
 slug: wages-report-2018-1
 title: Bootcamp Graduates Salary 2018
-avatar: "/staff/marcelo.png"
+avatar: "/images/staff/marcelo.jpeg"
 image: "https://ucarecdn.com/73f7da7f-d8a0-4929-88b2-ff0240d1daa8/BootCamp2018021.jpg"
 wordpress_id: 2807
 categories:

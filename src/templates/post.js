@@ -20,7 +20,6 @@ import {
 export default function Template (props) {
     const {data, pageContext} = props;
     const post = props.data.markdownRemark;
-    console.log("POSTHTML", post.html)
     const allowed = [`${post.frontmatter.author}`];
     const filtered = Object.keys(twitterUser)
         .filter(key => allowed.includes(key))
@@ -79,7 +78,7 @@ export default function Template (props) {
                     <Column size="10">
                         <Row height="100%" align="around">
                             <Column size="2" customRespSize respSize="2" alignSelf="center" >
-                                <LazyLoad throttle={200} height={300}>
+                                <LazyLoad scroll={true} height={100} once={true}>
                                     <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
                                 </LazyLoad>
                             </Column>
@@ -136,7 +135,7 @@ export default function Template (props) {
                 <Divider height="30px" />
                 <Row>
                     <Column size="10" customRespSize respSize="10" alignSelf="center">
-                        <LazyLoad throttle={200} height={300}>
+                        <LazyLoad scroll={true} height={100} once={true} >
                             <RoundImage border="1.25rem" width="100%" height="300px" bsize="contain" position="center" url={post.frontmatter.image} />
                         </LazyLoad>
                     </Column>
