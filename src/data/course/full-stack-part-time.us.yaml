@@ -32,7 +32,7 @@ details:
       projects: "CSS Postcard, Minimal Instagram Version, etc."
       slug: "prework"
       duration: "~ 60 hours"
-      step: .5
+      step: 0
     - module_name: "FOUNDATIONS"
       title: "Learn To Code"
       description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
@@ -46,21 +46,28 @@ details:
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."
       slug: "web-development"
       duration: "6 weeks"
-      step: 8
-    - module_name: "ADVANCED APPLICATION"
+      step: 5.9
+    - module_name: "API'S"
+      title: "API Development"
+      description: "Mainly focused on Python, get ready to build your own API and interact with 3rd party applications like Twillio, Stripe and many more."
+      projects: "Coursera clone, Instagram clone, Youtube clone, etc."
+      slug: "web-development"
+      duration: "6 weeks"
+      step: 2
+    - module_name: "ADVANCED APPS"
       title: "Advanced Application"
       description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
       slug: "advanced-application"
       duration: "6 wks"
-      step: 14
-    - module_name: "LIFELONG LEARNING"
-      title: "Lifelong Learning"
-      description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
-      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
+      step: 6
+    - module_name: "LIFELONG SUPPORT"
+      title: "Lifelong Support"
+      description: "Keep practicing with the academy's help, we will coaching you for life, build your Resume, Github, LinkedIn, help you apply for jobs, support you once you get a job"
+      projects: "Get paid to keep learning, raise your income gradually as you become a more senior developer, enjoy and build software for life."
       slug: "lifelong-learning"
-      duration: "2+ week"
-      step: 17
+      duration: "forever"
+      step: 0.1
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

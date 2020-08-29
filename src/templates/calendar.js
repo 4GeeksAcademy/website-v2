@@ -370,7 +370,7 @@ const Calendar = (props) => {
         style="default"
 
         border="top"
-        color={cohorts.length > 0 ? Colors.lightGray : ""}
+        background={cohorts.length > 0 ? Colors.lightGray : ""}
       >
         <Row>
           {

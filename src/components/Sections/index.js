@@ -204,6 +204,7 @@ export const Column = styled.div`
     text-align: ${props => props.align || "left"};
     position: relative;
     width: 100%;
+    background: ${props => props.background};
     border: ${props => props.borderStyle};
     align-self: ${props => props.alignSelf};
     padding-right: ${props => props.paddingRight};
@@ -329,7 +330,7 @@ ${props =>
 `
 
 export const Wrapper = props => {
-    if (props.style === "default") {
+    if (!props.style || props.style === "default") {
         return (
             <Container margin={props.margin} github={props.github} fluid>
                 <Row>
@@ -340,7 +341,7 @@ export const Wrapper = props => {
                             url={props.image}
                             border={props.border}
                             customBorderRadius={props.customBorderRadius}
-                            color={props.color}
+                            color={props.background}
                             align={props.align}
                             height={props.height}
                             backgroundSize={props.backgroundSize}
@@ -368,7 +369,7 @@ export const Wrapper = props => {
                             url={props.image}
                             border={props.border}
                             customBorderRadius={props.customBorderRadius}
-                            color={props.color}
+                            color={props.background}
                             align={props.align}
                             height={props.height}
                             backgroundSize={props.backgroundSize}
@@ -399,9 +400,8 @@ export const Wrapper = props => {
                         url={props.image}
                         border={props.border}
                         customBorderRadius={props.customBorderRadius}
-                        color={props.color}
-
-                        props>
+                        color={props.background}
+                    >
                         {props.full
                             ?
                             <Row align={props.innerLeftRowAlign}>

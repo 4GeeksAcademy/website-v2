@@ -55,6 +55,7 @@ const Program = ({data, pageContext, yml}) => {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(yml);
+  const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
 
   const handleOpen = () => {
     setOpen(true);
@@ -390,14 +391,15 @@ const Program = ({data, pageContext, yml}) => {
         primary
       />
       <section className="section" id="section-4"></section>
-      <PricesAndPayment type={pageContext.slug} lang={data.allLocationYaml.edges} />
+      <PricesAndPayment 
+        type={pageContext.slug} 
+        locations={data.allLocationYaml.edges} 
+        course={program_type}
+      />
       <Divider height="100px" />
     </Wrapper>
 
-    {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
-      <TypicalDay data={yml.typical} />
-
-      : null}
+    { program_type === "full-time" && <TypicalDay data={yml.typical} />}
 
     <Divider height="100px" />
     <Wrapper

@@ -167,7 +167,7 @@ const Why = (props) => {
             <Wrapper
                 style="default"
 
-                color={Colors.lightGray}
+                background={Colors.lightGray}
                 border="custom"
                 customBorderRadius="1.25rem 0 0 1.25rem"
             >
@@ -235,7 +235,7 @@ const Why = (props) => {
             <Wrapper
                 style="default"
 
-                color={Colors.lightGray}
+                background={Colors.lightGray}
                 border="custom"
                 customBorderRadius="1.25rem 0 0 1.25rem"
             >
@@ -334,7 +334,7 @@ const Why = (props) => {
                 <RecentPosts />
             </Wrapper>
             <Divider height="100px" />
-            <Wrapper style="default" color={Colors.lightGray} border="top">
+            <Wrapper style="default" background={Colors.lightGray} border="top">
                 <Divider height="100px" />
                 <WhoIsHiring
                     margin="50px"

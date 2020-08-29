@@ -90,6 +90,7 @@ function closestLoc (locations, lat, lon) {
             location = locations[i].node
         }
     }
+    console.log("The closest location is: ", location)
     return location;
 }
 export const SessionContext = createContext(null);
@@ -130,14 +131,21 @@ export const withSession = Component => {
                 let v4 = null;
                 let storedSession = JSON.parse(localStorage.getItem("academy_session"));
 
-                if(location!==null) location = locationsArray.edges.find(({ node }) => node.meta_info.slug === location).node;
-                else if(storedSession && storedSession.location != null) location = storedSession.location;
+                if(location!==null){
+                    location = locationsArray.edges.find(({ node }) => node.meta_info.slug === location).node;
+                    console.log("Hardcoded location", location)
+                } 
+                else if(storedSession && storedSession.location != null){
+                    location = storedSession.location;
+                    console.log("Location already found on session location", location)
+                } 
                 else if(location === null){
+                    console.log("Calculating your location...")
 
                     const v4 = await publicIp.v4();
                     const response = await fetch(`https://api.ipstack.com/${v4}?access_key=73822e5a584c041268f0e78a3253cf0d`);
                     
-                    location = locationsArray.edges.find(({ node }) => node.defaultLanguage == "us").node;
+                    location = locationsArray.edges.find(({ node }) => node.meta_info.slug == "downtown-miami").node;
                     try{
                         let data = response.status === 200 ? await response.json() : null;
                         if(data) location = closestLoc(locationsArray.edges, data.latitude, data.longitude)

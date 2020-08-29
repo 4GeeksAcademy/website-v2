@@ -238,7 +238,7 @@ const Program = ({data, pageContext, yml}) => {
         </Column>
       </Row>
     </Container>
-    {/* </Wrapper> */}
+
     <Divider height="100px" />
 
     <Wrapper
