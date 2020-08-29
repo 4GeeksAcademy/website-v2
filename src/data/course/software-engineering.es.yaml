@@ -66,6 +66,35 @@ details:
       duration: "forever"
       step: 0
 
+potential_companies:
+  tagline: "Entrénate para destacar en las compañías mas exigentes"
+  sub_heading: "Dá un salto a tu carrera y trabaja en las mejores empresas"
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
+
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "EN NÚMEROS: 4 GEEKS VS OTROS"
