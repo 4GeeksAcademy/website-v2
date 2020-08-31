@@ -67,15 +67,13 @@ const Home = (props) => {
 
       {/* CREDENTIALS CARDS */}
 
-      <Wrapper
-        style="default">
+      <Wrapper>
         <Credentials up="80" lang={data.allCredentialsYaml.edges} />
       </Wrapper>
 
       {/* WHY 4GEEKS SECTION */}
 
-      <Wrapper
-        style="default">
+      <Wrapper>
         <Divider height="100px" />
         <Why4Geeks lang={data.allWhy4GeeksYaml.edges} playerHeight="250px" />
         <Divider height="50px" />
@@ -83,15 +81,11 @@ const Home = (props) => {
 
       {/* JOBS STATISTICS SECTION */}
 
-      <Wrapper
-        style="default">
+      <Wrapper>
         <JobsStatistics lang={data.allJobsStatisticsYaml.edges} />
       </Wrapper>
 
-      <Wrapper
-        margin="30px"
-        style="default"
-      >
+      <Wrapper margin="30px">
         <Row align="center" >
           <Column size="4" customRespSize respSize="4" margin="5px 0">
             <Paragraph
@@ -193,7 +187,7 @@ const Home = (props) => {
 
       {/* GEEKS VS OTHERS SECTION 
 
-      <Wrapper style="default" margin="100px">
+      <Wrapper margin="100px">
         <Title
           title={yml.geeks_vs_others.heading}
           paragraph={yml.geeks_vs_others.sub_heading}
@@ -206,7 +200,7 @@ const Home = (props) => {
         <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
       </Wrapper>*/}
 
-      <Wrapper style="default" margin="100px">
+      <Wrapper margin="100px">
         <Title
           title={yml.join_geeks.heading}
           paragraph={yml.join_geeks.sub_heading}
@@ -281,9 +275,8 @@ const Home = (props) => {
       </Wrapper>
 
       <Wrapper
-        style="default"
         margin="100px"
-        color={Colors.lightGray}
+        background={Colors.lightGray}
         border="top">
         <WhoIsHiring
           margin="50px"
@@ -297,8 +290,7 @@ const Home = (props) => {
       </Wrapper>
 
       <Wrapper
-        margin="100px"
-        style="default">
+        margin="100px">
         <Title
           size="10"
           title={yml.alumni_header.heading}
@@ -310,8 +302,7 @@ const Home = (props) => {
       </Wrapper>
 
       <Wrapper
-        margin="100px"
-        style="default">
+        margin="100px">
         <Title
           primary
           title={yml.locations.heading}
@@ -321,7 +312,7 @@ const Home = (props) => {
         />
         <Loc lang={data.allLocationYaml.edges} />
       </Wrapper>
-      <Wrapper style="default" margin="100px">
+      <Wrapper margin="100px">
         <Title
           primary
           title={yml.testimonial_header.heading}

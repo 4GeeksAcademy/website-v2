@@ -36,39 +36,94 @@ details:
       projects: "Queue Managment System using React, Java and MySQL"
       slug: "prework"
       duration: "~ 60 hours"
-      step: .5
-    - module_name: "FOUNDATIONS"
-      title: "Learn To Code"
-      description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
-      projects: "Instagram Application, Memory Card Game, Tic Tac Toe, Flappy Bird, etc."
-      slug: "foundations"
+      step: 0
+    - module_name: "FRONT"
+      title: "Advanced Front-End"
+      description: >
+        Asuming you have knowledge already in Component Frameworks (React.js, Angular, etc.), we are going to dive into JS and DOM optimization with Suspense, Code-spliting, Transpiling and front-end architectures like Redux and Flux \n
+        This module also serves as a great complement for all the others as they will all require some kind of front-end interface.
+      projects: "Peer to Peer video chat application (using WebRTC no backend required for communication)"
+      slug: "advanced-front-end"
       duration: "2 weeks"
+      step: 1
+    - module_name: "ALGORITHMS"
+      title: "Advanced Algorithms"
+      description: "Get ready to pass any coding interview: Big O, Meassuring Time and Space, Advanced Data-strctures and dsign patterns, Binary and Secuancial Search, DFS/BFS."
+      projects: "You will solve several real life optimization algorithm challenges"
+      slug: "advanced-algorithms"
+      duration: "2 wks"
       step: 2
-    - module_name: "WEB DEVELOPMENT"
-      title: "Web Development"
-      description: "Create your first React.js application, MVC Pattern, JS Modules, Bunding, Babel JS, The DOM, Events"
-      projects: "Coursera clone, Instagram clone, Youtube clone, etc."
-      slug: "web-development"
-      duration: "6 weeks"
-      step: 8
-    - module_name: "ADVANCED APPLICATION"
-      title: "Advanced Application"
-      description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
+    - module_name: "STORE"
+      title: "Information Storage and Retrival"
+      description: >
+        Java is the most used programing language in the enterprise world (by far). Here you will learn Java best practices and design patterns to solve classic scaling, optimization infrastructure challenges: DAO, Maven, O.O.P, Singleton, Factory, Strategy, Observer, Builder, etc. \n
+        There are so many different ways and technologies to store and retrive data, here you will learn to used the most used ones and solve classic Scaling, Big Data and data-mining challenges: Distributed Storace, Redis/Memcache, SQL, NoSQL, GraphQL, etc.
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
-      slug: "advanced-application"
-      duration: "6 wks"
-      step: 14
-    - module_name: "LIFELONG LEARNING"
-      title: "Lifelong Learning"
-      description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
-      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
+      slug: "info-retrival"
+      duration: "2.5 wks"
+      step: 3
+    - module_name: "SCALE"
+      title: "Distributed Applications"
+      description: "The number one challenge for enteprise software is building applications that can scale to millions of users, you will learn and use the most important strategies for distributed apps like concurrency, sockets, data-compresion, distributed storage, messaging, etc."
+      projects: "Build a chat application with multi threading, compression, microservices and many other perks"
       slug: "lifelong-learning"
-      duration: "2+ week"
-      step: 17
+      duration: "3 wks"
+      step: 3
+    - module_name: "QUALITY"
+      title: "Quality Assurance"
+      description: "When enterprise software is built you need to make sure your code its bullet proof, here you will learn to build a Continued Integration that guarantees software quality since conception to deployment, specially on lecacy applications with lots of technical debt."
+      projects: "You will be given a real life application challenge withe legacy code, you will need to understand the code and build a continued deployment an integration system that guaranties quality."
+      slug: "quality-deploy"
+      duration: "2 wks"
+      step: 2
+    - module_name: "FINAL PROJECT"
+      title: "The Final Project"
+      description: "When enterprise software is built you need to make sure your code its bullet proof, here you will learn to build a Continued Integration that guarantees software quality since conception to deployment, specially on lecacy applications with lots of technical debt."
+      projects: "You will be given a real life application challenge withe legacy code, you will need to understand the code and build a continued deployment an integration system that guaranties quality."
+      slug: "quality-deploy"
+      duration: "4 wks"
+      step: 3.9
+    - module_name: "LIFELONG"
+      title: "Lifelong Support"
+      description: "Keep practicing with the academy's help, we will coaching you for life, build your Resume, Github, LinkedIn, help you apply for jobs, support you once you get a job"
+      projects: "Get paid to keep learning, raise your income gradually as you become a more senior developer, enjoy and build software for life."
+      slug: "lifelong-learning"
+      duration: "forever"
+      step: 0.1
+
+
+potential_companies:
+  tagline: "Get trained to thrive at major companies"
+  sub_heading: "Get ready to apply to the best companies in the world, the next level in your career."
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
+  heading: "WHAT MAKES 4GEEKS A GREAT SCHOOL?"
   sub_heading: "View full comparison table >"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES

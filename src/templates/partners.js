@@ -108,7 +108,7 @@ const Partners = (props) => {
       <Wrapper
         style="default"
 
-        color={Colors.lightGray}
+        background={Colors.lightGray}
         border="top"
       >
 
@@ -121,13 +121,8 @@ const Partners = (props) => {
           footerLink={hiring.partners.footer_link}
           footerButton={hiring.partners.footer_button}
         />
-        {/* </Wrapper> */}
-        <Divider height="50px" />
-        {/* <Wrapper
-                    style="default"
-                > */}
-        <Divider height="50px" />
 
+        <Divider height="50px" />
 
         <WhoIsHiring
           tagline={hiring.coding.tagline}

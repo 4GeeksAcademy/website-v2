@@ -36,7 +36,7 @@ details:
       projects: "CSS Postcard, Versión mínima de Instagram, etc."
       slug: "prework"
       duration: "2 sem"
-      step: .5
+      step: 0
     - module_name: "FUNDAMENTOS"
       title: "Aprende a programar"
       description: "Piensa como un ordenador: Controla el flujo de tu código, crea algoritmos, haz un bucle, usa condicionales y usa/mezcla JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
@@ -58,13 +58,42 @@ details:
       slug: "aplicacion-avanzada"
       duration: "6 wks"
       step: 8
-    - module_name: "LIFELONG LEARNING"
-      title: "Lifelong Learning"
-      description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
-      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
+    - module_name: "LIFELONG SUPPORT"
+      title: "Lifelong Support"
+      description: "Keep practicing with the academy's help, we will coaching you for life, build your Resume, Github, LinkedIn, help you apply for jobs, support you once you get a job"
+      projects: "Get paid to keep learning, raise your income gradually as you become a more senior developer, enjoy and build software for life."
       slug: "lifelong-learning"
-      duration: "2+ week"
-      step: 17
+      duration: "forever"
+      step: 0
+
+potential_companies:
+  tagline: "Entrénate para destacar en las compañías mas exigentes"
+  sub_heading: "Dá un salto a tu carrera y trabaja en las mejores empresas"
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

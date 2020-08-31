@@ -27,29 +27,16 @@ const FillerStyles = styled.div`
 
 
 const ProgramDetails = (props) => {
-    const [selected, setSelected] = useState(0);
-    const [completed, setCompleted] = useState(0.5);
-
-    const Slider = () => {
-        let sliderArray = [];
-        if (props.details.sub_heading === "Full Time") {
-            for (let i = 0; i < 11; i++) {
-                sliderArray.push(i)
-            }
-        }
-        if (props.details.sub_heading === "Part Time") {
-            for (let i = 0; i < 18; i++) {
-                sliderArray.push(i)
-            }
-        }
-
-        return sliderArray
-    }
-
+    const [selected, setSelected] = useState({ index: 0, manual: false });
+    const steps = props.details.details_modules.reduce((total, current, i) => [ ...total, (total[i-1] || 0) + current.step],[])
+    useEffect(() => {
+        const inter = setInterval(() => {
+            setSelected(current => current.manual ? current : current.index < steps.length-1 ? ({ index: current.index+1, manual: false }) : ({ index: 0, manual: false }))
+        },2000);
+        return () => clearInterval(inter)
+    },[])
     return (
-        <Wrapper
-            style="default"
-        >
+        <Wrapper style="default">
             <Title
                 size="10"
                 marginTop="40px"
@@ -80,12 +67,12 @@ const ProgramDetails = (props) => {
                                                 key={index}
                                                 flexDirection={`column`}
                                                 alignItems={`center`}
-                                                background={selected === index ? "#ededed" : null}
-                                                padding={selected === index ? "1rem" : null}
-                                                borderRadius={selected === index ? ".75rem" : null}
+                                                background={selected.index === index ? "#bfeeff" : null}
+                                                padding={selected.index === index ? "1rem" : null}
+                                                borderRadius={selected.index === index ? ".75rem" : null}
                                             >
                                                 <Div
-                                                    onClick={() => {setSelected(index); setCompleted((item.step * 100) / (Slider().length - 1))}}
+                                                    onClick={() => setSelected({ index, manual: true })}
                                                     alignItems={`center`}
                                                     margin={`0 0 5px 0`}
 
@@ -121,22 +108,13 @@ const ProgramDetails = (props) => {
                                     })}
 
                                 </Row>
-                                <Row align={`around`} alignItems={`center`}>
-                                    <Column size={`11`}>
-                                        <ContainerStyle>
-                                            <FillerStyles completed={completed} />
-                                        </ContainerStyle>
-                                    </Column>
-                                </Row>
+                                <ContainerStyle>
+                                    <FillerStyles completed={(steps[selected.index] * 100) / steps[steps.length-1]} />
+                                </ContainerStyle>
                                 <Row align={`center`} alignItems={`center`} marginTop={`10px`}>
                                     <Column size="11" display={`flex`} justifyContent={`space-between`}>
-                                        {/* <Column size={`12`}> */}
-                                        {Slider().map((item, index) => {
+                                        {Array(steps[steps.length-1]).fill(null).map((item, index) => {
                                             return (
-                                                <Div key={index} alignItems={`center`}>
-                                                    {index === Slider().length - 1 ?
-                                                        <Infinity width="16px" fill={Colors.darkGray} />
-                                                        :
                                                         <Paragraph
                                                             color={Colors.darkGray}
 
@@ -146,17 +124,54 @@ const ProgramDetails = (props) => {
                                                             fs_lg="12px"
                                                             fs_xl="14px"
                                                         >
-                                                            {item}
+                                                            {index+1}
                                                         </Paragraph>
-                                                    }
-                                                </Div>
-                                            )
-                                        })}
+                                        )})}
+                                        {/* <Infinity width="16px" fill={Colors.darkGray} /> */}
                                     </Column>
                                 </Row>
 
                                 <Row height={`75%`} >
                                     <Column size="12" customRespSize respSize="12" paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+                                        <Div flexDirection={`row`} >
+                                            <Div margin={`0 5px 0 0`} flexDirection={`column`} alignContent={`start`}>
+                                                <Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                            </Div>
+                                            <Div flexDirection={`column`} >
+                                                <Div alignItems={`center`} margin={`5px 0`}>
+
+                                                    <H4
+                                                        fs_xs="18px"
+                                                        fs_sm="18px"
+                                                        fs_md="20px"
+                                                        fs_lg="18px"
+                                                        fs_xl="22px"
+                                                        fontWeight={`400`}
+                                                    >
+                                                        {props.details.details_modules[selected.index].title}
+                                                    </H4>
+
+                                                </Div>
+                                                <div>
+                                                        {props.details.details_modules[selected.index].description.split('\\n').map(d => 
+                                                            <Paragraph
+                                                                color={Colors.darkGray}
+                                                                margin="10px 0px 0px 0px"
+                                                                fs_xs="12px"
+                                                                fs_sm="16px"
+                                                                fs_md="16px"
+                                                                fs_lg="18px"
+                                                                fs_xl="18px"
+                                                                customTextAlignSmall
+                                                                alignXs={`start`}
+                                                            >
+                                                            {d}
+                                                            </Paragraph>    
+                                                        )}
+                                                </div>
+                                                {/* </Div> */}
+                                            </Div>
+                                        </Div>
                                         <Div flexDirection={`row`} >
                                             <Div width={`50%`}>
                                                 <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
@@ -189,13 +204,11 @@ const ProgramDetails = (props) => {
                                                             customTextAlignSmall
                                                             alignXs={`start`}
                                                         >
-                                                            {props.details.details_modules[selected].projects}
+                                                            {props.details.details_modules[selected.index].projects}
                                                         </Paragraph>
                                                     </Div>
                                                 </Div>
                                             </Div>
-                                            {/* </Div>
-                                        <Div flexDirection={`column`} > */}
                                             <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
                                                 <Clock width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                             </Div>
@@ -225,46 +238,9 @@ const ProgramDetails = (props) => {
                                                         customTextAlignSmall
                                                         alignXs={`start`}
                                                     >
-                                                        {props.details.details_modules[selected].duration}
+                                                        {props.details.details_modules[selected.index].duration}
                                                     </Paragraph>
                                                 </Div>
-                                            </Div>
-                                        </Div>
-                                        <Div flexDirection={`row`} >
-                                            {/* <Div width={`100%`}> */}
-                                            <Div margin={`0 5px 0 0`} flexDirection={`column`} alignContent={`start`}>
-                                                <Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} />
-                                            </Div>
-                                            <Div flexDirection={`column`} >
-                                                <Div alignItems={`center`} margin={`5px 0`}>
-
-                                                    <H4
-                                                        fs_xs="18px"
-                                                        fs_sm="18px"
-                                                        fs_md="20px"
-                                                        fs_lg="18px"
-                                                        fs_xl="22px"
-                                                        fontWeight={`400`}
-                                                    >
-                                                        {props.details.details_modules[selected].title}
-                                                    </H4>
-
-                                                </Div>
-                                                <Div >
-                                                    <Paragraph
-                                                        color={Colors.darkGray}
-                                                        fs_xs="12px"
-                                                        fs_sm="16px"
-                                                        fs_md="16px"
-                                                        fs_lg="18px"
-                                                        fs_xl="18px"
-                                                        customTextAlignSmall
-                                                        alignXs={`start`}
-                                                    >
-                                                        {props.details.details_modules[selected].description}
-                                                    </Paragraph>
-                                                </Div>
-                                                {/* </Div> */}
                                             </Div>
                                         </Div>
                                     </Column>

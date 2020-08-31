@@ -12,6 +12,7 @@ import AlumniProjects from '../components/AlumniProjects'
 import BaseRender from './_baseRender'
 import ProgramSelector from '../components/ProgramSelector'
 import {requestSyllabus} from "../actions";
+import WhoIsHiring from '../components/WhoIsHiring';
 // import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
@@ -28,8 +29,6 @@ const Program = ({data, pageContext, yml}) => {
 
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
-
-  console.log("Software Engineering")
 
   return (<>
     <Wrapper
@@ -84,10 +83,20 @@ const Program = ({data, pageContext, yml}) => {
     </Wrapper>
 
     <ProgramDetails details={yml.details} />
-
+    
     <Wrapper
-      style="default"
-    >
+        margin="100px"
+        background={Colors.lightGray}
+        border="top">
+      <WhoIsHiring
+        margin="50px"
+        tagline={yml.potential_companies.tagline}
+        subheading={yml.potential_companies.sub_heading}
+        images={yml.potential_companies.companies}
+      />
+    </Wrapper>
+
+    <Wrapper>
       <section className="section" id="section-3"></section>
       <Title
         size="10"
@@ -100,19 +109,11 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
     </Wrapper>
 
-    
-
-      <Row height="100%">
-        <Column size="12">
-          <SyllabusSVG />
-        </Column>
-      </Row>
     {/* SVG  END*/}
     <Divider height="100px" />
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
     {/* ---------------------------- */}
-    <section className="section" id="section-1"></section>
     <Container fluid>
       <Row>
         <Column size="2">
@@ -252,23 +253,22 @@ const Program = ({data, pageContext, yml}) => {
       </Row>
     </Container>
     {/* </Wrapper> */}
-    <Divider height="100px" />
 
     <Wrapper
       style="default"
       github="/course"
     >
-
-
       <Title
         size="10"
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
         primary
       />
-      <section className="section" id="section-4"></section>
-      <PricesAndPayment type={pageContext.slug} lang={data.allLocationYaml.edges} />
-      <Divider height="100px" />
+      <PricesAndPayment 
+        type={pageContext.slug} 
+        locations={data.allLocationYaml.edges} 
+        course="software_engineering"
+      />
     </Wrapper>
 
     {/* {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
@@ -276,7 +276,6 @@ const Program = ({data, pageContext, yml}) => {
 
       : null} */}
 
-    <Divider height="100px" />
     <Wrapper
       style="default"
     >
@@ -288,7 +287,6 @@ const Program = ({data, pageContext, yml}) => {
         primary
       />
       <Divider height="50px" />
-      <section className="section" id="section-5"></section>
       <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} />
       <Divider height="100px" />
     </Wrapper>
@@ -353,6 +351,20 @@ export const query = graphql`
                 duration
                 description
                 step
+              }
+            }
+            potential_companies{
+              tagline
+              sub_heading
+              companies{
+                name
+                image{
+                  childImageSharp {
+                    fluid(maxWidth: 100){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
               }
             }
             geeks_vs_others{
@@ -502,7 +514,7 @@ export const query = graphql`
           }
           
           prices {
-            full_time {
+            software_engineering {
               center_section {
                 button {
                   button_text
@@ -546,54 +558,6 @@ export const query = graphql`
                 header {
                   sub_heading
                   heading_one
-                  heading_two
-                }
-              }
-            }
-            part_time {
-              center_section {
-                button {
-                  button_text
-                }
-                header {
-                  heading_two
-                  sub_heading
-                  heading_one
-                }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
-                }
-              }
-              left_section {
-                button {
-                  button_text
-                }
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  sub_heading
-                  heading_two
-                }
-              }
-              right_section {
-                button {
-                  button_text
-                }
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  sub_heading
                   heading_two
                 }
               }

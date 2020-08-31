@@ -24,153 +24,29 @@ import {InView} from 'react-intersection-observer'
 
 
 const PricesAndPayments = (props) => {
-  const {session, setSession} = useContext(SessionContext);
-  const [checked, setChecked] = useState(false)
+  const {session} = useContext(SessionContext);
   const classes = useStyles();
-  const [completed, setCompleted] = useState({});
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [currentCourseType, setCurrentCourseType] = useState()
-
-  useEffect(() => {
-    const programType = async () => {
-      const type = await getProgramInfo()
-      setCurrentCourseType(type)
-    }
-    programType()
-  }, [])
-  const [prova, setProva] = useState({
+  const [activeStep, setActiveStep] = useState(0);
+  
+  let prova = {
     currentCityLocation: "",
-    activeStep: 0,
     steps: [],
     currentFilteredCourse: ""
-  })
-  useEffect(() => {
-    const loadCurrentCity = async () => {
-      try {
-        let response = await session.location;
-        if (response) {
-          var city = await response.city;
-        } else if (response.city == undefined) {
-          alert("no city found!!");
-        }
-      } catch (error) {
-        console.log("Something failed", error);
-      }
-      const myLocation = await getCurrentCity(city)
-      if (myLocation != null) {
-        setProva({...prova, currentCityLocation: myLocation})
-      }
-
-    }
-    loadCurrentCity();
-  }, [session.location])
-
-  useEffect(() => {
-    const loadCurrentProgramSteps = async () => {
-      if (currentCourseType === "part-time") {
-        if (prova.currentCityLocation.hasFinancialsOption === true) {
-          setProva({
-            ...prova,
-            steps: prova.currentCityLocation.financials_max_months,
-            activeStep: prova.currentCityLocation.financials_max_months.length - 1,
-            currentFilteredCourse: prova.currentCityLocation.prices.part_time
-          })
-        }
-        else {
-          setProva({
-            ...prova,
-            steps: null,
-            activeStep: null,
-            currentFilteredCourse: prova.currentCityLocation.prices.part_time
-          })
-        }
-      }
-      else if (currentCourseType === "full-time") {
-        if (prova.currentCityLocation.hasFinancialsOption === true) {
-          setProva({
-            ...prova,
-            steps: prova.currentCityLocation.financials_max_months,
-            activeStep: prova.currentCityLocation.financials_max_months.length - 1,
-            currentFilteredCourse: prova.currentCityLocation.prices.full_time
-          })
-        }
-        else {
-          setProva({
-            ...prova,
-            steps: null,
-            activeStep: null,
-            currentFilteredCourse: prova.currentCityLocation.prices.full_time
-          })
-        }
+  }
+  if(session.location){
+    let currentLocation = props.locations.find(l => l.node.meta_info.slug === session.location.meta_info.slug)
+    console.log("current location",currentLocation)
+    console.log("session location",session.location)
+    console.log("props.locations",props.locations)
+    if(currentLocation){
+      currentLocation = currentLocation.node
+      prova = {
+        currentCityLocation: currentLocation,
+        steps: currentLocation.financials_max_months,
+        currentFilteredCourse: currentLocation.prices[props.course]
       }
     }
-    loadCurrentProgramSteps();
-  }, [prova.currentCityLocation])
-
-  function getProgramInfo () {
-    let program = "";
-    {
-      props.type === "full-stack-web-development-bootcamp-part-time" || props.type === "desarrollo-web-full-stack-bootcamp-part-time"
-        ? program = "part-time"
-        : props.type === "full-stack-web-development-bootcamp-full-time" || props.type === "desarrollo-web-full-stack-bootcamp-full-time"
-          ? program = "full-time"
-          : program = "part-time"
-    }
-    return program
   }
-
-  function getCurrentCity (needALocation) {
-    let currentCityInfo = null;
-    let info = null;
-    currentCityInfo = props.lang.filter((item) => {return item.node.city === needALocation})
-    {currentCityInfo[0] ? info = currentCityInfo[0].node : null}
-    return info
-  }
-
-  const handleChange = (checked) => {
-    setChecked(checked)
-  }
-
-  const totalSteps = () => {
-    return steps.length;
-  };
-  const completedSteps = () => {
-    return Object.keys(completed).length;
-  };
-  const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
-  };
-  const allStepsCompleted = () => {
-    return completedSteps() === totalSteps();
-  };
-  const handleNext = () => {
-    const newActiveStep =
-      isLastStep() && !allStepsCompleted()
-        ? // It's the last step, but not all steps have been completed,
-        // find the first step that has been completed
-        steps.findIndex((step, i) => !(i in completed))
-        : activeStep + 1;
-    setActiveStep(newActiveStep);
-  };
-  const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
-  };
-  const handleStep = step => () => {
-    // stop()
-    // setActiveStep(step);
-    setProva({...prova, activeStep: step});
-  };
-  const handleComplete = () => {
-    const newCompleted = completed;
-    newCompleted[activeStep] = true;
-    setCompleted(newCompleted);
-    handleNext();
-  };
-  const handleReset = () => {
-    setActiveStep(0);
-    setCompleted({});
-  };
-
 
   function getStepLogo (step) {
     switch (step) {
@@ -189,55 +65,6 @@ const PricesAndPayments = (props) => {
       default:
         return 'Loading Data';
     }
-  }
-
-
-  function getStepContents (step) {
-    switch (step) {
-      case 0:
-        return prova.currentFilteredCourse.center_section.plans[0].payment
-        break
-      case 1:
-        return prova.currentFilteredCourse.center_section.plans[1].payment
-        break
-      case 2:
-        return prova.currentFilteredCourse.center_section.plans[2].payment
-        break
-      case 3:
-        return prova.currentFilteredCourse.center_section.plans[3].payment
-        break
-      case 4:
-        return prova.currentFilteredCourse.center_section.plans[4].payment
-        break
-      case 5:
-        return prova.currentFilteredCourse.center_section.plans[5].payment
-        break
-      default:
-        return 'Loading Data';
-    }
-  }
-
-  function getStepPayments (step, language) {
-    switch (step) {
-      case 0:
-        return prova.currentFilteredCourse.center_section.plans[0].paymentInfo
-      case 1:
-        return prova.currentFilteredCourse.center_section.plans[1].paymentInfo
-      case 2:
-        return prova.currentFilteredCourse.center_section.plans[2].paymentInfo
-      case 3:
-        return prova.currentFilteredCourse.center_section.plans[3].paymentInfo
-      case 4:
-        return prova.currentFilteredCourse.center_section.plans[4].paymentInfo
-      case 5:
-        return prova.currentFilteredCourse.center_section.plans[5].paymentInfo
-      default:
-        return 'Loading Data';
-    }
-  }
-
-  if (scrollPosition == 2741) {
-    // start()
   }
 
   return (
@@ -355,7 +182,7 @@ const PricesAndPayments = (props) => {
                             fs_xl="24px"
                             align="center"
                             color={Colors.white}>
-                            {getStepContents(prova.activeStep)}
+                            {prova.currentFilteredCourse.center_section.plans[activeStep].payment}
                           </H3>
                           <Paragraph
                             align="center"
@@ -364,7 +191,7 @@ const PricesAndPayments = (props) => {
                             fontFamily="Lato-bold, sans-serif"
                             color={Colors.gray}
                           >
-                            {getStepPayments(prova.activeStep, props.lang)}
+                            {prova.currentFilteredCourse.center_section.plans[activeStep].paymentInfo}
                           </Paragraph>
                         </Column>
                       </Row>
@@ -373,10 +200,10 @@ const PricesAndPayments = (props) => {
                   <Row height="80px" >
                     <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                       <Row height="100%" align="center">
-                        <Stepper nonLinear activeStep={prova.activeStep} alternativeLabel connector={<QontoConnector />}>
+                        <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
                           {prova.steps != null && prova.steps.map((label, index) => (
                             <Step key={label}>
-                              <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={handleStep(index)} completed={completed[index]}>
+                              <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={() => setActiveStep(index)}>
                                 <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
                               </StepButton>
                             </Step>
@@ -385,7 +212,7 @@ const PricesAndPayments = (props) => {
                       </Row>
                       <Row align="center" height="40px">
                         <Column size="12" align="center">
-                          <Typography className={classes.instructions}>{getStepLogo(prova.activeStep)}</Typography>
+                          <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
                         </Column>
                       </Row>
                     </Column>

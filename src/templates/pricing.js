@@ -115,7 +115,7 @@ const Pricing = (props) => {
       <Wrapper
         style="default"
 
-        color={Colors.lightGray}
+        background={Colors.lightGray}
         border="top"
 
       >
@@ -154,7 +154,7 @@ const Pricing = (props) => {
       <Wrapper
         style="default"
 
-        color={Colors.lightGray}
+        background={Colors.lightGray}
         border="top"
       >
         <Divider height="20px" />
