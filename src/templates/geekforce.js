@@ -27,7 +27,7 @@ const GeekForce = (props) => {
     <>
       <Wrapper
         style="default"
-        image={yml.image}
+        imageData={yml.image && yml.image.childImageSharp.fluid}
         border="bottom"
         height="auto"
       >
@@ -148,7 +148,13 @@ export const query = graphql`
             }
             tagline
             sub_heading
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200){
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             image_logo
             benefits {
               heading

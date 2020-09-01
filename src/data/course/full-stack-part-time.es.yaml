@@ -16,6 +16,7 @@ meta_info:
 header:
   tagline: "FULL STACK DEVELOPER"
   image: "../../../static/images/bg/bg-pr.jpg"
+  paragraph: "From zero to a get paid as a developer, learn the skills of the present and future, boost your professional career, get hired by a tech company."
   alt: ""
 
 button:

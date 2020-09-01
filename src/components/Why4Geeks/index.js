@@ -1,9 +1,8 @@
 import React from 'react';
 import {Title, H4, Paragraph} from '../Heading'
 import {Column, Row, Divider} from '../Sections'
-import {Address, HandMoney, Laptop, Colors, BackgroundSection} from '../Styling'
+import {Address, HandMoney, Laptop, Colors, StyledBackgroundSection} from '../Styling'
 import ReactPlayer from 'react-player'
-import StyledBackgroundSection from '../Styling'
 import Fragment from "../Fragment"
 
 export default (props) => {
@@ -28,14 +27,14 @@ return (<Fragment github="/components/4geeks_vs_others">
                 height='250px'
               />
               :
-              <BackgroundSection
+              <StyledBackgroundSection
                 image={i.image.childImageSharp.fluid}
                 alt={i.alt}
                 height={`250px`}
                 bgSize={`cover`}
                 borderRadius={`1.25rem`}
                 className={`img-border`}
-              ></BackgroundSection>
+              ></StyledBackgroundSection>
             }
             <Row align="around" marginTop="20px">
               <Column size size="2" p_xs="0 5px 0 0" p_sm="0 5px 0 0" customRespSize respSize="2" t_align="right" alignSelf="center">

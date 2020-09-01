@@ -43,13 +43,13 @@ export const NavItem = styled.li`
     font-family: lato, sans-serif;
     font-size: 12px;
     @media ${Device.xs}{
-        font-size: 10px;
+      font-size: ${props => props.fontSize || "10px"};
     }
     @media ${Device.sm}{
-        font-size: 10px;
+      font-size: ${props => props.fontSize || "10px"};
     }
     @media ${Device.md}{
-    
+      font-size: ${props => props.fontSize || "10px"};
     }
     @media ${Device.lg}{
      
@@ -242,26 +242,19 @@ export const RightNav = ({menu, open}) => {
     }
   `)
   return (
-    <>
-
-      <Div open={open}>
+      <Div height="100vh" open={open}>
         <Link to={'/'}>
           <Img fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo"></Img>
-          {/* <img src="/images/4G_logo_negro.png" width="70" alt=""></img> */}
         </Link>
         <Ul open={open}>
           {menu.menu.navbar && menu.menu.navbar.map((item, index) => {
             return (
-              <Link to={item.link} key={index}><NavItem>{item.name}</NavItem></Link>
+              <NavItem fontSize="16px"><Link to={item.link} key={index}>{item.name}</Link></NavItem>
             )
           })}
         </Ul>
         <Link to="/apply"><Button width="130px" color={Colors.red} textColor={Colors.white}>Apply</Button></Link>
       </Div>
-
-
-    </>
-
   )
 }
 

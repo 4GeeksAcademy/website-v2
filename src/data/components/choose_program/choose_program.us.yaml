@@ -1,8 +1,8 @@
 lang: "us"
 programs:
-  - text: "Software Development"
+  - text: "Become a Developer"
     link: "/us/course/full-stack-web-development-bootcamp-part-time"
-  - text: "Software Engineering"
+  - text: "Become a Software Engineer"
     link: "/us/course/software-engineering-coding-bootcamp"
   - text: "Online / Remote"
     link: "/us/course/online-remote-coding-bootcamp"
