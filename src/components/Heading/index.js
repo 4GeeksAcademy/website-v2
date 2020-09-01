@@ -242,22 +242,24 @@ export const Paragraph = styled.div`
 export const Title = props => {
   const HeadingType = props.main ? H1 : H2;
   return (
-    <>
+    <div style={{ marginBottom: "30px "}}>
       <HeadingType align="center" color={props.color} marginTop={props.marginTop} fontSize={props.fontSize} align={props.textAlign}>{props.title}</HeadingType>
       <Separator align="center" primary={props.primary} />
-      <Paragraph
-        align="center"
-        onClick={() => props.linkTo && redirectTo(props.linkTo)}
-        color={props.paragraphColor}
-        fontFamily={props.fontFamily}
-        size={props.customParagraphSize}
-        fontSize={props.primary ? `20px` : null}
-        fontWeight={props.primary ? `500` : null}
-        margin={props.margin ? props.margin : `0 0 30px 0`}
-      >
-        {props.paragraph}
-      </Paragraph>
-    </>
+        {props.paragraph.split('\\n').map(content => 
+          <Paragraph
+            align="center"
+            onClick={() => props.linkTo && redirectTo(props.linkTo)}
+            color={props.paragraphColor}
+            fontFamily={props.fontFamily}
+            size={props.customParagraphSize}
+            fontSize={props.primary ? `20px` : null}
+            fontWeight={props.primary ? `500` : null}
+            margin={props.margin}
+          >
+            {content}
+          </Paragraph>
+        )}
+    </div>
   )
 }
 Title.propTypes = {
@@ -267,6 +269,10 @@ Title.propTypes = {
   size: PropTypes.string,
   paragraphColor: PropTypes.string
 };
+Title.defaultProps = {
+  margin: "0",
+  paragraph: ""
+}
 // H2.propTypes = {
 //   primary: PropTypes.bool.isRequired,
 // }

@@ -1,6 +1,4 @@
 import React, {useState, useContext, useEffect, useRef} from 'react';
-import styled from 'styled-components';
-import {useStaticQuery, graphql} from 'gatsby';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -19,7 +17,7 @@ import {Card} from '../Card';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage} from '../Styling';
 import {SessionContext} from '../../session'
-import {InView} from 'react-intersection-observer'
+import Fragment from "../Fragment"
 
 
 
@@ -35,9 +33,6 @@ const PricesAndPayments = (props) => {
   }
   if(session.location){
     let currentLocation = props.locations.find(l => l.node.meta_info.slug === session.location.meta_info.slug)
-    console.log("current location",currentLocation)
-    console.log("session location",session.location)
-    console.log("props.locations",props.locations)
     if(currentLocation){
       currentLocation = currentLocation.node
       prova = {
@@ -47,6 +42,7 @@ const PricesAndPayments = (props) => {
       }
     }
   }
+  if(!prova.currentFilteredCourse) return "Loading...";
 
   function getStepLogo (step) {
     switch (step) {
@@ -68,12 +64,8 @@ const PricesAndPayments = (props) => {
   }
 
   return (
-
-    <>
-      {/* 3 COLUMNS LAYOUT */}
-      {prova.currentFilteredCourse &&
-        <>
-          <Row github="/location" align="center"><Paragraph align="center" fontSize="14px" color={Colors.gray}>{session.location && session.location.city}</Paragraph></Row>
+        <Fragment github="/location">
+          <Paragraph align="center" fontSize="14px" color={Colors.gray}>{session.location && session.location.city}</Paragraph>
           <Divider height="50px" />
           <Row align="center">
             <Column size="4" customRespSize respSize="12">
@@ -137,7 +129,7 @@ const PricesAndPayments = (props) => {
                 </Row>
               </Card>
             </Column>
-            {prova.currentCityLocation.hasFinancialsOption === true ?
+            {prova.currentCityLocation.hasFinancialsOption &&
               <Column size="4" customRespSize respSize="12">
                 <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
                   <Row height="100px" >
@@ -228,7 +220,7 @@ const PricesAndPayments = (props) => {
                   </Row>
                 </Card>
               </Column>
-              : null}
+            }
             <Column size="4" customRespSize respSize="12">
               <Card shadow width="100%" height="350px" margin="5px 0">
                 <Row height="100px" >
@@ -283,10 +275,7 @@ const PricesAndPayments = (props) => {
               </Card>
             </Column>
           </Row>
-        </>
-
-      }
-    </>
+        </Fragment>
   )
 }
 export default (PricesAndPayments)

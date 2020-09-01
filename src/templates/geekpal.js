@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
+import {Column, Row, Divider, Wrapper} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'
 import Testimonials from '../components/Testimonials'
@@ -148,7 +148,13 @@ export const query = graphql`
             }
             tagline
             sub_heading
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200){
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             image_logo
             benefits {
               heading

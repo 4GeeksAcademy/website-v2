@@ -1,63 +1,20 @@
 import React, {useState, useContext} from 'react';
-import Layout from '../global/Layout';
-import styled, {css} from 'styled-components';
-import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
+import {Column, Row, Container, Divider, Wrapper, Div} from "../components/Sections";
 import {Title, H3, H4, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, RoundImage} from '../components/Styling';
 import Credentials from '../components/Credentials';
 import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring';
 import BaseRender from './_baseRender';
-import {Card} from '../components/Card';
-import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import {Input, Alert} from '../components/Form';
 import {reviewGuidebook} from "../actions";
 import LeadForm from "../components/LeadForm/index.js";
-
-function rand () {
-  return Math.round(Math.random() * 20) - 10;
-}
-
-function getModalStyle () {
-  const top = 50 + rand();
-  const left = 50 + rand();
-
-  return {
-    top: `${50}%`,
-    left: `${50}%`,
-    transform: `translate(-${50}%, -${50}%)`,
-  };
-}
-
-const useStyles = makeStyles(theme => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    height: 300,
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '1.25rem',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
 
 
 const Pricing = (props) => {
   const {data, pageContext, yml} = props;
-  const [showModal, setShowModal] = useState(false)
-  const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-  const classes = useStyles();
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+  const [course, setCourse] = React.useState(null);
   const hiring = data.allPartnerYaml.edges[0].node;
   return (
     <>
@@ -124,7 +81,17 @@ const Pricing = (props) => {
           title={yml.prices.heading}
           primary
         />
-        <PricesAndPayment type={pageContext.slug} lang={data.allLocationYaml.edges} />
+        <Div width="fit-content" margin="auto">
+            Select a program
+            <Button width="auto">Part-Time</Button>
+        </Div>
+        {course && 
+          <PricesAndPayment 
+            type={pageContext.slug} 
+            locations={data.allLocationYaml.edges} 
+            course={course}
+          />
+        }
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
@@ -143,11 +110,11 @@ const Pricing = (props) => {
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
             open={open}
-            onClose={handleClose}
+            onClose={() => setOpen(false)}
           >
-            <LeadForm heading="REVIEW GUIDEBOOK" formHandler={reviewGuidebook} handleClose={handleClose} />
+            <LeadForm heading="REVIEW GUIDEBOOK" formHandler={reviewGuidebook} handleClose={() => setOpen(false)} />
           </Modal>
-          <Button outline position="relative" width="300px" onClick={handleOpen} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
+          <Button outline position="relative" width="300px" onClick={() => setOpen(true)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
         </Row>
         <Divider height="100px" />
       </Wrapper>

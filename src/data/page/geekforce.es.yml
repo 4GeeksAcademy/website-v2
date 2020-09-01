@@ -7,7 +7,7 @@ meta_info:
   redirects: []
 tagline: GEEKPAL
 sub_heading: ""
-image: "/images/bg/companies-bg.jpg"
+image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekpal.png"
 benefits:
   - p:

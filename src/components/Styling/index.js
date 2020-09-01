@@ -247,6 +247,7 @@ export const BackgroundSection = ({children, className, image, height, width, bg
         <BackgroundImage
             Tag="section"
             className={className}
+            borderRadius={borderRadius}
             fluid={image}
             style={{
                 // Defaults are overwrite-able by setting one or each of the following:
@@ -265,13 +266,15 @@ export const BackgroundSection = ({children, className, image, height, width, bg
 
 
 }
-const StyledBackgroundSection = styled(BackgroundSection)`
+export const StyledBackgroundSection = styled(BackgroundSection)`
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+    &:after {
+        border-radius: ${props => props.borderRadius};
+    }
   `
-export default StyledBackgroundSection
 
 const SmartButton = ({children, colorHover, textColor, borderRadius, outline, ...rest}) => <button {...rest}>{children}</button>;
 export const Button = styled(SmartButton)`

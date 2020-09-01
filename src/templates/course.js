@@ -14,6 +14,7 @@ import AlumniProjects from '../components/AlumniProjects'
 import BaseRender from './_baseRender'
 import ProgramSelector from '../components/ProgramSelector'
 import {requestSyllabus} from "../actions";
+import Credentials from '../components/Credentials'
 import Scrollspy from 'react-scrollspy'
 // import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
@@ -170,6 +171,7 @@ const Program = ({data, pageContext, yml}) => {
         title={yml.header.tagline}
         main
         color={Colors.white}
+        paragraph={yml.header.paragraph}
         fontSize="46px"
         textAlign="center"
 
@@ -189,6 +191,17 @@ const Program = ({data, pageContext, yml}) => {
         <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
       </Modal>
     </Wrapper>
+
+    <Wrapper>
+      <Title
+        size="10"
+        title={"This Program By The Numbers"}
+        paragraph={"Our results speak for themselves"}
+        primary
+      />
+      <Credentials lang={data.allCredentialsYaml.edges} />
+    </Wrapper>
+
     <Sidebar
       shadow
       borders="1.25rem"
@@ -204,6 +217,7 @@ const Program = ({data, pageContext, yml}) => {
         <li className="scroll_li"><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
       </Scrollspy>
     </Sidebar>
+
     <Divider height="100px" />
     <Wrapper
       style="default"
@@ -430,6 +444,7 @@ export const query = graphql`
         node{
             header{
               tagline
+              paragraph
               image {
                 childImageSharp {
                   fluid(maxWidth: 1200){

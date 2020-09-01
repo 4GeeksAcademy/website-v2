@@ -5,7 +5,7 @@ import {Carousel} from 'react-responsive-carousel';
 import {Card} from "../Card"
 import {H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {Row, Column, Wrapper, Divider} from '../Sections'
-import {Colors, BackgroundSection} from '../Styling'
+import {Colors, StyledBackgroundSection} from '../Styling'
 import {Link} from 'gatsby';
 import Img from "gatsby-image"
 import Fragment from "../Fragment"
@@ -31,14 +31,14 @@ const Testimonials = (props) => {
                         <Row align="center" padding="30px" key={i}>
                             <Card width="700px" >
                                 <Row align="center">
-                                    <BackgroundSection
+                                    <StyledBackgroundSection
                                         image={item.student_thumb.childImageSharp.fluid}
                                         alt={item.alt}
                                         height={`200px`}
                                         width={`200px`}
                                         bgSize={`cover`}
                                         className={`img-testimonials`}
-                                    ></BackgroundSection>
+                                    ></StyledBackgroundSection>
                                 </Row>
                                 <Divider height="10px" />
                                 <Row align="center" >
