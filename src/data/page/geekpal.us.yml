@@ -7,7 +7,7 @@ meta_info:
   redirects: ["/geekpal"]
 tagline: NEVER BE STUCK AGAIN
 sub_heading: "LEARN FASTER THAN ANYONE ON EARTH"
-image: "/images/bg/companies-bg.jpg"
+image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekpal.png"
 benefits:
   - p:

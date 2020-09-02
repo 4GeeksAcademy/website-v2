@@ -17,10 +17,11 @@ const Privacy = (props) => {
             <Wrapper
                 github="/components/privacy"
                 style="default"
-
                 border="bottom"
                 height="auto"
                 backgroundSize="cover"
+                paddingRight={`0`}
+
             >
                 <Divider height="100px" />
                 <Title

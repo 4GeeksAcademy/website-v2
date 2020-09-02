@@ -1,10 +1,11 @@
 import React, {useState, useContext} from 'react';
 import {Column, Row, Container, Divider, Wrapper, Div} from "../components/Sections";
 import {Title, H3, H4, H5, Paragraph} from '../components/Heading';
-import {Button, Colors, RoundImage} from '../components/Styling';
+import {Button, Colors, RoundImage, TriangleDown} from '../components/Styling';
 import Credentials from '../components/Credentials';
 import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring';
+import {Card} from '../components/Card'
 import BaseRender from './_baseRender';
 import Modal from '@material-ui/core/Modal';
 import {reviewGuidebook} from "../actions";
@@ -15,7 +16,19 @@ const Pricing = (props) => {
   const {data, pageContext, yml} = props;
   const [open, setOpen] = React.useState(false);
   const [course, setCourse] = React.useState(null);
+  const [courseArray, setCourseArray] = useState([
+    {
+      type: "part_time",
+      name: "Part Time"
+    },
+    {
+      type: "full_time",
+      name: "Full Time"
+    }
+  ])
+  const [priceToggle, setPriceToggle] = useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
+
   return (
     <>
       {/* HEADER SECTION */}
@@ -26,6 +39,8 @@ const Pricing = (props) => {
         height={`500px`}
         bgSize={`cover`}
         alt={yml.header_data.alt}
+        paddingRight={`0`}
+
       >
         <Divider height="100px" />
         <Title
@@ -81,18 +96,123 @@ const Pricing = (props) => {
           title={yml.prices.heading}
           primary
         />
-        <Div width="fit-content" margin="auto">
+        {/* <Div width="fit-content" margin="auto" alignItems={`baseline`}>
+          <Paragraph
+            fontWeight={`500`}
+            fs_xs="18px"
+            fs_sm="18px"
+            fs_md="18px"
+            fs_lg="18px"
+            fs_xl="20px"
+            margin={`0 5px 0 0`}>
             Select a program
-            <Button width="auto">Part-Time</Button>
-        </Div>
-        {course && 
-          <PricesAndPayment 
-            type={pageContext.slug} 
-            locations={data.allLocationYaml.edges} 
+          </Paragraph>
+          <Button
+            width="auto"
+            display={`flex`}
+            onClick={() => setPriceToggle(!priceToggle)}
+          >
+            <Paragraph
+              fontWeight={`500`}
+              fs_xs="18px"
+              fs_sm="18px"
+              fs_md="18px"
+              fs_lg="18px"
+              fs_xl="20px"
+              margin={`0 5px 0 0`}>
+
+              {course}
+            </Paragraph>
+            <TriangleDown width="16" color={Colors.gray} fill={Colors.gray} />
+          </Button>
+          {priceToggle ?
+            <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".5rem" shadow>ciao</Row>
+            : null
+          }
+        </Div> */}
+        <Row
+          padding={`10px 20px`}
+          background={Colors.lightGray}
+          borderRadius={`.5rem`}
+          align={`center`}
+          customRespSize
+          alignResp={`space-between`}
+        >
+          <Div alignItems={`center`}>
+            <Paragraph
+              fontWeight={`500`}
+              fs_xs="18px"
+              fs_sm="18px"
+              fs_md="18px"
+              fs_lg="18px"
+              fs_xl="20px"
+              margin={`0 5px 0 0`}>
+              Select a program
+          </Paragraph>
+            <Card
+              color={`grey`}
+              borders={`.5rem`}
+              margin={`0 20px 0 0`}
+              margin_sm={"20px auto"}
+              margin_xs={"20px auto"}
+            >
+
+              <Button
+                display={`flex`}
+
+                width="fit-content"
+                onClick={() => setPriceToggle(!priceToggle)}
+                // onClick={() => {toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))}}
+                color={Colors.lightGray}
+              >
+                <Paragraph
+                  fontWeight={`500`}
+                  color={Colors.blue}
+                  fs_xs="18px"
+                  fs_sm="18px"
+                  fs_md="18px"
+                  fs_lg="18px"
+                  fs_xl="20px"
+                  margin={`0 5px 0 0`}>{course === "part_time" ? "Part Time" : "Full Time"}
+                </Paragraph>
+                <TriangleDown width="16" color={Colors.gray} fill={Colors.gray} />
+              </Button>
+              {priceToggle &&
+                <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".5rem" shadow>
+                  {Array.isArray(courseArray) && courseArray.map((item, index) => {
+                    return (
+                      <Button
+                        key={index}
+                        colorHover={Colors.lightBlue}
+                        // onClick={() => {item.city in filterCity ? null : item.city != "All Locations" ? setAcademy(item.slug) : setAcademy(null), setFilterByCity([item.city]), setToggleCity(!toggleCity)}}
+                        onClick={() => {setCourse(item.type), setPriceToggle(!priceToggle)}}
+                        textColor={Colors.gray}
+                        fontSize={"16px"}
+                        borderRadius=".5rem" padding="10px"
+                      >
+                        <Paragraph
+                          fontSize="16px"
+                          color={Colors.gray} >
+                          {item.name}
+                        </Paragraph>
+
+                      </Button>
+                    )
+                  })}
+                </Row>
+              }
+            </Card>
+          </Div>
+        </Row>
+        {
+          course &&
+          <PricesAndPayment
+            type={pageContext.slug}
+            locations={data.allLocationYaml.edges}
             course={course}
           />
         }
-      </Wrapper>
+      </Wrapper >
       <Divider height="100px" />
       <Wrapper
         style="default"

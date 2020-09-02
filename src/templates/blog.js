@@ -32,6 +32,8 @@ const Blog = ({data, pageContext, yml}) => {
                 bgSize="cover"
                 className={`img-header`}
                 height={`300px`}
+                paddingRight={`0`}
+
             >
                 <Divider height="100px" />
                 <Title

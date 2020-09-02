@@ -143,9 +143,9 @@ const Calendar = (props) => {
     const loadFilterType = async () => {
       let filterTypeArray = ['courses', 'events'];
       for (let i = 0; i < events.length; i++) {
-        // if (!filterTypeArray.includes(events[i].type)) {
-        filterTypeArray.push(events[i].event_type.name)
-        // }
+        if (!filterTypeArray.includes(events[i].event_type.name)) {
+          filterTypeArray.push(events[i].event_type.name)
+        }
       }
       setFilterType(filterTypeArray);
     }
@@ -182,6 +182,8 @@ const Calendar = (props) => {
         border="bottom"
         height="300px"
         bgSize="cover"
+        paddingRight={`0`}
+
       >
         <Divider height="100px" />
         <Title

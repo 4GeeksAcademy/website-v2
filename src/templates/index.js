@@ -53,6 +53,7 @@ const Home = (props) => {
           customRespSize
           disp_sm={"none"}
           disp_xs={"none"}
+          paddingRight={`0`}
         >
           <BackgroundSection
             className={`image`}
