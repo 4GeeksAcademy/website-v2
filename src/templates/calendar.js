@@ -182,6 +182,8 @@ const Calendar = (props) => {
         border="bottom"
         height="300px"
         bgSize="cover"
+        paddingRight={`0`}
+
       >
         <Divider height="100px" />
         <Title

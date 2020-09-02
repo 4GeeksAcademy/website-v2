@@ -6,7 +6,7 @@ import {Container, Row, Column, Wrapper, Divider, Sidebar, Div} from '../compone
 import {Title, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
-import { navigate } from "@reach/router"
+import {navigate} from "@reach/router"
 import PricesAndPayment from '../components/PricesAndPayment'
 import AlumniProjects from '../components/AlumniProjects'
 import BaseRender from './_baseRender'
@@ -39,6 +39,8 @@ const Program = ({data, pageContext, yml}) => {
       height={`600px`}
       bgSize={`cover`}
       alt={yml.header.alt}
+      paddingRight={`0`}
+
     >
       <Title
         size="5"
@@ -54,8 +56,8 @@ const Program = ({data, pageContext, yml}) => {
         <Column align="right" size="6">
           <Button
             onClick={() => navigate(yml.button.apply_button_link)}
-           width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button>
-          </Column>
+            width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button>
+        </Column>
         <Column align="left" size="6">
           <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
         </Column>
@@ -87,13 +89,13 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
     </Wrapper>
 
-    
 
-      <Row height="100%">
-        <Column size="12">
-          <SyllabusSVG />
-        </Column>
-      </Row>
+
+    <Row height="100%">
+      <Column size="12">
+        <SyllabusSVG />
+      </Column>
+    </Row>
     {/* SVG  END*/}
     <Divider height="100px" />
 

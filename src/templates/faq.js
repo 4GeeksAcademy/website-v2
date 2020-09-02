@@ -25,10 +25,12 @@ const Faq = (props) => {
         <>
             <Wrapper
                 style="default"
-                image={yml.banner.image}
+                imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
                 border="bottom"
                 height="300px"
                 backgroundSize="cover"
+                paddingRight={`0`}
+
             >
                 <Divider height="100px" />
                 <Title

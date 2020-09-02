@@ -27,6 +27,8 @@ const Location = ({data, pageContext, yml}) => {
             height={`300px`}
             bgSize={`cover`}
             alt={yml.header.alt}
+            paddingRight={`0`}
+
         >
             <Divider height="50px" />
             <Row github={`/location`}>

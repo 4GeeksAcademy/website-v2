@@ -26,6 +26,8 @@ const Pricing = (props) => {
         height={`500px`}
         bgSize={`cover`}
         alt={yml.header_data.alt}
+        paddingRight={`0`}
+
       >
         <Divider height="100px" />
         <Title
@@ -82,13 +84,13 @@ const Pricing = (props) => {
           primary
         />
         <Div width="fit-content" margin="auto">
-            Select a program
+          Select a program
             <Button width="auto">Part-Time</Button>
         </Div>
-        {course && 
-          <PricesAndPayment 
-            type={pageContext.slug} 
-            locations={data.allLocationYaml.edges} 
+        {course &&
+          <PricesAndPayment
+            type={pageContext.slug}
+            locations={data.allLocationYaml.edges}
             course={course}
           />
         }
