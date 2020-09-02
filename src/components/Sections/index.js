@@ -345,6 +345,7 @@ export const Wrapper = props => {
                             align={props.align}
                             height={props.height}
                             backgroundSize={props.backgroundSize}
+                            paddingRight={props.paddingRight}
                         ><BackgroundSection
                             className={props.className}
                             height={props.height}
