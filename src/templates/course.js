@@ -415,7 +415,7 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" />
     </Wrapper>
 
-    {program_type === "full-time" && <TypicalDay data={yml.typical} />}
+    {program_type === "full_time" && <TypicalDay data={yml.typical} />}
 
     <Divider height="100px" />
     <Wrapper
