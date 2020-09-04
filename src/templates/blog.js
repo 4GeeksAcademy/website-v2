@@ -26,14 +26,12 @@ const Blog = ({data, pageContext, yml}) => {
         <>
             <WrapperImage
                 github={`/page/blog.${pageContext.lang}.yml`}
-                
-                border="bottom"
                 imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
                 bgSize="cover"
                 className={`img-header`}
                 height={`300px`}
                 paddingRight={`0`}
-
+                customBorderRadius="0 0 0 1.25rem"
             >
                 <Divider height="100px" />
                 <Title

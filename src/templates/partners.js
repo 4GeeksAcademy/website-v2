@@ -74,6 +74,7 @@ const Partners = (props) => {
         bgSize={`cover`}
         alt={yml.header_data.alt}
         paddingRight={`0`}
+        customBorderRadius="0 0 0 1.25rem"
 
       >
         <Divider height="100px" />

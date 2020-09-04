@@ -10,9 +10,11 @@ import styled from 'styled-components';
 export const ChooseWrap = styled.div`
     position: relative;
     cursor: pointer;
+    margin: ${props => props.margin};
     ${props => props.centered ? 
         `
-            margin: auto;
+            margin-right: auto;
+            margin-left: auto;
             width: 255px;
         `
         :
@@ -40,10 +42,11 @@ const ChooseProgram = (props) => {
     return (
         <ChooseWrap 
             centered={props.centered}
+            margin={props.margin}
             onMouseLeave={() => {
                 setStatus({ ...status, hovered: false });
                 setTimeout(() => {
-                    // setStatus(_status => ({ ..._status, toggle: _status.hovered }));
+                    setStatus(_status => ({ ..._status, toggle: _status.hovered }));
                 },300)
             }}
             onMouseEnter={() => setStatus({ ...status, hovered: true })}

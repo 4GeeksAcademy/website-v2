@@ -22,6 +22,8 @@ const Jobs = ({data, pageContext, yml}) => {
         className={`img-header`}
         height={`300px`}
         bgSize={`cover`}
+        border="bottom"
+        customBorderRadius="0 0 0 1.25rem"
         paddingRight={`0`}
 
       >

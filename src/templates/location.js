@@ -12,17 +12,17 @@ import {BrowserView} from "react-device-detect";
 const Location = ({data, pageContext, yml}) => {
     return (<>
         <WrapperImage
+            paddingBottom="50px"
             github={`/location`}
             imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
             filter="brightness(0.4)"
             className={`img-header`}
-            height={`300px`}
             bgSize={`cover`}
             alt={yml.header.alt}
             paddingRight={`0`}
 
         >
-            <Divider height="50px" />
+            <Divider height="100px" />
             <H1 type="h1"  fontSize="13px" color={Colors.white} align="center">{yml.seo_title}</H1>
             <Divider height="20px" />
             <Title
@@ -36,6 +36,7 @@ const Location = ({data, pageContext, yml}) => {
             />
           <ChooseProgram
             centered
+            margin="0 0 40px 0"
             programs={data.allChooseProgramYaml.edges[0].node.programs}
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
             closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}

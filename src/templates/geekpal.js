@@ -28,9 +28,10 @@ const GeekPal = (props) => {
     <>
       <WrapperImage
         imageData={yml.image && yml.image.childImageSharp.fluid}
-        border="bottom"
         height="auto"
         paddingRight={`0`}
+        filter="brightness(0.4)"
+        customBorderRadius="0 0 0 1.25rem"
       >
         <Divider height="50px" />
         <Title

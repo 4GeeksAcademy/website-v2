@@ -371,6 +371,7 @@ export const WrapperImage = (props) => {
                 color={props.background}
                 align={props.align}
                 height={props.height}
+                paddingRight="0"
                 backgroundSize={props.backgroundSize}
             ><StyledBackgroundSection
                 className={props.className}

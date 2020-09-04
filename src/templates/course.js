@@ -163,6 +163,8 @@ const Program = ({data, pageContext, yml}) => {
       bgSize={`cover`}
       alt={yml.header.alt}
       paddingRight={`0`}
+      customBorderRadius="0 0 0 1.25rem"
+
 
     >
       <Divider height="20%" />

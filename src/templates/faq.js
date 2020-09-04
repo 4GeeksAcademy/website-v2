@@ -29,7 +29,7 @@ const Faq = (props) => {
                 height="300px"
                 backgroundSize="cover"
                 paddingRight={`0`}
-
+                customBorderRadius="0 0 0 1.25rem"
             >
                 <Divider height="100px" />
                 <Title

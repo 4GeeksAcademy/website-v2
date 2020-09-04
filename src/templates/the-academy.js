@@ -24,6 +24,7 @@ const Why = (props) => {
                 height={`500px`}
                 bgSize={`cover`}
                 alt={yml.header_data.alt}
+                customBorderRadius="0 0 0 1.25rem"
                 paddingRight={`0`}
             >
                 <Divider height="100px" />
@@ -39,8 +40,7 @@ const Why = (props) => {
 
                 />
             </WrapperImage>
-            <Wrapper
-                >
+            <Wrapper>
                 <Credentials move="up" up="100" lang={data.allCredentialsYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
@@ -170,8 +170,6 @@ const Why = (props) => {
             </Wrapper>
             <Divider height="150px" />
             <Wrapper
-                
-
                 background={Colors.lightGray}
                 border="custom"
                 customBorderRadius="1.25rem 0 0 1.25rem"
