@@ -162,6 +162,8 @@ const Program = ({data, pageContext, yml}) => {
       height={`600px`}
       bgSize={`cover`}
       alt={yml.header.alt}
+      paddingRight={`0`}
+
     >
       <Divider height="20%" />
       <ProgramSelector week={week} context={pageContext} />
@@ -407,17 +409,16 @@ const Program = ({data, pageContext, yml}) => {
         variant="primary"
       />
       <section className="section" id="section-4"></section>
-      <PricesAndPayment 
-        type={pageContext.slug} 
-        locations={data.allLocationYaml.edges} 
+      <PricesAndPayment
+        type={pageContext.slug}
+        locations={data.allLocationYaml.edges}
         course={program_type}
       />
     </Wrapper>
 
-    { program_type === "full_time" && <TypicalDay data={yml.typical} />}
+    {program_type === "full_time" && <TypicalDay data={yml.typical} />}
 
     <Wrapper
-      
       margin="50px 0"
     >
       <Title

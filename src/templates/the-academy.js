@@ -24,6 +24,7 @@ const Why = (props) => {
                 height={`500px`}
                 bgSize={`cover`}
                 alt={yml.header_data.alt}
+                paddingRight={`0`}
             >
                 <Divider height="100px" />
                 <Title

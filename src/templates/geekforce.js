@@ -30,6 +30,8 @@ const GeekForce = (props) => {
         imageData={yml.image && yml.image.childImageSharp.fluid}
         border="bottom"
         height="auto"
+        paddingRight={`0`}
+
       >
         <Divider height="50px" />
         <Title

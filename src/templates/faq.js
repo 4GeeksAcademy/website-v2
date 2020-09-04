@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
-import {Row, Column, Wrapper, Divider} from '../components/Sections'
+import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Colors, Button, RoundImage, Address, Marker, Clock, Plus, Minus} from '../components/Styling'
 import {Card} from '../components/Card'
@@ -23,12 +23,13 @@ const Faq = (props) => {
     const {session, setSession} = useContext(SessionContext);
     return (
         <>
-            <Wrapper
-                
-                image={yml.banner.image}
+            <WrapperImage
+                imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
                 border="bottom"
                 height="300px"
                 backgroundSize="cover"
+                paddingRight={`0`}
+
             >
                 <Divider height="100px" />
                 <Title
@@ -39,7 +40,7 @@ const Faq = (props) => {
                     fontSize="46px"
                     textAlign="center"
                 />
-            </Wrapper>
+            </WrapperImage>
             <Divider height="50px" />
             <Wrapper
                 github={`/page/faq.${pageContext.lang}.yml`}

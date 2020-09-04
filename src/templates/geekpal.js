@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {Column, Row, Divider, Wrapper} from "../components/Sections";
+import {Column, Row, Divider, Wrapper, WrapperImage} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'
+import {Colors, Button, Check, RoundImage, Span, StyledBackgroundSection} from '../components/Styling'
 import Testimonials from '../components/Testimonials'
 import BaseRender from './_baseRender'
+
 
 function splitTitleString (string) {
   let stringObj = {
@@ -25,11 +26,11 @@ const GeekPal = (props) => {
   const {data, pageContext, yml} = props;
   return (
     <>
-      <Wrapper
-        
-        image={yml.image}
+      <WrapperImage
+        imageData={yml.image && yml.image.childImageSharp.fluid}
         border="bottom"
         height="auto"
+        paddingRight={`0`}
       >
         <Divider height="50px" />
         <Title
@@ -43,7 +44,7 @@ const GeekPal = (props) => {
           paragraphColor={Colors.white}
         />
         <Divider height="100px" />
-      </Wrapper>
+      </WrapperImage>
       <Divider height="50px" />
       <Wrapper
         
@@ -51,6 +52,14 @@ const GeekPal = (props) => {
         height="auto"
       >
         <Row align="center">
+          {/* <StyledBackgroundSection
+            image={yml.image_logo && yml.image_logo.childImageSharp.fluid}
+            height={`200px`}
+            width={`200px`}
+            bgSize={`cover`}
+          >
+
+          </StyledBackgroundSection> */}
           <RoundImage
             url={yml.image_logo}
             bsize="contain"

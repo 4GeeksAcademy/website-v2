@@ -22,6 +22,8 @@ const Location = ({data, pageContext, yml}) => {
             bgSize={`cover`}
 
             alt={yml.header.alt}
+            paddingRight={`0`}
+
         >
             <Divider height="50px" />
             <H1 type="h1"  fontSize="13px" color={Colors.white} align="center">{yml.seo_title}</H1>

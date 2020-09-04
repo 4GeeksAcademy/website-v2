@@ -22,6 +22,7 @@ const Jobs = ({data, pageContext, yml}) => {
         className={`img-header`}
         height={`300px`}
         bgSize={`cover`}
+        paddingRight={`0`}
 
       >
         <Divider height="100px" />
