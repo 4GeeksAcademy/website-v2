@@ -60,11 +60,11 @@ const Apply = (props) => {
             <Divider height="100px" />
             <Wrapper
                 github={`/page/apply.${pageContext.lang}.yml`}
-                style="default">
+                >
                 <Title
                     title={yml.tagline}
                     paragraph={yml.sub_heading}
-                    primary
+                    variant="primary"
                     size="8"
                 />
                 <Divider height="100px" />
@@ -227,9 +227,9 @@ const Apply = (props) => {
 
             </Wrapper>
             <Divider height="150px" />
-                <Wrapper style="default">
+                <Wrapper >
                     <Title
-                        primary
+                         variant="primary"
                         title={yml.testimonial_header.heading}
                         paragraph={yml.testimonial_header.sub_heading}
                         customParagraphSize="8"

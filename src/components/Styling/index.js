@@ -271,7 +271,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    &:after {
+    &:before, &:after {
         border-radius: ${props => props.borderRadius};
     }
   `
@@ -325,6 +325,7 @@ export const Button = styled(SmartButton)`
             display: ${props => props.display};
             padding: ${props => props.padding};
             margin: ${props => props.margin};
+            box-shadow: ${props => props.shadow};
             ${props => props.move === "up" ?
                 css`
                 transform: translateY(-${props => props.up});

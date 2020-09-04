@@ -9,7 +9,7 @@ const ThankYou = (props) => {
     const {data, pageContext, yml} = props;
     return (
         <>
-            <Wrapper style="default"
+            <Wrapper 
                 image={yml.banner.image}
                 height="300px"
                 border="bottom"
@@ -20,7 +20,7 @@ const ThankYou = (props) => {
                     color={Colors.white}
                     title={yml.banner.tagline}
                     paragraph={yml.banner.sub_heading}
-                    main
+                    variant="main"
                     paragraphColor={Colors.white}
                     fontSize="46px"
                     textAlign="center"
@@ -29,7 +29,7 @@ const ThankYou = (props) => {
 
             </Wrapper>
             <Divider height="100px" />
-            <Wrapper style="default">
+            <Wrapper >
                 <Row align="center">
                     <Column size="12" align="center">
                         <H2>{yml.content.title}</H2>

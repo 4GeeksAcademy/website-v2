@@ -1,10 +1,13 @@
 lang: "es"
 programs:
   - text: "Software Development"
+    schedule: "Horario Part-Time and Full-Time"
     link: "/es/course/desarrollo-web-full-stack-bootcamp-part-time"
   - text: "Software Engineering"
+    schedule: "Horario Part-Time únicamente"
     link: "/es/course/ingenieria-de-software-programacion"
   - text: "Desde Casa (Online)"
+    schedule: "Horario Part-Time and Full-Time"
     link: "/es/course/online-remoto-bootcamp-de-programacion"
 open_button_text: "SELECCIONAR PROGRAMA"
 close_button_text: "Close"

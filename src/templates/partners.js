@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
-import {Column, Row, Container, Divider, Wrapper} from "../components/Sections"
+import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections"
 import {Title, H4, Paragraph} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 import Credentials from '../components/Credentials'
@@ -66,8 +66,8 @@ const Partners = (props) => {
     <>
       {/* <Img className={`image`} fluid={yml.image.childImageSharp.fluid} alt="Florida Education Logo"></Img> */}
 
-      <Wrapper
-        style="default"
+      <WrapperImage
+        
         imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
         className={`img-header`}
         height={`500px`}
@@ -78,7 +78,7 @@ const Partners = (props) => {
         <Title
           size="5"
           title={yml.header_data.tagline}
-          main
+          variant="main"
           color={Colors.white}
           fontSize="46px"
           textAlign="center"
@@ -99,14 +99,14 @@ const Partners = (props) => {
           </Modal>
           <Button width="200px" margin="15px 0px" onClick={handleOpen} color="red" textColor="white">{yml.button_section.button_text}</Button>
         </Row>
-      </Wrapper>
+      </WrapperImage>
       <Wrapper
-        style="default">
+        >
         <Credentials move="up" up="100" lang={data.allCredentialsYaml.edges} />
       </Wrapper>
       <Divider height="50px" />
       <Wrapper
-        style="default"
+        
 
         background={Colors.lightGray}
         border="top"
@@ -132,11 +132,7 @@ const Partners = (props) => {
           footerLink={hiring.coding.footer_link}
           footerButton={hiring.coding.footer_button}
         />
-        {/* </Wrapper> */}
-        <Divider height="50px" />
-        {/* <Wrapper
-                    style="default"
-                > */}
+
         <Divider height="50px" />
 
         <WhoIsHiring

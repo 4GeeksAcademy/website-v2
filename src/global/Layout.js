@@ -31,7 +31,6 @@ const Layout = ({children, seo, context}) => {
         allFooterYaml {
           edges {
             node {
-              lang
               footer {
                 heading
                 items {
@@ -39,13 +38,16 @@ const Layout = ({children, seo, context}) => {
                   link
                 }
               }
+              fields {
+                lang
+              }
             }
           }
+
         }
-        allNavbarYaml {
+        allNavbarYaml{
           edges {
             node {
-              lang
               navbar {
                 name
                 link
@@ -57,14 +59,17 @@ const Layout = ({children, seo, context}) => {
                 button_color_text
                 button_background_color
               }
+              fields {
+                lang
+              }
             }
           }
         }
       }
     `}
       render={(data) => {
-        let myFooter = data.allFooterYaml.edges.filter(item => item.node.lang === context.lang)
-        let myNavbar = data.allNavbarYaml.edges.filter(item => item.node.lang === context.lang)
+        let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
+        let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
         return (
           <>
             {editMode && <div style={{ background: "yellow", padding: "15px" }}>
@@ -79,13 +84,13 @@ const Layout = ({children, seo, context}) => {
             </div>}
             <SEO {...seo} context={context} />
             {/* <NavB lang={myNavbar} /> */}
-            <Navbar lang={myNavbar} />
+            <Navbar menu={myNavbar.node.navbar} lang={context.lang} />
             <GlobalStyle />
             <>
               {children}
             </>
             <UpcomingProgram position="bottom" showOnScrollPosition={400} />
-            <Footer lang={myFooter} />
+            <Footer footer={myFooter.node.footer} />
           </>
         )
       }}

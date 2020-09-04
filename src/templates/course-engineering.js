@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
 import styled from 'styled-components';
 import {Card} from '../components/Card'
-import {Container, Row, Column, Wrapper, Divider, Sidebar, Div} from '../components/Sections'
+import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {H1, Title, Paragraph, H5} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
@@ -31,9 +31,8 @@ const Program = ({data, pageContext, yml}) => {
   const [open, setOpen] = React.useState(false);
 
   return (<>
-    <Wrapper
+    <WrapperImage
       github="/course"
-      style="default"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       className={`img-header`}
       height={`600px`}
@@ -42,7 +41,7 @@ const Program = ({data, pageContext, yml}) => {
     >
       <H1
         size="5"
-        main
+        variant="main"
         marginTop="140px"
         color={Colors.white}
         fontSize="46px"
@@ -52,7 +51,7 @@ const Program = ({data, pageContext, yml}) => {
       <Title
         size="5"
         title={yml.header.tagline}
-        primary
+        variant="primary"
         marginTop="0"
         color={Colors.white}
         fontSize="46px"
@@ -80,9 +79,18 @@ const Program = ({data, pageContext, yml}) => {
       >
         <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={() => setOpen(false)} />
       </Modal>
-    </Wrapper>
+    </WrapperImage>
 
-    <ProgramDetails details={yml.details} />
+    <Wrapper  margin="50px 0 0 0">
+      <Title
+          size="10"
+          marginTop="40px"
+          title={yml.details.heading}
+          paragraph={yml.details.sub_heading}
+          variant="primary"
+      />
+      <ProgramDetails details={yml.details} />
+    </Wrapper>
     
     <Wrapper
         margin="100px"
@@ -96,173 +104,160 @@ const Program = ({data, pageContext, yml}) => {
       />
     </Wrapper>
 
-    <Wrapper>
-      <section className="section" id="section-3"></section>
+    <Wrapper margin="50px 0">
       <Title
         size="10"
         title={yml.geeks_vs_others.heading}
         paragraph={yml.geeks_vs_others.sub_heading}
-        primary
+        variant="primary"
       />
-      <Divider height="50px" />
       <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
-      <Divider height="100px" />
     </Wrapper>
-
-    {/* SVG  END*/}
-    <Divider height="100px" />
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
     {/* ---------------------------- */}
-    <Container fluid>
-      <Row>
-        <Column size="2">
+    <Wrapper margin="50px 0">
+      <Row >
+        <Column size="6" paddingLeft={`0`}>
+          <Card
+            h_xs="400px"
+            h_sm="370px"
+            h_md="470px"
+            h_lg="470px"
+            h_xl="470px"
+            padding="20px"
+            shadow height="400px"
+            width="100%"
+            margin="10px 0px"
+            move="up"
+            up="100px">
+            <Row height="100%">
+              <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
+                <Div flexDirection={`column`} height={`20%`} justifyContent={`space-between`}>
+                  <Row marginLeft="0px" height={`70%`} >
+                    <RoundImage url="/images/geekpal.png" bsize="contain" height="100%" position="left" />
+                  </Row>
+                  <Row height={`20%`}>
+                    <Column size="12">
+                      <Paragraph
+                        fs_xs="10px"
+                        fs_sm="10px"
+                        fs_md="11px"
+                        fs_lg="12px"
+                        fs_xl="16px"
+                        color={Colors.black}
+                        customTextAlignSmall
+                        alignXs="left">
+                        {geek.geek_data.geek_pal_heading}
+                      </Paragraph>
+                    </Column>
+                  </Row>
+                </Div>
+                <Div flexDirection={`column`} height={`80%`} justifyContent={`space-between`}>
+                  <Row marginTop="15px" height={`100%`}>
+                    <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+                      {geek.geek_data.geek_pal.map((pal, index) => {
+                        return (
+                          <Row key={index} marginBottom="4px">
+                            <Column size="1" customRespSize respSize="1" alignSelf="center">
+                              <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                            </Column>
+                            <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                              <Paragraph
+                                fs_xs="10px"
+                                fs_sm="10px"
+                                fs_md="12px"
+                                fs_lg="12px"
+                                fs_xl="14px"
+                                color={Colors.gray}>{pal}</Paragraph>
+                            </Column>
+                          </Row>
+                        )
+                      })}
+                    </Column>
+                  </Row>
+                </Div>
+              </Column>
+              <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
+                <Link to={`/${pageContext.lang}/geekpal`}>
+                  <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                </Link>
+              </Column>
+            </Row>
+          </Card>
         </Column>
-        <Column size="8">
-          <Row >
-            <Column size="6" paddingLeft={`0`}>
-              <Card
-                h_xs="400px"
-                h_sm="370px"
-                h_md="470px"
-                h_lg="470px"
-                h_xl="470px"
-                padding="20px"
-                shadow height="400px"
-                width="100%"
-                margin="10px 0px"
-                move="up"
-                up="100px">
-                <Row height="100%">
-                  <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                    <Div flexDirection={`column`} height={`20%`} justifyContent={`space-between`}>
-                      <Row marginLeft="0px" height={`70%`} >
-                        <RoundImage url="/images/geekpal.png" bsize="contain" height="100%" position="left" />
-                      </Row>
-                      <Row height={`20%`}>
-                        <Column size="12">
-                          <Paragraph
-                            fs_xs="10px"
-                            fs_sm="10px"
-                            fs_md="11px"
-                            fs_lg="12px"
-                            fs_xl="16px"
-                            color={Colors.black}
-                            customTextAlignSmall
-                            alignXs="left">
-                            {geek.geek_data.geek_pal_heading}
-                          </Paragraph>
-                        </Column>
-                      </Row>
-                    </Div>
-                    <Div flexDirection={`column`} height={`80%`} justifyContent={`space-between`}>
-                      <Row marginTop="15px" height={`100%`}>
-                        <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
-                          {geek.geek_data.geek_pal.map((pal, index) => {
-                            return (
-                              <Row key={index} marginBottom="4px">
-                                <Column size="1" customRespSize respSize="1" alignSelf="center">
-                                  <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
-                                </Column>
-                                <Column size="8" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                                  <Paragraph
-                                    fs_xs="10px"
-                                    fs_sm="10px"
-                                    fs_md="12px"
-                                    fs_lg="12px"
-                                    fs_xl="14px"
-                                    color={Colors.gray}>{pal}</Paragraph>
-                                </Column>
-                              </Row>
-                            )
-                          })}
-                        </Column>
-                      </Row>
-                    </Div>
-                  </Column>
-                  <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
-                    <Link to={`/${pageContext.lang}/geekpal`}>
-                      <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
-                    </Link>
-                  </Column>
-                </Row>
-              </Card>
-            </Column>
-            <Column size="6" paddingRight={`0`}>
-              <Card
-                h_xs="400px"
-                h_sm="400px"
-                h_md="470px"
-                h_lg="470px"
-                h_xl="470px"
-                padding="20px"
-                shadow
-                height="400px"
-                width="100%"
-                margin="10px 0px"
-                move="up"
-                up="100px">
-                <Row height="100%">
-                  <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                    <Div flexDirection={`column`} height={`20%`}>
-                      <Row marginLeft="0px" height={`70%`}>
-                        <RoundImage url="/images/geekforce.png" bsize="contain" height="100%" position="left" />
-                      </Row>
-                      <Row height={`20%`}>
-                        <Column size="12">
-                          <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
-                            alignXs="left">
-                            {geek.geek_data.geek_force_heading}
-                          </Paragraph>
-                        </Column>
-                      </Row>
-                    </Div>
-                    <Div flexDirection={`column`} height={`80%`} justifyContent={`space-between`}>
-                      <Row marginTop="15px" height={`100%`}>
-                        <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
-                          {geek.geek_data.geek_force.map((pal, index) => {
-                            return (
-                              <Row key={index} marginBottom="2px" >
-                                <Column size="1" customRespSize respSize="1" alignSelf="center">
-                                  <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
-                                </Column>
-                                <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                                  <Paragraph fs_xs="10px"
-                                    fs_sm="10px"
-                                    fs_md="11px"
-                                    fs_lg="12px"
-                                    fs_xl="14px" color={Colors.gray}>{pal}</Paragraph>
-                                </Column>
-                              </Row>
-                            )
-                          })}
-                        </Column>
-                      </Row>
-                    </Div>
-                  </Column>
-                  <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
-                    <Link to={`/${pageContext.lang}/geekforce`}>
-                      <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
-                    </Link>
-                  </Column>
-                </Row>
-              </Card>
-            </Column>
-          </Row>
+        <Column size="6" paddingRight={`0`}>
+          <Card
+            h_xs="400px"
+            h_sm="400px"
+            h_md="470px"
+            h_lg="470px"
+            h_xl="470px"
+            padding="20px"
+            shadow
+            height="400px"
+            width="100%"
+            margin="10px 0px"
+            move="up"
+            up="100px">
+            <Row height="100%">
+              <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
+                <Div flexDirection={`column`} height={`20%`}>
+                  <Row marginLeft="0px" height={`70%`}>
+                    <RoundImage url="/images/geekforce.png" bsize="contain" height="100%" position="left" />
+                  </Row>
+                  <Row height={`20%`}>
+                    <Column size="12">
+                      <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
+                        alignXs="left">
+                        {geek.geek_data.geek_force_heading}
+                      </Paragraph>
+                    </Column>
+                  </Row>
+                </Div>
+                <Div flexDirection={`column`} height={`80%`} justifyContent={`space-between`}>
+                  <Row marginTop="15px" height={`100%`}>
+                    <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+                      {geek.geek_data.geek_force.map((pal, index) => {
+                        return (
+                          <Row key={index} marginBottom="2px" >
+                            <Column size="1" customRespSize respSize="1" alignSelf="center">
+                              <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                            </Column>
+                            <Column size="8" customRespSize respSize="8" paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                              <Paragraph fs_xs="10px"
+                                fs_sm="10px"
+                                fs_md="11px"
+                                fs_lg="12px"
+                                fs_xl="14px" color={Colors.gray}>{pal}</Paragraph>
+                            </Column>
+                          </Row>
+                        )
+                      })}
+                    </Column>
+                  </Row>
+                </Div>
+              </Column>
+              <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
+                <Link to={`/${pageContext.lang}/geekforce`}>
+                  <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                </Link>
+              </Column>
+            </Row>
+          </Card>
         </Column>
       </Row>
-    </Container>
-    {/* </Wrapper> */}
+    </Wrapper>
 
     <Wrapper
-      style="default"
+      
       github="/course"
     >
       <Title
         size="10"
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
-        primary
+        variant="primary"
       />
       <PricesAndPayment 
         type={pageContext.slug} 
@@ -277,20 +272,18 @@ const Program = ({data, pageContext, yml}) => {
       : null} */}
 
     <Wrapper
-      style="default"
+      margin="50px 0"
+      
     >
       <Title
         size="10"
         title={yml.alumni.heading}
         paragraph={yml.alumni.sub_heading}
         customParagraphSize="8"
-        primary
+        variant="primary"
       />
-      <Divider height="50px" />
       <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} />
-      <Divider height="100px" />
     </Wrapper>
-    <Divider height="100px" />
     {/* </div> */}
   </>
   )

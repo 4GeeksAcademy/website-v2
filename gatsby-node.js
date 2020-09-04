@@ -20,9 +20,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions;
 
     // curstom post types for the website
-    const types = ['MarkdownRemark', 'PageYaml', 'CourseYaml', 'LocationYaml', 'JobYaml'];
-
-    if (types.includes(node.internal.type)) {
+    if (['MarkdownRemark', 'FooterYaml', 'NavbarYaml', 'PageYaml', 'CourseYaml', 'LocationYaml', 'JobYaml'].includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});
 
@@ -394,7 +392,7 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
     const type = frontmatter ? "post" : m[1];
 
     const lang = m[3] || "en";
-    const customSlug = (typeof meta_info.slug === "string");
+    const customSlug = (meta_info!== undefined && typeof meta_info.slug === "string");
     const file_name = m[2];// + (lang == "es" ? "-es": "");
     const slug = (customSlug) ? meta_info.slug : file_name;
     const template = type === "page" ? file_name : type;

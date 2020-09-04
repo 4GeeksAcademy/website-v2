@@ -20,17 +20,17 @@ const Graduates = ({data, pageContext, yml}) => {
     <>
       <Divider height="100px" />
       <Wrapper
-        style="default">
+        >
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} showThumbs="true" changeIndex={() => setSlideIndex()} playerHeight="500px" />
       </Wrapper>
       <Divider height="50px" />
       <Wrapper
-        style="default"
+        
         height="400px"
       >
         <Title
           title={yml.about.heading}
-          primary
+          variant="primary"
           size="8"
           paragraph={yml.about.sub_heading}
         />

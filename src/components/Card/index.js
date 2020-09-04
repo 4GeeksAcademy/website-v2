@@ -6,6 +6,12 @@ import {Device} from '../Responsive'
 import {FadeIn} from '../Animations'
 import Fragment from "../Fragment"
 
+const _colors = () => ({ 
+    black: Colors.black,
+    grey: Colors.lightGray,
+    darkGray: Colors.borderGray,
+    blue: Colors.blue,
+})
 export const Card = styled(Fragment)`
     :focus {outline: none;};
     overflow: ${props => props.overflow};
@@ -16,20 +22,12 @@ export const Card = styled(Fragment)`
     width: ${props => props.width};
     height: ${props => props.height};
     padding: ${props => props.padding};
-    background: ${props => props.color === "black"
-        ?
-        `${Colors.black}`
-        : props.color === "grey"
-            ? `${Colors.lightGray}`
-            : props.color === "darkGray"
-                ? `${Colors.borderGray}`
-                : props.color === "blue"
-                    ? `${Colors.blue}`
-                    : `${Colors.white}`
-    };
+    background: ${props => _colors()[props.color] || Colors.white};
     border-radius: ${props => props.borders};
-    box-shadow: ${props => props.shadow
-        && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
+    box-shadow: ${props => props.shadow === true ?
+        `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
+        :
+        props.shadow
     }
     @media ${Device.xs}{
         height: ${props => props.h_xs};

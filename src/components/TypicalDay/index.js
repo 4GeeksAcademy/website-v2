@@ -55,14 +55,12 @@ const TypicalDay = (props) => {
 
     return (
         <>
-            <Wrapper
-                style="default"
-            >
+            <Wrapper>
                 <Title
                     size="10"
                     title="TYPICAL DAY AT THE ACADEMY"
                     paragraph="Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio"
-                    primary
+                    variant="primary"
                 />
                 <Divider height="50px" />
                 <Row height={`500px`} align={`center`}>

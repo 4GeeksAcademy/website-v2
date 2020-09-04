@@ -11,7 +11,7 @@ export default (props) => {
 return (<Fragment github="/components/4geeks_vs_others">
       <Title
         title={info.heading}
-        primary
+        variant="primary"
       />
       <Row height="auto" marginTop="50px">
         {info.why.map((i, index) => (

@@ -6,7 +6,6 @@ import {H5, Separator, Paragraph} from '../Heading'
 import Fragment from "../Fragment"
 
 const Footer = (props) => {
-    let col = props;
     // let col = data.allFooterYaml.edges;
     return (
         <Fragment github="/components/footer">
@@ -17,7 +16,7 @@ const Footer = (props) => {
                     <Column size="8">
 
                         <Row align="center">
-                            {col.lang[0].node.footer.map((item, index) => {
+                            {props.footer.map((item, index) => {
 
                                 return (
                                     <Column key={index} size="2" margin={item.heading === "COMPANY" || item.heading === "COMPAÑÍA" ? "0" : "0 0 20px 0"}>
@@ -26,9 +25,9 @@ const Footer = (props) => {
                                             : <Row height="20px"><H5 fontSize="16px" color={Colors.gray}>{item.heading}</H5></Row>}
                                         {item.heading != null
                                             ? item.heading === "COMPANY" || item.heading === "COMPAÑÍA"
-                                                ? <Row height="20px" marginBottom="10px"><Separator left width="100%" primary></Separator></Row>
-                                                : <Row height="20px" marginBottom="10px" ><Separator left primary></Separator></Row>
-                                            : <Row height="20px" marginBottom="10px" display_xs="none" display_sm="none"><Separator left primary></Separator></Row>
+                                                ? <Row height="20px" marginBottom="10px"><Separator left width="100%" variant="primary"></Separator></Row>
+                                                : <Row height="20px" marginBottom="10px" ><Separator left variant="primary"></Separator></Row>
+                                            : <Row height="20px" marginBottom="10px" display_xs="none" display_sm="none"><Separator left variant="primary"></Separator></Row>
                                         }
                                         {item.items.map((ln, i) => {
                                             return (

@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 import Layout from '../global/Layout';
 import styled from 'styled-components';
 import {Card} from '../components/Card'
-import {Container, Row, Column, Wrapper, Divider, Sidebar, Div} from '../components/Sections'
+import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {Title, H2, H3, H4, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
@@ -154,9 +154,9 @@ const Program = ({data, pageContext, yml}) => {
   return (<>
     {/* <div className={test}> */}
 
-    <Wrapper
+    <WrapperImage
       github="/course"
-      style="default"
+      
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       className={`img-header`}
       height={`600px`}
@@ -169,7 +169,7 @@ const Program = ({data, pageContext, yml}) => {
       <Title
         size="5"
         title={yml.header.tagline}
-        main
+        variant="main"
         color={Colors.white}
         paragraph={yml.header.paragraph}
         fontSize="46px"
@@ -190,14 +190,13 @@ const Program = ({data, pageContext, yml}) => {
       >
         <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
       </Modal>
-    </Wrapper>
+    </WrapperImage>
 
     <Wrapper>
       <Title
         size="10"
         title={"This Program By The Numbers"}
         paragraph={"Our results speak for themselves"}
-        primary
       />
       <Credentials lang={data.allCredentialsYaml.edges} />
     </Wrapper>
@@ -218,28 +217,34 @@ const Program = ({data, pageContext, yml}) => {
       </Scrollspy>
     </Sidebar>
 
-    <Divider height="100px" />
     <Wrapper
-      style="default"
+      
+      margin="50px"
     >
       <section className="section" id="section-3"></section>
       <Title
         size="10"
         title={yml.geeks_vs_others.heading}
         paragraph={yml.geeks_vs_others.sub_heading}
-        primary
+        variant="primary"
       />
       <Divider height="50px" />
       <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
-      <Divider height="100px" />
     </Wrapper>
 
-    <Divider height="100px" />
     {/* PROGRAM DETAILS */}
     {/* --------------- */}
-    <ProgramDetails details={yml.details} />
-    {/* SVG  START*/}
-    <Divider height="100px" />
+    <Wrapper >
+      <Title
+          size="10"
+          marginTop="40px"
+          title={yml.details.heading}
+          paragraph={yml.details.sub_heading}
+          variant="primary"
+      />
+      <ProgramDetails details={yml.details} />
+    </Wrapper>
+
     <Row height="100%">
       <Column size="12">
         <SyllabusSVG />
@@ -250,7 +255,6 @@ const Program = ({data, pageContext, yml}) => {
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
     {/* ---------------------------- */}
-    <section className="section" id="section-1"></section>
     <Container fluid>
       <Row>
         <Column size="2">
@@ -390,19 +394,17 @@ const Program = ({data, pageContext, yml}) => {
       </Row>
     </Container>
     {/* </Wrapper> */}
-    <Divider height="100px" />
 
     <Wrapper
-      style="default"
+      
+      margin="50px 0"
       github="/course"
     >
-
-
       <Title
         size="10"
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
-        primary
+        variant="primary"
       />
       <section className="section" id="section-4"></section>
       <PricesAndPayment 
@@ -410,28 +412,23 @@ const Program = ({data, pageContext, yml}) => {
         locations={data.allLocationYaml.edges} 
         course={program_type}
       />
-      <Divider height="100px" />
     </Wrapper>
 
-    { program_type === "full-time" && <TypicalDay data={yml.typical} />}
+    { program_type === "full_time" && <TypicalDay data={yml.typical} />}
 
-    <Divider height="100px" />
     <Wrapper
-      style="default"
+      
+      margin="50px 0"
     >
       <Title
         size="10"
         title={yml.alumni.heading}
         paragraph={yml.alumni.sub_heading}
         customParagraphSize="8"
-        primary
+        variant="primary"
       />
-      <Divider height="50px" />
-      <section className="section" id="section-5"></section>
       <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} />
-      <Divider height="100px" />
     </Wrapper>
-    <Divider height="100px" />
     {/* </div> */}
   </>
   )

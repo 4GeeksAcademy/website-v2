@@ -1,16 +1,9 @@
 import React, {useState, useEffect, useContext} from 'react';
-import Layout from '../global/Layout';
-import styled from 'styled-components';
 import {Card} from '../components/Card'
-import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
+import ChooseProgram from '../components/ChooseProgram'
+import {Container, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
 import {Title, H1, H2, H3, Span, Paragraph, Separator} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, RoundImage, BackgroundSection} from '../components/Styling'
-import GeeksVsOthers from '../components/GeeksVsOthers'
-import Mentors from '../components/Mentors'
-import PricesAndPayment from '../components/PricesAndPayment'
-import AlumniProjects from '../components/AlumniProjects'
-import Credentials from '../components/Credentials'
-import Scrollspy from 'react-scrollspy'
 import BaseRender from './_baseRender'
 import {SessionContext} from '../session.js'
 import ProgramSelector from '../components/ProgramSelector'
@@ -20,34 +13,36 @@ import {BrowserView} from "react-device-detect";
 
 const Location = ({data, pageContext, yml}) => {
     return (<>
-        <Wrapper
-            style="default"
+        <WrapperImage
+            github={`/location`}
+            
             imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
             className={`img-header`}
             height={`300px`}
             bgSize={`cover`}
+
             alt={yml.header.alt}
         >
             <Divider height="50px" />
-            <Row github={`/location`}>
-                <Column size="12">
-                    <H1 color={Colors.white} fontSize="24px" align="center">{yml.seo_title}</H1>
-                </Column>
-            </Row>
-            {/* <ProgramSelector week={week} /> */}
+            <H1 type="h1"  fontSize="13px" color={Colors.white} align="center">{yml.seo_title}</H1>
             <Divider height="20px" />
-
             <Title
-                size="5"
-                title={yml.tagline}
-                main
+                type="h2"
+                title={yml.header.tagline}
+                paragraph={yml.header.paragraph}
+                variant="main"
                 color={Colors.white}
                 fontSize="46px"
                 textAlign="center"
             />
-        </Wrapper>
+          <ChooseProgram
+            programs={data.allChooseProgramYaml.edges[0].node.programs}
+            openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+            closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+          />
+        </WrapperImage>
         <Divider height="100px" />
-        <Wrapper style="default">
+        <Wrapper >
             <Row>
                 <Column
                     size="12"
@@ -72,13 +67,13 @@ const Location = ({data, pageContext, yml}) => {
                                                     fs_md="18px"
                                                     fs_lg="20px"
                                                     fs_xl="24px"
-                                                    primary align="left" >{yml.info_box.heading}</H3>
+                                                    align="left" >{yml.info_box.heading}</H3>
                                                 <Paragraph primary margin="5px 0" align="left" ></Paragraph>
                                             </Column>
                                         </Row>
                                         <Row height="5%" align="around">
                                             <Column size="12" alignSelf="center">
-                                                <Separator primary />
+                                                <Separator  variant="primary" />
                                             </Column>
                                         </Row>
                                         <Row height="30%">
@@ -94,13 +89,13 @@ const Location = ({data, pageContext, yml}) => {
                                                     fs_md="18px"
                                                     fs_lg="20px"
                                                     fs_xl="24px"
-                                                    primary align="left" >{yml.info_box.contact_heading}</H3>
+                                                    align="left" >{yml.info_box.contact_heading}</H3>
                                                 <Paragraph primary margin="5px 0" align="left" ></Paragraph>
                                             </Column>
                                         </Row>
                                         <Row height="5%" align="around">
                                             <Column size="12" alignSelf="center">
-                                                <Separator primary />
+                                                <Separator  variant="primary" />
                                             </Column>
                                         </Row>
                                         <Row height="5%">
@@ -143,7 +138,7 @@ const Location = ({data, pageContext, yml}) => {
             </Row>
         </Wrapper>
         <Divider height="100px" />
-        <Wrapper style="default">
+        <Wrapper >
             <Row>
                 <Column
                     size="12"
@@ -194,13 +189,15 @@ const Location = ({data, pageContext, yml}) => {
                                                     fs_sm="20px"
                                                     fs_md="18px"
                                                     fs_lg="20px"
-                                                    fs_xl="24px" primary align="left" >{yml.carousel_box.heading}</H3>
+                                                    fs_xl="24px" 
+                                                    align="left" 
+                                                >{yml.carousel_box.heading}</H3>
                                                 <Paragraph primary margin="5px 0" align="left" ></Paragraph>
                                             </Column>
                                         </Row>
                                         <Row height="5%" align="around">
                                             <Column size="12" alignSelf="center">
-                                                <Separator primary />
+                                                <Separator  variant="primary" />
                                             </Column>
                                         </Row>
                                         <Row height="30%">
@@ -239,6 +236,7 @@ export const query = graphql`
             seo_title
             header{
                 tagline
+                paragraph
                 sub_heading
                 image {
                     childImageSharp {
@@ -288,6 +286,20 @@ export const query = graphql`
             
         }
       }
+    }
+    allChooseProgramYaml(filter: {lang: {eq: $lang}}) {
+        edges {
+          node {
+            lang
+            programs{
+                text
+                link
+                schedule
+            }
+            open_button_text
+            close_button_text
+          }
+        }
     }
   }
 `;

@@ -1,15 +1,23 @@
 meta_info:
-  slug: online-remote-coding-bootcamp
+  slug: full-stack-web-development-bootcamp-part-time
   title: ""
+  bc_slug: "full-stack"
   description: null
   image: ""
-  template: "course-online"
   keywords: ""
-  redirects: []
+  redirects:
+    [
+      "/part-time",
+      "/program",
+      "/us/part-time",
+      "/us/course/part-time",
+      "us/full-stack",
+    ]
 
 header:
-  tagline: "FULL STACK DEVELOPER (ONLINE)"
+  tagline: "FULL STACK DEVELOPER"
   image: "../../../static/images/bg/bg-pr.jpg"
+  paragraph: "From zero to a get paid as a developer, learn the skills of the present and future. \\n Boost your professional career, get hired by a tech company."
   alt: ""
 
 button:
@@ -47,27 +55,27 @@ details:
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."
       slug: "web-development"
       duration: "6 weeks"
-      step: 6
+      step: 5.9
     - module_name: "API'S"
       title: "API Development"
       description: "Mainly focused on Python, get ready to build your own API and interact with 3rd party applications like Twillio, Stripe and many more."
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."
       slug: "web-development"
-      duration: "6 weeks"
+      duration: "2 weeks"
       step: 2
-    - module_name: "ADVANCED APPLICATION"
+    - module_name: "ADVANCED APPS"
       title: "Advanced Application"
       description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
       slug: "advanced-application"
       duration: "6 wks"
-      step: 5.9
+      step: 6
     - module_name: "LIFELONG SUPPORT"
       title: "Lifelong Support"
       description: "Keep practicing with the academy's help, we will coaching you for life, build your Resume, Github, LinkedIn, help you apply for jobs, support you once you get a job"
       projects: "Get paid to keep learning, raise your income gradually as you become a more senior developer, enjoy and build software for life."
       slug: "lifelong-learning"
-      duration: "1+ week"
+      duration: "forever"
       step: 0.1
 
 ## 4GEEKS VS OTHERS SECTION

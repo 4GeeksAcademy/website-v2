@@ -1,6 +1,6 @@
 meta_info:
   slug: "costa-rica-san-jose"
-  title: ""
+  title: "4Geeks Academy Coding Bootcamp - Costa Rica, San Jose"
   position: 5
   description: null
   image: ""
@@ -9,7 +9,7 @@ meta_info:
   keywords: ""
   redirects: []
 
-seo_title: "4Geeks Academy Costa Rica"
+seo_title: "Aprende a programar en Costa Rica"
 header:
   tagline: "4GEEKS ACADEMY EN COSTA RICA"
   sub_heading: ""
@@ -132,7 +132,7 @@ prices:
         price_info: ""
       button:
         button_text: "APPLY NOW"
-
+        
 city: "Maracaibo"
 name: "Maracaibo"
 latitude: "10.664500"

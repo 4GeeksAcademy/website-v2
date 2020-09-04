@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Column, Row, Wrapper, Divider} from '../components/Sections';
+import {Container, Column, Row, Wrapper, Divider, WrapperImage} from '../components/Sections';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
 import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage, BackgroundSection} from '../components/Styling'
@@ -18,8 +18,7 @@ const Why = (props) => {
     const hiring = data.allPartnerYaml.edges[0].node;
     return (
         <>
-            <Wrapper
-                style="default"
+            <WrapperImage
                 imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
                 className={`img-header`}
                 height={`500px`}
@@ -32,27 +31,27 @@ const Why = (props) => {
                     color={Colors.white}
                     title={yml.header_data.tagline}
                     paragraph={yml.header_data.sub_heading}
-                    main
+                    variant="main"
                     paragraphColor={Colors.white}
                     fontSize="46px"
                     textAlign="center"
 
                 />
-            </Wrapper>
+            </WrapperImage>
             <Wrapper
-                style="default">
+                >
                 <Credentials move="up" up="100" lang={data.allCredentialsYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
                 github="/components/outcomes"
-                style="default"
+                
             >
                 <Title
                     size="10"
                     title={yml.outcomes.heading}
                     paragraph={yml.outcomes.sub_heading}
-                    primary
+                    variant="primary"
                     customParagraphSize="8"
                 />
                 <Divider height="20px" />
@@ -160,12 +159,17 @@ const Why = (props) => {
                 </Row>
             </Wrapper>
             <Divider height="100px" />
-            <Wrapper style="default">
-                <Title size="8" title={yml.cornerstones.heading} paragraph={yml.cornerstones.sub_heading} primary />
+            <Wrapper >
+                <Title 
+                    size="8" 
+                    title={yml.cornerstones.heading} 
+                    paragraph={yml.cornerstones.sub_heading} 
+                    variant="primary" 
+                />
             </Wrapper>
             <Divider height="150px" />
             <Wrapper
-                style="default"
+                
 
                 background={Colors.lightGray}
                 border="custom"
@@ -227,13 +231,18 @@ const Why = (props) => {
 
                 </Row>
             </Wrapper>
-            <Wrapper margin="50px 0 150px 0" style="default">
+            <Wrapper margin="50px 0 150px 0" >
                 {/* MEET THE TEAM */}
-                <Title size="8" title={yml.staff.heading} paragraph={yml.staff.sub_heading} primary />
+                <Title 
+                    size="8" 
+                    title={yml.staff.heading} 
+                    paragraph={yml.staff.sub_heading}
+                    variant="primary"
+                 />
                 <Mentors />
             </Wrapper>
             <Wrapper
-                style="default"
+                
 
                 background={Colors.lightGray}
                 border="custom"
@@ -252,12 +261,12 @@ const Why = (props) => {
                                     <Divider height="10%" />
                                     <Row height="10%">
                                         <Column size="10">
-                                            <H3 primary align="left" >{yml.story.heading}</H3>
+                                            <H3 align="left" >{yml.story.heading}</H3>
                                         </Column>
                                     </Row>
                                     <Row height="10%">
                                         <Column size="12">
-                                            <Separator primary />
+                                            <Separator  variant="primary" />
                                         </Column>
                                     </Row>
                                     <Row height="50%">
@@ -321,9 +330,9 @@ const Why = (props) => {
             </Wrapper>
             <Divider height="100px" />
             <Wrapper
-                style="default">
+                >
                 <Title
-                    primary
+                    variant="primary"
                     title={yml.posts.heading}
                     paragraph={yml.posts.sub_heading}
                     customParagraphSize="8"
@@ -334,7 +343,7 @@ const Why = (props) => {
                 <RecentPosts />
             </Wrapper>
             <Divider height="100px" />
-            <Wrapper style="default" background={Colors.lightGray} border="top">
+            <Wrapper  background={Colors.lightGray} border="top">
                 <Divider height="100px" />
                 <WhoIsHiring
                     margin="50px"

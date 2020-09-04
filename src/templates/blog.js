@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
+import {Container, Row, Column, Divider, Wrapper, WrapperImage} from '../components/Sections'
 import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseRender from './_baseRender'
@@ -24,9 +24,9 @@ const Blog = ({data, pageContext, yml}) => {
 
     return (
         <>
-            <Wrapper
+            <WrapperImage
                 github={`/page/blog.${pageContext.lang}.yml`}
-                style="default"
+                
                 border="bottom"
                 imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
                 bgSize="cover"
@@ -36,7 +36,7 @@ const Blog = ({data, pageContext, yml}) => {
                 <Divider height="100px" />
                 <Title
                     title={yml.banner.tagline}
-                    main
+                    variant="main"
                     size="8"
                     color={Colors.white}
                     paragraph={yml.banner.sub_heading}
@@ -44,10 +44,10 @@ const Blog = ({data, pageContext, yml}) => {
                     textAlign="center"
 
                 />
-            </Wrapper>
+            </WrapperImage>
             <Divider height="50px" />
 
-            <Wrapper style="default">
+            <Wrapper >
                 <Row align="left">
                     <Column size="12">
                         <H4
@@ -61,7 +61,7 @@ const Blog = ({data, pageContext, yml}) => {
                     </Column>
                 </Row>
                 <Row>
-                    <Separator primary />
+                    <Separator variant="primary" />
                 </Row>
                 <Divider height="50px" />
                 <Row github={`/blog`}>
@@ -136,7 +136,7 @@ const Blog = ({data, pageContext, yml}) => {
                     </div>
                 </Row>
             </Wrapper>
-            <Wrapper style="default">
+            <Wrapper >
                 <Row align="left">
                     <Column size="12">
                         <H4
@@ -150,7 +150,7 @@ const Blog = ({data, pageContext, yml}) => {
                     </Column>
                 </Row>
                 <Row>
-                    <Separator primary />
+                    <Separator  variant="primary" />
                 </Row>
                 <Divider height="50px" />
                 <Row>

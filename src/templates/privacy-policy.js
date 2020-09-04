@@ -16,7 +16,7 @@ const Privacy = (props) => {
         <>
             <Wrapper
                 github="/components/privacy"
-                style="default"
+                
 
                 border="bottom"
                 height="auto"
@@ -28,7 +28,7 @@ const Privacy = (props) => {
                     color={Colors.black}
                     title={yml.header.tagline}
                     paragraph={yml.header.sub_heading}
-                    main
+                    variant="main"
                     paragraphColor={Colors.black}
                     fontSize="46px"
                     textAlign="center"
@@ -36,7 +36,7 @@ const Privacy = (props) => {
                 />
             </Wrapper>
             <Divider height="100px" />
-            <Wrapper style="default">
+            <Wrapper >
                 {yml.sections.map((section, i) => {
                     return (
                         <Row key={i} align="center" marginBottom="30px">

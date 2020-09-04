@@ -1,16 +1,25 @@
 meta_info:
-  slug: online-remoto-bootcamp-de-programacion
+  slug: desarrollo-web-full-stack-bootcamp-part-time
   title: ""
   description: null
+  bc_slug: "full-stack"
   image: ""
-  template: "course-online" # js component that will be handling the rendering
   keywords: ""
-  redirects: []
+  redirects:
+    [
+      "/part-time",
+      "/programa",
+      "/es/part-time",
+      "/es/course/part-time",
+      "/es/full-stack",
+    ]
 
 header:
-  tagline: "FULL STACK DEVELOPER (ONLINE)"
+  tagline: "FULL STACK DEVELOPER"
   image: "../../../static/images/bg/bg-pr.jpg"
+  paragraph: "From zero to a get paid as a developer, learn the skills of the present and future, boost your professional career, get hired by a tech company."
   alt: ""
+
 button:
   syllabus_button_text: "REQUEST SYLLABUS"
   syllabus_submit_text: "SUBMIT"
@@ -47,6 +56,13 @@ details:
       slug: "desarrollo-web"
       duration: "6 sem"
       step: 6
+    - module_name: "API'S"
+      title: "API Development"
+      description: "Mainly focused on Python, get ready to build your own API and interact with 3rd party applications like Twillio, Stripe and many more."
+      projects: "Coursera clone, Instagram clone, Youtube clone, etc."
+      slug: "web-development"
+      duration: "6 weeks"
+      step: 2
     - module_name: "APLICACIÓN AVANZADA"
       title: "Aplicación avanzada"
       description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publicando tu sitio web, etc."
@@ -59,8 +75,8 @@ details:
       description: "Keep practicing with the academy's help, we will coaching you for life, build your Resume, Github, LinkedIn, help you apply for jobs, support you once you get a job"
       projects: "Get paid to keep learning, raise your income gradually as you become a more senior developer, enjoy and build software for life."
       slug: "lifelong-learning"
-      duration: "forever"
-      step: 1
+      duration: "1+ week"
+      step: 0
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

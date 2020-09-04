@@ -14,7 +14,7 @@ html, body
 .img-border::before{
     border-radius: 1.25rem;
 }
-.img-testimonials::before{
+.b-corner-50, .b-corner-50::before, .b-corner-50::after{
     border-radius: 50%;
 }
 .img-header::before{

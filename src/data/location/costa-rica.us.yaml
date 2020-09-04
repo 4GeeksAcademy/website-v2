@@ -1,6 +1,6 @@
 meta_info:
   slug: "costa-rica"
-  title: ""
+  title: "4Geeks Academy Costa Rica"
   position: 5
   description: null
   image: ""
@@ -9,10 +9,11 @@ meta_info:
   unlisted: false
   redirects: []
 
-seo_title: "4Geeks Academy Costa Rica"
+seo_title: "Coding Bootcamp Costa Rica"
 header:
-  tagline: "4GEEKS ACADEMY IN COSTA RICA"
+  tagline: "Learn to Code in Costa Rica"
   sub_heading: ""
+  paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Costa Rica with 1000+ graduates"
   image: "../../../static/images/locations/mcbo-loc-2.png"
   alt: ""
 

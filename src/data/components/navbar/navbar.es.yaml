@@ -1,4 +1,3 @@
-lang: "es"
 navbar:
   - name: "Home"
     link: "/"
@@ -6,8 +5,8 @@ navbar:
     link: "/la-academia"
   - name: "Programas"
     link: "/curso/desarrollo-web-full-stack-bootcamp-part-time"
-  - name: "Precios"
-    link: "/precios"
+  # - name: "Precios"
+  #   link: "/precios"
   - name: "Aliados"
     link: "/aliados"
 button:

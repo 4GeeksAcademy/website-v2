@@ -10,9 +10,10 @@ const WhoIsHiring = props => {
     <Fragment margin={props.margin} padding="20px 0" github="/components/partner">
       <Title
         title={props.tagline}
-        primary
+        variant="primary"
         size="8"
         paragraph={props.subheading}
+        paragraphColor={Colors.gray}
         customParagraphSize="12"
       />
       <Row >

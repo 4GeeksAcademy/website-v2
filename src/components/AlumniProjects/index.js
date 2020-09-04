@@ -48,7 +48,7 @@ const AlumniProjects = ({lang, showThumbs}) => {
                                 paddingLeft={`30px`}
                                 paddingRight={`25px`}
                             >
-                                <H3 primary color={Colors.blue} align="left" >{`Meet  `}</H3>
+                                <H3 color={Colors.blue} align="left" >{`Meet  `}</H3>
                                 {item.alumni.map((alumni, i) => {
                                     return (
                                         <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
@@ -60,7 +60,7 @@ const AlumniProjects = ({lang, showThumbs}) => {
                                                         fs_md="18px"
                                                         fs_lg="20px"
                                                         fs_xl="20px"
-                                                        primary align_xs="center"
+                                                        align_xs="center"
                                                         align="left"
                                                         fontWeight={`400`}
                                                     >{`${alumni.first_name} ${alumni.last_name}`}

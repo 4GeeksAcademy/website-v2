@@ -3,6 +3,8 @@ import styled, {css} from 'styled-components';
 import Img from "gatsby-image"
 import {Link, useStaticQuery, graphql} from 'gatsby';
 import {Device} from '../Responsive';
+import ChooseProgram from '../ChooseProgram'
+import {Card} from '../Card'
 import PropTypes from 'prop-types';
 import {Colors, Button} from '../Styling';
 import Fragment from "../Fragment"
@@ -15,23 +17,25 @@ export const NavBar = styled.nav`
     align-items: center;
     height: 55px;
     z-index: 10000;
-@media ${Device.xs}{
-  position: fixed;
-  width: 100%;
-}
-@media ${Device.sm}{
-  position: fixed;
-  width: 100%;
-}
-@media ${Device.md}{
+    @media ${Device.xs}{
+      height: ${props => props.open ? "100vh" : null};
+      position: fixed;
+      width: 100%;
+    }
+    @media ${Device.sm}{
+      height: ${props => props.open ? "100vh" : null};
+      position: fixed;
+      width: 100%;
+    }
+    @media ${Device.md}{
 
-}
-@media ${Device.lg}{
+    }
+    @media ${Device.lg}{
 
-}
-@media ${Device.xl} {
+    }
+    @media ${Device.xl} {
 
-}
+    }
 `
 export const Nav = styled.ul`
     display: flex;
@@ -40,13 +44,14 @@ export const Nav = styled.ul`
 export const NavItem = styled.li`
     text-transform: uppercase;
     margin: 0 .5rem;
+    text-align: center;
     font-family: lato, sans-serif;
     font-size: 12px;
     @media ${Device.xs}{
-      font-size: ${props => props.fontSize || "10px"};
+      font-size: ${props => "16px"};
     }
     @media ${Device.sm}{
-      font-size: ${props => props.fontSize || "10px"};
+      font-size: ${props => "16px"};
     }
     @media ${Device.md}{
       font-size: ${props => props.fontSize || "10px"};
@@ -116,22 +121,19 @@ const StyledBurger = styled.div`
 `;
 
 export const Burger = (props) => {
-  const [open, setOpen] = useState(false)
-
+  const [open, setOpen] = React.useState(false)
   return (
-    <Fragment github="/components/alumni_projects">
+    <NavBar open={open}>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open} menu={props} />
-      {/* {open === true ? <RightNav open={open} menu={props} /> : null} */}
-      {/* <NavButton open={open} /> */}
-
-    </Fragment>
+      <RightNav lang={props.lang} open={open} menu={props.menu} />
+    </NavBar>
   )
 }
+export default Burger;
 const ButtonStyle = styled.div`
     display: flex;
     flex-flow: row nowrap;
@@ -198,27 +200,22 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+  color: black;
   li {
     padding: 18px 10px;
+    color: black;
   }
   @media ${Device.xs} {
+    width: 100%;
     flex-flow: column nowrap;
     align-items: center;
-    li {
-      color: black;
-      
-    }
   }
   @media ${Device.sm} {
+    width: 100%;
     flex-flow: column nowrap;
     align-items: center;
-    li {
-      color: black;
-      font-size: 10px;
-    }
   }
   @media ${Device.md} {
-    
     li {
       color: black;
       font-size: 10px;
@@ -226,9 +223,23 @@ const Ul = styled.ul`
   }
 `;
 
-export const RightNav = ({menu, open}) => {
+export const RightNav = ({lang, menu, open}) => {
   const data = useStaticQuery(graphql`
     query {
+      allChooseProgramYaml {
+        edges {
+          node {
+            lang
+            programs{
+                text
+                link
+                schedule
+            }
+            open_button_text
+            close_button_text
+          }
+        }
+      }
       file(relativePath: { eq: "images/4G_logo_negro.png" }) {
         childImageSharp {
           fluid(maxWidth: 225) {
@@ -236,22 +247,39 @@ export const RightNav = ({menu, open}) => {
           }
           fixed(width: 75) {
             ...GatsbyImageSharpFixed
-          }
+          } 
         }
       }
     }
   `)
+  const content = data.allChooseProgramYaml.edges.find(({node}) => node.lang === lang);
   return (
-      <Div height="100vh" open={open}>
+      <Div open={open}>
         <Link to={'/'}>
           <Img fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo"></Img>
         </Link>
         <Ul open={open}>
-          {menu.menu.navbar && menu.menu.navbar.map((item, index) => {
-            return (
-              <NavItem fontSize="16px"><Link to={item.link} key={index}>{item.name}</Link></NavItem>
-            )
-          })}
+          {menu && menu.map((item, index) => 
+            (item.name === "The Programs" || item.name==="Programas") ?
+                <ChooseProgram
+                  key={index}
+                  programs={content.node.programs}
+                  marginTop="-3px"
+                  borderRadius="0 .75rem .75rem .75rem"
+                  openLabel={content.node.close_button_text}
+                  closeLabel={content.node.open_button_text}
+                  selector={({ status, setStatus }) => 
+                    !status.toggle ?
+                      <NavItem fontSize="16px" onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
+                      :
+                      <Card shadow borders="1.25rem 1.25rem 0 0">
+                        <NavItem fontSize="16px" onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
+                      </Card>
+                  }
+                />
+                :
+                <NavItem fontSize="16px"><Link to={item.link} key={index}>{item.name}</Link></NavItem>
+          )}
         </Ul>
         <Link to="/apply"><Button width="130px" color={Colors.red} textColor={Colors.white}>Apply</Button></Link>
       </Div>
@@ -259,15 +287,4 @@ export const RightNav = ({menu, open}) => {
 }
 
 
-const Navbar = (props) => {
-  console.log("navbar props:", props)
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-  return (
-    <NavBar>
-      {/* <Link to={'/'}><img src="/images/4G_logo_negro.png" width="70" alt=""></img></Link> */}
-      <Burger menu={props.lang[0].node} />
-    </NavBar>
-  )
-}
-export default Navbar;
+

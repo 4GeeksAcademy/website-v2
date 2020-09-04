@@ -40,7 +40,6 @@ const ProgramSelector = (props) => {
   const classes = useStyles();
 
   let locArray = session.locations;
-  console.log("Locations", locArray)
   // let locArray = data.loc.edges;
   let weekArray = ["16", "9"]
   let link = "";

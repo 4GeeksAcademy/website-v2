@@ -191,6 +191,7 @@ prices:
         price_info: "per month"
       button:
         button_text: "APPLY NOW"
+
 ## UPCOMING COURSES
 # upcoming_courses:
 #   -

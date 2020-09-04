@@ -28,7 +28,7 @@ const Job = ({data, pageContext, yml}) => {
     });
     return (<>
         <Wrapper
-            style="default"
+            
             
             url={yml.banner_image}
             border="bottom"
@@ -47,7 +47,7 @@ const Job = ({data, pageContext, yml}) => {
             <Title
                 size="5"
                 title={yml.banner_heading}
-                main
+                variant="main"
                 color={Colors.black}
                 fontSize="46px"
                 textAlign="center"
@@ -56,7 +56,7 @@ const Job = ({data, pageContext, yml}) => {
 
         </Wrapper>
         <Divider height="100px" />
-        <Wrapper style="default">
+        <Wrapper >
             <Card height="auto"
                 width="100%"
                 shadow
@@ -84,7 +84,7 @@ const Job = ({data, pageContext, yml}) => {
                             </Row>
                             <Row height="5%" align="center">
 
-                                <Separator primary />
+                                <Separator  variant="primary" />
 
                             </Row>
                             <Divider height="10px" />
@@ -186,7 +186,7 @@ const Job = ({data, pageContext, yml}) => {
                     null}
             </Card>
         </Wrapper>
-        <Wrapper style="default">
+        <Wrapper >
 
             <Row align="around" height="100%" >
                 <Column size="12" alignSelf="center" >

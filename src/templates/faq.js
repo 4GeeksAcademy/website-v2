@@ -24,7 +24,7 @@ const Faq = (props) => {
     return (
         <>
             <Wrapper
-                style="default"
+                
                 image={yml.banner.image}
                 border="bottom"
                 height="300px"
@@ -34,7 +34,7 @@ const Faq = (props) => {
                 <Title
                     size="5"
                     title={yml.banner.tagline}
-                    main
+                    variant="main"
                     color={Colors.white}
                     fontSize="46px"
                     textAlign="center"
@@ -43,7 +43,7 @@ const Faq = (props) => {
             <Divider height="50px" />
             <Wrapper
                 github={`/page/faq.${pageContext.lang}.yml`}
-                style="default">
+                >
                 {yml.faq.map((item, index) => {
                     return (
                         <Row key={index}>

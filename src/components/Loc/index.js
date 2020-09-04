@@ -95,17 +95,6 @@ const Loc = (props) => {
                                 <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{item.node.carousel_box.content}</Paragraph>
                               </Column>
                             </Row>
-                            {/* <Row height="5%">
-                              <Column size="12">
-                                <H4 primary align="left" >{item.node.city}</H4>
-                              </Column>
-                            </Row>
-
-                            <Row height="10%">
-                              <Column size="12">
-                                <Paragraph color={Colors.blue} align="left" fontSize="14px" lineHeight="20px">test</Paragraph>
-                              </Column>
-                            </Row> */}
                           </Column>
                         </Row>
 
@@ -128,7 +117,6 @@ const Loc = (props) => {
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               {/* <Card width="100%" > */}
               <Link to={`/${session.language}/location/${pic.node.meta_info.slug}`}>
-                {console.log("childImageSharp", pic.node.carousel_box.images[randLocImgIndex])}
                 <BackgroundSection
                   className={`img-thumbs`}
                   height={`60px`}

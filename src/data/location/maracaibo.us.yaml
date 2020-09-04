@@ -134,7 +134,7 @@ prices:
         price_info: ""
       button:
         button_text: "APPLY NOW"
-
+        
 city: "Maracaibo"
 name: "Maracaibo"
 latitude: "10.664500"

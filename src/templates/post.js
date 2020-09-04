@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
+import {Container, Row, Column, Divider, WrapperCustom} from '../components/Sections'
 import {RoundImage, Colors, Check, ArrowLeft} from '../components/Styling'
 import Layout from '../global/Layout'
 import {Card} from '../components/Card'
@@ -43,8 +43,7 @@ export default function Template (props) {
     let postDate = GetFormattedDate(post.frontmatter.date);
     return (
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
-            <Wrapper
-                style="custom"
+            <WrapperCustom
                 innerLeftCol="2"
                 innerRightCol="9"
                 full
@@ -164,7 +163,7 @@ export default function Template (props) {
                     </Column>
                 </Row>
                 <Divider height="100px" />
-            </Wrapper>
+            </WrapperCustom>
         </Layout>)
 }
 export const postQuery = graphql`

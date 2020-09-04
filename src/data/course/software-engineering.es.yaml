@@ -2,6 +2,7 @@ meta_info:
   slug: ingenieria-de-software-programacion
   title: ""
   description: null
+  bc_slug: "software-engineering"
   image: ""
   template: "course-engineering"
   keywords: ""

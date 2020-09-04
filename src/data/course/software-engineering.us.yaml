@@ -2,6 +2,7 @@ meta_info:
   slug: software-engineering-coding-bootcamp
   title: ""
   description: null
+  bc_slug: "software-engineering"
   image: ""
   template: "course-engineering"
   keywords: ""

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
+import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'
 import Testimonials from '../components/Testimonials'
@@ -25,8 +25,8 @@ const GeekForce = (props) => {
   const {data, pageContext, yml} = props;
   return (
     <>
-      <Wrapper
-        style="default"
+      <WrapperImage
+        
         imageData={yml.image && yml.image.childImageSharp.fluid}
         border="bottom"
         height="auto"
@@ -36,17 +36,17 @@ const GeekForce = (props) => {
           size="5"
           title={yml.tagline}
           paragraph={yml.sub_heading}
-          main
+          variant="main"
           color={Colors.white}
           fontSize="46px"
           textAlign="center"
           paragraphColor={Colors.white}
         />
         <Divider height="100px" />
-      </Wrapper>
+      </WrapperImage>
       <Divider height="50px" />
       <Wrapper
-        style="default"
+        
         border="bottom"
         height="auto"
       >
@@ -61,7 +61,7 @@ const GeekForce = (props) => {
         </Row>
         <Divider height="50px" />
       </Wrapper>
-      <Wrapper style="default">
+      <Wrapper >
         <Row>
           {yml.benefits.map((col, i) => {
             const splittedTitle = splitTitleString(col.heading)
@@ -119,15 +119,7 @@ const GeekForce = (props) => {
         </Row>
       </Wrapper>
       <Divider height="50px" />
-      <Wrapper style="default">
-        {/* <Title
-          primary
-          title={yml.testimonial_header.heading}
-          paragraph={yml.testimonial_header.sub_heading}
-          customParagraphSize="8"
-        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
-        /> */}
-        <Divider height="20px" />
+      <Wrapper >
         <Testimonials lang={data.allTestimonialsYaml.edges} />
       </Wrapper>
       <Divider height="100px" />

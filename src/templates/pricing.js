@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {Column, Row, Container, Divider, Wrapper, Div} from "../components/Sections";
+import {Column, Row, Container, Divider, Wrapper, WrapperImage, Div} from "../components/Sections";
 import {Title, H3, H4, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, RoundImage} from '../components/Styling';
 import Credentials from '../components/Credentials';
@@ -19,8 +19,7 @@ const Pricing = (props) => {
   return (
     <>
       {/* HEADER SECTION */}
-      <Wrapper
-        style="default"
+      <WrapperImage
         imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
         className={`img-header`}
         height={`500px`}
@@ -33,16 +32,16 @@ const Pricing = (props) => {
           color={Colors.white}
           title={yml.header_data.tagline}
           paragraph={yml.header_data.sub_heading}
-          main
+          variant="main"
           paragraphColor={Colors.white}
           fontSize="46px"
           textAlign="center"
 
         />
-      </Wrapper>
+      </WrapperImage>
       {/* CREDENTIALS SECTION */}
       <Wrapper
-        style="default">
+        >
         <Credentials up="80" lang={data.allCredentialsYaml.edges} />
       </Wrapper>
       <Divider height="100px" />
@@ -70,7 +69,7 @@ const Pricing = (props) => {
       </Container>
       <Divider height="100px" />
       <Wrapper
-        style="default"
+        
 
         background={Colors.lightGray}
         border="top"
@@ -79,11 +78,11 @@ const Pricing = (props) => {
         <Title
           size="10"
           title={yml.prices.heading}
-          primary
+          variant="primary"
         />
         <Div width="fit-content" margin="auto">
             Select a program
-            <Button width="auto">Part-Time</Button>
+            <Button width="auto" onClick={() => setCourse("part_time")}>Part-Time</Button>
         </Div>
         {course && 
           <PricesAndPayment 
@@ -95,14 +94,14 @@ const Pricing = (props) => {
       </Wrapper>
       <Divider height="100px" />
       <Wrapper
-        style="default"
+        
 
       >
         <Title
           size="10"
           title={yml.payment_guide.heading}
           paragraph={yml.payment_guide.sub_heading}
-          primary
+          variant="primary"
         />
         <Divider height="30px" />
         <Row align="center">
@@ -119,7 +118,7 @@ const Pricing = (props) => {
         <Divider height="100px" />
       </Wrapper>
       <Wrapper
-        style="default"
+        
 
         background={Colors.lightGray}
         border="top"

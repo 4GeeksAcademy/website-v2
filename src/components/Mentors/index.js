@@ -35,7 +35,6 @@ const Mentors = props => {
             }
         `)
     let staff = data.allStaffYaml.edges;
-    console.log("STAFF:", staff)
 
     return (
         <Row github="/components/staff">

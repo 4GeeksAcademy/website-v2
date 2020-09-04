@@ -141,6 +141,7 @@ prices:
       button:
         button_text: "APLICA YA"
 
+        
 city: "Madrid"
 name: "Madrid"
 latitude: "40.439769"

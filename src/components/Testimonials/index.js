@@ -37,7 +37,7 @@ const Testimonials = (props) => {
                                         height={`200px`}
                                         width={`200px`}
                                         bgSize={`cover`}
-                                        className={`img-testimonials`}
+                                        className={`b-corner-50`}
                                     ></StyledBackgroundSection>
                                 </Row>
                                 <Divider height="10px" />

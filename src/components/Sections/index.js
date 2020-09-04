@@ -107,6 +107,7 @@ export const Row = styled(Fragment)`
                         ? css`justify-content: flex-end;`
                         : css`justify-content: flex-start;`}
     @media ${Device.xs}{
+        width: ${props => props.width_xs};
         display: ${props => props.display_xs};
         ${props => props.customRespSize
         ? css`justify-content: ${props => props.alignResp};`
@@ -114,6 +115,7 @@ export const Row = styled(Fragment)`
     }
         padding: ${props => props.p_xs};
     @media  ${Device.sm}{
+        width: ${props => props.width_sm};
         display: ${props => props.display_sm};
         ${props => props.customRespSize
         ? css`justify-content: ${props => props.alignResp};`
@@ -329,97 +331,96 @@ ${props =>
     }
 `
 
-export const Wrapper = props => {
-    if (!props.style || props.style === "default") {
-        return (
-            <Container margin={props.margin} github={props.github} fluid>
-                <Row>
+export const Wrapper = (props) => {
+    return <Container margin={props.margin} github={props.github} fluid>
+        <Row>
+            <Column size="1" />
+            <Column
+                size="11"
+                url={props.image}
+                border={props.border}
+                customBorderRadius={props.customBorderRadius}
+                color={props.background}
+                align={props.align}
+                height={props.height}
+                backgroundSize={props.backgroundSize}
+            >
+                <Row padding={`20px 0`}>
                     <Column size="1" />
-                    {props.imageData ?
-                        <Column
-                            size="11"
-                            url={props.image}
-                            border={props.border}
-                            customBorderRadius={props.customBorderRadius}
-                            color={props.background}
-                            align={props.align}
-                            height={props.height}
-                            backgroundSize={props.backgroundSize}
-                        ><BackgroundSection
-                            className={props.className}
-                            height={props.height}
-                            image={props.imageData}
-                            bgSize={props.bgSize}
-                            alt={props.alt}
-                        >
-                                <Row>
-                                    <Column
-                                        size="9"
-                                        margin="0 auto"
-                                        height={props.height}
-                                    >
-                                        {props.children}
-                                    </Column>
-                                </Row>
-                            </BackgroundSection>
-                        </Column>
-                        :
-                        <Column
-                            size="11"
-                            url={props.image}
-                            border={props.border}
-                            customBorderRadius={props.customBorderRadius}
-                            color={props.background}
-                            align={props.align}
-                            height={props.height}
-                            backgroundSize={props.backgroundSize}
-                        >
-                            <Row padding={`20px 0`}>
-                                <Column size="1" />
-                                <Column
-                                    size="9"
-                                    height={props.height}
-                                >
-                                    {props.children}
-                                </Column>
-                            </Row>
-                        </Column>
-                    }
-                </Row>
-            </Container>
-        )
-    }
-
-    if (props.style === "custom") {
-        return (
-            <Container width={props.width}>
-                <Row>
-                    <Column size={props.outerLeftCol} ></Column>
                     <Column
-                        size={props.outerRightCol}
-                        url={props.image}
-                        border={props.border}
-                        customBorderRadius={props.customBorderRadius}
-                        color={props.background}
+                        size="9"
+                        height={props.height}
                     >
-                        {props.full
-                            ?
-                            <Row align={props.innerLeftRowAlign}>
-                                <Column size={props.innerLeftCol} >{props.content}</Column>
-                                <Column size={props.innerRightCol}>
-                                    {props.children}
-                                </Column>
-                            </Row>
-                            :
-                            props.children
-                        }
+                        {props.children}
                     </Column>
                 </Row>
-            </Container>
-        )
-    }
-
+            </Column>
+        </Row>
+    </Container>
 }
+
+export const WrapperImage = (props) => {
+    return <Container margin={props.margin} github={props.github} fluid>
+        <Row>
+            <Column size="1" />
+            <Column
+                size="11"
+                url={props.image}
+                border={props.border}
+                customBorderRadius={props.customBorderRadius}
+                color={props.background}
+                align={props.align}
+                height={props.height}
+                backgroundSize={props.backgroundSize}
+            ><BackgroundSection
+                className={props.className}
+                height={props.height}
+                image={props.imageData}
+                bgSize={props.bgSize}
+                alt={props.alt}
+            >
+                    <Row>
+                        <Column
+                            size="9"
+                            margin="0 auto"
+                            height={props.height}
+                        >
+                            {props.children}
+                        </Column>
+                    </Row>
+                </BackgroundSection>
+            </Column>
+        </Row>
+    </Container>
+}
+
+export const WrapperCustom = () => {
+    return <Container width={props.width}>
+        <Row>
+            <Column size={props.outerLeftCol} ></Column>
+            <Column
+                size={props.outerRightCol}
+                url={props.image}
+                border={props.border}
+                customBorderRadius={props.customBorderRadius}
+                color={props.background}
+            >
+                {props.full
+                    ?
+                    <Row align={props.innerLeftRowAlign}>
+                        <Column size={props.innerLeftCol} >{props.content}</Column>
+                        <Column size={props.innerRightCol}>
+                            {props.children}
+                        </Column>
+                    </Row>
+                    :
+                    props.children
+                }
+            </Column>
+        </Row>
+    </Container>
+}
+
 export const Divider = props => {
     const Height = styled.div`
         height: ${props.height}
@@ -459,6 +460,7 @@ Column.defaultProps = {
 // };
 Wrapper.defaultProps = {
     width: 'fluid',
+    variant: 'default',
     outerLeftCol: '1',
     outerRightCol: '11',
     innerLeftCol: '1',

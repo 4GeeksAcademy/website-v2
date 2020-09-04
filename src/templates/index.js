@@ -29,17 +29,16 @@ const Home = (props) => {
     <>
       <Row>
         <Column size="4" margin="0 0 0 auto" padding="100px 10px 0 10px">
-          <H1 textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header_data.tagline}</H1>
-          <Separator primary left />
+          <H1 type="h1" textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header_data.tagline}</H1>
+          <Separator  variant="primary" left />
           <H2
             fs_sm="38px"
             fs_md="30px"
             fs_lg="32px"
             fs_xl="38px"
-            // primary
             align="left" >{yml.header_data.title}<Span animated color={Colors.yellow}>_</Span>
           </H2>
-          <Paragraph color={Colors.gray} margin="20px 0px" padding="0px 20px" align="left" fontSize="15px">{yml.header_data.sub_heading}</Paragraph>
+          <Paragraph color={Colors.gray} margin="20px 0px" maxWidth="350px" align="left" fontSize="15px">{yml.header_data.sub_heading}</Paragraph>
           <ChooseProgram
             programs={data.allChooseProgramYaml.edges[0].node.programs}
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
@@ -98,21 +97,7 @@ const Home = (props) => {
               fs_xl="12px"
               align="center">{yml.education.left_box.heading}
             </Paragraph>
-            {/* <Card width="100%" padding="20px"> */}
             <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="Florida Education Logo"></Img>
-            {/* <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="4Geeks Logo"></Img> */}
-            {/* <Img fixed={yml.education.left_box.image.childImageSharp.fixed} alt="4Geeks Logo"></Img> */}
-            {/* <RoundImage
-              h_xs="40px"
-              h_sm="40px"
-              h_md="60px"
-              h_lg="60px"
-              h_xl="60px"
-              width="100%"
-              url={yml.education.left_box.image}
-              bsize="contain"
-              position="50% 50%" /> */}
-            {/* </Card> */}
           </Column>
           <Column size="4" customRespSize respSize="4" margin="5px 0">
             <Paragraph
@@ -125,20 +110,7 @@ const Home = (props) => {
               fs_xl="12px"
               align="center">{yml.education.center_box.heading}
             </Paragraph>
-            {/* <Card width="100%" padding="20px"> */}
             <Img className={`image`} fluid={yml.education.center_box.image.childImageSharp.fluid} alt="Newsweek Logo"></Img>
-            {/* <RoundImage
-              h_xs="40px"
-              h_sm="40px"
-              h_md="60px"
-              h_lg="60px"
-              h_xl="60px"
-              width="100%"
-              url={yml.education.center_box.image}
-              bsize="contain"
-              position="50% 50%" /> */}
-
-            {/* </Card> */}
           </Column>
           <Column size="4" customRespSize respSize="4" margin="5px 0">
             <Paragraph
@@ -151,20 +123,7 @@ const Home = (props) => {
               fs_xl="12px"
               align="center">{yml.education.right_box.heading}
             </Paragraph>
-            {/* <Card width="100%" padding="20px"> */}
-            {/* <BackgroundSection className={`image`} fluid={yml.education.right_box.image.childImageSharp.fluid} alt="Cnn Logo"></BackgroundSection> */}
             <Img className={`image`} fluid={yml.education.right_box.image.childImageSharp.fluid} alt="Cnn Logo"></Img>
-            {/* <RoundImage
-              h_xs="40px"
-              h_sm="40px"
-              h_md="60px"
-              h_lg="60px"
-              h_xl="60px"
-              width="100%"
-              url={yml.education.right_box.image}
-              bsize="contain"
-              position="50% 50%" /> */}
-            {/* </Card> */}
           </Column>
         </Row>
         <Row>
@@ -185,7 +144,7 @@ const Home = (props) => {
         </Row>
       </Wrapper>
 
-      {/* GEEKS VS OTHERS SECTION 
+      {/* GEEKS VS OTHERS SECTION */}
 
       <Wrapper margin="100px">
         <Title
@@ -194,17 +153,17 @@ const Home = (props) => {
           link={true}
           linkTo={yml.geeks_vs_others.sub_heading_link}
           paragraphColor={Colors.blue}
-          primary
+          variant="primary"
           size="10"
         />
         <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
-      </Wrapper>*/}
+      </Wrapper>
 
       <Wrapper margin="100px">
         <Title
           title={yml.join_geeks.heading}
           paragraph={yml.join_geeks.sub_heading}
-          primary
+          variant="primary"
         />
 
         {/* ******************* */}
@@ -296,7 +255,7 @@ const Home = (props) => {
           title={yml.alumni_header.heading}
           paragraph={yml.alumni_header.sub_heading}
           customParagraphSize="8"
-          primary
+          variant="primary"
         />
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" />
       </Wrapper>
@@ -304,7 +263,7 @@ const Home = (props) => {
       <Wrapper
         margin="100px">
         <Title
-          primary
+          variant="primary"
           title={yml.locations.heading}
           paragraph={yml.locations.sub_heading}
           customParagraphSize="8"
@@ -314,7 +273,7 @@ const Home = (props) => {
       </Wrapper>
       <Wrapper margin="100px">
         <Title
-          primary
+          variant="primary"
           title={yml.testimonial_header.heading}
           paragraph={yml.testimonial_header.sub_heading}
           customParagraphSize="8"
@@ -730,6 +689,7 @@ export const query = graphql`
                 programs{
                     text
                     link
+                    schedule
                 }
                 open_button_text
                 close_button_text

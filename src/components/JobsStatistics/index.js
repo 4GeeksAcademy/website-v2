@@ -15,11 +15,6 @@ export default (props) => {
                 <Column size="4" key={index} >
                     <Card
                         width="100%"
-                        h_xs="120px"
-                        h_sm="140px"
-                        h_md="130px"
-                        h_lg="150px"
-                        h_xl="160px"
                         shadow
                         padding="15px"
                         margin="5px 0"
@@ -40,7 +35,7 @@ export default (props) => {
                                     </Paragraph>
                                 </Row>
                                 <Row>
-                                    <H3 primary>{i.value}</H3><span><H3 primary>{i.value_symbol}</H3></span>
+                                    <H3>{i.value}</H3><span><H3>{i.value_symbol}</H3></span>
                                 </Row>
                                 <Row>
                                     <Paragraph

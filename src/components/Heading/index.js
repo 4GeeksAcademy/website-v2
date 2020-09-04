@@ -1,30 +1,32 @@
 import React from 'react';
 import styled, {css, keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
-import {Colors, Icons} from '../../components/Styling'
+import {Colors} from '../Styling'
 import {Column, Row} from '../Sections'
 import {Device} from '../Responsive'
 import {Blink} from '../Animations'
 import Link from 'gatsby-link'
 import {redirectTo} from "@reach/router"
 
-export const H1 = styled.h1`
-${props => props.lato ?
-    css`
-      font-family: 'Lato-Bold', sans-serif;
-      font-size: ${props => props.fontSize};
-      font-weight: 500;
-      letter-spacing: 0px;
-      color: ${props => props.color};
-  `
-    :
-    css`
-      font-family: 'Futura', 'sans-serif';
-      font-size: ${props => props.fontSize};
-      font-weight: 800;
-      letter-spacing: 0px;
-      color: ${props => props.color};
-`};
+const Heading = ({ type, children, className }) => {
+  const Comp = type;
+return <Comp className={className}>{children}</Comp>;
+}
+Heading.propTypes = {
+  type: PropTypes.string.isRequired,
+};
+Heading.defaultProps = {
+  type: "span",
+};
+
+//font-family: 'Lato-Bold', sans-serif;
+export const H1 = styled(Heading)`
+display: block;
+font-family: 'Futura', sans-serif;
+font-weight: 500;
+letter-spacing: 0px;
+font-size: ${props => props.fontSize};
+color: ${props => props.color};
 text-shadow: ${props => props.textShadow}; 
 margin-top: ${props => props.marginTop || "initial"}; 
 text-transform: ${props => props.uppercase && "uppercase"};
@@ -49,7 +51,8 @@ text-align: ${props => props.align};
   font-size: ${props => props.fs_xl};
 }   
 `;
-export const H2 = styled.h2`
+export const H2 = styled(Heading)`
+    display: block;
     text-align: ${props => props.align || "center"};
     font-family: 'Futura', sans-serif;
     font-weight: 800;
@@ -74,7 +77,8 @@ export const H2 = styled.h2`
       font-size: ${props => props.fs_xl};
     }   
     `;
-export const H3 = styled.h3`
+export const H3 = styled(Heading)`
+display: block;
 text-align: ${props => props.align || "center"};
 font-family: 'Futura', sans-serif;
 margin: ${props => props.margin};
@@ -101,7 +105,8 @@ color: ${props => props.color};
 }   
 
 `;
-export const H4 = styled.h4`
+export const H4 = styled(Heading)`
+display: block;
 text-align: ${props => props.align || "center"};
 font-family: 'Futura', sans-serif;
 margin: ${props => props.m};
@@ -131,7 +136,8 @@ font-style: normal;
   font-size: ${props => props.fs_xl};
 }   
 `;
-export const H5 = styled.h5`
+export const H5 = styled(Heading)`
+      display: block;
       font-family: 'Lato', sans-serif;
       font-size: ${props => props.fontSize};
       font-weight: 500;
@@ -169,7 +175,7 @@ export const Span = styled.span`
       font-size: ${props => props.fs};
       margin: ${props => props.margin};
 `
-export const Separator = styled.div`
+const StyledSeparator = styled.div`
   text-align: ${props => props.align || "center"};
   margin: ${props => props.left ? props.margin : "auto"};
   margin-top: 10px;
@@ -188,31 +194,39 @@ export const Separator = styled.div`
     margin-right: auto;
     width: 50px;
   }
-
-  border-bottom: ${props => props.primary
-    ? `2px solid ${Colors.yellow} `
-    : `2px solid ${Colors.lightBlue}`
+  border-bottom: ${props => props.border};
 
   };
 `
+export const Separator = ({ variant, children, ...rest }) => {
+  let variants = {
+    default: {
+      border: `2px solid ${Colors.lightBlue}`,
+    },
+    primary: {
+      border: `2px solid ${Colors.yellow}`,
+    },
+    main: {
+      border: `2px solid ${Colors.yellow}`,
+    }
+  }
+  return <StyledSeparator {...rest} border={variants[variant || "default"].border}>{children}</StyledSeparator>
+}
+Separator.propTypes = {
+  variant: PropTypes.string,
+};
+Separator.defaultProps = {
+  variant: 'default',
+};
+
 export const Paragraph = styled.div`
   @media ${Device.xs}{
     font-size: ${props => props.fs_xs};
-    ${props => props.customTextAlignSmall
-    ?
-    css`text-align: ${props => props.alignXs}`
-    :
-    css`text-align: text-align: center;`
-  }
+    text-align: ${props => props.alignXs || 'center'};
   }
   @media  ${Device.sm}{
     font-size: ${props => props.fs_sm};
-    ${props => props.customTextAlignSmall
-    ?
-    css`text-align: ${props => props.alignXs}`
-    :
-    css`text-align: text-align: center;`
-  }
+    text-align: ${props => props.alignXs || 'center'};
   }
   @media ${Device.md}{
     text-align: ${props => props.align};
@@ -230,31 +244,48 @@ export const Paragraph = styled.div`
   font-size: ${props => props.fontSize};
   font-family: ${props => props.fontFamily};
   font-weight: ${props => props.fontWeight};
+  max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
   padding-right: ${props => props.paddingRight || "innitial"};
   letter-spacing: 0px;
+  text-shadow: ${props => props.textShadow}; 
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};
   cursor: ${props => props.cursor === "pointer" && "pointer"};
-  // display: flex;
   `
-// color: ${props => props.primary ? `${Colors.gray}` : `${props.color}`};
+
 export const Title = props => {
-  const HeadingType = props.main ? H1 : H2;
+  const variants = {
+    default: {
+      headingComponent: H2,
+    },
+    primary: {
+      headingComponent: H2,
+      fontSize: '20px',
+      fontWeight: '500',
+    },
+    main: {
+      headingComponent: H1,
+      shadow: "0px 0px 4px black",
+    }
+  }
+  const theme = variants[props.variant]
+  const HeadingType = theme.headingComponent;
   return (
     <div style={{ marginBottom: "30px "}}>
-      <HeadingType align="center" color={props.color} marginTop={props.marginTop} fontSize={props.fontSize} align={props.textAlign}>{props.title}</HeadingType>
-      <Separator align="center" primary={props.primary} />
-        {props.paragraph.split('\\n').map(content => 
-          <Paragraph
+      <HeadingType type={props.type} align="center" color={props.color} marginTop={props.marginTop} fontSize={props.fontSize} align={props.textAlign}>{props.title}</HeadingType>
+      <Separator align="center" variant={props.variant} />
+        {props.paragraph && props.paragraph.split('\\n').map((content,i) => 
+          <Paragraph key={i}
             align="center"
             onClick={() => props.linkTo && redirectTo(props.linkTo)}
             color={props.paragraphColor}
             fontFamily={props.fontFamily}
             size={props.customParagraphSize}
-            fontSize={props.primary ? `20px` : null}
-            fontWeight={props.primary ? `500` : null}
+            fontSize={theme.fontSize}
+            fontWeight={theme.fontWeight}
             margin={props.margin}
+            textShadow={theme.shadow}
           >
             {content}
           </Paragraph>
@@ -263,15 +294,19 @@ export const Title = props => {
   )
 }
 Title.propTypes = {
+  variant: PropTypes.string,
   title: PropTypes.string.isRequired,
   paragraph: PropTypes.string,
   content: PropTypes.func,
   size: PropTypes.string,
-  paragraphColor: PropTypes.string
+  paragraphColor: PropTypes.string,
+  paragraphShadow: PropTypes.string,
 };
 Title.defaultProps = {
+  variant: "default",
   margin: "0",
-  paragraph: ""
+  paragraph: "",
+  paragraphColor: "white"
 }
 // H2.propTypes = {
 //   primary: PropTypes.bool.isRequired,
@@ -286,12 +321,13 @@ Paragraph.defaultProps = {
 };
 Separator.defaultProps = {
   width: "50px",
-  margin: ""
+  margin: "",
+  border: `2px solid black`
 };
 H1.defaultProps = {
   // color: Colors.black,
   fontSize: "42px",
-  textShadow: "2px 1px #898a8b"
+  textShadow: "0px 0px 4px black"
 };
 H2.defaultProps = {
   fs_xs: '7.5vw',

@@ -42,6 +42,7 @@ const PricesAndPayments = (props) => {
       }
     }
   }
+
   if(!prova.currentFilteredCourse) return "Loading...";
 
   function getStepLogo (step) {

@@ -1,26 +1,46 @@
 import React, {useEffect, useState, useContext} from 'react';
-import {SessionContext} from '../../session';
+import PropTypes from "prop-types";
 import {Button, Colors} from '../Styling';
 import {Card} from '../Card'
+import {Device} from '../Responsive'
 import {Row, Column} from '../Sections'
 import { navigate } from "@reach/router"
+import styled from 'styled-components';
 
+export const ChooseWrap = styled.div`
+    position: relative;
+    cursor: pointer;
+    @media ${Device.xs} {
+        width: 100%;
+    }
+    @media ${Device.sm} {
+        width: 100%;
+    }
+`;
+export const Schedule = styled.small`
+    font-size: 12px;
+    display: block;
+    color: #BDBDBD;
+`;
 const ChooseProgram = (props) => {
-    const [toggle, setToggle] = useState(false)
-
+    const [status, setStatus] = useState({ toggle: false, hovered: false })
+    const _Selector = (_p) => <Button shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)" width="250px" onClick={() => _p.setStatus({ toggle: !_p.status.toggle })} color={Colors.blue} textColor={Colors.white}>
+        {_p.status.toggle ? props.openLabel : props.closeLabel}
+    </Button>
+    const Selector = props.selector || _Selector;
     return (
-        <Card
-            github="/components/choose_program"
-            shadow width="230px"
-            margin={"20px 0"}
-            margin_sm={"20px auto"}
-            margin_xs={"20px auto"}
+        <ChooseWrap 
+            onMouseLeave={() => {
+                setStatus({ ...status, hovered: false });
+                setTimeout(() => {
+                    setStatus(_status => ({ ..._status, toggle: _status.hovered }));
+                },300)
+            }}
+            onMouseEnter={() => setStatus({ ...status, hovered: true })}
         >
-            <Button width="100%" onClick={() => setToggle(!toggle)} color={Colors.blue} textColor={Colors.white}>
-                {toggle ? props.openLabel : props.closeLabel}
-            </Button>
-            {toggle && 
-                <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".75rem" shadow>
+            <Selector status={status} setStatus={setStatus} />
+            {status.toggle && 
+                <Row marginTop={props.marginTop} marginBottom="5px" marginRight="0" marginLeft={props.marginLeft} width="250px" width_xs="100%" width_sm="100%" align="center" position="absolute" zIndex="2" background={Colors.white} borderRadius={props.borderRadius} shadow={props.shadow}>
                     {Array.isArray(props.programs) && props.programs.map((item, index) => {
                         return (
                             <Button 
@@ -32,13 +52,30 @@ const ChooseProgram = (props) => {
                                 borderRadius=".75rem" padding="10px"
                             >
                                 {item.text}
+                                { item.schedule && item.schedule != "" && <Schedule>{item.schedule}</Schedule>}
                             </Button>
                         )
                     })}
                 </Row>
             }
-        </Card>
+        </ChooseWrap>
     )
 };
-
+ChooseProgram.propTypes = {
+    selector: PropTypes.func,
+    marginTop: PropTypes.string,
+    marginLeft: PropTypes.string,
+    borderRadius: PropTypes.string,
+    shadow: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.string
+      ])
+  };
+  ChooseProgram.defaultProps = {
+    selector: null,
+    shadow: true,
+    marginTop: "5px",
+    marginLeft: "0",
+    borderRadius: ".75rem",
+  }
 export default ChooseProgram;

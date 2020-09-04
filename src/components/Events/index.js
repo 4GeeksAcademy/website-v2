@@ -52,7 +52,7 @@ const Events = () => {
             {newEventArray != 0 && <Title
                 size="10"
                 title="UPCOMING EVENTS"
-                primary
+                variant="primary"
             />}
 
             <Carousel showIndicators={false} showThumbs={false} showStatus={false}>
@@ -74,10 +74,10 @@ const Events = () => {
                                             <Column size="9" height="100%">
                                                 <Divider height="30px" />
                                                 <Row height="60px">
-                                                    <H3 primary align="left" >{item.title}</H3>
+                                                    <H3 align="left" >{item.title}</H3>
                                                 </Row>
                                                 <Row height="30px">
-                                                    <Separator primary />
+                                                    <Separator variant="primary" />
                                                 </Row>
                                                 <Row height="20px">
                                                     <Column size="2" customRespSize respSize="4" paddingLeft="0px">

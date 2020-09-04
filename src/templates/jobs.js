@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
-import {Row, Column, Wrapper, Divider} from '../components/Sections'
+import {Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
 import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, BackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
@@ -16,8 +16,8 @@ import Link from 'gatsby-link'
 const Jobs = ({data, pageContext, yml}) => {
   return (
     <>
-      <Wrapper
-        style="default"
+      <WrapperImage
+        
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         className={`img-header`}
         height={`300px`}
@@ -28,25 +28,25 @@ const Jobs = ({data, pageContext, yml}) => {
         <Title
           size="5"
           title={yml.header.tagline}
-          main
+          variant="main"
           color={Colors.white}
           fontSize="46px"
           textAlign="center"
         />
-      </Wrapper>
+      </WrapperImage>
       <Wrapper
-        style="default">
+        >
         <JobInfo />
       </Wrapper>
       <Divider height="50px" />
       <Wrapper
-        style="default"
+        
         height="400px"
         github={`/page/jobs.${pageContext.lang}.yml`}
       >
         <Title
           title={yml.about.heading}
-          primary
+          variant="primary"
           size="8"
           paragraph={yml.about.sub_heading}
         />

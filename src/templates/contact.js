@@ -59,7 +59,6 @@ const Contact = (props) => {
     }
 
     return (
-        <>
         <form onSubmit={(e) => {
             e.preventDefault();
             if(formStatus.status === "error"){
@@ -73,28 +72,25 @@ const Contact = (props) => {
                 .then((data) => {
                     if(data.error !== false && data.error !== undefined){    
                         setFormStatus({status: "error", msg: "Fix errors"});
-                        console.log("submit error")
                     }else {
                         setFormStatus({status: "thank-you", msg: "Thank you"});
-                        console.log("Thank you");
                     }
                 })
                 .catch(error => {
-                      console.log("error", error);
+                    console.error("error", error);
                     setFormStatus({status: "error", msg: error.message || error});
                 })
             }
         }}>
-            <Divider height="100px" />
             <Wrapper
-                style="default">
+                margin="50px 0"
+                >
                 <Title
                     title={yml.tagline}
                     paragraph={yml.sub_heading}
-                    primary
+                    variant="primary"
                     size="8"
                 />
-                <Divider height="100px" />
                 <Row>
                     <Column
                         size="12"
@@ -226,9 +222,7 @@ const Contact = (props) => {
                     </Column>
                 </Row>
             </Wrapper>
-            <Divider height="300px" />
         </form>
-        </>
     )
 };
 export const query = graphql`

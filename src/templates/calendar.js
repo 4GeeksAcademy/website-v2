@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
-import {Row, Column, Wrapper, Divider, Div} from '../components/Sections'
+import {Row, Column, Wrapper, WrapperImage, Divider, Div} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, RoundImage, Address, Marker, ArrowRight, Clock, Question, Filter, Cross, AngleDown, TriangleDown, BackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
@@ -133,8 +133,7 @@ const Calendar = (props) => {
         }
       }
       catch (error) {
-        console.log("something failed");
-        console.log(error);
+        console.error("Something failed", error);
       }
     }
     loadFilterCity();
@@ -156,7 +155,6 @@ const Calendar = (props) => {
     const filterEvents = async () => {
       let filteredEventsArray = []
       let filteredCohortsArray = []
-      console.log("filteredEventsArray", filteredEventsArray)
       if (filterByCity.length > 0) {
         const filteredCohortByCity = cohorts.filter(item => item.slug.includes(filterByCity[0].toLowerCase()))
         if (filteredCohortByCity.length > 0) {
@@ -176,8 +174,8 @@ const Calendar = (props) => {
 
   return (
     <>
-      <Wrapper
-        style="default"
+      <WrapperImage
+        
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         border="bottom"
         height="300px"
@@ -187,14 +185,14 @@ const Calendar = (props) => {
         <Title
           size="5"
           title={yml.header.tagline}
-          main
+          variant="main"
           color={Colors.white}
           fontSize="46px"
           textAlign="center"
         />
-      </Wrapper>
+      </WrapperImage>
       <Wrapper
-        style="default"
+        
 
         border="top"
         color={Colors.white}
@@ -213,7 +211,7 @@ const Calendar = (props) => {
           </Column>
         </Row>
         <Row marginBottom={`10px`}>
-          <Separator primary />
+          <Separator variant="primary" />
         </Row>
         <Row marginBottom={`10px`} align={`end`}>
           {/* <Column size="2" alignSelf="center" align="right"> */}
@@ -368,7 +366,7 @@ const Calendar = (props) => {
       </Wrapper>
       {cohorts.length > 0 ? <Divider height="150px" /> : null}
       <Wrapper
-        style="default"
+        
 
         border="top"
         background={cohorts.length > 0 ? Colors.lightGray : ""}

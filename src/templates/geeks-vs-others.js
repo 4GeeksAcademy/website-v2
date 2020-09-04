@@ -53,11 +53,11 @@ const GeeksVsOthers = (props) => {
   let info_len = yml.info.length
   return (
     <>
-      <Wrapper style="default">
+      <Wrapper >
         <Title
           title={yml.tagline}
           paragraph={yml.sub_heading}
-          primary
+          variant="primary"
           size="8"
         />
         <Divider height="50px" />
