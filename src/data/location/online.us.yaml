@@ -5,12 +5,12 @@ meta_info:
   description: "null"
   image: ""
   keywords: "null"
-  redirects: ["/online", "/remote"]
+  redirects: ["/location/online", "/location/remote"]
 
-seo_title: "4Geeks Academy Online Coding Bootcamp"
+seo_title: "Online Coding Bootcamp"
 header:
-  tagline: "4GEEKS ACADEMY ONLINE"
-  sub_heading: ""
+  tagline: "Learn To Code Online"
+  paragraph: "Learning online is hard: You need a schedule, unlimited support, amazing content and unlimited lifetime career support. \\n Yes, it's for the rest of your life."
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
 info_box:
@@ -209,7 +209,7 @@ courses:
   - "Part-Time"
 active_campaign_location_slug: ""
 flag_icon: ""
-breathecode_location_slug: ""
+breathecode_location_slug: "online"
 location_map: ""
 location_phone_number: ""
 location_office_image: ""

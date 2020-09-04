@@ -179,7 +179,7 @@ const StyledSeparator = styled.div`
   text-align: ${props => props.align || "center"};
   margin: ${props => props.left ? props.margin : "auto"};
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   height: 5px;
   width: ${props => props.width};
 

@@ -1,16 +1,16 @@
 meta_info:
   slug: "downtown-miami-usa"
   position: 1
-  title: "4Geeks Academy Miami"
+  title: "4Geeks Academy Miami - Bootcamp de programación en Miami, aprende a programar en Miami"
   description: "null"
   image: ""
   keywords: "null"
   redirects: []
 
-seo_title: "4Geeks Academy Miami"
+seo_title: "Bootcamp de Programación en Miami"
 header:
   tagline: "4GEEKS ACADEMY IN MIAMI"
-  sub_heading: ""
+  paragraph: "Miami is una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \\n El Career Support y Student Support es de por vida."
   image: "../../../static/images/locations/miami-loc.jpg"
   alt: ""
 
@@ -34,12 +34,6 @@ carousel_box:
       alt: "4Geeeks miami lab"
 
 ## HEADING SECTION
-
-## PRICES SECTION
-## MIAMI HAS 3 BOXES:
-## LEFT     BOX => UPFRONT OPTION
-## CENTER   BOX => FINANCIAL SLIDER OPTIONS
-## RIGHT    BOX => ISA - INCOMING SHARING AGREEMENT
 hasFinancialsOption: true
 financials_max_months: ["6 mo", "12 mo", "24 mo", "36 mo", "42 mo", "60 mo"]
 prices:

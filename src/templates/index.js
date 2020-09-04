@@ -7,7 +7,7 @@ import ChooseProgram from '../components/ChooseProgram'
 import JobsStatistics from '../components/JobsStatistics';
 import {H1, H2, H3, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowRight, BackgroundSection} from '../components/Styling'
+import {RoundImage, Colors, Check, ArrowRight, StyledBackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
 import WhoIsHiring from '../components/WhoIsHiring';
 import AlumniProjects from '../components/AlumniProjects'
@@ -54,7 +54,7 @@ const Home = (props) => {
           disp_xs={"none"}
           paddingRight={`0`}
         >
-          <BackgroundSection
+          <StyledBackgroundSection
             className={`image`}
             height={`500px`}
             image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}

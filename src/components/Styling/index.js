@@ -256,6 +256,7 @@ export const BackgroundSection = ({children, className, image, height, width, bg
                 backgroundRepeat: 'no-repeat',
                 height: height,
                 width: width,
+                opacity: 1,
                 margin: margin,
             }}
 
@@ -273,6 +274,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     background-size: contain;
     &:before, &:after {
         border-radius: ${props => props.borderRadius};
+        filter: ${props => props.filter};
     }
   `
 

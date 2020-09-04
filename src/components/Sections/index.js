@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
-import {Colors, BackgroundSection} from '../../components/Styling'
+import {Colors, StyledBackgroundSection} from '../../components/Styling'
 import {Device} from '../Responsive'
 import {Paragraph} from '../Heading'
 import Fragment from "../Fragment"
@@ -372,12 +372,14 @@ export const WrapperImage = (props) => {
                 align={props.align}
                 height={props.height}
                 backgroundSize={props.backgroundSize}
-            ><BackgroundSection
+            ><StyledBackgroundSection
                 className={props.className}
                 height={props.height}
+                borderRadius={props.customBorderRadius}
                 image={props.imageData}
                 bgSize={props.bgSize}
                 alt={props.alt}
+                filter={props.filter}
             >
                     <Row>
                         <Column
@@ -388,13 +390,16 @@ export const WrapperImage = (props) => {
                             {props.children}
                         </Column>
                     </Row>
-                </BackgroundSection>
+                </StyledBackgroundSection>
             </Column>
         </Row>
     </Container>
 }
+WrapperImage.defaultProps = {
+    customBorderRadius: "10px 10px"
+};
 
-export const WrapperCustom = () => {
+export const WrapperCustom = (props) => {
     return <Container width={props.width}>
         <Row>
             <Column size={props.outerLeftCol} ></Column>
@@ -465,8 +470,8 @@ Wrapper.defaultProps = {
     outerRightCol: '11',
     innerLeftCol: '1',
     innerRightCol: '10',
-
 };
+
 
 Divider.propTypes = {
     height: PropTypes.string

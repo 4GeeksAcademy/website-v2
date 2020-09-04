@@ -10,6 +10,15 @@ import styled from 'styled-components';
 export const ChooseWrap = styled.div`
     position: relative;
     cursor: pointer;
+    ${props => props.centered ? 
+        `
+            margin: auto;
+            width: 255px;
+        `
+        :
+        null
+    }
+    
     @media ${Device.xs} {
         width: 100%;
     }
@@ -30,10 +39,11 @@ const ChooseProgram = (props) => {
     const Selector = props.selector || _Selector;
     return (
         <ChooseWrap 
+            centered={props.centered}
             onMouseLeave={() => {
                 setStatus({ ...status, hovered: false });
                 setTimeout(() => {
-                    setStatus(_status => ({ ..._status, toggle: _status.hovered }));
+                    // setStatus(_status => ({ ..._status, toggle: _status.hovered }));
                 },300)
             }}
             onMouseEnter={() => setStatus({ ...status, hovered: true })}

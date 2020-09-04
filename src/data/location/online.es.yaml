@@ -5,7 +5,7 @@ meta_info:
   position: 0
   image: ""
   keywords: "null"
-  redirects: ["/remoto"]
+  redirects: ["/location/remoto"]
 
 seo_title: "4Geeks Academy Remoto"
 header:
@@ -205,7 +205,7 @@ courses:
   - "Part-Time"
 active_campaign_location_slug: ""
 flag_icon: ""
-breathecode_location_slug: ""
+breathecode_location_slug: "online"
 location_map: ""
 location_phone_number: ""
 location_office_image: ""

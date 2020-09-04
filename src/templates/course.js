@@ -156,7 +156,7 @@ const Program = ({data, pageContext, yml}) => {
 
     <WrapperImage
       github="/course"
-      
+      filter="brightness(0.4)"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       className={`img-header`}
       height={`600px`}
