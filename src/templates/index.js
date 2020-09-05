@@ -28,17 +28,25 @@ const Home = (props) => {
   return (
     <>
       <Row>
-        <Column size="4" margin="0 0 0 auto" padding="100px 10px 0 10px">
+        <Column 
+          size="4" 
+          m_sm="0" 
+          size_sm="10" 
+          align_sm="center" 
+          padding="100px 10px 0 10px"
+          margin="0 0 0 auto" 
+        >
           <H1 type="h1" textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header_data.tagline}</H1>
           <Separator  variant="primary" left />
           <H2
+            padding="0 10px"
             fs_sm="38px"
             fs_md="30px"
             fs_lg="32px"
             fs_xl="38px"
             align="left" >{yml.header_data.title}<Span animated color={Colors.yellow}>_</Span>
           </H2>
-          <Paragraph color={Colors.gray} margin="20px 0px" maxWidth="350px" align="left" fontSize="15px">{yml.header_data.sub_heading}</Paragraph>
+          <Paragraph color={Colors.gray} margin="20px auto" maxWidth="350px" align="left" fontSize="15px">{yml.header_data.sub_heading}</Paragraph>
           <ChooseProgram
             programs={data.allChooseProgramYaml.edges[0].node.programs}
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
@@ -73,10 +81,8 @@ const Home = (props) => {
 
       {/* WHY 4GEEKS SECTION */}
 
-      <Wrapper>
-        <Divider height="100px" />
+      <Wrapper margin="50px 0">
         <Why4Geeks lang={data.allWhy4GeeksYaml.edges} playerHeight="250px" />
-        <Divider height="50px" />
       </Wrapper>
 
       {/* JOBS STATISTICS SECTION */}
@@ -94,8 +100,6 @@ const Home = (props) => {
               fs_xs="10px"
               fs_sm="12px"
               fs_md="12px"
-              fs_lg="12px"
-              fs_xl="12px"
               align="center">{yml.education.left_box.heading}
             </Paragraph>
             <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="Florida Education Logo"></Img>
@@ -160,19 +164,20 @@ const Home = (props) => {
         <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
       </Wrapper>
 
+      {/* ******************* */}
+      {/* JOIN 4GEEKS SECTION */}
+      {/* ******************* */}
       <Wrapper margin="100px">
         <Title
           title={yml.join_geeks.heading}
           paragraph={yml.join_geeks.sub_heading}
+          paragraphColor={Colors.darkGray}
+          maxWidth="66%"
+          margin="auto"
           variant="primary"
         />
-
-        {/* ******************* */}
-        {/* JOIN 4GEEKS SECTION */}
-        {/* ******************* */}
-
         <Row github="/page/index.us.yml">
-          <Column size="6" >
+          <Column size="6" size_sm="12" >
             <Card
               padding="20px"
               shadow
@@ -183,7 +188,7 @@ const Home = (props) => {
                 color={Colors.black}
                 margin="15px 0px 15px 0px"
                 customTextAlignSmall
-                alignXs="left">
+                align_xs="left">
                 {yml.join_geeks.geek_data.geek_pal_heading}
               </Paragraph>
               <Paragraph
@@ -193,7 +198,7 @@ const Home = (props) => {
                 fontSize="14px"
                 lineHeight="18px"
                 customTextAlignSmall
-                alignXs="left">
+                align_xs="left">
                 {yml.join_geeks.geek_data.geek_pal_data.content}
               </Paragraph>
               <Column size="2" margin="0 0 0 auto" customRespSize align="right" paddingRight="0" respSize="2" alignSelf="flex-end">
@@ -203,7 +208,7 @@ const Home = (props) => {
               </Column>
             </Card>
           </Column>
-          <Column size="6">
+          <Column size="6" size_sm="12">
             <Card
               padding="20px"
               shadow
@@ -213,15 +218,14 @@ const Home = (props) => {
               <RoundImage url="/images/geekforce.png" bsize="contain" height="40px" position="left" />
               <Paragraph color={Colors.black} customTextAlignSmall
                 margin="15px 0px 15px 0px"
-                alignXs="left">{yml.join_geeks.geek_data.geek_force_heading}</Paragraph>
+                align_xs="left">{yml.join_geeks.geek_data.geek_force_heading}</Paragraph>
               <Paragraph
                 key="index"
                 color={Colors.gray}
                 fontSize="14px"
                 paddingRight="30px"
                 lineHeight="18px"
-                customTextAlignSmall
-                alignXs="left">
+                align_xs="left">
                 {yml.join_geeks.geek_data.geek_force_data.content}
               </Paragraph>
               <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right" customRespSize respSize="2" alignSelf="flex-end">
@@ -236,6 +240,7 @@ const Home = (props) => {
 
       <Wrapper
         margin="100px"
+        right={true}
         background={Colors.lightGray}
         border="top">
         <WhoIsHiring
@@ -255,7 +260,9 @@ const Home = (props) => {
           size="10"
           title={yml.alumni_header.heading}
           paragraph={yml.alumni_header.sub_heading}
-          customParagraphSize="8"
+          paragraphColor={Colors.darkGray}
+          maxWidth="66%"
+          margin="auto"
           variant="primary"
         />
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" />
@@ -267,7 +274,9 @@ const Home = (props) => {
           variant="primary"
           title={yml.locations.heading}
           paragraph={yml.locations.sub_heading}
-          customParagraphSize="8"
+          paragraphColor={Colors.darkGray}
+          maxWidth="66%"
+          margin="auto"
         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
         />
         <Loc lang={data.allLocationYaml.edges} />
@@ -277,7 +286,7 @@ const Home = (props) => {
           variant="primary"
           title={yml.testimonial_header.heading}
           paragraph={yml.testimonial_header.sub_heading}
-          customParagraphSize="8"
+          maxWidth="66%"
         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
         />
         <Testimonials lang={data.allTestimonialsYaml.edges} />

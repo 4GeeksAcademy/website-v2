@@ -33,6 +33,7 @@ const Layout = ({children, seo, context}) => {
             node {
               footer {
                 heading
+                width
                 items {
                   name
                   link

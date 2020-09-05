@@ -232,7 +232,7 @@ const Apply = (props) => {
                          variant="primary"
                         title={yml.testimonial_header.heading}
                         paragraph={yml.testimonial_header.sub_heading}
-                        customParagraphSize="8"
+                        maxWidth="66%"
                         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
                     />
                 <Divider height="20px" />

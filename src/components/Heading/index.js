@@ -3,7 +3,7 @@ import styled, {css, keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../Styling'
 import {Column, Row} from '../Sections'
-import {Device} from '../Responsive'
+import {Device, Break} from '../Responsive'
 import {Blink} from '../Animations'
 import Link from 'gatsby-link'
 import {redirectTo} from "@reach/router"
@@ -54,6 +54,7 @@ text-align: ${props => props.align};
 export const H2 = styled(Heading)`
     display: block;
     text-align: ${props => props.align || "center"};
+    padding: ${props => props.padding};
     font-family: 'Futura', sans-serif;
     font-weight: 800;
     letter-spacing: -2px;
@@ -86,24 +87,23 @@ font-weight: 400;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
-@media ${Device.xs}{
-  font-size: ${props => props.fs_xs};
-  padding: 0.5px;
+
+@media ${Break.lg}{
+  font-size: ${props => props.fs_lg};
 }
-@media  ${Device.sm}{
+@media ${Break.md}{
+  font-size: ${props => props.fs_md};
+}
+@media  ${Break.sm}{
+  text-align: ${props => props.align_sm || "center"};
   font-size: ${props => props.fs_sm};
   padding: 0 5px;
 }
-@media ${Device.md}{
-  font-size: ${props => props.fs_md};
+@media ${Break.xs}{
+  text-align: ${props => props.align_xs};
+  font-size: ${props => props.fs_xs};
+  padding: 0.5px;
 }
-@media ${Device.lg}{
-  font-size: ${props => props.fs_lg};
-}
-@media ${Device.xl} {
-  font-size: ${props => props.fs_xl};
-}   
-
 `;
 export const H4 = styled(Heading)`
 display: block;
@@ -112,6 +112,7 @@ font-family: 'Futura', sans-serif;
 margin: ${props => props.m};
 font-weight: ${props => props.fontWeight};
 letter-spacing: -1px;
+padding: ${props => props.padding}
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
 background-color: ${props => props.bg};
@@ -182,21 +183,19 @@ const StyledSeparator = styled.div`
   margin-bottom: 15px;
   height: 5px;
   width: ${props => props.width};
-
-  @media  ${Device.xs}{
-    margin-left: auto;
-    margin-right: auto;
-    width: 50px;
-  }
-
-  @media  ${Device.sm}{
-    margin-left: auto;
-    margin-right: auto;
-    width: 50px;
-  }
   border-bottom: ${props => props.border};
 
-  };
+  @media  ${Break.sm}{
+    margin-left: ${props => props.ml_sm || "auto"};
+    margin-right: auto;
+    width: ${props => props.width_sm || "50px"};
+  }
+  @media  ${Break.xs}{
+    margin-left: auto;
+    margin-right: auto;
+    width: ${props => props.width_xs};
+  }
+};
 `
 export const Separator = ({ variant, children, ...rest }) => {
   let variants = {
@@ -208,9 +207,10 @@ export const Separator = ({ variant, children, ...rest }) => {
     },
     main: {
       border: `2px solid ${Colors.yellow}`,
-    }
+    },
   }
-  return <StyledSeparator {...rest} border={variants[variant || "default"].border}>{children}</StyledSeparator>
+  let props = { ...rest, ...variants[variant] };
+  return <StyledSeparator {...props}>{children}</StyledSeparator>
 }
 Separator.propTypes = {
   variant: PropTypes.string,
@@ -220,26 +220,8 @@ Separator.defaultProps = {
 };
 
 export const Paragraph = styled.div`
-  @media ${Device.xs}{
-    font-size: ${props => props.fs_xs};
-    text-align: ${props => props.alignXs || 'center'};
-  }
-  @media  ${Device.sm}{
-    font-size: ${props => props.fs_sm};
-    text-align: ${props => props.alignXs || 'center'};
-  }
-  @media ${Device.md}{
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_md};
-  }
-  @media ${Device.lg}{
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_lg};
-  }
-  @media ${Device.xl} {
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_xl};
-  }   
+  maxWidth: ${props => props.maxWidth};
+  cursor: ${props => props.cursor};
   margin: ${props => props.margin};
   font-size: ${props => props.fontSize};
   font-family: ${props => props.fontFamily};
@@ -251,8 +233,62 @@ export const Paragraph = styled.div`
   text-shadow: ${props => props.textShadow}; 
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};
-  cursor: ${props => props.cursor === "pointer" && "pointer"};
-  `
+  text-align: ${props => props.align};
+
+  @media ${Break.lg}{
+    text-align: ${props => props.align_lg};
+    font-size: ${props => props.fs_lg};
+  }
+  @media ${Break.md}{
+    text-align: ${props => props.align};
+    font-size: ${props => props.fs_md};
+  }
+  @media ${Break.sm}{
+    display: ${props => props.display_sm};
+    font-size: ${props => props.fs_sm};
+    text-align: ${props => props.align_sm || 'center'};
+  }
+  @media ${Break.xs}{
+    font-size: ${props => props.fs_xs};
+    text-align: ${props => props.align_xs};
+  } 
+`
+export const Anchor = styled(Link)`
+  display: block;
+  font-family: Lato,sans-serif;
+  maxWidth: ${props => props.maxWidth};
+  cursor: ${props => props.cursor};
+  margin: ${props => props.margin};
+  font-size: ${props => props.fontSize};
+  font-family: ${props => props.fontFamily};
+  font-weight: ${props => props.fontWeight};
+  max-width: ${props => props.maxWidth};
+  padding: ${props => props.padding};
+  padding-right: ${props => props.paddingRight || "innitial"};
+  letter-spacing: 0px;
+  text-shadow: ${props => props.textShadow}; 
+  line-height: ${props => props.lineHeight};
+  color: ${props => props.color};
+  text-align: ${props => props.align};
+
+  @media ${Break.lg}{
+    text-align: ${props => props.align_lg};
+    font-size: ${props => props.fs_lg};
+  }
+  @media ${Break.md}{
+    text-align: ${props => props.align};
+    font-size: ${props => props.fs_md};
+  }
+  @media ${Break.sm}{
+    display: ${props => props.display_sm};
+    font-size: ${props => props.fs_sm};
+    text-align: ${props => props.align_sm || 'center'};
+  }
+  @media ${Break.xs}{
+    font-size: ${props => props.fs_xs};
+    text-align: ${props => props.align_xs};
+  } 
+`
 
 export const Title = props => {
   const variants = {
@@ -281,7 +317,7 @@ export const Title = props => {
             onClick={() => props.linkTo && redirectTo(props.linkTo)}
             color={props.paragraphColor}
             fontFamily={props.fontFamily}
-            size={props.customParagraphSize}
+            maxWidth={props.maxWidth}
             fontSize={theme.fontSize}
             fontWeight={theme.fontWeight}
             margin={props.margin}
@@ -316,7 +352,6 @@ Paragraph.defaultProps = {
   fontFamily: "Lato, sans-serif",
   fontWeight: "300",
   marginTop: "40px",
-  customParagraphSize: "12",
   color: "#898a8b"
 };
 Separator.defaultProps = {

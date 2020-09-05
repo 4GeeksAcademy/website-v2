@@ -2,7 +2,7 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors, StyledBackgroundSection} from '../../components/Styling'
-import {Device} from '../Responsive'
+import {Device, Break} from '../Responsive'
 import {Paragraph} from '../Heading'
 import Fragment from "../Fragment"
 
@@ -65,25 +65,34 @@ export const Container = styled(Fragment)`
     padding-bottom: ${props => props.p_bottom};
     background: ${props => props.color};
 `
+
+const rowAligns = {
+    "around": "space-around",
+    "center": "center",
+    "between": "space-between",
+    "evenly": "space-evenly",
+    "end": "flex-end",
+    "start": "flex-start",
+}
 export const Row = styled(Fragment)`
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};
+    border: ${props => props.border};
     border-top: ${props => props.borderTop};
-    ${props => props.border && css`border: ${props.border};`};
     border-bottom: ${props => props.borderBottom};
     border-radius: ${props => props.borderRadius};
-    position: ${props => props.position === "absolute" ? "absolute" : props.position === "relative" && "relative"};
+    position: ${props => props.position};
     z-index: ${props => props.zIndex};
     display: flex;
     flex-wrap: wrap; 
-    // justify-content: ${props => props.justifyContent};
     align-items:${props => props.alignItems};
     margin-right: ${props => props.marginRight};
     margin-left: ${props => props.marginLeft};
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
     background: ${props => props.background};
+    justify-content: ${props => rowAligns[props.align]};
     box-shadow: ${props => props.shadow
         && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
     };
@@ -92,29 +101,8 @@ export const Row = styled(Fragment)`
         margin: ${props => props.marginHover};
         border-radius: ${props => props.borderRadiusHover};
     }
-    // ${Paragraph}:hover{
-    //     color:${props => props.colorHover};
-    // }
-    ${props => props.align === "around"
-        ? css`justify-content: space-around;`
-        : props => props.align === "center"
-            ? css`justify-content: center;`
-            : props => props.align === "between"
-                ? css`justify-content: space-between;`
-                : props => props.align === "evenly"
-                    ? css`justify-content: space-evenly;`
-                    : props => props.align === "end"
-                        ? css`justify-content: flex-end;`
-                        : css`justify-content: flex-start;`}
-    @media ${Device.xs}{
-        width: ${props => props.width_xs};
-        display: ${props => props.display_xs};
-        ${props => props.customRespSize
-        ? css`justify-content: ${props => props.alignResp};`
-        : css`justify-content: center;`};
-    }
-        padding: ${props => props.p_xs};
-    @media  ${Device.sm}{
+
+    @media  ${Break.sm}{
         width: ${props => props.width_sm};
         display: ${props => props.display_sm};
         ${props => props.customRespSize
@@ -125,15 +113,15 @@ export const Row = styled(Fragment)`
             padding-left: 15px;
             padding-right: 15px;`
     }
-        
+    @media ${Break.xs}{
+        width: ${props => props.width_xs};
+        display: ${props => props.display_xs};
+        ${props => props.customRespSize
+        ? css`justify-content: ${props => props.alignResp};`
+        : css`justify-content: center;`};
+        padding: ${props => props.p_xs};
     }
-    @media ${Device.md}{
-    }
-    @media ${Device.lg}{
-    }
-    @media ${Device.xl} {
-    } 
-    `
+`
 
 export const Sidebar = styled.div`
 position: absolute;
@@ -207,6 +195,7 @@ export const Column = styled.div`
     position: relative;
     width: 100%;
     background: ${props => props.background};
+    background-color: ${props => props.color};
     border: ${props => props.borderStyle};
     align-self: ${props => props.alignSelf};
     padding-right: ${props => props.paddingRight};
@@ -215,6 +204,11 @@ export const Column = styled.div`
     flex-direction: ${props => props.flexDirection};
     justify-content: ${props => props.justifyContent};
     align-items: ${props => props.alignItems};
+    text-align: ${props => props.align};
+    
+    flex: 0 0 ${props => (props.size / 12) * 100}%;
+    max-width: ${props => (props.size / 12) * 100}%;
+
     ${props => props.masonry && 'display: inline-block;'}
     ${props =>
         props.border === "bottom"
@@ -233,108 +227,49 @@ export const Column = styled.div`
                         border-radius: ${props.customBorderRadius};
                     `
     }
-        ${props => !props.imageData && css`background: ${props => props.color};`
+       
+    @media ${Break.lg}{
+        flex: 0 0 ${props => (props.size_lg / 12) * 100}%;
+        max-width: ${props => (props.size_lg / 12) * 100}%;
+        padding-left: ${props => props.pl_lg};
+        display: ${props => props.disp_lg};
     }
-
-
-${props =>
-        props.size
-            &&
-            props.customRespSize
-            ?
-            css`
-            @media ${Device.xs}{
-                flex: 0 0 ${(props.respSize / 12) * 100}%;
-                max-width: ${(props.respSize / 12) * 100}%;
-                height: ${props => props.h_xs};
-                border-radius: ${props => props.br_xs};
-                text-align: ${props => props.t_align === "left" ? "left" : props.t_align === "right" ? "right" : "center"};
-                margin: ${props => props.m_xs};
-                padding: ${props => props.p_xs};
-                display: ${props => props.disp_xs};
-                
-            }
-            @media ${Device.sm}{
-                flex: 0 0 ${(props.respSize / 12) * 100}%;
-                max-width: ${(props.respSize / 12) * 100}%;
-                height: ${props => props.h_sm};
-                border-radius: ${props => props.br_sm};
-                text-align: ${props => props.t_align === "left" ? "left" : props.t_align === "right" ? "right" : "center"};
-                margin-bottom: ${props => props.respSizeMargin};
-                margin: ${props => props.m_sm};
-                padding: ${props => props.p_sm};
-                display: ${props => props.disp_sm};
-            }
-            @media ${Device.md}{
-                flex: 0 0 ${(props.size / 12) * 100}%;
-                max-width: ${(props.size / 12) * 100}%;
-                text-align: ${props => props.align};
-                margin-bottom: ${props => props.respSizeMargin};
-                border-radius: ${props => props.br_md};
-                margin: ${props => props.m_md};
-                padding: ${props => props.p_md};
-                height: ${props => props.h_md};
-                display: ${props => props.disp_md};
-            }
-            @media ${Device.lg}{
-                flex: 0 0 ${(props.size / 12) * 100}%;
-                max-width: ${(props.size / 12) * 100}%;
-                text-align: ${props => props.align};
-            }
-            @media ${Device.xl} {
-                flex: 0 0 ${(props.size / 12) * 100}%;
-                max-width: ${(props.size / 12) * 100}%;
-                text-align: ${props => props.align};
-            }
-            `
-            :
-            css`
-            @media ${Device.xs}{
-                flex: 0 0 '100%';
-                max-width: 100%;
-                // height: 300px;
-                border-radius: 0 0 0 0;
-                text-align: ${props => props.alignXs};
-                
-            }
-            @media  ${Device.sm}{
-                flex: 0 0 100%;
-                max-width: 100%;
-                // height: 300px;
-                border-radius: 0 0 0 0;
-                text-align: ${props => props.alignSm};
-                padding-left: ${props => props.pl_sm};
-                
-            }
-            @media ${Device.md}{
-                // flex: 0 0 100%;
-                // max-width: 100%;
-                flex: 0 0 ${(props.size / 12) * 100}%;
-                max-width: ${(props.size / 12) * 100}%;
-                // text-align: center;
-                text-align: ${props => props.align};
-                padding-left: ${props => props.pl_md};
-                
-            }
-            @media ${Device.lg}{
-                flex: 0 0 ${(props.size / 12) * 100}%;
-                max-width: ${(props.size / 12) * 100}%;
-                text-align: ${props => props.align};
-                padding-left: ${props => props.pl_lg};
-            }
-            @media ${Device.xl} {
-                flex: 0 0 ${(props.size / 12) * 100}%;
-                max-width: ${(props.size / 12) * 100}%;
-                text-align: ${props => props.align};
-            }
-`
+    @media ${Break.md}{
+        flex: 0 0 ${props => (props.size_md / 12) * 100}%;
+        max-width: ${props => (props.size_md / 12) * 100}%;
+        text-align: ${props => props.align};
+        margin-bottom: ${props => props.respSizeMargin};
+        border-radius: ${props => props.br_md};
+        margin: ${props => props.m_md};
+        padding: ${props => props.p_md};
+        padding-left: ${props => props.pl_md};
+        height: ${props => props.h_md};
+        display: ${props => props.disp_md};
+    }
+    @media ${Break.sm}{
+        flex: 0 0 ${props => (props.size_sm / 12) * 100}%;
+        max-width: ${props => (props.size_sm / 12) * 100}%;
+        height: ${props => props.h_sm};
+        border-radius: ${props => props.br_sm};
+        text-align: ${props => props.align_sm};
+        margin-bottom: ${props => props.respSizeMargin};
+        margin: ${props => props.m_sm};
+        padding: ${props => props.p_sm};
+        padding-left: ${props => props.pl_sm};
+        display: ${props => props.disp_sm};
+    }
+    @media ${Break.xs} {
+        flex: 0 0 ${props => (props.size_xs / 12) * 100}%;
+        max-width: ${props => (props.size_xs / 12) * 100}%;
+        display: ${props => props.disp_xs};
+        margin: ${props => props.m_xs};
     }
 `
 
 export const Wrapper = (props) => {
     return <Container margin={props.margin} github={props.github} fluid>
         <Row>
-            <Column size="1" />
+            <Column size="1" disp_md="none" />
             <Column
                 size="11"
                 url={props.image}
@@ -343,12 +278,15 @@ export const Wrapper = (props) => {
                 color={props.background}
                 align={props.align}
                 height={props.height}
+                m_md={props.right ? "0 0 0 auto" : undefined}
                 backgroundSize={props.backgroundSize}
             >
                 <Row padding={`20px 0`}>
-                    <Column size="1" />
+                    <Column size="1" disp_sm="none" />
                     <Column
-                        size="9"
+                        size={props.wide ? 11 : 9}
+                        size_md={props.wide ? 12 : 11}
+                        paddingRight={props.wide ? 0 : undefined}
                         height={props.height}
                     >
                         {props.children}
@@ -471,6 +409,7 @@ Wrapper.defaultProps = {
     outerRightCol: '11',
     innerLeftCol: '1',
     innerRightCol: '10',
+    right: null,
 };
 
 

@@ -46,8 +46,10 @@ const ProgramSelector = (props) => {
   {props.week === 16 ? link = "full-time" : link = "part-time"}
   return (
     <Row align="around">
-      <Column size="2" alignSelf="center" paddingRight="0" align="right" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >It takes just </Paragraph></Column>
-      <Column size="1" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" customRespSize respSize="4" >
+      <Column size="2" size_sm="3" alignSelf="center" paddingRight="0" align="right" margin="5px 0">
+        <Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >It takes just </Paragraph>
+      </Column>
+      <Column size="1" size_sm="3" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" >
           {toggles === false &&
             <Button borderRadius=".25rem" onClick={() => setToggles(!toggles)} color={Colors.white} textColor={Colors.gray}>
                 {props.week}
@@ -77,8 +79,8 @@ const ProgramSelector = (props) => {
           </Card>
         }
       </Column>
-      <Column size="1" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >weeks in</Paragraph></Column>
-      <Column size="2" alignSelf="center" align="center" paddingLeft="0" paddingRight="0" customRespSize respSize="5">
+      <Column size="1" size_sm="3" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >weeks in</Paragraph></Column>
+      <Column size="2" size_sm="3" alignSelf="center" align="center" paddingLeft="0" paddingRight="0">
           {toggle == false && 
             <Button borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>
                 {session.location && session.location.city}
@@ -106,7 +108,9 @@ const ProgramSelector = (props) => {
           </Card>
           }
       </Column>
-      <Column size="2" alignSelf="center" align="left" paddingLeft="0" paddingRight="0" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >to become a</Paragraph></Column>
+      <Column size="2" size_sm="12" alignSelf="center" align="left" paddingLeft="0" paddingRight="0" m_sm="20px 0px 0px 0px">
+        <Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >to become a</Paragraph>
+      </Column>
     </Row>
   )
 };

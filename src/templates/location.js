@@ -3,7 +3,7 @@ import {Card} from '../components/Card'
 import ChooseProgram from '../components/ChooseProgram'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
 import {Title, H1, H2, H3, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors, Check, ArrowRight, RoundImage, BackgroundSection} from '../components/Styling'
+import {Button, Colors, Check, ArrowRight, RoundImage, StyledBackgroundSection} from '../components/Styling'
 import BaseRender from './_baseRender'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -127,7 +127,7 @@ const Location = ({data, pageContext, yml}) => {
                                     border="custom"
                                     customBorderRadius="0 1.25rem 1.25rem 0"
                                 >
-                                    <BackgroundSection
+                                    <StyledBackgroundSection
                                         className={`img-right`}
                                         height={`426px`}
                                         image={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
@@ -170,7 +170,7 @@ const Location = ({data, pageContext, yml}) => {
                                                 border="custom"
                                                 customBorderRadius="1.25rem 0 0 1.25rem"
                                             >
-                                                <BackgroundSection
+                                                <StyledBackgroundSection
                                                     className={`img-left`}
                                                     height={`426px`}
                                                     image={item.path.childImageSharp.fluid}

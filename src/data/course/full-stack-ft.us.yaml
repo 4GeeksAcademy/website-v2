@@ -51,7 +51,7 @@ details:
       slug: "foundations"
       duration: "3.5 weeks"
       step: 3.5
-    - module_name: "WEB DEVELOPMENT"
+    - module_name: "THE WEB"
       title: "Web Development"
       description: "Create your first React.js application, MVC Pattern, JS Modules, Bunding, Babel JS, The DOM, Events"
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."

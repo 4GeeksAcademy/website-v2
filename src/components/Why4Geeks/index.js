@@ -15,7 +15,7 @@ return (<Fragment github="/components/4geeks_vs_others">
       />
       <Row height="auto" marginTop="50px">
         {info.why.map((i, index) => (
-          <Column size="4" key={index}>
+          <Column size="4" size_sm="12" key={index}>
             {i.video != "" ?
               <ReactPlayer
                 className='react-player'

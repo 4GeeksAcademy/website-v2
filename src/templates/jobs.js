@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
 import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, BackgroundSection} from '../components/Styling'
+import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
 import Grid from '@material-ui/core/Grid';
 import ToggleButton from '@material-ui/lab/ToggleButton';
@@ -119,7 +119,7 @@ const Jobs = ({data, pageContext, yml}) => {
                   paddingRight={`0`}
                   customBorderRadius="0 1.25rem 1.25rem 0"
                 >
-                  <BackgroundSection
+                  <StyledBackgroundSection
                     className={`img-right`}
                     height={`426px`}
                     image={yml.about.about_image.image.childImageSharp.fluid}

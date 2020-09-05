@@ -3,7 +3,7 @@ import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, WrapperImage, Divider, Div} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, RoundImage, Address, Marker, ArrowRight, Clock, Question, Filter, Cross, AngleDown, TriangleDown, BackgroundSection} from '../components/Styling'
+import {Colors, Button, RoundImage, Address, Marker, ArrowRight, Clock, Question, Filter, Cross, AngleDown, TriangleDown, StyledBackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
 import BaseRender from './_baseRender'
 import Link from 'gatsby-link'
@@ -400,13 +400,13 @@ const Calendar = (props) => {
 
                             shadow
                             move="up">
-                            <BackgroundSection
+                            <StyledBackgroundSection
                               image={data.cohort_img.childImageSharp.fluid}
                               // alt={i.alt}
                               height={`230px`}
                               bgSize={`cover`}
                               className={`img-event`}
-                            ></BackgroundSection>
+                            ></StyledBackgroundSection>
                             {/* <RoundImage
                           url={data.cohort_img.childImageSharp.fluid}
                           bsize="cover"
@@ -516,12 +516,12 @@ const Calendar = (props) => {
                             shadow
                             move="up">
                             {!event.banner.indexOf("http") ?
-                              <BackgroundSection
+                              <StyledBackgroundSection
                                 image={data.cohort_img.childImageSharp.fluid}
                                 height={`230px`}
                                 bgSize={`cover`}
                                 className={`img-event`}
-                              ></BackgroundSection>
+                              ></StyledBackgroundSection>
                               :
                               <LazyLoad scroll={true} height={230}>
                                 <RoundImage

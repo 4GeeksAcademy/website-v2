@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import {useStaticQuery, graphql} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
-import {RoundImage, Colors, Over, ArrowRight, BackgroundSection} from '../Styling';
+import {RoundImage, Colors, Over, ArrowRight} from '../Styling';
 import {Row, Column, Divider} from '../Sections'
 import {Card} from '../Card'
 
@@ -40,7 +40,7 @@ const Mentors = props => {
         <Row github="/components/staff">
             {staff[0].node.staff.map((item, index) => {
                 return (
-                    <Column key={index} size="3" customRespSize respSize="6">
+                    <Column key={index} size_xs="12" size_sm="6" size_md="4" size="3" >
                         <RoundImage
                             pos={`relative`}
                             opacity="1"

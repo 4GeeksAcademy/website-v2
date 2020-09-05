@@ -49,7 +49,7 @@ details:
       slug: "fundamentos"
       duration: "2 sem"
       step: 2
-    - module_name: "DESARROLLO WEB"
+    - module_name: "LA WEB"
       title: "Desarrollo web"
       description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bunding, Babel JS, el DOM, Eventos"
       projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."

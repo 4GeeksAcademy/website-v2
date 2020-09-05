@@ -151,8 +151,6 @@ const ProgramDetails = (props) => {
                                                     fs_md="16px"
                                                     fs_lg="18px"
                                                     fs_xl="18px"
-                                                    customTextAlignSmall
-                                                    alignXs={`start`}
                                                 >
                                                 {d}
                                                 </Paragraph>    
@@ -190,8 +188,6 @@ const ProgramDetails = (props) => {
                                                 fs_md="16px"
                                                 fs_lg="18px"
                                                 fs_xl="18px"
-                                                customTextAlignSmall
-                                                alignXs={`start`}
                                             >
                                                 {props.details.details_modules[selected.index].projects}
                                             </Paragraph>
@@ -224,8 +220,6 @@ const ProgramDetails = (props) => {
                                             fs_md="16px"
                                             fs_lg="18px"
                                             fs_xl="18px"
-                                            customTextAlignSmall
-                                            alignXs={`start`}
                                         >
                                             {props.details.details_modules[selected.index].duration}
                                         </Paragraph>

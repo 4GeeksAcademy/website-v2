@@ -14,11 +14,13 @@ const _colors = () => ({
 })
 export const Card = styled(Fragment)`
     :focus {outline: none;};
+    cursor: ${props => props.onClick ? "pointer" : "inherit"};
     overflow: ${props => props.overflow};
     position: ${props => props.position};
     z-index: ${props => props.index};
     text-align: ${props => props.align || "initial"};
     flex-direction: column;
+    min-height: ${props => props.minHeight}
     width: ${props => props.width};
     height: ${props => props.height};
     padding: ${props => props.padding};

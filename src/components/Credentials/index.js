@@ -12,7 +12,12 @@ export default props => {
     <Row github="/components/credentials">
       {credentials.map((i, index) => {
         return (
-          <Column key={index} size="3" customRespSize respSize="6" respSizeMargin="10px" m_xs="35px 0 5px 0" m_sm="35px 0 5px 0" m_md="35px 0 5px 0">
+          <Column key={index} 
+            size="3" 
+            size_sm="6" 
+            margin_sm="10px" 
+            m_md="35px 0 5px 0"
+          >
               <Card
                 padding="15px"
                 shadow

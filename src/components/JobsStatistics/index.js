@@ -12,59 +12,41 @@ export default (props) => {
     return (<Fragment github="/components/jobs_statistics">
         <Row>
             {jobs.map((i, index) => (
-                <Column size="4" key={index} >
+                <Column size="4" size_sm="12" key={index} >
                     <Card
-                        width="100%"
                         shadow
                         padding="15px"
+                        p_xs="15px 100px 15px 0px"
                         margin="5px 0"
                     >
-                        <Row align="around" marginLeft="10px">
-                            <Column size size="6" customRespSize respSize="6" >
-                                <Row>
-                                    <Paragraph
-                                        color="gray"
-                                        align="left"
-                                        margin="0 0 10px 0"
-                                        fs_xs="10px"
-                                        fs_sm="12px"
-                                        fs_md="10px"
-                                        fs_lg="12px"
-                                        fs_xl="12px">
-                                        {i.title}
-                                    </Paragraph>
-                                </Row>
-                                <Row>
-                                    <H3>{i.value}</H3><span><H3>{i.value_symbol}</H3></span>
-                                </Row>
-                                <Row>
-                                    <Paragraph
-                                        color="gray"
-                                        align="left"
-                                        margin="10px 0 0 0"
-                                        fs_xs="10px"
-                                        fs_sm="12px"
-                                        fs_md="10px"
-                                        fs_lg="12px"
-                                        fs_xl="12px">
-                                        {i.sub_title}
-                                    </Paragraph>
-                                </Row>
-                            </Column>
-                            <Column size size="4" customRespSize respSize="6" alignSelf="center">
-                                <Trend
-                                    smooth
-                                    autoDraw
-                                    autoDrawDuration={5000}
-                                    autoDrawEasing="ease-out"
-                                    data={i.chart_data}
-                                    gradient={[`${Colors.blue}`]}
-                                    radius={25}
-                                    strokeWidth={10}
-                                    strokeLinecap={'butt'}
-                                />
-                            </Column>
-                        </Row>
+                        <Trend
+                            className="trend"
+                            smooth
+                            autoDraw
+                            width={200}
+                            autoDrawDuration={5000}
+                            autoDrawEasing="ease-out"
+                            data={i.chart_data}
+                            gradient={[`${Colors.blue}`]}
+                            radius={25}
+                            strokeWidth={10}
+                            strokeLinecap={'butt'}
+                        />
+                        <Paragraph
+                            color="gray"
+                            align="left"
+                            margin="0 0 10px 0"
+                        >
+                            {i.title}
+                        </Paragraph>
+                        <H3 align="left" align_xs="center" align_sm="center">{i.value}{i.value_symbol}</H3>
+                        <Paragraph
+                            color="gray"
+                            align="left"
+                            margin="10px 0 0 0"
+                            >
+                            {i.sub_title}
+                        </Paragraph>
                     </Card>
                 </Column>
             ))

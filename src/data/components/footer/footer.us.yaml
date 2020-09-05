@@ -1,5 +1,6 @@
 footer:
   - column_one:
+    width: 2
     heading: "CONTACT"
     items:
       - name: "Monday to Friday"
@@ -7,6 +8,7 @@ footer:
       - name: "9:00am - 8:00pm"
         link: ""
   - column_two:
+    width: 3
     heading: "COMPANY"
     items:
       - name: "Program"
@@ -19,8 +21,6 @@ footer:
         link: "/pricing"
       - name: "Events"
         link: "/calendar"
-  - column_three:
-    items:
       - name: "Blog"
         link: "/blog"
       - name: "Contact"
@@ -32,6 +32,7 @@ footer:
       - name: "FAQ"
         link: "/faq"
   - column_four:
+    width: 3
     heading: "LOCATIONS"
     items:
       - name: "Online"
@@ -49,6 +50,7 @@ footer:
       - name: "Maracaibo"
         link: "/location/maracaibo"
   - column_five:
+    width: 2
     heading: "FOLLOW"
     items:
       - name: "Github"

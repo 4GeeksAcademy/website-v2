@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../Heading';
 import {Container, Row, Column, Wrapper, Divider} from '../Sections'
-import {Button, Colors, Check, ArrowRight, RoundImage, Over, BackgroundSection} from '../Styling'
+import {Button, Colors, Check, ArrowRight, RoundImage, Over, StyledBackgroundSection} from '../Styling'
 import styled from 'styled-components';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -53,12 +53,8 @@ const Loc = (props) => {
                         alignSelf="center"
                         height="100%"
                         paddingLeft={`0`}
-                      // image="yes" 
-                      // url={item.node.image} 
-                      // border="custom" 
-                      // customBorderRadius="1.25rem 0 0 1.25rem" 
                       >
-                        <BackgroundSection
+                        <StyledBackgroundSection
                           className={`image`}
                           height={`500px`}
                           image={item.node.header.image && item.node.header.image.childImageSharp.fluid}
@@ -69,32 +65,19 @@ const Loc = (props) => {
                       <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
                         <Row align="center" height="100%">
                           <Column size="9" height="100%">
-                            <Divider height="10%" />
-                            <Row height="10%">
-                              <Column size="12">
                                 <H3
+                                  margin="20px 0"
                                   fs_xs="20px"
                                   fs_sm="22px"
                                   fs_md="20px"
                                   fs_lg="20px"
                                   fs_xl="20px"
-                                  primary
                                   align="left"
                                 >
                                   {item.node.city}
                                 </H3>
-                              </Column>
-                            </Row>
-                            <Row height="5%" align="left">
-
-                              <Separator al_xs="center" />
-
-                            </Row>
-                            <Row height="auto" marginBottom="10px">
-                              <Column size="12">
-                                <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{item.node.carousel_box.content}</Paragraph>
-                              </Column>
-                            </Row>
+                              <Separator left variant="primary" />
+                              <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{item.node.carousel_box.content}</Paragraph>
                           </Column>
                         </Row>
 
@@ -117,33 +100,13 @@ const Loc = (props) => {
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               {/* <Card width="100%" > */}
               <Link to={`/${session.language}/location/${pic.node.meta_info.slug}`}>
-                <BackgroundSection
+                <StyledBackgroundSection
                   className={`img-thumbs`}
                   height={`60px`}
                   image={pic.node.carousel_box.images[randLocImgIndex].path && pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
                   bgSize={`cover`}
                   alt={pic.node.carousel_box.images[randLocImgIndex].alt}
                 >
-                  {/* <RoundImage
-                  h_xs="40px"
-                  h_sm="70px"
-                  h_md="60px"
-                  h_lg="80px"
-                  h_xl="90px"
-                  width="100%"
-                  br_xs=".25rem"
-                  br_sm=".25rem"
-                  br_md=".25rem"
-                  br_lg=".25rem"
-                  br_xl=".25rem"
-                  url={pic.node.carousel_box.images[randLocImgIndex].path}
-                  border=".75rem"
-                  bsize="cover"
-                  position="center"
-                  height="100%"
-                  // width="auto"
-                  mb="1.25rem"> */}
-
                   <Row
                     height="100%"
                     align="around"
@@ -169,7 +132,7 @@ const Loc = (props) => {
 
                     </Column>
                   </Row>
-                </BackgroundSection>
+                </StyledBackgroundSection>
                 {/* </RoundImage> */}
               </Link>
               {/* </Card> */}

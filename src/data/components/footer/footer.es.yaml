@@ -1,5 +1,6 @@
 footer:
   - column_one:
+    width: 2
     heading: "CONTACTO"
     items:
       - name: "Lunes a viernes"
@@ -8,6 +9,7 @@ footer:
         link: ""
   - column_two:
     heading: "COMPAÑÍA"
+    width: 3
     items:
       - name: "Programa"
         link: "/course/desarrollo-web-full-stack-bootcamp-part-time"
@@ -19,8 +21,6 @@ footer:
         link: "/precios"
       - name: "Eventos"
         link: "/calendario"
-  - column_three:
-    items:
       - name: "Blog"
         link: "/blog"
       - name: "Contacto"
@@ -31,6 +31,7 @@ footer:
         link: "/faqs"
   - column_four:
     heading: "SEDES"
+    width: 3
     items:
       - name: "Online"
         link: "/location/online"
@@ -47,6 +48,7 @@ footer:
       - name: "Maracaibo"
         link: "/location/maracaibo"
   - column_five:
+    width: 2
     heading: "SÍGUENOS"
     items:
       - name: "Github"

@@ -12,3 +12,9 @@ export const Device = {
     lg: `(min-width: ${Size.laptop}) and (max-width: ${Size.laptopL})`,
     xl: `(min-width: ${Size.laptopL})`,
 };
+export const Break = {
+    xs: `(max-width: ${Size.mobileS})`,
+    sm: `(max-width: ${Size.tablet})`,
+    md: `(max-width: ${Size.laptop})`,
+    lg: `(max-width: ${Size.laptopL})`,
+};

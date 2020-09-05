@@ -49,14 +49,14 @@ details:
       slug: "fundamentos"
       duration: "2 sem"
       step: 3.4
-    - module_name: "DESARROLLO WEB"
+    - module_name: "LA WEB"
       title: "Desarrollo web"
       description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bunding, Babel JS, el DOM, Eventos"
       projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."
       slug: "desarrollo-web"
       duration: "4 sem"
       step: 3.5
-    - module_name: "APLICACIÓN AVANZADA"
+    - module_name: "API's"
       title: "Aplicación avanzada"
       description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publicando tu sitio web, etc."
       projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."

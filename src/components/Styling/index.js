@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
-import {Device} from '../Responsive';
+import {Device, Break} from '../Responsive';
 import {Paragraph} from '../Heading';
 import BackgroundImage from 'gatsby-background-image'
 import {graphql, StaticQuery} from 'gatsby'
@@ -35,7 +35,7 @@ export const Glasses = props => <svg width={props.width} height={props.height} x
 export const Clock = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 13 4 L 13 6 L 19 6 L 19 4 Z M 16 7 C 9.9375 7 5 11.9375 5 18 C 5 24.0625 9.9375 29 16 29 C 22.0625 29 27 24.0625 27 18 C 27 15.082031 25.863281 12.410156 24 10.4375 L 25.71875 8.71875 L 24.28125 7.28125 L 22.46875 9.09375 C 20.65625 7.773438 18.410156 7 16 7 Z M 16 9 C 20.980469 9 25 13.019531 25 18 C 25 22.980469 20.980469 27 16 27 C 11.019531 27 7 22.980469 7 18 C 7 13.019531 11.019531 9 16 9 Z M 15 11 L 15 16.28125 C 14.402344 16.628906 14 17.261719 14 18 C 14 18.738281 14.402344 19.371094 15 19.71875 L 15 21 L 17 21 L 17 19.71875 C 17.597656 19.371094 18 18.738281 18 18 C 18 17.261719 17.597656 16.628906 17 16.28125 L 17 11 Z" /></svg>;
 export const Users = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 9 7 C 5.699219 7 3 9.699219 3 13 C 3 14.984375 3.976563 16.75 5.46875 17.84375 C 2.832031 19.152344 1 21.863281 1 25 L 3 25 C 3 21.675781 5.675781 19 9 19 C 12.324219 19 15 21.675781 15 25 L 17 25 C 17 21.675781 19.675781 19 23 19 C 26.324219 19 29 21.675781 29 25 L 31 25 C 31 21.863281 29.167969 19.152344 26.53125 17.84375 C 28.023438 16.75 29 14.984375 29 13 C 29 9.699219 26.300781 7 23 7 C 19.699219 7 17 9.699219 17 13 C 17 14.984375 17.976563 16.75 19.46875 17.84375 C 18.011719 18.566406 16.789063 19.707031 16 21.125 C 15.210938 19.707031 13.988281 18.566406 12.53125 17.84375 C 14.023438 16.75 15 14.984375 15 13 C 15 9.699219 12.300781 7 9 7 Z M 9 9 C 11.222656 9 13 10.777344 13 13 C 13 15.222656 11.222656 17 9 17 C 6.777344 17 5 15.222656 5 13 C 5 10.777344 6.777344 9 9 9 Z M 23 9 C 25.222656 9 27 10.777344 27 13 C 27 15.222656 25.222656 17 23 17 C 20.777344 17 19 15.222656 19 13 C 19 10.777344 20.777344 9 23 9 Z" /></svg>;
 export const Comments = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 2 5 L 2 21 L 6 21 L 6 26.09375 L 7.625 24.78125 L 12.34375 21 L 22 21 L 22 5 Z M 4 7 L 20 7 L 20 19 L 11.65625 19 L 11.375 19.21875 L 8 21.90625 L 8 19 L 4 19 Z M 24 9 L 24 11 L 28 11 L 28 23 L 24 23 L 24 25.90625 L 20.34375 23 L 12.84375 23 L 10.34375 25 L 19.65625 25 L 26 30.09375 L 26 25 L 30 25 L 30 9 Z" /></svg>;
-export const ArrowRight = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 18.71875 6.78125 L 17.28125 8.21875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 17.28125 23.78125 L 18.71875 25.21875 L 27.21875 16.71875 L 27.90625 16 L 27.21875 15.28125 Z" /></svg>;
+export const ArrowRight = props => <svg style={props.style} width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 18.71875 6.78125 L 17.28125 8.21875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 17.28125 23.78125 L 18.71875 25.21875 L 27.21875 16.71875 L 27.90625 16 L 27.21875 15.28125 Z" /></svg>;
 export const ArrowLeft = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 13.28125 6.78125 L 4.78125 15.28125 L 4.09375 16 L 4.78125 16.71875 L 13.28125 25.21875 L 14.71875 23.78125 L 7.9375 17 L 28 17 L 28 15 L 7.9375 15 L 14.71875 8.21875 Z" /></svg>;
 export const ArrowUp = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 16 4.09375 L 15.28125 4.78125 L 6.78125 13.28125 L 8.21875 14.71875 L 15 7.9375 L 15 28 L 17 28 L 17 7.9375 L 23.78125 14.71875 L 25.21875 13.28125 L 16.71875 4.78125 Z" /></svg>;
 export const AngleDown = props => <svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z" /></svg>;
@@ -146,38 +146,6 @@ export const Tooltip = styled.div`
     line-height: 1.2;
     text-align: center;
     -webkit-transition: all .15s ease-in-out;
-// white-space: nowrap;
-// transform: translate(-50%, 1em);
-transition: all .15s ease-in-out;
-// &::before {
-//     content: '';
-//     position: absolute;
-//     top: 100%;
-//     left: 50%;
-//     width: 0;
-//     height: 0;
-//     border: .5em solid transparent;
-//     border-top-color: rgba(137, 138, 139, 1);
-//     transform: translate(-50%, 0);
-// }
-    @media ${Device.xs}{
-   
-    }
-    @media ${Device.sm}{
-        
- 
-    }
-    @media ${Device.md}{
-           
-    }
-    @media ${Device.lg}{
- 
-    }
-    @media ${Device.xl} {
-
-    }
-    
-
 `
 export const RoundImage = styled.div`
     position: ${props => props.pos};
@@ -190,6 +158,7 @@ export const RoundImage = styled.div`
     background-color: ${props => props.backgroundColor};
     width: ${props => props.width};
     height: ${props => props.height};
+    min-height: ${props => props.minHeight};
     ${Over}:hover {
         opacity: ${props => props.opacity};
       }
@@ -249,17 +218,6 @@ export const BackgroundSection = ({children, className, image, height, width, bg
             className={className}
             borderRadius={borderRadius}
             fluid={image}
-            style={{
-                // Defaults are overwrite-able by setting one or each of the following:
-                backgroundSize: bgSize,
-                backgroundPosition: 'center center',
-                backgroundRepeat: 'no-repeat',
-                height: height,
-                width: width,
-                opacity: 1,
-                margin: margin,
-            }}
-
         >
             {children}
         </BackgroundImage>
@@ -268,14 +226,30 @@ export const BackgroundSection = ({children, className, image, height, width, bg
 
 }
 export const StyledBackgroundSection = styled(BackgroundSection)`
-    width: 100%;
-    background-position: center center;
+    width: ${props => props.width || "100%"};
+    background-position: ${props => props.backgroundPosition || "center center"};
     background-repeat: no-repeat;
-    background-size: contain;
+    margin: ${props => props.margin}
+    opacity: 1;
+    background-size: ${props => props.bgSize || "cover"};
+    height: ${props => props.height};
     &:before, &:after {
         border-radius: ${props => props.borderRadius};
         filter: ${props => props.filter};
     }
+    @media ${Break.lg}{
+    }
+    @media ${Break.md}{
+    }
+    @media ${Break.sm}{
+        height: ${props => props.height_sm};
+        &:before, &:after {
+            border-radius: ${props => props.borderRadius_sm};
+        }
+    }
+    @media ${Break.xs} {
+    }
+
   `
 
 const SmartButton = ({children, colorHover, textColor, borderRadius, outline, ...rest}) => <button {...rest}>{children}</button>;

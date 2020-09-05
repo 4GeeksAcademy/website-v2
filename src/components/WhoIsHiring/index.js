@@ -1,6 +1,6 @@
 import React from 'react';
 import {Column, Row, Divider} from '../../components/Sections'
-import {Colors, BackgroundSection} from '../Styling';
+import {Colors, StyledBackgroundSection} from '../Styling';
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
 import {Card} from '../Card';
@@ -14,20 +14,18 @@ const WhoIsHiring = props => {
         size="8"
         paragraph={props.subheading}
         paragraphColor={Colors.gray}
-        customParagraphSize="12"
       />
       <Row >
         {props.images.map((item, index) => (
-          <Column size="3" customRespSize respSize="3" key={index} margin="5px 0">
-            <Card width="100%" padding="20px">
-              <BackgroundSection
+          <Column  key={index} size="3" size_sm="4" margin="5px 0">
+            <Card width="100%" padding="20px" p_xs="3px">
+              <StyledBackgroundSection
                 image={item.image.childImageSharp.fluid}
                 alt={item.alt}
-                height={`60px`}
+                height="60px"
                 bgSize={`contain`}
                 margin={`1rem`}
-              ></BackgroundSection>
-
+              ></StyledBackgroundSection>
             </Card>
           </Column>
         ))}

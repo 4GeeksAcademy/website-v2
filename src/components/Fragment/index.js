@@ -18,7 +18,7 @@ export const An = styled.a`
 `
 
 const GITHUB_REPO = "https://github.com/4GeeksAcademy/website-v2/tree/master/src/data";
-const Fragment = ({ github, style, className, children }) => {
+const Fragment = ({ github, style, onClick, className, children }) => {
     let { edit } = parseQueryString(useLocation().search)
     const [ editMode, setEditMode ] = React.useState(false)
     React.useEffect(() => {
@@ -32,9 +32,9 @@ const Fragment = ({ github, style, className, children }) => {
         <An href={`${GITHUB_REPO}${github}`} target="blank" rel="noopener noreferrer">edit</An>
         {children}
     </div>
-    else return <div style={{ ...style }} className={className}>{children}</div>;
+    else return <div onClick={(e) => onClick && onClick(e)} style={{ ...style }} className={className}>{children}</div>;
 }
-const FakeFragment = ({ style, className, children }) => <div style={{ ...style }} className={className}>{children}</div>;
+const FakeFragment = ({ style, className, onClick, children }) => <div onClick={(e) => onClick && onClick(e)} style={{ ...style }} className={className}>{children}</div>;
 Fragment.propTypes = {
     github: PropTypes.string,
     children: PropTypes.node,

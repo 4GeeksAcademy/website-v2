@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
-import {navigate} from 'gatsby';
+import {navigate} from '@reach/router';
 import {useInView} from "react-intersection-observer";
-import Link from 'gatsby-link'
 import Layout from '../global/Layout';
 import styled from 'styled-components';
 import {Card} from '../components/Card'
@@ -181,8 +180,10 @@ const Program = ({data, pageContext, yml}) => {
 
       />
       <Row align="center">
-        <Column align="right" size="6"><Link to={yml.button.apply_button_link}><Button width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button></Link></Column>
-        <Column align="left" size="6">
+        <Column align="right" size="6" size_sm="12" align="center">
+          <Button width="200px" onClick={() => navegate(yml.button.apply_button_link)} color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button>
+        </Column>
+        <Column align="left" size="6" size_sm="12" align="center">
           <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
         </Column>
       </Row>
@@ -225,7 +226,6 @@ const Program = ({data, pageContext, yml}) => {
       
       margin="50px"
     >
-      <section className="section" id="section-3"></section>
       <Title
         size="10"
         title={yml.geeks_vs_others.heading}
@@ -261,12 +261,13 @@ const Program = ({data, pageContext, yml}) => {
     {/* ---------------------------- */}
     <Container fluid>
       <Row>
-        <Column size="2">
-        </Column>
-        <Column size="8">
+        <Column size="2" disp_md="none" />
+        <Column size="8" size_md="10" m_md="auto">
           <Row >
             <Column size="6" paddingLeft={`0`}>
               <Card
+                cursor="pointer"
+                onClick={() => navegate(`/${pageContext.lang}/geekpal`)}
                 h_xs="400px"
                 h_sm="370px"
                 h_md="470px"
@@ -293,8 +294,7 @@ const Program = ({data, pageContext, yml}) => {
                             fs_lg="12px"
                             fs_xl="16px"
                             color={Colors.black}
-                            customTextAlignSmall
-                            alignXs="left">
+                            align_xs="left">
                             {geek.geek_data.geek_pal_heading}
                           </Paragraph>
                         </Column>
@@ -326,15 +326,15 @@ const Program = ({data, pageContext, yml}) => {
                     </Div>
                   </Column>
                   <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
-                    <Link to={`/${pageContext.lang}/geekpal`}>
                       <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
-                    </Link>
                   </Column>
                 </Row>
               </Card>
             </Column>
             <Column size="6" paddingRight={`0`}>
               <Card
+                cursor="pointer"
+                onClick={() => navegate(`/${pageContext.lang}/geekforce`)}
                 h_xs="400px"
                 h_sm="400px"
                 h_md="470px"
@@ -356,7 +356,7 @@ const Program = ({data, pageContext, yml}) => {
                       <Row height={`20%`}>
                         <Column size="12">
                           <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
-                            alignXs="left">
+                            align_xs="left">
                             {geek.geek_data.geek_force_heading}
                           </Paragraph>
                         </Column>
@@ -386,9 +386,7 @@ const Program = ({data, pageContext, yml}) => {
                     </Div>
                   </Column>
                   <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
-                    <Link to={`/${pageContext.lang}/geekforce`}>
                       <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
-                    </Link>
                   </Column>
                 </Row>
               </Card>
@@ -410,7 +408,6 @@ const Program = ({data, pageContext, yml}) => {
         paragraph={yml.prices.sub_heading}
         variant="primary"
       />
-      <section className="section" id="section-4"></section>
       <PricesAndPayment
         type={pageContext.slug}
         locations={data.allLocationYaml.edges}
@@ -427,7 +424,7 @@ const Program = ({data, pageContext, yml}) => {
         size="10"
         title={yml.alumni.heading}
         paragraph={yml.alumni.sub_heading}
-        customParagraphSize="8"
+        maxWidth="66%"
         variant="primary"
       />
       <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} />

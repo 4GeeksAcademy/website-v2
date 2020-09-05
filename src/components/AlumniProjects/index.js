@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, Address, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage, BackgroundSection} from '../Styling';
+import {Colors, Address, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage, StyledBackgroundSection} from '../Styling';
 import {Card} from '../Card';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -38,15 +38,11 @@ const AlumniProjects = ({lang, showThumbs}) => {
                                 display={`flex`}
                                 flexDirection={`column`}
                                 justifyContent={`space-between`}
-                                customRespSize
-                                respSize="6"
                                 alignSelf="center"
                                 height="100%"
                                 image="no"
                                 border="bottom"
-                                padding={`25px`}
-                                paddingLeft={`30px`}
-                                paddingRight={`25px`}
+                                padding={`25px 30px 25px 25px`}
                             >
                                 <H3 color={Colors.blue} align="left" >{`Meet  `}</H3>
                                 {item.alumni.map((alumni, i) => {
@@ -118,7 +114,7 @@ const AlumniProjects = ({lang, showThumbs}) => {
                                     respSize="6"
                                     paddingRight={`0`}
                                 >
-                                    <BackgroundSection
+                                    <StyledBackgroundSection
                                         className={`image`}
                                         height={`500px`}
                                         image={item.project_image.image.childImageSharp.fluid}

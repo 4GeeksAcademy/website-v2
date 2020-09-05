@@ -248,3 +248,27 @@ a {
     outline-style: auto;
     outline-width: 3px;
     } */
+
+.trend{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    /* @media (min-width: 768px) { ... }
+    @media (min-width: 992px) { ... }
+    @media (min-width: 1200px) { ... } */
+}
+@media (min-width: 576px) {
+    .trend{
+        right: -20px;
+    }
+}
+@media (min-width: 992px) {
+    .trend{
+        right: -35px;
+    }
+}
+@media (min-width: 1200px) {
+    .trend{
+        right: 20px;
+    }
+}

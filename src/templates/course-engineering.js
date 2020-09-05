@@ -149,8 +149,7 @@ const Program = ({data, pageContext, yml}) => {
                         fs_lg="12px"
                         fs_xl="16px"
                         color={Colors.black}
-                        customTextAlignSmall
-                        alignXs="left">
+                        align_xs="left">
                         {geek.geek_data.geek_pal_heading}
                       </Paragraph>
                     </Column>
@@ -212,7 +211,7 @@ const Program = ({data, pageContext, yml}) => {
                   <Row height={`20%`}>
                     <Column size="12">
                       <Paragraph fontSize="16px" color={Colors.black} customTextAlignSmall
-                        alignXs="left">
+                        align_xs="left">
                         {geek.geek_data.geek_force_heading}
                       </Paragraph>
                     </Column>
@@ -282,7 +281,7 @@ const Program = ({data, pageContext, yml}) => {
         size="10"
         title={yml.alumni.heading}
         paragraph={yml.alumni.sub_heading}
-        customParagraphSize="8"
+        maxWidth="66%"
         variant="primary"
       />
       <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} />
