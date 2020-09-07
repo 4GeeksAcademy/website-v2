@@ -18,7 +18,6 @@ export const Container = styled(Fragment)`
                 @media ${Device.xs}{
                     // height: auto;
                     padding: ${props => props.p_xs};
-                    
                 }
                 @media  ${Device.sm}{
                     

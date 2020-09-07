@@ -109,8 +109,7 @@ const Partners = (props) => {
       </Wrapper>
       <Divider height="50px" />
       <Wrapper
-        
-
+        right
         background={Colors.lightGray}
         border="top"
       >

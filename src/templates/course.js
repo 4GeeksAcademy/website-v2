@@ -151,6 +151,18 @@ const Program = ({data, pageContext, yml}) => {
       <Credentials lang={data.allCredentialsYaml.edges} />
     </Wrapper>
 
+    {/* PROGRAM DETAILS */}
+    <Wrapper >
+      <Title
+          size="10"
+          marginTop="40px"
+          title={yml.details.heading}
+          paragraph={yml.details.sub_heading}
+          variant="primary"
+      />
+      <ProgramDetails details={yml.details} />
+    </Wrapper>
+
     <Sidebar
       shadow
       borders="1.25rem"
@@ -181,18 +193,6 @@ const Program = ({data, pageContext, yml}) => {
       <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
     </Wrapper>
 
-    {/* PROGRAM DETAILS */}
-    <Wrapper >
-      <Title
-          size="10"
-          marginTop="40px"
-          title={yml.details.heading}
-          paragraph={yml.details.sub_heading}
-          variant="primary"
-      />
-      <ProgramDetails details={yml.details} />
-    </Wrapper>
-
     <Row height="100%">
       <Column size="12">
         <SyllabusSVG />
@@ -219,8 +219,7 @@ const Program = ({data, pageContext, yml}) => {
                 shadow height="400px"
                 width="100%"
                 margin="10px 0px"
-                move="up"
-                up="100px">
+                >
                 <Row height="100%">
                   <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
                     <Div flexDirection={`column`} height={`20%`} justifyContent={`space-between`}>
@@ -287,8 +286,7 @@ const Program = ({data, pageContext, yml}) => {
                 height="400px"
                 width="100%"
                 margin="10px 0px"
-                move="up"
-                up="100px">
+                >
                 <Row height="100%">
                   <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
                     <Div flexDirection={`column`} height={`20%`}>
