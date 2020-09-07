@@ -83,11 +83,12 @@ const Contact = (props) => {
             }
         }}>
             <Wrapper
-                margin="50px 0"
+                margin="100px 0"
                 >
                 <Title
                     title={yml.tagline}
                     paragraph={yml.sub_heading}
+                    paragraphColor={Colors.gray}
                     variant="primary"
                     size="8"
                 />

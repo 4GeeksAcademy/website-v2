@@ -4,11 +4,8 @@ import PropTypes from "prop-types"
 import dayjs from "dayjs";
 import {Colors, Button} from '../Styling';
 import {Device} from '../Responsive';
-import {Paragraph} from '../Heading'
 import Link from 'gatsby-link'
-import {Card} from '../Card';
 import {useScrollPosition} from "./useScrollPosition"
-import {SessionContext} from '../../session.js'
 
 const ShadowedRow = styled.div`
     background: #ececec;
@@ -82,16 +79,22 @@ const Right = styled.div`
     padding-top: 5px;
 `;
 
-const UpcomingProgram = ({upcomingPath, applyPath, position, showOnScrollPosition}) => {
+const UpcomingProgram = ({upcomingPath, applyPath, position, showOnScrollPosition, location}) => {
     const [show, setShow] = useState(showOnScrollPosition == null)
+    const [cohorts, setCohorts] = useState([])
 
-    const {session} = useContext(SessionContext);
+    React.useEffect(() => {
+        if(location) fetch(`${process.env.BREATHECODE_HOST}/admissions/cohort/?upcoming=true&academy=${location.meta_info.slug}`)
+            .then(resp => resp.json())
+            .then(upcoming => setCohorts(upcoming))
+            .catch(error => console.error("Error loading cohorts", error))
+    },[location])
 
     let title = "Full Stack Development"
     let date = new Date()
-    if (session && session.upcoming.length > 0) {
-        date = new Date(session.upcoming[0].kickoff_date)
-        title = dayjs(session.upcoming[0].certificate.name)
+    if (cohorts.length > 0) {
+        date = new Date(cohorts.upcoming[0].kickoff_date)
+        title = dayjs(cohorts.upcoming[0].certificate.name)
     }
 
     useScrollPosition(({prevPos, currPos}) => {

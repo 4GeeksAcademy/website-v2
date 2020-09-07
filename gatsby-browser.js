@@ -1,15 +1,21 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-// You can delete this file if you're not using it
-// import React from 'react';
-
-// import {ThemeProvider} from './src/context/ThemeContext';
-
-// export const wrapRootElement = ({element}) => (
-//     <ThemeProvider>{element}</ThemeProvider>
-// );
+import React from 'react';
+// import Layout from '../global/Layout';
 import 'lazysizes'
+
+// const createStore = require("./src/state/createStore")
+// const store = createStore()
+
+// exports.wrapRootElement = ({ element }) => {
+//   return (
+//     <Provider store={store}>
+//       {element}
+//     </Provider>
+//   )
+// }
+
+// Wraps every page in a component
+export const wrapPageElement = ({ element, props }) => {
+  return <div className="pupusito">
+        {element}
+    </div>
+}

@@ -128,7 +128,6 @@ const ProgramDetails = (props) => {
                                 </Div>
                                 <Div flexDirection={`column`} >
                                     <Div alignItems={`center`} margin={`5px 0`}>
-
                                         <H4
                                             fs_xs="18px"
                                             fs_sm="18px"
@@ -145,6 +144,7 @@ const ProgramDetails = (props) => {
                                             {props.details.details_modules[selected.index].description.split('\\n').map(d => 
                                                 <Paragraph
                                                     color={Colors.darkGray}
+                                                    align_sm="left"
                                                     margin="10px 0px 0px 0px"
                                                     fs_xs="12px"
                                                     fs_sm="16px"
@@ -183,6 +183,7 @@ const ProgramDetails = (props) => {
                                         <Div >
                                             <Paragraph
                                                 color={Colors.darkGray}
+                                                align_sm="left"
                                                 fs_xs="12px"
                                                 fs_sm="16px"
                                                 fs_md="16px"
@@ -215,6 +216,7 @@ const ProgramDetails = (props) => {
                                     <Div >
                                         <Paragraph
                                             color={Colors.darkGray}
+                                            align_sm="left"
                                             fs_xs="12px"
                                             fs_sm="16px"
                                             fs_md="16px"

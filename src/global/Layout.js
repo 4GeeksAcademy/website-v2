@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Helmet} from 'react-helmet';
-
+import {SessionContext} from '../session';
 import '../assets/css/style.css';
 import Navbar from '../components/Navbar';
 import {Nav} from '../components/Navbar';
@@ -16,7 +15,8 @@ import SEO from './SEO';
 
 const Layout = ({children, seo, context}) => {
 
-  const {slug, title, description, image, keywords} = seo;
+  const { session } = React.useContext(SessionContext);
+  // const {slug, title, description, image, keywords} = seo;
   const [ editMode, setEditMode ] = React.useState()
   
   React.useEffect(() => {
@@ -33,7 +33,6 @@ const Layout = ({children, seo, context}) => {
             node {
               footer {
                 heading
-                width
                 items {
                   name
                   link
@@ -90,7 +89,7 @@ const Layout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            <UpcomingProgram position="bottom" showOnScrollPosition={400} />
+            <UpcomingProgram location={session.location} position="bottom" showOnScrollPosition={400} />
             <Footer footer={myFooter.node.footer} />
           </>
         )

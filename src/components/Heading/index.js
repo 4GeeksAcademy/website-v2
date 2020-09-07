@@ -121,21 +121,19 @@ background-color: ${props => props.bg};
 }
 text-shadow: ${props => props.textShadow};
 font-style: normal;
-@media ${Device.xs}{
-  font-size: ${props => props.fs_xs};
-}
-@media  ${Device.sm}{
-  font-size: ${props => props.fs_sm};
-}
-@media ${Device.md}{
-  font-size: ${props => props.fs_md};
-}
-@media ${Device.lg}{
+
+@media ${Break.lg}{
   font-size: ${props => props.fs_lg};
 }
-@media ${Device.xl} {
-  font-size: ${props => props.fs_xl};
-}   
+@media ${Break.md}{
+  font-size: ${props => props.fs_md};
+}
+@media  ${Break.sm}{
+  font-size: ${props => props.fs_sm};
+}
+@media ${Break.xs}{
+  font-size: ${props => props.fs_xs};
+}  
 `;
 export const H5 = styled(Heading)`
       display: block;

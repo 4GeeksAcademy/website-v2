@@ -86,59 +86,6 @@ const Program = ({data, pageContext, yml}) => {
         : activeStep + 1;
     setActiveStep(newActiveStep);
   };
-  const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
-  };
-  const handleStep = step => () => {
-    setActiveStep(step);
-  };
-  const handleComplete = () => {
-    const newCompleted = completed;
-    newCompleted[activeStep] = true;
-    setCompleted(newCompleted);
-    handleNext();
-  };
-  const handleReset = () => {
-    setActiveStep(0);
-    setCompleted({});
-  };
-  function getStepTitle (step) {
-    switch (step) {
-      case 0:
-        return `${yml.typical.schedule[0].title}`
-      case 1:
-        return `${yml.typical.schedule[1].title}`
-      case 2:
-        return `${yml.typical.schedule[2].title}`
-      case 3:
-        return `${yml.typical.schedule[3].title}`
-      case 4:
-        return `${yml.typical.schedule[4].title}`
-      case 5:
-        return `${yml.typical.schedule[5].title}`
-      default:
-        return 'Unknown step';
-    }
-  }
-  function getStepContent (step) {
-    switch (step) {
-      case 0:
-        return `${yml.typical.schedule[0].content}`
-      case 1:
-        return `${yml.typical.schedule[1].content}`
-      case 2:
-        return `${yml.typical.schedule[2].content}`
-      case 3:
-        return `${yml.typical.schedule[3].content}`
-      case 4:
-        return `${yml.typical.schedule[4].content}`
-      case 5:
-        return `${yml.typical.schedule[5].content}`
-      default:
-        return 'Unknown step';
-    }
-  }
-
 
   let week = "";
   {
@@ -151,8 +98,6 @@ const Program = ({data, pageContext, yml}) => {
   }
 
   return (<>
-    {/* <div className={test}> */}
-
     <WrapperImage
       github="/course"
       filter="brightness(0.4)"
@@ -237,7 +182,6 @@ const Program = ({data, pageContext, yml}) => {
     </Wrapper>
 
     {/* PROGRAM DETAILS */}
-    {/* --------------- */}
     <Wrapper >
       <Title
           size="10"
@@ -254,8 +198,6 @@ const Program = ({data, pageContext, yml}) => {
         <SyllabusSVG />
       </Column>
     </Row>
-    {/* SVG  END*/}
-    <Divider height="100px" />
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
     {/* ---------------------------- */}
