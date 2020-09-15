@@ -67,14 +67,20 @@ const PricesAndPayments = (props) => {
   return (
     <Fragment github="/location">
       <Row
-        // padding={`10px 20px`}
         background={Colors.lightGray}
         borderRadius={`.5rem`}
         align={`center`}
         customRespSize
-        alignResp={`space-between`}
+        alignResp={`center`}
       >
-        <Div alignItems={`center`}>
+        <Div alignItems={`center`}
+          onMouseLeave={() => {
+
+            setTimeout(() => {
+              setCityToggle(false);
+            }, 300)
+          }}
+        >
           {/* <Paragraph
             fontWeight={`500`}
             fs_xs="18px"
@@ -145,7 +151,7 @@ const PricesAndPayments = (props) => {
 
       <Divider height="50px" />
       <Row align="center">
-        <Column size="4" customRespSize respSize="12">
+        <Column size="4" size_sm="12" customRespSize respSize="12">
           <Card
             shadow
             width="100%"
@@ -207,7 +213,7 @@ const PricesAndPayments = (props) => {
           </Card>
         </Column>
         {prova.currentCityLocation.hasFinancialsOption &&
-          <Column size="4" customRespSize respSize="12">
+          <Column size="4" size_sm="12" customRespSize respSize="12">
             <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
               <Row height="100px" >
                 <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
@@ -298,7 +304,7 @@ const PricesAndPayments = (props) => {
             </Card>
           </Column>
         }
-        <Column size="4" customRespSize respSize="12">
+        <Column size="4" size_sm="12" customRespSize respSize="12">
           <Card shadow width="100%" height="350px" margin="5px 0">
             <Row height="100px" >
               <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >

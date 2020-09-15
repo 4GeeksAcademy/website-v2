@@ -45,7 +45,8 @@ const Calendar = (props) => {
   const [cohorts, setCohorts] = useState([]);
   const [events, setEvent] = useState([]);
   const [academy, setAcademy] = useState(null);
-  const [selected, setSelected] = useState(0)
+  const [selected, setSelected] = useState(0);
+  const [status, setStatus] = useState({toggle: false, hovered: false})
   const [single, setSingle] = useState()
   const [filteredEvents, setFilteredEvents] = useState([]);
   const [filteredCohorts, setFilteredCohorts] = useState([]);
@@ -56,12 +57,8 @@ const Calendar = (props) => {
   const [toggles, setToggles] = useState();
   const [filterType, setFilterType] = useState();
   const [filterCity, setFilterCity] = useState();
-  const [filters, setFilters] = useState({
-    cityFilter: [],
-    typeFilter: []
-  })
   const [test, setTest] = useState([]);
-  const [filterByCity, setFilterByCity] = useState(["Locations"]);
+  const [filterByCity, setFilterByCity] = useState(() => session.location ? [session.location.city] : ["Locations"]);
   const [filterByType, setFilterByType] = useState(["Courses"]);
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=santiago-chile
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true
@@ -106,14 +103,14 @@ const Calendar = (props) => {
           .then(response => response.json())
           .then(data => setEvent(data))
       }
-      // else{
-      //   await fetch(
-      //     // 'https://assets.breatheco.de/apis/event/all',
-      //     'https://breathecode.herokuapp.com/v1/events/all?upcoming=true',
-      //   )
-      //     .then(response => response.json())
-      //     .then(data => setEvent(data))
-      // }
+      else {
+        await fetch(
+          // 'https://assets.breatheco.de/apis/event/all',
+          `https://breathecode.herokuapp.com/v1/events/all?academy=${academy}&type=${filterByType[0]}`,
+        )
+          .then(response => response.json())
+          .then(data => setEvent(data))
+      }
     }
     loadEvents();
   }, []);
@@ -153,8 +150,6 @@ const Calendar = (props) => {
   }, [events])
   useEffect(() => {
     const filterEvents = async () => {
-      let filteredEventsArray = []
-      let filteredCohortsArray = []
       if (filterByCity.length > 0) {
         const filteredCohortByCity = cohorts.filter(item => item.slug.includes(filterByCity[0].toLowerCase()))
         if (filteredCohortByCity.length > 0) {
@@ -175,7 +170,7 @@ const Calendar = (props) => {
   return (
     <>
       <WrapperImage
-        
+
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         border="bottom"
         height="300px"
@@ -194,7 +189,7 @@ const Calendar = (props) => {
         />
       </WrapperImage>
       <Wrapper
-        
+
 
         border="top"
         color={Colors.white}
@@ -229,13 +224,24 @@ const Calendar = (props) => {
           customRespSize
           alignResp={`space-between`}
         >
-          <Div >
+          <Div
+            onMouseLeave={() => {
+
+              setTimeout(() => {
+                setToggle(false);
+                setToggleCity(false);
+                //   setStatus(_status => ({..._status, toggle: _status.hovered}));
+              }, 300)
+            }}
+          >
             <Card
+
               color={`grey`}
               borders={`.5rem`}
               margin={`0 20px 0 0`}
               margin_sm={"20px auto"}
               margin_xs={"20px auto"}
+
             >
               <Button
                 display={`flex`}
@@ -279,6 +285,7 @@ const Calendar = (props) => {
               }
             </Card>
             <Card
+
               color={`grey`}
               borders={`.5rem`}
               margin_sm={"20px auto"}
@@ -328,47 +335,48 @@ const Calendar = (props) => {
           {/* ******* */}
           {/* CLEAR FILTERS */}
 
-          <Div alignItems={`center`}>
-            {academy != null || filterByType.length > 0
-              ?
+          <Div alignItems={`center`} cursor={`pointer`} onClick={() => {
+            setFilterByCity(["Locations"]);
+            setFilterByType(["Courses"]);
+            setFilteredCohorts([]);
+            setAcademy(null);
+          }}>
+            {
+              // academy != null || filterByType.length > 0
+              //   ?
               filterByCity[0] != "Locations"
-              // || filterByType[0] != "Courses"
-              &&
-              <>
-                <Paragraph
-                  fs_xs="18px"
-                  fs_sm="18px"
-                  fs_md="9px"
-                  fs_lg="11px"
-                  fs_xl="20px"
-                  fontWeight={`500`}
-                  margin={`0 5px`}
-                  cursor={`pointer`}
-                  onClick={() => {
-                    setFilterByCity(["Locations"]);
-                    setFilterByType(["Courses"]);
-                    setFilteredCohorts([]);
-                    setAcademy(null);
-                  }}>Clear all filters
+                || filterByType[0] != "Courses"
+                ?
+                <>
+                  <Paragraph
+                    fs_xs="18px"
+                    fs_sm="18px"
+                    fs_md="9px"
+                    fs_lg="11px"
+                    fs_xl="20px"
+                    fontWeight={`500`}
+                    margin={`0 5px`}
+                    cursor={`pointer`}
+                  >Clear all filters
                 </Paragraph>
-                <Cross
-                  onClick={() => {
-                    setFilterByCity(["Locations"]);
-                    setFilterByType(["Courses"]);
-                    setFilteredCohorts([]);
-                    setAcademy(null);
-                  }}
-                  width="16" color={Colors.blue} fill={Colors.blue} />
-              </>
-              :
-              null
+                  <Cross
+                    onClick={() => {
+                      setFilterByCity(["Locations"]);
+                      setFilterByType(["Courses"]);
+                      setFilteredCohorts([]);
+                      setAcademy(null);
+                    }}
+                    width="16" color={Colors.blue} fill={Colors.blue} />
+                </>
+                :
+                null
             }
           </Div>
         </Row>
       </Wrapper>
-      {cohorts.length > 0 ? <Divider height="150px" /> : null}
+      {/* {cohorts.length > 0 ? <Divider height="150px" /> : null} */}
       <Wrapper
-        
+
 
         border="top"
         background={cohorts.length > 0 ? Colors.lightGray : ""}
@@ -382,14 +390,14 @@ const Calendar = (props) => {
                   console.log("%%%%%", cohortDate.getDay())
                   return (
                     <>
-                      <Column size="4" key={index} margin="0 0 1rem 0">
+                      <Column size="4" size_sm="12" key={index} margin="0 0 1rem 0">
                         <Link to={`/${session.language}/${cohort.certificate.slug}`}>
                           <Card
                             overflow={`hidden`}
                             onMouseOver={() => setSelected(index)}
                             onClick={() => setSelected(index)}
-                            move="up"
-                            up="30%"
+                            // move="up"
+                            // up="30%"
                             h_xs="auto"
                             h_sm="auto"
                             h_md="auto"
@@ -499,12 +507,12 @@ const Calendar = (props) => {
                   console.log("*****", eventDate.getDay())
                   return (
                     <>
-                      <Column size="4" key={index} margin="0 0 1rem 0">
+                      <Column size="4" size_sm="12" key={index} margin="0 0 1rem 0">
                         <a href={event.url} target="_blank" rel="noopener noreferrer">
                           <Card
                             overflow={`hidden`}
-                            move="up"
-                            up="30%"
+                            // move="up"
+                            // up="30%"
                             h_xs="auto"
                             h_sm="auto"
                             h_md="auto"
@@ -650,7 +658,7 @@ const Calendar = (props) => {
                   fs_md="16px"
                   fs_lg="118px"
                   fs_xl="18px">
-                  It seems we could not found any results.
+                  It seems we could not found any result.
               </Paragraph>
 
           }

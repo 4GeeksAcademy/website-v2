@@ -56,7 +56,7 @@ const Pricing = (props) => {
       </WrapperImage>
       {/* CREDENTIALS SECTION */}
       <Wrapper
-        >
+      >
         <Credentials up="80" lang={data.allCredentialsYaml.edges} />
       </Wrapper>
       <Divider height="100px" />
@@ -69,10 +69,10 @@ const Pricing = (props) => {
               <Column size="1" />
               <Column size="10">
                 <Row>
-                  <Column size="5" height="300px">
+                  <Column size="5" size_sm="12" height="300px">
                     <RoundImage url={yml.intro.image} height="400px" bsize="contain" />
                   </Column>
-                  <Column size="4">
+                  <Column size="4" size_sm="12">
                     <Divider height="100px" />
                     <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
                   </Column>
@@ -98,9 +98,17 @@ const Pricing = (props) => {
           borderRadius={`.5rem`}
           align={`center`}
           customRespSize
-          alignResp={`space-between`}
+          alignResp={`center`}
         >
-          <Div alignItems={`center`}>
+          <Div
+            alignItems={`center`}
+            onMouseLeave={() => {
+
+              setTimeout(() => {
+                setPriceToggle(false);
+              }, 300)
+            }}
+          >
             <Paragraph
               fontWeight={`500`}
               fs_xs="18px"
@@ -177,7 +185,7 @@ const Pricing = (props) => {
       </Wrapper >
       <Divider height="100px" />
       <Wrapper
-        
+
 
       >
         <Title
@@ -201,7 +209,7 @@ const Pricing = (props) => {
         <Divider height="100px" />
       </Wrapper>
       <Wrapper
-        
+
 
         background={Colors.lightGray}
         border="top"
