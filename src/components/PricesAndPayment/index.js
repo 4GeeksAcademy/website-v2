@@ -73,7 +73,14 @@ const PricesAndPayments = (props) => {
         customRespSize
         alignResp={`center`}
       >
-        <Div alignItems={`center`}>
+        <Div alignItems={`center`}
+          onMouseLeave={() => {
+
+            setTimeout(() => {
+              setCityToggle(false);
+            }, 300)
+          }}
+        >
           {/* <Paragraph
             fontWeight={`500`}
             fs_xs="18px"
