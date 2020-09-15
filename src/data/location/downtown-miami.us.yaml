@@ -13,6 +13,13 @@ header:
   paragraph: "Miami is one of the fastest growing tech ecosistems in the world right now, join the #1 part-time Coding Bootcamp in Miami and the biggest developer community. \\n Career Support and Student Support are for life."
   image: "../../../static/images/locations/miami-loc.jpg"
   alt: ""
+
+button:
+  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_text: "APPLY NOW"
+  apply_button_link: "/apply"
+  
 info_box:
   heading: "Find us in Miami"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"

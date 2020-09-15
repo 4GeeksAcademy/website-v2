@@ -13,6 +13,13 @@ header:
   sub_heading: ""
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
   alt: ""
+
+button:
+  syllabus_button_text: "DESCARGAR CURRÍCULUM"
+  syllabus_submit_text: "DESCARGER"
+  apply_button_text: "APLICA AHORA"
+  apply_button_link: "/aplica"
+
 info_box:
   heading: "Find us in Caracas"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"

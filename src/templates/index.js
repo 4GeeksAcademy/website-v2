@@ -39,14 +39,14 @@ const Home = (props) => {
           <H1 type="h1" textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header_data.tagline}</H1>
           <Separator  variant="primary" left />
           <H2
-            padding="0 10px"
+            padding="0 10px 0 0px"
             fs_sm="38px"
             fs_md="30px"
             fs_lg="32px"
             fs_xl="38px"
             align="left" >{yml.header_data.title}<Span animated color={Colors.yellow}>_</Span>
           </H2>
-          <Paragraph color={Colors.gray} margin="20px auto" maxWidth="350px" align="left" fontSize="15px">{yml.header_data.sub_heading}</Paragraph>
+          <Paragraph color={Colors.gray} margin="20px 0px" m_sm="20px auto" maxWidth="350px" align="left" fontSize="15px">{yml.header_data.sub_heading}</Paragraph>
           <ChooseProgram
             programs={data.allChooseProgramYaml.edges[0].node.programs}
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}

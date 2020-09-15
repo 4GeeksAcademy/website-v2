@@ -17,6 +17,12 @@ header:
   image: "../../../static/images/locations/mcbo-loc-2.png"
   alt: ""
 
+button:
+  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_text: "APPLY NOW"
+  apply_button_link: "/apply"
+  
 info_box:
   heading: "Find us in Costa Rica"
   address: "Only remotely in Costa Rica"

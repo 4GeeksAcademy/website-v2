@@ -15,6 +15,13 @@ header:
   sub_heading: ""
   image: "../../../static/images/locations/mcbo-loc-2.png"
   alt: ""
+
+button:
+  syllabus_button_text: "DESCARGA MALLA EDUCATIVA"
+  syllabus_submit_text: "DESCARGER"
+  apply_button_text: "APLICA AHORA"
+  apply_button_link: "/aplica"
+  
 info_box:
   heading: "Encuentranos en Costa Rica"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"

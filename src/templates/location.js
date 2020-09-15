@@ -7,9 +7,20 @@ import {Button, Colors, Check, ArrowRight, RoundImage, StyledBackgroundSection} 
 import BaseRender from './_baseRender'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
-import {BrowserView} from "react-device-detect";
+import {requestSyllabus} from "../actions";
+
+import Modal from '../components/Modal';
+import LeadForm from "../components/LeadForm/index.js";
 
 const Location = ({data, pageContext, yml}) => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => {
+        setOpen(true);
+      };
+    
+      const handleClose = () => {
+        setOpen(false);
+      };
     return (<>
         <WrapperImage
             paddingBottom="50px"
@@ -34,13 +45,28 @@ const Location = ({data, pageContext, yml}) => {
                 fontSize="46px"
                 textAlign="center"
             />
-          <ChooseProgram
-            centered
-            margin="0 0 40px 0"
-            programs={data.allChooseProgramYaml.edges[0].node.programs}
-            openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-            closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-          />
+            <Row align="center">
+                <Column align="right" size="6" size_sm="12" align="center">
+                    <ChooseProgram
+                        centered
+                        margin="0 0 40px 0"
+                        programs={data.allChooseProgramYaml.edges[0].node.programs}
+                        openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+                        closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+                    />
+                </Column>
+                <Column align="left" size="6" size_sm="12" align="center">
+                    <Button width="200px" onClick={handleOpen} color={Colors.red} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
+                </Column>
+            </Row>
+            <Modal
+                aria-labelledby="simple-modal-title"
+                aria-describedby="simple-modal-description"
+                open={open}
+                onClose={handleClose}
+            >
+                <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
+            </Modal>
         </WrapperImage>
         <Divider height="100px" />
 
@@ -251,6 +277,9 @@ export const query = graphql`
                     }
                 } 
                 alt
+            }
+            button{
+                syllabus_button_text
             }
             info_box{
                 heading

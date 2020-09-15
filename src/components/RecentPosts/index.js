@@ -76,6 +76,7 @@ const RecentPosts = () => {
                     <Card
                         onClick={() => navigate(`/${i.node.frontmatter.slug}`)}
                         shadow
+                        bgHover={Colors.lightGray}
                         position="relative"
                         width="100%"
                         h_xs="230px"
@@ -98,11 +99,12 @@ const RecentPosts = () => {
                             fs_sm="16px"
                             fs_md="14px"
                             fs_lg="20px"
-                            padding="10px"
+                            padding="5px"
                             fs_xl="20px"
                             uppercase align="center">{i.node.frontmatter.title}</H4>
                         <Paragraph
                             display_sm="none"
+                            padding="10px"
                             fontSize="12px"
                             color="gray" align="left" margin="10px 0">{i.node.frontmatter.excerpt}</Paragraph>
                         <ArrowRight width="32" color={Colors.blue} fill={Colors.blue} 

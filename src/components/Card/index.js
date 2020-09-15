@@ -31,6 +31,9 @@ export const Card = styled(Fragment)`
         :
         props.shadow
     }
+    &:hover{
+        background-color: ${props => props.bgHover};
+    }
     @media ${Device.xs}{
         height: ${props => props.h_xs};
         width: ${props => props.w_xs};

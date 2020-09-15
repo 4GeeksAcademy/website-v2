@@ -13,6 +13,12 @@ header:
   paragraph: "Learning online is hard: You need a schedule, unlimited support, amazing content and unlimited lifetime career support. \\n Yes, it's for the rest of your life."
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
+button:
+  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_text: "APPLY NOW"
+  apply_button_link: "/apply"
+  
 info_box:
   heading: "Find us in Miami"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"

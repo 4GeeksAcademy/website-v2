@@ -16,7 +16,7 @@ import {requestSyllabus} from "../actions";
 import Credentials from '../components/Credentials'
 import Scrollspy from 'react-scrollspy'
 // import {makeStyles} from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
+
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import StepConnector from '@material-ui/core/StepConnector';
 import clsx from 'clsx';
@@ -24,7 +24,7 @@ import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import TypicalDay from "../components/TypicalDay"
-// import Modal from '../components/Modal';
+import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
 
 function rand () {

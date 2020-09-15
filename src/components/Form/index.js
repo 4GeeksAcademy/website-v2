@@ -16,6 +16,7 @@ const StyledInput = styled.input`
     height: 40px;
     width: 100%;
     padding: 5px 10px;
+    margin: 10px 0px;
     border: none;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
@@ -27,8 +28,8 @@ const Rel = styled.div`
 `
 const Msg = styled.span`
     position: absolute;
-    top: -19px;
-    right: 2px;
+    top: -8px;
+    left: 0px;
     padding: 3px;
     font-size: 12px;
     background-color: ${Colors.lightRed};

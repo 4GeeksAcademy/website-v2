@@ -10,13 +10,13 @@ import {Colors, Button} from '../Styling';
 import Fragment from "../Fragment"
 
 export const NavBar = styled.nav`
-    background-color: white;
+    background-color: ${props => props.open ? "white" : null};
     // padding: 0 2rem;
     // display: flex;
     // justify-content: space-between;
     align-items: center;
     height: 55px;
-    z-index: 10000;
+    z-index: 999;
     @media ${Device.xs}{
       height: ${props => props.open ? "100vh" : null};
       position: fixed;
@@ -27,15 +27,7 @@ export const NavBar = styled.nav`
       position: fixed;
       width: 100%;
     }
-    @media ${Device.md}{
 
-    }
-    @media ${Device.lg}{
-
-    }
-    @media ${Device.xl} {
-
-    }
 `
 export const Nav = styled.ul`
     display: flex;

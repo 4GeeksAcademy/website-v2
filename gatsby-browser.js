@@ -14,8 +14,8 @@ import 'lazysizes'
 // }
 
 // Wraps every page in a component
-export const wrapPageElement = ({ element, props }) => {
-  return <div className="pupusito">
-        {element}
-    </div>
-}
+// export const wrapPageElement = ({ element, props }) => {
+//   return <div>
+//         {element}
+//     </div>
+// }
