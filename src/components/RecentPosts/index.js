@@ -59,7 +59,7 @@ const RecentPosts = () => {
             }
         `)
     let post = data.allMarkdownRemark.edges;
-    
+
     const [posts, setPosts] = useState([])
     useEffect(() => {
         let newArray = [];
@@ -72,7 +72,7 @@ const RecentPosts = () => {
     return (
         <Row github="/blog">
             {posts.map((i, index) => (
-                <Column size="4" key={index} margin="10px 0">
+                <Column size="4" size_sm="12" key={index} margin="10px 0">
                     <Card
                         onClick={() => navigate(`/${i.node.frontmatter.slug}`)}
                         shadow
@@ -107,7 +107,7 @@ const RecentPosts = () => {
                             padding="10px"
                             fontSize="12px"
                             color="gray" align="left" margin="10px 0">{i.node.frontmatter.excerpt}</Paragraph>
-                        <ArrowRight width="32" color={Colors.blue} fill={Colors.blue} 
+                        <ArrowRight width="32" color={Colors.blue} fill={Colors.blue}
                             style={{
                                 position: "absolute",
                                 bottom: "10px",
