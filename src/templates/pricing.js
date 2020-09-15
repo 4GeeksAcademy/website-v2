@@ -98,7 +98,7 @@ const Pricing = (props) => {
           borderRadius={`.5rem`}
           align={`center`}
           customRespSize
-          alignResp={`space-between`}
+          alignResp={`center`}
         >
           <Div alignItems={`center`}>
             <Paragraph
