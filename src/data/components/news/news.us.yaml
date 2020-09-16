@@ -38,3 +38,19 @@ news:
     location: ["santiago-chile"]
     url: "https://www.emol.com/noticias/Economia/2019/02/15/937929/Pueden-ganar-1-millon-sin-tener-experiencia-y-hay-deficit-de-expertos-El-perfil-de-los-programadores-en-Chile.html"
     image: "../../../../static/images/news/logo_emol.png"
+  - name: "El Nuevo Herald"
+    location: ["miami-downtown"]
+    url: "https://www.elnuevoherald.com/noticias/finanzas/acceso-miami/article228797629.html"
+    image: "../../../../static/images/news/elnuevoherald.png"
+  - name: "El Universal Venezuela"
+    location: ["el-nacional"]
+    url: "https://www.eluniversal.com/estilo-de-vida/39583/primera-convocatoria-para-el-programa-de-formacion-de-software-y-emprendimiento"
+    image: "../../../../static/images/news/el-universal-vzla.png"
+  - name: "Duplos"
+    location: ["santiago-chile"]
+    url: "https://www.duplos.cl/uno-de-los-top-10-bootcamp-de-programacion-llega-a-chile/"
+    image: "../../../../static/images/news/duplos.png"
+  - name: "Analitica"
+    location: ["el-nacional"]
+    url: "https://www.analitica.com/emprendimiento/noti-tips/4geeks-academy-una-academia-para-desarrolladores-web/"
+    image: "../../../../static/images/news/analitica.png"

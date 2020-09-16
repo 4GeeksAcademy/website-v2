@@ -20,6 +20,11 @@ button:
   apply_button_text: "APLICA AHORA"
   apply_button_link: "/aplica"
 
+news:
+  title: "4Geeks Academy Caracas en las noticias..."
+upcoming:
+  title: "Próximos programas para aprender a programar en Caracas, Venezuela"
+
 info_box:
   heading: "Find us in Caracas"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"
