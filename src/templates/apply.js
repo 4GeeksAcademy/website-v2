@@ -283,10 +283,9 @@ export const query = graphql`
         }
       }
     }
-    allTestimonialsYaml(filter: {lang: {eq: $lang}}) {
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
-            lang
             testimonials {
               student_name
               testimonial_date

@@ -275,10 +275,9 @@ export const query = graphql`
         }
       }
     }
-    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+    allCredentialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
-            lang
             credentials {
               title
               slug
@@ -421,14 +420,12 @@ export const query = graphql`
           }
         }
       }
-      allPartnerYaml(filter: {lang: {eq: $lang}}) {
+      allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
             node {
-              lang
               partners {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -445,7 +442,6 @@ export const query = graphql`
               coding {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -462,7 +458,6 @@ export const query = graphql`
               influencers {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -479,7 +474,6 @@ export const query = graphql`
               financials {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){

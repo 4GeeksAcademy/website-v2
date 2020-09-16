@@ -1,34 +1,60 @@
 import React from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
-import {Row} from '../Sections'
+import {useStaticQuery, graphql, Link} from 'gatsby';
+import styled from "styled-components"
+import {Row, Column} from '../Sections'
 import graphic from "../../assets/images/graphic.png"
+import Img from "gatsby-image"
 
-export default () => {
-  // const data = useStaticQuery(graphql`
-  //   query myQueryNews{
-  //       news: allNewsYaml {
-  //         edges {
-  //           node {
-  //             news {
-  //                 name
-  //                 image
-  //               }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `)
+const Helper = styled.span`
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+`
+export default ({ location, lang }) => {
+  const data = useStaticQuery(graphql`
+    query myQueryNews{
+      allNewsYaml{
+        edges {
+          node {
+            news {
+              name
+              url
+              image{
+                childImageSharp {
+                  fluid(maxHeight: 60){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              location
+            }
+            fields {
+              lang
+            }
+          }
+        }
+      }
+    }
+    `)
+
+  const languageNews = data.allNewsYaml.edges.find(({ node }) => node.fields.lang === lang);
+  const locationNews = typeof(languageNews) !== "object" ? [] : languageNews.node.news.filter(n => n.location === "all" || n.location.includes(location));
+  console.log("locationNews",locationNews )
+  if(locationNews.length === 0) return null;
   return (
       <Row github="/components/news">
-        <div className="col-lg-8 offset-lg-1 text-center">
-          <Row>
-            {data.news.edges[0].node.news.map(i => (
-              <div className="col-md-4 ">
-                <img src={i.image} width="100%" height="150" />
-              </div>
-            ))}
-          </Row>
-        </div>
+        {locationNews.map((l,i) => (
+          <Column margin="auto" style={{ whiteSpace: "nowrap", height: "60px" }} key={i} size="2" size_md="3" size_sm="4">
+            <Link to={l.url} target="_blank">
+            <Img 
+              style={{ height: "100%" }} 
+              imgStyle={{ objectFit: "contain" }} 
+              alt={l.name} 
+              fluid={l.image.childImageSharp.fluid} 
+              />
+            </Link>
+          </Column>
+        ))}
       </Row>
   )
 }

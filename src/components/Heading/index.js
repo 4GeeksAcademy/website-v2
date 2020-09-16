@@ -32,7 +32,7 @@ margin-top: ${props => props.marginTop || "initial"};
 text-transform: ${props => props.uppercase && "uppercase"};
 text-align: ${props => props.align};
 @media ${Device.xs}{
-  font-size: ${props => props.fontSizeXs}
+  font-size: ${props => props.fs_xs};
 }
 @media  ${Device.sm}{
   text-align: center;
@@ -208,6 +208,9 @@ export const Separator = ({variant, children, ...rest}) => {
     main: {
       border: `2px solid ${Colors.yellow}`,
     },
+    small: {
+      border: `none`,
+    },
   }
   let props = {...rest, ...variants[variant]};
   return <StyledSeparator {...props}>{children}</StyledSeparator>
@@ -295,22 +298,39 @@ export const Title = props => {
   const variants = {
     default: {
       headingComponent: H2,
+      align: "center",
     },
     primary: {
       headingComponent: H2,
       fontSize: '20px',
       fontWeight: '500',
+      align: "center",
+    },
+    small: {
+      headingComponent: H3,
+      fontSize: '18px',
+      fontWeight: '300',
+      align: "left",
     },
     main: {
       headingComponent: H1,
       shadow: "0px 0px 4px black",
+      align: "center",
     }
   }
   const theme = variants[props.variant]
   const HeadingType = theme.headingComponent;
   return (
     <div style={{marginBottom: "30px "}}>
-      <HeadingType type={props.type} align="center" color={props.color} marginTop={props.marginTop} fontSize={props.fontSize} align={props.textAlign}>{props.title}</HeadingType>
+      <HeadingType type={props.type} align={theme.align}
+        color={props.color}
+        marginTop={props.marginTop}
+        fontSize={props.fontSize}
+        fs_xs={props.fs_xs}
+        align={props.textAlign}
+      >
+        {props.title}
+      </HeadingType>
       <Separator align="center" variant={props.variant} />
       {props.paragraph && props.paragraph.split('\\n').map((content, i) =>
         <Paragraph key={i}
@@ -382,6 +402,6 @@ H3.defaultProps = {
 
 };
 H4.defaultProps = {
-  fontSizeXs: '5vw',
+  fs_xs: '5vw',
   fontWeight: '400',
 };

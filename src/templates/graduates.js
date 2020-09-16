@@ -116,7 +116,7 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: {lang: {eq: $lang}}){
+    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
         edges {
           node {
             header{

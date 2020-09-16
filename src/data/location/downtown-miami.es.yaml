@@ -19,6 +19,11 @@ button:
   syllabus_submit_text: "DESCARGER"
   apply_button_text: "APLICA AHORA"
   apply_button_link: "/aplica"
+
+news:
+  title: "4Geeks Academy Miami en las noticias..."
+upcoming:
+  title: "Próximos programas en 4Geeks Miami"
   
 info_box:
   heading: "Find us in Miami"

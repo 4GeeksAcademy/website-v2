@@ -211,6 +211,18 @@ export const Span = styled.div`
         opacity: ${props => props.opacity};
       }
 `
+
+export const Img = styled.div`
+    background-image: url(${props => props.src});
+    background-repeat: no-repeat;
+    background-size:${props => props.backgroundSize || "cover"};
+    border-radius: ${props => props.borderRadius};
+    background-position: ${props => props.position || "center center"};
+    background-color: ${props => props.backgroundColor};
+    width: ${props => props.width};
+    height: ${props => props.height};
+`
+
 export const BackgroundSection = ({children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
     return (
         <BackgroundImage
@@ -222,8 +234,6 @@ export const BackgroundSection = ({children, className, image, height, width, bg
             {children}
         </BackgroundImage>
     )
-
-
 }
 export const StyledBackgroundSection = styled(BackgroundSection)`
     width: ${props => props.width || "100%"};
@@ -252,6 +262,9 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
 
   `
 
+export const Small = styled.small`
+    display: ${props => props.display};
+`
 const SmartButton = ({children, colorHover, textColor, borderRadius, outline, ...rest}) => <button {...rest}>{children}</button>;
 export const Button = styled(SmartButton)`
     ${props => props.outline
@@ -296,6 +309,7 @@ export const Button = styled(SmartButton)`
             color: ${props => props.textColor};
             cursor: pointer;
             width: ${props => props.width};
+            max-width: ${props => props.maxWidth};
             text-align: center;
             vertical-align: middle;
             display: ${props => props.display};
@@ -319,7 +333,7 @@ export const Button = styled(SmartButton)`
         `}  
 `;
 Button.defaultProps = {
-    padding: '.5rem .45rem',
+    padding: '10px 30px',
     fontSize: '12px',
     width: '100%',
     type: 'button',

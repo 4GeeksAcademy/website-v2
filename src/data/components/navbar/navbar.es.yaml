@@ -9,6 +9,8 @@ navbar:
   #   link: "/precios"
   - name: "Aliados"
     link: "/aliados"
+  - name: "Próximas Fechas"
+    link: "/calendario"
 button:
   button_text: "APLICA"
   button_link: "/aplica"

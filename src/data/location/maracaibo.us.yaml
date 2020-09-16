@@ -22,6 +22,13 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
+
+news:
+  title: "4Geeks Academy Maracaibo in the news..."
+
+upcoming:
+  title: "Upcoming programs in Maracaibo, Venezuela"
+  
   
 info_box:
   heading: "Find us in Maracaibo"
@@ -154,7 +161,7 @@ courses:
   - "Part-Time"
 active_campaign_location_slug: ""
 flag_icon: ""
-breathecode_location_slug: ""
+breathecode_location_slug: "maracaibo"
 location_map: ""
 location_phone_number: ""
 location_office_image: ""

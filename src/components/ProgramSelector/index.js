@@ -45,7 +45,7 @@ const ProgramSelector = (props) => {
   let link = "";
   {props.week === 16 ? link = "full-time" : link = "part-time"}
   return (
-    <Row align="around">
+    <Row align="around" marginTop={props.marginTop}>
       <Column size="2" size_sm="3" alignSelf="center" paddingRight="0" align="right" margin="5px 0">
         <Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >It takes just </Paragraph>
       </Column>

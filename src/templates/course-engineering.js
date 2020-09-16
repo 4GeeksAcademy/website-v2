@@ -35,7 +35,6 @@ const Program = ({data, pageContext, yml}) => {
       github="/course"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       className={`img-header`}
-      height={`600px`}
       bgSize={`cover`}
       alt={yml.header.alt}
       paddingRight={`0`}
@@ -45,7 +44,7 @@ const Program = ({data, pageContext, yml}) => {
       <H1
         size="5"
         variant="main"
-        marginTop="140px"
+        marginTop="100px"
         color={Colors.white}
         fontSize="46px"
         align="center"
@@ -64,14 +63,14 @@ const Program = ({data, pageContext, yml}) => {
         margin="0"
       />
       <H5 color={Colors.white} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
-      <Row align="center" marginTop="20px">
-        <Column align="right" size="6">
+      <Row align="center" marginTop="20px" marginBottom="50px">
+        <Column align="right" size="6" size_xs="12" align_sm="center" m_sm="0px 0px 15px 0px">
           <Button
             onClick={() => navigate(yml.button.apply_button_link)}
-            width="200px" color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button>
+            width="200px" color="red" margin="0" textColor=" white">{yml.button.apply_button_text}</Button>
         </Column>
-        <Column align="left" size="6">
-          <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
+        <Column align="left" size="6" size_xs="12" align_sm="center">
+          <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
         </Column>
       </Row>
       <Modal
@@ -395,7 +394,7 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: {lang: {eq: $lang}}){
+    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
       edges {
         node {
           header{
@@ -436,10 +435,9 @@ export const query = graphql`
         }
       }
     }
-    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+    allCredentialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
       edges {
         node {
-          lang
           credentials {
             title
             slug
@@ -450,11 +448,9 @@ export const query = graphql`
         }
       }
     }
-    allGeeksVsOthersYaml(filter: {lang: {eq: $lang}}) {
+    allGeeksVsOthersYaml(filter: { fields: { lang: { eq: $lang }}}) {
       edges {
         node {
-          lang
-          
           info {
             features
             at4_Geeks

@@ -113,7 +113,7 @@ const Calendar = (props) => {
       }
     }
     loadEvents();
-  }, []);
+  }, [academy]);
   useEffect(() => {
     const loadFilterCity = async () => {
       let filterCityArray = [{city: 'All Locations', slug: ''}];

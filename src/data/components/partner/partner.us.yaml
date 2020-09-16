@@ -1,5 +1,3 @@
-lang: "us"
-
 ## THE PARTNERS ARE DIVIDED IN 4 CATEGORIES:
 ## PARTNERS - CODING - INFLUENCERS - FINANCIALS
 ## THIS COMPONENT IS USED IN "/partners" and "/pricing"
@@ -12,57 +10,57 @@ partners:
   footer_link: "/geekforce"
   images:
     - name: "Microsoft"
-      slug: "microsoft"
+      locations: all
       image: "../../../../static/images/partner/microsoft.png"
       alt: ""
       featured: true
     - name: "Boats Group"
-      slug: "boats-group"
+      locations: ["miami-downtown"]
       image: "../../../../static/images/partner/boats.jpg"
       alt: ""
       featured: true
     - name: "Facebook"
-      slug: "facebook"
+      locations: all
       image: "../../../../static/images/partner/facebook.png"
       alt: ""
       featured: true
     - name: "National Geographic"
-      slug: "natgeo"
+      locations: all
       image: "../../../../static/images/partner/natgeo.png"
       alt: ""
       featured: true
     - name: "Evernote"
-      slug: "evernote"
+      locations: all
       image: "../../../../static/images/partner/evernote.png"
       alt: ""
       featured: true
     - name: "Ultimate Software"
-      slug: "ultimate-software"
+      locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ultimate.png"
       alt: ""
       featured: true
     - name: "TCG Group"
-      slug: "tcg"
+      locations: ["miami-downtown"]
       image: "../../../../static/images/partner/tcg.png"
       alt: ""
       featured: true
     - name: "Razz"
-      slug: "razz"
+      locations: ["miami-downtown"]
       image: "../../../../static/images/partner/razz.png"
       alt: ""
       featured: true
     - name: "Overseas"
-      slug: "overseas"
+      locations: ["miami-downtown"]
       image: "../../../../static/images/partner/overseas.png"
       alt: ""
       featured: true
     - name: "DS9"
-      slug: "ds9"
+      locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ds9.png"
       alt: ""
       featured: true
     - name: "Coinet"
-      slug: "coinet"
+      locations: ["miami-downtown"]
       image: "../../../../static/images/partner/coinet.jpg"
       alt: ""
       featured: true
@@ -71,37 +69,30 @@ coding:
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
   images:
     - name: "Google Developers"
-      slug: "google-developers"
       image: "../../../../static/images/coding/google-developers.png"
       alt: ""
       featured: false
     - name: "Facebook Developer Circle"
-      slug: "facebook-developer-circle"
       image: "../../../../static/images/coding/developer-circles.png"
       alt: ""
       featured: false
     - name: "Bloktech"
-      slug: "bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
       alt: ""
       featured: false
     - name: "Startup"
-      slug: "startup"
       image: "../../../../static/images/coding/startup.png"
       alt: ""
       featured: false
     - name: "Shell Hacks"
-      slug: "shell-hacks"
       image: "../../../../static/images/coding/shell-hacks.png"
       alt: ""
       featured: false
     - name: "Womans Who Code"
-      slug: "woman-who-code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
       alt: ""
       featured: false
     - name: "Worldcamp"
-      slug: "worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"
       alt: ""
       featured: false
@@ -110,32 +101,26 @@ influencers:
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
   images:
     - name: "Quotanda"
-      slug: "quotanda"
       image: "../../../../static/images/quotanda-logo.png"
       alt: ""
       featured: false
     - name: "Climb"
-      slug: "climb"
       image: "../../../../static/images/climb-logo.png"
       alt: ""
       featured: false
     - name: "Skill Fund"
-      slug: "skill-fund"
       image: "../../../../static/images/skill-logo.png"
       alt: ""
       featured: false
     - name: "Dda"
-      slug: "dda"
       image: "../../../../static/images/influencers/dda.png"
       alt: ""
       featured: false
     - name: "Miami Dade"
-      slug: "miami-dade"
       image: "../../../../static/images/influencers/miami-dade.png"
       alt: ""
       featured: false
     - name: "Beacon Council"
-      slug: "beacon-council"
       image: "../../../../static/images/influencers/beacon.png"
       alt: ""
       featured: false
@@ -144,17 +129,14 @@ financials:
   sub_heading: "In a big effort to create the most accessible education.."
   images:
     - name: "Quotanda"
-      slug: "quotanda"
       image: "../../../../static/images/quotanda-logo.png"
       alt: ""
       featured: false
     - name: "Climb"
-      slug: "climb"
       image: "../../../../static/images/climb-logo.png"
       alt: ""
       featured: false
     - name: "Skill Fund"
-      slug: "skill-fund"
       image: "../../../../static/images/skill-logo.png"
       alt: ""
       featured: false

@@ -21,6 +21,11 @@ button:
   syllabus_submit_text: "DESCARGER"
   apply_button_text: "APLICA AHORA"
   apply_button_link: "/aplica"
+
+news:
+  title: "4Geeks Academy Costa Rica en las noticias..."
+upcoming:
+  title: "Próximos programas en 4Geeks Costa Rica"
   
 info_box:
   heading: "Encuentranos en Costa Rica"
@@ -153,7 +158,7 @@ courses:
   - "Part-Time"
 active_campaign_location_slug: ""
 flag_icon: ""
-breathecode_location_slug: ""
+breathecode_location_slug: "costa-rica"
 location_map: ""
 location_phone_number: ""
 location_office_image: ""

@@ -5,55 +5,36 @@ import {Colors, StyledBackgroundSection} from '../../components/Styling'
 import {Device, Break} from '../Responsive'
 import {Paragraph} from '../Heading'
 import Fragment from "../Fragment"
+import { InsertChartOutlinedTwoTone } from '@material-ui/icons';
 
+const containerVariants = {
+    fluid: {
+        width: "100%"
+    },
+    fixed: {
+        width: "inherit"
+    }
+}
 export const Container = styled(Fragment)`
-    ${props =>
-        props.width === "fluid"
-            ?
+
+    ${props => props.variant === "fixed" ?
             css`
-                width: 100%;
-                @media ${Device.md}{
-                    
-                }
-                @media ${Device.xs}{
-                    // height: auto;
-                    padding: ${props => props.p_xs};
-                }
-                @media  ${Device.sm}{
-                    
-                    
-                }
-                @media ${Device.lg}{
-                    
-                }
-                @media ${Device.xl} {
-                   
-                }
-            `
-            :
-            props.width === "fixed"
-            &&
-            css`
-            @media ${Device.md}{
-                max-width: 540px;
-            }
-            @media ${Device.xs}{
-                max-width: 540px;
-                
-            }
-            @media  ${Device.sm}{
-                max-width: 720px;
-                
-            }
-            @media ${Device.lg}{
+            max-width: 1140px;
+            @media ${Break.lg}{
                 max-width: 960px;
             }
-            @media ${Device.xl} {
-                max-width: 1140px;
+            @media ${Break.md}{
+                max-width: 540px;
             }
-            `
+            @media  ${Break.sm}{
+                max-width: 720px;
+            }
+            @media ${Break.xs}{
+                max-width: 540px;
+            }
+            `:''
     }
-    
+    width: ${props => containerVariants[props.variant || "fixed"]};
     height: ${props => props.height};
     margin: ${props => props.margin || "initial"};
     padding-right: 15px;
@@ -63,6 +44,12 @@ export const Container = styled(Fragment)`
     padding-top: ${props => props.p_top};
     padding-bottom: ${props => props.p_bottom};
     background: ${props => props.color};
+    @media  ${Break.sm}{
+        padding: ${props => props.p_sm};
+    }
+    @media  ${Break.xs}{
+        padding: ${props => props.p_xs};
+    }
 `
 
 const rowAligns = {
@@ -86,6 +73,10 @@ export const Row = styled(Fragment)`
     display: flex;
     flex-wrap: wrap; 
     align-items:${props => props.alignItems};
+    margin: ${props => props.margin};
+    right: ${props => props.right};
+    left: ${props => props.left};
+    top: ${props => props.top};
     margin-right: ${props => props.marginRight};
     margin-left: ${props => props.marginLeft};
     margin-top: ${props => props.marginTop};
@@ -104,13 +95,10 @@ export const Row = styled(Fragment)`
     @media  ${Break.sm}{
         width: ${props => props.width_sm};
         display: ${props => props.display_sm};
+        margin: ${props => props.m_sm};
         ${props => props.customRespSize
         ? css`justify-content: ${props => props.alignResp};`
         : css`justify-content: center;`};
-        ${props => props.RespSm
-        && css`
-            padding-left: 15px;
-            padding-right: 15px;`
     }
     @media ${Break.xs}{
         width: ${props => props.width_xs};
@@ -119,6 +107,7 @@ export const Row = styled(Fragment)`
         ? css`justify-content: ${props => props.alignResp};`
         : css`justify-content: center;`};
         padding: ${props => props.p_xs};
+        margin: ${props => props.m_xs};
     }
 `
 
@@ -266,7 +255,11 @@ export const Column = styled.div`
 `
 
 export const Wrapper = (props) => {
-    return <Container margin={props.margin} github={props.github} fluid>
+    return <Container 
+        github={props.github} 
+        margin={props.margin} 
+        variant="fluid"
+    >
         <Row>
             <Column size="1" disp_md="none" />
             <Column
@@ -297,7 +290,12 @@ export const Wrapper = (props) => {
 }
 
 export const WrapperImage = (props) => {
-    return <Container margin={props.margin} github={props.github} fluid>
+    return <Container 
+            margin={props.margin} 
+            p_xs="0" 
+            github={props.github} 
+            variant="fluid"
+        >
         <Row>
             <Column size="1" />
             <Column
@@ -364,15 +362,12 @@ export const WrapperCustom = (props) => {
     </Container>
 }
 
-export const Divider = props => {
-    const Height = styled.div`
-        height: ${props.height}
-    `;
-    return (
-        <Height></Height>
-    )
-};
-
+export const Divider = styled.div`
+    height: ${props => props.height};
+    @media ${Break.md} {
+        height: ${props => props.md};
+    }
+`;
 
 Container.propTypes = {
     color: PropTypes.string,

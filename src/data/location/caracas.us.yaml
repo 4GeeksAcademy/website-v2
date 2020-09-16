@@ -19,6 +19,12 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
+
+news:
+  title: "4Geeks Academy Caracas in the news..."
+
+upcoming:
+  title: "Upcoming programs in Caracas, Venezuela"
   
 info_box:
   heading: "Find us in Caracas"
