@@ -6,7 +6,7 @@ import {Device} from '../Responsive'
 import {FadeIn} from '../Animations'
 import Fragment from "../Fragment"
 
-const _colors = () => ({ 
+const _colors = () => ({
     black: Colors.black,
     grey: Colors.lightGray,
     darkGray: Colors.borderGray,
@@ -39,29 +39,34 @@ export const Card = styled(Fragment)`
         width: ${props => props.w_xs};
         padding: ${props => props.p_xs};
         margin: ${props => props.margin_xs || props.margin};
+        display: ${props => props.display_xs};
+        
     }
     @media ${Device.sm}{
         height: ${props => props.h_sm};
         width: ${props => props.w_sm};
         margin: ${props => props.margin_sm || props.margin};
         padding: ${props => props.p_sm};
+        display: ${props => props.display_sm};
     }
     @media ${Device.md}{
         height: ${props => props.h_md};
         width: ${props => props.w_md};
         padding: ${props => props.p_md};
         margin: ${props => props.margin_md || props.margin};
-        
+        display: ${props => props.display};
     }
     @media ${Device.lg}{
         width: ${props => props.w_lg};
         height: ${props => props.h_lg};
         margin: ${props => props.margin_lg || props.margin};
+        display: ${props => props.display};
     }
     @media ${Device.xl} {
         width: ${props => props.w_xl};
         height: ${props => props.h_xl};
         margin: ${props => props.margin_xl || props.margin};
+        display: ${props => props.display};
     }
     ${props =>
         props.move === "up"
