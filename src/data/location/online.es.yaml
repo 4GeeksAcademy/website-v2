@@ -10,7 +10,7 @@ meta_info:
 seo_title: "4Geeks Academy Remoto"
 header:
   tagline: "4GEEKS ACADEMY IN MIAMI"
-  sub_heading: ""
+  paragraph: "Aprender a programar online es difcíl, únete a la comunidad de programadores mas grande del mundo y recibe soporte para aprender y para conseguir trabajo de por vida"
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
 
@@ -21,7 +21,7 @@ button:
   apply_button_link: "/aplica"
   
 info_box:
-  heading: "Find us in Miami"
+  heading: ""
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"

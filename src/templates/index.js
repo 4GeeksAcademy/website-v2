@@ -48,6 +48,8 @@ const Home = (props) => {
           </H2>
           <Paragraph color={Colors.gray} margin="20px 0px" m_sm="20px auto" maxWidth="350px" align="left" fontSize="15px">{yml.header_data.sub_heading}</Paragraph>
           <ChooseProgram
+            left="15px"
+            top="40px"
             programs={data.allChooseProgramYaml.edges[0].node.programs}
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
             closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
@@ -401,10 +403,9 @@ export const query = graphql`
         }
       }
     }
-    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+    allCredentialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
-            lang
             credentials {
               title
               slug
@@ -415,10 +416,9 @@ export const query = graphql`
           }
         }
       }
-      allWhy4GeeksYaml(filter: {lang: {eq: $lang}}) {
+      allWhy4GeeksYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
-            lang
             heading
             sub_heading
             why {
@@ -441,11 +441,10 @@ export const query = graphql`
           }
         }
       }
-      allJobsStatisticsYaml(filter: {lang: {eq: $lang}}) {
+      allJobsStatisticsYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
             id
-            lang
             jobs {
               title
               slug
@@ -457,11 +456,9 @@ export const query = graphql`
           }
         }
      }
-     allGeeksVsOthersYaml(filter: {lang: {eq: $lang}}) {
+     allGeeksVsOthersYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
-            lang
-            
             info {
               features
               at4_Geeks
@@ -483,10 +480,9 @@ export const query = graphql`
           }
         }
       }
-      allPartnerYaml(filter: {lang: {eq: $lang}}) {
+      allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
             node {
-              lang
               partners {
                 tagline
                 sub_heading
@@ -495,7 +491,6 @@ export const query = graphql`
                 footer_link
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -510,7 +505,6 @@ export const query = graphql`
               coding {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -527,7 +521,6 @@ export const query = graphql`
               influencers {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -544,7 +537,6 @@ export const query = graphql`
               financials {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -626,10 +618,9 @@ export const query = graphql`
               }
             }
           }
-          allTestimonialsYaml(filter: {lang: {eq: $lang}}) {
+          allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
             edges {
               node {
-                lang
                 testimonials {
                   student_name
                   testimonial_date
@@ -651,7 +642,7 @@ export const query = graphql`
               }
             }
           }
-          allAlumniProjectsYaml(filter: {lang: {eq: $lang}}){
+          allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
             edges {
               node {
                 header{
@@ -692,10 +683,9 @@ export const query = graphql`
               }
             }
           }
-          allChooseProgramYaml(filter: {lang: {eq: $lang}}) {
+          allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
             edges {
               node {
-                lang
                 programs{
                     text
                     link

@@ -14,6 +14,8 @@ navbar:
   #   link: "/pricing"
   - name: "for companies"
     link: "/partners"
+  - name: "Upcoming"
+    link: "/calendar"
 button:
   button_text: "APPLY NOW"
   button_link: "/apply"

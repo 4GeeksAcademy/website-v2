@@ -1,19 +1,26 @@
 import React, {useState, useEffect, useContext} from 'react';
+import {Link} from "gatsby"
 import {Card} from '../components/Card'
 import ChooseProgram from '../components/ChooseProgram'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
-import {Title, H1, H2, H3, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors, Check, ArrowRight, RoundImage, StyledBackgroundSection} from '../components/Styling'
+import News from '../components/News'
+import dayjs from "dayjs"
+import {Div, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
+import {Title, H1, H4, H3, Span, Paragraph, Separator} from '../components/Heading'
+import {Button, Colors, Small, ArrowRight, Img, StyledBackgroundSection} from '../components/Styling'
 import BaseRender from './_baseRender'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {requestSyllabus} from "../actions";
 
+import {Clock} from '../components/Styling'
+
 import Modal from '../components/Modal';
 import LeadForm from "../components/LeadForm/index.js";
 
 const Location = ({data, pageContext, yml}) => {
+    const { lang } = pageContext;
     const [open, setOpen] = React.useState(false);
+    const [cohorts, setCohorts] = React.useState([]);
     const handleOpen = () => {
         setOpen(true);
       };
@@ -21,20 +28,29 @@ const Location = ({data, pageContext, yml}) => {
       const handleClose = () => {
         setOpen(false);
       };
+      console.log("pageContext",pageContext)
+      console.log("yml",yml)
+
+      useEffect(() => {
+        const loadCohorts = async () => {
+            const resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
+            const data = await resp.json();
+            setCohorts(data.slice(0,4))
+        }
+        loadCohorts();
+      }, []);
+
     return (<>
         <WrapperImage
-            paddingBottom="50px"
             github={`/location`}
             imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
             filter="brightness(0.4)"
             className={`img-header`}
             bgSize={`cover`}
             alt={yml.header.alt}
-            paddingRight={`0`}
-
+            customBorderRadius="0 0 0 1.25rem"
         >
-            <Divider height="100px" />
-            <H1 type="h1"  fontSize="13px" color={Colors.white} align="center">{yml.seo_title}</H1>
+            <H1 type="h1"  fontSize="13px" marginTop="50px" color={Colors.white} align="center">{yml.seo_title}</H1>
             <Divider height="20px" />
             <Title
                 type="h2"
@@ -45,18 +61,18 @@ const Location = ({data, pageContext, yml}) => {
                 fontSize="46px"
                 textAlign="center"
             />
-            <Row align="center">
-                <Column align="right" size="6" size_sm="12" align="center">
+            <Row align="center" marginBottom="40px">
+                <Column align="right" align_xs="center" m_xs="0 0 15px 0" size="6" size_sm="12">
                     <ChooseProgram
-                        centered
-                        margin="0 0 40px 0"
+                        right="15px"
+                        top="40px"
                         programs={data.allChooseProgramYaml.edges[0].node.programs}
                         openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
                         closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
                     />
                 </Column>
-                <Column align="left" size="6" size_sm="12" align="center">
-                    <Button width="200px" onClick={handleOpen} color={Colors.red} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
+                <Column align="left" align_xs="center" size="6" size_sm="12">
+                    <Button width="220px" onClick={handleOpen} color={Colors.red} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
                 </Column>
             </Row>
             <Modal
@@ -65,11 +81,19 @@ const Location = ({data, pageContext, yml}) => {
                 open={open}
                 onClose={handleClose}
             >
-                <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
+                <LeadForm heading={yml.button.syllabus_button_text} formHandler={requestSyllabus} handleClose={handleClose} />
             </Modal>
         </WrapperImage>
         <Divider height="100px" />
-
+        <Wrapper >
+            <Title
+                size="10"
+                title={yml.news.title}
+                margin="left"
+                variant="small"
+            />
+            <News location={yml.breathecode_location_slug} lang={lang}  />
+        </Wrapper>
         { yml.breathecode_location_slug !== "online" &&
             <Wrapper >
                 <Row>
@@ -153,13 +177,15 @@ const Location = ({data, pageContext, yml}) => {
                                     border="custom"
                                     customBorderRadius="0 1.25rem 1.25rem 0"
                                 >
-                                    <StyledBackgroundSection
-                                        className={`img-right`}
-                                        height={`426px`}
-                                        image={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
-                                        bgSize={`cover`}
-                                        alt="Cnn Logo"
-                                    />
+                                    <Link to={yml.info_box.map_url} target="_blank">
+                                        <StyledBackgroundSection
+                                            className={`img-right`}
+                                            height={`426px`}
+                                            image={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
+                                            bgSize={`cover`}
+                                            alt="Cnn Logo"
+                                            />
+                                    </Link>
                                 </Column>
                             </Row>
                         </Card>
@@ -168,6 +194,56 @@ const Location = ({data, pageContext, yml}) => {
             </Wrapper>
         }
         <Divider height="100px" />
+        <Wrapper>
+            <Title
+                size="10"
+                title={yml.upcoming.title}
+                margin="left"
+                variant="primary"
+            />
+            <Row>
+                { cohorts && cohorts.map(cohort => 
+                    <Column
+                        size="3"
+                        size_md="4"
+                        size_sm="6"
+                        size_xs="12"
+                        border="bottom"
+                    >
+                        <Card
+                            color={`grey`}
+                            borders={`.5rem`}
+                            margin={`0 20px 0 0`}
+                            margin_sm={"20px auto"}
+                            margin_xs={"20px auto"}
+                        >
+                            <Img 
+                                src={cohort.certificate.logo} 
+                                height="120px" 
+                                borderRadius="1rem 1rem 0 0"
+                            />
+                            <H4 padding="10px">{cohort.certificate.name}</H4>
+                            <Div padding="10px">
+                                <Clock width="24" color={Colors.blue} fill={Colors.blue} />
+                                <Paragraph
+                                margin={`0 0 0 10px`}
+                                fs_xs="18px"
+                                fs_sm="18px"
+                                fs_md="9px"
+                                fs_lg="11px"
+                                fs_xl="14px">
+                                    <Small display="block">Starting on:</Small>
+                                    {dayjs(cohort.kickoff_date).format("ddd, D MMM YYYY")}
+                                </Paragraph>
+                            </Div>
+                            <Div padding="10px">
+                                <Button color={Colors.red} textColor={Colors.white}>Apply now</Button>
+                            </Div>
+                        </Card>
+                    </Column>
+                )}
+            </Row>
+        </Wrapper>
         <Wrapper >
             <Row>
                 <Column
@@ -280,9 +356,17 @@ export const query = graphql`
             }
             button{
                 syllabus_button_text
+                syllabus_submit_text
+            }
+            news{
+                title
+            }
+            upcoming{
+                title
             }
             info_box{
                 heading
+                map_url
                 address
                 phone
                 email
@@ -321,10 +405,9 @@ export const query = graphql`
         }
       }
     }
-    allChooseProgramYaml(filter: {lang: {eq: $lang}}) {
+    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
-            lang
             programs{
                 text
                 link

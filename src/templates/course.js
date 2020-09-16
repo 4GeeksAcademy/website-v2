@@ -103,33 +103,29 @@ const Program = ({data, pageContext, yml}) => {
       filter="brightness(0.4)"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       className={`img-header`}
-      height={`600px`}
       bgSize={`cover`}
       alt={yml.header.alt}
       paddingRight={`0`}
       customBorderRadius="0 0 0 1.25rem"
-
-
     >
-      <Divider height="20%" />
-      <ProgramSelector week={week} context={pageContext} />
-      <Divider height="20px" />
+      <ProgramSelector week={week} context={pageContext} marginTop="70px" />
       <Title
         size="5"
+        marginTop="20px"
         title={yml.header.tagline}
         variant="main"
         color={Colors.white}
         paragraph={yml.header.paragraph}
         fontSize="46px"
+        fs_xs="40px"
         textAlign="center"
-
       />
-      <Row align="center">
-        <Column align="right" size="6" size_sm="12" align="center">
-          <Button width="200px" onClick={() => navegate(yml.button.apply_button_link)} color="red" margin="15px 0" textColor=" white">{yml.button.apply_button_text}</Button>
+      <Row align="center" marginBottom="50px">
+        <Column align="right" size="6" align_sm="center" m_sm="0px 0px 15px 0px" size_sm="12" align="right">
+          <Button width="200px" onClick={() => navegate(yml.button.apply_button_link)} color="red" margin="0" textColor=" white">{yml.button.apply_button_text}</Button>
         </Column>
-        <Column align="left" size="6" size_sm="12" align="center">
-          <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="15px 0" textColor=" white">{yml.button.syllabus_button_text}</Button>
+        <Column align="left" size="6" align_sm="center" size_sm="12" align="left">
+          <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
         </Column>
       </Row>
       <Modal
@@ -142,7 +138,7 @@ const Program = ({data, pageContext, yml}) => {
       </Modal>
     </WrapperImage>
 
-    <Wrapper>
+    <Wrapper margin="80px 0 0 0" m_sm="0">
       <Title
         size="10"
         title={"This Program By The Numbers"}
@@ -463,7 +459,7 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: {lang: {eq: $lang}}){
+    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
       edges {
         node {
           header{
@@ -504,10 +500,9 @@ export const query = graphql`
         }
       }
     }
-    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+    allCredentialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
       edges {
         node {
-          lang
           credentials {
             title
             slug
@@ -518,11 +513,9 @@ export const query = graphql`
         }
       }
     }
-    allGeeksVsOthersYaml(filter: {lang: {eq: $lang}}) {
+    allGeeksVsOthersYaml(filter: { fields: { lang: { eq: $lang }}}) {
       edges {
         node {
-          lang
-          
           info {
             features
             at4_Geeks

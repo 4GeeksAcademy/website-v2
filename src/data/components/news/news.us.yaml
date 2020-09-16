@@ -1,11 +1,40 @@
 ## DATA TO CHANGE THE IMAGES IN THE NEWS SECTION IN THE HOME PAGE
 news:
-  - name: "Education"
-    slug: "education"
-    image: "../education.jpg"
   - name: "Newsweek"
-    slug: "newsweek"
-    image: "../newsweek.png"
-  - name: "News"
-    slug: "news"
-    image: "../news.jpg"
+    location: ["miami-downtown", "online"]
+    image: "../../../../static/images/news/newsweek.png"
+  - name: "RRHH Digital"
+    location: ["madrid-spain"]
+    image: "../../../../static/images/news/rrhhdigital.png"
+    url: "https://uploads.convertflow.co/production/websites/9849/K3qc2IPjSnGqG3qYNKt2_rrhhdigital.png"
+  - name: "TIC Pymes"
+    location: ["madrid-spain"]
+    image: "../../../../static/images/news/ticpymes.png"
+    url: "https://www.ticpymes.es/tecnologia/noticias/1117890049504/entrevista-aprendizaje-y-ejercitacion-de-logica-clave-aprender-programar.1.html"
+  - name: "La Razón"
+    location: ["madrid-spain"]
+    image: "../../../../static/images/news/larazon.png"
+    url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"
+  - name: "El Economista"
+    location: ["madrid-spain"]
+    image: "../../../../static/images/news/economista.png"
+  - name: "La Tercera"
+    location: ["santiago-chile"]
+    url: "https://www.latercera.com/pulso/noticia/destacada-academia-estadounidense-programadores-aterriza-chile/491519/"
+    image: "../../../../static/images/news/la-tercera.png"
+  - name: "CNN Español"
+    location: ["santiago-chile"]
+    url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
+    image: "../../../../static/images/news/cnn-chile.png"
+  - name: "La Nacion"
+    location: ["costa-rica"]
+    url: "https://www.nacion.com/el-pais/educacion/academia-ofrece-a-ticos-300-becas-completas-para/4HWBOQ2SVRAITNWJPJ2LUMUE3M/story/"
+    image: "../../../../static/images/news/la-nacion-costa-rica.png"
+  - name: "Las Ultimas Noticias"
+    location: ["santiago-chile"]
+    url: "http://www.lun.com/Pages/NewsDetail.aspx?dt=2019-02-16&NewsID=420792&BodyID=0&PaginaId=16"
+    image: "../../../../static/images/news/lun.png"
+  - name: "Emol"
+    location: ["santiago-chile"]
+    url: "https://www.emol.com/noticias/Economia/2019/02/15/937929/Pueden-ganar-1-millon-sin-tener-experiencia-y-hay-deficit-de-expertos-El-perfil-de-los-programadores-en-Chile.html"
+    image: "../../../../static/images/news/logo-emol.png"

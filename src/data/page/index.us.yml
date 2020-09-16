@@ -19,7 +19,7 @@ education:
     alt: ""
   center_box:
     heading: "TOP CODING BOOTCAMP"
-    image: "../../../static/images/Newsweek_Logo.png"
+    image: "../../../static/images/news/newsweek.png"
     alt: ""
   right_box:
     heading: "As Reviewed in"

@@ -20,7 +20,7 @@ education:
     alt: ""
   center_box:
     heading: "TOP CODING SCHOOL"
-    image: "../../../static/images/Newsweek_Logo.png"
+    image: "../../../static/images/news/newsweek.png"
     alt: ""
   right_box:
     heading: "4GEEKS IN LOS MEDIOS"

@@ -20,11 +20,18 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions;
 
     // curstom post types for the website
-    if (['MarkdownRemark', 'FooterYaml', 'NavbarYaml', 'PageYaml', 'CourseYaml', 'LocationYaml', 'JobYaml'].includes(node.internal.type)) {
+    if ([
+        'MarkdownRemark', 'NewsYaml', 'PartnerYaml', 'CredentialsYaml', 
+        'FooterYaml', 'NavbarYaml', 'PageYaml', 'CourseYaml', 
+        'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
+        'TestimonialsYaml', 'GeeksVsOthersYaml', 'JobsStatisticsYaml',
+        'Why4GeeksYaml', 'AlumniProjectsYaml',
+        ].includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});
 
         // add properties to the graph
+        if(node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
         if (meta) {
             createNodeField({node, name: `lang`, value: meta.lang});
             createNodeField({node, name: `slug`, value: meta.slug});

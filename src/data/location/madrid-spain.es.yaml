@@ -5,18 +5,18 @@ meta_info:
   description: null
   image: ""
   keywords: ""
-  redirects: []
+  redirects: ['/es/location/madrid-spain/']
 
-seo_title: "4Geeks Academy Madrid"
+seo_title: "4Geeks Academy Madrid, España"
 header:
-  tagline: "4GEEKS ACADEMY IN MADRID"
-  sub_heading: ""
+  tagline: "4GEEKS ACADEMY MADRID"
+  paragraph: "Unete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/madrid-loc.jpg"
   alt: ""
 
 button:
   syllabus_button_text: "DESCARGA MALLA EDUCATIVA"
-  syllabus_submit_text: "DESCARGER"
+  syllabus_submit_text: "DESCARGAR"
   apply_button_text: "APLICA AHORA"
   apply_button_link: "/aplica"
   
@@ -27,7 +27,15 @@ info_box:
   phone: "910 86 69 83"
   email: "es@4geeksacademy.com"
   image: "../../../static/images/locations/madrid-map.png"
+  map_url: "https://www.google.com/maps/place/4Geeks+Academy/@40.4396216,-3.6808932,15z/data=!4m2!3m1!1s0x0:0xb1a742c609c68c4b?sa=X&ved=2ahUKEwjspv__4-zrAhXEY98KHa3RBpYQ_BIwCnoECBkQCA"
   alt: ""
+
+news:
+  title: "4Geeks Academy Madrid en las noticias..."
+
+upcoming:
+  title: "Próximas fechas en Madrid, España"
+
 carousel_box:
   heading: "Qué deberías saber sobre esta ubicación: "
   content: "A 5 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
@@ -162,7 +170,7 @@ courses:
   - "Part-Time"
 active_campaign_location_slug: ""
 flag_icon: ""
-breathecode_location_slug: ""
+breathecode_location_slug: "madrid-spain"
 location_map: ""
 location_phone_number: ""
 location_office_image: ""

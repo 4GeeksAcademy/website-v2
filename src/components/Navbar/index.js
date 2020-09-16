@@ -221,11 +221,13 @@ export const RightNav = ({lang, menu, open}) => {
       allChooseProgramYaml {
         edges {
           node {
-            lang
             programs{
                 text
                 link
                 schedule
+            }
+            fields{
+              lang
             }
             open_button_text
             close_button_text
@@ -244,7 +246,7 @@ export const RightNav = ({lang, menu, open}) => {
       }
     }
   `)
-  const content = data.allChooseProgramYaml.edges.find(({node}) => node.lang === lang);
+  const content = data.allChooseProgramYaml.edges.find(({node}) => node.fields.lang === lang);
   return (
       <Div open={open}>
         <Link to={'/'}>
@@ -255,6 +257,7 @@ export const RightNav = ({lang, menu, open}) => {
             (item.name === "The Programs" || item.name==="Programas") ?
                 <ChooseProgram
                   key={index}
+                  left="15px"
                   programs={content.node.programs}
                   marginTop="-3px"
                   borderRadius="0 .75rem .75rem .75rem"

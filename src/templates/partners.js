@@ -70,12 +70,10 @@ const Partners = (props) => {
         
         imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
         className={`img-header`}
-        height={`500px`}
         bgSize={`cover`}
         alt={yml.header_data.alt}
         paddingRight={`0`}
         customBorderRadius="0 0 0 1.25rem"
-
       >
         <Divider height="100px" />
         <Title
@@ -84,6 +82,7 @@ const Partners = (props) => {
           variant="main"
           color={Colors.white}
           fontSize="46px"
+          fs_xs="37px"
           textAlign="center"
           paragraph={yml.header_data.sub_heading}
           paragraphColor={Colors.white}
@@ -102,6 +101,7 @@ const Partners = (props) => {
           </Modal>
           <Button width="200px" margin="15px 0px" onClick={handleOpen} color="red" textColor="white">{yml.button_section.button_text}</Button>
         </Row>
+        <Divider height="130px" xs="0" />
       </WrapperImage>
       <Wrapper
         >
@@ -187,10 +187,9 @@ export const query = graphql`
         }
       }
     }
-    allCredentialsYaml(filter: {lang: {eq: $lang}}) {
+    allCredentialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
-            lang
             credentials {
               title
               slug
@@ -201,14 +200,12 @@ export const query = graphql`
           }
         }
       }
-      allPartnerYaml(filter: {lang: {eq: $lang}}) {
+      allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
             node {
-              lang
               partners {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -225,7 +222,6 @@ export const query = graphql`
               coding {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -242,7 +238,6 @@ export const query = graphql`
               influencers {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
@@ -259,7 +254,6 @@ export const query = graphql`
               financials {
                 images {
                   name
-                  slug
                   image {
                     childImageSharp {
                       fluid(maxWidth: 100){
