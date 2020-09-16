@@ -85,15 +85,17 @@ const Location = ({data, pageContext, yml}) => {
             </Modal>
         </WrapperImage>
         <Divider height="100px" />
-        <Wrapper >
-            <Title
-                size="10"
-                title={yml.news.title}
-                margin="left"
-                variant="small"
-            />
-            <News location={yml.breathecode_location_slug} lang={lang}  />
-        </Wrapper>
+        {yml.news && 
+            <Wrapper >
+                <Title
+                    size="10"
+                    title={yml.news.title}
+                    margin="left"
+                    variant="small"
+                />
+                <News location={yml.breathecode_location_slug} lang={lang}  />
+            </Wrapper>
+        }
         { yml.breathecode_location_slug !== "online" &&
             <Wrapper >
                 <Row>

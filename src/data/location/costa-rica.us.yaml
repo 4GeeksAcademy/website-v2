@@ -22,6 +22,11 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
+
+news:
+  title: "4Geeks Academy Costa Rica in the news..."
+upcoming:
+  title: "Upcoming programs 4Geeks Costa Rica"
   
 info_box:
   heading: "Find us in Costa Rica"

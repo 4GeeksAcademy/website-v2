@@ -20,8 +20,7 @@ button:
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
 
-news:
-  title: "4Geeks Academy Chile in the news..."
+
 
 info_box:
   heading: "Find us in Santiago de Chile"
@@ -32,7 +31,9 @@ info_box:
   image: "../../../static/images/locations/santiago-map.png"
   map_url: https://www.google.com/maps/place/4Geeks+Academy+Chile/@-33.4104594,-70.5662933,15z/data=!4m2!3m1!1s0x0:0x37af5bee84731bcc?sa=X&ved=2ahUKEwj35Kmp_-zrAhUFTd8KHeaZDHMQ_BIwE3oECBYQCA
   alt: ""
-
+  
+news:
+  title: "4Geeks Academy Chile in the news..."
 upcoming:
   title: "Upcoming programs in Santiago de Chile"
 

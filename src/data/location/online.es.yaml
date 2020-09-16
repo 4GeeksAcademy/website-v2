@@ -19,6 +19,11 @@ button:
   syllabus_submit_text: "DESCARGER"
   apply_button_text: "APLICA AHORA"
   apply_button_link: "/aplica"
+
+news:
+  title: "4Geeks Academy Online en las noticias..."
+upcoming:
+  title: "Próximos programas para aprender a programar online"
   
 info_box:
   heading: ""
@@ -28,7 +33,7 @@ info_box:
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
-  
+
 carousel_box:
   heading: "What you should know about this location: "
   content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
