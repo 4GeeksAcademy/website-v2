@@ -13,7 +13,6 @@ const ProgramDetailsMobile = (props) => {
     return (
         <>
             {props.details.details_modules.map((item, index) => {
-                console.log("ITEM", item)
                 return (
                     <>
                         <Card
@@ -68,7 +67,7 @@ const ProgramDetailsMobile = (props) => {
                                         margin={`0 10px`}
                                         fontWeight={`400`}
                                     >
-                                        {item.module_name}
+                                        {item.title}
                                     </H3>
                                 </Div>
                                 <Div >
