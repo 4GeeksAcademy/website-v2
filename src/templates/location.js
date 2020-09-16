@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import {Link} from "gatsby"
 import {Card} from '../components/Card'
 import ChooseProgram from '../components/ChooseProgram'
+import Why4Geeks from '../components/Why4Geeks';
 import News from '../components/News'
 import dayjs from "dayjs"
 import {Div, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
@@ -28,8 +29,6 @@ const Location = ({data, pageContext, yml}) => {
       const handleClose = () => {
         setOpen(false);
       };
-      console.log("pageContext",pageContext)
-      console.log("yml",yml)
 
       useEffect(() => {
         const loadCohorts = async () => {
@@ -94,6 +93,7 @@ const Location = ({data, pageContext, yml}) => {
                     variant="small"
                 />
                 <News location={yml.breathecode_location_slug} lang={lang}  />
+                <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
             </Wrapper>
         }
         { yml.breathecode_location_slug !== "online" &&

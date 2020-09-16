@@ -41,11 +41,11 @@ carousel_box:
   content: "A 5 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
   images:
     - path: "../../../static/images/locations/madrid-loc.jpg"
-      alt: "madrid-location"
+      alt: "miami-sunset"
     - path: "../../../static/images/locations/madrid-loc-2.jpg"
-      alt: "4Geeks Academy Madrid location"
-    - path: "../../../static/images/locations/madrid-loc-3.jpg"
-      alt: "4Geeks Madrid location"
+      alt: "4Geeeks miami location"
+    - path: "../../../static/images/locations/madrid-loc-4.jpg"
+      alt: "4Geeeks miami lab"
 
 ## PRICES SECTION
 ## MADRID HAS 3 BOXES:

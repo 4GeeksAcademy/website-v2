@@ -1,18 +1,46 @@
 import React from 'react';
+import {useStaticQuery} from "gatsby"
 import {Title, H4, Paragraph} from '../Heading'
 import {Column, Row, Divider} from '../Sections'
 import {Address, HandMoney, Laptop, Colors, StyledBackgroundSection} from '../Styling'
 import ReactPlayer from 'react-player'
 import Fragment from "../Fragment"
 
-export default (props) => {
-  const info = props.lang[0].node;
-
-return (<Fragment github="/components/4geeks_vs_others">
-      <Title
-        title={info.heading}
-        variant="primary"
-      />
+export default ({ lang, playerHeight }) => {
+  const data = useStaticQuery(graphql`
+    query why4Geeks{
+      allWhy4GeeksYaml{
+        edges {
+          node {
+            fields {
+              lang
+            }
+            why {
+              title
+              description
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 300){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                  fixed(width: 300, height: 60) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
+              alt
+              slug
+              video
+            }
+          }
+        }
+      }
+    }
+    `)
+    let info = data.allWhy4GeeksYaml.edges.find(({ node }) => node.fields.lang === lang);
+    if(info) info = info.node;
+    console.log("info",info )
+    return (<Fragment github="/components/4geeks_vs_others">
       <Row height="auto" marginTop="50px">
         {info.why.map((i, index) => (
           <Column size="4" size_sm="12" key={index}>
@@ -20,7 +48,7 @@ return (<Fragment github="/components/4geeks_vs_others">
               <ReactPlayer
                 className='react-player'
                 light={i.image}
-                style={{height: props.playerHeight}}
+                style={{height: playerHeight}}
                 controls={true}
                 url={i.video}
                 width='100%'
@@ -58,7 +86,6 @@ return (<Fragment github="/components/4geeks_vs_others">
           </Column>
         ))}
       </Row>
-      {/* <StyledBackgroundSection test={info.why[0].image} /> */}
     </Fragment>
   )
 }

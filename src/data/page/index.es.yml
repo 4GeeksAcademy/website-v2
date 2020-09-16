@@ -12,6 +12,10 @@ header_data:
   sub_heading: Únete a miles graduados que viven como programadores, trabajan en grandes empresa y forman parte de una de las comunidades de programación más grandes del mundo.
   image: "../../../static/images/bg/main-bg.jpg"
 
+why_4geeks:
+  heading: ¿POR QUÉ 4GEEKS?
+  sub_heading: ""
+
 ## EDUCATION SECTION
 education:
   left_box:

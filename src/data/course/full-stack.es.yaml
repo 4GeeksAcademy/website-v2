@@ -17,7 +17,7 @@ meta_info:
 header:
   tagline: "FULL STACK DEVELOPER"
   image: "../../../static/images/bg/bg-pr.jpg"
-  paragraph: "From zero to a get paid as a developer, learn the skills of the present and future, boost your professional career, get hired by a tech company."
+  paragraph: "De cero a tener tu primer trabajo como programador, aprende todos los necesario, recibe soporte de por vida y consigue un trabajo como programador 16+ semanas despues de empezar."
   alt: ""
 
 button:
@@ -30,17 +30,17 @@ details:
   heading: DETALLES DEL PROGRAMA
   sub_heading: "Part Time"
   left_labels:
-    description: "DESCRIPTION:"
-    projects: "PROJECTS:"
-    duration: "DURATION:"
-    skills: "Skills / Weeks:"
+    description: "DESCRIPCION:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Tópico / Semana:"
   details_modules:
     - module_name: "PREWORK"
       title: "Prework"
       description: "Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página."
       projects: "CSS Postcard, Versión mínima de Instagram, etc."
       slug: "prework"
-      duration: "2 sem"
+      duration: "(previo)"
       step: 0
     - module_name: "FUNDAMENTOS"
       title: "Aprende a programar"
@@ -57,32 +57,37 @@ details:
       duration: "6 sem"
       step: 6
     - module_name: "API'S"
-      title: "API Development"
-      description: "Mainly focused on Python, get ready to build your own API and interact with 3rd party applications like Twillio, Stripe and many more."
-      projects: "Coursera clone, Instagram clone, Youtube clone, etc."
+      title: "Desarrollo de APIs"
+      description: "Enfocado principalmente en Python, Flask y SQL constrirás tus propias APIs e interactuarás con otras APIs muy conocidas como Google, Twillio, Facebook, Stripe y más!"
+      projects: "Clón de Coursera, Clón de Instagram, Clón de Youtube, etc."
       slug: "web-development"
-      duration: "6 weeks"
+      duration: "2 sem"
       step: 2
-    - module_name: "APLICACIÓN AVANZADA"
-      title: "Aplicación avanzada"
+    - module_name: "APPS AVANZADAS"
+      title: "Apps Avanzadas"
       description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publicando tu sitio web, etc."
       projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
       slug: "aplicacion-avanzada"
-      duration: "6 wks"
+      duration: "6 sem"
       step: 6
-    - module_name: "LIFELONG SUPPORT"
-      title: "Lifelong Support"
-      description: "Keep practicing with the academy's help, we will coaching you for life, build your Resume, Github, LinkedIn, help you apply for jobs, support you once you get a job"
-      projects: "Get paid to keep learning, raise your income gradually as you become a more senior developer, enjoy and build software for life."
+    - module_name: "DE POR VIDA"
+      title: "De por vida"
+      description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
+      projects: "Consegurás tu primer trabajo, empezaras a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganár muy bien y disfrutar de la vida de un programador."
       slug: "lifelong-learning"
-      duration: "1+ week"
+      duration: "1+ sem"
       step: 0
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "EN NÚMEROS: 4 GEEKS VS OTROS"
+  heading: "EN NÚMEROS: 4GEEKS VS OTROS"
   sub_heading: ""
   sub_heading_link: ""
+
+why_4geeks:
+  heading: Porqué 4Geeks Academy
+  sub_heading: ""
+
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
   geek_pal_heading: Trabaja en tecnología
@@ -142,13 +147,13 @@ typical:
 
 ## ALUMNI SECTION
 alumni:
-  heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+  heading: "CONOCE A LOS ALUMNOS Y PROYECTOS"
+  sub_heading: "La última fase del curso debes construir un proyecto final que tu mismo escogeras, puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en colaboración con nuestros hiring partners."
 
 ## SIDEBAR
 sidebar:
-  membership: "MEMBERSHIPS"
-  program: "PROGRAM"
-  geeks_vs_other: "4GEEKS vs OTHERS"
-  pricing: "PRICING"
-  alumni: "THE ALUMNI"
+  membership: "MEMBRESÍA"
+  program: "PROGRAMA"
+  geeks_vs_other: "4GEEKS vs OTROS"
+  pricing: "PRECIO"
+  alumni: "GRADUADOS"

@@ -28,9 +28,13 @@ education:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
+  heading: "WHAT MAKES THIS CODING BOOTCAMP STAND OUT?"
   sub_heading: "View full comparison table >"
   sub_heading_link: "/geeks-vs-others"
+
+why_4geeks:
+  heading: Why 4Geeks Academy
+  sub_heading: ""
 
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:

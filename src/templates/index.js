@@ -25,6 +25,7 @@ const Home = (props) => {
   const {data, pageContext, yml} = props;
 
   const hiring = data.allPartnerYaml.edges[0].node;
+  const city = session && session.location ? session.location.city : "Miami";
   return (
     <>
       <Row>
@@ -36,7 +37,7 @@ const Home = (props) => {
           padding="100px 10px 0 10px"
           margin="0 0 0 auto" 
         >
-          <H1 type="h1" textShadow="none" fontSize="13px" color={Colors.gray} lato>{session && session.location ? session.location.city : "Miami"}{" "}{yml.header_data.tagline}</H1>
+          <H1 type="h1" textShadow="none" fontSize="13px" color={Colors.gray} lato>{city}{" "}{yml.header_data.tagline}</H1>
           <Separator  variant="primary" left />
           <H2
             padding="0 10px 0 0px"
@@ -84,7 +85,11 @@ const Home = (props) => {
       {/* WHY 4GEEKS SECTION */}
 
       <Wrapper margin="50px 0">
-        <Why4Geeks lang={data.allWhy4GeeksYaml.edges} playerHeight="250px" />
+        <Title
+          title={yml.why_4geeks.heading + " " + city}
+          variant="primary"
+        />
+        <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
       </Wrapper>
 
       {/* JOBS STATISTICS SECTION */}
@@ -171,7 +176,7 @@ const Home = (props) => {
       {/* ******************* */}
       <Wrapper margin="100px">
         <Title
-          title={yml.join_geeks.heading}
+          title={yml.join_geeks.heading+" "+city}
           paragraph={yml.join_geeks.sub_heading}
           paragraphColor={Colors.darkGray}
           maxWidth="66%"
@@ -327,6 +332,10 @@ export const query = graphql`
                 sub_heading
                 sub_heading_link
             }
+            why_4geeks{
+              heading
+              sub_heading
+            }
             join_geeks {
                 heading
                 sub_heading
@@ -412,31 +421,6 @@ export const query = graphql`
               value
               symbol
               symbol_position
-            }
-          }
-        }
-      }
-      allWhy4GeeksYaml(filter: { fields: { lang: { eq: $lang }}}) {
-        edges {
-          node {
-            heading
-            sub_heading
-            why {
-              title
-              description
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 300){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                  fixed(width: 300, height: 60) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-              }
-              alt
-              slug
-              video
             }
           }
         }

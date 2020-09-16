@@ -5,8 +5,6 @@
 
 ## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
 
-heading: ¿POR QUÉ 4GEEKS?
-sub_heading: ""
 why:
   - title: "Get a job in Tech"
     description: "Únete a cientos de personas graduadas trabajando en compañías tecnológicas top: Construcción de perfil, Marca personal, Simulacros de entrevistas, etc."
