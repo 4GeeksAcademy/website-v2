@@ -27,14 +27,14 @@ const FillerStyles = styled.div`
 
 
 const ProgramDetails = (props) => {
-    const [selected, setSelected] = useState({ index: 0, manual: false });
-    const steps = props.details.details_modules.reduce((total, current, i) => [ ...total, (total[i-1] || 0) + current.step],[])
+    const [selected, setSelected] = useState({index: 0, manual: false});
+    const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
     useEffect(() => {
         const inter = setInterval(() => {
-            setSelected(current => current.manual ? current : current.index < steps.length-1 ? ({ index: current.index+1, manual: false }) : ({ index: 0, manual: false }))
-        },2000);
+            setSelected(current => current.manual ? current : current.index < steps.length - 1 ? ({index: current.index + 1, manual: false}) : ({index: 0, manual: false}))
+        }, 2000);
         return () => clearInterval(inter)
-    },[])
+    }, [])
     return (
         <Card
             h_xs="400px"
@@ -46,6 +46,8 @@ const ProgramDetails = (props) => {
             shadow height="400px"
             width="100%"
             margin="10px 0px"
+            display_xs={`none`}
+            display_sm={`none`}
         >
             <Row height="100%">
                 <Column size="12" customRespSize respSize="12" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
@@ -61,7 +63,7 @@ const ProgramDetails = (props) => {
                                     borderRadius={selected.index === index ? ".75rem" : null}
                                 >
                                     <Div
-                                        onClick={() => setSelected({ index, manual: true })}
+                                        onClick={() => setSelected({index, manual: true})}
                                         alignItems={`center`}
                                         margin={`0 0 5px 0`}
 
@@ -98,24 +100,25 @@ const ProgramDetails = (props) => {
 
                     </Row>
                     <ContainerStyle>
-                        <FillerStyles completed={(steps[selected.index] * 100) / steps[steps.length-1]} />
+                        <FillerStyles completed={(steps[selected.index] * 100) / steps[steps.length - 1]} />
                     </ContainerStyle>
                     <Row align={`center`} alignItems={`center`} marginTop={`10px`}>
                         <Column size="11" display={`flex`} justifyContent={`space-between`}>
-                            {Array(steps[steps.length-1]).fill(null).map((item, index) => {
+                            {Array(steps[steps.length - 1]).fill(null).map((item, index) => {
                                 return (
-                                            <Paragraph
-                                                color={Colors.darkGray}
+                                    <Paragraph
+                                        color={Colors.darkGray}
 
-                                                fs_xs="8px"
-                                                fs_sm="10px"
-                                                fs_md="10px"
-                                                fs_lg="12px"
-                                                fs_xl="14px"
-                                            >
-                                                {index+1}
-                                            </Paragraph>
-                            )})}
+                                        fs_xs="8px"
+                                        fs_sm="10px"
+                                        fs_md="10px"
+                                        fs_lg="12px"
+                                        fs_xl="14px"
+                                    >
+                                        {index + 1}
+                                    </Paragraph>
+                                )
+                            })}
                             {/* <Infinity width="16px" fill={Colors.darkGray} /> */}
                         </Column>
                     </Row>
@@ -141,20 +144,20 @@ const ProgramDetails = (props) => {
 
                                     </Div>
                                     <div>
-                                            {props.details.details_modules[selected.index].description.split('\\n').map(d => 
-                                                <Paragraph
-                                                    color={Colors.darkGray}
-                                                    align_sm="left"
-                                                    margin="10px 0px 0px 0px"
-                                                    fs_xs="12px"
-                                                    fs_sm="16px"
-                                                    fs_md="16px"
-                                                    fs_lg="18px"
-                                                    fs_xl="18px"
-                                                >
+                                        {props.details.details_modules[selected.index].description.split('\\n').map(d =>
+                                            <Paragraph
+                                                color={Colors.darkGray}
+                                                align_sm="left"
+                                                margin="10px 0px 0px 0px"
+                                                fs_xs="12px"
+                                                fs_sm="16px"
+                                                fs_md="16px"
+                                                fs_lg="18px"
+                                                fs_xl="18px"
+                                            >
                                                 {d}
-                                                </Paragraph>    
-                                            )}
+                                            </Paragraph>
+                                        )}
                                     </div>
                                     {/* </Div> */}
                                 </Div>

@@ -22,6 +22,7 @@ import Fragment from "../Fragment"
 
 
 const PricesAndPayments = (props) => {
+  console.log("PROPS: ", props)
   const {session, setSession} = useContext(SessionContext);
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
@@ -34,6 +35,7 @@ const PricesAndPayments = (props) => {
   }
   if (session.location) {
     let currentLocation = props.locations.find(l => l.node.meta_info.slug === session.location.meta_info.slug)
+    console.log("CURRENTLOC: ", session.location)
     if (currentLocation) {
       currentLocation = currentLocation.node
       prova = {
@@ -43,8 +45,9 @@ const PricesAndPayments = (props) => {
       }
     }
   }
-  if (!prova.currentFilteredCourse) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
 
+  console.log("PROVA: ", prova)
+  if (!prova.currentFilteredCourse) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
   function getStepLogo (step) {
     switch (step) {
       case 0:
