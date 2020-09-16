@@ -8,9 +8,9 @@ import {Blink} from '../Animations'
 import Link from 'gatsby-link'
 import {redirectTo} from "@reach/router"
 
-const Heading = ({ type, children, className }) => {
+const Heading = ({type, children, className}) => {
   const Comp = type;
-return <Comp className={className}>{children}</Comp>;
+  return <Comp className={className}>{children}</Comp>;
 }
 Heading.propTypes = {
   type: PropTypes.string.isRequired,
@@ -88,7 +88,7 @@ font-weight: 400;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
-font-size: ${props=>props.fs_xl}
+font-size: ${props => props.fs_xl}
 
 @media ${Break.lg}{
   font-size: ${props => props.fs_lg};
@@ -99,12 +99,12 @@ font-size: ${props=>props.fs_xl}
 @media  ${Break.sm}{
   text-align: ${props => props.align_sm || "center"};
   font-size: ${props => props.fs_sm};
-  padding: 0 5px;
+  // padding: 0 5px;
 }
 @media ${Break.xs}{
   text-align: ${props => props.align_xs};
   font-size: ${props => props.fs_xs};
-  padding: 0.5px;
+  // padding: 0 5px;
 }
 `;
 export const H4 = styled(Heading)`
@@ -197,7 +197,7 @@ const StyledSeparator = styled.div`
   }
 };
 `
-export const Separator = ({ variant, children, ...rest }) => {
+export const Separator = ({variant, children, ...rest}) => {
   let variants = {
     default: {
       border: `2px solid ${Colors.lightBlue}`,
@@ -209,7 +209,7 @@ export const Separator = ({ variant, children, ...rest }) => {
       border: `2px solid ${Colors.yellow}`,
     },
   }
-  let props = { ...rest, ...variants[variant] };
+  let props = {...rest, ...variants[variant]};
   return <StyledSeparator {...props}>{children}</StyledSeparator>
 }
 Separator.propTypes = {
@@ -309,24 +309,24 @@ export const Title = props => {
   const theme = variants[props.variant]
   const HeadingType = theme.headingComponent;
   return (
-    <div style={{ marginBottom: "30px "}}>
+    <div style={{marginBottom: "30px "}}>
       <HeadingType type={props.type} align="center" color={props.color} marginTop={props.marginTop} fontSize={props.fontSize} align={props.textAlign}>{props.title}</HeadingType>
       <Separator align="center" variant={props.variant} />
-        {props.paragraph && props.paragraph.split('\\n').map((content,i) => 
-          <Paragraph key={i}
-            align="center"
-            onClick={() => props.linkTo && redirectTo(props.linkTo)}
-            color={props.paragraphColor}
-            fontFamily={props.fontFamily}
-            maxWidth={props.maxWidth}
-            fontSize={theme.fontSize}
-            fontWeight={theme.fontWeight}
-            margin={props.margin}
-            textShadow={theme.shadow}
-          >
-            {content}
-          </Paragraph>
-        )}
+      {props.paragraph && props.paragraph.split('\\n').map((content, i) =>
+        <Paragraph key={i}
+          align="center"
+          onClick={() => props.linkTo && redirectTo(props.linkTo)}
+          color={props.paragraphColor}
+          fontFamily={props.fontFamily}
+          maxWidth={props.maxWidth}
+          fontSize={theme.fontSize}
+          fontWeight={theme.fontWeight}
+          margin={props.margin}
+          textShadow={theme.shadow}
+        >
+          {content}
+        </Paragraph>
+      )}
     </div>
   )
 }

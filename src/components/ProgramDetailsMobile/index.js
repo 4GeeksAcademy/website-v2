@@ -23,6 +23,7 @@ const ProgramDetailsMobile = (props) => {
                             padding={`20px`}
                             borders={`.5rem`}
                             margin={`5px 0`}
+                            display={`none`}
                         >
                             <Div
                                 onClick={() => selected.index === index ? setSelected({index: null, manual: true}) : setSelected({index: index, manual: true})}

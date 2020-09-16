@@ -16,12 +16,13 @@ import {requestSyllabus} from "../actions";
 import Credentials from '../components/Credentials'
 import Scrollspy from 'react-scrollspy'
 // import {makeStyles} from '@material-ui/core/styles';
-
+import {Device, Break} from '../components/Responsive'
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import StepConnector from '@material-ui/core/StepConnector';
 import clsx from 'clsx';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import TypicalDay from "../components/TypicalDay"
 import Modal from '../components/Modal';
@@ -154,13 +155,14 @@ const Program = ({data, pageContext, yml}) => {
     {/* PROGRAM DETAILS */}
     <Wrapper >
       <Title
-          size="10"
-          marginTop="40px"
-          title={yml.details.heading}
-          paragraph={yml.details.sub_heading}
-          variant="primary"
+        size="10"
+        marginTop="40px"
+        title={yml.details.heading}
+        paragraph={yml.details.sub_heading}
+        variant="primary"
       />
       <ProgramDetails details={yml.details} />
+      <ProgramDetailsMobile details={yml.details} />
     </Wrapper>
 
     <Sidebar
@@ -180,7 +182,7 @@ const Program = ({data, pageContext, yml}) => {
     </Sidebar>
 
     <Wrapper
-      
+
       margin="50px"
     >
       <Title
@@ -219,7 +221,7 @@ const Program = ({data, pageContext, yml}) => {
                 shadow height="400px"
                 width="100%"
                 margin="10px 0px"
-                >
+              >
                 <Row height="100%">
                   <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
                     <Div flexDirection={`column`} height={`20%`} justifyContent={`space-between`}>
@@ -267,7 +269,7 @@ const Program = ({data, pageContext, yml}) => {
                     </Div>
                   </Column>
                   <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
-                      <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                    <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
                   </Column>
                 </Row>
               </Card>
@@ -286,7 +288,7 @@ const Program = ({data, pageContext, yml}) => {
                 height="400px"
                 width="100%"
                 margin="10px 0px"
-                >
+              >
                 <Row height="100%">
                   <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
                     <Div flexDirection={`column`} height={`20%`}>
@@ -326,7 +328,7 @@ const Program = ({data, pageContext, yml}) => {
                     </Div>
                   </Column>
                   <Column size="2" customRespSize respSize="2" alignSelf="flex-end">
-                      <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                    <ArrowRight width="24px" color={Colors.yellow} fill={Colors.yellow} />
                   </Column>
                 </Row>
               </Card>
@@ -338,7 +340,7 @@ const Program = ({data, pageContext, yml}) => {
     {/* </Wrapper> */}
 
     <Wrapper
-      
+
       margin="50px 0"
       github="/course"
     >
