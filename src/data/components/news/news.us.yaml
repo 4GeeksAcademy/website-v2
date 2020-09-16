@@ -37,4 +37,4 @@ news:
   - name: "Emol"
     location: ["santiago-chile"]
     url: "https://www.emol.com/noticias/Economia/2019/02/15/937929/Pueden-ganar-1-millon-sin-tener-experiencia-y-hay-deficit-de-expertos-El-perfil-de-los-programadores-en-Chile.html"
-    image: "../../../../static/images/news/logo-emol.png"
+    image: "../../../../static/images/news/logo_emol.png"
