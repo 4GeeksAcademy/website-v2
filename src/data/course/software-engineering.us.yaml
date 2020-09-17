@@ -67,7 +67,7 @@ details:
       title: "Distributed Applications"
       description: "The number one challenge for enteprise software is building applications that can scale to millions of users, you will learn and use the most important strategies for distributed apps like concurrency, sockets, data-compresion, distributed storage, messaging, etc."
       projects: "Build a chat application with multi threading, compression, microservices and many other perks"
-      slug: "lifelong-learning"
+      slug: "scale"
       duration: "3 wks"
       step: 3
     - module_name: "QUALITY"

@@ -19,6 +19,7 @@ const ProgramDetailsMobile = (props) => {
                             key={index}
                             color={`blue`}
                             width="100%"
+                            height="82px"
                             padding={`20px`}
                             borders={`.5rem`}
                             margin={`5px 0`}

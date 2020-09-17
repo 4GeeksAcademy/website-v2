@@ -63,10 +63,10 @@ details:
       slug: "aplicacion-avanzada"
       duration: "2 sem"
       step: 2
-    - module_name: "LIFELONG SUPPORT"
-      title: "Lifelong Support"
-      description: "Keep practicing with the academy's help, we will coaching you for life, build your Resume, Github, LinkedIn, help you apply for jobs, support you once you get a job"
-      projects: "Get paid to keep learning, raise your income gradually as you become a more senior developer, enjoy and build software for life."
+    - module_name: "DE POR VIDA"
+      title: "Soporte de por vida"
+      description: "Sigue practicando y recibiendo apoyo no sólo hasta conseguir un trabajo sino de por vida. Sabemos lo importante que es contar con ayuda incluso después de conseguir trabajo."
+      projects: "Tambien recibirás un intenso entrenamiento y seguimiento para desarrollar tu Hoja de Vida, Perfil de LinkedIn, Github y redes sociales. Te realizaremos una entrevista de trabajo ficticia y recibirás coaching semanal para el mejoramiento de tus habilidades."
       slug: "lifelong-learning"
       duration: "1+ week"
       step: 0.1
