@@ -5,7 +5,7 @@ meta_info:
   description: null
   image: ""
   keywords: ""
-  redirects: ["/madrid","/location/madrid"]
+  redirects: ["/madrid", "/location/madrid"]
 
 seo_title: "4Geeks Academy Madrid"
 header:
@@ -23,7 +23,7 @@ button:
 
 news:
   title: "4Geeks Academy Madrid in the news..."
-  
+
 info_box:
   heading: "Find us in Madrid, Spain."
   address: "Calle Edison, 3, 28006 Madrid, Spain"
@@ -54,7 +54,8 @@ carousel_box:
 ## CENTER   BOX => FINANCIAL SLIDER OPTIONS
 ## RIGHT    BOX => FULL-TIME
 hasFinancialsOption: true
-financials_max_months: ["6 mo", "12 mo"]
+# financials_max_months: ["6 mo", "12 mo"]
+financials_max_months: ["12 mo", "6 mo"]
 prices:
   full_time:
     ## GENERAL INFO
@@ -80,18 +81,18 @@ prices:
         heading: "EXTENDED"
         sub_heading:
       plans:
-        - months: "6"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
         - months: "12"
           payment: ""
           paymentInfo: ""
           provider: ""
           logo: ""
           message:
+        - months: "6"
+          payment: ""
+          paymentInfo: ""
+          provider: ""
+          logo: ""
+          message: ""
       button:
         button_text:
     ## RIGHT BOX SECTION
@@ -130,17 +131,17 @@ prices:
         heading_two:
         sub_heading:
       plans:
-        - months: " 6 mo"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
         - months: "12 mo"
           payment: ""
           paymentInfo: ""
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
+          message: ""
+        - months: " 6 mo"
+          payment: ""
+          paymentInfo: ""
+          provider: ""
+          logo: ""
           message: ""
 
       button:

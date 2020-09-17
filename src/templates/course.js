@@ -204,7 +204,7 @@ const Program = ({data, pageContext, yml}) => {
         <Column size="2" disp_md="none" />
         <Column size="8" size_md="10" m_md="auto">
           <Row >
-            <Column size="6" paddingLeft={`0`}>
+            <Column size="6" size_sm="12" paddingLeft={`0`}>
               <Card
                 cursor="pointer"
                 onClick={() => navegate(`/${pageContext.lang}/geekpal`)}
@@ -270,7 +270,7 @@ const Program = ({data, pageContext, yml}) => {
                 </Row>
               </Card>
             </Column>
-            <Column size="6" paddingRight={`0`}>
+            <Column size="6" size_sm="12" paddingRight={`0`}>
               <Card
                 cursor="pointer"
                 onClick={() => navegate(`/${pageContext.lang}/geekforce`)}

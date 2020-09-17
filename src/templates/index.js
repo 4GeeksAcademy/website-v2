@@ -23,22 +23,22 @@ import Img from "gatsby-image"
 const Home = (props) => {
   const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
-
+  console.log("DATA", data)
   const hiring = data.allPartnerYaml.edges[0].node;
   const city = session && session.location ? session.location.city : "Miami";
   return (
     <>
       <Row>
-        <Column 
-          size="4" 
-          m_sm="0" 
-          size_sm="10" 
-          align_sm="center" 
+        <Column
+          size="4"
+          m_sm="0"
+          size_sm="10"
+          align_sm="center"
           padding="100px 10px 0 10px"
-          margin="0 0 0 auto" 
+          margin="0 0 0 auto"
         >
           <H1 type="h1" textShadow="none" fontSize="13px" color={Colors.gray} lato>{city}{" "}{yml.header_data.tagline}</H1>
-          <Separator  variant="primary" left />
+          <Separator variant="primary" left />
           <H2
             padding="0 10px 0 0px"
             fs_sm="38px"
@@ -176,7 +176,7 @@ const Home = (props) => {
       {/* ******************* */}
       <Wrapper margin="100px">
         <Title
-          title={yml.join_geeks.heading+" "+city}
+          title={yml.join_geeks.heading + " " + city}
           paragraph={yml.join_geeks.sub_heading}
           paragraphColor={Colors.darkGray}
           maxWidth="66%"

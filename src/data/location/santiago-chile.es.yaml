@@ -68,15 +68,15 @@ prices:
         heading_one: "EXTENDED"
         sub_heading: "el mejor precio de la ciudad"
       plans:
-        - months: "6"
-          payment: "407.121 CLP"
-          paymentInfo: "al mes + 410.000 deposito"
+        - months: "12"
+          payment: "210.641 CLP"
+          paymentInfo: "mensual + 410.000 deposito"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
-        - months: "12"
-          payment: "210.641 CLP"
-          paymentInfo: "al mes + 410.000 deposito"
+        - months: "6"
+          payment: "407.121 CLP"
+          paymentInfo: "mensual + 410.000 deposito"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
@@ -118,15 +118,15 @@ prices:
         heading_one: "EXTENDED"
         sub_heading: "y disfruta de mejores precios"
       plans:
-        - months: "6 mo"
-          payment: "356.231 CLP"
-          paymentInfo: "mensual + 362.250 deposit"
+        - months: "12 m"
+          payment: "184.311 CLP"
+          paymentInfo: "mensual + 362.250 deposito"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
-        - months: "12 mo"
-          payment: "184.311 CLP"
-          paymentInfo: "mensual + 362.250 deposit"
+        - months: "6 m"
+          payment: "356.231 CLP"
+          paymentInfo: "mensual + 362.250 deposito"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
@@ -146,7 +146,8 @@ prices:
 
 city: "Santiago de Chile"
 hasFinancialsOption: true
-financials_max_months: ["6 mo", "12 mo"]
+# financials_max_months: ["6 mo", "12 mo"]
+financials_max_months: ["12 mo", "6 mo"]
 name: "Santiago"
 latitude: "-33.408837"
 longitude: "-70.567958"

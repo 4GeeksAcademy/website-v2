@@ -314,6 +314,7 @@ export const Button = styled(SmartButton)`
             text-align: center;
             vertical-align: middle;
             display: ${props => props.display};
+            align-items: ${props => props.alignItems};
             padding: ${props => props.padding};
             margin: ${props => props.margin};
             box-shadow: ${props => props.shadow};
