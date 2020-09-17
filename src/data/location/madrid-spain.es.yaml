@@ -5,7 +5,7 @@ meta_info:
   description: null
   image: ""
   keywords: ""
-  redirects: ['/es/location/madrid-spain/']
+  redirects: ["/es/location/madrid-spain/"]
 
 seo_title: "4Geeks Academy Madrid, España"
 header:
@@ -19,7 +19,7 @@ button:
   syllabus_submit_text: "DESCARGAR"
   apply_button_text: "APLICA AHORA"
   apply_button_link: "/aplica"
-  
+
 info_box:
   heading: "Encuéntranos en Madrid"
   address: "Edison 3, 28006, Madrid."
@@ -53,7 +53,8 @@ carousel_box:
 ## CENTER   BOX => FINANCIAL SLIDER OPTIONS
 ## RIGHT    BOX => FULL-TIME
 hasFinancialsOption: true
-financials_max_months: ["6 mo", "12 mo"]
+# financials_max_months: ["6 mo", "12 mo"]
+financials_max_months: ["12 mo", "6 mo"]
 prices:
   full_time:
     ## GENERAL INFO
@@ -79,18 +80,18 @@ prices:
         heading:
         sub_heading:
       plans:
-        - months: "6"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
         - months: "12"
           payment: ""
           paymentInfo: ""
           provider: ""
           logo: ""
           message:
+        - months: "6"
+          payment: ""
+          paymentInfo: ""
+          provider: ""
+          logo: ""
+          message: ""
       button:
         button_text:
     ## RIGHT BOX SECTION
@@ -129,17 +130,17 @@ prices:
         heading_two:
         sub_heading:
       plans:
-        - months: " 6 mo"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
         - months: "12 mo"
           payment: ""
           paymentInfo: ""
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
+          message: ""
+        - months: " 6 mo"
+          payment: ""
+          paymentInfo: ""
+          provider: ""
+          logo: ""
           message: ""
 
       button:
@@ -156,7 +157,6 @@ prices:
       button:
         button_text: "APLICA YA"
 
-        
 city: "Madrid"
 name: "Madrid"
 latitude: "40.439769"
