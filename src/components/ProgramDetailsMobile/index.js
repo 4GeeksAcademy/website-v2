@@ -26,12 +26,6 @@ const ProgramDetailsMobile = (props) => {
                         >
                             <Div
                                 onClick={() => selected.index === index ? setSelected({index: null, manual: true}) : setSelected({index: index, manual: true})}
-                                // onMouseLeave={() => {
-
-                                //     setTimeout(() => {
-                                //         setSelected({index: null, manual: true})
-                                //     }, 500)
-                                // }}
                                 justifyContent={`space-between`}
                                 cursor={`pointer`}
                             >
@@ -59,69 +53,48 @@ const ProgramDetailsMobile = (props) => {
                                 <Div alignItems={`center`} margin={`10px 0`}>
                                     <Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
-                                        // fs_xs="18px"
-                                        // fs_sm="18px"
-                                        // fs_md="20px"
-                                        // fs_lg="18px"
-                                        // fs_xl="22px"
                                         margin={`0 10px`}
                                         fontWeight={`400`}
                                     >
                                         {item.title}
                                     </H3>
                                 </Div>
-                                <Div >
-                                    <Paragraph
-                                        align_sm={`start`}
-                                        align_xs={`start`}
-                                    >
-                                        {item.description}
-                                    </Paragraph>
-                                </Div>
+                                <Paragraph
+                                    align_sm={`start`}
+                                    align_xs={`start`}
+                                >
+                                    {item.description}
+                                </Paragraph>
                                 <Div alignItems={`center`} margin={`10px 0`}>
                                     <Rocket width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
-                                        // fs_xs="18px"
-                                        // fs_sm="18px"
-                                        // fs_md="20px"
-                                        // fs_lg="18px"
-                                        // fs_xl="22px"
                                         margin={`0 10px`}
                                         fontWeight={`400`}
                                     >
                                         {`Projects`}
                                     </H3>
                                 </Div>
-                                <Div >
-                                    <Paragraph
-                                        align_sm={`start`}
-                                        align_xs={`start`}
-                                    >
-                                        {item.projects}
-                                    </Paragraph>
-                                </Div>
+                                <Paragraph
+                                    align_sm={`start`}
+                                    align_xs={`start`}
+                                >
+                                    {item.projects}
+                                </Paragraph>
                                 <Div alignItems={`center`} margin={`10px 0`}>
                                     <Clock width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
-                                        // fs_xs="18px"
-                                        // fs_sm="18px"
-                                        // fs_md="20px"
-                                        // fs_lg="18px"
-                                        // fs_xl="22px"
                                         margin={`0 10px`}
                                         fontWeight={`400`}
                                     >
                                         {`Duration`}
                                     </H3>
                                 </Div>
-                                <Div >
-                                    <Paragraph
-                                        align_sm={`start`}
-                                        align_xs={`start`}
-                                    >
-                                        {item.duration}
-                                    </Paragraph>
-                                </Div>
+                                <Paragraph
+                                    align_sm={`start`}
+                                    align_xs={`start`}
+                                >
+                                    {item.duration}
+                                </Paragraph>
                             </Card>}
                     </>
                 )
