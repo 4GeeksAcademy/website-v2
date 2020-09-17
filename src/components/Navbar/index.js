@@ -121,7 +121,7 @@ export const Burger = (props) => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav lang={props.lang} open={open} menu={props.menu} />
+      <RightNav lang={props.lang} open={open} menu={props.menu} button={props.button} />
     </NavBar>
   )
 }
@@ -215,7 +215,7 @@ const Ul = styled.ul`
   }
 `;
 
-export const RightNav = ({lang, menu, open}) => {
+export const RightNav = ({lang, menu, open, button}) => {
   const data = useStaticQuery(graphql`
     query {
       allChooseProgramYaml {
@@ -273,10 +273,10 @@ export const RightNav = ({lang, menu, open}) => {
                   }
                 />
                 :
-                <NavItem fontSize="16px"><Link to={item.link} key={index}>{item.name}</Link></NavItem>
+                <NavItem key={index} fontSize="16px"><Link to={item.link} key={index}>{item.name}</Link></NavItem>
           )}
         </Ul>
-        <Link to="/apply"><Button width="130px" color={Colors.red} textColor={Colors.white}>Apply</Button></Link>
+        <Link to={button.button_link}><Button width="130px" color={Colors.red} textColor={Colors.white}>{button.button_text}</Button></Link>
       </Div>
   )
 }

@@ -114,6 +114,7 @@ font-family: 'Futura', sans-serif;
 margin: ${props => props.m};
 font-weight: ${props => props.fontWeight};
 letter-spacing: -1px;
+font-size: ${props=>props.fontSize};
 padding: ${props => props.padding};
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
@@ -274,6 +275,9 @@ export const Anchor = styled(Link)`
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};
   text-align: ${props => props.align};
+  &:hover{
+    text-decoration: underline;
+  }
 
   @media ${Break.lg}{
     text-align: ${props => props.align_lg};

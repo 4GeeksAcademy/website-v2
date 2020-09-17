@@ -7,7 +7,7 @@ meta_info:
   description: null
   image: null
   keywords: ""
-  redirects: []
+  redirects: ["/empleo"]
 
 header:
   tagline: "TRABAJA EN 4GEEKS ACADEMY"

@@ -8,16 +8,22 @@ import {Card} from '../Card';
 import Link from 'gatsby-link'
 import Fragment from "../Fragment"
 
+const icon = {
+  teacher: Teacher,
+  glasses: Glasses,
+  clock: Clock,
+  users: Users,
+  comments: Comments,
+}
 const Globe = styled.div`
 opacity: 1;
-width: 170px;
-height: 120px;
-background: #ffffff;
+background: #e6ba1f;
+width: 200px;
+min-height: 50px;
+padding: 5px;
 font-family: "Lato, sans-serif";
 position: absolute;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-border-radius: 50%;
+border-radius: 10px;
 bottom: 40px;
 z-index: 100;
 left: 20px;
@@ -29,26 +35,62 @@ text-align: center;
 &:before {
   content: "";
   position: absolute;
-  right: 67%;
-  top: 117px;
+  z-index: 99;
+  left: 0;
+  top: 50px;
   transform: rotate(-45deg);
   width: 0;
   height: 0;
   border-top: 1px solid transparent;
-  border-right: 46px solid #ffffff;
+  border-right: 35px solid #e6ba1f;
   border-bottom: 13px solid transparent;
   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 `
 
 const GeeksVsOthers = props => {
+  const data = useStaticQuery(graphql`
+  query GeeksVsOthersQuery{
+    allGeeksVsOthersYaml{
+      edges {
+        node {
+          fields{
+            lang
+          }
+          info {
+            features
+            at4_Geeks
+            industry_average
+            why_important
+            icon
+          }
+          globe_text
+          titles{
+            featured
+            at_geeks
+            average
+          }
+
+          button{
+            button_text
+            button_link
+          }
+        }
+      }
+    }
+  }
+    `)
   const [tooltip, setTooltip] = useState(false);
-  const [globe, setGlobe] = useState(true)
+  const [openedIndex, setOpenedIndex] = useState(null)
   const [tooltipOpacity, setTooltipOpacity] = useState(0)
   const [tooltipIndex, setTooltipIndex] = useState()
+
   const [globeTooltip, setGlobeTooltip] = useState(true)
   const [globeTooltipOpacity, setGlobeTooltipOpacity] = useState(0)
-  const geeks = props.lang[0].node;
+
+  let geeks = data.allGeeksVsOthersYaml.edges.find(({ node }) => node.fields.lang === props.lang);
+  if(geeks) geeks = geeks.node;
+
   return (
     <Fragment github="/components/geeks_vs_others">
       <Row>
@@ -58,7 +100,7 @@ const GeeksVsOthers = props => {
           image="no"
           color={Colors.white}
         >
-          <Card shadow borders="1.25rem" height="480px">
+          <Card shadow borders="1.25rem" overflow="hidden">
             <Row height="80px" marginLeft="0" marginRight="0">
               <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" >
                 <Row height="100%" borderBottom={"1px solid " + Colors.darkGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.featured}</H5></Column></Row>
@@ -70,51 +112,38 @@ const GeeksVsOthers = props => {
                 <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.average}</H5></Column></Row>
               </Column>
             </Row>
-            {geeks.info.map((item, index) => {
+            {geeks.info.slice(0,props.limit || geeks.info.length).map((item, index) => {
+              const Icon = icon[item.icon]
               return (
-                <div key={item.slug}>
-                  {index == geeks.info.length - 1
-                    ?
+                <div key={index}>
+                    {openedIndex === index ? <div 
+                      onClick={() => setOpenedIndex(openedIndex === index ? null : index)}
+                      style={{ border: '1px solid', fontSize: "20px", fontFamily: "Lato, sans-serif", minHeight: "80px", textAlign: "center", padding: "20px" }}
+                    >{item.why_important}</div>
+                    :
                     <Row
+                      key={index}
                       height="80px"
-                      marginLeft="0"
-                      marginRight="0"
-                      customRespSize
+                      marginLeft="0" marginRight="0"
+                      className="pointer"
                       alignResp="end"
+                      onClick={() => setOpenedIndex(openedIndex === index ? null : index)}
                     >
-                      <Column
-                        size="6"
-                        customRespSize
-                        respSize="6"
-                        alignSelf="center"
-                        height="100%"
-                        image="no"
-                        color={Colors.black}
-                        border="bottom"
-                      >
-                        <Row
-                          align="center"
-                          height="100%"
-                        // borderBottom={"1px solid " + Colors.darkGray}
-                        // onClick={() => {setColumnDisplay(!columnDisplay), setColumnDisplayIndex(index)}}
-                        // onMouseOver={() => {setColumnDisplay(false), setColumnDisplayIndex(index)}}
-                        >
+                      <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
+                        <Row align="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
                           <Div flexDirection={`column`} justifyContent={`center`} >
                             <Div alignItems={`center`}>
-                              <Div margin={`0 10px 0 0`}>
-                                {(item.slug === "one-teacher-every-five" || item.slug === "apoyo-profesional") && <Teacher width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                                {(item.slug === "senior-teacher-per-student" || item.slug === "mentores-senior-por-estudiante") && <Glasses width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                                {(item.slug === "average-time-to-get-help" || item.slug === "tiempo-promedio-para-recibir-ayuda") && <Clock width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                                {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                                {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              </Div>
+                              { Icon && <Div margin={`0 10px 0 0`}>
+                                  <Icon width="32" color={Colors.yellow} fill={Colors.yellow} /> 
+                                </Div>
+                              }
                               <Div margin={`0 3px`}>
                                 <H4
+                                  fontSize="24px"
                                   fs_xs="12px"
                                   fs_sm="16px"
                                   fs_md="16px"
                                   fs_lg="18px"
-                                  fs_xl="24px"
                                   color={Colors.white}
                                 >
                                   {item.features}
@@ -131,7 +160,7 @@ const GeeksVsOthers = props => {
                                       fs_xl="16px"
                                       color={Colors.white}
                                     >
-                                      {item.tooltip}
+                                      {item.why_important}
                                     </Paragraph>
                                   </Tooltip>
                                   : null}
@@ -152,19 +181,18 @@ const GeeksVsOthers = props => {
                                   onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false)}}
                                   onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0), setGlobeTooltip(false)}}
                                   onClick={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(0), setGlobeTooltip(false)}}
-
                                 >
-                                  <Question width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
+                                  <Question className="pointer" width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
                                 </span>
                               </Div>
                             </Div>
                           </Div>
                         </Row>
                       </Column>
-
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
                         <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
-                          <H4 align="center"
+                          <H4
+                            align="center"
                             fs_xs="12px"
                             fs_sm="16px"
                             fs_md="16px"
@@ -174,8 +202,7 @@ const GeeksVsOthers = props => {
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center">
                         <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
-                          <H4
-                            align="center"
+                          <H4 align="center"
                             fs_xs="12px"
                             fs_sm="16px"
                             fs_md="16px"
@@ -184,100 +211,7 @@ const GeeksVsOthers = props => {
                             color={Colors.gray}>{item.industry_average}</H4></Column></Row>
                       </Column>
                     </Row>
-                    :
-                    <Row
-                      key={item.slug}
-                      height="80px"
-                      marginLeft="0" marginRight="0"
-                      customRespSize
-                      alignResp="end"
-                    >
-                      <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
-                        <Row align="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
-                          <Div flexDirection={`column`} justifyContent={`center`} >
-                            <Div alignItems={`center`}>
-                              <Div margin={`0 10px 0 0`}>
-                                {(item.slug === "one-teacher-every-five" || item.slug === "apoyo-profesional") && <Teacher width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                                {(item.slug === "senior-teacher-per-student" || item.slug === "mentores-senior-por-estudiante") && <Glasses width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                                {(item.slug === "average-time-to-get-help" || item.slug === "tiempo-promedio-para-recibir-ayuda") && <Clock width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                                {(item.slug === "one-on-one-mentoring" || item.slug === "mentorias-uno-a-uno") && <Users width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                                {(item.slug === "interview-preparation" || item.slug === "preparacion-para-entrevistas") && <Comments width="32" color={Colors.yellow} fill={Colors.yellow} />}
-                              </Div>
-                              <Div margin={`0 3px`}>
-                                <H4
-                                  fs_xs="12px"
-                                  fs_sm="16px"
-                                  fs_md="16px"
-                                  fs_lg="18px"
-                                  fs_xl="24px"
-                                  color={Colors.white}
-                                >
-                                  {item.features}
-                                </H4>
-                              </Div>
-                              <Div position={`relative`}>
-                                {tooltip === true && index === tooltipIndex ?
-                                  <Tooltip opacity={tooltipOpacity}>
-                                    <Paragraph align="center"
-                                      fs_xs="16px"
-                                      fs_sm="16px"
-                                      fs_md="16px"
-                                      fs_lg="16px"
-                                      fs_xl="16px"
-                                      color={Colors.white}
-                                    >
-                                      {item.tooltip}
-                                    </Paragraph>
-                                  </Tooltip>
-                                  : null}
-                                {globeTooltip === true && index === 0 ?
-                                  <Globe opacity={globeTooltipOpacity}>
-                                    <Paragraph align="center"
-                                      fs_xs="16px"
-                                      fs_sm="16px"
-                                      fs_md="16px"
-                                      fs_lg="16px"
-                                      fs_xl="16px"
-                                      color={Colors.black}
-                                    >
-                                      {geeks.globe_text}
-                                    </Paragraph>
-                                  </Globe> : null}
-                                <span
-                                  onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false)}}
-                                  onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0), setGlobeTooltip(false)}}
-                                  onClick={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(0), setGlobeTooltip(false)}}
-
-                                >
-                                  <Question width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
-                                </span>
-                              </Div>
-                            </Div>
-                          </Div>
-                        </Row>
-                      </Column>
-                      <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
-                          <H4
-                            align="center"
-                            fs_xs="12px"
-                            fs_sm="16px"
-                            fs_md="16px"
-                            fs_lg="18px"
-                            fs_xl="24px"
-                            color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
-                      </Column>
-                      <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center">
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
-                          <H4 align="center"
-                            fs_xs="12px"
-                            fs_sm="16px"
-                            fs_md="16px"
-                            fs_lg="18px"
-                            fs_xl="24px"
-                            color={Colors.gray}>{item.industry_average}</H4></Column></Row>
-                      </Column>
-                    </Row>}
+                    }
                 </div>
               )
             }
@@ -285,9 +219,13 @@ const GeeksVsOthers = props => {
           </Card>
         </Column>
       </Row>
-      <Row align="center">
-        {geeks.button.button_link != "" ? <Link to={geeks.button.button_link}><Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">{geeks.button.button_text}</Button></Link> : null}
-      </Row>
+      {props.limit && 
+          <Row align="center">
+            <Link to={geeks.button.button_link}>
+              <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">{geeks.button.button_text}</Button>
+            </Link>
+          </Row>
+        }
     </Fragment>
   )
 };

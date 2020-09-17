@@ -61,7 +61,7 @@ const Location = ({data, pageContext, yml}) => {
                 textAlign="center"
             />
             <Row align="center" marginBottom="40px">
-                <Column align="right" align_xs="center" m_xs="0 0 15px 0" size="6" size_sm="12">
+                <Column align="right" align_sm="center" m_sm="0 0 15px 0" size="6" size_sm="12">
                     <ChooseProgram
                         right="15px"
                         top="40px"
@@ -70,7 +70,7 @@ const Location = ({data, pageContext, yml}) => {
                         closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
                     />
                 </Column>
-                <Column align="left" align_xs="center" size="6" size_sm="12">
+                <Column align="left" align_sm="center" size="6" size_sm="12">
                     <Button width="220px" onClick={handleOpen} color={Colors.red} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
                 </Column>
             </Row>

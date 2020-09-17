@@ -21,7 +21,7 @@ button:
 
 info_box:
   heading: "Encuentranos en Santiago de Chile"
-  address: "Santiago Av. Apoquindo 5950, Las Condes Región Metropolitana"
+  address: "Av. Manquehue Sur 350, Oficina 110, Las Condes, Región Metropolitana, Chile"
   contact_heading: "Contacts"
   phone: "+56 9 7284 8039"
   email: "info@4GeeksAcademy.com"
@@ -37,7 +37,7 @@ upcoming:
 
 carousel_box:
   heading: "Lo que debes saber de nuestra sede en Santiago de Chile: "
-  content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "A 10 min camindando desde la estación del metro y ubicada en una de las zonas mas centricas de la ciudad, esta oficina es ideal para todos los Santiagüeños que quieran convertirse en programadores. Reciendemente remodelada, con enternet de alta velocidad y acceso ilimitado para nuestros alumnos."
   images:
     - path: "../../../static/images/locations/santiago-loc.jpg"
       alt: "Santiago Location Image"
@@ -55,33 +55,33 @@ prices:
     left_section:
       header:
         heading_one: "FULL TIME"
-        sub_heading: "and enjoy the best pricing in town"
+        sub_heading: "el mejor precio de la ciudad"
       content:
         price: "2.760.000 CLP"
-        price_info: "single payment"
+        price_info: "una sola quota"
       button:
-        button_text: "APPLY NOW"
+        button_text: "APLICA"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
       header:
         heading_one: "EXTENDED"
-        sub_heading: "and enjoy the best pricing in town"
+        sub_heading: "el mejor precio de la ciudad"
       plans:
         - months: "6"
           payment: "407.121 CLP"
-          paymentInfo: "per month + 410.000 deposit"
+          paymentInfo: "al mes + 410.000 deposito"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
         - months: "12"
           payment: "210.641 CLP"
-          paymentInfo: "per month + 410.000 deposit"
+          paymentInfo: "al mes + 410.000 deposito"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
       button:
-        button_text: "APPLY NOW"
+        button_text: "SOLICITA TU PLAZA"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -90,9 +90,9 @@ prices:
         sub_heading: "y disfruta de mejores precios"
       content:
         price: "2.415.000 CLP"
-        price_info: "single payment"
+        price_info: "una sola quota"
       button:
-        button_text: "APPLY NOW"
+        button_text: "SOLICITA TU PLAZA"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -108,9 +108,9 @@ prices:
         sub_heading: "y disfruta de mejores precios"
       content:
         price: "2.415.000 CLP"
-        price_info: "single payment"
+        price_info: "una sola quota"
       button:
-        button_text: "APPLY NOW"
+        button_text: "SOLICITA TU PLAZA"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -120,18 +120,18 @@ prices:
       plans:
         - months: "6 mo"
           payment: "356.231 CLP"
-          paymentInfo: "per month + 362.250 deposit"
+          paymentInfo: "mensual + 362.250 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
         - months: "12 mo"
           payment: "184.311 CLP"
-          paymentInfo: "per month + 362.250 deposit"
+          paymentInfo: "mensual + 362.250 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
       button:
-        button_text: "APPLY NOW"
+        button_text: "SOLICITA TU PLAZA"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -140,9 +140,9 @@ prices:
         sub_heading: "y disfruta de mejores precios"
       content:
         price: "2.760.000 CLP"
-        price_info: "single payment"
+        price_info: "una sola quota"
       button:
-        button_text: "APPLY NOW"
+        button_text: "SOLICITA TU PLAZA"
 
 city: "Santiago de Chile"
 hasFinancialsOption: true
@@ -150,7 +150,7 @@ financials_max_months: ["6 mo", "12 mo"]
 name: "Santiago"
 latitude: "-33.408837"
 longitude: "-70.567958"
-address: "Apoquindo 5950 las condes."
+address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
 zip_code: ""
 state: ""
 country: "Chile"

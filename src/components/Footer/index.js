@@ -16,7 +16,7 @@ const Footer = (props) => {
         p_bottom="135px"
         p_xs="25px 15px 155px 15px"
     >
-        <Row align="center" marginLeft="8%" marginRight="8%">
+        <Row align="center" margin="0 8%" m_md="0 4%">
             {props.footer.map((item, index) => {
                 return (
                     <Column key={index} size={item.width} size_sm="6" margin={"0 0 20px 0"}>
@@ -31,10 +31,12 @@ const Footer = (props) => {
                         {item.items.map((ln, i) => {
                             return (
                                 <Anchor
+                                    key={i}
                                     cursor="pointer"
                                     to={ln.link}
                                     align="left"
                                     align_sm="left"
+                                    margin="0 0 5px 0"
                                     fontSize="16px"
                                     color={Colors.white}
                                 >
@@ -48,8 +50,8 @@ const Footer = (props) => {
             })}
         </Row>
         <Row height="20%">
-            <Column size="2"></Column>
-            <Column size="8">
+            <Column disp_md="none" size="2"></Column>
+            <Column size="8" size_md="11">
                 <Row align="center">
                     <Column size="6" margin="5px 0">
                         <Paragraph fontSize="12px" color={Colors.gray}>@ 4Geeks Academy LLC 2019 </Paragraph>

@@ -18,9 +18,14 @@ import {Carousel} from 'react-responsive-carousel';
 const Graduates = ({data, pageContext, yml}) => {
   return (
     <>
-      <Divider height="100px" />
-      <Wrapper
-        >
+      <Wrapper margin="50px 0">
+        <Title
+          title={yml.banner.tagline}
+          variant="primary"
+          size="8"
+          paragraph={yml.banner.sub_heading}
+          paragraphColor={Colors.darkGray}
+        />
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} showThumbs="true" changeIndex={() => setSlideIndex()} playerHeight="500px" />
       </Wrapper>
       <Divider height="50px" />

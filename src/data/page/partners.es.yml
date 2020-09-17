@@ -4,7 +4,7 @@ meta_info:
   description: "Acerca de 4Geeks Academy"
   image: ""
   keywords: ""
-  redirects: []
+  redirects: ["/aliados"]
 
 header_data:
   tagline: COMPAÑÍAS QUE CONFIAN EN NOSOTROS Y CONTRATAN A NUESTROS ESTUDIANTES

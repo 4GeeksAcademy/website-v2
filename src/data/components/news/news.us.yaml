@@ -1,7 +1,7 @@
 ## DATA TO CHANGE THE IMAGES IN THE NEWS SECTION IN THE HOME PAGE
 news:
   - name: "Newsweek"
-    location: ["miami-downtown", "online"]
+    location: ["miami-downtown", "online", "madrid-spain"]
     image: "../../../../static/images/news/newsweek.png"
   - name: "RRHH Digital"
     location: ["madrid-spain"]
@@ -23,7 +23,7 @@ news:
     url: "https://www.latercera.com/pulso/noticia/destacada-academia-estadounidense-programadores-aterriza-chile/491519/"
     image: "../../../../static/images/news/la-tercera.png"
   - name: "CNN Español"
-    location: ["santiago-chile"]
+    location: ["santiago-chile", "online"]
     url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
     image: "../../../../static/images/news/cnn-chile.png"
   - name: "La Nacion"
@@ -39,7 +39,7 @@ news:
     url: "https://www.emol.com/noticias/Economia/2019/02/15/937929/Pueden-ganar-1-millon-sin-tener-experiencia-y-hay-deficit-de-expertos-El-perfil-de-los-programadores-en-Chile.html"
     image: "../../../../static/images/news/logo_emol.png"
   - name: "El Nuevo Herald"
-    location: ["miami-downtown"]
+    location: ["miami-downtown", "online"]
     url: "https://www.elnuevoherald.com/noticias/finanzas/acceso-miami/article228797629.html"
     image: "../../../../static/images/news/elnuevoherald.png"
   - name: "El Universal Venezuela"

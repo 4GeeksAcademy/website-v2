@@ -188,7 +188,7 @@ const Program = ({data, pageContext, yml}) => {
         variant="primary"
       />
       <Divider height="50px" />
-      <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
+      <GeeksVsOthers lang={pageContext.lang} limit={5} />
     </Wrapper>
 
     <Row height="100%">
@@ -365,7 +365,7 @@ const Program = ({data, pageContext, yml}) => {
         maxWidth="66%"
         variant="primary"
       />
-      <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} />
+      <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
     </Wrapper>
     {/* </div> */}
   </>
@@ -511,30 +511,6 @@ export const query = graphql`
             value
             symbol
             symbol_position
-          }
-        }
-      }
-    }
-    allGeeksVsOthersYaml(filter: { fields: { lang: { eq: $lang }}}) {
-      edges {
-        node {
-          info {
-            features
-            at4_Geeks
-            industry_average
-            tooltip
-            icon
-            slug
-          }
-          globe_text
-          titles{
-              featured
-              at_geeks
-              average
-          }
-          button{
-              button_text
-              button_link
           }
         }
       }

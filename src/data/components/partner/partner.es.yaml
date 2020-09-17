@@ -97,19 +97,35 @@ coding:
       alt: ""
       featured: false
 influencers:
-  tagline: "EN ASOCIACIÓN CON LOS MÁS INFLUYENTES DE LA CIUDAD"
+  tagline: "ASOCIADOS CON ACTORES GLOBALES EN EL MUNDO DEL CÓDIGO"
   sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
   images:
-    - name: "Quotanda"
-      image: "../../../../static/images/quotanda-logo.png"
+    - name: "Google Developers"
+      image: "../../../../static/images/coding/google-developers.png"
       alt: ""
       featured: false
-    - name: "Climb"
-      image: "../../../../static/images/climb-logo.png"
+    - name: "Facebook Developer Circle"
+      image: "../../../../static/images/coding/developer-circles.png"
       alt: ""
       featured: false
-    - name: "Skill Fund"
-      image: "../../../../static/images/skill-logo.png"
+    - name: "Startup"
+      image: "../../../../static/images/coding/startup.png"
+      alt: ""
+      featured: false
+    - name: "Womans Who Code"
+      image: "../../../../static/images/coding/woman-who-code.jpeg"
+      alt: ""
+      featured: false
+    - name: "Carnet Joven"
+      image: "../../../../static/images/partner/carnet-joven.png"
+      alt: ""
+      featured: false
+    - name: "Trivu"
+      image: "../../../../static/images/partner/logo_trivu.png"
+      alt: ""
+      featured: false
+    - name: "La Nave"
+      image: "../../../../static/images/partner/la-nave.png"
       alt: ""
       featured: false
     - name: "Dda"

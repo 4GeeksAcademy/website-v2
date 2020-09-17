@@ -79,7 +79,7 @@ const Right = styled.div`
     padding-top: 5px;
 `;
 
-const UpcomingProgram = ({upcomingPath, applyPath, position, showOnScrollPosition, location}) => {
+const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location, button}) => {
     const [show, setShow] = useState(showOnScrollPosition == null)
     const [cohorts, setCohorts] = useState([])
 
@@ -116,7 +116,7 @@ const UpcomingProgram = ({upcomingPath, applyPath, position, showOnScrollPositio
                 <P2 fontSize="18px">{title}</P2>
             </Center>
             <Right>
-                <Link to={applyPath}><Button color={Colors.red} textColor={Colors.white}>Apply now</Button></Link>
+                <Link to={button.button_link}><Button color={Colors.red} textColor={Colors.white}>{button.button_text}</Button></Link>
                 <p style={{textAlign: "center"}}>or <Anchor to={upcomingPath}>review other dates</Anchor></p>
             </Right>
         </Centered>

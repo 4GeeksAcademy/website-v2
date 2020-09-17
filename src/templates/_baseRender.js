@@ -8,7 +8,7 @@ const BaseRender = (Page) => (props) => {
     let yml = null;
     try {
         yml = data[`all${cap(pageContext.type)}Yaml`].edges[0].node;
-        // console.log("YML: ", yml);
+        console.log("YML: ", yml);
     }
     catch (err) {
         // console.error("Props: ", props);

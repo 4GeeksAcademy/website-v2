@@ -50,7 +50,7 @@ carousel_box:
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
 heading_section:
-  heading: "PRICING AND FINANCING"
+  heading: "PRECIO Y FINANCIACIÓN"
   sub_heading: ""
 
 ## PRICES SECTION
@@ -76,7 +76,7 @@ prices:
         price: "Pay upfront and get a discount or ask for a 2 payment options"
         price_info:
       button:
-        button_text: "APPLY NOW"
+        button_text: "APLICA"
 
     center_section:
       header:
@@ -101,7 +101,7 @@ prices:
         price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
         price_info: ""
       button:
-        button_text: "APPLY NOW"
+        button_text: "APLICA"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -119,7 +119,7 @@ prices:
         price: "Pay upfront and get a discount or ask for a 2 payment options"
         price_info: ""
       button:
-        button_text: "APPLY NOW"
+        button_text: "APLICA"
 
     center_section:
       header:
@@ -144,7 +144,7 @@ prices:
         price: "ay upfront and get a discount or ask for a 3 - 4 payment options"
         price_info: ""
       button:
-        button_text: "APPLY NOW"
+        button_text: "APLICA"
 
         
 city: "Maracaibo"

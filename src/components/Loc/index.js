@@ -8,13 +8,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Card} from '../Card';
 import Link from 'gatsby-link'
-import {SessionContext} from '../../session'
-
 
 const Loc = (props) => {
-  const {session, setSession} = useContext(SessionContext);
 
-  let loc = props.lang.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
+  let loc = props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
   return (
     <>
       <Row
@@ -99,7 +96,7 @@ const Loc = (props) => {
           return (
             <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
               {/* <Card width="100%" > */}
-              <Link to={`/${session.language}/location/${pic.node.meta_info.slug}`}>
+              <Link to={`/${props.lang}/location/${pic.node.meta_info.slug}`}>
                 <StyledBackgroundSection
                   className={`img-thumbs`}
                   height={`60px`}

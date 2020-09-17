@@ -100,28 +100,32 @@ influencers:
   tagline: "IN PARTNERSHIP WITH THE CITY'S BIGGEST INFLUENCERS"
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
   images:
-    - name: "Quotanda"
-      image: "../../../../static/images/quotanda-logo.png"
+    - name: "Google Developers"
+      image: "../../../../static/images/coding/google-developers.png"
       alt: ""
       featured: false
-    - name: "Climb"
-      image: "../../../../static/images/climb-logo.png"
+    - name: "Facebook Developer Circle"
+      image: "../../../../static/images/coding/developer-circles.png"
       alt: ""
       featured: false
-    - name: "Skill Fund"
-      image: "../../../../static/images/skill-logo.png"
+    - name: "Startup"
+      image: "../../../../static/images/coding/startup.png"
       alt: ""
       featured: false
-    - name: "Dda"
-      image: "../../../../static/images/influencers/dda.png"
+    - name: "Womans Who Code"
+      image: "../../../../static/images/coding/woman-who-code.jpeg"
       alt: ""
       featured: false
-    - name: "Miami Dade"
-      image: "../../../../static/images/influencers/miami-dade.png"
+    - name: "Carnet Joven"
+      image: "../../../../static/images/partner/carnet-joven.png"
       alt: ""
       featured: false
-    - name: "Beacon Council"
-      image: "../../../../static/images/influencers/beacon.png"
+    - name: "Trivu"
+      image: "../../../../static/images/partner/logo_trivu.png"
+      alt: ""
+      featured: false
+    - name: "La Nave"
+      image: "../../../../static/images/partner/la-nave.png"
       alt: ""
       featured: false
 financials:

@@ -168,7 +168,7 @@ const Home = (props) => {
           variant="primary"
           size="10"
         />
-        <GeeksVsOthers lang={data.allGeeksVsOthersYaml.edges} />
+        <GeeksVsOthers lang={pageContext.lang} limit={5} />
       </Wrapper>
 
       {/* ******************* */}
@@ -272,7 +272,7 @@ const Home = (props) => {
           margin="auto"
           variant="primary"
         />
-        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" />
+        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false"  limit={2} />
       </Wrapper>
 
       <Wrapper
@@ -286,7 +286,7 @@ const Home = (props) => {
           margin="auto"
         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
         />
-        <Loc lang={data.allLocationYaml.edges} />
+        <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} />
       </Wrapper>
       <Wrapper margin="100px">
         <Title
@@ -440,30 +440,6 @@ export const query = graphql`
           }
         }
      }
-     allGeeksVsOthersYaml(filter: { fields: { lang: { eq: $lang }}}) {
-        edges {
-          node {
-            info {
-              features
-              at4_Geeks
-              industry_average
-              tooltip
-              icon
-              slug
-            }
-            globe_text
-            titles{
-                featured
-                at_geeks
-                average
-            }
-            button{
-                button_text
-                button_link
-            }
-          }
-        }
-      }
       allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
             node {

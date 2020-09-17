@@ -85,12 +85,12 @@ const Layout = ({children, seo, context}) => {
             </div>}
             <SEO {...seo} context={context} />
             {/* <NavB lang={myNavbar} /> */}
-            <Navbar menu={myNavbar.node.navbar} lang={context.lang} />
+            <Navbar menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
             <GlobalStyle />
             <>
               {children}
             </>
-            <UpcomingProgram location={session.location} position="bottom" showOnScrollPosition={400} />
+            <UpcomingProgram location={session.location} button={myNavbar.node.button} position="bottom" showOnScrollPosition={400} />
             <Footer footer={myFooter.node.footer} />
           </>
         )

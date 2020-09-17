@@ -4,7 +4,7 @@ meta_info:
   description: "Acerca de 4Geeks Academy"
   image: ""
   keywords: ""
-  redirects: []
+  redirects: ["/la-academia"]
 
 ## BANNER - HEADER
 header_data:

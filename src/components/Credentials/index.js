@@ -1,10 +1,8 @@
 import React from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
 import {H2, H3, H4} from '../Heading'
 import {Card} from '../Card'
 import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
 import {Row, Column, Container, Divider} from '../Sections'
-import Fragment from "../Fragment"
 
 export default props => {
   const credentials = props.lang[0].node.credentials

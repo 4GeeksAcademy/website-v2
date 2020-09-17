@@ -4,7 +4,7 @@ meta_info:
   description: null
   image: null
   keywords: ""
-  redirects: ["/home", "/es/home", "/es/inicio"]
+  redirects: ["/home", "/es/home", "/es/inicio","/inicio"]
 
 header_data:
   tagline: Coding Bootcamp
@@ -13,7 +13,7 @@ header_data:
   image: "../../../static/images/bg/main-bg.jpg"
 
 why_4geeks:
-  heading: ¿POR QUÉ 4GEEKS?
+  heading: Porqué 4Geeks
   sub_heading: ""
 
 ## EDUCATION SECTION
@@ -54,12 +54,12 @@ join_geeks:
 ## LOCATIONS SECTION
 locations:
   heading: "NUESTRAS SEDES"
-  sub_heading: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+  sub_heading: "Con 6 sedes (y creciendo), 4Geeks es una de las escuelas y comunidades de programadores más grandes del mundo"
 
 ## ALUMNI SECTION
 alumni_header:
   heading: "CONOCE A NUESTROS GRADUADOS Y SUS PROYECTOS"
-  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+  sub_heading: "Éstos son algunos de los proyectos que serás capaz de desarrollar durante la última etapa del curso"
 
   ## TESTIMONIAL SECTION
 testimonial_header:

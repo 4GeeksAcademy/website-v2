@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider, Div} from '../Sections'
+import PropTypes from "prop-types"
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors, Address, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage, StyledBackgroundSection} from '../Styling';
 import {Card} from '../Card';
@@ -9,9 +9,10 @@ import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import ReactPlayer from 'react-player'
+import { checkPropTypes } from 'prop-types';
 
-const AlumniProjects = ({lang, showThumbs}) => {
-    const [projects, setProjects] = useState(lang[0].node.projects.slice(0, 2))
+const AlumniProjects = ({lang, showThumbs, limit}) => {
+    const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
 
     return (
         <Fragment github="/components/alumni_projects">
@@ -140,15 +141,22 @@ const AlumniProjects = ({lang, showThumbs}) => {
                 })
                 }
             </Carousel>
-            <Row height="10%" align="center">
+            {limit > 0 && <Row height="10%" align="center">
                 <Column size="6" align="center">
                     <Link to={lang[0].node.button_section.button_link}>
                         <Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>
                     </Link>
                 </Column>
             </Row>
+            }
         </Fragment>)
 };
+AlumniProjects.propTypes = {
+    limit: PropTypes.number
+}
+AlumniProjects.defaultProps = {
+    limit: 0,
+}
 export default AlumniProjects;
 
 
