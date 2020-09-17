@@ -228,12 +228,10 @@ const Calendar = (props) => {
         >
           <Div
             onMouseLeave={() => {
-
               setTimeout(() => {
                 setToggle(false);
                 setToggleCity(false);
-                //   setStatus(_status => ({..._status, toggle: _status.hovered}));
-              }, 300)
+              }, 500)
             }}
           >
             <Card
@@ -288,7 +286,6 @@ const Calendar = (props) => {
               }
             </Card>
             <Card
-
               color={`grey`}
               borders={`.5rem`}
               margin_sm={"20px auto"}
@@ -391,7 +388,6 @@ const Calendar = (props) => {
               cohorts.length > 0 ?
                 cohorts.map((cohort, index) => {
                   let cohortDate = new Date(cohort.kickoff_date)
-                  console.log("%%%%%", cohortDate.getDay())
                   return (
                     <>
                       <Column size="4" size_sm="12" key={index} margin="0 0 1rem 0">
@@ -419,21 +415,7 @@ const Calendar = (props) => {
                               bgSize={`cover`}
                               className={`img-event`}
                             ></StyledBackgroundSection>
-                            {/* <RoundImage
-                          url={data.cohort_img.childImageSharp.fluid}
-                          bsize="cover"
-                          mb="10px"
-                          border="1.25rem 1.25rem 0 0"
-                          position="center center"
-                          h_xs="230px"
-                          h_sm="230px"
-                          h_md="230px"
-                          h_lg="230px"
-                          h_xl="230px"
-                        /> */}
                             <Row
-
-                              // background={Colors.lightGray}
                               marginLeft="0"
                               marginRight="0"
                               padding={`15px`}>
@@ -502,13 +484,12 @@ const Calendar = (props) => {
                   fs_md="16px"
                   fs_lg="118px"
                   fs_xl="18px">
-                  It seems we could not found any results.
-                  </Paragraph>
+                  {academy != null ? "It seems we could not found any result." : "Loading..."}
+                </Paragraph>
               :
               events.length ?
                 events.map((event, index) => {
                   let eventDate = new Date(event.starting_at)
-                  console.log("*****", eventDate.getDay())
                   return (
                     <>
                       <Column size="4" size_sm="12" key={index} margin="0 0 1rem 0">
@@ -619,37 +600,8 @@ const Calendar = (props) => {
                                       fill={Colors.blue} />
                                   </a>
                                 </Row>
-
-                                {/* <Row marginBottom=".2rem" align={`evenly`} customRespSize alignResp={`space-evenly`}>
-                      <a href={"i.url"}>
-                        <Button
-                          outline
-                          color={Colors.gray}
-                          textColor={Colors.black}
-                          margin=".5rem 0"
-                          padding=".35rem.85rem">
-                          Join Our Community
-                                  </Button>
-                      </a>
-                      <a href={"i.url"} target="_blank" rel="noopener noreferrer">
-                        <Button
-                          outline
-                          color={Colors.red}
-                          textColor={Colors.black}
-                          margin=".5rem 0"
-                          padding=".35rem.85rem"
-                        >
-                          Register Now
-                                  </Button>
-                      </a>
-                    </Row> */}
-
                               </Column>
                             </Row>
-
-
-
-
                           </Card>
                         </a>
                       </Column>
@@ -663,7 +615,7 @@ const Calendar = (props) => {
                   fs_lg="118px"
                   fs_xl="18px">
                   It seems we could not found any result.
-              </Paragraph>
+                </Paragraph>
 
           }
         </Row>
@@ -719,7 +671,3 @@ export const query = graphql`
   }
 `;
 export default BaseRender(Calendar);
-
-
-
-
