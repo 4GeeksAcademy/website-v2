@@ -24,6 +24,10 @@ const Pricing = (props) => {
     {
       type: "full_time",
       name: "Full Time"
+    },
+    {
+      type: "online",
+      name: "Online"
     }
   ])
   const [priceToggle, setPriceToggle] = useState(false);
@@ -129,7 +133,7 @@ const Pricing = (props) => {
 
               <Button
                 display={`flex`}
-
+                alignItems={`center`}
                 width="fit-content"
                 onClick={() => setPriceToggle(!priceToggle)}
                 // onClick={() => {toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))}}
@@ -143,7 +147,7 @@ const Pricing = (props) => {
                   fs_md="18px"
                   fs_lg="18px"
                   fs_xl="20px"
-                  margin={`0 5px 0 0`}>{course === "part_time" ? "Part Time" : "Full Time"}
+                  margin={`0 5px 0 0`}>{course === "online" ? "Online" : course === "full_time" ? "Full Time" : "Part Time"}
                 </Paragraph>
                 <TriangleDown width="16" color={Colors.gray} fill={Colors.gray} />
               </Button>

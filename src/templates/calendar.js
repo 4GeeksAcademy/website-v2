@@ -119,6 +119,8 @@ const Calendar = (props) => {
       let filterCityArray = [{city: 'All Locations', slug: ''}];
       try {
         let response = await session.location;
+        // let sortedResponse = await response.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
+        // console.log("response", sortedResponse)
         if (response) {
           for (let i of session.locations) {
             // if (!filterCityArray.includes(i.city)) {
@@ -166,7 +168,7 @@ const Calendar = (props) => {
     }
     filterEvents();
   }, [filterByCity, filterByType])
-
+  if (!cohorts) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
   return (
     <>
       <WrapperImage
@@ -245,6 +247,7 @@ const Calendar = (props) => {
             >
               <Button
                 display={`flex`}
+                alignItems={`center`}
                 width="100%"
                 onClick={() => {toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))}}
                 color={Colors.lightGray}
@@ -293,6 +296,7 @@ const Calendar = (props) => {
             >
               <Button
                 display={`flex`}
+                alignItems={`center`}
                 width="100%"
                 onClick={() => {toggleCity == false ? setToggle(!toggle) : (setToggle(!toggle), setToggleCity(false))}}
                 color={Colors.lightGray}

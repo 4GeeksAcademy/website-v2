@@ -27,7 +27,7 @@ const PricesAndPayments = (props) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [cityToggle, setCityToggle] = useState(false);
-
+  let loc = props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
   let prova = {
     currentCityLocation: "",
     steps: [],
@@ -46,7 +46,6 @@ const PricesAndPayments = (props) => {
     }
   }
 
-  console.log("PROVA: ", prova)
   if (!prova.currentFilteredCourse) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
   function getStepLogo (step) {
     switch (step) {
@@ -103,7 +102,7 @@ const PricesAndPayments = (props) => {
           >
             <Button
               display={`flex`}
-
+              alignItems={`center`}
               width="fit-content"
               onClick={() => setCityToggle(!cityToggle)}
               color={Colors.lightGray}
@@ -123,7 +122,7 @@ const PricesAndPayments = (props) => {
             </Button>
             {cityToggle &&
               <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".5rem" shadow>
-                {Array.isArray(props.locations) && props.locations.map((item, index) => {
+                {Array.isArray(loc) && loc.map((item, index) => {
                   return (
                     <Button
                       key={index}
