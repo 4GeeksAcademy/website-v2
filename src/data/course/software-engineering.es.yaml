@@ -90,7 +90,7 @@ details:
       projects: "Consegurás tu primer trabajo, empezaras a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganár muy bien y disfrutar de la vida de un programador."
       slug: "lifelong-learning"
       duration: "1+ sem"
-      step: 0
+      step: 0.1
 
 potential_companies:
   tagline: "Entrénate para destacar en las compañías mas exigentes"
