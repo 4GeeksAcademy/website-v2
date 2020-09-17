@@ -20,8 +20,6 @@ button:
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
 
-
-
 info_box:
   heading: "Find us in Santiago de Chile"
   address: "Santiago Av. Apoquindo 5950, Las Condes Región Metropolitana"
@@ -31,7 +29,7 @@ info_box:
   image: "../../../static/images/locations/santiago-map.png"
   map_url: https://www.google.com/maps/place/4Geeks+Academy+Chile/@-33.4104594,-70.5662933,15z/data=!4m2!3m1!1s0x0:0x37af5bee84731bcc?sa=X&ved=2ahUKEwj35Kmp_-zrAhUFTd8KHeaZDHMQ_BIwE3oECBYQCA
   alt: ""
-  
+
 news:
   title: "4Geeks Academy Chile in the news..."
 upcoming:
@@ -47,7 +45,8 @@ carousel_box:
       alt: "Santiago Location Image"
 
 hasFinancialsOption: true
-financials_max_months: ["6 mo", "12 mo"]
+# financials_max_months: ["6 mo", "12 mo"]
+financials_max_months: ["12 mo", "6 mo"]
 prices:
   full_time:
     ## GENERAL INFO
@@ -72,14 +71,14 @@ prices:
         heading_one: "EXTENDED"
         sub_heading: "and enjoy the best pricing in town"
       plans:
-        - months: "6"
-          payment: "407.121 CLP"
+        - months: "12"
+          payment: "210.641 CLP"
           paymentInfo: "per month + 410.000 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
-        - months: "12"
-          payment: "210.641 CLP"
+        - months: "6"
+          payment: "407.121 CLP"
           paymentInfo: "per month + 410.000 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
@@ -122,14 +121,14 @@ prices:
         heading_one: "EXTENDED"
         sub_heading: "and enjoy the best pricing in town"
       plans:
-        - months: "6 mo"
-          payment: "356.231 CLP"
+        - months: "12 mo"
+          payment: "184.311 CLP"
           paymentInfo: "per month + 362.250 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
-        - months: "12 mo"
-          payment: "184.311 CLP"
+        - months: "6 mo"
+          payment: "356.231 CLP"
           paymentInfo: "per month + 362.250 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
