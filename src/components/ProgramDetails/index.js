@@ -104,7 +104,7 @@ const ProgramDetails = (props) => {
                     </ContainerStyle>
                     <Row align={`center`} alignItems={`center`} marginTop={`10px`}>
                         <Column size="11" display={`flex`} justifyContent={`space-between`}>
-                            {Array(steps[steps.length - 1]).fill(null).map((item, index) => {
+                            {steps.length > 0 && Array(steps[steps.length - 1]).fill(null).map((item, index) => {
                                 return (
                                     <Paragraph
                                         color={Colors.darkGray}
@@ -119,6 +119,7 @@ const ProgramDetails = (props) => {
                                     </Paragraph>
                                 )
                             })}
+                            }
                             {/* <Infinity width="16px" fill={Colors.darkGray} /> */}
                         </Column>
                     </Row>
