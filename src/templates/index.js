@@ -17,15 +17,20 @@ import Testimonials from '../components/Testimonials'
 import Events from '../components/Events'
 import Loc from '../components/Loc'
 import {Link} from 'gatsby';
+import {navigate} from "@reach/router";
 import {SessionContext} from '../session.js'
 import Img from "gatsby-image"
 
 const Home = (props) => {
   const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
-  console.log("DATA", data)
   const hiring = data.allPartnerYaml.edges[0].node;
   const city = session && session.location ? session.location.city : "Miami";
+  
+  React.useEffect(() => {
+    console.log("session", session)
+    if(session.language === "es" && (window.location.pathname === "" || window.location.pathname === "/")) navigate("/es/inicio")
+  },[])
   return (
     <>
       <Row>

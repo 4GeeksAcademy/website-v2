@@ -28,7 +28,7 @@ const Apply = (props) => {
         last_name: {value: '', valid: false},
         phone: {value: '', valid: false},
         email: {value: '', valid: false},
-        location: {value: '', valid: false},
+        utm_location: {value: '', valid: false},
         referral_key: {value: '', valid: true}
     });
     return (
@@ -42,7 +42,7 @@ const Apply = (props) => {
                 setFormStatus({status: "loading", msg: "Loading..."});
                 apply(formData, session)
                     .then(data => {
-                        if (data.error !== false) {
+                        if (typeof(data.error) !== "undefined") {
                             setFormStatus({status: "error", msg: "Fix errors"});
                         }
                         else {
@@ -169,17 +169,18 @@ const Apply = (props) => {
                                     />
                                 </Row>
                                 <Row height="40px">
-                                    <Paragraph padding="0.375rem 0.75rem" fontSize="13px" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
+                                    <Paragraph padding="0.375rem 0.75rem" fontSize="14px" margin="10px 0 0 0" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
                                 </Row>
                                 <Row>
                                     {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
                                     { session.locations && session.locations.map(l => 
                                         <Column size="6" size_md="12" paddingRight="0px" paddingLeft="0px" paddingTop="3px">
                                             <Button key={l.meta_info.slug} 
-                                                color={l.meta_info.slug === formData.location.value ? Colors.lightYellow : Colors.lightGray} 
+                                                color={l.meta_info.slug === formData.utm_location.value ? Colors.lightYellow : Colors.lightGray} 
+                                                border={l.meta_info.slug === formData.utm_location.value ? "1px solid "+Colors.lightYellow : "1px solid white"} 
                                                 borderRadius="0" 
                                                 colorHover={Colors.verylightGray}
-                                                onClick={(e) => setVal({...formData, location: { value: l.meta_info.slug, valid: true }})}
+                                                onClick={(e) => setVal({...formData, utm_location: { value: l.meta_info.slug, valid: true }})}
                                                 >
                                                 <Paragraph color={Colors.gray}>{l.city}, {l.country}</Paragraph>
                                             </Button>
@@ -202,7 +203,7 @@ const Apply = (props) => {
                                         move="up" up="15px" color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue} textColor={Colors.white}
                                         margin="2rem 0" padding=".45rem 3rem"
                                         disabled={formStatus.status === "loading" ? true: false}
-                                    >{yml.left.button.button_text}</Button>
+                                    >{formStatus.status === "loading" ? "Loading..." : yml.left.button.button_text}</Button>
                                 </Row>
                             </Column>
                         </Row>
@@ -210,7 +211,7 @@ const Apply = (props) => {
                     </Column>
                 </Row>
             </Wrapper>
-            <Wrapper margin="50px 0">
+            <Wrapper margin="150px 0 50px 0">
                 <Title
                     variant="primary"
                     title={yml.testimonial_header.heading}

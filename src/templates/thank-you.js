@@ -1,7 +1,7 @@
 import React from 'react';
 import BaseRender from './_baseRender'
-import {Container, Row, Column, Wrapper, Divider, Sidebar} from '../components/Sections'
-import {Title, H1, H2, H3, Span, Paragraph} from '../components/Heading'
+import { Column, Wrapper, Divider, Sidebar} from '../components/Sections'
+import {Title, H1, H2, H3, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
 import Link from 'gatsby-link'
 
@@ -9,12 +9,11 @@ const ThankYou = (props) => {
     const {data, pageContext, yml} = props;
     return (
         <>
-            <Wrapper 
+            <Wrapper
+                margin="50px 0 0 0"
                 image={yml.banner.image}
-                height="300px"
                 border="bottom"
             >
-                <Divider height="100px" />
                 <Title
                     size="5"
                     color={Colors.white}
@@ -28,26 +27,15 @@ const ThankYou = (props) => {
                 />
 
             </Wrapper>
-            <Divider height="100px" />
-            <Wrapper >
-                <Row align="center">
-                    <Column size="12" align="center">
-                        <H2>{yml.content.title}</H2>
-                    </Column>
-                </Row>
-                <Row align="center">
-                    <Column size="8" align="center">
-                        <Paragraph>{yml.content.message}</Paragraph>
-                    </Column>
-                </Row>
-                <Divider height="50px" />
-                <Row>
-                    <Column size="12" align="center">
-                        <Link to="/blog"><Button width="150px" color={Colors.blue} textColor={Colors.white}>Go to the blog</Button></Link>
-                    </Column>
-                </Row>
+            <Wrapper margin="0 0 50px 0">
+                <H2 margin="5px 0">{yml.content.title}</H2>
+                {yml.content.message.split("\n").map(m => 
+                    <Paragraph align="center">{m}</Paragraph>
+                )}
+                <Column margin="50px 0 0 0" size="12" align="center">
+                <Link to="/blog"><Button width="150px" color={Colors.blue} textColor={Colors.white}>{yml.content.button}</Button></Link>
+                </Column>
             </Wrapper>
-            <Divider height="100px" />
         </>
     )
 };
@@ -76,6 +64,7 @@ export const query = graphql`
             content{
                 title
                 message
+                button
             }
             
         }

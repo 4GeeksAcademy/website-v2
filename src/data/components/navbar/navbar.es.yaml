@@ -1,6 +1,6 @@
 navbar:
   - name: "Home"
-    link: "/"
+    link: "/es/inicio"
   - name: "La Academia"
     link: "/la-academia"
   - name: "Programas"

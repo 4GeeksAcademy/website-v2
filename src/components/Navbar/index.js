@@ -276,7 +276,7 @@ export const RightNav = ({lang, menu, open, button}) => {
                 <NavItem key={index} fontSize="16px"><Link to={item.link} key={index}>{item.name}</Link></NavItem>
           )}
         </Ul>
-        <Link to={button.button_link}><Button width="130px" color={Colors.red} textColor={Colors.white}>{button.button_text}</Button></Link>
+        <Link to={button.button_link}><Button m_sm="10px 0" width="130px" color={Colors.red} textColor={Colors.white}>{button.button_text}</Button></Link>
       </Div>
   )
 }

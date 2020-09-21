@@ -112,6 +112,14 @@ export const apply = async (data, session) => {
     throw Error('Unexpected error');
 }
 
+export const applyJob = async (data, session) => {
+    tagManager('job_application');
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    return await save_form(body, [], [], session);
+}
+
 export const requestSyllabus = async (data,session) => {
     console.log("Succesfully requested Syllabus", data)
     let body = {};

@@ -7,6 +7,7 @@ import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../components/H
 import {Button, Colors, Check, ArrowLeft, ArrowUp} from '../components/Styling'
 import BaseRender from './_baseRender'
 import {Link} from 'gatsby';
+import {applyJob} from "../actions";
 
 const Input = styled.input`
     background-color:${Colors.lightGray};
@@ -157,7 +158,7 @@ const Job = ({data, pageContext, yml}) => {
                                             <Button
                                                 color={Colors.blue} width="auto" textColor={Colors.white}
                                                 margin="2rem 0" padding=".45rem 3rem"
-                                                onClick={() => apply(formData)
+                                                onClick={() => applyJob(formData)
                                                     .then(() => {
                                                         console.log("Thank you");
                                                     })

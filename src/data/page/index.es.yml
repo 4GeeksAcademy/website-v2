@@ -4,7 +4,7 @@ meta_info:
   description: null
   image: null
   keywords: ""
-  redirects: ["/home", "/es/home", "/es/inicio","/inicio"]
+  redirects: ["/home", "/es/home", /inicio", "/es/"]
 
 header_data:
   tagline: Coding Bootcamp

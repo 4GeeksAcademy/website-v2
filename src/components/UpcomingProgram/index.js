@@ -124,7 +124,6 @@ const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location
     )
 };
 UpcomingProgram.propTypes = {
-    date: PropTypes.date,
     title: PropTypes.string,
     upcomingPath: PropTypes.string,
     applyPath: PropTypes.string,
@@ -132,7 +131,6 @@ UpcomingProgram.propTypes = {
     showOnScrollPosition: PropTypes.number
 }
 UpcomingProgram.defaultProps = {
-    date: new Date(),
     title: "",
     upcomingPath: "/calendar",
     applyPath: "/apply",

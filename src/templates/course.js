@@ -123,7 +123,7 @@ const Program = ({data, pageContext, yml}) => {
       />
       <Row align="center" marginBottom="50px">
         <Column align="right" size="6" align_sm="center" m_sm="0px 0px 15px 0px" size_sm="12" align="right">
-          <Button width="200px" onClick={() => navegate(yml.button.apply_button_link)} color="red" margin="0" textColor=" white">{yml.button.apply_button_text}</Button>
+          <Button width="200px" onClick={() => navigate(yml.button.apply_button_link)} color="red" margin="0" textColor=" white">{yml.button.apply_button_text}</Button>
         </Column>
         <Column align="left" size="6" align_sm="center" size_sm="12" align="left">
           <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
@@ -207,7 +207,7 @@ const Program = ({data, pageContext, yml}) => {
             <Column size="6" size_sm="12" paddingLeft={`0`}>
               <Card
                 cursor="pointer"
-                onClick={() => navegate(`/${pageContext.lang}/geekpal`)}
+                onClick={() => navigate(`/${pageContext.lang}/geekpal`)}
                 h_xs="400px"
                 h_sm="370px"
                 h_md="470px"
@@ -273,7 +273,7 @@ const Program = ({data, pageContext, yml}) => {
             <Column size="6" size_sm="12" paddingRight={`0`}>
               <Card
                 cursor="pointer"
-                onClick={() => navegate(`/${pageContext.lang}/geekforce`)}
+                onClick={() => navigate(`/${pageContext.lang}/geekforce`)}
                 h_xs="400px"
                 h_sm="400px"
                 h_md="470px"

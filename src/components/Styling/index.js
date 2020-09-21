@@ -266,7 +266,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
 export const Small = styled.small`
     display: ${props => props.display};
 `
-const SmartButton = ({children, colorHover, textColor, borderRadius, outline, ...rest}) => <button {...rest}>{children}</button>;
+const SmartButton = ({children, colorHover, textColor, borderRadius, outline, maxWidth, ...rest}) => <button {...rest}>{children}</button>;
 export const Button = styled(SmartButton)`
     ${props => props.outline
         ?
@@ -305,6 +305,7 @@ export const Button = styled(SmartButton)`
             letter-spacing: 0px;
             line-height: 1.5;
             position: ${props => props.position};
+            border: ${props => props.border};
             border-radius: ${props => props.borderRadius};
             background-color: ${props => props.color};
             color: ${props => props.textColor};
@@ -332,6 +333,9 @@ export const Button = styled(SmartButton)`
                     background-color: ${props => props.colorHover};
                 }
             `}  
+            @media ${Break.sm}{
+                margin: ${props => props.m_sm};
+            }
         `}  
 `;
 Button.defaultProps = {

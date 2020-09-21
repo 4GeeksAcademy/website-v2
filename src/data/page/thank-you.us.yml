@@ -4,7 +4,7 @@ meta_info:
   description: ""
   image: ""
   keywords: "codign bootcamp"
-  redirects: ["/thank"]
+  redirects: ["/thank", "/thank-you/apply"]
 banner:
   tagline: "Thank You"
   sub_heading: ""
@@ -16,3 +16,4 @@ content:
 In the meantime, please read our blog.  It's full of important info that we are sure you will find useful. :)
 
 Some articles that may interest you:"
+  button: "Read our blog"

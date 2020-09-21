@@ -39,7 +39,7 @@ const ProgramSelector = (props) => {
   const [weeks, setWeeks] = useState("16");
   const classes = useStyles();
 
-  let locArray = session.locations;
+  let locArray = session.locations || [];
   // let locArray = data.loc.edges;
   let weekArray = ["16", "9"]
   let link = "";

@@ -3,7 +3,7 @@ import {Link} from 'gatsby';
 import {Container, Row, Column, Divider} from '../Sections'
 import {Colors, RoundImage} from '../Styling'
 import {H5, Separator, Paragraph, Anchor} from '../Heading'
-import {navegate} from "@reach/router";
+import {navigate} from "@reach/router";
 
 const Footer = (props) => {
     // let col = data.allFooterYaml.edges;

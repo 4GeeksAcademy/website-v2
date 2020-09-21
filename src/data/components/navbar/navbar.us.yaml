@@ -1,6 +1,6 @@
 navbar:
   - name: "Home"
-    link: "/"
+    link: "/home"
   - name: "Why 4Geeks"
     link: "/the-academy"
   - name: "The Programs"
@@ -14,7 +14,7 @@ navbar:
   #   link: "/pricing"
   - name: "for companies"
     link: "/partners"
-  - name: "Upcoming"
+  - name: "Upcoming Dates"
     link: "/calendar"
 button:
   button_text: "APPLY NOW"

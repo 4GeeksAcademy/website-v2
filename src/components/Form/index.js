@@ -86,6 +86,7 @@ export const Alert = styled.div`
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     font-color: ${props => colors[props.color][1]};
+    margin: ${props => props.margin};
 `;
 
 //TextArea Styled Component
