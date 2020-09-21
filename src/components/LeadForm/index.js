@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import {SessionContext} from '../../session';
 import { Button, Colors } from "../Styling";
 import { NaturePeopleOutlined } from "@material-ui/icons";
+import {navigate} from "@reach/router";
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
