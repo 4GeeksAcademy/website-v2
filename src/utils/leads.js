@@ -20,7 +20,7 @@ export const save_form = async (formData=null, tags='', automations='', session=
             ...formData, 
             tags: tags.join(","), 
             automations: automations.join(","), 
-            language: session.language,
+            utm_language: session.language,
             city: session.location.city, 
             country: session.location.country, 
             utm_url: window.location.href 

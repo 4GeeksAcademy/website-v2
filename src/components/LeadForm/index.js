@@ -23,7 +23,7 @@ const Form = styled.form`
 `;
 
 
-const LeadForm = ({heading, formHandler, handleClose}) => {
+const LeadForm = ({heading, formHandler, data, handleClose}) => {
     const [formStatus, setFormStatus] = useState({ status: "idle", msg: "Resquest" });
     const [formData, setVal] = useState({
         first_name: { value: '', valid: false },
@@ -31,6 +31,9 @@ const LeadForm = ({heading, formHandler, handleClose}) => {
         email: { value: '', valid: false },
     });
     const { session } = useContext(SessionContext);
+    useEffect(() => {
+        setVal(_data => ({ ..._data, data, utm_url: window.location.href }))
+    },[data])
     return (
         <Form onSubmit={(e) => {
                 e.preventDefault();

@@ -135,7 +135,11 @@ const Program = ({data, pageContext, yml}) => {
         open={open}
         onClose={handleClose}
       >
-        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} />
+        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} 
+          data={{ 
+            course: yml.meta_info.bc_slug 
+          }}
+        />
       </Modal>
     </WrapperImage>
 
