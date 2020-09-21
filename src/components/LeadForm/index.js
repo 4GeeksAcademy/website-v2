@@ -34,8 +34,6 @@ const LeadForm = ({heading, formHandler, data, handleClose}) => {
     });
     const { session } = useContext(SessionContext);
     React.useEffect(() => {
-        let propsData = {}
-        Object.keys(data).forEach(key => propsData[key] = { value: data[key], valid: true })
         setVal(_data => ({ ..._data, ...data, utm_url: { value: window.location.href, valid: true } }))
     },[data])
     return (
