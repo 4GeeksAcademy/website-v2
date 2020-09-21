@@ -5,15 +5,7 @@ import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Section
 import {H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Colors, Button, RoundImage, Address, Marker, Clock, Plus, Minus} from '../components/Styling'
 import {Card} from '../components/Card'
-import Grid from '@material-ui/core/Grid';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import {makeStyles} from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
 import BaseRender from './_baseRender'
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import Link from 'gatsby-link'
 import {SessionContext} from '../session'
 
 const Faq = (props) => {

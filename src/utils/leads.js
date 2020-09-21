@@ -7,7 +7,7 @@ const API_HOST = 'https://breathecode.herokuapp.com/v1'
  * @param {hard, soft, newsletter, etc} automations 
  * @param {session information object} session 
  */
-export const save_form = async (formData=null, tags='', automations='', session=null) => {
+export const save_form = async (formData=null, tags=[], automations=[], session=null) => {
 
     if(!Array.isArray(tags)) throw Error("Tags must be an array");
     if(typeof(session) !== 'object') throw Error("Missing session");
@@ -21,6 +21,7 @@ export const save_form = async (formData=null, tags='', automations='', session=
             tags: tags.join(","), 
             automations: automations.join(","), 
             utm_language: session.language,
+            language: session.language,
             city: session.location.city, 
             country: session.location.country, 
             utm_url: window.location.href 

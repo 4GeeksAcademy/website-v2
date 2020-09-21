@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {SessionContext} from '../../session';
 import { Button, Colors } from "../Styling";
+import { NaturePeopleOutlined } from "@material-ui/icons";
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -31,8 +32,10 @@ const LeadForm = ({heading, formHandler, data, handleClose}) => {
         email: { value: '', valid: false },
     });
     const { session } = useContext(SessionContext);
-    useEffect(() => {
-        setVal(_data => ({ ..._data, data, utm_url: window.location.href }))
+    React.useEffect(() => {
+        let propsData = {}
+        Object.keys(data).forEach(key => propsData[key] = { value: data[key], valid: true })
+        setVal(_data => ({ ..._data, ...data, utm_url: { value: window.location.href, valid: true } }))
     },[data])
     return (
         <Form onSubmit={(e) => {
@@ -40,7 +43,10 @@ const LeadForm = ({heading, formHandler, data, handleClose}) => {
                 if(formStatus.status === "error"){
                     setFormStatus({ status: "idle", msg: "Resquest" })
                     }
-                if (!formIsValid(formData)) setFormStatus({ status: "error", msg: "There are some errors in your form" });
+                if (!formIsValid(formData)){
+                    console.log("formData", formData)
+                    setFormStatus({ status: "error", msg: "There are some errors in your form" });
+                } 
                 else {
                     setFormStatus({ status: "loading", msg: "Loading..." });
                     formHandler(formData, session)
@@ -50,7 +56,7 @@ const LeadForm = ({heading, formHandler, data, handleClose}) => {
                             }
                             else {
                                 setFormStatus({ status: "thank-you", msg: "Thank you" });
-                                navigate('/thank-you/apply');
+                                navigate('/thank-you');
                             }
                         })
                         .catch(error => {
@@ -118,10 +124,15 @@ const LeadForm = ({heading, formHandler, data, handleClose}) => {
     );
 }
 
-export default LeadForm;
-
 LeadForm.propTypes = {
     heading: PropTypes.string,
     formHandler: PropTypes.func,
     handleClose: PropTypes.func
 }
+LeadForm.defaultProps = {
+    heading: "",
+    formHandler: null,
+    handleClose: null,
+    data: {},
+}
+export default LeadForm;

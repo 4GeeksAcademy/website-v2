@@ -112,14 +112,6 @@ export const apply = async (data, session) => {
     throw Error('Unexpected error');
 }
 
-export const applyJob = async (data, session) => {
-    tagManager('job_application');
-    let body = {};
-    for (let key in data) body[key] = data[key].value;
-
-    return await save_form(body, [], [], session);
-}
-
 export const requestSyllabus = async (data,session) => {
     console.log("Succesfully requested Syllabus", data)
     let body = {};
@@ -157,7 +149,7 @@ export const beHiringPartner = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    return await save_form(body, ['hiring-partner'], ['soft'], session);
+    return await save_form(body, ['hiring-partner'], ['hiring-partner'], session);
     
 }
 export const contactUs = async (data,session) => {
@@ -165,7 +157,7 @@ export const contactUs = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    return await save_form(body, ['contact us'], ['soft'], session);
+    return await save_form(body, ['contact us'], ['contact-us'], session);
 }
 
 export const initSession = async (previousSession, locationsArray, location=null) => {

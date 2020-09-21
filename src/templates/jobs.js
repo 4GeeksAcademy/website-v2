@@ -5,10 +5,6 @@ import {Row, Column, Wrapper, WrapperImage, Divider} from '../components/Section
 import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
-import Grid from '@material-ui/core/Grid';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender'
 import JobInfo from '../components/JobInfo'
 import Link from 'gatsby-link'

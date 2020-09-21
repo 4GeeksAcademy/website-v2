@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import styled, {css} from 'styled-components';
 import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections"
 import {Title, H4, Paragraph} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
@@ -7,53 +6,16 @@ import Credentials from '../components/Credentials'
 import WhoIsHiring from '../components/WhoIsHiring'
 import BaseRender from './_baseRender'
 import {beHiringPartner} from "../actions";
-import {makeStyles} from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
 import LeadForm from "../components/LeadForm/index.js";
-import Img from "gatsby-image"
+import Modal from "../components/Modal"
 
-const Input = styled.input`
-    background-color:${Colors.lightGray};
-    height: 40px;
-    width: 100%;
-    border: none;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    font-color: ${Colors.black};
-`
 function rand () {
   return Math.round(Math.random() * 20) - 10;
 }
 
-function getModalStyle () {
-  const top = 50 + rand();
-  const left = 50 + rand();
-
-  return {
-    top: `${50}%`,
-    left: `${50}%`,
-    transform: `translate(-${50}%, -${50}%)`,
-  };
-}
-
-const useStyles = makeStyles(theme => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    height: 300,
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '1.25rem',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
 const Partners = (props) => {
   const {data, pageContext, yml} = props;
-  const [formMessage, setFormMessage] = useState("Fill the form to submit")
-  const [showModal, setShowModal] = useState(false)
-  const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-  const classes = useStyles();
   const handleOpen = () => {
     setOpen(true);
   };
@@ -64,10 +26,7 @@ const Partners = (props) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   return (
     <>
-      {/* <Img className={`image`} fluid={yml.image.childImageSharp.fluid} alt="Florida Education Logo"></Img> */}
-
       <WrapperImage
-        
         imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
         className={`img-header`}
         bgSize={`cover`}

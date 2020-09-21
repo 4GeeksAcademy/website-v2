@@ -1,42 +1,17 @@
 import React, {useState, useContext, useEffect} from 'react';
 import Layout from '../global/Layout';
-import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Card} from '../components/Card'
-import Grid from '@material-ui/core/Grid';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import {makeStyles} from '@material-ui/core/styles';
 import BaseRender from './_baseRender';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
 import {Input, Alert, TextArea} from '../components/Form';
 import {useDebounce} from "../utils/debounce";
 
-const useStyles = makeStyles({
-    root: {
-        background: Colors.white,
-        fontSize: '10px',
-        borderRadius: 3,
-        border: 0,
-        color: 'white',
-        padding: '0 10px',
-        '&$selected': {
-            background: Colors.yellow,
-            color: Colors.white
-        },
-    },
-    label: {
-        textTransform: 'lowercase',
-    },
-});
-
-
 const Contact = (props) => {
     const {data, pageContext, yml} = props;
-    const classes = useStyles();
     const { session } = useContext(SessionContext);
     const [alignment, setAlignment] = useState('left');
     const [ formStatus, setFormStatus ] = useState({ status: "idle", msg: "Contact Us"});
