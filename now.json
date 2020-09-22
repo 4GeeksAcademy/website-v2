@@ -1,11 +1,4 @@
 {
-  "build": {
-    "env": {
-      "ACP_TOKEN": "@acp_token",
-      "ACP_HOST": "@acp_host",
-      "BREATHECODE_HOST": "https://breathecode.herokuapp.com/v1"
-    }
-  },
   "routes": [
     {
       "src": "/static/(.*)",

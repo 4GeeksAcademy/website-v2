@@ -7,7 +7,6 @@ var redirects = [];
 const saveRedirectLogs = () => {
     
     console.log('Saving redirect log');
-
     fs.writeFile('./public/redirects.log', JSON.stringify(redirects, null, 1), function (err) {
         if (err) return console.log(err);
         console.log('Created redirects file');

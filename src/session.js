@@ -39,7 +39,7 @@ export const withSession = Component => {
             const urlParams = new URLSearchParams(window.location.search);
             initSession(session, data.allLocationYaml, {
               location: urlParams.get('location') || null,
-              gclid: urlParams.get('GCLID') || urlParams.get('gclid'),
+              gclid: urlParams.get('gclid') || urlParams.get('fbclid'),
               utm_medium: urlParams.get('utm_medium'),
               utm_campaign: urlParams.get('utm_campaign'),
               utm_content: urlParams.get('utm_content'),
