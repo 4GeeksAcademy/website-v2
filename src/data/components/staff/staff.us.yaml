@@ -5,7 +5,7 @@ staff:
     nick_name: "Alesanchezr"
     slug: "alejandro-sanchez"
     job_title: "Director of Education"
-    bio: "20 years coding, Software Engineer and Google Embasador"
+    bio: "20 years coding, Software Engineer and Google Ambassador"
     github: "https://github.com/alesanchezr"
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
     twitter: "https://twitter.com/alesanchezr"
@@ -19,7 +19,7 @@ staff:
     location: ""
   - name: "Marcelo"
     last_name: "Ricigliano"
-    nick_name: ""
+    nick_name: "MRicigliano"
     slug: marcelo-ricigliano
     bio: "Forbes Latam top 50 companies, Master on International Law"
     job_title: "CEO - co-founder"
