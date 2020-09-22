@@ -32,7 +32,7 @@ const Location = ({data, pageContext, yml}) => {
 
       useEffect(() => {
         const loadCohorts = async () => {
-            const resp = await fetch(`${process.env.BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
+            const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
             const data = await resp.json();
             setCohorts(data.slice(0,4))
         }

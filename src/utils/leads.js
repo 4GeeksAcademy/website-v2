@@ -11,7 +11,7 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
     if(typeof(session) !== 'object') throw Error("Missing session");
     if(typeof(formData) !== 'object') throw Error("Missing formData");
 
-    const resp = await fetch(`${process.env.BREATHECODE_HOST}/marketing/lead`, {
+    const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/marketing/lead`, {
         headers: new Headers({'content-type': 'application/json'}),
         method: "POST",
         body: JSON.stringify({
