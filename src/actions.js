@@ -164,7 +164,7 @@ export const contactUs = async (data,session) => {
 }
 
 export const initSession = async (previousSession, locationsArray, seed=null) => {
-    let v4 = null;
+    var v4 = null;
     let storedSession = JSON.parse(localStorage.getItem("academy_session"));
     let location = null;
 
@@ -183,14 +183,16 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     if(location === null){
         console.log("Calculating nearest location because it was null...")
 
-        const v4 = await publicIp.v4();
+        v4 = await publicIp.v4();
         const response = await fetch(`https://api.ipstack.com/${v4}?access_key=73822e5a584c041268f0e78a3253cf0d`);
         
         location = locationsArray.edges.find(({ node }) => node.meta_info.slug == "downtown-miami").node;
         try{
             let data = response.status === 200 ? await response.json() : null;
             if(data) location = getClosestLoc(locationsArray.edges, data.latitude, data.longitude)
-        }catch(e){}
+        }catch(e){
+            console.log("Error retrieving IP information: ", e)
+        }
     }
     console.log("New updated location", location)
     // const location = "Santiago de Chile"
