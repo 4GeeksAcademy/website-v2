@@ -50,6 +50,6 @@ If we asked some typical students "What would be the qualities of an ideal instr
 
 **In conclusion, we could say that an instructor is:** A person who dominates theoretically and practically one or more specialties with a fundamental purpose to convey their knowledge and experience to others who need it to perform properly in their jobs; dominating teaching-learning methodologies.
 
-![Arte-blog-4G-Julio-32-672x1024-1](https://4geeksacademy.co/wp-content/uploads/2016/07/Arte-blog-4G-Julio-32-672x1024-1-197x300.png)
+![Arte-blog-4G-Julio-32-672x1024-1](https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/Arte-blog-4G-Julio-32-672x1024-1-197x300.png)
 
 At [4Geeks Academy](breathco.de), the instructor is not your typical teacher.  We mentor you, we are always close, and we also have a  student/instructor ratio that allows us to help you and not leave you behind.

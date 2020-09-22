@@ -22,7 +22,7 @@ En el año 2009, junto con dos amigos, comenzamos una pequeña empresa de desarr
 
 Luego de muchas noches sin dormir y de echar líneas de código, comenzamos a generar ingresos hasta que logramos reunir lo suficiente para comenzar a contratar a nuestros ¡primeros empleados! Un desarrollador de Software -Santiago Pérez- y dos programadores: Ignacio Córdoba y Alex Milano.
 
-![comunidad-rigos-300x274](https://4geeksacademy.co/wp-content/uploads/2016/04/comunidad-rigos-300x274.png)
+![comunidad-rigos-300x274](https://storage.googleapis.com/4geeks-academy-website/blog/2016/04/comunidad-rigos-300x274.png)
 
 Tratando de encontrar a Alex y a Nacho, nos dimos cuenta de lo difícil que era conseguir a buenos desarrolladores. Es por esta razón que decidimos crear la "Comunidad de Desarrolladores", con la intención de poder reunir a todos los programadores, creando un espacio donde todos los _developers_ quisieran estar: excelente ambiente de trabajo, muchos eventos y diversión, workshops y cursos de programación, entre otros.
 
@@ -32,8 +32,8 @@ Tratando de encontrar a Alex y a Nacho, nos dimos cuenta de lo difícil que era 
 
 Con el paso de los años, comenzamos a lanzar diferentes iniciativas dentro de la Comunidad: The TechMeetup (un evento mensual para conectar y reunir a todas las personas del ecosistema de StartUps en la ciudad), The Dev Labs (laboratorios de aprendizaje que se realizan en las universidades), workshops y cursos de programación, entre otros
 
-[![logo tech meetup copy](https://4geeksacademy.co/wp-content/uploads/2016/04/logo-tech-meetup-copy.png)
-](https://4geeksacademy.co/wp-content/uploads/2016/04/logo-tech-meetup-copy.png)[![Screen Shot 2015-12-23 at 1.45.50 AM](https://4geeksacademy.co/wp-content/uploads/2016/04/Screen-Shot-2015-12-23-at-1.45.50-AM.png)](https://4geeksacademy.co/wp-content/uploads/2016/04/Screen-Shot-2015-12-23-at-1.45.50-AM.png)
+[![logo tech meetup copy](https://storage.googleapis.com/4geeks-academy-website/blog/2016/04/logo-tech-meetup-copy.png)
+](https://storage.googleapis.com/4geeks-academy-website/blog/2016/04/logo-tech-meetup-copy.png)[![Screen Shot 2015-12-23 at 1.45.50 AM](https://storage.googleapis.com/4geeks-academy-website/blog/2016/04/Screen-Shot-2015-12-23-at-1.45.50-AM.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/04/Screen-Shot-2015-12-23-at-1.45.50-AM.png)
 
 La Comunidad resultó ser muy atractiva para los _developers _y crecimos de 6 a 80 empleados en 4 años con operaciones comerciales en 5 países y más de 250 proyectos entregados.
 
@@ -45,7 +45,7 @@ Un día, nos vimos en la necesidad de contratar un nuevo CTO y fue cuando apreci
 
 Estuvimos conversando y manejando la idea de la Academia por un tiempo, hasta que en febrero de 2014, decidimos hacerla realidad. Así es como comenzamos a planificar el lanzamiento de {HACK}, un Bootcamp de desarrollo web en Caracas, Venezuela. Seis meses después, HACK ya estaba operando, siendo nuestro primer curso el 20 de octubre de 2014. Romer Ramos -entonces líder de un área en 4Geeks- se convirtió en el CEO de la Academia y 4Geeks le brindó todo el apoyo financiero y operativo para dar inicio en esta nueva compañía.
 
-[![hack-logo](https://4geeksacademy.co/wp-content/uploads/2016/04/hack-logo1.png)](https://4geeksacademy.co/wp-content/uploads/2016/04/hack-logo1.png)
+[![hack-logo](https://storage.googleapis.com/4geeks-academy-website/blog/2016/04/hack-logo1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/04/hack-logo1.png)
 
 El primer curso resultó fantástico, los estudiantes quedaron encantados con la Academia; la mayoría (más de un 60%) de los graduados fueron contratados inmediatamente por diferentes compañías. Muchos de ellos decidieron mudarse del país y comenzar sus carrera como desarrolladores de software fuera de nuestra fronteras.
 
@@ -55,7 +55,7 @@ Luego de 3 cursos y tomando como base la experiencia de HACK, **4Geeks** decide 
 ### 4Geeks Academy…
 
 
-[![logo1-01-02](https://4geeksacademy.co/wp-content/uploads/2016/04/logo1-01-02.png)](https://4geeksacademy.co/wp-content/uploads/2016/04/logo1-01-02.png)
+[![logo1-01-02](https://storage.googleapis.com/4geeks-academy-website/blog/2016/04/logo1-01-02.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/04/logo1-01-02.png)
 
 Partiendo de nuestra experiencia anterior, decidimos crear los cursos de 4Geeks Academy medio tiempo, convirtiendo los programas mucho más amigables y accesibles para cualquier persona.
 

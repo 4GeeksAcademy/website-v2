@@ -12,7 +12,7 @@ published: false
 slug: pre-work-phase-free-open-everybody
 title: Why our pre-work phase is free and open for everybody
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://4geeksacademy.co/wp-content/uploads/2016/01/welcome-1.jpg"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/welcome-1.jpg"
 wordpress_id: 516
 categories:
 - Sin categoría

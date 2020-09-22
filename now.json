@@ -13,6 +13,11 @@
       "status": 308, "headers": { "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-isa.pdf" }
     },
     {
+      "src": "/wp-content/uploads/(.*)",
+      "status": 308, 
+      "dest": "https://storage.googleapis.com/4geeks-academy-website/blog/$1"
+    },
+    {
       "src": "/static/(.*)",
       "headers": { "cache-control": "public, max-age=31536000, immutable" },
       "dest": "/static/$1"

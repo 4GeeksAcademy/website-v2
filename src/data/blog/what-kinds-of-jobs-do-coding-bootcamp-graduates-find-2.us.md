@@ -35,7 +35,7 @@ _Course Reports_ says on their website that 75% of graduates report being employ
 
 Some graduates found jobs in:
 
-[![Tabla-01](https://4geeksacademy.co/wp-content/uploads/2016/03/Tabla-01-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/03/Tabla-01-1.png)
+[![Tabla-01](https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/Tabla-01-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/Tabla-01-1.png)
 
 Graduates from bootcamps are saying that learning to code gave them the opportunity to change their career.  **_TheMuse.com_** highlights the story of _Dang: _she found her dream job just after the program at De Bootcamp.  She started the program with zero programming knowledge, and now she is employed as a software engineer and can contribute meaningfully to development teams and discussions.
 
@@ -45,6 +45,6 @@ _Alyssa Ravasio _started her own company called _Hipcam; _she went into_ Dev Bo
 
 Employers will look at portfolios and projects to verify coding skills. Some jobs that a graduate can find could be:
 
-[![imagen para blog-02](https://4geeksacademy.co/wp-content/uploads/2016/03/imagen-para-blog-02-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/03/imagen-para-blog-02-1.png)You have to keep learning new technologies, and continue practicing and improving your coding skills.  Get a mentor, apply for internships.  Keep pushing forward.  You can even volunteer in non-profit projects to build a portfolio.
+[![imagen para blog-02](https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/imagen-para-blog-02-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/imagen-para-blog-02-1.png)You have to keep learning new technologies, and continue practicing and improving your coding skills.  Get a mentor, apply for internships.  Keep pushing forward.  You can even volunteer in non-profit projects to build a portfolio.
 
 The marketplace could change in the upcoming years, so the data we can get today may do a 180 turn tomorrow.  However, job growth is expected to grow up to 24% by 2020.  Don't expect to get an ideal job just after getting out of school, but you can start with little projects or build your own protfolio.

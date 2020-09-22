@@ -29,7 +29,7 @@ featured: true
 
 The #IntroToCoding Workshop Level 2 sponsored by Facilcloud and lead by our instructor Jose Cirigliano was held on December 17th at WeWork Lincoln Road.
 
-[![4Geeks Academy IntroToCoding Workshop](https://4geeksacademy.co/wp-content/uploads/2015/12/4Geeks-Academy-IntroToCoding-Workshop-1-1.jpg)](https://4geeksacademy.co/wp-content/uploads/2015/12/4Geeks-Academy-IntroToCoding-Workshop-1-1.jpg)
+[![4Geeks Academy IntroToCoding Workshop](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/4Geeks-Academy-IntroToCoding-Workshop-1-1.jpg)](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/4Geeks-Academy-IntroToCoding-Workshop-1-1.jpg)
 
 The topic of the workshop was: How Does The Web Work? **HTML** + **CSS** and everyone who attended received USD1400 to use in the cloud.
 
@@ -45,7 +45,7 @@ The internet is a series of devices connecting one to another and interacting be
 
 HTML + CSS
 
-To be able to build a store we need a blueprint and such is built through the use of **HTML** tags.  These **HTML** tags are the base of the website and allow the developer to build the main structure of it with a rough format.  Although the **HTML** tags are essential for building a website, so are the Selectors and Rules of **CSS**.[![4Geeks Academy IntroToCoding Workshop](https://4geeksacademy.co/wp-content/uploads/2015/12/4Geeks-Academy-IntroToCoding-Workshop-2.jpg)](https://4geeksacademy.co/wp-content/uploads/2015/12/4Geeks-Academy-IntroToCoding-Workshop-2.jpg)
+To be able to build a store we need a blueprint and such is built through the use of **HTML** tags.  These **HTML** tags are the base of the website and allow the developer to build the main structure of it with a rough format.  Although the **HTML** tags are essential for building a website, so are the Selectors and Rules of **CSS**.[![4Geeks Academy IntroToCoding Workshop](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/4Geeks-Academy-IntroToCoding-Workshop-2.jpg)](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/4Geeks-Academy-IntroToCoding-Workshop-2.jpg)
 
 The Cheat Sheet Style or **CSS** allows the web developer to add a stylish touched to the store such as colors, alignment, font, etc; making it more appealing to the spectator.
 

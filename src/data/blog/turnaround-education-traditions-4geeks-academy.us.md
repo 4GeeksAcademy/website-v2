@@ -32,7 +32,7 @@ Experts and institutions blame the educational standard (the traditional method)
 
 Several articles and academic studies have shown, and still do, that the flipped classroom is more effective -facts based- than the traditional methods[3]. There is still a long road to walk until results can become tangible and clear as to how flipped classrooms are the way education shall be performing during the next years. However, actions are needed now. It would be a lazy decision to keep waiting until final results are publicly known and then make the decision to change the model.
 
-![](https://4geeksacademy.co/wp-content/uploads/2017/04/Picture1-300x115.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2017/04/Picture1-300x115.png)
 
 It’s easy: these generations need a change in the educational system. They are not engaged and they are not performing as well as they could. They need a more complete and effective method to become the professionals society needs.
 

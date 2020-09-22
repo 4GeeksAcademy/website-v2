@@ -48,16 +48,16 @@ For example, here are some sites built with:
 If we talk about usability, we can observe that PHP follows a classic approach and is extensively documented - this means that it is in the middle of the scale.  Ruby is highly usable because of its principle of least astonishment - enforcing to minimize confusion for users - placing it in a better position on the scale than PHP.  Python uses strict indentation enforcements and it is the most readable programming language, which means that, on the scale, Python and Ruby fight for the best position.
 
 
-**_![1-3](https://4geeksacademy.co/wp-content/uploads/2016/05/1-3-300x20.jpg)_**
-**_![2-2](https://4geeksacademy.co/wp-content/uploads/2016/05/2-2-300x60.jpg)
+**_![1-3](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/1-3-300x20.jpg)_**
+**_![2-2](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/2-2-300x60.jpg)
 Source:_**_https://blog.udemy.com/modern-language-wars/_
 
 
 In the case of "ease of learning," PHP is slightly above half of the scale.  Ruby is slightly below half of the scale, and Python is the best of the scale.
 
 
-**_![1-2](https://4geeksacademy.co/wp-content/uploads/2016/05/1-2-300x20.jpg)_**
-**_![2-2](https://4geeksacademy.co/wp-content/uploads/2016/05/2-2-300x60.jpg)_**
+**_![1-2](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/1-2-300x20.jpg)_**
+**_![2-2](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/2-2-300x60.jpg)_**
 **_Source: _**_https://blog.udemy.com/modern-language-wars/_
 
 
@@ -66,7 +66,7 @@ Now, let’s take a look on the index made by _Tiobe_._com_:
 _The TIOBE Programming Community_ index is an indicator of the popularity of programming languages; in this index we´re going to compare May 2016 and May 2015.
 
 
-**_![4](https://4geeksacademy.co/wp-content/uploads/2016/05/4-1-300x190.jpg)_**
+**_![4](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/4-1-300x190.jpg)_**
 **_Source_: **_http://www.tiobe.com/tiobe_index_
 
 
@@ -79,7 +79,7 @@ Python and Ruby are the newest ones compared to PHP; they also have an elegant a
 If we take a glimpse into some "job-hunter" companies in the Miami area, we find the following:
 
 
-![5](https://4geeksacademy.co/wp-content/uploads/2016/05/5-300x69.jpg)
+![5](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/5-300x69.jpg)
 
 
 It seems that PHP was not a leading language amount the Miami organizations, but if we combine the _Tiobe_ research with the job hunters company in Miami, we find that PHP was climbing faster than the other languages, and it looks like it will be one of the top languages required by Miami businesses.

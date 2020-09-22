@@ -44,7 +44,7 @@ Wait, it's not just that we believe in Part-time education because people need t
 ### The unemployment rate in Miami Dade city is 5.5%, and it is going down!
 
 
-[![Unemployment Rate in Miami-Dade County](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-08-at-6.38.55-AM-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-08-at-6.38.55-AM-1.png)
+[![Unemployment Rate in Miami-Dade County](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2016-01-08-at-6.38.55-AM-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2016-01-08-at-6.38.55-AM-1.png)
 
 What that means is that 94.5% of the people can't attend full-time immersive schools.  We asked ourselves, why should we open another full-time course if 94.5% of the people will not be able to sign-up?
 

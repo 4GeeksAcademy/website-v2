@@ -44,12 +44,12 @@ Learning the PHP language is not about the syntax - that is easy.  The challen
 
 <td >
 
-[![PHP and Ruby interest in google worldwide](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.49.23-PM-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.49.23-PM-1.png) Worldwide PHP vs Ruby Interest over time.
+[![PHP and Ruby interest in google worldwide](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2016-01-10-at-6.49.23-PM-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2016-01-10-at-6.49.23-PM-1.png) Worldwide PHP vs Ruby Interest over time.
 </td>
 
 <td >
 
-[![Miami PHP vs Ruby interest over time](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.54.45-PM-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-6.54.45-PM-1.png) Florida-Miami PHP vs Ruby interest.
+[![Miami PHP vs Ruby interest over time](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2016-01-10-at-6.54.45-PM-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2016-01-10-at-6.54.45-PM-1.png) Florida-Miami PHP vs Ruby interest.
 </td>
 </tr>
 </tbody>
@@ -60,13 +60,13 @@ The community is the gasoline behind the programming language; they give the fe
 ### Documentation
 
 
-![stack-overflow-languages](https://4geeksacademy.co/wp-content/uploads/2016/01/stack-overflow-languages-2.png)PHP documentation is clear, concise, and spectacular. I cannot remember having a question that was hard to find.  When you have such an active community, everything flows.  PHP is the third language with most discussions on Stack Overflow, and all the big websites that teach to code have active PHP courses and tutorials.
+![stack-overflow-languages](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/stack-overflow-languages-2.png)PHP documentation is clear, concise, and spectacular. I cannot remember having a question that was hard to find.  When you have such an active community, everything flows.  PHP is the third language with most discussions on Stack Overflow, and all the big websites that teach to code have active PHP courses and tutorials.
 
 
 ### PHP is, by far, the most used language on the web:
 
 
-![Percentage of websites using php](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-7.37.48-PM-2.png)With 82% of the websites and web applications using PHP, it is the most used language.  For example: Facebook, Yahoo, Tumblr and Wikipedia (and 65% of the world's top 1 million websites), as well as WordPress (which runs 25% of internet websites) are built on PHP.
+![Percentage of websites using php](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2016-01-10-at-7.37.48-PM-2.png)With 82% of the websites and web applications using PHP, it is the most used language.  For example: Facebook, Yahoo, Tumblr and Wikipedia (and 65% of the world's top 1 million websites), as well as WordPress (which runs 25% of internet websites) are built on PHP.
 
 
 

@@ -7,7 +7,7 @@ link: https://www.4geeksacademy.co/ironhack-vs-wyncode-vs-4geeks-academy/
 slug: ironhack-vs-wyncode-vs-4geeks-academy
 title: 4Geeks Academy and LaunchCode.org
 avatar: "/4geeks-logo.png"
-image: "https://4geeksacademy.co/wp-content/uploads/2016/01/launchcode-button-300x89.png"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/launchcode-button-300x89.png"
 wordpress_id: 471
 categories:
 - Learning to code
@@ -20,7 +20,7 @@ tags:
 
 Yes, we are exited!  We are proud to say that we have partnered with LaunchCode.org
 
-[![launchcode-button-300x89](https://4geeksacademy.co/wp-content/uploads/2016/01/launchcode-button-300x89.png)](https://4geeksacademy.co/wp-content/uploads/2016/01/launchcode-button-300x89.png)One of our main goals at 4Geeks Academy is to develop a reliable hiring platform for our students.  We believe in our graduates talents, but we know finding a job is sometimes not just about being a great developer.  That is why we make a huge effort to prepare our students in every possible way.
+[![launchcode-button-300x89](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/launchcode-button-300x89.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/launchcode-button-300x89.png)One of our main goals at 4Geeks Academy is to develop a reliable hiring platform for our students.  We believe in our graduates talents, but we know finding a job is sometimes not just about being a great developer.  That is why we make a huge effort to prepare our students in every possible way.
 
 
 ### How do we prepare our students to get hired?

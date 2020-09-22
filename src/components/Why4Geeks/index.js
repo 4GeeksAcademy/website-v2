@@ -40,7 +40,7 @@ export default ({lang, playerHeight}) => {
   let info = data.allWhy4GeeksYaml.edges.find(({node}) => node.fields.lang === lang);
   if (info) info = info.node;
 
-return (<Fragment github="/components/4geeks_vs_others">
+return (<Fragment github="/components/geeks_vs_others">
     <Row height="auto" marginTop="50px">
       {info.why.map((i, index) => (
         <Column size="4" size_sm="12" key={index}>

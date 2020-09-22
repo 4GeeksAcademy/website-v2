@@ -98,7 +98,7 @@ Los montos pueden establecerse entre los 20 y 30 mil dólares para los principia
 
 Según los conocimientos:
 
-[![1](https://4geeksacademy.co/wp-content/uploads/2016/05/1-1.jpg)](https://4geeksacademy.co/wp-content/uploads/2016/05/1-1.jpg)
+[![1](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/1-1.jpg)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/1-1.jpg)
 
 
 Fuente de la imagen: Funders & Founders
@@ -106,7 +106,7 @@ Fuente de la imagen: Funders & Founders
 
 En función del rol que desempeña (área)
 
-[![2](https://4geeksacademy.co/wp-content/uploads/2016/05/2-1.jpg)](https://4geeksacademy.co/wp-content/uploads/2016/05/2-1.jpg)
+[![2](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/2-1.jpg)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/2-1.jpg)
 
 
 Fuente de la imagen: Funders & Founders

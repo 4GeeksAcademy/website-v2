@@ -32,7 +32,7 @@ const Home = (props) => {
   },[])
   return (
     <>
-      <Row>
+      <Row github={`/page/index.${pageContext.lang}.yml`}>
         <Column
           size="4"
           m_sm="0"
@@ -187,7 +187,7 @@ const Home = (props) => {
           margin="auto"
           variant="primary"
         />
-        <Row github="/page/index.us.yml">
+        <Row github={`/page/index.${pageContext.lang}.yml`}>
           <Column size="6" size_sm="12" >
             <Card
               padding="20px"

@@ -157,7 +157,7 @@ const Why = (props) => {
                 right
                 customBorderRadius="1.25rem 0 0 1.25rem"
             >
-                <Row github="/page/the-academy.us.yml" marginBottom="30px">
+                <Row github={`/page/the-academy.${pageContext.lang}.yml`} marginBottom="30px">
                     {cornerstone.cornerstones_list.map((item, index) => {
                         return (
                             <Column key={index} size="6" size_sm="12" margin="0 0 10px 0">
@@ -230,7 +230,7 @@ const Why = (props) => {
             >
                 <Card shadow borders="1.25rem" minHeight="450px" move="up" up="20%">
                     <Row
-                        github="/page/the-academy.us.yml#L77"
+                        github={`/page/the-academy.${pageContext.lang}.yml#L77`}
                         height="100%"
                         marginLeft="0"
                         marginRight="0"

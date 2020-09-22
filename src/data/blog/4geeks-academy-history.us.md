@@ -33,8 +33,7 @@ Trying to find Alex and Nacho, we realized how difficult it was to find great d
 
 The years went by and we launched a lot of initiatives inside of the community: The TechMeetup (a monthly event to gather the startup ecosystem in the city), The Dev Labs (extracurricular learning laboratories in universities), lots of learning workshops, programming courses, etc.
 
-
-[![logo tech meetup copy](https://4geeksacademy.co/wp-content/uploads/2015/12/logo-tech-meetup-copy-1.png)](https://4geeksacademy.co/wp-content/uploads/2015/12/logo-tech-meetup-copy-1.png)[![Screen Shot 2015-12-23 at 1.45.50 AM](https://4geeksacademy.co/wp-content/uploads/2015/12/Screen-Shot-2015-12-23-at-1.45.50-AM-1.png)](https://4geeksacademy.co/wp-content/uploads/2015/12/Screen-Shot-2015-12-23-at-1.45.50-AM-1.png)
+[![logo tech meetup copy](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/logo-tech-meetup-copy-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/logo-tech-meetup-copy-1.png)[![Screen Shot 2015-12-23 at 1.45.50 AM](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/Screen-Shot-2015-12-23-at-1.45.50-AM-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/Screen-Shot-2015-12-23-at-1.45.50-AM-1.png)
 
 
 The community worked!  We were a very attractive place for developers, and we grew from 6 to 80 employees in 4 years, with commercial operations in 5 countries and more than 250 projects delivered.
@@ -49,7 +48,7 @@ One day, Alex resigned and we had to hire another CTO.  That's when we met Rome
 
 We kept talking about the academy for a while, and in February 2014 we started planning {HACK} - a web development bootcamp in Caracas, Venezuela.  6 months later, HACK was a reality: the first Cohort started on the 20th of October 2014.  Romer became the CEO, and 4Geeks became the sponsor with all the funding needed and taking part in the operations of the new company.
 
-[![hack-logo](https://4geeksacademy.co/wp-content/uploads/2015/12/hack-logo1-1.png)](https://4geeksacademy.co/wp-content/uploads/2015/12/hack-logo1-1.png)
+[![hack-logo](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/hack-logo1-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/hack-logo1-1.png)
 
 The first cohort was great.  The students loved the academy, 60% of them experienced a raise in income.  Some of them even moved to other countries and started their careers as software developers overseas.
 
@@ -59,7 +58,7 @@ After 3 cohorts and our growing experience with HACK, 4Geeks decided to launch 
 ### 4Geeks Academy was born...
 
 
-[![logo1-01-02](https://4geeksacademy.co/wp-content/uploads/2015/12/logo1-01-02-1.png)](https://4geeksacademy.co/wp-content/uploads/2015/12/logo1-01-02-1.png)
+[![logo1-01-02](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/logo1-01-02-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2015/12/logo1-01-02-1.png)
 
 Learning from our experience with HACK, we decided to do all of 4Geeks Academy courses part-time, making the programs more affordable and accessible to everyone.
 

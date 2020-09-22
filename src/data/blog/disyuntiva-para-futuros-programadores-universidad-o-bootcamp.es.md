@@ -63,4 +63,4 @@ Para las personas que esperan ser desarrolladores en Venezuela representa una tr
 
 
 
-[![Arte-blog-4Geeks-Academy](https://4geeksacademy.co/wp-content/uploads/2016/05/Arte-blog-4Geeks-Academy-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/05/Arte-blog-4Geeks-Academy-1.png)
+[![Arte-blog-4Geeks-Academy](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/Arte-blog-4Geeks-Academy-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/Arte-blog-4Geeks-Academy-1.png)

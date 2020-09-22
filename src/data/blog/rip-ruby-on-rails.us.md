@@ -33,11 +33,11 @@ I don’t mean to troll Ruby fans, but let’s be objective here: Rails framewo
 ### **PHP is the most used on the web (back-end)**
 
 
-[![Percentage of websites using php](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-7.37.48-PM-1.png)](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2016-01-10-at-7.37.48-PM-1.png)
+[![Percentage of websites using php](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2016-01-10-at-7.37.48-PM-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2016-01-10-at-7.37.48-PM-1.png)
 
 PHP Has proven to be a great survivor: 82% of the web uses PHP (Ruby only 0.5%).  PHP WordPress is 27% (and growing).  It is the [second language with the most interest from Google](https://www.google.ca/trends/explore#q=%2Fm%2F060kv%2C%20%2Fm%2F0bbxf89%2C%20%2Fm%2F07sbkfb%2C%20%2Fm%2F06ff5&date=today%2012-m&cmpt=q&tz=Etc%2FGMT%2B5).  In a [stack-overflow 2017 developer survey](https://insights.stackoverflow.com/survey/2017#technologies-and-occupations), PHP was the most popular language between PHP, Ruby, NodeJS and Python.  And it was the second language with the most questions.  PHP Frameworks are phenomenal: [Laravel](https://laravel.com/), [Phpixie](https://phpixie.com/), [Slim](https://www.slimframework.com/), etc.
 
-[caption id="attachment_2050" align="aligncenter" width="300"]![](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2017-07-10-at-11.34.01-PM-300x173.png) StackOverflow Language 2017 Survey[/caption]
+[caption id="attachment_2050" align="aligncenter" width="300"]![](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2017-07-10-at-11.34.01-PM-300x173.png) StackOverflow Language 2017 Survey[/caption]
 
 
 ### **Java is the most used in the enterprise world**
@@ -55,7 +55,7 @@ If PHP is the king of the web, Python is the prince of everywhere…it’s a ver
 ### You need to learn JavaScript (JS)
 
 
-[![](https://4geeksacademy.co/wp-content/uploads/2016/01/Screen-Shot-2017-07-10-at-11.54.31-PM-1024x492.png)](https://trends.google.com/trends/explore?date=all&q=Ruby%20on%20Rails,Node%20js)
+[![](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Screen-Shot-2017-07-10-at-11.54.31-PM-1024x492.png)](https://trends.google.com/trends/explore?date=all&q=Ruby%20on%20Rails,Node%20js)
 
 Oh my, where do I start?  You need to learn JavaScript now!  JS and Node are rising strong.  It is the most popular technology in the world; the most used language on the web (almost every website needs a bit of JavaScript); it’s the native language of web browsers!  NodeJS is the framework with most job vacancies on indeed.com (for example).  The only problem with JS is the frameworks (React, Angular, Vue, etc) - they are changing a lot and developers need to be constantly upgrading or redoing all the code.  Maybe in 2018 that will change, but it does not matter, because the future of JavaScript on the web is the brightest of all!
 
