@@ -22,7 +22,7 @@ import Fragment from "../Fragment"
 
 
 const PricesAndPayments = (props) => {
-  console.log("PROPS: ", props)
+
   const {session, setSession} = useContext(SessionContext);
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
@@ -35,7 +35,7 @@ const PricesAndPayments = (props) => {
   }
   if (session.location) {
     let currentLocation = props.locations.find(l => l.node.meta_info.slug === session.location.meta_info.slug)
-    console.log("CURRENTLOC: ", session.location)
+
     if (currentLocation) {
       currentLocation = currentLocation.node
       prova = {

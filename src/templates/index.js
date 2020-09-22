@@ -28,7 +28,6 @@ const Home = (props) => {
   const city = session && session.location ? session.location.city : "Miami";
   
   React.useEffect(() => {
-    console.log("session", session)
     if(session.language === "es" && window.location.hash === "") navigate("/es/inicio")
   },[])
   return (

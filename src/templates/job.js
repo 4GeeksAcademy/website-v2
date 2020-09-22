@@ -162,8 +162,8 @@ const Job = ({data, pageContext, yml}) => {
                                                     .then(() => {
                                                         console.log("Thank you");
                                                     })
-                                                    .catch(() => {
-                                                        console.log("error");
+                                                    .catch((error) => {
+                                                        console.log("error", error);
                                                     })
                                                 }
                                             >APPLY FOR THIS JOB</Button>
