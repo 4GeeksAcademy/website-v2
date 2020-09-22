@@ -1,5 +1,5 @@
 {
-  "redirects": [
+  "routes": [
     {
       "source": "/wp-content/uploads/2020/05/MINI-SYLLABUS-Madrid-1.pdf",
       "destination": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-full-stack.pdf"
@@ -11,9 +11,7 @@
     {
       "source": "/wp-content/uploads/2020/06/Paga-cuando-consigas-trabajo.pdf",
       "destination": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-isa.pdf"
-    }
-  ],
-  "routes": [
+    },
     {
       "src": "/static/(.*)",
       "headers": { "cache-control": "public, max-age=31536000, immutable" },
