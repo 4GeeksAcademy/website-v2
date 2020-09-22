@@ -1,16 +1,16 @@
 meta_info:
   slug: "santiago-chile-es"
   position: 4
-  title: ""
+  title: "Coding Bootcamp en Santiago de Chile, aprende a programar, aprende código."
   description: null
-  image: ""
+  image: "https://storage.googleapis.com/4geeks-academy-website/santiago-es.png"
   keywords: ""
   redirects: []
 
-seo_title: "4Geeks Academy Santiago deChile"
+seo_title: "Coding Bootcamp en Santiago de Chile"
 header:
-  tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
-  sub_heading: ""
+  tagline: "4GEEKS ACADEMY en SANTIAGO DE CHILE"
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/santiago-loc.jpg"
   alt: ""
 button:

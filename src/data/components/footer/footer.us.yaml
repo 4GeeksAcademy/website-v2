@@ -7,6 +7,10 @@ footer:
         link: ""
       - name: "9:00am - 8:00pm"
         link: ""
+      - name: "-"
+        link: ""
+      - name: "🇪🇸 Cambiar a Español"
+        link: "/es/inicio"
   - column_two:
     width: 3
     heading: "COMPANY"

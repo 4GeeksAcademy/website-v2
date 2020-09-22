@@ -29,7 +29,7 @@ const Home = (props) => {
   
   React.useEffect(() => {
     console.log("session", session)
-    if(session.language === "es" && (window.location.pathname === "" || window.location.pathname === "/")) navigate("/es/inicio")
+    if(session.language === "es" && window.location.hash === "") navigate("/es/inicio")
   },[])
   return (
     <>

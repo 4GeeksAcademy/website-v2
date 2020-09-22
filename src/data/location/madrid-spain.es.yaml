@@ -3,14 +3,14 @@ meta_info:
   position: 2
   title: 4Geeks Academy Madrid
   description: null
-  image: ""
+  image: "https://storage.googleapis.com/4geeks-academy-website/madrid-es.png"
   keywords: ""
   redirects: ["/es/location/madrid-spain/"]
 
 seo_title: "4Geeks Academy Madrid, España"
 header:
   tagline: "4GEEKS ACADEMY MADRID"
-  paragraph: "Unete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/madrid-loc.jpg"
   alt: ""
 

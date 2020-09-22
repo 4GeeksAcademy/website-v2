@@ -1,6 +1,6 @@
 navbar:
   - name: "Home"
-    link: "/home"
+    link: "/#home"
   - name: "Why 4Geeks"
     link: "/the-academy"
   - name: "The Programs"
