@@ -4,7 +4,7 @@
 
 partners:
   tagline: "WHO IS HIRING OUR STUDENTS"
-  sub_heading: "Thanks to our growing list of partners every day, we have constant local and international job offers for our students, together with our Career Support support service we are happy to have 90% of our students hired in 90 days or less."
+  sub_heading: "Thanks to our growing list of partners, we have local and international job offers for our students on daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have 86% of our students hired in 100 days or less."
   footer_tagline: "438 COMPANIES"
   footer_button: "Review our latest hirings"
   footer_link: "/geekforce"
@@ -130,7 +130,7 @@ influencers:
       featured: false
 financials:
   tagline: "FINANCIAL PARTNERS"
-  sub_heading: "In a big effort to create the most accessible education.."
+  sub_heading: "We are making a huge effort to make premium coding education accessible to more people."
   images:
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
