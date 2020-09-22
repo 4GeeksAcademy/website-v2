@@ -287,7 +287,6 @@ const Program = ({data, pageContext, yml}) => {
       />
       <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
     </Wrapper>
-    {/* </div> */}
   </>
   )
 };
