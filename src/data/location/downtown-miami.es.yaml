@@ -202,6 +202,11 @@ prices:
       button:
         button_text: "APLICA"
 
+active_campaign_location_slug: "miami-downtown"
+breathecode_location_slug: "miami-downtown"
+gdpr_compliant: false # do we need to ask for permision?
+
+
 city: "Miami"
 name: "Downtown Miami"
 latitude: "25.760158"
@@ -213,9 +218,7 @@ country: "usa"
 courses:
   - "Full-Time"
   - "Part-Time"
-active_campaign_location_slug: ""
 flag_icon: ""
-breathecode_location_slug: "miami-downtown"
 location_map: ""
 location_phone_number: ""
 location_office_image: ""

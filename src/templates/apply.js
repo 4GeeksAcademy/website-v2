@@ -15,7 +15,7 @@ import Testimonials from '../components/Testimonials'
 const formIsValid = (formData=null) => {
     if(!formData) return null;
     for(let key in formData){
-        if(!formData[key].valid) return false;
+        if(!formData[key].valid) return key;
     }
     return true;
 }
@@ -34,22 +34,30 @@ const Apply = (props) => {
     });
     React.useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
+        // Pre-fill the location
         let _location = urlParams.get('location');
-        if(!_location && session.location) _location = session.location.meta_info.slug;
+        if(!_location && session.location) _location = session.location.active_campaign_location_slug;
         
-        if(typeof(_location) === "string" && session.locations) _location = session.locations.find(l => l.meta_info.slug === _location);
+        if(typeof(_location) === "string" && session.locations) _location = session.locations.find(l => l.active_campaign_location_slug === _location || l.breathecode_location_slug === _location);
         else _location = null;
+
+        if(_location) _location = _location.active_campaign_location_slug;
         
-        if(_location) _location = _location.meta_info.slug;
-        
+        // Pre-fill the course
         let _course = urlParams.get('course');
         if(!_course && props.location.state) _course = props.location.state.course;
-
+        
         if(typeof(_course) === "string") _course = data.allCourseYaml.edges.find(c => c.node.meta_info.bc_slug === _course);
         if(_course) _course = _course.node.meta_info.bc_slug;
+        
+        // Pre-fill the utm_url
+        let _utm_url = undefined;
+        if(props.location.state) _utm_url = { value: props.location.state.prevUrl, valid: true };
+        console.log("props.location.state", props.location.state)
 
         setVal(_val => ({
             ..._val,
+            utm_url: _utm_url,
             location: {value: _location || "", valid: typeof(_location) === "string" && _location !== ""},
             course: {value: _course || undefined, valid: true},//it has to be valid because the user has no option to pick one
         }));
@@ -62,7 +70,12 @@ const Apply = (props) => {
         <form onSubmit={(e) => {
             e.preventDefault();
             if(formStatus.status === "error") setFormStatus({ status: "idle", msg: "Resquest" })
-            if (!formIsValid(formData)) setFormStatus({status: "error", msg: "There are some errors in your form"});
+
+            const valid = formIsValid(formData);
+            if (valid !== true){
+                setFormStatus({status: "error", msg: "There are some errors in your form: "+valid});
+                console.log("formData", formData)
+            } 
             else {
                 setFormStatus({status: "loading", msg: "Loading..."});
                 apply(formData, session)
@@ -187,8 +200,8 @@ const Apply = (props) => {
                                         required
                                         onChange={(value, valid) => {setVal({...formData, phone: {value, valid}})
                                         if(formStatus.status === "error"){
-                                        setFormStatus({ status: "idle", msg: "Resquest" })
-                                    }
+                                            setFormStatus({ status: "idle", msg: "Resquest" })
+                                        }
                                     }}
                                         value={formData.phone.value}
                                     />
@@ -199,13 +212,13 @@ const Apply = (props) => {
                                 <Row>
                                     {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
                                     { session.locations && session.locations.map(l => 
-                                        <Column size="6" size_md="12" paddingRight="0px" paddingLeft="0px" paddingTop="3px">
-                                            <Button key={l.meta_info.slug} 
-                                                color={l.meta_info.slug === formData.location.value ? Colors.lightYellow : Colors.lightGray} 
-                                                border={l.meta_info.slug === formData.location.value ? "1px solid "+Colors.lightYellow : "1px solid white"} 
+                                        <Column key={l.active_campaign_location_slug} size="6" size_md="12" paddingRight="0px" paddingLeft="0px" paddingTop="3px">
+                                            <Button 
+                                                color={l.active_campaign_location_slug === formData.location.value ? Colors.lightYellow : Colors.lightGray} 
+                                                border={l.active_campaign_location_slug === formData.location.value ? "1px solid "+Colors.lightYellow : "1px solid white"} 
                                                 borderRadius="0" 
                                                 colorHover={Colors.verylightGray}
-                                                onClick={(e) => setVal({...formData, location: { value: l.meta_info.slug, valid: true }})}
+                                                onClick={(e) => setVal({...formData, location: { value: l.active_campaign_location_slug, valid: true }})}
                                                 >
                                                 <Paragraph color={Colors.gray}>{l.city}, {l.country}</Paragraph>
                                             </Button>
@@ -219,7 +232,7 @@ const Apply = (props) => {
                                     />
                                     <Paragraph padding="0" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.referral_section.content}</Paragraph>
                                 </Row>
-                                {session.location && session.location.meta_info.slug === "madrid-spain" &&
+                                {session.location && session.location.gdpr_compliant &&
                                      <Row marginTop="10px">
                                         <Paragraph fontSize="14px" margin="5px 0 0 0">
                                             <input

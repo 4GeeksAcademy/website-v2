@@ -1,4 +1,6 @@
 import { save_form } from "./utils/leads";
+import dayjs from "dayjs"
+import 'dayjs/locale/es'
 
 const getFirstBrowserLanguage = () => {
     var nav = window.navigator,
@@ -169,7 +171,7 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
 
     console.log("seed", seed)
     if(seed.location){
-        location = locationsArray.edges.find(({ node }) => node.meta_info.slug === seed.location)
+        location = locationsArray.edges.find(({ node }) => node.breathecode_location_slug === seed.location)
         if(location) location = location.node;
         else location = null;
         console.log("Hardcoded location", location)
@@ -208,13 +210,15 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
         location.reliable = true;
     } 
     else {
-        location = locationsArray.edges.find(({ node }) => node.meta_info.slug == "downtown-miami").node;
+        location = locationsArray.edges.find(({ node }) => node.breathecode_location_slug == "downtown-miami").node;
         console.log("Location could not be loaded, using browserlanguage as default language");
         language = browserLang.substring(0, 2);
         if(language === "en") language = "us";
         location.reliable = false;
     }
     
+    dayjs.locale(language == "us" ? "en" : language)
+
     let repeated = [];
     const _session = {
         ...previousSession, v4, location, browserLang, language,
@@ -246,6 +250,7 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
             .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
     };
     console.log("Session: ", _session);
+    console.log("locationsArray: ", locationsArray);
     
     localStorage.setItem("academy_session", JSON.stringify(_session));
     return _session

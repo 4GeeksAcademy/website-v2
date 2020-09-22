@@ -257,45 +257,6 @@ export const Paragraph = styled.div`
     text-align: ${props => props.align_xs};
   } 
 `
-export const Anchor = styled(Link)`
-  display: block;
-  font-family: Lato,sans-serif;
-  maxWidth: ${props => props.maxWidth};
-  cursor: ${props => props.cursor};
-  margin: ${props => props.margin};
-  font-size: ${props => props.fontSize};
-  font-family: ${props => props.fontFamily};
-  font-weight: ${props => props.fontWeight};
-  max-width: ${props => props.maxWidth};
-  padding: ${props => props.padding};
-  padding-right: ${props => props.paddingRight || "innitial"};
-  letter-spacing: 0px;
-  text-shadow: ${props => props.textShadow}; 
-  line-height: ${props => props.lineHeight};
-  color: ${props => props.color};
-  text-align: ${props => props.align};
-  &:hover{
-    text-decoration: underline;
-  }
-
-  @media ${Break.lg}{
-    text-align: ${props => props.align_lg};
-    font-size: ${props => props.fs_lg};
-  }
-  @media ${Break.md}{
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_md};
-  }
-  @media ${Break.sm}{
-    display: ${props => props.display_sm};
-    font-size: ${props => props.fs_sm};
-    text-align: ${props => props.align_sm || 'center'};
-  }
-  @media ${Break.xs}{
-    font-size: ${props => props.fs_xs};
-    text-align: ${props => props.align_xs};
-  } 
-`
 
 export const Title = props => {
   const variants = {

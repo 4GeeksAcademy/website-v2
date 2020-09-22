@@ -157,6 +157,11 @@ prices:
       button:
         button_text: "APLICA YA"
 
+active_campaign_location_slug: "madrid-spain"
+breathecode_location_slug: "madrid-spain"
+gdpr_compliant: false # do we need to ask for permision?
+
+
 city: "Madrid"
 name: "Madrid"
 latitude: "40.439769"
@@ -168,9 +173,7 @@ country: "España"
 courses:
   - "Full-Time"
   - "Part-Time"
-active_campaign_location_slug: ""
 flag_icon: ""
-breathecode_location_slug: "madrid-spain"
 location_map: ""
 location_phone_number: ""
 location_office_image: ""

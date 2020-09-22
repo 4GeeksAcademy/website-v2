@@ -144,6 +144,10 @@ prices:
       button:
         button_text: "SOLICITA TU PLAZA"
 
+active_campaign_location_slug: "santiago-chile"
+breathecode_location_slug: "santiago-chile"
+gdpr_compliant: false # do we need to ask for permision?
+
 city: "Santiago de Chile"
 hasFinancialsOption: true
 # financials_max_months: ["6 mo", "12 mo"]
@@ -158,9 +162,8 @@ country: "Chile"
 courses:
   - "Full-Time"
   - "Part-Time"
-active_campaign_location_slug: ""
+
 flag_icon: ""
-breathecode_location_slug: "santiago-chile"
 location_map: ""
 location_phone_number: ""
 location_office_image: ""

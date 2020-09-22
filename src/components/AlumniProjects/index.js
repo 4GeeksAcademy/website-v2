@@ -143,9 +143,9 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
             </Carousel>
             {limit > 0 && <Row height="10%" align="center">
                 <Column size="6" align="center">
-                    <Link to={lang[0].node.button_section.button_link}>
+                    <a href={lang[0].node.button_section.button_link} rel="noopener noreferrer nofollow">
                         <Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>
-                    </Link>
+                    </a>
                 </Column>
             </Row>
             }

@@ -274,11 +274,6 @@ const Program = ({data, pageContext, yml}) => {
       />
     </Wrapper>
 
-    {/* {yml.meta_info.slug === "full-stack-web-development-bootcamp-full-time" || yml.meta_info.slug === "desarrollo-web-full-stack-bootcamp-full-time" ?
-      <TypicalDay data={yml.typical} />
-
-      : null} */}
-
     <Wrapper
       margin="50px 0"
       

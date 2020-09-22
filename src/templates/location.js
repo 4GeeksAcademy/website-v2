@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
-import {Link} from "gatsby"
+import { Link, Anchor } from "../components/Styling/index"
 import {Card} from '../components/Card'
 import ChooseProgram from '../components/ChooseProgram'
 import Why4Geeks from '../components/Why4Geeks';
@@ -181,7 +181,7 @@ const Location = ({data, pageContext, yml}) => {
                                     border="custom"
                                     borderRadius="0 1.25rem 1.25rem 0"
                                 >
-                                    <Link to={yml.info_box.map_url} target="_blank">
+                                    <Anchor to={yml.info_box.map_url}>
                                         <StyledBackgroundSection
                                             className={`img-right`}
                                             height={`426px`}
@@ -189,7 +189,7 @@ const Location = ({data, pageContext, yml}) => {
                                             bgSize={`cover`}
                                             alt="Cnn Logo"
                                             />
-                                    </Link>
+                                    </Anchor>
                                 </Column>
                             </Row>
                         </Card>
@@ -241,7 +241,7 @@ const Location = ({data, pageContext, yml}) => {
                                 </Paragraph>
                             </Div>
                             <Div padding="10px">
-                                <Button color={Colors.red} textColor={Colors.white}>Apply now</Button>
+                                <Link ><Button color={Colors.red} textColor={Colors.white}>Apply now</Button></Link>
                             </Div>
                         </Card>
                     </Column>

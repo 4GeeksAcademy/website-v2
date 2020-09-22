@@ -16,6 +16,9 @@ export const withSession = Component => {
                 longitude
                 country
                 defaultLanguage
+                breathecode_location_slug
+                active_campaign_location_slug
+                gdpr_compliant
                 meta_info{
                     slug
                     unlisted
@@ -26,6 +29,7 @@ export const withSession = Component => {
             nodes{
                 fields {
                     file_name
+                    lang
                     slug
                 }
             }

@@ -2,9 +2,8 @@ import React, {useState, useContext} from 'react';
 import styled from 'styled-components';
 import PropTypes from "prop-types"
 import dayjs from "dayjs";
-import {Colors, Button} from '../Styling';
+import {Colors, Button, Link, Anchor} from '../Styling';
 import {Device} from '../Responsive';
-import Link from 'gatsby-link'
 import {useScrollPosition} from "./useScrollPosition"
 
 const ShadowedRow = styled.div`
@@ -19,9 +18,6 @@ const ShadowedRow = styled.div`
     top: ${props => props.position == "top" ? "0" : 'inherit'};
     bottom: ${props => props.position == "bottom" ? "0" : 'inherit'};
     display: ${props => props.hide ? "none" : 'block'};
-`;
-const Anchor = styled(Link)`
-    text-decoration: underline;
 `;
 const Centered = styled.div`
     max-width: 750px;
@@ -79,13 +75,13 @@ const Right = styled.div`
     padding-top: 5px;
 `;
 
-const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location, button}) => {
+const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location, button, lang}) => {
     const [show, setShow] = useState(showOnScrollPosition == null)
     const [cookieShow, setCookieShow] = useState(true)
     const [cohorts, setCohorts] = useState([])
 
     React.useEffect(() => {
-        if(location) fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${location.meta_info.slug}`)
+        if(location) fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${location.breathecode_location_slug}`)
             .then(resp => resp.json())
             .then(upcoming => setCohorts(upcoming))
             .catch(error => console.error("Error loading cohorts", error))
@@ -113,12 +109,12 @@ const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location
                 <CalendarIcon month={dayjs(date).format('MMM')} day={dayjs(date).format('D')} height="60px" />
             </Left>
             <Center>
-                <P1 fontSize="30px">Next cohort starts on {dayjs(date).format('MMM D, YYYY')}</P1>
+                <P1 fontSize="30px">{button.next_cohort}{" "}{dayjs(date).format('MMM D, YYYY')}</P1>
                 <P2 fontSize="18px">{title}</P2>
             </Center>
             <Right>
                 <Link to={button.button_link}><Button color={Colors.red} textColor={Colors.white}>{button.button_text}</Button></Link>
-                <p style={{textAlign: "center"}}>or <Anchor to={upcomingPath}>review other dates</Anchor></p>
+                <p style={{textAlign: "center"}}><Anchor className="decorated" display="inline" to={upcomingPath}>{button.other_dates}</Anchor></p>
             </Right>
         </Centered>
     </ShadowedRow>

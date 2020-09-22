@@ -147,6 +147,12 @@ prices:
         button_text: "APLICA"
 
         
+active_campaign_location_slug: "maracaibo-venezuela"
+breathecode_location_slug: "maracaibo"
+defaultLanguage: "es" # All lead marketing communications will arrive on this language
+gdpr_compliant: false # do we need to ask for permision?
+
+
 city: "Maracaibo"
 name: "Maracaibo"
 latitude: "10.664500"
@@ -158,9 +164,8 @@ country: "Venezuela"
 courses:
   - "Full-Time"
   - "Part-Time"
-active_campaign_location_slug: ""
+
 flag_icon: ""
-breathecode_location_slug: "maracaibo"
 location_map: ""
 location_phone_number: ""
 location_office_image: ""
@@ -168,4 +173,3 @@ location_office_image2: ""
 location_office_image3: ""
 should_know: ""
 value: "Maracaibo"
-defaultLanguage: "es" # All lead marketing communications will arrive on this language

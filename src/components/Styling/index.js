@@ -3,7 +3,8 @@ import styled, {css} from 'styled-components';
 import {Device, Break} from '../Responsive';
 import {Paragraph} from '../Heading';
 import BackgroundImage from 'gatsby-background-image'
-import {graphql, StaticQuery} from 'gatsby'
+import {graphql, StaticQuery, Link} from 'gatsby'
+import { Location } from '@reach/router'
 // COLORS SET
 
 export const Colors = {
@@ -377,3 +378,72 @@ Over.defaultProps = {
     right: '15px',
     left: '15px'
 };
+
+
+const SmartLink = ({ children, state, ...rest }) => (
+  <Location>
+    {({ location }) => (
+        //make sure user's state is not overwritten
+      <Link {...rest} state={{ prevUrl: location.href, ...state}}>
+        { children }
+      </Link>
+    )}
+  </Location>
+)
+
+export { SmartLink as Link }
+
+
+const linkRegex = new RegExp("http")
+const StyledLink = ({ children, ...rest }) => {
+    let Comp = Link;
+    let props = {}
+    if(linkRegex.test(rest.to)){
+      props.href = rest.to;
+      props.target = "_blank";
+      props.rel = "noopener noreferrer nofollow"
+      Comp = "a";
+    }
+    return <Comp { ...Object.assign(props, rest) }>
+        { children }
+      </Comp>;
+};
+export const Anchor = styled(StyledLink)`
+  display: ${props => props.display || "block"};
+  font-family: Lato,sans-serif;
+  maxWidth: ${props => props.maxWidth};
+  cursor: ${props => props.cursor};
+  margin: ${props => props.margin};
+  font-size: ${props => props.fontSize};
+  font-family: ${props => props.fontFamily};
+  font-weight: ${props => props.fontWeight};
+  max-width: ${props => props.maxWidth};
+  padding: ${props => props.padding};
+  padding-right: ${props => props.paddingRight || "innitial"};
+  letter-spacing: 0px;
+  text-shadow: ${props => props.textShadow}; 
+  line-height: ${props => props.lineHeight};
+  color: ${props => props.color};
+  text-align: ${props => props.align};
+  &:hover{
+    text-decoration: underline;
+  }
+
+  @media ${Break.lg}{
+    text-align: ${props => props.align_lg};
+    font-size: ${props => props.fs_lg};
+  }
+  @media ${Break.md}{
+    text-align: ${props => props.align};
+    font-size: ${props => props.fs_md};
+  }
+  @media ${Break.sm}{
+    display: ${props => props.display_sm};
+    font-size: ${props => props.fs_sm};
+    text-align: ${props => props.align_sm || 'center'};
+  }
+  @media ${Break.xs}{
+    font-size: ${props => props.fs_xs};
+    text-align: ${props => props.align_xs};
+  } 
+`

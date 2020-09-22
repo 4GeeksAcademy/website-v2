@@ -59,6 +59,8 @@ const Layout = ({children, seo, context}) => {
                 button_type
                 button_color_text
                 button_background_color
+                next_cohort
+                other_dates
               }
               fields {
                 lang
@@ -90,7 +92,7 @@ const Layout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            <UpcomingProgram location={session.location} button={myNavbar.node.button} position="bottom" showOnScrollPosition={400} />
+            <UpcomingProgram location={session.location} button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />
             <Footer footer={myFooter.node.footer} />
           </>
         )

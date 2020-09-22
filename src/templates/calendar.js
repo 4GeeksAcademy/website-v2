@@ -120,7 +120,7 @@ const Calendar = (props) => {
         let response = await session.location;
         if (response) {
           for (let i of session.locations) {
-            filterCityArray.push({city: i.city, slug: i.meta_info.slug})
+            filterCityArray.push({city: i.city, slug: i.breathecode_location_slug})
           }
           setFilterCity(filterCityArray);
         }

@@ -22,3 +22,5 @@ button:
   button_type: "" ## YOU CAN LEAVE IT EMPTY FOR A FULL BACKGROUND COLOR OR 'outline' FOR A WHITE BACKGROUND WITH A BORDER
   button_color_text: ""
   button_background_color: ""
+  next_cohort: "Próxima cohorte:"
+  other_dates: "o revisa otras fechas"

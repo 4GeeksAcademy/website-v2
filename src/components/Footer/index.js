@@ -1,9 +1,7 @@
 import React from 'react';
-import {Link} from 'gatsby';
 import {Container, Row, Column, Divider} from '../Sections'
-import {Colors, RoundImage} from '../Styling'
-import {H5, Separator, Paragraph, Anchor} from '../Heading'
-import {navigate} from "@reach/router";
+import {Colors, RoundImage, Anchor} from '../Styling'
+import {H5, Separator, Paragraph} from '../Heading'
 
 const Footer = (props) => {
     // let col = data.allFooterYaml.edges;

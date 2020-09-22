@@ -22,3 +22,5 @@ button:
   button_type: ""
   button_color_text: ""
   button_background_color: ""
+  next_cohort: "Next cohort starts on"
+  other_dates: "or review other dates"

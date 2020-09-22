@@ -29,8 +29,8 @@ const ThankYou = (props) => {
             </Wrapper>
             <Wrapper margin="0 0 50px 0">
                 <H2 margin="5px 0">{yml.content.title}</H2>
-                {yml.content.message.split("\n").map(m => 
-                    <Paragraph align="center">{m}</Paragraph>
+                {yml.content.message.split("\n").map((m,i) => 
+                    <Paragraph key={i} align="center">{m}</Paragraph>
                 )}
                 <Column margin="50px 0 0 0" size="12" align="center">
                 <Link to="/blog"><Button width="150px" color={Colors.blue} textColor={Colors.white}>{yml.content.button}</Button></Link>

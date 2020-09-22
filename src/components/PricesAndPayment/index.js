@@ -10,7 +10,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import VideoLabelIcon from '@material-ui/icons/VideoLabel';
 import Check from '@material-ui/icons/Check';
-import {Link} from 'gatsby';
+import {Link} from '../Styling/index';
 import Typography from '@material-ui/core/Typography';
 import {Row, Column, Divider, Div} from '../Sections';
 import {Card} from '../Card';

@@ -1,13 +1,11 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled, {css} from 'styled-components';
 import Img from "gatsby-image"
-import {Link, useStaticQuery, graphql} from 'gatsby';
+import { useStaticQuery, graphql} from 'gatsby';
 import {Device} from '../Responsive';
 import ChooseProgram from '../ChooseProgram'
 import {Card} from '../Card'
-import PropTypes from 'prop-types';
-import {Colors, Button} from '../Styling';
-import Fragment from "../Fragment"
+import {Colors, Button, Link} from '../Styling';
 
 export const NavBar = styled.nav`
     background-color: ${props => props.open ? "white" : null};

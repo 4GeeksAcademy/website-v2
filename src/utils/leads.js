@@ -22,9 +22,9 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
             utm_language: session.language,
             language: session.language,
             city: session.location.city, 
-            location: formData.location || session.location.meta_info.slug, 
+            location: formData.location || session.location.active_campaign_location_slug, 
             country: session.location.country, 
-            utm_url: window.location.href,
+            utm_url: formData.utm_url || window.location.href,
         }),
     })
     if (resp.status >= 200 && resp.status < 400) {

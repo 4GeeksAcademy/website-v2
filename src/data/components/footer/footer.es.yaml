@@ -15,8 +15,6 @@ footer:
     heading: "COMPAÑÍA"
     width: 3
     items:
-      - name: "🇺🇸 English Version"
-        link: "/home"
       - name: "Programa"
         link: "/course/desarrollo-web-full-stack-bootcamp-part-time"
       - name: "La Academia"

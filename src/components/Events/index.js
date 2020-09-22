@@ -6,7 +6,6 @@ import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button, RoundImage} from '../Styling';
 import {Card} from '../Card';
-import Link from 'gatsby-link'
 
 const days = [
     'Sun',
