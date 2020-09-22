@@ -4,7 +4,7 @@
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
 
 titles:
-  featured: "FEATURED"
+  featured: "FEATURES"
   at_geeks: "AT 4GEEKS"
   average: "INDUSTRY AVERAGE"
 globe_text: Click me for details
@@ -13,13 +13,13 @@ info:
   - features: "Career Support"
     at4_Geeks: "Forever"
     industry_average: "Until you get a job"
-    why_important: "Meet hiring partners during Demo Day, attend the CareerWeek™️, build your resume, mock interviews and tailored training. And keep coming! Having a friendly at your first job is key to gain confidence and kill it. You can keep coming and use any of the GeePAL services."
+    why_important: "Meet hiring partners during Demo Day (GeekTALKS), attend the CareerWeek™️, build your resume, mock interviews and tailored training. And keep coming! Having a friendly at your first job is key to gain confidence and kill it. You can keep coming and use any of the GeePAL services."
     icon: "teacher"
 
   - features: "Teacher: Student Ratio"
     at4_Geeks: "1:5 avg"
     industry_average: "1:10 avg"
-    why_important: "It is really easy to get stuck when you are learning to code: You need personal attention. That is why you find more teachers at 4Geeks than the industry average."
+    why_important: "It is really easy to get stuck when you are learning to code: You need personal mentorship. That is why you find more teachers at 4Geeks than the industry average."
     icon: "glasses"
 
   - features: "Questions Response Time"
@@ -97,7 +97,7 @@ info:
   - features: "Previous Knowledge"
     at4_Geeks: "Not Required"
     industry_average: "Previous test required"
-    why_important: "We belive education must be universally accessed, our courses are specially designed for people from every background, no Math or previous coding skills required."
+    why_important: "We belive education must be universally accessed, our courses are specially designed for people from every background. No Math or previous coding skills required."
     icon: ""
 
 button:
