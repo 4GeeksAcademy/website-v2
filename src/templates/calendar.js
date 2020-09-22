@@ -119,14 +119,9 @@ const Calendar = (props) => {
       let filterCityArray = [{city: 'All Locations', slug: ''}];
       try {
         let response = await session.location;
-        // let sortedResponse = await response.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
-        // console.log("response", sortedResponse)
         if (response) {
           for (let i of session.locations) {
-            // if (!filterCityArray.includes(i.city)) {
             filterCityArray.push({city: i.city, slug: i.meta_info.slug})
-            // filterCityArray.push({city: i.city, slug: i.meta_info, slug})
-            // }
           }
           setFilterCity(filterCityArray);
         }
