@@ -6,7 +6,7 @@
 ## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
 
 why:
-  - title: "Get a job in Tech"
+  - title: "Consigue trabajo"
     description: "Únete a cientos de personas graduadas trabajando en compañías tecnológicas top: Construcción de perfil, Marca personal, Simulacros de entrevistas, etc."
     image: ../../../../static/images/why1.png
     alt: ""

@@ -181,10 +181,8 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     
     if(location === null){
         console.log("Calculating nearest location because it was null...")
-
-        const response = await fetch(`https://api.ipstack.com/check?access_key=73822e5a584c041268f0e78a3253cf0d`);
-        location = locationsArray.edges.find(({ node }) => node.meta_info.slug == "downtown-miami").node;
         try{
+            const response = await fetch(`https://api.ipstack.com/check?access_key=73822e5a584c041268f0e78a3253cf0d`);
             let data = response.status === 200 ? await response.json() : null;
             if(data){
                 v4 = data.ip;
@@ -202,8 +200,11 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     let language = null;
     if (location) language = location.defaultLanguage;
     else {
+        location = locationsArray.edges.find(({ node }) => node.meta_info.slug == "downtown-miami").node;
         console.log("Location could not be loaded, using browserlanguage as default language");
         language = browserLang.substring(0, 2);
+        if(language === "en") language = "us";
+        location.city = ""
     }
     
     let repeated = [];
