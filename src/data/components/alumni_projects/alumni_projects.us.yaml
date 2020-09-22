@@ -9,7 +9,7 @@ projects:
     project_image:
       image: "../../../../static/images/projects/rocket-app.jpg"
       image_alt: ""
-    project_content: "Platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track your places (where you have been), and gather information that you thought it was important and save for as long as you want it in just one place."
+    project_content: "Platform capable of receiving information (wind, temperature, geolocation, etc) from rockets being launched to outer space. The platform also lets you make arrangements to send your own rocket, track it and receive messages from it."
     project_video: ""
     github_repo: ""
     live_link: ""
@@ -31,7 +31,7 @@ projects:
     project_image:
       image: "../../../../static/images/projects/fernando-funez.jpg"
       image_alt: ""
-    project_content: "Platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track your places (where you have been), and gather information that you thought was important and save for as long as you want it in just one place."
+    project_content: "A Platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track your places (where you have been), and gather information that you thought was important and save for as long as you want it in just one place."
     project_video: ""
     # project_video: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
     github_repo: "https://github.com/gmihov001/Wandertracker_front-end"
@@ -39,13 +39,13 @@ projects:
     alumni:
       - first_name: "Fernando"
         last_name: "Funes"
-        job_title: "Teacher Assistant"
+        job_title: "Web Developer"
         github: "https://github.com/ferfunes"
         linkedin: ""
         twitter: ""
       - first_name: "George"
         last_name: "Mihov"
-        job_title: "Web Developer"
+        job_title: "Web Developer and Mentor"
         github: "https://github.com/gmihov001"
         linkedin: "https://www.linkedin.com/in/gmihov/"
         twitter: ""
