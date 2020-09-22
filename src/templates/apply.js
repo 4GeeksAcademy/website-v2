@@ -28,9 +28,34 @@ const Apply = (props) => {
         last_name: {value: '', valid: false},
         phone: {value: '', valid: false},
         email: {value: '', valid: false},
-        utm_location: {value: '', valid: false},
+        location: {value: '', valid: false},
         referral_key: {value: '', valid: true}
     });
+    React.useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        let _location = urlParams.get('location');
+        if(!_location && session.location) _location = session.location.meta_info.slug;
+        
+        if(typeof(_location) === "string" && session.locations) _location = session.locations.find(l => l.meta_info.slug === _location);
+        else _location = null;
+        
+        if(_location) _location = _location.meta_info.slug;
+        console.log("_location", _location)
+        
+        let _course = urlParams.get('course');
+        if(!_course && props.location.state) _course = props.location.state.course;
+
+        if(typeof(_course) === "string") _course = data.allCourseYaml.edges.find(c => c.node.meta_info.bc_slug === _course);
+        if(_course) _course = _course.node.meta_info.bc_slug;
+
+        setVal(_val => ({
+            ..._val,
+            location: {value: _location || "", valid: typeof(_location) === "string" && _location !== ""},
+            course: {value: _course || undefined, valid: true},//it has to be valid because the user has no option to pick one
+        }));
+    }, [session])
+
+    console.log("formData", formData)
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
@@ -176,11 +201,11 @@ const Apply = (props) => {
                                     { session.locations && session.locations.map(l => 
                                         <Column size="6" size_md="12" paddingRight="0px" paddingLeft="0px" paddingTop="3px">
                                             <Button key={l.meta_info.slug} 
-                                                color={l.meta_info.slug === formData.utm_location.value ? Colors.lightYellow : Colors.lightGray} 
-                                                border={l.meta_info.slug === formData.utm_location.value ? "1px solid "+Colors.lightYellow : "1px solid white"} 
+                                                color={l.meta_info.slug === formData.location.value ? Colors.lightYellow : Colors.lightGray} 
+                                                border={l.meta_info.slug === formData.location.value ? "1px solid "+Colors.lightYellow : "1px solid white"} 
                                                 borderRadius="0" 
                                                 colorHover={Colors.verylightGray}
-                                                onClick={(e) => setVal({...formData, utm_location: { value: l.meta_info.slug, valid: true }})}
+                                                onClick={(e) => setVal({...formData, location: { value: l.meta_info.slug, valid: true }})}
                                                 >
                                                 <Paragraph color={Colors.gray}>{l.city}, {l.country}</Paragraph>
                                             </Button>
@@ -265,6 +290,15 @@ export const query = graphql`
             }
         }
       }
+    }
+    allCourseYaml(filter: { fields: { lang: { eq: $lang }}}) {
+        edges{
+            node{
+                meta_info{
+                    bc_slug
+                }
+            }
+        }
     }
     allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {

@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
+import {Link} from "gatsby";
 import {navigate} from '@reach/router';
 import {useInView} from "react-intersection-observer";
 import Layout from '../global/Layout';
@@ -123,7 +124,10 @@ const Program = ({data, pageContext, yml}) => {
       />
       <Row align="center" marginBottom="50px">
         <Column align="right" size="6" align_sm="center" m_sm="0px 0px 15px 0px" size_sm="12" align="right">
-          <Button width="200px" onClick={() => navigate(yml.button.apply_button_link)} color="red" margin="0" textColor=" white">{yml.button.apply_button_text}</Button>
+          <Link to={yml.button.apply_button_link}
+            state={{ course: yml.meta_info.bc_slug }}
+          >
+          <Button width="200px" color="red" margin="0" textColor="white">{yml.button.apply_button_text}</Button></Link>
         </Column>
         <Column align="left" size="6" align_sm="center" size_sm="12" align="left">
           <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
@@ -405,6 +409,7 @@ export const query = graphql`
                 image
                 keywords
                 slug
+                bc_slug
             }
             geek_data {
               geek_force

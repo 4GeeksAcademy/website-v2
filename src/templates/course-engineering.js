@@ -65,9 +65,11 @@ const Program = ({data, pageContext, yml}) => {
       <H5 color={Colors.white} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
       <Row align="center" marginTop="20px" marginBottom="50px">
         <Column align="right" size="6" size_xs="12" align_sm="center" m_sm="0px 0px 15px 0px">
-          <Button
-            onClick={() => navigate(yml.button.apply_button_link)}
-            width="200px" color="red" margin="0" textColor=" white">{yml.button.apply_button_text}</Button>
+          <Link to={yml.button.apply_button_link}
+              state={{ course: yml.meta_info.bc_slug }}
+            >
+            <Button width="200px" color="red" margin="0" textColor=" white">{yml.button.apply_button_text}</Button>
+          </Link>
         </Column>
         <Column align="left" size="6" size_xs="12" align_sm="center">
           <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
@@ -325,6 +327,7 @@ export const query = graphql`
                 image
                 keywords
                 slug
+                bc_slug
             }
             geek_data {
               geek_force

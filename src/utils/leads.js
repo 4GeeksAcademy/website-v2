@@ -1,4 +1,5 @@
-const API_HOST = 'https://breathecode.herokuapp.com/v1'
+// const API_HOST = 'https://breathecode.herokuapp.com/v1'
+const API_HOST = 'https://8000-b658ff1e-dddd-4d1d-9e7a-d365b463cb71.ws-eu01.gitpod.io/v1'
 
 /**
  * 
@@ -23,6 +24,7 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
             utm_language: session.language,
             language: session.language,
             city: session.location.city, 
+            location: formData.location || session.location.meta_info.slug, 
             country: session.location.country, 
             utm_url: window.location.href 
         }),
