@@ -1,13 +1,15 @@
 import React, {useContext, useState } from "react";
 import { Alert, Input } from "../Form/index";
 import { Row, Column } from "../Sections";
-import { H2 } from "../Heading";
+import { H2, Paragraph } from "../Heading";
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {SessionContext} from '../../session';
 import { Button, Colors } from "../Styling";
 import { NaturePeopleOutlined } from "@material-ui/icons";
 import {navigate} from "@reach/router";
+import {Link} from "gatsby";
+import {useStaticQuery, graphql} from 'gatsby';
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -25,12 +27,35 @@ const Form = styled.form`
 `;
 
 
-const LeadForm = ({heading, formHandler, data, handleClose}) => {
+const LeadForm = ({heading, formHandler, data, handleClose, lang}) => {
+    const _query = useStaticQuery(graphql`
+    query LeadFormQuery {
+        allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
+          edges{
+                node{
+                    fields{
+                        lang
+                    }
+                    consent{
+                        message
+                        link_label
+                        url
+                    }
+                }
+            }
+        }
+    }
+    `)
+
+    let yml = _query.allPageYaml.edges.find(({ node }) => node.fields.lang === lang);
+    if(yml) yml = yml.node;
+
     const [formStatus, setFormStatus] = useState({ status: "idle", msg: "Resquest" });
     const [formData, setVal] = useState({
         first_name: { value: '', valid: false },
         last_name: { value: '', valid: false },
         email: { value: '', valid: false },
+        consent: { value: true, valid: true },
     });
     const { session } = useContext(SessionContext);
     React.useEffect(() => {
@@ -103,6 +128,17 @@ const LeadForm = ({heading, formHandler, data, handleClose}) => {
                                 required
                                 style={{marginBottom: "5px"}}
                             />
+                            {session.location && session.location.meta_info.slug === "madrid-spain" &&
+                                <Paragraph fontSize="14px" margin="5px 0 0 0">
+                                    <input
+                                        name="isGoing"
+                                        type="checkbox"
+                                        checked={formData.consent.valid}
+                                        onChange={() => setVal({ ...formData, consent: { ...formData.consent, valid: !formData.consent.valid } })} />
+                                        {yml.consent.message}
+                                        <a target="_blank" rel="noopener noreferrer" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
+                                </Paragraph>
+                            }
                             {formStatus.status === "error" && <Alert color="red"  padding="5px 0 0 0">{formStatus.msg}</Alert>}
                 </Column>
             </Row>

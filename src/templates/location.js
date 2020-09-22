@@ -80,7 +80,9 @@ const Location = ({data, pageContext, yml}) => {
                 open={open}
                 onClose={handleClose}
             >
-                <LeadForm heading={yml.button.syllabus_button_text} formHandler={requestSyllabus} handleClose={handleClose} />
+                <LeadForm heading={yml.button.syllabus_button_text} formHandler={requestSyllabus} handleClose={handleClose} 
+                    lang={pageContext.lang}
+                />
             </Modal>
         </WrapperImage>
         <Divider height="100px" />

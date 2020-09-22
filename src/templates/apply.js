@@ -29,6 +29,7 @@ const Apply = (props) => {
         phone: {value: '', valid: false},
         email: {value: '', valid: false},
         location: {value: '', valid: false},
+        consent: {value: true, valid: true},
         referral_key: {value: '', valid: true}
     });
     React.useEffect(() => {
@@ -55,7 +56,10 @@ const Apply = (props) => {
         }));
     }, [session])
 
-    console.log("formData", formData)
+    let privacy = data.privacy.edges.find(({ node }) => node.fields.lang === pageContext.lang);
+    if(privacy) privacy = privacy.node;
+
+    console.log("privacy", privacy)
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
@@ -217,10 +221,20 @@ const Apply = (props) => {
                                         value={formData.referral_key.value}
                                         onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
                                     />
+                                    <Paragraph padding="0" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.referral_section.content}</Paragraph>
                                 </Row>
-                                <Row height="20px">
-                                    <Paragraph padding="0.375rem 0.75rem" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.referral_section.content}</Paragraph>
-                                </Row>
+                                {session.location && session.location.meta_info.slug === "madrid-spain" &&
+                                     <Row marginTop="10px">
+                                        <Paragraph fontSize="14px" margin="5px 0 0 0">
+                                            <input
+                                                type="checkbox"
+                                                checked={formData.consent.valid}
+                                                onChange={() => setVal({ ...formData, consent: { ...formData.consent, valid: !formData.consent.valid } })} />
+                                                {privacy.consent.message}
+                                                <a target="_blank" rel="noopener noreferrer" className="decorated" href={privacy.consent.url}>{privacy.consent.link_label}</a>
+                                        </Paragraph>
+                                    </Row>
+                                }
                                 <Row >
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                     <Button type="submit"
@@ -251,6 +265,20 @@ const Apply = (props) => {
 };
 export const query = graphql`
   query ApplyQuery($file_name: String!, $lang: String!) {
+    privacy: allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
+        edges{
+              node{
+                  fields{
+                      lang
+                  }
+                  consent{
+                      message
+                      link_label
+                      url
+                  }
+              }
+          }
+      }
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{

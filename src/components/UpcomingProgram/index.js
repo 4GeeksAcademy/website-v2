@@ -81,6 +81,7 @@ const Right = styled.div`
 
 const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location, button}) => {
     const [show, setShow] = useState(showOnScrollPosition == null)
+    const [cookieShow, setCookieShow] = useState(true)
     const [cohorts, setCohorts] = useState([])
 
     React.useEffect(() => {

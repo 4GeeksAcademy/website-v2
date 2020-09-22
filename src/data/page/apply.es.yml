@@ -14,8 +14,8 @@ sub_heading: ""
 left:
   heading: "CUÉNTANOS SOBRE TI"
   form_section:
-    first_name: Nombres""
-    last_name: "Apellidos"
+    first_name: Nombres
+    last_name: Apellidos
     email: "Email"
     phone: "Móvil"
   locations_title: "Selecciona una sede"

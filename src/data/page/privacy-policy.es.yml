@@ -1,5 +1,5 @@
 meta_info:
-  slug: privacy-policy
+  slug: politica-de-privacidad
   title: ""
   description: null
   image: null
@@ -12,9 +12,9 @@ meta_info:
 #   image: "/images/bg/pricing-bg.jpg"
 
 consent:
-  message: By submitting this form, I accept that my data may be used for a quote request and the commercial relationship that may result from it. Check out our complete 
-  link_label: Privacy Policy
-  url: /us/privacy-policy
+  message: Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podria resultar una relación comercial a partir de esto. Revisa nuestra
+  link_label: Política de Privacidad
+  url: /es/politica-de-privacidad
 
 header:
   tagline: Privacy Policy for 4Geeks Academy

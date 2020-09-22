@@ -206,7 +206,7 @@ const Pricing = (props) => {
             open={open}
             onClose={() => setOpen(false)}
           >
-            <LeadForm heading="REVIEW GUIDEBOOK" formHandler={reviewGuidebook} handleClose={() => setOpen(false)} />
+            <LeadForm heading="REVIEW GUIDEBOOK" formHandler={reviewGuidebook} handleClose={() => setOpen(false)} lang={pageContext.lang} />
           </Modal>
           <Button outline position="relative" width="300px" onClick={() => setOpen(true)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
         </Row>

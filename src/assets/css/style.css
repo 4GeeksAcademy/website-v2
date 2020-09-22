@@ -139,6 +139,7 @@ a.nav-item.nav-link.side {
     padding: 0px!important;
 }
 
+.decorated{ text-decoration: underline; font-weight: 400; }
 a:hover {
     text-decoration: none;
   }
