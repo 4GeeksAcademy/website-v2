@@ -7,6 +7,7 @@ import {Colors, Button, RoundImage, Address, Marker, ArrowRight, Clock, Question
 import {Card} from '../components/Card'
 import BaseRender from './_baseRender'
 import Link from 'gatsby-link'
+import dayjs from "dayjs"
 import LazyLoad from 'react-lazyload';
 import {SessionContext} from '../session'
 
@@ -69,9 +70,9 @@ const Calendar = (props) => {
   // https://breathecode.herokuapp.com/v1/events/all?academy=downtown-miami&type=workshop
 
   useEffect(() => {
-    const loadCohorts = async () => {
+    const loadCohorts = () => {
       if (academy == null) {
-        await fetch(
+        fetch(
           `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
         )
           .then(response => response.json())
@@ -80,7 +81,7 @@ const Calendar = (props) => {
           })
       }
       else {
-        await fetch(
+        fetch(
           `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${academy}`,
         )
           .then(response => response.json())
@@ -90,28 +91,28 @@ const Calendar = (props) => {
 
       }
     }
-    loadCohorts();
-  }, [academy]);
-
-  useEffect(() => {
-    const loadEvents = async () => {
+    
+    const loadEvents = () => {
       if (academy == null) {
-        await fetch(
+        fetch(
           `${process.env.GATSBY_BREATHECODE_HOST}/events/all?upcoming=true`,
         )
           .then(response => response.json())
           .then(data => setEvent(data))
       }
       else {
-        await fetch(
+        fetch(
           `${process.env.GATSBY_BREATHECODE_HOST}/events/all?academy=${academy}&type=${filterByType[0]}`,
         )
           .then(response => response.json())
           .then(data => setEvent(data))
       }
     }
+
+    loadCohorts();
     loadEvents();
   }, [academy]);
+
   useEffect(() => {
     const loadFilterCity = async () => {
       let filterCityArray = [{city: 'All Locations', slug: ''}];
@@ -368,7 +369,6 @@ const Calendar = (props) => {
           </Div>
         </Row>
       </Wrapper>
-      {/* {cohorts.length > 0 ? <Divider height="150px" /> : null} */}
       <Wrapper
 
 
@@ -380,7 +380,6 @@ const Calendar = (props) => {
             filterByType[0].toLowerCase() === "courses".toLowerCase() ?
               cohorts.length > 0 ?
                 cohorts.map((cohort, index) => {
-                  let cohortDate = new Date(cohort.kickoff_date)
                   return (
                     <>
                       <Column size="4" size_sm="12" key={index} margin="0 0 1rem 0">
@@ -401,13 +400,14 @@ const Calendar = (props) => {
 
                             shadow
                             move="up">
-                            <StyledBackgroundSection
-                              image={data.cohort_img.childImageSharp.fluid}
-                              // alt={i.alt}
-                              height={`230px`}
-                              bgSize={`cover`}
+                            <img src={cohort.academy.logo_url}
+                              style={{
+                                height: `130px`,
+                                width: "100%",
+                                objectFit: "cover",
+                              }}
                               className={`img-event`}
-                            ></StyledBackgroundSection>
+                            />
                             <Row
                               marginLeft="0"
                               marginRight="0"
@@ -416,9 +416,6 @@ const Calendar = (props) => {
                                 onMouseOver={() => setSelected(index)}
                                 onMouseOut={() => setSelected()}
                                 onClick={() => setSelected(index)}>
-                                <Row marginBottom="1rem" align={`center`}>
-                                  <Paragraph>{cohort.slug}</Paragraph>
-                                </Row>
                                 <Row marginBottom="1rem" >
                                   <H4
                                     fs_xs="18px"
@@ -438,7 +435,7 @@ const Calendar = (props) => {
                                     fs_md="9px"
                                     fs_lg="11px"
                                     fs_xl="14px">
-                                    {days[cohortDate.getDay()]}, {cohortDate.getDate()} {months[cohortDate.getMonth()]} {cohortDate.getFullYear()}
+                                    {dayjs(cohort.kickoff_date).add(5,"hour").format("ddd, DD MMM YYYY")}
                                   </Paragraph>
                                 </Row>
                                 <Row marginBottom=".2rem" alignItems={`center`} >
@@ -450,7 +447,7 @@ const Calendar = (props) => {
                                     fs_md="9px"
                                     fs_lg="11px"
                                     fs_xl="14px">
-                                    {cohort.academy.name}
+                                    {cohort.academy.city.name}, {cohort.academy.country.name}
                                   </Paragraph>
                                 </Row>
                                 <Row height="5%" align="end">
