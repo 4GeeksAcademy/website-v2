@@ -1,16 +1,16 @@
 {
   "routes": [
     {
-      "source": "/wp-content/uploads/2020/05/MINI-SYLLABUS-Madrid-1.pdf",
-      "destination": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-full-stack.pdf"
+      "src": "/wp-content/uploads/2020/05/MINI-SYLLABUS-Madrid-1.pdf",
+      "status": 308, "headers": { "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-full-stack.pdf" }
     },
     {
-      "source": "/wp-content/uploads/2020/06/%C2%BFQuisieras_tener_un_perfil_asombroso_para_impulsar_tus_oportunidades_de_empleo__2.pdf",
-      "destination": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-conseguir-empleo-rapido.pdf"
+      "src": "/wp-content/uploads/2020/06/%C2%BFQuisieras_tener_un_perfil_asombroso_para_impulsar_tus_oportunidades_de_empleo__2.pdf",
+      "status": 308, "headers": { "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-conseguir-empleo-rapido.pdf" }
     },
     {
-      "source": "/wp-content/uploads/2020/06/Paga-cuando-consigas-trabajo.pdf",
-      "destination": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-isa.pdf"
+      "src": "/wp-content/uploads/2020/06/Paga-cuando-consigas-trabajo.pdf",
+      "status": 308, "headers": { "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-isa.pdf" }
     },
     {
       "src": "/static/(.*)",
