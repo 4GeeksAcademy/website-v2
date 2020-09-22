@@ -39,12 +39,14 @@ export const withSession = Component => {
             const urlParams = new URLSearchParams(window.location.search);
             initSession(session, data.allLocationYaml, {
               location: urlParams.get('location') || null,
-              gclid: urlParams.get('gclid'),
+              gclid: urlParams.get('GCLID') || urlParams.get('gclid'),
               utm_medium: urlParams.get('utm_medium'),
               utm_campaign: urlParams.get('utm_campaign'),
               utm_content: urlParams.get('utm_content'),
+              utm_source: urlParams.get('utm_source'),
             })
               .then(_session => setSession(_session))
+              .catch(error => console.error("Error initilizing session", error))
         }, []);
 
         return <SessionContext.Provider value={{session, setSession}}>

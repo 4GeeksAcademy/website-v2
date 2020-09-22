@@ -72,7 +72,7 @@ const Calendar = (props) => {
     const loadCohorts = async () => {
       if (academy == null) {
         await fetch(
-          `https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`,
+          `${process.env.BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
         )
           .then(response => response.json())
           .then(data => {
@@ -81,7 +81,7 @@ const Calendar = (props) => {
       }
       else {
         await fetch(
-          `https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${academy}`,
+          `${process.env.BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${academy}`,
         )
           .then(response => response.json())
           .then(data => {
@@ -98,7 +98,7 @@ const Calendar = (props) => {
       if (academy == null) {
         await fetch(
           // 'https://assets.breatheco.de/apis/event/all',
-          'https://breathecode.herokuapp.com/v1/events/all?upcoming=true',
+          `${process.env.BREATHECODE_HOST}/events/all?upcoming=true`,
         )
           .then(response => response.json())
           .then(data => setEvent(data))
@@ -106,7 +106,7 @@ const Calendar = (props) => {
       else {
         await fetch(
           // 'https://assets.breatheco.de/apis/event/all',
-          `https://breathecode.herokuapp.com/v1/events/all?academy=${academy}&type=${filterByType[0]}`,
+          `${process.env.BREATHECODE_HOST}/events/all?academy=${academy}&type=${filterByType[0]}`,
         )
           .then(response => response.json())
           .then(data => setEvent(data))

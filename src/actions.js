@@ -168,6 +168,7 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     let storedSession = JSON.parse(localStorage.getItem("academy_session"));
     let location = null;
 
+    console.log("seed", seed)
     if(seed.location){
         location = locationsArray.edges.find(({ node }) => node.meta_info.slug === seed.location)
         if(location) location = location.node;
