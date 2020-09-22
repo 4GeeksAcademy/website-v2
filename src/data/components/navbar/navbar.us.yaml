@@ -6,9 +6,9 @@ navbar:
   - name: "The Programs"
     link: "#"
     links: 
-      - name: "Full Stack Development"
+      - name: "Desarrollador Full Stack"
       - link: "/course/full-stack-web-development-bootcamp-part-time"
-      - name: "Senior Software Engineering"
+      - name: "Ingeniero de Software"
       - link: "/course/software-engineering-coding-bootcamp"
   # - name: "Pricing"
   #   link: "/pricing"

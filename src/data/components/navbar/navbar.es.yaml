@@ -4,7 +4,12 @@ navbar:
   - name: "La Academia"
     link: "/la-academia"
   - name: "Programas"
-    link: "/curso/desarrollo-web-full-stack-bootcamp-part-time"
+    link: "#"
+    links: 
+      - name: "Full Stack Development"
+      - link: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+      - name: "Senior Software Engineering"
+      - link: "/es/course/ingenieria-de-software-programacion"
   # - name: "Precios"
   #   link: "/precios"
   - name: "Aliados"
