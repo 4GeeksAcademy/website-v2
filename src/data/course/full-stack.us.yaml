@@ -85,6 +85,7 @@ geeks_vs_others:
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
+  heading: "And enjoy Career Support... for Life!"
   geek_pal_heading: Get a job in tech
   geek_pal:
     - Resume building

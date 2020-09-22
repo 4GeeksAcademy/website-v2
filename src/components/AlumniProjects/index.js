@@ -42,7 +42,7 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                 alignSelf="center"
                                 height="100%"
                                 image="no"
-                                border="bottom"
+                                borderRadius="0 0 0 1.25rem"
                                 padding={`25px 30px 25px 25px`}
                             >
                                 <H3 color={Colors.blue} align="left" >{`Meet  `}</H3>

@@ -198,23 +198,7 @@ export const Column = styled.div`
     max-width: ${props => (props.size / 12) * 100}%;
 
     ${props => props.masonry && 'display: inline-block;'}
-    ${props =>
-        props.border === "bottom"
-            ?
-            css`
-                    border-radius: 0 0 0 1.25rem;
-                    `
-            : props.border === "top"
-                ?
-                css`
-                        border-radius: 1.25rem 0 0 0;
-                    `
-                : props.border === "custom"
-                &&
-                css`
-                        border-radius: ${props.customBorderRadius};
-                    `
-    }
+    border-radius: ${props => props.borderRadius};
        
     @media ${Break.lg}{
         flex: 0 0 ${props => (props.size_lg / 12) * 100}%;

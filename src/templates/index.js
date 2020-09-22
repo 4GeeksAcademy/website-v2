@@ -25,7 +25,7 @@ const Home = (props) => {
   const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
-  const city = session && session.location ? session.location.city : "Miami";
+  const city = session && session.location ? session.location.reliable ? city : "" : "Miami";
   
   React.useEffect(() => {
     if(session.language === "es" && window.location.hash === "") navigate("/es/inicio")
@@ -62,7 +62,7 @@ const Home = (props) => {
         </Column>
         <Column
           size="6"
-          border="bottom"
+          borderRadius="0 0 0 1.25rem"
           height="500px"
           customRespSize
           disp_sm={"none"}

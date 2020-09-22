@@ -19,7 +19,7 @@ const Loc = (props) => {
       >
         <Column
           size="12"
-          border="bottom"
+          borderRadius="0 0 0 1.25rem"
           image="no"
           color={Colors.white}
         ><Carousel
@@ -59,7 +59,7 @@ const Loc = (props) => {
                           alt="Cnn Logo"
                         />
                       </Column>
-                      <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
+                      <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" borderRadius="0 0 0 1.25rem">
                         <Row align="center" height="100%">
                           <Column size="9" height="100%">
                                 <H3

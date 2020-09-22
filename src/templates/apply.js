@@ -135,7 +135,7 @@ const Apply = (props) => {
                             </Column>
                         </Row>
                     </Column>
-                    <Column size="8" size_sm="12" alignSelf="center" height="100%"  border="bottom" color="white">
+                    <Column size="8" size_sm="12" alignSelf="center" height="100%"  borderRadius="0 0 0 1.25rem" color="white">
                         <Row align="center" height="100%">
                             <Column size="10" height="100%">
                                 <Divider height="50px" />

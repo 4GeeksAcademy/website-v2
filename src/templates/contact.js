@@ -70,7 +70,7 @@ const Contact = (props) => {
                 <Row>
                     <Column
                         size="12"
-                        border="bottom"
+                        borderRadius="0 0 0 1.25rem"
                         
                         color={Colors.white}
                     >
@@ -84,7 +84,7 @@ const Contact = (props) => {
                                 align="center"
                                 borderRadius="1.25rem 1.25rem 1.25rem 1.25rem"
                             >
-                                <Column size="8" size_sm="12" alignSelf="center" height="100%"  border="bottom" color="white">
+                                <Column size="8" size_sm="12" alignSelf="center" height="100%"  borderRadius="0 0 0 1.25rem" color="white">
                                     <Row align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />

@@ -31,7 +31,7 @@ const Blog = ({data, pageContext, yml}) => {
                 className={`img-header`}
                 height={`300px`}
                 paddingRight={`0`}
-                customBorderRadius="0 0 0 1.25rem"
+                borderRadius="0 0 0 1.25rem"
             >
                 <Divider height="100px" />
                 <Title

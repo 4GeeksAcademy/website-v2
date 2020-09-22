@@ -236,7 +236,7 @@ const Why = (props) => {
                         marginRight="0"
                     >
                         <Column size="6" size_md="5" size_sm="12" 
-                            alignSelf="center" height="100%" border="bottom"
+                            alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem"
                             padding="50px 10px"
                         >
                             <H3 align="left" >{yml.story.heading}</H3>
@@ -272,7 +272,7 @@ const Why = (props) => {
                             paddingRight={`0`}
                             pl_sm={0}
                             border="custom"
-                            customBorderRadius="0 1.25rem 1.25rem 0"
+                            borderRadius="0 1.25rem 1.25rem 0"
                         >
                             <StyledBackgroundSection
                                 className={`img-right`}

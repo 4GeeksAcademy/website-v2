@@ -96,19 +96,19 @@ const GeeksVsOthers = props => {
       <Row>
         <Column
           size="12"
-          border="bottom"
+          borderRadius="0 0 0 1.25rem"
           image="no"
           color={Colors.white}
         >
           <Card shadow borders="1.25rem" overflow="hidden">
             <Row height="80px" marginLeft="0" marginRight="0">
-              <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} border="top" >
+              <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black} borderRadius="1.25rem 0 0 0" >
                 <Row height="100%" borderBottom={"1px solid " + Colors.darkGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.featured}</H5></Column></Row>
               </Column>
               <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
                 <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.at_geeks}</H5></Column></Row>
               </Column>
-              <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" customBorderRadius="0 1.25rem 0  0">
+              <Column size="3" customRespSize respSize="3" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" borderRadius="0 1.25rem 0  0">
                 <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.average}</H5></Column></Row>
               </Column>
             </Row>

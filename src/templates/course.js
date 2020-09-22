@@ -204,15 +204,9 @@ const Program = ({data, pageContext, yml}) => {
       <Column size="12">
         <SyllabusSVG />
       </Column>
-    </Row>
-
-    {/* GEEKPAL && GEEKFORCE SECTION */}
-    {/* ---------------------------- */}
-    <Container fluid>
-      <Row>
-        <Column size="2" disp_md="none" />
-        <Column size="8" size_md="10" m_md="auto">
-          <Row >
+      <Column size="10" color="#1898CC" margin="-30px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
+        <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
+        <Row padding="0px 40px" p_md="0 10px">
             <Column size="6" size_sm="12" paddingLeft={`0`}>
               <Card
                 cursor="pointer"
@@ -231,7 +225,7 @@ const Program = ({data, pageContext, yml}) => {
                   <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
                     <Div flexDirection={`column`} height={`20%`} justifyContent={`space-between`}>
                       <Row marginLeft="0px" height={`70%`} >
-                        <RoundImage url="/images/geekpal.png" bsize="contain" height="100%" position="left" />
+                        <RoundImage url="/images/geekforce.png" bsize="contain" height="100%" position="left" />
                       </Row>
                       <Row height={`20%`}>
                         <Column size="12">
@@ -297,8 +291,8 @@ const Program = ({data, pageContext, yml}) => {
                 <Row height="100%">
                   <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
                     <Div flexDirection={`column`} height={`20%`}>
-                      <Row marginLeft="0px" height={`70%`}>
-                        <RoundImage url="/images/geekforce.png" bsize="contain" height="100%" position="left" />
+                      <Row marginLeft="0px" height={`70%`} a_sm="center">
+                        <RoundImage url="/images/geekpal.png" bsize="contain" height="100%" position="left" />
                       </Row>
                       <Row height={`20%`}>
                         <Column size="12">
@@ -339,10 +333,8 @@ const Program = ({data, pageContext, yml}) => {
               </Card>
             </Column>
           </Row>
-        </Column>
-      </Row>
-    </Container>
-    {/* </Wrapper> */}
+      </Column>
+    </Row>
 
     <Wrapper
 
@@ -413,6 +405,7 @@ export const query = graphql`
                 bc_slug
             }
             geek_data {
+              heading
               geek_force
               geek_pal
               geek_pal_heading
@@ -442,6 +435,7 @@ export const query = graphql`
               sub_heading
               sub_heading_link
           }
+            
             prices{
               heading
               sub_heading

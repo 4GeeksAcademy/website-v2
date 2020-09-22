@@ -61,23 +61,22 @@ export const H2 = styled(Heading)`
     letter-spacing: -2px;
     text-transform: ${props => props.uppercase && "uppercase"};
     color: ${props => props.color};
-    @media ${Device.xs}{
-      text-align: center;
-      font-size: ${props => props.fs_xs};
+    font-size: ${props => props.fontSize || props.fs_xl};
+
+    @media ${Break.lg}{
+      font-size: ${props => props.fs_lg};
     }
-    @media  ${Device.sm}{
+    @media ${Break.md}{
+      font-size: ${props => props.fs_md};
+    }
+    @media  ${Break.sm}{
       text-align: center;
       font-size: ${props => props.fs_sm};
     }
-    @media ${Device.md}{
-      font-size: ${props => props.fs_md};
+    @media ${Break.xs}{
+      text-align: center;
+      font-size: ${props => props.fs_xs};
     }
-    @media ${Device.lg}{
-      font-size: ${props => props.fs_lg};
-    }
-    @media ${Device.xl} {
-      font-size: ${props => props.fs_xl};
-    }   
     `;
 export const H3 = styled(Heading)`
 display: block;

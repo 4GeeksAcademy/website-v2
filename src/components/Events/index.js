@@ -69,7 +69,7 @@ const Events = () => {
                                     marginRight="0"
                                     customRespSize
                                 >
-                                    <Column size="5" customRespSize respSize="6" alignSelf="center" height="100%" image="no" border="bottom">
+                                    <Column size="5" customRespSize respSize="6" alignSelf="center" height="100%" image="no" borderRadius="0 0 0 1.25rem">
                                         <Row align="center" height="100%">
                                             <Column size="9" height="100%">
                                                 <Divider height="30px" />
@@ -113,7 +113,7 @@ const Events = () => {
                                         </Row>
 
                                     </Column>
-                                    <Column size="7" customRespSize respSize="6" alignSelf="center" width="100%" height="100%" border="custom" customBorderRadius="0 1.25rem 1.25rem 0" image="yes" url={item.banner_url} backgroundSize="cover" >
+                                    <Column size="7" customRespSize respSize="6" alignSelf="center" width="100%" height="100%" border="custom" borderRadius="0 1.25rem 1.25rem 0" image="yes" url={item.banner_url} backgroundSize="cover" >
 
                                     </Column>
                                 </Row>

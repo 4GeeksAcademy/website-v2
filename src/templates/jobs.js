@@ -53,7 +53,7 @@ const Jobs = ({data, pageContext, yml}) => {
         <Row>
           <Column
             size="12"
-            border="bottom"
+            borderRadius="0 0 0 1.25rem"
 
           >
             <Card shadow borders="1.25rem" height="426px" >
@@ -63,7 +63,7 @@ const Jobs = ({data, pageContext, yml}) => {
                 marginRight="0"
                 customRespSize
               >
-                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" border="bottom">
+                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
                   <Row align="center" height="100%">
                     <Column size="8" height="100%">
                       <Row height="5%" />
@@ -113,7 +113,7 @@ const Jobs = ({data, pageContext, yml}) => {
                   customRespSize
                   respSize="6"
                   paddingRight={`0`}
-                  customBorderRadius="0 1.25rem 1.25rem 0"
+                  borderRadius="0 1.25rem 1.25rem 0"
                 >
                   <StyledBackgroundSection
                     className={`img-right`}

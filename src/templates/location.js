@@ -103,7 +103,7 @@ const Location = ({data, pageContext, yml}) => {
                 <Row>
                     <Column
                         size="12"
-                        border="bottom"
+                        borderRadius="0 0 0 1.25rem"
 
                     >
                         <Card shadow borders="1.25rem" height="426px" >
@@ -113,7 +113,7 @@ const Location = ({data, pageContext, yml}) => {
                                 marginRight="0"
                                 customRespSize
                             >
-                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" border="bottom">
+                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
                                     <Row align="center" height="100%">
                                         <Column size="10" height="100%">
                                             <Divider height="50px" />
@@ -179,7 +179,7 @@ const Location = ({data, pageContext, yml}) => {
                                     respSize="6"
                                     paddingRight={`0`}
                                     border="custom"
-                                    customBorderRadius="0 1.25rem 1.25rem 0"
+                                    borderRadius="0 1.25rem 1.25rem 0"
                                 >
                                     <Link to={yml.info_box.map_url} target="_blank">
                                         <StyledBackgroundSection
@@ -212,7 +212,7 @@ const Location = ({data, pageContext, yml}) => {
                         size_md="4"
                         size_sm="6"
                         size_xs="12"
-                        border="bottom"
+                        borderRadius="0 0 0 1.25rem"
                     >
                         <Card
                             color={`grey`}
@@ -252,7 +252,7 @@ const Location = ({data, pageContext, yml}) => {
             <Row>
                 <Column
                     size="12"
-                    border="bottom"
+                    borderRadius="0 0 0 1.25rem"
 
                 >
                     <Card shadow borders="1.25rem" height="426px" >
@@ -262,7 +262,7 @@ const Location = ({data, pageContext, yml}) => {
                             marginRight="0"
                             customRespSize
                         >
-                            <Column size="6" customRespSize respSize="6" paddingLeft="0" alignSelf="center" height="100%" backgroundSize="cover" border="custom" customBorderRadius="1.25rem 0 0 1.25rem" >
+                            <Column size="6" customRespSize respSize="6" paddingLeft="0" alignSelf="center" height="100%" backgroundSize="cover" border="custom" borderRadius="1.25rem 0 0 1.25rem" >
                                 <Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
 
                                     {yml.carousel_box.images.map((item, index) => {
@@ -274,7 +274,7 @@ const Location = ({data, pageContext, yml}) => {
                                                 respSize="12"
                                                 paddingLeft={`0`}
                                                 border="custom"
-                                                customBorderRadius="1.25rem 0 0 1.25rem"
+                                                borderRadius="1.25rem 0 0 1.25rem"
                                             >
                                                 <StyledBackgroundSection
                                                     className={`img-left`}
@@ -289,7 +289,7 @@ const Location = ({data, pageContext, yml}) => {
                                 </Carousel>
 
                             </Column>
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" border="bottom">
+                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
                                 <Row align="center" height="100%">
                                     <Column size="10" height="100%">
                                         <Divider height="50px" />

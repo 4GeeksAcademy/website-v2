@@ -182,18 +182,17 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     if(location === null){
         console.log("Calculating nearest location because it was null...")
         try{
-            //https://api.ipstack.com/check?access_key=73822e5a584c041268f0e78a3253cf0d
             const response = await fetch(`https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c`, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 method: 'POST'
             });
-            let data = response.status === 200 ? await response.json() : null;
-            if(data && data.error === undefined){
+            let data = await response.json() || null;
+            if(data){
                 // v4 = data.ip;
                 location = getClosestLoc(locationsArray.edges, data.location.lat, data.location.lng)
-            }else throw data.error[0]
+            }else throw Error("Error when connecting t Google Geolocation API")
         }catch(e){
             console.log("Error retrieving IP information: ", e)
         }
@@ -204,13 +203,16 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     
     // get the language
     let language = null;
-    if (location) language = location.defaultLanguage;
+    if (location){
+        language = location.defaultLanguage;
+        location.reliable = true;
+    } 
     else {
         location = locationsArray.edges.find(({ node }) => node.meta_info.slug == "downtown-miami").node;
         console.log("Location could not be loaded, using browserlanguage as default language");
         language = browserLang.substring(0, 2);
         if(language === "en") language = "us";
-        location.city = ""
+        location.reliable = false;
     }
     
     let repeated = [];
