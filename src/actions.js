@@ -110,7 +110,7 @@ export const apply = async (data, session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    return await save_form(body, ['website-lead'], ['hard'], session);
+    return await save_form(body, ['website-lead'], ['strong'], session);
 
     throw Error('Unexpected error');
 }

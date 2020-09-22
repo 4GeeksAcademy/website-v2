@@ -41,7 +41,6 @@ const Apply = (props) => {
         else _location = null;
         
         if(_location) _location = _location.meta_info.slug;
-        console.log("_location", _location)
         
         let _course = urlParams.get('course');
         if(!_course && props.location.state) _course = props.location.state.course;
@@ -59,13 +58,10 @@ const Apply = (props) => {
     let privacy = data.privacy.edges.find(({ node }) => node.fields.lang === pageContext.lang);
     if(privacy) privacy = privacy.node;
 
-    console.log("privacy", privacy)
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
-            if(formStatus.status === "error"){
-                            setFormStatus({ status: "idle", msg: "Resquest" })
-                            }
+            if(formStatus.status === "error") setFormStatus({ status: "idle", msg: "Resquest" })
             if (!formIsValid(formData)) setFormStatus({status: "error", msg: "There are some errors in your form"});
             else {
                 setFormStatus({status: "loading", msg: "Loading..."});

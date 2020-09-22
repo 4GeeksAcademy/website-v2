@@ -85,19 +85,19 @@ const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location
     const [cohorts, setCohorts] = useState([])
 
     React.useEffect(() => {
-        if(location) fetch(`${process.env.BREATHECODE_HOST}/admissions/cohort/?upcoming=true&academy=${location.meta_info.slug}`)
+        if(location) fetch(`${process.env.BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${location.meta_info.slug}`)
             .then(resp => resp.json())
             .then(upcoming => setCohorts(upcoming))
             .catch(error => console.error("Error loading cohorts", error))
     },[location])
 
     let title = "Full Stack Development"
-    let date = new Date()
+    let date = dayjs()
     if (cohorts.length > 0) {
-        date = new Date(cohorts.upcoming[0].kickoff_date)
-        title = dayjs(cohorts.upcoming[0].certificate.name)
+        date = dayjs(cohorts[0].kickoff_date).add(1,"hour")
+        title = cohorts[0].certificate.name
     }
-
+    
     useScrollPosition(({prevPos, currPos}) => {
         if (showOnScrollPosition && showOnScrollPosition + currPos.y < 0) {
             if (!show) setShow(true)
