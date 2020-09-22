@@ -182,7 +182,13 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     if(location === null){
         console.log("Calculating nearest location because it was null...")
         try{
-            const response = await fetch(`https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c`);
+            //https://api.ipstack.com/check?access_key=73822e5a584c041268f0e78a3253cf0d
+            const response = await fetch(`https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c`, {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST'
+            });
             let data = response.status === 200 ? await response.json() : null;
             if(data && data.error === undefined){
                 // v4 = data.ip;
