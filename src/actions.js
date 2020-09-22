@@ -50,11 +50,14 @@ export const defaultSession = {
     email: null,
     location: null,
     language: "en",
-    gclid: null,
-    utm_campaign: null,
-    utm_source: null,
-    utm_medium: null,
-    referral_code: null
+    utm: {
+        gclid: null,
+        utm_campaign: null,
+        utm_source: null,
+        utm_medium: null,
+        utm_content: null,
+        referral_code: null
+    }
 };
 function distance (lat1, lon1, lat2, lon2, unit) {
     if ((lat1 == lat2) && (lon1 == lon2)) {
@@ -160,12 +163,13 @@ export const contactUs = async (data,session) => {
     return await save_form(body, ['contact us'], ['contact-us'], session);
 }
 
-export const initSession = async (previousSession, locationsArray, location=null) => {
+export const initSession = async (previousSession, locationsArray, seed=null) => {
     let v4 = null;
     let storedSession = JSON.parse(localStorage.getItem("academy_session"));
+    let location = null;
 
-    if(location!==null){
-        location = locationsArray.edges.find(({ node }) => node.meta_info.slug === location)
+    if(seed.location){
+        location = locationsArray.edges.find(({ node }) => node.meta_info.slug === seed.location)
         if(location) location = location.node;
         else location = null;
         console.log("Hardcoded location", location)
@@ -202,7 +206,18 @@ export const initSession = async (previousSession, locationsArray, location=null
     let repeated = [];
     const _session = {
         ...previousSession, v4, location, browserLang, language,
-        upcoming: [],
+        upcoming: [], 
+        
+        // marketing utm info
+        utm: {
+            gclid: seed.gclid, 
+            utm_campaign: seed.utm_campaign, 
+            utm_source: seed.utm_source, 
+            utm_medium: seed.utm_medium, 
+            utm_content: seed.utm_content, 
+            referral_code: seed.referral_code,
+        },
+
         locations: locationsArray.nodes.filter(l => {
             const [ name, lang ] = l.fields.file_name.split(".");
             //filter repetead and only english locations
@@ -210,13 +225,13 @@ export const initSession = async (previousSession, locationsArray, location=null
             repeated.push(name);
             return true;
         })
-        .map(l => locationsArray.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node)
-        .filter(l => {
-            // filter inlisted locations
-            if(l.meta_info.unlisted) return false;
-            return true;
-        })
-        .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
+            .map(l => locationsArray.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node)
+            .filter(l => {
+                // filter inlisted locations
+                if(l.meta_info.unlisted) return false;
+                return true;
+            })
+            .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
     };
     console.log("Session: ", _session);
     

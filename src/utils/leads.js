@@ -19,6 +19,7 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
         method: "POST",
         body: JSON.stringify({
             ...formData, 
+            ...session.utm,
             tags: tags.join(","), 
             automations: automations.join(","), 
             utm_language: session.language,
@@ -26,7 +27,7 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
             city: session.location.city, 
             location: formData.location || session.location.meta_info.slug, 
             country: session.location.country, 
-            utm_url: window.location.href 
+            utm_url: window.location.href,
         }),
     })
     if (resp.status >= 200 && resp.status < 400) {

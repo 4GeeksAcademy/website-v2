@@ -37,8 +37,14 @@ export const withSession = Component => {
         //get ip address
         useEffect(() => {
             const urlParams = new URLSearchParams(window.location.search);
-            initSession(session, data.allLocationYaml, urlParams.get('location') || null)
-                .then(_session => setSession(_session))
+            initSession(session, data.allLocationYaml, {
+              location: urlParams.get('location') || null,
+              gclid: urlParams.get('gclid'),
+              utm_medium: urlParams.get('utm_medium'),
+              utm_campaign: urlParams.get('utm_campaign'),
+              utm_content: urlParams.get('utm_content'),
+            })
+              .then(_session => setSession(_session))
         }, []);
 
         return <SessionContext.Provider value={{session, setSession}}>
