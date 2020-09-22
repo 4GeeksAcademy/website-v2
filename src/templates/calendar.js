@@ -97,7 +97,6 @@ const Calendar = (props) => {
     const loadEvents = async () => {
       if (academy == null) {
         await fetch(
-          // 'https://assets.breatheco.de/apis/event/all',
           `${process.env.GATSBY_BREATHECODE_HOST}/events/all?upcoming=true`,
         )
           .then(response => response.json())
@@ -105,7 +104,6 @@ const Calendar = (props) => {
       }
       else {
         await fetch(
-          // 'https://assets.breatheco.de/apis/event/all',
           `${process.env.GATSBY_BREATHECODE_HOST}/events/all?academy=${academy}&type=${filterByType[0]}`,
         )
           .then(response => response.json())
