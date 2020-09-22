@@ -1,4 +1,3 @@
-import publicIp from 'public-ip';
 import { save_form } from "./utils/leads";
 
 const getFirstBrowserLanguage = () => {
@@ -183,13 +182,14 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     if(location === null){
         console.log("Calculating nearest location because it was null...")
 
-        v4 = await publicIp.v4();
-        const response = await fetch(`https://api.ipstack.com/${v4}?access_key=73822e5a584c041268f0e78a3253cf0d`);
-        
+        const response = await fetch(`https://api.ipstack.com/check?access_key=73822e5a584c041268f0e78a3253cf0d`);
         location = locationsArray.edges.find(({ node }) => node.meta_info.slug == "downtown-miami").node;
         try{
             let data = response.status === 200 ? await response.json() : null;
-            if(data) location = getClosestLoc(locationsArray.edges, data.latitude, data.longitude)
+            if(data){
+                v4 = data.ip;
+                location = getClosestLoc(locationsArray.edges, data.latitude, data.longitude)
+            } 
         }catch(e){
             console.log("Error retrieving IP information: ", e)
         }
