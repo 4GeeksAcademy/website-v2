@@ -35,7 +35,7 @@ info_box:
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "miami-sunset"
