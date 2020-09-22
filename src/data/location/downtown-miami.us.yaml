@@ -10,12 +10,12 @@ meta_info:
 seo_title: "4Geeks Academy Miami"
 header:
   tagline: "4GEEKS ACADEMY IN MIAMI"
-  paragraph: "Miami is one of the fastest growing tech ecosistems in the world right now, join the #1 part-time Coding Bootcamp in Miami and the biggest developer community. \\n Career Support and Student Support are for life."
+  paragraph: "Miami is one of the fastest growing tech ecosistems in the world right now. Join the #1 part-time Coding Bootcamp in Miami and the best place to learn to code in Florida. \\n Career Support and Mentorship for studets are for life."
   image: "../../../static/images/locations/miami-loc.jpg"
   alt: ""
 
 news:
-  title: "4Geeks Academy Miami in the news..."
+  title: "4Geeks Academy Miami has been reviewed in:"
 upcoming:
   title: "Upcoming programs in Miami, USA"
 
@@ -35,7 +35,7 @@ info_box:
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "miami-sunset"
@@ -66,7 +66,7 @@ prices:
       header:
         heading_one: "PAY UPFRONT"
         heading_two: "(OUT OF POCKET)"
-        sub_heading: "and enjoy the best pricing in town"
+        sub_heading: "and enjoy the best Price in town"
       content:
         price: "$9,499.00"
         price_info: "single payment"
@@ -78,7 +78,7 @@ prices:
       header:
         heading_one: "EXTENDED"
         heading_two: "PAYMENT PLAN"
-        sub_heading: "and enjoy the best pricing in town"
+        sub_heading: "and enjoy the best Price in town"
       plans:
         - months: "60"
           payment: "$214.74"
@@ -91,7 +91,7 @@ prices:
           paymentInfo: "per month + $0 deposit"
           provider: "Climb"
           logo: "/images/climb-logo-white.png"
-          message: "Thanks to our partnership with Climb we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Climb we have managed to create the most flexible payment plan in town"
         - months: "36"
           payment: "$314.10"
           paymentInfo: "per month + $0 deposit"
@@ -103,19 +103,19 @@ prices:
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "12"
           payment: "$755.13"
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "6"
           payment: "$1,449.73"
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
       button:
         button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
@@ -143,7 +143,7 @@ prices:
       header:
         heading_one: "PAY UPFRONT"
         heading_two: "(OUT OF POCKET)"
-        sub_heading: "and enjoy the best pricing in town"
+        sub_heading: "and enjoy the best Price in town"
       content:
         price: "$7,499.00"
         price_info: "single payment"
@@ -155,7 +155,7 @@ prices:
       header:
         heading_one: "EXTENDED"
         heading_two: "PAYMENT PLAN"
-        sub_heading: "and enjoy the best pricing in town"
+        sub_heading: "and enjoy the best Price in town"
       plans:
         - months: "60 mo"
           payment: "$169.53"
@@ -168,7 +168,7 @@ prices:
           paymentInfo: "per month + $0 deposit"
           provider: "Climb"
           logo: "/images/climb-logo-white.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "36 mo"
           payment: "$247.97"
           paymentInfo: "per month + $0 deposit"
@@ -180,19 +180,19 @@ prices:
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "12 mo"
           payment: "$577.43"
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "6 mo"
           payment: "$1,108.58"
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
       button:
         button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
@@ -243,7 +243,7 @@ prices:
           paymentInfo: "per month + $0 deposit"
           provider: "Climb"
           logo: "/images/climb-logo-white.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "36 mo"
           payment: "$447.97"
           paymentInfo: "per month + $0 deposit"
@@ -255,19 +255,19 @@ prices:
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "12 mo"
           payment: "$1277.43"
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "6 mo"
           payment: "$2,508.58"
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
+          message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
       button:
         button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
@@ -278,7 +278,7 @@ prices:
         heading_two: "YOU GET A JOB"
         sub_heading: "and talk about the income share agreement"
       content:
-        price: "10% of salary"
+        price: "9% of salary"
         price_info: "until paid"
       button:
         button_text: "APPLY NOW"
