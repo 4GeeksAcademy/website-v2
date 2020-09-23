@@ -169,7 +169,6 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     let storedSession = JSON.parse(localStorage.getItem("academy_session"));
     let location = null;
 
-    console.log("seed", seed)
     if(seed.location){
         location = locationsArray.edges.find(({ node }) => node.breathecode_location_slug === seed.location)
         if(location) location = location.node;
@@ -250,8 +249,6 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
             .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
     };
     console.log("Session: ", _session);
-    console.log("locationsArray: ", locationsArray);
-    
     localStorage.setItem("academy_session", JSON.stringify(_session));
     return _session
 

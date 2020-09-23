@@ -68,7 +68,6 @@ const LeadForm = ({heading, formHandler, data, handleClose, lang}) => {
                     setFormStatus({ status: "idle", msg: "Resquest" })
                     }
                 if (!formIsValid(formData)){
-                    console.log("formData", formData)
                     setFormStatus({ status: "error", msg: "There are some errors in your form" });
                 } 
                 else {
