@@ -13,13 +13,13 @@ header_data:
   image: "../../../static/images/bg/main-bg.jpg"
 
 why_4geeks:
-  heading: Porqué 4Geeks
+  heading: Por qué 4Geeks
   sub_heading: ""
 
 ## EDUCATION SECTION
 education:
   left_box:
-    heading: "AVALADO POR"
+    heading: "CERTIFICADO POR"
     image: "../../../static/images/florida-logo.png"
     alt: ""
   center_box:
@@ -27,7 +27,7 @@ education:
     image: "../../../static/images/news/newsweek.png"
     alt: ""
   right_box:
-    heading: "4GEEKS IN LOS MEDIOS"
+    heading: "4GEEKS EN LOS MEDIOS"
     image: "../../../static/images/Group.png"
     alt: "CNN and BCC Logo"
 
@@ -44,17 +44,17 @@ join_geeks:
   geek_data:
     geek_pal_heading: Programming - Always - Limitless
     geek_pal_data:
-      content: Nunca programes sol@ otra vez. Estaremos junto a ti, a lo largo de tu viaje y durante todo el tiempo que quieras que lo estemos.
+      content: Nunca programes sol@ otra vez. Estaremos junto a ti, a lo largo de tu viaje y durante todo el tiempo que quieras y nos necesites.
       icon_link: "/es/geekpal-soporte"
     geek_force_heading: FOR Career Empowerment
     geek_force_data:
-      content: Haremos todo lo que esté en nuestras manos para ayudarte a conseguir un trabajo en el sector. Incluye el programa de Career Support, GeekPAL, y GeekTALK.
+      content: Haremos todo lo que esté en nuestras manos para ayudarte a conseguir un trabajo en el sector. Esto incluye el programa de Career Support, GeekPAL, y GeekTALK.
       icon_link: "/es/geekforce-soporte-a-tu-carrera"
 
 ## LOCATIONS SECTION
 locations:
   heading: "NUESTRAS SEDES"
-  sub_heading: "Con 6 sedes (y creciendo), 4Geeks es una de las escuelas y comunidades de programadores más grandes del mundo"
+  sub_heading: "Con +7 sedes (y creciendo), 4Geeks es una de las escuelas y comunidades de programadores más grandes del mundo"
 
 ## ALUMNI SECTION
 alumni_header:
