@@ -101,14 +101,15 @@ const getClosestLoc = (locations, lat, lon) => {
 
 export const setTagManaerVisitorInfo = (session) => {
     if (typeof dataLayer != 'undefined') {
-        dataLayer.push({ 
+        const info = { 
             location_city: session.location.city, 
             location_country: session.location.country, 
             location_slug: session.location.active_campaign_location_slug, 
             language: session.language,
             latitude: session.latitude,
             longitude: session.longitude,
-        })
+        }
+        dataLayer.push(info);
         // THIS BELOW DOEST NOT WORK RIGHT NOW, NEEDS MORE WORK
         // if(session.latitude && session.longitude){
         //     const resp = fetch(`http://maps.googleapis.com/maps/api/geocode/json?latlng=${session.latitude},${session.longitude}&sensor=false&key=${GOOGLE_KEY}`)
@@ -119,7 +120,7 @@ export const setTagManaerVisitorInfo = (session) => {
         //     })
         //     else console.log("Error adding aditional information to the dataLayer")
         // }
-        console.log('Datalayer successfully set with ', info);
+        console.log('Datalayer successfully set with ', session);
     }
     else console.log('TagManager:dataLayer not found');
 }

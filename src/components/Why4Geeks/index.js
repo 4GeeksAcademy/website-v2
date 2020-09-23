@@ -20,7 +20,7 @@ export default ({lang, playerHeight}) => {
               description
               image {
                 childImageSharp {
-                  fluid(maxWidth: 300){
+                  fluid(maxWidth: 400){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                   fixed(width: 300, height: 60) {
