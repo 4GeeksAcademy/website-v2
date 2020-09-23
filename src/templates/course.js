@@ -1,9 +1,7 @@
-import React, {useState, useEffect, useContext, useRef} from 'react';
+import React, {useState} from 'react';
 import {Link} from "gatsby";
 import {navigate} from '@reach/router';
 import {useInView} from "react-intersection-observer";
-import Layout from '../global/Layout';
-import styled from 'styled-components';
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {Title, H2, H3, H4, Span, Paragraph} from '../components/Heading'
@@ -15,9 +13,7 @@ import BaseRender from './_baseRender'
 import ProgramSelector from '../components/ProgramSelector'
 import {requestSyllabus} from "../actions";
 import Credentials from '../components/Credentials'
-import Scrollspy from 'react-scrollspy'
 // import {makeStyles} from '@material-ui/core/styles';
-import {Device, Break} from '../components/Responsive'
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import StepConnector from '@material-ui/core/StepConnector';
 import clsx from 'clsx';
@@ -29,32 +25,13 @@ import TypicalDay from "../components/TypicalDay"
 import Modal from '../components/Modal';
 // import SimpleModal from '../components/SimpleModal';
 
-function rand () {
-  return Math.round(Math.random() * 20) - 10;
-}
-
-const useStyles = makeStyles(theme => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    height: 300,
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '1.25rem',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
-
-
 const Program = ({data, pageContext, yml}) => {
   const [ref, inView] = useInView({
     threshold: 0
   });
-  const scrollRef = useRef();
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
   const steps = getSteps(yml);
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
@@ -65,28 +42,6 @@ const Program = ({data, pageContext, yml}) => {
 
   const handleClose = () => {
     setOpen(false);
-  };
-
-  const totalSteps = () => {
-    return steps.length;
-  };
-  const completedSteps = () => {
-    return Object.keys(completed).length;
-  };
-  const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
-  };
-  const allStepsCompleted = () => {
-    return completedSteps() === totalSteps();
-  };
-  const handleNext = () => {
-    const newActiveStep =
-      isLastStep() && !allStepsCompleted()
-        ? // It's the last step, but not all steps have been completed,
-        // find the first step that has been completed
-        steps.findIndex((step, i) => !(i in completed))
-        : activeStep + 1;
-    setActiveStep(newActiveStep);
   };
 
   let week = "";
@@ -170,7 +125,7 @@ const Program = ({data, pageContext, yml}) => {
       <ProgramDetailsMobile details={yml.details} />
     </Wrapper>
 
-    <Sidebar
+    {/* <Sidebar
       shadow
       borders="1.25rem"
       display_xs="none"
@@ -184,7 +139,7 @@ const Program = ({data, pageContext, yml}) => {
         <li className="scroll_li"><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
         <li className="scroll_li"><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
       </Scrollspy>
-    </Sidebar>
+    </Sidebar> */}
 
     <Wrapper
 
