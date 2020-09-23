@@ -33,6 +33,9 @@ const Apply = (props) => {
         referral_key: {value: '', valid: true}
     });
     React.useEffect(() => {
+        tagManager("application_rendered")
+    },[])
+    React.useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         // Pre-fill the location
         let _location = urlParams.get('location');

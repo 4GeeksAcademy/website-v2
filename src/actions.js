@@ -97,7 +97,7 @@ const getClosestLoc = (locations, lat, lon) => {
     return location;
 }
 
-function tagManager (eventName) {
+export function tagManager (eventName) {
     if (typeof dataLayer != 'undefined') {
         dataLayer.push({'event': eventName});
         console.log('Event successfully triggered: ' + eventName);
