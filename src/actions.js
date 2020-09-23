@@ -2,6 +2,8 @@ import { save_form } from "./utils/leads";
 import dayjs from "dayjs"
 import 'dayjs/locale/es'
 
+const GOOGLE_KEY = "AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c"
+
 const getFirstBrowserLanguage = () => {
     var nav = window.navigator,
         browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
@@ -97,6 +99,31 @@ const getClosestLoc = (locations, lat, lon) => {
     return location;
 }
 
+export const setTagManaerVisitorInfo = async (session) => {
+    if (typeof dataLayer != 'undefined') {
+        dataLayer.push({ 
+            location_city: session.location.city, 
+            location_country: session.location.country, 
+            location_slug: session.location.active_campaign_location_slug, 
+            language: session.language,
+            latitude: session.latitude,
+            longitude: session.longitude,
+        })
+        // THIS BELOW DOEST NOT WORK RIGHT NOW, NEEDS MORE WORK
+        // if(session.latitude && session.longitude){
+        //     const resp = fetch(`http://maps.googleapis.com/maps/api/geocode/json?latlng=${session.latitude},${session.longitude}&sensor=false&key=${GOOGLE_KEY}`)
+        //     const data = await resp.json()
+        //     if(data && data.results) data.results.address_components.forEach(comp => {
+        //         if(comp.types.includes("country")) dataLayer.push({  country_name: comp.short_name.toLowerCase() })
+        //         if(comp.types.includes("locality")) dataLayer.push({  city: comp.short_name.toLowerCase() })
+        //     })
+        //     else console.log("Error adding aditional information to the dataLayer")
+        // }
+        console.log('Datalayer successfully set with ', info);
+    }
+    else console.log('TagManager:dataLayer not found');
+}
+
 export function tagManager (eventName) {
     if (typeof dataLayer != 'undefined') {
         dataLayer.push({'event': eventName});
@@ -166,6 +193,8 @@ export const contactUs = async (data,session) => {
 
 export const initSession = async (previousSession, locationsArray, seed=null) => {
     var v4 = null;
+    var latitude = null;
+    var longitude = null;
     let storedSession = JSON.parse(localStorage.getItem("academy_session"));
     let location = null;
 
@@ -177,13 +206,15 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     } 
     else if(storedSession && storedSession.location != null){
         location = storedSession.location;
+        latitude = storedSession.latitude;
+        longitude = storedSession.longitude;
         console.log("Location already found on session location", location)
     } 
     
     if(location === null){
         console.log("Calculating nearest location because it was null...")
         try{
-            const response = await fetch(`https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c`, {
+            const response = await fetch(`https://www.googleapis.com/geolocation/v1/geolocate?key=${GOOGLE_KEY}`, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -191,7 +222,8 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
             });
             let data = await response.json() || null;
             if(data){
-                // v4 = data.ip;
+                latitude = data.location.lat;
+                longitude = data.location.lng;
                 location = getClosestLoc(locationsArray.edges, data.location.lat, data.location.lng)
             }else throw Error("Error when connecting t Google Geolocation API")
         }catch(e){
@@ -220,7 +252,7 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
 
     let repeated = [];
     const _session = {
-        ...previousSession, v4, location, browserLang, language,
+        ...previousSession, v4, location, browserLang, language, latitude, longitude,
         upcoming: [], 
         
         // marketing utm info

@@ -1,6 +1,6 @@
 import React, {createContext, useState, useEffect} from "react";
 import {useStaticQuery, graphql} from 'gatsby';
-import { initSession, defaultSession } from "./actions"
+import { initSession, defaultSession, setTagManaerVisitorInfo } from "./actions"
 
 export const SessionContext = createContext(null);
 export const withSession = Component => {
@@ -49,7 +49,10 @@ export const withSession = Component => {
               utm_content: urlParams.get('utm_content'),
               utm_source: urlParams.get('utm_source'),
             })
-              .then(_session => setSession(_session))
+              .then(_session => {
+                setSession(_session)
+                // setTagManaerVisitorInfo(_session)
+              })
               .catch(error => console.error("Error initilizing session", error))
         }, []);
 
