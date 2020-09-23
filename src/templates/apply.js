@@ -8,7 +8,7 @@ import {Card} from '../components/Card'
 import {Input, Alert} from '../components/Form'
 import BaseRender from './_baseRender'
 import {SessionContext} from '../session.js'
-import {apply} from "../actions";
+import {apply, tagManager} from "../actions";
 import {BrowserView, MObileView, isBrowser, isMobile} from "react-device-detect";
 import Testimonials from '../components/Testimonials'
 
