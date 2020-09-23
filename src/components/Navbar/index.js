@@ -112,14 +112,15 @@ const StyledBurger = styled.div`
 
 export const Burger = (props) => {
   const [open, setOpen] = React.useState(false)
+  const handleToggle = () => setOpen(!open)
   return (
     <NavBar open={open}>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger open={open} onClick={handleToggle}>
         <div />
         <div />
         <div />
       </StyledBurger>
-      <RightNav lang={props.lang} open={open} menu={props.menu} button={props.button} />
+      <RightNav lang={props.lang} open={open} onToggle={handleToggle} menu={props.menu} button={props.button} />
     </NavBar>
   )
 }
@@ -213,7 +214,7 @@ const Ul = styled.ul`
   }
 `;
 
-export const RightNav = ({lang, menu, open, button}) => {
+export const RightNav = ({lang, menu, open, button, onToggle}) => {
   const data = useStaticQuery(graphql`
     query {
       allChooseProgramYaml {
@@ -271,10 +272,10 @@ export const RightNav = ({lang, menu, open, button}) => {
                   }
                 />
                 :
-                <NavItem key={index} fontSize="16px"><Link to={item.link} key={index}>{item.name}</Link></NavItem>
+                <NavItem key={index} fontSize="16px"><Link onClick={onToggle} to={item.link} key={index}>{item.name}</Link></NavItem>
           )}
         </Ul>
-        <Link to={button.button_link}><Button m_sm="10px 0" width="130px" color={Colors.red} textColor={Colors.white}>{button.button_text}</Button></Link>
+        <Link onClick={onToggle} to={button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="130px" color={Colors.red} textColor={Colors.white}>{button.button_text}</Button></Link>
       </Div>
   )
 }

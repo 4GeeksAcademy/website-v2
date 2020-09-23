@@ -18,7 +18,7 @@ const icon = {
 const Globe = styled.div`
 opacity: 1;
 background: #e6ba1f;
-width: 200px;
+width: 80px;
 min-height: 50px;
 padding: 5px;
 font-family: "Lato, sans-serif";
@@ -26,7 +26,7 @@ position: absolute;
 border-radius: 10px;
 bottom: 40px;
 z-index: 100;
-left: 20px;
+left: 0px;
 box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
 display: flex;
 flex-direction: column;
@@ -36,7 +36,7 @@ text-align: center;
   content: "";
   position: absolute;
   z-index: 99;
-  left: 0;
+  left: 15px;
   top: 50px;
   transform: rotate(-45deg);
   width: 0;
@@ -46,6 +46,13 @@ text-align: center;
   border-bottom: 13px solid transparent;
   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+opacity: 0.1;  
+animation: blink-animation 2s steps(15, start) infinite;
+  @keyframes blink-animation {
+    to {
+      opacity: 1;
+    }
+  }
 `
 
 const GeeksVsOthers = props => {
@@ -86,7 +93,6 @@ const GeeksVsOthers = props => {
   const [tooltipIndex, setTooltipIndex] = useState()
 
   const [globeTooltip, setGlobeTooltip] = useState(true)
-  const [globeTooltipOpacity, setGlobeTooltipOpacity] = useState(0)
 
   let geeks = data.allGeeksVsOthersYaml.edges.find(({ node }) => node.fields.lang === props.lang);
   if(geeks) geeks = geeks.node;
@@ -119,7 +125,10 @@ const GeeksVsOthers = props => {
                     {openedIndex === index ? <div 
                       onClick={() => setOpenedIndex(openedIndex === index ? null : index)}
                       style={{ border: '1px solid', fontSize: "20px", fontFamily: "Lato, sans-serif", minHeight: "80px", textAlign: "center", padding: "20px" }}
-                    >{item.why_important}</div>
+                    >
+                      <H4>{item.features}</H4>
+                      {item.why_important}
+                    </div>
                     :
                     <Row
                       key={index}
@@ -127,20 +136,16 @@ const GeeksVsOthers = props => {
                       marginLeft="0" marginRight="0"
                       className="pointer"
                       alignResp="end"
-                      onClick={() => setOpenedIndex(openedIndex === index ? null : index)}
+                      onClick={() => { setGlobeTooltip(false); setOpenedIndex(openedIndex === index ? null : index); }}
                     >
                       <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
                         <Row align="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
                           <Div flexDirection={`column`} justifyContent={`center`} >
-                            <Div alignItems={`center`}>
-                              { Icon && <Div margin={`0 10px 0 0`}>
-                                  <Icon width="32" color={Colors.yellow} fill={Colors.yellow} /> 
-                                </Div>
-                              }
-                              <Div margin={`0 3px`}>
+                            <Div alignItems={`center`} padding="10px">
+                              { Icon && <Icon width="32" style={{ marginRight: "5px" }} color={Colors.yellow} fill={Colors.yellow} /> }
                                 <H4
                                   fontSize="24px"
-                                  fs_xs="12px"
+                                  fs_xs="16px"
                                   fs_sm="16px"
                                   fs_md="16px"
                                   fs_lg="18px"
@@ -148,9 +153,8 @@ const GeeksVsOthers = props => {
                                 >
                                   {item.features}
                                 </H4>
-                              </Div>
                               <Div position={`relative`}>
-                                {tooltip === true && index === tooltipIndex ?
+                                {tooltip === true && index === tooltipIndex &&
                                   <Tooltip opacity={tooltipOpacity}>
                                     <Paragraph align="center"
                                       fs_xs="16px"
@@ -163,9 +167,9 @@ const GeeksVsOthers = props => {
                                       {item.why_important}
                                     </Paragraph>
                                   </Tooltip>
-                                  : null}
-                                {globeTooltip === true && index === 0 ?
-                                  <Globe opacity={globeTooltipOpacity}>
+                                }
+                                {globeTooltip === true && index === 0 &&
+                                  <Globe>
                                     <Paragraph align="center"
                                       fs_xs="16px"
                                       fs_sm="16px"
@@ -176,7 +180,7 @@ const GeeksVsOthers = props => {
                                     >
                                       {geeks.globe_text}
                                     </Paragraph>
-                                  </Globe> : null}
+                                  </Globe>}
                                 <span
                                   onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false)}}
                                   onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0), setGlobeTooltip(false)}}

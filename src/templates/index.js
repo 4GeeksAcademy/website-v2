@@ -29,7 +29,7 @@ const Home = (props) => {
   
   React.useEffect(() => {
     if(session.language === "es" && window.location.hash === "") navigate("/es/inicio")
-  },[])
+  },[session])
   return (
     <>
       <Row github={`/page/index.${pageContext.lang}.yml`}>
