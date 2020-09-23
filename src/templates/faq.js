@@ -41,12 +41,6 @@ const Faq = (props) => {
                     return (
                         <Row key={index}>
                             <Column
-                                onMouseLeave={() => {
-                                    setTimeout(() => {
-                                        setButtonToggle(false);
-                                        setToggleIndex(undefined);
-                                    }, 7000)
-                                }}
                             >
                                 <Card
                                     color={buttonToggle && index == toggleIndex && "grey"}
