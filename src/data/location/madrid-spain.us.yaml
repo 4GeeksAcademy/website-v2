@@ -53,7 +53,7 @@ carousel_box:
 ## LEFT     BOX => PART-TIME
 ## CENTER   BOX => FINANCIAL SLIDER OPTIONS
 ## RIGHT    BOX => FULL-TIME
-hasFinancialsOption: true
+hasFinancialsOption: false
 # financials_max_months: ["6 mo", "12 mo"]
 financials_max_months: ["12 mo", "6 mo"]
 prices:
@@ -161,7 +161,6 @@ prices:
 active_campaign_location_slug: "madrid-spain"
 breathecode_location_slug: "madrid-spain"
 gdpr_compliant: false # do we need to ask for permision?
-
 
 city: "Madrid"
 name: "Madrid"
