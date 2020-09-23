@@ -7,6 +7,6 @@ meta_info:
     redirects: ["/calendario"]
 
 header:
-    tagline: UPCOMING EVENTS AT 4GEEKS ACADEMY
+    tagline: Próximos programas y Eventos de 4GEEKS ACADEMY
     sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
     image: "../../../static/images/bg/4Geeks-events-bg.jpg"
