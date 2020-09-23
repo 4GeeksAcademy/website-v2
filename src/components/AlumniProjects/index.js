@@ -92,9 +92,9 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
 
 
                                                     </Paragraph>
-                                                    {alumni.github != "" && <Span margin="0 5px" ><a target="_blank" href={alumni.github}><Github width="14" color={Colors.gray} fill={Colors.gray} /></a></Span>}
+                                                    {alumni.github != "" && <Span margin="0 5px" ><a target="_blank" href={alumni.github}><Github width="18" color={Colors.gray} fill={Colors.gray} /></a></Span>}
                                                     {/* {alumni.github != "" && <Github width="14" color={Colors.blue} fill={Colors.blue} />} */}
-                                                    {alumni.linkedin != "" && <Span ><a target="_blank" href={alumni.linkedin}><Linkedin width="16" color={Colors.gray} fill={Colors.gray} /></a></Span>}
+                                                    {alumni.linkedin != "" && <Span ><a target="_blank" href={alumni.linkedin}><Linkedin width="18" color={Colors.gray} fill={Colors.gray} /></a></Span>}
                                                 </Column>
                                             </Row>
                                         </Div>
