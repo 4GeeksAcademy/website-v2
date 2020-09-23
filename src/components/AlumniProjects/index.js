@@ -44,9 +44,19 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                 height="100%"
                                 image="no"
                                 borderRadius="0 0 0 1.25rem"
-                                paddingLeft={`35px`}
+                                paddingLeft={`28px`}
+                                paddingRight={`28px`}
                             >
-                                <H3 align_sm={`left`} type={`H3`} color={Colors.blue} align="left" >{`Meet  `}</H3>
+                                <H3
+                                    align_sm={`left`}
+                                    type={`H3`}
+                                    color={Colors.blue}
+                                    fs_sm={`30px`}
+                                    fs_xs={`30px`}
+                                    align="left"
+                                    margin={`10px 0`}
+                                >{`Meet  `}
+                                </H3>
                                 {item.alumni.map((alumni, i) => {
                                     return (
                                         <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
@@ -121,7 +131,8 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                 <Column
                                     size="6"
                                     size_sm="12"
-                                    paddingRight={`0`}
+                                    paddingRight={`28px`}
+                                    paddingLeft={`28px`}
                                 >
                                     <StyledBackgroundSection
                                         className={`image`}
