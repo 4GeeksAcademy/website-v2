@@ -16,8 +16,8 @@ benefits:
     items:
       - title: Resume Preparation
         sub_title: (up to 8 students per class)
-      - title: Linked In Preparation
-        sub_title: (one mentor every 8 students)
+      - title: LinkedIn Preparation
+        sub_title: (one mentor every 4 students)
       - title: Github Preparation
         sub_title: (unlimited sessions)
       - title: Personal Portfolio
@@ -30,9 +30,9 @@ benefits:
       - title: Get Job offers from our partners
         sub_title: Referrals comming from our oun network of hundreds of partners
       - title: Mock interview Trainings
-        sub_title: Several fake interviews that to assess your weaknesses and train before the real interviews.
+        sub_title: Several fake interviews to assess your weaknesses and make a stronger profile before the interviews.
       - title: Target Coaching per Interview 
-        sub_title: Intensive individual coaching. Each time you have an important interviews, and we will practice using and working with different technologies.
+        sub_title: Intensive individual coaching. Each time you have an important interview, we will practice using and working with different technologies.
       - title: Thousands of tailored exercises
         sub_title: Our very own pool of thousands of auto-graded exercises will let you practice until you can master those skills.
   - l:
@@ -40,7 +40,7 @@ benefits:
     items:
       - title: The coaching never ends
         sub_title: Once you land the job, you get help to keep at it.
-      - title: Change job
+      - title: Change your job
         sub_title: Our referral system never ends; you can always come back to look for better jobs.
       - title: Continue Growing
         sub_title: Private invites to career fares, events and networking sessions.
