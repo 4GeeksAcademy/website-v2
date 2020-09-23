@@ -9,7 +9,7 @@ import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import ReactPlayer from 'react-player'
-import { checkPropTypes } from 'prop-types';
+import {checkPropTypes} from 'prop-types';
 
 const AlumniProjects = ({lang, showThumbs, limit}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
@@ -36,6 +36,7 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                         >
                             <Column
                                 size="6"
+                                size_sm="12"
                                 display={`flex`}
                                 flexDirection={`column`}
                                 justifyContent={`space-between`}
@@ -43,27 +44,38 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                 height="100%"
                                 image="no"
                                 borderRadius="0 0 0 1.25rem"
-                                padding={`25px 30px 25px 25px`}
+                                paddingLeft={`28px`}
+                                paddingRight={`28px`}
                             >
-                                <H3 color={Colors.blue} align="left" >{`Meet  `}</H3>
+                                <H3
+                                    align_sm={`left`}
+                                    type={`H3`}
+                                    color={Colors.blue}
+                                    fs_sm={`30px`}
+                                    fs_xs={`30px`}
+                                    align="left"
+                                    margin={`10px 0`}
+                                >{`Meet  `}
+                                </H3>
                                 {item.alumni.map((alumni, i) => {
                                     return (
                                         <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
-                                            <Row >
-                                                <Column size="12">
-                                                    <H4
-                                                        fs_xs="16px"
-                                                        fs_sm="16px"
-                                                        fs_md="18px"
-                                                        fs_lg="20px"
-                                                        fs_xl="20px"
-                                                        align_xs="center"
-                                                        align="left"
-                                                        fontWeight={`400`}
-                                                    >{`${alumni.first_name} ${alumni.last_name}`}
-                                                    </H4>
-                                                </Column>
-                                            </Row>
+                                            {/* <Row > */}
+                                            {/* <Column size="12"> */}
+                                            <H4
+                                                type={`H4`}
+                                                fs_xs="16px"
+                                                fs_sm="16px"
+                                                fs_md="18px"
+                                                fs_lg="20px"
+                                                fs_xl="20px"
+                                                align_xs="center"
+                                                align="left"
+                                                fontWeight={`400`}
+                                            >{`${alumni.first_name} ${alumni.last_name}`}
+                                            </H4>
+                                            {/* </Column> */}
+                                            {/* </Row> */}
                                             <Row marginBottom="5px">
                                                 <Column size="12" alignSm="center" display={`flex`} flexDirection={`row`} alignItems={`end`}>
                                                     <Paragraph
@@ -80,15 +92,20 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
 
 
                                                     </Paragraph>
-                                                    {alumni.github != "" && <Span margin="0 5px" ><a target="_blank" href={alumni.github}><Github width="14" color={Colors.gray} fill={Colors.gray} /></a></Span>}
+                                                    {alumni.github != "" && <Span margin="0 5px" ><a target="_blank" href={alumni.github}><Github width="18" color={Colors.gray} fill={Colors.gray} /></a></Span>}
                                                     {/* {alumni.github != "" && <Github width="14" color={Colors.blue} fill={Colors.blue} />} */}
-                                                    {alumni.linkedin != "" && <Span ><a target="_blank" href={alumni.linkedin}><Linkedin width="16" color={Colors.gray} fill={Colors.gray} /></a></Span>}
+                                                    {alumni.linkedin != "" && <Span ><a target="_blank" href={alumni.linkedin}><Linkedin width="18" color={Colors.gray} fill={Colors.gray} /></a></Span>}
                                                 </Column>
                                             </Row>
                                         </Div>
                                     )
                                 })}
-                                <H4 color={Colors.gray} align="left" fs_xs="16px"
+                                <H4
+                                    type={`H4`}
+                                    m={`0 0 10px 0`}
+                                    color={Colors.gray}
+                                    align="left"
+                                    fs_xs="16px"
                                     fs_sm="16px"
                                     fs_md="16px"
                                     fs_lg="16px"
@@ -97,6 +114,8 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     fontWeight={`400`}
                                 >{`${item.project_name}`}</H4>
                                 <Paragraph
+                                    margin={`0 0 14px 0`}
+                                    align_sm={`left`}
                                     fs_xs="10px"
                                     fs_sm="11px"
                                     fs_md="13px"
@@ -111,9 +130,9 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                             {item.project_video === "" ?
                                 <Column
                                     size="6"
-                                    customRespSize
-                                    respSize="6"
-                                    paddingRight={`0`}
+                                    size_sm="12"
+                                    paddingRight={`28px`}
+                                    paddingLeft={`28px`}
                                 >
                                     <StyledBackgroundSection
                                         className={`image`}
@@ -125,7 +144,7 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     />
                                 </Column>
                                 :
-                                <Column size="6" paddingRight={`0`}>
+                                <Column size="6" size_sm="12" paddingRight={`0`}>
                                     <ReactPlayer
                                         className='react-player alumni-player'
                                         file={{forceVideo: true}}
