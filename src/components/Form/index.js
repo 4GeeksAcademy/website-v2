@@ -21,6 +21,7 @@ const StyledInput = styled.input`
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     font-color: ${Colors.black};
+    user-select: initial;
 `
 const Rel = styled.div`
     position: relative;

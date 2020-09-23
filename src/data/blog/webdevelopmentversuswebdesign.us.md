@@ -39,7 +39,7 @@ Some people assume that - because development involves higher level programming 
 
 So we invite you to analyze yourself and explore what would fit best for you.
 
-[![infografias blog-01](https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/infografias-blog-01-353x1024-1.png)](https://4geeksacademy.co/app/uploads/2016/03/infografias-blog-01.png)
+[![infografias blog-01](https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/infografias-blog-01-353x1024-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/infografias-blog-01.png)
 
 **Also, consider these aspects…**
 

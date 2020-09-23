@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/2019-developers-salaries-report/
 slug: 2019-developers-salaries-report
 title: BOOTCAMP GRADUATES SALARIES 2019 EDITION
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/10f9e707-9062-43a4-81c4-c6eb070535e4/MAINBLOG.jpg"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/MAIN-BLOG-1024x270.jpg"
 wordpress_id: 3481
 categories:
 - Sin categoría
@@ -87,7 +87,7 @@ Keep in mind the following: developers salaries vary between cities. As we state
 
 Payscale is offering some facts about gender behaviors in the market.  79% are male while 20% are female while 1% does not identify with either gender. The SO survey gives a more dramatic outtake,  with a male developer population of 92.9% while the female is around 6.9%. Non-binary, genderqueer, or gender non-conforming is 0.9% of the population surveyed.
 
-![](https://ucarecdn.com/6496c20e-78c3-41a0-a6b3-a4c28597c9c1/Gender.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/Gender.png)
 
 
 Mean of 64,804 responses; percent who consider themselves part of the Stack Overflow community; genders is select all that apply.  _Source: Stack Overflow Developer Survey Results_

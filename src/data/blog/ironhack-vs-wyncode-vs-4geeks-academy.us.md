@@ -47,6 +47,6 @@ Yes, we are exited!  We are proud to say that we have partnered with LaunchCode
 
 Now we can add a new bullet, because having LaunchCode as a hiring partner surely elevates our student's chances to get hired by any one of their companies.  Our LaunchCode partnership give our students access to a network of more than 300 hiring companies with a hiring rate of 90%.  Like they say on their website: "90% of LaunchCode apprentices converted to full-time employment within 90 days".
 
-Here you can find more information about LaunchCode: [LaunchCode National Overview](https://4geeksacademy.co/app/uploads/2016/01/National-Overview.pdf)
+Here you can find more information about LaunchCode: [LaunchCode National Overview](https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/National-Overview.pdf)
 
 
