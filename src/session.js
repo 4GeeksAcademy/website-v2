@@ -51,7 +51,7 @@ export const withSession = Component => {
             })
               .then(_session => {
                 setSession(_session)
-                // setTagManaerVisitorInfo(_session)
+                setTagManaerVisitorInfo(_session)
               })
               .catch(error => console.error("Error initilizing session", error))
         }, []);
