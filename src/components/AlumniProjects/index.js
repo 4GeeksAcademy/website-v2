@@ -51,6 +51,7 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     align_sm={`left`}
                                     type={`H3`}
                                     color={Colors.blue}
+                                    fs_lg={`40px`}
                                     fs_sm={`30px`}
                                     fs_xs={`30px`}
                                     align="left"
@@ -60,8 +61,6 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                 {item.alumni.map((alumni, i) => {
                                     return (
                                         <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
-                                            {/* <Row > */}
-                                            {/* <Column size="12"> */}
                                             <H4
                                                 type={`H4`}
                                                 fs_xs="16px"
@@ -74,8 +73,6 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                                 fontWeight={`400`}
                                             >{`${alumni.first_name} ${alumni.last_name}`}
                                             </H4>
-                                            {/* </Column> */}
-                                            {/* </Row> */}
                                             <Row marginBottom="5px">
                                                 <Column size="12" alignSm="center" display={`flex`} flexDirection={`row`} alignItems={`end`}>
                                                     <Paragraph
@@ -85,16 +82,26 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                                         fs_md="14px"
                                                         fs_lg="16px"
                                                         fs_xl="16px"
-                                                        lineHeight="24px"
+                                                        lineHeight="22px"
                                                         // margin="5px 0"
                                                         align="left" >
                                                         {alumni.job_title}
-
-
                                                     </Paragraph>
-                                                    {alumni.github != "" && <Span margin="0 5px" ><a target="_blank" href={alumni.github}><Github width="18" color={Colors.gray} fill={Colors.gray} /></a></Span>}
+                                                    {alumni.github != "" &&
+                                                        <Span style={{width: "22px", height: "22px"}} margin="0 5px" >
+                                                            <a target="_blank" href={alumni.github}>
+                                                                <Github width="22" color={Colors.gray} fill={Colors.gray} />
+                                                            </a>
+                                                        </Span>
+                                                    }
                                                     {/* {alumni.github != "" && <Github width="14" color={Colors.blue} fill={Colors.blue} />} */}
-                                                    {alumni.linkedin != "" && <Span ><a target="_blank" href={alumni.linkedin}><Linkedin width="18" color={Colors.gray} fill={Colors.gray} /></a></Span>}
+                                                    {alumni.linkedin != "" &&
+                                                        <Span style={{width: "22px", height: "22px"}}>
+                                                            <a target="_blank" href={alumni.linkedin}>
+                                                                <Linkedin width="22" color={Colors.gray} fill={Colors.gray} />
+                                                            </a>
+                                                        </Span>
+                                                    }
                                                 </Column>
                                             </Row>
                                         </Div>
@@ -109,7 +116,7 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     fs_sm="16px"
                                     fs_md="16px"
                                     fs_lg="16px"
-                                    fs_xl="24px"
+                                    fs_xl="28px"
                                     lineHeight="20px"
                                     fontWeight={`400`}
                                 >{`${item.project_name}`}</H4>
@@ -120,10 +127,13 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     fs_sm="11px"
                                     fs_md="13px"
                                     fs_lg="11px"
-                                    fs_xl="16px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.project_content}</Paragraph>
-                                {item.live_link && <a href={`${item.live_link}`} target="_blank">
-                                    Live Link
-                                </a>
+                                    fs_xl="16px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.project_content}
+                                </Paragraph>
+                                {item.live_link ?
+                                    <a href={`${item.live_link}`} target="_blank">
+                                        <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link</Paragraph>
+                                    </a>
+                                    : <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}></Paragraph>
                                 }
                             </Column>
 
