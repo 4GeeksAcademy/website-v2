@@ -19,8 +19,9 @@ const StyledInput = styled.input`
     margin: 10px 0px;
     border: none;
     font-family: 'Lato', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-color: ${Colors.black};
+    user-select: initial;
 `
 const Rel = styled.div`
     position: relative;
@@ -96,7 +97,7 @@ const StyledTextArea = styled.textarea`
     padding: 5px 10px;
     border: none;
     font-family: 'Lato', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-color: ${Colors.black};
 `
 

@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/2019-developers-salaries-report/
 slug: 2019-developers-salaries-report
 title: BOOTCAMP GRADUATES SALARIES 2019 EDITION
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/10f9e707-9062-43a4-81c4-c6eb070535e4/MAINBLOG.jpg"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/MAIN-BLOG-1024x270.jpg"
 wordpress_id: 3481
 categories:
 - Sin categoría
@@ -58,7 +58,7 @@ Creating websites is still the main source of employment for developers. 74% of 
 
 Hackerrank, a popular technology hiring platform, came up with their [2019 report on developer skills.](https://research.hackerrank.com/developer-skills/2019/) They also have Javascript as the most popular coding language but they differ a bit with StackOverflow. Angular is the most known framework but now developers want to learn ReactJS being both favorite frameworks among hiring managers.
 
-![](https://ucarecdn.com/b8a15b69-7cd4-42ee-9e94-247fe845dd46/TECHNOLOGIES.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/TECHNOLOGIES.png)
 
 
 **_Most Popular Technologies according to SO._**
@@ -87,7 +87,7 @@ Keep in mind the following: developers salaries vary between cities. As we state
 
 Payscale is offering some facts about gender behaviors in the market.  79% are male while 20% are female while 1% does not identify with either gender. The SO survey gives a more dramatic outtake,  with a male developer population of 92.9% while the female is around 6.9%. Non-binary, genderqueer, or gender non-conforming is 0.9% of the population surveyed.
 
-![](https://ucarecdn.com/6496c20e-78c3-41a0-a6b3-a4c28597c9c1/Gender.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/Gender.png)
 
 
 Mean of 64,804 responses; percent who consider themselves part of the Stack Overflow community; genders is select all that apply.  _Source: Stack Overflow Developer Survey Results_
@@ -137,7 +137,7 @@ But there’s one technology that’s really standing out for developers: PYTHON
 
 Python has become a really popular coding language, all over again. We would love to [dwell on the reasons](https://www.skillsoft.com/blog/2018/06/top-5-reasons-why-python-is-so-popular/) but the main focus is that AI, machine learning and Data Science, are the three biggest industries requiring developers to have experience or skills working with Python. Even SO states “Python has a solid claim to being the [fastest-growing major programming language](https://stackoverflow.blog/2017/09/06/incredible-growth-python/?_ga=2.143744437.1095777110.1552433040-300991308.1550620590)”.
 
-![](https://ucarecdn.com/a079a2e4-a971-4f34-a2e4-8a1ab1619f42/Technologygrowth.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/Technology-growth.png)
 
 It’s easily the strongest career path for new developers and professionals that are looking for a new way to make their skills endure. 
 

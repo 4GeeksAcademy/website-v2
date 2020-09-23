@@ -10,7 +10,7 @@ link: https://www.4geeksacademy.co/why-we-teach-python-4geeks/
 slug: why-we-teach-python-4geeks
 title: Why 4Geeks Academy teaches Python as Backend Language?
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/1d78d210-3c67-448e-a2c9-3f11727d8935/ScreenShot20190328at62555PM.png"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/Screen-Shot-2019-03-28-at-6.25.55-PM.png"
 wordpress_id: 3509
 categories:
 - Sin categoría

@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/bootcamp-salaries-2-0/
 slug: bootcamp-salaries-2-0
 title: "Bootcamp Graduates Salary 2017: 2.0 edition"
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/776c553c-ff4a-43ab-8393-bba06f2c67af/portadabootcamp021.jpg"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/portada-bootcamp-02-1-1024x674.jpg"
 wordpress_id: 2580
 categories:
 - Learning to code
@@ -42,11 +42,11 @@ That's the question; according to the [Bureau of Labor Statistic](https://www.bl
 
 On the other hand, [Pay Scale](https://www.payscale.com/research/US/Job=Web_Developer/Salary/b98d92f7/Entry-Level) data shows that wages of entry-level web developers are in a range $33,516 to $86,736 per year with a median salary of 54,149 per year, while [Indeed](https://www.indeed.com/salaries/Entry-Level-Web-Developer-Salaries) placed an average salary in the field of $60,379 per year; and [Glassdoor](https://www.glassdoor.com/Salaries/miami-web-developer-salary-SRCH_IL.0,5_IM558_KO6,19.htm) placed an average salary above $70k per year.  Not that bad, for a junior position, at least.
 
-![](https://ucarecdn.com/87cf095c-df61-46f8-b54a-b836dfd557e8/ScreenShot20171027at71412PM.png)Considering the data at hand, the average salary for a junior developer is around $63k in Miami.  Now, you are probably thinking: seriously?  For a junior/entry level that’s the pay? Yes!  [Numbers never lie](https://sheilabrobinson.com/2013/01/28/they-say-that-numbers-never-lie/).
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Screen-Shot-2017-10-27-at-7.14.12-PM.png)Considering the data at hand, the average salary for a junior developer is around $63k in Miami.  Now, you are probably thinking: seriously?  For a junior/entry level that’s the pay? Yes!  [Numbers never lie](https://sheilabrobinson.com/2013/01/28/they-say-that-numbers-never-lie/).
 
 And how has the average salary behavior been through time?  [StackOverflow](https://insights.stackoverflow.com/survey/2017#overview) provides us with a glimpse of this through their annual Developer Survey Reports:
 
-![](https://ucarecdn.com/f478c1da-e19f-4bb9-9e71-32874c679bde/ScreenShot20171027at71700PM768x143.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Screen-Shot-2017-10-27-at-7.17.00-PM-768x143.png)
 
 The results only demonstrate that wages are around $90k per year consistently.  Good news to everybody.  Although there is the challenge of third-party software development, the United States remain positive in hiring local talent to carry on their in-house requirements.
 
@@ -72,7 +72,7 @@ While a CS college student invests 4 years to graduate, most coding Bootcamp stu
 
 
 
-![](https://ucarecdn.com/ad1ac888-85a2-4fcf-8fc5-b1a4bcc093b5/Picture1300x300.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Picture1-300x300.png)
 
 
 
@@ -80,7 +80,7 @@ While a CS college student invests 4 years to graduate, most coding Bootcamp stu
 Let’s be clear: we don’t have to start a fight against Colleges.  Actually, they teach more stuff and consider a bunch of areas where we don’t want to get involved.  However, if you want to become a developer, your decision is easy: Join a Bootcamp.  Coding Bootcamps are faster and efficient, inexpensive (compared to colleges), and, after graduating, you get as much money as a College graduate.
 
 
-![](https://ucarecdn.com/faa482d8-2f11-42ec-8988-ebf232f935cf/Picture1png2_e1509146648856.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Picture1.png2_.png)
 
 
 Anyway, if you are a tech person and you are thinking about your education, please take a wiser decision.  Are you ready?
