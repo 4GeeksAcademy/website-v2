@@ -6,7 +6,6 @@ import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} fr
 import {H1, Title, Paragraph, H5} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
-import {navigate} from "@reach/router"
 import PricesAndPayment from '../components/PricesAndPayment'
 import AlumniProjects from '../components/AlumniProjects'
 import BaseRender from './_baseRender'
@@ -21,9 +20,6 @@ import clsx from 'clsx';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
-
-// import Modal from '../components/Modal';
-// import SimpleModal from '../components/SimpleModal';
 
 const Program = ({data, pageContext, yml}) => {
 
@@ -329,6 +325,10 @@ export const query = graphql`
               geek_pal
               geek_pal_heading
               geek_force_heading
+            }
+            credentials{
+              heading
+              paragraph
             }
             details {
               heading

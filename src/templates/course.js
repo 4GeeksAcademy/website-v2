@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from "gatsby";
 import {navigate} from '@reach/router';
-import {useInView} from "react-intersection-observer";
+import BaseRender from './_baseRender'
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {Title, H2, H3, H4, Span, Paragraph} from '../components/Heading'
@@ -9,31 +9,20 @@ import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee,
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import PricesAndPayment from '../components/PricesAndPayment'
 import AlumniProjects from '../components/AlumniProjects'
-import BaseRender from './_baseRender'
 import ProgramSelector from '../components/ProgramSelector'
 import {requestSyllabus} from "../actions";
 import Credentials from '../components/Credentials'
-// import {makeStyles} from '@material-ui/core/styles';
-import {makeStyles, withStyles} from '@material-ui/core/styles';
-import StepConnector from '@material-ui/core/StepConnector';
-import clsx from 'clsx';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import TypicalDay from "../components/TypicalDay"
 import Modal from '../components/Modal';
-// import SimpleModal from '../components/SimpleModal';
 
 const Program = ({data, pageContext, yml}) => {
-  const [ref, inView] = useInView({
-    threshold: 0
-  });
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const [completed, setCompleted] = useState({});
-  const steps = getSteps(yml);
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
 
   const handleOpen = () => {
@@ -106,8 +95,8 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper margin="80px 0 0 0" m_sm="0">
       <Title
         size="10"
-        title={"This Program By The Numbers"}
-        paragraph={"Our results speak for themselves"}
+        title={yml.credentials.heading}
+        paragraph={yml.credentials.paragraph}
       />
       <Credentials lang={data.allCredentialsYaml.edges} />
     </Wrapper>
@@ -125,22 +114,6 @@ const Program = ({data, pageContext, yml}) => {
       <ProgramDetailsMobile details={yml.details} />
     </Wrapper>
 
-    {/* <Sidebar
-      shadow
-      borders="1.25rem"
-      display_xs="none"
-      display_sm="none"
-      display_md="none"
-    >
-      <Scrollspy style={{fontSize: "12px", position: "-webkit-sticky", position: "sticky", top: "10%", fontFamily: "Lato-Bold, sans-serif", color: Colors.blue}} items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',]} currentClassName="nav__item--active ">
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-1" >{yml.sidebar.membership}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-2">{yml.sidebar.program}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-3">{yml.sidebar.geeks_vs_other}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-4">{yml.sidebar.pricing}</a></li>
-        <li className="scroll_li"><a className="nav-item nav-link side" href="#section-5">{yml.sidebar.alumni}</a></li>
-      </Scrollspy>
-    </Sidebar> */}
-
     <Wrapper
 
       margin="50px"
@@ -155,11 +128,12 @@ const Program = ({data, pageContext, yml}) => {
       <GeeksVsOthers lang={pageContext.lang} limit={5} />
     </Wrapper>
 
-    <Row height="100%">
-      <Column size="12">
-        <SyllabusSVG />
-      </Column>
-      <Column size="10" color="#1898CC" margin="-30px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
+    <Wrapper
+
+      margin="50px"
+    >
+      <SyllabusSVG />
+      <Column size="10" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
         <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
         <Row padding="0px 40px" p_md="0 10px">
             <Column size="6" size_sm="12" paddingLeft={`0`}>
@@ -287,9 +261,9 @@ const Program = ({data, pageContext, yml}) => {
                 </Row>
               </Card>
             </Column>
-          </Row>
+        </Row>
       </Column>
-    </Row>
+    </Wrapper>
 
     <Wrapper
 
@@ -365,6 +339,10 @@ export const query = graphql`
               geek_pal
               geek_pal_heading
               geek_force_heading
+            }
+            credentials{
+              heading
+              paragraph
             }
             details {
               heading
@@ -611,140 +589,4 @@ export const query = graphql`
   }
 `;
 
-
-
-const Header = styled.div`
-    background: black;
-    border-radius: 1.25rem 1.25rem 0 0;
-    height: ${props => props.height};
-    color: white;
-    font-family: 'lato', sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    align-items: center;
-`;
-const Body = styled.div`
-    background: white;
-    height: ${props => props.height};
-    border-radius: 0 0 1.25rem 1.25rem;`
-
-const QontoConnector = withStyles({
-  alternativeLabel: {
-    top: 5,
-    left: 'calc(-50% + 5px)',
-    right: 'calc(50% + 5px)',
-    color: 'black'
-  },
-  active: {
-    '& $line': {
-      borderColor: Colors.white,
-    },
-  },
-  completed: {
-    '& $line': {
-      borderColor: Colors.yellow,
-    },
-  },
-  circle: {
-    width: 4,
-    height: 4,
-    borderRadius: '50%',
-    backgroundColor: Colors.blue,
-  },
-  line: {
-    borderColor: 'white',
-    borderTopWidth: 1,
-    borderRadius: 1,
-  },
-})(StepConnector);
-const useQontoStepIconStyles = makeStyles({
-  root: {
-    color: 'black',
-    display: 'flex',
-    height: 22,
-    alignItems: 'center',
-  },
-  active: {
-    color: '#784af4',
-  },
-  circle: {
-    width: 4,
-    height: 4,
-    borderRadius: '50%',
-    backgroundColor: Colors.blue,
-  },
-  completed: {
-    color: '#784af4',
-    zIndex: 1,
-    fontSize: 18,
-  },
-});
-function QontoStepIcon (props) {
-  const classes = useQontoStepIconStyles();
-  const {active, completed} = props;
-
-  return (
-    <div
-      className={clsx(classes.root, {
-        [classes.active]: active,
-      })}
-    >
-      {completed ? <Check className={classes.completed} /> : <div className={classes.circle} />}
-    </div>
-  );
-}
-
-const useColorlibStepIconStyles = makeStyles({
-  root: {
-    backgroundColor: '#ccc',
-    zIndex: 1,
-    color: Colors.yellow,
-    width: 12,
-    height: 12,
-    display: 'flex',
-    borderRadius: '50%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  active: {
-    backgroundColor: Colors.yellow
-  },
-  completed: {
-    backgroundImage:
-      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)',
-  },
-});
-
-function ColorlibStepIcon (props) {
-  const classes = useColorlibStepIconStyles();
-  const {active, completed} = props;
-
-  const icons = {
-    1: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />,
-    2: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />,
-    3: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />,
-  };
-
-  return (
-    <div
-      className={clsx(classes.root, {
-        [classes.active]: active,
-        [classes.completed]: completed,
-      })}
-    >
-      {icons[String(props.icon)]}
-    </div>
-  );
-}
-
-function getSteps (day) {
-  return [
-    {icon: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[0].time},
-    {icon: <Coffee width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[1].time},
-    {icon: <FileCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[2].time},
-    {icon: <LaptopCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[3].time},
-    {icon: <Utensils width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[4].time},
-    {icon: <Dumbbell width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[5].time},
-  ];
-}
 export default BaseRender(Program);

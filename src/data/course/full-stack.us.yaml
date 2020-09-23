@@ -26,6 +26,10 @@ button:
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
 ## PROGRAM DETAILS
+credentials:
+  heading: "This Program By The Numbers"
+  paragraph: "Our results speak for themselves"
+
 details:
   heading: PROGRAM DETAILS
   sub_heading: "Part Time"

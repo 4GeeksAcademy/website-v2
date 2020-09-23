@@ -6,9 +6,10 @@ import {Row, Column, Container, Divider} from '../Sections'
 
 export default props => {
   const credentials = props.lang[0].node.credentials
+  const scope = props.scope_slug; // it can be course slug like "full-stack" or an academy location like "downtown-miami"
   return (
     <Row github="/components/credentials">
-      {credentials.map((i, index) => {
+      {credentials.filter(c => c.scope === scope).map((i, index) => {
         return (
           <Column key={index} 
             size="3" 
