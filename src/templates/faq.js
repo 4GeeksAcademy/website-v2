@@ -40,8 +40,16 @@ const Faq = (props) => {
                 {yml.faq.map((item, index) => {
                     return (
                         <Row key={index}>
-                            <Column>
+                            <Column
+                                onMouseLeave={() => {
+                                    setTimeout(() => {
+                                        setButtonToggle(false);
+                                        setToggleIndex(undefined);
+                                    }, 7000)
+                                }}
+                            >
                                 <Card
+
                                     color={buttonToggle && index == toggleIndex && "grey"}
                                     height="auto"
                                     width="100%"
@@ -50,72 +58,77 @@ const Faq = (props) => {
                                     // move="up"
                                     // up="50%"
                                     margin="5px 0 10px 0"
+                                    onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
+                                // onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}}
                                 >
                                     <Row height="100%">
-                                        <Column size="10" customRespSize respSize="10">
-                                            <Row height={buttonToggle === false ? 'auto' : 'auto'} align="around">
-                                                <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" customRespSize respSize="1" alignSelf="center">
-                                                    {buttonToggle === false ?
-                                                        toggleIndex != index &&
-                                                        <Plus
-                                                            width="32"
-                                                            color={Colors.blue}
-                                                            fill={Colors.blue}
+                                        {/* <Column size="12" size_sm="12">
+                                            <Row height={buttonToggle === false ? 'auto' : 'auto'} align="around"> */}
+                                        <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" size_sm="2" align={`center`} alignSelf="center">
+                                            {buttonToggle === false ?
+                                                toggleIndex != index &&
+                                                <Plus
+                                                    width="32"
+                                                    color={Colors.blue}
+                                                    fill={Colors.blue}
 
-                                                        />
-                                                        :
-                                                        buttonToggle === true && toggleIndex === index ?
-                                                            < Minus
-                                                                width="32"
-                                                                color={Colors.blue}
-                                                                fill={Colors.blue}
+                                                />
+                                                :
+                                                buttonToggle === true && toggleIndex === index ?
+                                                    < Minus
+                                                        width="32"
+                                                        color={Colors.blue}
+                                                        fill={Colors.blue}
 
-                                                            />
-                                                            :
-                                                            <Plus
-                                                                width="32"
-                                                                color={Colors.blue}
-                                                                fill={Colors.blue}
+                                                    />
+                                                    :
+                                                    <Plus
+                                                        width="32"
+                                                        color={Colors.blue}
+                                                        fill={Colors.blue}
 
-                                                            />
-                                                    }
+                                                    />
+                                            }
 
 
 
-                                                </Column>
-                                                <Column size="11" customRespSize respSize="11" alignSelf="center">
-                                                    <H4
-                                                        align={`left`}
-                                                        fs_xs="18px"
-                                                        fs_sm="20px"
-                                                        fs_md="20px"
-                                                        fs_lg="20px"
-                                                        fs_xl="24px"
-                                                        color={Colors.black}>{item.question}
-                                                    </H4>
-
-                                                    {buttonToggle === true && toggleIndex === index &&
-                                                        <Row height="auto" marginTop="10px">
-                                                            <Column size="10" align="left">
-                                                                <Paragraph
-                                                                    fontFamily="Lato-bold, sans-serif"
-                                                                    lineHeight="1rem">
-                                                                    {item.answer}
-                                                                </Paragraph>
-                                                            </Column>
-                                                        </Row>}
-                                                </Column>
-                                            </Row>
                                         </Column>
+                                        <Column size="11" size_sm="10" alignSelf="center">
+                                            <H4
+                                                align={`left`}
+                                                fs_xs="18px"
+                                                fs_sm="20px"
+                                                fs_md="20px"
+                                                fs_lg="20px"
+                                                fs_xl="24px"
+                                                color={Colors.black}>{item.question}
+                                            </H4>
+
+                                            {buttonToggle === true && toggleIndex === index &&
+                                                // <Row height="auto" marginTop="10px">
+                                                // <Column size="10" align="left" p_sm="0">
+                                                <Paragraph
+                                                    margin={`10px 0 0 0`}
+                                                    align_sm="left"
+                                                    fontFamily="Lato-bold, sans-serif"
+                                                    lineHeight="1rem">
+                                                    {item.answer}
+                                                </Paragraph>
+                                                // </Column>
+                                                // </Row>
+                                            }
+                                        </Column>
+                                        {/* </Row>
+                                        </Column> */}
 
                                     </Row>
                                 </Card>
-                            </Column>
-                        </Row>
+                            </Column >
+                        </Row >
                     )
                 })
                 }
-            </Wrapper>
+            </Wrapper >
             <Divider height="50px" />
         </>
     )
