@@ -36,7 +36,7 @@ const Faq = (props) => {
             <Divider height="50px" />
             <Wrapper
                 github={`/page/faq.${pageContext.lang}.yml`}
-                >
+            >
                 {yml.faq.map((item, index) => {
                     return (
                         <Row key={index}>
@@ -54,18 +54,7 @@ const Faq = (props) => {
                                     <Row height="100%">
                                         <Column size="10" customRespSize respSize="10">
                                             <Row height={buttonToggle === false ? 'auto' : 'auto'} align="around">
-                                                <Column size="10" customRespSize respSize="10" alignSelf="center">
-                                                    <H4
-                                                        fs_xs="18px"
-                                                        fs_sm="20px"
-                                                        fs_md="20px"
-                                                        fs_lg="20px"
-                                                        fs_xl="24px"
-                                                        color={Colors.black}>{item.question}
-                                                    </H4>
-
-                                                </Column>
-                                                <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="2" customRespSize respSize="2" alignSelf="center">
+                                                <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" customRespSize respSize="1" alignSelf="center">
                                                     {buttonToggle === false ?
                                                         toggleIndex != index &&
                                                         <Plus
@@ -94,17 +83,29 @@ const Faq = (props) => {
 
 
                                                 </Column>
+                                                <Column size="11" customRespSize respSize="11" alignSelf="center">
+                                                    <H4
+                                                        align={`left`}
+                                                        fs_xs="18px"
+                                                        fs_sm="20px"
+                                                        fs_md="20px"
+                                                        fs_lg="20px"
+                                                        fs_xl="24px"
+                                                        color={Colors.black}>{item.question}
+                                                    </H4>
+
+                                                    {buttonToggle === true && toggleIndex === index &&
+                                                        <Row height="auto" marginTop="10px">
+                                                            <Column size="10" align="left">
+                                                                <Paragraph
+                                                                    fontFamily="Lato-bold, sans-serif"
+                                                                    lineHeight="1rem">
+                                                                    {item.answer}
+                                                                </Paragraph>
+                                                            </Column>
+                                                        </Row>}
+                                                </Column>
                                             </Row>
-                                            {buttonToggle === true && toggleIndex === index &&
-                                                <Row height="auto" marginTop="10px">
-                                                    <Column size="10" align="left">
-                                                        <Paragraph
-                                                            fontFamily="Lato-bold, sans-serif"
-                                                            lineHeight="1rem">
-                                                            {item.answer}
-                                                        </Paragraph>
-                                                    </Column>
-                                                </Row>}
                                         </Column>
 
                                     </Row>
