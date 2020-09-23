@@ -1,4 +1,5 @@
 const Size = {
+    miniS: '320px',
     mobileS: '576px',
     mobileL: '576px',
     tablet: '768px',
@@ -13,6 +14,7 @@ export const Device = {
     xl: `(min-width: ${Size.laptopL})`,
 };
 export const Break = {
+    xxs: `(max-width: ${Size.miniS})`,
     xs: `(max-width: ${Size.mobileS})`,
     sm: `(max-width: ${Size.tablet})`,
     md: `(max-width: ${Size.laptop})`,

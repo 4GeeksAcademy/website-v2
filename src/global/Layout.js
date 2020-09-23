@@ -18,9 +18,13 @@ const Layout = ({children, seo, context}) => {
   const { session } = React.useContext(SessionContext);
   // const {slug, title, description, image, keywords} = seo;
   const [ editMode, setEditMode ] = React.useState()
+  const [ showUpcoming, setShowUpcoming ] = React.useState(true)
   
   React.useEffect(() => {
     setEditMode(localStorage.getItem("edit-mode") === "true");
+    if(RegExp('\/app?l(?:y|ica)').test(window.location.href)){
+      setShowUpcoming(false);
+    } 
   },[]);
 
   return (
@@ -92,7 +96,7 @@ const Layout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            <UpcomingProgram location={session.location} button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />
+            { showUpcoming && <UpcomingProgram location={session.location} button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
             <Footer footer={myFooter.node.footer} />
           </>
         )

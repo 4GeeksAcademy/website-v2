@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from "prop-types"
 import dayjs from "dayjs";
 import {Colors, Button, Link, Anchor} from '../Styling';
-import {Device} from '../Responsive';
+import {Break} from '../Responsive';
 import {useScrollPosition} from "./useScrollPosition"
 
 const ShadowedRow = styled.div`
@@ -27,47 +27,45 @@ const Centered = styled.div`
 
 const Left = styled.div`
     width: 90px;
-    display: none;
-    @media ${Device.md}{
-        display: block;
-    }
-    @media ${Device.lg}{
-        display: block;
-    }
-    @media ${Device.xl}{
-        display: block;
+    display: block;
+    @media ${Break.md}{
+        display: none;
     }
 `;
 const Center = styled.div`
     width: 100%;
     text-align: center;
     font-weight: 900;
-    @media ${Device.xs}{
-        text-align: left;
-    }
-    @media ${Device.sm}{
+    @media ${Break.xs}{
         text-align: left;
     }
 `;
 const P1 = styled.p`
     font-size: 28px;
     font-weight: 900;
-    @media ${Device.xs}{
-        padding-top: 10px;
-        font-size: 18px;
-    }
-    @media ${Device.sm}{
+    @media ${Break.sm}{
         padding-top: 5px;
         font-size: 24px;
+    }
+    @media ${Break.xs}{
+        padding-top: 10px;
+        font-size: 18px;
     }
 `
 const P2 = styled.p`
     font-size: 20px;
-    @media ${Device.xs}{
-        font-size: 14px;
-    }
-    @media ${Device.sm}{
+    @media ${Break.sm}{
         font-size: 20px;
+    }
+    @media ${Break.xs}{
+        font-size: 14px;
+        width: 190px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden !important;
+    }
+    @media ${Break.xxs}{
+        width: 160px;
     }
 `
 const Right = styled.div`
