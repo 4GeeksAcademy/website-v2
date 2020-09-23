@@ -58,7 +58,7 @@ Creating websites is still the main source of employment for developers. 74% of 
 
 Hackerrank, a popular technology hiring platform, came up with their [2019 report on developer skills.](https://research.hackerrank.com/developer-skills/2019/) They also have Javascript as the most popular coding language but they differ a bit with StackOverflow. Angular is the most known framework but now developers want to learn ReactJS being both favorite frameworks among hiring managers.
 
-![](https://ucarecdn.com/b8a15b69-7cd4-42ee-9e94-247fe845dd46/TECHNOLOGIES.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/TECHNOLOGIES.png)
 
 
 **_Most Popular Technologies according to SO._**
@@ -137,7 +137,7 @@ But there’s one technology that’s really standing out for developers: PYTHON
 
 Python has become a really popular coding language, all over again. We would love to [dwell on the reasons](https://www.skillsoft.com/blog/2018/06/top-5-reasons-why-python-is-so-popular/) but the main focus is that AI, machine learning and Data Science, are the three biggest industries requiring developers to have experience or skills working with Python. Even SO states “Python has a solid claim to being the [fastest-growing major programming language](https://stackoverflow.blog/2017/09/06/incredible-growth-python/?_ga=2.143744437.1095777110.1552433040-300991308.1550620590)”.
 
-![](https://ucarecdn.com/a079a2e4-a971-4f34-a2e4-8a1ab1619f42/Technologygrowth.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/Technology-growth.png)
 
 It’s easily the strongest career path for new developers and professionals that are looking for a new way to make their skills endure. 
 

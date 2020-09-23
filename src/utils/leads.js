@@ -35,7 +35,7 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
         if(typeof(error.detail) === 'string') throw Error(error.detail);
         if(typeof(error.details) === 'string') throw Error(error.details);
         for(let key in error){
-            throw Error(error[key][0]);
+            throw Error(error[key][0] + " "+key);
         }
     }
 }
