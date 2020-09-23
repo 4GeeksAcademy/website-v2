@@ -90,7 +90,7 @@ const Mentors = props => {
                                 <Paragraph margin="5px 0" color={Colors.verylightGray}>{item.job_title}</Paragraph>
                                 <Paragraph margin="15px 0" color={Colors.lightGray}>{item.bio}</Paragraph>
                                 <Divider height="10%" />
-                                <a href={item.linkdin != '' ? `http://${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
+                                <a href={item.linkdin != '' ? `${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
                             </Over>
                         </RoundImage>
                     </Column>

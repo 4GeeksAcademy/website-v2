@@ -57,7 +57,7 @@ staff:
     last_name: "Chang"
     nick_name: ""
     slug: "daniel-chang"
-    bio: "Electronics Engineer and Teaching Fellow at Hardvard"
+    bio: "Electronics Engineer and Teaching Fellow at Harvard"
     job_title: "Lead Instructor"
     github: "https://github.com/djoker07"
     linkdin: "https://www.linkedin.com/in/daniel-chang-7a8b5870/"
@@ -66,7 +66,7 @@ staff:
     image: "/images/staff/daniel-chang.jpeg"
     age: 42
     interests:
-      - Robotics 
+      - Robotics
       - Computer Vision
       - AI
       - Game Development
@@ -115,6 +115,7 @@ staff:
     nick_name: ""
     slug: "bridget-schraeder"
     job_title: "Career Support "
+    bio: "Head of Partnerships and Career Support with over four years of recruitment experience"
     github: ""
     linkdin: "https://linkedin.com/in/bridget-schraeder-625657195"
     twitter: "https://twitter.com/BridgetAlexys"

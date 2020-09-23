@@ -36,85 +36,73 @@ const Faq = (props) => {
             <Divider height="50px" />
             <Wrapper
                 github={`/page/faq.${pageContext.lang}.yml`}
-                >
+            >
                 {yml.faq.map((item, index) => {
                     return (
                         <Row key={index}>
-                            <Column>
+                            <Column
+                            >
                                 <Card
                                     color={buttonToggle && index == toggleIndex && "grey"}
                                     height="auto"
                                     width="100%"
                                     shadow
                                     padding="20px "
-                                    // move="up"
-                                    // up="50%"
                                     margin="5px 0 10px 0"
+                                    onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
                                 >
                                     <Row height="100%">
-                                        <Column size="10" customRespSize respSize="10">
-                                            <Row height={buttonToggle === false ? 'auto' : 'auto'} align="around">
-                                                <Column size="10" customRespSize respSize="10" alignSelf="center">
-                                                    <H4
-                                                        fs_xs="18px"
-                                                        fs_sm="20px"
-                                                        fs_md="20px"
-                                                        fs_lg="20px"
-                                                        fs_xl="24px"
-                                                        color={Colors.black}>{item.question}
-                                                    </H4>
-
-                                                </Column>
-                                                <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="2" customRespSize respSize="2" alignSelf="center">
-                                                    {buttonToggle === false ?
-                                                        toggleIndex != index &&
-                                                        <Plus
-                                                            width="32"
-                                                            color={Colors.blue}
-                                                            fill={Colors.blue}
-
-                                                        />
-                                                        :
-                                                        buttonToggle === true && toggleIndex === index ?
-                                                            < Minus
-                                                                width="32"
-                                                                color={Colors.blue}
-                                                                fill={Colors.blue}
-
-                                                            />
-                                                            :
-                                                            <Plus
-                                                                width="32"
-                                                                color={Colors.blue}
-                                                                fill={Colors.blue}
-
-                                                            />
-                                                    }
-
-
-
-                                                </Column>
-                                            </Row>
-                                            {buttonToggle === true && toggleIndex === index &&
-                                                <Row height="auto" marginTop="10px">
-                                                    <Column size="10" align="left">
-                                                        <Paragraph
-                                                            fontFamily="Lato-bold, sans-serif"
-                                                            lineHeight="1rem">
-                                                            {item.answer}
-                                                        </Paragraph>
-                                                    </Column>
-                                                </Row>}
+                                        <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" size_sm="2" align={`center`} alignSelf="center">
+                                            {buttonToggle === false ?
+                                                toggleIndex != index &&
+                                                <Plus
+                                                    width="32"
+                                                    color={Colors.blue}
+                                                    fill={Colors.blue}
+                                                />
+                                                :
+                                                buttonToggle === true && toggleIndex === index ?
+                                                    < Minus
+                                                        width="32"
+                                                        color={Colors.blue}
+                                                        fill={Colors.blue}
+                                                    />
+                                                    :
+                                                    <Plus
+                                                        width="32"
+                                                        color={Colors.blue}
+                                                        fill={Colors.blue}
+                                                    />
+                                            }
                                         </Column>
-
+                                        <Column size="11" size_sm="10" alignSelf="center">
+                                            <H4
+                                                align={`left`}
+                                                fs_xs="18px"
+                                                fs_sm="20px"
+                                                fs_md="20px"
+                                                fs_lg="20px"
+                                                fs_xl="24px"
+                                                color={Colors.black}>{item.question}
+                                            </H4>
+                                            {buttonToggle === true && toggleIndex === index &&
+                                                <Paragraph
+                                                    margin={`10px 0 0 0`}
+                                                    align_sm="left"
+                                                    fontFamily="Lato-bold, sans-serif"
+                                                    lineHeight="1rem">
+                                                    {item.answer}
+                                                </Paragraph>
+                                            }
+                                        </Column>
                                     </Row>
                                 </Card>
-                            </Column>
-                        </Row>
+                            </Column >
+                        </Row >
                     )
                 })
                 }
-            </Wrapper>
+            </Wrapper >
             <Divider height="50px" />
         </>
     )
