@@ -7,7 +7,7 @@ partners:
   sub_heading: "Thanks to our growing list of partners, we have local and international job offers for our students on daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have 86% of our students hired in 100 days or less."
   footer_tagline: "438 COMPANIES"
   footer_button: "Review our latest hirings"
-  footer_link: "/geekforce"
+  footer_link: "/partners"
   images:
     - name: "Microsoft"
       locations: all

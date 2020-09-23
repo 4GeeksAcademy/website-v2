@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/empowering-women-tech/
 slug: empowering-women-tech
 title: 4Geeks Academy empowering Women in Tech
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/96adaad4-eba6-47e7-b85d-fd57fb9697ff/WomenPowering011.png"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/04/Women-Powering-01-1-1024x645.png"
 wordpress_id: 2849
 categories:
 - Living and working as a developer
@@ -23,7 +23,7 @@ tags:
 
 We’ve all seen the statistics about [women in tech](https://www.4geeksacademy.co/women-in-tech-2017).  Gender gaps is a reality, but we are not going to talk about those gaps anymore; we are celebrating gender diversity at 4Geeks Academy.  That’s why we are so proud and happy to announce that our Cohort III at Downtown Miami has a **60% female enrollment**!
 
-![](https://ucarecdn.com/fd4533a8-cd3a-444c-bc34-ac0aa6746438/ScreenShot20180411at93505PM1.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2018/04/Screen-Shot-2018-04-11-at-9.35.05-PM-1.png)
 
 
 # Let’s keep an inclusive tech culture
