@@ -113,7 +113,7 @@ font-family: 'Futura', sans-serif;
 margin: ${props => props.m};
 font-weight: ${props => props.fontWeight};
 letter-spacing: -1px;
-font-size: ${props=>props.fontSize};
+font-size: ${props => props.fontSize};
 padding: ${props => props.padding};
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
@@ -223,7 +223,6 @@ Separator.defaultProps = {
 };
 
 export const Paragraph = styled.div`
-  maxWidth: ${props => props.maxWidth};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin};
   font-size: ${props => props.fontSize};
@@ -237,6 +236,7 @@ export const Paragraph = styled.div`
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};
   text-align: ${props => props.align};
+  height: ${props => props.height};
 
   @media ${Break.lg}{
     text-align: ${props => props.align_lg};
