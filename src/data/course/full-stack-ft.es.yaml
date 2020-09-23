@@ -25,6 +25,11 @@ button:
   syllabus_submit_text: "SUBMIT"
   apply_button_text: "APPLY NOW"
   apply_button_link: "/aplica"
+
+credentials:
+  heading: "Nuestros números hablan por sí solos"
+  paragraph: "Our results speak for themselves"
+
 ## PROGRAM DETAILS
 details:
   heading: DETALLES DEL PROGRAMA

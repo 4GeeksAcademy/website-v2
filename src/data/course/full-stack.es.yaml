@@ -28,8 +28,8 @@ button:
   apply_button_link: "/aplica"
 
 credentials:
-  heading: "This Program By The Numbers"
-  paragraph: "Our results speak for themselves"
+  heading: "Nuestros números hablan por sí solos"
+  paragraph: ""
 ## PROGRAM DETAILS
 details:
   heading: DETALLES DEL PROGRAMA

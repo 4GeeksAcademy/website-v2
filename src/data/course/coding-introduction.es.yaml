@@ -12,6 +12,10 @@ header:
   image: "../../../static/images/bg/program-bg.png"
   alt: ""
 
+credentials:
+  heading: "Nuestros números hablan por sí solos"
+  paragraph: ""
+
 button:
   syllabus_button_text: "REQUEST SYLLABUS"
   syllabus_submit_text: "SUBMIT"
