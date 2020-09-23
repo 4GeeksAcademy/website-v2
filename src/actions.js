@@ -99,7 +99,7 @@ const getClosestLoc = (locations, lat, lon) => {
     return location;
 }
 
-export const setTagManaerVisitorInfo = async (session) => {
+export const setTagManaerVisitorInfo = (session) => {
     if (typeof dataLayer != 'undefined') {
         dataLayer.push({ 
             location_city: session.location.city, 
