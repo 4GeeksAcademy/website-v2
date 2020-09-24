@@ -3,8 +3,8 @@ author: 4GeeksAcademy
 comments: true
 date: 2016-01-08 11:19:14+00:00
 layout: post
-link: https://www.4geeksacademy.co/ironhack-vs-wyncode-vs-4geeks-academy/
-slug: ironhack-vs-wyncode-vs-4geeks-academy
+link: https://www.4geeksacademy.co/launchcode-and-4geeks-academy/
+slug: launchcode-and-4geeks-academy
 title: 4Geeks Academy and LaunchCode.org
 avatar: "/4geeks-logo.png"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/launchcode-button-300x89.png"
