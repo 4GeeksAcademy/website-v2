@@ -7,7 +7,6 @@ import {Nav} from '../components/Navbar';
 import NavB from '../components/Navbar'
 import Footer from '../components/Footer'
 import {StaticQuery, graphql} from 'gatsby';
-import {withSession} from "../session.js";
 import UpcomingProgram from "../components/UpcomingProgram"
 
 import GlobalStyle from './GlobalStyle';
@@ -114,4 +113,4 @@ NavB.defaultProps = {
   seo: {}
 }
 
-export default withSession(Layout);
+export default Layout;

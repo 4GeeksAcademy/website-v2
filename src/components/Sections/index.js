@@ -296,6 +296,7 @@ export const WrapperImage = (props) => {
                 className={props.className}
                 height={props.height}
                 borderRadius={props.customBorderRadius}
+                backgroundColor={Colors.darkGray}
                 image={props.imageData}
                 bgSize={props.bgSize}
                 alt={props.alt}

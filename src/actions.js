@@ -192,15 +192,16 @@ export const contactUs = async (data,session) => {
     return await save_form(body, ['contact us'], ['contact-us'], session);
 }
 
-export const initSession = async (previousSession, locationsArray, seed=null) => {
+export const initSession = async (locationsArray, seed={}) => {
     var v4 = null;
     var latitude = null;
     var longitude = null;
     let storedSession = JSON.parse(localStorage.getItem("academy_session"));
     let { location, ...utm } = seed;
-    console.log("Incoming utm", utm)
-    console.log("Previous utm", previousSession.utm)
-    console.log("New utm", { ...previousSession.utm, ...utm })
+
+    // remove undefineds from the seed utm's
+    Object.keys(utm).forEach(key => utm[key] === undefined && delete utm[key])
+
     if(location){
         location = locationsArray.edges.find(({ node }) => node.breathecode_location_slug === location)
         if(location) location = location.node;
@@ -255,11 +256,11 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
 
     let repeated = [];
     const _session = {
-        ...previousSession, v4, location, browserLang, language, latitude, longitude,
-        upcoming: [], 
+        ...defaultSession,
+        ...storedSession, v4, location, browserLang, language, latitude, longitude,
         
         // marketing utm info
-        utm: { ...previousSession.utm, ...utm },
+        utm: { ...storedSession.utm, ...utm },
 
         locations: locationsArray.nodes.filter(l => {
             const [ name, lang ] = l.fields.file_name.split(".");

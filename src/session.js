@@ -3,9 +3,9 @@ import {useStaticQuery, graphql} from 'gatsby';
 import { initSession, defaultSession, setTagManaerVisitorInfo } from "./actions"
 
 export const SessionContext = createContext(null);
-export const withSession = Component => {
-    const SessionComponent = (props) => {
-        const data = useStaticQuery(graphql`
+
+export default ({children}) => {
+    const data = useStaticQuery(graphql`
       query myQuerySession{
           allLocationYaml{
             edges{
@@ -40,8 +40,9 @@ export const withSession = Component => {
         const [session, setSession] = useState(defaultSession);
         //get ip address
         useEffect(() => {
+            console.log("Use effect de layout")
             const urlParams = new URLSearchParams(window.location.search);
-            initSession(session, data.allLocationYaml, {
+            initSession(data.allLocationYaml, {
               location: urlParams.get('location') || null,
               gclid: urlParams.get('gclid') || urlParams.get('fbclid') || undefined,
               utm_medium: urlParams.get('utm_medium') || undefined,
@@ -58,9 +59,7 @@ export const withSession = Component => {
         }, []);
 
         return <SessionContext.Provider value={{session, setSession}}>
-            <Component {...props} />
+            {children}
         </SessionContext.Provider>
-    }
-    return SessionComponent;
 };
 

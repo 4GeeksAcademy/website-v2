@@ -28,7 +28,7 @@ const Home = (props) => {
   const city = session && session.location ? session.location.reliable ? session.location.city : "" : "Miami";
   
   React.useEffect(() => {
-    if(session.language === "es" && window.location.hash === "") navigate("/es/inicio")
+    if(session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
   },[session])
   return (
     <>
@@ -74,6 +74,7 @@ const Home = (props) => {
             height={`500px`}
             image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
             bgSize={`cover`}
+            backgroundColor={Colors.lightGray}
             alt="4Geeks Academy"
             borderRadius={`0 0 0 1.25rem`}
           />
