@@ -91,7 +91,7 @@ const Calendar = (props) => {
 
       }
     }
-    
+
     const loadEvents = () => {
       if (academy == null) {
         fetch(
@@ -191,21 +191,6 @@ const Calendar = (props) => {
         color={Colors.white}
       >
         <Divider height="50px" />
-        <Row align="around" >
-          <Column size="12" alignSelf="center">
-            <H4
-
-              fs_xs="30px"
-              fs_sm="30px"
-              fs_md="30px"
-              fs_lg="30px"
-              fs_xl="30px"
-            >Check for upcoming courses, workshops and events</H4>
-          </Column>
-        </Row>
-        <Row marginBottom={`10px`}>
-          <Separator variant="primary" />
-        </Row>
         <Row marginBottom={`10px`} align={`end`}>
           {/* <Column size="2" alignSelf="center" align="right"> */}
           <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer"><Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Join Our Meetup</Button></a>
@@ -216,11 +201,13 @@ const Calendar = (props) => {
           padding={`10px 20px`}
           background={Colors.lightGray}
           borderRadius={`.5rem`}
-          align={`between`}
+          alignItems={`center`}
           customRespSize
           alignResp={`space-between`}
+          flexDirection_sm={`column`}
         >
           <Div
+            justifyContent={`center`}
             onMouseLeave={() => {
               setTimeout(() => {
                 setToggle(false);
@@ -229,13 +216,8 @@ const Calendar = (props) => {
             }}
           >
             <Card
-
               color={`grey`}
               borders={`.5rem`}
-              margin={`0 20px 0 0`}
-              margin_sm={"20px auto"}
-              margin_xs={"20px auto"}
-
             >
               <Button
                 display={`flex`}
@@ -279,11 +261,19 @@ const Calendar = (props) => {
                 </Row>
               }
             </Card>
+          </Div>
+          <Div
+            justifyContent={`center`}
+            onMouseLeave={() => {
+              setTimeout(() => {
+                setToggle(false);
+                setToggleCity(false);
+              }, 500)
+            }}
+          >
             <Card
               color={`grey`}
               borders={`.5rem`}
-              margin_sm={"20px auto"}
-              margin_xs={"20px auto"}
             >
               <Button
                 display={`flex`}
@@ -330,43 +320,51 @@ const Calendar = (props) => {
           {/* ******* */}
           {/* CLEAR FILTERS */}
 
-          <Div alignItems={`center`} cursor={`pointer`} onClick={() => {
-            setFilterByCity(["Locations"]);
-            setFilterByType(["Courses"]);
-            setFilteredCohorts([]);
-            setAcademy(null);
-          }}>
-            {
-              // academy != null || filterByType.length > 0
-              //   ?
-              filterByCity[0] != "Locations"
-                || filterByType[0] != "Courses"
-                ?
-                <>
-                  <Paragraph
-                    fs_xs="18px"
-                    fs_sm="18px"
-                    fs_md="9px"
-                    fs_lg="11px"
-                    fs_xl="20px"
-                    fontWeight={`500`}
-                    margin={`0 5px`}
-                    cursor={`pointer`}
-                  >Clear all filters
+          {
+            // academy != null || filterByType.length > 0
+            //   ?
+            filterByCity[0] != "Locations"
+              || filterByType[0] != "Courses"
+              ?
+              <Div
+                style={{border: "1px solid #0097CE", borderRadius: "5px", width: "max-content"}}
+                padding={`5px`}
+                margin={`10px 0`}
+                justifyContent={`center`}
+                alignItems={`center`}
+                cursor={`pointer`}
+                onClick={() => {
+                  setFilterByCity(["Locations"]);
+                  setFilterByType(["Courses"]);
+                  setFilteredCohorts([]);
+                  setAcademy(null);
+                }}>
+
+                <Paragraph
+                  fs_xs="18px"
+                  fs_sm="18px"
+                  fs_md="18px"
+                  fs_lg="18px"
+                  fs_xl="20px"
+                  fontWeight={`500`}
+                  margin={`0 5px`}
+                  cursor={`pointer`}
+                  color={Colors.blue}
+                >Clear all filters
                 </Paragraph>
-                  <Cross
-                    onClick={() => {
-                      setFilterByCity(["Locations"]);
-                      setFilterByType(["Courses"]);
-                      setFilteredCohorts([]);
-                      setAcademy(null);
-                    }}
-                    width="16" color={Colors.blue} fill={Colors.blue} />
-                </>
-                :
-                null
-            }
-          </Div>
+                <Cross
+                  onClick={() => {
+                    setFilterByCity(["Locations"]);
+                    setFilterByType(["Courses"]);
+                    setFilteredCohorts([]);
+                    setAcademy(null);
+                  }}
+                  width="18" color={Colors.blue} fill={Colors.blue} />
+
+              </Div>
+              :
+              null
+          }
         </Row>
       </Wrapper>
       <Wrapper
@@ -396,7 +394,7 @@ const Calendar = (props) => {
                             width="100%"
                             color={index === selected ? 'grey' : 'white'}
                             shadow
-                            >
+                          >
                             <img src={cohort.academy.logo_url}
                               style={{
                                 height: `130px`,
@@ -432,7 +430,7 @@ const Calendar = (props) => {
                                     fs_md="9px"
                                     fs_lg="11px"
                                     fs_xl="14px">
-                                    {dayjs(cohort.kickoff_date).add(5,"hour").format("ddd, DD MMM YYYY")}
+                                    {dayjs(cohort.kickoff_date).add(5, "hour").format("ddd, DD MMM YYYY")}
                                   </Paragraph>
                                 </Row>
                                 <Row marginBottom=".2rem" alignItems={`center`} >
@@ -469,7 +467,7 @@ const Calendar = (props) => {
                   fs_xs="18px"
                   fs_sm="18px"
                   fs_md="16px"
-                  fs_lg="118px"
+                  fs_lg="18px"
                   fs_xl="18px">
                   {academy != null ? "It seems we could not found any result." : "Loading..."}
                 </Paragraph>
@@ -492,7 +490,7 @@ const Calendar = (props) => {
                             color={index === selected ? 'grey' : 'white'}
 
                             shadow
-                            >
+                          >
                             {!event.banner.indexOf("http") ?
                               <StyledBackgroundSection
                                 image={data.cohort_img.childImageSharp.fluid}
@@ -597,7 +595,7 @@ const Calendar = (props) => {
                   fs_xs="18px"
                   fs_sm="18px"
                   fs_md="16px"
-                  fs_lg="118px"
+                  fs_lg="18px"
                   fs_xl="18px">
                   It seems we could not found any result.
                 </Paragraph>
