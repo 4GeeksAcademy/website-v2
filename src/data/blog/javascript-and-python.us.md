@@ -51,7 +51,7 @@ For any coding student, launching your coding experience with JavaScript is the 
 Are you looking to become a[ Front-End Develope](https://www.techopedia.com/definition/29569/front-end-developer)r? Knowing your career goals can make it easier at the moment you are choosing your favorite programming language. For example, if you like being on the client-side and designing, JavaScript is an indisputable option to achieve your goals. 
 
 
-## **Python leads among the favorites **
+## **Python leads among the favorites**
 
 
 [Python](https://hackernoon.com/could-pythons-popularity-outperform-javascript-in-the-next-five-years-abed4e307224) is one of the most demanded programming languages ​​nowadays, in fact, it has become the favorite of Big Data companies for its [great advantages.](https://skillcrush.com/2019/06/21/what-is-python/) Starting with its simplicity, which allows it to be easier to learn. For beginners in coding, Python could be the best choice to learn fast and easier. 

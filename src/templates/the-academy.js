@@ -42,7 +42,7 @@ const Why = (props) => {
                 <Divider height="150px" md="0" />
             </WrapperImage>
             <Wrapper margin="0 0 50px 0">
-                <Credentials move="up" up="100" lang={data.allCredentialsYaml.edges} />
+                <Credentials transform="translateY(-100px)" lang={data.allCredentialsYaml.edges} />
             </Wrapper>
             <Wrapper
                 margin="50px 0"
@@ -166,8 +166,7 @@ const Why = (props) => {
                                     height="200px"
                                     color="black"
                                     padding="30px"
-                                    move="up"
-                                    up="100px"
+                                    transform="translateY(-100px)"
                                     marginXs="0 0 30px 0"
                                 >
                                     <Row >
@@ -228,7 +227,7 @@ const Why = (props) => {
                 wide
                 customBorderRadius="1.25rem 0 0 1.25rem"
             >
-                <Card shadow borders="1.25rem" minHeight="450px" move="up" up="20%">
+                <Card shadow borders="1.25rem" minHeight="450px" transform="translateY(-20%)">
                     <Row
                         github={`/page/the-academy.${pageContext.lang}.yml#L77`}
                         height="100%"

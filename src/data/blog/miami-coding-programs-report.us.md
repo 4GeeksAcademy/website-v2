@@ -134,7 +134,7 @@ It is also important to understand what alumni say about their experience, and h
 
 We see how students in their impressions of the Bootcamps are oriented by the promptness, and effectiveness in the learning. Besides, it is not necessary to have a vast experience to start programming because the idea of these programs (be it full-time or part-time) is to train non-coders and make developers out of them. 
 
-**PLACEMENT FACTS **
+**PLACEMENT FACTS**
 
 Placement is the end goal. To get the students hired by a company. It’s actually everybody’s goal. Here some facts to illustrate how important this is: 
 

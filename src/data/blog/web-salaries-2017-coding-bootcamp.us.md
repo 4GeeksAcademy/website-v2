@@ -27,7 +27,7 @@ status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
 ---
 
-## **Real data addressing real questions. **
+## **Real data addressing real questions.**
 
 
 There are several reasons to support the decision of becoming a web developer.  It’s not just cyclical.  According to experts (our students!), there are a couple of main reasons to join a Coding Bootcamp: (1) placement opportunities; and, (2) average salary.

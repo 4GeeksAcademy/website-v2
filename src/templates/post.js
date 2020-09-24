@@ -8,6 +8,7 @@ import {Card} from '../components/Card'
 import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
 import {TwitterFollowButton} from 'react-twitter-embed';
+import "../assets/css/single-post.css"
 import {
     FacebookShareButton,
     TwitterShareButton,
@@ -16,6 +17,28 @@ import {
     FacebookShareCount
 } from "react-share";
 
+{/* <Row>
+
+<TwitterShareButton
+    className="network__share-button"
+    url={`https://www.4geeksacademy.co/${pageContext.slug}`}
+    title={"share"}
+>
+    <TwitterIcon
+        size={24} round={true}
+    />
+</TwitterShareButton>
+<FacebookShareButton
+    className="network__share-button"
+    url={`https://www.4geeksacademy.co/${pageContext.slug}`}
+    title={"share"}
+>
+    <FacebookIcon
+        size={24} round={true}
+    />
+</FacebookShareButton>
+<Link to="/blog"><ArrowLeft width="24px" color={Colors.yellow} fill={Colors.yellow} /></Link>
+</Row> */}
 
 export default function Template (props) {
     const {data, pageContext} = props;
@@ -43,127 +66,71 @@ export default function Template (props) {
     let postDate = GetFormattedDate(post.frontmatter.date);
     return (
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
-            <WrapperCustom
-                innerLeftCol="2"
-                innerRightCol="9"
-                full
-
-                content={<Row align="end" padding="0 20px 0 0" style={{position: "sticky", top: "12%"}}>
-                    <Column size="" customRespSize respSize="10" >
-                        <Row>
-
-                            <TwitterShareButton
-                                className="network__share-button"
-                                url={`https://www.4geeksacademy.co/${pageContext.slug}`}
-                                title={"share"}
+            <Column size="10" margin="50px auto 0px auto">
+                <Column size="7" margin="30px auto">
+                    <Row height="100%" align="around">
+                        <Column size="2" customRespSize respSize="2" alignSelf="center" >
+                            <LazyLoad scroll={true} height={100} once={true}>
+                                <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
+                            </LazyLoad>
+                        </Column>
+                        <Column size="8" customRespSize respSize="8" alignSelf="center">
+                            <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px"><a href={`https://twitter.com/${filtered.name || "4GeeksAcademy"}`} rel="author noopener noreferrer nofollow">{`${postDate} - ${filtered.name || '4Geeks Academy'}`}</a></Paragraph>
+                            <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${filtered.bio}`}</Paragraph>
+                            <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text}`}</Paragraph>
+                            {filtered.username && <TwitterFollowButton screenName={filtered.username} /> }
+                        </Column>
+                    </Row>
+                </Column>
+                <Column size="12" align="center" margin="30px 0px">
+                    {post.frontmatter.tags != null && post.frontmatter.tags.map((tag, i) => {
+                        return (
+                            <Card
+                                key={i}
+                                color="darkGray"
+                                display="inline-block"
+                                padding="5px 8px"
+                                borders=".2rem"
+                                margin="5px 3px"
+                                w_xs="20px"
                             >
-                                <TwitterIcon
-                                    size={24} round={true}
-                                />
-                            </TwitterShareButton>
-                            <FacebookShareButton
-                                className="network__share-button"
-                                url={`https://www.4geeksacademy.co/${pageContext.slug}`}
-                                title={"share"}
-                            >
-                                <FacebookIcon
-                                    size={24} round={true}
-                                />
-                            </FacebookShareButton>
-                            <Link to="/blog"><ArrowLeft width="24px" color={Colors.yellow} fill={Colors.yellow} /></Link>
-                        </Row>
-                    </Column></Row>}>
-                <Row align="left">
-                    <Column size="10">
-                        <Row height="100%" align="around">
-                            <Column size="2" customRespSize respSize="2" alignSelf="center" >
-                                <LazyLoad scroll={true} height={100} once={true}>
-                                    <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
-                                </LazyLoad>
-                            </Column>
-                            <Column size="8" customRespSize respSize="8" alignSelf="center">
-                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px"><a href={`https://twitter.com/${filtered.name || "4GeeksAcademy"}`} rel="author noopener noreferrer nofollow">{`${postDate} - ${filtered.name || '4Geeks Academy'}`}</a></Paragraph></Row>
-                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${filtered.bio}`}</Paragraph></Row>
-                                <Row><Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text}`}</Paragraph></Row>
-                                {filtered.username && <Row>
-                                    <TwitterFollowButton
-                                        screenName={filtered.username}
-                                    />
-                                </Row>}
-
-                            </Column>
-
-                        </Row>
-                        {/* <FacebookShareCount url={"shareUrl"} /> */}
-                    </Column>
-                </Row>
-                <Divider height="30px" />
-                <Row align="left" >
-                    <Column size="10" align="center">
-                        <Row>
-                            {post.frontmatter.tags != null ? post.frontmatter.tags.map((tag, i) => {
-                                return (
-                                    <Card
-                                        key={i}
-                                        color="darkGray"
-                                        padding="2px 5px"
-                                        borders=".2rem"
-                                        margin="5px 3px"
-                                        w_xs="20px"
-                                    >
-                                        <Paragraph color={Colors.darkGray}>{tag}</Paragraph>
-                                    </Card>
-                                )
-                            }) : null}
-
-                        </Row>
-                    </Column>
-                </Row>
-                <Divider height="30px" />
-                <Row>
-                    <Column size="10" align="center">
-                        <H1
-
-                            fs_sm="30px"
-                            fs_md="30px"
-                            fs_lg="30px"
-                            fs_xl="36px"
-                            textShadow="none">{post.frontmatter.title}</H1>
-                    </Column>
-                </Row>
-                <Divider height="30px" />
-                <Row>
-                    <Column size="10" customRespSize respSize="10" alignSelf="center">
-                        <LazyLoad scroll={true} height={100} once={true} >
-                            <RoundImage border="1.25rem" width="100%" height="300px" bsize="contain" position="center" url={post.frontmatter.image} />
-                        </LazyLoad>
-                    </Column>
-                </Row>
-                <Row height="auto" align="left">
-                    <Column size="10" >
-                        <div className="single-post" dangerouslySetInnerHTML={{__html: post.html}}></div>
-                    </Column>
-                </Row>
-                <Row align="left" >
-                    <Column size="10" align="left">
-                        {post.frontmatter.tags && <Row>
-                            {post.frontmatter.tags.map((tag, i) => {
-                                return (
-                                    <Card
-                                        key={i}
-                                        color="darkGray"
-                                        padding="2px 5px"
-                                        borders=".2rem"
-                                        margin="5px 3px">
-                                        <Paragraph color={Colors.darkGray}>{tag}</Paragraph>
-                                    </Card>
-                                )
-                            })}
-                        </Row>}
-                    </Column>
-                </Row>
-                <Divider height="100px" />
-            </WrapperCustom>
+                                <Link to={"/us/blog/tag/"+tag}>{tag}</Link>
+                            </Card>
+                        )
+                    })}
+                </Column>
+                <Column size="12" align="center">
+                    <H1
+                        type="h1"
+                        fontSize="36px"
+                        fs_lg="30px"
+                        textShadow="none">{post.frontmatter.title}</H1>
+                </Column>
+                <Column size="12" margin="10px 0px">
+                    <LazyLoad scroll={true} height={100} once={true} >
+                        <RoundImage border="1.25rem" width="100%" height="300px" bsize="contain" position="center" url={post.frontmatter.image} />
+                    </LazyLoad>
+                </Column>
+                <Column size="12"  margin="10px 0px" >
+                    <div className="single-post" dangerouslySetInnerHTML={{__html: post.html.replace(/<h1>.*<\/h1>/gm,"")}}></div>
+                </Column>
+                <Column size="12" margin="10px 0px 50px 0px" align="left">
+                    {post.frontmatter.tags && post.frontmatter.tags.map((tag, i) => {
+                        return (
+                            <Card
+                                key={i}
+                                color="darkGray"
+                                cursor="pointer"
+                                padding="5px 8px"
+                                display="inline-block"
+                                borders=".2rem"
+                                margin="5px 3px">
+                                {tag}
+                            </Card>
+                        )
+                    })}
+                </Column>
+            </Column>
         </Layout>)
 }
 export const postQuery = graphql`

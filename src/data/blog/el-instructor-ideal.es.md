@@ -45,7 +45,7 @@ Podríamos hacer una encuesta entre varios de nuestros compañeros de estudio y 
 
 -**Respecto a los participantes** **y Ética:** Estar atento de no emplear el rol de instructor, como elemento de coerción, influencia, petición de favores o bondades de parte de los participantes durante o después de la actividad. Por el contrario, debe desarrollar sistemas de comunicación claros, diáfanos y transparentes, que impidan el ejercicio del rumor, el tráfico de influencias o cualquier otro elemento que pueda poner de manifiesto discriminación o trato diferenciado basado en razones de edad, género, religión, color de piel, condición social o de alguna otra índole.
 
--**Manejo de conflictos: ** Debe ser capaz de resolver problemas en el mejor resultado para el estudiante.
+-**Manejo de conflictos:** Debe ser capaz de resolver problemas en el mejor resultado para el estudiante.
 
 **-Apariencia personal**: Aunque algunos no lo crean, cómo luce, los colores que lleva encima, influyen en la percecpión que los alumnos pueden tener de él/ella. Se recomienda optar por el color beige, kaki, marrón o colores pasteles para las actividades, clases que sean en las mañana o fines de semana. Vestimenta oscura es recomendada para ponencias, conferencias, charlas o clases magistrales.
 

@@ -45,7 +45,7 @@ Education needs to be delivered with technology, not only complemented by it. It
 Flipped Classrooms are trendy and that’s a tricky perspective because trends are abandoned at some point. People get tired and the solution could become a problem in a few years. That is why Flipped Classrooms -per se- are not the sole answer. What the educational system requires is a pragmatic, evolutionary and effective method to become better and adapt to the reality.
 
 
-### **The Focus **
+### **The Focus**
 
 
 It looks like we are just making a public statement: “We hate traditional education!”

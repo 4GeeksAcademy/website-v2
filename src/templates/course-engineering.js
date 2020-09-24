@@ -134,8 +134,8 @@ const Program = ({data, pageContext, yml}) => {
             shadow height="400px"
             width="100%"
             margin="10px 0px"
-            move="up"
-            up="100px">
+            transform="translateY(-100px)"
+          >
             <Row height="100%">
               <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
                 <Div flexDirection={`column`} height={`20%`} justifyContent={`space-between`}>
@@ -202,8 +202,8 @@ const Program = ({data, pageContext, yml}) => {
             height="400px"
             width="100%"
             margin="10px 0px"
-            move="up"
-            up="100px">
+            transform="translateY(-100px)"
+          >
             <Row height="100%">
               <Column size="10" customRespSize respSize="10" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
                 <Div flexDirection={`column`} height={`20%`}>

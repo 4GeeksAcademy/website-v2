@@ -388,8 +388,6 @@ const Calendar = (props) => {
                             overflow={`hidden`}
                             onMouseOver={() => setSelected(index)}
                             onClick={() => setSelected(index)}
-                            // move="up"
-                            // up="30%"
                             h_xs="auto"
                             h_sm="auto"
                             h_md="auto"
@@ -397,9 +395,8 @@ const Calendar = (props) => {
                             h_xl="auto"
                             width="100%"
                             color={index === selected ? 'grey' : 'white'}
-
                             shadow
-                            move="up">
+                            >
                             <img src={cohort.academy.logo_url}
                               style={{
                                 height: `130px`,
@@ -486,8 +483,6 @@ const Calendar = (props) => {
                         <a href={event.url} target="_blank" rel="noopener noreferrer">
                           <Card
                             overflow={`hidden`}
-                            // move="up"
-                            // up="30%"
                             h_xs="auto"
                             h_sm="auto"
                             h_md="auto"
@@ -497,7 +492,7 @@ const Calendar = (props) => {
                             color={index === selected ? 'grey' : 'white'}
 
                             shadow
-                            move="up">
+                            >
                             {!event.banner.indexOf("http") ?
                               <StyledBackgroundSection
                                 image={data.cohort_img.childImageSharp.fluid}

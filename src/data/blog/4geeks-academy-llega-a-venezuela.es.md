@@ -37,7 +37,7 @@ Para Marco, la demanda ha aumentado porque “también hay un crecimiento de par
 
 “A pesar de los esfuerzos de nuestras universidades e institutos por mantener currículos académicos vigentes, las tecnologías web llevan una evolución muy acelerada, lo que hace que los espacios de educación y capacitación tradicionales queden rezagados. Es allí donde 4Geeks Academy cumple un papel esencial, ya que cubre las necesidades inmediatas de capacitación técnica en tecnologías web de punta, permitiendo una rápida inserción laboral y una pronta atención a las necesidades técnicas que el mercado necesita”, enfatiza Marco Gómez.
 
-**El Curso **
+**El Curso**
 
 Una de las ventajas y promesas que brinda **4Geeks Academy**, es que las personas pueden formarse como programadores con los mejores instructores en un formato medio tiempo, sin dejar de lado su trabajo actual u otros estudios.
 

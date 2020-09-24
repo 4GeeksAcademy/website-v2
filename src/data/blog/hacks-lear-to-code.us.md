@@ -61,7 +61,7 @@ It has been shown that students can improve their way of understanding something
 
 How to apply it daily? Go to [Breathe Code](https://breatheco.de/). At first, you need to be clear about the topic. Everything we show you are backed up by images, videos, explanations, infographics, and even Emojis!  Now, if you need more, and you will need more for sure, start searching for images that are related to it. Read the information, understand it, and then, you can start making some sketches. Once you have some illustrations, make comparisons (between images and text), and the learning process will get easier. 
 
-The purpose of this technique is to be able to remember and understand the information accurately and be able to write about it or redraw everything effortlessly.** **
+The purpose of this technique is to be able to remember and understand the information accurately and be able to write about it or redraw everything effortlessly.
 
 
 ## **What we think about it. What does 4Geeks Academy think about these techniques?**

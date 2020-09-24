@@ -28,7 +28,7 @@ The idea is simple: keep the same motivation afloat.
 Let’s be honest, learning to code is like an emotional roller coaster. Our task is to unify them in a way that you can actually feel or understand where you are at some point.  
 
 
-## **Stage 1: The beginning:  Motivation & Anxiety **
+## **Stage 1: The beginning:  Motivation & Anxiety**
 
 
 It's normal to feel very motivated at the very beginning. A new career is about to get started. In your mind, there is an overabundance of hopes and high expectations about becoming a software developer.

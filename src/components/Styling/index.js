@@ -245,13 +245,10 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     opacity: 1;
     background-size: ${props => props.bgSize || "cover"};
     height: ${props => props.height};
+    maxWidth: ${props => props.maxWidth};
     &:before, &:after {
         border-radius: ${props => props.borderRadius};
         filter: ${props => props.filter};
-    }
-    @media ${Break.lg}{
-    }
-    @media ${Break.md}{
     }
     @media ${Break.sm}{
         height: ${props => props.height_sm};
@@ -259,9 +256,6 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
             border-radius: ${props => props.borderRadius_sm};
         }
     }
-    @media ${Break.xs} {
-    }
-
   `
 
 export const Small = styled.small`
@@ -288,15 +282,7 @@ export const Button = styled(SmartButton)`
             line-height: 1.5;
             margin: ${props => props.margin};
             font-weight: 500;
-            ${props => props.move === "up" ?
-                css`
-                transform: translateY(-${props => props.up});
-            `
-                : props.move === "down" &&
-                css`
-                transform: translateY(${props => props.down});
-            `
-            }
+            transform: ${props => props.transform};
         `
         :
         css`
@@ -320,15 +306,7 @@ export const Button = styled(SmartButton)`
             padding: ${props => props.padding};
             margin: ${props => props.margin};
             box-shadow: ${props => props.shadow};
-            ${props => props.move === "up" ?
-                css`
-                transform: translateY(-${props => props.up});
-            `
-                : props.move === "down" &&
-                css`
-                transform: translateY(${props => props.down});
-            `
-            }
+            transform: ${props => props.transform};
             ${props => props.colorHover &&
                 css`&:hover {
                     background-color: ${props => props.colorHover};

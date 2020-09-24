@@ -83,7 +83,7 @@ const Home = (props) => {
       {/* CREDENTIALS CARDS */}
 
       <Wrapper>
-        <Credentials up="80" lang={data.allCredentialsYaml.edges} />
+        <Credentials lang={data.allCredentialsYaml.edges} />
       </Wrapper>
 
       {/* WHY 4GEEKS SECTION */}

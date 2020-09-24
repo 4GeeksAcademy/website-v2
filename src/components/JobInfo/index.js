@@ -40,8 +40,7 @@ const JobInfo = () => {
                   width="100%"
                   shadow
                   padding="0 20px 0 40px"
-                  move="up"
-                  up="50%"
+                  transform="translate(-50%)"
                   margin="5px 0 10px 0"
                 >
                   <Row height="100%">

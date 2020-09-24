@@ -21,8 +21,7 @@ export default props => {
                 padding="15px"
                 shadow
                 align="center"
-                move="up"
-                up={(index % 2 !== 0) ? props.up + "px" : ((props.up * 20) / 100) + "px"}
+                transform={`translateY(-${(index % 2 !== 0) ? props.up + "px" : ((props.up * 20) / 100) + "px"})`}
               >
                 {(i.slug === "campuses" || i.slug === "campus") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
                 {(i.slug === "alumni" || i.slug === "graduados") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}

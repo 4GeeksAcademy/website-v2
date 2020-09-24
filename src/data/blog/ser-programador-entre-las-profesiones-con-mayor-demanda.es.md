@@ -88,7 +88,7 @@ El Departamento de Trabajo de Estados Unidos, realizó también **_[_un ránking
   * Auditores técnicos y contables
 
 
-**Así se cotizan los programadores **
+**Así se cotizan los programadores**
 
 Según un estudio presentado por la firma **_Funders & Founders_** sobre el estudio de los salarios de los programadores en 2014, los sueldos varían en función de la especialidad y los años de experiencia.
 

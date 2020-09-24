@@ -82,18 +82,15 @@ Check out your options on the chart below:
 
 </td>
 
-<td width="86" style="text-align: left;" >** **
+<td width="86" style="text-align: left;" >
 
 **$6,000**
-
-** **
 </td>
 
-<td width="90" style="text-align: left;" >** **
+<td width="90" style="text-align: left;" >
 
 **Apply for an Extended Payment Plan**
 
-** **
 </td>
 
 <td width="90" style="text-align: left;" > 
@@ -126,30 +123,30 @@ Check out your options on the chart below:
 
 </td>
 
-<td width="86" >** **
+<td width="86" >
 
 **No deposit**
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **$1,000**
 
-** **
+
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **$1,000**
 
-** **
+
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **$1,000**
 
-** **
+
 </td>
 </tr>
 <tr >
@@ -159,28 +156,28 @@ Check out your options on the chart below:
 **_Instalments amount_**
 </td>
 
-<td width="86" >** **
+<td width="86" >
 
 **Collected before program start date or in thirds**.**
 
-** **
+
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **$852.89**
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **$444.24**
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **$240.06**
 
-** **
+
 </td>
 </tr>
 <tr >
@@ -190,28 +187,28 @@ Check out your options on the chart below:
 **_Payment Schedule_**
 </td>
 
-<td width="86" >** **
+<td width="86" >
 
 **Collected before program start date or in thirds**.**
 
-** **
+
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **Every 30 days for 6 months from the start date.**
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **Every 30 days for 12 months from the start date.**
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **Every 30 days for 24 months from the start date.**
 
-** **
+
 </td>
 </tr>
 <tr >
@@ -221,26 +218,26 @@ Check out your options on the chart below:
 **_Total Payment_**
 </td>
 
-<td width="86" >** **
+<td width="86" >
 
 **$6,000**
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **$5,117.34 + Deposit**
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **$5,330.88 + Deposit**
 </td>
 
-<td width="90" >** **
+<td width="90" >
 
 **$5,761.44 + Deposit**
 
-** **
+
 </td>
 </tr>
 <tr >
@@ -250,17 +247,17 @@ Check out your options on the chart below:
 **_Payment Method_**
 </td>
 
-<td width="86" style="text-align: left;" >** **
+<td width="86" style="text-align: left;" >
 
 **Debit, Credit, Deposit, Wire Transfer or Zelle**
 </td>
 
-<td width="90" style="text-align: left;" >** **
+<td width="90" style="text-align: left;" >
 
 **Debit, Credit, Deposit, Wire Transfer or Zelle**
 </td>
 
-<td width="90" style="text-align: left;" >** **
+<td width="90" style="text-align: left;" >
 
 **Debit, Credit, Deposit, Wire Transfer or Zelle**
 </td>
@@ -268,7 +265,7 @@ Check out your options on the chart below:
 <td width="90" >
 
 
-** **
+
 
 
 

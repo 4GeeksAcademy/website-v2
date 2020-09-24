@@ -251,7 +251,7 @@ const Apply = (props) => {
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                     <Button type="submit"
                                         width="150px"
-                                        move="up" up="15px" color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue} textColor={Colors.white}
+                                        transform="translateY(-15px)" color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue} textColor={Colors.white}
                                         margin="2rem 0" padding=".45rem 3rem"
                                         disabled={formStatus.status === "loading" ? true: false}
                                     >{formStatus.status === "loading" ? "Loading..." : yml.left.button.button_text}</Button>

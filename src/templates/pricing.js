@@ -61,7 +61,7 @@ const Pricing = (props) => {
       {/* CREDENTIALS SECTION */}
       <Wrapper
       >
-        <Credentials up="80" lang={data.allCredentialsYaml.edges} />
+        <Credentials lang={data.allCredentialsYaml.edges} />
       </Wrapper>
       <Divider height="100px" />
       {/*  */}

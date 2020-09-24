@@ -54,12 +54,12 @@ export const defaultSession = {
     location: null,
     language: "en",
     utm: {
-        gclid: null,
-        utm_campaign: null,
-        utm_source: null,
-        utm_medium: null,
-        utm_content: null,
-        referral_code: null
+        gclid: undefined,
+        utm_campaign: undefined,
+        utm_source: undefined,
+        utm_medium: undefined,
+        utm_content: undefined,
+        referral_code: undefined
     }
 };
 function distance (lat1, lon1, lat2, lon2, unit) {
@@ -197,10 +197,12 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
     var latitude = null;
     var longitude = null;
     let storedSession = JSON.parse(localStorage.getItem("academy_session"));
-    let location = null;
-
-    if(seed.location){
-        location = locationsArray.edges.find(({ node }) => node.breathecode_location_slug === seed.location)
+    let { location, ...utm } = seed;
+    console.log("Incoming utm", utm)
+    console.log("Previous utm", previousSession.utm)
+    console.log("New utm", { ...previousSession.utm, ...utm })
+    if(location){
+        location = locationsArray.edges.find(({ node }) => node.breathecode_location_slug === location)
         if(location) location = location.node;
         else location = null;
         console.log("Hardcoded location", location)
@@ -257,14 +259,7 @@ export const initSession = async (previousSession, locationsArray, seed=null) =>
         upcoming: [], 
         
         // marketing utm info
-        utm: {
-            gclid: seed.gclid, 
-            utm_campaign: seed.utm_campaign, 
-            utm_source: seed.utm_source, 
-            utm_medium: seed.utm_medium, 
-            utm_content: seed.utm_content, 
-            referral_code: seed.referral_code,
-        },
+        utm: { ...previousSession.utm, ...utm },
 
         locations: locationsArray.nodes.filter(l => {
             const [ name, lang ] = l.fields.file_name.split(".");

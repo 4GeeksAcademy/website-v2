@@ -40,7 +40,7 @@ In fact, these [hybrid jobs](https://fortune.com/2019/03/21/hybrid-jobs-purple-s
 Sure, software can analyze data, but we need people to interpret the analysis, apply it and make sure it’s ethical and valid. 
 
 
-## **Hybrid Skills: not only software skills **
+## **Hybrid Skills: not only software skills**
 
 
 Have you heard about [purple squirrels](https://fortune.com/2019/03/21/hybrid-jobs-purple-squirrels/)? Yes, they don't exist in the real world but for today ́s recruiters are everything. A purple squirrel is the perfect job candidate, the one with the experience, education and eager to go further for becoming a multi-functional individual. Now you must have a combination of skills such as creative thinking and powerful analysis to succeed in business. Technology is a fundamental component of this trend but is not the exclusive force of it. 
@@ -74,7 +74,7 @@ Blending [multiple abilities](https://www.thebalancecareers.com/what-is-a-skill
 Coding is a vital skill that any purple squirrel should have. In a digitizing life, having some tech proficiency could be your ticket for innumerable professional opportunities. Learning to code will increase considerably your potential to be valuable at any company. Marketers, designers, IT,  and other professionals have needed learning to code intended to get better jobs and improve their lives. 
 
 
-## **How to be ready for a hybrid tech job? **
+## **How to be ready for a hybrid tech job?**
 
 
 It is a fact that the rise of hybrid jobs is increasing daily. To face this reality, you have to prepare yourself in [different disciplines](https://www.getsmarter.com/blog/employee-development/skills-of-the-future-workforce-upskilling-for-hybrid-jobs/) that go beyond your professional area. Having technological and digital skills is fundamental if you want to succeed in that hybrid position. [Learning to code](https://www.4geeksacademy.co/hacks-lear-to-code/) is no longer a limited task only for programming students. Having basic knowledge about programming, coding and web development is essential in today's world for getting new jobs, even if it is not your main work area. 

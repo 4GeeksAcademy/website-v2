@@ -64,7 +64,7 @@ const Partners = (props) => {
       </WrapperImage>
       <Wrapper
         >
-        <Credentials move="up" up="100" lang={data.allCredentialsYaml.edges} />
+        <Credentials transform="translate(-100px)" lang={data.allCredentialsYaml.edges} />
       </Wrapper>
       <Divider height="50px" />
       <Wrapper

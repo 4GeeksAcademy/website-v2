@@ -48,7 +48,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 <tbody >
 <tr >
 
-<td width="117" >** **
+<td width="117" >
 </td>
 
 <td width="117" style="text-align: center;" >
@@ -110,7 +110,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Hours**
 
-** **
+
 </td>
 
 <td width="117" style="text-align: center;" >350+ hours
@@ -129,7 +129,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Type of training**
 
-** **
+
 </td>
 
 <td width="117" >Wyncode trains students with a mix of web development and entrepreneurial lessons. You will also learn full stack web development.
@@ -151,7 +151,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Dedication required**
 
-** **
+
 </td>
 
 <td width="117" >Most students say that they practically move out to Wyncode for 9 weeks.  It's a very immersive experience.
@@ -173,7 +173,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Schedule**
 
-** **
+
 </td>
 
 <td width="117" >Full-time: 9AM-6PM, Monday to Friday.
@@ -195,7 +195,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Mentorship**
 
-** **
+
 </td>
 
 <td width="117" >Wyncode has in-class mentoring sessions.
@@ -217,7 +217,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Teacher: Student Ratio**
 
-** **
+
 </td>
 
 <td width="117" >
@@ -253,7 +253,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Hiring rate**
 
-** **
+
 </td>
 
 <td width="117" >
@@ -289,7 +289,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Price**
 
-** **
+
 </td>
 
 <td width="117" style="text-align: center;" >$11,500 total tuition
@@ -307,7 +307,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Financing**
 
-** **
+
 </td>
 
 <td width="117" >They have a partnership with Pave and Climb for 36 months financing. 
@@ -325,7 +325,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Pre-work**
 
-** **
+
 </td>
 
 <td width="117" >
@@ -354,7 +354,7 @@ IronHack has a paid pre-work for all their students:
 
 <td width="117" >**Technologies**** used**
 
-** **
+
 </td>
 
 <td width="117" >
@@ -391,7 +391,7 @@ Ruby, JavaScript, and Rails.
 
 <td width="117" >**Academic content platform**
 
-** **
+
 </td>
 
 <td width="117" >
@@ -431,7 +431,7 @@ NO
 
 <td width="117" >**Deposit**
 
-** **
+
 </td>
 
 <td width="117" >
@@ -471,7 +471,7 @@ No Deposit!
 
 <td width="117" >**Location**
 
-** **
+
 </td>
 
 <td width="117" style="text-align: center;" >Wynwood
@@ -515,7 +515,7 @@ Downtown (Building.co)
 
 <td width="117" >**Hiring partners**
 
-** **
+
 </td>
 
 <td width="117" >

@@ -22,7 +22,9 @@ const WhoIsHiring = props => {
               <StyledBackgroundSection
                 image={item.image.childImageSharp.fluid}
                 alt={item.alt}
+                margin="auto"
                 height="60px"
+                maxWidth="100px"
                 bgSize={`contain`}
                 margin={`1rem`}
               ></StyledBackgroundSection>

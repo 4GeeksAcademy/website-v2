@@ -43,11 +43,12 @@ export const withSession = Component => {
             const urlParams = new URLSearchParams(window.location.search);
             initSession(session, data.allLocationYaml, {
               location: urlParams.get('location') || null,
-              gclid: urlParams.get('gclid') || urlParams.get('fbclid'),
-              utm_medium: urlParams.get('utm_medium'),
-              utm_campaign: urlParams.get('utm_campaign'),
-              utm_content: urlParams.get('utm_content'),
-              utm_source: urlParams.get('utm_source'),
+              gclid: urlParams.get('gclid') || urlParams.get('fbclid') || undefined,
+              utm_medium: urlParams.get('utm_medium') || undefined,
+              utm_campaign: urlParams.get('utm_campaign') || undefined,
+              utm_content: urlParams.get('utm_content') || undefined,
+              utm_source: urlParams.get('utm_source') || undefined,
+              referral_code: urlParams.get('referral_code') || undefined,
             })
               .then(_session => {
                 setSession(_session)

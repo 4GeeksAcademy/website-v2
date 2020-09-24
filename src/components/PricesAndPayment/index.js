@@ -216,7 +216,7 @@ const PricesAndPayments = (props) => {
         </Column>
         {prova.currentCityLocation.hasFinancialsOption &&
           <Column size="4" size_sm="12" customRespSize respSize="12">
-            <Card shadow width="100%" height="400px" margin="5px 0" color="black" move="up" up="20px">
+            <Card shadow width="100%" height="400px" margin="5px 0" color="black" transform="translateY(-20px)">
               <Row height="100px" >
                 <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
                   <Row height="100%" >
