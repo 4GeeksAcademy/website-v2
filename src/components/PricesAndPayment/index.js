@@ -33,7 +33,7 @@ const PricesAndPayments = (props) => {
     steps: [],
     currentFilteredCourse: ""
   }
-  if (session && session.location) {
+  if (session) {
     let currentLocation = props.locations.find(l => l.node.meta_info.slug === session.location.meta_info.slug)
 
     if (currentLocation) {
@@ -116,7 +116,7 @@ const PricesAndPayments = (props) => {
                 fs_lg="18px"
                 fs_xl="20px"
                 margin={`0 5px 0 0`}>
-                {session && session?.location?.city}
+                {session && session.location && session.location.city}
               </Paragraph>
               <TriangleDown width="16" color={Colors.gray} fill={Colors.gray} />
             </Button>
