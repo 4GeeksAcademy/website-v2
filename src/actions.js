@@ -184,6 +184,13 @@ export const beHiringPartner = async (data,session) => {
     return await save_form(body, ['hiring-partner'], ['hiring-partner'], session);
     
 }
+export const applyJob = async (data) => {
+    console.log("New job application", data);
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    //return await save_form(body, ['hiring-partner'], ['hiring-partner']);
+}
 export const contactUs = async (data,session) => {
     console.log("Succesfully contact us", data)
     let body = {};

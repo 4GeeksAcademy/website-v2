@@ -2,7 +2,7 @@ import React, {createContext, useState, useEffect} from "react";
 import {useStaticQuery, graphql} from 'gatsby';
 import { initSession, defaultSession, setTagManaerVisitorInfo } from "./actions"
 
-export const SessionContext = createContext(null);
+export const SessionContext = createContext(defaultSession);
 
 export default ({children}) => {
     const data = useStaticQuery(graphql`

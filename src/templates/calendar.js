@@ -59,7 +59,7 @@ const Calendar = (props) => {
   const [filterType, setFilterType] = useState();
   const [filterCity, setFilterCity] = useState();
   const [test, setTest] = useState([]);
-  const [filterByCity, setFilterByCity] = useState(() => session.location ? [session.location.city] : ["Locations"]);
+  const [filterByCity, setFilterByCity] = useState(() => session?.location ? [session.location.city] : ["Locations"]);
   const [filterByType, setFilterByType] = useState(["Courses"]);
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=santiago-chile
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true
@@ -383,7 +383,7 @@ const Calendar = (props) => {
                   return (
                     <>
                       <Column size="4" size_sm="12" key={index} margin="0 0 1rem 0">
-                        <Link to={`/${session.language}/${cohort.certificate.slug}`}>
+                        <Link to={`/${session?.language}/${cohort.certificate.slug}`}>
                           <Card
                             overflow={`hidden`}
                             onMouseOver={() => setSelected(index)}

@@ -127,7 +127,7 @@ const LeadForm = ({heading, formHandler, data, handleClose, lang}) => {
                                 required
                                 style={{marginBottom: "5px"}}
                             />
-                            {session.location && session.location.gdpr_compliant &&
+                            {session?.location?.gdpr_compliant &&
                                 <Paragraph fontSize="14px" margin="5px 0 0 0">
                                     <input
                                         name="isGoing"

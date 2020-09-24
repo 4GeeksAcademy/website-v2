@@ -214,7 +214,7 @@ const Apply = (props) => {
                                 </Row>
                                 <Row>
                                     {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
-                                    { session.locations && session.locations.map(l => 
+                                    { session?.locations.map(l => 
                                         <Column key={l.active_campaign_location_slug} size="6" size_md="12" paddingRight="0px" paddingLeft="0px" paddingTop="3px">
                                             <Button 
                                                 color={l.active_campaign_location_slug === formData.location.value ? Colors.lightYellow : Colors.lightGray} 
@@ -235,7 +235,7 @@ const Apply = (props) => {
                                     />
                                     <Paragraph padding="0" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.referral_section.content}</Paragraph>
                                 </Row>
-                                {session.location && session.location.gdpr_compliant &&
+                                {session?.location.gdpr_compliant &&
                                      <Row marginTop="10px">
                                         <Paragraph fontSize="14px" margin="5px 0 0 0">
                                             <input
