@@ -18,9 +18,9 @@ intro:
   image: "/images/pricing.png"
   content: "Our program was specifically built to efficiently deliver the most current and essential tech knowledge and skills, while remaining as an affordable -yet growing- Bootcamp."
 
-## PRICES AND PAYMENTS SECTION
+## TUITION AND PAYMENTS SECTION
 prices:
-  heading: "PRICES AND PAYMENTS"
+  heading: "TUITION AND PAYMENTS"
 
 ## PAYMENT GUIDE SECTION
 payment_guide:
