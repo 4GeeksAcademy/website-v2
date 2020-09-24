@@ -10,14 +10,14 @@ meta_info:
 header_data:
   #Empowering talent with code by providing flexible educational experiences
   tagline: EMPOWERING TALENT WITH CODING CAREERS
-  sub_heading: "We are specialist of code, the place were developers grow and thrive."
+  sub_heading: "We are specialist of code. 4Geeks is the place were developers grow and thrive."
   image: "../../../static/images/bg/the-academy-bg.jpg"
   alt: ""
 
 ## 4GEEKS OUTCOMES
 outcomes:
   heading: "4GEEKS OUTCOMES"
-  sub_heading: "out of our total students, 76% are looking to get a job right after and 24% are pursuing to improve their skills or launch startups"
+  sub_heading: "76% of our total students are looking to get a job right after the program, and 24% are pursuing to improve their skills or launch startups"
   ## The field image is gonna be replaced from a dinamic chart generator
   image: "/images/program-charts.png"
   left:
