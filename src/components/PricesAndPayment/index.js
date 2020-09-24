@@ -24,6 +24,7 @@ import Fragment from "../Fragment"
 const PricesAndPayments = (props) => {
 
   const {session, setSession} = useContext(SessionContext);
+  console.log("session", session)
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [cityToggle, setCityToggle] = useState(false);
@@ -33,7 +34,7 @@ const PricesAndPayments = (props) => {
     steps: [],
     currentFilteredCourse: ""
   }
-  if (session) {
+  if (session && session.location) {
     let currentLocation = props.locations.find(l => l.node.meta_info.slug === session.location.meta_info.slug)
 
     if (currentLocation) {

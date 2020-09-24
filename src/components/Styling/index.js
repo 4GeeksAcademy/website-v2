@@ -263,7 +263,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
 export const Small = styled.small`
     display: ${props => props.display};
 `
-const SmartButton = ({children, colorHover, textColor, borderRadius, outline, maxWidth, ...rest}) => <button {...rest}>{children}</button>;
+const SmartButton = ({children, colorHover, alignItems, textColor, borderRadius, outline, maxWidth, ...rest}) => <button {...rest}>{children}</button>;
 export const Button = styled(SmartButton)`
     ${props => props.outline
         ?
