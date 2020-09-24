@@ -21,24 +21,24 @@ tags:
 - wyncode
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+featured: true
 ---
 
-We are sure that every potential student is asking the same question:  Which is the best coding academy (development bootcamp) in Miami?
+We are sure that every potential student is asking the same question:  Which is the best coding academy (development bootcamp) in Miami?
 
 **A short and expected answer is the same: It depends!**
 
-When you have several options (but mainly 3 most recognizable) in the same market, all of them are trying to build the difference; the coding bootcamps market in Miami is not the exception.  I consider Miami a very lucky place because 24 months ago there were no coding bootcamps in Miami, and now we have 3 great academies with a lot of experience in teaching and proven success.
+When you have several options in the same market, all of them are trying to build the difference; the coding bootcamps market in Miami is not the exemption.  I consider Miami a very lucky place because 4 years ago there were no coding bootcamps in Miami, and now we have 3 great academies -and other good options as well- with a lot of experience in teaching web development (first, our main added value. At 4Geeks we tech Software developemnt, not just web).
 
 
 ### It is not about the best academy in Miami
 
 
-The real question is: Which is the best Bootcamp for me?  Learn all the pros and cons of each academy and make a decision-based on your own priorities, needs, and values.
+The real question is: Which is the best Bootcamp for me?  Learn all the pros and cons of each academy and make a decision-based on your own priorities, needs, and values.
 
 **Quick Fact!**
 
-There are over 23,000 open jobs NOW in Miami for Software Developers.  So, there is plenty of space for all of us.
+There are over 20,000 open jobs NOW in Miami for Software Developers.  So, there is plenty of space for all of us.
 
 
 ### Let's cut to the chase and start the comparison:
@@ -48,7 +48,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 <tbody >
 <tr >
 
-<td width="117" >** **
+<td width="117" >** **
 </td>
 
 <td width="117" style="text-align: center;" >
@@ -83,13 +83,13 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 <td width="117" >**Background**
 </td>
 
-<td width="117" >They are a local initiative founded with the support of the Knight Foundation. They started in Wynwood and now they have opened another location in Fort Lauderdale. They started the project in April 2015.
+<td width="117" >They are a local initiative launched with the support of the Knight Foundation. They started in Wynwood and and they have remained building their market there. Wyncode was launched back in 2015.
 </td>
 
-<td width="117" >Was born out the necessity of developers at 4Geeks, a software development company with more than 9 years of experience. We are a Miami based Bootcamp, with 5 Locations across three (3) different cities. We launched the company in October 2015. [Learn more about our history here.](https://4geeksacademy.co/4geeks-academy-history/)
+<td width="117" >Launched in Miami by Alejandro and Marcelo. Now we have over 7 Campuses across the US, Central and Sout America, and Europe. We have graduated over 1000 students already. We launched the company in October 2015. [Learn more about our history here.](https://4geeksacademy.co/4geeks-academy-history/)
 </td>
 
-<td width="117" >Miami is the third location for IronHack, they have other locations in Madrid and Barcelona (Spain). They started the project in late 2013. 
+<td width="117" >IronHack has a campus in Miami and in other 8 cities. They started the project in late 2014. 
 </td>
 </tr>
 <tr >
@@ -97,53 +97,52 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 <td width="117" >**Experience**
 </td>
 
-<td width="117" >Is the fastest growing Bootcamp in Miami, in the past 10 months they have graduated more than 100 students; they are part of [NESTA](http://www.thenesta.org/) and have support from Knight Foundation.
+<td width="117" >They have good support from the community. Their founders attended a Bootcamp in Canada, and they are part of [NESTA](http://www.thenesta.org/).
 </td>
 
-<td width="117" >We already have more than 300 graduates across 5 Locations. We are certified by the Florida Department of Education, and we also have a strong alliance with Miami Dade College. 
+<td width="117" >Alejandro has over 20 years of Coding Experience (Software Engineer) and Marcelo has launched, built and sold (also a couple of failures) over 6 startups in the last 10 years. We are Licensed by the Florida Department of Education, and we also have a strong alliance with Miami Dade College. 
 </td>
 
-<td width="117" >IronHack is pretty known in Spain, if not the best; they are one of the top bootcamps there, with courses in Barcelona and Madrid.
+<td width="117" >IronHack has a strong market in Europe. Their outcomes are legit and they have been growing fast, They are also backed by some VC's.
 </td>
 </tr>
 <tr >
 
 <td width="117" >**Hours**
 
-** **
+** **
 </td>
 
 <td width="117" style="text-align: center;" >350+ hours
-(40+ hours week for 9 weeks) 
+(35+ hours week for 10 weeks) 
 </td>
 
-<td width="117" style="text-align: center;" >320+ hours
-(25+ hours per week for 14 weeks) 
+<td width="117" style="text-align: center;" >380+ hours
+(25+ hours per week for 16 weeks) or 400 hours (40+ hours per week for 9 weeks)
 </td>
 
 <td width="117" style="text-align: center;" >360+ hours 
-(40+ hours per week for 8 weeks) 
+(40+ hours per week for 8 weeks) 
 </td>
 </tr>
 <tr >
 
 <td width="117" >**Type of training**
 
-** **
+** **
 </td>
 
-<td width="117" >Wyncode trains students with a mix of web development and entrepreneurial lessons. You will also learn full stack web development.
+<td width="117" >Wyncode trains students with a mix of web development and entrepreneurial lessons. You will also learn full stack web development based in Ruby.
 
- 
+ 
 </td>
 
-<td width="117" >We focus all our energy on getting the students ready for real life coding jobs in web development.  We use a full stack web development syllabus.
+<td width="117" >We focus all our energy in getting the students ready for real life coding jobs in software development.  Our Syllabus is based on JS, React, and Python. We are the only one with a Software Engineering Program.
 
- 
+ 
 </td>
 
-<td width="117" >They also focus all their energy on preparing students for web development, with a full stack web development syllabus.
-
+<td width="117" >Their programs are Web dev and UI/UX (recentely launched a Data Course). 
 
 </td>
 </tr>
@@ -151,79 +150,78 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Dedication required**
 
-** **
+** **
 </td>
 
-<td width="117" >Most students say that they practically move out to Wyncode for 9 weeks.  It's a very immersive experience.
+<td width="117" >Most students say that they practically move out to Wyncode for 9 weeks.  It's a very immersive experience.
 
- 
+ 
 </td>
 
-<td width="117" >Part-time focused.  10 hours of in-person classes and 10+ hours more of practice, building projects and learning all the content designed to enhance your career. 
-
- 
+<td width="117" >Part-time focused, and probably the best doing that. Full-Time programs are also available. Coding all the time, with unlimited access to mentors and a lifelong Support.
+ 
 </td>
 
 <td width="117" >IronHack says that you need 110% dedication to the course; you cannot do anything else for 9 weeks.
 
- 
+ 
 </td>
 </tr>
 <tr >
 
 <td width="117" >**Schedule**
 
-** **
+** **
 </td>
 
 <td width="117" >Full-time: 9AM-6PM, Monday to Friday.
 
- 
+ 
 </td>
 
-<td width="117" >Part-time: 6PM-9PM, three classes (3) per week. 
+<td width="117" >Part-time: 6PM-9PM, three classes (3) per week. Or FT from 9am to 6pm for 9 weeks (real immersive as well). 
 
- 
+ 
 </td>
 
 <td width="117" >Full-time: 9AM-8PM, Monday to Friday.
 
- 
+ 
 </td>
 </tr>
 <tr >
 
 <td width="117" >**Mentorship**
 
-** **
+** **
 </td>
 
 <td width="117" >Wyncode has in-class mentoring sessions.
 
- 
+ 
 </td>
 
-<td width="117" >In addition to the in-class mentorship, we have a special program in which you can ask for a remote one-on-one mentoring session whenever and wherever you want.
+<td width="117" >Online and In-Person. We have a special program in which you can ask for a remote one-on-one mentoring session whenever and wherever you want.
 
- 
+ 
 </td>
 
-<td width="117" >IronHack has in-class mentoring sessions.
+<td width="117" >IronHack has in-person and Remote mentoring sessions.
 
- 
+ 
 </td>
 </tr>
 <tr >
 
 <td width="117" >**Teacher: Student Ratio**
 
-** **
+** **
 </td>
 
 <td width="117" >
 
 
-1 : 8
+1 : 10
 
 
 
@@ -232,7 +230,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 </td>
 
-<td width="117" style="text-align: center;" >1 : 7
+<td width="117" style="text-align: center;" >1 : 5
 
 
 </td>
@@ -240,7 +238,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 <td width="117" >
 
 
-1 : 8
+1 : 9
 
 
 
@@ -253,13 +251,13 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Hiring rate**
 
-** **
+** **
 </td>
 
 <td width="117" >
 
 
-90%
+85%
 
 
 
@@ -268,7 +266,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 </td>
 
-<td width="117" style="text-align: center;" >90%
+<td width="117" style="text-align: center;" >86%
 
 
 </td>
@@ -276,7 +274,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 <td width="117" >
 
 
-92%
+86%
 
 
 
@@ -289,49 +287,49 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 <td width="117" >**Price**
 
-** **
+** **
+</td>
+
+<td width="117" style="text-align: center;" >$12,500 total tuition
+(special discounts for veterans and women) 
+</td>
+
+<td width="117" style="text-align: center;" >$7,499 (PT) or $9,499 (FT)
 </td>
 
 <td width="117" style="text-align: center;" >$11,500 total tuition
-(special discounts for veterans and women) 
-</td>
-
-<td width="117" style="text-align: center;" >$6,000 total tuition
-</td>
-
-<td width="117" style="text-align: center;" >$11,000 total tuition
-($500+ Scholarships may apply) 
+($500+ Scholarships may apply) 
 </td>
 </tr>
 <tr >
 
 <td width="117" >**Financing**
 
-** **
+** **
 </td>
 
-<td width="117" >They have a partnership with Pave and Climb for 36 months financing. 
+<td width="117" >They have a partnership with Pave and Climb for 36 months financing. 
 </td>
 
-<td width="117" >We have our very own Extended Payment Plan. You apply to a very simple process designed to accommodate your financial possibilities. 
+<td width="117" >Skills Fund, Climb, and first ISA in Florida. We also have our very own Extended Payment Plan. You apply to a very simple process designed to accommodate your financial possibilities. 
 </td>
 
 <td width="117" >Financing information available upon request.
 
- 
+ 
 </td>
 </tr>
 <tr >
 
 <td width="117" >**Pre-work**
 
-** **
+** **
 </td>
 
 <td width="117" >
 
 
-Wyncode has no pre-work or technical preparation for the course.
+Wyncode does not mandatory request a pre-work or technical preparation for the course.
 
 
 
@@ -343,18 +341,18 @@ Wyncode has no pre-work or technical preparation for the course.
 <td width="117" >
 
 
-IronHack has a paid pre-work for all their students:
+IronHack has a paid pre-work for all their students:
 3+ weeks, remote and part-time.
 
 
- 
+ 
 </td>
 </tr>
 <tr >
 
-<td width="117" >**Technologies**** used**
+<td width="117" >**Technologies**** used**
 
-** **
+** **
 </td>
 
 <td width="117" >
@@ -366,14 +364,14 @@ Ruby and Rails.
 
 
 
- 
+ 
 
 
 
 </td>
 
 <td width="117" style="text-align: center;" >Full stack:
-JavaScript, ReactJS, PythonPHP and WordPress, PHP and WordPress
+JavaScript, ReactJS, Context, Flux, Python, API's, SQLAlquemy and Flask
 ([Learn here why we teach PHP](https://4geeksacademy.co/4geeks-academy-teaches-php-backend-language/))
 </td>
 
@@ -381,17 +379,17 @@ JavaScript, ReactJS, PythonPHP and WordPress, PHP and WordPress
 
 
 Full stack:
-Ruby, JavaScript, and Rails.
+MERN
 
 
- 
+ 
 </td>
 </tr>
 <tr >
 
 <td width="117" >**Academic content platform**
 
-** **
+** **
 </td>
 
 <td width="117" >
@@ -402,7 +400,7 @@ NO
 
 
 
- 
+ 
 
 
 
@@ -410,18 +408,18 @@ NO
 
 <td width="117" style="text-align: center;" >YES
 
- 
+ 
 </td>
 
 <td width="117" >
 
 
-NO
+YES
 
 
 
 
- 
+ 
 
 
 
@@ -431,7 +429,7 @@ NO
 
 <td width="117" >**Deposit**
 
-** **
+** **
 </td>
 
 <td width="117" >
@@ -442,7 +440,7 @@ $1,000 credit card deposit to reserve.
 
 
 
- 
+ 
 
 
 
@@ -456,42 +454,32 @@ No Deposit!
 
 
 
- 
+ 
 
 
 
 </td>
 
-<td width="117" >                             $1,000 deposit.
+<td width="117" >                             $1,000 deposit.
 
- 
+ 
 </td>
 </tr>
 <tr >
 
 <td width="117" >**Location**
 
-** **
+** **
 </td>
 
 <td width="117" style="text-align: center;" >Wynwood
-Fort Lauderdale (FAT Village) 
+Fort Lauderdale (FAT Village) 
 </td>
 
 <td width="117" >
 
 
-Miami Dade College 
-
-
-
-
-&
-
-
-
-
-Downtown Miami (Starthub) 
+Brikell with a beautiful terrace!
 
 
 
@@ -500,12 +488,12 @@ Downtown Miami (Starthub) 
 <td width="117" >
 
 
-Downtown (Building.co)
+Downtown (Building.co) with a nice terrace as well.
 
 
 
 
- 
+ 
 
 
 
@@ -515,7 +503,7 @@ Downtown (Building.co)
 
 <td width="117" >**Hiring partners**
 
-** **
+** **
 </td>
 
 <td width="117" >
@@ -526,7 +514,7 @@ Strong and very close relations with potential employers.
 
 
 
- 
+ 
 
 
 
@@ -534,7 +522,7 @@ Strong and very close relations with potential employers.
 
 <td width="117" style="text-align: center;" >Strong and very close relations with potential employers.
 
- 
+ 
 </td>
 
 <td width="117" >
@@ -545,7 +533,7 @@ Strong and very close relations with potential employers.
 
 
 
- 
+ 
 
 
 
@@ -553,12 +541,12 @@ Strong and very close relations with potential employers.
 </tr>
 </tbody>
 </table>
-As you can see, the bootcamps in Miami vary a lot depending on your needs.  At 4Geeks Academy we believe in "part-time education" because it's the best way to keep up your life while you take the time to become a developer.
+As you can see, the bootcamps in Miami vary a lot depending on your needs.  At 4Geeks Academy we believe in "part-time education" because it's the best way to keep up your life while you take the time to become a developer.
 
-Here you can read more about: [Why we think part-time studies are the future.](https://4geeksacademy.co/one-on-one-mentorship-program-of-4geeks-academy/)
+Here you can read more about it: [Why we think part-time studies are the future.](https://4geeksacademy.co/one-on-one-mentorship-program-of-4geeks-academy/)
 
-Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](http://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
+Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](http://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
 
 If you want to get more into detail, you can read our [comparison between 4Geeks Academy and Wyncode.](https://4geeksacademy.co/wyncode-vs-4geeks-academy-programming-bootcamp-better-investment/)
 
-Finally, we want to remain not just the most affordable academy between the three (by far), but we also want to be the most accessible one. This is why we have opened our pre-work free for everybody.  If you want to sign-up, [click here](https://4geeksacademy.co/course/web-development-parttime/).
+Finally, we want to remain not just the most affordable academy between the three (by far), but we also want to be the most accessible one. This is why we have opened our pre-work free for everybody.  If you want to sign-up, [click here](https://4geeksacademy.co/course/web-development-parttime/).
