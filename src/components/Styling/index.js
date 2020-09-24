@@ -4,7 +4,7 @@ import {Device, Break} from '../Responsive';
 import {Paragraph} from '../Heading';
 import BackgroundImage from 'gatsby-background-image'
 import {graphql, StaticQuery, Link} from 'gatsby'
-import { Location } from '@reach/router'
+import {Location} from '@reach/router'
 // COLORS SET
 
 export const Colors = {
@@ -305,6 +305,7 @@ export const Button = styled(SmartButton)`
             vertical-align: middle;
             display: ${props => props.display};
             align-items: ${props => props.alignItems};
+            justify-content: ${props => props.justifyContent};
             padding: ${props => props.padding};
             margin: ${props => props.margin};
             box-shadow: ${props => props.shadow};
@@ -360,33 +361,33 @@ Over.defaultProps = {
 };
 
 
-const SmartLink = ({ children, state, ...rest }) => (
-  <Location>
-    {({ location }) => (
-        //make sure user's state is not overwritten
-      <Link {...rest} state={{ prevUrl: location.href, ...state}}>
-        { children }
-      </Link>
-    )}
-  </Location>
+const SmartLink = ({children, state, ...rest}) => (
+    <Location>
+        {({location}) => (
+            //make sure user's state is not overwritten
+            <Link {...rest} state={{prevUrl: location.href, ...state}}>
+                { children}
+            </Link>
+        )}
+    </Location>
 )
 
-export { SmartLink as Link }
+export {SmartLink as Link}
 
 
 const linkRegex = new RegExp("http")
-const StyledLink = ({ children, ...rest }) => {
+const StyledLink = ({children, ...rest}) => {
     let Comp = Link;
     let props = {}
-    if(linkRegex.test(rest.to)){
-      props.href = rest.to;
-      props.target = "_blank";
-      props.rel = "noopener noreferrer nofollow"
-      Comp = "a";
+    if (linkRegex.test(rest.to)) {
+        props.href = rest.to;
+        props.target = "_blank";
+        props.rel = "noopener noreferrer nofollow"
+        Comp = "a";
     }
-    return <Comp { ...Object.assign(props, rest) }>
-        { children }
-      </Comp>;
+    return <Comp {...Object.assign(props, rest)}>
+        {children}
+    </Comp>;
 };
 export const Anchor = styled(StyledLink)`
   display: ${props => props.display || "block"};

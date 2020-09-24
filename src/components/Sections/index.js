@@ -5,7 +5,7 @@ import {Colors, StyledBackgroundSection} from '../../components/Styling'
 import {Device, Break} from '../Responsive'
 import {Paragraph} from '../Heading'
 import Fragment from "../Fragment"
-import { InsertChartOutlinedTwoTone } from '@material-ui/icons';
+import {InsertChartOutlinedTwoTone} from '@material-ui/icons';
 
 const containerVariants = {
     fluid: {
@@ -18,7 +18,7 @@ const containerVariants = {
 export const Container = styled(Fragment)`
 
     ${props => props.variant === "fixed" ?
-            css`
+        css`
             max-width: 1140px;
             @media ${Break.lg}{
                 max-width: 960px;
@@ -32,7 +32,7 @@ export const Container = styled(Fragment)`
             @media ${Break.xs}{
                 max-width: 540px;
             }
-            `:''
+            `: ''
     }
     width: ${props => containerVariants[props.variant || "fixed"]};
     height: ${props => props.height};
@@ -99,6 +99,7 @@ export const Row = styled(Fragment)`
         ${props => props.customRespSize
         ? css`justify-content: ${props => props.alignResp};`
         : css`justify-content: center;`};
+        flex-direction: ${props => props.flexDirection_sm};
     }
     @media ${Break.xs}{
         width: ${props => props.width_xs};
@@ -239,9 +240,9 @@ export const Column = styled.div`
 `
 
 export const Wrapper = (props) => {
-    return <Container 
-        github={props.github} 
-        margin={props.margin} 
+    return <Container
+        github={props.github}
+        margin={props.margin}
         variant="fluid"
     >
         <Row>
@@ -274,12 +275,12 @@ export const Wrapper = (props) => {
 }
 
 export const WrapperImage = (props) => {
-    return <Container 
-            margin={props.margin} 
-            p_xs="0" 
-            github={props.github} 
-            variant="fluid"
-        >
+    return <Container
+        margin={props.margin}
+        p_xs="0"
+        github={props.github}
+        variant="fluid"
+    >
         <Row>
             <Column size="1" />
             <Column
