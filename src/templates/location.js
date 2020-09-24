@@ -344,6 +344,7 @@ export const query = graphql`
       edges{
         node{
             seo_title
+            active_campaign_location_slug
             breathecode_location_slug
             header{
                 tagline

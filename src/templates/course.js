@@ -459,6 +459,8 @@ export const query = graphql`
           city
           hasFinancialsOption
           financials_max_months
+          active_campaign_location_slug
+          breathecode_location_slug
           fields{
             lang
           }

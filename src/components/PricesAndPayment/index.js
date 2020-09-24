@@ -24,7 +24,6 @@ import Fragment from "../Fragment"
 const PricesAndPayments = (props) => {
 
   const {session, setSession} = useContext(SessionContext);
-  console.log("session", session)
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [cityToggle, setCityToggle] = useState(false);
@@ -35,7 +34,7 @@ const PricesAndPayments = (props) => {
     currentFilteredCourse: ""
   }
   if (session && session.location) {
-    let currentLocation = props.locations.find(l => l.node.meta_info.slug === session.location.meta_info.slug)
+    let currentLocation = props.locations.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
 
     if (currentLocation) {
       currentLocation = currentLocation.node
@@ -45,6 +44,7 @@ const PricesAndPayments = (props) => {
         currentFilteredCourse: currentLocation.prices[props.course]
       }
     }
+    else console.log("Problem finding location on ", props.locations)
   }
 
   if (!prova.currentFilteredCourse) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
