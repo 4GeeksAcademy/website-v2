@@ -36,77 +36,48 @@ const JobInfo = () => {
             <Row key={index}>
               <Column>
                 <Card
+                  style={{position: "relative"}}
                   height="100px"
                   width="100%"
                   shadow
-                  padding="0 20px 0 40px"
-                  transform="translate(-50%)"
+                  padding="20px"
                   margin="5px 0 10px 0"
                 >
-                  <Row height="100%">
-                    <Column size="10" customRespSize respSize="10">
-                      <Row height="100%">
-                        <Column size="12">
-                          <Divider height="10%" />
-                          <Row height="40%" >
-                            <Column size="12">
-                              <H4
-                                fs_xs="18px"
-                                fs_sm="20px"
-                                fs_md="20px"
-                                fs_lg="20px"
-                                fs_xl="24px"
-                                color={Colors.black}>{item.node.banner_heading}</H4>
-                            </Column>
-                          </Row>
-                          <Divider height="10%" />
-                          <Row height="20%">
-                            {
-                              item.node.cities.map((city, index) => {
-                                return (
-                                  <Column key={index} size="2" customRespSize respSize="3">
-                                    <Card
-                                      padding="1px 10px"
-                                      h_xs="10px"
-                                      h_sm="10px"
-                                      h_md="10px"
-                                      h_lg="10px"
-                                      h_xl="10px"
-                                      borders=".25rem"
-                                      width="100%"
-                                      color={Colors.lightGray}
-                                    >
-                                      <Row align="around" height="100%">
-                                        <Column size="12" alignSelf="center">
-                                          <Paragraph
-                                            color={Colors.gray}
-                                            align="center"
-                                            fs_xs="8px"
-                                            fs_sm="10px"
-                                            fs_md="10px"
-                                            fs_lg="10px"
-                                            fs_xl="12px"
-                                          >{city}</Paragraph>
-                                        </Column>
-                                      </Row>
-                                    </Card>
-                                  </Column>
-                                )
-                              })
-                            }
-                          </Row>
-                          <Divider height="20%" />
-                        </Column>
-                      </Row>
-                    </Column>
-                    <Column size="2" customRespSize respSize="2">
-                      <Row align="around" height="100%" >
-                        <Column size="12" alignSelf="center" >
-                          <Link to={`/job/${item.node.meta_info.slug}`}><ArrowRight width="32" color={Colors.blue} fill={Colors.blue} /></Link>
-                        </Column>
-                      </Row>
+                  <Row >
+                    <Column size="12">
+                      <H4
+                        fs_xs="18px"
+                        fs_sm="20px"
+                        fs_md="20px"
+                        fs_lg="20px"
+                        fs_xl="24px"
+                        color={Colors.black}>{item.node.banner_heading}</H4>
                     </Column>
                   </Row>
+                  <Row align={`center`} margin={`10px 0 0 0`}>
+                    {
+                      item.node.cities.map((city, index) => {
+                        return (
+                          <Card
+                            key={index}
+                            padding="3px 10px"
+                            borders=".25rem"
+                            width="100%"
+                            color={`grey`}
+                            margin={`3px`}
+                          ><Paragraph
+                            color={Colors.gray}
+                            align="center"
+                            fs_sm="12px"
+                          >{city}</Paragraph>
+                          </Card>
+                        )
+                      })
+                    }
+                  </Row>
+                  <Link to={`/job/${item.node.meta_info.slug}`}>
+                    <ArrowRight style={{position: "absolute", right: "10px", bottom: "5px"}} width="32" color={Colors.blue} fill={Colors.blue} />
+                  </Link>
                 </Card>
               </Column>
             </Row>
