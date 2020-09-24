@@ -203,14 +203,14 @@ export const initSession = async (locationsArray, seed={}) => {
     var v4 = null;
     var latitude = null;
     var longitude = null;
-    let storedSession = JSON.parse(localStorage.getItem("academy_session"));
+    let storedSession = JSON.parse(localStorage.getItem("academy_session")) || {};
     let { location, ...utm } = seed;
 
     // remove undefineds from the seed utm's
     Object.keys(utm).forEach(key => utm[key] === undefined && delete utm[key])
 
     if(location){
-        location = locationsArray.edges.find(({ node }) => node.breathecode_location_slug === location)
+        location = locationsArray.edges.find(elm => elm && node.breathecode_location_slug === location)
         if(location) location = location.node;
         else location = null;
         console.log("Hardcoded location", location)
@@ -232,16 +232,15 @@ export const initSession = async (locationsArray, seed={}) => {
                 method: 'POST'
             });
             let data = await response.json() || null;
-            if(data){
+            if(data && data.location){
                 latitude = data.location.lat;
                 longitude = data.location.lng;
                 location = getClosestLoc(locationsArray.edges, data.location.lat, data.location.lng)
-            }else throw Error("Error when connecting t Google Geolocation API")
+            }else throw Error("Error when connecting to Google Geolocation API")
         }catch(e){
             console.log("Error retrieving IP information: ", e)
         }
     }
-    console.log("New updated location", location)
     // const location = "Santiago de Chile"
     const browserLang = getFirstBrowserLanguage();
     
@@ -252,13 +251,17 @@ export const initSession = async (locationsArray, seed={}) => {
         location.reliable = true;
     } 
     else {
-        location = locationsArray.edges.find(({ node }) => node.breathecode_location_slug == "downtown-miami").node;
         console.log("Location could not be loaded, using browserlanguage as default language");
+        location = locationsArray.edges.find(({node}) => node.breathecode_location_slug == "downtown-miami");
+        if(location){
+            location = location.node;
+            location.reliable = false;
+        } 
         language = browserLang.substring(0, 2);
         if(language === "en") language = "us";
-        location.reliable = false;
     }
     
+    console.log("New updated location", location)
     dayjs.locale(language == "us" ? "en" : language)
 
     let repeated = [];
