@@ -590,10 +590,10 @@ export const query = graphql`
                   testimonial_date
                   student_thumb{
                     childImageSharp {
-                      fluid(maxWidth: 200){
+                      fluid(maxHeight: 200){
                         ...GatsbyImageSharpFluid_withWebp
                       }
-                      fixed(width: 200, height: 200) {
+                      fixed(width: 250, height: 250) {
                         ...GatsbyImageSharpFixed
                       }
                     }

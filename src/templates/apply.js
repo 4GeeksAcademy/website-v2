@@ -15,7 +15,7 @@ import Testimonials from '../components/Testimonials'
 const formIsValid = (formData=null) => {
     if(!formData) return null;
     for(let key in formData){
-        if(!formData[key].valid) return key;
+        if(formData[key] !== undefined && !formData[key].valid) return key;
     }
     return true;
 }
@@ -223,7 +223,7 @@ const Apply = (props) => {
                                                 colorHover={Colors.verylightGray}
                                                 onClick={(e) => setVal({...formData, location: { value: l.active_campaign_location_slug, valid: true }})}
                                                 >
-                                                <Paragraph color={Colors.gray}>{l.city}, {l.country}</Paragraph>
+                                                <Paragraph className="no-wrap" color={Colors.gray}>{l.city}, {l.country}</Paragraph>
                                             </Button>
                                         </Column>
                                     )}

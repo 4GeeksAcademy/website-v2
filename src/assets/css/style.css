@@ -9,6 +9,14 @@ html, body
     overflow-x: hidden!important; 
 }
 .pointer{cursor: pointer; }
+
+/* adds three dots to text when reaches the end of line */
+.no-wrap{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .img-border::before{
     border-radius: 1.25rem;
 }
