@@ -13,7 +13,7 @@ const Jobs = ({data, pageContext, yml}) => {
   return (
     <>
       <WrapperImage
-        
+
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         className={`img-header`}
         height={`300px`}
@@ -21,7 +21,6 @@ const Jobs = ({data, pageContext, yml}) => {
         border="bottom"
         customBorderRadius="0 0 0 1.25rem"
         paddingRight={`0`}
-
       >
         <Divider height="100px" />
         <Title
@@ -34,12 +33,11 @@ const Jobs = ({data, pageContext, yml}) => {
         />
       </WrapperImage>
       <Wrapper
-        >
+      >
         <JobInfo />
       </Wrapper>
       <Divider height="50px" />
       <Wrapper
-        
         height="400px"
         github={`/page/jobs.${pageContext.lang}.yml`}
       >
@@ -49,69 +47,22 @@ const Jobs = ({data, pageContext, yml}) => {
           size="8"
           paragraph={yml.about.sub_heading}
         />
-        <Divider height="50px" />
-        <Row>
+        <Row >
           <Column
             size="12"
             borderRadius="0 0 0 1.25rem"
-
           >
-            <Card shadow borders="1.25rem" height="426px" >
+            <Card shadow borders="1.25rem" height="auto" >
               <Row
                 height="100%"
                 marginLeft="0"
                 marginRight="0"
                 customRespSize
               >
-                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
-                  <Row align="center" height="100%">
-                    <Column size="8" height="100%">
-                      <Row height="5%" />
-                      <Row height="70%" align="around">
-                        <Column size="12" alignSelf="center">
-                          <Paragraph
-                            color={Colors.gray}
-                            fs_xs="12px"
-                            fs_sm="12px"
-                            fs_md="12px"
-                            fs_lg="12px"
-                            fs_xl="12px"
-                            lineHeight="20px"
-                            margin="20px 0 0 0"
-                            align="left"
-                          >
-                            {yml.about.content}
-                          </Paragraph>
-                        </Column>
-                      </Row>
-                      <Row height="20%" align="around">
-                        <Column size="12" alignSelf="center">
-                          <Link to={yml.about.button_link}>
-                            <Paragraph
-                              color={Colors.blue}
-                              fs_xs="12px"
-                              fs_sm="12px"
-                              fs_md="12px"
-                              fs_lg="12px"
-                              fs_xl="12px"
-                              lineHeight="20px"
-                              margin="20px 0 0 0"
-                              align="left"
-                            >
-                              {yml.about.button}
-                            </Paragraph></Link>
-                        </Column>
-                      </Row>
-                      <Row height="5%" />
-
-
-                    </Column>
-                  </Row>
-                </Column>
                 <Column
                   size="6"
-                  customRespSize
-                  respSize="6"
+                  size_sm={`12`}
+                  paddingLeft={`0`}
                   paddingRight={`0`}
                   borderRadius="0 1.25rem 1.25rem 0"
                 >
@@ -121,8 +72,35 @@ const Jobs = ({data, pageContext, yml}) => {
                     image={yml.about.about_image.image.childImageSharp.fluid}
                     bgSize={`cover`}
                     alt={yml.about.about_image.alt}
-                    borderRadius={`0 0 0 1.25rem`}
+                    borderRadius={`1.25rem 0 0 1.25rem`}
                   />
+                </Column>
+                <Column size="6" size_sm={`12`} alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
+                  <Row align="center" padding={`20px`}>
+                    <Paragraph
+                      color={Colors.gray}
+                      fontSize="18px"
+                      fs_sm="14px"
+                      lineHeight="20px"
+                      margin="20px 0 0 0"
+                      align="left"
+                    >
+                      {yml.about.content}
+                    </Paragraph>
+                  </Row>
+                  <Row align="around" padding={`10px`}>
+                    <Link to={yml.about.button_link}>
+                      <Paragraph
+                        color={Colors.blue}
+                        fontSize="20px"
+                        fs_sm="18px"
+                        lineHeight="20px"
+                        margin="20px 0 0 0"
+                        align="left"
+                      >
+                        {yml.about.button}
+                      </Paragraph></Link>
+                  </Row>
                 </Column>
               </Row>
             </Card>
@@ -130,7 +108,7 @@ const Jobs = ({data, pageContext, yml}) => {
         </Row>
       </Wrapper>
 
-      <Divider height="350px" />
+      <Divider height="480px" />
 
     </>
   )
