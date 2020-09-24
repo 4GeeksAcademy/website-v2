@@ -29,11 +29,10 @@ const GeekPal = (props) => {
       <WrapperImage
         imageData={yml.image && yml.image.childImageSharp.fluid}
         height="auto"
-        paddingRight={`0`}
         filter="brightness(0.4)"
         customBorderRadius="0 0 0 1.25rem"
       >
-        <Divider height="50px" />
+        <Divider height="100px" />
         <Title
           size="5"
           title={yml.tagline}
@@ -46,30 +45,15 @@ const GeekPal = (props) => {
         />
         <Divider height="100px" />
       </WrapperImage>
-      <Divider height="50px" />
-      <Wrapper
-        
-        border="bottom"
-        height="auto"
-      >
-        <Row align="center">
-          {/* <StyledBackgroundSection
-            image={yml.image_logo && yml.image_logo.childImageSharp.fluid}
-            height={`200px`}
-            width={`200px`}
-            bgSize={`cover`}
-          >
-
-          </StyledBackgroundSection> */}
+      <Wrapper margin="50px 0px" align="center">
           <RoundImage
             url={yml.image_logo}
             bsize="contain"
+            margin="auto"
             position="center center"
             width="300px"
             height="200px"
           />
-        </Row>
-        <Divider height="50px" />
       </Wrapper>
       <Wrapper >
         <Row>

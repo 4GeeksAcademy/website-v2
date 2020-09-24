@@ -5,15 +5,15 @@ meta_info:
   image: null
   keywords: ""
   redirects: []
-tagline: GEEKPAL
-sub_heading: ""
+tagline: NO PROGRAMES SOLO MÁS NUNCA
+sub_heading: Y aprende todo lo que necesitas más rápido que cualquiera, lo más rapido que se puede.
 image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekpal.png"
 benefits:
   - p:
     heading: "Personal"
     items:
-      - title: Exclusive classes
+      - title: Clases
         sub_title: (up to 8 students per class)
       - title: 1:4 teacher-student-ratio
         sub_title: (one mentor every 8 students)

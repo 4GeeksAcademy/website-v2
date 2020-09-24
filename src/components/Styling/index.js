@@ -156,6 +156,7 @@ export const RoundImage = styled.div`
     background-repeat: no-repeat;
     background-size:${props => props.bsize};
     border-radius: ${props => props.border};
+    margin: ${props => props.margin};
     background-position: ${props => props.position};
     background-color: ${props => props.backgroundColor};
     width: ${props => props.width};
