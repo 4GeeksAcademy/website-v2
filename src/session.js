@@ -50,6 +50,7 @@ export default ({children}) => {
               utm_content: urlParams.get('utm_content') || undefined,
               utm_source: urlParams.get('utm_source') || undefined,
               referral_code: urlParams.get('referral_code') || undefined,
+              utm_test: urlParams.get('utm_test') || undefined,
             })
               .then(_session => {
                 setSession(_session)

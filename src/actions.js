@@ -139,7 +139,7 @@ export const apply = async (data, session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    return await save_form(body, ['website-lead'], ['strong'], session);
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['website-lead'], ['strong'], session);
 
     throw Error('Unexpected error');
 }
@@ -149,7 +149,7 @@ export const requestSyllabus = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    return await save_form(body, ['request_more_info'], ['soft'], session);
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['request_more_info'], ['soft'], session);
     // return fetch('/api/acp_apply', {
     //     headers: new Headers({'content-type': 'application/json'}),
     //     method: "POST",

@@ -86,7 +86,7 @@ const Apply = (props) => {
                         else {
                             setFormStatus({status: "thank-you", msg: "Thank you"});
                             // console.log("Thank you");
-                            navigate('/thank-you/apply');
+                            if(!session || !session.utm || !session.utm.utm_test) navigate('/thank-you/apply');
                         }
                     })
                     .catch(error => {
