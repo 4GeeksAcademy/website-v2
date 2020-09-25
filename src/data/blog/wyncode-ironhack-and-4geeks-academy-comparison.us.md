@@ -1,3 +1,48 @@
+---
+author: 4GeeksAcademy
+comments: true
+date: 2016-01-08 11:14:46+00:00
+excerpt: A straightforward analysis of your main Coding Bootcamps options in Miami.
+layout: post
+link: https://www.4geeksacademy.co/wyncode-ironhack-and-4geeks-academy-comparison/
+slug: wyncode-ironhack-and-4geeks-academy-comparison
+title: Wyncode, Ironhack and 4Geeks Academy comparison
+avatar: "/4geeks-logo.png"
+image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/wyncode4geeksironhack.jpeg"
+wordpress_id: 476
+categories:
+- Learning to code
+
+tags:
+- 4geeks
+- coding bootcamp
+- ironhack
+- learn to code
+- wyncode
+lang: "us"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: false
+---
+
+We are sure that every potential student is asking the same question:  Which is the best coding academy (development bootcamp) in Miami?
+
+**A short and expected answer is the same: It depends!**
+
+When you have several options (but mainly 3 most recognizable) in the same market, all of them are trying to build the difference; the coding bootcamps market in Miami is not the exception.  I consider Miami a very lucky place because 24 months ago there were no coding bootcamps in Miami, and now we have 3 great academies with a lot of experience in teaching and proven success.
+
+
+### It is not about the best academy in Miami
+
+
+The real question is: Which is the best Bootcamp for me?  Learn all the pros and cons of each academy and make a decision-based on your own priorities, needs, and values.
+
+**Quick Fact!**
+
+There are over 23,000 open jobs NOW in Miami for Software Developers.  So, there is plenty of space for all of us.
+
+
+### Let's cut to the chase and start the comparison:
+
 |                                             | **Wyncode**                                                                                                                                                                                              | **4Geeks Academy**                                                                                                                                                                                                                                                                                                          | **IronHack**                                                                                                                         |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | **Background**                              | They are a local initiative launched<br>with the support of the Knight Foundation. <br>They started in Wynwood and they have remained building their market there.<br>Wyncode was launched back in 2015. | Launched in Miami by Alejandro and Marcelo. <br>Now we have over 7 Campuses across the US, Central and South America, and Europe.<br>We have graduated over 1000 students already. <br>We launched the Bootcamp in October 2015. <br>[Learn more about our history here.](https://4geeksacademy.co/4geeks-academy-history/) | IronHack has a campus in Miami and in other 8 cities. <br>They started the project in late 2014.                                     |
@@ -12,3 +57,13 @@
 | **Financing**                               | Climb.                                                                                                                                                                                                   | Skills Fund, Climb, and first ISA in Florida. We also have our very own Extended Payment Plan. <br>You apply to a very simple process designed to accommodate your financial possibilities. Skills Funds                                                                                                                    | Financing information available upon request.                                                                                        |
 | **Syllabus**                                | Web Dev: Ruby on Rails.  Also programs in marketing and UI/UX.                                                                                                                                           | Full stack:<br>JavaScript, ReactJS, Context, Flux, Python, API's, SQLAlquemy, and Flask.<br>Software Engineering Program: Java, Algorithms, Data Structures, Machine Learning specializations.<br>([Learn here why we teach Python](https://4geeksacademy.co/us/post/why-we-teach-python-4geeks/))                          |                                                                                                                                      |
 |                                             |                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                             |                                                                                                                                      |
+
+As you can see, the bootcamps in Miami vary a lot depending on your needs.  At 4Geeks Academy we believe in "part-time education" because it's the best way to keep up your life while you take the time to become a developer.
+
+Here you can read more about: [Why we think part-time studies are the future.](https://4geeksacademy.co/one-on-one-mentorship-program-of-4geeks-academy/)
+
+Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](http://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
+
+If you want to get more into detail, you can read our [comparison between 4Geeks Academy and Wyncode.](https://4geeksacademy.co/wyncode-vs-4geeks-academy-programming-bootcamp-better-investment/)
+
+Finally, we want to remain not just the most affordable academy between the three (by far), but we also want to be the most accessible one. This is why we have opened our pre-work free for everybody.  If you want to sign-up, [click here](https://4geeksacademy.co/course/web-development-parttime/).
