@@ -9,7 +9,6 @@ import Link from 'gatsby-link'
 
 const ProgramDetailsMobile = (props) => {
     const [selected, setSelected] = useState({index: null, manual: false});
-    const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
     return (
         <>
             {props.details.details_modules.map((item, index) => {
@@ -24,6 +23,7 @@ const ProgramDetailsMobile = (props) => {
                             borders={`.5rem`}
                             margin={`5px 0`}
                             display={`none`}
+                            display_sm={`block`}
                         >
                             <Div
                                 onClick={() => selected.index === index ? setSelected({index: null, manual: true}) : setSelected({index: index, manual: true})}

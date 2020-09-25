@@ -277,7 +277,7 @@ const Why = (props) => {
                                 className={`img-right`}
                                 backgroundPosition="top center"
                                 height="450px"
-                                height_sm="350px"
+                                h_sm="350px"
                                 image={yml.story.image.childImageSharp.fluid}
                                 bgSize={`cover`}
                                 // alt={yml.about.about_image.alt}

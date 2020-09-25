@@ -250,10 +250,11 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     &:before, &:after {
         border-radius: ${props => props.borderRadius};
         filter: ${props => props.filter};
+        height: ${props => props.h_sm};
         background-color: ${props => props.backgroundColor};
     }
     @media ${Break.sm}{
-        height: ${props => props.height_sm};
+        height: ${props => props.h_sm};
         &:before, &:after {
             border-radius: ${props => props.borderRadius_sm};
         }

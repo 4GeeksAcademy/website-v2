@@ -40,45 +40,39 @@ const Loc = (props) => {
                       height="100%"
                       marginLeft="0"
                       marginRight="0"
-                      customRespSize
-
                     >
                       <Column
                         size="6"
-                        customRespSize
-                        respSize="6"
+                        size_sm="12"
                         alignSelf="center"
-                        height="100%"
-                        paddingLeft={`0`}
+                        height="500px"
+                        h_sm="120px"
+                        paddingRight="0"
+                        paddingLeft="0"
                       >
                         <StyledBackgroundSection
                           className={`image`}
                           height={`500px`}
+                          h_sm={`120px`}
                           image={item.node.header.image && item.node.header.image.childImageSharp.fluid}
                           bgSize={`cover`}
                           alt="Cnn Logo"
                         />
                       </Column>
-                      <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" image="no" borderRadius="0 0 0 1.25rem">
-                        <Row align="center" height="100%">
-                          <Column size="9" height="100%">
-                                <H3
-                                  margin="20px 0"
-                                  fs_xs="20px"
-                                  fs_sm="22px"
-                                  fs_md="20px"
-                                  fs_lg="20px"
-                                  fs_xl="20px"
-                                  align="left"
-                                >
-                                  {item.node.city}
-                                </H3>
-                              <Separator left variant="primary" />
-                              <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{item.node.carousel_box.content}</Paragraph>
-                          </Column>
-                        </Row>
-
-
+                      <Column size="6" size_sm="12" height="500px" h_sm="380px" image="no" borderRadius="0 0 0 1.25rem">
+                          <H3
+                            margin="20px 0"
+                            fs_xs="20px"
+                            fs_sm="22px"
+                            fs_md="20px"
+                            fs_lg="20px"
+                            fs_xl="20px"
+                            align="left"
+                          >
+                            {item.node.city}
+                          </H3>
+                        <Separator left variant="primary" />
+                        <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{item.node.carousel_box.content}</Paragraph>
                       </Column>
                     </Row>
                   </Card>

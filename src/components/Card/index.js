@@ -27,6 +27,7 @@ export const Card = styled(Fragment)`
     background: ${props => _colors()[props.color] || Colors.white};
     border-radius: ${props => props.borders};
     transform: ${props => props.transform};
+    display: ${props => props.display};
     box-shadow: ${props => props.shadow === true ?
         `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
         :
@@ -39,20 +40,17 @@ export const Card = styled(Fragment)`
         width: ${props => props.w_xl};
         height: ${props => props.h_xl};
         margin: ${props => props.margin_xl || props.margin};
-        display: ${props => props.display};
     }
     @media ${Break.lg}{
         width: ${props => props.w_lg};
         height: ${props => props.h_lg};
         margin: ${props => props.margin_lg || props.margin};
-        display: ${props => props.display};
     }
     @media ${Break.md}{
         height: ${props => props.h_md};
         width: ${props => props.w_md};
         padding: ${props => props.p_md};
         margin: ${props => props.margin_md || props.margin};
-        display: ${props => props.display};
     }
     @media ${Break.sm}{
         height: ${props => props.h_sm};
