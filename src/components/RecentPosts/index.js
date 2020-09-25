@@ -1,12 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
+import {useStaticQuery, graphql, navigate} from 'gatsby';
 import styled from 'styled-components';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors, ArrowRight, Button, RoundImage} from '../Styling';
 import {Card} from '../Card';
-import Link from 'gatsby-link'
-import {navigate} from "@reach/router"
 
 const days = [
     'Sun',

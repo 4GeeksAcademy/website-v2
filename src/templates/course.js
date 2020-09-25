@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from "gatsby";
-import {navigate} from '@reach/router';
+import {Link, navigate} from "gatsby";
 import BaseRender from './_baseRender'
 import {Card} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'

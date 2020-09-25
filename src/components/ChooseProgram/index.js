@@ -4,7 +4,7 @@ import {Button, Colors} from '../Styling';
 import {Card} from '../Card'
 import {Break} from '../Responsive'
 import {Row, Column} from '../Sections'
-import { navigate } from "@reach/router"
+import { navigate } from "gatsby"
 import styled from 'styled-components';
 
 export const ChooseWrap = styled.div`

@@ -16,8 +16,7 @@ import BaseRender from './_baseRender'
 import Testimonials from '../components/Testimonials'
 import Events from '../components/Events'
 import Loc from '../components/Loc'
-import {Link} from 'gatsby';
-import {navigate} from "@reach/router";
+import {Link, navigate} from 'gatsby';
 import {SessionContext} from '../session.js'
 import Img from "gatsby-image"
 
