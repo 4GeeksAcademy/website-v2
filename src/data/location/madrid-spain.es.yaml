@@ -54,7 +54,7 @@ carousel_box:
 ## RIGHT    BOX => FULL-TIME
 hasFinancialsOption: false
 # financials_max_months: ["6 mo", "12 mo"]
-financials_max_months: ["12 mo", "6 mo"]
+financials_max_months: ["24 m", "21 m", "18 m", "12 m", "6 m", "3 m"]
 prices:
   full_time:
     ## GENERAL INFO
@@ -66,8 +66,8 @@ prices:
     left_section:
       header:
         heading_one: "FULL-TIME"
-        heading_two: "PAGO ADELANTADO"
-        sub_heading: "y disfruta de mejores precios"
+        heading_two: "Pago adelantado"
+        sub_heading: "Pregunta por nuestros descuentos y obtén el mejor precio de España"
       content:
         price: "5.999,00 €"
         price_info: "pago de contado"
@@ -77,32 +77,57 @@ prices:
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
       header:
-        heading:
-        sub_heading:
+        heading: "FINANCIADO"
+        sub_heading: "Opciones de financiación que se adaptan a ti"
       plans:
-        - months: "12"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message:
-        - months: "6"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
+        - months: "24 m"
+          payment: "251,56€"
+          paymentInfo: "24 meses + 600€ Reserva"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Pregunta por nuestras becas compatibles con financiación"
+        - months: "21 m"
+          payment: "274,03€"
+          paymentInfo: "21 meses + 600€ Reserva"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: "Pregunta por nuestras becas compatibles con financiación"
+        - months: "18 m"
+          payment: "326,68€"
+          paymentInfo: "18 meses + 600€ Reserva"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Pregunta por nuestras becas compatibles con financiación"  
+        - months: "12 m"
+          payment: "477,14€"
+          paymentInfo: "12 meses + 600€ Reserva"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Pregunta por nuestras becas compatibles con financiación"        
+        - months: "6 m"
+          payment: "928,96€"
+          paymentInfo: "6 meses + 600€ Reserva"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"   
+          message: "Pregunta por nuestras becas compatibles con financiación"
+        - months: "3 m"
+          payment: "2.000€"
+          paymentInfo: "3 cuotas ¡sin intereses!"
+          provider: "4Geeks"
+          logo: 
+          message: "Pregunta por nuestras becas compatibles con financiación"
       button:
         button_text:
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading: ""
-        sub_heading: ""
+        heading_one: "NO PAGUES HASTA"
+        heading_two: "QUE ENCUENTRES TRABAJO"
+        sub_heading: "Acuerdo de Ingresos Compartidos"
       content:
-        price: "5.499,00 €"
-        price_info: "pago de contado"
+        price: "120€"
+        price_info: "Desde 120€ al mes"
       button:
         button_text: "APLICA YA"
   ## *****************
@@ -117,7 +142,8 @@ prices:
     left_section:
       header:
         heading_one: "PART-TIME"
-        sub_heading: "y disfruta de mejores precios"
+        heading_two: "Pago adelantado"
+        sub_heading: "Pregunta por nuestros descuentos y obtén el mejor precio de España"
       content:
         price: "5.499,00 €"
         price_info: "pago de contado"
@@ -127,33 +153,44 @@ prices:
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
       header:
-        heading_two:
-        sub_heading:
+        heading_two: "Financiado"
+        sub_heading: "Opciones de financiación que se adaptan a ti"
       plans:
-        - months: "12 mo"
-          payment: ""
-          paymentInfo: ""
+        - months: "24 m"
+          payment: "223,98€"
+          paymentInfo: "24 meses + 500€ Reserva"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: ""
-        - months: " 6 mo"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-
+          message: "Pregunta por nuestras becas compatibles con financiación"
+        - months: "18 m"
+          payment: "302,18€"
+          paymentInfo: "18 meses + 500€ Reserva"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Pregunta por nuestras becas compatibles con financiación"  
+        - months: "12 m"
+          payment: "432,90"
+          paymentInfo: "18 meses + 500€ Reserva"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: "Pregunta por nuestras becas compatibles con financiación"
+        - months: "6 m"
+          payment: "816,15€"
+          paymentInfo: "6 meses + 500€ Reserva"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Pregunta por nuestras becas compatibles con financiación"          
       button:
         button_text: "APLICA YA"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "FULL-TIME"
-        sub_heading: "y disfruta de mejores precios"
+        heading_one: "PART-TIME"
+        sub_heading: "Financia sin intereses ¡becas disponibles!"
       content:
         price: "5.999,00 €"
-        price_info: "pago de contado"
+        price_info: "3 cuotas de 2.000€"
       button:
         button_text: "APLICA YA"
 
