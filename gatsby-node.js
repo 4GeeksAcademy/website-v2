@@ -69,6 +69,8 @@ const createEditPage = async ({actions, graphql}) => {
             ymls,
         }
     });
+
+    return true;
 }
 
 const createBlog = async ({actions, graphql}) => {
