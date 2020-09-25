@@ -95,7 +95,7 @@ const Layout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            { showUpcoming && <UpcomingProgram location={session?.location} button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
+            { showUpcoming && <UpcomingProgram location={session ? session.location : null} button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
             <Footer footer={myFooter.node.footer} />
           </>
         )

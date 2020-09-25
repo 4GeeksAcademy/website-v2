@@ -102,7 +102,7 @@ const ProgramSelector = (props) => {
             style={{maxWidth: "200px", position: "relative"}}
 
             padding={`5px`} borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>
-            {session && session?.location?.city}
+            {session && session.location && session.location.city}
             <TriangleDown style={{marginLeft: "5px", position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)"}} width="14" color={Colors.gray} fill={Colors.gray} />
           </Button>
         }
