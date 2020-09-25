@@ -67,3 +67,5 @@ Part-time is only possible as a consequence of our own methodology: Flipped Clas
 If you want to get more into detail, you can read our [comparison between 4Geeks Academy and Wyncode.](https://4geeksacademy.co/wyncode-vs-4geeks-academy-programming-bootcamp-better-investment/)
 
 Finally, we want to remain not just the most affordable academy between the three (by far), but we also want to be the most accessible one. This is why we have opened our pre-work free for everybody.  If you want to sign-up, [click here](https://4geeksacademy.co/course/web-development-parttime/).
+
+Contact: info@4geeksacademy.com
