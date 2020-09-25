@@ -4,6 +4,7 @@ const YAML = require('yaml');
 const {createFilePath} = require(`gatsby-source-filesystem`)
 
 var redirects = [];
+var ymls = [];
 const saveRedirectLogs = () => {
     
     console.log('Saving redirect log');
@@ -39,6 +40,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
             createNodeField({node, name: `type`, value: meta.type});
             createNodeField({node, name: `pagePath`, value: meta.pagePath});
             createNodeField({node, name: `filePath`, value: url});
+            ymls.push(meta)
             //   createNodeField({ node, name: `ctas`, value: ctas });
         }
     }
@@ -46,6 +48,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
 
 // Create all the apges needed
 exports.createPages = async (params) =>
+    await createEditPage(params) &&
     await createBlog(params) &&
     await createPagesfromYml(params) &&
 
@@ -55,6 +58,18 @@ exports.createPages = async (params) =>
     await createEntityPagesfromYml('Job', params) &&
     await addAdditionalRedirects(params) &&
     saveRedirectLogs();
+
+const createEditPage = async ({actions, graphql}) => {
+    const {createPage, createRedirect} = actions;
+
+    createPage({
+        path: "/edit",
+        component: path.resolve('src/templates/edit.js'),
+        context: {
+            ymls,
+        }
+    });
+}
 
 const createBlog = async ({actions, graphql}) => {
     const {createPage, createRedirect} = actions;
