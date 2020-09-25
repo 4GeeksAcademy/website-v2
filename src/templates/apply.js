@@ -87,6 +87,7 @@ const Apply = (props) => {
                             setFormStatus({status: "thank-you", msg: "Thank you"});
                             // console.log("Thank you");
                             if(!session || !session.utm || !session.utm.utm_test) navigate('/thank-you/apply');
+                            else console.log("Lead success, but no redirection because of testing purposes")
                         }
                     })
                     .catch(error => {

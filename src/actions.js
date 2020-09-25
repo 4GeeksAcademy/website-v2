@@ -140,8 +140,7 @@ export const apply = async (data, session) => {
     for (let key in data) body[key] = data[key].value;
 
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['website-lead'], ['strong'], session);
-
-    throw Error('Unexpected error');
+    return true;
 }
 
 export const requestSyllabus = async (data,session) => {
@@ -150,46 +149,32 @@ export const requestSyllabus = async (data,session) => {
     for (let key in data) body[key] = data[key].value;
 
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['request_more_info'], ['soft'], session);
-    // return fetch('/api/acp_apply', {
-    //     headers: new Headers({'content-type': 'application/json'}),
-    //     method: "POST",
-    //     body: JSON.stringify({ ...data, tags: ['syllabus_request'] }),
-    // })
-    //     .then(resp => {
-    //         if( resp.status >= 200 && resp.status < 400) return resp.json();
-    //         throw Error('Unexpected error');
-    //     });
+    return true;
 }
 export const reviewGuidebook = async (data,session) => {
     console.log("Succesfully requested Guidebook", data)
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    return await save_form(body, ['download-guidebook'], ['soft'], session);
-    // return fetch('/api/acp_apply', {
-    //     headers: new Headers({'content-type': 'application/json'}),
-    //     method: "POST",
-    //     body: JSON.stringify({ ...data, tags: ['review_guidebook'] }),
-    // })
-    //     .then(resp => {
-    //         if( resp.status >= 200 && resp.status < 400) return resp.json();
-    //         throw Error('Unexpected error');
-    //     });
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['download-guidebook'], ['soft'], session);
+    return true;
 }
 export const beHiringPartner = async (data,session) => {
     console.log("Succesfully requested Be Hiring Partner", data);
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    return await save_form(body, ['hiring-partner'], ['hiring-partner'], session);
-    
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['hiring-partner'], ['hiring-partner'], session);
+    return true;
 }
 export const applyJob = async (data) => {
     console.log("New job application", data);
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    //return await save_form(body, ['hiring-partner'], ['hiring-partner']);
+    
+    //if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['hiring-partner'], ['hiring-partner']);
+    return true;
 }
 export const contactUs = async (data,session) => {
     console.log("Succesfully contact us", data)
