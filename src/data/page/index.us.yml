@@ -1,7 +1,7 @@
 meta_info:
   slug: index
   title: "Miami Coding Bootcamp, Madrid España, Santiago de Chile"
-  description: "The #1 Top coding bootcamp with 1000+ graduates and life-long career support. Spain, Chile and Miami Coding Bootcamp."
+  description: "The #1 Top coding bootcamp with 1000+ graduates and life-long career support. USA, Spain, Chile, Venezuela and Costa Rica Coding Bootcamp."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp Miami, Learn to code miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa"
   redirects: ["/home", "/us/home"]
@@ -39,15 +39,15 @@ why_4geeks:
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:
   heading: JOIN 4GEEKS
-  sub_heading: By becoming part of 4Geeks you get access to the memberships that will boost your learning process and your professional careers
+  sub_heading: "By becoming part of 4Geeks, you get access to our main Feautures: Lifeling Mentorship and Unlimited Career Support."
   geek_data:
     geek_pal_heading: Programming - Always - Limitles
     geek_pal_data:
-      content: Never code on your own again for the rest of your life. We will be along, by you side, for as long as you need, even after you get your first job. Chat Support, One-to-One, Q&A, Office Space and more.
+      content: Never code on your own again -A PAL for the rest of your life-. We will be together, by your side, for as long as you need, even after you get your first job. Mentorship Support, One-to-One, Q&A, Office Space and more.
       icon_link: "/us/geekpal-support"
     geek_force_heading: Career Empowerment
     geek_force_data:
-      content: "We'll do everything to get you a job in the field, for life! Including Profile Building: Job Referrals, Tailored Interview Training, Weekly Coaching, Unlimited One-on-One's, Chat Support, Networking Events and more."
+      content: "We'll do everything needed to help you get a job in the field! Including Profile Building: Job Referrals, Tailored Interview Training, Weekly Coaching, Unlimited One-on-One's, Chat Support, Networking Events and more."
       icon_link: "/us/geekforce-career-support"
 
 ## LOCATIONS SECTION
@@ -58,7 +58,7 @@ locations:
 ## ALUMNI SECTION
 alumni_header:
   heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "We want to introduce you just a few examples of the amazing people that belong to our Alumni Community"
+  sub_heading: "Projects and experiences from our graduates and alumni. People that decided to boost their carrer with Code at 4Geeks."
 
 ## TESTIMONIAL SECTION
 testimonial_header:

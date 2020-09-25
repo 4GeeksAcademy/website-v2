@@ -18,12 +18,14 @@ faq:
     answer: "For sure! We are licensed (not accredited) in Florida by the Commission for Independent Education of the Florida Department of Education. "
   - question: "What is a typical class day like?"
     answer: |-
-      Our course offers classes 3 times per week, 3 hours per day.  Normally, you may want to grab a coffee on your way in (Starthub coffee is a must!) and arrive early to chat with both your mentors and your peer programmers.
+      "Our FT program runs for 9 weeks and it's really immersive. 9am to 60pm. Blocks of 2 hours each. Small coffee breaks in the middle and lunch time (60min). We recommend stay longer (after 6pm) because there is 
+      always smething happening, or someone great to meet or more work to do. It's never enough!
+      Our PT program consist of classes 3 times per week, 3 hours each class.  Normally, you may want to grab a coffee on your way in and arrive early to chat with both your mentors and your peer programmers.
       Our “Flipped Classroom” means that you MUST come to class having previously read the required material; having watched the required videos; and having practiced a couple of exercises.  We know that your time is “gold,” so we must take advantage of every available moment that you have while you are in front of us.
       After the “classic 15 minutes to get settled in,” we begin by reviewing the content for that specific class.  Your mentors will clarify any and all questions/doubts you may have, and they will thoroughly explain how the coding content of the day works – providing relevant examples as to how the day’s coding lesson will be integral to your new coding lifestyle.
       Next, we start coding.  Generally, there are one or two exercises or mini-projects that we will complete during each class.  “Awareness” becomes “knowledge” after you have practiced and reviewed a specific topic several times.
       By the end of the class, your mentors will guide you through the next assignments.  You will be informed of what you will need to study, watch, and practice for the subsequent class.  Also, there will always be time to resolve any last-minute issues with your code; your mentors will always try to help you reach your particular goal."
-  - question: "How many hours a week do I need to have available?"
+  - question: "How many hours a week do I need to have available fr the PT Program?"
     answer: |-
       "This is a “part-time” program.  The in-house classes will require 9 hours every week.  However, in order to make you the BEST POSSIBLE developer, we need for you to commit an additional 10 hours from your end, resulting in approximately 20 hours each week.  Sorry, there is no other way to get you to where you desire to be.  If you don’t complete the exercises, you will be behind.  Plus, this is the ONLY way we can make sure that you gather the skills needed to become a developer.
       We have built an online LMS (Learning Machine System) that includes: exercises, videos, tutorials, cheat sheets, individually customized profile, gamified learning and evaluations, text, readings, recommended books, lessons, infographics, and so much more.
@@ -58,20 +60,20 @@ faq:
       Talent Tree:  The syllabus maps out 44 skills in which students earn points towards each skill learned in a gamified fashion."
   - question: "How do I pay for my tuition?"
     answer: |-
-      "You have several options.  Our tuition fee for the Full Stack Development program (Part-Time) is $7499 or (Full-Time) is $9499.  There are no other fees, hidden charges, or anything else.  Just $7499 for a 16-week coding program in Miami. Or $9499 for a 09 weeks Full-time program.
+      "You have several options.  Our tuition fee for the Full Stack Development program (Part-Time) is $7499 or (Full-Time) is $9499.  There are no other fees, hidden charges, or anything else.  Just $7499 for a 16-week coding program in Miami. Or $9499 for a 9 weeks Full-time program.
       Furthermore, we have also worked (together with amazing partners) on offering you an Extended Payment Plan as an option.  You can now apply for either a 6, 12, or 24-month plan in order to lower the up-front cost and, most importantly, get the education that you need.  There is no other offer like this in Miami.
       Here you can also find the 4Geeks Academy Guidebook:
       Financing is available for those who qualify wherever financing is available. 
-      If you are in Chile and you are wondering which options are available for you, please click here; we also have Quotanda as our partner offering several options to make your education possible.
+      If you are in Chile or in Spain, and you are wondering which options are available for you, please click here; we also have Quotanda as our partner offering several options to make your education possible.
       If you need more info about how this works, please feel free to send us an email at: info@4geeksacademy.com"
   - question: "What is the difference between the Full Stack Development program and the Website Program at Miami Dade College?"
     answer: |-
       "We love this question.  Basically, we are in charge of both of them. 😊
-      In the Website program at Miami Dade College, you will learn both how to code and how to build websites.  The syllabus for this program includes: HTML, CSS, PHP, JavaScript, WordPress, API’s, and more.
+      In the Web Dev program at Miami Dade College, you will learn both how to code and how to build websites.  The syllabus for this program includes: HTML, CSS, PHP, JavaScript, WordPress, API’s, and more.
       Now, the Full Stack Development program is designed in four seasons:
       Pre-Work + Learn to Code + Build Websites + Build Web Applications
       It also has additional features:
-      It is 16 weeks long at includes over 320 hours of learning or a Full-Time with over 260 hours of coding.
+      It is 16 weeks long at includes over 360 hours of learning or a Full-Time with over 380 hours of coding.
       The stack of technologies here are: JavaScript, React, Python, Flask, API’s, AJAX, SASS, HTML, CSS, Bootstrap and more
       There are plenty of payment opportunities with our Extended Payment Plan
       We will guide you and help you find a job after the course though our Placement Program
@@ -98,6 +100,7 @@ faq:
       From 6:00 pm to 9:00 pm
       Mandatory attendance (To graduate you will need to have a minimum 80% attendance)
       16 weeks
+      On the other hand, the Full-time program is 9 weeks in total, Monday through Friday from 9am to 6pm."
   - question: "How do I apply?"
     answer: |-
       "To begin your career as a Developer, you only need to click here and fill out a very simple form.  We will take care of the rest. "

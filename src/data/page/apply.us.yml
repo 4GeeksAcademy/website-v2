@@ -1,7 +1,7 @@
 meta_info:
   slug: apply
   title: "Apply to 4Geeks Academy"
-  description: "Apply to one of the top coding bootcamps in the world with locations in Miami, Santiago de Chile, Madrid Spain and Caracas Venezuela."
+  description: "Apply to one of the top coding bootcamps in the world with locations in Miami, Santiago de Chile, Madrid, Costa Rica, Maracaibo and Caracas"
   image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
   keywords: "apply, 4geeks academy, apply to 4geeks academy, apply to coding bootcamp, coding bootcamp, coding school, apply to coding school, apply to coding institution"
   redirects: ["/apply"]
@@ -32,9 +32,9 @@ right:
   heading: "ONCE YOU CLICK ON APPLY, YOU WILL"
   content_section:
     - "1- Receive an email from your City Advisor"
-    - "2- Receive info related to the options you have to finance your tuition."
-    - "3- An explanation on how the process works to get the best deal in the City, respectively."
-    - "4- A syllabus of your program and regular coaching assistance from our advisors to help you take the best decision for your career."
+    - "2- Get Info and details about the programs, people, community, outcomes, campus and more."
+    - "3- Receive info related to the options you have for scholarships or financing your tuition."
+    - "4- A syllabus explanation of the program, our endless mentorship and unlimited support that will help you make the best decision for your career."
 
   ## TESTIMONIAL SECTION
 testimonial_header:

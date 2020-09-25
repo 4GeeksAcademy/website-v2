@@ -13,33 +13,33 @@ benefits:
   - p:
     heading: "Personal"
     items:
-      - title: Exclusive classes
-        sub_title: (up to 8 students per class)
+      - title: Clases exclusivas
+        sub_title: (máx 8 students)
       - title: 1:4 teacher-student-ratio
-        sub_title: (one mentor every 8 students)
-      - title: Mentoring 1-1
-        sub_title: (unlimited sessions)
-      - title: Tallored career support
-        sub_title: (based on each job opportunity)
+        sub_title: (one mentor every 4 students)
+      - title: Mentoría 1-1
+        sub_title: (sesiones ilimitadas)
+      - title: Soporte profesional customizado
+        sub_title: (basado en la oportunidad laboral)
   - a:
-    heading: "Anywhere & time"
+    heading: "Donde sea y cuánto sea necesario"
     items:
-      - title: Adjusted to your schedule
-        sub_title: (on demand session w/appointment)
-      - title: Permanent mentor schedule
-        sub_title: (Always on mentorship & chat support)
-      - title: Online or in-person
-        sub_title: (Locations around the world)
-      - title: Tallored careere support
-        sub_title: (based on each job opportunity)
+      - title: Ajustado a tu calendario
+        sub_title: (Sesiones según agenda en el calendario)
+      - title: Oportunidad de mentorías constantes
+        sub_title: (Siempre habilitado en persona o remoto)
+      - title: Online o en persona
+        sub_title: (Campus en muchas ciudades y en muchos husos horarios)
+      - title: Apoyo profesional customizado
+        sub_title: (Basado en la oportunidad laboral)
   - l:
     heading: "Limitless"
     items:
-      - title: All the mentoring you need
-        sub_title: (on demand session w/appointment)
-      - title: Mentoring after you graduate
-        sub_title: (even after you get the job, to keep the job)
-      - title: Mentoring for life
-        sub_title: (Keep coming, scheduling or attending)
-      - title: Tallored careere support
-        sub_title: (based on each job opportunity)
+      - title: Toda la mentoría que necesites
+        sub_title: (sesiones habilitadas para que puedas agendar con nuestros mentores)
+      - title: Mentoría ilimitada después de graduarte 
+        sub_title: (incluso después que consigas trabajo)
+      - title: Mentoría de por vida
+        sub_title: (Sigue trabajando con nosotros y recibiendo mentoría)
+      - title: Apoyo profesional customizado
+        sub_title: (Basado en la oportunidad laboral)
