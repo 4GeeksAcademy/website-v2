@@ -24,7 +24,7 @@ tags:
 - Jobs in Miami
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+featured: true
 ---
 
 Coding Bootcamps are a great option to launching a new career, land in a new job and get great benefits afterward; but there are many factors and options to take into consideration when you are choosing the best coding Bootcamp for you.
