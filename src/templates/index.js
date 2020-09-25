@@ -165,6 +165,7 @@ const Home = (props) => {
 
       <Wrapper margin="100px">
         <Title
+          type="h2"
           title={yml.geeks_vs_others.heading}
           paragraph={yml.geeks_vs_others.sub_heading}
           link={true}
@@ -181,6 +182,7 @@ const Home = (props) => {
       {/* ******************* */}
       <Wrapper margin="100px">
         <Title
+          type="h2"
           title={yml.join_geeks.heading + " " + city}
           paragraph={yml.join_geeks.sub_heading}
           paragraphColor={Colors.darkGray}

@@ -33,7 +33,7 @@ const SEO = (props) => (
       const { lang, type, pagePath } = context;
       const url = `${siteUrl}${pagePath || "/"}`;
       const _keywords = keywords ? (keywords + [].join(",")) : defaultKeywords[lang].join(",");
-
+      const previewImage = `${RegExp("http").test(image || defaultImage) ? "" : siteUrl}${image || defaultImage}`;
       return (
         <>
             <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
@@ -42,26 +42,26 @@ const SEO = (props) => (
                 <meta name="description" content={description || defaultDescription[lang]} />
                 <meta name="keywords" content={_keywords} />
                 { unlisted === true && <meta name="robots" content="noindex" /> }
-                <meta name="image" content={image || defaultImage} />
+                <meta name="image" content={previewImage} />
                 {(type === "blog" ) ? <meta property="og:type" content="article" />
                     : <meta property="og:type" content="website" />
                 }
                 <meta name="og:title" content={title || defaultTitle} />
                 <meta name="og:url" content={url} />
                 <meta property="og:description" content={description || defaultDescription[lang]} />
-                <meta property="og:image" content={`${siteUrl}${image || defaultImage}`} />
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:image" content={previewImage} />
+                <meta name="twitter:card" content={previewImage} />
                 <meta name="twitter:creator" content={social.twitterUsername || defaultTwitterUsername} />
                 <meta name="twitter:title" content={title || defaultTitle} />
                 <meta name="twitter:description" content={description || defaultDescription[lang]} />
-                <meta name="twitter:image" content={`${siteUrl}${image || defaultImage}`} />
+                <meta name="twitter:image" content={previewImage} />
             </Helmet>
             <SchemaOrg
                 author={author}
                 // canonicalUrl=""
                 // datePublished={}
                 description={description || defaultDescription} 
-                image={`${siteUrl}${image || defaultImage}`}
+                image={previewImage}
                 type={type}
                 title={title || defaultTitle}
                 url={url}

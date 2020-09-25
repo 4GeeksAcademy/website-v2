@@ -9,7 +9,6 @@ import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import ReactPlayer from 'react-player'
-import {checkPropTypes} from 'prop-types';
 
 const AlumniProjects = ({lang, showThumbs, limit}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
@@ -49,7 +48,6 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                             >
                                 <H3
                                     align_sm={`left`}
-                                    type={`H3`}
                                     color={Colors.blue}
                                     fs_lg={`40px`}
                                     fs_sm={`30px`}
@@ -62,7 +60,6 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     return (
                                         <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
                                             <H4
-                                                type={`H4`}
                                                 fs_xs="16px"
                                                 fs_sm="16px"
                                                 fs_md="18px"
@@ -108,7 +105,6 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     )
                                 })}
                                 <H4
-                                    type={`H4`}
                                     m={`0 0 10px 0`}
                                     color={Colors.gray}
                                     align="left"
