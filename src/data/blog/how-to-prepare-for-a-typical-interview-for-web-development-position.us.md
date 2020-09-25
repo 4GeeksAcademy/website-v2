@@ -8,7 +8,7 @@ link: https://www.4geeksacademy.co/how-to-prepare-for-a-typical-interview-for-we
 slug: how-to-prepare-for-a-typical-interview-for-web-development-position
 title: My Job Interview
 avatar: "/4geeks-logo.png"
-image: "https://ucarecdn.com/4756adca-2825-4e01-b8ba-5749db5e9d0f/jobinterview.jpeg"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/jobinterview.jpeg"
 wordpress_id: 697
 categories:
 - Living and working as a developer

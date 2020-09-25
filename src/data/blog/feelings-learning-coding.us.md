@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/feelings-learning-coding/
 slug: feelings-learning-coding
 title: The feelings when Learning to Code
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/e0877985-15df-4c88-8aef-7675deaf550e/feelings.jpg"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/06/feelings.jpg"
 wordpress_id: 3112
 categories:
 - Living and working as a developer

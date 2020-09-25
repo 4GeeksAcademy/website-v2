@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/pay-once-get-job-isa/
 slug: pay-once-get-job-isa
 title: Pay once you get a Job
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/cd496d1e-172d-4cbd-bfda-c82f6d633b83/ISABlogCover.png"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/04/ISA-Blog-Cover.png"
 wordpress_id: 3519
 categories:
 - Sin categoría

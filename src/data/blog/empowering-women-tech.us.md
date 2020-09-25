@@ -35,6 +35,6 @@ Therefore, we are committed to empowering our students’ life by not only deliv
 
 We acknowledge the importance of closing gender gaps.  In fact, our own team (4Geeks staff) is 50% women and 50% men.  We believe in the importance of a balanced teamwork, and now we want to promote women participation in designing and developing high-quality tech products and services.
 
-![](https://ucarecdn.com/0d1774a1-d678-46b7-9615-e3004dda2507/ScreenShot20180411at93527PM.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2018/04/Screen-Shot-2018-04-11-at-9.35.27-PM.png)
 
 In the meantime, we are still working together with Bridges Unite not just to improve the numbers but also towards making this a regular trend.  If you want to get involved and even participate for a full sponsorship of your coding education, please [click here](https://www.bridgesunite.com/contact) and start the process.  You could become a part of it in our upcoming [programs](https://www.4geeksacademy.co/wp-content/uploads/2017/09/4GEEKS-ACADEMY-SYLLABUS.pdf).  
