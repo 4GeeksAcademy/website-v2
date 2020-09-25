@@ -195,7 +195,7 @@ export const initSession = async (locationsArray, seed={}) => {
     Object.keys(utm).forEach(key => utm[key] === undefined && delete utm[key])
 
     if(location){
-        location = locationsArray.edges.find(elm => elm && node.breathecode_location_slug === location)
+        location = locationsArray.edges.find(({node}) => node.breathecode_location_slug === location)
         if(location) location = location.node;
         else location = null;
         console.log("Hardcoded location", location)
