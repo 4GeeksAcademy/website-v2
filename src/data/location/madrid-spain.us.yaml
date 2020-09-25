@@ -5,7 +5,7 @@ meta_info:
   description: null
   image: ""
   keywords: ""
-  redirects: ["/madrid", "/location/madrid"]
+  redirects: ["/location/madrid"]
 
 seo_title: "Coding Bootcamp Madrid"
 header:

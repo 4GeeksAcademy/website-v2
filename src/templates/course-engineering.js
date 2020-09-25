@@ -30,6 +30,7 @@ const Program = ({data, pageContext, yml}) => {
     <WrapperImage
       github="/course"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
+      backgroundPosition={yml.header.image_position}
       className={`img-header`}
       bgSize={`cover`}
       alt={yml.header.alt}
@@ -41,6 +42,7 @@ const Program = ({data, pageContext, yml}) => {
         size="5"
         variant="main"
         marginTop="100px"
+        m_sm="50px 0 0 0"
         color={Colors.white}
         fontSize="46px"
         align="center"
@@ -49,7 +51,7 @@ const Program = ({data, pageContext, yml}) => {
       <Title
         size="5"
         title={yml.header.tagline}
-        variant="primary"
+        variant="main"
         marginTop="0"
         color={Colors.white}
         fontSize="46px"
@@ -84,6 +86,7 @@ const Program = ({data, pageContext, yml}) => {
           }}
         />
       </Modal>
+      <Divider height="100px" md="0px" />
     </WrapperImage>
 
     <Wrapper  margin="50px 0 0 0">
@@ -264,6 +267,7 @@ const Program = ({data, pageContext, yml}) => {
         variant="primary"
       />
       <PricesAndPayment
+        lang={pageContext.lang}
         type={pageContext.slug}
         locations={data.allLocationYaml.edges}
         course="software_engineering"
@@ -297,6 +301,7 @@ export const query = graphql`
               tagline
               sub_heading
               subsub_heading
+              image_position
               image {
                 childImageSharp {
                   fluid(maxWidth: 1200){
@@ -455,6 +460,7 @@ export const query = graphql`
         node {
           id
           city
+          country
           hasFinancialsOption
           financials_max_months
           active_campaign_location_slug

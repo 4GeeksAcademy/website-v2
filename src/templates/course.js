@@ -56,7 +56,7 @@ const Program = ({data, pageContext, yml}) => {
       <ProgramSelector week={week} context={pageContext} marginTop="70px" />
       <Title
         size="5"
-        marginTop="20px"
+        marginTop="40px"
         title={yml.header.tagline}
         variant="main"
         color={Colors.white}
@@ -89,6 +89,7 @@ const Program = ({data, pageContext, yml}) => {
           }}
         />
       </Modal>
+      <Divider height="100px" md="0px" />
     </WrapperImage>
 
     <Wrapper margin="80px 0 0 0" m_sm="0">
@@ -277,6 +278,7 @@ const Program = ({data, pageContext, yml}) => {
       />
       <PricesAndPayment
         type={pageContext.slug}
+        lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
         course={program_type}
       />
@@ -456,6 +458,7 @@ export const query = graphql`
         node {
           id
           city
+          country
           hasFinancialsOption
           financials_max_months
           active_campaign_location_slug

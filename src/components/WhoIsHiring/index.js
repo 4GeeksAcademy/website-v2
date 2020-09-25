@@ -24,9 +24,8 @@ const WhoIsHiring = props => {
                 alt={item.alt}
                 margin="auto"
                 height="60px"
-                maxWidth="100px"
+                maxWidth="150px"
                 bgSize={`contain`}
-                margin={`1rem`}
               ></StyledBackgroundSection>
             </Card>
           </Column>

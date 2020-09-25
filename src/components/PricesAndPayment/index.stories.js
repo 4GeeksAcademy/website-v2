@@ -5,5 +5,5 @@ import PricesAndPayment from '.';
 
 storiesOf('PricesAndPayment', module)
     .add('Default', () => (
-        <PricesAndPayment />
+        <PricesAndPayment lang={"us"} />
     ));

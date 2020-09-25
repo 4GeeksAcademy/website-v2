@@ -239,28 +239,47 @@ export const BackgroundSection = ({children, className, image, height, width, bg
         </BackgroundImage>
     )
 }
+
 export const StyledBackgroundSection = styled(BackgroundSection)`
     width: ${props => props.width || "100%"};
-    background-position: ${props => props.backgroundPosition || "center center"};
     background-repeat: no-repeat;
-    margin: ${props => props.margin}
+    margin: ${props => props.margin || "auto"};
     opacity: 1;
     background-size: ${props => props.bgSize || "cover"};
     height: ${props => props.height};
-    maxWidth: ${props => props.maxWidth};
+    max-width: ${props => props.maxWidth};
     &:before, &:after {
         border-radius: ${props => props.borderRadius};
         filter: ${props => props.filter};
         height: ${props => props.h_sm};
+        max-width: ${props => props.maxWidth};
         background-color: ${props => props.backgroundColor};
+        background-position: ${props => props.backgroundPosition} !important;
+    }
+    @media ${Break.lg}{
+        &:before, &:after {
+            background-position: ${props => props.bp_lg} !important;
+        }
+    }
+    @media ${Break.md}{
+        &:before, &:after {
+            background-position: ${props => props.bp_md} !important;
+        }
     }
     @media ${Break.sm}{
         height: ${props => props.h_sm};
         &:before, &:after {
             border-radius: ${props => props.borderRadius_sm};
+            background-position: ${props => props.bp_sm} !important;
+        }
+    }
+    @media ${Break.xs}{
+        &:before, &:after {
+            background-position: ${props => props.bp_xs} !important;
         }
     }
   `
+
 
 export const Small = styled.small`
     display: ${props => props.display};
@@ -303,6 +322,7 @@ export const Button = styled(SmartButton)`
             cursor: pointer;
             width: ${props => props.width};
             max-width: ${props => props.maxWidth};
+            min-width: ${props => props.minWidth};
             text-align: center;
             vertical-align: middle;
             display: ${props => props.display};

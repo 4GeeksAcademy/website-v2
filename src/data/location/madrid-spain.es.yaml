@@ -5,7 +5,7 @@ meta_info:
   description: null
   image: "https://storage.googleapis.com/4geeks-academy-website/madrid-es.png"
   keywords: ""
-  redirects: ["/es/location/madrid-spain/"]
+  redirects: ["madrid","/es/location/madrid-spain/"]
 
 seo_title: "4Geeks Academy Madrid, España"
 header:

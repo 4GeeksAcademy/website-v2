@@ -26,7 +26,7 @@ const Why = (props) => {
                 customBorderRadius="0 0 0 1.25rem"
                 paddingRight={`0`}
             >
-                <Divider height="100px" />
+                <Divider height="150px" md="100px" />
                 <Title
                     size="5"
                     color={Colors.white}

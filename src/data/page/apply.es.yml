@@ -4,7 +4,7 @@ meta_info:
   description: null
   image: null
   keywords: ""
-  redirects: ["/aplica"]
+  redirects: ["/aplica","/es/apply"]
 
 ## APPLY HEADING
 tagline: APLICA A 4GEEKS

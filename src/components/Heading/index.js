@@ -31,25 +31,23 @@ text-shadow: ${props => props.textShadow};
 margin-top: ${props => props.marginTop || "initial"}; 
 text-transform: ${props => props.uppercase && "uppercase"};
 text-align: ${props => props.align};
-@media ${Device.xs}{
-  font-size: ${props => props.fs_xs};
-}
-@media  ${Device.sm}{
-  text-align: center;
-  font-size: ${props => props.fs_sm};
-}
-@media ${Device.md}{
-  text-align: ${props => props.align};
-  font-size: ${props => props.fs_md};
-}
-@media ${Device.lg}{
+
+@media ${Break.lg}{
   text-align: ${props => props.align};
   font-size: ${props => props.fs_lg};
 }
-@media ${Device.xl} {
+@media ${Break.md}{
   text-align: ${props => props.align};
-  font-size: ${props => props.fs_xl};
-}   
+  font-size: ${props => props.fs_md};
+}
+@media  ${Break.sm}{
+  text-align: center;
+  font-size: ${props => props.fs_sm};
+  margin: ${props => props.m_sm};
+}  
+@media ${Break.xs}{
+  font-size: ${props => props.fs_xs};
+}
 `;
 export const H2 = styled(Heading)`
     display: block;
@@ -87,7 +85,7 @@ font-weight: 400;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
-font-size: ${props => props.fs_xl}
+font-size: ${props => props.fs_xl || props.fontSize}
 
 @media ${Break.lg}{
   font-size: ${props => props.fs_lg};
@@ -111,6 +109,7 @@ display: block;
 text-align: ${props => props.align || "center"};
 font-family: 'Futura', sans-serif;
 margin: ${props => props.m};
+width: ${props => props.width};
 font-weight: ${props => props.fontWeight};
 letter-spacing: -1px;
 font-size: ${props => props.fontSize};
@@ -270,6 +269,7 @@ export const Title = props => {
       fontWeight: '500',
       align: "center",
     },
+    shadow: "0px 0px 4px black",
     small: {
       headingComponent: H3,
       fontSize: '18px',
@@ -279,6 +279,7 @@ export const Title = props => {
     main: {
       headingComponent: H1,
       shadow: "0px 0px 4px black",
+      fontSize: '20px',
       align: "center",
     }
   }
@@ -292,6 +293,7 @@ export const Title = props => {
         fontSize={props.fontSize}
         fs_xs={props.fs_xs}
         align={props.textAlign}
+        textShadow={theme.shadow}
       >
         {props.title}
       </HeadingType>

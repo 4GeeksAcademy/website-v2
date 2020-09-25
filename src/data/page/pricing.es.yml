@@ -21,6 +21,9 @@ intro:
 ## PRICES AND PAYMENTS SECTION
 prices:
   heading: "PRECIOS Y PAGOS"
+  paragraph: "Empieza seleccionando un programa y ciudad para revisar los precios"
+  closed_label: "Haz Clic Aquí Para Seleccionar un Programa"
+  opened_label: "Cerrar"
 
 ## PAYMENT GUIDE SECTION
 payment_guide:

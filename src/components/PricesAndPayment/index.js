@@ -11,356 +11,157 @@ import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import VideoLabelIcon from '@material-ui/icons/VideoLabel';
 import Check from '@material-ui/icons/Check';
 import {Link} from '../Styling/index';
-import Typography from '@material-ui/core/Typography';
 import {Row, Column, Divider, Div} from '../Sections';
 import {Card} from '../Card';
+import Select from '../Select';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage, TriangleDown} from '../Styling';
 import {SessionContext} from '../../session'
 import Fragment from "../Fragment"
 
+const PricingCard = ({data, lang, children, price, color, background, transform, priceInfo}) => {
+  const { header, button } = data;
+  return <Card padding="30px" shadow margin="5px 0" color={background} transform={transform}>
+        <H4 
+        align="center"
+        fontSize="20px"
+        fs_md="18px"
+        fs_sm="24px"
+        fs_xs="22px"
+        color={color}
+        >
+            {header.heading_one}
+        </H4>
+        <H4 color={color} fontSize="18px" align="center">
+          {header.heading_two}
+        </H4>
+    <Paragraph padding="20px" align="center" fontSize="12px" color={color || Colors.gray}>{header.sub_heading}</Paragraph>
+    <H3 margin="20px 0 0"
+      fontSize="20px"
+      color={color}
+      align="center" >{price}</H3>
+    <Paragraph align="center" margin="5px 0 40px 0" fontSize="12px" color={color || Colors.gray}>{priceInfo}</Paragraph>
+    <Div display="block" margin="0 -50px">{children}</Div>
+    <Column size="12" margin="40px 0 0 0"  align="center" image="no"  >
+      <Link to={`/${lang}/apply`}><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{button.button_text}</Button></Link>
+    </Column>
+  </Card>;
+}
 
+const courseArray =[
+  {
+    value: "part_time",
+    label: "Full Stack Development (Part-Time)"
+  },
+  {
+    value: "full_time",
+    label: "Full Stack Development (Full-Time)"
+  },
+  {
+    value: "software-engineering",
+    label: "Software Engineering"
+  }
+];
 
 const PricesAndPayments = (props) => {
 
   const {session, setSession} = useContext(SessionContext);
-  const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
-  const [cityToggle, setCityToggle] = useState(false);
-  let loc = props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
-  let prova = {
-    currentCityLocation: "",
-    steps: [],
-    currentFilteredCourse: ""
-  }
-  if (session && session.location) {
-    let currentLocation = props.locations.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
+  const [currentLocation, setCurrentLocation] = useState(false);
+  const [course, setCourse] = useState(false);
+  const [locations, setLocations] = useState(false);
 
-    if (currentLocation) {
-      currentLocation = currentLocation.node
-      prova = {
-        currentCityLocation: currentLocation,
-        steps: currentLocation.financials_max_months,
-        currentFilteredCourse: currentLocation.prices[props.course]
-      }
-    }
-    else console.log("Problem finding location on ", props.locations)
-  }
-
-  if (!prova.currentFilteredCourse) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
-  function getStepLogo (step) {
-    switch (step) {
-      case 0:
-        return <img src={prova.currentFilteredCourse.center_section.plans[0].logo} height="20px" />;
-      case 1:
-        return <img src={prova.currentFilteredCourse.center_section.plans[1].logo} height="20px" />;
-      case 2:
-        return <img src={prova.currentFilteredCourse.center_section.plans[2].logo} height="20px" />;
-      case 3:
-        return <img src={prova.currentFilteredCourse.center_section.plans[3].logo} height="20px" />;
-      case 4:
-        return <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" />;
-      case 5:
-        return <><img src={prova.currentFilteredCourse.center_section.plans[5].logo} height="20px" />  <img src={prova.currentFilteredCourse.center_section.plans[4].logo} height="20px" /></>;
-      default:
-        return 'Loading Data';
-    }
-  }
+  useEffect(() => {
+    setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
+    if(session && session.location){
+      const _loc = props.locations.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug);
+      setCurrentLocation(_loc ? _loc.node : null)
+    } 
+  },[session, props.locations])
+  
+  // sync property course
+  useEffect(() => setCourse(courseArray.find(c => c.value === props.course)),[props.course]);
+  
+  if (!currentLocation || !currentLocation.prices) 
+  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >Prices are currently not available for this course at {currentLocation.city}</Paragraph>
+  
+  const prices = !course ? {} : currentLocation.prices[course.value];
+  
+  console.log("prices.center_section", prices.center_section)
 
   return (
     <Fragment github="/location">
       <Row
-        background={Colors.lightGray}
-        borderRadius={`.5rem`}
         align={`center`}
-        customRespSize
-        alignResp={`center`}
+        margin="0 0 20px 0"
       >
-        <Div alignItems={`center`}
-          onMouseLeave={() => {
-
-            setTimeout(() => {
-              setCityToggle(false);
-            }, 300)
-          }}
-        >
-          {/* <Paragraph
-            fontWeight={`500`}
-            fs_xs="18px"
-            fs_sm="18px"
-            fs_md="18px"
-            fs_lg="18px"
-            fs_xl="20px"
-            margin={`0 5px 0 0`}>
-            Select a city
-          </Paragraph> */}
-          <Card
-            color={`grey`}
-            borders={`.5rem`}
-            margin={`0 20px 0 0`}
-            margin_sm={"20px auto"}
-            margin_xs={"20px auto"}
-          >
-            <Button
-              display={`flex`}
-              alignItems={`center`}
-              width="fit-content"
-              onClick={() => setCityToggle(!cityToggle)}
-              color={Colors.lightGray}
-            >
-              <Paragraph
-                fontWeight={`500`}
-                color={Colors.gray}
-                fs_xs="18px"
-                fs_sm="18px"
-                fs_md="18px"
-                fs_lg="18px"
-                fs_xl="20px"
-                margin={`0 5px 0 0`}>
-                {session && session.location && session.location.city}
-              </Paragraph>
-              <TriangleDown width="16" color={Colors.gray} fill={Colors.gray} />
-            </Button>
-            {cityToggle &&
-              <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".5rem" shadow>
-                {Array.isArray(loc) && loc.map((item, index) => {
-                  return (
-                    <Button
-                      key={index}
-                      colorHover={Colors.lightBlue}
-                      onClick={() => {
-                        setSession({...session, location: {...item.node}})
-                        setCityToggle(!cityToggle)
-                      }}
-
-                      textColor={Colors.gray}
-                      fontSize={"16px"}
-                      borderRadius=".5rem" padding="10px"
-                    >
-                      <Paragraph
-                        fontSize="16px"
-                        color={Colors.gray} >
-                        {item.node.city}
-                      </Paragraph>
-
-                    </Button>
-                  )
-                })}
-              </Row>
-            }
-          </Card>
-        </Div>
-      </Row>
-
-      <Divider height="50px" />
-      <Row align="center">
-        <Column size="4" size_sm="12" customRespSize respSize="12">
-          <Card
-            shadow
-            width="100%"
-            height="350px"
-            margin="5px 0"
-          >
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <Row align="center" height="100%" >
-                      <H4
-                        fs_xs="20px"
-                        fs_sm="24px"
-                        fs_md="18px"
-                        fs_lg="20px"
-                        fs_xl="16px"
-                        align="center">{prova.currentFilteredCourse.left_section.header.heading_one}
-                      </H4>
-                    </Row>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="40px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Column size="8" alignSelf="center" >
-                    <Paragraph align="center" fontSize="12px" color={Colors.gray}>{prova.currentFilteredCourse.left_section.header.sub_heading}</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="110px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Column size="10" alignSelf="center" align="center">
-                    <H3
-                      fs_xs="20px"
-                      fs_sm="24px"
-                      fs_md="24px"
-                      fs_lg="20px"
-                      fs_xl="24px"
-                      align="center" >{prova.currentFilteredCourse.left_section.content.price}</H3>
-                    <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{prova.currentFilteredCourse.left_section.content.price_info}</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" align="center">
-                    <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{prova.currentFilteredCourse.left_section.button.button_text}</Button></Link>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-          </Card>
-        </Column>
-        {prova.currentCityLocation.hasFinancialsOption &&
-          <Column size="4" size_sm="12" customRespSize respSize="12">
-            <Card shadow width="100%" height="400px" margin="5px 0" color="black" transform="translateY(-20px)">
-              <Row height="100px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" >
-                      <Row align="center" height="100%" >
-                        <H4 fs_xs="16px"
-                          fs_sm="24px"
-                          fs_md="18px"
-                          fs_lg="20px"
-                          fs_xl="16px" align="center" color={Colors.white}>{prova.currentFilteredCourse.center_section.header.heading_one}</H4></Row>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="50px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" align="center">
-                    <Column size="8" alignSelf="center" >
-                      <Paragraph
-                        align="center"
-                        fontSize="12px"
-                        fontFamily="Lato-bold, sans-serif"
-                        color={Colors.yellow}
-                      >
-                        {prova.currentFilteredCourse.center_section.header.sub_heading}
-                      </Paragraph>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="50px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" >
-                      <H3
-                        fs_xs="20px"
-                        fs_sm="24px"
-                        fs_md="24px"
-                        fs_lg="20px"
-                        fs_xl="24px"
-                        align="center"
-                        color={Colors.white}>
-                        {prova.currentFilteredCourse.center_section.plans[activeStep].payment}
-                      </H3>
-                      <Paragraph
-                        align="center"
-                        margin="5px 0"
-                        fontSize="12px"
-                        fontFamily="Lato-bold, sans-serif"
-                        color={Colors.gray}
-                      >
-                        {prova.currentFilteredCourse.center_section.plans[activeStep].paymentInfo}
-                      </Paragraph>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="80px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" align="center">
-                    <Stepper nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
-                      {prova.steps != null && prova.steps.map((label, index) => (
-                        <Step key={label}>
-                          <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={() => setActiveStep(index)}>
-                            <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
-                          </StepButton>
-                        </Step>
-                      ))}
-                    </Stepper>
-                  </Row>
-                  <Row align="center" height="40px">
-                    <Column size="12" align="center">
-                      <Typography className={classes.instructions}>{getStepLogo(activeStep)}</Typography>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-              <Row height="120px" >
-                <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                  <Row height="100%" >
-                    <Column size="12" alignSelf="center" align="center">
-                      <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{prova.currentFilteredCourse.center_section.button.button_text}</Button></Link>
-                    </Column>
-                  </Row>
-                </Column>
-              </Row>
-            </Card>
-          </Column>
+        {!props.course && <Select  
+          top="40px"
+          left="20px"
+          width="300px"
+          maxWidth="100%"
+          options={courseArray}
+          openLabel={course ? course.label : props.openedLabel}
+          closeLabel={course ? course.label : props.closedLabel}
+          onSelect={(opt) => setCourse(opt)}
+          />
         }
-        <Column size="4" size_sm="12" customRespSize respSize="12">
-          <Card shadow width="100%" height="350px" margin="5px 0">
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" >
-                    <Row align="center" height="100%" >
-                      <H4 fs_xs="20px"
-                        fs_sm="24px"
-                        fs_md="18px"
-                        fs_lg="20px"
-                        fs_xl="16px" align="center">{prova.currentFilteredCourse.right_section.header.heading_one}</H4></Row>
-                    {/* <Row align="center" height="100%" ><H4 fontSize="22px" align="center">{props.lang === "es" ? locInfo.right_section.header.heading_two.es : locInfo.right_section.header.heading_two.us}</H4></Row> */}
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="40px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Column size="8" alignSelf="center" >
-                    <Paragraph align="center" fontSize="12px" color={Colors.gray}>{prova.currentFilteredCourse.right_section.header.sub_heading}</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="110px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" align="center">
-                  <Column size="10" alignSelf="center" align="center">
-                    <H3
-                      fs_xs="20px"
-                      fs_sm="24px"
-                      fs_md="24px"
-                      fs_lg="20px"
-                      fs_xl="24px"
-                      align="center" >{prova.currentFilteredCourse.right_section.content.price}</H3>
-                    <Paragraph align="center" margin="5px 0 0 0" fontSize="10px" color={Colors.gray}>{prova.currentFilteredCourse.right_section.content.price_info}</Paragraph>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-            <Row height="100px" >
-              <Column size="12" customRespSize respSize="12" alignSelf="center" height="100%" image="no"  >
-                <Row height="100%" >
-                  <Column size="12" alignSelf="center" align="center">
-                    <Link to="/apply"><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{prova.currentFilteredCourse.right_section.button.button_text}</Button></Link>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
-          </Card>
-        </Column>
+        &nbsp;
+        { course && <Select  
+          top="40px"
+          left="20px"
+          width="300px"
+          maxWidth="100%"
+          options={locations.map(l => ({ label: l.node.city + ", "+ l.node.country, value: l.node.active_campaign_location_slug }))}
+          openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
+          closeLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
+          onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}
+        />}
       </Row>
+      {!prices ? <Paragraph margin="10px 0px" align="center" fontSize="18px" >Prices are currently not available for this {course.label} at {currentLocation.city}</Paragraph>
+      :
+        <Row align="center">
+          { prices.left_section && <Column size="4" maxWidth="280px" size_sm="12" >
+            <PricingCard lang={props.lang} 
+              transform="translateY(20%)"
+              price={prices.right_section.content.price}
+              priceInfo={prices.right_section.content.price_info}
+              data={prices.left_section} 
+            />
+          </Column>
+          }
+          { prices.center_section && Array.isArray(prices.center_section.plans) && <Column size="4" maxWidth="280px" size_sm="12" >
+              <PricingCard lang={props.lang} color="white" background='black'
+                price={prices.center_section.plans[activeStep].payment}
+                priceInfo={prices.center_section.plans[activeStep].paymentInfo}
+                data={prices.center_section}
+              >
+                <Stepper style={{ marginTop: "-50px" }} nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
+                  {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map(p => p.months).map((label, index) => (
+                    <Step key={label}>
+                      <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={() => setActiveStep(index)}>
+                        <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+                      </StepButton>
+                    </Step>
+                  ))}
+                </Stepper>
+                <Div margin="0 0 40px 0">
+                  <img style={{ margin: "auto", height: "20px" }} src={prices.center_section.plans[activeStep].logo} />
+                </Div>
+              </PricingCard>
+            </Column>
+          }
+          { prices.right_section && <Column size="4" maxWidth="280px" size_sm="12" >
+            <PricingCard lang={props.lang} 
+              transform="translateY(20%)"
+              price={prices.right_section.content.price}
+              priceInfo={prices.right_section.content.price_info}
+              data={prices.right_section} 
+            />
+          </Column>
+          }
+        </Row>
+      }
     </Fragment>
   )
 }

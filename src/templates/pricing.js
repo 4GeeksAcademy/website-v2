@@ -1,9 +1,10 @@
 import React, {useState, useContext} from 'react';
 import {Column, Row, Container, Divider, Wrapper, WrapperImage, Div} from "../components/Sections";
-import {Title, H3, H4, H5, Paragraph} from '../components/Heading';
+import {Title, H2, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, RoundImage, TriangleDown} from '../components/Styling';
 import Credentials from '../components/Credentials';
 import PricesAndPayment from '../components/PricesAndPayment';
+import Select from '../components/Select';
 import WhoIsHiring from '../components/WhoIsHiring';
 import {Card} from '../components/Card'
 import BaseRender from './_baseRender';
@@ -11,26 +12,9 @@ import Modal from '@material-ui/core/Modal';
 import {reviewGuidebook} from "../actions";
 import LeadForm from "../components/LeadForm/index.js";
 
-
 const Pricing = (props) => {
   const {data, pageContext, yml} = props;
   const [open, setOpen] = React.useState(false);
-  const [course, setCourse] = React.useState(null);
-  const [courseArray, setCourseArray] = useState([
-    {
-      type: "part_time",
-      name: "Part Time"
-    },
-    {
-      type: "full_time",
-      name: "Full Time"
-    },
-    {
-      type: "online",
-      name: "Online"
-    }
-  ])
-  const [priceToggle, setPriceToggle] = useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
 
   return (
@@ -58,34 +42,18 @@ const Pricing = (props) => {
 
         />
       </WrapperImage>
-      {/* CREDENTIALS SECTION */}
-      <Wrapper
-      >
-        <Credentials lang={data.allCredentialsYaml.edges} />
-      </Wrapper>
       <Divider height="100px" />
-      {/*  */}
-      <Container fluid >
+      <Wrapper>
         <Row>
-          <Column size="1" />
-          <Column size="11" >
-            <Row>
-              <Column size="1" />
-              <Column size="10">
-                <Row>
-                  <Column size="5" size_sm="12" height="300px">
-                    <RoundImage url={yml.intro.image} height="400px" bsize="contain" />
-                  </Column>
-                  <Column size="4" size_sm="12">
-                    <Divider height="100px" />
-                    <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
-                  </Column>
-                </Row>
-              </Column>
-            </Row>
+          <Column size="5" size_sm="12" height="300px">
+            <RoundImage url={yml.intro.image} height="400px" bsize="contain" />
+          </Column>
+          <Column size="7" size_sm="12">
+            <H2 align="left" margin="30px 0 20px 0" type="h1">4Geeks's pricing makes sense</H2>
+            <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
           </Column>
         </Row>
-      </Container>
+      </Wrapper>
       <Divider height="100px" />
       <Wrapper
         background={Colors.lightGray}
@@ -94,104 +62,20 @@ const Pricing = (props) => {
         <Title
           size="10"
           title={yml.prices.heading}
+          paragraph={yml.prices.paragraph}
+          paragraphColor={Colors.black}
           variant="primary"
         />
-        <Row
-          padding={`10px 20px`}
-          background={Colors.lightGray}
-          borderRadius={`.5rem`}
-          align={`center`}
-          customRespSize
-          alignResp={`center`}
-        >
-          <Div
-            alignItems={`center`}
-            onMouseLeave={() => {
-
-              setTimeout(() => {
-                setPriceToggle(false);
-              }, 300)
-            }}
-          >
-            <Paragraph
-              fontWeight={`500`}
-              fs_xs="18px"
-              fs_sm="18px"
-              fs_md="18px"
-              fs_lg="18px"
-              fs_xl="20px"
-              margin={`0 5px 0 0`}>
-              Select a program
-          </Paragraph>
-            <Card
-              color={`grey`}
-              borders={`.5rem`}
-              margin={`0 20px 0 0`}
-              margin_sm={"20px auto"}
-              margin_xs={"20px auto"}
-            >
-
-              <Button
-                display={`flex`}
-                alignItems={`center`}
-                width="fit-content"
-                onClick={() => setPriceToggle(!priceToggle)}
-                // onClick={() => {toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))}}
-                color={Colors.lightGray}
-              >
-                <Paragraph
-                  fontWeight={`500`}
-                  color={Colors.blue}
-                  fs_xs="18px"
-                  fs_sm="18px"
-                  fs_md="18px"
-                  fs_lg="18px"
-                  fs_xl="20px"
-                  margin={`0 5px 0 0`}>{course === "online" ? "Online" : course === "full_time" ? "Full Time" : "Part Time"}
-                </Paragraph>
-                <TriangleDown width="16" color={Colors.gray} fill={Colors.gray} />
-              </Button>
-              {priceToggle &&
-                <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".5rem" shadow>
-                  {Array.isArray(courseArray) && courseArray.map((item, index) => {
-                    return (
-                      <Button
-                        key={index}
-                        colorHover={Colors.lightBlue}
-                        // onClick={() => {item.city in filterCity ? null : item.city != "All Locations" ? setAcademy(item.slug) : setAcademy(null), setFilterByCity([item.city]), setToggleCity(!toggleCity)}}
-                        onClick={() => {setCourse(item.type), setPriceToggle(!priceToggle)}}
-                        textColor={Colors.gray}
-                        fontSize={"16px"}
-                        borderRadius=".5rem" padding="10px"
-                      >
-                        <Paragraph
-                          fontSize="16px"
-                          color={Colors.gray} >
-                          {item.name}
-                        </Paragraph>
-
-                      </Button>
-                    )
-                  })}
-                </Row>
-              }
-            </Card>
-          </Div>
-        </Row>
-        {
-          course &&
-          <PricesAndPayment
-            type={pageContext.slug}
-            locations={data.allLocationYaml.edges}
-            course={course}
-          />
-        }
+        <PricesAndPayment
+          openedLabel={yml.prices.opened_label}
+          closedLabel={yml.prices.closed_label}
+          type={pageContext.slug}
+          lang={pageContext.lang}
+          locations={data.allLocationYaml.edges}
+        />
       </Wrapper >
       <Divider height="100px" />
-      <Wrapper
-
-
-      >
+      <Wrapper>
         <Title
           size="10"
           title={yml.payment_guide.heading}
@@ -213,8 +97,6 @@ const Pricing = (props) => {
         <Divider height="100px" />
       </Wrapper>
       <Wrapper
-
-
         background={Colors.lightGray}
         border="top"
       >
@@ -263,6 +145,9 @@ export const query = graphql`
             }
             prices{
                 heading
+                paragraph
+                opened_label
+                closed_label
             }
             payment_guide{
                 heading
@@ -298,6 +183,7 @@ export const query = graphql`
           node {
             id
             city
+            country
             hasFinancialsOption
             financials_max_months
             active_campaign_location_slug
@@ -307,6 +193,7 @@ export const query = graphql`
             }
             meta_info {
               slug
+              title
               description
               image
               keywords

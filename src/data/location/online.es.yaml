@@ -5,7 +5,7 @@ meta_info:
   position: 0
   image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
   keywords: "null"
-  redirects: ["/location/remoto"]
+  redirects: ["/location/remoto","/remoto"]
 
 seo_title: "Coding Bootcamp Remoto"
 header:

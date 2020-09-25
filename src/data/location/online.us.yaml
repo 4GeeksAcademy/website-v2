@@ -5,7 +5,7 @@ meta_info:
   description: "null"
   image: ""
   keywords: "null"
-  redirects: ["/location/online", "/location/remote"]
+  redirects: ["/location/online", "/location/remote","/online"]
 
 seo_title: "Online Coding Bootcamp"
 header:

@@ -5,7 +5,7 @@ meta_info:
   description: "Learn & evolve your coding skills. Miami Coding Bootcamp with 1000+ Graduates & 86% hiring rate. The #1 part-time coding bootcamp in the world."
   image: ""
   keywords: "null"
-  redirects: ["/locations"]
+  redirects: ["/locations", "/miami"]
 
 seo_title: "4Geeks Academy Miami"
 header:
@@ -52,8 +52,6 @@ carousel_box:
 ## CENTER   BOX => FINANCIAL SLIDER OPTIONS
 ## RIGHT    BOX => ISA - INCOMING SHARING AGREEMENT
 hasFinancialsOption: true
-# financials_max_months: ["6 mo", "12 mo", "24 mo", "36 mo", "42 mo", "60 mo"]
-financials_max_months: ["60 mo", "42 mo", "36 mo", "24 mo", "12 mo", "6 mo"]
 prices:
   full_time:
     ## GENERAL INFO

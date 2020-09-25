@@ -13,7 +13,12 @@ header:
   tagline: "SENIOR SOFTWARE ENGINEER"
   sub_heading: "Work at a great company, make a great living and help build tomorrows software."
   subsub_heading: "(Previous coding experience is required)"
+
+  # The background image position can be cnotroled by device size
+  # devices:        imac         laptop     ipad        phone     small phone
+  image_position: ["0px -100px","0px -50px","0px -20px","0px 0px","0px 0px"]
   image: "../../../static/images/bg/apple-building.jpg"
+  
   alt: ""
 
 button:

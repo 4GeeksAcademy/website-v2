@@ -59,38 +59,12 @@ heading_section:
 ## RIGHT BOX => FULL-TIME
 ## CARACAS AT THE MOMENT HAS NO FINANCIAL OPTIONS SET
 hasFinancialsOption: false
-financials_max_months:
 prices:
   full_time:
     ## GENERAL INFO
     slug: "full-time"
     duration: "9 Weeks"
 
-    ## LEFT BOX SECTION FULL-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "FULL-TIME"
-        sub_heading: ""
-      content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
-        price_info:
-      button:
-        button_text: "APLICA"
-
-    center_section:
-      header:
-        heading_one: ""
-        sub_heading: ""
-      plans:
-        - months: ""
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-      button:
-        button_text: ""
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:

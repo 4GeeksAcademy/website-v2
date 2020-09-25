@@ -22,6 +22,7 @@ export const Card = styled(Fragment)`
     flex-direction: column;
     min-height: ${props => props.minHeight}
     width: ${props => props.width};
+    max-width: ${props => props.maxWidth};
     height: ${props => props.height};
     padding: ${props => props.padding};
     background: ${props => _colors()[props.color] || Colors.white};
@@ -58,6 +59,7 @@ export const Card = styled(Fragment)`
         margin: ${props => props.margin_sm || props.margin};
         padding: ${props => props.p_sm};
         display: ${props => props.display_sm};
+        transform: none;
     }
     @media ${Break.xs}{
         height: ${props => props.h_xs};

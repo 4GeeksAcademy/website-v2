@@ -149,7 +149,7 @@ border-radius: ${props => props.borders};
 
 `
 export const Div = styled.div`
-    display: flex;
+    display: ${props => props.display || "flex"};
     flex-wrap: nowrap; 
     flex-direction: ${props => props.flexDirection === 'column' ? 'column' : 'row'};
     justify-content: ${props => props.justifyContent};
@@ -169,12 +169,6 @@ export const Div = styled.div`
     @media  ${Device.sm}{
         align-items: ${props => props.alignItems_sm};
     }
-    @media ${Device.md}{        
-    }
-    @media ${Device.lg}{
-    }
-    @media ${Device.xl} {
-    } 
 `
 export const Column = styled.div`
     padding: ${props => props.padding};
@@ -298,6 +292,11 @@ export const WrapperImage = (props) => {
                 height={props.height}
                 borderRadius={props.customBorderRadius}
                 backgroundColor={Colors.darkGray}
+                backgroundPosition={props.backgroundPosition[0]}
+                bp_lg={props.backgroundPosition[1]}
+                bp_md={props.backgroundPosition[2]}
+                bp_sm={props.backgroundPosition[3]}
+                bp_xs={props.backgroundPosition[4]}
                 image={props.imageData}
                 bgSize={props.bgSize}
                 alt={props.alt}
@@ -318,7 +317,8 @@ export const WrapperImage = (props) => {
     </Container>
 }
 WrapperImage.defaultProps = {
-    customBorderRadius: "10px 10px"
+    customBorderRadius: "10px 10px",
+    backgroundPosition: [],
 };
 
 export const WrapperCustom = (props) => {

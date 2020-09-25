@@ -5,7 +5,7 @@ meta_info:
   position: 20
   image: "https://storage.googleapis.com/4geeks-academy-website/caracas-es.png"
   keywords: ""
-  redirects: ["/venezuela"]
+  redirects: ["/venezuela", "/caracas"]
 
 seo_title: "4Geeks Academy Caracas"
 header:

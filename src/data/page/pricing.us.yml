@@ -20,7 +20,10 @@ intro:
 
 ## TUITION AND PAYMENTS SECTION
 prices:
-  heading: "TUITION AND PAYMENTS"
+  heading: "SELECT A PROGRAM"
+  paragraph: "Start by choosing a program and location"
+  closed_label: "Click to select a program"
+  opened_label: "Close"
 
 ## PAYMENT GUIDE SECTION
 payment_guide:
