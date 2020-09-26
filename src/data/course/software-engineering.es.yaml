@@ -47,7 +47,7 @@ details:
       description: "Prepárate para empezar el curso: Solidifica conceptos de algoritmos, famliarizate con JAVA, Programación Orientada a Objectos, Javascript, React.js y el mundo del desarrollo web."
       projects: "Aplicación para el manejo de colas utilizando React.js, JAVA y Postgress"
       slug: "prework"
-      duration: "~ 60 hours"
+      duration: "~ 60 hrs"
       step: 0
     - module_name: "FRONT"
       title: "Front-End Avanzado"
@@ -68,37 +68,37 @@ details:
     - module_name: "STORAGE"
       title: "Almacenado y Búsqueda de Información"
       description: >
-        Java es el lenguaje mas utilizado del mundo (por mucho). En este modulos aprenderás los patrones de diseño más importantes para escalar aplicaciones, retos de optimización: DAO, Maven, O.O.P, Singleton, Factory, Strategy, Observer, Builder, etc. \n
-        Hay demasiadas formas diferentes de almacenar y buscar información, aqui aprenderás las mas populares y resolveras problemas típicos de escalamiento con Big Data, Data-Mining, Almacenamiento Distribuido, Redis/Memcache, SQL, NoSQL, GraphQL, et.
+        Java es el lenguaje más utilizado del mundo (por mucho). En este modulos aprenderás los patrones de diseño más importantes para escalar aplicaciones, retos de optimización: DAO, Maven, O.O.P, Singleton, Factory, Strategy, Observer, Builder, etc. \n
+        Hay demasiadas formas diferentes de almacenar y buscar información, aqui aprenderás las más populares y resolveras problemas típicos de escalamiento con Big Data, Data-Mining, Almacenamiento Distribuido, Redis/Memcache, SQL, NoSQL, GraphQL, et.
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
       slug: "info-retrival"
       duration: "2.5 wks"
       step: 3
     - module_name: "DISTRIBUIDO"
       title: "Aplicaciones Distribuidas"
-      description: "Estár listo para tener millones de usuarios require de fuertes conocimientos de arquitectura, aqui aprenderas las estrategias mas importantes: Concurrencia, Sockets, Compresion de Datos, Almacenamiento Distribuido, Mensajeria, Colas, etc."
+      description: "Una aplicación lista para tener millones de usuarios require de fuertes conocimientos de arquitectura, aquí aprenderas las estrategias más importantes: Concurrencia, Sockets, Compresion de Datos, Almacenamiento Distribuido, Mensajeria, Colas, etc."
       projects: "Construye una aplicación con multiples hilos, compresion de datos, microservicios y otras ventajas"
       slug: "scale"
       duration: "3 wks"
       step: 3
     - module_name: "CALIDAD"
       title: "Control de la Calidad"
-      description: "Cuando contrulles software para una empresa grande tu código debe ser a prueba de balas, aquí aprenderas a configurar un sistema de integración continua que garantice un deploy rapido y libre de errores, especialmente en aplicaciónes que tienen mucho tiempo funcionando y tiene mucha deuda técnica."
+      description: "Cuando construlles software para una empresa grande tu código debe ser a prueba de balas, aquí aprenderas a configurar un sistema de integración continua que garantice un deploy rápido y libre de errores, especialmente en aplicaciónes que tienen mucho tiempo funcionando (legacy) y tienen mucha deuda técnica."
       projects: "Te entregaremos un reto de la vida real de una aplicación que ya esta en funcionamiento, deberás entenderla y construir un sistema de integración continua que asegure la calidad."
       slug: "quality-deploy"
       duration: "2 wks"
       step: 2
     - module_name: "FINAL PROJECT"
       title: "The Final Project"
-      description: "Durante el proyecto final deberas elejir que tipo de proyecto quieres realizar: Inteligencia Artificial, Blockchain o desarrollo web. Sin recibir ninguna materia nuevo nos enfocaremos en apoyarte en la realicación de una idea desde cero hasta su publicación y escalamiento exitoso."
-      projects: "Desarrollaras tu aplicación desde cero y la publicarás en Amazon Web Services."
+      description: "Durante el proyecto final deberas elegir que tipo de proyecto quieres realizar: Inteligencia Artificial, Blockchain o desarrollo web. Sin recibir ninguna materia nuevo nos enfocaremos en apoyarte en la realicación de una idea desde cero hasta su publicación y escalamiento exitoso."
+      projects: "Desarrollarás tu aplicación desde cero y la publicarás en Amazon Web Services."
       slug: "quality-deploy"
       duration: "4 wks"
       step: 3.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
       description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
-      projects: "Consegurás tu primer trabajo, empezaras a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganár muy bien y disfrutar de la vida de un programador."
+      projects: "Consegurás tu primer trabajo, empezarás a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganár muy bien y disfrutar de la vida de un programador."
       slug: "lifelong-learning"
       duration: "1+ sem"
       step: 0.1

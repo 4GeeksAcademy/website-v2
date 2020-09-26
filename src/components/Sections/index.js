@@ -157,6 +157,7 @@ export const Div = styled.div`
     align-content: ${props => props.alignContent};
     height: ${props => props.height};
     width: ${props => props.width};
+    align: ${props => props.align};
     margin: ${props => props.margin};
     position: ${props => props.position};
     background: ${props => props.background};
@@ -166,11 +167,13 @@ export const Div = styled.div`
     &:hover { 
         background: ${props => props.backgroundHover};
     }
-    @media ${Device.xs}{
-        align-items: ${props => props.alignItems_xs};
-    }
-    @media  ${Device.sm}{
+    @media  ${Break.sm}{
         align-items: ${props => props.alignItems_sm};
+        padding: ${props => props.p_sm};
+        width: ${props => props.w_sm};
+    }
+    @media ${Break.xs}{
+        align-items: ${props => props.alignItems_xs};
     }
 `
 export const Column = styled.div`

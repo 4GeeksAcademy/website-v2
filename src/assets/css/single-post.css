@@ -7,6 +7,9 @@
 .single-post ul li{
     list-style: circle;
 }
+.single-post ol li{
+    list-style: decimal;
+}
 .single-post p img{
     display: block;
     max-width: 100%;
@@ -57,4 +60,77 @@
 .single-post p a{
     color: #0097CE;
     text-decoration: underline;
+}
+
+.single-post {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    color: #24292e;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-family: PingFangSC-Semibold, Microsoft YaHei, sans-serif;
+}
+
+
+
+.single-post table{
+    margin: 40px 0;
+    font-size: 14px;
+    color: #2D3138;
+    letter-spacing: 0;
+    line-height: 28px;
+}
+
+@media (max-width: 768px) {
+
+    .single-post table:before {
+        content: " 👆 ➡ Swipe your finger to scroll the table";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background: black;
+        color: white;
+    }
+    .single-post table {
+        padding-top: 30px;
+        position: relative;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .single-post table td:nth-child(1) {
+        white-space: normal;
+    }
+}
+
+.single-post table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.single-post * {
+    box-sizing: border-box;
+}
+
+.single-post table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+.single-post table tr:hover {
+    background-color: #f5f2fe;
+}
+
+.single-post table th, .single-post table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+.single-post table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+.single-post table tr:nth-child(2n):hover {
+    background-color: #c8c3d8;
 }

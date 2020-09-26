@@ -223,6 +223,7 @@ Separator.defaultProps = {
 };
 
 export const Paragraph = styled.div`
+  width: ${props => props.width};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin};
   font-size: ${props => props.fontSize};
