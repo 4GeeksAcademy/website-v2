@@ -79,6 +79,7 @@ Input.defaultProps = {
 
 const colors = {
     red: [Colors.lightRed, Colors.red],
+    green: [Colors.lightGreen, Colors.green],
 }
 export const Alert = styled.div`
     background-color: ${props => colors[props.color][0]};

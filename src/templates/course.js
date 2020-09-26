@@ -231,8 +231,6 @@ export const query = graphql`
               heading
               geek_force
               geek_pal
-              geek_pal_heading
-              geek_force_heading
             }
             credentials{
               heading

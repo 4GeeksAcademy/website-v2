@@ -180,8 +180,9 @@ export const contactUs = async (data,session) => {
     console.log("Succesfully contact us", data)
     let body = {};
     for (let key in data) body[key] = data[key].value;
-
-    return await save_form(body, ['contact us'], ['contact-us'], session);
+    
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['contact-us'], ['soft'], session);
+    return true;
 }
 
 export const initSession = async (locationsArray, seed={}) => {

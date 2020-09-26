@@ -1,3 +1,6 @@
+*{
+    user-select: initial !important;
+}
 * :focus{
     outline:none!important;
 }

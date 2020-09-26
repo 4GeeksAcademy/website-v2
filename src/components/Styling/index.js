@@ -14,6 +14,7 @@ export const Colors = {
     verylightGray: "#fafafa",
     lightGray: "#ededed",
     lightGreen: "#c4f7b7",
+    green: "#20630d",
     darkGray: '#2e2e2e',
     borderGray: '#ececec',
     yellow: "#E6BA1F",

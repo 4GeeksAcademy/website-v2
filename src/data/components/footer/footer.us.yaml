@@ -3,13 +3,15 @@ footer:
     width: 2
     heading: "CONTACT"
     items:
-      - name: "Monday to Friday"
+      - name: "✉️ Email Us"
+        link: "/contact"
+      - name: "۪"
+        link: ""
+      - name: "Our offices are open Monday to Friday"
         link: ""
       - name: "9:00am - 9:00pm"
         link: ""
-      - name: "-"
-        link: ""
-      - name: "🇪🇸 Cambiar a Español"
+      - name: "🇪🇸 Cambiar al Español"
         link: "/es/inicio"
   - column_two:
     width: 3
@@ -27,8 +29,6 @@ footer:
         link: "/calendar"
       - name: "Blog"
         link: "/blog"
-      - name: "Contact"
-        link: "/contact"
       - name: "Careers"
         link: "/jobs"
       - name: "Legal"

@@ -78,6 +78,7 @@ export const H2 = styled(Heading)`
     `;
 export const H3 = styled(Heading)`
 display: block;
+width: 100%;
 text-align: ${props => props.align || "center"};
 font-family: 'Futura', sans-serif;
 margin: ${props => props.margin};
@@ -85,7 +86,7 @@ font-weight: 400;
 letter-spacing: -1px;
 text-transform: ${props => props.uppercase && "uppercase"};
 color: ${props => props.color};
-font-size: ${props => props.fs_xl || props.fontSize}
+font-size: ${props => props.fs_xl || props.fontSize};
 
 @media ${Break.lg}{
   font-size: ${props => props.fs_lg};

@@ -222,10 +222,9 @@ export const query = graphql`
                 bc_slug
             }
             geek_data {
+              heading
               geek_force
               geek_pal
-              geek_pal_heading
-              geek_force_heading
             }
             credentials{
               heading
