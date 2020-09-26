@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
+import PropTypes from "prop-types";
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {redirectTo, Redirect} from "@reach/router"
@@ -14,6 +15,19 @@ import FormControl from '@material-ui/core/FormControl';
 // import Select from '@material-ui/core/Select';
 // import Button from '@material-ui/core/Button';
 import {Card} from '../Card'
+
+const strings = {
+  us: {
+    "It takes just": "It takes just",
+    "weeks in": "weeks in",
+    "to become a": "to become a"
+  },
+  es: {
+    "It takes just": "En tan sólo",
+    "weeks in": "semánas en",
+    "to become a": "te convertirás en"
+  }
+}
 
 const useStyles = makeStyles(theme => ({
   selector: {
@@ -46,7 +60,7 @@ const ProgramSelector = (props) => {
   return (
     <Row align="around" marginTop={props.marginTop}>
       <Column size="2" size_sm="12" alignSelf="center" paddingRight="0" align="right" margin="5px 0">
-        <Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >It takes just </Paragraph>
+        <Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >{strings[props.lang]["It takes just"]}</Paragraph>
       </Column>
       <Column size="1" size_sm="12" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" >
         {toggles === false &&
@@ -95,8 +109,8 @@ const ProgramSelector = (props) => {
           </Card>
         }
       </Column>
-      <Column size="1" size_sm="12" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >weeks in</Paragraph></Column>
-      <Column size="3" size_sm="12" alignSelf="center" align="center" paddingLeft="0" paddingRight="0">
+      <Column size="2" size_sm="12" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >{strings[props.lang]["weeks in"]}</Paragraph></Column>
+      <Column size="2" size_sm="12" alignSelf="center" align="center" paddingLeft="0" paddingRight="0">
         {toggle == false &&
           <Button
             style={{maxWidth: "200px", position: "relative"}}
@@ -135,10 +149,15 @@ const ProgramSelector = (props) => {
         }
       </Column>
       <Column size="2" size_sm="12" alignSelf="center" align="left" paddingLeft="0" paddingRight="0" m_sm="20px 0px 0px 0px">
-        <Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >to become a</Paragraph>
+        <Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >{strings[props.lang]["to become a"]}</Paragraph>
       </Column>
     </Row>
   )
 };
-
+ProgramSelector.propTypes = {
+  lang: PropTypes.string,
+}
+ProgramSelector.defaultProps = {
+  lang: "us",
+}
 export default ProgramSelector;

@@ -54,7 +54,7 @@ const Program = ({data, pageContext, yml}) => {
       paddingRight={`0`}
       customBorderRadius="0 0 0 1.25rem"
     >
-      <ProgramSelector week={week} context={pageContext} marginTop="70px" />
+      <ProgramSelector lang={pageContext.lang} week={week} context={pageContext} marginTop="70px" />
       <Title
         size="5"
         marginTop="40px"

@@ -338,8 +338,15 @@ export const Button = styled(SmartButton)`
                     background-color: ${props => props.colorHover};
                 }
             `}  
+            @media ${Break.lg}{
+                font-size: ${props => props.fs_lg};
+            }
+            @media ${Break.md}{
+                font-size: ${props => props.fs_md};
+            }
             @media ${Break.sm}{
                 margin: ${props => props.m_sm};
+                font-size: ${props => props.fs_sm};
             }
         `}  
 `;

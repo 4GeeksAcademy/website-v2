@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
 import styled from 'styled-components';
-import {Card} from '../components/Card'
+import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
-import {H1, Title, Paragraph, H5} from '../components/Heading'
+import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import PricesAndPayment from '../components/PricesAndPayment'
@@ -89,20 +89,9 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" md="0px" />
     </WrapperImage>
 
-    <Wrapper  margin="50px 0 0 0">
-      <Title
-          size="10"
-          marginTop="40px"
-          title={yml.details.heading}
-          paragraph={yml.details.sub_heading}
-          variant="primary"
-      />
-      <ProgramDetails details={yml.details} />
-    </Wrapper>
     
     <Wrapper
       margin="100px"
-      background={Colors.lightGray}
       border="top">
       <WhoIsHiring
         margin="50px"
@@ -112,14 +101,15 @@ const Program = ({data, pageContext, yml}) => {
       />
     </Wrapper>
 
-    <Wrapper margin="50px 0">
+    <Wrapper  margin="50px 0 0 0">
       <Title
-        size="10"
-        title={yml.geeks_vs_others.heading}
-        paragraph={yml.geeks_vs_others.sub_heading}
-        variant="primary"
+          size="10"
+          marginTop="40px"
+          title={yml.details.heading}
+          paragraph={yml.details.sub_heading}
+          variant="primary"
       />
-      <GeeksVsOthers lang={pageContext.lang} limit={5} />
+      <ProgramDetails details={yml.details} />
     </Wrapper>
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
@@ -150,6 +140,16 @@ const Program = ({data, pageContext, yml}) => {
             </Column>
         </Row>
       </Column>
+    </Wrapper>
+
+    <Wrapper margin="50px 0">
+      <Title
+        size="10"
+        title={yml.geeks_vs_others.heading}
+        paragraph={yml.geeks_vs_others.sub_heading}
+        variant="primary"
+      />
+      <GeeksVsOthers lang={pageContext.lang} limit={5} />
     </Wrapper>
 
     <Wrapper

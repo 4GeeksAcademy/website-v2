@@ -1,5 +1,6 @@
 import React, {useState, useContext, useEffect, useRef} from 'react';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
+import {useStaticQuery, graphql} from "gatsby"
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
@@ -37,13 +38,14 @@ const PricingCard = ({data, lang, children, price, color, background, transform,
         </H4>
     <Paragraph padding="20px" align="center" fontSize="12px" color={color || Colors.gray}>{header.sub_heading}</Paragraph>
     <H3 margin="20px 0 0"
-      fontSize="20px"
+      fs_xl="25px"
+      fs_lg="20px"
       color={color}
       align="center" >{price}</H3>
     <Paragraph align="center" margin="5px 0 40px 0" fontSize="12px" color={color || Colors.gray}>{priceInfo}</Paragraph>
     <Div display="block" margin="0 -50px">{children}</Div>
     <Column size="12" margin="40px 0 0 0"  align="center" image="no"  >
-      <Link to={`/${lang}/apply`}><Button width="120px" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="8px">{button.button_text}</Button></Link>
+      <Link to={`/${lang}/apply`}><Button width="100%" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="16px" fs_lg="14px" fs_sm="16px">{button.button_text}</Button></Link>
     </Column>
   </Card>;
 }
@@ -58,12 +60,29 @@ const courseArray =[
     label: "Full Stack Development (Full-Time)"
   },
   {
-    value: "software-engineering",
+    value: "software_engineering",
     label: "Software Engineering"
   }
 ];
 
 const PricesAndPayments = (props) => {
+  const data = useStaticQuery(graphql`
+    query PricesAndPayments{
+      content: allPricesAndPaymentYaml{
+        edges {
+          node {
+            fields {
+              lang
+            }
+            pricing_error_contact
+            pricing_error
+          }
+        }
+      }
+    }
+    `)
+    let info = data.content.edges.find(({node}) => node.fields.lang === props.lang);
+    if (info) info = info.node;
 
   const {session, setSession} = useContext(SessionContext);
   const [activeStep, setActiveStep] = useState(0);
@@ -83,12 +102,10 @@ const PricesAndPayments = (props) => {
   useEffect(() => setCourse(courseArray.find(c => c.value === props.course)),[props.course]);
   
   if (!currentLocation || !currentLocation.prices) 
-  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >Prices are currently not available for this course at {currentLocation.city}</Paragraph>
+  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
   
   const prices = !course ? {} : currentLocation.prices[course.value];
   
-  console.log("prices.center_section", prices.center_section)
-
   return (
     <Fragment github="/location">
       <Row
@@ -118,14 +135,15 @@ const PricesAndPayments = (props) => {
           onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}
         />}
       </Row>
-      {!prices ? <Paragraph margin="10px 0px" align="center" fontSize="18px" >Prices are currently not available for this {course.label} at {currentLocation.city}</Paragraph>
+      {!prices ? 
+        <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
       :
         <Row align="center">
           { prices.left_section && <Column size="4" maxWidth="280px" size_sm="12" >
             <PricingCard lang={props.lang} 
               transform="translateY(20%)"
-              price={prices.right_section.content.price}
-              priceInfo={prices.right_section.content.price_info}
+              price={prices.left_section.content.price}
+              priceInfo={prices.left_section.content.price_info}
               data={prices.left_section} 
             />
           </Column>
