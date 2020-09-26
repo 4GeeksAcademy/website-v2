@@ -134,7 +134,7 @@ geeks_vs_others:
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
-  geek_pal_heading: Get a job in tech
+  header: And Forbes 500 companies will hire you!
   geek_pal:
     - Resume building
     - Github profile building

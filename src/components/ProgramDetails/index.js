@@ -53,18 +53,19 @@ const ProgramDetails = (props) => {
                         {props.details.details_modules.map((item, index) => {
                             return (
                                 <Div
+                                    onClick={() => setSelected({index, manual: true})}
                                     key={index}
+                                    cursor="pointer"
                                     flexDirection={`column`}
                                     alignItems={`center`}
+                                    backgroundHover={Colors.lightGray}
                                     background={selected.index === index ? "#bfeeff" : null}
-                                    padding={selected.index === index ? "1rem" : null}
-                                    borderRadius={selected.index === index ? ".75rem" : null}
+                                    padding={"10px"}
+                                    borderRadius={".75rem"}
                                 >
                                     <Div
-                                        onClick={() => setSelected({index, manual: true})}
                                         alignItems={`center`}
                                         margin={`0 0 5px 0`}
-
                                     >
                                         <Paragraph
                                             color={Colors.darkGray}
@@ -117,8 +118,6 @@ const ProgramDetails = (props) => {
                                     </Paragraph>
                                 )
                             })}
-                            }
-                            {/* <Infinity width="16px" fill={Colors.darkGray} /> */}
                         </Column>
                     </Row>
 

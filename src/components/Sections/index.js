@@ -163,6 +163,9 @@ export const Div = styled.div`
     border-radius: ${props => props.borderRadius};
     padding: ${props => props.padding};
     cursor: ${props => props.cursor};
+    &:hover { 
+        background: ${props => props.backgroundHover};
+    }
     @media ${Device.xs}{
         align-items: ${props => props.alignItems_xs};
     }

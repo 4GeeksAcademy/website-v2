@@ -1,10 +1,13 @@
 import React from 'react';
 import styled, {css, keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
-import {Colors} from '../../components/Styling'
 import {Break} from '../Responsive'
 import {FadeIn} from '../Animations'
 import Fragment from "../Fragment"
+import {navigate} from "gatsby";
+import {RoundImage, Colors, Check} from '../Styling'
+import {Row, Column} from '../Sections'
+import {Paragraph} from '../Heading'
 
 const _colors = () => ({
     black: Colors.black,
@@ -85,3 +88,40 @@ Card.defaultProps = {
     margin_sm: null,
     margin_xs: null,
 };
+
+export const GeekCard = ({  heading, bullets, image, to, icon  }) => {
+    const Icon = icon;
+    return <Card shadow
+      cursor="pointer"
+      style={{position: "relative"}}
+      bgHover={Colors.lightGray}
+      onClick={() => navigate(to)}
+      h_xs="400px"
+      h_sm="370px"
+      height="500px"
+      padding="20px"
+      width="100%"
+      margin="10px 0px"
+    >
+        <RoundImage url={image} bsize="contain" height="80px" margin="0 0 30px 0" position="left" />
+        {Array.isArray(bullets) && bullets.map((pal, index) => {
+          return (
+            <Row key={index} marginBottom="5px">
+              <Column size="1" alignSelf="top">
+                <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+              </Column>
+              <Column size="10" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                <Paragraph
+                  fs_sm="14px"
+                  fs_md="16px"
+                  fs_lg="16px"
+                  fontSize="18px"
+                  align_sm="left"
+                  color={Colors.gray}>{pal}</Paragraph>
+              </Column>
+            </Row>
+          )
+        })}
+        <Icon style={{position: "absolute", right: "10px", bottom: "5px"}} width="32" color={Colors.yellow} fill={Colors.yellow} />
+    </Card>
+  }

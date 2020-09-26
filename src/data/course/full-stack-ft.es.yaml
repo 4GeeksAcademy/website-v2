@@ -84,7 +84,7 @@ geeks_vs_others:
 
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
-  geek_pal_heading: Trabaja en tecnología
+  heading: ¡Career Support de por vida!
   geek_pal:
     - Construcción de CV
     - Construcción del perfil de Github
@@ -92,7 +92,6 @@ geek_data:
     - Sesión de preparación de entrevistas personalizadas para trabajos específicos
     - Entrenamiento de marca personal
     - Prácticas y ejercicios de programación posteriores a la graduación
-  geek_force_heading: ""
   geek_force:
     - Un profesor cada cuatro estudiantes (1:4)
     - Un profesor principal cada doce estudiantes (1:12)

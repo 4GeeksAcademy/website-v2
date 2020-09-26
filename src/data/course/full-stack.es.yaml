@@ -42,8 +42,10 @@ details:
   details_modules:
     - module_name: "PREWORK"
       title: "Prework"
-      description: "Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página."
-      projects: "CSS Postcard, Versión mínima de Instagram, etc."
+      description: >
+        Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página.
+        Durante el prework revisaras como hacer un website con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciaras en el mundo de Javascrpt, aprendiendo sobre variables, loops, condicionales, y funciones.
+      projects: "Contruye tu primera página web, y una versión mínima de Instagram."
       slug: "prework"
       duration: "(previo)"
       step: 0
@@ -74,14 +76,14 @@ details:
       projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
       slug: "aplicacion-avanzada"
       duration: "6 sem"
-      step: 6
+      step: 5.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
       description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
       projects: "Consegurás tu primer trabajo, empezaras a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganár muy bien y disfrutar de la vida de un programador."
       slug: "lifelong-learning"
       duration: "1+ sem"
-      step: 0
+      step: 0.1
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
@@ -95,60 +97,31 @@ why_4geeks:
 
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
-  geek_pal_heading: Trabaja en tecnología
+  heading: ¡Career Support de por vida!
   geek_pal:
-    - Construcción de CV
-    - Construcción del perfil de Github
-    - Preparación de simulación de entrevistas
-    - Sesión de preparación de entrevistas personalizadas para trabajos específicos
-    - Entrenamiento de marca personal
-    - Prácticas y ejercicios de programación posteriores a la graduación
-  geek_force_heading: ""
-  geek_force:
+    - Aprenderas Python, Javascript y React. Los Lenguajes más buscados.
     - Un profesor cada cuatro estudiantes (1:4)
-    - Un profesor principal cada doce estudiantes (1:12)
-    - Sesiones ilimitadas de tutoría por demanda, en persona o en línea.
-    - Miles de ejercicios autoevaluados
-    - Tutoriales interactivos y autoevaluados
+    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
+    - Miles de ejercicios interactivos y autoevaluados
     - Soluciones en video para una retroalimentación instantánea
     - Chat de apoyo en línea 12 horas al día
     - Transmisión en línea de las clases
     - Grabación de las clases para su posterior revisión
+  geek_force:
+    - Construcción de CV y LinkedIn
+    - Construcción del perfil de Github y portafolio desde el dia 1
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos
+    - Entrenamiento de marca personal
+    - Prácticas y ejercicios de programación posteriores a la graduación
+    - Coaching SEMANAL hasta que consigas trabajo.
+    - Red de 500+ hiring partners.
 
 ## PRICES AND PAYMENTS SECTION
 prices:
   heading: "PRECIOS Y PAGOS"
   sub_heading: ""
-
-## TYPICAL DAY SECTION
-typical:
-  heading: ""
-  sub_heading: ""
-  schedule:
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
 
 ## ALUMNI SECTION
 alumni:

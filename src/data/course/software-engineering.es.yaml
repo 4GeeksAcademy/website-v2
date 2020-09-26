@@ -139,7 +139,7 @@ geeks_vs_others:
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
-  geek_pal_heading: Trabaja en tecnología
+  heading: ¡Para que te contraten empresas de Forbes 500!
   geek_pal:
     - Construcción de CV
     - Construcción del perfil de Github
@@ -164,35 +164,6 @@ prices:
   heading: "PRECIOS Y PAGOS"
   sub_heading: ""
 
-## TYPICAL DAY SECTION
-typical:
-  heading: ""
-  sub_heading: ""
-  schedule:
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
 
 ## ALUMNI SECTION
 alumni:
