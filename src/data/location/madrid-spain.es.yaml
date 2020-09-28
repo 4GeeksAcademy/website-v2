@@ -38,7 +38,7 @@ upcoming:
 
 carousel_box:
   heading: "Qué deberías saber sobre esta ubicación: "
-  content: "A 5 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
+  content: "A 2 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
   images:
     - path: "../../../static/images/locations/madrid-loc.jpg"
       alt: "miami-sunset"
