@@ -152,6 +152,7 @@ export const Tooltip = styled.div`
     -webkit-transition: all .15s ease-in-out;
 `
 export const RoundImage = styled.div`
+    display: ${props=>props.display || "block"};
     position: ${props => props.pos};
     background-image: url(${props => props.url} );
     margin-bottom: ${props => props.mb};
@@ -172,35 +173,29 @@ export const RoundImage = styled.div`
         css`
         transform: translateY(-${props => props.up});
     `}
-    @media ${Device.xs}{
-        height: ${props => props.h_xs};
-        width: ${props => props.w_xs};
-        border-radius: ${props => props.br_xs};
-        
+
+    @media ${Break.lg}{
+        width: ${props => props.w_lg};
+        height: ${props => props.h_lg};
+        border-radius: ${props => props.br_lg};
     }
-    @media ${Device.sm}{
+    @media ${Device.md}{
+        height: ${props => props.h_md};
+        width: ${props => props.w_md};
+        border-radius: ${props => props.br_md};
+    }
+    @media ${Break.sm}{
         
         height: ${props => props.h_sm};
         width: ${props => props.w_sm};
         border-radius: ${props => props.br_sm};
        
     }
-    @media ${Device.md}{
-        height: ${props => props.h_md};
-        width: ${props => props.w_md};
-        border-radius: ${props => props.br_md};
+    @media ${Break.xs}{
+        height: ${props => props.h_xs};
+        width: ${props => props.w_xs};
+        border-radius: ${props => props.br_xs};
         
-           
-    }
-    @media ${Device.lg}{
-        width: ${props => props.w_lg};
-        height: ${props => props.h_lg};
-        border-radius: ${props => props.br_lg};
-    }
-    @media ${Device.xl} {
-        width: ${props => props.w_xl};
-        height: ${props => props.h_xl};
-        border-radius: ${props => props.br_xl};
     }
 `
 export const Span = styled.div`

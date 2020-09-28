@@ -124,9 +124,7 @@ const Loc = (props) => {
                     </Column>
                   </Row>
                 </StyledBackgroundSection>
-                {/* </RoundImage> */}
               </Link>
-              {/* </Card> */}
             </Column>
           )
         })}

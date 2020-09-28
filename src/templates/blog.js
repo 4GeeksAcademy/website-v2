@@ -78,11 +78,11 @@ const Blog = ({data, pageContext, yml}) => {
                                                     mb="10px"
                                                     border="1.25rem"
                                                     position="center"
-                                                    h_xs="150px"
-                                                    h_sm="200px"
-                                                    h_md="120px"
+                                                    width="180px"
                                                     h_lg="140px"
-                                                    h_xl="180px"
+                                                    h_md="120px"
+                                                    h_sm="200px"
+                                                    h_xs="150px"
                                                 />
                                             </LazyLoad>
                                         </Link> : null}
@@ -107,7 +107,6 @@ const Blog = ({data, pageContext, yml}) => {
                                     <Row height="auto" align="around">
                                         <Column size="1" customRespSize respSize="2" alignSelf="center">
                                             <LazyLoad scroll={true} height={30} once={true}>
-                                                {/* <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={`/images/staff/alejandro.png`} /> */}
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
                                             </LazyLoad>
                                         </Column>
@@ -167,11 +166,11 @@ const Blog = ({data, pageContext, yml}) => {
                                                     mb="10px"
                                                     border="1.25rem"
                                                     position="center"
-                                                    h_xs="150px"
-                                                    h_sm="200px"
-                                                    h_md="120px"
+                                                    width="180px"
                                                     h_lg="140px"
-                                                    h_xl="180px"
+                                                    h_md="120px"
+                                                    h_sm="200px"
+                                                    h_xs="150px"
                                                 />
                                             </LazyLoad>
                                         </Link> : null}

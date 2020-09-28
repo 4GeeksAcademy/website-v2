@@ -4,7 +4,7 @@ meta_info:
   description: ""
   image: ""
   keywords: ""
-  redirects: ["/preguntas-frecuentes"]
+  redirects: ["/preguntas-frecuentes", "/es/preguntas-frecuentes"]
 
 banner:
   tagline: FREQUENTLY ASKED QUESTIONS

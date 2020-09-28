@@ -16,6 +16,7 @@ header_data:
 ## FIRST SECTION AFTER THE BANNER
 intro:
   image: "/images/pricing.png"
+  heading: "Precios que tienen sentido común"
   content: "Nuestro programa ha sido construido específicamente para entregar eficientemente el conocimiento y las habilidades tecnológicas más actuales y esenciales, sin dejar de ser asequibles."
 
 ## PRICES AND PAYMENTS SECTION

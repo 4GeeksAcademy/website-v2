@@ -151,12 +151,9 @@ export const requestSyllabus = async (data,session) => {
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['request_more_info'], ['soft'], session);
     return true;
 }
-export const reviewGuidebook = async (data,session) => {
-    console.log("Succesfully requested Guidebook", data)
-    let body = {};
-    for (let key in data) body[key] = data[key].value;
-
-    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['download-guidebook'], ['soft'], session);
+export const openGuidebook = (url) => {
+    tagManager('financing_guide_download')
+    window.open(url);
     return true;
 }
 export const beHiringPartner = async (data,session) => {

@@ -506,11 +506,7 @@ const Calendar = (props) => {
                                   mb="10px"
                                   border="1.25rem 1.25rem 0 0"
                                   position="center center"
-                                  h_xs="230px"
-                                  h_sm="230px"
-                                  h_md="230px"
-                                  h_lg="230px"
-                                  h_xl="230px"
+                                  width="230px"
                                 />
                               </LazyLoad>}
                             <Row marginLeft="0" marginRight="0" padding={`15px`}>

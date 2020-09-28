@@ -2,20 +2,24 @@ import React, {useState, useContext} from 'react';
 import {Column, Row, Container, Divider, Wrapper, WrapperImage, Div} from "../components/Sections";
 import {Title, H2, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, RoundImage, TriangleDown} from '../components/Styling';
-import Credentials from '../components/Credentials';
 import PricesAndPayment from '../components/PricesAndPayment';
-import Select from '../components/Select';
 import WhoIsHiring from '../components/WhoIsHiring';
-import {Card} from '../components/Card'
 import BaseRender from './_baseRender';
 import Modal from '@material-ui/core/Modal';
-import {reviewGuidebook} from "../actions";
+import {openGuidebook} from "../actions";
+import {SessionContext} from '../session.js'
 import LeadForm from "../components/LeadForm/index.js";
 
 const Pricing = (props) => {
+  const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
+  console.log("data", data);
+  let location = null;
+  if(session && session.location) location = data.allLocationYaml.edges.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
+  if(location) location = location.node;
+  console.log("location",location)
 
   return (
     <>
@@ -27,6 +31,7 @@ const Pricing = (props) => {
         bgSize={`cover`}
         alt={yml.header_data.alt}
         paddingRight={`0`}
+        customBorderRadius="0 0 0 1.25rem"
 
       >
         <Divider height="100px" />
@@ -42,20 +47,25 @@ const Pricing = (props) => {
 
         />
       </WrapperImage>
-      <Divider height="100px" />
       <Wrapper>
-        <Row>
+        <Row m_sm="0px 0px 100px 0">
           <Column size="5" size_sm="12" height="300px">
-            <RoundImage url={yml.intro.image} height="400px" bsize="contain" />
+            <RoundImage 
+              url={yml.intro.image} 
+              margin="auto" 
+              width="300px" 
+              height="300px" 
+              bsize="contain" 
+          />
           </Column>
           <Column size="7" size_sm="12">
-            <H2 align="left" margin="30px 0 20px 0" type="h1">4Geeks's pricing makes sense</H2>
+            <H2 align="left" margin="30px 0 20px 0" type="h1">{yml.intro.heading}</H2>
             <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
           </Column>
         </Row>
       </Wrapper>
-      <Divider height="100px" />
-      <Wrapper
+      <Wrapper margin="50px 0px" right
+        customBorderRadius="1.25rem 0 0 1.25rem"
         background={Colors.lightGray}
         border="top"
       >
@@ -74,29 +84,22 @@ const Pricing = (props) => {
           locations={data.allLocationYaml.edges}
         />
       </Wrapper >
-      <Divider height="100px" />
-      <Wrapper>
-        <Title
-          size="10"
-          title={yml.payment_guide.heading}
-          paragraph={yml.payment_guide.sub_heading}
-          variant="primary"
-        />
-        <Divider height="30px" />
-        <Row align="center">
-          <Modal
-            aria-labelledby="simple-modal-title"
-            aria-describedby="simple-modal-description"
-            open={open}
-            onClose={() => setOpen(false)}
-          >
-            <LeadForm heading="REVIEW GUIDEBOOK" formHandler={reviewGuidebook} handleClose={() => setOpen(false)} lang={pageContext.lang} />
-          </Modal>
-          <Button outline position="relative" width="300px" onClick={() => setOpen(true)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
-        </Row>
-        <Divider height="100px" />
-      </Wrapper>
-      <Wrapper
+      { session && session.location && session.location.active_campaign_location_slug === "downtown-miami" &&
+        <Wrapper margin="50px 0px">
+          <Title
+            size="10"
+            title={yml.payment_guide.heading}
+            paragraph={yml.payment_guide.sub_heading}
+            paragraphColor="black"
+            variant="primary"
+          />
+          <Divider height="30px" />
+          <Row align="center">
+            <Button outline position="relative" width="300px" onClick={() => openGuidebook(location.documents.payment_guide.url)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
+          </Row>
+        </Wrapper>
+      }
+      <Wrapper right margin="50px 0px"
         background={Colors.lightGray}
         border="top"
       >
@@ -142,6 +145,7 @@ export const query = graphql`
             intro{
                 image
                 content
+                heading
             }
             prices{
                 heading
@@ -309,7 +313,11 @@ export const query = graphql`
                 }
               }
             }
-            
+            documents{
+              payment_guidebook{
+                url
+              }
+            }
           }
         }
       }

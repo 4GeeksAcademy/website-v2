@@ -17,7 +17,7 @@ meta_info:
 header:
   tagline: "FULL STACK DEVELOPER"
   image: "../../../static/images/bg/program-bg.png"
-  paragraph: "From zero to a get paid as a developer, learn the skills of the present and future, boost your professional career, get hired by a tech company."
+  paragraph: "De cero a tener tu primer trabajo como programador, aprende todos los necesario, recibe soporte de por vida y consigue un trabajo como programador 16+ semanas despues de empezar."
   alt: ""
 
 button:
@@ -27,8 +27,8 @@ button:
   apply_button_link: "/aplica"
 
 credentials:
-  heading: "Nuestros números hablan por sí solos"
-  paragraph: "Our results speak for themselves"
+  heading: "RESULTADOS"
+  paragraph: "Nuestros resultados hablan por sí solos"
 
 ## PROGRAM DETAILS
 details:
