@@ -10,7 +10,7 @@ link: https://www.4geeksacademy.co/women-in-tech-2017/
 slug: women-in-tech-2017
 title: Women in Tech 2017
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/f6797449-fd52-49a7-9cb5-6b9407f5891e/ScreenShot20180116at115832PM.png"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/01/Screen-Shot-2018-01-16-at-11.58.32-PM.png"
 wordpress_id: 2661
 categories:
 - Living and working as a developer

@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/skillsfund-4geeksacademy/
 slug: skillsfund-4geeksacademy
 title: Skills Fund & 4Geeks Academy finally together
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/6483c7fd-2897-4df8-aff7-d0401427676a/SkillFund0411.jpg"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/02/Skill-Fund-04-1-1-768x433.jpg"
 wordpress_id: 2752
 categories:
 - Living and working as a developer

@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/webdevelopmentversuswebdesign/
 slug: webdevelopmentversuswebdesign
 title: Web Development Vs. Web Design
 avatar: "/4geeks-logo.png"
-image: "https://ucarecdn.com/7820f82c-24d1-440d-83ba-f2b3fc54df80/developmentvsdesign1024x622.png"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/development-vs-design-1024x622.png"
 wordpress_id: 701
 categories:
 - Why learn to code?

@@ -8,7 +8,7 @@ link: https://www.4geeksacademy.co/student-testimonials/
 slug: student-testimonials
 title: Learn to code at 4Geeks| Voices to be heard
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/c86f2bdd-90ef-4155-9cd8-8327abacfbdd/Jennifer.png"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/Jennifer-768x768.png"
 wordpress_id: 3288
 categories:
 - Learning to code

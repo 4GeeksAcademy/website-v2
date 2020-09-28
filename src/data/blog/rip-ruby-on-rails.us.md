@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/rip-ruby-on-rails/
 slug: rip-ruby-on-rails
 title: R.I.P. Ruby on Rails. Thanks for everything!
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/01a628ce-b859-4a70-aacc-e420e1bffd88/ryby.png"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/ruby.png"
 wordpress_id: 634
 categories:
 - Learning to code

@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/wages-report-2018-1/
 slug: wages-report-2018-1
 title: Bootcamp Graduates Salary 2018
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/73f7da7f-d8a0-4929-88b2-ff0240d1daa8/BootCamp2018021.jpg"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/BOOTCAMP2018-01-768x505.png"
 wordpress_id: 2807
 categories:
 - Living and working as a developer
@@ -35,7 +35,7 @@ Whereas [PayScale](https://www.payscale.com/research/US/Job=Web_Developer/Salar
 
 If we compare this data to our last report (October 2017) [Bootcamp Graduates Salary in 2017](https://www.4geeksacademy.co/pay-tuition-4geeks-2/), you will find the following results:
 
-![](https://ucarecdn.com/cd793753-0b98-46b0-9d80-d1303dc78e9e/ScreenShot20180319at63214PMe1521498827339.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/Screen-Shot-2018-03-19-at-6.32.14-PM.png)
 
 In the above chart comparison, you can easily observe a clear reflection of the wage reality from October 2017 to March 2018 and how it remains increasing through time.
 
@@ -143,7 +143,7 @@ When we talk about salary expectations, we don’t only care about providing you
 
 A recent [HackerRank](https://research.hackerrank.com/developer-skills/2018/) report found that JavaScript, Java, Python, C++, C, C# and PHP are the top languages (with slight variations by industry), and Angular JS, Node.js React, Spring,  Django and .NETCore are the top frameworks that employers want candidates to have.
 
-![](https://ucarecdn.com/3fa393f1-08bd-4fb2-9484-1da1fcf9b56b/GRAFICA011768x484.jpg)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/GRAFICA-01-1-768x484.jpg)
 
 
 Source: HackerRank
@@ -155,7 +155,7 @@ On the other hand, a [Stack Overflow Developer Survey 2018](https://insights.st
 
 Taking this into consideration, we have created the following graphic to make a close up of salary vs. the most popular technology specialties:
 
-![](https://ucarecdn.com/d0330904-b779-44fe-b776-eb465e9973d1/BOOTCAMP201801768x505.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/BOOTCAMP2018-01-768x505.png)
 
 According to the graph, Web Developers with the highest salary are those with JavaScript (58K – 72K), followed by Python (71K – 92K), as a specialty in their stack of technologies.
 
@@ -232,7 +232,7 @@ We have said it: the biggest career challenges for [women in tech](https://www.
 
 But what about the racial gap?  A [latest study of the Institute for Women Policy](https://iwpr.org/publications/gender-wage-gap-2017-race-ethnicity/) reflects that women of all major racial and ethnic groups earn less than men of the same group, and also earn less than white men:
 
-![](https://ucarecdn.com/f35dc277-9384-4e06-a015-d83d60e24c73/ScreenShot20180320at101254AM.png)
+![](https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/Screen-Shot-2018-03-20-at-10.12.54-AM.png)
 Source: Institute for Women Policy Research  **Note:** Hispanic workers may be of any race; White, Black, and Asian workers include Hispanics. The annual average of median weekly earnings. 
 
 The numbers demonstrate that gender and racial gaps are still far from being close.  The next step?  **Compensation**: start as individuals and spread equality in all labor fields supporting access and providing opportunities to help you and others get into the tech field.

@@ -10,7 +10,7 @@ link: https://www.4geeksacademy.co/the-talent-tree/
 slug: the-talent-tree
 title: The Talent Tree
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://ucarecdn.com/0fdbf00a-89ad-48d5-869e-aa2f0ed48185/Talents_for_Paladins.jpg"
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Talents_for_Paladins.jpg"
 wordpress_id: 2539
 categories:
 - Learning to code
