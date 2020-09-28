@@ -5,10 +5,8 @@ import {Button, Colors, RoundImage, TriangleDown} from '../components/Styling';
 import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring';
 import BaseRender from './_baseRender';
-import Modal from '@material-ui/core/Modal';
 import {openGuidebook} from "../actions";
 import {SessionContext} from '../session.js'
-import LeadForm from "../components/LeadForm/index.js";
 
 const Pricing = (props) => {
   const {session} = React.useContext(SessionContext);
@@ -17,9 +15,11 @@ const Pricing = (props) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   console.log("data", data);
   let location = null;
-  if(session && session.location) location = data.allLocationYaml.edges.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
-  if(location) location = location.node;
-  console.log("location",location)
+  if(session && session.location){
+
+    location = data.allLocationYaml.edges.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
+    if(location) location = location.node;
+  } 
 
   return (
     <>
@@ -95,7 +95,7 @@ const Pricing = (props) => {
           />
           <Divider height="30px" />
           <Row align="center">
-            <Button outline position="relative" width="300px" onClick={() => openGuidebook(location.documents.payment_guide.url)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
+            <Button outline position="relative" width="300px" onClick={() => openGuidebook(location.documents.payment_guidebook.url)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
           </Row>
         </Wrapper>
       }
