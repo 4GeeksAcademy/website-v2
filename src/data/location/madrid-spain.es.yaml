@@ -78,6 +78,7 @@ prices:
     center_section:
       header:
         heading: "FINANCIADO"
+        heading_two: "Desde 24 Quotas"
         sub_heading: "Opciones de financiación que se adaptan a ti"
       plans:
         - months: "24 m"
