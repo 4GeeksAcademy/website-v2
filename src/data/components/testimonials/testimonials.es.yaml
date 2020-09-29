@@ -23,12 +23,11 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      I love 4Geeks Academy's approach to teaching students. There are always 3 tutors who will 
-      make sure you master your skills and will not give up on you if there's something 
-      you don't understand. They never leave my questions unanswered, regardless how obvious 
-      they may seem. And just the atmosphere in the school is very warm.
-      I'm grateful to you guys for providing 24 hour access to school, 
-      so we can work any time that is convenient for us. Thank you, 4Geeks!!
+      Me encanta el enfoque de 4Geeks Academy para enseñar Programación. Siempre hay -al menos- 3 mentores disponibles para ayudarte y asegurar que puedas entender todo el contenido.  
+      Nunca dejan las preguntas sin responder, a pesar que algunas son bastante obvias!. 
+      La atomósfera de la Academia es bastante cercana y cálida. 
+      Yo estoy muy agradecida por todo el apoyo que siempre 24/7 nos han dado. 
+      Gracias 4Geeks!!
   # - student_name: "Samir Benzada"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
@@ -49,12 +48,12 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      Overall just a great group of people with a common goal. I came into 4Geeks with little 
-      to no knowledge about coding and after 16 weeks I was building projects I could have never 
-      imagined I would be able to build. They will provide you with the knowledge and tools to 
-      become a successful developer ready for hire.... Ask as many questions 
-      as you need and they will be happy to help. Not to mention the lifetime support you get 
-      even after completing the Bootcamp.
+      En general es un grupo extraordinario de personas. Yo empecé en 4Geeks con casi ningún conocimiento de programación. 
+      En 16 semanas todo había cambiado y ya era un programador junior. Ya tengo trabajo y en gran parte se los debo a 4Geeks, porque me ayudaron con mis habilidades como programador. 
+      Ellos te van a ayudar a que tengas todo lo que necesitas para que puedas salir a buscar y conseguir trabajo. 
+      Tienes que preguntar siempre y sin parar. Ese tip no falla, además ellos te ayudan constantemente.
+      Sin contar con el acceso a mentores y el apoyo profesional que de por vida dan. Yo me gradué hace 2 años y todavía sigo en contacto con ellos. 
+      
 
   - student_name: "Fernando Funez"
     testimonial_date: ""
@@ -64,10 +63,9 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      I highly recommend this coding boot camp!!!! Before 4Geeks I never had any experience with 
-      code I didn't know where to start and within 10 weeks I was able to grasp the core concepts 
-      of being a developer. The staff and Mentors are awesome... enroll today if u want to go from 
-      zero to hero in 10 weeks and start developing your own apps.
+      Yo recomiendo totalmente 4Geeks Academy. Antes de 4Geeks no sabía nada y después de 10 semanas ya estaba haciendo cosas impensadas por mi. 
+      Te ayudan para que aún en poco tiempo puedas entender, ejecutar y desarrollar. te vas a convertir en programador de software y podrás conseguir un trabajo como el que ya yo tengo web developer). 
+      El staff y los mentors son geniales. Si quieren entrar en este mundo, inscreibanse en 4Geeks sin pensarlo dos veces. 
   - student_name: "Salvador Desravines"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
