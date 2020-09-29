@@ -77,19 +77,6 @@ prices:
       button:
         button_text: "APLICA"
 
-    center_section:
-      header:
-        heading_one: ""
-        sub_heading: ""
-      plans:
-        - months: ""
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-      button:
-        button_text: ""
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -120,19 +107,6 @@ prices:
       button:
         button_text: "APLICA"
 
-    center_section:
-      header:
-        heading_one: ""
-        sub_heading: ""
-      plans:
-        - months: ""
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-      button:
-        button_text: ""
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -140,7 +114,7 @@ prices:
         heading_one: "PART-TIME"
         sub_heading: ""
       content:
-        price: "ay upfront and get a discount or ask for a 3 - 4 payment options"
+        price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
         price_info: ""
       button:
         button_text: "APLICA"
