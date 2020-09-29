@@ -81,7 +81,7 @@ prices:
         heading: "FINANCED"
         sub_heading: "Get the best price in Spain"
       plans:
-- months: "24 mo"
+-       - months: "24 mo"
           payment: "251,56€"
           paymentInfo: "per month + 600€ up-front"
           provider: "Zank"
