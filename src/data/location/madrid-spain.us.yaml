@@ -151,7 +151,7 @@ prices:
         button_text: "APPLY NOW"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
-   center_section:
+    center_section:
       header:
         heading: "FINANCED"
         sub_heading: "Get the best prices in Spain"
