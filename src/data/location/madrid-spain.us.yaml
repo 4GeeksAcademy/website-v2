@@ -68,7 +68,7 @@ prices:
       header:
         heading_one: "UP-FRONT"
         heading_two: "(out of pocket)"
-        sub_heading: "Ask for scollarships and discounts"
+        sub_heading: "Ask for scholarships and discounts"
       content:
         price: "5.999,00€"
         price_info: "single payment"
@@ -78,34 +78,59 @@ prices:
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
       header:
-        heading: "EXTENDED"
-        sub_heading:
+        heading: "FINANCED"
+        sub_heading: "Get the best price in Spain"
       plans:
-        - months: "12"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message:
-        - months: "6"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
+- months: "24 mo"
+          payment: "251,56€"
+          paymentInfo: "per month + 600€ up-front"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Ask for our scholarships compatible with financing plans"
+        - months: "21 mo"
+          payment: "274,03€"
+          paymentInfo: "per month + 600€ up-front"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: "Ask for our scholarships compatible with financing plans"
+        - months: "18 mo"
+          payment: "326,68€"
+          paymentInfo: "per month + 600€ up-front"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Ask for our scholarships compatible with financing plans"  
+        - months: "12 mo"
+          payment: "477,14€"
+          paymentInfo: "per month + 600€ up-front"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Ask for our scholarships compatible with financing plans"        
+        - months: "6 mo"
+          payment: "928,96€"
+          paymentInfo: "per month + 600€ up-front"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"   
+          message: "Ask for our scholarships compatible with financing plans"
+        - months: "3 mo"
+          payment: "2.000€"
+          paymentInfo: "3 free-interest installments"
+          provider: "4Geeks"
+          logo: 
+          message: "Ask for our scholarships compatible with financing plans"
       button:
         button_text:
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading: ""
-        sub_heading: ""
+        heading_one: "PAY ONLY"
+        heading_two: "WHEN YOU GET A JOB"
+        sub_heading: "Income Share Agreement"
       content:
-        price: "5.499,00€"
-        price_info: "single payment"
+        price: "120€"
+        price_info: "from 120€ per month"
       button:
-        button_text: "APPLY NOW"
+        button_text: "APPLY NOW"        
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -118,7 +143,7 @@ prices:
     left_section:
       header:
         heading_one: "PART-TIME"
-        sub_heading: "and enjoy the best pricing in town"
+        sub_heading: "Ask for scholarships and discounts"
       content:
         price: "5.499,00€"
         price_info: "single payment"
@@ -126,24 +151,35 @@ prices:
         button_text: "APPLY NOW"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
-    center_section:
+   center_section:
       header:
-        heading_two:
-        sub_heading:
+        heading: "FINANCED"
+        sub_heading: "Get the best prices in Spain"
       plans:
-        - months: "12 mo"
-          payment: ""
-          paymentInfo: ""
+        - months: "24 mo"
+          payment: "223,98€"
+          paymentInfo: "per month + 500€ up-front"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: ""
-        - months: " 6 mo"
-          payment: ""
-          paymentInfo: ""
-          provider: ""
-          logo: ""
-          message: ""
-
+          message: "Ask for our scholarships compatible with financing plans"
+        - months: "18 mo"
+          payment: "302,18€"
+          paymentInfo: "per month + 500€ up-front"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Ask for our scholarships compatible with financing plans"  
+        - months: "12 mo"
+          payment: "432,90€"
+          paymentInfo: "per month + 500€ up-front"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: "Ask for our scholarships compatible with financing plans"
+        - months: "6 mo"
+          payment: "816,15€"
+          paymentInfo: "per month + 500€ up-front"
+          provider: "Zank"
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          message: "Ask for our scholarships compatible with financing plans"          
       button:
         button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
@@ -154,8 +190,8 @@ prices:
         heading_two: "and Financing plans"
         sub_heading: "disponemos de múltimples alianzas y becas permanentes de hasta 100% de la matrícula"
       content:
-        price: "0€"
-        price_info: "variable"
+        price: "5.999,00 €"
+        price_info: "3 free-interest installments"
       button:
         button_text: "APPLY NOW"
 
