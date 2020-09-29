@@ -16,6 +16,7 @@ header_data:
 ## FIRST SECTION AFTER THE BANNER
 intro:
   image: "/images/pricing.png"
+  heading: "4Geeks's pricing makes sense"
   content: "Our program was specifically built to efficiently deliver the most current and essential tech knowledge and skills, while remaining as an affordable -yet growing- Bootcamp."
 
 ## TUITION AND PAYMENTS SECTION

@@ -49,11 +49,7 @@ const Mentors = props => {
                             bsize="cover"
                             border="10px"
                             height="250px"
-                            w_xs="100"
-                            w_sm="100"
-                            w_md="100"
-                            w_lg="100"
-                            w_xl="100"
+                            width="100"
                             move up={props.up}>
                             <Over
                                 h_xs="250px"

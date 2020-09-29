@@ -309,3 +309,7 @@ location_office_image3: ""
 should_know: ""
 value: "Miami"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language
+
+documents: 
+  payment_guidebook: 
+    url: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/4GA-Payment-Guidebook-2.pdf"

@@ -12,8 +12,7 @@ import BaseRender from './_baseRender'
 import ProgramSelector from '../components/ProgramSelector'
 import {requestSyllabus} from "../actions";
 import WhoIsHiring from '../components/WhoIsHiring';
-// import {makeStyles} from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
+import Modal from '../components/Modal';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import StepConnector from '@material-ui/core/StepConnector';
 import clsx from 'clsx';

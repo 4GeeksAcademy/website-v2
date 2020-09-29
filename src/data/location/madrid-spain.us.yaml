@@ -1,6 +1,6 @@
 meta_info:
   slug: "madrid-spain"
-  title: 4Geeks Academy Madrid - Coding Bootcampn Madrid España
+  title: 4Geeks Academy Madrid - Coding Bootcampn Madrid Spain
   position: 2
   description: null
   image: ""
@@ -186,8 +186,9 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PART-TIME"
-        sub_heading: "free-interest istallments compatible with scholarships"
+        heading_one: "Scholarships"
+        heading_two: "and Financing plans"
+        sub_heading: "disponemos de múltimples alianzas y becas permanentes de hasta 100% de la matrícula"
       content:
         price: "5.999,00 €"
         price_info: "3 free-interest installments"
