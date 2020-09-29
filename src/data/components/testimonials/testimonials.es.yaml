@@ -23,12 +23,11 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      I love 4Geeks Academy's approach to teaching students. There are always 3 tutors who will 
-      make sure you master your skills and will not give up on you if there's something 
-      you don't understand. They never leave my questions unanswered, regardless how obvious 
-      they may seem. And just the atmosphere in the school is very warm.
-      I'm grateful to you guys for providing 24 hour access to school, 
-      so we can work any time that is convenient for us. Thank you, 4Geeks!!
+      Me encanta el enfoque de 4Geeks Academy para enseñar Programación. Siempre hay -al menos- 3 mentores disponibles para ayudarte y asegurar que puedas entender todo el contenido.  
+      Nunca dejan las preguntas sin responder, a pesar que algunas son bastante obvias!. 
+      La atomósfera de la Academia es bastante cercana y cálida. 
+      Yo estoy muy agradecida por todo el apoyo que siempre 24/7 nos han dado. 
+      Gracias 4Geeks!!
   # - student_name: "Samir Benzada"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
@@ -49,12 +48,12 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      Overall just a great group of people with a common goal. I came into 4Geeks with little 
-      to no knowledge about coding and after 16 weeks I was building projects I could have never 
-      imagined I would be able to build. They will provide you with the knowledge and tools to 
-      become a successful developer ready for hire.... Ask as many questions 
-      as you need and they will be happy to help. Not to mention the lifetime support you get 
-      even after completing the Bootcamp.
+      En general es un grupo extraordinario de personas. Yo empecé en 4Geeks con casi ningún conocimiento de programación. 
+      En 16 semanas todo había cambiado y ya era un programador junior. Ya tengo trabajo y en gran parte se los debo a 4Geeks, porque me ayudaron con mis habilidades como programador. 
+      Ellos te van a ayudar a que tengas todo lo que necesitas para que puedas salir a buscar y conseguir trabajo. 
+      Tienes que preguntar siempre y sin parar. Ese tip no falla, además ellos te ayudan constantemente.
+      Sin contar con el acceso a mentores y el apoyo profesional que de por vida dan. Yo me gradué hace 2 años y todavía sigo en contacto con ellos. 
+      
 
   - student_name: "Fernando Funez"
     testimonial_date: ""
@@ -64,10 +63,9 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      I highly recommend this coding boot camp!!!! Before 4Geeks I never had any experience with 
-      code I didn't know where to start and within 10 weeks I was able to grasp the core concepts 
-      of being a developer. The staff and Mentors are awesome... enroll today if u want to go from 
-      zero to hero in 10 weeks and start developing your own apps.
+      Yo recomiendo totalmente 4Geeks Academy. Antes de 4Geeks no sabía nada y después de 10 semanas ya estaba haciendo cosas impensadas por mi. 
+      Te ayudan para que aún en poco tiempo puedas entender, ejecutar y desarrollar. te vas a convertir en programador de software y podrás conseguir un trabajo como el que ya yo tengo web developer). 
+      El staff y los mentors son geniales. Si quieren entrar en este mundo, inscreibanse en 4Geeks sin pensarlo dos veces. 
   - student_name: "Salvador Desravines"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
@@ -76,9 +74,9 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      This program was definitely one of the hardest things I've done in my life. It was 16 weeks of 
-      constant work and practice. All things in life worth having is not going to be easily obtained. 
-      If you can stick with it and follow what the teachers are teaching you, you will succeed.
+      Este programa es definitivamente una de las cosas más difíciles que he hecho en mi vida. Pero lo completé y me gradué como Desarrollador de Software en 16 semanas. 
+      Estar todos los días y practicar mucho es clave para poder lograrlo. Todas las cosas de la vida que valen la pena requieren de cierto sacrificio. 
+      Si le pones pasión, los prefores y mentores te van a ayudar en todo momento.
   - student_name: "Jorge Montes"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
@@ -87,9 +85,9 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      Now I think that I can actually know how to solve the issues that I face when I’m coding and 
-      the professors have been a great help along the process. I would recommend this Bootcamp to 
-      everyone.
+      Agora creo que puedo completamente desarrollar una aplicación y entender cómo funciona. Puedo incluso ayudar a resolver problemas y bugs en algún código. 
+      Los profesores son geniales y el resto del staff está siempre pendiente que te vaya de la mejor manera posible. Es increíble todo el apoyo que recibes. 
+      Recomiendo el Bootcamp 100%. 
   - student_name: "Fidel Rosell"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
@@ -98,8 +96,10 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      My experience on 4Geeks Academy was and is the best. The instructors and TAs will help you in 
-      a blink. 4Geeks' Slack should be renamed to 4Geeks Overflow. The response time is fast. The 
-      responses are strong and different solutions are provided. If you have an interview and you 
-      want to refresh your knowledge or exercise do not hesitate to go to 4Geeks, you will find 
-      someone ready to help you...
+      Mi experiencia en 4Geeks ha sido super gratificante. Los mentores y personal son muy buenos con todos. La cantidad de soporte que recibes es mejor de lo que imaginas. 
+      El Slack de 4Geeks se debería llamar 4Geeks Overflow, de lo rápido y la calidad de respuestas que tienes. 
+      Se enfocan en problemas duros y te ayudan en todo momento. Los instructores senio son impresionantes en cuanto a conocimiento y capacidades. 
+      Si tienes una entrevista de trabajo, te ayudan con test, con entrevistas simuladas y te preparan de la mejor manera. 
+      Una vez graduado, si quieres seguir practicando o conseguir un nuevo trabajo, ellos te van a ayudar. 
+
+      
