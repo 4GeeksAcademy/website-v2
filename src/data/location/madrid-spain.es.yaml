@@ -31,7 +31,7 @@ info_box:
   alt: ""
 
 news:
-  title: "4Geeks Academy Madrid en las noticias..."
+  title: "4Geeks Academy Madrid en los medios..."
 
 upcoming:
   title: "Próximas fechas en Madrid, España"
@@ -78,7 +78,7 @@ prices:
     center_section:
       header:
         heading: "FINANCIADO"
-        heading_two: "Desde 24 Quotas"
+        heading_two: "Hasta 24 meses"
         sub_heading: "Opciones de financiación que se adaptan a ti"
       plans:
         - months: "24 m"
@@ -190,8 +190,8 @@ prices:
         heading_one: "PART-TIME"
         sub_heading: "Financia sin intereses ¡becas disponibles!"
       content:
-        price: "5.999,00 €"
-        price_info: "3 cuotas de 2.000€"
+        price: "5.499,00 €"
+        price_info: "3 cuotas de 1.833€"
       button:
         button_text: "APLICA YA"
 
