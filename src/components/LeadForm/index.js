@@ -141,15 +141,15 @@ const LeadForm = ({heading, formHandler, data, handleClose, lang}) => {
             </Row>
             <Row padding="5px 0 0 0" >
                 <Column size="6" padding="10px 20px">
+                    <Button  width="100%" padding=".7rem .45rem" color={Colors.red} textColor={Colors.white} onClick={handleClose}>Close</Button>
+                </Column>
+                <Column size="6" padding="10px 20px">
                     <Button width="100%" padding=".7rem .45rem"
                         type="submit"
                         color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue}
                         textColor={Colors.white}
                         disabled={formStatus.status === "loading" ? true: false}
                     >{formStatus.status === "loading" ? "Loading...": "SEND"}</Button>
-                </Column>
-                <Column size="6" padding="10px 20px">
-                    <Button  width="100%" padding=".7rem .45rem" color={Colors.red} textColor={Colors.white} onClick={handleClose}>Close</Button>
                 </Column>
             </Row>
         </Form>
