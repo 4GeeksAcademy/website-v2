@@ -44,11 +44,11 @@ join_geeks:
     geek_pal_heading: Programming - Always - Limitles
     geek_pal_data:
       content: Never code on your own again -A PAL for the rest of your life-. We will be together, by your side, for as long as you need, even after you get your first job. Mentorship Support, One-to-One, Q&A, Office Space and more.
-      icon_link: "/us/geekpal-support"
+      icon_link: "/geekpal-support"
     geek_force_heading: Career Empowerment
     geek_force_data:
       content: "We'll do everything needed to help you get a job in the field! Including Profile Building: Job Referrals, Tailored Interview Training, Weekly Coaching, Unlimited One-on-One's, Chat Support, Networking Events and more."
-      icon_link: "/us/geekforce-career-support"
+      icon_link: "/geekforce-career-support"
 
 ## LOCATIONS SECTION
 locations:

@@ -1,9 +1,10 @@
 import React, {useState, useContext} from 'react';
 import {Column, Row, Container, Divider, Wrapper, WrapperImage, Div} from "../components/Sections";
 import {Title, H2, H5, Paragraph} from '../components/Heading';
-import {Button, Colors, RoundImage, TriangleDown} from '../components/Styling';
+import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
 import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring';
+import Img from "gatsby-image"
 import BaseRender from './_baseRender';
 import {openGuidebook} from "../actions";
 import {SessionContext} from '../session.js'
@@ -32,7 +33,7 @@ const Pricing = (props) => {
         alt={yml.header_data.alt}
         paddingRight={`0`}
         customBorderRadius="0 0 0 1.25rem"
-
+        margin="0 0 50px 0"
       >
         <Divider height="100px" />
         <Title
@@ -49,14 +50,13 @@ const Pricing = (props) => {
       </WrapperImage>
       <Wrapper>
         <Row m_sm="0px 0px 100px 0">
-          <Column size="5" size_sm="12" height="300px">
-            <RoundImage 
-              url={yml.intro.image} 
-              margin="auto" 
-              width="300px" 
-              height="300px" 
-              bsize="contain" 
-          />
+          <Column size="5" size_sm="12" height="300px" align_sm="center">
+          <Img
+              fixed={yml.intro.image_second.childImageSharp.fixed}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              margin="auto"
+            />
           </Column>
           <Column size="7" size_sm="12">
             <H2 align="left" margin="30px 0 20px 0" type="h1">{yml.intro.heading}</H2>
@@ -64,6 +64,22 @@ const Pricing = (props) => {
           </Column>
         </Row>
       </Wrapper>
+      {/* <Wrapper>
+        <Row m_sm="0px 0px 100px 0">
+          <Column size="7" size_sm="12">
+            <H2 align="left" margin="30px 0 20px 0" type="h1">{yml.intro.heading_second}</H2>
+            <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</H5>
+          </Column>
+          <Column size="5" size_sm="12" height="300px" align_sm="center">
+            <Img
+              fixed={yml.intro.image_second.childImageSharp.fixed}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              margin="auto"
+            />
+          </Column>
+        </Row>
+      </Wrapper> */}
       <Wrapper margin="50px 0px" right
         customBorderRadius="1.25rem 0 0 1.25rem"
         background={Colors.lightGray}
@@ -84,7 +100,7 @@ const Pricing = (props) => {
           locations={data.allLocationYaml.edges}
         />
       </Wrapper >
-      { session && session.location && session.location.active_campaign_location_slug === "downtown-miami" &&
+      { location && location.documents && location.documents.payment_guidebook && location.documents.payment_guidebook.url && location.documents.payment_guidebook.url != "" &&
         <Wrapper margin="50px 0px">
           <Title
             size="10"
@@ -143,8 +159,29 @@ export const query = graphql`
                 sub_heading
             }
             intro{
-                image
+                image {
+                  childImageSharp {
+                    fluid(maxHeight: 300, maxWidth: 300){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                    fixed(width: 300, height: 300) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+                image_second {
+                  childImageSharp {
+                    fluid(maxWidth: 250){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                    fixed(width: 250, height: 250) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
                 content
+                content_second
+                heading_second
                 heading
             }
             prices{

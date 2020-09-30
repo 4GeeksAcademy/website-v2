@@ -15,9 +15,12 @@ header_data:
 
 ## FIRST SECTION AFTER THE BANNER
 intro:
-  image: "/images/pricing.png"
+  image: "../../../static/images/pricing.png"
   heading: "Precios que tienen sentido común"
   content: "Nuestro programa ha sido construido específicamente para entregar eficientemente el conocimiento y las habilidades tecnológicas más actuales y esenciales, sin dejar de ser asequibles."
+  image_second: "../../../static/images/pricing.png"
+  heading_second: "4Geeks's pricing makes sense"
+  content_second: "Our program was specifically built to efficiently deliver the most current and essential tech knowledge and skills, while remaining as an affordable -yet growing- Bootcamp."
 
 ## PRICES AND PAYMENTS SECTION
 prices:
