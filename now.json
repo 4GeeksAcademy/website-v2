@@ -1,6 +1,10 @@
 {
   "routes": [
     {
+      "src": "/mdc",
+      "status": 308, "headers": { "Location": "https://mdc.4geeksacademy.com" }
+    },
+    {
       "src": "/wp-content/uploads/2020/05/MINI-SYLLABUS-Madrid-1.pdf",
       "status": 308, "headers": { "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/madrid-full-stack.pdf" }
     },
