@@ -67,6 +67,7 @@ const Blog = ({data, pageContext, yml}) => {
                 <Row github={`/blog`}>
                     <div className="card-columns" >
                         {data.posts.edges.filter(post => post.node.frontmatter.featured === true).map((item, i) => {
+                            console.log("blog:", item.node.frontmatter.image)
                             return (
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
@@ -78,11 +79,8 @@ const Blog = ({data, pageContext, yml}) => {
                                                     mb="10px"
                                                     border="1.25rem"
                                                     position="center"
-                                                    width="180px"
-                                                    h_lg="140px"
-                                                    h_md="120px"
-                                                    h_sm="200px"
-                                                    h_xs="150px"
+                                                    width="100%"
+                                                    height="120px"
                                                 />
                                             </LazyLoad>
                                         </Link> : null}
@@ -149,7 +147,7 @@ const Blog = ({data, pageContext, yml}) => {
                     </Column>
                 </Row>
                 <Row>
-                    <Separator  variant="primary" />
+                    <Separator variant="primary" />
                 </Row>
                 <Divider height="50px" />
                 <Row>
@@ -166,11 +164,8 @@ const Blog = ({data, pageContext, yml}) => {
                                                     mb="10px"
                                                     border="1.25rem"
                                                     position="center"
-                                                    width="180px"
-                                                    h_lg="140px"
-                                                    h_md="120px"
-                                                    h_sm="200px"
-                                                    h_xs="150px"
+                                                    width="100%"
+                                                    height="120px"
                                                 />
                                             </LazyLoad>
                                         </Link> : null}
