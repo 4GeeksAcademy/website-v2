@@ -8,8 +8,8 @@ meta_info:
 
 header_data:
   tagline: Coding Bootcamp
-  title: APRENDE O MEJORA TUS HABILIDADES COMO PROGRAMADOR
-  sub_heading: Únete a miles graduados que viven como programadores, trabajan en grandes empresa y forman parte de una de las comunidades de programación más grandes del mundo.
+  title: IMPULSA TU CARRERA GRACIAS A LA PROGRAMACIÓN
+  sub_heading: Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo.
   image: "../../../static/images/bg/main-bg.jpg"
 
 why_4geeks:
@@ -34,7 +34,7 @@ education:
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "¿QUÉ HACE QUE ESTE PROGRAMA DESTAQUE?"
-  sub_heading: "En pocas palabras, la forma más simple de comparar coding schools"
+  sub_heading: "En pocas palabras, la forma más simple de comparar coding bootcamps"
   sub_heading_link: ""
 
 ## JOIN 4GEEKS SECTION DATA

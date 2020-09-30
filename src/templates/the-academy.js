@@ -163,7 +163,7 @@ const Why = (props) => {
                             <Column key={index} size="6" size_sm="12" margin="0 0 10px 0">
                                 <Card
                                     width="100%"
-                                    height="200px"
+                                    height="250px"
                                     color="black"
                                     padding="30px"
                                     transform="translateY(-100px)"
@@ -180,10 +180,8 @@ const Why = (props) => {
                                             <Row>
                                                 <H4
                                                     fs_xs="18px"
-                                                    fs_sm="20px"
-                                                    fs_md="18px"
                                                     fs_lg="20px"
-                                                    fs_xl="22px"
+                                                    fontSize="22px"
                                                     color={Colors.white}
                                                 >
                                                     {item.title}
@@ -191,11 +189,8 @@ const Why = (props) => {
                                             </Row>
                                             <Row marginTop="15px">
                                                 <Paragraph
-                                                    fs_xs="16px"
                                                     fs_sm="16px"
-                                                    fs_md="10px"
-                                                    fs_lg="13px"
-                                                    fs_xl="14px"
+                                                    fontSize="18px"
                                                     lineHeight="18px"
                                                     color={Colors.lightGray}>
                                                     {item.content}
