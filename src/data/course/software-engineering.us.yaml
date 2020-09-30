@@ -134,7 +134,7 @@ geeks_vs_others:
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
-  header: And Forbes 500 companies will hire you!
+  heading: And Forbes 500 companies will hire you!
   geek_pal:
     - Resume building
     - Github profile building
@@ -142,7 +142,6 @@ geek_data:
     - Customized interview preparation session for targeted jobs
     - Personal Branding coaching
     - Post-graduation coding practices and exercises
-  geek_force_heading: ""
   geek_force:
     - One teacher every four students (1:4)
     - One senior teacher every twelve students (1:12)

@@ -18,7 +18,7 @@ import StepConnector from '@material-ui/core/StepConnector';
 import clsx from 'clsx';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
-import SyllabusSVG from "../assets/images/syllabus.inline.svg";
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 
 const Program = ({data, pageContext, yml}) => {
 
@@ -109,6 +109,7 @@ const Program = ({data, pageContext, yml}) => {
           variant="primary"
       />
       <ProgramDetails details={yml.details} />
+      <ProgramDetailsMobile details={yml.details} />
     </Wrapper>
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
