@@ -45,14 +45,14 @@ const GeekPal = (props) => {
         />
         <Divider height="100px" />
       </WrapperImage>
-      <Wrapper margin="50px 0px" align="center">
+      <Wrapper margin="50px 0px 10px 0" align="center">
         <RoundImage
           url={yml.image_logo}
           bsize="contain"
           margin="auto"
           position="center center"
           width="300px"
-          height="200px"
+          height="100px"
         />
       </Wrapper>
       <Wrapper >
