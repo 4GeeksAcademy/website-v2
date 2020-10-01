@@ -1,0 +1,32 @@
+meta_info:
+  slug: coding-classes-parttime
+  title: ""
+  description: ""
+  image: ""
+  template: "landing_a"
+  keywords: ""
+  redirects: [""]
+  crm:
+    course: full-stack
+    location: downtown-miami
+
+header_data:
+  tagline: Become a Software Developer
+  sub_heading: in only 16 weeks (part-time)
+  image: "../../../static/images/bg/main-bg.jpg"
+  image_filter: brightness(0.4)
+
+features:
+  - Beautiful Miami Campus
+  - A Junior Developer makes $55k+ in Florida (avg)
+  - No previous experience or coding skills required
+  - Training on everything needed to become a successful software developer
+  - Career Support to help you land your first coding job
+
+credential: We are proud to have been mentioned as one of the top coding bootcamps in the US by Newsweek
+
+testimonials:
+  - student_name: Olson Dimanche
+    student_description: Graduate from our Miami Campus.
+    video_title: What are your thoughts about the program?
+    video_id: z_YORvcJHqA

@@ -105,7 +105,7 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     )
                                 })}
                                 <H4
-                                    m={`0 0 10px 0`}
+                                    margin={`0 0 10px 0`}
                                     color={Colors.gray}
                                     align="left"
                                     fs_xs="16px"

@@ -24,7 +24,7 @@ const Form = styled.form`
 `;
 
 
-const LeadForm = ({heading, formHandler, data, handleClose, lang}) => {
+const LeadForm = ({heading, formHandler, data, handleClose, style, lang}) => {
     const _query = useStaticQuery(graphql`
     query LeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -59,7 +59,7 @@ const LeadForm = ({heading, formHandler, data, handleClose, lang}) => {
         setVal(_data => ({ ..._data, ...data, utm_url: { value: window.location.href, valid: true } }))
     },[data])
     return (
-        <Form onSubmit={(e) => {
+        <Form style={style} onSubmit={(e) => {
                 e.preventDefault();
                 if(formStatus.status === "error"){
                     setFormStatus({ status: "idle", msg: "Resquest" })

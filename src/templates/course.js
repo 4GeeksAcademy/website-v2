@@ -124,7 +124,7 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       margin="50px"
     >
-      <SyllabusSVG className="d-sm-none" />
+      <SyllabusSVG className="d-sm-none w-100" />
       <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
         <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
         <Row padding="0px 40px" p_md="0 10px">

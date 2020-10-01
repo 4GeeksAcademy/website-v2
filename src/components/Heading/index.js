@@ -109,7 +109,7 @@ export const H4 = styled(Heading)`
 display: block;
 text-align: ${props => props.align || "center"};
 font-family: 'Futura', sans-serif;
-margin: ${props => props.m};
+margin: ${props => props.margin};
 width: ${props => props.width};
 font-weight: ${props => props.fontWeight};
 letter-spacing: -1px;
@@ -147,7 +147,7 @@ export const H5 = styled(Heading)`
       text-transform: ${props => props.uppercase && "uppercase"};
       font-style: normal;
       color: ${props => props.color};
-      margin: ${props => props.m};
+      margin: ${props => props.margin};
       text-align: ${props => props.align || "center"};
   
     

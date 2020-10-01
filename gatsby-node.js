@@ -22,7 +22,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     // curstom post types for the website
     if ([
         'MarkdownRemark', 'NewsYaml', 'PartnerYaml', 'CredentialsYaml', 
-        'FooterYaml', 'NavbarYaml', 'PageYaml', 'CourseYaml', 
+        'FooterYaml', 'NavbarYaml', 'PageYaml', 'LandingYaml', 'CourseYaml', 
         'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
         'TestimonialsYaml', 'GeeksVsOthersYaml', 'JobsStatisticsYaml',
         'Why4GeeksYaml', 'AlumniProjectsYaml', 'PricesAndPaymentYaml',
@@ -41,6 +41,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
             createNodeField({node, name: `pagePath`, value: meta.pagePath});
             createNodeField({node, name: `filePath`, value: url});
             ymls.push(meta)
+
             //   createNodeField({ node, name: `ctas`, value: ctas });
         }
     }
@@ -56,6 +57,7 @@ exports.createPages = async (params) =>
     await createEntityPagesfromYml('Course', params) &&
     await createEntityPagesfromYml('Location', params) &&
     await createEntityPagesfromYml('Job', params) &&
+    await createEntityPagesfromYml('Landing', params) &&
     await addAdditionalRedirects(params) &&
     saveRedirectLogs();
 
@@ -186,7 +188,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
 
     const translations = buildTranslations(result.data[`all${entity}Yaml`]);
     result.data[`all${entity}Yaml`].edges.forEach(({node}) => {
-        console.log(`Creating entity page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} with template ${node.meta_info.template || node.fields.defaultTemplate}.js`);
+        console.log(`Creating entity ${entity} ${node.fields.slug === "index" ? "/" : node.fields.pagePath} with template ${node.meta_info.template || node.fields.defaultTemplate}.js`);
         createPage({
             path: node.fields.pagePath,
             component: path.resolve(`./src/templates/${node.meta_info.template || node.fields.defaultTemplate}.js`),
@@ -229,10 +231,9 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}) => {
 
         if (node.meta_info && node.meta_info.redirects) {
             node.meta_info.redirects.forEach(path => {
-                if (typeof (path) !== "string") {
-                    throw new Error(`The path in ${node.meta_info.slug} its not a string: ${path}`);
-                }
-                path = path[0] !== '/' ? '/' + path : path;
+                if (typeof (path) !== "string") throw new Error(`The path in ${node.meta_info.slug} is not a string: ${path}`);
+                if (path === "") return;
+                path = path[0] !== '/' ? '/' + path : path; //and forward slash at the beginning of path
                 _createRedirect({
                     fromPath: path,
                     toPath: node.fields.pagePath,
