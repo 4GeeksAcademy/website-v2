@@ -17,9 +17,12 @@ import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import TypicalDay from "../components/TypicalDay"
 import Modal from '../components/Modal';
+import {SessionContext} from '../session'
+
 
 
 const Program = ({data, pageContext, yml}) => {
+  const {session} = React.useContext(SessionContext);
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
@@ -42,6 +45,9 @@ const Program = ({data, pageContext, yml}) => {
         : pageContext.slug === "coding-introduction" || pageContext.slug === "introduccion-programacion"
         && null
   }
+
+  const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
+  const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   return (<>
     <WrapperImage
@@ -71,10 +77,10 @@ const Program = ({data, pageContext, yml}) => {
           <Link to={yml.button.apply_button_link}
             state={{ course: yml.meta_info.bc_slug }}
           >
-          <Button width="200px" color="red" margin="0" textColor="white">{yml.button.apply_button_text}</Button></Link>
+          <Button width="200px" color="red" margin="0" textColor="white">{apply_button_text}</Button></Link>
         </Column>
         <Column align="left" size="6" align_sm="center" size_sm="12" align="left">
-          <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
+          <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
         </Column>
       </Row>
       <Modal
@@ -171,6 +177,7 @@ const Program = ({data, pageContext, yml}) => {
       <PricesAndPayment
         type={pageContext.slug}
         lang={pageContext.lang}
+        session={session}
         locations={data.allLocationYaml.edges}
         course={program_type}
       />
@@ -214,9 +221,7 @@ export const query = graphql`
             alt
             }
             button{
-              syllabus_button_text
               syllabus_submit_text
-              apply_button_text
               apply_button_link
             }
             meta_info{
@@ -382,9 +387,6 @@ export const query = graphql`
           prices {
             full_time {
               center_section {
-                button {
-                  button_text
-                }
                 header {
                   sub_heading
                   heading_one
@@ -400,9 +402,6 @@ export const query = graphql`
                 }
               }
               left_section {
-                button {
-                  button_text
-                }
                 content {
                   price
                   price_info
@@ -414,9 +413,6 @@ export const query = graphql`
                 }
               }
               right_section {
-                button {
-                  button_text
-                }
                 content {
                   price
                   price_info
@@ -430,9 +426,7 @@ export const query = graphql`
             }
             part_time {
               center_section {
-                button {
-                  button_text
-                }
+
                 header {
                   heading_two
                   sub_heading
@@ -448,9 +442,7 @@ export const query = graphql`
                 }
               }
               left_section {
-                button {
-                  button_text
-                }
+
                 content {
                   price
                   price_info
@@ -462,9 +454,7 @@ export const query = graphql`
                 }
               }
               right_section {
-                button {
-                  button_text
-                }
+
                 content {
                   price
                   price_info

@@ -75,7 +75,6 @@ const Right = styled.div`
 
 const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location, button, lang}) => {
     const [show, setShow] = useState(showOnScrollPosition == null)
-    const [cookieShow, setCookieShow] = useState(true)
     const [cohorts, setCohorts] = useState([])
 
     React.useEffect(() => {
@@ -111,7 +110,7 @@ const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location
                 <P2 fontSize="18px">{title}</P2>
             </Center>
             <Right>
-                <Link to={button.button_link}><Button color={Colors.red} textColor={Colors.white}>{button.button_text}</Button></Link>
+                <Link to={button.button_link}><Button color={Colors.red} textColor={Colors.white}>{location && location.button.apply_button_text}</Button></Link>
                 <p style={{textAlign: "center"}}><Anchor className="decorated" display="inline" to={upcomingPath}>{button.other_dates}</Anchor></p>
             </Right>
         </Centered>

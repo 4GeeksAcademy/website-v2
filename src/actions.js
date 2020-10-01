@@ -62,6 +62,79 @@ export const defaultSession = {
         referral_code: undefined
     }
 };
+
+ /*  removeStorage: removes a key from localStorage and its sibling expiracy key
+    params:
+        key <string>     : localStorage key to remove
+    returns:
+        <boolean> : telling if operation succeeded
+ */
+function removeStorage(name) {
+    try {
+        localStorage.removeItem(name);
+        localStorage.removeItem(name + '_expiresIn');
+    } catch(e) {
+        console.log('removeStorage: Error removing key ['+ key + '] from localStorage: ' + JSON.stringify(e) );
+        return false;
+    }
+    return true;
+}
+/*  getStorage: retrieves a key from localStorage previously set with setStorage().
+    params:
+        key <string> : localStorage key
+    returns:
+        <string> : value of localStorage key
+        null : in case of expired key or failure
+ */
+function getStorage(key) {
+
+    var now = Date.now();  //epoch time, lets deal only with integer
+    // set expiration for storage
+    var expiresIn = localStorage.getItem(key+'_expiresIn');
+    if (expiresIn===undefined || expiresIn===null) { expiresIn = 0; }
+
+    if (expiresIn < now) {// Expired
+        removeStorage(key);
+        return {};
+    } else {
+        try {
+            var value = JSON.parse(localStorage.getItem(key)) || {};
+            return value;
+        } catch(e) {
+            console.log('getStorage: Error reading key ['+ key + '] from localStorage: ' + JSON.stringify(e) );
+            return null;
+        }
+    }
+}
+/*  setStorage: writes a key into localStorage setting a expire time
+    params:
+        key <string>     : localStorage key
+        value <string>   : localStorage value
+        expires <number> : number of seconds from now to expire the key
+    returns:
+        <boolean> : telling if operation succeeded
+ */
+function setStorage(key, value, expires=null) {
+
+    if (!expires) {
+        expires = (24*60*60);  // default: seconds for 1 day
+    } else {
+        expires = Math.abs(expires); //make sure it's positive
+    }
+
+    var now = Date.now();  //millisecs since epoch time, lets deal only with integer
+    var schedule = now + expires*1000; 
+    try {
+        localStorage.setItem(key, JSON.stringify(value));
+        localStorage.setItem(key + '_expiresIn', schedule);
+    } catch(e) {
+        console.log('setStorage: Error setting key ['+ key + '] in localStorage: ' + JSON.stringify(e) );
+        return false;
+    }
+    return true;
+}
+
+
 function distance (lat1, lon1, lat2, lon2, unit) {
     if ((lat1 == lat2) && (lon1 == lon2)) {
         return 0;
@@ -89,10 +162,10 @@ const getClosestLoc = (locations, lat, lon) => {
     let tempLocation = 0;
     let location = null;
     for (var i = 0; i < locations.length; i++) {
-        tempLocation = distance(locations[i].node.latitude, locations[i].node.longitude, lat, lon)
+        tempLocation = distance(locations[i].latitude, locations[i].longitude, lat, lon)
         if (tempLocation <= lowerDistance) {
             lowerDistance = tempLocation;
-            location = locations[i].node
+            location = locations[i]
         }
     }
     console.log("The closest location is: ", location)
@@ -181,27 +254,53 @@ export const contactUs = async (data,session) => {
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['contact-us'], ['soft'], session);
     return true;
 }
+export const newsletterSignup = async (data,session) => {
+    console.log("Succesfully contact us", data)
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+    
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['newsletter'], ['newsletter'], session);
+    return true;
+}
 
 export const initSession = async (locationsArray, seed={}) => {
     var v4 = null;
     var latitude = null;
     var longitude = null;
-    let storedSession = JSON.parse(localStorage.getItem("academy_session")) || {};
-    let { location, ...utm } = seed;
+    let storedSession = getStorage("academy_session");
+    let { location, language, ...utm } = seed;
+
+    const browserLang = getFirstBrowserLanguage();
+    if(!language){
+        if(storedSession) language = storedSession.language;
+        else language = browserLang.substring(0, 2);
+    }
+    if(language === "en") language = "us";
+    
+    //cleanup the locations array and add all the data I need for locations
+    let repeated = [];
+    let languageToFilter = language || "us";
+    const locations = locationsArray.nodes.filter(l => {
+        const [ name, _lang ] = l.fields.file_name.split(".");
+        //filter repetead locations and only focuse on the desired language
+        if(_lang !== languageToFilter || repeated.includes(name)) return false;
+        repeated.push(name);
+        return true;
+    }).map(l => locationsArray.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node);
 
     // remove undefineds from the seed utm's
     Object.keys(utm).forEach(key => utm[key] === undefined && delete utm[key])
 
     if(location){
-        location = locationsArray.edges.find(({node}) => node.breathecode_location_slug === location)
+        location = locations.find(l => l.breathecode_location_slug === location)
         if(location) location = location.node;
         else location = null;
         console.log("Hardcoded location", location)
     } 
     else if(storedSession && storedSession.location != null){
-        location = storedSession.location;
-        latitude = storedSession.latitude;
-        longitude = storedSession.longitude;
+        location = locations.find(l => l.breathecode_location_slug === storedSession.location.breathecode_location_slug);
+        latitude = location.latitude;
+        longitude = location.longitude;
         console.log("Location already found on session location", location)
     } 
     
@@ -218,36 +317,30 @@ export const initSession = async (locationsArray, seed={}) => {
             if(data && data.location){
                 latitude = data.location.lat;
                 longitude = data.location.lng;
-                location = getClosestLoc(locationsArray.edges, data.location.lat, data.location.lng)
+                location = getClosestLoc(locations, data.location.lat, data.location.lng)
             }else throw Error("Error when connecting to Google Geolocation API")
         }catch(e){
             console.log("Error retrieving IP information: ", e)
         }
     }
-    // const location = "Santiago de Chile"
-    const browserLang = getFirstBrowserLanguage();
     
     // get the language
-    let language = null;
     if (location){
-        language = location.defaultLanguage;
         location.reliable = true;
     } 
     else {
-        console.log("Location could not be loaded, using browserlanguage as default language");
-        location = locationsArray.edges.find(({node}) => node.breathecode_location_slug == "downtown-miami");
+        console.log("Location could not be loaded, using miami as default location");
+        location = locations.find(l => l.breathecode_location_slug == "downtown-miami");
         if(location){
             location = location.node;
             location.reliable = false;
         } 
-        language = browserLang.substring(0, 2);
-        if(language === "en") language = "us";
     }
     
-    console.log("New updated location", location)
+    if(!language) language = location.defaultLanguage;
+    console.log("New updated location and language", language, location)
     dayjs.locale(language == "us" ? "en" : language)
 
-    let repeated = [];
     const _session = {
         ...defaultSession,
         ...storedSession, v4, location, browserLang, language, latitude, longitude,
@@ -255,23 +348,15 @@ export const initSession = async (locationsArray, seed={}) => {
         // marketing utm info
         utm: { ...storedSession.utm, ...utm },
 
-        locations: locationsArray.nodes.filter(l => {
-            const [ name, lang ] = l.fields.file_name.split(".");
-            //filter repetead and only english locations
-            if(lang !== "us" || repeated.includes(name)) return false;
-            repeated.push(name);
+        locations: locations.filter(l => {
+            // filter inlisted locations
+            if(l.meta_info.unlisted) return false;
             return true;
         })
-            .map(l => locationsArray.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node)
-            .filter(l => {
-                // filter inlisted locations
-                if(l.meta_info.unlisted) return false;
-                return true;
-            })
-            .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
+        .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
     };
     console.log("Session: ", _session);
-    localStorage.setItem("academy_session", JSON.stringify(_session));
+    setStorage("academy_session", _session);
     return _session
 
 };

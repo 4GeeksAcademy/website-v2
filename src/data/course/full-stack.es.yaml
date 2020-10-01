@@ -25,9 +25,7 @@ header:
 
 button:
   heading: And enjoy Career Support... for Life!
-  syllabus_button_text: "DESCARGA EL PROGRAMA"
-  syllabus_submit_text: "ENVIAR"
-  apply_button_text: "SOLICITA UNA PLAZA"
+  syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
 
 credentials:

@@ -1,3 +1,9 @@
+newsletter:
+  heading: "Subscribe for more!"
+  paragraph: "The developer community on your inbox! Stay up to date on discounts, promotions, events and announcements"
+  button_text: "SIGN UP"
+  thankyou: "Amazing! You have successfully joined, stay tuned for upcoming information soon 😁"
+
 footer:
   - column_one:
     width: 2
@@ -12,7 +18,7 @@ footer:
       - name: "9:00am - 9:00pm"
         link: ""
       - name: "🇪🇸 Cambiar al Español"
-        link: "/es/inicio"
+        link: "/es/inicio?lang=es"
   - column_two:
     width: 3
     heading: "COMPANY"

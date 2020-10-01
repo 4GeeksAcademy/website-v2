@@ -24,6 +24,10 @@ export default ({children}) => {
                     unlisted
                     position
                 }
+                button{
+                  apply_button_text
+                  syllabus_button_text
+                }
               }
             }
             nodes{
@@ -43,7 +47,7 @@ export default ({children}) => {
             console.log("Use effect de layout")
             const urlParams = new URLSearchParams(window.location.search);
             initSession(data.allLocationYaml, {
-              location: urlParams.get('location') || null,
+              location: urlParams.get('location') || urlParams.get('city') || null,
               gclid: urlParams.get('gclid') || urlParams.get('fbclid') || undefined,
               utm_medium: urlParams.get('utm_medium') || undefined,
               utm_campaign: urlParams.get('utm_campaign') || undefined,
@@ -51,6 +55,7 @@ export default ({children}) => {
               utm_source: urlParams.get('utm_source') || undefined,
               referral_code: urlParams.get('referral_code') || undefined,
               utm_test: urlParams.get('utm_test') || undefined,
+              language: urlParams.get('lang') || urlParams.get('language') || undefined,
             })
               .then(_session => {
                 setSession(_session)

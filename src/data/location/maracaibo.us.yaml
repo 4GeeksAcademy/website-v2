@@ -76,8 +76,6 @@ prices:
       content:
         price: "Pay upfront and get a discount or ask for a 2 payment options"
         price_info:
-      button:
-        button_text: "APPLY NOW"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
@@ -88,8 +86,6 @@ prices:
       content:
         price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
         price_info: ""
-      button:
-        button_text: "APPLY NOW"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -106,8 +102,6 @@ prices:
       content:
         price: "Pay upfront and get a discount or ask for a 2 payment options"
         price_info: ""
-      button:
-        button_text: "APPLY NOW"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
@@ -118,8 +112,6 @@ prices:
       content:
         price: "ay upfront and get a discount or ask for a 3 - 4 payment options"
         price_info: ""
-      button:
-        button_text: "APPLY NOW"
 
 active_campaign_location_slug: "maracaibo-venezuela"
 breathecode_location_slug: "maracaibo"

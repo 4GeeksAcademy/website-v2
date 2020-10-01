@@ -94,6 +94,7 @@ const Pricing = (props) => {
         />
         <PricesAndPayment
           openedLabel={yml.prices.opened_label}
+          session={session}
           closedLabel={yml.prices.closed_label}
           type={pageContext.slug}
           lang={pageContext.lang}
