@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {SessionContext} from '../../session';
 import { Button, Colors } from "../Styling";
-import { NaturePeopleOutlined } from "@material-ui/icons";
 import {useStaticQuery, graphql, navigate} from 'gatsby';
 
 const formIsValid = (formData = null) => {

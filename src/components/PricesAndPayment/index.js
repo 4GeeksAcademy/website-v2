@@ -20,7 +20,7 @@ import {Button, Colors, Circle, RoundImage, TriangleDown} from '../Styling';
 import {SessionContext} from '../../session'
 import Fragment from "../Fragment"
 
-const PricingCard = ({data, lang, children, price, color, background, transform, priceInfo}) => {
+const PricingCard = ({data, lang, children, price, color, background, transform, priceInfo, applyLabel}) => {
   const { header, button } = data;
   return <Card padding="30px" shadow margin="5px 0" color={background} transform={transform}>
         <H4 
@@ -45,7 +45,7 @@ const PricingCard = ({data, lang, children, price, color, background, transform,
     <Paragraph align="center" margin="5px 0 40px 0" fontSize="12px" color={color || Colors.gray}>{priceInfo}</Paragraph>
     <Div display="block" margin="0 -50px">{children}</Div>
     <Column size="12" margin="40px 0 0 0"  align="center" image="no"  >
-      <Link to={`/${lang}/apply`}><Button width="100%" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="16px" fs_lg="14px" fs_sm="16px">{button.button_text}</Button></Link>
+      <Link to={`/${lang}/apply`}><Button width="100%" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="16px" fs_lg="14px" fs_sm="16px">{applyLabel}</Button></Link>
     </Column>
   </Card>;
 }
@@ -105,6 +105,8 @@ const PricesAndPayments = (props) => {
   return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
   
   const prices = !course ? {} : currentLocation.prices[course.value];
+
+  const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   
   return (
     <Fragment github="/location">
@@ -145,6 +147,7 @@ const PricesAndPayments = (props) => {
               price={prices.left_section.content.price}
               priceInfo={prices.left_section.content.price_info}
               data={prices.left_section} 
+              applyLabel={apply_button_text}
             />
           </Column>
           }
@@ -152,6 +155,7 @@ const PricesAndPayments = (props) => {
               <PricingCard lang={props.lang} color="white" background='black'
                 price={prices.center_section.plans[activeStep].payment}
                 priceInfo={prices.center_section.plans[activeStep].paymentInfo}
+                applyLabel={apply_button_text}
                 data={prices.center_section}
               >
                 <Stepper style={{ marginTop: "-50px" }} nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
@@ -174,6 +178,7 @@ const PricesAndPayments = (props) => {
               transform="translateY(20%)"
               price={prices.right_section.content.price}
               priceInfo={prices.right_section.content.price_info}
+              applyLabel={apply_button_text}
               data={prices.right_section} 
             />
           </Column>

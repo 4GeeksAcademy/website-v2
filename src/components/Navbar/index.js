@@ -139,11 +139,6 @@ const ButtonStyle = styled.div`
       transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
     }
 `
-export const NavButton = ({open}) => {
-  return (
-    <ButtonStyle open={open}>Apply</ButtonStyle>
-  )
-}
 const Div = styled.div`
   display: flex;
   flex-flow: row nowrap;
@@ -275,7 +270,7 @@ export const RightNav = ({lang, menu, open, button, onToggle}) => {
                 <NavItem key={index} fontSize="16px"><Link onClick={onToggle} to={item.link} key={index}>{item.name}</Link></NavItem>
           )}
         </Ul>
-        <Link onClick={onToggle} to={button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="130px" color={Colors.red} textColor={Colors.white}>{button.button_text}</Button></Link>
+        <Link onClick={onToggle} to={button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="130px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text}</Button></Link>
       </Div>
   )
 }

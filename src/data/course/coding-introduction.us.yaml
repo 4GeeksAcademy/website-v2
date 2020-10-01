@@ -12,9 +12,7 @@ header:
   image: "../../../static/images/bg/program-bg.png"
   alt: ""
 button:
-  syllabus_button_text: "REQUEST SYLLABUS"
-  syllabus_submit_text: "SUBMIT"
-  apply_button_text: "APPLY NOW"
+  syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
 
 credentials:

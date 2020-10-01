@@ -13,12 +13,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {requestSyllabus} from "../actions";
 
+
 import {Clock} from '../components/Styling'
 
 import Modal from '../components/Modal';
 import LeadForm from "../components/LeadForm/index.js";
 
 const Location = ({data, pageContext, yml}) => {
+
     const { lang } = pageContext;
     const [open, setOpen] = React.useState(false);
     const [cohorts, setCohorts] = React.useState([]);
@@ -241,7 +243,7 @@ const Location = ({data, pageContext, yml}) => {
                                 </Paragraph>
                             </Div>
                             <Div padding="10px">
-                                <Link ><Button color={Colors.red} textColor={Colors.white}>Apply now</Button></Link>
+                            <Link to={yml.button.apply_button_link}><Button color={Colors.red} textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
                             </Div>
                         </Card>
                     </Column>
@@ -360,6 +362,8 @@ export const query = graphql`
                 alt
             }
             button{
+                apply_button_link
+                apply_button_text
                 syllabus_button_text
                 syllabus_submit_text
             }
