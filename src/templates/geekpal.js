@@ -61,26 +61,23 @@ const GeekPal = (props) => {
             const splittedTitle = splitTitleString(col.heading)
             return (
               <Column size="4" key={i} size_sm={`12`}>
-                {/* <Row align="around" height="80px">
-                  <Column size="12" selfAlign="center" align="center"> */}
-
                 <H3
                   fs_xl="36px"
                 ><span className="text-danger split" >{splittedTitle.first}</span>{splittedTitle.remainingString}
                 </H3>
-                {/* </Column>
-                </Row> */}
                 {col.items.map((item, index) => {
                   return (
-                    <Row key={index} marginBottom="15px" style={{position: "relative"}} padding={`0 0 0 22px`} align={`center`} margin={`20px 0 00`}>
-                      {/* <Column size="2" size_sm={`2`} paddingRight="0" > */}
+                    <Row
+                      key={index}
+                      marginBottom="15px"
+                      style={{position: "relative"}}
+                      customRespSize
+                      alignResp={`left`}
+                      padding={`0 0 0 25px`}
+                      align={`center`}
+                      margin={`20px 0 00`}>
                       <Check width="24px" color={Colors.yellow} fill={Colors.yellow} style={{position: "absolute", left: "10px"}} />
-
-                      {/* </Column> */}
-                      <Div flexDirection={`column`} margin={`0 0 0 10px`}>
-                        {/* <Row> */}
-                        {/* <Column size="12"> */}
-
+                      <Div flexDirection={`column`} margin={`0 0 0 20px`}>
                         <H5
                           m="0px"
                           fs_xl="16px"
@@ -88,24 +85,22 @@ const GeekPal = (props) => {
                           fs_md="14px"
                           fs_sm="16px"
                           fs_xs="20px"
+                          align={`center`}
+                          textAlign_sm={`left`}
+                          textAlign_xs={`left`}
                         >{item.title}
                         </H5>
-                        {/* </Column> */}
-                        {/* </Row> */}
-                        {/* <Row> */}
-                        {/* <Column size="12"> */}
                         <Paragraph
                           fs_xl="14px"
                           fs_lg="14px"
                           fs_md="12px"
                           fs_sm="16px"
                           fs_xs="14px"
+                          align_sm={`left`}
                           align={`center`}
                         >{item.sub_title}
                         </Paragraph>
                       </Div>
-                      {/* </Row> */}
-                      {/* </Column> */}
                     </Row>
                   )
                 })}

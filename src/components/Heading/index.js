@@ -151,22 +151,20 @@ export const H5 = styled(Heading)`
       text-align: ${props => props.align || "center"};
   
     
-      @media ${Device.xs}{
-        font-size: ${props => props.fs_xs};
-      }
-      @media  ${Device.sm}{
-        font-size: ${props => props.fs_sm};
-      }
+      @media ${Device.lg}{
+        font-size: ${props => props.fs_lg};
+      }      
       @media ${Device.md}{
         font-size: ${props => props.fs_md};
                       }
-      @media ${Device.lg}{
-        font-size: ${props => props.fs_lg};
+      @media  ${Device.sm}{
+        font-size: ${props => props.fs_sm};
+        text-align: ${props => props.textAlign_sm};
       }
-      @media ${Device.xl} {
-        font-size: ${props => props.fs_xl};
+      @media ${Device.xs}{
+        font-size: ${props => props.fs_xs};
+        text-align: ${props => props.textAlign_xs};
       }
-      
 `;
 
 export const Span = styled.span`
