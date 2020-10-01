@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections";
+import {Column, Row, Container, Divider, Wrapper, WrapperImage, Div} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'
 import Testimonials from '../components/Testimonials'
@@ -26,7 +26,7 @@ const GeekForce = (props) => {
   return (
     <>
       <WrapperImage
-        
+
         imageData={yml.image && yml.image.childImageSharp.fluid}
         border="bottom"
         height="auto"
@@ -47,71 +47,63 @@ const GeekForce = (props) => {
         <Divider height="100px" />
       </WrapperImage>
       <Divider height="50px" />
-      <Wrapper
-        
-        border="bottom"
-        height="auto"
-      >
+      <Wrapper margin="50px 0px 10px 0" align="center" >
         <Row align="center">
           <RoundImage
             url={yml.image_logo}
             bsize="contain"
+            margin="auto"
             position="center center"
             width="300px"
-            height="200px"
+            height="100px"
           />
         </Row>
-        <Divider height="50px" />
       </Wrapper>
       <Wrapper >
         <Row>
           {yml.benefits.map((col, i) => {
             const splittedTitle = splitTitleString(col.heading)
             return (
-              <Column size="4" key={i}>
-                <Row align="around" height="80px">
-                  <Column size="12" selfAlign="center" align="center">
-
-                    <H3
-                      fs_xl="36px"
-                    ><span className="text-danger split" >{splittedTitle.first}</span>{splittedTitle.remainingString}</H3>
-                  </Column>
-                </Row>
-                <Divider height="50px" />
+              <Column size="4" key={i} size_sm={`12`}>
+                <H3
+                  fs_xl="36px"
+                ><span className="text-danger split" >{splittedTitle.first}</span>{splittedTitle.remainingString}</H3>
                 {col.items.map((item, index) => {
                   return (
-                    <Row key={index} marginBottom="15px">
-                      <Column size="2" customRespSize respSize="3" passingRight="0" >
-                        <Check width="24px" color={Colors.yellow} fill={Colors.yellow} />
-
-                      </Column>
-                      <Column size="10" customRespSize respSize="9" >
-                        <Row>
-                          <Column size="12">
-                            <H5
-                              m="0px"
-                              fs_xl="16px"
-                              fs_lg="16px"
-                              fs_md="14px"
-                              fs_sm="16px"
-                              fs_xs="20px"
-                            >{item.title}
-                            </H5>
-                          </Column>
-                        </Row>
-                        <Row>
-                          <Column size="12">
-                            <Paragraph
-                              fs_xl="14px"
-                              fs_lg="14px"
-                              fs_md="12px"
-                              fs_sm="16px"
-                              fs_xs="14px"
-                            >{item.sub_title}
-                            </Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
+                    <Row
+                      key={index}
+                      marginBottom="15px"
+                      style={{position: "relative"}}
+                      customRespSize
+                      alignResp={`left`}
+                      padding={`0 0 0 25px`}
+                      align={`center`}
+                      margin={`20px 0 00`}>
+                      <Check width="24px" color={Colors.yellow} fill={Colors.yellow} style={{position: "absolute", left: "10px"}} />
+                      <Div flexDirection={`column`} margin={`0 0 0 20px`}>
+                        <H5
+                          m="0px"
+                          fs_xl="16px"
+                          fs_lg="16px"
+                          fs_md="14px"
+                          fs_sm="16px"
+                          fs_xs="20px"
+                          align={`center`}
+                          textAlign_sm={`left`}
+                          textAlign_xs={`left`}
+                        >{item.title}
+                        </H5>
+                        <Paragraph
+                          fs_xl="14px"
+                          fs_lg="14px"
+                          fs_md="12px"
+                          fs_sm="16px"
+                          fs_xs="14px"
+                          align_sm={`left`}
+                          align={`center`}
+                        >{item.sub_title}
+                        </Paragraph>
+                      </Div>
                     </Row>
                   )
                 })}
