@@ -15,7 +15,7 @@ header:
   alt: ""
 
 button:
-  syllabus_button_text: "DESCARGAR CURRÍCULUM"
+  syllabus_button_text: "DESCARGAR PÉNSUM"
   syllabus_submit_text: "DESCARGAR"
   apply_button_text: "APLICAR"
   apply_button_link: "/aplica"

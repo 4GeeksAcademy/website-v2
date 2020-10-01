@@ -17,7 +17,7 @@ header:
   alt: ""
 
 button:
-  syllabus_button_text: "DESCARGA MALLA EDUCATIVA"
+  syllabus_button_text: "DESCARGAR PROGRAMA"
   syllabus_submit_text: "DESCARGER"
   apply_button_text: "APLICAR"
   apply_button_link: "/aplica"
