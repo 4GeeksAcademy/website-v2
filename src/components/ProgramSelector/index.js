@@ -1,19 +1,12 @@
 import React, {useState, useEffect, useContext} from 'react';
 import PropTypes from "prop-types";
 import styled from 'styled-components';
-import {useStaticQuery, graphql} from 'gatsby';
-import {redirectTo, Redirect} from "@reach/router"
+import {navigate, graphql} from 'gatsby';
 import {Row, Column} from '../Sections';
 import {Paragraph, Span} from '../Heading';
 import {Colors, Select, Option, Button, TriangleDown} from '../Styling';
 import Link from 'gatsby-link'
 import {SessionContext} from '../../session'
-import {makeStyles} from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-// import Select from '@material-ui/core/Select';
-// import Button from '@material-ui/core/Button';
 import {Card} from '../Card'
 
 const strings = {
@@ -29,29 +22,10 @@ const strings = {
   }
 }
 
-const useStyles = makeStyles(theme => ({
-  selector: {
-    background: 'white',
-    width: '100%',
-    borderRadius: '.25rem',
-    border: 'none',
-  },
-  text: {
-
-    color: 'black'
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
-}));
-
 const ProgramSelector = (props) => {
   const {session, setSession} = useContext(SessionContext);
   const [toggles, setToggles] = useState(false)
   const [toggle, setToggle] = useState(false)
-  const [weeks, setWeeks] = useState("16");
-  const classes = useStyles();
   let locArray = session ? session.locations || [] : [];
   // let locArray = data.loc.edges;
   let weekArray = ["16", "9"]
@@ -76,7 +50,7 @@ const ProgramSelector = (props) => {
             onClick={() => setToggles(!toggles)}
             color={Colors.white}
             textColor={Colors.gray}>
-            {weeks}
+            {props.week}
             <TriangleDown style={{marginLeft: "5px", position: "absolute", right: "5px", top: "50%", transform: "translateY(-50%)"}} width="14" color={Colors.gray} fill={Colors.gray} />
           </Button>
         }
@@ -88,21 +62,17 @@ const ProgramSelector = (props) => {
                 <Button
                   key={index}
                   width="100%"
-                  color={item === weeks ? Colors.lightBlue : null}
+                  color={item === props.week ? Colors.lightBlue : null}
                   colorHover={Colors.lightBlue}
                   textColor={Colors.gray}
                   borderRadius=".25rem"
                   padding="5px"
                   onClick={() => {
-                    setWeeks(item);
                     setToggles(!toggles);
-
-                    // redirectTo(`/${session.language}/course/${link}`); NOT WORKING. TEMPORARLY REPLACED WITH LINK TAG
+                    navigate(`/${props.lang}/course/${link}`)
                   }}
                 >
-                  <Link to={`/${session.language}/course/${link}`}>
-                    {item}
-                  </Link>
+                  {item}
                 </Button>
               )
             })}
@@ -132,7 +102,7 @@ const ProgramSelector = (props) => {
                 key={index}
                 style={{maxWidth: "100%", position: "relative"}}
                 onClick={() => {
-                  setSession({...session, location: {...item}})
+                  setSession({...session, location: {...item}, language: props.lang })
                   setToggle(!toggle)
                 }}
                 colorHover={Colors.lightBlue}

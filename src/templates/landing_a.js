@@ -5,6 +5,7 @@ import News from '../components/News'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import ChooseProgram from '../components/ChooseProgram'
 import JobsStatistics from '../components/JobsStatistics';
+import WhyPython from '../components/WhyPython'
 import LeadForm from "../components/LeadForm/index.js";
 import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
@@ -12,10 +13,10 @@ import {RoundImage, Colors, Check, ArrowRight, StyledBackgroundSection} from '..
 import {Card} from '../components/Card'
 import WhoIsHiring from '../components/WhoIsHiring';
 import AlumniProjects from '../components/AlumniProjects'
-import Credentials from '../components/Credentials'
+import ProgramDetails from '../components/ProgramDetails'
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile'
 import BaseRender from './_baseRender'
 import Testimonials from '../components/Testimonials'
-import Events from '../components/Events'
 import Loc from '../components/Loc'
 import {Link, navigate} from 'gatsby';
 import {requestSyllabus} from "../actions";
@@ -26,7 +27,7 @@ const Landing = (props) => {
   const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   const city = session && session.location ? session.location.reliable ? session.location.city : "" : "Miami";
-  
+  const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
   return (
     <>
       <Row className="d-sm-none">
@@ -55,8 +56,9 @@ const Landing = (props) => {
           disp_xs={"none"}
           padding={`80px 0 0 0`}
         >            
-          <H2
+          <H1
             type="h1"
+            variant="main"
             padding="0 10px 0 0px"
             color={Colors.white}
             fs_sm="38px"
@@ -64,16 +66,18 @@ const Landing = (props) => {
             fs_lg="32px"
             fs_xl="38px"
             align="left" >{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
-          </H2>
+          </H1>
           <H4 align="left" fontSize="18px" color={Colors.white} 
+            variant="main"
             margin="20px 0px 40px 0px" 
             m_sm="20px auto" 
             maxWidth="350px"
+            textShadow="0px 0px 4px black"
           >
             {yml.header_data.sub_heading}
           </H4>
           {Array.isArray(yml.features) && yml.features.map((f, i) => 
-            <Paragraph margin="4px 0" color={Colors.white} key={i}>✅ {f}</Paragraph>
+            <Paragraph textShadow="0px 0px 4px black" align_sm="left" mw_sm="300px" margin="7px 0" color={Colors.white} key={i}>✅ {f}</Paragraph>
           )}
         </Column>
           </StyledBackgroundSection>
@@ -124,44 +128,81 @@ const Landing = (props) => {
       )}
         <LeadForm style={{marginTop: "0px"}} formHandler={requestSyllabus} 
             lang={pageContext.lang}
+            sendLabel={yml.header_data.button_label}
             data={{ 
               course: { value: yml.meta_info.bc_slug, valid: true }
             }}
           />
       </StyledBackgroundSection>
 
-      {/* CREDENTIALS CARDS */}
-
+      {/* In the news... */}
       <Wrapper>
-        <Credentials lang={data.allCredentialsYaml.edges} />
-      </Wrapper>
-
-      <Wrapper>
+          <H4 align="center" fontSize="18px" color={Colors.darkGray} 
+            margin="20px 0px 10px 0px" 
+            m_sm="20px auto" 
+            maxWidth="350px"
+          >{yml.credential}
+          </H4>
           <News location={session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
           <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
+      </Wrapper>
+
+    {/* PROGRAM DETAILS */}
+      <Wrapper >
+        <Title
+          size="10"
+          marginTop="40px"
+          title={yml.details.heading}
+          paragraph={yml.details.sub_heading}
+          variant="primary"
+        />
+        <ProgramDetails details={course && course.details} />
+        <ProgramDetailsMobile details={course && course.details} />
+      </Wrapper>
+
+
+
+      <Wrapper margin="50px 0">
+        <WhyPython lang={pageContext.lang} />
+      </Wrapper>
+
+      <Wrapper margin="100px">
+        <Title
+          variant="primary"
+          title={yml.testimonial.heading}
+          paragraph={yml.testimonial.sub_heading}
+          maxWidth="66%"
+        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+        />
+        <Testimonials lang={data.allTestimonialsYaml.edges} />
       </Wrapper>
     </>
   )
 };
 export const query = graphql`
-  query LandingAQuery($file_name: String!, $lang: String!) {
+  query LandingAQuery($file_name: String!, $lang: String!, $utm_course: String!) {
     allLandingYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
             meta_info{
-                title
-                description
-                image
-                keywords
-                crm{
-                  course
-                  location
-                }
+              title
+              description
+              image
+              keywords
+              utm_course
+              utm_location
+            }
+            features
+            credential
+            details{
+              heading
+              sub_heading
             }
             header_data{
               tagline
               sub_heading
               image_filter
+              button_label
               image{
                 childImageSharp {
                   fluid(maxWidth: 1000){
@@ -170,7 +211,10 @@ export const query = graphql`
                 }
               }
             }
-            features
+            testimonial{
+              heading
+              sub_heading
+            }
         }
       }
     }
@@ -186,6 +230,70 @@ export const query = graphql`
             }
           }
         }
+    }
+    allCourseYaml(filter: { fields: { file_name: { eq: $utm_course }, lang: { eq: $lang }}}) {
+      edges{
+        node{
+            typical{
+              heading
+              sub_heading
+              schedule{
+                title
+                time
+                icon
+                content
+                step
+              }
+            }
+            alumni{
+              heading
+              sub_heading
+            }
+            details {
+              heading
+              sub_heading
+              left_labels{
+                description
+                projects
+                duration
+                skills
+              }
+              details_modules {
+                title
+                projects
+                slug
+                module_name
+                duration
+                description
+                step
+              }
+            }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          testimonials {
+            student_name
+            testimonial_date
+            student_thumb{
+              childImageSharp {
+                fluid(maxHeight: 200){
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+                fixed(width: 250, height: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            starts
+            content
+            source_url
+            source_url_text
+          }
+        }
+      }
     }
   }
 `;

@@ -27,7 +27,7 @@ const Footer = ({ yml, session }) => {
         email: { value: '', valid: false },
         consent: { value: true, valid: true },
     });
-    console.log("Footer YML", yml)
+    
     return (
     <Container github="/components/footer" 
         width="fluid" 

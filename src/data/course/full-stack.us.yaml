@@ -24,11 +24,12 @@ header:
 button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
-## PROGRAM DETAILS
+  
 credentials:
   heading: "This Program By The Numbers"
   paragraph: "Our results speak for themselves"
 
+## PROGRAM DETAILS
 details:
   heading: PROGRAM DETAILS
   sub_heading: "Part Time"

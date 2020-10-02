@@ -263,6 +263,17 @@ export const newsletterSignup = async (data,session) => {
     return true;
 }
 
+export const locByLanguage = (locations, languageToFilter) => {
+    let repeated = [];
+    return locations.nodes.filter(l => {
+        const [ name, _lang ] = l.fields.file_name.split(".");
+        //filter repetead locations and only focuse on the desired language
+        if(_lang !== languageToFilter || repeated.includes(name)) return false;
+        repeated.push(name);
+        return true;
+    }).map(l => locations.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node);
+}
+
 export const initSession = async (locationsArray, seed={}) => {
     var v4 = null;
     var latitude = null;
@@ -278,15 +289,8 @@ export const initSession = async (locationsArray, seed={}) => {
     if(language === "en") language = "us";
     
     //cleanup the locations array and add all the data I need for locations
-    let repeated = [];
     let languageToFilter = language || "us";
-    const locations = locationsArray.nodes.filter(l => {
-        const [ name, _lang ] = l.fields.file_name.split(".");
-        //filter repetead locations and only focuse on the desired language
-        if(_lang !== languageToFilter || repeated.includes(name)) return false;
-        repeated.push(name);
-        return true;
-    }).map(l => locationsArray.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node);
+    const locations = locByLanguage(locationsArray, languageToFilter);
 
     // remove undefineds from the seed utm's
     Object.keys(utm).forEach(key => utm[key] === undefined && delete utm[key])
@@ -329,10 +333,9 @@ export const initSession = async (locationsArray, seed={}) => {
         location.reliable = true;
     } 
     else {
-        console.log("Location could not be loaded, using miami as default location");
         location = locations.find(l => l.breathecode_location_slug == "downtown-miami");
+        console.log("Location could not be loaded, using miami as default location", location);
         if(location){
-            location = location.node;
             location.reliable = false;
         } 
     }

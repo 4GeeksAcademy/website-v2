@@ -252,6 +252,7 @@ export const Paragraph = styled.div`
     font-size: ${props => props.fs_sm};
     margin: ${props => props.m_sm};
     text-align: ${props => props.align_sm || 'center'};
+    max-width: ${props => props.mw_sm};
   }
   @media ${Break.xs}{
     font-size: ${props => props.fs_xs};

@@ -1,5 +1,5 @@
 meta_info:
-  slug: coding-classes-parttime
+  slug: clases-de-informatica-part-time
   title: ""
   description: ""
   image: ""
@@ -14,7 +14,7 @@ header_data:
   sub_heading: in only 16 weeks (part-time)
   image: "../../../static/images/bg/main-bg.jpg"
   image_filter: brightness(0.4)
-  button_label: "Request more info"
+  button_label: Solicitar Información
 
 features:
   - Beautiful Miami Campus
@@ -29,7 +29,6 @@ details:
   heading: "What you will learn"
   sub_heading: "The most wanted tecnologies in the job market"
 
-## TESTIMONIAL SECTION
 testimonial:
   heading: "TESTIMONIALS"
   sub_heading: ""
@@ -38,4 +37,3 @@ testimonial:
     student_description: Graduate from our Miami Campus.
     video_title: What are your thoughts about the program?
     video_id: z_YORvcJHqA
-

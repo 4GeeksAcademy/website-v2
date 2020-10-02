@@ -45,7 +45,7 @@ const Program = ({data, pageContext, yml}) => {
         : pageContext.slug === "coding-introduction" || pageContext.slug === "introduccion-programacion"
         && null
   }
-
+  
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
@@ -117,8 +117,8 @@ const Program = ({data, pageContext, yml}) => {
         paragraph={yml.details.sub_heading}
         variant="primary"
       />
-      <ProgramDetails details={yml.details} />
-      <ProgramDetailsMobile details={yml.details} />
+      <ProgramDetails lang={pageContext.lang} course={program_type} />
+      <ProgramDetailsMobile lang={pageContext.lang} course={program_type} />
     </Wrapper>
 
     <Wrapper
@@ -237,10 +237,6 @@ export const query = graphql`
               geek_force
               geek_pal
             }
-            credentials{
-              heading
-              paragraph
-            }
             details {
               heading
               sub_heading
@@ -259,6 +255,10 @@ export const query = graphql`
                 description
                 step
               }
+            }
+            credentials{
+              heading
+              paragraph
             }
             geeks_vs_others{
               heading

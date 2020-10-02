@@ -24,7 +24,7 @@ const Form = styled.form`
 `;
 
 
-const LeadForm = ({heading, formHandler, data, handleClose, style, lang}) => {
+const LeadForm = ({heading, formHandler, data, handleClose, style, sendLabel, lang}) => {
     const _query = useStaticQuery(graphql`
     query LeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -139,16 +139,16 @@ const LeadForm = ({heading, formHandler, data, handleClose, style, lang}) => {
                 </Column>
             </Row>
             <Row padding="5px 0 0 0" >
-                <Column size="6" padding="10px 20px">
-                    <Button  width="100%" padding=".7rem .45rem" color={Colors.red} textColor={Colors.white} onClick={handleClose}>Close</Button>
-                </Column>
-                <Column size="6" padding="10px 20px">
+                { handleClose && <Column size="6" padding="10px 20px">
+                    <Button  width="100%" padding=".7rem .45rem" color={Colors.gray} textColor={Colors.white} onClick={handleClose}>Close</Button>
+                </Column>}
+                <Column size="6" padding="10px 20px" margin="auto">
                     <Button width="100%" padding=".7rem .45rem"
                         type="submit"
-                        color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue}
+                        color={formStatus.status === "loading" ? Colors.darkGray:  Colors.red}
                         textColor={Colors.white}
                         disabled={formStatus.status === "loading" ? true: false}
-                    >{formStatus.status === "loading" ? "Loading...": "SEND"}</Button>
+                    >{formStatus.status === "loading" ? "Loading...": sendLabel}</Button>
                 </Column>
             </Row>
         </Form>
@@ -157,11 +157,13 @@ const LeadForm = ({heading, formHandler, data, handleClose, style, lang}) => {
 
 LeadForm.propTypes = {
     heading: PropTypes.string,
+    sendLabel: PropTypes.string,
     formHandler: PropTypes.func,
     handleClose: PropTypes.func
 }
 LeadForm.defaultProps = {
     heading: "",
+    sendLabel: "SEND",
     formHandler: null,
     handleClose: null,
     data: {},
