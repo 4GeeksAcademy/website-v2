@@ -3,7 +3,7 @@ meta_info:
   title: "Miami Coding Bootcamp, Madrid España, Santiago de Chile"
   description: "The #1 Top coding bootcamp with 1000+ graduates and life-long career support. USA, Spain, Chile, Venezuela and Costa Rica Coding Bootcamp."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
-  keywords: "Coding Bootcamp Miami, Learn to code miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa"
+  keywords: "Coding Bootcamp Miami, Learn to code Miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn Python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa, Coding Bootcamp Costa Rica"
   redirects: ["/home", "/us/home"]
 header_data:
   tagline: Coding Bootcamp
@@ -39,9 +39,9 @@ why_4geeks:
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:
   heading: JOIN 4GEEKS
-  sub_heading: "By becoming part of 4Geeks, you get access to our main Feautures: Lifeling Mentorship and Unlimited Career Support."
+  sub_heading: "By becoming part of 4Geeks, you get access to our main features: Lifelong Mentorship and Unlimited Career Support."
   geek_data:
-    geek_pal_heading: Programming - Always - Limitles
+    geek_pal_heading: Programming - Always - Limitless
     geek_pal_data:
       content: Never code on your own again -A PAL for the rest of your life-. We will be together, by your side, for as long as you need, even after you get your first job. Mentorship Support, One-to-One, Q&A, Office Space and more.
       icon_link: "/geekpal-support"
