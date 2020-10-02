@@ -64,7 +64,7 @@ const Pricing = (props) => {
           </Column>
         </Row>
       </Wrapper>
-      {/* <Wrapper>
+      <Wrapper>
         <Row m_sm="0px 0px 100px 0">
           <Column size="7" size_sm="12">
             <H2 align="left" margin="30px 0 20px 0" type="h1">{yml.intro.heading_second}</H2>
@@ -79,7 +79,7 @@ const Pricing = (props) => {
             />
           </Column>
         </Row>
-      </Wrapper> */}
+      </Wrapper>
       <Wrapper margin="50px 0px" right
         customBorderRadius="1.25rem 0 0 1.25rem"
         background={Colors.lightGray}
