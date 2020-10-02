@@ -23,9 +23,7 @@ header:
   
 
 button:
-  syllabus_button_text: "REQUEST SYLLABUS"
-  syllabus_submit_text: "SUBMIT"
-  apply_button_text: "APPLY NOW"
+  syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/aplica"
 
 credentials:
@@ -147,7 +145,6 @@ geek_data:
     - Sesión de preparación de entrevistas personalizadas para trabajos específicos
     - Entrenamiento de marca personal
     - Prácticas y ejercicios de programación posteriores a la graduación
-  geek_force_heading: ""
   geek_force:
     - Un profesor cada cuatro estudiantes (1:4)
     - Un profesor principal cada doce estudiantes (1:12)

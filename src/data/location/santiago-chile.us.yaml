@@ -62,8 +62,6 @@ prices:
       content:
         price: "2.760.000 CLP"
         price_info: "single payment"
-      button:
-        button_text: "APPLY NOW"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -83,8 +81,6 @@ prices:
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
-      button:
-        button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -94,8 +90,6 @@ prices:
       content:
         price: "2.415.000 CLP"
         price_info: "single payment"
-      button:
-        button_text: "APPLY NOW"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -112,8 +106,6 @@ prices:
       content:
         price: "2.415.000 CLP"
         price_info: "single payment"
-      button:
-        button_text: "APPLY NOW"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -133,8 +125,6 @@ prices:
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
-      button:
-        button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -144,8 +134,6 @@ prices:
       content:
         price: "2.760.000 CLP"
         price_info: "single payment"
-      button:
-        button_text: "APPLY NOW"
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"

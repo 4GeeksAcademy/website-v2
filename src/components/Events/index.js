@@ -30,7 +30,7 @@ const months = [
     'Nov',
     'Dec'
 ]
-const Events = () => {
+const Events = ({ }) => {
     const [event, setEvent] = useState([])
     useEffect(() => {
         const loadEvents = async () => {
@@ -105,7 +105,7 @@ const Events = () => {
                                                 </Row>
                                                 <Row height="100px">
                                                     <a href={item.url} target="_blank" rel="noopener noreferrer">
-                                                        <Button outline color={Colors.blue} textColor={Colors.black} padding=".35rem.85rem">APPLY NOW</Button>
+                                                        <Button outline color={Colors.blue} textColor={Colors.black} padding=".35rem.85rem">MORE DETAILS</Button>
                                                     </a>
                                                 </Row>
                                             </Column>

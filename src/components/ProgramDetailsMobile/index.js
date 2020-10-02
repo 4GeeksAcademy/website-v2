@@ -9,6 +9,10 @@ import Link from 'gatsby-link'
 
 const ProgramDetailsMobile = (props) => {
     const [selected, setSelected] = useState({index: null, manual: false});
+    if(!props.details){
+        console.log("Warning! Ignoring Program Details because it came null form the graphql query")
+        return null;
+    }
     return (
         <>
             {props.details.details_modules.map((item, index) => {

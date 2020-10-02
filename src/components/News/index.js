@@ -40,7 +40,10 @@ export default ({ location, lang }) => {
   const languageNews = data.allNewsYaml.edges.find(({ node }) => node.fields.lang === lang);
   const locationNews = typeof(languageNews) !== "object" ? [] : languageNews.node.news.filter(n => n.location === "all" || n.location.includes(location));
 
-  if(locationNews.length === 0) return null;
+  if(locationNews.length === 0){
+    console.error( `No news to display for location ${location}`, languageNews)
+    return null;
+  } 
   return (
       <Row github="/components/news">
         {locationNews.map((l,i) => (

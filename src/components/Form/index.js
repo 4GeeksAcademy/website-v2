@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import styled, {css, keyframes} from 'styled-components';
 import {Colors, Button} from '../Styling';
+import {Break} from "../Responsive"
 
 const regex = {
     email: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
@@ -14,18 +15,22 @@ const regex = {
 const StyledInput = styled.input`
     background-color: ${props => props.valid ? Colors.lightGray : Colors.lightRed};
     height: 40px;
-    width: 100%;
+    width: ${props => props.width || "100%"};
     padding: 5px 10px;
-    margin: 10px 0px;
+    margin: ${props => props.margin || "10px 0px"};
+    border-radius: ${props => props.borderRadius};
     border: none;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-color: ${Colors.black};
     user-select: initial;
+    @media ${Break.sm}{
+        width: ${props => props.w_sm};
+    }
 `
 const Rel = styled.div`
     position: relative;
-    width: 100%;
+    width: ${props => props.width || "100%"};
 `
 const Msg = styled.span`
     position: absolute;
@@ -36,12 +41,12 @@ const Msg = styled.span`
     background-color: ${Colors.lightRed};
 `
 
-export const Input = ({ onChange, type, required, validate, errorMsg, ...rest}) => {
+export const Input = ({ onChange, type, required, validate, errorMsg, width, margin,...rest}) => {
     const [ validStatus, setValidStatus ] = useState({ valid: true });
     
-    return <Rel>
+    return <Rel width={width}>
         { !validStatus.valid && <Msg>{errorMsg}</Msg>}
-        <StyledInput {...rest} type={type} required={required} valid={validStatus.valid}
+        <StyledInput {...rest} type={type} margin={margin} required={required} valid={validStatus.valid}
             onChange={(e) => {
             let isValid = true;
             if(required === false && e.target.value.length === 0) isValid = true;

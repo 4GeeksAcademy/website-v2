@@ -17,7 +17,6 @@ navbar:
   - name: "Próximas Fechas"
     link: "/calendario"
 button:
-  button_text: "APLICA"
   button_link: "/aplica"
   button_type: "" ## YOU CAN LEAVE IT EMPTY FOR A FULL BACKGROUND COLOR OR 'outline' FOR A WHITE BACKGROUND WITH A BORDER
   button_color_text: ""
