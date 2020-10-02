@@ -4,7 +4,7 @@
 ## THE FIRST NUMBER IS THE STARTING OF THE CHART IN THE BOTTOM - LEFT
 jobs:
   - title: "Growth Rate"
-    slug: "growt-rate"
+    slug: "growth-rate"
     sub_title: "Coding Bootcamp"
     value: 171
     value_symbol: "%"
