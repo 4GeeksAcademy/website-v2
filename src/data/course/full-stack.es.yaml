@@ -13,6 +13,8 @@ meta_info:
       "/es/course/part-time",
       "/es/full-stack",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time/madrid-espana",
+      "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
+      "/es/course/bootcamp-desarrollo-web-full-stack-part-time"
     ]
 
 header:
@@ -23,9 +25,7 @@ header:
 
 button:
   heading: And enjoy Career Support... for Life!
-  syllabus_button_text: "DESCARGA EL PROGRAMA"
-  syllabus_submit_text: "ENVIAR"
-  apply_button_text: "SOLICITA UNA PLAZA"
+  syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
 
 credentials:

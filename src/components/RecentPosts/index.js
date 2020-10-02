@@ -76,10 +76,12 @@ const RecentPosts = () => {
                         shadow
                         bgHover={Colors.lightGray}
                         position="relative"
+                        height="350px"
                         width="430px"
-                        h_lg="440px"
+                        h_lg="400px"
                         h_md="370px"
-                        h_sm="230px"
+                        h_sm="170px"
+                        h_xs="200px"
                     >
                         <RoundImage
                             url={i.node.frontmatter.image}

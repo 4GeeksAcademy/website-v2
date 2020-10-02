@@ -10,7 +10,7 @@ import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import ReactPlayer from 'react-player'
 
-const AlumniProjects = ({lang, showThumbs, limit}) => {
+const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
 
     return (
@@ -105,7 +105,7 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     )
                                 })}
                                 <H4
-                                    m={`0 0 10px 0`}
+                                    margin={`0 0 10px 0`}
                                     color={Colors.gray}
                                     align="left"
                                     fs_xs="16px"
@@ -154,7 +154,7 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     <ReactPlayer
                                         className='react-player alumni-player'
                                         file={{forceVideo: true}}
-                                        style={{height: props.playerHeight}}
+                                        style={{height: playerHeight}}
                                         light={item.project_image.image}
                                         controls={true}
                                         url={item.project_video}
@@ -165,12 +165,18 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                     )
                 })
                 }
+                <Div display="block" align="center" padding="150px 0">
+                    <H2 width="100%">{lang[0].node.button_section.button_text}</H2>
+                    <Link to={lang[0].node.button_section.button_link}>
+                        <Button outline width="200px" color={Colors.blue} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>
+                    </Link>
+                </Div>
             </Carousel>
             {limit > 0 && <Row height="10%" align="center">
                 <Column size="6" align="center">
-                    <a href={lang[0].node.button_section.button_link} rel="noopener noreferrer nofollow">
+                    <Link to={lang[0].node.button_section.button_link}>
                         <Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>
-                    </a>
+                    </Link>
                 </Column>
             </Row>
             }

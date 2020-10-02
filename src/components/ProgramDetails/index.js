@@ -26,6 +26,10 @@ const FillerStyles = styled.div`
 
 const ProgramDetails = (props) => {
     const [selected, setSelected] = useState({index: 0, manual: false});
+    if(!props.details){
+        console.log("Warning! Ignoring Program Details because it came null form the graphql query")
+        return null;
+    }
     const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
     useEffect(() => {
         const inter = setInterval(() => {
@@ -107,7 +111,7 @@ const ProgramDetails = (props) => {
                                 return (
                                     <Paragraph
                                         color={Colors.darkGray}
-
+                                        key={index}
                                         fs_xs="8px"
                                         fs_sm="10px"
                                         fs_md="10px"
@@ -142,9 +146,10 @@ const ProgramDetails = (props) => {
 
                                     </Div>
                                     <div>
-                                        {props.details.details_modules[selected.index].description.split('\\n').map(d =>
+                                        {props.details.details_modules[selected.index].description.split('\\n').map((d, i) =>
                                             <Paragraph
                                                 color={Colors.darkGray}
+                                                key={i}
                                                 align_sm="left"
                                                 margin="10px 0px 0px 0px"
                                                 fs_xs="12px"

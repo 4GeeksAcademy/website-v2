@@ -18,12 +18,18 @@ import StepConnector from '@material-ui/core/StepConnector';
 import clsx from 'clsx';
 import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
-import SyllabusSVG from "../assets/images/syllabus.inline.svg";
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
+import {SessionContext} from '../session'
 
 const Program = ({data, pageContext, yml}) => {
 
+  const {session} = React.useContext(SessionContext);
+  
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+
+  const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
+  const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   return (<>
     <WrapperImage
@@ -65,11 +71,11 @@ const Program = ({data, pageContext, yml}) => {
           <Link to={yml.button.apply_button_link}
               state={{ course: yml.meta_info.bc_slug }}
             >
-            <Button width="200px" color="red" margin="0" textColor=" white">{yml.button.apply_button_text}</Button>
+            <Button width="200px" color="red" margin="0" textColor=" white">{apply_button_text}</Button>
           </Link>
         </Column>
         <Column align="left" size="6" size_xs="12" align_sm="center">
-          <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
+          <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
         </Column>
       </Row>
       <Modal
@@ -109,6 +115,7 @@ const Program = ({data, pageContext, yml}) => {
           variant="primary"
       />
       <ProgramDetails details={yml.details} />
+      <ProgramDetailsMobile details={yml.details} />
     </Wrapper>
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
@@ -163,6 +170,7 @@ const Program = ({data, pageContext, yml}) => {
       />
       <PricesAndPayment
         lang={pageContext.lang}
+        session={session}
         type={pageContext.slug}
         locations={data.allLocationYaml.edges}
         course="software_engineering"
@@ -207,9 +215,7 @@ export const query = graphql`
               alt
             }
             button{
-              syllabus_button_text
               syllabus_submit_text
-              apply_button_text
               apply_button_link
             }
             meta_info{
@@ -387,9 +393,7 @@ export const query = graphql`
           prices {
             software_engineering {
               center_section {
-                button {
-                  button_text
-                }
+
                 header {
                   sub_heading
                   heading_one
@@ -405,9 +409,7 @@ export const query = graphql`
                 }
               }
               left_section {
-                button {
-                  button_text
-                }
+
                 content {
                   price
                   price_info
@@ -419,9 +421,7 @@ export const query = graphql`
                 }
               }
               right_section {
-                button {
-                  button_text
-                }
+
                 content {
                   price
                   price_info

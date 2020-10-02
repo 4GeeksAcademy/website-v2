@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {SessionContext} from '../session';
 import '../assets/css/style.css';
+import '../assets/css/utils.css';
 import Navbar from '../components/Navbar';
 import {Nav} from '../components/Navbar';
 import NavB from '../components/Navbar'
@@ -34,6 +35,12 @@ const Layout = ({children, seo, context}) => {
         allFooterYaml {
           edges {
             node {
+              newsletter{
+                heading
+                paragraph
+                button_text
+                thankyou
+              }
               footer {
                 heading
                 width
@@ -57,7 +64,6 @@ const Layout = ({children, seo, context}) => {
                 link
               }
               button {
-                button_text
                 button_link
                 button_type
                 button_color_text
@@ -76,6 +82,10 @@ const Layout = ({children, seo, context}) => {
       render={(data) => {
         let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
         let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
+
+        let _btnInfo = myNavbar.node.button;
+        if(session && session.location) _btnInfo = { ..._btnInfo, ...session.location.button };
+        
         return (
           <>
             {editMode && <div style={{ background: "yellow", padding: "15px" }}>
@@ -90,13 +100,13 @@ const Layout = ({children, seo, context}) => {
             </div>}
             <SEO {...seo} context={context} />
             {/* <NavB lang={myNavbar} /> */}
-            <Navbar menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
+            <Navbar menu={myNavbar.node.navbar} button={_btnInfo} lang={context.lang} />
             <GlobalStyle />
             <>
               {children}
             </>
-            { showUpcoming && <UpcomingProgram location={session ? session.location : null} button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
-            <Footer footer={myFooter.node.footer} />
+            { showUpcoming && <UpcomingProgram location={session ? session.location : null} button={_btnInfo} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
+            <Footer yml={myFooter.node} session={session} />
           </>
         )
       }}

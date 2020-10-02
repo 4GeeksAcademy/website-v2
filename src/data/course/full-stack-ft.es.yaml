@@ -12,6 +12,9 @@ meta_info:
       "/es/full-time",
       "/es/course/full-time",
       "es/full-stack-ft",
+      "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time/madrid-espana",
+      "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time",
+      "/es/course/bootcamp-desarrollo-web-full-stack-full-time"
     ]
 
 header:
@@ -21,9 +24,7 @@ header:
   alt: ""
 
 button:
-  syllabus_button_text: "REQUEST SYLLABUS"
-  syllabus_submit_text: "SUBMIT"
-  apply_button_text: "APPLY NOW"
+  syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
 
 credentials:

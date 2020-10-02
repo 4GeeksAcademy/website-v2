@@ -1,3 +1,9 @@
+newsletter:
+  heading: "¡Suscríbete y mantente al día!"
+  paragraph: "¡La comunidad de desarrolladores en tu buzón de correo! Eventos, Descuentos, Becas, Promociones y Anuncios."
+  button_text: "SUSCRÍBETE"
+  thankyou: "¡Excelente! Te haz suscrito con éxito, está pendiente que pronto haremos nuevos anuncios 😁"
+
 footer:
   - column_one:
     width: 2
@@ -12,7 +18,7 @@ footer:
       - name: "9:00am - 8:00pm"
         link: ""
       - name: "🇺🇸 English Version"
-        link: "/#home"
+        link: "/?lang=en#home"
   - column_two:
     heading: "COMPAÑÍA"
     width: 3

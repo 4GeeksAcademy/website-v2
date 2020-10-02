@@ -33,7 +33,7 @@ const WhoIsHiring = props => {
       </Row>
       {props.footerTagline &&
         <div>
-          <H4 m="20px 0 10px 0" fs_xs="20px" fs_sm="20px" fs_md="20px" fs_lg="20px" fs_xl="20px" primary>{props.footerTagline}</H4>
+          <H4 margin="20px 0 10px 0" fs_xs="20px" fs_sm="20px" fs_md="20px" fs_lg="20px" fs_xl="20px" primary>{props.footerTagline}</H4>
           <Link to={props.footerLink}>
             <Paragraph align="center" color={Colors.blue}>{props.footerButton}</Paragraph>
           </Link>

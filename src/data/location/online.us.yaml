@@ -65,8 +65,6 @@ prices:
       content:
         price: "$9,499.00"
         price_info: "single payment"
-      button:
-        button_text: "APPLY NOW"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -111,8 +109,6 @@ prices:
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-      button:
-        button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -123,8 +119,6 @@ prices:
       content:
         price: "$134.99"
         price_info: "per month"
-      button:
-        button_text: "APPLY NOW"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -142,8 +136,6 @@ prices:
       content:
         price: "$7,499.00"
         price_info: "single payment"
-      button:
-        button_text: "APPLY NOW"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -188,8 +180,6 @@ prices:
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: "Thanks to our partnership with Quotanda we have managed to create the most flexible placement plan in town"
-      button:
-        button_text: "APPLY NOW"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -200,8 +190,6 @@ prices:
       content:
         price: "$134.99"
         price_info: "per month"
-      button:
-        button_text: "APPLY NOW"
 
 ## UPCOMING COURSES
 # upcoming_courses:

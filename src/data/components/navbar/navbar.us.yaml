@@ -17,7 +17,6 @@ navbar:
   - name: "Upcoming Dates"
     link: "/calendar"
 button:
-  button_text: "APPLY NOW"
   button_link: "/apply"
   button_type: ""
   button_color_text: ""

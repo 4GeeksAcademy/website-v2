@@ -33,8 +33,7 @@ export default props => {
                   <H3 margin="10px 0 20px 0">{i.symbol}{i.value}</H3>
                 }
                 <H4
-                  fs_xs="20px"
-                  fs_sm="18px"
+                  fs_xs="16px"
                   fs_md="16px"
                   fs_lg="18px"
                   fs_xl="20px"

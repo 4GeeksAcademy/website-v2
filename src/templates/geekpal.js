@@ -81,7 +81,7 @@ const GeekPal = (props) => {
                         <Row>
                           <Column size="12">
                             <H5
-                              m="0px"
+                              margin="0px"
                               fs_xl="16px"
                               fs_lg="16px"
                               fs_md="14px"
