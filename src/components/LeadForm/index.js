@@ -125,7 +125,7 @@ const LeadForm = ({heading, formHandler, data, handleClose, style, sendLabel, la
                                 style={{marginBottom: "5px"}}
                             />
                             {session && session.location && session.location.gdpr_compliant &&
-                                <Paragraph fontSize="14px" margin="5px 0 0 0">
+                                <Paragraph fontSize="11px" margin="5px 0 0 0">
                                     <input
                                         name="isGoing"
                                         type="checkbox"

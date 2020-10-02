@@ -1,5 +1,5 @@
 meta_info:
-  slug: coding-classes-parttime
+  slug: aprende-a-programar
   title: ""
   description: ""
   image: ""
@@ -7,36 +7,33 @@ meta_info:
   keywords: ""
   redirects: [""]
   utm_course: full-stack
-  utm_location: downtown-miami
+  utm_location: madrid-spain
 
 header_data:
-  tagline: Become a Software Developer
+  tagline: Aprende a programar
   sub_heading: in only 16 weeks (part-time)
   image: "../../../static/images/bg/main-bg.jpg"
   image_filter: brightness(0.4)
-  button_label: "Request more info"
+  button_label: Pide más información
 
 features:
   styles: '{ "fontSize": "20px", "margin": "10px 0" }'
   bullets:
-    - Beautiful Miami Campus
-    - A Junior Developer makes $55k+ in Florida (avg)
-    - No previous experience or coding skills required
-    - Training on everything needed to become a successful software developer
-    - Career Support to help you land your first coding job
+    - Un Desarrollador en Madrid hace €25mil anual
+    - Hay más vacantes que en cualquier otra industria
+    - Impulsa tu Carrera y hazte programador de software
 
-credential: Recognized as one of the top coding bootcamps in the US by Newsweek
+credential: 4Geeks en los medios
 
 details:
   heading: "Lo que aprenerás"
-  sub_heading: "Tecnologías y programa de estudios"
+  sub_heading: "Las tecnologias más buscadas en el mercado laboral"
 
 geeks_vs_others:
-  heading: "What makes 4Geeks so successfull"
+  heading: "¿Qué hace a 4Geeks Academy exitoso?"
   paragraph: ""
   total_rows: 7
 
-## TESTIMONIAL SECTION
 testimonial:
   heading: "TESTIMONIALS"
   sub_heading: ""
@@ -45,4 +42,3 @@ testimonial:
     student_description: Graduate from our Miami Campus.
     video_title: What are your thoughts about the program?
     video_id: z_YORvcJHqA
-

@@ -28,6 +28,8 @@ const Landing = (props) => {
   const {data, pageContext, yml} = props;
   const city = session && session.location ? session.location.reliable ? session.location.city : "" : "Miami";
   const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
+
+  console.log("yml", yml)
   return (
     <>
       <Row className="d-sm-none">
@@ -76,8 +78,14 @@ const Landing = (props) => {
           >
             {yml.header_data.sub_heading}
           </H4>
-          {Array.isArray(yml.features) && yml.features.map((f, i) => 
-            <Paragraph textShadow="0px 0px 4px black" align_sm="left" mw_sm="300px" margin="7px 0" color={Colors.white} key={i}>✅ {f}</Paragraph>
+          {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) => 
+            <Paragraph key={i}
+              style={JSON.parse(yml.features.styles)} 
+              margin="7px 0" 
+              textShadow="0px 0px 4px black" 
+              align_sm="left" 
+              mw_sm="300px" 
+              color={Colors.white}>✅ {f}</Paragraph>
           )}
         </Column>
           </StyledBackgroundSection>
@@ -145,10 +153,20 @@ const Landing = (props) => {
           >{yml.credential}
           </H4>
           <News location={session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
-          <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
       </Wrapper>
 
-    {/* PROGRAM DETAILS */}
+      <Wrapper margin="100px">
+        <Title
+          type="h2"
+          title={yml.geeks_vs_others.heading}
+          paragraph={yml.geeks_vs_others.sub_heading}
+          paragraphColor={Colors.blue}
+          variant="primary"
+          size="10"
+        />
+        <GeeksVsOthers lang={pageContext.lang} limit={yml.geeks_vs_others.total_rows} />
+      </Wrapper>
+
       <Wrapper >
         <Title
           size="10"
@@ -193,7 +211,10 @@ export const query = graphql`
               utm_course
               utm_location
             }
-            features
+            features{
+              bullets
+              styles
+            }
             credential
             details{
               heading
@@ -211,6 +232,11 @@ export const query = graphql`
                   }
                 }
               }
+            }
+            geeks_vs_others{
+              heading
+              paragraph
+              total_rows
             }
             testimonial{
               heading
