@@ -21,6 +21,7 @@ const GITHUB_REPO = "https://github.com/4GeeksAcademy/website-v2/tree/master/src
 const Fragment = ({ github, style, onClick, className, children }) => {
     let { edit } = parseQueryString(useLocation().search)
     const [ editMode, setEditMode ] = React.useState(false)
+    const [status, setStatus] = React.useState({ toggle: false, hovered: false })
     React.useEffect(() => {
         if(edit !== undefined){
             localStorage.setItem("edit-mode", "true");
@@ -28,8 +29,17 @@ const Fragment = ({ github, style, onClick, className, children }) => {
         } 
         else setEditMode(localStorage.getItem("edit-mode") === "true")
     }, [])
-    if(editMode && github) return <div style={{ ...style, position: "relative" }} className={className}>
-        <An href={`${GITHUB_REPO}${github}`} target="blank" rel="noopener noreferrer">edit</An>
+    if(editMode && github) return <div style={{ ...style, position: "relative", background: status.hovered ? 'rgba(0,0,0,0.3)': 'none' }} className={className}>
+        <An
+            onMouseLeave={() => {
+                setStatus({ ...status, hovered: false });
+                setTimeout(() => {
+                    setStatus(_status => ({ ..._status, toggle: _status.hovered }));
+                },300)
+            }}
+            onMouseEnter={() => setStatus({ ...status, hovered: true })}
+            href={`${GITHUB_REPO}${github}`} target="blank" rel="noopener noreferrer"
+        >edit</An>
         {children}
     </div>
     else return <div onClick={(e) => onClick && onClick(e)} style={{ ...style }} className={className}>{children}</div>;
