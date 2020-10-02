@@ -36,7 +36,7 @@ const Landing = (props) => {
             height={`500px`}
             image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
             bgSize={`cover`}
-            width="50%"
+            width="58%"
             w_xs="100%"
             margin="0 0 auto 0"
             filter={yml.header_data.image_filter}
@@ -82,7 +82,8 @@ const Landing = (props) => {
         </Column>
           </StyledBackgroundSection>
         <Column
-          size="4"
+          size="3"
+          size_lg="4"
           size_sm="6"
           size_xs="12"
           align_sm="center"

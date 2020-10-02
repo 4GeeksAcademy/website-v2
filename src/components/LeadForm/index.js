@@ -1,7 +1,7 @@
 import React, {useContext, useState } from "react";
 import { Alert, Input } from "../Form/index";
 import { Row, Column } from "../Sections";
-import { H2, Paragraph } from "../Heading";
+import { H4, Paragraph } from "../Heading";
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {SessionContext} from '../../session';
@@ -85,7 +85,7 @@ const LeadForm = ({heading, formHandler, data, handleClose, style, sendLabel, la
                         })
                 }
             }}>
-            <H2 margin="20px 0px 40px 0px">{heading}</H2>
+            <H4 fontSize="25px" margin="20px 0px 40px 0px">{heading}</H4>
             <Row>
                 <Column size="12">
                             <Input
@@ -142,7 +142,7 @@ const LeadForm = ({heading, formHandler, data, handleClose, style, sendLabel, la
                 { handleClose && <Column size="6" padding="10px 20px">
                     <Button  width="100%" padding=".7rem .45rem" color={Colors.gray} textColor={Colors.white} onClick={handleClose}>Close</Button>
                 </Column>}
-                <Column size="6" padding="10px 20px" margin="auto">
+                <Column size={handleClose ? "6" : "12"} padding="10px 20px" margin="auto">
                     <Button width="100%" padding=".7rem .45rem"
                         type="submit"
                         color={formStatus.status === "loading" ? Colors.darkGray:  Colors.red}

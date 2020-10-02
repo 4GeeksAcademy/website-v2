@@ -297,8 +297,7 @@ export const initSession = async (locationsArray, seed={}) => {
 
     if(location){
         location = locations.find(l => l.breathecode_location_slug === location)
-        if(location) location = location.node;
-        else location = null;
+        if(!location) location = null;
         console.log("Hardcoded location", location)
     } 
     else if(storedSession && storedSession.location != null){
