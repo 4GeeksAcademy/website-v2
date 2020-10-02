@@ -15,6 +15,7 @@ import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import Testimonials from '../components/Testimonials'
 import Events from '../components/Events'
+import WhyPython from '../components/WhyPython'
 import Loc from '../components/Loc'
 import {Link, navigate} from 'gatsby';
 import {SessionContext} from '../session.js'
@@ -94,6 +95,12 @@ const Home = (props) => {
           variant="primary"
         />
         <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
+      </Wrapper>
+
+      {/* JOBS STATISTICS SECTION */}
+
+      <Wrapper margin="50px 0">
+        <WhyPython lang={pageContext.lang} />
       </Wrapper>
 
       {/* JOBS STATISTICS SECTION */}

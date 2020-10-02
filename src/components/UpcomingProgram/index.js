@@ -69,7 +69,7 @@ const P2 = styled.p`
     }
 `
 const Right = styled.div`
-    width: 270px;
+    width: 300px;
     padding-top: 5px;
 `;
 
@@ -110,7 +110,7 @@ const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location
                 <P2 fontSize="18px">{title}</P2>
             </Center>
             <Right>
-                <Link to={button.button_link}><Button color={Colors.red} textColor={Colors.white}>{location && location.button.apply_button_text}</Button></Link>
+                <Link to={button.button_link}><Button color={Colors.red} fs_sm="11px" textColor={Colors.white}>{location && location.button.apply_button_text}</Button></Link>
                 <p style={{textAlign: "center"}}><Anchor className="decorated" display="inline" to={upcomingPath}>{button.other_dates}</Anchor></p>
             </Right>
         </Centered>

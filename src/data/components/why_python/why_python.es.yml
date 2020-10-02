@@ -1,0 +1,21 @@
+
+
+heading: ¿Por qué enseñamos estas tecnologías?
+subheading: JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js
+link:
+  label: Haz clic aquí para comprobarlo.
+  url: https://www.linkedin.com/jobs/search?keywords=javascript&location=florida&trk=jobs_jserp_search_button_execute&orig=JSERP&applyLogin=&locationId=
+
+technologies:
+  - name: Javascript
+    percentage: 55
+    color: "#334d5c"
+  - name: Python
+    percentage: 33
+    color: "#45b29d"
+  - name: Node
+    percentage: 8
+    color: "#efc94c"
+  - name: Ruby
+    percentage: 4
+    color: "#ecdeac"

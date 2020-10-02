@@ -1,0 +1,9 @@
+# This section is mean for badges, awards and recognitions
+# For example:
+
+badge:
+  - name: "Course Report"
+    metric: 4.8/5
+    url: "https://www.latercera.com/pulso/noticia/destacada-academia-estadounidense-programadores-aterriza-chile/491519/"
+    image: "../../../../static/images/news/la-tercera.png"
+    alt: "One of the top coding bootcamps in Course Report"

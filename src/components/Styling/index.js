@@ -238,6 +238,8 @@ export const BackgroundSection = ({children, className, image, height, width, bg
 
 export const StyledBackgroundSection = styled(BackgroundSection)`
     width: ${props => props.width || "100%"};
+    padding: ${props => props.padding};
+    text-align: ${props => props.align};
     background-repeat: no-repeat;
     margin: ${props => props.margin || "auto"};
     opacity: 1;
@@ -264,12 +266,14 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     }
     @media ${Break.sm}{
         height: ${props => props.h_sm};
+        width: ${props => props.w_sm};
         &:before, &:after {
             border-radius: ${props => props.borderRadius_sm};
             background-position: ${props => props.bp_sm} !important;
         }
     }
     @media ${Break.xs}{
+        width: ${props => props.w_xs};
         &:before, &:after {
             background-position: ${props => props.bp_xs} !important;
         }

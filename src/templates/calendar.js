@@ -184,10 +184,8 @@ const Calendar = (props) => {
   return (
     <>
       <WrapperImage
-
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         border="bottom"
-        height="300px"
         bgSize="cover"
         paddingRight={`0`}
         customBorderRadius="0 0 0 1.25rem"
@@ -195,6 +193,7 @@ const Calendar = (props) => {
         <Divider height="100px" />
         <Title
           size="5"
+          type="h1"
           title={yml.header.tagline}
           variant="main"
           color={Colors.white}

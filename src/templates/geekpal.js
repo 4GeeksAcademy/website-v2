@@ -67,6 +67,7 @@ const GeekPal = (props) => {
                 </H3>
                 {col.items.map((item, index) => {
                   return (
+<<<<<<< HEAD
                     <Row
                       key={index}
                       marginBottom="15px"
@@ -101,6 +102,40 @@ const GeekPal = (props) => {
                         >{item.sub_title}
                         </Paragraph>
                       </Div>
+=======
+                    <Row key={index} marginBottom="15px">
+                      <Column size="2" customRespSize respSize="3" passingRight="0" >
+                        <Check width="24px" color={Colors.yellow} fill={Colors.yellow} />
+
+                      </Column>
+                      <Column size="10" customRespSize respSize="9" >
+                        <Row>
+                          <Column size="12">
+                            <H5
+                              margin="0px"
+                              fs_xl="16px"
+                              fs_lg="16px"
+                              fs_md="14px"
+                              fs_sm="16px"
+                              fs_xs="20px"
+                            >{item.title}
+                            </H5>
+                          </Column>
+                        </Row>
+                        <Row>
+                          <Column size="12">
+                            <Paragraph
+                              fs_xl="14px"
+                              fs_lg="14px"
+                              fs_md="12px"
+                              fs_sm="16px"
+                              fs_xs="14px"
+                            >{item.sub_title}
+                            </Paragraph>
+                          </Column>
+                        </Row>
+                      </Column>
+>>>>>>> 4d80b2510ba7993737a6ca439cb6878e815170e6
                     </Row>
                   )
                 })}

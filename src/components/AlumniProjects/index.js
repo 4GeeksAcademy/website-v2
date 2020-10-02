@@ -105,7 +105,7 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                                     )
                                 })}
                                 <H4
-                                    m={`0 0 10px 0`}
+                                    margin={`0 0 10px 0`}
                                     color={Colors.gray}
                                     align="left"
                                     fs_xs="16px"
@@ -165,6 +165,10 @@ const AlumniProjects = ({lang, showThumbs, limit}) => {
                     )
                 })
                 }
+                <Div display="block" align="center" padding="150px 0">
+                    <H2 width="100%">Review more projects</H2>
+                    <Button outline width="200px" color={Colors.blue} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>
+                </Div>
             </Carousel>
             {limit > 0 && <Row height="10%" align="center">
                 <Column size="6" align="center">

@@ -1,0 +1,18 @@
+.pointer{cursor: pointer; }
+
+.d-none{ display: none !important;}
+@media (max-width: 576px) {
+    .d-xs-none{ display: none !important; }
+    .d-xs-block{ display: block !important; }
+}
+@media (max-width: 768px) {
+    .d-sm-none{ display: none !important; }
+    .d-sm-block{ display: block !important; }
+}
+.w-100{ width: 100%; }
+
+.no-wrap{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

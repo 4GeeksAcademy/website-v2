@@ -1,6 +1,6 @@
 import React, {createContext, useState, useEffect} from "react";
 import {useStaticQuery, graphql} from 'gatsby';
-import { initSession, defaultSession, setTagManaerVisitorInfo } from "./actions"
+import { initSession, defaultSession, setTagManaerVisitorInfo, locByLanguage } from "./actions"
 
 export const SessionContext = createContext(defaultSession);
 
@@ -64,7 +64,10 @@ export default ({children}) => {
               .catch(error => console.error("Error initilizing session", error))
         }, []);
 
-        return <SessionContext.Provider value={{session, setSession}}>
+        return <SessionContext.Provider value={{session, setSession: (_s) => {
+            const location = locByLanguage(data.allLocationYaml, _s.language).find(l => l.breathecode_location_slug === _s.location.breathecode_location_slug)
+            setSession({ ..._s, location })
+          }}}>
             {children}
         </SessionContext.Provider>
 };

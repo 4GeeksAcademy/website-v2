@@ -9,9 +9,6 @@ import {Colors, Button, Link} from '../Styling';
 
 export const NavBar = styled.nav`
     background-color: ${props => props.open ? "white" : null};
-    // padding: 0 2rem;
-    // display: flex;
-    // justify-content: space-between;
     align-items: center;
     height: 55px;
     z-index: 999;
@@ -270,7 +267,7 @@ export const RightNav = ({lang, menu, open, button, onToggle}) => {
                 <NavItem key={index} fontSize="16px"><Link onClick={onToggle} to={item.link} key={index}>{item.name}</Link></NavItem>
           )}
         </Ul>
-        <Link onClick={onToggle} to={button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="130px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text}</Button></Link>
+        <Link onClick={onToggle} to={button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text}</Button></Link>
       </Div>
   )
 }

@@ -45,7 +45,7 @@ const Program = ({data, pageContext, yml}) => {
         : pageContext.slug === "coding-introduction" || pageContext.slug === "introduccion-programacion"
         && null
   }
-
+  
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
@@ -117,14 +117,14 @@ const Program = ({data, pageContext, yml}) => {
         paragraph={yml.details.sub_heading}
         variant="primary"
       />
-      <ProgramDetails details={yml.details} />
-      <ProgramDetailsMobile details={yml.details} />
+      <ProgramDetails lang={pageContext.lang} course={program_type} />
+      <ProgramDetailsMobile lang={pageContext.lang} course={program_type} />
     </Wrapper>
 
     <Wrapper
       margin="50px"
     >
-      <SyllabusSVG className="d-sm-none" />
+      <SyllabusSVG className="d-sm-none w-100" />
       <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
         <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
         <Row padding="0px 40px" p_md="0 10px">
@@ -237,10 +237,6 @@ export const query = graphql`
               geek_force
               geek_pal
             }
-            credentials{
-              heading
-              paragraph
-            }
             details {
               heading
               sub_heading
@@ -259,6 +255,10 @@ export const query = graphql`
                 description
                 step
               }
+            }
+            credentials{
+              heading
+              paragraph
             }
             geeks_vs_others{
               heading
