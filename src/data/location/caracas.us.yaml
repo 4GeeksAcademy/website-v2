@@ -10,12 +10,12 @@ meta_info:
 seo_title: "4Geeks Academy Caracas"
 header:
   tagline: "4GEEKS ACADEMY IN CARACAS"
-  paragraph: "Come and learn code in one of the biggest coding schools and communities in the world, receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
+  paragraph: "Come and learn code in one of the biggest coding schools and communities in the world, and receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
   alt: ""
 
 button:
-  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_button_text: "DOWNLOAD SYLLABUS"
   syllabus_submit_text: "DOWNLOAD"
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
@@ -36,7 +36,7 @@ info_box:
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is opened 24/7 during the week and on Saturday we do out famous 'Coding Weekends' were students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "Walking distance to the subway station and 5 min away from Brickell, one of the most active areas in the city. Free parking available for students. The office is open 24/7 during the week and on Saturdays we do our famous 'Coding Weekends' where students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
     - path: "../../../static/images/locations/caracas-loc.jpg"
       alt: "miami-sunset"
@@ -69,7 +69,7 @@ prices:
         heading_one: "FULL-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
+        price: "Pay upfront and get a discount or ask about additional financing options"
         price_info:
 
     ## RIGHT BOX SECTION
@@ -79,7 +79,7 @@ prices:
         heading_one: "PART-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
+        price: "Pay upfront and get a discount or ask about additional financing options"
         price_info: ""
   ## *****************
   ## PART-TIME SECTION
@@ -95,7 +95,7 @@ prices:
         heading_one: "FULL-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
+        price: "Pay upfront and get a discount or ask about additional financing options"
         price_info: ""
 
     ## RIGHT BOX SECTION
@@ -105,7 +105,7 @@ prices:
         heading_one: "PART-TIME"
         sub_heading: ""
       content:
-        price: "ay upfront and get a discount or ask for a 3 - 4 payment options"
+        price: "Pay upfront and get a discount or ask about additional financing options"
         price_info: ""
      
 active_campaign_location_slug: "los-cortijos-caracas"

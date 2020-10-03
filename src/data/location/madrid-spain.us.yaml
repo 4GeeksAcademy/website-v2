@@ -1,6 +1,6 @@
 meta_info:
   slug: "madrid-spain"
-  title: 4Geeks Academy Madrid - Coding Bootcampn Madrid Spain
+  title: 4Geeks Academy Madrid - Coding Bootcamp Madrid Spain
   position: 2
   description: null
   image: ""
@@ -11,12 +11,12 @@ seo_title: "Coding Bootcamp Madrid"
 header:
   tagline: "4GEEKS ACADEMY IN MADRID"
   sub_heading: ""
-  paragraph: "Come and learn code in one of the biggest coding schools and communities in the world, receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
+  paragraph: "Come and learn code in one of the biggest coding schools and communities in the world! Receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
   image: "../../../static/images/locations/madrid-loc.jpg"
   alt: ""
 
 button:
-  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_button_text: "DOWNLOAD SYLLABUS"
   syllabus_submit_text: "DOWNLOAD"
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
@@ -39,7 +39,7 @@ upcoming:
 
 carousel_box:
   heading: "What you should know about this location: "
-  content: "Just 2 min. away from the subway, the office is located in one of Madrid's most active areas. Open to students 12 hrs a day and with the out famous 'Coding Weekends' on Saturdays were students come to receive senior coaching, hangout and eat pizza!"
+  content: "Just 2 min. away from the subway, the office is located in one of Madrid's most active areas. Open to students 12 hrs a day and with our famous 'Coding Weekends' on Saturdays where students come to receive senior coaching, hang out and eat pizza!"
   images:
     - path: "../../../static/images/locations/madrid-loc.jpg"
       alt: "miami-sunset"
@@ -84,44 +84,44 @@ prices:
           paymentInfo: "per month + 600€ up-front"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"
-          message: "Ask for our scholarships compatible with financing plans"
+          message: "Ask about our scholarships compatible with financing plans"
         - months: "21 mo"
           payment: "274,03€"
           paymentInfo: "per month + 600€ up-front"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Ask for our scholarships compatible with financing plans"
+          message: "Ask about our scholarships compatible with financing plans"
         - months: "18 mo"
           payment: "326,68€"
           paymentInfo: "per month + 600€ up-front"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"
-          message: "Ask for our scholarships compatible with financing plans"  
+          message: "Ask about our scholarships compatible with financing plans"  
         - months: "12 mo"
           payment: "477,14€"
           paymentInfo: "per month + 600€ up-front"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"
-          message: "Ask for our scholarships compatible with financing plans"        
+          message: "Ask about our scholarships compatible with financing plans"        
         - months: "6 mo"
           payment: "928,96€"
           paymentInfo: "per month + 600€ up-front"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"   
-          message: "Ask for our scholarships compatible with financing plans"
+          message: "Ask about our scholarships compatible with financing plans"
         - months: "3 mo"
           payment: "2.000€"
           paymentInfo: "3 free-interest installments"
           provider: "4Geeks"
           logo: 
-          message: "Ask for our scholarships compatible with financing plans"
+          message: "Ask about our scholarships compatible with financing plans"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
         heading_one: "PAY ONLY"
         heading_two: "WHEN YOU GET A JOB"
-        sub_heading: "Income Share Agreement"
+        sub_heading: "Income Share Agreement (ISA)"
       content:
         price: "120€"
         price_info: "from 120€ per month"
@@ -137,7 +137,7 @@ prices:
     left_section:
       header:
         heading_one: "PART-TIME"
-        sub_heading: "Ask for scholarships and discounts"
+        sub_heading: "Ask about scholarships and discounts"
       content:
         price: "5.499,00€"
         price_info: "single payment"
@@ -153,32 +153,32 @@ prices:
           paymentInfo: "per month + 500€ up-front"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Ask for our scholarships compatible with financing plans"
+          message: "Ask about our scholarships compatible with financing plans"
         - months: "18 mo"
           payment: "302,18€"
           paymentInfo: "per month + 500€ up-front"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"
-          message: "Ask for our scholarships compatible with financing plans"  
+          message: "Ask about our scholarships compatible with financing plans"  
         - months: "12 mo"
           payment: "432,90€"
           paymentInfo: "per month + 500€ up-front"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
-          message: "Ask for our scholarships compatible with financing plans"
+          message: "Ask about our scholarships compatible with financing plans"
         - months: "6 mo"
           payment: "816,15€"
           paymentInfo: "per month + 500€ up-front"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"
-          message: "Ask for our scholarships compatible with financing plans"          
+          message: "Ask about our scholarships compatible with financing plans"          
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
         heading_one: "Scholarships"
         heading_two: "and Financing plans"
-        sub_heading: "disponemos de múltimples alianzas y becas permanentes de hasta 100% de la matrícula"
+        sub_heading: "We have multiple scholarships and financial aid options available - up to 100% of your tuition cost!"
       content:
         price: "5.999,00 €"
         price_info: "3 free-interest installments"

@@ -2,7 +2,7 @@ meta_info:
   slug: "downtown-miami"
   title: "Miami Coding Bootcamp"
   position: 1
-  description: "Learn & evolve your coding skills. Miami Coding Bootcamp with 1000+ Graduates & 86% hiring rate. The #1 part-time coding bootcamp in the world."
+  description: "Learn & evolve your coding skills. Miami Coding Bootcamp with over 1,000 Graduates & 86% hiring rate. The #1 part-time coding bootcamp in the world."
   image: ""
   keywords: "null"
   redirects: ["/locations", "/miami"]
@@ -10,7 +10,7 @@ meta_info:
 seo_title: "4Geeks Academy Miami"
 header:
   tagline: "4GEEKS ACADEMY IN MIAMI"
-  paragraph: "Miami is one of the fastest growing tech ecosistems in the world right now. Join the #1 part-time Coding Bootcamp in Miami and the best place to learn to code in Florida. \\n Career Support and Mentorship for studets are for life."
+  paragraph: "Miami is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Miami and become part of the best place to learn to code in Florida. \\n Career Support and Mentorship for our students is for life."
   image: "../../../static/images/locations/miami-loc.jpg"
   alt: ""
 
@@ -20,7 +20,7 @@ upcoming:
   title: "Upcoming programs in Miami, USA"
 
 button:
-  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_button_text: "DOWNLOAD SYLLABUS"
   syllabus_submit_text: "DOWNLOAD"
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
@@ -62,12 +62,13 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PAY UPFRONT"
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "and enjoy the best Price in town"
+        heading_one: "PAY ONLY AFTER"
+        heading_two: "YOU GET A JOB"
+        sub_heading: "and talk about the Income Sharing Agreement (ISA)"
       content:
-        price: "$9,499.00"
-        price_info: "single payment"
+        price: "9% of salary"
+        price_info: "until fully paid, and only if you get the job"
+
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -79,9 +80,9 @@ prices:
         - months: "60"
           payment: "$214.74"
           paymentInfo: "per month + $0 deposit"
-          provider: "Skill Fund - Climb"
+          provider: "Skills Fund - Climb"
           logo: "/images/skill-logo.png"
-          message: "We have partened with Skills Fund and Climb in order to offer you the best payment options in Town"
+          message: "We have partnered with Skills Fund and Climb in order to offer you the best payment options in town"
         - months: "42"
           payment: "$314.10"
           paymentInfo: "per month + $0 deposit"
@@ -91,7 +92,7 @@ prices:
         - months: "36"
           payment: "$314.10"
           paymentInfo: "per month + $0 deposit"
-          provider: "Skill Fund"
+          provider: "Skills Fund"
           logo: "/images/skill-logo.png"
           message: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
         - months: "24"
@@ -116,12 +117,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAY ONLY AFTER"
-        heading_two: "YOU GET A JOB"
-        sub_heading: "and talk about the income share agreement"
+        heading_one: "PAY UPFRONT"
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "and enjoy the best Price in town"
       content:
-        price: "$134.99"
-        price_info: "per month"
+        price: "$9,499.00"
+        price_info: "single payment"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -133,26 +134,26 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PAY UPFRONT"
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "and enjoy the best Price in town"
+        heading_one: "PAY ONLY AFTER"
+        heading_two: "YOU GET A JOB"
+        sub_heading: "and talk about the Income Sharing Agreement (ISA)"
       content:
-        price: "$7,499.00"
-        price_info: "single payment"
+        price: "9% of sallary"
+        price_info: "until fully paid, and only if you get the job"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
       header:
         heading_one: "EXTENDED"
         heading_two: "PAYMENT PLAN"
-        sub_heading: "and enjoy the best Price in town"
+        sub_heading: "and enjoy the Best Price in town"
       plans:
         - months: "60 mo"
           payment: "$169.53"
           paymentInfo: "per month + $0 deposit"
-          provider: "Skill Fund - Climb"
+          provider: "Skills Fund - Climb"
           logo: "/images/skill-logo.png"
-          message: "We have partened with Skills Fund and Climb in order to offer you the best payment options in Town"
+          message: "We have partnered with Skills Fund and Climb in order to offer you the best payment options in town"
         - months: "42 mo"
           payment: "$314.10"
           paymentInfo: "per month + $0 deposit"
@@ -162,7 +163,7 @@ prices:
         - months: "36 mo"
           payment: "$247.97"
           paymentInfo: "per month + $0 deposit"
-          provider: "Skill Fund"
+          provider: "Skills Fund"
           logo: "/images/skill-logo.png"
           message: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
         - months: "24 mo"
@@ -187,12 +188,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAY ONLY AFTER"
-        heading_two: "YOU GET A JOB"
-        sub_heading: "and talk about the income share agreement"
+        heading_one: "PAY UPFRONT"
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "and enjoy the Best Price in town"
       content:
-        price: "$134.99"
-        price_info: "per month"
+        price: "$7,499.00"
+        price_info: "single payment"
 
   software_engineering:
     slug: "software-engineering"
@@ -202,12 +203,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PAY UPFRONT"
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "and enjoy the best pricing in town"
+        heading_one: "PAY ONLY AFTER"
+        heading_two: "YOU GET A JOB"
+        sub_heading: "and talk about the Income Sharing Agreement (ISA)"
       content:
-        price: "$13,499.00"
-        price_info: "single payment"
+        price: "9% of salary"
+        price_info: "until paid, and only if you get the job"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -219,9 +220,9 @@ prices:
         - months: "60 mo"
           payment: "$269.53"
           paymentInfo: "per month + $0 deposit"
-          provider: "Skill Fund - Climb"
+          provider: "Skills Fund - Climb"
           logo: "/images/skill-logo.png"
-          message: "We have partened with Skills Fund and Climb in order to offer you the best payment options in Town"
+          message: "We have partened with Skills Fund and Climb in order to offer you the best payment options in town"
         - months: "42 mo"
           payment: "$384.10"
           paymentInfo: "per month + $0 deposit"
@@ -231,7 +232,7 @@ prices:
         - months: "36 mo"
           payment: "$447.97"
           paymentInfo: "per month + $0 deposit"
-          provider: "Skill Fund"
+          provider: "Skills Fund"
           logo: "/images/skill-logo.png"
           message: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
         - months: "24 mo"
@@ -256,12 +257,13 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAY ONLY AFTER"
-        heading_two: "YOU GET A JOB"
-        sub_heading: "and talk about the income share agreement"
+        heading_one: "PAY UPFRONT"
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "9% of salary"
-        price_info: "until paid"
+        price: "$13,499.00"
+        price_info: "single payment"
+
 ## UPCOMING COURSES
 # upcoming_courses:
 #   -

@@ -143,7 +143,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                     <StyledBackgroundSection
                                         className={`image`}
                                         height={`500px`}
-                                        image={item.project_image.image.childImageSharp.fluid}
+                                        image={item.project_image.childImageSharp.fluid}
                                         bgSize={`cover`}
                                         alt="Cnn Logo"
                                         borderRadius={`0 0 0 1.25rem`}
@@ -155,7 +155,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                         className='react-player alumni-player'
                                         file={{forceVideo: true}}
                                         style={{height: playerHeight}}
-                                        light={item.project_image.image}
+                                        light={item.project_image}
                                         controls={true}
                                         url={item.project_video}
                                         width='100%'

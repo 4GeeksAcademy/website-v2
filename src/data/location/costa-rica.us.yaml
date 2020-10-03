@@ -12,12 +12,12 @@ meta_info:
 seo_title: "Coding Bootcamp Costa Rica"
 header:
   tagline: "Learn to Code in Costa Rica"
-  paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Costa Rica with 1000+ graduates"
+  paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Costa Rica with over 1,000 graduates"
   image: "../../../static/images/locations/mcbo-loc-2.png"
   alt: ""
 
 button:
-  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_button_text: "DOWNLOAD SYLLABUS"
   syllabus_submit_text: "DOWNLOAD"
   apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
@@ -37,7 +37,7 @@ info_box:
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and at walking distance to the most prominent restorants, cofee shops and business center. 140 metters of innovation, curious people and very good vibe to learn."
+  content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and at walking distance to the most prominent restaurants, coffee shops and business centers. 140 meters of innovation, curious people and an awesome vibe to learn."
   images:
     - path: "../../../static/images/locations/mcbo-chinita.jpeg"
       alt: "mcbo-chinita"
@@ -72,7 +72,7 @@ prices:
         heading_one: "FULL-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
+        price: "Pay upfront and get a discount or ask for additional financing options"
         price_info:
 
     ## RIGHT BOX SECTION
@@ -82,7 +82,7 @@ prices:
         heading_one: "PART-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
+        price: "Pay upfront and get a discount or ask for additional financing options"
         price_info: ""
   ## *****************
   ## PART-TIME SECTION
@@ -98,7 +98,7 @@ prices:
         heading_one: "FULL-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
+        price: "Pay upfront and get a discount or ask for additional financing options"
         price_info: ""
 
     ## RIGHT BOX SECTION
@@ -108,7 +108,7 @@ prices:
         heading_one: "PART-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 3-4 payment options"
+        price: "Pay upfront and get a discount or ask for additional financing options"
         price_info: ""
 
 active_campaign_location_slug: "costa-rica"
