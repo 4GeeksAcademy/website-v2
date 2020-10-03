@@ -132,7 +132,7 @@ const LeadForm = ({heading, formHandler, data, handleClose, style, sendLabel, la
                                         checked={formData.consent.valid}
                                         onChange={() => setVal({ ...formData, consent: { ...formData.consent, valid: !formData.consent.valid } })} />
                                         {yml.consent.message}
-                                        <a target="_blank" rel="noopener noreferrer" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
+                                        <a target="_blank"  rel="noopener noreferrer" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
                                 </Paragraph>
                             }
                             {formStatus.status === "error" && <Alert color="red"  padding="5px 0 0 0">{formStatus.msg}</Alert>}

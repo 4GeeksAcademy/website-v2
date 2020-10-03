@@ -48,14 +48,14 @@ export default ({ location, lang }) => {
       <Row github="/components/news">
         {locationNews.map((l,i) => (
           <Column margin="auto" style={{ whiteSpace: "nowrap", height: "60px" }} key={i} size="2" size_md="3" size_sm="4">
-            <Link to={l.url} target="_blank">
-            <Img 
-              style={{ height: "100%" }} 
-              imgStyle={{ objectFit: "contain" }} 
-              alt={l.name} 
-              fluid={l.image.childImageSharp.fluid} 
-              />
-            </Link>
+            <a href={l.url} target="_blank" rel="noopener noreferrer nofollow">
+              <Img 
+                style={{ height: "100%" }} 
+                imgStyle={{ objectFit: "contain" }} 
+                alt={l.name} 
+                fluid={l.image.childImageSharp.fluid} 
+                />
+              </a>
           </Column>
         ))}
       </Row>

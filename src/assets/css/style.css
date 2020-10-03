@@ -155,11 +155,17 @@ a {
 .react-player video, .react-player__preview{
     border-radius: 1.25rem!important;
 }
-/* .react-player{
-    height: 100%!important;
-} */
+.react-player__shadow{
+    border-radius: 120px !important;
+    width: 120px !important;
+    height: 100px !important;
+}
+.react-player__play-icon{
+    border-width: 40px 0px 50px 80px !important;
+}
 .react-player__preview{
-    height: 100%!important;
+    height: 100% !important;
+    min-height: 300px !important;
 } 
 .split{
     font-size: 55px;
