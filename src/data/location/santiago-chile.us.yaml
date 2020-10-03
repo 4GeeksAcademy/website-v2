@@ -10,7 +10,7 @@ meta_info:
 seo_title: "Coding Bootcamp Santiago de Chile"
 header:
   tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
-  paragraph: "Come and learn code in the biggest coding school and community in Santiago de Chile, receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
+  paragraph: "Come and learn code in the biggest coding school and community in Santiago de Chile! Receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
   image: "../../../static/images/locations/santiago-loc.png"
   alt: ""
 
@@ -37,7 +37,7 @@ upcoming:
 
 carousel_box:
   heading: "What you should know about this location: "
-  content: "Located at in one the best areas of the city, the financial district. Walking distance from the subway station. The office is open to the students 24/7 every day of the week. On Saturdays we have the famous 'Coding Weekends' were students gather to practice and code during the entire day with mentors available. Pizzas and drinks are on the house!"
+  content: "Located in one the best areas of the city - the Financial District. Walking distance from the subway station. The office is open to the students 24/7 every day of the week. On Saturdays we have the famous 'Coding Weekends' where students gather to practice and code during the entire day with mentors available. Pizzas and drinks are on the house!"
   images:
     - path: "../../../static/images/locations/santiago-loc-2.jpg"
       alt: "Santiago Location Image"

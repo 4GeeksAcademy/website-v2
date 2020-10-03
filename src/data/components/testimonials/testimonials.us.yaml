@@ -8,13 +8,13 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      I was almost leaving my career behind, not even seeing clear goals for me, and then 
-      I had this great opportunity to join this community of knowledge and on top of anything 
-      else great humans!... I was able to commit to something very interesting with never ending options 
-      to make my career as a graphic designer more powerful without leaving my life, with a 
-      perfect part-time cohort... I 
-      take with me after this experience all kinds of tools i learned there along my way, 
-      knowing that i can always go back and keep growing at 4geeks.
+      I felt lost in my career and could not see clear goals for myself anymore.  I came across 
+      this great opportunity to join this community of knowledge and, to top it all off, great humans!
+      I found myself able to commit to something very interesting with endless options 
+      to create my career as a graphic designer more powerful without having to stop what I was doing 
+      within a perfect part-time cohort. 
+      I now have all kinds of new tools I learned there along the way, 
+      and there is a new comfort in knowing that I can always go back and keep growing at 4geeks.
   - student_name: "Naila Kaliyeva"
     testimonial_date: ""
     source_link: ""
@@ -24,12 +24,12 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      I love 4Geeks Academy's approach to teaching students. There are always 3 tutors who will 
+      I love 4Geeks Academy's approach to teaching students. There are always at least three tutors who will 
       make sure you master your skills and will not give up on you if there's something 
-      you don't understand. They never leave my questions unanswered, regardless how obvious 
-      they may seem. And just the atmosphere in the school is very warm.
+      you don't understand. They never leave my questions unanswered, regardless of how obvious 
+      they may seem..and the atmosphere in the school is very warm.
       I'm grateful to you guys for providing 24 hour access to school, 
-      so we can work any time that is convenient for us. Thank you, 4Geeks!!
+      so we can work any time that is convenient for us. Thank you, 4Geeks!!!
   # - student_name: "Samir Benzada"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
@@ -41,7 +41,7 @@ testimonials:
   #     I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP. 
   #     I've been struggling a lot trying to make a dynamic website, so I started to look 
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to 
-  #     the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
+  #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
   - student_name: "Charles Fabricius"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
@@ -66,8 +66,8 @@ testimonials:
     source_url_text: ""
     content: |
       I highly recommend this coding boot camp!!!! Before 4Geeks I never had any experience with 
-      code I didn't know where to start and within 10 weeks I was able to grasp the core concepts 
-      of being a developer. The staff and Mentors are awesome... enroll today if u want to go from 
+      code - I didn't know where to start. Within 10 weeks I was able to grasp the core concepts 
+      of being a developer. The staff and Mentors are awesome... enroll today if yoou want to go from 
       zero to hero in 10 weeks and start developing your own apps.
   - student_name: "Salvador Desravines"
     testimonial_date: ""
@@ -99,8 +99,8 @@ testimonials:
     source_url: ""
     source_url_text: ""
     content: |
-      My experience on 4Geeks Academy was and is the best. The instructors and TAs will help you in 
+      My experience in 4Geeks Academy was and is the best. The instructors and TAs will help you in 
       a blink. 4Geeks' Slack should be renamed to 4Geeks Overflow. The response time is fast. The 
       responses are strong and different solutions are provided. If you have an interview and you 
       want to refresh your knowledge or exercise do not hesitate to go to 4Geeks, you will find 
-      someone ready to help you...
+      someone ready to help you.
