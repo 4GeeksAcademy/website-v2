@@ -13,31 +13,31 @@ info:
   - features: "Career Support"
     at4_Geeks: "Forever"
     industry_average: "Until you get a job"
-    why_important: "Meet hiring partners during Demo Day (GeekTALKS), attend the CareerWeek™️, build your resume, mock interviews and tailored training. And keep coming! Having a friendly at your first job is key to gain confidence and kill it. You can keep coming and use any of the GeePAL services."
+    why_important: "Meet hiring partners during Demo Day (GeekTALKS), attend the CareerWeek™️, build your resume, mock interviews and tailored training. And keep coming back!  GeekPAL services are available for life."
     icon: "teacher"
 
   - features: "Teacher: Student Ratio"
     at4_Geeks: "1:5 avg"
     industry_average: "1:10 avg"
-    why_important: "It is really easy to get stuck when you are learning to code: You need personal mentorship. That is why you find more teachers at 4Geeks than the industry average."
+    why_important: "It is really easy to get stuck when you are learning to code: You need personal mentorship. That is why you will find more teachers at 4Geeks than the industry average."
     icon: "glasses"
 
   - features: "Questions Response Time"
     at4_Geeks: "15 min"
     industry_average: "Not measured"
-    why_important: "Getting stuck is the 1st reason to become frustrated and lose motivation. That is why we have created the “15 min rule” to keep you going. There is always going to be someone to help you."
+    why_important: "Getting stuck is the 1st reason that leads to both frustration and to loss of motivation. That is why we have created the “15 min rule” to keep you going. Someone will always be available to help you."
     icon: "clock"
 
   - features: "Mentoring 1-on-1"
     at4_Geeks: "unlimited"
     industry_average: "limited"
-    why_important: "Appointment system where you can request 1-on-1 mentorships 9am - 9pm. Online and in-person, for the rest of your life."
+    why_important: "Appointment system where you can request 1-on-1 mentorships from 9am - 9pm. Online and in-person, for the rest of your life."
     icon: "users"
 
   - features: "Interview Preparation"
     at4_Geeks: "Tailored for each interview"
     industry_average: "general"
-    why_important: "Our interview preparation is tailored for each opportunity that you face, our mentors will recommend specific tutorials and other priorities, and our coaching doesn't end until you find a job."
+    why_important: "Our interview preparation is tailored for each opportunity that you face, our mentors will recommend specific tutorials and other priorities, and our coaching does not end until you find a job."
     icon: "comments"
     
   - features: "Focus"
@@ -49,7 +49,7 @@ info:
   - features: "% Hiring Rate"
     at4_Geeks: "~90%"
     industry_average: "~90%"
-    why_important: "Our levels are among the world standards, but with 4Geeks you have many other benefits."
+    why_important: "Our levels are tops amongst global standards, but with 4Geeks you have many other benefits."
     icon: ""
 
   - features: "Senior Teacher:Student Ratio"
@@ -61,7 +61,7 @@ info:
   - features: "Community"
     at4_Geeks: "Strong Local and online"
     industry_average: "Depends on each school"
-    why_important: "Once you are a part of 4Geeks, you belong to a real life local community with real events, office space, job fairs and any other initiatives at any of our brick and mortar locations. You will also have access to recurrent online webinars, networking events and more."
+    why_important: "Once you are a part of 4Geeks, you belong to a real life local community with real events, office space, job fairs and any other initiatives at any of our brick and mortar locations worldwide. You will also have access to recurrent online webinars, networking events and more."
     icon: ""
 
   - features: "Support at job (after hiring)"
@@ -73,7 +73,7 @@ info:
   - features: "Online/Offline Support"
     at4_Geeks: "Forever"
     industry_average: "Limited"
-    why_important: "All of our classes are recorded, and our content is 100% original and avaiable to our students for life.  All of our locations are available for use around the globe, you can keep attending classes after graduation, keep scheduling 1-on-1 mentoring sessions, etc."
+    why_important: "All of our classes are recorded, and our content is 100% original and avaiable to our students for life.  All of our locations are available for use around the globe: you can keep attending classes after graduation, keep scheduling 1-on-1 mentoring sessions, etc."
     icon: ""
 
   - features: "Type of class"
@@ -85,7 +85,7 @@ info:
   - features: "Languages"
     at4_Geeks: "Python + React + Node y Javascript"
     industry_average: "Ruby/Node + React + JS"
-    why_important: "Python is the fastest growing language in the world, it leads the technologies in almost every industry. Together with React.js and Javascript, we teach the most desired stack of techonolgies companies want today."
+    why_important: "Python is the fastest growing language in the world, it is the primary language in virtually every industry. Together with React.js and Javascript, we teach the most desired stack of techonolgies companies want today."
     icon: ""
 
   - features: "Syllabus Refresh Rate"
