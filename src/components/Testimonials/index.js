@@ -26,7 +26,7 @@ const Testimonials = (props) => {
                 swipeable={true}
                 dynamicHeight={true}
             >
-                {testimonialsArray.map((item, i) => {
+                {testimonialsArray.filter(item => item.hidden !== true).map((item, i) => {
                     return (
                         <Row align="center" padding="30px" key={i}>
                             <Card width="700px" >

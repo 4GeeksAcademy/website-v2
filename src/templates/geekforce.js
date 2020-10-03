@@ -64,7 +64,7 @@ const GeekForce = (props) => {
         <Divider height="50px" />
       </Wrapper>
       <Wrapper >
-        <Row>
+        <Row github={`/page/geekforce.${pageContext.lang}.md`}>
           {yml.benefits.map((col, i) => {
             const splittedTitle = splitTitleString(col.heading)
             return (
@@ -167,6 +167,7 @@ export const query = graphql`
           testimonials {
             student_name
             testimonial_date
+            hidden
             student_thumb{
               childImageSharp {
                 fluid(maxWidth: 200){

@@ -56,7 +56,7 @@ const GeekPal = (props) => {
           />
       </Wrapper>
       <Wrapper >
-        <Row>
+        <Row github={`/page/geekpal.${pageContext.lang}.md`}>
           {yml.benefits.map((col, i) => {
             const splittedTitle = splitTitleString(col.heading)
             return (
@@ -159,6 +159,7 @@ export const query = graphql`
           testimonials {
             student_name
             testimonial_date
+            hidden
             student_thumb{
               childImageSharp {
                 fluid(maxWidth: 200){

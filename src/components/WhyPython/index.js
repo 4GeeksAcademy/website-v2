@@ -35,7 +35,7 @@ const WhyPython = ({ lang }) => {
             let translations = incoming.list.edges.find(({ node }) => node.fields.lang === lang);
             if(translations) translations = translations.node;
           
-            return <>
+            return <Fragment  github={`/components/why_python`}>
                 <Title 
                     title={translations.heading}
                     paragraph={translations.subheading}
@@ -56,7 +56,7 @@ const WhyPython = ({ lang }) => {
                     </tr>
                 </table>
                 <Anchor color={Colors.gray} align="center" target="_blank" rel="noopener noreferrer nofollow" href={translations.link.url}>{translations.link.label}</Anchor>
-            </>}}
+            </Fragment>}}
     />
 }
 

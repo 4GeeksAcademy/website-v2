@@ -344,6 +344,7 @@ export const query = graphql`
             testimonials {
               student_name
               testimonial_date
+              hidden
               student_thumb{
                 childImageSharp {
                   fluid(maxWidth: 200){
