@@ -14,9 +14,11 @@ header:
   image: "../../../static/images/locations/santiago-loc.png"
   alt: ""
 button:
-  syllabus_button_text: "DESCARGA MALLA EDUCATIVA"
+  syllabus_button_text: "DESCARGA MALLA EDUCATIVA" # <-- this will show everywhere in the website
+  apply_button_text: "APLICA YA" # <-- this will show everywhere in the website
+  
   syllabus_submit_text: "DESCARGAR"
-  apply_button_text: "APLICA AHORA"
+  cohort_more_details_text: "VER MÁS"
   apply_button_link: "/aplica"
 
 info_box:

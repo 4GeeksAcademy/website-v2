@@ -15,9 +15,11 @@ header:
   alt: ""
 
 button:
-  syllabus_button_text: "DESCARGAR CURRÍCULO"
+  syllabus_button_text: "DESCARGAR CURRÍCULO" # <-- this will show everywhere in the website
+  apply_button_text: "SOLICITA TU PLAZA" # <-- this will show everywhere in the website
+  
   syllabus_submit_text: "DESCARGAR"
-  apply_button_text: "SOLICITA TU PLAZA"
+  cohort_more_details_text: "VER MÁS"
   apply_button_link: "/aplica"
 
 info_box:

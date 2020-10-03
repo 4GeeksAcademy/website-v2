@@ -167,9 +167,13 @@ export const Div = styled.div`
     &:hover { 
         background: ${props => props.backgroundHover};
     }
+    @media  ${Break.lg}{
+        display: ${props => props.d_lg};
+    }
     @media  ${Break.sm}{
         align-items: ${props => props.alignItems_sm};
         padding: ${props => props.p_sm};
+        display: ${props => props.d_sm};
         width: ${props => props.w_sm};
     }
     @media ${Break.xs}{

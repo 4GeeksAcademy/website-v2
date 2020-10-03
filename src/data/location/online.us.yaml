@@ -14,11 +14,12 @@ header:
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
 button:
-  syllabus_button_text: "DOWNLOAD SYLLABUS"
+  syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
+  
   syllabus_submit_text: "DOWNLOAD"
-  apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
-
+  cohort_more_details_text: "DETAILS"
 news:
   title: "4Geeks Academy in the news..."
 upcoming:
