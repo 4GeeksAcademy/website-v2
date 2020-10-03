@@ -3,7 +3,6 @@ testimonials:
   - student_name: "Azul Botaya"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -18,7 +17,6 @@ testimonials:
     testimonial_date: ""
     source_link: ""
     student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -43,8 +41,6 @@ testimonials:
   - student_name: "Charles Fabricius"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
-    alt: ""
-
     source_url: ""
     source_url_text: ""
     content: |
@@ -58,7 +54,6 @@ testimonials:
   - student_name: "Fernando Funez"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -69,7 +64,6 @@ testimonials:
   - student_name: "Salvador Desravines"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -80,7 +74,6 @@ testimonials:
   - student_name: "Jorge Montes"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -92,7 +85,6 @@ testimonials:
     testimonial_date: ""
     hidden: false
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
-    alt: ""
     source_url: ""
     source_url_text: ""
     content: |

@@ -1,16 +1,23 @@
 meta_info:
-  slug: aprende-a-programar
+  slug: example # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
   title: ""
   description: ""
   image: ""
-  template: "landing_a"
   keywords: ""
-  redirects: [""]
+  
+  template: "landing_a" # <--- choose your landing template
+  redirects: [""] # <--- URL redirections to avoid 404 errors
+  
+  # this UTM fields will be included in the CRM
   utm_course: full-stack
   utm_location: madrid-spain
 
+# posible fields: "first_name", "last_name", "full_name", "phone", "email"
 form_fields: ["full_name", "phone", "email"]
 
+# jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Aprende a programar
   sub_heading: in only 16 weeks (part-time)
@@ -25,20 +32,24 @@ features:
     - Hay más vacantes que en cualquier otra industria
     - Impulsa tu Carrera y hazte programador de software
 
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
+#
+
 in_the_news: 4Geeks en los medios
 
 program_details:
   heading: "Lo que aprenerás"
   sub_heading: "Las tecnologias más buscadas en el mercado laboral"
 
-# geeks_vs_others:
-#   heading: "¿Qué hace a 4Geeks Academy exitoso?"
-#   paragraph: ""
-#   total_rows: 7
+geeks_vs_others:
+  heading: "¿Qué hace a 4Geeks Academy exitoso?"
+  paragraph: ""
+  total_rows: 7
 
 why_python:
-  heading: "¿Porqué enseñamos Python?"
-  sub_heading: "blah"
+  heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
+  sub_heading: " " # optional or set to white space to hide
 
 testimonial:
   heading: "TESTIMONIALS"

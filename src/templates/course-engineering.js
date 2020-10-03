@@ -84,7 +84,12 @@ const Program = ({data, pageContext, yml}) => {
         open={open}
         onClose={() => setOpen(false)}
       >
-        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={() => setOpen(false)} 
+        <LeadForm 
+          heading={yml.button.syllabus_heading} 
+          motivation={yml.button.syllabus_motivation} 
+          sendLabel={yml.button.syllabus_btn_label}
+          formHandler={requestSyllabus} 
+          handleClose={() => setOpen(false)} 
           lang={pageContext.lang}
           data={{ 
             course: { value: yml.meta_info.bc_slug, valid: true }
@@ -215,7 +220,8 @@ export const query = graphql`
               alt
             }
             button{
-              syllabus_submit_text
+              syllabus_heading
+              syllabus_motivation
               apply_button_link
             }
             meta_info{

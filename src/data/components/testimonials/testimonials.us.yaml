@@ -3,7 +3,6 @@ testimonials:
   - student_name: "Azul Botaya"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -19,7 +18,6 @@ testimonials:
     testimonial_date: ""
     source_link: ""
     student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -45,7 +43,6 @@ testimonials:
   - student_name: "Charles Fabricius"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -60,7 +57,6 @@ testimonials:
   - student_name: "Fernando Funez"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -72,7 +68,6 @@ testimonials:
   - student_name: "Salvador Desravines"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -83,7 +78,6 @@ testimonials:
   - student_name: "Jorge Montes"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
-    alt: ""
     hidden: false
     source_url: ""
     source_url_text: ""
@@ -91,11 +85,12 @@ testimonials:
       Now I think that I can actually know how to solve the issues that I face when I’m coding and 
       the professors have been a great help along the process. I would recommend this Bootcamp to 
       everyone.
+
   - student_name: "Fidel Rosell"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
-    alt: ""
     hidden: false
+    linkedin: "https://www.linkedin.com/in/fidelrosell/"
     source_url: ""
     source_url_text: ""
     content: |
@@ -104,6 +99,33 @@ testimonials:
       responses are strong and different solutions are provided. If you have an interview and you 
       want to refresh your knowledge or exercise do not hesitate to go to 4Geeks, you will find 
       someone ready to help you.
+  - student_name: "Jordan"
+    last_name: "Aguiriano"
+    student_thumb: ""
+    hidden: true
+    job_title: "Web Developer"
+    video_url: "https://www.youtube.com/watch?v=SixRm6R8rc0"
+    github: "https://github.com/JordanAguiriano"
+    linkedin: "https://www.linkedin.com/in/jordan-aguiriano/"
+    content: ""
+  - student_name: "Gabriela"
+    last_name: "Rodriguez"
+    job_title: "Web Developer"
+    student_thumb: ""
+    hidden: true
+    github: "https://github.com/gabsssrod"
+    linkedin: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
+    content: ""
+  - student_name: "Guensie Grecy"
+    testimonial_date: ""
+    student_thumb: ""
+    linkedin: "https://www.linkedin.com/in/guensiegrecy/"
+    hidden: true
+    source_url: ""
+    video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
+    source_url_text: ""
+    content: |
+      I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn’t know anything about anything computer-technology wise, so that’s an encouragement because it’s possible!
   # - student_name: "Darius Bounds"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/darius-bounds.jpg"

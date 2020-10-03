@@ -156,12 +156,19 @@ a {
     border-radius: 1.25rem!important;
 }
 .react-player__shadow{
-    border-radius: 120px !important;
-    width: 120px !important;
-    height: 100px !important;
+    border-radius: 100% !important;
+    padding: 20px 23px !important;
+    width: initial !important;
+    height: initial !important;
+    background:rgba(0,0,0,0.5) !important;
+}
+.react-player__shadow:hover{
+    background: red !important;
 }
 .react-player__play-icon{
-    border-width: 40px 0px 50px 80px !important;
+    border-width: 20px 0px 20px 30px !important;
+    margin-left: 8px !important;
+
 }
 .react-player__preview{
     height: 100% !important;

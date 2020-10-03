@@ -9,6 +9,8 @@ meta_info:
   utm_course: full-stack
   utm_location: downtown-miami
 
+form_fields: ["full_name", "phone", "email"]
+
 header_data:
   tagline: Become a Software Developer
   sub_heading: in only 16 weeks (part-time)
@@ -25,9 +27,9 @@ features:
     - Training on everything needed to become a successful software developer
     - Career Support to help you land your first coding job
 
-credential: Recognized as one of the top coding bootcamps in the US by Newsweek
+in_the_news: Recognized as one of the top coding bootcamps in the US by Newsweek
 
-details:
+program_details:
   heading: "Lo que aprenerás"
   sub_heading: "Tecnologías y programa de estudios"
 
@@ -35,6 +37,10 @@ geeks_vs_others:
   heading: "What makes 4Geeks so successfull"
   paragraph: ""
   total_rows: 7
+
+why_python:
+  heading: "¿Porqué enseñamos Python?"
+  sub_heading: "blah"
 
 ## TESTIMONIAL SECTION
 testimonial:

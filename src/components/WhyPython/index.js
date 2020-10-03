@@ -4,7 +4,7 @@ import {Title} from "../Heading"
 import {Colors, Anchor} from "../Styling"
 import Fragment from "../Fragment";
 
-const WhyPython = ({ lang }) => {
+const WhyPython = ({ heading, subheading, lang }) => {
     return <StaticQuery
     query={graphql`
     query WhyPythonQuery {
@@ -37,8 +37,8 @@ const WhyPython = ({ lang }) => {
           
             return <Fragment  github={`/components/why_python`}>
                 <Title 
-                    title={translations.heading}
-                    paragraph={translations.subheading}
+                    title={heading || translations.heading}
+                    paragraph={subheading || translations.subheading}
                     paragraphColor={Colors.darkGray}
                 />
                 <table style={{ width: "100%", height: "70px", verticalAlign: "middle" }}>

@@ -15,7 +15,7 @@ header:
   alt: ""
 
 button:
-  syllabus_button_text: "DESCARGAR PROGRAMA"
+  syllabus_button_text: "DESCARGAR CURRÍCULO"
   syllabus_submit_text: "DESCARGAR"
   apply_button_text: "SOLICITA TU PLAZA"
   apply_button_link: "/aplica"
