@@ -4,7 +4,7 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
     alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -20,7 +20,7 @@ testimonials:
     source_link: ""
     student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
     alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -34,7 +34,7 @@ testimonials:
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
   #   alt: ""
-  #   starts: 1
+  #   hidden: false
   #   source_url: ""
   #   source_url_text: ""
   #   content: |
@@ -46,7 +46,7 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
     alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -61,7 +61,7 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
     alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -73,7 +73,7 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
     alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -84,7 +84,7 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
     alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -95,7 +95,7 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
     alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -107,14 +107,14 @@ testimonials:
   # - student_name: "Darius Bounds"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/darius-bounds.jpg"
-  #   starts: 1
+  #   hidden: false
   #   linkedin: "https://www.linkedin.com/in/darius-b-7511255b/"
   #   github: "https://github.com/dcbounds"
   #   content: ""
   # - student_name: "Christian Valdes"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/darius-bounds.jpg"
-  #   starts: 1
+  #   hidden: false
   #   hidden: true
   #   linkedin: "https://www.linkedin.com/in/darius-b-7511255b/"
   #   github: "https://github.com/CxJAY26"

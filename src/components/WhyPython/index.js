@@ -2,7 +2,7 @@ import React from "react";
 import {StaticQuery} from "gatsby"
 import {Title} from "../Heading"
 import {Colors, Anchor} from "../Styling"
-import { PlayCircleFilledWhite } from "@material-ui/icons";
+import Fragment from "../Fragment";
 
 const WhyPython = ({ lang }) => {
     return <StaticQuery

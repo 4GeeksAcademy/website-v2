@@ -315,7 +315,6 @@ export const query = graphql`
                 }
               }
             }
-            starts
             content
             source_url
             source_url_text
