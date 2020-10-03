@@ -156,3 +156,7 @@ financials:
       image: "../../../../static/images/skill-logo.png"
       alt: ""
       featured: false
+    - name: "Zank"
+      image: "../../../../static/images/zank.png"
+      alt: ""
+      featured: false

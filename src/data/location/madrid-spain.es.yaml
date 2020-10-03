@@ -161,7 +161,7 @@ prices:
           payment: "302,18€"
           paymentInfo: "18 meses + 500€ Reserva"
           provider: "Zank"
-          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          logo: "/images/zank.png"
           message: "Pregunta por nuestras becas compatibles con financiación"  
         - months: "12 m"
           payment: "432,90€"
@@ -173,7 +173,7 @@ prices:
           payment: "816,15€"
           paymentInfo: "6 meses + 500€ Reserva"
           provider: "Zank"
-          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          logo: "/images/zank.png"
           message: "Pregunta por nuestras becas compatibles con financiación"          
       button:
         button_text: "APLICA YA"
