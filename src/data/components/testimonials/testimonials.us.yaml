@@ -104,18 +104,18 @@ testimonials:
       responses are strong and different solutions are provided. If you have an interview and you 
       want to refresh your knowledge or exercise do not hesitate to go to 4Geeks, you will find 
       someone ready to help you...
-  - student_name: "Darius Bounds"
-    testimonial_date: ""
-    student_thumb: "../../../../static/images/testimonials/darius-bounds.jpg"
-    starts: 1
-    linkedin: "https://www.linkedin.com/in/darius-b-7511255b/"
-    github: "https://github.com/dcbounds"
-    content: ""
-  - student_name: "Christian Valdes"
-    testimonial_date: ""
-    student_thumb: "../../../../static/images/testimonials/darius-bounds.jpg"
-    starts: 1
-    hidden: true
-    linkedin: "https://www.linkedin.com/in/darius-b-7511255b/"
-    github: "https://github.com/CxJAY26"
-    content: ""
+  # - student_name: "Darius Bounds"
+  #   testimonial_date: ""
+  #   student_thumb: "../../../../static/images/testimonials/darius-bounds.jpg"
+  #   starts: 1
+  #   linkedin: "https://www.linkedin.com/in/darius-b-7511255b/"
+  #   github: "https://github.com/dcbounds"
+  #   content: ""
+  # - student_name: "Christian Valdes"
+  #   testimonial_date: ""
+  #   student_thumb: "../../../../static/images/testimonials/darius-bounds.jpg"
+  #   starts: 1
+  #   hidden: true
+  #   linkedin: "https://www.linkedin.com/in/darius-b-7511255b/"
+  #   github: "https://github.com/CxJAY26"
+  #   content: ""
