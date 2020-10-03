@@ -78,7 +78,7 @@ prices:
           payment: "$214.74"
           paymentInfo: "mensual + $0 deposit"
           provider: "Skill Fund - Climb"
-          logo: "/images/skill-logo.png"
+          logo: "/images/climb-and-skillfund.png"
           message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
         - months: "42"
           payment: "$314.10"

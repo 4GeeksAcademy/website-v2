@@ -62,14 +62,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: DE CONTADO
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "y disfruta el mejor precio de la ciudad"
+        heading_one: "PAGA SÓLO DESPUÉS"
+        heading_two: "DE CONSEGUIR TRABAJO"
+        sub_heading: "y hablemos del Income Share Agreement"
       content:
-        price: "$9,499.00"
-        price_info: "una sola quota"
-      button:
-        button_text: "APLICA"
+        price: "9% del salario"
+        price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -120,12 +118,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAGA SÓLO DESPUÉS"
-        heading_two: "DE CONSEGUIR TRABAJO"
-        sub_heading: "y hablemos del Income Share Agreement"
+        heading_one: DE CONTADO
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "y disfruta el mejor precio de la ciudad"
       content:
-        price: "$134.99"
-        price_info: "mensual"
+        price: "$9,499.00"
+        price_info: "una sola quota"
       button:
         button_text: "APLICA"
   ## *****************
@@ -139,14 +137,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: DE CONTADO
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "y disfruta el mejor precio de la ciudad"
+        heading_one: "PAGA SÓLO DESPUÉS"
+        heading_two: "DE CONSEGUIR TRABAJO"
+        sub_heading: "y hablemos del Income Share Agreement"
       content:
-        price: "$7,499.00"
-        price_info: "una sola quota"
-      button:
-        button_text: "APLICA"
+        price: "9% del salario"
+        price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -197,12 +193,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAGA SÓLO DESPUÉS"
-        heading_two: "DE CONSEGUIR TRABAJO"
-        sub_heading: "y hablemos del Income Share Agreement"
+        heading_one: DE CONTADO
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "y disfruta el mejor precio de la ciudad"
       content:
-        price: "$134.99"
-        price_info: "mensual"
+        price: "$7,499.00"
+        price_info: "una sola quota"
       button:
         button_text: "APLICA"
 

@@ -59,16 +59,19 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "FULL TIME"
-        sub_heading: "and enjoy the best pricing in town"
+        heading_one: "PAY ONLY AFTER"
+        heading_two: "YOU GET A JOB"
+        sub_heading: "with the Income Sharing Agreement (ISA)"
       content:
-        price: "2.760.000 CLP"
-        price_info: "single payment"
+        price: "9% of Sallary"
+        price_info: "until fully paid, and only if you get the job"
+
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
       header:
         heading_one: "EXTENDED"
+        heading_two: "PAYMENT PLAN"
         sub_heading: "and enjoy the best pricing in town"
       plans:
         - months: "12"
@@ -87,11 +90,13 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PART TIME"
+        heading_one: "PAY UPFRONT"
+        heading_two: "(OUT OF POCKET)"
         sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "2.415.000 CLP"
+        price: "2.760.000 CLP"
         price_info: "single payment"
+
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -103,11 +108,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PART TIME"
-        sub_heading: "and enjoy the best pricing in town"
+        heading_one: "PAY ONLY AFTER"
+        heading_two: "YOU GET A JOB"
+        sub_heading: "with the Income Sharing Agreement (ISA)"
       content:
-        price: "2.415.000 CLP"
-        price_info: "single payment"
+        price: "9% of Sallary"
+        price_info: "until fully paid, and only if you get the job"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -131,10 +137,10 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "FULL TIME"
+        heading_one: "PART TIME"
         sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "2.760.000 CLP"
+        price: "2.415.000 CLP"
         price_info: "single payment"
 
 active_campaign_location_slug: "santiago-chile"
