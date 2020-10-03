@@ -21,7 +21,7 @@ button:
   apply_button_text: "APLICAR" # <-- this will show everywhere in the website
   
   syllabus_submit_text: "DESCARGAR"
-  cohort_more_details_text: "VER MÁS"
+  cohort_more_details_text: "INFO"
   apply_button_link: "/aplica"
 
 news:
