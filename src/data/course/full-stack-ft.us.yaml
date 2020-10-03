@@ -18,7 +18,7 @@ meta_info:
 header:
   tagline: "FULL STACK DEVELOPER"
   image: "../../../static/images/bg/program-bg.png"
-  paragraph: "From zero to a get paid as a developer, learn the skills of the present and future. \n Boost your professional career, get hired by a tech company."
+  paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
   alt: ""
 
 button:
@@ -69,8 +69,8 @@ details:
       step: 2
     - module_name: "LIFELONG SUPPORT"
       title: "Lifelong Support"
-      description: "Keep practicing with the academy's help, we will coaching you for life, build your Resume, Github, LinkedIn, help you apply for jobs, support you once you get a job"
-      projects: "Get paid to keep learning, raise your income gradually as you become a more senior developer, enjoy and build software for life."
+      description: "Keep practicing with the academy's help - we will be coaching you for life. Build your Resume, Github, LinkedIn.  We help you apply for jobs and provide support for you once you find a job."
+      projects: "Get paid to keep learning. Raise your income gradually as you grow into a Senior Developer. Enjoy and build software for life."
       slug: "lifelong-learning"
       duration: "1+ week"
       step: 1
@@ -118,12 +118,12 @@ typical:
     - title: "Setup and coffee"
       time: "8:45 AM"
       icon: circle
-      content: "The bootcamp starts at 9 am, take some coffee to recharge your energies and get ready to learn!"
+      content: "The bootcamp starts at 9:00 AM, so have some coffee to recharge your energy and get ready to learn!"
       step: 1
     - title: "Review Last Day"
       time: "9:00 AM"
       icon: circle
-      content: "Review last day & weekend activities, Q&A. And brief overall of what we have addressed."
+      content: "Review last day & weekend activities, Q&A. Overall briefing of what we have addressed."
       step: 2
     - title: "Lesson Time"
       time: "10:00 AM"
@@ -143,7 +143,7 @@ typical:
     - title: "Collaborative Coding"
       time: "5:00 PM"
       icon: coffee
-      content: "All students will code in a single screen, discuss approaches, strategies and deliver the projects."
+      content: "All students will code on a single screen, discuss approaches and strategies, and deliver the projects."
       step: 6
 
 ## ALUMNI SECTION
