@@ -9,7 +9,6 @@ import BaseRender from './_baseRender'
 import Link from 'gatsby-link'
 import dayjs from "dayjs"
 import LazyLoad from 'react-lazyload';
-import Select from "../components/Select";
 import {SessionContext} from '../session'
 
 const days = [
@@ -48,9 +47,6 @@ const Calendar = (props) => {
   const [events, setEvent] = useState([]);
   const [academy, setAcademy] = useState(null);
   const [selected, setSelected] = useState(0);
-  const [locations, setLocations] = useState(null);
-  const [currentLocation, setCurrentLocation] = useState();
-  const [filterLocations, setFilterLocations] = useState();
   const [status, setStatus] = useState({toggle: false, hovered: false})
   const [single, setSingle] = useState()
   const [filteredEvents, setFilteredEvents] = useState([]);
@@ -65,8 +61,6 @@ const Calendar = (props) => {
   const [test, setTest] = useState([]);
   const [filterByCity, setFilterByCity] = useState(() => (session && session.location) ? [session.location.city] : ["Locations"]);
   const [filterByType, setFilterByType] = useState(["Courses"]);
-  console.log("hash:", window.location.hash)
-  console.log("hashs:", window.location.search)
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=santiago-chile
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all
@@ -77,10 +71,9 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const loadCohorts = () => {
-      if (currentLocation == null) {
+      if (academy == null) {
         fetch(
-          `https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`,
-          // `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
+          `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
         )
           .then(response => response.json())
           .then(data => {
@@ -89,7 +82,7 @@ const Calendar = (props) => {
       }
       else {
         fetch(
-          `https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${currentLocation.active_campaign_location_slug}`,
+          `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${academy}`,
         )
           .then(response => response.json())
           .then(data => {
@@ -100,7 +93,7 @@ const Calendar = (props) => {
     }
 
     const loadEvents = () => {
-      if (currentLocation == null) {
+      if (academy == null) {
         fetch(
           `${process.env.GATSBY_BREATHECODE_HOST}/events/all?upcoming=true`,
         )
@@ -118,18 +111,7 @@ const Calendar = (props) => {
 
     loadCohorts();
     loadEvents();
-  }, [currentLocation]);
-
-  useEffect(() => {
-    const loadLocations = async () => {
-      let _locations = await session.locations;
-      let _test = [];
-      if (_locations != undefined) {_test = _locations.map(l => ({label: l.city + ", " + l.country, value: l.active_campaign_location_slug}))}
-      setLocations(_locations);
-      setFilterLocations(_test);
-    }
-    loadLocations();
-  }, [session])
+  }, [academy]);
 
   useEffect(() => {
     const loadFilterCity = async () => {
@@ -212,33 +194,6 @@ const Calendar = (props) => {
           {/* <Column size="2" alignSelf="center" align="right"> */}
           <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer"><Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Join Our Meetup</Button></a>
           {/* </Column> */}
-        </Row>
-        <Row
-          align={`left`}
-          margin="0 0 20px 0"
-        >
-
-          <Select
-            top="40px"
-            left="20px"
-            width="300px"
-            maxWidth="100%"
-            margin={`0 10px 0 0`}
-            options={filterLocations != null && filterLocations}
-            onSelect={(opt) => setCurrentLocation(locations.find(l => l.active_campaign_location_slug === opt.value))}
-            openLabel={!currentLocation ? "Pick a location" : currentLocation.city + ". " + currentLocation.country}
-            closeLabel={!currentLocation ? "Pick a location" : currentLocation.city + ". " + currentLocation.country}
-          />
-          <Select
-            top="40px"
-            left="20px"
-            width="300px"
-            maxWidth="100%"
-            options={filterType != null && filterType}
-          // onSelect={(opt) => setCurrentLocation(locations.find(l => l.active_campaign_location_slug === opt.value))}
-          // openLabel={!currentLocation ? "Courses" : currentLocation.city + ". " + currentLocation.country}
-          // closeLabel={!currentLocation ? "Courses" : currentLocation.city + ". " + currentLocation.country}
-          />
         </Row>
 
         <Row
