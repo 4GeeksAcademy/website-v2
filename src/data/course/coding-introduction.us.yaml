@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-introduction"
   bc_slug: "coding-introduction"
   title: "Coding Introduction Course - 4Geeks Academy"
-  description: "Learn to code in just a couple of weeks. Ideal get you introduced in the world of coding."
+  description: "Learn to code in just a couple of weeks. Ideal to get you introduced into the world of coding."
   image: "/images/bg/program-bg.png"
   keywords: "coding introduction, learn to code"
   redirects: ["/coding-introduction-programming"]
@@ -12,7 +12,9 @@ header:
   image: "../../../static/images/bg/program-bg.png"
   alt: ""
 button:
-  syllabus_submit_text: "DOWNLOAD"
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
   apply_button_link: "/apply"
 
 credentials:

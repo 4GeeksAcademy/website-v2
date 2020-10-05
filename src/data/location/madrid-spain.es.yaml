@@ -15,9 +15,11 @@ header:
   alt: ""
 
 button:
-  syllabus_button_text: "DESCARGAR PROGRAMA"
+  syllabus_button_text: "DESCARGAR CURRÍCULO" # <-- this will show everywhere in the website
+  apply_button_text: "SOLICITA TU PLAZA" # <-- this will show everywhere in the website
+  
   syllabus_submit_text: "DESCARGAR"
-  apply_button_text: "SOLICITA TU PLAZA"
+  cohort_more_details_text: "INFO"
   apply_button_link: "/aplica"
 
 info_box:
@@ -65,14 +67,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "FULL-TIME"
-        heading_two: "Pago adelantado"
-        sub_heading: "Pregunta por nuestros descuentos y obtén el mejor precio de España"
+        heading_one: "NO PAGUES HASTA"
+        heading_two: "QUE ENCUENTRES TRABAJO"
+        sub_heading: "Acuerdo de Ingresos Compartidos"
       content:
-        price: "5.999,00 €"
-        price_info: "pago de contado"
-      button:
-        button_text: "APLICA YA"
+        price: "9% de tu sueldo"
+        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -117,20 +117,16 @@ prices:
           provider: "4Geeks"
           logo: 
           message: "Pregunta por nuestras becas compatibles con financiación"
-      button:
-        button_text:
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "NO PAGUES HASTA"
-        heading_two: "QUE ENCUENTRES TRABAJO"
-        sub_heading: "Acuerdo de Ingresos Compartidos"
+        heading_one: "PAGO DE CONTADO"
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "Pregunta por nuestros descuentos y obtén el mejor precio de España"
       content:
-        price: "120€"
-        price_info: "Desde 120€ al mes"
-      button:
-        button_text: "APLICA YA"
+        price: "5.999,00 €"
+        price_info: "un solo pago"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -142,14 +138,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PART-TIME"
-        heading_two: "Pago adelantado"
-        sub_heading: "Pregunta por nuestros descuentos y obtén el mejor precio de España"
+        heading_one: "NO PAGUES HASTA"
+        heading_two: "QUE ENCUENTRES TRABAJO"
+        sub_heading: "Acuerdo de Ingresos Compartidos"
       content:
-        price: "5.499,00 €"
-        price_info: "pago de contado"
-      button:
-        button_text: "APLICA YA"
+        price: "9% de tu sueldo"
+        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -167,7 +161,7 @@ prices:
           payment: "302,18€"
           paymentInfo: "18 meses + 500€ Reserva"
           provider: "Zank"
-          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          logo: "/images/zank.png"
           message: "Pregunta por nuestras becas compatibles con financiación"  
         - months: "12 m"
           payment: "432,90€"
@@ -179,7 +173,7 @@ prices:
           payment: "816,15€"
           paymentInfo: "6 meses + 500€ Reserva"
           provider: "Zank"
-          logo: "https://www.zank.com.es/img/logozankgris.svg"
+          logo: "/images/zank.png"
           message: "Pregunta por nuestras becas compatibles con financiación"          
       button:
         button_text: "APLICA YA"
@@ -187,13 +181,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PART-TIME"
+        heading_one: "PAGO DE CONTADO"
+        heading_two: "(OUT OF POCKET)"
         sub_heading: "Financia sin intereses ¡becas disponibles!"
       content:
         price: "5.499,00 €"
         price_info: "3 cuotas de 1.833€"
-      button:
-        button_text: "APLICA YA"
 
 active_campaign_location_slug: "madrid-spain"
 breathecode_location_slug: "madrid-spain"

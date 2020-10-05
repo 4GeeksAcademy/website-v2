@@ -99,6 +99,7 @@ const Landing = (props) => {
         >
           <LeadForm style={{marginTop: "50px"}} heading="Request More Info." formHandler={requestSyllabus} 
               lang={pageContext.lang}
+              fields={yml.form_fields}
               data={{ 
                 course: { value: yml.meta_info.bc_slug, valid: true }
               }}
@@ -144,46 +145,51 @@ const Landing = (props) => {
           />
       </StyledBackgroundSection>
 
-      {/* In the news... */}
-      <Wrapper>
-          <H4 align="center" fontSize="18px" color={Colors.darkGray} 
-            margin="20px 0px 10px 0px" 
-            m_sm="20px auto" 
-            maxWidth="350px"
-          >{yml.credential}
-          </H4>
-          <News location={session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
-      </Wrapper>
+      {yml.in_the_news &&
+        <Wrapper>
+            <H4 align="center" fontSize="18px" color={Colors.darkGray} 
+              margin="20px 0px 10px 0px" 
+              m_sm="20px auto" 
+              maxWidth="350px"
+            >{yml.in_the_news}
+            </H4>
+            <News location={session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
+        </Wrapper>
+      }
 
-      <Wrapper margin="100px">
-        <Title
-          type="h2"
-          title={yml.geeks_vs_others.heading}
-          paragraph={yml.geeks_vs_others.sub_heading}
-          paragraphColor={Colors.blue}
-          variant="primary"
-          size="10"
-        />
-        <GeeksVsOthers lang={pageContext.lang} limit={yml.geeks_vs_others.total_rows} />
-      </Wrapper>
+      {yml.geeks_vs_others &&
+        <Wrapper margin="100px">
+          <Title
+            type="h2"
+            title={yml.geeks_vs_others.heading}
+            paragraph={yml.geeks_vs_others.sub_heading}
+            paragraphColor={Colors.blue}
+            variant="primary"
+            size="10"
+          />
+          <GeeksVsOthers lang={pageContext.lang} limit={yml.geeks_vs_others.total_rows} />
+        </Wrapper>
+      }
 
-      <Wrapper >
-        <Title
-          size="10"
-          marginTop="40px"
-          title={yml.details.heading}
-          paragraph={yml.details.sub_heading}
-          variant="primary"
-        />
-        <ProgramDetails details={course && course.details} />
-        <ProgramDetailsMobile details={course && course.details} />
-      </Wrapper>
+      {yml.program_details &&
+        <Wrapper >
+          <Title
+            size="10"
+            marginTop="40px"
+            title={yml.program_details.heading}
+            paragraph={yml.program_details.sub_heading}
+            variant="primary"
+          />
+          <ProgramDetails details={course && course.details} />
+          <ProgramDetailsMobile details={course && course.details} />
+        </Wrapper>
+      }
 
-
-
-      <Wrapper margin="50px 0">
-        <WhyPython lang={pageContext.lang} />
-      </Wrapper>
+      { yml.why_python && 
+        <Wrapper margin="50px 0">
+          <WhyPython heading={yml.why_python.heading} subheading={yml.why_python.sub_heading} lang={pageContext.lang} />
+        </Wrapper>
+      }
 
       <Wrapper margin="100px">
         <Title
@@ -211,12 +217,17 @@ export const query = graphql`
               utm_course
               utm_location
             }
+            form_fields
             features{
               bullets
               styles
             }
-            credential
-            details{
+            in_the_news
+            program_details{
+              heading
+              sub_heading
+            }
+            why_python{
               heading
               sub_heading
             }
@@ -304,6 +315,7 @@ export const query = graphql`
           testimonials {
             student_name
             testimonial_date
+            hidden
             student_thumb{
               childImageSharp {
                 fluid(maxHeight: 200){
@@ -314,7 +326,6 @@ export const query = graphql`
                 }
               }
             }
-            starts
             content
             source_url
             source_url_text

@@ -4,7 +4,7 @@
 
 partners:
   tagline: "WHO IS HIRING OUR STUDENTS"
-  sub_heading: "Thanks to our growing list of partners, we have local and international job offers for our students on daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have 86% of our students hired in 100 days or less."
+  sub_heading: "Thanks to our growing list of partners, we have local and international job offers for our students on a daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have 86% of our students hired within 100 days or less from Graduation Day."
   footer_tagline: "438 COMPANIES"
   footer_button: "Review our latest hirings"
   footer_link: "/partners"
@@ -88,7 +88,7 @@ coding:
       image: "../../../../static/images/coding/shell-hacks.png"
       alt: ""
       featured: false
-    - name: "Womans Who Code"
+    - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
       alt: ""
       featured: false
@@ -112,7 +112,7 @@ influencers:
       image: "../../../../static/images/coding/startup.png"
       alt: ""
       featured: false
-    - name: "Womans Who Code"
+    - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
       alt: ""
       featured: false
@@ -130,7 +130,7 @@ influencers:
       featured: false
 financials:
   tagline: "FINANCIAL PARTNERS"
-  sub_heading: "We are making a huge effort to make premium coding education accessible to more people."
+  sub_heading: "We are making a huge effort to make premium coding education accessible to everyone."
   images:
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
@@ -140,7 +140,11 @@ financials:
       image: "../../../../static/images/climb-logo.png"
       alt: ""
       featured: false
-    - name: "Skill Fund"
+    - name: "Skills Fund"
       image: "../../../../static/images/skill-logo.png"
+      alt: ""
+      featured: false
+    - name: "Zank"
+      image: "../../../../static/images/zank.png"
       alt: ""
       featured: false

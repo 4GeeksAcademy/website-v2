@@ -597,6 +597,7 @@ export const query = graphql`
                 testimonials {
                   student_name
                   testimonial_date
+                  hidden
                   student_thumb{
                     childImageSharp {
                       fluid(maxHeight: 200){
@@ -607,7 +608,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  starts
                   content
                   source_url
                   source_url_text
@@ -621,21 +621,17 @@ export const query = graphql`
                 header{
                   tagline
                   sub_heading
-                  button_text
                 }
                 projects {
                     project_name
                     slug
-                    project_image{
-                        image {
-                            childImageSharp {
-                              fluid(maxWidth: 800){
-                                ...GatsbyImageSharpFluid_withWebp
-                              }
-                            }
-                          } 
-                        image_alt
-                    }
+                    project_image {
+                      childImageSharp {
+                        fluid(maxWidth: 800){
+                          ...GatsbyImageSharpFluid_withWebp
+                        }
+                      }
+                    } 
                     project_content
                     project_video
                     live_link

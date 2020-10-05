@@ -17,7 +17,9 @@ credentials:
   paragraph: "Nuestros números hablan por sí solos"
 
 button:
-  syllabus_submit_text: "DESCARGAR"
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "Recíbelo en 30 segundos"
   apply_button_link: "/aplica"
 ## PROGRAM DETAILS
 details:

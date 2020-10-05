@@ -64,7 +64,7 @@ Here you can read more about: [Why we think part-time studies are the future.](h
 
 Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](http://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
 
-If you want to get more into detail, you can read our [comparison between 4Geeks Academy and Wyncode.](https://4geeksacademy.co/wyncode-vs-4geeks-academy-programming-bootcamp-better-investment/)
+If you want to get more into detail, you can read our [comparison between 4Geeks Academy and other industry coding bootcamps.](https://4geeksacademy.co/us/geeks-vs-others)
 
 Finally, we want to remain not just the most affordable academy between the three (by far), but we also want to be the most accessible one. This is why we have opened our pre-work free for everybody.  If you want to sign-up, [click here](https://4geeksacademy.co/course/web-development-parttime/).
 

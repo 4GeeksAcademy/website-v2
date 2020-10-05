@@ -10,15 +10,17 @@ meta_info:
 seo_title: "Coding Bootcamp Santiago de Chile"
 header:
   tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
-  paragraph: "Come and learn code in the biggest coding school and community in Santiago de Chile, receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
+  paragraph: "Come and learn code in the biggest coding school and community in Santiago de Chile! Receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
   image: "../../../static/images/locations/santiago-loc.png"
   alt: ""
 
 button:
-  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_button_text: "REQUEST SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
+  
   syllabus_submit_text: "DOWNLOAD"
-  apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
+  cohort_more_details_text: "DETAILS"
 
 info_box:
   heading: "Find us in Santiago de Chile"
@@ -37,7 +39,7 @@ upcoming:
 
 carousel_box:
   heading: "What you should know about this location: "
-  content: "Located at in one the best areas of the city, the financial district. Walking distance from the subway station. The office is open to the students 24/7 every day of the week. On Saturdays we have the famous 'Coding Weekends' were students gather to practice and code during the entire day with mentors available. Pizzas and drinks are on the house!"
+  content: "Located in one the best areas of the city - the Financial District. Walking distance from the subway station. The office is open to the students 24/7 every day of the week. On Saturdays we have the famous 'Coding Weekends' where students gather to practice and code during the entire day with mentors available. Pizzas and drinks are on the house!"
   images:
     - path: "../../../static/images/locations/santiago-loc-2.jpg"
       alt: "Santiago Location Image"
@@ -57,16 +59,19 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "FULL TIME"
-        sub_heading: "and enjoy the best pricing in town"
+        heading_one: "PAY ONLY AFTER"
+        heading_two: "YOU GET A JOB"
+        sub_heading: "with the Income Sharing Agreement (ISA)"
       content:
-        price: "2.760.000 CLP"
-        price_info: "single payment"
+        price: "9% of Sallary"
+        price_info: "until fully paid, and only if you get the job"
+
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
       header:
         heading_one: "EXTENDED"
+        heading_two: "PAYMENT PLAN"
         sub_heading: "and enjoy the best pricing in town"
       plans:
         - months: "12"
@@ -85,11 +90,13 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PART TIME"
+        heading_one: "PAY UPFRONT"
+        heading_two: "(OUT OF POCKET)"
         sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "2.415.000 CLP"
+        price: "2.760.000 CLP"
         price_info: "single payment"
+
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -101,11 +108,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PART TIME"
-        sub_heading: "and enjoy the best pricing in town"
+        heading_one: "PAY ONLY AFTER"
+        heading_two: "YOU GET A JOB"
+        sub_heading: "with the Income Sharing Agreement (ISA)"
       content:
-        price: "2.415.000 CLP"
-        price_info: "single payment"
+        price: "9% of Sallary"
+        price_info: "until fully paid, and only if you get the job"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -129,10 +137,10 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "FULL TIME"
+        heading_one: "PART TIME"
         sub_heading: "and enjoy the best pricing in town"
       content:
-        price: "2.760.000 CLP"
+        price: "2.415.000 CLP"
         price_info: "single payment"
 
 active_campaign_location_slug: "santiago-chile"
