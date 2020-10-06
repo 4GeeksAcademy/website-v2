@@ -28,7 +28,7 @@ const _fields = {
     full_name: { value: '', valid: false, required: true, type: 'text', ph: "Full name *", error: "Please specify a valid full name" },
     last_name: { value: '', valid: false, required: false, type: 'text', ph: "Last name", error: "Please specify a valid last name" },
     email: { value: '', valid: false, required: true, type: 'email', ph: "Your email *", error: "Please specify a valid email" },
-    phone: { value: '', valid: false, required: false, type: 'phone', ph: "Phone number", error: "Please specify a valid phone" },
+    phone: { value: '', valid: false, required: true, type: 'phone', ph: "Phone number", error: "Please specify a valid phone" },
     consent: { value: true, valid: true, required: true, type: 'text', ph: "", error: "You need to accept the privacy terms" },
 }
 

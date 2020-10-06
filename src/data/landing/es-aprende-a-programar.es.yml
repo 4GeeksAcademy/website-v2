@@ -25,7 +25,8 @@ features:
     - Hay más vacantes que en cualquier otra industria
     - Impulsa tu Carrera y hazte programador de software
 
-in_the_news: 4Geeks en los medios
+in_the_news: 
+  heading: 4Geeks en los medios
 
 program_details:
   heading: "Lo que aprenerás"

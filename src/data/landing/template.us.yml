@@ -38,24 +38,35 @@ features:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
 #
 
-in_the_news: 4Geeks en los medios
+in_the_news:
+  position: 1
+  heading: "4Geeks en los medios"
 
 why_4geeks:
+  position: 2
   heading: "Porqué 4Geeks"
   sub_heading: "Porque somos los mejores"
 
 geeks_vs_others:
+  position: 3
   heading: "¿Qué hace a 4Geeks Academy exitoso?"
   paragraph: ""
   total_rows: 5
 
 program_details:
+  position: 4
   heading: "Lo que aprenerás"
   sub_heading: "Las tecnologias más buscadas en el mercado laboral"
 
 alumni_projects:
+  position: 5
   heading: "Alumnos"
   sub_heading: "Lo que aprenderás"
+
+who_is_hiring:
+  position: 6
+  heading: "Who is hiring"
+  sub_heading: "These comanies are hiring"
 
 
 # horizontal_secction
@@ -63,10 +74,12 @@ alumni_projects:
 #   right:
 
 why_python:
+  position: 7
   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
   sub_heading: " " # optional or set to white space to hide
 
 testimonial:
+  position: 8
   heading: "TESTIMONIALS"
   sub_heading: ""
   videos:

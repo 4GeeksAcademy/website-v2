@@ -27,7 +27,8 @@ features:
     - Training on everything needed to become a successful software developer
     - Career Support to help you land your first coding job
 
-in_the_news: Recognized as one of the top coding bootcamps in the US by Newsweek
+in_the_news: 
+  heading: Recognized as one of the top coding bootcamps in the US by Newsweek
 
 program_details:
   heading: "Lo que aprenerás"

@@ -134,7 +134,7 @@ const Landing = (props) => {
         {yml.header_data.sub_heading}
       </H4>
       {Array.isArray(yml.features) && yml.features.map((f, i) => 
-        <Paragraph margin="4px 0" color={Colors.white} key={i}>✅ {f}</Paragraph>
+        <Paragraph margin="4px 0" color={Colors.white} key={i}>{f}</Paragraph>
       )}
         <LeadForm style={{marginTop: "0px"}} formHandler={requestSyllabus} 
             lang={pageContext.lang}
@@ -146,9 +146,10 @@ const Landing = (props) => {
       </StyledBackgroundSection>
 
       {
-        Object.keys(yml).filter(name => sections[name] !== undefined).map(name =>
-          sections[name](session, props, city, course)
-        )
+        Object.keys(yml)
+          .filter(name => sections[name] !== undefined)
+          .sort((a,b) => sections[a].position > sections[a].position ? -1 : 1)
+          .map(name => sections[name](session, props, city, course))
       }
     </>
   )
@@ -171,12 +172,32 @@ export const query = graphql`
               bullets
               styles
             }
-            in_the_news
+            in_the_news{
+              heading
+              position
+            }
             program_details{
+              position
+              heading
+              sub_heading
+            }
+            why_4geeks{
+              position
+              heading
+              sub_heading
+            }
+            alumni_projects{
+              position
+              heading
+              sub_heading
+            }
+            who_is_hiring{
+              position
               heading
               sub_heading
             }
             why_python{
+              position
               heading
               sub_heading
             }
@@ -194,11 +215,13 @@ export const query = graphql`
               }
             }
             geeks_vs_others{
+              position
               heading
               paragraph
               total_rows
             }
             testimonial{
+              position
               heading
               sub_heading
             }
@@ -331,7 +354,7 @@ const sections = {
       margin="20px 0px 10px 0px" 
       m_sm="20px auto" 
       maxWidth="350px"
-    >{yml.in_the_news}
+    >{yml.in_the_news.heading}
     </H4>
     <News location={session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
   </Wrapper>,
@@ -360,7 +383,7 @@ const sections = {
   why_python: (session, { pageContext, yml}, city, course) => <Wrapper margin="50px 0">
     <WhyPython heading={yml.why_python.heading} subheading={yml.why_python.sub_heading} lang={pageContext.lang} />
   </Wrapper>,
-  testimonials: (session, { pageContext, yml}, city, course) => <Wrapper margin="100px">
+  testimonials: (session, { data, pageContext, yml}, city, course) => <Wrapper margin="100px">
     <Title
       variant="primary"
       title={yml.testimonial.heading}
@@ -377,7 +400,7 @@ const sections = {
     />
     <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
   </Wrapper>,
-  alumni_projects: (session, { pageContext, yml}, city, course) => <Wrapper margin="100px">
+  alumni_projects: (session, { data, pageContext, yml}, city, course) => <Wrapper margin="100px">
     <Title
       size="10"
       title={yml.alumni_projects.heading}
