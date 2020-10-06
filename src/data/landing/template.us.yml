@@ -15,6 +15,7 @@ meta_info:
   utm_location: madrid-spain
 
 # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+# always the first_name, email and phone will be mandatory if added.
 form_fields: ["full_name", "phone", "email"]
 
 # jumbotron on the top (cannot be commented out)
@@ -26,7 +27,8 @@ header_data:
   button_label: Pide más información
 
 features:
-  styles: '{ "fontSize": "20px", "margin": "10px 0" }'
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - Un Desarrollador en Madrid hace €25mil anual
     - Hay más vacantes que en cualquier otra industria
@@ -38,14 +40,27 @@ features:
 
 in_the_news: 4Geeks en los medios
 
-program_details:
-  heading: "Lo que aprenerás"
-  sub_heading: "Las tecnologias más buscadas en el mercado laboral"
+why_4geeks:
+  heading: "Porqué 4Geeks"
+  sub_heading: "Porque somos los mejores"
 
 geeks_vs_others:
   heading: "¿Qué hace a 4Geeks Academy exitoso?"
   paragraph: ""
-  total_rows: 7
+  total_rows: 5
+
+program_details:
+  heading: "Lo que aprenerás"
+  sub_heading: "Las tecnologias más buscadas en el mercado laboral"
+
+alumni_projects:
+  heading: "Alumnos"
+  sub_heading: "Lo que aprenderás"
+
+
+# horizontal_secction
+#   left:
+#   right:
 
 why_python:
   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
@@ -59,3 +74,7 @@ testimonial:
     student_description: Graduate from our Miami Campus.
     video_title: What are your thoughts about the program?
     video_id: z_YORvcJHqA
+  - student_name: Guensi 
+      student_description: Graduate from our Miami Campus.
+      video_title: What are your thoughts about the program?
+      video_id: z_YORvcJHqA

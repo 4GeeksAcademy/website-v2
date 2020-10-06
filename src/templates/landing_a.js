@@ -145,62 +145,11 @@ const Landing = (props) => {
           />
       </StyledBackgroundSection>
 
-      {yml.in_the_news &&
-        <Wrapper>
-            <H4 align="center" fontSize="18px" color={Colors.darkGray} 
-              margin="20px 0px 10px 0px" 
-              m_sm="20px auto" 
-              maxWidth="350px"
-            >{yml.in_the_news}
-            </H4>
-            <News location={session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
-        </Wrapper>
+      {
+        Object.keys(yml).filter(name => sections[name] !== undefined).map(name =>
+          sections[name](session, props, city, course)
+        )
       }
-
-      {yml.geeks_vs_others &&
-        <Wrapper margin="100px">
-          <Title
-            type="h2"
-            title={yml.geeks_vs_others.heading}
-            paragraph={yml.geeks_vs_others.sub_heading}
-            paragraphColor={Colors.blue}
-            variant="primary"
-            size="10"
-          />
-          <GeeksVsOthers lang={pageContext.lang} limit={yml.geeks_vs_others.total_rows} />
-        </Wrapper>
-      }
-
-      {yml.program_details &&
-        <Wrapper >
-          <Title
-            size="10"
-            marginTop="40px"
-            title={yml.program_details.heading}
-            paragraph={yml.program_details.sub_heading}
-            variant="primary"
-          />
-          <ProgramDetails details={course && course.details} />
-          <ProgramDetailsMobile details={course && course.details} />
-        </Wrapper>
-      }
-
-      { yml.why_python && 
-        <Wrapper margin="50px 0">
-          <WhyPython heading={yml.why_python.heading} subheading={yml.why_python.sub_heading} lang={pageContext.lang} />
-        </Wrapper>
-      }
-
-      <Wrapper margin="100px">
-        <Title
-          variant="primary"
-          title={yml.testimonial.heading}
-          paragraph={yml.testimonial.sub_heading}
-          maxWidth="66%"
-        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
-        />
-        <Testimonials lang={data.allTestimonialsYaml.edges} />
-      </Wrapper>
     </>
   )
 };
@@ -333,7 +282,111 @@ export const query = graphql`
         }
       }
     }
+    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
+      edges {
+        node {
+          header{
+            tagline
+            sub_heading
+          }
+          projects {
+              project_name
+              slug
+              project_image {
+                childImageSharp {
+                  fluid(maxWidth: 800){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              } 
+              project_content
+              project_video
+              live_link
+              github_repo
+              alumni {
+                first_name
+                last_name
+                job_title
+                github
+                linkedin
+                twitter
+              }
+            }
+          button_section{
+            button_text
+            button_link
+          }
+        }
+      }
+    }
   }
 `;
 
 export default BaseRender(Landing, "landing");
+
+
+const sections = {
+  in_the_news: (session, { pageContext, yml}, city, course) => <Wrapper>
+    <H4 align="center" fontSize="18px" color={Colors.darkGray} 
+      margin="20px 0px 10px 0px" 
+      m_sm="20px auto" 
+      maxWidth="350px"
+    >{yml.in_the_news}
+    </H4>
+    <News location={session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
+  </Wrapper>,
+  geeks_vs_others: (session, { pageContext, yml}, city, course) => <Wrapper margin="100px">
+    <Title
+      type="h2"
+      title={yml.geeks_vs_others.heading}
+      paragraph={yml.geeks_vs_others.sub_heading}
+      paragraphColor={Colors.blue}
+      variant="primary"
+      size="10"
+    />
+    <GeeksVsOthers lang={pageContext.lang} limit={yml.geeks_vs_others.total_rows} />
+  </Wrapper>,
+  program_details: (session, { pageContext, yml}, city, course) => <Wrapper>
+    <Title
+      size="10"
+      marginTop="40px"
+      title={yml.program_details.heading}
+      paragraph={yml.program_details.sub_heading}
+      variant="primary"
+    />
+    <ProgramDetails details={course && course.details} />
+    <ProgramDetailsMobile details={course && course.details} />
+  </Wrapper>,
+  why_python: (session, { pageContext, yml}, city, course) => <Wrapper margin="50px 0">
+    <WhyPython heading={yml.why_python.heading} subheading={yml.why_python.sub_heading} lang={pageContext.lang} />
+  </Wrapper>,
+  testimonials: (session, { pageContext, yml}, city, course) => <Wrapper margin="100px">
+    <Title
+      variant="primary"
+      title={yml.testimonial.heading}
+      paragraph={yml.testimonial.sub_heading}
+      maxWidth="66%"
+    // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+    />
+    <Testimonials lang={data.allTestimonialsYaml.edges} />
+  </Wrapper>,
+  why_4geeks: (session, { pageContext, yml}, city, course) => <Wrapper margin="50px 0">
+    <Title
+      title={yml.why_4geeks.heading + " " + city}
+      variant="primary"
+    />
+    <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
+  </Wrapper>,
+  alumni_projects: (session, { pageContext, yml}, city, course) => <Wrapper margin="100px">
+    <Title
+      size="10"
+      title={yml.alumni_projects.heading}
+      paragraph={yml.alumni_projects.sub_heading}
+      paragraphColor={Colors.darkGray}
+      maxWidth="66%"
+      margin="auto"
+      variant="primary"
+    />
+    <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false"  limit={2} />
+  </Wrapper>
+}
