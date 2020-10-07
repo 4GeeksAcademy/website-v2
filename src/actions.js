@@ -162,6 +162,10 @@ const getClosestLoc = (locations, lat, lon) => {
     let tempLocation = 0;
     let location = null;
     for (var i = 0; i < locations.length; i++) {
+        
+        // ignore unlisted locations on the ymls
+        if(locations[i].meta_info.unlisted === true) continue;
+
         tempLocation = distance(locations[i].latitude, locations[i].longitude, lat, lon)
         if (tempLocation <= lowerDistance) {
             lowerDistance = tempLocation;
@@ -267,6 +271,7 @@ export const locByLanguage = (locations, languageToFilter) => {
     let repeated = [];
     return locations.nodes.filter(l => {
         const [ name, _lang ] = l.fields.file_name.split(".");
+
         //filter repetead locations and only focuse on the desired language
         if(_lang !== languageToFilter || repeated.includes(name)) return false;
         repeated.push(name);
@@ -291,6 +296,7 @@ export const initSession = async (locationsArray, seed={}) => {
     //cleanup the locations array and add all the data I need for locations
     let languageToFilter = language || "us";
     const locations = locByLanguage(locationsArray, languageToFilter);
+    console.log("Locations", locations)
 
     // remove undefineds from the seed utm's
     Object.keys(utm).forEach(key => utm[key] === undefined && delete utm[key])

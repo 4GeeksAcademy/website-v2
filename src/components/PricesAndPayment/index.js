@@ -102,7 +102,7 @@ const PricesAndPayments = (props) => {
   useEffect(() => setCourse(courseArray.find(c => c.value === props.course)),[props.course]);
   
   if (!currentLocation || !currentLocation.prices) 
-  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
   
   const prices = !course ? {} : currentLocation.prices[course.value];
 

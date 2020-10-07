@@ -26,7 +26,8 @@ const Home = (props) => {
   const {session, setLocation } = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
-  const city = session && session.location ? session.location.reliable ? session.location.city : "" : "Miami";
+  // const city = session && session.location ? session.location.reliable ? "" : "" : "Miami";
+  const city = session && session.location ? "" : "Miami";
   
   React.useEffect(() => {
     if(session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
