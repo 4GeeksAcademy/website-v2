@@ -82,7 +82,7 @@ const Faq = (props) => {
                                                 fs_sm="20px"
                                                 fs_md="20px"
                                                 fs_lg="20px"
-                                                fs_xl="24px"
+                                                fontSize="24px"
                                                 color={Colors.black}>{item.question}
                                             </H4>
                                             {buttonToggle === true && toggleIndex === index &&

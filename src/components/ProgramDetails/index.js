@@ -138,7 +138,7 @@ const ProgramDetails = (props) => {
                                             fs_sm="18px"
                                             fs_md="20px"
                                             fs_lg="18px"
-                                            fs_xl="22px"
+                                            fontSize="22px"
                                             fontWeight={`400`}
                                         >
                                             {props.details.details_modules[selected.index].title}
@@ -178,7 +178,7 @@ const ProgramDetails = (props) => {
                                                 fs_sm="18px"
                                                 fs_md="20px"
                                                 fs_lg="18px"
-                                                fs_xl="22px"
+                                                fontSize="22px"
                                                 fontWeight={`400`}
                                             >
                                                 {`Projects`}
@@ -212,7 +212,7 @@ const ProgramDetails = (props) => {
                                             fs_sm="18px"
                                             fs_md="20px"
                                             fs_lg="18px"
-                                            fs_xl="22px"
+                                            fontSize="22px"
                                             fontWeight={`400`}
                                         >
                                             {`Duration`}

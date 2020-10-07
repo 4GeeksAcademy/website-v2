@@ -64,7 +64,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                                 fs_sm="16px"
                                                 fs_md="18px"
                                                 fs_lg="20px"
-                                                fs_xl="20px"
+                                                fontSize="20px"
                                                 align_xs="center"
                                                 align="left"
                                                 fontWeight={`400`}
@@ -109,7 +109,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                     color={Colors.gray}
                                     align="left"
                                     fs_lg="18px"
-                                    fs_xl="28px"
+                                    fontSize="28px"
                                     lineHeight="20px"
                                     fontWeight={`400`}
                                 >Project: {`${item.project_name}`}</H4>

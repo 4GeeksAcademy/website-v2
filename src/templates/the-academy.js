@@ -315,7 +315,7 @@ const Why = (props) => {
                                 fs_sm="24px"
                                 fs_md="16px"
                                 fs_lg="18px"
-                                fs_xl="20px"
+                                fontSize="20px"
                             >{yml.outcomes.left.title}</H4>
                             </Column>
                         </Row>
@@ -349,7 +349,7 @@ const Why = (props) => {
                                 fs_sm="18px"
                                 fs_md="16px"
                                 fs_lg="18px"
-                                fs_xl="20px"
+                                fontSize="20px"
                             >{yml.outcomes.right.chart_one.title}</H4>
                                 <Charts dataArray={yml.outcomes.right.chart_three.data} />
                             </Column>
@@ -359,7 +359,7 @@ const Why = (props) => {
                                 fs_sm="18px"
                                 fs_md="16px"
                                 fs_lg="18px"
-                                fs_xl="20px"
+                                fontSize="20px"
                             >{yml.outcomes.right.chart_two.title}</H4>
                                 <Charts dataArray={yml.outcomes.right.chart_two.data} />
                             </Column>
@@ -369,7 +369,7 @@ const Why = (props) => {
                                 fs_sm="18px"
                                 fs_md="16px"
                                 fs_lg="18px"
-                                fs_xl="20px"
+                                fontSize="20px"
                             >{yml.outcomes.right.chart_three.title}</H4>
                                 <Charts dataArray={yml.outcomes.right.chart_one.data} />
                             </Column>

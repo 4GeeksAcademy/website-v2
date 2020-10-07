@@ -238,7 +238,7 @@ const Location = ({data, pageContext, yml}) => {
                                 fs_sm="18px"
                                 fs_md="9px"
                                 fs_lg="11px"
-                                fs_xl="14px">
+                                fontSize="14px">
                                     <Small display="block">Starting on:</Small>
                                     {dayjs(cohort.kickoff_date).format("ddd, D MMM YYYY")}
                                 </Paragraph>

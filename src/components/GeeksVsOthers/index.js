@@ -201,7 +201,7 @@ const GeeksVsOthers = props => {
                             fs_sm="16px"
                             fs_md="16px"
                             fs_lg="18px"
-                            fs_xl="24px"
+                            fontSize="24px"
                             color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
                       </Column>
                       <Column size="3" customRespSize respSize="3" width="100%" height="100%" alignSelf="center">
@@ -211,7 +211,7 @@ const GeeksVsOthers = props => {
                             fs_sm="16px"
                             fs_md="16px"
                             fs_lg="18px"
-                            fs_xl="24px"
+                            fontSize="24px"
                             color={Colors.gray}>{item.industry_average}</H4></Column></Row>
                       </Column>
                     </Row>

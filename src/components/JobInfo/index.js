@@ -50,7 +50,7 @@ const JobInfo = () => {
                         fs_sm="20px"
                         fs_md="20px"
                         fs_lg="20px"
-                        fs_xl="24px"
+                        fontSize="24px"
                         color={Colors.black}>{item.node.banner_heading}</H4>
                     </Column>
                   </Row>

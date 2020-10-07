@@ -38,7 +38,7 @@ export default props => {
                   fs_xs="16px"
                   fs_md="16px"
                   fs_lg="18px"
-                  fs_xl="20px"
+                  fontSize="20px"
                   uppercase>{i.title}
                 </H4>
               </Card>

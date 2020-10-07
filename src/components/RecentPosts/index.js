@@ -97,8 +97,8 @@ const RecentPosts = () => {
                             fs_sm="16px"
                             fs_md="14px"
                             fs_lg="20px"
+                            fontSize="20px"
                             padding="5px"
-                            fs_xl="20px"
                             uppercase align="center">{i.node.frontmatter.title}</H4>
                         <Paragraph
                             display_sm="none"
