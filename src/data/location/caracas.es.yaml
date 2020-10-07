@@ -67,25 +67,23 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "FULL-TIME"
-        sub_heading: ""
+        heading_one: "NO PAGUES HASTA"
+        heading_two: "QUE ENCUENTRES PEGA"
+        sub_heading: "Acuerdo de Ingresos Compartidos"
       content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
-        price_info:
-      button:
-        button_text: "APLICA"
+        price: "9% de tu sueldo"
+        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
         
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PART-TIME"
-        sub_heading: ""
+        heading_one: "PAGO DE CONTADO"
+        heading_two: "CON FINANCIAMIENTO"
+        sub_heading: "pregunta por nuestras becase, financiamientos y precios"
       content:
-        price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
-        price_info: ""
-      button:
-        button_text: "APLICA"
+        price: "?"
+        price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becase."
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -97,25 +95,23 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "FULL-TIME"
-        sub_heading: ""
+        heading_one: "NO PAGUES HASTA"
+        heading_two: "QUE ENCUENTRES PEGA"
+        sub_heading: "Acuerdo de Ingresos Compartidos"
       content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
-        price_info: ""
-      button:
-        button_text: "APLICA"
+        price: "9% de tu sueldo"
+        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PART-TIME"
-        sub_heading: ""
+        heading_one: "PAGO DE CONTADO"
+        heading_two: "CON FINANCIAMIENTO"
+        sub_heading: "pregunta por nuestras becase, financiamientos y precios"
       content:
-        price: "ay upfront and get a discount or ask for a 3 - 4 payment options"
-        price_info: ""
-      button:
-        button_text: "APLICA"
+        price: "?"
+        price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becase."
        
 active_campaign_location_slug: "los-cortijos-caracas"
 breathecode_location_slug: "el-nacional"

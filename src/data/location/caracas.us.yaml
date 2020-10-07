@@ -68,21 +68,23 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "FULL-TIME"
-        sub_heading: ""
+        heading_one: "PAY ONLY AFTER"
+        heading_two: "YOU GET A JOB"
+        sub_heading: "with the Income Sharing Agreement (ISA)"
       content:
-        price: "Pay upfront and get a discount or ask about additional financing options"
-        price_info:
+        price: "9% of Sallary"
+        price_info: "until fully paid, and only if you get the job"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PART-TIME"
-        sub_heading: ""
+        heading_one: "PAY UPFRONT"
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "ask for our financing and scollarships"
       content:
-        price: "Pay upfront and get a discount or ask about additional financing options"
-        price_info: ""
+        price: " "
+        price_info: " "
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -94,21 +96,23 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "FULL-TIME"
-        sub_heading: ""
+        heading_one: "PAY ONLY AFTER"
+        heading_two: "YOU GET A JOB"
+        sub_heading: "with the Income Sharing Agreement (ISA)"
       content:
-        price: "Pay upfront and get a discount or ask about additional financing options"
-        price_info: ""
+        price: "9% of Sallary"
+        price_info: "until fully paid, and only if you get the job"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PART-TIME"
-        sub_heading: ""
+        heading_one: "PAY UPFRONT"
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: " "
       content:
-        price: "Pay upfront and get a discount or ask about additional financing options"
-        price_info: ""
+        price: "?"
+        price_info: "please contact us for more information about prices, scolarships and financing options."
      
 active_campaign_location_slug: "los-cortijos-caracas"
 breathecode_location_slug: "el-nacional"
