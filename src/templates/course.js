@@ -104,15 +104,6 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" md="0px" />
     </WrapperImage>
 
-    <Wrapper margin="80px 0 0 0" m_sm="0">
-      <Title
-        size="10"
-        title={yml.credentials.heading}
-        paragraph={yml.credentials.paragraph}
-      />
-      <Credentials lang={data.allCredentialsYaml.edges} />
-    </Wrapper>
-
     {/* PROGRAM DETAILS */}
     <Wrapper >
       <Title

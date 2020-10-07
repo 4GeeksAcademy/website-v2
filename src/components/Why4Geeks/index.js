@@ -1,10 +1,16 @@
 import React from 'react';
 import {useStaticQuery, graphql} from "gatsby"
 import {Title, H4, Paragraph} from '../Heading'
-import {Column, Row, Divider} from '../Sections'
+import {Column, Row, Div} from '../Sections'
 import {Address, HandMoney, Laptop, Colors, StyledBackgroundSection} from '../Styling'
 import ReactPlayer from 'react-player'
 import Fragment from "../Fragment"
+
+const icons = {
+  job: Address,
+  finance: HandMoney,
+  support: Laptop
+}
 
 export default ({lang, playerHeight}) => {
   const data = useStaticQuery(graphql`
@@ -29,7 +35,7 @@ export default ({lang, playerHeight}) => {
                 }
               }
               alt
-              slug
+              icon
               video
             }
           }
@@ -42,8 +48,9 @@ export default ({lang, playerHeight}) => {
 
 return (<Fragment github="/components/geeks_vs_others">
     <Row height="auto" marginTop="50px">
-      {info.why.map((i, index) => (
-        <Column size="4" size_sm="12" key={index}>
+      {info.why.map((i, index) => {
+        const Icon = icons[i.icon];
+        return (<Column size="4" size_sm="12" key={index}>
           {i.video != "" ?
             <ReactPlayer
               className='react-player'
@@ -64,27 +71,27 @@ return (<Fragment github="/components/geeks_vs_others">
               className={`img-border`}
             ></StyledBackgroundSection>
           }
-          <Row align="around" marginTop="20px">
-            <Column size size="2" p_xs="0 5px 0 0" p_sm="0 5px 0 0" customRespSize respSize="2" t_align="right" alignSelf="center">
-              {(i.slug === "job-in-tech" || i.slug === "trabaja-en-tecnologia") && <Address width="32" color={Colors.yellow} fill={Colors.yellow} />}
-              {(i.slug === "finance-your-career" || i.slug === "financiamos-tu-carrera") && <HandMoney width="32" color={Colors.yellow} fill={Colors.yellow} />}
-              {(i.slug === "never-code-alone-again" || i.slug === "nunca-programes-solo-otra-vez") && <Laptop width="32" color={Colors.yellow} fill={Colors.yellow} />}
-            </Column>
-            <Column size size="8" p_xs="0" p_sm="0" customRespSize respSize="10" alignSelf="center" >
+          <Div position="relative" marginTop="20px" padding="10px 0">
+              <Icon width="32" 
+                style={{ position: "absolute" }} 
+                color={Colors.yellow} fill={Colors.yellow} 
+              />
               <H4
                 align="left"
+                align_sm="center"
+                width="100%"
+                margin="0 0 0 38px"
                 uppercase
                 fs_xs="20px"
                 fs_sm="24px"
                 fs_md="14px"
                 fs_lg="18px"
-                fs_xl="20px"
+                fontSize="20px"
               >{i.title}</H4>
-            </Column>
-          </Row>
-          <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{i.description}</Paragraph>
+          </Div>
+          <Paragraph color="gray" align="left" margin="10px 0" fontSize="16px">{i.description}</Paragraph>
         </Column>
-      ))}
+      )})}
     </Row>
   </Fragment>
   )

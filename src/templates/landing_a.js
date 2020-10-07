@@ -12,7 +12,7 @@ import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session.js'
 
 const Landing = (props) => {
-  const {session} = React.useContext(SessionContext);
+  const {session } = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   const city = session && session.location ? session.location.reliable ? session.location.city : "" : "Miami";
   const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
@@ -25,7 +25,7 @@ const Landing = (props) => {
     });
     setComponents({ ...yml, ..._components });
   },[yml]);
-  
+
   return (
     <>
       <Row className="d-sm-none">
@@ -97,6 +97,7 @@ const Landing = (props) => {
           <LeadForm style={{marginTop: "50px"}} heading="Request More Info." 
               formHandler={requestSyllabus}
               heading={yml.form.heading}
+              sendLabel={yml.form.button_label}
               redirect={yml.form.redirect}
               lang={pageContext.lang}
               fields={yml.form.fields}
@@ -140,18 +141,20 @@ const Landing = (props) => {
             lang={pageContext.lang}
             sendLabel={yml.header_data.button_label}
             data={{ 
-              course: { value: yml.meta_info.bc_slug, valid: true }
+              course: { value: yml.meta_info.bc_slug, valid: true },
+              utm_location: { value: yml.meta_info.utm_location, valid: true },
+              utm_course: { value: yml.meta_info.utm_course, valid: true },
             }}
           />
       </StyledBackgroundSection>
 
       {
         Object.keys(components)
-          .filter(name => landingSections[name] !== undefined || landingSections[components[name].layout] !== undefined)
-          .sort((a,b) => components[a].position > components[a].position ? -1 : 1)
+          .filter(name => components[name] && (landingSections[name] || landingSections[components[name].layout]))
+          .sort((a,b) => components[b].position > components[a].position ? -1 : 1)
           .map(name => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({ ...props, yml: components[name], session, city, course })
+            return landingSections[layout]({ ...props, yml: components[name], session, city, course, location: components.meta_info.utm_location })
           })
       }
     </>
@@ -171,9 +174,10 @@ export const query = graphql`
               utm_location
             }
             form{
-              header
+              heading
               redirect
               fields
+              button_label
             }
             features{
               marginTop
@@ -214,14 +218,19 @@ export const query = graphql`
               position
               layout
               image
-              heading
-              content
+              heading{
+                text
+                font_size
+              }
+              content{
+                text
+                font_size
+              }
             }
             header_data{
               tagline
               sub_heading
               image_filter
-              button_label
               image{
                 childImageSharp {
                   fluid(maxWidth: 1000){

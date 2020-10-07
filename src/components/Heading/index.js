@@ -132,6 +132,7 @@ font-style: normal;
   font-size: ${props => props.fs_md};
 }
 @media  ${Break.sm}{
+  text-align: ${props => props.align_sm};
   font-size: ${props => props.fs_sm};
 }
 @media ${Break.xs}{
@@ -369,9 +370,10 @@ H3.defaultProps = {
   fs_md: '2.5vw',
   fs_lg: '3vw',
   fs_xl: '2.5vw'
-
+  
 };
 H4.defaultProps = {
-  fs_xs: '5vw',
+  fontSize: '2vw',
+  fs_sm: '5vw',
   fontWeight: '400',
 };

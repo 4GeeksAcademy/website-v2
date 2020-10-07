@@ -21,9 +21,9 @@ const WhyPython = ({ heading, subheading, lang }) => {
                     url
                 }
                 technologies {
-                name
-                percentage
-                color
+                    name
+                    percentage
+                    color
                 }
           }
         }

@@ -298,7 +298,7 @@ export const initSession = async (locationsArray, seed={}) => {
     const locations = locByLanguage(locationsArray, languageToFilter);
     console.log("Locations", locations)
 
-    // remove undefineds from the seed utm's
+    // remove undefineds from the seed utm's to avoid overriding the originals with undefined
     Object.keys(utm).forEach(key => utm[key] === undefined && delete utm[key])
 
     if(location){

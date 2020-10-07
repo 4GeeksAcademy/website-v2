@@ -1,20 +1,20 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import Layout from '../global/Layout';
 import Why4Geeks from '../components/Why4Geeks';
 import GeeksVsOthers from '../components/GeeksVsOthers'
+import Badges from '../components/Badges'
+import News from '../components/News'
 import ChooseProgram from '../components/ChooseProgram'
 import JobsStatistics from '../components/JobsStatistics';
-import {H1, H2, H3, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowRight, StyledBackgroundSection} from '../components/Styling'
+import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
+import {Row, Column, Wrapper} from '../components/Sections'
+import {RoundImage, Colors, ArrowRight, StyledBackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
 import WhoIsHiring from '../components/WhoIsHiring';
 import AlumniProjects from '../components/AlumniProjects'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import { TestimonialsCarrousel } from '../components/Testimonials'
-import Events from '../components/Events'
 import WhyPython from '../components/WhyPython'
 import Loc from '../components/Loc'
 import {Link, navigate} from 'gatsby';
@@ -84,10 +84,12 @@ const Home = (props) => {
         </Column>
       </Row>
 
-      {/* CREDENTIALS CARDS */}
+      {/* BADGES AND NEWS CARDS */}
 
       <Wrapper>
-        <Credentials lang={data.allCredentialsYaml.edges} />
+        <Badges lang={pageContext.lang} />
+        <H4 margin="50px 0">{yml.news.heading}</H4>
+        <News lang={pageContext.lang} limit={yml.news.limit}  />
       </Wrapper>
 
       {/* WHY 4GEEKS SECTION */}
@@ -98,77 +100,14 @@ const Home = (props) => {
           variant="primary"
         />
         <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
+        <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       </Wrapper>
-
-      {/* JOBS STATISTICS SECTION */}
 
       <Wrapper margin="50px 0">
         <WhyPython lang={pageContext.lang} />
       </Wrapper>
 
-      {/* JOBS STATISTICS SECTION */}
 
-      <Wrapper>
-        <JobsStatistics lang={data.allJobsStatisticsYaml.edges} />
-      </Wrapper>
-
-      <Wrapper margin="30px">
-        <Row align="center" >
-          <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph
-              margin="5px 0"
-              color={Colors.gray}
-              fs_xs="10px"
-              fs_sm="12px"
-              fs_md="12px"
-              align="center">{yml.education.left_box.heading}
-            </Paragraph>
-            <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="Florida Education Logo"></Img>
-          </Column>
-          <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph
-              margin="5px 0"
-              color={Colors.gray}
-              fs_xs="10px"
-              fs_sm="12px"
-              fs_md="12px"
-              fs_lg="12px"
-              fs_xl="12px"
-              align="center">{yml.education.center_box.heading}
-            </Paragraph>
-            <Img className={`image`} fluid={yml.education.center_box.image.childImageSharp.fluid} alt="Newsweek Logo"></Img>
-          </Column>
-          <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph
-              margin="5px 0"
-              color={Colors.gray}
-              fs_xs="10px"
-              fs_sm="12px"
-              fs_md="12px"
-              fs_lg="12px"
-              fs_xl="12px"
-              align="center">{yml.education.right_box.heading}
-            </Paragraph>
-            <Img className={`image`} fluid={yml.education.right_box.image.childImageSharp.fluid} alt="Cnn Logo"></Img>
-          </Column>
-        </Row>
-        <Row>
-          <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
-          <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph
-
-              color={Colors.gray}
-              fs_xs="10px"
-              fs_sm="12px"
-              fs_md="12px"
-              fs_lg="12px"
-              fs_xl="12px"
-              align="center">2017 Report
-            </Paragraph>
-          </Column>
-          <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
-        </Row>
-      </Wrapper>
 
       {/* GEEKS VS OTHERS SECTION */}
 
@@ -348,7 +287,10 @@ export const query = graphql`
               }
            
             }
-            
+            news{
+              limit
+              heading
+            }
             geeks_vs_others{
                 heading
                 sub_heading
@@ -373,50 +315,6 @@ export const query = graphql`
                     
                   geek_force_heading
                   geek_pal_heading
-                }
-            }
-            education{
-                left_box{
-                    heading
-                    image {
-                      childImageSharp {
-                        fluid(maxWidth: 300){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                        fixed(width: 300, height: 60) {
-                          ...GatsbyImageSharpFixed
-                        }
-                      }
-                    }
-                    alt
-                }
-                center_box{
-                    heading
-                    image {
-                      childImageSharp {
-                        fluid(maxWidth: 300){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                        fixed(width: 300, height: 60) {
-                          ...GatsbyImageSharpFixed
-                        }
-                      }
-                    }
-                    alt
-                }
-                right_box{
-                    heading
-                    image {
-                      childImageSharp {
-                        fluid(maxWidth: 300){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                        fixed(width: 300, height: 60) {
-                          ...GatsbyImageSharpFixed
-                        }
-                      }
-                    }
-                    alt
                 }
             }
             locations{

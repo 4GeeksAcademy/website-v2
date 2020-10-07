@@ -40,6 +40,9 @@ const _fields = {
     email: { value: '', valid: false, required: true, type: 'email', place_holder: "Your email *", error: "Please specify a valid email" },
     phone: { value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone" },
     consent: { value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms" },
+    utm_language: { value: '', valid: true, required: true, type: 'hidden'},
+    utm_form: { value: '', valid: true, required: true, type: 'hidden'},
+    utm_location: { value: '', valid: true, required: true, type: 'hidden'},
 }
 
 const clean = (fields, data) => {
@@ -117,7 +120,7 @@ const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handl
             return ({ ..._, ...data, utm_url: { value: window.location.href, valid: true } })
         })
     },[data])
-    console.log("redirect", redirect)
+    // console.log("redirect", redirect)
     return <Form style={style} onSubmit={(e) => {
                 e.preventDefault();
 
@@ -156,7 +159,7 @@ const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handl
                     <Paragraph align="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>
                     <Row>
                         <Column size="12">
-                            {fields.map(f => {
+                            {fields.filter(f => formData[f].type !== 'hidden').map(f => {
                                 const _field = formData[f]
                                 return <Input
                                     type={_field.type} className="form-control" placeholder={_field.place_holder}

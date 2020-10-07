@@ -1,12 +1,12 @@
 meta_info:
     slug: calendario
-    title: "Sobre la Academia"
-    description: "Acerca de 4Geeks Academy"
-    image: ""
-    keywords: ""
+    title: "Próximas fechas de programs, cohortes, talleres y eventos en 4Geeks Academy"
+    description: "Conoce las próximas fechas: Cursos, Programas, Talleres y Eventos. Todos enfocado especificamente para la comunidad de desarrolladores."
+    image: "/images/seo/calendar-es.png"
+    keywords: "4Geeks Academy Eventos, 4Geeks Academy Proximas Fechas, 4Geeks Academy Talleres, 4Geeks Academy Cursos"
     redirects: ["/calendario"]
 
 header:
     tagline: Próximos programas y Eventos de 4GEEKS ACADEMY
-    sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+    sub_heading: "Ajusta los filtros a los eventos of cursos que más te interesan"
     image: "../../../static/images/bg/4Geeks-events-bg.jpg"

@@ -244,9 +244,9 @@ const Location = ({data, pageContext, yml}) => {
                                 </Paragraph>
                             </Div>
                             <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center">
-                                <Link to={yml.button.apply_button_link}><Button color={Colors.red} textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
+                                <Link to={yml.button.apply_button_link}><Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
                                 &nbsp;
-                                <Link to={`/${pageContext.lang}/${cohort.certificate.slug}`}><Button color={Colors.blue} textColor={Colors.white}>{yml.button.cohort_more_details_text}</Button></Link>
+                                <Link to={`/${pageContext.lang}/${cohort.certificate.slug}`}><Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{yml.button.cohort_more_details_text}</Button></Link>
                             </Div>
                         </Card>
                     </Column>

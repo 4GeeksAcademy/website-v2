@@ -18,7 +18,8 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  header: "Solicita más información"
+  heading: "Solicita más información"
+  button_label: Enviar
   redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
@@ -27,7 +28,6 @@ header_data:
   sub_heading: " "
   image: "../../../static/images/bg/main-bg.jpg"
   image_filter: brightness(0.4)
-  button_label: Pide más información
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
@@ -80,8 +80,13 @@ components:
     layout: two_column_right 
     position: 7
     image: "/images/projects/ims.jpg"
-    heading: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
-    content: " "
+    heading: 
+      text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    content: 
+      text: " "
+      font_size: ["16px"]
 
 # why_python:
 #   position: 7

@@ -14,7 +14,7 @@ const Pricing = (props) => {
   const {data, pageContext, yml} = props;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
-  console.log("data", data);
+  console.log("yml", yml);
   let location = null;
   if(session && session.location){
 
@@ -122,8 +122,8 @@ const Pricing = (props) => {
       >
           <Title
             size="10"
-            title={yml.financials.tagline}
-            paragraph={yml.financials.sub_heading}
+            title={yml.ecosystem.heading}
+            paragraph={yml.ecosystem.sub_heading}
             paragraphColor="black"
             variant="primary"
           />

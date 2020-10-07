@@ -18,7 +18,8 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  header: "Request more info."
+  heading: "Request more info."
+  button_label: SEND
   redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
@@ -27,7 +28,6 @@ header_data:
   sub_heading: in only 16 weeks (part-time)
   image: "../../../static/images/bg/main-bg.jpg"
   image_filter: brightness(0.4)
-  button_label: Pide más información
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
@@ -78,11 +78,15 @@ who_is_hiring:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: some_id
-    layout: two_column_left 
-    position: 8
+    layout: two_column_right 
+    position: 7
     image: "/images/projects/ims.jpg"
-    heading: "Some heading"
-    content: "With some description"
+    heading: 
+      text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+      font_size: ["24px"]
+    content: 
+      text: " "
+      font_size: ["16px"]
 
 why_python:
   position: 7

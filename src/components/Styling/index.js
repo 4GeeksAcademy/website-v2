@@ -284,70 +284,63 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
 export const Small = styled.small`
     display: ${props => props.display};
 `
-const SmartButton = ({children, colorHover, alignItems, textColor, borderRadius, outline, minWidth, maxWidth, ...rest}) => <button {...rest}>{children}</button>;
+
+const getVariant = (props) => ({
+    "true": {
+        border: `1px solid ${props.color}`,
+        background: "initial",
+        color: props.color,
+    },
+    "false":{
+        border: "none",
+        background: props.color,
+        color: props.textColor || "white"
+    }
+})
+const SmartButton = ({children, onClick, ...rest}) => {
+    const styles = getVariant(rest)[rest.outline];
+    return <button onClick={(e) => onClick(e)} className={rest.className} style={{ ...rest.style, ...styles}} >{children}</button>;
+}
 export const Button = styled(SmartButton)`
-    ${props => props.outline
-        ?
-        css`
-            border: 1px solid ${props => props.color}; 
-            color:${props => props.color};
-            background-color: white;
-            font-family: lato, sans-serif;
-            border-radius: ${props => props.borderRadius};
-            cursor: pointer;
-            width: ${props => props.width};
-            text-align: center;
-            vertical-align: middle;
-            display: ${props => props.display};
-            position: ${props => props.position};
-            padding: ${props => props.padding};
-            font-size: .75rem;
-            line-height: 1.5;
-            margin: ${props => props.margin};
-            font-weight: 500;
-            transform: ${props => props.transform};
-        `
-        :
-        css`
-            font-family: 'Lato-Bold', sans-serif;
-            font-size: ${props => props.fontSize};
-            font-weight: 500;
-            letter-spacing: 0px;
-            line-height: 1.5;
-            position: ${props => props.position};
-            border: ${props => props.border};
-            border-radius: ${props => props.borderRadius};
-            background-color: ${props => props.color};
-            color: ${props => props.textColor};
-            cursor: pointer;
-            width: ${props => props.width};
-            max-width: ${props => props.maxWidth};
-            min-width: ${props => props.minWidth};
-            text-align: center;
-            vertical-align: middle;
-            display: ${props => props.display};
-            align-items: ${props => props.alignItems};
-            justify-content: ${props => props.justifyContent};
-            padding: ${props => props.padding};
-            margin: ${props => props.margin};
-            box-shadow: ${props => props.shadow};
-            transform: ${props => props.transform};
-            ${props => props.colorHover &&
-                css`&:hover {
-                    background-color: ${props => props.colorHover};
-                }
-            `}  
-            @media ${Break.lg}{
-                font-size: ${props => props.fs_lg};
-            }
-            @media ${Break.md}{
-                font-size: ${props => props.fs_md};
-            }
-            @media ${Break.sm}{
-                margin: ${props => props.m_sm};
-                font-size: ${props => props.fs_sm};
-            }
-        `}  
+    font-size: ${props => props.fontSize || '.75rem'};
+    font-family: 'Lato-Bold', sans-serif;
+    font-weight: 500;
+    margin: ${props => props.margin};
+    border-radius: ${props => props.borderRadius};
+    position: ${props => props.position};
+    display: ${props => props.display};
+    padding: ${props => props.padding};
+    transform: ${props => props.transform};
+
+    color: ${props => props.border};
+    background: ${props => props.background};
+    border: ${props => props.color};
+
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0px;
+    line-height: 1.5;
+    vertical-align: middle;
+    width: ${props => props.width};
+    max-width: ${props => props.maxWidth};
+    min-width: ${props => props.minWidth};
+    align-items: ${props => props.alignItems};
+    justify-content: ${props => props.justifyContent};
+    box-shadow: ${props => props.shadow};
+
+    &:hover {
+        background-color: ${props => props.colorHover || props.color};
+    }
+    @media ${Break.lg}{
+        font-size: ${props => props.fs_lg};
+    }
+    @media ${Break.md}{
+        font-size: ${props => props.fs_md};
+    }
+    @media ${Break.sm}{
+        margin: ${props => props.m_sm};
+        font-size: ${props => props.fs_sm};
+    }
 `;
 Button.defaultProps = {
     padding: '10px 30px',
@@ -356,6 +349,7 @@ Button.defaultProps = {
     type: 'button',
     colorHover: null,
     borderRadius: '50rem',
+    outline: false,
     display: 'inline-block'
 };
 

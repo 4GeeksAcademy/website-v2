@@ -4,13 +4,13 @@ import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading
 import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage, StyledBackgroundSection} from '../components/Styling'
 import Mentors from '../components/Mentors'
-import Events from '../components/Events'
 import {Charts} from '../components/Chart'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import WhoIsHiring from '../components/WhoIsHiring';
 import RecentPosts from '../components/RecentPosts'
 import Link from 'gatsby-link'
+import Img from "gatsby-image"
 
 const Why = (props) => {
     const {data, pageContext, yml} = props;
@@ -41,6 +41,65 @@ const Why = (props) => {
                 />
                 <Divider height="150px" md="0" />
             </WrapperImage>
+
+            <Wrapper margin="30px">
+                <Row align="center" >
+                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                    <Paragraph
+                    margin="5px 0"
+                    color={Colors.gray}
+                    fs_xs="10px"
+                    fs_sm="12px"
+                    fs_md="12px"
+                    align="center">{yml.education.left_box.heading}
+                    </Paragraph>
+                    <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="Florida Education Logo"></Img>
+                </Column>
+                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                    <Paragraph
+                    margin="5px 0"
+                    color={Colors.gray}
+                    fs_xs="10px"
+                    fs_sm="12px"
+                    fs_md="12px"
+                    fs_lg="12px"
+                    fs_xl="12px"
+                    align="center">{yml.education.center_box.heading}
+                    </Paragraph>
+                    <Img className={`image`} fluid={yml.education.center_box.image.childImageSharp.fluid} alt="Newsweek Logo"></Img>
+                </Column>
+                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                    <Paragraph
+                    margin="5px 0"
+                    color={Colors.gray}
+                    fs_xs="10px"
+                    fs_sm="12px"
+                    fs_md="12px"
+                    fs_lg="12px"
+                    fs_xl="12px"
+                    align="center">{yml.education.right_box.heading}
+                    </Paragraph>
+                    <Img className={`image`} fluid={yml.education.right_box.image.childImageSharp.fluid} alt="Cnn Logo"></Img>
+                </Column>
+                </Row>
+                <Row>
+                <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
+                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                    <Paragraph
+
+                    color={Colors.gray}
+                    fs_xs="10px"
+                    fs_sm="12px"
+                    fs_md="12px"
+                    fs_lg="12px"
+                    fs_xl="12px"
+                    align="center">2017 Report
+                    </Paragraph>
+                </Column>
+                <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
+                </Row>
+            </Wrapper>
+            
             <Wrapper margin="0 0 50px 0">
                 <Credentials transform="translateY(-100px)" lang={data.allCredentialsYaml.edges} />
             </Wrapper>
@@ -245,7 +304,7 @@ const Why = (props) => {
                     paragraphColor={Colors.gray}
                     margin={"auto"}
                     variant="primary"
-                    maxWidth="350px"
+                    maxWidth="700px"
                 />
                 <Row align='center'>
                     <Column size="3" size_sm='12' customRespSize respSize="12" padding="20px 0">
@@ -357,6 +416,50 @@ export const query = graphql`
                     }
                   } 
                 alt
+            }
+            education{
+                left_box{
+                    heading
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 300){
+                          ...GatsbyImageSharpFluid_withWebp
+                        }
+                        fixed(width: 300, height: 60) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
+                    alt
+                }
+                center_box{
+                    heading
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 300){
+                          ...GatsbyImageSharpFluid_withWebp
+                        }
+                        fixed(width: 300, height: 60) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
+                    alt
+                }
+                right_box{
+                    heading
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 300){
+                          ...GatsbyImageSharpFluid_withWebp
+                        }
+                        fixed(width: 300, height: 60) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
+                    alt
+                }
             }
             outcomes{
                 heading

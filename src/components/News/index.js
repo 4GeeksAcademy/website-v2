@@ -10,7 +10,7 @@ const Helper = styled.span`
   height: 100%;
   vertical-align: middle;
 `
-export default ({ location, lang }) => {
+export default ({ location, lang, limit }) => {
   const data = useStaticQuery(graphql`
     query myQueryNews{
       allNewsYaml{
@@ -38,16 +38,18 @@ export default ({ location, lang }) => {
     `)
 
   const languageNews = data.allNewsYaml.edges.find(({ node }) => node.fields.lang === lang);
-  const locationNews = typeof(languageNews) !== "object" ? [] : languageNews.node.news.filter(n => n.location === "all" || n.location.includes(location));
+  let locationNews = typeof(languageNews) !== "object" ? [] : languageNews.node.news.filter(n => n.location === "all" || !location || n.location.includes(location));
+  if(limit) locationNews = locationNews.slice(0,limit)
 
   if(locationNews.length === 0){
-    console.error( `No news to display for location ${location}`, languageNews)
+    console.error( `No news to display for location `, location, locationNews)
     return null;
   } 
+  console.error("location", location)
   return (
       <Row github="/components/news">
         {locationNews.map((l,i) => (
-          <Column margin="auto" style={{ whiteSpace: "nowrap", height: "60px" }} key={i} size="2" size_md="3" size_sm="4">
+          <Column margin="auto" style={{ whiteSpace: "nowrap", height: "60px" }} key={i} size="2" size_md="3">
             <a href={l.url} target="_blank" rel="noopener noreferrer nofollow">
               <Img 
                 style={{ height: "100%" }} 

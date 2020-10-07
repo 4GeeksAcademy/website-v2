@@ -11,20 +11,9 @@ header_data:
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
   image: "../../../static/images/bg/main-bg.jpg"
 
-## EDUCATION SECTION
-education:
-  left_box:
-    heading: "LICENSED BY"
-    image: "../../../static/images/florida-logo.png"
-    alt: ""
-  center_box:
-    heading: "TOP CODING BOOTCAMP"
-    image: "../../../static/images/news/newsweek.png"
-    alt: ""
-  right_box:
-    heading: "As Reviewed in"
-    image: "../../../static/images/Group.png"
-    alt: "CNN and BCC Logo"
+news:
+  heading: "Read about us this coding bootcamp in the news..."
+  limit: 4
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

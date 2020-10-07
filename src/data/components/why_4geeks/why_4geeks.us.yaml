@@ -12,21 +12,21 @@ why:
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    slug: job-in-tech
+    icon: job
   - title: "We finance your career"
     description: "Don't pay anything from day one until you finally get a coding job with our Income Sharing Agreement(ISA)."
     image: "../../../../static/images/why2.jpg"
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=sJrH4f7Df8g" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    slug: finance-your-career
+    icon: finance
   - title: "Never code alone again"
     description: "Limitless and forever: Mentorships, exercises, permanent chatroom, real classrooms, even after you get your job."
     image: "../../../../static/images/why3.jpg"
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=mYgJ6cOxgJs" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    slug: never-code-alone-again
+    icon: support
 ## ***************************
 ## BELOW SOME AVAILABLE VIDEOS
 ## ***************************

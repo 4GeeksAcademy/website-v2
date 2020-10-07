@@ -16,21 +16,6 @@ why_4geeks:
   heading: Por qué 4Geeks
   sub_heading: ""
 
-## EDUCATION SECTION
-education:
-  left_box:
-    heading: "CERTIFICADO POR"
-    image: "../../../static/images/florida-logo.png"
-    alt: ""
-  center_box:
-    heading: "TOP CODING SCHOOL"
-    image: "../../../static/images/news/newsweek.png"
-    alt: ""
-  right_box:
-    heading: "4GEEKS EN LOS MEDIOS"
-    image: "../../../static/images/Group.png"
-    alt: "CNN and BCC Logo"
-
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "¿QUÉ HACE QUE ESTE PROGRAMA DESTAQUE?"

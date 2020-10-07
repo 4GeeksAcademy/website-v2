@@ -23,31 +23,38 @@ const Side = ({ image, heading, content }) => {
             src={image}
         />
     } 
-    else return <>
-      <H2 align="left" margin="30px 0 20px 0" type="h1">{heading}</H2>
-      <H5 align="left" fontSize="20px" fontHeight="30px">{content}</H5>
+    
+    const [ h_xl, h_lg, h_md, h_sm, h_xs ] = heading.font_size;
+    const [ c_xl, c_lg, c_md, c_sm, c_xs ] = content.font_size;
+    return <>
+      <H2 align="left" 
+        fontSize={h_xl || "20px"}  fs_xl={h_xl}  fs_md={h_md} fs_sm={h_sm} fs_xs={h_xs} 
+        margin="30px 0 20px 0" type="h1">{heading.text}</H2>
+      <H5 align="left" 
+        fontSize={c_xl || "16px"} fs_sm={c_sm} fs_md={c_md} fs_sm={c_sm} fs_xs={c_xs} 
+        fontHeight="30px">{content.text}</H5>
     </>
 }
 export const TwoColumn = ({ left, right }) => {
     return <Row m_sm="0px 0px 100px 0">
-    <Column size="5" size_sm="12" height="300px" align_sm="center">
+    <Column size="6" size_sm="12" height="300px" align_sm="center">
         <Side {...left} />
     </Column>
-    <Column size="7" size_sm="12">
+    <Column size="6" size_sm="12">
         <Side {...right} />
     </Column>
   </Row>
 }
 
 export const landingSections = {
-    in_the_news: ({ session, pageContext, yml, city, course }) => <Wrapper>
-    <H4 align="center" fontSize="18px" color={Colors.darkGray} 
-        margin="20px 0px 10px 0px" 
-        m_sm="20px auto" 
-        maxWidth="350px"
-    >{yml.heading}
-    </H4>
-    <News location={session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
+    in_the_news: ({ session, pageContext, yml, city, course, location }) => <Wrapper>
+        <H4 align="center" fontSize="18px" color={Colors.darkGray} 
+            margin="20px 0px 10px 0px" 
+            m_sm="20px auto" 
+            maxWidth="350px"
+        >{yml.heading}
+        </H4>
+        <News location={location ? location : session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
     </Wrapper>,
     geeks_vs_others: ({ session, pageContext, yml, city, course }) => <Wrapper margin="100px">
     <Title
