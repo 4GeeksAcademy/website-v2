@@ -1,0 +1,36 @@
+
+messages:
+  error: "There are some errors in your form"
+  success: "Thank you. Check your email! 😁"
+  loading: "Loading..."
+form_fields:
+  - name: first_name
+    required: true
+    type: 'text'
+    place_holder: "First name *"
+    error: "Please specify a valid first name"
+  - name: full_name
+    required: true
+    type: 'text'
+    place_holder: "Full name *"
+    error: "Please specify a valid full name"
+  - name: last_name
+    required: false
+    type: 'text'
+    place_holder: "Last name"
+    error: "Please specify a valid last name"
+  - name: email
+    required: true
+    type: 'email'
+    place_holder: "Your email *"
+    error: "Please specify a valid email"
+  - name: phone
+    required: true
+    type: 'phone'
+    place_holder: "Phone number *"
+    error: "Please specify a valid phone"
+  - name: consent
+    required: true
+    type: 'text'
+    place_holder: ""
+    error: "You need to accept the privacy terms"

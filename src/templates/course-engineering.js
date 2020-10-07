@@ -103,10 +103,14 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       margin="100px"
       border="top">
+      <Title
+          size="10"
+          marginTop="40px"
+          title={yml.potential_companies.tagline}
+          paragraph={yml.potential_companies.sub_heading}
+          variant="primary"
+      />
       <WhoIsHiring
-        margin="50px"
-        tagline={yml.potential_companies.tagline}
-        subheading={yml.potential_companies.sub_heading}
         images={yml.potential_companies.companies}
       />
     </Wrapper>

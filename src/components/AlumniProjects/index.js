@@ -159,7 +159,6 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                         light={item.project_image}
                                         controls={true}
                                         url={item.project_video}
-                                        minHeight="300px"
                                         width='100%'
                                         height='100%'
                                     /></Column>}

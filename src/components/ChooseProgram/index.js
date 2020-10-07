@@ -76,7 +76,10 @@ const ChooseProgram = (props) => {
                             <Button 
                                 key={index}
                                 colorHover={Colors.lightBlue}
-                                onClick={() => navigate(item.link)} 
+                                onClick={() => {
+                                    if(item.location_bc_slug && props.onLocationChange) props.onLocationChange(item.location_bc_slug)
+                                    navigate(item.link)
+                                }} 
                                 textColor={Colors.gray} 
                                 fontSize={"16px"}
                                 borderRadius=".75rem" padding="10px"

@@ -43,8 +43,9 @@ const WhyPython = ({ heading, subheading, lang }) => {
                 />
                 <table style={{ width: "100%", height: "70px", verticalAlign: "middle" }}>
                     <tr>
-                        {translations.technologies.map(t => 
-                            <td style={{ 
+                        {translations.technologies.map((t,i) => 
+                            <td key={i}
+                                style={{ 
                                 width: t.percentage+"%",
                                 backgroundColor: t.color,
                                 textAlign: "center",

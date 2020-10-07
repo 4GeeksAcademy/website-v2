@@ -424,6 +424,7 @@ export const query = graphql`
             programs{
                 text
                 link
+                location_bc_slug
                 schedule
             }
             open_button_text

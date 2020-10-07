@@ -11,6 +11,7 @@ import {useStaticQuery, graphql, navigate} from 'gatsby';
 const formIsValid = (formData = null) => {
     if (!formData) return null;
     for (let key in formData) {
+        if(formData[key].value === "" && formData[key].required === false) continue;
         if (!formData[key].valid) return false;
     }
     return true;
@@ -23,13 +24,22 @@ const Form = styled.form`
     max-width: 600px;
 `;
 
+const langs = {
+    us: {
+        "First name *": "First name *",
+        "Full name *": "First name *",
+        "Last name *": "First name *",
+        "Your email *": "First name *",
+        "Phone number": "First name *",
+    }
+}
 const _fields = {
-    first_name: { value: '', valid: false, required: true, type: 'text', ph: "First name *", error: "Please specify a valid first name" },
-    full_name: { value: '', valid: false, required: true, type: 'text', ph: "Full name *", error: "Please specify a valid full name" },
-    last_name: { value: '', valid: false, required: false, type: 'text', ph: "Last name", error: "Please specify a valid last name" },
-    email: { value: '', valid: false, required: true, type: 'email', ph: "Your email *", error: "Please specify a valid email" },
-    phone: { value: '', valid: false, required: true, type: 'phone', ph: "Phone number", error: "Please specify a valid phone" },
-    consent: { value: true, valid: true, required: true, type: 'text', ph: "", error: "You need to accept the privacy terms" },
+    first_name: { value: '', valid: false, required: true, type: 'text', place_holder: "First name *", error: "Please specify a valid first name" },
+    full_name: { value: '', valid: false, required: true, type: 'text', place_holder: "Full name *", error: "Please specify a valid full name" },
+    last_name: { value: '', valid: false, required: false, type: 'text', place_holder: "Last name", error: "Please specify a valid last name" },
+    email: { value: '', valid: false, required: true, type: 'email', place_holder: "Your email *", error: "Please specify a valid email" },
+    phone: { value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone" },
+    consent: { value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms" },
 }
 
 const clean = (fields, data) => {
@@ -47,7 +57,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({fields, thankyou, heading, formHandler, data, handleClose, style, sendLabel, lang, motivation}) => {
+const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation}) => {
     const _query = useStaticQuery(graphql`
     query LeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -64,40 +74,76 @@ const LeadForm = ({fields, thankyou, heading, formHandler, data, handleClose, st
                 }
             }
         }
+        allLeadFormYaml{
+          edges{
+                node{
+                    fields{
+                        lang
+                    }
+                    messages{
+                        loading
+                        success
+                        error
+                    }
+                    form_fields{
+                        name
+                        required
+                        type
+                        place_holder
+                        error
+                    }
+                }
+            }
+        }
     }
     `)
 
-    let yml = _query.allPageYaml.edges.find(({ node }) => node.fields.lang === lang);
-    if(yml) yml = yml.node;
+    let page = _query.allPageYaml.edges.find(({ node }) => node.fields.lang === lang);
+    let form = _query.allLeadFormYaml.edges.find(({ node }) => node.fields.lang === lang);
+    let yml = { ...page.node, ...form.node };
 
-    const [formStatus, setFormStatus] = useState({ status: "idle", msg: "Resquest" });
+    const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
     const [formData, setVal] = useState(_fields);
     const { session } = useContext(SessionContext);
     React.useEffect(() => {
-        setVal(_data => ({ ..._data, ...data, utm_url: { value: window.location.href, valid: true } }))
+        setVal(_data => {
+            const _ = Object.keys(_data).reduce((total, key) => {
+                if(_data[key] !== undefined){
+                    const field = yml.form_fields.find(f => f.name === key);
+                    return { ...total, [key]: {..._data[key], ...field }};
+                }
+            },{}) 
+            
+            return ({ ..._, ...data, utm_url: { value: window.location.href, valid: true } })
+        })
     },[data])
+    console.log("redirect", redirect)
     return <Form style={style} onSubmit={(e) => {
                 e.preventDefault();
 
-                if(formStatus.status === "error") setFormStatus({ status: "idle", msg: "Resquest" })
+                if(formStatus.status === "error") setFormStatus({ status: "idle", msg: "" })
                     
                 const cleanedData = clean(fields, formData);
                 if (!formIsValid(cleanedData)){
-                    setFormStatus({ status: "error", msg: "There are some errors in your form" });
+                    setFormStatus({ status: "error", msg: yml.messages.error });
                 } 
                 else {
-                    setFormStatus({ status: "loading", msg: "Loading..." });
+                    setFormStatus({ status: "loading", msg: yml.messages.loading });
                     formHandler(cleanedData, session)
                         .then(data => {
-                            if (data.error !== false && data.error !== undefined) {
-                                setFormStatus({ status: "error", msg: "Fix errors" });
+                            if (data && data.error !== false && data.error !== undefined) {
+                                setFormStatus({ status: "error", msg: data.error });
                             }
                             else {
-                                setFormStatus({ status: "thank-you", msg: "Thank you. Check your email! 😁" });
+                                if(redirect && redirect !== ""){
+                                    if(redirect.indexOf("http") > -1) window.location.href = redirect;
+                                    else navigate(redirect);
+                                }
+                                else setFormStatus({ status: "thank-you", msg: yml.messages.success });
                             }
                         })
                         .catch(error => {
-                            console.log("error", error);
+                            console.error("error", error);
                             setFormStatus({ status: "error", msg: error.message || error });
                         })
                 }
@@ -111,18 +157,18 @@ const LeadForm = ({fields, thankyou, heading, formHandler, data, handleClose, st
                     <Row>
                         <Column size="12">
                             {fields.map(f => {
-                                const meta = _fields[f];
+                                const _field = formData[f]
                                 return <Input
-                                    type={meta.type} className="form-control" placeholder={meta.ph}
+                                    type={_field.type} className="form-control" placeholder={_field.place_holder}
                                     onChange={(value,valid) => {
-                                        setVal({ ...formData, [f]: { value,valid } });
+                                        setVal({ ...formData, [f]: { ..._field, value, valid } });
                                         if(formStatus.status === "error"){
                                             setFormStatus({ status: "idle", msg: "Request" })
                                         }
                                     }}
-                                    value={formData[f].value}
-                                    errorMsg={meta.error}
-                                    required={meta.required}
+                                    value={_field.value}
+                                    errorMsg={_field.error}
+                                    required={_field.required}
                                     on
                                 />    
                             })}
@@ -161,6 +207,7 @@ const LeadForm = ({fields, thankyou, heading, formHandler, data, handleClose, st
 LeadForm.propTypes = {
     heading: PropTypes.string,
     sendLabel: PropTypes.string,
+    redirect: PropTypes.string,
     fields: PropTypes.array,
     formHandler: PropTypes.func,
     handleClose: PropTypes.func
@@ -169,6 +216,7 @@ LeadForm.defaultProps = {
     heading: "",
     sendLabel: "SEND",
     formHandler: null,
+    redirect: null,
     handleClose: null,
     data: {},
     fields: ['full_name', 'email'],

@@ -1,5 +1,5 @@
 meta_info:
-  slug: example # <--- URL 4geeksacademy.com/us/landing/example
+  slug: impulsa-tu-carrera # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
   title: ""
@@ -18,13 +18,13 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  header: "Request more info."
+  header: "Solicita más información"
   redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Aprende a programar
-  sub_heading: in only 16 weeks (part-time)
+  sub_heading: " "
   image: "../../../static/images/bg/main-bg.jpg"
   image_filter: brightness(0.4)
   button_label: Pide más información
@@ -47,47 +47,46 @@ in_the_news:
   position: 1
   heading: "4Geeks en los medios"
 
-why_4geeks:
-  position: 2
-  heading: "Porqué 4Geeks"
-  sub_heading: "Porque somos los mejores"
-
 geeks_vs_others:
-  position: 3
+  position: 2
   heading: "¿Qué hace a 4Geeks Academy exitoso?"
   paragraph: ""
   total_rows: 5
 
-program_details:
-  position: 4
-  heading: "Lo que aprenderás"
-  sub_heading: "Las tecnologias más buscadas en el mercado laboral"
-
-alumni_projects:
-  position: 5
-  heading: "Alumnos"
-  sub_heading: "Lo que aprenderás"
+  why_4geeks:
+  position: 3
+  heading: "Porqué 4Geeks"
+  sub_heading: "Porque somos los mejores"
 
 who_is_hiring:
-  position: 6
+  position: 4
   limit: 4
-  heading: "Who is hiring"
-  sub_heading: "These comanies are hiring"
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
 
+program_details:
+  position: 5
+  heading: "Lo que aprenderás"
+  sub_heading: "Tecnologías y programa de estudios"
+
+alumni_projects:
+  position: 6
+  heading: "Así podría ser tu proyecto final"
+  sub_heading: "Lo que desarrollarás"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: some_id
-    layout: two_column_left 
-    position: 8
+    layout: two_column_right 
+    position: 7
     image: "/images/projects/ims.jpg"
-    heading: "Some heading"
-    content: "With some description"
+    heading: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+    content: " "
 
-why_python:
-  position: 7
-  heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
-  sub_heading: " " # optional or set to white space to hide
+# why_python:
+#   position: 7
+#   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
+#   sub_heading: " " # optional or set to white space to hide
 
 testimonial:
   position: 8

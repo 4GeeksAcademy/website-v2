@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Column, Row, Divider, Wrapper, WrapperImage} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span, StyledBackgroundSection} from '../components/Styling'
-import Testimonials from '../components/Testimonials'
+import { TestimonialsCarrousel } from '../components/Testimonials'
 import BaseRender from './_baseRender'
 
 
@@ -114,7 +114,7 @@ const GeekPal = (props) => {
       </Wrapper>
       <Divider height="50px" />
       <Wrapper >
-        <Testimonials lang={data.allTestimonialsYaml.edges} />
+        <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
       </Wrapper>
       <Divider height="100px" />
     </>

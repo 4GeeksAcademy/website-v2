@@ -13,16 +13,17 @@ import WhoIsHiring from '../components/WhoIsHiring';
 import AlumniProjects from '../components/AlumniProjects'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
-import Testimonials from '../components/Testimonials'
+import { TestimonialsCarrousel } from '../components/Testimonials'
 import Events from '../components/Events'
 import WhyPython from '../components/WhyPython'
 import Loc from '../components/Loc'
 import {Link, navigate} from 'gatsby';
 import {SessionContext} from '../session.js'
 import Img from "gatsby-image"
+import { SentimentDissatisfiedOutlined } from '@material-ui/icons';
 
 const Home = (props) => {
-  const {session} = React.useContext(SessionContext);
+  const {session, setLocation } = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
   const city = session && session.location ? session.location.reliable ? session.location.city : "" : "Miami";
@@ -55,6 +56,7 @@ const Home = (props) => {
           <ChooseProgram
             left="15px"
             top="40px"
+            onLocationChange={(slug) => setLocation(slug)}
             programs={data.allChooseProgramYaml.edges[0].node.programs}
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
             closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
@@ -263,10 +265,16 @@ const Home = (props) => {
         right={true}
         background={Colors.lightGray}
         border="top">
+        <Title
+            size="10"
+            marginTop="40px"
+            title={hiring.partners.tagline}
+            paragraph={hiring.partners.sub_heading}
+            paragraphColor="black"
+            variant="primary"
+        />
         <WhoIsHiring
           margin="50px"
-          tagline={hiring.partners.tagline}
-          subheading={hiring.partners.sub_heading}
           images={hiring.partners.images}
           footerTagline={hiring.partners.footer_tagline}
           footerLink={hiring.partners.footer_link}
@@ -309,7 +317,7 @@ const Home = (props) => {
           maxWidth="66%"
         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
         />
-        <Testimonials lang={data.allTestimonialsYaml.edges} />
+        <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
       </Wrapper>
 
     </>
@@ -471,7 +479,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
               }
@@ -485,7 +492,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -501,7 +507,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -517,7 +522,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -657,6 +661,7 @@ export const query = graphql`
               node {
                 programs{
                     text
+                    location_bc_slug
                     link
                     schedule
                 }

@@ -120,11 +120,15 @@ const Pricing = (props) => {
         background={Colors.lightGray}
         border="top"
       >
-        <Divider height="20px" />
+          <Title
+            size="10"
+            title={yml.financials.tagline}
+            paragraph={yml.financials.sub_heading}
+            paragraphColor="black"
+            variant="primary"
+          />
         <WhoIsHiring
           margin="50px"
-          tagline={hiring.financials.tagline}
-          subheading={hiring.financials.sub_heading}
           images={hiring.financials.images}
           footerTagline={hiring.financials.footer_tagline}
           footerLink={hiring.financials.footer_link}
@@ -372,7 +376,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -388,7 +391,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -404,7 +406,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -420,7 +421,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline

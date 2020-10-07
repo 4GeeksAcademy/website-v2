@@ -1,35 +1,31 @@
-import React from 'react';
-import {graphql} from 'gatsby';
-import Why4Geeks from '../components/Why4Geeks';
-import News from '../components/News'
-import GeeksVsOthers from '../components/GeeksVsOthers'
-import ChooseProgram from '../components/ChooseProgram'
-import JobsStatistics from '../components/JobsStatistics';
-import WhyPython from '../components/WhyPython'
+import React, { useEffect } from 'react';
+import {graphql, navigate} from 'gatsby';
+import { landingSections } from '../components/landing';
+
 import LeadForm from "../components/LeadForm/index.js";
-import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowRight, StyledBackgroundSection} from '../components/Styling'
-import {Card} from '../components/Card'
-import WhoIsHiring from '../components/WhoIsHiring';
-import AlumniProjects from '../components/AlumniProjects'
-import ProgramDetails from '../components/ProgramDetails'
-import ProgramDetailsMobile from '../components/ProgramDetailsMobile'
+import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
+import { Row, Column, Divider, Wrapper} from '../components/Sections'
+import {Colors, StyledBackgroundSection} from '../components/Styling'
+
 import BaseRender from './_baseRender'
-import Testimonials from '../components/Testimonials'
-import Loc from '../components/Loc'
-import {Link, navigate} from 'gatsby';
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session.js'
-import Img from "gatsby-image"
 
 const Landing = (props) => {
   const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   const city = session && session.location ? session.location.reliable ? session.location.city : "" : "Miami";
   const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
+  const [ components, setComponents ] = React.useState({});
 
-  console.log("yml", yml)
+  useEffect(() => {
+    let _components = {};
+    if(yml.components) yml.components.forEach(({ name, ...rest }) => {
+      _components[name] = rest;
+    });
+    setComponents({ ...yml, ..._components });
+  },[yml]);
+  
   return (
     <>
       <Row className="d-sm-none">
@@ -78,6 +74,7 @@ const Landing = (props) => {
           >
             {yml.header_data.sub_heading}
           </H4>
+          <Divider height={yml.features.marginTop} />
           {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) => 
             <Paragraph key={i}
               style={JSON.parse(yml.features.styles)} 
@@ -85,7 +82,7 @@ const Landing = (props) => {
               textShadow="0px 0px 4px black" 
               align_sm="left" 
               mw_sm="300px" 
-              color={Colors.white}>✅ {f}</Paragraph>
+              color={Colors.white}>{'• '}{f}</Paragraph>
           )}
         </Column>
           </StyledBackgroundSection>
@@ -97,9 +94,12 @@ const Landing = (props) => {
           align_sm="center"
           margin="0 auto 0 0"
         >
-          <LeadForm style={{marginTop: "50px"}} heading="Request More Info." formHandler={requestSyllabus} 
+          <LeadForm style={{marginTop: "50px"}} heading="Request More Info." 
+              formHandler={requestSyllabus}
+              heading={yml.form.heading}
+              redirect={yml.form.redirect}
               lang={pageContext.lang}
-              fields={yml.form_fields}
+              fields={yml.form.fields}
               data={{ 
                 course: { value: yml.meta_info.bc_slug, valid: true }
               }}
@@ -146,10 +146,13 @@ const Landing = (props) => {
       </StyledBackgroundSection>
 
       {
-        Object.keys(yml)
-          .filter(name => sections[name] !== undefined)
-          .sort((a,b) => sections[a].position > sections[a].position ? -1 : 1)
-          .map(name => sections[name](session, props, city, course))
+        Object.keys(components)
+          .filter(name => landingSections[name] !== undefined || landingSections[components[name].layout] !== undefined)
+          .sort((a,b) => components[a].position > components[a].position ? -1 : 1)
+          .map(name => {
+            const layout = components[name].layout || name;
+            return landingSections[layout]({ ...props, yml: components[name], session, city, course })
+          })
       }
     </>
   )
@@ -167,8 +170,13 @@ export const query = graphql`
               utm_course
               utm_location
             }
-            form_fields
+            form{
+              header
+              redirect
+              fields
+            }
             features{
+              marginTop
               bullets
               styles
             }
@@ -201,6 +209,14 @@ export const query = graphql`
               heading
               sub_heading
             }
+            components{
+              name
+              position
+              layout
+              image
+              heading
+              content
+            }
             header_data{
               tagline
               sub_heading
@@ -224,6 +240,12 @@ export const query = graphql`
               position
               heading
               sub_heading
+              students{
+                name
+                sub_heading
+                comment
+                video
+              }
             }
         }
       }
@@ -342,74 +364,31 @@ export const query = graphql`
         }
       }
     }
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          partners {
+            tagline
+            sub_heading
+            footer_tagline
+            footer_button
+            footer_link
+            images {
+              name
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 150){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              featured
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
 export default BaseRender(Landing, "landing");
-
-
-const sections = {
-  in_the_news: (session, { pageContext, yml}, city, course) => <Wrapper>
-    <H4 align="center" fontSize="18px" color={Colors.darkGray} 
-      margin="20px 0px 10px 0px" 
-      m_sm="20px auto" 
-      maxWidth="350px"
-    >{yml.in_the_news.heading}
-    </H4>
-    <News location={session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
-  </Wrapper>,
-  geeks_vs_others: (session, { pageContext, yml}, city, course) => <Wrapper margin="100px">
-    <Title
-      type="h2"
-      title={yml.geeks_vs_others.heading}
-      paragraph={yml.geeks_vs_others.sub_heading}
-      paragraphColor={Colors.blue}
-      variant="primary"
-      size="10"
-    />
-    <GeeksVsOthers lang={pageContext.lang} limit={yml.geeks_vs_others.total_rows} />
-  </Wrapper>,
-  program_details: (session, { pageContext, yml}, city, course) => <Wrapper>
-    <Title
-      size="10"
-      marginTop="40px"
-      title={yml.program_details.heading}
-      paragraph={yml.program_details.sub_heading}
-      variant="primary"
-    />
-    <ProgramDetails details={course && course.details} />
-    <ProgramDetailsMobile details={course && course.details} />
-  </Wrapper>,
-  why_python: (session, { pageContext, yml}, city, course) => <Wrapper margin="50px 0">
-    <WhyPython heading={yml.why_python.heading} subheading={yml.why_python.sub_heading} lang={pageContext.lang} />
-  </Wrapper>,
-  testimonials: (session, { data, pageContext, yml}, city, course) => <Wrapper margin="100px">
-    <Title
-      variant="primary"
-      title={yml.testimonial.heading}
-      paragraph={yml.testimonial.sub_heading}
-      maxWidth="66%"
-    // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
-    />
-    <Testimonials lang={data.allTestimonialsYaml.edges} />
-  </Wrapper>,
-  why_4geeks: (session, { pageContext, yml}, city, course) => <Wrapper margin="50px 0">
-    <Title
-      title={yml.why_4geeks.heading + " " + city}
-      variant="primary"
-    />
-    <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
-  </Wrapper>,
-  alumni_projects: (session, { data, pageContext, yml}, city, course) => <Wrapper margin="100px">
-    <Title
-      size="10"
-      title={yml.alumni_projects.heading}
-      paragraph={yml.alumni_projects.sub_heading}
-      paragraphColor={Colors.darkGray}
-      maxWidth="66%"
-      margin="auto"
-      variant="primary"
-    />
-    <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false"  limit={2} />
-  </Wrapper>
-}

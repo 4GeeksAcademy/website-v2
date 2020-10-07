@@ -1,13 +1,16 @@
 
 programs:
   - text: "Full-Stack Developer"
+    location_bc_slug: null #<--- puedes cambiar la location cuando hagan click
     schedule: "Horario Part-Time and Full-Time"
     link: "/es/course/desarrollo-web-full-stack-bootcamp-part-time"
   - text: "Ingeniero de Software"
+    location_bc_slug: null
     schedule: "Horario Part-Time únicamente"
     link: "/es/course/ingenieria-de-software-programacion"
   - text: "Desde Casa (Online)"
+    location_bc_slug: online
     schedule: "Horario Part-Time and Full-Time"
-    link: "/es/course/desarrollo-web-full-stack-bootcamp-full-time"
+    link: "/es/course/desarrollo-web-full-stack-bootcamp-full-time?location=online"
 open_button_text: "SELECCIONAR PROGRAMA"
 close_button_text: "Close"

@@ -7,7 +7,7 @@ import {Input, Alert} from '../components/Form'
 import BaseRender from './_baseRender'
 import {SessionContext} from '../session.js'
 import {apply, tagManager} from "../actions";
-import Testimonials from '../components/Testimonials'
+import { TestimonialsCarrousel } from '../components/Testimonials'
 
 const formIsValid = (formData=null) => {
     if(!formData) return null;
@@ -267,7 +267,7 @@ const Apply = (props) => {
                     paragraph={yml.testimonial_header.sub_heading}
                     maxWidth="66%"
                 />
-                <Testimonials lang={data.allTestimonialsYaml.edges} />
+                <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
             </Wrapper>
             <Divider height="100px" />
         </form>

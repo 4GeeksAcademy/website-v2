@@ -64,10 +64,17 @@ export default ({children}) => {
               .catch(error => console.error("Error initilizing session", error))
         }, []);
 
-        return <SessionContext.Provider value={{session, setSession: (_s) => {
-            const location = locByLanguage(data.allLocationYaml, _s.language).find(l => l.breathecode_location_slug === _s.location.breathecode_location_slug)
-            setSession({ ..._s, location })
-          }}}>
+        return <SessionContext.Provider value={{
+            session, 
+            setSession: (_s) => {
+              const location = locByLanguage(data.allLocationYaml, _s.language).find(l => l.breathecode_location_slug === _s.location.breathecode_location_slug)
+              setSession({ ..._s, location })
+            },
+            setLocation: (slug) => {
+              const location = locByLanguage(data.allLocationYaml, session.language).find(l => l.breathecode_location_slug === slug)
+              setSession({ ...session, location })
+            }
+          }}>
             {children}
         </SessionContext.Provider>
 };

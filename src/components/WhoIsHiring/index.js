@@ -8,13 +8,6 @@ import Fragment from "../Fragment"
 const WhoIsHiring = props => {
   return (
     <Fragment margin={props.margin} padding="20px 0" github="/components/partner">
-      <Title
-        title={props.tagline}
-        variant="primary"
-        size="8"
-        paragraph={props.subheading}
-        paragraphColor={Colors.gray}
-      />
       <Row >
         {props.images.map((item, index) => (
           <Column  key={index} size="3" size_sm="4" margin="5px 0">

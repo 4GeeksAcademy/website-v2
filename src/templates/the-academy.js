@@ -299,20 +299,31 @@ const Why = (props) => {
                 right
                 background={Colors.lightGray} border="top"
             >
+                <Title
+                    size="10"
+                    marginTop="50px"
+                    title={hiring.partners.tagline}
+                    paragraph={hiring.partners.sub_heading}
+                    paragraphColor="black"
+                    variant="primary"
+                />
                 <WhoIsHiring
                     margin="50px"
-                    tagline={hiring.partners.tagline}
-                    subheading={hiring.partners.sub_heading}
                     images={hiring.partners.images}
                     footerTagline={hiring.partners.footer_tagline}
                     footerLink={hiring.partners.footer_link}
                     footerButton={hiring.partners.footer_button}
                 />
-                <Divider height="100px" />
+                <Title
+                    size="10"
+                    marginTop="50px"
+                    title={hiring.influencers.tagline}
+                    paragraph={hiring.influencers.sub_heading}
+                    paragraphColor="black"
+                    variant="primary"
+                />
                 <WhoIsHiring
                     margin="50px"
-                    tagline={hiring.influencers.tagline}
-                    subheading={hiring.influencers.sub_heading}
                     images={hiring.influencers.images}
                     footerTagline={hiring.influencers.footer_tagline}
                     footerLink={hiring.influencers.footer_link}
@@ -431,7 +442,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -447,7 +457,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -463,7 +472,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -479,7 +487,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline

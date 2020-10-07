@@ -56,6 +56,7 @@ export const H2 = styled(Heading)`
     font-family: 'Futura', sans-serif;
     font-weight: 800;
     margin: ${props => props.margin};
+    margin-top: ${props => props.marginTop};
     letter-spacing: -2px;
     text-transform: ${props => props.uppercase && "uppercase"};
     color: ${props => props.color};
