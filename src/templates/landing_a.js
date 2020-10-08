@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {graphql, navigate} from 'gatsby';
 import { landingSections } from '../components/landing';
 import FollowBar from "../components/FollowBar"
-import LeadForm from "../components/LeadForm/index.js";
+import LeadForm from "../components/LeadForm";
 import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
 import { Row, Column, Divider, Div} from '../components/Sections'
 import {Colors, StyledBackgroundSection} from '../components/Styling'
