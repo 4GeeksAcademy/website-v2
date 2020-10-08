@@ -1,10 +1,6 @@
 import React, {useEffect} from 'react';
 import {graphql, navigate} from 'gatsby';
-<<<<<<< HEAD
-import {landingSections} from '../components/landing';
-=======
-import { landingSections } from '../components/Landing';
->>>>>>> bff2f817a2c2395cf454fe9ad463003b8791593c
+import {landingSections} from '../components/Landing';
 import FollowBar from "../components/FollowBar"
 import LeadForm from "../components/LeadForm";
 import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
