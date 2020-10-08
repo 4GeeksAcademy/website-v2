@@ -165,6 +165,7 @@ const Contact = (props) => {
                                     <Row height="60px" padding="0 20px" margin="0 0 40px 0">
                                         {yml.right.heading.split("\n").map(text => 
                                             <H3
+                                                key={text}
                                                 fs_sm="20px"
                                                 fs_md="20px"
                                                 fs_lg="22px"

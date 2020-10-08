@@ -22,6 +22,18 @@ form:
   button_label: SEND
   redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content: 
+    text: "Solicita una beca de hasta 2.750 euros. Planes de pago de hasta 24 meses."
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["2vw", "2vw", "2vw", "2vw", "2vw"]
+  button:
+    text: "Pide mas info"
+    path: "#"
+  phone:
+    text: "O llamanos al "
+
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Aprende a programar
@@ -74,16 +86,40 @@ who_is_hiring:
   heading: "Who is hiring"
   sub_heading: "These comanies are hiring"
 
+badges:
+  position: 3
+  heading: " "
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: more_testimonials
+    position: 8
+    layout: two_column_left 
+    image: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+    heading: 
+      text: "Escúchalo de nuestros alumnos"
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    button: 
+      text: "Ver testimoniales"
+      color: pink
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    content: 
+      text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
+      font_size: ["16px"]
+  - name: divider_one
+    position: 9
+    layout: divider 
+    height: ["50px","50px","50px","50px","50px"]
   - name: some_id
+    position: 10
     layout: two_column_right 
-    position: 7
     image: "/images/projects/ims.jpg"
+    video: "https://www.youtube.com/watch?v=plwPwyrxX84"
     heading: 
       text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
-      font_size: ["24px"]
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
     content: 
       text: " "
       font_size: ["16px"]

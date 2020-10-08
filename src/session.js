@@ -1,6 +1,6 @@
 import React, {createContext, useState, useEffect} from "react";
 import {useStaticQuery, graphql} from 'gatsby';
-import { initSession, defaultSession, setTagManaerVisitorInfo, locByLanguage } from "./actions"
+import { initSession, defaultSession, setStorage, setTagManaerVisitorInfo, locByLanguage } from "./actions"
 
 export const SessionContext = createContext(defaultSession);
 
@@ -14,6 +14,7 @@ export default ({children}) => {
                 name
                 latitude
                 longitude
+                phone
                 country
                 defaultLanguage
                 breathecode_location_slug
@@ -72,7 +73,13 @@ export default ({children}) => {
             },
             setLocation: (slug) => {
               const location = locByLanguage(data.allLocationYaml, session.language).find(l => l.breathecode_location_slug === slug)
-              setSession({ ...session, location })
+              console.log("setLocation", location)
+              if(location){
+                const _session = { ...session, location };
+                setSession(_session)
+                setStorage(_session);
+              }
+              else console.error(`Location ${slug} with language ${session.language} not found to be set`)
             }
           }}>
             {children}

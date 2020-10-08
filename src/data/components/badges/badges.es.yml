@@ -1,0 +1,20 @@
+# This section is mean for badges, awards and recognitions
+# For example:
+
+badges:
+  - name: "FDOE"
+    url: ""
+    image: "../../../../static/images/badges/licensed.png"
+    alt: "Licensed by the department of education"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../../static/images/badges/newsweek.png"
+    alt: "TOP Coding Bootcamps Newsweek"
+  - name: "FDOE"
+    url: ""
+    image: "../../../../static/images/badges/reviews.png"
+    alt: "TOP Coding Bootcamps Switchup"
+  - name: "FDOE"
+    url: "Syllabus"
+    image: "../../../../static/images/badges/syllabus.png"
+    alt: "Award winning syllabus"

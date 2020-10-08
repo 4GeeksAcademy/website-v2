@@ -19,8 +19,6 @@ import WhyPython from '../components/WhyPython'
 import Loc from '../components/Loc'
 import {Link, navigate} from 'gatsby';
 import {SessionContext} from '../session.js'
-import Img from "gatsby-image"
-import { SentimentDissatisfiedOutlined } from '@material-ui/icons';
 
 const Home = (props) => {
   const {session, setLocation } = React.useContext(SessionContext);

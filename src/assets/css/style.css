@@ -153,7 +153,7 @@ a {
     color: black;
 }
 .react-player video, .react-player__preview{
-    border-radius: 1.25rem!important;
+    border-radius: 1.25rem !important;
 }
 .react-player__shadow{
     border-radius: 100% !important;

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {Suspense} from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseRender'
 import {Card, GeekCard} from '../components/Card'
@@ -11,13 +11,13 @@ import AlumniProjects from '../components/AlumniProjects'
 import ProgramSelector from '../components/ProgramSelector'
 import {requestSyllabus} from "../actions";
 import Credentials from '../components/Credentials'
-import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import TypicalDay from "../components/TypicalDay"
-import Modal from '../components/Modal';
 import {SessionContext} from '../session'
+const LeadForm = React.lazy(() => import('../components/LeadForm'));
+const Modal = React.lazy(() => import('../components/Modal'));
 
 
 
@@ -83,24 +83,27 @@ const Program = ({data, pageContext, yml}) => {
           <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
         </Column>
       </Row>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={handleClose}
-      >
-        <LeadForm 
-          heading={yml.button.syllabus_heading}
-          motivation={yml.button.syllabus_motivation} 
-          sendLabel={yml.button.syllabus_btn_label}
-          formHandler={requestSyllabus} 
-          handleClose={handleClose} 
-          lang={pageContext.lang}
-          data={{ 
-            course: { value: yml.meta_info.bc_slug, valid: true }
-          }}
-        />
-      </Modal>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Modal
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+          open={open}
+          onClose={handleClose}
+        >
+          <LeadForm 
+            style={{ marginTop: "50px" }}
+            heading={yml.button.syllabus_heading}
+            motivation={yml.button.syllabus_motivation} 
+            sendLabel={yml.button.syllabus_btn_label}
+            formHandler={requestSyllabus} 
+            handleClose={handleClose} 
+            lang={pageContext.lang}
+            data={{ 
+              course: { value: yml.meta_info.bc_slug, valid: true }
+            }}
+          />
+        </Modal>
+      </Suspense>
       <Divider height="100px" md="0px" />
     </WrapperImage>
 

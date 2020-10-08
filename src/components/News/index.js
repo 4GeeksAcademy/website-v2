@@ -45,7 +45,7 @@ export default ({ location, lang, limit }) => {
     console.error( `No news to display for location `, location, locationNews)
     return null;
   } 
-  console.error("location", location)
+  
   return (
       <Row github="/components/news">
         {locationNews.map((l,i) => (

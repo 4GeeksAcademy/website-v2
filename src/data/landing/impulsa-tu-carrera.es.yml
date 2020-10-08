@@ -10,7 +10,8 @@ meta_info:
   template: "landing_a" # <--- choose your landing template
   redirects: [""] # <--- URL redirections to avoid 404 errors
   
-  # this UTM fields will be included in the CRM
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
   utm_course: full-stack
   utm_location: madrid-spain
 
@@ -20,7 +21,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Solicita más información"
   button_label: Enviar
-  redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
+  redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -39,6 +40,19 @@ features:
     - Hay más vacantes que en cualquier otra industria
     - Impulsa tu Carrera y hazte programador de software
 
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Solicita una beca de hasta 2.750 euros. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de €2.750 . \n Plan de pago de 24 m. \n ¡Últimas plazas!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Más información"
+    path: "#top"
+  phone:
+    text: "Llama "
+
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
 #
@@ -47,39 +61,63 @@ in_the_news:
   position: 1
   heading: "4Geeks en los medios"
 
-geeks_vs_others:
+badges:
   position: 2
+  heading: " "
+
+geeks_vs_others:
+  position: 3
   heading: "¿Qué hace a 4Geeks Academy exitoso?"
   paragraph: ""
   total_rows: 5
 
 why_4geeks:
-  position: 3
+  position: 4
   heading: "Porqué 4Geeks"
   sub_heading: "Porque somos los mejores"
 
 who_is_hiring:
-  position: 4
+  position: 5
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
 
 program_details:
-  position: 5
+  position: 6
   heading: "Lo que aprenderás"
   sub_heading: "Tecnologías y programa de estudios"
 
 alumni_projects:
-  position: 6
+  position: 7
   heading: "Así podría ser tu proyecto final"
   sub_heading: "Lo que desarrollarás"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: more_testimonials
+    position: 8
+    layout: two_column_left 
+    image: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+    heading: 
+      text: "Escúchalo de nuestros alumnos"
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    button: 
+      text: "Ver testimoniales"
+      color: null
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    content: 
+      text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
+      font_size: ["16px"]
+  - name: divider_one
+    position: 9
+    layout: divider 
+    height: ["50px","50px","50px","50px","50px"]
   - name: some_id
+    position: 10
     layout: two_column_right 
-    position: 7
-    image: "/images/projects/ims.jpg"
+    image: "/images/bg/people_happy.jpg"
+    video: "https://www.youtube.com/watch?v=plwPwyrxX84"
     heading: 
       text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
                   #xl      lg     md     sm    xs
@@ -94,7 +132,7 @@ components:
 #   sub_heading: " " # optional or set to white space to hide
 
 testimonial:
-  position: 8
+  position: 9
   heading: "Lo que dicen nuestros alumnos"
   sub_heading: "Descúbrelo tú mismo"
   students:

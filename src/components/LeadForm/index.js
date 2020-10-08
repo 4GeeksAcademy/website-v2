@@ -19,20 +19,10 @@ const formIsValid = (formData = null) => {
 
 const Form = styled.form`
     margin: auto;
-    margin-top: 80px;
     padding: 20px;
     max-width: 600px;
 `;
 
-const langs = {
-    us: {
-        "First name *": "First name *",
-        "Full name *": "First name *",
-        "Last name *": "First name *",
-        "Your email *": "First name *",
-        "Phone number": "First name *",
-    }
-}
 const _fields = {
     first_name: { value: '', valid: false, required: true, type: 'text', place_holder: "First name *", error: "Please specify a valid first name" },
     full_name: { value: '', valid: false, required: true, type: 'text', place_holder: "Full name *", error: "Please specify a valid full name" },
@@ -40,15 +30,20 @@ const _fields = {
     email: { value: '', valid: false, required: true, type: 'email', place_holder: "Your email *", error: "Please specify a valid email" },
     phone: { value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone" },
     consent: { value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms" },
-    utm_language: { value: '', valid: true, required: true, type: 'hidden'},
-    utm_form: { value: '', valid: true, required: true, type: 'hidden'},
-    utm_location: { value: '', valid: true, required: true, type: 'hidden'},
 }
 
 const clean = (fields, data) => {
     let cleanedData = {...data};
-    //clean all fields that are no supposed to be sent to the server
-    Object.keys(cleanedData).forEach(key => !fields.includes(key) && delete cleanedData[key]);
+    
+    
+    Object.keys(cleanedData).forEach(key => 
+        // i also make sure I don't delete the hidden fields
+        cleanedData[key].type !== 'hidden' && 
+        //clean all the rest of the fields that are no supposed to be sent 
+        //according to the landing YML data
+        !fields.includes(key) && 
+        delete cleanedData[key]
+    );
 
     // forget about the full_name, its relly first_name
     if(cleanedData.full_name !== undefined){
@@ -56,7 +51,7 @@ const clean = (fields, data) => {
         delete cleanedData.full_name;
     }
 
-    console.log("FormData Before sending", cleanedData, fields)
+    console.log("FormData Before sending", cleanedData, data, fields)
     return cleanedData;
 }
 
@@ -117,10 +112,10 @@ const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handl
                 }
             },{}) 
             
-            return ({ ..._, ...data, utm_url: { value: window.location.href, valid: true } })
+            return ({ ..._, ...data, utm_url: { type: "hidden", value: window.location.href, valid: true } })
         })
     },[data])
-    // console.log("redirect", redirect)
+    // console.log("formData", formData)
     return <Form style={style} onSubmit={(e) => {
                 e.preventDefault();
 
@@ -151,17 +146,18 @@ const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handl
                         })
                 }
             }}>
-            <H4 fontSize="25px" margin="20px 0px 0px 0px">{heading}</H4>
+            {heading && <H4 fontSize="25px" margin="20px 0px 0px 0px">{heading}</H4>}
             { formStatus.status === "thank-you" ?
                 <Paragraph align="center" margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
                 :
                 <>
-                    <Paragraph align="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>
+                    {motivation && <Paragraph align="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
                     <Row>
                         <Column size="12">
-                            {fields.filter(f => formData[f].type !== 'hidden').map(f => {
+                            {fields.filter(f => formData[f].type !== 'hidden').map((f,i) => {
                                 const _field = formData[f]
                                 return <Input
+                                    key={i}
                                     type={_field.type} className="form-control" placeholder={_field.place_holder}
                                     onChange={(value,valid) => {
                                         setVal({ ...formData, [f]: { ..._field, value, valid } });
@@ -209,6 +205,7 @@ const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handl
 
 LeadForm.propTypes = {
     heading: PropTypes.string,
+    motivation: PropTypes.string,
     sendLabel: PropTypes.string,
     redirect: PropTypes.string,
     fields: PropTypes.array,
@@ -216,12 +213,13 @@ LeadForm.propTypes = {
     handleClose: PropTypes.func
 }
 LeadForm.defaultProps = {
-    heading: "",
+    heading: null,
+    motivation: null,
     sendLabel: "SEND",
     formHandler: null,
     redirect: null,
     handleClose: null,
     data: {},
-    fields: ['full_name', 'email'],
+    fields: ['full_name', 'phone', 'email'],
 }
 export default LeadForm;

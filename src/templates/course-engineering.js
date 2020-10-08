@@ -85,6 +85,7 @@ const Program = ({data, pageContext, yml}) => {
         onClose={() => setOpen(false)}
       >
         <LeadForm 
+          style={{ marginTop: "50px" }}
           heading={yml.button.syllabus_heading} 
           motivation={yml.button.syllabus_motivation} 
           sendLabel={yml.button.syllabus_btn_label}

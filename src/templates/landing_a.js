@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import {graphql, navigate} from 'gatsby';
 import { landingSections } from '../components/landing';
-
+import FollowBar from "../components/FollowBar"
 import LeadForm from "../components/LeadForm/index.js";
 import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
-import { Row, Column, Divider, Wrapper} from '../components/Sections'
+import { Row, Column, Divider, Div} from '../components/Sections'
 import {Colors, StyledBackgroundSection} from '../components/Styling'
 
 import BaseRender from './_baseRender'
@@ -12,9 +12,8 @@ import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session.js'
 
 const Landing = (props) => {
-  const {session } = React.useContext(SessionContext);
+  const {session, setLocation} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
-  const city = session && session.location ? session.location.reliable ? session.location.city : "" : "Miami";
   const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
   const [ components, setComponents ] = React.useState({});
 
@@ -25,9 +24,47 @@ const Landing = (props) => {
     });
     setComponents({ ...yml, ..._components });
   },[yml]);
+  useEffect(() => {
+    if(yml.meta_info && yml.meta_info.utm_location) setLocation(yml.meta_info.utm_location);
+  },[]);
+
+    // data sent to the form already prefilled
+  const preData = { 
+    course: { type: "hidden", value: yml.meta_info.utm_course, valid: true },
+    utm_location: { type: "hidden", value: yml.meta_info.utm_location, valid: true }
+  };
 
   return (
     <>
+      <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
+        buttonText={yml.follow_bar.button.text}
+        phone={session.location && session.location.phone}
+        phoneText={yml.follow_bar.phone.text}
+        onClick={() => {
+          if(yml.follow_bar.button.path === "#top"){
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+        }}
+      >
+          <Paragraph
+            margin="0"
+            fontWeight="800"
+            color={Colors.black}
+            align_sm="left"
+            align="left"
+            fontSize={yml.follow_bar.content.font_size[0]}
+            fs_lg={yml.follow_bar.content.font_size[1]}
+            fs_md={yml.follow_bar.content.font_size[2]}
+            fs_sm={yml.follow_bar.content.font_size[3]}
+            fs_xs={yml.follow_bar.content.font_size[4]}
+            >
+            {yml.follow_bar.content.text.split("\n").map((c,i) => <span className="d-block d-xs-none w-100">{c}</span>)}
+            {yml.follow_bar.content.text_mobile.split("\n").map((c,i) => <span className="d-none d-xs-block w-100">{c}</span>)}
+          </Paragraph>
+      </FollowBar>
       <Row className="d-sm-none">
           <StyledBackgroundSection
             className={`image`}
@@ -101,9 +138,7 @@ const Landing = (props) => {
               redirect={yml.form.redirect}
               lang={pageContext.lang}
               fields={yml.form.fields}
-              data={{ 
-                course: { value: yml.meta_info.bc_slug, valid: true }
-              }}
+              data={preData}
             />
         </Column>
       </Row>
@@ -134,19 +169,26 @@ const Landing = (props) => {
       >
         {yml.header_data.sub_heading}
       </H4>
-      {Array.isArray(yml.features) && yml.features.map((f, i) => 
-        <Paragraph margin="4px 0" color={Colors.white} key={i}>{f}</Paragraph>
+      {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) => 
+        <Paragraph align_sm="left" padding="0 20px" margin="4px 0" 
+          color={Colors.white} 
+          textShadow="0px 0px 4px black" 
+          fontWeight="800"
+          key={i}
+          style={JSON.parse(yml.features.styles)} 
+        >{'• '}{f}</Paragraph>
       )}
-        <LeadForm style={{marginTop: "0px"}} formHandler={requestSyllabus} 
-            lang={pageContext.lang}
-            sendLabel={yml.header_data.button_label}
-            data={{ 
-              course: { value: yml.meta_info.bc_slug, valid: true },
-              utm_location: { value: yml.meta_info.utm_location, valid: true },
-              utm_course: { value: yml.meta_info.utm_course, valid: true },
-            }}
-          />
+      <Divider height="20px" />
       </StyledBackgroundSection>
+      <Div background={Colors.black} display="none" d_sm="block">
+        <LeadForm formHandler={requestSyllabus} 
+            lang={pageContext.lang}
+            sendLabel={yml.form.button_label}
+            redirect={yml.form.redirect}
+            fields={yml.form.fields}
+            data={preData}
+            />
+      </Div>
 
       {
         Object.keys(components)
@@ -154,7 +196,7 @@ const Landing = (props) => {
           .sort((a,b) => components[b].position > components[a].position ? -1 : 1)
           .map(name => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({ ...props, yml: components[name], session, city, course, location: components.meta_info.utm_location })
+            return landingSections[layout]({ ...props, yml: components[name], session, course, location: components.meta_info.utm_location })
           })
       }
     </>
@@ -173,6 +215,21 @@ export const query = graphql`
               utm_course
               utm_location
             }
+            follow_bar{
+              position
+              content{
+                text
+                text_mobile
+                font_size
+              }
+              button{
+                text
+                path
+              }
+              phone{
+                text
+              }
+            }
             form{
               heading
               redirect
@@ -183,6 +240,10 @@ export const query = graphql`
               marginTop
               bullets
               styles
+            }
+            badges{
+              position
+              heading
             }
             in_the_news{
               heading
@@ -218,6 +279,13 @@ export const query = graphql`
               position
               layout
               image
+              video
+              height
+              button{
+                text
+                color
+                path
+              }
               heading{
                 text
                 font_size

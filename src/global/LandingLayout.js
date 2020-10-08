@@ -5,8 +5,6 @@ import '../assets/css/style.css';
 import NavB from '../components/Navbar'
 import Footer from '../components/Footer'
 import {StaticQuery, graphql} from 'gatsby';
-import UpcomingProgram from "../components/UpcomingProgram"
-
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
@@ -79,7 +77,6 @@ const Layout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            <UpcomingProgram location={session ? session.location : null} button={_btnInfo} lang={context.lang} position="bottom" showOnScrollPosition={400} />
             <Footer yml={myFooter.node} session={session} />
           </>
         )

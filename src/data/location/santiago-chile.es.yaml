@@ -153,6 +153,7 @@ financials_max_months: ["12 mo", "6 mo"]
 name: "Santiago"
 latitude: "-33.408837"
 longitude: "-70.567958"
+phone: "+56 (9) 7284 8039"
 address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
 zip_code: ""
 state: ""

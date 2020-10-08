@@ -32,6 +32,8 @@ export default ({ location, lang }) => {
 
   let content = data.allBadgesYaml.edges.find(({ node }) => node.fields.lang === lang);
   if(content) content = content.node;
+  else return null;
+
   return (
       <Row github="/components/badges">
         {content.badges.map((l,i) => (

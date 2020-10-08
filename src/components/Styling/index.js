@@ -299,7 +299,7 @@ const getVariant = (props) => ({
 })
 const SmartButton = ({children, onClick, ...rest}) => {
     const styles = getVariant(rest)[rest.outline];
-    return <button onClick={(e) => onClick(e)} className={rest.className} style={{ ...rest.style, ...styles}} >{children}</button>;
+    return <button onClick={(e) => onClick && onClick(e)} className={rest.className} style={{ ...rest.style, ...styles}} >{children}</button>;
 }
 export const Button = styled(SmartButton)`
     font-size: ${props => props.fontSize || '.75rem'};
@@ -350,6 +350,7 @@ Button.defaultProps = {
     colorHover: null,
     borderRadius: '50rem',
     outline: false,
+    onClick: null,
     display: 'inline-block'
 };
 

@@ -114,8 +114,8 @@ function getStorage(key) {
     returns:
         <boolean> : telling if operation succeeded
  */
-function setStorage(key, value, expires=null) {
-
+export function setStorage(value, expires=null) {
+    let key = "academy_session";
     if (!expires) {
         expires = (24*60*60);  // default: seconds for 1 day
     } else {
@@ -247,7 +247,7 @@ export const applyJob = async (data) => {
     for (let key in data) body[key] = data[key].value;
 
     
-    //if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['hiring-partner'], ['hiring-partner']);
+    // if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['hiring-partner'], ['hiring-partner']);
     return true;
 }
 export const contactUs = async (data,session) => {
@@ -268,6 +268,8 @@ export const newsletterSignup = async (data,session) => {
 }
 
 export const locByLanguage = (locations, languageToFilter) => {
+    if(languageToFilter == "en") languageToFilter = "us";
+
     let repeated = [];
     return locations.nodes.filter(l => {
         const [ name, _lang ] = l.fields.file_name.split(".");
@@ -364,7 +366,7 @@ export const initSession = async (locationsArray, seed={}) => {
         .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
     };
     console.log("Session: ", _session);
-    setStorage("academy_session", _session);
+    setStorage(_session);
     return _session
 
 };

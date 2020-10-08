@@ -251,6 +251,7 @@ export const Paragraph = styled.div`
   }
   @media ${Break.sm}{
     display: ${props => props.display_sm};
+    color: ${props => props.color_sm};
     font-size: ${props => props.fs_sm};
     margin: ${props => props.m_sm};
     text-align: ${props => props.align_sm || 'center'};

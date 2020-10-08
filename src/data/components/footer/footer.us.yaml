@@ -25,13 +25,15 @@ footer:
     items:
       - name: "Program"
         link: "/course/full-stack-web-development-bootcamp-part-time"
-      - name: "The Academy"
+      - name: "Academy"
         link: "/the-academy"
       - name: "Partners"
         link: "/partners"
       - name: "Pricing"
         link: "/pricing"
       - name: "Events"
+        link: "/calendar"
+      - name: "Upcoming Dates"
         link: "/calendar"
       - name: "Blog"
         link: "/blog"
@@ -41,6 +43,8 @@ footer:
         link: "/privacy-policy"
       - name: "FAQ"
         link: "/faq"
+      - name: "Contact Us"
+        link: "/contact"
   - column_four:
     width: 3
     heading: "LOCATIONS"
