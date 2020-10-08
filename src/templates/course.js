@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseRender'
 import {Card, GeekCard} from '../components/Card'
@@ -16,9 +16,8 @@ import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import TypicalDay from "../components/TypicalDay"
 import {SessionContext} from '../session'
-const LeadForm = React.lazy(() => import('../components/LeadForm'));
-const Modal = React.lazy(() => import('../components/Modal'));
-
+import LeadForm from "../components/LeadForm"
+import Modal from "../components/Modal"
 
 
 const Program = ({data, pageContext, yml}) => {
@@ -83,7 +82,6 @@ const Program = ({data, pageContext, yml}) => {
           <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
         </Column>
       </Row>
-      <Suspense fallback={<div>Loading...</div>}>
         <Modal
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
@@ -103,7 +101,6 @@ const Program = ({data, pageContext, yml}) => {
             }}
           />
         </Modal>
-      </Suspense>
       <Divider height="100px" md="0px" />
     </WrapperImage>
 

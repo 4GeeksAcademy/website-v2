@@ -1,7 +1,7 @@
 meta_info:
   slug: desarrollo-web-full-stack-bootcamp-part-time
   title: ""
-  description: null
+  description: ""
   bc_slug: "full-stack"
   image: ""
   keywords: ""
@@ -14,7 +14,9 @@ meta_info:
       "/es/full-stack",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
-      "/es/course/bootcamp-desarrollo-web-full-stack-part-time"
+      "/es/course/bootcamp-desarrollo-web-full-stack-part-time",
+      "/es/course/introduccion-programacion",
+      "/introduccion-programacion-codigo"
     ]
 
 header:

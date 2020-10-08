@@ -1,7 +1,7 @@
 meta_info:
   slug: full-stack-web-development-bootcamp-full-time
   title: ""
-  description: null
+  description: ""
   bc_slug: "full-stack-ft"
   image: ""
   keywords: ""
@@ -12,7 +12,7 @@ meta_info:
       "/us/full-time",
       "/us/course/full-time",
       "/the-program",
-      "/us/full-stack-ft",
+      "/us/full-stack-ft"
     ]
 
 header:
