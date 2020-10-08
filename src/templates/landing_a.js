@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {graphql, navigate} from 'gatsby';
-import { landingSections } from '../components/landing';
+import { landingSections } from '../components/Landing';
 import FollowBar from "../components/FollowBar"
 import LeadForm from "../components/LeadForm";
 import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
@@ -68,7 +68,6 @@ const Landing = (props) => {
       <Row className="d-sm-none">
           <StyledBackgroundSection
             className={`image`}
-            height={`500px`}
             image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
             bgSize={`cover`}
             width="58%"
@@ -82,10 +81,12 @@ const Landing = (props) => {
           >
         <Column
           size="8"
+          size_lg="9"
+          size_md="10"
           size_xs="12"
           borderRadius="0 0 0 1.25rem"
           height="500px"
-          margin="0 0 0 auto"
+          margin="0 0 10px auto"
           customRespSize
           disp_sm={"none"}
           disp_xs={"none"}
@@ -134,6 +135,7 @@ const Landing = (props) => {
           <LeadForm style={{marginTop: "50px"}} heading="Request More Info." 
               formHandler={requestSyllabus}
               heading={yml.form.heading}
+              motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
               redirect={yml.form.redirect}
               lang={pageContext.lang}
@@ -183,6 +185,7 @@ const Landing = (props) => {
       <Div background={Colors.black} display="none" d_sm="block">
         <LeadForm formHandler={requestSyllabus} 
             lang={pageContext.lang}
+            motivation={pageContext.motivation}
             sendLabel={yml.form.button_label}
             redirect={yml.form.redirect}
             fields={yml.form.fields}
@@ -232,6 +235,7 @@ export const query = graphql`
             }
             form{
               heading
+              motivation
               redirect
               fields
               button_label
@@ -277,8 +281,13 @@ export const query = graphql`
             components{
               name
               position
+              proportions
               layout
-              image
+              image{
+                src
+                style
+                link
+              }
               video
               height
               button{

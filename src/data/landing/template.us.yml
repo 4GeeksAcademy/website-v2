@@ -19,6 +19,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Request more info."
+  motivation: "" # < -- subtitle ideal to movitate people on filling the form
   button_label: SEND
   redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
@@ -96,7 +97,10 @@ components:
   - name: more_testimonials
     position: 8
     layout: two_column_left 
-    image: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+    image: 
+      style: "{}"
+      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      link: "https://google.com" # take uses somewhere when they click on the image
     heading: 
       text: "Escúchalo de nuestros alumnos"
                   #xl      lg     md     sm    xs
@@ -115,7 +119,10 @@ components:
   - name: some_id
     position: 10
     layout: two_column_right 
-    image: "/images/projects/ims.jpg"
+    image: 
+      style: "{}"
+      src: "/images/projects/ims.jpg"
+      link: "https://google.com" # take uses somewhere when they click on the image
     video: "https://www.youtube.com/watch?v=plwPwyrxX84"
     heading: 
       text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."

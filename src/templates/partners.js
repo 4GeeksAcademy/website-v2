@@ -58,7 +58,7 @@ const Partners = (props) => {
           >
             <LeadForm heading="BE A HIRING PARTNER" formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
           </Modal>
-          <Button width="200px" margin="15px 0px" onClick={handleOpen} color="red" textColor="white">{yml.button_section.button_text}</Button>
+          <Button width="300px" margin="15px 0px 25px 0px" onClick={handleOpen} color="red" textColor="white">{yml.button_section.button_text}</Button>
         </Row>
         <Divider height="130px" xs="0" />
       </WrapperImage>
