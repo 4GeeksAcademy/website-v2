@@ -18,6 +18,9 @@ const ShadowedRow = styled.div`
     top: ${props => props.position == "top" ? "0" : 'inherit'};
     bottom: ${props => props.position == "bottom" ? "0" : 'inherit'};
     display: ${props => props.hide ? "none" : 'block'};
+    @media ${Break.xxs}{
+        height: 125px;
+    }
 `;
 const Centered = styled.div`
     max-width: 750px;
@@ -63,7 +66,6 @@ const P2 = styled.p`
 `
 const Right = styled.div`
     width: 300px;
-    padding-top: 5px;
 `;
 
 const FollowBar = ({children, showOnScrollPosition, position, buttonText, phone, phoneText, onClick}) => {
@@ -85,7 +87,7 @@ const FollowBar = ({children, showOnScrollPosition, position, buttonText, phone,
             </Center>
             <Right>
                 <Button onClick={() => onClick && onClick()} color={Colors.red} fs_sm="11px" textColor={Colors.white}>{buttonText}</Button>
-<p style={{textAlign: "center"}}><a className="decorated" display="inline" href={`tel:${phone}`}>{phoneText}{phone}</a></p>
+<p style={{textAlign: "center", marginTop: "3px", fontSize: "15px"}}><a className="decorated" display="inline" href={`tel:${phone}`}>{phoneText}{phone}</a></p>
             </Right>
         </Centered>
     </ShadowedRow>
