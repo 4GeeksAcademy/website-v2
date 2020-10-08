@@ -14,22 +14,22 @@ import WhoIsHiring from '../components/WhoIsHiring';
 import AlumniProjects from '../components/AlumniProjects'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
-import { TestimonialsCarrousel } from '../components/Testimonials'
+import {TestimonialsCarrousel} from '../components/Testimonials'
 import WhyPython from '../components/WhyPython'
 import Loc from '../components/Loc'
 import {Link, navigate} from 'gatsby';
 import {SessionContext} from '../session.js'
 
 const Home = (props) => {
-  const {session, setLocation } = React.useContext(SessionContext);
+  const {session, setLocation} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
   // const city = session && session.location ? session.location.reliable ? "" : "" : "Miami";
   const city = session && session.location ? "" : "Miami";
-  
+
   React.useEffect(() => {
-    if(session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
-  },[session])
+    if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
+  }, [session])
   return (
     <>
       <Row github={`/page/index.${pageContext.lang}.yml`}>
@@ -87,7 +87,7 @@ const Home = (props) => {
       <Wrapper>
         <Badges lang={pageContext.lang} />
         <H4 margin="50px 0">{yml.news.heading}</H4>
-        <News lang={pageContext.lang} limit={yml.news.limit}  />
+        <News lang={pageContext.lang} limit={yml.news.limit} />
       </Wrapper>
 
       {/* WHY 4GEEKS SECTION */}
@@ -204,12 +204,12 @@ const Home = (props) => {
         background={Colors.lightGray}
         border="top">
         <Title
-            size="10"
-            marginTop="40px"
-            title={hiring.partners.tagline}
-            paragraph={hiring.partners.sub_heading}
-            paragraphColor="black"
-            variant="primary"
+          size="10"
+          marginTop="40px"
+          title={hiring.partners.tagline}
+          paragraph={hiring.partners.sub_heading}
+          paragraphColor="black"
+          variant="primary"
         />
         <WhoIsHiring
           margin="50px"
@@ -231,7 +231,7 @@ const Home = (props) => {
           margin="auto"
           variant="primary"
         />
-        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false"  limit={2} />
+        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
       </Wrapper>
 
       <Wrapper
@@ -499,6 +499,8 @@ export const query = graphql`
                   student_name
                   testimonial_date
                   hidden
+                  linkedin_url
+                  linkedin_text
                   student_thumb{
                     childImageSharp {
                       fluid(maxHeight: 200){
