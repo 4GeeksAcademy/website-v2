@@ -145,7 +145,7 @@ export const H5 = styled(Heading)`
       font-size: ${props => props.fontSize};
       font-weight: 500;
       letter-spacing: 0px;
-      line-height: ${props => props.fontHeight};
+      padding: ${props => props.padding};
       text-transform: ${props => props.uppercase && "uppercase"};
       font-style: normal;
       color: ${props => props.color};

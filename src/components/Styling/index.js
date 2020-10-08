@@ -221,6 +221,10 @@ export const Img = styled.div`
     background-color: ${props => props.backgroundColor};
     width: ${props => props.width};
     height: ${props => props.height};
+    @media ${Break.sm}{
+        height: ${props => props.h_sm};
+        width: ${props => props.w_sm};
+    }
 `
 
 export const BackgroundSection = ({children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
