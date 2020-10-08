@@ -9,7 +9,7 @@ import Link from 'gatsby-link'
 
 const ProgramDetailsMobile = (props) => {
     const [selected, setSelected] = useState({index: null, manual: false});
-    if(!props.details){
+    if (!props.details) {
         console.log("Warning! Ignoring Program Details because it came null form the graphql query")
         return null;
     }
@@ -60,6 +60,7 @@ const ProgramDetailsMobile = (props) => {
                                     <H3
                                         margin={`0 10px`}
                                         fontWeight={`400`}
+                                        align_sm={`left`}
                                     >
                                         {item.title}
                                     </H3>
@@ -75,6 +76,7 @@ const ProgramDetailsMobile = (props) => {
                                     <H3
                                         margin={`0 10px`}
                                         fontWeight={`400`}
+                                        align_sm={`left`}
                                     >
                                         {`Projects`}
                                     </H3>
@@ -90,6 +92,7 @@ const ProgramDetailsMobile = (props) => {
                                     <H3
                                         margin={`0 10px`}
                                         fontWeight={`400`}
+                                        align_sm={`left`}
                                     >
                                         {`Duration`}
                                     </H3>
