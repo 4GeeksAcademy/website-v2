@@ -16,6 +16,10 @@ why_4geeks:
   heading: Por qué 4Geeks
   sub_heading: ""
 
+news:
+  heading: "Lee sobre nosotros en las noticias..."
+  limit: 4
+
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "¿QUÉ HACE QUE ESTE PROGRAMA DESTAQUE?"

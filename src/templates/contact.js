@@ -22,7 +22,7 @@ const Contact = (props) => {
         first_name: {value: '', valid: false},
         last_name: {value: '', valid: false},
         email: {value: '', valid: false},
-        client_comment: {value: '', valid: false}
+        client_comments: {value: '', valid: false}
     });
     
     const formIsValid = (formData=null) => {
@@ -134,10 +134,10 @@ const Contact = (props) => {
                                 </Row>
                                 <Row height="200px">
                                     <TextArea type="text" rows="10" cols="50" className="form-control" 
-                                        value={formData.client_comment.value} 
+                                        value={formData.client_comments.value} 
                                         required
                                         placeholder={yml.left.message_section.placeholder} 
-                                        onChange={(value,valid) => {setVal({...formData, client_comment: {value,valid}})
+                                        onChange={(value,valid) => {setVal({...formData, client_comments: {value,valid}})
                                         if(formStatus.status === "error"){
                                         setFormStatus({ status: "idle", msg: "Resquest" })
                                     }

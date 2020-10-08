@@ -38,7 +38,7 @@ const Landing = (props) => {
     <>
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
         buttonText={yml.follow_bar.button.text}
-        phone={session.location && session.location.phone}
+        phone={session && session.location && session.location.phone}
         phoneText={yml.follow_bar.phone.text}
         onClick={() => {
           if(yml.follow_bar.button.path === "#top"){
@@ -62,7 +62,7 @@ const Landing = (props) => {
             fs_xs={yml.follow_bar.content.font_size[4]}
             >
             {yml.follow_bar.content.text.split("\n").map((c,i) => <span className="d-block d-xs-none w-100">{c}</span>)}
-            {yml.follow_bar.content.text_mobile.split("\n").map((c,i) => <span className="d-none d-xs-block w-100">{c}</span>)}
+            {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c,i) => <span className="d-none d-xs-block w-100">{c}</span>)}
           </Paragraph>
       </FollowBar>
       <Row className="d-sm-none">

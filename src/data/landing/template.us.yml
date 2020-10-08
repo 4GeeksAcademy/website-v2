@@ -24,15 +24,16 @@ form:
 
 follow_bar:
   position: "top" # top, bottom, hidden
-  content: 
-    text: "Solicita una beca de hasta 2.750 euros. Planes de pago de hasta 24 meses."
+  content:
+    text: "Solicita una beca de hasta 2.750 euros. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de €2.750 . \n Plan de pago de 24 m. \n ¡Últimas plazas!"
     # devices:   XL      LG    MD      SM    XS
-    font_size: ["2vw", "2vw", "2vw", "2vw", "2vw"]
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Pide mas info"
-    path: "#"
+    text: "Más información"
+    path: "#top"
   phone:
-    text: "O llamanos al "
+    text: "Llama "
 
 # jumbotron on the top (cannot be commented out)
 header_data:
