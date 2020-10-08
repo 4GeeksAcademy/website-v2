@@ -172,9 +172,9 @@ export const landingSections = {
         />
     </Wrapper>,
     two_column_right: ({ session, data, pageContext, yml, course }) => <Wrapper margin="50px 0">
-    <TwoColumn 
-        left={{ heading: yml.heading, content: yml.content, button: yml.button }}
-        right={{ image: yml.image, video: yml.video }}
-    />
+        <TwoColumn 
+            left={{ heading: yml.heading, content: yml.content, button: yml.button }}
+            right={{ image: yml.image, video: yml.video }}
+        />
     </Wrapper>,
 }

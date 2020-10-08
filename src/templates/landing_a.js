@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {graphql, navigate} from 'gatsby';
-import { landingSections } from '../components/landing';
+import { landingSections } from '../components/Landing';
 import FollowBar from "../components/FollowBar"
 import LeadForm from "../components/LeadForm";
 import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
