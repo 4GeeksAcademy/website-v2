@@ -127,3 +127,21 @@ staff:
     coding_skills:
       - Excel
     location: ""
+ - name: "Mafe"
+    last_name: "Castro"
+    nick_name: ""
+    slug: "mafe-castrp"
+    job_title: "Growth and Marketing"
+    bio: "Leading the efforts of our growth Department for our HP operations."
+    github: ""
+    linkdin: "https://www.linkedin.com/in/mafecasvi/"
+    twitter: "https://twitter.com/mafecasvi"
+    website: ""
+    image: "/images/staff/mafe.jpg"
+    age: 35
+    interests:
+      - Fashion Design
+    coding_skills:
+      - Bootstrap
+    location: ""
+    
