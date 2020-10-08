@@ -15,9 +15,11 @@ header:
   alt: ""
 
 button:
-  syllabus_button_text: "DESCARGAR SYLLABUS"
-  syllabus_submit_text: "DESCARGER"
-  apply_button_text: "APLICA YA"
+  syllabus_button_text: "DESCARGAR SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APLICAR" # <-- this will show everywhere in the website
+
+  syllabus_submit_text: "DESCARGAR"
+  cohort_more_details_text: "INFO"
   apply_button_link: "/aplica"
 
 news:
@@ -58,14 +60,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: DE CONTADO
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "y disfruta el mejor precio de la ciudad"
+        heading_one: "PAGA SÓLO DESPUÉS"
+        heading_two: "DE CONSEGUIR TRABAJO"
+        sub_heading: "y hablemos del Income Share Agreement"
       content:
-        price: "$9,499.00"
-        price_info: "una sola quota"
-      button:
-        button_text: "APLICA"
+        price: "9% del salario"
+        price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -78,7 +78,7 @@ prices:
           payment: "$214.74"
           paymentInfo: "mensual + $0 deposit"
           provider: "Skill Fund - Climb"
-          logo: "/images/skill-logo.png"
+          logo: "/images/climb-and-skillfund.png"
           message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
         - months: "42"
           payment: "$314.10"
@@ -116,12 +116,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAGA SÓLO DESPUÉS"
-        heading_two: "DE CONSEGUIR TRABAJO"
-        sub_heading: "y hablemos del Income Share Agreement"
+        heading_one: DE CONTADO
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "y disfruta el mejor precio de la ciudad"
       content:
-        price: "$134.99"
-        price_info: "mensual"
+        price: "$9,499.00"
+        price_info: "una sola quota"
       button:
         button_text: "APLICA"
   ## *****************
@@ -135,14 +135,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: DE CONTADO
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "y disfruta el mejor precio de la ciudad"
+        heading_one: "PAGA SÓLO DESPUÉS"
+        heading_two: "DE CONSEGUIR TRABAJO"
+        sub_heading: "y hablemos del Income Share Agreement"
       content:
-        price: "$7,499.00"
-        price_info: "una sola quota"
-      button:
-        button_text: "APLICA"
+        price: "9% del salario"
+        price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -187,20 +185,16 @@ prices:
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-      button:
-        button_text: "APLICA"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAGA SÓLO DESPUÉS"
-        heading_two: "DE CONSEGUIR TRABAJO"
-        sub_heading: "y hablemos del Income Share Agreement"
+        heading_one: DE CONTADO
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "y disfruta el mejor precio de la ciudad"
       content:
-        price: "$134.99"
-        price_info: "mensual"
-      button:
-        button_text: "APLICA"
+        price: "$7,499.00"
+        price_info: "una sola quota"
 
   software_engineering:
     slug: "software-engineering"
@@ -210,14 +204,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "DE CONTADO"
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "el mejor precio de la ciudad"
+        heading_one: "PASA SÓLO DESPUÉS"
+        heading_two: "DE CONSEGUIR TRABAJO"
+        sub_heading: "y solamente mientras tengas trabajo"
       content:
-        price: "$13,499.00"
-        price_info: "un sólo pago"
-      button:
-        button_text: "¡APLICA YA!"
+        price: "9% de tu salario"
+        price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -262,20 +254,16 @@ prices:
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-      button:
-        button_text: "¡APLICA YA!"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PASA SÓLO DESPUÉS"
-        heading_two: "DE CONSEGUIR TRABAJO"
-        sub_heading: "y solamente mientras tengas trabajo"
+        heading_one: "DE CONTADO"
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "el mejor precio de la ciudad"
       content:
-        price: "9% de tu salario"
-        price_info: "hasta que lo pagues todo"
-      button:
-        button_text: "¡APLICA YA!"
+        price: "$13,499.00"
+        price_info: "un sólo pago"
 
 active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"
@@ -286,7 +274,8 @@ city: "Miami"
 name: "Downtown Miami"
 latitude: "25.760158"
 longitude: "-80.200154"
-address: "1801 SW 18th Road"
+address: "1801 SW 3rd Ave #100"
+phone: "+1 (786) 416-6640"
 zip_code: "33130"
 state: "Florida"
 country: "USA"

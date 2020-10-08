@@ -10,10 +10,8 @@ import {Link} from 'gatsby';
 import Img from "gatsby-image"
 import Fragment from "../Fragment"
 
-const Testimonials = (props) => {
-    const [carouselHeight, setCarouselHeight] = useState("500px")
+export const TestimonialsCarrousel = (props) => {
     let testimonialsArray = props.lang[0].node.testimonials;
-
     return (
         <Fragment github="/components/testimonials">
             <Carousel
@@ -26,7 +24,7 @@ const Testimonials = (props) => {
                 swipeable={true}
                 dynamicHeight={true}
             >
-                {testimonialsArray.map((item, i) => {
+                {testimonialsArray.filter(item => item.hidden !== true).map((item, i) => {
                     return (
                         <Row align="center" padding="30px" key={i}>
                             <Card width="700px" >
@@ -87,5 +85,3 @@ const Testimonials = (props) => {
         </Fragment>
     )
 };
-
-export default Testimonials;

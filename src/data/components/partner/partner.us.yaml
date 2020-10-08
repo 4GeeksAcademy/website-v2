@@ -4,7 +4,7 @@
 
 partners:
   tagline: "WHO IS HIRING OUR STUDENTS"
-  sub_heading: "Thanks to our growing list of partners, we have local and international job offers for our students on daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have 86% of our students hired in 100 days or less."
+  sub_heading: "Thanks to our growing list of partners, we have local and international job offers for our students on a daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have 86% of our students hired within 100 days or less from Graduation Day."
   footer_tagline: "438 COMPANIES"
   footer_button: "Review our latest hirings"
   footer_link: "/partners"
@@ -12,57 +12,46 @@ partners:
     - name: "Microsoft"
       locations: all
       image: "../../../../static/images/partner/microsoft.png"
-      alt: ""
       featured: true
     - name: "Boats Group"
       locations: ["miami-downtown"]
       image: "../../../../static/images/partner/boats.jpg"
-      alt: ""
       featured: true
     - name: "Facebook"
       locations: all
       image: "../../../../static/images/partner/facebook.png"
-      alt: ""
       featured: true
     - name: "National Geographic"
       locations: all
       image: "../../../../static/images/partner/natgeo.png"
-      alt: ""
       featured: true
     - name: "Evernote"
       locations: all
       image: "../../../../static/images/partner/evernote.png"
-      alt: ""
       featured: true
     - name: "Ultimate Software"
       locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ultimate.png"
-      alt: ""
       featured: true
     - name: "TCG Group"
       locations: ["miami-downtown"]
       image: "../../../../static/images/partner/tcg.png"
-      alt: ""
       featured: true
     - name: "Razz"
       locations: ["miami-downtown"]
       image: "../../../../static/images/partner/razz.png"
-      alt: ""
       featured: true
     - name: "Overseas"
       locations: ["miami-downtown"]
       image: "../../../../static/images/partner/overseas.png"
-      alt: ""
       featured: true
     - name: "DS9"
       locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ds9.png"
-      alt: ""
       featured: true
     - name: "Coinet"
       locations: ["miami-downtown"]
       image: "../../../../static/images/partner/coinet.jpg"
-      alt: ""
       featured: true
 coding:
   tagline: "IMMERSED IN THE CODING ECOSYSTEM"
@@ -70,31 +59,24 @@ coding:
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
-      alt: ""
       featured: false
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
-      alt: ""
       featured: false
     - name: "Bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
-      alt: ""
       featured: false
     - name: "Startup"
       image: "../../../../static/images/coding/startup.png"
-      alt: ""
       featured: false
     - name: "Shell Hacks"
       image: "../../../../static/images/coding/shell-hacks.png"
-      alt: ""
       featured: false
-    - name: "Womans Who Code"
+    - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
-      alt: ""
       featured: false
     - name: "Worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"
-      alt: ""
       featured: false
 influencers:
   tagline: "IN PARTNERSHIP WITH THE CITY'S BIGGEST INFLUENCERS"
@@ -102,45 +84,38 @@ influencers:
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
-      alt: ""
       featured: false
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
-      alt: ""
       featured: false
     - name: "Startup"
       image: "../../../../static/images/coding/startup.png"
-      alt: ""
       featured: false
-    - name: "Womans Who Code"
+    - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
-      alt: ""
       featured: false
     - name: "Carnet Joven"
       image: "../../../../static/images/partner/carnet-joven.png"
-      alt: ""
       featured: false
     - name: "Trivu"
       image: "../../../../static/images/partner/logo_trivu.png"
-      alt: ""
       featured: false
     - name: "La Nave"
       image: "../../../../static/images/partner/la-nave.png"
-      alt: ""
       featured: false
 financials:
   tagline: "FINANCIAL PARTNERS"
-  sub_heading: "We are making a huge effort to make premium coding education accessible to more people."
+  sub_heading: "We are making a huge effort to make premium coding education accessible to everyone."
   images:
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
-      alt: ""
       featured: false
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
-      alt: ""
       featured: false
-    - name: "Skill Fund"
+    - name: "Skills Fund"
       image: "../../../../static/images/skill-logo.png"
-      alt: ""
+      featured: false
+    - name: "Zank"
+      image: "../../../../static/images/zank.png"
       featured: false

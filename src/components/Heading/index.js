@@ -56,6 +56,7 @@ export const H2 = styled(Heading)`
     font-family: 'Futura', sans-serif;
     font-weight: 800;
     margin: ${props => props.margin};
+    margin-top: ${props => props.marginTop};
     letter-spacing: -2px;
     text-transform: ${props => props.uppercase && "uppercase"};
     color: ${props => props.color};
@@ -131,6 +132,7 @@ font-style: normal;
   font-size: ${props => props.fs_md};
 }
 @media  ${Break.sm}{
+  text-align: ${props => props.align_sm};
   font-size: ${props => props.fs_sm};
 }
 @media ${Break.xs}{
@@ -249,6 +251,7 @@ export const Paragraph = styled.div`
   }
   @media ${Break.sm}{
     display: ${props => props.display_sm};
+    color: ${props => props.color_sm};
     font-size: ${props => props.fs_sm};
     margin: ${props => props.m_sm};
     text-align: ${props => props.align_sm || 'center'};
@@ -368,9 +371,10 @@ H3.defaultProps = {
   fs_md: '2.5vw',
   fs_lg: '3vw',
   fs_xl: '2.5vw'
-
+  
 };
 H4.defaultProps = {
-  fs_xs: '5vw',
+  fontSize: '2vw',
+  fs_sm: '5vw',
   fontWeight: '400',
 };

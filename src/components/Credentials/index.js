@@ -6,6 +6,7 @@ import {Row, Column, Container, Divider} from '../Sections'
 
 export default props => {
   const credentials = props.lang[0].node.credentials
+  const shadow = props.shadow===undefined || props.shadow===true;
   const scope = props.scope_slug; // it can be course slug like "full-stack" or an academy location like "downtown-miami"
   return (
     <Row github="/components/credentials">
@@ -19,7 +20,8 @@ export default props => {
           >
               <Card
                 padding="15px"
-                shadow
+                shadow={shadow}
+                color={'grey'}
                 align="center"
                 transform={`translateY(-${(index % 2 !== 0) ? props.up + "px" : ((props.up * 20) / 100) + "px"})`}
               >
@@ -36,7 +38,7 @@ export default props => {
                   fs_xs="16px"
                   fs_md="16px"
                   fs_lg="18px"
-                  fs_xl="20px"
+                  fontSize="20px"
                   uppercase>{i.title}
                 </H4>
               </Card>

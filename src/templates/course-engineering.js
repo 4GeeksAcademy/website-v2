@@ -84,7 +84,13 @@ const Program = ({data, pageContext, yml}) => {
         open={open}
         onClose={() => setOpen(false)}
       >
-        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={() => setOpen(false)} 
+        <LeadForm 
+          style={{ marginTop: "50px" }}
+          heading={yml.button.syllabus_heading} 
+          motivation={yml.button.syllabus_motivation} 
+          sendLabel={yml.button.syllabus_btn_label}
+          formHandler={requestSyllabus} 
+          handleClose={() => setOpen(false)} 
           lang={pageContext.lang}
           data={{ 
             course: { value: yml.meta_info.bc_slug, valid: true }
@@ -98,10 +104,14 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       margin="100px"
       border="top">
+      <Title
+          size="10"
+          marginTop="40px"
+          title={yml.potential_companies.tagline}
+          paragraph={yml.potential_companies.sub_heading}
+          variant="primary"
+      />
       <WhoIsHiring
-        margin="50px"
-        tagline={yml.potential_companies.tagline}
-        subheading={yml.potential_companies.sub_heading}
         images={yml.potential_companies.companies}
       />
     </Wrapper>
@@ -215,7 +225,8 @@ export const query = graphql`
               alt
             }
             button{
-              syllabus_submit_text
+              syllabus_heading
+              syllabus_motivation
               apply_button_link
             }
             meta_info{
@@ -307,21 +318,17 @@ export const query = graphql`
           header{
             tagline
             sub_heading
-            button_text
           }
           projects {
               project_name
               slug
-              project_image{
-                  image {
-                      childImageSharp {
-                        fluid(maxWidth: 800){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                      }
-                    } 
-                  image_alt
-              }
+              project_image {
+                childImageSharp {
+                  fluid(maxWidth: 800){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              } 
               project_content
               project_video
               live_link

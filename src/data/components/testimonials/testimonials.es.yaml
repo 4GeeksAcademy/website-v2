@@ -3,8 +3,7 @@ testimonials:
   - student_name: "Azul Botaya"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
-    alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -18,8 +17,7 @@ testimonials:
     testimonial_date: ""
     source_link: ""
     student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
-    alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -32,7 +30,7 @@ testimonials:
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
   #   alt: ""
-  #   starts: 1
+  #   hidden: false
   #   source_url: ""
   #   source_url_text: ""
   #   content: |
@@ -43,8 +41,6 @@ testimonials:
   - student_name: "Charles Fabricius"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
-    alt: ""
-    starts: 1
     source_url: ""
     source_url_text: ""
     content: |
@@ -58,8 +54,7 @@ testimonials:
   - student_name: "Fernando Funez"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
-    alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -69,8 +64,7 @@ testimonials:
   - student_name: "Salvador Desravines"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
-    alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
@@ -80,19 +74,17 @@ testimonials:
   - student_name: "Jorge Montes"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
-    alt: ""
-    starts: 1
+    hidden: false
     source_url: ""
     source_url_text: ""
     content: |
-      Agora creo que puedo completamente desarrollar una aplicación y entender cómo funciona. Puedo incluso ayudar a resolver problemas y bugs en algún código. 
+      Ahora creo que puedo completamente desarrollar una aplicación y entender cómo funciona. Puedo incluso ayudar a resolver problemas y bugs en algún código. 
       Los profesores son geniales y el resto del staff está siempre pendiente que te vaya de la mejor manera posible. Es increíble todo el apoyo que recibes. 
       Recomiendo el Bootcamp 100%. 
   - student_name: "Fidel Rosell"
     testimonial_date: ""
+    hidden: false
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
-    alt: ""
-    starts: 1
     source_url: ""
     source_url_text: ""
     content: |
@@ -101,5 +93,14 @@ testimonials:
       Se enfocan en problemas duros y te ayudan en todo momento. Los instructores senio son impresionantes en cuanto a conocimiento y capacidades. 
       Si tienes una entrevista de trabajo, te ayudan con test, con entrevistas simuladas y te preparan de la mejor manera. 
       Una vez graduado, si quieres seguir practicando o conseguir un nuevo trabajo, ellos te van a ayudar. 
+  - student_name: "Guensie Grecy"
+    testimonial_date: ""
+    student_thumb: ""
+    linkedin: "https://www.linkedin.com/in/guensiegrecy/"
+    hidden: true
+    source_url: ""
+    video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
+    source_url_text: ""
+    content: |
+      I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn’t know anything about anything computer-technology wise, so that’s an encouragement because it’s possible!
 
-      

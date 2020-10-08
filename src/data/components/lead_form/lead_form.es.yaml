@@ -1,0 +1,36 @@
+
+messages:
+  error: "Hay errores en el formulario"
+  success: "¡Gracias! Revisa tu buzón de correo 😁"
+  loading: "Enviando..."
+form_fields:
+  - name: first_name
+    required: true
+    type: 'text'
+    place_holder: "Nombre *"
+    error: "Por favor especifica tu primer nombre"
+  - name: full_name
+    required: true
+    type: 'text'
+    place_holder: "Nombre completo *"
+    error: "Por favor especifica tu nombre completo"
+  - name: last_name
+    required: false
+    type: 'text'
+    place_holder: "Apellido"
+    error: "Por favor especifica tu apellido"
+  - name: email
+    required: true
+    type: 'email'
+    place_holder: "Correo electrónico *"
+    error: "Por favor especifica tu correo electrónico"
+  - name: phone
+    required: true
+    type: 'phone'
+    place_holder: "Número móvil"
+    error: "Por favor especifica tu número móvil"
+  - name: consent
+    required: true
+    type: 'text'
+    place_holder: ""
+    error: "Debes aceptar la política de privacidad y términos de uso"

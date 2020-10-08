@@ -1,12 +1,12 @@
 meta_info:
     slug: calendar
-    title: "About The Academy"
-    description: "About 4Geeks Academy"
+    title: "Upcoming dates, cohorts, workshops and events at 4Geeks Academy"
+    description: "Learn about 4Geeks Academy's upcoming cohorts, and also our exciting workshops and events tailred for the local software development community"
     image: ""
-    keywords: ""
-    redirects: []
+    keywords: "4Geeks Academy Events, 4Geeks Academy Workshops, 4Geeks Academy Events, Workshops, Events, Upcoming Cohorts, Upcoming Dates"
+    redirects: ["/upcoming", "/dates"]
 
 header:
     tagline: UPCOMING PROGRAMS AND EVENTS AT 4GEEKS ACADEMY
-    sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+    sub_heading: "Filter the events or cohorts based what you are interested on"
     image: "../../../static/images/bg/4Geeks-events-bg.jpg"

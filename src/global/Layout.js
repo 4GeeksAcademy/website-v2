@@ -15,7 +15,7 @@ import SEO from './SEO';
 
 const Layout = ({children, seo, context}) => {
 
-  const { session } = React.useContext(SessionContext);
+  const { session, setLocation } = React.useContext(SessionContext);
   // const {slug, title, description, image, keywords} = seo;
   const [ editMode, setEditMode ] = React.useState()
   const [ showUpcoming, setShowUpcoming ] = React.useState(true)
@@ -100,7 +100,7 @@ const Layout = ({children, seo, context}) => {
             </div>}
             <SEO {...seo} context={context} />
             {/* <NavB lang={myNavbar} /> */}
-            <Navbar menu={myNavbar.node.navbar} button={_btnInfo} lang={context.lang} />
+            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={_btnInfo} lang={context.lang} />
             <GlobalStyle />
             <>
               {children}

@@ -72,43 +72,53 @@ const Partners = (props) => {
         background={Colors.lightGray}
         border="top"
       >
-
-        <Divider height="20px" />
+        <Title
+          size="10"
+          marginTop="40px"
+          title={hiring.partners.tagline}
+          paragraph={hiring.partners.sub_heading}
+          paragraphColor={Colors.black}
+          variant="primary"
+        />
         <WhoIsHiring
-          tagline={hiring.partners.tagline}
-          subheading={hiring.partners.sub_heading}
           images={hiring.partners.images}
           footerTagline={hiring.partners.footer_tagline}
           footerLink={hiring.partners.footer_link}
           footerButton={hiring.partners.footer_button}
         />
 
-        <Divider height="50px" />
+        <Title
+          size="10"
+          marginTop="40px"
+          title={hiring.coding.tagline}
+          paragraph={hiring.coding.sub_heading}
+          paragraphColor={Colors.black}
+          variant="primary"
+        />
 
         <WhoIsHiring
-          tagline={hiring.coding.tagline}
-          subheading={hiring.coding.sub_heading}
           images={hiring.coding.images}
           footerTagline={hiring.coding.footer_tagline}
           footerLink={hiring.coding.footer_link}
           footerButton={hiring.coding.footer_button}
         />
 
-        <Divider height="50px" />
+        <Title
+          size="10"
+          marginTop="40px"
+          title={hiring.influencers.tagline}
+          paragraph={hiring.influencers.sub_heading}
+          paragraphColor={Colors.black}
+          variant="primary"
+        />
 
         <WhoIsHiring
-          tagline={hiring.influencers.tagline}
-          subheading={hiring.influencers.sub_heading}
           images={hiring.influencers.images}
           footerTagline={hiring.influencers.footer_tagline}
           footerLink={hiring.influencers.footer_link}
           footerButton={hiring.influencers.footer_button}
         />
-        {/* <Row align="center">
-                    <Button width="300px" color={Colors.blue} onClick={() => setShowModal(!showModal)} textColor={Colors.white} margin="2rem 0" padding=".85rem">{yml.button_section.button_text}</Button>
-                </Row> */}
         <Divider height="100px" />
-        {/* </Wrapper> */}
       </Wrapper>
       <Divider height="100px" />
 
@@ -172,7 +182,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -188,7 +197,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -204,7 +212,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -220,7 +227,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline

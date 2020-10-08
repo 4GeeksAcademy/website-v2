@@ -416,7 +416,7 @@ const Calendar = (props) => {
                                     fs_sm="18px"
                                     fs_md="16px"
                                     fs_lg="16px"
-                                    fs_xl="20px"
+                                    fontSize="20px"
                                   >{cohort.certificate.name}
                                   </H4>
                                 </Row>
@@ -523,7 +523,7 @@ const Calendar = (props) => {
                                     fs_sm="18px"
                                     fs_md="16px"
                                     fs_lg="16px"
-                                    fs_xl="20px"
+                                    fontSize="20px"
                                   >{event.title}
                                   </H4>
                                 </Row>

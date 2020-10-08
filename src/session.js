@@ -1,6 +1,6 @@
 import React, {createContext, useState, useEffect} from "react";
 import {useStaticQuery, graphql} from 'gatsby';
-import { initSession, defaultSession, setTagManaerVisitorInfo, locByLanguage } from "./actions"
+import { initSession, defaultSession, setStorage, setTagManaerVisitorInfo, locByLanguage } from "./actions"
 
 export const SessionContext = createContext(defaultSession);
 
@@ -14,6 +14,7 @@ export default ({children}) => {
                 name
                 latitude
                 longitude
+                phone
                 country
                 defaultLanguage
                 breathecode_location_slug
@@ -64,10 +65,23 @@ export default ({children}) => {
               .catch(error => console.error("Error initilizing session", error))
         }, []);
 
-        return <SessionContext.Provider value={{session, setSession: (_s) => {
-            const location = locByLanguage(data.allLocationYaml, _s.language).find(l => l.breathecode_location_slug === _s.location.breathecode_location_slug)
-            setSession({ ..._s, location })
-          }}}>
+        return <SessionContext.Provider value={{
+            session, 
+            setSession: (_s) => {
+              const location = locByLanguage(data.allLocationYaml, _s.language).find(l => l.breathecode_location_slug === _s.location.breathecode_location_slug)
+              setSession({ ..._s, location })
+            },
+            setLocation: (slug) => {
+              const location = locByLanguage(data.allLocationYaml, session.language).find(l => l.breathecode_location_slug === slug)
+              console.log("setLocation", location)
+              if(location){
+                const _session = { ...session, location };
+                setSession(_session)
+                setStorage(_session);
+              }
+              else console.error(`Location ${slug} with language ${session.language} not found to be set`)
+            }
+          }}>
             {children}
         </SessionContext.Provider>
 };

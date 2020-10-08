@@ -28,7 +28,7 @@ const PricingCard = ({data, lang, children, price, color, background, transform,
         fontSize="20px"
         fs_md="18px"
         fs_sm="24px"
-        fs_xs="22px"
+        fontSize="22px"
         color={color}
         >
             {header.heading_one}
@@ -38,7 +38,7 @@ const PricingCard = ({data, lang, children, price, color, background, transform,
         </H4>
     <Paragraph padding="20px" align="center" fontSize="12px" color={color || Colors.gray}>{header.sub_heading}</Paragraph>
     <H3 margin="20px 0 0"
-      fs_xl="25px"
+      fontSize="25px"
       fs_lg="20px"
       color={color}
       align="center" >{price}</H3>
@@ -102,7 +102,7 @@ const PricesAndPayments = (props) => {
   useEffect(() => setCourse(courseArray.find(c => c.value === props.course)),[props.course]);
   
   if (!currentLocation || !currentLocation.prices) 
-  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
   
   const prices = !course ? {} : currentLocation.prices[course.value];
 

@@ -10,10 +10,25 @@ meta_info:
 header_data:
   #Empowering talent with code by providing flexible educational experiences
   tagline: EMPOWERING TALENT WITH CODING CAREERS
-  sub_heading: "We are specialist of code. 4Geeks is the place were developers grow and thrive."
+  sub_heading: "We are specialists of code. 4Geeks is the place were developers grow and thrive."
   image: "../../../static/images/bg/the-academy-bg.jpg"
   alt: ""
 
+## CREDENTIALS SECTION
+education:
+  left_box:
+    heading: "LICENSED BY"
+    image: "../../../static/images/florida-logo.png"
+    alt: ""
+  center_box:
+    heading: "TOP CODING BOOTCAMP"
+    image: "../../../static/images/news/newsweek.png"
+    alt: ""
+  right_box:
+    heading: "As Reviewed in"
+    image: "../../../static/images/Group.png"
+    alt: "CNN and BCC Logo"
+    
 ## 4GEEKS OUTCOMES
 outcomes:
   heading: "4GEEKS OUTCOMES"
@@ -24,7 +39,7 @@ outcomes:
     title: "Demographics"
     content: "4Geeks Academy students are mainly between the ages of 26 and 32 years old. We have chosen 3 main segments in order to show the average age of our graduates."
     sub_content: "Coding Bootcamp Graduates are 30.6 years old (avg)."
-    bottom_message: "Our students make 24% more money after comnpleting our programs."
+    bottom_message: "Our students increase their salary by 24% after comnpleting our programs."
   right:
     chart_one:
       ## EACH DONUTCHART NEEDS AN ARRAY OF ARRAYS WITH  LABEL AND VALUE
@@ -56,7 +71,7 @@ cornerstones:
   sub_heading: ""
   cornerstones_list:
     - title: FLIPPED CLASSROOM
-      content: Theory is delivered trough video, animation, images and infographics. Class time is then used to debate, create and build projects, and mentor over practicalexercises.
+      content: Theory is delivered trough video, animation, images and infographics. Class time is then used to debate, create and build projects, and mentor over practical exercises.
       icon: Book
     - title: 1:7 MENTOR-STUDENT RATIO
       content: An intimate setting provides the faculty with the opportunity to adapt to each student's particular pace.
@@ -76,7 +91,7 @@ staff:
 ## OUR STORY SECTION
 story:
   heading: OUR STORY
-  sub_heading_one: "4Geeks Academy was founded in 2015. What began as an internal project to train new developers has flourished into a full-time passion.Today, 4Geeks is now based in the U.S. As coding has become an essential part of society, the mission of our Coding Bootcamp is to instill a new framework for Coding Education universally."
+  sub_heading_one: "4Geeks Academy was founded in 2015. What began as an internal project to train new developers has flourished into a full-time passion. Today, 4Geeks is now based in the U.S. As coding has become an essential part of society, the mission of our Coding Bootcamp is to instill a new framework for Coding Education universally."
   button: "Read More >"
   button_link: "/us/post/4geeks-academy-history"
   image: "../../../static/images/our-story.png"

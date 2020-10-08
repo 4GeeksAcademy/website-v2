@@ -1,31 +1,31 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import Layout from '../global/Layout';
 import Why4Geeks from '../components/Why4Geeks';
 import GeeksVsOthers from '../components/GeeksVsOthers'
+import Badges from '../components/Badges'
+import News from '../components/News'
 import ChooseProgram from '../components/ChooseProgram'
 import JobsStatistics from '../components/JobsStatistics';
-import {H1, H2, H3, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Container, Row, Column, Divider, Wrapper} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowRight, StyledBackgroundSection} from '../components/Styling'
+import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
+import {Row, Column, Wrapper} from '../components/Sections'
+import {RoundImage, Colors, ArrowRight, StyledBackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
 import WhoIsHiring from '../components/WhoIsHiring';
 import AlumniProjects from '../components/AlumniProjects'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
-import Testimonials from '../components/Testimonials'
-import Events from '../components/Events'
+import { TestimonialsCarrousel } from '../components/Testimonials'
 import WhyPython from '../components/WhyPython'
 import Loc from '../components/Loc'
 import {Link, navigate} from 'gatsby';
 import {SessionContext} from '../session.js'
-import Img from "gatsby-image"
 
 const Home = (props) => {
-  const {session} = React.useContext(SessionContext);
+  const {session, setLocation } = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
-  const city = session && session.location ? session.location.reliable ? session.location.city : "" : "Miami";
+  // const city = session && session.location ? session.location.reliable ? "" : "" : "Miami";
+  const city = session && session.location ? "" : "Miami";
   
   React.useEffect(() => {
     if(session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
@@ -55,6 +55,7 @@ const Home = (props) => {
           <ChooseProgram
             left="15px"
             top="40px"
+            onLocationChange={(slug) => setLocation(slug)}
             programs={data.allChooseProgramYaml.edges[0].node.programs}
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
             closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
@@ -81,10 +82,12 @@ const Home = (props) => {
         </Column>
       </Row>
 
-      {/* CREDENTIALS CARDS */}
+      {/* BADGES AND NEWS CARDS */}
 
       <Wrapper>
-        <Credentials lang={data.allCredentialsYaml.edges} />
+        <Badges lang={pageContext.lang} />
+        <H4 margin="50px 0">{yml.news.heading}</H4>
+        <News lang={pageContext.lang} limit={yml.news.limit}  />
       </Wrapper>
 
       {/* WHY 4GEEKS SECTION */}
@@ -95,77 +98,14 @@ const Home = (props) => {
           variant="primary"
         />
         <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
+        <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       </Wrapper>
-
-      {/* JOBS STATISTICS SECTION */}
 
       <Wrapper margin="50px 0">
         <WhyPython lang={pageContext.lang} />
       </Wrapper>
 
-      {/* JOBS STATISTICS SECTION */}
 
-      <Wrapper>
-        <JobsStatistics lang={data.allJobsStatisticsYaml.edges} />
-      </Wrapper>
-
-      <Wrapper margin="30px">
-        <Row align="center" >
-          <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph
-              margin="5px 0"
-              color={Colors.gray}
-              fs_xs="10px"
-              fs_sm="12px"
-              fs_md="12px"
-              align="center">{yml.education.left_box.heading}
-            </Paragraph>
-            <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="Florida Education Logo"></Img>
-          </Column>
-          <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph
-              margin="5px 0"
-              color={Colors.gray}
-              fs_xs="10px"
-              fs_sm="12px"
-              fs_md="12px"
-              fs_lg="12px"
-              fs_xl="12px"
-              align="center">{yml.education.center_box.heading}
-            </Paragraph>
-            <Img className={`image`} fluid={yml.education.center_box.image.childImageSharp.fluid} alt="Newsweek Logo"></Img>
-          </Column>
-          <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph
-              margin="5px 0"
-              color={Colors.gray}
-              fs_xs="10px"
-              fs_sm="12px"
-              fs_md="12px"
-              fs_lg="12px"
-              fs_xl="12px"
-              align="center">{yml.education.right_box.heading}
-            </Paragraph>
-            <Img className={`image`} fluid={yml.education.right_box.image.childImageSharp.fluid} alt="Cnn Logo"></Img>
-          </Column>
-        </Row>
-        <Row>
-          <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
-          <Column size="4" customRespSize respSize="4" margin="5px 0">
-            <Paragraph
-
-              color={Colors.gray}
-              fs_xs="10px"
-              fs_sm="12px"
-              fs_md="12px"
-              fs_lg="12px"
-              fs_xl="12px"
-              align="center">2017 Report
-            </Paragraph>
-          </Column>
-          <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
-        </Row>
-      </Wrapper>
 
       {/* GEEKS VS OTHERS SECTION */}
 
@@ -263,10 +203,16 @@ const Home = (props) => {
         right={true}
         background={Colors.lightGray}
         border="top">
+        <Title
+            size="10"
+            marginTop="40px"
+            title={hiring.partners.tagline}
+            paragraph={hiring.partners.sub_heading}
+            paragraphColor="black"
+            variant="primary"
+        />
         <WhoIsHiring
           margin="50px"
-          tagline={hiring.partners.tagline}
-          subheading={hiring.partners.sub_heading}
           images={hiring.partners.images}
           footerTagline={hiring.partners.footer_tagline}
           footerLink={hiring.partners.footer_link}
@@ -309,7 +255,7 @@ const Home = (props) => {
           maxWidth="66%"
         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
         />
-        <Testimonials lang={data.allTestimonialsYaml.edges} />
+        <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
       </Wrapper>
 
     </>
@@ -339,7 +285,10 @@ export const query = graphql`
               }
            
             }
-            
+            news{
+              limit
+              heading
+            }
             geeks_vs_others{
                 heading
                 sub_heading
@@ -364,50 +313,6 @@ export const query = graphql`
                     
                   geek_force_heading
                   geek_pal_heading
-                }
-            }
-            education{
-                left_box{
-                    heading
-                    image {
-                      childImageSharp {
-                        fluid(maxWidth: 300){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                        fixed(width: 300, height: 60) {
-                          ...GatsbyImageSharpFixed
-                        }
-                      }
-                    }
-                    alt
-                }
-                center_box{
-                    heading
-                    image {
-                      childImageSharp {
-                        fluid(maxWidth: 300){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                        fixed(width: 300, height: 60) {
-                          ...GatsbyImageSharpFixed
-                        }
-                      }
-                    }
-                    alt
-                }
-                right_box{
-                    heading
-                    image {
-                      childImageSharp {
-                        fluid(maxWidth: 300){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                        fixed(width: 300, height: 60) {
-                          ...GatsbyImageSharpFixed
-                        }
-                      }
-                    }
-                    alt
                 }
             }
             locations{
@@ -471,7 +376,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
               }
@@ -485,7 +389,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -501,7 +404,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -517,7 +419,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -597,6 +498,7 @@ export const query = graphql`
                 testimonials {
                   student_name
                   testimonial_date
+                  hidden
                   student_thumb{
                     childImageSharp {
                       fluid(maxHeight: 200){
@@ -607,7 +509,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  starts
                   content
                   source_url
                   source_url_text
@@ -621,21 +522,17 @@ export const query = graphql`
                 header{
                   tagline
                   sub_heading
-                  button_text
                 }
                 projects {
                     project_name
                     slug
-                    project_image{
-                        image {
-                            childImageSharp {
-                              fluid(maxWidth: 800){
-                                ...GatsbyImageSharpFluid_withWebp
-                              }
-                            }
-                          } 
-                        image_alt
-                    }
+                    project_image {
+                      childImageSharp {
+                        fluid(maxWidth: 800){
+                          ...GatsbyImageSharpFluid_withWebp
+                        }
+                      }
+                    } 
                     project_content
                     project_video
                     live_link
@@ -661,6 +558,7 @@ export const query = graphql`
               node {
                 programs{
                     text
+                    location_bc_slug
                     link
                     schedule
                 }

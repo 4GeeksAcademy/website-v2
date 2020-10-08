@@ -14,7 +14,7 @@ const Pricing = (props) => {
   const {data, pageContext, yml} = props;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
-  console.log("data", data);
+  console.log("yml", yml);
   let location = null;
   if(session && session.location){
 
@@ -64,7 +64,7 @@ const Pricing = (props) => {
           </Column>
         </Row>
       </Wrapper>
-      <Wrapper>
+      {/* <Wrapper>
         <Row m_sm="0px 0px 100px 0">
           <Column size="7" size_sm="12">
             <H2 align="left" margin="30px 0 20px 0" type="h1">{yml.intro.heading_second}</H2>
@@ -79,7 +79,7 @@ const Pricing = (props) => {
             />
           </Column>
         </Row>
-      </Wrapper>
+      </Wrapper> */}
       <Wrapper margin="50px 0px" right
         customBorderRadius="1.25rem 0 0 1.25rem"
         background={Colors.lightGray}
@@ -120,11 +120,15 @@ const Pricing = (props) => {
         background={Colors.lightGray}
         border="top"
       >
-        <Divider height="20px" />
+          <Title
+            size="10"
+            title={yml.ecosystem.heading}
+            paragraph={yml.ecosystem.sub_heading}
+            paragraphColor="black"
+            variant="primary"
+          />
         <WhoIsHiring
           margin="50px"
-          tagline={hiring.financials.tagline}
-          subheading={hiring.financials.sub_heading}
           images={hiring.financials.images}
           footerTagline={hiring.financials.footer_tagline}
           footerLink={hiring.financials.footer_link}
@@ -372,7 +376,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -388,7 +391,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -404,7 +406,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -420,7 +421,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline

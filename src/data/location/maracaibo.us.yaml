@@ -13,15 +13,17 @@ meta_info:
 seo_title: "4Geeks Academy Maracaibo"
 header:
   tagline: "4GEEKS ACADEMY IN Maracaibo"
-  paragraph: "Come and learn code in one of the biggest coding schools and communities in the world, receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
+  paragraph: "Come and learn code in one of the biggest coding schools and communities in the world!  Receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
   image: "../../../static/images/locations/mcbo-loc-2.png"
   alt: ""
 
 button:
-  syllabus_button_text: "REQUEST SYLLABUS"
+  syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
+
   syllabus_submit_text: "DOWNLOAD"
-  apply_button_text: "APPLY NOW"
   apply_button_link: "/apply"
+  cohort_more_details_text: "DETAILS"
 
 news:
   title: "4Geeks Academy Maracaibo in the news..."
@@ -40,7 +42,7 @@ info_box:
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and at walking distance to the most prominent restorants, cofee shops and business center. 140 metters of innovation, curious people and very good vibe to learn."
+  content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and within walking distance of the most prominent restaurants, coffee shops and business centers. 140 meters of innovation, curious people and an amazing vibe to learn."
   images:
     - path: "../../../static/images/locations/mcbo-chinita.jpeg"
       alt: "mcbo-chinita"
@@ -74,7 +76,7 @@ prices:
         heading_one: "FULL-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
+        price: "Pay upfront and get a discount or ask for additional financing options"
         price_info:
 
     ## RIGHT BOX SECTION
@@ -84,7 +86,7 @@ prices:
         heading_one: "PART-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
+        price: "Pay upfront and get a discount or ask for additional financing options"
         price_info: ""
   ## *****************
   ## PART-TIME SECTION
@@ -100,7 +102,7 @@ prices:
         heading_one: "FULL-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
+        price: "Pay upfront and get a discount or ask for additional financing options"
         price_info: ""
 
     ## RIGHT BOX SECTION
@@ -110,7 +112,7 @@ prices:
         heading_one: "PART-TIME"
         sub_heading: ""
       content:
-        price: "ay upfront and get a discount or ask for a 3 - 4 payment options"
+        price: "Pay upfront and get a discount or ask for additional financing options"
         price_info: ""
 
 active_campaign_location_slug: "maracaibo-venezuela"

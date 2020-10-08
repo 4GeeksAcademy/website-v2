@@ -3,14 +3,14 @@ news:
   - name: "Newsweek"
     location: ["downtown-miami", "online", "madrid-spain"]
     image: "../../../../static/images/news/newsweek.png"
-  - name: "RRHH Digital"
-    location: ["madrid-spain"]
-    image: "../../../../static/images/news/rrhhdigital.png"
-    url: "https://uploads.convertflow.co/production/websites/9849/K3qc2IPjSnGqG3qYNKt2_rrhhdigital.png"
-  - name: "TIC Pymes"
-    location: ["madrid-spain"]
-    image: "../../../../static/images/news/ticpymes.png"
-    url: "https://www.ticpymes.es/tecnologia/noticias/1117890049504/entrevista-aprendizaje-y-ejercitacion-de-logica-clave-aprender-programar.1.html"
+  - name: "CNN Español"
+    location: ["santiago-chile", "online", "downtown-miami"]
+    url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
+    image: "../../../../static/images/news/cnn-chile.png"
+  - name: "NBC"
+    location: ["downtown-miami"]
+    url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
+    image: "../../../../static/images/news/nbc.png"
   - name: "La Razón"
     location: ["madrid-spain"]
     image: "../../../../static/images/news/larazon.png"
@@ -22,14 +22,18 @@ news:
     location: ["santiago-chile"]
     url: "https://www.latercera.com/pulso/noticia/destacada-academia-estadounidense-programadores-aterriza-chile/491519/"
     image: "../../../../static/images/news/la-tercera.png"
-  - name: "CNN Español"
-    location: ["santiago-chile", "online", "downtown-miami"]
-    url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
-    image: "../../../../static/images/news/cnn-chile.png"
   - name: "La Nacion"
     location: ["costa-rica"]
     url: "https://www.nacion.com/el-pais/educacion/academia-ofrece-a-ticos-300-becas-completas-para/4HWBOQ2SVRAITNWJPJ2LUMUE3M/story/"
     image: "../../../../static/images/news/la-nacion-costa-rica.png"
+  - name: "TIC Pymes"
+    location: ["madrid-spain"]
+    image: "../../../../static/images/news/ticpymes.png"
+    url: "https://www.ticpymes.es/tecnologia/noticias/1117890049504/entrevista-aprendizaje-y-ejercitacion-de-logica-clave-aprender-programar.1.html"
+  - name: "RRHH Digital"
+    location: ["madrid-spain"]
+    image: "../../../../static/images/news/rrhhdigital.png"
+    url: "https://uploads.convertflow.co/production/websites/9849/K3qc2IPjSnGqG3qYNKt2_rrhhdigital.png"
   - name: "Las Ultimas Noticias"
     location: ["santiago-chile"]
     url: "http://www.lun.com/Pages/NewsDetail.aspx?dt=2019-02-16&NewsID=420792&BodyID=0&PaginaId=16"
@@ -54,7 +58,3 @@ news:
     location: ["el-nacional"]
     url: "https://www.analitica.com/emprendimiento/noti-tips/4geeks-academy-una-academia-para-desarrolladores-web/"
     image: "../../../../static/images/news/analitica.png"
-  - name: "NBC"
-    location: ["downtown-miami"]
-    url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
-    image: "../../../../static/images/news/nbc.png"

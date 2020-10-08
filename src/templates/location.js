@@ -36,7 +36,7 @@ const Location = ({data, pageContext, yml}) => {
         const loadCohorts = async () => {
             const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
             const data = await resp.json();
-            setCohorts(data.slice(0,4))
+            setCohorts(data.slice(0,3))
         }
         loadCohorts();
       }, []);
@@ -210,7 +210,7 @@ const Location = ({data, pageContext, yml}) => {
             <Row>
                 { cohorts && cohorts.map(cohort => 
                     <Column
-                        size="3"
+                        size="4"
                         size_md="4"
                         size_sm="6"
                         size_xs="12"
@@ -223,11 +223,12 @@ const Location = ({data, pageContext, yml}) => {
                             margin_sm={"20px auto"}
                             margin_xs={"20px auto"}
                         >
-                            <Img 
+                            <Link to={`/${pageContext.lang}/${cohort.certificate.slug}`}><Img 
                                 src={cohort.certificate.logo} 
+                                className="pointer"
                                 height="120px" 
                                 borderRadius="1rem 1rem 0 0"
-                            />
+                            /></Link>
                             <H4 padding="10px">{cohort.certificate.name}</H4>
                             <Div padding="10px">
                                 <Clock width="24" color={Colors.blue} fill={Colors.blue} />
@@ -237,13 +238,15 @@ const Location = ({data, pageContext, yml}) => {
                                 fs_sm="18px"
                                 fs_md="9px"
                                 fs_lg="11px"
-                                fs_xl="14px">
+                                fontSize="14px">
                                     <Small display="block">Starting on:</Small>
                                     {dayjs(cohort.kickoff_date).format("ddd, D MMM YYYY")}
                                 </Paragraph>
                             </Div>
-                            <Div padding="10px">
-                            <Link to={yml.button.apply_button_link}><Button color={Colors.red} textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
+                            <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center">
+                                <Link to={yml.button.apply_button_link}><Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
+                                &nbsp;
+                                <Link to={`/${pageContext.lang}/${cohort.certificate.slug}`}><Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{yml.button.cohort_more_details_text}</Button></Link>
                             </Div>
                         </Card>
                     </Column>
@@ -364,6 +367,7 @@ export const query = graphql`
             button{
                 apply_button_link
                 apply_button_text
+                cohort_more_details_text
                 syllabus_button_text
                 syllabus_submit_text
             }
@@ -420,6 +424,7 @@ export const query = graphql`
             programs{
                 text
                 link
+                location_bc_slug
                 schedule
             }
             open_button_text

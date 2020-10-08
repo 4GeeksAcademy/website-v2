@@ -33,12 +33,16 @@ footer:
         link: "/precio"
       - name: "Eventos"
         link: "/calendario"
+      - name: "Próximas Fechas"
+        link: "/calendario"
       - name: "Blog"
         link: "/blog-en-espanol"
       - name: "Empleo"
         link: "/empleo"
       - name: "FAQ"
         link: "/preguntas-frecuentes"
+      - name: "Contacto"
+        link: "/contactanos"
   - column_four:
     heading: "SEDES"
     width: 3

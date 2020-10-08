@@ -117,7 +117,7 @@ export const Burger = (props) => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav lang={props.lang} open={open} onToggle={handleToggle} menu={props.menu} button={props.button} />
+      <RightNav onLocationChange={(slug) => props.onLocationChange(slug)} lang={props.lang} open={open} onToggle={handleToggle} menu={props.menu} button={props.button} />
     </NavBar>
   )
 }
@@ -206,7 +206,7 @@ const Ul = styled.ul`
   }
 `;
 
-export const RightNav = ({lang, menu, open, button, onToggle}) => {
+export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange}) => {
   const data = useStaticQuery(graphql`
     query {
       allChooseProgramYaml {
@@ -215,6 +215,7 @@ export const RightNav = ({lang, menu, open, button, onToggle}) => {
             programs{
                 text
                 link
+                location_bc_slug
                 schedule
             }
             fields{
@@ -253,6 +254,7 @@ export const RightNav = ({lang, menu, open, button, onToggle}) => {
                   marginTop="-3px"
                   borderRadius="0 .75rem .75rem .75rem"
                   openLabel={content.node.close_button_text}
+                  onLocationChange={(slug) => onLocationChange(slug)}
                   closeLabel={content.node.open_button_text}
                   selector={({ status, setStatus }) => 
                     !status.toggle ?

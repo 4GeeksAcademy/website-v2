@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Row, Container, Column, Divider, Div} from '../Sections'
 import PropTypes from "prop-types"
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, Address, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage, StyledBackgroundSection} from '../Styling';
+import {Colors, Anchor, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage, StyledBackgroundSection} from '../Styling';
 import {Card} from '../Card';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -64,7 +64,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                                 fs_sm="16px"
                                                 fs_md="18px"
                                                 fs_lg="20px"
-                                                fs_xl="20px"
+                                                fontSize="20px"
                                                 align_xs="center"
                                                 align="left"
                                                 fontWeight={`400`}
@@ -86,7 +86,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                                     </Paragraph>
                                                     {alumni.github != "" &&
                                                         <Span style={{width: "22px", height: "22px"}} margin="0 5px" >
-                                                            <a target="_blank" href={alumni.github}>
+                                                            <a target="_blank" href={alumni.github} rel="noopener noreferrer nofollow">
                                                                 <Github width="22" color={Colors.gray} fill={Colors.gray} />
                                                             </a>
                                                         </Span>
@@ -94,7 +94,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                                     {/* {alumni.github != "" && <Github width="14" color={Colors.blue} fill={Colors.blue} />} */}
                                                     {alumni.linkedin != "" &&
                                                         <Span style={{width: "22px", height: "22px"}}>
-                                                            <a target="_blank" href={alumni.linkedin}>
+                                                            <a target="_blank" href={alumni.linkedin} rel="noopener noreferrer nofollow">
                                                                 <Linkedin width="22" color={Colors.gray} fill={Colors.gray} />
                                                             </a>
                                                         </Span>
@@ -108,14 +108,11 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                     margin={`0 0 10px 0`}
                                     color={Colors.gray}
                                     align="left"
-                                    fs_xs="16px"
-                                    fs_sm="16px"
-                                    fs_md="16px"
-                                    fs_lg="16px"
-                                    fs_xl="28px"
+                                    fs_lg="18px"
+                                    fontSize="28px"
                                     lineHeight="20px"
                                     fontWeight={`400`}
-                                >{`${item.project_name}`}</H4>
+                                >Project: {`${item.project_name}`}</H4>
                                 <Paragraph
                                     margin={`0 0 14px 0`}
                                     align_sm={`left`}
@@ -125,12 +122,16 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                     fs_lg="11px"
                                     fs_xl="16px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.project_content}
                                 </Paragraph>
-                                {item.live_link ?
-                                    <a href={`${item.live_link}`} target="_blank">
-                                        <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link</Paragraph>
-                                    </a>
-                                    : <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}></Paragraph>
-                                }
+                                <Div>
+                                    {item.project_video && <Anchor href={`${item.project_video}`} target="_blank" rel="noopener noreferrer nofollow">
+                                            <Paragraph margin={`10px 5px 0 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Video Demo •</Paragraph>
+                                        </Anchor>
+                                    }
+                                    {item.live_link && <Anchor href={`${item.live_link}`} target="_blank" rel="noopener noreferrer nofollow">
+                                            <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link </Paragraph>
+                                        </Anchor>
+                                    }
+                                </Div>
                             </Column>
 
                             {item.project_video === "" ?
@@ -142,8 +143,8 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                 >
                                     <StyledBackgroundSection
                                         className={`image`}
-                                        height={`500px`}
-                                        image={item.project_image.image.childImageSharp.fluid}
+                                        height={`350px`}
+                                        image={item.project_image.childImageSharp.fluid}
                                         bgSize={`cover`}
                                         alt="Cnn Logo"
                                         borderRadius={`0 0 0 1.25rem`}
@@ -155,7 +156,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                         className='react-player alumni-player'
                                         file={{forceVideo: true}}
                                         style={{height: playerHeight}}
-                                        light={item.project_image.image}
+                                        light={item.project_image}
                                         controls={true}
                                         url={item.project_video}
                                         width='100%'

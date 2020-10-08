@@ -56,7 +56,7 @@ const Blog = ({data, pageContext, yml}) => {
                             fs_sm="30px"
                             fs_md="30px"
                             fs_lg="30px"
-                            fs_xl="30px"
+                            fontSize="30px"
                         >Featured</H4>
                     </Column>
                 </Row>
@@ -95,7 +95,7 @@ const Blog = ({data, pageContext, yml}) => {
                                                 fs_sm="24px"
                                                 fs_md="16px"
                                                 fs_lg="20px"
-                                                fs_xl="22px"
+                                                fontSize="22px"
                                             >{item.node.frontmatter.title}</H4></Link>
                                         </Column>
                                     </Row>
@@ -144,7 +144,7 @@ const Blog = ({data, pageContext, yml}) => {
                             fs_sm="30px"
                             fs_md="30px"
                             fs_lg="30px"
-                            fs_xl="30px"
+                            fontSize="30px"
                         >All Stories</H4>
                     </Column>
                 </Row>
@@ -183,7 +183,7 @@ const Blog = ({data, pageContext, yml}) => {
                                                 fs_sm="24px"
                                                 fs_md="16px"
                                                 fs_lg="20px"
-                                                fs_xl="22px"
+                                                fontSize="22px"
                                             >{item.node.frontmatter.title}</H4></Link>
                                         </Column>
                                     </Row>

@@ -104,7 +104,7 @@ const Events = ({ }) => {
 
                                                 </Row>
                                                 <Row height="100px">
-                                                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                                                    <a href={item.url} target="_blank"  rel="noopener noreferrer nofollow">
                                                         <Button outline color={Colors.blue} textColor={Colors.black} padding=".35rem.85rem">MORE DETAILS</Button>
                                                     </a>
                                                 </Row>

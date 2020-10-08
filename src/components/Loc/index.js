@@ -115,7 +115,7 @@ const Loc = (props) => {
                         fs_sm="12px"
                         fs_md="12px"
                         fs_lg="14px"
-                        fs_xl="16px"
+                        fontSize="20px"
 
                       >
                         {pic.node.city}

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseRender'
 import {Card, GeekCard} from '../components/Card'
@@ -11,19 +11,18 @@ import AlumniProjects from '../components/AlumniProjects'
 import ProgramSelector from '../components/ProgramSelector'
 import {requestSyllabus} from "../actions";
 import Credentials from '../components/Credentials'
-import LeadForm from "../components/LeadForm/index.js";
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import TypicalDay from "../components/TypicalDay"
-import Modal from '../components/Modal';
 import {SessionContext} from '../session'
-
+import LeadForm from "../components/LeadForm"
+import Modal from "../components/Modal"
 
 
 const Program = ({data, pageContext, yml}) => {
   const {session} = React.useContext(SessionContext);
-  const geek = data.allCourseYaml.edges[0].node;
+  const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
@@ -83,30 +82,27 @@ const Program = ({data, pageContext, yml}) => {
           <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
         </Column>
       </Row>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={handleClose}
-      >
-        <LeadForm heading="Request Syllabus" formHandler={requestSyllabus} handleClose={handleClose} 
-          lang={pageContext.lang}
-          data={{ 
-            course: { value: yml.meta_info.bc_slug, valid: true }
-          }}
-        />
-      </Modal>
+        <Modal
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+          open={open}
+          onClose={handleClose}
+        >
+          <LeadForm 
+            style={{ marginTop: "50px" }}
+            heading={yml.button.syllabus_heading}
+            motivation={yml.button.syllabus_motivation} 
+            sendLabel={yml.button.syllabus_btn_label}
+            formHandler={requestSyllabus} 
+            handleClose={handleClose} 
+            lang={pageContext.lang}
+            data={{ 
+              course: { value: yml.meta_info.bc_slug, valid: true }
+            }}
+          />
+        </Modal>
       <Divider height="100px" md="0px" />
     </WrapperImage>
-
-    <Wrapper margin="80px 0 0 0" m_sm="0">
-      <Title
-        size="10"
-        title={yml.credentials.heading}
-        paragraph={yml.credentials.paragraph}
-      />
-      <Credentials lang={data.allCredentialsYaml.edges} />
-    </Wrapper>
 
     {/* PROGRAM DETAILS */}
     <Wrapper >
@@ -117,8 +113,8 @@ const Program = ({data, pageContext, yml}) => {
         paragraph={yml.details.sub_heading}
         variant="primary"
       />
-      <ProgramDetails lang={pageContext.lang} course={program_type} />
-      <ProgramDetailsMobile lang={pageContext.lang} course={program_type} />
+      <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+      <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     </Wrapper>
 
     <Wrapper
@@ -133,8 +129,8 @@ const Program = ({data, pageContext, yml}) => {
                 icon={ArrowRight}
                 to={`/${pageContext.lang}/geekforce`}
                 image="/images/geekforce.png"
-                heading={geek.geek_data.geek_force_heading}
-                bullets={geek.geek_data.geek_force}
+                heading={courseDetails.geek_data.geek_force_heading}
+                bullets={courseDetails.geek_data.geek_force}
               />
             </Column>
             <Column size="6" size_sm="12" paddingRight={`0`} p_sm="0">
@@ -142,8 +138,8 @@ const Program = ({data, pageContext, yml}) => {
                 icon={ArrowRight}
                 to={`/${pageContext.lang}/geekforce`}
                 image="/images/geekpal.png"
-                heading={geek.geek_data.geek_pal_heading}
-                bullets={geek.geek_data.geek_pal}
+                heading={courseDetails.geek_data.geek_pal_heading}
+                bullets={courseDetails.geek_data.geek_pal}
               />
             </Column>
         </Row>
@@ -221,7 +217,9 @@ export const query = graphql`
             alt
             }
             button{
-              syllabus_submit_text
+              syllabus_heading
+              syllabus_btn_label
+              syllabus_motivation
               apply_button_link
             }
             meta_info{
@@ -301,21 +299,17 @@ export const query = graphql`
           header{
             tagline
             sub_heading
-            button_text
           }
           projects {
               project_name
               slug
               project_image{
-                  image {
-                      childImageSharp {
-                        fluid(maxWidth: 800){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                      }
-                    } 
-                  image_alt
-              }
+                childImageSharp {
+                  fluid(maxWidth: 800){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              } 
               project_content
               project_video
               live_link

@@ -7,6 +7,7 @@ import {Break} from "../Responsive"
 const regex = {
     email: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
     text: /^.+$/,
+    textarea: /^.+$/,
     number: /^\d+$/,
     phone: /(\+\d{1,3})?(\d{9,10})$/, // +17834565748 or 7834565748
 }
@@ -119,7 +120,6 @@ export const TextArea = ({ onChange, type,errorMsg, required, validate, ...rest}
             onChange= {(e) => {
                 let isValid = true;
                 if(required === false && e.target.value.length === 0) isValid = true;
-                else isValid = regex[type].test(e.target.value);
                 
                 if(isValid != validStatus) setValidStatus({ 
                     valid: isValid,
@@ -142,7 +142,7 @@ TextArea.propTypes = {
 
 TextArea.defaultProps = {
     onChange: null,
-    type: "text",
+    type: "textarea",
     validate: null,
     errorMsg: "Missing Comment",
     required: false,

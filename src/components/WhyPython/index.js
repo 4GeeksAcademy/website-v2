@@ -2,9 +2,9 @@ import React from "react";
 import {StaticQuery} from "gatsby"
 import {Title} from "../Heading"
 import {Colors, Anchor} from "../Styling"
-import { PlayCircleFilledWhite } from "@material-ui/icons";
+import Fragment from "../Fragment";
 
-const WhyPython = ({ lang }) => {
+const WhyPython = ({ heading, subheading, lang }) => {
     return <StaticQuery
     query={graphql`
     query WhyPythonQuery {
@@ -21,9 +21,9 @@ const WhyPython = ({ lang }) => {
                     url
                 }
                 technologies {
-                name
-                percentage
-                color
+                    name
+                    percentage
+                    color
                 }
           }
         }
@@ -35,16 +35,17 @@ const WhyPython = ({ lang }) => {
             let translations = incoming.list.edges.find(({ node }) => node.fields.lang === lang);
             if(translations) translations = translations.node;
           
-            return <>
+            return <Fragment  github={`/components/why_python`}>
                 <Title 
-                    title={translations.heading}
-                    paragraph={translations.subheading}
+                    title={heading || translations.heading}
+                    paragraph={subheading || translations.subheading}
                     paragraphColor={Colors.darkGray}
                 />
                 <table style={{ width: "100%", height: "70px", verticalAlign: "middle" }}>
                     <tr>
-                        {translations.technologies.map(t => 
-                            <td style={{ 
+                        {translations.technologies.map((t,i) => 
+                            <td key={i}
+                                style={{ 
                                 width: t.percentage+"%",
                                 backgroundColor: t.color,
                                 textAlign: "center",
@@ -56,7 +57,7 @@ const WhyPython = ({ lang }) => {
                     </tr>
                 </table>
                 <Anchor color={Colors.gray} align="center" target="_blank" rel="noopener noreferrer nofollow" href={translations.link.url}>{translations.link.label}</Anchor>
-            </>}}
+            </Fragment>}}
     />
 }
 

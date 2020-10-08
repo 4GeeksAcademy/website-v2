@@ -4,13 +4,13 @@ import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading
 import {Card} from '../components/Card'
 import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage, StyledBackgroundSection} from '../components/Styling'
 import Mentors from '../components/Mentors'
-import Events from '../components/Events'
 import {Charts} from '../components/Chart'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import WhoIsHiring from '../components/WhoIsHiring';
 import RecentPosts from '../components/RecentPosts'
 import Link from 'gatsby-link'
+import Img from "gatsby-image"
 
 const Why = (props) => {
     const {data, pageContext, yml} = props;
@@ -41,106 +41,69 @@ const Why = (props) => {
                 />
                 <Divider height="150px" md="0" />
             </WrapperImage>
+
+            <Wrapper margin="30px">
+                <Row align="center" >
+                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                    <Paragraph
+                    margin="5px 0"
+                    color={Colors.gray}
+                    fs_xs="10px"
+                    fs_sm="12px"
+                    fs_md="12px"
+                    align="center">{yml.education.left_box.heading}
+                    </Paragraph>
+                    <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="Florida Education Logo"></Img>
+                </Column>
+                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                    <Paragraph
+                    margin="5px 0"
+                    color={Colors.gray}
+                    fs_xs="10px"
+                    fs_sm="12px"
+                    fs_md="12px"
+                    fs_lg="12px"
+                    fs_xl="12px"
+                    align="center">{yml.education.center_box.heading}
+                    </Paragraph>
+                    <Img className={`image`} fluid={yml.education.center_box.image.childImageSharp.fluid} alt="Newsweek Logo"></Img>
+                </Column>
+                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                    <Paragraph
+                    margin="5px 0"
+                    color={Colors.gray}
+                    fs_xs="10px"
+                    fs_sm="12px"
+                    fs_md="12px"
+                    fs_lg="12px"
+                    fs_xl="12px"
+                    align="center">{yml.education.right_box.heading}
+                    </Paragraph>
+                    <Img className={`image`} fluid={yml.education.right_box.image.childImageSharp.fluid} alt="Cnn Logo"></Img>
+                </Column>
+                </Row>
+                <Row>
+                <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
+                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                    <Paragraph
+
+                    color={Colors.gray}
+                    fs_xs="10px"
+                    fs_sm="12px"
+                    fs_md="12px"
+                    fs_lg="12px"
+                    fs_xl="12px"
+                    align="center">2017 Report
+                    </Paragraph>
+                </Column>
+                <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
+                </Row>
+            </Wrapper>
+            
             <Wrapper margin="0 0 50px 0">
                 <Credentials transform="translateY(-100px)" lang={data.allCredentialsYaml.edges} />
             </Wrapper>
-            <Wrapper
-                margin="50px 0"
-                github="/components/outcomes"
-            >
-                <Title
-                    size="10"
-                    title={yml.outcomes.heading}
-                    paragraph={yml.outcomes.sub_heading}
-                    paragraphColor={Colors.gray}
-                    margin={"auto"}
-                    variant="primary"
-                    maxWidth="350px"
-                />
-                <Row align='center'>
-                    <Column size="3" size_sm='12' customRespSize respSize="12" padding="20px 0">
-                        <Row>
-                            <Column size="12">
-                            <H4
-                                fs_xs="20px"
-                                fs_sm="24px"
-                                fs_md="16px"
-                                fs_lg="18px"
-                                fs_xl="20px"
-                            >{yml.outcomes.left.title}</H4>
-                            </Column>
-                        </Row>
-                        <Divider height="30px" />
-                        <Row>
-                            <Column size="12" align="left"><Paragraph
-                                fs_xs="12px"
-                                fs_sm="13px"
-                                fs_md="12px"
-                                fs_lg="12px"
-                                fs_xl="14px"
-                            >{yml.outcomes.left.content}</Paragraph></Column>
-                        </Row>
-                        <Row marginTop="15px">
-                            <Column size="12" align="left">
-                                <Paragraph
-                                    color={Colors.blue}
-                                    fs_xs="12px"
-                                    fs_sm="13px"
-                                    fs_md="12px"
-                                    fs_lg="12px"
-                                    fs_xl="14px"
-                                >{yml.outcomes.left.sub_content}</Paragraph></Column>
-                        </Row>
-                    </Column>
-                    <Column size="9" customRespSize respSize="12">
-                        <Row align="center">
-                            <Column size="4" size_sm="12" customRespSize respSize="4" padding="20px 0" align="center"><H4
-                                uppercase
-                                fs_xs="16px"
-                                fs_sm="18px"
-                                fs_md="16px"
-                                fs_lg="18px"
-                                fs_xl="20px"
-                            >{yml.outcomes.right.chart_one.title}</H4>
-                                <Charts dataArray={yml.outcomes.right.chart_three.data} />
-                            </Column>
-                            <Column size="4" size_sm="12" customRespSize respSize="4" padding="20px 0" align="center"><H4
-                                uppercase
-                                fs_xs="16px"
-                                fs_sm="18px"
-                                fs_md="16px"
-                                fs_lg="18px"
-                                fs_xl="20px"
-                            >{yml.outcomes.right.chart_two.title}</H4>
-                                <Charts dataArray={yml.outcomes.right.chart_two.data} />
-                            </Column>
-                            <Column size="4" size_sm="12" customRespSize respSize="4" padding="20px 0" align="center"><H4
-                                uppercase
-                                fs_xs="16px"
-                                fs_sm="18px"
-                                fs_md="16px"
-                                fs_lg="18px"
-                                fs_xl="20px"
-                            >{yml.outcomes.right.chart_three.title}</H4>
-                                <Charts dataArray={yml.outcomes.right.chart_one.data} />
-                            </Column>
-                        </Row>
-                    </Column>
-                </Row>
-                <Row align='center'>
-                    <Column size="8" customRespSize respSize="8" align="center">
-                        <Paragraph
-                            color={Colors.blue}
-                            fs_xs="14px"
-                            fs_sm="14px"
-                            fs_md="16px"
-                            fs_lg="16px"
-                            fs_xl="14px"
-                        >{yml.outcomes.left.bottom_message}
-                        </Paragraph>
-                    </Column>
-                </Row>
-            </Wrapper>
+            
             <Wrapper margin="50px">
                 <Title 
                     size="8" 
@@ -299,25 +262,133 @@ const Why = (props) => {
                 right
                 background={Colors.lightGray} border="top"
             >
+                <Title
+                    size="10"
+                    marginTop="50px"
+                    title={hiring.partners.tagline}
+                    paragraph={hiring.partners.sub_heading}
+                    paragraphColor="black"
+                    variant="primary"
+                />
                 <WhoIsHiring
                     margin="50px"
-                    tagline={hiring.partners.tagline}
-                    subheading={hiring.partners.sub_heading}
                     images={hiring.partners.images}
                     footerTagline={hiring.partners.footer_tagline}
                     footerLink={hiring.partners.footer_link}
                     footerButton={hiring.partners.footer_button}
                 />
-                <Divider height="100px" />
+                <Title
+                    size="10"
+                    marginTop="50px"
+                    title={hiring.influencers.tagline}
+                    paragraph={hiring.influencers.sub_heading}
+                    paragraphColor="black"
+                    variant="primary"
+                />
                 <WhoIsHiring
                     margin="50px"
-                    tagline={hiring.influencers.tagline}
-                    subheading={hiring.influencers.sub_heading}
                     images={hiring.influencers.images}
                     footerTagline={hiring.influencers.footer_tagline}
                     footerLink={hiring.influencers.footer_link}
                     footerButton={hiring.influencers.footer_button}
                 />
+            </Wrapper>
+            <Wrapper
+                margin="50px 0"
+                github="/components/outcomes"
+            >
+                <Title
+                    size="10"
+                    title={yml.outcomes.heading}
+                    paragraph={yml.outcomes.sub_heading}
+                    paragraphColor={Colors.gray}
+                    margin={"auto"}
+                    variant="primary"
+                    maxWidth="700px"
+                />
+                <Row align='center'>
+                    <Column size="3" size_sm='12' customRespSize respSize="12" padding="20px 0">
+                        <Row>
+                            <Column size="12">
+                            <H4
+                                fs_xs="20px"
+                                fs_sm="24px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fontSize="20px"
+                            >{yml.outcomes.left.title}</H4>
+                            </Column>
+                        </Row>
+                        <Divider height="30px" />
+                        <Row>
+                            <Column size="12" align="left"><Paragraph
+                                fs_xs="12px"
+                                fs_sm="13px"
+                                fs_md="12px"
+                                fs_lg="12px"
+                                fs_xl="14px"
+                            >{yml.outcomes.left.content}</Paragraph></Column>
+                        </Row>
+                        <Row marginTop="15px">
+                            <Column size="12" align="left">
+                                <Paragraph
+                                    color={Colors.blue}
+                                    fs_xs="12px"
+                                    fs_sm="13px"
+                                    fs_md="12px"
+                                    fs_lg="12px"
+                                    fs_xl="14px"
+                                >{yml.outcomes.left.sub_content}</Paragraph></Column>
+                        </Row>
+                    </Column>
+                    <Column size="9" customRespSize respSize="12">
+                        <Row align="center">
+                            <Column size="4" size_sm="12" customRespSize respSize="4" padding="20px 0" align="center"><H4
+                                uppercase
+                                fs_xs="16px"
+                                fs_sm="18px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fontSize="20px"
+                            >{yml.outcomes.right.chart_one.title}</H4>
+                                <Charts dataArray={yml.outcomes.right.chart_three.data} />
+                            </Column>
+                            <Column size="4" size_sm="12" customRespSize respSize="4" padding="20px 0" align="center"><H4
+                                uppercase
+                                fs_xs="16px"
+                                fs_sm="18px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fontSize="20px"
+                            >{yml.outcomes.right.chart_two.title}</H4>
+                                <Charts dataArray={yml.outcomes.right.chart_two.data} />
+                            </Column>
+                            <Column size="4" size_sm="12" customRespSize respSize="4" padding="20px 0" align="center"><H4
+                                uppercase
+                                fs_xs="16px"
+                                fs_sm="18px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                fontSize="20px"
+                            >{yml.outcomes.right.chart_three.title}</H4>
+                                <Charts dataArray={yml.outcomes.right.chart_one.data} />
+                            </Column>
+                        </Row>
+                    </Column>
+                </Row>
+                <Row align='center'>
+                    <Column size="8" customRespSize respSize="8" align="center">
+                        <Paragraph
+                            color={Colors.blue}
+                            fs_xs="14px"
+                            fs_sm="14px"
+                            fs_md="16px"
+                            fs_lg="16px"
+                            fs_xl="14px"
+                        >{yml.outcomes.left.bottom_message}
+                        </Paragraph>
+                    </Column>
+                </Row>
             </Wrapper>
         </>
     )
@@ -345,6 +416,50 @@ export const query = graphql`
                     }
                   } 
                 alt
+            }
+            education{
+                left_box{
+                    heading
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 300){
+                          ...GatsbyImageSharpFluid_withWebp
+                        }
+                        fixed(width: 300, height: 60) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
+                    alt
+                }
+                center_box{
+                    heading
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 300){
+                          ...GatsbyImageSharpFluid_withWebp
+                        }
+                        fixed(width: 300, height: 60) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
+                    alt
+                }
+                right_box{
+                    heading
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 300){
+                          ...GatsbyImageSharpFluid_withWebp
+                        }
+                        fixed(width: 300, height: 60) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
+                    alt
+                }
             }
             outcomes{
                 heading
@@ -431,7 +546,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -447,7 +561,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -463,7 +576,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline
@@ -479,7 +591,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  alt
                   featured
                 }
                 tagline

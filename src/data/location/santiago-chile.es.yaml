@@ -14,9 +14,11 @@ header:
   image: "../../../static/images/locations/santiago-loc.png"
   alt: ""
 button:
-  syllabus_button_text: "DESCARGA MALLA EDUCATIVA"
+  syllabus_button_text: "DESCARGA MALLA EDUCATIVA" # <-- this will show everywhere in the website
+  apply_button_text: "APLICA YA" # <-- this will show everywhere in the website
+  
   syllabus_submit_text: "DESCARGAR"
-  apply_button_text: "APLICA AHORA"
+  cohort_more_details_text: "INFO"
   apply_button_link: "/aplica"
 
 info_box:
@@ -54,13 +56,13 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "FULL TIME"
-        sub_heading: "el mejor precio de la ciudad"
+        heading_one: "NO PAGUES HASTA"
+        heading_two: "QUE ENCUENTRES PEGA"
+        sub_heading: "Acuerdo de Ingresos Compartidos"
       content:
-        price: "2.760.000 CLP"
-        price_info: "una sola quota"
-      button:
-        button_text: "APLICA"
+        price: "9% de tu sueldo"
+        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -86,13 +88,13 @@ prices:
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PART TIME"
-        sub_heading: "y disfruta de mejores precios"
+        heading_one: "PAGO DE CONTADO"
+        heading_two: "DESDE EL DíA 1"
+        sub_heading: "el mejor precio de la ciudad"
       content:
-        price: "2.415.000 CLP"
+        price: "2.760.000 CLP"
         price_info: "una sola quota"
-      button:
-        button_text: "SOLICITA TU PLAZA"
+
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -104,13 +106,12 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PART TIME"
-        sub_heading: "y disfruta de mejores precios"
+        heading_one: "NO PAGUES HASTA"
+        heading_two: "QUE ENCUENTRES PEGA"
+        sub_heading: "Acuerdo de Ingresos Compartidos"
       content:
-        price: "2.415.000 CLP"
-        price_info: "una sola quota"
-      button:
-        button_text: "SOLICITA TU PLAZA"
+        price: "9% de tu sueldo"
+        price_info: "hasta pagarlo todo, pero sólo si consigues trabajo en tech"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -130,19 +131,16 @@ prices:
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
-      button:
-        button_text: "SOLICITA TU PLAZA"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "FULL TIME"
-        sub_heading: "y disfruta de mejores precios"
+        heading_one: "PAGO DE CONTADO"
+        heading_two: "DESDE EL DíA 1"
+        sub_heading: "y disfruta de mejores precios de chile"
       content:
-        price: "2.760.000 CLP"
+        price: "2.415.000 CLP"
         price_info: "una sola quota"
-      button:
-        button_text: "SOLICITA TU PLAZA"
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
@@ -155,6 +153,7 @@ financials_max_months: ["12 mo", "6 mo"]
 name: "Santiago"
 latitude: "-33.408837"
 longitude: "-70.567958"
+phone: "+56 (9) 7284 8039"
 address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
 zip_code: ""
 state: ""

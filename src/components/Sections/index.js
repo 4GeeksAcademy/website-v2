@@ -46,6 +46,7 @@ export const Container = styled(Fragment)`
     background: ${props => props.color};
     @media  ${Break.sm}{
         padding: ${props => props.p_sm};
+        margin: ${props => props.m_sm};
     }
     @media  ${Break.xs}{
         padding: ${props => props.p_xs};
@@ -167,9 +168,13 @@ export const Div = styled.div`
     &:hover { 
         background: ${props => props.backgroundHover};
     }
+    @media  ${Break.lg}{
+        display: ${props => props.d_lg};
+    }
     @media  ${Break.sm}{
         align-items: ${props => props.alignItems_sm};
         padding: ${props => props.p_sm};
+        display: ${props => props.d_sm};
         width: ${props => props.w_sm};
     }
     @media ${Break.xs}{
@@ -243,6 +248,9 @@ export const Wrapper = (props) => {
     return <Container
         github={props.github}
         margin={props.margin}
+        m_sm={props.m_sm}
+        p_sm={props.p_sm}
+        p_xs={props.p_xs}
         variant="fluid"
     >
         <Row>
@@ -356,8 +364,17 @@ export const WrapperCustom = (props) => {
 
 export const Divider = styled.div`
     height: ${props => props.height};
+    @media ${Break.lg} {
+        height: ${props => props.lg};
+    }
     @media ${Break.md} {
         height: ${props => props.md};
+    }
+    @media ${Break.sm} {
+        height: ${props => props.sm};
+    }
+    @media ${Break.xs} {
+        height: ${props => props.xs};
     }
 `;
 
