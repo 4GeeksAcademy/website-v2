@@ -127,7 +127,7 @@ staff:
     coding_skills:
       - Excel
     location: ""
- - name: "Mafe"
+  - name: "Mafe"
     last_name: "Castro"
     nick_name: ""
     slug: "mafe-castrp"
@@ -144,7 +144,7 @@ staff:
     coding_skills:
       - Bootstrap
     location: ""
-      - name: "Nacho"
+  - name: "Nacho"
     last_name: "Cordoba"
     nick_name: "Nacho"
     slug: "nacho-cordoba"
