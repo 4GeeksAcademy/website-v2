@@ -16,6 +16,7 @@ import { TestimonialsCarrousel } from '../Testimonials'
 import GeeksVsOthers from '../GeeksVsOthers'
 import ReactPlayer from 'react-player'
 import {navigate} from "gatsby"
+import {requestSyllabus} from "../../actions"
 
 const Image = styled.img`
     max-width: 100%;
@@ -105,6 +106,28 @@ export const landingSections = {
     </Wrapper>,
     badges: ({ session, data, pageContext, yml, course }) => 
     <Wrapper p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></Wrapper>,
+    badges: ({ session, data, pageContext, yml, course, location }) => <Div 
+        display="block" 
+        margin="50px 0px 0px 0px" 
+        m_sm="50px 0px"
+        background={Colors.lightGray}
+    >
+    <Wrapper>
+        <H5 fontSize="20px">{yml.heading}</H5>
+        <LeadForm 
+            style={{ padding: "10px 0px", maxWidth: "100%" }}
+            inputBgColor={Colors.white}
+            layout="flex"
+            lang={pageContext.lang}
+            sendLabel={yml.button.text}
+            formHandler={requestSyllabus} 
+            data={{ 
+                course: { type: "hidden", value: course, valid: true },
+                utm_location: { type: "hidden", value: location, valid: true }
+            }}
+        />
+    </Wrapper>
+    </Div>,
     geeks_vs_others: ({ session, pageContext, yml, course }) => 
     <Wrapper margin="100px" m_sm="50px 0" p_sm="0" p_xs="0">
         <Title

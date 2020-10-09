@@ -16,7 +16,7 @@ import Modal from '../components/Modal';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import StepConnector from '@material-ui/core/StepConnector';
 import clsx from 'clsx';
-import LeadForm from "../components/LeadForm/index.js";
+import LeadForm from "../components/LeadForm";
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import {SessionContext} from '../session'
@@ -119,6 +119,7 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper  margin="50px 0 0 0">
       <Title
           size="10"
+          type="h2"
           marginTop="40px"
           title={yml.details.heading}
           paragraph={yml.details.sub_heading}
@@ -127,6 +128,27 @@ const Program = ({data, pageContext, yml}) => {
       <ProgramDetails details={yml.details} />
       <ProgramDetailsMobile details={yml.details} />
     </Wrapper>
+
+    <Div 
+          display="block" 
+          margin="50px 0px 0px 0px" 
+          m_sm="50px 0px"
+          background={Colors.lightGray}
+      >
+        <Wrapper>
+          <H5 fontSize="20px">{yml.syllabus.heading}</H5>
+          <LeadForm 
+            style={{ padding: "10px 0px", maxWidth: "100%" }}
+            inputBgColor={Colors.white}
+            layout="flex"
+            lang={pageContext.lang}
+            formHandler={requestSyllabus} 
+            data={{ 
+              course: { type: "hidden", value: yml.meta_info.bc_slug, valid: true }
+            }}
+          />
+        </Wrapper>
+      </Div>
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
     {/* ---------------------------- */}
@@ -187,19 +209,6 @@ const Program = ({data, pageContext, yml}) => {
       />
     </Wrapper>
 
-    <Wrapper
-      margin="50px 0"
-      
-    >
-      <Title
-        size="10"
-        title={yml.alumni.heading}
-        paragraph={yml.alumni.sub_heading}
-        maxWidth="66%"
-        variant="primary"
-      />
-      <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
-    </Wrapper>
   </>
   )
 };
@@ -264,6 +273,10 @@ export const query = graphql`
                 description
                 step
               }
+            }
+            syllabus{
+              heading
+              button_label
             }
             potential_companies{
               tagline

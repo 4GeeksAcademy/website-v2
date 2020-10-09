@@ -3,7 +3,7 @@ import {Link} from "gatsby";
 import BaseRender from './_baseRender'
 import {Card, GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
-import {Title, H2, H3, H4, Span, Paragraph} from '../components/Heading'
+import {Title, H2, H3, H5, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import PricesAndPayment from '../components/PricesAndPayment'
@@ -117,8 +117,30 @@ const Program = ({data, pageContext, yml}) => {
       <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     </Wrapper>
 
+      <Div 
+          display="block" 
+          margin="50px 0px 0px 0px" 
+          m_sm="50px 0px"
+          background={Colors.lightGray}
+      >
+        <Wrapper>
+          <H5 fontSize="20px">{yml.syllabus.heading}</H5>
+          <LeadForm 
+            style={{ padding: "10px 0px", maxWidth: "100%" }}
+            inputBgColor={Colors.white}
+            layout="flex"
+            sendLabel={yml.syllabus.button_label}
+            lang={pageContext.lang}
+            formHandler={requestSyllabus} 
+            data={{ 
+              course: { type: "hidden", value: yml.meta_info.bc_slug, valid: true }
+            }}
+          />
+        </Wrapper>
+      </Div>
+
     <Wrapper
-      margin="50px"
+      margin="0 0 50px 0"
     >
       <SyllabusSVG className="d-sm-none w-100" />
       <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
@@ -253,6 +275,10 @@ export const query = graphql`
                 description
                 step
               }
+            }
+            syllabus{
+              heading
+              button_label
             }
             credentials{
               heading

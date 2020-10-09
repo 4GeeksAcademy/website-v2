@@ -143,7 +143,7 @@ export const H5 = styled(Heading)`
       display: block;
       font-family: 'Lato', sans-serif;
       font-size: ${props => props.fontSize};
-      font-weight: 500;
+      font-weight: 700;
       letter-spacing: 0px;
       padding: ${props => props.padding};
       text-transform: ${props => props.uppercase && "uppercase"};
@@ -335,7 +335,7 @@ Title.defaultProps = {
   variant: "default",
   margin: "0",
   paragraph: "",
-  paragraphColor: "white"
+  paragraphColor: "#898a8b"
 }
 // H2.propTypes = {
 //   primary: PropTypes.bool.isRequired,

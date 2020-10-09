@@ -19,6 +19,7 @@ import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage, TriangleDown} from '../Styling';
 import {SessionContext} from '../../session'
 import Fragment from "../Fragment"
+import LeadForm from "../LeadForm";
 
 const PricingCard = ({data, lang, children, price, color, background, transform, priceInfo, applyLabel}) => {
   const { header, button } = data;
@@ -76,6 +77,7 @@ const PricesAndPayments = (props) => {
             }
             pricing_error_contact
             pricing_error
+            get_notified
           }
         }
       }
@@ -185,6 +187,13 @@ const PricesAndPayments = (props) => {
           }
         </Row>
       }
+      <Div display="block" margin="20px 0px" padding="30px 30px 10px 30px" 
+        shadow="inset 0px 0px 10px rgba(0,0,0,0.2)"
+        background={Colors.grey}
+        borderRadius="1.25rem"
+      >
+          <H5 fontSize="20px">{info.get_notified}</H5>
+      </Div>
     </Fragment>
   )
 }

@@ -259,7 +259,8 @@ export const contactUs = async (data,session) => {
     return true;
 }
 export const newsletterSignup = async (data,session) => {
-    console.log("Succesfully contact us", data)
+    tagManager('newsletter_signup')
+    console.log("Succesfully newsletter signup", data)
     let body = {};
     for (let key in data) body[key] = data[key].value;
     

@@ -165,6 +165,7 @@ export const Div = styled.div`
     border-radius: ${props => props.borderRadius};
     padding: ${props => props.padding};
     cursor: ${props => props.cursor};
+    box-shadow: ${props => props.shadow};
     &:hover { 
         background: ${props => props.backgroundHover};
     }
@@ -176,6 +177,7 @@ export const Div = styled.div`
         padding: ${props => props.p_sm};
         display: ${props => props.d_sm};
         width: ${props => props.w_sm};
+        margin: ${props => props.m_sm};
     }
     @media ${Break.xs}{
         align-items: ${props => props.alignItems_xs};
