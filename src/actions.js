@@ -222,9 +222,9 @@ export const apply = async (data, session) => {
 
 export const requestSyllabus = async (data,session) => {
     console.log("Succesfully requested Syllabus", data)
+    tagManager('request_more_info');
     let body = {};
     for (let key in data) body[key] = data[key].value;
-
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['request_more_info'], ['soft'], session);
     return true;
 }
@@ -259,7 +259,8 @@ export const contactUs = async (data,session) => {
     return true;
 }
 export const newsletterSignup = async (data,session) => {
-    console.log("Succesfully contact us", data)
+    tagManager('newsletter_signup')
+    console.log("Succesfully newsletter signup", data)
     let body = {};
     for (let key in data) body[key] = data[key].value;
     

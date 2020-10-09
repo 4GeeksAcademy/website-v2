@@ -14,7 +14,7 @@ const regex = {
 
 
 const StyledInput = styled.input`
-    background-color: ${props => props.valid ? Colors.lightGray : Colors.lightRed};
+    background-color: ${props => props.valid ? props.bgColor : Colors.lightRed};
     height: 40px;
     width: ${props => props.width || "100%"};
     padding: 5px 10px;
@@ -25,6 +25,11 @@ const StyledInput = styled.input`
     font-size: 16px;
     font-color: ${Colors.black};
     user-select: initial;
+    opacity: 0.7;
+    :focus {
+        opacity: 1;
+        border: 1px solid ${props => props.valid ? props.lightGray : Colors.lightRed};
+    }
     @media ${Break.sm}{
         width: ${props => props.w_sm};
     }
@@ -73,6 +78,7 @@ Input.propTypes = {
     required: PropTypes.bool,
     validate: PropTypes.object,
     pattern: PropTypes.string,
+    bcColor: PropTypes.string,
 }
 Input.defaultProps = {
     onChange: null,
@@ -80,6 +86,7 @@ Input.defaultProps = {
     type: "text",
     errorMsg: "Invalid Value",
     required: false,
+    bgColor: Colors.gray,
     pattern: null,
 };
 
@@ -89,8 +96,9 @@ const colors = {
 }
 export const Alert = styled.div`
     background-color: ${props => colors[props.color][0]};
-    padding: 5px;
+    padding: 10px;
     width: 100%;
+    text-align: center;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     font-color: ${props => colors[props.color][1]};

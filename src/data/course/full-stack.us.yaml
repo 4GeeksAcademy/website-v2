@@ -13,6 +13,7 @@ meta_info:
       "/us/course/part-time",
       "/us/full-stack",
       "/landing/coding-classes-part-time",
+      "/course/web-development-parttime",
       "/coding-introduction-programming",
       "/us/course/coding-introduction",
     ]
@@ -85,6 +86,10 @@ details:
       slug: "lifelong-learning"
       duration: "forever"
       step: 0.1
+
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

@@ -28,8 +28,8 @@ button:
   apply_button_link: "/apply"
 ## PROGRAM DETAILS
 details:
-  heading: PROGRAM DETAILS
-  sub_heading: "Learn exactly what is required to be a real engineer."
+  heading: Software Engineering Syllabus
+  sub_heading: "Master exactly what is required to be a real Software Engineer."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -97,10 +97,13 @@ details:
       duration: "forever"
       step: 0.1
 
-
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
+  
 potential_companies:
   tagline: "Get trained to thrive at major companies"
-  sub_heading: "Get ready to apply to the best companies in the world: the next level in your career."
+  sub_heading: "Get ready to apply to the best companies in the world: the next level in your career as Software Engineer"
   companies:
     - name: "Facebook"
       image: "../../../static/images/partner/facebook.png"
@@ -129,8 +132,8 @@ potential_companies:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "WHAT MAKES 4GEEKS A GREAT SCHOOL?"
-  sub_heading: "View full comparison table >"
+  heading: "WHAT MAKES US SO SUCCESSFULL?"
+  sub_heading: "Compare 4Geeks with other coding schools"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:

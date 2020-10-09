@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {SessionContext} from '../../session';
 import { Button, Colors } from "../Styling";
+import { Break } from "../Responsive";
 import {useStaticQuery, graphql, navigate} from 'gatsby';
 
 const formIsValid = (formData = null) => {
@@ -21,6 +22,9 @@ const Form = styled.form`
     margin: auto;
     padding: 20px;
     max-width: 600px;
+    @media  ${Break.sm}{
+        display: ${props => props.d_sm};
+    }
 `;
 
 const _fields = {
@@ -55,7 +59,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation}) => {
+const LeadForm = ({ d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor}) => {
     const _query = useStaticQuery(graphql`
     query LeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -116,7 +120,7 @@ const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handl
         })
     },[data])
     // console.log("formData", formData)
-    return <Form style={style} onSubmit={(e) => {
+    return <Form d_sm={d_sm} style={style} onSubmit={(e) => {
                 e.preventDefault();
 
                 if(formStatus.status === "error") setFormStatus({ status: "idle", msg: "" })
@@ -153,11 +157,13 @@ const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handl
                 <>
                     {motivation && <Paragraph align="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
                     <Row>
-                        <Column size="12">
+                        <Column display={layout} size="12">
                             {fields.filter(f => formData[f].type !== 'hidden').map((f,i) => {
                                 const _field = formData[f]
                                 return <Input
                                     key={i}
+                                    bgColor={inputBgColor}
+                                    borderRadius={i === 0 && layout === "flex" ? "10px 0px 0px 10px" : "0"}
                                     type={_field.type} className="form-control" placeholder={_field.place_holder}
                                     onChange={(value,valid) => {
                                         setVal({ ...formData, [f]: { ..._field, value, valid } });
@@ -171,6 +177,16 @@ const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handl
                                     on
                                 />    
                             })}
+                            {layout === "flex" &&
+                                <Button width="100%" padding=".7rem .45rem"
+                                    type="submit"
+                                    margin="10px 0"
+                                    borderRadius="0px 10px 10px 0px"
+                                    color={formStatus.status === "loading" ? Colors.darkGray:  Colors.red}
+                                    textColor={Colors.white}
+                                    disabled={formStatus.status === "loading" ? true: false}
+                                >{formStatus.status === "loading" ? "Loading...": sendLabel}</Button>
+                            }
                             {session && session.location && session.location.gdpr_compliant &&
                                 <Paragraph fontSize="11px" margin="5px 0 0 0">
                                     <input
@@ -182,22 +198,24 @@ const LeadForm = ({fields, thankyou, heading, redirect, formHandler, data, handl
                                         <a target="_blank"  rel="noopener noreferrer" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
                                 </Paragraph>
                             }
-                            {formStatus.status === "error" && <Alert color="red"  padding="5px 0 0 0">{formStatus.msg}</Alert>}
                         </Column>
+                        {formStatus.status === "error" && <Alert color="red" margin="0 15px"  padding="5px 0 0 0">{formStatus.msg}</Alert>}
                     </Row>
-                    <Row padding="5px 0 0 0" >
-                        { handleClose && <Column size="6" padding="10px 20px">
-                            <Button  width="100%" padding=".7rem .45rem" color={Colors.gray} textColor={Colors.white} onClick={handleClose}>Close</Button>
-                        </Column>}
-                        <Column size={handleClose ? "6" : "12"} padding="10px 20px" margin="auto">
-                            <Button width="100%" padding=".7rem .45rem"
-                                type="submit"
-                                color={formStatus.status === "loading" ? Colors.darkGray:  Colors.red}
-                                textColor={Colors.white}
-                                disabled={formStatus.status === "loading" ? true: false}
-                            >{formStatus.status === "loading" ? "Loading...": sendLabel}</Button>
-                        </Column>
-                    </Row>
+                    {layout === "block" && 
+                        <Row padding="5px 0 0 0" >
+                            { handleClose && <Column size="6" padding="10px 20px">
+                                <Button  width="100%" padding=".7rem .45rem" color={Colors.gray} textColor={Colors.white} onClick={handleClose}>Close</Button>
+                            </Column>}
+                            <Column size={handleClose ? "6" : "12"} padding="10px 20px" margin="auto">
+                                <Button width="100%" padding=".7rem .45rem"
+                                    type="submit"
+                                    color={formStatus.status === "loading" ? Colors.darkGray:  Colors.red}
+                                    textColor={Colors.white}
+                                    disabled={formStatus.status === "loading" ? true: false}
+                                >{formStatus.status === "loading" ? "Loading...": sendLabel}</Button>
+                            </Column>
+                        </Row>
+                    }
                 </>
         }
         </Form>
@@ -208,6 +226,7 @@ LeadForm.propTypes = {
     motivation: PropTypes.string,
     sendLabel: PropTypes.string,
     redirect: PropTypes.string,
+    layout: PropTypes.string,
     fields: PropTypes.array,
     formHandler: PropTypes.func,
     handleClose: PropTypes.func
@@ -219,6 +238,8 @@ LeadForm.defaultProps = {
     formHandler: null,
     redirect: null,
     handleClose: null,
+    layout: "block",
+    inputBgColor: Colors.lightGray,
     data: {},
     fields: ['full_name', 'phone', 'email'],
 }

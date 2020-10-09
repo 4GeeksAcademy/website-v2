@@ -1,10 +1,12 @@
 import React from "react"
-import {Row, Column, Wrapper, Divider} from '../Sections'
+import {Row, Column, Wrapper, Divider, Div} from '../Sections'
+import PropTypes from "prop-types"
 import {H2, H5, H4, Title} from '../Heading'
 import styled from "styled-components"
 import {Colors,Img, Button} from '../Styling'
 import WhoIsHiring from '../WhoIsHiring';
 import Badges from '../Badges';
+import LeadForm from '../LeadForm';
 import AlumniProjects from '../AlumniProjects'
 import ProgramDetails from '../ProgramDetails'
 import ProgramDetailsMobile from '../ProgramDetailsMobile'
@@ -15,6 +17,7 @@ import { TestimonialsCarrousel } from '../Testimonials'
 import GeeksVsOthers from '../GeeksVsOthers'
 import ReactPlayer from 'react-player'
 import {navigate} from "gatsby"
+import {requestSyllabus} from "../../actions"
 
 const Image = styled.img`
     max-width: 100%;
@@ -32,24 +35,36 @@ const Side = ({ video, image, heading, content, button }) => {
         height='100%'
     />
     if(image) return <Img
-        src={image}
+        src={image.src}
+        onClick={() => {
+            if(image.link){
+                if(image.link.indexOf("http") > -1) window.open(image.link);
+                else navigate(image.link);
+            }
+        }}
+        style={image.style ? JSON.parse(image.style) : null}
         borderRadius={"1.25rem"}
+        className="pointer"
         alt={"4Geeks Academy Section"}
         margin="auto"
         height="100%"
         width="100%"
+        h_sm="250px"
         backgroundSize={`cover`}
     ></Img>
     
-    const [ h_xl, h_lg, h_md, h_sm, h_xs ] = heading.font_size;
-    const [ c_xl, c_lg, c_md, c_sm, c_xs ] = content.font_size;
+    const [ h_xl, h_lg, h_md, h_sm, h_xs ] = heading ? heading.font_size : [];
+    const [ c_xl, c_lg, c_md, c_sm, c_xs ] = content ? content.font_size : [];
     return <>
-        <H2 align="left" 
+        {heading && <H2 align="left" 
             fontSize={h_xl || "20px"}  fs_xl={h_xl}  fs_md={h_md} fs_sm={h_sm} fs_xs={h_xs} 
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
-        <H5 align="left" 
+        }
+        {content && <H5 align="left" 
+            padding={heading ? "0" : "20px"}
             fontSize={c_xl || "16px"} fs_sm={c_sm} fs_md={c_md} fs_sm={c_sm} fs_xs={c_xs} 
             fontHeight="30px">{content.text}</H5>
+        }
         {button && <Button outline width="200px" 
             color={button.color || Colors.blue} 
             textColor={Colors.black} 
@@ -63,15 +78,21 @@ const Side = ({ video, image, heading, content, button }) => {
         </Button>}
     </>
 }
-export const TwoColumn = ({ left, right }) => {
+export const TwoColumn = ({ left, right, proportions }) => {
+    const [ left_size, right_size ] = proportions ? proportions : [];
     return <Row m_sm="0px 0px 100px 0">
-    <Column size="6" size_sm="12" maxHeight="300px" align_sm="center">
+    <Column size={left_size || 6} size_sm="12" maxHeight="300px" align_sm="center">
         <Side {...left} />
     </Column>
-    <Column size="6" size_sm="12">
+    <Column size={right_size || 6} size_sm="12" align_sm="center">
         <Side {...right} />
     </Column>
   </Row>
+}
+TwoColumn.defaultProps = {
+    proportions: [],
+    left: null,
+    right: null,
 }
 
 export const landingSections = {
@@ -86,6 +107,28 @@ export const landingSections = {
     </Wrapper>,
     badges: ({ session, data, pageContext, yml, course }) => 
     <Wrapper p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></Wrapper>,
+    syllabus: ({ session, data, pageContext, yml, course, location }) => <Div 
+        display="block" 
+        margin="50px 0px 0px 0px" 
+        m_sm="50px 0px"
+        background={Colors.lightGray}
+    >
+    <Wrapper>
+        <H5 fontSize="20px">{yml.heading}</H5>
+        <LeadForm 
+            style={{ padding: "10px 0px", maxWidth: "100%" }}
+            inputBgColor={Colors.white}
+            layout="flex"
+            lang={pageContext.lang}
+            sendLabel={yml.button ? yml.button.text : "SEND"}
+            formHandler={requestSyllabus} 
+            data={{ 
+                course: { type: "hidden", value: course, valid: true },
+                utm_location: { type: "hidden", value: location, valid: true }
+            }}
+        />
+    </Wrapper>
+    </Div>,
     geeks_vs_others: ({ session, pageContext, yml, course }) => 
     <Wrapper margin="100px" m_sm="50px 0" p_sm="0" p_xs="0">
         <Title
@@ -104,6 +147,7 @@ export const landingSections = {
             marginTop="40px"
             title={yml.heading}
             paragraph={yml.sub_heading}
+            paragraphColor={Colors.gray}
             variant="primary"
         />
         <ProgramDetails details={course && course.details} />
@@ -117,6 +161,7 @@ export const landingSections = {
         variant="primary"
         title={yml.testimonial.heading}
         paragraph={yml.testimonial.sub_heading}
+        paragraphColor={Colors.gray}
         maxWidth="66%"
     // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
     />
@@ -125,6 +170,8 @@ export const landingSections = {
     why_4geeks: ({ session, pageContext, yml, course }) => <Wrapper margin="50px 0" p_xs="0">
     <Title
         title={yml.heading}
+        paragraph={yml.sub_heading}
+        paragraphColor={Colors.gray}
         variant="primary"
     />
     <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
@@ -169,12 +216,14 @@ export const landingSections = {
         <TwoColumn 
         left={{ image: yml.image, video: yml.video }}
         right={{ heading: yml.heading, content: yml.content, button: yml.button }}
+        proportions={yml.proportions}
         />
     </Wrapper>,
     two_column_right: ({ session, data, pageContext, yml, course }) => <Wrapper margin="50px 0">
         <TwoColumn 
             left={{ heading: yml.heading, content: yml.content, button: yml.button }}
             right={{ image: yml.image, video: yml.video }}
+            proportions={yml.proportions}
         />
     </Wrapper>,
 }

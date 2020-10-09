@@ -77,6 +77,10 @@ details:
       duration: "1+ week"
       step: 1
 
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
+
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "WHAT MAKES THIS PROGRAM STAND OUT?"

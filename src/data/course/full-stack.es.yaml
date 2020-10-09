@@ -89,6 +89,10 @@ details:
       duration: "1+ sem"
       step: 0.1
 
+syllabus:
+  heading: Descarga toda la infomación sobre este programa
+  button_label: Descargar
+
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "EN NÚMEROS: 4GEEKS VS OTROS"

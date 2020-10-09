@@ -102,6 +102,10 @@ details:
       duration: "1+ sem"
       step: 0.1
 
+syllabus:
+  heading: Descarga toda la infomación sobre este programa
+  button_label: Descargar
+
 potential_companies:
   tagline: "Entrénate para destacar en las compañías mas exigentes"
   sub_heading: "Dá un salto a tu carrera y trabaja en las mejores empresas"
