@@ -86,7 +86,7 @@ Input.defaultProps = {
     type: "text",
     errorMsg: "Invalid Value",
     required: false,
-    bgColor: Colors.gray,
+    bgColor: Colors.lightGray,
     pattern: null,
 };
 
