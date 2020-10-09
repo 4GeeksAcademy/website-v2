@@ -1,11 +1,12 @@
 import React from "react"
-import {Row, Column, Wrapper, Divider} from '../Sections'
+import {Row, Column, Wrapper, Divider, Div} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H5, H4, Title} from '../Heading'
 import styled from "styled-components"
 import {Colors,Img, Button} from '../Styling'
 import WhoIsHiring from '../WhoIsHiring';
 import Badges from '../Badges';
+import LeadForm from '../LeadForm';
 import AlumniProjects from '../AlumniProjects'
 import ProgramDetails from '../ProgramDetails'
 import ProgramDetailsMobile from '../ProgramDetailsMobile'
@@ -106,7 +107,7 @@ export const landingSections = {
     </Wrapper>,
     badges: ({ session, data, pageContext, yml, course }) => 
     <Wrapper p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></Wrapper>,
-    badges: ({ session, data, pageContext, yml, course, location }) => <Div 
+    syllabus: ({ session, data, pageContext, yml, course, location }) => <Div 
         display="block" 
         margin="50px 0px 0px 0px" 
         m_sm="50px 0px"
@@ -119,7 +120,7 @@ export const landingSections = {
             inputBgColor={Colors.white}
             layout="flex"
             lang={pageContext.lang}
-            sendLabel={yml.button.text}
+            sendLabel={yml.button ? yml.button.text : "SEND"}
             formHandler={requestSyllabus} 
             data={{ 
                 course: { type: "hidden", value: course, valid: true },

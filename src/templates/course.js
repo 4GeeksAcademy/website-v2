@@ -67,6 +67,7 @@ const Program = ({data, pageContext, yml}) => {
         variant="main"
         color={Colors.white}
         paragraph={yml.header.paragraph}
+        paragraphColor={Colors.white}
         fontSize="46px"
         fs_xs="40px"
         textAlign="center"

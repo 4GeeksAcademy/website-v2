@@ -71,6 +71,7 @@ const Footer = ({ yml, session }) => {
                         }}>
                             <Input type="email" className="form-control" width="50%" placeholder="Email *"
                                 borderRadius="10px 0px 0px 10px"
+                                bgColor={Colors.white}
                                 margin="0"
                                 onChange={(value,valid) => {
                                 setVal({ ...formData, email: {value,valid} })
