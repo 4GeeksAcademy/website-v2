@@ -127,3 +127,39 @@ staff:
     coding_skills:
       - Excel
     location: ""
+  - name: "Mafe"
+    last_name: "Castro"
+    nick_name: ""
+    slug: "mafe-castrp"
+    job_title: "Growth and Marketing"
+    bio: "Leading the efforts of our growth Department for our HP operations."
+    github: ""
+    linkdin: "https://www.linkedin.com/in/mafecasvi/"
+    twitter: "https://twitter.com/mafecasvi"
+    website: ""
+    image: "/images/staff/mafe.jpg"
+    age: 35
+    interests:
+      - Fashion Design
+    coding_skills:
+      - Bootstrap
+    location: ""
+  - name: "Nacho"
+    last_name: "Cordoba"
+    nick_name: "Nacho"
+    slug: "nacho-cordoba"
+    job_title: "Lead Mentor"
+    bio: "Over 12 years of experience in Coding, and more than 4 teaching Coding in the US campus."
+    github: "https://github.com/nachovz"
+    linkdin: "https://www.linkedin.com/in/nachovz/en-us/"
+    twitter: ""
+    website: ""
+    image: "/images/staff/nacho.jpg"
+    age: 42
+    interests:
+      - Board Games
+      - Soccer
+      - Music
+    coding_skills:
+      - Javascript and Python
+    location: ""
