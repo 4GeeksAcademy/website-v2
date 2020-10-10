@@ -157,7 +157,7 @@ const LeadForm = ({ d_sm, fields, thankyou, heading, redirect, formHandler, data
                 <>
                     {motivation && <Paragraph align="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
                     <Row>
-                        <Column display={layout} size="12">
+                        <Column display={layout} size="12" paddingLeft="0" paddingRight="0">
                             {fields.filter(f => formData[f].type !== 'hidden').map((f,i) => {
                                 const _field = formData[f]
                                 return <Input
@@ -187,18 +187,18 @@ const LeadForm = ({ d_sm, fields, thankyou, heading, redirect, formHandler, data
                                     disabled={formStatus.status === "loading" ? true: false}
                                 >{formStatus.status === "loading" ? "Loading...": sendLabel}</Button>
                             }
-                            {session && session.location && session.location.gdpr_compliant &&
-                                <Paragraph fontSize="11px" margin="5px 0 0 0">
-                                    <input
-                                        name="isGoing"
-                                        type="checkbox"
-                                        checked={formData.consent.valid}
-                                        onChange={() => setVal({ ...formData, consent: { ...formData.consent, valid: !formData.consent.valid } })} />
-                                        {yml.consent.message}
-                                        <a target="_blank"  rel="noopener noreferrer" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
-                                </Paragraph>
-                            }
                         </Column>
+                        {session && session.location && session.location.gdpr_compliant &&
+                            <Paragraph fontSize="11px" margin="5px 0 0 0">
+                                <input
+                                    name="isGoing"
+                                    type="checkbox"
+                                    checked={formData.consent.valid}
+                                    onChange={() => setVal({ ...formData, consent: { ...formData.consent, valid: !formData.consent.valid } })} />
+                                    {yml.consent.message}
+                                    <a target="_blank"  rel="noopener noreferrer" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
+                            </Paragraph>
+                        }
                         {formStatus.status === "error" && <Alert color="red" margin="0 15px"  padding="5px 0 0 0">{formStatus.msg}</Alert>}
                     </Row>
                     {layout === "block" && 

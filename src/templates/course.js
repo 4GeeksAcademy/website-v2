@@ -98,7 +98,7 @@ const Program = ({data, pageContext, yml}) => {
             handleClose={handleClose} 
             lang={pageContext.lang}
             data={{ 
-              course: { value: yml.meta_info.bc_slug, valid: true }
+              course: { type: "hidden", value: yml.meta_info.bc_slug, valid: true }
             }}
           />
         </Modal>
