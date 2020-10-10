@@ -40,12 +40,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No previous experience or coding skills required;
-    - Part-Time or Full-Time Schedules Available;
-    - Training on everything needed to become a successful software developer;
-    - Get career coaching and help until you land your first coding job.
-    - Junior developers make around $55k per year;
-    - Beautiful Miami Campus;
+    - No previous experience or coding skills required.
+    - Part-Time or Full-Time Schedules Available. Online or in our beautiful campus in Miami.
+    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
+    - Junior developers make avg $55k per year in Florida.
 
 follow_bar:
   position: "top" # top, bottom, hidden
