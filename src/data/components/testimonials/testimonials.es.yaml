@@ -1,9 +1,10 @@
-
 testimonials:
   - student_name: "Azul Botaya"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
+    linkedin_text: "Linkedin Perfil"
     source_url: ""
     source_url_text: ""
     content: |
@@ -18,6 +19,8 @@ testimonials:
     source_link: ""
     student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
+    linkedin_text: "Linkedin Perfil"
     source_url: ""
     source_url_text: ""
     content: |
@@ -34,13 +37,16 @@ testimonials:
   #   source_url: ""
   #   source_url_text: ""
   #   content: |
-  #     I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP. 
-  #     I've been struggling a lot trying to make a dynamic website, so I started to look 
-  #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to 
+  #     I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP.
+  #     I've been struggling a lot trying to make a dynamic website, so I started to look
+  #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
   - student_name: "Charles Fabricius"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/charles-fabricius/"
+    linkedin_text: "Linkedin Perfil"
     source_url: ""
     source_url_text: ""
     content: |
@@ -48,23 +54,26 @@ testimonials:
       En 16 semanas todo había cambiado y ya era un programador junior. Ya tengo trabajo y en gran parte se los debo a 4Geeks, porque me ayudaron con mis habilidades como programador. 
       Ellos te van a ayudar a que tengas todo lo que necesitas para que puedas salir a buscar y conseguir trabajo. 
       Tienes que preguntar siempre y sin parar. Ese tip no falla, además ellos te ayudan constantemente.
-      Sin contar con el acceso a mentores y el apoyo profesional que de por vida dan. Yo me gradué hace 2 años y todavía sigo en contacto con ellos. 
-      
+      Sin contar con el acceso a mentores y el apoyo profesional que de por vida dan. Yo me gradué hace 2 años y todavía sigo en contacto con ellos.
 
   - student_name: "Fernando Funez"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/fernando-funezdev/"
+    linkedin_text: "Linkedin Perfil"
     source_url: ""
     source_url_text: ""
     content: |
       Yo recomiendo totalmente 4Geeks Academy. Antes de 4Geeks no sabía nada y después de 10 semanas ya estaba haciendo cosas impensadas por mi. 
       Te ayudan para que aún en poco tiempo puedas entender, ejecutar y desarrollar. te vas a convertir en programador de software y podrás conseguir un trabajo como el que ya yo tengo web developer). 
-      El staff y los mentors son geniales. Si quieren entrar en este mundo, inscreibanse en 4Geeks sin pensarlo dos veces. 
+      El staff y los mentors son geniales. Si quieren entrar en este mundo, inscreibanse en 4Geeks sin pensarlo dos veces.
   - student_name: "Salvador Desravines"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/salvador-desravines-b85b4a196/"
+    linkedin_text: "Linkedin Perfil"
     source_url: ""
     source_url_text: ""
     content: |
@@ -75,15 +84,19 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
     hidden: false
+    linkedin_url: ""
+    linkedin_text: "Linkedin Perfil"
     source_url: ""
     source_url_text: ""
     content: |
       Ahora creo que puedo completamente desarrollar una aplicación y entender cómo funciona. Puedo incluso ayudar a resolver problemas y bugs en algún código. 
       Los profesores son geniales y el resto del staff está siempre pendiente que te vaya de la mejor manera posible. Es increíble todo el apoyo que recibes. 
-      Recomiendo el Bootcamp 100%. 
+      Recomiendo el Bootcamp 100%.
   - student_name: "Fidel Rosell"
     testimonial_date: ""
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/fidelrosell/"
+    linkedin_text: "Linkedin Perfil"
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
     source_url: ""
     source_url_text: ""
@@ -92,15 +105,15 @@ testimonials:
       El Slack de 4Geeks se debería llamar 4Geeks Overflow, de lo rápido y la calidad de respuestas que tienes. 
       Se enfocan en problemas duros y te ayudan en todo momento. Los instructores senio son impresionantes en cuanto a conocimiento y capacidades. 
       Si tienes una entrevista de trabajo, te ayudan con test, con entrevistas simuladas y te preparan de la mejor manera. 
-      Una vez graduado, si quieres seguir practicando o conseguir un nuevo trabajo, ellos te van a ayudar. 
+      Una vez graduado, si quieres seguir practicando o conseguir un nuevo trabajo, ellos te van a ayudar.
   - student_name: "Guensie Grecy"
     testimonial_date: ""
     student_thumb: ""
-    linkedin: "https://www.linkedin.com/in/guensiegrecy/"
+    linkedin_url: "https://www.linkedin.com/in/guensiegrecy/"
+    linkedin_text: "Linkedin Perfil"
     hidden: true
     source_url: ""
     video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
     source_url_text: ""
     content: |
       I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn’t know anything about anything computer-technology wise, so that’s an encouragement because it’s possible!
-

@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
-import { Link, Anchor } from "../components/Styling/index"
+import {Link, Anchor} from "../components/Styling/index"
 import {Card} from '../components/Card'
 import ChooseProgram from '../components/ChooseProgram'
 import Why4Geeks from '../components/Why4Geeks';
@@ -21,25 +21,25 @@ import LeadForm from "../components/LeadForm/index.js";
 
 const Location = ({data, pageContext, yml}) => {
 
-    const { lang } = pageContext;
+    const {lang} = pageContext;
     const [open, setOpen] = React.useState(false);
     const [cohorts, setCohorts] = React.useState([]);
     const handleOpen = () => {
         setOpen(true);
-      };
-    
-      const handleClose = () => {
-        setOpen(false);
-      };
+    };
 
-      useEffect(() => {
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    useEffect(() => {
         const loadCohorts = async () => {
             const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
             const data = await resp.json();
-            setCohorts(data.slice(0,3))
+            setCohorts(data.slice(0, 3))
         }
         loadCohorts();
-      }, []);
+    }, []);
 
     return (<>
         <WrapperImage
@@ -51,7 +51,7 @@ const Location = ({data, pageContext, yml}) => {
             alt={yml.header.alt}
             customBorderRadius="0 0 0 1.25rem"
         >
-            <H1 type="h1"  fontSize="13px" marginTop="50px" color={Colors.white} align="center">{yml.seo_title}</H1>
+            <H1 type="h1" fontSize="13px" marginTop="50px" color={Colors.white} align="center">{yml.seo_title}</H1>
             <Divider height="20px" />
             <Title
                 type="h2"
@@ -82,16 +82,16 @@ const Location = ({data, pageContext, yml}) => {
                 open={open}
                 onClose={handleClose}
             >
-                <LeadForm 
-                    heading={yml.button.syllabus_button_text} 
-                    formHandler={requestSyllabus} 
-                    handleClose={handleClose} 
+                <LeadForm
+                    heading={yml.button.syllabus_button_text}
+                    formHandler={requestSyllabus}
+                    handleClose={handleClose}
                     lang={pageContext.lang}
                 />
             </Modal>
         </WrapperImage>
         <Divider height="100px" />
-        {yml.news && 
+        {yml.news &&
             <Wrapper >
                 <Title
                     size="10"
@@ -99,7 +99,7 @@ const Location = ({data, pageContext, yml}) => {
                     margin="left"
                     variant="small"
                 />
-                <News location={yml.breathecode_location_slug} lang={lang}  />
+                <News location={yml.breathecode_location_slug} lang={lang} />
                 <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
             </Wrapper>
         }
@@ -135,7 +135,7 @@ const Location = ({data, pageContext, yml}) => {
                                             </Row>
                                             <Row height="5%" align="around">
                                                 <Column size="12" alignSelf="center">
-                                                    <Separator  variant="primary" left />
+                                                    <Separator variant="primary" left />
                                                 </Column>
                                             </Row>
                                             <Row height="30%">
@@ -157,7 +157,7 @@ const Location = ({data, pageContext, yml}) => {
                                             </Row>
                                             <Row height="5%" align="around">
                                                 <Column size="12" alignSelf="center">
-                                                    <Separator  variant="primary" left />
+                                                    <Separator variant="primary" left />
                                                 </Column>
                                             </Row>
                                             <Row height="5%">
@@ -193,7 +193,7 @@ const Location = ({data, pageContext, yml}) => {
                                             image={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
                                             bgSize={`cover`}
                                             alt="Cnn Logo"
-                                            />
+                                        />
                                     </Anchor>
                                 </Column>
                             </Row>
@@ -211,7 +211,7 @@ const Location = ({data, pageContext, yml}) => {
                 variant="primary"
             />
             <Row>
-                { cohorts && cohorts.map(cohort => 
+                {cohorts && cohorts.map(cohort =>
                     <Column
                         size="4"
                         size_md="4"
@@ -226,22 +226,22 @@ const Location = ({data, pageContext, yml}) => {
                             margin_sm={"20px auto"}
                             margin_xs={"20px auto"}
                         >
-                            <Link to={`/${pageContext.lang}/${cohort.certificate.slug}`}><Img 
-                                src={cohort.certificate.logo} 
+                            <Link to={`/${pageContext.lang}/${cohort.certificate.slug}`}><Img
+                                src={cohort.certificate.logo}
                                 className="pointer"
-                                height="120px" 
+                                height="120px"
                                 borderRadius="1rem 1rem 0 0"
                             /></Link>
                             <H4 padding="10px">{cohort.certificate.name}</H4>
                             <Div padding="10px">
                                 <Clock width="24" color={Colors.blue} fill={Colors.blue} />
                                 <Paragraph
-                                margin={`0 0 0 10px`}
-                                fs_xs="18px"
-                                fs_sm="18px"
-                                fs_md="9px"
-                                fs_lg="11px"
-                                fontSize="14px">
+                                    margin={`0 0 0 10px`}
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="9px"
+                                    fs_lg="11px"
+                                    fontSize="14px">
                                     <Small display="block">Starting on:</Small>
                                     {dayjs(cohort.kickoff_date).format("ddd, D MMM YYYY")}
                                 </Paragraph>
@@ -307,15 +307,15 @@ const Location = ({data, pageContext, yml}) => {
                                                     fs_sm="20px"
                                                     fs_md="18px"
                                                     fs_lg="20px"
-                                                    fs_xl="24px" 
-                                                    align="left" 
+                                                    fs_xl="24px"
+                                                    align="left"
                                                 >{yml.carousel_box.heading}</H3>
                                                 <Paragraph primary margin="5px 0" align="left" ></Paragraph>
                                             </Column>
                                         </Row>
                                         <Row height="5%" align="around">
                                             <Column size="12" alignSelf="center">
-                                                <Separator  variant="primary" />
+                                                <Separator variant="primary" />
                                             </Column>
                                         </Row>
                                         <Row height="30%">
@@ -408,7 +408,7 @@ export const query = graphql`
                 images{
                     path{
                         childImageSharp {
-                          fluid(maxWidth: 300){
+                          fluid(maxWidth: 800){
                             ...GatsbyImageSharpFluid_withWebp
                           }
                         }

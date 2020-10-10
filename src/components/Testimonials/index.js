@@ -15,7 +15,7 @@ export const TestimonialsCarrousel = (props) => {
     return (
         <Fragment github="/components/testimonials">
             <Carousel
-                style={{ margin: props.margin || 0 }}
+                style={{margin: props.margin || 0}}
                 showThumbs={false}
                 showStatus={false}
                 stopOnHover={true}
@@ -73,9 +73,25 @@ export const TestimonialsCarrousel = (props) => {
                                             </Link>
                                         </Column>}
                                 </Row>
-
+                                <Row align="center" margin={`10px 0`}>
+                                    {item.linkedin_url != "" && item.linkedin_text != null ?
+                                        <Column size="12" align={`center`}>
+                                            <a href={item.linkedin_url} target="_blank">
+                                                <Paragraph
+                                                    fs_xs="12px"
+                                                    fs_sm="12px"
+                                                    fs_md="14px"
+                                                    fs_lg="14px"
+                                                    fs_xl="14px"
+                                                    color={Colors.blue}
+                                                >
+                                                    {item.linkedin_text}
+                                                </Paragraph>
+                                            </a>
+                                        </Column>
+                                        : null}
+                                </Row>
                                 <Divider height="10px" />
-
                             </Card>
                         </Row>
 
