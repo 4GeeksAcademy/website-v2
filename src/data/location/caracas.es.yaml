@@ -80,10 +80,10 @@ prices:
       header:
         heading_one: "PAGO DE CONTADO"
         heading_two: "CON FINANCIAMIENTO"
-        sub_heading: "pregunta por nuestras becase, financiamientos y precios"
+        sub_heading: "pregunta por nuestras becas, financiamientos y precios"
       content:
         price: "?"
-        price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becase."
+        price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becas."
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -108,10 +108,10 @@ prices:
       header:
         heading_one: "PAGO DE CONTADO"
         heading_two: "CON FINANCIAMIENTO"
-        sub_heading: "pregunta por nuestras becase, financiamientos y precios"
+        sub_heading: "pregunta por nuestras becas, financiamientos y precios"
       content:
         price: "?"
-        price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becase."
+        price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becas."
        
 active_campaign_location_slug: "los-cortijos-caracas"
 breathecode_location_slug: "el-nacional"
