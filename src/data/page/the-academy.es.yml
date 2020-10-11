@@ -31,7 +31,7 @@ education:
 ## 4GEEKS OUTCOMES
 outcomes:
   heading: "RESULTADOS DE 4GEEKS"
-  sub_heading: "El 76% de nuestros estudiantes busca un trabajo justo después de graduarse y el 24% busca mejorar sus habilidades o lanzar empresas."
+  sub_heading: "El 76% de nuestros estudiantes busca un trabajo justo después de graduarse y el 24% busca mejorar sus habilidades o lanzar startups."
   ## The field image is gonna be replaced from a dinamic chart generator
   image: "/images/program-charts.png"
   left:
@@ -97,4 +97,4 @@ story:
 ## RECENT BLOG POSTS  SECTION
 posts:
   heading: "PUBLICACIONES RECIENTES"
-  sub_heading: "Vivamus sagittis lacus vel augue laoreet rutrum ."
+  sub_heading: "Lee las publicaciones de nuestro blog."
