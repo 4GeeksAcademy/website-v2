@@ -106,7 +106,7 @@ geek_data:
     - Miles de ejercicios autoevaluados
     - Tutoriales interactivos y autoevaluados
     - Soluciones en video para una retroalimentación instantánea
-    - Chat de apoyo en línea 12 horas al día
+    - Chat de apoyo en línea al menos 12 horas al día
     - Transmisión en línea de las clases
     - Grabación de las clases para su posterior revisión
 
@@ -117,48 +117,48 @@ prices:
 
 # TYPICAL DAY SECTION
 typical:
-  heading: "TYPICAL DAY AT THE ACADEMY"
+  heading: "Un día típico en la academia"
   sub_heading: ""
   schedule:
-    - title: "Meditation"
-      time: "8:00 AM"
+    - title: "Meditación"
+      time: "8:30 AM"
       icon: users
-      content: "You will spend hundreds of hours coding; your body needs to relax, stretch and get ready for a thrilling day!"
+      content: "Empezamos a las 9 am pero vas a pasar muchas horas programando, tu cuerpo necesita relajarse, estirarse y prepararse para otro día de aprendizaje"
       step: 0
-    - title: "Setup and coffee"
+    - title: "Setup y café"
       time: "8:45 AM"
       icon: circle
-      content: "The bootcamp starts at 9 am, take some coffee to recharge your energies and get ready to learn!"
+      content: "Empezamos en 15 minutos, tómate una café, ¡recarga tus energías y prepárate para aprender!"
       step: 1
-    - title: "Review Last Day"
+    - title: "Revisión del día anterior"
       time: "9:00 AM"
       icon: circle
-      content: "Review last day & weekend activities, Q&A. And brief overall of what we have addressed."
+      content: "Revisión de las actividades del día anterior o del fin de semana, preguntas y respuestas. Breve resumen de lo que hemos abordado."
       step: 2
-    - title: "Lesson Time"
+    - title: "Clase del día"
       time: "10:00 AM"
       icon: LaptopCode
-      content: "Incremental: Each morning mentors will introduce a small set of new concepts and techniques that will help you along the way."
+      content: "Incremental: cada mañana, los mentores presentarán un pequeño conjunto de nuevos conceptos y técnicas que te ayudarán en el camino."
       step: 3
-    - title: "Lunch Time"
-      time: "12:40 PM"
+    - title: "¡Hora de la comida!"
+      time: "01:00 PM"
       icon: utensils
-      content: "Recharge your batteries, get ready to spend the rest of the day practicing, solving challenges and projects."
+      content: "Recarga tus baterías mientras conoces a tus compañeros, prepárate para pasar el resto del día practicando, resolviendo ejercicios y proyectos de la vida real."
       step: 4
-    - title: "Projects and Exercises"
+    - title: "Ejercicios y Proyectos"
       time: "2:00 PM"
       icon: coffee
-      content: "You will be continuously challenged with real-life projects and exercises to deliver."
+      content: "Afrontarás constantemente nuevos retos con proyectos de la vida real y ejercicios."
       step: 5
-    - title: "Collaborative Coding"
+    - title: "Trabajos colaborativos"
       time: "5:00 PM"
       icon: coffee
-      content: "All students will code in a single screen, discuss approaches, strategies and deliver the projects."
+      content: "Todos los estudiantes programarán en una sola pantalla, discutirán enfoques, estrategias y entregarán sus proyectos."
       step: 6
 ## ALUMNI SECTION
 alumni:
-  heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+  heading: "Conoce a los graduados y sus proyectos"
+  sub_heading: "Tú también podrás hacer proyectos como estos cuando seas programador"
 
 ## SIDEBAR
 sidebar:
