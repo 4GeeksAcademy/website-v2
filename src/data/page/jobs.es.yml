@@ -16,7 +16,7 @@ header:
   alt: ""
 about:
   heading: "MÁS SOBRE 4GEEKS ACADEMY"
-  sub_heading: "Curabitur blandit tempus porttitor."
+  sub_heading: "Conoce nuestra historia."
   about_image:
     image: ../../../static/images/our-story.png
     alt: ""
