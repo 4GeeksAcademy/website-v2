@@ -38,10 +38,10 @@ details:
   heading: DETALLES DEL PROGRAMA
   sub_heading: "Full Time"
   left_labels:
-    description: "DESCRIPTION:"
-    projects: "PROJECTS:"
-    duration: "DURATION:"
-    skills: "Skills / Weeks:"
+    description: "DESCRIPCIÓN:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Skills / Semanas:"
   details_modules:
     - module_name: "PREWORK"
       title: "PREWORK"
@@ -65,7 +65,7 @@ details:
       duration: "4 sem"
       step: 3.5
     - module_name: "API's"
-      title: "Aplicación avanzada"
+      title: "Aplicaciones avanzadas"
       description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publicando tu sitio web, etc."
       projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
       slug: "aplicacion-avanzada"
