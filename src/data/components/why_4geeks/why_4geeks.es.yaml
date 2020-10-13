@@ -14,7 +14,7 @@ why:
     # video: "https://www.youtube.com/watch?v=sJrH4f7Df8g" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: job
   - title: "Financiamos tu carrera"
-    description: "No pagues nada desde el día uno hasta conseguir curro como programador con Income Sharing Agreement(ISA)."
+    description: "No pagues nada desde el día uno hasta conseguir trabajo como programador con Income Share Agreement (ISA)."
     image: "../../../../static/images/why2.jpg"
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
