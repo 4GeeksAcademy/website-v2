@@ -135,7 +135,7 @@ const Calendar = (props) => {
     const loadFilterType = async () => {
       let filterTypeArray = ['courses', 'events'];
       for (let i = 0; i < events.length; i++) {
-        if (!filterTypeArray.includes(events[i].event_type.name)) {
+        if (events[i].event_type && !filterTypeArray.includes(events[i].event_type.name)) {
           filterTypeArray.push(events[i].event_type.name)
         }
       }
@@ -490,24 +490,19 @@ const Calendar = (props) => {
 
                             shadow
                           >
-                            {!event.banner.indexOf("http") ?
-                              <StyledBackgroundSection
-                                image={data.cohort_img.childImageSharp.fluid}
-                                height={`230px`}
-                                bgSize={`cover`}
-                                className={`img-event`}
-                              ></StyledBackgroundSection>
-                              :
-                              <LazyLoad scroll={true} height={230}>
-                                <RoundImage
-                                  url={event.banner}
-                                  bsize="cover"
-                                  mb="10px"
-                                  border="1.25rem 1.25rem 0 0"
-                                  position="center center"
-                                  width="230px"
-                                />
-                              </LazyLoad>}
+                            <LazyLoad scroll={true} height={230}>
+                              <RoundImage
+                                url={event.banner}
+                                bsize="cover"
+                                mb="10px"
+                                border="1.25rem 1.25rem 0 0"
+                                position="center center"
+                                height="180px"
+                                h_lg="120px"
+                                h_md="140px"
+                                h_sm="220px"
+                              />
+                            </LazyLoad>
                             <Row marginLeft="0" marginRight="0" padding={`15px`}>
                               <Column
                                 onMouseOver={() => setSelected(index)}
@@ -515,7 +510,7 @@ const Calendar = (props) => {
                                 onClick={() => setSelected(index)}
                                 size="12" >
                                 <Row marginBottom="1rem" align={`center`}>
-                                  <Paragraph>{event.event_type.name}</Paragraph>
+                                  <Paragraph>{event.event_type && event.event_type.name}</Paragraph>
                                 </Row>
                                 <Row marginBottom="1.25rem" >
                                   <H4
@@ -552,14 +547,6 @@ const Calendar = (props) => {
                                   </Paragraph>
                                 </Row>
                                 <Row marginBottom=".2rem" alignItems={`center`} >
-                                  <H3
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="16px"
-                                    fs_lg="14px"
-                                    fs_xl="16px"
-                                  >Description:
-                            </H3>
                                   <Paragraph
                                     margin={`10px 0 0 0`}
                                     fs_xs="18px"

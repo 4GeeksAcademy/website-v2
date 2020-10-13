@@ -1,10 +1,10 @@
 
 programs:
-  - text: "Become a Full-Stack Developer"
+  - text: "Level 1: Full-Stack Developer"
     location_bc_slug: null #<-- you can change location when user clicks on this link
     schedule: "Part-Time/Full-Time available"
     link: "/us/course/full-stack-web-development-bootcamp-part-time"
-  - text: "Become a Software Engineer"
+  - text: "Level 2: Software Engineer"
     location_bc_slug: null
     schedule: "Part-Time Only"
     link: "/us/course/software-engineering-coding-bootcamp"
