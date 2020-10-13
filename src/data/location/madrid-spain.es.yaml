@@ -79,7 +79,7 @@ prices:
       header:
         heading: "FINANCIADO"
         heading_two: "Hasta 24 meses"
-        sub_heading: "Opciones de financiación que se adaptan a ti"
+        sub_heading: "Opciones de financiación compatibles con nuestras becas"
       plans:
         - months: "24 m"
           payment: "251,56€"
@@ -149,7 +149,7 @@ prices:
     center_section:
       header:
         heading_two: "Financiado"
-        sub_heading: "Opciones de financiación que se adaptan a ti"
+        sub_heading: "Opciones de financiación compatibles con becas"
       plans:
         - months: "24 m"
           payment: "223,98€"
