@@ -12,30 +12,28 @@ projects:
     slug: "re-mindful"
     project_image: "../../../../static/images/projects/re-mindful.jpg"
     project_content: |
-      Generating awareness about recycling and considering all the steps that need to be covered. 
-      They have created an application that integrates both software and hardware that allows to weigh 
-      the amount of plastic, glass or garbage there is within a container and how much it will 
-      affect both the recycling process as well as the environment.
+      Este proyecto quiere generar mayor conciencia sobre el reciclaje, considerando todos los pasos que deben de ser cubiertos. 
+      Han creado una aplicación donde se integra software y hardware que permite pesar la cantidad del plástico, vidrio o basura dentro de un contenedor y cómo estos van a afectar al proceso del reciclaje y el medio ambiente.
     project_video: "https://www.youtube.com/watch?v=cKcZD0_1IKk"
     github_repo: "https://github.com/gabsssrod/ReduceReuseRecycle-frontEnd"
     live_link: "https://re-mindful.vercel.app/"
     alumni:
       - first_name: "Jordan"
         last_name: "Aguiriano"
-        job_title: "Web Developer"
+        job_title: "Desarrollador"
         github: "https://github.com/JordanAguiriano"
         linkedin: "https://www.linkedin.com/in/jordan-aguiriano/"
         twitter: ""
       - first_name: "Gabriela"
         last_name: "Rodriguez"
-        job_title: "Web Developer"
+        job_title: "Desarrolladora"
         github: "https://github.com/gabsssrod"
         linkedin: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
         twitter: ""
   - project_name: "Raspberry Sky"
     slug: "raspberry-sky"
     project_image: "../../../../static/images/projects/rocket-app.jpg"
-    project_content: "A platform capable of receiving information (wind, temperature, geolocation, etc) from rockets being launched to outer space. The platform also lets you make arrangements to send your own rocket, track it and receive messages from it."
+    project_content: "Una plataforma capaz de recibir data como velocidad del viento, temperatura, geo, etc. de cohetes que se lanzan al espacio. La plataforma te deja hacer ajustes al dispositivo enviado, al tiempo de enviar y recibir mensajes."
     project_video: ""
     github_repo: "https://github.com/Luis846/SatelliteBetaSoftware"
     live_link: "https://sattelite-beta.vercel.app/"
@@ -123,7 +121,7 @@ projects:
     hidden: true
     slug: "the-hour"
     project_image: "../../../../static/images/projects/the-hour.png"
-    project_content: "What are you doing tonight? The Hour is your perfect night-life sidekick, find information about bars, night clubs and what is happening in the city! This application stands out because of its UI/UX component, very easy to use, mobile first and build around React.js, Javascript and Headless Wordpress API for easy management."
+    project_content: "¿Qué harás esta noche? The Hour es el app perfecta para darte recomiendaciones de Bares y Locales nocturnos, donde conseguiræas info de Happy Hours, y las cosas que están pasando en la ciudad! Esta aplicación destaca por su componente UI/UX, porque es muy sencilla y porque se pensó para Mobile. Está desarrollada en React.js, Javascript y Wordpress API para un mejor manejo y carga de la info."
     project_video: ""
     live_link: ""
     github_repo: "https://github.com/dcbounds/TheHour"
