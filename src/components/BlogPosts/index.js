@@ -5,6 +5,7 @@ import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors, ArrowRight, Button, RoundImage} from '../Styling';
 import {Card} from '../Card';
+import { shuffle } from "../../actions"
 
 const days = [
     'Sun',
@@ -29,7 +30,7 @@ const months = [
     'Nov',
     'Dec'
 ]
-const RecentPosts = () => {
+const BlogPosts = ({ filter, limit, featured }) => {
     const data = useStaticQuery(graphql`
         query myPostsQuery{
             allMarkdownRemark {
@@ -43,6 +44,7 @@ const RecentPosts = () => {
                       image
                       avatar
                       excerpt
+                      featured
                     }
                     rawMarkdownBody
                     html
@@ -56,15 +58,22 @@ const RecentPosts = () => {
               }
             }
         `)
-    let post = data.allMarkdownRemark.edges;
-
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState(data.allMarkdownRemark.edges)
     useEffect(() => {
-        let newArray = [];
-        for (let i = 0; i < 3; i++) {
-            newArray.push(post[Math.floor(Math.random() * post.length)]);
-        }
-        setPosts(newArray);
+        let _posts = data.allMarkdownRemark.edges;
+        if(featured) _posts = _posts.filter(p => p.node.frontmatter.featured)
+        
+        if(filter){
+            _posts = _posts.filter(p => filter.includes(p.node.frontmatter.slug));
+            setPosts(_posts)
+        } 
+        else{
+            let newArray = [];
+            for (let i = 0; i < limit; i++) {
+                newArray.push(_posts[Math.floor(Math.random() * _posts.length)]);
+            }
+            setPosts(newArray)
+        } 
     }, []);
 
     return (
@@ -118,5 +127,8 @@ const RecentPosts = () => {
         </Row>
     )
 };
-
-export default RecentPosts;
+BlogPosts.defaultProps = {
+    limit: 3,
+    filter: null
+}
+export default BlogPosts;

@@ -71,11 +71,14 @@ const Pricing = (props) => {
             <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</H5>
           </Column>
           <Column size="5" size_sm="12" height="300px" align_sm="center">
-            <Img
-              fixed={yml.intro.image_second.childImageSharp.fixed}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              margin="auto"
+            <StyledBackgroundSection
+              className={`image`}
+              height={`250px`}
+              image={yml.intro.image_second.childImageSharp.fluid}
+              bgSize={`cover`}
+              backgroundColor={Colors.lightGray}
+              alt="4Geeks Academy"
+              borderRadius={`1.25rem`}
             />
           </Column>
         </Row>
@@ -176,7 +179,7 @@ export const query = graphql`
                 }
                 image_second {
                   childImageSharp {
-                    fluid(maxWidth: 250){
+                    fluid(maxWidth: 300){
                       ...GatsbyImageSharpFluid_withWebp
                     }
                     fixed(width: 250, height: 250) {
@@ -416,7 +419,7 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
+                      fluid(maxWidth: 200){
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }

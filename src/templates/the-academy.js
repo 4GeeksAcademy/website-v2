@@ -8,7 +8,7 @@ import {Charts} from '../components/Chart'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseRender'
 import WhoIsHiring from '../components/WhoIsHiring';
-import RecentPosts from '../components/RecentPosts'
+import BlogPosts from '../components/BlogPosts'
 import Link from 'gatsby-link'
 import Img from "gatsby-image"
 
@@ -256,7 +256,14 @@ const Why = (props) => {
                 />
 
                 <Divider height="50px" />
-                <RecentPosts />
+                <BlogPosts 
+                  filter={[
+                    'why-we-teach-python-4geeks',
+                    'dont-teach-nodejs-full-stack-development-program',
+                    'choosing-coding-bootcamp'
+                  ]}
+                  featured
+                />
             </Wrapper>
             <Wrapper margin="50px" 
                 right
