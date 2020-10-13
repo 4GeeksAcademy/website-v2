@@ -35,8 +35,8 @@ credentials:
 
 ## PROGRAM DETAILS
 details:
-  heading: DETALLES DEL PROGRAMA
-  sub_heading: "Full Time"
+  heading: DETALLES DEL PROGRAMA FULL-TIME
+  sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"

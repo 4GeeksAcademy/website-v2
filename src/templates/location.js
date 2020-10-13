@@ -57,6 +57,7 @@ const Location = ({data, pageContext, yml}) => {
                 type="h2"
                 title={yml.header.tagline}
                 paragraph={yml.header.paragraph}
+                paragraphColor={Colors.lightGray}
                 variant="main"
                 color={Colors.white}
                 fontSize="46px"
@@ -105,104 +106,44 @@ const Location = ({data, pageContext, yml}) => {
         }
         { yml.breathecode_location_slug !== "online" &&
             <Wrapper >
-                <Row>
-                    <Column
-                        size="12"
-                        borderRadius="0 0 0 1.25rem"
-
+                <Card shadow borders="1.25rem" >
+                    <Row
+                        height="100%"
+                        marginLeft="0"
+                        marginRight="0"
+                        customRespSize
                     >
-                        <Card shadow borders="1.25rem" height="426px" >
-                            <Row
-                                height="100%"
-                                marginLeft="0"
-                                marginRight="0"
-                                customRespSize
-                            >
-                                <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
-                                    <Row align="center" height="100%">
-                                        <Column size="10" height="100%">
-                                            <Divider height="50px" />
-                                            <Row height="5%">
-                                                <Column size="12">
-                                                    <H3 fs_xs="20px"
-                                                        fs_sm="20px"
-                                                        fs_md="18px"
-                                                        fs_lg="20px"
-                                                        fs_xl="24px"
-                                                        align="left" >{yml.info_box.heading}</H3>
-                                                    <Paragraph primary margin="5px 0" align="left" ></Paragraph>
-                                                </Column>
-                                            </Row>
-                                            <Row height="5%" align="around">
-                                                <Column size="12" alignSelf="center">
-                                                    <Separator variant="primary" left />
-                                                </Column>
-                                            </Row>
-                                            <Row height="30%">
-                                                <Column size="12">
-                                                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{yml.info_box.address}</Paragraph>
-                                                </Column>
-                                            </Row>
-                                            <Row height="5%">
-                                                <Column size="12">
-                                                    <H3
-                                                        fs_xs="20px"
-                                                        fs_sm="24px"
-                                                        fs_md="18px"
-                                                        fs_lg="20px"
-                                                        fs_xl="24px"
-                                                        align="left" >{yml.info_box.contact_heading}</H3>
-                                                    <Paragraph primary margin="5px 0" align="left" ></Paragraph>
-                                                </Column>
-                                            </Row>
-                                            <Row height="5%" align="around">
-                                                <Column size="12" alignSelf="center">
-                                                    <Separator variant="primary" left />
-                                                </Column>
-                                            </Row>
-                                            <Row height="5%">
-                                                <Column size="12">
-                                                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{yml.info_box.phone}</Paragraph>
-                                                </Column>
-                                            </Row>
-                                            <Row height="5%">
-                                                <Column size="12">
-                                                    <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{yml.info_box.email}</Paragraph>
-                                                </Column>
-                                            </Row>
-                                            <Row height="">
-                                                <Paragraph color={Colors.gray} fontSize="14px" lineHeight="20px" margin="20px 0 0 0" align="left" ></Paragraph>
-                                            </Row>
-
-
-                                        </Column>
-                                    </Row>
-                                </Column>
-                                <Column
-                                    size="6"
-                                    customRespSize
-                                    respSize="6"
-                                    paddingRight={`0`}
-                                    border="custom"
-                                    borderRadius="0 1.25rem 1.25rem 0"
-                                >
-                                    <Anchor to={yml.info_box.map_url}>
-                                        <StyledBackgroundSection
-                                            className={`img-right`}
-                                            height={`426px`}
-                                            image={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
-                                            bgSize={`cover`}
-                                            alt="Cnn Logo"
-                                        />
-                                    </Anchor>
-                                </Column>
-                            </Row>
-                        </Card>
-                    </Column>
-                </Row>
+                        <Column size="6" size_sm="12" padding="20px" alignSelf="center" borderRadius="0 0 0 1.25rem">
+                            <H3 align="left" >{yml.info_box.heading}</H3>
+                            <Separator variant="primary" left />
+                            <Paragraph align="left">{yml.info_box.address}</Paragraph>
+                            <H3 margin='10px 0' align="left" >{yml.info_box.contact_heading}</H3>
+                            <Paragraph align="left"><a href={`tel:${yml.info_box.phone}`}>{yml.info_box.phone}</a></Paragraph>
+                            <Paragraph margin="10px 0 0 0" align="left">{yml.info_box.email}</Paragraph>
+                        </Column>
+                        <Column
+                            size="6" size_sm="12"
+                            paddingRight={`0`}
+                            paddingLeft={`0`}
+                            border="custom"
+                            borderRadius="0 1.25rem 1.25rem 0"
+                        >
+                            <Anchor to={yml.info_box.map_url}>
+                                <StyledBackgroundSection
+                                    className={`img-right`}
+                                    height={`426px`}
+                                    h_sm={`326px`}
+                                    image={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
+                                    bgSize={`cover`}
+                                    alt="Cnn Logo"
+                                    borderRadius="1.25rem"
+                                />
+                            </Anchor>
+                        </Column>
+                    </Row>
+                </Card>
             </Wrapper>
         }
-        <Divider height="100px" />
         <Wrapper>
             <Title
                 size="10"
@@ -270,50 +211,30 @@ const Location = ({data, pageContext, yml}) => {
                             marginRight="0"
                             customRespSize
                         >
-                            <Column size="6" size_sm={`12`} paddingLeft="0" paddingRight="0" alignSelf="center" backgroundSize="cover" border="custom" borderRadius="1.25rem 0 0 1.25rem" >
+                            <Column size="6" size_sm="12" paddingLeft="0" paddingRight="0" alignSelf="center" height="100%" backgroundSize="cover" border="custom" borderRadius="1.25rem 0 0 1.25rem" >
                                 <Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
 
                                     {yml.carousel_box.images.map((item, index) => {
                                         return (
-                                            <Column
-                                                key={index}
-                                                size="12"
-                                                paddingLeft={`0`}
-                                                paddingRight={`0`}
-                                                border="custom"
-                                                borderRadius="1.25rem 0 0 1.25rem"
-                                            >
-                                                <StyledBackgroundSection
-                                                    className={`img-left`}
-                                                    height={`400px`}
-                                                    image={item.path.childImageSharp.fluid}
-                                                    bgSize={`cover`}
-                                                    alt="Caracas"
-                                                />
-                                            </Column>
+                                            <StyledBackgroundSection
+                                                className={`img-left`}
+                                                height={`426px`}
+                                                h_sm={`326px`}
+                                                image={item.path.childImageSharp.fluid}
+                                                bgSize={`cover`}
+                                                alt="Cnn Logo"
+                                                borderRadius="1.25rem"
+                                            />
                                         )
                                     })}
                                 </Carousel>
-
                             </Column>
-                            <Column size="6" size_sm={`12`} alignSelf="center" borderRadius="0 0 0 1.25rem" padding={`20px`} margin={`20px 0 0 0`}>
-                                <H3 fs_xs="18px"
-                                    fs_sm="20px"
-                                    fs_md="18px"
-                                    fs_lg="20px"
-                                    fs_xl="24px"
-                                    align="left"
-                                    margin={`0 0 20px 0`}
-                                >
-                                    {yml.carousel_box.heading}
-                                </H3>
+                            <Column size="6" size_sm="12" padding="20px" alignSelf="center" borderRadius="0 0 0 1.25rem">
+                                <H3 align="left">{yml.carousel_box.heading}</H3>
+                                <Paragraph margin="5px 0" align="left" ></Paragraph>
                                 <Separator variant="primary" />
-                                <Paragraph
-                                    fs_xs="12px"
-                                    fs_sm="12px"
-                                    fs_md="12px"
-                                    fs_lg="14px"
-                                    fs_xl="14px" color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{yml.carousel_box.content}
+                                <Paragraph color={Colors.gray} align="left">
+                                    {yml.carousel_box.content}
                                 </Paragraph>
                             </Column>
                         </Row>
