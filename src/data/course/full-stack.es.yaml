@@ -36,8 +36,8 @@ credentials:
   paragraph: "Nuestros números hablan por sí solos"
 ## PROGRAM DETAILS
 details:
-  heading: DETALLES DEL PROGRAMA
-  sub_heading: "Part Time"
+  heading: DETALLES DEL PROGRAMA PART-TIME
+  sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
     description: "DESCRIPCION:"
     projects: "PROYECTOS:"

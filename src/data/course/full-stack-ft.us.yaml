@@ -33,8 +33,8 @@ credentials:
 
 ## PROGRAM DETAILS
 details:
-  heading: PROGRAM DETAILS
-  sub_heading: "Full Time"
+  heading: PROGRAM DETAILS FULL-TIME
+  sub_heading: Real life proyects and exactly what companies are looking for
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"

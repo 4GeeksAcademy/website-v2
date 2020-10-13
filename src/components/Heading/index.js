@@ -360,21 +360,22 @@ H1.defaultProps = {
 H2.defaultProps = {
   fs_xs: '7.5vw',
   fs_sm: '6vw',
-  fs_md: '5vw',
-  fs_lg: '4vw',
-  fs_xl: '2.5vw'
+  fs_md: '30px',
+  fs_lg: '30px',
+  fontSize: '35px'
 
 };
 H3.defaultProps = {
   fs_xs: '4.5vw',
   fs_sm: '4vw',
-  fs_md: '2.5vw',
-  fs_lg: '3vw',
-  fs_xl: '2.5vw'
-  
+  fs_md: '25px',
+  fs_lg: '25px',
+  fs_xl: '30px'
 };
 H4.defaultProps = {
-  fontSize: '2vw',
+  fontSize: '25px',
+  fs_lg: '23px',
+  fs_md: '23px',
   fs_sm: '5vw',
   fontWeight: '400',
 };

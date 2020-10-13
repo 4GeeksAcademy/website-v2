@@ -76,7 +76,7 @@ export const TestimonialsCarrousel = (props) => {
                                 <Row align="center" margin={`10px 0`}>
                                     {item.linkedin_url != "" && item.linkedin_text != null ?
                                         <Column size="12" align={`center`}>
-                                            <a href={item.linkedin_url} target="_blank">
+                                            <a href={item.linkedin_url} target="_blank" rel="noopener noreferrer">
                                                 <Paragraph
                                                     fs_xs="12px"
                                                     fs_sm="12px"

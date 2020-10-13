@@ -36,8 +36,8 @@ credentials:
 
 ## PROGRAM DETAILS
 details:
-  heading: PROGRAM DETAILS
-  sub_heading: "Part Time"
+  heading: PROGRAM DETAILS PART-TIME
+  sub_heading: Real life proyects and exactly what companies are looking for
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -122,7 +122,6 @@ prices:
   heading: "PRICES AND PAYMENTS"
   sub_heading: ""
 
-## TYPICAL DAY SECTION
 typical:
   heading: ""
   sub_heading: ""

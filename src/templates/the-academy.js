@@ -250,12 +250,7 @@ const Why = (props) => {
                 <Title
                     variant="primary"
                     title={yml.posts.heading}
-                    paragraph={yml.posts.sub_heading}
-                    maxWidth="66%"
-                // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
                 />
-
-                <Divider height="50px" />
                 <BlogPosts 
                   filter={[
                     'why-we-teach-python-4geeks',

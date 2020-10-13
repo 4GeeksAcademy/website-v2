@@ -7,16 +7,14 @@ import BaseRender from './_baseRender';
 
 const Privacy = (props) => {
     const {data, pageContext, yml} = props;
-    return (
-        <>
-            <Wrapper
+    return (<Wrapper
                 github="/components/privacy"
                 border="bottom"
                 height="auto"
+                margin="100px 0"
                 backgroundSize="cover"
                 paddingRight={`0`}
             >
-                <Divider height="100px" />
                 <Title
                     size="5"
                     color={Colors.black}
@@ -26,38 +24,15 @@ const Privacy = (props) => {
                     paragraphColor={Colors.black}
                     fontSize="46px"
                     textAlign="center"
-
                 />
-            </Wrapper>
-            <Divider height="100px" />
-            <Wrapper >
+                <Divider height="40px" />
                 {yml.sections.map((section, i) => {
-                    return (
-                        <Row key={i} align="center" marginBottom="30px">
-                            <Column size="10">
-                                <H2
-                                    fs_xs="24px"
-                                    fs_sm="24px"
-                                    fs_md="24px"
-                                    fs_lg="24px"
-                                    fs_xl="24px"
-                                >{section.title}</H2>
-                                <Paragraph
-                                    fs_xs="12px"
-                                    fs_sm="12px"
-                                    fs_md="12px"
-                                    fs_lg="12px"
-                                    fs_xl="12px"
-                                >{section.text}</Paragraph>
-                            </Column>
-                        </Row>
-                    )
+                    return (<>
+                        <H4>{section.title}</H4>
+                        <Paragraph margin="10px 0">{section.text}</Paragraph>
+                    </>)
                 })}
             </Wrapper>
-            <Divider height="100px" />
-
-
-        </ >
     )
 };
 export const query = graphql`
