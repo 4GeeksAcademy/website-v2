@@ -31,7 +31,6 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                             borders="1.25rem"
                             marginLeft="0"
                             marginRight="0"
-                            customRespSize
                         >
                             <Column
                                 size="6"

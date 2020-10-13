@@ -212,7 +212,8 @@ const Program = ({data, pageContext, yml}) => {
         size="10"
         title={yml.alumni.heading}
         paragraph={yml.alumni.sub_heading}
-        maxWidth="66%"
+        maxWidth="80%"
+        margin="auto"
         variant="primary"
       />
       <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />

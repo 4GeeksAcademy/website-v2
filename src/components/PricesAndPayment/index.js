@@ -145,7 +145,7 @@ const PricesAndPayments = (props) => {
         <Row align="center">
           { prices.left_section && <Column size="4" maxWidth="280px" size_sm="12" >
             <PricingCard lang={props.lang} 
-              transform="translateY(20%)"
+              transform="translateY(10%)"
               price={prices.left_section.content.price}
               priceInfo={prices.left_section.content.price_info}
               data={prices.left_section} 
@@ -177,7 +177,7 @@ const PricesAndPayments = (props) => {
           }
           { prices.right_section && <Column size="4" maxWidth="280px" size_sm="12" >
             <PricingCard lang={props.lang} 
-              transform="translateY(20%)"
+              transform="translateY(10%)"
               price={prices.right_section.content.price}
               priceInfo={prices.right_section.content.price_info}
               applyLabel={apply_button_text}
@@ -187,7 +187,7 @@ const PricesAndPayments = (props) => {
           }
         </Row>
       }
-      <Div display="block" margin="20px 0px" padding="30px 30px 10px 30px" 
+      <Div display="block" margin="20px 0px" padding="30px 30px 30px 30px" 
         shadow="inset 0px 0px 10px rgba(0,0,0,0.2)"
         background={Colors.grey}
         borderRadius="1.25rem"

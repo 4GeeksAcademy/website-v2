@@ -543,7 +543,7 @@ const Calendar = (props) => {
                                     fs_md="12px"
                                     fs_lg="14px"
                                     fs_xl="16px">
-                                    {event.academy.name}
+                                    {event.online_event ? "Online" : event.academy.city ? event.academy.city.name : event.academy.name}
                                   </Paragraph>
                                 </Row>
                                 <Row marginBottom=".2rem" alignItems={`center`} >

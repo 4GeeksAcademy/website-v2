@@ -96,7 +96,7 @@ export const GeekCard = ({  heading, bullets, image, to, icon  }) => {
       style={{position: "relative"}}
       bgHover={Colors.lightGray}
       onClick={() => navigate(to)}
-      h_xs="400px"
+      h_xs="auto"
       h_sm="370px"
       height="500px"
       padding="20px"
@@ -115,7 +115,7 @@ export const GeekCard = ({  heading, bullets, image, to, icon  }) => {
                   fs_sm="14px"
                   fs_md="16px"
                   fs_lg="16px"
-                  fontSize="18px"
+                  fontSize="16px"
                   align_sm="left"
                   color={Colors.gray}>{pal}</Paragraph>
               </Column>
