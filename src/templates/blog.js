@@ -78,11 +78,8 @@ const Blog = ({data, pageContext, yml}) => {
                                                     mb="10px"
                                                     border="1.25rem"
                                                     position="center"
-                                                    width="180px"
-                                                    h_lg="140px"
-                                                    h_md="120px"
-                                                    h_sm="200px"
-                                                    h_xs="150px"
+                                                    width="100%"
+                                                    height={`150px`}
                                                 />
                                             </LazyLoad>
                                         </Link> : null}
@@ -149,7 +146,7 @@ const Blog = ({data, pageContext, yml}) => {
                     </Column>
                 </Row>
                 <Row>
-                    <Separator  variant="primary" />
+                    <Separator variant="primary" />
                 </Row>
                 <Divider height="50px" />
                 <Row>
@@ -166,11 +163,8 @@ const Blog = ({data, pageContext, yml}) => {
                                                     mb="10px"
                                                     border="1.25rem"
                                                     position="center"
-                                                    width="180px"
-                                                    h_lg="140px"
-                                                    h_md="120px"
-                                                    h_sm="200px"
-                                                    h_xs="150px"
+                                                    width="100%"
+                                                    height={`150px`}
                                                 />
                                             </LazyLoad>
                                         </Link> : null}
