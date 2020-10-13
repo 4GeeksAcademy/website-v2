@@ -18,9 +18,15 @@ intro:
   image: "../../../static/images/pricing.png"
   heading: "4Geeks's pricing makes sense"
   content: "Our program was specifically built to efficiently deliver the most current and essential tech knowledge and skills, while remaining as an affordable -yet growing- Bootcamp."
-  image_second: "../../../static/images/pricing.png"
-  heading_second: "4Geeks's pricing makes sense"
-  content_second: "Our program was specifically built to efficiently deliver the most current and essential tech knowledge and skills, while remaining as an affordable -yet growing- Bootcamp."
+  image_second: "../../../static/images/nacho-chriss.jpg"
+  heading_second: "What you need to know"
+  content_second: "We are with you throughout the process. If you have any question, please get in contact with your Admissions Advisor here. Now, let's break it down:"
+  bullets:
+   - "You need to choose a program."
+   - "You need to choose a city/Campus."
+   - "Each campus offers you different options. For example: Miami (Skills Fund, Climb), Madrid (Quotanda or Stuent Finance), Chile (Quotanda)."
+   - "Ask for Income Sharing Agreements (only available for Full-Time students), Scholarships available (we are always finding new ways to lower the final price), and/or partnerships with special offers."
+   - "Apply, go through the admissions process or call us now. We are here to help. Your Coding Career at 4Geeks is about to start." 
 
 ## TUITION AND PAYMENTS SECTION
 prices:

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Column, Row, Divider, Wrapper, WrapperImage} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span, StyledBackgroundSection} from '../components/Styling'
-import { TestimonialsCarrousel } from '../components/Testimonials'
+import {TestimonialsCarrousel} from '../components/Testimonials'
 import BaseRender from './_baseRender'
 
 
@@ -46,14 +46,14 @@ const GeekPal = (props) => {
         <Divider height="100px" />
       </WrapperImage>
       <Wrapper margin="50px 0px" align="center">
-          <RoundImage
-            url={yml.image_logo}
-            bsize="contain"
-            margin="auto"
-            position="center center"
-            width="300px"
-            height="200px"
-          />
+        <RoundImage
+          url={yml.image_logo}
+          bsize="contain"
+          margin="auto"
+          position="center center"
+          width="300px"
+          height="200px"
+        />
       </Wrapper>
       <Wrapper >
         <Row github={`/page/geekpal.${pageContext.lang}.md`}>
@@ -160,6 +160,8 @@ export const query = graphql`
             student_name
             testimonial_date
             hidden
+            linkedin_url
+            linkedin_text
             student_thumb{
               childImageSharp {
                 fluid(maxWidth: 200){

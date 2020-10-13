@@ -7,19 +7,19 @@ import {Input, Alert} from '../components/Form'
 import BaseRender from './_baseRender'
 import {SessionContext} from '../session.js'
 import {apply, tagManager} from "../actions";
-import { TestimonialsCarrousel } from '../components/Testimonials'
+import {TestimonialsCarrousel} from '../components/Testimonials'
 
-const formIsValid = (formData=null) => {
-    if(!formData) return null;
-    for(let key in formData){
-        if(formData[key] !== undefined && !formData[key].valid) return key;
+const formIsValid = (formData = null) => {
+    if (!formData) return null;
+    for (let key in formData) {
+        if (formData[key] !== undefined && !formData[key].valid) return key;
     }
     return true;
 }
 const Apply = (props) => {
     const {data, pageContext, yml} = props;
-    const { session } = useContext(SessionContext);
-    const [ formStatus, setFormStatus ] = useState({ status: "idle", msg: "Apply"});
+    const {session} = useContext(SessionContext);
+    const [formStatus, setFormStatus] = useState({status: "idle", msg: "Apply"});
     const [formData, setVal] = useState({
         first_name: {value: '', valid: false},
         last_name: {value: '', valid: false},
@@ -31,62 +31,62 @@ const Apply = (props) => {
     });
     React.useEffect(() => {
         tagManager("application_rendered")
-    },[])
+    }, [])
     React.useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         // Pre-fill the location
         let _location = urlParams.get('location');
-        if(!_location && session.location) _location = session.location.active_campaign_location_slug;
-        
-        if(typeof(_location) === "string" && session.locations) _location = session.locations.find(l => l.active_campaign_location_slug === _location || l.breathecode_location_slug === _location);
+        if (!_location && session.location) _location = session.location.active_campaign_location_slug;
+
+        if (typeof (_location) === "string" && session.locations) _location = session.locations.find(l => l.active_campaign_location_slug === _location || l.breathecode_location_slug === _location);
         else _location = null;
 
-        if(_location) _location = _location.active_campaign_location_slug;
-        
+        if (_location) _location = _location.active_campaign_location_slug;
+
         // Pre-fill the course
         let _course = urlParams.get('course');
-        if(!_course && props.location.state) _course = props.location.state.course;
-        
-        if(typeof(_course) === "string") _course = data.allCourseYaml.edges.find(c => c.node.meta_info.bc_slug === _course);
-        if(_course) _course = _course.node.meta_info.bc_slug;
-        
+        if (!_course && props.location.state) _course = props.location.state.course;
+
+        if (typeof (_course) === "string") _course = data.allCourseYaml.edges.find(c => c.node.meta_info.bc_slug === _course);
+        if (_course) _course = _course.node.meta_info.bc_slug;
+
         // Pre-fill the utm_url
         let _utm_url = undefined;
-        if(props.location.state) _utm_url = { value: props.location.state.prevUrl, valid: true };
+        if (props.location.state) _utm_url = {value: props.location.state.prevUrl, valid: true};
         console.log("props.location.state", props.location.state)
 
         setVal(_val => ({
             ..._val,
             utm_url: _utm_url,
-            location: {value: _location || "", valid: typeof(_location) === "string" && _location !== ""},
+            location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
             course: {value: _course || undefined, valid: true},//it has to be valid because the user has no option to pick one
         }));
     }, [session])
 
-    let privacy = data.privacy.edges.find(({ node }) => node.fields.lang === pageContext.lang);
-    if(privacy) privacy = privacy.node;
+    let privacy = data.privacy.edges.find(({node}) => node.fields.lang === pageContext.lang);
+    if (privacy) privacy = privacy.node;
 
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
-            if(formStatus.status === "error") setFormStatus({ status: "idle", msg: "Resquest" })
+            if (formStatus.status === "error") setFormStatus({status: "idle", msg: "Resquest"})
 
             const valid = formIsValid(formData);
-            if (valid !== true){
-                setFormStatus({status: "error", msg: "There are some errors in your form: "+valid});
+            if (valid !== true) {
+                setFormStatus({status: "error", msg: "There are some errors in your form: " + valid});
                 console.log("formData", formData)
-            } 
+            }
             else {
                 setFormStatus({status: "loading", msg: "Loading..."});
                 apply(formData, session)
                     .then(data => {
-                        if (typeof(data.error) !== "undefined") {
+                        if (typeof (data.error) !== "undefined") {
                             setFormStatus({status: "error", msg: "Fix errors"});
                         }
                         else {
                             setFormStatus({status: "thank-you", msg: "Thank you"});
                             // console.log("Thank you");
-                            if(!session || !session.utm || !session.utm.utm_test) navigate('/thank-you/apply');
+                            if (!session || !session.utm || !session.utm.utm_test) navigate('/thank-you/apply');
                             else console.log("Lead success, but no redirection because of testing purposes")
                         }
                     })
@@ -98,7 +98,7 @@ const Apply = (props) => {
         }}>
             <Wrapper
                 github={`/page/apply.${pageContext.lang}.yml`}
-                >
+            >
                 <Title
                     title={yml.tagline}
                     variant="primary"
@@ -133,23 +133,23 @@ const Apply = (props) => {
 
                                 {yml.right.content_section.map((item, i) => {
                                     return (<Row key={i} height="50px">
-                                            <Paragraph
+                                        <Paragraph
 
-                                                fs_xs="12px"
-                                                fs_sm="14px"
-                                                fs_md="10px"
-                                                fs_lg="12px"
-                                                fs_xl="14px"
-                                                lineHeight="16px"
-                                                color={Colors.lightGray}
-                                            >{item}
-                                            </Paragraph>
-                                        </Row>)
+                                            fs_xs="12px"
+                                            fs_sm="14px"
+                                            fs_md="10px"
+                                            fs_lg="12px"
+                                            fs_xl="14px"
+                                            lineHeight="16px"
+                                            color={Colors.lightGray}
+                                        >{item}
+                                        </Paragraph>
+                                    </Row>)
                                 })}
                             </Column>
                         </Row>
                     </Column>
-                    <Column size="8" size_sm="12" alignSelf="center" height="100%"  borderRadius="0 0 0 1.25rem" color="white">
+                    <Column size="8" size_sm="12" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem" color="white">
                         <Row align="center" height="100%">
                             <Column size="10" height="100%">
                                 <Divider height="50px" />
@@ -162,11 +162,12 @@ const Apply = (props) => {
                                         type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                         errorMsg="Please specify a valid first name"
                                         required
-                                        onChange={(value, valid) => {setVal({...formData, first_name: {value, valid}})
-                                        if(formStatus.status === "error"){
-                                        setFormStatus({ status: "idle", msg: "Resquest" })
-                                    }
-                                    }}
+                                        onChange={(value, valid) => {
+                                            setVal({...formData, first_name: {value, valid}})
+                                            if (formStatus.status === "error") {
+                                                setFormStatus({status: "idle", msg: "Resquest"})
+                                            }
+                                        }}
                                         value={formData.first_name.value}
                                     />
                                 </Row>
@@ -174,11 +175,12 @@ const Apply = (props) => {
                                     <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                         errorMsg="Please specify a valid last name"
                                         required
-                                        onChange={(value, valid) => {setVal({...formData, last_name: {value, valid}})
-                                        if(formStatus.status === "error"){
-                                        setFormStatus({ status: "idle", msg: "Resquest" })
-                                    }
-                                    }}
+                                        onChange={(value, valid) => {
+                                            setVal({...formData, last_name: {value, valid}})
+                                            if (formStatus.status === "error") {
+                                                setFormStatus({status: "idle", msg: "Resquest"})
+                                            }
+                                        }}
                                         value={formData.last_name.value}
                                     />
                                 </Row>
@@ -186,11 +188,12 @@ const Apply = (props) => {
                                     <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
                                         errorMsg="Please specify a valid email"
                                         required
-                                        onChange={(value, valid) => {setVal({...formData, email: {value, valid}})
-                                        if(formStatus.status === "error"){
-                                        setFormStatus({ status: "idle", msg: "Resquest" })
-                                    }
-                                    }}
+                                        onChange={(value, valid) => {
+                                            setVal({...formData, email: {value, valid}})
+                                            if (formStatus.status === "error") {
+                                                setFormStatus({status: "idle", msg: "Resquest"})
+                                            }
+                                        }}
                                         value={formData.email.value}
                                     />
                                 </Row>
@@ -199,11 +202,12 @@ const Apply = (props) => {
                                         type="phone" className="form-control" placeholder={yml.left.form_section.phone}
                                         errorMsg="Please specify a valid phone number"
                                         required
-                                        onChange={(value, valid) => {setVal({...formData, phone: {value, valid}})
-                                        if(formStatus.status === "error"){
-                                            setFormStatus({ status: "idle", msg: "Resquest" })
-                                        }
-                                    }}
+                                        onChange={(value, valid) => {
+                                            setVal({...formData, phone: {value, valid}})
+                                            if (formStatus.status === "error") {
+                                                setFormStatus({status: "idle", msg: "Resquest"})
+                                            }
+                                        }}
                                         value={formData.phone.value}
                                     />
                                 </Row>
@@ -212,36 +216,36 @@ const Apply = (props) => {
                                 </Row>
                                 <Row>
                                     {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
-                                    { session && session.locations && session.locations.map(l => 
+                                    {session && session.locations && session.locations.map(l =>
                                         <Column key={l.active_campaign_location_slug} size="6" size_md="12" paddingRight="0px" paddingLeft="0px" paddingTop="3px">
-                                            <Button 
-                                                color={l.active_campaign_location_slug === formData.location.value ? Colors.lightYellow : Colors.lightGray} 
-                                                border={l.active_campaign_location_slug === formData.location.value ? "1px solid "+Colors.lightYellow : "1px solid white"} 
-                                                borderRadius="0" 
+                                            <Button
+                                                color={l.active_campaign_location_slug === formData.location.value ? Colors.lightYellow : Colors.lightGray}
+                                                border={l.active_campaign_location_slug === formData.location.value ? "1px solid " + Colors.lightYellow : "1px solid white"}
+                                                borderRadius="0"
                                                 colorHover={Colors.verylightGray}
-                                                onClick={(e) => setVal({...formData, location: { value: l.active_campaign_location_slug, valid: true }})}
-                                                >
+                                                onClick={(e) => setVal({...formData, location: {value: l.active_campaign_location_slug, valid: true}})}
+                                            >
                                                 <Paragraph className="no-wrap" color={Colors.gray}>{l.city}, {l.country}</Paragraph>
                                             </Button>
                                         </Column>
                                     )}
                                 </Row>
                                 <Row marginTop="10px">
-                                    <Input type="text" className="form-control" placeholder={yml.left.referral_section.placeholder} 
+                                    <Input type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
                                         value={formData.referral_key.value}
                                         onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
                                     />
                                     <Paragraph padding="0" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.referral_section.content}</Paragraph>
                                 </Row>
                                 {session && session.location && location.gdpr_compliant &&
-                                     <Row marginTop="10px">
+                                    <Row marginTop="10px">
                                         <Paragraph fontSize="14px" margin="5px 0 0 0">
                                             <input
                                                 type="checkbox"
                                                 checked={formData.consent.valid}
-                                                onChange={() => setVal({ ...formData, consent: { ...formData.consent, valid: !formData.consent.valid } })} />
-                                                {privacy.consent.message}
-                                                <a target="_blank" rel="noopener noreferrer" className="decorated" href={privacy.consent.url}>{privacy.consent.link_label}</a>
+                                                onChange={() => setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})} />
+                                            {privacy.consent.message}
+                                            <a target="_blank" rel="noopener noreferrer" className="decorated" href={privacy.consent.url}>{privacy.consent.link_label}</a>
                                         </Paragraph>
                                     </Row>
                                 }
@@ -249,9 +253,9 @@ const Apply = (props) => {
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                     <Button type="submit"
                                         width="150px"
-                                        transform="translateY(-15px)" color={formStatus.status === "loading" ? Colors.darkGray:  Colors.blue} textColor={Colors.white}
+                                        transform="translateY(-15px)" color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue} textColor={Colors.white}
                                         margin="2rem 0" padding=".45rem 3rem"
-                                        disabled={formStatus.status === "loading" ? true: false}
+                                        disabled={formStatus.status === "loading" ? true : false}
                                     >{formStatus.status === "loading" ? "Loading..." : yml.left.button.button_text}</Button>
                                 </Row>
                             </Column>
@@ -345,6 +349,8 @@ export const query = graphql`
               student_name
               testimonial_date
               hidden
+              linkedin_url
+              linkedin_text
               student_thumb{
                 childImageSharp {
                   fluid(maxWidth: 200){

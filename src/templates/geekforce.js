@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'
-import { TestimonialsCarrousel } from '../components/Testimonials'
+import {TestimonialsCarrousel} from '../components/Testimonials'
 import BaseRender from './_baseRender'
 
 function splitTitleString (string) {
@@ -26,7 +26,7 @@ const GeekForce = (props) => {
   return (
     <>
       <WrapperImage
-        
+
         imageData={yml.image && yml.image.childImageSharp.fluid}
         border="bottom"
         height="auto"
@@ -48,7 +48,7 @@ const GeekForce = (props) => {
       </WrapperImage>
       <Divider height="50px" />
       <Wrapper
-        
+
         border="bottom"
         height="auto"
       >
@@ -168,6 +168,8 @@ export const query = graphql`
             student_name
             testimonial_date
             hidden
+            linkedin_url
+            linkedin_text
             student_thumb{
               childImageSharp {
                 fluid(maxWidth: 200){

@@ -43,8 +43,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita una beca de hasta 2.750 euros. \n Planes de pago de hasta 24 meses."
-    text_mobile: "Becas de €2.750 . \n Plan de pago de 24 m. \n ¡Últimas plazas!"
+    text: "Solicita una beca de hasta 1.800€. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de 1.800€ . \n Plan de pago de 24 m. \n ¡Últimas plazas!"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:

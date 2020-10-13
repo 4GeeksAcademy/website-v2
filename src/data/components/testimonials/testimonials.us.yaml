@@ -1,9 +1,10 @@
-
 testimonials:
   - student_name: "Azul Botaya"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
+    linkedin_text: "Linkedin Profile"
     source_url: ""
     source_url_text: ""
     content: |
@@ -19,6 +20,8 @@ testimonials:
     source_link: ""
     student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
+    linkedin_text: "Linkedin Profile"
     source_url: ""
     source_url_text: ""
     content: |
@@ -36,14 +39,16 @@ testimonials:
   #   source_url: ""
   #   source_url_text: ""
   #   content: |
-  #     I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP. 
-  #     I've been struggling a lot trying to make a dynamic website, so I started to look 
-  #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to 
+  #     I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP.
+  #     I've been struggling a lot trying to make a dynamic website, so I started to look
+  #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
   - student_name: "Charles Fabricius"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/charles-fabricius/"
+    linkedin_text: "Linkedin Profile"
     source_url: ""
     source_url_text: ""
     content: |
@@ -58,6 +63,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/fernando-funezdev/"
+    linkedin_text: "Linkedin Profile"
     source_url: ""
     source_url_text: ""
     content: |
@@ -69,6 +76,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
     hidden: false
+    linkedin_url: "https://www.linkedin.com/in/salvador-desravines-b85b4a196/"
+    linkedin_text: "Linkedin Profile"
     source_url: ""
     source_url_text: ""
     content: |
@@ -79,6 +88,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
     hidden: false
+    linkedin_url: ""
+    linkedin_text: "Linkedin Profile"
     source_url: ""
     source_url_text: ""
     content: |
@@ -90,7 +101,8 @@ testimonials:
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
     hidden: false
-    linkedin: "https://www.linkedin.com/in/fidelrosell/"
+    linkedin_url: "https://www.linkedin.com/in/fidelrosell/"
+    linkedin_text: "Linkedin Profile"
     source_url: ""
     source_url_text: ""
     content: |
@@ -106,7 +118,8 @@ testimonials:
     job_title: "Web Developer"
     video_url: "https://www.youtube.com/watch?v=SixRm6R8rc0"
     github: "https://github.com/JordanAguiriano"
-    linkedin: "https://www.linkedin.com/in/jordan-aguiriano/"
+    linkedin_url: "https://www.linkedin.com/in/jordan-aguiriano/"
+    linkedin_text: "Linkedin Profile"
     content: ""
   - student_name: "Gabriela"
     last_name: "Rodriguez"
@@ -114,12 +127,14 @@ testimonials:
     student_thumb: ""
     hidden: true
     github: "https://github.com/gabsssrod"
-    linkedin: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
+    linkedin_url: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
+    linkedin_text: "Linkedin Profile"
     content: ""
   - student_name: "Guensie Grecy"
     testimonial_date: ""
     student_thumb: ""
-    linkedin: "https://www.linkedin.com/in/guensiegrecy/"
+    linkedin_url: "https://www.linkedin.com/in/guensiegrecy/"
+    linkedin_text: "Linkedin Profile"
     hidden: true
     source_url: ""
     video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
