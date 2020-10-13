@@ -182,7 +182,7 @@ prices:
     right_section:
       header:
         heading_one: "PAGO DE CONTADO"
-        heading_two: "(OUT OF POCKET)"
+        heading_two: ""
         sub_heading: "Financia sin intereses ¡becas disponibles!"
       content:
         price: "5.499,00 €"
