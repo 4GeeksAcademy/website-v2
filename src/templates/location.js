@@ -263,14 +263,14 @@ const Location = ({data, pageContext, yml}) => {
                     borderRadius="0 0 0 1.25rem"
 
                 >
-                    <Card shadow borders="1.25rem" height="426px" >
+                    <Card shadow borders="1.25rem" >
                         <Row
                             height="100%"
                             marginLeft="0"
                             marginRight="0"
                             customRespSize
                         >
-                            <Column size="6" customRespSize respSize="6" paddingLeft="0" alignSelf="center" height="100%" backgroundSize="cover" border="custom" borderRadius="1.25rem 0 0 1.25rem" >
+                            <Column size="6" size_sm={`12`} paddingLeft="0" paddingRight="0" alignSelf="center" backgroundSize="cover" border="custom" borderRadius="1.25rem 0 0 1.25rem" >
                                 <Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
 
                                     {yml.carousel_box.images.map((item, index) => {
@@ -278,18 +278,17 @@ const Location = ({data, pageContext, yml}) => {
                                             <Column
                                                 key={index}
                                                 size="12"
-                                                customRespSize
-                                                respSize="12"
                                                 paddingLeft={`0`}
+                                                paddingRight={`0`}
                                                 border="custom"
                                                 borderRadius="1.25rem 0 0 1.25rem"
                                             >
                                                 <StyledBackgroundSection
                                                     className={`img-left`}
-                                                    height={`426px`}
+                                                    height={`400px`}
                                                     image={item.path.childImageSharp.fluid}
                                                     bgSize={`cover`}
-                                                    alt="Cnn Logo"
+                                                    alt="Caracas"
                                                 />
                                             </Column>
                                         )
@@ -297,45 +296,26 @@ const Location = ({data, pageContext, yml}) => {
                                 </Carousel>
 
                             </Column>
-                            <Column size="6" customRespSize respSize="6" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
-                                <Row align="center" height="100%">
-                                    <Column size="10" height="100%">
-                                        <Divider height="50px" />
-                                        <Row height="15%">
-                                            <Column size="12">
-                                                <H3 fs_xs="18px"
-                                                    fs_sm="20px"
-                                                    fs_md="18px"
-                                                    fs_lg="20px"
-                                                    fs_xl="24px"
-                                                    align="left"
-                                                >{yml.carousel_box.heading}</H3>
-                                                <Paragraph primary margin="5px 0" align="left" ></Paragraph>
-                                            </Column>
-                                        </Row>
-                                        <Row height="5%" align="around">
-                                            <Column size="12" alignSelf="center">
-                                                <Separator variant="primary" />
-                                            </Column>
-                                        </Row>
-                                        <Row height="30%">
-                                            <Column size="12">
-                                                <Paragraph
-                                                    fs_xs="12px"
-                                                    fs_sm="12px"
-                                                    fs_md="12px"
-                                                    fs_lg="14px"
-                                                    fs_xl="14px" color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{yml.carousel_box.content}</Paragraph>
-                                            </Column>
-                                        </Row>
-
-
-
-
-                                    </Column>
-                                </Row>
+                            <Column size="6" size_sm={`12`} alignSelf="center" borderRadius="0 0 0 1.25rem" padding={`20px`} margin={`20px 0 0 0`}>
+                                <H3 fs_xs="18px"
+                                    fs_sm="20px"
+                                    fs_md="18px"
+                                    fs_lg="20px"
+                                    fs_xl="24px"
+                                    align="left"
+                                    margin={`0 0 20px 0`}
+                                >
+                                    {yml.carousel_box.heading}
+                                </H3>
+                                <Separator variant="primary" />
+                                <Paragraph
+                                    fs_xs="12px"
+                                    fs_sm="12px"
+                                    fs_md="12px"
+                                    fs_lg="14px"
+                                    fs_xl="14px" color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{yml.carousel_box.content}
+                                </Paragraph>
                             </Column>
-
                         </Row>
                     </Card>
                 </Column>
