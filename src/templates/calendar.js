@@ -613,14 +613,7 @@ export const query = graphql`
               }
             } 
           }
-          about{
-            heading
-            sub_heading
-            image
-            content
-            button
-            button_link
-          }
+          
         }
       }
     }

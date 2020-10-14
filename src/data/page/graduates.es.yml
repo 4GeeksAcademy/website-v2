@@ -16,6 +16,10 @@ banner:
 
 about:
   heading: "MÁS SOBRE 4GEEKS ACADEMY"
-  sub_heading: "Curabitur blandit tempus porttitor."
-  image: "/images/our-story.png"
+  sub_heading: ""
+  about_image:
+    image: ../../../static/images/our-story.png
+    alt: ""
   content: "4Geeks Aademy fue fundada en 2015. Lo que comenzó como un proyecto interno para entrenar a más desarrolladores se ha convertido en nuestra pasión a tiempo completo. 4Geeks es hoy en día un Coding Bootcamp con sede en EE.UU. que persigue construir un nuevo marco de trabajo para la Educación en Codificación, porque la codificación se está convirtiendo en una parte esencial de nuestra sociedad. La Academia 4Geeks tiene ahora sedes en 4 ciudades, 7 campus en curso, y más de 600 graduados."
+  button: "Read More >"
+  button_link: "/us/post/4geeks-academy-history"

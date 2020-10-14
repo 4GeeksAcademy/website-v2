@@ -150,7 +150,7 @@ const Blog = ({data, pageContext, yml}) => {
                     </Column>
                 </Row>
                 <Row>
-                    <Separator  variant="primary" />
+                    <Separator variant="primary" />
                 </Row>
                 <Divider height="50px" />
                 <Row>

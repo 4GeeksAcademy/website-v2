@@ -113,7 +113,7 @@ const Location = ({data, pageContext, yml}) => {
                         marginRight="0"
                         customRespSize
                     >
-                        <Column size="6" size_sm="12" padding="20px"  alignSelf="center" borderRadius="0 0 0 1.25rem">
+                        <Column size="6" size_sm="12" padding="20px" alignSelf="center" borderRadius="0 0 0 1.25rem">
                             <H3 align="left" >{yml.info_box.heading}</H3>
                             <Separator variant="primary" left />
                             <Paragraph align="left">{yml.info_box.address}</Paragraph>
@@ -216,15 +216,15 @@ const Location = ({data, pageContext, yml}) => {
 
                                     {yml.carousel_box.images.map((item, index) => {
                                         return (
-                                        <StyledBackgroundSection
-                                            className={`img-left`}
-                                            height={`426px`}
-                                            h_sm={`326px`}
-                                            image={item.path.childImageSharp.fluid}
-                                            bgSize={`cover`}
-                                            alt="Cnn Logo"
-                                            borderRadius="1.25rem"
-                                        />
+                                            <StyledBackgroundSection
+                                                className={`img-left`}
+                                                height={`426px`}
+                                                h_sm={`326px`}
+                                                image={item.path.childImageSharp.fluid}
+                                                bgSize={`cover`}
+                                                alt="Cnn Logo"
+                                                borderRadius="1.25rem"
+                                            />
                                         )
                                     })}
                                 </Carousel>
@@ -237,7 +237,6 @@ const Location = ({data, pageContext, yml}) => {
                                     {yml.carousel_box.content}
                                 </Paragraph>
                             </Column>
-
                         </Row>
                     </Card>
                 </Column>

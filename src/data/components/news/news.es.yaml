@@ -2,6 +2,7 @@
 news:
   - name: "Newsweek"
     location: ["downtown-miami", "online", "madrid-spain"]
+    url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
     image: "../../../../static/images/news/newsweek.png"
   - name: "CNN Español"
     location: ["santiago-chile", "online", "downtown-miami"]
@@ -17,6 +18,7 @@ news:
     url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"
   - name: "El Economista"
     location: ["madrid-spain"]
+    url: "https://www.eleconomista.es/ecoaula/noticias/10357127/02/20/Victor-Manuel-Gomez-El-90-de-los-alumnos-encuentra-trabajo-en-los-100-primeros-dias-tras-su-graduacion.html"
     image: "../../../../static/images/news/economista.png"
   - name: "La Tercera"
     location: ["santiago-chile"]
@@ -33,7 +35,7 @@ news:
   - name: "RRHH Digital"
     location: ["madrid-spain"]
     image: "../../../../static/images/news/rrhhdigital.png"
-    url: "https://uploads.convertflow.co/production/websites/9849/K3qc2IPjSnGqG3qYNKt2_rrhhdigital.png"
+    url: "http://www.rrhhdigital.com/secciones/mercado-laboral/140492/Diez-requisitos-imprescindibles-que-todo-programador-debe-cumplir-en-la-actualidad"
   - name: "Las Ultimas Noticias"
     location: ["santiago-chile"]
     url: "http://www.lun.com/Pages/NewsDetail.aspx?dt=2019-02-16&NewsID=420792&BodyID=0&PaginaId=16"
