@@ -1,24 +1,28 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import Why4Geeks from '../components/Why4Geeks';
-import GeeksVsOthers from '../components/GeeksVsOthers'
-import Badges from '../components/Badges'
-import News from '../components/News'
-import ChooseProgram from '../components/ChooseProgram'
-import JobsStatistics from '../components/JobsStatistics';
+import loadable from '@loadable/component'
+import {Link, navigate} from 'gatsby';
+
 import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Row, Column, Wrapper} from '../components/Sections'
 import {RoundImage, Colors, ArrowRight, StyledBackgroundSection} from '../components/Styling'
-import {Card} from '../components/Card'
-import WhoIsHiring from '../components/WhoIsHiring';
-import AlumniProjects from '../components/AlumniProjects'
+
+import News from '../components/News'
 import Credentials from '../components/Credentials'
+import ChooseProgram from '../components/ChooseProgram'
+import {Card} from '../components/Card'
 import BaseRender from './_baseRender'
 import {TestimonialsCarrousel} from '../components/Testimonials'
-import WhyPython from '../components/WhyPython'
-import Loc from '../components/Loc'
-import {Link, navigate} from 'gatsby';
 import {SessionContext} from '../session.js'
+
+const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
+const Why4Geeks = loadable(() => import('../components/Why4Geeks'))
+const AlumniProjects = loadable(() => import('../components/AlumniProjects'))
+const JobsStatistics = loadable(() => import('../components/JobsStatistics'))
+const WhoIsHiring = loadable(() => import('../components/WhoIsHiring'))
+const Badges = loadable(() => import('../components/Badges'))
+const WhyPython = loadable(() => import('../components/WhyPython'))
+const Loc = loadable(() => import('../components/Loc'))
 
 const Home = (props) => {
   const {session, setLocation} = React.useContext(SessionContext);
