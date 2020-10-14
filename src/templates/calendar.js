@@ -1,6 +1,4 @@
 import React, {useState, useEffect, useContext} from 'react';
-import Layout from '../global/Layout';
-import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, WrapperImage, Divider, Div} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, RoundImage, Address, Marker, ArrowRight, Clock, Question, Filter, Cross, AngleDown, TriangleDown, StyledBackgroundSection} from '../components/Styling'

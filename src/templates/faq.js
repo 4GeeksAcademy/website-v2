@@ -78,11 +78,7 @@ const Faq = (props) => {
                                         <Column size="11" size_sm="10" alignSelf="center">
                                             <H4
                                                 align={`left`}
-                                                fs_xs="18px"
-                                                fs_sm="20px"
-                                                fs_md="20px"
-                                                fs_lg="20px"
-                                                fontSize="24px"
+                                                align_sm={`left`}
                                                 color={Colors.black}>{item.question}
                                             </H4>
                                             {buttonToggle === true && toggleIndex === index &&

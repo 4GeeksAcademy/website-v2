@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {Link, Anchor} from "../components/Styling/index"
 import {Card} from '../components/Card'
+import loadable from '@loadable/component'
 import ChooseProgram from '../components/ChooseProgram'
-import Why4Geeks from '../components/Why4Geeks';
 import News from '../components/News'
 import dayjs from "dayjs"
 import {Div, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
@@ -12,12 +12,12 @@ import BaseRender from './_baseRender'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {requestSyllabus} from "../actions";
-
-
 import {Clock} from '../components/Styling'
 
-import Modal from '../components/Modal';
-import LeadForm from "../components/LeadForm/index.js";
+const LeadForm = loadable(() => import('../components/LeadForm'))
+const Modal = loadable(() => import('../components/Modal'))
+const Why4Geeks = loadable(() => import('../components/Why4Geeks'))
+
 
 const Location = ({data, pageContext, yml}) => {
 

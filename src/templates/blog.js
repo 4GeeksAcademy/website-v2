@@ -89,7 +89,7 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Link> : null}
                                     <Row align="around" >
 
-                                        <Column size size="12" customRespSize respSize="8" alignSelf="center" align="left">
+                                        <Column size size="12"  alignSelf="center" align="left">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
                                                 uppercase
                                                 fs_xs="20px"
@@ -106,12 +106,12 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Column>
                                     </Row>
                                     <Row height="auto" align="around">
-                                        <Column size="1" customRespSize respSize="2" alignSelf="center">
+                                        <Column size="1"  alignSelf="center">
                                             <LazyLoad scroll={true} height={30} once={true}>
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
                                             </LazyLoad>
                                         </Column>
-                                        <Column size="8" customRespSize respSize="8" alignSelf="center">
+                                        <Column size="8"  alignSelf="center">
                                             <Paragraph color={Colors.gray} align="left"
                                                 fs_xs="12px"
                                                 fs_sm="12px"
@@ -125,7 +125,7 @@ const Blog = ({data, pageContext, yml}) => {
                                                 fs_xl="12px" lineHeight="20px">{`${GetFormattedDate(item.node.frontmatter.date)}`}</Paragraph>
                                             {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
                                         </Column>
-                                        <Column size="2" customRespSize respSize="2" align="end">
+                                        <Column size="2"  align="end">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><ArrowRight width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                         </Column>
                                     </Row>
@@ -177,7 +177,7 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Link> : null}
                                     <Row align="around" >
 
-                                        <Column size size="12" customRespSize respSize="8" alignSelf="center" align="left">
+                                        <Column size size="12"  alignSelf="center" align="left">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
                                                 uppercase
                                                 fs_xs="20px"
@@ -194,12 +194,12 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Column>
                                     </Row>
                                     <Row height="auto" align="around">
-                                        <Column size="1" customRespSize respSize="2" alignSelf="center">
+                                        <Column size="1"  alignSelf="center">
                                             <LazyLoad scroll={true} height={30} once={true}>
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
                                             </LazyLoad>
                                         </Column>
-                                        <Column size="8" customRespSize respSize="8" alignSelf="center">
+                                        <Column size="8"  alignSelf="center">
                                             <Paragraph color={Colors.gray} align="left"
                                                 fs_xs="12px"
                                                 fs_sm="12px"
@@ -213,7 +213,7 @@ const Blog = ({data, pageContext, yml}) => {
                                                 fs_xl="12px" lineHeight="20px">{`${GetFormattedDate(item.node.frontmatter.date)}`}</Paragraph>
                                             {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
                                         </Column>
-                                        <Column size="2" customRespSize respSize="2" align="end">
+                                        <Column size="2"  align="end">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><ArrowRight width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                         </Column>
                                     </Row>

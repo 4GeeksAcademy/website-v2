@@ -58,17 +58,12 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                 {item.alumni.map((alumni, i) => {
                                     return (
                                         <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
-                                            <H4
-                                                fs_xs="16px"
-                                                fs_sm="16px"
-                                                fs_md="18px"
-                                                fs_lg="20px"
-                                                fontSize="20px"
-                                                align_xs="center"
+                                            <H5
                                                 align="left"
+                                                align_sm="left"
                                                 fontWeight={`400`}
                                             >{`${alumni.first_name} ${alumni.last_name}`}
-                                            </H4>
+                                            </H5>
                                             <Row marginBottom="5px">
                                                 <Column size="12" alignSm="center" display={`flex`} flexDirection={`row`} alignItems={`end`}>
                                                     <Paragraph

@@ -68,7 +68,7 @@ const Events = ({ }) => {
                                     marginRight="0"
                                     customRespSize
                                 >
-                                    <Column size="5" customRespSize respSize="6" alignSelf="center" height="100%" image="no" borderRadius="0 0 0 1.25rem">
+                                    <Column size="5" alignSelf="center" height="100%" image="no" borderRadius="0 0 0 1.25rem">
                                         <Row align="center" height="100%">
                                             <Column size="9" height="100%">
                                                 <Divider height="30px" />
@@ -79,26 +79,26 @@ const Events = ({ }) => {
                                                     <Separator variant="primary" />
                                                 </Row>
                                                 <Row height="20px">
-                                                    <Column size="2" customRespSize respSize="4" paddingLeft="0px">
+                                                    <Column size="2"  paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >Date:</Paragraph>
                                                     </Column>
-                                                    <Column size="6" customRespSize respSize="6">
+                                                    <Column size="6" >
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >{days[date.getDay()]}, {date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</Paragraph>
                                                     </Column>
                                                 </Row>
                                                 <Row height="20px">
-                                                    <Column size="2" customRespSize respSize="4" paddingLeft="0px">
+                                                    <Column size="2"  paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >Time:</Paragraph>
                                                     </Column>
-                                                    <Column size="6" customRespSize respSize="6">
+                                                    <Column size="6" >
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >{date.getHours()}pm</Paragraph>
                                                     </Column>
                                                 </Row>
                                                 <Row height="50px">
-                                                    <Column size="2" customRespSize respSize="4" paddingLeft="0px">
+                                                    <Column size="2"  paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >City:</Paragraph>
                                                     </Column>
-                                                    <Column size="5" customRespSize respSize="6" >
+                                                    <Column size="5"  >
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >{item.city_slug}</Paragraph>
                                                     </Column>
 
@@ -112,7 +112,7 @@ const Events = ({ }) => {
                                         </Row>
 
                                     </Column>
-                                    <Column size="7" customRespSize respSize="6" alignSelf="center" width="100%" height="100%" border="custom" borderRadius="0 1.25rem 1.25rem 0" image="yes" url={item.banner_url} backgroundSize="cover" >
+                                    <Column size="7"  alignSelf="center" width="100%" height="100%" border="custom" borderRadius="0 1.25rem 1.25rem 0" image="yes" url={item.banner_url} backgroundSize="cover" >
 
                                     </Column>
                                 </Row>

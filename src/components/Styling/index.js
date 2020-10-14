@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
-import {Device, Break} from '../Responsive';
-import {Paragraph} from '../Heading';
+import {Break} from '../Responsive';
 import BackgroundImage from 'gatsby-background-image'
 import {graphql, StaticQuery, Link} from 'gatsby'
 import {Location} from '@reach/router'
@@ -80,57 +79,6 @@ export const Option = styled.option`
     background: green;
     color: black;
 `
-export const Over = styled.div`
-    position: absolute;
-    top: ${props => props.top};
-    bottom: ${props => props.bottom};
-    right: ${props => props.right};
-    left: ${props => props.left};
-    // background: rgb(0, 0, 0);
-    background: ${props => props.bg};
-    color: #f1f1f1;
-    border-radius: ${props => props.b_radius};
-    transition: .5s ease;
-    opacity:0;
-    padding: 10px 15px;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    @media ${Device.xs}{
-        height: ${props => props.h_xs};
-        width: ${props => props.w_xs};
-        border-radius: ${props => props.br_xs};
-    
-     
-        
-    }
-    @media ${Device.sm}{
-        
-        height: ${props => props.h_sm};
-        width: ${props => props.w_sm};
-        border-radius: ${props => props.br_sm};
-       
-    }
-    @media ${Device.md}{
-        height: ${props => props.h_md};
-        width: ${props => props.w_md};
-        border-radius: ${props => props.br_md};
-        
-           
-    }
-    @media ${Device.lg}{
-        width: ${props => props.w_lg};
-        height: ${props => props.h_lg};
-        border-radius: ${props => props.br_lg};
-    }
-    @media ${Device.xl} {
-        width: ${props => props.w_xl};
-        height: ${props => props.h_xl};
-        border-radius: ${props => props.br_xl};
-    }
-    
-
-`
 export const Tooltip = styled.div`
     position: absolute;
     left: 20px;
@@ -165,9 +113,9 @@ export const RoundImage = styled.div`
     width: ${props => props.width};
     height: ${props => props.height};
     min-height: ${props => props.minHeight};
-    ${Over}:hover {
+    :hover {
         opacity: ${props => props.opacity};
-      }
+    }
     
     ${props => props.move &&
         css`
@@ -179,7 +127,7 @@ export const RoundImage = styled.div`
         height: ${props => props.h_lg};
         border-radius: ${props => props.br_lg};
     }
-    @media ${Device.md}{
+    @media ${Break.md}{
         height: ${props => props.h_md};
         width: ${props => props.w_md};
         border-radius: ${props => props.br_md};
@@ -308,6 +256,7 @@ const SmartButton = ({children, onClick, ...rest}) => {
 export const Button = styled(SmartButton)`
     font-size: ${props => props.fontSize || '.75rem'};
     font-family: 'Lato-Bold', sans-serif;
+    font-display: swap;
     font-weight: 500;
     margin: ${props => props.margin};
     border-radius: ${props => props.borderRadius};
@@ -379,13 +328,6 @@ Select.defaultProps = {
     background: Colors.white,
     color: Colors.black,
     border: 'none',
-};
-Over.defaultProps = {
-    b_radius: '10px',
-    bg: 'rgba(0, 0, 0, 0.8)',
-    bottom: '20px',
-    right: '15px',
-    left: '15px'
 };
 
 

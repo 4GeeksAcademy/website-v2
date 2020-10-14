@@ -9,6 +9,7 @@ import {useScrollPosition} from "./useScrollPosition"
 const ShadowedRow = styled.div`
     background: #ececec;
     font-family: 'Lato-Bold', sans-serif;
+    font-display: swap;
     box-shadow: 0 0 16px 0 rgba(50,50,50,.3);
     height: 80px;
     padding: 10px;

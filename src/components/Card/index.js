@@ -110,7 +110,7 @@ export const GeekCard = ({  heading, bullets, image, to, icon  }) => {
               <Column size="1" alignSelf="top">
                 <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
               </Column>
-              <Column size="10" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+              <Column size="10"  test paddingRight="0px" paddingLeft="5px" alignSelf="center">
                 <Paragraph
                   fs_sm="14px"
                   fs_md="16px"
