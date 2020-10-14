@@ -88,7 +88,7 @@ const Graduates = ({data, pageContext, yml}) => {
           </Row>
         </Card>
       </Wrapper>
-      <Divider height="500px" />
+      <Divider height="550px" />
     </>
   )
 };

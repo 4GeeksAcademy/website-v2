@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styled, {css} from 'styled-components';
 import Img from "gatsby-image"
 import { useStaticQuery, graphql} from 'gatsby';
-import {Device} from '../Responsive';
+import {Break} from '../Responsive';
 import ChooseProgram from '../ChooseProgram'
 import {Card} from '../Card'
 import {Colors, Button, Link} from '../Styling';
@@ -12,12 +12,12 @@ export const NavBar = styled.nav`
     align-items: center;
     height: 55px;
     z-index: 999;
-    @media ${Device.xs}{
+    @media ${Break.sm}{
       height: ${props => props.open ? "100vh" : null};
       position: fixed;
       width: 100%;
     }
-    @media ${Device.sm}{
+    @media ${Break.xs}{
       height: ${props => props.open ? "100vh" : null};
       position: fixed;
       width: 100%;
@@ -34,20 +34,14 @@ export const NavItem = styled.li`
     text-align: center;
     font-family: lato, sans-serif;
     font-size: 12px;
-    @media ${Device.xs}{
-      font-size: ${props => "16px"};
-    }
-    @media ${Device.sm}{
-      font-size: ${props => "16px"};
-    }
-    @media ${Device.md}{
+    @media ${Break.md}{
       font-size: ${props => props.fontSize || "10px"};
     }
-    @media ${Device.lg}{
-     
+    @media ${Break.sm}{
+      font-size: 16px;
     }
-    @media ${Device.xl} {
-     
+    @media ${Break.xs}{
+      font-size: 16px;
     }
 `
 
@@ -59,11 +53,7 @@ const StyledBurger = styled.div`
   right: 20px;
   z-index: 20;
   display: none;
-  @media ${Device.xs} {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
-  }
+
   div {
     width: 2rem;
     height: 0.25rem;
@@ -82,7 +72,12 @@ const StyledBurger = styled.div`
       transform: ${({open}) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
-  @media ${Device.sm} {
+  @media ${Break.sm} {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+  @media ${Break.xs} {
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
@@ -128,7 +123,7 @@ const ButtonStyle = styled.div`
     border: 1px solid;
     background-color:white;
     color: black;
-    @media ${Device.sm} {
+    @media ${Break.sm} {
       position: fixed;
       top: 0;
       right: 0;
@@ -142,7 +137,7 @@ const Div = styled.div`
   justify-content: space-between;
   padding: 0 2rem;
   align-items: center;
-  @media ${Device.xs} {
+  @media ${Break.sm} {
     display:${({open}) => open ? '' : 'none'};
     flex-flow: column nowrap;
     background-color: white;
@@ -160,7 +155,7 @@ const Div = styled.div`
       color: #fff;
     }
   }
-  @media ${Device.sm} {
+  @media ${Break.xs} {
     display:${({open}) => open ? '' : 'none'};
     flex-flow: column nowrap;
     background-color: white;
@@ -188,21 +183,24 @@ const Ul = styled.ul`
     padding: 18px 10px;
     color: black;
   }
-  @media ${Device.xs} {
-    width: 100%;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-  @media ${Device.sm} {
-    width: 100%;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-  @media ${Device.md} {
+  @media ${Break.md} {
     li {
       color: black;
       font-size: 10px;
     }
+  }
+  @media ${Break.sm} {
+    width: 100%;
+    flex-flow: column nowrap;
+    li {
+      font-size: 16px;
+    }
+    align-items: center;
+  }
+  @media ${Break.xs} {
+    width: 100%;
+    flex-flow: column nowrap;
+    align-items: center;
   }
 `;
 
@@ -258,15 +256,15 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
                   closeLabel={content.node.open_button_text}
                   selector={({ status, setStatus }) => 
                     !status.toggle ?
-                      <NavItem fontSize="16px" onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
+                      <NavItem onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
                       :
                       <Card shadow borders="1.25rem 1.25rem 0 0">
-                        <NavItem fontSize="16px" onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
+                        <NavItem onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
                       </Card>
                   }
                 />
                 :
-                <NavItem key={index} fontSize="16px"><Link onClick={onToggle} to={item.link} key={index}>{item.name}</Link></NavItem>
+                <NavItem fs_sm="18px" key={index}><Link onClick={onToggle} to={item.link} key={index}>{item.name}</Link></NavItem>
           )}
         </Ul>
         <Link onClick={onToggle} to={button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text}</Button></Link>

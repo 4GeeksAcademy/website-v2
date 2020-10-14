@@ -2,10 +2,8 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors, StyledBackgroundSection} from '../../components/Styling'
-import {Device, Break} from '../Responsive'
-import {Paragraph} from '../Heading'
+import {Break} from '../Responsive'
 import Fragment from "../Fragment"
-import {InsertChartOutlinedTwoTone} from '@material-ui/icons';
 
 const containerVariants = {
     fluid: {
@@ -97,58 +95,18 @@ export const Row = styled(Fragment)`
         width: ${props => props.width_sm};
         display: ${props => props.display_sm};
         margin: ${props => props.m_sm};
-        ${props => props.customRespSize
-        ? css`justify-content: ${props => props.alignResp};`
-        : css`justify-content: center;`};
+        justify-content: ${props => props.alignResp || "center"};
         flex-direction: ${props => props.flexDirection_sm};
     }
     @media ${Break.xs}{
         width: ${props => props.width_xs};
         display: ${props => props.display_xs};
-        ${props => props.customRespSize
-        ? css`justify-content: ${props => props.alignResp};`
-        : css`justify-content: center;`};
+        justify-content: ${props => props.alignResp || "center"};
         padding: ${props => props.p_xs};
         margin: ${props => props.m_xs};
     }
 `
 
-export const Sidebar = styled.div`
-position: absolute;
-left: 40px;
-box-shadow: ${props => props.shadow
-        && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
-    }
-
-border-radius: ${props => props.borders};
-
-@media ${Device.xs}{
-    display: ${props => props.display_xs};
-}
-@media  ${Device.sm}{
-    display: ${props => props.display_sm};
-}
-@media ${Device.md}{
-    display: ${props => props.display_md};
-    
-}
-@media ${Device.lg}{
-    position: sticky;
-    top: 12%;
-    width: 160px;
-    left:15px;
-    padding: 15px;
-}
-@media ${Device.xl} {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 12%;
-    width: 180px;
-    left: 20px;
-    padding: 15px;
-} 
-
-`
 export const Div = styled.div`
     display: ${props => props.display || "flex"};
     flex-wrap: nowrap; 

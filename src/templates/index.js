@@ -15,10 +15,10 @@ import BaseRender from './_baseRender'
 import {TestimonialsCarrousel} from '../components/Testimonials'
 import {SessionContext} from '../session.js'
 
+// const JobsStatistics = loadable(() => import('../components/JobsStatistics'))
 const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
 const Why4Geeks = loadable(() => import('../components/Why4Geeks'))
 const AlumniProjects = loadable(() => import('../components/AlumniProjects'))
-const JobsStatistics = loadable(() => import('../components/JobsStatistics'))
 const WhoIsHiring = loadable(() => import('../components/WhoIsHiring'))
 const Badges = loadable(() => import('../components/Badges'))
 const WhyPython = loadable(() => import('../components/WhyPython'))
@@ -45,7 +45,7 @@ const Home = (props) => {
           padding="100px 10px 0 10px"
           margin="0 0 0 auto"
         >
-          <H1 type="h1" textShadow="none" fontSize="13px" color={Colors.gray} lato>{city}{" "}{yml.header_data.tagline}</H1>
+          <H1 type="h1" align="left" textShadow="none" fontSize="13px" color={Colors.gray} lato>{city}{" "}{yml.header_data.tagline}</H1>
           <Separator variant="primary" left />
           <H2
             padding="0 10px 0 0px"
@@ -192,7 +192,7 @@ const Home = (props) => {
                 align_xs="left">
                 {yml.join_geeks.geek_data.geek_force_data.content}
               </Paragraph>
-              <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right" customRespSize respSize="2" alignSelf="flex-end">
+              <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right"  alignSelf="flex-end">
                 <Link to={yml.join_geeks.geek_data.geek_force_data.icon_link}>
                   <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
                 </Link>

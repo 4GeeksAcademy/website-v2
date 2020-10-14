@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../Heading';
 import {Container, Row, Column, Wrapper, Divider} from '../Sections'
-import {Button, Colors, Check, ArrowRight, RoundImage, Over, StyledBackgroundSection} from '../Styling'
+import {Button, Colors, Check, ArrowRight, RoundImage, StyledBackgroundSection} from '../Styling'
 import styled from 'styled-components';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -88,7 +88,7 @@ const Loc = (props) => {
         {loc.map((pic, i) => {
           let randLocImgIndex = Math.floor(Math.random() * pic.node.carousel_box.images.length)
           return (
-            <Column key={i} size="2" customRespSize respSize="2" padding="0 25px">
+            <Column key={i} size="2"  padding="0 25px">
               {/* <Card width="100%" > */}
               <Link to={`/${props.lang}/location/${pic.node.meta_info.slug}`}>
                 <StyledBackgroundSection

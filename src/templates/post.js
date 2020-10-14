@@ -1,44 +1,14 @@
 import React, {useContext} from 'react'
-import Link from 'gatsby-link'
+import {Link} from 'gatsby'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Div, Row, Column, Divider, WrapperCustom} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowLeft} from '../components/Styling'
+import {Div, Row, Column} from '../components/Sections'
+import {RoundImage, Colors} from '../components/Styling'
 import Layout from '../global/Layout'
 import {Card} from '../components/Card'
 import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
 import {TwitterFollowButton} from 'react-twitter-embed';
 import "../assets/css/single-post.css"
-import {
-    FacebookShareButton,
-    TwitterShareButton,
-    TwitterIcon,
-    FacebookIcon,
-    FacebookShareCount
-} from "react-share";
-
-{/* <Row>
-
-<TwitterShareButton
-    className="network__share-button"
-    url={`https://www.4geeksacademy.co/${pageContext.slug}`}
-    title={"share"}
->
-    <TwitterIcon
-        size={24} round={true}
-    />
-</TwitterShareButton>
-<FacebookShareButton
-    className="network__share-button"
-    url={`https://www.4geeksacademy.co/${pageContext.slug}`}
-    title={"share"}
->
-    <FacebookIcon
-        size={24} round={true}
-    />
-</FacebookShareButton>
-<Link to="/blog"><ArrowLeft width="24px" color={Colors.yellow} fill={Colors.yellow} /></Link>
-</Row> */}
 
 export default function Template (props) {
     const {data, pageContext} = props;

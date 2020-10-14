@@ -133,7 +133,7 @@ const Footer = ({ yml, session }) => {
                     <Column size="6" margin="5px 0">
                         <Paragraph fontSize="12px" color={Colors.gray}>@ 4Geeks Academy LLC 2019 </Paragraph>
                     </Column>
-                    <Column size="6" margin="5px 0" customRespSize respSize="6">
+                    <Column size="6" margin="5px 0" >
                         <Row align="around">
                             <Column size="4"  selfAlign="center">
                                 <Paragraph fontSize="10px" color={Colors.gray}>We accept: </Paragraph>
