@@ -35,6 +35,7 @@ module.exports = {
   },
   plugins: [
     // 'gatsby-plugin-force-trailing-slashes',
+    'gatsby-plugin-loadable-components-ssr',
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

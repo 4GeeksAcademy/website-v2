@@ -79,7 +79,11 @@ const Blog = ({data, pageContext, yml}) => {
                                                     border="1.25rem"
                                                     position="center"
                                                     width="100%"
-                                                    height={`150px`}
+                                                    height="140px"
+                                                    h_lg="140px"
+                                                    h_md="120px"
+                                                    h_sm="200px"
+                                                    h_xs="150px"
                                                 />
                                             </LazyLoad>
                                         </Link> : null}
@@ -156,7 +160,7 @@ const Blog = ({data, pageContext, yml}) => {
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
                                         <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
-                                            <LazyLoad scroll={true} height={200} once={true}>
+                                            <LazyLoad scroll={true} height={200} width="100%" once={true}>
                                                 <RoundImage
                                                     url={item.node.frontmatter.image}
                                                     bsize="cover"
@@ -164,7 +168,10 @@ const Blog = ({data, pageContext, yml}) => {
                                                     border="1.25rem"
                                                     position="center"
                                                     width="100%"
-                                                    height={`150px`}
+                                                    h_lg="140px"
+                                                    h_md="120px"
+                                                    h_sm="200px"
+                                                    h_xs="150px"
                                                 />
                                             </LazyLoad>
                                         </Link> : null}
