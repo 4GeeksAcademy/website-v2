@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {graphql} from 'gatsby'
 import styled from 'styled-components';
-import {Card} from '../components/Card'
+import Card from '../components/Card'
 import Icon from '../components/Icon'
 import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../components/Heading'

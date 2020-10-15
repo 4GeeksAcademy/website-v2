@@ -3,7 +3,7 @@ import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors} from '../Styling';
-import {Card} from '../Card';
+import Card from '../Card';
 import Link from 'gatsby-link'
 import Icon from '../Icon'
 import Fragment from "../Fragment"

@@ -1,6 +1,6 @@
 import React from 'react';
 import {H2, H3, H4} from '../Heading'
-import {Card} from '../Card'
+import Card from '../Card'
 import {Colors} from '../Styling'
 import Icon from "../Icon"
 import {Row, Column, Container, Divider} from '../Sections'

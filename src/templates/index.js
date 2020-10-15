@@ -9,13 +9,12 @@ import News from '../components/News'
 import Icon from '../components/Icon'
 import Credentials from '../components/Credentials'
 import ChooseProgram from '../components/ChooseProgram'
-import {Card} from '../components/Card'
 import BaseRender from './_baseLayout'
-import TestimonialsCarrousel from '../components/Testimonials'
 import {SessionContext} from '../session.js'
 
-// const JobsStatistics = loadable(() => import('../components/JobsStatistics'))
+const Card = loadable(() => import('../components/Card'))
 const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
+const TestimonialsCarrousel = loadable(() => import('../components/Testimonials'))
 const Why4Geeks = loadable(() => import('../components/Why4Geeks'))
 const AlumniProjects = loadable(() => import('../components/AlumniProjects'))
 const WhoIsHiring = loadable(() => import('../components/WhoIsHiring'))
@@ -30,7 +29,7 @@ const CityH1 = ({yml}) => {
   React.useEffect(() => {
     if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
   }, [session])
-  
+
   return <H1 type="h1" align="left" textShadow="none" fontSize="13px" color={Colors.gray} lato>{city}{" "}{yml.header_data.tagline}</H1>
 }
 const CityWrapper = ({yml}) => {

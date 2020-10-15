@@ -24,9 +24,6 @@ export default ({lang, playerHeight}) => {
                   fluid(maxWidth: 400){
                     ...GatsbyImageSharpFluid_withWebp
                   }
-                  fixed(width: 300, height: 60) {
-                    ...GatsbyImageSharpFixed
-                  }
                 }
               }
               alt

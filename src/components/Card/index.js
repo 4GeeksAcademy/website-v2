@@ -16,7 +16,7 @@ const _colors = () => ({
     darkGray: Colors.borderGray,
     blue: Colors.blue,
 })
-export const Card = styled(Fragment)`
+const Card = styled(Fragment)`
     :focus {outline: none;};
     cursor: ${props => props.onClick ? "pointer" : "inherit"};
     overflow: ${props => props.overflow};
@@ -89,6 +89,7 @@ Card.defaultProps = {
     margin_sm: null,
     margin_xs: null,
 };
+export default Card;
 
 export const GeekCard = ({  heading, bullets, image, to, icon  }) => {
     return <Card shadow

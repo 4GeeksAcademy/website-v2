@@ -13,16 +13,13 @@ import ProgramDetailsMobile from '../ProgramDetailsMobile'
 import WhyPython from '../WhyPython'
 import Why4Geeks from '../Why4Geeks';
 import News from '../News'
-import TestimonialsCarrousel from '../Testimonials'
 import GeeksVsOthers from '../GeeksVsOthers'
 import ReactPlayer from 'react-player'
 import {navigate} from "gatsby"
 import {requestSyllabus} from "../../actions"
 
-const Image = styled.img`
-    max-width: 100%;
-    max-height: 100%;
-`;
+const TestimonialsCarrousel = loadable(() => import('../Testimonials'))
+
 const Side = ({ video, image, heading, content, button, bullets }) => {
 
     // if(bullets) return <Bullets />

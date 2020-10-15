@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Column, Row, Wrapper, Divider, WrapperImage} from '../components/Sections';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
-import {Card} from '../components/Card'
+import Card from '../components/Card'
 import {Colors, StyledBackgroundSection} from '../components/Styling'
 import Mentors from '../components/Mentors'
 import {Charts} from '../components/Chart'

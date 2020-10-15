@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Row, Container, Column, Divider, Wrapper, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors} from '../Styling';
-import {Card} from '../Card';
+import Card from '../Card';
 import Icon from '../Icon'
 
 

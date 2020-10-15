@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { useStaticQuery, graphql} from 'gatsby';
 import {Break} from '../Responsive';
 import ChooseProgram from '../ChooseProgram'
-import {Card} from '../Card'
+import Card from '../Card'
 import {Colors, Button, Link} from '../Styling';
 
 export const NavBar = styled.nav`

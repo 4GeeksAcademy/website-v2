@@ -4,11 +4,10 @@ import {SessionContext} from '../session';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
 import Navbar from '../components/Navbar';
-import {Nav} from '../components/Navbar';
-import NavB from '../components/Navbar'
-import Footer from '../components/Footer'
 import {StaticQuery, graphql} from 'gatsby';
-import UpcomingProgram from "../components/UpcomingProgram"
+
+const UpcomingProgram = loadable(() => import('../components/UpcomingProgram'))
+const Footer = loadable(() => import('../components/Footer'))
 
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
@@ -99,7 +98,6 @@ const Layout = ({children, seo, context}) => {
                 > ❌ Clear edit mode</button>
             </div>}
             <SEO {...seo} context={context} />
-            {/* <NavB lang={myNavbar} /> */}
             <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={_btnInfo} lang={context.lang} />
             <GlobalStyle />
             <>
@@ -119,8 +117,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   seo: PropTypes.object
 };
-NavB.defaultProps = {
-  seo: {}
-}
 
 export default Layout;

@@ -6,7 +6,7 @@ import {Button, Colors, RoundImage, StyledBackgroundSection} from '../Styling'
 import styled from 'styled-components';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
-import {Card} from '../Card';
+import Card from '../Card';
 import Link from 'gatsby-link'
 
 const Loc = (props) => {

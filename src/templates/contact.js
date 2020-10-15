@@ -2,7 +2,7 @@ import React, {useState, useContext, useEffect} from 'react';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
-import {Card} from '../components/Card'
+import Card from '../components/Card'
 import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';

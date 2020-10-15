@@ -4,7 +4,7 @@ import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/H
 import {Div, Row, Column} from '../components/Sections'
 import {RoundImage, Colors} from '../components/Styling'
 import Layout from '../global/Layout'
-import {Card} from '../components/Card'
+import Card from '../components/Card'
 import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
 import {TwitterFollowButton} from 'react-twitter-embed';

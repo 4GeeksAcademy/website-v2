@@ -7,7 +7,8 @@ import {Input, Alert} from '../components/Form'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
 import {apply, tagManager} from "../actions";
-import TestimonialsCarrousel from '../components/Testimonials'
+
+const TestimonialsCarrousel = loadable(() => import('../components/Testimonials'))
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;

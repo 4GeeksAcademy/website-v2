@@ -13,7 +13,7 @@ import VideoLabelIcon from '@material-ui/icons/VideoLabel';
 import Icon from '../Icon';
 import {Link} from '../Styling/index';
 import {Row, Column, Divider, Div} from '../Sections';
-import {Card} from '../Card';
+import Card from '../Card';
 import Select from '../Select';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage} from '../Styling';

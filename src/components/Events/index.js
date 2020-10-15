@@ -5,7 +5,7 @@ import {Carousel} from 'react-responsive-carousel';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors, Button, RoundImage} from '../Styling';
-import {Card} from '../Card';
+import Card from '../Card';
 
 const days = [
     'Sun',

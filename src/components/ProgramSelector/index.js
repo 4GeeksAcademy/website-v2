@@ -5,7 +5,7 @@ import {Row, Column} from '../Sections';
 import {Paragraph, Span} from '../Heading';
 import {Colors, Button} from '../Styling';
 import {SessionContext} from '../../session'
-import {Card} from '../Card'
+import Card from '../Card'
 import Icon from '../Icon'
 
 const strings = {

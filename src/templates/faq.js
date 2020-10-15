@@ -4,7 +4,7 @@ import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Colors, Button, RoundImage} from '../components/Styling'
-import {Card} from '../components/Card'
+import Card from '../components/Card'
 import Icon from '../components/Icon'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session'

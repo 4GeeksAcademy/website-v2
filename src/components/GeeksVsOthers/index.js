@@ -4,7 +4,7 @@ import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider, Div} from '../Sections'
 import {H3, H4, H5, Title, Paragraph} from '../Heading';
 import {Colors, Button, Tooltip, Span} from '../Styling';
-import {Card} from '../Card';
+import Card from '../Card';
 import Icon from '../Icon';
 import Link from 'gatsby-link'
 import Fragment from "../Fragment"

@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {Link, Anchor} from "../components/Styling/index"
-import {Card} from '../components/Card'
+import Card from '../components/Card'
 import loadable from '@loadable/component'
 import ChooseProgram from '../components/ChooseProgram'
 import News from '../components/News'

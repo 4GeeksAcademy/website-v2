@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import {Row, Column, Wrapper, WrapperImage, Divider, Div} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, RoundImage} from '../components/Styling'
-import {Card} from '../components/Card'
+import Card from '../components/Card'
 import Icon from '../components/Icon'
 import BaseRender from './_baseLayout'
 import { Link } from 'gatsby'

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
-import {Card} from "../Card"
+import Card from "../Card"
 import {H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {Row, Column, Wrapper, Divider} from '../Sections'
 import {Colors, StyledBackgroundSection} from '../Styling'
