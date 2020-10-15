@@ -4,10 +4,10 @@ import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Input, Alert} from '../components/Form'
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
 import {apply, tagManager} from "../actions";
-import {TestimonialsCarrousel} from '../components/Testimonials'
+import TestimonialsCarrousel from '../components/Testimonials'
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;

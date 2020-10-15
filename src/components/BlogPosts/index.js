@@ -1,35 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {useStaticQuery, graphql, navigate} from 'gatsby';
-import styled from 'styled-components';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, ArrowRight, Button, RoundImage} from '../Styling';
+import {Colors, Button, RoundImage} from '../Styling';
 import {Card} from '../Card';
-import { shuffle } from "../../actions"
+import Icon from "../Icon"
 
-const days = [
-    'Sun',
-    'Mon',
-    'Tue',
-    'Wed',
-    'Thu',
-    'Fri',
-    'Sat'
-]
-const months = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
-]
 const BlogPosts = ({ filter, limit, featured }) => {
     const data = useStaticQuery(graphql`
         query myPostsQuery{
@@ -114,7 +90,7 @@ const BlogPosts = ({ filter, limit, featured }) => {
                             padding="10px"
                             fontSize="12px"
                             color="gray" align="left" margin="10px 0">{i.node.frontmatter.excerpt}</Paragraph>
-                        <ArrowRight width="32" color={Colors.blue} fill={Colors.blue}
+                        <Icon icon="arrowright" width="32" color={Colors.blue} fill={Colors.blue}
                             style={{
                                 position: "absolute",
                                 bottom: "10px",

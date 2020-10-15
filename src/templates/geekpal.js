@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Column, Row, Divider, Wrapper, WrapperImage} from "../components/Sections";
-import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, Check, RoundImage, Span, StyledBackgroundSection} from '../components/Styling'
-import {TestimonialsCarrousel} from '../components/Testimonials'
-import BaseRender from './_baseRender'
+import {H3, H5, Title, Separator, Paragraph} from '../components/Heading'
+import {Colors, RoundImage, Check} from '../components/Styling'
+import loadable from '@loadable/component'
+import BaseRender from './_baseLayout'
 
+const TestimonialsCarrousel = loadable(() => import('../components/Testimonials'))
 
 function splitTitleString (string) {
   let stringObj = {
@@ -74,7 +75,7 @@ const GeekPal = (props) => {
                   return (
                     <Row key={index} marginBottom="15px">
                       <Column size="2"  passingRight="0" >
-                        <Check width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                        Icon icon="check" width="24px" color={Colors.yellow} fill={Colors.yellow} />
 
                       </Column>
                       <Column size="10"  >

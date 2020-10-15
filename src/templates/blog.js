@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper, WrapperImage} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
+import {RoundImage, Colors} from '../components/Styling'
 import LazyLoad from 'react-lazyload';
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
+import Icon from '../components/Icon'
 
 
 const Blog = ({data, pageContext, yml}) => {
@@ -126,7 +127,7 @@ const Blog = ({data, pageContext, yml}) => {
                                             {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
                                         </Column>
                                         <Column size="2"  align="end">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><ArrowRight width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                         </Column>
                                     </Row>
 
@@ -214,7 +215,7 @@ const Blog = ({data, pageContext, yml}) => {
                                             {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
                                         </Column>
                                         <Column size="2"  align="end">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><ArrowRight width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                         </Column>
                                     </Row>
 

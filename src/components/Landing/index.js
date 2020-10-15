@@ -13,7 +13,7 @@ import ProgramDetailsMobile from '../ProgramDetailsMobile'
 import WhyPython from '../WhyPython'
 import Why4Geeks from '../Why4Geeks';
 import News from '../News'
-import { TestimonialsCarrousel } from '../Testimonials'
+import TestimonialsCarrousel from '../Testimonials'
 import GeeksVsOthers from '../GeeksVsOthers'
 import ReactPlayer from 'react-player'
 import {navigate} from "gatsby"

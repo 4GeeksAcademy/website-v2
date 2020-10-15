@@ -7,12 +7,12 @@ import News from '../components/News'
 import dayjs from "dayjs"
 import {Div, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
 import {Title, H1, H4, H3, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors, Small, ArrowRight, Img, StyledBackgroundSection} from '../components/Styling'
-import BaseRender from './_baseRender'
+import {Button, Colors, Small, Img, StyledBackgroundSection} from '../components/Styling'
+import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {requestSyllabus} from "../actions";
-import {Clock} from '../components/Styling'
+import Icon from '../components/Icon'
 
 const LeadForm = loadable(() => import('../components/LeadForm'))
 const Modal = loadable(() => import('../components/Modal'))
@@ -175,7 +175,7 @@ const Location = ({data, pageContext, yml}) => {
                             /></Link>
                             <H4 padding="10px">{cohort.certificate.name}</H4>
                             <Div padding="10px">
-                                <Clock width="24" color={Colors.blue} fill={Colors.blue} />
+                                <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
                                 <Paragraph
                                     margin={`0 0 0 10px`}
                                     fs_xs="18px"

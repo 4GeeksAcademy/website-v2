@@ -10,16 +10,15 @@ import clsx from 'clsx';
 import SettingsIcon from '@material-ui/icons/Settings';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import VideoLabelIcon from '@material-ui/icons/VideoLabel';
-import Check from '@material-ui/icons/Check';
+import Icon from '../Icon';
 import {Link} from '../Styling/index';
 import {Row, Column, Divider, Div} from '../Sections';
 import {Card} from '../Card';
 import Select from '../Select';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
-import {Button, Colors, Circle, RoundImage, TriangleDown} from '../Styling';
+import {Button, Colors, Circle, RoundImage} from '../Styling';
 import {SessionContext} from '../../session'
 import Fragment from "../Fragment"
-import LeadForm from "../LeadForm";
 
 const PricingCard = ({data, lang, children, price, color, background, transform, priceInfo, applyLabel}) => {
   const { header, button } = data;
@@ -163,7 +162,7 @@ const PricesAndPayments = (props) => {
                 <Stepper style={{ marginTop: "-50px" }} nonLinear activeStep={activeStep} alternativeLabel connector={<QontoConnector />}>
                   {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map(p => p.months).map((label, index) => (
                     <Step key={label}>
-                      <StepButton icon={<Circle width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={() => setActiveStep(index)}>
+                      <StepButton icon={<Icon icon="circle" width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={() => setActiveStep(index)}>
                         <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
                       </StepButton>
                     </Step>
@@ -259,7 +258,7 @@ function QontoStepIcon (props) {
         [classes.active]: active,
       })}
     >
-      {completed ? <Check className={classes.completed} /> : <div className={classes.circle} />}
+      {completed ? <Icon icon="check" className={classes.completed} /> : <div className={classes.circle} />}
     </div>
   );
 }

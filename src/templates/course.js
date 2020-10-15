@@ -1,24 +1,25 @@
 import React from 'react';
 import {Link} from "gatsby";
-import BaseRender from './_baseRender'
+import loadable from '@loadable/component'
+import BaseRender from './_baseLayout'
 import {Card, GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {Title, H2, H3, H5, Span, Paragraph} from '../components/Heading'
-import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
-import GeeksVsOthers from '../components/GeeksVsOthers'
-import PricesAndPayment from '../components/PricesAndPayment'
-import AlumniProjects from '../components/AlumniProjects'
-import ProgramSelector from '../components/ProgramSelector'
+import {Button, Colors} from '../components/Styling'
 import {requestSyllabus} from "../actions";
-import Credentials from '../components/Credentials'
-import ProgramDetails from '../components/ProgramDetails';
-import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
-import TypicalDay from "../components/TypicalDay"
 import {SessionContext} from '../session'
-import LeadForm from "../components/LeadForm"
-import Modal from "../components/Modal"
+import Icon from '../components/Icon'
 
+const TypicalDay = loadable(() => import('../components/TypicalDay'))
+const AlumniProjects = loadable(() => import('../components/AlumniProjects'))
+const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
+const ProgramDetails = loadable(() => import('../components/ProgramDetails'))
+const ProgramDetailsMobile = loadable(() => import('../components/ProgramDetailsMobile'))
+const ProgramSelector = loadable(() => import('../components/ProgramSelector'))
+const PricesAndPayment = loadable(() => import('../components/PricesAndPayment'))
+const LeadForm = loadable(() => import('../components/LeadForm'))
+const Modal = loadable(() => import('../components/Modal'))
 
 const Program = ({data, pageContext, yml}) => {
   const {session} = React.useContext(SessionContext);
@@ -149,7 +150,7 @@ const Program = ({data, pageContext, yml}) => {
         <Row padding="0px 40px" p_md="0 10px">
             <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">
               <GeekCard 
-                icon={ArrowRight}
+                icon="arrowright"
                 to={`/${pageContext.lang}/geekforce`}
                 image="/images/geekforce.png"
                 heading={courseDetails.geek_data.geek_force_heading}
@@ -158,7 +159,7 @@ const Program = ({data, pageContext, yml}) => {
             </Column>
             <Column size="6" size_sm="12" paddingRight={`0`} p_sm="0">
               <GeekCard 
-                icon={ArrowRight}
+                icon="arrowright"
                 to={`/${pageContext.lang}/geekforce`}
                 image="/images/geekpal.png"
                 heading={courseDetails.geek_data.geek_pal_heading}
@@ -363,7 +364,7 @@ export const query = graphql`
         node {
           credentials {
             title
-            slug
+            icon
             value
             symbol
             symbol_position

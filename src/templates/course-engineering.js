@@ -1,25 +1,22 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
-import styled from 'styled-components';
+import loadable from '@loadable/component'
 import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
-import {Button, Colors, Check, ArrowRight, Circle, RoundImage, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../components/Styling'
-import GeeksVsOthers from '../components/GeeksVsOthers'
-import PricesAndPayment from '../components/PricesAndPayment'
-import AlumniProjects from '../components/AlumniProjects'
-import BaseRender from './_baseRender'
-import ProgramSelector from '../components/ProgramSelector'
+import {Button, Colors} from '../components/Styling'
+import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
-import WhoIsHiring from '../components/WhoIsHiring';
-import Modal from '../components/Modal';
-import {makeStyles, withStyles} from '@material-ui/core/styles';
-import StepConnector from '@material-ui/core/StepConnector';
-import clsx from 'clsx';
-import LeadForm from "../components/LeadForm";
-import ProgramDetails from '../components/ProgramDetails';
-import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import {SessionContext} from '../session'
+import Icon from '../components/Icon'
+
+const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
+const ProgramDetails = loadable(() => import('../components/ProgramDetails'))
+const ProgramDetailsMobile = loadable(() => import('../components/ProgramDetailsMobile'))
+const WhoIsHiring = loadable(() => import('../components/WhoIsHiring'))
+const PricesAndPayment = loadable(() => import('../components/PricesAndPayment'))
+const LeadForm = loadable(() => import('../components/LeadForm'))
+const Modal = loadable(() => import('../components/Modal'))
 
 const Program = ({data, pageContext, yml}) => {
 
@@ -160,7 +157,7 @@ const Program = ({data, pageContext, yml}) => {
         <Row padding="0px 40px" p_md="0 10px">
             <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">
               <GeekCard 
-                icon={ArrowRight}
+                icon="arrowright"
                 to={`/${pageContext.lang}/geekforce`}
                 image="/images/geekforce.png"
                 heading={geek.geek_data.geek_force_heading}
@@ -169,7 +166,7 @@ const Program = ({data, pageContext, yml}) => {
             </Column>
             <Column size="6" size_sm="12" paddingRight={`0`} p_sm="0">
               <GeekCard 
-                icon={ArrowRight}
+                icon="arrowright"
                 to={`/${pageContext.lang}/geekforce`}
                 image="/images/geekpal.png"
                 heading={geek.geek_data.geek_pal_heading}
@@ -367,7 +364,7 @@ export const query = graphql`
         node {
           credentials {
             title
-            slug
+            icon
             value
             symbol
             symbol_position
@@ -460,141 +457,4 @@ export const query = graphql`
     }
   }
 `;
-
-
-
-const Header = styled.div`
-    background: black;
-    border-radius: 1.25rem 1.25rem 0 0;
-    height: ${props => props.height};
-    color: white;
-    font-family: 'lato', sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    align-items: center;
-`;
-const Body = styled.div`
-    background: white;
-    height: ${props => props.height};
-    border-radius: 0 0 1.25rem 1.25rem;`
-
-const QontoConnector = withStyles({
-  alternativeLabel: {
-    top: 5,
-    left: 'calc(-50% + 5px)',
-    right: 'calc(50% + 5px)',
-    color: 'black'
-  },
-  active: {
-    '& $line': {
-      borderColor: Colors.white,
-    },
-  },
-  completed: {
-    '& $line': {
-      borderColor: Colors.yellow,
-    },
-  },
-  circle: {
-    width: 4,
-    height: 4,
-    borderRadius: '50%',
-    backgroundColor: Colors.blue,
-  },
-  line: {
-    borderColor: 'white',
-    borderTopWidth: 1,
-    borderRadius: 1,
-  },
-})(StepConnector);
-const useQontoStepIconStyles = makeStyles({
-  root: {
-    color: 'black',
-    display: 'flex',
-    height: 22,
-    alignItems: 'center',
-  },
-  active: {
-    color: '#784af4',
-  },
-  circle: {
-    width: 4,
-    height: 4,
-    borderRadius: '50%',
-    backgroundColor: Colors.blue,
-  },
-  completed: {
-    color: '#784af4',
-    zIndex: 1,
-    fontSize: 18,
-  },
-});
-function QontoStepIcon (props) {
-  const classes = useQontoStepIconStyles();
-  const {active, completed} = props;
-
-  return (
-    <div
-      className={clsx(classes.root, {
-        [classes.active]: active,
-      })}
-    >
-      {completed ? <Check className={classes.completed} /> : <div className={classes.circle} />}
-    </div>
-  );
-}
-
-const useColorlibStepIconStyles = makeStyles({
-  root: {
-    backgroundColor: '#ccc',
-    zIndex: 1,
-    color: Colors.yellow,
-    width: 12,
-    height: 12,
-    display: 'flex',
-    borderRadius: '50%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  active: {
-    backgroundColor: Colors.yellow
-  },
-  completed: {
-    backgroundImage:
-      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)',
-  },
-});
-
-function ColorlibStepIcon (props) {
-  const classes = useColorlibStepIconStyles();
-  const {active, completed} = props;
-
-  const icons = {
-    1: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />,
-    2: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />,
-    3: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />,
-  };
-
-  return (
-    <div
-      className={clsx(classes.root, {
-        [classes.active]: active,
-        [classes.completed]: completed,
-      })}
-    >
-      {icons[String(props.icon)]}
-    </div>
-  );
-}
-
-function getSteps (day) {
-  return [
-    {icon: <Circle width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[0].time},
-    {icon: <Coffee width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[1].time},
-    {icon: <FileCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[2].time},
-    {icon: <LaptopCode width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[3].time},
-    {icon: <Utensils width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[4].time},
-    {icon: <Dumbbell width="32" color={Colors.yellow} fill={Colors.yellow} />, time: day.typical.schedule[5].time},
-  ];
-}
 export default BaseRender(Program);

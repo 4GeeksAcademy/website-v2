@@ -267,7 +267,7 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
                 <NavItem fs_sm="18px" key={index}><Link onClick={onToggle} to={item.link} key={index}>{item.name}</Link></NavItem>
           )}
         </Ul>
-        <Link onClick={onToggle} to={button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text}</Button></Link>
+        <Link onClick={onToggle} to={button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
       </Div>
   )
 }

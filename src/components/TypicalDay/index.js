@@ -1,19 +1,9 @@
 import React, {useState} from 'react';
 import {Row, Column, Wrapper, Divider, Div} from '../Sections';
 import styled from 'styled-components';
-import {Card} from '../Card';
+import Icon from '../Icon';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
-import {Button, Colors, Circle, RoundImage, UserGroup, Utensils, Coffee, Dumbbell, LaptopCode, FileCode} from '../Styling';
-
-const icons = {
-    coffee: Coffee,
-    circle: Circle,
-    utensils: Utensils,
-    dumbbell: Dumbbell,
-    laptopcode: LaptopCode,
-    filecode: FileCode,
-    users: UserGroup
-};
+import {Colors} from '../Styling';
 
 const ContainerStyle = styled.div`
     height: 1px;
@@ -68,7 +58,6 @@ const TypicalDay = (props) => {
                         <Row height={`15%`} align={`between`}>
                             {data.schedule.length > 0 &&
                                 data.schedule.map((item, index) => {
-                                    const Icon = icons[item.icon.toLowerCase()]
                                     return (
                                         <Div
                                             key={index}
@@ -77,7 +66,7 @@ const TypicalDay = (props) => {
                                             onClick={() => {setSelected(index); setCompleted((index * 100) / (Slider().length - 1))}}
                                         >
                                             <Div justifyContent={`center`}>
-                                                <Icon width="28" stroke={Colors.gray} fill={Colors.gray} />
+                                                <Icon icon={item.icon} width="28" stroke={Colors.gray} fill={Colors.gray} />
                                             </Div>
                                             <Div justifyContent={`center`}>
                                                 <Paragraph

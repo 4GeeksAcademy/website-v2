@@ -5,7 +5,7 @@ import {Row, Column, Wrapper, WrapperImage, Divider} from '../components/Section
 import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
 import JobInfo from '../components/JobInfo'
 import Link from 'gatsby-link'
 

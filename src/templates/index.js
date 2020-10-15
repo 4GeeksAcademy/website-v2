@@ -1,18 +1,17 @@
 import React from 'react';
-import {graphql} from 'gatsby';
+import {graphql,Link, navigate} from 'gatsby';
 import loadable from '@loadable/component'
-import {Link, navigate} from 'gatsby';
-
 import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Row, Column, Wrapper} from '../components/Sections'
-import {RoundImage, Colors, ArrowRight, StyledBackgroundSection} from '../components/Styling'
-
+import {RoundImage, Colors} from '../components/Styling'
+import Img from "gatsby-image"
 import News from '../components/News'
+import Icon from '../components/Icon'
 import Credentials from '../components/Credentials'
 import ChooseProgram from '../components/ChooseProgram'
 import {Card} from '../components/Card'
-import BaseRender from './_baseRender'
-import {TestimonialsCarrousel} from '../components/Testimonials'
+import BaseRender from './_baseLayout'
+import TestimonialsCarrousel from '../components/Testimonials'
 import {SessionContext} from '../session.js'
 
 // const JobsStatistics = loadable(() => import('../components/JobsStatistics'))
@@ -24,16 +23,43 @@ const Badges = loadable(() => import('../components/Badges'))
 const WhyPython = loadable(() => import('../components/WhyPython'))
 const Loc = loadable(() => import('../components/Loc'))
 
-const Home = (props) => {
-  const {session, setLocation} = React.useContext(SessionContext);
-  const {data, pageContext, yml} = props;
-  const hiring = data.allPartnerYaml.edges[0].node;
-  // const city = session && session.location ? session.location.reliable ? "" : "" : "Miami";
+const CityH1 = ({yml}) => {
+  const {session} = React.useContext(SessionContext);
   const city = session && session.location ? "" : "Miami";
 
   React.useEffect(() => {
     if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
   }, [session])
+  
+  return <H1 type="h1" align="left" textShadow="none" fontSize="13px" color={Colors.gray} lato>{city}{" "}{yml.header_data.tagline}</H1>
+}
+const CityWrapper = ({yml}) => {
+  const {session} = React.useContext(SessionContext);
+  const city = session && session.location ? "" : "Miami";
+  return <Title
+    title={yml.why_4geeks.heading + " " + city}
+    variant="primary"
+  />
+}
+const CityWrapper2 = ({yml}) => {
+  const {session} = React.useContext(SessionContext);
+  const city = session && session.location ? "" : "Miami";
+  return <Title
+    type="h2"
+    title={yml.join_geeks.heading + " " + city}
+    paragraph={yml.join_geeks.sub_heading}
+    paragraphColor={Colors.darkGray}
+    maxWidth="66%"
+    margin="auto"
+    variant="primary"
+  />
+}
+
+const Home = (props) => {
+  
+  const {data, pageContext, yml} = props;
+  const hiring = data.allPartnerYaml.edges[0].node;
+
   return (
     <>
       <Row github={`/page/index.${pageContext.lang}.yml`}>
@@ -45,7 +71,7 @@ const Home = (props) => {
           padding="100px 10px 0 10px"
           margin="0 0 0 auto"
         >
-          <H1 type="h1" align="left" textShadow="none" fontSize="13px" color={Colors.gray} lato>{city}{" "}{yml.header_data.tagline}</H1>
+          <CityH1 yml={yml} />
           <Separator variant="primary" left />
           <H2
             padding="0 10px 0 0px"
@@ -59,7 +85,6 @@ const Home = (props) => {
           <ChooseProgram
             left="15px"
             top="40px"
-            onLocationChange={(slug) => setLocation(slug)}
             programs={data.allChooseProgramYaml.edges[0].node.programs}
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
             closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
@@ -74,14 +99,11 @@ const Home = (props) => {
           disp_xs={"none"}
           paddingRight={`0`}
         >
-          <StyledBackgroundSection
-            className={`image`}
-            height={`500px`}
-            image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-            bgSize={`cover`}
-            backgroundColor={Colors.lightGray}
+          <Img 
+            style={{ height: "500px", backgroundColor: Colors.lightGray, borderRadius: "0 0 0 1.25rem" }} 
+            imgStyle={{ objectFit: "cover" }} 
             alt="4Geeks Academy"
-            borderRadius={`0 0 0 1.25rem`}
+            fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid} 
           />
         </Column>
       </Row>
@@ -97,10 +119,7 @@ const Home = (props) => {
       {/* WHY 4GEEKS SECTION */}
 
       <Wrapper margin="50px 0">
-        <Title
-          title={yml.why_4geeks.heading + " " + city}
-          variant="primary"
-        />
+        <CityWrapper yml={yml} />
         <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
         <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       </Wrapper>
@@ -131,15 +150,7 @@ const Home = (props) => {
       {/* JOIN 4GEEKS SECTION */}
       {/* ******************* */}
       <Wrapper margin="100px">
-        <Title
-          type="h2"
-          title={yml.join_geeks.heading + " " + city}
-          paragraph={yml.join_geeks.sub_heading}
-          paragraphColor={Colors.darkGray}
-          maxWidth="66%"
-          margin="auto"
-          variant="primary"
-        />
+        <CityWrapper2 yml={yml} />
         <Row github={`/page/index.${pageContext.lang}.yml`}>
           <Column size="6" size_sm="12" >
             <Card
@@ -167,7 +178,7 @@ const Home = (props) => {
               </Paragraph>
               <Column size="2" margin="0 0 0 auto" customRespSize align="right" paddingRight="0" respSize="2" alignSelf="flex-end">
                 <Link to={yml.join_geeks.geek_data.geek_pal_data.icon_link}>
-                  <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
+                  <Icon icon="arrowright" width="24px" color={Colors.blue} fill={Colors.blue} />
                 </Link>
               </Column>
             </Card>
@@ -194,7 +205,7 @@ const Home = (props) => {
               </Paragraph>
               <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right"  alignSelf="flex-end">
                 <Link to={yml.join_geeks.geek_data.geek_force_data.icon_link}>
-                  <ArrowRight width="24px" color={Colors.blue} fill={Colors.blue} />
+                  <Icon icon="arrowright" width="24px" color={Colors.blue} fill={Colors.blue} />
                 </Link>
               </Column>
             </Card>
@@ -339,7 +350,7 @@ export const query = graphql`
           node {
             credentials {
               title
-              slug
+              icon
               value
               symbol
               symbol_position

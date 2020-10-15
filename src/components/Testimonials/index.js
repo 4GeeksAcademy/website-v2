@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Card} from "../Card"
@@ -7,10 +6,9 @@ import {H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {Row, Column, Wrapper, Divider} from '../Sections'
 import {Colors, StyledBackgroundSection} from '../Styling'
 import {Link} from 'gatsby';
-import Img from "gatsby-image"
 import Fragment from "../Fragment"
 
-export const TestimonialsCarrousel = (props) => {
+const TestimonialsCarrousel = (props) => {
     let testimonialsArray = props.lang[0].node.testimonials;
     return (
         <Fragment github="/components/testimonials">
@@ -101,3 +99,4 @@ export const TestimonialsCarrousel = (props) => {
         </Fragment>
     )
 };
+export default TestimonialsCarrousel

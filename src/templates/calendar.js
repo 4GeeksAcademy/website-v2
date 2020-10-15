@@ -1,10 +1,11 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {Row, Column, Wrapper, WrapperImage, Divider, Div} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, RoundImage, Address, Marker, ArrowRight, Clock, Question, Filter, Cross, AngleDown, TriangleDown, StyledBackgroundSection} from '../components/Styling'
+import {Colors, Button, RoundImage} from '../components/Styling'
 import {Card} from '../components/Card'
-import BaseRender from './_baseRender'
-import Link from 'gatsby-link'
+import Icon from '../components/Icon'
+import BaseRender from './_baseLayout'
+import { Link } from 'gatsby'
 import dayjs from "dayjs"
 import LazyLoad from 'react-lazyload';
 import {SessionContext} from '../session'
@@ -231,7 +232,7 @@ const Calendar = (props) => {
                   fs_lg="18px"
                   fs_xl="20px"
                   margin={`0 5px 0 0`}>{filterByCity}</Paragraph>
-                <TriangleDown width="16" color={Colors.gray} fill={Colors.gray} />
+                <Icon icon="triangledown" width="16" color={Colors.gray} fill={Colors.gray} />
               </Button>
               {toggleCity &&
                 <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".5rem" shadow>
@@ -287,7 +288,7 @@ const Calendar = (props) => {
                   fs_lg="18px"
                   fs_xl="20px"
                   margin={`0 15px 0 0`}>{filterByType}</Paragraph>
-                <TriangleDown width="16" color={Colors.gray} fill={Colors.gray} />
+                <Icon icon="triangledown" width="16" color={Colors.gray} fill={Colors.gray} />
               </Button>
               {toggle &&
                 <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".5rem" shadow>
@@ -349,7 +350,7 @@ const Calendar = (props) => {
                   color={Colors.blue}
                 >Clear all filters
                 </Paragraph>
-                <Cross
+                <Icon icon="cross"
                   onClick={() => {
                     setFilterByCity(["Locations"]);
                     setFilterByType(["Courses"]);
@@ -419,7 +420,7 @@ const Calendar = (props) => {
                                   </H4>
                                 </Row>
                                 <Row marginBottom=".2rem" alignItems={`center`} >
-                                  <Clock width="24" color={Colors.blue} fill={Colors.blue} />
+                                  <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
                                   <Paragraph
                                     margin={`0 0 0 10px`}
                                     fs_xs="18px"
@@ -431,7 +432,7 @@ const Calendar = (props) => {
                                   </Paragraph>
                                 </Row>
                                 <Row marginBottom=".2rem" alignItems={`center`} >
-                                  <Marker width="24" color={Colors.blue} fill={Colors.blue} />
+                                  <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
                                   <Paragraph
                                     margin={`0 0 0 10px`}
                                     fs_xs="18px"
@@ -444,7 +445,7 @@ const Calendar = (props) => {
                                 </Row>
                                 <Row height="5%" align="end">
                                   <a href={`#`} target="_blank" rel="noopener noreferrer">
-                                    <ArrowRight
+                                    <Icon icon="arrowright"
                                       width="32"
                                       color={Colors.blue}
                                       fill={Colors.blue} />
@@ -521,7 +522,7 @@ const Calendar = (props) => {
                                   </H4>
                                 </Row>
                                 <Row marginBottom=".2rem" alignItems={`center`} >
-                                  <Clock width="24" color={Colors.blue} fill={Colors.blue} />
+                                  <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
                                   <Paragraph
                                     margin={`0 0 0 10px`}
                                     fs_xs="18px"
@@ -533,7 +534,7 @@ const Calendar = (props) => {
                                   </Paragraph>
                                 </Row>
                                 <Row marginBottom="1.25rem" alignItems={`center`} >
-                                  <Marker width="24" color={Colors.blue} fill={Colors.blue} />
+                                  <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
                                   <Paragraph
                                     margin={`0 0 0 10px`}
                                     fs_xs="18px"
@@ -557,7 +558,7 @@ const Calendar = (props) => {
                                 </Row>
                                 <Row height="5%" align="end">
                                   <a href={event.url} target="_blank" rel="noopener noreferrer">
-                                    <ArrowRight
+                                    <Icon icon="arrowright"
                                       width="32"
                                       color={Colors.blue}
                                       fill={Colors.blue} />

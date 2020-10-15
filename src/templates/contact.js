@@ -1,14 +1,12 @@
 import React, {useState, useContext, useEffect} from 'react';
-import Layout from '../global/Layout';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Card} from '../components/Card'
-import BaseRender from './_baseRender';
+import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
 import {Input, Alert, TextArea} from '../components/Form';
-import {useDebounce} from "../utils/debounce";
 
 const Contact = (props) => {
     const {data, pageContext, yml} = props;

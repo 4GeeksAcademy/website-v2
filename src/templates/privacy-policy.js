@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
 import {Title, H2, H3, H4, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, RoundImage} from '../components/Styling';
-import BaseRender from './_baseRender';
+import BaseRender from './_baseLayout';
 
 
 const Privacy = (props) => {

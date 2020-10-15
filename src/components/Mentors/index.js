@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
-import {RoundImage, Colors, ArrowRight} from '../Styling';
+import {RoundImage, Colors} from '../Styling';
 import {Row, Column, Divider} from '../Sections'
 import styled from "styled-components";
+import Icon from "../Icon";
 
 const Over = styled.div`
     position: absolute;
@@ -92,7 +93,7 @@ const Mentors = props => {
                                 <Paragraph margin="5px 0" color={Colors.verylightGray}>{item.job_title}</Paragraph>
                                 <Paragraph margin="15px 0" color={Colors.lightGray}>{item.bio}</Paragraph>
                                 <Divider height="10%" />
-                                <a href={item.linkdin != '' ? `${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer nofollow"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
+                                <a href={item.linkdin != '' ? `${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer nofollow"><Icon icon="arrowright" width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
                             </Over>
                         </RoundImage>
                     </Column>

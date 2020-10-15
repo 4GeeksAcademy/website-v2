@@ -6,7 +6,7 @@ import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H2, H3, H4, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
 import AlumniProjects from '../components/AlumniProjects'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 

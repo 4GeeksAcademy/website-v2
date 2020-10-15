@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../Heading';
 import {Container, Row, Column, Wrapper, Divider} from '../Sections'
-import {Button, Colors, Check, ArrowRight, RoundImage, StyledBackgroundSection} from '../Styling'
+import {Button, Colors, RoundImage, StyledBackgroundSection} from '../Styling'
 import styled from 'styled-components';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';

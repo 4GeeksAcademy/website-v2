@@ -72,16 +72,16 @@ cornerstones:
   cornerstones_list:
     - title: FLIPPED CLASSROOM
       content: Theory is delivered trough video, animation, images and infographics. Class time is then used to debate, create and build projects, and mentor over practical exercises.
-      icon: Book
+      icon: book
     - title: 1:7 MENTOR-STUDENT RATIO
       content: An intimate setting provides the faculty with the opportunity to adapt to each student's particular pace.
-      icon: Teacher
+      icon: teacher
     - title: 1:1 MENTORSHIP
       content: Every student has the opportunity to have regular conversations with a mentor.
-      icon: Users
+      icon: users
     - title: PART-TIME
       content: We have mastered our programs to be a Premium Education Experience through a part-time schedule.
-      icon: Sitemap
+      icon: sitemap
 
 ## STAFF SECTION
 staff:

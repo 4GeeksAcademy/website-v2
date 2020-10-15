@@ -386,35 +386,6 @@ const addAdditionalRedirects = ({graphql, actions}) => {
     return true;
 };
 
-// const callToActions = () => {
-//     const URL = './src/data/call-to-actions.yml';
-//     try{
-//         const contents = fs.readFileSync(URL, 'utf8');
-//         if(!contents) throw Error("Error reading the redirect file");
-//         const config = YAML.parse(contents);
-//         if(!config) throw Error("Error parsing the "+URL);
-
-
-//         return {
-//             getFromSlug: (slug) => config.call_to_actions.filter(cta => {
-//                 if(cta.excludes && cta.excludes.excludes > 0){
-//                     const isExcluded = cta.excludes.find(s => s === slug);
-//                     if(isExcluded) return false;
-//                 } 
-//                 if(isExcluded)
-//                 const isIncluded = cta.includes
-//             }).map().concat(config.excludes),
-//             includes: [].concat(config.includes),
-//             type: config.type || "next-cohort"
-//         }
-//     }
-//     catch(error){
-//         throw Error(error);
-//     }
-
-//     return true;
-// };
-
 const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
     //if its a blog post the meta_info comes from the front-matter
@@ -448,3 +419,16 @@ const buildTranslations = ({edges}) => {
     });
     return translations;
 };
+
+exports.onCreateWebpackConfig = ({ actions: { replaceWebpackConfig }, getConfig }) => {
+    const config = getConfig()
+
+    config.module.rules.push({
+        test: /\.worker\.js$/,
+        use: { loader: 'workerize-loader' }
+    })
+
+    config.output.globalObject = 'this'
+
+    replaceWebpackConfig(config)
+}

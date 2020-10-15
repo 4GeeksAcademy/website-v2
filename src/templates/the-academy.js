@@ -2,14 +2,15 @@ import React from 'react';
 import {Container, Column, Row, Wrapper, Divider, WrapperImage} from '../components/Sections';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
 import {Card} from '../components/Card'
-import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage, StyledBackgroundSection} from '../components/Styling'
+import {Colors, StyledBackgroundSection} from '../components/Styling'
 import Mentors from '../components/Mentors'
 import {Charts} from '../components/Chart'
 import Credentials from '../components/Credentials'
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
 import WhoIsHiring from '../components/WhoIsHiring';
 import BlogPosts from '../components/BlogPosts'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
+import Icon from '../components/Icon'
 import Img from "gatsby-image"
 
 const Why = (props) => {
@@ -134,10 +135,7 @@ const Why = (props) => {
                                 >
                                     <Row >
                                         <Column size="3" pl_lg="0">
-                                            {item.icon === "Book" && <Book width="48px" color={Colors.yellow} fill={Colors.yellow} />}
-                                            {item.icon === "Teacher" && <Teacher width="48px" color={Colors.yellow} fill={Colors.yellow} />}
-                                            {item.icon === "Users" && <Users width="48px" color={Colors.yellow} fill={Colors.yellow} />}
-                                            {item.icon === "Sitemap" && <Sitemap width="48px" color={Colors.yellow} fill={Colors.yellow} />}
+                                            <Icon icon={item.icon} width="48px" color={Colors.yellow} fill={Colors.yellow} />
                                         </Column>
                                         <Column size="8" >
                                             <Row>
@@ -527,7 +525,7 @@ export const query = graphql`
           node {
             credentials {
               title
-              slug
+              icon
               value
               symbol
               symbol_position

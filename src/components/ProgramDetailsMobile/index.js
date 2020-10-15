@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import styled from 'styled-components';
 import {Row, Container, Column, Divider, Wrapper, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, TriangleDown, Laptop, Rocket, Clock} from '../Styling';
+import {Colors} from '../Styling';
 import {Card} from '../Card';
-import Link from 'gatsby-link'
+import Icon from '../Icon'
 
 
 const ProgramDetailsMobile = (props) => {
@@ -47,7 +46,7 @@ const ProgramDetailsMobile = (props) => {
                                         fontWeight={`500`}
                                     >{item.duration}</Paragraph>
                                 </Div>
-                                <TriangleDown width="16" color={Colors.white} fill={Colors.white} />
+                                <Icon icon="triangledown" width="16" color={Colors.white} fill={Colors.white} />
                             </Div>
 
                         </Card>
@@ -56,7 +55,7 @@ const ProgramDetailsMobile = (props) => {
                                 padding={`20px`}
                             >
                                 <Div alignItems={`center`} margin={`10px 0`}>
-                                    <Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                    <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
                                         margin={`0 10px`}
                                         fontWeight={`400`}
@@ -72,7 +71,7 @@ const ProgramDetailsMobile = (props) => {
                                     {item.description}
                                 </Paragraph>
                                 <Div alignItems={`center`} margin={`10px 0`}>
-                                    <Rocket width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                    <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
                                         margin={`0 10px`}
                                         fontWeight={`400`}
@@ -88,7 +87,7 @@ const ProgramDetailsMobile = (props) => {
                                     {item.projects}
                                 </Paragraph>
                                 <Div alignItems={`center`} margin={`10px 0`}>
-                                    <Clock width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                    <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
                                         margin={`0 10px`}
                                         fontWeight={`400`}

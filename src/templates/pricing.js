@@ -5,7 +5,7 @@ import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
 import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring';
 import Img from "gatsby-image"
-import BaseRender from './_baseRender';
+import BaseRender from './_baseLayout';
 import {openGuidebook} from "../actions";
 import {SessionContext} from '../session.js'
 
@@ -218,7 +218,7 @@ export const query = graphql`
           node {
             credentials {
               title
-              slug
+              icon
               value
               symbol
               symbol_position

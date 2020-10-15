@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider, Wrapper, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, ArrowRight, Teacher, Glasses, Clock, Users, Rocket, Button, Laptop, Infinity} from '../Styling';
+import {Colors} from '../Styling';
 import {Card} from '../Card';
+import Icon from '../Icon';
 
 const ContainerStyle = styled.div`
     height: 1px;
@@ -128,7 +129,7 @@ const ProgramDetails = (props) => {
                         <Column size="12"  paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
                             <Div flexDirection={`row`} >
                                 <Div margin={`0 5px 0 0`} flexDirection={`column`} alignContent={`start`}>
-                                    <Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                    <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                 </Div>
                                 <Div flexDirection={`column`} >
                                     <Div alignItems={`center`} margin={`5px 0`}>
@@ -160,7 +161,7 @@ const ProgramDetails = (props) => {
                             <Div flexDirection={`row`} >
                                 <Div width={`50%`}>
                                     <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
-                                        <Rocket width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                        <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     </Div>
                                     <Div flexDirection={`column`} >
                                         <Div alignItems={`center`} margin={`5px 0`}>
@@ -187,7 +188,7 @@ const ProgramDetails = (props) => {
                                     </Div>
                                 </Div>
                                 <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
-                                    <Clock width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                    <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                 </Div>
                                 <Div flexDirection={`column`}>
                                     <Div alignItems={`center`} margin={`5px 0`}>

@@ -2,10 +2,11 @@ import React, {useState, useEffect, useContext} from 'react';
 import {graphql} from 'gatsby'
 import styled from 'styled-components';
 import {Card} from '../components/Card'
+import Icon from '../components/Icon'
 import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors, Check, ArrowLeft, ArrowUp} from '../components/Styling'
-import BaseRender from './_baseRender'
+import {Button, Colors} from '../components/Styling'
+import BaseRender from './_baseLayout'
 import {Link} from 'gatsby';
 import {applyJob} from "../actions";
 
@@ -175,7 +176,7 @@ const Job = ({data, pageContext, yml}) => {
                                     <Row align="around" height="100%">
                                         <Column size="12" alignSelf="center">
                                             <Paragraph onClick={() => setForm(!form)} margin="10px 0" color={Colors.gray} align="right" fontSize="14px">Close</Paragraph>
-                                            {/* <ArrowUp width="24" color={Colors.red} fill={Colors.red} /> */}
+                                            {/* <Icon icon="arrowup" width="24" color={Colors.red} fill={Colors.red} /> */}
                                         </Column>
                                     </Row>
                                 </Column>
@@ -192,7 +193,7 @@ const Job = ({data, pageContext, yml}) => {
 
             <Row align="around" height="100%" >
                 <Column size="12" alignSelf="center" >
-                    <Link to="/jobs"><ArrowLeft width="32" color={Colors.blue} fill={Colors.blue} /></Link>
+                    <Link to="/jobs"><Icon icon="arrowleft" width="32" color={Colors.blue} fill={Colors.blue} /></Link>
                 </Column>
             </Row>
         </Wrapper>

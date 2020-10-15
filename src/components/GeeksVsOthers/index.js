@@ -3,18 +3,12 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider, Div} from '../Sections'
 import {H3, H4, H5, Title, Paragraph} from '../Heading';
-import {Colors, Address, Teacher, Glasses, Clock, Users, Comments, Button, Question, Tooltip, Span} from '../Styling';
+import {Colors, Button, Tooltip, Span} from '../Styling';
 import {Card} from '../Card';
+import Icon from '../Icon';
 import Link from 'gatsby-link'
 import Fragment from "../Fragment"
 
-const icon = {
-  teacher: Teacher,
-  glasses: Glasses,
-  clock: Clock,
-  users: Users,
-  comments: Comments,
-}
 const Globe = styled.div`
 opacity: 1;
 background: #e6ba1f;
@@ -120,7 +114,6 @@ const GeeksVsOthers = props => {
               </Column>
             </Row>
             {geeks.info.slice(0,props.limit || geeks.info.length).map((item, index) => {
-              const Icon = icon[item.icon]
               return (
                 <div key={index}>
                     {openedIndex === index ? <div 
@@ -142,7 +135,7 @@ const GeeksVsOthers = props => {
                         <Row align="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
                           <Div flexDirection={`column`} justifyContent={`center`} >
                             <Div alignItems={`center`} padding="10px">
-                              { Icon && <Icon width="32" style={{ marginRight: "5px" }} color={Colors.yellow} fill={Colors.yellow} /> }
+                              {item.icon && <Icon icon={item.icon} width="32" style={{ marginRight: "5px" }} color={Colors.yellow} fill={Colors.yellow} />}
                                 <H4
                                   fontSize="24px"
                                   fs_xs="16px"
@@ -186,7 +179,7 @@ const GeeksVsOthers = props => {
                                   onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0), setGlobeTooltip(false)}}
                                   onClick={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(0), setGlobeTooltip(false)}}
                                 >
-                                  <Question className="pointer" width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
+                                  <Icon icon="question" className="pointer" width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
                                 </span>
                               </Div>
                             </Div>
