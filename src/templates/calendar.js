@@ -5,7 +5,7 @@ import {Colors, Button, RoundImage} from '../components/Styling'
 import Card from '../components/Card'
 import Icon from '../components/Icon'
 import BaseRender from './_baseLayout'
-import { Link } from 'gatsby'
+import {Link} from 'gatsby'
 import dayjs from "dayjs"
 import LazyLoad from 'react-lazyload';
 import {SessionContext} from '../session'
@@ -43,6 +43,9 @@ const Calendar = (props) => {
   const {session, setSession} = useContext(SessionContext);
 
   const [cohorts, setCohorts] = useState([]);
+  const [locations, setLocations] = useState(null);
+  const [currentLocation, setCurrentLocation] = useState();
+  const [filterLocations, setFilterLocations] = useState();
   const [events, setEvent] = useState([]);
   const [academy, setAcademy] = useState(null);
   const [selected, setSelected] = useState(0);
@@ -67,101 +70,139 @@ const Calendar = (props) => {
   // https://breathecode.herokuapp.com/v1/events/all
   // https://breathecode.herokuapp.com/v1/events/all?upcoming=true
   // https://breathecode.herokuapp.com/v1/events/all?academy=downtown-miami&type=workshop
-
   useEffect(() => {
-    const loadCohorts = () => {
-      if (academy == null) {
-        fetch(
-          `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
-        )
-          .then(response => response.json())
-          .then(data => {
-            setCohorts(data)
-          })
-      }
-      else {
-        fetch(
-          `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${academy}`,
-        )
-          .then(response => response.json())
-          .then(data => {
-            setCohorts(data)
-          })
-
-      }
-    }
-
-    const loadEvents = () => {
-      if (academy == null) {
-        fetch(
-          `${process.env.GATSBY_BREATHECODE_HOST}/events/all?upcoming=true`,
-        )
-          .then(response => response.json())
-          .then(data => setEvent(data))
-      }
-      else {
-        fetch(
-          `${process.env.GATSBY_BREATHECODE_HOST}/events/all?academy=${academy}&type=${filterByType[0]}`,
-        )
-          .then(response => response.json())
-          .then(data => setEvent(data))
-      }
-    }
-
-    loadCohorts();
-    loadEvents();
-  }, [academy]);
-
-  useEffect(() => {
-    const loadFilterCity = async () => {
-      let filterCityArray = [{city: 'All Locations', slug: ''}];
+    const loadSession = async (session) => {
       try {
-        let response = await session.location;
-        if (response) {
-          for (let i of session.locations) {
-            filterCityArray.push({city: i.city, slug: i.breathecode_location_slug})
-          }
-          setFilterCity(filterCityArray);
-        }
-      }
-      catch (error) {
-        console.error("Something failed", error);
-      }
-    }
-    loadFilterCity();
-  }, [session])
-  useEffect(() => {
-    const loadFilterType = async () => {
-      let filterTypeArray = ['courses', 'events'];
-      for (let i = 0; i < events.length; i++) {
-        if (events[i].event_type && !filterTypeArray.includes(events[i].event_type.name)) {
-          filterTypeArray.push(events[i].event_type.name)
-        }
-      }
-      setFilterType(filterTypeArray);
-    }
-    loadFilterType();
-
-  }, [events])
-  useEffect(() => {
-    const filterEvents = async () => {
-      if (filterByCity.length > 0) {
-        const filteredCohortByCity = cohorts.filter(item => item.slug.includes(filterByCity[0].toLowerCase()))
-        if (filteredCohortByCity.length > 0) {
-          setFilteredCohorts(filteredCohortByCity)
+        var _currentSession = {};
+        const _response = await session;
+        _currentSession = _response;
+        console.log("response", _currentSession)
+        var _currentHash = await props.location;
+        console.log("hash", _currentHash)
+        var _hashedCurrentLocation = {};
+        if (_currentHash.hash != "") {
+          _hashedCurrentLocation = _response.locations != undefined && _response.locations.find(location => location.breathecode_location_slug === _currentHash.hash.replace("#location=", ""))
+          // _currentHash = _currentHash.hash.replace("#location=", "")
+          // const _hashedCurrentLocation = await _response.locations.find(location => location.breathecode_location_slug === _currentHash)
         }
         else {
-          setFilteredCohorts([])
+          delete _currentHash["hash"]
+          console.log("hash2", _currentHash)
         }
-      }
-      else {
-        setFilteredCohorts([])
-      }
+        // console.log("++--", _currentHash["hash"])
+        // Object.keys(_currentHash).forEach(key => _currentHash[key] === "" && console.log(_currentHash[key]))
 
+        // if (_currentHash.hash != "") _currentHash = _currentHash.hash.replace("#location=", "")
+        // else Object.keys(_currentHash).forEach(key => _currentHash[key] === "" && delete _currentHash[key])
+        // if (_response.locations != null) {
+        //   const _hashedCurrentLocation = await _response.locations.filter(location => location.breathecode_location_slug === _currentHash)
+        //   console.log("HASHED", _hashedCurrentLocation)
+        // }
+
+        setCurrentLocation(_currentSession)
+      }
+      catch (err) {
+        console.log("err", err)
+      }
     }
-    filterEvents();
-  }, [filterByCity, filterByType])
-  if (!cohorts) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
+    loadSession(session);
+
+  }, [session])
+
+  // useEffect(() => {
+  //   const loadCohorts = () => {
+  //     if (academy == null) {
+  //       fetch(
+  //         `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
+  //       )
+  //         .then(response => response.json())
+  //         .then(data => {
+  //           setCohorts(data)
+  //         })
+  //     }
+  //     else {
+  //       fetch(
+  //         `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${academy}`,
+  //       )
+  //         .then(response => response.json())
+  //         .then(data => {
+  //           setCohorts(data)
+  //         })
+
+  //     }
+  //   }
+
+  //   const loadEvents = () => {
+  //     if (academy == null) {
+  //       fetch(
+  //         `${process.env.GATSBY_BREATHECODE_HOST}/events/all?upcoming=true`,
+  //       )
+  //         .then(response => response.json())
+  //         .then(data => setEvent(data))
+  //     }
+  //     else {
+  //       fetch(
+  //         `${process.env.GATSBY_BREATHECODE_HOST}/events/all?academy=${academy}&type=${filterByType[0]}`,
+  //       )
+  //         .then(response => response.json())
+  //         .then(data => setEvent(data))
+  //     }
+  //   }
+
+  //   loadCohorts();
+  //   loadEvents();
+  // }, [academy]);
+
+  // useEffect(() => {
+  //   const loadFilterCity = async () => {
+  //     let filterCityArray = [{city: 'All Locations', slug: ''}];
+  //     try {
+  //       let response = await session.location;
+  //       if (response) {
+  //         for (let i of session.locations) {
+  //           filterCityArray.push({city: i.city, slug: i.breathecode_location_slug})
+  //         }
+  //         setFilterCity(filterCityArray);
+  //       }
+  //     }
+  //     catch (error) {
+  //       console.error("Something failed", error);
+  //     }
+  //   }
+  //   loadFilterCity();
+  // }, [session])
+  // useEffect(() => {
+  //   const loadFilterType = async () => {
+  //     let filterTypeArray = ['courses', 'events'];
+  //     for (let i = 0; i < events.length; i++) {
+  //       if (events[i].event_type && !filterTypeArray.includes(events[i].event_type.name)) {
+  //         filterTypeArray.push(events[i].event_type.name)
+  //       }
+  //     }
+  //     setFilterType(filterTypeArray);
+  //   }
+  //   loadFilterType();
+
+  // }, [events])
+  // useEffect(() => {
+  //   const filterEvents = async () => {
+  //     if (filterByCity.length > 0) {
+  //       const filteredCohortByCity = cohorts.filter(item => item.slug.includes(filterByCity[0].toLowerCase()))
+  //       if (filteredCohortByCity.length > 0) {
+  //         setFilteredCohorts(filteredCohortByCity)
+  //       }
+  //       else {
+  //         setFilteredCohorts([])
+  //       }
+  //     }
+  //     else {
+  //       setFilteredCohorts([])
+  //     }
+
+  //   }
+  //   filterEvents();
+  // }, [filterByCity, filterByType])
+  // if (!cohorts) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
   return (
     <>
       <WrapperImage
