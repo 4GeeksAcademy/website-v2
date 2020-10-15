@@ -31,15 +31,15 @@ upcoming:
   
 info_box:
   heading: "Encuentranos en Costa Rica"
-  address: "1801 SW 3rd Ave #100, Miami, FL 33129"
-  contact_heading: "Contacts"
-  phone: "(786) 416-6640"
-  email: "info@4GeeksAcademy.com"
+  address: 
+  contact_heading: "Escríbenos al Whatsapp"
+  phone: "(506) 8692 8372"
+  email: "puravida@4GeeksAcademy.com"
   image: "../../../static/images/locations/maracaibo-map.png"
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and at walking distance to the most prominent restorants, cofee shops and business center. 140 metters of innovation, curious people and very good vibe to learn."
+  content: "4Geeks Costa Rica es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
   images:
     - path: "../../../static/images/locations/mcbo-chinita.jpeg"
       alt: "mcbo-chinita"
@@ -74,7 +74,7 @@ prices:
         heading_one: "FULL-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
+        price: "Pregunta por las becas o Paga por adelantado y recibe un plan de pagos de 3-4 meses"
         price_info:
       button:
         button_text: "APLICA"
@@ -86,7 +86,7 @@ prices:
         heading_one: "PART-TIME"
         sub_heading: ""
       content:
-        price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
+        price: "Pregunta por las becas o Paga por adelantado y recibe un plan de pagos de 3-4 meses"
         price_info: ""
       button:
         button_text: "APLICA"
