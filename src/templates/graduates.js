@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {graphql} from 'gatsby'
+import Link from 'gatsby-link'
 import Layout from '../global/Layout';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H2, H3, H4, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button} from '../components/Styling'
+import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
 import {Card} from '../components/Card'
 import BaseRender from './_baseRender'
 import AlumniProjects from '../components/AlumniProjects'
@@ -24,7 +25,7 @@ const Graduates = ({data, pageContext, yml}) => {
       </Wrapper>
       <Divider height="50px" />
       <Wrapper
-        
+
         height="400px"
       >
         <Title
@@ -34,51 +35,60 @@ const Graduates = ({data, pageContext, yml}) => {
           paragraph={yml.about.sub_heading}
         />
         <Divider height="50px" />
-        <Row>
-          <Column
-            size="12"
-            borderRadius="0 0 0 1.25rem"
-
+        <Card shadow borders="1.25rem"  >
+          <Row
+            height="100%"
+            marginLeft="0"
+            marginRight="0"
+            customRespSize
           >
-            <Card shadow borders="1.25rem" height="426px" >
-              <Row
-                height="100%"
-                marginLeft="0"
-                marginRight="0"
-                customRespSize
-              >
-                <Column size="6"  alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
-                  <Row align="center" height="100%">
-                    <Column size="8" height="100%">
-                      <Row height="5%" />
-                      <Row height="90%" align="around">
-                        <Column size="12" alignSelf="center">
-                          <Paragraph
-                            color={Colors.gray}
-                            fs_xs="12px"
-                            fs_sm="12px"
-                            fs_md="12px"
-                            fs_lg="12px"
-                            fs_xl="12px"
-                            lineHeight="20px"
-                            margin="20px 0 0 0"
-                            align="left"
-                          >
-                            {yml.about.content}
-                          </Paragraph>
-                        </Column>
-                      </Row>
-                      <Row height="5%" />
-                    </Column>
-                  </Row>
-                </Column>
-                <Column size="6"  alignSelf="center" height="100%" backgroundSize="cover" image={yml.about.image} border="custom" borderRadius="0 1.25rem 1.25rem 0" />
+            <Column size="6" size_sm={`12`} alignSelf="center" height="100%" >
+              <Row align="center" padding={`20px`}>
+                <Paragraph
+                  color={Colors.gray}
+                  fontSize="18px"
+                  fs_sm="14px"
+                  lineHeight="20px"
+                  margin="20px 0 0 0"
+                  align="left"
+                >
+                  {yml.about.content}
+                </Paragraph>
               </Row>
-            </Card>
-          </Column>
-        </Row>
+              <Row align="around" padding={`10px`}>
+                <Link to={yml.about.button_link}>
+                  <Paragraph
+                    color={Colors.blue}
+                    fontSize="20px"
+                    fs_sm="18px"
+                    lineHeight="20px"
+                    margin="20px 0 0 0"
+                    align="left"
+                  >
+                    {yml.about.button}
+                  </Paragraph></Link>
+              </Row>
+            </Column>
+            <Column
+              size="6"
+              size_sm={`12`}
+              paddingLeft={`0`}
+              paddingRight={`0`}
+              borderRadius="0 1.25rem 1.25rem 0"
+            >
+              <StyledBackgroundSection
+                className={`img-right`}
+                height={`426px`}
+                image={yml.about.about_image.image.childImageSharp.fluid}
+                bgSize={`cover`}
+                alt={yml.about.about_image.alt}
+                borderRadius={`0 1.25rem 1.25rem 0`}
+              />
+            </Column>
+          </Row>
+        </Card>
       </Wrapper>
-      <Divider height="250px" />
+      <Divider height="550px" />
     </>
   )
 };
@@ -109,8 +119,19 @@ export const query = graphql`
           about{
             heading
             sub_heading
-            image
+            about_image{
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 800){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              } 
+              alt
+            } 
             content
+            button
+            button_link
           }
         }
       }
