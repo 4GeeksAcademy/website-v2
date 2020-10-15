@@ -1,11 +1,11 @@
 import React, {useEffect, useState, useContext} from 'react';
 import PropTypes from "prop-types";
 import {Button, Colors} from '../Styling';
-import {Card} from '../Card'
 import {Break} from '../Responsive'
 import {Row, Column} from '../Sections'
 import { navigate } from "gatsby"
 import styled from 'styled-components';
+import {SessionContext} from '../../session.js'
 
 export const ChooseWrap = styled.div`
     position: relative;
@@ -26,6 +26,7 @@ export const Schedule = styled.small`
     color: #BDBDBD;
 `;
 const ChooseProgram = (props) => {
+    const {setLocation} = React.useContext(SessionContext);
     const [status, setStatus] = useState({ toggle: false, hovered: false })
     const _Selector = (_p) => <Button 
         shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)" 
@@ -77,7 +78,7 @@ const ChooseProgram = (props) => {
                                 key={index}
                                 colorHover={Colors.lightBlue}
                                 onClick={() => {
-                                    if(item.location_bc_slug && props.onLocationChange) props.onLocationChange(item.location_bc_slug)
+                                    if(item.location_bc_slug) setLocation(item.location_bc_slug)
                                     navigate(item.link)
                                 }} 
                                 textColor={Colors.gray} 

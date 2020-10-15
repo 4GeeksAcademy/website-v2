@@ -41,7 +41,7 @@ header_data:
   tagline: Aprende a programar
   sub_heading: in only 16 weeks (part-time)
   image: "../../../static/images/bg/main-bg.jpg"
-  image_filter: brightness(0.4)
+  image_filter: brightness(0.4) #0 is dark, 1 is bright
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
@@ -92,7 +92,7 @@ badges:
   position: 3
   heading: " "
 
-# Possible layours: [two_column_left_image, two_column_right_image]
+# Possible layours: [two_column_left, two_column_right]
 components:
   - name: more_testimonials
     position: 8

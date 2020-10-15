@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider, Wrapper, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, ArrowRight, Teacher, Glasses, Clock, Users, Rocket, Button, Laptop, Infinity} from '../Styling';
-import {Card} from '../Card';
-import Link from 'gatsby-link'
+import {Colors} from '../Styling';
+import Card from '../Card';
+import Icon from '../Icon';
 
 const ContainerStyle = styled.div`
     height: 1px;
@@ -52,8 +52,8 @@ const ProgramDetails = (props) => {
             display_sm={`none`}
         >
             <Row height="100%">
-                <Column size="12" customRespSize respSize="12" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                    <Row height={`15%`} align={`around`} alignItems={`center`} marginBottom={`15px`} customRespSize alignResp={`space-around`}>
+                <Column size="12"  display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
+                    <Row height={`15%`} align={`around`} alignItems={`center`} marginBottom={`15px`} alignResp={`space-around`}>
                         {props.details.details_modules.map((item, index) => {
                             return (
                                 <Div
@@ -126,21 +126,14 @@ const ProgramDetails = (props) => {
                     </Row>
 
                     <Row height={`75%`} >
-                        <Column size="12" customRespSize respSize="12" paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+                        <Column size="12"  paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
                             <Div flexDirection={`row`} >
                                 <Div margin={`0 5px 0 0`} flexDirection={`column`} alignContent={`start`}>
-                                    <Laptop width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                    <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                 </Div>
                                 <Div flexDirection={`column`} >
                                     <Div alignItems={`center`} margin={`5px 0`}>
-                                        <H4
-                                            fs_xs="18px"
-                                            fs_sm="18px"
-                                            fs_md="20px"
-                                            fs_lg="18px"
-                                            fontSize="22px"
-                                            fontWeight={`400`}
-                                        >
+                                        <H4 align="left" align_sm="left">
                                             {props.details.details_modules[selected.index].title}
                                         </H4>
 
@@ -168,19 +161,12 @@ const ProgramDetails = (props) => {
                             <Div flexDirection={`row`} >
                                 <Div width={`50%`}>
                                     <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
-                                        <Rocket width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                        <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     </Div>
                                     <Div flexDirection={`column`} >
                                         <Div alignItems={`center`} margin={`5px 0`}>
                                             {/* <Div> */}
-                                            <H4
-                                                fs_xs="18px"
-                                                fs_sm="18px"
-                                                fs_md="20px"
-                                                fs_lg="18px"
-                                                fontSize="22px"
-                                                fontWeight={`400`}
-                                            >
+                                            <H4 align="left" align_sm="left">
                                                 {`Projects`}
                                             </H4>
                                             {/* </Div> */}
@@ -202,19 +188,12 @@ const ProgramDetails = (props) => {
                                     </Div>
                                 </Div>
                                 <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
-                                    <Clock width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                    <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                 </Div>
                                 <Div flexDirection={`column`}>
                                     <Div alignItems={`center`} margin={`5px 0`}>
 
-                                        <H4
-                                            fs_xs="18px"
-                                            fs_sm="18px"
-                                            fs_md="20px"
-                                            fs_lg="18px"
-                                            fontSize="22px"
-                                            fontWeight={`400`}
-                                        >
+                                        <H4 align="left" align_sm="left">
                                             {`Duration`}
                                         </H4>
 

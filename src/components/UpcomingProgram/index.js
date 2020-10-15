@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react';
 import styled from 'styled-components';
 import PropTypes from "prop-types"
 import dayjs from "dayjs";
+import {SessionContext} from '../../session';
 import {Colors, Button, Link, Anchor} from '../Styling';
 import {Break} from '../Responsive';
 import {useScrollPosition} from "./useScrollPosition"
@@ -9,6 +10,7 @@ import {useScrollPosition} from "./useScrollPosition"
 const ShadowedRow = styled.div`
     background: #ececec;
     font-family: 'Lato-Bold', sans-serif;
+    font-display: swap;
     box-shadow: 0 0 16px 0 rgba(50,50,50,.3);
     height: 80px;
     padding: 10px;
@@ -73,7 +75,9 @@ const Right = styled.div`
     padding-top: 5px;
 `;
 
-const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, location, button, lang}) => {
+const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, button, lang}) => {
+    const { session } = React.useContext(SessionContext);
+    const location = session ? session.location : null;
     const [show, setShow] = useState(showOnScrollPosition == null)
     const [cohorts, setCohorts] = useState([])
 

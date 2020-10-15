@@ -12,7 +12,7 @@ header_data:
   image: "../../../static/images/bg/main-bg.jpg"
 
 news:
-  heading: "Read about us this coding bootcamp in the news..."
+  heading: "Read about this coding bootcamp in the news..."
   limit: 4
 
 ## 4GEEKS VS OTHERS SECTION

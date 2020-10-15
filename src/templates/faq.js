@@ -3,9 +3,10 @@ import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Colors, Button, RoundImage, Address, Marker, Clock, Plus, Minus} from '../components/Styling'
-import {Card} from '../components/Card'
-import BaseRender from './_baseRender'
+import {Colors, Button, RoundImage} from '../components/Styling'
+import Card from '../components/Card'
+import Icon from '../components/Icon'
+import BaseRender from './_baseLayout'
 import {SessionContext} from '../session'
 
 const Faq = (props) => {
@@ -55,20 +56,20 @@ const Faq = (props) => {
                                         <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" size_sm="2" align={`center`} alignSelf="center">
                                             {buttonToggle === false ?
                                                 toggleIndex != index &&
-                                                <Plus
+                                                <Icon icon="plus"
                                                     width="32"
                                                     color={Colors.blue}
                                                     fill={Colors.blue}
                                                 />
                                                 :
                                                 buttonToggle === true && toggleIndex === index ?
-                                                    < Minus
+                                                    <Icon icon="minus"
                                                         width="32"
                                                         color={Colors.blue}
                                                         fill={Colors.blue}
                                                     />
                                                     :
-                                                    <Plus
+                                                    <Icon icon="plus"
                                                         width="32"
                                                         color={Colors.blue}
                                                         fill={Colors.blue}
@@ -78,11 +79,7 @@ const Faq = (props) => {
                                         <Column size="11" size_sm="10" alignSelf="center">
                                             <H4
                                                 align={`left`}
-                                                fs_xs="18px"
-                                                fs_sm="20px"
-                                                fs_md="20px"
-                                                fs_lg="20px"
-                                                fontSize="24px"
+                                                align_sm={`left`}
                                                 color={Colors.black}>{item.question}
                                             </H4>
                                             {buttonToggle === true && toggleIndex === index &&

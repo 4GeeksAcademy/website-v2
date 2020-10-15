@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, ArrowRight, Teacher, Glasses, Clock, Users, Comments, Button, RoundImage} from '../Styling';
-import {Card} from '../Card';
+import {Colors} from '../Styling';
+import Card from '../Card';
 import Link from 'gatsby-link'
+import Icon from '../Icon'
 import Fragment from "../Fragment"
 
 const JobInfo = () => {
@@ -76,7 +74,7 @@ const JobInfo = () => {
                     }
                   </Row>
                   <Link to={`/job/${item.node.meta_info.slug}`}>
-                    <ArrowRight style={{position: "absolute", right: "10px", bottom: "5px"}} width="32" color={Colors.blue} fill={Colors.blue} />
+                    <Icon icon="arrowright" style={{position: "absolute", right: "10px", bottom: "5px"}} width="32" color={Colors.blue} fill={Colors.blue} />
                   </Link>
                 </Card>
               </Column>

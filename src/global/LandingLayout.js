@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import loadable from '@loadable/component'
 import {SessionContext} from '../session';
 import '../assets/css/style.css';
-import NavB from '../components/Navbar'
-import Footer from '../components/Footer'
 import {StaticQuery, graphql} from 'gatsby';
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
+
+const Footer = loadable(() => import('../components/Footer'))
 
 const Layout = ({children, seo, context}) => {
   const { session } = React.useContext(SessionContext);
@@ -90,8 +91,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   seo: PropTypes.object
 };
-NavB.defaultProps = {
-  seo: {}
-}
 
 export default Layout;

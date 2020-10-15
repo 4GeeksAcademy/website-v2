@@ -1,13 +1,12 @@
 import React, {useState, useEffect, useContext} from 'react';
 import PropTypes from "prop-types";
-import styled from 'styled-components';
 import {navigate, graphql} from 'gatsby';
 import {Row, Column} from '../Sections';
 import {Paragraph, Span} from '../Heading';
-import {Colors, Select, Option, Button, TriangleDown} from '../Styling';
-import Link from 'gatsby-link'
+import {Colors, Button} from '../Styling';
 import {SessionContext} from '../../session'
-import {Card} from '../Card'
+import Card from '../Card'
+import Icon from '../Icon'
 
 const strings = {
   us: {
@@ -17,7 +16,7 @@ const strings = {
   },
   es: {
     "It takes just": "En tan sólo",
-    "weeks in": "semánas en",
+    "weeks in": "semanas en",
     "to become a": "te convertirás en"
   }
 }
@@ -51,7 +50,7 @@ const ProgramSelector = (props) => {
             color={Colors.white}
             textColor={Colors.gray}>
             {props.week}
-            <TriangleDown style={{marginLeft: "5px", position: "absolute", right: "5px", top: "50%", transform: "translateY(-50%)"}} width="14" color={Colors.gray} fill={Colors.gray} />
+            <Icon icon="triangledown" style={{marginLeft: "5px", position: "absolute", right: "5px", top: "50%", transform: "translateY(-50%)"}} width="14" color={Colors.gray} fill={Colors.gray} />
           </Button>
         }
 
@@ -87,7 +86,7 @@ const ProgramSelector = (props) => {
 
             padding={`5px`} borderRadius=".25rem" onClick={() => setToggle(!toggle)} color={Colors.white} textColor={Colors.gray}>
             {session && session.location && session.location.city}
-            <TriangleDown style={{marginLeft: "5px", position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)"}} width="14" color={Colors.gray} fill={Colors.gray} />
+            <Icon icon="triangledown" style={{marginLeft: "5px", position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)"}} width="14" color={Colors.gray} fill={Colors.gray} />
           </Button>
         }
         {toggle == true && <Card borders=".25rem" color="grey">

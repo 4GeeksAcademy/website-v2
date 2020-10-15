@@ -31,7 +31,6 @@ const WhyPython = ({ heading, subheading, lang }) => {
     }
   `}
         render={incoming => {
-            console.log("incoming", incoming)
             let translations = incoming.list.edges.find(({ node }) => node.fields.lang === lang);
             if(translations) translations = translations.node;
           
@@ -42,6 +41,7 @@ const WhyPython = ({ heading, subheading, lang }) => {
                     paragraphColor={Colors.darkGray}
                 />
                 <table style={{ width: "100%", height: "70px", verticalAlign: "middle" }}>
+                    <tbody>
                     <tr>
                         {translations.technologies.map((t,i) => 
                             <td key={i}
@@ -55,8 +55,9 @@ const WhyPython = ({ heading, subheading, lang }) => {
                             }}>{t.name}<br />{t.percentage}%</td>
                             )}
                     </tr>
+                    </tbody>
                 </table>
-                <Anchor color={Colors.gray} align="center" target="_blank" rel="noopener noreferrer nofollow" href={translations.link.url}>{translations.link.label}</Anchor>
+                <Anchor color={Colors.gray} align="center" target="_blank" rel="noopener noreferrer nofollow" to={translations.link.url}>{translations.link.label}</Anchor>
             </Fragment>}}
     />
 }

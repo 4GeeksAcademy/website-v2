@@ -1,15 +1,16 @@
 import React from 'react';
 import {Container, Column, Row, Wrapper, Divider, WrapperImage} from '../components/Sections';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
-import {Card} from '../components/Card'
-import {Colors, Book, Teacher, Users, Sitemap, Button, RoundImage, StyledBackgroundSection} from '../components/Styling'
+import Card from '../components/Card'
+import {Colors, StyledBackgroundSection} from '../components/Styling'
 import Mentors from '../components/Mentors'
 import {Charts} from '../components/Chart'
 import Credentials from '../components/Credentials'
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
 import WhoIsHiring from '../components/WhoIsHiring';
-import RecentPosts from '../components/RecentPosts'
-import Link from 'gatsby-link'
+import BlogPosts from '../components/BlogPosts'
+import { Link } from 'gatsby'
+import Icon from '../components/Icon'
 import Img from "gatsby-image"
 
 const Why = (props) => {
@@ -44,7 +45,7 @@ const Why = (props) => {
 
             <Wrapper margin="30px">
                 <Row align="center" >
-                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                <Column size="4"  margin="5px 0">
                     <Paragraph
                     margin="5px 0"
                     color={Colors.gray}
@@ -55,7 +56,7 @@ const Why = (props) => {
                     </Paragraph>
                     <Img className={`image`} fluid={yml.education.left_box.image.childImageSharp.fluid} alt="Florida Education Logo"></Img>
                 </Column>
-                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                <Column size="4"  margin="5px 0">
                     <Paragraph
                     margin="5px 0"
                     color={Colors.gray}
@@ -68,7 +69,7 @@ const Why = (props) => {
                     </Paragraph>
                     <Img className={`image`} fluid={yml.education.center_box.image.childImageSharp.fluid} alt="Newsweek Logo"></Img>
                 </Column>
-                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                <Column size="4"  margin="5px 0">
                     <Paragraph
                     margin="5px 0"
                     color={Colors.gray}
@@ -83,8 +84,8 @@ const Why = (props) => {
                 </Column>
                 </Row>
                 <Row>
-                <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
-                <Column size="4" customRespSize respSize="4" margin="5px 0">
+                <Column size="4"  margin="5px 0"></Column>
+                <Column size="4"  margin="5px 0">
                     <Paragraph
 
                     color={Colors.gray}
@@ -96,7 +97,7 @@ const Why = (props) => {
                     align="center">2017 Report
                     </Paragraph>
                 </Column>
-                <Column size="4" customRespSize respSize="4" margin="5px 0"></Column>
+                <Column size="4"  margin="5px 0"></Column>
                 </Row>
             </Wrapper>
             
@@ -134,10 +135,7 @@ const Why = (props) => {
                                 >
                                     <Row >
                                         <Column size="3" pl_lg="0">
-                                            {item.icon === "Book" && <Book width="48px" color={Colors.yellow} fill={Colors.yellow} />}
-                                            {item.icon === "Teacher" && <Teacher width="48px" color={Colors.yellow} fill={Colors.yellow} />}
-                                            {item.icon === "Users" && <Users width="48px" color={Colors.yellow} fill={Colors.yellow} />}
-                                            {item.icon === "Sitemap" && <Sitemap width="48px" color={Colors.yellow} fill={Colors.yellow} />}
+                                            <Icon icon={item.icon} width="48px" color={Colors.yellow} fill={Colors.yellow} />
                                         </Column>
                                         <Column size="8" >
                                             <Row>
@@ -250,13 +248,15 @@ const Why = (props) => {
                 <Title
                     variant="primary"
                     title={yml.posts.heading}
-                    paragraph={yml.posts.sub_heading}
-                    maxWidth="66%"
-                // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
                 />
-
-                <Divider height="50px" />
-                <RecentPosts />
+                <BlogPosts 
+                  filter={[
+                    'why-we-teach-python-4geeks',
+                    'dont-teach-nodejs-full-stack-development-program',
+                    'choosing-coding-bootcamp'
+                  ]}
+                  featured
+                />
             </Wrapper>
             <Wrapper margin="50px" 
                 right
@@ -307,7 +307,7 @@ const Why = (props) => {
                     maxWidth="700px"
                 />
                 <Row align='center'>
-                    <Column size="3" size_sm='12' customRespSize respSize="12" padding="20px 0">
+                    <Column size="3" size_sm='12'  padding="20px 0">
                         <Row>
                             <Column size="12">
                             <H4
@@ -341,9 +341,9 @@ const Why = (props) => {
                                 >{yml.outcomes.left.sub_content}</Paragraph></Column>
                         </Row>
                     </Column>
-                    <Column size="9" customRespSize respSize="12">
+                    <Column size="9" >
                         <Row align="center">
-                            <Column size="4" size_sm="12" customRespSize respSize="4" padding="20px 0" align="center"><H4
+                            <Column size="4" size_sm="12"  padding="20px 0" align="center"><H4
                                 uppercase
                                 fs_xs="16px"
                                 fs_sm="18px"
@@ -353,7 +353,7 @@ const Why = (props) => {
                             >{yml.outcomes.right.chart_one.title}</H4>
                                 <Charts dataArray={yml.outcomes.right.chart_three.data} />
                             </Column>
-                            <Column size="4" size_sm="12" customRespSize respSize="4" padding="20px 0" align="center"><H4
+                            <Column size="4" size_sm="12"  padding="20px 0" align="center"><H4
                                 uppercase
                                 fs_xs="16px"
                                 fs_sm="18px"
@@ -363,7 +363,7 @@ const Why = (props) => {
                             >{yml.outcomes.right.chart_two.title}</H4>
                                 <Charts dataArray={yml.outcomes.right.chart_two.data} />
                             </Column>
-                            <Column size="4" size_sm="12" customRespSize respSize="4" padding="20px 0" align="center"><H4
+                            <Column size="4" size_sm="12"  padding="20px 0" align="center"><H4
                                 uppercase
                                 fs_xs="16px"
                                 fs_sm="18px"
@@ -377,7 +377,7 @@ const Why = (props) => {
                     </Column>
                 </Row>
                 <Row align='center'>
-                    <Column size="8" customRespSize respSize="8" align="center">
+                    <Column size="8"  align="center">
                         <Paragraph
                             color={Colors.blue}
                             fs_xs="14px"
@@ -525,7 +525,7 @@ export const query = graphql`
           node {
             credentials {
               title
-              slug
+              icon
               value
               symbol
               symbol_position

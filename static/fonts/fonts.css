@@ -1,13 +1,16 @@
 @font-face {
-    font-family: "Lato-Regular";
-    src: url("./lato/Lato-Regular.woff");
-  }
+  font-family: "Lato-Regular";
+  font-display: swap;
+  src: url("./lato/Lato-Regular.woff");
+}
 @font-face {
-    font-family: "Lato-Bold";
-    src: url("./lato/Lato-Bold.woff");
-  }
+  font-family: "Lato-Bold";
+  font-display: swap;
+  src: url("./lato/Lato-Bold.woff");
+}
 
-  @font-face {
-    font-family: "Futura";
-    src: url("./futura/FuturaPT-ExtraBold.woff");
-  }
+@font-face {
+  font-family: "Futura";
+  font-display: swap;
+  src: url("./futura/FuturaPT-ExtraBold.woff");
+}

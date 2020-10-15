@@ -3,7 +3,7 @@ import {Column, Row, Divider} from '../../components/Sections'
 import {Colors, StyledBackgroundSection} from '../Styling';
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
-import {Card} from '../Card';
+import Card from '../Card';
 import Fragment from "../Fragment"
 const WhoIsHiring = props => {
   return (

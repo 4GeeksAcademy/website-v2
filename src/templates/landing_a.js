@@ -7,7 +7,7 @@ import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
 import {Row, Column, Divider, Div} from '../components/Sections'
 import {Colors, StyledBackgroundSection} from '../components/Styling'
 
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLandingLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session.js'
 
@@ -341,7 +341,7 @@ export const query = graphql`
           node {
             credentials {
               title
-              slug
+              icon
               value
               symbol
               symbol_position
@@ -477,4 +477,4 @@ export const query = graphql`
   }
 `;
 
-export default BaseRender(Landing, "landing");
+export default BaseRender(Landing);

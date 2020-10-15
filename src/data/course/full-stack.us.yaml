@@ -36,8 +36,8 @@ credentials:
 
 ## PROGRAM DETAILS
 details:
-  heading: PROGRAM DETAILS
-  sub_heading: "Part Time"
+  heading: PROGRAM DETAILS PART-TIME
+  sub_heading: Real life proyects and exactly what companies are looking for
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -94,7 +94,7 @@ syllabus:
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
-  sub_heading: "View full comparison table >"
+  sub_heading: "Compare with other schools"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
@@ -122,7 +122,6 @@ prices:
   heading: "PRICES AND PAYMENTS"
   sub_heading: ""
 
-## TYPICAL DAY SECTION
 typical:
   heading: ""
   sub_heading: ""
@@ -155,7 +154,7 @@ typical:
 ## ALUMNI SECTION
 alumni:
   heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+  sub_heading: "Get to know our graduates and some of the projects you will be building during the program"
 
 ## SIDEBAR
 sidebar:

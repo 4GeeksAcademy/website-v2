@@ -10,7 +10,7 @@
 # 3. If none of your redirects apply to entities or pages you can put them here:
 
 redirects:
-  - fromPath: "/redirect-test"
+  - fromPath: "/landing/weekend-program-santiago/"
     toPath: "/"
-    redirectInBrowser: true
+    #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results

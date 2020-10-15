@@ -2,10 +2,8 @@ import React from 'react';
 import styled, {css, keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../Styling'
-import {Column, Row} from '../Sections'
-import {Device, Break} from '../Responsive'
+import {Break} from '../Responsive'
 import {Blink} from '../Animations'
-import Link from 'gatsby-link'
 import {redirectTo} from "@reach/router"
 
 const Heading = ({type, children, className}) => {
@@ -19,160 +17,66 @@ Heading.defaultProps = {
   type: "span",
 };
 
-//font-family: 'Lato-Bold', sans-serif;
-export const H1 = styled(Heading)`
-display: block;
-font-family: 'Futura', sans-serif;
-font-weight: 500;
-letter-spacing: 0px;
-font-size: ${props => props.fontSize};
-color: ${props => props.color};
-text-shadow: ${props => props.textShadow}; 
-margin-top: ${props => props.marginTop || "initial"}; 
-text-transform: ${props => props.uppercase && "uppercase"};
-text-align: ${props => props.align};
+const BaseHeading = styled(Heading)`
+  display: block;
+  width: ${props => props.width || "100%"};
+  font-family: 'Futura', sans-serif;
+  letter-spacing: 0px;
+  font-weight: ${props => props.fontWeight};
+  font-size: ${props => props.fontSize};
+  font-style: normal;
+  font-display: swap;
+  color: ${props => props.color};
+  margin: ${props => props.margin};
+  text-shadow: ${props => props.textShadow}; 
+  background-color: ${props => props.bg};
+  margin-top: ${props => props.marginTop}; 
+  text-transform: ${props => props.uppercase && "uppercase"};
+  text-align: ${props => props.align || "center"};
+  padding: ${props => props.padding};
 
-@media ${Break.lg}{
-  text-align: ${props => props.align};
-  font-size: ${props => props.fs_lg};
-}
-@media ${Break.md}{
-  text-align: ${props => props.align};
-  font-size: ${props => props.fs_md};
-}
-@media  ${Break.sm}{
-  text-align: center;
-  font-size: ${props => props.fs_sm};
-  margin: ${props => props.m_sm};
-}  
-@media ${Break.xs}{
-  font-size: ${props => props.fs_xs};
-}
+  &:hover{
+    background-color: ${props => props.bgHover || props.bg};
+  }
+  @media ${Break.lg}{
+    text-align: ${props => props.align};
+    font-size: ${props => props.fs_lg};
+  }
+  @media ${Break.md}{
+    text-align: ${props => props.align};
+    font-size: ${props => props.fs_md};
+  }
+  @media  ${Break.sm}{
+    text-align: ${props => props.align_sm || "center"};
+    font-size: ${props => props.fs_sm};
+    margin: ${props => props.m_sm};
+  }  
+  @media ${Break.xs}{
+    text-align: ${props => props.align_xs};
+    font-size: ${props => props.fs_xs};
+  }
+`
+
+export const H1 = styled(BaseHeading)``;
+
+export const H2 = styled(BaseHeading)`
+  font-weight: 800;
+  letter-spacing: -2px;
 `;
-export const H2 = styled(Heading)`
-    display: block;
-    text-align: ${props => props.align || "center"};
-    padding: ${props => props.padding};
-    font-family: 'Futura', sans-serif;
-    font-weight: 800;
-    margin: ${props => props.margin};
-    margin-top: ${props => props.marginTop};
-    letter-spacing: -2px;
-    text-transform: ${props => props.uppercase && "uppercase"};
-    color: ${props => props.color};
-    font-size: ${props => props.fontSize || props.fs_xl};
-
-    @media ${Break.lg}{
-      font-size: ${props => props.fs_lg};
-    }
-    @media ${Break.md}{
-      font-size: ${props => props.fs_md};
-    }
-    @media  ${Break.sm}{
-      text-align: center;
-      font-size: ${props => props.fs_sm};
-    }
-    @media ${Break.xs}{
-      text-align: center;
-      font-size: ${props => props.fs_xs};
-    }
-    `;
-export const H3 = styled(Heading)`
-display: block;
-width: 100%;
-text-align: ${props => props.align || "center"};
-font-family: 'Futura', sans-serif;
-margin: ${props => props.margin};
+export const H3 = styled(BaseHeading)`
 font-weight: 400;
 letter-spacing: -1px;
-text-transform: ${props => props.uppercase && "uppercase"};
-color: ${props => props.color};
-font-size: ${props => props.fs_xl || props.fontSize};
-
-@media ${Break.lg}{
-  font-size: ${props => props.fs_lg};
-}
-@media ${Break.md}{
-  font-size: ${props => props.fs_md};
-}
-@media  ${Break.sm}{
-  text-align: ${props => props.align_sm || "center"};
-  font-size: ${props => props.fs_sm};
-  // padding: 0 5px;
-}
-@media ${Break.xs}{
-  text-align: ${props => props.align_xs};
-  font-size: ${props => props.fs_xs};
-  // padding: 0 5px;
-}
 `;
-export const H4 = styled(Heading)`
-display: block;
-text-align: ${props => props.align || "center"};
-font-family: 'Futura', sans-serif;
-margin: ${props => props.margin};
-width: ${props => props.width};
-font-weight: ${props => props.fontWeight};
+export const H4 = styled(BaseHeading)`
 letter-spacing: -1px;
-font-size: ${props => props.fontSize};
-padding: ${props => props.padding};
-text-transform: ${props => props.uppercase && "uppercase"};
-color: ${props => props.color};
-background-color: ${props => props.bg};
-&:hover{
-  background-color: ${props => props.bgHover || props.bg};
-}
-text-shadow: ${props => props.textShadow};
-font-style: normal;
 
-@media ${Break.lg}{
-  font-size: ${props => props.fs_lg};
-}
-@media ${Break.md}{
-  font-size: ${props => props.fs_md};
-}
-@media  ${Break.sm}{
-  text-align: ${props => props.align_sm};
-  font-size: ${props => props.fs_sm};
-}
-@media ${Break.xs}{
-  font-size: ${props => props.fs_xs};
-}  
 `;
-export const H5 = styled(Heading)`
-      display: block;
-      font-family: 'Lato', sans-serif;
-      font-size: ${props => props.fontSize};
-      font-weight: 700;
-      letter-spacing: 0px;
-      padding: ${props => props.padding};
-      text-transform: ${props => props.uppercase && "uppercase"};
-      font-style: normal;
-      color: ${props => props.color};
-      margin: ${props => props.margin};
-      text-align: ${props => props.align || "center"};
-  
-    
-      @media ${Device.xs}{
-        font-size: ${props => props.fs_xs};
-      }
-      @media  ${Device.sm}{
-        font-size: ${props => props.fs_sm};
-      }
-      @media ${Device.md}{
-        font-size: ${props => props.fs_md};
-                      }
-      @media ${Device.lg}{
-        font-size: ${props => props.fs_lg};
-      }
-      @media ${Device.xl} {
-        font-size: ${props => props.fs_xl};
-      }
-      
+export const H5 = styled(BaseHeading)`
+  font-weight: 700;
+  letter-spacing: 0px;
 `;
 
 export const Span = styled.span`
-
       animation:${Blink} 1.2s infinite;
       color: ${props => props.color};
       font-size: ${props => props.fs};
@@ -225,6 +129,7 @@ Separator.defaultProps = {
 };
 
 export const Paragraph = styled.div`
+  font-display: swap;
   width: ${props => props.width};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin};
@@ -360,21 +265,22 @@ H1.defaultProps = {
 H2.defaultProps = {
   fs_xs: '7.5vw',
   fs_sm: '6vw',
-  fs_md: '5vw',
-  fs_lg: '4vw',
-  fs_xl: '2.5vw'
+  fs_md: '30px',
+  fs_lg: '30px',
+  fontSize: '35px'
 
 };
 H3.defaultProps = {
   fs_xs: '4.5vw',
   fs_sm: '4vw',
-  fs_md: '2.5vw',
-  fs_lg: '3vw',
-  fs_xl: '2.5vw'
-  
+  fs_md: '25px',
+  fs_lg: '25px',
+  fontSize: '30px'
 };
 H4.defaultProps = {
-  fontSize: '2vw',
-  fs_sm: '5vw',
+  fontSize: '25px',
+  fs_lg: '23px',
+  fs_md: '23px',
+  fs_sm: '23px',
   fontWeight: '400',
 };

@@ -39,7 +39,7 @@ info_box:
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and at walking distance to the most prominent restaurants, coffee shops and business centers. 140 meters of innovation, curious people and an awesome vibe to learn."
+  content: "4Geeks Office is Located at the epicenter of San Jose, next to the metro station and at walking distance to the most prominent restaurants, coffee shops and business centers. 140 meters of innovation, curious people and an awesome vibe to learn."
   images:
     - path: "../../../static/images/locations/mcbo-chinita.jpeg"
       alt: "mcbo-chinita"

@@ -22,6 +22,7 @@ const StyledInput = styled.input`
     border-radius: ${props => props.borderRadius};
     border: none;
     font-family: 'Lato', sans-serif;
+    font-display: swap;
     font-size: 16px;
     font-color: ${Colors.black};
     user-select: initial;
@@ -100,6 +101,7 @@ export const Alert = styled.div`
     width: 100%;
     text-align: center;
     font-family: 'Lato', sans-serif;
+    font-display: swap;
     font-size: 14px;
     font-color: ${props => colors[props.color][1]};
     margin: ${props => props.margin};
@@ -112,6 +114,7 @@ const StyledTextArea = styled.textarea`
     padding: 5px 10px;
     border: none;
     font-family: 'Lato', sans-serif;
+    font-display: swap;
     font-size: 16px;
     font-color: ${Colors.black};
 `

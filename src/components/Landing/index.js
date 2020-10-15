@@ -1,4 +1,5 @@
 import React from "react"
+import loadable from '@loadable/component'
 import {Row, Column, Wrapper, Divider, Div} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H5, H4, Title} from '../Heading'
@@ -13,18 +14,16 @@ import ProgramDetailsMobile from '../ProgramDetailsMobile'
 import WhyPython from '../WhyPython'
 import Why4Geeks from '../Why4Geeks';
 import News from '../News'
-import { TestimonialsCarrousel } from '../Testimonials'
 import GeeksVsOthers from '../GeeksVsOthers'
 import ReactPlayer from 'react-player'
 import {navigate} from "gatsby"
 import {requestSyllabus} from "../../actions"
 
-const Image = styled.img`
-    max-width: 100%;
-    max-height: 100%;
-`;
-const Side = ({ video, image, heading, content, button }) => {
+const TestimonialsCarrousel = loadable(() => import('../Testimonials'))
 
+const Side = ({ video, image, heading, content, button, bullets }) => {
+
+    // if(bullets) return <Bullets />
     if(video) return <ReactPlayer
         className='react-player alumni-player'
         file={{forceVideo: true}}

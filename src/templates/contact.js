@@ -1,14 +1,12 @@
 import React, {useState, useContext, useEffect} from 'react';
-import Layout from '../global/Layout';
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
-import {Card} from '../components/Card'
-import BaseRender from './_baseRender';
+import Card from '../components/Card'
+import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
 import {Input, Alert, TextArea} from '../components/Form';
-import {useDebounce} from "../utils/debounce";
 
 const Contact = (props) => {
     const {data, pageContext, yml} = props;
@@ -159,7 +157,7 @@ const Contact = (props) => {
                             </Column>
                         }
 
-                        <Column size="5" size_sm="12" customRespSize respSize="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="unset" height="100%"  >
+                        <Column size="5" size_sm="12"  color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="unset" height="100%"  >
                             <Row align="center" height="100%" borderRadius="0 1.25rem 1.25rem 1.25rem">
                                 <Column size="10" height="100%" padding="30px 0px 50px 0px" paddingLeft="0" paddingRight="0" p_md="10px 0px">
                                     <Row height="60px" padding="0 20px" margin="0 0 40px 0">

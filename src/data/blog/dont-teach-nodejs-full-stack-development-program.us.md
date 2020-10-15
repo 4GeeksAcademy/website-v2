@@ -23,7 +23,7 @@ tags:
 - Python
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+featured: true
 ---
 
 We love NodeJS.  We even work with it in some of our 4Geeks experiments.  Node challenges the way the web is made - making it super fast and unifying it into a single language (which is amazing for the community because developers are able to specialize).  Node is super hot in the software development world and it was growing so much last year (2016) that it seemed unstoppable.  All that said, I’m sure you are asking yourself, why is it that 4Geeks decided to leave it out from its Full-Stack Development program?
