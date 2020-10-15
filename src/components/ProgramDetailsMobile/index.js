@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {Row, Container, Column, Divider, Wrapper, Div} from '../Sections'
-import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
+import {Div} from '../Sections'
+import {H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors} from '../Styling';
 import Card from '../Card';
 import Icon from '../Icon'
@@ -16,7 +16,7 @@ const ProgramDetailsMobile = (props) => {
         <>
             {props.details.details_modules.map((item, index) => {
                 return (
-                    <>
+                    <React.Fragment key={index}>
                         <Card
                             key={index}
                             color={`blue`}
@@ -103,7 +103,7 @@ const ProgramDetailsMobile = (props) => {
                                     {item.duration}
                                 </Paragraph>
                             </Card>}
-                    </>
+                    </React.Fragment>
                 )
             })}
         </>

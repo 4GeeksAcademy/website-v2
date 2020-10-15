@@ -150,7 +150,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                         className='react-player alumni-player'
                                         file={{forceVideo: true}}
                                         style={{height: playerHeight}}
-                                        light={item.project_image}
+                                        light={true}
                                         controls={true}
                                         url={item.project_video}
                                         width='100%'

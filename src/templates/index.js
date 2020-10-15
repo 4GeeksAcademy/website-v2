@@ -4,7 +4,7 @@ import loadable from '@loadable/component'
 import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Row, Column, Wrapper} from '../components/Sections'
 import {RoundImage, Colors} from '../components/Styling'
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
 import News from '../components/News'
 import Icon from '../components/Icon'
 import Credentials from '../components/Credentials'
@@ -58,7 +58,7 @@ const Home = (props) => {
   
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
-
+  console.log("Rerender...");
   return (
     <>
       <Row github={`/page/index.${pageContext.lang}.yml`}>
@@ -98,11 +98,14 @@ const Home = (props) => {
           disp_xs={"none"}
           paddingRight={`0`}
         >
-          <Img 
+          <Img
             style={{ height: "500px", backgroundColor: Colors.lightGray, borderRadius: "0 0 0 1.25rem" }} 
             imgStyle={{ objectFit: "cover" }} 
             alt="4Geeks Academy"
+            loading="eager"
+            fadeIn={false}
             fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid} 
+            backgroundSize={`cover`}
           />
         </Column>
       </Row>
@@ -519,9 +522,6 @@ export const query = graphql`
                     childImageSharp {
                       fluid(maxHeight: 200){
                         ...GatsbyImageSharpFluid_withWebp
-                      }
-                      fixed(width: 250, height: 250) {
-                        ...GatsbyImageSharpFixed
                       }
                     }
                   }

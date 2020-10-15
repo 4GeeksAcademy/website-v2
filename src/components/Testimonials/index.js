@@ -4,8 +4,9 @@ import {Carousel} from 'react-responsive-carousel';
 import Card from "../Card"
 import {H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {Row, Column, Wrapper, Divider} from '../Sections'
-import {Colors, StyledBackgroundSection} from '../Styling'
+import {Colors} from '../Styling'
 import {Link} from 'gatsby';
+import Img from 'gatsby-image';
 import Fragment from "../Fragment"
 
 const TestimonialsCarrousel = (props) => {
@@ -20,79 +21,40 @@ const TestimonialsCarrousel = (props) => {
                 autoPlay={true}
                 infiniteLoop={true}
                 swipeable={true}
-                dynamicHeight={true}
             >
                 {testimonialsArray.filter(item => item.hidden !== true).map((item, i) => {
-                    return (
-                        <Row align="center" padding="30px" key={i}>
-                            <Card width="700px" >
-                                <Row align="center">
-                                    <StyledBackgroundSection
-                                        image={item.student_thumb.childImageSharp.fluid}
-                                        alt={item.alt}
-                                        height={`200px`}
-                                        width={`200px`}
-                                        bgSize={`cover`}
-                                        className={`b-corner-50`}
-                                    ></StyledBackgroundSection>
-                                </Row>
-                                <Divider height="10px" />
-                                <Row align="center" >
-                                    <Column size="12" >
-                                        <Paragraph lineHeight="24px">
-                                            <Span color={Colors.blue} >"</Span>
-                                            {item.content}
-                                            <Span color={Colors.blue} >"</Span>
-                                        </Paragraph>
-                                    </Column>
-                                </Row>
-                                <Divider height="10px" />
-                                <Row align="center">
-                                    <Column size="12" >
-                                        <H4>
-                                            {item.student_name}
-                                        </H4>
-                                    </Column>
-                                </Row>
-                                <Row align="center">
-                                    {item.source_url_text === "" && item.source_url === "" ? null :
-                                        <Column size="12" >
-                                            <Link to={item.source_url}>
-                                                <Paragraph
-                                                    fs_xs="12px"
-                                                    fs_sm="12px"
-                                                    fs_md="14px"
-                                                    fs_lg="14px"
-                                                    fs_xl="14px"
-                                                    color={Colors.yellow}
-                                                >
-                                                    {item.source_url_text}
-                                                </Paragraph>
-                                            </Link>
-                                        </Column>}
-                                </Row>
-                                <Row align="center" margin={`10px 0`}>
-                                    {item.linkedin_url != "" && item.linkedin_text != null ?
-                                        <Column size="12" align={`center`}>
-                                            <a href={item.linkedin_url} target="_blank" rel="noopener noreferrer">
-                                                <Paragraph
-                                                    fs_xs="12px"
-                                                    fs_sm="12px"
-                                                    fs_md="14px"
-                                                    fs_lg="14px"
-                                                    fs_xl="14px"
-                                                    color={Colors.blue}
-                                                >
-                                                    {item.linkedin_text}
-                                                </Paragraph>
-                                            </a>
-                                        </Column>
-                                        : null}
-                                </Row>
-                                <Divider height="10px" />
-                            </Card>
-                        </Row>
-
+                    return (<Card padding="20px 30px 30px 30px" height="460px" >
+                        <Img
+                            fluid={item.student_thumb.childImageSharp.fluid}
+                            alt={item.alt}
+                            style={{ height: "180px", width: "180px", margin:"auto", backgroundSize: `cover` }}
+                            className={`b-corner-50`}
+                        />
+                        <Paragraph margin="20px 0 0 0" fontSize="20px">
+                            {item.content}
+                        </Paragraph>
+                        <H4 margin="10px 0px">{item.student_name}</H4>
+                        {item.source_url_text === "" && item.source_url === "" &&
+                            <Link to={item.source_url}>
+                                <Paragraph
+                                    color={Colors.yellow}
+                                >
+                                    {item.source_url_text}
+                                </Paragraph>
+                            </Link>
+                        }
+                        {item.linkedin_url != "" && item.linkedin_text != null &&
+                            <a href={item.linkedin_url} target="_blank" rel="noopener noreferrer">
+                                <Paragraph
+                                    align="center"
+                                    margin="10px 0 0 0"
+                                    color={Colors.blue}
+                                >
+                                    {item.linkedin_text}
+                                </Paragraph>
+                            </a>
+                        }
+                    </Card>
                     )
                 })}
             </Carousel>

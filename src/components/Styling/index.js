@@ -119,7 +119,7 @@ export const Span = styled.div`
       }
 `
 
-export const Img = styled.div`
+const StyledImage = styled.div`
     background-image: url(${props => props.src});
     background-repeat: no-repeat;
     background-size:${props => props.backgroundSize || "cover"};
@@ -133,11 +133,14 @@ export const Img = styled.div`
         width: ${props => props.w_sm};
     }
 `
+export const Img = React.memo(StyledImage);
 
 export const BackgroundSection = ({children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
     return (
         <BackgroundImage
             Tag="section"
+            loading="eager"
+            fadeIn={false}
             className={className}
             borderRadius={borderRadius}
             fluid={image}

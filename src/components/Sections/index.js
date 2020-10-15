@@ -32,9 +32,11 @@ export const Container = styled(Fragment)`
             }
             `: ''
     }
+    display: ${props => props.display};
     width: ${props => containerVariants[props.variant || "fixed"]};
     height: ${props => props.height};
     margin: ${props => props.margin || "initial"};
+    padding: ${props=> props.padding};
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -212,33 +214,33 @@ export const Wrapper = (props) => {
         p_sm={props.p_sm}
         p_xs={props.p_xs}
         variant="fluid"
+        display="flex"
     >
-        <Row>
-            <Column size="1" disp_md="none" />
-            <Column
-                size="11"
-                url={props.image}
-                border={props.border}
-                customBorderRadius={props.customBorderRadius}
-                color={props.background}
-                align={props.align}
-                height={props.height}
-                m_md={props.right ? "0 0 0 auto" : undefined}
-                backgroundSize={props.backgroundSize}
-            >
-                <Row padding={`20px 0`}>
-                    <Column size="1" disp_sm="none" />
-                    <Column
-                        size={props.wide ? 11 : 9}
-                        size_md={props.wide ? 12 : 11}
-                        paddingRight={props.wide ? 0 : undefined}
-                        height={props.height}
-                    >
-                        {props.children}
-                    </Column>
-                </Row>
-            </Column>
-        </Row>
+        <Column size="1" disp_md="none" />
+        <Column
+            size="11"
+            size_sm="12"
+            url={props.image}
+            border={props.border}
+            customBorderRadius={props.customBorderRadius}
+            color={props.background}
+            align={props.align}
+            height={props.height}
+            m_md={props.right ? "0 0 0 auto" : undefined}
+            backgroundSize={props.backgroundSize}
+        >
+            <Row padding={`20px 0`}>
+                <Column size="1" disp_sm="none" />
+                <Column
+                    size={props.wide ? 11 : 9}
+                    size_md={props.wide ? 12 : 11}
+                    paddingRight={props.wide ? 0 : undefined}
+                    height={props.height}
+                >
+                    {props.children}
+                </Column>
+            </Row>
+        </Column>
     </Container>
 }
 

@@ -78,7 +78,6 @@ const getClosestLoc = (locations, lat, lon) => {
             location = locations[i]
         }
     }
-    console.log("The closest location is: ", location)
     return location;
 }
 
@@ -98,7 +97,6 @@ export const initSession = async (locationsArray, storedSession, seed={}) => {
     //cleanup the locations array and add all the data I need for locations
     let languageToFilter = language || "us";
     const locations = locByLanguage(locationsArray, languageToFilter);
-    console.log("Locations", locations)
 
     // remove undefineds from the seed utm's to avoid overriding the originals with undefined
     Object.keys(utm).forEach(key => utm[key] === undefined && delete utm[key])
@@ -112,7 +110,6 @@ export const initSession = async (locationsArray, storedSession, seed={}) => {
         location = locations.find(l => l.breathecode_location_slug === storedSession.location.breathecode_location_slug);
         latitude = location.latitude;
         longitude = location.longitude;
-        console.log("Location already found on session location", location)
     } 
     
     if(location === null){
@@ -148,8 +145,6 @@ export const initSession = async (locationsArray, storedSession, seed={}) => {
     }
     
     if(!language) language = location.defaultLanguage;
-    console.log("New updated location and language", language, location)
-
     const _session = {
         ...defaultSession,
         ...storedSession, v4, location, browserLang, language, latitude, longitude,
@@ -164,7 +159,6 @@ export const initSession = async (locationsArray, storedSession, seed={}) => {
         })
         .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
     };
-    console.log("Session: ", _session);
     return _session
 
 };

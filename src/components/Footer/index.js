@@ -3,6 +3,7 @@ import {Container, Row, Column} from '../Sections'
 import {Colors, RoundImage, Anchor, Button} from '../Styling'
 import {H2, H4, H5, Separator, Paragraph} from '../Heading'
 import {newsletterSignup} from "../../actions"
+import {SessionContext} from '../../session';
 import {Input} from "../Form"
 import styled from 'styled-components';
 
@@ -21,7 +22,8 @@ const Form = styled.form`
     display: flex;
 `;
 
-const Footer = ({ yml, session }) => {
+const Footer = ({ yml }) => {
+    const { session } = React.useContext(SessionContext);
     const [formStatus, setFormStatus] = useState({ status: "idle", msg: "Resquest" });
     const [formData, setVal] = useState({
         email: { value: '', valid: false },
