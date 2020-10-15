@@ -231,9 +231,6 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
       }
       file(relativePath: { eq: "images/4G_logo_negro.png" }) {
         childImageSharp {
-          fluid(maxWidth: 225) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
           fixed(width: 75) {
             ...GatsbyImageSharpFixed
           } 
@@ -245,7 +242,11 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
   return (
       <Div open={open}>
         <Link to={'/'}>
-          <Img fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo"></Img>
+          <Img 
+            critical={true}
+            fadeIn={false}
+            fixed={data.file.childImageSharp.fixed} critical={true} alt="4Geeks Logo" 
+          />
         </Link>
         <Ul open={open}>
           {menu && menu.map((item, index) => 

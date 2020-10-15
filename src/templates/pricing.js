@@ -65,12 +65,12 @@ const Pricing = (props) => {
         </Row>
       </Wrapper>
       <Wrapper>
-        <Row m_sm="0px 0px 100px 0">
+        <Row m_sm="0px 0px 0px 0">
           <Column size="7" size_sm="12">
             <H2 align="left" margin="30px 0 20px 0" type="h1">{yml.intro.heading_second}</H2>
             <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</H5>
           </Column>
-          <Column size="5" size_sm="12" height="300px" align_sm="center">
+          <Column size="5" disp_sm="none" height="300px" align_sm="center">
             <StyledBackgroundSection
               className={`image`}
               height={`250px`}
@@ -83,7 +83,7 @@ const Pricing = (props) => {
           </Column>
         </Row>
       </Wrapper>
-      <Wrapper margin="50px 0px" right
+      <Wrapper margin="50px 0px" m_sm="0" right
         customBorderRadius="1.25rem 0 0 1.25rem"
         background={Colors.lightGray}
         border="top"

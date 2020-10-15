@@ -15,12 +15,12 @@ import SEO from './SEO';
 const Layout = ({children, seo, context}) => {
   // const {slug, title, description, image, keywords} = seo;
   const [ editMode, setEditMode ] = React.useState()
-  const [ showUpcoming, setShowUpcoming ] = React.useState(false)
+  const [ showUpcoming, setShowUpcoming ] = React.useState(true)
   
   React.useEffect(() => {
     if(localStorage.getItem("edit-mode") === "true") setEditMode(true);
-    if(!RegExp('\/app?l(?:y|ica)').test(window.location.href)){
-      setShowUpcoming(true);
+    if(RegExp('\/app?l(?:y|ica)').test(window.location.href)){
+      setShowUpcoming(false);
     } 
   },[]);
   console.log("rerender layout...")

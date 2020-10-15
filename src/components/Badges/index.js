@@ -1,10 +1,9 @@
 import React from 'react';
 import {useStaticQuery, graphql, Link} from 'gatsby';
-import styled from "styled-components"
 import {Row, Column} from '../Sections'
 import Img from "gatsby-image"
 
-export default ({ location, lang }) => {
+export default ({ location, lang, loading }) => {
   const data = useStaticQuery(graphql`
     query myQueryBadges{
       allBadgesYaml{
@@ -42,6 +41,8 @@ export default ({ location, lang }) => {
               <Img 
                 style={{ height: "100%" }} 
                 imgStyle={{ objectFit: "contain" }} 
+                critical={true}
+                fadeIn={false}
                 alt={l.name} 
                 fluid={l.image.childImageSharp.fluid} 
                 />
