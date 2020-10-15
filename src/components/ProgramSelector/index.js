@@ -17,7 +17,7 @@ const strings = {
   },
   es: {
     "It takes just": "En tan sólo",
-    "weeks in": "semánas en",
+    "weeks in": "semanas en",
     "to become a": "te convertirás en"
   }
 }

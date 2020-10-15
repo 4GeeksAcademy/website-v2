@@ -23,8 +23,9 @@ const Image = styled.img`
     max-width: 100%;
     max-height: 100%;
 `;
-const Side = ({ video, image, heading, content, button }) => {
+const Side = ({ video, image, heading, content, button, bullets }) => {
 
+    // if(bullets) return <Bullets />
     if(video) return <ReactPlayer
         className='react-player alumni-player'
         file={{forceVideo: true}}
