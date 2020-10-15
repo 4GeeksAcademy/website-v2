@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import loadable from '@loadable/component'
 import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'

@@ -1,4 +1,5 @@
 import React from "react"
+import loadable from '@loadable/component'
 import {Row, Column, Wrapper, Divider, Div} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H5, H4, Title} from '../Heading'

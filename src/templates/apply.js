@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import {navigate} from 'gatsby';
+import loadable from '@loadable/component'
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
