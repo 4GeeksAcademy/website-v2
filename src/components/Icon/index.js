@@ -10,6 +10,9 @@ const Icon = ({ icon, ...rest }) => {
 }
 Icon.propTypes = {
     icon: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
+    color: PropTypes.string,
+}
+Icon.defaultProps = {
+    color: "black",
 }
 export default Icon;

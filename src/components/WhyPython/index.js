@@ -31,7 +31,6 @@ const WhyPython = ({ heading, subheading, lang }) => {
     }
   `}
         render={incoming => {
-            console.log("incoming", incoming)
             let translations = incoming.list.edges.find(({ node }) => node.fields.lang === lang);
             if(translations) translations = translations.node;
           

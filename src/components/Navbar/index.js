@@ -3,6 +3,7 @@ import styled, {css} from 'styled-components';
 import Img from "gatsby-image"
 import { useStaticQuery, graphql} from 'gatsby';
 import {Break} from '../Responsive';
+import {SessionContext} from '../../session';
 import ChooseProgram from '../ChooseProgram'
 import Card from '../Card'
 import {Colors, Button, Link} from '../Styling';
@@ -103,8 +104,12 @@ const StyledBurger = styled.div`
 `;
 
 export const Burger = (props) => {
+  const { session } = React.useContext(SessionContext);
   const [open, setOpen] = React.useState(false)
   const handleToggle = () => setOpen(!open)
+
+  let _btnInfo = {};
+  if(session && session.location) _btnInfo = { ...props.button, ...session.location.button };
   return (
     <NavBar open={open}>
       <StyledBurger open={open} onClick={handleToggle}>
@@ -112,7 +117,7 @@ export const Burger = (props) => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav onLocationChange={(slug) => props.onLocationChange(slug)} lang={props.lang} open={open} onToggle={handleToggle} menu={props.menu} button={props.button} />
+      <RightNav onLocationChange={(slug) => props.onLocationChange(slug)} lang={props.lang} open={open} onToggle={handleToggle} menu={props.menu} button={_btnInfo} />
     </NavBar>
   )
 }

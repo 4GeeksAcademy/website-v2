@@ -1,7 +1,6 @@
 import React from 'react';
 import loadable from '@loadable/component'
 import PropTypes from 'prop-types';
-import {SessionContext} from '../session';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
 import Navbar from '../components/Navbar';
@@ -14,19 +13,17 @@ import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
 const Layout = ({children, seo, context}) => {
-
-  const { session, setLocation } = React.useContext(SessionContext);
   // const {slug, title, description, image, keywords} = seo;
   const [ editMode, setEditMode ] = React.useState()
-  const [ showUpcoming, setShowUpcoming ] = React.useState(true)
+  const [ showUpcoming, setShowUpcoming ] = React.useState(false)
   
   React.useEffect(() => {
-    setEditMode(localStorage.getItem("edit-mode") === "true");
-    if(RegExp('\/app?l(?:y|ica)').test(window.location.href)){
-      setShowUpcoming(false);
+    if(localStorage.getItem("edit-mode") === "true") setEditMode(true);
+    if(!RegExp('\/app?l(?:y|ica)').test(window.location.href)){
+      setShowUpcoming(true);
     } 
   },[]);
-
+  console.log("rerender layout...")
   return (
     <StaticQuery
       query={graphql`
@@ -83,9 +80,6 @@ const Layout = ({children, seo, context}) => {
         let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
         let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
 
-        let _btnInfo = myNavbar.node.button;
-        if(session && session.location) _btnInfo = { ..._btnInfo, ...session.location.button };
-        
         return (
           <>
             {editMode && <div style={{ background: "yellow", padding: "15px" }}>
@@ -99,13 +93,13 @@ const Layout = ({children, seo, context}) => {
                 > ❌ Clear edit mode</button>
             </div>}
             <SEO {...seo} context={context} />
-            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={_btnInfo} lang={context.lang} />
+            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
             <GlobalStyle />
             <>
               {children}
             </>
-            { showUpcoming && <UpcomingProgram location={session ? session.location : null} button={_btnInfo} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
-            <Footer yml={myFooter.node} session={session} />
+            { showUpcoming && <UpcomingProgram button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
+            <Footer yml={myFooter.node} />
           </>
         )
       }}

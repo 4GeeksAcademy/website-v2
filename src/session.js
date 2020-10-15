@@ -48,9 +48,7 @@ export default ({children}) => {
         const [session, setSession] = useState(defaultSession);
         //get ip address
         useEffect(() => {
-            console.log("Use effect de layout")
             const urlParams = new URLSearchParams(window.location.search);
-            console.log("ActionsWorker", ActionsWorker)
             ActionsWorker().initSession(data.allLocationYaml, getStorage("academy_session"), {
               navigator: JSON.stringify(window.navigator), 
               location: urlParams.get('location') || urlParams.get('city') || null,
@@ -64,7 +62,6 @@ export default ({children}) => {
               language: urlParams.get('lang') || urlParams.get('language') || undefined,
             })
               .then(_session => {
-                console.log("Finish init session", _session)
                 setStorage(_session);
                 setSession(_session)
                 setTagManaerVisitorInfo(_session)
@@ -79,11 +76,11 @@ export default ({children}) => {
               const location = locByLanguage(data.allLocationYaml, _s.language).find(l => l.breathecode_location_slug === _s.location.breathecode_location_slug)
               const _session = { ..._s, location };
               setStorage(_session);
+              setSession(_session);
               dayjs.locale(_session.language == "us" ? "en" : _session.language)
             },
             setLocation: (slug) => {
               const location = locByLanguage(data.allLocationYaml, session.language).find(l => l.breathecode_location_slug === slug)
-              console.log("setLocation", location)
               if(location){
                 const _session = { ...session, location };
                 setSession(_session)
