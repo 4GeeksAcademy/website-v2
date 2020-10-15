@@ -139,7 +139,7 @@ export const BackgroundSection = ({children, className, image, height, width, bg
     return (
         <BackgroundImage
             Tag="section"
-            critical={true}
+            loading="eager"
             fadeIn={false}
             className={className}
             borderRadius={borderRadius}

@@ -243,9 +243,9 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
       <Div open={open}>
         <Link to={'/'}>
           <Img 
-            critical={true}
             fadeIn={false}
-            fixed={data.file.childImageSharp.fixed} critical={true} alt="4Geeks Logo" 
+            loading="eager"
+            fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo" 
           />
         </Link>
         <Ul open={open}>

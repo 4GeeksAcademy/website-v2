@@ -41,7 +41,7 @@ export default ({ location, lang, loading }) => {
               <Img 
                 style={{ height: "100%" }} 
                 imgStyle={{ objectFit: "contain" }} 
-                critical={true}
+                loading="eager"
                 fadeIn={false}
                 alt={l.name} 
                 fluid={l.image.childImageSharp.fluid} 

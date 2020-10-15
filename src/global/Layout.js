@@ -23,7 +23,6 @@ const Layout = ({children, seo, context}) => {
       setShowUpcoming(false);
     } 
   },[]);
-  console.log("rerender layout...")
   return (
     <StaticQuery
       query={graphql`

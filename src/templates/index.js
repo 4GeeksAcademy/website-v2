@@ -102,7 +102,7 @@ const Home = (props) => {
             style={{ height: "500px", backgroundColor: Colors.lightGray, borderRadius: "0 0 0 1.25rem" }} 
             imgStyle={{ objectFit: "cover" }} 
             alt="4Geeks Academy"
-            critical={true}
+            loading="eager"
             fadeIn={false}
             fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid} 
             backgroundSize={`cover`}
@@ -522,9 +522,6 @@ export const query = graphql`
                     childImageSharp {
                       fluid(maxHeight: 200){
                         ...GatsbyImageSharpFluid_withWebp
-                      }
-                      fixed(width: 250, height: 250) {
-                        ...GatsbyImageSharpFixed
                       }
                     }
                   }
