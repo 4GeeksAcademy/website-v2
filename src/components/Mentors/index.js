@@ -1,10 +1,30 @@
 import React, {useState} from 'react';
-
 import {useStaticQuery, graphql} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
-import {RoundImage, Colors, Over, ArrowRight} from '../Styling';
+import {RoundImage, Colors} from '../Styling';
 import {Row, Column, Divider} from '../Sections'
-import {Card} from '../Card'
+import styled from "styled-components";
+import Icon from "../Icon";
+
+const Over = styled.div`
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #f1f1f1;
+    border-radius: 10px;
+    transition: .5s ease;
+    padding: 10px 15px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+    &:hover{
+        opacity: 1;
+    }
+`
 
 const Mentors = props => {
     const data = useStaticQuery(graphql`
@@ -51,20 +71,7 @@ const Mentors = props => {
                             height="250px"
                             width="100"
                             move up={props.up}>
-                            <Over
-                                h_xs="250px"
-                                h_sm="250px"
-                                h_md="250px"
-                                h_lg="250px"
-                                h_xl="250px"
-                                w_xs="100%"
-                                w_sm="100%"
-                                w_md="100%"
-                                w_lg="100%"
-                                w_xl="100%"
-                                bottom={`0`}
-                                left={`0`}
-                            >
+                            <Over>
                                 <Divider height="10%" />
                                 <H3 fs_xs="14px"
                                     fs_sm="14px"
@@ -86,7 +93,7 @@ const Mentors = props => {
                                 <Paragraph margin="5px 0" color={Colors.verylightGray}>{item.job_title}</Paragraph>
                                 <Paragraph margin="15px 0" color={Colors.lightGray}>{item.bio}</Paragraph>
                                 <Divider height="10%" />
-                                <a href={item.linkdin != '' ? `${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer nofollow"><ArrowRight width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
+                                <a href={item.linkdin != '' ? `${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer nofollow"><Icon icon="arrowright" width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
                             </Over>
                         </RoundImage>
                     </Column>

@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Container, Row, Column, Divider, Wrapper, WrapperImage} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowRight} from '../components/Styling'
+import {RoundImage, Colors} from '../components/Styling'
 import LazyLoad from 'react-lazyload';
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
+import Icon from '../components/Icon'
 
 
 const Blog = ({data, pageContext, yml}) => {
@@ -78,7 +79,8 @@ const Blog = ({data, pageContext, yml}) => {
                                                     mb="10px"
                                                     border="1.25rem"
                                                     position="center"
-                                                    width="180px"
+                                                    width="100%"
+                                                    height="140px"
                                                     h_lg="140px"
                                                     h_md="120px"
                                                     h_sm="200px"
@@ -88,7 +90,7 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Link> : null}
                                     <Row align="around" >
 
-                                        <Column size size="12" customRespSize respSize="8" alignSelf="center" align="left">
+                                        <Column size size="12"  alignSelf="center" align="left">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
                                                 uppercase
                                                 fs_xs="20px"
@@ -105,12 +107,12 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Column>
                                     </Row>
                                     <Row height="auto" align="around">
-                                        <Column size="1" customRespSize respSize="2" alignSelf="center">
+                                        <Column size="1"  alignSelf="center">
                                             <LazyLoad scroll={true} height={30} once={true}>
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
                                             </LazyLoad>
                                         </Column>
-                                        <Column size="8" customRespSize respSize="8" alignSelf="center">
+                                        <Column size="8"  alignSelf="center">
                                             <Paragraph color={Colors.gray} align="left"
                                                 fs_xs="12px"
                                                 fs_sm="12px"
@@ -124,8 +126,8 @@ const Blog = ({data, pageContext, yml}) => {
                                                 fs_xl="12px" lineHeight="20px">{`${GetFormattedDate(item.node.frontmatter.date)}`}</Paragraph>
                                             {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
                                         </Column>
-                                        <Column size="2" customRespSize respSize="2" align="end">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><ArrowRight width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                        <Column size="2"  align="end">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                         </Column>
                                     </Row>
 
@@ -149,7 +151,7 @@ const Blog = ({data, pageContext, yml}) => {
                     </Column>
                 </Row>
                 <Row>
-                    <Separator  variant="primary" />
+                    <Separator variant="primary" />
                 </Row>
                 <Divider height="50px" />
                 <Row>
@@ -159,14 +161,14 @@ const Blog = ({data, pageContext, yml}) => {
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
                                         <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
-                                            <LazyLoad scroll={true} height={200} once={true}>
+                                            <LazyLoad scroll={true} height={200} width="100%" once={true}>
                                                 <RoundImage
                                                     url={item.node.frontmatter.image}
                                                     bsize="cover"
                                                     mb="10px"
                                                     border="1.25rem"
                                                     position="center"
-                                                    width="180px"
+                                                    width="100%"
                                                     h_lg="140px"
                                                     h_md="120px"
                                                     h_sm="200px"
@@ -176,7 +178,7 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Link> : null}
                                     <Row align="around" >
 
-                                        <Column size size="12" customRespSize respSize="8" alignSelf="center" align="left">
+                                        <Column size size="12"  alignSelf="center" align="left">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
                                                 uppercase
                                                 fs_xs="20px"
@@ -193,12 +195,12 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Column>
                                     </Row>
                                     <Row height="auto" align="around">
-                                        <Column size="1" customRespSize respSize="2" alignSelf="center">
+                                        <Column size="1"  alignSelf="center">
                                             <LazyLoad scroll={true} height={30} once={true}>
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
                                             </LazyLoad>
                                         </Column>
-                                        <Column size="8" customRespSize respSize="8" alignSelf="center">
+                                        <Column size="8"  alignSelf="center">
                                             <Paragraph color={Colors.gray} align="left"
                                                 fs_xs="12px"
                                                 fs_sm="12px"
@@ -212,8 +214,8 @@ const Blog = ({data, pageContext, yml}) => {
                                                 fs_xl="12px" lineHeight="20px">{`${GetFormattedDate(item.node.frontmatter.date)}`}</Paragraph>
                                             {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
                                         </Column>
-                                        <Column size="2" customRespSize respSize="2" align="end">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><ArrowRight width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                        <Column size="2"  align="end">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                         </Column>
                                     </Row>
 

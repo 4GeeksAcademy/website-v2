@@ -5,7 +5,7 @@ import {H3, H4, Paragraph} from '../Heading'
 import graphic from "../../assets/images/graphic.png"
 import Trend from 'react-trend';
 import {Colors} from '../Styling'
-import {Card} from '../Card'
+import Card from '../Card'
 import Fragment from "../Fragment"
 export default (props) => {
     const jobs = props.lang[0].node.jobs

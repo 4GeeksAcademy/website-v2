@@ -2,10 +2,8 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors, StyledBackgroundSection} from '../../components/Styling'
-import {Device, Break} from '../Responsive'
-import {Paragraph} from '../Heading'
+import {Break} from '../Responsive'
 import Fragment from "../Fragment"
-import {InsertChartOutlinedTwoTone} from '@material-ui/icons';
 
 const containerVariants = {
     fluid: {
@@ -34,9 +32,11 @@ export const Container = styled(Fragment)`
             }
             `: ''
     }
+    display: ${props => props.display};
     width: ${props => containerVariants[props.variant || "fixed"]};
     height: ${props => props.height};
     margin: ${props => props.margin || "initial"};
+    padding: ${props=> props.padding};
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -97,58 +97,18 @@ export const Row = styled(Fragment)`
         width: ${props => props.width_sm};
         display: ${props => props.display_sm};
         margin: ${props => props.m_sm};
-        ${props => props.customRespSize
-        ? css`justify-content: ${props => props.alignResp};`
-        : css`justify-content: center;`};
+        justify-content: ${props => props.alignResp || "center"};
         flex-direction: ${props => props.flexDirection_sm};
     }
     @media ${Break.xs}{
         width: ${props => props.width_xs};
         display: ${props => props.display_xs};
-        ${props => props.customRespSize
-        ? css`justify-content: ${props => props.alignResp};`
-        : css`justify-content: center;`};
+        justify-content: ${props => props.alignResp || "center"};
         padding: ${props => props.p_xs};
         margin: ${props => props.m_xs};
     }
 `
 
-export const Sidebar = styled.div`
-position: absolute;
-left: 40px;
-box-shadow: ${props => props.shadow
-        && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
-    }
-
-border-radius: ${props => props.borders};
-
-@media ${Device.xs}{
-    display: ${props => props.display_xs};
-}
-@media  ${Device.sm}{
-    display: ${props => props.display_sm};
-}
-@media ${Device.md}{
-    display: ${props => props.display_md};
-    
-}
-@media ${Device.lg}{
-    position: sticky;
-    top: 12%;
-    width: 160px;
-    left:15px;
-    padding: 15px;
-}
-@media ${Device.xl} {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 12%;
-    width: 180px;
-    left: 20px;
-    padding: 15px;
-} 
-
-`
 export const Div = styled.div`
     display: ${props => props.display || "flex"};
     flex-wrap: nowrap; 
@@ -254,33 +214,33 @@ export const Wrapper = (props) => {
         p_sm={props.p_sm}
         p_xs={props.p_xs}
         variant="fluid"
+        display="flex"
     >
-        <Row>
-            <Column size="1" disp_md="none" />
-            <Column
-                size="11"
-                url={props.image}
-                border={props.border}
-                customBorderRadius={props.customBorderRadius}
-                color={props.background}
-                align={props.align}
-                height={props.height}
-                m_md={props.right ? "0 0 0 auto" : undefined}
-                backgroundSize={props.backgroundSize}
-            >
-                <Row padding={`20px 0`}>
-                    <Column size="1" disp_sm="none" />
-                    <Column
-                        size={props.wide ? 11 : 9}
-                        size_md={props.wide ? 12 : 11}
-                        paddingRight={props.wide ? 0 : undefined}
-                        height={props.height}
-                    >
-                        {props.children}
-                    </Column>
-                </Row>
-            </Column>
-        </Row>
+        <Column size="1" disp_md="none" />
+        <Column
+            size="11"
+            size_sm="12"
+            url={props.image}
+            border={props.border}
+            customBorderRadius={props.customBorderRadius}
+            color={props.background}
+            align={props.align}
+            height={props.height}
+            m_md={props.right ? "0 0 0 auto" : undefined}
+            backgroundSize={props.backgroundSize}
+        >
+            <Row padding={`20px 0`}>
+                <Column size="1" disp_sm="none" />
+                <Column
+                    size={props.wide ? 11 : 9}
+                    size_md={props.wide ? 12 : 11}
+                    paddingRight={props.wide ? 0 : undefined}
+                    height={props.height}
+                >
+                    {props.children}
+                </Column>
+            </Row>
+        </Column>
     </Container>
 }
 

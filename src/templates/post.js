@@ -1,44 +1,14 @@
 import React, {useContext} from 'react'
-import Link from 'gatsby-link'
+import {Link} from 'gatsby'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Div, Row, Column, Divider, WrapperCustom} from '../components/Sections'
-import {RoundImage, Colors, Check, ArrowLeft} from '../components/Styling'
+import {Div, Row, Column} from '../components/Sections'
+import {RoundImage, Colors} from '../components/Styling'
 import Layout from '../global/Layout'
-import {Card} from '../components/Card'
+import Card from '../components/Card'
 import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
 import {TwitterFollowButton} from 'react-twitter-embed';
 import "../assets/css/single-post.css"
-import {
-    FacebookShareButton,
-    TwitterShareButton,
-    TwitterIcon,
-    FacebookIcon,
-    FacebookShareCount
-} from "react-share";
-
-{/* <Row>
-
-<TwitterShareButton
-    className="network__share-button"
-    url={`https://www.4geeksacademy.co/${pageContext.slug}`}
-    title={"share"}
->
-    <TwitterIcon
-        size={24} round={true}
-    />
-</TwitterShareButton>
-<FacebookShareButton
-    className="network__share-button"
-    url={`https://www.4geeksacademy.co/${pageContext.slug}`}
-    title={"share"}
->
-    <FacebookIcon
-        size={24} round={true}
-    />
-</FacebookShareButton>
-<Link to="/blog"><ArrowLeft width="24px" color={Colors.yellow} fill={Colors.yellow} /></Link>
-</Row> */}
 
 export default function Template (props) {
     const {data, pageContext} = props;
@@ -75,10 +45,10 @@ export default function Template (props) {
                         <Div width="400px" w_sm="200px" margin="0 0 0 20px" display="block" align="left" alignSelf="center">
                             <Paragraph color={Colors.gray} fontWeight="900" fs_sm="12px" align="left" align_sm="left" fontSize="16px" lineHeight="20px"><a href={`https://twitter.com/${filtered.name || "4GeeksAcademy"}`} rel="author noopener noreferrer nofollow">{`${filtered.name || '4Geeks Academy'} on ${postDate}`}</a></Paragraph>
                             <Paragraph color={Colors.gray} align="left" fs_sm="10px" align_sm="left" fontSize="14px" lineHeight="14px">{`${filtered.bio}`}</Paragraph>
-                            <Paragraph color={Colors.gray} margin="0 0 10px 0"  fs_sm="10px" fontWeight="900" align="left" align_sm="left" fontSize="14px" lineHeight="14px">{`${post.fields.readingTime.text}`}</Paragraph>
+                            <Paragraph color={Colors.gray} margin="0 0 10px 0" fs_sm="10px" fontWeight="900" align="left" align_sm="left" fontSize="14px" lineHeight="14px">{`${post.fields.readingTime.text}`}</Paragraph>
                         </Div>
                     </Div>
-                    {filtered.username && 
+                    {filtered.username &&
                         <Div width="400px" w_sm="100%" margin="auto" align="center" padding="0 0 0 50px" p_sm="0" display="block" align="left" alignSelf="center">
                             <TwitterFollowButton screenName={filtered.username} />
                         </Div>
@@ -93,9 +63,9 @@ export default function Template (props) {
                                 display="inline-block"
                                 padding="5px 8px"
                                 borders=".2rem"
-                                margin="5px 3px"
+                                margin="7px"
                             >
-                                <Link to={"/us/blog/tag/"+tag}>{tag}</Link>
+                                <Link to={"/us/blog/tag/" + tag}>{tag}</Link>
                             </Card>
                         )
                     })}
@@ -112,8 +82,8 @@ export default function Template (props) {
                         <RoundImage border="1.25rem" width="100%" height="300px" bsize="contain" position="center" url={post.frontmatter.image} />
                     </LazyLoad>
                 </Column>
-                <Column size="12"  margin="10px 0px" >
-                    <div className="single-post" dangerouslySetInnerHTML={{__html: post.html.replace(/<h1>.*<\/h1>/gm,"")}}></div>
+                <Column size="12" margin="10px 0px" >
+                    <div className="single-post" dangerouslySetInnerHTML={{__html: post.html.replace(/<h1>.*<\/h1>/gm, "")}}></div>
                 </Column>
                 <Column size="12" margin="10px 0px 50px 0px" align="left">
                     {post.frontmatter.tags && post.frontmatter.tags.map((tag, i) => {
@@ -125,7 +95,7 @@ export default function Template (props) {
                                 padding="5px 8px"
                                 display="inline-block"
                                 borders=".2rem"
-                                margin="5px 3px">
+                                margin="7px">
                                 {tag}
                             </Card>
                         )

@@ -99,6 +99,11 @@ a.nav-item.nav-link.side {
     text-align: center;
     background: transparent!important;
 }
+.carousel .slide iframe{
+    margin: 0 !important;
+    width: 100% !important;
+    border-radius: 1.25rem;
+}
 .carousel {
     position: relative;
     width: 100%;

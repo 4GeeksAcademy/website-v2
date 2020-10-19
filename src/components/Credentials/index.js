@@ -1,7 +1,8 @@
 import React from 'react';
 import {H2, H3, H4} from '../Heading'
-import {Card} from '../Card'
-import {Graduation, Trophy, Book, Hand, Colors} from '../Styling'
+import Card from '../Card'
+import {Colors} from '../Styling'
+import Icon from "../Icon"
 import {Row, Column, Container, Divider} from '../Sections'
 
 export default props => {
@@ -25,10 +26,7 @@ export default props => {
                 align="center"
                 transform={`translateY(-${(index % 2 !== 0) ? props.up + "px" : ((props.up * 20) / 100) + "px"})`}
               >
-                {(i.slug === "campuses" || i.slug === "campus") && <Book width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                {(i.slug === "alumni" || i.slug === "graduados") && <Graduation width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                {(i.slug === "rating" || i.slug === "valoracion") && <Trophy width="48" color={Colors.yellow} fill={Colors.yellow} />}
-                {(i.slug === "hired" || i.slug === "contratados") && <Hand width="48" color={Colors.yellow} fill={Colors.yellow} />}
+                <Icon icon={i.icon} width="48" color={Colors.yellow} fill={Colors.yellow} />
                 {(i.slug === "hired" || i.slug === "contratados") ? 
                   <H3 margin="10px 0 20px 0">{i.value}{i.symbol}</H3> 
                   :

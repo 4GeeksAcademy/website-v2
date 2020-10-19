@@ -1,35 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import {useStaticQuery, graphql, navigate} from 'gatsby';
-import styled from 'styled-components';
 import {Row, Container, Column, Divider} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, ArrowRight, Button, RoundImage} from '../Styling';
-import {Card} from '../Card';
+import {Colors, Button, RoundImage} from '../Styling';
+import Card from '../Card';
+import Icon from "../Icon"
 
-const days = [
-    'Sun',
-    'Mon',
-    'Tue',
-    'Wed',
-    'Thu',
-    'Fri',
-    'Sat'
-]
-const months = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
-]
-const RecentPosts = () => {
+const BlogPosts = ({ filter, limit, featured }) => {
     const data = useStaticQuery(graphql`
         query myPostsQuery{
             allMarkdownRemark {
@@ -43,6 +20,7 @@ const RecentPosts = () => {
                       image
                       avatar
                       excerpt
+                      featured
                     }
                     rawMarkdownBody
                     html
@@ -56,15 +34,22 @@ const RecentPosts = () => {
               }
             }
         `)
-    let post = data.allMarkdownRemark.edges;
-
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState(data.allMarkdownRemark.edges)
     useEffect(() => {
-        let newArray = [];
-        for (let i = 0; i < 3; i++) {
-            newArray.push(post[Math.floor(Math.random() * post.length)]);
-        }
-        setPosts(newArray);
+        let _posts = data.allMarkdownRemark.edges;
+        if(featured) _posts = _posts.filter(p => p.node.frontmatter.featured)
+        
+        if(filter){
+            _posts = _posts.filter(p => filter.includes(p.node.frontmatter.slug));
+            setPosts(_posts)
+        } 
+        else{
+            let newArray = [];
+            for (let i = 0; i < limit; i++) {
+                newArray.push(_posts[Math.floor(Math.random() * _posts.length)]);
+            }
+            setPosts(newArray)
+        } 
     }, []);
 
     return (
@@ -105,7 +90,7 @@ const RecentPosts = () => {
                             padding="10px"
                             fontSize="12px"
                             color="gray" align="left" margin="10px 0">{i.node.frontmatter.excerpt}</Paragraph>
-                        <ArrowRight width="32" color={Colors.blue} fill={Colors.blue}
+                        <Icon icon="arrowright" width="32" color={Colors.blue} fill={Colors.blue}
                             style={{
                                 position: "absolute",
                                 bottom: "10px",
@@ -118,5 +103,8 @@ const RecentPosts = () => {
         </Row>
     )
 };
-
-export default RecentPosts;
+BlogPosts.defaultProps = {
+    limit: 3,
+    filter: null
+}
+export default BlogPosts;

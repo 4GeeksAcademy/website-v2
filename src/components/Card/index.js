@@ -5,9 +5,10 @@ import {Break} from '../Responsive'
 import {FadeIn} from '../Animations'
 import Fragment from "../Fragment"
 import {navigate} from "gatsby";
-import {RoundImage, Colors, Check} from '../Styling'
+import {RoundImage, Colors} from '../Styling'
 import {Row, Column} from '../Sections'
 import {Paragraph} from '../Heading'
+import Icon from '../Icon'
 
 const _colors = () => ({
     black: Colors.black,
@@ -15,7 +16,7 @@ const _colors = () => ({
     darkGray: Colors.borderGray,
     blue: Colors.blue,
 })
-export const Card = styled(Fragment)`
+const Card = styled(Fragment)`
     :focus {outline: none;};
     cursor: ${props => props.onClick ? "pointer" : "inherit"};
     overflow: ${props => props.overflow};
@@ -88,9 +89,9 @@ Card.defaultProps = {
     margin_sm: null,
     margin_xs: null,
 };
+export default Card;
 
 export const GeekCard = ({  heading, bullets, image, to, icon  }) => {
-    const Icon = icon;
     return <Card shadow
       cursor="pointer"
       style={{position: "relative"}}
@@ -108,9 +109,9 @@ export const GeekCard = ({  heading, bullets, image, to, icon  }) => {
           return (
             <Row key={index} marginBottom="5px">
               <Column size="1" alignSelf="top">
-                <Check width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                <Icon icon="check" width="12px" color={Colors.yellow} fill={Colors.yellow} />
               </Column>
-              <Column size="10" customRespSize respSize="8" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+              <Column size="10"  test paddingRight="0px" paddingLeft="5px" alignSelf="center">
                 <Paragraph
                   fs_sm="14px"
                   fs_md="16px"
@@ -122,6 +123,6 @@ export const GeekCard = ({  heading, bullets, image, to, icon  }) => {
             </Row>
           )
         })}
-        <Icon style={{position: "absolute", right: "10px", bottom: "5px"}} width="32" color={Colors.yellow} fill={Colors.yellow} />
+        <Icon icon={icon} style={{position: "absolute", right: "10px", bottom: "5px"}} width="32" color={Colors.yellow} fill={Colors.yellow} />
     </Card>
   }

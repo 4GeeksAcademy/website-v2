@@ -1,8 +1,8 @@
 import React from 'react';
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
 import { Column, Wrapper, Divider, Sidebar} from '../components/Sections'
 import {Title, H1, H2, H3, Paragraph} from '../components/Heading'
-import {Button, Colors, Check, ArrowRight, RoundImage} from '../components/Styling'
+import {Button, Colors, RoundImage} from '../components/Styling'
 import Link from 'gatsby-link'
 
 const ThankYou = (props) => {

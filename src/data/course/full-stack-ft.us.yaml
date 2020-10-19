@@ -33,8 +33,8 @@ credentials:
 
 ## PROGRAM DETAILS
 details:
-  heading: PROGRAM DETAILS
-  sub_heading: "Full Time"
+  heading: PROGRAM DETAILS FULL-TIME
+  sub_heading: Real life proyects and exactly what companies are looking for
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -84,19 +84,12 @@ syllabus:
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
-  sub_heading: "View full comparison table >"
+  sub_heading: "Compare with other schools"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
   heading: "And enjoy Career Support... for Life!"
   geek_pal:
-    - Resume building
-    - Github profile building
-    - Mock interview preparation
-    - Customized interview preparation session for targeted jobs
-    - Personal Branding coaching
-    - Post-graduation coding practices and exercises
-  geek_force:
     - One teacher every four students (1:4)
     - One senior teacher every twelve students (1:12)
     - Unlimited on-demand in-person or online mentoring sessions
@@ -106,6 +99,13 @@ geek_data:
     - Online support chat 12 hours a day
     - Online streaming of classes
     - Recording of classes for later review
+  geek_force:
+    - Resume building
+    - Github profile building
+    - Mock interview preparation
+    - Customized interview preparation session for targeted jobs
+    - Personal Branding coaching
+    - Post-graduation coding practices and exercises
 
 ## PRICES AND PAYMENTS SECTION
 prices:
@@ -155,7 +155,7 @@ typical:
 ## ALUMNI SECTION
 alumni:
   heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+  sub_heading: "Get to know our graduates and some of the projects you will be building during the program"
 
 ## SIDEBAR
 sidebar:

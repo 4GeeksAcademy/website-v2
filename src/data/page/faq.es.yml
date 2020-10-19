@@ -4,12 +4,16 @@ meta_info:
   description: ""
   image: ""
   keywords: ""
-  redirects: ["/preguntas-frecuentes", "/es/preguntas-frecuentes"]
+  redirects: [
+    "/preguntas-frecuentes", 
+    "/es/preguntas-frecuentes",
+    "/es/preguntas-frequentes", 
+    "/preguntas-frequentes"
+  ]
 
 banner:
-  tagline: FREQUENTLY ASKED QUESTIONS
-  sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
-  image: "/images/bg/4Geeks-events-bg.jpg"
+  tagline: PREGUNTAS FRECUENTES
+  image: "../../../static/images/bg/4Geeks-events-bg.jpg"
 
 faq:
   - question: "Do I HAVE to bring my own laptop?"

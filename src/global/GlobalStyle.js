@@ -3,6 +3,4 @@ import reset from 'styled-reset-advanced';
 
 export default createGlobalStyle`
   ${reset};
-
-  
 `;

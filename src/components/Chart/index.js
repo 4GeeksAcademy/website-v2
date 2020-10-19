@@ -3,6 +3,7 @@ import styled, {css} from 'styled-components';
 import Chart from "react-google-charts";
 const labelCustom = styled.div`
     font-family: 'Lato';
+    font-display: swap;
     font-size: 5px;
     color: red;
 `
@@ -61,32 +62,3 @@ export const Charts = (props) => {
         </div>
     )
 }
-
-{/* <PieChart
-                animate={true}
-                animationDuration={7000}
-                animationEasing="ease-out"
-                cx={50}
-                cy={50}
-                data={props.dataArray}
-                labelStyle={{
-                    fontFamily: 'Lato',
-                    fontSize: '8px'
-                }}
-
-                label={true}
-                labelPosition={70}
-                lengthAngle={360}
-                lineWidth={15}
-                onClick={undefined}
-                onMouseOut={undefined}
-                onMouseOver={undefined}
-                paddingAngle={10}
-                radius={50}
-                rounded
-                startAngle={0}
-                viewBoxSize={[
-                    100,
-                    100
-                ]}
-            /> */}

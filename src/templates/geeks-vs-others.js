@@ -3,7 +3,7 @@ import {Row, Column, Wrapper, Divider, Div} from '../components/Sections'
 import {Title} from '../components/Heading'
 import {Colors} from '../components/Styling'
 import GeeksVsOthers from '../components/GeeksVsOthers'
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
 import {graphql} from 'gatsby'
 
 const View = (props) => {

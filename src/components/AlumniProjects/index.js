@@ -1,14 +1,16 @@
 import React, {useState, useEffect} from 'react';
-import {Row, Container, Column, Divider, Div} from '../Sections'
+import loadable from '@loadable/component'
+import {Row, Column, Div} from '../Sections'
 import PropTypes from "prop-types"
-import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, Anchor, Teacher, Glasses, Clock, Linkedin, Github, Button, RoundImage, StyledBackgroundSection} from '../Styling';
-import {Card} from '../Card';
+import {H2, H3, H4, H5, Paragraph} from '../Heading';
+import {Colors, Anchor, Button, StyledBackgroundSection, Span} from '../Styling';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
-import ReactPlayer from 'react-player'
+import Icon from "../Icon"
+
+const ReactPlayer = loadable(() => import('../ReactPlayer'))
 
 const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
@@ -58,17 +60,12 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                 {item.alumni.map((alumni, i) => {
                                     return (
                                         <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
-                                            <H4
-                                                fs_xs="16px"
-                                                fs_sm="16px"
-                                                fs_md="18px"
-                                                fs_lg="20px"
-                                                fontSize="20px"
-                                                align_xs="center"
+                                            <H5
                                                 align="left"
+                                                align_sm="left"
                                                 fontWeight={`400`}
                                             >{`${alumni.first_name} ${alumni.last_name}`}
-                                            </H4>
+                                            </H5>
                                             <Row marginBottom="5px">
                                                 <Column size="12" alignSm="center" display={`flex`} flexDirection={`row`} alignItems={`end`}>
                                                     <Paragraph
@@ -86,15 +83,15 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                                     {alumni.github != "" &&
                                                         <Span style={{width: "22px", height: "22px"}} margin="0 5px" >
                                                             <a target="_blank" href={alumni.github} rel="noopener noreferrer nofollow">
-                                                                <Github width="22" color={Colors.gray} fill={Colors.gray} />
+                                                                <Icon icon="github" width="22" color={Colors.gray} fill={Colors.gray} />
                                                             </a>
                                                         </Span>
                                                     }
-                                                    {/* {alumni.github != "" && <Github width="14" color={Colors.blue} fill={Colors.blue} />} */}
+                                                    {/* {alumni.github != "" && <Icon icon="github" width="14" color={Colors.blue} fill={Colors.blue} />} */}
                                                     {alumni.linkedin != "" &&
                                                         <Span style={{width: "22px", height: "22px"}}>
                                                             <a target="_blank" href={alumni.linkedin} rel="noopener noreferrer nofollow">
-                                                                <Linkedin width="22" color={Colors.gray} fill={Colors.gray} />
+                                                                <Icon icon="linkedin" width="22" color={Colors.gray} fill={Colors.gray} />
                                                             </a>
                                                         </Span>
                                                     }
@@ -122,11 +119,11 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                     fs_xl="16px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.project_content}
                                 </Paragraph>
                                 <Div>
-                                    {item.project_video && <Anchor href={`${item.project_video}`} target="_blank" rel="noopener noreferrer nofollow">
+                                    {item.project_video && <Anchor to={`${item.project_video}`} target="_blank" rel="noopener noreferrer nofollow">
                                             <Paragraph margin={`10px 5px 0 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Video Demo •</Paragraph>
                                         </Anchor>
                                     }
-                                    {item.live_link && <Anchor href={`${item.live_link}`} target="_blank" rel="noopener noreferrer nofollow">
+                                    {item.live_link && <Anchor to={`${item.live_link}`} target="_blank" rel="noopener noreferrer nofollow">
                                             <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link </Paragraph>
                                         </Anchor>
                                     }
@@ -152,15 +149,15 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                 :
                                 <Column size="6" size_sm="12" paddingRight={`0`}>
                                     <ReactPlayer
-                                        className='react-player alumni-player'
-                                        file={{forceVideo: true}}
-                                        style={{height: playerHeight}}
-                                        light={item.project_image}
-                                        controls={true}
-                                        url={item.project_video}
-                                        width='100%'
-                                        height='100%'
-                                    /></Column>}
+                                        id={item.project_video}
+                                        thumb={item.project_image}
+                                        imageSize="maxresdefault"
+                                        styles={{
+                                            width: "100%",
+                                            height: "350px"
+                                        }}
+                                    />
+                                </Column>}
                         </Row>
                     )
                 })
@@ -187,6 +184,7 @@ AlumniProjects.propTypes = {
 }
 AlumniProjects.defaultProps = {
     limit: 0,
+    playerHeight: "100%"
 }
 export default AlumniProjects;
 

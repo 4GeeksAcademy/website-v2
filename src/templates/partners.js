@@ -4,7 +4,7 @@ import {Title, H4, Paragraph} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 import Credentials from '../components/Credentials'
 import WhoIsHiring from '../components/WhoIsHiring'
-import BaseRender from './_baseRender'
+import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
 import LeadForm from "../components/LeadForm/index.js";
 import Modal from "../components/Modal"
@@ -161,7 +161,7 @@ export const query = graphql`
           node {
             credentials {
               title
-              slug
+              icon
               value
               symbol
               symbol_position
