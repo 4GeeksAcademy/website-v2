@@ -16,7 +16,7 @@ projects:
       They have created an application that integrates both software and hardware that allows to weigh 
       the amount of plastic, glass or garbage there is within a container and how much it will 
       affect both the recycling process as well as the environment.
-    project_video: "https://www.youtube.com/watch?v=cKcZD0_1IKk"
+    project_video: "cKcZD0_1IKk"
     github_repo: "https://github.com/gabsssrod/ReduceReuseRecycle-frontEnd"
     live_link: "https://re-mindful.vercel.app/"
     alumni:
@@ -36,7 +36,7 @@ projects:
     slug: "raspberry-sky"
     project_image: "../../../../static/images/projects/rocket-app.jpg"
     project_content: "A platform capable of receiving information (wind, temperature, geolocation, etc) from rockets being launched to outer space. The platform also lets you make arrangements to send your own rocket, track it and receive messages from it."
-    project_video: "https://www.youtube.com/watch?v=OZfv9kYl0_o"
+    project_video: "OZfv9kYl0_o"
     github_repo: "https://github.com/Luis846/SatelliteBetaSoftware"
     live_link: "https://sattelite-beta.vercel.app/"
     alumni:
@@ -57,7 +57,7 @@ projects:
     slug: "ims"
     project_image: "../../../../static/images/projects/ims.jpg"
     project_content: "IMS is a Pharmacy Inventory and logistics tracking system built using Python, Javascript, React, and integration with Barcode Readers, SMS, the Twillio API, and GPS Tracking Systems. IMS holds stock quantities of all products stored and sold by the Drug Store and then tracks the vehicles that deliver those sells."
-    project_video: "https://www.youtube.com/watch?v=TTjSZ2Lud2E"
+    project_video: "TTjSZ2Lud2E"
     live_link: "https://ims-frontend.vercel.app/react-hello-webapp/private/dashboard"
     github_repo: "https://github.com/sebastianpd1/IMS-FRONTEND"
     alumni:
@@ -84,7 +84,7 @@ projects:
     slug: "the-hour"
     project_image: "../../../../static/images/projects/the-hour.png"
     project_content: "What are you doing tonight? The Hour is your perfect night-life sidekick, find information about bars, night clubs and what is happening in the city! This application stands out because of its UI/UX component, very easy to use, mobile first and build around React.js, Javascript and Headless Wordpress API for easy management."
-    project_video: "https://www.youtube.com/watch?v=KTeOIU3eVrc"
+    project_video: "KTeOIU3eVrc"
     live_link: ""
     github_repo: "https://github.com/dcbounds/TheHour"
     alumni:
