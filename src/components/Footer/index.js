@@ -29,7 +29,7 @@ const Footer = ({ yml }) => {
         email: { value: '', valid: false },
         consent: { value: true, valid: true },
     });
-    
+
     return (
     <Container github="/components/footer" 
         width="fluid" 
@@ -108,6 +108,7 @@ const Footer = ({ yml }) => {
                             }}
                         >
                         {item.items.map((ln, i) => {
+                            
                             return (
                                 <Anchor
                                     key={i}

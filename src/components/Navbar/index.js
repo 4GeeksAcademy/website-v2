@@ -6,7 +6,7 @@ import {Break} from '../Responsive';
 import {SessionContext} from '../../session';
 import ChooseProgram from '../ChooseProgram'
 import Card from '../Card'
-import {Colors, Button, Link} from '../Styling';
+import {Colors, Button, Anchor, Link} from '../Styling';
 
 export const NavBar = styled.nav`
     background-color: ${props => props.open ? "white" : null};
@@ -110,6 +110,7 @@ export const Burger = (props) => {
 
   let _btnInfo = {};
   if(session && session.location) _btnInfo = { ...props.button, ...session.location.button };
+
   return (
     <NavBar open={open}>
       <StyledBurger open={open} onClick={handleToggle}>
@@ -270,10 +271,10 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
                   }
                 />
                 :
-                <NavItem fs_sm="18px" key={index}><Link onClick={onToggle} to={item.link} key={index}>{item.name}</Link></NavItem>
+                <NavItem fs_sm="18px" key={index}><Anchor onClick={onToggle} to={item.link} key={index}>{item.name}</Anchor></NavItem>
           )}
         </Ul>
-        <Link onClick={onToggle} to={button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+        <Link onClick={onToggle} to={button.button_link || "#"}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
       </Div>
   )
 }

@@ -68,7 +68,8 @@ const Pricing = (props) => {
         <Row m_sm="0px 0px 0px 0">
           <Column size="7" size_sm="12">
             <H2 align="left" margin="30px 0 20px 0" type="h1">{yml.intro.heading_second}</H2>
-            <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</H5>
+            <Paragraph align="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</Paragraph>
+            {yml.intro.bullets.map(b => <Paragraph align_sm="left" margin="10px 0">• {b}</Paragraph>)}
           </Column>
           <Column size="5" disp_sm="none" height="300px" align_sm="center">
             <StyledBackgroundSection
@@ -169,9 +170,6 @@ export const query = graphql`
             intro{
                 image {
                   childImageSharp {
-                    fluid(maxHeight: 300, maxWidth: 300){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
                     fixed(width: 300, height: 300) {
                       ...GatsbyImageSharpFixed
                     }
@@ -179,17 +177,15 @@ export const query = graphql`
                 }
                 image_second {
                   childImageSharp {
-                    fluid(maxWidth: 300){
+                    fluid(maxWidth: 450){
                       ...GatsbyImageSharpFluid_withWebp
-                    }
-                    fixed(width: 250, height: 250) {
-                      ...GatsbyImageSharpFixed
                     }
                   }
                 }
                 content
                 content_second
                 heading_second
+                bullets
                 heading
             }
             prices{

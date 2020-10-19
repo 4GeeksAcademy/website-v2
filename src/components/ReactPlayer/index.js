@@ -25,7 +25,7 @@ const Image = styled.div`
   margin: auto;
   height: 100%;
   overflow: hidden;
-  box-shadow: ${props => props.theme.shadow};
+  box-shadow: ${props => props.shadow};
   border-radius: 1.25rem;
 `
 
