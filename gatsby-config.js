@@ -37,6 +37,22 @@ module.exports = {
     // 'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-loadable-components-ssr',
     {
+      resolve: "gatsby-plugin-rollbar",
+      options: {
+        accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
+        // For all configuration options, see https://docs.rollbar.com/docs/rollbarjs-configuration-reference
+        captureUncaught: true,
+        captureUnhandledRejections: true,
+        payload: {
+          environment: process.env.NODE_ENV,
+          server: {
+            branch: process.env.VERCEL_GITHUB_COMMIT_REF,
+            host: process.env.VERCEL_URL,
+          }
+        }
+      }
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
