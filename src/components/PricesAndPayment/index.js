@@ -162,9 +162,6 @@ const PricesAndPayments = (props) => {
                     onMouseOver={() => setActiveStep(index)}
                     background={index <= activeStep ? Colors.yellow : Colors.black}
                   >
-                    {/* <StepButton icon={<Icon icon="circle" width="14" stroke={Colors.yellow} fill={Colors.yellow} />} onMouseOver={() => setActiveStep(index)}> */}
-                    {/* <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel> */}
-                    {/* </StepButton> */}
                     <StepLabel>{label}</StepLabel>
                   </StepperCircle >
                 ))}
