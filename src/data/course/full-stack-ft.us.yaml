@@ -133,7 +133,7 @@ typical:
       step: 2
     - title: "Lesson Time"
       time: "10:00 AM"
-      icon: LaptopCode
+      icon: laptopcode
       content: "Incremental: Each morning mentors will introduce a small set of new concepts and techniques that will help you along the way."
       step: 3
     - title: "Lunch Time"

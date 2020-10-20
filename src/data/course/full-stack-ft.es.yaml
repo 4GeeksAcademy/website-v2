@@ -139,7 +139,7 @@ typical:
       step: 2
     - title: "Clase del día"
       time: "10:00 AM"
-      icon: LaptopCode
+      icon: laptopcode
       content: "Incremental: cada mañana, los mentores presentarán un pequeño conjunto de nuevos conceptos y técnicas que te ayudarán en el camino."
       step: 3
     - title: "¡Hora de la comida!"
