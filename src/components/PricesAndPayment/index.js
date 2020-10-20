@@ -162,7 +162,7 @@ const PricesAndPayments = (props) => {
                     onMouseOver={() => setActiveStep(index)}
                     background={index <= activeStep ? Colors.yellow : Colors.black}
                   >
-                    <StepLabel>{label}</StepLabel>
+                    <StepLabel color={index == activeStep ? Colors.yellow : Colors.white}>{label}</StepLabel>
                   </StepperCircle >
                 ))}
               </StepperContainer>
@@ -205,7 +205,7 @@ const StepperContainer = styled.div`
   margin: 0 0 20px 0;
 `
 const StepLabel = styled.div`
-  color: white;
+  color: ${props => props.color};
   width: 100px;
   font-family: 'Lato', sans-serif;
   font-size: 8px;
