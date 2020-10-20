@@ -1,5 +1,4 @@
 import React from "react"
-import loadable from '@loadable/component'
 import {Row, Column, Wrapper, Divider, Div} from '../Sections'
 import {H2, H5, H4, Title} from '../Heading'
 import {Colors,Img, Button} from '../Styling'
@@ -9,15 +8,15 @@ import News from '../News'
 import {navigate} from "gatsby"
 import {requestSyllabus} from "../../actions"
 
-const ReactPlayer = loadable(() => import('../ReactPlayer'))
-const TestimonialsCarrousel = loadable(() => import('../Testimonials'))
-const Why4Geeks = loadable(() => import('../Why4Geeks'))
-const WhyPython = loadable(() => import('../WhyPython'))
-const AlumniProjects = loadable(() => import('../AlumniProjects'))
-const GeeksVsOthers = loadable(() => import('../GeeksVsOthers'))
-const ProgramDetails = loadable(() => import('../ProgramDetails'))
-const ProgramDetailsMobile = loadable(() => import('../ProgramDetailsMobile'))
-const LeadForm = loadable(() => import('../LeadForm'))
+import ReactPlayer from '../ReactPlayer';
+import TestimonialsCarrousel from '../Testimonials';
+import Why4Geeks from '../Why4Geeks';
+import WhyPython from '../WhyPython';
+import AlumniProjects from '../AlumniProjects';
+import GeeksVsOthers from '../GeeksVsOthers';
+import ProgramDetails from '../ProgramDetails';
+import ProgramDetailsMobile from '../ProgramDetailsMobile';
+import LeadForm from '../LeadForm';
 
 const Side = ({ video, image, heading, content, button, bullets }) => {
 
@@ -75,6 +74,7 @@ const Side = ({ video, image, heading, content, button, bullets }) => {
 }
 export const TwoColumn = ({ left, right, proportions }) => {
     const [ left_size, right_size ] = proportions ? proportions : [];
+
     return <Row m_sm="0px 0px 100px 0">
     <Column size={left_size || 6} size_sm="12" maxHeight="300px" align_sm="center">
         <Side {...left} />
@@ -220,5 +220,5 @@ export const landingSections = {
             right={{ image: yml.image, video: yml.video }}
             proportions={yml.proportions}
         />
-    </Wrapper>,
+    </Wrapper>
 }

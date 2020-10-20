@@ -30,7 +30,7 @@ const Image = styled.div`
 `
 
 const Player = ({ id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
-    onPlaybackQualityChange, imageSize, playerVars, noCookies, styles, 
+    onPlaybackQualityChange, imageSize, playerVars, noCookies, style, 
     thumb, ...rest}) => {
 
     const [ showVideo, setShowVideo ] = React.useState(false)
@@ -45,7 +45,7 @@ const Player = ({ id, onPlay, onPause, onEnd, onError, onStateChange, onPlayback
 
     const image = () => validImageSizes.includes(imageSize) ? imageSize : "default"
 
-    return <VideoWrapper {...rest} style={styles}>
+    return <VideoWrapper {...rest} style={style}>
         {showVideo ? (
         <Iframe
             videoId={id}
@@ -75,18 +75,18 @@ const Player = ({ id, onPlay, onPause, onEnd, onError, onStateChange, onPlayback
                     fluid={thumb.childImageSharp.fluid}
                     alt="Video"
                     style={{
-                        height: styles.height || "100%",
-                        width: styles.width || "100%"
+                        height: style.height || "100%",
+                        width: style.width || "100%"
                     }}
                 />
                 :
                 <Thumbnail
                     onClick={() => setShowVideo(true)}
-                    src={`https://img.youtube.com/vi/${id}/${image()}.jpg`}
+                    src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
                     alt="Video"
                     style={{
-                        height: styles.height || "100%",
-                        width: styles.width || "100%"
+                        height: style.height || "100%",
+                        width: style.width || "100%"
                     }}
                 />
             }
@@ -109,7 +109,7 @@ Player.defaultProps = {
   playerVars: {},
   noCookies: false,
   thumb: null,
-  styles: {}
+  style: {}
 }
 
 Player.propTypes = {
@@ -132,7 +132,7 @@ Player.propTypes = {
   /** https://developers.google.com/youtube/player_parameters */
   playerVars: PropTypes.object,
   /** .Styles to apply over the wrappr */
-  styles: PropTypes.object,
+  style: PropTypes.object,
   /** .if set to true will change the host to  "https://www.youtube-nocookie.com" */
   noCookies: PropTypes.bool,
   /** .Size of the thumbnail we get from youtube */
@@ -148,7 +148,7 @@ Player.propTypes = {
 const Play = styled.button`
   background: #282828;
   border-radius: 50% / 10%;
-  color: ${props => props.theme.white};
+  color: ${props => props.white};
   font-size: 1em;
   height: 3em;
   padding: 0;

@@ -75,9 +75,15 @@ program_details:
   heading: "Master Python, JS and React"
   sub_heading: "The 3 most used languages in the world"
 
+why_python:
+  position: 4
+  heading: "Why Python and React.js" # optional or set to white space to hide
+  sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+
+
 geeks_vs_others:
   position: 5
-  heading: "¿What made us so successfull?"
+  heading: "What made us so successfull?"
   paragraph: ""
   total_rows: 5
 
@@ -89,8 +95,8 @@ why_4geeks:
 who_is_hiring:
   position: 7
   limit: 4
-  heading: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
+  heading: "Who is hiring our students?"
+  sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
 
 alumni_projects:
   position: 8
@@ -107,6 +113,10 @@ components:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
       link: "https://www.switchup.org/rankings/best-coding-bootcamps"
+    button: 
+      text: "Read testimonials"
+      color: null
+      path: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading: 
       text: "We have been named one of the TOP coding bootcamps in the World"
                   #xl      lg     md     sm    xs
