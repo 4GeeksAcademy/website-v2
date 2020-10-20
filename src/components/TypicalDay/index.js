@@ -42,7 +42,7 @@ const TypicalDay = (props) => {
         }
         return sliderArray
     }
-
+    console.log("data.schedule", data.schedule)
     return (
         <>
             <Wrapper>

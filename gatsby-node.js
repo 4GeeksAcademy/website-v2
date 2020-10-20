@@ -15,7 +15,7 @@ const saveRedirectLogs = () => {
 
     return true;
 }
-
+ 
 exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions;
 

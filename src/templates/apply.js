@@ -70,6 +70,7 @@ const Apply = (props) => {
 
     return (
         <form onSubmit={(e) => {
+            console.log("Submit..")
             e.preventDefault();
             if (formStatus.status === "error") setFormStatus({status: "idle", msg: "Resquest"})
 

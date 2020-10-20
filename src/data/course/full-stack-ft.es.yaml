@@ -93,22 +93,24 @@ geeks_vs_others:
 geek_data:
   heading: ¡Career Support de por vida!
   geek_pal:
-    - Construcción de CV
-    - Construcción del perfil de Github
-    - Preparación de simulación de entrevistas
-    - Sesión de preparación de entrevistas personalizadas para trabajos específicos
-    - Entrenamiento de marca personal
-    - Prácticas y ejercicios de programación posteriores a la graduación
-  geek_force:
-    - Un profesor cada cuatro estudiantes (1:4)
-    - Un profesor principal cada doce estudiantes (1:12)
+    - Un profesor cada cuatro estudiantes (1:4).
+    - Un profesor principal cada doce estudiantes (1:12).
     - Sesiones ilimitadas de tutoría por demanda, en persona o en línea.
-    - Miles de ejercicios autoevaluados
-    - Tutoriales interactivos y autoevaluados
-    - Soluciones en video para una retroalimentación instantánea
-    - Chat de apoyo en línea al menos 12 horas al día
-    - Transmisión en línea de las clases
-    - Grabación de las clases para su posterior revisión
+    - Miles de ejercicios autoevaluados.
+    - Tutoriales interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Chat de apoyo en línea al menos 12 horas al día.
+    - Transmisión en línea de las clases.
+    - Grabación de las clases para su posterior revisión.
+  geek_force:
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Entrenamiento de marca personal.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+    - Coaching SEMANAL hasta que consigas trabajo.
 
 ## PRICES AND PAYMENTS SECTION
 prices:
@@ -137,7 +139,7 @@ typical:
       step: 2
     - title: "Clase del día"
       time: "10:00 AM"
-      icon: LaptopCode
+      icon: laptopcode
       content: "Incremental: cada mañana, los mentores presentarán un pequeño conjunto de nuevos conceptos y técnicas que te ayudarán en el camino."
       step: 3
     - title: "¡Hora de la comida!"
