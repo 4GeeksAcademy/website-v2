@@ -307,7 +307,7 @@ const SmartLink = ({children, state, ...rest}) => (
 export {SmartLink as Link}
 
 
-const linkRegex = new RegExp("(tel:|http|#)")
+const linkRegex = new RegExp("(tel:|http)")
 const StyledLink = ({children, ...rest}) => {
     let Comp = Link;
     let props = {}
@@ -317,7 +317,7 @@ const StyledLink = ({children, ...rest}) => {
         props.rel = "noopener noreferrer nofollow"
         Comp = "a";
     }
-    else if(rest.to === "#" || rest.to === ""){
+    else if(!rest.to || rest.to.charAt(0) === "#" || rest.to === ""){
         Comp = "label";
     }
     return <Comp {...Object.assign(props, rest)}>
