@@ -74,8 +74,7 @@ const Calendar = (props) => {
     const loadCohorts = () => {
       if (academy == null) {
         fetch(
-          // `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
-          `https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`,
+          `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
         )
           .then(response => response.json())
           .then(data => {
@@ -84,7 +83,7 @@ const Calendar = (props) => {
       }
       else {
         fetch(
-          `https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${academy}`,
+          `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${academy}`,
         )
           .then(response => response.json())
           .then(data => {
