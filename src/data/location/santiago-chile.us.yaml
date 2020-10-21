@@ -24,7 +24,7 @@ button:
 
 info_box:
   heading: "Find us in Santiago de Chile"
-  address: "Santiago Av. Apoquindo 5950, Las Condes Región Metropolitana"
+  address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
   contact_heading: "Contacts"
   phone: "+56 9 7284 8039"
   email: "chile@4GeeksAcademy.com"
@@ -112,7 +112,7 @@ prices:
         heading_two: "YOU GET A JOB"
         sub_heading: "with the Income Sharing Agreement (ISA)"
       content:
-        price: "9% of Sallary"
+        price: "16% of Sallary"
         price_info: "until fully paid, and only if you get the job"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
@@ -152,7 +152,7 @@ name: "Santiago"
 latitude: "-33.408837"
 longitude: "-70.567958"
 phone: "+56 (9) 7284 8039"
-address: "Apoquindo 5950 las condes."
+address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
 zip_code: ""
 state: ""
 country: "Chile"
