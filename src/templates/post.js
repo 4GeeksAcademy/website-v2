@@ -65,7 +65,8 @@ export default function Template (props) {
                                 borders=".2rem"
                                 margin="7px"
                             >
-                                <Link to={"/us/blog/tag/" + tag}>{tag}</Link>
+                                <Link to={"#"}>{tag}</Link>
+                                {/* <Link to={"/us/blog/tag/" + tag}>{tag}</Link> */}
                             </Card>
                         )
                     })}
