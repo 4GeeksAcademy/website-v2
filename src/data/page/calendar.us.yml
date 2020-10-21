@@ -10,3 +10,10 @@ header:
     tagline: UPCOMING PROGRAMS AND EVENTS AT 4GEEKS ACADEMY
     sub_heading: "Filter the events or cohorts based what you are interested on"
     image: "../../../static/images/bg/4Geeks-events-bg.jpg"
+button: # button apply in the cards
+    button_link: "/apply"
+    button_type: ""
+    button_color_text: ""
+    button_background_color: ""
+    next_cohort: "Next cohort starts on"
+    other_dates: "or review other dates"

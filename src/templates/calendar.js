@@ -43,9 +43,6 @@ const Calendar = (props) => {
   const {session, setSession} = useContext(SessionContext);
 
   const [cohorts, setCohorts] = useState([]);
-  const [locations, setLocations] = useState(null);
-  const [currentLocation, setCurrentLocation] = useState();
-  const [filterLocations, setFilterLocations] = useState();
   const [events, setEvent] = useState([]);
   const [academy, setAcademy] = useState(null);
   const [selected, setSelected] = useState(0);
@@ -63,6 +60,8 @@ const Calendar = (props) => {
   const [test, setTest] = useState([]);
   const [filterByCity, setFilterByCity] = useState(() => (session && session.location) ? [session.location.city] : ["Locations"]);
   const [filterByType, setFilterByType] = useState(["Courses"]);
+
+  const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=santiago-chile
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true
   // https://breathecode.herokuapp.com/v1/admissions/cohort/all
@@ -70,139 +69,102 @@ const Calendar = (props) => {
   // https://breathecode.herokuapp.com/v1/events/all
   // https://breathecode.herokuapp.com/v1/events/all?upcoming=true
   // https://breathecode.herokuapp.com/v1/events/all?academy=downtown-miami&type=workshop
+
   useEffect(() => {
-    const loadSession = async (session) => {
-      try {
-        var _currentSession = {};
-        const _response = await session;
-        _currentSession = _response;
-        console.log("response", _currentSession)
-        var _currentHash = await props.location;
-        console.log("hash", _currentHash)
-        var _hashedCurrentLocation = {};
-        if (_currentHash.hash != "") {
-          _hashedCurrentLocation = _response.locations != undefined && _response.locations.find(location => location.breathecode_location_slug === _currentHash.hash.replace("#location=", ""))
-          // _currentHash = _currentHash.hash.replace("#location=", "")
-          // const _hashedCurrentLocation = await _response.locations.find(location => location.breathecode_location_slug === _currentHash)
-        }
-        else {
-          delete _currentHash["hash"]
-          console.log("hash2", _currentHash)
-        }
-        // console.log("++--", _currentHash["hash"])
-        // Object.keys(_currentHash).forEach(key => _currentHash[key] === "" && console.log(_currentHash[key]))
-
-        // if (_currentHash.hash != "") _currentHash = _currentHash.hash.replace("#location=", "")
-        // else Object.keys(_currentHash).forEach(key => _currentHash[key] === "" && delete _currentHash[key])
-        // if (_response.locations != null) {
-        //   const _hashedCurrentLocation = await _response.locations.filter(location => location.breathecode_location_slug === _currentHash)
-        //   console.log("HASHED", _hashedCurrentLocation)
-        // }
-
-        setCurrentLocation(_currentSession)
+    const loadCohorts = () => {
+      if (academy == null) {
+        fetch(
+          // `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
+          `https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`,
+        )
+          .then(response => response.json())
+          .then(data => {
+            setCohorts(data)
+          })
       }
-      catch (err) {
-        console.log("err", err)
+      else {
+        fetch(
+          `https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${academy}`,
+        )
+          .then(response => response.json())
+          .then(data => {
+            setCohorts(data)
+          })
+
       }
     }
-    loadSession(session);
 
+    const loadEvents = () => {
+      if (academy == null) {
+        fetch(
+          `${process.env.GATSBY_BREATHECODE_HOST}/events/all?upcoming=true`,
+        )
+          .then(response => response.json())
+          .then(data => setEvent(data))
+      }
+      else {
+        fetch(
+          `${process.env.GATSBY_BREATHECODE_HOST}/events/all?academy=${academy}&type=${filterByType[0]}`,
+        )
+          .then(response => response.json())
+          .then(data => setEvent(data))
+      }
+    }
+
+    loadCohorts();
+    loadEvents();
+  }, [academy]);
+
+  useEffect(() => {
+    const loadFilterCity = async () => {
+      let filterCityArray = [{city: 'All Locations', slug: ''}];
+      try {
+        let response = await session.location;
+        if (response) {
+          for (let i of session.locations) {
+            filterCityArray.push({city: i.city, slug: i.breathecode_location_slug})
+          }
+          setFilterCity(filterCityArray);
+        }
+      }
+      catch (error) {
+        console.error("Something failed", error);
+      }
+    }
+    loadFilterCity();
   }, [session])
+  useEffect(() => {
+    const loadFilterType = async () => {
+      let filterTypeArray = ['courses', 'events'];
+      for (let i = 0; i < events.length; i++) {
+        if (events[i].event_type && !filterTypeArray.includes(events[i].event_type.name)) {
+          filterTypeArray.push(events[i].event_type.name)
+        }
+      }
+      setFilterType(filterTypeArray);
+    }
+    loadFilterType();
 
-  // useEffect(() => {
-  //   const loadCohorts = () => {
-  //     if (academy == null) {
-  //       fetch(
-  //         `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
-  //       )
-  //         .then(response => response.json())
-  //         .then(data => {
-  //           setCohorts(data)
-  //         })
-  //     }
-  //     else {
-  //       fetch(
-  //         `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${academy}`,
-  //       )
-  //         .then(response => response.json())
-  //         .then(data => {
-  //           setCohorts(data)
-  //         })
+  }, [events])
+  useEffect(() => {
+    const filterEvents = async () => {
+      if (filterByCity.length > 0) {
+        const filteredCohortByCity = cohorts.filter(item => item.slug.includes(filterByCity[0].toLowerCase()))
+        if (filteredCohortByCity.length > 0) {
+          setFilteredCohorts(filteredCohortByCity)
+        }
+        else {
+          setFilteredCohorts([])
+        }
+      }
+      else {
+        setFilteredCohorts([])
+      }
 
-  //     }
-  //   }
-
-  //   const loadEvents = () => {
-  //     if (academy == null) {
-  //       fetch(
-  //         `${process.env.GATSBY_BREATHECODE_HOST}/events/all?upcoming=true`,
-  //       )
-  //         .then(response => response.json())
-  //         .then(data => setEvent(data))
-  //     }
-  //     else {
-  //       fetch(
-  //         `${process.env.GATSBY_BREATHECODE_HOST}/events/all?academy=${academy}&type=${filterByType[0]}`,
-  //       )
-  //         .then(response => response.json())
-  //         .then(data => setEvent(data))
-  //     }
-  //   }
-
-  //   loadCohorts();
-  //   loadEvents();
-  // }, [academy]);
-
-  // useEffect(() => {
-  //   const loadFilterCity = async () => {
-  //     let filterCityArray = [{city: 'All Locations', slug: ''}];
-  //     try {
-  //       let response = await session.location;
-  //       if (response) {
-  //         for (let i of session.locations) {
-  //           filterCityArray.push({city: i.city, slug: i.breathecode_location_slug})
-  //         }
-  //         setFilterCity(filterCityArray);
-  //       }
-  //     }
-  //     catch (error) {
-  //       console.error("Something failed", error);
-  //     }
-  //   }
-  //   loadFilterCity();
-  // }, [session])
-  // useEffect(() => {
-  //   const loadFilterType = async () => {
-  //     let filterTypeArray = ['courses', 'events'];
-  //     for (let i = 0; i < events.length; i++) {
-  //       if (events[i].event_type && !filterTypeArray.includes(events[i].event_type.name)) {
-  //         filterTypeArray.push(events[i].event_type.name)
-  //       }
-  //     }
-  //     setFilterType(filterTypeArray);
-  //   }
-  //   loadFilterType();
-
-  // }, [events])
-  // useEffect(() => {
-  //   const filterEvents = async () => {
-  //     if (filterByCity.length > 0) {
-  //       const filteredCohortByCity = cohorts.filter(item => item.slug.includes(filterByCity[0].toLowerCase()))
-  //       if (filteredCohortByCity.length > 0) {
-  //         setFilteredCohorts(filteredCohortByCity)
-  //       }
-  //       else {
-  //         setFilteredCohorts([])
-  //       }
-  //     }
-  //     else {
-  //       setFilteredCohorts([])
-  //     }
-
-  //   }
-  //   filterEvents();
-  // }, [filterByCity, filterByType])
-  // if (!cohorts) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
+    }
+    filterEvents();
+  }, [filterByCity, filterByType])
+  if (!cohorts) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
   return (
     <>
       <WrapperImage
@@ -484,13 +446,20 @@ const Calendar = (props) => {
                                     {cohort.academy.city.name}, {cohort.academy.country.name}
                                   </Paragraph>
                                 </Row>
-                                <Row height="5%" align="end">
-                                  <a href={`#`} target="_blank" rel="noopener noreferrer">
-                                    <Icon icon="arrowright"
-                                      width="32"
-                                      color={Colors.blue}
-                                      fill={Colors.blue} />
-                                  </a>
+                                <Row marginBottom=".2rem" alignItems={`center`} >
+                                  <Icon icon="laptop" width="24" color={Colors.blue} fill={Colors.blue} />
+                                  <Paragraph
+                                    margin={`0 0 0 10px`}
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="9px"
+                                    fs_lg="11px"
+                                    fs_xl="14px">
+                                    {cohort.slug.includes("ft") ? "Full Time" : "Part Time"}
+                                  </Paragraph>
+                                </Row>
+                                <Row align={`center`} margin={`25px 0 15px 0`}>
+                                  <Link to={yml.button.button_link}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{apply_button_text}</Button></Link>
                                 </Row>
                               </Column>
                             </Row>
@@ -643,6 +612,14 @@ export const query = graphql`
             description
             image
             keywords
+          }
+          button {
+            button_link
+            button_type
+            button_color_text
+            button_background_color
+            next_cohort
+            other_dates
           }
           header{
             tagline

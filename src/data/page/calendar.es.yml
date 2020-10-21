@@ -10,3 +10,10 @@ header:
     tagline: Próximos programas y Eventos de 4GEEKS ACADEMY
     sub_heading: "Ajusta los filtros a los eventos of cursos que más te interesan"
     image: "../../../static/images/bg/4Geeks-events-bg.jpg"
+button: # button apply in the cards
+    button_link: "/aplica"
+    button_type: "" ## YOU CAN LEAVE IT EMPTY FOR A FULL BACKGROUND COLOR OR 'outline' FOR A WHITE BACKGROUND WITH A BORDER
+    button_color_text: ""
+    button_background_color: ""
+    next_cohort: "Próxima cohorte:"
+    other_dates: "ver otras fechas"
