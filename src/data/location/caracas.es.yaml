@@ -37,7 +37,7 @@ info_box:
   alt: ""
 carousel_box:
   heading: "What you should know about this location: "
-  content: "A pocos metros del del metro, en Chacao, el mejor municipio de la ciudad y en una de las torres mas emblemáticas. Tendrás accesso a internet de alta velocidad y una oficina de primer nivel."
+  content: "A pocos metros del metro, en Chacao, el mejor municipio de la ciudad y en una de las torres mas emblemáticas. Tendrás accesso a internet de alta velocidad y una oficina de primer nivel."
   images:
     - path: "../../../static/images/locations/caracas-loc.jpg"
       alt: "caracas-loc"

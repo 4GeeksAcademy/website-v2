@@ -1,14 +1,16 @@
 import React, {useState, useEffect} from 'react';
-import {Row, Container, Column, Divider, Div} from '../Sections'
+import loadable from '@loadable/component'
+import {Row, Column, Div} from '../Sections'
 import PropTypes from "prop-types"
-import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, Anchor, Button, RoundImage, StyledBackgroundSection} from '../Styling';
+import {H2, H3, H4, H5, Paragraph} from '../Heading';
+import {Colors, Anchor, Button, StyledBackgroundSection, Span} from '../Styling';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import Icon from "../Icon"
-import ReactPlayer from 'react-player'
+
+const ReactPlayer = loadable(() => import('../ReactPlayer'))
 
 const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
@@ -147,15 +149,15 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                 :
                                 <Column size="6" size_sm="12" paddingRight={`0`}>
                                     <ReactPlayer
-                                        className='react-player alumni-player'
-                                        file={{forceVideo: true}}
-                                        style={{height: playerHeight}}
-                                        light={true}
-                                        controls={true}
-                                        url={item.project_video}
-                                        width='100%'
-                                        height='100%'
-                                    /></Column>}
+                                        id={item.project_video}
+                                        thumb={item.project_image}
+                                        imageSize="maxresdefault"
+                                        style={{
+                                            width: "100%",
+                                            height: "350px"
+                                        }}
+                                    />
+                                </Column>}
                         </Row>
                     )
                 })
@@ -182,6 +184,7 @@ AlumniProjects.propTypes = {
 }
 AlumniProjects.defaultProps = {
     limit: 0,
+    playerHeight: "100%"
 }
 export default AlumniProjects;
 

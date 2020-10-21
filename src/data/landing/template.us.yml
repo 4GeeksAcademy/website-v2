@@ -121,9 +121,9 @@ components:
     layout: two_column_right 
     image: 
       style: "{}"
-      src: "/images/projects/ims.jpg"
+      src: "../../../static/images/projects/ims.jpg"
       link: "https://google.com" # take uses somewhere when they click on the image
-    video: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    video: "plwPwyrxX84" #youtube id
     heading: 
       text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
                   #xl      lg     md     sm    xs

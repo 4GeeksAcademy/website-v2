@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import loadable from '@loadable/component'
+import Navbar from '../components/SmallNav';
+import Footer from '../components/Footer';
 import {SessionContext} from '../session';
 import '../assets/css/style.css';
 import {StaticQuery, graphql} from 'gatsby';
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
-
-const Footer = loadable(() => import('../components/Footer'))
 
 const Layout = ({children, seo, context}) => {
   const { session } = React.useContext(SessionContext);
@@ -74,6 +73,7 @@ const Layout = ({children, seo, context}) => {
         return (
           <>
             <SEO {...seo} context={context} />
+            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
             <GlobalStyle />
             <>
               {children}

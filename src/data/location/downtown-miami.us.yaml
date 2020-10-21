@@ -69,7 +69,7 @@ prices:
         sub_heading: "and talk about the Income Sharing Agreement (ISA)"
       content:
         price: "9% of salary"
-        price_info: "until fully paid, and only if you get the job"
+        price_info: "Once you get a Job and for 4 years or until you reach 1.5 Rev Cap"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -123,7 +123,7 @@ prices:
         sub_heading: "and enjoy the best Price in town"
       content:
         price: "$9,499.00"
-        price_info: "single payment"
+        price_info: "Single payment. Get a 10% Discount!"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -137,10 +137,10 @@ prices:
       header:
         heading_one: "PAY ONLY AFTER"
         heading_two: "YOU GET A JOB"
-        sub_heading: "and talk about the Income Sharing Agreement (ISA)"
+        sub_heading: "Let's talk about the Income Sharing Agreement (ISA)"
       content:
         price: "9% of salary"
-        price_info: "until fully paid, and only if you get the job"
+        price_info: "Once you get a Job and up to 1.5 Cap"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -194,7 +194,7 @@ prices:
         sub_heading: "and enjoy the Best Price in town"
       content:
         price: "$7,499.00"
-        price_info: "single payment"
+        price_info: "Single payment. Get a 10% Discount!"
 
   software_engineering:
     slug: "software-engineering"
@@ -209,7 +209,7 @@ prices:
         sub_heading: "and talk about the Income Sharing Agreement (ISA)"
       content:
         price: "9% of salary"
-        price_info: "until paid, and only if you get the job"
+        price_info: "Once you get a Job and for 4 years or until you reach 1.5 Rev Cap"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
