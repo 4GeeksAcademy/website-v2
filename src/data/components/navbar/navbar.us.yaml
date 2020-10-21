@@ -4,7 +4,7 @@ navbar:
   - name: "Why 4Geeks"
     link: "/the-academy"
   - name: "The Programs"
-    link: "#"
+    link: "/course/full-stack-web-development-bootcamp-part-time"
     links: 
       - name: "Desarrollador Full Stack"
       - link: "/course/full-stack-web-development-bootcamp-part-time"

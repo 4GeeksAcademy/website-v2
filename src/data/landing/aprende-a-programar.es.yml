@@ -131,7 +131,7 @@ components:
     layout: two_column_right 
     image: 
       src: "/images/bg/people_happy.jpg"
-    video: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    video: "plwPwyrxX84"
     heading: 
       text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
                   #xl      lg     md     sm    xs
