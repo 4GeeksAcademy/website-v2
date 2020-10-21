@@ -2,6 +2,7 @@ import React from 'react';
 import {Column, Row, Divider, Wrapper, WrapperImage} from "../components/Sections";
 import {H3, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, RoundImage, Check} from '../components/Styling'
+import Icon from '../components/Icon'
 import loadable from '@loadable/component'
 import BaseRender from './_baseLayout'
 
@@ -74,8 +75,8 @@ const GeekPal = (props) => {
                 {col.items.map((item, index) => {
                   return (
                     <Row key={index} marginBottom="15px">
-                      <Column size="2"  passingRight="0" >
-                        Icon icon="check" width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                      <Column size="2" passingRight="0" >
+                        <Icon icon="check" width="24px" color={Colors.yellow} fill={Colors.yellow} />
 
                       </Column>
                       <Column size="10"  >
