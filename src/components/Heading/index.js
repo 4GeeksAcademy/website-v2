@@ -19,6 +19,7 @@ Heading.defaultProps = {
 
 const BaseHeading = styled(Heading)`
   display: block;
+  float: ${props => props.float || "none"};
   width: ${props => props.width || "100%"};
   font-family: 'Futura', sans-serif;
   letter-spacing: 0px;
