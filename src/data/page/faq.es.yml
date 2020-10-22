@@ -5,10 +5,7 @@ meta_info:
   image: ""
   keywords: ""
   redirects: [
-    "/preguntas-frecuentes", 
     "/es/preguntas-frecuentes",
-    "/es/preguntas-frequentes", 
-    "/preguntas-frequentes"
   ]
 
 banner:
