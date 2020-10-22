@@ -76,7 +76,7 @@ prices:
       plans:
         - months: "12"
           payment: "210.641 CLP"
-          paymentInfo: "per month + 410.000 deposit"
+          paymentInfo: "per month + 414.000 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
