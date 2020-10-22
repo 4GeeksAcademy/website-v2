@@ -36,7 +36,7 @@ outcomes:
   image: "/images/program-charts.png"
   left:
     title: "Demográficos"
-    content: "Los estudiantes de la 4Geeks Academy tienen principalmente entre 26 y 32 años. Hemos elegido 3 segmentos principales para mostrar la edad media de nuestros graduados."
+    content: "Los estudiantes de 4Geeks Academy tienen principalmente entre 26 y 32 años. Hemos elegido 3 segmentos principales para mostrar la edad media de nuestros graduados."
     sub_content: "Las personas que se gradúan en 4Geeks Academy tienen una edad promedio de 30,6 años."
     bottom_message: "Nuestros estudiantes incrementan un 24% sus salarios, después de completar nuestros programas."
   right:
@@ -90,7 +90,7 @@ staff:
 ## OUR STORY SECTION
 story:
   heading: NUESTRA HISTORIA
-  sub_heading_one: "4Geeks Academy fue fundada en 2015. Lo que comenzó como un proyecto interno para entrenar a más desarrolladores, se ha convertido en nuestra pasión a tiempo completo. 4Geeks es hoy un Coding Bootcamp con sede en EE.UU., que persigue construir un nuevo marco de trabajo para la Educación en Programación porque la programación se está convirtiendo en una parte esencial de nuestra sociedad. 4Geeks Academy tiene ahora sedes en 4 ciudades, 6 campus en curso, y más de 1100 personas graduadas."
+  sub_heading_one: "4Geeks Academy fue fundada en 2015. En 2016 logró finalmente estar al aire en 3 sedes: Miami Dade College, Miami y Caracas. Todo comenzó como un proyecto interno para entrenar a más desarrolladores, y de a poco se convirtió  en nuestra pasión a tiempo completo. Alejandro y Marcelo, amigos de muchos años, no habían trabajado en un mismo Proyecto hasta que 4Geeks unió ambas visiones. La Academia además fue además una pasión sobrevenida para ambos. Por un lado la pasión por la educación y el software (Alejandro) y por el otro la pasión por las Tech startups (Marcelo). Hoy 4Geeks tiene +7 campus repartidos entre Estados Unidos, Latinoamérica y Europa. +1000 Graduados y un montón de cosas por las que sentirnos orgullosos. El camino sigue siendo muy retador porque estamos en el camino a construir un símbolo de la educación en Tecnología."
   image: "../../../static/images/our-story.png"
   button: "Read More"
   button_link: "/us/post/4geeks-academy-history"

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import loadable from '@loadable/component'
+import Icon from '../components/Icon'
 import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'
@@ -83,8 +84,8 @@ const GeekForce = (props) => {
                 {col.items.map((item, index) => {
                   return (
                     <Row key={index} marginBottom="15px">
-                      <Column size="2"  passingRight="0" >
-                        Icon icon="check" width="24px" color={Colors.yellow} fill={Colors.yellow} />
+                      <Column size="2" passingRight="0" >
+                        <Icon icon="check" width="24px" color={Colors.yellow} fill={Colors.yellow} />
 
                       </Column>
                       <Column size="10"  >

@@ -91,7 +91,7 @@ staff:
 ## OUR STORY SECTION
 story:
   heading: OUR STORY
-  sub_heading_one: "4Geeks Academy was founded in 2015. What began as an internal project to train new developers has flourished into a full-time passion. Today, 4Geeks is now based in the U.S. As coding has become an essential part of society, the mission of our Coding Bootcamp is to instill a new framework for Coding Education universally."
+  sub_heading_one: "4Geeks Academy was founded in 2015. However, was in 2016 when we were finally out there with 3 locations: Miami Dade College, Caracas, and Miami.  What began as an internal project to train new developers has flourished into a full-time passion. Alejandro and Marcelo, friends of many years, have not worked on the same Project until 4Geeks united both visions. The Academy was also a supervening passion for both of them. On one side, the passion for education and software (Alejandro) and on the other the passion for Tech startups (Marcelo). Today 4Geeks has +7 campuses spread over the United States, Latin America and Europe. 1000+ graduates and tons of things to be proud of. The path continues to be very challenging because we are on the way to building a symbol of education in Technology."
   button: "Read More >"
   button_link: "/us/post/4geeks-academy-history"
   image: "../../../static/images/our-story.png"

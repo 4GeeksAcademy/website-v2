@@ -59,7 +59,7 @@ details:
       step: 1
     - module_name: "ALGORITMOS"
       title: "Algoritmos Avanzados"
-      description: "Todas las entrevistas de trabajo en empresas del Forbes 500 requieren que sepas algoritmos avanzados: Big O, Medicion de Tiempo y Espacio, Estructuras Avanzadas, Patrones de Diseño, Árboles, DFS/BFS."
+      description: "Todas las entrevistas de trabajo en empresas del Fortune 500 requieren que sepas algoritmos avanzados: Big O, Medicion de Tiempo y Espacio, Estructuras Avanzadas, Patrones de Diseño, Árboles, DFS/BFS."
       projects: "Vas a pasar todo el rato perfeccionando tus habilidades de algoritmos y te presentaremos retos sacados de entrevistas reals."
       slug: "advanced-algorithms"
       duration: "2 wks"
@@ -142,7 +142,7 @@ geeks_vs_others:
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
-  heading: ¡Para que te contraten empresas de Forbes 500!
+  heading: ¡Para que te contraten empresas de Fortune 500!
   geek_pal:
     - Construcción de CV
     - Construcción del perfil de Github
