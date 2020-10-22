@@ -16,7 +16,7 @@ meta_info:
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
       "/es/course/bootcamp-desarrollo-web-full-stack-part-time",
       "/es/course/introduccion-programacion",
-      "/introduccion-programacion-codigo"
+      "/introduccion-programacion-codigo",
     ]
 
 header:
@@ -70,7 +70,7 @@ details:
     - module_name: "API'S"
       title: "Desarrollo de APIs"
       description: "Enfocado principalmente en Python, Flask y SQL constrirás tus propias APIs e interactuarás con otras APIs muy conocidas como Google, Twillio, Facebook, Stripe y más!"
-      projects: "Clón de Coursera, Clón de Instagram, Clón de Youtube, etc."
+      projects: "Clon de Coursera, Clon de Instagram, Clon de Youtube, etc."
       slug: "web-development"
       duration: "2 sem"
       step: 2
