@@ -108,7 +108,6 @@ const LeadForm = ({ d_sm, fields, thankyou, heading, redirect, formHandler, data
     const [formData, setVal] = useState(_fields);
     const { session } = useContext(SessionContext);
     React.useEffect(() => {
-        console.log("Data change")
         setVal(_data => {
             const _ = Object.keys(_data).reduce((total, key) => {
                 if(_data[key] !== undefined){

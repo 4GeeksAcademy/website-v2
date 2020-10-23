@@ -16,7 +16,7 @@ width: 80px;
 min-height: 50px;
 padding: 5px;
 font-family: "Lato, sans-serif";
-font-display: swap;
+
 position: absolute;
 border-radius: 10px;
 bottom: 40px;

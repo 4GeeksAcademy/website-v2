@@ -6,20 +6,20 @@ import {Img} from "../components/Styling"
 
 const Heading = styled.h1`
   font-family: 'Lato-Bold', sans-serif;
-  font-display: swap;
+  
   text-align: center;
   font-size: 30px;
   margin: 10px 0;
   `;
   const Div = styled.div`
   font-family: 'Lato-Bold', sans-serif;
-  font-display: swap;
+  
   text-align: center;
   margin: 50px 0;
   `;
   const Heading2 = styled.h2`
   font-family: 'Lato-Bold', sans-serif;
-  font-display: swap;
+  
   margin: 40px 0;
   text-align: center;
   font-size: 25px;
@@ -30,7 +30,7 @@ const Anchor = styled(Link)`
 `;
 const Paragraph = styled.p`
 font-family: 'Lato-Bold', sans-serif;
-font-display: swap;
+
 margin: 40px 0;
 text-align: center;
 `;

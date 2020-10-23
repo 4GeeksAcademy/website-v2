@@ -15,7 +15,7 @@ header:
   alt: ""
 button:
   syllabus_button_text: "DESCARGA MALLA EDUCATIVA" # <-- this will show everywhere in the website
-  apply_button_text: "APLICA YA" # <-- this will show everywhere in the website
+  apply_button_text: "POSTÚLATE" # <-- this will show everywhere in the website
   
   syllabus_submit_text: "DESCARGAR"
   cohort_more_details_text: "INFO"

@@ -187,13 +187,7 @@ a {
 }
 .card-columns{
     display: inline-block;
-    column-count: 4;
-    column-gap: 1.25rem;
-}
-@media (max-width: 1200px) {
-    .card-columns{
-        column-count: 3;
-    }
+    column-count: 3;
 }
 @media (max-width: 768px) {
     .card-columns{

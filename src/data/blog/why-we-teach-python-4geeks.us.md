@@ -1,7 +1,7 @@
 ---
 author: MRiciglianoC
 comments: true
-date: 2019-03-28 22:32:53+00:00
+date: 2020-11-23 22:32:53+00:00
 excerpt: We were sure that Ruby was a bad decision (see here why) and after weeks
   of consideration between several programming languages we decided to start teaching
   Python at 4Geeks Academy
