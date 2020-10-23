@@ -64,7 +64,7 @@ prices:
         heading_two: "YOU GET A JOB"
         sub_heading: "with the Income Sharing Agreement (ISA)"
       content:
-        price: "9% of Sallary"
+        price: "9% of Salary"
         price_info: "until fully paid, and only if you get the job"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
@@ -137,7 +137,7 @@ prices:
         heading_two: "YOU GET A JOB"
         sub_heading: "and talk about the Income Sharing Agreement (ISA)"
       content:
-        price: "%9 of Sallary"
+        price: "%9 of Salary"
         price_info: "until fully paid, and only if you get the job"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
