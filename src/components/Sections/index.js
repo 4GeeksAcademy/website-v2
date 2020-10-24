@@ -252,9 +252,9 @@ export const WrapperImage = (props) => {
         variant="fluid"
     >
         <Row>
-            <Column size="1" />
+            <Column size="1" d_sm="none" />
             <Column
-                size="11"
+                size="11" size_sm="12"
                 url={props.image}
                 border={props.border}
                 customBorderRadius={props.customBorderRadius}
