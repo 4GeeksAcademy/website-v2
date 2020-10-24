@@ -126,7 +126,7 @@ const Program = ({data, pageContext, yml}) => {
       >
         <Wrapper>
           <H5 fontSize="20px">{yml.syllabus.heading}</H5>
-          <Lead Form 
+          <LeadForm 
             style={{ padding: "10px 0px", maxWidth: "100%" }}
             inputBgColor={Colors.white}
             layout="flex"
