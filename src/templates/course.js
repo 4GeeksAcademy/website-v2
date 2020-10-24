@@ -130,7 +130,7 @@ const Program = ({data, pageContext, yml}) => {
             style={{ padding: "10px 0px", maxWidth: "100%" }}
             inputBgColor={Colors.white}
             layout="flex"
-            sendLabel={syllabus_button_text}
+            sendLabel={yml.button.syllabus_btn_label}
             lang={pageContext.lang}
             formHandler={requestSyllabus} 
             data={{ 

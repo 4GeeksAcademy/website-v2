@@ -200,6 +200,19 @@ a {
     }
 }
 
+@media (max-width: 576px) {
+    .leadform-flex{
+        display: block !important;
+    }
+    .leadform-flex input{
+        border-radius: 0px;
+    }
+    .leadform-flex button{
+        border-radius: 10px;
+    }
+}
+
+
 /* :-webkit-direct-focus {
     outline-color: none!important;
     outline-style: auto;

@@ -217,7 +217,7 @@ const SmartButton = ({children, onClick, type, ...rest}) => {
 }
 export const Button = styled(SmartButton)`
     font-size: ${props => props.fontSize || '14rem'};
-    font-family: 'Lato-Bold', sans-serif;
+    font-family: ${props => props.font || "'Futura', sans-serif"};
     
     font-weight: 800;
     margin: ${props => props.margin};

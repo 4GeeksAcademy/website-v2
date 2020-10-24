@@ -148,7 +148,7 @@ const GeeksVsOthers = props => {
                                 </H4>
                               <Div position={`relative`}>
                                 {tooltip === true && index === tooltipIndex &&
-                                  <Tooltip opacity={tooltipOpacity}>
+                                  <Tooltip className="d-sm-none" opacity={tooltipOpacity}>
                                     <Paragraph align="center"
                                       fs_xs="16px"
                                       fs_sm="16px"
