@@ -14,7 +14,7 @@ header:
   image: "../../../static/images/locations/santiago-loc.png"
   alt: ""
 button:
-  syllabus_button_text: "DESCARGA MALLA EDUCATIVA" # <-- this will show everywhere in the website
+  syllabus_button_text: "DESCARGA MALLA" # <-- this will show everywhere in the website
   apply_button_text: "POSTÚLATE" # <-- this will show everywhere in the website
   
   syllabus_submit_text: "DESCARGAR"
