@@ -91,7 +91,7 @@ const createBlog = async ({actions, graphql}) => {
     const postTemplate = path.resolve('src/templates/post.js');
     const result = await graphql(`
     {
-        allMarkdownRemark{
+        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}){
             edges{
                 node{
                     html

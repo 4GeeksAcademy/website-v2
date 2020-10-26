@@ -16,7 +16,7 @@ const Input = styled.input`
     width: 100%;
     border: none;
     font-family: 'Lato', sans-serif;
-    font-display: swap;
+    
     font-size: 14px;
     font-color: ${Colors.black};
 `

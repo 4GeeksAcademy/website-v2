@@ -6,8 +6,7 @@ meta_info:
   image: ""
   template: "course-engineering"
   keywords: ""
-  redirects:
-    ["ingenieria-software"]
+  redirects: ["ingenieria-software"]
 
 header:
   tagline_top: "CONVIERTETE EN"
@@ -15,12 +14,12 @@ header:
   sub_heading: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro."
   subsub_heading: "(Previous coding experience required)"
   alt: ""
-  
+
   # The background image position can be cnotroled by device size
   # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px","0px -50px","0px -20px","0px 0px","0px 0px"]
+  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
   image: "../../../static/images/bg/apple-building.jpg"
-  
+
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
@@ -51,7 +50,7 @@ details:
     - module_name: "FRONT"
       title: "Front-End Avanzado"
       description: >
-        Asumiendo que ya tienes experiencia con frameworks de componentes (React.js, Angular, etc). Vamos a adentrarnos en optimización de React con Suspense, Code-spliting, Transpilación y arquitecturas de front-end como Redux \n
+        Asumiendo que ya tienes experiencia con frameworks de componentes (React.js, Angular, etc). Vamos a adentrarnos en optimización de React con Suspense, Code-spliting, Transpilación y arquitecturas de front-end como Redux 
         Este modulo tambien sirve como un complemento perfecto para los siguientes ya que todos los proyectos van a requerir algun tipo de interfaz de usuario.
       projects: "Aplicación de video llamadas Peer-to-Peer utilizando WebRTC y no se requiere un backend para la comunicación"
       slug: "advanced-front-end"
@@ -67,7 +66,7 @@ details:
     - module_name: "STORAGE"
       title: "Almacenado y Búsqueda de Información"
       description: >
-        Java es el lenguaje más utilizado del mundo (por mucho). En este modulos aprenderás los patrones de diseño más importantes para escalar aplicaciones, retos de optimización: DAO, Maven, O.O.P, Singleton, Factory, Strategy, Observer, Builder, etc. \n
+        Java es el lenguaje más utilizado del mundo (por mucho). En este modulos aprenderás los patrones de diseño más importantes para escalar aplicaciones, retos de optimización: DAO, Maven, O.O.P, Singleton, Factory, Strategy, Observer, Builder, etc. 
         Hay demasiadas formas diferentes de almacenar y buscar información, aqui aprenderás las más populares y resolveras problemas típicos de escalamiento con Big Data, Data-Mining, Almacenamiento Distribuido, Redis/Memcache, SQL, NoSQL, GraphQL, et.
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
       slug: "info-retrival"
@@ -165,7 +164,6 @@ geek_data:
 prices:
   heading: "PRECIOS Y PAGOS"
   sub_heading: ""
-
 
 ## ALUMNI SECTION
 alumni:
