@@ -28,15 +28,15 @@ upcoming:
   title: "Próximos programas para aprender a programar en Caracas, Venezuela"
 
 info_box:
-  heading: "Find us in Caracas"
-  address: "1801 SW 3rd Ave #100, Miami, FL 33129"
+  heading: "Encuentranos en Caracas"
+  address: "Urb Altamira, Av Avila cruce con Av Felix Sosa Edificio Don Camilo, PB, Local 1"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/caracas-map.png"
   alt: ""
 carousel_box:
-  heading: "What you should know about this location: "
+  heading: "Lo que deberías saber de Caracas: "
   content: "A pocos metros del metro, en Chacao, el mejor municipio de la ciudad y en una de las torres mas emblemáticas. Tendrás accesso a internet de alta velocidad y una oficina de primer nivel."
   images:
     - path: "../../../static/images/locations/caracas-loc.jpg"
@@ -47,7 +47,7 @@ carousel_box:
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
 heading_section:
-  heading: "PRECIO Y FINANCIACIÓN"
+  heading: "PRECIO Y FINANCIAMIENTO"
   sub_heading: ""
 
 ## PRICES SECTION

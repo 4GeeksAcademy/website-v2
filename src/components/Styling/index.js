@@ -216,10 +216,10 @@ const SmartButton = ({children, onClick, type, ...rest}) => {
     return <button type={type || "button"} onClick={(e) => onClick && onClick(e)} className={rest.className} style={{ ...rest.style, ...styles}} >{children}</button>;
 }
 export const Button = styled(SmartButton)`
-    font-size: ${props => props.fontSize || '.75rem'};
-    font-family: 'Lato-Bold', sans-serif;
-    font-display: swap;
-    font-weight: 500;
+    font-size: ${props => props.fontSize || '14rem'};
+    font-family: ${props => props.font || "'Futura', sans-serif"};
+    
+    font-weight: 800;
     margin: ${props => props.margin};
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position};

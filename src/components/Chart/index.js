@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 import Chart from "react-google-charts";
 const labelCustom = styled.div`
     font-family: 'Lato';
-    font-display: swap;
+    
     font-size: 5px;
     color: red;
 `

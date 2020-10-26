@@ -26,7 +26,7 @@ const BaseHeading = styled(Heading)`
   font-weight: ${props => props.fontWeight};
   font-size: ${props => props.fontSize};
   font-style: normal;
-  font-display: swap;
+  
   color: ${props => props.color};
   margin: ${props => props.margin};
   text-shadow: ${props => props.textShadow}; 
@@ -130,7 +130,7 @@ Separator.defaultProps = {
 };
 
 export const Paragraph = styled.div`
-  font-display: swap;
+  
   width: ${props => props.width};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin};

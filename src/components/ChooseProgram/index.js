@@ -76,6 +76,7 @@ const ChooseProgram = (props) => {
                         return (
                             <Button 
                                 key={index}
+                                font='"Lato", sans-serif'
                                 colorHover={Colors.lightBlue}
                                 onClick={() => {
                                     if(item.location_bc_slug) setLocation(item.location_bc_slug)

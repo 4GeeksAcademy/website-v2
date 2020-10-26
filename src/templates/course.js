@@ -9,7 +9,6 @@ import {Button, Colors} from '../components/Styling'
 import {requestSyllabus} from "../actions";
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import {SessionContext} from '../session'
-import Icon from '../components/Icon'
 
 const TypicalDay = loadable(() => import('../components/TypicalDay'))
 const AlumniProjects = loadable(() => import('../components/AlumniProjects'))
@@ -94,7 +93,7 @@ const Program = ({data, pageContext, yml}) => {
             style={{ marginTop: "50px" }}
             heading={yml.button.syllabus_heading}
             motivation={yml.button.syllabus_motivation} 
-            sendLabel={yml.button.syllabus_btn_label}
+            sendLabel={syllabus_button_text}
             formHandler={requestSyllabus} 
             handleClose={handleClose} 
             lang={pageContext.lang}
@@ -131,7 +130,7 @@ const Program = ({data, pageContext, yml}) => {
             style={{ padding: "10px 0px", maxWidth: "100%" }}
             inputBgColor={Colors.white}
             layout="flex"
-            sendLabel={yml.syllabus.button_label}
+            sendLabel={yml.button.syllabus_btn_label}
             lang={pageContext.lang}
             formHandler={requestSyllabus} 
             data={{ 
