@@ -163,3 +163,21 @@ staff:
     coding_skills:
       - Javascript and Python
     location: ""
+  - name: "Ana"
+    last_name: "Salas"
+    nick_name: "Anita"
+    slug: "ana-salas"
+    job_title: "Marketing Dev"
+    bio: "Marketing specialist from Northeastern University"
+    github: "https://github.com/absalas12"
+    linkdin: "https://www.linkedin.com/in/anabelensalas/"
+    twitter: "https://twitter.com/anabelensalas"
+    website: ""
+    image: ""
+    age: 27
+    interests:
+      - Movies
+      - Dancing
+    coding_skills:
+      - Excel
+    location: ""
