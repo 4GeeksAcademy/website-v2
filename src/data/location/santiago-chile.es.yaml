@@ -14,7 +14,7 @@ header:
   image: "../../../static/images/locations/santiago-loc.png"
   alt: ""
 button:
-  syllabus_button_text: "DESCARGA MALLA EDUCATIVA" # <-- this will show everywhere in the website
+  syllabus_button_text: "DESCARGA MALLA" # <-- this will show everywhere in the website
   apply_button_text: "POSTÚLATE" # <-- this will show everywhere in the website
   
   syllabus_submit_text: "DESCARGAR"
@@ -39,7 +39,7 @@ upcoming:
 
 carousel_box:
   heading: "Lo que debes saber de nuestra sede en Santiago de Chile: "
-  content: "A 10 min camindando desde la estación del metro y ubicada en una de las zonas mas centricas de la ciudad, esta oficina es ideal para todos los Santiagüeños que quieran convertirse en programadores. Reciendemente remodelada, con enternet de alta velocidad y acceso ilimitado para nuestros alumnos."
+  content: "A 10 min camindando desde la estación del metro y ubicada en una de las zonas mas centricas de la ciudad, esta oficina es ideal para todos los Santiagüeños que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
   images:
     - path: "../../../static/images/locations/santiago-loc-2.jpg"
       alt: "Santiago Location Image"
