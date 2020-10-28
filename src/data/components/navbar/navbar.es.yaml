@@ -5,7 +5,7 @@ navbar:
     link: "/la-academia"
   - name: "Programas"
     link: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
-    links: 
+    links:
       - name: "Full Stack Development"
       - link: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
       - name: "Senior Software Engineering"
@@ -16,6 +16,11 @@ navbar:
     link: "/aliados"
   - name: "Próximas Fechas"
     link: "/calendario"
+  - name: "🇺🇸"
+    link: "/?lang=en#home"
+    links:
+      - name: "🇪🇸"
+      - link: "/es/inicio?lang=es"
 button:
   button_link: "/aplica"
   button_type: "" ## YOU CAN LEAVE IT EMPTY FOR A FULL BACKGROUND COLOR OR 'outline' FOR A WHITE BACKGROUND WITH A BORDER
