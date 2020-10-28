@@ -93,15 +93,13 @@ geeks_vs_others:
 geek_data:
   heading: ¡Career Support de por vida!
   geek_pal:
-    - Un profesor cada cuatro estudiantes (1:4).
-    - Un profesor principal cada doce estudiantes (1:12).
+    - Un profesor cada cinco estudiantes (1:5).
     - Sesiones ilimitadas de tutoría por demanda, en persona o en línea.
     - Miles de ejercicios autoevaluados.
     - Tutoriales interactivos y autoevaluados.
     - Soluciones en video para una retroalimentación instantánea.
     - Chat de apoyo en línea al menos 12 horas al día.
     - Transmisión en línea de las clases.
-    - Grabación de las clases para su posterior revisión.
   geek_force:
     - Construcción de CV y LinkedIn.
     - Construcción del perfil de Github y portafolio desde el dia 1.
