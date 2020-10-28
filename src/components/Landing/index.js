@@ -1,37 +1,32 @@
 import React from "react"
-import loadable from '@loadable/component'
 import {Row, Column, Wrapper, Divider, Div} from '../Sections'
-import PropTypes from "prop-types"
 import {H2, H5, H4, Title} from '../Heading'
-import styled from "styled-components"
 import {Colors,Img, Button} from '../Styling'
 import WhoIsHiring from '../WhoIsHiring';
 import Badges from '../Badges';
-import LeadForm from '../LeadForm';
-import AlumniProjects from '../AlumniProjects'
-import ProgramDetails from '../ProgramDetails'
-import ProgramDetailsMobile from '../ProgramDetailsMobile'
-import WhyPython from '../WhyPython'
-import Why4Geeks from '../Why4Geeks';
 import News from '../News'
-import GeeksVsOthers from '../GeeksVsOthers'
-import ReactPlayer from 'react-player'
 import {navigate} from "gatsby"
 import {requestSyllabus} from "../../actions"
 
-const TestimonialsCarrousel = loadable(() => import('../Testimonials'))
+import ReactPlayer from '../ReactPlayer';
+import TestimonialsCarrousel from '../Testimonials';
+import Why4Geeks from '../Why4Geeks';
+import WhyPython from '../WhyPython';
+import AlumniProjects from '../AlumniProjects';
+import GeeksVsOthers from '../GeeksVsOthers';
+import ProgramDetails from '../ProgramDetails';
+import ProgramDetailsMobile from '../ProgramDetailsMobile';
+import LeadForm from '../LeadForm';
 
 const Side = ({ video, image, heading, content, button, bullets }) => {
 
-    // if(bullets) return <Bullets />
     if(video) return <ReactPlayer
-        className='react-player alumni-player'
-        file={{forceVideo: true}}
-        light={image}
-        controls={true}
-        url={video}
-        width='100%'
-        height='100%'
+        thumb={image && image.src}
+        id={video}
+        style={{
+            width: '100%',
+            height: '100%'
+        }}
     />
     if(image) return <Img
         src={image.src}
@@ -79,6 +74,7 @@ const Side = ({ video, image, heading, content, button, bullets }) => {
 }
 export const TwoColumn = ({ left, right, proportions }) => {
     const [ left_size, right_size ] = proportions ? proportions : [];
+
     return <Row m_sm="0px 0px 100px 0">
     <Column size={left_size || 6} size_sm="12" maxHeight="300px" align_sm="center">
         <Side {...left} />
@@ -224,5 +220,5 @@ export const landingSections = {
             right={{ image: yml.image, video: yml.video }}
             proportions={yml.proportions}
         />
-    </Wrapper>,
+    </Wrapper>
 }

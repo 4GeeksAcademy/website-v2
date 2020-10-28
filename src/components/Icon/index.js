@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 const Icon = ({ icon, ...rest }) => {
     if(typeof(window) === 'undefined' || !window) return "";
 
-    const Comp = loadable(() => import(`./set/${icon}`))
+    const Comp = loadable(() => 
+        import(`./set/${icon}`)
+            .catch(err => console.error(err))
+    )
     return <Comp {...rest} />
 }
 Icon.propTypes = {

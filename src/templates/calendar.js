@@ -1,167 +1,136 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {Row, Column, Wrapper, WrapperImage, Divider, Div} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, RoundImage} from '../components/Styling'
+import {Colors, Button, Img, Anchor} from '../components/Styling'
 import Card from '../components/Card'
 import Icon from '../components/Icon'
+import Select from '../components/Select'
 import BaseRender from './_baseLayout'
-import { Link } from 'gatsby'
 import dayjs from "dayjs"
 import LazyLoad from 'react-lazyload';
 import {SessionContext} from '../session'
 
-const days = [
-  'Sun',
-  'Mon',
-  'Tue',
-  'Wed',
-  'Thu',
-  'Fri',
-  'Sat'
-]
-const months = [
-  'Jan',
-  'Feb',
-  'Mar',
-  'Apr',
-  'May',
-  'Jun',
-  'Jul',
-  'Aug',
-  'Sep',
-  'Oct',
-  'Nov',
-  'Dec'
-]
-function rand () {
-  return Math.round(Math.random() * 20) - 10;
-}
-
+const ListCard = ({ image,  onClick, title, date, address, link }) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
+<Anchor to={link}>
+  <Card
+    overflow={`hidden`}
+    height="auto"
+    width="100%"
+    shadow
+  >
+    <LazyLoad scroll={true} height={230}>
+      <Img
+        src={image}
+        bsize="cover"
+        mb="10px"
+        border="1.25rem 1.25rem 0 0"
+        position="center center"
+        height="180px"
+        h_lg="120px"
+        h_md="140px"
+        h_sm="220px"
+      />
+    </LazyLoad>
+    <Row
+      marginLeft="0"
+      marginRight="0"
+      padding={`15px`}>
+      <Column size="12"
+        onClick={() => onClick(index)}>
+        <Row marginBottom="1rem" >
+          <H4
+            fs_xs="18px"
+            fs_sm="18px"
+            fs_md="16px"
+            fs_lg="16px"
+            fontSize="20px"
+          >{title}
+          </H4>
+        </Row>
+        <Row marginBottom=".2rem" alignItems={`center`} >
+          <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
+          <Paragraph
+            margin={`0 0 0 10px`}
+            fs_xs="18px"
+            fs_sm="18px"
+            fs_md="9px"
+            fs_lg="11px"
+            fs_xl="14px">
+            {dayjs(date).add(5, "hour").format("ddd, DD MMM YYYY")}
+          </Paragraph>
+        </Row>
+        <Row marginBottom=".2rem" alignItems={`center`} >
+          <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
+          <Paragraph
+            margin={`0 0 0 10px`}
+            fs_xs="18px"
+            fs_sm="18px"
+            fs_md="9px"
+            fs_lg="11px"
+            fs_xl="14px">
+            {address}
+          </Paragraph>
+        </Row>
+        <Row height="5%" align="end">
+          <a href={`#`} target="_blank" rel="noopener noreferrer">
+            <Icon icon="arrowright"
+              width="32"
+              color={Colors.blue}
+              fill={Colors.blue} />
+          </a>
+        </Row>
+      </Column>
+    </Row>
+  </Card>
+</Anchor>
+</Column>;
 
 const Calendar = (props) => {
-  const {data, pageContext, yml} = props;
-  const {session, setSession} = useContext(SessionContext);
+  const {pageContext, yml} = props;
+  const {session} = useContext(SessionContext);
 
-  const [cohorts, setCohorts] = useState([]);
-  const [events, setEvent] = useState([]);
-  const [academy, setAcademy] = useState(null);
-  const [selected, setSelected] = useState(0);
-  const [status, setStatus] = useState({toggle: false, hovered: false})
-  const [single, setSingle] = useState()
-  const [filteredEvents, setFilteredEvents] = useState([]);
-  const [filteredCohorts, setFilteredCohorts] = useState([]);
-  const [open, setOpen] = React.useState(false);
-  const [toggleCity, setToggleCity] = useState();
-  const [togglesCity, setTogglesCity] = useState();
-  const [toggle, setToggle] = useState();
-  const [toggles, setToggles] = useState();
-  const [filterType, setFilterType] = useState();
-  const [filterCity, setFilterCity] = useState();
-  const [test, setTest] = useState([]);
-  const [filterByCity, setFilterByCity] = useState(() => (session && session.location) ? [session.location.city] : ["Locations"]);
-  const [filterByType, setFilterByType] = useState(["Courses"]);
-  // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=santiago-chile
-  // https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true
-  // https://breathecode.herokuapp.com/v1/admissions/cohort/all
-
-  // https://breathecode.herokuapp.com/v1/events/all
-  // https://breathecode.herokuapp.com/v1/events/all?upcoming=true
-  // https://breathecode.herokuapp.com/v1/events/all?academy=downtown-miami&type=workshop
+  const [data, setData] = useState({ 
+    events: { catalog: [], all: [], filtered: [] },
+    cohorts: { catalog: [], all: [], filtered: [] }
+  });
+  const [academy, setAcademy] = useState(null)
+  const [filterType, setFilterType] = useState({ label: "Upcoming Courses and Events", value: "cohorts" });
 
   useEffect(() => {
-    const loadCohorts = () => {
-      if (academy == null) {
-        fetch(
-          `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`,
-        )
-          .then(response => response.json())
-          .then(data => {
-            setCohorts(data)
-          })
-      }
-      else {
-        fetch(
-          `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${academy}`,
-        )
-          .then(response => response.json())
-          .then(data => {
-            setCohorts(data)
-          })
-
-      }
-    }
-
-    const loadEvents = () => {
-      if (academy == null) {
-        fetch(
-          `${process.env.GATSBY_BREATHECODE_HOST}/events/all?upcoming=true`,
-        )
-          .then(response => response.json())
-          .then(data => setEvent(data))
-      }
-      else {
-        fetch(
-          `${process.env.GATSBY_BREATHECODE_HOST}/events/all?academy=${academy}&type=${filterByType[0]}`,
-        )
-          .then(response => response.json())
-          .then(data => setEvent(data))
-      }
-    }
-
-    loadCohorts();
-    loadEvents();
-  }, [academy]);
-
-  useEffect(() => {
-    const loadFilterCity = async () => {
-      let filterCityArray = [{city: 'All Locations', slug: ''}];
-      try {
-        let response = await session.location;
-        if (response) {
-          for (let i of session.locations) {
-            filterCityArray.push({city: i.city, slug: i.breathecode_location_slug})
-          }
-          setFilterCity(filterCityArray);
-        }
-      }
-      catch (error) {
-        console.error("Something failed", error);
-      }
-    }
-    loadFilterCity();
-  }, [session])
-  useEffect(() => {
-    const loadFilterType = async () => {
-      let filterTypeArray = ['courses', 'events'];
+    const getData = async () => {
+      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      let cohorts = await resp.json();
+      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      let events = await resp2.json();
+      let _types = []
       for (let i = 0; i < events.length; i++) {
-        if (events[i].event_type && !filterTypeArray.includes(events[i].event_type.name)) {
-          filterTypeArray.push(events[i].event_type.name)
+        if (events[i].event_type && !_types.includes(events[i].event_type.name)) {
+          _types.push({ label: events[i].event_type.name, value: events[i].event_type.name })
         }
       }
-      setFilterType(filterTypeArray);
+      setData(oldData => ({
+        events: { catalog: _types, all: events, filtered: events },
+        cohorts: { catalog: oldData.cohorts.catalog, all: cohorts, filtered: cohorts }
+      }))
     }
-    loadFilterType();
+    getData();
+  }, []);
 
-  }, [events])
   useEffect(() => {
-    const filterEvents = async () => {
-      if (filterByCity.length > 0) {
-        const filteredCohortByCity = cohorts.filter(item => item.slug.includes(filterByCity[0].toLowerCase()))
-        if (filteredCohortByCity.length > 0) {
-          setFilteredCohorts(filteredCohortByCity)
-        }
-        else {
-          setFilteredCohorts([])
+    if(session && Array.isArray(session.locations)){
+      const _data = {
+        ...data,
+        cohorts: { 
+          ...data.cohorts,
+          catalog: [{label: 'All Locations', value: null}].concat(
+            session.locations.map(l => ({ label: l.city, value: l.breathecode_location_slug}))
+          )
         }
       }
-      else {
-        setFilteredCohorts([])
-      }
-
+      setData(_data);
     }
-    filterEvents();
-  }, [filterByCity, filterByType])
-  if (!cohorts) return <Row align={`center`}> <Paragraph align="center" fontSize="18px" >"Loading..."</Paragraph></Row>
+  }, [session]);
+
   return (
     <>
       <WrapperImage
@@ -178,21 +147,18 @@ const Calendar = (props) => {
           title={yml.header.tagline}
           variant="main"
           color={Colors.white}
-          fontSize="46px"
           textAlign="center"
         />
       </WrapperImage>
-      <Wrapper
-
-
-        border="top"
-        color={Colors.white}
-      >
+      <Wrapper border="top" color={Colors.white}>
         <Divider height="50px" />
         <Row marginBottom={`10px`} align={`end`}>
-          {/* <Column size="2" alignSelf="center" align="right"> */}
-          <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer"><Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">Join Our Meetup</Button></a>
-          {/* </Column> */}
+          <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer">
+            <Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">
+              Join Our Meetup
+            </Button>
+          </a>
+          <H4 margin="20px 0 0 0" align="left" a_sm="left">Filter courses and events:</H4>
         </Row>
 
         <Row
@@ -204,383 +170,78 @@ const Calendar = (props) => {
           alignResp={`space-between`}
           flexDirection_sm={`column`}
         >
-          <Div
-            justifyContent={`center`}
-            onMouseLeave={() => {
-              setTimeout(() => {
-                setToggle(false);
-                setToggleCity(false);
-              }, 500)
-            }}
-          >
-            <Card
-              color={`grey`}
-              borders={`.5rem`}
-            >
-              <Button
-                display={`flex`}
-                alignItems={`center`}
-                width="100%"
-                onClick={() => {toggle == false ? setToggleCity(!toggleCity) : (setToggleCity(!toggleCity), setToggle(false))}}
-                color={Colors.lightGray}
-              >
-                <Paragraph
-                  fontWeight={`500`}
-                  fs_xs="18px"
-                  fs_sm="18px"
-                  fs_md="18px"
-                  fs_lg="18px"
-                  fs_xl="20px"
-                  margin={`0 5px 0 0`}>{filterByCity}</Paragraph>
-                <Icon icon="triangledown" width="16" color={Colors.gray} fill={Colors.gray} />
-              </Button>
-              {toggleCity &&
-                <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".5rem" shadow>
-                  {Array.isArray(filterCity) && filterCity.map((item, index) => {
-                    return (
-                      <Button
-                        key={index}
-                        colorHover={Colors.lightBlue}
-                        onClick={() => {item.city in filterCity ? null : item.city != "All Locations" ? setAcademy(item.slug) : setAcademy(null), setFilterByCity([item.city]), setToggleCity(!toggleCity)}}
-                        // onClick={() => {item.city in filterCity ? null : setFilterByCity([item]), setToggleCity(!toggleCity)}}
-                        textColor={Colors.gray}
-                        fontSize={"16px"}
-                        borderRadius=".5rem" padding="10px"
-                      >
-                        <Paragraph
-                          fontSize="16px"
-                          color={Colors.gray} >
-                          {item.city}
-                        </Paragraph>
-
-                      </Button>
-                    )
-                  })}
-                </Row>
-              }
-            </Card>
-          </Div>
-          <Div
-            justifyContent={`center`}
-            onMouseLeave={() => {
-              setTimeout(() => {
-                setToggle(false);
-                setToggleCity(false);
-              }, 500)
-            }}
-          >
-            <Card
-              color={`grey`}
-              borders={`.5rem`}
-            >
-              <Button
-                display={`flex`}
-                alignItems={`center`}
-                width="100%"
-                onClick={() => {toggleCity == false ? setToggle(!toggle) : (setToggle(!toggle), setToggleCity(false))}}
-                color={Colors.lightGray}
-              >
-                <Paragraph
-                  fontWeight={`500`}
-                  fs_xs="18px"
-                  fs_sm="18px"
-                  fs_md="18px"
-                  fs_lg="18px"
-                  fs_xl="20px"
-                  margin={`0 15px 0 0`}>{filterByType}</Paragraph>
-                <Icon icon="triangledown" width="16" color={Colors.gray} fill={Colors.gray} />
-              </Button>
-              {toggle &&
-                <Row marginBottom="5px" marginTop="3px" marginRight="0" marginLeft="0" width="250px" align="center" position="absolute" zIndex="1000" background={Colors.white} borderRadius=".5rem" shadow>
-                  {Array.isArray(filterType) && filterType.map((type, index) => {
-                    return (
-                      <Button
-                        key={index}
-                        colorHover={Colors.lightBlue}
-                        onClick={() => {filterByType.includes(type) ? null : setFilterByType([type]), setToggle(!toggle)}}
-                        textColor={Colors.gray}
-                        fontSize={"16px"}
-                        borderRadius=".5rem" padding="10px"
-                      >
-                        <Paragraph
-                          fontSize="16px"
-                          color={Colors.gray} >
-                          {type}
-                        </Paragraph>
-                      </Button>
-                    )
-                  })}
-                </Row>
-              }
-            </Card>
-          </Div>
-
-          {/* ******* */}
-          {/* CLEAR FILTERS */}
-
-          {
-            // academy != null || filterByType.length > 0
-            //   ?
-            filterByCity[0] != "Locations"
-              || filterByType[0] != "Courses"
-              ?
-              <Div
-                style={{border: "1px solid #0097CE", borderRadius: "5px", width: "max-content"}}
-                padding={`5px`}
-                margin={`10px 0`}
-                justifyContent={`center`}
-                alignItems={`center`}
-                cursor={`pointer`}
-                onClick={() => {
-                  setFilterByCity(["Locations"]);
-                  setFilterByType(["Courses"]);
-                  setFilteredCohorts([]);
-                  setAcademy(null);
-                }}>
-
-                <Paragraph
-                  fs_xs="18px"
-                  fs_sm="18px"
-                  fs_md="18px"
-                  fs_lg="18px"
-                  fs_xl="20px"
-                  fontWeight={`500`}
-                  margin={`0 5px`}
-                  cursor={`pointer`}
-                  color={Colors.blue}
-                >Clear all filters
-                </Paragraph>
-                <Icon icon="cross"
-                  onClick={() => {
-                    setFilterByCity(["Locations"]);
-                    setFilterByType(["Courses"]);
-                    setFilteredCohorts([]);
-                    setAcademy(null);
-                  }}
-                  width="18" color={Colors.blue} fill={Colors.blue} />
-
-              </Div>
-              :
-              null
-          }
+            <Select  
+              top="40px"
+              left="20px"
+              width="300px"
+              m_sm="5px"
+              maxWidth="100%"
+              options={console.log("catalog", data.cohorts.catalog) || data.cohorts.catalog}
+              openLabel={academy ? "Campus: "+academy.label : "Select one academy"}
+              closeLabel={academy ? "Campus: "+academy.label : "Select one academy"}
+              onSelect={(opt) => {
+                setAcademy(opt)
+                setData({
+                  ...data,
+                  [filterType.value]: { 
+                    ...data[filterType.value],
+                    filtered: data[filterType.value].all.filter(elm => elm.academy.slug === opt.value)
+                  }
+                });
+              }}
+            />
+            <Select  
+              top="40px"
+              left="20px"
+              width="300px"
+              maxWidth="100%"
+              m_sm="5px"
+              options={[
+                { label: "Courses", value: "cohorts" }, 
+                { label: "Events", value: "events" }
+              ]}
+              openLabel={filterType.label}
+              closeLabel={filterType.label}
+              onSelect={(opt) => setFilterType(opt)}
+            />
         </Row>
       </Wrapper>
-      <Wrapper
-
-
-        border="top"
-        background={cohorts.length > 0 ? Colors.lightGray : ""}
-      >
+      <Wrapper border="top">
         <Row>
           {
-            filterByType[0].toLowerCase() === "courses".toLowerCase() ?
-              cohorts.length > 0 ?
-                cohorts.map((cohort, index) => {
-                  return (
-                    <>
-                      <Column size="4" size_sm="12" key={index} margin="0 0 1rem 0">
-                        <Link to={`/${session ? session.language : "us"}/${cohort.certificate.slug}`}>
-                          <Card
-                            overflow={`hidden`}
-                            onMouseOver={() => setSelected(index)}
-                            onClick={() => setSelected(index)}
-                            h_xs="auto"
-                            h_sm="auto"
-                            h_md="auto"
-                            h_lg="auto"
-                            h_xl="auto"
-                            width="100%"
-                            color={index === selected ? 'grey' : 'white'}
-                            shadow
-                          >
-                            <img src={cohort.academy.logo_url}
-                              style={{
-                                height: `130px`,
-                                width: "100%",
-                                objectFit: "cover",
-                              }}
-                              className={`img-event`}
-                            />
-                            <Row
-                              marginLeft="0"
-                              marginRight="0"
-                              padding={`15px`}>
-                              <Column size="12"
-                                onMouseOver={() => setSelected(index)}
-                                onMouseOut={() => setSelected()}
-                                onClick={() => setSelected(index)}>
-                                <Row marginBottom="1rem" >
-                                  <H4
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="16px"
-                                    fs_lg="16px"
-                                    fontSize="20px"
-                                  >{cohort.certificate.name}
-                                  </H4>
-                                </Row>
-                                <Row marginBottom=".2rem" alignItems={`center`} >
-                                  <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
-                                  <Paragraph
-                                    margin={`0 0 0 10px`}
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="9px"
-                                    fs_lg="11px"
-                                    fs_xl="14px">
-                                    {dayjs(cohort.kickoff_date).add(5, "hour").format("ddd, DD MMM YYYY")}
-                                  </Paragraph>
-                                </Row>
-                                <Row marginBottom=".2rem" alignItems={`center`} >
-                                  <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
-                                  <Paragraph
-                                    margin={`0 0 0 10px`}
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="9px"
-                                    fs_lg="11px"
-                                    fs_xl="14px">
-                                    {cohort.academy.city.name}, {cohort.academy.country.name}
-                                  </Paragraph>
-                                </Row>
-                                <Row height="5%" align="end">
-                                  <a href={`#`} target="_blank" rel="noopener noreferrer">
-                                    <Icon icon="arrowright"
-                                      width="32"
-                                      color={Colors.blue}
-                                      fill={Colors.blue} />
-                                  </a>
-                                </Row>
-                              </Column>
-                            </Row>
-                          </Card>
-                        </Link>
-                      </Column>
-                    </>
-                  )
-                }) :
-
-                <Paragraph
-                  margin={`0 0 0 10px`}
-                  fs_xs="18px"
-                  fs_sm="18px"
-                  fs_md="16px"
-                  fs_lg="18px"
-                  fs_xl="18px">
-                  {academy != null ? "It seems we could not found any result." : "Loading..."}
-                </Paragraph>
+            filterType.value === "cohorts" ?
+              data.cohorts.filtered.length == 0 ?
+              <Paragraph margin={`0 0 0 10px`} fontSize="18px">
+                {academy != null ? "It seems we could not found any result." : "Loading..."}
+              </Paragraph>
               :
-              events.length ?
-                events.map((event, index) => {
-                  let eventDate = new Date(event.starting_at)
-                  return (
-                    <>
-                      <Column size="4" size_sm="12" key={index} margin="0 0 1rem 0">
-                        <a href={event.url} target="_blank" rel="noopener noreferrer">
-                          <Card
-                            overflow={`hidden`}
-                            h_xs="auto"
-                            h_sm="auto"
-                            h_md="auto"
-                            h_lg="auto"
-                            h_xl="auto"
-                            width="100%"
-                            color={index === selected ? 'grey' : 'white'}
-
-                            shadow
-                          >
-                            <LazyLoad scroll={true} height={230}>
-                              <RoundImage
-                                url={event.banner}
-                                bsize="cover"
-                                mb="10px"
-                                border="1.25rem 1.25rem 0 0"
-                                position="center center"
-                                height="180px"
-                                h_lg="120px"
-                                h_md="140px"
-                                h_sm="220px"
-                              />
-                            </LazyLoad>
-                            <Row marginLeft="0" marginRight="0" padding={`15px`}>
-                              <Column
-                                onMouseOver={() => setSelected(index)}
-                                onMouseOut={() => setSelected()}
-                                onClick={() => setSelected(index)}
-                                size="12" >
-                                <Row marginBottom="1rem" align={`center`}>
-                                  <Paragraph>{event.event_type && event.event_type.name}</Paragraph>
-                                </Row>
-                                <Row marginBottom="1.25rem" >
-                                  <H4
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="16px"
-                                    fs_lg="16px"
-                                    fontSize="20px"
-                                  >{event.title}
-                                  </H4>
-                                </Row>
-                                <Row marginBottom=".2rem" alignItems={`center`} >
-                                  <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
-                                  <Paragraph
-                                    margin={`0 0 0 10px`}
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="9px"
-                                    fs_lg="11px"
-                                    fs_xl="14px">
-                                    {days[eventDate.getDay()]}, {eventDate.getDate()} {months[eventDate.getMonth()]} {eventDate.getFullYear()}
-                                  </Paragraph>
-                                </Row>
-                                <Row marginBottom="1.25rem" alignItems={`center`} >
-                                  <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
-                                  <Paragraph
-                                    margin={`0 0 0 10px`}
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="12px"
-                                    fs_lg="14px"
-                                    fs_xl="16px">
-                                    {event.online_event ? "Online" : event.academy.city ? event.academy.city.name : event.academy.name}
-                                  </Paragraph>
-                                </Row>
-                                <Row marginBottom=".2rem" alignItems={`center`} >
-                                  <Paragraph
-                                    margin={`10px 0 0 0`}
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="12px"
-                                    fs_lg="14px"
-                                    fs_xl="16px">
-                                    {event.exerpt}
-                                  </Paragraph>
-                                </Row>
-                                <Row height="5%" align="end">
-                                  <a href={event.url} target="_blank" rel="noopener noreferrer">
-                                    <Icon icon="arrowright"
-                                      width="32"
-                                      color={Colors.blue}
-                                      fill={Colors.blue} />
-                                  </a>
-                                </Row>
-                              </Column>
-                            </Row>
-                          </Card>
-                        </a>
-                      </Column>
-                    </>
-                  )
-                }) : <Paragraph
-                  margin={`0 0 0 10px`}
-                  fs_xs="18px"
-                  fs_sm="18px"
-                  fs_md="16px"
-                  fs_lg="18px"
-                  fs_xl="18px">
-                  It seems we could not found any result.
-                </Paragraph>
-
+              data.cohorts.filtered.map((cohort, index) => 
+                <ListCard 
+                  key={index}
+                  title={cohort.certificate.name}
+                  address={`${cohort.academy.city.name}, ${cohort.academy.country.name}`}
+                  image={cohort.academy.logo_url}
+                  link={`/${session ? session.language : "us"}/${cohort.certificate.slug}`}
+                  date={cohort.kickoff_date}
+                />
+              )
+              :
+              data.events.filtered.length === 0 ?
+              <Paragraph margin={`0 0 0 10px`} fontSize="18px">
+                {academy != null ? "It seems we could not found any result." : "Loading..."}
+              </Paragraph>
+              :
+              data.events.filtered.map((event, index) => 
+                <ListCard 
+                  key={index}
+                  title={event.title}
+                  address={event.online_event ? "Online" : event.academy.city ? event.academy.city.name : event.academy.name}
+                  image={event.banner}
+                  link={event.url}
+                  date={event.starting_at}
+                  exerpt={event.exerpt}
+                />
+              )
           }
         </Row>
       </Wrapper>

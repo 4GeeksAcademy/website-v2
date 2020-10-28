@@ -140,6 +140,8 @@ const ButtonStyle = styled.div`
 const Div = styled.div`
   display: flex;
   flex-flow: row nowrap;
+  max-width: 1024px;
+  margin: auto;
   justify-content: space-between;
   padding: 0 2rem;
   align-items: center;
@@ -154,7 +156,6 @@ const Div = styled.div`
     top: 0;
     right: 0;
     height: ${({open}) => open ? '50vh' : '0'};
-    width: 100%;
     padding: 0.5rem;
     transition: transform 0.3s ease-in-out;
     li {
@@ -213,23 +214,6 @@ const Ul = styled.ul`
 export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange}) => {
   const data = useStaticQuery(graphql`
     query {
-      allChooseProgramYaml {
-        edges {
-          node {
-            programs{
-                text
-                link
-                location_bc_slug
-                schedule
-            }
-            fields{
-              lang
-            }
-            open_button_text
-            close_button_text
-          }
-        }
-      }
       file(relativePath: { eq: "images/4G_logo_negro.png" }) {
         childImageSharp {
           fixed(width: 75) {
@@ -239,7 +223,6 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
       }
     }
   `)
-  const content = data.allChooseProgramYaml.edges.find(({node}) => node.fields.lang === lang);
   return (
       <Div open={open}>
         <Link to={'/'}>
@@ -251,30 +234,9 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
         </Link>
         <Ul open={open}>
           {menu && menu.map((item, index) => 
-            (item.name === "The Programs" || item.name==="Programas") ?
-                <ChooseProgram
-                  key={index}
-                  left="15px"
-                  programs={content.node.programs}
-                  marginTop="-3px"
-                  borderRadius="0 .75rem .75rem .75rem"
-                  openLabel={content.node.close_button_text}
-                  onLocationChange={(slug) => onLocationChange(slug)}
-                  closeLabel={content.node.open_button_text}
-                  selector={({ status, setStatus }) => 
-                    !status.toggle ?
-                      <NavItem onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
-                      :
-                      <Card shadow borders="1.25rem 1.25rem 0 0">
-                        <NavItem onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
-                      </Card>
-                  }
-                />
-                :
-                <NavItem fs_sm="18px" key={index}><Anchor onClick={onToggle} to={item.link} key={index}>{item.name}</Anchor></NavItem>
+            <NavItem fs_sm="18px" key={index}><Anchor onClick={onToggle} to={item.link} key={index}>{item.name}</Anchor></NavItem>
           )}
         </Ul>
-        <Link onClick={onToggle} to={button.button_link || "#"}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
       </Div>
   )
 }

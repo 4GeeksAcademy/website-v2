@@ -19,13 +19,14 @@ Heading.defaultProps = {
 
 const BaseHeading = styled(Heading)`
   display: block;
+  float: ${props => props.float || "none"};
   width: ${props => props.width || "100%"};
   font-family: 'Futura', sans-serif;
   letter-spacing: 0px;
   font-weight: ${props => props.fontWeight};
   font-size: ${props => props.fontSize};
   font-style: normal;
-  font-display: swap;
+  
   color: ${props => props.color};
   margin: ${props => props.margin};
   text-shadow: ${props => props.textShadow}; 
@@ -129,7 +130,7 @@ Separator.defaultProps = {
 };
 
 export const Paragraph = styled.div`
-  font-display: swap;
+  
   width: ${props => props.width};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin};
