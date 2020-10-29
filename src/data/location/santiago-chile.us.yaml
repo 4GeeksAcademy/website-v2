@@ -76,7 +76,7 @@ prices:
       plans:
         - months: "12"
           payment: "210.641 CLP"
-          paymentInfo: "per month + 410.000 deposit"
+          paymentInfo: "per month + 414.000 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
@@ -113,7 +113,7 @@ prices:
         sub_heading: "with the Income Sharing Agreement (ISA)"
       content:
         price: "16% of Salary"
-        price_info: "until fully paid, and only if you get the job"
+        price_info: "until fully paid, and only full-time program"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
