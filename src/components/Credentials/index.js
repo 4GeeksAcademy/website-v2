@@ -27,11 +27,7 @@ export default props => {
                 transform={`translateY(-${(index % 2 !== 0) ? props.up + "px" : ((props.up * 20) / 100) + "px"})`}
               >
                 <Icon icon={i.icon} width="48" color={Colors.yellow} fill={Colors.yellow} />
-                {(i.slug === "hired" || i.slug === "contratados") ? 
-                  <H3 margin="10px 0 20px 0">{i.value}{i.symbol}</H3> 
-                  :
-                  <H3 margin="10px 0 20px 0">{i.symbol}{i.value}</H3>
-                }
+                <H3 margin="10px 0 20px 0">{i.value}</H3> 
                 <H4
                   fs_xs="16px"
                   fs_md="16px"
