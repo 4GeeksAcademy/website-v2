@@ -16,11 +16,11 @@ const Pricing = (props) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   console.log("yml", yml);
   let location = null;
-  if(session && session.location){
+  if (session && session.location) {
 
     location = data.allLocationYaml.edges.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
-    if(location) location = location.node;
-  } 
+    if (location) location = location.node;
+  }
 
   return (
     <>
@@ -37,6 +37,7 @@ const Pricing = (props) => {
       >
         <Divider height="100px" />
         <Title
+          type="h1"
           size="5"
           color={Colors.white}
           title={yml.header_data.tagline}
@@ -51,7 +52,7 @@ const Pricing = (props) => {
       <Wrapper>
         <Row m_sm="0px 0px 100px 0">
           <Column size="5" size_sm="12" height="300px" align_sm="center">
-          <Img
+            <Img
               fixed={yml.intro.image.childImageSharp.fixed}
               objectFit="cover"
               objectPosition="50% 50%"
@@ -59,7 +60,7 @@ const Pricing = (props) => {
             />
           </Column>
           <Column size="7" size_sm="12">
-            <H2 align="left" margin="30px 0 20px 0" type="h1">{yml.intro.heading}</H2>
+            <H2 align="left" margin="30px 0 20px 0" type="h2">{yml.intro.heading}</H2>
             <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
           </Column>
         </Row>
@@ -67,7 +68,7 @@ const Pricing = (props) => {
       <Wrapper>
         <Row m_sm="0px 0px 0px 0">
           <Column size="7" size_sm="12">
-            <H2 align="left" margin="30px 0 20px 0" type="h1">{yml.intro.heading_second}</H2>
+            <H2 align="left" margin="30px 0 20px 0" >{yml.intro.heading_second}</H2>
             <Paragraph align="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</Paragraph>
             {yml.intro.bullets.map(b => <Paragraph align_sm="left" margin="10px 0">• {b}</Paragraph>)}
           </Column>
@@ -124,13 +125,13 @@ const Pricing = (props) => {
         background={Colors.lightGray}
         border="top"
       >
-          <Title
-            size="10"
-            title={yml.ecosystem.heading}
-            paragraph={yml.ecosystem.sub_heading}
-            paragraphColor="black"
-            variant="primary"
-          />
+        <Title
+          size="10"
+          title={yml.ecosystem.heading}
+          paragraph={yml.ecosystem.sub_heading}
+          paragraphColor="black"
+          variant="primary"
+        />
         <WhoIsHiring
           margin="50px"
           images={hiring.financials.images}
