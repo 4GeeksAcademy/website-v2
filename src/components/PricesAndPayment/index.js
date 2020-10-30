@@ -189,7 +189,7 @@ const PricesAndPayments = (props) => {
         background={Colors.grey}
         borderRadius="1.25rem"
       >
-        <H5 fontSize="20px">{info.get_notified}</H5>
+        <Paragraph align="center">{info.get_notified}</Paragraph>
       </Div>
     </Fragment>
   )

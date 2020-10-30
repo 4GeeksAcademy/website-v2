@@ -217,8 +217,6 @@ export const query = graphql`
               title
               icon
               value
-              symbol
-              symbol_position
             }
           }
         }

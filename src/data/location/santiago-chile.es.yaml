@@ -10,7 +10,7 @@ meta_info:
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:
   tagline: "4GEEKS ACADEMY en SANTIAGO DE CHILE"
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/santiago-loc.png"
   alt: ""
 button:
@@ -26,7 +26,7 @@ info_box:
   address: "Av. Manquehue Sur 350, Oficina 110, Las Condes, Región Metropolitana, Chile"
   contact_heading: "Contacts"
   phone: "+56 9 7284 8039"
-  email: "info@4GeeksAcademy.com"
+  email: "chile@4GeeksAcademy.com"
   image: "../../../static/images/locations/santiago-map.png"
   map_url: https://www.google.com/maps/place/4Geeks+Academy+Chile/@-33.4104594,-70.5662933,15z/data=!4m2!3m1!1s0x0:0x37af5bee84731bcc?sa=X&ved=2ahUKEwj35Kmp_-zrAhUFTd8KHeaZDHMQ_BIwE3oECBYQCA
   alt: ""
@@ -39,7 +39,7 @@ upcoming:
 
 carousel_box:
   heading: "Lo que debes saber de nuestra sede en Santiago de Chile: "
-  content: "A 10 min camindando desde la estación del metro y ubicada en una de las zonas mas centricas de la ciudad, esta oficina es ideal para todos los Santiagüeños que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
+  content: "A 10 min camindando desde la estación del metro y ubicada en la zona oriente de la ciudad, esta oficina es ideal para todos los Santiaguinos que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
   images:
     - path: "../../../static/images/locations/santiago-loc-2.jpg"
       alt: "Santiago Location Image"
@@ -78,7 +78,7 @@ prices:
           message: ""
         - months: "6"
           payment: "407.121 CLP"
-          paymentInfo: "mensual + 410.000 deposito"
+          paymentInfo: "mensual + 414.000 depósito"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
@@ -93,7 +93,7 @@ prices:
         sub_heading: "el mejor precio de la ciudad"
       content:
         price: "2.760.000 CLP"
-        price_info: "una sola quota"
+        price_info: "una sola cuota"
 
   ## *****************
   ## PART-TIME SECTION
@@ -110,7 +110,7 @@ prices:
         heading_two: "QUE ENCUENTRES PEGA"
         sub_heading: "Acuerdo de Ingresos Compartidos"
       content:
-        price: "16% de tu sueldo"
+        price: "Válido sólo para modalidad full time"
         price_info: "hasta pagarlo todo, pero sólo si consigues trabajo en tech"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
@@ -121,7 +121,7 @@ prices:
       plans:
         - months: "12 m"
           payment: "184.311 CLP"
-          paymentInfo: "mensual + 362.250 deposito"
+          paymentInfo: "mensual + 362.250 depósito"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
@@ -140,7 +140,7 @@ prices:
         sub_heading: "y disfruta de mejores precios de chile"
       content:
         price: "2.415.000 CLP"
-        price_info: "una sola quota"
+        price_info: "una sola cuota"
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
