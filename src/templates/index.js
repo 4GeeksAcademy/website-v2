@@ -58,7 +58,7 @@ const Home = (props) => {
   
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
-  console.log("Rerender...");
+  
   return (
     <>
       <Row github={`/page/index.${pageContext.lang}.yml`}>
@@ -354,8 +354,6 @@ export const query = graphql`
               title
               icon
               value
-              symbol
-              symbol_position
             }
           }
         }

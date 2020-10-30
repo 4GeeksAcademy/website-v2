@@ -23,7 +23,7 @@ const TestimonialsCarrousel = (props) => {
                 swipeable={true}
             >
                 {testimonialsArray.filter(item => item.hidden !== true).map((item, i) => {
-                    return (<Card padding="20px 30px 30px 30px" height="460px" >
+                    return (<Card key={i} padding="20px 30px 30px 30px" height="460px" >
                         <Img
                             fluid={item.student_thumb.childImageSharp.fluid}
                             alt={item.alt}

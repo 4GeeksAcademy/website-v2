@@ -51,14 +51,7 @@ const Blog = ({data, pageContext, yml}) => {
             <Wrapper >
                 <Row align="left">
                     <Column size="12">
-                        <H4
-
-                            fs_xs="30px"
-                            fs_sm="30px"
-                            fs_md="30px"
-                            fs_lg="30px"
-                            fontSize="30px"
-                        >Featured</H4>
+                        <H4 fontSize="30px">Featured</H4>
                     </Column>
                 </Row>
                 <Row>
@@ -67,10 +60,10 @@ const Blog = ({data, pageContext, yml}) => {
                 <Divider height="50px" />
                 <Row github={`/blog`}>
                     <div className="card-columns" >
-                        {data.posts.edges.filter(post => post.node.frontmatter.featured === true).map((item, i) => {
+                        {data.featured.edges.map((item, i) => {
                             return (
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
-                                    {item.node.frontmatter.image != null ?
+                                    {item.node.frontmatter.image &&
                                         <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
                                             <LazyLoad height={10} scroll={true} once={true}>
                                                 <RoundImage
@@ -87,11 +80,12 @@ const Blog = ({data, pageContext, yml}) => {
                                                     h_xs="150px"
                                                 />
                                             </LazyLoad>
-                                        </Link> : null}
+                                        </Link>
+                                    }
                                     <Row align="around" >
-
                                         <Column size size="12"  alignSelf="center" align="left">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
+                                                align="left" align_sm="left"
                                                 uppercase
                                                 fs_xs="20px"
                                                 fs_sm="24px"
@@ -103,7 +97,7 @@ const Blog = ({data, pageContext, yml}) => {
                                     </Row>
                                     <Row height="auto">
                                         <Column size="12" align="center">
-                                            <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{item.node.frontmatter.excerpt}</Paragraph>
+                                            <Paragraph color="gray" align="left" margin="10px 0">{item.node.frontmatter.excerpt}</Paragraph>
                                         </Column>
                                     </Row>
                                     <Row height="auto" align="around">
@@ -113,18 +107,18 @@ const Blog = ({data, pageContext, yml}) => {
                                             </LazyLoad>
                                         </Column>
                                         <Column size="8"  alignSelf="center">
-                                            <Paragraph color={Colors.gray} align="left"
-                                                fs_xs="12px"
-                                                fs_sm="12px"
-                                                fs_md="10px"
-                                                fs_lg="12px"
-                                                fs_xl="12px" lineHeight="20px">{`${item.node.frontmatter.author} `}</Paragraph>
-                                            <Paragraph color={Colors.gray} align="left" fs_xs="12px"
-                                                fs_sm="12px"
-                                                fs_md="10px"
-                                                fs_lg="12px"
-                                                fs_xl="12px" lineHeight="20px">{`${GetFormattedDate(item.node.frontmatter.date)}`}</Paragraph>
-                                            {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
+                                            <Paragraph 
+                                                color={Colors.gray} 
+                                                align="left"
+                                                fontSize="12px" 
+                                                lineHeight="20px">
+                                                    {`${item.node.frontmatter.author} `}
+                                            </Paragraph>
+                                            <Paragraph 
+                                                color={Colors.gray} align="left" fontSize="12px"
+                                                lineHeight="20px">
+                                                    {`${GetFormattedDate(item.node.frontmatter.date)}`}
+                                            </Paragraph>
                                         </Column>
                                         <Column size="2"  align="end">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
@@ -257,25 +251,59 @@ query BlogQuery($file_name: String!, $lang: String!) {
         }
       }
     }
-    posts: allMarkdownRemark (filter: {frontmatter: {lang: {eq: $lang}}}){
+    featured: allMarkdownRemark (
+        sort: {fields: frontmatter___date, order: DESC},
+        filter: {frontmatter: {
+            featured: {eq: true}, 
+            lang: {eq: $lang},
+            status: {eq: "published"}
+        }},
+        limit: 10
+    ){
         edges {
-          node {
-            frontmatter {
-              author
-              avatar
-              date
-              image
-              slug
-              title
-              excerpt
-              lang
-              featured
-              status
-              
+            node {
+                frontmatter {
+                author
+                avatar
+                date
+                image
+                slug
+                title
+                excerpt
+                lang
+                featured
+                status
+                
+                }
             }
-          }
         }
-      }
+    }
+    posts: allMarkdownRemark (
+        sort: {fields: frontmatter___date, order: DESC},
+        filter: {frontmatter: {
+            featured: {eq: true}, 
+            lang: {eq: $lang},
+            status: {eq: "published"}
+        }}
+    ){
+        edges {
+            node {
+                frontmatter {
+                author
+                avatar
+                date
+                image
+                slug
+                title
+                excerpt
+                lang
+                featured
+                status
+                
+                }
+            }
+        }
+    }
 }
 
 

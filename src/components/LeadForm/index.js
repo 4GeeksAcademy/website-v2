@@ -157,7 +157,7 @@ const LeadForm = ({ d_sm, fields, thankyou, heading, redirect, formHandler, data
                 <>
                     {motivation && <Paragraph align="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
                     <Row>
-                        <Column display={layout} size="12" paddingLeft="0" paddingRight="0">
+                        <Column display={layout} className={"leadform-"+layout} size="12" paddingLeft="0" paddingRight="0">
                             {fields.filter(f => formData[f].type !== 'hidden').map((f,i) => {
                                 const _field = formData[f]
                                 return <Input

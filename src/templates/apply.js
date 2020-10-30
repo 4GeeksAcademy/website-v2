@@ -70,6 +70,7 @@ const Apply = (props) => {
 
     return (
         <form onSubmit={(e) => {
+            console.log("Submit..")
             e.preventDefault();
             if (formStatus.status === "error") setFormStatus({status: "idle", msg: "Resquest"})
 
@@ -115,41 +116,30 @@ const Apply = (props) => {
                     align="center"
                     borderRadius="0 1.25rem 1.25rem 1.25rem"
                 >
-                    <Column size="4" size_sm="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="center" height="100%"  >
-                        <Row align="center" height="100%">
-                            <Column size="10" height="100%">
-                                <Divider height="50px" />
-                                <Row height="60px">
-                                    <H3
-                                        fs_xs="20px"
-                                        fs_sm="18px"
-                                        fs_md="18px"
-                                        fs_lg="20px"
-                                        fs_xl="24px"
-                                        color={Colors.yellow}
-                                    >
-                                        {yml.right.heading}
-                                    </H3>
-                                </Row>
-                                <Divider height="30px" />
-
-                                {yml.right.content_section.map((item, i) => {
-                                    return (<Row key={i} height="50px">
-                                        <Paragraph
-
-                                            fs_xs="12px"
-                                            fs_sm="14px"
-                                            fs_md="10px"
-                                            fs_lg="12px"
-                                            fs_xl="14px"
-                                            lineHeight="16px"
-                                            color={Colors.lightGray}
-                                        >{item}
-                                        </Paragraph>
-                                    </Row>)
-                                })}
-                            </Column>
+                    <Column
+                        size="4"
+                        size_sm="12"
+                        color={Colors.black}
+                    >
+                        <Row padding={`20px`}>
+                            <H3
+                                fontSize={`22px`}
+                                color={Colors.yellow}
+                            >
+                                {yml.right.heading}
+                            </H3>
                         </Row>
+
+                        {yml.right.content_section.map((item, i) => {
+                            return (<Row key={i} margin={`5px 0`} padding={`20px`}>
+                                <Paragraph
+                                    fontSize={`18px`}
+                                    lineHeight="18px"
+                                    color={Colors.lightGray}
+                                >{item}
+                                </Paragraph>
+                            </Row>)
+                        })}
                     </Column>
                     <Column size="8" size_sm="12" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem" color="white">
                         <Row align="center" height="100%">

@@ -16,6 +16,7 @@ const Landing = (props) => {
   const {data, pageContext, yml} = props;
   const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
   const [components, setComponents] = React.useState({});
+  const [inLocation, setInLocation] = React.useState("");
 
   useEffect(() => {
     let _components = {};
@@ -26,6 +27,10 @@ const Landing = (props) => {
   }, [yml]);
   useEffect(() => {
     if (yml.meta_info && yml.meta_info.utm_location) setLocation(yml.meta_info.utm_location);
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const _inLoc = urlParams.get('in') || null;
+    if(_inLoc && _inLoc!="") setInLocation(_inLoc.replace(/^\w/, c => c.toUpperCase())+" ");
   }, []);
 
   // data sent to the form already prefilled
@@ -101,7 +106,7 @@ const Landing = (props) => {
               fs_md="30px"
               fs_lg="32px"
               fs_xl="38px"
-              align="left" >{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
+              align="left" >{inLocation}{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
             </H1>
             <H4 align="left" fontSize="18px" color={Colors.white}
               variant="main"
@@ -343,8 +348,6 @@ export const query = graphql`
               title
               icon
               value
-              symbol
-              symbol_position
             }
           }
         }

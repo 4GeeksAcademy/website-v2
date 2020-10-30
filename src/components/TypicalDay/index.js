@@ -42,14 +42,13 @@ const TypicalDay = (props) => {
         }
         return sliderArray
     }
-
+    console.log("data.schedule", data.schedule)
     return (
         <>
             <Wrapper>
                 <Title
                     size="10"
                     title="TYPICAL DAY AT THE ACADEMY"
-                    paragraph="Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio"
                     variant="primary"
                 />
                 <Divider height="50px" />

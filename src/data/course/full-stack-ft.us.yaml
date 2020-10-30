@@ -34,7 +34,7 @@ credentials:
 ## PROGRAM DETAILS
 details:
   heading: PROGRAM DETAILS FULL-TIME
-  sub_heading: Real life proyects and exactly what companies are looking for
+  sub_heading: Real life projects and exactly what companies are looking for
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -131,7 +131,7 @@ typical:
       step: 2
     - title: "Lesson Time"
       time: "10:00 AM"
-      icon: LaptopCode
+      icon: laptopcode
       content: "Incremental: Each morning mentors will introduce a small set of new concepts and techniques that will help you along the way."
       step: 3
     - title: "Lunch Time"

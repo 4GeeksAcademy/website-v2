@@ -2,8 +2,8 @@ import React from 'react';
 import {useStaticQuery, graphql} from "gatsby"
 import {Title, H4, Paragraph} from '../Heading'
 import {Column, Row, Div} from '../Sections'
-import {Colors, StyledBackgroundSection} from '../Styling'
-import ReactPlayer from 'react-player'
+import {Colors} from '../Styling'
+import ReactPlayer from '../ReactPlayer'
 import Fragment from "../Fragment"
 import Icon from "../Icon"
 
@@ -38,30 +38,17 @@ export default ({lang, playerHeight}) => {
   let info = data.allWhy4GeeksYaml.edges.find(({node}) => node.fields.lang === lang);
   if (info) info = info.node;
 
-return (<Fragment github="/components/geeks_vs_others">
+return (<Fragment github="/components/why_4geeks">
     <Row height="auto" marginTop="50px">
       {info.why.map((i, index) => {
         return (<Column size="4" size_sm="12" key={index}>
-          {i.video != "" ?
-            <ReactPlayer
-              className='react-player'
-              light={i.image}
-              style={{height: playerHeight}}
-              controls={true}
-              url={i.video}
-              width='100%'
-              height='250px'
-            />
-            :
-            <StyledBackgroundSection
-              image={i.image.childImageSharp.fluid}
-              alt={i.alt}
-              height={`250px`}
-              bgSize={`cover`}
-              borderRadius={`1.25rem`}
-              className={`img-border`}
-            ></StyledBackgroundSection>
-          }
+          <ReactPlayer
+            thumb={i.image}
+            style={{height: playerHeight}}
+            id={i.video}
+            width='100%'
+            height='250px'
+          />
           <Div position="relative" marginTop="20px" padding="10px 0">
               <Icon width="32" icon={i.icon}
                 style={{ position: "absolute" }} 

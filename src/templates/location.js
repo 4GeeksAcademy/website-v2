@@ -152,8 +152,9 @@ const Location = ({data, pageContext, yml}) => {
                 variant="primary"
             />
             <Row>
-                {cohorts && cohorts.map(cohort =>
+                {cohorts && cohorts.map((cohort, key) =>
                     <Column
+                        key={key}
                         size="4"
                         size_md="4"
                         size_sm="6"
@@ -217,6 +218,7 @@ const Location = ({data, pageContext, yml}) => {
                                     {yml.carousel_box.images.map((item, index) => {
                                         return (
                                             <StyledBackgroundSection
+                                                key={index}
                                                 className={`img-left`}
                                                 height={`426px`}
                                                 h_sm={`326px`}

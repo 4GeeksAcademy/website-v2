@@ -139,6 +139,7 @@ const Program = ({data, pageContext, yml}) => {
             inputBgColor={Colors.white}
             layout="flex"
             lang={pageContext.lang}
+            sendLabel={syllabus_button_text}
             formHandler={requestSyllabus} 
             data={{ 
               course: { type: "hidden", value: yml.meta_info.bc_slug, valid: true }
@@ -366,8 +367,6 @@ export const query = graphql`
             title
             icon
             value
-            symbol
-            symbol_position
           }
         }
       }

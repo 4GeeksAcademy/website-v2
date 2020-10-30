@@ -99,6 +99,11 @@ a.nav-item.nav-link.side {
     text-align: center;
     background: transparent!important;
 }
+.carousel .slide iframe{
+    margin: 0 !important;
+    width: 100% !important;
+    border-radius: 1.25rem;
+}
 .carousel {
     position: relative;
     width: 100%;
@@ -182,13 +187,7 @@ a {
 }
 .card-columns{
     display: inline-block;
-    column-count: 4;
-    column-gap: 1.25rem;
-}
-@media (max-width: 1200px) {
-    .card-columns{
-        column-count: 3;
-    }
+    column-count: 3;
 }
 @media (max-width: 768px) {
     .card-columns{
@@ -200,6 +199,19 @@ a {
         column-count: 1;
     }
 }
+
+@media (max-width: 576px) {
+    .leadform-flex{
+        display: block !important;
+    }
+    .leadform-flex input{
+        border-radius: 0px;
+    }
+    .leadform-flex button{
+        border-radius: 10px;
+    }
+}
+
 
 /* :-webkit-direct-focus {
     outline-color: none!important;
