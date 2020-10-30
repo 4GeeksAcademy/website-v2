@@ -234,5 +234,5 @@ const StepperCircle = styled.div`
   border: 1px solid ${Colors.yellow};
   cursor: pointer;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 `
