@@ -8,10 +8,9 @@ import Select from '../components/Select'
 import BaseRender from './_baseLayout'
 import dayjs from "dayjs"
 import LazyLoad from 'react-lazyload';
-import {Link} from 'gatsby'
 import {SessionContext} from '../session'
 
-const ListCard = ({image, onClick, title, date, address, link, slug, applyButtonText, applyButtonLink, detailsButtonText, detailsButtonLink}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
+const ListCard = ({image, onClick, title, date, address, link}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
   <Anchor to={link}>
     <Card
       overflow={`hidden`}
@@ -37,8 +36,7 @@ const ListCard = ({image, onClick, title, date, address, link, slug, applyButton
         marginRight="0"
         padding={`15px`}>
         <Column size="12"
-        // onClick={() => onClick(index)}
-        >
+          onClick={() => onClick(index)}>
           <Row marginBottom="1rem" >
             <H4
               fs_xs="18px"
@@ -73,38 +71,14 @@ const ListCard = ({image, onClick, title, date, address, link, slug, applyButton
               {address}
             </Paragraph>
           </Row>
-          <Row marginBottom=".2rem" alignItems={`center`} >
-            <Icon icon="laptop" width="24" color={Colors.blue} fill={Colors.blue} />
-            <Paragraph
-              margin={`0 0 0 10px`}
-              fs_xs="18px"
-              fs_sm="18px"
-              fs_md="9px"
-              fs_lg="11px"
-              fs_xl="14px">
-              {slug.includes("ft") ? "Full Time" : "Part Time"}
-            </Paragraph>
+          <Row height="5%" align="end">
+            <a href={`#`} target="_blank" rel="noopener noreferrer">
+              <Icon icon="arrowright"
+                width="32"
+                color={Colors.blue}
+                fill={Colors.blue} />
+            </a>
           </Row>
-
-          <Row align={`center`}>
-            <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center">
-              <Link to={applyButtonLink}>
-                <Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{applyButtonText}</Button>
-              </Link>
-              &nbsp;
-              <Link to={detailsButtonLink}>
-                <Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{detailsButtonText}</Button>
-              </Link>
-            </Div>
-          </Row>
-          {/* <Row height="5%" align="end">
-          <a href={`#`} target="_blank" rel="noopener noreferrer">
-            <Icon icon="arrowright"
-              width="32"
-              color={Colors.blue}
-              fill={Colors.blue} />
-          </a>
-        </Row> */}
         </Column>
       </Row>
     </Card>
@@ -124,11 +98,9 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
-      // let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
       let cohorts = await resp.json();
-      let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
-      // let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
@@ -199,7 +171,6 @@ const Calendar = (props) => {
           flexDirection_sm={`column`}
         >
           <Select
-            margin="0 10px 0 0"
             top="40px"
             left="20px"
             width="300px"
@@ -252,11 +223,6 @@ const Calendar = (props) => {
                     image={cohort.academy.logo_url}
                     link={`/${session ? session.language : "us"}/${cohort.certificate.slug}`}
                     date={cohort.kickoff_date}
-                    slug={cohort.slug}
-                    applyButtonText={yml.button.apply_button_text}
-                    applyButtonLink={yml.button.apply_button_link}
-                    detailsButtonText={yml.button.cohort_more_details_text}
-                    detailsButtonLink={`/${pageContext.lang}/${cohort.certificate.slug}`}
                   />
                 )
               :
@@ -274,7 +240,6 @@ const Calendar = (props) => {
                     link={event.url}
                     date={event.starting_at}
                     exerpt={event.exerpt}
-
                   />
                 )
           }
@@ -298,11 +263,6 @@ export const query = graphql`
             description
             image
             keywords
-          }
-          button{
-            apply_button_text
-            apply_button_link
-            cohort_more_details_text
           }
           header{
             tagline
