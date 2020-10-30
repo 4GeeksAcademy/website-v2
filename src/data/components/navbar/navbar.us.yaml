@@ -16,12 +16,6 @@ navbar:
     link: "/partners"
   - name: "Upcoming Dates"
     link: "/calendar"
-  - name: "🇪🇸"
-    link: "/es/inicio?lang=es"
-    links:
-      - name: "🇺🇸"
-      - link: "/?lang=en#home"
-
 button:
   button_link: "/apply"
   button_type: ""

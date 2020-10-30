@@ -23,7 +23,6 @@ export const NavBar = styled.nav`
       position: fixed;
       width: 100%;
     }
-
 `
 export const Nav = styled.ul`
     display: flex;
@@ -34,7 +33,7 @@ export const NavItem = styled.li`
     margin: 0 .5rem;
     text-align: center;
     font-family: lato, sans-serif;
-    font-size: ${props => props.fontSize || "12px"};
+    font-size: 12px;
     @media ${Break.md}{
       font-size: ${props => props.fontSize || "10px"};
     }
@@ -54,7 +53,6 @@ const StyledBurger = styled.div`
   right: 20px;
   z-index: 20;
   display: none;
-
   div {
     width: 2rem;
     height: 0.25rem;
@@ -271,13 +269,10 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
               }
             />
             :
-            <NavItem fontSize={item.name === "🇪🇸" || item.name === "🇺🇸" && "16px"} key={index}><Anchor onClick={onToggle} to={item.link} key={index}>{item.name}</Anchor></NavItem>
+            <NavItem fs_sm="18px" key={index}><Anchor onClick={onToggle} to={item.link} key={index}>{item.name}</Anchor></NavItem>
         )}
       </Ul>
       <Link onClick={onToggle} to={button.button_link || "#"}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
     </Div>
   )
 }
-
-
-
