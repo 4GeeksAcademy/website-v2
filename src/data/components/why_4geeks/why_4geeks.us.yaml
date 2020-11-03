@@ -8,7 +8,7 @@
 why:
   - title: "Get a job in Tech"
     description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
-    image: ../../../../static/images/why1.jpg
+    image: ../../../../static/images/why3.jpg
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -22,7 +22,7 @@ why:
     icon: handmoney
   - title: "Never code alone again"
     description: "Limitless and forever: Mentorships, exercises, permanent chatroom, real classrooms, even after you get your job."
-    image: "../../../../static/images/why3.jpg"
+    image: "../../../../static/images/why1.jpg"
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=mYgJ6cOxgJs" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL

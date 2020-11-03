@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styled, {css} from 'styled-components';
 import Img from "gatsby-image"
-import { useStaticQuery, graphql} from 'gatsby';
+import {useStaticQuery, graphql} from 'gatsby';
 import {Break} from '../Responsive';
 import {SessionContext} from '../../session';
 import ChooseProgram from '../ChooseProgram'
@@ -23,7 +23,6 @@ export const NavBar = styled.nav`
       position: fixed;
       width: 100%;
     }
-
 `
 export const Nav = styled.ul`
     display: flex;
@@ -54,7 +53,6 @@ const StyledBurger = styled.div`
   right: 20px;
   z-index: 20;
   display: none;
-
   div {
     width: 2rem;
     height: 0.25rem;
@@ -104,12 +102,12 @@ const StyledBurger = styled.div`
 `;
 
 export const Burger = (props) => {
-  const { session } = React.useContext(SessionContext);
+  const {session} = React.useContext(SessionContext);
   const [open, setOpen] = React.useState(false)
   const handleToggle = () => setOpen(!open)
 
   let _btnInfo = {};
-  if(session && session.location) _btnInfo = { ...props.button, ...session.location.button };
+  if (session && session.location) _btnInfo = {...props.button, ...session.location.button};
 
   return (
     <NavBar open={open}>
@@ -241,43 +239,40 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
   `)
   const content = data.allChooseProgramYaml.edges.find(({node}) => node.fields.lang === lang);
   return (
-      <Div open={open}>
-        <Link to={'/'}>
-          <Img 
-            fadeIn={false}
-            loading="eager"
-            fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo" 
-          />
-        </Link>
-        <Ul open={open}>
-          {menu && menu.map((item, index) => 
-            (item.name === "The Programs" || item.name==="Programas") ?
-                <ChooseProgram
-                  key={index}
-                  left="15px"
-                  programs={content.node.programs}
-                  marginTop="-3px"
-                  borderRadius="0 .75rem .75rem .75rem"
-                  openLabel={content.node.close_button_text}
-                  onLocationChange={(slug) => onLocationChange(slug)}
-                  closeLabel={content.node.open_button_text}
-                  selector={({ status, setStatus }) => 
-                    !status.toggle ?
-                      <NavItem onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
-                      :
-                      <Card shadow borders="1.25rem 1.25rem 0 0">
-                        <NavItem onClick={() => setStatus({ toggle: !status.toggle })}>{item.name}</NavItem>
-                      </Card>
-                  }
-                />
-                :
-                <NavItem fs_sm="18px" key={index}><Anchor onClick={onToggle} to={item.link} key={index}>{item.name}</Anchor></NavItem>
-          )}
-        </Ul>
-        <Link onClick={onToggle} to={button.button_link || "#"}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
-      </Div>
+    <Div open={open}>
+      <Link to={'/'}>
+        <Img
+          fadeIn={false}
+          loading="eager"
+          fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo"
+        />
+      </Link>
+      <Ul open={open}>
+        {menu && menu.map((item, index) =>
+          (item.name === "The Programs" || item.name === "Programas") ?
+            <ChooseProgram
+              key={index}
+              left="15px"
+              programs={content.node.programs}
+              marginTop="-3px"
+              borderRadius="0 .75rem .75rem .75rem"
+              openLabel={content.node.close_button_text}
+              onLocationChange={(slug) => onLocationChange(slug)}
+              closeLabel={content.node.open_button_text}
+              selector={({status, setStatus}) =>
+                !status.toggle ?
+                  <NavItem onClick={() => setStatus({toggle: !status.toggle})}>{item.name}</NavItem>
+                  :
+                  <Card shadow borders="1.25rem 1.25rem 0 0">
+                    <NavItem onClick={() => setStatus({toggle: !status.toggle})}>{item.name}</NavItem>
+                  </Card>
+              }
+            />
+            :
+            <NavItem fs_sm="18px" key={index}><Anchor onClick={onToggle} to={item.link} key={index}>{item.name}</Anchor></NavItem>
+        )}
+      </Ul>
+      <Link onClick={onToggle} to={button.button_link || "#"}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+    </Div>
   )
 }
-
-
-

@@ -40,13 +40,6 @@ details:
     duration: "DURATION:"
     skills: "Skills / Weeks:"
   details_modules:
-    - module_name: "PREWORK"
-      title: "Reforzamiento para programadores"
-      description: "Prepárate para empezar el curso: Solidifica conceptos de algoritmos, famliarizate con JAVA, Programación Orientada a Objectos, Javascript, React.js y el mundo del desarrollo web."
-      projects: "Aplicación para el manejo de colas utilizando React.js, JAVA y Postgress"
-      slug: "prework"
-      duration: "~ 60 hrs"
-      step: 0
     - module_name: "FRONT"
       title: "Front-End Avanzado"
       description: >
@@ -143,22 +136,22 @@ geeks_vs_others:
 geek_data:
   heading: ¡Para que te contraten empresas de Fortune 500!
   geek_pal:
-    - Construcción de CV
-    - Construcción del perfil de Github
-    - Preparación de simulación de entrevistas
-    - Sesión de preparación de entrevistas personalizadas para trabajos específicos
-    - Entrenamiento de marca personal
-    - Prácticas y ejercicios de programación posteriores a la graduación
+    - Un profesor cada seis estudiantes (1:5).
+    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
+    - Miles de ejercicios interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Chat de apoyo en línea 12 horas al día.
+    - Transmisión en línea de las clases.
+    - Grabación de las clases para su posterior revisión.
   geek_force:
-    - Un profesor cada cuatro estudiantes (1:4)
-    - Un profesor principal cada doce estudiantes (1:12)
-    - Sesiones ilimitadas de tutoría por demanda, en persona o en línea.
-    - Miles de ejercicios autoevaluados
-    - Tutoriales interactivos y autoevaluados
-    - Soluciones en video para una retroalimentación instantánea
-    - Chat de apoyo en línea 12 horas al día
-    - Transmisión en línea de las clases
-    - Grabación de las clases para su posterior revisión
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Entrenamiento de marca personal.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+    - Coaching SEMANAL hasta que consigas trabajo.
 
 ## PRICES AND PAYMENTS SECTION
 prices:
