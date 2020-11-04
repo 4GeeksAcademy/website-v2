@@ -21,9 +21,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information"
-  motivation: "Get a PDF and email in just 5 minutes"
-  button_label: Get more information 
+  heading: "Conoce más información"
+  motivation: "Llena el formulatio y te enviaremos la info en menos de 5 min"
+  button_label: Obtener malla y más información 
   redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
@@ -39,10 +39,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Ninguna experiencia previa requerida.
-    - Horarios part-time y full-time. Online y presencial en una de las zonas más populares de Santiago.
-    - Acceso de por vida a mentorías y career support (hasta conseguir trabajo como programador y más)
-    - Los desarrolladores junior hacen hasta 900 mil pesos en Chile al año.
+    - No se requiere experiencia previa.
+    - Horarios part-time y full-time. Online o Presencial.
+    - Mentorias y career support de por vida.
+    - Un desarrollador jr. hace 900 mill CLP al año.
 
 follow_bar:
   position: "top" # top, bottom, hidden
