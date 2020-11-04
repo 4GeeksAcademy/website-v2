@@ -49,8 +49,8 @@ projects:
       - first_name: "Naila"
         last_name: "Kaliyeva"
         job_title: "Web Developer"
-        github: ""
-        linkedin: ""
+        github: "https://github.com/nailakaliyeva"
+        linkedin: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
         twitter: ""
   - project_name: "IMS: Inventory Tracking"
     hidden: false
