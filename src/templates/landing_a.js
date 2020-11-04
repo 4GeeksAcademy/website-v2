@@ -257,6 +257,7 @@ export const query = graphql`
             in_the_news{
               heading
               position
+              filter
             }
             program_details{
               position

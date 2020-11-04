@@ -98,7 +98,12 @@ export const landingSections = {
             maxWidth="350px"
         >{yml.heading}
         </H4>
-        <News location={location ? location : session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang}  />
+        <News 
+            limit={yml.limit || 3}
+            location={location ? location : session && session.location && session.location.breathecode_location_slug} 
+            lang={pageContext.lang}  
+            filter={!Array.isArray(yml.filter) ? null : (n) => yml.filter.includes(n.name)}
+        />
     </Wrapper>,
     badges: ({ session, data, pageContext, yml, course }) => 
     <Wrapper p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></Wrapper>,
@@ -169,7 +174,7 @@ export const landingSections = {
         paragraphColor={Colors.gray}
         variant="primary"
     />
-    <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
+        <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
     </Wrapper>,
     alumni_projects: ({ session, data, pageContext, yml, course }) => <Wrapper margin="100px" m_sm="0" p_xs="0">
     <Title
@@ -183,7 +188,7 @@ export const landingSections = {
     />
     <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false"  limit={2} />
     </Wrapper>,
-    who_is_hiring: ({ session, data, pageContext, yml, course }) => {
+    who_is_hiring: ({ session, data, pageContext, yml, course, location }) => {
         const hiring = data.allPartnerYaml.edges[0].node;
         return <Wrapper margin="100px" m_sm="0" p_xs="0">
             <Title
@@ -196,7 +201,7 @@ export const landingSections = {
                 variant="primary"
             />
                 <WhoIsHiring
-                    images={hiring.partners.images}
+                    images={hiring.partners.images.filter(p => !p.locations || p.locations === "all" || p.locations.includes(location))}
                 />
             </Wrapper>
     },

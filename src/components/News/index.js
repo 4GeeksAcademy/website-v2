@@ -10,7 +10,7 @@ const Helper = styled.span`
   height: 100%;
   vertical-align: middle;
 `
-export default ({ location, lang, limit }) => {
+export default ({ location, lang, limit, filter }) => {
   const data = useStaticQuery(graphql`
     query myQueryNews{
       allNewsYaml{
@@ -38,7 +38,10 @@ export default ({ location, lang, limit }) => {
     `)
 
   const languageNews = data.allNewsYaml.edges.find(({ node }) => node.fields.lang === lang);
-  let locationNews = typeof(languageNews) !== "object" ? [] : languageNews.node.news.filter(n => n.location === "all" || !location || n.location.includes(location));
+  let locationNews = typeof(languageNews) !== "object" ? [] : languageNews.node.news;
+  if(filter) locationNews = locationNews.filter(filter)
+  else if(location) locationNews = locationNews.filter(n => n.location === "all" || !location || n.location.includes(location));
+  
   if(limit) locationNews = locationNews.slice(0,limit)
 
   if(locationNews.length === 0){
