@@ -114,7 +114,7 @@ export const landingSections = {
         background={Colors.lightGray}
     >
     <Wrapper>
-        <H5 fontSize="20px">{yml.heading}</H5>
+        <H5 fontSize="20px">{yml.heading.text}</H5>
         <LeadForm 
             style={{ padding: "10px 0px", maxWidth: "100%" }}
             inputBgColor={Colors.white}
@@ -150,7 +150,7 @@ export const landingSections = {
             paragraphColor={Colors.gray}
             variant="primary"
         />
-        <ProgramDetails details={course && course.details} />
+        <ProgramDetails details={course && course.details} lang={pageContext.lang} />
         <ProgramDetailsMobile details={course && course.details} />
     </Wrapper>,
     why_python: ({ session, pageContext, yml, course }) => <Wrapper margin="50px 0" p_sm="0">

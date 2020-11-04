@@ -78,34 +78,34 @@ program_details:
 why_python:
   position: 4
   heading: "¿Porqué Python y React.js?" # optional or set to white space to hide
-  sub_heading: "JavaScript es 26 veces buscado que Ruby On Rails. Python es 10 veces mas buscado que Node.js" # optional or set to white space to hide
+  sub_heading: "Javascript es 26 veces más buscado que Ruby On Rails. Python es 10 veces más buscado que Node.js" # optional or set to white space to hide
 
 geeks_vs_others:
-  position: 5
+  position: 6
   heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
   paragraph: ""
   total_rows: 5
 
 why_4geeks:
-  position: 6
+  position: 7
   heading: "Porqué 4Geeks"
   sub_heading: " "
 
 who_is_hiring:
-  position: 7
+  position: 8
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
 
 alumni_projects:
-  position: 8
+  position: 9
   heading: "Así podría ser tu proyecto final"
   sub_heading: "Proyectos hechos por graduados de la academia"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: top_coding_bootcamp
-    position: 4
+    position: 5
     layout: two_column_left 
     proportions: [4,8]
     image: 
@@ -120,8 +120,17 @@ components:
       text: "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
                   #xl      lg     md     sm    xs
       font_size: ["40px","40px","40px","40px", "40px"]
+  - name: first_syllabus_form
+    position: 4
+    layout: syllabus 
+    button: 
+      text: "Descarga Instántanea"
+    heading: 
+      text: "Descarga la Malla Educativa"
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","40px","40px","40px", "40px"]
   - name: working_as_software_developers
-    position: 7
+    position: 8
     proportions: [4,8]
     layout: two_column_left 
     image: 
