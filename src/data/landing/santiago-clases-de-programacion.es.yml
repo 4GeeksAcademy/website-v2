@@ -72,7 +72,7 @@ badges:
 
 program_details:
   position: 3
-  heading: "Master Python, JS y React"
+  heading: "Domina Python, JS y React"
   sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
 
 why_python:
@@ -127,7 +127,7 @@ components:
     image: 
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     content: 
-      text: "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
+      text: "89% de nuestros graduados ya trabajan como desarrolladores de software."
                   #xl      lg     md     sm    xs
       font_size: ["40px","34px","34px","25px", "20px"]
 
