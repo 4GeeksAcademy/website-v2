@@ -24,11 +24,11 @@ const FillerStyles = styled.div`
 `
 
 const strings = {
-    "en": {
+    us: {
         "Projects": "Projects",
         "Duration": "Duration"
     },
-    "es": {
+    es: {
         "Projects": "Proyectos",
         "Duration": "Duración"
     }
