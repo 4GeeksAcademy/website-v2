@@ -31,7 +31,7 @@ const JobInfo = () => {
         ?
         jobs.map((item, index) => {
           return (
-            <Row key={index}>
+            <Row display="flex" key={index}>
               <Column>
                 <Card
                   style={{position: "relative"}}
@@ -41,7 +41,7 @@ const JobInfo = () => {
                   padding="20px"
                   margin="5px 0 10px 0"
                 >
-                  <Row >
+                  <Row display="flex">
                     <Column size="12">
                       <H4
                         fs_xs="18px"
@@ -52,7 +52,7 @@ const JobInfo = () => {
                         color={Colors.black}>{item.node.banner_heading}</H4>
                     </Column>
                   </Row>
-                  <Row justifyContent={`center`} margin={`10px 0 0 0`}>
+                  <Row display="flex" justifyContent={`center`} margin={`10px 0 0 0`}>
                     {
                       item.node.cities.map((city, index) => {
                         return (
