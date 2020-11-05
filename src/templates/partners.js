@@ -49,6 +49,7 @@ const Partners = (props) => {
         />
         <Row
           justifyContent="center"
+          display="flex"
         >
           <Modal
             aria-labelledby="simple-modal-title"
