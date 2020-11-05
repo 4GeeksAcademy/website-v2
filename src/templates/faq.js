@@ -40,7 +40,7 @@ const Faq = (props) => {
             >
                 {yml.faq.map((item, index) => {
                     return (
-                        <Row key={index}>
+                        <Row key={index} display="flex">
                             <Column
                             >
                                 <Card
@@ -52,7 +52,7 @@ const Faq = (props) => {
                                     margin="5px 0 10px 0"
                                     onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
                                 >
-                                    <Row height="100%">
+                                    <Row display="flex" height="100%">
                                         <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" size_sm="2" align={`center`} alignSelf="center">
                                             {buttonToggle === false ?
                                                 toggleIndex != index &&

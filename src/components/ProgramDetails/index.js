@@ -61,9 +61,9 @@ const ProgramDetails = (props) => {
             display_xs={`none`}
             display_sm={`none`}
         >
-            <Row height="100%">
+            <Row display="flex" height="100%">
                 <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                    <Row height={`15%`} justifyContent={`around`} alignItems={`center`} marginBottom={`15px`} alignResp={`space-around`}>
+                    <Row display="flex" height={`15%`} justifyContent={`around`} alignItems={`center`} marginBottom={`15px`} alignResp={`space-around`}>
                         {props.details.details_modules.map((item, index) => {
                             return (
                                 <Div
@@ -115,7 +115,7 @@ const ProgramDetails = (props) => {
                     <ContainerStyle>
                         <FillerStyles completed={(steps[selected.index] * 100) / steps[steps.length - 1]} />
                     </ContainerStyle>
-                    <Row justifyContent={`center`} alignItems={`center`} marginTop={`10px`}>
+                    <Row display="flex" justifyContent={`center`} alignItems={`center`} marginTop={`10px`}>
                         <Column size="11" display={`flex`} justifyContent={`space-between`}>
                             {steps.length > 0 && Array(steps[steps.length - 1]).fill(null).map((item, index) => {
                                 return (
@@ -135,7 +135,7 @@ const ProgramDetails = (props) => {
                         </Column>
                     </Row>
 
-                    <Row height={`75%`} >
+                    <Row display="flex" height={`75%`} >
                         <Column size="12" paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
                             <Div flexDirection={`row`} >
                                 <Div margin={`0 5px 0 0`} flexDirection={`column`} alignContent={`start`}>

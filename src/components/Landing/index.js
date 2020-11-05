@@ -75,7 +75,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
 export const TwoColumn = ({left, right, proportions}) => {
     const [left_size, right_size] = proportions ? proportions : [];
 
-    return <Row m_sm="0px 0px 100px 0">
+    return <Row display="flex" m_sm="0px 0px 100px 0">
         <Column size={left_size || 6} size_sm="12" maxHeight="300px" align_sm="center">
             <Side {...left} />
         </Column>

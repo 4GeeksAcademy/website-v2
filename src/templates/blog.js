@@ -49,16 +49,16 @@ const Blog = ({data, pageContext, yml}) => {
             <Divider height="50px" />
 
             <Wrapper >
-                <Row justifyContent="left">
+                <Row display="flex" justifyContent="left">
                     <Column size="12">
                         <H4 fontSize="30px">Featured</H4>
                     </Column>
                 </Row>
-                <Row>
+                <Row display="flex">
                     <Separator variant="primary" />
                 </Row>
                 <Divider height="50px" />
-                <Row github={`/blog`}>
+                <Row display="flex" github={`/blog`}>
                     <div className="card-columns" >
                         {data.featured.edges.map((item, i) => {
                             return (
@@ -82,7 +82,7 @@ const Blog = ({data, pageContext, yml}) => {
                                             </LazyLoad>
                                         </Link>
                                     }
-                                    <Row justifyContent="around" >
+                                    <Row display="flex" justifyContent="around" >
                                         <Column size size="12" alignSelf="center" align="left">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
                                                 align="left" align_sm="left"
@@ -95,12 +95,12 @@ const Blog = ({data, pageContext, yml}) => {
                                             >{item.node.frontmatter.title}</H4></Link>
                                         </Column>
                                     </Row>
-                                    <Row height="auto">
+                                    <Row display="flex" height="auto">
                                         <Column size="12" align="center">
                                             <Paragraph color="gray" align="left" margin="10px 0">{item.node.frontmatter.excerpt}</Paragraph>
                                         </Column>
                                     </Row>
-                                    <Row height="auto" justifyContent="around">
+                                    <Row display="flex" height="auto" justifyContent="around">
                                         <Column size="1" alignSelf="center">
                                             <LazyLoad scroll={true} height={30} once={true}>
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
@@ -132,7 +132,7 @@ const Blog = ({data, pageContext, yml}) => {
                 </Row>
             </Wrapper>
             <Wrapper >
-                <Row justifyContent="left">
+                <Row display="flex" justifyContent="left">
                     <Column size="12">
                         <H4
 
@@ -144,11 +144,11 @@ const Blog = ({data, pageContext, yml}) => {
                         >All Stories</H4>
                     </Column>
                 </Row>
-                <Row>
+                <Row display="flex">
                     <Separator variant="primary" />
                 </Row>
                 <Divider height="50px" />
-                <Row>
+                <Row display="flex">
                     <div className="card-columns" >
                         {data.posts.edges.filter(post => post.node.frontmatter.status === "published").map((item, i) => {
                             return (
@@ -170,7 +170,7 @@ const Blog = ({data, pageContext, yml}) => {
                                                 />
                                             </LazyLoad>
                                         </Link> : null}
-                                    <Row justifyContent="around" >
+                                    <Row display="flex" justifyContent="around" >
 
                                         <Column size size="12" alignSelf="center" align="left">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
@@ -183,12 +183,12 @@ const Blog = ({data, pageContext, yml}) => {
                                             >{item.node.frontmatter.title}</H4></Link>
                                         </Column>
                                     </Row>
-                                    <Row height="auto">
+                                    <Row display="flex" height="auto">
                                         <Column size="12" align="center">
                                             <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{item.node.frontmatter.excerpt}</Paragraph>
                                         </Column>
                                     </Row>
-                                    <Row height="auto" justifyContent="around">
+                                    <Row display="flex" height="auto" justifyContent="around">
                                         <Column size="1" alignSelf="center">
                                             <LazyLoad scroll={true} height={30} once={true}>
                                                 <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />

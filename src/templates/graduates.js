@@ -37,13 +37,14 @@ const Graduates = ({data, pageContext, yml}) => {
         <Divider height="50px" />
         <Card shadow borders="1.25rem"  >
           <Row
+            display="flex"
             height="100%"
             marginLeft="0"
             marginRight="0"
             customRespSize
           >
             <Column size="6" size_sm={`12`} alignSelf="center" height="100%" >
-              <Row justifyContent="center" padding={`20px`}>
+              <Row display="flex" justifyContent="center" padding={`20px`}>
                 <Paragraph
                   color={Colors.gray}
                   fontSize="18px"
@@ -55,7 +56,7 @@ const Graduates = ({data, pageContext, yml}) => {
                   {yml.about.content}
                 </Paragraph>
               </Row>
-              <Row justifyContent="around" padding={`10px`}>
+              <Row display="flex" justifyContent="around" padding={`10px`}>
                 <Link to={yml.about.button_link}>
                   <Paragraph
                     color={Colors.blue}

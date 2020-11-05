@@ -55,7 +55,7 @@ const ChooseProgram = (props) => {
         >
             <Selector status={status} setStatus={setStatus} />
             {status.toggle &&
-                <Row
+                <Row display="flex"
                     margin={props.margin}
                     m_sm={props.m_sm}
                     m_xs={props.m_xs}

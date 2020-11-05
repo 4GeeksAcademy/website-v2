@@ -52,9 +52,9 @@ const TypicalDay = (props) => {
                     variant="primary"
                 />
                 <Divider height="50px" />
-                <Row height={`500px`} justifyContent={`center`}>
+                <Row display="flex" height={`500px`} justifyContent={`center`}>
                     <Column size="8" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                        <Row height={`15%`} justifyContent={`between`}>
+                        <Row display="flex" height={`15%`} justifyContent={`between`}>
                             {data.schedule.length > 0 &&
                                 data.schedule.map((item, index) => {
                                     return (
@@ -82,15 +82,15 @@ const TypicalDay = (props) => {
                                     )
                                 })}
                         </Row>
-                        <Row height={`15%`}>
+                        <Row display="flex" height={`15%`}>
                             <ContainerStyle>
                                 <FillerStyles completed={completed} />
                             </ContainerStyle>
                         </Row>
-                        <Row height={`15%`}>
+                        <Row display="flex" height={`15%`}>
                             <H3>{data.schedule[selected].title}</H3>
                         </Row>
-                        <Row height={`55%`}>
+                        <Row display="flex" height={`55%`}>
                             <Paragraph
                                 fs_xs="14px"
                                 fs_sm="14px"

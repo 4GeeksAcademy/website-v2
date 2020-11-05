@@ -63,7 +63,7 @@ const Location = ({data, pageContext, yml}) => {
                 fontSize="46px"
                 textAlign="center"
             />
-            <Row justifyContent="center" marginBottom="40px">
+            <Row display="flex" justifyContent="center" marginBottom="40px">
                 <Column align="right" align_sm="center" m_sm="0 0 15px 0" size="6" size_sm="12">
                     <ChooseProgram
                         right="15px"
@@ -107,7 +107,7 @@ const Location = ({data, pageContext, yml}) => {
         { yml.breathecode_location_slug !== "online" &&
             <Wrapper >
                 <Card shadow borders="1.25rem" >
-                    <Row
+                    <Row display="flex"
                         height="100%"
                         marginLeft="0"
                         marginRight="0"
@@ -151,7 +151,7 @@ const Location = ({data, pageContext, yml}) => {
                 margin="left"
                 variant="primary"
             />
-            <Row>
+            <Row display="flex">
                 {cohorts && cohorts.map((cohort, key) =>
                     <Column
                         key={key}
@@ -199,14 +199,14 @@ const Location = ({data, pageContext, yml}) => {
             </Row>
         </Wrapper>
         <Wrapper >
-            <Row>
+            <Row display="flex">
                 <Column
                     size="12"
                     borderRadius="0 0 0 1.25rem"
 
                 >
                     <Card shadow borders="1.25rem" >
-                        <Row
+                        <Row display="flex"
                             height="100%"
                             marginLeft="0"
                             marginRight="0"

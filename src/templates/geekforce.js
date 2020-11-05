@@ -55,7 +55,7 @@ const GeekForce = (props) => {
         border="bottom"
         height="auto"
       >
-        <Row justifyContent="center">
+        <Row display="flex" justifyContent="center">
           <RoundImage
             url={yml.image_logo}
             bsize="contain"
@@ -67,12 +67,12 @@ const GeekForce = (props) => {
         <Divider height="50px" />
       </Wrapper>
       <Wrapper >
-        <Row github={`/page/geekforce.${pageContext.lang}.md`}>
+        <Row display="flex" github={`/page/geekforce.${pageContext.lang}.md`}>
           {yml.benefits.map((col, i) => {
             const splittedTitle = splitTitleString(col.heading)
             return (
               <Column size="4" key={i}>
-                <Row justifyContent="around" height="80px">
+                <Row display="flex" justifyContent="around" height="80px">
                   <Column size="12" selfAlign="center" align="center">
 
                     <H3
@@ -83,13 +83,13 @@ const GeekForce = (props) => {
                 <Divider height="50px" />
                 {col.items.map((item, index) => {
                   return (
-                    <Row key={index} marginBottom="15px">
+                    <Row display="flex" key={index} marginBottom="15px">
                       <Column size="2" passingRight="0" >
                         <Icon icon="check" width="24px" color={Colors.yellow} fill={Colors.yellow} />
 
                       </Column>
                       <Column size="10"  >
-                        <Row>
+                        <Row display="flex">
                           <Column size="12">
                             <H5
                               margin="0px"
@@ -102,7 +102,7 @@ const GeekForce = (props) => {
                             </H5>
                           </Column>
                         </Row>
-                        <Row>
+                        <Row display="flex">
                           <Column size="12">
                             <Paragraph
                               fs_xl="14px"

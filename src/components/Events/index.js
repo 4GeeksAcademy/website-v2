@@ -62,23 +62,23 @@ const Events = ({}) => {
                         return (
                             // STARTED NEW LAYOUT
                             <Card key={index} borders="1.25rem" height="260px">
-                                <Row
+                                <Row display="flex"
                                     height="100%"
                                     marginLeft="0"
                                     marginRight="0"
                                     customRespSize
                                 >
                                     <Column size="5" alignSelf="center" height="100%" image="no" borderRadius="0 0 0 1.25rem">
-                                        <Row justifyContent="center" height="100%">
+                                        <Row display="flex" justifyContent="center" height="100%">
                                             <Column size="9" height="100%">
                                                 <Divider height="30px" />
-                                                <Row height="60px">
+                                                <Row display="flex" height="60px">
                                                     <H3 align="left" >{item.title}</H3>
                                                 </Row>
-                                                <Row height="30px">
+                                                <Row display="flex" height="30px">
                                                     <Separator variant="primary" />
                                                 </Row>
-                                                <Row height="20px">
+                                                <Row display="flex" height="20px">
                                                     <Column size="2" paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >Date:</Paragraph>
                                                     </Column>
@@ -86,7 +86,7 @@ const Events = ({}) => {
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >{days[date.getDay()]}, {date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</Paragraph>
                                                     </Column>
                                                 </Row>
-                                                <Row height="20px">
+                                                <Row display="flex" height="20px">
                                                     <Column size="2" paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >Time:</Paragraph>
                                                     </Column>
@@ -94,7 +94,7 @@ const Events = ({}) => {
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >{date.getHours()}pm</Paragraph>
                                                     </Column>
                                                 </Row>
-                                                <Row height="50px">
+                                                <Row display="flex" height="50px">
                                                     <Column size="2" paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >City:</Paragraph>
                                                     </Column>
@@ -103,7 +103,7 @@ const Events = ({}) => {
                                                     </Column>
 
                                                 </Row>
-                                                <Row height="100px">
+                                                <Row display="flex" height="100px">
                                                     <a href={item.url} target="_blank" rel="noopener noreferrer nofollow">
                                                         <Button outline color={Colors.blue} textColor={Colors.black} padding=".35rem.85rem">MORE DETAILS</Button>
                                                     </a>

@@ -67,7 +67,7 @@ const Contact = (props) => {
                     size="8"
                 />
                 <Card shadow borders="1.25rem" p_sm="0" p_md="0">
-                    <Row
+                    <Row display="flex"
                         background="#000000"
                         height="100%"
                         marginLeft="0"
@@ -89,11 +89,11 @@ const Contact = (props) => {
                             :
                             <Column size="7" size_sm="12" padding="30px 0px 100px 0px" paddingRight="40px" paddingLeft="40px" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem" color="white">
                                 <Divider height="50px" />
-                                <Row height="50px">
+                                <Row display="flex" height="50px">
                                     <H3 align="left" fs_xl="25px">{yml.left.heading}</H3>
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                 </Row>
-                                <Row height="50px">
+                                <Row display="flex" height="50px">
                                     <Input
                                         type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                         errorMsg="Please specify a valid first name"
@@ -107,7 +107,7 @@ const Contact = (props) => {
                                         value={formData.first_name.value}
                                     />
                                 </Row>
-                                <Row height="50px">
+                                <Row display="flex" height="50px">
                                     <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                         onChange={(value, valid) => {
                                             setVal({...formData, last_name: {value, valid}})
@@ -120,7 +120,7 @@ const Contact = (props) => {
                                         value={formData.last_name.value}
                                     />
                                 </Row>
-                                <Row height="50px" margin="0 0 10px 0">
+                                <Row display="flex" height="50px" margin="0 0 10px 0">
                                     <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
                                         onChange={(value, valid) => {
                                             setVal({...formData, email: {value, valid}})
@@ -133,7 +133,7 @@ const Contact = (props) => {
                                         value={formData.email.value}
                                     />
                                 </Row>
-                                <Row height="200px">
+                                <Row display="flex" height="200px">
                                     <TextArea type="text" rows="10" cols="50" className="form-control"
                                         value={formData.client_comments.value}
                                         required
@@ -148,7 +148,7 @@ const Contact = (props) => {
                                         required
                                     />
                                 </Row>
-                                <Row >
+                                <Row display="flex" >
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                     <Button
                                         width="150px"
@@ -162,9 +162,9 @@ const Contact = (props) => {
                         }
 
                         <Column size="5" size_sm="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="unset" height="100%"  >
-                            <Row justifyContent="center" height="100%" borderRadius="0 1.25rem 1.25rem 1.25rem">
+                            <Row display="flex" justifyContent="center" height="100%" borderRadius="0 1.25rem 1.25rem 1.25rem">
                                 <Column size="10" height="100%" padding="30px 0px 50px 0px" paddingLeft="0" paddingRight="0" p_md="10px 0px">
-                                    <Row height="60px" padding="0 20px" margin="0 0 40px 0">
+                                    <Row display="flex" height="60px" padding="0 20px" margin="0 0 40px 0">
                                         {yml.right.heading.split("\n").map(text =>
                                             <H3
                                                 key={text}

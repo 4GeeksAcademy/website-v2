@@ -35,11 +35,11 @@ const EditPage = (props) => {
     const [content, setContent] = React.useState('Hello World')
     const [status, setStatus] = React.useState({state: 'idle', message: ''})
     return (<>
-        <Row background={Colors.lightGray} padding="10px" justifyContent="center">
+        <Row display="flex" background={Colors.lightGray} padding="10px" justifyContent="center">
             <H2 fontSize="25px" fs_md="20px">Type your YML content and validate it</H2>
         </Row>
         { status.state !== "idle" ?
-            <Row
+            <Row display="flex"
                 justifyContent="center"
                 background={status.state === "error" ? Colors.lightRed : Colors.lightGreen}
                 onClick={() => setStatus({state: 'idle', message: ''})}
@@ -47,7 +47,7 @@ const EditPage = (props) => {
                 {status.message}
             </Row>
             :
-            <Row justifyContent="center">
+            <Row display="flex" justifyContent="center">
                 <Button type="button" width="100px" onClick={() => {
                     const success = load(content);
                     if (success !== true) setStatus({state: 'error', message: success})

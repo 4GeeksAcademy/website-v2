@@ -73,7 +73,7 @@ const Program = ({data, pageContext, yml}) => {
         fs_xs="40px"
         textAlign="center"
       />
-      <Row justifyContent="center" marginBottom="50px">
+      <Row display="flex" justifyContent="center" marginBottom="50px">
         <Column align="right" size="6" align_sm="center" m_sm="0px 0px 15px 0px" size_sm="12" align="right">
           <Link to={yml.button.apply_button_link}
             state={{course: yml.meta_info.bc_slug}}
@@ -147,7 +147,7 @@ const Program = ({data, pageContext, yml}) => {
       <SyllabusSVG className="d-sm-none w-100" />
       <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
         <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
-        <Row padding="0px 40px" p_md="0 10px">
+        <Row display="flex" padding="0px 40px" p_md="0 10px">
           <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">
             <GeekCard
               icon="arrowright"

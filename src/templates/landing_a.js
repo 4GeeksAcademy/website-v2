@@ -30,7 +30,7 @@ const Landing = (props) => {
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get('in') || null;
-    if(_inLoc && _inLoc!="") setInLocation(_inLoc.replace(/^\w/, c => c.toUpperCase())+" ");
+    if (_inLoc && _inLoc != "") setInLocation(_inLoc.replace(/^\w/, c => c.toUpperCase()) + " ");
   }, []);
 
   // data sent to the form already prefilled
@@ -70,7 +70,7 @@ const Landing = (props) => {
           {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
-      <Row className="d-sm-none">
+      <Row display="flex" className="d-sm-none">
         <StyledBackgroundSection
           className={`image`}
           image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
