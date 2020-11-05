@@ -62,7 +62,7 @@ const ProgramDetails = (props) => {
             display_sm={`none`}
         >
             <Row display="flex" height="100%">
-                <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
+                <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`between`}>
                     <Row display="flex" height={`15%`} justifyContent={`around`} alignItems={`center`} marginBottom={`15px`} alignResp={`space-around`}>
                         {props.details.details_modules.map((item, index) => {
                             return (
@@ -76,10 +76,12 @@ const ProgramDetails = (props) => {
                                     background={selected.index === index ? "#bfeeff" : null}
                                     padding={"10px"}
                                     borderRadius={".75rem"}
+                                    display="flex"
                                 >
                                     <Div
                                         alignItems={`center`}
                                         margin={`0 0 5px 0`}
+                                        display="flex"
                                     >
                                         <Paragraph
                                             color={Colors.darkGray}
@@ -93,7 +95,7 @@ const ProgramDetails = (props) => {
                                             {item.module_name}
                                         </Paragraph>
                                     </Div>
-                                    <Div alignItems={`center`}>
+                                    <Div alignItems={`center`} display="flex">
                                         <Paragraph
                                             color={Colors.darkGray}
 
@@ -116,7 +118,7 @@ const ProgramDetails = (props) => {
                         <FillerStyles completed={(steps[selected.index] * 100) / steps[steps.length - 1]} />
                     </ContainerStyle>
                     <Row display="flex" justifyContent={`center`} alignItems={`center`} marginTop={`10px`}>
-                        <Column size="11" display={`flex`} justifyContent={`space-between`}>
+                        <Column size="11" display={`flex`} justifyContent={`between`}>
                             {steps.length > 0 && Array(steps[steps.length - 1]).fill(null).map((item, index) => {
                                 return (
                                     <Paragraph
@@ -136,13 +138,13 @@ const ProgramDetails = (props) => {
                     </Row>
 
                     <Row display="flex" height={`75%`} >
-                        <Column size="12" paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
-                            <Div flexDirection={`row`} >
-                                <Div margin={`0 5px 0 0`} flexDirection={`column`} alignContent={`start`}>
+                        <Column size="12" paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`evenly`}>
+                            <Div flexDirection={`row`} display="flex">
+                                <Div margin={`0 5px 0 0`} flexDirection={`column`} alignContent={`start`} display="flex">
                                     <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                 </Div>
-                                <Div flexDirection={`column`} >
-                                    <Div alignItems={`center`} margin={`5px 0`}>
+                                <Div flexDirection={`column`} display="flex">
+                                    <Div alignItems={`center`} margin={`5px 0`} display="flex">
                                         <H4 align="left" align_sm="left">
                                             {props.details.details_modules[selected.index].title}
                                         </H4>
@@ -168,13 +170,13 @@ const ProgramDetails = (props) => {
                                     {/* </Div> */}
                                 </Div>
                             </Div>
-                            <Div flexDirection={`row`} >
-                                <Div width={`50%`}>
-                                    <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
+                            <Div flexDirection={`row`} display="flex">
+                                <Div width={`50%`} display="flex">
+                                    <Div display="flex" flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
                                         <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     </Div>
-                                    <Div flexDirection={`column`} >
-                                        <Div alignItems={`center`} margin={`5px 0`}>
+                                    <Div display="flex" flexDirection={`column`} >
+                                        <Div display="flex" alignItems={`center`} margin={`5px 0`}>
                                             {/* <Div> */}
                                             <H4 align="left" align_sm="left">
                                                 {strings[lang]["Projects"]}
@@ -182,7 +184,7 @@ const ProgramDetails = (props) => {
                                             {/* </Div> */}
                                         </Div>
 
-                                        <Div >
+                                        <Div display="flex" >
                                             <Paragraph
                                                 color={Colors.darkGray}
                                                 align_sm="left"
@@ -197,18 +199,18 @@ const ProgramDetails = (props) => {
                                         </Div>
                                     </Div>
                                 </Div>
-                                <Div flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
+                                <Div display="flex" flexDirection={`column`} alignContent={`start`} margin={`0 5px 0 0`}>
                                     <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                 </Div>
-                                <Div flexDirection={`column`}>
-                                    <Div alignItems={`center`} margin={`5px 0`}>
+                                <Div display="flex" flexDirection={`column`}>
+                                    <Div display="flex" alignItems={`center`} margin={`5px 0`}>
 
                                         <H4 align="left" align_sm="left">
                                             {`Duration`}
                                         </H4>
 
                                     </Div>
-                                    <Div >
+                                    <Div display="flex">
                                         <Paragraph
                                             color={Colors.darkGray}
                                             align_sm="left"

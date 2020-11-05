@@ -134,7 +134,6 @@ export const Column = styled(Div)`
     position: relative;
     width: 100%;
     background: ${props => props.background};
-    // background-color: ${props => props.color};
     border: ${props => props.borderStyle};
     align-self: ${props => props.alignSelf};
     padding-right: ${props => props.paddingRight};
