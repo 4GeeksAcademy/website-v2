@@ -9,14 +9,6 @@ const TypicalDay = (props) => {
     const {data} = props;
     const [activeStep, setActiveStep] = useState(0);
 
-    const Slider = () => {
-        let sliderArray = [];
-        for (let i = 0; i < data.schedule.length; i++) {
-            sliderArray.push(i)
-        }
-        return sliderArray
-    }
-    console.log("data.schedule", data.schedule)
     return (
         <>
             <Wrapper>
