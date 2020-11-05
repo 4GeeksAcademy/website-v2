@@ -99,17 +99,17 @@ const GeeksVsOthers = props => {
           size="12"
           borderRadius="0 0 0 1.25rem"
           image="no"
-          color={Colors.white}
+          background={Colors.white}
         >
           <Card shadow borders="1.25rem" overflow="hidden">
             <Row height="80px" marginLeft="0" marginRight="0" display={`flex`}>
-              <Column size="6" alignSelf="center" height="100%" image="no" color={Colors.black} borderRadius="1.25rem 0 0 0" >
+              <Column size="6" alignSelf="center" height="100%" image="no" background={Colors.black} borderRadius="1.25rem 0 0 0" >
                 <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.darkGray}`}}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.featured}</H5></Column></Row>
               </Column>
-              <Column size="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
+              <Column size="3" alignSelf="center" height="100%" image="no" background={Colors.lightGray}>
                 <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.at_geeks}</H5></Column></Row>
               </Column>
-              <Column size="3" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" borderRadius="0 1.25rem 0  0">
+              <Column size="3" alignSelf="center" height="100%" image="no" background={Colors.white} border="custom" borderRadius="0 1.25rem 0  0">
                 <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.average}</H5></Column></Row>
               </Column>
             </Row>
@@ -132,7 +132,7 @@ const GeeksVsOthers = props => {
                       className="pointer"
                       onClick={() => {setGlobeTooltip(false); setOpenedIndex(openedIndex === index ? null : index);}}
                     >
-                      <Column size="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
+                      <Column size="6" alignSelf="center" height="100%" image="no" background={Colors.black}>
                         <Row display={`flex`} justifyContent="around" height="100%" style={{borderBottom: `1px solid ${Colors.darkGray}`}}>
                           <Div display={`flex`} flexDirection={`column`} justifyContent={`center`} >
                             <Div display={`flex`} alignItems={`center`} padding="10px">
@@ -187,7 +187,7 @@ const GeeksVsOthers = props => {
                           </Div>
                         </Row>
                       </Column>
-                      <Column size="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
+                      <Column size="3" width="100%" height="100%" alignSelf="center" image="no" background={Colors.lightGray}>
                         <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" >
                           <H4
                             align="center"

@@ -129,24 +129,17 @@ export const Row = styled(Div)`
 `
 
 
-export const Column = styled.div`
-    padding: ${props => props.padding};
-    height: ${props => props.height};
-    margin: ${props => props.margin};
+export const Column = styled(Div)`
     text-align: ${props => props.align || "left"};
     position: relative;
     width: 100%;
     background: ${props => props.background};
-    background-color: ${props => props.color};
+    // background-color: ${props => props.color};
     border: ${props => props.borderStyle};
     align-self: ${props => props.alignSelf};
     padding-right: ${props => props.paddingRight};
     padding-left: ${props => props.paddingLeft};
-    display: ${props => props.display};
     flex-direction: ${props => props.flexDirection};
-    justify-content: ${props => props.justifyContent};
-    align-items: ${props => props.alignItems};
-    text-align: ${props => props.align};
     
     flex: 0 0 ${props => (props.size / 12) * 100}%;
     max-width: ${props => (props.size / 12) * 100}%;
@@ -264,7 +257,7 @@ export const WrapperImage = (props) => {
                 alt={props.alt}
                 filter={props.filter}
             >
-                    <Row>
+                    <Row display="flex">
                         <Column
                             size="9"
                             margin="0 auto"
@@ -296,7 +289,7 @@ export const WrapperCustom = (props) => {
             >
                 {props.full
                     ?
-                    <Row justifyContent={props.innerLeftRowAlign}>
+                    <Row justifyContent={props.innerLeftRowAlign} display="flex">
                         <Column size={props.innerLeftCol} >{props.content}</Column>
                         <Column size={props.innerRightCol}>
                             {props.children}
