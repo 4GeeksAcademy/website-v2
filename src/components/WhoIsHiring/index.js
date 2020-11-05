@@ -8,9 +8,9 @@ import Fragment from "../Fragment"
 const WhoIsHiring = props => {
   return (
     <Fragment margin={props.margin} padding="20px 0" github="/components/partner">
-      <Row >
+      <Row display="flex">
         {props.images.map((item, index) => (
-          <Column  key={index} size="3" size_sm="4" margin="5px 0">
+          <Column key={index} size="3" size_sm="4" margin="5px 0">
             <Card width="100%" padding="20px" p_xs="3px">
               <StyledBackgroundSection
                 image={item.image.childImageSharp.fluid}

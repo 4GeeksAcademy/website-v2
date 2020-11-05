@@ -16,6 +16,7 @@ const Loc = (props) => {
     <>
       <Row
         github={"/location"}
+        display="flex"
       >
         <Column
           size="12"
@@ -40,6 +41,7 @@ const Loc = (props) => {
                       height="100%"
                       marginLeft="0"
                       marginRight="0"
+                      display="flex"
                     >
                       <Column
                         size="6"
@@ -84,7 +86,7 @@ const Loc = (props) => {
         </Column>
       </Row>
       <Divider height="10px" />
-      <Row height="auto" justifyContent="center">
+      <Row height="auto" justifyContent="center" display="flex">
         {loc.map((pic, i) => {
           let randLocImgIndex = Math.floor(Math.random() * pic.node.carousel_box.images.length)
           return (
@@ -104,6 +106,7 @@ const Loc = (props) => {
                     backgroundHover={Colors.blue}
                     marginHover="0"
                     borderRadiusHover=".25rem"
+                    display="flex"
                   >
                     <Column size="12" alignSelf="center" align="center">
 

@@ -39,7 +39,7 @@ const Footer = ({yml}) => {
             p_bottom="135px"
             p_xs="25px 15px 155px 15px"
         >
-            <Row justifyContent="center" margin="20px 0 30px 0">
+            <Row justifyContent="center" margin="20px 0 30px 0" display="flex">
                 {formStatus.status === "thank-you" ?
                     <H4 fontSize="18px" margin="10px 0" color={Colors.lightGreen} align="center">{yml.newsletter.thankyou}</H4>
                     :
@@ -95,7 +95,7 @@ const Footer = ({yml}) => {
                     </Column>
                 }
             </Row>
-            <Row justifyContent="center" margin="0 8%" m_md="0 4%">
+            <Row justifyContent="center" margin="0 8%" m_md="0 4%" display="flex">
                 {yml.footer.map((item, index) => {
                     return (
                         <Column key={index} size={item.width} size_sm="6" margin={"0 0 20px 0"}>
@@ -129,15 +129,15 @@ const Footer = ({yml}) => {
                     )
                 })}
             </Row>
-            <Row height="20%">
+            <Row height="20%" display="flex">
                 <Column disp_md="none" size="2"></Column>
                 <Column size="8" size_md="11">
-                    <Row justifyContent="center">
+                    <Row justifyContent="center" display="flex">
                         <Column size="6" margin="5px 0">
                             <Paragraph fontSize="12px" color={Colors.gray}>@ 4Geeks Academy LLC 2019 </Paragraph>
                         </Column>
                         <Column size="6" margin="5px 0" >
-                            <Row justifyContent="around">
+                            <Row justifyContent="around" display="flex">
                                 <Column size="4" selfAlign="center">
                                     <Paragraph fontSize="10px" color={Colors.gray}>We accept: </Paragraph>
                                 </Column>

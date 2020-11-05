@@ -38,8 +38,8 @@ export default ({lang, playerHeight}) => {
   let info = data.allWhy4GeeksYaml.edges.find(({node}) => node.fields.lang === lang);
   if (info) info = info.node;
 
-return (<Fragment github="/components/why_4geeks">
-    <Row height="auto" marginTop="50px">
+  return (<Fragment github="/components/why_4geeks">
+    <Row height="auto" marginTop="50px" display={`flex`}>
       {info.why.map((i, index) => {
         return (<Column size="4" size_sm="12" key={index}>
           <ReactPlayer
@@ -49,27 +49,28 @@ return (<Fragment github="/components/why_4geeks">
             width='100%'
             height='250px'
           />
-          <Div position="relative" marginTop="20px" padding="10px 0">
-              <Icon width="32" icon={i.icon}
-                style={{ position: "absolute" }} 
-                color={Colors.yellow} fill={Colors.yellow} 
-              />
-              <H4
-                align="left"
-                align_sm="center"
-                width="100%"
-                margin="0 0 0 38px"
-                uppercase
-                fs_xs="20px"
-                fs_sm="24px"
-                fs_md="14px"
-                fs_lg="18px"
-                fontSize="20px"
-              >{i.title}</H4>
+          <Div position="relative" marginTop="20px" padding="10px 0" display={`flex`}>
+            <Icon width="32" icon={i.icon}
+              style={{position: "absolute"}}
+              color={Colors.yellow} fill={Colors.yellow}
+            />
+            <H4
+              align="left"
+              align_sm="center"
+              width="100%"
+              margin="0 0 0 38px"
+              uppercase
+              fs_xs="20px"
+              fs_sm="24px"
+              fs_md="14px"
+              fs_lg="18px"
+              fontSize="20px"
+            >{i.title}</H4>
           </Div>
           <Paragraph color="gray" align="left" margin="10px 0" fontSize="16px">{i.description}</Paragraph>
         </Column>
-      )})}
+        )
+      })}
     </Row>
   </Fragment>
   )

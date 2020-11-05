@@ -1,5 +1,5 @@
 import React from 'react';
-import {graphql,Link, navigate} from 'gatsby';
+import {graphql, Link, navigate} from 'gatsby';
 import loadable from '@loadable/component'
 import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Row, Column, Wrapper} from '../components/Sections'
@@ -55,13 +55,13 @@ const CityWrapper2 = ({yml}) => {
 }
 
 const Home = (props) => {
-  
+
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
-  
+
   return (
     <>
-      <Row github={`/page/index.${pageContext.lang}.yml`}>
+      <Row github={`/page/index.${pageContext.lang}.yml`} display={`flex`}>
         <Column
           size="4"
           m_sm="0"
@@ -99,12 +99,12 @@ const Home = (props) => {
           paddingRight={`0`}
         >
           <Img
-            style={{ height: "500px", backgroundColor: Colors.lightGray, borderRadius: "0 0 0 1.25rem" }} 
-            imgStyle={{ objectFit: "cover" }} 
+            style={{height: "500px", backgroundColor: Colors.lightGray, borderRadius: "0 0 0 1.25rem"}}
+            imgStyle={{objectFit: "cover"}}
             alt="4Geeks Academy"
             loading="eager"
             fadeIn={false}
-            fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid} 
+            fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
             backgroundSize={`cover`}
           />
         </Column>
@@ -153,7 +153,7 @@ const Home = (props) => {
       {/* ******************* */}
       <Wrapper margin="100px">
         <CityWrapper2 yml={yml} />
-        <Row github={`/page/index.${pageContext.lang}.yml`}>
+        <Row github={`/page/index.${pageContext.lang}.yml`} display="flex">
           <Column size="6" size_sm="12" >
             <Card
               padding="20px"
@@ -205,7 +205,7 @@ const Home = (props) => {
                 align_xs="left">
                 {yml.join_geeks.geek_data.geek_force_data.content}
               </Paragraph>
-              <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right"  alignSelf="flex-end">
+              <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right" alignSelf="flex-end">
                 <Link to={yml.join_geeks.geek_data.geek_force_data.icon_link}>
                   <Icon icon="arrowright" width="24px" color={Colors.blue} fill={Colors.blue} />
                 </Link>

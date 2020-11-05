@@ -33,6 +33,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                             borders="1.25rem"
                             marginLeft="0"
                             marginRight="0"
+                            display="flex"
                         >
                             <Column
                                 size="6"
@@ -59,14 +60,14 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                 </H3>
                                 {item.alumni.map((alumni, i) => {
                                     return (
-                                        <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
+                                        <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`} display="flex">
                                             <H5
                                                 align="left"
                                                 align_sm="left"
                                                 fontWeight={`400`}
                                             >{`${alumni.first_name} ${alumni.last_name}`}
                                             </H5>
-                                            <Row marginBottom="5px">
+                                            <Row marginBottom="5px" display="flex">
                                                 <Column size="12" alignSm="center" display={`flex`} flexDirection={`row`} alignItems={`end`}>
                                                     <Paragraph
                                                         primary
@@ -118,7 +119,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                     fs_lg="11px"
                                     fs_xl="16px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.project_content}
                                 </Paragraph>
-                                <Div>
+                                <Div display="flex">
                                     {item.project_video && <Anchor to={`${item.project_video}`} target="_blank" rel="noopener noreferrer nofollow">
                                         <Paragraph margin={`10px 5px 0 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Video Demo •</Paragraph>
                                     </Anchor>
@@ -169,7 +170,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                     </Link>
                 </Div>
             </Carousel>
-            {limit > 0 && <Row height="10%" justifyContent="center">
+            {limit > 0 && <Row height="10%" justifyContent="center" display="flex">
                 <Column size="6" align="center">
                     <Link to={lang[0].node.button_section.button_link}>
                         <Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>

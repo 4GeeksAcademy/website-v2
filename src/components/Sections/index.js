@@ -65,7 +65,7 @@ export const Div = styled.div`
     height: ${props => props.height};
     width: ${props => props.width};
     position: ${props => props.position};
-    display: ${props => props.display || "flex"};
+    display: ${props => props.display};
     align-items: ${props => props.alignItems};
     margin: ${props => props.margin};
     border-radius: ${props => props.borderRadius};
@@ -215,7 +215,7 @@ export const Wrapper = (props) => {
             m_md={props.right ? "0 0 0 auto" : undefined}
             backgroundSize={props.backgroundSize}
         >
-            <Row padding={`20px 0`}>
+            <Row padding={`20px 0`} display={`flex`}>
                 <Column size="1" disp_sm="none" />
                 <Column
                     size={props.wide ? 11 : 9}
@@ -237,7 +237,7 @@ export const WrapperImage = (props) => {
         github={props.github}
         variant="fluid"
     >
-        <Row>
+        <Row display={`flex`}>
             <Column size="1" d_sm="none" />
             <Column
                 size="11" size_sm="12"
@@ -285,7 +285,7 @@ WrapperImage.defaultProps = {
 
 export const WrapperCustom = (props) => {
     return <Container width={props.width}>
-        <Row>
+        <Row display={`flex`}>
             <Column size={props.outerLeftCol} ></Column>
             <Column
                 size={props.outerRightCol}
