@@ -207,7 +207,7 @@ const Program = ({data, pageContext, yml}) => {
 
     {/* ALUMNI PROJECTS */}
     <Wrapper
-      margin="50px 0"
+      margin="75px 0"
     >
       <Title
         size="10"
