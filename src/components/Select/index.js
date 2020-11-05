@@ -57,6 +57,7 @@ const Select = (props) => {
                     width={props.width || "250px"}
                     width_xs="100%"
                     width_sm="100%"
+                    display="flex"
                     justifyContent="center"
                     position="absolute"
                     right={props.right}
