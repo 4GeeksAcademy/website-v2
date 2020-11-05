@@ -20,63 +20,63 @@ export const ChooseWrap = styled.div`
     }
 `;
 const Select = (props) => {
-    const [status, setStatus] = useState({ toggle: false, hovered: false })
-    const _Selector = (_p) => <Button 
-        shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)" 
-        padding="10px 30px" 
+    const [status, setStatus] = useState({toggle: false, hovered: false})
+    const _Selector = (_p) => <Button
+        shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
+        padding="10px 30px"
         maxWidth={props.maxWidth}
         width={props.width}
         minWidth={props.minWidth}
-        onClick={() => _p.setStatus({ toggle: !_p.status.toggle })} 
-        color={Colors.blue} 
+        onClick={() => _p.setStatus({toggle: !_p.status.toggle})}
+        color={Colors.blue}
         textColor={Colors.white}
     >
         {_p.status.toggle ? props.openLabel : props.closeLabel}
     </Button>
     const Selector = props.selector || _Selector;
     return (
-        <ChooseWrap 
+        <ChooseWrap
             centered={props.centered}
             margin={props.margin}
             m_sm={props.m_sm}
             m_xs={props.m_xs}
             onMouseLeave={() => {
-                setStatus({ ...status, hovered: false });
+                setStatus({...status, hovered: false});
                 setTimeout(() => {
-                    setStatus(_status => ({ ..._status, toggle: _status.hovered }));
-                },300)
+                    setStatus(_status => ({..._status, toggle: _status.hovered}));
+                }, 300)
             }}
-            onMouseEnter={() => setStatus({ ...status, hovered: true })}
+            onMouseEnter={() => setStatus({...status, hovered: true})}
         >
             <Selector status={status} setStatus={setStatus} />
-            {status.toggle && 
-                <Row 
+            {status.toggle &&
+                <Row
                     margin={props.margin}
                     m_sm={props.m_sm}
                     m_xs={props.m_xs}
                     width={props.width || "250px"}
-                    width_xs="100%" 
+                    width_xs="100%"
                     width_sm="100%"
-                    align="center" 
-                    position="absolute" 
+                    justifyContent="center"
+                    position="absolute"
                     right={props.right}
                     top={props.top}
                     left={props.left}
-                    zIndex="2" 
-                    background={Colors.white} 
-                    borderRadius={props.borderRadius} 
+                    zIndex="2"
+                    background={Colors.white}
+                    borderRadius={props.borderRadius}
                     shadow={props.shadow}
                 >
                     {Array.isArray(props.options) && props.options.map((item, index) => {
                         return (
-                            <Button 
+                            <Button
                                 key={index}
                                 colorHover={Colors.lightBlue}
                                 onClick={() => {
-                                    setStatus({ toggle: false, hovered: false });
-                                    if(props.onSelect) props.onSelect(item);
-                                }} 
-                                textColor={Colors.gray} 
+                                    setStatus({toggle: false, hovered: false});
+                                    if (props.onSelect) props.onSelect(item);
+                                }}
+                                textColor={Colors.gray}
                                 fontSize={"16px"}
                                 borderRadius=".75rem" padding="10px"
                             >
@@ -97,13 +97,13 @@ Select.propTypes = {
     shadow: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.string
-      ])
-  };
+    ])
+};
 Select.defaultProps = {
     selector: null,
     shadow: true,
     marginTop: "5px",
     marginLeft: "0",
     borderRadius: ".75rem",
-  }
+}
 export default Select;

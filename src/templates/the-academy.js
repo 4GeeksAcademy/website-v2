@@ -44,7 +44,7 @@ const Why = (props) => {
       </WrapperImage>
 
       <Wrapper margin="30px">
-        <Row align="center" >
+        <Row justifyContent="center" >
           <Column size="4" margin="5px 0">
             <Paragraph
               margin="5px 0"
@@ -306,7 +306,7 @@ const Why = (props) => {
           variant="primary"
           maxWidth="700px"
         />
-        <Row align='center'>
+        <Row justifyContent='center'>
           <Column size="3" size_sm='12' padding="20px 0">
             <Row>
               <Column size="12">
@@ -342,7 +342,7 @@ const Why = (props) => {
             </Row>
           </Column>
           <Column size="9" >
-            <Row align="center">
+            <Row justifyContent="center">
               <Column size="4" size_sm="12" padding="20px 0" align="center"><H4
                 uppercase
                 fs_xs="16px"
@@ -376,7 +376,7 @@ const Why = (props) => {
             </Row>
           </Column>
         </Row>
-        <Row align='center'>
+        <Row justifyContent='center'>
           <Column size="8" align="center">
             <Paragraph
               color={Colors.blue}

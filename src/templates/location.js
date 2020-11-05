@@ -63,7 +63,7 @@ const Location = ({data, pageContext, yml}) => {
                 fontSize="46px"
                 textAlign="center"
             />
-            <Row align="center" marginBottom="40px">
+            <Row justifyContent="center" marginBottom="40px">
                 <Column align="right" align_sm="center" m_sm="0 0 15px 0" size="6" size_sm="12">
                     <ChooseProgram
                         right="15px"

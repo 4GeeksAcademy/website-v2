@@ -36,7 +36,7 @@ export const Container = styled(Fragment)`
     width: ${props => containerVariants[props.variant || "fixed"]};
     height: ${props => props.height};
     margin: ${props => props.margin || "initial"};
-    padding: ${props=> props.padding};
+    padding: ${props => props.padding};
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -51,9 +51,8 @@ export const Container = styled(Fragment)`
     @media  ${Break.xs}{
         padding: ${props => props.p_xs};
     }
-`
-
-const rowAligns = {
+    `
+const justifyContentOptions = {
     "around": "space-around",
     "center": "center",
     "between": "space-between",
@@ -61,20 +60,48 @@ const rowAligns = {
     "end": "flex-end",
     "start": "flex-start",
 }
-export const Row = styled(Fragment)`
+export const Div = styled.div`
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};
+    position: ${props => props.position};
+    display: ${props => props.display || "flex"};
+    align-items: ${props => props.alignItems};
+    margin: ${props => props.margin};
+    border-radius: ${props => props.borderRadius};
+    background: ${props => props.background};
+    justify-content: ${props => justifyContentOptions[props.justifyContent]};
+    flex-direction: ${props => props.flexDirection || 'row'};
+    
+    box-shadow: ${props => props.shadow};
+    flex-wrap: nowrap; 
+    align-content: ${props => props.alignContent};
+    align: ${props => props.align};
+    cursor: ${props => props.cursor};
+    &:hover { 
+        background: ${props => props.backgroundHover};
+    }
+    @media  ${Break.lg}{
+        display: ${props => props.d_lg};
+    }
+    @media  ${Break.sm}{
+        align-items: ${props => props.alignItems_sm};
+        padding: ${props => props.p_sm};
+        display: ${props => props.d_sm};
+        width: ${props => props.w_sm};
+        margin: ${props => props.m_sm};
+    }
+    @media ${Break.xs}{
+        align-items: ${props => props.alignItems_xs};
+    }
+`
+export const Row = styled(Div)`
     border: ${props => props.border};
     border-top: ${props => props.borderTop};
     border-bottom: ${props => props.borderBottom};
-    border-radius: ${props => props.borderRadius};
-    position: ${props => props.position};
     z-index: ${props => props.zIndex};
-    display: flex;
+    
     flex-wrap: wrap; 
-    align-items:${props => props.alignItems};
-    margin: ${props => props.margin};
     right: ${props => props.right};
     left: ${props => props.left};
     top: ${props => props.top};
@@ -82,8 +109,6 @@ export const Row = styled(Fragment)`
     margin-left: ${props => props.marginLeft};
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
-    background: ${props => props.background};
-    justify-content: ${props => rowAligns[props.align]};
     box-shadow: ${props => props.shadow
         && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
     };
@@ -109,40 +134,7 @@ export const Row = styled(Fragment)`
     }
 `
 
-export const Div = styled.div`
-    display: ${props => props.display || "flex"};
-    flex-wrap: nowrap; 
-    flex-direction: ${props => props.flexDirection === 'column' ? 'column' : 'row'};
-    justify-content: ${props => props.justifyContent};
-    align-items: ${props => props.alignItems};
-    align-content: ${props => props.alignContent};
-    height: ${props => props.height};
-    width: ${props => props.width};
-    align: ${props => props.align};
-    margin: ${props => props.margin};
-    position: ${props => props.position};
-    background: ${props => props.background};
-    border-radius: ${props => props.borderRadius};
-    padding: ${props => props.padding};
-    cursor: ${props => props.cursor};
-    box-shadow: ${props => props.shadow};
-    &:hover { 
-        background: ${props => props.backgroundHover};
-    }
-    @media  ${Break.lg}{
-        display: ${props => props.d_lg};
-    }
-    @media  ${Break.sm}{
-        align-items: ${props => props.alignItems_sm};
-        padding: ${props => props.p_sm};
-        display: ${props => props.d_sm};
-        width: ${props => props.w_sm};
-        margin: ${props => props.m_sm};
-    }
-    @media ${Break.xs}{
-        align-items: ${props => props.alignItems_xs};
-    }
-`
+
 export const Column = styled.div`
     padding: ${props => props.padding};
     height: ${props => props.height};
@@ -310,7 +302,7 @@ export const WrapperCustom = (props) => {
             >
                 {props.full
                     ?
-                    <Row align={props.innerLeftRowAlign}>
+                    <Row justifyContent={props.innerLeftRowAlign}>
                         <Column size={props.innerLeftCol} >{props.content}</Column>
                         <Column size={props.innerRightCol}>
                             {props.children}

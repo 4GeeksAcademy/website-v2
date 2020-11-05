@@ -36,7 +36,7 @@ const strings = {
 const ProgramDetails = (props) => {
     const [selected, setSelected] = useState({index: 0, manual: false});
     const lang = props.lang || "en";
-    if(!props.details){
+    if (!props.details) {
         console.log("Warning! Ignoring Program Details because it came null form the graphql query")
         return null;
     }
@@ -62,8 +62,8 @@ const ProgramDetails = (props) => {
             display_sm={`none`}
         >
             <Row height="100%">
-                <Column size="12"  display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                    <Row height={`15%`} align={`around`} alignItems={`center`} marginBottom={`15px`} alignResp={`space-around`}>
+                <Column size="12" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
+                    <Row height={`15%`} justifyContent={`around`} alignItems={`center`} marginBottom={`15px`} alignResp={`space-around`}>
                         {props.details.details_modules.map((item, index) => {
                             return (
                                 <Div
@@ -115,7 +115,7 @@ const ProgramDetails = (props) => {
                     <ContainerStyle>
                         <FillerStyles completed={(steps[selected.index] * 100) / steps[steps.length - 1]} />
                     </ContainerStyle>
-                    <Row align={`center`} alignItems={`center`} marginTop={`10px`}>
+                    <Row justifyContent={`center`} alignItems={`center`} marginTop={`10px`}>
                         <Column size="11" display={`flex`} justifyContent={`space-between`}>
                             {steps.length > 0 && Array(steps[steps.length - 1]).fill(null).map((item, index) => {
                                 return (
@@ -136,7 +136,7 @@ const ProgramDetails = (props) => {
                     </Row>
 
                     <Row height={`75%`} >
-                        <Column size="12"  paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
+                        <Column size="12" paddingRight={`30px`} paddingLeft={`30px`} display={`flex`} flexDirection={`column`} justifyContent={`space-evenly`}>
                             <Div flexDirection={`row`} >
                                 <Div margin={`0 5px 0 0`} flexDirection={`column`} alignContent={`start`}>
                                     <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />

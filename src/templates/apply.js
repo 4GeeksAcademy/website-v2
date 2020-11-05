@@ -113,7 +113,7 @@ const Apply = (props) => {
                     height="100%"
                     marginLeft="0"
                     marginRight="0"
-                    align="center"
+                    justifyContent="center"
                     borderRadius="0 1.25rem 1.25rem 1.25rem"
                 >
                     <Column
@@ -142,7 +142,7 @@ const Apply = (props) => {
                         })}
                     </Column>
                     <Column size="8" size_sm="12" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem" color="white">
-                        <Row align="center" height="100%">
+                        <Row justifyContent="center" height="100%">
                             <Column size="10" height="100%">
                                 <Divider height="50px" />
                                 <Row height="50px">

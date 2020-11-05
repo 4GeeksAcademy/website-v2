@@ -30,7 +30,7 @@ const months = [
     'Nov',
     'Dec'
 ]
-const Events = ({ }) => {
+const Events = ({}) => {
     const [event, setEvent] = useState([])
     useEffect(() => {
         const loadEvents = async () => {
@@ -69,7 +69,7 @@ const Events = ({ }) => {
                                     customRespSize
                                 >
                                     <Column size="5" alignSelf="center" height="100%" image="no" borderRadius="0 0 0 1.25rem">
-                                        <Row align="center" height="100%">
+                                        <Row justifyContent="center" height="100%">
                                             <Column size="9" height="100%">
                                                 <Divider height="30px" />
                                                 <Row height="60px">
@@ -79,7 +79,7 @@ const Events = ({ }) => {
                                                     <Separator variant="primary" />
                                                 </Row>
                                                 <Row height="20px">
-                                                    <Column size="2"  paddingLeft="0px">
+                                                    <Column size="2" paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >Date:</Paragraph>
                                                     </Column>
                                                     <Column size="6" >
@@ -87,7 +87,7 @@ const Events = ({ }) => {
                                                     </Column>
                                                 </Row>
                                                 <Row height="20px">
-                                                    <Column size="2"  paddingLeft="0px">
+                                                    <Column size="2" paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >Time:</Paragraph>
                                                     </Column>
                                                     <Column size="6" >
@@ -95,7 +95,7 @@ const Events = ({ }) => {
                                                     </Column>
                                                 </Row>
                                                 <Row height="50px">
-                                                    <Column size="2"  paddingLeft="0px">
+                                                    <Column size="2" paddingLeft="0px">
                                                         <Paragraph color={Colors.gray} fontSize="14px" align="left" >City:</Paragraph>
                                                     </Column>
                                                     <Column size="5"  >
@@ -104,7 +104,7 @@ const Events = ({ }) => {
 
                                                 </Row>
                                                 <Row height="100px">
-                                                    <a href={item.url} target="_blank"  rel="noopener noreferrer nofollow">
+                                                    <a href={item.url} target="_blank" rel="noopener noreferrer nofollow">
                                                         <Button outline color={Colors.blue} textColor={Colors.black} padding=".35rem.85rem">MORE DETAILS</Button>
                                                     </a>
                                                 </Row>
@@ -112,7 +112,7 @@ const Events = ({ }) => {
                                         </Row>
 
                                     </Column>
-                                    <Column size="7"  alignSelf="center" width="100%" height="100%" border="custom" borderRadius="0 1.25rem 1.25rem 0" image="yes" url={item.banner_url} backgroundSize="cover" >
+                                    <Column size="7" alignSelf="center" width="100%" height="100%" border="custom" borderRadius="0 1.25rem 1.25rem 0" image="yes" url={item.banner_url} backgroundSize="cover" >
 
                                     </Column>
                                 </Row>

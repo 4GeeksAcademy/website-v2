@@ -63,7 +63,7 @@ const GeekPal = (props) => {
             const splittedTitle = splitTitleString(col.heading)
             return (
               <Column size="4" key={i}>
-                <Row align="around" height="80px">
+                <Row justifyContent="around" height="80px">
                   <Column size="12" selfAlign="center" align="center">
 
                     <H3

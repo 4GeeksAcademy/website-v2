@@ -71,7 +71,7 @@ const ListCard = ({image, onClick, title, date, address, link}) => <Column size=
               {address}
             </Paragraph>
           </Row>
-          <Row height="5%" align="end">
+          <Row height="5%" justifyContent="end">
             <a href={`#`} target="_blank" rel="noopener noreferrer">
               <Icon icon="arrowright"
                 width="32"
@@ -152,7 +152,7 @@ const Calendar = (props) => {
       </WrapperImage>
       <Wrapper border="top" color={Colors.white}>
         <Divider height="50px" />
-        <Row marginBottom={`10px`} align={`end`}>
+        <Row marginBottom={`10px`} justifyContent={`end`}>
           <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer">
             <Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">
               Join Our Meetup

@@ -73,7 +73,7 @@ const Program = ({data, pageContext, yml}) => {
         fs_xs="40px"
         textAlign="center"
       />
-      <Row align="center" marginBottom="50px">
+      <Row justifyContent="center" marginBottom="50px">
         <Column align="right" size="6" align_sm="center" m_sm="0px 0px 15px 0px" size_sm="12" align="right">
           <Link to={yml.button.apply_button_link}
             state={{course: yml.meta_info.bc_slug}}

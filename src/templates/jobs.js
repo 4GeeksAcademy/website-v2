@@ -76,7 +76,7 @@ const Jobs = ({data, pageContext, yml}) => {
                   />
                 </Column>
                 <Column size="6" size_sm={`12`} alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
-                  <Row align="center" padding={`20px`}>
+                  <Row justifyContent="center" padding={`20px`}>
                     <Paragraph
                       color={Colors.gray}
                       fontSize="18px"
@@ -88,7 +88,7 @@ const Jobs = ({data, pageContext, yml}) => {
                       {yml.about.content}
                     </Paragraph>
                   </Row>
-                  <Row align="around" padding={`10px`}>
+                  <Row justifyContent="around" padding={`10px`}>
                     <Link to={yml.about.button_link}>
                       <Paragraph
                         color={Colors.blue}

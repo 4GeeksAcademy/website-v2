@@ -104,7 +104,7 @@ const PricesAndPayments = (props) => {
   return (
     <Fragment github="/location">
       <Row
-        align={`center`}
+        justifyContent={`center`}
         margin="0 0 20px 0"
       >
         {!props.course && <Select
@@ -133,7 +133,7 @@ const PricesAndPayments = (props) => {
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
-        <Row align="center">
+        <Row justifyContent="center">
           {prices.left_section && <Column size="4" maxWidth="280px" size_sm="12" >
             <PricingCard lang={props.lang}
               transform="translateY(10%)"

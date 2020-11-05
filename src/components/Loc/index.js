@@ -60,17 +60,17 @@ const Loc = (props) => {
                         />
                       </Column>
                       <Column size="6" size_sm="12" height="500px" h_sm="380px" image="no" borderRadius="0 0 0 1.25rem">
-                          <H3
-                            margin="20px 0"
-                            fs_xs="20px"
-                            fs_sm="22px"
-                            fs_md="20px"
-                            fs_lg="20px"
-                            fs_xl="20px"
-                            align="left"
-                          >
-                            {item.node.city}
-                          </H3>
+                        <H3
+                          margin="20px 0"
+                          fs_xs="20px"
+                          fs_sm="22px"
+                          fs_md="20px"
+                          fs_lg="20px"
+                          fs_xl="20px"
+                          align="left"
+                        >
+                          {item.node.city}
+                        </H3>
                         <Separator left variant="primary" />
                         <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{item.node.carousel_box.content}</Paragraph>
                       </Column>
@@ -84,11 +84,11 @@ const Loc = (props) => {
         </Column>
       </Row>
       <Divider height="10px" />
-      <Row height="auto" align="center">
+      <Row height="auto" justifyContent="center">
         {loc.map((pic, i) => {
           let randLocImgIndex = Math.floor(Math.random() * pic.node.carousel_box.images.length)
           return (
-            <Column key={i} size="2"  padding="0 25px">
+            <Column key={i} size="2" padding="0 25px">
               {/* <Card width="100%" > */}
               <Link to={`/${props.lang}/location/${pic.node.meta_info.slug}`}>
                 <StyledBackgroundSection
@@ -100,7 +100,7 @@ const Loc = (props) => {
                 >
                   <Row
                     height="100%"
-                    align="around"
+                    justifyContent="around"
                     backgroundHover={Colors.blue}
                     marginHover="0"
                     borderRadiusHover=".25rem"

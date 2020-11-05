@@ -48,7 +48,7 @@ const Partners = (props) => {
           fontFamily="Lato-bold, sans-serif"
         />
         <Row
-          align="center"
+          justifyContent="center"
         >
           <Modal
             aria-labelledby="simple-modal-title"
@@ -63,7 +63,7 @@ const Partners = (props) => {
         <Divider height="130px" xs="0" />
       </WrapperImage>
       <Wrapper
-        >
+      >
         <Credentials transform="translate(-100px)" lang={data.allCredentialsYaml.edges} />
       </Wrapper>
       <Divider height="50px" />

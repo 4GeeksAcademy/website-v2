@@ -89,8 +89,8 @@ const GeeksVsOthers = props => {
 
   const [globeTooltip, setGlobeTooltip] = useState(true)
 
-  let geeks = data.allGeeksVsOthersYaml.edges.find(({ node }) => node.fields.lang === props.lang);
-  if(geeks) geeks = geeks.node;
+  let geeks = data.allGeeksVsOthersYaml.edges.find(({node}) => node.fields.lang === props.lang);
+  if (geeks) geeks = geeks.node;
 
   return (
     <Fragment github="/components/geeks_vs_others">
@@ -103,49 +103,49 @@ const GeeksVsOthers = props => {
         >
           <Card shadow borders="1.25rem" overflow="hidden">
             <Row height="80px" marginLeft="0" marginRight="0">
-              <Column size="6"  alignSelf="center" height="100%" image="no" color={Colors.black} borderRadius="1.25rem 0 0 0" >
+              <Column size="6" alignSelf="center" height="100%" image="no" color={Colors.black} borderRadius="1.25rem 0 0 0" >
                 <Row height="100%" borderBottom={"1px solid " + Colors.darkGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.featured}</H5></Column></Row>
               </Column>
-              <Column size="3"  alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
+              <Column size="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
                 <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.at_geeks}</H5></Column></Row>
               </Column>
-              <Column size="3"  alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" borderRadius="0 1.25rem 0  0">
+              <Column size="3" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" borderRadius="0 1.25rem 0  0">
                 <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.average}</H5></Column></Row>
               </Column>
             </Row>
-            {geeks.info.slice(0,props.limit || geeks.info.length).map((item, index) => {
+            {geeks.info.slice(0, props.limit || geeks.info.length).map((item, index) => {
               return (
                 <div key={index}>
-                    {openedIndex === index ? <div 
-                      onClick={() => setOpenedIndex(openedIndex === index ? null : index)}
-                      style={{ border: '1px solid', fontSize: "20px", fontFamily: "Lato, sans-serif", minHeight: "80px", textAlign: "center", padding: "20px" }}
-                    >
-                      <H4>{item.features}</H4>
-                      {item.why_important}
-                    </div>
+                  {openedIndex === index ? <div
+                    onClick={() => setOpenedIndex(openedIndex === index ? null : index)}
+                    style={{border: '1px solid', fontSize: "20px", fontFamily: "Lato, sans-serif", minHeight: "80px", textAlign: "center", padding: "20px"}}
+                  >
+                    <H4>{item.features}</H4>
+                    {item.why_important}
+                  </div>
                     :
                     <Row
                       key={index}
                       height="80px"
                       marginLeft="0" marginRight="0"
                       className="pointer"
-                      onClick={() => { setGlobeTooltip(false); setOpenedIndex(openedIndex === index ? null : index); }}
+                      onClick={() => {setGlobeTooltip(false); setOpenedIndex(openedIndex === index ? null : index);}}
                     >
-                      <Column size="6"  alignSelf="center" height="100%" image="no" color={Colors.black}>
-                        <Row align="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
+                      <Column size="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
+                        <Row justifyContent="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
                           <Div flexDirection={`column`} justifyContent={`center`} >
                             <Div alignItems={`center`} padding="10px">
-                              {item.icon && <Icon icon={item.icon} width="32" style={{ marginRight: "5px" }} color={Colors.yellow} fill={Colors.yellow} />}
-                                <H4
-                                  fontSize="24px"
-                                  fs_xs="16px"
-                                  fs_sm="16px"
-                                  fs_md="16px"
-                                  fs_lg="18px"
-                                  color={Colors.white}
-                                >
-                                  {item.features}
-                                </H4>
+                              {item.icon && <Icon icon={item.icon} width="32" style={{marginRight: "5px"}} color={Colors.yellow} fill={Colors.yellow} />}
+                              <H4
+                                fontSize="24px"
+                                fs_xs="16px"
+                                fs_sm="16px"
+                                fs_md="16px"
+                                fs_lg="18px"
+                                color={Colors.white}
+                              >
+                                {item.features}
+                              </H4>
                               <Div position={`relative`}>
                                 {tooltip === true && index === tooltipIndex &&
                                   <Tooltip className="d-sm-none" opacity={tooltipOpacity}>
@@ -186,7 +186,7 @@ const GeeksVsOthers = props => {
                           </Div>
                         </Row>
                       </Column>
-                      <Column size="3"  width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
+                      <Column size="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
                         <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
                           <H4
                             align="center"
@@ -197,7 +197,7 @@ const GeeksVsOthers = props => {
                             fontSize="24px"
                             color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
                       </Column>
-                      <Column size="3"  width="100%" height="100%" alignSelf="center">
+                      <Column size="3" width="100%" height="100%" alignSelf="center">
                         <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
                           <H4 align="center"
                             fs_xs="12px"
@@ -208,7 +208,7 @@ const GeeksVsOthers = props => {
                             color={Colors.gray}>{item.industry_average}</H4></Column></Row>
                       </Column>
                     </Row>
-                    }
+                  }
                 </div>
               )
             }
@@ -216,13 +216,13 @@ const GeeksVsOthers = props => {
           </Card>
         </Column>
       </Row>
-      {props.limit && 
-          <Row align="center">
-            <Link to={geeks.button.button_link}>
-              <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">{geeks.button.button_text}</Button>
-            </Link>
-          </Row>
-        }
+      {props.limit &&
+        <Row justifyContent="center">
+          <Link to={geeks.button.button_link}>
+            <Button width="300px" color={Colors.blue} textColor={Colors.white} margin="2rem 0" padding=".85rem">{geeks.button.button_text}</Button>
+          </Link>
+        </Row>
+      }
     </Fragment>
   )
 };

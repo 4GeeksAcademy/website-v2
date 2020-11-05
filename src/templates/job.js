@@ -31,8 +31,8 @@ const Job = ({data, pageContext, yml}) => {
     });
     return (<>
         <Wrapper
-            
-            
+
+
             url={yml.banner_image}
             border="bottom"
             height="200px"
@@ -65,13 +65,13 @@ const Job = ({data, pageContext, yml}) => {
                 shadow
                 padding="30px"
                 margin="5px 0 10px 0">
-                <Row align="center">
+                <Row justifyContent="center">
                     <Column size="12">
                         <H3 align="center" uppercase fontSize="28px" color={Colors.blue}>{yml.title}</H3>
                     </Column>
                 </Row>
                 <Divider height="20px" />
-                <Row align="center">
+                <Row justifyContent="center">
                     <Column size="8">
                         <Paragraph color={Colors.gray} align="center" fontSize="16px">{yml.description}</Paragraph>
                     </Column>
@@ -80,18 +80,18 @@ const Job = ({data, pageContext, yml}) => {
                 {yml.content.map((item, index) => {
                     return (
                         <>
-                            <Row key={index} align="center">
+                            <Row key={index} justifyContent="center">
                                 <Column size="12">
                                     <H4 align="center" fontSize="28px" color={Colors.black}>{item.label}</H4>
                                 </Column>
                             </Row>
-                            <Row height="5%" align="center">
+                            <Row height="5%" justifyContent="center">
 
-                                <Separator  variant="primary" />
+                                <Separator variant="primary" />
 
                             </Row>
                             <Divider height="10px" />
-                            <Row align="center">
+                            <Row justifyContent="center">
                                 <Column size="8">
                                     <ul>
                                         {item.list.map((item) => {
@@ -108,7 +108,7 @@ const Job = ({data, pageContext, yml}) => {
                 })
 
                 }
-                <Row align="center">
+                <Row justifyContent="center">
                     <Column size="12" align="center">
                         {
                             form === false
@@ -120,7 +120,7 @@ const Job = ({data, pageContext, yml}) => {
                 {form === true
                     ?
 
-                    <Row align="center" height="100%">
+                    <Row justifyContent="center" height="100%">
                         <Column size="8" height="100%">
                             <Divider height="50px" />
                             <Row height="50px">
@@ -152,10 +152,10 @@ const Job = ({data, pageContext, yml}) => {
                                     value={formData.phone}
                                 />
                             </Row>
-                            <Row align="center" height="100%">
+                            <Row justifyContent="center" height="100%">
                                 <Column size="3"></Column>
                                 <Column size="6">
-                                    <Row align="around" height="100%">
+                                    <Row justifyContent="around" height="100%">
                                         <Column size="12" alignSelf="center">
                                             <Button
                                                 color={Colors.blue} width="auto" textColor={Colors.white}
@@ -173,7 +173,7 @@ const Job = ({data, pageContext, yml}) => {
                                     </Row>
                                 </Column>
                                 <Column size="3" align="right">
-                                    <Row align="around" height="100%">
+                                    <Row justifyContent="around" height="100%">
                                         <Column size="12" alignSelf="center">
                                             <Paragraph onClick={() => setForm(!form)} margin="10px 0" color={Colors.gray} align="right" fontSize="14px">Close</Paragraph>
                                             {/* <Icon icon="arrowup" width="24" color={Colors.red} fill={Colors.red} /> */}
@@ -191,7 +191,7 @@ const Job = ({data, pageContext, yml}) => {
         </Wrapper>
         <Wrapper >
 
-            <Row align="around" height="100%" >
+            <Row justifyContent="around" height="100%" >
                 <Column size="12" alignSelf="center" >
                     <Link to="/jobs"><Icon icon="arrowleft" width="32" color={Colors.blue} fill={Colors.blue} /></Link>
                 </Column>

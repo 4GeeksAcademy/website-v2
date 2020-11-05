@@ -52,9 +52,9 @@ const TypicalDay = (props) => {
                     variant="primary"
                 />
                 <Divider height="50px" />
-                <Row height={`500px`} align={`center`}>
+                <Row height={`500px`} justifyContent={`center`}>
                     <Column size="8" display={`flex`} flexDirection={`column`} justifyContent={`space-between`}>
-                        <Row height={`15%`} align={`between`}>
+                        <Row height={`15%`} justifyContent={`between`}>
                             {data.schedule.length > 0 &&
                                 data.schedule.map((item, index) => {
                                     return (

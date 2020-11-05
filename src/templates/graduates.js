@@ -43,7 +43,7 @@ const Graduates = ({data, pageContext, yml}) => {
             customRespSize
           >
             <Column size="6" size_sm={`12`} alignSelf="center" height="100%" >
-              <Row align="center" padding={`20px`}>
+              <Row justifyContent="center" padding={`20px`}>
                 <Paragraph
                   color={Colors.gray}
                   fontSize="18px"
@@ -55,7 +55,7 @@ const Graduates = ({data, pageContext, yml}) => {
                   {yml.about.content}
                 </Paragraph>
               </Row>
-              <Row align="around" padding={`10px`}>
+              <Row justifyContent="around" padding={`10px`}>
                 <Link to={yml.about.button_link}>
                   <Paragraph
                     color={Colors.blue}

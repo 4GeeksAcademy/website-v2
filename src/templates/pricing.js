@@ -116,7 +116,7 @@ const Pricing = (props) => {
             variant="primary"
           />
           <Divider height="30px" />
-          <Row align="center">
+          <Row justifyContent="center">
             <Button outline position="relative" width="300px" onClick={() => openGuidebook(location.documents.payment_guidebook.url)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
           </Row>
         </Wrapper>

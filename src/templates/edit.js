@@ -5,21 +5,21 @@ import {Row, Column} from "../components/Sections"
 import {Colors} from "../components/Styling"
 import {H2} from "../components/Heading"
 import jsyaml from "js-yaml";
-import { highlight, languages } from 'prismjs/components/prism-core';
+import {highlight, languages} from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-yaml';
 
 const load = (content) => {
-    try{
+    try {
         const yaml = jsyaml.load(content);
         console.log("yaml", yaml)
-        if(typeof yaml == 'undefined' || !yaml) throw new Error(`The file content was impossible to parse`);
+        if (typeof yaml == 'undefined' || !yaml) throw new Error(`The file content was impossible to parse`);
         return true;
     }
-    catch(error){
+    catch (error) {
         return error.message || error;
     }
-    
+
 }
 
 const Button = styled.div`
@@ -33,25 +33,25 @@ const EditPage = (props) => {
     const {pageContext} = props;
     console.log(pageContext)
     const [content, setContent] = React.useState('Hello World')
-    const [status, setStatus] = React.useState({ state: 'idle', message: ''})
+    const [status, setStatus] = React.useState({state: 'idle', message: ''})
     return (<>
-        <Row background={Colors.lightGray} padding="10px" align="center">
+        <Row background={Colors.lightGray} padding="10px" justifyContent="center">
             <H2 fontSize="25px" fs_md="20px">Type your YML content and validate it</H2>
         </Row>
-        { status.state !== "idle" ? 
-            <Row 
-                align="center"
-                background={status.state === "error" ? Colors.lightRed : Colors.lightGreen} 
-                onClick={() => setStatus({ state: 'idle', message: ''})}
+        { status.state !== "idle" ?
+            <Row
+                justifyContent="center"
+                background={status.state === "error" ? Colors.lightRed : Colors.lightGreen}
+                onClick={() => setStatus({state: 'idle', message: ''})}
             >
                 {status.message}
             </Row>
             :
-            <Row align="center">
+            <Row justifyContent="center">
                 <Button type="button" width="100px" onClick={() => {
                     const success = load(content);
-                    if(success !== true) setStatus({ state: 'error', message: success})
-                    else setStatus({ state: 'success', message: "Everything is amazing 🤣!"})
+                    if (success !== true) setStatus({state: 'error', message: success})
+                    else setStatus({state: 'success', message: "Everything is amazing 🤣!"})
                 }}>Validate</Button>
             </Row>
         }
@@ -59,7 +59,7 @@ const EditPage = (props) => {
             <Editor
                 value={content}
                 onValueChange={_content => {
-                    setContent(_content); setStatus({ state: 'idle', message: ''});
+                    setContent(_content); setStatus({state: 'idle', message: ''});
                 }}
                 highlight={_content => highlight(_content, languages.yaml)}
                 padding={10}

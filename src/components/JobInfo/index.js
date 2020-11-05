@@ -52,7 +52,7 @@ const JobInfo = () => {
                         color={Colors.black}>{item.node.banner_heading}</H4>
                     </Column>
                   </Row>
-                  <Row align={`center`} margin={`10px 0 0 0`}>
+                  <Row justifyContent={`center`} margin={`10px 0 0 0`}>
                     {
                       item.node.cities.map((city, index) => {
                         return (

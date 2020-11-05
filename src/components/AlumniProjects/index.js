@@ -12,7 +12,7 @@ import Icon from "../Icon"
 
 const ReactPlayer = loadable(() => import('../ReactPlayer'))
 
-const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
+const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
 
     return (
@@ -120,12 +120,12 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                 </Paragraph>
                                 <Div>
                                     {item.project_video && <Anchor to={`${item.project_video}`} target="_blank" rel="noopener noreferrer nofollow">
-                                            <Paragraph margin={`10px 5px 0 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Video Demo •</Paragraph>
-                                        </Anchor>
+                                        <Paragraph margin={`10px 5px 0 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Video Demo •</Paragraph>
+                                    </Anchor>
                                     }
                                     {item.live_link && <Anchor to={`${item.live_link}`} target="_blank" rel="noopener noreferrer nofollow">
-                                            <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link </Paragraph>
-                                        </Anchor>
+                                        <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link </Paragraph>
+                                    </Anchor>
                                     }
                                 </Div>
                             </Column>
@@ -169,7 +169,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                     </Link>
                 </Div>
             </Carousel>
-            {limit > 0 && <Row height="10%" align="center">
+            {limit > 0 && <Row height="10%" justifyContent="center">
                 <Column size="6" align="center">
                     <Link to={lang[0].node.button_section.button_link}>
                         <Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>
