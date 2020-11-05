@@ -32,12 +32,13 @@ const ListCard = ({image, onClick, title, date, address, link}) => <Column size=
         />
       </LazyLoad>
       <Row
+        display="flex"
         marginLeft="0"
         marginRight="0"
         padding={`15px`}>
         <Column size="12"
           onClick={() => onClick(index)}>
-          <Row marginBottom="1rem" >
+          <Row marginBottom="1rem" display="flex">
             <H4
               fs_xs="18px"
               fs_sm="18px"
@@ -47,7 +48,7 @@ const ListCard = ({image, onClick, title, date, address, link}) => <Column size=
             >{title}
             </H4>
           </Row>
-          <Row marginBottom=".2rem" alignItems={`center`} >
+          <Row marginBottom=".2rem" alignItems={`center`} display="flex">
             <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
             <Paragraph
               margin={`0 0 0 10px`}
@@ -59,7 +60,7 @@ const ListCard = ({image, onClick, title, date, address, link}) => <Column size=
               {dayjs(date).add(5, "hour").format("ddd, DD MMM YYYY")}
             </Paragraph>
           </Row>
-          <Row marginBottom=".2rem" alignItems={`center`} >
+          <Row marginBottom=".2rem" alignItems={`center`} display="flex">
             <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
             <Paragraph
               margin={`0 0 0 10px`}
@@ -71,7 +72,7 @@ const ListCard = ({image, onClick, title, date, address, link}) => <Column size=
               {address}
             </Paragraph>
           </Row>
-          <Row height="5%" justifyContent="end">
+          <Row height="5%" justifyContent="end" display="flex">
             <a href={`#`} target="_blank" rel="noopener noreferrer">
               <Icon icon="arrowright"
                 width="32"
@@ -152,7 +153,7 @@ const Calendar = (props) => {
       </WrapperImage>
       <Wrapper border="top" color={Colors.white}>
         <Divider height="50px" />
-        <Row marginBottom={`10px`} justifyContent={`end`}>
+        <Row marginBottom={`10px`} justifyContent={`end`} display="flex">
           <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer">
             <Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">
               Join Our Meetup
@@ -169,6 +170,7 @@ const Calendar = (props) => {
           customRespSize
           alignResp={`space-between`}
           flexDirection_sm={`column`}
+          display="flex"
         >
           <Select
             top="40px"
@@ -207,7 +209,7 @@ const Calendar = (props) => {
         </Row>
       </Wrapper>
       <Wrapper border="top">
-        <Row>
+        <Row display="flex">
           {
             filterType.value === "cohorts" ?
               data.cohorts.filtered.length == 0 ?
