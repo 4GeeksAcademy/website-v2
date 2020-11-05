@@ -72,9 +72,10 @@ export const Div = styled.div`
     background: ${props => props.background};
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
     flex-direction: ${props => props.flexDirection || 'row'};
-    
     box-shadow: ${props => props.shadow};
+    
     flex-wrap: nowrap; 
+    
     align-content: ${props => props.alignContent};
     align: ${props => props.align};
     cursor: ${props => props.cursor};
@@ -109,9 +110,7 @@ export const Row = styled(Div)`
     margin-left: ${props => props.marginLeft};
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
-    box-shadow: ${props => props.shadow
-        && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
-    };
+    
     &:hover { 
         background: ${props => props.backgroundHover};
         margin: ${props => props.marginHover};
