@@ -94,6 +94,13 @@ alumni_projects:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: first_syllabus_form
+    position: 4
+    layout: syllabus 
+    button: 
+      text: "Descarga Instántanea"
+    heading: 
+      text: "Descarga la Malla Educativa"
   - name: top_coding_bootcamp
     position: 4
     layout: two_column_left 

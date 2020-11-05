@@ -1,15 +1,15 @@
 meta_info:
-  slug: clases-de-programacion-santiago # <--- URL 4geeksacademy.com/us/landing/example
+  slug: aprende-a-programar-santiago # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Clases de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
-  description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, toma clases de programación con 4Geeks Academy."
+  title: "Aprende a programar en 9 o 16 sem y consigue trabajo como programador."
+  description: "La programación es un conocimiento escencial para tu éxito, aprende a programar con 4Geeks Academy."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Boortamp, 4Geeks Academy"
+  keywords: "Aprende a programar, aprende programación, Aprende a codificar, Aprende python y javascript, Curso de Informática, Coding Boortamp, 4Geeks Academy"
   
   template: "landing_a" # <--- choose your landing template
   redirects: [ # <--- URL redirections to avoid 404 errors
-    "/landing/clases-de-programacion-santiago",
+    "/landing/aprende-a-programar-santiago",
   ] 
   
   # Set a particular course or location to the landing page
@@ -28,8 +28,8 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Clases de programación
-  sub_heading: "Aprende a programar y consige trabajo como desarrollador"
+  tagline: Aprende a programar
+  sub_heading: "Desde cero hasta conseguir trabajo como desarrollador"
   image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.3)
 
@@ -73,7 +73,7 @@ badges:
 program_details:
   position: 3
   heading: "Domina Python, JS y React"
-  sub_heading: "Clases de programación sobre las tecnologías más usadas del mundo"
+  sub_heading: "Aprende a programar con las tecnologías más usadas del mundo"
 
 why_python:
   position: 4
@@ -82,8 +82,8 @@ why_python:
 
 geeks_vs_others:
   position: 6
-  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
-  paragraph: ""
+  heading: "¿Porqué somos tan exitosos?"
+  paragraph: "Exactamente lo que necesitas para aprender a programar rápido y exitosamente"
   total_rows: 5
 
 why_4geeks:
@@ -99,7 +99,7 @@ who_is_hiring:
 
 alumni_projects:
   position: 9
-  heading: "Así podría ser tu proyecto final"
+  heading: "Así podría ser tu proyecto final del curso"
   sub_heading: "Proyectos hechos por graduados de la academia"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
