@@ -103,9 +103,6 @@ export const Row = styled(Div)`
     z-index: ${props => props.zIndex};
     
     flex-wrap: wrap; 
-    right: ${props => props.right};
-    left: ${props => props.left};
-    top: ${props => props.top};
     margin-right: ${props => props.marginRight};
     margin-left: ${props => props.marginLeft};
     margin-top: ${props => props.marginTop};
