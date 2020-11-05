@@ -52,7 +52,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
     return <>
         {heading && <H2 align="left"
             fontSize={h_xl || "20px"} fs_xl={h_xl} fs_md={h_md} fs_sm={h_sm} fs_xs={h_xs}
-            margin="30px 0 20px 0" >{heading.text}</H2>
+            margin="30px 0 20px 0" type="h1">{heading.text}</H2>
         }
         {content && <H5 align="left"
             padding={heading ? "0" : "20px"}
@@ -98,7 +98,12 @@ export const landingSections = {
             maxWidth="350px"
         >{yml.heading}
         </H4>
-        <News location={location ? location : session && session.location && session.location.breathecode_location_slug} lang={pageContext.lang} />
+        <News
+            limit={yml.limit || 3}
+            location={location ? location : session && session.location && session.location.breathecode_location_slug}
+            lang={pageContext.lang}
+            filter={!Array.isArray(yml.filter) ? null : (n) => yml.filter.includes(n.name)}
+        />
     </Wrapper>,
     badges: ({session, data, pageContext, yml, course}) =>
         <Wrapper p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></Wrapper>,
@@ -109,7 +114,7 @@ export const landingSections = {
         background={Colors.lightGray}
     >
         <Wrapper>
-            <H5 fontSize="20px">{yml.heading}</H5>
+            <H5 fontSize="20px">{yml.heading.text}</H5>
             <LeadForm
                 style={{padding: "10px 0px", maxWidth: "100%"}}
                 inputBgColor={Colors.white}
@@ -127,6 +132,7 @@ export const landingSections = {
     geeks_vs_others: ({session, pageContext, yml, course}) =>
         <Wrapper margin="100px" m_sm="50px 0" p_sm="0" p_xs="0">
             <Title
+                type="h2"
                 title={yml.heading}
                 paragraph={yml.sub_heading}
                 paragraphColor={Colors.blue}
@@ -144,7 +150,7 @@ export const landingSections = {
             paragraphColor={Colors.gray}
             variant="primary"
         />
-        <ProgramDetails details={course && course.details} />
+        <ProgramDetails details={course && course.details} lang={pageContext.lang} />
         <ProgramDetailsMobile details={course && course.details} />
     </Wrapper>,
     why_python: ({session, pageContext, yml, course}) => <Wrapper margin="50px 0" p_sm="0">
@@ -182,7 +188,7 @@ export const landingSections = {
         />
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
     </Wrapper>,
-    who_is_hiring: ({session, data, pageContext, yml, course}) => {
+    who_is_hiring: ({session, data, pageContext, yml, course, location}) => {
         const hiring = data.allPartnerYaml.edges[0].node;
         return <Wrapper margin="100px" m_sm="0" p_xs="0">
             <Title
@@ -195,7 +201,7 @@ export const landingSections = {
                 variant="primary"
             />
             <WhoIsHiring
-                images={hiring.partners.images}
+                images={hiring.partners.images.filter(p => !p.locations || p.locations === "all" || p.locations.includes(location))}
             />
         </Wrapper>
     },

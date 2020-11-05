@@ -122,7 +122,7 @@ const Program = ({data, pageContext, yml}) => {
           paragraph={yml.details.sub_heading}
           variant="primary"
       />
-      <ProgramDetails details={yml.details} />
+      <ProgramDetails details={yml.details} lang={pageContext.lang} />
       <ProgramDetailsMobile details={yml.details} />
     </Wrapper>
 

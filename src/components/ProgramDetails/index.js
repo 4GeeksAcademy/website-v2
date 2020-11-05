@@ -23,9 +23,19 @@ const FillerStyles = styled.div`
     transform: translateY(-50%);
 `
 
-
+const strings = {
+    us: {
+        "Projects": "Projects",
+        "Duration": "Duration"
+    },
+    es: {
+        "Projects": "Proyectos",
+        "Duration": "Duración"
+    }
+}
 const ProgramDetails = (props) => {
     const [selected, setSelected] = useState({index: 0, manual: false});
+    const lang = props.lang || "en";
     if(!props.details){
         console.log("Warning! Ignoring Program Details because it came null form the graphql query")
         return null;
@@ -167,7 +177,7 @@ const ProgramDetails = (props) => {
                                         <Div alignItems={`center`} margin={`5px 0`}>
                                             {/* <Div> */}
                                             <H4 align="left" align_sm="left">
-                                                {`Projects`}
+                                                {strings[lang]["Projects"]}
                                             </H4>
                                             {/* </Div> */}
                                         </Div>

@@ -60,6 +60,7 @@ features:
 in_the_news:
   position: 1
   heading: "4Geeks en los medios"
+  filter: ["CNN Español","La Tercera","Las Ultimas Noticias","Emol"] # remove this filter property if you don't want to filter the news logos
 
 why_4geeks:
   position: 2
