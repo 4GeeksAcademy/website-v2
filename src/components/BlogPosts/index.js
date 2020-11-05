@@ -6,7 +6,7 @@ import {Colors, Button, RoundImage} from '../Styling';
 import Card from '../Card';
 import Icon from "../Icon"
 
-const BlogPosts = ({ filter, limit, featured }) => {
+const BlogPosts = ({filter, limit, featured}) => {
     const data = useStaticQuery(graphql`
         query myPostsQuery{
             allMarkdownRemark {
@@ -37,23 +37,23 @@ const BlogPosts = ({ filter, limit, featured }) => {
     const [posts, setPosts] = useState(data.allMarkdownRemark.edges)
     useEffect(() => {
         let _posts = data.allMarkdownRemark.edges;
-        if(featured) _posts = _posts.filter(p => p.node.frontmatter.featured)
-        
-        if(filter){
+        if (featured) _posts = _posts.filter(p => p.node.frontmatter.featured)
+
+        if (filter) {
             _posts = _posts.filter(p => filter.includes(p.node.frontmatter.slug));
             setPosts(_posts)
-        } 
-        else{
+        }
+        else {
             let newArray = [];
             for (let i = 0; i < limit; i++) {
                 newArray.push(_posts[Math.floor(Math.random() * _posts.length)]);
             }
             setPosts(newArray)
-        } 
+        }
     }, []);
 
     return (
-        <Row github="/blog">
+        <Row github="/blog" display="flex">
             {posts.map((i, index) => (
                 <Column size="4" size_sm="12" key={index} margin="10px 0">
                     <Card
