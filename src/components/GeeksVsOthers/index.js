@@ -104,13 +104,13 @@ const GeeksVsOthers = props => {
           <Card shadow borders="1.25rem" overflow="hidden">
             <Row height="80px" marginLeft="0" marginRight="0">
               <Column size="6" alignSelf="center" height="100%" image="no" color={Colors.black} borderRadius="1.25rem 0 0 0" >
-                <Row height="100%" borderBottom={"1px solid " + Colors.darkGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.featured}</H5></Column></Row>
+                <Row height="100%" style={{borderBottom: `1px solid ${Colors.darkGray}`}}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.featured}</H5></Column></Row>
               </Column>
               <Column size="3" alignSelf="center" height="100%" image="no" color={Colors.lightGray}>
-                <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.at_geeks}</H5></Column></Row>
+                <Row height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.at_geeks}</H5></Column></Row>
               </Column>
               <Column size="3" alignSelf="center" height="100%" image="no" color={Colors.white} border="custom" borderRadius="0 1.25rem 0  0">
-                <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.average}</H5></Column></Row>
+                <Row height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.average}</H5></Column></Row>
               </Column>
             </Row>
             {geeks.info.slice(0, props.limit || geeks.info.length).map((item, index) => {
@@ -132,7 +132,7 @@ const GeeksVsOthers = props => {
                       onClick={() => {setGlobeTooltip(false); setOpenedIndex(openedIndex === index ? null : index);}}
                     >
                       <Column size="6" alignSelf="center" height="100%" image="no" color={Colors.black}>
-                        <Row justifyContent="around" height="100%" borderBottom={"1px solid " + Colors.darkGray}>
+                        <Row justifyContent="around" height="100%" style={{borderBottom: `1px solid ${Colors.darkGray}`}}>
                           <Div flexDirection={`column`} justifyContent={`center`} >
                             <Div alignItems={`center`} padding="10px">
                               {item.icon && <Icon icon={item.icon} width="32" style={{marginRight: "5px"}} color={Colors.yellow} fill={Colors.yellow} />}
@@ -187,7 +187,7 @@ const GeeksVsOthers = props => {
                         </Row>
                       </Column>
                       <Column size="3" width="100%" height="100%" alignSelf="center" image="no" color={Colors.lightGray}>
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
+                        <Row height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" >
                           <H4
                             align="center"
                             fs_xs="12px"
@@ -198,7 +198,7 @@ const GeeksVsOthers = props => {
                             color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
                       </Column>
                       <Column size="3" width="100%" height="100%" alignSelf="center">
-                        <Row height="100%" borderBottom={"1px solid " + Colors.borderGray}><Column size size="12" alignSelf="center" >
+                        <Row height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" >
                           <H4 align="center"
                             fs_xs="12px"
                             fs_sm="16px"

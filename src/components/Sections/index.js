@@ -99,9 +99,7 @@ export const Div = styled.div`
 export const Row = styled(Div)`
     border: ${props => props.border};
     border-top: ${props => props.borderTop};
-    border-bottom: ${props => props.borderBottom};
     z-index: ${props => props.zIndex};
-    
     flex-wrap: wrap; 
     margin-right: ${props => props.marginRight};
     margin-left: ${props => props.marginLeft};
