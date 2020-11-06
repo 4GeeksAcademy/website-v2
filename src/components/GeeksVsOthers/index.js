@@ -197,11 +197,11 @@ const GeeksVsOthers = props => {
                         <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}} alignItems="center">
                           <H4
                             align="center"
-                            fs_xs="12px"
+                            fontSize="20px"
+                            fs_xs="16px"
                             fs_sm="16px"
                             fs_md="16px"
                             fs_lg="18px"
-                            fontSize="24px"
                             color={Colors.gray}>{item.at4_Geeks}
                           </H4>
                         </Row>
@@ -209,11 +209,11 @@ const GeeksVsOthers = props => {
                       <Column size="3" width="100%" height="100%" alignSelf="center">
                         <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}} alignItems="center">
                           <H4 align="center"
-                            fs_xs="12px"
+                            fontSize="20px"
+                            fs_xs="16px"
                             fs_sm="16px"
                             fs_md="16px"
                             fs_lg="18px"
-                            fontSize="24px"
                             color={Colors.gray}>{item.industry_average}
                           </H4>
                         </Row>
