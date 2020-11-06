@@ -104,13 +104,19 @@ const GeeksVsOthers = props => {
           <Card shadow borders="1.25rem" overflow="hidden">
             <Row height="80px" marginLeft="0" marginRight="0" display={`flex`}>
               <Column size="6" alignSelf="center" height="100%" image="no" background={Colors.black} borderRadius="1.25rem 0 0 0" >
-                <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.darkGray}`}}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.featured}</H5></Column></Row>
+                <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.darkGray}`}} alignItems="center">
+                  <H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.featured}</H5>
+                </Row>
               </Column>
               <Column size="3" alignSelf="center" height="100%" image="no" background={Colors.lightGray}>
-                <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.at_geeks}</H5></Column></Row>
+                <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}} alignItems="center">
+                  <H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.at_geeks}</H5>
+                </Row>
               </Column>
               <Column size="3" alignSelf="center" height="100%" image="no" background={Colors.white} border="custom" borderRadius="0 1.25rem 0  0">
-                <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" ><H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.average}</H5></Column></Row>
+                <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}} alignItems="center">
+                  <H5 fontSize="12px" align="center" color={Colors.gray}>{geeks.titles.average}</H5>
+                </Row>
               </Column>
             </Row>
             {geeks.info.slice(0, props.limit || geeks.info.length).map((item, index) => {
@@ -188,7 +194,7 @@ const GeeksVsOthers = props => {
                         </Row>
                       </Column>
                       <Column size="3" width="100%" height="100%" alignSelf="center" image="no" background={Colors.lightGray}>
-                        <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" >
+                        <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}} alignItems="center">
                           <H4
                             align="center"
                             fs_xs="12px"
@@ -196,17 +202,21 @@ const GeeksVsOthers = props => {
                             fs_md="16px"
                             fs_lg="18px"
                             fontSize="24px"
-                            color={Colors.gray}>{item.at4_Geeks}</H4></Column></Row>
+                            color={Colors.gray}>{item.at4_Geeks}
+                          </H4>
+                        </Row>
                       </Column>
                       <Column size="3" width="100%" height="100%" alignSelf="center">
-                        <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}}><Column size size="12" alignSelf="center" >
+                        <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}} alignItems="center">
                           <H4 align="center"
                             fs_xs="12px"
                             fs_sm="16px"
                             fs_md="16px"
                             fs_lg="18px"
                             fontSize="24px"
-                            color={Colors.gray}>{item.industry_average}</H4></Column></Row>
+                            color={Colors.gray}>{item.industry_average}
+                          </H4>
+                        </Row>
                       </Column>
                     </Row>
                   }
