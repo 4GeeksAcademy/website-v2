@@ -198,9 +198,8 @@ const GeeksVsOthers = props => {
                           <H4
                             align="center"
                             fontSize="20px"
-                            fs_xs="16px"
-                            fs_sm="16px"
-                            fs_md="16px"
+                            fs_sm="14px"
+                            fs_md="18px"
                             fs_lg="18px"
                             color={Colors.gray}>{item.at4_Geeks}
                           </H4>
@@ -210,9 +209,8 @@ const GeeksVsOthers = props => {
                         <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.borderGray}`}} alignItems="center">
                           <H4 align="center"
                             fontSize="20px"
-                            fs_xs="16px"
-                            fs_sm="16px"
-                            fs_md="16px"
+                            fs_sm="14px"
+                            fs_md="18px"
                             fs_lg="18px"
                             color={Colors.gray}>{item.industry_average}
                           </H4>
