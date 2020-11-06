@@ -88,8 +88,8 @@ const ProgramDetails = (props) => {
                                             cursor={`pointer`}
                                             fs_xs="8px"
                                             fs_sm="12px"
-                                            fs_md="12px"
-                                            fs_lg="14px"
+                                            fs_md="10px"
+                                            fs_lg="12px"
                                             fs_xl="16px"
                                         >
                                             {item.module_name}
@@ -98,7 +98,6 @@ const ProgramDetails = (props) => {
                                     <Div alignItems={`center`} display="flex">
                                         <Paragraph
                                             color={Colors.darkGray}
-
                                             fs_xs="8px"
                                             fs_sm="10px"
                                             fs_md="10px"
