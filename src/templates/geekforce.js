@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import loadable from '@loadable/component'
 import Icon from '../components/Icon'
 import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections";
 import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'
 import BaseRender from './_baseLayout'
+import TestimonialsCarrousel from '../components/Testimonials';
 
-const TestimonialsCarrousel = loadable(() => import('../components/Testimonials'))
 
 function splitTitleString (string) {
   let stringObj = {

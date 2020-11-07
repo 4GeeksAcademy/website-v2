@@ -3,10 +3,8 @@ import {Column, Row, Divider, Wrapper, WrapperImage} from "../components/Section
 import {H3, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, RoundImage, Check} from '../components/Styling'
 import Icon from '../components/Icon'
-import loadable from '@loadable/component'
 import BaseRender from './_baseLayout'
-
-const TestimonialsCarrousel = loadable(() => import('../components/Testimonials'))
+import TestimonialsCarrousel from '../components/Testimonials';
 
 function splitTitleString (string) {
   let stringObj = {
