@@ -16,9 +16,9 @@ header:
 button:
   syllabus_button_text: "DESCARGA MALLA" # <-- this will show everywhere in the website
   apply_button_text: "POSTÚLATE" # <-- this will show everywhere in the website
-  
+
   syllabus_submit_text: "DESCARGAR"
-  cohort_more_details_text: "INFO"
+  cohort_more_details_text: "DETALLES"
   apply_button_link: "/aplica"
 
 info_box:
@@ -62,7 +62,6 @@ prices:
       content:
         price: "16% de tu sueldo"
         price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
-
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:

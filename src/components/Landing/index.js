@@ -7,7 +7,6 @@ import Badges from '../Badges';
 import News from '../News'
 import {navigate} from "gatsby"
 import {requestSyllabus} from "../../actions"
-
 import ReactPlayer from '../ReactPlayer';
 import TestimonialsCarrousel from '../Testimonials';
 import Why4Geeks from '../Why4Geeks';

@@ -1,6 +1,5 @@
 import React from 'react';
 import {graphql, Link, navigate} from 'gatsby';
-import loadable from '@loadable/component'
 import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Row, Column, Wrapper} from '../components/Sections'
 import {RoundImage, Colors} from '../components/Styling'
@@ -11,16 +10,16 @@ import Credentials from '../components/Credentials'
 import ChooseProgram from '../components/ChooseProgram'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
+import Loc from '../components/Loc';
+import WhyPython from '../components/WhyPython';
+import Badges from '../components/Badges';
+import WhoIsHiring from '../components/WhoIsHiring';
+import AlumniProjects from '../components/AlumniProjects';
+import Why4Geeks from '../components/Why4Geeks';
+import TestimonialsCarrousel from '../components/Testimonials';
+import Card from '../components/Card';
+import GeeksVsOthers from '../components/GeeksVsOthers';
 
-const Card = loadable(() => import('../components/Card'))
-const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
-const TestimonialsCarrousel = loadable(() => import('../components/Testimonials'))
-const Why4Geeks = loadable(() => import('../components/Why4Geeks'))
-const AlumniProjects = loadable(() => import('../components/AlumniProjects'))
-const WhoIsHiring = loadable(() => import('../components/WhoIsHiring'))
-const Badges = loadable(() => import('../components/Badges'))
-const WhyPython = loadable(() => import('../components/WhyPython'))
-const Loc = loadable(() => import('../components/Loc'))
 
 const CityH1 = ({yml}) => {
   const {session} = React.useContext(SessionContext);

@@ -1,4 +1,3 @@
-
 ## GEEKS VS OTHERS COMPONENT
 ## THIS COMPONENT IS USED IN "/home" AND "/course/..."
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
@@ -9,7 +8,6 @@ titles:
   average: "INDUSTRY AVERAGE"
 globe_text: Click me!
 info:
-
   - features: "Career Support"
     at4_Geeks: "Forever"
     industry_average: "Until you get a job"
@@ -39,7 +37,7 @@ info:
     industry_average: "general"
     why_important: "Our interview preparation is tailored for each opportunity that you face, our mentors will recommend specific tutorials and other priorities, and our coaching does not end until you find a job."
     icon: "comments"
-    
+
   - features: "Focus"
     at4_Geeks: "We only teach code"
     industry_average: "Other schools teach many things"
@@ -83,7 +81,7 @@ info:
     icon: ""
 
   - features: "Languages"
-    at4_Geeks: "Python + React + Node y Javascript"
+    at4_Geeks: "Python + React + Javascript"
     industry_average: "Ruby/Node + React + JS"
     why_important: "Python is the fastest growing language in the world, it is the primary language in virtually every industry. Together with React.js and Javascript, we teach the most desired stack of techonolgies companies want today."
     icon: ""

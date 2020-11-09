@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
-import loadable from '@loadable/component'
 import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
@@ -9,14 +8,14 @@ import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
 import Icon from '../components/Icon'
+import GeeksVsOthers from '../components/GeeksVsOthers';
+import ProgramDetails from '../components/ProgramDetails';
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
+import WhoIsHiring from '../components/WhoIsHiring';
+import PricesAndPayment from '../components/PricesAndPayment';
+import LeadForm from '../components/LeadForm';
+import Modal from '../components/Modal';
 
-const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
-const ProgramDetails = loadable(() => import('../components/ProgramDetails'))
-const ProgramDetailsMobile = loadable(() => import('../components/ProgramDetailsMobile'))
-const WhoIsHiring = loadable(() => import('../components/WhoIsHiring'))
-const PricesAndPayment = loadable(() => import('../components/PricesAndPayment'))
-const LeadForm = loadable(() => import('../components/LeadForm'))
-const Modal = loadable(() => import('../components/Modal'))
 
 const Program = ({data, pageContext, yml}) => {
 

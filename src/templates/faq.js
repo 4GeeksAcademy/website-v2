@@ -14,6 +14,7 @@ const Faq = (props) => {
     const [buttonToggle, setButtonToggle] = useState(false);
     const [toggleIndex, setToggleIndex] = useState();
     const {session, setSession} = useContext(SessionContext);
+
     return (
         <>
             <WrapperImage
@@ -39,6 +40,8 @@ const Faq = (props) => {
                 github={`/page/faq.${pageContext.lang}.yml`}
             >
                 {yml.faq.map((item, index) => {
+                    var link = item.question == "Why Python?" && item.answer.replace("here", "<a href='#'>Your html code here.</a>");
+                    console.log('link:', link)
                     return (
                         <Row key={index} display="flex">
                             <Column

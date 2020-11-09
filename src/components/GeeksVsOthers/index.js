@@ -101,7 +101,7 @@ const GeeksVsOthers = props => {
           image="no"
           background={Colors.white}
         >
-          <Card shadow borders="1.25rem" overflow="hidden">
+          <Card shadow borders="1.25rem" overflow="hidden" >
             <Row height="80px" marginLeft="0" marginRight="0" display={`flex`}>
               <Column size="6" alignSelf="center" height="100%" image="no" background={Colors.black} borderRadius="1.25rem 0 0 0" >
                 <Row display={`flex`} height="100%" style={{borderBottom: `1px solid ${Colors.darkGray}`}} alignItems="center">
@@ -182,9 +182,9 @@ const GeeksVsOthers = props => {
                                     </Paragraph>
                                   </Globe>}
                                 <span
-                                  onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false)}}
+                                  onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false), setOpenedIndex(null)}}
                                   onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0), setGlobeTooltip(false)}}
-                                  onClick={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(0), setGlobeTooltip(false)}}
+                                  onClick={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(0), setGlobeTooltip(false), setOpenedIndex(null)}}
                                 >
                                   <Icon icon="question" className="pointer" width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
                                 </span>

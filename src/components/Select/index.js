@@ -64,6 +64,8 @@ const Select = (props) => {
                     top={props.top}
                     left={props.left}
                     zIndex="2"
+                    marginRight="0"
+                    marginLeft="0"
                     background={Colors.white}
                     borderRadius={props.borderRadius}
                     shadow={props.shadow}
@@ -87,7 +89,7 @@ const Select = (props) => {
                     })}
                 </Row>
             }
-        </ChooseWrap>
+        </ChooseWrap >
     )
 };
 Select.propTypes = {

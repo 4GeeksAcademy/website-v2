@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from "gatsby";
-import loadable from '@loadable/component'
 import BaseRender from './_baseLayout'
 import {Card, GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
@@ -9,16 +8,16 @@ import {Button, Colors} from '../components/Styling'
 import {requestSyllabus} from "../actions";
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import {SessionContext} from '../session'
+import GeeksVsOthers from '../components/GeeksVsOthers';
+import ProgramDetails from '../components/ProgramDetails';
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
+import PricesAndPayment from '../components/PricesAndPayment';
+import LeadForm from '../components/LeadForm';
+import Modal from '../components/Modal';
+import TypicalDay from '../components/TypicalDay';
+import AlumniProjects from '../components/AlumniProjects';
+import ProgramSelector from '../components/ProgramSelector';
 
-const TypicalDay = loadable(() => import('../components/TypicalDay'))
-const AlumniProjects = loadable(() => import('../components/AlumniProjects'))
-const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
-const ProgramDetails = loadable(() => import('../components/ProgramDetails'))
-const ProgramDetailsMobile = loadable(() => import('../components/ProgramDetailsMobile'))
-const ProgramSelector = loadable(() => import('../components/ProgramSelector'))
-const PricesAndPayment = loadable(() => import('../components/PricesAndPayment'))
-const LeadForm = loadable(() => import('../components/LeadForm'))
-const Modal = loadable(() => import('../components/Modal'))
 
 const Program = ({data, pageContext, yml}) => {
   const {session} = React.useContext(SessionContext);

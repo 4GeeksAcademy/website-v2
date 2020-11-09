@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import loadable from '@loadable/component'
 import {Row, Column, Div} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
@@ -9,8 +8,8 @@ import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import Icon from "../Icon"
+import ReactPlayer from '../ReactPlayer';
 
-const ReactPlayer = loadable(() => import('../ReactPlayer'))
 
 const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))

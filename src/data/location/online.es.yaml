@@ -5,7 +5,7 @@ meta_info:
   position: 0
   image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
   keywords: "null"
-  redirects: ["/location/remoto","/remoto"]
+  redirects: ["/location/remoto", "/remoto"]
 
 seo_title: "Coding Bootcamp Remoto"
 header:
@@ -17,10 +17,10 @@ header:
 button:
   syllabus_button_text: "DESCARGAR CURRÍCULO" # <-- this will show everywhere in the website
   apply_button_text: "APLICA YA" # <-- this will show everywhere in the website
-  
+
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
-  cohort_more_details_text: "INFO"
+  cohort_more_details_text: "DETALLES"
 
 news:
   title: "4Geeks Academy Online en las noticias..."

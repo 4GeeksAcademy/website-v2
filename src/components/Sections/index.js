@@ -73,9 +73,7 @@ export const Div = styled.div`
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
     flex-direction: ${props => props.flexDirection || 'row'};
     box-shadow: ${props => props.shadow};
-    
     flex-wrap: nowrap; 
-    
     align-content: ${props => props.alignContent};
     align: ${props => props.align};
     cursor: ${props => props.cursor};
