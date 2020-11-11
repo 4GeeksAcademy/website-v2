@@ -78,7 +78,7 @@ const ProgramSelector = (props) => {
           </Card>
         }
       </Column>
-      <Column size="2" size_sm="12" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >{strings[props.lang]["weeks in"]}</Paragraph></Column>
+      <Column size="2" size_sm="12" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" background={Colors.white} >{strings[props.lang]["weeks in"]}</Paragraph></Column>
       <Column size="2" size_sm="12" alignSelf="center" align="center" paddingLeft="0" paddingRight="0">
         {toggle == false &&
           <Button

@@ -199,7 +199,7 @@ export const Wrapper = (props) => {
             url={props.image}
             border={props.border}
             customBorderRadius={props.customBorderRadius}
-            color={props.background}
+            background={props.background}
             align={props.align}
             height={props.height}
             m_md={props.right ? "0 0 0 auto" : undefined}
@@ -234,7 +234,7 @@ export const WrapperImage = (props) => {
                 url={props.image}
                 border={props.border}
                 customBorderRadius={props.customBorderRadius}
-                color={props.background}
+                background={props.background}
                 align={props.align}
                 height={props.height}
                 paddingRight="0"
@@ -282,7 +282,7 @@ export const WrapperCustom = (props) => {
                 url={props.image}
                 border={props.border}
                 customBorderRadius={props.customBorderRadius}
-                color={props.background}
+                background={props.background}
             >
                 {props.full
                     ?

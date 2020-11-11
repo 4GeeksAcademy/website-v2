@@ -22,7 +22,7 @@ const Loc = (props) => {
           size="12"
           borderRadius="0 0 0 1.25rem"
           image="no"
-          color={Colors.white}
+          background={Colors.white}
         ><Carousel
           showIndicators={false}
           showThumbs={false}
