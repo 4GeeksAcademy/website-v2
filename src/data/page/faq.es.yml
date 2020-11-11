@@ -13,110 +13,98 @@ banner:
   image: "../../../static/images/bg/4Geeks-events-bg.jpg"
 
 faq:
-  - question: "Do I HAVE to bring my own laptop?"
-    answer: "Absolutely, unequivocally, the answer is:  YES.  Bring your laptop EVERY SINGLE TIME.  We do not require a specific OS, and, since all of our coding lessons and practices are cloud-based, you can even use a Chromebook."
-  - question: "Is 4Geeks a licensed/accredited academic institution?"
-    answer: "For sure! We are licensed (not accredited) in Florida by the Commission for Independent Education of the Florida Department of Education. "
-  - question: "What is a typical class day like?"
+  - question: "¿TENGO que traer mi propia laptop / portátil / notebook?"
+    answer: "Absolutamente, inequívocamente, la respuesta es: SI. Trae tu computadora/ordenador portátil CADA VEZ.  No requerimos de un sistema operativo específico y, dado que nuestras lecciones y prácticas están en la nube, incluso puedes usar una Chromebook."
+  - question: "¿4Geeks es una institución académica certificada?"
+    answer: "¡Sin lugar a dudas! Estamos certificados por la Comisión de Educación Independiente del Departamento de Educación de Florida en Estados Unidos."
+  - question: "¿Cuántas horas a la semana necesito tener disponibles?"
     answer: |-
-      Our course offers classes 3 times per week, 3 hours per day.  Normally, you may want to grab a coffee on your way in (Starthub coffee is a must!) and arrive early to chat with both your mentors and your peer programmers.
-      Our “Flipped Classroom” means that you MUST come to class having previously read the required material; having watched the required videos; and having practiced a couple of exercises.  We know that your time is “gold,” so we must take advantage of every available moment that you have while you are in front of us.
-      After the “classic 15 minutes to get settled in,” we begin by reviewing the content for that specific class.  Your mentors will clarify any and all questions/doubts you may have, and they will thoroughly explain how the coding content of the day works – providing relevant examples as to how the day’s coding lesson will be integral to your new coding lifestyle.
-      Next, we start coding.  Generally, there are one or two exercises or mini-projects that we will complete during each class.  “Awareness” becomes “knowledge” after you have practiced and reviewed a specific topic several times.
-      By the end of the class, your mentors will guide you through the next assignments.  You will be informed of what you will need to study, watch, and practice for the subsequent class.  Also, there will always be time to resolve any last-minute issues with your code; your mentors will always try to help you reach your particular goal."
-  - question: "How many hours a week do I need to have available?"
+      Para convertirte en el mejor developer posible debes dedicar tiempo, no hay otra manera, en nuestro programa “part-time” tendrás clases 3 horas 3 días a la semana, y debes dedicar en total unas 20-24 horas de estudio semanal. En el caso del programa a tiempo completo, que son 8 horas de clases al día, con dedicar en total unas 48 horas a la semana es suficiente." 
+  - question: "¿Por qué Javascript?"
     answer: |-
-      "This is a “part-time” program.  The in-house classes will require 9 hours every week.  However, in order to make you the BEST POSSIBLE developer, we need for you to commit an additional 10 hours from your end, resulting in approximately 20 hours each week.  Sorry, there is no other way to get you to where you desire to be.  If you don’t complete the exercises, you will be behind.  Plus, this is the ONLY way we can make sure that you gather the skills needed to become a developer.
-      We have built an online LMS (Learning Machine System) that includes: exercises, videos, tutorials, cheat sheets, individually customized profile, gamified learning and evaluations, text, readings, recommended books, lessons, infographics, and so much more.
-      Do you recall us mentioning that we are instilling a new framework in the world of Coding Education?  Okay, well, we are SERIOUS about doing so.  From day one, you will have to reach deep within yourself and get ready to learn in a new, challenging way.  But, we are here for you – REALLY HERE FOR YOU – with both online and offline access to both our Mentors and Communications platforms.  We are committed to training you as a Developer, and we will do this TOGETHER."
-  - question: "Why Javascript?"
+      "JavaScript "es dueño" de la web; es el único lenguaje que todos los navegadores web entienden,es el lenguaje de programación más utilizado en el mundo; todos los sitios web lo necesitan, y es el más demandado por las empresas en diez veces el siguiente."
+  - question: "¿Por qué Python?"
     answer: |-
-      "This question should be asked the other way around – “Why NOT JavaScript?”  Because there are no other alternatives – JavaScript “owns” the web; it is the only language all web browsers understand, AND, it is STILL growing like crazy.
-      JavaScript is the most used coding language in the world; every website needs it, and it is the most demanded language by companies by ten times the next.  It is just the way it has to be."
-  - question: "Why Python?"
+      "Python es el lenguaje de más rápido crecimiento en los países más ricos. Se usa ampliamente en prácticamente todas las industrias y tiene bibliotecas de alta calidad para todos los campos que crecen para ser 'el futuro': Web, IA, Robótica, Big Data, etc. Según profesores del MIT, es el lenguaje de programación esencial para aprender. Adelante, échale un vistazo <a href="https://www.python.org/">aquí</a>. 
+      Tiene que ser Python. Encontrarás más oportunidades laborales, aprenderás a programar y te ayudará con otros lenguajes y frameworks. ¡Incluso Google aprobó Python y lo ha incorporado en todas partes!"
+  - question: "¿Por qué no Node JS?"
     answer: |-
-      "Python is the fastest growing language in the wealthiest countries.  It is widely used in virtually every industry and has top-quality libraries for all fields growing to be “the future”:  Web, AI, Robotics, Big Data, etc.  According to MIT Professors, it is the essential programming language to learn.  Go ahead and take a look for yourself here.
-      It has to be Python.  You will find more job opportunities; you will learn to code, and it will help you with other back-end languages and frameworks.  Even Google endorsed python and has incorporated it everywhere!"
-  - question: "Why not Node JS?"
+     "Node es asombroso. Desafía la forma en que se crea la web. Sin embargo, solo el 0,3% de la web ha adoptado Node JS y su crecimiento se ha ralentizado aún más en los últimos meses. Python, Java, PHP y otros lenguajes similares todavía gobiernan el mundo (y eso no va a cambiar en el corto plazo). 
+      Funcionan de una manera muy diferente a como lo hace Node; nuestro propósito es prepararte para el "mundo real". Capacitamos a nuestros desarrolladores Full-Stack usando / enseñando sólo las tecnologías más estándar y profesionales. <a href="https://4geeksacademy.co/us/post/dont-teach-nodejs-full-stack-development-program">Aquí</a> puedes encontrar un gran argumento de por qué no estamos enseñando Node JS."
+  - question: "¿Por qué 4Geeks Academy?"
     answer: |-
-      "Node is amazing.  It challenges the way the web is created.  However, only 0.3% of the web has adopted Node JS, and its growth has slowed even further over the last months.  Python, Java, PHP, and other similar languages still rule the world (and that is not going to change anytime soon).  They work in a very different way than Node does; our purpose is to prepare you for the “real world.”  We train our Full-Stack Developers using/teaching only the most standard and professional technologies.
-      Here you can find a great argument as to why we are not teaching Node JS."
-  - question: "Why 4Geeks Academy?"
+      "Bueno, es un poco extraño hablar mucho sobre uno mismo ... pero, está bien, ¡ya que lo preguntaste! 
+      Ofrecemos una metodología única en la que mejoraremos tu capacidades generales; te formaremos y convertiremos en un desarrollador de software. Estamos constantemente brindando nuevos enfoques innovadores para enseñar programación que no muchas otras organizaciones educativas están haciendo. 
+      “Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el aprendizaje sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana."
+  - question: "¿Por qué “Part-time?” ¿Cómo funciona?"
     answer: |-
-      "Well, it IS kind of weird to speak greatly about oneself…but, okay, since you asked!
-      Premium Coding Education + Part-time + From as low as $135 per month.
-      We also offer a unique methodology in which we will enhance your overall capabilities; we will train you and we will make a software developer out of you.  We are constantly providing innovative new approaches to teaching coding that not many other educational organizations are doing.
-      We “Breathe Coding.”  That is our motto, because we understand that, in order to become a developer, one has to become part of the coding culture.
-      One of the greatest things about 4Geeks Academy is the gamification behind our curriculum.  We’ve made learning fun and we have mastered the art of showing how coding skills can fit into everyday life.
-      There are others echoing this…you can watch them here."
-  - question: "Why “Part-time?” How does it work?"
+      "Creemos que el futuro de la educación es el 'tiempo parcial'. Lo que ofrecemos es una educación combinada que aprovecha dos formatos probados: formación a tiempo parcial y aula invertida. La metodología tiene una combinación de los siguientes cuatro pilares: 
+      Aula invertida: la teoría se imparte a través de videos, animación, imágenes e infografías. El tiempo de clase se usa para debatir, crear y construir proyectos, y ser mentorizado para resolver muchos ejercicios prácticos. 
+      Mentorías personalizadas: cada estudiante tiene la oportunidad de tener conversaciones privadas con un mentor principal de manera regular. 
+      Proporción de mentor-estudiante 1: 6 (en promedio): Un entorno cercano y personalizado  brinda a nuestra academia la oportunidad de adaptarse al ritmo particular de cada estudiante. 
+      Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica."
+  - question: "¿Por qué “Part-time?” ¿Cómo funciona?"
     answer: |-
-      "We believe that the future of education is “part-time.”
-      What we provide is a blended education leveraging two proven formats:  Part-time Training and Flipped Classroom.  The methodology combines a mixture of the following four cornerstones:
-      Flipped Classroom: Theory is delivered through video, animation, images, and infographics.  Class time is then used to debate, create and build projects, and mentor over practical exercises.
-      One-on-One Weekly Mentorship: Every student has the opportunity to have private conversations with a Senior Mentor on a regular basis.
-      1:7 Mentor-Student Ratio: An intimate setting provides our faculty with the opportunity to adapt to each student’s particular pace.
-      Talent Tree:  The syllabus maps out 44 skills in which students earn points towards each skill learned in a gamified fashion."
-  - question: "How do I pay for my tuition?"
+      "También ofrecemos formación a tiempo completo, entendemos que si buscas un curso full-time es porque no tienes que renunciar a tu empleo y que lejos de frenarte profesionalmente, ¡impulsará tu carrera!. La metodología, que además de ser super inmersiva, tiene una combinación de los siguientes cuatro pilares: 
+      Aula invertida: la teoría se imparte a través de videos, animación, imágenes e infografías. El tiempo de clase se usa para debatir, crear y construir proyectos, y ser mentorizado para resolver muchos ejercicios prácticos. 
+      Mentorías personalizadas: cada estudiante tiene la oportunidad de tener conversaciones privadas con un mentor principal de manera regular. 
+      Proporción de mentor-estudiante 1: 6 (en promedio): Un entorno cercano y personalizado brinda a nuestra academia la oportunidad de adaptarse al ritmo particular de cada estudiante. 
+      Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica."
+  - question: "¿Cómo pago mi matrícula?"
     answer: |-
-      "You have several options.  Our tuition fee for the Full Stack Development program is $7499.  There are no other fees, hidden charges, or anything else.  Just $7499 for a 16-week coding program in Miami. Or $9499 for a 09 weeks Full-time program.
-      Furthermore, we have also worked (together with amazing partners) on offering you an Extended Payment Plan as an option.  You can now apply for either a 6, 12, or 24-month plan in order to lower the up-front cost and, most importantly, get the education that you need.  There is no other offer like this in Miami.
-      Here you can also find the 4Geeks Academy Guidebook:
-      Financing is available for those who qualify wherever financing is available. 
-      If you are in Chile and you are wondering which options are available for you, please click here; we also have Quotanda as our partner offering several options to make your education possible.
-      If you need more info about how this works, please feel free to send us an email at: info@4geeksacademy.com"
-  - question: "What is the difference between the Full Stack Development program and the Website Program at Miami Dade College?"
+      "Tienes varias opciones. Nuestro precio varía según el país en el que te encuentres, sin embargo, no hay otros costes asociados, cargos ocultos ni nada más. 
+      Además, contamos con increíbles partners para ofrecerte la mejor financiación. Puedes solicitar un plan de 6, 12, 18 o 24 meses (según cada sede) preocúpate solo por obtener la educación que necesitas.
+      El financiamiento está disponible para aquellos que califiquen dondequiera que haya financiamiento disponible.
+      Si te encuentras en Chile o en España, también tenemos a Quotanda como nuestro partner que ofrece varias opciones para hacer posible tu educación.
+      Si necesitas más información no dudes en enviarnos un correo electrónico a: info@4geeksacademy.com "
+  - question: "¿Cuál es la diferencia entre el programa Full Stack Development y otros programas más junior como los Website Developer?"
     answer: |-
-      "We love this question.  Basically, we are in charge of both of them. 😊
-      In the Website program at Miami Dade College, you will learn both how to code and how to build websites.  The syllabus for this program includes: HTML, CSS, PHP, JavaScript, WordPress, API’s, and more.
-      Now, the Full Stack Development program is designed in four seasons:
-      Pre-Work + Learn to Code + Build Websites + Build Web Applications
-      It also has additional features:
-      It is 16 weeks long at includes over 300 hours of learning
-      The stack of technologies here are: JavaScript, React, MongoDB, Python, Django, API’s, AJAX, SASS, HTML, CSS, and more
-      There are plenty of payment opportunities with our Extended Payment Plan
-      We will guide you and help you find a job after the course though our Placement Program
-      You will have access for one year to both our academic and exercises platforms (4Geeks Academy LMS: Breath Code Platform
-      You will be able to create and build websites, but you will attain the skills and tools to tackle more challenging projects such as: Data Analysis, Machine Learning, and Augmented Reality, to name a few (no one else in Miami is teaching new coders these skills)"
-  - question: "Do I get a job after completing the program?"
+      "En el caso de Website Developer, el plan de estudios incluye: HTML, CSS, PHP, JavaScript, WordPress, API y más.
+      Ahora bien, el programa Full Stack Software Development está diseñado en cuatro etapas:
+      Prework + Aprender a programar + Crear sitios web + Crear aplicaciones web
+      Tiene una duración de 16 semanas e incluye más de 300 horas de aprendizaje.
+      El stack de tecnologías aquí son: JavaScript, React, Python, Flask, API, AJAX, SASS, HTML, CSS y más.
+      Te guiaremos y te ayudaremos a encontrar un trabajo después del curso a través de nuestro Programa de Colocación.
+      Tendrás acceso de por vida  a nuestra plataforma de aprendizaje Breatheco.de 
+      Podrás crear y construir sitios web, pero obtendrás las habilidades y herramientas para abordar proyectos más desafiantes como: análisis de datos, aprendizaje automático y realidad aumentada, por nombrar algunos."
+  - question: "¿Consigo un trabajo después de completar el programa?"
     answer: |-
-      "This is the part where everyone pays attention…we cannot guarantee that you will get a job after completion of our course.  
-      Nobody can, actually.  However, by enrolling in our program, you will have access to our Advisors and Partners.  You will be part of a new network and we will be both helping you and guiding you throughout the job-seeking process."
-  - question: "Extended Payment Plan? How does it work? What does that mean?"
+      "Esta es la parte en la que todos prestan atención ... no podemos garantizar que obtendrás un trabajo después de completar nuestro curso.
+      Nadie puede, en realidad. Sin embargo, al inscribirte en nuestro programa, tendrás acceso a nuestros asesores y partners. Serás parte de una nueva red y te ayudaremos y guiaremos a lo largo del proceso de búsqueda de empleo, trabajaremos en tu CV, Linkedin, GitHub y haremos todo lo necesario para que consigas trabajo ".
+  - question: "¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso?"
     answer: |-
-      "The Extended Payment Plan has been designed specifically for OUR students.  The average tuition fee for a coding program in the U.S. is about $11,000.  YES, that is $5,000 more than what we charge.  Again, YES, that is 83% more expensive than us.
-      But, wait…not only do we offer the best price in town ($6,000 for the entire course), we ALSO offer the best payment plan in Miami.  You can apply for either a 6, 12, or 24-month extended payment plan.  You can pay only $240 per month (plus a $1,000 deposit) for 24 months, and you will become a developer in 16 weeks.
-      If you want to get to know more about this plan, click here and go to page 4.
-      Now, if you wish to begin your application, click here."
-  - question: "Do I graduate as a 'Senior Developer?'"
+      "El Plan de pago extendido ha sido diseñado específicamente para NUESTROS estudiantes.
+      Puedes solicitar un plan de pago extendido de 6, 12, 18 o 24 meses. Sólo debes pagar un depósito o inicial y firmar el contrato correspondiente para las cuotas que mejor se adapten a tu situación.
+      Si deseas obtener más información sobre este plan, haz clic <a href="https://quotanda.com/es/4geeks/">aquí</a>."
+  - question: "¿Me gradúo como 'Senior Developer?'"
     answer: |-
-      "Nope.  Please don’t run before you learn to walk.  Coding is just like life:  if you are good at it, you will learn faster, but you will not learn instantly.  You will get the experience to see all the details once you have mastered the art.
-      Taking our Full Stack program means that your life will have a new skill, but you will also develop a brand-new way of “thinking.”  You will graduate as a “Junior Developer” – but as a REALLY GOOD “Junior Developer” – not just another in the bunch!"
-  - question: "What is your schedule? "
+      "No. Por favor, no corras antes de aprender a caminar. La programación es como la vida: si eres bueno en eso, aprenderás más rápido, pero no al instante. Obtendrás la experiencia de ver todos los detalles una vez hayas dominado el arte.
+      Hacer nuestro programa Full Stack significa que tu vida tendrá una nueva habilidad, pero también desarrollará una nueva forma de "pensar". Te gradúas como “Desarrollador Junior”, pero como un “Desarrollador Junior” REALMENTE BUENO, ¡no como uno más en el grupo!"
+  - question: "¿Cuál es el horario?"
     answer: |-
-      "It’s actually really easy:
-      Mondays, Wednesdays & Fridays
-      From 6:00 pm to 9:00 pm
-      Mandatory attendance (To graduate you will need to have a minimum 80% attendance)
-      16 weeks
-  - question: "How do I apply?"
+      "Los horarios varían según la sede.
+      Part-Time
+      1. España: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábados de 10:00 a 13:00 hrs
+      2. Chile y Estados Unidos: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábados de 9:00 a 12:00 hrs
+      3. Venezuela: lunes a viernes de 16:00 a 18:00 hrs
+      Full-Time
+      De lunes a viernes de 9:00 a 18:00 hrs." 
+  - question: "¿Cómo me inscribo?"
     answer: |-
-      "To begin your career as a Developer, you only need to click here and fill out a very simple form.  We will take care of the rest. "
-  - question: "What is your admission process?"
+      "Para comenzar tu carrera como Desarrollador, solo necesitas hacer clic <a href="https://4geeksacademy.co/es/aplica">aquí</a> y completar un formulario muy simple. Nosotros nos encargaremos del resto".
+  - question: "¿Cuál es el proceso de admisión?"
     answer: |-
-      "Once you begin the application process, you will receive an email from one of our Student Counselors.  We will guide you throughout the process.  Simply reply to our email and we shall give you a call at your convenience.
-      After the phone call, you will be invited to a personal meeting.  You will be able to visit our location, meet the team, and get to know us.  During the meeting, you can explain to us why you wish to become a developer.  We will take care of everything."
-  - question: "Do I need any coding experience to enroll in the program?"
+      "Una vez que comiences el proceso de solicitud, recibirás un correo electrónico de uno de nuestros Consejeros Estudiantiles. Te guiaremos durante todo el proceso. Simplemente responde a nuestro correo electrónico y te llamaremos a tu conveniencia. 
+      Después de la llamada telefónica, serás invitado a una reunión personal o por videollamada. Si lo deseas, podrás visitar nuestra ubicación, conocer al equipo y conocernos. Durante la reunión, podrás explicarnos por qué deseas convertirte en desarrollador. Nosotros nos encargaremos de todo."
+  - question: "¿Necesito experiencia previa en programación para inscribirme en el programa?"
     answer: |-
-      "No.  You just need to want to learn.  Coding must exist in some part of your body, and we will find it!  If you already know how to open a browser and check your Facebook, then we’ll be fine!"
-  - question: "What is the market like for companies seeking developers?"
+      "No. Solo necesitas querer aprender. La programación debe existir en alguna parte de tu cuerpo, ¡y la encontraremos! Si ya sabes cómo abrir un navegador y revisar tu Facebook, ¡entonces estaremos bien!"
+  - question: "¿Cómo es el mercado para las empresas que buscan desarrolladores?"
     answer: |-
-      "There are over FIVE HUNDRED THOUSAND (500,000) open coding jobs in the United States alone.  We have over 25,000 open positions in Florida alone, and university graduates equate to only 2,000 annually.  The gap is HUGE…and the Bureau of Labor Statistics estimates that it will grow by 24% by 2020."
-  - question: "Why Miami?"
+      " De acuerdo a estimaciones del IDC entre 2020 y 2025 se necesitarán sumar 10.5 millones de profesionales en el área de tecnología en todo el mundo. Por el momento hay más de 1.4 millones de puestos de trabajo de programación abiertos solo en los Estados Unidos y se espera que este número siga creciendo para el 2021;  en España, durante la pandemia, se crearon 1.500 ofertas como programador junior en tan solo una de las webs para búsqueda de empleo y por otro lado en Latinoamérica se necesitarán alrededor de 1.2millones de profesionales para disminuir la brecha. Por lo tanto el mercado para las empresas que buscan desarrolladores seguirá creciendo a un paso acelerado para poder cumplir con la alta demanda."  
+  - question: "¿Por qué nuestros Campus?"
     answer: |-
-      "Miami. No longer a city known just for tourism, parties, and an extravagant lifestyle; Miami is becoming a place where technology and the startup ecosystem is growing faster than those of any other city in the US.
-      According to a Careerbliss study published in Forbes, Miami is the happiest city to live, and according to CNN, software development is the best profession in America. Can you imagine having both?
-      Here are more details of what we think about Learning to Code in Miami."
-  - question: "Who is that face in the Logo?"
+      "Cualquiera de ellos será una excelente opción, bien sea en Miami, Madrid, Santiago de Chile, Caracas o San José de Costa Rica, en cualquiera de nuestras ciudades vivirás una excelente experiencia con un ambiente totalmente preparado para la formación y vivir una experiencia única durante tu paso por el bootcamp."
+  - question: "¿Quién es esa cara en el logo?"
     answer: |-
-      "Oh, you mean Rigoberto?  He is the heart and spirit of everyone working for the Academy."
+      "Oh, ¿te refieres a Rigoberto? Él es el corazón y el espíritu de todos los que trabajan para la Academia."
