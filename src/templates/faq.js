@@ -85,13 +85,11 @@ const Faq = (props) => {
                                             </H4>
                                             {buttonToggle === true && toggleIndex === index &&
                                                 <Paragraph
-                                                    // style={{zIndex: "1"}}
                                                     dangerouslySetInnerHTML={{__html: item.answer}}
                                                     margin={`10px 0 0 0`}
                                                     align_sm="left"
                                                     fontFamily="Lato-bold, sans-serif"
                                                     lineHeight="1rem">
-                                                    {/* {item.answer} */}
                                                 </Paragraph>
                                             }
                                         </Column>
