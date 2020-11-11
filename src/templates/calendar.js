@@ -11,7 +11,7 @@ import LazyLoad from 'react-lazyload';
 import {Link} from 'gatsby'
 import {SessionContext} from '../session'
 
-const ListCard = ({image, onClick, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
+const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
   <Anchor to={link}>
     <Card
       overflow={`hidden`}
@@ -37,8 +37,7 @@ const ListCard = ({image, onClick, title, date, address, link, slug, applyButton
         marginLeft="0"
         marginRight="0"
         padding={`15px`}>
-        <Column size="12"
-          onClick={() => onClick(index)}>
+        <Column size="12">
           <Row marginBottom="1rem" display="flex">
             <H4
               fs_xs="18px"
@@ -98,9 +97,9 @@ const ListCard = ({image, onClick, title, date, address, link, slug, applyButton
           </Row>}
           {eventLink && eventText && <Row justifyContent={`end`} display="flex">
             <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center" display="flex">
-              <Link to={eventLink}>
+              <Anchor to={eventLink}>
                 <Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{eventText}</Button>
-              </Link>
+              </Anchor>
             </Div>
           </Row>}
         </Column>
@@ -122,9 +121,11 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
+      // let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
       let cohorts = await resp.json();
-      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
+      // let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
