@@ -1,4 +1,3 @@
-
 ## GEEKS VS OTHERS COMPONENT
 ## THIS COMPONENT IS USED IN "/home" AND "/course/..."
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
@@ -9,7 +8,6 @@ titles:
   average: "PROMEDIO DE LA INDUSTRIA"
 globe_text: ¡Clic aquí!
 info:
-  
   - features: "Apoyo Profesional"
     at4_Geeks: "Para Siempre"
     industry_average: "Hasta que Consigas Trabajo"
@@ -57,7 +55,7 @@ info:
     industry_average: "1:20 avg"
     why_important: "Recibir mentorías de programadores senior hace una gran diferencia. Una mejor explicación permitirá que aprendas más rapido, y un buen consejo te ahorrará muchos dolores de cabeza."
     icon: ""
-    
+
   - features: "Comunidad"
     at4_Geeks: "Apoyo fuerte en persona y remotoStrong Local and online"
     industry_average: "Depende de cada Bootcamp"
@@ -83,7 +81,7 @@ info:
     icon: ""
 
   - features: "Lenguajes"
-    at4_Geeks: "Python + React + Node y Javascript"
+    at4_Geeks: "Python + React + Javascript"
     industry_average: "Ruby/Node + React + JS"
     why_important: "Todo desarrollador debe saber programar en Python y en JavaScript. Es el lenguaje backend de más crecimiento del mundo, el que se utiliza en más industrias y el que mejores oportunidades ofrece. "
     icon: ""

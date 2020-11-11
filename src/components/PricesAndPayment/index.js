@@ -104,7 +104,8 @@ const PricesAndPayments = (props) => {
   return (
     <Fragment github="/location">
       <Row
-        align={`center`}
+        display="flex"
+        justifyContent={`center`}
         margin="0 0 20px 0"
       >
         {!props.course && <Select
@@ -133,7 +134,7 @@ const PricesAndPayments = (props) => {
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
-        <Row align="center">
+        <Row justifyContent="center" display="flex">
           {prices.left_section && <Column size="4" maxWidth="280px" size_sm="12" >
             <PricingCard lang={props.lang}
               transform="translateY(10%)"
@@ -165,7 +166,7 @@ const PricesAndPayments = (props) => {
                   </StepperCircle >
                 ))}
               </StepperContainer>
-              <Div margin="0 0 40px 0">
+              <Div margin="0 0 40px 0" display="flex">
                 <img style={{margin: "auto", height: "20px"}} src={prices.center_section.plans[activeStep].logo} />
               </Div>
 
@@ -234,5 +235,5 @@ const StepperCircle = styled.div`
   border: 1px solid ${Colors.yellow};
   cursor: pointer;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 `

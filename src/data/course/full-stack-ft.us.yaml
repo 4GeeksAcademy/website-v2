@@ -12,7 +12,7 @@ meta_info:
       "/us/full-time",
       "/us/course/full-time",
       "/the-program",
-      "/us/full-stack-ft"
+      "/us/full-stack-ft",
     ]
 
 header:
@@ -121,17 +121,17 @@ typical:
       step: 0
     - title: "Setup and coffee"
       time: "8:45 AM"
-      icon: circle
+      icon: coffee
       content: "The bootcamp starts at 9:00 AM, so have some coffee to recharge your energy and get ready to learn!"
       step: 1
     - title: "Review Last Day"
       time: "9:00 AM"
-      icon: circle
+      icon: laptopcode
       content: "Review last day & weekend activities, Q&A. Overall briefing of what we have addressed."
       step: 2
     - title: "Lesson Time"
       time: "10:00 AM"
-      icon: laptopcode
+      icon: teacher
       content: "Incremental: Each morning mentors will introduce a small set of new concepts and techniques that will help you along the way."
       step: 3
     - title: "Lunch Time"
@@ -141,12 +141,12 @@ typical:
       step: 4
     - title: "Projects and Exercises"
       time: "2:00 PM"
-      icon: coffee
+      icon: laptop
       content: "You will be continuously challenged with real-life projects and exercises to deliver."
       step: 5
     - title: "Collaborative Coding"
       time: "5:00 PM"
-      icon: coffee
+      icon: usergroup
       content: "All students will code on a single screen, discuss approaches and strategies, and deliver the projects."
       step: 6
 

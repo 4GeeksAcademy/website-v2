@@ -38,7 +38,7 @@ export default function Template (props) {
         <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Column size="10" margin="50px auto 0px auto">
                 <Column size="12" margin="auto">
-                    <Div height="100%" align="around" justifyContent="center">
+                    <Div height="100%" align="around" justifyContent="center" display="flex">
                         <LazyLoad scroll={true} height={100} once={true}>
                             <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
                         </LazyLoad>

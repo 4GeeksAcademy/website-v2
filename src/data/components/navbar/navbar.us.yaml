@@ -5,7 +5,7 @@ navbar:
     link: "/the-academy"
   - name: "The Programs"
     link: "/course/full-stack-web-development-bootcamp-part-time"
-    links: 
+    links:
       - name: "Desarrollador Full Stack"
       - link: "/course/full-stack-web-development-bootcamp-part-time"
       - name: "Ingeniero de Software"

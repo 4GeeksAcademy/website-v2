@@ -16,9 +16,9 @@ header:
 
   # The background image position can be cnotroled by device size
   # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px","0px -50px","0px -20px","0px 0px","0px 0px"]
+  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
   image: "../../../static/images/bg/apple-building.jpg"
-  
+
   alt: ""
 
 button:
@@ -36,13 +36,6 @@ details:
     duration: "DURATION:"
     skills: "Skills / Weeks:"
   details_modules:
-    - module_name: "PREWORK"
-      title: "From programming to engineering"
-      description: "During this phase we will make sure you know you are ready for the course: Solidify algorithm concepts, get familizarized with Java Programming Language, Object Oriented Programming, Javascript, React.js and web development."
-      projects: "Queue Managment System using React, Java and MySQL"
-      slug: "prework"
-      duration: "~ 60 hours"
-      step: 0
     - module_name: "FRONT"
       title: "Advanced Front-End"
       description: >
@@ -100,7 +93,7 @@ details:
 syllabus:
   heading: Get all the information about the syllabus
   button_label: Download
-  
+
 potential_companies:
   tagline: "Get trained to thrive at major companies"
   sub_heading: "Get ready to apply to the best companies in the world: the next level in your career as Software Engineer"

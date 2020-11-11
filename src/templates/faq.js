@@ -14,6 +14,7 @@ const Faq = (props) => {
     const [buttonToggle, setButtonToggle] = useState(false);
     const [toggleIndex, setToggleIndex] = useState();
     const {session, setSession} = useContext(SessionContext);
+
     return (
         <>
             <WrapperImage
@@ -39,8 +40,10 @@ const Faq = (props) => {
                 github={`/page/faq.${pageContext.lang}.yml`}
             >
                 {yml.faq.map((item, index) => {
+                    var link = item.question == "Why Python?" && item.answer.replace("here", "<a href='#'>Your html code here.</a>");
+                    console.log('link:', link)
                     return (
-                        <Row key={index}>
+                        <Row key={index} display="flex">
                             <Column
                             >
                                 <Card
@@ -52,7 +55,7 @@ const Faq = (props) => {
                                     margin="5px 0 10px 0"
                                     onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
                                 >
-                                    <Row height="100%">
+                                    <Row display="flex" height="100%">
                                         <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" size_sm="2" align={`center`} alignSelf="center">
                                             {buttonToggle === false ?
                                                 toggleIndex != index &&

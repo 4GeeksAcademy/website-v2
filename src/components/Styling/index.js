@@ -40,7 +40,7 @@ export const Option = styled.option`
 `
 export const Tooltip = styled.div`
     position: absolute;
-    left: 20px;
+    left: 30px;
     bottom: 0;
     transform: translateY(50%);
     height: auto;
@@ -59,7 +59,7 @@ export const Tooltip = styled.div`
     -webkit-transition: all .15s ease-in-out;
 `
 export const RoundImage = styled.div`
-    display: ${props=>props.display || "block"};
+    display: ${props => props.display || "block"};
     position: ${props => props.pos};
     background-image: url(${props => props.url} );
     margin-bottom: ${props => props.mb};
@@ -205,7 +205,7 @@ const getVariant = (props) => ({
         background: "initial",
         color: props.color,
     },
-    "false":{
+    "false": {
         border: "none",
         background: props.color,
         color: props.textColor || "white"
@@ -213,7 +213,7 @@ const getVariant = (props) => ({
 })
 const SmartButton = ({children, onClick, type, ...rest}) => {
     const styles = getVariant(rest)[rest.outline];
-    return <button type={type || "button"} onClick={(e) => onClick && onClick(e)} className={rest.className} style={{ ...rest.style, ...styles}} >{children}</button>;
+    return <button type={type || "button"} onClick={(e) => onClick && onClick(e)} className={rest.className} style={{...rest.style, ...styles}} >{children}</button>;
 }
 export const Button = styled(SmartButton)`
     font-size: ${props => props.fontSize || '14rem'};
@@ -317,7 +317,7 @@ const StyledLink = ({children, ...rest}) => {
         props.rel = "noopener noreferrer nofollow"
         Comp = "a";
     }
-    else if(!rest.to || rest.to.charAt(0) === "#" || rest.to === ""){
+    else if (!rest.to || rest.to.charAt(0) === "#" || rest.to === "") {
         Comp = "label";
     }
     return <Comp {...Object.assign(props, rest)}>
