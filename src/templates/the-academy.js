@@ -44,7 +44,7 @@ const Why = (props) => {
       </WrapperImage>
 
       <Wrapper margin="30px">
-        <Row align="center" >
+        <Row display="flex" justifyContent="center" >
           <Column size="4" margin="5px 0">
             <Paragraph
               margin="5px 0"
@@ -83,7 +83,7 @@ const Why = (props) => {
             <Img className={`image`} fluid={yml.education.right_box.image.childImageSharp.fluid} alt="Cnn Logo"></Img>
           </Column>
         </Row>
-        <Row>
+        <Row display="flex">
           <Column size="4" margin="5px 0"></Column>
           <Column size="4" margin="5px 0">
             <Paragraph
@@ -121,7 +121,7 @@ const Why = (props) => {
         right
         customBorderRadius="1.25rem 0 0 1.25rem"
       >
-        <Row github={`/page/the-academy.${pageContext.lang}.yml`} marginBottom="30px">
+        <Row display="flex" github={`/page/the-academy.${pageContext.lang}.yml`} marginBottom="30px">
           {cornerstone.cornerstones_list.map((item, index) => {
             return (
               <Column key={index} size="6" size_sm="12" margin="0 0 10px 0">
@@ -133,12 +133,12 @@ const Why = (props) => {
                   transform="translateY(-100px)"
                   marginXs="0 0 30px 0"
                 >
-                  <Row >
+                  <Row display="flex">
                     <Column size="3" pl_lg="0">
                       <Icon icon={item.icon} width="48px" color={Colors.yellow} fill={Colors.yellow} />
                     </Column>
                     <Column size="8" >
-                      <Row>
+                      <Row display="flex">
                         <H4
                           fs_xs="18px"
                           fs_lg="20px"
@@ -148,7 +148,7 @@ const Why = (props) => {
                           {item.title}
                         </H4>
                       </Row>
-                      <Row marginTop="15px">
+                      <Row display="flex" marginTop="15px">
                         <Paragraph
                           fs_sm="16px"
                           fontSize="18px"
@@ -185,6 +185,7 @@ const Why = (props) => {
       >
         <Card shadow borders="1.25rem" minHeight="450px" transform="translateY(-20%)">
           <Row
+            display="flex"
             github={`/page/the-academy.${pageContext.lang}.yml#L77`}
             height="100%"
             marginLeft="0"
@@ -306,9 +307,9 @@ const Why = (props) => {
           variant="primary"
           maxWidth="700px"
         />
-        <Row align='center'>
+        <Row display="flex" justifyContent='center'>
           <Column size="3" size_sm='12' padding="20px 0">
-            <Row>
+            <Row display="flex">
               <Column size="12">
                 <H4
                   fs_xs="20px"
@@ -320,7 +321,7 @@ const Why = (props) => {
               </Column>
             </Row>
             <Divider height="30px" />
-            <Row>
+            <Row display="flex">
               <Column size="12" align="left"><Paragraph
                 fs_xs="12px"
                 fs_sm="13px"
@@ -329,7 +330,7 @@ const Why = (props) => {
                 fs_xl="14px"
               >{yml.outcomes.left.content}</Paragraph></Column>
             </Row>
-            <Row marginTop="15px">
+            <Row display="flex" marginTop="15px">
               <Column size="12" align="left">
                 <Paragraph
                   color={Colors.blue}
@@ -342,7 +343,7 @@ const Why = (props) => {
             </Row>
           </Column>
           <Column size="9" >
-            <Row align="center">
+            <Row display="flex" justifyContent="center">
               <Column size="4" size_sm="12" padding="20px 0" align="center"><H4
                 uppercase
                 fs_xs="16px"
@@ -376,7 +377,7 @@ const Why = (props) => {
             </Row>
           </Column>
         </Row>
-        <Row align='center'>
+        <Row display="flex" justifyContent='center'>
           <Column size="8" align="center">
             <Paragraph
               color={Colors.blue}

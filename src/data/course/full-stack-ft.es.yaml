@@ -14,7 +14,7 @@ meta_info:
       "es/full-stack-ft",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time",
-      "/es/course/bootcamp-desarrollo-web-full-stack-full-time"
+      "/es/course/bootcamp-desarrollo-web-full-stack-full-time",
     ]
 
 header:
@@ -127,17 +127,17 @@ typical:
       step: 0
     - title: "Setup y café"
       time: "8:45 AM"
-      icon: circle
+      icon: coffee
       content: "Empezamos en 15 minutos, tómate una café, ¡recarga tus energías y prepárate para aprender!"
       step: 1
     - title: "Revisión del día anterior"
       time: "9:00 AM"
-      icon: circle
+      icon: laptopcode
       content: "Revisión de las actividades del día anterior o del fin de semana, preguntas y respuestas. Breve resumen de lo que hemos abordado."
       step: 2
     - title: "Clase del día"
       time: "10:00 AM"
-      icon: laptopcode
+      icon: teacher
       content: "Incremental: cada mañana, los mentores presentarán un pequeño conjunto de nuevos conceptos y técnicas que te ayudarán en el camino."
       step: 3
     - title: "¡Hora de la comida!"
@@ -147,12 +147,12 @@ typical:
       step: 4
     - title: "Ejercicios y Proyectos"
       time: "2:00 PM"
-      icon: coffee
+      icon: laptop
       content: "Afrontarás constantemente nuevos retos con proyectos de la vida real y ejercicios."
       step: 5
     - title: "Trabajos colaborativos"
       time: "5:00 PM"
-      icon: coffee
+      icon: usergroup
       content: "Todos los estudiantes programarán en una sola pantalla, discutirán enfoques, estrategias y entregarán sus proyectos."
       step: 6
 ## ALUMNI SECTION

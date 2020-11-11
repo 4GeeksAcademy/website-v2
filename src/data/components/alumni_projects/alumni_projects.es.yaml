@@ -4,7 +4,7 @@ header:
   sub_heading: "El último dia del cursos los alumnos presentan sus proyectos ante expertos de la industria y posibles hiring partners"
 
 button_section:
-  button_text: "VER TODOS LOS PROYECTOS"
+  button_text: "VER MÁS PROYECTOS"
   button_link: "/graduados"
 
 projects:
@@ -47,8 +47,8 @@ projects:
       - first_name: "Naila"
         last_name: "Kaliyeva"
         job_title: "Web Developer"
-        github: ""
-        linkedin: ""
+        github: "https://github.com/nailakaliyeva"
+        linkedin: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
         twitter: ""
   - project_name: "IMS: Inventory Tracking"
     hidden: false

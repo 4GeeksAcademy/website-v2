@@ -50,7 +50,7 @@ const Pricing = (props) => {
         />
       </WrapperImage>
       <Wrapper>
-        <Row m_sm="0px 0px 100px 0">
+        <Row m_sm="0px 0px 100px 0" display="flex">
           <Column size="5" size_sm="12" height="300px" align_sm="center">
             <Img
               fixed={yml.intro.image.childImageSharp.fixed}
@@ -66,7 +66,7 @@ const Pricing = (props) => {
         </Row>
       </Wrapper>
       <Wrapper>
-        <Row m_sm="0px 0px 0px 0">
+        <Row m_sm="0px 0px 0px 0" display="flex">
           <Column size="7" size_sm="12">
             <H2 align="left" margin="30px 0 20px 0" >{yml.intro.heading_second}</H2>
             <Paragraph align="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</Paragraph>
@@ -116,7 +116,7 @@ const Pricing = (props) => {
             variant="primary"
           />
           <Divider height="30px" />
-          <Row align="center">
+          <Row display="flex" justifyContent="center">
             <Button outline position="relative" width="300px" onClick={() => openGuidebook(location.documents.payment_guidebook.url)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
           </Row>
         </Wrapper>

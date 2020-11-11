@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from "gatsby";
-import loadable from '@loadable/component'
 import BaseRender from './_baseLayout'
 import {Card, GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
@@ -9,16 +8,16 @@ import {Button, Colors} from '../components/Styling'
 import {requestSyllabus} from "../actions";
 import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import {SessionContext} from '../session'
+import GeeksVsOthers from '../components/GeeksVsOthers';
+import ProgramDetails from '../components/ProgramDetails';
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
+import PricesAndPayment from '../components/PricesAndPayment';
+import LeadForm from '../components/LeadForm';
+import Modal from '../components/Modal';
+import TypicalDay from '../components/TypicalDay';
+import AlumniProjects from '../components/AlumniProjects';
+import ProgramSelector from '../components/ProgramSelector';
 
-const TypicalDay = loadable(() => import('../components/TypicalDay'))
-const AlumniProjects = loadable(() => import('../components/AlumniProjects'))
-const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
-const ProgramDetails = loadable(() => import('../components/ProgramDetails'))
-const ProgramDetailsMobile = loadable(() => import('../components/ProgramDetailsMobile'))
-const ProgramSelector = loadable(() => import('../components/ProgramSelector'))
-const PricesAndPayment = loadable(() => import('../components/PricesAndPayment'))
-const LeadForm = loadable(() => import('../components/LeadForm'))
-const Modal = loadable(() => import('../components/Modal'))
 
 const Program = ({data, pageContext, yml}) => {
   const {session} = React.useContext(SessionContext);
@@ -73,7 +72,7 @@ const Program = ({data, pageContext, yml}) => {
         fs_xs="40px"
         textAlign="center"
       />
-      <Row align="center" marginBottom="50px">
+      <Row display="flex" justifyContent="center" marginBottom="50px">
         <Column align="right" size="6" align_sm="center" m_sm="0px 0px 15px 0px" size_sm="12" align="right">
           <Link to={yml.button.apply_button_link}
             state={{course: yml.meta_info.bc_slug}}
@@ -147,7 +146,7 @@ const Program = ({data, pageContext, yml}) => {
       <SyllabusSVG className="d-sm-none w-100" />
       <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
         <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
-        <Row padding="0px 40px" p_md="0 10px">
+        <Row display="flex" padding="0px 40px" p_md="0 10px">
           <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">
             <GeekCard
               icon="arrowright"
@@ -207,7 +206,7 @@ const Program = ({data, pageContext, yml}) => {
 
     {/* ALUMNI PROJECTS */}
     <Wrapper
-      margin="50px 0"
+      margin="75px 0"
     >
       <Title
         size="10"

@@ -29,11 +29,12 @@ const ProgramDetailsMobile = (props) => {
                             display_sm={`block`}
                         >
                             <Div
+                                display="flex"
                                 onClick={() => selected.index === index ? setSelected({index: null, manual: true}) : setSelected({index: index, manual: true})}
-                                justifyContent={`space-between`}
+                                justifyContent={`between`}
                                 cursor={`pointer`}
                             >
-                                <Div flexDirection={`column`} alignItems={`flex-start`}>
+                                <Div display="flex" flexDirection={`column`} alignItems={`flex-start`}>
                                     <H3
                                         color={Colors.white}
                                         align_sm={`left`}
@@ -54,7 +55,7 @@ const ProgramDetailsMobile = (props) => {
                             <Card
                                 padding={`20px`}
                             >
-                                <Div alignItems={`center`} margin={`10px 0`}>
+                                <Div display="flex" alignItems={`center`} margin={`10px 0`}>
                                     <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
                                         margin={`0 10px`}
@@ -70,7 +71,7 @@ const ProgramDetailsMobile = (props) => {
                                 >
                                     {item.description}
                                 </Paragraph>
-                                <Div alignItems={`center`} margin={`10px 0`}>
+                                <Div display="flex" alignItems={`center`} margin={`10px 0`}>
                                     <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
                                         margin={`0 10px`}
@@ -86,7 +87,7 @@ const ProgramDetailsMobile = (props) => {
                                 >
                                     {item.projects}
                                 </Paragraph>
-                                <Div alignItems={`center`} margin={`10px 0`}>
+                                <Div display="flex" alignItems={`center`} margin={`10px 0`}>
                                     <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
                                         margin={`0 10px`}

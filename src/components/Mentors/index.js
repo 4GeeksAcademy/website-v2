@@ -57,7 +57,7 @@ const Mentors = props => {
     let staff = data.allStaffYaml.edges;
 
     return (
-        <Row github="/components/staff">
+        <Row github="/components/staff" display="flex">
             {staff[0].node.staff.map((item, index) => {
                 return (
                     <Column key={index} size_xs="12" size_sm="6" size_md="4" size="3" >
