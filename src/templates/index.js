@@ -294,7 +294,7 @@ export const query = graphql`
               sub_heading
               image{
                 childImageSharp {
-                  fluid(maxWidth: 1000){
+                  fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

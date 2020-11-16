@@ -144,7 +144,7 @@ export const query = graphql`
               sub_heading
               image{
                 childImageSharp {
-                  fluid(maxWidth: 1200){
+                  fluid(maxWidth: 1600, quality: 100){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
