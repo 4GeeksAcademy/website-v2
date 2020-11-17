@@ -1,6 +1,6 @@
 import React from "react"
 import {Row, Column, Wrapper, Divider, Div} from '../Sections'
-import {H2, H5, H4, Title} from '../Heading'
+import {H2, H5, H4, Title, Paragraph} from '../Heading'
 import {Colors, Img, Button} from '../Styling'
 import WhoIsHiring from '../WhoIsHiring';
 import Badges from '../Badges';
@@ -53,10 +53,10 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             fontSize={h_xl || "20px"} fs_xl={h_xl} fs_md={h_md} fs_sm={h_sm} fs_xs={h_xs}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
         }
-        {content && <H5 align="left"
+        {content && <Paragraph align="left"
             padding={heading ? "0" : "20px"}
             fontSize={c_xl || "16px"} fs_sm={c_sm} fs_md={c_md} fs_sm={c_sm} fs_xs={c_xs}
-            fontHeight="30px">{content.text}</H5>
+            fontHeight="30px">{content.text}</Paragraph>
         }
         {button && <Button outline width="200px"
             color={button.color || Colors.blue}

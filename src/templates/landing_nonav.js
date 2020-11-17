@@ -38,7 +38,6 @@ const Landing = (props) => {
     course: {type: "hidden", value: yml.meta_info.utm_course, valid: true},
     utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true}
   };
-
   return (
     <>
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
@@ -211,7 +210,7 @@ const Landing = (props) => {
   )
 };
 export const query = graphql`
-  query LandingAQuery($file_name: String!, $lang: String!, $utm_course: String!) {
+  query LandingNonavQuery($file_name: String!, $lang: String!, $utm_course: String!) {
     allLandingYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{

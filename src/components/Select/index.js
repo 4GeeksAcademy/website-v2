@@ -74,6 +74,7 @@ const Select = (props) => {
                         return (
                             <Button
                                 key={index}
+                                font={"Lato, sans-serif"}
                                 colorHover={Colors.lightBlue}
                                 onClick={() => {
                                     setStatus({toggle: false, hovered: false});
