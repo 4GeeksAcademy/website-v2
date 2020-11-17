@@ -113,6 +113,7 @@ const PricesAndPayments = (props) => {
           left="20px"
           width="300px"
           maxWidth="100%"
+          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
           options={courseArray}
           openLabel={course ? course.label : props.openedLabel}
           closeLabel={course ? course.label : props.closedLabel}
@@ -125,6 +126,7 @@ const PricesAndPayments = (props) => {
           left="20px"
           width="300px"
           maxWidth="100%"
+          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
           options={locations.map(l => ({label: l.node.city + ", " + l.node.country, value: l.node.active_campaign_location_slug}))}
           openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
           closeLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}

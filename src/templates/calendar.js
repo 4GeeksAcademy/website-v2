@@ -201,6 +201,7 @@ const Calendar = (props) => {
             width="300px"
             m_sm="5px"
             maxWidth="100%"
+            shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
             options={console.log("catalog", data.cohorts.catalog) || data.cohorts.catalog}
             openLabel={academy ? "Campus: " + academy.label : "Select one academy"}
             closeLabel={academy ? "Campus: " + academy.label : "Select one academy"}
@@ -221,6 +222,7 @@ const Calendar = (props) => {
             width="300px"
             maxWidth="100%"
             m_sm="5px"
+            shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
             options={[
               {label: "Courses", value: "cohorts"},
               {label: "Events", value: "events"}
