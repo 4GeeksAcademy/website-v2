@@ -104,7 +104,8 @@ const PricesAndPayments = (props) => {
   return (
     <Fragment github="/location">
       <Row
-        align={`center`}
+        display="flex"
+        justifyContent={`center`}
         margin="0 0 20px 0"
       >
         {!props.course && <Select
@@ -112,6 +113,7 @@ const PricesAndPayments = (props) => {
           left="20px"
           width="300px"
           maxWidth="100%"
+          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
           options={courseArray}
           openLabel={course ? course.label : props.openedLabel}
           closeLabel={course ? course.label : props.closedLabel}
@@ -124,6 +126,7 @@ const PricesAndPayments = (props) => {
           left="20px"
           width="300px"
           maxWidth="100%"
+          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
           options={locations.map(l => ({label: l.node.city + ", " + l.node.country, value: l.node.active_campaign_location_slug}))}
           openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
           closeLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
@@ -133,7 +136,7 @@ const PricesAndPayments = (props) => {
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
-        <Row align="center">
+        <Row justifyContent="center" display="flex">
           {prices.left_section && <Column size="4" maxWidth="280px" size_sm="12" >
             <PricingCard lang={props.lang}
               transform="translateY(10%)"
@@ -165,7 +168,7 @@ const PricesAndPayments = (props) => {
                   </StepperCircle >
                 ))}
               </StepperContainer>
-              <Div margin="0 0 40px 0">
+              <Div margin="0 0 40px 0" display="flex">
                 <img style={{margin: "auto", height: "20px"}} src={prices.center_section.plans[activeStep].logo} />
               </Div>
 
@@ -234,5 +237,5 @@ const StepperCircle = styled.div`
   border: 1px solid ${Colors.yellow};
   cursor: pointer;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 `

@@ -249,7 +249,7 @@ Title.defaultProps = {
 Paragraph.defaultProps = {
   fontSize: "16px",
   fontFamily: "Lato, sans-serif",
-  fontWeight: "300",
+  fontWeight: "500",
   marginTop: "40px",
   color: "#898a8b"
 };

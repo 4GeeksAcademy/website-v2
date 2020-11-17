@@ -24,12 +24,12 @@ faq:
       "JavaScript "owns" the web; it is the only language that all web browsers understand, it is also the most used coding language in the world; every site need it, and it's also the most demanded language by companies at least ten times more than the rest."
   - question: "Why Python?"
     answer: |-
-      "Python is the fastest growing language in the wealthiest countries. It is widely used in virtually every industry,and has top-quality libraries  It is widely used in virtually every industry and has high-quality libraries for every field growing to be 'the future': Web, AI, Robotics, Big Data, etc. According to MIT professors, it is the essential programming language to learn. Go ahead and check it out <a href="https://www.python.org/">here</a>. 
-      It has to be Python. You will find more job opportunities, you will learn to program and it will help you with other languages ​​and frameworks. Even Google approved Python and has incorporated it everywhere!."
+      "Python is the fastest growing language in the wealthiest countries.  It is widely used in virtually every industry and has top-quality libraries for all fields growing to be “the future”:  Web, AI, Robotics, Big Data, etc.  According to MIT Professors, it is the essential programming language to learn.  Go ahead and take a look for yourself <a class="faq-link" target="a_blank" rel="noopener noreferrer nofollow" href="https://www.python.org/">here</a>.
+      It has to be Python.  You will find more job opportunities; you will learn to code, and it will help you with other back-end languages and frameworks.  Even Google endorsed python and has incorporated it everywhere!"
   - question: "Why not Node JS?"
     answer: |-
-      "Node is amazing. It challenges the way the web is built. However, only 0.3% of the web has adopted Node JS and its growth has slowed even more in recent months. Python, Java, PHP, and other similar languages ​​still rule the world (and that's not going to change any time soon).
-      They work in a very different way than Node does; our purpose is to prepare you for the "real world". We train our Full-Stack developers using / teaching only the most standard and professional technologies. <a href="https://4geeksacademy.co/us/post/dont-teach-nodejs-full-stack-development-program">Here</a> you can find a great argument why we are not teaching Node JS."
+      "Node is amazing.  It challenges the way the web is created.  However, only 0.3% of the web has adopted Node JS, and its growth has slowed even further over the last months.  Python, Java, PHP, and other similar languages still rule the world (and that is not going to change anytime soon).  They work in a very different way than Node does; our purpose is to prepare you for the “real world.”  We train our Full-Stack Developers using/teaching only the most standard and professional technologies.
+      <a class="faq-link" href="https://4geeksacademy.co/us/post/dont-teach-nodejs-full-stack-development-program">Here</a> you can find a great argument as to why we are not teaching Node JS."
   - question: "Why 4Geeks Academy?"
     answer: |-
       "Well, it's kind of weird to talk about yourself a lot ... but, okay, since you asked!
@@ -73,7 +73,7 @@ faq:
     answer: |-
       "The Extended Payment Plan has been designed specifically for our students.
       You can apply for an extended payment plan for either a 6,12, 18 or 24 months. You just need to pay the deposit and sign a contract that will take about the payments and what fits best your lifestyle.
-      If you want to have more information about the pla, click <a href="http://quotanda.com/en/4geeks/">here</a>."
+      If you want to have more information about the plan, click <a href="http://quotanda.com/en/4geeks/">here</a>."
   - question: "Do I graduate as a 'Senior Developer?'"
     answer: |-
        "No. Please, don’t run before you learn how to walk. Coding is just like life, if you are good at it you will learn faster, but you will not learn instantly.You will get the experience to see all the details once you have mastered the art. Taking our Full-Stack program means that your life will have a new skill, but you will also develop a brand new way of thinking. You will graduate as a Junior Developer bur as a REALLY GOOD “Junior Developer”, not just another one in the bunch."
@@ -89,8 +89,8 @@ faq:
         From Monday to Friday from 9:00 to 18:00 hrs."
   - question: "How do I apply?"
     answer: |-
-      "To start your career as a Software Developer you just need to click <a href="https://4geeksacademy.co/us/apply">here</a>, fill out our very simple form and we will take care of the rest."
-  - question: "What is the admissions process?"
+      "To begin your career as a Developer, you only need to click <a class="faq-link" href="https://4geeksacademy.co/us/apply">here</a> and fill out a very simple form.  We will take care of the rest. "
+  - question: "What is your admission process?"
     answer: |-
       "Once you start the admissions process, you will receive and email from one of our student counselors. We will guide you through the whole process. Simply reply to our email and we will set up a call at your convenience. After the phone call, you will be invited to an interview online or personal. 
       If you wish you can visit our campus to get to know the team and the location. During the meeting you will be able to let us know why you want to become a developer."

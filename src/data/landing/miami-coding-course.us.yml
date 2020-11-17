@@ -1,15 +1,15 @@
 meta_info:
-  slug: learn-to-code # <--- URL 4geeksacademy.com/us/landing/example
+  slug: coding-course # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Learn To Code Online and in person, learn to code and get a better professional career"
-  description: "Coding has become an essencial knowledge for every career, learn to code and have a better life."
+  title: "Coding Course On-line and In-person, learn to code and get a better professional career"
+  description: "Coding has become an essencial knowledge for every career, take coding course and learn to code and have a better life."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Learn to Code, Learn Code, Coding Classes, Learn to code, 4Geeks Academy"
+  keywords: "Coding Course, Coding Bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
   
   template: "landing_a" # <--- choose your landing template
   redirects: [ # <--- URL redirections to avoid 404 errors
-    "/landing/learn-to-code",
+    "/landing/coding-course",
   ] 
   
   # Set a particular course or location to the landing page
@@ -28,8 +28,8 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Learn To Code
-  sub_heading: "Become a web developer and get a job in tech"
+  tagline: Coding Course
+  sub_heading: "Learn to code and become a web developer"
   image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.3)
 
@@ -79,7 +79,6 @@ why_python:
   heading: "Why Python and React.js" # optional or set to white space to hide
   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
 
-
 geeks_vs_others:
   position: 5
   heading: "What made us so successfull?"
@@ -104,6 +103,15 @@ alumni_projects:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: first_syllabus_form
+    position: 4
+    layout: syllabus 
+    button: 
+      text: "Instant Download"
+    heading: 
+      text: "Download the course syllabus"
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","40px","40px","40px", "40px"]
   - name: top_coding_bootcamp
     position: 4
     layout: two_column_left 
@@ -116,11 +124,8 @@ components:
       text: "Read testimonials"
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
-    content: 
-      text: "We are proud to have been awarded os one of the top coding schools in the world"
-      font_size: ["18px"]
     heading: 
-      text: "One of the TOP coding schools in the World"
+      text: "We have been awarded one of the TOP coding courses in the World"
                   #xl      lg     md     sm    xs
       font_size: ["40px","40px","40px","40px", "40px"]
   - name: working_as_software_developers

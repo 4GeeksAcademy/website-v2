@@ -1,4 +1,3 @@
-
 ## GEEKS VS OTHERS COMPONENT
 ## THIS COMPONENT IS USED IN "/home" AND "/course/..."
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
@@ -9,11 +8,10 @@ titles:
   average: "PROMEDIO DE LA INDUSTRIA"
 globe_text: ¡Clic aquí!
 info:
-  
   - features: "Apoyo Profesional"
     at4_Geeks: "Para Siempre"
     industry_average: "Hasta que Consigas Trabajo"
-    why_important: "Desde el día de tu graduación invitamos a algunos de nuestros hiring partners, después asistiras a nuestro 'career week' donde construiras tu CV, LinkedIn, Github y perfil online, asistirás a una entrevista ficticia para diagnosticar tu nivel y luego empezará un seguimiento semanal mientras aplicas a los diferentes trabajos. El soporte nunca termina, incluso recibirás ayuda para desempeñarte mejor en tu trabajo."
+    why_important: "Desde el día de tu graduación invitamos a algunos de nuestros hiring partners, después asistirás a nuestro 'career week' donde construiras tu CV, LinkedIn, Github y perfil online, asistirás a una entrevista ficticia para diagnosticar tu nivel y luego empezará un seguimiento semanal mientras aplicas a los diferentes trabajos. El soporte nunca termina, incluso recibirás ayuda para desempeñarte mejor en tu trabajo."
     icon: "teacher"
 
   - features: "Profesor: Estudiante Ratio"
@@ -37,7 +35,7 @@ info:
   - features: "Preparación a la Entrevista"
     at4_Geeks: "Customizada para cada oportunidad"
     industry_average: "General"
-    why_important: "No nos conformamos con un workshop sobre cómo hacer una buena entrevista de trabajo. ¡NO! Nosotros te preparamos personalmente con entrevistas de de verdad. Además, te daremos consejos antes de la real, para que tu entrevista verdadera sea exitosa y tus probabilidades de conseguir trabajo sean altísimas "
+    why_important: "No nos conformamos con un workshop sobre cómo hacer una buena entrevista de trabajo. ¡NO! Nosotros te preparamos personalmente con entrevistas de verdad. Además, te daremos consejos antes de la real, para que tu entrevista verdadera sea exitosa y tus probabilidades de conseguir trabajo sean altísimas "
     icon: "comments"
 
   - features: "Enfoque"
@@ -57,7 +55,7 @@ info:
     industry_average: "1:20 avg"
     why_important: "Recibir mentorías de programadores senior hace una gran diferencia. Una mejor explicación permitirá que aprendas más rapido, y un buen consejo te ahorrará muchos dolores de cabeza."
     icon: ""
-    
+
   - features: "Comunidad"
     at4_Geeks: "Apoyo fuerte en persona y remotoStrong Local and online"
     industry_average: "Depende de cada Bootcamp"
@@ -83,7 +81,7 @@ info:
     icon: ""
 
   - features: "Lenguajes"
-    at4_Geeks: "Python + React + Node y Javascript"
+    at4_Geeks: "Python + React + Javascript"
     industry_average: "Ruby/Node + React + JS"
     why_important: "Todo desarrollador debe saber programar en Python y en JavaScript. Es el lenguaje backend de más crecimiento del mundo, el que se utiliza en más industrias y el que mejores oportunidades ofrece. "
     icon: ""

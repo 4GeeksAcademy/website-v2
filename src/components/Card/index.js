@@ -11,10 +11,10 @@ import {Paragraph} from '../Heading'
 import Icon from '../Icon'
 
 const _colors = () => ({
-    black: Colors.black,
-    grey: Colors.lightGray,
-    darkGray: Colors.borderGray,
-    blue: Colors.blue,
+  black: Colors.black,
+  grey: Colors.lightGray,
+  darkGray: Colors.borderGray,
+  blue: Colors.blue,
 })
 const Card = styled(Fragment)`
     :focus {outline: none;};
@@ -34,10 +34,10 @@ const Card = styled(Fragment)`
     transform: ${props => props.transform};
     display: ${props => props.display};
     box-shadow: ${props => props.shadow === true ?
-        `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
-        :
-        props.shadow
-    }
+    `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
+    :
+    props.shadow
+  }
     &:hover{
         background-color: ${props => props.bgHover};
     }
@@ -75,54 +75,54 @@ const Card = styled(Fragment)`
     }
 `;
 Card.propTypes = {
-    color: PropTypes.string,
-    width: PropTypes.string,
-    height: PropTypes.string,
-    borders: PropTypes.string,
-    shadow: PropTypes.bool,
-    move: PropTypes.string,
-    up: PropTypes.string,
-    down: PropTypes.string,
+  color: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  borders: PropTypes.string,
+  shadow: PropTypes.bool,
+  move: PropTypes.string,
+  up: PropTypes.string,
+  down: PropTypes.string,
 }
 Card.defaultProps = {
-    borders: '1.25rem',
-    margin_sm: null,
-    margin_xs: null,
+  borders: '1.25rem',
+  margin_sm: null,
+  margin_xs: null,
 };
 export default Card;
 
-export const GeekCard = ({  heading, bullets, image, to, icon  }) => {
-    return <Card shadow
-      cursor="pointer"
-      style={{position: "relative"}}
-      bgHover={Colors.lightGray}
-      onClick={() => navigate(to)}
-      h_xs="auto"
-      h_sm="370px"
-      height="500px"
-      padding="20px"
-      width="100%"
-      margin="10px 0px"
-    >
-        <RoundImage url={image} bsize="contain" height="80px" margin="0 0 30px 0" position="left" />
-        {Array.isArray(bullets) && bullets.map((pal, index) => {
-          return (
-            <Row key={index} marginBottom="5px">
-              <Column size="1" alignSelf="top">
-                <Icon icon="check" width="12px" color={Colors.yellow} fill={Colors.yellow} />
-              </Column>
-              <Column size="10"  test paddingRight="0px" paddingLeft="5px" alignSelf="center">
-                <Paragraph
-                  fs_sm="14px"
-                  fs_md="16px"
-                  fs_lg="16px"
-                  fontSize="16px"
-                  align_sm="left"
-                  color={Colors.gray}>{pal}</Paragraph>
-              </Column>
-            </Row>
-          )
-        })}
-        <Icon icon={icon} style={{position: "absolute", right: "10px", bottom: "5px"}} width="32" color={Colors.yellow} fill={Colors.yellow} />
-    </Card>
-  }
+export const GeekCard = ({heading, bullets, image, to, icon}) => {
+  return <Card shadow
+    cursor="pointer"
+    style={{position: "relative"}}
+    bgHover={Colors.lightGray}
+    onClick={() => navigate(to)}
+    h_xs="auto"
+    h_sm="370px"
+    height="500px"
+    padding="20px"
+    width="100%"
+    margin="10px 0px"
+  >
+    <RoundImage url={image} bsize="contain" height="80px" margin="0 0 30px 0" position="left" />
+    {Array.isArray(bullets) && bullets.map((pal, index) => {
+      return (
+        <Row display="flex" key={index} marginBottom="5px">
+          <Column size="1" alignSelf="top">
+            <Icon icon="check" width="12px" color={Colors.yellow} fill={Colors.yellow} />
+          </Column>
+          <Column size="10" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+            <Paragraph
+              fs_sm="14px"
+              fs_md="16px"
+              fs_lg="16px"
+              fontSize="16px"
+              align_sm="left"
+              color={Colors.gray}>{pal}</Paragraph>
+          </Column>
+        </Row>
+      )
+    })}
+    <Icon icon={icon} style={{position: "absolute", right: "10px", bottom: "5px"}} width="32" color={Colors.yellow} fill={Colors.yellow} />
+  </Card>
+}

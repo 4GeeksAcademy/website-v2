@@ -47,13 +47,14 @@ const Jobs = ({data, pageContext, yml}) => {
           size="8"
           paragraph={yml.about.sub_heading}
         />
-        <Row >
+        <Row display="flex">
           <Column
             size="12"
             borderRadius="0 0 0 1.25rem"
           >
             <Card shadow borders="1.25rem" height="auto" >
               <Row
+                display="flex"
                 height="100%"
                 marginLeft="0"
                 marginRight="0"
@@ -76,7 +77,7 @@ const Jobs = ({data, pageContext, yml}) => {
                   />
                 </Column>
                 <Column size="6" size_sm={`12`} alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem">
-                  <Row align="center" padding={`20px`}>
+                  <Row display="flex" justifyContent="center" padding={`20px`}>
                     <Paragraph
                       color={Colors.gray}
                       fontSize="18px"
@@ -88,7 +89,7 @@ const Jobs = ({data, pageContext, yml}) => {
                       {yml.about.content}
                     </Paragraph>
                   </Row>
-                  <Row align="around" padding={`10px`}>
+                  <Row display="flex" justifyContent="around" padding={`10px`}>
                     <Link to={yml.about.button_link}>
                       <Paragraph
                         color={Colors.blue}

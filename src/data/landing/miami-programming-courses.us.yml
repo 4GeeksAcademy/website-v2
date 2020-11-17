@@ -1,15 +1,15 @@
 meta_info:
-  slug: coding-school # <--- URL 4geeksacademy.com/us/landing/example
+  slug: programming-courses # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Coding School Online and in person, learn to code and get a better professional career"
-  description: "Coding has become an essencial knowledge for every career, join our coding school, learn to code and have a better life."
+  title: "Coding Classes Online and in person, learn to code and get a better professional career"
+  description: "Coding has become an essencial knowledge for every career, take programming courses and learn to code and have a better life."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Coding School, Coding Academy, Coding Classes, Learn to code, 4Geeks Academy"
+  keywords: "Programming Courses, Programming Course, Computer Programming Courses, Coding Classes, Learn to code, 4Geeks Academy"
   
   template: "landing_a" # <--- choose your landing template
   redirects: [ # <--- URL redirections to avoid 404 errors
-    "/landing/coding-school",
+    "/landing/programming-courses",
   ] 
   
   # Set a particular course or location to the landing page
@@ -28,7 +28,7 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Coding School
+  tagline: Programming Courses
   sub_heading: "Become a web developer and get a job in tech"
   image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.3)
@@ -63,7 +63,7 @@ follow_bar:
 
 in_the_news:
   position: 1
-  heading: "This coding school in the media..."
+  heading: "Read about us in the media..."
 
 badges:
   position: 2
@@ -71,7 +71,7 @@ badges:
 
 program_details:
   position: 3
-  heading: "Master Python, JS and React"
+  heading: "Prgramming Course in Python, JS and React"
   sub_heading: "The 3 most used languages in the world"
 
 why_python:
@@ -104,6 +104,15 @@ alumni_projects:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: first_syllabus_form
+    position: 4
+    layout: syllabus 
+    button: 
+      text: "Instant Download"
+    heading: 
+      text: "Download the course syllabus"
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","40px","40px","40px", "40px"]
   - name: top_coding_bootcamp
     position: 4
     layout: two_column_left 
@@ -116,11 +125,8 @@ components:
       text: "Read testimonials"
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
-    content: 
-      text: "We are proud to have been awarded os one of the top coding schools in the world"
-      font_size: ["18px"]
     heading: 
-      text: "One of the TOP coding schools in the World"
+      text: "We have been named one of the TOP programming courses in the World"
                   #xl      lg     md     sm    xs
       font_size: ["40px","40px","40px","40px", "40px"]
   - name: working_as_software_developers

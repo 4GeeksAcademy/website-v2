@@ -40,13 +40,6 @@ details:
     duration: "DURATION:"
     skills: "Skills / Weeks:"
   details_modules:
-    - module_name: "PREWORK"
-      title: "Reforzamiento para programadores"
-      description: "Prepárate para empezar el curso: Solidifica conceptos de algoritmos, famliarizate con JAVA, Programación Orientada a Objectos, Javascript, React.js y el mundo del desarrollo web."
-      projects: "Aplicación para el manejo de colas utilizando React.js, JAVA y Postgress"
-      slug: "prework"
-      duration: "~ 60 hrs"
-      step: 0
     - module_name: "FRONT"
       title: "Front-End Avanzado"
       description: >

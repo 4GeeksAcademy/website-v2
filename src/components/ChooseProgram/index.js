@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {Button, Colors} from '../Styling';
 import {Break} from '../Responsive'
 import {Row, Column} from '../Sections'
-import { navigate } from "gatsby"
+import {navigate} from "gatsby"
 import styled from 'styled-components';
 import {SessionContext} from '../../session.js'
 
@@ -27,62 +27,64 @@ export const Schedule = styled.small`
 `;
 const ChooseProgram = (props) => {
     const {setLocation} = React.useContext(SessionContext);
-    const [status, setStatus] = useState({ toggle: false, hovered: false })
-    const _Selector = (_p) => <Button 
-        shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)" 
-        padding="10px 30px" 
+    const [status, setStatus] = useState({toggle: false, hovered: false})
+    const _Selector = (_p) => <Button
+        shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
+        padding="10px 30px"
         maxWidth="250px"
-        onClick={() => _p.setStatus({ toggle: !_p.status.toggle })} 
-        color={Colors.blue} 
+        onClick={() => _p.setStatus({toggle: !_p.status.toggle})}
+        color={Colors.blue}
         textColor={Colors.white}
     >
         {_p.status.toggle ? props.openLabel : props.closeLabel}
     </Button>
     const Selector = props.selector || _Selector;
     return (
-        <ChooseWrap 
+        <ChooseWrap
             centered={props.centered}
             margin={props.margin}
             m_sm={props.m_sm}
             m_xs={props.m_xs}
             onMouseLeave={() => {
-                setStatus({ ...status, hovered: false });
+                setStatus({...status, hovered: false});
                 setTimeout(() => {
-                    setStatus(_status => ({ ..._status, toggle: _status.hovered }));
-                },300)
+                    setStatus(_status => ({..._status, toggle: _status.hovered}));
+                }, 300)
             }}
-            onMouseEnter={() => setStatus({ ...status, hovered: true })}
+            onMouseEnter={() => setStatus({...status, hovered: true})}
         >
             <Selector status={status} setStatus={setStatus} />
-            {status.toggle && 
-                <Row 
+            {status.toggle &&
+                <Row display="flex"
                     margin={props.margin}
                     m_sm={props.m_sm}
                     m_xs={props.m_xs}
-                    width="250px" 
-                    width_xs="100%" 
+                    width="250px"
+                    width_xs="100%"
                     width_sm="100%"
-                    align="center" 
-                    position="absolute" 
+                    justifyContent="center"
+                    marginLeft="0"
+                    marginRight="0"
+                    position="absolute"
                     right={props.right}
                     top={props.top}
                     left={props.left}
-                    zIndex="2" 
-                    background={Colors.white} 
-                    borderRadius={props.borderRadius} 
-                    shadow={props.shadow}
+                    zIndex="2"
+                    background={Colors.white}
+                    borderRadius={props.borderRadius}
+                    shadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
                 >
                     {Array.isArray(props.programs) && props.programs.map((item, index) => {
                         return (
-                            <Button 
+                            <Button
                                 key={index}
                                 font='"Lato", sans-serif'
                                 colorHover={Colors.lightBlue}
                                 onClick={() => {
-                                    if(item.location_bc_slug) setLocation(item.location_bc_slug)
+                                    if (item.location_bc_slug) setLocation(item.location_bc_slug)
                                     navigate(item.link)
-                                }} 
-                                textColor={Colors.gray} 
+                                }}
+                                textColor={Colors.gray}
                                 fontSize={"16px"}
                                 borderRadius=".75rem" padding="10px"
                             >
@@ -104,13 +106,13 @@ ChooseProgram.propTypes = {
     shadow: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.string
-      ])
-  };
-  ChooseProgram.defaultProps = {
+    ])
+};
+ChooseProgram.defaultProps = {
     selector: null,
     shadow: true,
     marginTop: "5px",
     marginLeft: "0",
     borderRadius: ".75rem",
-  }
+}
 export default ChooseProgram;
