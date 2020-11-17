@@ -8,7 +8,7 @@ import {StaticQuery, graphql} from 'gatsby';
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
-const Layout = ({children, seo, context}) => {
+const Layout = ({children, seo, context, withNavbar}) => {
   const { session } = React.useContext(SessionContext);
 
   return (
@@ -73,7 +73,7 @@ const Layout = ({children, seo, context}) => {
         return (
           <>
             <SEO {...seo} context={context} />
-            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
+            {withNavbar && <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />}
             <GlobalStyle />
             <>
               {children}
