@@ -241,7 +241,7 @@ query BlogQuery($file_name: String!, $lang: String!) {
             sub_heading
             image{
                 childImageSharp {
-                  fluid(maxWidth: 1500){
+                  fluid(maxWidth: 1500, quality: 100){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

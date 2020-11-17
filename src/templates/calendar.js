@@ -11,7 +11,7 @@ import LazyLoad from 'react-lazyload';
 import {Link} from 'gatsby'
 import {SessionContext} from '../session'
 
-const ListCard = ({image, onClick, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
+const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
   <Anchor to={link}>
     <Card
       overflow={`hidden`}
@@ -37,8 +37,7 @@ const ListCard = ({image, onClick, title, date, address, link, slug, applyButton
         marginLeft="0"
         marginRight="0"
         padding={`15px`}>
-        <Column size="12"
-          onClick={() => onClick(index)}>
+        <Column size="12">
           <Row marginBottom="1rem" display="flex">
             <H4
               fs_xs="18px"
@@ -98,9 +97,9 @@ const ListCard = ({image, onClick, title, date, address, link, slug, applyButton
           </Row>}
           {eventLink && eventText && <Row justifyContent={`end`} display="flex">
             <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center" display="flex">
-              <Link to={eventLink}>
+              <Anchor to={eventLink}>
                 <Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{eventText}</Button>
-              </Link>
+              </Anchor>
             </Div>
           </Row>}
         </Column>
@@ -202,6 +201,7 @@ const Calendar = (props) => {
             width="300px"
             m_sm="5px"
             maxWidth="100%"
+            shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
             options={console.log("catalog", data.cohorts.catalog) || data.cohorts.catalog}
             openLabel={academy ? "Campus: " + academy.label : "Select one academy"}
             closeLabel={academy ? "Campus: " + academy.label : "Select one academy"}
@@ -222,6 +222,7 @@ const Calendar = (props) => {
             width="300px"
             maxWidth="100%"
             m_sm="5px"
+            shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
             options={[
               {label: "Courses", value: "cohorts"},
               {label: "Events", value: "events"}
@@ -309,7 +310,7 @@ export const query = graphql`
             sub_heading
             image{
               childImageSharp {
-                fluid(maxWidth: 1500){
+                fluid(maxWidth: 2400, quality: 100){
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

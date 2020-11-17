@@ -63,6 +63,8 @@ const ChooseProgram = (props) => {
                     width_xs="100%"
                     width_sm="100%"
                     justifyContent="center"
+                    marginLeft="0"
+                    marginRight="0"
                     position="absolute"
                     right={props.right}
                     top={props.top}
@@ -70,7 +72,7 @@ const ChooseProgram = (props) => {
                     zIndex="2"
                     background={Colors.white}
                     borderRadius={props.borderRadius}
-                    shadow={props.shadow}
+                    shadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
                 >
                     {Array.isArray(props.programs) && props.programs.map((item, index) => {
                         return (

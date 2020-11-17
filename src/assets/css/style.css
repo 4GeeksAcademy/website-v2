@@ -242,3 +242,9 @@ a {
         right: 20px;
     }
 }
+a.faq-link {
+    color: #0097CE;
+}
+a.faq-link:hover {
+    text-decoration: underline;
+}
