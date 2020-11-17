@@ -14,7 +14,6 @@ import {SessionContext} from '../session.js'
 const Landing = (props) => {
   const {session, setLocation} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
-  const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
   const [components, setComponents] = React.useState({});
   const [inLocation, setInLocation] = React.useState("");
 
@@ -204,7 +203,7 @@ const Landing = (props) => {
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
           .map(name => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, yml: components[name], session, course, location: components.meta_info.utm_location})
+            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location })
           })
       }
     </>
@@ -481,4 +480,6 @@ export const query = graphql`
   }
 `;
 
-export default BaseRender(Landing);
+export default BaseRender(Landing, {
+  navbar: true
+});
