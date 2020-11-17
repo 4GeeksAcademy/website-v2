@@ -98,6 +98,7 @@ const Pricing = (props) => {
           variant="primary"
         />
         <PricesAndPayment
+          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
           openedLabel={yml.prices.opened_label}
           session={session}
           closedLabel={yml.prices.closed_label}
@@ -160,7 +161,7 @@ export const query = graphql`
                 tagline
                 image{
                   childImageSharp {
-                    fluid(maxWidth: 1200){
+                    fluid(maxWidth: 1600, quality: 100){
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -249,7 +250,7 @@ export const query = graphql`
               alt
               image {
                 childImageSharp {
-                  fluid(maxWidth: 800){
+                  fluid(maxWidth: 1200, quality: 100){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

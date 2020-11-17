@@ -261,7 +261,7 @@ export const query = graphql`
                 sub_heading
                 image {
                     childImageSharp {
-                    fluid(maxWidth: 800){
+                    fluid(maxWidth: 1200, quality: 100){
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -290,7 +290,7 @@ export const query = graphql`
                 contact_heading
                 image {
                     childImageSharp {
-                      fluid(maxWidth: 800){
+                      fluid(maxWidth: 800, quality: 100){
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }
@@ -309,7 +309,7 @@ export const query = graphql`
                 images{
                     path{
                         childImageSharp {
-                          fluid(maxWidth: 800){
+                          fluid(maxWidth: 800, quality: 100){
                             ...GatsbyImageSharpFluid_withWebp
                           }
                         }
