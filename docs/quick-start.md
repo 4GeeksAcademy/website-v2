@@ -46,9 +46,20 @@ This website has no database, all the data is hosted inside the `./src/data` dir
 
 > We've built [this amazing tool](https://dev.4geeksacademy.co/?edit) to help you identify what parts of the website are in which YML
 
-Pages
+### Pages
 
 The pages folder is almost empty because any page that needs translation will be be considered a "template" and it will be inside the `./src/templates` directory.
 
-Styling
+### Styling
 
+We use [Styled Components](https://styled-components.com/) for the entire website styling, no bootstrap, nothing else. I you are not familizar please take some time to understand how styled components work, these are the main folders you need to understand for styling:
+
+- Sections: Contains the Row, Column, Div and other mayor boxes used for the grid system.
+- Headings: Title, Paragraph, H1, H2, etc.
+- Styling: Other very common styling components like the Anchor, Tooltip, Styled Image, etc.
+
+All the other folders are separate componentes reused thoughout the website, each of those components has its own styles using styled components.
+
+### Components
+
+The `./src/components` folder contains most of the website code, everything is split into components that are heavily re-used on each `./src/template`.
