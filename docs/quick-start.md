@@ -67,3 +67,33 @@ All the other folders are separate componentes reused thoughout the website, eac
 ### Components
 
 The `./src/components` folder contains most of the website code, everything is split into components that are heavily re-used on each `./src/template`.
+
+## Data and Translations
+
+The website is multilangual, any file inside the `./src/data` probably needs a translation and you can see which language it has based on the file name:
+```
+🇪🇸 Spanish: ./src/data/pages/about-us.es.yml
+🇺🇸 English Version: ./src/data/pages/about-us.us.yml
+```
+
+The YMLs contain inside a list of all the strings used on each template, for example, this is just one small part of one of those YML files for a location:
+
+```yml
+meta_info:
+  slug: "downtown-miami-usa"
+  position: 1
+  title: "4Geeks Academy Miami - Bootcamp de programación en Miami, aprende a programar en Miami"
+  description: "null"
+  image: ""
+  keywords: "null"
+  redirects: []
+
+seo_title: "Bootcamp de Programación en Miami"
+header:
+  tagline: "4GEEKS ACADEMY IN MIAMI"
+  paragraph: "Miami is una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \\n El Career Support y Student Support es de por vida."
+  image: "../../../static/images/locations/miami-loc.jpg"
+  alt: ""
+```
+
+Normally each file starts with a "meta_info" section that describes SEO information like URL, title, description, etc. The `redirects` property is also very importnat because it specifies alternative website paths for the same content.
