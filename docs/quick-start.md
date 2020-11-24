@@ -4,11 +4,15 @@
 
 1. Technologies
 2. Installation
-3. Project structure
-  3.1. gatsby-node.js
-  3.2. gatsby-browser.js
-4. Organizing the components
-5. Organizing the YMLs
+3. Website Structure:  
+  3.1. Data. 
+  3.2. Pages. 
+  3.3. Styling. 
+  3.4. Components. 
+4. Data and Translations
+5. Configuration. 
+  5.1. gatsby-node.js. 
+  5.2. gatsby-browser.js. 
 
 ## Technologies
 
