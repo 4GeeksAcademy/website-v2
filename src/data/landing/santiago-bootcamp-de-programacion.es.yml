@@ -5,7 +5,7 @@ meta_info:
   title: "Bootcamp de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
   description: "La programación es escencial para tu éxito profesional, únete a 4Geeks Academy, el bootcamp de programación número uno de Chile."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Bootcamp de Programación, Bootcamp de Codigo, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Boortamp, 4Geeks Academy"
+  keywords: "Bootcamp de Programación, Bootcamp de Codigo, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
   
   template: "landing_a" # <--- choose your landing template
   redirects: [ # <--- URL redirections to avoid 404 errors
@@ -22,7 +22,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
-  motivation: "Llena el formulatio y te enviaremos la info en menos de 5 min"
+  motivation: "Llena el formulario y te enviaremos la info en menos de 5 min"
   button_label: Obtener malla y más información 
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -42,7 +42,7 @@ features:
     - No se requiere experiencia previa.
     - Horarios part-time y full-time. Online o Presencial.
     - Mentorias y career support de por vida.
-    - Un desarrollador jr. hace 900 mill CLP al año.
+    - Un desarrollador jr. hace $900.000 CLP al mes
 
 follow_bar:
   position: "top" # top, bottom, hidden
