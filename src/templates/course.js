@@ -17,6 +17,7 @@ import Modal from '../components/Modal';
 import TypicalDay from '../components/TypicalDay';
 import AlumniProjects from '../components/AlumniProjects';
 import ProgramSelector from '../components/ProgramSelector';
+import ProgramSVG from '../components/ProgramSVG';
 
 
 const Program = ({data, pageContext, yml}) => {
@@ -143,8 +144,9 @@ const Program = ({data, pageContext, yml}) => {
     <Wrapper
       margin="0 0 50px 0"
     >
-      <SyllabusSVG className="d-sm-none w-100" />
-      <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
+      <ProgramSVG lang={pageContext.lang} />
+      {/* <SyllabusSVG className="d-sm-none w-100" /> */}
+      <Column size="12" background="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
         <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
         <Row display="flex" padding="0px 40px" p_md="0 10px">
           <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">

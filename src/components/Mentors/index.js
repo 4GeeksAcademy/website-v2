@@ -10,15 +10,16 @@ const Over = styled.div`
     position: absolute;
     height: 250px;
     width: 100%;
-    bottom: 0;
+    z-index: 10;
+    top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.8);
     color: #f1f1f1;
     border-radius: 10px;
     transition: .5s ease;
-    padding: 10px 15px;
+    padding: 15px;
     color: white;
-    font-size: 20px;
+    font-size: 10px;
     text-align: center;
     opacity: 0;
     &:hover{
@@ -28,39 +29,43 @@ const Over = styled.div`
 
 const Mentors = props => {
     const data = useStaticQuery(graphql`
-        query myStaffQuery{
-            allStaffYaml {
-                edges {
-                  node {
-                    staff {
-                      name
-                      last_name
-                      nick_name
-                      bio
-                      slug
-                      job_title
-                      github
-                      linkdin
-                      twitter
-                      website
-                      image
-                      age
-                      location
-                      interests
-                      coding_skills
-                    }
-                  }
-                }
-              }
+    query myStaffQuery{
+        allStaffYaml {
+            edges {
+                node {
+                    fields {
+              lang
             }
-        `)
-    let staff = data.allStaffYaml.edges;
-
+                    staff {
+                        name
+                        last_name
+                        nick_name
+                        bio
+                        slug
+                        job_title
+                        github
+                        linkdin
+                        twitter
+                        website
+                        image
+                        age
+                        location
+                        interests
+                        coding_skills
+                    }
+                }
+            }
+        }
+    }
+    `)
+    let staff = data.allStaffYaml.edges.find(({node}) => node.fields.lang === props.lang);
+    if (staff) staff = staff.node;
     return (
+
         <Row github="/components/staff" display="flex">
-            {staff[0].node.staff.map((item, index) => {
+            {staff.staff.map((item, index) => {
                 return (
-                    <Column key={index} size_xs="12" size_sm="6" size_md="4" size="3" >
+                    <Column key={index} size_xs="12" size_sm="6" size_md="6" size_lg="6" size="4" >
                         <RoundImage
                             pos={`relative`}
                             opacity="1"
@@ -72,27 +77,17 @@ const Mentors = props => {
                             width="100"
                             move up={props.up}>
                             <Over>
-                                <Divider height="10%" />
-                                <H3 fs_xs="14px"
-                                    fs_sm="14px"
-                                    fs_md="14px"
-                                    fs_lg="14px"
-                                    fs_xl="18px"
+                                <H3
                                     margin="0"
                                     uppercase
                                     color={Colors.yellow}
                                 >{item.name}</H3>
-                                <H3 fs_xs="14px"
-                                    fs_sm="14px"
-                                    fs_md="14px"
-                                    fs_lg="14px"
-                                    fs_xl="18px"
+                                <H3
                                     margin="0"
                                     uppercase
                                     color={Colors.yellow}>{item.last_name}</H3>
                                 <Paragraph margin="5px 0" color={Colors.verylightGray}>{item.job_title}</Paragraph>
                                 <Paragraph margin="15px 0" color={Colors.lightGray}>{item.bio}</Paragraph>
-                                <Divider height="10%" />
                                 <a href={item.linkdin != '' ? `${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer nofollow"><Icon icon="arrowright" width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
                             </Over>
                         </RoundImage>
