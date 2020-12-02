@@ -182,9 +182,10 @@ const GeeksVsOthers = props => {
                                     </Paragraph>
                                   </Globe>}
                                 <span
+                                  style={{zIndex: "10"}}
                                   onMouseOver={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false), setOpenedIndex(null)}}
                                   onMouseOut={() => {setTooltip(!tooltip), setTooltipIndex(null), setTooltipOpacity(0), setGlobeTooltip(false)}}
-                                  onClick={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(0), setGlobeTooltip(false), setOpenedIndex(null)}}
+                                  onClick={() => {setTooltip(!tooltip), setTooltipIndex(index), setTooltipOpacity(1), setGlobeTooltip(false), setOpenedIndex(null)}}
                                 >
                                   <Icon icon="question" className="pointer" width="20" color={Colors.lightBlue} fill={Colors.lightBlue} />
                                 </span>
