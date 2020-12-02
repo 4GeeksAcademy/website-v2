@@ -6,7 +6,6 @@ import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} fr
 import {Title, H2, H3, H5, Span, Paragraph} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
 import {requestSyllabus} from "../actions";
-import SyllabusSVG from "../assets/images/syllabus.inline.svg";
 import {SessionContext} from '../session'
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import ProgramDetails from '../components/ProgramDetails';

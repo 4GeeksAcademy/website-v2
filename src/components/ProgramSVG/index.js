@@ -1,6 +1,5 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby';
-import {ReactComponent as ImageSVG} from '../../assets/images/syllabus.inline.svg';
 const ProgramSVG = ({lang}) => {
     const data = useStaticQuery(graphql`
     query myProgramQuery{
