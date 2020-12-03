@@ -21,6 +21,7 @@ walk(`${__dirname}/../data/`, function (err, files) {
     let slugs = {};
     _files.forEach(_path => {
         const yml = load(_path);
+        // const checkBioLength = yml.staff.filter(item => item.bio.length < 20)
         console.log(yml.staff)
         if (!yml) fail("Invalid YML syntax for " + _path)
     });
