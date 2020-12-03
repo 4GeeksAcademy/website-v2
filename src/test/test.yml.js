@@ -21,7 +21,7 @@ walk(`${__dirname}/../data/`, function (err, files) {
     let slugs = {};
     _files.forEach(_path => {
         const yml = load(_path);
-        console.log(yml)
+        console.log(yml.staff)
         if (!yml) fail("Invalid YML syntax for " + _path)
     });
     success("All YML have correct syntax")
