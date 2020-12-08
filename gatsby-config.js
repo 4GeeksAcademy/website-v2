@@ -116,7 +116,7 @@ module.exports = {
     },
     'gatsby-transformer-yaml',
     'gatsby-plugin-zeit-now',
-    'gatsby-plugin-meta-redirect',
+    // 'gatsby-plugin-meta-redirect',
     'gatsby-remark-reading-time',
     {
       resolve: `gatsby-plugin-sitemap`,
