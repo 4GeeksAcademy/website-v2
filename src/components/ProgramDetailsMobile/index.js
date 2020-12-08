@@ -19,7 +19,6 @@ const strings = {
 const ProgramDetailsMobile = (props) => {
     const [selected, setSelected] = useState({index: null, manual: false});
     const lang = props.lang || "us";
-    console.log("PROPS:", lang)
     if (!props.details) {
         console.log("Warning! Ignoring Program Details because it came null form the graphql query")
         return null;

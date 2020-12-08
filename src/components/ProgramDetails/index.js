@@ -36,7 +36,6 @@ const strings = {
 const ProgramDetails = (props) => {
     const [selected, setSelected] = useState({index: 0, manual: false});
     const lang = props.lang || "en";
-    console.log("LANG:", lang)
     if (!props.details) {
         console.log("Warning! Ignoring Program Details because it came null form the graphql query")
         return null;
