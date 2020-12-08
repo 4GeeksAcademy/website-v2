@@ -1,3 +1,4 @@
+
 var colors = require('colors')
 const {walk, load, empty, fail, success} = require("./_utils")
 
@@ -17,16 +18,11 @@ walk(`${__dirname}/../data/`, function (err, files) {
         f.indexOf('additional-redirects.yml') === -1 &&
         f.indexOf('call-to-actions.yml') === -1
     )
-    console.log("_files:", _files)
+
     let slugs = {};
     _files.forEach(_path => {
-        console.log("path", _path)
         const yml = load(_path);
-        // if (yml.staff != undefined) {
-        //     const check = yml.staff.filter(f => f.bio.length > 10)
-        //     console.log(check)
-        // }
         if (!yml) fail("Invalid YML syntax for " + _path)
     });
     success("All YML have correct syntax")
-});
+});     
