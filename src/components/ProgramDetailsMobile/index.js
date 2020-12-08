@@ -5,9 +5,21 @@ import {Colors} from '../Styling';
 import Card from '../Card';
 import Icon from '../Icon'
 
+const strings = {
+    us: {
+        "Projects": "Projects",
+        "Duration": "Duration"
+    },
+    es: {
+        "Projects": "Proyectos",
+        "Duration": "Duración"
+    }
+}
 
 const ProgramDetailsMobile = (props) => {
     const [selected, setSelected] = useState({index: null, manual: false});
+    const lang = props.lang || "us";
+    console.log("PROPS:", lang)
     if (!props.details) {
         console.log("Warning! Ignoring Program Details because it came null form the graphql query")
         return null;
@@ -78,7 +90,7 @@ const ProgramDetailsMobile = (props) => {
                                         fontWeight={`400`}
                                         align_sm={`left`}
                                     >
-                                        {`Projects`}
+                                        {strings[lang]["Projects"]}
                                     </H3>
                                 </Div>
                                 <Paragraph
@@ -94,7 +106,7 @@ const ProgramDetailsMobile = (props) => {
                                         fontWeight={`400`}
                                         align_sm={`left`}
                                     >
-                                        {`Duration`}
+                                        {strings[lang]["Duration"]}
                                     </H3>
                                 </Div>
                                 <Paragraph

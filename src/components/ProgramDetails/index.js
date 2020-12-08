@@ -36,6 +36,7 @@ const strings = {
 const ProgramDetails = (props) => {
     const [selected, setSelected] = useState({index: 0, manual: false});
     const lang = props.lang || "en";
+    console.log("LANG:", lang)
     if (!props.details) {
         console.log("Warning! Ignoring Program Details because it came null form the graphql query")
         return null;
@@ -176,11 +177,9 @@ const ProgramDetails = (props) => {
                                     </Div>
                                     <Div display="flex" flexDirection={`column`} >
                                         <Div display="flex" alignItems={`center`} margin={`5px 0`}>
-                                            {/* <Div> */}
                                             <H4 align="left" align_sm="left">
                                                 {strings[lang]["Projects"]}
                                             </H4>
-                                            {/* </Div> */}
                                         </Div>
 
                                         <Div display="flex" >
@@ -205,7 +204,7 @@ const ProgramDetails = (props) => {
                                     <Div display="flex" alignItems={`center`} margin={`5px 0`}>
 
                                         <H4 align="left" align_sm="left">
-                                            {`Duration`}
+                                            {strings[lang]["Duration"]}
                                         </H4>
 
                                     </Div>
