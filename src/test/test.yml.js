@@ -23,6 +23,7 @@ walk(`${__dirname}/../data/`, function (err, files) {
     _files.forEach(_path => {
         const yml = load(_path);
         if (!yml) fail("Invalid YML syntax for " + _path)
+        console.log("STAFF: ", yml.staff)
     });
     success("All YML have correct syntax")
 });     
