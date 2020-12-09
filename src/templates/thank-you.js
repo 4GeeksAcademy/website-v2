@@ -59,18 +59,16 @@ const ThankYou = (props) => {
         />
 
       </WrapperImage>
-      <Wrapper margin="0 0 50px 0">
+      <Wrapper margin="0 0 10px 0">
         <H2 margin="5px 0">{yml.content.title}</H2>
         {yml.content.message.split("\n").map((m, i) =>
           <Paragraph key={i} align="center">{m}</Paragraph>
         )}
-        <Column margin="50px 0 0 0" size="12" align="center">
-          <Link to="/blog"><Button width="150px" color={Colors.blue} textColor={Colors.white}>{yml.content.button}</Button></Link>
-        </Column>
+
       </Wrapper>
       <Wrapper margin="0 0 50px 0">
-        <H2 margin="10px 0">{yml.social.title}</H2>
-        {session.location != null && Array.isArray(session.location.socials) && session.location.socials.map((item, index) => {
+        <H2 margin="10px 0" fontSize="24px">{yml.social.title}</H2>
+        {session != undefined && session.location != null && Array.isArray(session.location.socials) && session.location.socials.map((item, index) => {
           return (
             <Row justifyContent="center" key={index} display="flex" >
               <Column size="8" size_sm="12" size_md="10" style={{position: "relative"}} >
@@ -95,6 +93,9 @@ const ThankYou = (props) => {
             </Row>
           )
         })}
+        <Column margin="50px 0 0 0" size="12" align="center">
+          <Link to="/blog"><Button outline width="150px" color={Colors.blue} textColor={Colors.white}>{yml.content.button}</Button></Link>
+        </Column>
       </Wrapper>
 
     </>
