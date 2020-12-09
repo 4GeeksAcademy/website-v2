@@ -17,7 +17,7 @@ header:
 button:
   syllabus_button_text: "REQUEST SYLLABUS" # <-- this will show everywhere in the website
   apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
-  
+
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
@@ -65,7 +65,6 @@ prices:
       content:
         price: "16% of Salary"
         price_info: "until fully paid, and only if you get the job"
-
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -156,6 +155,15 @@ address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
 zip_code: ""
 state: ""
 country: "Chile"
+socials:
+  - social_name: "Facebook"
+    social_link: "https://www.facebook.com/4geeksacademycl"
+  - social_name: "Twitter"
+    social_link: "https://www.twitter.com/4geeksacademycl"
+  - social_name: "Instagram"
+    social_link: "https://www.instagram.com/4geeksacademycl"
+  - social_name: "Meetup"
+    social_link: "https://www.meetup.com/4geeks-academy-chile"
 courses:
   - "Full-Time"
   - "Part-Time"

@@ -1,10 +1,10 @@
 meta_info:
-  slug: thank-you
+  slug: gracias
   title: "General Thank You - 4Geeks Academy"
   description: ""
   image: ""
   keywords: "codign bootcamp"
-  redirects: ["/thank", "/thank-you/apply", "/thank-you/more-info"]
+  redirects: []
 banner:
   tagline: "Thank You"
   sub_heading: ""
@@ -18,10 +18,6 @@ In the meantime, please read our blog.  It's full of important info that we are 
 Some articles that may interest you:"
   button: "Read our blog"
 social: 
-  title: "Follow Us"
+  title: "Síguenos"
   message: "Select where you like to follow us"
-  button_text: "Take me to"
-      
-      
-    
-  
+  button_text: "Llévame a"
