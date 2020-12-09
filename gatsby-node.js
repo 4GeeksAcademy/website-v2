@@ -22,7 +22,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     // curstom post types for the website
     if ([
         'MarkdownRemark', 'LeadFormYaml', 'NewsYaml', 'PartnerYaml', 'CredentialsYaml',
-        'FooterYaml', 'NavbarYaml', 'BadgesYaml', 'PageYaml', 'LandingYaml', 'CourseYaml',
+        'FooterYaml', 'NavbarYaml', 'CustomBarYaml', 'BadgesYaml', 'PageYaml', 'LandingYaml', 'CourseYaml',
         'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
         'TestimonialsYaml', 'GeeksVsOthersYaml', 'JobsStatisticsYaml',
         'Why4GeeksYaml', 'AlumniProjectsYaml', 'StaffYaml', 'ProgramSvgYaml', 'PricesAndPaymentYaml',
