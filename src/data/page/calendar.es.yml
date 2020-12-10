@@ -13,5 +13,5 @@ header:
 button:
     apply_button_text: "APLICAR"
     apply_button_link: "/aplica"
-    cohort_more_details_text: "DETTALLES"
+    cohort_more_details_text: "DETALLES"
     event_register_button_link: "DETALLES"
