@@ -21,9 +21,10 @@ walk(`${__dirname}/../data/`, function(err, files) {
 
     let slugs = {};
     _files.forEach(_path => {
-        const yml = load(_path);
+        const doc = load(_path);
+        const yml = doc.yaml;
         if(!yml) fail("Invalid YML syntax for "+_path)
-        else if(empty(yml.meta_info)) fail("Missing meta for "+_path)
+        else if(empty(yml.meta_info)) fail("Missing meta for "+_path, yml.meta_info)
         else{
             
             // look for duplicated slugs
