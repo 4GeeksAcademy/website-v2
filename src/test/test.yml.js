@@ -1,4 +1,5 @@
 var colors = require('colors')
+const fs = require('fs')
 const {walk, load, empty, fail, success} = require("./_utils")
 
 const metas = [ 
@@ -10,7 +11,7 @@ const metas = [
     { key: "redirects",  type: "array"}
 ]
 
-walk(`${__dirname}/../data/`, function(err, files) {
+walk(`${__dirname}/../data/`, async function(err, files) {
     if (err) fail("Error reding the YML files: ", err)
     const _files = files.filter(f => 
         (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1)&&
@@ -19,9 +20,24 @@ walk(`${__dirname}/../data/`, function(err, files) {
     )
 
     let slugs = {};
-    _files.forEach(_path => {
-        const yml = load(_path);
-        if(!yml) fail("Invalid YML syntax for "+_path)
-    });
+    for(let i = 0; i<_files.length;i++){
+        const _path = _files[i];
+        const doc = load(_path);
+        if(!doc.yaml) fail("Invalid YML syntax for "+_path)
+        const testPath = __dirname+"/yml/"+doc.name+".js";
+        if (fs.existsSync(testPath)) { 
+
+            console.log(`Running tests for ${doc.name} yml file`.blue)
+            const test = require(testPath);
+            try{
+                console.log(test);
+                test(doc)
+            }
+            catch(error){
+                console.log(`Error on file: ${_path}`.red)
+                fail(error.message || error)
+            }
+        } 
+    }
     success("All YML have correct syntax")
 });
