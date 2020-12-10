@@ -1,15 +1,15 @@
 meta_info:
-  slug: clases-de-programacion-santiago # <--- URL 4geeksacademy.com/us/landing/example
+  slug: curso-de-programacion-santiago # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Clases de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
-  description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, toma clases de programación con 4Geeks Academy."
+  title: "Curso de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
+  description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, haz un curso de programación con 4Geeks Academy."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
+  keywords: "Curso de programación, Curso de python, Cursos de Programación, Curso de React y Javascript, Curso de Informática, Coding Boortamp, 4Geeks Academy"
   
   template: "landing_a" # <--- choose your landing template
   redirects: [ # <--- URL redirections to avoid 404 errors
-    "/landing/clases-de-programacion-santiago",
+    "/landing/curso-de-programacion-santiago",
   ] 
   
   # Set a particular course or location to the landing page
@@ -22,13 +22,13 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
-  motivation: "Llena el formulario y te enviaremos la info en menos de 5 min"
+  motivation: "Llena el formulatio y te enviaremos la info en menos de 5 min"
   button_label: Obtener malla y más información 
   redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Clases de programación
+  tagline: Curso de programación
   sub_heading: "Aprende a programar y consige trabajo como desarrollador"
   image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.3)
@@ -42,7 +42,7 @@ features:
     - No se requiere experiencia previa.
     - Horarios part-time y full-time. Online o Presencial.
     - Mentorias y career support de por vida.
-    - Un desarrollador jr. hace $900.000 CLP al año.
+    - Un desarrollador jr. hace 900 mill CLP al año.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -73,7 +73,7 @@ badges:
 program_details:
   position: 3
   heading: "Domina Python, JS y React"
-  sub_heading: "Clases de programación sobre las tecnologías más usadas del mundo"
+  sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
 why_python:
   position: 4
@@ -82,8 +82,8 @@ why_python:
 
 geeks_vs_others:
   position: 6
-  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
-  paragraph: ""
+  heading: "¿Porqué somos tan exitosos?"
+  paragraph: "Un galardonado curso de programación"
   total_rows: 5
 
 why_4geeks:
@@ -99,7 +99,7 @@ who_is_hiring:
 
 alumni_projects:
   position: 9
-  heading: "Así podría ser tu proyecto final"
+  heading: "Así podría ser tu proyecto final del curso"
   sub_heading: "Proyectos hechos por graduados de la academia"
 
 # Possible layours: [two_column_left_image, two_column_right_image]

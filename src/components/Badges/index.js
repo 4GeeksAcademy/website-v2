@@ -37,7 +37,7 @@ export default ({location, lang, loading}) => {
     <Row github="/components/badges" display={`flex`}>
       {content.badges.map((l, i) => (
         <Column margin="auto" style={{whiteSpace: "nowrap", height: "100px"}} key={i} size="3" size_md="6">
-          <a href={l.url || "#"} target="_blank" rel="noopener noreferrer nofollow">
+          <a href={l.url != "" && l.url} target={l.url != "" && "_blank"} rel={l.url != "" && "noopener noreferrer nofollow"}>
             <Img
               style={{height: "100%"}}
               imgStyle={{objectFit: "contain"}}
