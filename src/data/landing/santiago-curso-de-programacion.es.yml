@@ -5,7 +5,7 @@ meta_info:
   title: "Curso de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
   description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, haz un curso de programación con 4Geeks Academy."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Curso de programación, Curso de python, Cursos de Programación, Curso de React y Javascript, Curso de Informática, Coding Boortamp, 4Geeks Academy"
+  keywords: "Curso de programación, Curso de python, Cursos de Programación, Curso de React y Javascript, Curso de Informática, Coding Bootcamp, 4Geeks Academy"
   
   template: "landing_a" # <--- choose your landing template
   redirects: [ # <--- URL redirections to avoid 404 errors
@@ -22,7 +22,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
-  motivation: "Llena el formulatio y te enviaremos la info en menos de 5 min"
+  motivation: "Llena el formulario y te enviaremos la info en menos de 5 min"
   button_label: Obtener malla y más información 
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -42,7 +42,7 @@ features:
     - No se requiere experiencia previa.
     - Horarios part-time y full-time. Online o Presencial.
     - Mentorias y career support de por vida.
-    - Un desarrollador jr. hace 900 mill CLP al año.
+    - Un desarrollador jr. hace $900.000 CLP al mes
 
 follow_bar:
   position: "top" # top, bottom, hidden

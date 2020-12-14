@@ -8,7 +8,7 @@ import Icon from "../Icon";
 
 const Over = styled.div`
     position: absolute;
-    height: 250px;
+    height: 270px;
     width: 100%;
     z-index: 10;
     top: 0;
@@ -64,8 +64,9 @@ const Mentors = props => {
 
         <Row github="/components/staff" display="flex">
             {staff.staff.map((item, index) => {
+                console.log(`${item.name}: ${item.bio && item.bio.length}`)
                 return (
-                    <Column key={index} size_xs="12" size_sm="6" size_md="6" size_lg="6" size="4" >
+                    <Column key={index} size_xs="12" size_sm="12" size_md="6" size_lg="6" size="4" >
                         <RoundImage
                             pos={`relative`}
                             opacity="1"
@@ -73,7 +74,7 @@ const Mentors = props => {
                             url={item.image}
                             bsize="cover"
                             border="10px"
-                            height="250px"
+                            height="270px"
                             width="100"
                             move up={props.up}>
                             <Over>
@@ -87,8 +88,16 @@ const Mentors = props => {
                                     uppercase
                                     color={Colors.yellow}>{item.last_name}</H3>
                                 <Paragraph margin="5px 0" color={Colors.verylightGray}>{item.job_title}</Paragraph>
-                                <Paragraph margin="15px 0" color={Colors.lightGray}>{item.bio}</Paragraph>
-                                <a href={item.linkdin != '' ? `${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer nofollow"><Icon icon="arrowright" width="32" color={Colors.yellow} fill={Colors.yellow} /></a>
+                                <Paragraph
+                                    fontSize="14px"
+                                    fs_lg="16px"
+                                    margin="15px 0 5px 0"
+                                    color={Colors.lightGray}>
+                                    {item.bio}
+                                </Paragraph>
+                                <a href={item.linkdin != '' ? `${item.linkdin}` : "#"} target="_blank" rel="noopener noreferrer nofollow">
+                                    <Icon icon="arrowright" width="32" color={Colors.yellow} fill={Colors.yellow} />
+                                </a>
                             </Over>
                         </RoundImage>
                     </Column>
