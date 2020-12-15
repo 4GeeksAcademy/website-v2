@@ -247,6 +247,24 @@ a.faq-link {
 }
 a.faq-link:hover {
     text-decoration: underline;
+    cursor: pointer;
+}
+.ul-privacy{
+    padding-left: 15px;
+    list-style: none;
+    margin: 10px 0;
+}
+.ul-privacy li::before{
+    content: "\2022";
+    color:#0097CE;
+    margin-right: 10px;
+}
+.ul-privacy li{
+    margin: 3px 0;
+}
+.bold-privacy-text{
+    font-weight: 700;
+    color: black;
 }
 .checkbox-container {
     display: block;
