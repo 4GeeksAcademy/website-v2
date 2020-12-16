@@ -8,7 +8,7 @@ import Icon from "../Icon";
 
 const Over = styled.div`
     position: absolute;
-    height: 270px;
+    height: 280px;
     width: 100%;
     z-index: 10;
     top: 0;
@@ -74,7 +74,7 @@ const Mentors = props => {
                             url={item.image}
                             bsize="cover"
                             border="10px"
-                            height="270px"
+                            height="280px"
                             width="100"
                             move up={props.up}>
                             <Over>
