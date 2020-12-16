@@ -22,7 +22,7 @@ const ShadowedRow = styled.div`
     display: ${props => props.hide ? "none" : 'block'};
 `;
 const Centered = styled.div`
-    max-width: 650px;
+    max-width: 750px;
     display: flex;
     margin: auto;
 `;
@@ -91,7 +91,10 @@ const CustomBar = ({upcomingPath, position, showOnScrollPosition, button, lang})
     return (<ShadowedRow width="100%" position={position} hide={!show}>
         <Centered>
             <Center>
-                <P1 fontSize="30px">{button.heading}</P1>
+                {button.heading.split("\n").map((m, i) =>
+                    <P1 fontSize="30px">{m}</P1>
+                    //   <Paragraph key={i} align="center">{m}</Paragraph>
+                )}
             </Center>
             <Right>
                 <Link to={button.link_to}><Button color={Colors.red} fs_sm="11px" textColor={Colors.white}>{button.button_text}</Button></Link>
