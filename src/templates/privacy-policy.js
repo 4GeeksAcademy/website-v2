@@ -7,7 +7,6 @@ import BaseRender from './_baseLayout';
 
 const Privacy = (props) => {
   const {data, pageContext, yml} = props;
-  console.log("Privacy: ", yml)
   return (<Wrapper
     github="/components/privacy"
     border="bottom"
