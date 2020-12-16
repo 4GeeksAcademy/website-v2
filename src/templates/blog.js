@@ -22,7 +22,21 @@ const Blog = ({data, pageContext, yml}) => {
 
         return [year, month, day].join('-');
     }
-
+    function OrganizeColumns(arr){
+        let posts = [[],[],[]];
+        for(let i = 0; i < arr.length; i += 3){
+            posts[0].push(arr[i])
+        }
+        for(let i = 1; i < arr.length; i += 3){
+            posts[1].push(arr[i])
+        }
+        for(let i = 2; i < arr.length; i += 3){
+            posts[2].push(arr[i])
+        }
+        return posts;
+    }
+    const blog_posts = OrganizeColumns(data.featured.edges);
+    const story_posts = OrganizeColumns(data.posts.edges.filter(post => post.node.frontmatter.status === "published"))
     return (
         <>
             <WrapperImage
@@ -60,7 +74,147 @@ const Blog = ({data, pageContext, yml}) => {
                 <Divider height="50px" />
                 <Row display="flex" github={`/blog`}>
                     <div className="card-columns" >
-                        {data.featured.edges.map((item, i) => {
+                        {blog_posts[0].map((item, i) => {
+                            return (
+                                <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
+                                    {item.node.frontmatter.image &&
+                                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                                            <LazyLoad height={10} scroll={true} once={true}>
+                                                <RoundImage
+                                                    url={item.node.frontmatter.image}
+                                                    bsize="cover"
+                                                    mb="10px"
+                                                    border="1.25rem"
+                                                    position="center"
+                                                    width="100%"
+                                                    height="140px"
+                                                    h_lg="140px"
+                                                    h_md="120px"
+                                                    h_sm="200px"
+                                                    h_xs="150px"
+                                                />
+                                            </LazyLoad>
+                                        </Link>
+                                    }
+                                    <Row display="flex" justifyContent="around" >
+                                        <Column size size="12" alignSelf="center" align="left">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
+                                                align="left" align_sm="left"
+                                                uppercase
+                                                fs_xs="20px"
+                                                fs_sm="24px"
+                                                fs_md="16px"
+                                                fs_lg="20px"
+                                                fontSize="22px"
+                                            >{item.node.frontmatter.title}</H4></Link>
+                                        </Column>
+                                    </Row>
+                                    <Row display="flex" height="auto">
+                                        <Column size="12" align="center">
+                                            <Paragraph color="gray" align="left" margin="10px 0">{item.node.frontmatter.excerpt}</Paragraph>
+                                        </Column>
+                                    </Row>
+                                    <Row display="flex" height="auto" justifyContent="around">
+                                        <Column size="1" alignSelf="center">
+                                            <LazyLoad scroll={true} height={30} once={true}>
+                                                <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
+                                            </LazyLoad>
+                                        </Column>
+                                        <Column size="8" alignSelf="center">
+                                            <Paragraph
+                                                color={Colors.gray}
+                                                align="left"
+                                                fontSize="12px"
+                                                lineHeight="20px">
+                                                {`${item.node.frontmatter.author} `}
+                                            </Paragraph>
+                                            <Paragraph
+                                                color={Colors.gray} align="left" fontSize="12px"
+                                                lineHeight="20px">
+                                                {`${GetFormattedDate(item.node.frontmatter.date)}`}
+                                            </Paragraph>
+                                        </Column>
+                                        <Column size="2" align="end">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                        </Column>
+                                    </Row>
+
+                                </Column>
+                            )
+                        })}
+                    </div>
+                    <div className="card-columns" >
+                        {blog_posts[1].map((item, i) => {
+                            return (
+                                <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
+                                    {item.node.frontmatter.image &&
+                                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                                            <LazyLoad height={10} scroll={true} once={true}>
+                                                <RoundImage
+                                                    url={item.node.frontmatter.image}
+                                                    bsize="cover"
+                                                    mb="10px"
+                                                    border="1.25rem"
+                                                    position="center"
+                                                    width="100%"
+                                                    height="140px"
+                                                    h_lg="140px"
+                                                    h_md="120px"
+                                                    h_sm="200px"
+                                                    h_xs="150px"
+                                                />
+                                            </LazyLoad>
+                                        </Link>
+                                    }
+                                    <Row display="flex" justifyContent="around" >
+                                        <Column size size="12" alignSelf="center" align="left">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
+                                                align="left" align_sm="left"
+                                                uppercase
+                                                fs_xs="20px"
+                                                fs_sm="24px"
+                                                fs_md="16px"
+                                                fs_lg="20px"
+                                                fontSize="22px"
+                                            >{item.node.frontmatter.title}</H4></Link>
+                                        </Column>
+                                    </Row>
+                                    <Row display="flex" height="auto">
+                                        <Column size="12" align="center">
+                                            <Paragraph color="gray" align="left" margin="10px 0">{item.node.frontmatter.excerpt}</Paragraph>
+                                        </Column>
+                                    </Row>
+                                    <Row display="flex" height="auto" justifyContent="around">
+                                        <Column size="1" alignSelf="center">
+                                            <LazyLoad scroll={true} height={30} once={true}>
+                                                <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
+                                            </LazyLoad>
+                                        </Column>
+                                        <Column size="8" alignSelf="center">
+                                            <Paragraph
+                                                color={Colors.gray}
+                                                align="left"
+                                                fontSize="12px"
+                                                lineHeight="20px">
+                                                {`${item.node.frontmatter.author} `}
+                                            </Paragraph>
+                                            <Paragraph
+                                                color={Colors.gray} align="left" fontSize="12px"
+                                                lineHeight="20px">
+                                                {`${GetFormattedDate(item.node.frontmatter.date)}`}
+                                            </Paragraph>
+                                        </Column>
+                                        <Column size="2" align="end">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                        </Column>
+                                    </Row>
+
+                                </Column>
+                            )
+                        })}
+                    </div>
+                    <div className="card-columns" >
+                        {blog_posts[2].map((item, i) => {
                             return (
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image &&
@@ -150,7 +304,143 @@ const Blog = ({data, pageContext, yml}) => {
                 <Divider height="50px" />
                 <Row display="flex">
                     <div className="card-columns" >
-                        {data.posts.edges.filter(post => post.node.frontmatter.status === "published").map((item, i) => {
+                        {story_posts[0].map((item, i) => {
+                            return (
+                                <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
+                                    {item.node.frontmatter.image != null ?
+                                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                                            <LazyLoad scroll={true} height={200} width="100%" once={true}>
+                                                <RoundImage
+                                                    url={item.node.frontmatter.image}
+                                                    bsize="cover"
+                                                    mb="10px"
+                                                    border="1.25rem"
+                                                    position="center"
+                                                    width="100%"
+                                                    h_lg="140px"
+                                                    h_md="120px"
+                                                    h_sm="200px"
+                                                    h_xs="150px"
+                                                />
+                                            </LazyLoad>
+                                        </Link> : null}
+                                    <Row display="flex" justifyContent="around" >
+
+                                        <Column size size="12" alignSelf="center" align="left">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
+                                                uppercase
+                                                fs_xs="20px"
+                                                fs_sm="24px"
+                                                fs_md="16px"
+                                                fs_lg="20px"
+                                                fontSize="22px"
+                                            >{item.node.frontmatter.title}</H4></Link>
+                                        </Column>
+                                    </Row>
+                                    <Row display="flex" height="auto">
+                                        <Column size="12" align="center">
+                                            <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{item.node.frontmatter.excerpt}</Paragraph>
+                                        </Column>
+                                    </Row>
+                                    <Row display="flex" height="auto" justifyContent="around">
+                                        <Column size="1" alignSelf="center">
+                                            <LazyLoad scroll={true} height={30} once={true}>
+                                                <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
+                                            </LazyLoad>
+                                        </Column>
+                                        <Column size="8" alignSelf="center">
+                                            <Paragraph color={Colors.gray} align="left"
+                                                fs_xs="12px"
+                                                fs_sm="12px"
+                                                fs_md="10px"
+                                                fs_lg="12px"
+                                                fs_xl="12px" lineHeight="20px">{`${item.node.frontmatter.author} `}</Paragraph>
+                                            <Paragraph color={Colors.gray} align="left" fs_xs="12px"
+                                                fs_sm="12px"
+                                                fs_md="10px"
+                                                fs_lg="12px"
+                                                fs_xl="12px" lineHeight="20px">{`${GetFormattedDate(item.node.frontmatter.date)}`}</Paragraph>
+                                            {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
+                                        </Column>
+                                        <Column size="2" align="end">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                        </Column>
+                                    </Row>
+
+                                </Column>
+                            )
+                        })}
+                    </div>
+                    <div className="card-columns" >
+                        {story_posts[1].map((item, i) => {
+                            return (
+                                <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
+                                    {item.node.frontmatter.image != null ?
+                                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                                            <LazyLoad scroll={true} height={200} width="100%" once={true}>
+                                                <RoundImage
+                                                    url={item.node.frontmatter.image}
+                                                    bsize="cover"
+                                                    mb="10px"
+                                                    border="1.25rem"
+                                                    position="center"
+                                                    width="100%"
+                                                    h_lg="140px"
+                                                    h_md="120px"
+                                                    h_sm="200px"
+                                                    h_xs="150px"
+                                                />
+                                            </LazyLoad>
+                                        </Link> : null}
+                                    <Row display="flex" justifyContent="around" >
+
+                                        <Column size size="12" alignSelf="center" align="left">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
+                                                uppercase
+                                                fs_xs="20px"
+                                                fs_sm="24px"
+                                                fs_md="16px"
+                                                fs_lg="20px"
+                                                fontSize="22px"
+                                            >{item.node.frontmatter.title}</H4></Link>
+                                        </Column>
+                                    </Row>
+                                    <Row display="flex" height="auto">
+                                        <Column size="12" align="center">
+                                            <Paragraph color="gray" align="left" margin="10px 0" fontSize="12px">{item.node.frontmatter.excerpt}</Paragraph>
+                                        </Column>
+                                    </Row>
+                                    <Row display="flex" height="auto" justifyContent="around">
+                                        <Column size="1" alignSelf="center">
+                                            <LazyLoad scroll={true} height={30} once={true}>
+                                                <RoundImage border="100%" width="30px" height="30px" bsize="contain" url={item.node.frontmatter.avatar} />
+                                            </LazyLoad>
+                                        </Column>
+                                        <Column size="8" alignSelf="center">
+                                            <Paragraph color={Colors.gray} align="left"
+                                                fs_xs="12px"
+                                                fs_sm="12px"
+                                                fs_md="10px"
+                                                fs_lg="12px"
+                                                fs_xl="12px" lineHeight="20px">{`${item.node.frontmatter.author} `}</Paragraph>
+                                            <Paragraph color={Colors.gray} align="left" fs_xs="12px"
+                                                fs_sm="12px"
+                                                fs_md="10px"
+                                                fs_lg="12px"
+                                                fs_xl="12px" lineHeight="20px">{`${GetFormattedDate(item.node.frontmatter.date)}`}</Paragraph>
+                                            {/* <Paragraph color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{`${post.fields.readingTime.text} read`}</Paragraph> */}
+                                        </Column>
+                                        <Column size="2" align="end">
+                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                        </Column>
+                                    </Row>
+
+                                </Column>
+                            )
+                        })}
+                    </div>
+                    <div className="card-columns" >
+                        {story_posts[2].map((item, i) => {
                             return (
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image != null ?
