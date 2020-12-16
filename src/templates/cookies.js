@@ -4,7 +4,7 @@ import {Title, H2, H3, H4, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, RoundImage} from '../components/Styling';
 import BaseRender from './_baseLayout';
 
-const Terms = (props) => {
+const Cookies = (props) => {
     const {data, pageContext, yml} = props;
     return (<Wrapper
         // github="/components/privacy"
@@ -39,7 +39,7 @@ const Terms = (props) => {
     )
 };
 export const query = graphql`
-    query TermsQuery($file_name: String!, $lang: String!) {
+    query CookiesQuery($file_name: String!, $lang: String!) {
       allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
         edges{
           node{
@@ -74,4 +74,4 @@ export const query = graphql`
       
     }
   `;
-export default BaseRender(Terms);
+export default BaseRender(Cookies);
