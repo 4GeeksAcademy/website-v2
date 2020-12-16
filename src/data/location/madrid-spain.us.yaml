@@ -98,24 +98,24 @@ prices:
           paymentInfo: "per month + 600€ up-front"
           provider: "Zank"
           logo: "/images/zank.png"
-          message: "Ask about our scholarships compatible with financing plans"  
+          message: "Ask about our scholarships compatible with financing plans"
         - months: "12 mo"
           payment: "477,14€"
           paymentInfo: "per month + 600€ up-front"
           provider: "Zank"
           logo: "/images/zank.png"
-          message: "Ask about our scholarships compatible with financing plans"        
+          message: "Ask about our scholarships compatible with financing plans"
         - months: "6 mo"
           payment: "928,96€"
           paymentInfo: "per month + 600€ up-front"
           provider: "Zank"
-          logo: "/images/zank.png"   
+          logo: "/images/zank.png"
           message: "Ask about our scholarships compatible with financing plans"
         - months: "3 mo"
           payment: "2.000€"
           paymentInfo: "3 free-interest installments"
           provider: "4Geeks"
-          logo: 
+          logo:
           message: "Ask about our scholarships compatible with financing plans"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
@@ -161,7 +161,7 @@ prices:
           paymentInfo: "per month + 500€ up-front"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"
-          message: "Ask about our scholarships compatible with financing plans"  
+          message: "Ask about our scholarships compatible with financing plans"
         - months: "12 mo"
           payment: "432,90€"
           paymentInfo: "per month + 500€ up-front"
@@ -173,7 +173,7 @@ prices:
           paymentInfo: "per month + 500€ up-front"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"
-          message: "Ask about our scholarships compatible with financing plans"          
+          message: "Ask about our scholarships compatible with financing plans"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -198,6 +198,15 @@ address: "Edison 3"
 zip_code: "28006"
 state: "Madrid"
 country: "Spain"
+socials:
+  - social_name: "Facebook"
+    social_link: "https://www.facebook.com/4geeksacademyes"
+  - social_name: "Twitter"
+    social_link: "https://www.twitter.com/4geeksacademyes"
+  - social_name: "Instagram"
+    social_link: "https://www.instagram.com/4geeksacademyes"
+  - social_name: "Meetup"
+    social_link: "https://www.meetup.com/4geeks-academy-madrid"
 courses:
   - "Full-Time"
   - "Part-Time"

@@ -176,11 +176,9 @@ const ProgramDetails = (props) => {
                                     </Div>
                                     <Div display="flex" flexDirection={`column`} >
                                         <Div display="flex" alignItems={`center`} margin={`5px 0`}>
-                                            {/* <Div> */}
                                             <H4 align="left" align_sm="left">
                                                 {strings[lang]["Projects"]}
                                             </H4>
-                                            {/* </Div> */}
                                         </Div>
 
                                         <Div display="flex" >
@@ -205,7 +203,7 @@ const ProgramDetails = (props) => {
                                     <Div display="flex" alignItems={`center`} margin={`5px 0`}>
 
                                         <H4 align="left" align_sm="left">
-                                            {`Duration`}
+                                            {strings[lang]["Duration"]}
                                         </H4>
 
                                     </Div>

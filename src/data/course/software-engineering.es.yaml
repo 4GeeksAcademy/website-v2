@@ -35,9 +35,9 @@ details:
   heading: DETALLES DEL PROGRAMA
   sub_heading: "Part Time"
   left_labels:
-    description: "DESCRIPTION:"
-    projects: "PROJECTS:"
-    duration: "DURATION:"
+    description: "DESCRIPCION:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
     skills: "Skills / Weeks:"
   details_modules:
     - module_name: "FRONT"

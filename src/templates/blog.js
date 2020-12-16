@@ -4,7 +4,7 @@ import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/H
 import {Container, Row, Column, Divider, Wrapper, WrapperImage} from '../components/Sections'
 import {RoundImage, Colors} from '../components/Styling'
 import LazyLoad from 'react-lazyload';
-import BaseRender from './_baseLayout'
+import BaseBlogRender from './_baseBlogLayout'
 import Icon from '../components/Icon'
 
 
@@ -598,4 +598,4 @@ query BlogQuery($file_name: String!, $lang: String!) {
 
 
 `
-export default BaseRender(Blog);
+export default BaseBlogRender(Blog);
