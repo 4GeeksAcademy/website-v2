@@ -35,17 +35,17 @@ sections:
     text: "Listar los nombres de las cookies, tipo, propietario, función y vencimiento, por ejemplo: 
     
     <ul class='ul-privacy'>
-      <li class='li-privacy-link' >PHPSESSID: cookie técnica y estrictamente necesaria que contiene el identificador de la sesión. Se elimina al cerrar el navegador. </li>
-      <li class='li-privacy-link' >_lang: cookie técnica y estrictamente necesaria que contiene el idioma de la sesión. Se elimina al cerrar el navegador. </li>
-      <li class='li-privacy-link' >ac_cookies: cookie técnica y estrictamente necesaria que contiene el valor de si se ha aceptado la instalación de cookies. Caduca en 1 año desde la última actualización.</li>
-      <li class='li-privacy-link' >_ga: cookie de Google Analytics que habilita la función de control de visitas únicas. La primera vez que un usuario entre en el sitio web a través de un navegador se instalará esta cookie. Cuando este usuario vuelva a entrar en la web con el mismo navegador, la cookie considerará que es el mismo usuario. Solo en el caso de que el usuario cambie de navegador, se considerará otro usuario. Caduca a los 2 años desde la última actualización.</li>
-      <li class='li-privacy-link' >_gat: Esta cookie se asocia con Google Analytics Universal. Se utiliza para limitar la velocidad de petición - la limitación de la recogida de datos en los sitios de alto tráfico. Caduca a los 10 minutos.</li>
-      <li class='li-privacy-link' >_utma: cookie de Google Analytics que registra la fecha de la primera y última vez que el usuario vistió el sitio web. Caduca a los 2 años desde la última actualización.</li>
-      <li class='li-privacy-link' >_utmb: cookie de Google Analytics que registra la hora de llegada a la página web. Caduca a los 30 minutos desde la última actualización.</li>
-      <li class='li-privacy-link' >_utmc: cookie de Google Analytics utilizada para la interoperabilidad con el código de seguimiento urchin.js. Se elimina al cerrar el navegador.</li>
-      <li class='li-privacy-link' >_utmt: cookie de Google Analytics. Esta cookie se utiliza para procesar el tipo de solicitud pedida por el usuario. Caduca al finalizar la sesión.</li>
-      <li class='li-privacy-link' >_utmv: cookie de Google Analytics. Esta cookie se utiliza para segmentar datos demográficos. Caduca al finalizar la sesión.</li>
-      <li class='li-privacy-link' >_utmz: cookie de Google Analytics que almacena la fuente de tráfico o una campaña para explicar cómo el usuario llegó al sitio web. Caduca a los 6 meses desde la última actualización.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>PHPSESSID:</span> cookie técnica y estrictamente necesaria que contiene el identificador de la sesión. Se elimina al cerrar el navegador. </li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_lang:</span> cookie técnica y estrictamente necesaria que contiene el idioma de la sesión. Se elimina al cerrar el navegador. </li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>ac_cookies:</span> cookie técnica y estrictamente necesaria que contiene el valor de si se ha aceptado la instalación de cookies. Caduca en 1 año desde la última actualización.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_ga:</span> cookie de Google Analytics que habilita la función de control de visitas únicas. La primera vez que un usuario entre en el sitio web a través de un navegador se instalará esta cookie. Cuando este usuario vuelva a entrar en la web con el mismo navegador, la cookie considerará que es el mismo usuario. Solo en el caso de que el usuario cambie de navegador, se considerará otro usuario. Caduca a los 2 años desde la última actualización.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_gat:</span> Esta cookie se asocia con Google Analytics Universal. Se utiliza para limitar la velocidad de petición - la limitación de la recogida de datos en los sitios de alto tráfico. Caduca a los 10 minutos.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utma:</span> cookie de Google Analytics que registra la fecha de la primera y última vez que el usuario vistió el sitio web. Caduca a los 2 años desde la última actualización.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmb:</span> cookie de Google Analytics que registra la hora de llegada a la página web. Caduca a los 30 minutos desde la última actualización.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmc:</span> cookie de Google Analytics utilizada para la interoperabilidad con el código de seguimiento urchin.js. Se elimina al cerrar el navegador.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmt:</span> cookie de Google Analytics. Esta cookie se utiliza para procesar el tipo de solicitud pedida por el usuario. Caduca al finalizar la sesión.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmv:</span> cookie de Google Analytics. Esta cookie se utiliza para segmentar datos demográficos. Caduca al finalizar la sesión.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmz:</span> cookie de Google Analytics que almacena la fuente de tráfico o una campaña para explicar cómo el usuario llegó al sitio web. Caduca a los 6 meses desde la última actualización.</li>
     </ul>
     
     "
