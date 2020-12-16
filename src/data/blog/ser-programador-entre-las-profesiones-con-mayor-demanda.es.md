@@ -7,7 +7,7 @@ link: https://www.4geeksacademy.co/es/ser-programador-entre-las-profesiones-con-
 slug: ser-programador-entre-las-profesiones-con-mayor-demanda
 title: Ser Programador… Entre las profesiones con mayor demanda
 avatar: "/images/staff/marcelo.jpeg"
-image: ""
+image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/1-1.jpg"
 wordpress_id: 1184
 categories:
 - Aprendiendo a desarrollar
@@ -33,7 +33,7 @@ Si le sumamos a esto que el mundo globalizado, interconectado ha cambiado la man
 
 En algunos estudios realizados sobre los oficios más demandados durante 2015, varios coinciden en el **top ten**, es decir, los 10 más buscados. El de desarrollador ocupó el segundo y el tercer lugar.
 
-El Centro de Estudios CEAC, un centro de enseñanza privada español, elaboró un [**ranking**](http://infobae.com/ranking-a5860)** **de los 10 empleos más demandados en todo el mundo en 2015:
+El Centro de Estudios CEAC, un centro de enseñanza privada español, elaboró un [**ranking**](http://infobae.com/ranking-a5860) de los 10 empleos más demandados en todo el mundo en 2015:
 
 
 
@@ -68,7 +68,7 @@ El Centro de Estudios CEAC, un centro de enseñanza privada español, elaboró u
   19. Ejecutivos de Marketing.
 
 
-El Departamento de Trabajo de Estados Unidos, realizó también **_[_un ránking de las carreras_](http://noticias.universia.es/practicas-empleo/noticia/2014/02/12/1081179/20-carreras-mayor-futuro-laboral.html) _**con mayor proyección hasta el 2022. El desarrollador también se ubica de 3ro:
+El Departamento de Trabajo de Estados Unidos, realizó también [**un ránking de las carreras**](http://noticias.universia.es/practicas-empleo/noticia/2014/02/12/1081179/20-carreras-mayor-futuro-laboral.html) con mayor proyección hasta el 2022. El desarrollador también se ubica de 3ro:
 
 
 
