@@ -7,11 +7,12 @@ import Icon from '../components/Icon'
 import Select from '../components/Select'
 import BaseRender from './_baseLayout'
 import dayjs from "dayjs"
+import 'dayjs/locale/de'
 import LazyLoad from 'react-lazyload';
 import {Link} from 'gatsby'
 import {SessionContext} from '../session'
 
-const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
+const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText, context}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
   <Anchor to={link}>
     <Card
       overflow={`hidden`}
@@ -50,15 +51,25 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
           </Row>
           <Row marginBottom=".2rem" alignItems={`center`} display="flex">
             <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
-            <Paragraph
+            {context == "us" ? <Paragraph
               margin={`0 0 0 10px`}
               fs_xs="18px"
               fs_sm="18px"
               fs_md="9px"
               fs_lg="11px"
               fs_xl="14px">
-              {dayjs(date).add(5, "hour").format("ddd, DD MMM YYYY")}
+              {dayjs(date).add(5, "hour").locale("en").format("ddd, DD MMM YYYY")}
             </Paragraph>
+            : <Paragraph
+              margin={`0 0 0 10px`}
+              fs_xs="18px"
+              fs_sm="18px"
+              fs_md="9px"
+              fs_lg="11px"
+              fs_xl="14px">
+              {dayjs(date).add(5, "hour").locale("es").format("ddd, DD MMM YYYY")}
+            </Paragraph>}
+            
           </Row>
           <Row marginBottom=".2rem" alignItems={`center`} display="flex">
             <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
@@ -211,7 +222,7 @@ const Calendar = (props) => {
                 ...data,
                 [filterType.value]: {
                   ...data[filterType.value],
-                  filtered: data[filterType.value].all.filter(elm => elm.academy.slug === opt.value)
+                  filtered: opt.label !== 'All Locations' ? data[filterType.value].all.filter(elm => elm.academy.slug === opt.value) : data[filterType.value].all
                 }
               });
             }}
@@ -255,7 +266,7 @@ const Calendar = (props) => {
                     applyButtonLink={yml.button.apply_button_link}
                     detailsButtonText={yml.button.cohort_more_details_text}
                     detailsButtonLink={`/${pageContext.lang}/${cohort.certificate.slug}`}
-
+                    context={pageContext.lang}
                   />
                 )
               :

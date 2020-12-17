@@ -174,7 +174,7 @@ const Why = (props) => {
           paragraph={yml.staff.sub_heading}
           variant="primary"
         />
-        <Mentors />
+        <Mentors lang={pageContext.lang} />
       </Wrapper>
       <Wrapper
         background={Colors.lightGray}
@@ -411,7 +411,7 @@ export const query = graphql`
                 sub_heading
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 1200){
+                      fluid(maxWidth: 1600, quality: 100){
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }
@@ -508,7 +508,7 @@ export const query = graphql`
                 button_link
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 800){
+                      fluid(maxWidth: 1600, quality: 100){
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }

@@ -30,8 +30,7 @@ news:
 
 upcoming:
   title: "Upcoming programs in Maracaibo, Venezuela"
-  
-  
+
 info_box:
   heading: "Find us in Maracaibo"
   address: "Av. 5 de julio. Maracaibo, Venezuela."
@@ -120,7 +119,6 @@ breathecode_location_slug: "maracaibo"
 defaultLanguage: "es" # All lead marketing communications will arrive on this language
 gdpr_compliant: false # do we need to ask for permision?
 
-
 city: "Maracaibo"
 name: "Maracaibo"
 latitude: "10.664500"
@@ -129,6 +127,13 @@ address: ""
 zip_code: ""
 state: ""
 country: "Venezuela"
+socials:
+  - social_name: "Facebook"
+    social_link: "https://www.facebook.com/4geeksacademyve"
+  - social_name: "Twitter"
+    social_link: "https://www.twitter.com/4geeksacademyve"
+  - social_name: "Instagram"
+    social_link: "https://www.instagram.com/4geeksacademyve"
 courses:
   - "Full-Time"
   - "Part-Time"

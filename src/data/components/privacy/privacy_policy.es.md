@@ -4,4 +4,3 @@ slug: privacy
 title: privacy
 image: "/images/why2.png"
 ---
-

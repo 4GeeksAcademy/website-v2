@@ -19,7 +19,7 @@ header:
 button:
   syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
   apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
-  
+
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
@@ -28,7 +28,7 @@ news:
   title: "4Geeks Academy Costa Rica in the news..."
 upcoming:
   title: "Upcoming programs 4Geeks Costa Rica"
-  
+
 info_box:
   heading: "Find us in Costa Rica"
   address: "Only remotely in Costa Rica"
@@ -117,7 +117,6 @@ active_campaign_location_slug: "costa-rica"
 breathecode_location_slug: "costa-rica"
 gdpr_compliant: false # do we need to ask for permision?
 
-
 city: "San Jose"
 name: "Costa Rica"
 latitude: "10.664500"
@@ -126,6 +125,13 @@ address: ""
 zip_code: ""
 state: ""
 country: "Costa Rica"
+socials:
+  - social_name: "Facebook"
+    social_link: "https://www.facebook.com/4geeksacademycr"
+  - social_name: "Twitter"
+    social_link: "https://www.twitter.com/4geeksacademycr"
+  - social_name: "Instagram"
+    social_link: "https://www.instagram.com/4geeksacademycr"
 courses:
   - "Full-Time"
   - "Part-Time"

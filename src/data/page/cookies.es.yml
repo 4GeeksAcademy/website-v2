@@ -1,0 +1,137 @@
+meta_info:
+  slug: cookie
+  title: "Cookies 4Geeks Academy"
+  description: ""
+  image: null
+  keywords: ""
+  redirects: []
+header:
+  tagline: "COOKIES: Política de cookies (PLANTILLA)"
+  sub_heading: ""
+  image: ../../../static/images/bg/companies-bg.jpg
+  alt: ""
+sections:
+  - title: "INFORMACIÓN SOBRE COOKIES"
+    text: "Debido a la entrada en vigor de la referente modificación de la “Ley de Servicios de la Sociedad de la Información” (LSSICE) establecida por el Real Decreto 13/2012, es de obligación obtener el consentimiento expreso del usuario de todas las páginas web que usan cookies prescindibles, antes de que éste navegue por ellas.  "
+  - title: "¿QUÉ SON LAS COOKIES?"
+    text: "Las cookies y otras tecnologías similares tales como local shared objects, flash cookies o píxeles, son herramientas empleadas por los servidores Web para almacenar y recuperar información acerca de sus visitantes, así como para ofrecer un correcto funcionamiento del sitio.
+    
+    Mediante el uso de estos dispositivos se permite al servidor Web recordar algunos datos concernientes al usuario, como sus preferencias para la visualización de las páginas de ese servidor, nombre y contraseña, productos que más le interesan, etc.
+    "
+  - title: "COOKIES AFECTADAS POR LA NORMATIVA Y COOKIES EXCEPTUADAS"
+    text: "Según la directiva de la UE, las cookies que requieren el consentimiento informado por parte del usuario son las cookies de analítica y las de publicidad y afiliación, quedando exceptuadas las de carácter técnico y las necesarias para el funcionamiento del sitio web o la prestación de servicios expresamente solicitados por el usuario."
+  - title: "¿QUÉ TIPOS DE COOKIES EXISTEN?"
+    text: "Sobre los tipos de cookies, existen cinco grandes grupos:
+      
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Cookies analíticas: recogen información del uso que se realiza del sitio web.</li>
+      <li class='li-privacy-link' >Cookies sociales: son aquellas necesarias para redes sociales externas.</li>
+      <li class='li-privacy-link' > Cookies de afiliados: permiten hacer un seguimiento de las visitas procedentes de otras webs, con las que el sitio web establece un contrato de afiliación (empresas de afiliación).</li>
+      <li class='li-privacy-link' >Cookies de publicidad y comportamentales: recogen información sobre las preferencias y elecciones personales del usuario (retargeting).</li>
+      <li class='li-privacy-link' >Cookies técnicas y funcionales: son las estrictamente necesarias para el uso del sitio web y para la prestación del servicio contratado.</li>
+    </ul>
+      "
+  - title: "COOKIES QUE SE UTILIZAN EN ESTE SITIO WEB"
+    text: "Listar los nombres de las cookies, tipo, propietario, función y vencimiento, por ejemplo: 
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>PHPSESSID:</span> cookie técnica y estrictamente necesaria que contiene el identificador de la sesión. Se elimina al cerrar el navegador. </li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_lang:</span> cookie técnica y estrictamente necesaria que contiene el idioma de la sesión. Se elimina al cerrar el navegador. </li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>ac_cookies:</span> cookie técnica y estrictamente necesaria que contiene el valor de si se ha aceptado la instalación de cookies. Caduca en 1 año desde la última actualización.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_ga:</span> cookie de Google Analytics que habilita la función de control de visitas únicas. La primera vez que un usuario entre en el sitio web a través de un navegador se instalará esta cookie. Cuando este usuario vuelva a entrar en la web con el mismo navegador, la cookie considerará que es el mismo usuario. Solo en el caso de que el usuario cambie de navegador, se considerará otro usuario. Caduca a los 2 años desde la última actualización.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_gat:</span> Esta cookie se asocia con Google Analytics Universal. Se utiliza para limitar la velocidad de petición - la limitación de la recogida de datos en los sitios de alto tráfico. Caduca a los 10 minutos.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utma:</span> cookie de Google Analytics que registra la fecha de la primera y última vez que el usuario vistió el sitio web. Caduca a los 2 años desde la última actualización.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmb:</span> cookie de Google Analytics que registra la hora de llegada a la página web. Caduca a los 30 minutos desde la última actualización.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmc:</span> cookie de Google Analytics utilizada para la interoperabilidad con el código de seguimiento urchin.js. Se elimina al cerrar el navegador.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmt:</span> cookie de Google Analytics. Esta cookie se utiliza para procesar el tipo de solicitud pedida por el usuario. Caduca al finalizar la sesión.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmv:</span> cookie de Google Analytics. Esta cookie se utiliza para segmentar datos demográficos. Caduca al finalizar la sesión.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmz:</span> cookie de Google Analytics que almacena la fuente de tráfico o una campaña para explicar cómo el usuario llegó al sitio web. Caduca a los 6 meses desde la última actualización.</li>
+    </ul>
+    
+    "
+  - title: "REVOCACIÓN DEL CONSENTIMIENTO PARA INSTALAR COOKIES"
+    text: "COMO ELIMINAR LAS COOKIES DEL NAVEGADOR
+    
+    <span class='bold-privacy-text'>CHROME</span>
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Selecciona el icono de Herramientas </li>
+      <li class='li-privacy-link' >Haz clic en Configuración.</li>
+      <li class='li-privacy-link' >Haz clic en Mostrar Opciones Avanzadas.</li>
+      <li class='li-privacy-link' >
+        En la sección 'Privacidad' haz clic en Configuración de contenido.
+        <ol class='ol-cookies'>
+          <li class='li-privacy-lin' >Eliminar cookies: Haz clic en Todas las cookies y los datos de sitios…</li>
+          <li class='li-privacy-lin' >No permitir que se almacenen cookies.</li>
+        </ol>
+      </li>
+      <li class='li-privacy-link' >Haz clic en Eliminar datos de navegación (vaciar la Caché).</li>
+      <li class='li-privacy-link' >Cierra y reinicia el navegador.</li>
+    </ul>
+    
+    Para más información sobre Chrome pulse aquí: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='http://support.google.com/chrome/answer/95647?hl=es'>http://support.google.com/chrome/answer/95647?hl=es</a>
+    
+    <span class='bold-privacy-text'>Internet Explorer. Versión 11</span>
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Selecciona Herramientas | Opciones de Internet.</li>
+      <li class='li-privacy-link' >Haz clic en la ficha General.</li>
+      <li class='li-privacy-link' >En la sección 'Historial de exploración', haz clic en Eliminar el historial de exploración al salir.</li>
+      <li class='li-privacy-link' >Seleccionar Eliminar archivos.</li>
+      <li class='li-privacy-link' >Seleccionar Eliminar cookies.</li>
+      <li class='li-privacy-link' >Haz clic en Eliminar.</li>
+      <li class='li-privacy-link' >Haz clic en Aceptar.</li>
+      <li class='li-privacy-link' >Cierra y reinicia el navegador.</li>
+    </ul>
+    
+    Para más información sobre Internet Explorer pulse aquí: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='http://windows.microsoft.com/es-419/windows7/how-to-manage-cookies-in-internet-explorer-9'>http://windows.microsoft.com/es-419/windows7/how-to-manage-cookies-in-internet-explorer-9</a>
+    
+    <span class='bold-privacy-text'>Firefox. Versión 18</span>
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Selecciona Firefox | Historial | Limpiar el historial reciente.</li>
+      <li class='li-privacy-link' >Al lado de 'Detalles', haz clic en la flecha hacia abajo.</li>
+      <li class='li-privacy-link' >Selecciona las siguientes casillas de verificación: Cookies, Caché, Inicios de sesión activos</li>
+      <li class='li-privacy-link' >Usando el 'Intervalo de tiempo para borrar' en el menú desplegable, selecciona Todo.</li>
+      <li class='li-privacy-link' >Haz clic en Borrar ahora.</li>
+      <li class='li-privacy-link' >Cierra y reinicia el navegador.</li>
+    </ul>
+    
+    Puede aceptar o rechazar las cookies individualmente en las Preferencias de Firefox, en la sección Historial disponible en Herramientas > Opciones > Privacidad.
+    
+    Para más información sobre Mozilla Firefox pulse aquí: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='https://www.mozilla.org/es-ES/privacy/websites/#cookies'>https://www.mozilla.org/es-ES/privacy/websites/#cookies</a>
+    
+    <span class='bold-privacy-text'>Safari Versión 5.1</span>
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Selecciona el icono de Safari / Editar | Restaurar Safari.</li>
+      <li class='li-privacy-link' >Selecciona las siguientes casillas de verificación: Borrar el historial, Eliminar todos los datos de sitio web</li>
+      <li class='li-privacy-link' >Haz clic en Restablecer.</li>
+      <li class='li-privacy-link' >Cierra y reinicia el navegador.</li>
+    </ul>
+    
+    Para más información sobre Safari pulse aquí: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='http://support.apple.com/kb/PH5042'>http://support.apple.com/kb/PH5042</a>
+    
+    <span class='bold-privacy-text'>Opera</span>
+    
+    Opciones - Avanzado - Cookies.
+    
+    Las opciones de cookies controlan el modo en que Opera los maneja y por lo tanto su aceptación o rechazo.
+    
+    Para más información sobre Ópera pulse aquí: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='http://help.opera.com/Linux/10.60/es-ES/cookies.html'>http://help.opera.com/Linux/10.60/es-ES/cookies.html</a>
+    
+    <span class='bold-privacy-text'>Otros navegadores</span>
+    
+    Consulte la documentación del navegador que tenga instalado.
+    "
+
