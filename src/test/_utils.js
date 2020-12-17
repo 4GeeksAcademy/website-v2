@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const jsyaml = require("js-yaml");
+const fm = require('front-matter');
 var colors = require('colors');
 
 const walk = function(dir, done) {
@@ -26,7 +27,7 @@ const walk = function(dir, done) {
   });
 };
 
-const load = (pathToFile) => {
+const loadYML = (pathToFile) => {
     const content = fs.readFileSync(pathToFile, 'utf8');
     try{
         const yaml = jsyaml.load(content);
@@ -42,6 +43,25 @@ const load = (pathToFile) => {
         return null;
     }
     
+}
+
+
+const loadMD = (pathToFile) => {
+  let raw = fs.readFileSync(pathToFile, 'utf8');
+  try{
+      const content = fm(raw);
+      
+      const fileName = pathToFile.replace(/^.*[\\\/]/, '').split('.').slice(0, -1).join('.').toLowerCase();
+      if(typeof content == 'undefined' || !content) throw new Error(`The file ${fileName}.yml was impossible to parse`.red);
+
+      const [name, lang] = fileName.split(".");
+      return { ...content,name, lang}
+  }
+  catch(error){
+      console.error(error);
+      return null;
+  }
+  
 }
 
 const empty = (data) => {
@@ -61,4 +81,4 @@ const success = (msg, ...params) => {
     process.exit(0);
 }
 
-module.exports = { walk, load, empty, fail, success }
+module.exports = { walk, loadYML, loadMD, empty, fail, success }

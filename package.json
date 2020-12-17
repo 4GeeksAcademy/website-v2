@@ -100,6 +100,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
+    "front-matter": "^4.0.2",
     "gatsby-plugin-webpack-size": "^1.0.0",
     "jest": "^25.5.3",
     "js-yaml": "^3.13.1",

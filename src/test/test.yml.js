@@ -1,7 +1,7 @@
 
 var colors = require('colors')
 const fs = require('fs')
-const {walk, load, empty, fail, success} = require("./_utils")
+const {walk, loadYML, empty, fail, success} = require("./_utils")
 
 const metas = [
     {key: "slug", type: "string", mandatory: true},
@@ -23,7 +23,7 @@ walk(`${__dirname}/../data/`, async function (err, files) {
     let slugs = {};
     for (let i = 0; i < _files.length; i++) {
         const _path = _files[i];
-        const doc = load(_path);
+        const doc = loadYML(_path);
         if (!doc.yaml) fail("Invalid YML syntax for " + _path)
         if (!doc.lang) fail("Missing language on yml file name for " + _path)
         const testPath = __dirname + "/yml/" + doc.name + ".js";

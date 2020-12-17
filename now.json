@@ -2,29 +2,267 @@
   "routes": [
     {
       "src": "/mdc",
-      "status": 308, "headers": { "Location": "https://mdc.4geeksacademy.com" }
+      "status": 308,
+      "headers": {
+        "Location": "https://mdc.4geeksacademy.com"
+      }
     },
     {
       "src": "/wp-content/uploads/2020/05/MINI-SYLLABUS-Madrid-1.pdf",
-      "status": 308, "headers": { "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/madrid-full-stack.pdf" }
+      "status": 308,
+      "headers": {
+        "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/madrid-full-stack.pdf"
+      }
     },
     {
       "src": "/wp-content/uploads/2020/06/%C2%BFQuisieras_tener_un_perfil_asombroso_para_impulsar_tus_oportunidades_de_empleo__2.pdf",
-      "status": 308, "headers": { "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/madrid-conseguir-empleo-rapido.pdf" }
+      "status": 308,
+      "headers": {
+        "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/madrid-conseguir-empleo-rapido.pdf"
+      }
     },
     {
       "src": "/wp-content/uploads/2020/06/Paga-cuando-consigas-trabajo.pdf",
-      "status": 308, "headers": { "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/madrid-isa.pdf" }
+      "status": 308,
+      "headers": {
+        "Location": "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/madrid-isa.pdf"
+      }
     },
     {
       "src": "/wp-content/uploads/(.*)",
-      "status": 308, 
+      "status": 308,
       "dest": "https://storage.googleapis.com/4geeks-academy-website/blog/$1"
     },
     {
       "src": "/static/(.*)",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
       "dest": "/static/$1"
+    },
+    {
+      "src": "/2019-developers-salaries-report",
+      "dest": "/us/post/2019-developers-salaries-report"
+    },
+    {
+      "src": "/4geeks-academy-casimiro-global-foundation",
+      "dest": "/us/post/4geeks-academy-casimiro-global-foundation"
+    },
+    {
+      "src": "/4geeks-academy-history",
+      "dest": "/us/post/4geeks-academy-history"
+    },
+    {
+      "src": "/4geeks-academy-llega-a-venezuela",
+      "dest": "/es/post/4geeks-academy-llega-a-venezuela"
+    },
+    {
+      "src": "/4geeks-academy-teaches-php-backend-language",
+      "dest": "/us/post/4geeks-academy-teaches-php-backend-language"
+    },
+    {
+      "src": "/4geeks-miami-dade-college-story",
+      "dest": "/us/post/4geeks-miami-dade-college-story"
+    },
+    {
+      "src": "/4geeks-santiago-chile-programacion-2",
+      "dest": "/es/post/4geeks-santiago-chile-programacion-2"
+    },
+    {
+      "src": "/7-hacks-to-land-a-job",
+      "dest": "/us/post/7-hacks-to-land-a-job"
+    },
+    {
+      "src": "/ama-chapter-of-fiu-4geeks-academy",
+      "dest": "/us/post/ama-chapter-of-fiu-4geeks-academy"
+    },
+    {
+      "src": "/becoming-a-web-developer-in-miami",
+      "dest": "/us/post/becoming-a-web-developer-in-miami"
+    },
+    {
+      "src": "/bootcamp-salaries-2-0",
+      "dest": "/us/post/bootcamp-salaries-2-0"
+    },
+    {
+      "src": "/challenges-web-developer",
+      "dest": "/us/post/challenges-web-developer"
+    },
+    {
+      "src": "/choosing-coding-bootcamp",
+      "dest": "/us/post/choosing-coding-bootcamp"
+    },
+    {
+      "src": "/coding-bootcamp-syllabus-matters",
+      "dest": "/us/post/coding-bootcamp-syllabus-matters"
+    },
+    {
+      "src": "/digital-marketing-in-the-coding-world",
+      "dest": "/us/post/digital-marketing-in-the-coding-world"
+    },
+    {
+      "src": "/disyuntiva-para-futuros-programadores-universidad-o-bootcamp",
+      "dest": "/es/post/disyuntiva-para-futuros-programadores-universidad-o-bootcamp"
+    },
+    {
+      "src": "/el-instructor-ideal",
+      "dest": "/es/post/el-instructor-ideal"
+    },
+    {
+      "src": "/dont-teach-nodejs-full-stack-development-program",
+      "dest": "/us/post/dont-teach-nodejs-full-stack-development-program"
+    },
+    {
+      "src": "/empowering-women-tech",
+      "dest": "/us/post/empowering-women-tech"
+    },
+    {
+      "src": "/feelings-learning-coding",
+      "dest": "/us/post/feelings-learning-coding"
+    },
+    {
+      "src": "/full-stack-web-development-at-miami-dade-college",
+      "dest": "/us/post/full-stack-web-development-at-miami-dade-college"
+    },
+    {
+      "src": "/growth-road-full-time-job",
+      "dest": "/us/post/growth-road-full-time-job"
+    },
+    {
+      "src": "/hacks-lear-to-code",
+      "dest": "/us/post/hacks-lear-to-code"
+    },
+    {
+      "src": "/historia-de-4geeks-academy",
+      "dest": "/es/post/historia-de-4geeks-academy"
+    },
+    {
+      "src": "/how-does-the-web-work-html-css",
+      "dest": "/us/post/how-does-the-web-work-html-css"
+    },
+    {
+      "src": "/how-to-prepare-for-a-typical-interview-for-web-development-position",
+      "dest": "/us/post/how-to-prepare-for-a-typical-interview-for-web-development-position"
+    },
+    {
+      "src": "/hybrid-jobs",
+      "dest": "/us/post/hybrid-jobs"
+    },
+    {
+      "src": "/javascript-and-python",
+      "dest": "/us/post/javascript-and-python"
+    },
+    {
+      "src": "/launchcode-and-4geeks-academy",
+      "dest": "/us/post/launchcode-and-4geeks-academy"
+    },
+    {
+      "src": "/miami-coding-programs-report",
+      "dest": "/us/post/miami-coding-programs-report"
+    },
+    {
+      "src": "/new-year-new-hiring-partners-launch-potato-us",
+      "dest": "/us/post/new-year-new-hiring-partners-launch-potato-us"
+    },
+    {
+      "src": "/part-time-bootcamps",
+      "dest": "/us/post/part-time-bootcamps"
+    },
+    {
+      "src": "/part-time-future-education",
+      "dest": "/us/post/part-time-future-education"
+    },
+    {
+      "src": "/pay-once-get-job-isa",
+      "dest": "/us/post/pay-once-get-job-isa"
+    },
+    {
+      "src": "/pay-tuition-4geeks-academy",
+      "dest": "/us/post/pay-tuition-4geeks-academy"
+    },
+    {
+      "src": "/pay-tuition-4geeks",
+      "dest": "/us/post/pay-tuition-4geeks"
+    },
+    {
+      "src": "/pre-work-phase-free-open-everybody",
+      "dest": "/us/post/pre-work-phase-free-open-everybody"
+    },
+    {
+      "src": "/rip-ruby-on-rails",
+      "dest": "/us/post/rip-ruby-on-rails"
+    },
+    {
+      "src": "/ser-programador-entre-las-profesiones-con-mayor-demanda",
+      "dest": "/es/post/ser-programador-entre-las-profesiones-con-mayor-demanda"
+    },
+    {
+      "src": "/skillsfund-4geeksacademy",
+      "dest": "/us/post/skillsfund-4geeksacademy"
+    },
+    {
+      "src": "/student-testimonials",
+      "dest": "/us/post/student-testimonials"
+    },
+    {
+      "src": "/techcamp-2017-beca",
+      "dest": "/es/post/techcamp-2017-beca"
+    },
+    {
+      "src": "/the-ideal-instructor",
+      "dest": "/us/post/the-ideal-instructor"
+    },
+    {
+      "src": "/the-talent-tree",
+      "dest": "/us/post/the-talent-tree"
+    },
+    {
+      "src": "/truth-behind-part-time-education",
+      "dest": "/us/post/truth-behind-part-time-education"
+    },
+    {
+      "src": "/turnaround-education-traditions-4geeks-academy",
+      "dest": "/us/post/turnaround-education-traditions-4geeks-academy"
+    },
+    {
+      "src": "/used-backend-programming-language-miami",
+      "dest": "/us/post/used-backend-programming-language-miami"
+    },
+    {
+      "src": "/wages-report-2018-1",
+      "dest": "/us/post/wages-report-2018-1"
+    },
+    {
+      "src": "/web-developer-earn-the-salary-you-deserve",
+      "dest": "/us/post/web-developer-earn-the-salary-you-deserve"
+    },
+    {
+      "src": "/web-salaries-2017-coding-bootcamp",
+      "dest": "/us/post/web-salaries-2017-coding-bootcamp"
+    },
+    {
+      "src": "/webdevelopmentversuswebdesign",
+      "dest": "/us/post/webdevelopmentversuswebdesign"
+    },
+    {
+      "src": "/what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2",
+      "dest": "/us/post/what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2"
+    },
+    {
+      "src": "/why-become-a-web-developer-in-miami-dade-in-2016",
+      "dest": "/us/post/why-become-a-web-developer-in-miami-dade-in-2016"
+    },
+    {
+      "src": "/why-we-teach-python-4geeks",
+      "dest": "/us/post/why-we-teach-python-4geeks"
+    },
+    {
+      "src": "/women-in-tech-2017",
+      "dest": "/us/post/women-in-tech-2017"
+    },
+    {
+      "src": "/wyncode-ironhack-and-4geeks-academy-comparison",
+      "dest": "/us/post/wyncode-ironhack-and-4geeks-academy-comparison"
     }
   ]
 }
