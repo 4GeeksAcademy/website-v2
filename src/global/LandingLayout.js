@@ -67,6 +67,7 @@ const Layout = ({children, seo, context, withNavbar}) => {
         let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
         let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
 
+        if(!myNavbar || myNavbar == undefined) throw Error("Navbar not found, yml is missing language information?")
         let _btnInfo = myNavbar.node.button;
         if(session && session.location) _btnInfo = { ..._btnInfo, ...session.location.button };
         

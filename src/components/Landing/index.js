@@ -89,8 +89,40 @@ TwoColumn.defaultProps = {
     right: null,
 }
 
+export const Columns = ({ columns, proportions}) => {
+    return <Row display="flex" m_sm="0px 0px 100px 0">
+        {columns.map(c => 
+            <Column size={c.size[0]} size_sm={c.size[2]} size_xs={c.size[3]} align={c.align}>
+                <Img
+                    src={c.image.src}
+                    onClick={() => {
+                        if (c.image.link) {
+                            if (c.image.link.indexOf("http") > -1) window.open(c.image.link);
+                            else navigate(c.image.link);
+                        }
+                    }}
+                    style={c.image.style ? JSON.parse(c.image.style) : null}
+                    borderRadius={"1.25rem"}
+                    className="pointer"
+                    alt={"4Geeks Academy Section"}
+                    margin="auto"
+                    height="100%"
+                    width="100%"
+                    h_sm="250px"
+                    backgroundSize={`cover`}
+                ></Img>
+                <Paragraph>{c.content.text}</Paragraph>
+            </Column>
+        )}
+    </Row>
+}
+Columns.defaultProps = {
+    columns: [],
+    proportions: [],
+}
+
 export const landingSections = {
-    in_the_news: ({session, pageContext, yml, course, location}) => <Wrapper p_sm="0" p_xs="30 0 0 0">
+    in_the_news: ({session, pageContext, yml, course, location, index}) => <Wrapper key={index} p_sm="0" p_xs="30 0 0 0">
         <H4 align="center" fontSize="18px" color={Colors.darkGray}
             margin="20px 0px 10px 0px"
             m_sm="20px auto"
@@ -104,9 +136,10 @@ export const landingSections = {
             filter={!Array.isArray(yml.filter) ? null : (n) => yml.filter.includes(n.name)}
         />
     </Wrapper>,
-    badges: ({session, data, pageContext, yml, course}) =>
-        <Wrapper p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></Wrapper>,
-    syllabus: ({session, data, pageContext, yml, course, location}) => <Div
+    badges: ({session, data, pageContext, yml, course, index}) =>
+        <Wrapper key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></Wrapper>,
+    syllabus: ({session, data, pageContext, yml, course, location, index}) => <Div
+        key={index}
         display="block"
         margin="50px 0px 0px 0px"
         m_sm="50px 0px"
@@ -128,8 +161,8 @@ export const landingSections = {
             />
         </Wrapper>
     </Div>,
-    geeks_vs_others: ({session, pageContext, yml, course}) =>
-        <Wrapper margin="100px" m_sm="50px 0" p_sm="0" p_xs="0">
+    geeks_vs_others: ({session, pageContext, yml, course, index}) =>
+        <Wrapper key={index} margin="100px" m_sm="50px 0" p_sm="0" p_xs="0">
             <Title
                 type="h2"
                 title={yml.heading}
@@ -140,9 +173,9 @@ export const landingSections = {
             />
             <GeeksVsOthers lang={pageContext.lang} limit={yml.total_rows} />
         </Wrapper>,
-    program_details: ({session, pageContext, yml, data}) => {
+    program_details: ({session, pageContext, yml, data, index}) => {
         const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
-        return <Wrapper p_xs="0">
+        return <Wrapper key={index} p_xs="0">
             <Title
                 size="10"
                 marginTop="40px"
@@ -155,10 +188,10 @@ export const landingSections = {
             <ProgramDetailsMobile details={course && course.details} />
         </Wrapper>
     },
-    why_python: ({session, pageContext, yml}) => <Wrapper margin="50px 0" p_sm="0">
+    why_python: ({session, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0" p_sm="0">
         <WhyPython heading={yml.heading} subheading={yml.sub_heading} lang={pageContext.lang} />
     </Wrapper>,
-    testimonials: ({session, data, pageContext, yml}) => <Wrapper margin="100px" m_sm="0" p_xs="0">
+    testimonials: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="100px" m_sm="0" p_xs="0">
         <Title
             variant="primary"
             title={yml.testimonial.heading}
@@ -169,7 +202,7 @@ export const landingSections = {
         />
         <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
     </Wrapper>,
-    why_4geeks: ({session, pageContext, yml}) => <Wrapper margin="50px 0" p_xs="0">
+    why_4geeks: ({session, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0" p_xs="0">
         <Title
             title={yml.heading}
             paragraph={yml.sub_heading}
@@ -178,7 +211,7 @@ export const landingSections = {
         />
         <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
     </Wrapper>,
-    alumni_projects: ({session, data, pageContext, yml}) => <Wrapper margin="100px" m_sm="0" p_xs="0">
+    alumni_projects: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="100px" m_sm="0" p_xs="0">
         <Title
             size="10"
             title={yml.heading}
@@ -190,9 +223,9 @@ export const landingSections = {
         />
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
     </Wrapper>,
-    who_is_hiring: ({session, data, pageContext, yml, location}) => {
+    who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
         const hiring = data.allPartnerYaml.edges[0].node;
-        return <Wrapper margin="100px" m_sm="0" p_xs="0">
+        return <Wrapper key={index} margin="100px" m_sm="0" p_xs="0">
             <Title
                 size="10"
                 title={hiring.partners.tagline}
@@ -207,25 +240,37 @@ export const landingSections = {
             />
         </Wrapper>
     },
-    divider: ({session, data, pageContext, yml}) => <Divider
+    divider: ({session, data, pageContext, yml, index}) => <Divider key={index}
         height={yml.height[0]}
         lg={yml.height[1]}
         md={yml.height[2]}
         sm={yml.height[3]}
         xs={yml.height[4]}
     />,
-    two_column_left: ({session, data, pageContext, yml}) => <Wrapper margin="50px 0">
+    two_column_left: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0">
         <TwoColumn
             left={{image: yml.image, video: yml.video}}
             right={{heading: yml.heading, content: yml.content, button: yml.button}}
             proportions={yml.proportions}
         />
     </Wrapper>,
-    two_column_right: ({session, data, pageContext, yml}) => <Wrapper margin="50px 0">
+    two_column_right: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0">
         <TwoColumn
             left={{heading: yml.heading, content: yml.content, button: yml.button}}
             right={{image: yml.image, video: yml.video}}
             proportions={yml.proportions}
         />
+    </Wrapper>,
+    columns: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0">
+        <Title
+            size="10"
+            title={yml.heading.text}
+            paragraph={yml.sub_heading}
+            paragraphColor={Colors.darkGray}
+            maxWidth="800px"
+            margin="auto"
+            variant="primary"
+        />
+        <Columns columns={yml.columns} proportions={yml.proportions}  />
     </Wrapper>
 }

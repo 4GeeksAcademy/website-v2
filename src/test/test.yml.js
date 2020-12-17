@@ -25,13 +25,13 @@ walk(`${__dirname}/../data/`, async function (err, files) {
         const _path = _files[i];
         const doc = load(_path);
         if (!doc.yaml) fail("Invalid YML syntax for " + _path)
+        if (!doc.lang) fail("Missing language on yml file name for " + _path)
         const testPath = __dirname + "/yml/" + doc.name + ".js";
         if (fs.existsSync(testPath)) {
 
             console.log(`Running tests for ${doc.name} yml file`.blue)
             const test = require(testPath);
             try {
-                console.log(test);
                 test(doc)
             }
             catch (error) {
