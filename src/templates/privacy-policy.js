@@ -6,34 +6,38 @@ import BaseRender from './_baseLayout';
 
 
 const Privacy = (props) => {
-    const {data, pageContext, yml} = props;
-    return (<Wrapper
-                github="/components/privacy"
-                border="bottom"
-                height="auto"
-                margin="100px 0"
-                backgroundSize="cover"
-                paddingRight={`0`}
-            >
-                <Title
-                    size="5"
-                    color={Colors.black}
-                    title={yml.header.tagline}
-                    paragraph={yml.header.sub_heading}
-                    variant="main"
-                    paragraphColor={Colors.black}
-                    fontSize="46px"
-                    textAlign="center"
-                />
-                <Divider height="40px" />
-                {yml.sections.map((section, i) => {
-                    return (<>
-                        <H4>{section.title}</H4>
-                        <Paragraph margin="10px 0">{section.text}</Paragraph>
-                    </>)
-                })}
-            </Wrapper>
-    )
+  const {data, pageContext, yml} = props;
+  return (<Wrapper
+    github="/components/privacy"
+    border="bottom"
+    height="auto"
+    margin="100px 0"
+    backgroundSize="cover"
+    paddingRight={`0`}
+  >
+    <Title
+      size="5"
+      color={Colors.black}
+      title={yml.header.tagline}
+      paragraph={yml.header.sub_heading}
+      variant="main"
+      paragraphColor={Colors.black}
+      fontSize="46px"
+      textAlign="center"
+    />
+    <Divider height="40px" />
+    {yml.sections.map((section, i) => {
+      return (
+        <>
+          <H4 margin="10px 0">{section.title}</H4>
+          {section.text.split("\n").map((m, i) =>
+            <Paragraph key={i} align="left" align_sm="left" margin="15px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+          )}
+        </>)
+    })}
+    <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph>
+  </Wrapper>
+  )
 };
 export const query = graphql`
   query PrivacyQuery($file_name: String!, $lang: String!) {
@@ -61,8 +65,9 @@ export const query = graphql`
            
             sections{
                 title
-                text
+                text                
             }
+            date_release
            
             
         }

@@ -222,7 +222,7 @@ const Calendar = (props) => {
                 ...data,
                 [filterType.value]: {
                   ...data[filterType.value],
-                  filtered: data[filterType.value].all.filter(elm => elm.academy.slug === opt.value)
+                  filtered: opt.label !== 'All Locations' ? data[filterType.value].all.filter(elm => elm.academy.slug === opt.value) : data[filterType.value].all
                 }
               });
             }}

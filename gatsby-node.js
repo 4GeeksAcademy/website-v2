@@ -6,7 +6,7 @@ const {createFilePath} = require(`gatsby-source-filesystem`)
 var redirects = [];
 var ymls = [];
 const saveRedirectLogs = () => {
-    
+
     console.log('Saving redirect log');
     fs.writeFile('./public/redirects.log', JSON.stringify(redirects, null, 1), function (err) {
         if (err) return console.log(err);
@@ -15,24 +15,24 @@ const saveRedirectLogs = () => {
 
     return true;
 }
- 
+
 exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions;
 
     // curstom post types for the website
     if ([
-        'MarkdownRemark', 'LeadFormYaml', 'NewsYaml', 'PartnerYaml', 'CredentialsYaml', 
-        'FooterYaml', 'NavbarYaml', 'BadgesYaml', 'PageYaml', 'LandingYaml', 'CourseYaml', 
+        'MarkdownRemark', 'LeadFormYaml', 'NewsYaml', 'PartnerYaml', 'CredentialsYaml',
+        'FooterYaml', 'NavbarYaml', 'CustomBarYaml', 'BadgesYaml', 'PageYaml', 'LandingYaml', 'CourseYaml',
         'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
         'TestimonialsYaml', 'GeeksVsOthersYaml', 'JobsStatisticsYaml',
-        'Why4GeeksYaml', 'AlumniProjectsYaml', 'PricesAndPaymentYaml',
+        'Why4GeeksYaml', 'AlumniProjectsYaml', 'StaffYaml', 'ProgramSvgYaml', 'PricesAndPaymentYaml',
         'WhyPythonYaml',
-        ].includes(node.internal.type)) {
+    ].includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});
 
         // add properties to the graph
-        if(node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
+        if (node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
         if (meta) {
             createNodeField({node, name: `lang`, value: meta.lang});
             createNodeField({node, name: `slug`, value: meta.slug});
@@ -58,8 +58,8 @@ exports.createPages = async (params) =>
     await createEntityPagesfromYml('Course', params) &&
     await createEntityPagesfromYml('Location', params) &&
     await createEntityPagesfromYml('Job', params) &&
-    await createEntityPagesfromYml('Landing', params, extraFields=['utm_course', 'utm_location'], 
-        extraContext=(node) => {
+    await createEntityPagesfromYml('Landing', params, extraFields = ['utm_course', 'utm_location'],
+        extraContext = (node) => {
             return {
                 utm_course: node.meta_info.utm_course + "." + node.fields.lang
             }
@@ -160,7 +160,7 @@ const createBlog = async ({actions, graphql}) => {
 
     return true;
 }
-const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields=[], extraContext=null) => {
+const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields = [], extraContext = null) => {
     const {createPage, createRedirect} = actions;
     const extraFieldsQuery = extraFields.join('\n')
     const _createRedirect = (args) => {
@@ -397,7 +397,7 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
     const type = frontmatter ? "post" : m[1];
 
     const lang = m[3] || "en";
-    const customSlug = (meta_info!== undefined && typeof meta_info.slug === "string");
+    const customSlug = (meta_info !== undefined && typeof meta_info.slug === "string");
     const file_name = m[2];// + (lang == "es" ? "-es": "");
     const slug = (customSlug) ? meta_info.slug : file_name;
     const template = type === "page" ? file_name : type;
@@ -419,12 +419,12 @@ const buildTranslations = ({edges}) => {
     return translations;
 };
 
-exports.onCreateWebpackConfig = ({ actions: { replaceWebpackConfig }, getConfig }) => {
+exports.onCreateWebpackConfig = ({actions: {replaceWebpackConfig}, getConfig}) => {
     const config = getConfig()
 
     config.module.rules.push({
         test: /\.worker\.js$/,
-        use: { loader: 'workerize-loader' }
+        use: {loader: 'workerize-loader'}
     })
 
     config.output.globalObject = 'this'

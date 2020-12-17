@@ -125,6 +125,13 @@ address: "Sede Principal de El Nacional."
 zip_code: ""
 state: "Los Cortijos de Lourdes"
 country: "Venezuela"
+socials:
+  - social_name: "Facebook"
+    social_link: "https://www.facebook.com/4geeksacademyve"
+  - social_name: "Twitter"
+    social_link: "https://www.twitter.com/4geeksacademyve"
+  - social_name: "Instagram"
+    social_link: "https://www.instagram.com/4geeksacademyve"
 courses:
   - "Full-Time"
   - "Part-Time"
