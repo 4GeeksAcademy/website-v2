@@ -131,21 +131,21 @@ Check out your options on the chart below:
 
 <td width="90" >
 
-**$1,000**
+**$1,500**
 
 
 </td>
 
 <td width="90" >
 
-**$1,000**
+**$1,500**
 
 
 </td>
 
 <td width="90" >
 
-**$1,000**
+**$1,500**
 
 
 </td>
