@@ -9,7 +9,7 @@ import {useScrollPosition} from "./useScrollPosition"
 const ShadowedRow = styled.div`
     background: #ececec;
     font-family: 'Lato-Bold', sans-serif;
-    font-display: swap;
+    
     box-shadow: 0 0 16px 0 rgba(50,50,50,.3);
     height: 80px;
     padding: 10px;
@@ -19,9 +19,15 @@ const ShadowedRow = styled.div`
     top: ${props => props.position == "top" ? "0" : 'inherit'};
     bottom: ${props => props.position == "bottom" ? "0" : 'inherit'};
     display: ${props => props.hide ? "none" : 'block'};
+    @media ${Break.sm}{
+        height: 90px;
+        top: inherit;
+        bottom: 0;
+    }
     @media ${Break.xxs}{
         height: 125px;
     }
+
 `;
 const Centered = styled.div`
     max-width: 750px;
@@ -88,9 +94,10 @@ const FollowBar = ({children, showOnScrollPosition, position, buttonText, phone,
             </Center>
             <Right>
                 <Button onClick={() => onClick && onClick()} color={Colors.red} fs_sm="11px" textColor={Colors.white}>{buttonText}</Button>
-<p style={{textAlign: "center", marginTop: "3px", fontSize: "15px"}}><a className="decorated" display="inline" href={`tel:${phone}`}>{phoneText}{phone}</a></p>
+                <p style={{textAlign: "center", marginTop: "3px", fontSize: "15px"}}><a className="decorated d-sm-none" display="inline" href={`tel:${phone}`}>{phoneText}{phone}</a></p>
             </Right>
         </Centered>
+        <p style={{textAlign: "right", marginTop: "3px", marginRight: "10px", fontSize: "15px"}}><a className="decorated d-none d-sm-block" display="inline" href={`tel:${phone}`}>{phoneText}{phone}</a></p>
     </ShadowedRow>
     )
 };

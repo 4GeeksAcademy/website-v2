@@ -39,6 +39,8 @@ footer:
         link: "/blog-en-espanol"
       - name: "Empleo"
         link: "/empleo"
+      - name: "Privacy"
+        link: "/politica-de-privacidad"
       - name: "FAQ"
         link: "/preguntas-frecuentes"
       - name: "Contacto"

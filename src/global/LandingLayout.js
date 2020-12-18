@@ -8,9 +8,9 @@ import {StaticQuery, graphql} from 'gatsby';
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
-const Layout = ({children, seo, context}) => {
+const Layout = ({children, seo, context, withNavbar}) => {
   const { session } = React.useContext(SessionContext);
-
+  console.log("withnavbar", withNavbar)
   return (
     <StaticQuery
       query={graphql`
@@ -67,13 +67,14 @@ const Layout = ({children, seo, context}) => {
         let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
         let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
 
+        if(!myNavbar || myNavbar == undefined) throw Error("Navbar not found, yml is missing language information?")
         let _btnInfo = myNavbar.node.button;
         if(session && session.location) _btnInfo = { ..._btnInfo, ...session.location.button };
         
         return (
           <>
             <SEO {...seo} context={context} />
-            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
+            {withNavbar && <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />}
             <GlobalStyle />
             <>
               {children}

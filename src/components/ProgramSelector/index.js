@@ -31,7 +31,7 @@ const ProgramSelector = (props) => {
   let link = "";
   {props.week === 16 ? link = "full-time" : link = "part-time"}
   return (
-    <Row align="around" marginTop={props.marginTop}>
+    <Row display="flex" justifyContent="around" marginTop={props.marginTop}>
       <Column size="2" size_sm="12" alignSelf="center" paddingRight="0" align="right" margin="5px 0">
         <Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >{strings[props.lang]["It takes just"]}</Paragraph>
       </Column>
@@ -78,7 +78,7 @@ const ProgramSelector = (props) => {
           </Card>
         }
       </Column>
-      <Column size="2" size_sm="12" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" color={Colors.white} >{strings[props.lang]["weeks in"]}</Paragraph></Column>
+      <Column size="2" size_sm="12" alignSelf="center" paddingLeft="0" paddingRight="0" align="center" margin="5px 0"><Paragraph fontSize="20px" fs_md="14px" background={Colors.white} >{strings[props.lang]["weeks in"]}</Paragraph></Column>
       <Column size="2" size_sm="12" alignSelf="center" align="center" paddingLeft="0" paddingRight="0">
         {toggle == false &&
           <Button
@@ -101,7 +101,7 @@ const ProgramSelector = (props) => {
                 key={index}
                 style={{maxWidth: "100%", position: "relative"}}
                 onClick={() => {
-                  setSession({...session, location: {...item}, language: props.lang })
+                  setSession({...session, location: {...item}, language: props.lang})
                   setToggle(!toggle)
                 }}
                 colorHover={Colors.lightBlue}

@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react';
 import {navigate} from 'gatsby';
-import loadable from '@loadable/component'
 import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
@@ -8,8 +7,8 @@ import {Input, Alert} from '../components/Form'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
 import {apply, tagManager} from "../actions";
+import TestimonialsCarrousel from '../components/Testimonials';
 
-const TestimonialsCarrousel = loadable(() => import('../components/Testimonials'))
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -108,59 +107,49 @@ const Apply = (props) => {
                     size="8"
                 />
                 <Row
-                    shadow
+                    display="flex"
+                    shadow={`0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)`}
                     background="#000000"
                     height="100%"
                     marginLeft="0"
                     marginRight="0"
-                    align="center"
+                    justifyContent="center"
                     borderRadius="0 1.25rem 1.25rem 1.25rem"
                 >
-                    <Column size="4" size_sm="12" color={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="center" height="100%"  >
-                        <Row align="center" height="100%">
-                            <Column size="10" height="100%">
-                                <Divider height="50px" />
-                                <Row height="60px">
-                                    <H3
-                                        fs_xs="20px"
-                                        fs_sm="18px"
-                                        fs_md="18px"
-                                        fs_lg="20px"
-                                        fs_xl="24px"
-                                        color={Colors.yellow}
-                                    >
-                                        {yml.right.heading}
-                                    </H3>
-                                </Row>
-                                <Divider height="30px" />
-
-                                {yml.right.content_section.map((item, i) => {
-                                    return (<Row key={i} height="50px">
-                                        <Paragraph
-
-                                            fs_xs="12px"
-                                            fs_sm="14px"
-                                            fs_md="10px"
-                                            fs_lg="12px"
-                                            fs_xl="14px"
-                                            lineHeight="16px"
-                                            color={Colors.lightGray}
-                                        >{item}
-                                        </Paragraph>
-                                    </Row>)
-                                })}
-                            </Column>
+                    <Column
+                        size="4"
+                        size_sm="12"
+                        background={Colors.black}
+                    >
+                        <Row display="flex" padding={`20px`}>
+                            <H3
+                                fontSize={`22px`}
+                                color={Colors.yellow}
+                            >
+                                {yml.right.heading}
+                            </H3>
                         </Row>
+
+                        {yml.right.content_section.map((item, i) => {
+                            return (<Row display="flex" key={i} margin={`5px 0`} padding={`20px`}>
+                                <Paragraph
+                                    fontSize={`18px`}
+                                    lineHeight="18px"
+                                    color={Colors.lightGray}
+                                >{item}
+                                </Paragraph>
+                            </Row>)
+                        })}
                     </Column>
-                    <Column size="8" size_sm="12" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem" color="white">
-                        <Row align="center" height="100%">
+                    <Column size="8" size_sm="12" alignSelf="center" height="100%" borderRadius="0 0 0 1.25rem" background="white">
+                        <Row display="flex" justifyContent="center" height="100%">
                             <Column size="10" height="100%">
                                 <Divider height="50px" />
-                                <Row height="50px">
+                                <Row display="flex" height="50px">
                                     <H3>{yml.left.heading}</H3>
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                 </Row>
-                                <Row height="50px">
+                                <Row display="flex" height="50px">
                                     <Input
                                         type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                         errorMsg="Please specify a valid first name"
@@ -174,7 +163,7 @@ const Apply = (props) => {
                                         value={formData.first_name.value}
                                     />
                                 </Row>
-                                <Row height="50px">
+                                <Row display="flex" height="50px">
                                     <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                         errorMsg="Please specify a valid last name"
                                         required
@@ -187,7 +176,7 @@ const Apply = (props) => {
                                         value={formData.last_name.value}
                                     />
                                 </Row>
-                                <Row height="50px">
+                                <Row display="flex" height="50px">
                                     <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
                                         errorMsg="Please specify a valid email"
                                         required
@@ -200,7 +189,7 @@ const Apply = (props) => {
                                         value={formData.email.value}
                                     />
                                 </Row>
-                                <Row height="50px">
+                                <Row display="flex" height="50px">
                                     <Input
                                         type="phone" className="form-control" placeholder={yml.left.form_section.phone}
                                         errorMsg="Please specify a valid phone number"
@@ -214,10 +203,10 @@ const Apply = (props) => {
                                         value={formData.phone.value}
                                     />
                                 </Row>
-                                <Row height="40px">
+                                <Row display="flex" height="40px">
                                     <Paragraph padding="0.375rem 0.75rem" fontSize="14px" margin="10px 0 0 0" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
                                 </Row>
-                                <Row>
+                                <Row display="flex">
                                     {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
                                     {session && session.locations && session.locations.map(l =>
                                         <Column key={l.active_campaign_location_slug} size="6" size_md="12" paddingRight="0px" paddingLeft="0px" paddingTop="3px">
@@ -233,7 +222,7 @@ const Apply = (props) => {
                                         </Column>
                                     )}
                                 </Row>
-                                <Row marginTop="10px">
+                                <Row display="flex" marginTop="10px">
                                     <Input type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
                                         value={formData.referral_key.value}
                                         onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
@@ -241,7 +230,7 @@ const Apply = (props) => {
                                     <Paragraph padding="0" fontSize="10px" lineHeight="16px" color={Colors.black}>{yml.left.referral_section.content}</Paragraph>
                                 </Row>
                                 {session && session.location && location.gdpr_compliant &&
-                                    <Row marginTop="10px">
+                                    <Row display="flex" marginTop="10px">
                                         <Paragraph fontSize="14px" margin="5px 0 0 0">
                                             <input
                                                 type="checkbox"
@@ -252,7 +241,7 @@ const Apply = (props) => {
                                         </Paragraph>
                                     </Row>
                                 }
-                                <Row >
+                                <Row display="flex">
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                     <Button type="submit"
                                         width="150px"

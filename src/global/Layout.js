@@ -1,28 +1,27 @@
 import React from 'react';
-import loadable from '@loadable/component'
 import PropTypes from 'prop-types';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
 import Navbar from '../components/Navbar';
 import {StaticQuery, graphql} from 'gatsby';
+import UpcomingProgram from '../components/UpcomingProgram';
+import Footer from '../components/Footer';
 
-const UpcomingProgram = loadable(() => import('../components/UpcomingProgram'))
-const Footer = loadable(() => import('../components/Footer'))
 
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
 const Layout = ({children, seo, context}) => {
   // const {slug, title, description, image, keywords} = seo;
-  const [ editMode, setEditMode ] = React.useState()
-  const [ showUpcoming, setShowUpcoming ] = React.useState(true)
-  
+  const [editMode, setEditMode] = React.useState()
+  const [showUpcoming, setShowUpcoming] = React.useState(true)
+
   React.useEffect(() => {
-    if(localStorage.getItem("edit-mode") === "true") setEditMode(true);
-    if(RegExp('\/app?l(?:y|ica)').test(window.location.href)){
+    if (localStorage.getItem("edit-mode") === "true") setEditMode(true);
+    if (RegExp('\/app?l(?:y|ica)').test(window.location.href)) {
       setShowUpcoming(false);
-    } 
-  },[]);
+    }
+  }, []);
   return (
     <StaticQuery
       query={graphql`
@@ -81,15 +80,15 @@ const Layout = ({children, seo, context}) => {
 
         return (
           <>
-            {editMode && <div style={{ background: "yellow", padding: "15px" }}>
-                <span>You are reviewing the website on edit mode</span>
-                <button 
-                  style={{ border: "1px solid black", float: "right", padding: "5px" }}
-                  onClick={() => {
-                    localStorage.setItem("edit-mode", "false");
-                    setEditMode(false);
-                  }}
-                > ❌ Clear edit mode</button>
+            {editMode && <div style={{background: "yellow", padding: "15px"}}>
+              <span>You are reviewing the website on edit mode</span>
+              <button
+                style={{border: "1px solid black", float: "right", padding: "5px"}}
+                onClick={() => {
+                  localStorage.setItem("edit-mode", "false");
+                  setEditMode(false);
+                }}
+              > ❌ Clear edit mode</button>
             </div>}
             <SEO {...seo} context={context} />
             <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />

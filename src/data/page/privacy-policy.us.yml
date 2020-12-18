@@ -12,7 +12,7 @@ meta_info:
 #   image: "/images/bg/pricing-bg.jpg"
 
 consent:
-  message: By submitting this form, I accept that my data may be used for a quote request and the commercial relationship that may result from it. Check out our complete 
+  message: By submitting this form, I accept that my data may be used for a quote request and the commercial relationship that may result from it. Check out our complete
   link_label: Privacy Policy
   url: /us/privacy-policy
 
@@ -41,3 +41,4 @@ sections:
     text: "This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in 4Geeks Academy. This policy is not applicable to any information collected offline or via channels other than this website."
   - title: "Consent"
     text: "By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions."
+date_release: ""

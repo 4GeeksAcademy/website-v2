@@ -5,9 +5,20 @@ import {Colors} from '../Styling';
 import Card from '../Card';
 import Icon from '../Icon'
 
+const strings = {
+    us: {
+        "Projects": "Projects",
+        "Duration": "Duration"
+    },
+    es: {
+        "Projects": "Proyectos",
+        "Duration": "Duración"
+    }
+}
 
 const ProgramDetailsMobile = (props) => {
     const [selected, setSelected] = useState({index: null, manual: false});
+    const lang = props.lang || "us";
     if (!props.details) {
         console.log("Warning! Ignoring Program Details because it came null form the graphql query")
         return null;
@@ -29,11 +40,12 @@ const ProgramDetailsMobile = (props) => {
                             display_sm={`block`}
                         >
                             <Div
+                                display="flex"
                                 onClick={() => selected.index === index ? setSelected({index: null, manual: true}) : setSelected({index: index, manual: true})}
-                                justifyContent={`space-between`}
+                                justifyContent={`between`}
                                 cursor={`pointer`}
                             >
-                                <Div flexDirection={`column`} alignItems={`flex-start`}>
+                                <Div display="flex" flexDirection={`column`} alignItems={`flex-start`}>
                                     <H3
                                         color={Colors.white}
                                         align_sm={`left`}
@@ -54,7 +66,7 @@ const ProgramDetailsMobile = (props) => {
                             <Card
                                 padding={`20px`}
                             >
-                                <Div alignItems={`center`} margin={`10px 0`}>
+                                <Div display="flex" alignItems={`center`} margin={`10px 0`}>
                                     <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
                                         margin={`0 10px`}
@@ -70,14 +82,14 @@ const ProgramDetailsMobile = (props) => {
                                 >
                                     {item.description}
                                 </Paragraph>
-                                <Div alignItems={`center`} margin={`10px 0`}>
+                                <Div display="flex" alignItems={`center`} margin={`10px 0`}>
                                     <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
                                         margin={`0 10px`}
                                         fontWeight={`400`}
                                         align_sm={`left`}
                                     >
-                                        {`Projects`}
+                                        {strings[lang]["Projects"]}
                                     </H3>
                                 </Div>
                                 <Paragraph
@@ -86,14 +98,14 @@ const ProgramDetailsMobile = (props) => {
                                 >
                                     {item.projects}
                                 </Paragraph>
-                                <Div alignItems={`center`} margin={`10px 0`}>
+                                <Div display="flex" alignItems={`center`} margin={`10px 0`}>
                                     <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
                                     <H3
                                         margin={`0 10px`}
                                         fontWeight={`400`}
                                         align_sm={`left`}
                                     >
-                                        {`Duration`}
+                                        {strings[lang]["Duration"]}
                                     </H3>
                                 </Div>
                                 <Paragraph

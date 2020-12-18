@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import loadable from '@loadable/component'
 import {Row, Column, Div} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
@@ -9,10 +8,10 @@ import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import Icon from "../Icon"
+import ReactPlayer from '../ReactPlayer';
 
-const ReactPlayer = loadable(() => import('../ReactPlayer'))
 
-const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
+const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
 
     return (
@@ -33,6 +32,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                             borders="1.25rem"
                             marginLeft="0"
                             marginRight="0"
+                            display="flex"
                         >
                             <Column
                                 size="6"
@@ -59,14 +59,14 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                 </H3>
                                 {item.alumni.map((alumni, i) => {
                                     return (
-                                        <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`}>
+                                        <Div key={i} flexDirection={`column`} margin={`10px 0 5px 0`} display="flex">
                                             <H5
                                                 align="left"
                                                 align_sm="left"
                                                 fontWeight={`400`}
                                             >{`${alumni.first_name} ${alumni.last_name}`}
                                             </H5>
-                                            <Row marginBottom="5px">
+                                            <Row marginBottom="5px" display="flex">
                                                 <Column size="12" alignSm="center" display={`flex`} flexDirection={`row`} alignItems={`end`}>
                                                     <Paragraph
                                                         primary
@@ -118,14 +118,14 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                                     fs_lg="11px"
                                     fs_xl="16px" color={Colors.gray} align="left" fontSize="14px" lineHeight="20px">{item.project_content}
                                 </Paragraph>
-                                <Div>
+                                <Div display="flex">
                                     {item.project_video && <Anchor to={`${item.project_video}`} target="_blank" rel="noopener noreferrer nofollow">
-                                            <Paragraph margin={`10px 5px 0 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Video Demo •</Paragraph>
-                                        </Anchor>
+                                        <Paragraph margin={`10px 5px 0 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Video Demo •</Paragraph>
+                                    </Anchor>
                                     }
                                     {item.live_link && <Anchor to={`${item.live_link}`} target="_blank" rel="noopener noreferrer nofollow">
-                                            <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link </Paragraph>
-                                        </Anchor>
+                                        <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link </Paragraph>
+                                    </Anchor>
                                     }
                                 </Div>
                             </Column>
@@ -169,7 +169,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight }) => {
                     </Link>
                 </Div>
             </Carousel>
-            {limit > 0 && <Row height="10%" align="center">
+            {limit > 0 && <Row height="10%" justifyContent="center" display="flex">
                 <Column size="6" align="center">
                     <Link to={lang[0].node.button_section.button_link}>
                         <Button outline width="200px" color={Colors.gray} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>

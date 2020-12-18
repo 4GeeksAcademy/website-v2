@@ -36,7 +36,7 @@ export const Container = styled(Fragment)`
     width: ${props => containerVariants[props.variant || "fixed"]};
     height: ${props => props.height};
     margin: ${props => props.margin || "initial"};
-    padding: ${props=> props.padding};
+    padding: ${props => props.padding};
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -51,9 +51,8 @@ export const Container = styled(Fragment)`
     @media  ${Break.xs}{
         padding: ${props => props.p_xs};
     }
-`
-
-const rowAligns = {
+    `
+const justifyContentOptions = {
     "around": "space-around",
     "center": "center",
     "between": "space-between",
@@ -61,32 +60,50 @@ const rowAligns = {
     "end": "flex-end",
     "start": "flex-start",
 }
-export const Row = styled(Fragment)`
+export const Div = styled.div`
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};
+    position: ${props => props.position};
+    display: ${props => props.display};
+    align-items: ${props => props.alignItems};
+    margin: ${props => props.margin};
+    border-radius: ${props => props.borderRadius};
+    background: ${props => props.background};
+    justify-content: ${props => justifyContentOptions[props.justifyContent]};
+    flex-direction: ${props => props.flexDirection || 'row'};
+    box-shadow: ${props => props.shadow};
+    flex-wrap: nowrap; 
+    align-content: ${props => props.alignContent};
+    align: ${props => props.align};
+    cursor: ${props => props.cursor};
+    &:hover { 
+        background: ${props => props.backgroundHover};
+    }
+    @media  ${Break.lg}{
+        display: ${props => props.d_lg};
+    }
+    @media  ${Break.sm}{
+        align-items: ${props => props.alignItems_sm};
+        padding: ${props => props.p_sm};
+        display: ${props => props.d_sm};
+        width: ${props => props.w_sm};
+        margin: ${props => props.m_sm};
+    }
+    @media ${Break.xs}{
+        align-items: ${props => props.alignItems_xs};
+    }
+`
+export const Row = styled(Div)`
     border: ${props => props.border};
     border-top: ${props => props.borderTop};
-    border-bottom: ${props => props.borderBottom};
-    border-radius: ${props => props.borderRadius};
-    position: ${props => props.position};
     z-index: ${props => props.zIndex};
-    display: flex;
     flex-wrap: wrap; 
-    align-items:${props => props.alignItems};
-    margin: ${props => props.margin};
-    right: ${props => props.right};
-    left: ${props => props.left};
-    top: ${props => props.top};
     margin-right: ${props => props.marginRight};
     margin-left: ${props => props.marginLeft};
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
-    background: ${props => props.background};
-    justify-content: ${props => rowAligns[props.align]};
-    box-shadow: ${props => props.shadow
-        && `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);`
-    };
+    
     &:hover { 
         background: ${props => props.backgroundHover};
         margin: ${props => props.marginHover};
@@ -109,58 +126,17 @@ export const Row = styled(Fragment)`
     }
 `
 
-export const Div = styled.div`
-    display: ${props => props.display || "flex"};
-    flex-wrap: nowrap; 
-    flex-direction: ${props => props.flexDirection === 'column' ? 'column' : 'row'};
-    justify-content: ${props => props.justifyContent};
-    align-items: ${props => props.alignItems};
-    align-content: ${props => props.alignContent};
-    height: ${props => props.height};
-    width: ${props => props.width};
-    align: ${props => props.align};
-    margin: ${props => props.margin};
-    position: ${props => props.position};
-    background: ${props => props.background};
-    border-radius: ${props => props.borderRadius};
-    padding: ${props => props.padding};
-    cursor: ${props => props.cursor};
-    box-shadow: ${props => props.shadow};
-    &:hover { 
-        background: ${props => props.backgroundHover};
-    }
-    @media  ${Break.lg}{
-        display: ${props => props.d_lg};
-    }
-    @media  ${Break.sm}{
-        align-items: ${props => props.alignItems_sm};
-        padding: ${props => props.p_sm};
-        display: ${props => props.d_sm};
-        width: ${props => props.w_sm};
-        margin: ${props => props.m_sm};
-    }
-    @media ${Break.xs}{
-        align-items: ${props => props.alignItems_xs};
-    }
-`
-export const Column = styled.div`
-    padding: ${props => props.padding};
-    height: ${props => props.height};
-    margin: ${props => props.margin};
+
+export const Column = styled(Div)`
     text-align: ${props => props.align || "left"};
     position: relative;
     width: 100%;
     background: ${props => props.background};
-    background-color: ${props => props.color};
     border: ${props => props.borderStyle};
     align-self: ${props => props.alignSelf};
     padding-right: ${props => props.paddingRight};
     padding-left: ${props => props.paddingLeft};
-    display: ${props => props.display};
     flex-direction: ${props => props.flexDirection};
-    justify-content: ${props => props.justifyContent};
-    align-items: ${props => props.alignItems};
-    text-align: ${props => props.align};
     
     flex: 0 0 ${props => (props.size / 12) * 100}%;
     max-width: ${props => (props.size / 12) * 100}%;
@@ -223,13 +199,13 @@ export const Wrapper = (props) => {
             url={props.image}
             border={props.border}
             customBorderRadius={props.customBorderRadius}
-            color={props.background}
+            background={props.background}
             align={props.align}
             height={props.height}
             m_md={props.right ? "0 0 0 auto" : undefined}
             backgroundSize={props.backgroundSize}
         >
-            <Row padding={`20px 0`}>
+            <Row padding={`20px 0`} display={`flex`}>
                 <Column size="1" disp_sm="none" />
                 <Column
                     size={props.wide ? 11 : 9}
@@ -251,14 +227,14 @@ export const WrapperImage = (props) => {
         github={props.github}
         variant="fluid"
     >
-        <Row>
-            <Column size="1" />
+        <Row display={`flex`}>
+            <Column size="1" d_sm="none" />
             <Column
-                size="11"
+                size="11" size_sm="12"
                 url={props.image}
                 border={props.border}
                 customBorderRadius={props.customBorderRadius}
-                color={props.background}
+                background={props.background}
                 align={props.align}
                 height={props.height}
                 paddingRight="0"
@@ -278,7 +254,7 @@ export const WrapperImage = (props) => {
                 alt={props.alt}
                 filter={props.filter}
             >
-                    <Row>
+                    <Row display="flex">
                         <Column
                             size="9"
                             margin="0 auto"
@@ -299,18 +275,18 @@ WrapperImage.defaultProps = {
 
 export const WrapperCustom = (props) => {
     return <Container width={props.width}>
-        <Row>
+        <Row display={`flex`}>
             <Column size={props.outerLeftCol} ></Column>
             <Column
                 size={props.outerRightCol}
                 url={props.image}
                 border={props.border}
                 customBorderRadius={props.customBorderRadius}
-                color={props.background}
+                background={props.background}
             >
                 {props.full
                     ?
-                    <Row align={props.innerLeftRowAlign}>
+                    <Row justifyContent={props.innerLeftRowAlign} display="flex">
                         <Column size={props.innerLeftCol} >{props.content}</Column>
                         <Column size={props.innerRightCol}>
                             {props.children}

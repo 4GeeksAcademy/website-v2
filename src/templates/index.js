@@ -1,6 +1,5 @@
 import React from 'react';
-import {graphql,Link, navigate} from 'gatsby';
-import loadable from '@loadable/component'
+import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Row, Column, Wrapper} from '../components/Sections'
 import {RoundImage, Colors} from '../components/Styling'
@@ -11,16 +10,16 @@ import Credentials from '../components/Credentials'
 import ChooseProgram from '../components/ChooseProgram'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
+import Loc from '../components/Loc';
+import WhyPython from '../components/WhyPython';
+import Badges from '../components/Badges';
+import WhoIsHiring from '../components/WhoIsHiring';
+import AlumniProjects from '../components/AlumniProjects';
+import Why4Geeks from '../components/Why4Geeks';
+import TestimonialsCarrousel from '../components/Testimonials';
+import Card from '../components/Card';
+import GeeksVsOthers from '../components/GeeksVsOthers';
 
-const Card = loadable(() => import('../components/Card'))
-const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
-const TestimonialsCarrousel = loadable(() => import('../components/Testimonials'))
-const Why4Geeks = loadable(() => import('../components/Why4Geeks'))
-const AlumniProjects = loadable(() => import('../components/AlumniProjects'))
-const WhoIsHiring = loadable(() => import('../components/WhoIsHiring'))
-const Badges = loadable(() => import('../components/Badges'))
-const WhyPython = loadable(() => import('../components/WhyPython'))
-const Loc = loadable(() => import('../components/Loc'))
 
 const CityH1 = ({yml}) => {
   const {session} = React.useContext(SessionContext);
@@ -55,13 +54,13 @@ const CityWrapper2 = ({yml}) => {
 }
 
 const Home = (props) => {
-  
+
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
-  
+
   return (
     <>
-      <Row github={`/page/index.${pageContext.lang}.yml`}>
+      <Row github={`/page/index.${pageContext.lang}.yml`} display={`flex`}>
         <Column
           size="4"
           m_sm="0"
@@ -99,12 +98,12 @@ const Home = (props) => {
           paddingRight={`0`}
         >
           <Img
-            style={{ height: "500px", backgroundColor: Colors.lightGray, borderRadius: "0 0 0 1.25rem" }} 
-            imgStyle={{ objectFit: "cover" }} 
+            style={{height: "500px", backgroundColor: Colors.lightGray, borderRadius: "0 0 0 1.25rem"}}
+            imgStyle={{objectFit: "cover"}}
             alt="4Geeks Academy"
             loading="eager"
             fadeIn={false}
-            fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid} 
+            fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
             backgroundSize={`cover`}
           />
         </Column>
@@ -153,7 +152,7 @@ const Home = (props) => {
       {/* ******************* */}
       <Wrapper margin="100px">
         <CityWrapper2 yml={yml} />
-        <Row github={`/page/index.${pageContext.lang}.yml`}>
+        <Row github={`/page/index.${pageContext.lang}.yml`} display="flex">
           <Column size="6" size_sm="12" >
             <Card
               padding="20px"
@@ -205,7 +204,7 @@ const Home = (props) => {
                 align_xs="left">
                 {yml.join_geeks.geek_data.geek_force_data.content}
               </Paragraph>
-              <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right"  alignSelf="flex-end">
+              <Column size="2" margin="0 0 0 auto" paddingRight="0" align="right" alignSelf="flex-end">
                 <Link to={yml.join_geeks.geek_data.geek_force_data.icon_link}>
                   <Icon icon="arrowright" width="24px" color={Colors.blue} fill={Colors.blue} />
                 </Link>
@@ -295,7 +294,7 @@ export const query = graphql`
               sub_heading
               image{
                 childImageSharp {
-                  fluid(maxWidth: 1000){
+                  fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -354,8 +353,6 @@ export const query = graphql`
               title
               icon
               value
-              symbol
-              symbol_position
             }
           }
         }

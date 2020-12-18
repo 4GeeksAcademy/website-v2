@@ -14,6 +14,7 @@ const Faq = (props) => {
     const [buttonToggle, setButtonToggle] = useState(false);
     const [toggleIndex, setToggleIndex] = useState();
     const {session, setSession} = useContext(SessionContext);
+
     return (
         <>
             <WrapperImage
@@ -40,7 +41,7 @@ const Faq = (props) => {
             >
                 {yml.faq.map((item, index) => {
                     return (
-                        <Row key={index}>
+                        <Row key={index} display="flex">
                             <Column
                             >
                                 <Card
@@ -52,7 +53,7 @@ const Faq = (props) => {
                                     margin="5px 0 10px 0"
                                     onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
                                 >
-                                    <Row height="100%">
+                                    <Row display="flex" height="100%">
                                         <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" size_sm="2" align={`center`} alignSelf="center">
                                             {buttonToggle === false ?
                                                 toggleIndex != index &&
@@ -84,11 +85,11 @@ const Faq = (props) => {
                                             </H4>
                                             {buttonToggle === true && toggleIndex === index &&
                                                 <Paragraph
+                                                    dangerouslySetInnerHTML={{__html: item.answer}}
                                                     margin={`10px 0 0 0`}
                                                     align_sm="left"
                                                     fontFamily="Lato-bold, sans-serif"
                                                     lineHeight="1rem">
-                                                    {item.answer}
                                                 </Paragraph>
                                             }
                                         </Column>

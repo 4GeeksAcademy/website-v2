@@ -14,7 +14,6 @@ import {SessionContext} from '../session.js'
 const Landing = (props) => {
   const {session, setLocation} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
-  const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
   const [components, setComponents] = React.useState({});
   const [inLocation, setInLocation] = React.useState("");
 
@@ -30,7 +29,7 @@ const Landing = (props) => {
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get('in') || null;
-    if(_inLoc && _inLoc!="") setInLocation(_inLoc.replace(/^\w/, c => c.toUpperCase())+" ");
+    if (_inLoc && _inLoc != "") setInLocation(_inLoc.replace(/^\w/, c => c.toUpperCase()) + " ");
   }, []);
 
   // data sent to the form already prefilled
@@ -66,11 +65,11 @@ const Landing = (props) => {
           fs_sm={yml.follow_bar.content.font_size[3]}
           fs_xs={yml.follow_bar.content.font_size[4]}
         >
-          {yml.follow_bar.content.text.split("\n").map((c, i) => <span className="d-block d-xs-none w-100">{c}</span>)}
-          {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
+          {yml.follow_bar.content.text.split("\n").map((c, i) => <span key={i} className="d-block d-xs-none w-100">{c}</span>)}
+          {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span key={i} className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
-      <Row className="d-sm-none">
+      <Row display="flex" className="d-sm-none">
         <StyledBackgroundSection
           className={`image`}
           image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
@@ -202,9 +201,9 @@ const Landing = (props) => {
         Object.keys(components)
           .filter(name => components[name] && (landingSections[name] || landingSections[components[name].layout]))
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
-          .map(name => {
+          .map((name, i) => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, yml: components[name], session, course, location: components.meta_info.utm_location})
+            return landingSections[layout]({...props, index: i, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location })
           })
       }
     </>
@@ -257,6 +256,7 @@ export const query = graphql`
             in_the_news{
               heading
               position
+              filter
             }
             program_details{
               position
@@ -308,6 +308,17 @@ export const query = graphql`
                 text
                 font_size
               }
+              columns{
+                size
+                content{
+                  text
+                  font_size
+                }
+                image{
+                  src
+                  style
+                }
+              }
             }
             header_data{
               tagline
@@ -348,8 +359,6 @@ export const query = graphql`
               title
               icon
               value
-              symbol
-              symbol_position
             }
           }
         }
@@ -482,4 +491,6 @@ export const query = graphql`
   }
 `;
 
-export default BaseRender(Landing);
+export default BaseRender(Landing, {
+  navbar: true
+});

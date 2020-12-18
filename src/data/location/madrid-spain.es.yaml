@@ -5,7 +5,7 @@ meta_info:
   description: null
   image: "https://storage.googleapis.com/4geeks-academy-website/madrid-es.png"
   keywords: ""
-  redirects: ["madrid","/es/location/madrid-spain/"]
+  redirects: ["madrid", "/es/location/madrid-spain/"]
 
 seo_title: "4Geeks Academy Madrid, España"
 header:
@@ -17,9 +17,9 @@ header:
 button:
   syllabus_button_text: "DESCARGAR CURRÍCULO" # <-- this will show everywhere in the website
   apply_button_text: "SOLICITA TU PLAZA" # <-- this will show everywhere in the website
-  
+
   syllabus_submit_text: "DESCARGAR"
-  cohort_more_details_text: "INFO"
+  cohort_more_details_text: "DETALLES"
   apply_button_link: "/aplica"
 
 info_box:
@@ -98,24 +98,24 @@ prices:
           paymentInfo: "18 meses + 600€ Reserva"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"
-          message: "Pregunta por nuestras becas compatibles con financiación"  
+          message: "Pregunta por nuestras becas compatibles con financiación"
         - months: "12 m"
           payment: "477,14€"
           paymentInfo: "12 meses + 600€ Reserva"
           provider: "Zank"
           logo: "https://www.zank.com.es/img/logozankgris.svg"
-          message: "Pregunta por nuestras becas compatibles con financiación"        
+          message: "Pregunta por nuestras becas compatibles con financiación"
         - months: "6 m"
           payment: "928,96€"
           paymentInfo: "6 meses + 600€ Reserva"
           provider: "Zank"
-          logo: "https://www.zank.com.es/img/logozankgris.svg"   
+          logo: "https://www.zank.com.es/img/logozankgris.svg"
           message: "Pregunta por nuestras becas compatibles con financiación"
         - months: "3 m"
           payment: "2.000€"
           paymentInfo: "3 cuotas ¡sin intereses!"
           provider: "4Geeks"
-          logo: 
+          logo:
           message: "Pregunta por nuestras becas compatibles con financiación"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
@@ -162,7 +162,7 @@ prices:
           paymentInfo: "18 meses + 500€ Reserva"
           provider: "Zank"
           logo: "/images/zank.png"
-          message: "Pregunta por nuestras becas compatibles con financiación"  
+          message: "Pregunta por nuestras becas compatibles con financiación"
         - months: "12 m"
           payment: "432,90€"
           paymentInfo: "12 meses + 500€ Reserva"
@@ -174,7 +174,7 @@ prices:
           paymentInfo: "6 meses + 500€ Reserva"
           provider: "Zank"
           logo: "/images/zank.png"
-          message: "Pregunta por nuestras becas compatibles con financiación"          
+          message: "Pregunta por nuestras becas compatibles con financiación"
       button:
         button_text: "APLICA YA"
     ## RIGHT BOX SECTION
@@ -196,11 +196,20 @@ city: "Madrid"
 name: "Madrid"
 latitude: "40.439769"
 longitude: "-3.680207"
-phone: "+34 (910) 86 69 83"
+phone: "+34 910 86 69 83"
 address: "Calle de Edison 3"
 zip_code: "28006"
 state: "Madrid"
 country: "España"
+socials:
+  - social_name: "Facebook"
+    social_link: "https://www.facebook.com/4geeksacademyes"
+  - social_name: "Twitter"
+    social_link: "https://www.twitter.com/4geeksacademyes"
+  - social_name: "Instagram"
+    social_link: "https://www.instagram.com/4geeksacademyes"
+  - social_name: "Meetup"
+    social_link: "https://www.meetup.com/4geeks-academy-madrid"
 courses:
   - "Full-Time"
   - "Part-Time"

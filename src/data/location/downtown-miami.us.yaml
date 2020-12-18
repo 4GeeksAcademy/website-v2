@@ -2,7 +2,7 @@ meta_info:
   slug: "downtown-miami"
   title: "Miami Coding Bootcamp"
   position: 1
-  description: "Learn & evolve your coding skills. Miami Coding Bootcamp with over 1,000 Graduates & 86% hiring rate. The #1 part-time coding bootcamp in the world."
+  description: "Learn & evolve your coding skills. Miami Coding Bootcamp with over 1,000 Graduates & ~89% hiring rate. The #1 part-time coding bootcamp in the world."
   image: ""
   keywords: "null"
   redirects: ["/locations", "/miami"]
@@ -282,6 +282,15 @@ address: "1801 SW 3rd Ave #100"
 zip_code: "33130"
 state: "Florida"
 country: "USA"
+socials:
+  - social_name: "Facebook"
+    social_link: "https://www.facebook.com/4geeksacademy"
+  - social_name: "Twitter"
+    social_link: "https://www.twitter.com/4geeksacademy"
+  - social_name: "Instagram"
+    social_link: "https://www.instagram.com/4geeksacademy"
+  - social_name: "Meetup"
+    social_link: "https://www.meetup.com/4geeks-academy"
 courses:
   - "Full-Time"
   - "Part-Time"

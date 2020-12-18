@@ -10,3 +10,8 @@ header:
     tagline: Próximos programas y Eventos de 4GEEKS ACADEMY
     sub_heading: "Ajusta los filtros a los eventos of cursos que más te interesan"
     image: "../../../static/images/bg/4Geeks-events-bg.jpg"
+button:
+    apply_button_text: "APLICAR"
+    apply_button_link: "/aplica"
+    cohort_more_details_text: "DETALLES"
+    event_register_button_link: "DETALLES"

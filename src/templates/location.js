@@ -1,10 +1,10 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {Link, Anchor} from "../components/Styling/index"
 import Card from '../components/Card'
-import loadable from '@loadable/component'
 import ChooseProgram from '../components/ChooseProgram'
 import News from '../components/News'
 import dayjs from "dayjs"
+import 'dayjs/locale/de'
 import {Div, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
 import {Title, H1, H4, H3, Span, Paragraph, Separator} from '../components/Heading'
 import {Button, Colors, Small, Img, StyledBackgroundSection} from '../components/Styling'
@@ -13,11 +13,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {requestSyllabus} from "../actions";
 import Icon from '../components/Icon'
-
-const LeadForm = loadable(() => import('../components/LeadForm'))
-const Modal = loadable(() => import('../components/Modal'))
-const Why4Geeks = loadable(() => import('../components/Why4Geeks'))
-
+import LeadForm from '../components/LeadForm';
+import Modal from '../components/Modal';
+import Why4Geeks from '../components/Why4Geeks';
 
 const Location = ({data, pageContext, yml}) => {
 
@@ -63,7 +61,7 @@ const Location = ({data, pageContext, yml}) => {
                 fontSize="46px"
                 textAlign="center"
             />
-            <Row align="center" marginBottom="40px">
+            <Row display="flex" justifyContent="center" marginBottom="40px">
                 <Column align="right" align_sm="center" m_sm="0 0 15px 0" size="6" size_sm="12">
                     <ChooseProgram
                         right="15px"
@@ -107,7 +105,7 @@ const Location = ({data, pageContext, yml}) => {
         { yml.breathecode_location_slug !== "online" &&
             <Wrapper >
                 <Card shadow borders="1.25rem" >
-                    <Row
+                    <Row display="flex"
                         height="100%"
                         marginLeft="0"
                         marginRight="0"
@@ -151,7 +149,7 @@ const Location = ({data, pageContext, yml}) => {
                 margin="left"
                 variant="primary"
             />
-            <Row>
+            <Row display="flex">
                 {cohorts && cohorts.map((cohort, key) =>
                     <Column
                         key={key}
@@ -177,6 +175,7 @@ const Location = ({data, pageContext, yml}) => {
                             <H4 padding="10px">{cohort.certificate.name}</H4>
                             <Div padding="10px">
                                 <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
+                                {pageContext.lang == "us" ? 
                                 <Paragraph
                                     margin={`0 0 0 10px`}
                                     fs_xs="18px"
@@ -185,8 +184,19 @@ const Location = ({data, pageContext, yml}) => {
                                     fs_lg="11px"
                                     fontSize="14px">
                                     <Small display="block">Starting on:</Small>
-                                    {dayjs(cohort.kickoff_date).format("ddd, D MMM YYYY")}
+                                    {dayjs(cohort.kickoff_date).locale("us").add(5, "hour").format("ddd, D MMM YYYY")}
                                 </Paragraph>
+                                : <Paragraph
+                                    margin={`0 0 0 10px`}
+                                    fs_xs="18px"
+                                    fs_sm="18px"
+                                    fs_md="9px"
+                                    fs_lg="11px"
+                                    fontSize="14px">
+                                    <Small display="block">Empezando el:</Small>
+                                    {dayjs(cohort.kickoff_date).locale("es").add(5, "hour").format("ddd, D MMM YYYY")}
+                                </Paragraph>}
+                                
                             </Div>
                             <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center">
                                 <Link to={yml.button.apply_button_link}><Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
@@ -199,14 +209,14 @@ const Location = ({data, pageContext, yml}) => {
             </Row>
         </Wrapper>
         <Wrapper >
-            <Row>
+            <Row display="flex">
                 <Column
                     size="12"
                     borderRadius="0 0 0 1.25rem"
 
                 >
                     <Card shadow borders="1.25rem" >
-                        <Row
+                        <Row display="flex"
                             height="100%"
                             marginLeft="0"
                             marginRight="0"
@@ -263,7 +273,7 @@ export const query = graphql`
                 sub_heading
                 image {
                     childImageSharp {
-                    fluid(maxWidth: 800){
+                    fluid(maxWidth: 1200, quality: 100){
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -292,7 +302,7 @@ export const query = graphql`
                 contact_heading
                 image {
                     childImageSharp {
-                      fluid(maxWidth: 800){
+                      fluid(maxWidth: 800, quality: 100){
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }
@@ -311,7 +321,7 @@ export const query = graphql`
                 images{
                     path{
                         childImageSharp {
-                          fluid(maxWidth: 800){
+                          fluid(maxWidth: 800, quality: 100){
                             ...GatsbyImageSharpFluid_withWebp
                           }
                         }

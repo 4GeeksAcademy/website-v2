@@ -24,7 +24,7 @@ education:
     image: "../../../static/images/news/newsweek.png"
     alt: ""
   right_box:
-    heading: "4GEEKS EN LOS MEDIOS"
+    heading: "4GEEKS ACADEMY EN LOS MEDIOS"
     image: "../../../static/images/Group.png"
     alt: "CNN and BCC Logo"
 

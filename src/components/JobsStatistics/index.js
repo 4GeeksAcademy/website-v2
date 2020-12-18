@@ -10,7 +10,7 @@ import Fragment from "../Fragment"
 export default (props) => {
     const jobs = props.lang[0].node.jobs
     return (<Fragment github="/components/jobs_statistics">
-        <Row>
+        <Row display="flex">
             {jobs.map((i, index) => (
                 <Column size="4" size_sm="12" key={index} >
                     <Card
@@ -44,7 +44,7 @@ export default (props) => {
                             color="gray"
                             align="left"
                             margin="10px 0 0 0"
-                            >
+                        >
                             {i.sub_title}
                         </Paragraph>
                     </Card>
@@ -52,7 +52,7 @@ export default (props) => {
             ))
             }
         </Row >
-        </Fragment>
+    </Fragment>
     )
 }
 

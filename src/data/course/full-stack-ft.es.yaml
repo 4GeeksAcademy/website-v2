@@ -14,7 +14,7 @@ meta_info:
       "es/full-stack-ft",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time",
-      "/es/course/bootcamp-desarrollo-web-full-stack-full-time"
+      "/es/course/bootcamp-desarrollo-web-full-stack-full-time",
     ]
 
 header:
@@ -93,15 +93,13 @@ geeks_vs_others:
 geek_data:
   heading: ¡Career Support de por vida!
   geek_pal:
-    - Un profesor cada cuatro estudiantes (1:4).
-    - Un profesor principal cada doce estudiantes (1:12).
+    - Un profesor cada cinco estudiantes (1:5).
     - Sesiones ilimitadas de tutoría por demanda, en persona o en línea.
     - Miles de ejercicios autoevaluados.
     - Tutoriales interactivos y autoevaluados.
     - Soluciones en video para una retroalimentación instantánea.
     - Chat de apoyo en línea al menos 12 horas al día.
     - Transmisión en línea de las clases.
-    - Grabación de las clases para su posterior revisión.
   geek_force:
     - Construcción de CV y LinkedIn.
     - Construcción del perfil de Github y portafolio desde el dia 1.
@@ -129,17 +127,17 @@ typical:
       step: 0
     - title: "Setup y café"
       time: "8:45 AM"
-      icon: circle
+      icon: coffee
       content: "Empezamos en 15 minutos, tómate una café, ¡recarga tus energías y prepárate para aprender!"
       step: 1
     - title: "Revisión del día anterior"
       time: "9:00 AM"
-      icon: circle
+      icon: laptopcode
       content: "Revisión de las actividades del día anterior o del fin de semana, preguntas y respuestas. Breve resumen de lo que hemos abordado."
       step: 2
     - title: "Clase del día"
       time: "10:00 AM"
-      icon: laptopcode
+      icon: teacher
       content: "Incremental: cada mañana, los mentores presentarán un pequeño conjunto de nuevos conceptos y técnicas que te ayudarán en el camino."
       step: 3
     - title: "¡Hora de la comida!"
@@ -149,12 +147,12 @@ typical:
       step: 4
     - title: "Ejercicios y Proyectos"
       time: "2:00 PM"
-      icon: coffee
+      icon: laptop
       content: "Afrontarás constantemente nuevos retos con proyectos de la vida real y ejercicios."
       step: 5
     - title: "Trabajos colaborativos"
       time: "5:00 PM"
-      icon: coffee
+      icon: usergroup
       content: "Todos los estudiantes programarán en una sola pantalla, discutirán enfoques, estrategias y entregarán sus proyectos."
       step: 6
 ## ALUMNI SECTION

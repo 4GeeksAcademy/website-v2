@@ -48,7 +48,8 @@ const Partners = (props) => {
           fontFamily="Lato-bold, sans-serif"
         />
         <Row
-          align="center"
+          justifyContent="center"
+          display="flex"
         >
           <Modal
             aria-labelledby="simple-modal-title"
@@ -63,7 +64,7 @@ const Partners = (props) => {
         <Divider height="130px" xs="0" />
       </WrapperImage>
       <Wrapper
-        >
+      >
         <Credentials transform="translate(-100px)" lang={data.allCredentialsYaml.edges} />
       </Wrapper>
       <Divider height="50px" />
@@ -143,7 +144,7 @@ export const query = graphql`
               sub_heading
               image{
                 childImageSharp {
-                  fluid(maxWidth: 1200){
+                  fluid(maxWidth: 1600, quality: 100){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -163,8 +164,6 @@ export const query = graphql`
               title
               icon
               value
-              symbol
-              symbol_position
             }
           }
         }

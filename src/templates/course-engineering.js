@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
-import loadable from '@loadable/component'
 import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
@@ -9,19 +8,19 @@ import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
 import Icon from '../components/Icon'
+import GeeksVsOthers from '../components/GeeksVsOthers';
+import ProgramDetails from '../components/ProgramDetails';
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
+import WhoIsHiring from '../components/WhoIsHiring';
+import PricesAndPayment from '../components/PricesAndPayment';
+import LeadForm from '../components/LeadForm';
+import Modal from '../components/Modal';
 
-const GeeksVsOthers = loadable(() => import('../components/GeeksVsOthers'))
-const ProgramDetails = loadable(() => import('../components/ProgramDetails'))
-const ProgramDetailsMobile = loadable(() => import('../components/ProgramDetailsMobile'))
-const WhoIsHiring = loadable(() => import('../components/WhoIsHiring'))
-const PricesAndPayment = loadable(() => import('../components/PricesAndPayment'))
-const LeadForm = loadable(() => import('../components/LeadForm'))
-const Modal = loadable(() => import('../components/Modal'))
 
 const Program = ({data, pageContext, yml}) => {
 
   const {session} = React.useContext(SessionContext);
-  
+
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
@@ -63,11 +62,11 @@ const Program = ({data, pageContext, yml}) => {
         margin="0"
       />
       <H5 color={Colors.white} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
-      <Row align="center" marginTop="20px" marginBottom="50px">
+      <Row display="flex" justifyContent="center" marginTop="20px" marginBottom="50px">
         <Column align="right" size="6" size_xs="12" align_sm="center" m_sm="0px 0px 15px 0px">
           <Link to={yml.button.apply_button_link}
-              state={{ course: yml.meta_info.bc_slug }}
-            >
+            state={{course: yml.meta_info.bc_slug}}
+          >
             <Button width="200px" color="red" margin="0" textColor=" white">{apply_button_text}</Button>
           </Link>
         </Column>
@@ -81,71 +80,72 @@ const Program = ({data, pageContext, yml}) => {
         open={open}
         onClose={() => setOpen(false)}
       >
-        <LeadForm 
-          style={{ marginTop: "50px" }}
-          heading={yml.button.syllabus_heading} 
-          motivation={yml.button.syllabus_motivation} 
+        <LeadForm
+          style={{marginTop: "50px"}}
+          heading={yml.button.syllabus_heading}
+          motivation={yml.button.syllabus_motivation}
           sendLabel={yml.button.syllabus_btn_label}
-          formHandler={requestSyllabus} 
-          handleClose={() => setOpen(false)} 
+          formHandler={requestSyllabus}
+          handleClose={() => setOpen(false)}
           lang={pageContext.lang}
-          data={{ 
-            course: { value: yml.meta_info.bc_slug, valid: true }
+          data={{
+            course: {value: yml.meta_info.bc_slug, valid: true}
           }}
         />
       </Modal>
       <Divider height="100px" md="0px" />
     </WrapperImage>
 
-    
+
     <Wrapper
       margin="100px"
       border="top">
       <Title
-          size="10"
-          marginTop="40px"
-          title={yml.potential_companies.tagline}
-          paragraph={yml.potential_companies.sub_heading}
-          variant="primary"
+        size="10"
+        marginTop="40px"
+        title={yml.potential_companies.tagline}
+        paragraph={yml.potential_companies.sub_heading}
+        variant="primary"
       />
       <WhoIsHiring
         images={yml.potential_companies.companies}
       />
     </Wrapper>
 
-    <Wrapper  margin="50px 0 0 0">
+    <Wrapper margin="50px 0 0 0">
       <Title
-          size="10"
-          type="h2"
-          marginTop="40px"
-          title={yml.details.heading}
-          paragraph={yml.details.sub_heading}
-          variant="primary"
+        size="10"
+        type="h2"
+        marginTop="40px"
+        title={yml.details.heading}
+        paragraph={yml.details.sub_heading}
+        variant="primary"
       />
-      <ProgramDetails details={yml.details} />
-      <ProgramDetailsMobile details={yml.details} />
+      <ProgramDetails details={yml.details} lang={pageContext.lang} />
+      <ProgramDetailsMobile details={yml.details} lang={pageContext.lang} />
     </Wrapper>
 
-    <Div 
-          display="block" 
-          margin="50px 0px 0px 0px" 
-          m_sm="50px 0px"
-          background={Colors.lightGray}
-      >
-        <Wrapper>
-          <H5 fontSize="20px">{yml.syllabus.heading}</H5>
-          <LeadForm 
-            style={{ padding: "10px 0px", maxWidth: "100%" }}
-            inputBgColor={Colors.white}
-            layout="flex"
-            lang={pageContext.lang}
-            formHandler={requestSyllabus} 
-            data={{ 
-              course: { type: "hidden", value: yml.meta_info.bc_slug, valid: true }
-            }}
-          />
-        </Wrapper>
-      </Div>
+    <Div
+      display="block"
+      margin="50px 0px 0px 0px"
+      m_sm="50px 0px"
+      background={Colors.lightGray}
+    >
+      <Wrapper>
+        <H5 fontSize="20px">{yml.syllabus.heading}</H5>
+        <LeadForm
+          style={{padding: "10px 0px", maxWidth: "100%"}}
+          inputBgColor={Colors.white}
+          layout="flex"
+          lang={pageContext.lang}
+          sendLabel={syllabus_button_text}
+          formHandler={requestSyllabus}
+          data={{
+            course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
+          }}
+        />
+      </Wrapper>
+    </Div>
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
     {/* ---------------------------- */}
@@ -154,25 +154,25 @@ const Program = ({data, pageContext, yml}) => {
     >
       <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
         <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
-        <Row padding="0px 40px" p_md="0 10px">
-            <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">
-              <GeekCard 
-                icon="arrowright"
-                to={`/${pageContext.lang}/geekforce`}
-                image="/images/geekforce.png"
-                heading={geek.geek_data.geek_force_heading}
-                bullets={geek.geek_data.geek_force}
-              />
-            </Column>
-            <Column size="6" size_sm="12" paddingRight={`0`} p_sm="0">
-              <GeekCard 
-                icon="arrowright"
-                to={`/${pageContext.lang}/geekforce`}
-                image="/images/geekpal.png"
-                heading={geek.geek_data.geek_pal_heading}
-                bullets={geek.geek_data.geek_pal}
-              />
-            </Column>
+        <Row display="flex" padding="0px 40px" p_md="0 10px">
+          <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">
+            <GeekCard
+              icon="arrowright"
+              to={`/${pageContext.lang}/geekforce`}
+              image="/images/geekforce.png"
+              heading={geek.geek_data.geek_force_heading}
+              bullets={geek.geek_data.geek_force}
+            />
+          </Column>
+          <Column size="6" size_sm="12" paddingRight={`0`} p_sm="0">
+            <GeekCard
+              icon="arrowright"
+              to={`/${pageContext.lang}/geekforce`}
+              image="/images/geekpal.png"
+              heading={geek.geek_data.geek_pal_heading}
+              bullets={geek.geek_data.geek_pal}
+            />
+          </Column>
         </Row>
       </Column>
     </Wrapper>
@@ -188,7 +188,7 @@ const Program = ({data, pageContext, yml}) => {
     </Wrapper>
 
     <Wrapper
-      
+
       github="/course"
     >
       <Title
@@ -366,8 +366,6 @@ export const query = graphql`
             title
             icon
             value
-            symbol
-            symbol_position
           }
         }
       }

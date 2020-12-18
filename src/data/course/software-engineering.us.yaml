@@ -16,9 +16,9 @@ header:
 
   # The background image position can be cnotroled by device size
   # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px","0px -50px","0px -20px","0px 0px","0px 0px"]
+  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
   image: "../../../static/images/bg/apple-building.jpg"
-  
+
   alt: ""
 
 button:
@@ -36,13 +36,6 @@ details:
     duration: "DURATION:"
     skills: "Skills / Weeks:"
   details_modules:
-    - module_name: "PREWORK"
-      title: "From programming to engineering"
-      description: "During this phase we will make sure you know you are ready for the course: Solidify algorithm concepts, get familizarized with Java Programming Language, Object Oriented Programming, Javascript, React.js and web development."
-      projects: "Queue Managment System using React, Java and MySQL"
-      slug: "prework"
-      duration: "~ 60 hours"
-      step: 0
     - module_name: "FRONT"
       title: "Advanced Front-End"
       description: >
@@ -100,7 +93,7 @@ details:
 syllabus:
   heading: Get all the information about the syllabus
   button_label: Download
-  
+
 potential_companies:
   tagline: "Get trained to thrive at major companies"
   sub_heading: "Get ready to apply to the best companies in the world: the next level in your career as Software Engineer"
@@ -139,22 +132,14 @@ geeks_vs_others:
 geek_data:
   heading: And Fortune 500 companies will hire you!
   geek_pal:
-    - Resume building
-    - Github profile building
-    - Mock interview preparation
-    - Customized interview preparation session for targeted jobs
-    - Personal Branding coaching
-    - Post-graduation coding practices and exercises
+    - Unlimited Senior mentorship.
+    - Lifetime access to the software community.
+    - Worldwide access and support.
   geek_force:
-    - One teacher every four students (1:4)
-    - One senior teacher every twelve students (1:12)
-    - Unlimited on-demand in-person or online mentoring sessions
-    - Thousands of auto-graded exercises
-    - Interactive and auto-graded tutorials
-    - Video solutions for instant feedback
-    - Online support chat 12 hours a day
-    - Online streaming of classes
-    - Recording of classes for later review
+    - Helping you land a job in a 500 Fortune company.
+    - Profile, portfolio, interviews, workshops, talks, software community, network, active projects collaboration.
+    - It’s about getting your career to the next level.
+    
 
 ## PRICES AND PAYMENTS SECTION
 prices:

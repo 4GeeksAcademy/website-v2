@@ -1,15 +1,15 @@
 meta_info:
-  slug: programming-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
+  slug: coding-school # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Programming Bootcamp On-line and In-person, learn to code and get a better professional career"
-  description: "Coding has become an essencial knowledge for every career, take a programming bootcamp and learn to code and have a better life."
+  title: "Coding School Online and in person, learn to code and get a better professional career"
+  description: "Coding has become an essencial knowledge for every career, join our coding school, learn to code and have a better life."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Programming Bootcamp, Coding Bootcamp, Computer Science Bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
+  keywords: "Coding School, Coding Academy, Coding Classes, Learn to code, 4Geeks Academy"
   
   template: "landing_a" # <--- choose your landing template
   redirects: [ # <--- URL redirections to avoid 404 errors
-    "/landing/programming-bootcamp",
+    "/landing/coding-school",
   ] 
   
   # Set a particular course or location to the landing page
@@ -28,8 +28,8 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Programming Bootcamp
-  sub_heading: "Become a web developer in 9 or 16 weeks"
+  tagline: Coding School
+  sub_heading: "Become a web developer and get a job in tech"
   image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.3)
 
@@ -63,7 +63,7 @@ follow_bar:
 
 in_the_news:
   position: 1
-  heading: "Read about us in the media..."
+  heading: "This coding school in the media..."
 
 badges:
   position: 2
@@ -73,6 +73,12 @@ program_details:
   position: 3
   heading: "Master Python, JS and React"
   sub_heading: "The 3 most used languages in the world"
+
+why_python:
+  position: 4
+  heading: "Why Python and React.js" # optional or set to white space to hide
+  sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+
 
 geeks_vs_others:
   position: 5
@@ -98,6 +104,15 @@ alumni_projects:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: first_syllabus_form
+    position: 4
+    layout: syllabus 
+    button: 
+      text: "Instant Download"
+    heading: 
+      text: "Download the course syllabus"
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","40px","40px","40px", "40px"]
   - name: top_coding_bootcamp
     position: 4
     layout: two_column_left 
@@ -110,8 +125,11 @@ components:
       text: "Read testimonials"
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
+    content: 
+      text: "We are proud to have been awarded os one of the top coding schools in the world"
+      font_size: ["18px"]
     heading: 
-      text: "We have been named one of the TOP programming bootcamps in the World"
+      text: "One of the TOP coding schools in the World"
                   #xl      lg     md     sm    xs
       font_size: ["40px","40px","40px","40px", "40px"]
   - name: working_as_software_developers
