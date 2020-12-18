@@ -28,10 +28,11 @@ Education has always been a matter of “How to Pay?”, “Do I qualify?”, �
 
 First things first, let’s answer your main question right away: How much does the program cost?
 
+Part-time
+### $7,499
 
-### $6,000
-
-
+Full-time
+### $9,499
 
 
 ### No extra fees. No tricks.
@@ -47,7 +48,7 @@ We lowered the cost, and, yes, it was a big challenge, but we found a way to off
 
 Now there’s more: We do not only offer the best price in the city but also the best payment plan.  Others will follow, but we know _**we are the first**_ to offer you the Extended Payment Plan.
 
-If you want to fully understand how the process works and what we mean by “Extended Payment Plan”, you can take a deeper look in our [Payment GuideBook](https://www.4geeksacademy.co/wp-content/uploads/2017/10/4GA-Payment-Guidebook-2.pdf). We tried to answer every question you may have, but, most importantly, we have designed a program where coding is a priority and not pricing.
+If you want to fully understand how the process works and what we mean by “Extended Payment Plan”, you can take a deeper look in our [Payment GuideBook](https://storage.googleapis.com/4geeks-academy-website/Material%20(PDF%20and%20Images)%20website/4GA%20Financial%20Guidebook.pdf)x We tried to answer every question you may have, but, most importantly, we have designed a program where coding is a priority and not pricing.
 
 Check out your options on the chart below:
 
