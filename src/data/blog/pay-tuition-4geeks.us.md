@@ -221,7 +221,7 @@ Check out your options on the chart below:
 
 <td width="86" >
 
-**$6,000**
+**$7,499**
 </td>
 
 <td width="90" >
