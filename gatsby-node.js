@@ -48,7 +48,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     }
 };
 
-// Create all the apges needed
+// Create all the pages needed
 exports.createPages = async (params) =>
     await createEditPage(params) &&
     await createBlog(params) &&
@@ -104,7 +104,6 @@ const createBlog = async ({actions, graphql}) => {
                         status
                         featured
                         tags
-                        
                     }
                     excerpt,
                     fields{
