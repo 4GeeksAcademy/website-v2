@@ -1,5 +1,5 @@
 meta_info:
-  slug: "impact-hub"
+  slug: "caracas-venezuela-en"
   title: 4Geeks Academy Caracas
   position: 20
   description: null
@@ -114,8 +114,8 @@ prices:
         price: "?"
         price_info: "please contact us for more information about prices, scolarships and financing options."
 
-active_campaign_location_slug: "los-cortijos-caracas"
-breathecode_location_slug: "el-nacional"
+active_campaign_location_slug: "caracas-venezuela"
+breathecode_location_slug: "caracas-venezuela"
 gdpr_compliant: false # do we need to ask for permision?
 
 city: "Caracas"
