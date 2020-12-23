@@ -143,7 +143,11 @@ export const apply = async (data, session) => {
     console.log("Apply action called with session: ", session);
     tagManager('student_application');
     let body = {};
-    Object.keys(data).forEach(key => body[key] = data[key].value);
+    console.log("form data: ", data)
+    Object.keys(data).forEach(key => {
+        if(typeof(data[key]) === "object") body[key] = data[key].value;
+        else body[key] = data[key];
+    });
 
     const automation = data.automation || 'website-lead';
     const tag = data.tag || 'strong';

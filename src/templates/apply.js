@@ -4,10 +4,10 @@ import {Row, Column, Wrapper, Divider} from '../components/Sections'
 import {H3, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Input, Alert} from '../components/Form'
+import {SelectRaw} from '../components/Select'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
 import {apply, tagManager} from "../actions"
-import Select from "../components/Select"
 import TestimonialsCarrousel from '../components/Testimonials'
 
 
@@ -21,7 +21,6 @@ const formIsValid = (formData = null) => {
 const Apply = (props) => {
     const {data, pageContext, yml} = props;
     const {session} = useContext(SessionContext);
-    const [ toggle, setToggle ] = useState(false);
     const [formStatus, setFormStatus] = useState({status: "idle", msg: "Apply"});
     const [formData, setVal] = useState({
         first_name: {value: '', valid: false},
@@ -35,13 +34,11 @@ const Apply = (props) => {
     });
     const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
         label: p.text,
-        value: p.location_bc_slug
+        value: p.bc_slug
     }))
     React.useEffect(() => {
         tagManager("application_rendered")
     }, [])
-    console.log("formdata course", formData.course);
-    console.log("yml", yml.left.course_title);
     React.useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         // Pre-fill the location
@@ -56,19 +53,18 @@ const Apply = (props) => {
         // Pre-fill the course
         let _course = urlParams.get('course');
         if (!_course && props.location.state) _course = props.location.state.course;
-
-        if (typeof (_course) === "string") _course = programs.find(p => p.location_bc_slug === _course);
+        
+        if (typeof (_course) === "string") _course = programs.find(p => p.value === _course);
 
         // Pre-fill the utm_url
         let _utm_url = undefined;
         if (props.location.state) _utm_url = {value: props.location.state.prevUrl, valid: true};
-        console.log("props.location.state", props.location.state)
 
         setVal(_val => ({
             ..._val,
             utm_url: _utm_url,
             location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
-            course: { value: _course || null, valid: false },
+            course: { value: _course || null, valid: _course && _course.value ? true : false },
         }));
     }, [session])
 
@@ -88,7 +84,7 @@ const Apply = (props) => {
             }
             else {
                 setFormStatus({status: "loading", msg: "Loading..."});
-                apply(formData, session)
+                apply({ ...formData, course: formData.course.value}, session)
                     .then(data => {
                         if (typeof (data.error) !== "undefined") {
                             setFormStatus({status: "error", msg: "Fix errors"});
@@ -157,8 +153,8 @@ const Apply = (props) => {
                                     <H3>{yml.left.heading}</H3>
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                 </Row>
-                                <Row display="flex" height="50px">
-                                    <Column size="6" size_sm="12" paddingRight="10px"  paddingLeft="0">
+                                <Row display="flex">
+                                    <Column size="6" size_sm="12" paddingRight="10px" p_sm="0"  paddingLeft="0">
                                         <Input
                                             type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                             errorMsg="Please specify a valid first name"
@@ -214,15 +210,13 @@ const Apply = (props) => {
                                     />
                                 </Row>
                                 <Row display="flex" height="50px">
-                                    <Button
-                                    color={Colors.lightGray}
-                                    border={"1px solid white"}
-                                    borderRadius="0"
-                                    colorHover={Colors.verylightGray}
-                                    onClick={(e) => setToggle(!toggle)}
-                                    >
-                                        <Paragraph className="no-wrap" color={Colors.gray}>{formData.course && formData.course.value ? formData.course.value.label : yml.left.course_title.open}</Paragraph>
-                                    </Button>
+                                    {console.log("default", formData.course.value)}
+                                    <SelectRaw 
+                                        options={programs}
+                                        value={formData.course.value}
+                                        placeholder={yml.left.course_title.open}
+                                        onChange={(value, valid) => setVal({...formData, course: {value, valid}})}
+                                    />
                                 </Row>
                                 <Row display="flex" height="40px">
                                     <Paragraph padding="0.375rem 0.75rem" fontSize="14px" margin="10px 0 0 0" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
@@ -350,15 +344,6 @@ export const query = graphql`
         }
       }
     }
-    allCourseYaml(filter: { fields: { lang: { eq: $lang }}}) {
-        edges{
-            node{
-                meta_info{
-                    bc_slug
-                }
-            }
-        }
-    }
     allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
@@ -391,11 +376,10 @@ export const query = graphql`
             programs{
                 text
                 link
+                bc_slug
                 location_bc_slug
                 schedule
             }
-            open_button_text
-            close_button_text
           }
         }
     }
