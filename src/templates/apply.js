@@ -6,8 +6,9 @@ import {Colors, Button} from '../components/Styling'
 import {Input, Alert} from '../components/Form'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
-import {apply, tagManager} from "../actions";
-import TestimonialsCarrousel from '../components/Testimonials';
+import {apply, tagManager} from "../actions"
+import Select from "../components/Select"
+import TestimonialsCarrousel from '../components/Testimonials'
 
 
 const formIsValid = (formData = null) => {
@@ -20,6 +21,7 @@ const formIsValid = (formData = null) => {
 const Apply = (props) => {
     const {data, pageContext, yml} = props;
     const {session} = useContext(SessionContext);
+    const [ toggle, setToggle ] = useState(false);
     const [formStatus, setFormStatus] = useState({status: "idle", msg: "Apply"});
     const [formData, setVal] = useState({
         first_name: {value: '', valid: false},
@@ -28,11 +30,18 @@ const Apply = (props) => {
         email: {value: '', valid: false},
         location: {value: '', valid: false},
         consent: {value: true, valid: true},
-        referral_key: {value: '', valid: true}
+        referral_key: {value: '', valid: true},
+        course: { value: null, valid: false }
     });
+    const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
+        label: p.text,
+        value: p.location_bc_slug
+    }))
     React.useEffect(() => {
         tagManager("application_rendered")
     }, [])
+    console.log("formdata course", formData.course);
+    console.log("yml", yml.left.course_title);
     React.useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         // Pre-fill the location
@@ -48,8 +57,7 @@ const Apply = (props) => {
         let _course = urlParams.get('course');
         if (!_course && props.location.state) _course = props.location.state.course;
 
-        if (typeof (_course) === "string") _course = data.allCourseYaml.edges.find(c => c.node.meta_info.bc_slug === _course);
-        if (_course) _course = _course.node.meta_info.bc_slug;
+        if (typeof (_course) === "string") _course = programs.find(p => p.location_bc_slug === _course);
 
         // Pre-fill the utm_url
         let _utm_url = undefined;
@@ -60,7 +68,7 @@ const Apply = (props) => {
             ..._val,
             utm_url: _utm_url,
             location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
-            course: {value: _course || undefined, valid: true},//it has to be valid because the user has no option to pick one
+            course: { value: _course || null, valid: false },
         }));
     }, [session])
 
@@ -150,31 +158,33 @@ const Apply = (props) => {
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                 </Row>
                                 <Row display="flex" height="50px">
-                                    <Input
-                                        type="text" className="form-control" placeholder={yml.left.form_section.first_name}
-                                        errorMsg="Please specify a valid first name"
-                                        required
-                                        onChange={(value, valid) => {
-                                            setVal({...formData, first_name: {value, valid}})
-                                            if (formStatus.status === "error") {
-                                                setFormStatus({status: "idle", msg: "Resquest"})
-                                            }
-                                        }}
-                                        value={formData.first_name.value}
-                                    />
-                                </Row>
-                                <Row display="flex" height="50px">
-                                    <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
-                                        errorMsg="Please specify a valid last name"
-                                        required
-                                        onChange={(value, valid) => {
-                                            setVal({...formData, last_name: {value, valid}})
-                                            if (formStatus.status === "error") {
-                                                setFormStatus({status: "idle", msg: "Resquest"})
-                                            }
-                                        }}
-                                        value={formData.last_name.value}
-                                    />
+                                    <Column size="6" size_sm="12" paddingRight="10px"  paddingLeft="0">
+                                        <Input
+                                            type="text" className="form-control" placeholder={yml.left.form_section.first_name}
+                                            errorMsg="Please specify a valid first name"
+                                            required
+                                            onChange={(value, valid) => {
+                                                setVal({...formData, first_name: {value, valid}})
+                                                if (formStatus.status === "error") {
+                                                    setFormStatus({status: "idle", msg: "Resquest"})
+                                                }
+                                            }}
+                                            value={formData.first_name.value}
+                                        />
+                                    </Column>
+                                    <Column size="6" size_sm="12" paddingRight="0"  paddingLeft="0">
+                                        <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
+                                            errorMsg="Please specify a valid last name"
+                                            required
+                                            onChange={(value, valid) => {
+                                                setVal({...formData, last_name: {value, valid}})
+                                                if (formStatus.status === "error") {
+                                                    setFormStatus({status: "idle", msg: "Resquest"})
+                                                }
+                                            }}
+                                            value={formData.last_name.value}
+                                        />
+                                    </Column>
                                 </Row>
                                 <Row display="flex" height="50px">
                                     <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
@@ -202,6 +212,17 @@ const Apply = (props) => {
                                         }}
                                         value={formData.phone.value}
                                     />
+                                </Row>
+                                <Row display="flex" height="50px">
+                                    <Button
+                                    color={Colors.lightGray}
+                                    border={"1px solid white"}
+                                    borderRadius="0"
+                                    colorHover={Colors.verylightGray}
+                                    onClick={(e) => setToggle(!toggle)}
+                                    >
+                                        <Paragraph className="no-wrap" color={Colors.gray}>{formData.course && formData.course.value ? formData.course.value.label : yml.left.course_title.open}</Paragraph>
+                                    </Button>
                                 </Row>
                                 <Row display="flex" height="40px">
                                     <Paragraph padding="0.375rem 0.75rem" fontSize="14px" margin="10px 0 0 0" lineHeight="16px" color={Colors.black}>Select a location</Paragraph>
@@ -299,6 +320,10 @@ export const query = graphql`
             left {
                 heading
                 locations_title
+                course_title{
+                    open
+                    close
+                }
                 button {
                   button_text
                   button_link
@@ -357,6 +382,20 @@ export const query = graphql`
               source_url
               source_url_text
             }
+          }
+        }
+    }
+    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
+        edges {
+          node {
+            programs{
+                text
+                link
+                location_bc_slug
+                schedule
+            }
+            open_button_text
+            close_button_text
           }
         }
     }

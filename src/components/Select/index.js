@@ -48,7 +48,7 @@ const Select = (props) => {
             }}
             onMouseEnter={() => setStatus({...status, hovered: true})}
         >
-            <Selector status={status} setStatus={setStatus} />
+            <Selector status={status} setStatus={setStatus} options={props.options} />
             {status.toggle &&
                 <Row
                     margin={props.margin}

@@ -19,6 +19,9 @@ left:
     email: "Email"
     phone: "Móvil"
   locations_title: "Selecciona una sede"
+  course_title: 
+    open: "¿Qué programa quisieras estudiar?"
+    close: "Selecciona un programa"
   referral_section:
     placeholder: "Código de invitación"
     content: "Si te ha referido alguien que estudia o ha estudiado en 4Geeks, tendrás un beneficio adicional usando su código de invitación."

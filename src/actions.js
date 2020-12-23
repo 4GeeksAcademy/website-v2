@@ -145,7 +145,10 @@ export const apply = async (data, session) => {
     let body = {};
     Object.keys(data).forEach(key => body[key] = data[key].value);
 
-    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['website-lead'], ['strong'], session);
+    const automation = data.automation || 'website-lead';
+    const tag = data.tag || 'strong';
+    //                                                                                      tag           automation
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [automation], [tag], session);
     return true;
 }
 
@@ -154,7 +157,11 @@ export const requestSyllabus = async (data,session) => {
     tagManager('request_more_info');
     let body = {};
     for (let key in data) body[key] = data[key].value;
-    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['request_more_info'], ['soft'], session);
+
+    const automation = data.automation || 'request_more_info';
+    const tag = data.tag || 'soft';
+    //                                                                                      tag                automation
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [automation], [tag], session);
     return true;
 }
 export const openGuidebook = (url) => {
@@ -167,6 +174,7 @@ export const beHiringPartner = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
+    //                                                                                      tag                automation
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['hiring-partner'], ['hiring-partner'], session);
     return true;
 }
@@ -184,6 +192,7 @@ export const contactUs = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
     
+    //                                                                                      tag       automation
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['contact-us'], ['soft'], session);
     return true;
 }
@@ -193,6 +202,7 @@ export const newsletterSignup = async (data,session) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
     
+    //                                                                                      tag          automation
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['newsletter'], ['newsletter'], session);
     return true;
 }
