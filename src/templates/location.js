@@ -47,6 +47,7 @@ const Location = ({data, pageContext, yml}) => {
             className={`img-header`}
             bgSize={`cover`}
             alt={yml.header.alt}
+            align="center"
             customBorderRadius="0 0 0 1.25rem"
         >
             <H1 type="h1" fontSize="13px" marginTop="50px" color={Colors.white} align="center">{yml.seo_title}</H1>
@@ -61,33 +62,14 @@ const Location = ({data, pageContext, yml}) => {
                 fontSize="46px"
                 textAlign="center"
             />
-            <Row display="flex" justifyContent="center" marginBottom="40px">
-                <Column align="right" align_sm="center" m_sm="0 0 15px 0" size="6" size_sm="12">
-                    <ChooseProgram
-                        right="15px"
-                        top="40px"
-                        programs={data.allChooseProgramYaml.edges[0].node.programs}
-                        openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-                        closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-                    />
-                </Column>
-                <Column align="left" align_sm="center" size="6" size_sm="12">
-                    <Button width="220px" onClick={handleOpen} color={Colors.red} margin="0" textColor=" white">{yml.button.syllabus_button_text}</Button>
-                </Column>
-            </Row>
-            <Modal
-                aria-labelledby="simple-modal-title"
-                aria-describedby="simple-modal-description"
-                open={open}
-                onClose={handleClose}
-            >
-                <LeadForm
-                    heading={yml.button.syllabus_button_text}
-                    formHandler={requestSyllabus}
-                    handleClose={handleClose}
-                    lang={pageContext.lang}
-                />
-            </Modal>
+            <ChooseProgram
+                right="15px"
+                top="40px"
+                margin="0 0 40px 0"
+                programs={data.allChooseProgramYaml.edges[0].node.programs}
+                openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+                closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+            />
         </WrapperImage>
         <Divider height="100px" />
         {yml.news &&

@@ -35,7 +35,9 @@ const Landing = (props) => {
   // data sent to the form already prefilled
   const preData = {
     course: {type: "hidden", value: yml.meta_info.utm_course, valid: true},
-    utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true}
+    utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
+    automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
+    tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
   };
   return (
     <>
@@ -220,6 +222,8 @@ export const query = graphql`
               keywords
               utm_course
               utm_location
+              automation
+              tag
             }
             follow_bar{
               position
