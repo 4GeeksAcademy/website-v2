@@ -128,6 +128,10 @@ const StyledImage = styled.div`
     background-color: ${props => props.backgroundColor};
     width: ${props => props.width};
     height: ${props => props.height};
+    transition: transform 0.7s;
+    :hover {
+        transform: ${props => props.transform};
+    }
     @media ${Break.sm}{
         height: ${props => props.h_sm};
         width: ${props => props.w_sm};

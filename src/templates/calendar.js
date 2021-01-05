@@ -127,7 +127,7 @@ const Calendar = (props) => {
     cohorts: {catalog: [], all: [], filtered: []}
   });
   const [academy, setAcademy] = useState(null)
-  const [filterType, setFilterType] = useState({label: "Upcoming Courses and Events", value: "cohorts"});
+  const [filterType, setFilterType] = useState(pageContext.lang == "us" ? {label: "Upcoming Courses and Events", value: "cohorts"} : {label: "Próximos Cursos y Eventos", value: "cohorts"});
 
   useEffect(() => {
     const getData = async () => {
@@ -188,10 +188,10 @@ const Calendar = (props) => {
         <Row marginBottom={`10px`} justifyContent={`end`} display="flex">
           <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer">
             <Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">
-              Join Our Meetup
+              {pageContext.lang == "us" ? "Join Our Meetup" : "Únete a nuestro Meetup"}
             </Button>
           </a>
-          <H4 margin="20px 0 0 0" align="left" a_sm="left">Filter courses and events:</H4>
+          <H4 margin="20px 0 0 0" align="left" a_sm="left">{pageContext.lang == "us" ? "Filter courses and events:" : "Filtra por cursos y eventos:"}</H4>
         </Row>
 
         <Row
@@ -213,8 +213,8 @@ const Calendar = (props) => {
             maxWidth="100%"
             shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
             options={console.log("catalog", data.cohorts.catalog) || data.cohorts.catalog}
-            openLabel={academy ? "Campus: " + academy.label : "Select one academy"}
-            closeLabel={academy ? "Campus: " + academy.label : "Select one academy"}
+            openLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
+            closeLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
             onSelect={(opt) => {
               setAcademy(opt)
               setData({
@@ -233,10 +233,11 @@ const Calendar = (props) => {
             maxWidth="100%"
             m_sm="5px"
             shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-            options={[
-              {label: "Courses", value: "cohorts"},
-              {label: "Events", value: "events"}
-            ]}
+            options={pageContext.lang == "us" ? [
+                {label: "Courses", value: "cohorts"},
+                {label: "Events", value: "events"}] : 
+                [{label: "Cursos", value: "cohorts"},
+                {label: "Eventos", value: "events"}]}
             openLabel={filterType.label}
             closeLabel={filterType.label}
             onSelect={(opt) => setFilterType(opt)}
@@ -249,7 +250,7 @@ const Calendar = (props) => {
             filterType.value === "cohorts" ?
               data.cohorts.filtered.length == 0 ?
                 <Paragraph margin={`0 0 0 10px`} fontSize="18px">
-                  {academy != null ? "It seems we could not found any result." : "Loading..."}
+                  {pageContext.lang == "us" ? academy != null ? "It seems we could not found any result." : "Loading..." : academy != null ? "Parece que no pudimos conseguir ningún resultado." : "Cargando..."}
                 </Paragraph>
                 :
                 data.cohorts.filtered.map((cohort, index) =>
@@ -271,7 +272,7 @@ const Calendar = (props) => {
               :
               data.events.filtered.length === 0 ?
                 <Paragraph margin={`0 0 0 10px`} fontSize="18px">
-                  {academy != null ? "It seems we could not found any result." : "Loading..."}
+                  {pageContext.lang == "us" ? academy != null ? "It seems we could not found any result." : "Loading..." : academy != null ? "Parece que no pudimos conseguir ningún resultado." : "Cargando..."}
                 </Paragraph>
                 :
                 data.events.filtered.map((event, index) =>
