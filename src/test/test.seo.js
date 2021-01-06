@@ -1,5 +1,5 @@
 var colors = require('colors')
-const {walk, load, empty, fail, success} = require("./_utils")
+const {walk, loadYML, empty, fail, success} = require("./_utils")
 
 const metas = [ 
     { key: "slug", type: "string", mandatory: true }, 
@@ -21,7 +21,7 @@ walk(`${__dirname}/../data/`, function(err, files) {
 
     let slugs = {};
     _files.forEach(_path => {
-        const doc = load(_path);
+        const doc = loadYML(_path);
         const yml = doc.yaml;
         if(!yml) fail("Invalid YML syntax for "+_path)
         else if(empty(yml.meta_info)) fail("Missing meta for "+_path, yml.meta_info)

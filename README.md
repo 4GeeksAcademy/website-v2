@@ -1,37 +1,18 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="./src/assets/images/cover.png" width="600" />
-  </a>
-</p>
-<h1 align="center">
-  GatsbyJS + Storybook Starter
-</h1>
-<p align="center">
-  Gatsby starter that uses Storybook + additional set of tools listed bellow, and provides an easy to start structure to get you up and running with your Gatsby powered site.
-</p>
+# 4Geeks Academy Website
 
-##  What's inside?
+## Tests
 
-- Gatsby (v2)
-- Storybook (v5)
-- Styled Components (v4)
-- Styled Reset (Advanced)
-- Netlify Conf
-- Eslint
+Test SEO best practice and YML format and rules:
 
-## Quick start
 ```bash
-$ gatsby new my-awesome-site https://github.com/markoradak/gatsby-starter-storybook
-
-$ cd my-awesome-site
-$ yarn start || yarn develop
+$ node ./src/test/test.seo.yml
+$ node ./src/test/test.yml.yml
 ```
 
-## Deploy
+## Redirects
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/markoradak/gatsby-starter-storybook)
+You can create bloposts redirects:
 
-## License
-
-Licensed under the MIT License, Copyright © 2018 Marko Radak.  
-See [license](LICENSE) for more information.
+```bash
+$ node ./src/utils/create_redirects.js
+```

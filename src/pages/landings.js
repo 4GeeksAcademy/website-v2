@@ -32,7 +32,7 @@ const Table = styled.table`
 font-family: 'Lato-Bold', sans-serif;
 text-align: left;
 margin: auto;
-width: 500px;
+max-width: 700px;
 th{
     font-weight: 500;
     text-transform: capitalize;

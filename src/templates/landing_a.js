@@ -65,8 +65,8 @@ const Landing = (props) => {
           fs_sm={yml.follow_bar.content.font_size[3]}
           fs_xs={yml.follow_bar.content.font_size[4]}
         >
-          {yml.follow_bar.content.text.split("\n").map((c, i) => <span className="d-block d-xs-none w-100">{c}</span>)}
-          {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
+          {yml.follow_bar.content.text.split("\n").map((c, i) => <span key={i} className="d-block d-xs-none w-100">{c}</span>)}
+          {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span key={i} className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
       <Row display="flex" className="d-sm-none">
@@ -201,9 +201,9 @@ const Landing = (props) => {
         Object.keys(components)
           .filter(name => components[name] && (landingSections[name] || landingSections[components[name].layout]))
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
-          .map(name => {
+          .map((name, i) => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location })
+            return landingSections[layout]({...props, index: i, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location })
           })
       }
     </>
@@ -307,6 +307,17 @@ export const query = graphql`
               content{
                 text
                 font_size
+              }
+              columns{
+                size
+                content{
+                  text
+                  font_size
+                }
+                image{
+                  src
+                  style
+                }
               }
             }
             header_data{
