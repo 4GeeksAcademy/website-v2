@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import {Row, Column, Wrapper, WrapperImage, Divider, Div} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Img, Anchor} from '../components/Styling'
+import {ZoomOut} from "../components/Animations"
 import Card from '../components/Card'
 import Icon from '../components/Icon'
 import Select from '../components/Select'
@@ -12,15 +13,15 @@ import LazyLoad from 'react-lazyload';
 import {Link} from 'gatsby'
 import {SessionContext} from '../session'
 
-const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText, context}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
+const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText, context, bg_size}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
   <Anchor to={link}>
     <Card
       overflow={`hidden`}
       height="auto"
-      width="100%"
       shadow
     >
       <LazyLoad scroll={true} height={230}>
+        
         <Img
           src={image}
           bsize="cover"
@@ -31,6 +32,7 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
           h_lg="120px"
           h_md="140px"
           h_sm="220px"
+          bg_hover={bg_size}
         />
       </LazyLoad>
       <Row
@@ -121,7 +123,7 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
 const Calendar = (props) => {
   const {pageContext, yml} = props;
   const {session} = useContext(SessionContext);
-
+const [backgroundSize, setBackgroundSize] = useState("100%");
   const [data, setData] = useState({
     events: {catalog: [], all: [], filtered: []},
     cohorts: {catalog: [], all: [], filtered: []}
@@ -131,9 +133,10 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
+    //   ${process.env.GATSBY_BREATHECODE_HOST}
       let cohorts = await resp.json();
-      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
@@ -267,6 +270,7 @@ const Calendar = (props) => {
                     detailsButtonText={yml.button.cohort_more_details_text}
                     detailsButtonLink={`/${pageContext.lang}/${cohort.certificate.slug}`}
                     context={pageContext.lang}
+                    bg_size="cover"
                   />
                 )
               :
@@ -286,6 +290,9 @@ const Calendar = (props) => {
                     exerpt={event.exerpt}
                     eventLink={event.url}
                     eventText={yml.button.event_register_button_link}
+                    context={pageContext.lang}
+                    onMouseOver={() => setBackgroundSize("contain")}
+                    bg_size={backgroundSize}
                   />
                 )
           }
