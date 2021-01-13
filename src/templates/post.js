@@ -3,11 +3,13 @@ import {Link} from 'gatsby'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
 import {Div, Row, Column} from '../components/Sections'
 import {RoundImage, Colors} from '../components/Styling'
-import Layout from '../global/Layout'
+// import Layout from '../global/Layout'
+import BlogLayout from '../global/BlogLayout'
 import Card from '../components/Card'
 import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
 import {TwitterFollowButton} from 'react-twitter-embed';
+
 import "../assets/css/single-post.css"
 
 export default function Template (props) {
@@ -35,7 +37,7 @@ export default function Template (props) {
     }
     let postDate = GetFormattedDate(post.frontmatter.date);
     return (
-        <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
+        <BlogLayout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
             <Column size="10" margin="50px auto 0px auto">
                 <Column size="12" margin="auto">
                     <Div height="100%" align="around" justifyContent="center" display="flex">
@@ -102,7 +104,7 @@ export default function Template (props) {
                     })}
                 </Column>
             </Column>
-        </Layout>)
+        </BlogLayout>)
 }
 export const postQuery = graphql`
 query BlogPostBySlug($slug: String!){
