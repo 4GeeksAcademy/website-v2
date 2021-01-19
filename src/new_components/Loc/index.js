@@ -12,7 +12,7 @@ const Loc = (props) => {
 
   let loc = props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
   return (
-    <Grid columns="3" gridGap="0" >
+    <Grid columns="2" gridGap="0" >
       {/* <Row
         github={"/location"}
         display="flex"
@@ -35,7 +35,10 @@ const Loc = (props) => {
               >{item.node.city}
                 <Span animated color={Colors.yellow}>_</Span>
               </H3>
-              <Div>
+              <Div
+                display="none"
+                display_tablet="block"
+              >
                 <Paragraph fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
                   Next Cohort in this location
                 </Paragraph >
