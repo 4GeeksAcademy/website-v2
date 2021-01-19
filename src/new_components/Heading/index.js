@@ -3,6 +3,7 @@ import styled, {css, keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../Styling'
 import {Break} from '../Responsive'
+import {Devices} from '../Responsive'
 import {Blink} from '../Animations'
 import {redirectTo} from "@reach/router"
 
@@ -149,26 +150,49 @@ export const Paragraph = styled.p`
   text-align: ${props => props.align};
   height: ${props => props.height};
 
-  @media ${Break.lg}{
-    text-align: ${props => props.align_lg};
-    font-size: ${props => props.fs_lg};
+  @media ${Devices.xxs}{
   }
-  @media ${Break.md}{
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_md};
+  @media ${Devices.xs}{
+      
   }
-  @media ${Break.sm}{
-    display: ${props => props.display_sm};
-    color: ${props => props.color_sm};
-    font-size: ${props => props.fs_sm};
-    margin: ${props => props.m_sm};
-    text-align: ${props => props.align_sm || 'center'};
-    max-width: ${props => props.mw_sm};
+  @media  ${Devices.sm}{
+      
   }
-  @media ${Break.xs}{
-    font-size: ${props => props.fs_xs};
-    text-align: ${props => props.align_xs};
-  } 
+  @media  ${Devices.tablet}{
+      
+  }
+  @media  ${Devices.md}{
+
+  }
+  @media  ${Devices.lg}{
+
+  }
+  @media  ${Devices.xl}{
+
+  }
+  @media  ${Devices.xxl}{
+
+  }
+  // @media ${Break.lg}{
+  //   text-align: ${props => props.align_lg};
+  //   font-size: ${props => props.fs_lg};
+  // }
+  // @media ${Break.md}{
+  //   text-align: ${props => props.align};
+  //   font-size: ${props => props.fs_md};
+  // }
+  // @media ${Break.sm}{
+  //   display: ${props => props.display_sm};
+  //   color: ${props => props.color_sm};
+  //   font-size: ${props => props.fs_sm};
+  //   margin: ${props => props.m_sm};
+  //   text-align: ${props => props.align_sm || 'center'};
+  //   max-width: ${props => props.mw_sm};
+  // }
+  // @media ${Break.xs}{
+  //   font-size: ${props => props.fs_xs};
+  //   text-align: ${props => props.align_xs};
+  // } 
 `
 
 export const Title = props => {

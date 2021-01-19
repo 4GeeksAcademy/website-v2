@@ -104,8 +104,11 @@ export const Div = styled.div`
     display: ${props => props.display};
     align-items: ${props => props.alignItems};
     margin: ${props => props.margin};
+    border: ${props => props.border};
     border-radius: ${props => props.borderRadius};
     background: ${props => props.background};
+    border-left: ${props => props.borderLeft};
+    border-top: ${props => props.borderTop};
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
     flex-direction: ${props => props.flexDirection || 'row'};
     box-shadow: ${props => props.shadow};
@@ -117,18 +120,22 @@ export const Div = styled.div`
         background: ${props => props.backgroundHover};
     }
     @media ${Devices.xxs}{
-
     }
     @media ${Devices.xs}{
-
+        
     }
     @media  ${Devices.sm}{
-
+        
     }
     @media  ${Devices.tablet}{
-
+        
     }
     @media  ${Devices.md}{
+        flex-direction: ${props => props.flexDirection_md};
+        border: ${props => props.border_md};
+        border-left: ${props => props.borderLeft_md};
+        border-top: ${props => props.borderTop_md};
+        align-items: ${props => props.alignItems_md};
 
     }
     @media  ${Devices.lg}{
