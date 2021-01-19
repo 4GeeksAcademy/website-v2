@@ -11,17 +11,25 @@ import {SessionContext} from '../../session.js'
 
 const ChooseYourProgram = (props) => {
     return (
-        <Grid columns="3" columns_sm="1">
+        <Grid columns_md="3">
             {Array.isArray(props.programs) && props.programs.map((program, i) => {
                 return (
                     <Div
                         key={i}
                         display="flex"
-                        flexDirection="column"
                         height="245px"
                         borderRadius="3px"
                         padding="1rem"
-                        style={{border: "1px solid black", borderTop: "6px solid black", position: "relative"}}
+                        border="1px solid black"
+                        borderLeft="6px solid black"
+                        borderTop="1px solid black"
+                        borderLeft_md="1px solid black"
+                        borderTop_md="6px solid black"
+                        flexDirection_md="column"
+                        alignItems="center"
+                        justifyContent="space-between"
+                        alignItems_md="flex-end"
+                        style={{position: "relative"}}
                     >
                         <Div
                             display="flex"
@@ -32,6 +40,9 @@ const ChooseYourProgram = (props) => {
                         <Div
                             display="flex"
                             flexDirection="column"
+                            width="100%"
+                            alignContent="flex-start"
+                            padding="0 0 0 15px"
                         >
                             <H4
                                 uppercase
@@ -55,6 +66,7 @@ const ChooseYourProgram = (props) => {
                             )}
                             {program.description.split("\n").map((m, i) =>
                                 <Paragraph
+                                    align="left"
                                     fontSize="15px"
                                     lineHeight="19px"
                                     fontWeight="400"
