@@ -1,24 +1,28 @@
 import React from 'react';
 import {graphql, Link, navigate} from 'gatsby';
-import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Row, Column, Wrapper} from '../components/Sections'
-import {RoundImage, Colors} from '../components/Styling'
+import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
+import {Row, Column, Wrapper} from '../new_components/Sections'
+import {RoundImage, Colors} from '../new_components/Styling'
 import Img from 'gatsby-image'
-import News from '../components/News'
-import Icon from '../components/Icon'
-import Credentials from '../components/Credentials'
+import News from '../new_components/News'
+import Icon from '../new_components/Icon'
+import Credentials from '../new_components/Credentials'
 import ChooseProgram from '../components/ChooseProgram'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
-import Loc from '../components/Loc';
+import Loc from '../new_components/Loc';
 import WhyPython from '../components/WhyPython';
 import Badges from '../components/Badges';
 import WhoIsHiring from '../components/WhoIsHiring';
 import AlumniProjects from '../components/AlumniProjects';
-import Why4Geeks from '../components/Why4Geeks';
+// import Why4Geeks from '../components/Why4Geeks';
+import With4Geeks from '../new_components/With4Geeks';
+import About4Geeks from '../new_components/About4Geeks';
+import ChooseYourProgram from '../new_components/ChooseYourProgram';
 import TestimonialsCarrousel from '../components/Testimonials';
 import Card from '../components/Card';
 import GeeksVsOthers from '../components/GeeksVsOthers';
+import {WrapperCustom} from '../new_components/Sections';
 
 
 const CityH1 = ({yml}) => {
@@ -87,53 +91,100 @@ const Home = (props) => {
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
             closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
           />
+          <News lang={pageContext.lang} limit={yml.news.limit} />
         </Column>
         <Column
           size="6"
           borderRadius="0 0 0 1.25rem"
-          height="500px"
+          height="620px"
           customRespSize
           disp_sm={"none"}
           disp_xs={"none"}
           paddingRight={`0`}
         >
+
           <Img
-            style={{height: "500px", backgroundColor: Colors.lightGray, borderRadius: "0 0 0 1.25rem"}}
-            imgStyle={{objectFit: "cover"}}
+            style={{height: "620px", position: "relative"}}
+            imgStyle={{objectFit: "contain"}}
             alt="4Geeks Academy"
             loading="eager"
             fadeIn={false}
             fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-            backgroundSize={`cover`}
-          />
+            backgroundSize={`contain`}
+          >
+            {/* <div style={{position: "absolute", zIndex: "1", bottom: "33px", right: "144px", transform: "translate(-50%, -50%)"}}> */}
+
+            <svg style={{position: "absolute", zIndex: "1", bottom: "33px", right: "144px"}} width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="26.5" cy="26.5" r="26.5" fill="#0097CD" />
+            </svg>
+
+            {/* </div> */}
+          </Img>
         </Column>
       </Row>
 
       {/* BADGES AND NEWS CARDS */}
 
       <Wrapper>
+        {/* <Title
+        style={{}}
+          size="10"
+          marginTop="40px"
+          paragraph={yml.badges.sub_heading}
+          paragraphColor="black"
+          variant="primary"
+        /> */}
+        <Paragraph
+          margin="32px 0 32px 0"
+          letteSpacing="0.05em"
+          fontSize="22px"
+          fontWeight="300"
+          color={Colors.black}
+          lineHeight="38px"
+          align="center"
+          dangerouslySetInnerHTML={{__html: yml.badges.sub_heading}}
+        ></Paragraph>
         <Badges lang={pageContext.lang} />
-        <H4 margin="50px 0">{yml.news.heading}</H4>
-        <News lang={pageContext.lang} limit={yml.news.limit} />
+        {/* <H4 margin="50px 0">{yml.news.heading}</H4> */}
+        {/* <News lang={pageContext.lang} limit={yml.news.limit} /> */}
+      </Wrapper>
+
+      {/* ABOUT 4GEEKS SECTION */}
+
+      <Wrapper margin="50px 0">
+        <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
+        {/* <About4Geeks lang={pageContext.lang} /> */}
+        {/* <H4 margin="50px 0">{yml.news.heading}</H4> */}
+        {/* <News lang={pageContext.lang} limit={yml.news.limit} /> */}
       </Wrapper>
 
       {/* WHY 4GEEKS SECTION */}
 
       <Wrapper margin="50px 0">
         <CityWrapper yml={yml} />
-        <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
-        <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
+        <With4Geeks lang={pageContext.lang} playerHeight="158px" />
       </Wrapper>
 
       <Wrapper margin="50px 0">
-        <WhyPython lang={pageContext.lang} />
+        <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
       </Wrapper>
+
+      {/* NEW COMPONENT TEST */}
+
+      <WrapperCustom width="100%" style={{background: "grey"}}>
+        <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
+
+      </WrapperCustom>
+
+      {/* <Wrapper margin="50px 0">
+        <WhyPython lang={pageContext.lang} />
+      </Wrapper> */}
 
 
 
       {/* GEEKS VS OTHERS SECTION */}
 
-      <Wrapper margin="100px">
+      {/* <Wrapper margin="100px">
         <Title
           type="h2"
           title={yml.geeks_vs_others.heading}
@@ -145,12 +196,12 @@ const Home = (props) => {
           size="10"
         />
         <GeeksVsOthers lang={pageContext.lang} limit={5} />
-      </Wrapper>
+      </Wrapper> */}
 
       {/* ******************* */}
       {/* JOIN 4GEEKS SECTION */}
       {/* ******************* */}
-      <Wrapper margin="100px">
+      {/* <Wrapper margin="100px">
         <CityWrapper2 yml={yml} />
         <Row github={`/page/index.${pageContext.lang}.yml`} display="flex">
           <Column size="6" size_sm="12" >
@@ -212,9 +263,9 @@ const Home = (props) => {
             </Card>
           </Column>
         </Row>
-      </Wrapper>
+      </Wrapper> */}
 
-      <Wrapper
+      {/* <Wrapper
         margin="100px"
         right={true}
         background={Colors.lightGray}
@@ -234,9 +285,9 @@ const Home = (props) => {
           footerLink={hiring.partners.footer_link}
           footerButton={hiring.partners.footer_button}
         />
-      </Wrapper>
+      </Wrapper> */}
 
-      <Wrapper
+      {/* <Wrapper
         margin="100px">
         <Title
           size="10"
@@ -248,7 +299,7 @@ const Home = (props) => {
           variant="primary"
         />
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
-      </Wrapper>
+      </Wrapper> */}
 
       <Wrapper
         margin="100px">
@@ -263,7 +314,7 @@ const Home = (props) => {
         />
         <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} />
       </Wrapper>
-      <Wrapper margin="100px">
+      {/* <Wrapper margin="100px">
         <Title
           variant="primary"
           title={yml.testimonial_header.heading}
@@ -272,7 +323,7 @@ const Home = (props) => {
         // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
         />
         <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
-      </Wrapper>
+      </Wrapper> */}
 
     </>
   )
@@ -304,6 +355,10 @@ export const query = graphql`
             news{
               limit
               heading
+            }
+            badges{
+              heading
+                sub_heading
             }
             geeks_vs_others{
                 heading
@@ -563,6 +618,47 @@ export const query = graphql`
                   button_text
                   button_link
                 }
+              }
+            }
+          }
+          allChooseYourProgramYaml (filter: { fields: { lang: { eq: $lang }}}){
+            edges {
+              node {
+                programs {
+                  link
+                  sub_title
+                  title
+                  description
+                  icon
+                }
+              }
+            }
+          }
+          allAbout4GeeksYaml (filter: { fields: { lang: { eq: $lang }}}){
+            edges {
+              node {
+                heading
+                sub_heading
+                list{
+                  title
+                }
+                paragraph
+                button_text
+                button_link
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 1200){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                } 
+                image_mobile {
+                  childImageSharp {
+                    fluid(maxWidth: 800){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                } 
               }
             }
           }
