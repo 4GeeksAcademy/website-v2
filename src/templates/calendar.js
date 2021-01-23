@@ -283,7 +283,7 @@ const Calendar = (props) => {
                     image={event.banner}
                     link={event.url}
                     date={event.starting_at}
-                    exerpt={event.exerpt}
+                    exerpt={event.excerpt}
                     eventLink={event.url}
                     eventText={yml.button.event_register_button_link}
                   />
