@@ -1,0 +1,18 @@
+title: "Herramientas que aprenderás"
+sub_title: "Nuestro programa está basado en el uso de Phyton y Javascript. La razón?
+En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que 
+Ruby on Rails. Python tiene 10 veces más trabajos que node.js.
+
+Otras herramientas que también aprenderás a usar en nuestro programa son:
+"
+icon: "python"
+tech_list: 
+  - icon_name: "bootstrap"
+  - icon_name: "html"
+  - icon_name: "flask"
+  - icon_name: "git"
+  - icon_name: "terminal"
+  - icon_name: "github"
+  - icon_name: "python"
+  - icon_name: "css"
+  - icon_name: "js"
