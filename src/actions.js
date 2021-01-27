@@ -152,7 +152,7 @@ export const apply = async (data, session) => {
     const tag = body.tag || 'website-lead';
     const automation = body.automation || 'strong';
     //                                                                                      tag           automation
-    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [automation.value || automation], [tag.value || tag], session);
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [tag.value || tag], [automation.value || automation], session);
     return true;
 }
 
@@ -166,7 +166,7 @@ export const requestSyllabus = async (data,session) => {
     const automation = body.automation || 'soft';
 
     //                                                                                      tag                automation
-    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [automation.value || automation], [tag.value || tag], session);
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [tag.value || tag], [automation.value || automation], session);
     return true;
 }
 export const openGuidebook = (url) => {
