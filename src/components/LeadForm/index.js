@@ -119,7 +119,6 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
             return ({..._, ...data, utm_url: {type: "hidden", value: window.location.href, valid: true}})
         })
     }, [data])
-    // console.log("formData", formData)
     return <Form d_sm={d_sm} style={style} onSubmit={(e) => {
         e.preventDefault();
 
