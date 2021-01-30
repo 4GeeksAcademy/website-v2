@@ -58,7 +58,6 @@ const Home = (props) => {
 
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
-  console.log(data)
 
   return (
     <>
