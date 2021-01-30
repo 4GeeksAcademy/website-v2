@@ -19,6 +19,7 @@ import Why4Geeks from '../components/Why4Geeks';
 import TestimonialsCarrousel from '../components/Testimonials';
 import Card from '../components/Card';
 import GeeksVsOthers from '../components/GeeksVsOthers';
+import CookieBot from "react-cookiebot";
 
 
 const CityH1 = ({yml}) => {
@@ -57,9 +58,11 @@ const Home = (props) => {
 
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
+  console.log(data)
 
   return (
     <>
+      <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} />
       <Row github={`/page/index.${pageContext.lang}.yml`} display={`flex`}>
         <Column
           size="4"
@@ -578,6 +581,11 @@ export const query = graphql`
                 open_button_text
                 close_button_text
               }
+            }
+          }
+          cookiebotYaml {
+            domain_ID {
+              id
             }
           }
   }
