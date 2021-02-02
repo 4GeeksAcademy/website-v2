@@ -5,21 +5,21 @@ newsletter:
   thankyou: "Amazing! You have successfully joined, stay tuned for upcoming information soon 😁"
 
 footer:
+  # - column_one:
+  #   width: 2
+  #   heading: "CONTACT"
+  #   items:
+  #     - name: "✉️ Email Us"
+  #       link: "/contact"
+  #     - name: "۪"
+  #       link: ""
+  #     - name: "Our offices are open Monday to Friday"
+  #       link: ""
+  #     - name: "9:00am - 9:00pm"
+  #       link: ""
+  #     - name: "🇪🇸 Cambiar al Español"
+  #       link: "/es/inicio?lang=es"
   - column_one:
-    width: 2
-    heading: "CONTACT"
-    items:
-      - name: "✉️ Email Us"
-        link: "/contact"
-      - name: "۪"
-        link: ""
-      - name: "Our offices are open Monday to Friday"
-        link: ""
-      - name: "9:00am - 9:00pm"
-        link: ""
-      - name: "🇪🇸 Cambiar al Español"
-        link: "/es/inicio?lang=es"
-  - column_two:
     width: 3
     heading: "COMPANY"
     items:
@@ -45,6 +45,16 @@ footer:
         link: "/faq"
       - name: "Contact Us"
         link: "/contact"
+  - column_two:
+    width: 3
+    heading: "PROGRAMS"
+    items:
+      - name: "Full Stack Developer"
+        link: "/course/full-stack-web-development-bootcamp-part-time"
+      - name: "Software Engineer"
+        link: ""
+      - name: "Online"
+        link: ""
   - column_four:
     width: 3
     heading: "LOCATIONS"
