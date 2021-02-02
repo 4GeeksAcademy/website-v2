@@ -1,28 +1,39 @@
 import React from 'react';
 import {graphql, Link, navigate} from 'gatsby';
-import {H1, H2, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
-import {Row, Column, Wrapper} from '../new_components/Sections'
+import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
+import {Row, Column, Wrapper, Container, Grid, Div} from '../new_components/Sections'
 import {RoundImage, Colors} from '../new_components/Styling'
 import Img from 'gatsby-image'
 import News from '../new_components/News'
 import Icon from '../new_components/Icon'
 import Credentials from '../new_components/Credentials'
-import ChooseProgram from '../components/ChooseProgram'
+import ChooseProgram from '../new_components/ChooseProgram'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
 import Loc from '../new_components/Loc';
 import WhyPython from '../components/WhyPython';
-import Badges from '../components/Badges';
+import Badges from '../new_components/Badges';
 import WhoIsHiring from '../components/WhoIsHiring';
 import AlumniProjects from '../components/AlumniProjects';
 // import Why4Geeks from '../components/Why4Geeks';
 import With4Geeks from '../new_components/With4Geeks';
 import About4Geeks from '../new_components/About4Geeks';
+import OurPartners from '../new_components/OurPartners';
 import ChooseYourProgram from '../new_components/ChooseYourProgram';
-import TestimonialsCarrousel from '../components/Testimonials';
+import Testimonials from '../new_components/Testimonials';
 import Card from '../components/Card';
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import {WrapperCustom} from '../new_components/Sections';
+
+
+const imageSvg = props => <svg style={props.style} width="587" height="514" viewBox="0 0 587 514" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="416.5" cy="487.5" r="26.5" fill="#0097CD" />
+  <circle cx="516" cy="100" r="14" fill="#FFB718" />
+  <circle cx="546" cy="290" r="119" fill="#FFB718" fill-opacity="0.2" />
+  <circle cx="28.5" cy="80.5" r="28.5" fill="#FFB718" fill-opacity="0.2" />
+  <circle cx="47.5" cy="12.5" r="12.5" fill="#CD0000" />
+  <circle cx="111.5" cy="125.5" r="5.5" fill="#0097CD" />
+</svg>
 
 
 const CityH1 = ({yml}) => {
@@ -33,7 +44,7 @@ const CityH1 = ({yml}) => {
     if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
   }, [session])
 
-  return <H1 type="h1" align="left" textShadow="none" fontSize="13px" color={Colors.gray} lato>{city}{" "}{yml.header_data.tagline}</H1>
+  return <H1 type="h1" textAlign="left" textShadow="none" fontSize="13px" color="#606060" >{city}{" "}{yml.header_data.tagline}</H1>
 }
 const CityWrapper = ({yml}) => {
   const {session} = React.useContext(SessionContext);
@@ -64,7 +75,37 @@ const Home = (props) => {
 
   return (
     <>
-      <Row github={`/page/index.${pageContext.lang}.yml`} display={`flex`}>
+      <Container variant="fluid">
+        <Grid columns_tablet="2" >
+          <Div flexDirection="column" >
+            <CityH1 yml={yml} />
+            <H2
+              // padding="0 10px 0 0px"
+              // margin="16px 0 0 0"
+              fontSize="50px"
+              lineHeight="60px"
+            // textAlign="left"
+            >
+              {yml.header_data.title}
+              {/* <Span animated color={Colors.yellow}>_</Span> */}
+            </H2>
+            <Paragraph color={Colors.gray} margin="25px 0px" m_sm="20px auto" maxWidth="350px" textAlign="left" >{yml.header_data.sub_heading}</Paragraph>
+            <ChooseProgram
+              left="15px"
+              top="40px"
+              programs={data.allChooseProgramYaml.edges[0].node.programs}
+              openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+              closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+            />
+            <News lang={pageContext.lang} limit={yml.news.limit} />
+          </Div>
+          <Div background={Colors.gray}>test
+            {/* <Div background={Colors.blue} height="623px" width="623px" borderRadius="50%"></Div> */}
+
+          </Div>
+        </Grid>
+      </Container>
+      {/* <Row github={`/page/index.${pageContext.lang}.yml`} display={`flex`}>
         <Column
           size="4"
           m_sm="0"
@@ -74,24 +115,7 @@ const Home = (props) => {
           margin="0 0 0 auto"
         >
           <CityH1 yml={yml} />
-          <Separator variant="primary" left />
-          <H2
-            padding="0 10px 0 0px"
-            fs_sm="38px"
-            fs_md="30px"
-            fs_lg="32px"
-            fs_xl="38px"
-            align="left" >{yml.header_data.title}<Span animated color={Colors.yellow}>_</Span>
-          </H2>
-          <Paragraph color={Colors.gray} margin="20px 0px" m_sm="20px auto" maxWidth="350px" align="left" fontSize="15px">{yml.header_data.sub_heading}</Paragraph>
-          <ChooseProgram
-            left="15px"
-            top="40px"
-            programs={data.allChooseProgramYaml.edges[0].node.programs}
-            openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-            closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-          />
-          <News lang={pageContext.lang} limit={yml.news.limit} />
+
         </Column>
         <Column
           size="6"
@@ -101,10 +125,11 @@ const Home = (props) => {
           disp_sm={"none"}
           disp_xs={"none"}
           paddingRight={`0`}
+          style={{position: "relative"}}
         >
 
           <Img
-            style={{height: "620px", position: "relative"}}
+            style={{height: "620px"}}
             imgStyle={{objectFit: "contain"}}
             alt="4Geeks Academy"
             loading="eager"
@@ -112,32 +137,31 @@ const Home = (props) => {
             fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
             backgroundSize={`contain`}
           >
-            {/* <div style={{position: "absolute", zIndex: "1", bottom: "33px", right: "144px", transform: "translate(-50%, -50%)"}}> */}
+            <div style={{position: "absolute", zIndex: "1", bottom: "33px", right: "144px", transform: "translate(-50%, -50%)"}}>
 
             <svg style={{position: "absolute", zIndex: "1", bottom: "33px", right: "144px"}} width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="26.5" cy="26.5" r="26.5" fill="#0097CD" />
             </svg>
-
-            {/* </div> */}
+            <div style={{position: "absolute", top: "50%", left: "50%"}} >test</div>
+            <imageSvg style={{position: "absolute", zIndex: "1"}} />
+            </div>
           </Img>
         </Column>
-      </Row>
+      </Row> */}
 
-      {/* BADGES AND NEWS CARDS */}
 
-      <Wrapper>
-        {/* <Title
-        style={{}}
-          size="10"
-          marginTop="40px"
-          paragraph={yml.badges.sub_heading}
-          paragraphColor="black"
-          variant="primary"
-        /> */}
+      <Container variant="fluid" background="#f5f5f5" height="425px" padding="48px 0 36px 0" margin="50px 0">
+        <H2>{yml.testimonial_header.heading}</H2>
+        <Paragraph margin="25px 0 36px 0" color={Colors.blue}>{yml.testimonial_header.button_text}</Paragraph>
+        <Testimonials lang={data.allTestimonialsYaml.edges} />
+      </Container>
+
+      <Container variant="fixed" style={{borderBottom: "1px solid #ebebeb"}} padding="0 17px 59px 17px">
         <Paragraph
           margin="32px 0 32px 0"
           letteSpacing="0.05em"
-          fontSize="22px"
+          fontSize="18px"
+          fontSize_tablet="22px"
           fontWeight="300"
           color={Colors.black}
           lineHeight="38px"
@@ -145,36 +169,76 @@ const Home = (props) => {
           dangerouslySetInnerHTML={{__html: yml.badges.sub_heading}}
         ></Paragraph>
         <Badges lang={pageContext.lang} />
-        {/* <H4 margin="50px 0">{yml.news.heading}</H4> */}
-        {/* <News lang={pageContext.lang} limit={yml.news.limit} /> */}
-      </Wrapper>
+      </Container>
 
       {/* ABOUT 4GEEKS SECTION */}
 
-      <Wrapper margin="50px 0">
+      {/* <Wrapper margin="50px 0"> */}
+      <Container variant="fluid" margin="90px 0">
         <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
-        {/* <About4Geeks lang={pageContext.lang} /> */}
-        {/* <H4 margin="50px 0">{yml.news.heading}</H4> */}
-        {/* <News lang={pageContext.lang} limit={yml.news.limit} /> */}
-      </Wrapper>
-
+      </Container>
+      {/* <About4Geeks lang={pageContext.lang} /> */}
+      {/* <H4 margin="50px 0">{yml.news.heading}</H4> */}
+      {/* <News lang={pageContext.lang} limit={yml.news.limit} /> */}
+      {/* </Wrapper> */}
       {/* WHY 4GEEKS SECTION */}
 
-      <Wrapper margin="50px 0">
-        <CityWrapper yml={yml} />
-        <With4Geeks lang={pageContext.lang} playerHeight="158px" />
-      </Wrapper>
+      <Container variant="fluid" background={Colors.verylightGray} margin="100px auto">
+        <Container variant="fixed">
+          <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
+        </Container>
+      </Container>
 
-      <Wrapper margin="50px 0">
-        <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
-      </Wrapper>
+
+      <Container
+        variant="fixed"
+        margin="100px auto"
+      >
+        <H2 margin="0 0 30px 0" fontSize="15px" lineHeight="19px" fontWeight="900">WITH 4GEEKS</H2>
+        <With4Geeks lang={pageContext.lang} playerHeight="82px" />
+      </Container>
+      <Container
+        variant="fluid"
+        background={Colors.verylightGray}
+        height_md="300px"
+        margin_md="0 0 215px 0"
+        margin="0 0 76px 0"
+        padding="59px 17px 83px 17px"
+      >
+        <Container
+          variant="fixed"
+          transform_md="translateY(15%)"
+        >
+          <H2 fontSize="15px" lineHeight="19px" fontWeight="900">CHOOSE YOUR PROGRAM</H2>
+          <Paragraph margin="0 0 36px 0">Contamos con programas que combinan clases prácticas dictadas por expertos</Paragraph>
+          <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
+        </Container>
+      </Container>
+
+      <Container
+        variant="fluid"
+      >
+        <Container variant="fixed">
+          <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
+          <Paragraph margin="0 0 50px 0" >{hiring.partners.sub_heading}</Paragraph>
+
+        </Container>
+        <OurPartners images={hiring.partners.images}></OurPartners>
+      </Container>
+      <Container
+        variant="fixed"
+        margin="100px auto"
+      >
+        <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{yml.locations.heading}</H2>
+        <Paragraph margin="0 0 50px 0" >{yml.locations.sub_heading}</Paragraph>
+        <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} />
+      </Container>
 
       {/* NEW COMPONENT TEST */}
 
-      <WrapperCustom width="100%" style={{background: "grey"}}>
-        <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
+      {/* <WrapperCustom width="100%" style={{background: "grey"}}> */}
 
-      </WrapperCustom>
+      {/* </WrapperCustom> */}
 
       {/* <Wrapper margin="50px 0">
         <WhyPython lang={pageContext.lang} />
@@ -265,27 +329,7 @@ const Home = (props) => {
         </Row>
       </Wrapper> */}
 
-      {/* <Wrapper
-        margin="100px"
-        right={true}
-        background={Colors.lightGray}
-        border="top">
-        <Title
-          size="10"
-          marginTop="40px"
-          title={hiring.partners.tagline}
-          paragraph={hiring.partners.sub_heading}
-          paragraphColor="black"
-          variant="primary"
-        />
-        <WhoIsHiring
-          margin="50px"
-          images={hiring.partners.images}
-          footerTagline={hiring.partners.footer_tagline}
-          footerLink={hiring.partners.footer_link}
-          footerButton={hiring.partners.footer_button}
-        />
-      </Wrapper> */}
+
 
       {/* <Wrapper
         margin="100px">
@@ -301,29 +345,8 @@ const Home = (props) => {
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
       </Wrapper> */}
 
-      <Wrapper
-        margin="100px">
-        <Title
-          variant="primary"
-          title={yml.locations.heading}
-          paragraph={yml.locations.sub_heading}
-          paragraphColor={Colors.darkGray}
-          maxWidth="66%"
-          margin="auto"
-        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
-        />
-        <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} />
-      </Wrapper>
-      {/* <Wrapper margin="100px">
-        <Title
-          variant="primary"
-          title={yml.testimonial_header.heading}
-          paragraph={yml.testimonial_header.sub_heading}
-          maxWidth="66%"
-        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
-        />
-        <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
-      </Wrapper> */}
+
+
 
     </>
   )
@@ -358,7 +381,11 @@ export const query = graphql`
             }
             badges{
               heading
-                sub_heading
+              sub_heading
+            }
+            with{
+              heading
+              sub_heading
             }
             geeks_vs_others{
                 heading
@@ -396,7 +423,8 @@ export const query = graphql`
             }
             testimonial_header{
                 heading
-                sub_heading
+                button_text
+                button_link
             }
         }
       }
@@ -570,6 +598,13 @@ export const query = graphql`
                   hidden
                   linkedin_url
                   linkedin_text
+                  linkedin_image{
+                    childImageSharp {
+                      fluid(maxHeight: 14){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
                   student_thumb{
                     childImageSharp {
                       fluid(maxHeight: 200){
@@ -577,6 +612,7 @@ export const query = graphql`
                       }
                     }
                   }
+                  short_content
                   content
                   source_url
                   source_url_text
