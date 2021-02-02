@@ -204,6 +204,7 @@ const Home = (props) => {
         margin_md="0 0 215px 0"
         margin="0 0 76px 0"
         padding="59px 17px 83px 17px"
+        padding_md="17px"
       >
         <Container
           variant="fixed"
