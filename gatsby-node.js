@@ -306,7 +306,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
 
         if (node.fields.lang === "us") {
             _createRedirect({
-                fromPath: "/" + node.fields.slug + "/",
+                fromPath: "/" + node.fields.slug,
                 toPath: _targetPath,
                 // redirectInBrowser: true,
                 isPermanent: true
