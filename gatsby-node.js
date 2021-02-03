@@ -261,6 +261,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
     const {createPage, createRedirect} = actions;
     const _createRedirect = (args) => {
         redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
+        console.log(`Redirect from ${args.fromPath} to ${args.toPath}`);
         createRedirect(args);
     }
     const result = await graphql(`
@@ -293,7 +294,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
     //for each page found on the YML
     result.data[`allPageYaml`].edges.forEach(({node}) => {
         const _targetPath = node.fields.slug === "index" ? "/" : node.fields.pagePath;
-        console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath}`);
+        console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} in ${node.fields.lang}`);
         createPage({
             path: _targetPath,
             component: path.resolve(`./src/templates/${node.fields.defaultTemplate}.js`),
@@ -305,16 +306,16 @@ const createPagesfromYml = async ({graphql, actions}) => {
 
         if (node.fields.lang === "us") {
             _createRedirect({
-                fromPath: "/" + node.fields.slug,
+                fromPath: "/" + node.fields.slug + "/",
                 toPath: _targetPath,
-                redirectInBrowser: true,
+                // redirectInBrowser: true,
                 isPermanent: true
             });
 
             _createRedirect({
                 fromPath: "/en/" + node.fields.slug,
                 toPath: _targetPath,
-                redirectInBrowser: true,
+                // redirectInBrowser: true,
                 isPermanent: true
             });
 
@@ -322,7 +323,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                 _createRedirect({
                     fromPath: "/en",
                     toPath: _targetPath,
-                    redirectInBrowser: true,
+                    // redirectInBrowser: true,
                     isPermanent: true
                 });
             }
@@ -331,9 +332,15 @@ const createPagesfromYml = async ({graphql, actions}) => {
             _createRedirect({
                 fromPath: "/" + node.fields.slug,
                 toPath: _targetPath,
-                redirectInBrowser: true,
+                // redirectInBrowser: true,
                 isPermanent: true
             });
+            // _createRedirect({
+            //     fromPath: "/es/" + node.fields.slug,
+            //     toPath: _targetPath,
+            //     // redirectInBrowser: true,
+            //     isPermanent: true
+            // });
 
         }
 
@@ -343,12 +350,14 @@ const createPagesfromYml = async ({graphql, actions}) => {
                     throw new Error(`The path in ${node.meta_info.slug} its not a string: ${path}`);
                 }
                 path = path[0] !== '/' ? '/' + path : path;
-                _createRedirect({
-                    fromPath: path,
-                    toPath: _targetPath,
-                    redirectInBrowser: true,
-                    isPermanent: true
-                });
+                const exists = redirects.find(p => p === `Redirect from ${path} to ${_targetPath}`);
+                if(!exists || exists === undefined)
+                    _createRedirect({
+                        fromPath: path,
+                        toPath: _targetPath,
+                        // redirectInBrowser: true,
+                        isPermanent: true
+                    });
             })
         }
     });
