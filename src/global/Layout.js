@@ -5,7 +5,7 @@ import '../assets/css/utils.css';
 import Navbar from '../components/Navbar';
 import {StaticQuery, graphql} from 'gatsby';
 import UpcomingProgram from '../components/UpcomingProgram';
-import Footer from '../components/Footer';
+import Footer from '../new_components/Footer';
 
 
 import GlobalStyle from './GlobalStyle';
@@ -96,7 +96,7 @@ const Layout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            { showUpcoming && <UpcomingProgram button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
+            {/* { showUpcoming && <UpcomingProgram button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />} */}
             <Footer yml={myFooter.node} />
           </>
         )
