@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Row, Container, Column, Divider, Grid, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors} from '../Styling';
+import {Colors, StyledBackgroundSection} from '../Styling';
 import Img from "gatsby-image"
 import Icon from '../Icon';
 
@@ -16,11 +16,17 @@ const TechsWeTeach = ({lang}) => {
           node {
             title
             sub_title
-            icon
+            image{
+                childImageSharp {
+                  fluid(maxHeight: 289, maxWidth: 390){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+            }
             tech_list {
               image{
                 childImageSharp {
-                  fluid(maxHeight: 60, maxWidth: 100){
+                  fluid(maxHeight: 100, maxWidth: 100){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -48,10 +54,10 @@ const TechsWeTeach = ({lang}) => {
             >
                 <Container
                     variant="fixed"
-                    padding="70px 20px 42px 20px"
+                    padding="0 20px 42px 20px"
                 >
                     <Grid columns_tablet="2" >
-                        <Div flexDirection="column" >
+                        <Div flexDirection="column" padding="36px 0 0 0" padding_md="84px 0 0 0">
                             <H3 textAlign="left" margin="0 0 20px 0">{content.title}</H3>
                             {content.sub_title.split("\n").map((m, i) =>
                                 <Paragraph
@@ -64,8 +70,22 @@ const TechsWeTeach = ({lang}) => {
                                 </Paragraph>
                             )}
                         </Div>
-                        <Div>
-                            <Div height="340px" width="100%" background={Colors.blue}></Div>
+                        <Div padding="20px 0 0 0" padding_md="45px 0 0 0">
+                            <StyledBackgroundSection
+                                // className={`image`}
+                                height={`289px`}
+                                image={content.image.childImageSharp.fluid}
+                                bgSize={`contain`}
+                                alt="Cnn Logo"
+                                borderRadius={`0 0 0 3px`}
+                            />
+                            {/* <Img
+                                style={{height: "289", minWidth: "390", margin: "0 25px"}}
+                                imgStyle={{objectFit: "contain"}}
+                                // alt={l.name}
+                                fluid={content.image != null && content.image.childImageSharp.fluid}
+                            /> */}
+                            {/* <Div height="340px" width="100%" background={Colors.blue}></Div> */}
                             {/* <Icon icon={content.icon} width="38px" height="48px" /> */}
                         </Div>
                         {/* <Div flexDirection="column" justifyContent="between" >
@@ -84,7 +104,7 @@ const TechsWeTeach = ({lang}) => {
                     {Array.isArray(content.tech_list) && content.tech_list.map((l, i) => {
                         return (
                             <Img
-                                style={{height: "80px", minWidth: "80px", margin: "0 25px"}}
+                                style={{height: "40px", minWidth: "40px", margin: "0 25px"}}
                                 imgStyle={{objectFit: "contain"}}
                                 alt={l.name}
                                 fluid={l.image != null && l.image.childImageSharp.fluid}
