@@ -7,7 +7,7 @@ with:
   - name: "PABLO PÉrez"
     title: "I got a job ..."
     description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
-    image: ../../../../static/images/why3.jpg
+    image: ../../../../static/images/pablo-perez.png
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -21,7 +21,7 @@ with:
   - name: "Marco Rojas"
     title: "They financed my career ..."
     description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
-    image: ../../../../static/images/why3.jpg
+    image: ../../../../static/images/marco-rojas.png
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -35,9 +35,9 @@ with:
   - name: "Luisa Barrios"
     title: "They financed my career ..."
     description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
-    image: ../../../../static/images/why3.jpg
+    image: ../../../../static/images/luisa-barrios.png
     alt: ""
-    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
