@@ -177,7 +177,7 @@ const Program = ({data, pageContext, yml}) => {
       <Paragraph margin="0 0 50px 0">{yml.alumni.sub_heading}</Paragraph>
       <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
     </Container>
-    <Container variant="fluid" background="#f5f5f5" height="425px" padding="48px 0 36px 0" margin="50px 0">
+    <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
 
       <Testimonials lang={data.allTestimonialsYaml.edges} />
     </Container>

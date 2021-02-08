@@ -16,7 +16,7 @@ const Testimonials = (props) => {
         <Fragment github="/components/testimonials">
             <H2>{testimonialsArray.heading}</H2>
             <Link to="/us/success-stories"><Paragraph margin="25px 0 36px 0" color={Colors.blue}>{testimonialsArray.button_text}</Paragraph></Link>
-            <Div className="testimonial-slider" display="flex" height="auto" background="#f5f5f5" padding="0 0 59px 0">
+            <Div className="testimonial-slider" display="flex" height="auto" background="linear-gradient(#f5f5f5, white)" padding="0 0 59px 0">
                 {testimonialsArray.testimonials.filter(item => item.hidden !== true).map((item, i) => {
                     return (
                         <Div display="flex" background="#ffffff" minWidth="245px" height="150px" margin="0 12px 0 0" padding="20px 24px 30px 20px" border="1px solid #EBEBEB" alignItems="flex-start">
