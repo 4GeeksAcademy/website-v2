@@ -35,7 +35,7 @@ info_box:
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/caracas-map.png"
   alt: ""
-carousel_box:
+images_box:
   heading: "Lo que deberías saber de Caracas: "
   content: "A pocos metros del metro, en Chacao, el mejor municipio de la ciudad y en una de las torres mas emblemáticas. Tendrás accesso a internet de alta velocidad y una oficina de primer nivel."
   images:

@@ -37,7 +37,7 @@ info_box:
   email: "ve@4GeeksAcademy.com"
   image: "../../../static/images/locations/maracaibo-map.png"
   alt: ""
-carousel_box:
+images_box:
   heading: "What you should know about this location: "
   content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and at walking distance to the most prominent restorants, cofee shops and business center. 140 metters of innovation, curious people and very good vibe to learn."
   images:

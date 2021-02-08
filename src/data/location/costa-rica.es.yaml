@@ -37,7 +37,7 @@ info_box:
   email: "puravida@4GeeksAcademy.com"
   image: "../../../static/images/locations/maracaibo-map.png"
   alt: ""
-carousel_box:
+images_box:
   heading: "What you should know about this location: "
   content: "4Geeks Costa Rica es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
   images:

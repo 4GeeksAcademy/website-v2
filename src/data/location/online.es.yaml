@@ -36,7 +36,7 @@ info_box:
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
 
-carousel_box:
+images_box:
   heading: "Qué debes saber acerca de esta ubicación: "
   content: "Cuando aprendes a programar online no solamente tienes acceso a nuestra plataforma, tambien tendrás disponible cualquiera de nuestras locaciones a nivel mundial."
   images:

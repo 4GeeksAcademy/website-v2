@@ -7,13 +7,23 @@ meta_info:
   redirects: ["/home", "/us/home"]
 header_data:
   tagline: Coding Bootcamp
-  title: EMPOWER YOUR LIFE WITH CODING SKILLS
+  title: Empower your life with coding skills
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
-  image: "../../../static/images/bg/main-bg.jpg"
+  image: "../../../static/images/bg/main.png"
 
 news:
   heading: "Read about this coding bootcamp in the news..."
   limit: 4
+
+## BADGES SECTION
+badges:
+  heading: ""
+  sub_heading: "Lorem ipsum dolor sit amet, <span class='badge'>consectetur</span> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+
+##WITH 4GEEKS
+with:
+  heading: "Choose your program"
+  sub_heading: "Contamos con programas que combinan clases prácticas dictadas por expertos"
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
@@ -51,5 +61,6 @@ alumni_header:
 
 ## TESTIMONIAL SECTION
 testimonial_header:
-  heading: "TESTIMONIALS"
-  sub_heading: ""
+  heading: "86% of our graduates got hired"
+  button_text: "See all testimonials"
+  button_link: ""

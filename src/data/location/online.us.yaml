@@ -5,7 +5,7 @@ meta_info:
   description: "null"
   image: ""
   keywords: "null"
-  redirects: ["/location/online", "/location/remote","/online"]
+  redirects: ["/location/online", "/location/remote", "/online"]
 
 seo_title: "Online Coding Bootcamp"
 header:
@@ -16,7 +16,7 @@ header:
 button:
   syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
   apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
-  
+
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
@@ -33,7 +33,7 @@ info_box:
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
-carousel_box:
+images_box:
   heading: "What you should know about this location: "
   content: >
     Online real life classes - NOT "Go watch the video and figure it out for yourself": You have unlimited One-on-One mentoring, access to live chat support 12 hours a day, hundreds of interactive exercises and videos, real time streaming classes and our very own social network where our thousands of graduates are actively engaged around the world."
@@ -120,7 +120,6 @@ prices:
       content:
         price: "$9,499.00"
         price_info: "single payment"
-
 
   ## *****************
   ## PART-TIME SECTION

@@ -18,7 +18,6 @@ meta_info:
       "/es/course/introduccion-programacion",
       "/introduccion-programacion-codigo",
     ]
-
 header:
   tagline: "FULL STACK DEVELOPER"
   image: "../../../static/images/bg/bg-pr.jpg"
@@ -36,6 +35,26 @@ credentials:
   paragraph: "Nuestros números hablan por sí solos"
 ## PROGRAM DETAILS
 details:
+  about:
+      title: "About the program"
+      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
+      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
+      diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
+      sólida base de front end, back end, base de datos, manejo de procesos       
+      distribuidos y despliegue a distantas plataformas web.
+
+      Al finalizar este programa, contarás con los conocimientos para       
+      desempeñarte como Full Stack Developer. 
+    "
+      list:
+        - label: "Duration"
+          content:  "16 Weeks"
+        - label: "Classes"
+          content: "3 Classes weekly"
+        - label: "Certificate"
+          content: ""
+        - label: "Requisites"
+          content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA PART-TIME
   sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
@@ -127,8 +146,8 @@ geek_data:
 
 ## PRICES AND PAYMENTS SECTION
 prices:
-  heading: "PRECIOS Y PAGOS"
-  sub_heading: ""
+  heading: "Planes y Precios"
+  sub_heading: "Selecciona la sede o modalidad de tu curso para ver los precios y planes de pago"
 
 ## ALUMNI SECTION
 alumni:

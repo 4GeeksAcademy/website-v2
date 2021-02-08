@@ -1,0 +1,75 @@
+## WHY 4GEEKS SECTION
+## THIS COMPONENT IS USED IN "/home"
+
+## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
+
+with:
+  - name: "PABLO PÉrez"
+    title: "I got a job ..."
+    description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
+    image: ../../../../static/images/pablo-perez.png
+    alt: ""
+    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekforce.png"
+      image_link: ""
+      text: ""
+      text_link: ""
+  - name: "Marco Rojas"
+    title: "They financed my career ..."
+    description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
+    image: ../../../../static/images/marco-rojas.png
+    alt: ""
+    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    icon: address
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: "Check Financials Options"
+      text_link: ""
+  - name: "Luisa Barrios"
+    title: "They financed my career ..."
+    description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
+    image: ../../../../static/images/luisa-barrios.png
+    alt: ""
+    video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekpal.png"
+      image_link: ""
+      text: ""
+      text_link: ""
+## ***************************
+## BELOW SOME AVAILABLE VIDEOS
+## ***************************
+
+# A mix of different students talking and recommending 4GA.
+# Here is the URL: https://www.youtube.com/watch?v=sJrH4f7Df8g      # CURRENT 2ST BOX
+
+# Jonathan Ferragut. 2018
+# Here is the URL: https://www.youtube.com/watch?v=oeX_ocy6zv4
+
+# Olson Dimanche
+# Here is the URL: https://www.youtube.com/watch?v=mYgJ6cOxgJs      # 3rd box
+
+# Carlos Ávila
+# Here is the URL: https://www.youtube.com/watch?v=plwPwyrxX84
+# Finding a Job after the Program
+
+# Guensie Grecy. 2019
+# Here is the URL: https://www.youtube.com/watch?v=_rtJgxuY4i4      # CURRENT 1ND BOX
+
+# Olson Dimanche
+# Here is the URL: https://www.youtube.com/watch?v=dQrMEb8iiyM
+
+# Switch Career
+
+# Guensie Grecy
+# Here is the URL: https://www.youtube.com/watch?v=z_YORvcJHqA

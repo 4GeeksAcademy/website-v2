@@ -1,12 +1,17 @@
+heading: "86% of our graduates got hired"
+button_text: See all testimonials
+button_link: ""
 testimonials:
   - student_name: "Azul Botaya"
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
-    linkedin_text: "Linkedin Profile"
+    linkedin_text: ""
+    linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
     content: |
       I felt lost in my career and could not see clear goals for myself anymore.  I came across 
       this great opportunity to join this community of knowledge and, to top it all off, great humans!
@@ -22,8 +27,10 @@ testimonials:
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
     linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
     content: |
       I love 4Geeks Academy's approach to teaching students. There are always at least three tutors who will 
       make sure you master your skills and will not give up on you if there's something 
@@ -49,8 +56,10 @@ testimonials:
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/charles-fabricius/"
     linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
     content: |
       Overall just a great group of people with a common goal. I came into 4Geeks with little 
       to no knowledge about coding and after 16 weeks I was building projects I could have never 
@@ -65,8 +74,10 @@ testimonials:
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/fernando-funezdev/"
     linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
     content: |
       I highly recommend this coding boot camp!!!! Before 4Geeks I never had any experience with 
       code - I didn't know where to start. Within 10 weeks I was able to grasp the core concepts 
@@ -78,8 +89,10 @@ testimonials:
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/salvador-desravines-b85b4a196/"
     linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
     content: |
       This program was definitely one of the hardest things I've done in my life. It was 16 weeks of 
       constant work and practice. All things in life worth having is not going to be easily obtained. 
@@ -90,8 +103,10 @@ testimonials:
     hidden: false
     linkedin_url: ""
     linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
     content: |
       Now I think that I can actually know how to solve the issues that I face when I’m coding and 
       the professors have been a great help along the process. I would recommend this Bootcamp to 
@@ -103,8 +118,10 @@ testimonials:
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/fidelrosell/"
     linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
     content: |
       My experience in 4Geeks Academy was and is the best. The instructors and TAs will help you in 
       a blink. 4Geeks' Slack should be renamed to 4Geeks Overflow. The response time is fast. The 
@@ -120,6 +137,8 @@ testimonials:
     github: "https://github.com/JordanAguiriano"
     linkedin_url: "https://www.linkedin.com/in/jordan-aguiriano/"
     linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    short_content: "Full Stack Developer in Facebook"
     content: ""
   - student_name: "Gabriela"
     last_name: "Rodriguez"
@@ -129,16 +148,20 @@ testimonials:
     github: "https://github.com/gabsssrod"
     linkedin_url: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
     linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    short_content: "Full Stack Developer in Facebook"
     content: ""
   - student_name: "Guensie Grecy"
     testimonial_date: ""
     student_thumb: ""
     linkedin_url: "https://www.linkedin.com/in/guensiegrecy/"
     linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
     hidden: true
     source_url: ""
     video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
     source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
     content: |
       I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn’t know anything about anything computer-technology wise, so that’s an encouragement because it’s possible!
   # - student_name: "Darius Bounds"
