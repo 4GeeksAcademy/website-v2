@@ -37,7 +37,7 @@ info_box:
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/maracaibo-map.png"
   alt: ""
-carousel_box:
+images_box:
   heading: "What you should know about this location: "
   content: "4Geeks Office is Located at the epicenter of San Jose, next to the metro station and at walking distance to the most prominent restaurants, coffee shops and business centers. 140 meters of innovation, curious people and an awesome vibe to learn."
   images:
