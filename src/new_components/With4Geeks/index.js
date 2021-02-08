@@ -1,9 +1,9 @@
 import React from 'react';
-import {useStaticQuery, graphql} from "gatsby"
+import {useStaticQuery, graphql, Link} from "gatsby"
 import {Title, H4, H3, Paragraph} from '../Heading'
 import {Column, Row, Div, Grid} from '../Sections'
 import {RoundImage, Colors} from '../../components/Styling'
-import ReactPlayer from '../../components/ReactPlayer'
+import ReactPlayer from '../../new_components/ReactPlayer'
 import Fragment from "../../components/Fragment"
 import Icon from "../../components/Icon"
 
@@ -53,18 +53,29 @@ export default ({lang, playerHeight}) => {
         return (
           <Div
             display="flex"
-            flexDirection="column"
-            justifyContent="spece-between"
+            flexDirection_md="column"
+            justifyContent="between"
+            borderBottom={`1px solid ${Colors.lightGray}`}
+            border_md={`1px solid ${Colors.lightGray}`}
+            // justifyContent="spece-between"
             key={index}
-            style={{border: `1px solid ${Colors.lightGray}`, borderRadius: `3px`}}
+            style={{borderRadius: `3px`}}
           >
-            <Div>
+            <Div
+              padding="19px 0 0 25px"
+              padding_md="0"
+              width_md="100%"
+              height_md="158px"
+              alignSelf="baseline"
+            >
               <ReactPlayer
                 thumb={i.image}
-                style={{height: playerHeight}}
+                // style={{height: playerHeight}}
                 id={i.video}
-                width='100%'
-                height='158px'
+                width='82px'
+                width_md="100%"
+                height_md='158px'
+                height={playerHeight}
               />
             </Div>
             <Div
@@ -77,10 +88,9 @@ export default ({lang, playerHeight}) => {
               color={Colors.yellow} fill={Colors.yellow}
             /> */}
               <H4
-                align="left"
-                align_sm="center"
+                textAlign="left"
                 width="100%"
-                margin="0"
+                margin="0 0 10px 0"
                 uppercase
                 fontSize="15px"
                 fontWeight="400"
@@ -89,39 +99,40 @@ export default ({lang, playerHeight}) => {
                 {i.name}
               </H4>
               <H3
-                align="left"
-                align_sm="center"
+                textAlign="left"
                 width="100%"
                 margin="0"
                 fontSize="22px"
                 fontWeight="700"
+                lineHeight="26px"
               >
                 {`“${i.title}”`}
               </H3>
               <Paragraph
                 color="gray"
-                align="left"
+                textAlign="left"
                 margin="10px 0 10px 0"
                 fontWeight="400"
-                lineHeight="20px"
-                fontSize="16px">
+                lineHeight="18px"
+                fontSize="14px">
                 {i.description}
               </Paragraph>
 
               {i.footer.is_image ?
                 <RoundImage url={i.footer.image} bsize="contain" height="20px" position="left" />
                 :
-                <H4
-                  align="left"
-                  align_sm="center"
-                  width="100%"
-                  margin="0 0 0 10px"
-                  uppercase
-                  fontSize="15px"
-                  fontWeight="400"
-                  color={Colors.darkGray}
-                >{i.name}
-                </H4>
+                <Link to={i.footer.text_link}>
+                  <H4
+                    textAlign="left"
+                    align_sm="center"
+                    width="100%"
+                    fontSize="13px"
+                    lineHeight="15px"
+                    fontWeight="400"
+                    color={Colors.blue}
+                  >{i.footer.text}
+                  </H4>
+                </Link>
               }
             </Div>
           </Div>
