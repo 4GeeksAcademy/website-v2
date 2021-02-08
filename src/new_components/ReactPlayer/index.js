@@ -19,6 +19,7 @@ const Iframe = styled(YouTube)`
 const Thumbnail = styled.img`
   display: block;
   object-fit: cover;
+
 `
 
 const Image = styled.div`
@@ -28,7 +29,7 @@ const Image = styled.div`
   width: ${props => props.width || "100%"};
   overflow: hidden;
   box-shadow: ${props => props.shadow};
-  border-radius: ${props => props.borderRadius || "1.25rem"};
+  // border-radius: ${props => props.borderRadius || "1.25rem"};
   @media ${Devices.xxs}{
 
   }
@@ -175,7 +176,7 @@ Player.propTypes = {
 
 const Play = styled.button`
   background: #282828;
-  border-radius: 50% / 10%;
+  border-radius: 3px;
   color: ${props => props.white};
   font-size: 1em;
   height: 3em;
