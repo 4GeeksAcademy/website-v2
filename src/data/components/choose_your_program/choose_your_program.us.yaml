@@ -1,16 +1,17 @@
 programs:
   - title: "Full-Stack 
-    
-    Developer
-    "
+  
+  Developer"
     sub_title: "Level 1"
     description: "Master the basics of machine"
     icon: "fullstack"
     link: "/us/course/full-stack-web-development-bootcamp-part-time"
-  - title: "Software Engineer"
+  - title: "Software 
+  
+  Engineer"
     sub_title: "Level 2"
     description: "Master the basics of machine"
-    icon: "software"
+    icon: "fullstack"
     link: "/us/course/software-engineering-coding-bootcamp"
   - title: "AI/Machine Learning
   
@@ -18,6 +19,6 @@ programs:
     "
     sub_title: "Online"
     description: "Master the basics of machine"
-    icon: "machine"
+    icon: "fullstack"
     link: "/us/course/full-stack-web-development-bootcamp-part-time"
 
