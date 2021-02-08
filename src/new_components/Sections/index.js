@@ -6,6 +6,8 @@ import {Break} from '../Responsive'
 import {Devices} from '../Responsive'
 import Fragment from "../Fragment"
 
+
+
 const containerVariants = {
     fluid: {
         width: "100%"
@@ -15,51 +17,82 @@ const containerVariants = {
     }
 }
 export const Container = styled(Fragment)`
-
     ${props => props.variant === "fixed" ?
         css`
+        @media ${Devices.xxs}{
+        }
+        @media ${Devices.xs}{
+    
+        }
+        @media  ${Devices.sm}{
+            max-width: 540px;
+        }
+        @media  ${Devices.tablet}{
+            max-width: 720px;
+            height: ${props => props.height_tablet};
+        }
+        @media  ${Devices.md}{
+            max-width: 960px;
+            height: ${props => props.height_md};
+            transform: ${props => props.transform_md};
+            
+        }
+        @media  ${Devices.lg}{
+            max-width: 1024px;
+        }
+        @media  ${Devices.xl}{
             max-width: 1140px;
-            @media ${Break.lg}{
-                max-width: 960px;
+            
+        }
+        @media  ${Devices.xxl}{
+            max-width: 1320px;
+    
+        }
+            `:
+        css`
+            @media ${Devices.xxs}{
             }
-            @media ${Break.md}{
-                max-width: 540px;
+            @media ${Devices.xs}{
+        
             }
-            @media  ${Break.sm}{
-                max-width: 720px;
+            @media  ${Devices.sm}{
             }
-            @media ${Break.xs}{
-                max-width: 540px;
+            @media  ${Devices.tablet}{
+                height: ${props => props.height_tablet};
             }
-            `: ''
+            @media  ${Devices.md}{
+                height: ${props => props.height_md};
+                margin: ${props => props.margin_md};
+                padding: ${props => props.padding_md};
+                
+            }
+            @media  ${Devices.lg}{
+            }
+            @media  ${Devices.xl}{
+                
+            }
+            @media  ${Devices.xxl}{
+        
+            }
+                `
     }
     display: ${props => props.display};
+    background: ${props => props.background};
     width: ${props => containerVariants[props.variant || "fixed"]};
     height: ${props => props.height};
-    margin: ${props => props.margin || "initial"};
+    margin: ${props => props.margin || "0 auto"};
     padding: ${props => props.padding};
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: ${props => props.p_top};
-    padding-bottom: ${props => props.p_bottom};
-    background: ${props => props.color};
-    @media  ${Break.sm}{
-        padding: ${props => props.p_sm};
-        margin: ${props => props.m_sm};
-    }
-    @media  ${Break.xs}{
-        padding: ${props => props.p_xs};
-    }
+    transform: ${props => props.transform};
     `
 // TEST TO CHECK IF THE GRID IS A GOOD OPTION
 export const Grid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(${props => props.columns}, 1fr);
-    grid-template-rows: auto;
+    display: ${props => props.display || "grid"};
+    grid-template-columns: repeat(${props => props.columns || "1"}, 1fr);
+    grid-template-rows: repeat(${props => props.rows || "auto"});
     grid-gap: ${props => props.gridGap || "15px"};
     height: ${props => props.height};
+    background: ${props => props.background};
+    padding: ${props => props.padding};
     
     @media ${Devices.xxs}{
         grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
@@ -72,9 +105,15 @@ export const Grid = styled.div`
     }
     @media  ${Devices.tablet}{
         grid-template-columns: repeat(${props => props.columns_tablet}, 1fr);
+        grid-template-rows: repeat(${props => props.rows_tablet}, 5vw);
     }
     @media  ${Devices.md}{
         grid-template-columns: repeat(${props => props.columns_md}, 1fr);
+        grid-template-rows: repeat(${props => props.rows_md});
+        grid-gap: ${props => props.gridGap_md};
+        height: ${props => props.height_md};
+        padding: ${props => props.padding_md};
+        display: ${props => props.display_md};
     }
     @media  ${Devices.lg}{
         grid-template-columns: repeat(${props => props.columns_lg}, 1fr);
@@ -100,42 +139,60 @@ export const Div = styled.div`
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};
+    min-width: ${props => props.minWidth};
     position: ${props => props.position};
-    display: ${props => props.display};
+    display: ${props => props.display || "flex"};
+    flex-direction: ${props => props.flexDirection || 'row'};
     align-items: ${props => props.alignItems};
+    align-self: ${props => props.alignSelf};
     margin: ${props => props.margin};
     border: ${props => props.border};
     border-radius: ${props => props.borderRadius};
     background: ${props => props.background};
     border-left: ${props => props.borderLeft};
     border-top: ${props => props.borderTop};
+    border-bottom: ${props => props.borderBottom};
+    border-right: ${props => props.borderRight};
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
-    flex-direction: ${props => props.flexDirection || 'row'};
     box-shadow: ${props => props.shadow};
     flex-wrap: nowrap; 
     align-content: ${props => props.alignContent};
     align: ${props => props.align};
     cursor: ${props => props.cursor};
+    transform: ${props => props.transform};
     &:hover { 
         background: ${props => props.backgroundHover};
     }
     @media ${Devices.xxs}{
+
     }
     @media ${Devices.xs}{
         
+        
     }
     @media  ${Devices.sm}{
+        padding: ${props => props.padding_sm};
         
     }
     @media  ${Devices.tablet}{
+        display: ${props => props.display_tablet};
+        padding: ${props => props.padding_tablet};
         
     }
     @media  ${Devices.md}{
+        grid-area: ${props => props.gridArea_md};
+        margin: ${props => props.margin_md};
+        width: ${props => props.width_md};
+        height: ${props => props.height_md};
         flex-direction: ${props => props.flexDirection_md};
         border: ${props => props.border_md};
         border-left: ${props => props.borderLeft_md};
+        border-right: ${props => props.borderRight_md};
         border-top: ${props => props.borderTop_md};
         align-items: ${props => props.alignItems_md};
+        display: ${props => props.display_md};
+        padding: ${props => props.padding_md};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_md]};
 
     }
     @media  ${Devices.lg}{
@@ -373,20 +430,11 @@ export const Divider = styled.div`
 Div.defaultProps = {
     justifyContent: "flex-start"
 }
-Container.propTypes = {
-    color: PropTypes.string,
-    height: PropTypes.string,
-    margin: PropTypes.string,
-    marginLeft: PropTypes.string,
-    borderTopLeft: PropTypes.string,
-    borderBottomLeft: PropTypes.string,
-}
-// Container.defaultProps = {
-//     borderBottomLeft: '1.25rem',
-// };
+
 Container.defaultProps = {
-    p_xs: '30px 0',
+    padding: '17px',
 };
+
 Row.defaultProps = {
     marginLeft: '-15px',
     marginRight: '-15px',
