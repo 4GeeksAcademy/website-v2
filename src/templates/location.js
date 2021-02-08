@@ -1,13 +1,18 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {Link, Anchor} from "../components/Styling/index"
 import Card from '../components/Card'
-import ChooseProgram from '../components/ChooseProgram'
-import News from '../components/News'
+import ChooseProgram from '../new_components/ChooseProgram'
+import News from '../new_components/News'
+import Badges from '../new_components/Badges'
+import Loc from '../new_components/Loc'
+import OurPartners from '../new_components/OurPartners'
+import ChooseYourProgram from '../new_components/ChooseYourProgram'
+import UpcomingDates from '../new_components/UpcomingDates'
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
-import {Div, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
-import {Title, H1, H4, H3, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors, Small, Img, StyledBackgroundSection} from '../components/Styling'
+import {Div, Row, Column, Wrapper, Container, Divider, Grid} from '../new_components/Sections'
+import {Title, H1, H2, H4, H3, Span, Paragraph, Separator} from '../new_components/Heading'
+import {Button, Colors, Small, Img, StyledBackgroundSection} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
@@ -18,9 +23,11 @@ import Modal from '../components/Modal';
 import Why4Geeks from '../components/Why4Geeks';
 
 const Location = ({data, pageContext, yml}) => {
-
+    console.log("ymllll:", data)
     const {lang} = pageContext;
     const [open, setOpen] = React.useState(false);
+    const hiring = data.allPartnerYaml.edges[0].node;
+    const images = data.allLocationYaml.edges[0].node;
     const [cohorts, setCohorts] = React.useState([]);
     const handleOpen = () => {
         setOpen(true);
@@ -40,51 +47,145 @@ const Location = ({data, pageContext, yml}) => {
     }, []);
 
     return (<>
-        <WrapperImage
-            github={`/location`}
-            imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
-            filter="brightness(0.4)"
-            className={`img-header`}
-            bgSize={`cover`}
-            alt={yml.header.alt}
-            align="center"
-            customBorderRadius="0 0 0 1.25rem"
+        {/* github={`/location`} */}
+        <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px">
+            <Grid columns_md="2">
+                <Div flexDirection="column" justifyContent_md="center">
+                    <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
+                    <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`</ ${yml.header.tagline}`}</H2>
+                    <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
+                    <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
+                    <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph>
+                    <ChooseProgram
+                        right="15px"
+                        top="40px"
+                        margin="40px 0"
+                        textAlign_tablet="left"
+                        programs={data.allChooseProgramYaml.edges[0].node.programs}
+                        openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+                        closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+                    />
+                </Div>
+                <Div>
+                    <StyledBackgroundSection
+                        height={`426px`}
+                        image={yml.header.image.childImageSharp.fluid}
+                        bgSize={`cover`}
+                        alt={yml.header.alt}
+                    />
+                </Div>
+            </Grid>
+        </Container>
+        <Container variant="fluid" background={Colors.verylightGray} padding="63px 81px">
+            <Badges lang={pageContext.lang} />
+            {/* <News location={yml.breathecode_location_slug} lang={lang} /> */}
+        </Container>
+        <Container variant="fixed" margin="88px auto 96px auto">
+            <Div margin="0 0 77px 0">
+                <H2 textAlign_tablet="left">{images.images_box.heading}</H2>
+                <Div flexDirection="column" padding="0 85px 0 0">
+                    {images.images_box.content.split("\n").map((m, i) =>
+                        <Paragraph
+                            textAlign_tablet="left"
+                            margin="0 0 20px 0"
+                            fontSize="15px"
+                            lineHeight="26px"
+                        >
+                            {m}
+                        </Paragraph>
+                    )}
+                </Div>
+            </Div>
+            <Grid columns_md="8" rows_md="8" gridGap="11px">
+
+                <Div background={Colors.blue}
+                    borderRadius="3px"
+                    style={{
+                        gridColumnStart: "1",
+                        gridColumnEnd: "7",
+                        gridRowStart: "1",
+                        gridRowEnd: "5",
+                    }}>
+                    <StyledBackgroundSection
+                        height="353px"
+                        image={yml.header.image.childImageSharp.fluid}
+                        bgSize={`cover`}
+                        alt={yml.header.alt}
+                    />
+                </Div>
+                <Div background={Colors.blue}
+                    borderRadius="3px"
+                    style={{
+                        gridColumnStart: "7",
+                        gridColumnEnd: "9",
+                        gridRowStart: "1",
+                        gridRowEnd: "5",
+                    }}>
+                </Div>
+                <Div background={Colors.blue}
+                    borderRadius="3px"
+                    style={{
+                        gridColumnStart: "1",
+                        gridColumnEnd: "3",
+                        gridRowStart: "5",
+                        gridRowEnd: "7",
+                    }}>
+                </Div>
+                <Div background={Colors.blue}
+                    borderRadius="3px"
+                    style={{
+                        gridColumnStart: "3",
+                        gridColumnEnd: "9",
+                        gridRowStart: "5",
+                        gridRowEnd: "9",
+                    }}>
+                </Div>
+                <Div background={Colors.blue}
+                    borderRadius="3px"
+                    style={{
+                        gridColumnStart: "1",
+                        gridColumnEnd: "3",
+                        gridRowStart: "7",
+                        gridRowEnd: "9",
+                    }}>
+                </Div>
+
+            </Grid>
+        </Container>
+        <Container
+            variant="fluid"
+            margin="100px 0"
         >
-            <H1 type="h1" fontSize="13px" marginTop="50px" color={Colors.white} align="center">{yml.seo_title}</H1>
-            <Divider height="20px" />
-            <Title
-                type="h2"
-                title={yml.header.tagline}
-                paragraph={yml.header.paragraph}
-                paragraphColor={Colors.lightGray}
-                variant="main"
-                color={Colors.white}
-                fontSize="46px"
-                textAlign="center"
-            />
-            <ChooseProgram
-                right="15px"
-                top="40px"
-                margin="0 0 40px 0"
-                programs={data.allChooseProgramYaml.edges[0].node.programs}
-                openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-                closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-            />
-        </WrapperImage>
-        <Divider height="100px" />
-        {yml.news &&
-            <Wrapper >
-                <Title
-                    size="10"
-                    title={yml.news.title}
-                    margin="left"
-                    variant="small"
-                />
-                <News location={yml.breathecode_location_slug} lang={lang} />
-                <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
-            </Wrapper>
-        }
-        { yml.breathecode_location_slug !== "online" &&
+            <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
+            <Paragraph margin="0 auto 50px auto" width="700px">{hiring.partners.sub_heading}</Paragraph>
+            <OurPartners images={hiring.partners.images}></OurPartners>
+        </Container>
+        <Container
+            variant="fluid"
+            background={Colors.verylightGray}
+            height_md="300px"
+            margin_md="0 0 215px 0"
+            margin="0 0 76px 0"
+            padding="59px 17px 83px 17px"
+            padding_md="17px"
+        >
+            <Container
+                variant="fixed"
+                transform_md="translateY(15%)"
+            >
+                <H2 fontSize="15px" lineHeight="19px" fontWeight="900">CHOOSE YOUR PROGRAM</H2>
+                <Paragraph margin="0 0 36px 0">Contamos con programas que combinan clases prácticas dictadas por expertos</Paragraph>
+                <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
+            </Container>
+        </Container>
+        <UpcomingDates lang={pageContext.lang} />
+        <Container variant="fluid" background={Colors.lightYellow}>
+            <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">Title</H2>
+            <Paragraph margin="0 0 50px 0" >Sub Title</Paragraph>
+            <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} />
+        </Container>
+        {/* {
+            yml.breathecode_location_slug !== "online" &&
             <Wrapper >
                 <Card shadow borders="1.25rem" >
                     <Row display="flex"
@@ -123,8 +224,8 @@ const Location = ({data, pageContext, yml}) => {
                     </Row>
                 </Card>
             </Wrapper>
-        }
-        <Wrapper>
+        } */}
+        {/* <Wrapper>
             <Title
                 size="10"
                 title={yml.upcoming.title}
@@ -157,28 +258,28 @@ const Location = ({data, pageContext, yml}) => {
                             <H4 padding="10px">{cohort.certificate.name}</H4>
                             <Div padding="10px">
                                 <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
-                                {pageContext.lang == "us" ? 
-                                <Paragraph
-                                    margin={`0 0 0 10px`}
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="9px"
-                                    fs_lg="11px"
-                                    fontSize="14px">
-                                    <Small display="block">Starting on:</Small>
-                                    {dayjs(cohort.kickoff_date).locale("us").add(5, "hour").format("ddd, D MMM YYYY")}
-                                </Paragraph>
-                                : <Paragraph
-                                    margin={`0 0 0 10px`}
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="9px"
-                                    fs_lg="11px"
-                                    fontSize="14px">
-                                    <Small display="block">Empezando el:</Small>
-                                    {dayjs(cohort.kickoff_date).locale("es").add(5, "hour").format("ddd, D MMM YYYY")}
-                                </Paragraph>}
-                                
+                                {pageContext.lang == "us" ?
+                                    <Paragraph
+                                        margin={`0 0 0 10px`}
+                                        fs_xs="18px"
+                                        fs_sm="18px"
+                                        fs_md="9px"
+                                        fs_lg="11px"
+                                        fontSize="14px">
+                                        <Small display="block">Starting on:</Small>
+                                        {dayjs(cohort.kickoff_date).locale("us").add(5, "hour").format("ddd, D MMM YYYY")}
+                                    </Paragraph>
+                                    : <Paragraph
+                                        margin={`0 0 0 10px`}
+                                        fs_xs="18px"
+                                        fs_sm="18px"
+                                        fs_md="9px"
+                                        fs_lg="11px"
+                                        fontSize="14px">
+                                        <Small display="block">Empezando el:</Small>
+                                        {dayjs(cohort.kickoff_date).locale("es").add(5, "hour").format("ddd, D MMM YYYY")}
+                                    </Paragraph>}
+
                             </Div>
                             <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center">
                                 <Link to={yml.button.apply_button_link}><Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
@@ -189,8 +290,8 @@ const Location = ({data, pageContext, yml}) => {
                     </Column>
                 )}
             </Row>
-        </Wrapper>
-        <Wrapper >
+        </Wrapper> */}
+        {/* <Wrapper >
             <Row display="flex">
                 <Column
                     size="12"
@@ -235,8 +336,7 @@ const Location = ({data, pageContext, yml}) => {
                     </Card>
                 </Column>
             </Row>
-        </Wrapper>
-        <Divider height="100px" />
+        </Wrapper> */}
     </>
     )
 };
@@ -297,7 +397,7 @@ export const query = graphql`
                 image
                 keywords
             }
-            carousel_box{
+            images_box{
                 heading
                 content
                 images{
@@ -316,6 +416,89 @@ export const query = graphql`
         }
       }
     }
+    allChooseYourProgramYaml (filter: { fields: { lang: { eq: $lang }}}){
+        edges {
+          node {
+            programs {
+              link
+              sub_title
+              title
+              description
+              icon
+            }
+          }
+        }
+      }
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+        edges {
+            node {
+              partners {
+                tagline
+                sub_heading
+                footer_tagline
+                footer_button
+                footer_link
+                images {
+                  name
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 150){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                  featured
+                }
+              }
+              coding {
+                images {
+                  name
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              influencers {
+                images {
+                  name
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              financials {
+                images {
+                  name
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+            }
+          }
+        }
+        
     allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
