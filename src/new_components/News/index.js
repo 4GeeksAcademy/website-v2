@@ -1,9 +1,11 @@
 import React from 'react';
 import {useStaticQuery, graphql, Link} from 'gatsby';
 import styled from "styled-components"
-import {Row, Column} from '../Sections'
+import {Row, Div} from '../Sections'
+import {Colors} from '../Styling'
 import graphic from "../../assets/images/graphic.png"
 import Img from "gatsby-image"
+import Fragment from "../Fragment"
 
 const Helper = styled.span`
   display: inline-block;
@@ -48,21 +50,38 @@ export default ({location, lang, limit, filter}) => {
     console.error(`No news to display for location `, location, locationNews)
     return null;
   }
-
   return (
-    <Row github="/components/news" display={`flex`} marginTop="75px" justifyContent={`between`}>
-      {locationNews.map((l, i) => (
-        <Column style={{whiteSpace: "nowrap", height: "60px"}} key={i} size="2" size_md="3">
-          <a href={l.url} target="_blank" rel="noopener noreferrer nofollow">
+    <Fragment github="/components/news" >
+      <Div margin="40px 0 0 0" className="badge-slider" display="flex" height="auto" justifyContent="center" justifyContent_md="between">
+        {Array.isArray(locationNews) && locationNews.map((l, i) => {
+          return (
+            // <Div key={i} background={Colors.blue}>test</Div>
             <Img
-              style={{height: "100%"}}
+              key={i}
+              style={{height: "60px", minWidth: "60px", margin: "0 20px"}}
               imgStyle={{objectFit: "contain"}}
               alt={l.name}
-              fluid={l.image.childImageSharp.fluid}
+              fluid={l.image != null && l.image.childImageSharp.fluid}
             />
-          </a>
-        </Column>
-      ))}
-    </Row>
+          )
+        })}
+
+      </Div>
+    </Fragment>
   )
 }
+
+    // <Row github="/components/news" display={`flex`} marginTop="75px" justifyContent={`between`}>
+    //   {locationNews.map((l, i) => (
+    //     <Column style={{whiteSpace: "nowrap", height: "60px"}} key={i} size="2" size_md="3">
+    //       <a href={l.url} target="_blank" rel="noopener noreferrer nofollow">
+    //         <Img
+    //           style={{height: "100%"}}
+    //           imgStyle={{objectFit: "contain"}}
+    //           alt={l.name}
+    //           fluid={l.image.childImageSharp.fluid}
+    //         />
+    //       </a>
+    //     </Column>
+    //   ))}
+    // </Row>
