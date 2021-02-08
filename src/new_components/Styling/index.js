@@ -12,13 +12,14 @@ export const Colors = {
     lightBlue: "#BBEAFC",
     gray: "#898a8b",
     verylightGray: "#F5F5F5",
-    lightGray: "#ededed",
+    lightGray: "#ebebeb",
     lightGreen: "#c4f7b7",
     green: "#20630d",
     darkGray: '#3A3A3A;',
     borderGray: '#ececec',
-    yellow: "#FFB718",
-    lightYellow: "#FFCF18",
+    yellow: "#FFC718",
+    lightYellow: "rgba(255, 183, 24, 0.1)",
+    darkYellow: "#FFECBF",
     black: "#000000",
     white: "#FFFFFF",
     red: "red",
@@ -219,9 +220,9 @@ const SmartButton = ({children, onClick, type, ...rest}) => {
 }
 export const Button = styled(SmartButton)`
     font-size: ${props => props.fontSize || '14rem'};
-    font-family: ${props => props.font || "'Futura', sans-serif"};
+    font-family: ${props => props.font || "'Lato', sans-serif"};
     text-transform: ${props => props.textTransform || "uppercase"};
-    font-weight: 800;
+    font-weight: 700;
     margin: ${props => props.margin};
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position};
@@ -232,7 +233,7 @@ export const Button = styled(SmartButton)`
     color: ${props => props.border};
     background: ${props => props.background};
     border: ${props => props.color};
-
+    height: ${props => props.height};
     cursor: pointer;
     text-align: center;
     letter-spacing: 0px;
@@ -262,10 +263,10 @@ export const Button = styled(SmartButton)`
 Button.defaultProps = {
     padding: '10px 30px',
     fontSize: '12px',
-    width: '100%',
+    width: 'fit-content',
     type: 'button',
     colorHover: null,
-    borderRadius: '50rem',
+    borderRadius: '3px',
     outline: false,
     onClick: null,
     display: 'inline-block'
@@ -329,39 +330,64 @@ const StyledLink = ({children, ...rest}) => {
 export const Anchor = styled(StyledLink)`
   display: ${props => props.display || "block"};
   font-family: Lato,sans-serif;
+  text-align: ${props => props.textAlign};
+  font-size: ${props => props.fontSize};
+  font-weight: ${props => props.fontWeight};
+  letter-spacing: 0.05em;
+  text-transform: ${props => props.textTransform};
   maxWidth: ${props => props.maxWidth};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin};
-  font-size: ${props => props.fontSize};
-  font-family: ${props => props.fontFamily};
-  font-weight: ${props => props.fontWeight};
   max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
   padding-right: ${props => props.paddingRight || "innitial"};
-  letter-spacing: 0px;
   text-shadow: ${props => props.textShadow}; 
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};
-  text-align: ${props => props.align};
   &:hover{
     text-decoration: underline;
   }
+    @media ${Devices.xxs}{
 
-  @media ${Break.lg}{
-    text-align: ${props => props.align_lg};
-    font-size: ${props => props.fs_lg};
-  }
-  @media ${Break.md}{
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_md};
-  }
-  @media ${Break.sm}{
-    display: ${props => props.display_sm};
-    font-size: ${props => props.fs_sm};
-    text-align: ${props => props.align_sm || 'center'};
-  }
-  @media ${Break.xs}{
-    font-size: ${props => props.fs_xs};
-    text-align: ${props => props.align_xs};
-  } 
+    }
+    @media ${Devices.xs}{
+        
+        
+    }
+    @media  ${Devices.sm}{
+        
+    }
+    @media  ${Devices.tablet}{
+        
+    }
+    @media  ${Devices.md}{
+
+    }
+    @media  ${Devices.lg}{
+
+    }
+    @media  ${Devices.xl}{
+
+    }
+    @media  ${Devices.xxl}{
+
+    }
+
 `
+//   @media ${Break.lg}{
+//     text-align: ${props => props.align_lg};
+//     font-size: ${props => props.fs_lg};
+//   }
+//   @media ${Break.md}{
+//     text-align: ${props => props.align};
+//     font-size: ${props => props.fs_md};
+//   }
+//   @media ${Break.sm}{
+//     display: ${props => props.display_sm};
+//     font-size: ${props => props.fs_sm};
+//     text-align: ${props => props.align_sm || 'center'};
+//   }
+//   @media ${Break.xs}{
+//     font-size: ${props => props.fs_xs};
+//     text-align: ${props => props.align_xs};
+//   } 
