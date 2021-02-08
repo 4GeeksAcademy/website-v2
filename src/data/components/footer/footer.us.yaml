@@ -56,7 +56,7 @@ footer:
       - name: "Online"
         link: ""
   - column_four:
-    width: 3
+    width: 2
     heading: "LOCATIONS"
     items:
       - name: "Online"
@@ -75,15 +75,17 @@ footer:
         link: "/location/maracaibo"
   - column_five:
     width: 2
-    heading: "FOLLOW"
+    heading: "FOR COMPANIES"
     items:
-      - name: "Github"
-        link: "https://www.github.com/4GeeksAcademy"
-      - name: "Facebook"
-        link: "https://www.facebook.com/4GeeksAcademy"
-      - name: "Twitter"
-        link: "https://www.twitter.com/4GeeksAcademy"
-      - name: "Instagram"
-        link: "https://www.instagram.com/4GeeksAcademy"
-      - name: "Youtube"
-        link: "https://www.youtube.com/4GeeksAcademy"
+      - name: "4GEEKS FOR COMPANIES"
+        link: ""
+      # - name: "Github"
+      #   link: "https://www.github.com/4GeeksAcademy"
+      # - name: "Facebook"
+      #   link: "https://www.facebook.com/4GeeksAcademy"
+      # - name: "Twitter"
+      #   link: "https://www.twitter.com/4GeeksAcademy"
+      # - name: "Instagram"
+      #   link: "https://www.instagram.com/4GeeksAcademy"
+      # - name: "Youtube"
+      #   link: "https://www.youtube.com/4GeeksAcademy"
