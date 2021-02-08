@@ -44,12 +44,13 @@ const TechsWeTeach = ({lang}) => {
             <Container
                 variant="fluid"
                 background={Colors.lightYellow}
-                padding="50px 0"
+                padding="0"
             >
                 <Container
                     variant="fixed"
+                    padding="70px 20px 42px 20px"
                 >
-                    <Grid columns_lg="2" gridGap="100px">
+                    <Grid columns_tablet="2" >
                         <Div flexDirection="column" >
                             <H3 textAlign="left" margin="0 0 20px 0">{content.title}</H3>
                             {content.sub_title.split("\n").map((m, i) =>
@@ -63,7 +64,10 @@ const TechsWeTeach = ({lang}) => {
                                 </Paragraph>
                             )}
                         </Div>
-                        <Div><Icon icon={content.icon} width="38px" height="48px" /></Div>
+                        <Div>
+                            <Div height="340px" width="100%" background={Colors.blue}></Div>
+                            {/* <Icon icon={content.icon} width="38px" height="48px" /> */}
+                        </Div>
                         {/* <Div flexDirection="column" justifyContent="between" >
                             {Array.isArray(content.tech_list) && content.tech_list.map((m, i) => {
                                 return (
@@ -76,18 +80,15 @@ const TechsWeTeach = ({lang}) => {
 
                     </Grid>
                 </Container>
-                <Div>
+                <Div className="badge-slider" justifyContent="center" padding="44px 0" style={{borderTop: `1px solid ${Colors.lightGray}`}}>
                     {Array.isArray(content.tech_list) && content.tech_list.map((l, i) => {
                         return (
-                            <Div key={i} width="100px" height="60px" >
-                                <Img
-                                    style={{height: "100%"}}
-                                    imgStyle={{objectFit: "cover"}}
-                                    objectFit="cover"
-                                    alt={l.name}
-                                    fluid={l.image != null && l.image.childImageSharp.fluid}
-                                />
-                            </Div>
+                            <Img
+                                style={{height: "80px", minWidth: "80px", margin: "0 25px"}}
+                                imgStyle={{objectFit: "contain"}}
+                                alt={l.name}
+                                fluid={l.image != null && l.image.childImageSharp.fluid}
+                            />
                         )
                     })}
                 </Div>
