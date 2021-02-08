@@ -4,7 +4,7 @@ import {Button, Colors, StyledBackgroundSection} from '../Styling';
 import {Break} from '../Responsive'
 import {Devices} from '../Responsive'
 import {Row, Column, Grid, Div} from '../Sections'
-import {H4, H3, Paragraph} from '../Heading'
+import {H2, H4, H3, Paragraph} from '../Heading'
 import {useStaticQuery, navigate, Link} from "gatsby"
 import styled from 'styled-components';
 import Icon from "../Icon"
@@ -12,22 +12,22 @@ import {SessionContext} from '../../session.js'
 
 const About4Geeks = (props) => {
     const about = props.lang[0].node
+    console.log("about", about)
     return (
         <Grid
-            columns_lg="2"
+            columns_md="2"
         >
             <Div
-                display="flex"
                 flexDirection="column"
-                padding="0 30px 0 0"
+                padding_md="0 30px 0 176px"
             >
-                <H3
-                    align="left"
+                <H2
+                    textAlign="left"
                     margin="0 0 20px 0"
-                >{about.heading}</H3>
+                >{about.heading}</H2>
                 {about.sub_heading.split("\n").map((m, i) =>
                     <H4
-                        align="left"
+                        textAlign="left"
                         fontSize="15px"
                         lineHeight="22px"
                         color={Colors.darkGray}
@@ -35,7 +35,7 @@ const About4Geeks = (props) => {
                         {m}
                     </H4>
                 )}
-                {about.list.map((m, i) => {
+                {about.list != null && about.list.map((m, i) => {
                     return (
                         <Div
                             key={i}
@@ -47,7 +47,7 @@ const About4Geeks = (props) => {
                         >
                             <Icon icon="check" width="14px" height="14px" style={{marginRight: "10px"}} color={Colors.yellow} fill={Colors.yellow} />
                             <H4
-                                align="left"
+                                textAlign="left"
                                 fontSize="15px"
                                 lineHeight="26px"
                                 color={Colors.darkGray}
@@ -59,7 +59,7 @@ const About4Geeks = (props) => {
                     dangerouslySetInnerHTML={{__html: about.paragraph}}
                     margin="22px 0 0 0"
                     color={Colors.darkGray}
-                    align="left"
+                    textAlign="left"
                     fontSize="15px"
                     lineHeight="22px"
                 ></Paragraph>
