@@ -17,7 +17,8 @@ const ChooseYourProgram = (props) => {
                     <Div
                         key={i}
                         display="flex"
-                        height="245px"
+                        height="124px"
+                        height_md="245px"
                         borderRadius="3px"
                         padding="1rem"
                         border="1px solid black"
@@ -29,35 +30,39 @@ const ChooseYourProgram = (props) => {
                         alignItems="center"
                         justifyContent="space-between"
                         alignItems_md="flex-end"
+                        background="#ffffff"
                         style={{position: "relative"}}
                     >
                         <Div
                             display="flex"
                             justifyContent="end"
                         >
-                            <Icon icon={program.icon} width="119px" height="72px" />
+                            <Icon className="choose-your-program-icon" icon={program.icon} height="40px" width="52px" />
                         </Div>
                         <Div
                             display="flex"
                             flexDirection="column"
                             width="100%"
                             alignContent="flex-start"
+                            margin="10px 0 0 0"
                             padding="0 0 0 15px"
                         >
+                            {/* {program.sub_title.toLowerCase() != "online" &&  */}
                             <H4
-                                uppercase
-                                align="left"
+                                textTransform="uppercase"
+                                textAlign="left"
                                 fontSize="15px"
                                 lineHeight="19px"
                                 letterSpacing="0.05em"
                                 color={Colors.darkGray}
-                                margin="0 0 10px 0"
+                                margin="0 0 5px 0"
                             >
                                 {program.sub_title}
                             </H4>
+                            {/* // } */}
                             {program.title.split("\n").map((m, i) =>
                                 <H3
-                                    align="left"
+                                    textAlign="left"
                                     fontSize="22px"
                                     lineHeight="26px"
                                 >
@@ -66,15 +71,16 @@ const ChooseYourProgram = (props) => {
                             )}
                             {program.description.split("\n").map((m, i) =>
                                 <Paragraph
-                                    align="left"
+                                    textAlign="left"
                                     fontSize="15px"
                                     lineHeight="19px"
                                     fontWeight="400"
                                     margin="10px 0 0 0"
+                                    margin_md="10px 0 0 0"
                                 >{m}</Paragraph>
                             )}
                         </Div>
-                        <Icon style={{position: "absolute", bottom: "35px", right: "27px"}} icon="arrowright" height="32px" width="32px" />
+                        <Icon className="mobile " style={{position: "absolute", bottom: "35px", right: "27px"}} icon="arrowright" height="32px" width="32px" />
                     </Div>
                 )
             })}
