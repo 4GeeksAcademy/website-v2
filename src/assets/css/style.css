@@ -227,6 +227,9 @@ a {
     @media (min-width: 992px) { ... }
     @media (min-width: 1200px) { ... } */
 }
+.react-player{
+    height: 82px;
+}
 @media (min-width: 320px) {
     .mobile{
         display: none;
