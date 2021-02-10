@@ -55,7 +55,7 @@ const Program = ({data, pageContext, yml}) => {
   return (<>
     <Container
       variant="fluid"
-      margin="120px auto">
+      margin="100px auto 0 auto">
       <Div
         display="flex"
         flexDirection="column"
@@ -68,15 +68,17 @@ const Program = ({data, pageContext, yml}) => {
           letterSpacing="0.05em"
           color="#606060"
         >Coding Bootcamp</H1>
-        <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{`< Full Stack Developer and other stuff>`}</H2>
-        <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">Aprende desde cero hasta tener tu primer trabajo como programador. Recibe mentoría ilimitada, soporte de por vida
+        <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{`< Full Stack Developer >`}</H2>
+        <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="470px">Aprende desde cero hasta tener tu primer trabajo como programador. Recibe mentoría ilimitada, soporte de por vida
         y consigue un trabajo como programador en 16 semanas después de empezar.</Paragraph>
-
-        <Link to={yml.button.apply_button_link}
-          state={{course: yml.meta_info.bc_slug}}
-        >
-          <Button width="200px" color={Colors.blue} margin="10px 0" textColor="white">{apply_button_text}</Button></Link>
-        <Button outline width="200px" onClick={handleOpen} color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Div flexDirection_md="row" flexDirection="column">
+          <Link to={yml.button.apply_button_link}
+            state={{course: yml.meta_info.bc_slug}}
+          >
+            <Button width_md="113px" width="208px" color={Colors.blue} margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+          </Link>
+          <Button outline width="200px" onClick={handleOpen} color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        </Div>
       </Div>
       <Container variant="fixed">
         <Badges lang={pageContext.lang} />
