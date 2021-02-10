@@ -13,7 +13,7 @@ import Fragment from "../Fragment"
 
 const PricingCard = ({data, lang, children, price, color, background, transform, priceInfo, applyLabel, border, borderLeft, borderRight}) => {
   const {header, button} = data;
-  return <Div flexDirection="column" padding="30px" margin="5px 0" height="fit-content" background={background} transform={transform} border={border} borderLeft={borderLeft} borderRight={borderRight}>
+  return <Div flexDirection="column" padding="30px" margin="5px 0" height="fit-content" background={background} transform={transform} border={border} borderLeft={borderLeft} borderRight_tablet={borderRight}>
     <H2
       color={color}
     >
