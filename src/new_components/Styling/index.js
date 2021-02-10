@@ -171,31 +171,56 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
         background-color: ${props => props.backgroundColor};
         background-position: ${props => props.backgroundPosition} !important;
     }
-    @media ${Break.lg}{
-        &:before, &:after {
-            background-position: ${props => props.bp_lg} !important;
-        }
+    @media ${Devices.xxs}{
+
     }
-    @media ${Break.md}{
-        &:before, &:after {
-            background-position: ${props => props.bp_md} !important;
-        }
+    @media ${Devices.xs}{
+        
+        
     }
-    @media ${Break.sm}{
-        height: ${props => props.h_sm};
-        width: ${props => props.w_sm};
-        &:before, &:after {
-            border-radius: ${props => props.borderRadius_sm};
-            background-position: ${props => props.bp_sm} !important;
-        }
+    @media  ${Devices.sm}{
+        
     }
-    @media ${Break.xs}{
-        width: ${props => props.w_xs};
-        &:before, &:after {
-            background-position: ${props => props.bp_xs} !important;
-        }
+    @media  ${Devices.tablet}{
+        
     }
-  `
+    @media  ${Devices.md}{
+
+    }
+    @media  ${Devices.lg}{
+
+    }
+    @media  ${Devices.xl}{
+
+    }
+    @media  ${Devices.xxl}{
+
+    }
+    `
+// @media ${Break.lg}{
+//     &:before, &:after {
+//         background-position: ${props => props.bp_lg} !important;
+//     }
+// }
+// @media ${Break.md}{
+//     &:before, &:after {
+//         background-position: ${props => props.bp_md} !important;
+//     }
+// }
+// @media ${Break.sm}{
+//     height: ${props => props.h_sm};
+//     width: ${props => props.w_sm};
+//     &:before, &:after {
+//         border-radius: ${props => props.borderRadius_sm};
+//         background-position: ${props => props.bp_sm} !important;
+//     }
+// }
+// @media ${Break.xs}{
+//     width: ${props => props.w_xs};
+//     &:before, &:after {
+//         background-position: ${props => props.bp_xs} !important;
+//     }
+// }
 
 
 export const Small = styled.small`
@@ -248,17 +273,33 @@ export const Button = styled(SmartButton)`
 
     &:hover {
         background-color: ${props => props.colorHover || props.color};
-    }
-    @media ${Break.lg}{
-        font-size: ${props => props.fs_lg};
-    }
-    @media ${Break.md}{
-        font-size: ${props => props.fs_md};
-    }
-    @media ${Break.sm}{
-        margin: ${props => props.m_sm};
-        font-size: ${props => props.fs_sm};
-    }
+        @media ${Devices.xxs}{
+
+        }
+        @media ${Devices.xs}{
+            
+            
+        }
+        @media  ${Devices.sm}{
+            width: ${props => props.width_sm};
+        }
+        @media  ${Devices.tablet}{
+            width: ${props => props.width_tablet};
+            
+        }
+        @media  ${Devices.md}{
+            width: ${props => props.width_md};
+    
+        }
+        @media  ${Devices.lg}{
+    
+        }
+        @media  ${Devices.xl}{
+    
+        }
+        @media  ${Devices.xxl}{
+    
+        }
 `;
 Button.defaultProps = {
     padding: '10px 30px',
