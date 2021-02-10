@@ -177,6 +177,11 @@ export const Div = styled.div`
     @media  ${Devices.tablet}{
         display: ${props => props.display_tablet};
         padding: ${props => props.padding_tablet};
+        border: ${props => props.border_tablet};
+        border-top: ${props => props.borderTop_tablet};
+        border-right: ${props => props.borderRight_tablet};
+        border-bottom: ${props => props.borderBottom_tablet};
+        border-left: ${props => props.borderLeft_tablet};
         
     }
     @media  ${Devices.md}{
