@@ -54,9 +54,9 @@ const UpcomingDates = ({lang}) => {
         >
             <Grid columns_lg="1" gridGap="100px">
                 <Div flexDirection="column">
-                    <Div padding="30px 0" style={{borderBottom: "1px solid black"}} justifyContent="between" >
+                    <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent="between" flexDirection="column" flexDirection_tablet="row">
                         <H3 textAlign="left">Next Dates</H3>
-                        <Button outline width="200px" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
+                        <Button outline width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button>
                     </Div>
                     {Array.isArray(data.cohorts.all) && data.cohorts.all.map((m, i) => {
                         return (
