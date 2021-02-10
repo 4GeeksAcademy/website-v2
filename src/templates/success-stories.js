@@ -34,29 +34,21 @@ const SuccessStories = (props) => {
                 </Container>
             </Container>
             <Container variant="fixed">
-                <Grid columns="1" columns_md="12" rows_md="4" gridGap="11px">
-                    <Div background={Colors.darkYellow}
+                <Grid height="908px" height_md="507px" columns="1" rows="1" columns_md="12" gridGap="11px">
+                    <Div
+
+                        height="507px"
+                        background={Colors.darkYellow}
                         borderRadius="3px"
                         gridArea_md="1/1/6/5"
-                    // style={{
-                    //     gridColumnStart: "1",
-                    //     gridColumnEnd: "5",
-                    //     gridRowStart: "1",
-                    //     gridRowEnd: "6",
-                    // }}
                     >
                     </Div>
                     <Div
+                        height="378px"
+                        height_md="507px"
                         borderRadius="3px"
                         border={`1px solid ${Colors.lightGray}`}
                         gridArea_md="1/5/6/13"
-                    // style={{
-                    //     gridColumnStart: "5",
-                    //     gridColumnEnd: "13",
-                    //     gridRowStart: "1",
-                    //     gridRowEnd: "6",
-
-                    // }}
                     >
                     </Div>
                 </Grid>
@@ -88,7 +80,7 @@ const SuccessStories = (props) => {
                 <Div style={{border: `7px solid ${Colors.verylightGray}`}} />
             </Container>
             <Container variant="fixed">
-                <Grid columns_md="12" rows_md="10" gridGap="11px">
+                <Grid height="375px" height_md="507px" columns_md="12" rows_md="10" gridGap="11px">
                     <Div
                         borderRadius="3px"
                         border={`1px solid ${Colors.lightGray}`}
