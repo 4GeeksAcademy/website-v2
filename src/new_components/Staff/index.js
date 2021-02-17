@@ -73,11 +73,11 @@ const Staff = props => {
     console.log("Staff: ", staff)
     return (
         <Fragment github="/components/staff">
-            <Div alignItems="center" flexDirection="column" >
+            <Div alignItems="center" flexDirection="column" display_md="none" >
                 <H4 fontSize="15px" lineHeight="19px" fontWeight="900">{props.heading || staff.heading}</H4>
                 <Paragraph width="331px" textAlign="center" margin="14px 0 50px 0">{props.paragraph || staff.sub_heading}</Paragraph>
             </Div>
-            <Div className="testimonial-slider" display="flex" display_md="none" height="auto" padding="0 17px 59px 17px">
+            <Div className="testimonial-slider" display_md="none" height="auto" padding="0 17px 59px 17px">
                 {staff.staff.map((item, index) => {
                     console.log(`${item.name}: ${item.bio && item.bio.length}`)
                     return (
