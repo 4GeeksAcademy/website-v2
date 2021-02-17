@@ -3,12 +3,49 @@ import {Column, Row, Container, Div, Grid} from "../new_components/Sections";
 import {Title, H1, H2, H3, H4, H5, Paragraph} from '../new_components/Heading';
 import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling';
 import BaseRender from './_baseLayout';
+import Img from 'gatsby-image';
 
+const featuredPositions = {
+    "1": "1/1/6/5",
+    "2": "1/5/6/13"
+}
+const defaultPositions = {
+    "1": "1/1/3/7",
+    "2": "1/7/3/10",
+    "2": "1/7/3/10",
+    "2": "1/7/3/10",
+    "2": "1/7/3/10",
+}
 
 const SuccessStories = (props) => {
     const {data, pageContext, yml} = props;
+    let testimonials = data.allTestimonialsYaml.edges[0].node
+    console.log("success", testimonials)
     return (
         <>
+
+            {/* <Grid columns="9" rows="4" gridGap="11px" height_md="813px" height="304px">
+
+        {yml.images_box.images.map((m, i) => {
+          return (
+            <Div
+              key={i}
+              borderRadius="3px"
+              gridArea={imagePositions[`${m.position}`]}
+            >
+              <StyledBackgroundSection
+                height="auto"
+                margin="0"
+                borderRadius="3px"
+                image={m.path.childImageSharp.fluid}
+                bgSize={`cover`}
+                alt={m.alt}
+              />
+            </Div>)
+        })}
+
+
+      </Grid> */}
             <Container
                 variant="fluid"
                 margin="120px auto">
@@ -36,20 +73,69 @@ const SuccessStories = (props) => {
             <Container variant="fixed">
                 <Grid height="908px" height_md="507px" columns="1" rows="1" columns_md="12" gridGap="11px">
                     <Div
-
+                        flexDirection="column"
                         height="507px"
                         background={Colors.darkYellow}
                         borderRadius="3px"
                         gridArea_md="1/1/6/5"
+                        padding="20px"
                     >
+                        <Div>
+                            <Img
+                                fluid={testimonials.testimonials[0].student_thumb.childImageSharp.fluid}
+                                style={{height: "39px", minWidth: "39px", backgroundSize: `cover`}}
+                            />
+                            <Div flexDirection="column" margin="0 0 0 9px">
+                                <H3
+                                    fontSize="15px"
+                                    lineHeight="19px"
+                                    textAlign="left"
+                                >
+                                    {testimonials.testimonials[0].student_name}
+                                </H3>
+                                <H4
+                                    fontSize="14px"
+                                    lineHeight="22px"
+                                    textAlign="left"
+                                >
+                                    {testimonials.testimonials[0].short_content}
+                                </H4>
+                            </Div>
+                        </Div>
+                        <Paragraph textAlign="left" margin="49px 0 0 0">{testimonials.testimonials[0].content}</Paragraph>
                     </Div>
                     <Div
+                        flexDirection="column"
                         height="378px"
                         height_md="507px"
                         borderRadius="3px"
                         border={`1px solid ${Colors.lightGray}`}
                         gridArea_md="1/5/6/13"
+                        padding="20px"
                     >
+                        <Div>
+                            <Img
+                                fluid={testimonials.testimonials[1].student_thumb.childImageSharp.fluid}
+                                style={{height: "39px", minWidth: "39px", backgroundSize: `cover`}}
+                            />
+                            <Div flexDirection="column" margin="0 0 0 9px">
+                                <H3
+                                    fontSize="15px"
+                                    lineHeight="19px"
+                                    textAlign="left"
+                                >
+                                    {testimonials.testimonials[1].student_name}
+                                </H3>
+                                <H4
+                                    fontSize="14px"
+                                    lineHeight="22px"
+                                    textAlign="left"
+                                >
+                                    {testimonials.testimonials[1].short_content}
+                                </H4>
+                            </Div>
+                        </Div>
+                        <Paragraph textAlign="left" margin="49px 0 0 0">{testimonials.testimonials[0].content}</Paragraph>
                     </Div>
                 </Grid>
             </Container>
@@ -166,12 +252,14 @@ export const query = graphql`
     allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {
+            
             heading
-      button_text
-      button_link
+            button_text
+            button_link
             testimonials {
               student_name
               featured
+              highlighted
               testimonial_date
               hidden
               linkedin_url
@@ -190,6 +278,7 @@ export const query = graphql`
                   }
                 }
               }
+              student_video
               short_content
               content
               source_url

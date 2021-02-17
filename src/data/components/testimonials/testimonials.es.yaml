@@ -1,7 +1,14 @@
+heading: "86% de nuestros alumnos han sido contratados"
+button_text: Ver experiencias
+button_link: ""
 testimonials:
   - student_name: "Azul Botaya"
+    featured: false
+    highlighted: false
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
     linkedin_text: "Linkedin Perfil"
@@ -17,9 +24,13 @@ testimonials:
       No tenía que renunciar a nada. 
       Se que hice un gran grupo y que además podré volver siempre con ellos.
   - student_name: "Naila Kaliyeva"
+    featured: false
+    highlighted: false
     testimonial_date: ""
     source_link: ""
     student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
     linkedin_text: "Linkedin Perfil"
@@ -46,8 +57,12 @@ testimonials:
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
   - student_name: "Charles Fabricius"
+    featured: false
+    highlighted: false
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/charles-fabricius/"
     linkedin_text: "Linkedin Perfil"
@@ -63,8 +78,12 @@ testimonials:
       Sin contar con el acceso a mentores y el apoyo profesional que de por vida dan. Yo me gradué hace 2 años y todavía sigo en contacto con ellos.
 
   - student_name: "Fernando Funez"
+    featured: false
+    highlighted: false
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/fernando-funezdev/"
     linkedin_text: "Linkedin Perfil"
@@ -77,8 +96,12 @@ testimonials:
       Te ayudan para que aún en poco tiempo puedas entender, ejecutar y desarrollar. te vas a convertir en programador de software y podrás conseguir un trabajo como el que ya yo tengo web developer). 
       El staff y los mentors son geniales. Si quieren entrar en este mundo, inscreibanse en 4Geeks sin pensarlo dos veces.
   - student_name: "Salvador Desravines"
+    featured: false
+    highlighted: false
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/salvador-desravines-b85b4a196/"
     linkedin_text: "Linkedin Perfil"
@@ -91,8 +114,12 @@ testimonials:
       Estar todos los días y practicar mucho es clave para poder lograrlo. Todas las cosas de la vida que valen la pena requieren de cierto sacrificio. 
       Si le pones pasión, los prefores y mentores te van a ayudar en todo momento.
   - student_name: "Jorge Montes"
+    featured: false
+    highlighted: false
     testimonial_date: ""
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: ""
     linkedin_text: "Linkedin Perfil"
@@ -105,6 +132,8 @@ testimonials:
       Los profesores son geniales y el resto del staff está siempre pendiente que te vaya de la mejor manera posible. Es increíble todo el apoyo que recibes. 
       Recomiendo el Bootcamp 100%.
   - student_name: "Fidel Rosell"
+    featured: false
+    highlighted: false
     testimonial_date: ""
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/fidelrosell/"
@@ -121,6 +150,8 @@ testimonials:
       Si tienes una entrevista de trabajo, te ayudan con test, con entrevistas simuladas y te preparan de la mejor manera. 
       Una vez graduado, si quieres seguir practicando o conseguir un nuevo trabajo, ellos te van a ayudar.
   - student_name: "Guensie Grecy"
+    featured: false
+    highlighted: false
     testimonial_date: ""
     student_thumb: ""
     linkedin_url: "https://www.linkedin.com/in/guensiegrecy/"

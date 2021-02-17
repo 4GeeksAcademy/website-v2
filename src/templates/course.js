@@ -8,7 +8,7 @@ import {Button, Colors} from '../new_components/Styling'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
 import ProgramDetails from '../new_components/ProgramDetails';
-import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
+import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
 import PricesAndPayment from '../new_components/PricesAndPayment';
 import Modal from '../components/Modal';
 import TypicalDay from '../components/TypicalDay';
@@ -75,7 +75,7 @@ const Program = ({data, pageContext, yml}) => {
           <Link to={yml.button.apply_button_link}
             state={{course: yml.meta_info.bc_slug}}
           >
-            <Button width_md="113px" width="208px" color={Colors.blue} margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+            <Button width_md="120px" width="208px" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
           </Link>
           <Button outline width="200px" onClick={handleOpen} color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
         </Div>
@@ -86,6 +86,7 @@ const Program = ({data, pageContext, yml}) => {
     </Container>
 
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+    <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <TechsWeTeach lang={pageContext.lang} />
     <GeeksInfo lang={pageContext.lang} />
     <UpcomingDates lang={pageContext.lang} />
@@ -160,9 +161,32 @@ const Program = ({data, pageContext, yml}) => {
       <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
       <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     </Wrapper> */}
+    <Container
+      variant="fluid"
+      background="rgba(255, 183, 24, 0.15)"
+      // height="433px"
+      height_md="511px"
+      margin_md="0 0 215px 0"
+      margin="100px 0 76px 0"
+      padding="59px 17px 83px 17px"
+      padding_md="17px"
+    >
+      <Container
+        variant="fixed"
+        transform_md="translateY(-42%)"
+      >
 
+        <PricesAndPayment
+          type={pageContext.slug}
+          lang={pageContext.lang}
+          session={session}
+          locations={data.allLocationYaml.edges}
+          course={program_type}
+        />
+      </Container>
+    </Container>
 
-    <Container variant="fixed" margin="50px auto" style={{position: "relative"}}>
+    {/* <Container variant="fixed" margin="50px auto" style={{position: "relative"}}>
       <H2>{yml.prices.heading}</H2>
       <Paragraph margin="0 0 50px 0">{yml.prices.sub_heading}</Paragraph>
 
@@ -173,7 +197,7 @@ const Program = ({data, pageContext, yml}) => {
         locations={data.allLocationYaml.edges}
         course={program_type}
       />
-    </Container>
+    </Container> */}
     <Container variant="fluid">
       <H2>{yml.alumni.heading}</H2>
       <Paragraph margin="0 0 50px 0">{yml.alumni.sub_heading}</Paragraph>

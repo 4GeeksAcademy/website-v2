@@ -114,6 +114,7 @@ export const Grid = styled.div`
         height: ${props => props.height_md};
         padding: ${props => props.padding_md};
         display: ${props => props.display_md};
+        margin: ${props => props.margin_md};
     }
     @media  ${Devices.lg}{
         grid-template-columns: repeat(${props => props.columns_lg}, 1fr);
@@ -136,6 +137,7 @@ const justifyContentOptions = {
 }
 
 export const Div = styled.div`
+grid-area: ${props => props.gridArea};
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};
@@ -176,28 +178,32 @@ export const Div = styled.div`
     }
     @media  ${Devices.tablet}{
         display: ${props => props.display_tablet};
+        flex-direction: ${props => props.flexDirection_tablet};
+        align-items: ${props => props.alignItems_tablet};
         padding: ${props => props.padding_tablet};
         border: ${props => props.border_tablet};
         border-top: ${props => props.borderTop_tablet};
         border-right: ${props => props.borderRight_tablet};
         border-bottom: ${props => props.borderBottom_tablet};
         border-left: ${props => props.borderLeft_tablet};
+        transform: ${props => props.transform_tablet};
+        grid-area: ${props => props.gridArea_tablet};
         
     }
     @media  ${Devices.md}{
         grid-area: ${props => props.gridArea_md};
+        display: ${props => props.display_md};
+        flex-direction: ${props => props.flexDirection_md};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_md]};
+        align-items: ${props => props.alignItems_md};
         margin: ${props => props.margin_md};
+        padding: ${props => props.padding_md};
         width: ${props => props.width_md};
         height: ${props => props.height_md};
-        flex-direction: ${props => props.flexDirection_md};
         border: ${props => props.border_md};
-        border-left: ${props => props.borderLeft_md};
-        border-right: ${props => props.borderRight_md};
         border-top: ${props => props.borderTop_md};
-        align-items: ${props => props.alignItems_md};
-        display: ${props => props.display_md};
-        padding: ${props => props.padding_md};
-        justify-content: ${props => justifyContentOptions[props.justifyContent_md]};
+        border-right: ${props => props.borderRight_md};
+        border-left: ${props => props.borderLeft_md};
 
     }
     @media  ${Devices.lg}{

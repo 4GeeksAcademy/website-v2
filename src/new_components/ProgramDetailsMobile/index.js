@@ -32,7 +32,7 @@ const ProgramDetailsMobile = (props) => {
                             <Div
                                 key={index}
                                 width="100%"
-                                height="76px"
+                                height={selected.index === index ? "auto" : "76px"}
                                 padding="20px"
                                 border={`1px solid ${Colors.black}`}
                                 borderRadius="3px"
@@ -42,8 +42,9 @@ const ProgramDetailsMobile = (props) => {
                                 cursor={`pointer`}
                                 onClick={() => selected.index === index ? setSelected({index: null, manual: true}) : setSelected({index: index, manual: true})}
                                 justifyContent={`between`}
+                                flexDirection={selected.index === index && "column"}
                             >
-                                <Div display="flex" flexDirection={`column`} alignItems={`flex-start`}>
+                                <Div display="flex" flexDirection={`column`} alignItems={`flex-start`} style={{position: "relative"}}>
                                     <H3
                                         textAlign="left"
                                     >
@@ -51,63 +52,65 @@ const ProgramDetailsMobile = (props) => {
                                     </H3>
                                     <Paragraph
                                         textAlign="left"
+                                        margin="0 0 20px 0"
                                     >{item.duration}</Paragraph>
-                                </Div>
-                                <Icon icon="arrowdown" width="32" />
 
-                            </Div>
-                            {selected.index === index &&
-                                <Div
-                                    flexDirection="column"
-                                >
-                                    <Div alignItems={`center`} margin={`10px 0`}>
-                                        <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
-                                        <H3
+                                </Div>
+                                <Icon icon="arrowdown" width="32" style={{position: "absolute", right: "35px"}} />
+                                {selected.index === index &&
+                                    <Div
+                                        flexDirection="column"
+                                    >
+                                        <Div alignItems={`center`} margin={`10px 0`}>
+                                            <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                            <H3
+                                                textAlign="left"
+                                                margin="0 0 0 16px"
+                                                fontWeight="700"
+                                            >
+                                                {item.title}
+                                            </H3>
+                                        </Div>
+                                        <Paragraph
                                             textAlign="left"
-                                            margin="0 0 0 16px"
-                                            fontWeight="700"
+                                            margin="0 0 20px 0"
                                         >
-                                            {item.title}
-                                        </H3>
-                                    </Div>
-                                    <Paragraph
-                                        textAlign="left"
-                                    >
-                                        {item.description}
-                                    </Paragraph>
-                                    <Div display="flex" alignItems={`center`} margin={`10px 0`}>
-                                        <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
-                                        <H3
-                                            margin={`0 10px`}
-                                            fontWeight={`400`}
-                                            align_sm={`left`}
+                                            {item.description}
+                                        </Paragraph>
+                                        <Div display="flex" alignItems={`center`} margin="10px 0">
+                                            <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                            <H3
+                                                margin={`0 10px`}
+                                                fontWeight="700"
+                                                textAlign="left"
+                                            >
+                                                {strings[lang]["Projects"]}
+                                            </H3>
+                                        </Div>
+                                        <Paragraph
+                                            textAlign="left"
+                                            margin="0 0 20px 0"
                                         >
-                                            {strings[lang]["Projects"]}
-                                        </H3>
-                                    </Div>
-                                    <Paragraph
-                                        align_sm={`start`}
-                                        align_xs={`start`}
-                                    >
-                                        {item.projects}
-                                    </Paragraph>
-                                    <Div display="flex" alignItems={`center`} margin={`10px 0`}>
-                                        <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
-                                        <H3
-                                            margin={`0 10px`}
-                                            fontWeight={`400`}
-                                            align_sm={`left`}
+                                            {item.projects}
+                                        </Paragraph>
+                                        <Div display="flex" alignItems={`center`} margin={`10px 0`}>
+                                            <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                            <H3
+                                                margin={`0 10px`}
+                                                fontWeight="700"
+                                                textAlign="left"
+                                            >
+                                                {strings[lang]["Duration"]}
+                                            </H3>
+                                        </Div>
+                                        <Paragraph
+                                            textAlign="left"
                                         >
-                                            {strings[lang]["Duration"]}
-                                        </H3>
-                                    </Div>
-                                    <Paragraph
-                                        align_sm={`start`}
-                                        align_xs={`start`}
-                                    >
-                                        {item.duration}
-                                    </Paragraph>
-                                </Div>}
+                                            {item.duration}
+                                        </Paragraph>
+                                    </Div>}
+                            </Div>
+
                         </React.Fragment>
                     )
                 })}

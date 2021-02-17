@@ -157,6 +157,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     width: ${props => props.width || "100%"};
     padding: ${props => props.padding};
     text-align: ${props => props.align};
+    border-radius: ${props => props.borderRadius};
     background-repeat: no-repeat;
     margin: ${props => props.margin || "auto"};
     opacity: 1;
@@ -244,8 +245,8 @@ const SmartButton = ({children, onClick, type, ...rest}) => {
     return <button type={type || "button"} onClick={(e) => onClick && onClick(e)} className={rest.className} style={{...rest.style, ...styles}} >{children}</button>;
 }
 export const Button = styled(SmartButton)`
-    font-size: ${props => props.fontSize || '14rem'};
-    font-family: ${props => props.font || "'Lato', sans-serif"};
+    font-size: ${props => props.fontSize};
+    font-family: 'Lato', sans-serif;
     text-transform: ${props => props.textTransform || "uppercase"};
     font-weight: 700;
     margin: ${props => props.margin};
@@ -273,6 +274,7 @@ export const Button = styled(SmartButton)`
 
     &:hover {
         background-color: ${props => props.colorHover || props.color};
+    }
         @media ${Devices.xxs}{
 
         }

@@ -11,9 +11,9 @@ import {Button, Colors, Circle, RoundImage} from '../Styling';
 import {SessionContext} from '../../session'
 import Fragment from "../Fragment"
 
-const PricingCard = ({data, lang, children, price, color, background, transform, priceInfo, applyLabel, border, borderLeft, borderRight}) => {
+const PricingCard = ({data, lang, children, price, color, background, transform_tablet, priceInfo, applyLabel, border, borderLeft, borderRight, borderRight_tablet, borderLeft_tablet}) => {
   const {header, button} = data;
-  return <Div flexDirection="column" padding="30px" margin="5px 0" height="fit-content" background={background} transform={transform} border={border} borderLeft={borderLeft} borderRight_tablet={borderRight}>
+  return <Div flexDirection="column" padding="30px" margin="5px 0" height="fit-content" background={background} transform_tablet={transform_tablet} border={border} borderLeft={borderLeft} borderRight={borderRight} borderLeft_tablet={borderLeft_tablet} borderRight_tablet={borderRight_tablet}>
     <H2
       color={color}
     >
@@ -131,16 +131,17 @@ const PricesAndPayments = (props) => {
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
-        <Grid columns_lg="3" gridGap="0px">
+        <Grid columns_lg="3" gridGap_md="0px" gridGap="40px">
           {prices.left_section &&
             <PricingCard lang={props.lang}
-              transform="translateY(10%)"
+              background={Colors.white}
+              transform_tablet="translateY(10%)"
               price={prices.left_section.content.price}
               priceInfo={prices.left_section.content.price_info}
               data={prices.left_section}
               applyLabel={apply_button_text}
               border="1px solid black"
-              borderRight="none"
+              borderRight_tablet="none"
             />
           }
           {prices.center_section && Array.isArray(prices.center_section.plans) &&
@@ -171,13 +172,14 @@ const PricesAndPayments = (props) => {
           }
           {prices.right_section &&
             <PricingCard lang={props.lang}
-              transform="translateY(10%)"
+              background={Colors.white}
+              transform_tablet="translateY(10%)"
               price={prices.right_section.content.price}
               priceInfo={prices.right_section.content.price_info}
               applyLabel={apply_button_text}
               data={prices.right_section}
               border="1px solid black"
-              borderLeft="none"
+              borderLeft_tablet="none"
             />
           }
         </Grid>

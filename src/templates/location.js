@@ -8,6 +8,7 @@ import Loc from '../new_components/Loc'
 import OurPartners from '../new_components/OurPartners'
 import ChooseYourProgram from '../new_components/ChooseYourProgram'
 import UpcomingDates from '../new_components/UpcomingDates'
+import Staff from '../new_components/Staff';
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
 import {Div, Row, Column, Wrapper, Container, Divider, Grid} from '../new_components/Sections'
@@ -17,174 +18,156 @@ import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {requestSyllabus} from "../actions";
-import Icon from '../components/Icon'
+// import Icon from '../components/Icon'
 import LeadForm from '../components/LeadForm';
 import Modal from '../components/Modal';
 import Why4Geeks from '../components/Why4Geeks';
 
+const imagePositions = {
+  "1": "1/1/3/7",
+  "2": "1/7/3/10",
+  "3": "3/1/4/4",
+  "4": "4/1/5/4",
+  "5": "3/4/5/10"
+}
 const Location = ({data, pageContext, yml}) => {
-    console.log("ymllll:", data)
-    const {lang} = pageContext;
-    const [open, setOpen] = React.useState(false);
-    const hiring = data.allPartnerYaml.edges[0].node;
-    const images = data.allLocationYaml.edges[0].node;
-    const [cohorts, setCohorts] = React.useState([]);
-    const handleOpen = () => {
-        setOpen(true);
-    };
+  console.log("ymllll:", data)
+  const {lang} = pageContext;
+  const [open, setOpen] = React.useState(false);
+  const hiring = data.allPartnerYaml.edges[0].node;
+  const images = data.allLocationYaml.edges[0].node;
+  const [cohorts, setCohorts] = React.useState([]);
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-    useEffect(() => {
-        const loadCohorts = async () => {
-            const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
-            const data = await resp.json();
-            setCohorts(data.slice(0, 3))
-        }
-        loadCohorts();
-    }, []);
+  useEffect(() => {
+    const loadCohorts = async () => {
+      const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
+      const data = await resp.json();
+      setCohorts(data.slice(0, 3))
+    }
+    loadCohorts();
+  }, []);
 
-    return (<>
-        {/* github={`/location`} */}
-        <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px">
-            <Grid columns_md="2">
-                <Div flexDirection="column" justifyContent_md="center">
-                    <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
-                    <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`</ ${yml.header.tagline}`}</H2>
-                    <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
-                    <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
-                    <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph>
-                    <ChooseProgram
-                        right="15px"
-                        top="40px"
-                        margin="40px 0"
-                        textAlign_tablet="left"
-                        programs={data.allChooseProgramYaml.edges[0].node.programs}
-                        openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-                        closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-                    />
-                </Div>
-                <Div>
-                    <StyledBackgroundSection
-                        height={`426px`}
-                        image={yml.header.image.childImageSharp.fluid}
-                        bgSize={`cover`}
-                        alt={yml.header.alt}
-                    />
-                </Div>
-            </Grid>
-        </Container>
-        <Container variant="fluid" background={Colors.verylightGray} padding="63px 81px">
-            <Badges lang={pageContext.lang} />
-            {/* <News location={yml.breathecode_location_slug} lang={lang} /> */}
-        </Container>
-        <Container variant="fixed" margin="88px auto 96px auto">
-            <Div margin="0 0 77px 0">
-                <H2 textAlign_tablet="left">{images.images_box.heading}</H2>
-                <Div flexDirection="column" padding="0 85px 0 0">
-                    {images.images_box.content.split("\n").map((m, i) =>
-                        <Paragraph
-                            textAlign_tablet="left"
-                            margin="0 0 20px 0"
-                            fontSize="15px"
-                            lineHeight="26px"
-                        >
-                            {m}
-                        </Paragraph>
-                    )}
-                </Div>
-            </Div>
-            <Grid columns_md="8" rows_md="8" gridGap="11px">
-
-                <Div background={Colors.blue}
-                    borderRadius="3px"
-                    style={{
-                        gridColumnStart: "1",
-                        gridColumnEnd: "7",
-                        gridRowStart: "1",
-                        gridRowEnd: "5",
-                    }}>
-                    <StyledBackgroundSection
-                        height="353px"
-                        image={yml.header.image.childImageSharp.fluid}
-                        bgSize={`cover`}
-                        alt={yml.header.alt}
-                    />
-                </Div>
-                <Div background={Colors.blue}
-                    borderRadius="3px"
-                    style={{
-                        gridColumnStart: "7",
-                        gridColumnEnd: "9",
-                        gridRowStart: "1",
-                        gridRowEnd: "5",
-                    }}>
-                </Div>
-                <Div background={Colors.blue}
-                    borderRadius="3px"
-                    style={{
-                        gridColumnStart: "1",
-                        gridColumnEnd: "3",
-                        gridRowStart: "5",
-                        gridRowEnd: "7",
-                    }}>
-                </Div>
-                <Div background={Colors.blue}
-                    borderRadius="3px"
-                    style={{
-                        gridColumnStart: "3",
-                        gridColumnEnd: "9",
-                        gridRowStart: "5",
-                        gridRowEnd: "9",
-                    }}>
-                </Div>
-                <Div background={Colors.blue}
-                    borderRadius="3px"
-                    style={{
-                        gridColumnStart: "1",
-                        gridColumnEnd: "3",
-                        gridRowStart: "7",
-                        gridRowEnd: "9",
-                    }}>
-                </Div>
-
-            </Grid>
-        </Container>
-        <Container
-            variant="fluid"
-            margin="100px 0"
-        >
-            <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
-            <Paragraph margin="0 auto 50px auto" width="700px">{hiring.partners.sub_heading}</Paragraph>
-            <OurPartners images={hiring.partners.images}></OurPartners>
-        </Container>
-        <Container
-            variant="fluid"
-            background={Colors.verylightGray}
-            height_md="300px"
-            margin_md="0 0 215px 0"
-            margin="0 0 76px 0"
-            padding="59px 17px 83px 17px"
-            padding_md="17px"
-        >
-            <Container
-                variant="fixed"
-                transform_md="translateY(15%)"
+  return (<>
+    {/* github={`/location`} */}
+    {/* <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px"> */}
+    {/* <Grid height="375px" height_md="219px" columns="2" rows="2" columns_md="12" rows_md="1" background={Colors.verylightGray}> */}
+    <Grid columns_md="12" height_md="395px" margin_md="0 0 57px 0">
+      <Div flexDirection="column" justifyContent_md="center" gridArea_md="1/3/1/7">
+        <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
+        <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`</ ${yml.header.tagline}`}</H2>
+        <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
+        <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
+        <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph>
+        <ChooseProgram
+          right="15px"
+          top="40px"
+          margin="40px 0"
+          textAlign="center"
+          textAlign_md="left"
+          programs={data.allChooseProgramYaml.edges[0].node.programs}
+          openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+          closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+        />
+      </Div>
+      <Div gridArea_md="1/7/1/13">
+        <StyledBackgroundSection
+          height={`395px`}
+          image={yml.header.image.childImageSharp.fluid}
+          bgSize={`cover`}
+          alt={yml.header.alt}
+        />
+      </Div>
+    </Grid>
+    {/* </Container> */}
+    <Container variant="fluid" background={Colors.verylightGray} padding="63px 81px">
+      <Badges lang={pageContext.lang} />
+      {/* <News location={yml.breathecode_location_slug} lang={lang} /> */}
+    </Container>
+    <Container variant="fixed" margin="88px auto 96px auto">
+      <Div margin="0 0 77px 0">
+        <H2 textAlign_tablet="left">{images.images_box.heading}</H2>
+        <Div flexDirection="column" padding="0 85px 0 0">
+          {images.images_box.content.split("\n").map((m, i) =>
+            <Paragraph
+              textAlign_tablet="left"
+              margin="0 0 20px 0"
+              fontSize="15px"
+              lineHeight="26px"
             >
-                <H2 fontSize="15px" lineHeight="19px" fontWeight="900">CHOOSE YOUR PROGRAM</H2>
-                <Paragraph margin="0 0 36px 0">Contamos con programas que combinan clases prácticas dictadas por expertos</Paragraph>
-                <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
-            </Container>
-        </Container>
-        <UpcomingDates lang={pageContext.lang} />
-        <Container variant="fluid" background={Colors.lightYellow}>
-            <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">Title</H2>
-            <Paragraph margin="0 0 50px 0" >Sub Title</Paragraph>
-            <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} />
-        </Container>
-        {/* {
+              {m}
+            </Paragraph>
+          )}
+        </Div>
+      </Div>
+      <Grid columns="9" rows="4" gridGap="11px" height_md="813px" height="304px">
+
+        {yml.images_box.images.map((m, i) => {
+          return (
+            <Div
+              key={i}
+              borderRadius="3px"
+              gridArea={imagePositions[`${m.position}`]}
+            >
+              <StyledBackgroundSection
+                height="auto"
+                margin="0"
+                borderRadius="3px"
+                image={m.path.childImageSharp.fluid}
+                bgSize={`cover`}
+                alt={m.alt}
+              />
+            </Div>)
+        })}
+
+
+      </Grid>
+    </Container>
+    <Container
+      variant="fluid"
+      margin="100px 0"
+    >
+      <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
+      <Paragraph margin="0 auto 50px auto" width="700px">{hiring.partners.sub_heading}</Paragraph>
+      <OurPartners images={hiring.partners.images}></OurPartners>
+    </Container>
+    <Container
+      variant="fluid"
+      background={Colors.verylightGray}
+      height_md="300px"
+      margin_md="0 0 215px 0"
+      margin="0 0 76px 0"
+      padding="59px 17px 83px 17px"
+      padding_md="17px"
+    >
+      <Container
+        variant="fixed"
+        transform_md="translateY(15%)"
+      >
+        <H2 fontSize="15px" lineHeight="19px" fontWeight="900">CHOOSE YOUR PROGRAM</H2>
+        <Paragraph margin="0 0 36px 0">Contamos con programas que combinan clases prácticas dictadas por expertos</Paragraph>
+        <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
+      </Container>
+    </Container>
+    <UpcomingDates lang={pageContext.lang} />
+    <Container variant="fluid" background={Colors.lightYellow} margin="0 0 67px 0" padding="0 0 86px 0">
+      <Container
+        variant="fixed"
+        margin="0 auto"
+      >
+        <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">Title</H2>
+        <Paragraph margin="0 0 50px 0" >Sub Title</Paragraph>
+        <Loc lang={pageContext.lang} locations={data.test.edges} />
+      </Container>
+    </Container>
+    <Staff lang={pageContext.lang} />
+    {/* {
             yml.breathecode_location_slug !== "online" &&
             <Wrapper >
                 <Card shadow borders="1.25rem" >
@@ -225,7 +208,7 @@ const Location = ({data, pageContext, yml}) => {
                 </Card>
             </Wrapper>
         } */}
-        {/* <Wrapper>
+    {/* <Wrapper>
             <Title
                 size="10"
                 title={yml.upcoming.title}
@@ -291,7 +274,7 @@ const Location = ({data, pageContext, yml}) => {
                 )}
             </Row>
         </Wrapper> */}
-        {/* <Wrapper >
+    {/* <Wrapper >
             <Row display="flex">
                 <Column
                     size="12"
@@ -337,8 +320,8 @@ const Location = ({data, pageContext, yml}) => {
                 </Column>
             </Row>
         </Wrapper> */}
-    </>
-    )
+  </>
+  )
 };
 
 export const query = graphql`
@@ -409,6 +392,7 @@ export const query = graphql`
                         }
                       } 
                     alt
+                    position
                 }
                 
             }
@@ -416,6 +400,71 @@ export const query = graphql`
         }
       }
     }
+    test : allLocationYaml(filter: {fields: { lang: {eq: $lang}}}) {
+        edges {
+          node {
+            city
+            meta_info {
+              slug
+              title
+              description
+              unlisted
+              position
+              image
+              keywords
+            }
+            seo_title
+            header{
+              sub_heading
+              tagline
+              alt
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 800){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              } 
+            }
+            prices {
+                full_time {
+                  slug
+                }
+                part_time {
+                  slug
+                }
+              }
+            info_box {
+              heading
+              address
+              contact_heading
+              phone
+              email
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 800){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              } 
+            }
+            images_box {
+              images {
+                path{
+                  childImageSharp {
+                    fluid(maxWidth: 100){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                } 
+                alt
+              }
+              content
+              heading
+            }
+          }
+        }
+      }
     allChooseYourProgramYaml (filter: { fields: { lang: { eq: $lang }}}){
         edges {
           node {
