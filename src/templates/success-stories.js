@@ -163,6 +163,41 @@ export const query = graphql`
         }
       }
     }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+        edges {
+          node {
+            heading
+      button_text
+      button_link
+            testimonials {
+              student_name
+              featured
+              testimonial_date
+              hidden
+              linkedin_url
+              linkedin_text
+              linkedin_image{
+                childImageSharp {
+                  fluid(maxHeight: 14){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              student_thumb{
+                childImageSharp {
+                  fluid(maxHeight: 200){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              short_content
+              content
+              source_url
+              source_url_text
+            }
+          }
+        }
+      }
     
   }
 `;
