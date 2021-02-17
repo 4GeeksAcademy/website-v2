@@ -107,7 +107,6 @@ a.nav-item.nav-link.side {
 .carousel {
     position: relative;
     width: 100%;
-    border-radius: 1.25rem;
     /* box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .carousel .control-dots .dot {
@@ -394,6 +393,9 @@ a.faq-link:hover {
 .testimonial-slider::-webkit-scrollbar {
     height: 5px;
   }
+  .staff-slider::-webkit-scrollbar {
+    display: none;
+}
 
 /****** React Select ******/
 .react-select-wrapper{
