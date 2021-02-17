@@ -64,7 +64,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Futura, Lato"],
+          families: ["Lato"],
           urls: ["/fonts/fonts.css"],
         },
       },
@@ -129,10 +129,10 @@ module.exports = {
       options: {
         env: {
           production: {
-            policy: [{ userAgent: '*' }]
+            policy: [{userAgent: '*'}]
           },
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+            policy: [{userAgent: '*', disallow: ['/']}]
           },
         }
       }
