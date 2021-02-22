@@ -329,8 +329,7 @@ export const Toggle = styled.div`
 `
 
 RoundImage.defaultProps = {
-    width: '100%',
-    backgroundColor: Colors.white
+    width: '100%'
 };
 Select.defaultProps = {
     background: Colors.white,
