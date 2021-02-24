@@ -259,6 +259,7 @@ export const WrapperImage = (props) => {
                             size="9"
                             margin="0 auto"
                             height={props.height}
+                            align={props.align}
                         >
                             {props.children}
                         </Column>

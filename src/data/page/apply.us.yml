@@ -19,6 +19,9 @@ left:
     email: "Email"
     phone: "Phone"
   locations_title: "Select a location"
+  course_title: 
+    open: "Please select one program"
+    close: "What program would you like to attend?"
   referral_section:
     placeholder: "Refferral Key"
     content: "If you were referred by any current or past student, use your referral code for extra credit or discount."

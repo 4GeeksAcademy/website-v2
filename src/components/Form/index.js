@@ -18,7 +18,7 @@ const StyledInput = styled.input`
     height: 40px;
     width: ${props => props.width || "100%"};
     padding: 5px 10px;
-    margin: ${props => props.margin || "10px 0px"};
+    margin: ${props => props.margin || "5px 0px"};
     border-radius: ${props => props.borderRadius};
     border: none;
     font-family: 'Lato', sans-serif;

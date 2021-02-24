@@ -187,7 +187,7 @@ a {
 }
 .card-columns{
     display: inline-block;
-    width: 300px;
+    width: 33%;
 }
 @media (max-width: 768px) {
     .card-columns{
@@ -339,4 +339,14 @@ a.faq-link:hover {
         border-left-width: medium;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
+}
+
+
+
+
+
+
+/****** React Select ******/
+.react-select-wrapper{
+    width: 100% !important;
 }
