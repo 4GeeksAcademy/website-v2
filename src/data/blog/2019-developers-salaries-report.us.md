@@ -105,7 +105,7 @@ All workplaces are looking for developers that not only meet with high coding sk
 
 In today’s job market, tech skills are no longer just coding and building cool stuff: You need to find your place in a team. To be able to deliver a standing project, no developer can do it by themselves. Usually, there’s a lot of people involved in the same project to ensure its success. That’s the reason people skills, management skills, and soft skills, in general, are in demand.
 
-[According to the LinkedIn Business Blog](https://business.linkedin.com/talent-solutions/blog/trends-and-research/2018/the-most-in-demand-hard-and-soft-skills-of-2018), the most in-demand soft skills for 2019 are 
+[According to the LinkedIn Business Blog](https://business.linkedin.com/talent-solutions/blog/trends-and-research/2018/the-most-in-demand-hard-and-soft-skills-of-2018), the most in-demand soft skills for 2019 are: 
 
 
 
