@@ -10,16 +10,15 @@ title: PANDEMIC IMPACT ON CODING BOOTCAMPS
 avatar: /images/staff/marcelo.jpeg
 image: https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/MAIN-BLOG-1024x270.jpg
 wordpress_id:3481
-categories:
-- Sin categoría
+categories: []
 lang: us
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
 tags: 
-- report
-- pandemic 
-- coding bootcamps 
-- COVID-19
+  - report
+  - pandemic 
+  - coding bootcamps 
+  - COVID-19
 ---
 
 # PANDEMIC IMPACT ON CODING BOOTCAMPS 
