@@ -33,6 +33,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "14": "^3.1.6",
     "@loadable/component": "^5.13.2",
     "dayjs": "^1.8.29",
     "gatsby": "^2.24.2",
