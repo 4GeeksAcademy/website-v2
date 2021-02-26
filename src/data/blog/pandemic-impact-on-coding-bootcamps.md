@@ -50,16 +50,3 @@ We have secured a total of 2millions (USD) in new programs sponsored by third pa
 We have decided to bring two new products: Software engineering, and AI/Data Science programs, and one new location: Orlando, Florida. 
 
 We won’t stop until we make sure that every effort was worth it and every student trusting in us is having a better career. 
-
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
