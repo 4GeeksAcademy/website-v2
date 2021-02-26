@@ -8,7 +8,7 @@ link: https://www.4geeksacademy.co/pandemic-impact-on-coding-bootcamps/
 slug: pandemic-impact-on-coding-bootcamps
 title: PANDEMIC IMPACT ON CODING BOOTCAMPS 
 avatar: /images/staff/marcelo.jpeg
-image: https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/MAIN-BLOG-1024x270.jpg
+image:
 
 categories:
 - coding bootcamps
