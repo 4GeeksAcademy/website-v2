@@ -64,7 +64,7 @@ const Contact = (props) => {
         }}>
             <Div className="circles-left" display="none" display_tablet="inherit">
                 <Icon icon="landingCircles/smCircle-red" style={{zIndex: 2, position: "absolute", left: "218px", top: "225px"}}/>
-                <Icon icon="landingCircles/mdCricle-lightBlue" style={{zIndex: 2, position: "absolute", left: "53px", top: "97px"}}/>
+                <Icon icon="landingCircles/mdCircle-lightBlue" style={{zIndex: 2, position: "absolute", left: "53px", top: "97px"}}/>
                 <Icon icon="landingCircles/bigCircle-yellow" style={{zIndex: 2, position:"absolute", left: "0px", top: "250px"}}/>
             </Div>
             <Div className="circles-right" display="none" display_tablet="inherit">

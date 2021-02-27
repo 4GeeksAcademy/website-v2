@@ -254,6 +254,7 @@ export const Button = styled(SmartButton)`
     }
     @media ${Break.md}{
         font-size: ${props => props.fs_md};
+        margin: ${props => props.m_md};
     }
     @media ${Break.sm}{
         margin: ${props => props.m_sm};
