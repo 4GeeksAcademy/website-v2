@@ -4,6 +4,12 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: "./src/data/location"
+  label: Locations
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".yml"
 - type: document
   path: "./src/data/additional-redirects.yml"
   label: Redirects
