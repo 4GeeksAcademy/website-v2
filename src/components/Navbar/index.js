@@ -247,7 +247,9 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
           fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo"
         />
       </Link>
-      <Ul open={open}>
+      <Ul 
+      id="Choose-Programs"
+      open={open}>
         {menu && menu.map((item, index) =>
           (item.name === "The Programs" || item.name === "Programas") ?
             <ChooseProgram
