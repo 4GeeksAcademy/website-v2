@@ -253,6 +253,7 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
             <ChooseProgram
               key={index}
               left="15px"
+              id="Choose-Programs"
               programs={content.node.programs}
               marginTop="-3px"
               borderRadius="0 .75rem .75rem .75rem"
