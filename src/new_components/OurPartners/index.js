@@ -1,29 +1,40 @@
-import React from 'react';
-import {Div} from '../Sections'
-import {Colors, StyledBackgroundSection} from '../Styling';
-import Img from "gatsby-image"
-import {H2, H3, H4, Title, Paragraph} from '../Heading'
-import Link from 'gatsby-link'
-import Card from '../Card';
-import Fragment from "../Fragment"
-const OurPartners = props => {
+import React from "react";
+import { Div } from "../Sections";
+import { Colors, StyledBackgroundSection } from "../Styling";
+import Img from "gatsby-image";
+import { H2, H3, H4, Title, Paragraph } from "../Heading";
+import Link from "gatsby-link";
+import Card from "../Card";
+import Fragment from "../Fragment";
+import DragScrollProvider from '../DragScrollProvider'
+
+const OurPartners = (props) => {
   return (
-    <Fragment margin={props.margin} padding="20px 0" github="/components/partner" >
-      <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0">
+    <Fragment
+      margin={props.margin}
+      padding="20px 0"
+      github="/components/partner"
+    >
+      <DragScrollProvider
+        className="testimonial-slider"
+        id="DragScroll-Partners"
+        justifyContent="between"
+        margin="0 0 60px 0"
+      >
         {props.images.map((l, i) => {
           return (
             // <Div key={i} minWidth="200px" height="60px" margin="0 15px" >
             <Img
-              style={{height: "80px", minWidth: "120px", margin: "0 15px"}}
-              imgStyle={{objectFit: "contain"}}
+              draggable="false"
+              style={{ height: "80px", minWidth: "120px", margin: "0 15px" }}
+              imgStyle={{ objectFit: "contain" }}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}
             />
             // </Div>
-          )
+          );
         })}
-
-      </Div>
+      </DragScrollProvider>
     </Fragment>
 
     // <Div display="flex" height="auto" style={{overflowX: "auto"}}>
@@ -44,12 +55,13 @@ const OurPartners = props => {
     //   })}
     // </Div>
     // </Fragment>
-  )
+  );
 };
 
 export default OurPartners;
 
-{/* <Row display="flex">
+{
+  /* <Row display="flex">
     {props.images.map((item, index) => (
       <Column key={index} size="3" size_sm="4" margin="5px 0">
         <Card width="100%" padding="20px" p_xs="3px">
@@ -72,9 +84,11 @@ export default OurPartners;
         <Paragraph align="center" color={Colors.blue}>{props.footerButton}</Paragraph>
       </Link>
     </div>
-  } */}
+  } */
+}
 
-{/* // <Div width="350px">
+{
+  /* // <Div width="350px">
         //   <StyledBackgroundSection
         //     image={item.image.childImageSharp.fluid}
         //     alt={item.alt}
@@ -83,4 +97,5 @@ export default OurPartners;
         //     width="100%"
         //     bgSize={`contain`}
         //   />
-        // </Div> */}
+        // </Div> */
+}
