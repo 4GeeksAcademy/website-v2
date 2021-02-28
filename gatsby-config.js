@@ -116,6 +116,7 @@ module.exports = {
     },
     'gatsby-transformer-yaml',
     'gatsby-plugin-zeit-now',
+    `gatsby-plugin-netlify-cms`,
     // 'gatsby-plugin-meta-redirect',
     'gatsby-remark-reading-time',
     {
