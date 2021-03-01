@@ -21,7 +21,7 @@ collections:
       - { label: "Avatar", name: "avatar", widget: "image"}
       - { label: "Comments", name: "comments", widget: "boolean" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Image", name: "image", widget: image }
       - { label: "Lang", name: "lang", widget: "string", default: "us/es" }
       - { label: "Layout", name: "layout", widget: "string", default: "post"}
       - { label: "Title", name: "title", widget: "string" }
