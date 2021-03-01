@@ -18,7 +18,7 @@ collections:
       preview: true
     fields:
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Avatar", name: "avatar", widget: "string"}
+      - { label: "Avatar", name: "avatar", widget: "image"}
       - { label: "Comments", name: "comments", widget: "boolean" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
