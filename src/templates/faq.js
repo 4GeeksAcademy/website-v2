@@ -2,12 +2,17 @@ import React, {useState, useEffect, useContext} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Sections'
-import {H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../components/Heading'
+// import {Title, Separator, Span} from '../components/Heading'
 import {Colors, Button, RoundImage} from '../components/Styling'
 import Card from '../components/Card'
 import Icon from '../components/Icon'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session'
+
+// Added new_components
+import Link from 'gatsby-link'
+import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
+// import {Row, Column, HR, Divider, Container, Div} from '../new_components/Sections'
 
 const Faq = (props) => {
     const {data, pageContext, yml} = props;
@@ -17,33 +22,37 @@ const Faq = (props) => {
 
     return (
         <>
-            <WrapperImage
-                imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
-                border="bottom"
-                height="300px"
-                backgroundSize="cover"
-                paddingRight={`0`}
-                customBorderRadius="0 0 0 1.25rem"
-            >
-                <Divider height="100px" />
-                <Title
-                    size="5"
-                    title={yml.banner.tagline}
-                    variant="main"
-                    color={Colors.white}
-                    fontSize="46px"
-                    textAlign="center"
-                />
-            </WrapperImage>
+
+            <Divider height="64px" />
+            <H1
+                zIndex="5"
+                fontSize="13px"
+                lineHeight="16px"
+                fontWeight="700"
+                letterSpacing="0.05em"
+                color="#606060"
+            >4GEEKS ACADEMY</H1>
+
+            <H2 zIndex="5" fontSize="48px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.banner.tagline}</H2>
+            <Paragraph padding_sm="0 35px" padding_tablet="0 12em" padding_md="0 30%" padding_xs="0 5%" >{yml.banner.sub_heading} 
+                <Link to={`/${yml.fields.lang}/${yml.banner.pathContact}`} style={{color: "#52a6d1"}}
+                >
+                    {yml.banner.sub_heading_contact}
+                </Link>
+            </Paragraph>
+
             <Divider height="50px" />
             <Wrapper
                 github={`/page/faq.${pageContext.lang}.yml`}
             >
+                aqui empieza el card
                 {yml.faq.map((item, index) => {
                     return (
                         <Row key={index} display="flex">
                             <Column
                             >
+                                <H3 >{item.topic}</H3>
+
                                 <Card
                                     color={buttonToggle && index == toggleIndex && "grey"}
                                     height="auto"
@@ -77,6 +86,7 @@ const Faq = (props) => {
                                                     />
                                             }
                                         </Column>
+
                                         <Column size="11" size_sm="10" alignSelf="center">
                                             <H4
                                                 align={`left`}
@@ -93,6 +103,7 @@ const Faq = (props) => {
                                                 </Paragraph>
                                             }
                                         </Column>
+
                                     </Row>
                                 </Card>
                             </Column >
@@ -100,6 +111,7 @@ const Faq = (props) => {
                     )
                 })
                 }
+                
             </Wrapper >
             <Divider height="50px" />
         </>
@@ -110,7 +122,6 @@ export const query = graphql`
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-          
           meta_info{
             slug
             title
@@ -121,6 +132,8 @@ export const query = graphql`
           banner{
             tagline
             sub_heading
+            sub_heading_contact
+            pathContact
             image{
                 childImageSharp {
                   fluid(maxWidth: 1200){
@@ -129,9 +142,13 @@ export const query = graphql`
                 }
               }  
           }
-          faq{
-              question
-              answer
+          faq {
+            answer
+            question
+            topic
+          }
+          fields {
+            lang
           }
       
         }

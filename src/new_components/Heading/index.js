@@ -119,7 +119,6 @@ const StyledSeparator = styled.div`
     margin-right: auto;
     width: ${props => props.width_xs};
   }
-};
 `
 export const Separator = ({variant, children, ...rest}) => {
   let variants = {
@@ -163,14 +162,14 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   height: ${props => props.height};
-
   @media ${Devices.xxs}{
   }
   @media ${Devices.xs}{
-      
+      padding: ${props => props.padding_xs}
   }
   @media  ${Devices.sm}{
       width: ${props => props.width_sm};
+      padding: ${props => props.padding_sm};
   }
   @media  ${Devices.tablet}{
       display: ${props => props.display_tablet};
@@ -183,15 +182,13 @@ export const Paragraph = styled.p`
     @media  ${Devices.md}{
       text-align: ${props => props.textAlign_md};
       margin: ${props => props.margin_md};
+      padding: ${props => props.padding_md}
   }
   @media  ${Devices.lg}{
-
   }
   @media  ${Devices.xl}{
-
   }
   @media  ${Devices.xxl}{
-
   }
 `
 
