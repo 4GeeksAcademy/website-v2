@@ -256,16 +256,16 @@ const Calendar = (props) => {
                 data.cohorts.filtered.map((cohort, index) =>
                   <ListCard
                     key={index}
-                    title={cohort.certificate.name}
+                    title={cohort.syllabus ? cohort.syllabus.certificate.name : ""}
                     address={`${cohort.academy.city.name}, ${cohort.academy.country.name}`}
                     image={cohort.academy.logo_url}
-                    link={`/${session ? session.language : "us"}/${cohort.certificate.slug}`}
+                    link={`/${session ? session.language : "us"}/${cohort.syllabus ? cohort.syllabus.certificate.slug : ""}`}
                     date={cohort.kickoff_date}
                     slug={cohort.slug}
                     applyButtonText={yml.button.apply_button_text}
                     applyButtonLink={yml.button.apply_button_link}
                     detailsButtonText={yml.button.cohort_more_details_text}
-                    detailsButtonLink={`/${pageContext.lang}/${cohort.certificate.slug}`}
+                    detailsButtonLink={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}
                     context={pageContext.lang}
                   />
                 )

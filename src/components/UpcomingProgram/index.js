@@ -92,7 +92,7 @@ const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, button, 
     let date = dayjs()
     if (cohorts.length > 0) {
         date = dayjs(cohorts[0].kickoff_date).add(1,"hour")
-        title = cohorts[0].certificate.name
+        title = cohorts[0].syllabus ? cohorts[0].syllabus.certificate.name : ""
     }
     
     useScrollPosition(({prevPos, currPos}) => {
