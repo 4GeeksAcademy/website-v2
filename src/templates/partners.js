@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {Column, Row, Container, Divider, Div, WrapperImage} from "../new_components/Sections"
+import {Column, Row, Container, Divider, Div, Grid} from "../new_components/Sections"
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
-import {Button, Colors} from '../new_components/Styling'
-import Credentials from '../new_components/Credentials'
-// import WhoIsHiring from '../new_components/WhoIsHiring'
+import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling'
+import Badges from '../new_components/Badges'
+import OurPartners from '../new_components/OurPartners'
 import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
 // import LeadForm from "../new_components/LeadForm/index.js";
@@ -23,12 +23,52 @@ const Partners = (props) => {
   const handleClose = () => {
     setOpen(false);
   };
-  const hiring = data.allPartnerYaml.edges[0].node;
+  const partnersData = data.allPartnerYaml.edges[0].node;
   return (
     <>
-      <Container
+      <Grid columns_md="12" margin="67px 0"
+      >
+        <Div
+          gridArea_md="1/4/1/10"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <H1
+            fontSize="13px"
+            lineHeight="16px"
+            fontWeight="700"
+            letterSpacing="0.05em"
+            color="#606060"
+          >{yml.seo_title}</H1>
+          <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{`< ${yml.header_data.tagline} >`}</H2>
+          <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">{yml.header_data.sub_heading}</Paragraph>
+          <Button width="300px" color={Colors.blue} textColor="white">{yml.button_section.button_text}</Button>
+        </Div>
+
+      </Grid>
+      <Grid columns_md="12">
+        <Div gridArea_md="1/1/1/13">
+          <StyledBackgroundSection
+            height={`389px`}
+            image={yml.header_data.image.childImageSharp.fluid}
+            bgSize={`cover`}
+            alt={yml.header_data.alt}
+          />
+        </Div>
+      </Grid>
+
+      <Badges lang={pageContext.lang} />
+      <Div height="5px" display="none" display_md="flex" background={Colors.lightGray}></Div>
+      <OurPartners
+        images={partnersData.partners.images}
+        title={partnersData.partners.tagline}
+        paragraph={partnersData.partners.sub_heading}
+        showFeatured={true}
+      ></OurPartners>
+      {/* <Container
         variant="fluid"
-        margin="120px auto">
+      >
         <Div
           display="flex"
           flexDirection="column"
@@ -47,6 +87,16 @@ const Partners = (props) => {
         </Div>
 
       </Container>
+      <Container variant="fluid" padding="0">
+        <Div gridArea_md="1/7/1/13">
+          <StyledBackgroundSection
+            height={`389px`}
+            image={yml.header_data.image.childImageSharp.fluid}
+            bgSize={`cover`}
+            alt={yml.header_data.alt}
+          />
+        </Div>
+      </Container> */}
     </>
   )
 };

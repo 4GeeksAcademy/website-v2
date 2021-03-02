@@ -1,19 +1,52 @@
 import React from 'react';
-import {Div} from '../Sections'
+import {Div, Grid} from '../Sections'
 import {Colors, StyledBackgroundSection} from '../Styling';
 import Img from "gatsby-image"
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
 import Card from '../Card';
 import Fragment from "../Fragment"
-const OurPartners = props => {
+
+const OurPartners = ({title, paragraph, link, showFeatured, images}) => {
   return (
-    <Fragment margin={props.margin} padding="20px 0" github="/components/partner" >
+    <Fragment padding="20px 0" github="/components/partner" >
+      <Grid columns_md="12" margin="67px 0" padding="0 17px"
+      >
+        <Div
+          gridArea_tablet="1/4/1/10"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>
+          <Paragraph margin="0 0 50px 0" >{paragraph}</Paragraph>
+        </Div>
+
+      </Grid>
+      {showFeatured &&
+        <>
+          <Div justifyContent="center" flexDirection="column" flexDirection_md="row">
+            {images.filter(f => f.featured == true).map((m, i) => {
+              return (
+                <Img
+                  key={i}
+                  style={{height: "55px", minWidth: "220px", margin: "23px 15px"}}
+                  imgStyle={{objectFit: "contain"}}
+                  alt={m.name}
+                  fluid={m.image.childImageSharp.fluid}
+                />
+              )
+            })}
+          </Div>
+          <Div height="1px" background={Colors.lightGray} margin="88px 0 79px 0" />
+        </>
+      }
       <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0">
-        {props.images.map((l, i) => {
+        {images.map((l, i) => {
           return (
             // <Div key={i} minWidth="200px" height="60px" margin="0 15px" >
             <Img
+              key={i}
               style={{height: "80px", minWidth: "120px", margin: "0 15px"}}
               imgStyle={{objectFit: "contain"}}
               alt={l.name}
