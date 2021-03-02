@@ -6,7 +6,7 @@ import Badges from '../new_components/Badges'
 import OurPartners from '../new_components/OurPartners'
 import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
-// import LeadForm from "../new_components/LeadForm/index.js";
+import LeadForm from "../new_components/LeadForm/index.js";
 // import Modal from "../new_components/Modal"
 
 function rand () {
@@ -65,7 +65,39 @@ const Partners = (props) => {
         title={partnersData.partners.tagline}
         paragraph={partnersData.partners.sub_heading}
         showFeatured={true}
-      ></OurPartners>
+        props={partnersData.partners}
+      />
+      <OurPartners
+        title={partnersData.coding.tagline}
+        paragraph={partnersData.coding.sub_heading}
+        images={partnersData.coding.images}
+        showFeatured={true}
+        props={partnersData.partners}
+      />
+      <Grid columns_md="12" gridGap_md="0" margin_md="90px 0 104px 0">
+        <Div gridArea_md="1/3/1/7" flexDirection="column" padding_md="0 90px 0 0" padding="0 17px">
+          <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
+          {yml.form.paragraph.split("\n").map((m, i) =>
+            <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+          )}
+        </Div>
+        <Div gridArea_md="1/7/1/11" justifyContent="center" >
+          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
+        </Div>
+
+      </Grid>
+      <Grid columns_md="12">
+        <Div gridArea_md="1/1/1/13">
+          <StyledBackgroundSection
+            height={`389px`}
+            image={yml.footer_data.image.childImageSharp.fluid}
+            bgSize={`cover`}
+          // alt={yml.header_data.alt}
+          />
+        </Div>
+      </Grid>
+
+
       {/* <Container
         variant="fluid"
       >
@@ -125,6 +157,19 @@ query PartnersQuery($file_name: String!, $lang: String!) {
           }
           alt
         }
+        form{
+          title
+          paragraph
+        }
+        footer_data{
+          image{
+            childImageSharp {
+              fluid(maxWidth: 1600, quality: 100){
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
         button_section{
           button_text
         }
@@ -159,6 +204,8 @@ query PartnersQuery($file_name: String!, $lang: String!) {
           }
           tagline
           sub_heading
+          footer_button
+          footer_link
         }
         coding {
           images {

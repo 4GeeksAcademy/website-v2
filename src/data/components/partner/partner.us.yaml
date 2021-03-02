@@ -59,10 +59,10 @@ coding:
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
-      featured: false
+      featured: true
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
-      featured: false
+      featured: true
     - name: "Bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
       featured: false
@@ -74,7 +74,7 @@ coding:
       featured: false
     - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
-      featured: false
+      featured: true
     - name: "Worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"
       featured: false
@@ -84,7 +84,7 @@ influencers:
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
-      featured: false
+      featured: true
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
       featured: false
