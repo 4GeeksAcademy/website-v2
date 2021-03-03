@@ -24,6 +24,7 @@ const Contact = (props) => {
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     };
+    console.log(process.env.GATSBY_BREATHECODE_HOST)
     const [formData, setVal] = useState({
         first_name: {value: '', valid: false},
         last_name: {value: '', valid: false},
@@ -109,13 +110,13 @@ const Contact = (props) => {
                         {formStatus.status === "thank-you" ?
                             <Column size="5" size_sm="12"
                                 alignSelf="center"
-                                padding="40%"
                                 align="left"
                                 borderRadius="0 0 0 1.25rem"
                                 background="white"
+                                display="grid"
                             >
-                                <H3 textAlign="left" color={Colors.green}>{formStatus.msg}</H3>
-                                <Paragraph margin="10px 0">{yml.left.thankyou}</Paragraph>
+                                <H3 textAlign="center" fontSize="30px" color={Colors.green}>{formStatus.msg}</H3>
+                                <Paragraph padding="20px 10%" padding_sm="12px 20%" fontSize="20px" >{yml.left.thankyou}</Paragraph>
                             </Column>
                             :
                             // Padding top m_xs="35px 0" m_sm="35px 0" m_md="35px 0" removed

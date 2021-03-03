@@ -282,7 +282,7 @@ export const Column = styled(Div)`
     padding-left: ${props => props.paddingLeft};
     flex-direction: ${props => props.flexDirection};
     justify-content: ${props => props.justifyContent};
-    
+    display: ${props => props.display};
     flex: 0 0 ${props => (props.size / 12) * 100}%;
     max-width: ${props => (props.size / 12) * 100}%;
 
