@@ -85,6 +85,7 @@ export const H2 = styled(BaseHeading)`
 `;
 export const H3 = styled(BaseHeading)`
   font-weight: ${props => props.fontWeight || "700"};
+  font-size: ${props => props.fonSize};
   text-align: ${props => props.textAlign};
   letter-spacing: 0.05em;
 `;
