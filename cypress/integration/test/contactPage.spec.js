@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
 
-import { number } from "prop-types";
-
 context("Contact Form", () => {
   // Regex validator
   const regex = {
@@ -72,7 +70,6 @@ it("Call the form and verify that the hint for empty inputs are correct", () => 
     cy.get('Button[type="submit"]').contains("Send").click().wait(2000);
   });
 
-
 /*
  2nd case: 
       The form will verify that each input has the regular expressions 
@@ -121,7 +118,6 @@ it("Call the form and verify that the hint for empty inputs are correct", () => 
         });
     });
   });
-
   it("Submit the form with values to api", () => {
     cy.get('Button[type="submit"]').contains("Send").click().wait(2000);
     cy.get(".thankfulness").contains("Thank you 🤣 Gracias").log("success");
