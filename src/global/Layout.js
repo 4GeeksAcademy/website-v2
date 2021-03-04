@@ -6,7 +6,6 @@ import Navbar from '../components/Navbar';
 import {StaticQuery, graphql} from 'gatsby';
 import UpcomingProgram from '../components/UpcomingProgram';
 import Footer from '../components/Footer';
-import CookieBot from "react-cookiebot";
 
 
 import GlobalStyle from './GlobalStyle';
@@ -73,11 +72,6 @@ const Layout = ({children, seo, context}) => {
             }
           }
         }  
-          cookiebotYaml {
-            domain_ID {
-              id
-            }
-          }
       }
     `}
       render={(data) => {
@@ -99,7 +93,6 @@ const Layout = ({children, seo, context}) => {
             <SEO {...seo} context={context} />
             <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
             <GlobalStyle />
-             <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} />
             <>
               {children}
             </>
