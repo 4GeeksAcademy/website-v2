@@ -1,0 +1,8 @@
+{
+  "formValue": {
+    "name": "Ariel",
+    "lastName": "C. Serrano",
+    "email": "calisayaariel62@gmail.com",
+    "comment": "testing form with cypress"
+  }
+}

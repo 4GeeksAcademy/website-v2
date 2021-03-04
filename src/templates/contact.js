@@ -24,7 +24,7 @@ const Contact = (props) => {
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     };
-    
+
     const [formData, setVal] = useState({
         first_name: {value: '', valid: false},
         last_name: {value: '', valid: false},
@@ -109,6 +109,7 @@ const Contact = (props) => {
                     >
                         {formStatus.status === "thank-you" ?
                             <Column size="5" size_sm="12"
+                                className="thankfulness"
                                 alignSelf="center"
                                 align="left"
                                 borderRadius="0 0 0 1.25rem"
