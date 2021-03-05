@@ -4,12 +4,12 @@ import styled, {css, keyframes} from 'styled-components';
 import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Sections'
 // import {Title, Separator, Span} from '../components/Heading'
 import {Colors, Button, RoundImage} from '../components/Styling'
-import Card from '../components/Card'
-import Icon from '../components/Icon'
+import Icon from '../new_components/Icon'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session'
 
 // Added new_components
+import Card from '../new_components/Card'
 import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
 import {Container} from '../new_components/Sections'
@@ -44,11 +44,12 @@ const Faq = (props) => {
 
             <Divider height="50px" />
             <Container
-                margin="0 22%"
+                margin_lg="0 24%"
+                margin_tablet="0 10%"
+                margin_md="0 16%"
                 github={`/page/faq.${pageContext.lang}.yml`}
             >
-                aqui empieza el card
-                <H3 style={{ borderBottom: "1px solid", borderColor: "#C4C4C4"}} padding="16px" >Sobre 4Geeks</H3>
+                <H3 borderBottom="1px solid" borderColor="#C4C4C4" padding="30px" >{yml.topic}</H3>
                 {yml.faq.map((item, index) => {
                     return (
                         <>
@@ -61,9 +62,10 @@ const Faq = (props) => {
                                     color={buttonToggle && index == toggleIndex}
                                     height="auto"
                                     width="100%"
-                                    
+                                    borders= "0"
+                                    borderBottom="1px solid"
+                                    borderColor=" #C4C4C4"
                                     padding="20px "
-                                    margin="5px 0 10px 0"
                                     onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
                                 >
                                     <Row display="flex" height="100%">
@@ -73,36 +75,30 @@ const Faq = (props) => {
                                                 align={`left`}
                                                 align_sm={`left`}
                                                 color={Colors.black}
+                                                paddingRight="5%"
                                                 textTransform="uppercase"
                                                 fontWeight="700"
-                                                >
-                                                    {item.question}
-                                            </H4>
+                                                >{item.question}</H4>
+
                                             {buttonToggle === false ?
                                                 toggleIndex != index &&
                                                 <Icon icon="plus"
-                                                    width="32"
-                                                    color={Colors.blue}
-                                                    fill={Colors.blue}
+                                                    width="24"
                                                 />
                                                 :
                                                 buttonToggle === true && toggleIndex === index ?
                                                     <Icon icon="minus"
-                                                        width="32"
-                                                        color={Colors.blue}
-                                                        fill={Colors.blue}
+                                                        width="24"
                                                     />
                                                     :
                                                     <Icon icon="plus"
-                                                        width="32"
-                                                        color={Colors.blue}
-                                                        fill={Colors.blue}
+                                                        width="24"
                                                     />
                                             }
 
                                         </Column>
 
-                                        <Column size="11" size_sm="10" alignSelf="center">
+                                        <Column size="12" size_sm="12" alignSelf="center">
                                             {buttonToggle === true && toggleIndex === index &&
                                                 <Paragraph
                                                     textAlign="left"
@@ -110,7 +106,7 @@ const Faq = (props) => {
                                                     lineHeight="22px"
                                                     fontWeight="normal"
                                                     dangerouslySetInnerHTML={{__html: item.answer}}
-                                                    margin={`10px 0 0 0`}
+                                                    margin={`20px 0 0 0`}
                                                     align_sm="left"
                                                     fontFamily="Lato, sans-serif">
                                                 </Paragraph>
@@ -156,6 +152,7 @@ export const query = graphql`
                 }
               }  
           }
+          topic
           faq {
             answer
             question

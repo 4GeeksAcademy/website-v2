@@ -30,6 +30,8 @@ const BaseHeading = styled(Heading)`
   font-style: normal;
   color: ${props => props.color};
   margin: ${props => props.margin};
+  border-bottom: ${props => props.borderBottom};
+  border-color: ${props => props.borderColor};
   text-shadow: ${props => props.textShadow}; 
   background-color: ${props => props.background};
   margin-top: ${props => props.marginTop}; 
@@ -86,8 +88,7 @@ export const H3 = styled(BaseHeading)`
 `;
 export const H4 = styled(BaseHeading)`
   letter-spacing: 0.05em;
-
-
+  padding-right: ${props => props.paddingRight};
 `;
 export const H5 = styled(BaseHeading)`
   font-weight: 700;

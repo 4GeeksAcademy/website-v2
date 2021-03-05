@@ -15,6 +15,7 @@ banner:
 
 
 # - topic: "Question topic"
+topic: "Frequently Asked Questions about 4Geeks"
 faq:
   
   - question: "Why 4Geeks Academy?"

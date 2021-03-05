@@ -59,6 +59,7 @@ export const Container = styled(Fragment)`
             }
             @media  ${Devices.tablet}{
                 height: ${props => props.height_tablet};
+                margin: ${props => props.margin_tablet};
             }
             @media  ${Devices.md}{
                 height: ${props => props.height_md};
@@ -67,6 +68,7 @@ export const Container = styled(Fragment)`
                 
             }
             @media  ${Devices.lg}{
+                margin: ${props => props.margin_lg};
             }
             @media  ${Devices.xl}{
                 
