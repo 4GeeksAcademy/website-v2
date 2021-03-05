@@ -113,7 +113,7 @@ const Location = ({data, pageContext, yml}) => {
             <Div
               key={i}
               borderRadius="3px"
-              gridArea={imagePositions[`${m.position}`]}
+              gridArea={imagePositions[`${i + 1}`]}
             >
               <StyledBackgroundSection
                 height="auto"

@@ -34,6 +34,33 @@ const Outcomes = ({data, pageContext, yml}) => {
                     {/* <Icon icon="outcomes" /> */}
                 </Div>
             </Grid>
+            <Grid columns_md="12" >
+                <Div gridArea="1/2/1/9" flexDirection="column" padding="0 65px 0 0 " >
+                    {yml.sections.map((section, i) => {
+                        return (
+                            <>
+                                <H3 margin="54px 0 0 0 " textAlign="left" >{section.title}</H3>
+                                {section.paragraph.split("\n").map((m, i) =>
+                                    <Paragraph key={i} textAlign="left" margin="15px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+                                )}
+                                <Div justifyContent="between">
+                                    {section.stats.map((m, i) => {
+                                        return (
+                                            <Div key={i} flexDirection="column" >
+                                                <H2 textAlign="left" color={Colors.blue}>{m.stat}</H2>
+                                                <H3 textAlign="left" >{m.content}</H3>
+                                            </Div>
+                                        )
+                                    })}
+                                </Div>
+                            </>)
+                    })}
+                </Div>
+                <Div gridArea="1/9/1/13" display="none" display_md="flex" style={{position: "relative"}}>
+                    <Div style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">right</Div>
+                </Div>
+            </Grid>
+            {/* <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph> */}
             {/* </Container> */}
         </>
     )
@@ -62,7 +89,18 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                   }
                 
             }
-           
+            sections{
+                title
+                paragraph
+                stats{
+                    stat
+                    content
+                }
+                sub_sections{
+                    title
+                    content
+                }
+            }
             
            
             

@@ -93,6 +93,7 @@ export const Grid = styled.div`
     height: ${props => props.height};
     background: ${props => props.background};
     padding: ${props => props.padding};
+    margin: ${props => props.margin};
     
     @media ${Devices.xxs}{
         grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
@@ -156,7 +157,7 @@ grid-area: ${props => props.gridArea};
     border-bottom: ${props => props.borderBottom};
     border-right: ${props => props.borderRight};
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
-    box-shadow: ${props => props.shadow};
+    box-shadow: ${props => props.boxShadow};
     flex-wrap: nowrap; 
     align-content: ${props => props.alignContent};
     align: ${props => props.align};

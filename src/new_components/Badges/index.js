@@ -1,6 +1,6 @@
 import React from 'react';
 import {useStaticQuery, graphql, Link} from 'gatsby';
-import {Row, Div} from '../Sections'
+import {Grid, Div} from '../Sections'
 import {Paragraph} from '../Heading'
 import {Colors} from '../Styling'
 import Img from "gatsby-image"
@@ -24,6 +24,8 @@ export default ({location, lang, loading}) => {
                 }
               }
             }
+            link_text
+            link_to
             fields {
               lang
             }
@@ -39,7 +41,7 @@ export default ({location, lang, loading}) => {
 
   return (
     <Fragment github="/new_components/badges">
-      <Div justifyContent="center">
+      {/* <Div justifyContent="center">
         <Paragraph
           margin="32px 0 32px 0"
           padding="0 auto"
@@ -50,22 +52,27 @@ export default ({location, lang, loading}) => {
           textAlign="center"
           dangerouslySetInnerHTML={{__html: content.paragraph}}
         ></Paragraph>
-      </Div>
-      <Div className="badge-slider" justifyContent="between">
-        {content.badges.map((l, i) => {
-          return (
-            <Img
-              style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
-              imgStyle={{objectFit: "contain"}}
-              loading="eager"
-              fadeIn={false}
-              alt={l.name}
-              fluid={l.image.childImageSharp.fluid}
-            />
-          )
-        })}
+      </Div> */}
+      <Grid columns_md="12" margin="36px 0 58px 0" margin_md="73px 0">
+        <Div className="badge-slider" justifyContent="between" gridArea_md="1/3/1/11">
+          {content.badges.map((l, i) => {
+            return (
+              <Img
+                style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
+                imgStyle={{objectFit: "contain"}}
+                loading="eager"
+                fadeIn={false}
+                alt={l.name}
+                fluid={l.image.childImageSharp.fluid}
+              />
+            )
+          })}
 
-      </Div>
+        </Div>
+        <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">
+          <Link to="/us/badges"><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>
+        </Div>
+      </Grid>
     </Fragment>
 
     // <Row github="/components/badges" display={`flex`}>

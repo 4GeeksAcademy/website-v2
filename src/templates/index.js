@@ -21,6 +21,7 @@ import About4Geeks from '../new_components/About4Geeks';
 import OurPartners from '../new_components/OurPartners';
 import ChooseYourProgram from '../new_components/ChooseYourProgram';
 import Testimonials from '../new_components/Testimonials';
+import Carousel from '../new_components/Carousel';
 import Card from '../components/Card';
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import {WrapperCustom} from '../new_components/Sections';
@@ -149,7 +150,10 @@ const Home = (props) => {
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       {/* </Container>
       </Container> */}
-
+      {/* <Carousel>
+        <img src="https://picsum.photos/id/100/500/500" />
+        <img src="https://picsum.photos/id/200/500/500" />
+      </Carousel> */}
       <Container
         variant="fixed"
         margin="100px auto"
@@ -180,8 +184,8 @@ const Home = (props) => {
         variant="fluid"
       >
         <Container variant="fixed">
-          <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
-          <Paragraph margin="0 0 50px 0" >{hiring.partners.sub_heading}</Paragraph>
+          {/* <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
+          <Paragraph margin="0 0 50px 0" >{hiring.partners.sub_heading}</Paragraph> */}
 
         </Container>
         <OurPartners images={hiring.partners.images}></OurPartners>

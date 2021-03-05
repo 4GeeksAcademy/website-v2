@@ -102,7 +102,7 @@ const PricesAndPayments = (props) => {
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
-        <Grid columns_lg="3" gridGap_md="0px" gridGap="40px">
+        <Grid columns_md="3" gridGap_md="0px" gridGap="40px">
           {prices.left_section &&
             <PricingCard lang={props.lang}
               background={Colors.white}
@@ -155,7 +155,7 @@ const PricesAndPayments = (props) => {
           }
         </Grid>
       }
-      <Grid columns_md="12" rows_md="1" gridGap="0" padding_md="50px 0 0 0">
+      <Grid columns_md="12" rows_md="1" gridGap="0" margin="47px 0 37px 0">
         <Div gridArea_md="1/5/1/9" justifyContent="center" alignItems="center">
           <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >We accept: </H4>
           <RoundImage url="/images/bitcoin.png" height="10px" width="65px" bsize="contain" margin="0 15px" />

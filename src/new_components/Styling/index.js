@@ -10,6 +10,7 @@ import {Location} from '@reach/router'
 export const Colors = {
     blue: "#00A0DA",
     lightBlue: "#BBEAFC",
+    veryLightBlue: "#C7F3FD",
     gray: "#898a8b",
     verylightGray: "#F5F5F5",
     lightGray: "#ebebeb",
