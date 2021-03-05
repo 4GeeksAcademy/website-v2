@@ -6,7 +6,7 @@ testimonials:
     featured: true
     highlighted: true
     testimonial_date: ""
-    rating: 4
+    rating: 5
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
     student_video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL

@@ -11,17 +11,11 @@ import Img from 'gatsby-image';
 const TestimonialCard = ({highlighted, featured, height, height_md, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition}) => {
 
     const StarRating = ({totalStars}) => {
-        console.log("tot", totalStars)
         return (
             <div>
-                {[...Array(totalStars)].map((m, i) => (
-                    <Icon key={i} style={{marginRight: "8px"}} icon="star" height="12px" width="12px" stroke={Colors.darkGray} />
+                {[...Array(5)].map((m, i) => (
+                    <Icon key={i} style={{marginRight: "8px"}} icon="star" height="12px" width="12px" stroke={Colors.darkGray} fill={i >= studentRating ? "transparent" : `${Colors.darkGray}`} />
                 ))}
-                {totalStars < 5 && [...Array(5 - totalStars)].map((m, i) => (
-                    <Icon key={i} style={{marginRight: "8px"}} icon="star" height="12px" width="12px" fill="transparent" stroke={Colors.darkGray} />
-                ))}
-
-
             </div>
         );
     };
