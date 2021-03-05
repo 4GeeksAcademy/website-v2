@@ -198,8 +198,8 @@ const SuccessStories = (props) => {
                 <Grid height="auto" columns="1" rows="1" columns_md="12" gridGap="11px">
                     {
                         Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.featured == true && f.hidden == false).map((m, i) => {
-                            console.log("huhouo", m)
                             return (
+                                i < 2 &&
                                 <TestimonialCard
                                     key={i}
                                     height="507px"
