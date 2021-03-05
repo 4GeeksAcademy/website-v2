@@ -83,7 +83,7 @@ const Image = styled.div`
 `
 
 const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
-  onPlaybackQualityChange, imageSize, playerVars, noCookies, style,
+  onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className,
   thumb, ...rest}) => {
 
   const [showVideo, setShowVideo] = React.useState(false)
@@ -126,7 +126,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
           {id && <Play onClick={() => setShowVideo(true)} aria-label="Play Video" />}
           {thumb && thumb.childImageSharp ?
             <GImage
-              className="react-player"
+              className={className}
               onClick={() => setShowVideo(true)}
               fluid={thumb.childImageSharp.fluid}
               alt="Video"
@@ -137,7 +137,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
             />
             :
             <Thumbnail
-              className="react-player"
+              className={className}
               onClick={() => setShowVideo(true)}
               src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
               alt="Video"

@@ -3,9 +3,10 @@ button_text: See all testimonials
 button_link: ""
 testimonials:
   - student_name: "Azul Botaya"
-    featured: false
-    highlighted: false
+    featured: true
+    highlighted: true
     testimonial_date: ""
+    rating: 4
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -25,12 +26,13 @@ testimonials:
       I now have all kinds of new tools I learned there along the way, 
       and there is a new comfort in knowing that I can always go back and keep growing at 4geeks.
   - student_name: "Naila Kaliyeva"
-    featured: false
+    featured: true
     highlighted: false
     testimonial_date: ""
+    rating: 5
     source_link: ""
     student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    student_video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
@@ -62,6 +64,7 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    rating: 5
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -84,6 +87,7 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    rating: 5
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -103,6 +107,7 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    rating: 5
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -121,6 +126,7 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    rating: 5
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -140,6 +146,7 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    rating: 5
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -160,6 +167,7 @@ testimonials:
     featured: false
     highlighted: false
     last_name: "Aguiriano"
+    rating: 5
     student_thumb: ""
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -175,6 +183,7 @@ testimonials:
   - student_name: "Gabriela"
     featured: false
     highlighted: false
+    rating: 5
     last_name: "Rodriguez"
     job_title: "Web Developer"
     student_thumb: ""
@@ -191,6 +200,7 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    rating: 5
     student_thumb: ""
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
