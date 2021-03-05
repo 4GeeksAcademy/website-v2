@@ -18,11 +18,11 @@ banner:
 faq:
 
   - question: "¿Por qué 4Geeks Academy?"
-    topic: "Preguntas Frecuentes sobre 4Geeks"
+    # topic: "Preguntas Frecuentes sobre 4Geeks"
     answer: |-
-      "Bueno, es un poco extraño hablar mucho sobre uno mismo ... pero, está bien, ¡ya que lo preguntaste! 
+      Bueno, es un poco extraño hablar mucho sobre uno mismo ... pero, está bien, ¡ya que lo preguntaste! 
       Ofrecemos una metodología única en la que mejoraremos tu capacidades generales; te formaremos y convertiremos en un desarrollador de software. Estamos constantemente brindando nuevos enfoques innovadores para enseñar programación que no muchas otras organizaciones educativas están haciendo. 
-      “Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el aprendizaje sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana."
+      “Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el aprendizaje sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana.
   - question: "¿4Geeks es una institución académica certificada?"
     answer: "¡Sin lugar a dudas! Estamos certificados por la Comisión de Educación Independiente del Departamento de Educación de Florida en Estados Unidos."
   - question: "¿Por qué nuestros campus?"
@@ -34,7 +34,7 @@ faq:
 
 
   - question: "¿Cómo me inscribo?"
-    topic: "Preguntas Frecuentes sobre Inscripciones"
+    # topic: "Preguntas Frecuentes sobre Inscripciones"
     answer: |-
       "Para comenzar tu carrera como Desarrollador, solo necesitas hacer clic <a  class="faq-link" href="https://4geeksacademy.co/es/aplica">aquí</a> y completar un formulario muy simple. Nosotros nos encargaremos del resto".
   - question: "¿Cuál es el proceso de admisión?"
@@ -58,7 +58,7 @@ faq:
 
 
   - question: "¿Cuántas horas a la semana necesito tener disponibles?"
-    topic: "Preguntas Frecuentes sobre Programas"
+    # topic: "Preguntas Frecuentes sobre Programas"
     answer: |-
       Para convertirte en el mejor developer posible debes dedicar tiempo, no hay otra manera, en nuestro programa “part-time” tendrás clases 3 horas 3 días a la semana, y debes dedicar en total unas 20-24 horas de estudio semanal. En el caso del programa a tiempo completo, que son 8 horas de clases al día, con dedicar en total unas 48 horas a la semana es suficiente."
   - question: "¿Por qué “Part-time?” ¿Cómo funciona?"
@@ -101,7 +101,7 @@ faq:
 
   
   - question: "¿Por qué Javascript?"
-    topic: "Preguntas Frecuentes sobre Experiencia"
+    # topic: "Preguntas Frecuentes sobre Experiencia"
     answer: |-
       "JavaScript "es dueño" de la web; es el único lenguaje que todos los navegadores web entienden,es el lenguaje de programación más utilizado en el mundo; todos los sitios web lo necesitan, y es el más demandado por las empresas en diez veces el siguiente."
   - question: "¿Por qué Python?"

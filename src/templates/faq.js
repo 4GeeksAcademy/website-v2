@@ -12,6 +12,7 @@ import {SessionContext} from '../session'
 // Added new_components
 import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
+import {Container} from '../new_components/Sections'
 // import {Row, Column, HR, Divider, Container, Div} from '../new_components/Sections'
 
 const Faq = (props) => {
@@ -42,28 +43,41 @@ const Faq = (props) => {
             </Paragraph>
 
             <Divider height="50px" />
-            <Wrapper
+            <Container
+                margin="0 22%"
                 github={`/page/faq.${pageContext.lang}.yml`}
             >
                 aqui empieza el card
+                <H3 style={{ borderBottom: "1px solid", borderColor: "#C4C4C4"}} padding="16px" >Sobre 4Geeks</H3>
                 {yml.faq.map((item, index) => {
                     return (
+                        <>
                         <Row key={index} display="flex">
                             <Column
+                            
                             >
-                                <H3 >{item.topic}</H3>
 
                                 <Card
-                                    color={buttonToggle && index == toggleIndex && "grey"}
+                                    color={buttonToggle && index == toggleIndex}
                                     height="auto"
                                     width="100%"
-                                    shadow
+                                    
                                     padding="20px "
                                     margin="5px 0 10px 0"
                                     onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
                                 >
                                     <Row display="flex" height="100%">
-                                        <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" size_sm="2" align={`center`} alignSelf="center">
+                                        <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} display="flex"  align={`center`} alignSelf="center">
+                                            <H4
+                                                textAlign="left"
+                                                align={`left`}
+                                                align_sm={`left`}
+                                                color={Colors.black}
+                                                textTransform="uppercase"
+                                                fontWeight="700"
+                                                >
+                                                    {item.question}
+                                            </H4>
                                             {buttonToggle === false ?
                                                 toggleIndex != index &&
                                                 <Icon icon="plus"
@@ -85,21 +99,20 @@ const Faq = (props) => {
                                                         fill={Colors.blue}
                                                     />
                                             }
+
                                         </Column>
 
                                         <Column size="11" size_sm="10" alignSelf="center">
-                                            <H4
-                                                align={`left`}
-                                                align_sm={`left`}
-                                                color={Colors.black}>{item.question}
-                                            </H4>
                                             {buttonToggle === true && toggleIndex === index &&
                                                 <Paragraph
+                                                    textAlign="left"
+                                                    letterSpacing="0.05em"
+                                                    lineHeight="22px"
+                                                    fontWeight="normal"
                                                     dangerouslySetInnerHTML={{__html: item.answer}}
                                                     margin={`10px 0 0 0`}
                                                     align_sm="left"
-                                                    fontFamily="Lato-bold, sans-serif"
-                                                    lineHeight="1rem">
+                                                    fontFamily="Lato, sans-serif">
                                                 </Paragraph>
                                             }
                                         </Column>
@@ -108,11 +121,12 @@ const Faq = (props) => {
                                 </Card>
                             </Column >
                         </Row >
+                        </>
                     )
                 })
                 }
                 
-            </Wrapper >
+            </Container >
             <Divider height="50px" />
         </>
     )
@@ -145,7 +159,7 @@ export const query = graphql`
           faq {
             answer
             question
-            topic
+            # topic
           }
           fields {
             lang
