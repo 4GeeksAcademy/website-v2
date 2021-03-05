@@ -35,7 +35,7 @@ const TestimonialCard = ({highlighted, featured, height, height_md, studentRatin
             background={background}
             borderRadius="3px"
             gridArea_md={gridAreaPosition}
-            padding="20px"
+            padding="20px 20px 0 20px"
             border={`1px solid ${Colors.lightGray}`}
             boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
         >
@@ -61,17 +61,17 @@ const TestimonialCard = ({highlighted, featured, height, height_md, studentRatin
                     </H4>
                 </Div>
             </Div>
-            <Div margin="50px 0 17px 0">
+            <Div margin="30px 0 17px 0">
                 <StarRating totalStars={studentRating} />
             </Div>
             {!video && <Paragraph textAlign="left" >{description}</Paragraph>}
             {video &&
                 <>
                     <Div
-                        padding="19px 0 0 25px"
+                        // padding="19px 0 0 25px"
                         padding_md="0"
                         width_md="100%"
-                        height_md="310px"
+                        // height_md="310px"
                         alignSelf="baseline"
                     >
                         <ReactPlayer
