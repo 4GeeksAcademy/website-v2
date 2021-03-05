@@ -23,7 +23,6 @@ const Faq = (props) => {
 
     return (
         <>
-
             <Divider height="64px" />
             <H1
                 zIndex="5"
@@ -57,7 +56,6 @@ const Faq = (props) => {
                             <Column
                             
                             >
-
                                 <Card
                                     color={buttonToggle && index == toggleIndex}
                                     height="auto"
@@ -95,7 +93,6 @@ const Faq = (props) => {
                                                         width="24"
                                                     />
                                             }
-
                                         </Column>
 
                                         <Column size="12" size_sm="12" alignSelf="center">
@@ -121,7 +118,6 @@ const Faq = (props) => {
                     )
                 })
                 }
-                
             </Container >
             <Divider height="50px" />
         </>
