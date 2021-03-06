@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
-import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Sections'
+// import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Sections'
 // import {Title, Separator, Span} from '../components/Heading'
 import {Colors, Button, RoundImage} from '../components/Styling'
 import Icon from '../new_components/Icon'
@@ -13,7 +13,7 @@ import Card from '../new_components/Card'
 import Link from 'gatsby-link'
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
 import {Container} from '../new_components/Sections'
-// import {Row, Column, HR, Divider, Container, Div} from '../new_components/Sections'
+import {Row, Column, Divider} from '../new_components/Sections'
 
 const Faq = (props) => {
     const {data, pageContext, yml} = props;
@@ -63,7 +63,7 @@ const Faq = (props) => {
                                     borders= "0"
                                     borderBottom="1px solid"
                                     borderColor=" #C4C4C4"
-                                    padding="20px "
+                                    padding="20px"
                                     onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
                                 >
                                     <Row display="flex" height="100%">
@@ -152,7 +152,6 @@ export const query = graphql`
           faq {
             answer
             question
-            # topic
           }
           fields {
             lang
