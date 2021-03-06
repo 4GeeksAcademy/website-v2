@@ -1,14 +1,11 @@
-import React, {useState, useEffect, useContext} from 'react';
-import Layout from '../global/Layout';
-import styled, {css, keyframes} from 'styled-components';
-// import {Title, Separator, Span} from '../components/Heading'
-import {Colors, Button, RoundImage} from '../components/Styling'
-import Icon from '../new_components/Icon'
+import React, {useState, useContext} from 'react';
+import {Colors} from '../components/Styling'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session'
 
 // Added new_components
 import Link from 'gatsby-link'
+import Icon from '../new_components/Icon'
 import Card from '../new_components/Card'
 import {Container} from '../new_components/Sections'
 import {Row, Column, Divider} from '../new_components/Sections'
