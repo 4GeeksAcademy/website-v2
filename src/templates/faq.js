@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
-// import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Sections'
 // import {Title, Separator, Span} from '../components/Heading'
 import {Colors, Button, RoundImage} from '../components/Styling'
 import Icon from '../new_components/Icon'
