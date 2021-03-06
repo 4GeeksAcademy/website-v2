@@ -8,11 +8,11 @@ import BaseRender from './_baseLayout'
 import {SessionContext} from '../session'
 
 // Added new_components
-import Card from '../new_components/Card'
 import Link from 'gatsby-link'
-import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
+import Card from '../new_components/Card'
 import {Container} from '../new_components/Sections'
 import {Row, Column, Divider} from '../new_components/Sections'
+import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
 
 const Faq = (props) => {
     const {data, pageContext, yml} = props;
