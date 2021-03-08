@@ -14,7 +14,8 @@ const TestimonialCard = ({highlighted, featured, height, height_md, studentRatin
         return (
             <div>
                 {[...Array(5)].map((m, i) => (
-                    <Icon key={i} style={{marginRight: "8px"}} icon="star" height="12px" width="12px" stroke={Colors.darkGray} fill={i >= studentRating ? "transparent" : `${Colors.darkGray}`} />
+                    <Icon key={i} style={{marginRight: "8px"}} icon="linkedin" height="12px" width="12px" stroke={Colors.white} fill="#0e76a8" />
+                    // <Icon key={i} style={{marginRight: "8px"}} icon="linkedin" height="12px" width="12px" stroke={Colors.darkGray} fill={i >= studentRating ? "transparent" : `${Colors.darkGray}`} />
                 ))}
             </div>
         );
