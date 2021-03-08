@@ -162,6 +162,7 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   height: ${props => props.height};
+  border-left: ${props => props.borderLeft};
 
   @media ${Devices.xxs}{
   }
