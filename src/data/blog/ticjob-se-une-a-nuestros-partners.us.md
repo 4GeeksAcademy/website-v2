@@ -2,7 +2,7 @@
 
 Qué mejor manera de continuar el mes de Marzo que presentando a nuestro nuevo partner, !Ticjob!
 
-![Ticjob%20se%20uno%20a%20nuestros%20partners%2082995237cfd748aebb39c9e91f4ccd6e/Blog_post.png](Ticjob%20se%20uno%20a%20nuestros%20partners%2082995237cfd748aebb39c9e91f4ccd6e/Blog_post.png)
+![Ticjob%20se%20uno%20a%20nuestros%20partners%2082995237cfd748aebb39c9e91f4ccd6e/Blog_post.png](https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/ARTE_BLOG.png?raw=true)
 
 El principal objetivo de [4Geeks Academy](https://4geeksacademy.com/) es **lanzar la carrera tecnológica** de nuestros alumnos para que consigan un trabajo en programación lo más rápido posible tras completar nuestra formación premium en **desarrollo de software**. Para mejorar sus opciones e impulsar su empleabilidad, hemos desarrollado esta **alianza estratégica con TicJob**.
 
@@ -12,4 +12,4 @@ Actualmente, tratan de ofrecer a sus más de **800.000 candidatos** una cobertur
 
 Para celebrar el inicio de esta relación hemos preparado [3 premios](https://ticjob.es/esp/trabajo/desarrollador-programador-fullstack-beca-100/46577) exclusivos para poder estudiar nuestro **programa Full-stack con una beca del 100%** (y otra del 80%) a partir del próximo Julio, y que así, el componente económico no sea un obstáculo para **lanzar tu carrera tecnológica**. Para conocer todos los detalles del acuerdo y apuntaros a las becas podéis visitar el siguiente enlace. El registro termina el **31 de Mayo**.
 
-![Ticjob%20se%20uno%20a%20nuestros%20partners%2082995237cfd748aebb39c9e91f4ccd6e/ARTE_BLOG.png](Ticjob%20se%20uno%20a%20nuestros%20partners%2082995237cfd748aebb39c9e91f4ccd6e/ARTE_BLOG.png)
+![Ticjob%20se%20uno%20a%20nuestros%20partners%2082995237cfd748aebb39c9e91f4ccd6e/ARTE_BLOG.png](https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/Blog_post.png?raw=true)
