@@ -103,21 +103,28 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              loading: 'lazy'
+            {
+                resolve: `gatsby-remark-images`,
+                options: {
+                maxWidth: 800,
+                loading: 'lazy'
+                },
             },
-          },
-          `gatsby-remark-lazy-load`,
+            `gatsby-remark-lazy-load`,
+            {
+                resolve: "gatsby-remark-external-links",
+                options: {
+                target: "_self",
+                rel: "nofollow"
+                }
+            },
         ]
       }
     },
     'gatsby-transformer-yaml',
     'gatsby-plugin-zeit-now',
-    // 'gatsby-plugin-meta-redirect',
     'gatsby-remark-reading-time',
+    // 'gatsby-plugin-meta-redirect',
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
