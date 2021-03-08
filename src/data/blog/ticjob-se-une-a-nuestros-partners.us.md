@@ -1,3 +1,21 @@
+---
+author: Jimena_y_yo
+date: 2021-03-08 05:31:23+00:00
+slug: ticjob-se-une-a-nuestros-partners
+title: Ticjob se une a nuestros partners
+avatar: "/images/staff/jimena.jpg"
+image: "/blog/ARTE_BLOG.png"
+categories:
+- Partnerships
+tags:
+- 4geeks
+- ticjob
+lang: "es"
+status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+featured: true
+---
+
+
 # Ticjob se uno a nuestros partners
 
 Qué mejor manera de continuar el mes de Marzo que presentando a nuestro nuevo partner, !Ticjob!
