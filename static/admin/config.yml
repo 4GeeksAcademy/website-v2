@@ -11,8 +11,8 @@ collections:
     folder: "src/data/blog"
     create: true
     slug: "{{title}}"
-    media_folder: "static/images"
-    public_folder: ""
+    media_folder: "/static/images"
+    public_folder: "/static/"
     path: "{{title}}"
     editor:
       preview: true
