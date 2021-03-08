@@ -100,7 +100,7 @@ components:
     button: 
       text: "Descarga Instántanea"
     heading: 
-      text: "Descarga la Malla Educativa"
+      text: "Descarga la Programa de Estudios"
   - name: top_coding_bootcamp
     position: 4
     layout: two_column_left 
