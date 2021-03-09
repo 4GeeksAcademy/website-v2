@@ -97,7 +97,7 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Link>
                                     }
                                     <Row display="flex" justifyContent="around" >
-                                        <Column size size="12" alignSelf="center" align="left">
+                                        <Column size size="10" alignSelf="center" align="left">
                                             <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
                                                 align="left" align_sm="left"
                                                 uppercase
@@ -110,7 +110,7 @@ const Blog = ({data, pageContext, yml}) => {
                                         </Column>
                                     </Row>
                                     <Row display="flex" height="auto">
-                                        <Column size="12" align="center">
+                                        <Column size="10" align="center">
                                             <Paragraph color="gray" align="left" margin="10px 0">{item.node.frontmatter.excerpt}</Paragraph>
                                         </Column>
                                     </Row>
@@ -520,7 +520,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-          
           meta_info{
             slug
             title
