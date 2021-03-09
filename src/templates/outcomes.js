@@ -60,8 +60,8 @@ const Outcomes = ({data, pageContext, yml}) => {
 
                                         return (
                                             <React.Fragment key={i}>
-                                                <H4 textAlign="left" fontWeight="700" margin="42px 0 13px 0">{m.title}</H4>
-                                                <Paragraph textAlign="left">{m.content}</Paragraph>
+                                                <H4 textAlign="left" textTransform="uppercase" fontWeight="700" margin="42px 0 13px 0">{m.title}</H4>
+                                                <Paragraph textAlign="left" margin_md="10px 0" dangerouslySetInnerHTML={{__html: m.content}}></Paragraph>
                                                 {
                                                     Array.isArray(m.image_section) && m.image_section.map((m, i) => {
                                                         return (
@@ -84,10 +84,8 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                                     <Charts dataArray={c.data} />
                                                                                     <H4 textTransform="uppercase" fontSize="15px" LineHeight="19px" fontWeight="900">{c.title}</H4>
                                                                                 </Div>
-
                                                                             )
                                                                         })
-                                                                        // console.log("66666", yml.charts)
                                                                     }
                                                                 </Grid>
                                                             </React.Fragment>

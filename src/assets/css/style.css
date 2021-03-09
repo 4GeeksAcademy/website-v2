@@ -287,6 +287,20 @@ a.faq-link:hover {
     list-style: none;
     margin: 10px 0;
 }
+.ul-outcomes{
+    /* padding-left: 15px; */
+    list-style: none;
+    margin: 15px 0;
+}
+
+.ul-outcomes .li-outcomes-link{
+    margin: 20px 0;
+}
+.ul-outcomes .li-outcomes-link::before{
+    content: "\2022";
+    color:#0097CE;
+    margin-right: 10px;
+}
 .ul-privacy .li-privacy-link::before{
     content: "\2022";
     color:#0097CE;
