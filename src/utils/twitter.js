@@ -22,7 +22,7 @@ export default {
         "name": "4Geeks Academy",
         "avatar": "/4geeks-logo.png",
         "username": "4GeeksAcademy"
-    }
+    },
     "4GeeksAcademyES": {
         "bio": "4Geeks Academy is one of the top coding bootcamps in Spain and the world, thousands of graduates and 86% hiring rate.",
         "name": "4Geeks Academy",
