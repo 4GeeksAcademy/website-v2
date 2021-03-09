@@ -13,9 +13,9 @@ partners:
       locations: all
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
-    - name: "Boats Group"
-      locations: ["miami-downtown"]
-      image: "../../../../static/images/partner/boats.jpg"
+    - name: "Evernote"
+      locations: all
+      image: "../../../../static/images/partner/evernote.png"
       featured: true
     - name: "Facebook"
       locations: all
@@ -25,9 +25,9 @@ partners:
       locations: all
       image: "../../../../static/images/partner/natgeo.png"
       featured: true
-    - name: "Evernote"
-      locations: all
-      image: "../../../../static/images/partner/evernote.png"
+    - name: "Ticjob"
+      locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/new_logo_ticjob.png"
       featured: true
     - name: "Ultimate Software"
       locations: ["miami-downtown"]
