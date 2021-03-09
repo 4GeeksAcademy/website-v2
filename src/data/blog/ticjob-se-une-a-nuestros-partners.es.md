@@ -1,16 +1,13 @@
 ---
 author: Jimena_y_yo
 date: 2021-03-08 05:31:23+00:00
-slug: ticjob-se-une-a-nuestros-partners
 title: Ticjob se une a nuestros partners
-avatar: "/images/staff/jimena.jpg"
-image: "/blog/ARTE_BLOG.png"
+image: "/images/blog/Blog_post.png"
 categories:
 - Partnerships
 tags:
 - 4geeks
 - ticjob
-lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
 ---
@@ -29,5 +26,3 @@ El principal objetivo de [4Geeks Academy](/) es **lanzar la carrera tecnológica
 Actualmente, tratan de ofrecer a sus más de **800.000 candidatos** una cobertura total de los empleos disponibles en el mercado TIC de España y cuentan con un equipo de expertos que ofrece un asesoramiento cercano y personalizado tanto a empresas como a candidatos.
 
 Para celebrar el inicio de esta relación hemos preparado [3 premios](https://ticjob.es/esp/trabajo/desarrollador-programador-fullstack-beca-100/46577) exclusivos para poder estudiar nuestro **programa Full-stack con una beca del 100%** (y otra del 80%) a partir del próximo Julio, y que así, el componente económico no sea un obstáculo para **lanzar tu carrera tecnológica**. Para conocer todos los detalles del acuerdo y apuntaros a las becas podéis visitar el siguiente enlace. El registro termina el **31 de Mayo**.
-
-![Ticjob%20se%20uno%20a%20nuestros%20partners%2082995237cfd748aebb39c9e91f4ccd6e/ARTE_BLOG.png](https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/Blog_post.png?raw=true)
