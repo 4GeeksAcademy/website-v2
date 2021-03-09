@@ -1,7 +1,8 @@
 ---
 author: Jimena_y_yo
 date: 2021-03-08 05:31:23+00:00
-title: Ticjob se une a nuestros partners
+slug: ticjob-se-une-a-nuestros-partners
+title: "Ticjob se une a nuestros partners"
 image: "/images/blog/Blog_post.png"
 categories:
 - Partnerships
@@ -17,7 +18,7 @@ featured: true
 
 Qué mejor manera de continuar el mes de Marzo que presentando a nuestro nuevo partner, !Ticjob!
 
-![Ticjob%20se%20uno%20a%20nuestros%20partners%2082995237cfd748aebb39c9e91f4ccd6e/Blog_post.png](https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/ARTE_BLOG.png?raw=true)
+![Ticjob se uno a nuestros partners](https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/ARTE_BLOG.png?raw=true)
 
 El principal objetivo de [4Geeks Academy](/) es **lanzar la carrera tecnológica** de nuestros alumnos para que consigan un trabajo en programación lo más rápido posible tras completar nuestra formación premium en **desarrollo de software**. Para mejorar sus opciones e impulsar su empleabilidad, hemos desarrollado esta **alianza estratégica con TicJob**.
 
