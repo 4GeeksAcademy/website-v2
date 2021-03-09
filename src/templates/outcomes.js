@@ -12,7 +12,6 @@ import Img from "gatsby-image"
 
 
 const Outcomes = ({data, pageContext, yml}) => {
-    console.log("outcomes", yml)
     return (
         <>
             {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" > */}
@@ -36,21 +35,22 @@ const Outcomes = ({data, pageContext, yml}) => {
                     {/* <Icon icon="outcomes" /> */}
                 </Div>
             </Grid>
-            <Grid columns_md="12" >
-                <Div gridArea="1/2/1/9" flexDirection="column" padding="0 65px 0 0 " >
+            <Grid columns_md="12" padding="0 17px" padding_md="0 65px 0 0 " gridGap="0" gridGap_md="11px">
+                <Div gridArea="1/2/1/9" flexDirection="column"  >
                     {yml.sections.map((section, i) => {
                         return (
                             <>
                                 <H3 margin="54px 0 0 0 " textAlign="left" >{section.title}</H3>
+                                <Div style={{margin: "40px 0", height: "1px", background: "#c4c4c4"}} />
                                 {section.paragraph.split("\n").map((m, i) =>
-                                    <Paragraph key={i} textAlign="left" margin="10px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+                                    <Paragraph key={i} textAlign="left" margin="10px 0" >{m}</Paragraph>
                                 )}
                                 <Grid justifyContent="between" columns_md={Array.isArray(section.stats) && section.stats.length} margin="41px 0 0 0">
                                     {section.stats.map((m, i) => {
                                         return (
-                                            <Div key={i} flexDirection="column" >
-                                                <H2 textAlign="left" color={Colors.blue}>{m.stat}</H2>
-                                                <H3 textAlign="left" >{m.content}</H3>
+                                            <Div key={i} flexDirection="column" margin="0 0 38px 0">
+                                                <H2 textAlign_md="left" color={Colors.blue}>{m.stat}</H2>
+                                                <H3 textAlign_md="left" >{m.content}</H3>
                                             </Div>
                                         )
                                     })}
@@ -60,20 +60,10 @@ const Outcomes = ({data, pageContext, yml}) => {
 
                                         return (
                                             <React.Fragment key={i}>
-                                                {/* <Img
-                                                    style={{height: "100%"}}
-                                                    imgStyle={{objectFit: "contain"}}
-                                                    loading="eager"
-                                                    fadeIn={false}
-                                                    // alt={l.name}
-                                                    // fluid={m.image.childImageSharp.fluid}
-                                                    fluid={m.image}
-                                                /> */}
                                                 <H4 textAlign="left" fontWeight="700" margin="42px 0 13px 0">{m.title}</H4>
                                                 <Paragraph textAlign="left">{m.content}</Paragraph>
                                                 {
                                                     Array.isArray(m.image_section) && m.image_section.map((m, i) => {
-                                                        console.log("gyguguy", m)
                                                         return (
                                                             <React.Fragment key={i}>
                                                                 <Img
