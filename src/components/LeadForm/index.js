@@ -179,7 +179,7 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
                         {layout === "flex" &&
                             <Button width="100%" padding=".7rem .45rem"
                                 type="submit"
-                                margin="10px 0"
+                                margin="4px 0px 10px 0px"
                                 borderRadius="0px 10px 10px 0px"
                                 color={formStatus.status === "loading" ? Colors.darkGray : Colors.red}
                                 textColor={Colors.white}
