@@ -102,4 +102,4 @@ Either way, both kinds of students feel what they learn in 4Geeks will help them
 ## **Learn to code at 4Geeks Academy**
 
 
-Learning to code with the help of 4Geeks Academy is not for the faint of heart. It takes dedication, as many things in life do. It is a universal truth that coding changes the life of everyone involved so why not yours? Enroll in a 4Geeks Academy program and learn coding skills that change your life.[ Find out more here](https://4geeksacademy.co/).
+Learning to code with the help of 4Geeks Academy is not for the faint of heart. It takes dedication, as many things in life do. It is a universal truth that coding changes the life of everyone involved so why not yours? Enroll in a 4Geeks Academy program and learn coding skills that change your life.[ Find out more here](//).

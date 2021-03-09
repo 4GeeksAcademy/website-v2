@@ -24,7 +24,7 @@ As a coding Bootcamp co-founder and head of the Academic and Technologies Depart
 
 I became obsessed: reading everywhere, asking colleagues and CTO’s that I knew had demonstrated great vision when picking their company’s stack of technologies, and I quickly started experimenting with different technologies to be taught and included in our syllabus.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2017/10/Picture1-1.png)
+![](/wp-content/uploads/2017/10/Picture1-1.png)
 
 **Why Do Coding Bootcamps say that the language is not “that important”?**
 

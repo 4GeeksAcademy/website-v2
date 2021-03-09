@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     defaultTitle: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
     titleTemplate: "%s · 4Geeks Academy",
-    siteUrl: `https://www.4geeksacademy.co`,
+    siteUrl: `https://www.4geeksacademy.com`,
     defaultDescription: {
       "us": "4Geeks Academy is a world-wide leading coding school focused specially in part-time studies, you don't have to quite your job to become a web developer. Career support for life, coding mentoring for life. We have Miami Coding bootcamps; in Madrid, Spain; Santiago de Chile and Caracas, Venezuela. ",
       "es": "4Geeks Academy es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, en estudios principalmente part-time donde no tienes que dejar tu trabajo para aprender a programar.",
