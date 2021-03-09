@@ -7,6 +7,7 @@ import {H1, H2, H3, H4, Title, Separator, Paragraph} from '../new_components/Hea
 import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
 import Icon from '../new_components/Icon'
 import BaseRender from './_baseLayout'
+import Img from "gatsby-image"
 
 
 const Outcomes = ({data, pageContext, yml}) => {
@@ -41,9 +42,9 @@ const Outcomes = ({data, pageContext, yml}) => {
                             <>
                                 <H3 margin="54px 0 0 0 " textAlign="left" >{section.title}</H3>
                                 {section.paragraph.split("\n").map((m, i) =>
-                                    <Paragraph key={i} textAlign="left" margin="15px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+                                    <Paragraph key={i} textAlign="left" margin="10px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
                                 )}
-                                <Div justifyContent="between">
+                                <Grid justifyContent="between" columns_md={Array.isArray(section.stats) && section.stats.length} margin="41px 0 0 0">
                                     {section.stats.map((m, i) => {
                                         return (
                                             <Div key={i} flexDirection="column" >
@@ -52,7 +53,46 @@ const Outcomes = ({data, pageContext, yml}) => {
                                             </Div>
                                         )
                                     })}
-                                </Div>
+                                </Grid>
+                                {
+                                    Array.isArray(section.sub_sections) && section.sub_sections.map((m, i) => {
+
+                                        return (
+                                            <React.Fragment key={i}>
+                                                {/* <Img
+                                                    style={{height: "100%"}}
+                                                    imgStyle={{objectFit: "contain"}}
+                                                    loading="eager"
+                                                    fadeIn={false}
+                                                    // alt={l.name}
+                                                    // fluid={m.image.childImageSharp.fluid}
+                                                    fluid={m.image}
+                                                /> */}
+                                                <H4 textAlign="left" fontWeight="700" margin="42px 0 13px 0">{m.title}</H4>
+                                                <Paragraph textAlign="left">{m.content}</Paragraph>
+                                                {
+                                                    Array.isArray(m.image_section) && m.image_section.map((m, i) => {
+                                                        console.log("gyguguy", m)
+                                                        return (
+                                                            <React.Fragment key={i}>
+                                                                <Img
+                                                                    style={{height: "100%"}}
+                                                                    imgStyle={{objectFit: "contain"}}
+                                                                    loading="eager"
+                                                                    style={{margin: "38px 0"}}
+                                                                    fadeIn={false}
+                                                                    // alt={l.name}
+                                                                    fluid={m.image && m.image.childImageSharp.fluid}
+                                                                />
+                                                                <Paragraph textAlign="left">{m.image_paragraph}</Paragraph>
+                                                            </React.Fragment>
+                                                        )
+                                                    })
+                                                }
+                                            </React.Fragment>
+                                        )
+                                    })
+                                }
                             </>)
                     })}
                 </Div>
@@ -99,6 +139,16 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                 sub_sections{
                     title
                     content
+                    image_section{
+                        image{
+                            childImageSharp {
+                            fluid(quality: 100){
+                                ...GatsbyImageSharpFluid_withWebp
+                            }
+                            }
+                        }
+                        image_paragraph  
+                    }
                 }
             }
             
