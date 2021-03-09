@@ -63,7 +63,7 @@ sections:
         image_section:
           - image: "../../../static/images/outcomes/outcomes.png"
             image_paragraph: "There are many things to know about our students. Where they come from, their age, gender, etc. Here are some of them."
-    
+            chart: true
   - title: "Job Placement"
     paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days.
     "
@@ -82,26 +82,24 @@ sections:
             image_paragraph: ""
             
 charts:
-  chart_one:
+  chart_list:
     ## EACH DONUTCHART NEEDS AN ARRAY OF ARRAYS WITH  LABEL AND VALUE
     ## THE VALUE NEED TO BE A STRING, NOT A NUMBER
-    title: "ages"
-    data:
-      - [Task, Ages]
-      - [26-32, "44"] ## EACH ARRAY NEEDS LABEL AND VALUE
-      - [22-25, "30"]
-      - [33-42, "26"]
-  chart_two:
-    title: "gender"
-    data:
-      - [Task, Gender]
-      - [Female, "21"]
-      - [Male, "79"]
-  chart_three:
-    title: "nationality"
-    data:
-      - [Task, Nationality]
-      - [North America, "60"]
-      - [Asia, "1"]
-      - [Europe, "5"]
-      - [Lat.Am., "34"]
+    - title: "ages"
+      data:
+        - [Task, Ages]
+        - [26-32, "44"] ## EACH ARRAY NEEDS LABEL AND VALUE
+        - [22-25, "30"]
+        - [33-42, "26"]
+    - title: "gender"
+      data:
+        - [Task, Gender]
+        - [Female, "21"]
+        - [Male, "79"]
+    - title: "nationality"
+      data:
+        - [Task, Nationality]
+        - [North America, "60"]
+        - [Asia, "1"]
+        - [Europe, "5"]
+        - [Lat.Am., "34"]

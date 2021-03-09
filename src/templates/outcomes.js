@@ -6,6 +6,7 @@ import {Grid, Div} from '../new_components/Sections'
 import {H1, H2, H3, H4, Title, Separator, Paragraph} from '../new_components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
 import Icon from '../new_components/Icon'
+import {Charts} from '../new_components/Chart'
 import BaseRender from './_baseLayout'
 import Img from "gatsby-image"
 
@@ -85,6 +86,20 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                     fluid={m.image && m.image.childImageSharp.fluid}
                                                                 />
                                                                 <Paragraph textAlign="left">{m.image_paragraph}</Paragraph>
+                                                                <Grid columns_md="3">
+                                                                    {m.chart &&
+                                                                        yml.charts.chart_list.map((c, i) => {
+                                                                            return (
+                                                                                <Div flexDirection="column" key={i}>
+                                                                                    <Charts dataArray={c.data} />
+                                                                                    <H4 textTransform="uppercase" fontSize="15px" LineHeight="19px" fontWeight="900">{c.title}</H4>
+                                                                                </Div>
+
+                                                                            )
+                                                                        })
+                                                                        // console.log("66666", yml.charts)
+                                                                    }
+                                                                </Grid>
                                                             </React.Fragment>
                                                         )
                                                     })
@@ -148,10 +163,18 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                             }
                         }
                         image_paragraph  
+                        chart
                     }
                 }
             }
-            
+            charts{
+                    chart_list{
+                        title
+                        data
+                    }
+                    
+                    
+            }
            
             
         }
