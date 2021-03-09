@@ -307,7 +307,7 @@ const Blog = ({data, pageContext, yml}) => {
                             return (
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image &&
-                                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                                        <Link to={`/${pageContext.lang}/post/${item.node.fields.slug}`}>
                                             <LazyLoad height={10} scroll={true} once={true}>
                                                 <RoundImage
                                                     url={item.node.frontmatter.image}
@@ -327,7 +327,7 @@ const Blog = ({data, pageContext, yml}) => {
                                     }
                                     <Row display="flex" justifyContent="around" >
                                         <Column size size="12" alignSelf="center" align="left">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
+                                            <Link to={`/${pageContext.lang}/post/${item.node.fields.slug}`}><H4
                                                 align="left" align_sm="left"
                                                 uppercase
                                                 fs_xs="20px"
@@ -364,7 +364,7 @@ const Blog = ({data, pageContext, yml}) => {
                                             </Paragraph>
                                         </Column>
                                         <Column size="2" align="end">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                            <Link to={`/${pageContext.lang}/post/${item.node.fields.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                         </Column>
                                     </Row>
                                 </Column>
@@ -376,7 +376,7 @@ const Blog = ({data, pageContext, yml}) => {
                             return (
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image &&
-                                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                                        <Link to={`/${pageContext.lang}/post/${item.node.fields.slug}`}>
                                             <LazyLoad height={10} scroll={true} once={true}>
                                                 <RoundImage
                                                     url={item.node.frontmatter.image}
@@ -396,7 +396,7 @@ const Blog = ({data, pageContext, yml}) => {
                                     }
                                     <Row display="flex" justifyContent="around" >
                                         <Column size size="12" alignSelf="center" align="left">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
+                                            <Link to={`/${pageContext.lang}/post/${item.node.fields.slug}`}><H4
                                                 align="left" align_sm="left"
                                                 uppercase
                                                 fs_xs="20px"
@@ -433,7 +433,7 @@ const Blog = ({data, pageContext, yml}) => {
                                             </Paragraph>
                                         </Column>
                                         <Column size="2" align="end">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                            <Link to={`/${pageContext.lang}/post/${item.node.fields.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                         </Column>
                                     </Row>
                                 </Column>
@@ -445,7 +445,7 @@ const Blog = ({data, pageContext, yml}) => {
                             return (
                                 <Column masonry size="12" key={i} height="auto" margin="0 0 40px 0">
                                     {item.node.frontmatter.image &&
-                                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                                        <Link to={`/${pageContext.lang}/post/${item.node.fields.slug}`}>
                                             <LazyLoad height={10} scroll={true} once={true}>
                                                 <RoundImage
                                                     url={item.node.frontmatter.image}
@@ -465,7 +465,7 @@ const Blog = ({data, pageContext, yml}) => {
                                     }
                                     <Row display="flex" justifyContent="around" >
                                         <Column size size="12" alignSelf="center" align="left">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><H4
+                                            <Link to={`/${pageContext.lang}/post/${item.node.fields.slug}`}><H4
                                                 align="left" align_sm="left"
                                                 uppercase
                                                 fs_xs="20px"
@@ -502,7 +502,7 @@ const Blog = ({data, pageContext, yml}) => {
                                             </Paragraph>
                                         </Column>
                                         <Column size="2" align="end">
-                                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
+                                            <Link to={`/${pageContext.lang}/post/${item.node.fields.slug}`}><Icon icon="arrowright" width="24" color={Colors.yellow} fill={Colors.yellow} /></Link>
                                         </Column>
                                     </Row>
                                 </Column>
@@ -545,11 +545,15 @@ query BlogQuery($file_name: String!, $lang: String!) {
     }
     featured: allMarkdownRemark (
         sort: {fields: frontmatter___date, order: DESC},
-        filter: {frontmatter: {
-            featured: {eq: true}, 
-            lang: {eq: $lang},
-            status: {eq: "published"}
-        }},
+        filter: {
+            frontmatter: {
+                featured: {eq: true}, 
+                status: {eq: "published"}
+            }
+            fields: {
+                lang: {eq: $lang}
+            }
+        },
         limit: 10
     ){
         edges {
@@ -572,26 +576,30 @@ query BlogQuery($file_name: String!, $lang: String!) {
     }
     posts: allMarkdownRemark (
         sort: {fields: frontmatter___date, order: DESC},
-        filter: {frontmatter: {
-            featured: {eq: true}, 
-            lang: {eq: $lang},
-            status: {eq: "published"}
-        }}
+        filter: {
+            frontmatter: {
+                status: {eq: "published"}
+            }
+            fields: {
+                lang: {eq: $lang}
+            }
+        }
     ){
         edges {
             node {
                 frontmatter {
-                author
-                avatar
-                date
-                image
-                slug
-                title
-                excerpt
-                lang
-                featured
-                status
-                
+                    author
+                    avatar
+                    date
+                    image
+                    title
+                    excerpt
+                    featured
+                    status
+                }
+                fields{
+                    lang
+                    slug
                 }
             }
         }
