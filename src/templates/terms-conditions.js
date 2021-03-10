@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import BaseRender from './_baseLayout';
 
 // new_components
-import {Column, Container, Divider} from "../new_components/Sections";
+import {Divider, Div, Grid} from "../new_components/Sections";
 import {H1, H2, H4, Paragraph} from '../new_components/Heading'
 
 
@@ -13,16 +13,12 @@ const Terms = (props) => {
     return (
     <>
     <Divider height="64px" />
-    <Container
+    <Grid
         // github="/components/privacy"
-        margin_lg="0 24%"
-        margin_tablet="0 10%"
-        margin_md="0 16%"
-        border="bottom"
-        height="auto"
-        margin="100px 0"
-        backgroundSize="cover"
-        paddingRight={`0`}
+        padding="0 4%"
+        gridGap="0px"
+        padding_tablet="0 20%"
+        padding_lg="0 26%"
     >
           <H1
             fontSize="13px"
@@ -32,10 +28,10 @@ const Terms = (props) => {
             color="#606060"
         >4GEEKS ACADEMY</H1>
 
-        <H2 zIndex="5" fontSize="48px" lineHeight="60px" margin="16px 0px 19px 0px">
+        <H2 zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">
           {yml.header.tagline}
         </H2>
-        <Column flexDirection="column">
+        <Div flexDirection="column">
           {yml.sections.map((section, i) => {
             return (
               <>
@@ -45,9 +41,9 @@ const Terms = (props) => {
                           )}
                   </>)
           })}
-        </Column>
+        </Div>
         <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph>
-    </Container>
+    </Grid>
     </>
     )
 };

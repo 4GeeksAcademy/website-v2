@@ -4,7 +4,7 @@ import {Button, Colors, RoundImage} from '../components/Styling';
 import BaseRender from './_baseLayout';
 
 // new_components
-import {Column, Container, Divider} from "../new_components/Sections";
+import {Divider, Div, Grid} from "../new_components/Sections";
 import {H1, H2, H4, Paragraph} from '../new_components/Heading'
 
 
@@ -13,15 +13,11 @@ const Privacy = (props) => {
   return (
   <>
     <Divider height="64px" />
-    <Container
-      margin_lg="0 24%"
-      margin_tablet="0 10%"
-      margin_md="0 16%"
-      border="bottom"
-      height="auto"
-      margin="100px 0"
-      backgroundSize="cover"
-      paddingRight={`0`}
+    <Grid
+      padding="0 4%"
+      gridGap="0px"
+      padding_tablet="0 20%"
+      padding_lg="0 26%"
     >
     <H1
       fontSize="13px"
@@ -30,11 +26,11 @@ const Privacy = (props) => {
       letterSpacing="0.05em"
       color="#606060"
       >4GEEKS ACADEMY</H1>
-      <H2 zIndex="5" fontSize="48px" lineHeight="60px" margin="16px 0px 19px 0px">
+      <H2 zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">
             {yml.header.tagline}
       </H2>
       <Paragraph borderLeft="4px solid" padding="0 0 0 15px" letterSpacing="0.05em" textAlign="left" align="left" align_sm="left" margin="65px 0 0 0" >{yml.header.sub_heading}</Paragraph>
-      <Column flexDirection="column">
+      <Div flexDirection="column">
       {yml.sections.map((section, i) => {
         return (
           <>
@@ -44,9 +40,9 @@ const Privacy = (props) => {
               )}
           </>)
       })}
-      </Column>
+      </Div>
     <Paragraph letterSpacing="0.05em" margin="45px 0 0 0" dangerouslySetInnerHTML={{__html: yml.date_release}}></Paragraph>
-  </Container>
+  </Grid>
   </>
   )
 };
