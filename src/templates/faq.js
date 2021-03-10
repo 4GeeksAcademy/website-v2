@@ -8,7 +8,7 @@ import Link from 'gatsby-link'
 import Icon from '../new_components/Icon'
 import Card from '../new_components/Card'
 import {Container} from '../new_components/Sections'
-import {Row, Column, Divider} from '../new_components/Sections'
+import {Row, Column, Divider, Div, Grid} from '../new_components/Sections'
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
 
 const Faq = (props) => {
@@ -38,20 +38,19 @@ const Faq = (props) => {
             </Paragraph>
 
             <Divider height="50px" />
-            <Container
-                margin_lg="0 24%"
-                margin_tablet="0 10%"
-                margin_md="0 16%"
+            <Grid
+                padding="0 4%"
+                gridGap="0px"
+                padding_tablet="0 20%"
+                padding_lg="0 26%"        
                 github={`/page/faq.${pageContext.lang}.yml`}
             >
                 <H3 borderBottom="1px solid" borderColor="#C4C4C4" padding="30px" >{yml.topic}</H3>
                 {yml.faq.map((item, index) => {
                     return (
                         <>
-                        <Row key={index} display="flex">
-                            <Column
-                            
-                            >
+                        <Row key={index} display="contents">
+                          
                                 <Card
                                     color={buttonToggle && index == toggleIndex}
                                     height="auto"
@@ -63,7 +62,7 @@ const Faq = (props) => {
                                     onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
                                 >
                                     <Row display="flex" height="100%">
-                                        <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} display="flex"  align={`center`} alignSelf="center">
+                                        <Div onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} display="flex" width="100%" align={`center`} alignSelf="center">
                                             <H4
                                                 textAlign="left"
                                                 align={`left`}
@@ -89,9 +88,9 @@ const Faq = (props) => {
                                                         width="24"
                                                     />
                                             }
-                                        </Column>
+                                        </Div>
 
-                                        <Column size="12" size_sm="12" alignSelf="center">
+                                        <Div size="12" size_sm="12" alignSelf="center">
                                             {buttonToggle === true && toggleIndex === index &&
                                                 <Paragraph
                                                     textAlign="left"
@@ -104,17 +103,16 @@ const Faq = (props) => {
                                                     fontFamily="Lato, sans-serif">
                                                 </Paragraph>
                                             }
-                                        </Column>
+                                        </Div>
 
                                     </Row>
                                 </Card>
-                            </Column >
                         </Row >
                         </>
                     )
                 })
                 }
-            </Container >
+            </Grid >
             <Divider height="50px" />
         </>
     )
