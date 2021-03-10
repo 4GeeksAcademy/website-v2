@@ -29,7 +29,7 @@ const Faq = (props) => {
                 color="#606060"
             >4GEEKS ACADEMY</H1>
 
-            <H2 zIndex="5" fontSize="48px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.banner.tagline}</H2>
+            <H2 zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.banner.tagline}</H2>
             <Paragraph padding_sm="0 35px" padding_tablet="0 12em" padding_md="0 30%" padding_xs="0 5%" >{yml.banner.sub_heading} 
                 <Link to={`/${yml.fields.lang}/${yml.banner.pathContact}`} style={{color: "#52a6d1"}}
                 >
