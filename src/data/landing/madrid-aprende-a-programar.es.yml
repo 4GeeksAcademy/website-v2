@@ -27,7 +27,7 @@ form:
 header_data:
   tagline: Aprende a programar
   sub_heading: " "
-  image: "../../../static/images/4geeks-main.jpg"
+  image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
 features:
@@ -62,7 +62,7 @@ in_the_news:
   heading: "4Geeks en los medios"
 
 badges:
-  position: 2
+  position: 6
   heading: " "
 
 program_details:
@@ -86,11 +86,11 @@ who_is_hiring:
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
-
-alumni_projects:
-  position: 7
-  heading: "Así podría ser tu proyecto final"
-  sub_heading: "Proyectos de antiguos estudiantes"
+ 
+#alumni_projects:
+ # position: 7
+  #heading: "Así podría ser tu proyecto final"
+  #sub_heading: "Proyectos de antiguos estudiantes"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
@@ -98,11 +98,11 @@ components:
     position: 4
     layout: syllabus 
     button: 
-      text: "Descarga Instántanea"
+      text: "Descarga Instantánea"
     heading: 
       text: "Descarga el Programa de Estudios"
   - name: top_coding_bootcamp
-    position: 4
+    position: 5
     layout: two_column_left 
     proportions: [4,8]
     image: 
@@ -114,7 +114,7 @@ components:
                   #xl      lg     md     sm    xs
       font_size: ["40px","40px","40px","40px", "40px"]
   - name: more_testimonials
-    position: 8
+    position: 9
     layout: two_column_left 
     image: 
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
@@ -123,7 +123,7 @@ components:
                   #xl      lg     md     sm    xs
       font_size: ["40px","34px","34px","25px", "20px"]
     button: 
-      text: "Ver testimoniales"
+      text: "Más testimoniales"
       color: null
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content: 
@@ -134,7 +134,7 @@ components:
     layout: divider 
     height: ["50px","50px","50px","0px","0px"]
   - name: some_id
-    position: 10
+    position: 7
     layout: two_column_right 
     image: 
       src: "/images/bg/people_happy.jpg"
