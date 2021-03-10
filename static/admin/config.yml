@@ -11,26 +11,26 @@ collections:
     folder: "src/data/blog"
     create: true
     slug: "{{title}}"
-    media_folder: "/static/images"
-    public_folder: "/static/images"
+    # Wehere it create images
+    media_folder: "/static/images/blog"
+    # where use the images
+    public_folder: "/static/images/blog"
     path: "{{title}}"
     editor:
       preview: true
     fields:
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Comments", name: "comments", widget: "boolean", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Excerpt", name: "excerpt", widget: "string"}
-      - { label: "Layout", name: "layout", widget: "string", default: "post", required: false}
       - { label: "Link", name: "link", widget: "string", required: false}
-      - { label: "Slug", name: "slug", widget: "string", default: "the-title"}
+      # TODO: Ocultar slug
+      # - { label: "Slug", name: "slug", widget: "hidden", default: "the-title"}
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Avatar", name: "avatar", widget: "image"}
-      - { label: "Image", name: "image", widget: image, required: false}
+      - { label: "Image", name: "image", widget: "image"}
+      # - { label: "Avatar", name: "avatar", widget: "image"}
       - { label: "Categories", name: "categories", widget: "list"}
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Lang", name: "lang", widget: "string", default: "us/es" }
-      - { label: "Status", name: "status", widget: "string", default: "published/draft/unassigned"}
+      - { label: "Lang", name: "lang", widget: "select", options: ["us", "es"], default: ["us"] }
+      - { label: "Status", name: "status", widget: "string", options: ["published", "draft", "unassigned"]}
       - { label: "Featured", name: "featured", widget: "boolean", default: false}
-      - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
