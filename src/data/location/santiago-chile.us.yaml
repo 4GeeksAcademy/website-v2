@@ -5,7 +5,7 @@ meta_info:
   description: null
   image: ""
   keywords: ""
-  redirects: ["/location/santiago", "/location/santiago-de-chile", "/us/location/santiago-chile"]
+  redirects: ["/location/santiago", "/location/santiago-de-chile", "/us/location/santiago-chile", "/location/santiago-chile"]
 
 seo_title: "Coding Bootcamp Santiago de Chile"
 header:
