@@ -6,8 +6,7 @@ layout: post
 link: https://netlify-with-gatsby4blog.netlify.app/us/migration-netlify
 slug: migration-netlify
 title: Test migration netlify
-avatar: sketch1598308487170.png
-image: /images/staff/marcelo.jpeg
+image: /images/blog/ARTE_BLOG.png
 categories:
   - there's an example
   - hello world

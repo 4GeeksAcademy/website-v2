@@ -35,6 +35,7 @@ module.exports = {
   },
   plugins: [
     // 'gatsby-plugin-force-trailing-slashes',
+    `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-loadable-components-ssr',
     {
       resolve: "gatsby-plugin-rollbar",
@@ -116,7 +117,6 @@ module.exports = {
     },
     'gatsby-transformer-yaml',
     'gatsby-plugin-zeit-now',
-    `gatsby-plugin-netlify-cms`,
     // 'gatsby-plugin-meta-redirect',
     'gatsby-remark-reading-time',
     {
