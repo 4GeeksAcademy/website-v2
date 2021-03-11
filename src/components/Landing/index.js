@@ -88,6 +88,16 @@ TwoColumn.defaultProps = {
     left: null,
     right: null,
 }
+export const SingleColumn = ({ column }) => {
+    return <Row display="flex" m_sm="0px 0px 100px 0">
+        <Column size={12} size_sm="12" align_sm="center">
+            <Side {...column} />
+        </Column>
+    </Row>
+}
+TwoColumn.defaultProps = {
+    column: null,
+}
 
 export const Columns = ({ columns, proportions}) => {
     return <Row display="flex" m_sm="0px 0px 100px 0">
@@ -259,6 +269,17 @@ export const landingSections = {
             left={{heading: yml.heading, content: yml.content, button: yml.button}}
             right={{image: yml.image, video: yml.video}}
             proportions={yml.proportions}
+        />
+    </Wrapper>,
+    single_column: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0">
+        <SingleColumn
+            column={{
+                heading: yml.heading, 
+                content: yml.content, 
+                button: yml.button,
+                image: yml.image, 
+                video: yml.video
+            }}
         />
     </Wrapper>,
     columns: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0">
