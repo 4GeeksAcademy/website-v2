@@ -1,12 +1,12 @@
 meta_info:
-  slug: software-engineering-bootcamp
+  slug: software-engineer-bootcamp
   title: "Become a Software Engineer at 4Geeks Academy"
   description: "Our new course: Software Engineer, will help you master advanced coding techniques and get hired by the biggest tech companies"
   bc_slug: "software-engineering"
   image: ""
   template: "course-engineering"
   keywords: ""
-  redirects: ["/software-engineering", "/us/course/sofware-engineering-coding-bootcamp"]
+  redirects: ["/software-engineering", "/us/course/sofware-engineering-coding-bootcamp", "/course/software-engineering-coding-bootcamp"]
 
 header:
   tagline_top: "BECOME A"
