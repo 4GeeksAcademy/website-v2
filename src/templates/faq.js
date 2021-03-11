@@ -21,6 +21,7 @@ const Faq = (props) => {
         <>
             <Divider height="64px" />
             <H1
+                type="h1"
                 zIndex="5"
                 fontSize="13px"
                 lineHeight="16px"
@@ -29,15 +30,13 @@ const Faq = (props) => {
                 color="#606060"
             >4GEEKS ACADEMY</H1>
 
-            <H2 zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.banner.tagline}</H2>
+            <H2 type="h2" zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.banner.tagline}</H2>
             <Paragraph padding_sm="0 35px" padding_tablet="0 12em" padding_md="0 30%" padding_xs="0 5%" >{yml.banner.sub_heading} 
                 <Link to={`/${yml.fields.lang}/${yml.banner.pathContact}`} style={{color: "#52a6d1"}}
                 >
                     {yml.banner.sub_heading_contact}
                 </Link>
             </Paragraph>
-
-            <Divider height="50px" />
             <Grid
                 padding="0 4%"
                 gridGap="0px"
@@ -45,41 +44,45 @@ const Faq = (props) => {
                 padding_lg="0 26%"        
                 github={`/page/faq.${pageContext.lang}.yml`}
             >
-                <H3 borderBottom="1px solid" borderColor="#C4C4C4" padding="30px" >{yml.topic}</H3>
-                {yml.faq.map((item, index) => {
+                {yml.faq.map((item, i) => {
                     return (
                         <>
-                        <Row key={index} display="contents">
-                          
+                        <H3 type="h3" key={i} borderBottom="1px solid" borderColor="#C4C4C4" padding="80px 30px 30px 30px" >{item.topic}</H3>
+                        
+                        {item.questions.map((faq, index) => {
+                          return (
+                            <Row display="contents">
                                 <Card
-                                    color={buttonToggle && index == toggleIndex}
+                                    color={buttonToggle && faq.question == toggleIndex}
                                     height="auto"
                                     width="100%"
                                     borders= "0"
                                     borderBottom="1px solid"
                                     borderColor=" #C4C4C4"
                                     padding="20px"
-                                    onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
+                                    onClick={() => toggleIndex === faq.question ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(faq.question), setButtonToggle(true))}
                                 >
-                                    <Row display="flex" height="100%">
-                                        <Div onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} display="flex" width="100%" align={`center`} alignSelf="center">
+                                    <Row key={faq.question} display="flex" height="100%">
+                                        <Div onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : faq.question)}} display="flex" width="100%" align={`center`} alignSelf="center">
                                             <H4
+                                                type="h4"
                                                 textAlign="left"
+                                                fontSize="13px"
                                                 align={`left`}
                                                 align_sm={`left`}
                                                 color={Colors.black}
                                                 paddingRight="5%"
                                                 textTransform="uppercase"
                                                 fontWeight="700"
-                                                >{item.question}</H4>
+                                                >{faq.question}</H4>
 
                                             {buttonToggle === false ?
-                                                toggleIndex != index &&
+                                                toggleIndex != faq.question &&
                                                 <Icon icon="plus"
                                                     width="24"
                                                 />
                                                 :
-                                                buttonToggle === true && toggleIndex === index ?
+                                                buttonToggle === true && toggleIndex === faq.question ?
                                                     <Icon icon="minus"
                                                         width="24"
                                                     />
@@ -91,13 +94,14 @@ const Faq = (props) => {
                                         </Div>
 
                                         <Div size="12" size_sm="12" alignSelf="center">
-                                            {buttonToggle === true && toggleIndex === index &&
+                                            {buttonToggle === true && toggleIndex === faq.question &&
                                                 <Paragraph
+                                                    
                                                     textAlign="left"
                                                     letterSpacing="0.05em"
                                                     lineHeight="22px"
                                                     fontWeight="normal"
-                                                    dangerouslySetInnerHTML={{__html: item.answer}}
+                                                    dangerouslySetInnerHTML={{__html: faq.answer}}
                                                     margin={`20px 0 0 0`}
                                                     align_sm="left"
                                                     fontFamily="Lato, sans-serif">
@@ -107,7 +111,9 @@ const Faq = (props) => {
 
                                     </Row>
                                 </Card>
-                        </Row >
+                            </Row >
+                          )}
+                        )}
                         </>
                     )
                 })
@@ -142,10 +148,12 @@ export const query = graphql`
                 }
               }  
           }
-          topic
           faq {
-            answer
-            question
+            topic
+            questions{
+                question
+                answer
+            }
           }
           fields {
             lang
