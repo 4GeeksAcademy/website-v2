@@ -21,7 +21,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Solicita una beca"
   button_label: Enviar
-  redirect:  #you can redirect to another url or entirely diffrent website
+  redirect: "/us/thank-you"  #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
