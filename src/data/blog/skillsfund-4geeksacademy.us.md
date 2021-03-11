@@ -93,6 +93,6 @@ It’s quite simple, you may follow four (4) simple steps for applying:
 </table>
 * Based on a 60-month $6,000 loan with a 10.99% interest rate. | Source: Skills Fund
 
-We enhance our financing options to help you pay for your education because our commitment is to provide you with a [Premium Coding Program](https://www.4geeksacademy.co/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf) that has multiple financing options and gives you the opportunity of reaching your goal and becoming a developer.
+We enhance our financing options to help you pay for your education because our commitment is to provide you with a [Premium Coding Program](/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf) that has multiple financing options and gives you the opportunity of reaching your goal and becoming a developer.
 
-[Apply here](https://www.4geeksacademy.co/apply/) to our program and you'll receive a link to our Skills Fund & 4Geeks Academy website to learn more about all the loan terms and conditions.
+[Apply here](/apply/) to our program and you'll receive a link to our Skills Fund & 4Geeks Academy website to learn more about all the loan terms and conditions.

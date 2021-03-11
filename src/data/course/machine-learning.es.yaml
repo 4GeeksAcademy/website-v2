@@ -1,0 +1,172 @@
+meta_info:
+  slug: ingenieria-en-machine-learning
+  title: "Estudia Machine Learning en 4Geeks Academy"
+  description: "Conviérte en un Ingeniero de Machine Learning y obtén un trabajo de clase mundial"
+  bc_slug: "machine-learning"
+  image: ""
+  template: "course-machine-learning"
+  keywords: ""
+  redirects: ["machine-learning"]
+
+header:
+  tagline_top: "CONVIERTETE EN"
+  tagline: "INGENIERO EN MACHINE LEARNING"
+  sub_heading: "Únete a la revolución AI y obtén uno de los trabajos profesionales mejor pagados del mundo"
+  subsub_heading: "(Ninguna experiencia de código requerida)"
+  alt: ""
+
+  # The background image position can be cnotroled by device size
+  # devices:        imac         laptop     ipad        phone     small phone
+  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
+  image: "../../../static/images/bg/apple-building.jpg"
+
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
+  apply_button_link: "/aplica"
+
+credentials:
+  heading: "Nuestros números hablan por sí solos"
+  paragraph: ""
+
+## PROGRAM DETAILS
+details:
+  heading: DETALLES DEL PROGRAMA
+  sub_heading: "Part Time"
+  left_labels:
+    description: "DESCRIPCION:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "FRONT"
+      title: "Front-End Avanzado"
+      description: >
+        Asumiendo que ya tienes experiencia con frameworks de componentes (React.js, Angular, etc). Vamos a adentrarnos en optimización de React con Suspense, Code-spliting, Transpilación y arquitecturas de front-end como Redux 
+        Este modulo tambien sirve como un complemento perfecto para los siguientes ya que todos los proyectos van a requerir algun tipo de interfaz de usuario.
+      projects: "Aplicación de video llamadas Peer-to-Peer utilizando WebRTC y no se requiere un backend para la comunicación"
+      slug: "advanced-front-end"
+      duration: "2 weeks"
+      step: 1
+    - module_name: "ALGORITMOS"
+      title: "Algoritmos Avanzados"
+      description: "Todas las entrevistas de trabajo en empresas del Fortune 500 requieren que sepas algoritmos avanzados: Big O, Medicion de Tiempo y Espacio, Estructuras Avanzadas, Patrones de Diseño, Árboles, DFS/BFS."
+      projects: "Vas a pasar todo el rato perfeccionando tus habilidades de algoritmos y te presentaremos retos sacados de entrevistas reals."
+      slug: "advanced-algorithms"
+      duration: "2 wks"
+      step: 2
+    - module_name: "STORAGE"
+      title: "Almacenado y Búsqueda de Información"
+      description: >
+        Java es el lenguaje más utilizado del mundo (por mucho). En este modulos aprenderás los patrones de diseño más importantes para escalar aplicaciones, retos de optimización: DAO, Maven, O.O.P, Singleton, Factory, Strategy, Observer, Builder, etc. 
+        Hay demasiadas formas diferentes de almacenar y buscar información, aqui aprenderás las más populares y resolveras problemas típicos de escalamiento con Big Data, Data-Mining, Almacenamiento Distribuido, Redis/Memcache, SQL, NoSQL, GraphQL, et.
+      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
+      slug: "info-retrival"
+      duration: "2.5 wks"
+      step: 3
+    - module_name: "DISTRIBUIDO"
+      title: "Aplicaciones Distribuidas"
+      description: "Una aplicación lista para tener millones de usuarios require de fuertes conocimientos de arquitectura, aquí aprenderas las estrategias más importantes: Concurrencia, Sockets, Compresion de Datos, Almacenamiento Distribuido, Mensajeria, Colas, etc."
+      projects: "Construye una aplicación con multiples hilos, compresion de datos, microservicios y otras ventajas"
+      slug: "scale"
+      duration: "3 wks"
+      step: 3
+    - module_name: "CALIDAD"
+      title: "Control de la Calidad"
+      description: "Cuando construlles software para una empresa grande tu código debe ser a prueba de balas, aquí aprenderas a configurar un sistema de integración continua que garantice un deploy rápido y libre de errores, especialmente en aplicaciónes que tienen mucho tiempo funcionando (legacy) y tienen mucha deuda técnica."
+      projects: "Te entregaremos un reto de la vida real de una aplicación que ya esta en funcionamiento, deberás entenderla y construir un sistema de integración continua que asegure la calidad."
+      slug: "quality-deploy"
+      duration: "2 wks"
+      step: 2
+    - module_name: "FINAL PROJECT"
+      title: "The Final Project"
+      description: "Durante el proyecto final deberas elegir que tipo de proyecto quieres realizar: Inteligencia Artificial, Blockchain o desarrollo web. Sin recibir ninguna materia nuevo nos enfocaremos en apoyarte en la realicación de una idea desde cero hasta su publicación y escalamiento exitoso."
+      projects: "Desarrollarás tu aplicación desde cero y la publicarás en Amazon Web Services."
+      slug: "quality-deploy"
+      duration: "4 wks"
+      step: 3.9
+    - module_name: "DE POR VIDA"
+      title: "De por vida"
+      description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
+      projects: "Consegurás tu primer trabajo, empezarás a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganár muy bien y disfrutar de la vida de un programador."
+      slug: "lifelong-learning"
+      duration: "1+ sem"
+      step: 0.1
+
+syllabus:
+  heading: Descarga toda la infomación sobre este programa
+  button_label: Descargar
+
+potential_companies:
+  tagline: "Entrénate para destacar en las compañías mas exigentes"
+  sub_heading: "Dá un salto a tu carrera y trabaja en las mejores empresas"
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "EN NÚMEROS: 4 GEEKS VS OTROS"
+  sub_heading: ""
+  sub_heading_link: ""
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: ¡Para que te contraten empresas de Fortune 500!
+  geek_pal:
+    - Un profesor cada cinco estudiantes (1:5).
+    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
+    - Miles de ejercicios interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Chat de apoyo en línea 12 horas al día.
+    - Transmisión en línea de las clases.
+    - Grabación de las clases para su posterior revisión.
+  geek_force:
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Entrenamiento de marca personal.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+    - Coaching SEMANAL hasta que consigas trabajo.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRECIOS Y PAGOS"
+  sub_heading: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBERSHIPS"
+  program: "PROGRAM"
+  geeks_vs_other: "4GEEKS vs OTHERS"
+  pricing: "PRICING"
+  alumni: "THE ALUMNI"

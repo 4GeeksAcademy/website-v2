@@ -28,7 +28,7 @@ faq:
   - question: "¿Por qué no Node JS?"
     answer: |-
       "Node es asombroso. Desafía la forma en que se crea la web. Sin embargo, solo el 0,3% de la web ha adoptado Node JS y su crecimiento se ha ralentizado aún más en los últimos meses. Python, Java, PHP y otros lenguajes similares todavía gobiernan el mundo (y eso no va a cambiar en el corto plazo). 
-       Funcionan de una manera muy diferente a como lo hace Node; nuestro propósito es prepararte para el "mundo real". Capacitamos a nuestros desarrolladores Full-Stack usando / enseñando sólo las tecnologías más estándar y profesionales. <a class="faq-link" href="https://4geeksacademy.co/us/post/dont-teach-nodejs-full-stack-development-program">Aquí</a> puedes encontrar un gran argumento de por qué no estamos enseñando Node JS."
+       Funcionan de una manera muy diferente a como lo hace Node; nuestro propósito es prepararte para el "mundo real". Capacitamos a nuestros desarrolladores Full-Stack usando / enseñando sólo las tecnologías más estándar y profesionales. <a class="faq-link" href="/us/post/dont-teach-nodejs-full-stack-development-program">Aquí</a> puedes encontrar un gran argumento de por qué no estamos enseñando Node JS."
   - question: "¿Por qué 4Geeks Academy?"
     answer: |-
       "Bueno, es un poco extraño hablar mucho sobre uno mismo ... pero, está bien, ¡ya que lo preguntaste! 
@@ -89,7 +89,7 @@ faq:
       De lunes a viernes de 9:00 a 18:00 hrs."
   - question: "¿Cómo me inscribo?"
     answer: |-
-      "Para comenzar tu carrera como Desarrollador, solo necesitas hacer clic <a  class="faq-link" href="https://4geeksacademy.co/es/aplica">aquí</a> y completar un formulario muy simple. Nosotros nos encargaremos del resto".
+      "Para comenzar tu carrera como Desarrollador, solo necesitas hacer clic <a  class="faq-link" href="/es/aplica">aquí</a> y completar un formulario muy simple. Nosotros nos encargaremos del resto".
   - question: "¿Cuál es el proceso de admisión?"
     answer: |-
       "Una vez que comiences el proceso de solicitud, recibirás un correo electrónico de uno de nuestros Consejeros Estudiantiles. Te guiaremos durante todo el proceso. Simplemente responde a nuestro correo electrónico y te llamaremos a tu conveniencia. 

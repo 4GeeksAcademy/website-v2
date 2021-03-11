@@ -13,6 +13,14 @@
   ],
   "redirects": [
     {
+      "source": "/(\\w{2})/location/(.*)",
+      "destination": "/$1/coding-campuses/$2"
+    },
+    {
+      "source": "/(\\w{2})/course/(.*)",
+      "destination": "/$1/coding-bootcamps/$2"
+    },
+    {
       "source": "/mdc",
       "destination": "https://mdc.4geeksacademy.com"
     },

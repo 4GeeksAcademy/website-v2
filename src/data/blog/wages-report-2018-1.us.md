@@ -33,7 +33,7 @@ The annual average salary in the US has grown up by 1% in February 2018.  Yes, 
 
 Whereas [PayScale](https://www.payscale.com/research/US/Job=Web_Developer/Salary) estimates a **median salary of $58,005 per year** for a Junior Web Developer,  [Indeed](https://www.indeed.com/salaries/Web-Developer-Salaries) places it at **$60,597 per year**, and the most recent StackOverflow survey places the median salary for a _Full-Stack Web Developer_ in the U.S. at **$100,000 per year.**
 
-If we compare this data to our last report (October 2017) [Bootcamp Graduates Salary in 2017](https://www.4geeksacademy.co/pay-tuition-4geeks-2/), you will find the following results:
+If we compare this data to our last report (October 2017) [Bootcamp Graduates Salary in 2017](/pay-tuition-4geeks-2/), you will find the following results:
 
 ![](https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/Screen-Shot-2018-03-19-at-6.32.14-PM.png)
 
@@ -228,7 +228,7 @@ Source: Course Report 2017 Coding Bootcamp Outcomes +Demographics Report
 
 Much is being done to try to close the gap.  If you are a woman trying to get the tech education you want, look at our partnership with [Bridges Unite](https://www.bridgesunite.com/).  Together we are bringing coding education opportunities to women in Florida by supporting/sponsoring one candidate to take one of our Full Stack Development programs at no cost.  Much more is needed, and we are aware.  Feel free to [contact us if you have a great idea on how to improve that](mailto:info@4geeksacademy.com). 
 
-We have said it: the biggest career challenges for [women in tech](https://www.4geeksacademy.co/women-in-tech-2017/) is not about finding a good job or solving coding bugs, but by finding a healthy and fair work environment so that they can feel part of a team and be valued by male coworkers.
+We have said it: the biggest career challenges for [women in tech](/women-in-tech-2017/) is not about finding a good job or solving coding bugs, but by finding a healthy and fair work environment so that they can feel part of a team and be valued by male coworkers.
 
 But what about the racial gap?  A [latest study of the Institute for Women Policy](https://iwpr.org/publications/gender-wage-gap-2017-race-ethnicity/) reflects that women of all major racial and ethnic groups earn less than men of the same group, and also earn less than white men:
 
@@ -247,4 +247,4 @@ What should you do from the beginning?  Tailor your resume with your collection
 
 _By enrolling in our program you will work in a 99% practical environment, Part-Time focused, with REAL “Senior” mentors and with a stack of top notch technologies._
 
-[_Join us_](https://www.4geeksacademy.co/apply/)_ and become a Software Developer._
+[_Join us_](/apply/)_ and become a Software Developer._

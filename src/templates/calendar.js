@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import {Row, Column, Wrapper, WrapperImage, Divider, Div} from '../components/Sections'
 import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, Img, Anchor} from '../components/Styling'
+import {ZoomOut} from "../components/Animations"
 import Card from '../components/Card'
 import Icon from '../components/Icon'
 import Select from '../components/Select'
@@ -12,15 +13,15 @@ import LazyLoad from 'react-lazyload';
 import {Link} from 'gatsby'
 import {SessionContext} from '../session'
 
-const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText, context}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
+const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText, context, bg_size}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
   <Anchor to={link}>
     <Card
       overflow={`hidden`}
       height="auto"
-      width="100%"
       shadow
     >
       <LazyLoad scroll={true} height={230}>
+        
         <Img
           src={image}
           bsize="cover"
@@ -31,6 +32,7 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
           h_lg="120px"
           h_md="140px"
           h_sm="220px"
+          bg_hover={bg_size}
         />
       </LazyLoad>
       <Row
@@ -69,7 +71,6 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
               fs_xl="14px">
               {dayjs(date).add(5, "hour").locale("es").format("ddd, DD MMM YYYY")}
             </Paragraph>}
-            
           </Row>
           <Row marginBottom=".2rem" alignItems={`center`} display="flex">
             <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
@@ -122,19 +123,20 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
 const Calendar = (props) => {
   const {pageContext, yml} = props;
   const {session} = useContext(SessionContext);
-
+const [backgroundSize, setBackgroundSize] = useState("100%");
   const [data, setData] = useState({
     events: {catalog: [], all: [], filtered: []},
     cohorts: {catalog: [], all: [], filtered: []}
   });
   const [academy, setAcademy] = useState(null)
-  const [filterType, setFilterType] = useState({label: "Upcoming Courses and Events", value: "cohorts"});
+  const [filterType, setFilterType] = useState(pageContext.lang == "us" ? {label: "Upcoming Courses and Events", value: "cohorts"} : {label: "Próximos Cursos y Eventos", value: "cohorts"});
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
+    //   ${process.env.GATSBY_BREATHECODE_HOST}
       let cohorts = await resp.json();
-      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
@@ -189,10 +191,10 @@ const Calendar = (props) => {
         <Row marginBottom={`10px`} justifyContent={`end`} display="flex">
           <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer">
             <Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">
-              Join Our Meetup
+              {pageContext.lang == "us" ? "Join Our Meetup" : "Únete a nuestro Meetup"}
             </Button>
           </a>
-          <H4 margin="20px 0 0 0" align="left" a_sm="left">Filter courses and events:</H4>
+          <H4 margin="20px 0 0 0" align="left" a_sm="left">{pageContext.lang == "us" ? "Filter courses and events:" : "Filtra por cursos y eventos:"}</H4>
         </Row>
 
         <Row
@@ -214,8 +216,8 @@ const Calendar = (props) => {
             maxWidth="100%"
             shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
             options={console.log("catalog", data.cohorts.catalog) || data.cohorts.catalog}
-            openLabel={academy ? "Campus: " + academy.label : "Select one academy"}
-            closeLabel={academy ? "Campus: " + academy.label : "Select one academy"}
+            openLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
+            closeLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
             onSelect={(opt) => {
               setAcademy(opt)
               setData({
@@ -234,10 +236,11 @@ const Calendar = (props) => {
             maxWidth="100%"
             m_sm="5px"
             shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-            options={[
-              {label: "Courses", value: "cohorts"},
-              {label: "Events", value: "events"}
-            ]}
+            options={pageContext.lang == "us" ? [
+                {label: "Courses", value: "cohorts"},
+                {label: "Events", value: "events"}] : 
+                [{label: "Cursos", value: "cohorts"},
+                {label: "Eventos", value: "events"}]}
             openLabel={filterType.label}
             closeLabel={filterType.label}
             onSelect={(opt) => setFilterType(opt)}
@@ -250,7 +253,7 @@ const Calendar = (props) => {
             filterType.value === "cohorts" ?
               data.cohorts.filtered.length == 0 ?
                 <Paragraph margin={`0 0 0 10px`} fontSize="18px">
-                  {academy != null ? "It seems we could not found any result." : "Loading..."}
+                  {pageContext.lang == "us" ? academy != null ? "It seems we could not found any result." : "Loading..." : academy != null ? "Parece que no pudimos conseguir ningún resultado." : "Cargando..."}
                 </Paragraph>
                 :
                 data.cohorts.filtered.map((cohort, index) =>
@@ -267,12 +270,13 @@ const Calendar = (props) => {
                     detailsButtonText={yml.button.cohort_more_details_text}
                     detailsButtonLink={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}
                     context={pageContext.lang}
+                    bg_size="cover"
                   />
                 )
               :
               data.events.filtered.length === 0 ?
                 <Paragraph margin={`0 0 0 10px`} fontSize="18px">
-                  {academy != null ? "It seems we could not found any result." : "Loading..."}
+                  {pageContext.lang == "us" ? academy != null ? "It seems we could not found any result." : "Loading..." : academy != null ? "Parece que no pudimos conseguir ningún resultado." : "Cargando..."}
                 </Paragraph>
                 :
                 data.events.filtered.map((event, index) =>
@@ -286,6 +290,9 @@ const Calendar = (props) => {
                     exerpt={event.excerpt}
                     eventLink={event.url}
                     eventText={yml.button.event_register_button_link}
+                    context={pageContext.lang}
+                    onMouseOver={() => setBackgroundSize("contain")}
+                    bg_size={backgroundSize}
                   />
                 )
           }
