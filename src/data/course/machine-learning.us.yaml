@@ -36,11 +36,10 @@ details:
     duration: "DURATION:"
     skills: "Skills / Weeks:"
   details_modules:
-    - module_name: "FRONT"
-      title: "Advanced Front-End"
+    - module_name: "Data"
+      title: "Data Science for AI"
       description: >
-        Assuming you already have knowledge in Component Frameworks (React.js, Angular, etc.), we are going to dive into JS and DOM optimization with Suspense, Code-spliting, Transpiling and front-end architectures like Redux and Flux. \n
-        This module also serves as a great complement for all the others as they will all require some kind of front-end interface.
+        We don’t simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Algebra with Statistical Inference and Modeling. You’ll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets.
       projects: "Peer to Peer video chat application (using WebRTC no backend required for communication)"
       slug: "advanced-front-end"
       duration: "2 weeks"
