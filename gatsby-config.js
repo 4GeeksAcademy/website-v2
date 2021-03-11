@@ -128,8 +128,30 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags/links`]
-      }
+        exclude: [`/admin`, `/tags/links`, `/edit`, `/landings`],
+        // output: `/some-other-sitemap.xml`,
+        // query: `
+        // {
+        //     site {
+        //         siteMetadata {
+        //             siteUrl
+        //         }
+        //     }
+        //     allSitePage {
+        //         nodes {
+        //             path
+        //         }
+        //     }
+        // }`,
+        // serialize: ({ site, allSitePage }) =>
+        //     allSitePage.nodes.map(node => {
+        //         return {
+        //             url: `${site.siteMetadata.siteUrl}${node.path}`,
+        //             changefreq: `daily`,
+        //             priority: 0.7,
+        //         }
+        //     })
+        }
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
