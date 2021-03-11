@@ -1,5 +1,5 @@
 meta_info:
-  slug: full-stack-web-development-bootcamp-part-time
+  slug: part-time-full-stack-developer
   title: "Become a developer, learn to code and get a job in tech with 4Geeks Academy"
   bc_slug: "full-stack"
   description: "Master the coding fundamentals and develop real life applications, career support and mentoring for life."
@@ -17,6 +17,7 @@ meta_info:
       "/coding-introduction-programming",
       "/us/course/coding-introduction",
       "/course/coding-introduction",
+      "/us/course/full-stack-web-development-bootcamp-part-time",
     ]
 
 header:

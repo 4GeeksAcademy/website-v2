@@ -1,11 +1,11 @@
 meta_info:
-  slug: "downtown-miami"
+  slug: "coding-bootcamp-miami"
   title: "Miami Coding Bootcamp"
   position: 1
   description: "Learn & evolve your coding skills. Miami Coding Bootcamp with over 1,000 Graduates & ~89% hiring rate. The #1 part-time coding bootcamp in the world."
   image: ""
   keywords: "null"
-  redirects: ["/locations", "/miami"]
+  redirects: ["/locations", "/miami", "/us/location/downtown-miami"]
 
 seo_title: "4Geeks Academy Miami"
 header:

@@ -447,6 +447,14 @@ const addAdditionalRedirects = ({graphql, actions}) => {
 
 const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
+    let slugigy = (entity) => {
+        let slugMap = {
+            location: "coding-campuses",
+            course: "coding-bootcamps",
+        }
+        return slugMap[entity] || entity
+    }
+
     //if its a blog post the meta_info comes from the front-matter
     if (typeof (meta_info) == 'undefined') meta_info = frontmatter;
 
@@ -462,7 +470,7 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
     const slug = (customSlug) ? meta_info.slug : file_name;
     const template = type === "page" ? file_name : type;
 
-    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${template}/${slug}`;
+    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${slugigy(template)}/${slug}`;
 
     const meta = {lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath};
     //   console.log("meta: ", meta);

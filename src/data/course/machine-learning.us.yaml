@@ -1,18 +1,18 @@
 meta_info:
-  slug: software-engineering-bootcamp
-  title: "Become a Software Engineer at 4Geeks Academy"
-  description: "Our new course: Software Engineer, will help you master advanced coding techniques and get hired by the biggest tech companies"
-  bc_slug: "software-engineering"
+  slug: machine-learning-engineering
+  title: "Become a AI Machine Learning Engineer at 4Geeks Academy"
+  description: "Our new course: Machine Learning Engineering, will help you master advanced coding techniques and get hired by the biggest tech companies"
+  bc_slug: "machine-learning"
   image: ""
-  template: "course-engineering"
+  template: "course-machine-learning"
   keywords: ""
-  redirects: ["/software-engineering", "/us/course/sofware-engineering-coding-bootcamp"]
+  redirects: []
 
 header:
   tagline_top: "BECOME A"
-  tagline: "SENIOR SOFTWARE ENGINEER"
-  sub_heading: "Work at a great company, make a great living and help build tomorrow's software."
-  subsub_heading: "(Previous coding experience is required)"
+  tagline: "MACHINE LEARNING ENGINEER"
+  sub_heading: "Become one of the highest paid professionals in the world"
+  subsub_heading: "(no coding experience required)"
 
   # The background image position can be cnotroled by device size
   # devices:        imac         laptop     ipad        phone     small phone
@@ -28,7 +28,7 @@ button:
   apply_button_link: "/apply"
 ## PROGRAM DETAILS
 details:
-  heading: Software Engineering Syllabus
+  heading: Machine Learning Engineering Syllabus
   sub_heading: "Master exactly what is required to be a real Software Engineer."
   left_labels:
     description: "DESCRIPTION:"
