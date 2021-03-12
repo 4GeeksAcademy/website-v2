@@ -29,21 +29,21 @@ partners:
       locations: ["madrid-spain"]
       image: "../../../../static/images/partner/new_logo_ticjob.png"
       featured: true
-    - name: "Ultimate Software"
-      locations: ["miami-downtown"]
-      image: "../../../../static/images/partner/ultimate.png"
+    - name: "Agilia"
+      locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/agilia.png"
       featured: true
-    - name: "TCG Group"
-      locations: ["miami-downtown"]
-      image: "../../../../static/images/partner/tcg.png"
+    - name: "KPMG"
+      locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/kpmg-logo1.png"
+      featured: true      
+    - name: "Tucuvi"
+      locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/tucuvi.png"
       featured: true
-    - name: "Razz"
-      locations: ["miami-downtown"]
-      image: "../../../../static/images/partner/razz.png"
-      featured: true
-    - name: "Overseas"
-      locations: ["miami-downtown"]
-      image: "../../../../static/images/partner/overseas.png"
+    - name: "optiva-media"
+      locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/optiva-media.png"
       featured: true
     - name: "DS9"
       locations: ["miami-downtown"]
