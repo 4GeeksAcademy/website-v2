@@ -1,10 +1,10 @@
 meta_info:
   slug: "santiago-chile-es"
   position: 4
-  title: "Coding Bootcamp en Santiago de Chile, aprende a programar, aprende código."
-  description: null
+  title: "Coding Bootcamp Santiago"
+  description: "Coding Bootcamp en Santiago de Chile, aprende a programar, aprende código."
   image: "https://storage.googleapis.com/4geeks-academy-website/santiago-es.png"
-  keywords: ""
+  keywords: "Coding Bootcamp Santiago"
   redirects: ["/chile", "/es/inicio/santiago-de-chile"]
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
