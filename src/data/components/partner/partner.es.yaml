@@ -49,9 +49,9 @@ partners:
       locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ds9.png"
       featured: true
-    - name: "Coinet"
-      locations: ["miami-downtown"]
-      image: "../../../../static/images/partner/coinet.jpg"
+    - name: "Unono"
+      locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/Logo_Unono.png"
       featured: true
 coding:
   tagline: "LAS COMPAÑÍAS CONFÍAN Y CONTRATAN A NUESTROS ESTUDIANTES"
