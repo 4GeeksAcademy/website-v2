@@ -1,10 +1,10 @@
 meta_info:
   slug: "madrid-espana"
   position: 2
-  title: 4Geeks Academy Madrid
-  description: null
+  title: "Coding bootcamp Madrid"
+  description: "Coding bootcamp en Madrid, España"
   image: "https://storage.googleapis.com/4geeks-academy-website/madrid-es.png"
-  keywords: ""
+  keywords: "Coding bootcamp Madrid"
   redirects: ["madrid", "/es/location/madrid-spain/"]
 
 seo_title: "4Geeks Academy Madrid, España"
