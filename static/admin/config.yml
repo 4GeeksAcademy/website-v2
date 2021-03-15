@@ -2,22 +2,27 @@ backend:
   name: git-gateway
   branch: playground/next
 
-media_folder: /static/images
-public_folder: /images
+media_folder: "/static/images"
+# FIXME: Testing documentation
+publis_mode: editorial_workflow
+show_preview_links: true
+site_url: "https://netlify-with-gatsby4blog.netlify.app"
+display_url: "https://netlify-with-gatsby4blog.netlify.app"
+# --->
 
 collections:
   - name: "blog"
     label: "Blog"
     folder: "src/data/blog"
     create: true
-    slug: "{{title}}"
+    slug: "{{slug}}"
     # Wehere it create images
     media_folder: "/static/images/blog"
     # media_folder: ""
     # where use the images
-    public_folder: "/static/images/blog"
+    public_folder: "/images/blog"
     # public_folder: ""
-    path: "{{title}}"
+    path: "{{slug}}"
     editor:
       preview: true
     fields:
@@ -26,7 +31,7 @@ collections:
       - { label: "Excerpt", name: "excerpt", widget: "string"}
       - { label: "Link", name: "link", widget: "string", required: false}
       # TODO: Ocultar slug
-      - { label: "Slug", name: "slug", widget: "hidden", default: "{{title}}"}
+      - { label: "Slug", name: "slug", widget: "string", default: "{{slug}}"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image"}
       # - { label: "Avatar", name: "avatar", widget: "image"}
