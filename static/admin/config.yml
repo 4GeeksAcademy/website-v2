@@ -25,7 +25,8 @@ collections:
     label: "Blog"
     folder: "src/data/blog"
     create: true
-    slug: "{{slug}}"
+    #slug for markdown filename 
+    slug: "{{slug}}.{{fields.lang}}"
     editor:
       preview: true
     fields:
@@ -33,13 +34,14 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Excerpt", name: "excerpt", widget: "string"}
       - { label: "Link", name: "link", widget: "string", required: false}
-      # TODO: Ocultar slug
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image"}
-      # - { label: "Avatar", name: "avatar", widget: "image"}
       - { label: "Categories", name: "categories", widget: "list"}
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Lang", name: "lang", widget: "select", options: ["us", "es"], default: ["us"] }
-      - { label: "Status", name: "status", widget: "select", options: ["published", "draft", "unassigned"]}
+        # slug/path page (widget relation is awesome)
+      - { label: "Slug", name: "slug", widget: "relation", value_field: "{{slug}}"}
+      - { label: "Lang", name: "lang", widget: "select", options: ['us', 'es'] }
       - { label: "Featured", name: "featured", widget: "boolean", default: false}
       - { label: "Body", name: "body", widget: "markdown" }
+
+# COMPLETED: Deleted. avatar, slug, status

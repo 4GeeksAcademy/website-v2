@@ -13,6 +13,7 @@ import "../assets/css/single-post.css"
 export default function Template (props) {
     const {data, pageContext} = props;
     const post = props.data.markdownRemark;
+    console.log(post);
     const allowed = [`${post.frontmatter.author}`];
     const filtered = Object.keys(twitterUser)
         .filter(key => allowed.includes(key))
