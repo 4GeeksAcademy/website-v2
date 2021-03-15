@@ -10,7 +10,6 @@ backend:
 
 # FIXME: Testing documentation
 publish_mode: editorial_workflow
-media_folder: "/static/images"
 show_preview_links: true
 site_url: "https://netlify-with-gatsby4blog.netlify.app"
 display_url: "https://netlify-with-gatsby4blog.netlify.app"
