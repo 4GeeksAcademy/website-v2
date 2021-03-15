@@ -1,13 +1,24 @@
 backend:
   name: git-gateway
   branch: playground/next
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
 
 media_folder: "/static/images"
 # FIXME: Testing documentation
-publis_mode: editorial_workflow
 show_preview_links: true
+publis_mode: editorial_workflow
 site_url: "https://netlify-with-gatsby4blog.netlify.app"
 display_url: "https://netlify-with-gatsby4blog.netlify.app"
+
+# Wehere it create images
+media_folder: "/static/images/blog"
+# where use the images
+public_folder: "/images/blog"
 # --->
 
 collections:
@@ -16,13 +27,6 @@ collections:
     folder: "src/data/blog"
     create: true
     slug: "{{slug}}"
-    # Wehere it create images
-    media_folder: "/static/images/blog"
-    # media_folder: ""
-    # where use the images
-    public_folder: "/images/blog"
-    # public_folder: ""
-    path: "{{slug}}"
     editor:
       preview: true
     fields:
