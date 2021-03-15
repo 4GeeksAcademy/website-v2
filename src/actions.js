@@ -211,6 +211,3 @@ export const newsletterSignup = async (data,session) => {
     return true;
 }
 
-
-// regex for ignoring @<desposable-domain>.com
-// ^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!ignoreme|ignoreme2)[a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])+$
