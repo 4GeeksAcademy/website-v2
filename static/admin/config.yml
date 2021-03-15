@@ -8,10 +8,10 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-media_folder: "/static/images"
 # FIXME: Testing documentation
+publish_mode: editorial_workflow
+media_folder: "/static/images"
 show_preview_links: true
-publis_mode: editorial_workflow
 site_url: "https://netlify-with-gatsby4blog.netlify.app"
 display_url: "https://netlify-with-gatsby4blog.netlify.app"
 
