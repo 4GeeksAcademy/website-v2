@@ -39,7 +39,7 @@ collections:
       - { label: "Categories", name: "categories", widget: "list"}
       - { label: "Tags", name: "tags", widget: "list" }
         # slug/path page (widget relation is awesome)
-      - { label: "Slug", name: "slug", widget: "relation", value_field: "{{slug}}"}
+      - { label: "Slug", name: "slug", widget: "text", value_field: "{{slug}}"}
       - { label: "Lang", name: "lang", widget: "select", options: ['us', 'es'] }
       - { label: "Featured", name: "featured", widget: "boolean", default: false}
       - { label: "Body", name: "body", widget: "markdown" }
