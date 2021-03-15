@@ -5,11 +5,13 @@ import {Colors, Button} from '../Styling';
 import {Break} from "../Responsive"
 
 const regex = {
-    email: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
+    //old email: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
+    email: /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!mailinator|mailinator2|leonvero|ichkoch|naymeo|naymio)[a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])+$/,
     text: /^.+$/,
     textarea: /^.+$/,
     number: /^\d+$/,
-    phone: /(\+\d{1,3})?(\d{9,10})$/, // +17834565748 or 7834565748
+    // old phone: /(\+\d{1,3})?(\d{9,10})$/, // +17834565748 or 7834565748
+    phone: /^(?!(\d+)\1+$)(\+\d{1,3})?(\d{9,10})$/
 }
 
 
