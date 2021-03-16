@@ -5,6 +5,7 @@ excerpt: this is an exerpt information
 slug: netlify-blog-test
 title: Netlify blog test
 image: /images/blog/ARTE_BLOG.png
+# avatar: "/4geeks-logo.png"
 categories:
   - there's an example
   - hello world
