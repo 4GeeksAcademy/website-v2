@@ -2,7 +2,7 @@
 #   name: test-repo
 backend:
   name: git-gateway
-  branch: playground/next
+  branch: feature/netlifycms
   commit_messages:
     create: 'Create {{collection}} “{{slug}}” ✨'
     update: 'Update {{collection}} “{{slug}}”'
