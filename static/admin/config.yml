@@ -1,3 +1,5 @@
+# ----- development
+#   name: test-repo
 backend:
   name: git-gateway
   branch: playground/next
@@ -25,8 +27,8 @@ collections:
     label: "Blog"
     folder: "src/data/blog"
     create: true
-    #slug for markdown filename 
     widget: "object"
+    #slug for markdown filename 
     slug: "{{slug}}.{{fields.lang}}"
     editor:
       preview: true
@@ -37,12 +39,11 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image"}
-      - { label: "Slug", name: slug, widget: hidden, default: "{{slug}}"}
+      # Slug for frontmatter path
+      - { label: "Slug", name: slug, widget: string, required: true, pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'The slug can have no spaces or special characters']}
       - { label: "Lang", name: "lang", widget: "select", options: ['us', 'es'] }
       - { label: "Status", name: "status", widget: "hidden", default: "published"}
       - { label: "Featured", name: "featured", widget: "boolean", default: false}
       - { label: "Categories", name: "categories", widget: "list"}
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
-
-# COMPLETED: Deleted. avatar, slug, status
