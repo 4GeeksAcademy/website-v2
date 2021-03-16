@@ -4,7 +4,7 @@ backend:
   name: git-gateway
   branch: playground/next
   commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
+    create: 'Create {{collection}} “{{slug}}” ✨'
     update: 'Update {{collection}} “{{slug}}”'
     delete: 'Delete {{collection}} “{{slug}}”'
     uploadMedia: '[skip ci] Upload “{{path}}”'
