@@ -26,6 +26,7 @@ collections:
     folder: "src/data/blog"
     create: true
     #slug for markdown filename 
+    widget: "object"
     slug: "{{slug}}.{{fields.lang}}"
     editor:
       preview: true
