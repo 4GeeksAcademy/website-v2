@@ -39,6 +39,7 @@ collections:
       - { label: "Image", name: "image", widget: "image"}
       - { label: "Slug", name: "slug", widget: "string", value_field: "{{slug}}"}
       - { label: "Lang", name: "lang", widget: "select", options: ['us', 'es'] }
+      - { label: "Status", name: "status", widget: "hidden", default: "published"}
       - { label: "Featured", name: "featured", widget: "boolean", default: false}
       - { label: "Categories", name: "categories", widget: "list"}
       - { label: "Tags", name: "tags", widget: "list" }
