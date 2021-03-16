@@ -31,23 +31,100 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: "Author", name: "author", widget: "select", options: ["4GeeksAcademy", "MRiciglianoC", "alesanchezr"]}
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Excerpt", name: "excerpt", widget: "string"}
-      - { label: "Link", name: "link", widget: "string", required: false}
-      - name: "title", 
+      - name: "author" 
+          label: "Author"
+          widget: "select"
+          options: ["4GeeksAcademy", "MRiciglianoC", "alesanchezr"]
+      - name: "date" 
+          label: "Publish Date"
+          widget: "datetime"
+      - name: "excerpt" 
+          label: "Excerpt"
+          widget: "string"
+      - name: "link"
+          label: "Link"
+          widget: "string"
+          required: false
+      - name: "title"
           label: "Title"
           widget: "string"
-      - name: "slug",
+      - name: "slug"
           label: Slug
           widget: slug
           slug: 'example-{{title}}'
-      - { label: "Image", name: "image", widget: "image"}
-      - { label: "Lang", name: "lang", widget: "select", options: ['us', 'es'] }
-      - { label: "Status", name: "status", widget: "hidden", default: "published"}
-      - { label: "Featured", name: "featured", widget: "boolean", default: false}
-      - { label: "Categories", name: "categories", widget: "list"}
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - name: "image"
+          label: "Image"
+          widget: "image"
+      - name: "lang"
+          label: "Lang"
+          widget: "select"
+          options: ['us', 'es'] 
+      - name: "status" 
+          label: "Status" 
+          widget: "hidden" 
+          default: "published"
+      - name: "featured"
+          label: "Featured"
+          widget: "boolean"
+          default: false
+      - name: "categories"
+          label: "Categories"
+          widget: "list"
+      - name: "tags"
+          label: "Tags"
+          widget: "list" 
+      - name: "body"
+          label: "Body"
+          widget: "markdown" 
 
 # COMPLETED: Deleted. avatar, slug, status
+
+
+
+# backend:
+#   name: git-gateway
+#   branch: playground/next
+#   commit_messages:
+#     create: 'Create {{collection}} “{{slug}}”'
+#     update: 'Update {{collection}} “{{slug}}”'
+#     delete: 'Delete {{collection}} “{{slug}}”'
+#     uploadMedia: '[skip ci] Upload “{{path}}”'
+#     deleteMedia: '[skip ci] Delete “{{path}}”'
+
+# publish_mode: editorial_workflow
+# show_preview_links: true
+# site_url: "https://netlify-with-gatsby4blog.netlify.app"
+# display_url: "https://netlify-with-gatsby4blog.netlify.app"
+
+# # Wehere it create images
+# media_folder: "/static/images/blog"
+# # where use the images
+# public_folder: "/images/blog"
+# # --->
+
+# collections:
+#   - name: "blog"
+#     label: "Blog"
+#     folder: "src/data/blog"
+#     create: true
+#     #slug for markdown filename 
+#     widget: "object"
+#     slug: "{{slug}}.{{fields.lang}}"
+#     editor:
+#       preview: true
+#     fields:
+#       - { label: "Author", name: "author", widget: "select", options: ["4GeeksAcademy", "MRiciglianoC", "alesanchezr"]}
+#       - { label: "Publish Date", name: "date", widget: "datetime" }
+#       - { label: "Excerpt", name: "excerpt", widget: "string"}
+#       - { label: "Link", name: "link", widget: "string", required: false}
+#       - { label: "Title", name: "title", widget: "string" }
+#       - { label: "Image", name: "image", widget: "image"}
+#       - { label: "Slug", name: "slug", widget: "object", slug: '{{title}}'}
+#       - { label: "Lang", name: "lang", widget: "select", options: ['us', 'es'] }
+#       - { label: "Status", name: "status", widget: "hidden", default: "published"}
+#       - { label: "Featured", name: "featured", widget: "boolean", default: false}
+#       - { label: "Categories", name: "categories", widget: "list"}
+#       - { label: "Tags", name: "tags", widget: "list" }
+#       - { label: "Body", name: "body", widget: "markdown" }
+
+# # COMPLETED: Deleted. avatar, slug, status
