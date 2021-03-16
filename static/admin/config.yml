@@ -37,12 +37,11 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image"}
-      - { label: "Categories", name: "categories", widget: "list"}
-      - { label: "Tags", name: "tags", widget: "list" }
-        # slug/path page (widget relation is awesome)
       - { label: "Slug", name: "slug", widget: "string", value_field: "{{slug}}"}
       - { label: "Lang", name: "lang", widget: "select", options: ['us', 'es'] }
       - { label: "Featured", name: "featured", widget: "boolean", default: false}
+      - { label: "Categories", name: "categories", widget: "list"}
+      - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
 
 # COMPLETED: Deleted. avatar, slug, status
