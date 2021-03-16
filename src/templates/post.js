@@ -10,13 +10,6 @@ import twitterUser from '../utils/twitter'
 import {TwitterFollowButton} from 'react-twitter-embed';
 import "../assets/css/single-post.css"
 
-// const filtered = Object.keys(twitterUser)
-//         .filter(key => allowed.includes(key))
-//         .reduce((obj, key) => {
-//             obj = twitterUser[key];
-//             return obj;
-//         }, {});
-// <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
 export default function Template (props) {
     const {data, pageContext} = props;
     const post = props.data.markdownRemark;
