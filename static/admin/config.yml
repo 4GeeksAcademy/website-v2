@@ -35,9 +35,14 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Excerpt", name: "excerpt", widget: "string"}
       - { label: "Link", name: "link", widget: "string", required: false}
-      - { label: "Title", name: "title", widget: "string" }
+      - name: "title", 
+          label: "Title"
+          widget: "string"
+      - name: "slug",
+          label: Slug
+          widget: slug
+          slug: 'example-{{title}}'
       - { label: "Image", name: "image", widget: "image"}
-      - { label: "Slug", name: "slug", widget: "slug", slug: '{{title}}'}
       - { label: "Lang", name: "lang", widget: "select", options: ['us', 'es'] }
       - { label: "Status", name: "status", widget: "hidden", default: "published"}
       - { label: "Featured", name: "featured", widget: "boolean", default: false}
