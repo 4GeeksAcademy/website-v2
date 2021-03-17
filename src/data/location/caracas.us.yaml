@@ -5,7 +5,7 @@ meta_info:
   description: null
   image: ""
   keywords: ""
-  redirects: ["/impact-hub"]
+  redirects: ["/impact-hub", "/location/impact-hub"]
 
 seo_title: "4Geeks Academy Caracas"
 header:

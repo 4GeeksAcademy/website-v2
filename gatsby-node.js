@@ -5,6 +5,7 @@ const {createFilePath} = require(`gatsby-source-filesystem`)
 
 var redirects = [];
 var ymls = [];
+
 const saveRedirectLogs = () => {
 
     console.log('Saving redirect log');
@@ -32,7 +33,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
         const meta = getMetaFromPath({url, ...node});
 
         // add properties to the graph
-        if (node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
+        // if (node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
         if (meta) {
             createNodeField({node, name: `lang`, value: meta.lang});
             createNodeField({node, name: `slug`, value: meta.slug});
@@ -89,6 +90,7 @@ const createBlog = async ({actions, graphql}) => {
         createRedirect(args);
     }
     const postTemplate = path.resolve('src/templates/post.js');
+    const tagTemplate = path.resolve("src/templates/tags.js");
     const result = await graphql(`
     {
         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}){
@@ -121,8 +123,10 @@ const createBlog = async ({actions, graphql}) => {
     }
     `)
     if (result.errors) throw new Error(result.errors);
+    
+    const posts = result.data.allMarkdownRemark.edges;
 
-    result.data.allMarkdownRemark.edges.forEach(({node}) => {
+    posts.forEach(({node}) => {
 
         console.log(`Creating post ${node.fields.pagePath}`);
         createPage({
@@ -158,6 +162,53 @@ const createBlog = async ({actions, graphql}) => {
         });
     });
 
+    // Tag pages:
+    let tagsUs = [];
+    let tagsEs = [];
+    // Iterate through each post, putting all found tags into `tags`
+    posts.forEach(({node}) => {
+        if(node.frontmatter.tags){
+            if(node.fields.lang === "us"){
+                tagsUs = tagsUs.concat(node.frontmatter.tags);
+            } else {
+                tagsEs = tagsEs.concat(node.frontmatter.tags);
+            }
+        }
+    });
+    // Eliminate duplicate tags
+    tagsUs = tagsUs.filter((value, index) => tagsUs.indexOf(value) === index)
+    tagsEs = tagsEs.filter((value, index) => tagsEs.indexOf(value) === index)
+    // Make tag pages
+    tagsUs.forEach(tag => {
+        let file_name = `tags.us`
+        let lang = "us";
+        let type = "page";
+        createPage({
+            path: `/us/blog/tag/${tag}/`,
+            component: tagTemplate,
+            context: {
+                tag,
+                file_name,
+                lang,
+                type
+            },
+        });
+    });
+    tagsEs.forEach(tag => {
+        let file_name = `tags.es`;
+        let lang = "es";
+        let type = "page";
+        createPage({
+            path: `/es/blog/tag/${tag}/`,
+            component: tagTemplate,
+            context: {
+                tag,
+                file_name,
+                lang,
+                type
+            },
+        });
+    });
     return true;
 }
 const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields = [], extraContext = null) => {

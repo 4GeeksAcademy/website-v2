@@ -89,7 +89,7 @@ const BlogLayout = ({children, seo, context}) => {
       }
     `}
             render={(data) => {
-                console.log("DATA", data)
+
                 let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
                 let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
                 let myCustomBar = data.allCustomBarYaml.edges.find(item => item.node.fields.lang === context.lang)
@@ -107,13 +107,13 @@ const BlogLayout = ({children, seo, context}) => {
                             > ❌ Clear edit mode</button>
                         </div>}
                         <SEO {...seo} context={context} />
-                        <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
+                        {myNavbar && <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />}
                         <GlobalStyle />
                         <>
                             {children}
                         </>
-                        { showUpcoming && <CustomBar button={myCustomBar.node.bar_content} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
-                        <Footer yml={myFooter.node} />
+                        { showUpcoming && myCustomBar && <CustomBar button={myCustomBar.node.bar_content} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
+                        {myFooter && <Footer yml={myFooter.node} />}
                     </>
                 )
             }}

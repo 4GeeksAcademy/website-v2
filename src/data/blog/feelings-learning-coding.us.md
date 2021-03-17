@@ -37,7 +37,7 @@ As you start to learn the basic concepts and syntax, you start feeling the anxie
 
 In this stage no matter how hard people said it would be you feel you can achieve everything.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/1-300x224.jpg)
+![](/wp-content/uploads/2018/06/1-300x224.jpg)
 
 
 ## **Stage 2: Grasp the information: Falter & Overwhelm**
@@ -47,7 +47,7 @@ You will learn HTML, CSS, and Bootstrap and then your journey with JavaScript wi
 
 In the meanwhile, your training continues and more concepts, frameworks, technologies, languages, tools, libraries are coming into your life to say "hello" and to stay there until you master them. Anytime soon you will find a bug or maybe tons of them in your code. Practice is the only solution.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/2-300x224.jpg)
+![](/wp-content/uploads/2018/06/2-300x224.jpg)
 
 
 ## **Stage 3: Suffering self-doubts: Despair**
@@ -61,7 +61,7 @@ Don’t let your motivation vanish so soon. **You will** spend more time debuggi
 
 So, do not listen to that voice,** if you are developing software, you are a developer**.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/2-300x224.jpg)
+![](/wp-content/uploads/2018/06/2-300x224.jpg)
 
 
 ## **Stage 4: Go back. Ask questions. Look at other people's code: Optimism**
@@ -95,7 +95,7 @@ This is the point where you are probably facing two main options: you can easily
 
 Finally, you get the glory and all the efforts are worth the while. Your code does what you want it to and it looks exactly as you expected! You understand more and more about technologies and languages. You feel invincible, a bulletproof programmer...until the next time, of course.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/2-300x224.jpg)
+![](/wp-content/uploads/2018/06/2-300x224.jpg)
 
 
 ## **Stage 6: Return. Keep practicing: Motivation & Anxiety...again**
@@ -105,4 +105,4 @@ Aristotle said it: "the more you know, the more you don't know" and when you are
 
 Once you are here you never stop learning; technology advances every day and developers constantly learn new things to further adapt themselves to every change in our digital environment.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/5-300x224.jpg)
+![](/wp-content/uploads/2018/06/5-300x224.jpg)
