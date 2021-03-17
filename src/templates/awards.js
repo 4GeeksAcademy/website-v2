@@ -6,6 +6,7 @@ import {Grid, Div} from '../new_components/Sections'
 import {H1, H2, H3, H4, Title, Separator, Paragraph} from '../new_components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
 import Icon from '../new_components/Icon'
+import Badges from '../new_components/Badges'
 import {Charts} from '../new_components/Chart'
 import BaseRender from './_baseLayout'
 import Img from "gatsby-image"
@@ -30,6 +31,31 @@ const Awards = ({data, pageContext, yml}) => {
                     // alt={yml.header.alt}
                     />
                 </Div>
+            </Grid>
+            <Grid background={Colors.lightYellow} margin="0 0 58px 0" margin_md="0 0 78px 0">
+                <Badges lang={pageContext.lang} />
+            </Grid>
+            <Grid padding="17px">
+                {Array.isArray(yml.awards_list) && yml.awards_list.map((m, i) => {
+                    return (
+                        <Div key={i} flexDirection="column" flexDirection_md="row" margin="0 0 75px 0">
+                            <Img
+                                style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
+                                imgStyle={{objectFit: "contain"}}
+                                loading="eager"
+                                fadeIn={false}
+                                // alt={l.name}
+                                fluid={m.image.childImageSharp.fluid}
+                            />
+                            <H3 margin="49px 0 0 ">{m.title}</H3>
+                            <Div background="#c4c4c4" height=".5px" margin="35px 0" />
+                            {m.paragraph && m.paragraph.split('\\n').map((p, i) =>
+                                <Paragraph key={i}>{p}</Paragraph>
+                            )}
+
+                        </Div>
+                    )
+                })}
             </Grid>
             {/* <Grid columns_md="12" padding="0 17px" padding_md="0 65px 0 0 " gridGap="0" gridGap_md="11px">
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
@@ -127,6 +153,17 @@ query AwardsQuery($file_name: String!, $lang: String!) {
                     }
                   }
                 
+            }
+            awards_list{
+                image{
+                    childImageSharp {
+                      fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                title
+                paragraph
             }
             
             

@@ -6,7 +6,7 @@ import {Colors} from '../Styling'
 import Img from "gatsby-image"
 import Fragment from "../Fragment"
 
-export default ({location, lang, loading}) => {
+export default ({location, lang, loading, link}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges{
       allBadgesYaml{
@@ -69,9 +69,10 @@ export default ({location, lang, loading}) => {
           })}
 
         </Div>
-        <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">
-          <Link to="/us/badges"><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>
-        </Div>
+        {link &&
+          <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">
+            <Link to="/us/badges"><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>
+          </Div>}
       </Grid>
     </Fragment>
 
