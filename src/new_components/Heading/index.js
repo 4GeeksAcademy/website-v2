@@ -63,6 +63,7 @@ const BaseHeading = styled(Heading)`
     text-align: ${props => props.textAlign_md};
     lineHeight: ${props => props.lineHeight_md};
     display: ${props => props.display_md};
+    margin: ${props => props.margin_md};
   }
   @media  ${Devices.lg}{
 

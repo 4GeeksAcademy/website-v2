@@ -35,27 +35,30 @@ const Awards = ({data, pageContext, yml}) => {
             <Grid background={Colors.lightYellow} margin="0 0 58px 0" margin_md="0 0 78px 0">
                 <Badges lang={pageContext.lang} />
             </Grid>
-            <Grid padding="17px">
-                {Array.isArray(yml.awards_list) && yml.awards_list.map((m, i) => {
-                    return (
-                        <Div key={i} flexDirection="column" flexDirection_md="row" margin="0 0 75px 0">
-                            <Img
-                                style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
-                                imgStyle={{objectFit: "contain"}}
-                                loading="eager"
-                                fadeIn={false}
-                                // alt={l.name}
-                                fluid={m.image.childImageSharp.fluid}
-                            />
-                            <H3 margin="49px 0 0 ">{m.title}</H3>
-                            <Div background="#c4c4c4" height=".5px" margin="35px 0" />
-                            {m.paragraph && m.paragraph.split('\\n').map((p, i) =>
-                                <Paragraph key={i}>{p}</Paragraph>
-                            )}
-
-                        </Div>
-                    )
-                })}
+            <Grid padding="17px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0">
+                <Div gridArea_md="1/3/1/11" flexDirection="column"  >
+                    {Array.isArray(yml.awards_list) && yml.awards_list.map((m, i) => {
+                        return (
+                            <Div key={i} flexDirection="column" flexDirection_md="row" margin="0 0 75px 0" >
+                                <Img
+                                    style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
+                                    imgStyle={{objectFit: "contain"}}
+                                    loading="eager"
+                                    fadeIn={false}
+                                    // alt={l.name}
+                                    fluid={m.image.childImageSharp.fluid}
+                                />
+                                <Div flexDirection="column">
+                                    <H3 textAlign_md="left" margin="49px 0 0 " margin_md="0">{m.title}</H3>
+                                    <Div background="#c4c4c4" height=".5px" margin="35px 0" />
+                                    {m.paragraph && m.paragraph.split('\\n').map((p, i) =>
+                                        <Paragraph textAlign_md="left" key={i}>{p}</Paragraph>
+                                    )}
+                                </Div>
+                            </Div>
+                        )
+                    })}
+                </Div>
             </Grid>
             {/* <Grid columns_md="12" padding="0 17px" padding_md="0 65px 0 0 " gridGap="0" gridGap_md="11px">
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
