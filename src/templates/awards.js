@@ -11,11 +11,11 @@ import BaseRender from './_baseLayout'
 import Img from "gatsby-image"
 
 
-const Outcomes = ({data, pageContext, yml}) => {
+const Awards = ({data, pageContext, yml}) => {
     return (
         <>
             {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" > */}
-            <Grid height="754px" height_md="412px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" background={Colors.lightYellow}>
+            <Grid height="754px" height_md="412px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" background="rgba(199, 243, 253, 0.5)">
                 <Div flexDirection="column" justifyContent_md="start" padding="41px 0 0 0" padding_md="56px 0 0 0" gridArea_md="1/2/1/7">
                     {/* <CityH1 yml={yml} /> */}
                     <H1 textAlign="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
@@ -35,7 +35,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                     {/* <Icon icon="outcomes" /> */}
                 </Div>
             </Grid>
-            <Grid columns_md="12" padding="0 17px" padding_md="0 65px 0 0 " gridGap="0" gridGap_md="11px">
+            {/* <Grid columns_md="12" padding="0 17px" padding_md="0 65px 0 0 " gridGap="0" gridGap_md="11px">
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
                     {yml.sections.map((section, i) => {
                         return (
@@ -102,14 +102,14 @@ const Outcomes = ({data, pageContext, yml}) => {
                 <Div gridArea="1/9/1/13" display="none" display_md="flex" style={{position: "relative"}}>
                     <Div style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">right</Div>
                 </Div>
-            </Grid>
+            </Grid> */}
             {/* <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph> */}
             {/* </Container> */}
         </>
     )
 };
 export const query = graphql`
-query OutcomesQuery($file_name: String!, $lang: String!) {
+query AwardsQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
@@ -132,37 +132,8 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                   }
                 
             }
-            sections{
-                title
-                paragraph
-                stats{
-                    stat
-                    content
-                }
-                sub_sections{
-                    title
-                    content
-                    image_section{
-                        image{
-                            childImageSharp {
-                            fluid(quality: 100){
-                                ...GatsbyImageSharpFluid_withWebp
-                            }
-                            }
-                        }
-                        image_paragraph  
-                        chart
-                    }
-                }
-            }
-            charts{
-                    chart_list{
-                        title
-                        data
-                    }
-                    
-                    
-            }
+            
+            
            
             
         }
@@ -170,4 +141,4 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
     }
 }
 `;
-export default BaseRender(Outcomes);
+export default BaseRender(Awards);
