@@ -14,8 +14,8 @@ const TestimonialCard = ({highlighted, featured, height, height_md, studentRatin
         return (
             <div>
                 {[...Array(5)].map((m, i) => (
-                    <Icon key={i} style={{marginRight: "8px"}} icon="linkedin" height="12px" width="12px" stroke={Colors.white} fill="#0e76a8" />
-                    // <Icon key={i} style={{marginRight: "8px"}} icon="linkedin" height="12px" width="12px" stroke={Colors.darkGray} fill={i >= studentRating ? "transparent" : `${Colors.darkGray}`} />
+                    // <Icon key={i} style={{marginRight: "8px"}} icon="linkedin" height="12px" width="12px" stroke={Colors.white} fill="#0e76a8" />
+                    <Icon key={i} style={{marginRight: "8px"}} icon="star" height="12px" width="12px" stroke={Colors.darkGray} fill={i >= studentRating ? "transparent" : `${Colors.darkGray}`} />
                 ))}
             </div>
         );
@@ -142,29 +142,6 @@ const SuccessStories = (props) => {
     let testimonials = data.allTestimonialsYaml.edges[0].node
     return (
         <>
-
-            {/* <Grid columns="9" rows="4" gridGap="11px" height_md="813px" height="304px">
-
-        {yml.images_box.images.map((m, i) => {
-          return (
-            <Div
-              key={i}
-              borderRadius="3px"
-              gridArea={imagePositions[`${m.position}`]}
-            >
-              <StyledBackgroundSection
-                height="auto"
-                margin="0"
-                borderRadius="3px"
-                image={m.path.childImageSharp.fluid}
-                bgSize={`cover`}
-                alt={m.alt}
-              />
-            </Div>)
-        })}
-
-
-      </Grid> */}
             <Container
                 variant="fluid"
                 margin="120px auto">
@@ -239,70 +216,6 @@ const SuccessStories = (props) => {
                             )
                         })
                     }
-
-                    {/* <Div
-                        borderRadius="3px"
-                        height="378px"
-
-                        border={`1px solid ${Colors.lightGray}`}
-                        gridArea_md="1/1/4/5"
-                    >
-                    </Div>
-                    <Div
-                        borderRadius="3px"
-                        height="378px"
-
-                        border={`1px solid ${Colors.lightGray}`}
-                        gridArea_md="1/5/4/9"
-                    >
-                    </Div>
-                    <Div
-                        flexDirection="column"
-                        height="636px"
-                        background={Colors.darkYellow}
-                        borderRadius="3px"
-                        gridArea_md="1/9/6/13"
-                        padding="20px"
-                    >
-                        <Div>
-                            <Img
-                                fluid={testimonials.testimonials[0].student_thumb.childImageSharp.fluid}
-                                style={{height: "39px", minWidth: "39px", backgroundSize: `cover`}}
-                            />
-                            <Div flexDirection="column" margin="0 0 0 9px">
-                                <H3
-                                    fontSize="15px"
-                                    lineHeight="19px"
-                                    textAlign="left"
-                                >
-                                    {testimonials.testimonials[0].student_name}
-                                </H3>
-                                <H4
-                                    fontSize="14px"
-                                    lineHeight="22px"
-                                    textAlign="left"
-                                >
-                                    {testimonials.testimonials[0].short_content}
-                                </H4>
-                            </Div>
-                        </Div>
-                        <Paragraph textAlign="left" margin="49px 0 0 0">{testimonials.testimonials[0].content}</Paragraph>
-                    </Div>
-                    <Div
-                        borderRadius="3px"
-                        height="378px"
-                        height_md="507px"
-                        border={`1px solid ${Colors.lightGray}`}
-                        gridArea_md="4/1/8/9"
-                    >
-                    </Div>
-                    <Div
-                        borderRadius="3px"
-                        height="378px"
-                        border={`1px solid ${Colors.lightGray}`}
-                        gridArea_md="6/9/9/13"
-                    >
-                    </Div> */}
                 </Grid>
             </Container>
         </>

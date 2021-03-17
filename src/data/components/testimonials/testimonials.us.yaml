@@ -3,10 +3,10 @@ button_text: See all testimonials
 button_link: ""
 testimonials:
   - student_name: "Azul Botaya"
-    featured: true
+    featured: false
     highlighted: true
     testimonial_date: ""
-    rating: 5
+    rating: 4
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
     student_video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -26,7 +26,7 @@ testimonials:
       I now have all kinds of new tools I learned there along the way, 
       and there is a new comfort in knowing that I can always go back and keep growing at 4geeks.
   - student_name: "Naila Kaliyeva"
-    featured: true
+    featured: false
     highlighted: false
     testimonial_date: ""
     rating: 5
@@ -61,7 +61,7 @@ testimonials:
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
   - student_name: "Charles Fabricius"
-    featured: false
+    featured: true
     highlighted: false
     testimonial_date: ""
     rating: 5
@@ -143,7 +143,7 @@ testimonials:
       everyone.
 
   - student_name: "Fidel Rosell"
-    featured: false
+    featured: true
     highlighted: false
     testimonial_date: ""
     rating: 5
