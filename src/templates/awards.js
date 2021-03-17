@@ -50,9 +50,9 @@ const Awards = ({data, pageContext, yml}) => {
                                 />
                                 <Div flexDirection="column">
                                     <H3 textAlign_md="left" margin="49px 0 0 " margin_md="0">{m.title}</H3>
-                                    <Div background="#c4c4c4" height=".5px" margin="35px 0" />
-                                    {m.paragraph && m.paragraph.split('\\n').map((p, i) =>
-                                        <Paragraph textAlign_md="left" key={i}>{p}</Paragraph>
+                                    <Div background="#c4c4c4" height=".5px" margin="35px 0 25px 0" />
+                                    {m.paragraph.split('\n').map((p, i) =>
+                                        <Paragraph textAlign_md="left" margin="10px 0" key={i}>{p}</Paragraph>
                                     )}
                                 </Div>
                             </Div>
