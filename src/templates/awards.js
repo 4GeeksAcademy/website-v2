@@ -14,15 +14,12 @@ import Img from "gatsby-image"
 const Awards = ({data, pageContext, yml}) => {
     return (
         <>
-            {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" > */}
-            <Grid height="754px" height_md="412px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" background="rgba(199, 243, 253, 0.5)">
-                <Div flexDirection="column" justifyContent_md="start" padding="41px 0 0 0" padding_md="56px 0 0 0" gridArea_md="1/2/1/7">
+            <Grid height="754px" height_md="412px" padding="17px" padding_md="0" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" background="rgba(199, 243, 253, 0.5)">
+                <Div flexDirection="column" justifyContent_md="start" padding="41px 0 0 0" padding_md="56px 0 0 0" gridArea_md="1/3/1/7">
                     {/* <CityH1 yml={yml} /> */}
                     <H1 textAlign="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
                     <Paragraph textAlign="left" margin="26px 0" >{yml.header.paragraph}</Paragraph>
-                    {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
-                    <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
                 </Div>
                 <Div width="100%" gridArea_md="1/7/1/13" >
                     <StyledBackgroundSection
@@ -32,7 +29,6 @@ const Awards = ({data, pageContext, yml}) => {
                         bgSize={`contain`}
                     // alt={yml.header.alt}
                     />
-                    {/* <Icon icon="outcomes" /> */}
                 </Div>
             </Grid>
             {/* <Grid columns_md="12" padding="0 17px" padding_md="0 65px 0 0 " gridGap="0" gridGap_md="11px">
