@@ -1,5 +1,5 @@
 meta_info:
-  slug: "maracaibo-venezuela"
+  slug: "bootcamp-programacion-maracaibo"
   title: ""
   description: null
   image: ""
@@ -7,7 +7,7 @@ meta_info:
   unlisted: true
   position: 21
   keywords: ""
-  redirects: []
+  redirects: ["/es/location/maracaibo-venezuela"]
 
 seo_title: "4Geeks Academy Maracaibo"
 header:

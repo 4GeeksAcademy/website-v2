@@ -10,7 +10,7 @@ partners:
   footer_link: "/partners"
   images:
     - name: "Microsoft"
-      locations: all
+      #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
     - name: "Boats Group"
@@ -18,41 +18,46 @@ partners:
       image: "../../../../static/images/partner/boats.jpg"
       featured: true
     - name: "Facebook"
-      locations: all
+      #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/facebook.png"
       featured: true
+    - name: "Ebay"
+      #locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/ebay.png"
+      featured: true
     - name: "National Geographic"
-      locations: all
+      #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/natgeo.png"
       featured: true
     - name: "Evernote"
-      locations: all
+      #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/evernote.png"
       featured: true
     - name: "Ultimate Software"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ultimate.png"
       featured: true
     - name: "TCG Group"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/tcg.png"
       featured: true
     - name: "Razz"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/razz.png"
       featured: true
     - name: "Overseas"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/overseas.png"
       featured: true
     - name: "DS9"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ds9.png"
       featured: true
     - name: "Coinet"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/coinet.jpg"
       featured: true
+      
 coding:
   tagline: "IMMERSED IN THE CODING ECOSYSTEM"
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
@@ -60,24 +65,32 @@ coding:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Startup"
       image: "../../../../static/images/coding/startup.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Shell Hacks"
       image: "../../../../static/images/coding/shell-hacks.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"
       featured: false
+      #locations: ["miami-downtown"]
+
 influencers:
   tagline: "IN PARTNERSHIP WITH THE CITY'S BIGGEST INFLUENCERS"
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
@@ -85,24 +98,32 @@ influencers:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Startup"
       image: "../../../../static/images/coding/startup.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Carnet Joven"
       image: "../../../../static/images/partner/carnet-joven.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Trivu"
       image: "../../../../static/images/partner/logo_trivu.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "La Nave"
       image: "../../../../static/images/partner/la-nave.png"
       featured: false
+      #locations: ["miami-downtown"]
+
 financials:
   tagline: "FINANCIAL PARTNERS"
   sub_heading: "We are making a huge effort to make premium coding education accessible to everyone."
@@ -110,12 +131,16 @@ financials:
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Skills Fund"
       image: "../../../../static/images/skill-logo.png"
       featured: false
+      #locations: ["miami-downtown"]
     - name: "Zank"
       image: "../../../../static/images/zank.png"
       featured: false
+      #locations: ["miami-downtown"]
