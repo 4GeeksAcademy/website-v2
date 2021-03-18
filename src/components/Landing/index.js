@@ -40,8 +40,8 @@ const Side = ({video, image, heading, content, button, bullets}) => {
         className="pointer"
         alt={"4Geeks Academy Section"}
         margin="auto"
-        height="100%"
-        width="100%"
+        height={image.style ? image.style.height : "100%"}
+        width={image.style? image.style.width : "100%"}
         h_sm="250px"
         backgroundSize={`cover`}
     ></Img>
