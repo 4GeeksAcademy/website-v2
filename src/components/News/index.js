@@ -39,20 +39,21 @@ export default ({location, lang, limit, filter, autoTagLocation }) => {
     }
     `)
 
-    
-  const [news, setNews] = useState([]);
-  
-  useEffect(() => {
     const languageNews = data.allNewsYaml.edges.find(({node}) => node.fields.lang === lang);
     let locationNews = typeof (languageNews) !== "object" ? [] : languageNews.node.news;
+    const [news, setNews] = useState(locationNews.slice(0,4));
+  
+  useEffect(() => {
+        const languageNews = data.allNewsYaml.edges.find(({node}) => node.fields.lang === lang);
+        let locationNews = typeof (languageNews) !== "object" ? [] : languageNews.node.news;
         if (filter) setNews(locationNews.filter(filter))
         else if (location) setNews(locationNews.filter(n => !n.location || !location || n.location.includes(location)));
-  
-        if(!location && !filter && autoTagLocation){
+        else if(autoTagLocation){
             const store = getStorage("academy_session");
             console.log("getStorage", store)
             if(store && store.location) setNews(locationNews.filter(n => !n.location || n.location.includes(store.location.breathecode_location_slug)));
         }
+        else setNews(locationNews)
     },[])
 
   if (news.length === 0) {

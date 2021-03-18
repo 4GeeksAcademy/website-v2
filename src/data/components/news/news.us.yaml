@@ -1,11 +1,11 @@
 ## DATA TO CHANGE THE IMAGES IN THE NEWS SECTION IN THE HOME PAGE
 news:
   - name: "Newsweek"
-    location: ["downtown-miami", "online", "madrid-spain"]
+    location: ["downtown-miami", "online", "madrid-spain", "caracas-venezuela", "costa-rica"]
     url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
     image: "../../../../static/images/news/newsweek.png"
   - name: "CNN Español"
-    location: ["santiago-chile", "online", "downtown-miami"]
+    location: ["santiago-chile", "online", "downtown-miami", "caracas-venezuela"]
     url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
     image: "../../../../static/images/news/cnn-chile.png"
   - name: "NBC"
@@ -45,11 +45,11 @@ news:
     url: "https://www.emol.com/noticias/Economia/2019/02/15/937929/Pueden-ganar-1-millon-sin-tener-experiencia-y-hay-deficit-de-expertos-El-perfil-de-los-programadores-en-Chile.html"
     image: "../../../../static/images/news/logo_emol.png"
   - name: "El Nuevo Herald"
-    location: ["downtown-miami", "online"]
+    location: ["downtown-miami", "online", "caracas-venezuela", "costa-rica"]
     url: "https://www.elnuevoherald.com/noticias/finanzas/acceso-miami/article228797629.html"
     image: "../../../../static/images/news/elnuevoherald.png"
   - name: "El Universal Venezuela"
-    location: ["el-nacional"]
+    location: ["caracas-venezuela"]
     url: "https://www.eluniversal.com/estilo-de-vida/39583/primera-convocatoria-para-el-programa-de-formacion-de-software-y-emprendimiento"
     image: "../../../../static/images/news/el-universal-vzla.png"
   - name: "Duplos"
@@ -57,6 +57,6 @@ news:
     url: "https://www.duplos.cl/uno-de-los-top-10-bootcamp-de-programacion-llega-a-chile/"
     image: "../../../../static/images/news/duplos.png"
   - name: "Analitica"
-    location: ["el-nacional"]
+    location: ["caracas-venezuela"]
     url: "https://www.analitica.com/emprendimiento/noti-tips/4geeks-academy-una-academia-para-desarrolladores-web/"
     image: "../../../../static/images/news/analitica.png"
