@@ -39,15 +39,15 @@ export default ({location, lang, limit, filter, autoTagLocation }) => {
     }
     `)
 
-  const languageNews = data.allNewsYaml.edges.find(({node}) => node.fields.lang === lang);
-  let locationNews = typeof (languageNews) !== "object" ? [] : languageNews.node.news;
+    
+  const [news, setNews] = useState([]);
   
-  const [news, setNews] = useState(locationNews);
-  if (filter) setNews(locationNews.filter(filter))
-  else if (location) setNews(locationNews.filter(n => !n.location || !location || n.location.includes(location)));
-
-
-    useEffect(() => {
+  useEffect(() => {
+    const languageNews = data.allNewsYaml.edges.find(({node}) => node.fields.lang === lang);
+    let locationNews = typeof (languageNews) !== "object" ? [] : languageNews.node.news;
+        if (filter) setNews(locationNews.filter(filter))
+        else if (location) setNews(locationNews.filter(n => !n.location || !location || n.location.includes(location)));
+  
         if(!location && !filter && autoTagLocation){
             const store = getStorage("academy_session");
             console.log("getStorage", store)
@@ -55,8 +55,8 @@ export default ({location, lang, limit, filter, autoTagLocation }) => {
         }
     },[])
 
-  if (locationNews.length === 0) {
-    console.error(`No news to display for location `, location, locationNews)
+  if (news.length === 0) {
+    console.error(`No news to display for location `)
     return null;
   }
 

@@ -4,16 +4,16 @@ programs:
     bc_slug: "full-stack"
     location_bc_slug: null #<-- you can change location when user clicks on this link
     schedule: "Part-Time/Full-Time available"
-    link: "/us/course/full-stack-web-development-bootcamp-part-time"
+    link: "/us/coding-bootcamps/part-time-full-stack-developer"
   - text: "Level 2: Software Engineer"
     bc_slug: "software-engineering"
     location_bc_slug: null
     schedule: "Part-Time Only"
-    link: "/us/course/software-engineering-coding-bootcamp"
+    link: "/us/coding-bootcamps/software-engineer-bootcamp"
   - text: "Online / Remote"
     bc_slug: "full-stack"
     location_bc_slug: online
     schedule: "Part-Time/Full-Time Available"
-    link: "/us/course/full-stack-web-development-bootcamp-part-time"
+    link: "/us/coding-bootcamps/part-time-full-stack-developer"
 open_button_text: "CHOOSE PROGRAM"
 close_button_text: "Close"

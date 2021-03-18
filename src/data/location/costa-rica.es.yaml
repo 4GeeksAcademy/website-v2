@@ -1,5 +1,5 @@
 meta_info:
-  slug: "costa-rica-san-jose"
+  slug: "bootcamp-programacion-costa-rica"
   title: "Coding Bootcamp Campus Costa Rica"
   position: 5
   description: "Coding Bootcamp Campus de Costa Rica, San Jose"
@@ -7,7 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   unlisted: false
   keywords: "Coding Bootcamp Campus Costa Rica"
-  redirects: []
+  redirects: ["/es/location/costa-rica-san-jose"]
 
 seo_title: "Aprende a programar en Costa Rica"
 header:

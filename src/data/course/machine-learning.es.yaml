@@ -1,7 +1,7 @@
 meta_info:
-  slug: ingenieria-en-machine-learning
+  slug: curso-inteligencia-artificial
   title: "Estudia Machine Learning en 4Geeks Academy"
-  description: "Conviérte en un Ingeniero de Machine Learning y obtén un trabajo de clase mundial"
+  description: "Conviérte en un Ingeniero de Inteligencia Artificial y obtén un trabajo de clase mundial"
   bc_slug: "machine-learning"
   image: ""
   template: "course-machine-learning"
@@ -10,8 +10,8 @@ meta_info:
 
 header:
   tagline_top: "CONVIERTETE EN"
-  tagline: "INGENIERO EN MACHINE LEARNING"
-  sub_heading: "Únete a la revolución AI y obtén uno de los trabajos profesionales mejor pagados del mundo"
+  tagline: "INGENIERO EN INTELIGENCIA ARTIFICIAL"
+  sub_heading: "Únete a la revolución I.A. y obtén uno de los trabajos profesionales mejor pagados del mundo"
   subsub_heading: "(Ninguna experiencia de código requerida)"
   alt: ""
 
@@ -33,6 +33,7 @@ credentials:
 ## PROGRAM DETAILS
 details:
   heading: DETALLES DEL PROGRAMA
+  weeks: 16
   sub_heading: "Part Time"
   left_labels:
     description: "DESCRIPCION:"
