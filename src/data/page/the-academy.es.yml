@@ -1,9 +1,9 @@
 meta_info:
   slug: la-academia
-  title: ""
-  description: "Acerca de 4Geeks Academy"
+  title: "Sobre 4geeks Academy"
+  description: "4Geeks Academy fue fundada en 2015. Hoy somos especialistas en código con presencia internacional. 4Geeks es el lugar donde los desarrolladores crecen y prosperan."
   image: ""
-  keywords: ""
+  keywords: "Sobre 4geeks Academy"
   redirects: ["/la-academia", "/es/academia"]
 
 ## BANNER - HEADER
