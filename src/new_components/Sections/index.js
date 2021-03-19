@@ -95,6 +95,7 @@ export const Grid = styled.div`
     height: ${props => props.height};
     background: ${props => props.background};
     padding: ${props => props.padding};
+    margin: ${props => props.margin};
     
     @media ${Devices.xxs}{
         grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
@@ -117,6 +118,7 @@ export const Grid = styled.div`
         height: ${props => props.height_md};
         padding: ${props => props.padding_md};
         display: ${props => props.display_md};
+        margin: ${props => props.margin_md};
     }
     @media  ${Devices.lg}{
         grid-template-columns: repeat(${props => props.columns_lg}, 1fr);

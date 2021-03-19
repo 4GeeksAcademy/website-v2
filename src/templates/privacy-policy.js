@@ -4,7 +4,7 @@ import {Button, Colors, RoundImage} from '../components/Styling';
 import BaseRender from './_baseLayout';
 
 // new_components
-import {Divider, Div, Grid} from "../new_components/Sections";
+import {Div, Grid} from "../new_components/Sections";
 import {H1, H2, H4, Paragraph} from '../new_components/Heading'
 
 
@@ -12,8 +12,8 @@ const Privacy = (props) => {
   const {data, pageContext, yml} = props;
   return (
   <>
-    <Divider height="64px" />
     <Grid
+      margin="64px 0 0 0"
       padding="0 4%"
       gridGap="0px"
       padding_tablet="0 20%"
