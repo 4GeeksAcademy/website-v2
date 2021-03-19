@@ -1,9 +1,9 @@
 meta_info:
   slug: inicio
-  title: "4Geeks Academy - Coding Bootcamp Miami, España, Chile y Venezuela"
-  description: "El #1 part-time coding bootcamp, 1000+ graduados y soporte de por vida. Coding Bootcamp en Miami, España, Chile y Venezuela."
+  title: "Encuentra los mejores bootcamps de programación en 4Geeks Academy"
+  description: "El mejor bootcamp de programación con más de 1000 graduados y apoyo profesional de por vida. Ubicaciones de 4Geeks Academy en EE. UU., España, Chile, Venezuela y Costa Rica"
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
-  keywords: "Coding Bootcamp, Coding Bootcamp Miami, Coding Bootcamp España, Coding Bootcamp Chile, Aprende a programar, aprender programación, aprende computación"
+  keywords: "el mejor bootcamp de programación, 4geeks academy, Coding Bootcamp, Coding Bootcamp Miami, Coding Bootcamp España, Coding Bootcamp Chile, Aprende a programar, aprender programación, aprende computación"
   redirects: ["/home", "/es/home", /inicio", "/es/"]
 
 header_data:
