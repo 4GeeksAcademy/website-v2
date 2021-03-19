@@ -146,15 +146,9 @@ const Home = (props) => {
         <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       </Container>
 
-      {/* <Container variant="fluid" background={Colors.verylightGray} margin="100px auto">
-        <Container variant="fixed"> */}
+
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-      {/* </Container>
-      </Container> */}
-      {/* <Carousel>
-        <img src="https://picsum.photos/id/100/500/500" />
-        <img src="https://picsum.photos/id/200/500/500" />
-      </Carousel> */}
+
       <Container
         variant="fixed"
         margin="100px auto"

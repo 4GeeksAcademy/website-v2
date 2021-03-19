@@ -13,8 +13,8 @@ seo_title: "outcomes"
 header:
   title: "4Geeks Academy Outcomes Report"
   paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
-  image: "../../../static/images/outcomes/outcomes.png"
-
+  image: "../../../static/images/bg/outcomes.png"
+  image_alt: ""
 sections:
   - title: "Our Statement"
     paragraph: "The Coding Bootcamp industry has been growing tremendously in the last few years. Big cities are gathering the majority of the numbers, and also new tech hubs (such as Miami) are rising

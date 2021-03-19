@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Column, Row, Container, Div, Grid} from "../new_components/Sections";
+import {Column, Row, Container, Div, Grid, Header} from "../new_components/Sections";
 import {Title, H1, H2, H3, H4, H5, Paragraph} from '../new_components/Heading';
 import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling';
 import News from '../new_components/News';
@@ -14,7 +14,12 @@ const Press = (props) => {
     // let testimonials = data.allTestimonialsYaml.edges[0].node
     return (
         <>
-            <Grid height="754px" height_md="412px" columns="1" rows="1" columns_md="12" gridGap_md="11px">
+            <Header
+                seo_title={yml.seo_title}
+                title={yml.header.title}
+                paragraph={yml.header.paragraph}
+            />
+            {/* <Grid height="754px" height_md="412px" columns="1" rows="1" columns_md="12" gridGap_md="11px">
                 <Div
                     gridArea_md="1/3/1/11"
                     display="flex"
@@ -32,7 +37,7 @@ const Press = (props) => {
                     <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">{yml.header.paragraph}</Paragraph>
                     <News lang={pageContext.lang} limit={yml.news.limit} />
                 </Div>
-            </Grid>
+            </Grid> */}
         </>
     )
 };

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
-import {Colors, StyledBackgroundSection} from '../../components/Styling'
+import {Colors, StyledBackgroundSection} from '../Styling';
+import {H1, H2, Paragraph} from '../Heading';
 import {Break} from '../Responsive'
 import {Devices} from '../Responsive'
 import Fragment from "../Fragment"
@@ -304,22 +305,30 @@ export const Column = styled(Div)`
         margin: ${props => props.m_xs};
     }
 `
-export const Header = ({type, image, seoTitle, title, paragraph, height, height_md, height_tablet, background}) => {
+export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background}) => {
     return (
-        <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" background={background}>
-            <Div flexDirection="column" justifyContent_md="start" padding="41px 0 0 0" padding_md="56px 0 0 0" gridArea_md="1/3/1/7">
-                <H1 textAlign="left" margin="0 0 11px 0" color="#606060">{seoTitle}</H1>
-                <H2 textAlign="left" fontSize="50px" lineHeight="60px">{`${title}`}</H2>
-                <Paragraph textAlign="left" margin="26px 0" >{paragraph}</Paragraph>
+        <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md={image || svg_image && `12`} gridGap_md="11px" gridGap="0" background={background}>
+            <Div flexDirection="column" justifyContent_md="start" padding="41px 17px 0 17px" padding_md="56px 0 0 0" gridArea_md={image || svg_image && `1/2/1/7`}>
+                <H1 textAlign={image || svg_image && "left"} margin="0 0 11px 0" color="#606060">{seo_title}</H1>
+                <H2 textAlign={image || svg_image && "left"} fontSize="50px" lineHeight="60px">{`${title}`}</H2>
+                <Paragraph textAlign={image || svg_image && "left"} margin="26px 0" >{paragraph}</Paragraph>
+                {children}
             </Div>
-            <Div width="100%" gridArea_md="1/7/1/13" >
-                <StyledBackgroundSection
-                    height={`412px`}
-                    width="100%"
-                    image={image}
-                    bgSize={`contain`}
-                />
-            </Div>
+            {image ?
+                <Div width="100%" gridArea_md="1/7/1/13">
+                    <StyledBackgroundSection
+                        height={`412px`}
+                        width="100%"
+                        image={image}
+                        bgSize={`contain`}
+                        alt={image_alt}
+                    />
+                </Div>
+                :
+                <Div width="100%" gridArea_md="1/7/1/13" >
+                    {svg_image}
+                </Div>
+            }
         </Grid>)
 }
 export const Wrapper = (props) => {

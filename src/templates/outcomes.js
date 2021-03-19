@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
-import {Grid, Div} from '../new_components/Sections'
+import {Grid, Div, Header} from '../new_components/Sections'
 import {H1, H2, H3, H4, Title, Separator, Paragraph} from '../new_components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
 import Icon from '../new_components/Icon'
@@ -10,31 +10,48 @@ import {Charts} from '../new_components/Chart'
 import BaseRender from './_baseLayout'
 import Img from "gatsby-image"
 
+const SVGImage = () =>
+    <svg width="100%" height="412px" viewBox="0 0 360 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M49 219L120.64 121.903L152.066 156.291L264.932 42L319 105.046" stroke="#0097CD" stroke-width="2" stroke-linecap="round" />
+        <path d="M21 58V228H344" stroke="#A4A4A4" stroke-linecap="round" />
+        <ellipse cx="38.5" cy="160" rx="39.5" ry="39" fill="#FFB718" />
+        <circle cx="153.5" cy="115.5" r="9.5" fill="#FFB718" />
+        <ellipse cx="120" cy="66.5" rx="18" ry="18.5" fill="#0097CD" />
+        <ellipse cx="213.5" cy="35" rx="6.5" ry="6" fill="#FFB718" fill-opacity="0.2" />
+        <circle cx="235" cy="72" r="6" fill="#FFB718" fill-opacity="0.2" />
+        <ellipse cx="287.5" cy="48.5" rx="5.5" ry="5.5" transform="rotate(90 287.5 48.5)" fill="#FFB718" fill-opacity="0.2" />
+        <ellipse cx="213.5" cy="58.5" rx="6.5" ry="5.5" fill="black" />
+        <ellipse cx="235" cy="95.5" rx="6" ry="6.5" fill="black" />
+        <ellipse cx="337.5" cy="216" rx="6" ry="6.5" transform="rotate(90 337.5 216)" fill="black" />
+        <circle cx="213.5" cy="95.5" r="6.5" fill="#FFB718" fill-opacity="0.2" />
+        <ellipse cx="235" cy="124.5" rx="6" ry="5.5" fill="#FFB718" fill-opacity="0.2" />
+        <ellipse cx="235" cy="48.5" rx="5.5" ry="6" transform="rotate(90 235 48.5)" fill="#FFB718" fill-opacity="0.2" />
+        <ellipse cx="213.5" cy="124.5" rx="6.5" ry="5.5" fill="#FFB718" fill-opacity="0.2" />
+        <circle cx="235" cy="150" r="6" fill="#FFB718" fill-opacity="0.2" />
+        <ellipse cx="213.5" cy="193.5" rx="6.5" ry="5.5" fill="#0097CD" />
+        <circle cx="235" cy="216" r="6" fill="#FFB718" fill-opacity="0.2" />
+        <rect x="268" y="81" width="52" height="7" rx="3.5" transform="rotate(90 268 81)" fill="black" />
+        <rect x="186" y="170" width="52" height="6" rx="3" transform="rotate(90 186 170)" fill="black" />
+        <rect x="122" y="170" width="52" height="7" rx="3.5" transform="rotate(90 122 170)" fill="black" />
+        <rect x="268" y="142" width="80" height="7" rx="3.5" transform="rotate(90 268 142)" fill="black" />
+        <rect x="292" y="142" width="80" height="7" rx="3.5" transform="rotate(90 292 142)" fill="black" />
+        <rect x="317" y="178" width="44" height="8" rx="4" transform="rotate(90 317 178)" fill="black" />
+        <circle cx="398.5" cy="96.5" r="96.5" fill="#FFB718" fill-opacity="0.2" />
+        <ellipse cx="264" cy="41.5" rx="9" ry="9.5" fill="#CD0000" />
+    </svg>
 
 const Outcomes = ({data, pageContext, yml}) => {
     return (
         <>
             {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" > */}
-            <Grid height="754px" height_md="412px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" background={Colors.lightYellow}>
-                <Div flexDirection="column" justifyContent_md="start" padding="41px 0 0 0" padding_md="56px 0 0 0" gridArea_md="1/2/1/7">
-                    {/* <CityH1 yml={yml} /> */}
-                    <H1 textAlign="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
-                    <H2 textAlign="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
-                    <Paragraph textAlign="left" margin="26px 0" >{yml.header.paragraph}</Paragraph>
-                    {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
-                    <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
-                </Div>
-                <Div width="100%" gridArea_md="1/7/1/13" >
-                    <StyledBackgroundSection
-                        height={`412px`}
-                        width="100%"
-                        image={yml.header.image && yml.header.image.childImageSharp.fluid}
-                        bgSize={`contain`}
-                    // alt={yml.header.alt}
-                    />
-                    {/* <Icon icon="outcomes" /> */}
-                </Div>
-            </Grid>
+            <Header
+                seo_title={yml.seo_title}
+                title={yml.header.title}
+                paragraph={yml.header.paragraph}
+                svg_image={<SVGImage />}
+                background={Colors.lightYellow}
+            />
+
             <Grid columns_md="12" padding="0 17px" padding_md="0 65px 0 0 " gridGap="0" gridGap_md="11px">
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
                     {yml.sections.map((section, i) => {
