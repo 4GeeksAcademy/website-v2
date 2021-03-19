@@ -3,11 +3,10 @@ import {Colors} from '../components/Styling'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session'
 
-// Added new_components
 import Link from 'gatsby-link'
 import Icon from '../new_components/Icon'
 import Card from '../new_components/Card'
-import {Row, Column, Divider, Div, Grid} from '../new_components/Sections'
+import {Divider, Div, Grid} from '../new_components/Sections'
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
 
 const Faq = (props) => {
