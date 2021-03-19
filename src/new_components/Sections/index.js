@@ -304,7 +304,24 @@ export const Column = styled(Div)`
         margin: ${props => props.m_xs};
     }
 `
-
+export const Header = ({type, image, seoTitle, title, paragraph, height, height_md, height_tablet, background}) => {
+    return (
+        <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" background={background}>
+            <Div flexDirection="column" justifyContent_md="start" padding="41px 0 0 0" padding_md="56px 0 0 0" gridArea_md="1/3/1/7">
+                <H1 textAlign="left" margin="0 0 11px 0" color="#606060">{seoTitle}</H1>
+                <H2 textAlign="left" fontSize="50px" lineHeight="60px">{`${title}`}</H2>
+                <Paragraph textAlign="left" margin="26px 0" >{paragraph}</Paragraph>
+            </Div>
+            <Div width="100%" gridArea_md="1/7/1/13" >
+                <StyledBackgroundSection
+                    height={`412px`}
+                    width="100%"
+                    image={image}
+                    bgSize={`contain`}
+                />
+            </Div>
+        </Grid>)
+}
 export const Wrapper = (props) => {
     return <Container
         github={props.github}

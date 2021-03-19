@@ -16,7 +16,7 @@ const Outcomes = ({data, pageContext, yml}) => {
         <>
             {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" > */}
             <Grid height="754px" height_md="412px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" background={Colors.lightYellow}>
-                <Div flexDirection="column" justifyContent_md="start" padding="41px 0 0 0" padding_md="56px 0 0 0" gridArea_md="1/3/1/7">
+                <Div flexDirection="column" justifyContent_md="start" padding="41px 0 0 0" padding_md="56px 0 0 0" gridArea_md="1/2/1/7">
                     {/* <CityH1 yml={yml} /> */}
                     <H1 textAlign="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
