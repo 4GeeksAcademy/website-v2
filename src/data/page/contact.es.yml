@@ -1,9 +1,9 @@
 meta_info:
-  slug: contáctanos
-  title: ""
-  description: null
+  slug: contacto
+  title: "Contacto 4geeks Academy"
+  description: "Contacta con nosotros, respondemos cada pregunta o comentario."
   image: null
-  keywords: ""
+  keywords: "Contacto 4geeks Academy"
   redirects: ["/contactanos", "/contacto"]
 
 ## CONTACT-US HEADING
