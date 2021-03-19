@@ -171,3 +171,13 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
 }
 `;
 export default BaseRender(Outcomes);
+
+
+
+// image{
+//     childImageSharp {
+//       fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+//         ...GatsbyImageSharpFluid_withWebp
+//       }
+//     }
+//   }
