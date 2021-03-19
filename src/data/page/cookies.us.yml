@@ -1,9 +1,9 @@
 meta_info:
   slug: cookies
   title: "Cookies at 4Geeks Academy"
-  description: ""
+  description: "4Geeks Academy cookies policy"
   image: null
-  keywords: ""
+  keywords: "Cookies at 4Geeks Academy"
   redirects: []
 header:
   tagline: Cookies for 4Geeks Academy
@@ -11,5 +11,127 @@ header:
   image: ../../../static/images/bg/companies-bg.jpg
   alt: ""
 sections:
-  - title: ""
-    text: ""
+  - title: "INFORMATION ABOUT COOKIES"
+    text: "Due to the entry into force of the reference modification of the "Law of Services of the Information Society" (LSSICE) established by Royal Decree 13/2012, it is mandatory to obtain the express consent of the user of all web pages that use dispensable cookies, before the user navigates through them."
+  - title: "¿WHAT ARE COOKIES?"
+    text: "Cookies and other similar technologies such as local shared objects, flash cookies or pixels, are tools used by Web servers to store and retrieve information about their visitors, as well as to offer a correct operation of the site.
+    
+    Through the use of these devices, the Web server is allowed to remember some data concerning the user, such as their preferences for viewing the pages of that server, name and password, products that interest them the most, etc."
+  - title: "COOKIES AFFECTED BY THE REGULATIONS AND EXCEPTED COOKIES"
+    text: "According to the EU directive, the cookies that require the informed consent of the user are analytical cookies and those for advertising and affiliation, excepting those of a technical nature and those necessary for the operation of the website or the provision of services. expressly requested by the user."
+  - title: "¿WHAT TYPES OF COOKIES EXIST?"
+    text: "Regarding the types of cookies, there are five large groups:
+      
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Analytical cookies: collect information on the use made of the website.</li>
+      <li class='li-privacy-link' >Social cookies: are those necessary for external social networks.</li>
+      <li class='li-privacy-link' >Affiliate cookies: they allow you to track visits from other websites, with which the website establishes an affiliation contract (affiliate companies).</li>
+      <li class='li-privacy-link' >Advertising and behavioral cookies: they collect information about the user's preferences and personal choices (retargeting).</li>
+      <li class='li-privacy-link' >Technical and functional cookies: they are strictly necessary for the use of the website and for the provision of the contracted service.</li>
+    </ul>
+      "
+  - title: "COOKIES USED ON THIS WEBSITE"
+    text: "List the names of cookies, type, owner, function and expiration, for example: 
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>PHPSESSID:</span> Technical and strictly necessary cookie that contains the identifier of the session. It is removed when the browser is closed. </li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_lang:</span> Technical and strictly necessary cookie that contains the language of the session. It is removed when the browser is closed. </li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>ac_cookies:</span> Technical and strictly necessary cookie that contains the value of whether the installation of cookies has been accepted. It expires in 1 year from the last update.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_ga:</span> Google Analytics cookie that enables the unique visit control function. The first time a user enters the website through a browser, this cookie will be installed. When this user re-enters the web with the same browser, the cookie will consider that it is the same user. Only in the event that the user changes their browser, it will be considered another user. It expires 2 years after the last update.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_gat:</span> This cookie is associated with Google Analytics Universal. It is used to limit the request speed - limiting the collection of data on high-traffic sites. Expires after 10 minutes.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utma:</span> Google Analytics cookie that records the date of the first and last time the user visited the website. It expires 2 years after the last update.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmb:</span> Google Analytics cookie that records the time of arrival on the website. It expires 30 minutes from the last update.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmc:</span> Google Analytics cookie used for interoperability with the urchin.js tracking code. It is removed when the browser is closed.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmt:</span> Google Analytics cookie. This cookie is used to process the type of request requested by the user. It expires at the end of the session.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmv:</span> Google Analytics cookie. This cookie is used to segment demographic data. It expires at the end of the session.</li>
+      <li class='li-privacy-link' ><span class='bold-privacy-text'>_utmz:</span> Google Analytics cookie that stores the traffic source or a campaign to explain how the user reached the website. It expires 6 months after the last update.</li>
+    </ul>
+    
+    "
+  - title: "REVOCATION OF CONSENT TO INSTALL COOKIES"
+    text: "HOW TO DELETE COOKIES FROM THE BROWSER
+    
+    <span class='bold-privacy-text'>CHROME</span>
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Select the Tools icon </li>
+      <li class='li-privacy-link' >Click on Settings.</li>
+      <li class='li-privacy-link' >Click Show Advanced Settings.</li>
+      <li class='li-privacy-link' >
+        In the 'Privacy' section click on Content Settings.
+        <ol class='ol-cookies'>
+          <li class='li-privacy-lin' >Delete cookies: Click on All cookies and site data…</li>
+          <li class='li-privacy-lin' >Do not allow cookies to be stored.</li>
+        </ol>
+      </li>
+      <li class='li-privacy-link' >Click Clear browsing data (empty Cache).</li>
+      <li class='li-privacy-link' >Close and restart the browser.</li>
+    </ul>
+    
+    For more information about Chrome click here: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='http://support.google.com/chrome/answer/95647?hl=es'>http://support.google.com/chrome/answer/95647?hl=es</a>
+    
+    <span class='bold-privacy-text'>Internet Explorer. Version 11</span>
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Select Tools | Internet Options.</li>
+      <li class='li-privacy-link' >Click the General tab.</li>
+      <li class='li-privacy-link' >In the 'Browsing history' section, click Delete browsing history on exit.</li>
+      <li class='li-privacy-link' >Select Delete files.</li>
+      <li class='li-privacy-link' >Select Delete cookies.</li>
+      <li class='li-privacy-link' >Click Delete.</li>
+      <li class='li-privacy-link' >Click OK.</li>
+      <li class='li-privacy-link' >Close and restart the browser.</li>
+    </ul>
+    
+    For more information about Internet Explorer, click here: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='http://windows.microsoft.com/es-419/windows7/how-to-manage-cookies-in-internet-explorer-9'>http://windows.microsoft.com/es-419/windows7/how-to-manage-cookies-in-internet-explorer-9</a>
+    
+    <span class='bold-privacy-text'>Firefox. Version 18</span>
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Select Firefox | History | Clear recent history.</li>
+      <li class='li-privacy-link' >Next to 'Details', click the down arrow.</li>
+      <li class='li-privacy-link' >Select the following check boxes: Cookies, Cache, Active session starts</li>
+      <li class='li-privacy-link' >Using the 'Time interval to erase' in the drop-down menu, select All.</li>
+      <li class='li-privacy-link' >Click Clear Now.</li>
+      <li class='li-privacy-link' >Close and restart the browser.</li>
+    </ul>
+    
+    You can accept or reject cookies individually in Firefox Preferences, in the History section available in Tools> Options> Privacy.
+    
+    For more information about Mozilla Firefox, click here: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='https://www.mozilla.org/es-ES/privacy/websites/#cookies'>https://www.mozilla.org/es-ES/privacy/websites/#cookies</a>
+    
+    <span class='bold-privacy-text'>Safari Version 5.1</span>
+    
+    <ul class='ul-privacy'>
+      <li class='li-privacy-link' >Select the Safari / Edit icon | Restore Safari.</li>
+      <li class='li-privacy-link' >Select the following check boxes: Clear history, Delete all website data</li>
+      <li class='li-privacy-link' >Click Reset.</li>
+      <li class='li-privacy-link' >Close and restart the browser.</li>
+    </ul>
+    
+    For more information about Safari click here: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='http://support.apple.com/kb/PH5042'>http://support.apple.com/kb/PH5042</a>
+    
+    <span class='bold-privacy-text'>Opera</span>
+    
+    Options - Advanced - Cookies.
+    
+    The cookie options control the way in which Opera handles them and therefore their acceptance or rejection.
+    
+    For more information about Opera click here: 
+    
+    <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='http://help.opera.com/Linux/10.60/es-ES/cookies.html'>http://help.opera.com/Linux/10.60/es-ES/cookies.html</a>
+    
+    <span class='bold-privacy-text'>Other browsers</span>
+    
+    Consult the documentation of the browser you have installed.
+    "
+
+
