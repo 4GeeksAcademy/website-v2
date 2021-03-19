@@ -1,10 +1,10 @@
 meta_info:
   slug: index
   canonical: "/"
-  title: "Miami Coding Bootcamp, Madrid España, Santiago de Chile"
-  description: "The #1 Top coding bootcamp with over 1,000 graduates and life-long career support. USA, Spain, Chile, Venezuela and Costa Rica Coding Bootcamp."
+  title: "Find the best coding bootcamps in 4Geeks Academy"
+  description: "The best coding bootcamp with over 1,000 graduates and life-long career support. 4Geeks Academy locations in USA, Spain, Chile, Venezuela and Costa Rica"
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
-  keywords: "Coding Bootcamp Miami, Learn to code miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa"
+  keywords: "best coding bootcamps, 4Geeks Academy, Coding Bootcamp Miami, Learn to code miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa"
   redirects: ["/home", "/us/home"]
 header_data:
   tagline: Coding Bootcamp
