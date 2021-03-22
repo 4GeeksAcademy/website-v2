@@ -4,13 +4,13 @@ import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
 import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'
+import ProgramDetails from '../new_components/ProgramDetails';
+import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
 import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
 import Icon from '../components/Icon'
 import GeeksVsOthers from '../components/GeeksVsOthers';
-import ProgramDetails from '../components/ProgramDetails';
-import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import Badges from '../components/Badges';
 import PricesAndPayment from '../components/PricesAndPayment';
 import LeadForm from '../components/LeadForm';
@@ -20,9 +20,11 @@ import Modal from '../components/Modal';
 const Program = ({data, pageContext, yml}) => {
 
   const {session} = React.useContext(SessionContext);
-
+  const courseDetails = data.allCourseYaml.edges[0].node;
+  console.log("coursedetails", courseDetails)
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+  const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
@@ -44,6 +46,9 @@ const Program = ({data, pageContext, yml}) => {
       </Div>
       <Badges lang={pageContext.lang} />
     </Header>
+
+    <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+    <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     {/* <WrapperImage
       github="/course"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
@@ -128,7 +133,7 @@ const Program = ({data, pageContext, yml}) => {
       />
     </Wrapper> */}
 
-    <Wrapper margin="50px 0 0 0">
+    {/* <Wrapper margin="50px 0 0 0">
       <Title
         size="10"
         type="h2"
@@ -139,7 +144,7 @@ const Program = ({data, pageContext, yml}) => {
       />
       <ProgramDetails details={yml.details} lang={pageContext.lang} />
       <ProgramDetailsMobile details={yml.details} lang={pageContext.lang} />
-    </Wrapper>
+    </Wrapper> */}
 
     <Div
       display="block"
@@ -268,6 +273,14 @@ export const query = graphql`
               paragraph
             }
             details {
+              about{
+                title
+                sub_title
+                list{
+                  label
+                  content
+                }
+              }
               heading
               sub_heading
               left_labels{
