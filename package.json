@@ -33,7 +33,6 @@
     "clean": "gatsby clean",
     "cy:run": "cypress run",
     "cy:dev": "cypress open"
-
   },
   "dependencies": {
     "@loadable/component": "^5.13.2",

@@ -156,6 +156,7 @@ const Apply = (props) => {
                                 <Row display="flex">
                                     <Column size="6" size_sm="12" paddingRight="10px" p_sm="0"  paddingLeft="0">
                                         <Input
+                                            data-cy="first_name"
                                             type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                             errorMsg="Please specify a valid first name"
                                             required
@@ -169,7 +170,9 @@ const Apply = (props) => {
                                         />
                                     </Column>
                                     <Column size="6" size_sm="12" paddingRight="0"  paddingLeft="0">
-                                        <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
+                                        <Input
+                                            data-cy="last_name" 
+                                            type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                             errorMsg="Please specify a valid last name"
                                             required
                                             onChange={(value, valid) => {
@@ -183,7 +186,9 @@ const Apply = (props) => {
                                     </Column>
                                 </Row>
                                 <Row display="flex" height="50px">
-                                    <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
+                                    <Input 
+                                        data-cy="email"
+                                        type="email" className="form-control" placeholder={yml.left.form_section.email}
                                         errorMsg="Please specify a valid email"
                                         required
                                         onChange={(value, valid) => {
@@ -197,6 +202,7 @@ const Apply = (props) => {
                                 </Row>
                                 <Row display="flex" height="50px">
                                     <Input
+                                        data-cy="phone"
                                         type="phone" className="form-control" placeholder={yml.left.form_section.phone}
                                         errorMsg="Please specify a valid phone number"
                                         required
@@ -209,7 +215,9 @@ const Apply = (props) => {
                                         value={formData.phone.value}
                                     />
                                 </Row>
-                                <Row display="flex" height="50px">
+                                <Row 
+                                data-cy="dropdown_program_selector"
+                                display="flex" height="50px">
                                     {console.log("default", formData.course.value)}
                                     <SelectRaw 
                                         options={programs}
@@ -258,7 +266,8 @@ const Apply = (props) => {
                                 }
                                 <Row display="flex">
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
-                                    <Button type="submit"
+                                    <Button 
+                                        type="submit"
                                         width="150px"
                                         transform="translateY(-15px)" color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue} textColor={Colors.white}
                                         margin="2rem 0" padding=".45rem 3rem"

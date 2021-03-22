@@ -1,12 +1,11 @@
-/// <reference types="cypress" />
-
 context("Contact Form", () => {
   // Regex validator
   const regex = {
     text: /^.+$/,
     number: /^[0-9 ]*$/,
     names: /^[a-zA-Z(.)(,) ]*$/,
-    email: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/
+    email: /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!mailinator|mailinator2|leonvero|ichkoch|naymeo|naymio)[a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])+$/,
+    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{9,10})$/
   };
 
   it('Must visit the Contact with path "/us/contact"', () => {
