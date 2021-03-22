@@ -21,7 +21,6 @@ const Program = ({data, pageContext, yml}) => {
 
   const {session} = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
-  console.log("coursedetails", courseDetails)
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
