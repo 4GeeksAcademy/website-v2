@@ -1,0 +1,10 @@
+{
+  "user": {
+    "firstName": "Tomas",
+    "lastName": "Gomez"
+  },
+  "robot": {
+    "firstName": "#nro123",
+    "lastName": "$01in"
+  }
+}

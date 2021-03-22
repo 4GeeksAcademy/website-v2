@@ -129,6 +129,7 @@ const Contact = (props) => {
                                 </Row>
                                 <Row display="flex" height="50px">
                                     <Input 
+                                        data-cy="first_name"
                                         borderRadius="3px"
                                         border="1px solid #A4A4A4"
                                         margin="0"
@@ -148,6 +149,7 @@ const Contact = (props) => {
                                 </Row>
                                 <Row display="flex" height="50px">
                                     <Input 
+                                        data-cy="last_name"
                                         borderRadius="3px"
                                         border="1px solid #A4A4A4"
                                         margin="0"
@@ -167,6 +169,7 @@ const Contact = (props) => {
                                 </Row>
                                 <Row display="flex" height="50px" margin="0 0 10px 0">
                                     <Input 
+                                        data-cy="email"
                                         borderRadius="3px"
                                         border="1px solid #A4A4A4"
                                         margin="0"
@@ -186,6 +189,7 @@ const Contact = (props) => {
                                 </Row>
                                 <Row display="flex" height="200px">
                                     <TextArea 
+                                        data-cy="comment"
                                         borderRadius="3px"
                                         border="1px solid #A4A4A4"
                                         bgColor={Colors.white}

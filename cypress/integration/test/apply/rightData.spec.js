@@ -6,14 +6,14 @@ context("Regex test form", () => {
     });
   });
 
-  it("Call the form and verify that the hint for empty inputs are correct", () => {
+  it("Call the form and fill with right values", () => {
     // It gets data in fixtures folder to fill form
-    cy.fixture("/contact/fillContact.json").then((data) => {
-      const { name, lastName } = data.applyValues.rightValues;
+    cy.fixture("/apply/names.json").then((data) => {
+      const { firstName, lastName } = data.user;
 
       cy.get("[data-cy=first_name]")
-        .should("have.css", "border-color", "rgb(0, 0, 0)") // select the form
-        .type(name);
+        .should("have.css", "border-color", "rgb(0, 0, 0)") // focus the form
+        .type(firstName);
 
       cy.get("[data-cy=last_name]")
         .should("have.css", "border-color", "rgb(0, 0, 0)")
@@ -22,22 +22,27 @@ context("Regex test form", () => {
       cy.get("[data-cy=dropdown_program_selector]").click().wait(500); // Gets Drowpdown of Courses
       cy.get("#react-select-2-option-0").click(); // Selects Level 1 with position 0
     });
+  });
 
-    // Get the list of right emails and fill it
-    cy.fixture("/contact/email/right.json").each((right) => {
+  it("Fill the input fields with correct values", () => {
+    cy.fixture("/apply/form_values/right.json").each((right) => {
       cy.get("[data-cy=email]")
         .should("have.css", "border-color", "rgb(0, 0, 0)").wait(500)
         .clear()
         .type(right.email);
-    });
 
-    // Get the list of right phone numbers and fill it
-    cy.fixture("/contact/phone/right.json").each((right) => {
       cy.get("[data-cy=phone]")
         .should("have.css", "border-color", "rgb(0, 0, 0)").wait(500)
         .clear()
         .type(right.phone);
     });
+  })
+  
+  it("Should submit the form and redirect to thank-you page", () => {
     cy.get('Button[type="submit"]').contains("APPLY").click().wait(500);
-  });
+    cy.location().should((location) => {
+      expect(location.pathname).to.eq("/us/thank-you");
+    });
+  })
+
 });

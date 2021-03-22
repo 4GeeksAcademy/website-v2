@@ -6,36 +6,39 @@ context("Regex test form", () => {
     });
   });
 
-  it("Call the form and verify that the regex is rejecting wrong values", () => {
+  it("Call the form and fill with wrong values", () => {
     // It gets data in fixtures folder to fill form
-    cy.fixture("/contact/fillContact.json").then((data) => {
-      const { name, lastName, email } = data.applyValues.wrongValues;
+    cy.fixture("/apply/names.json").then((data) => {
+      const { firstName, lastName } = data.robot;
 
-      cy.get("[data-cy=first_name]").type(name);
+      cy.get("[data-cy=first_name]").type(firstName);
 
       cy.get("[data-cy=last_name]").type(lastName);
+    });    
+  });
 
-      cy.get("[data-cy=dropdown_program_selector]").click().wait(500); // Gets Drowpdown of Courses
-      cy.get("#react-select-2-option-1").click(); // Selects Level 2 with option 1
-    });
-
-    // Get the list of wrong emails and fill it
-    cy.fixture("/contact/email/wrong.json").each((wrong) => {
+  it("Fill the input fields with wrong values", () => {
+    cy.fixture("/apply/form_values/wrong.json").each((wrong) => {
       cy.get("[data-cy=email]")
         .clear()
         .type(wrong.email)
         .should("have.css", "background-color", "rgb(255, 205, 201)"); // reject input color
-
-      // Get the list of wrong phone numbers and fill it
-    });
-    cy.fixture("/contact/phone/wrong.json").each((wrong) => {
+      cy.get("span").contains("Please specify a valid email");
+  
       cy.get("[data-cy=phone]")
         .clear()
         .type(wrong.phone)
         .should("have.css", "background-color", "rgb(255, 205, 201)");
       cy.get("span").contains("Please specify a valid phone number");
     });
+  })
 
+  it("Select Program level 2", () => {
+    cy.get("[data-cy=dropdown_program_selector]").click().wait(500); // Gets Drowpdown of Courses
+    cy.get("#react-select-2-option-1").click(); // Selects Level with option 1
+  })
+  it("Shouldn't submit the form", () => {
     cy.get('Button[type="submit"]').contains("APPLY").click().wait(500);
-  });
+    cy.get(":nth-child(2) > .Form__Alert-iZcfNU") // Alert after submit
+  })
 });
