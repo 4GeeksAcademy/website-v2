@@ -13,6 +13,7 @@ const ChooseYourProgram = (props) => {
     return (
         <Grid columns_md="3">
             {Array.isArray(props.programs) && props.programs.map((program, i) => {
+                console.log("program", program)
                 return (
                     <Div
                         key={i}
@@ -37,7 +38,7 @@ const ChooseYourProgram = (props) => {
                             display="flex"
                             justifyContent="end"
                         >
-                            <Icon className="choose-your-program-icon" icon={program.icon} height="40px" width="52px" />
+                            <Icon className="choose-your-program-icon" icon="fullstack" height="40px" width="52px" />
                         </Div>
                         <Div
                             display="flex"
