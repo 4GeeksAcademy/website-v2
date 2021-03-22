@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
 import {GeekCard} from '../components/Card'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
-import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
-import {Button, Colors} from '../components/Styling'
+import {Container, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
+import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
+import {Button, Colors} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
@@ -11,7 +11,7 @@ import Icon from '../components/Icon'
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
-import WhoIsHiring from '../components/WhoIsHiring';
+import Badges from '../components/Badges';
 import PricesAndPayment from '../components/PricesAndPayment';
 import LeadForm from '../components/LeadForm';
 import Modal from '../components/Modal';
@@ -28,7 +28,23 @@ const Program = ({data, pageContext, yml}) => {
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   return (<>
-    <WrapperImage
+
+    <Header
+      seo_title={yml.seo_title}
+      title={yml.header.title}
+      paragraph={yml.header.paragraph}
+    >
+      <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+        <Link to={yml.button.apply_button_link}
+          state={{course: yml.meta_info.bc_slug}}
+        >
+          <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+        </Link>
+        <Button outline width="200px" color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+      </Div>
+      <Badges lang={pageContext.lang} />
+    </Header>
+    {/* <WrapperImage
       github="/course"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       backgroundPosition={yml.header.image_position}
@@ -94,10 +110,10 @@ const Program = ({data, pageContext, yml}) => {
         />
       </Modal>
       <Divider height="100px" md="0px" />
-    </WrapperImage>
+    </WrapperImage> */}
 
 
-    <Wrapper
+    {/* <Wrapper
       margin="100px"
       border="top">
       <Title
@@ -110,7 +126,7 @@ const Program = ({data, pageContext, yml}) => {
       <WhoIsHiring
         images={yml.potential_companies.companies}
       />
-    </Wrapper>
+    </Wrapper> */}
 
     <Wrapper margin="50px 0 0 0">
       <Title
@@ -215,21 +231,20 @@ export const query = graphql`
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            header{
-              tagline_top
-              tagline
-              sub_heading
-              subsub_heading
-              image_position
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 1200){
-                    ...GatsbyImageSharpFluid_withWebp
+          seo_title
+          header{
+              title
+              paragraph
+              image_alt
+              image{
+                  childImageSharp {
+                    fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
                   }
                 }
-              }
-              alt
-            }
+              
+          }
             button{
               syllabus_heading
               syllabus_motivation

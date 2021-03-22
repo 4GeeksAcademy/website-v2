@@ -307,10 +307,10 @@ export const Column = styled(Div)`
 `
 export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background}) => {
     return (
-        <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md={image || svg_image && `12`} gridGap_md="11px" gridGap="0" background={background}>
-            <Div flexDirection="column" justifyContent_md="start" padding="41px 17px 0 17px" padding_md="56px 0 0 0" gridArea_md={image || svg_image && `1/2/1/7`}>
+        <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md={`12`} gridGap_md="11px" gridGap="0" background={background}>
+            <Div flexDirection="column" justifyContent_md="start" padding="41px 17px 0 17px" padding_md="56px 0 0 0" gridArea_md={image || svg_image ? `1/2/1/7` : `1/4/1/10`}>
                 <H1 textAlign={image || svg_image && "left"} margin="0 0 11px 0" color="#606060">{seo_title}</H1>
-                <H2 textAlign={image || svg_image && "left"} fontSize="50px" lineHeight="60px">{`${title}`}</H2>
+                <H2 textAlign={image || svg_image && "left"} fontSize="50px" lineHeight="60px">{`< ${title} >`}</H2>
                 <Paragraph textAlign={image || svg_image && "left"} margin="26px 0" >{paragraph}</Paragraph>
                 {children}
             </Div>
