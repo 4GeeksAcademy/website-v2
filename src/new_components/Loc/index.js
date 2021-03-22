@@ -22,8 +22,9 @@ const Loc = (props) => {
     getData();
   }, []);
   let loc = props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
+  console.log("LOCSSS: ", loc)
   return (
-    <Grid columns="2" gridGap="0" >
+    <Grid columns="2" columns_md="3" gridGap="0" >
       {loc != null &&
         loc.map((item, index) => {
           return (
@@ -34,7 +35,7 @@ const Loc = (props) => {
               justifyContent="between"
               height="207px"
               padding="24px"
-              background={index === 1 && Colors.yellow}
+              background={Colors.white}
             >
               <H3
                 textAlign="left"

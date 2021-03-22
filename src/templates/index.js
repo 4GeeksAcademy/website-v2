@@ -21,6 +21,7 @@ import About4Geeks from '../new_components/About4Geeks';
 import OurPartners from '../new_components/OurPartners';
 import ChooseYourProgram from '../new_components/ChooseYourProgram';
 import Testimonials from '../new_components/Testimonials';
+import Carousel from '../new_components/Carousel';
 import Card from '../components/Card';
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import {WrapperCustom} from '../new_components/Sections';
@@ -75,28 +76,28 @@ const Home = (props) => {
 
   return (
     <>
-      <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" >
-        <Grid columns_md="2" >
-          <Div flexDirection="column" justifyContent_md="start" padding_md="70px 0 0 0">
-            <CityH1 yml={yml} />
-            {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
-            <H2 textAlign_md="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
-            <Paragraph textAlign_md="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
-            {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
+
+      <Grid height="754px" height_md="623px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" margin_md="0 171px">
+        <Div gridArea_md="1/1/1/5" flexDirection="column" justifyContent_md="start" padding_md="70px 0 0 0">
+          <CityH1 yml={yml} />
+          {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
+          <H2 textAlign_md="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
+          <Paragraph textAlign_md="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
+          {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
                     <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
-            <ChooseProgram
-              right="15px"
-              top="40px"
-              // margin="40px 0"
-              textAlign="center"
-              textAlign_md="left"
-              programs={data.allChooseProgramYaml.edges[0].node.programs}
-              openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-              closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-            />
-            <News lang={pageContext.lang} limit={yml.news.limit} />
-          </Div>
-          {/* <Div>
+          <ChooseProgram
+            right="15px"
+            top="40px"
+            // margin="40px 0"
+            textAlign="center"
+            textAlign_md="left"
+            programs={data.allChooseProgramYaml.edges[0].node.programs}
+            openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+            closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+          />
+          <News lang={pageContext.lang} limit={yml.news.limit} />
+        </Div>
+        {/* <Div>
             <Img
               style={{height: "623px"}}
               imgStyle={{objectFit: "contain"}}
@@ -107,17 +108,18 @@ const Home = (props) => {
               backgroundSize={`cover`}
             />
           </Div> */}
-          <Div display="none" display_md="flex" height="auto" width="100%">
-            <StyledBackgroundSection
-              height={`623px`}
-              width="100%"
-              image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-              bgSize={`contain`}
-            // alt={yml.header.alt}
-            />
-          </Div>
-        </Grid>
-      </Container>
+        <Div gridArea_md="1/7/1/13" display="none" display_md="flex" height="auto" width="100%">
+          <StyledBackgroundSection
+            height={`623px`}
+            width="100%"
+            image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
+            bgSize={`contain`}
+          // alt={yml.header.alt}
+          />
+        </Div>
+      </Grid>
+
+
 
       <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
         <Testimonials lang={data.allTestimonialsYaml.edges} />
@@ -144,11 +146,8 @@ const Home = (props) => {
         <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       </Container>
 
-      {/* <Container variant="fluid" background={Colors.verylightGray} margin="100px auto">
-        <Container variant="fixed"> */}
+
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-      {/* </Container>
-      </Container> */}
 
       <Container
         variant="fixed"
@@ -180,8 +179,8 @@ const Home = (props) => {
         variant="fluid"
       >
         <Container variant="fixed">
-          <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
-          <Paragraph margin="0 0 50px 0" >{hiring.partners.sub_heading}</Paragraph>
+          {/* <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
+          <Paragraph margin="0 0 50px 0" >{hiring.partners.sub_heading}</Paragraph> */}
 
         </Container>
         <OurPartners images={hiring.partners.images}></OurPartners>
@@ -566,3 +565,47 @@ export const query = graphql`
 `;
 
 export default BaseRender(Home);
+
+// {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" >
+//         <Grid columns_md="2" >
+//           <Div gridArea_md="1/2/1/7" flexDirection="column" justifyContent_md="start" padding_md="70px 0 0 0">
+//             <CityH1 yml={yml} />
+//             {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
+//             <H2 textAlign_md="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
+//             <Paragraph textAlign_md="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
+//             {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
+//                     <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
+//             <ChooseProgram
+//               right="15px"
+//               top="40px"
+//               // margin="40px 0"
+//               textAlign="center"
+//               textAlign_md="left"
+//               programs={data.allChooseProgramYaml.edges[0].node.programs}
+//               openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+//               closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+//             />
+//             <News lang={pageContext.lang} limit={yml.news.limit} />
+//           </Div>
+//           {/* <Div>
+//             <Img
+//               style={{height: "623px"}}
+//               imgStyle={{objectFit: "contain"}}
+//               alt="4Geeks Academy"
+//               loading="eager"
+//               fadeIn={false}
+//               fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
+//               backgroundSize={`cover`}
+//             />
+//           </Div> */}
+//           <Div gridArea_md="1/7/1/13" display="none" display_md="flex" height="auto" width="100%">
+//             <StyledBackgroundSection
+//               height={`623px`}
+//               width="100%"
+//               image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
+//               bgSize={`contain`}
+//             // alt={yml.header.alt}
+//             />
+//           </Div>
+//         </Grid>
+//       </Container> */}

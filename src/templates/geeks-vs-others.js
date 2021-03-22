@@ -2,22 +2,22 @@ import React, {useState} from 'react';
 import {Row, Column, Wrapper, Divider, Div} from '../components/Sections'
 import {Title} from '../components/Heading'
 import {Colors} from '../components/Styling'
-import GeeksVsOthers from '../components/GeeksVsOthers'
+import GeeksVsOthers from '../new_components/GeeksVsOthers'
 import BaseRender from './_baseLayout'
 import {graphql} from 'gatsby'
 
 const View = (props) => {
   const {data, pageContext, yml} = props;
   return (
-      <Wrapper margin="50px">
-        <Title
-          title={yml.tagline}
-          paragraph={yml.sub_heading}
-          paragraphColor={Colors.darkGray}
-          variant="primary"
-        />
-        <GeeksVsOthers lang={pageContext.lang} />
-      </Wrapper>
+    // <Wrapper margin="50px">
+    //   <Title
+    //     title={yml.tagline}
+    //     paragraph={yml.sub_heading}
+    //     paragraphColor={Colors.darkGray}
+    //     variant="primary"
+    //   />
+    <GeeksVsOthers lang={pageContext.lang} />
+    // </Wrapper>
   )
 };
 export const query = graphql`

@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
-import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections"
-import {Title, H4, Paragraph} from '../components/Heading'
-import {Button, Colors} from '../components/Styling'
-import Credentials from '../components/Credentials'
-import WhoIsHiring from '../components/WhoIsHiring'
+import {Column, Row, Container, Divider, Div, Grid} from "../new_components/Sections"
+import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
+import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling'
+import Badges from '../new_components/Badges'
+import OurPartners from '../new_components/OurPartners'
 import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
-import LeadForm from "../components/LeadForm/index.js";
-import Modal from "../components/Modal"
+import LeadForm from "../new_components/LeadForm/index.js";
 
 function rand () {
   return Math.round(Math.random() * 20) - 10;
@@ -23,191 +22,180 @@ const Partners = (props) => {
   const handleClose = () => {
     setOpen(false);
   };
-  const hiring = data.allPartnerYaml.edges[0].node;
+  const partnersData = data.allPartnerYaml.edges[0].node;
   return (
     <>
-      <WrapperImage
-        imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-        className={`img-header`}
-        bgSize={`cover`}
-        alt={yml.header_data.alt}
-        paddingRight={`0`}
-        customBorderRadius="0 0 0 1.25rem"
+      <Grid columns_md="12" margin="67px 0"
       >
-        <Divider height="100px" />
-        <Title
-          size="5"
-          title={yml.header_data.tagline}
-          variant="main"
-          color={Colors.white}
-          fontSize="46px"
-          fs_xs="37px"
-          textAlign="center"
-          paragraph={yml.header_data.sub_heading}
-          paragraphColor={Colors.white}
-          fontFamily="Lato-bold, sans-serif"
-        />
-        <Row
-          justifyContent="center"
+        <Div
+          gridArea_md="1/4/1/10"
           display="flex"
+          flexDirection="column"
+          alignItems="center"
         >
-          <Modal
-            aria-labelledby="simple-modal-title"
-            aria-describedby="simple-modal-description"
-            open={open}
-            onClose={handleClose}
-          >
-            <LeadForm heading="BE A HIRING PARTNER" formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
-          </Modal>
-          <Button width="300px" margin="15px 0px 25px 0px" onClick={handleOpen} color="red" textColor="white">{yml.button_section.button_text}</Button>
-        </Row>
-        <Divider height="130px" xs="0" />
-      </WrapperImage>
-      <Wrapper
-      >
-        <Credentials transform="translate(-100px)" lang={data.allCredentialsYaml.edges} />
-      </Wrapper>
-      <Divider height="50px" />
-      <Wrapper
-        right
-        background={Colors.lightGray}
-        border="top"
-      >
-        <Title
-          size="10"
-          marginTop="40px"
-          title={hiring.partners.tagline}
-          paragraph={hiring.partners.sub_heading}
-          paragraphColor={Colors.black}
-          variant="primary"
-        />
-        <WhoIsHiring
-          images={hiring.partners.images}
-          footerTagline={hiring.partners.footer_tagline}
-          footerLink={hiring.partners.footer_link}
-          footerButton={hiring.partners.footer_button}
-        />
+          <H1
+            fontSize="13px"
+            lineHeight="16px"
+            fontWeight="700"
+            letterSpacing="0.05em"
+            color="#606060"
+          >{yml.seo_title}</H1>
+          <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{`< ${yml.header_data.tagline} >`}</H2>
+          <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">{yml.header_data.sub_heading}</Paragraph>
+          <Button width="300px" color={Colors.blue} textColor="white">{yml.button_section.button_text}</Button>
+        </Div>
 
-        <Title
-          size="10"
-          marginTop="40px"
-          title={hiring.coding.tagline}
-          paragraph={hiring.coding.sub_heading}
-          paragraphColor={Colors.black}
-          variant="primary"
-        />
+      </Grid>
+      <Grid columns_md="12">
+        <Div gridArea_md="1/1/1/13">
+          <StyledBackgroundSection
+            height={`389px`}
+            image={yml.header_data.image.childImageSharp.fluid}
+            bgSize={`cover`}
+            alt={yml.header_data.alt}
+          />
+        </Div>
+      </Grid>
 
-        <WhoIsHiring
-          images={hiring.coding.images}
-          footerTagline={hiring.coding.footer_tagline}
-          footerLink={hiring.coding.footer_link}
-          footerButton={hiring.coding.footer_button}
-        />
+      <Badges lang={pageContext.lang} />
+      <Div height="5px" display="none" display_md="flex" background={Colors.lightGray}></Div>
+      <OurPartners
+        images={partnersData.partners.images}
+        title={partnersData.partners.tagline}
+        paragraph={partnersData.partners.sub_heading}
+        showFeatured={true}
+        props={partnersData.partners}
+      />
+      <OurPartners
+        title={partnersData.coding.tagline}
+        paragraph={partnersData.coding.sub_heading}
+        images={partnersData.coding.images}
+        showFeatured={true}
+        props={partnersData.partners}
+      />
+      <Grid columns_md="12" gridGap_md="0" margin_md="90px 0 104px 0">
+        <Div gridArea_md="1/3/1/7" flexDirection="column" padding_md="0 90px 0 0" padding="0 17px">
+          <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
+          {yml.form.paragraph.split("\n").map((m, i) =>
+            <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+          )}
+        </Div>
+        <Div gridArea_md="1/7/1/11" justifyContent="center" >
+          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
+        </Div>
 
-        <Title
-          size="10"
-          marginTop="40px"
-          title={hiring.influencers.tagline}
-          paragraph={hiring.influencers.sub_heading}
-          paragraphColor={Colors.black}
-          variant="primary"
-        />
-
-        <WhoIsHiring
-          images={hiring.influencers.images}
-          footerTagline={hiring.influencers.footer_tagline}
-          footerLink={hiring.influencers.footer_link}
-          footerButton={hiring.influencers.footer_button}
-        />
-        <Divider height="100px" />
-      </Wrapper>
-      <Divider height="100px" />
-
+      </Grid>
+      <Grid columns_md="12">
+        <Div gridArea_md="1/1/1/13">
+          <StyledBackgroundSection
+            height={`389px`}
+            image={yml.footer_data.image.childImageSharp.fluid}
+            bgSize={`cover`}
+            alt={yml.footer_data.alt}
+          />
+        </Div>
+      </Grid>
     </>
   )
 };
 export const query = graphql`
-  query PartnersQuery($file_name: String!, $lang: String!) {
-    allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
-            meta_info{
-                slug
-                title
-                description
-                image
-                keywords
-            }
-            
-            header_data{
-              tagline
-              sub_heading
-              image{
-                childImageSharp {
-                  fluid(maxWidth: 1600, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-              alt
-            }
-            button_section{
-                button_text
-            }
+query PartnersQuery($file_name: String!, $lang: String!) {
+  allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+    edges{
+      node{
+        meta_info{
+          slug
+          title
+          description
+          image
+          keywords
         }
-      }
-    }
-    allCredentialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
-        edges {
-          node {
-            credentials {
-              title
-              icon
-              value
+        seo_title
+        header_data{
+          tagline
+          sub_heading
+          image{
+            childImageSharp {
+              fluid(maxWidth: 1600, quality: 100){
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          alt
+        }
+        form{
+          title
+          paragraph
+        }
+        footer_data{
+          alt
+          image{
+            childImageSharp {
+              fluid(maxWidth: 1600, quality: 100){
+                ...GatsbyImageSharpFluid_withWebp
+              }
             }
           }
         }
+        button_section{
+          button_text
+        }
       }
-      allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
-        edges {
-            node {
-              partners {
-                images {
-                  name
-                  image {
-                    childImageSharp {
-                      fluid(maxWidth: 150){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  }
-                  featured
+    }
+  }
+  allCredentialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+    edges {
+      node {
+        credentials {
+          title
+          icon
+          value
+        }
+      }
+    }
+  }
+  allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+    edges {
+      node {
+        partners {
+          images {
+            name
+            image {
+              childImageSharp {
+                fluid(maxWidth: 150){
+                  ...GatsbyImageSharpFluid_withWebp
                 }
-                tagline
-                sub_heading
               }
-              coding {
-                images {
-                  name
-                  image {
-                    childImageSharp {
-                      fluid(maxWidth: 150){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  }
-                  featured
+            }
+            featured
+          }
+          tagline
+          sub_heading
+          footer_button
+          footer_link
+        }
+        coding {
+          images {
+            name
+            image {
+              childImageSharp {
+                fluid(maxWidth: 150){
+                  ...GatsbyImageSharpFluid_withWebp
                 }
-                tagline
-                sub_heading
               }
-              influencers {
-                images {
-                  name
-                  image {
-                    childImageSharp {
-                      fluid(maxWidth: 150){
-                        ...GatsbyImageSharpFluid_withWebp
+            }
+            featured
+          }
+          tagline
+          sub_heading
+        }
+        influencers {
+          images {
+            name
+            image {
+              childImageSharp {
+                fluid(maxWidth: 150){
+                  ...GatsbyImageSharpFluid_withWebp
                       }
                     }
                   }
@@ -234,6 +222,6 @@ export const query = graphql`
             }
           }
         }
-  }
-`;
+      }
+      `;
 export default BaseRender(Partners);
