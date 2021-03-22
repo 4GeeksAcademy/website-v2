@@ -6,6 +6,8 @@ import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'
 import ProgramDetails from '../new_components/ProgramDetails';
 import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
+import TechsWeTeach from '../new_components/TechsWeTeach';
+import GeeksInfo from '../new_components/GeeksInfo';
 import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
@@ -48,6 +50,8 @@ const Program = ({data, pageContext, yml}) => {
 
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+    <TechsWeTeach lang={pageContext.lang} />
+    <GeeksInfo lang={pageContext.lang} />
     {/* <WrapperImage
       github="/course"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
