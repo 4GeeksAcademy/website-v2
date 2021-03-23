@@ -265,7 +265,6 @@ export const query = graphql`
               title
               icon
               value
-              position
             }
           }
         }
