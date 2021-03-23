@@ -19,7 +19,7 @@ const OurPartners = ({title, paragraph, link, showFeatured, images, slider, ...r
           alignItems="center"
         >
           <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>
-          <Paragraph margin="0 0 50px 0" >{paragraph}</Paragraph>
+          <Paragraph>{paragraph}</Paragraph>
         </Div>
 
       </Grid>}
