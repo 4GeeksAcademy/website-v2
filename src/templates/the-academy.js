@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Column, Row, Div, Grid, Header} from '../new_components/Sections';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../new_components/Heading'
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
-import Mentors from '../components/Mentors'
+import Badges from '../new_components/Badges'
 import {Charts} from '../components/Chart'
 import Credentials from '../components/Credentials'
 import BaseRender from './_baseLayout'
@@ -34,7 +34,7 @@ const Why = (props) => {
           />
         </Div>
       </Grid>
-
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding_md="70px 0" />
 
 
     </>
@@ -63,6 +63,9 @@ export const query = graphql`
                       }
                     }
                   }
+            }
+            badges{
+              paragraph
             }
             education{
                 left_box{

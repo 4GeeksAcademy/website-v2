@@ -42,7 +42,8 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
 
   return (
     <Fragment github="/new_components/badges">
-      <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0">
+      <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" >
+        {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
         {paragraph && <Div className="badge-slider" justifyContent="between" gridArea_md="1/3/1/11">
           <Paragraph
             fontSize="18px"
