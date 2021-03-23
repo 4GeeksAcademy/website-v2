@@ -4,7 +4,7 @@ import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../new_components/Hea
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Badges from '../new_components/Badges'
 import {Charts} from '../components/Chart'
-import Credentials from '../components/Credentials'
+import Credentials from '../new_components/Credentials'
 import BaseRender from './_baseLayout'
 import WhoIsHiring from '../components/WhoIsHiring';
 import BlogPosts from '../components/BlogPosts'
@@ -34,8 +34,26 @@ const Why = (props) => {
           />
         </Div>
       </Grid>
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding_md="70px 0" />
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding="58px 17px" padding_md="70px 0" />
+      <Grid height="1027px" height_md="559px" columns="1" rows="1" columns_md={`12`} gridGap_md="11px" gridGap="0" >
+        <Div flexDirection="column" justifyContent_md="start" padding="41px 17px 0 17px" padding_md="56px 0 0 0" gridArea_md={`1/3/1/7`}>
+          <H2 textAlign="left" margin="0 0 15px 0">{yml.what_is_4geeks.title}</H2>
 
+          {yml.what_is_4geeks.paragraph.split("\n").map(paragraph =>
+            <Paragraph textAlign="left" margin="0 0 15px 0" >{paragraph}</Paragraph>
+          )}
+        </Div>
+        <Div width="331px" gridArea_md="1/8/1/13">
+          <StyledBackgroundSection
+            height={`390px`}
+            width="100%"
+            image={yml.what_is_4geeks.image && yml.what_is_4geeks.image.childImageSharp.fluid}
+            bgSize={`cover`}
+            alt={yml.what_is_4geeks.image_alt}
+          />
+        </Div>
+      </Grid>
+      <Credentials lang={data.allCredentialsYaml.edges} />
 
     </>
   )
@@ -66,6 +84,18 @@ export const query = graphql`
             }
             badges{
               paragraph
+            }
+            what_is_4geeks{
+              title
+                paragraph
+                image{
+                    childImageSharp {
+                      fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                image_alt
             }
             education{
                 left_box{

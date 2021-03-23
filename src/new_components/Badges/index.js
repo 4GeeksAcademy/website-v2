@@ -6,7 +6,7 @@ import {Colors} from '../Styling'
 import Img from "gatsby-image"
 import Fragment from "../Fragment"
 
-export default ({location, lang, loading, link, short_link, paragraph, background, padding_md}) => {
+export default ({location, lang, loading, link, short_link, paragraph, background, padding, padding_md}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges{
       allBadgesYaml{
@@ -42,7 +42,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
 
   return (
     <Fragment github="/new_components/badges">
-      <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" >
+      <Grid columns_md="12" background={background} padding={padding} padding_md={padding_md} rows={paragraph && `3`} >
         {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
         {paragraph && <Div className="badge-slider" justifyContent="between" gridArea_md="1/3/1/11">
           <Paragraph
