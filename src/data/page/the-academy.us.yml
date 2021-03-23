@@ -1,18 +1,17 @@
 meta_info:
-  slug: the-academy
+  slug: why-4geeks
   title: ""
   description: "About 4Geeks Academy"
   image: ""
   keywords: ""
   redirects: []
 
-## BANNER - HEADER
-header_data:
-  #Empowering talent with code by providing flexible educational experiences
-  tagline: EMPOWERING TALENT WITH CODING CAREERS
-  sub_heading: "We are specialists of code. 4Geeks is the place were developers grow and thrive."
+seo_title: "why 4Geeks"
+header:
+  title: "Empowering Talent with coding careers"
+  paragraph: "We are specialists of code. 4Geeks is the place were developers grow and thrive."
   image: "../../../static/images/bg/the-academy-bg.jpg"
-  alt: ""
+  image_alt: ""
 
 ## CREDENTIALS SECTION
 education:
@@ -28,7 +27,7 @@ education:
     heading: "As Reviewed in"
     image: "../../../static/images/Group.png"
     alt: "CNN and BCC Logo"
-    
+
 ## 4GEEKS OUTCOMES
 outcomes:
   heading: "4GEEKS OUTCOMES"

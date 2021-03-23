@@ -1,17 +1,17 @@
 meta_info:
-  slug: la-academia
+  slug: sobre-la-academia
   title: ""
   description: "Acerca de 4Geeks Academy"
   image: ""
   keywords: ""
   redirects: ["/la-academia", "/es/academia"]
 
-## BANNER - HEADER
-header_data:
-  tagline: EMPODERANDO TALENTOS IMPULSANDO SUS CARRERAS PROFESIONALES EN PROGRAMACION
-  sub_heading: ""
+seo_title: "sobre la academia"
+header:
+  title: "Empoderamos Talentos, impulsando sus carreras profesionales con programación"
+  paragraph: ""
   image: "../../../static/images/bg/the-academy-bg.jpg"
-  alt: ""
+  image_alt: ""
 
 ## EDUCATION SECTION
 education:
