@@ -139,7 +139,7 @@ const justifyContentOptions = {
 }
 
 export const Div = styled.div`
-grid-area: ${props => props.gridArea};
+    grid-area: ${props => props.gridArea};
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};

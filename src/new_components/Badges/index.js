@@ -6,7 +6,7 @@ import {Colors} from '../Styling'
 import Img from "gatsby-image"
 import Fragment from "../Fragment"
 
-export default ({location, lang, loading, link}) => {
+export default ({location, lang, loading, link, paragraph, background, padding_md}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges{
       allBadgesYaml{
@@ -41,20 +41,19 @@ export default ({location, lang, loading, link}) => {
 
   return (
     <Fragment github="/new_components/badges">
-      {/* <Div justifyContent="center">
-        <Paragraph
-          margin="32px 0 32px 0"
-          padding="0 auto"
-          letteSpacing="0.05em"
-          fontSize_tablet="22px"
-          fontWeight="300"
-          color={Colors.black}
-          textAlign="center"
-          dangerouslySetInnerHTML={{__html: content.paragraph}}
-        ></Paragraph>
-      </Div> */}
-      <Grid columns_md="12" margin="36px 0 58px 0" margin_md="73px 0">
-        <Div className="badge-slider" justifyContent="between" gridArea_md="1/3/1/11">
+      <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `2`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0">
+        {paragraph && <Div className="badge-slider" justifyContent="between" gridArea_md="1/3/1/11">
+          <Paragraph
+            fontSize="18px"
+            fontSize_tablet="22px"
+            lineHeight="38px"
+            fontWeight="300"
+            color={Colors.black}
+            dangerouslySetInnerHTML={{__html: paragraph}}
+            margin="0 0 32px 0"
+          />
+        </Div>}
+        <Div className="badge-slider" justifyContent="between" gridArea_md="2/3/2/11">
           {content.badges.map((l, i) => {
             return (
               <Img
@@ -71,26 +70,9 @@ export default ({location, lang, loading, link}) => {
         </Div>
         {link &&
           <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">
-            <Link to="/us/badges"><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>
+            <Link to={content.link_to}><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>
           </Div>}
       </Grid>
     </Fragment>
-
-    // <Row github="/components/badges" display={`flex`}>
-    //   {content.badges.map((l, i) => (
-    //     <Column margin="auto" style={{whiteSpace: "nowrap", height: "100px"}} key={i} size="3" size_md="6">
-    //       <a href={l.url != "" && l.url} target={l.url != "" && "_blank"} rel={l.url != "" && "noopener noreferrer nofollow"}>
-    //         <Img
-    //           style={{height: "100%"}}
-    //           imgStyle={{objectFit: "contain"}}
-    //           loading="eager"
-    //           fadeIn={false}
-    //           alt={l.name}
-    //           fluid={l.image.childImageSharp.fluid}
-    //         />
-    //       </a>
-    //     </Column>
-    //   ))}
-    // </Row>
   )
 }

@@ -125,7 +125,7 @@ const Home = (props) => {
         <Testimonials lang={data.allTestimonialsYaml.edges} />
       </Container>
 
-      <Container variant="fixed" style={{borderBottom: "1px solid #ebebeb"}} padding="0 17px 59px 17px">
+      {/* <Container variant="fixed" style={{borderBottom: "1px solid #ebebeb"}} padding="0 17px 59px 17px">
         <Paragraph
           margin="32px 0 32px 0"
           letteSpacing="0.05em"
@@ -138,8 +138,9 @@ const Home = (props) => {
           dangerouslySetInnerHTML={{__html: yml.badges.sub_heading}}
         ></Paragraph>
         <Badges lang={pageContext.lang} />
-      </Container>
+      </Container> */}
 
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} padding_md="62px 0" />
       {/* ABOUT 4GEEKS SECTION */}
 
       <Container variant="fluid" margin="90px 0">
@@ -225,8 +226,7 @@ export const query = graphql`
               heading
             }
             badges{
-              heading
-              sub_heading
+              paragraph
             }
             with{
               heading
