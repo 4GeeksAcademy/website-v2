@@ -125,23 +125,7 @@ const Home = (props) => {
         <Testimonials lang={data.allTestimonialsYaml.edges} />
       </Container>
 
-      {/* <Container variant="fixed" style={{borderBottom: "1px solid #ebebeb"}} padding="0 17px 59px 17px">
-        <Paragraph
-          margin="32px 0 32px 0"
-          letteSpacing="0.05em"
-          fontSize="18px"
-          fontSize_tablet="22px"
-          fontWeight="300"
-          color={Colors.black}
-          lineHeight="38px"
-          align="center"
-          dangerouslySetInnerHTML={{__html: yml.badges.sub_heading}}
-        ></Paragraph>
-        <Badges lang={pageContext.lang} />
-      </Container> */}
-
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} padding_md="62px 0" short_link />
-      {/* ABOUT 4GEEKS SECTION */}
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} />
 
       <Container variant="fluid" margin="90px 0">
         <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
