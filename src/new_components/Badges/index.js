@@ -6,7 +6,7 @@ import {Colors} from '../Styling'
 import Img from "gatsby-image"
 import Fragment from "../Fragment"
 
-export default ({location, lang, loading, link, paragraph, background, padding_md}) => {
+export default ({location, lang, loading, link, short_link, paragraph, background, padding_md}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges{
       allBadgesYaml{
@@ -26,6 +26,7 @@ export default ({location, lang, loading, link, paragraph, background, padding_m
             }
             link_text
             link_to
+            short_link_text
             fields {
               lang
             }
@@ -41,7 +42,7 @@ export default ({location, lang, loading, link, paragraph, background, padding_m
 
   return (
     <Fragment github="/new_components/badges">
-      <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `2`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0">
+      <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0">
         {paragraph && <Div className="badge-slider" justifyContent="between" gridArea_md="1/3/1/11">
           <Paragraph
             fontSize="18px"
@@ -53,7 +54,7 @@ export default ({location, lang, loading, link, paragraph, background, padding_m
             margin="0 0 32px 0"
           />
         </Div>}
-        <Div className="badge-slider" justifyContent="between" gridArea_md="2/3/2/11">
+        <Div className="badge-slider" justifyContent="between" gridArea_md="2/3/2/11" alignItems="center">
           {content.badges.map((l, i) => {
             return (
               <Img
@@ -66,10 +67,13 @@ export default ({location, lang, loading, link, paragraph, background, padding_m
               />
             )
           })}
+          {short_link &&
+            <Link to={content.link_to}><Paragraph color={Colors.blue}>{`${content.short_link_text} >`}</Paragraph></Link>
+          }
 
         </Div>
         {link &&
-          <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">
+          <Div gridArea_md="3/3/3/11" justifyContent="center" margin="50px 0 0 0">
             <Link to={content.link_to}><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>
           </Div>}
       </Grid>

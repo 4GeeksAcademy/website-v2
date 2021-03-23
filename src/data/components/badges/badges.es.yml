@@ -18,5 +18,6 @@ badges:
     url: ""
     image: "../../../../static/images/badges/syllabus.png"
     alt: "Award winning syllabus"
-link_text: "Ver más"
+link_text: "Ver todos los Premios y Reconocimientos"
 link_to: "/es/premios"
+short_link_text: "Ver más"

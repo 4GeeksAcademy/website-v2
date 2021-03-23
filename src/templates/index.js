@@ -140,7 +140,7 @@ const Home = (props) => {
         <Badges lang={pageContext.lang} />
       </Container> */}
 
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} padding_md="62px 0" />
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} padding_md="62px 0" short_link />
       {/* ABOUT 4GEEKS SECTION */}
 
       <Container variant="fluid" margin="90px 0">
