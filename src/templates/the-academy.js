@@ -3,10 +3,10 @@ import {Container, Column, Row, Div, Grid, Header} from '../new_components/Secti
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../new_components/Heading'
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Badges from '../new_components/Badges'
-import {Charts} from '../components/Chart'
+import OurPartners from '../new_components/OurPartners'
 import Credentials from '../new_components/Credentials'
 import BaseRender from './_baseLayout'
-import WhoIsHiring from '../components/WhoIsHiring';
+import Staff from '../new_components/Staff';
 import BlogPosts from '../components/BlogPosts'
 import {Link} from 'gatsby'
 import Icon from '../components/Icon'
@@ -17,6 +17,7 @@ const Why = (props) => {
   console.log("data", yml)
   const cornerstone = yml.cornerstones;
   const hiring = data.allPartnerYaml.edges[0].node;
+  const partnersData = data.allPartnerYaml.edges[0].node;
   return (
     <>
       <Header
@@ -54,7 +55,14 @@ const Why = (props) => {
         </Div>
       </Grid>
       <Credentials lang={data.allCredentialsYaml.edges} />
-
+      <OurPartners
+        images={partnersData.partners.images}
+        title={partnersData.partners.tagline}
+        paragraph={partnersData.partners.sub_heading}
+        showFeatured={true}
+        props={partnersData.partners}
+      />
+      <Staff lang={pageContext.lang} />
     </>
   )
 };
