@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Column, Row, Wrapper, Divider, Header} from '../new_components/Sections';
+import {Container, Column, Row, Div, Grid, Header} from '../new_components/Sections';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../new_components/Heading'
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Mentors from '../components/Mentors'
@@ -24,6 +24,16 @@ const Why = (props) => {
         title={yml.header.title}
         paragraph={yml.header.paragraph}
       />
+      <Grid columns_md="12">
+        <Div gridArea_md="1/1/1/13">
+          <StyledBackgroundSection
+            height={`389px`}
+            image={yml.header.image.childImageSharp.fluid}
+            bgSize={`cover`}
+            alt={yml.header.alt}
+          />
+        </Div>
+      </Grid>
 
 
 
