@@ -1,4 +1,4 @@
-context("Regex test form", () => {
+context("Test Apply page with correct data", () => {
   it('Visit the Apply page with path "/us/apply"', () => {
     cy.visit("/apply").wait(500);
     cy.location().should((location) => {
@@ -27,7 +27,7 @@ context("Regex test form", () => {
   it("Fill the input fields with correct values", () => {
     cy.fixture("/apply/form_values/right.json").each((right) => {
       cy.get("[data-cy=email]")
-        .should("have.css", "border-color", "rgb(0, 0, 0)").wait(500)
+        .should("have.css", "border-color", "rgb(0, 0, 0)").wait(200)
         .clear()
         .type(right.email);
 

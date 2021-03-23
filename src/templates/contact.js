@@ -2,13 +2,12 @@ import React, {useState, useContext, useEffect} from 'react';
 import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
-import {Input, Alert, TextArea} from '../components/Form';
 import Icon from '../components/Icon';
 import Link from 'gatsby-link'
 
 // New components
-import Card from '../new_components/Card'
 import {Colors, Button} from '../new_components/Styling'
+import {Input, Alert, TextArea} from '../new_components/Form';
 import {H1, H2, H3, Paragraph} from '../new_components/Heading'
 import { HR, Grid, Div} from '../new_components/Sections'
 
@@ -104,24 +103,24 @@ const Contact = (props) => {
                     >
                         {formStatus.status === "thank-you" ?
                             <Grid
+                                data-cy="thankfulness"
                                 width= "300px"
                                 justifySelf= "center"
-                                className="thankfulness"
                                 alignSelf="center"
                                 align="left"
                                 borderRadius="0 0 0 1.25rem"
                                 background="white"
                                 display="grid"
                             >
-                                <H3 type="h3" placeSelf="center" textAlign="center" fontSize="30px" color={Colors.green}>{formStatus.msg}</H3>
+                                <H3 type="h3" placeSelf="end" textAlign="center" fontSize="30px" color={Colors.green}>{formStatus.msg}</H3>
                                 <Paragraph padding="20px 10%" padding_sm="20px 20%" fontSize="20px" >{yml.left.thankyou}</Paragraph>
                             </Grid>
                             :
                             // Padding top m_xs="35px 0" m_sm="35px 0" m_md="35px 0" removed
                             <Div id="contact-form" minWidth_lg="max-content" flex_tablet="1" flexDirection="column" size="12" padding_md="0px" alignSelf="center"  height="100%" borderRadius="0 0 0 1.25rem" background="white">
 
-                                <Div display="flex" height="50px">
-                                    <H3 type="h3" textAlign="left" fs_xl="25px">{yml.left.heading}</H3>
+                                <Div display="block" height="50px">
+                                    <H3 type="h3" textAlign="left">{yml.left.heading}</H3>
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                 </Div>
                                 <Div display="flex" height="50px">
@@ -206,8 +205,8 @@ const Contact = (props) => {
                                         required
                                     />
                                 </Div>
-                                <Div display="flex" justifyContent="flex-end" alignResp="flex-end">
-                                    {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
+                                <Div display="block" justifyContent="flex-end" alignResp="flex-end">
+                                    {formStatus.status === "error" && <Alert data-action="alert-message" color="red">{formStatus.msg}</Alert>}
                                     <Button
                                         width="96px"
                                         m_md="17px 0px"

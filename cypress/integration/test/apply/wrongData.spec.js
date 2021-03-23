@@ -1,4 +1,4 @@
-context("Regex test form", () => {
+context("Test Apply page with wrong data", () => {
   it('Visit the Apply page with path "/us/apply"', () => {
     cy.visit("/apply").wait(500);
     cy.location().should((location) => {
