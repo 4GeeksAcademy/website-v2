@@ -88,9 +88,11 @@ export const Container = styled(Fragment)`
 // TEST TO CHECK IF THE GRID IS A GOOD OPTION
 export const Grid = styled.div`
     display: ${props => props.display || "grid"};
-    grid-template-columns: repeat(${props => props.columns || "1"}, 1fr);
+    grid-template-columns: repeat(${props => props.columns}, 1fr);
     grid-template-rows: repeat(${props => props.rows || "auto"});
     grid-gap: ${props => props.gridGap || "15px"};
+    width: ${props => props.width};
+    justify-self: ${props => props.justifySelf};
     height: ${props => props.height};
     background: ${props => props.background};
     padding: ${props => props.padding};
@@ -108,8 +110,9 @@ export const Grid = styled.div`
         grid-template-columns: repeat(${props => props.columns_tablet}, 1fr);
         grid-template-rows: repeat(${props => props.rows_tablet}, 5vw);
     }
+    // CHANGES: removed repeat({...} ,1fr) for contact page
     @media  ${Devices.md}{
-        grid-template-columns: repeat(${props => props.columns_md}, 1fr);
+        grid-template-columns: repeat(${props => props.columns_md});
         grid-template-rows: repeat(${props => props.rows_md});
         grid-gap: ${props => props.gridGap_md};
         height: ${props => props.height_md};
@@ -166,6 +169,8 @@ export const HR = styled.hr`
 `
 
 export const Div = styled.div`
+    flex: 0 0 ${props => (props.size / 12) * 100}%;
+    max-width: ${props => (props.size / 12) * 100}%;
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};
@@ -197,11 +202,12 @@ export const Div = styled.div`
 
     }
     @media ${Devices.xs}{
-        
+        padding: ${props => props.padding_xs};
         
     }
     @media  ${Devices.sm}{
         padding: ${props => props.padding_sm};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_sm]};
         
     }
     @media  ${Devices.tablet}{
@@ -211,6 +217,9 @@ export const Div = styled.div`
         
     }
     @media  ${Devices.md}{
+        flex: 0 0 ${props => (props.size_md / 12) * 100}%;
+        max-width: ${props => (props.size_md / 12) * 100}%;
+        min-width: ${props => props.minWidth_lg};
         grid-area: ${props => props.gridArea_md};
         margin: ${props => props.margin_md};
         width: ${props => props.width_md};
@@ -227,7 +236,7 @@ export const Div = styled.div`
 
     }
     @media  ${Devices.lg}{
-        justifyContent: ${props => justifyContentOptions[props.justifyContent_lg]};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_lg]};
     }
     @media  ${Devices.xl}{
 

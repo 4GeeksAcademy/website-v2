@@ -88,6 +88,7 @@ export const H3 = styled(BaseHeading)`
   font-size: ${props => props.fonSize};
   text-align: ${props => props.textAlign};
   letter-spacing: 0.05em;
+  place-self: ${props => props.placeSelf};
 `;
 export const H4 = styled(BaseHeading)`
   letter-spacing: 0.05em;
@@ -167,6 +168,7 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   height: ${props => props.height};
+  z-index: ${props => props.zIndex};
 
   @media ${Devices.xxs}{
   }

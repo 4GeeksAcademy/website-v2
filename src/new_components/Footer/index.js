@@ -47,7 +47,7 @@ const Footer = ({yml}) => {
             // padding_md="44px 175px"
             >
                 <Container variant="fixed" padding="27px 17px 17px 17px" style={{borderTop: `1px solid ${Colors.lightGray}`}}>
-                    <Grid columns="1" columns_md="12" rows_md="1" gridGap="11px">
+                    <Grid columns="0" columns_md="12" rows_md="1" gridGap="11px">
                         <Div
                             justifyContent="center"
                             alignItems="center"

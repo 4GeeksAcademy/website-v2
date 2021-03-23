@@ -1,7 +1,4 @@
 import React, {useState, useContext, useEffect} from 'react';
-// import {Row, Column, Wrapper, Divider} from '../components/Sections'
-// import {H3, Title, Separator} from '../components/Heading'
-// import Card from '../components/Card'
 import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
@@ -13,7 +10,7 @@ import Link from 'gatsby-link'
 import Card from '../new_components/Card'
 import {Colors, Button} from '../new_components/Styling'
 import {H1, H2, H3, Paragraph} from '../new_components/Heading'
-import {Row, Column, HR, Divider, Container, Div} from '../new_components/Sections'
+import { HR, Grid, Div} from '../new_components/Sections'
 
 
 const Contact = (props) => {
@@ -73,9 +70,8 @@ const Contact = (props) => {
                 <Icon icon="landingCircles/mdCircle-blue" style={{zIndex: 2, position: "absolute", right: "116px", top: "169px"}}/>
                 <Icon icon="landingCircles/smCircle-mustard" style={{zIndex: 2, position: "absolute", right: "299px", top: "122px"}}/>
             </Div>
-            <Divider height="64px" />
-            <Container variant="fluid" padding_md="17px 8px 40px 8px">
-            <Column
+            <Div margin="64px 0 0 0" justifyContent="center" variant="fluid" padding_md="17px 8px 40px 8px">
+            <Div
                 paddingRight="0px"
                 paddingLeft="0px"
                 flexDirection="column"
@@ -83,6 +79,7 @@ const Contact = (props) => {
                  >  
 
                 <H1
+                type="h1"
                 zIndex="5"
                 fontSize="13px"
                 lineHeight="16px"
@@ -91,24 +88,24 @@ const Contact = (props) => {
                 color="#606060"
                 >Coding Bootcamp</H1>
 
-                <H2 zIndex="5" fontSize="48px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.greetings}<br/>{yml.tagline}</H2>
-                <Paragraph padding_sm="0 35px" padding_tablet="0 12em" padding_md="0 30%" padding_xs="0 5%" >{yml.sub_heading} 
+                <H2 type="h2" zIndex="5" fontSize="48px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.greetings}<br/>{yml.tagline}</H2>
+                <Paragraph zIndex="5" padding_sm="0 35px" padding_tablet="0 12em" padding_md="0 30%" padding="0 5%" >{yml.sub_heading} 
                 <Link to={`/${yml.fields.lang}/${yml.pathFAQ}`} style={{color: "#52a6d1"}}> {yml.sub_headingFAQ}</Link>
-                
                 </Paragraph>
-                <Divider height="64px" xs="42px" />
-                <Card  padding="50px 0px 0px 0px" p_sm="0" p_md="0">
-                    <Row display="flex"
+
+                <Div justifyContent_sm="center" margin="64px 0 0 0" padding_xs="0 10px" padding="0 10px">
+                    <Grid 
                         height="100%"
-                        marginLeft="0"
-                        marginRight="0"
+                        columns_md="3, 0fr"
                         justifyContent="center"
                         padding_sm="0 40px"
                         padding_md="0 13%"
                         
                     >
                         {formStatus.status === "thank-you" ?
-                            <Column size="5" size_sm="12"
+                            <Grid
+                                width= "300px"
+                                justifySelf= "center"
                                 className="thankfulness"
                                 alignSelf="center"
                                 align="left"
@@ -116,18 +113,18 @@ const Contact = (props) => {
                                 background="white"
                                 display="grid"
                             >
-                                <H3 textAlign="center" fontSize="30px" color={Colors.green}>{formStatus.msg}</H3>
+                                <H3 type="h3" placeSelf="center" textAlign="center" fontSize="30px" color={Colors.green}>{formStatus.msg}</H3>
                                 <Paragraph padding="20px 10%" padding_sm="20px 20%" fontSize="20px" >{yml.left.thankyou}</Paragraph>
-                            </Column>
+                            </Grid>
                             :
                             // Padding top m_xs="35px 0" m_sm="35px 0" m_md="35px 0" removed
-                            <Column id="contact-form" flex_tablet="1" flexDirection="column" size="6" padding_tablet="0 90px" padding_md="0px" size_md="12" alignSelf="center"  height="100%" borderRadius="0 0 0 1.25rem" background="white">
+                            <Div id="contact-form" minWidth_lg="max-content" flex_tablet="1" flexDirection="column" size="12" padding_md="0px" alignSelf="center"  height="100%" borderRadius="0 0 0 1.25rem" background="white">
 
-                                <Row display="flex" height="50px">
-                                    <H3 textAlign="left" fs_xl="25px">{yml.left.heading}</H3>
+                                <Div display="flex" height="50px">
+                                    <H3 type="h3" textAlign="left" fs_xl="25px">{yml.left.heading}</H3>
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
-                                </Row>
-                                <Row display="flex" height="50px">
+                                </Div>
+                                <Div display="flex" height="50px">
                                     <Input 
                                         data-cy="first_name"
                                         borderRadius="3px"
@@ -146,8 +143,8 @@ const Contact = (props) => {
                                         }}
                                         value={formData.first_name.value}
                                     />
-                                </Row>
-                                <Row display="flex" height="50px">
+                                </Div>
+                                <Div display="flex" height="50px">
                                     <Input 
                                         data-cy="last_name"
                                         borderRadius="3px"
@@ -166,8 +163,8 @@ const Contact = (props) => {
                                         required
                                         value={formData.last_name.value}
                                     />
-                                </Row>
-                                <Row display="flex" height="50px" margin="0 0 10px 0">
+                                </Div>
+                                <Div display="flex" height="50px" margin="0 0 10px 0">
                                     <Input 
                                         data-cy="email"
                                         borderRadius="3px"
@@ -186,8 +183,8 @@ const Contact = (props) => {
                                         required
                                         value={formData.email.value}
                                     />
-                                </Row>
-                                <Row display="flex" height="200px">
+                                </Div>
+                                <Div display="flex" height="200px">
                                     <TextArea 
                                         data-cy="comment"
                                         borderRadius="3px"
@@ -208,8 +205,8 @@ const Contact = (props) => {
                                         errorMsg="Please leave us a comment"
                                         required
                                     />
-                                </Row>
-                                <Row display="flex" justifyContent="flex-end" alignResp="flex-end">
+                                </Div>
+                                <Div display="flex" justifyContent="flex-end" alignResp="flex-end">
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                     <Button
                                         width="96px"
@@ -220,37 +217,33 @@ const Contact = (props) => {
                                         disabled={formStatus.status === "loading" ? true : false}
                                         type="submit"
                                     >{yml.left.button.button_text}</Button>
-                                </Row>
-                            </Column>
+                                </Div>
+                            </Div>
                         }
 
                         <HR background="#F5F5F5" height="7px" width="100%" width_md="7px" height_md="auto" margin="28px 0" margin_md="0px 82px" />
-            
-                        <Column size="6" size_md="12" flex_tablet="1" justifyContent="left" background={Colors.white} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" paddingLeft="0" paddingRight="0"  alignSelf="unset" height="100%"  >
-                                <Column disp_sm="flex" disp_md="grid" templateColumns="repeat(4, 1fr)" size="10" height="100%" minWidth="fit-content" flexDirection="column"  paddingLeft="0" paddingRight="0" p_md="10px 0px">
-                                   
-                                    {yml.right.content_section.map((item, i) => {
-                                        return <Paragraph
-                                            key={i}
-                                            fs_sm="16px"
-                                            fontSize="16px"
-                                            dangerouslySetInnerHTML={{__html: item}}
-                                            margin="5px"
-                                            display="flex"
-                                            m_sm="2px"
-                                            align="left"
-                                            textAlign="left"
-                                            color={Colors.black}
-                                        >
-                                        </Paragraph>;
-                                    })}
-                                </Column>
-                        </Column>
-
-                    </Row>
-                </Card>
-                </Column>
-            </Container>
+                        <Grid gridGap="0" columns="1" size="12" height="100%" minWidth="fit-content" flexDirection="column"  paddingLeft="0" paddingRight="0" >
+                            
+                            {yml.right.content_section.map((item, i) => {
+                                return <Paragraph
+                                    key={i}
+                                    fs_sm="16px"
+                                    fontSize="16px"
+                                    dangerouslySetInnerHTML={{__html: item}}
+                                    margin="5px"
+                                    display="flex"
+                                    m_sm="2px"
+                                    align="left"
+                                    textAlign="left"
+                                    color={Colors.black}
+                                >
+                                </Paragraph>;
+                            })}
+                        </Grid>
+                    </Grid>
+                </Div>
+                </Div>
+            </Div>
         </form>
     )
 };
