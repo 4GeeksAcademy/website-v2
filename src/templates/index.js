@@ -168,7 +168,7 @@ const Home = (props) => {
           <Paragraph margin="0 0 50px 0" >{hiring.partners.sub_heading}</Paragraph> */}
 
         </Container>
-        <OurPartners images={hiring.partners.images}></OurPartners>
+        <OurPartners images={hiring.partners.images} slider />
       </Container>
       <Container
         variant="fixed"

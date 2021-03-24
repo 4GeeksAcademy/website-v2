@@ -35,7 +35,9 @@ const Why = (props) => {
           />
         </Div>
       </Grid>
+
       <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding="58px 17px" padding_md="70px 0" />
+
       <Grid height="1027px" height_md="559px" columns="1" rows="1" columns_md={`12`} gridGap_md="11px" gridGap="0" >
         <Div flexDirection="column" justifyContent_md="start" padding="41px 17px 0 17px" padding_md="56px 0 0 0" gridArea_md={`1/3/1/7`}>
           <H2 textAlign="left" margin="0 0 15px 0">{yml.what_is_4geeks.title}</H2>
@@ -61,6 +63,7 @@ const Why = (props) => {
         paragraph={partnersData.partners.sub_heading}
         showFeatured={true}
         props={partnersData.partners}
+        slider
       />
       <Staff lang={pageContext.lang} />
     </>
