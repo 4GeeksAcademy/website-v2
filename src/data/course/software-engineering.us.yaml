@@ -6,7 +6,12 @@ meta_info:
   image: ""
   template: "course-engineering"
   keywords: ""
-  redirects: ["/software-engineering", "/us/course/software-engineering-coding-bootcamp", "/course/software-engineering-coding-bootcamp"]
+  redirects: [
+    "/software-engineering", 
+    "/us/course/software-engineering-coding-bootcamp", 
+    "/course/software-engineering-coding-bootcamp", 
+    "/coding-campus/coding-bootcamp-miami"
+  ]
 
 header:
   tagline_top: "BECOME A"
