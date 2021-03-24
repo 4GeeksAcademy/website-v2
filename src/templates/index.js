@@ -77,7 +77,7 @@ const Home = (props) => {
   return (
     <>
 
-      <Grid height="754px" height_md="623px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" margin_md="0 171px">
+      <Grid height="410px" height_md="623px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" margin_md="0 171px">
         <Div gridArea_md="1/1/1/5" flexDirection="column" justifyContent_md="start" padding_md="70px 0 0 0">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
