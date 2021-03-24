@@ -57,7 +57,7 @@ const Partners = (props) => {
         </Div>
       </Grid>
 
-      <Badges lang={pageContext.lang} />
+      <Badges lang={pageContext.lang} link />
       <Div height="5px" display="none" display_md="flex" background={Colors.lightGray}></Div>
       <OurPartners
         images={partnersData.partners.images}

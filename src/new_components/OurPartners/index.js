@@ -7,7 +7,7 @@ import Link from 'gatsby-link'
 import Card from '../Card';
 import Fragment from "../Fragment"
 
-const OurPartners = ({title, paragraph, link, showFeatured, images, ...rest}) => {
+const OurPartners = ({title, paragraph, link, showFeatured, images, slider, ...rest}) => {
   return (
     <Fragment padding="20px 0" github="/components/partner" >
       {title && <Grid columns_md="12" margin="67px 0" padding="0 17px"
@@ -19,7 +19,7 @@ const OurPartners = ({title, paragraph, link, showFeatured, images, ...rest}) =>
           alignItems="center"
         >
           <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>
-          <Paragraph margin="0 0 50px 0" >{paragraph}</Paragraph>
+          <Paragraph>{paragraph}</Paragraph>
         </Div>
 
       </Grid>}
@@ -41,7 +41,7 @@ const OurPartners = ({title, paragraph, link, showFeatured, images, ...rest}) =>
           <Div height="1px" background={Colors.lightGray} margin="88px 0 79px 0" />
         </>
       }
-      <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0">
+      {slider ? <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0">
         {images.map((l, i) => {
           return (
             <Img
@@ -54,6 +54,66 @@ const OurPartners = ({title, paragraph, link, showFeatured, images, ...rest}) =>
           )
         })}
       </Div>
+        :
+        <>
+          <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0" display_md="none">
+            {images.map((l, i) => {
+              return (
+                <Img
+                  key={i}
+                  style={{height: "80px", minWidth: "120px", margin: "0 15px"}}
+                  imgStyle={{objectFit: "contain"}}
+                  alt={l.name}
+                  fluid={l.image.childImageSharp.fluid}
+                />
+              )
+            })}
+          </Div>
+          <Grid columns="4" rows="1" margin_md="0 200px" display="none" display_md="grid">
+            {images.map((l, i) => {
+              return (
+                i < 4 &&
+                <Img
+                  key={i}
+                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
+                  imgStyle={{objectFit: "contain"}}
+                  alt={l.name}
+                  fluid={l.image.childImageSharp.fluid}
+                />
+              )
+            })}
+          </Grid>
+          <Grid columns="5" rows="1" margin_md="44px 150px" display="none" display_md="grid">
+            {images.map((l, i) => {
+              return (
+                i > 3 && i < 9 &&
+                <Img
+                  key={i}
+                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
+                  imgStyle={{objectFit: "contain"}}
+                  alt={l.name}
+                  fluid={l.image.childImageSharp.fluid}
+                />
+              )
+            })}
+          </Grid>
+          <Grid columns="2" rows="1" margin_md="0 200px" display="none" display_md="grid">
+            {images.map((l, i) => {
+              return (
+                i > 8 &&
+                <Img
+                  key={i}
+                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
+                  imgStyle={{objectFit: "contain"}}
+                  alt={l.name}
+                  fluid={l.image.childImageSharp.fluid}
+                />
+              )
+            })}
+          </Grid>
+        </>
+      }
+
       {link &&
         <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">
           <Link to={rest.props.footer_link}><Paragraph color={Colors.blue}>{rest.props.footer_button}</Paragraph></Link>

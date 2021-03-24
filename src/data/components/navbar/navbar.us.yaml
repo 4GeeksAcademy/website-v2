@@ -2,7 +2,7 @@ navbar:
   - name: "Home"
     link: "/#home"
   - name: "Why 4Geeks"
-    link: "/the-academy"
+    link: "/why-4geeks"
   - name: "The Programs"
     link: "/course/full-stack-web-development-bootcamp-part-time"
     links:
