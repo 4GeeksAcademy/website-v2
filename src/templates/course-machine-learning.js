@@ -4,6 +4,7 @@ import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
+import {BackgroundDrawing} from '../components/BackgroundDrawing'
 import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
@@ -28,23 +29,16 @@ const Program = ({data, pageContext, yml}) => {
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   return (<>
-    <WrapperImage
+    <BackgroundDrawing
       github="/course"
-      imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
-      backgroundPosition={yml.header.image_position}
-      className={`img-header`}
-      bgSize={`cover`}
-      alt={yml.header.alt}
-      paddingRight={`0`}
-      customBorderRadius="0 0 0 1.25rem"
-
     >
       <H1
         size="5"
         variant="main"
         marginTop="100px"
+        textShadow="none"
         m_sm="50px 0 0 0"
-        color={Colors.white}
+        color={Colors.black}
         fontSize="46px"
         align="center"
 
@@ -53,15 +47,16 @@ const Program = ({data, pageContext, yml}) => {
         size="5"
         title={yml.header.tagline}
         variant="main"
+        textShadow="none"
         marginTop="0"
-        color={Colors.white}
+        color={Colors.black}
         fontSize="46px"
         textAlign="center"
         paragraph={yml.header.sub_heading}
-        paragraphColor={Colors.white}
+        paragraphColor={Colors.grey}
         margin="0"
       />
-      <H5 color={Colors.white} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
+      <H5 color={Colors.gray} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
       <Row display="flex" justifyContent="center" marginTop="20px" marginBottom="50px">
         <Column align="right" size="6" size_xs="12" align_sm="center" m_sm="0px 0px 15px 0px">
           <Link to={yml.button.apply_button_link}
@@ -94,7 +89,7 @@ const Program = ({data, pageContext, yml}) => {
         />
       </Modal>
       <Divider height="100px" md="0px" />
-    </WrapperImage>
+    </BackgroundDrawing>
 
 
     <Wrapper
@@ -202,7 +197,7 @@ const Program = ({data, pageContext, yml}) => {
         session={session}
         type={pageContext.slug}
         locations={data.allLocationYaml.edges}
-        course="software_engineering"
+        course="machine_learning"
       />
     </Wrapper>
 
@@ -406,7 +401,7 @@ export const query = graphql`
           }
           
           prices {
-            software_engineering {
+            machine_learning {
               center_section {
 
                 header {
