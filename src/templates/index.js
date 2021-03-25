@@ -77,7 +77,7 @@ const Home = (props) => {
   return (
     <>
 
-      <Grid height="754px" height_md="623px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" margin_md="0 171px">
+      <Grid height="410px" height_md="623px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" margin_md="0 171px">
         <Div gridArea_md="1/1/1/5" flexDirection="column" justifyContent_md="start" padding_md="70px 0 0 0">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
@@ -125,22 +125,7 @@ const Home = (props) => {
         <Testimonials lang={data.allTestimonialsYaml.edges} />
       </Container>
 
-      <Container variant="fixed" style={{borderBottom: "1px solid #ebebeb"}} padding="0 17px 59px 17px">
-        <Paragraph
-          margin="32px 0 32px 0"
-          letteSpacing="0.05em"
-          fontSize="18px"
-          fontSize_tablet="22px"
-          fontWeight="300"
-          color={Colors.black}
-          lineHeight="38px"
-          align="center"
-          dangerouslySetInnerHTML={{__html: yml.badges.sub_heading}}
-        ></Paragraph>
-        <Badges lang={pageContext.lang} />
-      </Container>
-
-      {/* ABOUT 4GEEKS SECTION */}
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} />
 
       <Container variant="fluid" margin="90px 0">
         <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
@@ -183,7 +168,7 @@ const Home = (props) => {
           <Paragraph margin="0 0 50px 0" >{hiring.partners.sub_heading}</Paragraph> */}
 
         </Container>
-        <OurPartners images={hiring.partners.images}></OurPartners>
+        <OurPartners images={hiring.partners.images} slider />
       </Container>
       <Container
         variant="fixed"
@@ -225,8 +210,7 @@ export const query = graphql`
               heading
             }
             badges{
-              heading
-              sub_heading
+              paragraph
             }
             with{
               heading
@@ -281,7 +265,6 @@ export const query = graphql`
               title
               icon
               value
-              position
             }
           }
         }
