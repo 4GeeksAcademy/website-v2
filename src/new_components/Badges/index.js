@@ -78,6 +78,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
             <Link to={content.link_to}><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>
           </Div>}
       </Grid>
+      {/* comentario */}
     </Fragment>
   )
 }
