@@ -36,6 +36,7 @@ const BaseHeading = styled(Heading)`
   text-transform: ${props => props.textTransform};
   text-align: ${props => props.textAlign || "center"};
   padding: ${props => props.padding};
+  border-bottom: ${props => props.borderBottom};
 
   &:hover{
     background-color: ${props => props.bgHover || props.bg};
@@ -88,7 +89,6 @@ export const H3 = styled(BaseHeading)`
 export const H4 = styled(BaseHeading)`
   letter-spacing: 0.05em;
 
-
 `;
 export const H5 = styled(BaseHeading)`
   font-weight: 700;
@@ -120,7 +120,6 @@ const StyledSeparator = styled.div`
     margin-right: auto;
     width: ${props => props.width_xs};
   }
-};
 `
 export const Separator = ({variant, children, ...rest}) => {
   let variants = {
@@ -164,6 +163,7 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   height: ${props => props.height};
+  border-left: ${props => props.borderLeft};
 
   @media ${Devices.xxs}{
   }

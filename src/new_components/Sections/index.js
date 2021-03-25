@@ -60,6 +60,7 @@ export const Container = styled(Fragment)`
             }
             @media  ${Devices.tablet}{
                 height: ${props => props.height_tablet};
+                margin: ${props => props.margin_tablet};
             }
             @media  ${Devices.md}{
                 height: ${props => props.height_md};
@@ -68,6 +69,7 @@ export const Container = styled(Fragment)`
                 
             }
             @media  ${Devices.lg}{
+                margin: ${props => props.margin_lg};
             }
             @media  ${Devices.xl}{
                 
@@ -108,6 +110,7 @@ export const Grid = styled.div`
     @media  ${Devices.tablet}{
         grid-template-columns: repeat(${props => props.columns_tablet}, 1fr);
         grid-template-rows: repeat(${props => props.rows_tablet}, 5vw);
+        padding: ${props => props.padding_tablet};
     }
     @media  ${Devices.md}{
         grid-template-columns: repeat(${props => props.columns_md}, 1fr);
@@ -120,6 +123,7 @@ export const Grid = styled.div`
     }
     @media  ${Devices.lg}{
         grid-template-columns: repeat(${props => props.columns_lg}, 1fr);
+        padding: ${props => props.padding_lg};
     }
     @media  ${Devices.xl}{
         grid-template-columns: repeat(${props => props.columns_xl}, 1fr);

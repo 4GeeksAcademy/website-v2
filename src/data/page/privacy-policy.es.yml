@@ -17,13 +17,12 @@ consent:
   url: /es/politica-de-privacidad
 
 header:
-  tagline: Política de Privacidad 4Geeks Academy
-  sub_heading: ""
+  tagline: < Política de Privacidad 4Geeks Academy >
+  sub_heading: "En 4Geeks Academy, accesible desde https://www.4geeksacademy.co, una de nuestras principales prioridades es la privacidad de nuestros visitantes. Este documento de Política de privacidad contiene tipos de información recopilada y registrada por 4Geeks Academy y cómo la usamos. Si tiene preguntas adicionales o necesita más información sobre nuestra Política de privacidad, no dude en contactarnos."
   image: ../../../static/images/bg/companies-bg.jpg
   alt: ""
 # header:
 #   title: "Privacy Policy for 4Geeks Academy"
-#   text: "At 4Geeks Academy, accessible from https://www.4geeksacademy.co , one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by 4Geeks Academy and how we use it.If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us."
 sections:
   - title: "Política de privacidad y uso de datos"
     text: "En esta web se respetan y cuidan los datos personales de los usuarios. Como usuario debes saber que tus derechos están garantizados.
@@ -38,27 +37,19 @@ sections:
     </ul>
     
     4Geeks Academy ha adecuado esta web a las exigencias de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD), y al Real Decreto 1720/2007, de 21 de diciembre, conocido como el Reglamento de desarrollo de la LOPD. Cumple también con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas (RGPD), así como con la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSICE o LSSI).
-    
     "
   - title: "Responsable del tratamiento de tus datos personales"
-    text: "Identidad del responsable: 4Geeks Academy España S.L.
-    
-    Domicilio de contacto: Calle Edison, 3, 28006 Madrid
-    
-    CIF/NIF: B88579495
-    
-    Email de contacto: es@4geeksacademy.es
-    
-    Teléfono: 910 86 69 83
-    
+    text: "
+    Identidad del responsable: 4Geeks Academy España S.L. <br/>
+    Domicilio de contacto: Calle Edison, 3, 28006 Madrid <br/>
+    CIF/NIF: B88579495 <br/>
+    Email de contacto: es@4geeksacademy.es <br/>
+    Teléfono: 910 86 69 83 <br/>
+
     A efectos de lo previsto en el Reglamento General de Protección de Datos antes citado, los 
-    
     datos personales que nos envíen a través de los formularios de la web, recibirán el 
-    
     tratamiento de datos de Usuarios de la web y suscriptores.
-    
     Para el tratamiento de datos de nuestros usuarios, implementamos todas las medidas 
-    
     técnicas y organizativas de seguridad establecidas en la legislación vigente.
     "
   - title: "Principios que aplicaremos a tu información personal"
