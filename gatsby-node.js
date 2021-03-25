@@ -33,7 +33,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
         const meta = getMetaFromPath({url, ...node});
 
         // add properties to the graph
-        if (node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
+        // if (node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
         if (meta) {
             createNodeField({node, name: `lang`, value: meta.lang});
             createNodeField({node, name: `slug`, value: meta.slug});
@@ -295,6 +295,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields 
                 if (typeof (path) !== "string") throw new Error(`The path in ${node.meta_info.slug} is not a string: ${path}`);
                 if (path === "") return;
                 path = path[0] !== '/' ? '/' + path : path; //and forward slash at the beginning of path
+                console.log(`Additional redirect ${path} => ${node.fields.pagePath}`)
                 _createRedirect({
                     fromPath: path,
                     toPath: node.fields.pagePath,
@@ -312,6 +313,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
     const {createPage, createRedirect} = actions;
     const _createRedirect = (args) => {
         redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
+        console.log(`Redirect from ${args.fromPath} to ${args.toPath}`);
         createRedirect(args);
     }
     const result = await graphql(`
@@ -344,7 +346,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
     //for each page found on the YML
     result.data[`allPageYaml`].edges.forEach(({node}) => {
         const _targetPath = node.fields.slug === "index" ? "/" : node.fields.pagePath;
-        console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath}`);
+        console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} in ${node.fields.lang}`);
         createPage({
             path: _targetPath,
             component: path.resolve(`./src/templates/${node.fields.defaultTemplate}.js`),
@@ -358,14 +360,14 @@ const createPagesfromYml = async ({graphql, actions}) => {
             _createRedirect({
                 fromPath: "/" + node.fields.slug,
                 toPath: _targetPath,
-                redirectInBrowser: true,
+                // redirectInBrowser: true,
                 isPermanent: true
             });
 
             _createRedirect({
                 fromPath: "/en/" + node.fields.slug,
                 toPath: _targetPath,
-                redirectInBrowser: true,
+                // redirectInBrowser: true,
                 isPermanent: true
             });
 
@@ -373,7 +375,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                 _createRedirect({
                     fromPath: "/en",
                     toPath: _targetPath,
-                    redirectInBrowser: true,
+                    // redirectInBrowser: true,
                     isPermanent: true
                 });
             }
@@ -382,9 +384,15 @@ const createPagesfromYml = async ({graphql, actions}) => {
             _createRedirect({
                 fromPath: "/" + node.fields.slug,
                 toPath: _targetPath,
-                redirectInBrowser: true,
+                // redirectInBrowser: true,
                 isPermanent: true
             });
+            // _createRedirect({
+            //     fromPath: "/es/" + node.fields.slug,
+            //     toPath: _targetPath,
+            //     // redirectInBrowser: true,
+            //     isPermanent: true
+            // });
 
         }
 
@@ -394,12 +402,14 @@ const createPagesfromYml = async ({graphql, actions}) => {
                     throw new Error(`The path in ${node.meta_info.slug} its not a string: ${path}`);
                 }
                 path = path[0] !== '/' ? '/' + path : path;
-                _createRedirect({
-                    fromPath: path,
-                    toPath: _targetPath,
-                    redirectInBrowser: true,
-                    isPermanent: true
-                });
+                const exists = redirects.find(p => p === `Redirect from ${path} to ${_targetPath}`);
+                if(!exists || exists === undefined)
+                    _createRedirect({
+                        fromPath: path,
+                        toPath: _targetPath,
+                        // redirectInBrowser: true,
+                        isPermanent: true
+                    });
             })
         }
     });
@@ -438,6 +448,14 @@ const addAdditionalRedirects = ({graphql, actions}) => {
 
 const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
+    let slugigy = (entity) => {
+        let slugMap = {
+            location: "coding-campuses",
+            course: "coding-bootcamps",
+        }
+        return slugMap[entity] || entity
+    }
+
     //if its a blog post the meta_info comes from the front-matter
     if (typeof (meta_info) == 'undefined') meta_info = frontmatter;
 
@@ -447,13 +465,13 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
     const type = frontmatter ? "post" : m[1];
 
-    const lang = m[3] || "en";
+    const lang = m[3] || "us";
     const customSlug = (meta_info !== undefined && typeof meta_info.slug === "string");
     const file_name = m[2];// + (lang == "es" ? "-es": "");
     const slug = (customSlug) ? meta_info.slug : file_name;
     const template = type === "page" ? file_name : type;
 
-    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${template}/${slug}`;
+    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${slugigy(template)}/${slug}`;
 
     const meta = {lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath};
     //   console.log("meta: ", meta);

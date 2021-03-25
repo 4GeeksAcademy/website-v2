@@ -47,8 +47,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No tienes que pagar nada hasta \n conseguir trabajo. Desde 184.311/mes."
-    text_mobile: "Desde 184.311 al mes. \n No pages nada hasta conseguir trabajo."
+    text: "Desde 184.311 al mes."
+    text_mobile: "Desde 184.311 al mes."
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:

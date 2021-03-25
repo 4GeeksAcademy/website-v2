@@ -1,11 +1,11 @@
 meta_info:
-  slug: "santiago-chile"
+  slug: "coding-bootcamp-santiago"
   title: "4Geeks Academy Chile"
   position: 4
   description: null
   image: ""
   keywords: ""
-  redirects: ["/location/santiago", "/location/santiago-de-chile"]
+  redirects: ["/location/santiago", "/location/santiago-de-chile", "/us/location/santiago-chile", "/location/santiago-chile"]
 
 seo_title: "Coding Bootcamp Santiago de Chile"
 header:
