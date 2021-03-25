@@ -166,6 +166,17 @@ export const Div = styled.div`
     align: ${props => props.align};
     cursor: ${props => props.cursor};
     transform: ${props => props.transform};
+    place-items: ${props => props.placeItems};
+    &:after {
+        content: ${props => props.contentAfter};
+        display: ${props => props.displayAfter || "block"};
+        background-color: ${props => props.backgroundColorAfter};
+        height: ${props => props.heightAfter};
+        width: ${props => props.widthAfter};
+        margin-left: ${props => props.marginLeftAfter};
+        position: ${props => props.positionAfter};
+    }
+
     &:hover { 
         background: ${props => props.backgroundHover};
     }
@@ -211,7 +222,11 @@ export const Div = styled.div`
         border-top: ${props => props.borderTop_md};
         border-right: ${props => props.borderRight_md};
         border-left: ${props => props.borderLeft_md};
+        place-items: ${props => props.placeItems_md};
 
+        &:after {
+            display: ${props => props.displayAfter_md};
+        }
     }
     @media  ${Devices.lg}{
         justifyContent: ${props => justifyContentOptions[props.justifyContent_lg]};

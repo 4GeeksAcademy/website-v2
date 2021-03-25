@@ -33,32 +33,36 @@ const GeekForce = (props) => {
     <>
       <Div
         margin="70px 10px"
-        margin_md="70px 0"
-        margin_tablet="70px 100px"
+        margin_md="100px 0"
+        margin_tablet="100px"
         border="bottom"
         height="auto"
         flexDirection="column"
         flexDirection_md="row"
       >
         {/* removed justifyContent="center" */}
-        <Div size="12" size_md="6" padding_lg="0 0 0 18%" padding_md="0 0 0 8%"  justifyContent_md="left" display="flex" flexDirection="column">
+        <Div size="12" size_md="6" padding_lg="0 0 0 13.2%" placeItems_md="initial" placeItems="center" padding_md="0 0 0 8%"  justifyContent_md="left" display="flex" flexDirection="column">
           <RoundImage
-            alignSelf_md="left"
-            alignSelf="center"
             url={yml.image_logo}
             bsize="contain"
             position="center center"
             width="256px"
             height="74px"
           />
-          <Paragraph fontSize="22px" lineHeight="38px" fontWeight="300" textAlign="inherit" padding="30px 30px 0 0">Texto que explique que GeekPal es una membresía con beneficios de apoyo profesional, que el estudiante obtiene al inscribirse en un programa con La Academia.{' '} 
+          <Paragraph fontSize="25px" lineHeight="38px" fontWeight="300" textAlign="inherit" padding="40px 10px" textAlign="center" textAlign_md="left" padding_md="30px 35px 0 0">Texto que explique que GeekPal es una membresía con beneficios de apoyo profesional, que el estudiante obtiene al inscribirse en un programa con La Academia.{' '} 
             <span style={{fontWeight: 700}}>Aún despues de haberte graduado continuarás teniendo el apoyo profesional ilimitado.</span>
             </Paragraph>
         </Div>
 
-        <Div size="12" size_md="6" justifyContent_md="end">
-          <Div width="733px" height="417px" background={Colors.verylightGray}>cs</Div>
-        </Div>
+        <Div display="flex" flexDirection="column" size="12" size_md="6" justifyContent_md="end" justifyContent="center"
+            displayAfter="none" displayAfter_md="block" contentAfter="''" marginLeftAfter="auto" widthAfter="80%" heightAfter="10px" backgroundColorAfter={Colors.yellow}>
+               
+          <Div width="100%" width_md="100%" height="417px" borderRadius="3px" justifyContent="center" alignItems="center" background={Colors.verylightGray}>
+            {''}
+            Video here
+            {''}
+            </Div>
+        </Div >
       </Div>
 
 

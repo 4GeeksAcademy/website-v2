@@ -184,6 +184,7 @@ export const Paragraph = styled.p`
     @media  ${Devices.md}{
       text-align: ${props => props.textAlign_md};
       margin: ${props => props.margin_md};
+      padding: ${props => props.padding_md};
   }
   @media  ${Devices.lg}{
 

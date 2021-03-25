@@ -75,7 +75,6 @@ export const RoundImage = styled.div`
     background-color: ${props => props.backgroundColor};
     width: ${props => props.width};
     height: ${props => props.height};
-    align-self: ${props => props.alignSelf}
     min-height: ${props => props.minHeight};
     :hover {
         opacity: ${props => props.opacity};
@@ -93,7 +92,6 @@ export const RoundImage = styled.div`
     }
     @media ${Break.md}{
         height: ${props => props.h_md};
-        align-self: ${props => props.alignSelf_md}
         width: ${props => props.w_md};
         border-radius: ${props => props.br_md};
     }
