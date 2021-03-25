@@ -139,6 +139,8 @@ const justifyContentOptions = {
 }
 
 export const Div = styled.div`
+    flex: 0 0 ${props => (props.size / 12) * 100}%;
+    max-width: ${props => (props.size / 12) * 100}%;
     grid-area: ${props => props.gridArea};
     padding: ${props => props.padding};
     height: ${props => props.height};
@@ -190,9 +192,12 @@ export const Div = styled.div`
         border-left: ${props => props.borderLeft_tablet};
         transform: ${props => props.transform_tablet};
         grid-area: ${props => props.gridArea_tablet};
+        margin: ${props => props.margin_tablet};
         
     }
     @media  ${Devices.md}{
+        flex: 0 0 ${props => (props.size_md / 12) * 100}%;
+        max-width: ${props => (props.size_md / 12) * 100}%;
         grid-area: ${props => props.gridArea_md};
         display: ${props => props.display_md};
         flex-direction: ${props => props.flexDirection_md};
@@ -210,6 +215,7 @@ export const Div = styled.div`
     }
     @media  ${Devices.lg}{
         justifyContent: ${props => justifyContentOptions[props.justifyContent_lg]};
+        padding: ${props => props.padding_lg};
     }
     @media  ${Devices.xl}{
 

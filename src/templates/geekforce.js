@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
 import Icon from '../components/Icon'
 import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections";
-import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, Check, RoundImage, Span} from '../components/Styling'
+// import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import BaseRender from './_baseLayout'
 import TestimonialsCarrousel from '../components/Testimonials';
 
+//new components
+import {Button, RoundImage} from '../new_components/Styling'
+import { Div, Grid } from '../new_components/Sections'
+import {H3, H4, H5, Title, Separator, Paragraph} from '../new_components/Heading'
+import {Colors} from '../new_components/Styling'
 
 function splitTitleString (string) {
   let stringObj = {
@@ -27,44 +31,37 @@ const GeekForce = (props) => {
   const {data, pageContext, yml} = props;
   return (
     <>
-      <WrapperImage
-
-        imageData={yml.image && yml.image.childImageSharp.fluid}
+      <Div
+        margin="70px 10px"
+        margin_md="70px 0"
+        margin_tablet="70px 100px"
         border="bottom"
         height="auto"
-        paddingRight={`0`}
-        customBorderRadius="0 0 0 1.25rem"
+        flexDirection="column"
+        flexDirection_md="row"
       >
-        <Divider height="50px" />
-        <Title
-          size="5"
-          title={yml.tagline}
-          paragraph={yml.sub_heading}
-          variant="main"
-          color={Colors.white}
-          fontSize="46px"
-          textAlign="center"
-          paragraphColor={Colors.white}
-        />
-        <Divider height="100px" />
-      </WrapperImage>
-      <Divider height="50px" />
-      <Wrapper
-
-        border="bottom"
-        height="auto"
-      >
-        <Row display="flex" justifyContent="center">
+        {/* removed justifyContent="center" */}
+        <Div size="12" size_md="6" padding_lg="0 0 0 18%" padding_md="0 0 0 8%"  justifyContent_md="left" display="flex" flexDirection="column">
           <RoundImage
+            alignSelf_md="left"
+            alignSelf="center"
             url={yml.image_logo}
             bsize="contain"
             position="center center"
-            width="300px"
-            height="200px"
+            width="256px"
+            height="74px"
           />
-        </Row>
-        <Divider height="50px" />
-      </Wrapper>
+          <Paragraph fontSize="22px" lineHeight="38px" fontWeight="300" textAlign="inherit" padding="30px 30px 0 0">Texto que explique que GeekPal es una membresía con beneficios de apoyo profesional, que el estudiante obtiene al inscribirse en un programa con La Academia.{' '} 
+            <span style={{fontWeight: 700}}>Aún despues de haberte graduado continuarás teniendo el apoyo profesional ilimitado.</span>
+            </Paragraph>
+        </Div>
+
+        <Div size="12" size_md="6" justifyContent_md="end">
+          <Div width="733px" height="417px" background={Colors.verylightGray}>cs</Div>
+        </Div>
+      </Div>
+
+
       <Wrapper >
         <Row display="flex" github={`/page/geekforce.${pageContext.lang}.md`}>
           {yml.benefits.map((col, i) => {
