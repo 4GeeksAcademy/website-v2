@@ -163,14 +163,14 @@ const Home = (props) => {
         </Container>
         <OurPartners images={hiring.partners.images} slider />
       </Container>
-      <Container
+      <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
+      {/* <Container
         variant="fixed"
         margin="0 auto"
       >
         <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{yml.locations.heading}</H2>
         <Paragraph margin="0 0 50px 0" >{yml.locations.sub_heading}</Paragraph>
-        <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} />
-      </Container>
+      </Container> */}
     </>
   )
 };

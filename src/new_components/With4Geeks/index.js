@@ -51,7 +51,7 @@ export default ({lang, playerHeight}) => {
     {/* <Grid columns_md="3"> */}
     {/* <Grid columns="3" fractions="4">
       <Div gridColumn="1 / span 10" gridColumn_md="3 / span 10" flexDirection="column" flexDirection_md="row" justifyContent="between" > */}
-    <GridContainer columns_tablet="3" >
+    <GridContainer columns_tablet="3" margin_tablet="0 0 84px 0">
       {info.with.map((i, index) => {
         return (
           <Div
