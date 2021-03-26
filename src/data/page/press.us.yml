@@ -1,0 +1,16 @@
+meta_info:
+  slug: press
+  title: ""
+  description: null
+  image: null
+  keywords: ""
+  redirects: []
+
+seo_title: "press"
+header:
+  title: "Press"
+  paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
+  image: "../../../static/images/outcomes/outcomes.png"
+news:
+  heading: "Read about this coding bootcamp in the news..."
+  limit: 4

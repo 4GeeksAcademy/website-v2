@@ -297,7 +297,7 @@ const SmartLink = ({children, state, ...rest}) => (
     <Location>
         {({location}) => (
             //make sure user's state is not overwritten
-            <Link {...rest} state={{prevUrl: location.href, ...state}}>
+            <Link {...rest} crossOrigin state={{prevUrl: location.href, ...state}}>
                 { children}
             </Link>
         )}

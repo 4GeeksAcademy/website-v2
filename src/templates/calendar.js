@@ -68,6 +68,7 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
                 fs_xl="14px">
                 {dayjs(date).add(5, "hour").locale("es").format("ddd, DD MMM YYYY")}
               </Paragraph>}
+
           </Row>
           <Row marginBottom=".2rem" alignItems={`center`} display="flex">
             <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
@@ -285,6 +286,7 @@ const Calendar = (props) => {
                     context={pageContext.lang}
                     onMouseOver={() => setBackgroundSize("contain")}
                     // bg_size={backgroundSize}
+
                   />
                 )
           }

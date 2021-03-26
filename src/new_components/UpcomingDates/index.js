@@ -54,18 +54,19 @@ const UpcomingDates = ({lang}) => {
         >
             <Grid columns_lg="1" gridGap="100px">
                 <Div flexDirection="column">
-                    <Div padding="30px 0" style={{borderBottom: "1px solid black"}} justifyContent="between" >
-                        <H3 textAlign="left">Next Dates</H3>
-                        <Button outline width="200px" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
+                    <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
+                        <H3 textAlign="left" width="188px">Next Dates</H3>
+                        <Button outline width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button>
                     </Div>
                     {Array.isArray(data.cohorts.all) && data.cohorts.all.map((m, i) => {
                         return (
                             i < 4 &&
-                            <Div key={i} style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
-                                <Div flexDirection="column">
-                                    <H4 textAlign="left">ENERO</H4>
-                                    <Paragraph>09/01 al 13/03</Paragraph>
+                            <Div key={i} flexDirection="column" flexDirection_md="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
+                                <Div flexDirection_md="column" alignItems="center" alignItems_md="start">
+                                    <H4 textAlign="left" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">ENERO</H4>
+                                    <Paragraph textAlign="left" fontWeight="700">09/01 al 13/03</Paragraph>
                                 </Div>
+                                {/* <Div > */}
                                 <Div flexDirection="column">
                                     <H4 textAlign="left">LOCATION</H4>
                                     <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
@@ -74,6 +75,7 @@ const UpcomingDates = ({lang}) => {
                                     <H4 textAlign="left">DURATION</H4>
                                     <Paragraph>16 weeks</Paragraph>
                                 </Div>
+                                {/* </Div> */}
                                 <Div flexDirection="column">
                                     <Button width="200px" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
                                 </Div>

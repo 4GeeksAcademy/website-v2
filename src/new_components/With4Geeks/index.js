@@ -69,6 +69,7 @@ export default ({lang, playerHeight}) => {
               alignSelf="baseline"
             >
               <ReactPlayer
+                className="react-player-with4geeks"
                 thumb={i.image}
                 // style={{height: playerHeight}}
                 id={i.video}

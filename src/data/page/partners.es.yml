@@ -12,6 +12,16 @@ header_data:
   button: HAZTE HIRING PARTNER
   image: "../../../static/images/bg/companies-bg.jpg"
   alt: ""
+form:
+  title: "Join our partnership network"
+  paragraph: "
+  Nuestros aliados forman una parte fundamental en la Academia y nos ayudan a impulsar la carrera profesional de nuestros alumnos. 
+
+Si tienes una empresa de tecnología y quieres contratar jovenes talentos, ser socio y impulsos de código y desarrollo, etc. Te invitamos a formar parte de esta gran familia. Llena el siguiente formulario y te contactaremos!
+  "
+footer_data:
+  image: "../../../static/images/partner/partnership.png"
+  alt: ""
 button_section:
   button_text: "Se Parte de nuestros Aliados"
   button_link: ""

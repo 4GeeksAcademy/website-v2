@@ -54,18 +54,19 @@ const GeeksInfo = ({lang}) => {
   return (
     <>
       <Container
-        variant="fluid" padding="0 17px"
+        variant="fluid" padding="0 17px" margin="35px 0 0 0" margin_md="76px 0 0 0"
       >
         <H2
           margin_tablet="76px 0"
           margin="0 0 27px 0"
+          margin_md="0 0 76px 0"
         >
           {content.heading}
         </H2>
         <Grid columns_md="2" gridGap_md="50px">
-          <Div style={{position: "relative"}} height="468px" padding="20px 38px 23px 25px">
+          <Div style={{position: "relative"}} height="468px" padding="0 38px 23px 25px">
             <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "0", left: "0", borderRadius: "3px"}}></Div>
-            <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "256px", height: "256px", bottom: "0", right: "18px", borderRadius: "3px"}}></Div>
+            <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "256px", height: "256px", bottom: "18px", right: "18px", borderRadius: "3px"}}></Div>
             <StyledBackgroundSection
               className={`image`}
               height={`412px`}
@@ -104,7 +105,7 @@ const GeeksInfo = ({lang}) => {
             })}
             <Paragraph
               dangerouslySetInnerHTML={{__html: content.paragraph}}
-              margin="22px 0 0 0"
+              margin="0"
               padding="18px 0"
               color={Colors.darkGray}
               textAlign="left"

@@ -1,34 +1,75 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
 import {GeekCard} from '../components/Card'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
-import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
-import {Button, Colors} from '../components/Styling'
+import {Container, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
+import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
+import {Button, Colors} from '../new_components/Styling'
+import ProgramDetails from '../new_components/ProgramDetails';
+import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
+import TechsWeTeach from '../new_components/TechsWeTeach';
+import GeeksInfo from '../new_components/GeeksInfo';
+import OurPartners from '../new_components/OurPartners';
 import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
 import Icon from '../components/Icon'
-import GeeksVsOthers from '../components/GeeksVsOthers';
-import ProgramDetails from '../components/ProgramDetails';
-import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
-import WhoIsHiring from '../components/WhoIsHiring';
-import PricesAndPayment from '../components/PricesAndPayment';
-import LeadForm from '../components/LeadForm';
+import Testimonials from '../new_components/Testimonials';
+import Badges from '../new_components/Badges';
+import PricesAndPayment from '../new_components/PricesAndPayment';
+import LeadForm from '../new_components/LeadForm';
 import Modal from '../components/Modal';
 
 
 const Program = ({data, pageContext, yml}) => {
 
   const {session} = React.useContext(SessionContext);
-
+  const courseDetails = data.allCourseYaml.edges[0].node;
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+  const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
+  const hiring = data.allPartnerYaml.edges[0].node;
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   return (<>
-    <WrapperImage
+
+    <Header
+      seo_title={yml.seo_title}
+      title={yml.header.title}
+      paragraph={yml.header.paragraph}
+    >
+      <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+        <Link to={yml.button.apply_button_link}
+          state={{course: yml.meta_info.bc_slug}}
+        >
+          <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+        </Link>
+        <Button outline width="200px" color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+      </Div>
+      <Badges lang={pageContext.lang} />
+    </Header>
+
+    <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+    <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+    <TechsWeTeach lang={pageContext.lang} />
+    <GeeksInfo lang={pageContext.lang} />
+
+    <PricesAndPayment
+      type={pageContext.slug}
+      lang={pageContext.lang}
+      session={session}
+      locations={data.allLocationYaml.edges}
+      course={program_type}
+    />
+
+    <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
+      <Testimonials lang={data.allTestimonialsYaml.edges} />
+    </Container>
+
+    <OurPartners images={hiring.partners.images}></OurPartners>
+
+    {/* <WrapperImage
       github="/course"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
       backgroundPosition={yml.header.image_position}
@@ -94,10 +135,10 @@ const Program = ({data, pageContext, yml}) => {
         />
       </Modal>
       <Divider height="100px" md="0px" />
-    </WrapperImage>
+    </WrapperImage> */}
 
 
-    <Wrapper
+    {/* <Wrapper
       margin="100px"
       border="top">
       <Title
@@ -110,9 +151,9 @@ const Program = ({data, pageContext, yml}) => {
       <WhoIsHiring
         images={yml.potential_companies.companies}
       />
-    </Wrapper>
+    </Wrapper> */}
 
-    <Wrapper margin="50px 0 0 0">
+    {/* <Wrapper margin="50px 0 0 0">
       <Title
         size="10"
         type="h2"
@@ -123,33 +164,12 @@ const Program = ({data, pageContext, yml}) => {
       />
       <ProgramDetails details={yml.details} lang={pageContext.lang} />
       <ProgramDetailsMobile details={yml.details} lang={pageContext.lang} />
-    </Wrapper>
+    </Wrapper> */}
 
-    <Div
-      display="block"
-      margin="50px 0px 0px 0px"
-      m_sm="50px 0px"
-      background={Colors.lightGray}
-    >
-      <Wrapper>
-        <H5 fontSize="20px">{yml.syllabus.heading}</H5>
-        <LeadForm
-          style={{padding: "10px 0px", maxWidth: "100%"}}
-          inputBgColor={Colors.white}
-          layout="flex"
-          lang={pageContext.lang}
-          sendLabel={syllabus_button_text}
-          formHandler={requestSyllabus}
-          data={{
-            course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
-          }}
-        />
-      </Wrapper>
-    </Div>
 
     {/* GEEKPAL && GEEKFORCE SECTION */}
     {/* ---------------------------- */}
-    <Wrapper
+    {/* <Wrapper
       margin="50px"
     >
       <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
@@ -175,9 +195,9 @@ const Program = ({data, pageContext, yml}) => {
           </Column>
         </Row>
       </Column>
-    </Wrapper>
+    </Wrapper> */}
 
-    <Wrapper margin="50px 0">
+    {/* <Wrapper margin="50px 0">
       <Title
         size="10"
         title={yml.geeks_vs_others.heading}
@@ -185,9 +205,9 @@ const Program = ({data, pageContext, yml}) => {
         variant="primary"
       />
       <GeeksVsOthers lang={pageContext.lang} limit={5} />
-    </Wrapper>
+    </Wrapper> */}
 
-    <Wrapper
+    {/* <Wrapper
 
       github="/course"
     >
@@ -204,7 +224,7 @@ const Program = ({data, pageContext, yml}) => {
         locations={data.allLocationYaml.edges}
         course="software_engineering"
       />
-    </Wrapper>
+    </Wrapper> */}
 
   </>
   )
@@ -215,21 +235,20 @@ export const query = graphql`
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            header{
-              tagline_top
-              tagline
-              sub_heading
-              subsub_heading
-              image_position
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 1200){
-                    ...GatsbyImageSharpFluid_withWebp
+          seo_title
+          header{
+              title
+              paragraph
+              image_alt
+              image{
+                  childImageSharp {
+                    fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
                   }
                 }
-              }
-              alt
-            }
+              
+          }
             button{
               syllabus_heading
               syllabus_motivation
@@ -253,6 +272,14 @@ export const query = graphql`
               paragraph
             }
             details {
+              about{
+                title
+                sub_title
+                list{
+                  label
+                  content
+                }
+              }
               heading
               sub_heading
               left_labels{
@@ -319,6 +346,109 @@ export const query = graphql`
               pricing
               alumni
             }
+        }
+      }
+    }
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+          node {
+            partners {
+              tagline
+              sub_heading
+              footer_tagline
+              footer_button
+              footer_link
+              images {
+                name
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 150){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                featured
+              }
+            }
+            coding {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 100){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                featured
+              }
+              tagline
+              sub_heading
+            }
+            influencers {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 100){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                featured
+              }
+              tagline
+              sub_heading
+            }
+            financials {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 100){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                featured
+              }
+              tagline
+              sub_heading
+            }
+          }
+        }
+      }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          heading
+    button_text
+    button_link
+          testimonials {
+            student_name
+            testimonial_date
+            hidden
+            linkedin_url
+            linkedin_text
+            linkedin_image{
+              childImageSharp {
+                fluid(maxHeight: 14){
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            student_thumb{
+              childImageSharp {
+                fluid(maxHeight: 200){
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            short_content
+            content
+            source_url
+            source_url_text
+          }
         }
       }
     }

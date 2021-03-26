@@ -11,7 +11,6 @@ import Fragment from "../Fragment"
 
 const Testimonials = (props) => {
     let testimonialsArray = props.lang[0].node;
-    console.log("RRRRR: ", testimonialsArray)
     return (
         <Fragment github="/components/testimonials">
             <H2>{testimonialsArray.heading}</H2>
@@ -30,14 +29,14 @@ const Testimonials = (props) => {
                                 <H3
                                     fontSize="15px"
                                     lineHeight="19px"
-                                    align="left"
+                                    textAlign="left"
                                 >
                                     {item.student_name}
                                 </H3>
                                 <H4
                                     fontSize="14px"
                                     lineHeight="22px"
-                                    align="left"
+                                    textAlign="left"
                                 >
                                     {item.short_content}
                                 </H4>
