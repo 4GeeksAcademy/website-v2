@@ -2,6 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const robots = process.env.GATSBY_ROBOTS || "show";
 module.exports = {
   siteMetadata: {
     defaultTitle: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
@@ -135,7 +136,7 @@ module.exports = {
       options: {
         env: {
           production: {
-            policy: [{userAgent: '*'}]
+            policy: robots !== "hidden" ? [{ userAgent: '*' }] : [{ userAgent: '*', disallow: ['/'] }]
           },
           development: {
             policy: [{userAgent: '*', disallow: ['/']}]
