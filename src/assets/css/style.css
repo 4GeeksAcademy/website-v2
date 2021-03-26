@@ -1,3 +1,6 @@
+/* He importado este font para probar el font Lato, sans serif correcto - Ariel C */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap');
+
 *{
     user-select: initial !important;
 }

@@ -77,13 +77,18 @@ const BaseHeading = styled(Heading)`
   }
 `
 
-export const H1 = styled(BaseHeading)``;
+export const H1 = styled(BaseHeading)`
+  z-index: ${props => props.zIndex};
+`;
 
 export const H2 = styled(BaseHeading)`
+  z-index: ${props => props.zIndex};
   letter-spacing: 0.05em;
 `;
 export const H3 = styled(BaseHeading)`
   font-weight: ${props => props.fontWeight || "700"};
+  font-size: ${props => props.fonSize};
+  text-align: ${props => props.textAlign};
   letter-spacing: 0.05em;
 `;
 export const H4 = styled(BaseHeading)`
@@ -168,10 +173,11 @@ export const Paragraph = styled.p`
   @media ${Devices.xxs}{
   }
   @media ${Devices.xs}{
-      
+      padding: ${props => props.padding_xs}
   }
   @media  ${Devices.sm}{
       width: ${props => props.width_sm};
+      padding: ${props => props.padding_sm};
   }
   @media  ${Devices.tablet}{
       display: ${props => props.display_tablet};
@@ -184,6 +190,7 @@ export const Paragraph = styled.p`
     @media  ${Devices.md}{
       text-align: ${props => props.textAlign_md};
       margin: ${props => props.margin_md};
+      padding: ${props => props.padding_md}
   }
   @media  ${Devices.lg}{
 
