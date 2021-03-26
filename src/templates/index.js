@@ -136,13 +136,6 @@ const Home = (props) => {
       <With4Geeks lang={pageContext.lang} playerHeight="82px" />
 
       <Container
-        variant="fixed"
-        margin="100px auto"
-      >
-        <H2 margin="0 0 30px 0" fontSize="15px" lineHeight="19px" fontWeight="900">WITH 4GEEKS</H2>
-        <With4Geeks lang={pageContext.lang} playerHeight="82px" />
-      </Container>
-      <Container
         variant="fluid"
         background={Colors.verylightGray}
         height_md="300px"
