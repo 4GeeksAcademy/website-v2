@@ -396,7 +396,7 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
     const type = frontmatter ? "post" : m[1];
 
-    const lang = m[3] || "en";
+    const lang = m[3] || "us";
     const customSlug = (meta_info !== undefined && typeof meta_info.slug === "string");
     const file_name = m[2];// + (lang == "es" ? "-es": "");
     const slug = (customSlug) ? meta_info.slug : file_name;

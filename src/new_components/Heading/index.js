@@ -36,6 +36,7 @@ const BaseHeading = styled(Heading)`
   text-transform: ${props => props.textTransform};
   text-align: ${props => props.textAlign || "center"};
   padding: ${props => props.padding};
+  border-bottom: ${props => props.borderBottom};
 
   &:hover{
     background-color: ${props => props.bgHover || props.bg};
@@ -63,6 +64,7 @@ const BaseHeading = styled(Heading)`
     text-align: ${props => props.textAlign_md};
     lineHeight: ${props => props.lineHeight_md};
     display: ${props => props.display_md};
+    margin: ${props => props.margin_md};
   }
   @media  ${Devices.lg}{
 
@@ -86,7 +88,6 @@ export const H3 = styled(BaseHeading)`
 `;
 export const H4 = styled(BaseHeading)`
   letter-spacing: 0.05em;
-
 
 `;
 export const H5 = styled(BaseHeading)`
@@ -119,7 +120,6 @@ const StyledSeparator = styled.div`
     margin-right: auto;
     width: ${props => props.width_xs};
   }
-};
 `
 export const Separator = ({variant, children, ...rest}) => {
   let variants = {
@@ -163,6 +163,7 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   height: ${props => props.height};
+  border-left: ${props => props.borderLeft};
 
   @media ${Devices.xxs}{
   }

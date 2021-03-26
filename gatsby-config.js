@@ -2,6 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const robots = process.env.GATSBY_ROBOTS || "show";
 module.exports = {
   siteMetadata: {
     defaultTitle: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
@@ -35,6 +36,12 @@ module.exports = {
   },
   plugins: [
     // 'gatsby-plugin-force-trailing-slashes',
+    {
+      resolve:'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     'gatsby-plugin-loadable-components-ssr',
     {
       resolve: "gatsby-plugin-rollbar",
@@ -64,7 +71,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Futura, Lato"],
+          families: ["Lato"],
           urls: ["/fonts/fonts.css"],
         },
       },
@@ -129,10 +136,10 @@ module.exports = {
       options: {
         env: {
           production: {
-            policy: [{ userAgent: '*' }]
+            policy: robots !== "hidden" ? [{ userAgent: '*' }] : [{ userAgent: '*', disallow: ['/'] }]
           },
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+            policy: [{userAgent: '*', disallow: ['/']}]
           },
         }
       }
