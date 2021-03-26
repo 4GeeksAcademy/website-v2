@@ -205,11 +205,12 @@ const Contact = (props) => {
                                         required
                                     />
                                 </Div>
-                                <Div display="block" justifyContent="flex-end" alignResp="flex-end">
+                                <Div textAlign="center" textAlign_md="right" display="block" justifyContent="flex-end" alignResp="flex-end">
                                     {formStatus.status === "error" && <Alert data-action="alert-message" color="red">{formStatus.msg}</Alert>}
                                     <Button
-                                        width="96px"
-                                        m_md="17px 0px"
+                                        width="50%"
+                                        width_md="96px"
+                                        margin_md="17px 0px"
                                         color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue} textColor={Colors.white}
                                         margin="23px 0px 0px 0px" padding="12px 24px"
                                         borderRadius="3px"

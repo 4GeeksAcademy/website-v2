@@ -10,6 +10,31 @@ const VideoWrapper = styled.section`
   width: ${props => props.width || "640px"};
   height: ${props => props.height || "auto"};
   margin: auto;
+  @media ${Devices.xxs}{
+
+  }
+  @media ${Devices.xs}{
+
+  }
+  @media  ${Devices.sm}{
+
+  }
+  @media  ${Devices.tablet}{
+
+  }
+  @media  ${Devices.md}{
+    width: ${props => props.width_md};
+    height: ${props => props.height_md};
+  }
+  @media  ${Devices.lg}{
+
+  }
+  @media  ${Devices.xl}{
+
+  }
+  @media  ${Devices.xxl}{
+
+  }
 `
 
 const Iframe = styled(YouTube)`
@@ -29,7 +54,7 @@ const Image = styled.div`
   width: ${props => props.width || "100%"};
   overflow: hidden;
   box-shadow: ${props => props.shadow};
-  // border-radius: ${props => props.borderRadius || "1.25rem"};
+  border-radius: ${props => props.borderRadius || "1.25rem"};
   @media ${Devices.xxs}{
 
   }
@@ -44,6 +69,7 @@ const Image = styled.div`
   }
   @media  ${Devices.md}{
     width: ${props => props.width_md};
+    height: ${props => props.height_md};
   }
   @media  ${Devices.lg}{
 
@@ -57,7 +83,7 @@ const Image = styled.div`
 `
 
 const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
-  onPlaybackQualityChange, imageSize, playerVars, noCookies, style,
+  onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className,
   thumb, ...rest}) => {
 
   const [showVideo, setShowVideo] = React.useState(false)
@@ -100,23 +126,25 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
           {id && <Play onClick={() => setShowVideo(true)} aria-label="Play Video" />}
           {thumb && thumb.childImageSharp ?
             <GImage
+              className={className}
               onClick={() => setShowVideo(true)}
               fluid={thumb.childImageSharp.fluid}
               alt="Video"
-              style={{
-                height: style.height || "100%",
-                width: style.width || "100%"
-              }}
+            // style={{
+            //   height: style.height || "100%",
+            //   width: style.width || "100%"
+            // }}
             />
             :
             <Thumbnail
+              className={className}
               onClick={() => setShowVideo(true)}
               src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
               alt="Video"
-              style={{
-                height: style.height || "100%",
-                width: style.width || "100%"
-              }}
+            // style={{
+            //   height: style.height || "100%",
+            //   width: style.width || "100%"
+            // }}
             />
           }
         </Image>
@@ -175,16 +203,16 @@ Player.propTypes = {
 }
 
 const Play = styled.button`
-  background: #282828;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
   color: ${props => props.white};
   font-size: 1em;
-  height: 3em;
+  height: 44px;
   padding: 0;
   text-align: center;
   text-indent: 0.1em;
   transition: all 150ms ease-out;
-  width: 4em;
+  width: 44px;
   position: absolute !important;
   top: 50%;
   left: 50%;
@@ -194,7 +222,7 @@ const Play = styled.button`
   cursor: pointer;
   z-index: 9;
   &:hover {
-    background: #ff0000;
+    background: black;
   }
   &:before {
     background: inherit;
@@ -209,7 +237,7 @@ const Play = styled.button`
   &:after {
     border-style: solid;
     border-width: 1em 0 1em 1.732em;
-    border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
+    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
     content: " ";
     font-size: 0.75em;
     height: 0;

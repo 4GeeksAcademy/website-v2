@@ -1,17 +1,33 @@
 meta_info:
-  slug: la-academia
+  slug: sobre-la-academia
   title: ""
   description: "Acerca de 4Geeks Academy"
   image: ""
   keywords: ""
   redirects: ["/la-academia", "/es/academia"]
 
-## BANNER - HEADER
-header_data:
-  tagline: EMPODERANDO TALENTOS IMPULSANDO SUS CARRERAS PROFESIONALES EN PROGRAMACION
-  sub_heading: ""
+seo_title: "sobre la academia"
+header:
+  title: "Empoderamos Talentos, impulsando sus carreras profesionales con programación"
+  paragraph: ""
   image: "../../../static/images/bg/the-academy-bg.jpg"
-  alt: ""
+  image_alt: ""
+
+## BADGES SECTION
+badges:
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+
+what_is_4geeks:
+  title: "¿Qué es 4Geeks?"
+  paragraph: "
+  4Geeks es una escuela internacional de código con campuses en Caracas, Madrid, Santiago de Chile, Miami, Costa Rica y Online. 
+
+  Fue fundada en 2015. En 2016 logró finalmente estar al aire en 3 sedes: Miami Dade College, Miami y Caracas. Todo comenzó como un proyecto interno para entrenar a más desarrolladores, y de a poco se convirtió en nuestra pasión a tiempo completo. Alejandro y Marcelo, amigos de muchos años, no habían trabajado en un mismo Proyecto hasta que 4Geeks unió ambas visiones. 
+
+  La Academia además fue además una pasión sobrevenida para ambos. Por un lado la pasión por la educación y el software (Alejandro) y por el otro la pasión por las Tech startups (Marcelo). Hoy 4Geeks tiene +7 campus repartidos entre Estados Unidos, Latinoamérica y Europa. +1000 Graduados y un montón de cosas por las que sentirnos orgullosos. El camino sigue siendo muy retador porque estamos en el camino a construir un símbolo de la educación en Tecnología.
+  "
+  image: "../../../static/images/the-academy/what-is-4geeks.jpg"
+  image_alt: ""
 
 ## EDUCATION SECTION
 education:

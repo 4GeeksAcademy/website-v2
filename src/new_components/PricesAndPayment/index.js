@@ -11,18 +11,19 @@ import {Button, Colors, Circle, RoundImage} from '../Styling';
 import {SessionContext} from '../../session'
 import Fragment from "../Fragment"
 
-const PricingCard = ({data, lang, children, price, color, background, transform, priceInfo, applyLabel, border, borderLeft, borderRight}) => {
+const PricingCard = ({data, lang, children, price, color, background, transform_tablet, priceInfo, applyLabel, border, borderLeft, borderRight, borderRight_tablet, borderLeft_tablet}) => {
   const {header, button} = data;
-  return <Div flexDirection="column" padding="30px" margin="5px 0" height="fit-content" background={background} transform={transform} border={border} borderLeft={borderLeft} borderRight={borderRight}>
+  return <Div flexDirection="column" padding="30px" margin="5px 0" height="fit-content" background={background} transform_tablet={transform_tablet} border={border} borderLeft={borderLeft} borderRight={borderRight} borderLeft_tablet={borderLeft_tablet} borderRight_tablet={borderRight_tablet}>
     <H2
       color={color}
+      lineHeight="30px"
     >
       {header.heading_one}
     </H2>
-    <H3 color={color}>
+    <H3 color={color} lineHeight="30px">
       {header.heading_two}
     </H3>
-    <Paragraph padding="20px" align="center" fontSize="12px" color={color || Colors.gray}>{header.sub_heading}</Paragraph>
+    <Paragraph padding="20px" color={color || Colors.gray}>{header.sub_heading}</Paragraph>
     <H3 margin="20px 0 0"
       fontSize="25px"
       fs_lg="20px"
@@ -98,49 +99,20 @@ const PricesAndPayments = (props) => {
 
   return (
     <Fragment github="/location">
-      {/* <Row
-        display="flex"
-        justifyContent={`center`}
-        margin="0 0 20px 0"
-      >
-        {!props.course && <Select
-          top="40px"
-          left="20px"
-          width="300px"
-          maxWidth="100%"
-          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-          options={courseArray}
-          openLabel={course ? course.label : props.openedLabel}
-          closeLabel={course ? course.label : props.closedLabel}
-          onSelect={(opt) => setCourse(opt)}
-        />
-        }
-        &nbsp;
-        {course && <Select
-          top="40px"
-          left="20px"
-          width="300px"
-          maxWidth="100%"
-          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-          options={locations.map(l => ({label: l.node.city + ", " + l.node.country, value: l.node.active_campaign_location_slug}))}
-          openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
-          closeLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
-          onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}
-        />}
-      </Row> */}
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
-        <Grid columns_lg="3" gridGap="0px">
+        <Grid columns_md="3" gridGap_md="0px" gridGap="40px">
           {prices.left_section &&
             <PricingCard lang={props.lang}
-              transform="translateY(10%)"
+              background={Colors.white}
+              transform_tablet="translateY(10%)"
               price={prices.left_section.content.price}
               priceInfo={prices.left_section.content.price_info}
               data={prices.left_section}
               applyLabel={apply_button_text}
               border="1px solid black"
-              borderRight="none"
+              borderRight_tablet="none"
             />
           }
           {prices.center_section && Array.isArray(prices.center_section.plans) &&
@@ -171,18 +143,26 @@ const PricesAndPayments = (props) => {
           }
           {prices.right_section &&
             <PricingCard lang={props.lang}
-              transform="translateY(10%)"
+              background={Colors.white}
+              transform_tablet="translateY(10%)"
               price={prices.right_section.content.price}
               priceInfo={prices.right_section.content.price_info}
               applyLabel={apply_button_text}
               data={prices.right_section}
               border="1px solid black"
-              borderLeft="none"
+              borderLeft_tablet="none"
             />
           }
         </Grid>
       }
-      <Paragraph margin="30px 0">{info.get_notified}</Paragraph>
+      <Grid columns_md="12" rows_md="1" gridGap="0" margin="47px 0 37px 0">
+        <Div gridArea_md="1/5/1/9" justifyContent="center" alignItems="center">
+          <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >We accept: </H4>
+          <RoundImage url="/images/bitcoin.png" height="10px" width="65px" bsize="contain" margin="0 15px" />
+          <RoundImage url="/images/ethereum.png" height="20px" width="65px" bsize="contain" />
+        </Div>
+      </Grid>
+      <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Fragment>
   )
