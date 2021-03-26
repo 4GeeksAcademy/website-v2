@@ -11,7 +11,6 @@ import 'dayjs/locale/de'
 import LazyLoad from 'react-lazyload';
 import {Link} from 'gatsby'
 import {SessionContext} from '../session'
-
 const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText, context}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
   <Anchor to={link}>
     <Card
@@ -118,18 +117,15 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
     </Card>
   </Anchor>
 </Column>;
-
 const Calendar = (props) => {
   const {pageContext, yml} = props;
   const {session} = useContext(SessionContext);
-
   const [data, setData] = useState({
     events: {catalog: [], all: [], filtered: []},
     cohorts: {catalog: [], all: [], filtered: []}
   });
   const [academy, setAcademy] = useState(null)
   const [filterType, setFilterType] = useState({label: "Upcoming Courses and Events", value: "cohorts"});
-
   useEffect(() => {
     const getData = async () => {
       // let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
@@ -152,7 +148,6 @@ const Calendar = (props) => {
     }
     getData();
   }, []);
-
   useEffect(() => {
     if (session && Array.isArray(session.locations)) {
       const _data = {
@@ -167,7 +162,6 @@ const Calendar = (props) => {
       setData(_data);
     }
   }, [session]);
-
   return (
     <>
       <WrapperImage
@@ -197,7 +191,6 @@ const Calendar = (props) => {
           </a>
           <H4 margin="20px 0 0 0" align="left" a_sm="left">Filter courses and events:</H4>
         </Row>
-
         <Row
           padding={`10px 20px`}
           background={Colors.lightGray}
@@ -292,15 +285,14 @@ const Calendar = (props) => {
                     eventText={yml.button.event_register_button_link}
                     context={pageContext.lang}
                     onMouseOver={() => setBackgroundSize("contain")}
-                    bg_size={backgroundSize}
+                    // bg_size={backgroundSize}
+
                   />
                 )
           }
         </Row>
       </Wrapper>
-
       <Divider height="50px" />
-
     </>
   )
 };
