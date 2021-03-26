@@ -111,6 +111,17 @@ const Program = ({data, pageContext, yml}) => {
         )}
 
         <Row display="flex" marginTop="50px" marginLeft="10%"  marginRight="10%">
+          <Column size="3" size_sm="12" pl_lg="0">
+            <StyledBackgroundSection
+              backgroundPosition="top center"
+              height="200px"
+              width="200px"
+              image={yml.teacher.picture.childImageSharp.fluid}
+              bgSize={`cover`}
+              // alt={yml.about.about_image.alt}
+              borderRadius={`50%`}
+            />
+          </Column>
           <Column size="8" size_sm="12" >
               <H4 align="left" margin="0px 0px 30px 0px">{`${yml.teacher.greeting} ${yml.teacher.full_name}`}</H4>
               {yml.teacher.bio.split("\\n").map(text => 
@@ -123,17 +134,6 @@ const Program = ({data, pageContext, yml}) => {
               </Paragraph>
             )}
             <Anchor cursor="pointer" color={Colors.blue} to={yml.teacher.linkedin}>Go to LinkedIn</Anchor>
-          </Column>
-          <Column size="3" size_sm="12" pl_lg="0">
-            <StyledBackgroundSection
-              backgroundPosition="top center"
-              height="200px"
-              width="200px"
-              image={yml.teacher.picture.childImageSharp.fluid}
-              bgSize={`cover`}
-              // alt={yml.about.about_image.alt}
-              borderRadius={`50%`}
-            />
           </Column>
         </Row>
     </Wrapper>
