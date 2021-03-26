@@ -133,8 +133,9 @@ const Home = (props) => {
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" />
+      <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
 
-      <Container
+      {/* <Container
         variant="fluid"
         background={Colors.verylightGray}
         height_md="300px"
@@ -149,9 +150,8 @@ const Home = (props) => {
         >
           <H2 fontSize="15px" lineHeight="19px" fontWeight="900">CHOOSE YOUR PROGRAM</H2>
           <Paragraph margin="0 0 36px 0">Contamos con programas que combinan clases prácticas dictadas por expertos</Paragraph>
-          <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
         </Container>
-      </Container>
+      </Container> */}
 
       <Container
         variant="fluid"

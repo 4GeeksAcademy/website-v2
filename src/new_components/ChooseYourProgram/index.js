@@ -2,7 +2,7 @@ import React, {useEffect, useState, useContext} from 'react';
 import PropTypes from "prop-types";
 import {Button, Colors} from '../Styling';
 import {Break} from '../Responsive'
-import {Row, Column, Grid, Div} from '../Sections'
+import {Row, GridContainer, Grid, Div} from '../Sections'
 import {H4, H3, Paragraph} from '../Heading'
 import {navigate} from "gatsby"
 import styled from 'styled-components';
@@ -11,9 +11,8 @@ import {SessionContext} from '../../session.js'
 
 const ChooseYourProgram = (props) => {
     return (
-        <Grid columns_md="3">
+        <GridContainer columns_tablet="3" >
             {Array.isArray(props.programs) && props.programs.map((program, i) => {
-                console.log("program", program)
                 return (
                     <Div
                         key={i}
@@ -85,7 +84,7 @@ const ChooseYourProgram = (props) => {
                     </Div>
                 )
             })}
-        </Grid>
+        </GridContainer>
     )
 };
 
