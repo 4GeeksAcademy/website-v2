@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
-import {Colors, StyledBackgroundSection} from '../../components/Styling'
+import {Colors, StyledBackgroundSection} from '../Styling';
+import {H1, H2, Paragraph} from '../Heading';
 import {Break} from '../Responsive'
 import {Devices} from '../Responsive'
 import Fragment from "../Fragment"
@@ -95,6 +96,7 @@ export const Grid = styled.div`
     height: ${props => props.height};
     background: ${props => props.background};
     padding: ${props => props.padding};
+    margin: ${props => props.margin};
     
     @media ${Devices.xxs}{
         grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
@@ -117,6 +119,7 @@ export const Grid = styled.div`
         height: ${props => props.height_md};
         padding: ${props => props.padding_md};
         display: ${props => props.display_md};
+        margin: ${props => props.margin_md};
     }
     @media  ${Devices.lg}{
         grid-template-columns: repeat(${props => props.columns_lg}, 1fr);
@@ -140,6 +143,7 @@ const justifyContentOptions = {
 }
 
 export const Div = styled.div`
+    grid-area: ${props => props.gridArea};
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};
@@ -158,7 +162,7 @@ export const Div = styled.div`
     border-bottom: ${props => props.borderBottom};
     border-right: ${props => props.borderRight};
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
-    box-shadow: ${props => props.shadow};
+    box-shadow: ${props => props.boxShadow};
     flex-wrap: nowrap; 
     align-content: ${props => props.alignContent};
     align: ${props => props.align};
@@ -180,23 +184,32 @@ export const Div = styled.div`
     }
     @media  ${Devices.tablet}{
         display: ${props => props.display_tablet};
+        flex-direction: ${props => props.flexDirection_tablet};
+        align-items: ${props => props.alignItems_tablet};
         padding: ${props => props.padding_tablet};
+        border: ${props => props.border_tablet};
+        border-top: ${props => props.borderTop_tablet};
+        border-right: ${props => props.borderRight_tablet};
+        border-bottom: ${props => props.borderBottom_tablet};
+        border-left: ${props => props.borderLeft_tablet};
+        transform: ${props => props.transform_tablet};
+        grid-area: ${props => props.gridArea_tablet};
         
     }
     @media  ${Devices.md}{
         grid-area: ${props => props.gridArea_md};
+        display: ${props => props.display_md};
+        flex-direction: ${props => props.flexDirection_md};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_md]};
+        align-items: ${props => props.alignItems_md};
         margin: ${props => props.margin_md};
+        padding: ${props => props.padding_md};
         width: ${props => props.width_md};
         height: ${props => props.height_md};
-        flex-direction: ${props => props.flexDirection_md};
         border: ${props => props.border_md};
-        border-left: ${props => props.borderLeft_md};
-        border-right: ${props => props.borderRight_md};
         border-top: ${props => props.borderTop_md};
-        align-items: ${props => props.alignItems_md};
-        display: ${props => props.display_md};
-        padding: ${props => props.padding_md};
-        justify-content: ${props => justifyContentOptions[props.justifyContent_md]};
+        border-right: ${props => props.borderRight_md};
+        border-left: ${props => props.borderLeft_md};
 
     }
     @media  ${Devices.lg}{
@@ -296,7 +309,32 @@ export const Column = styled(Div)`
         margin: ${props => props.m_xs};
     }
 `
-
+export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background}) => {
+    return (
+        <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md={`12`} gridGap_md="11px" gridGap="0" background={background}>
+            <Div flexDirection="column" justifyContent_md="start" padding="41px 17px 0 17px" padding_md="56px 0 0 0" gridArea_md={image || svg_image ? `1/2/1/7` : `1/4/1/10`}>
+                <H1 textAlign={image || svg_image && "left"} margin="0 0 11px 0" color="#606060">{seo_title}</H1>
+                <H2 textAlign={image || svg_image && "left"} fontSize="50px" lineHeight="60px">{`< ${title} >`}</H2>
+                <Paragraph textAlign={image || svg_image && "left"} margin="26px 0" >{paragraph}</Paragraph>
+                {children}
+            </Div>
+            {image ?
+                <Div width="100%" gridArea_md="1/7/1/13">
+                    <StyledBackgroundSection
+                        height={`412px`}
+                        width="100%"
+                        image={image}
+                        bgSize={`contain`}
+                        alt={image_alt}
+                    />
+                </Div>
+                :
+                <Div width="100%" gridArea_md="1/7/1/13" >
+                    {svg_image}
+                </Div>
+            }
+        </Grid>)
+}
 export const Wrapper = (props) => {
     return <Container
         github={props.github}

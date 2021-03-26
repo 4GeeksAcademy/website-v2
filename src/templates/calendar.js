@@ -60,16 +60,16 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
               fs_xl="14px">
               {dayjs(date).add(5, "hour").locale("en").format("ddd, DD MMM YYYY")}
             </Paragraph>
-            : <Paragraph
-              margin={`0 0 0 10px`}
-              fs_xs="18px"
-              fs_sm="18px"
-              fs_md="9px"
-              fs_lg="11px"
-              fs_xl="14px">
-              {dayjs(date).add(5, "hour").locale("es").format("ddd, DD MMM YYYY")}
-            </Paragraph>}
-            
+              : <Paragraph
+                margin={`0 0 0 10px`}
+                fs_xs="18px"
+                fs_sm="18px"
+                fs_md="9px"
+                fs_lg="11px"
+                fs_xl="14px">
+                {dayjs(date).add(5, "hour").locale("es").format("ddd, DD MMM YYYY")}
+              </Paragraph>}
+
           </Row>
           <Row marginBottom=".2rem" alignItems={`center`} display="flex">
             <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
@@ -132,9 +132,12 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      // let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
       let cohorts = await resp.json();
-      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      console.log("RESP: ", cohorts)
+      // let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
@@ -256,17 +259,18 @@ const Calendar = (props) => {
                 data.cohorts.filtered.map((cohort, index) =>
                   <ListCard
                     key={index}
-                    title={cohort.certificate.name}
+                    title={cohort.syllabus ? cohort.syllabus.certificate.name : ""}
                     address={`${cohort.academy.city.name}, ${cohort.academy.country.name}`}
                     image={cohort.academy.logo_url}
-                    link={`/${session ? session.language : "us"}/${cohort.certificate.slug}`}
+                    link={`/${session ? session.language : "us"}/${cohort.syllabus ? cohort.syllabus.certificate.slug : ""}`}
                     date={cohort.kickoff_date}
                     slug={cohort.slug}
                     applyButtonText={yml.button.apply_button_text}
                     applyButtonLink={yml.button.apply_button_link}
                     detailsButtonText={yml.button.cohort_more_details_text}
-                    detailsButtonLink={`/${pageContext.lang}/${cohort.certificate.slug}`}
+                    detailsButtonLink={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}
                     context={pageContext.lang}
+                    bg_size="cover"
                   />
                 )
               :
@@ -283,9 +287,12 @@ const Calendar = (props) => {
                     image={event.banner}
                     link={event.url}
                     date={event.starting_at}
-                    exerpt={event.exerpt}
+                    exerpt={event.excerpt}
                     eventLink={event.url}
                     eventText={yml.button.event_register_button_link}
+                    context={pageContext.lang}
+                    onMouseOver={() => setBackgroundSize("contain")}
+                    bg_size={backgroundSize}
                   />
                 )
           }

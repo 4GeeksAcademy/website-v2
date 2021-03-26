@@ -38,6 +38,7 @@ const BaseHeading = styled(Heading)`
   text-transform: ${props => props.textTransform};
   text-align: ${props => props.textAlign || "center"};
   padding: ${props => props.padding};
+  border-bottom: ${props => props.borderBottom};
 
   &:hover{
     background-color: ${props => props.bgHover || props.bg};
@@ -65,6 +66,7 @@ const BaseHeading = styled(Heading)`
     text-align: ${props => props.textAlign_md};
     lineHeight: ${props => props.lineHeight_md};
     display: ${props => props.display_md};
+    margin: ${props => props.margin_md};
   }
   @media  ${Devices.lg}{
 
@@ -163,6 +165,8 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   height: ${props => props.height};
+  border-left: ${props => props.borderLeft};
+
   @media ${Devices.xxs}{
   }
   @media ${Devices.xs}{

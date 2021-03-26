@@ -7,18 +7,18 @@ meta_info:
   template: "course-engineering"
   keywords: ""
   redirects: ["/software-engineering"]
+  
+seo_title: "Cooding Bootcamp"
 header:
-  tagline_top: "BECOME A"
-  tagline: "SENIOR SOFTWARE ENGINEER"
-  sub_heading: "Work at a great company, make a great living and help build tomorrow's software."
-  subsub_heading: "(Previous coding experience is required)"
-
-  # The background image position can be cnotroled by device size
-  # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
+  title: "Senior Software Engineer"
   image: "../../../static/images/bg/apple-building.jpg"
-
-  alt: ""
+  image_alt: ""
+  paragraph: "Get the skills to meet the global demand for problem solvers and logical 
+    thinkers who
+    drive the world to real change and impact.
+    Learn ”Modern Web Applications” or “Cloud Based Applications”used only by Forbes 500. Land
+    yourself a real software engineering job or create the next tech unicorn…
+  "
 
 button:
   syllabus_heading: "Download Syllabus"
