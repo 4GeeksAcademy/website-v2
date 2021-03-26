@@ -249,6 +249,15 @@ a {
         width: 120px;
         height: auto;
     }
+    .react-player-with4geeks{
+        height: 158px;
+    }
+    .react-player-testimonials-big{
+        height: 310px;
+    }
+    .react-player-testimonials-small{
+        height: 182px;
+    }
 }
 @media (min-width: 994px) {
     .react-player-with4geeks{

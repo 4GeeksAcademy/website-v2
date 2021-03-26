@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
-import {Row, Column, Wrapper, Container, Grid, Div} from '../new_components/Sections'
+import {Row, Column, Wrapper, Container, Grid, Div, GridContainer} from '../new_components/Sections'
 import {RoundImage, Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Img from 'gatsby-image'
 import News from '../new_components/News'
@@ -133,6 +133,7 @@ const Home = (props) => {
 
 
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
+      <With4Geeks lang={pageContext.lang} playerHeight="82px" />
 
       <Container
         variant="fixed"
