@@ -2,17 +2,15 @@ import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
 import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
-import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
-import {Button, Colors} from '../components/Styling'
+import {H1, H2, Title, Paragraph, H3, H4, H5} from '../components/Heading'
+import {Anchor, Button, Colors, StyledBackgroundSection} from '../components/Styling'
 import {BackgroundDrawing} from '../components/BackgroundDrawing'
 import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
-import Icon from '../components/Icon'
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
-import WhoIsHiring from '../components/WhoIsHiring';
 import PricesAndPayment from '../components/PricesAndPayment';
 import LeadForm from '../components/LeadForm';
 import Modal from '../components/Modal';
@@ -98,13 +96,46 @@ const Program = ({data, pageContext, yml}) => {
       <Title
         size="10"
         marginTop="40px"
-        title={yml.potential_companies.tagline}
-        paragraph={yml.potential_companies.sub_heading}
+        title={yml.description.heading}
+        paragraph={yml.description.sub_heading}
         variant="primary"
       />
-      <WhoIsHiring
-        images={yml.potential_companies.companies}
-      />
+        {yml.description.content.split("\\n").map(text => 
+          <Paragraph
+            margin="0px 0px 20px 0px"
+            fontSize="20px"
+            lineHeight="20px"
+          >
+            {text}
+          </Paragraph>
+        )}
+
+        <Row display="flex" marginTop="50px" marginLeft="10%"  marginRight="10%">
+          <Column size="3" pl_lg="0">
+            <StyledBackgroundSection
+              backgroundPosition="top center"
+              height="200px"
+              width="200px"
+              image={yml.teacher.picture.childImageSharp.fluid}
+              bgSize={`cover`}
+              // alt={yml.about.about_image.alt}
+              borderRadius={`50%`}
+            />
+          </Column>
+          <Column size="8" >
+              <H4 align="left" margin="0px 0px 30px 0px">{`${yml.teacher.greeting} ${yml.teacher.full_name}`}</H4>
+              {yml.teacher.bio.split("\\n").map(text => 
+              <Paragraph
+                margin="0px 0px 20px 0px"
+                fontSize="20px"
+                lineHeight="20px"
+              >
+                {text}
+              </Paragraph>
+            )}
+            <Anchor cursor="pointer" color={Colors.blue} to={yml.teacher.linkedin}>Go to LinkedIn</Anchor>
+          </Column>
+        </Row>
     </Wrapper>
 
     <Wrapper margin="50px 0 0 0">
@@ -270,6 +301,19 @@ export const query = graphql`
               heading
               button_label
             }
+            teacher{
+              picture{
+                childImageSharp {
+                  fluid(maxWidth: 400){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              greeting
+              linkedin
+              full_name
+              bio
+            }
             potential_companies{
               tagline
               sub_heading
@@ -293,15 +337,10 @@ export const query = graphql`
               heading
               sub_heading
             }
-            typical{
+            description{
               heading
               sub_heading
-              schedule{
-                title
-                time
-                icon
-                content
-              }
+              content
             }
             alumni{
               heading

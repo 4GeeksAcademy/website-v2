@@ -21,6 +21,14 @@ header:
 
   alt: ""
 
+description:
+  heading: "About this course"
+  sub_heading: "Prepare yourself for the Age of A.I."
+  content: >
+    Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
+    Practice with real-life business scenarios typical in business and review some of the tools used in the industry. \n
+    Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+
 button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
@@ -63,9 +71,8 @@ details:
     - module_name: "Deep L."
       title: "Practical Deep Learning"
       description: >
-        Java is the most used programing language in the enterprise world. Here you will learn Java's best practices and design patterns to solve classic scaling, optimization infrastructure challenges: DAO, Maven, O.O.P, Singleton, Factory, Strategy, Observer, Builder, etc. \n
-        There are so many different ways and technologies to store and retrieve data - here you will learn to use the most used ones and solve classic Scaling, Big Data and data-mining challenges: Distributed Storage, Redis/Memcache, SQL, NoSQL, GraphQL, etc."
-      projects: "Within deep learning, you’ll be able to wield some of the most powerful technologies that truly scale intelligence for business. Explore the fundamentals of Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Generative Models, Reinforcement Learning, and finally; we jump into Graph Convolutional Neural Networks. Your end-to-end project is to apply one of the neural network types on a real-world scenario use case."
+        Within deep learning, you’ll be able to wield some of the most powerful technologies that truly scale intelligence for business. Explore the fundamentals of Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Generative Models, Reinforcement Learning, and finally; we jump into Graph Convolutional Neural Networks. Your end-to-end project is to apply one of the neural network types on a real-world scenario use case.
+      projects: ""
       slug: "deep-learning"
       duration: "2.5 wks"
       step: 3
@@ -90,6 +97,14 @@ details:
       slug: "lifelong-learning"
       duration: "forever"
       step: 0.1
+
+teacher:
+  greeting: Meet your teacher
+  full_name: Sayyed H. Nezhadi
+  picture: ../../../static/images/staff/sayyed.jpeg
+  linkedin: https://www.linkedin.com/in/sayyednezhadi/
+  bio: >
+    His focus is on guiding some of the biggest companies in the world adopting Artificial Intelligence (Enterprise AI) through deep understanding of both digital architecture and AI. Successfully carried out over 1200 big-scale projects servicing over 350 clients around the globe.
 
 syllabus:
   heading: Get all the information about the syllabus
@@ -146,36 +161,6 @@ geek_data:
 prices:
   heading: "PRICES AND PAYMENTS"
   sub_heading: ""
-
-## TYPICAL DAY SECTION
-typical:
-  heading: ""
-  sub_heading: ""
-  schedule:
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
 
 ## ALUMNI SECTION
 alumni:
