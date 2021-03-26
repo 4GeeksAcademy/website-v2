@@ -127,11 +127,10 @@ const Home = (props) => {
 
       <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} />
 
-      <Container variant="fluid" margin="90px 0">
-        <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
-      </Container>
 
 
+
+      <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" />
 

@@ -235,6 +235,16 @@ export const GridContainer = ({fluid, children, background, backgroundChild, hei
         </Grid>
     )
 }
+export const GridContainerWithImage = ({children, imageSide, background, height, height_tablet, columns, columns_tablet, margin, margin_tablet}) => {
+    return (
+        <Grid gridTemplateColumns_tablet={imageSide == "left" ? "repeat(14, 1fr) 2fr" : "2fr repeat(14, 1fr)"} background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet}>
+            <Grid gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${14 / columns_tablet}fr)`} gridTemplateColumns={columns} gridColumn_tablet={imageSide == "left" ? "1 / span 14" : "2 / span 14"}>
+                {children}
+            </Grid>
+            {/* <Div display="grid" background={backgroundChild} gridColumn_md={fluid ? `1 / span 14` : `2 / span 12`}>{children}</Div> */}
+        </Grid>
+    )
+}
 export const Row = styled(Div)`
     border: ${props => props.border};
     border-top: ${props => props.borderTop};

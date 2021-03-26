@@ -24,7 +24,7 @@ export default props => {
   const credentials = props.lang[0].node.credentials
   const scope = props.scope_slug; // it can be course slug like "full-stack" or an academy location like "downtown-miami"
   return (
-    <GridContainer height="375px" height_md="219px" background={Colors.lightGray} columns="2" columns_tablet="4" >
+    <GridContainer height="375px" height_tablet="219px" background={Colors.lightGray} columns="2" columns_tablet="4" >
       {credentials.filter(c => c.scope === scope).map((m, i) => {
         return (
           <Div key={i} gridGap="0" alignItems="center" justifyContent="center" justifyContent_md="start" flexDirection="column" flexDirection_md="row">
