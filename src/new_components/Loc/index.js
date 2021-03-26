@@ -28,6 +28,9 @@ const Loc = ({locations, title, paragraph}) => {
       {title &&
         <GridContainer
           margin_tablet="0 0 35px 0"
+          margin="0 0 32px 0"
+          gridGap="17px"
+
         >
           <Div
             display="flex"

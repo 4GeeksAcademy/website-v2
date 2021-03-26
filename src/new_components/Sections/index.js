@@ -227,7 +227,7 @@ export const Grid = styled(Div)`
 
 export const GridContainer = ({fluid, children, background, backgroundChild, gridGap, height, height_tablet, columns, columns_tablet, margin, margin_tablet}) => {
     return (
-        <Grid background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet}>
+        <Grid background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding="0 17px">
             <Grid gridGap={gridGap} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${12 / columns_tablet}fr)`} gridTemplateColumns={columns} gridColumn_tablet={fluid ? "1 / span 14" : "2 / span 12"}>
                 {children}
             </Grid>
