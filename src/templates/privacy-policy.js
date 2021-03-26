@@ -20,13 +20,14 @@ const Privacy = (props) => {
       padding_lg="0 26%"
     >
     <H1
+      type="h1"
       fontSize="13px"
       lineHeight="16px"
       fontWeight="700"
       letterSpacing="0.05em"
       color="#606060"
       >4GEEKS ACADEMY</H1>
-      <H2 zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">
+      <H2 type="h2" zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">
             {yml.header.tagline}
       </H2>
       <Paragraph borderLeft="4px solid" padding="0 0 0 15px" letterSpacing="0.05em" textAlign="left" align="left" align_sm="left" margin="65px 0 0 0" >{yml.header.sub_heading}</Paragraph>
