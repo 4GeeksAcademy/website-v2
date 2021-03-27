@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import Icon from '../components/Icon'
-import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../components/Sections";
-// import {H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
 import BaseRender from './_baseLayout'
 import TestimonialsCarrousel from '../components/Testimonials';
 
 //new components
-import {Button, RoundImage} from '../new_components/Styling'
-import { Div, Grid } from '../new_components/Sections'
-import {H3, H4, H5, Title, Separator, Paragraph} from '../new_components/Heading'
 import {Colors} from '../new_components/Styling'
+import { Div, Grid } from '../new_components/Sections'
+import OurPartners from '../new_components/OurPartners'
+import {Button, RoundImage} from '../new_components/Styling'
+import {H3, H4, H5, Title, Separator, Paragraph} from '../new_components/Heading'
+import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../new_components/Sections";
 
 function splitTitleString (string) {
   let stringObj = {
@@ -29,6 +29,8 @@ function splitTitleString (string) {
 
 const GeekForce = (props) => {
   const {data, pageContext, yml} = props;
+  const partnersData = data.allPartnerYaml.edges[0].node;
+  console.log(data)
   return (
     <>
       <Div
@@ -40,7 +42,6 @@ const GeekForce = (props) => {
         flexDirection="column"
         flexDirection_md="row"
       >
-        {/* removed justifyContent="center" */}
         <Div size="12" size_md="6" padding_lg="0 0 0 13.2%" placeItems_md="initial" placeItems="center" padding_md="0 0 0 8%"  justifyContent_md="left" display="flex" flexDirection="column">
           <RoundImage
             url={yml.image_logo}
@@ -64,70 +65,16 @@ const GeekForce = (props) => {
             </Div>
         </Div >
       </Div>
-
-
-      <Wrapper >
-        <Row display="flex" github={`/page/geekforce.${pageContext.lang}.md`}>
-          {yml.benefits.map((col, i) => {
-            const splittedTitle = splitTitleString(col.heading)
-            return (
-              <Column size="4" key={i}>
-                <Row display="flex" justifyContent="around" height="80px">
-                  <Column size="12" selfAlign="center" align="center">
-
-                    <H3
-                      fs_xl="36px"
-                    ><span className="text-danger split" >{splittedTitle.first}</span>{splittedTitle.remainingString}</H3>
-                  </Column>
-                </Row>
-                <Divider height="50px" />
-                {col.items.map((item, index) => {
-                  return (
-                    <Row display="flex" key={index} marginBottom="15px">
-                      <Column size="2" passingRight="0" >
-                        <Icon icon="check" width="24px" color={Colors.yellow} fill={Colors.yellow} />
-
-                      </Column>
-                      <Column size="10"  >
-                        <Row display="flex">
-                          <Column size="12">
-                            <H5
-                              margin="0px"
-                              fs_xl="16px"
-                              fs_lg="16px"
-                              fs_md="14px"
-                              fs_sm="16px"
-                              fs_xs="20px"
-                            >{item.title}
-                            </H5>
-                          </Column>
-                        </Row>
-                        <Row display="flex">
-                          <Column size="12">
-                            <Paragraph
-                              fs_xl="14px"
-                              fs_lg="14px"
-                              fs_md="12px"
-                              fs_sm="16px"
-                              fs_xs="14px"
-                            >{item.sub_title}
-                            </Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                  )
-                })}
-              </Column>
-            )
-          })}
-        </Row>
-      </Wrapper>
-      <Divider height="50px" />
-      <Wrapper >
-        <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
-      </Wrapper>
-      <Divider height="100px" />
+      
+      <Div margin="120px 0px">
+        <OurPartners
+          images={partnersData.partners.images}
+          title={partnersData.partners.tagline}
+          paragraph={partnersData.partners.sub_heading}
+          showFeatured={false}
+          props={partnersData.partners}
+          />
+      </Div>
     </>
   )
 };
@@ -186,6 +133,29 @@ export const query = graphql`
             content
             source_url
             source_url_text
+          }
+        }
+      }
+    }
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          partners {
+            images {
+              name
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 150){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              featured
+            }
+            tagline
+            sub_heading
+            footer_button
+            footer_link
           }
         }
       }

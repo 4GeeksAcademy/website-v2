@@ -34,6 +34,7 @@ const Partners = (props) => {
           alignItems="center"
         >
           <H1
+            type="h1"
             fontSize="13px"
             lineHeight="16px"
             fontWeight="700"
