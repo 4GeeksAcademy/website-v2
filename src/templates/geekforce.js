@@ -5,11 +5,10 @@ import TestimonialsCarrousel from '../components/Testimonials';
 
 //new components
 import {Colors} from '../new_components/Styling'
-import { Div, Grid } from '../new_components/Sections'
+import { Div, Grid, HR } from '../new_components/Sections'
 import OurPartners from '../new_components/OurPartners'
 import {Button, RoundImage} from '../new_components/Styling'
 import {H3, H4, H5, Title, Separator, Paragraph} from '../new_components/Heading'
-import {Column, Row, Container, Divider, Wrapper, WrapperImage} from "../new_components/Sections";
 
 function splitTitleString (string) {
   let stringObj = {
@@ -32,7 +31,7 @@ const GeekForce = (props) => {
   const partnersData = data.allPartnerYaml.edges[0].node;
   console.log(data)
   return (
-    <>
+    <Div margin="0" margin_md="0 0 110px 0" flexDirection="column">
       <Div
         margin="70px 10px"
         margin_md="100px 0"
@@ -66,7 +65,8 @@ const GeekForce = (props) => {
         </Div >
       </Div>
       
-      <Div margin="120px 0px">
+      <HR background={Colors.verylightGray} margin="0 0 70px 0"/>
+
         <OurPartners
           images={partnersData.partners.images}
           title={partnersData.partners.tagline}
@@ -74,8 +74,8 @@ const GeekForce = (props) => {
           showFeatured={false}
           props={partnersData.partners}
           />
-      </Div>
-    </>
+
+    </Div>
   )
 };
 export const query = graphql`

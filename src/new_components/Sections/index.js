@@ -138,6 +138,35 @@ const justifyContentOptions = {
     "start": "flex-start",
 }
 
+export const HR = styled.hr`
+    background: ${props => props.background || "#000000"};
+    height: ${props => props.height || "7px"};
+    border: ${props => props.border || '0px'};
+    margin: ${props => props.margin || '0px'};
+    padding: ${props => props.padding || '0px'};
+    width: ${props => props.width || "100%"};
+    @media ${Devices.xxs}{
+    }
+    @media ${Devices.xs}{
+    }
+    @media  ${Devices.sm}{   
+    }
+    @media  ${Devices.tablet}{
+        margin: ${props => props.margin_tablet};
+        width: ${props => props.width_tablet};
+        height: ${props => props.height_tablet};
+    }
+    @media  ${Devices.md}{
+        width: ${props => props.width_md};
+        height: ${props => props.height_md};
+        margin: ${props => props.margin_md};
+    }
+    @media  ${Devices.lg}{
+    }
+    @media  ${Devices.xl}{
+    }
+`
+
 export const Div = styled.div`
     flex: 0 0 ${props => (props.size / 12) * 100}%;
     max-width: ${props => (props.size / 12) * 100}%;
