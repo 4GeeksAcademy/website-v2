@@ -9,6 +9,21 @@ tagline: NEVER BE STUCK AGAIN
 sub_heading: "LEARN FASTER THAN ANYONE ON EARTH"
 image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekpal.png"
+
+# list:
+#   - title: "Unlimited Professional Support"
+#     sub_title: "✔ Advice and creation of professional profile"
+#     text: "At 4Geeks we will help you perfect your professional profile. You will have personalized advice with our experts to improve your CV, Linkedin, GitHub and Portfolio."
+ 
+#   - title: "Interview Simulation"
+#     text: "In 4Geeks we not only adjust the sessions according to your calendar, but we also give you the opportunity to see them online or in person, this because we have campuses in many different cities and therefore time zones. In any case, we assure you that you have the opportunity for constant mentoring whenever you need it."
+
+#   - title: "Lifetime mentoring"
+#     sub_title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+#     .Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+#     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+
+
 benefits:
   - p:
     heading: "Personal"
@@ -43,3 +58,6 @@ benefits:
         sub_title: (Keep coming back, scheduling or attending)
       - title: Tailored career
         sub_title: (based on each job opportunity)
+
+# image1: "../../../static/images/geeksinfo/geeksinfo.png"
+# image2: "../../../static/images/bg/community.png"

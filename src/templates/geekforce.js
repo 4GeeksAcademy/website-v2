@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Icon from '../components/Icon'
 import BaseRender from './_baseLayout'
 import TestimonialsCarrousel from '../components/Testimonials';
 
@@ -8,7 +7,9 @@ import {Colors} from '../new_components/Styling'
 import { Div, Grid, HR } from '../new_components/Sections'
 import OurPartners from '../new_components/OurPartners'
 import {Button, RoundImage} from '../new_components/Styling'
-import {H3, H4, H5, Title, Separator, Paragraph} from '../new_components/Heading'
+import {H1, H2, Paragraph} from '../new_components/Heading'
+import {StyledBackgroundSection} from '../new_components/Styling'
+import Icon from '../new_components/Icon'
 
 function splitTitleString (string) {
   let stringObj = {
@@ -29,7 +30,8 @@ function splitTitleString (string) {
 const GeekForce = (props) => {
   const {data, pageContext, yml} = props;
   const partnersData = data.allPartnerYaml.edges[0].node;
-  console.log(data)
+  const content = data.allPageYaml.edges[0].node
+
   return (
     <Div margin="0" margin_md="0 0 110px 0" flexDirection="column">
       <Div
@@ -64,8 +66,97 @@ const GeekForce = (props) => {
             </Div>
         </Div >
       </Div>
-      
-      <HR background={Colors.verylightGray} margin="0 0 70px 0"/>
+      <Grid background={Colors.lightYellow} columns="4" overflowX="auto" alignItems="center" padding="0 15%" margin="0 0 58px 0" height="320px" width="auto" margin_md="0 0 78px 0">
+          {/* <Badges lang={pageContext.lang} /> */}
+        <Div flexDirection="column" alignItems="center">
+          <Icon icon="contract" width="85" height="90"/>
+          {/*TODO: H1 or H2? */}
+          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.hiring}</H1>
+        </Div>
+        <Div flexDirection="column" alignItems="center">
+          <Icon icon="job" width="96" height="98"/>
+          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.support}</H1>
+        </Div>
+        <Div flexDirection="column" alignItems="center">
+          <Icon icon="talk" width="79" height="98"/>
+          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.preparation}</H1>
+        </Div>
+        <Div flexDirection="column" alignItems="center">
+          <Icon icon="worker-portrait" width="98" height="98"/>
+          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.resume}</H1>
+        </Div>
+      </Grid>
+
+      {Array.isArray(content.list) && content.list.map((m, i) => {
+        return (
+          <>
+          {
+            m.position === "right" ? (
+              <Grid direction="rtl" columns_md="2" gridGap_md="50px">
+                <Div style={{position: "relative"}} height="215px" height_sm="400px" height_tablet="468px" padding="0 38px 30px 25px">
+                    <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "0", left: "0", borderRadius: "3px"}}></Div>
+                    <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "256px", height: "256px", bottom: "18px", right: "18px", borderRadius: "3px"}}></Div>
+                    <StyledBackgroundSection
+                      className={`image`}
+                      height={`100%`}
+                      image={m.image.childImageSharp.fluid}
+                      bgSize={`contain`}
+                      alt="Cnn Logo"
+                      borderRadius={`0 0 0 3px`}
+                    />
+                  </Div>
+                  <Div justifyContent="center" flexDirection="column" padding="0 5%" padding_sm="0 20%" padding_md="0 0 0 35%" >
+                    <Div direction="ltr" flexDirection="column" margin="0 0 30px 0">
+                      <H1 key={i} type="h1" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H1>
+                      <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m.sub_title}</H2>
+                        <Paragraph
+                          letterSpacing="0.05em"
+                          textAlign="left"
+                          margin="0 0 20px 0"
+                          fontSize="15px"
+                          lineHeight="26px"
+                          >
+                          {m.text}
+                        </Paragraph>
+                    </Div>
+                  </Div>
+                </Grid>
+              ) : (
+                <Grid columns_md="2" gridGap_md="50px">
+                  <Div style={{position: "relative"}} height="215px" height_sm="400px" height_tablet="468px" padding="0 38px 30px 25px">
+                    <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "0", left: "0", borderRadius: "3px"}}></Div>
+                    <Div display="none" display_md="flex" style={{position: "absolute", background: "#0097CD", width: "256px", height: "256px", bottom: "18px", right: "18px", borderRadius: "3px"}}></Div>
+                    <StyledBackgroundSection
+                      className={`image`}
+                      height={`100%`}
+                      image={m.image.childImageSharp.fluid}
+                      bgSize={`contain`}
+                      alt="Cnn Logo"
+                      borderRadius={`0 0 0 3px`}
+                    />
+                  </Div>
+                  <Div justifyContent="center" flexDirection="column" padding="0 5%" padding_sm="0 20%" padding_md="0 35% 0 0">
+                    <Div flexDirection="column" margin="0 0 30px 0">
+                      <H1 key={i} type="h1" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left"  margin="0" fontWeight="900" fontSize="30px">{m.title}</H1>
+                      <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m.sub_title}</H2>
+                        <Paragraph
+                          letterSpacing="0.05em"
+                          fontSize="15px"
+                          textAlign="left"
+                          margin="0 0 20px 0"
+                          lineHeight="22px"
+                          >
+                          {m.text}
+                        </Paragraph>
+                    </Div>
+                  </Div>
+                </Grid>
+              )
+            }
+            </>
+          )
+        })}
+      <HR background={Colors.verylightGray} margin="70px 0"/>
 
         <OurPartners
           images={partnersData.partners.images}
@@ -92,22 +183,24 @@ export const query = graphql`
             }
             tagline
             sub_heading
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1200){
-                  ...GatsbyImageSharpFluid_withWebp
+            list {
+              title
+              sub_title
+              text
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 800, quality: 100){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
                 }
               }
+              position
             }
             image_logo
-            benefits {
-              heading
-              items {
-                title
-                sub_title
-              }
-            } 
-              
+            hiring
+            support
+            preparation
+            resume
         } 
       }
     }

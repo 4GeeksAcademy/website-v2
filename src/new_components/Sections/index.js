@@ -95,7 +95,9 @@ export const Grid = styled.div`
     background: ${props => props.background};
     padding: ${props => props.padding};
     margin: ${props => props.margin};
-    
+    direction: ${props => props.direction};
+    align-items: ${props => props.alignItems};
+    overflow-x: ${props => props.overflowX};
     @media ${Devices.xxs}{
         grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
     }
@@ -178,6 +180,7 @@ export const Div = styled.div`
     position: ${props => props.position};
     display: ${props => props.display || "flex"};
     flex-direction: ${props => props.flexDirection || 'row'};
+    direction: ${props => props.direction};
     align-items: ${props => props.alignItems};
     align-self: ${props => props.alignSelf};
     margin: ${props => props.margin};
@@ -218,11 +221,13 @@ export const Div = styled.div`
     }
     @media  ${Devices.sm}{
         padding: ${props => props.padding_sm};
+        height: ${props => props.height_sm};
         
     }
     @media  ${Devices.tablet}{
         display: ${props => props.display_tablet};
         flex-direction: ${props => props.flexDirection_tablet};
+        height: ${props => props.height_tablet};
         align-items: ${props => props.alignItems_tablet};
         padding: ${props => props.padding_tablet};
         border: ${props => props.border_tablet};

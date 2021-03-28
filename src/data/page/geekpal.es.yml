@@ -9,6 +9,21 @@ tagline: NO PROGRAMES SOLO MÁS NUNCA
 sub_heading: Y aprende todo lo que necesitas más rápido que cualquiera, lo más rapido que se puede.
 image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekpal.png"
+
+
+# list:
+#   - title: "Apoyo Profesional Ilimitado"
+#     sub_title: "✔ Asesoría y creación de perfil profesional"
+#     text: "En 4Geeks te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio."
+ 
+#   - title: "Simulación de Entrevistas"
+#     text: "En 4Geeks no solo ajustamos las sesiones acordes tu calendario, sino que también te damos la oportunidad de verlas de forma online o presencial, esto debido a que contamos con campuses en muchas diversas ciudades y por ende husos horarios. En cualquier sea el caso, te aseguramos tener la oportunidad de mentorias constantes y siempre que las necesites."
+
+#   - title: "Mentoría de por vida"
+#     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+#     .Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+#     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+
 benefits:
   - p:
     heading: "Personal"
@@ -43,3 +58,6 @@ benefits:
         sub_title: (Sigue viniendo y agendando reuniones con nosotros)
       - title: Apoyo Profesional ilimitado
         sub_title: (basado en cada oportunidad de trabajo)
+
+# image1: "../../../static/images/geeksinfo/geeksinfo.png"
+# image2: "../../../static/images/bg/community.png"
