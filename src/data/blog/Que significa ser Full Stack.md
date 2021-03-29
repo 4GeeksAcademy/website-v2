@@ -8,7 +8,6 @@ link:
 slug: que-significa-ser-full-stack
 title: ¿Qué significa ser Full Stack? 
 avatar: /images/staff/jimena.jpg
-image: 
 
 
 
