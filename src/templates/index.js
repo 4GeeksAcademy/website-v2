@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
-import {Row, Column, Wrapper, Container, Grid, Div, GridContainer} from '../new_components/Sections'
+import {Row, Column, GridContainerWithImage, Container, Grid, Div, GridContainer} from '../new_components/Sections'
 import {RoundImage, Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Img from 'gatsby-image'
 import News from '../new_components/News'
@@ -76,13 +76,12 @@ const Home = (props) => {
 
   return (
     <>
-
-      <Grid height="410px" height_md="623px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0" margin_md="0 171px">
-        <Div gridArea_md="1/1/1/5" flexDirection="column" justifyContent_md="start" padding_md="70px 0 0 0">
+      <GridContainerWithImage columns_tablet="2" margin_tablet="0 0 108px 0">
+        <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
-          <H2 textAlign_md="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
-          <Paragraph textAlign_md="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
+          <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
+          <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
           {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
                     <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
           <ChooseProgram
@@ -90,25 +89,14 @@ const Home = (props) => {
             top="40px"
             // margin="40px 0"
             textAlign="center"
-            textAlign_md="left"
+            textAlign_tablet="left"
             programs={data.allChooseProgramYaml.edges[0].node.programs}
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
             closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
           />
           <News lang={pageContext.lang} limit={yml.news.limit} />
         </Div>
-        {/* <Div>
-            <Img
-              style={{height: "623px"}}
-              imgStyle={{objectFit: "contain"}}
-              alt="4Geeks Academy"
-              loading="eager"
-              fadeIn={false}
-              fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-              backgroundSize={`cover`}
-            />
-          </Div> */}
-        <Div gridArea_md="1/7/1/13" display="none" display_md="flex" height="auto" width="100%">
+        <Div display="none" display_tablet="flex" height="auto" width="100%">
           <StyledBackgroundSection
             height={`623px`}
             width="100%"
@@ -117,9 +105,7 @@ const Home = (props) => {
           // alt={yml.header.alt}
           />
         </Div>
-      </Grid>
-
-
+      </GridContainerWithImage>
 
       <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
         <Testimonials lang={data.allTestimonialsYaml.edges} />
@@ -134,43 +120,10 @@ const Home = (props) => {
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" />
       <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
-
-      {/* <Container
-        variant="fluid"
-        background={Colors.verylightGray}
-        height_md="300px"
-        margin_md="0 0 215px 0"
-        margin="0 0 76px 0"
-        padding="59px 17px 83px 17px"
-        padding_md="17px"
-      >
-        <Container
-          variant="fixed"
-          transform_md="translateY(15%)"
-        >
-          <H2 fontSize="15px" lineHeight="19px" fontWeight="900">CHOOSE YOUR PROGRAM</H2>
-          <Paragraph margin="0 0 36px 0">Contamos con programas que combinan clases prácticas dictadas por expertos</Paragraph>
-        </Container>
-      </Container> */}
-
-      <Container
-        variant="fluid"
-      >
-        <Container variant="fixed">
-          {/* <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
-          <Paragraph margin="0 0 50px 0" >{hiring.partners.sub_heading}</Paragraph> */}
-
-        </Container>
-        <OurPartners images={hiring.partners.images} slider />
-      </Container>
+      <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
-      {/* <Container
-        variant="fixed"
-        margin="0 auto"
-      >
-        <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{yml.locations.heading}</H2>
-        <Paragraph margin="0 0 50px 0" >{yml.locations.sub_heading}</Paragraph>
-      </Container> */}
+
+
     </>
   )
 };

@@ -11,7 +11,7 @@ import {SessionContext} from '../../session.js'
 
 const ChooseYourProgram = (props) => {
     return (
-        <GridContainer columns_tablet="3" >
+        <GridContainer columns_tablet="3" margin_tablet="0 0 93px 0" margin="0 0 76px 0">
             {Array.isArray(props.programs) && props.programs.map((program, i) => {
                 return (
                     <Div
