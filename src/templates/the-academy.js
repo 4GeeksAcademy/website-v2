@@ -9,13 +9,13 @@ import BaseRender from './_baseLayout'
 import Staff from '../new_components/Staff';
 import BlogPosts from '../components/BlogPosts'
 import {Link} from 'gatsby'
-import Icon from '../components/Icon'
+import Icon from '../new_components/Icon'
 import Img from "gatsby-image"
 
 const Why = (props) => {
   const {data, pageContext, yml} = props;
   console.log("data", yml)
-  const cornerstone = yml.cornerstones;
+  const cornerstones = yml.cornerstones;
   const hiring = data.allPartnerYaml.edges[0].node;
   const partnersData = data.allPartnerYaml.edges[0].node;
   return (
@@ -58,8 +58,40 @@ const Why = (props) => {
             alt={yml.what_is_4geeks.image_alt}
           />
         </Div>
-      </GridContainer>
+      </GridContainer >
       <Credentials lang={data.allCredentialsYaml.edges} />
+      <GridContainer margin="0 0 30px 0">
+        <Div flexDirection="column" >
+          <H2 >{cornerstones.title}</H2>
+        </Div>
+      </GridContainer>
+      <GridContainer height="auto" columns_tablet="2" margin_tablet="0 0 51px 0" margin="0 0 20px 0">
+
+        {
+          Array.isArray(cornerstones.cornerstones_list) && cornerstones.cornerstones_list.map((m, i) => {
+            return (
+              <Div margin="0 0 40px 0" key={i}>
+                <Div><Icon icon={m.icon} width="43px" height="34px" /></Div>
+                <Div flexDirection="column" margin="0 0 0 15px">
+                  <H3 textAlign="left" margin="0 0 20px 0">{m.title}</H3>
+                  {m.content.split('\\n').map((d, i) =>
+                    <Paragraph
+                      textAlign="left"
+                      color={Colors.darkGray}
+                      key={i}                        >
+                      {d}
+                    </Paragraph>
+                  )}
+                </Div>
+              </Div>
+            )
+          })
+        }
+      </GridContainer>
+      <GridContainer margin_tablet="0 0 76px 0" margin="0 0 65px 0">
+        <Div height="5px" background={Colors.verylightGray}></Div>
+      </GridContainer>
+
       <OurPartners
         images={partnersData.partners.images}
         title={partnersData.partners.tagline}
