@@ -115,8 +115,6 @@ const Home = (props) => {
       <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
       <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
-
-
     </>
   )
 };

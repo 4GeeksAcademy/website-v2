@@ -31,7 +31,7 @@ export default props => {
             <Icon icon={m.icon} width="48" height="48" />
             <Div flexDirection="column" margin="10px 0 0 0" margin_md="0 0 0 20px">
               <H3>{m.value}</H3>
-              <H4 lineHeight="19px" textTransform="uppercase" color={Colors.darkGray}>{m.title}</H4>
+              <H4 fontWeight="700" lineHeight="19px" textTransform="uppercase" color={Colors.darkGray}>{m.title}</H4>
             </Div>
           </Div>
         )

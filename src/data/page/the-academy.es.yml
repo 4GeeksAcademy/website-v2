@@ -82,8 +82,8 @@ outcomes:
 
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:
-  heading: NUESTRAS PIEDRAS ANGULARES
-  sub_heading: ""
+  title: Nuestras Piedras Angulares
+  paragraph: ""
   cornerstones_list:
     - title: SALÓN DE CLASES INVERTIDO
       content: La teoría se entrega a través de vídeos, animación, imágenes e infografías. El tiempo en clase se utiliza para debatir, crear y construir proyectos, y orientar sobre ejercicios prácticos.
