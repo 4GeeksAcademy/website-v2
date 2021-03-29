@@ -14,7 +14,6 @@ import Img from "gatsby-image"
 
 const Why = (props) => {
   const {data, pageContext, yml} = props;
-  console.log("data", yml)
   const cornerstones = yml.cornerstones;
   const hiring = data.allPartnerYaml.edges[0].node;
   const partnersData = data.allPartnerYaml.edges[0].node;
@@ -27,6 +26,8 @@ const Why = (props) => {
         image={yml.header.image.childImageSharp.fluid}
         margin_tablet="70px 0 0 0"
         margin="120px 0 0 0"
+        padding="0 0 60px 0"
+        padding_tablet="0 0 60px 0"
       />
       <Grid gridTemplateColumns_tablet="14">
         <Div grid_column_tablet="1 / span 14">
