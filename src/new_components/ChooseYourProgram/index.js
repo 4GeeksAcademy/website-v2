@@ -18,18 +18,18 @@ const ChooseYourProgram = (props) => {
                         key={i}
                         display="flex"
                         height="124px"
-                        height_md="245px"
+                        height_tablet="265px"
                         borderRadius="3px"
                         padding="1rem"
                         border="1px solid black"
                         borderLeft="6px solid black"
                         borderTop="1px solid black"
-                        borderLeft_md="1px solid black"
-                        borderTop_md="6px solid black"
-                        flexDirection_md="column"
+                        borderLeft_tablet="1px solid black"
+                        borderTop_tablet="6px solid black"
+                        flexDirection_tablet="column"
                         alignItems="center"
                         justifyContent="space-between"
-                        alignItems_md="flex-end"
+                        alignItems_tablet="flex-end"
                         background="#ffffff"
                         style={{position: "relative"}}
                     >
@@ -65,6 +65,7 @@ const ChooseYourProgram = (props) => {
                                     textAlign="left"
                                     fontSize="22px"
                                     lineHeight="26px"
+
                                 >
                                     {m}
                                 </H3>
@@ -76,7 +77,7 @@ const ChooseYourProgram = (props) => {
                                     lineHeight="19px"
                                     fontWeight="400"
                                     margin="10px 0 0 0"
-                                    margin_md="10px 0 0 0"
+                                    margin_tablet="10px 0 0 0"
                                 >{m}</Paragraph>
                             )}
                         </Div>
