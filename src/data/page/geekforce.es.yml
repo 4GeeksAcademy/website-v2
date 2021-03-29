@@ -8,8 +8,11 @@ meta_info:
 tagline: GEEKPAL
 sub_heading: ""
 image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekpal.png"
+image_logo: "/images/geekforce.png"
 
+geekForce:
+  - videoId: "cKcZD0_1IKk"
+    image: "../../../static/images/projects/re-mindful.jpg"
 
 hiring: "86% de nuestros alumnos contratados"
 support: "SOPORTE LABORAL POST PROGRAMA"
@@ -18,22 +21,26 @@ resume: "XX HOJAS DE VIDA CREADAS"
 
 list:
   - title: "Apoyo Profesional Ilimitado"
-    sub_title: "✔ Asesoría y creación de perfil profesional"
-    text: "En 4Geeks te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio."
     image: "../../../static/images/perfil-profesional.png"
     position: "right"
+    sub:
+      - title: "✔ Asesoría y creación de perfil profesional"
+        text: "En 4Geeks te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio."
  
   - title: "Simulación de Entrevistas"
-    text: "En 4Geeks no solo ajustamos las sesiones acordes tu calendario, sino que también te damos la oportunidad de verlas de forma online o presencial, esto debido a que contamos con campuses en muchas diversas ciudades y por ende husos horarios. En cualquier sea el caso, te aseguramos tener la oportunidad de mentorias constantes y siempre que las necesites."
     image: "../../../static/images/entrevista-tecnica.png"
     position: "left"
+    text: "En 4Geeks no solo ajustamos las sesiones 
+    <span style='font-weight: bold'> acordes tu calendario</span>, sino que también te damos la oportunidad de verlas de forma 
+    <span style='font-weight: bold'> online o presencial</span>, esto debido a que contamos con campuses en muchas diversas ciudades y por ende husos horarios.<br/>
+    <br/>En cualquier sea el caso, te aseguramos tener la oportunidad de mentorias constantes y siempre que las necesites."
 
   - title: "Mentoría de por vida"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    .Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     image: "../../../static/images/bg/main-bg.jpg"
     position: "right"
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/> 
+    <br/>.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 
 # benefits:
 #   - p:
