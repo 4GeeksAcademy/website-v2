@@ -51,14 +51,14 @@ export default ({lang, playerHeight}) => {
     {/* <Grid columns_md="3"> */}
     {/* <Grid columns="3" fractions="4">
       <Div gridColumn="1 / span 10" gridColumn_md="3 / span 10" flexDirection="column" flexDirection_md="row" justifyContent="between" > */}
-    <GridContainer columns_tablet="3" margin_tablet="0 0 84px 0">
+    <GridContainer columns_tablet="3" margin="0 0 73px 0" margin_tablet="0 0 84px 0">
       {info.with.map((i, index) => {
         return (
           <Div
             display="flex"
             flexDirection_tablet="column"
             justifyContent="between"
-            borderBottom={`1px solid ${Colors.lightGray}`}
+            borderBottom_tablet={`1px solid ${Colors.lightGray}`}
             border_tablet={`1px solid ${Colors.lightGray}`}
             // justifyContent="spece-between"
             key={index}
