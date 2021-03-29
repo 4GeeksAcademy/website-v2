@@ -7,8 +7,9 @@ import Icon from '../new_components/Icon'
 import {Colors} from '../new_components/Styling'
 import ReactPlayer from '../new_components/ReactPlayer'
 import OurPartners from '../new_components/OurPartners'
+import IconsBanner from '../new_components/IconsBanner'
 import { Div, Grid, HR } from '../new_components/Sections'
-import {H1, H2, Paragraph} from '../new_components/Heading'
+import {H1, H2, H3, Paragraph} from '../new_components/Heading'
 import {Button, RoundImage} from '../new_components/Styling'
 import {StyledBackgroundSection} from '../new_components/Styling'
 
@@ -32,6 +33,7 @@ const GeekPal = (props) => {
   const {data, pageContext, yml} = props;
   const partnersData = data.allPartnerYaml.edges[0].node;
   const content = data.allPageYaml.edges[0].node
+  console.log(content.icons)
   return (
     <Div margin="0" margin_md="0 0 110px 0" flexDirection="column">
       <Div
@@ -89,23 +91,14 @@ const GeekPal = (props) => {
             </Div>
         </Div >
       </Div>
-      <Grid background={Colors.lightYellow} columns="4" overflowX="auto" alignItems="center" padding="0 15%" margin="0 0 58px 0" height="320px" width="auto" margin_md="0 0 78px 0">
-        <Div flexDirection="column" alignItems="center">
-          <Icon icon="capacity" width="94" height="96"/>
-          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.capacity}</H1>
-        </Div>
-        <Div flexDirection="column" alignItems="center">
-          <Icon icon="ratio" width="90" height="94"/>
-          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.ratio}</H1>
-        </Div>
-        <Div flexDirection="column" alignItems="center">
-          <Icon icon="talk" width="79" height="98"/>
-          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.preparation}</H1>
-        </Div>
-        <Div flexDirection="column" alignItems="center">
-          <Icon icon="timer" width="76" height="91"/>
-          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.support}</H1>
-        </Div>
+
+      {/* FIXME: crear componente y modificar yml como lista y array con icon y capacity revisar credentials en home */}
+      <Grid background={Colors.lightYellow} columns="2" rows="2" columns_md="12" rows_md="1" alignItems="center" margin="0 0 58px 0" height="470px" height_md="320px" width="auto" margin_md="0 0 78px 0">
+        {Array.isArray(content.icons) && content.icons?.map((item, i) => {
+          return(
+            <IconsBanner icon={item.icon} index={i} title={item.title}  />
+            )
+        })}
       </Grid>
 
       {Array.isArray(content.list) && content.list.map((m, i) => {
@@ -128,7 +121,7 @@ const GeekPal = (props) => {
                   </Div>
                   <Div justifyContent="center" flexDirection="column" padding="0 5%" padding_sm="0 20%" padding_md="0 0 0 35%" >
                     <Div direction="ltr" flexDirection="column" margin="0 0 30px 0">
-                      <H1 key={i} type="h1" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H1>
+                      <H2 key={i} type="h2" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H2>
                       {
                         m.sub ? (
                           <>
@@ -136,7 +129,7 @@ const GeekPal = (props) => {
                               m.sub?.map(sub => {
                                 return (
                                   <>
-                                    <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H2>
+                                    <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H3>
                                     <Paragraph
                                       letterSpacing="0.05em"
                                       textAlign="left"
@@ -152,7 +145,7 @@ const GeekPal = (props) => {
                           </>
                           ) : (
                           <>
-                            <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H2>
+                            <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H3>
                             <Paragraph
                               letterSpacing="0.05em"
                               fontSize="15px"
@@ -183,7 +176,7 @@ const GeekPal = (props) => {
                   </Div>
                   <Div justifyContent="center" flexDirection="column" padding="0 5%" padding_sm="0 20%" padding_md="0 35% 0 0">
                     <Div flexDirection="column" margin="0 0 30px 0">
-                      <H1 key={i} type="h1" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left"  margin="0" fontWeight="900" fontSize="30px">{m.title}</H1>
+                      <H2 key={i} type="h2" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left"  margin="0" fontWeight="900" fontSize="30px">{m.title}</H2>
                       {
                         m.sub ? (
                           <>
@@ -191,7 +184,7 @@ const GeekPal = (props) => {
                               m.sub?.map(sub => {
                                 return (
                                   <>
-                                    <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H2>
+                                    <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H3>
                                     <Paragraph
                                       letterSpacing="0.05em"
                                       textAlign="left"
@@ -207,7 +200,7 @@ const GeekPal = (props) => {
                           </>
                           ) : (
                           <>
-                            <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H2>
+                            <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H3>
                             <Paragraph
                               letterSpacing="0.05em"
                               fontSize="15px"
@@ -271,10 +264,10 @@ export const query = graphql`
             position
           }
           image_logo
-          capacity
-          ratio
-          preparation
-          support
+          icons {
+            icon
+            title
+          }
           geekPal {
             videoId
             image {

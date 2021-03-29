@@ -15,10 +15,15 @@ geekPal:
   - videoId: "cKcZD0_1IKk"
     image: "../../../static/images/projects/re-mindful.jpg"
 
-capacity: "Maximum 8 students per class"
-ratio: "1:5 RATIO teacher student"
-preparation: "50 MENTORIES PER STUDENT"
-support: "RESPONSE TIME OF 15 MINUTES"
+icons:
+  - icon: "capacity"
+    title: "Maximum 8 students per class"
+  - icon: "ratio"
+    title: "1:5 RATIO teacher student"
+  - icon: "talk"
+    title: "50 MENTORIES PER STUDENT"
+  - icon: "timer"
+    title: "RESPONSE TIME OF 15 MINUTES"
 
 list:
   - title: "Unlimited Professional Support"

@@ -3,14 +3,14 @@ import BaseRender from './_baseLayout'
 // import TestimonialsCarrousel from '../components/Testimonials';
 
 //new components
-import {Colors} from '../new_components/Styling'
-import { Div, Grid, HR } from '../new_components/Sections'
-import OurPartners from '../new_components/OurPartners'
-import {Button, RoundImage} from '../new_components/Styling'
-import {H1, H2, Paragraph} from '../new_components/Heading'
-import {StyledBackgroundSection} from '../new_components/Styling'
-import ReactPlayer from '../new_components/ReactPlayer'
 import Icon from '../new_components/Icon'
+import {Colors} from '../new_components/Styling'
+import ReactPlayer from '../new_components/ReactPlayer'
+import OurPartners from '../new_components/OurPartners'
+import { Div, Grid, HR } from '../new_components/Sections'
+import {H1, H2, H3, Paragraph} from '../new_components/Heading'
+import {Button, RoundImage} from '../new_components/Styling'
+import {StyledBackgroundSection} from '../new_components/Styling'
 
 // function splitTitleString (string) {
 //   let stringObj = {
@@ -93,20 +93,19 @@ const GeekForce = (props) => {
       <Grid background={Colors.lightYellow} columns="4" overflowX="auto" alignItems="center" padding="0 15%" margin="0 0 58px 0" height="320px" width="auto" margin_md="0 0 78px 0">
         <Div flexDirection="column" alignItems="center">
           <Icon icon="contract" width="85" height="90"/>
-          {/*TODO: H1 or H2? */}
-          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.hiring}</H1>
+          <H2 type="h2" fontSize="15px" textTransform="uppercase" lineHeight="19px" padding="20px 15%" width="250px">{yml.hiring}</H2>
         </Div>
         <Div flexDirection="column" alignItems="center">
           <Icon icon="job" width="96" height="98"/>
-          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.support}</H1>
+          <H2 type="h2" fontSize="15px" textTransform="uppercase" lineHeight="19px" padding="20px 15%" width="250px">{yml.support}</H2>
         </Div>
         <Div flexDirection="column" alignItems="center">
           <Icon icon="talk" width="79" height="98"/>
-          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.preparation}</H1>
+          <H2 type="h2" fontSize="15px" textTransform="uppercase" lineHeight="19px" padding="20px 15%" width="250px">{yml.preparation}</H2>
         </Div>
         <Div flexDirection="column" alignItems="center">
           <Icon icon="worker-portrait" width="98" height="98"/>
-          <H1 type="h1" textTransform="uppercase" lineHeight="19px" padding="20px 20%" width="250px">{yml.resume}</H1>
+          <H2 type="h2" fontSize="15px" textTransform="uppercase" lineHeight="19px" padding="20px 15%" width="250px">{yml.resume}</H2>
         </Div>
       </Grid>
 
@@ -130,7 +129,7 @@ const GeekForce = (props) => {
                   </Div>
                   <Div justifyContent="center" flexDirection="column" padding="0 5%" padding_sm="0 20%" padding_md="0 0 0 35%" >
                     <Div direction="ltr" flexDirection="column" margin="0 0 30px 0">
-                      <H1 key={i} type="h1" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H1>
+                      <H2 key={i} type="h2" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H2>
                       {
                         m.sub ? (
                           <>
@@ -138,7 +137,7 @@ const GeekForce = (props) => {
                               m.sub?.map(sub => {
                                 return (
                                   <>
-                                    <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H2>
+                                    <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H3>
                                     <Paragraph
                                       letterSpacing="0.05em"
                                       textAlign="left"
@@ -154,7 +153,7 @@ const GeekForce = (props) => {
                           </>
                           ) : (
                           <>
-                            <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H2>
+                            <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H3>
                             <Paragraph
                               letterSpacing="0.05em"
                               fontSize="15px"
@@ -185,7 +184,7 @@ const GeekForce = (props) => {
                   </Div>
                   <Div justifyContent="center" flexDirection="column" padding="0 5%" padding_sm="0 20%" padding_md="0 35% 0 0">
                     <Div flexDirection="column" margin="0 0 30px 0">
-                      <H1 key={i} type="h1" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left"  margin="0" fontWeight="900" fontSize="30px">{m.title}</H1>
+                      <H2 key={i} type="h2" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left"  margin="0" fontWeight="900" fontSize="30px">{m.title}</H2>
                       {
                         m.sub ? (
                           <>
@@ -193,7 +192,7 @@ const GeekForce = (props) => {
                               m.sub?.map(sub => {
                                 return (
                                   <>
-                                    <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H2>
+                                    <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H3>
                                     <Paragraph
                                       letterSpacing="0.05em"
                                       textAlign="left"
@@ -209,7 +208,7 @@ const GeekForce = (props) => {
                           </>
                           ) : (
                           <>
-                            <H2 type="h2" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H2>
+                            <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H3>
                             <Paragraph
                               letterSpacing="0.05em"
                               fontSize="15px"

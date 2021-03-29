@@ -192,6 +192,7 @@ export const Div = styled.div`
     border-bottom: ${props => props.borderBottom};
     border-right: ${props => props.borderRight};
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
+    justify-self: ${props => props.justifySelf};
     box-shadow: ${props => props.boxShadow};
     flex-wrap: nowrap; 
     align-content: ${props => props.alignContent};

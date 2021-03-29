@@ -15,6 +15,17 @@ geekForce:
   - videoId: "cKcZD0_1IKk"
     image: "../../../static/images/projects/re-mindful.jpg"
 
+# icons:
+#   - icon: "contract"
+#     title: "86% of our students hired"
+#   - icon: "job"
+#     title: "POST PROGRAM LABOR SUPPORT"
+#   - icon: "talk"
+#     title: "PREPARING FOR INTERVIEWS"
+#   - icon: "worker-portrait"
+#     title: "XX LIFE SHEETS CREATED"
+    
+
 hiring: "86% of our students hired"
 support: "POST PROGRAM LABOR SUPPORT"
 preparation: "PREPARING FOR INTERVIEWS"

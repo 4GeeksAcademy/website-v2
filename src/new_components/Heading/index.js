@@ -57,6 +57,7 @@ const BaseHeading = styled(Heading)`
     lineHeight: ${props => props.lineHeight_tablet};
     margin: ${props => props.margin_tablet};
     display: ${props => props.display_tablet};
+    padding: ${props => props.padding_tablet};
   }
   @media  ${Devices.md}{
     font-size: ${props => props.fontSize_md};
@@ -64,6 +65,7 @@ const BaseHeading = styled(Heading)`
     lineHeight: ${props => props.lineHeight_md};
     display: ${props => props.display_md};
     margin: ${props => props.margin_md};
+    width: ${props => props.width_md};
   }
   @media  ${Devices.lg}{
 
@@ -154,7 +156,7 @@ export const Paragraph = styled.p`
   margin: ${props => props.margin || "0"};
   font-size: ${props => props.fontSize};
   font-family: ${props => props.fontFamily};
-  font-weight: ${props => props.fontWeight};
+  font-weight: ${props => props.fontWeight || "400"};
   max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
   padding-right: ${props => props.paddingRight || "innitial"};
@@ -283,7 +285,6 @@ Paragraph.defaultProps = {
   fontFamily: "Lato, sans-serif",
   fontSize: "15px",
   lineHeight: "22px",
-  fontWeight: "400",
   textAlign: "center",
   color: `${Colors.darkGray}`,
 };
