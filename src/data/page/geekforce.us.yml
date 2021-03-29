@@ -12,7 +12,7 @@ image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekforce.png"
 
 # Introduction Video here
-geekPal:
+geekForce:
   - videoId: "cKcZD0_1IKk"
     image: "../../../static/images/projects/re-mindful.jpg"
 
