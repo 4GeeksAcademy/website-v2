@@ -60,12 +60,12 @@ const Why = (props) => {
         </Div>
       </GridContainer >
       <Credentials lang={data.allCredentialsYaml.edges} />
-      <GridContainer margin="0 0 30px 0">
+      <GridContainer margin="0 0 30px 0" padding="0">
         <Div flexDirection="column" >
           <H2 >{cornerstones.title}</H2>
         </Div>
       </GridContainer>
-      <GridContainer height="auto" columns_tablet="2" margin_tablet="0 0 51px 0" margin="0 0 20px 0">
+      <GridContainer padding="0" height="auto" columns_tablet="2" margin_tablet="0 0 51px 0" margin="0 0 20px 0">
 
         {
           Array.isArray(cornerstones.cornerstones_list) && cornerstones.cornerstones_list.map((m, i) => {
