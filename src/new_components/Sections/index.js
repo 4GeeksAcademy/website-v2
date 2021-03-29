@@ -225,9 +225,9 @@ export const Grid = styled(Div)`
     }
     `
 
-export const GridContainer = ({fluid, children, background, backgroundChild, gridGap, height, height_tablet, columns, columns_tablet, margin, margin_tablet}) => {
+export const GridContainer = ({fluid, children, background, backgroundChild, gridGap, height, height_tablet, columns, columns_tablet, margin, margin_tablet, padding, padding_tablet}) => {
     return (
-        <Grid background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding="0 17px">
+        <Grid background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding={padding || "0 17px"} padding_tablet={padding_tablet}>
             <Grid gridGap={gridGap} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${12 / columns_tablet}fr)`} gridTemplateColumns={columns} gridColumn_tablet={fluid ? "1 / span 14" : "2 / span 12"}>
                 {children}
             </Grid>
@@ -235,9 +235,9 @@ export const GridContainer = ({fluid, children, background, backgroundChild, gri
         </Grid>
     )
 }
-export const GridContainerWithImage = ({children, imageSide, background, height, height_tablet, columns, columns_tablet, margin, margin_tablet}) => {
+export const GridContainerWithImage = ({children, imageSide, background, height, height_tablet, columns, columns_tablet, margin, margin_tablet, padding, padding_tablet}) => {
     return (
-        <Grid gridTemplateColumns_tablet={imageSide == "left" ? "repeat(14, 1fr) 2fr" : "2fr repeat(14, 1fr)"} background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet}>
+        <Grid gridTemplateColumns_tablet={imageSide == "left" ? "repeat(14, 1fr) 2fr" : "2fr repeat(14, 1fr)"} background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding={padding} padding_tablet={padding_tablet}>
             <Grid gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${14 / columns_tablet}fr)`} gridTemplateColumns={columns} gridColumn_tablet={imageSide == "left" ? "1 / span 14" : "2 / span 14"}>
                 {children}
             </Grid>

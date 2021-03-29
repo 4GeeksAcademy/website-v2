@@ -107,15 +107,8 @@ const Home = (props) => {
         </Div>
       </GridContainerWithImage>
 
-      <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
-        <Testimonials lang={data.allTestimonialsYaml.edges} />
-      </Container>
-
+      <Testimonials lang={data.allTestimonialsYaml.edges} />
       <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="0 0 108px 0" />
-
-
-
-
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" />
