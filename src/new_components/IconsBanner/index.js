@@ -27,7 +27,7 @@ export default props => {
     <Div key={props.index} gridArea_md={positions[index].position} width="150px" width_md="auto" gridGap="0" alignItems="center" justifySelf="center" justifyContent="center" flexDirection="column" flexDirection_md="row">
       <Div flexDirection="column" width="150px" width_md="auto" alignItems="center">
         <Icon icon={props.icon} width="94" height="98"/>
-        <H2 type="h2" fontSize="15px" width="140px" width_md="auto" textTransform="uppercase" lineHeight="19px" padding="20px 0" padding_tablet="20px 15%">{props.title}</H2>
+        <H2 type="h2" fontSize="15px" width="140px" width_md="auto" textTransform="uppercase" lineHeight="19px" padding="20px 0" padding_md="20px 15%">{props.title}</H2>
       </Div>
     </Div>
   )

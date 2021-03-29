@@ -11,25 +11,21 @@ sub_heading: "Job hunting will never be a problem again"
 image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekforce.png"
 
-geekForce:
+# Introduction Video here
+geekPal:
   - videoId: "cKcZD0_1IKk"
     image: "../../../static/images/projects/re-mindful.jpg"
 
-# icons:
-#   - icon: "contract"
-#     title: "86% of our students hired"
-#   - icon: "job"
-#     title: "POST PROGRAM LABOR SUPPORT"
-#   - icon: "talk"
-#     title: "PREPARING FOR INTERVIEWS"
-#   - icon: "worker-portrait"
-#     title: "XX LIFE SHEETS CREATED"
-    
-
-hiring: "86% of our students hired"
-support: "POST PROGRAM LABOR SUPPORT"
-preparation: "PREPARING FOR INTERVIEWS"
-resume: "XX LIFE SHEETS CREATED"
+# Banner of icons
+icons:
+  - icon: "contract"
+    title: "86% of our students hired"
+  - icon: "job"
+    title: "POST PROGRAM LABOR SUPPORT"
+  - icon: "talk"
+    title: "PREPARING FOR INTERVIEWS"
+  - icon: "worker-portrait"
+    title: "XX LIFE SHEETS CREATED"
 
 list:
   - title: "Unlimited Professional Support"

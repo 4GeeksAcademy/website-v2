@@ -11,10 +11,12 @@ sub_heading: "Text that explains that GeekPal is a membership with accompanying 
 image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekpal.png"
 
+# Introduction Video here
 geekPal:
   - videoId: "cKcZD0_1IKk"
     image: "../../../static/images/projects/re-mindful.jpg"
 
+# Banner of icons 
 icons:
   - icon: "capacity"
     title: "Maximum 8 students per class"

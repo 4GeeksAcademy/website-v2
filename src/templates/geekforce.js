@@ -7,6 +7,7 @@ import Icon from '../new_components/Icon'
 import {Colors} from '../new_components/Styling'
 import ReactPlayer from '../new_components/ReactPlayer'
 import OurPartners from '../new_components/OurPartners'
+import IconsBanner from '../new_components/IconsBanner'
 import { Div, Grid, HR } from '../new_components/Sections'
 import {H1, H2, H3, Paragraph} from '../new_components/Heading'
 import {Button, RoundImage} from '../new_components/Styling'
@@ -90,23 +91,13 @@ const GeekForce = (props) => {
             </Div>
         </Div >
       </Div>
-      <Grid background={Colors.lightYellow} columns="4" overflowX="auto" alignItems="center" padding="0 15%" margin="0 0 58px 0" height="320px" width="auto" margin_md="0 0 78px 0">
-        <Div flexDirection="column" alignItems="center">
-          <Icon icon="contract" width="85" height="90"/>
-          <H2 type="h2" fontSize="15px" textTransform="uppercase" lineHeight="19px" padding="20px 15%" width="250px">{yml.hiring}</H2>
-        </Div>
-        <Div flexDirection="column" alignItems="center">
-          <Icon icon="job" width="96" height="98"/>
-          <H2 type="h2" fontSize="15px" textTransform="uppercase" lineHeight="19px" padding="20px 15%" width="250px">{yml.support}</H2>
-        </Div>
-        <Div flexDirection="column" alignItems="center">
-          <Icon icon="talk" width="79" height="98"/>
-          <H2 type="h2" fontSize="15px" textTransform="uppercase" lineHeight="19px" padding="20px 15%" width="250px">{yml.preparation}</H2>
-        </Div>
-        <Div flexDirection="column" alignItems="center">
-          <Icon icon="worker-portrait" width="98" height="98"/>
-          <H2 type="h2" fontSize="15px" textTransform="uppercase" lineHeight="19px" padding="20px 15%" width="250px">{yml.resume}</H2>
-        </Div>
+      
+      <Grid background={Colors.lightYellow} columns="2" rows="2" columns_md="12" rows_md="1" alignItems="center" margin="0 0 58px 0" height="470px" height_md="320px" width="auto" margin_md="0 0 78px 0">
+        {Array.isArray(content.icons) && content.icons?.map((item, i) => {
+          return(
+            <IconsBanner icon={item.icon} index={i} title={item.title}  />
+            )
+        })}
       </Grid>
 
       {Array.isArray(content.list) && content.list.map((m, i) => {
@@ -153,7 +144,6 @@ const GeekForce = (props) => {
                           </>
                           ) : (
                           <>
-                            <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H3>
                             <Paragraph
                               letterSpacing="0.05em"
                               fontSize="15px"
@@ -208,7 +198,6 @@ const GeekForce = (props) => {
                           </>
                           ) : (
                           <>
-                            <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H3>
                             <Paragraph
                               letterSpacing="0.05em"
                               fontSize="15px"
@@ -272,10 +261,10 @@ export const query = graphql`
             position
           }
           image_logo
-          hiring
-          support
-          preparation
-          resume
+          icons {
+            icon
+            title
+          }
           geekForce {
             videoId
             image {

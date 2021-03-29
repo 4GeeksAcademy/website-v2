@@ -92,7 +92,6 @@ const GeekPal = (props) => {
         </Div >
       </Div>
 
-      {/* FIXME: crear componente y modificar yml como lista y array con icon y capacity revisar credentials en home */}
       <Grid background={Colors.lightYellow} columns="2" rows="2" columns_md="12" rows_md="1" alignItems="center" margin="0 0 58px 0" height="470px" height_md="320px" width="auto" margin_md="0 0 78px 0">
         {Array.isArray(content.icons) && content.icons?.map((item, i) => {
           return(
@@ -145,7 +144,6 @@ const GeekPal = (props) => {
                           </>
                           ) : (
                           <>
-                            <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H3>
                             <Paragraph
                               letterSpacing="0.05em"
                               fontSize="15px"
@@ -200,7 +198,6 @@ const GeekPal = (props) => {
                           </>
                           ) : (
                           <>
-                            <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{m?.sub_title}</H3>
                             <Paragraph
                               letterSpacing="0.05em"
                               fontSize="15px"

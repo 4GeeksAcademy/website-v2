@@ -14,20 +14,15 @@ geekForce:
   - videoId: "cKcZD0_1IKk"
     image: "../../../static/images/projects/re-mindful.jpg"
 
-# icons:
-#   - icon: "contract"
-#     title: "86% de nuestros alumnos contratados"
-#   - icon: "job"
-#     title: "SOPORTE LABORAL POST PROGRAMA"
-#   - icon: "talk"
-#     title: "PREPARACIÓN A ENTREVISTAS"
-#   - icon: "worker-portrait"
-#     title: "XX HOJAS DE VIDA CREADAS"
-
-hiring: "86% de nuestros alumnos contratados"
-support: "SOPORTE LABORAL POST PROGRAMA"
-preparation: "PREPARACIÓN A ENTREVISTAS"
-resume: "XX HOJAS DE VIDA CREADAS"
+icons:
+  - icon: "contract"
+    title: "86% de nuestros alumnos contratados"
+  - icon: "job"
+    title: "SOPORTE LABORAL POST PROGRAMA"
+  - icon: "talk"
+    title: "PREPARACIÓN A ENTREVISTAS"
+  - icon: "worker-portrait"
+    title: "XX HOJAS DE VIDA CREADAS"
 
 list:
   - title: "Apoyo Profesional Ilimitado"
