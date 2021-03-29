@@ -111,7 +111,7 @@ const Home = (props) => {
         <Testimonials lang={data.allTestimonialsYaml.edges} />
       </Container>
 
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} />
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="0 0 108px 0" />
 
 
 
