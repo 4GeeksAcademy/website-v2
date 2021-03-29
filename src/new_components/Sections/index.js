@@ -36,6 +36,7 @@ export const Container = styled(Fragment)`
             max-width: 960px;
             height: ${props => props.height_md};
             transform: ${props => props.transform_md};
+            padding: ${props => props.padding_md};
             
         }
         @media  ${Devices.lg}{
@@ -60,6 +61,7 @@ export const Container = styled(Fragment)`
             }
             @media  ${Devices.tablet}{
                 height: ${props => props.height_tablet};
+                margin: ${props => props.margin_tablet};
             }
             @media  ${Devices.md}{
                 height: ${props => props.height_md};
@@ -68,6 +70,7 @@ export const Container = styled(Fragment)`
                 
             }
             @media  ${Devices.lg}{
+                margin: ${props => props.margin_lg};
             }
             @media  ${Devices.xl}{
                 
@@ -110,6 +113,7 @@ export const Grid = styled.div`
     @media  ${Devices.tablet}{
         grid-template-columns: repeat(${props => props.columns_tablet}, 1fr);
         grid-template-rows: repeat(${props => props.rows_tablet}, 5vw);
+        padding: ${props => props.padding_tablet};
     }
     @media  ${Devices.md}{
         grid-template-columns: repeat(${props => props.columns_md}, 1fr);
@@ -122,6 +126,7 @@ export const Grid = styled.div`
     }
     @media  ${Devices.lg}{
         grid-template-columns: repeat(${props => props.columns_lg}, 1fr);
+        padding: ${props => props.padding_lg};
     }
     @media  ${Devices.xl}{
         grid-template-columns: repeat(${props => props.columns_xl}, 1fr);
@@ -231,6 +236,7 @@ export const Div = styled.div`
         height: ${props => props.height_tablet};
         align-items: ${props => props.alignItems_tablet};
         padding: ${props => props.padding_tablet};
+        flex: ${props => props.flex_tablet};
         border: ${props => props.border_tablet};
         border-top: ${props => props.borderTop_tablet};
         border-right: ${props => props.borderRight_tablet};
@@ -283,7 +289,9 @@ export const Row = styled(Div)`
     margin-left: ${props => props.marginLeft};
     margin-top: ${props => props.marginTop};
     margin-bottom: ${props => props.marginBottom};
-    
+    justify-content: ${props => props.justifyContent};
+    padding: ${props => props.padding};
+
     &:hover { 
         background: ${props => props.backgroundHover};
         margin: ${props => props.marginHover};
@@ -317,7 +325,8 @@ export const Column = styled(Div)`
     padding-right: ${props => props.paddingRight};
     padding-left: ${props => props.paddingLeft};
     flex-direction: ${props => props.flexDirection};
-    
+    justify-content: ${props => props.justifyContent};
+    display: ${props => props.display};
     flex: 0 0 ${props => (props.size / 12) * 100}%;
     max-width: ${props => (props.size / 12) * 100}%;
 
@@ -341,6 +350,7 @@ export const Column = styled(Div)`
         padding-left: ${props => props.pl_md};
         height: ${props => props.h_md};
         display: ${props => props.disp_md};
+        grid-template-columns: ${props => props.templateColumns}
     }
     @media ${Break.sm}{
         flex: 0 0 ${props => (props.size_sm / 12) * 100}%;

@@ -276,33 +276,44 @@ export const Button = styled(SmartButton)`
     &:hover {
         background-color: ${props => props.colorHover || props.color};
     }
-        @media ${Devices.xxs}{
+    @media ${Break.lg}{
+        font-size: ${props => props.fs_lg};
+    }
+    @media ${Break.md}{
+        font-size: ${props => props.fs_md};
+        margin: ${props => props.m_md};
+    }
+    @media ${Break.sm}{
+        margin: ${props => props.m_sm};
+        font-size: ${props => props.fs_sm};
+    }
+    @media ${Devices.xxs}{
 
-        }
-        @media ${Devices.xs}{
-            
-            
-        }
-        @media  ${Devices.sm}{
-            width: ${props => props.width_sm};
-        }
-        @media  ${Devices.tablet}{
-            width: ${props => props.width_tablet};
-            
-        }
-        @media  ${Devices.md}{
-            width: ${props => props.width_md};
-    
-        }
-        @media  ${Devices.lg}{
-    
-        }
-        @media  ${Devices.xl}{
-    
-        }
-        @media  ${Devices.xxl}{
-    
-        }
+    }
+    @media ${Devices.xs}{
+
+
+    }
+    @media  ${Devices.sm}{
+        width: ${props => props.width_sm};
+    }
+    @media  ${Devices.tablet}{
+        width: ${props => props.width_tablet};
+
+    }
+    @media  ${Devices.md}{
+        width: ${props => props.width_md};
+
+    }
+    @media  ${Devices.lg}{
+
+    }
+    @media  ${Devices.xl}{
+
+    }
+    @media  ${Devices.xxl}{
+
+    }
 `;
 Button.defaultProps = {
     padding: '10px 30px',
