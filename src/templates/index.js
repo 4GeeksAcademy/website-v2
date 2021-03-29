@@ -76,7 +76,7 @@ const Home = (props) => {
 
   return (
     <>
-      <GridContainerWithImage columns_tablet="2" margin_tablet="0 0 108px 0">
+      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="0 0 108px 0">
         <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
