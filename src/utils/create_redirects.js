@@ -39,13 +39,12 @@ walk(`${__dirname}/../data/blog/`, async function (err, files) {
         })
     }
 
+    const fileContent = JSON.stringify(vercel, null, 2);
     try{
-        fs.writeFileSync(vercelPath, JSON.stringify(vercel));
-        success("All redirects have been added to the now.json");
+        fs.writeFileSync(vercelPath, fileContent, 'utf8');
+        success("All redirects have been created")
     }
-    catch(e){
-        fail("Error writing redirects on vercel file: "+vercelPath);
-        console.error(e);
+    catch(err){
+        fail("Error writing redirects on vercel file: " + err);
     }
-
 });     

@@ -54,7 +54,11 @@ const courseArray = [
   {
     value: "software_engineering",
     label: "Software Engineering"
-  }
+  },
+  {
+    value: "machine_learning",
+    label: "Machine Learning"
+  },
 ];
 
 const PricesAndPayments = (props) => {
@@ -94,6 +98,7 @@ const PricesAndPayments = (props) => {
   // sync property course
   useEffect(() => setCourse(courseArray.find(c => c.value === props.course)), [props.course]);
 
+  console.log("currentLocation", currentLocation)
   if (!currentLocation || !currentLocation.prices)
     return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
 

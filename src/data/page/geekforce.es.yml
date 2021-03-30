@@ -1,45 +1,47 @@
 meta_info:
   slug: geekforce-soporte-a-tu-carrera
-  title: ""
-  description: null
+  title: "geekforce"
+  description: "geekforce, soporte a tu carrera de 4geeks Academy"
   image: null
   keywords: ""
   redirects: ["/es/geekforce"]
-tagline: GEEKPAL
-sub_heading: ""
+tagline: ENCUENTRA UN GRAN EMPLEO
+sub_heading: La búsqueda de empleo nunca volverá a ser un problema
 image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekpal.png"
+image_logo: "/images/geekforce.png"
 benefits:
   - p:
-    heading: "Personal"
+    heading: "Obtén entrevistas"
     items:
-      - title: Clases exclusivas
+      - title: Preparación de Currículum
         sub_title: (máx 8 students)
-      - title: 1:4 teacher-student-ratio
+      - title: Preparación de LinkedIn
         sub_title: (one mentor every 4 students)
-      - title: Mentoría 1-1
+      - title: Preparación de Github
         sub_title: (sesiones ilimitadas)
-      - title: Soporte profesional customizado
+      - title: Preparación de Portafolio
+        sub_title: (basado en la oportunidad laboral)
+      - title: Proyecto Final
         sub_title: (basado en la oportunidad laboral)
   - a:
-    heading: "Donde sea y cuánto sea necesario"
+    heading: "Obtén ofertas de trabajo"
     items:
-      - title: Ajustado a tu calendario
-        sub_title: (Sesiones según agenda en el calendario)
-      - title: Oportunidad de mentorías constantes
-        sub_title: (Siempre habilitado en persona o remoto)
-      - title: Online o en persona
-        sub_title: (Campus en muchas ciudades y en muchos husos horarios)
-      - title: Apoyo profesional customizado
-        sub_title: (Basado en la oportunidad laboral)
+      - title: Obtén ofertas de trabajo de nuestros socios
+        sub_title: Referencias provenientes de nuestra propia red de cientos de socios
+      - title: Entrenamientos de entrevistas simuladas
+        sub_title: Varias entrevistas simuladas para evaluar sus debilidades y crear un perfil más fuerte antes de las entrevistas reales.
+      - title: Coaching objetivo por entrevista
+        sub_title: Coaching individual intensivo. Cada vez que tengas una entrevista importante, practicaremos el uso y el trabajo con diferentes tecnologías.
+      - title: Miles de ejercicios personalizados
+        sub_title: Nuestro propio grupo de miles de ejercicios autocalificados te permitirá practicar hasta que puedas dominar esas habilidades.
   - l:
-    heading: "Limitless"
+    heading: "Conserva tu trabajo para siempre"
     items:
-      - title: Toda la mentoría que necesites
-        sub_title: (sesiones habilitadas para que puedas agendar con nuestros mentores)
-      - title: Mentoría ilimitada después de graduarte 
-        sub_title: (incluso después que consigas trabajo)
-      - title: Mentoría de por vida
-        sub_title: (Sigue trabajando con nosotros y recibiendo mentoría)
-      - title: Apoyo profesional customizado
-        sub_title: (Basado en la oportunidad laboral)
+      - title: El coaching nunca termina
+        sub_title: Una vez que consigues el trabajo, recibe ayuda para seguir haciéndolo.
+      - title: Cambia tu trabajo
+        sub_title: Nuestro sistema de referencias nunca termina; siempre puedes volver a buscar mejores trabajos.
+      - title: Sigue creciendo
+        sub_title: Invitaciones privadas a ferias profesionales, eventos y sesiones de networking.
+      - title: Conviértete en mentor
+        sub_title: Recibe dinero para ayudar a otros estudiantes; conviértete en parte de la red de mentores para siempre.

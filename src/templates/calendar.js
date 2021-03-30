@@ -93,7 +93,7 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
               fs_md="9px"
               fs_lg="11px"
               fs_xl="14px">
-              {slug.includes("ft") ? "Full Time" : "Part Time"}
+              {slug.includes("-ft") ? "Full Time" : "Part Time"}
             </Paragraph>
           </Row>}
           {applyButtonLink && detailsButtonLink && <Row justifyContent={`center`} display="flex">
@@ -259,16 +259,16 @@ const [backgroundSize, setBackgroundSize] = useState("100%");
                 data.cohorts.filtered.map((cohort, index) =>
                   <ListCard
                     key={index}
-                    title={cohort.certificate.name}
+                    title={cohort.syllabus ? cohort.syllabus.certificate.name : ""}
                     address={`${cohort.academy.city.name}, ${cohort.academy.country.name}`}
                     image={cohort.academy.logo_url}
-                    link={`/${session ? session.language : "us"}/${cohort.certificate.slug}`}
+                    link={`/${session ? session.language : "us"}/${cohort.syllabus ? cohort.syllabus.certificate.slug : ""}`}
                     date={cohort.kickoff_date}
                     slug={cohort.slug}
                     applyButtonText={yml.button.apply_button_text}
                     applyButtonLink={yml.button.apply_button_link}
                     detailsButtonText={yml.button.cohort_more_details_text}
-                    detailsButtonLink={`/${pageContext.lang}/${cohort.certificate.slug}`}
+                    detailsButtonLink={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}
                     context={pageContext.lang}
                     bg_size="cover"
                   />
@@ -287,7 +287,7 @@ const [backgroundSize, setBackgroundSize] = useState("100%");
                     image={event.banner}
                     link={event.url}
                     date={event.starting_at}
-                    exerpt={event.exerpt}
+                    exerpt={event.excerpt}
                     eventLink={event.url}
                     eventText={yml.button.event_register_button_link}
                     context={pageContext.lang}
