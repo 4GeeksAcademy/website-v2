@@ -44,7 +44,7 @@ const UpcomingDates = ({lang}) => {
         }
     }, [session]);
     return (
-        <GridContainer >
+        <GridContainer padding_tablet="0">
             <Div flexDirection="column">
                 <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
                     <H3 textAlign="left" width="188px">Next Dates</H3>
