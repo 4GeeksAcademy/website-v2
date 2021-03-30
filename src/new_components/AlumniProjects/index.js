@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Row, Column, Div, Grid} from '../Sections'
+import {GridContainer, GridContainerWithImage, Div, Grid} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
 import {Colors, Anchor, Button, StyledBackgroundSection, Span} from '../Styling';
@@ -26,9 +26,12 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                 interval={5000}
                 transitionTime={1000}
             >
+                {/* <GridContainer>
+                    test
+                            </GridContainer> */}
                 {projects.map((item, index) => {
                     return (
-                        <Grid columns_tablet="2" gridGap="0">
+                        <GridContainerWithImage imageSide="left" columns_tablet="2" gridGap_tablet="0" padding_tablet="0 0 100px 0">
                             <Div background={Colors.lightGray} padding="37px 107px">
                                 {item.project_video === "" ?
 
@@ -114,7 +117,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                 </Div> */}
                             </Div>
 
-                        </Grid>
+                        </GridContainerWithImage>
 
                     )
                 })

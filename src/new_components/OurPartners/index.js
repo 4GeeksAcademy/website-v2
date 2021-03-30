@@ -9,7 +9,7 @@ import Fragment from "../Fragment"
 
 const OurPartners = ({title, paragraph, link, showFeatured, images, slider, ...rest}) => {
   return (
-    <Fragment padding="20px 0" github="/components/partner" >
+    <Fragment github="/components/partner" >
       {title &&
         <GridContainer margin="0 0 40px 0"
         >

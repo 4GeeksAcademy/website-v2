@@ -186,21 +186,21 @@ const Program = ({data, pageContext, yml}) => {
         course={program_type}
       />
     </Container> */}
-    <Container variant="fluid">
+    <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
+    {/* <Container variant="fluid">
       <H2>{yml.alumni.heading}</H2>
       <Paragraph margin="0 0 50px 0">{yml.alumni.sub_heading}</Paragraph>
-      <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
     </Container>
-    <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
+    <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0"> */}
 
-      <Testimonials lang={data.allTestimonialsYaml.edges} />
-    </Container>
+    <Testimonials lang={data.allTestimonialsYaml.edges} />
+    {/* </Container> */}
 
-    <Container
+    {/* <Container
       variant="fluid"
-    >
-      <OurPartners images={hiring.partners.images}></OurPartners>
-    </Container>
+    > */}
+    <OurPartners images={hiring.partners.images} slider></OurPartners>
+    {/* </Container> */}
 
 
     {/* PRICING */}
