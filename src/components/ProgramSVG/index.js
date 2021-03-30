@@ -27,7 +27,7 @@ const ProgramSVG = ({lang}) => {
     `)
     let svg = data.allProgramSvgYaml.edges.find(({node}) => node.fields.lang === lang);
     if (svg) svg = svg.node;
-    console.log("svg:", svg)
+
     return (
         <svg className="d-sm-none w-100" width="fit-content" height="700" viewBox="0 0 1750 1183" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="1750" height="1183" fill="white" />

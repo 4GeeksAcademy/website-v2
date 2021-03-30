@@ -1,11 +1,11 @@
 meta_info:
-  slug: "enlinea-remoto"
+  slug: "online-bootcamp-programacion"
   title: "4Geeks Academy Miami"
   description: "null"
   position: 0
   image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
   keywords: "null"
-  redirects: ["/location/remoto", "/remoto"]
+  redirects: ["/location/remoto", "/remoto", "/es/location/enlinea-remoto"]
 
 seo_title: "Coding Bootcamp Remoto"
 header:

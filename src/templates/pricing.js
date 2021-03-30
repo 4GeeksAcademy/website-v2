@@ -14,7 +14,7 @@ const Pricing = (props) => {
   const {data, pageContext, yml} = props;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
-  console.log("yml", yml);
+
   let location = null;
   if (session && session.location) {
 

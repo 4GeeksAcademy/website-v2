@@ -1,11 +1,11 @@
 meta_info:
-  slug: "madrid-spain"
+  slug: "coding-bootcamp-madrid"
   title: 4Geeks Academy Madrid - Coding Bootcamp Madrid Spain
   position: 2
   description: null
   image: ""
   keywords: ""
-  redirects: ["/location/madrid"]
+  redirects: ["/location/madrid", "/us/location/madrid-spain"]
 
 seo_title: "Coding Bootcamp Madrid"
 header:

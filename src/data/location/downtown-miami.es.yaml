@@ -1,11 +1,11 @@
 meta_info:
-  slug: "downtown-miami-usa"
+  slug: "bootcamp-programacion-miami"
   position: 1
   title: "4Geeks Academy Miami - Bootcamp de programación en Miami, aprende a programar en Miami"
   description: "null"
   image: ""
   keywords: "null"
-  redirects: []
+  redirects: ["/es/location/downtown-miami-usa"]
 
 seo_title: "Bootcamp de Programación en Miami"
 header:
@@ -262,7 +262,7 @@ prices:
         heading_two: "(OUT OF POCKET)"
         sub_heading: "el mejor precio de la ciudad"
       content:
-        price: "$13,499.00"
+        price: "$11,499.00"
         price_info: "un sólo pago"
 
 active_campaign_location_slug: "downtown-miami"
