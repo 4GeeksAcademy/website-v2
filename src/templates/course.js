@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseLayout'
 import {Card, GeekCard} from '../components/Card'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div, GridContainer} from '../new_components/Sections'
+import {Container, Header, Column, Wrapper, WrapperImage, Divider, Sidebar, Div, GridContainer} from '../new_components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'
 import {requestSyllabus} from "../actions";
@@ -53,7 +53,24 @@ const Program = ({data, pageContext, yml}) => {
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   return (<>
-    <Container
+
+    <Header
+      seo_title={yml.seo_title}
+      title={yml.header.title}
+      paragraph={yml.header.paragraph}
+      padding_tablet="72px 0 40px 0"
+    >
+      <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+        <Link to={yml.button.apply_button_link}
+          state={{course: yml.meta_info.bc_slug}}
+        >
+          <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+        </Link>
+        <Button outline width="200px" color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+      </Div>
+      <Badges lang={pageContext.lang} />
+    </Header>
+    {/* <Container
       variant="fluid"
       margin="100px auto 0 auto">
       <Div
@@ -83,7 +100,7 @@ const Program = ({data, pageContext, yml}) => {
       <Container variant="fixed">
         <Badges lang={pageContext.lang} />
       </Container>
-    </Container>
+    </Container> */}
 
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
@@ -235,18 +252,20 @@ export const query = graphql`
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            header{
-              tagline
+          seo_title
+          header{
+              title
               paragraph
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 1200){
-                    ...GatsbyImageSharpFluid_withWebp
+              image_alt
+              image{
+                  childImageSharp {
+                    fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
                   }
                 }
-              }
-            alt
-            }
+              
+          }
             button{
               syllabus_heading
               syllabus_btn_label

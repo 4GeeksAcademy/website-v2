@@ -14,12 +14,12 @@ meta_info:
       "/the-program",
       "/us/full-stack-ft",
     ]
+seo_title: "Cooding Bootcamp"
 header:
-  tagline: "FULL STACK DEVELOPER"
+  title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
+  image_alt: ""
   paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
-  alt: ""
-
 button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"

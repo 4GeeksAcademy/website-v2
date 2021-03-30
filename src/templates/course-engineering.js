@@ -38,6 +38,7 @@ const Program = ({data, pageContext, yml}) => {
       seo_title={yml.seo_title}
       title={yml.header.title}
       paragraph={yml.header.paragraph}
+      padding_tablet="72px 0 40px 0"
     >
       <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
         <Link to={yml.button.apply_button_link}
@@ -67,7 +68,7 @@ const Program = ({data, pageContext, yml}) => {
       <Testimonials lang={data.allTestimonialsYaml.edges} />
     </Container>
 
-    <OurPartners images={hiring.partners.images}></OurPartners>
+    <OurPartners images={hiring.partners.images} slider></OurPartners>
 
     {/* <WrapperImage
       github="/course"
