@@ -20,7 +20,7 @@ const formIsValid = (formData = null) => {
 
 const Form = styled.form`
     // margin: auto;
-    padding: 20px;
+    // padding: 20px;
     width: 100%;
     @media  ${Break.sm}{
         display: ${props => props.d_sm};
@@ -156,7 +156,7 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
             :
             <>
                 {motivation && <Paragraph align="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
-                <Row display="flex">
+                <Row display="flex" marginLeft="0" marginRight="0">
                     <Column display={layout} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
                         {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
                             const _field = formData[f]

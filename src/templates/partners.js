@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {Column, Row, Container, Divider, Div, Grid} from "../new_components/Sections"
+import Link from 'gatsby-link'
+import {Column, Row, GridContainer, Header, Div, Grid} from "../new_components/Sections"
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
 import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Badges from '../new_components/Badges'
@@ -25,40 +26,34 @@ const Partners = (props) => {
   const partnersData = data.allPartnerYaml.edges[0].node;
   return (
     <>
-      <Grid columns_md="12" margin="67px 0"
-      >
-        <Div
-          gridArea_md="1/4/1/10"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-        >
-          <H1
-            fontSize="13px"
-            lineHeight="16px"
-            fontWeight="700"
-            letterSpacing="0.05em"
-            color="#606060"
-          >{yml.seo_title}</H1>
-          <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{`< ${yml.header_data.tagline} >`}</H2>
-          <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">{yml.header_data.sub_heading}</Paragraph>
-          <Button width="300px" color={Colors.blue} textColor="white">{yml.button_section.button_text}</Button>
-        </Div>
 
-      </Grid>
-      <Grid columns_md="12">
-        <Div gridArea_md="1/1/1/13">
+      <Header
+        seo_title={yml.seo_title}
+        title={yml.header.title}
+        paragraph={yml.header.paragraph}
+        padding_tablet="72px 0 40px 0"
+      >
+        <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+          <Link to={yml.button_section.button_link}
+            state={{course: yml.meta_info.bc_slug}}
+          >
+            <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
+          </Link>
+        </Div>
+      </Header>
+      <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
+        <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
             height={`389px`}
-            image={yml.header_data.image.childImageSharp.fluid}
+            image={yml.header.image.childImageSharp.fluid}
             bgSize={`cover`}
-            alt={yml.header_data.alt}
+            alt={yml.header.image_alt}
           />
         </Div>
       </Grid>
 
       <Badges lang={pageContext.lang} link />
-      <Div height="5px" display="none" display_md="flex" background={Colors.lightGray}></Div>
+      <Div height="5px" display="none" margin_tablet="73px 0" display_md="flex" background={Colors.lightGray}></Div>
       <OurPartners
         images={partnersData.partners.images}
         title={partnersData.partners.tagline}
@@ -73,20 +68,21 @@ const Partners = (props) => {
         showFeatured={true}
         props={partnersData.partners}
       />
-      <Grid columns_md="12" gridGap_md="0" margin_md="90px 0 104px 0">
-        <Div gridArea_md="1/3/1/7" flexDirection="column" padding_md="0 90px 0 0" padding="0 17px">
+      <GridContainer columns_tablet="12" padding_tablet="0">
+        <Div gridColumn_tablet="1 / 7" flexDirection="column" >
           <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
           {yml.form.paragraph.split("\n").map((m, i) =>
             <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
           )}
         </Div>
-        <Div gridArea_md="1/7/1/11" justifyContent="center" >
-          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
+        <Div justifyContent="center" gridColumn_tablet="8 / 13">
+          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} />
         </Div>
 
-      </Grid>
-      <Grid columns_md="12">
-        <Div gridArea_md="1/1/1/13">
+      </GridContainer>
+
+      <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
+        <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
             height={`389px`}
             image={yml.footer_data.image.childImageSharp.fluid}
@@ -111,18 +107,20 @@ query PartnersQuery($file_name: String!, $lang: String!) {
           keywords
         }
         seo_title
-        header_data{
-          tagline
-          sub_heading
-          image{
-            childImageSharp {
-              fluid(maxWidth: 1600, quality: 100){
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
+          header{
+              title
+              paragraph
+              image_alt
+              button
+              image{
+                  childImageSharp {
+                    fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+              
           }
-          alt
-        }
         form{
           title
           paragraph
