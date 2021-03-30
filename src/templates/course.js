@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseLayout'
 import {Card, GeekCard} from '../components/Card'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../new_components/Sections'
+import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div, GridContainer} from '../new_components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'
 import {requestSyllabus} from "../actions";
@@ -90,7 +90,9 @@ const Program = ({data, pageContext, yml}) => {
     <TechsWeTeach lang={pageContext.lang} />
     <GeeksInfo lang={pageContext.lang} />
     <UpcomingDates lang={pageContext.lang} />
-
+    <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
+      <Div height="1px" background="#EBEBEB"></Div>
+    </GridContainer>
 
     {/* <WrapperImage
       github="/course"
