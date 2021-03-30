@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
-import {Row, Container, Column, Divider, Grid, Div} from '../Sections'
+import {GridContainer, Container, Column, Divider, Grid, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors} from '../Styling';
 import Card from '../Card';
@@ -49,47 +49,35 @@ const ProgramDetails = (props) => {
     }, [])
     return (
         <>
-            <Container
-                variant="fluid"
-                background={Colors.verylightGray}
-                padding="50px 0"
-            >
-                <Container
-                    variant="fixed"
-                >
-                    <Grid columns_lg="2" gridGap="100px">
-                        <Div flexDirection="column" >
-                            <H3 textAlign="left" margin="0 0 20px 0">{props.details.about.title}</H3>
-                            {props.details.about.sub_title.split("\n").map((m, i) =>
-                                <Paragraph
-                                    textAlign="left"
-                                    margin="10px 0 "
-                                    fontSize="15px"
-                                    lineHeight="26px"
-                                >
-                                    {m}
-                                </Paragraph>
-                            )}
-                        </Div>
-                        <Div flexDirection="column" justifyContent="between" >
-                            {Array.isArray(props.details.about.list) && props.details.about.list.map((m, i) => {
-                                return (
-                                    <Div key={i} borderBottom="1px solid #ebebeb" >
-                                        <H4 fontWeight="700" textAlign="left" width="122px">{`${m.label}:`}</H4>
-                                        <Paragraph textAlign="left">{m.content}</Paragraph>
-                                    </Div>
-                                )
-                            })}
-                        </Div>
 
-                    </Grid>
-                </Container>
-            </Container>
-            <Container
-                variant="fixed"
-                margin="50px auto 100px auto"
-                style={{borderBottom: `1px solid black`}}
-            >
+            <GridContainer columns_tablet="2" background={Colors.verylightGray} padding_tablet="76px 0" gridGap="100px">
+                <Div flexDirection="column" >
+                    <H3 textAlign="left" margin="0 0 20px 0">{props.details.about.title}</H3>
+                    {props.details.about.sub_title.split("\n").map((m, i) =>
+                        <Paragraph
+                            textAlign="left"
+                            margin="10px 0 "
+                            fontSize="15px"
+                            lineHeight="26px"
+                        >
+                            {m}
+                        </Paragraph>
+                    )}
+                </Div>
+                <Div flexDirection="column" justifyContent="between" >
+                    {Array.isArray(props.details.about.list) && props.details.about.list.map((m, i) => {
+                        return (
+                            <Div key={i} borderBottom="1px solid #ebebeb" >
+                                <H4 fontWeight="700" textAlign="left" width="122px">{`${m.label}:`}</H4>
+                                <Paragraph textAlign="left">{m.content}</Paragraph>
+                            </Div>
+                        )
+                    })}
+                </Div>
+
+            </GridContainer>
+
+            <GridContainer padding_tablet="0" >
 
                 <Div
                     flexDirection="column"
@@ -191,7 +179,7 @@ const ProgramDetails = (props) => {
 
                 </Div>
 
-            </Container>
+            </GridContainer>
         </>
         // <Card
         //     h_xs="400px"
