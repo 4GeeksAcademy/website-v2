@@ -76,13 +76,14 @@ const ProgramDetails = (props) => {
                 </Div>
 
             </GridContainer>
-            <GridContainer padding_tablet="0" >
+            <GridContainer padding_tablet="0" margin_tablet="0 0 83px 0">
                 <Div
                     flexDirection="column"
                     display="none"
                     display_tablet="block"
                     margin="50px 0 0 0"
-                    height="475px"
+                    minHeight="475px"
+                    height="auto"
                 >
                     <H2>{props.details.heading}</H2>
                     <Paragraph>{props.details.sub_heading}</Paragraph>
