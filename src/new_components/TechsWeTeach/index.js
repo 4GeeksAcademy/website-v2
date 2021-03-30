@@ -75,7 +75,7 @@ const TechsWeTeach = ({lang}) => {
 
                 {/* ?icons */}
             </GridContainerWithImage >
-            <GridContainer fluid background={Colors.lightYellow}>
+            <GridContainer fluid background={Colors.lightYellow} margin_tablet="0 0 68px 0">
                 <Div className="badge-slider" justifyContent="center" padding="44px 0" style={{borderTop: `1px solid ${Colors.lightGray}`}}>
                     {Array.isArray(content.tech_list) && content.tech_list.map((l, i) => {
                         return (
