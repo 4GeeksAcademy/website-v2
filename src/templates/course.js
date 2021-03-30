@@ -161,31 +161,16 @@ const Program = ({data, pageContext, yml}) => {
       <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
       <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     </Wrapper> */}
-    <Container
-      variant="fluid"
-      background="rgba(255, 183, 24, 0.15)"
-      // height="433px"
-      height_md="511px"
-      height="auto"
-      margin_md="0 0 73px 0"
-      margin="100px 0 76px 0"
-      padding="59px 17px 83px 17px"
-      padding_md="17px"
-    >
-      <Container
-        variant="fixed"
-        transform_md="translateY(-42%)"
-      >
 
-        <PricesAndPayment
-          type={pageContext.slug}
-          lang={pageContext.lang}
-          session={session}
-          locations={data.allLocationYaml.edges}
-          course={program_type}
-        />
-      </Container>
-    </Container>
+
+    <PricesAndPayment
+      type={pageContext.slug}
+      lang={pageContext.lang}
+      session={session}
+      locations={data.allLocationYaml.edges}
+      course={program_type}
+    />
+
 
     {/* <Container variant="fixed" margin="50px auto" style={{position: "relative"}}>
       <H2>{yml.prices.heading}</H2>
