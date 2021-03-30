@@ -46,12 +46,12 @@ const Program = ({data, pageContext, yml}) => {
         >
           <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button outline width="200px" color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button outline width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
       <Badges lang={pageContext.lang} />
     </Header>
-
-    <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+    <OurPartners background={Colors.verylightGray} images={hiring.partners.images} slider></OurPartners>
+    <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} background={Colors.white} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <TechsWeTeach lang={pageContext.lang} />
     <GeeksInfo lang={pageContext.lang} />

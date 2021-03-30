@@ -7,11 +7,12 @@ import Link from 'gatsby-link'
 import Card from '../Card';
 import Fragment from "../Fragment"
 
-const OurPartners = ({title, paragraph, link, showFeatured, images, slider, ...rest}) => {
+const OurPartners = ({title, paragraph, background, link, showFeatured, images, slider, ...rest}) => {
   return (
     <Fragment github="/components/partner" >
       {title &&
         <GridContainer margin="0 0 40px 0"
+          background={background}
         >
           <Div
             display="flex"
