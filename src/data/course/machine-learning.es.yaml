@@ -1,18 +1,18 @@
 meta_info:
-  slug: ingenieria-de-software-programacion
-  title: "Estudia Ingeniería de Software en 4Geeks Academy"
-  description: "Conviérte en un Ingeniero de Software y obtén un trabajo de clase mundial con 4Geeks Academy"
-  bc_slug: "software-engineering"
+  slug: curso-inteligencia-artificial
+  title: "Estudia Machine Learning en 4Geeks Academy"
+  description: "Conviérte en un Ingeniero de Inteligencia Artificial y obtén un trabajo de clase mundial"
+  bc_slug: "machine-learning"
   image: ""
-  template: "course-engineering"
+  template: "course-machine-learning"
   keywords: ""
-  redirects: ["ingenieria-software", "/es/course/ingenieria-software"]
+  redirects: ["machine-learning"]
 
 header:
   tagline_top: "CONVIERTETE EN"
-  tagline: "INGENIERO DE SOFTWARE"
-  sub_heading: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro."
-  subsub_heading: "(Previous coding experience required)"
+  tagline: "INGENIERO EN INTELIGENCIA ARTIFICIAL"
+  sub_heading: "Únete a la revolución I.A. y obtén uno de los trabajos profesionales mejor pagados del mundo"
+  subsub_heading: "(Ninguna experiencia de código requerida)"
   alt: ""
 
   # The background image position can be cnotroled by device size

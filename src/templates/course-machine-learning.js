@@ -1,38 +1,28 @@
-import React from 'react';
-import {Link} from "gatsby";
-import BaseRender from './_baseLayout'
-import {Card, GeekCard} from '../components/Card'
+import React, {useState, useEffect, useContext, useRef} from 'react';
+import Link from 'gatsby-link'
+import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
-import {Title, H2, H3, H5, Span, Paragraph} from '../components/Heading'
+import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
 import {Button, Colors} from '../components/Styling'
+import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
+import Icon from '../components/Icon'
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
+import WhoIsHiring from '../components/WhoIsHiring';
 import PricesAndPayment from '../components/PricesAndPayment';
 import LeadForm from '../components/LeadForm';
 import Modal from '../components/Modal';
-import TypicalDay from '../components/TypicalDay';
-import AlumniProjects from '../components/AlumniProjects';
-import ProgramSelector from '../components/ProgramSelector';
-import ProgramSVG from '../components/ProgramSVG';
 
 
 const Program = ({data, pageContext, yml}) => {
+
   const {session} = React.useContext(SessionContext);
-  const courseDetails = data.allCourseYaml.edges[0].node;
+
+  const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
-
-  const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
@@ -40,72 +30,99 @@ const Program = ({data, pageContext, yml}) => {
   return (<>
     <WrapperImage
       github="/course"
-      filter="brightness(0.4)"
       imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
+      backgroundPosition={yml.header.image_position}
       className={`img-header`}
       bgSize={`cover`}
       alt={yml.header.alt}
       paddingRight={`0`}
       customBorderRadius="0 0 0 1.25rem"
+
     >
-      <ProgramSelector lang={pageContext.lang} week={yml.details.weeks} context={pageContext} marginTop="70px" />
-      <Title
-        type="h1"
+      <H1
         size="5"
-        marginTop="40px"
+        variant="main"
+        marginTop="100px"
+        m_sm="50px 0 0 0"
+        color={Colors.white}
+        fontSize="46px"
+        align="center"
+
+      >{yml.header.tagline_top}</H1>
+      <Title
+        size="5"
         title={yml.header.tagline}
         variant="main"
+        marginTop="0"
         color={Colors.white}
-        paragraph={yml.header.paragraph}
-        paragraphColor={Colors.white}
         fontSize="46px"
-        fs_xs="40px"
         textAlign="center"
+        paragraph={yml.header.sub_heading}
+        paragraphColor={Colors.white}
+        margin="0"
       />
-      <Row display="flex" justifyContent="center" marginBottom="50px">
-        <Column align="right" size="6" align_sm="center" m_sm="0px 0px 15px 0px" size_sm="12" align="right">
+      <H5 color={Colors.white} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
+      <Row display="flex" justifyContent="center" marginTop="20px" marginBottom="50px">
+        <Column align="right" size="6" size_xs="12" align_sm="center" m_sm="0px 0px 15px 0px">
           <Link to={yml.button.apply_button_link}
             state={{course: yml.meta_info.bc_slug}}
           >
-            <Button width="200px" color="red" margin="0" textColor="white">{apply_button_text}</Button></Link>
+            <Button width="200px" color="red" margin="0" textColor=" white">{apply_button_text}</Button>
+          </Link>
         </Column>
-        <Column align="left" size="6" align_sm="center" size_sm="12" align="left">
-          <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
+        <Column align="left" size="6" size_xs="12" align_sm="center">
+          <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
         </Column>
       </Row>
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
         open={open}
-        onClose={handleClose}
+        onClose={() => setOpen(false)}
       >
         <LeadForm
           style={{marginTop: "50px"}}
           heading={yml.button.syllabus_heading}
           motivation={yml.button.syllabus_motivation}
-          sendLabel={syllabus_button_text}
+          sendLabel={yml.button.syllabus_btn_label}
           formHandler={requestSyllabus}
-          handleClose={handleClose}
+          handleClose={() => setOpen(false)}
           lang={pageContext.lang}
           data={{
-            course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
+            course: {value: yml.meta_info.bc_slug, valid: true}
           }}
         />
       </Modal>
       <Divider height="100px" md="0px" />
     </WrapperImage>
 
-    {/* PROGRAM DETAILS */}
-    <Wrapper >
+
+    <Wrapper
+      margin="100px"
+      border="top">
       <Title
         size="10"
+        marginTop="40px"
+        title={yml.potential_companies.tagline}
+        paragraph={yml.potential_companies.sub_heading}
+        variant="primary"
+      />
+      <WhoIsHiring
+        images={yml.potential_companies.companies}
+      />
+    </Wrapper>
+
+    <Wrapper margin="50px 0 0 0">
+      <Title
+        size="10"
+        type="h2"
         marginTop="40px"
         title={yml.details.heading}
         paragraph={yml.details.sub_heading}
         variant="primary"
       />
-      <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
-      <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+      <ProgramDetails details={yml.details} lang={pageContext.lang} />
+      <ProgramDetailsMobile details={yml.details} lang={pageContext.lang} />
     </Wrapper>
 
     <Div
@@ -120,8 +137,8 @@ const Program = ({data, pageContext, yml}) => {
           style={{padding: "10px 0px", maxWidth: "100%"}}
           inputBgColor={Colors.white}
           layout="flex"
-          sendLabel={yml.button.syllabus_btn_label}
           lang={pageContext.lang}
+          sendLabel={syllabus_button_text}
           formHandler={requestSyllabus}
           data={{
             course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
@@ -130,12 +147,12 @@ const Program = ({data, pageContext, yml}) => {
       </Wrapper>
     </Div>
 
+    {/* GEEKPAL && GEEKFORCE SECTION */}
+    {/* ---------------------------- */}
     <Wrapper
-      margin="0 0 50px 0"
+      margin="50px"
     >
-      <ProgramSVG lang={pageContext.lang} />
-      {/* <SyllabusSVG className="d-sm-none w-100" /> */}
-      <Column size="12" background="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
+      <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
         <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
         <Row display="flex" padding="0px 40px" p_md="0 10px">
           <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">
@@ -143,8 +160,8 @@ const Program = ({data, pageContext, yml}) => {
               icon="arrowright"
               to={`/${pageContext.lang}/geekforce`}
               image="/images/geekforce.png"
-              heading={courseDetails.geek_data.geek_force_heading}
-              bullets={courseDetails.geek_data.geek_force}
+              heading={geek.geek_data.geek_force_heading}
+              bullets={geek.geek_data.geek_force}
             />
           </Column>
           <Column size="6" size_sm="12" paddingRight={`0`} p_sm="0">
@@ -152,30 +169,26 @@ const Program = ({data, pageContext, yml}) => {
               icon="arrowright"
               to={`/${pageContext.lang}/geekforce`}
               image="/images/geekpal.png"
-              heading={courseDetails.geek_data.geek_pal_heading}
-              bullets={courseDetails.geek_data.geek_pal}
+              heading={geek.geek_data.geek_pal_heading}
+              bullets={geek.geek_data.geek_pal}
             />
           </Column>
         </Row>
       </Column>
     </Wrapper>
 
-    <Wrapper
-      margin="50px"
-    >
+    <Wrapper margin="50px 0">
       <Title
         size="10"
         title={yml.geeks_vs_others.heading}
         paragraph={yml.geeks_vs_others.sub_heading}
         variant="primary"
       />
-      <Divider height="50px" />
       <GeeksVsOthers lang={pageContext.lang} limit={5} />
     </Wrapper>
 
-    {/* PRICING */}
     <Wrapper
-      margin="50px 0"
+
       github="/course"
     >
       <Title
@@ -185,43 +198,29 @@ const Program = ({data, pageContext, yml}) => {
         variant="primary"
       />
       <PricesAndPayment
-        type={pageContext.slug}
         lang={pageContext.lang}
         session={session}
+        type={pageContext.slug}
         locations={data.allLocationYaml.edges}
-        course={program_type}
+        course="software_engineering"
       />
     </Wrapper>
 
-    {program_type === "full_time" && <TypicalDay data={yml.typical} />}
-
-    {/* ALUMNI PROJECTS */}
-    <Wrapper
-      margin="75px 0"
-    >
-      <Title
-        size="10"
-        title={yml.alumni.heading}
-        paragraph={yml.alumni.sub_heading}
-        maxWidth="80%"
-        margin="auto"
-        variant="primary"
-      />
-      <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
-    </Wrapper>
-    {/* </div> */}
   </>
   )
 };
 
 export const query = graphql`
-  query CourseQuery($file_name: String!, $lang: String!) {
+  query CourseMachineLearningQuery($file_name: String!, $lang: String!) {
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
             header{
+              tagline_top
               tagline
-              paragraph
+              sub_heading
+              subsub_heading
+              image_position
               image {
                 childImageSharp {
                   fluid(maxWidth: 1200){
@@ -229,11 +228,10 @@ export const query = graphql`
                   }
                 }
               }
-            alt
+              alt
             }
             button{
               syllabus_heading
-              syllabus_btn_label
               syllabus_motivation
               apply_button_link
             }
@@ -250,9 +248,12 @@ export const query = graphql`
               geek_force
               geek_pal
             }
+            credentials{
+              heading
+              paragraph
+            }
             details {
               heading
-              weeks
               sub_heading
               left_labels{
                 description
@@ -274,16 +275,25 @@ export const query = graphql`
               heading
               button_label
             }
-            credentials{
-              heading
-              paragraph
+            potential_companies{
+              tagline
+              sub_heading
+              companies{
+                name
+                image{
+                  childImageSharp {
+                    fluid(maxWidth: 100){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+              }
             }
             geeks_vs_others{
               heading
               sub_heading
               sub_heading_link
           }
-            
             prices{
               heading
               sub_heading
@@ -296,7 +306,6 @@ export const query = graphql`
                 time
                 icon
                 content
-                step
               }
             }
             alumni{
@@ -323,7 +332,7 @@ export const query = graphql`
           projects {
               project_name
               slug
-              project_image{
+              project_image {
                 childImageSharp {
                   fluid(maxWidth: 800){
                     ...GatsbyImageSharpFluid_withWebp
@@ -397,52 +406,13 @@ export const query = graphql`
           }
           
           prices {
-            full_time {
-              center_section {
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
-                }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
-                }
-              }
-              left_section {
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  heading_two
-                  sub_heading
-                }
-              }
-              right_section {
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
-                }
-              }
-            }
-            part_time {
+            software_engineering {
               center_section {
 
                 header {
-                  heading_two
                   sub_heading
                   heading_one
+                  heading_two
                 }
                 plans {
                   months
@@ -461,8 +431,8 @@ export const query = graphql`
                 }
                 header {
                   heading_one
-                  sub_heading
                   heading_two
+                  sub_heading
                 }
               }
               right_section {
@@ -472,8 +442,8 @@ export const query = graphql`
                   price_info
                 }
                 header {
-                  heading_one
                   sub_heading
+                  heading_one
                   heading_two
                 }
               }
@@ -485,5 +455,4 @@ export const query = graphql`
     }
   }
 `;
-
 export default BaseRender(Program);

@@ -2,6 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const robots = process.env.GATSBY_ROBOTS || "show";
 module.exports = {
   siteMetadata: {
     defaultTitle: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
@@ -128,15 +129,37 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags/links`]
-      }
+        exclude: [`/admin`, `/tags/links`, `/edit`, `/landings`],
+        // output: `/some-other-sitemap.xml`,
+        // query: `
+        // {
+        //     site {
+        //         siteMetadata {
+        //             siteUrl
+        //         }
+        //     }
+        //     allSitePage {
+        //         nodes {
+        //             path
+        //         }
+        //     }
+        // }`,
+        // serialize: ({ site, allSitePage }) =>
+        //     allSitePage.nodes.map(node => {
+        //         return {
+        //             url: `${site.siteMetadata.siteUrl}${node.path}`,
+        //             changefreq: `daily`,
+        //             priority: 0.7,
+        //         }
+        //     })
+        }
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         env: {
           production: {
-            policy: [{ userAgent: '*' }]
+            policy: robots !== "hidden" ? [{ userAgent: '*' }] : [{ userAgent: '*', disallow: ['/'] }]
           },
           development: {
             policy: [{ userAgent: '*', disallow: ['/'] }]

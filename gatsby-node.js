@@ -295,6 +295,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields 
                 if (typeof (path) !== "string") throw new Error(`The path in ${node.meta_info.slug} is not a string: ${path}`);
                 if (path === "") return;
                 path = path[0] !== '/' ? '/' + path : path; //and forward slash at the beginning of path
+                console.log(`Additional redirect ${path} => ${node.fields.pagePath}`)
                 _createRedirect({
                     fromPath: path,
                     toPath: node.fields.pagePath,
@@ -447,6 +448,14 @@ const addAdditionalRedirects = ({graphql, actions}) => {
 
 const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
+    let slugigy = (entity) => {
+        let slugMap = {
+            location: "coding-campuses",
+            course: "coding-bootcamps",
+        }
+        return slugMap[entity] || entity
+    }
+
     //if its a blog post the meta_info comes from the front-matter
     if (typeof (meta_info) == 'undefined') meta_info = frontmatter;
 
@@ -456,13 +465,13 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
     const type = frontmatter ? "post" : m[1];
 
-    const lang = m[3] || "en";
+    const lang = m[3] || "us";
     const customSlug = (meta_info !== undefined && typeof meta_info.slug === "string");
     const file_name = m[2];// + (lang == "es" ? "-es": "");
     const slug = (customSlug) ? meta_info.slug : file_name;
     const template = type === "page" ? file_name : type;
 
-    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${template}/${slug}`;
+    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${slugigy(template)}/${slug}`;
 
     const meta = {lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath};
     //   console.log("meta: ", meta);

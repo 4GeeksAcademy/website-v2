@@ -10,6 +10,7 @@ import {SessionContext} from '../../session.js'
 export const ChooseWrap = styled.div`
     position: relative;
     cursor: pointer;
+    width: ${props => props.width};
     margin: ${props => props.margin};
     @media ${Break.sm} {
         width: 100%;
@@ -43,6 +44,7 @@ const ChooseProgram = (props) => {
         <ChooseWrap
             centered={props.centered}
             margin={props.margin}
+            width={props.width}
             m_sm={props.m_sm}
             m_xs={props.m_xs}
             onMouseLeave={() => {

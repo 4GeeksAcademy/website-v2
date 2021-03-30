@@ -10,47 +10,51 @@ partners:
   footer_link: "/es/aliados"
   images:
     - name: "Microsoft"
-      locations: all
+      #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
     - name: "Evernote"
-      locations: all
+      #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/evernote.png"
       featured: true
     - name: "Facebook"
-      locations: all
+      #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/facebook.png"
       featured: true
+    - name: "Ebay"
+      #locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/ebay.png"
+      featured: true
     - name: "National Geographic"
-      locations: all
+      #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/natgeo.png"
       featured: true
     - name: "Ticjob"
-      locations: ["madrid-spain"]
+      # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/new_logo_ticjob.png"
       featured: true
     - name: "Ultimate Software"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ultimate.png"
       featured: true
     - name: "TCG Group"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/tcg.png"
       featured: true
     - name: "Razz"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/razz.png"
       featured: true
     - name: "Overseas"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/overseas.png"
       featured: true
     - name: "DS9"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ds9.png"
       featured: true
     - name: "Coinet"
-      locations: ["miami-downtown"]
+      # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/coinet.jpg"
       featured: true
 coding:
@@ -60,24 +64,32 @@ coding:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Startup"
       image: "../../../../static/images/coding/startup.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Shell Hacks"
       image: "../../../../static/images/coding/shell-hacks.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Womans Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"
       featured: false
+      #locations: ["madrid-spain"]
+      
 influencers:
   tagline: "ASOCIADOS CON ACTORES GLOBALES EN EL MUNDO DEL CÓDIGO"
   sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
@@ -85,35 +97,44 @@ influencers:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Startup"
       image: "../../../../static/images/coding/startup.png"
-
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Womans Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
-
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Carnet Joven"
       image: "../../../../static/images/partner/carnet-joven.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Trivu"
       image: "../../../../static/images/partner/logo_trivu.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "La Nave"
       image: "../../../../static/images/partner/la-nave.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Dda"
       image: "../../../../static/images/influencers/dda.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Miami Dade"
       image: "../../../../static/images/influencers/miami-dade.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Beacon Council"
       image: "../../../../static/images/influencers/beacon.png"
       featured: false
+      #locations: ["madrid-spain"]
+
 financials:
   tagline: "INMERSOS EN EL ECOSISTEMA DE PROGRAMACIÓN DE LA CIUDAD"
   sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
@@ -121,12 +142,16 @@ financials:
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Skill Fund"
       image: "../../../../static/images/skill-logo.png"
       featured: false
+      #locations: ["madrid-spain"]
     - name: "Zank"
       image: "../../../../static/images/zank.png"
       featured: false
+      #locations: ["madrid-spain"]

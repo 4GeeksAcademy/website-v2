@@ -114,7 +114,7 @@ const Home = (props) => {
       <Wrapper>
         <Badges lang={pageContext.lang} />
         <H4 margin="50px 0">{yml.news.heading}</H4>
-        <News lang={pageContext.lang} limit={yml.news.limit} />
+        <News lang={pageContext.lang} limit={yml.news.limit} autoTagLocation />
       </Wrapper>
 
       {/* WHY 4GEEKS SECTION */}
@@ -229,6 +229,7 @@ const Home = (props) => {
         />
         <WhoIsHiring
           margin="50px"
+          autoTagLocation
           images={hiring.partners.images}
           footerTagline={hiring.partners.footer_tagline}
           footerLink={hiring.partners.footer_link}
@@ -383,6 +384,7 @@ export const query = graphql`
                 footer_link
                 images {
                   name
+                  locations
                   image {
                     childImageSharp {
                       fluid(maxWidth: 150){

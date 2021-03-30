@@ -65,7 +65,8 @@ const Location = ({data, pageContext, yml}) => {
             <ChooseProgram
                 right="15px"
                 top="40px"
-                margin="0 0 40px 0"
+                width="250px"
+                margin="0 auto 40px auto"
                 programs={data.allChooseProgramYaml.edges[0].node.programs}
                 openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
                 closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}

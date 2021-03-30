@@ -1,14 +1,14 @@
 meta_info:
-  slug: aprende-a-programar # <--- URL 4geeksacademy.com/us/landing/example
+  slug: carne-joven # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Impulsa tu carrera profesional, ¡aprende a programar con 4Geeks Academy!"
+  title: "Impulsa tu carrera profesional, ¡aprende a programar con 4Geeks Academy y el Carne Joven!"
   description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy."
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
   
   template: "landing_nonav" # <--- choose your landing template
-  redirects: ["/landing/impulsa-tu-carrera"] # <--- URL redirections to avoid 404 errors
+  redirects: ["/landing/impulsa-tu-carrera-carne-joven"] # <--- URL redirections to avoid 404 errors
   
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -19,13 +19,13 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Solicita más información"
+  heading: "Solicita una beca"
   button_label: Enviar
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: "/us/thank-you"  #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Aprende a programar
+  tagline: Aprende a programar con Carné Joven
   sub_heading: " "
   image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
@@ -38,17 +38,17 @@ features:
   bullets:
     - Un Desarrollador en Madrid gana 24.000€ al año
     - Hay más vacantes que en cualquier otra industria
-    - Impulsa tu Carrera y hazte programador de software
+    - ¡Impulsa tu Carrera! y hazte programador de software
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita una beca de hasta 1.800€. \n Planes de pago de hasta 24 meses."
-    text_mobile: "Becas de 1.800€ . \n Plan de pago de 24 m. \n ¡Últimas plazas!"
+    text: "Solicita una beca de del 50%. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de 50% . \n Plan de pago de 24 m."
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Más información"
+    text: "Solicitar"
     path: "#top"
   phone:
     text: "Llama "
