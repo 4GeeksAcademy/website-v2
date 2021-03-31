@@ -1,6 +1,6 @@
 # ¿Qué significa ser Full Stack?
 
-![%C2%BFQue%CC%81%20significa%20ser%20Full%20Stack%20cd0f57b3c9e44b309a8d442863a7f77c/Untitled.png](%C2%BFQue%CC%81%20significa%20ser%20Full%20Stack%20cd0f57b3c9e44b309a8d442863a7f77c/Untitled.png)
+![intro](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/ARTE_BLOG.png?raw=true)
 
 Cuántas cosas son necesarias conocer para ser Full Stack
 
