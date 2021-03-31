@@ -8,6 +8,7 @@ import {Colors} from '../Styling'
 import {Link} from 'gatsby';
 import Img from 'gatsby-image';
 import Fragment from "../Fragment"
+import DragScrollProvider from '../DragScrollProvider'
 
 const Testimonials = (props) => {
     let testimonialsArray = props.lang[0].node;

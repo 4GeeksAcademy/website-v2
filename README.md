@@ -1,5 +1,6 @@
 # 4Geeks Academy Website
 
+
 ## Tests
 
 Test SEO best practice and YML format and rules:

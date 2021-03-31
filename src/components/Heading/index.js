@@ -21,7 +21,7 @@ const BaseHeading = styled(Heading)`
   display: block;
   float: ${props => props.float || "none"};
   width: ${props => props.width || "100%"};
-  font-family: 'Futura', sans-serif;
+  font-family: 'Lato', sans-serif;
   letter-spacing: 0px;
   font-weight: ${props => props.fontWeight};
   font-size: ${props => props.fontSize};
@@ -102,7 +102,6 @@ const StyledSeparator = styled.div`
     margin-right: auto;
     width: ${props => props.width_xs};
   }
-};
 `
 export const Separator = ({variant, children, ...rest}) => {
   let variants = {
@@ -206,8 +205,9 @@ export const Title = props => {
         fs_xs={props.fs_xs}
         align={props.textAlign}
         textShadow={theme.shadow}
+        padding={props.padding}
       >
-        {props.title}
+        {props.greetings} <br/> {props.title}
       </HeadingType>
       <Separator align="center" variant={props.variant} />
       {props.paragraph && props.paragraph.split('\\n').map((content, i) =>
