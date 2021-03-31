@@ -18,11 +18,12 @@ meta_info:
       "/es/course/introduccion-programacion",
       "/introduccion-programacion-codigo",
     ]
+seo_title: "Cooding Bootcamp"
 header:
-  tagline: "FULL STACK DEVELOPER"
-  image: "../../../static/images/bg/bg-pr.jpg"
-  paragraph: "Aprende desde cero hasta tener tu primer trabajo como programador. Recibe mentoría ilimitada, soporte de por vida y consigue un trabajo como programador en 9+ o 16+ semanas despues de empezar."
-  alt: ""
+  title: "Full Stack Developer"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: ""
+  paragraph: "De cero a tener tu primer trabajo como programador, aprende todos los necesario, recibe soporte de por vida y consigue un trabajo como programador 16+ semanas despues de empezar."
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"

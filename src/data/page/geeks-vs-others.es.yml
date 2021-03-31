@@ -5,8 +5,9 @@ meta_info:
   image: null
   keywords: ""
   redirects: ["/otros"]
-  
-  
+
 ## 4GEEKS VS OTHERS HEADING
-tagline: 4GEEKS vs OTROS
-sub_heading: "Tabla Comparativa Completa"
+seo_title: "success stories"
+header:
+  title: 4GEEKS vs OTROS
+  paragraph: "Tabla Comparativa Completa"
