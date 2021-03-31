@@ -1,15 +1,94 @@
 import React, {useState} from 'react'
 import Link from 'gatsby-link'
-import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Container, Row, Column, Divider, Wrapper, WrapperImage} from '../components/Sections'
-import {RoundImage, Colors} from '../components/Styling'
+import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
+import {Container, Row, Column, Divider, Wrapper, WrapperImage} from '../new_components/Sections'
+import {RoundImage, Colors} from '../new_components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseBlogRender from './_baseBlogLayout'
-import Icon from '../components/Icon'
+import Icon from '../new_components/Icon'
 import twitterUser from '../utils/twitter'
+import { Grid, Div, Header } from '../new_components/Sections'
 
+import Banner from '../new_components/Blog/Banner' 
+import Careers from '../new_components/Blog/Careers'
+import Article from '../new_components/Blog/Article'
 
 const Blog = ({data, pageContext, yml}) => {
+
+    //Format a Post Card
+    function drawCard(item,i){
+      
+      return (
+        
+        <Column masonry size="12" key={i} height="auto" margin="0 8px 40px 8px">
+          {item.node.frontmatter.image &&
+            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+              <LazyLoad height={10} scroll={true} once={true}>
+                <RoundImage
+                  url={item.node.frontmatter.image}
+                  bsize="cover"
+                  mb="10px"
+                  border="0px"
+                  position="center"
+                  width="100%"
+                  height="329px"
+                  h_lg="140px"
+                  h_md="120px"
+                  h_sm="200px"
+                  h_xs="150px"
+                />
+              </LazyLoad>
+            </Link>
+          }
+          
+          <Row display="flex" >
+            <Column size size="12" textAlign="left">
+              <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                <H4             
+                  style={{fontFamily:"Lato"}}     
+                  textAlign="left" 
+                  align_sm="left"
+                  uppercase
+                  fs_xs="20px"
+                  fs_sm="24px"
+                  fs_md="16px"
+                  fs_lg="20px"
+                  fontSize="22px"
+                >
+                  {item.node.frontmatter.title}
+                </H4>                
+              </Link>
+            </Column>            
+          </Row>
+          
+          <Divider height="35px" />
+
+          <Row display="flex" height="auto" margin="0 0 0 0">
+            <Column size="12" align="center">
+              <Paragraph fontFamily="Lato" fontWeight="300" fontSize="15px" color="#3A3A3A" textAlign="left" margin="0 0 0px 0">
+                {item.node.frontmatter.excerpt}
+              </Paragraph>
+            </Column>
+          </Row>
+          
+          <Divider height="15px" />
+
+          <Row display="flex" height="auto" style={{"top": "1469px"}}>
+            <Column size="12">
+              <Paragraph fontSize="13px" color="#0097cd" margin="0 0 0 0" textAlign="left">            
+                <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                  Leer artículo &gt; 
+                </Link>
+              </Paragraph>
+            </Column>
+          </Row>
+
+        </Column>
+      ) 
+    }
+
+    //---------------------------------------------------
+
     function GetFormattedDate (date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -23,6 +102,7 @@ const Blog = ({data, pageContext, yml}) => {
 
         return [year, month, day].join('-');
     }
+
     function OrganizeColumns(arr){
         let posts = [[],[],[]];
         for(let i = 0; i < arr.length; i += 3){
@@ -36,45 +116,87 @@ const Blog = ({data, pageContext, yml}) => {
         }
         return posts;
     }
+       
     const blog_posts = OrganizeColumns(data.featured.edges);
     const story_posts = OrganizeColumns(data.posts.edges.filter(post => post.node.frontmatter.status === "published"));
+    
+    data.pageContext = pageContext
+
     return (
         <>
-            <WrapperImage
-                github={`/page/blog.${pageContext.lang}.yml`}
-                imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
-                bgSize="cover"
-                className={`img-header`}
-                height={`300px`}
-                paddingRight={`0`}
-                borderRadius="0 0 0 1.25rem"
-            >
-                <Divider height="100px" />
-                <Title
-                    title={yml.banner.tagline}
-                    variant="main"
-                    size="8"
-                    color={Colors.white}
-                    paragraph={yml.banner.sub_heading}
-                    paragraphColor={Colors.white}
-                    textAlign="center"
+         
+          <Grid>
+                                
+            <Banner yml={yml}/>
+              
+            <Divider height="40px"/>           
+                   
+            <Careers yml={yml} story_posts={story_posts} page_context={data.pageContext}/>
+            
+            <Divider height="78px"/>
+                        
+            <Div justifyContent="center" github={`/blog`} padding="0 167px 0 167px">
+              
+              <div style={{ 'display': 'inline-block', "width": "33%" }}>
+                {
+                  blog_posts[0].map((item, i) => {
+                    //COMPLETED: ahora no se necesita importar avatar en cada markdown
+                    const allowed = [`${item.node.frontmatter.author}`];
+                    const filtered = Object.keys(twitterUser)
+                          .filter(key => allowed.includes(key))
+                          .reduce((obj, key) => {
+                            obj = twitterUser[key];
+                            return obj;
+                          },{});
+                        
+                    return drawCard(item,i)
+                  })
+                }
+              </div>
+              
+            <div style={{ 'display': 'inline-block', "width": "33%" }}>
+                {
+                  blog_posts[1].map((item, i) => {
 
-                />
-            </WrapperImage>
-            <Divider height="50px" />
+                    return drawCard(item, i)
+                        
+                  })                
+                }
+              </div>
 
+              <div style={{ 'display': 'inline-block', "width": "33%" }}>
+                {
+                  blog_posts[2].map((item, i) => {
+
+                    return drawCard(item, i)
+
+                  })
+                }
+              </div>                  
+               
+            </Div>
+            
+          </Grid>
+
+            {/*
             <Wrapper >
+
                 <Row display="flex" justifyContent="left">
                     <Column size="12">
                         <H4 fontSize="30px">Featured</H4>
                     </Column>
                 </Row>
+            
                 <Row display="flex">
                     <Separator variant="primary" />
                 </Row>
+            
                 <Divider height="50px" />
+            
                 <Row display="flex" github={`/blog`}>
+
                     <div className="card-columns" >
+                
                         {blog_posts[0].map((item, i) => {
                             //COMPLETED: ahora no se necesita importar avatar en cada markdown
                             const allowed = [`${item.node.frontmatter.author}`];
@@ -294,6 +416,9 @@ const Blog = ({data, pageContext, yml}) => {
                     </div>
                 </Row>
             </Wrapper>
+            */}
+
+            {/*
             <Wrapper >
                 <Row display="flex" justifyContent="left">
                     <Column size="12">
@@ -520,6 +645,8 @@ const Blog = ({data, pageContext, yml}) => {
                     </div>
                 </Row>
             </Wrapper>
+            */}
+
         </>
     )
 }
@@ -542,13 +669,27 @@ query BlogQuery($file_name: String!, $lang: String!) {
             sub_heading
             image{
                 childImageSharp {
-                  fluid(maxWidth: 1500, quality: 100){
+                  fluid( maxWidth: 400, quality: 100){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }  
           }
-        
+          question
+          topics
+          seo_title 
+          header {
+            title
+            paragraph
+            image{
+                childImageSharp {
+                  fluid(maxWidth: 1500, quality: 100){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            image_alt
+          }          
         }
       }
     }
