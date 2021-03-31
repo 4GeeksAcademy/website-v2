@@ -34,7 +34,6 @@ A large part of these techniques aims to read less, but learn better and more ef
 
 ## **The Pomodoro Technique**
 
-![intro](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/ARTE_BLOG.png?raw=true)
 
 Have you already know something about this approach? One of the best-known techniques in productivity is the [Pomodoro technique](https://francescocirillo.com/pages/pomodoro-technique), created in 1980 by the Italian, Francesco Cirillo. Its effectiveness has been proven in students improving their performance.
 
