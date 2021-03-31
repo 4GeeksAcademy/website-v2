@@ -52,68 +52,6 @@ const Footer = ({yml}) => {
 
     return (
         <>
-<<<<<<< HEAD
-            <Container github="/components/footer"
-                variant="fluid"
-                height="auto"
-                background={Colors.white}
-                padding="0 17px 17px 17px"
-                margin="53px 0 0 0"
-
-            // padding_md="44px 175px"
-            >
-                <Container variant="fixed" padding="27px 17px 17px 17px" style={{borderTop: `1px solid ${Colors.lightGray}`}}>
-                    <Grid columns="0" columns_md="12" rows_md="1" gridGap="11px">
-                        <Div
-                            justifyContent="center"
-                            alignItems="center"
-                            height="43px"
-                            width="100%"
-                            width_md="143px"
-                            height_md="100%"
-                            borderRadius="3px"
-                            gridArea_md="1/1/2/3"
-                        >
-                            <RoundImage url="/images/logoweb.png" height="43px" width="143px" backgroundColor="transparent" position="center" bsize="contain" />
-                        </Div>
-                        <Div
-                            flexDirection="column"
-                            justifyContent="center"
-                            alignItems="center"
-                            height="43px"
-                            width="100%"
-                            width_md="100%"
-                            height_md="100%"
-                            borderRadius="3px"
-                            gridArea_md="1/9/2/13"
-                        >
-                            <H4 margin="0 0 10px 0" display="none" display_md="block">{yml.newsletter.heading}</H4>
-                            <Div>
-                                <Icon icon="twitter" style={{margin: "0 15px 0 0"}} height="32px" width="32px" />
-                                <Icon icon="facebook" style={{margin: "0 15px 0 0"}} color={Colors.black} fill={Colors.black} height="32px" width="32px" />
-                                <Icon icon="instagram" style={{margin: "0 15px 0 0"}} height="32px" width="32px" />
-                                {/* <Icon icon="youtube" style={{margin: "0 15px 0 0"}} height="32px" width="32px" /> */}
-                                <Icon icon="github" style={{margin: "0 15px 0 0"}} height="32px" width="32px" />
-                            </Div>
-                        </Div>
-                        <Div
-                            flexDirection="column"
-                            justifyContent="center"
-                            alignItems="center"
-                            padding="0 40px"
-                            height="43px"
-                            width="100%"
-                            borderRadius="3px"
-                            width_md="100%"
-                            height_md="100%"
-                            gridArea_md="1/3/2/9"
-                            borderRight_md={`1px solid ${Colors.lightGray}`}
-                        >
-                            <H4 margin="0 0 10px 0" display="none" display_md="block">{yml.newsletter.heading}</H4>
-                            <Div justifyContent="center" width="100%">
-                                <Form onSubmit={(e) => {
-                                    e.preventDefault();
-=======
             <GridContainer github="/components/footer" gridTemplateRows_tablet="2" columns_tablet="12">
                 <Div
                     justifyContent="center"
@@ -193,7 +131,6 @@ const Footer = ({yml}) => {
                                 margin="0"
                                 onChange={(value, valid) => {
                                     setVal({...formData, email: {value, valid}})
->>>>>>> upstream/next
                                     if (formStatus.status === "error") {
                                         setFormStatus({status: "idle", msg: "Resquest"})
                                     }

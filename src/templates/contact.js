@@ -9,7 +9,7 @@ import Link from 'gatsby-link'
 import {Colors, Button} from '../new_components/Styling'
 import {Input, Alert, TextArea} from '../new_components/Form';
 import {H1, H2, H3, Paragraph} from '../new_components/Heading'
-import { HR, Grid, Div} from '../new_components/Sections'
+import { HR, Grid, Div, SavedGrid} from '../new_components/Sections'
 
 
 const Contact = (props) => {
@@ -69,7 +69,7 @@ const Contact = (props) => {
                 <Icon icon="landingCircles/mdCircle-blue" style={{zIndex: 2, position: "absolute", right: "116px", top: "169px"}}/>
                 <Icon icon="landingCircles/smCircle-mustard" style={{zIndex: 2, position: "absolute", right: "299px", top: "122px"}}/>
             </Div>
-            <Div margin="64px 0 0 0" justifyContent="center" variant="fluid" padding_md="17px 8px 40px 8px">
+            <Div margin="64px 0" justifyContent="center" variant="fluid" padding_md="17px 8px 40px 8px">
             <Div
                 paddingRight="0px"
                 paddingLeft="0px"
@@ -93,7 +93,7 @@ const Contact = (props) => {
                 </Paragraph>
 
                 <Div justifyContent_sm="center" margin="64px 0 0 0" padding_xs="0 10px" padding="0 10px">
-                    <Grid 
+                    <SavedGrid 
                         height="100%"
                         columns_md="3, 0fr"
                         justifyContent="center"
@@ -102,7 +102,7 @@ const Contact = (props) => {
                         
                     >
                         {formStatus.status === "thank-you" ?
-                            <Grid
+                            <SavedGrid
                                 data-cy="thankfulness"
                                 width= "300px"
                                 justifySelf= "center"
@@ -110,11 +110,10 @@ const Contact = (props) => {
                                 align="left"
                                 borderRadius="0 0 0 1.25rem"
                                 background="white"
-                                display="grid"
                             >
                                 <H3 type="h3" placeSelf="end" textAlign="center" fontSize="30px" color={Colors.green}>{formStatus.msg}</H3>
                                 <Paragraph padding="20px 10%" padding_sm="20px 20%" fontSize="20px" >{yml.left.thankyou}</Paragraph>
-                            </Grid>
+                            </SavedGrid>
                             :
                             // Padding top m_xs="35px 0" m_sm="35px 0" m_md="35px 0" removed
                             <Div id="contact-form" minWidth_lg="max-content" flex_tablet="1" flexDirection="column" size="12" padding_md="0px" alignSelf="center"  height="100%" borderRadius="0 0 0 1.25rem" background="white">
@@ -222,7 +221,7 @@ const Contact = (props) => {
                         }
 
                         <HR background="#F5F5F5" height="7px" width="100%" width_md="7px" height_md="auto" margin="28px 0" margin_md="0px 82px" />
-                        <Grid gridGap="0" columns="1" size="12" height="100%" minWidth="fit-content" flexDirection="column"  paddingLeft="0" paddingRight="0" >
+                        <SavedGrid gridGap="0" columns="1" size="12" height="100%" minWidth="fit-content" flexDirection="column"  paddingLeft="0" paddingRight="0" >
                             
                             {yml.right.content_section.map((item, i) => {
                                 return <Paragraph
@@ -239,8 +238,8 @@ const Contact = (props) => {
                                 >
                                 </Paragraph>;
                             })}
-                        </Grid>
-                    </Grid>
+                        </SavedGrid>
+                    </SavedGrid>
                 </Div>
                 </Div>
             </Div>
