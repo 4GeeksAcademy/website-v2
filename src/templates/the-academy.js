@@ -40,7 +40,7 @@ const Why = (props) => {
         </Div>
       </Grid>
 
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding="58px 17px" padding_md="70px 0" />
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding="58px 17px" padding_tablet="70px 0" />
 
       <GridContainer height="auto" columns_tablet="2" padding="0" margin_tablet="0 0 88px 0">
         <Div flexDirection="column" justifyContent_tablet="start" padding="41px 17px 0 17px" padding_tablet="56px 0 0 0" >

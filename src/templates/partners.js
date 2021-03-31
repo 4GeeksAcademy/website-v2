@@ -75,22 +75,11 @@ const Partners = (props) => {
             <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
           )}
         </Div>
-        <Div justifyContent="center" gridColumn_tablet="8 / 13">
+        <Div justifyContent="center" gridColumn_tablet="8 / 13" margin="0 0 81px 0">
           <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} />
         </Div>
 
       </GridContainer>
-
-      <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
-        <Div grid_column_tablet="1 / span 14">
-          <StyledBackgroundSection
-            height={`389px`}
-            image={yml.footer_data.image.childImageSharp.fluid}
-            bgSize={`cover`}
-            alt={yml.footer_data.alt}
-          />
-        </Div>
-      </Grid>
     </>
   )
 };
