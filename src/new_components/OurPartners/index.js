@@ -1,5 +1,5 @@
 import React from 'react';
-import {Div, Grid} from '../Sections'
+import {Div, Grid, GridContainer} from '../Sections'
 import {Colors, StyledBackgroundSection} from '../Styling';
 import Img from "gatsby-image"
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
@@ -7,22 +7,24 @@ import Link from 'gatsby-link'
 import Card from '../Card';
 import Fragment from "../Fragment"
 
-const OurPartners = ({title, paragraph, link, showFeatured, images, slider, ...rest}) => {
+const OurPartners = ({title, paragraph, background, link, showFeatured, images, slider, ...rest}) => {
   return (
-    <Fragment padding="20px 0" github="/components/partner" >
-      {title && <Grid columns_md="12" margin="67px 0" padding="0 17px"
-      >
-        <Div
-          gridArea_tablet="1/4/1/10"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
+    <Fragment github="/components/partner" >
+      {title &&
+        <GridContainer margin="0 0 40px 0"
+          background={background}
         >
-          <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>
-          <Paragraph>{paragraph}</Paragraph>
-        </Div>
-
-      </Grid>}
+          <Div
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            padding_tablet="0 4em"
+            padding="0 2em"
+          >
+            <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>
+            <Paragraph>{paragraph}</Paragraph>
+          </Div>
+        </GridContainer>}
       {showFeatured &&
         <>
           <Div justifyContent="center" flexDirection="column" flexDirection_md="row">
