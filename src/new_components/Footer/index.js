@@ -52,7 +52,7 @@ const Footer = ({yml}) => {
 
     return (
         <>
-            <GridContainer github="/components/footer" gridTemplateRows_tablet="2" columns_tablet="12">
+            <GridContainer github="/components/footer" gridTemplateRows_tablet="2" columns_tablet="12" >
                 <Div
                     justifyContent="center"
                     alignItems="center"

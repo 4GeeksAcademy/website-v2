@@ -1,0 +1,14 @@
+meta_info:
+  slug: porque-4geeks
+  title: ""
+  description: "Acerca de 4Geeks Academy"
+  image: ""
+  keywords: ""
+  redirects: ["/porque-4geeks", "/es/porque-4geeks"]
+
+seo_title: "coding bootcamp"
+header:
+  title: "Empoderamos Talentos, impulsando sus carreras profesionales con programación"
+  paragraph: ""
+  image: "../../../static/images/bg/the-academy-bg.jpg"
+  image_alt: ""
