@@ -3,7 +3,7 @@ import {GridContainerWithImage, Column, GridContainer, Div, Grid, Header} from '
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../new_components/Heading'
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Badges from '../new_components/Badges'
-import OurPartners from '../new_components/OurPartners'
+import With4Geeks from '../new_components/With4Geeks'
 import Credentials from '../new_components/Credentials'
 import BaseRender from './_baseLayout'
 import Staff from '../new_components/Staff';
@@ -36,6 +36,9 @@ const Why4Geeks = (props) => {
                 </Div>
             </GridContainerWithImage>
             <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} link padding="58px 17px" padding_tablet="70px 0" />
+            <GridContainer display="none" display_tablet="grid" fluid height_tablet="914px" margin_tablet="0 0 101px 0" background={Colors.verylightGray}>test</GridContainer>
+            <With4Geeks lang={pageContext.lang} playerHeight="82px" />
+            <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
 
             {/* <Grid gridTemplateColumns_tablet="14">
         <Div grid_column_tablet="1 / span 14">
