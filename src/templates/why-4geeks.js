@@ -19,7 +19,7 @@ const Why4Geeks = (props) => {
     const partnersData = data.allPartnerYaml.edges[0].node;
     return (
         <>
-            <GridContainerWithImage background={Colors.lightBlue} padding_tablet="36px 0 54px 0" columns_tablet="14" margin="120px 0 71px 0" margin_tablet="0 0 108px 0">
+            <GridContainerWithImage background={Colors.lightBlue} padding_tablet="36px 0 54px 0" columns_tablet="14" margin="120px 0 71px 0" margin_tablet="0">
                 <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
                     <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
@@ -35,16 +35,8 @@ const Why4Geeks = (props) => {
                     />
                 </Div>
             </GridContainerWithImage>
-            <Header
-                seo_title={yml.seo_title}
-                title={yml.header.title}
-                paragraph={yml.header.paragraph}
-                image={yml.header.image.childImageSharp.fluid}
-                margin_tablet="70px 0 0 0"
-                margin="120px 0 0 0"
-                padding="0 0 60px 0"
-                padding_tablet="0 0 60px 0"
-            />
+            <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} link padding="58px 17px" padding_tablet="70px 0" />
+
             {/* <Grid gridTemplateColumns_tablet="14">
         <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
@@ -56,7 +48,6 @@ const Why4Geeks = (props) => {
         </Div>
       </Grid>
 
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding="58px 17px" padding_tablet="70px 0" />
 
       <GridContainer height="auto" columns_tablet="2" padding="0" margin_tablet="0 0 88px 0">
         <Div flexDirection="column" justifyContent_tablet="start" padding="41px 17px 0 17px" padding_tablet="56px 0 0 0" >

@@ -12,3 +12,6 @@ header:
   paragraph: ""
   image: "../../../static/images/bg/the-academy-bg.jpg"
   image_alt: ""
+
+badges:
+  paragraph: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
