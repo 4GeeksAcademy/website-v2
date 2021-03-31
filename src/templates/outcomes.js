@@ -90,7 +90,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                     style={{margin: "38px 0"}}
                                                                     fadeIn={false}
                                                                     // alt={l.name}
-                                                                    fluid={m.image && m.image.childImageSharp.fluid}
+                                                                    fluid={m.image && m.image}
                                                                 />
                                                                 <Paragraph textAlign="left">{m.image_paragraph}</Paragraph>
                                                                 <Grid columns_md="3">
@@ -142,11 +142,11 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                 paragraph
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                      fluid(maxWidth: 800){
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }
-                  }
+                  } 
                 
             }
             sections{
@@ -160,7 +160,13 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                     title
                     content
                     image_section{
-                        image
+                        image{
+                            childImageSharp {
+                              fluid(maxWidth: 800){
+                                ...GatsbyImageSharpFluid_withWebp
+                              }
+                            }
+                          } 
                         image_paragraph  
                         chart
                     }
