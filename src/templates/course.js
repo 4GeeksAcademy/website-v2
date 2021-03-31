@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseLayout'
 import {Card, GeekCard} from '../components/Card'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../new_components/Sections'
+import {Container, Header, Column, Wrapper, WrapperImage, Divider, Sidebar, Div, GridContainer} from '../new_components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'
 import {requestSyllabus} from "../actions";
@@ -53,7 +53,24 @@ const Program = ({data, pageContext, yml}) => {
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   return (<>
-    <Container
+
+    <Header
+      seo_title={yml.seo_title}
+      title={yml.header.title}
+      paragraph={yml.header.paragraph}
+      padding_tablet="72px 0 40px 0"
+    >
+      <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+        <Link to={yml.button.apply_button_link}
+          state={{course: yml.meta_info.bc_slug}}
+        >
+          <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+        </Link>
+        <Button outline width="200px" color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+      </Div>
+      <Badges lang={pageContext.lang} />
+    </Header>
+    {/* <Container
       variant="fluid"
       margin="100px auto 0 auto">
       <Div
@@ -83,14 +100,16 @@ const Program = ({data, pageContext, yml}) => {
       <Container variant="fixed">
         <Badges lang={pageContext.lang} />
       </Container>
-    </Container>
+    </Container> */}
 
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <TechsWeTeach lang={pageContext.lang} />
     <GeeksInfo lang={pageContext.lang} />
     <UpcomingDates lang={pageContext.lang} />
-
+    <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
+      <Div height="1px" background="#EBEBEB"></Div>
+    </GridContainer>
 
     {/* <WrapperImage
       github="/course"
@@ -161,31 +180,16 @@ const Program = ({data, pageContext, yml}) => {
       <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
       <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     </Wrapper> */}
-    <Container
-      variant="fluid"
-      background="rgba(255, 183, 24, 0.15)"
-      // height="433px"
-      height_md="511px"
-      height="auto"
-      margin_md="0 0 73px 0"
-      margin="100px 0 76px 0"
-      padding="59px 17px 83px 17px"
-      padding_md="17px"
-    >
-      <Container
-        variant="fixed"
-        transform_md="translateY(-42%)"
-      >
 
-        <PricesAndPayment
-          type={pageContext.slug}
-          lang={pageContext.lang}
-          session={session}
-          locations={data.allLocationYaml.edges}
-          course={program_type}
-        />
-      </Container>
-    </Container>
+
+    <PricesAndPayment
+      type={pageContext.slug}
+      lang={pageContext.lang}
+      session={session}
+      locations={data.allLocationYaml.edges}
+      course={program_type}
+    />
+
 
     {/* <Container variant="fixed" margin="50px auto" style={{position: "relative"}}>
       <H2>{yml.prices.heading}</H2>
@@ -199,21 +203,21 @@ const Program = ({data, pageContext, yml}) => {
         course={program_type}
       />
     </Container> */}
-    <Container variant="fluid">
+    <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
+    {/* <Container variant="fluid">
       <H2>{yml.alumni.heading}</H2>
       <Paragraph margin="0 0 50px 0">{yml.alumni.sub_heading}</Paragraph>
-      <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
     </Container>
-    <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
+    <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0"> */}
 
-      <Testimonials lang={data.allTestimonialsYaml.edges} />
-    </Container>
+    <Testimonials lang={data.allTestimonialsYaml.edges} />
+    {/* </Container> */}
 
-    <Container
+    {/* <Container
       variant="fluid"
-    >
-      <OurPartners images={hiring.partners.images}></OurPartners>
-    </Container>
+    > */}
+    <OurPartners images={hiring.partners.images} slider></OurPartners>
+    {/* </Container> */}
 
 
     {/* PRICING */}
@@ -248,18 +252,20 @@ export const query = graphql`
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            header{
-              tagline
+          seo_title
+          header{
+              title
               paragraph
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 1200){
-                    ...GatsbyImageSharpFluid_withWebp
+              image_alt
+              image{
+                  childImageSharp {
+                    fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
                   }
                 }
-              }
-            alt
-            }
+              
+          }
             button{
               syllabus_heading
               syllabus_btn_label

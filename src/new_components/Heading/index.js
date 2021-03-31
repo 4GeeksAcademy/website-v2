@@ -93,6 +93,7 @@ export const H3 = styled(BaseHeading)`
   place-self: ${props => props.placeSelf};
 `;
 export const H4 = styled(BaseHeading)`
+font-weight: ${props => props.fontWeight || "400"};
   letter-spacing: 0.05em;
 
 `;
@@ -318,7 +319,6 @@ H3.defaultProps = {
 };
 H4.defaultProps = {
   fontSize: '15px',
-  fontWeight: '400',
   lineHeight: '26px',
   letterSpacing: '0.05em'
 };

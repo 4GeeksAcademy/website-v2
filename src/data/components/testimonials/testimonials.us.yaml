@@ -62,7 +62,7 @@ testimonials:
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
   - student_name: "Charles Fabricius"
     featured: true
-    highlighted: false
+    highlighted: true
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"

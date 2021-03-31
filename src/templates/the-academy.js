@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Column, Row, Div, Grid, Header} from '../new_components/Sections';
+import {Container, Column, GridContainer, Div, Grid, Header} from '../new_components/Sections';
 import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../new_components/Heading'
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Badges from '../new_components/Badges'
@@ -9,13 +9,12 @@ import BaseRender from './_baseLayout'
 import Staff from '../new_components/Staff';
 import BlogPosts from '../components/BlogPosts'
 import {Link} from 'gatsby'
-import Icon from '../components/Icon'
+import Icon from '../new_components/Icon'
 import Img from "gatsby-image"
 
 const Why = (props) => {
   const {data, pageContext, yml} = props;
-  console.log("data", yml)
-  const cornerstone = yml.cornerstones;
+  const cornerstones = yml.cornerstones;
   const hiring = data.allPartnerYaml.edges[0].node;
   const partnersData = data.allPartnerYaml.edges[0].node;
   return (
@@ -24,9 +23,14 @@ const Why = (props) => {
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
+        image={yml.header.image.childImageSharp.fluid}
+        margin_tablet="70px 0 0 0"
+        margin="120px 0 0 0"
+        padding="0 0 60px 0"
+        padding_tablet="0 0 60px 0"
       />
-      <Grid columns_md="12">
-        <Div gridArea_md="1/1/1/13">
+      <Grid gridTemplateColumns_tablet="14">
+        <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
             height={`389px`}
             image={yml.header.image.childImageSharp.fluid}
@@ -36,17 +40,17 @@ const Why = (props) => {
         </Div>
       </Grid>
 
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding="58px 17px" padding_md="70px 0" />
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding="58px 17px" padding_tablet="70px 0" />
 
-      <Grid height="1027px" height_md="559px" columns="1" rows="1" columns_md={`12`} gridGap_md="11px" gridGap="0" >
-        <Div flexDirection="column" justifyContent_md="start" padding="41px 17px 0 17px" padding_md="56px 0 0 0" gridArea_md={`1/3/1/7`}>
+      <GridContainer height="auto" columns_tablet="2" padding="0" margin_tablet="0 0 88px 0">
+        <Div flexDirection="column" justifyContent_tablet="start" padding="41px 17px 0 17px" padding_tablet="56px 0 0 0" >
           <H2 textAlign="left" margin="0 0 15px 0">{yml.what_is_4geeks.title}</H2>
 
           {yml.what_is_4geeks.paragraph.split("\n").map(paragraph =>
             <Paragraph textAlign="left" margin="0 0 15px 0" >{paragraph}</Paragraph>
           )}
         </Div>
-        <Div width="331px" gridArea_md="1/8/1/13">
+        <Div width_tablet="331px" justifySelf_tablet="end" padding_tablet="56px 0 0 0" >
           <StyledBackgroundSection
             height={`390px`}
             width="100%"
@@ -55,8 +59,40 @@ const Why = (props) => {
             alt={yml.what_is_4geeks.image_alt}
           />
         </Div>
-      </Grid>
+      </GridContainer >
       <Credentials lang={data.allCredentialsYaml.edges} />
+      <GridContainer margin="0 0 30px 0" padding="0">
+        <Div flexDirection="column" >
+          <H2 >{cornerstones.title}</H2>
+        </Div>
+      </GridContainer>
+      <GridContainer padding="0" height="auto" columns_tablet="2" margin_tablet="0 0 51px 0" margin="0 0 20px 0">
+
+        {
+          Array.isArray(cornerstones.cornerstones_list) && cornerstones.cornerstones_list.map((m, i) => {
+            return (
+              <Div margin="0 0 40px 0" key={i}>
+                <Div><Icon icon={m.icon} width="43px" height="34px" /></Div>
+                <Div flexDirection="column" margin="0 0 0 15px">
+                  <H3 textAlign="left" margin="0 0 20px 0">{m.title}</H3>
+                  {m.content.split('\\n').map((d, i) =>
+                    <Paragraph
+                      textAlign="left"
+                      color={Colors.darkGray}
+                      key={i}                        >
+                      {d}
+                    </Paragraph>
+                  )}
+                </Div>
+              </Div>
+            )
+          })
+        }
+      </GridContainer>
+      <GridContainer margin_tablet="0 0 76px 0" margin="0 0 65px 0">
+        <Div height="5px" background={Colors.verylightGray}></Div>
+      </GridContainer>
+
       <OurPartners
         images={partnersData.partners.images}
         title={partnersData.partners.tagline}
@@ -179,8 +215,8 @@ export const query = graphql`
                 }
             }
             cornerstones {
-                heading
-                sub_heading
+                title
+                paragraph
                 cornerstones_list {
                   content
                   icon
