@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {GridContainer, Container, Column, Grid, Div} from '../Sections'
-import {H3, H4, H5, Title, Paragraph} from '../Heading';
+import {H2, H3, H4, H5, Title, Paragraph} from '../Heading';
 import {Colors, Button, Tooltip, Span} from '../Styling';
 import Card from '../Card';
 import Icon from '../Icon';
@@ -50,6 +50,20 @@ const GeeksVsOthers = props => {
 
   return (
     <Fragment github="/components/geeks_vs_others">
+      {props.title && props.paragraph &&
+        <GridContainer margin_tablet="0 0 38px 0">
+          <Div
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            padding_tablet="0 4em"
+            padding="0 2em"
+          >
+            <H2 margin="0 0 15px 0">{props.title}</H2>
+            <Paragraph>{props.paragraph}</Paragraph>
+          </Div>
+        </GridContainer>
+      }
       <GridContainer columns_tablet="12" backgroundChild={Colors.lightYellow} gridGap="0" padding_tabletChild="11px 11px 0 44px">
         {/* <Div justifyContent="between" background={Colors.lightYellow}> */}
         <Div gridColumn_tablet="1 / 7" height="74px" alignItems="center"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.featured}</H3></Div>

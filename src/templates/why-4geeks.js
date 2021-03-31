@@ -5,6 +5,7 @@ import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Badges from '../new_components/Badges'
 import With4Geeks from '../new_components/With4Geeks'
 import Credentials from '../new_components/Credentials'
+import GeeksVsOthers from '../new_components/GeeksVsOthers'
 import BaseRender from './_baseLayout'
 import Staff from '../new_components/Staff';
 import BlogPosts from '../components/BlogPosts'
@@ -39,6 +40,7 @@ const Why4Geeks = (props) => {
             <GridContainer display="none" display_tablet="grid" fluid height_tablet="914px" margin_tablet="0 0 101px 0" background={Colors.verylightGray}>test</GridContainer>
             <With4Geeks lang={pageContext.lang} playerHeight="82px" />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
+            <GeeksVsOthers lang={pageContext.lang} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
 
             {/* <Grid gridTemplateColumns_tablet="14">
         <Div grid_column_tablet="1 / span 14">
@@ -141,6 +143,10 @@ export const query = graphql`
             }
             badges{
               paragraph
+            }
+            geeksvsothers{
+                title
+                paragraph
             }
             what_is_4geeks{
               title
