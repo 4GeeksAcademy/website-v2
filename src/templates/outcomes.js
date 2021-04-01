@@ -160,13 +160,7 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                     title
                     content
                     image_section{
-                        image{
-                            childImageSharp {
-                              fluid(maxWidth: 800){
-                                ...GatsbyImageSharpFluid_withWebp
-                              }
-                            }
-                          } 
+                        image
                         image_paragraph  
                         chart
                     }

@@ -24,6 +24,14 @@ const SVGImage = () =>
         <circle cx="437.5" cy="219.5" r="112.5" fill="#FFB718" fill-opacity="0.2" />
     </svg>
 
+const RedPin = ({style}) =>
+    <svg width="8" height="16" style={style} viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="4" cy="12" r="4" fill="#CD0000" />
+        <path d="M7 3.04545L4 1V5.09091L7 3.04545Z" fill="#CD0000" />
+        <path d="M4 10V5.09091M4 5.09091V1L7 3.04545L4 5.09091Z" stroke="#CD0000" />
+    </svg>
+
+
 
 
 const Why4Geeks = (props) => {
@@ -50,7 +58,54 @@ const Why4Geeks = (props) => {
                 </Div>
             </GridContainerWithImage>
             <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} link padding="58px 17px" padding_tablet="70px 0" />
-            <GridContainer display="none" display_tablet="grid" fluid height_tablet="914px" margin_tablet="0 0 101px 0" background={Colors.verylightGray}>test</GridContainer>
+            <GridContainer display="none" display_tablet="grid" fluid margin_tablet="0 0 101px 0" background={Colors.verylightGray} padding="30px 17px" padding_tablet="65px 17px 80px 17px">
+                <GridContainer columns_tablet="12" margin_tablet="0 0 30px 0">
+                    <Div
+                        display="flex"
+                        flexDirection="column"
+                        alignItems="center"
+                        gridColumn_tablet="3 /11"
+                    >
+                        <H2 margin="0 0 15px 0">{yml.community_banner.title}</H2>
+                        <Paragraph>{yml.community_banner.paragraph}</Paragraph>
+                    </Div>
+                </GridContainer>
+                <Div display="none" display_tablet="flex" >
+                    <StyledBackgroundSection
+                        height="500px"
+                        width="100%"
+                        image={yml.community_banner.image && yml.community_banner.image.childImageSharp.fluid}
+                        bgSize={`cover`}
+                        alt={yml.community_banner.image_alt}
+                    />
+                </Div>
+                <GridContainer columns_tablet="12" margin_tablet="0 0 69px 0" display="none" display_tablet="grid">
+                    <Div
+                        display="flex"
+                        flexDirection="column"
+                        alignItems="center"
+                        gridColumn_tablet="3 /11"
+                    >
+                        <Paragraph ><RedPin style={{margin: "0 10px 0 0 "}} />{yml.community_banner.image_paragraph}</Paragraph>
+                    </Div>
+                </GridContainer>
+                <GridContainer columns_tablet="4"  >
+                    {yml.community_banner.list.map((m, i) => {
+                        return (
+                            <Div
+                                key={i}
+                                display="flex"
+                                flexDirection="column"
+                                alignItems="center"
+                                borderRight={i < yml.community_banner.list.length - 1 && "1px solid #C4C4C4"}
+
+                            >
+                                <H4 fontWeight="900" lineHeight="19px" textTransform="uppercase">{m.title}</H4>
+                            </Div>
+                        )
+                    })}
+                </GridContainer>
+            </GridContainer>
             <With4Geeks lang={pageContext.lang} playerHeight="82px" />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
             <GeeksVsOthers lang={pageContext.lang} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
@@ -168,6 +223,22 @@ export const query = graphql`
             }
             badges{
               paragraph
+            }
+            community_banner{
+                title
+                paragraph
+                image{
+                    childImageSharp {
+                      fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                image_alt
+                image_paragraph
+                list{
+                    title
+                }
             }
             geeksvsothers{
                 title
