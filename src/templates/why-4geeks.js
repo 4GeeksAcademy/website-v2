@@ -108,7 +108,7 @@ const Why4Geeks = (props) => {
             </GridContainer>
             <With4Geeks lang={pageContext.lang} playerHeight="82px" />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-            <GeeksVsOthers lang={pageContext.lang} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
+            <GeeksVsOthers lang={pageContext.lang} limit={4} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
             <GridContainerWithImage height_tablet="503px" background={Colors.lightBlue} padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
                 <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.python_banner.title}`}</H2>

@@ -73,7 +73,7 @@ const GeeksVsOthers = props => {
       </GridContainer>
 
       <GridContainer columns_tablet="12" margin_tablet="0 0 76px 0" gridGap="0" backgroundChild={Colors.lightYellow} padding_tabletChild="0 11px 11px 44px">
-        {geeks.info.map((m, i) => {
+        {geeks.info.slice(0, props.limit || geeks.info.length).map((m, i) => {
           return (
             <React.Fragment key={i}>
               {/* // <Div display="grid" key={i} gridColumn_tablet="12" height="74px" alignItems="center" background={Colors.lightYellow}> */}
