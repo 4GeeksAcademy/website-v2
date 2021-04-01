@@ -1,6 +1,18 @@
-# ¿Qué significa ser Full Stack?
+---
+author: https://twitter.com/jimena_y_yo
+comments: true
+date: 2020-06-24 20:44:51+00:00
+excerpt: ¿Qué es full stack? Te explicamos que significa ser full stack en el siguiente artículo de 4geeks Academy
+layout: post
+slug: que-significa-ser-full-stack
+title: ¿Qué significa ser Full Stack?
+avatar: "/images/staff/jimena.jpg"
 
-![%C2%BFQue%CC%81%20significa%20ser%20Full%20Stack%20cd0f57b3c9e44b309a8d442863a7f77c/Untitled.png](%C2%BFQue%CC%81%20significa%20ser%20Full%20Stack%20cd0f57b3c9e44b309a8d442863a7f77c/Untitled.png)
+---
+
+ ¿Qué significa ser Full Stack?
+
+![un estudiante aprendiendo full stack](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/learning-to-code.jpg?raw=true)
 
 Cuántas cosas son necesarias conocer para ser Full Stack
 
@@ -14,7 +26,7 @@ Te invito a seguir leyendo para conocer la respuesta.
 
 ---
 
-# Cómo funcionan las webs
+## Cómo funcionan las webs
 
 Para darte la respuesta larga primero debes entender cómo funcionan las webs.
 
@@ -58,7 +70,7 @@ Tenemos proveedores de servidores muy famosos como Google, Amazon o [Heroku](htt
 
 Ahora que conoces cómo funcionan las webs, podemos volver a la pregunta principal.
 
-# ¿Qué significa ser Full Stack? (respuesta larga)
+### ¿Qué significa ser Full Stack? (respuesta larga)
 
 Significa conocer en cada una de las áreas anteriores alguna tecnología para llevarla a cabo.
 
