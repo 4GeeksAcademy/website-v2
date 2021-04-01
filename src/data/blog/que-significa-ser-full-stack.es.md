@@ -12,7 +12,7 @@ avatar: "/images/staff/jimena.jpg"
 
  ¿Qué significa ser Full Stack?
 
-![un estudiante aprendiendo full stack](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/learning-to-code.jpg?raw=true)
+![un estudiante aprendiendo full stack](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/learn-to-code.jpg?raw=true)
 
 Cuántas cosas son necesarias conocer para ser Full Stack
 
