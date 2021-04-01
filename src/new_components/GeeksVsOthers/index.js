@@ -51,7 +51,7 @@ const GeeksVsOthers = props => {
   return (
     <Fragment github="/components/geeks_vs_others">
       {props.title && props.paragraph &&
-        <GridContainer margin_tablet="0 0 38px 0">
+        <GridContainer margin_tablet="0 0 38px 0" margin="0 0 24px 0">
           <Div
             display="flex"
             flexDirection="column"
@@ -64,23 +64,23 @@ const GeeksVsOthers = props => {
           </Div>
         </GridContainer>
       }
-      <GridContainer columns_tablet="12" backgroundChild={Colors.lightYellow} gridGap="0" padding_tabletChild="11px 11px 0 44px">
+      <GridContainer columns_tablet="12" columns="3" backgroundChild={Colors.lightYellow} gridGap="0" padding_tabletChild="11px 11px 0 44px">
         {/* <Div justifyContent="between" background={Colors.lightYellow}> */}
-        <Div gridColumn_tablet="1 / 7" height="74px" alignItems="center"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.featured}</H3></Div>
-        <Div gridColumn_tablet="7 / 10" height="74px" alignItems="center" background={Colors.veryLightBlue} padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.at_geeks}</H3></Div>
-        <Div gridColumn_tablet="10 / 13" height="74px" alignItems="center" background={Colors.white} padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.average}</H3></Div>
+        <Div gridColumn_tablet="1 / 7" height="74px" alignItems="center" padding="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.featured}</H3></Div>
+        <Div gridColumn_tablet="7 / 10" height="74px" alignItems="center" background={Colors.veryLightBlue} padding="0 5px 0 40px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.at_geeks}</H3></Div>
+        <Div gridColumn_tablet="10 / 13" height="74px" alignItems="center" background={Colors.white} padding="0 5px 0 40px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.average}</H3></Div>
         {/* </Div> */}
       </GridContainer>
 
-      <GridContainer columns_tablet="12" margin_tablet="0 0 76px 0" gridGap="0" backgroundChild={Colors.lightYellow} padding_tabletChild="0 11px 11px 44px">
+      <GridContainer columns_tablet="12" columns="3" margin="0 0 36px 0" margin_tablet="0 0 76px 0" gridGap="0" backgroundChild={Colors.lightYellow} padding_tabletChild="0 11px 11px 44px">
         {geeks.info.slice(0, props.limit || geeks.info.length).map((m, i) => {
           return (
             <React.Fragment key={i}>
               {/* // <Div display="grid" key={i} gridColumn_tablet="12" height="74px" alignItems="center" background={Colors.lightYellow}> */}
               {/* <Div display="grid" key={i} gridArea_tablet={`${i + 1}/1/${i + 1}/13`} height="74px" alignItems="center" background={Colors.lightYellow}> */}
-              <Div gridColumn_tablet="1 / 7" height="74px" alignItems="center" ><H3 textAlign="left" fontSize="15px" fontWeight="700" lineHeight="22px" textTransform="uppercase">{m.features}</H3></Div>
-              <Div gridColumn_tablet="7 / 10" height="74px" alignItems="center" background={Colors.veryLightBlue} padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="700" lineHeight="22px" textTransform="uppercase">{m.at4_Geeks}</H3></Div>
-              <Div gridColumn_tablet="10 / 13" height="74px" alignItems="center" background={Colors.white} padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="700" lineHeight="22px" textTransform="uppercase">{m.industry_average}</H3></Div>
+              <Div gridColumn_tablet="1 / 7" height="74px" alignItems="center" padding="0 10px"><H3 textAlign="left" fontSize="15px" fontWeight="700" lineHeight="22px" textTransform="uppercase">{m.features}</H3></Div>
+              <Div gridColumn_tablet="7 / 10" height="74px" alignItems="center" background={Colors.veryLightBlue} padding="0 5px 0 40px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="700" lineHeight="22px" textTransform="uppercase">{m.at4_Geeks}</H3></Div>
+              <Div gridColumn_tablet="10 / 13" height="74px" alignItems="center" background={Colors.white} padding="0 5px 0 40px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="700" lineHeight="22px" textTransform="uppercase">{m.industry_average}</H3></Div>
               {/* // </Div> */}
             </React.Fragment>
           )
