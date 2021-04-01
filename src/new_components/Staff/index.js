@@ -52,9 +52,9 @@ const Staff = props => {
     if (staff) staff = staff.node;
     return (
         <Fragment github="/components/staff">
-            <GridContainer columns_tablet="12" padding_tablet="0">
-                <Div alignItems="center" flexDirection="column" gridColumn_tablet="1/span 12">
-                    <H4 fontSize="15px" lineHeight="19px" fontWeight="900">{props.heading || staff.heading}</H4>
+            <GridContainer columns_tablet="12" padding_tablet="0" margin_tablet="0 0 72px 0" margin="0 0 36px 0">
+                <Div alignItems="center" flexDirection="column" gridColumn_tablet="3 /11">
+                    <H4 fontSize="15px" textTransform="uppercase" lineHeight="19px" fontWeight="900">{props.heading || staff.heading}</H4>
                     <Paragraph textAlign="center" margin="14px 0 50px 0">{props.paragraph || staff.sub_heading}</Paragraph>
                 </Div>
                 <Div gridColumn_tablet="1/span 12" className="testimonial-slider" height="auto" padding="0 17px 59px 17px">

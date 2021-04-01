@@ -13,6 +13,19 @@ import {Link} from 'gatsby'
 import Icon from '../new_components/Icon'
 import Img from "gatsby-image"
 
+const SVGImage = () =>
+    <svg width="550" height="335" viewBox="0 0 550 335" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="222" cy="37" r="37" fill="#FFB718" fill-opacity="0.2" />
+        <circle cx="330" cy="5" r="5" fill="#CD0000" />
+        <circle cx="43.5" cy="291.5" r="43.5" fill="#0097CD" />
+        <circle cx="473.5" cy="67.5" r="8.5" transform="rotate(90 473.5 67.5)" fill="black" />
+        <rect x="110" y="326" width="77" height="6" rx="3" fill="black" />
+        <rect x="201" y="326" width="119" height="6" rx="3" fill="black" />
+        <circle cx="437.5" cy="219.5" r="112.5" fill="#FFB718" fill-opacity="0.2" />
+    </svg>
+
+
+
 const Why4Geeks = (props) => {
     const {data, pageContext, yml} = props;
     const cornerstones = yml.cornerstones;
@@ -26,7 +39,7 @@ const Why4Geeks = (props) => {
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
                     <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header.paragraph} </Paragraph>
                 </Div>
-                <Div display="none" display_tablet="flex" height="auto" width="100%" gridColumn_tablet="9 / 15">
+                <Div height="auto" width="100%" gridColumn_tablet="9 / 15">
                     <StyledBackgroundSection
                         height="287px"
                         width="100%"
@@ -41,7 +54,19 @@ const Why4Geeks = (props) => {
             <With4Geeks lang={pageContext.lang} playerHeight="82px" />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
             <GeeksVsOthers lang={pageContext.lang} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
-
+            <GridContainerWithImage height_tablet="503px" background={Colors.lightBlue} padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
+                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
+                    <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.python_banner.title}`}</H2>
+                    {/* <Paragraph textAlign_tablet="left" margin="26px 0">{yml.python_banner.paragraph} </Paragraph> */}
+                    {yml.python_banner.paragraph.split('\n').map((p, i) =>
+                        <Paragraph textAlign_tablet="left" margin="26px 0" key={i}>{p}</Paragraph>
+                    )}
+                </Div>
+                <Div height="auto" width="100%" gridColumn_tablet="9 / 15">
+                    <SVGImage />
+                </Div>
+            </GridContainerWithImage>
+            <Staff lang={pageContext.lang} />
             {/* <Grid gridTemplateColumns_tablet="14">
         <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
@@ -145,6 +170,10 @@ export const query = graphql`
               paragraph
             }
             geeksvsothers{
+                title
+                paragraph
+            }
+            python_banner{
                 title
                 paragraph
             }
