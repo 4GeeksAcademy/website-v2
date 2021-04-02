@@ -11,6 +11,24 @@ header:
   title: "Press"
   paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
   image: "../../../static/images/outcomes/outcomes.png"
-news:
+
+content:
   heading: "Read about this coding bootcamp in the news..."
   limit: 4
+  news:
+    - name: "Newsweek"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
+      image: "../../../static/images/news/newsweek_grey.png"
+    - name: "CNN Español"
+      location: ["santiago-chile", "online", "downtown-miami"]
+      url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
+      image: "../../../static/images/news/cnn-chile_grey.png"
+    - name: "NBC"
+      location: ["downtown-miami"]
+      url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
+      image: "../../../static/images/news/nbc_grey.png"
+    - name: "La Razón"
+      location: ["madrid-spain"]
+      url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"
+      image: "../../../static/images/news/larazon_grey.png"
