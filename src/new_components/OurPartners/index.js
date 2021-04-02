@@ -67,7 +67,7 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
               return (
                 <Img
                   key={i}
-                  style={{height: "80px", minWidth: "120px", margin: "0 15px"}}
+                  style={{height: "80px", margin: "0 15px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={l.name}
                   fluid={l.image.childImageSharp.fluid}
@@ -81,7 +81,7 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
                 i < 4 &&
                 <Img
                   key={i}
-                  style={{height: "40px", minWidth: "100px", margin: "0 15px"}}
+                  style={{height: "40px", margin: "0 15px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={l.name}
                   fluid={l.image.childImageSharp.fluid}
@@ -97,7 +97,7 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
                 i > 3 && i < 9 &&
                 <Img
                   key={i}
-                  style={{height: "40px", minWidth: "100px", margin: "0 15px"}}
+                  style={{height: "40px", margin: "0 15px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={l.name}
                   fluid={l.image.childImageSharp.fluid}
@@ -111,7 +111,7 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
                 i > 8 &&
                 <Img
                   key={i}
-                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
+                  style={{height: "40px", margin: "0 15px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={l.name}
                   fluid={l.image.childImageSharp.fluid}
