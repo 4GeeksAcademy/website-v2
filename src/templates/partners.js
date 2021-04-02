@@ -61,13 +61,27 @@ const Partners = (props) => {
         showFeatured={true}
         props={partnersData.partners}
       />
-      <OurPartners
-        title={partnersData.coding.tagline}
-        paragraph={partnersData.coding.sub_heading}
-        images={partnersData.coding.images}
-        showFeatured={true}
-        props={partnersData.partners}
-      />
+      <GridContainer fluid background={Colors.verylightGray} padding="36px 17px 80px 17px" padding_tablet="75px 0 133px 0" margin_tablet="115px 0 100px 0">
+        <GridContainer columns_tablet="12" margin_tablet="0 0 50px 0">
+          <Div
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            gridColumn_tablet="3 /11"
+          >
+            <H2 margin="0 0 15px 0">{partnersData.coding.tagline}</H2>
+            <Paragraph>{partnersData.coding.sub_heading}</Paragraph>
+          </Div>
+        </GridContainer>
+        <GridContainer backgroundChild={Colors.white} padding_tablet="42px 0 80px 0">
+          <OurPartners
+            images={partnersData.coding.images}
+            showFeatured={true}
+            props={partnersData.partners}
+
+          />
+        </GridContainer>
+      </GridContainer>
       <GridContainer columns_tablet="12" padding_tablet="0">
         <Div gridColumn_tablet="1 / 7" flexDirection="column" >
           <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
