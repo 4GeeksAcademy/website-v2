@@ -47,7 +47,7 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
           </GridContainer>
         </>
       }
-      {slider ? <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0">
+      {slider ? <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0" >
         {images.map((l, i) => {
           return (
             <Img
@@ -67,7 +67,7 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
               return (
                 <Img
                   key={i}
-                  style={{height: "80px", margin: "0 15px"}}
+                  style={{height: "80px", minWidth: "120px", margin: "0 15px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={l.name}
                   fluid={l.image.childImageSharp.fluid}

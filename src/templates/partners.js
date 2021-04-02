@@ -82,14 +82,16 @@ const Partners = (props) => {
           />
         </GridContainer>
       </GridContainer>
-      <GridContainer columns_tablet="12" padding_tablet="0">
-        <Div gridColumn_tablet="1 / 7" flexDirection="column" >
+      <GridContainer columns_tablet="12" padding="99px  17px 80px 17px" padding_tablet="0" margin_tablet="0 0 81px 0">
+        <Div gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
           <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
+        </Div>
+        <Div gridColumn_tablet="1 / 7" gridRow_tablet="2 / 2" flexDirection="column" >
           {yml.form.paragraph.split("\n").map((m, i) =>
             <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
           )}
         </Div>
-        <Div justifyContent="center" gridColumn_tablet="8 / 13" margin="0 0 81px 0">
+        <Div justifyContent="center" gridColumn_tablet="8 / 13" gridRow_tablet="2 / 2" margin="0 0 81px 0">
           <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} />
         </Div>
 
