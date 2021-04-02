@@ -72,7 +72,7 @@ const GeeksVsOthers = props => {
         {/* </Div> */}
       </GridContainer>
 
-      <GridContainer columns_tablet="12" columns="3" margin="0 0 36px 0" margin_tablet="0 0 76px 0" gridGap="0" backgroundChild={Colors.lightYellow} padding_tabletChild="0 11px 11px 44px">
+      <GridContainer columns_tablet="12" columns="3" gridGap="0" backgroundChild={Colors.lightYellow} padding_tabletChild="0 11px 11px 44px">
         {geeks.info.slice(0, props.limit || geeks.info.length).map((m, i) => {
           return (
             <React.Fragment key={i}>
@@ -85,6 +85,12 @@ const GeeksVsOthers = props => {
             </React.Fragment>
           )
         })}
+      </GridContainer>
+      <GridContainer margin="0 0 36px 0" margin_tablet="0 0 76px 0">
+        {props.link &&
+          <Div justifyContent="center" margin="50px 0 0 0">
+            <Link to={geeks.button.button_link}><Paragraph color={Colors.blue}>{geeks.button.button_text}</Paragraph></Link>
+          </Div>}
       </GridContainer>
     </Fragment>
   )

@@ -47,13 +47,13 @@ const Why4Geeks = (props) => {
                 <Div display="none" display_tablet="flex" height="auto" width="100%" gridColumn_tablet="9 / 15" style={{position: "relative"}}>
                     <Div style={{position: "absolute", background: "#C7F3FD", width: "71%", height: "192px", top: "-24px", left: "97px", borderRadius: "3px"}}></Div>
                     <Div style={{position: "absolute", background: "#FFB718", width: "256px", height: "174px", bottom: "-25px", right: "18px", borderRadius: "3px"}}></Div>
-                    <StyledBackgroundSection
+                    {/* <StyledBackgroundSection
                         height="287px"
                         width="100%"
                         image={yml.header.image && yml.header.image.childImageSharp.fluid}
                         bgSize={`contain`}
                         alt={yml.header.alt}
-                    />
+                    /> */}
                 </Div>
             </GridContainerWithImage>
             <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} link padding="58px 17px" padding_tablet="70px 0" />
@@ -107,7 +107,7 @@ const Why4Geeks = (props) => {
             </GridContainer>
             <With4Geeks lang={pageContext.lang} playerHeight="82px" />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-            <GeeksVsOthers lang={pageContext.lang} limit={4} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
+            <GeeksVsOthers lang={pageContext.lang} link={true} limit={4} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
             <GridContainerWithImage height_tablet="503px" background={Colors.lightBlue} padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
                 <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.python_banner.title}`}</H2>
