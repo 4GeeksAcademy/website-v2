@@ -29,7 +29,8 @@ const Press = (props) => {
             {Array.isArray(content.news) && content.news.slice(0, content.limit).map((l, i) => {
                 return (
                     <>
-                      <H1 type="h1">{l.name}</H1>
+                      <H1 type="h1">{l.title}</H1>
+                      <Paragraph>{l.text}</Paragraph>
                       <Img
                         key={i}
                         style={{height: "50px", width: "120px", minWidth: "60px", margin: "0 20px"}}
@@ -37,7 +38,8 @@ const Press = (props) => {
                         alt={l.name}
                         fluid={l.image != null && l.image.childImageSharp.fluid}
                       />
-                      <Paragraph>See the notice <a href={l.url}>here</a></Paragraph>
+
+                      <Paragraph>ver entrevista <a href={l.url}>here</a></Paragraph>
                     </>
                 )
             })}
@@ -86,7 +88,6 @@ query PressQuery($file_name: String!, $lang: String!) {
                     news{
                         name
                         location
-                        url
                         image {
                             childImageSharp{
                                 fluid(maxHeight:60){
@@ -94,6 +95,9 @@ query PressQuery($file_name: String!, $lang: String!) {
                                 }
                             }
                         }
+                        title
+                        text
+                        url
                     }
                 }
             }

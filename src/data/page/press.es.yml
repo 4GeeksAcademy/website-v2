@@ -18,17 +18,26 @@ content:
   news:
     - name: "Newsweek"
       location: ["downtown-miami", "online", "madrid-spain"]
-      url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
       image: "../../../static/images/news/newsweek.png"
+      title: "A Coding Career and You  - Top Coding Schools 2017"
+      text: "Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel."
+      url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
+
     - name: "CNN Español"
       location: ["santiago-chile", "online", "downtown-miami"]
-      url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
       image: "../../../static/images/news/cnn-chile.png"
+      title: "Entrevista / 4Geeks Academy en CNN Chile"
+      text: "Gracias a nuestros amigos de CNN Chile por haber estado presentes en nuestro evento y publicar tan buen material sobre el futuro en educación que ofrecemos a la comunidad de Santiago a través de nuestro programa de #Bootcamp de #Programación."
+      url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
     - name: "NBC"
       location: ["downtown-miami"]
-      url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
       image: "../../../static/images/news/nbc.png"
+      title: "Student With Autism Learns to Code"
+      text: "Victor Fitchhorn, que tiene autismo, está aprendiendo a codificar en 4Geeks Academy, un campo de entrenamiento de codificación con sede en Miami. Ari Odzer de NBC 6 informa."
+      url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
     - name: "La Razón"
       location: ["madrid-spain"]
-      url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"
       image: "../../../static/images/news/larazon.png"
+      title: "Entrevista / 4Geeks Academy en CNN Chile"
+      text: "Gracias a nuestros amigos de CNN Chile por haber estado presentes en nuestro evento y publicar tan buen material sobre el futuro en educación que ofrecemos a la comunidad de Santiago a través de nuestro programa de #Bootcamp de #Programación."
+      url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"

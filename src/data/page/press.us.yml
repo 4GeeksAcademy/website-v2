@@ -18,17 +18,25 @@ content:
   news:
     - name: "Newsweek"
       location: ["downtown-miami", "online", "madrid-spain"]
-      url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
       image: "../../../static/images/news/newsweek_grey.png"
+      title: "Interview / 4Geeks Academy on CNN Chile"
+      text: "Thanks to our friends at CNN Chile for being present at our event and publishing such good material about the future in education that we offer to the Santiago community through our #Bootcamp de #Programming program."
+      url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
     - name: "CNN Español"
       location: ["santiago-chile", "online", "downtown-miami"]
-      url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
       image: "../../../static/images/news/cnn-chile_grey.png"
+      title: "Student With Autism Learns to Code"
+      text: "Victor Fitchhorn, who has autism, is learning how to code at Miami-based 4Geeks Academy, a coding bootcamp. NBC 6’s Ari Odzer reports."
+      url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
     - name: "NBC"
       location: ["downtown-miami"]
-      url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
       image: "../../../static/images/news/nbc_grey.png"
+      title: "Student With Autism Learns to Code"
+      text: "Victor Fitchhorn, who has autism, is learning how to code at Miami-based 4Geeks Academy, a coding bootcamp. NBC 6’s Ari Odzer reports."
+      url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
     - name: "La Razón"
       location: ["madrid-spain"]
-      url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"
       image: "../../../static/images/news/larazon_grey.png"
+      title: "Interview / 4Geeks Academy on CNN Chile"
+      text: "Thanks to our friends at CNN Chile for being present at our event and publishing such good material about the future in education that we offer to the Santiago community through our #Bootcamp de #Programming program."
+      url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"
