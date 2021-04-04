@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import {Title, H1, H2, H3, H4, H5, Paragraph} from '../new_components/Heading';
-import {Button, Colors, Link, StyledBackgroundSection} from '../new_components/Styling';
-import Icon from '../new_components/Icon';
 import BaseRender from './_baseLayout';
 // new_components
-import News from '../new_components/News';
-import {Column, GridContainer, Div, Grid, Header} from "../new_components/Sections";
 import Img from 'gatsby-image';
+import News from '../new_components/News';
+import Icon from '../new_components/Icon';
+import {Colors} from '../new_components/Styling'
+import {Column, GridContainer, GridContainerWithImage, Div, Grid, Header} from "../new_components/Sections";
 
 
 
@@ -17,52 +17,86 @@ const Press = (props) => {
     let content = data.allPageYaml.edges[0].node.content
     console.log(yml.news)
     return (
-        <Div margin="90px 0" flexDirection="column">
+        <Div margin="90px 0 75px 0" flexDirection="column">
             <Header
+                padding="0 10px"
+                padding_tablet="0 18%"
                 seo_title={yml.seo_title}
                 title={yml.header.title}
                 paragraph={yml.header.paragraph}
             />
-                <News lang={pageContext.lang} limit={content.limit} height="50px" width="120px" justifyContent="flex-start" padding="50px 0" padding_tablet="40px 22%"/>
-
-        <Div margin="90px 0" flexDirection="column">
-            {Array.isArray(content.news) && content.news.slice(0, content.limit).map((l, i) => {
-                return (
-                    <>
-                      <H1 type="h1">{l.title}</H1>
-                      <Paragraph>{l.text}</Paragraph>
-                      <Img
-                        key={i}
-                        style={{height: "50px", width: "120px", minWidth: "60px", margin: "0 20px"}}
-                        imgStyle={{objectFit: "contain"}}
-                        alt={l.name}
-                        fluid={l.image != null && l.image.childImageSharp.fluid}
-                      />
-
-                      <Paragraph>ver entrevista <a href={l.url}>here</a></Paragraph>
-                    </>
-                )
-            })}
-        </Div>
-            {/* <Grid height="754px" height_md="412px" columns="1" rows="1" columns_md="12" gridGap_md="11px">
-                <Div
-                    gridArea_md="1/3/1/11"
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                >
-                    <H1
-                        fontSize="13px"
-                        lineHeight="16px"
-                        fontWeight="700"
-                        letterSpacing="0.05em"
-                        color="#606060"
-                    >{yml.seo_title}</H1>
-                    <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{yml.header.title}</H2>
-                    <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">{yml.header.paragraph}</Paragraph>
-                    <News lang={pageContext.lang} limit={yml.news.limit} />
-                </Div>
-            </Grid> */}
+            <News lang={pageContext.lang} limit={content.limit} height="50px" width="120px" justifyContent="flex-start" padding="50px 10px" padding_tablet="20px 22%  70px 22%"/>
+            <Div  flexDirection="column">
+                {Array.isArray(content.news) && content.news.slice(0, content.limit).map((l, i) => {
+                    return (
+                        <>
+                        {
+                            // It identifies and separates the left[0, 2] and right[1, 3] section 
+                            (i % 2 == 0) ? (
+                            <GridContainer background={Colors.lightYellow} manageTabletColumns={true} numberColumns="13" columns_tablet="2" gridGap="30px
+                            " padding="38px 30px" padding_tablet="50px 0">
+                                <Div style={{position: "relative"}} height="100%" alignItems="center">
+                                    <Img
+                                        key={i}
+                                        style={{height: "276px", width: "100%", minWidth: "120px"}}
+                                        imgStyle={{ marginLeft: "auto", marginRight: "auto", right: "0", left: "0", objectPosition: "left", width: "416px", objectFit: "contain"}}
+                                        alt={l.name}
+                                        fluid={l.image != null && l.image.childImageSharp.fluid}
+                                    />
+                                </Div>
+                                <Div justifyContent="center" flexDirection="column" padding="0" >
+                                    <Div flexDirection="column" margin= "0" margin_tablet="0 0 30px 0">
+                                        <Img
+                                            key={i}
+                                            style={{height: "50px", width: "100%", minWidth: "60px", margin: "22px 0"}}
+                                            imgStyle={{objectPosition: "left", width: "120px", objectFit: "contain"}}
+                                            alt={l.name}
+                                            fluid={l.logo != null && l.logo.childImageSharp.fluid}
+                                        />
+                                        <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.title}</H3>
+                                        <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
+                                        <Paragraph style={{alignItems: "center"}} padding="15px 0px" display="flex" fontWeight="700" letterSpacing="0.05em" lineHeight="16px" textAlign="left" fontSize="13px" color={Colors.blue}>
+                                            <a href={l.url}>{l.textUrl}</a>
+                                            <Icon style={{margin: '0 0 0 10px'}} icon="arrow-right" width="5" height="10px" color={Colors.blue}/>
+                                        </Paragraph>
+                                    </Div>
+                                </Div>
+                            </GridContainer>
+                            ) : (
+                            <GridContainer direction="rtl" manageTabletColumns={true} numberColumns="13" columns_tablet="2" gridGap_md="50px" gridGap="30px" padding="38px 30px" padding_tablet="50px 0">
+                                <Div style={{position: "relative"}} height="100%" alignItems="center">
+                                    <Img
+                                        key={i}
+                                        style={{height: "276px", width: "100%", minWidth: "120px"}}
+                                        imgStyle={{marginLeft: "auto", marginRight: "auto", right: "0", left: "0", objectPosition: "left", width: "416px", objectFit: "contain"}}
+                                        alt={l.name}
+                                        fluid={l.image != null && l.image.childImageSharp.fluid}
+                                    />
+                                </Div>
+                                <Div justifyContent="center" flexDirection="column" padding="0" >
+                                    <Div flexDirection="column" margin= "0" margin_tablet="0 0 30px 0">
+                                        <Img
+                                            key={i}
+                                            style={{height: "50px", width: "100%", minWidth: "60px", margin: "22px 0"}}
+                                            imgStyle={{objectPosition: "left", width: "120px", objectFit: "contain"}}
+                                            alt={l.name}
+                                            fluid={l.logo != null && l.logo.childImageSharp.fluid}
+                                        />
+                                        <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.title}</H3>
+                                        <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
+                                        <Paragraph style={{alignItems: "center"}} direction="ltr" padding="15px 0px" display="flex" fontWeight="700" letterSpacing="0.05em" lineHeight="16px" textAlign="left" fontSize="13px" color={Colors.blue}>
+                                            <a href={l.url}>{l.textUrl}</a>
+                                            <Icon style={{margin: '0 0 0 10px'}} icon="arrow-right" width="5" height="10px" color={Colors.blue}/>
+                                        </Paragraph>
+                                    </Div>
+                                </Div>
+                            </GridContainer>
+                            )
+                        }
+                        </>
+                    )
+                })}
+            </Div>
         </Div>
     )
 };
@@ -87,16 +121,24 @@ query PressQuery($file_name: String!, $lang: String!) {
                     heading
                     news{
                         name
-                        location
-                        image {
+                        logo {
                             childImageSharp{
                                 fluid(maxHeight:60){
                                     ...GatsbyImageSharpFluid_withWebp
                                 }
                             }
                         }
+                        location
+                        image {
+                            childImageSharp{
+                                fluid(maxHeight:277){
+                                    ...GatsbyImageSharpFluid_withWebp
+                                }
+                            }
+                        }
                         title
                         text
+                        textUrl
                         url
                     }
                 }
