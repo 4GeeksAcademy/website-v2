@@ -331,6 +331,14 @@ export const query = graphql`
             prices{
               heading
               sub_heading
+              selector{
+                top_label
+                placeholder
+              }
+              button{
+                text
+                link
+              }
             }
             typical{
               heading

@@ -156,6 +156,7 @@ export const Div = styled.div`
     align: ${props => props.align};
     cursor: ${props => props.cursor};
     transform: ${props => props.transform};
+    z-index: ${props => props.zIndex};
     &:hover { 
         background: ${props => props.backgroundHover};
     }
