@@ -69,22 +69,22 @@ const Press = (props) => {
                                         fluid={l.image != null && l.image.childImageSharp.fluid}
                                     />
                                 </Div>
-                                <Div justifyContent="center" flexDirection="column" padding="0" >
-                                    <Div flexDirection="column" margin= "0" margin_tablet="0 0 30px 0">
-                                        <Img
-                                            key={i}
-                                            style={{height: "50px", width: "100%", minWidth: "60px", margin: "22px 0"}}
-                                            imgStyle={{objectPosition: "left", width: "120px", objectFit: "contain"}}
-                                            alt={l.name}
-                                            fluid={l.logo != null && l.logo.childImageSharp.fluid}
-                                        />
-                                        <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.title}</H3>
-                                        <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
-                                        <Paragraph style={{alignItems: "center"}} padding="15px 0px" display="flex" fontWeight="700" letterSpacing="0.05em" lineHeight="16px" textAlign="left" fontSize="13px" color={Colors.blue}>
-                                            <a href={l.url}>{l.textUrl}</a>
-                                            <Icon style={{margin: '0 0 0 10px'}} icon="arrow-right" width="5" height="10px" color={Colors.blue}/>
-                                        </Paragraph>
-                                    </Div>
+                                <Div flexDirection="column" margin= "0" margin_tablet="0 0 30px 0">
+                                    <Img
+                                        key={i}
+                                        style={{height: "50px", width: "100%", minWidth: "60px", margin: "22px 0"}}
+                                        imgStyle={{objectPosition: "left", width: "120px", objectFit: "contain"}}
+                                        alt={l.name}
+                                        fluid={l.logo != null && l.logo.childImageSharp.fluid}
+                                    />
+                                    <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.title}</H3>
+                                    <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
+                                    <Paragraph style={{alignItems: "center"}} padding="15px 0px" display="flex" fontWeight="700" letterSpacing="0.05em" lineHeight="16px" textAlign="left" fontSize="13px" color={Colors.blue}>
+                                        <a style={{display: 'flex'}} href={l.url}>
+                                            {l.textUrl}
+                                            <Icon style={{margin: '0 0 0 10px', placeSelf: 'center'}} icon="arrow-right" width="10" height="12px" color={Colors.blue}/>
+                                        </a>
+                                    </Paragraph>
                                 </Div>
                             </GridContainer>
                             ) : (
@@ -110,8 +110,10 @@ const Press = (props) => {
                                         <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.title}</H3>
                                         <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
                                         <Paragraph style={{alignItems: "center"}} direction="ltr" padding="15px 0px" display="flex" fontWeight="700" letterSpacing="0.05em" lineHeight="16px" textAlign="left" fontSize="13px" color={Colors.blue}>
-                                            <a href={l.url}>{l.textUrl}</a>
-                                            {/* <Icon style={{margin: '0 0 0 10px'}} icon="arrow-right" width="5" height="10px" color={Colors.blue}/> */}
+                                            <a style={{display: 'flex'}} href={l.url}>
+                                                {l.textUrl}
+                                                <Icon style={{margin: '0 0 0 10px', placeSelf: 'center'}} icon="arrow-right" width="10" height="12px" color={Colors.blue}/>
+                                            </a>
                                         </Paragraph>
                                     </Div>
                                 </Div>
