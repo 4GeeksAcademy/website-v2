@@ -6,7 +6,7 @@ import Img from 'gatsby-image';
 import News from '../new_components/News';
 import Icon from '../new_components/Icon';
 import {Colors} from '../new_components/Styling'
-import {Column, GridContainer, GridContainerWithImage, Div, Grid, Header} from "../new_components/Sections";
+import {GridContainer, Div, Header} from "../new_components/Sections";
 
 
 
@@ -18,6 +18,31 @@ const Press = (props) => {
     console.log(yml.news)
     return (
         <Div margin="90px 0 75px 0" flexDirection="column">
+            <Div id="circles-left" display="none" display_tablet="inherit">
+                {/* first column smCircles */}
+                <Icon icon="landingCircles/smCircle-gray" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "90px", top: "121px"}}/>
+                <Icon icon="landingCircles/smCircle-black" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "125px", top: "121px"}}/>
+                <Icon icon="landingCircles/smCircle-gray" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "168px", top: "121px"}}/>                
+                <Icon icon="landingCircles/smCircle-gray" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "205px", top: "121px"}}/>
+                <Icon icon="landingCircles/smCircle-gray" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "304px", top: "121px"}}/>
+
+                {/* second column smCircles */}
+                <Icon icon="landingCircles/mdCircle-blue" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "249px", top: "153px"}}/>
+                <Icon icon="landingCircles/smCircle-gray" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "168px", top: "153px"}}/>
+                <Icon icon="landingCircles/smCircle-gray" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "125px", top: "153px"}}/>
+                <Icon icon="landingCircles/smCircle-black" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "70px", top: "153px"}}/>
+                <Icon icon="landingCircles/smCircle-yellowLight" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "35px", top: "153px"}}/>
+                <Icon icon="landingCircles/smCircle-red" width="27" height="27" style={{zIndex: 2, position: "absolute", left: "214px", top: "224px"}}/>
+                <Icon icon="landingCircles/right-mdCircle-mustard" width="79px" height="116px" style={{zIndex: 2, position: "absolute", left: "0px", top: "269px"}}/>
+            </Div>
+            <Div id="circles-right" display="none" display_tablet="inherit">
+                <Icon icon="landingCircles/smCircle-mustard" style={{zIndex: 2, position: "absolute", right: "287px", top: "115px"}}/>
+                <Icon icon="landingCircles/smCircle-gray" width="17px" height="17px" style={{zIndex: 3, position: "absolute", right: "270px", top: "238px"}}/>
+                <Icon icon="landingCircles/smCircle-gray" width="17px" height="17px" style={{zIndex: 3, position: "absolute", right: "192px", top: "238px"}}/>
+                <Icon icon="landingCircles/mdCircle-blue" width="53px" height="53px" style={{zIndex: 3, position: "absolute", right: "71px", top: "134px"}}/>
+                <Icon icon="landingCircles/smCircle-black" width="17px" height="17px" style={{zIndex: 3, position: "absolute", right: "90px", top: "238px"}}/>
+                <Icon icon="landingCircles/md-rightCircle-yellowLight" width="233px" height="238px" style={{zIndex: 2, position:"absolute", right: "0", top: "128px"}}/>
+            </Div>
             <Header
                 padding="0 10px"
                 padding_tablet="0 18%"
@@ -86,7 +111,7 @@ const Press = (props) => {
                                         <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
                                         <Paragraph style={{alignItems: "center"}} direction="ltr" padding="15px 0px" display="flex" fontWeight="700" letterSpacing="0.05em" lineHeight="16px" textAlign="left" fontSize="13px" color={Colors.blue}>
                                             <a href={l.url}>{l.textUrl}</a>
-                                            <Icon style={{margin: '0 0 0 10px'}} icon="arrow-right" width="5" height="10px" color={Colors.blue}/>
+                                            {/* <Icon style={{margin: '0 0 0 10px'}} icon="arrow-right" width="5" height="10px" color={Colors.blue}/> */}
                                         </Paragraph>
                                     </Div>
                                 </Div>
