@@ -27,8 +27,6 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
                     display="flex"
                     flexDirection="column"
                     alignItems="center"
-                    padding_tablet="0 4em"
-                    padding="0 2em"
                 >
                     <H2 margin="0 0 15px 0" fontWeight="900">{title}</H2>
                     <Paragraph>{paragraph}</Paragraph>
@@ -37,7 +35,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
             <Carousel value={value} onChange={onChange} dots={true}>
                 {projects.map((item, index) => {
                     return (
-                        <GridContainerWithImage imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0">
+                        <GridContainerWithImage imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
                             <Div background={Colors.lightGray} height_tablet="auto" padding="17px 51px" gridColumn_tablet="1 / 9">
                                 {item.project_video === "" ?
 
