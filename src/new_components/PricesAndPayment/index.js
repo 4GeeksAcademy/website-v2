@@ -99,6 +99,47 @@ const PricesAndPayments = (props) => {
 
   return (
     <Fragment github="/location">
+      <GridContainer>
+        <Div
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <H2 margin="0 0 15px 0" fontWeight="900">{props.title}</H2>
+          <Paragraph>{props.paragraph}</Paragraph>
+        </Div>
+      </GridContainer>
+      {!props.course &&
+        // <GridContainer>
+        <Select
+          top="40px"
+          left="20px"
+          width="300px"
+          maxWidth="100%"
+          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
+          options={courseArray}
+          openLabel={course ? course.label : props.openedLabel}
+          closeLabel={course ? course.label : props.closedLabel}
+          onSelect={(opt) => setCourse(opt)}
+        />
+        // </GridContainer>
+      }
+        &nbsp;
+      {course &&
+        // <GridContainer>
+        <Select
+          top="40px"
+          left="20px"
+          width="300px"
+          maxWidth="100%"
+          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
+          options={locations.map(l => ({label: l.node.city + ", " + l.node.country, value: l.node.active_campaign_location_slug}))}
+          openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
+          closeLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
+          onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}
+        />
+        // </GridContainer>
+      }
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :

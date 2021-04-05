@@ -188,6 +188,8 @@ const Program = ({data, pageContext, yml}) => {
       session={session}
       locations={data.allLocationYaml.edges}
       course={program_type}
+      title={yml.prices.heading}
+      paragraph={yml.prices.sub_heading}
     />
 
 
