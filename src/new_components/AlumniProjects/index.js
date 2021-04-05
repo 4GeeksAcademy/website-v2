@@ -24,11 +24,11 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                 {projects.map((item, index) => {
                     return (
                         <GridContainerWithImage imageSide="left" columns_tablet="14" gridGap_tablet="0" padding_tablet="0 0 100px 0">
-                            <Div background={Colors.lightGray} padding="37px 107px" gridColumn_tablet="1 / 9">
+                            <Div background={Colors.lightGray} height_tablet="auto" padding="17px 51px" gridColumn_tablet="1 / 9">
                                 {item.project_video === "" ?
 
                                     <StyledBackgroundSection
-                                        height={`350px`}
+                                        // height={`166px`}
                                         image={item.project_image.childImageSharp.fluid}
                                         bgSize={`cover`}
                                         alt="Cnn Logo"
@@ -40,7 +40,6 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                         imageSize="maxresdefault"
                                         style={{
                                             width: "100%",
-                                            height: "350px"
                                         }}
                                     />
                                 }

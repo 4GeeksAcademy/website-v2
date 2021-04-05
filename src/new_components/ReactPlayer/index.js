@@ -53,7 +53,7 @@ const Image = styled.div`
   margin: auto;
   height: ${props => props.height || "auto"};
   width: ${props => props.width || "100%"};
-  overflow: hidden;
+  // overflow: hidden;
   box-shadow: ${props => props.shadow};
   border-radius: ${props => props.borderRadius || "1.25rem"};
   @media ${Devices.xxs}{
