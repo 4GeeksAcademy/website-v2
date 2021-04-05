@@ -1,5 +1,5 @@
 ---
-author: https://twitter.com/jimena_y_yo
+author: jimena_y_yo
 comments: true
 date: 2020-06-24 20:44:51+00:00
 excerpt: ¿Qué es full stack? Te explicamos que significa ser full stack en el siguiente artículo de 4geeks Academy
