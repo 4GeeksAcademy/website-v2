@@ -3,8 +3,10 @@ import {GridContainer, GridContainerWithImage, Div, Grid} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
 import {Colors, Anchor, Button, StyledBackgroundSection, Span} from '../Styling';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import {Carousel} from 'react-responsive-carousel';
+import Carousel, {Dots} from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import Icon from "../Icon"
@@ -13,26 +15,16 @@ import ReactPlayer from '../ReactPlayer';
 
 const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
+    const [value, setValue] = useState(0);
 
+    const onChange = e => setValue(e);
     return (
         <Fragment github="/components/alumni_projects">
-            <Carousel
-                showIndicators={false}
-                showThumbs={false}
-                showStatus={false}
-                autoPlay={false}
-                infiniteLoop={true}
-                showArrows={true}
-                interval={5000}
-                transitionTime={1000}
-            >
-                {/* <GridContainer>
-                    test
-                            </GridContainer> */}
+            <Carousel value={value} onChange={onChange} dots={true}>
                 {projects.map((item, index) => {
                     return (
-                        <GridContainerWithImage imageSide="left" columns_tablet="2" gridGap_tablet="0" padding_tablet="0 0 100px 0">
-                            <Div background={Colors.lightGray} padding="37px 107px">
+                        <GridContainerWithImage imageSide="left" columns_tablet="14" gridGap_tablet="0" padding_tablet="0 0 100px 0">
+                            <Div background={Colors.lightGray} padding="37px 107px" gridColumn_tablet="1 / 9">
                                 {item.project_video === "" ?
 
                                     <StyledBackgroundSection
@@ -53,7 +45,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                     />
                                 }
                             </Div>
-                            <Div flexDirection="column" padding="0 40px">
+                            <Div flexDirection="column" gridColumn_tablet="10 / 15 " >
                                 <H3
                                     textAlign="left"
                                     margin={`10px 0`}
@@ -102,7 +94,6 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                 <Paragraph
                                     color={Colors.gray}
                                     textAlign="left"
-                                    padding_tablet="0 175px 0 0"
                                 >{item.project_content}
                                 </Paragraph>
                                 {/* <Div display="flex">
@@ -129,6 +120,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                     </Link>
                 </Div> */}
             </Carousel>
+            <Dots value={value} onChange={onChange} />
         </Fragment>)
 };
 AlumniProjects.propTypes = {
