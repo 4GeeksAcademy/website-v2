@@ -38,6 +38,8 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                         id={item.project_video}
                                         thumb={item.project_image}
                                         imageSize="maxresdefault"
+                                        right_tablet="-93px"
+                                        left_tablet="unset"
                                         style={{
                                             width: "100%",
                                         }}
