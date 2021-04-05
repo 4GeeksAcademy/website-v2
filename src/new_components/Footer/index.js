@@ -52,7 +52,7 @@ const Footer = ({yml}) => {
 
     return (
         <>
-            <GridContainer github="/components/footer" gridTemplateRows_tablet="2" columns_tablet="12" padding="0 17px">
+            <GridContainer github="/components/footer" gridTemplateRows_tablet="2" columns_tablet="12" padding="0 17px" margin="0 0 60px 0">
                 <Div
                     justifyContent="center"
                     alignItems="center"
@@ -187,22 +187,25 @@ const Footer = ({yml}) => {
 
             </GridContainer>
 
-
-            <Grid columns_md="12" rows_md="1" gridGap="0" display="none" display_md="grid" padding_md="23px 0">
-                <Div gridArea_md="1/7/1/11" justifyContent="end" alignItems="center">
+            <GridContainer columns_tablet="12" margin_tablet="27px 0 60px 0" display="none" display_tablet="grid">
+                <Div gridArea_tablet="1/7/1/13" justifyContent="end" alignItems="center">
                     <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >We accept: </H4>
                     <RoundImage url="/images/bitcoin.png" height="10px" width="65px" bsize="contain" margin="0 15px" />
                     <RoundImage url="/images/ethereum.png" height="20px" width="65px" bsize="contain" />
                 </Div>
-            </Grid>
-            <Grid columns_md="12" rows_md="1" gridGap="0" height="140px" height_md="81px" background={Colors.verylightGray} >
-                <Div gridArea_md="1/6/1/11" justifyContent="end"
+
+            </GridContainer>
+            {/* <Grid columns_md="12" rows_md="1" gridGap="0" display="none" display_md="grid" padding_md="23px 0">
+            </Grid> */}
+            <GridContainer columns_tablet="12" background={Colors.lightGray} padding="11px 17px 29px 17px" padding_tablet="31px 0">
+                {/* <Grid columns_md="12" rows_md="1" gridGap="0" height="140px" height_md="81px" background={Colors.verylightGray} > */}
+                <Div gridArea_tablet="1/6/1/13" justifyContent="end"
                     alignItems="center"
                     flexDirection="column"
-                    flexDirection_md="row"
+                    flexDirection_tablet="row"
                     width="100%"
-                    width_md="100%"
-                    height_md="100%"
+                    width_tablet="100%"
+                    height_tablet="100%"
                 >
                     <Div>
                         <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >Políticas de Privacidad</H4>
@@ -210,13 +213,14 @@ const Footer = ({yml}) => {
                     </Div>
                     <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray}>Términos y Condiciones</H4>
                 </Div>
-                <Div gridArea_md="1/3/1/6" justifyContent="center"
+                <Div gridArea_tablet="1/1/1/6" justifyContent="center"
                     alignItems="center"
-                    height_md="100%"
+                    height_tablet="100%"
                 >
-                    <H4 fontSize="13px" lineHeight="22px" textAlign_md="left" color={Colors.darkGray}>@ 4Geeks Academy LLC 2019</H4>
+                    <H4 fontSize="13px" lineHeight="22px" textAlign_tablet="left" color={Colors.darkGray}>@ 4Geeks Academy LLC 2019</H4>
                 </Div>
-            </Grid>
+            </GridContainer>
+            {/* </Grid> */}
         </>
     )
 };
