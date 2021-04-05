@@ -439,3 +439,13 @@ a.faq-link:hover {
     height: 100%;
     object-fit: cover;
 }
+.BrainhubCarousel__dots .BrainhubCarousel__dot:before {
+    content: '';
+    display: block;
+    width: 11px !important;
+    height: 11px !important;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    background: #0097CD!important;
+}

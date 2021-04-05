@@ -203,7 +203,7 @@ const Program = ({data, pageContext, yml}) => {
         course={program_type}
       />
     </Container> */}
-    <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
+    <AlumniProjects title={yml.alumni.heading} paragraph={yml.alumni.sub_heading} lang={data.allAlumniProjectsYaml.edges} limit={2} />
     {/* <Container variant="fluid">
       <H2>{yml.alumni.heading}</H2>
       <Paragraph margin="0 0 50px 0">{yml.alumni.sub_heading}</Paragraph>

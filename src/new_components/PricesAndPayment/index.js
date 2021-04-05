@@ -102,7 +102,7 @@ const PricesAndPayments = (props) => {
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
-        <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0">
+        <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0" >
           {prices.left_section &&
             <PricingCard lang={props.lang}
               background={Colors.white}
@@ -155,13 +155,13 @@ const PricesAndPayments = (props) => {
           }
         </GridContainer>
       }
-      <Grid columns_md="12" rows_md="1" gridGap="0" margin="47px 0 37px 0">
-        <Div gridArea_md="1/5/1/9" justifyContent="center" alignItems="center">
+      <GridContainer columns_tablet="12" gridGap="0" margin_tablet="0 0 37px 0" >
+        <Div gridArea_tablet="1/5/1/9" justifyContent="center" alignItems="center">
           <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >We accept: </H4>
           <RoundImage url="/images/bitcoin.png" height="10px" width="65px" bsize="contain" margin="0 15px" />
           <RoundImage url="/images/ethereum.png" height="20px" width="65px" bsize="contain" />
         </Div>
-      </Grid>
+      </GridContainer>
       <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Fragment>

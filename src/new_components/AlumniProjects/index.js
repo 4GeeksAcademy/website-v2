@@ -13,13 +13,27 @@ import Icon from "../Icon"
 import ReactPlayer from '../ReactPlayer';
 
 
-const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
+const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
     const [value, setValue] = useState(0);
 
     const onChange = e => setValue(e);
     return (
-        <Fragment github="/components/alumni_projects">
+        // <Fragment github="/components/alumni_projects">
+        <>
+            <GridContainer margin="73px 0 40px 0"
+            >
+                <Div
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                    padding_tablet="0 4em"
+                    padding="0 2em"
+                >
+                    <H2 margin="0 0 15px 0" fontWeight="900">{title}</H2>
+                    <Paragraph>{paragraph}</Paragraph>
+                </Div>
+            </GridContainer>
             <Carousel value={value} onChange={onChange} dots={true}>
                 {projects.map((item, index) => {
                     return (
@@ -122,7 +136,8 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                 </Div> */}
             </Carousel>
             <Dots value={value} onChange={onChange} />
-        </Fragment>)
+        </>
+    )
 };
 AlumniProjects.propTypes = {
     limit: PropTypes.number
