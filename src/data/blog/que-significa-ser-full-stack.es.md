@@ -8,6 +8,7 @@ slug: que-significa-ser-full-stack
 title: ¿Qué significa ser Full Stack?
 avatar: "/images/staff/jimena.jpg"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/learn-to-code.jpg?raw=true"
+status: "published"
 ---
 
 Cuántas cosas son necesarias conocer para ser Full Stack
