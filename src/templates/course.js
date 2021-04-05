@@ -210,7 +210,7 @@ const Program = ({data, pageContext, yml}) => {
     </Container>
     <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0"> */}
 
-    <Testimonials lang={data.allTestimonialsYaml.edges} />
+    <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" />
     {/* </Container> */}
 
     {/* <Container
