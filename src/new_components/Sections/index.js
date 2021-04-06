@@ -99,12 +99,12 @@ const justifyContentOptions = {
 }
 
 export const HR = styled.hr`
-    background: ${props => props.background};
-    height: ${props => props.height};
+    background: ${props => props.background || "#000000"};
+    height: ${props => props.height || "7px"};
     border: ${props => props.border || '0px'};
     margin: ${props => props.margin || '0px'};
     padding: ${props => props.padding || '0px'};
-    width: ${props => props.width};
+    width: ${props => props.width || "100%"};
     @media ${Devices.xxs}{
     }
     @media ${Devices.xs}{
@@ -128,6 +128,8 @@ export const HR = styled.hr`
 `
 
 export const Div = styled.div`
+    flex: 0 0 ${props => (props.size / 12) * 100}%;
+    max-width: ${props => (props.size / 12) * 100}%;
     grid-area: ${props => props.gridArea};
     grid-column: ${props => props.gridColumn};
     grid-row: ${props => props.gridRow};
@@ -138,6 +140,7 @@ export const Div = styled.div`
     position: ${props => props.position};
     display: ${props => props.display || "flex"};
     flex-direction: ${props => props.flexDirection || 'row'};
+    direction: ${props => props.direction};
     align-items: ${props => props.alignItems};
     align-self: ${props => props.alignSelf};
     margin: ${props => props.margin};
@@ -156,6 +159,17 @@ export const Div = styled.div`
     align: ${props => props.align};
     cursor: ${props => props.cursor};
     transform: ${props => props.transform};
+    place-items: ${props => props.placeItems};
+    &:after {
+        content: ${props => props.contentAfter};
+        display: ${props => props.displayAfter || "block"};
+        background-color: ${props => props.backgroundColorAfter};
+        height: ${props => props.heightAfter};
+        width: ${props => props.widthAfter};
+        margin-left: ${props => props.marginLeftAfter};
+        position: ${props => props.positionAfter};
+    }
+
     &:hover { 
         background: ${props => props.backgroundHover};
     }
@@ -168,11 +182,13 @@ export const Div = styled.div`
     }
     @media  ${Devices.sm}{
         padding: ${props => props.padding_sm};
+        height: ${props => props.height_sm};
         
     }
     @media  ${Devices.tablet}{
         display: ${props => props.display_tablet};
         flex-direction: ${props => props.flexDirection_tablet};
+        height: ${props => props.height_tablet};
         align-items: ${props => props.alignItems_tablet};
         padding: ${props => props.padding_tablet};
         margin: ${props => props.margin_tablet};
@@ -186,12 +202,15 @@ export const Div = styled.div`
         border-left: ${props => props.borderLeft_tablet};
         transform: ${props => props.transform_tablet};
         grid-area: ${props => props.gridArea_tablet};
+        margin: ${props => props.margin_tablet};
         grid-column: ${props => props.gridColumn_tablet};
         grid-row: ${props => props.gridRow_tablet};
         justify-self: ${props => props.justifySelf_tablet};
         
     }
     @media  ${Devices.md}{
+        flex: 0 0 ${props => (props.size_md / 12) * 100}%;
+        max-width: ${props => (props.size_md / 12) * 100}%;
         grid-area: ${props => props.gridArea_md};
         display: ${props => props.display_md};
         flex-direction: ${props => props.flexDirection_md};
@@ -205,12 +224,17 @@ export const Div = styled.div`
         border-top: ${props => props.borderTop_md};
         border-right: ${props => props.borderRight_md};
         border-left: ${props => props.borderLeft_md};
+        place-items: ${props => props.placeItems_md};
         grid-column: ${props => props.gridColumn_md};
         grid-row: ${props => props.gridRow_md};
 
+        &:after {
+            display: ${props => props.displayAfter_md};
+        }
     }
     @media  ${Devices.lg}{
         justifyContent: ${props => justifyContentOptions[props.justifyContent_lg]};
+        padding: ${props => props.padding_lg};
     }
     @media  ${Devices.xl}{
 

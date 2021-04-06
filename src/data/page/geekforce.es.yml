@@ -8,38 +8,79 @@ meta_info:
 tagline: GEEKPAL
 sub_heading: ""
 image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekpal.png"
-benefits:
-  - p:
-    heading: "Personal"
-    items:
-      - title: Clases exclusivas
-        sub_title: (máx 8 students)
-      - title: 1:4 teacher-student-ratio
-        sub_title: (one mentor every 4 students)
-      - title: Mentoría 1-1
-        sub_title: (sesiones ilimitadas)
-      - title: Soporte profesional customizado
-        sub_title: (basado en la oportunidad laboral)
-  - a:
-    heading: "Donde sea y cuánto sea necesario"
-    items:
-      - title: Ajustado a tu calendario
-        sub_title: (Sesiones según agenda en el calendario)
-      - title: Oportunidad de mentorías constantes
-        sub_title: (Siempre habilitado en persona o remoto)
-      - title: Online o en persona
-        sub_title: (Campus en muchas ciudades y en muchos husos horarios)
-      - title: Apoyo profesional customizado
-        sub_title: (Basado en la oportunidad laboral)
-  - l:
-    heading: "Limitless"
-    items:
-      - title: Toda la mentoría que necesites
-        sub_title: (sesiones habilitadas para que puedas agendar con nuestros mentores)
-      - title: Mentoría ilimitada después de graduarte 
-        sub_title: (incluso después que consigas trabajo)
-      - title: Mentoría de por vida
-        sub_title: (Sigue trabajando con nosotros y recibiendo mentoría)
-      - title: Apoyo profesional customizado
-        sub_title: (Basado en la oportunidad laboral)
+image_logo: "/images/geekforce.png"
+
+geekForce:
+  - videoId: "cKcZD0_1IKk"
+    image: "../../../static/images/projects/re-mindful.jpg"
+
+icons:
+  - icon: "contract"
+    title: "86% de nuestros alumnos contratados"
+  - icon: "job"
+    title: "SOPORTE LABORAL POST PROGRAMA"
+  - icon: "talk"
+    title: "PREPARACIÓN A ENTREVISTAS"
+  - icon: "worker-portrait"
+    title: "XX HOJAS DE VIDA CREADAS"
+
+list:
+  - title: "Apoyo Profesional Ilimitado"
+    image: "../../../static/images/perfil-profesional.png"
+    position: "right"
+    sub:
+      - title: "✔ Asesoría y creación de perfil profesional"
+        text: "En 4Geeks te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio."
+ 
+  - title: "Simulación de Entrevistas"
+    image: "../../../static/images/entrevista-tecnica.png"
+    position: "left"
+    text: "En 4Geeks no solo ajustamos las sesiones 
+    <span style='font-weight: bold'> acordes tu calendario</span>, sino que también te damos la oportunidad de verlas de forma 
+    <span style='font-weight: bold'> online o presencial</span>, esto debido a que contamos con campuses en muchas diversas ciudades y por ende husos horarios.<br/>
+    <br/>En cualquier sea el caso, te aseguramos tener la oportunidad de mentorias constantes y siempre que las necesites."
+
+  - title: "Mentoría de por vida"
+    image: "../../../static/images/bg/main-bg.jpg"
+    position: "right"
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/> 
+    <br/>.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+
+# benefits:
+#   - p:
+#     heading: "Personal"
+#     items:
+#       - title: Clases exclusivas
+#         sub_title: (máx 8 students)
+#       - title: 1:4 teacher-student-ratio
+#         sub_title: (one mentor every 4 students)
+#       - title: Mentoría 1-1
+#         sub_title: (sesiones ilimitadas)
+#       - title: Soporte profesional customizado
+#         sub_title: (basado en la oportunidad laboral)
+#   - a:
+#     heading: "Donde sea y cuánto sea necesario"
+#     items:
+#       - title: Ajustado a tu calendario
+#         sub_title: (Sesiones según agenda en el calendario)
+#       - title: Oportunidad de mentorías constantes
+#         sub_title: (Siempre habilitado en persona o remoto)
+#       - title: Online o en persona
+#         sub_title: (Campus en muchas ciudades y en muchos husos horarios)
+#       - title: Apoyo profesional customizado
+#         sub_title: (Basado en la oportunidad laboral)
+#   - l:
+#     heading: "Limitless"
+#     items:
+#       - title: Toda la mentoría que necesites
+#         sub_title: (sesiones habilitadas para que puedas agendar con nuestros mentores)
+#       - title: Mentoría ilimitada después de graduarte 
+#         sub_title: (incluso después que consigas trabajo)
+#       - title: Mentoría de por vida
+#         sub_title: (Sigue trabajando con nosotros y recibiendo mentoría)
+#       - title: Apoyo profesional customizado
+#         sub_title: (Basado en la oportunidad laboral)
+
+# image1: "../../../static/images/geeksinfo/geeksinfo.png"
+# image2: "../../../static/images/bg/community.png"
