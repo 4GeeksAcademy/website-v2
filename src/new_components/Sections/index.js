@@ -225,6 +225,7 @@ export const Div = styled.div`
 //   grid-template-rows: repeat(${props => props.rows || "auto"});
 export const Grid = styled(Div)`
     display: ${props => props.display || "grid"};
+    direction: ${props => props.direction};
     grid-template-columns: repeat(${props => props.gridTemplateColumns || "1"}, 1fr);
     grid-template-rows: repeat(${props => props.gridTemplateRows});
     grid-gap: ${props => props.gridGap || "15px"};
@@ -291,8 +292,8 @@ export const Header = ({children, image, image_alt, svg_image, seo_title, title,
         <Grid background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding={padding || "0 17px"} padding_tablet={padding_tablet || "0"}>
             <Grid gridTemplateColumns_tablet={`repeat(12, 1fr`} gridColumn_tablet="3 / span 10">
                 <Div flexDirection="column" >
-                    <H1 margin="0 0 11px 0" color="#606060">{seo_title}</H1>
-                    <H2 fontSize="50px" lineHeight="60px">{`< ${title} >`}</H2>
+                    <H1 type="h1" margin="0 0 11px 0" color="#606060">{seo_title}</H1>
+                    <H2 type="h2" fontSize="50px" lineHeight="60px">{`< ${title} >`}</H2>
                     <Paragraph margin="26px 0" >{paragraph}</Paragraph>
                     {children}
                 </Div>
