@@ -20,7 +20,8 @@ const VideoWrapper = styled.section`
 
   }
   @media  ${Devices.tablet}{
-
+    width: ${props => props.width_tablet};
+    height: ${props => props.height_tablet};
   }
   @media  ${Devices.md}{
     width: ${props => props.width_md};
@@ -65,7 +66,8 @@ const Image = styled.div`
 
   }
   @media  ${Devices.tablet}{
-
+    width: ${props => props.width_tablet};
+    height: ${props => props.height_tablet};
   }
   @media  ${Devices.md}{
     width: ${props => props.width_md};
@@ -120,35 +122,35 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
         }}
       />
     ) : (
-        <Image
-          borderRadius="3px"
-        >
-          {id && <Play onClick={() => setShowVideo(true)} aria-label="Play Video" />}
-          {thumb && thumb.childImageSharp ?
-            <GImage
-              className={className}
-              onClick={() => setShowVideo(true)}
-              fluid={thumb.childImageSharp.fluid}
-              alt="Video"
-            // style={{
-            //   height: style.height || "100%",
-            //   width: style.width || "100%"
-            // }}
-            />
-            :
-            <Thumbnail
-              className={className}
-              onClick={() => setShowVideo(true)}
-              src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
-              alt="Video"
-            // style={{
-            //   height: style.height || "100%",
-            //   width: style.width || "100%"
-            // }}
-            />
-          }
-        </Image>
-      )}
+      <Image
+        borderRadius="3px"
+      >
+        {id && <Play onClick={() => setShowVideo(true)} aria-label="Play Video" />}
+        {thumb && thumb.childImageSharp ?
+          <GImage
+            className={className}
+            onClick={() => setShowVideo(true)}
+            fluid={thumb.childImageSharp.fluid}
+            alt="Video"
+          // style={{
+          //   height: style.height || "100%",
+          //   width: style.width || "100%"
+          // }}
+          />
+          :
+          <Thumbnail
+            className={className}
+            onClick={() => setShowVideo(true)}
+            src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
+            alt="Video"
+          // style={{
+          //   height: style.height || "100%",
+          //   width: style.width || "100%"
+          // }}
+          />
+        }
+      </Image>
+    )}
   </VideoWrapper>
 }
 

@@ -13,7 +13,7 @@ seo_title: "outcomes"
 header:
   title: "4Geeks Academy Outcomes Report"
   paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
-  image: "../../../static/images/bg/outcomes.png"
+  image: ""
   image_alt: ""
 sections:
   - title: "Our Statement"

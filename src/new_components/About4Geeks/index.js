@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {Button, Colors, StyledBackgroundSection} from '../Styling';
 import {Break} from '../Responsive'
 import {Devices} from '../Responsive'
-import {Row, Column, Grid, Div} from '../Sections'
+import {GridContainer, GridContainerWithImage, Grid, Div} from '../Sections'
 import {H2, H4, H3, Paragraph} from '../Heading'
 import {useStaticQuery, navigate, Link} from "gatsby"
 import styled from 'styled-components';
@@ -14,12 +14,9 @@ const About4Geeks = (props) => {
     const about = props.lang[0].node
     console.log("about", about)
     return (
-        <Grid
-            columns_md="2"
-        >
+        <GridContainerWithImage columns_tablet="2" margin_tablet="0 0 108px 0" margin="0 0 64px 0">
             <Div
                 flexDirection="column"
-                padding_md="0 30px 0 176px"
             >
                 <H2
                     textAlign="left"
@@ -95,7 +92,7 @@ const About4Geeks = (props) => {
                 />
 
             </Div>
-        </Grid>
+        </GridContainerWithImage>
     )
 };
 

@@ -1,15 +1,15 @@
 meta_info:
   slug: testimonios
 
-  title: "Testimonials"
-  description: "Testimonials"
+  title: "Testimonios e historias de éxito de 4Geeks Academy"
+  description: "Descubre nuestras historias de éxito y lo que dicen nuestros estudiantes sobre los Bootcamps de 4Geeks Academy"
   image: null
-  keywords: ""
+  keywords: "Testimonios, historias de éxito, 4Geeks Academy"
   redirects: []
 
 seo_title: "testimonios"
 header:
-  tagline: "< ¿Qué dicen nuestros alumnos? >"
+  title: " ¿Qué dicen nuestros alumnos? "
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
-  alt: ""
+  image_alt: ""

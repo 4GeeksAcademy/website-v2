@@ -2,7 +2,7 @@ import React, {useEffect, useState, useContext} from 'react';
 import PropTypes from "prop-types";
 import {Button, Colors} from '../Styling';
 import {Break} from '../Responsive'
-import {Row, Column, Grid, Div} from '../Sections'
+import {Row, GridContainer, Grid, Div} from '../Sections'
 import {H4, H3, Paragraph} from '../Heading'
 import {navigate} from "gatsby"
 import styled from 'styled-components';
@@ -11,26 +11,25 @@ import {SessionContext} from '../../session.js'
 
 const ChooseYourProgram = (props) => {
     return (
-        <Grid columns_md="3">
+        <GridContainer columns_tablet="3" margin_tablet="0 0 93px 0" margin="0 0 76px 0">
             {Array.isArray(props.programs) && props.programs.map((program, i) => {
-                console.log("program", program)
                 return (
                     <Div
                         key={i}
                         display="flex"
                         height="124px"
-                        height_md="245px"
+                        height_tablet="265px"
                         borderRadius="3px"
                         padding="1rem"
                         border="1px solid black"
                         borderLeft="6px solid black"
                         borderTop="1px solid black"
-                        borderLeft_md="1px solid black"
-                        borderTop_md="6px solid black"
-                        flexDirection_md="column"
+                        borderLeft_tablet="1px solid black"
+                        borderTop_tablet="6px solid black"
+                        flexDirection_tablet="column"
                         alignItems="center"
                         justifyContent="space-between"
-                        alignItems_md="flex-end"
+                        alignItems_tablet="flex-end"
                         background="#ffffff"
                         style={{position: "relative"}}
                     >
@@ -66,6 +65,7 @@ const ChooseYourProgram = (props) => {
                                     textAlign="left"
                                     fontSize="22px"
                                     lineHeight="26px"
+
                                 >
                                     {m}
                                 </H3>
@@ -77,7 +77,7 @@ const ChooseYourProgram = (props) => {
                                     lineHeight="19px"
                                     fontWeight="400"
                                     margin="10px 0 0 0"
-                                    margin_md="10px 0 0 0"
+                                    margin_tablet="10px 0 0 0"
                                 >{m}</Paragraph>
                             )}
                         </Div>
@@ -85,7 +85,7 @@ const ChooseYourProgram = (props) => {
                     </Div>
                 )
             })}
-        </Grid>
+        </GridContainer>
     )
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useStaticQuery, graphql, Link} from "gatsby"
 import {Title, H4, H3, Paragraph} from '../Heading'
-import {Column, Row, Div, Grid} from '../Sections'
+import {Column, Row, Div, Grid, GridContainer} from '../Sections'
 import {RoundImage, Colors} from '../../components/Styling'
 import ReactPlayer from '../../new_components/ReactPlayer'
 import Fragment from "../../components/Fragment"
@@ -48,24 +48,28 @@ export default ({lang, playerHeight}) => {
 
   return (<Fragment github="/new_components/with_4geeks">
 
-    <Grid columns_md="3">
+    {/* <Grid columns_md="3"> */}
+    {/* <Grid columns="3" fractions="4">
+      <Div gridColumn="1 / span 10" gridColumn_md="3 / span 10" flexDirection="column" flexDirection_md="row" justifyContent="between" > */}
+    <GridContainer columns_tablet="3" margin="0 0 73px 0" margin_tablet="0 0 84px 0">
       {info.with.map((i, index) => {
         return (
           <Div
             display="flex"
-            flexDirection_md="column"
+            flexDirection_tablet="column"
             justifyContent="between"
-            borderBottom={`1px solid ${Colors.lightGray}`}
-            border_md={`1px solid ${Colors.lightGray}`}
+            borderBottom_tablet={`1px solid ${Colors.lightGray}`}
+            border_tablet={`1px solid ${Colors.lightGray}`}
             // justifyContent="spece-between"
             key={index}
+            // margin_md="0 6px"
             style={{borderRadius: `3px`}}
           >
             <Div
               padding="19px 0 0 25px"
-              padding_md="0"
-              width_md="100%"
-              height_md="158px"
+              padding_tablet="0"
+              width_tablet="100%"
+              height_tablet="158px"
               alignSelf="baseline"
             >
               <ReactPlayer
@@ -74,8 +78,8 @@ export default ({lang, playerHeight}) => {
                 // style={{height: playerHeight}}
                 id={i.video}
                 width='82px'
-                width_md="100%"
-                height_md='158px'
+                width_tablet="100%"
+                height_tablet='158px'
                 height={playerHeight}
               />
             </Div>
@@ -125,7 +129,6 @@ export default ({lang, playerHeight}) => {
                 <Link to={i.footer.text_link}>
                   <H4
                     textAlign="left"
-                    align_sm="center"
                     width="100%"
                     fontSize="13px"
                     lineHeight="15px"
@@ -140,7 +143,7 @@ export default ({lang, playerHeight}) => {
         )
       })}
 
-    </Grid>
+    </GridContainer>
   </Fragment>
   )
 }

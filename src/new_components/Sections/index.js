@@ -88,53 +88,6 @@ export const Container = styled(Fragment)`
     padding: ${props => props.padding};
     transform: ${props => props.transform};
     `
-// TEST TO CHECK IF THE GRID IS A GOOD OPTION
-export const Grid = styled.div`
-    display: ${props => props.display || "grid"};
-    grid-template-columns: repeat(${props => props.columns || "1"}, 1fr);
-    grid-template-rows: repeat(${props => props.rows || "auto"});
-    grid-gap: ${props => props.gridGap || "15px"};
-    height: ${props => props.height};
-    background: ${props => props.background};
-    padding: ${props => props.padding};
-    margin: ${props => props.margin};
-    direction: ${props => props.direction};
-    align-items: ${props => props.alignItems};
-    overflow-x: ${props => props.overflowX};
-    @media ${Devices.xxs}{
-        grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
-    }
-    @media ${Devices.xs}{
-        grid-template-columns: repeat(${props => props.columns_xs}, 1fr);
-    }
-    @media  ${Devices.sm}{
-        grid-template-columns: repeat(${props => props.columns_sm}, 1fr);
-    }
-    @media  ${Devices.tablet}{
-        grid-template-columns: repeat(${props => props.columns_tablet}, 1fr);
-        grid-template-rows: repeat(${props => props.rows_tablet}, 5vw);
-        padding: ${props => props.padding_tablet};
-    }
-    @media  ${Devices.md}{
-        grid-template-columns: repeat(${props => props.columns_md}, 1fr);
-        grid-template-rows: repeat(${props => props.rows_md});
-        grid-gap: ${props => props.gridGap_md};
-        height: ${props => props.height_md};
-        padding: ${props => props.padding_md};
-        display: ${props => props.display_md};
-        margin: ${props => props.margin_md};
-    }
-    @media  ${Devices.lg}{
-        grid-template-columns: repeat(${props => props.columns_lg}, 1fr);
-        padding: ${props => props.padding_lg};
-    }
-    @media  ${Devices.xl}{
-        grid-template-columns: repeat(${props => props.columns_xl}, 1fr);
-    }
-    @media  ${Devices.xxl}{
-        grid-template-columns: repeat(${props => props.columns_xxl}, 1fr);
-    }
-    `
 
 const justifyContentOptions = {
     "around": "space-around",
@@ -178,6 +131,8 @@ export const Div = styled.div`
     flex: 0 0 ${props => (props.size / 12) * 100}%;
     max-width: ${props => (props.size / 12) * 100}%;
     grid-area: ${props => props.gridArea};
+    grid-column: ${props => props.gridColumn};
+    grid-row: ${props => props.gridRow};
     padding: ${props => props.padding};
     height: ${props => props.height};
     width: ${props => props.width};
@@ -236,6 +191,9 @@ export const Div = styled.div`
         height: ${props => props.height_tablet};
         align-items: ${props => props.alignItems_tablet};
         padding: ${props => props.padding_tablet};
+        margin: ${props => props.margin_tablet};
+        width: ${props => props.width_tablet};
+        height: ${props => props.height_tablet};
         flex: ${props => props.flex_tablet};
         border: ${props => props.border_tablet};
         border-top: ${props => props.borderTop_tablet};
@@ -245,6 +203,9 @@ export const Div = styled.div`
         transform: ${props => props.transform_tablet};
         grid-area: ${props => props.gridArea_tablet};
         margin: ${props => props.margin_tablet};
+        grid-column: ${props => props.gridColumn_tablet};
+        grid-row: ${props => props.gridRow_tablet};
+        justify-self: ${props => props.justifySelf_tablet};
         
     }
     @media  ${Devices.md}{
@@ -264,6 +225,8 @@ export const Div = styled.div`
         border-right: ${props => props.borderRight_md};
         border-left: ${props => props.borderLeft_md};
         place-items: ${props => props.placeItems_md};
+        grid-column: ${props => props.gridColumn_md};
+        grid-row: ${props => props.gridRow_md};
 
         &:after {
             display: ${props => props.displayAfter_md};
@@ -280,6 +243,108 @@ export const Div = styled.div`
 
     }
 `
+// TEST TO CHECK IF THE GRID IS A GOOD OPTION
+// grid-template-columns: 1fr repeat(2, 1fr) 1fr;
+//   grid-template-rows: repeat(${props => props.rows || "auto"});
+export const Grid = styled(Div)`
+    display: grid;
+    direction: ${props => props.direction};
+    grid-template-columns: repeat(${props => props.gridTemplateColumns || "1"}, 1fr);
+    grid-template-rows: repeat(${props => props.gridTemplateRows});
+    grid-gap: ${props => props.gridGap || "15px"};
+    justify-items: ${props => props.justifyItems};
+    grid-auto-rows: ${props => props.gridAutoRows};
+    grid-column: ${props => props.gridColumn};
+    
+    @media ${Devices.xxs}{
+        grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
+    }
+    @media ${Devices.xs}{
+        grid-template-columns: repeat(${props => props.columns_xs}, 1fr);
+    }
+    @media  ${Devices.sm}{
+        grid-template-columns: repeat(${props => props.columns_sm}, 1fr);
+    }
+    @media  ${Devices.tablet}{
+        grid-template-columns: ${props => props.gridTemplateColumns_tablet || "2fr repeat(12, 1fr) 2fr"};
+        grid-template-rows: repeat(${props => props.gridTemplateRows_tablet});
+        grid-gap: ${props => props.gridGap_tablet};
+    }
+    @media  ${Devices.md}{
+        // grid-template-columns: ${props => props.gridTemplateColumns_md || "2fr repeat(12, 1fr) 2fr"};
+        // grid-template-rows: repeat(${props => props.rows_md});
+        // grid-gap: ${props => props.gridGap_md};
+        grid-column: ${props => props.gridColumn_md};
+    }
+    @media  ${Devices.lg}{
+    }
+    @media  ${Devices.xl}{
+    }
+    @media  ${Devices.xxl}{
+    }
+    `
+// export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background}) => {
+//     return (
+//         <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md={`12`} gridGap_md="11px" gridGap="0" background={background}>
+// <Div flexDirection="column" justifyContent_md="start" padding="41px 17px 0 17px" padding_md="56px 0 0 0" gridArea_md={image || svg_image ? `1/2/1/7` : `1/4/1/10`}>
+//     <H1 textAlign={image || svg_image && "left"} margin="0 0 11px 0" color="#606060">{seo_title}</H1>
+//     <H2 textAlign={image || svg_image && "left"} fontSize="50px" lineHeight="60px">{`< ${title} >`}</H2>
+//     <Paragraph textAlign={image || svg_image && "left"} margin="26px 0" >{paragraph}</Paragraph>
+//     {children}
+// </Div>
+// {image ?
+//     <Div width="100%" gridArea_md="1/7/1/13">
+//         <StyledBackgroundSection
+//             height={`412px`}
+//             width="100%"
+//             image={image}
+//             bgSize={`contain`}
+//             alt={image_alt}
+//         />
+//     </Div>
+//     :
+//     <Div width="100%" gridArea_md="1/7/1/13" >
+//         {svg_image}
+//     </Div>
+// }
+//         </Grid>)
+// }
+export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background, margin, margin_tablet, padding, padding_tablet}) => {
+    return (
+        <Grid background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding={padding || "0 17px"} padding_tablet={padding_tablet || "0"}>
+            <Grid gridTemplateColumns_tablet={`repeat(12, 1fr`} gridColumn_tablet="3 / span 10">
+                <Div flexDirection="column" >
+                    <H1 type="h1" margin="0 0 11px 0" color="#606060">{seo_title}</H1>
+                    <H2 type="h2" fontSize="50px" lineHeight="60px">{`< ${title} >`}</H2>
+                    <Paragraph margin="26px 0" >{paragraph}</Paragraph>
+                    {children}
+                </Div>
+            </Grid>
+        </Grid>
+    )
+}
+
+export const GridContainer = ({numberColumns, manageTabletColumns, fluid, children, direction, background, backgroundChild, gridGap, gridGap_tablet, gridTemplateRows, gridTemplateRows_tablet, height, height_tablet, columns, columns_tablet, margin, margin_tablet, padding, padding_tablet, paddingChild, padding_tabletChild}) => {
+    return (
+        <Grid direction={direction} 
+        gridTemplateColumns_tablet={manageTabletColumns == true ? `2fr repeat(${numberColumns}, 1fr) 2fr` : `2fr repeat(12, 1fr) 2fr`} background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding={padding || "0 17px"} padding_tablet={padding_tablet || "0"}>
+            <Grid background={backgroundChild} gridGap={gridGap} gridGap_tablet={gridGap_tablet} gridTemplateRows={gridTemplateRows} gridTemplateRows_tablet={gridTemplateRows_tablet} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${12 / columns_tablet}fr)`} padding={paddingChild} padding_tablet={padding_tabletChild} gridTemplateColumns={columns} gridColumn_tablet={fluid ? "1 / span 14" : "2 / span 12"}>
+                {children}
+            </Grid>
+            {/* <Div display="grid" background={backgroundChild} gridColumn_md={fluid ? `1 / span 14` : `2 / span 12`}>{children}</Div> */}
+        </Grid>
+    )
+}
+export const GridContainerWithImage = ({children, gridGap, gridGap_tablet, imageSide, background, height, height_tablet, columns, columns_tablet, margin, margin_tablet, padding, padding_tablet}) => {
+    return (
+        <Grid gridTemplateColumns_tablet={imageSide == "left" ? "repeat(14, 1fr) 2fr" : "2fr repeat(14, 1fr)"} background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding={padding || "0 17px"} padding_tablet={padding_tablet}>
+            <Grid gridGap={gridGap} gridGap_tablet={gridGap_tablet} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${14 / columns_tablet}fr)`} gridTemplateColumns={columns} gridColumn_tablet={imageSide == "left" ? "1 / span 14" : "2 / span 14"}>
+                {children}
+            </Grid>
+            {/* <Div display="grid" background={backgroundChild} gridColumn_md={fluid ? `1 / span 14` : `2 / span 12`}>{children}</Div> */}
+        </Grid>
+    )
+}
 export const Row = styled(Div)`
     border: ${props => props.border};
     border-top: ${props => props.borderTop};
@@ -371,32 +436,7 @@ export const Column = styled(Div)`
         margin: ${props => props.m_xs};
     }
 `
-export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background}) => {
-    return (
-        <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md={`12`} gridGap_md="11px" gridGap="0" background={background}>
-            <Div flexDirection="column" justifyContent_md="start" padding="41px 17px 0 17px" padding_md="56px 0 0 0" gridArea_md={image || svg_image ? `1/2/1/7` : `1/4/1/10`}>
-                <H1 textAlign={image || svg_image && "left"} margin="0 0 11px 0" color="#606060">{seo_title}</H1>
-                <H2 textAlign={image || svg_image && "left"} fontSize="50px" lineHeight="60px">{`< ${title} >`}</H2>
-                <Paragraph textAlign={image || svg_image && "left"} margin="26px 0" >{paragraph}</Paragraph>
-                {children}
-            </Div>
-            {image ?
-                <Div width="100%" gridArea_md="1/7/1/13">
-                    <StyledBackgroundSection
-                        height={`412px`}
-                        width="100%"
-                        image={image}
-                        bgSize={`contain`}
-                        alt={image_alt}
-                    />
-                </Div>
-                :
-                <Div width="100%" gridArea_md="1/7/1/13" >
-                    {svg_image}
-                </Div>
-            }
-        </Grid>)
-}
+
 export const Wrapper = (props) => {
     return <Container
         github={props.github}
@@ -568,3 +608,31 @@ Divider.propTypes = {
 };
 
 
+// const Wrapper = styled.div`
+//   display: grid;
+//   grid-template-columns: 1fr repeat(2, 1fr) 1fr;
+//   grid-template-rows: repeat(${props => props.rows || "auto"});
+//   grid-gap: ${props => props.gridGap || "15px"};
+//   height: ${props => props.height};
+//   // margin: 0 auto;
+//   // width: 70%;
+//   background: red;
+//   padding: 5px 0;
+//   @media  ${Devices.md}{
+//     // grid-template-columns: 1fr repeat(12, 1fr) 1fr;
+//     height: ${props => props.height_md};
+//     padding: ${props => props.padding_md};
+//     display: ${props => props.display_md};
+//     margin: ${props => props.margin_md};
+// }
+// `
+
+// const Test = styled.div`
+//   grid-column: 3 / span 10;
+//   grid-row: 1;
+//   background: white;
+//   display: flex;
+//   justify-content: space-between;
+//   @media ${Devices.xxs}{
+
+// }

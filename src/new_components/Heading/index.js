@@ -94,6 +94,7 @@ export const H3 = styled(BaseHeading)`
   letter-spacing: 0.05em;
 `;
 export const H4 = styled(BaseHeading)`
+font-weight: ${props => props.fontWeight || "400"};
   letter-spacing: 0.05em;
 
 `;
@@ -155,6 +156,7 @@ Separator.defaultProps = {
 
 export const Paragraph = styled.p`
   display: ${props => props.display};
+  direction: ${props => props.direction};
   width: ${props => props.width || "100%"};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin || "0"};
@@ -183,6 +185,7 @@ export const Paragraph = styled.p`
   }
   @media  ${Devices.tablet}{
       display: ${props => props.display_tablet};
+      justify-content: ${props => props.justifyContent};
       width: ${props => props.width_tablet};
       font-size: ${props => props.fontSize_tablet};
       text-align: ${props => props.textAlign_tablet};
@@ -317,7 +320,6 @@ H3.defaultProps = {
 };
 H4.defaultProps = {
   fontSize: '15px',
-  fontWeight: '400',
   lineHeight: '26px',
   letterSpacing: '0.05em'
 };

@@ -3,7 +3,7 @@ import {useStaticQuery, graphql} from "gatsby"
 import styled from 'styled-components';
 import Icon from '../Icon';
 import {Link} from '../Styling/index';
-import {Row, Grid, Div} from '../Sections';
+import {GridContainer, Grid, Div} from '../Sections';
 import Card from '../Card';
 import Select from '../Select';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
@@ -102,7 +102,7 @@ const PricesAndPayments = (props) => {
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
-        <Grid columns_md="3" gridGap_md="0px" gridGap="40px">
+        <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0">
           {prices.left_section &&
             <PricingCard lang={props.lang}
               background={Colors.white}
@@ -153,7 +153,7 @@ const PricesAndPayments = (props) => {
               borderLeft_tablet="none"
             />
           }
-        </Grid>
+        </GridContainer>
       }
       <Grid columns_md="12" rows_md="1" gridGap="0" margin="47px 0 37px 0">
         <Div gridArea_md="1/5/1/9" justifyContent="center" alignItems="center">

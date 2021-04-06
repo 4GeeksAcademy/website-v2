@@ -38,7 +38,7 @@ const ProgramDetailsMobile = (props) => {
                                 borderRadius="3px"
                                 borderLeft={`6px solid ${Colors.black}`}
                                 margin={`7px 0`}
-                                display_md="none"
+                                display_tablet="none"
                                 cursor={`pointer`}
                                 onClick={() => selected.index === index ? setSelected({index: null, manual: true}) : setSelected({index: index, manual: true})}
                                 justifyContent={`between`}
