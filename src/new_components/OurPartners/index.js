@@ -27,23 +27,27 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
         </GridContainer>}
       {showFeatured &&
         <>
-          <Div justifyContent="center" flexDirection="column" flexDirection_md="row">
+          <GridContainer columns_tablet="3">
+            {/* <Div justifyContent="center" flexDirection="column" flexDirection_md="row"> */}
             {images.filter(f => f.featured == true).map((m, i) => {
               return (
                 <Img
                   key={i}
-                  style={{height: "55px", minWidth: "220px", margin: "23px 15px"}}
+                  style={{height: "55px", minWidth: "100px", margin: "23px 15px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={m.name}
                   fluid={m.image.childImageSharp.fluid}
                 />
               )
             })}
-          </Div>
-          <Div height="1px" background={Colors.lightGray} margin="88px 0 79px 0" />
+            {/* </Div> */}
+          </GridContainer>
+          <GridContainer>
+            <Div height="1px" background={Colors.lightGray} margin="30px 0" margin_tablet="80px 0" />
+          </GridContainer>
         </>
       }
-      {slider ? <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0">
+      {slider ? <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0" >
         {images.map((l, i) => {
           return (
             <Img
@@ -58,7 +62,7 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
       </Div>
         :
         <>
-          <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0" display_md="none">
+          <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0" display_tablet="none">
             {images.map((l, i) => {
               return (
                 <Img
@@ -71,48 +75,50 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
               )
             })}
           </Div>
-          <Grid columns="4" rows="1" margin_md="0 200px" display="none" display_md="grid">
+          <GridContainer columns_tablet="4" padding_tabletChild="0 80px" display="none">
             {images.map((l, i) => {
               return (
                 i < 4 &&
                 <Img
                   key={i}
-                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
+                  style={{height: "40px", margin: "0 15px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={l.name}
                   fluid={l.image.childImageSharp.fluid}
                 />
               )
             })}
-          </Grid>
-          <Grid columns="5" rows="1" margin_md="44px 150px" display="none" display_md="grid">
+          </GridContainer>
+          {/* <Grid columns="4" rows="1" margin_md="0 200px" display="none" display_tablet="grid">
+          </Grid> */}
+          <GridContainer columns_tablet="5" margin_tablet="30px 0" display="none">
             {images.map((l, i) => {
               return (
                 i > 3 && i < 9 &&
                 <Img
                   key={i}
-                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
+                  style={{height: "40px", margin: "0 15px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={l.name}
                   fluid={l.image.childImageSharp.fluid}
                 />
               )
             })}
-          </Grid>
-          <Grid columns="2" rows="1" margin_md="0 200px" display="none" display_md="grid">
+          </GridContainer>
+          <GridContainer columns_tablet="2" padding_tabletChild="0 10em" display="none">
             {images.map((l, i) => {
               return (
                 i > 8 &&
                 <Img
                   key={i}
-                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
+                  style={{height: "40px", margin: "0 15px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={l.name}
                   fluid={l.image.childImageSharp.fluid}
                 />
               )
             })}
-          </Grid>
+          </GridContainer>
         </>
       }
 

@@ -256,10 +256,9 @@ export const Button = styled(SmartButton)`
     display: ${props => props.display};
     padding: ${props => props.padding};
     transform: ${props => props.transform};
-
-    color: ${props => props.border};
+    color: ${props => props.color};
     background: ${props => props.background};
-    border: ${props => props.color};
+    border: ${props => props.border};
     height: ${props => props.height};
     cursor: pointer;
     text-align: center;
@@ -271,48 +270,29 @@ export const Button = styled(SmartButton)`
     min-width: ${props => props.minWidth};
     align-items: ${props => props.alignItems};
     justify-content: ${props => props.justifyContent};
-    box-shadow: ${props => props.shadow};
+    box-shadow: ${props => props.boxShadow};
 
     &:hover {
         background-color: ${props => props.colorHover || props.color};
     }
-    @media ${Break.lg}{
-        font-size: ${props => props.fs_lg};
-    }
-    @media ${Break.md}{
-        font-size: ${props => props.fs_md};
-        margin: ${props => props.m_md};
-    }
-    @media ${Break.sm}{
-        margin: ${props => props.m_sm};
-        font-size: ${props => props.fs_sm};
-    }
     @media ${Devices.xxs}{
-
     }
     @media ${Devices.xs}{
-
-
     }
     @media  ${Devices.sm}{
         width: ${props => props.width_sm};
     }
     @media  ${Devices.tablet}{
         width: ${props => props.width_tablet};
-
     }
     @media  ${Devices.md}{
         width: ${props => props.width_md};
-
     }
     @media  ${Devices.lg}{
-
     }
     @media  ${Devices.xl}{
-
     }
     @media  ${Devices.xxl}{
-
     }
 `;
 Button.defaultProps = {

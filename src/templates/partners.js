@@ -33,31 +33,12 @@ const Partners = (props) => {
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
       >
-        <Div
-          gridArea_md="1/4/1/10"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-        >
-          <H1
-            type="h1"
-            fontSize="13px"
-            lineHeight="16px"
-            fontWeight="700"
-            letterSpacing="0.05em"
-            color="#606060"
-          >{yml.seo_title}</H1>
-          <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{`< ${yml.header_data.tagline} >`}</H2>
-          <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">{yml.header_data.sub_heading}</Paragraph>
-          <Button width="300px" color={Colors.blue} textColor="white">{yml.button_section.button_text}</Button>
-
-        {/* <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center">
           <Link to={yml.button_section.button_link}
             state={{course: yml.meta_info.bc_slug}}
           >
             <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
-          </Link> */}
-
+          </Link>
         </Div>
       </Header>
       <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
@@ -80,21 +61,37 @@ const Partners = (props) => {
         showFeatured={true}
         props={partnersData.partners}
       />
-      <OurPartners
-        title={partnersData.coding.tagline}
-        paragraph={partnersData.coding.sub_heading}
-        images={partnersData.coding.images}
-        showFeatured={true}
-        props={partnersData.partners}
-      />
-      <GridContainer columns_tablet="12" padding_tablet="0">
-        <Div gridColumn_tablet="1 / 7" flexDirection="column" >
+      <GridContainer fluid background={Colors.verylightGray} padding="36px 17px 80px 17px" padding_tablet="75px 0 133px 0" margin_tablet="115px 0 100px 0">
+        <GridContainer columns_tablet="12" margin_tablet="0 0 50px 0">
+          <Div
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            gridColumn_tablet="3 /11"
+          >
+            <H2 margin="0 0 15px 0">{partnersData.coding.tagline}</H2>
+            <Paragraph>{partnersData.coding.sub_heading}</Paragraph>
+          </Div>
+        </GridContainer>
+        <GridContainer backgroundChild={Colors.white} padding_tablet="42px 0 80px 0">
+          <OurPartners
+            images={partnersData.coding.images}
+            showFeatured={true}
+            props={partnersData.partners}
+
+          />
+        </GridContainer>
+      </GridContainer>
+      <GridContainer columns_tablet="12" padding="99px  17px 80px 17px" padding_tablet="0" margin_tablet="0 0 81px 0">
+        <Div gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
           <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
+        </Div>
+        <Div gridColumn_tablet="1 / 7" gridRow_tablet="2 / 2" flexDirection="column" >
           {yml.form.paragraph.split("\n").map((m, i) =>
             <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
           )}
         </Div>
-        <Div justifyContent="center" gridColumn_tablet="8 / 13" margin="0 0 81px 0">
+        <Div justifyContent="center" gridColumn_tablet="8 / 13" gridRow_tablet="2 / 2" margin="0 0 81px 0">
           <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} />
         </Div>
 

@@ -174,7 +174,12 @@ geek_data:
 prices:
   heading: "PRECIOS Y PAGOS"
   sub_heading: ""
-
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
 ## ALUMNI SECTION
 alumni:
   heading: "MEET THE ALUMNI AND PROJECTS"

@@ -188,6 +188,8 @@ const Program = ({data, pageContext, yml}) => {
       session={session}
       locations={data.allLocationYaml.edges}
       course={program_type}
+      title={yml.prices.heading}
+      paragraph={yml.prices.sub_heading}
     />
 
 
@@ -203,14 +205,14 @@ const Program = ({data, pageContext, yml}) => {
         course={program_type}
       />
     </Container> */}
-    <AlumniProjects hasTitle lang={data.allAlumniProjectsYaml.edges} limit={2} />
+    <AlumniProjects title={yml.alumni.heading} paragraph={yml.alumni.sub_heading} lang={data.allAlumniProjectsYaml.edges} limit={2} />
     {/* <Container variant="fluid">
       <H2>{yml.alumni.heading}</H2>
       <Paragraph margin="0 0 50px 0">{yml.alumni.sub_heading}</Paragraph>
     </Container>
     <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0"> */}
 
-    <Testimonials lang={data.allTestimonialsYaml.edges} />
+    <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" />
     {/* </Container> */}
 
     {/* <Container
@@ -329,6 +331,14 @@ export const query = graphql`
             prices{
               heading
               sub_heading
+              selector{
+                top_label
+                placeholder
+              }
+              button{
+                text
+                link
+              }
             }
             typical{
               heading

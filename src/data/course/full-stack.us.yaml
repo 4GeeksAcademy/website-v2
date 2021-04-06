@@ -141,6 +141,12 @@ geek_data:
 prices:
   heading: "Prices and Payments"
   sub_heading: "Selecciona la sede o modalidad de tu curso para ver los precios y planes de pago"
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
 
 typical:
   heading: ""

@@ -90,7 +90,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                     style={{margin: "38px 0"}}
                                                                     fadeIn={false}
                                                                     // alt={l.name}
-                                                                    fluid={m.image && m.image}
+                                                                    fluid={m.image && m.image.childImageSharp.fluid}
                                                                 />
                                                                 <Paragraph textAlign="left">{m.image_paragraph}</Paragraph>
                                                                 <Grid columns_md="3">
