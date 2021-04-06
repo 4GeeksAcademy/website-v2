@@ -10,22 +10,19 @@ why:
     description: "Únete a cientos de personas graduadas trabajando en compañías tecnológicas top: Construcción de perfil, Marca personal, Simulacros de entrevistas, etc."
     image: ../../../../static/images/why3.jpg
     alt: ""
-    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=sJrH4f7Df8g" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
   - title: "Financiamos tu carrera"
     description: "No pagues nada desde el día uno hasta conseguir trabajo como programador con Income Share Agreement (ISA)."
     image: "../../../../static/images/why2.jpg"
     alt: ""
-    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: handmoney
   - title: "Nunca programes solo otra vez"
     description: "Ilimitado y para siempre: Mentorías, ejercicios, chatroom permanente, salones de clase reales, incluso luego de conseguir trabajo."
     image: "../../../../static/images/why1.jpg"
     alt: ""
-    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=oeX_ocy6zv4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: laptop
 ## ***************************
 ## BELOW SOME AVAILABLE VIDEOS
