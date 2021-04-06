@@ -138,7 +138,7 @@ components:
     position: 10
     layout: single_column 
     image: 
-      style: "{  }"
+      style: '{"height": ["400px", "400px", "400px", "300px", "200px"], "background-size": "contain"  }'
       src: "../../../static/images/projects/ims.jpg"
       link: "https://google.com" # take uses somewhere when they click on the image
     video: "plwPwyrxX84" #youtube id
