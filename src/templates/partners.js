@@ -33,31 +33,12 @@ const Partners = (props) => {
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
       >
-        <Div
-          gridArea_md="1/4/1/10"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-        >
-          <H1
-            type="h1"
-            fontSize="13px"
-            lineHeight="16px"
-            fontWeight="700"
-            letterSpacing="0.05em"
-            color="#606060"
-          >{yml.seo_title}</H1>
-          <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{`< ${yml.header_data.tagline} >`}</H2>
-          <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">{yml.header_data.sub_heading}</Paragraph>
-          <Button width="300px" color={Colors.blue} textColor="white">{yml.button_section.button_text}</Button>
-
-        {/* <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center">
           <Link to={yml.button_section.button_link}
             state={{course: yml.meta_info.bc_slug}}
           >
             <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
-          </Link> */}
-
+          </Link>
         </Div>
       </Header>
       <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
