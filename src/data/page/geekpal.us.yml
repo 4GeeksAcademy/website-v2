@@ -6,40 +6,88 @@ meta_info:
   keywords: ""
   redirects: ["/geekpal"]
 tagline: NEVER BE STUCK AGAIN
-sub_heading: "LEARN FASTER THAN ANYONE ON EARTH"
+sub_heading: "Text that explains that GeekPal is a membership with accompanying benefits, which the student obtains by enrolling in a program with The Academy. 
+<span style='font-weight: bold'> Even after you graduate, you will continue to have personalized mentoring.</span>"
 image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekpal.png"
-benefits:
-  - p:
-    heading: "Personal"
-    items:
-      - title: Exclusive classes
-        sub_title: (up to 8 students per class)
-      - title: 1:4 teacher-student-ratio
-        sub_title: (one mentor for every 8 students)
-      - title: Mentoring 1-1
-        sub_title: (unlimited sessions)
-      - title: Tailored career
-        sub_title: (based on each job opportunity)
-  - a:
-    heading: "Anywhere & time"
-    items:
-      - title: Adjusted to your schedule
-        sub_title: (on demand session w/appointment)
-      - title: Permanent mentor schedule
-        sub_title: (Always on mentorship & chat support)
-      - title: Online or in-person
-        sub_title: (Locations around the world)
-      - title: Tailored career support
-        sub_title: (based on each job opportunity)
-  - l:
-    heading: "Limitless"
-    items:
-      - title: All the mentoring you need
-        sub_title: (on demand session w/appointment)
-      - title: Mentoring after you graduate
-        sub_title: (even after you get the job so that you can keep the job)
-      - title: Mentoring for life
-        sub_title: (Keep coming back, scheduling or attending)
-      - title: Tailored career
-        sub_title: (based on each job opportunity)
+
+# Introduction Video here
+geekPal:
+  - videoId: "cKcZD0_1IKk"
+    image: "../../../static/images/projects/re-mindful.jpg"
+
+# Banner of icons 
+icons:
+  - icon: "capacity"
+    title: "Maximum 8 students per class"
+  - icon: "ratio"
+    title: "1:5 RATIO teacher student"
+  - icon: "talk"
+    title: "50 MENTORIES PER STUDENT"
+  - icon: "timer"
+    title: "RESPONSE TIME OF 15 MINUTES"
+
+list:
+  - title: "Unlimited Professional Support"
+    image: "../../../static/images/final-project.png"
+    position: "right"
+    sub:
+      - title: "✔ EXCLUSIVE CLASSES"
+        text: "At 4Geeks we believe that the personalized process gives better results, that is why our classes are designed for a maximum of 8 students and we have a ratio of <span style='font-weight: bold'> 1 teacher for every 5 students.</span>"
+      - title: "✔ MENTORIES 1:1"
+        text: "We have a network of mentors who are willing to give you 
+        <span style='font-weight: bold'> 1:1 support</span> in person or remotely, unlimitedly. These 
+        <span style='font-weight: bold'> unlimited mentoring continue</span> even after you finish your studies at 4geeks."
+
+  - title: "Wherever and whenever"
+    image: "../../../static/images/bg/main-bg.jpg"
+    position: "left"
+    text: "In 4Geeks we not only adjust the sessions 
+    <span style='font-weight: bold'> according to your calendar</span>, but we also give you the opportunity to see them 
+    <span style='font-weight: bold'> online or in person</span>, this because we have campuses in many different cities and therefore time zones.<br/>
+    <br/>In any case, we assure you that you have the opportunity for constant mentoring whenever you need it."
+
+  - title: "Community Support"
+    image: "../../../static/images/comunity-support.png"
+    position: "right"
+    sub:
+      - title: "✔ Breath Code"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      - title: "✔ Slack community"
+        text: "Our international community of more than 
+        <span style='font-weight: bold'> 1100 people</span>, who will provide you with all the support you need."
+
+# benefits:
+#   - p:
+#     heading: "Personal"
+#     items:
+#       - title: Exclusive classes
+#         sub_title: (up to 8 students per class)
+#       - title: 1:4 teacher-student-ratio
+#         sub_title: (one mentor for every 8 students)
+#       - title: Mentoring 1-1
+#         sub_title: (unlimited sessions)
+#       - title: Tailored career
+#         sub_title: (based on each job opportunity)
+#   - a:
+#     heading: "Anywhere & time"
+#     items:
+#       - title: Adjusted to your schedule
+#         sub_title: (on demand session w/appointment)
+#       - title: Permanent mentor schedule
+#         sub_title: (Always on mentorship & chat support)
+#       - title: Online or in-person
+#         sub_title: (Locations around the world)
+#       - title: Tailored career support
+#         sub_title: (based on each job opportunity)
+#   - l:
+#     heading: "Limitless"
+#     items:
+#       - title: All the mentoring you need
+#         sub_title: (on demand session w/appointment)
+#       - title: Mentoring after you graduate
+#         sub_title: (even after you get the job so that you can keep the job)
+#       - title: Mentoring for life
+#         sub_title: (Keep coming back, scheduling or attending)
+#       - title: Tailored career
+#         sub_title: (based on each job opportunity)

@@ -6,40 +6,86 @@ meta_info:
   keywords: ""
   redirects: []
 tagline: NO PROGRAMES SOLO MÁS NUNCA
-sub_heading: Y aprende todo lo que necesitas más rápido que cualquiera, lo más rapido que se puede.
+sub_heading: "Texto que explique que GeekPal es una membresía con beneficios de acompañamiento, que el estudiante obtiene al inscribirse en un programa con La Academia. 
+<span style='font-weight: bold'> Aún despues de haberte graduado continuarás teniendo mentoría personalizada.</span>"
 image: "../../../static/images/bg/companies-bg.jpg"
 image_logo: "/images/geekpal.png"
-benefits:
-  - p:
-    heading: "Personal"
-    items:
-      - title: Clases exclusivas
-        sub_title: (máx 8 estudiantes por clase)
-      - title: 1:4 ratio de profesor por estudiante
-        sub_title: (Un senior mentor por cada 8 estudiantes)
-      - title: Mentoría 1-1
-        sub_title: (Sesiones ilimitadas)
-      - title: Apoyo Profesional ilimitado
-        sub_title: (basado en cada oportunidad de trabajo)
-  - a:
-    heading: "Anywhere & time"
-    items:
-      - title: Ajustado a tu disponibilidad
-        sub_title: (tu haces la solicitud de la reunión!)
-      - title: Calendario de Mentores siempre disponibles
-        sub_title: (Mentores dispuestos de manera dremota o directa)
-      - title: Online o en persona
-        sub_title: (Varias locaciones en 7 ciudades)
-      - title: Apoyo Profesional ilimitado
-        sub_title: (basado en cada oportunidad de trabajo)
-  - l:
-    heading: "Limitless"
-    items:
-      - title: Toda la mentoría que necesitas
-        sub_title: (tu haces la solicitud de la reunión!)
-      - title: Mentoría incluso después de graduarte
-        sub_title: (después de consiguir trabajo y para que lo mantengas en el tiempo)
-      - title: Mentoría de por vida
-        sub_title: (Sigue viniendo y agendando reuniones con nosotros)
-      - title: Apoyo Profesional ilimitado
-        sub_title: (basado en cada oportunidad de trabajo)
+
+geekPal:
+  - videoId: "cKcZD0_1IKk"
+    image: "../../../static/images/projects/re-mindful.jpg"
+
+icons:
+  - icon: "capacity"
+    title: "MÁXIMO 8 ALUMNOS POR CLASES"
+  - icon: "ratio"
+    title: "1:5 RATIO profesor estudiante"
+  - icon: "talk"
+    title: "50 MENTORIAS POR ALUMNO"
+  - icon: "timer"
+    title: "TIEMPO DE RESPUESTA DE 15 MINUTOS"
+    
+list:
+  - title: "Apoyo Profesional Ilimitado"
+    image: "../../../static/images/final-project.png"
+    position: "right"
+    sub:
+      - title: "✔ CLASES EXCLUSIVAS"
+        text: "En 4Geeks creemos que el proceso personalizado da mejores resultados, es por esto que nuestras clases están pensadas para un máximo de 8 estudiantes y contamos con un ratio de <span style='font-weight: bold'> 1 profesor por cada 5 alumnos.</span>"
+      - title: "✔ MENTORÍAS 1:1"
+        text: "Contamos con una red de mentores que están dispuestos a darte 
+        <span style='font-weight: bold'> soporte 1:1</span> de manera presencial o remota, de forma ilimitada. Estas 
+        <span style='font-weight: bold'> mentorias ilimitadas continúan</span> incluso después de haber finalizado tus estudios en 4geeks."
+ 
+  - title: "Dónde sea y cuando sea"
+    image: "../../../static/images/bg/main-bg.jpg"
+    position: "left"
+    text: "En 4Geeks no solo ajustamos las sesiones 
+    <span style='font-weight: bold'> acordes tu calendario</span>, sino que también te damos la oportunidad de verlas de forma 
+    <span style='font-weight: bold'> online o presencial</span>, esto debido a que contamos con campuses en muchas diversas ciudades y por ende husos horarios.<br/>
+    <br/>En cualquier sea el caso, te aseguramos tener la oportunidad de mentorias constantes y siempre que las necesites."
+
+  - title: "Apoyo de la Comunidad"
+    image: "../../../static/images/comunity-support.png"
+    position: "right"
+    sub:
+      - title: "✔ Breath Code"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      - title: "✔ Comunidad Slack"
+        text: "Nuestra comunidad internacional de más de 
+        <span style='font-weight: bold'> 1100 personas</span>, que te brindará todo el apoyo que necesites."
+
+# benefits:
+#   - p:
+#     heading: "Personal"
+#     items:
+#       - title: Clases exclusivas
+#         sub_title: (máx 8 estudiantes por clase)
+#       - title: 1:4 ratio de profesor por estudiante
+#         sub_title: (Un senior mentor por cada 8 estudiantes)
+#       - title: Mentoría 1-1
+#         sub_title: (Sesiones ilimitadas)
+#       - title: Apoyo Profesional ilimitado
+#         sub_title: (basado en cada oportunidad de trabajo)
+#   - a:
+#     heading: "Anywhere & time"
+#     items:
+#       - title: Ajustado a tu disponibilidad
+#         sub_title: (tu haces la solicitud de la reunión!)
+#       - title: Calendario de Mentores siempre disponibles
+#         sub_title: (Mentores dispuestos de manera dremota o directa)
+#       - title: Online o en persona
+#         sub_title: (Varias locaciones en 7 ciudades)
+#       - title: Apoyo Profesional ilimitado
+#         sub_title: (basado en cada oportunidad de trabajo)
+#   - l:
+#     heading: "Limitless"
+#     items:
+#       - title: Toda la mentoría que necesitas
+#         sub_title: (tu haces la solicitud de la reunión!)
+#       - title: Mentoría incluso después de graduarte
+#         sub_title: (después de consiguir trabajo y para que lo mantengas en el tiempo)
+#       - title: Mentoría de por vida
+#         sub_title: (Sigue viniendo y agendando reuniones con nosotros)
+#       - title: Apoyo Profesional ilimitado
+#         sub_title: (basado en cada oportunidad de trabajo)

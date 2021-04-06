@@ -123,7 +123,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
       />
     ) : (
       <Image
-        borderRadius="0"
+        borderRadius="3px"
       >
         {id && <Play onClick={() => setShowVideo(true)} right_tablet={right_tablet} left_tablet={left_tablet} aria-label="Play Video" />}
         {thumb && thumb.childImageSharp ?
