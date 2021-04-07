@@ -4,12 +4,13 @@ comments: true
 date: 2020-06-24 20:44:51+00:00
 excerpt: ¿Qué es full stack? Te explicamos que significa ser full stack en el siguiente artículo de 4geeks Academy
 layout: post
-slug: que-significa-ser-full-stack
+slug: que-es-full-stack
 title: ¿Qué significa ser Full Stack?
 avatar: "/images/staff/jimena.jpg"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/learn-to-code.jpg?raw=true"
 status: "published"
 ---
+
 
 Cuántas cosas son necesarias conocer para ser Full Stack
 
