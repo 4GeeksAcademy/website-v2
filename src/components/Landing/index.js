@@ -27,24 +27,30 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             height: '100%'
         }}
     />
-    if (image) return <Img
-        src={image.src}
-        onClick={() => {
-            if (image.link) {
-                if (image.link.indexOf("http") > -1) window.open(image.link);
-                else navigate(image.link);
-            }
-        }}
-        style={image.style ? JSON.parse(image.style) : null}
-        borderRadius={"1.25rem"}
-        className="pointer"
-        alt={"4Geeks Academy Section"}
-        margin="auto"
-        height={image.style ? image.style.height : "100%"}
-        width={image.style? image.style.width : "100%"}
-        h_sm="250px"
-        backgroundSize={`cover`}
-    ></Img>
+
+
+    if (image){
+        const imgStyles = image.style ? JSON.parse(image.style) : null;
+        const [img_h_xl, img_h_lg, img_h_md, img_h_sm, img_h_xs] = imgStyles && imgStyles.height ? Array.isArray(imgStyles.height) ? imgStyles.height : [imgStyles.height] : ["100%"];
+        return <Img
+            src={image.src}
+            onClick={() => {
+                if (image.link) {
+                    if (image.link.indexOf("http") > -1) window.open(image.link);
+                    else navigate(image.link);
+                }
+            }}
+            style={imgStyles}
+            borderRadius={"1.25rem"}
+            className="pointer"
+            alt={"4Geeks Academy Section"}
+            margin="auto"
+            height={img_h_xl}
+            width={imgStyles ? imgStyles.width || "100%" : "100%"}
+            h_sm={img_h_sm || "250px"}
+            backgroundSize={`cover`}
+        ></Img>
+    } 
 
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
     const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
