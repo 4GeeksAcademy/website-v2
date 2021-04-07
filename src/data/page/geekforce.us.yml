@@ -6,11 +6,14 @@ meta_info:
   keywords: ""
   redirects: ["/career-support", "/geekforce", "/us/geekforce"]
 
-tagline: FIND A GREAT JOB
-sub_heading: "Job hunting will never be a problem again"
-image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekforce.png"
-
+seo_title: "geekforce"
+header:
+  title: ""
+  image: "../../../static/images/bg/companies-bg.jpg"
+  image_alt: ""
+  paragraph: "Texto que explique que GeekPal es una membresía con beneficios de apoyo profesional, que el estudiante obtiene al inscribirse en un programa con La Academia. Aún despues de haberte graduado continuarás teniendo el apoyo profesional ilimitado."
+  image_logo: "/images/geekforce.png"
+  
 # Introduction Video here
 geekForce:
   - videoId: "cKcZD0_1IKk"
