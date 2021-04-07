@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {Column, Row, Container, Divider, Wrapper, WrapperImage, Div} from "../components/Sections";
+import {Column, Row, Container, Divider, Wrapper, Header, Div} from "../components/Sections";
 import {Title, H2, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
 import PricesAndPayment from '../components/PricesAndPayment';
@@ -25,30 +25,20 @@ const Pricing = (props) => {
   return (
     <>
       {/* HEADER SECTION */}
-      <WrapperImage
-        imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-        className={`img-header`}
-        height={`500px`}
-        bgSize={`cover`}
-        alt={yml.header_data.alt}
-        paddingRight={`0`}
-        customBorderRadius="0 0 0 1.25rem"
-        margin="0 0 50px 0"
+      <Header
+        seo_title={yml.seo_title}
+        title={yml.header.title}
+        paragraph={yml.header.paragraph}
+        padding_tablet="72px 0 40px 0"
       >
-        <Divider height="100px" />
-        <Title
-          type="h1"
-          size="5"
-          color={Colors.white}
-          title={yml.header_data.tagline}
-          paragraph={yml.header_data.sub_heading}
-          variant="main"
-          paragraphColor={Colors.white}
-          fontSize="46px"
-          textAlign="center"
-
-        />
-      </WrapperImage>
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center">
+          <Link to={yml.button_section.button_link}
+            state={{course: yml.meta_info.bc_slug}}
+          >
+            <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
+          </Link>
+        </Div>
+      </Header>
       <Wrapper>
         <Row m_sm="0px 0px 100px 0" display="flex">
           <Column size="5" size_sm="12" height="300px" align_sm="center">

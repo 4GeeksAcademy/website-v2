@@ -20,6 +20,16 @@ const Partners = (props) => {
     setOpen(true);
   };
 
+
+  
+  // variable properties #e06c75
+  // Keywords #c678dd
+  // numbers #d19a66
+  // classes, constants #e5c07b
+  // function, methods #61afef
+  // string #98c379
+  // operator special function #56b6c2
+
   const handleClose = () => {
     setOpen(false);
   };
