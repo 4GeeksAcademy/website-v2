@@ -11,9 +11,6 @@ image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/imag
 status: "published"
 ---
 
-
-Cuántas cosas son necesarias conocer para ser Full Stack
-
 Si nos paramos un segundo a pensar en la traducción de Full Stack sería algo así como “Todas las agrupaciones de tecnologías”, es decir, que ser Full Stack implicaría conocer todas las agrupaciones de tecnologías ¿Es esto posible?
 
 Una respuesta corta sería que no.
