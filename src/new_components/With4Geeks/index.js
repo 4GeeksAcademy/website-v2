@@ -132,8 +132,8 @@ export default ({lang, playerHeight}) => {
                     width="100%"
                     fontSize="13px"
                     lineHeight="15px"
-                    fontWeight="400"
-                    color={Colors.blue}
+                    fontWeight="bold"
+                    color="#0097CD"
                   >{i.footer.text}
                   </H4>
                 </Link>

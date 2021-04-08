@@ -17,7 +17,13 @@ const Testimonials = (props) => {
             {/* <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0"></Container> */}
             <GridContainer fluid background="linear-gradient(#f5f5f5, white)" height="425px" margin={props.margin} margin_tablet={props.margin_tablet} padding="30px 17px 60px 17px" padding_tablet="48px 0 36px 0">
                 <H2>{testimonialsArray.heading}</H2>
-                <Link to="/us/success-stories"><Paragraph margin="25px 0 36px 0" color={Colors.blue}>{testimonialsArray.button_text}</Paragraph></Link>
+                <Link to="/us/success-stories">
+                  <Paragraph fontFamily="Lato" fontWeight="bold" fontSize="13px" color="#0097CD" margin="25px 0 36px 0" >
+                    {
+                      testimonialsArray.button_text
+                    }
+                  </Paragraph>
+                </Link>
                 <Div className="testimonial-slider" display="flex" height="auto" background="linear-gradient(#f5f5f5, white)" padding="0 0 59px 0">
                     {testimonialsArray.testimonials.filter(item => item.hidden !== true).map((item, i) => {
                         return (

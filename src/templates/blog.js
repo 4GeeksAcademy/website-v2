@@ -390,7 +390,7 @@ const Blog = ({data, pageContext, yml}) => {
           })
         }
         {
-          blog_posts[1].map((item, i) => {
+          blog_posts[2].map((item, i) => {
             return Post(item, i)
           })
         }

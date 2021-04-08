@@ -403,9 +403,11 @@ a.faq-link:hover {
     height: 28px;
 }
 .span-blue{
+    font-family: Lato;
     color: #0097CD;
     cursor: pointer;
     font-weight: bold;
+    font-size: 13px;
 }
 
 .testimonial-slider, .badge-slider, .partners-slider{

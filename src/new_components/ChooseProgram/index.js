@@ -50,6 +50,7 @@ export const Schedule = styled.small`
     color: #BDBDBD;
 `;
 const ChooseProgram = (props) => {
+
     const {setLocation} = React.useContext(SessionContext);
     const [status, setStatus] = useState({toggle: false, hovered: false})
     const _Selector = (_p) => <Button
@@ -58,7 +59,7 @@ const ChooseProgram = (props) => {
         maxWidth="250px"
         onClick={() => _p.setStatus({toggle: !_p.status.toggle})}
         color={Colors.blue}
-        textColor={Colors.white}
+        textColor={Colors.white}        
     >
         {_p.status.toggle ? props.openLabel : props.closeLabel}
     </Button>
