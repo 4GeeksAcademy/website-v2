@@ -40,17 +40,23 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
   if (content) content = content.node;
   else return null;
 
+  //todo quitar
+  //console.log("BADGES DATA", data)
+  //console.log("BADGES CONTENT", content)
+  //console.log("PARAGRAPH", paragraph)
+
   return (
     <Fragment github="/new_components/badges">
       <GridContainer background={background} padding={padding} padding_tablet={padding_tablet} rows={paragraph && `3`} margin={margin}>
         {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
         {paragraph && <Div className="badge-slider" justifyContent="between" >
           <Paragraph
-            fontSize="18px"
+            fontFamily="Lato"
+            fontSize="22px"
             fontSize_tablet="22px"
-            lineHeight="38px"
-            fontWeight="300"
             color={Colors.black}
+            fontWeight="300"
+            lineHeight="38px"            
             dangerouslySetInnerHTML={{__html: paragraph}}
             margin="0 0 32px 0"
           />
@@ -59,8 +65,8 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
           {content.badges.map((l, i) => {
             return (
               <Img
-                style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
-                imgStyle={{objectFit: "contain"}}
+                style={{ height: "85px", minWidth: "150px", margin: "0 24px" }}
+                imgStyle={{ objectFit: "contain" }}
                 loading="eager"
                 fadeIn={false}
                 alt={l.name}
@@ -69,13 +75,20 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
             )
           })}
           {short_link &&
-            <Link to={content.link_to}><Paragraph color={Colors.blue}>{`${content.short_link_text} >`}</Paragraph></Link>
+            <Link to={content.link_to}>
+            <Paragraph color={Colors.blue} fontFamily="Lato">
+                {`${content.short_link_text} >`}
+              </Paragraph>
+            </Link>
           }
-
         </Div>
         {link &&
           <Div justifyContent="center" margin="50px 0 0 0">
-            <Link to={content.link_to}><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>
+            <Link to={content.link_to}>
+              <Paragraph color={Colors.blue} fontFamily="Lato">
+                {content.link_text}
+              </Paragraph>
+            </Link>
           </Div>}
 
       </GridContainer>
