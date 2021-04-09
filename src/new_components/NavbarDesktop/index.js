@@ -54,9 +54,9 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
           }
         }
       }
-      file(relativePath: { eq: "images/4G_logo_negro.png" }) {
+      file(relativePath: { eq: "images/logoweb.png" }) {
         childImageSharp {
-          fixed(width: 75) {
+          fixed(width: 125) {
             ...GatsbyImageSharpFixed
           } 
         }
