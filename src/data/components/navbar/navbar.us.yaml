@@ -30,7 +30,7 @@ navbar:
   - name: "Why 4Geeks"
     link: "/why-4geeks"
     sub_menu:
-      icon: ""
+      icon: "awards"
       title: "Why 4Geeks Academy"
       paragraph: "Lorem ipsum dolor sit amet, consectetur 
       
@@ -67,7 +67,7 @@ navbar:
   - name: "The Academy"
     link: "/course/full-stack-web-development-bootcamp-part-time"
     sub_menu:
-      icon: ""
+      icon: "hat"
       title: "The Academy"
       paragraph: "Lorem ipsum dolor sit amet, consectetur 
       
@@ -93,7 +93,7 @@ navbar:
   - name: "Campuses"
     link: "/partners"
     sub_menu:
-      icon: ""
+      icon: "campuses"
       title: "Our Campuses"
       paragraph: "Lorem ipsum dolor sit amet, consectetur 
       
