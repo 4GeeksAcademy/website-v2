@@ -19,7 +19,7 @@ export const Colors = {
     darkGray: '#3A3A3A;',
     borderGray: '#ececec',
     yellow: "#FFC718",
-    lightYellow: "rgba(255, 183, 24, 0.2)",
+    lightYellow: "rgba(255, 183, 24, 0.1)",
     darkYellow: "#FFECBF",
     black: "#000000",
     white: "#FFFFFF",
