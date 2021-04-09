@@ -80,7 +80,10 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
                 }
                 )}
             </Menu>
-            <Div>Test</Div>
+            <Div alignItems="center" justifyContent="between">
+                <H3 fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">ENG / ESP</H3>
+                <Link onClick={onToggle} to={button.button_link || "#"}><Button minWidth="130px" width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+            </Div>
         </Nav>
     )
 }
