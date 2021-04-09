@@ -4,8 +4,10 @@ navbar:
     sub_menu:
       icon: ""
       title: "Programs"
-      paragraph: "Academia
-Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi.
+      "
       links:
         - title: "Online"
           sub_links: 
@@ -30,8 +32,9 @@ Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor inci
     sub_menu:
       icon: ""
       title: "Why 4Geeks Academy"
-      paragraph: "Academia
-Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
       links:
         - title: "Online"
         - title: "Campuses"
@@ -40,11 +43,20 @@ Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor inci
     sub_menu:
       icon: ""
       title: "The Academy"
-      paragraph: "Academia
-Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
       links:
-        - title: "Online"
-        - title: "Campuses"
+        - title: ""
+          sub_links: 
+            - title: "Who we are"
+              link_to: ""
+            - title: "Press"
+              link_to: ""
+            - title: "Blog"
+              link_to: ""
+            - title: "Partners"
+              link_to: ""
 # links:
 #       - name: "Desarrollador Full Stack"
 #       - link: "/course/full-stack-web-development-bootcamp-part-time"

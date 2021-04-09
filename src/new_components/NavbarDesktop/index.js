@@ -43,6 +43,7 @@ const Menu = styled.ul`
 `
 const MenuItem = styled.li`
     text-transform: uppercase;
+    cursor: pointer;
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
@@ -119,13 +120,13 @@ export const MegaMenu = ({status, setStatus, menu}) => {
     return (
         <>
             {status.itemIndex != null &&
-                <MegaMenuContainer background="white" padding_tablet="30px 15px 45px 30px" position="absolute" zIndex_tablet="1" borderRadius="3px" width_tablet="432px" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
-                    <Grid gridTemplateColumns_tablet="12" gridTemplateRows="2" >
+                <MegaMenuContainer background="white" padding_tablet="30px 30px 45px 30px" position="absolute" zIndex_tablet="1" borderRadius="3px" minWidth_tablet="432px" maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+                    <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" >
                         <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0">
                             <Div><Icon icon="laptop" width="43px" height="34px" /></Div>
                             <Div flexDirection="column" margin="0 0 0 15px" >
-                                <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 20px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3>
-                                {menu[status.itemIndex].sub_menu.paragraph.split('\\n').map((d, i) =>
+                                <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3>
+                                {menu[status.itemIndex].sub_menu.paragraph.split('\n').map((d, i) =>
                                     <Paragraph
                                         textAlign="left"
                                         color={Colors.darkGray}
@@ -136,18 +137,20 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                             </Div>
                         </Div>
                         <Div gridArea_tablet="2/1/2/13" >
-                            {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m, i) => {
-                                return (
-                                    <Div flexDirection="column" key={i}>
-                                        <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{m.title}</H3>
-                                        {Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
-                                            return (
-                                                <Link to={m.link_to}><H3 textAlign="left" fontSize="15px" lineHeight="20px" fontWeight="400" margin="5px 0">{m.title}</H3></Link>
-                                            )
-                                        })}
-                                    </Div>
-                                )
-                            })}
+                            <Grid gridTemplateColumns_tablet={`repeat(${menu[status.itemIndex].sub_menu.links.length}, 1fr)`} >
+                                {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m, i) => {
+                                    return (
+                                        <Div flexDirection="column" key={i}>
+                                            <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{m.title}</H3>
+                                            {Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
+                                                return (
+                                                    <Link to={m.link_to}><Div alignItems="baseline" margin="5px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3><Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" /></Div></Link>
+                                                )
+                                            })}
+                                        </Div>
+                                    )
+                                })}
+                            </Grid>
                         </Div>
                     </Grid>
                 </MegaMenuContainer>
