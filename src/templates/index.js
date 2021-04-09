@@ -22,7 +22,7 @@ import OurPartners from '../new_components/OurPartners';
 import ChooseYourProgram from '../new_components/ChooseYourProgram';
 import Testimonials from '../new_components/Testimonials';
 import Carousel from '../new_components/Carousel';
-import {MegaMenu} from '../new_components/NavbarDesktop';
+// import {MegaMenu} from '../new_components/NavbarDesktop';
 import Card from '../components/Card';
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import {WrapperCustom} from '../new_components/Sections';
@@ -77,7 +77,7 @@ const Home = (props) => {
 
   return (
     <>
-      <MegaMenu />
+      {/* <MegaMenu /> */}
       <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="0 0 108px 0">
         <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
           <CityH1 yml={yml} />

@@ -58,6 +58,18 @@ const Layout = ({children, seo, context}) => {
               navbar {
                 name
                 link
+                sub_menu{
+                  icon
+                  title
+                  paragraph
+                  links{
+                    title
+                    sub_links{
+                      title
+                      link_to
+                    }
+                  }
+                }
               }
               button {
                 button_link

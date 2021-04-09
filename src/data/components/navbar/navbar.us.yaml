@@ -1,21 +1,77 @@
 navbar:
   - name: "Programs"
     link: "/#home"
+    sub_menu:
+      icon: ""
+      title: "Programs"
+      paragraph: "Academia
+Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+          sub_links: 
+            - title: "Part Time"
+              link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+            - title: "Full Time"
+              link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+        - title: "Campuses"
+          sub_links: 
+            - title: "Caracas"
+              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+            - title: "Madrid"
+              link_to: "/us/coding-campuses/coding-bootcamp-madrid"
+            - title: "Miami"
+              link_to: "/us/coding-campuses/coding-bootcamp-miami"
+            - title: "San José"
+              link_to: "/us/coding-campuses/coding-bootcamp-costa-rica"
+            - title: "Santiago de Chile"
+              link_to: "/us/coding-campuses/coding-bootcamp-santiago"
   - name: "Why 4Geeks"
     link: "/why-4geeks"
+    sub_menu:
+      icon: ""
+      title: "Why 4Geeks Academy"
+      paragraph: "Academia
+Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+        - title: "Campuses"
   - name: "The Academy"
     link: "/course/full-stack-web-development-bootcamp-part-time"
-    links:
-      - name: "Desarrollador Full Stack"
-      - link: "/course/full-stack-web-development-bootcamp-part-time"
-      - name: "Ingeniero de Software"
-      - link: "/course/software-engineering-coding-bootcamp"
+    sub_menu:
+      icon: ""
+      title: "The Academy"
+      paragraph: "Academia
+Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+        - title: "Campuses"
+# links:
+#       - name: "Desarrollador Full Stack"
+#       - link: "/course/full-stack-web-development-bootcamp-part-time"
+#       - name: "Ingeniero de Software"
+#       - link: "/course/software-engineering-coding-bootcamp"
   # - name: "Pricing"
   #   link: "/pricing"
   - name: "Campuses"
     link: "/partners"
+    sub_menu:
+      icon: ""
+      title: "Our Campuses"
+      paragraph: "Academia
+      Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+        - title: "Campuses"
   - name: "Upcoming Dates"
     link: "/calendar"
+    sub_menu:
+      icon: ""
+      title: "Upcoming Dates"
+      paragraph: "Academia
+Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+        - title: "Campuses"
 button:
   button_link: "/apply"
   button_type: ""
