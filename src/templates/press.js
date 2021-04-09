@@ -55,7 +55,7 @@ const Press = (props) => {
             {Array.isArray(content.news) && content.news.slice(0, content.limit).map((l, i) => {
                 return (
                     <>
-                        {<GridContainer columns_tablet="12" background={i % 2 == 0 && Colors.lightYellow} padding_tablet="83px 0">
+                        {<GridContainer columns_tablet="12" background={i % 2 == 0 && Colors.lightYellow2} padding_tablet="83px 0">
                             <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}>
                                 <Img
                                     key={i}
