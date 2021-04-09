@@ -17,7 +17,29 @@ const MegaMenuContainer = styled(Div)`
     right: ${props => props.right};
     bottom: ${props => props.bottom};
     left: ${props => props.left};
+    transform: ${props => props.transform};
 `
+const MegaMenuPositions = [
+    {
+        top: "",
+        left: ""
+    },
+    {
+        top: "",
+        left: "50%",
+        transform: "translateX(-480px)"
+    },
+    {
+        top: "",
+        left: "50%",
+        transform: "translateX(-280px)"
+    },
+    {
+        top: "",
+        left: "50%",
+        transform: "translateX(-150px)"
+    },
+]
 const Nav = styled.nav`
     height: 71px;
     display: ${props => props.display};
@@ -49,10 +71,9 @@ const Menu = styled.ul`
 `
 const MenuItem = styled.li`
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    font-size: 13px;
-    line-height: 16px;
-    font-weight: 400;
     margin: 0 .5rem;
     text-align: center;
     font-family: lato, sans-serif;
@@ -106,7 +127,10 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
                 <Menu>
                     {menu && menu.map((item, index) => {
                         return (
-                            <MenuItem onClick={() => setStatus({...status, toggle: true, itemIndex: index})}>{item.name}</MenuItem>
+                            <MenuItem onClick={() => setStatus({...status, toggle: true, itemIndex: index})}>
+                                <H3 margin="0 5px 0 0" fontSize="13px" lineHeight="16px" fontWeight="400">{item.name}</H3>
+                                {index != menu.length - 1 && <Icon icon="arrowdown" />}
+                            </MenuItem>
                         )
                     }
                     )}
@@ -125,8 +149,8 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
 export const MegaMenu = ({status, setStatus, menu}) => {
     return (
         <>
-            {status.itemIndex != null &&
-                <MegaMenuContainer background="white" padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 && "0"} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+            {status.itemIndex != null && status.itemIndex != menu.length - 1 &&
+                <MegaMenuContainer background="white" transform={MegaMenuPositions[status.itemIndex].transform} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
                     <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
                         <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0">
                             <Div><Icon icon="laptop" width="43px" height="34px" /></Div>
