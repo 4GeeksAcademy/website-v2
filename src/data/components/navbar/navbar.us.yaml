@@ -36,8 +36,34 @@ navbar:
       
       adscing elit, sed do eiusmod tempor incidi."
       links:
-        - title: "Online"
-        - title: "Campuses"
+        - title: "Accompaniment"
+          sub_links: 
+            - title: "GeekPal"
+              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+            - title: "GeekForce"
+              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+        - title: "Validation"
+          sub_links: 
+            - title: "Awards"
+              link_to: ""
+            - title: "Outcomes"
+              link_to: ""
+            - title: "Geeks Vs Others"
+              link_to: ""
+        - title: "Prices"
+          sub_links: 
+            - title: "Financials"
+              link_to: ""
+            - title: "Prices"
+              link_to: ""
+            - title: "Scholarships"
+              link_to: ""
+        - title: "Our Students"
+          sub_links: 
+            - title: "Alumni & Projects"
+              link_to: ""
+            - title: "Testimonials"
+              link_to: ""
   - name: "The Academy"
     link: "/course/full-stack-web-development-bootcamp-part-time"
     sub_menu:
