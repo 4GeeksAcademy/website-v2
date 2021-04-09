@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styled, {css} from 'styled-components';
 import Img from "gatsby-image"
 import {useStaticQuery, graphql} from 'gatsby';
-import {Break} from '../Responsive';
+import {Devices} from '../Responsive'
 import {SessionContext} from '../../session';
 import ChooseProgram from '../ChooseProgram'
 import {H3} from '../Heading';
@@ -14,12 +14,29 @@ import {NavItem} from '../Navbar';
 
 const MegaMenuContainer = styled(Div)``
 const Nav = styled.nav`
-    background: red;
     height: 71px;
-    display: flex;
+    display: ${props => props.display};
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    @media ${Devices.xxs}{
+    }
+    @media ${Devices.xs}{
+    }
+    @media  ${Devices.sm}{
+    }
+    @media  ${Devices.tablet}{
+        display: ${props => props.display_tablet};
+    }
+    @media  ${Devices.md}{
+        display: ${props => props.display_md};
+    }
+    @media  ${Devices.lg}{
+    }
+    @media  ${Devices.xl}{
+    }
+    @media  ${Devices.xxl}{
+    }
 `
 const Menu = styled.ul`
     display: flex;
@@ -64,7 +81,7 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
     }
   `)
     return (
-        <Nav>
+        <Nav display_md="flex" display="none">
             <Link to={'/'}>
                 <Img
                     fadeIn={false}

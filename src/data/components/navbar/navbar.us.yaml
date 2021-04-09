@@ -1,9 +1,9 @@
 navbar:
-  - name: "Home"
+  - name: "Programs"
     link: "/#home"
   - name: "Why 4Geeks"
     link: "/why-4geeks"
-  - name: "The Programs"
+  - name: "The Academy"
     link: "/course/full-stack-web-development-bootcamp-part-time"
     links:
       - name: "Desarrollador Full Stack"
@@ -12,7 +12,7 @@ navbar:
       - link: "/course/software-engineering-coding-bootcamp"
   # - name: "Pricing"
   #   link: "/pricing"
-  - name: "for companies"
+  - name: "Campuses"
     link: "/partners"
   - name: "Upcoming Dates"
     link: "/calendar"
