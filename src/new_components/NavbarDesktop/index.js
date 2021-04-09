@@ -12,10 +12,16 @@ import Icon from "../Icon"
 import {NavItem} from '../Navbar';
 
 
-const MegaMenuContainer = styled(Div)``
+const MegaMenuContainer = styled(Div)`
+    top: ${props => props.top};
+    right: ${props => props.right};
+    bottom: ${props => props.bottom};
+    left: ${props => props.left};
+`
 const Nav = styled.nav`
     height: 71px;
     display: ${props => props.display};
+    position: relative;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
@@ -104,13 +110,13 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
                         )
                     }
                     )}
+                    <MegaMenu status={status} menu={menu} />
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
                     <H3 fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">ENG / ESP</H3>
                     <Link onClick={onToggle} to={button.button_link || "#"}><Button minWidth="130px" width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
             </Nav>
-            <MegaMenu status={status} menu={menu} />
         </>
     )
 }
@@ -120,8 +126,8 @@ export const MegaMenu = ({status, setStatus, menu}) => {
     return (
         <>
             {status.itemIndex != null &&
-                <MegaMenuContainer background="white" padding_tablet="30px 30px 45px 30px" position="absolute" zIndex_tablet="1" borderRadius="3px" minWidth_tablet="432px" maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
-                    <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" >
+                <MegaMenuContainer background="white" padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 && "0"} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+                    <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
                         <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0">
                             <Div><Icon icon="laptop" width="43px" height="34px" /></Div>
                             <Div flexDirection="column" margin="0 0 0 15px" >
@@ -137,7 +143,7 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                             </Div>
                         </Div>
                         <Div gridArea_tablet="2/1/2/13" >
-                            <Grid gridTemplateColumns_tablet={`repeat(${menu[status.itemIndex].sub_menu.links.length}, 1fr)`} >
+                            <Grid gridTemplateColumns_tablet={`repeat(${menu[status.itemIndex].sub_menu.links.length}, 1fr)`} width="100%">
                                 {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m, i) => {
                                     return (
                                         <Div flexDirection="column" key={i}>

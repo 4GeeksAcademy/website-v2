@@ -69,8 +69,9 @@ navbar:
     sub_menu:
       icon: ""
       title: "Our Campuses"
-      paragraph: "Academia
-      Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
       links:
         - title: "Online"
         - title: "Campuses"
@@ -79,8 +80,9 @@ navbar:
     sub_menu:
       icon: ""
       title: "Upcoming Dates"
-      paragraph: "Academia
-Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
       links:
         - title: "Online"
         - title: "Campuses"
