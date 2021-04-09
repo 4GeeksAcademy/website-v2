@@ -4,7 +4,6 @@ comments: true
 date: 2021-02-24 05:29:14 +0000
 excerpt: In the midst of Covid-19, 4Geeks has found its way to grow. 
 layout: post
-link: https://www.4geeksacademy.co/pandemic-impact-on-coding-bootcamps/
 slug: pandemic-impact-on-coding-bootcamps
 title: PANDEMIC IMPACT ON CODING BOOTCAMPS 
 avatar: /images/staff/marcelo.jpeg
