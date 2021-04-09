@@ -137,6 +137,7 @@ export const Div = styled.div`
     height: ${props => props.height};
     width: ${props => props.width};
     min-width: ${props => props.minWidth};
+    min-height: ${props => props.minHeight};
     position: ${props => props.position};
     display: ${props => props.display || "flex"};
     flex-direction: ${props => props.flexDirection || 'row'};
@@ -194,6 +195,8 @@ export const Div = styled.div`
         padding: ${props => props.padding_tablet};
         margin: ${props => props.margin_tablet};
         width: ${props => props.width_tablet};
+        min-width: ${props => props.minWidth_tablet};
+        min-height: ${props => props.minHeight_tablet};
         height: ${props => props.height_tablet};
         flex: ${props => props.flex_tablet};
         border: ${props => props.border_tablet};
@@ -207,6 +210,7 @@ export const Div = styled.div`
         grid-column: ${props => props.gridColumn_tablet};
         grid-row: ${props => props.gridRow_tablet};
         justify-self: ${props => props.justifySelf_tablet};
+        z-index: ${props => props.zIndex_tablet};
         
     }
     @media  ${Devices.md}{
