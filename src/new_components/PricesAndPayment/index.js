@@ -5,7 +5,7 @@ import Icon from '../Icon';
 import {Link} from '../Styling/index';
 import {GridContainer, Grid, Div} from '../Sections';
 import Card from '../Card';
-import Select from '../Select';
+import Select from '../SelectV2';
 import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
 import {Button, Colors, Circle, RoundImage} from '../Styling';
 import {SessionContext} from '../../session'
@@ -78,7 +78,13 @@ const PricesAndPayments = (props) => {
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
   const [locations, setLocations] = useState(false);
+  const [search, setSearch] = useState(false);
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
+
+
+  // console.log(locations)
+
+
   useEffect(() => {
     setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
     if (session && session.location) {
@@ -109,26 +115,27 @@ const PricesAndPayments = (props) => {
           <Paragraph>{props.paragraph}</Paragraph>
         </Div>
       </GridContainer>
-      <GridContainer margin_tablet="0 0 73px 0">
+      <GridContainer shadow="0px 0px 16px rgba(0, 0, 0, 0.25)" margin_tablet="0 0 73px 0" background={Colors.white} height="122px" borderRadius="3px" >
         <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
 
           {/* <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">"apply_button_text"</Button> */}
           {!props.course &&
             <Select
+              label={props.program}
               top="40px"
               left="20px"
               width="fit-content"
               options={courseArray}
-              openLabel={course ? course.label : props.openedLabel}
+              openLabel={course ? course.label : props.closedLabel}
               closeLabel={course ? course.label : props.closedLabel}
               onSelect={(opt) => setCourse(opt)}
             />
             // </GridContainer>
           }
-        &nbsp;
-      {course &&
+          {!props.course &&
             // <GridContainer>
             <Select
+              label={props.campus}
               top="40px"
               left="20px"
               width="fit-content"
@@ -139,11 +146,12 @@ const PricesAndPayments = (props) => {
             />
             // </GridContainer>
           }
-          <Button width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>"syllabus_button_text"</Button>
+          
+          <Button onClick={() => setSearch(true)} width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>{props.button_text}</Button>
         </Div>
       </GridContainer>
 
-      {!prices ?
+      {!prices  ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
         <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0" >
@@ -199,14 +207,14 @@ const PricesAndPayments = (props) => {
           }
         </GridContainer>
       }
-      <GridContainer columns_tablet="12" gridGap="0" margin_tablet="0 0 37px 0" >
+      {/* <GridContainer columns_tablet="12" gridGap="0" margin_tablet="0 0 37px 0" >
         <Div gridArea_tablet="1/5/1/9" justifyContent="center" alignItems="center">
           <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >We accept: </H4>
           <RoundImage url="/images/bitcoin.png" height="10px" width="65px" bsize="contain" margin="0 15px" />
           <RoundImage url="/images/ethereum.png" height="20px" width="65px" bsize="contain" />
         </Div>
-      </GridContainer>
-      <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
+      </GridContainer> */}
+      {/* <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph> */}
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Fragment>
   )

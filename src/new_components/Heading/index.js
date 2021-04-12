@@ -27,7 +27,7 @@ const BaseHeading = styled(Heading)`
   font-weight: ${props => props.fontWeight};
   font-size: ${props => props.fontSize};
   line-height: ${props => props.lineHeight};
-  font-style: normal;
+  font-style: ${props => props.fontStyle || "normal"};
   color: ${props => props.color};
   margin: ${props => props.margin};
   text-shadow: ${props => props.textShadow}; 

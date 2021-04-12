@@ -1,13 +1,16 @@
 import React, {useState, useContext} from 'react';
-import {Column, Row, Container, Divider, Wrapper, Header, Div} from "../components/Sections";
+import {Column, Row, Container, Divider, Wrapper, Div} from "../components/Sections";
 import {Title, H2, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
-import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring';
 import Img from "gatsby-image"
 import BaseRender from './_baseLayout';
 import {openGuidebook} from "../actions";
 import {SessionContext} from '../session.js'
+
+// new_components
+import PricesAndPayment from '../new_components/PricesAndPayment';
+import { Header } from '../new_components/Sections'
 
 const Pricing = (props) => {
   const {session} = React.useContext(SessionContext);
@@ -26,69 +29,20 @@ const Pricing = (props) => {
     <>
       {/* HEADER SECTION */}
       <Header
-        seo_title={yml.seo_title}
-        title={yml.header.title}
-        paragraph={yml.header.paragraph}
-        padding_tablet="72px 0 40px 0"
+          background={Colors.lightBlue2}
+          seo_title={yml.seo_title}
+          title={yml.header.title}
+          paragraph={yml.header.paragraph}
+          padding_tablet="72px 0 40px 0"
+          padding="66px 17px 85px 0"
       >
-        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center">
-          <Link to={yml.button_section.button_link}
-            state={{course: yml.meta_info.bc_slug}}
-          >
-            <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
-          </Link>
-        </Div>
-      </Header>
-      <Wrapper>
-        <Row m_sm="0px 0px 100px 0" display="flex">
-          <Column size="5" size_sm="12" height="300px" align_sm="center">
-            <Img
-              fixed={yml.intro.image.childImageSharp.fixed}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              margin="auto"
-            />
-          </Column>
-          <Column size="7" size_sm="12">
-            <H2 align="left" margin="30px 0 20px 0" type="h2">{yml.intro.heading}</H2>
-            <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
-          </Column>
-        </Row>
-      </Wrapper>
-      <Wrapper>
-        <Row m_sm="0px 0px 0px 0" display="flex">
-          <Column size="7" size_sm="12">
-            <H2 align="left" margin="30px 0 20px 0" >{yml.intro.heading_second}</H2>
-            <Paragraph align="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</Paragraph>
-            {yml.intro.bullets.map(b => <Paragraph align_sm="left" margin="10px 0">• {b}</Paragraph>)}
-          </Column>
-          <Column size="5" disp_sm="none" height="300px" align_sm="center">
-            <StyledBackgroundSection
-              className={`image`}
-              height={`250px`}
-              image={yml.intro.image_second.childImageSharp.fluid}
-              bgSize={`cover`}
-              backgroundColor={Colors.lightGray}
-              alt="4Geeks Academy"
-              borderRadius={`1.25rem`}
-            />
-          </Column>
-        </Row>
-      </Wrapper>
-      <Wrapper margin="50px 0px" m_sm="0" right
-        customBorderRadius="1.25rem 0 0 1.25rem"
-        background={Colors.lightGray}
-        border="top"
-      >
-        <Title
-          size="10"
-          title={yml.prices.heading}
-          paragraph={yml.prices.paragraph}
-          paragraphColor={Colors.black}
-          variant="primary"
-        />
+
         <PricesAndPayment
-          shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
+          // shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
+          button_text={yml.syllabus_button_text}
+          program={yml.label.program}
+          modality={yml.label.modality}
+          campus={yml.label.campus}
           openedLabel={yml.prices.opened_label}
           session={session}
           closedLabel={yml.prices.closed_label}
@@ -96,44 +50,8 @@ const Pricing = (props) => {
           lang={pageContext.lang}
           locations={data.allLocationYaml.edges}
         />
-      </Wrapper >
-      { location && location.documents && location.documents.payment_guidebook && location.documents.payment_guidebook.url && location.documents.payment_guidebook.url != "" &&
-        <Wrapper margin="50px 0px">
-          <Title
-            size="10"
-            title={yml.payment_guide.heading}
-            paragraph={yml.payment_guide.sub_heading}
-            paragraphColor="black"
-            variant="primary"
-          />
-          <Divider height="30px" />
-          <Row display="flex" justifyContent="center">
-            <Button outline position="relative" width="300px" onClick={() => openGuidebook(location.documents.payment_guidebook.url)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
-          </Row>
-        </Wrapper>
-      }
-      <Wrapper right margin="50px 0px"
-        background={Colors.lightGray}
-        border="top"
-      >
-        <Title
-          size="10"
-          title={yml.ecosystem.heading}
-          paragraph={yml.ecosystem.sub_heading}
-          paragraphColor="black"
-          variant="primary"
-        />
-        <WhoIsHiring
-          margin="50px"
-          images={hiring.financials.images}
-          footerTagline={hiring.financials.footer_tagline}
-          footerLink={hiring.financials.footer_link}
-          footerButton={hiring.financials.footer_button}
-        />
-        <Divider height="150px" />
-      </Wrapper>
-
-    </ >
+      </Header>
+    </>
   )
 };
 export const query = graphql`
@@ -147,7 +65,9 @@ export const query = graphql`
                 image
                 keywords
             }
-            header_data{
+            header{
+                title
+                paragraph
                 tagline
                 image{
                   childImageSharp {
@@ -180,6 +100,12 @@ export const query = graphql`
                 bullets
                 heading
             }
+            label{
+                program
+                modality
+                campus
+            }
+            syllabus_button_text
             prices{
                 heading
                 paragraph
