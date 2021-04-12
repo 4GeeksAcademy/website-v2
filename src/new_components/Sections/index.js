@@ -170,6 +170,10 @@ export const Div = styled.div`
         width: ${props => props.widthAfter};
         margin-left: ${props => props.marginLeftAfter};
         position: ${props => props.positionAfter};
+        top: ${props => props.topAfter};
+        bottom: ${props => props.bottomAfter};
+        left: ${props => props.leftAfter};
+        right: ${props => props.rightAfter};
     }
 
     &:hover { 
@@ -188,6 +192,7 @@ export const Div = styled.div`
         
     }
     @media  ${Devices.tablet}{
+        align-self: ${props => props.alignSelf_tablet};
         display: ${props => props.display_tablet};
         flex-direction: ${props => props.flexDirection_tablet};
         height: ${props => props.height_tablet};
@@ -211,6 +216,9 @@ export const Div = styled.div`
         grid-row: ${props => props.gridRow_tablet};
         justify-self: ${props => props.justifySelf_tablet};
         z-index: ${props => props.zIndex_tablet};
+        &:after {
+            display: ${props => props.displayAfter_tablet};
+        }
         
     }
     @media  ${Devices.md}{
@@ -232,10 +240,6 @@ export const Div = styled.div`
         place-items: ${props => props.placeItems_md};
         grid-column: ${props => props.gridColumn_md};
         grid-row: ${props => props.gridRow_md};
-
-        &:after {
-            display: ${props => props.displayAfter_md};
-        }
     }
     @media  ${Devices.lg}{
         justifyContent: ${props => justifyContentOptions[props.justifyContent_lg]};
@@ -343,7 +347,7 @@ export const GridContainer = ({fluid, children, display, display_tablet, backgro
 export const GridContainerWithImage = ({children, gridGap, gridGap_tablet, imageSide, background, height, height_tablet, columns, columns_tablet, margin, margin_tablet, padding, padding_tablet}) => {
     return (
         <Grid gridTemplateColumns_tablet={imageSide == "left" ? "repeat(14, 1fr) 2fr" : "2fr repeat(14, 1fr)"} background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding={padding || "0 17px"} padding_tablet={padding_tablet}>
-            <Grid gridGap={gridGap} gridGap_tablet={gridGap_tablet} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${14 / columns_tablet}fr)`} gridTemplateColumns={columns} gridColumn_tablet={imageSide == "left" ? "1 / span 14" : "2 / span 14"}>
+            <Grid gridGap={gridGap} gridGap_tablet={gridGap_tablet} gridTemplateColumns_tablet={imageSide == "left" ? `repeat(${`12`}, ${14 / columns_tablet}fr)` : `repeat(${columns_tablet}, ${14 / columns_tablet}fr)`} gridTemplateColumns={columns} gridColumn_tablet={imageSide == "left" ? "1 / span 14" : "2 / span 14"}>
                 {children}
             </Grid>
             {/* <Div display="grid" background={backgroundChild} gridColumn_md={fluid ? `1 / span 14` : `2 / span 12`}>{children}</Div> */}

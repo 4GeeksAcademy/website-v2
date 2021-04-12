@@ -9,7 +9,7 @@ import Fragment from "../Fragment"
 
 const OurPartners = ({title, paragraph, background, link, showFeatured, images, slider, ...rest}) => {
   return (
-    <Fragment github="/components/partner" >
+    <Fragment github="/components/partner" style={{margin: "100px 0px"}} >
       {title &&
         <GridContainer margin="0 0 40px 0"
           background={background}
@@ -22,7 +22,7 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
             padding="0 2em"
           >
             <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>
-            <Paragraph>{paragraph}</Paragraph>
+            <Paragraph fontSize="15px" lineHeight="22px" letterSpacing="0.05em" padding="0" padding_tablet="0 12% 4% 12%">{paragraph}</Paragraph>
           </Div>
         </GridContainer>}
       {showFeatured &&
@@ -91,7 +91,10 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
           </GridContainer>
           {/* <Grid columns="4" rows="1" margin_md="0 200px" display="none" display_tablet="grid">
           </Grid> */}
-          <GridContainer columns_tablet="5" margin_tablet="30px 0" display="none">
+
+
+          {/* changed on GridContainer margin_tablet="30px 0" */}
+          <GridContainer columns_tablet="5" margin_tablet="75px 0" display="none">
             {images.map((l, i) => {
               return (
                 i > 3 && i < 9 &&

@@ -57,6 +57,7 @@ const BaseHeading = styled(Heading)`
     font-size: ${props => props.fontSize_tablet};
     lineHeight: ${props => props.lineHeight_tablet};
     margin: ${props => props.margin_tablet};
+    padding: ${props => props.padding_tablet};
     display: ${props => props.display_tablet};
   }
   @media  ${Devices.md}{
