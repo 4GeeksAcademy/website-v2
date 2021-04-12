@@ -133,6 +133,12 @@ export const MegaMenu = ({status, setStatus, menu}) => {
         <>
             {status.toggle &&
                 <MegaMenuContainer
+                    onMouseLeave={() => {
+                        setStatus({...status, hovered: false});
+                        setTimeout(() => {
+                            setStatus(_status => ({..._status, toggle: _status.hovered}));
+                        }, 300)
+                    }}
                     flexDirection="column"
                     position="absolute"
                     background={Colors.white}
