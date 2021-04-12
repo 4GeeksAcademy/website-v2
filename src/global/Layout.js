@@ -79,6 +79,10 @@ const Layout = ({children, seo, context}) => {
                   }
                 }
               }
+              language_button{
+                text
+                link
+              }
               button {
                 button_link
                 button_type
@@ -112,8 +116,8 @@ const Layout = ({children, seo, context}) => {
               > ❌ Clear edit mode</button>
             </div>}
             <SEO {...seo} context={context} />
-            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
-            <NavbarMobile onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
+            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+            <NavbarMobile onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
             <GlobalStyle />
             <>
               {children}

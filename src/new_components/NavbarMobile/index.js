@@ -70,7 +70,7 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const NavbarMobile = ({lang, menu, open, button, onToggle, onLocationChange}) => {
+export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton, onLocationChange}) => {
     const [status, setStatus] = useState(
         {
             toggle: false,
@@ -118,7 +118,7 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, onLocationChan
                         />
                     </Link>
                 </Div>
-                <MegaMenu status={status} setStatus={setStatus} menu={menu} />
+                <MegaMenu status={status} setStatus={setStatus} menu={menu} languageButton={languageButton} />
                 <Div alignItems="center" justifyContent="between">
                     <Link onClick={onToggle} to={button.button_link || "#"}><Button minWidth="130px" width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
@@ -128,7 +128,7 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, onLocationChan
 }
 
 
-export const MegaMenu = ({status, setStatus, menu}) => {
+export const MegaMenu = ({status, setStatus, menu, languageButton}) => {
     return (
         <>
             {status.toggle &&
@@ -164,7 +164,7 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                                 <Icon icon="cross" color="#000000" width="12px" height="12px" style={{cursor: "pointer"}} onClick={() => setStatus({...status, toggle: false, itemIndex: null})} />
                             </>
                             :
-                            <H3 textAlign="left" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">ENG / ESP</H3>
+                            <Link to={languageButton.link}><H3 fontSize="13px" fontWeight="400" lineHeight="16px">{languageButton.text}</H3></Link>
                         }
                         {/* {
                             

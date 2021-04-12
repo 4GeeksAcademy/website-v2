@@ -127,7 +127,10 @@ navbar:
               link_to: "/us/coding-campuses/coding-bootcamp-santiago"
   - name: "Upcoming Dates"
     link: "/us/calendar"
-    
+
+language_button:
+  text: "ENG / ESP"
+  link: "/es/inicio?lang=es"
 button:
   button_link: "/apply"
   button_type: ""

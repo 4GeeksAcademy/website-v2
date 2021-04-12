@@ -61,6 +61,11 @@ Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor inci
       links:
         - title: "Online"
         - title: "Campuses"
+        
+        
+language_button:
+  text: "ENG / ESP"
+  link: "/?lang=en#home"
 button:
   button_link: "/aplica"
   button_type: "" ## YOU CAN LEAVE IT EMPTY FOR A FULL BACKGROUND COLOR OR 'outline' FOR A WHITE BACKGROUND WITH A BORDER

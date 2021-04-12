@@ -94,7 +94,7 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) => {
+export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLocationChange}) => {
     const [status, setStatus] = useState(
         {
             toggle: false,
@@ -152,7 +152,7 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
                     <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
-                    <H3 fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">ENG / ESP</H3>
+                    <Link to={languageButton.link}><H3 fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px">{languageButton.text}</H3></Link>
                     <Link onClick={onToggle} to={button.button_link || "#"}><Button minWidth="130px" width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
             </Nav>
