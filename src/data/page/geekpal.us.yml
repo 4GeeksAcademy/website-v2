@@ -4,7 +4,7 @@ meta_info:
   description: "Learn about our comprehensive support system for 4Geeks Academy graduates"
   image: null
   keywords: ""
-  redirects: ["/geekpal", "/us/geekpal-support"]
+  redirects: ["/geekpal", "/us/career-support"]
 tagline: NEVER BE STUCK AGAIN
 sub_heading: "LEARN FASTER THAN ANYONE ON EARTH"
 image: "../../../static/images/bg/companies-bg.jpg"
