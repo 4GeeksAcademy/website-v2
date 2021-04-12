@@ -127,14 +127,14 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
                 <Menu>
                     {menu && menu.map((item, index) => {
                         return (
-                            <MenuItem onClick={() => setStatus({...status, toggle: true, itemIndex: index})}>
+                            <MenuItem onClick={() => setStatus({...status, toggle: !status.toggle, itemIndex: index})}>
                                 <H3 margin="0 5px 0 0" fontSize="13px" lineHeight="16px" fontWeight="400">{item.name}</H3>
                                 {index != menu.length - 1 && <Icon icon="arrowdown" />}
                             </MenuItem>
                         )
                     }
                     )}
-                    <MegaMenu status={status} menu={menu} />
+                    <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
                     <H3 fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">ENG / ESP</H3>
@@ -147,10 +147,17 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
 
 
 export const MegaMenu = ({status, setStatus, menu}) => {
+    console.log("NAVBAR: ", setStatus)
     return (
         <>
-            {status.itemIndex != null && status.itemIndex != menu.length - 1 &&
-                <MegaMenuContainer background="white" transform={MegaMenuPositions[status.itemIndex].transform} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+            {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 &&
+                <MegaMenuContainer
+                    onMouseLeave={() => {
+                        setTimeout(() => {
+                            setStatus({...status, toggle: false});
+                        }, 500)
+                    }}
+                    background="white" transform={MegaMenuPositions[status.itemIndex].transform} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
                     <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
                         <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0">
                             {menu[status.itemIndex].sub_menu.icon && <Div margin="0 15px 0 0"><Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" /></Div>}
