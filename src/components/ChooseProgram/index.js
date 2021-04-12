@@ -32,7 +32,7 @@ const ChooseProgram = (props) => {
     const _Selector = (_p) => <Button
         shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
         padding="10px 30px"
-        maxWidth="250px"
+        maxWidth="300px"
         onClick={() => _p.setStatus({toggle: !_p.status.toggle})}
         color={Colors.blue}
         textColor={Colors.white}
@@ -61,7 +61,7 @@ const ChooseProgram = (props) => {
                     margin={props.margin}
                     m_sm={props.m_sm}
                     m_xs={props.m_xs}
-                    width="250px"
+                    width="300px"
                     width_xs="100%"
                     width_sm="100%"
                     justifyContent="center"

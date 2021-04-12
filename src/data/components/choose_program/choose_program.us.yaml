@@ -3,17 +3,17 @@ programs:
   - text: "Level 1: Full-Stack Developer"
     bc_slug: "full-stack"
     location_bc_slug: null #<-- you can change location when user clicks on this link
-    schedule: "Part-Time/Full-Time available"
+    schedule: "Part-Time/Full-Time - Online/In-person"
     link: "/us/coding-bootcamps/part-time-full-stack-developer"
   - text: "Level 2: Software Engineer"
     bc_slug: "software-engineering"
     location_bc_slug: null
-    schedule: "Part-Time Only"
+    schedule: "Part-Time - Online/In-person"
     link: "/us/coding-bootcamps/software-engineer-bootcamp"
-  - text: "Online / Remote"
-    bc_slug: "full-stack"
-    location_bc_slug: online
-    schedule: "Part-Time/Full-Time Available"
-    link: "/us/coding-bootcamps/part-time-full-stack-developer"
+  - text: "Machine Learning Engineering"
+    bc_slug: "machine-learning-engineering"
+    location_bc_slug: null
+    schedule: "Part-Time - Online"
+    link: "/us/coding-bootcamps/machine-learning-engineering"
 open_button_text: "CHOOSE PROGRAM"
 close_button_text: "Close"
