@@ -148,14 +148,14 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                     <Div background={Colors.lightGray} height="61px" alignItems="center" padding="24px 17px" justifyContent="between">
                         {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 ?
                             <>
-                                <Icon icon="arrowleft" color="#000000" width="12px" height="12px" />
+                                <Icon icon="arrowleft" color="#000000" width="12px" height="12px" style={{cursor: "pointer"}} onClick={() => setStatus({...status, itemIndex: null})} />
                                 <Div alignItems="center">
                                     {menu[status.itemIndex].sub_menu.icon && <Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" />}
                                     <H3 textAlign="center" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">
                                         {menu[status.itemIndex].sub_menu.title}
                                     </H3>
                                 </Div>
-                                <Icon icon="cross" color="#000000" width="12px" height="12px" />
+                                <Icon icon="cross" color="#000000" width="12px" height="12px" style={{cursor: "pointer"}} onClick={() => setStatus({...status, toggle: false, itemIndex: null})} />
                             </>
                             :
                             <H3 textAlign="left" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">ENG / ESP</H3>
@@ -166,17 +166,43 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                         <H3 textAlign="center" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">{status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 ? menu[status.itemIndex].sub_menu.title : "ENG / ESP"}</H3>
                         {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 && } */}
                     </Div>
-                    <Menu>
+
+                    {status.toggle && status.itemIndex == null && <Menu>
                         {menu && menu.map((item, index) => {
                             return (
                                 <MenuItem onClick={() => setStatus({...status, itemIndex: index})}>
-                                    <H3 textAlign="left" width="fit-content" margin="0 5px 0 0" fontSize="13px" lineHeight="16px" fontWeight="400">{item.name}</H3>
-                                    {index != menu.length - 1 && <Icon icon="arrow-right" color="#000000" width="12px" height="12px" />}
+                                    {index != menu.length - 1 ?
+                                        <>
+                                            <H3 textAlign="left" width="fit-content" margin="0 5px 0 0" fontSize="13px" lineHeight="16px" fontWeight="400">{item.name}</H3>
+                                            <Icon icon="arrow-right" color="#000000" width="12px" height="12px" />
+                                        </>
+                                        :
+                                        <Link to={item.link}><H3 textAlign="left" width="fit-content" margin="0 5px 0 0" fontSize="13px" lineHeight="16px" fontWeight="400">{item.name}</H3></Link>
+                                    }
                                 </MenuItem>
                             )
                         }
                         )}
-                    </Menu>
+                    </Menu>}
+                    <Div flexDirection="column" padding="24px 17px">
+                        {status.itemIndex != null && status.itemIndex != menu.length - 1 &&
+                            <>
+                                {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m, i) => {
+                                    return (
+                                        <>
+                                            <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="15px 0 5px 0">{m.title}</H3>
+                                            {m.sub_links != undefined && Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
+                                                return (
+                                                    <Link to={m.link_to} key={i}><Div alignItems="baseline" margin="10px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="22px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3></Div></Link>
+                                                )
+                                            })}
+                                        </>
+                                    )
+                                })}
+                            </>
+                        }
+                    </Div>
+
                 </MegaMenuContainer>
             }
         </>
@@ -198,14 +224,14 @@ export const MegaMenu = ({status, setStatus, menu}) => {
 //                 {menu[status.itemIndex].sub_menu.icon && <Div margin="0 15px 0 0"><Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" /></Div>}
 //                 <Div flexDirection="column" >
 //                     <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3>
-//                     {menu[status.itemIndex].sub_menu.paragraph.split('\n').map((d, i) =>
-//                         <Paragraph
-//                             textAlign="left"
-//                             color={Colors.darkGray}
-//                             key={i}                        >
-//                             {d}
-//                         </Paragraph>
-//                     )}
+                    // {menu[status.itemIndex].sub_menu.paragraph.split('\n').map((d, i) =>
+                    //     <Paragraph
+                    //         textAlign="left"
+                    //         color={Colors.darkGray}
+                    //         key={i}                        >
+                    //         {d}
+                    //     </Paragraph>
+                    // )}
 //                 </Div>
 //             </Div>
 //             <Div gridArea_tablet="2/1/2/13" >
@@ -238,11 +264,11 @@ export const MegaMenu = ({status, setStatus, menu}) => {
 //                                         })}
 //                                     </Div>
 //                                 }
-//                                 {m.sub_links != undefined && Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
-//                                     return (
-//                                         <Link to={m.link_to} key={i}><Div alignItems="baseline" margin="5px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3><Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" /></Div></Link>
-//                                     )
-//                                 })}
+                                // {m.sub_links != undefined && Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
+                                //     return (
+                                //         <Link to={m.link_to} key={i}><Div alignItems="baseline" margin="5px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3><Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" /></Div></Link>
+                                //     )
+                                // })}
 
 //                             </Div>
 //                         )
