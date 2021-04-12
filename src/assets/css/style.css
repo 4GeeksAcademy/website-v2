@@ -449,3 +449,7 @@ a.faq-link:hover {
     border: none;
     background: #0097CD!important;
 }
+
+.lang{
+    font-weight: 700;
+}

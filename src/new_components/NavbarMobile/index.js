@@ -164,7 +164,7 @@ export const MegaMenu = ({status, setStatus, menu, languageButton}) => {
                                 <Icon icon="cross" color="#000000" width="12px" height="12px" style={{cursor: "pointer"}} onClick={() => setStatus({...status, toggle: false, itemIndex: null})} />
                             </>
                             :
-                            <Link to={languageButton.link}><H3 fontSize="13px" fontWeight="400" lineHeight="16px">{languageButton.text}</H3></Link>
+                            <Link to={languageButton.link}><Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" fontWeight="400" lineHeight="16px"></Paragraph></Link>
                         }
                         {/* {
                             

@@ -152,7 +152,7 @@ export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLo
                     <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
-                    <Link to={languageButton.link}><H3 fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px">{languageButton.text}</H3></Link>
+                    <Link to={languageButton.link}><Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph></Link>
                     <Link onClick={onToggle} to={button.button_link || "#"}><Button minWidth="130px" width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
             </Nav>

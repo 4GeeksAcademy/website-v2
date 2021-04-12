@@ -129,7 +129,7 @@ navbar:
     link: "/us/calendar"
 
 language_button:
-  text: "ENG / ESP"
+  text: "<span class='lang'>ENG</span> / ESP"
   link: "/es/inicio?lang=es"
 button:
   button_link: "/apply"
