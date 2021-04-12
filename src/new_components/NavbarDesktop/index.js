@@ -147,16 +147,21 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
 
 
 export const MegaMenu = ({status, setStatus, menu}) => {
-    console.log("NAVBAR: ", setStatus)
     return (
         <>
             {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 &&
                 <MegaMenuContainer
                     onMouseLeave={() => {
+                        setStatus({...status, hovered: false});
                         setTimeout(() => {
-                            setStatus({...status, toggle: false});
-                        }, 500)
+                            setStatus(_status => ({..._status, toggle: _status.hovered}));
+                        }, 300)
                     }}
+                    // onMouseLeave={() => {
+                    //     setTimeout(() => {
+                    //         setStatus({...status, toggle: false});
+                    //     }, 500)
+                    // }}
                     background="white" transform={MegaMenuPositions[status.itemIndex].transform} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
                     <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
                         <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0">
