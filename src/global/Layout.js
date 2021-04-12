@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/Navbar';
+import {Navbar} from '../new_components/NavbarDesktop';
 import {StaticQuery, graphql} from 'gatsby';
 import UpcomingProgram from '../components/UpcomingProgram';
 import Footer from '../new_components/Footer';
@@ -57,6 +58,25 @@ const Layout = ({children, seo, context}) => {
               navbar {
                 name
                 link
+                sub_menu{
+                  icon
+                  title
+                  paragraph
+                  links{
+                    title
+                    level
+                    paragraph
+                    icon
+                    buttons{
+                      text
+                      link
+                    }
+                    sub_links{
+                      title
+                      link_to
+                    }
+                  }
+                }
               }
               button {
                 button_link

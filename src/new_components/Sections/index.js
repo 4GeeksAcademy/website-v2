@@ -137,6 +137,7 @@ export const Div = styled.div`
     height: ${props => props.height};
     width: ${props => props.width};
     min-width: ${props => props.minWidth};
+    min-height: ${props => props.minHeight};
     position: ${props => props.position};
     display: ${props => props.display || "flex"};
     flex-direction: ${props => props.flexDirection || 'row'};
@@ -199,6 +200,8 @@ export const Div = styled.div`
         padding: ${props => props.padding_tablet};
         margin: ${props => props.margin_tablet};
         width: ${props => props.width_tablet};
+        min-width: ${props => props.minWidth_tablet};
+        min-height: ${props => props.minHeight_tablet};
         height: ${props => props.height_tablet};
         flex: ${props => props.flex_tablet};
         border: ${props => props.border_tablet};
@@ -212,6 +215,7 @@ export const Div = styled.div`
         grid-column: ${props => props.gridColumn_tablet};
         grid-row: ${props => props.gridRow_tablet};
         justify-self: ${props => props.justifySelf_tablet};
+        z-index: ${props => props.zIndex_tablet};
         &:after {
             display: ${props => props.displayAfter_tablet};
         }
@@ -318,7 +322,7 @@ export const Grid = styled(Div)`
 export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background, margin, margin_tablet, padding, padding_tablet}) => {
     return (
         <Grid background={background} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} padding={padding || "0 17px"} padding_tablet={padding_tablet || "0"}>
-            <Grid gridTemplateColumns_tablet={`repeat(12, 1fr`} gridColumn_tablet="3 / span 10">
+            <Grid gridTemplateColumns_tablet={`repeat(12, 1fr)`} gridColumn_tablet="3 / span 10">
                 <Div flexDirection="column" >
                     <H1 type="h1" margin="0 0 11px 0" color="#606060">{seo_title}</H1>
                     <H2 type="h2" fontSize="50px" lineHeight="60px">{`< ${title} >`}</H2>

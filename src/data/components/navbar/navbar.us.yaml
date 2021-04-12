@@ -1,21 +1,133 @@
 navbar:
-  - name: "Home"
+  - name: "Programs"
     link: "/#home"
+    sub_menu:
+      icon: ""
+      title: "Programs"
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi.
+      "
+      links:
+        - title: "Full Stack Developer"
+          level: "Level 1"
+          icon: "fullstack"
+          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          buttons:
+            - text: "Part Time"
+              link: ""
+            - text: "Part Time"
+              link: ""
+          
+        - title: "Software Engineer"
+          level: "Level 2"
+          icon: "fullstack"
+          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          buttons:
+            - text: "View Program"
+              link: ""
+         
+        - title: "AI/Machine Learning Engineering"
+          level: "Online"
+          icon: "fullstack"
+          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          buttons:
+            - text: "View program"
+              link: ""
+          
   - name: "Why 4Geeks"
     link: "/why-4geeks"
-  - name: "The Programs"
+    sub_menu:
+      icon: "awards"
+      title: "Why 4Geeks Academy"
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Accompaniment"
+          sub_links: 
+            - title: "GeekPal"
+              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+            - title: "GeekForce"
+              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+        - title: "Validation"
+          sub_links: 
+            - title: "Awards"
+              link_to: ""
+            - title: "Outcomes"
+              link_to: ""
+            - title: "Geeks Vs Others"
+              link_to: ""
+        - title: "Prices"
+          sub_links: 
+            - title: "Financials"
+              link_to: ""
+            - title: "Prices"
+              link_to: ""
+            - title: "Scholarships"
+              link_to: ""
+        - title: "Our Students"
+          sub_links: 
+            - title: "Alumni & Projects"
+              link_to: ""
+            - title: "Testimonials"
+              link_to: ""
+  - name: "The Academy"
     link: "/course/full-stack-web-development-bootcamp-part-time"
-    links:
-      - name: "Desarrollador Full Stack"
-      - link: "/course/full-stack-web-development-bootcamp-part-time"
-      - name: "Ingeniero de Software"
-      - link: "/course/software-engineering-coding-bootcamp"
+    sub_menu:
+      icon: "hat"
+      title: "The Academy"
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: ""
+          sub_links: 
+            - title: "Who we are"
+              link_to: ""
+            - title: "Press"
+              link_to: ""
+            - title: "Blog"
+              link_to: ""
+            - title: "Partners"
+              link_to: ""
+# links:
+#       - name: "Desarrollador Full Stack"
+#       - link: "/course/full-stack-web-development-bootcamp-part-time"
+#       - name: "Ingeniero de Software"
+#       - link: "/course/software-engineering-coding-bootcamp"
   # - name: "Pricing"
   #   link: "/pricing"
-  - name: "for companies"
+  - name: "Campuses"
     link: "/partners"
+    sub_menu:
+      icon: "campuses"
+      title: "Our Campuses"
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+          sub_links: 
+            - title: "Part Time"
+              link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+            - title: "Full Time"
+              link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+        - title: "Campuses"
+          sub_links: 
+            - title: "Caracas"
+              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+            - title: "Madrid"
+              link_to: "/us/coding-campuses/coding-bootcamp-madrid"
+            - title: "Miami"
+              link_to: "/us/coding-campuses/coding-bootcamp-miami"
+            - title: "San José"
+              link_to: "/us/coding-campuses/coding-bootcamp-costa-rica"
+            - title: "Santiago de Chile"
+              link_to: "/us/coding-campuses/coding-bootcamp-santiago"
   - name: "Upcoming Dates"
-    link: "/calendar"
+    link: "/us/calendar"
+    
 button:
   button_link: "/apply"
   button_type: ""
