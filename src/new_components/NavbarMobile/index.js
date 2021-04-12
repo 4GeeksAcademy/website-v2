@@ -26,27 +26,9 @@ const MegaMenuContainer = styled(Div)`
     left: ${props => props.left};
     transform: ${props => props.transform};
 `
-const MegaMenuPositions = [
-    {
-        top: "",
-        left: ""
-    },
-    {
-        top: "",
-        left: "50%",
-        transform: "translateX(-480px)"
-    },
-    {
-        top: "",
-        left: "50%",
-        transform: "translateX(-280px)"
-    },
-    {
-        top: "",
-        left: "50%",
-        transform: "translateX(-150px)"
-    },
-]
+const SecondaryMenuContainer = styled(Div)`
+    
+`
 const Nav = styled.nav`
     height: 71px;
     display: ${props => props.display};
@@ -163,13 +145,31 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                     zIndex="1"
                     boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
                 >
-                    <Div background={Colors.lightGray} height="61px" alignItems="center" padding="24px 17px">
-                        <H3 textAlign="left" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">ENG / ESP</H3>
+                    <Div background={Colors.lightGray} height="61px" alignItems="center" padding="24px 17px" justifyContent="between">
+                        {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 ?
+                            <>
+                                <Icon icon="arrowleft" color="#000000" width="12px" height="12px" />
+                                <Div alignItems="center">
+                                    {menu[status.itemIndex].sub_menu.icon && <Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" />}
+                                    <H3 textAlign="center" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">
+                                        {menu[status.itemIndex].sub_menu.title}
+                                    </H3>
+                                </Div>
+                                <Icon icon="cross" color="#000000" width="12px" height="12px" />
+                            </>
+                            :
+                            <H3 textAlign="left" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">ENG / ESP</H3>
+                        }
+                        {/* {
+                            
+                        }
+                        <H3 textAlign="center" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">{status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 ? menu[status.itemIndex].sub_menu.title : "ENG / ESP"}</H3>
+                        {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 && } */}
                     </Div>
                     <Menu>
                         {menu && menu.map((item, index) => {
                             return (
-                                <MenuItem onClick={() => setStatus({...status, toggle: !status.toggle, itemIndex: index})}>
+                                <MenuItem onClick={() => setStatus({...status, itemIndex: index})}>
                                     <H3 textAlign="left" width="fit-content" margin="0 5px 0 0" fontSize="13px" lineHeight="16px" fontWeight="400">{item.name}</H3>
                                     {index != menu.length - 1 && <Icon icon="arrow-right" color="#000000" width="12px" height="12px" />}
                                 </MenuItem>
