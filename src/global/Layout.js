@@ -4,6 +4,7 @@ import '../assets/css/style.css';
 import '../assets/css/utils.css';
 // import Navbar from '../components/Navbar';
 import {Navbar} from '../new_components/NavbarDesktop';
+import {NavbarMobile} from '../new_components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
 import UpcomingProgram from '../components/UpcomingProgram';
 import Footer from '../new_components/Footer';
@@ -78,6 +79,10 @@ const Layout = ({children, seo, context}) => {
                   }
                 }
               }
+              language_button{
+                text
+                link
+              }
               button {
                 button_link
                 button_type
@@ -111,7 +116,8 @@ const Layout = ({children, seo, context}) => {
               > ❌ Clear edit mode</button>
             </div>}
             <SEO {...seo} context={context} />
-            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
+            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+            <NavbarMobile onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
             <GlobalStyle />
             <>
               {children}

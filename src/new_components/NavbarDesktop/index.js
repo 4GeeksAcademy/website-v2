@@ -19,24 +19,39 @@ const MegaMenuContainer = styled(Div)`
     left: ${props => props.left};
     transform: ${props => props.transform};
 `
+
+const Triangle = styled.div`
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid white;
+    top:-20px;
+    left: ${props => props.left};
+`
 const MegaMenuPositions = [
     {
         top: "",
-        left: ""
+        left: "",
+        leftTriangle: "28%"
     },
     {
         top: "",
         left: "50%",
+        leftTriangle: "40%",
         transform: "translateX(-480px)"
     },
     {
         top: "",
         left: "50%",
+        leftTriangle: "50%",
         transform: "translateX(-280px)"
     },
     {
         top: "",
         left: "50%",
+        leftTriangle: "50%",
         transform: "translateX(-150px)"
     },
 ]
@@ -79,7 +94,7 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) => {
+export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLocationChange}) => {
     const [status, setStatus] = useState(
         {
             toggle: false,
@@ -137,7 +152,7 @@ export const Navbar = ({lang, menu, open, button, onToggle, onLocationChange}) =
                     <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
-                    <H3 fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">ENG / ESP</H3>
+                    <Link to={languageButton.link}><Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph></Link>
                     <Link onClick={onToggle} to={button.button_link || "#"}><Button minWidth="130px" width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
             </Nav>
@@ -158,6 +173,7 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                         }, 300)
                     }}
                     background="white" transform={MegaMenuPositions[status.itemIndex].transform} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+                    <Triangle left={MegaMenuPositions[status.itemIndex].leftTriangle} />
                     <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
                         <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0" margin="0 0 50px 0">
                             {menu[status.itemIndex].sub_menu.icon && <Div margin="0 15px 0 0"><Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" /></Div>}
