@@ -5,11 +5,13 @@ meta_info:
   image: null
   keywords: ""
   redirects: []
-tagline: NO PROGRAMES SOLO MÁS NUNCA
-sub_heading: "Texto que explique que GeekPal es una membresía con beneficios de acompañamiento, que el estudiante obtiene al inscribirse en un programa con La Academia. 
-<span style='font-weight: bold'> Aún despues de haberte graduado continuarás teniendo mentoría personalizada.</span>"
-image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekpal.png"
+
+header:
+  title: ""
+  image: "../../../static/images/bg/companies-bg.jpg"
+  image_alt: ""
+  paragraph: "Texto que explique que GeekPal es una membresía con beneficios de acompañamiento, que el estudiante obtiene al inscribirse en un programa con La Academia. <span style='font-weight: bold'> Aún despues de haberte graduado continuarás teniendo mentoría personalizada.</span>"
+  image_logo: "/images/geekpal.png"
 
 geekPal:
   - videoId: "cKcZD0_1IKk"
