@@ -64,6 +64,13 @@ const Layout = ({children, seo, context}) => {
                   paragraph
                   links{
                     title
+                    level
+                    paragraph
+                    icon
+                    buttons{
+                      text
+                      link
+                    }
                     sub_links{
                       title
                       link_to

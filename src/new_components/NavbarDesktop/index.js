@@ -5,7 +5,7 @@ import {useStaticQuery, graphql} from 'gatsby';
 import {Devices} from '../Responsive'
 import {SessionContext} from '../../session';
 import ChooseProgram from '../ChooseProgram'
-import {H3, Paragraph} from '../Heading';
+import {H3, H4, Paragraph} from '../Heading';
 import {Colors, Button, Anchor, Link} from '../Styling';
 import {Div, Grid} from '../Sections';
 import Icon from "../Icon"
@@ -178,12 +178,38 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                                 {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m, i) => {
                                     return (
                                         <Div flexDirection="column" key={i}>
+                                            {m.icon && <Icon icon={m.icon} width="100px" height="73px" />}
                                             <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{m.title}</H3>
-                                            {Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
+                                            {m.level && <H4 textAlign="left" fontSize="15px" fontWeight="400" lineHeight="22px">{m.level}</H4>}
+                                            {m.paragraph && <Paragraph textAlign="left">{m.paragraph}</Paragraph>}
+                                            {m.buttons != undefined &&
+                                                <Div>
+                                                    {Array.isArray(m.buttons) && m.buttons.map((m, i) => {
+                                                        return (
+                                                            <Button
+                                                                outline
+                                                                font='"Lato", sans-serif'
+                                                                width="fit-content"
+                                                                colorHover={Colors.black}
+                                                                background={Colors.black}
+                                                                margin="20px 0"
+                                                                pointer
+                                                                textColor={Colors.white}
+                                                                fontSize={"13px"}
+                                                                borderRadius="3px" padding="10px"
+                                                            >
+                                                                {m.text}
+                                                            </Button>
+                                                        )
+                                                    })}
+                                                </Div>
+                                            }
+                                            {m.sub_links != undefined && Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
                                                 return (
                                                     <Link to={m.link_to} key={i}><Div alignItems="baseline" margin="5px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3><Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" /></Div></Link>
                                                 )
                                             })}
+
                                         </Div>
                                     )
                                 })}
