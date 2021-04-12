@@ -15,9 +15,9 @@ import "../assets/css/single-post.css"
 export default function Template (props) {
     const {data, pageContext} = props;
     const post = props.data.markdownRemark;
-    const allowed = [`${post.frontmatter.author}`];
+    const allowed = [`${post.frontmatter.author ? post.frontmatter.author.toLowerCase() : ""}`];
     const filtered = Object.keys(twitterUser)
-        .filter(key => allowed.includes(key))
+        .filter(key => allowed.includes(key.toLowerCase()))
         .reduce((obj, key) => {
             obj = twitterUser[key];
             return obj;
