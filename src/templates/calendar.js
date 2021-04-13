@@ -183,10 +183,10 @@ const Calendar = (props) => {
               return i < 3 && (
                 <Div
                   display="flex"
-                  flexDirection_tablet="column"
+                  flexDirection="column"
                   justifyContent="between"
-                  borderBottom_tablet={`1px solid ${Colors.lightGray}`}
-                  border_tablet={`1px solid ${Colors.lightGray}`}
+                  borderBottom={`1px solid ${Colors.lightGray}`}
+                  border={`1px solid ${Colors.lightGray}`}
                   key={i}
                   style={{borderRadius: `3px`}}>
                   <LazyLoad scroll={true} height={230}>
@@ -199,10 +199,10 @@ const Calendar = (props) => {
 
                     />
                   </LazyLoad>
-                  <Div padding="25px" flexDirection_tablet="column">
-                    <H3 textAlign="left" margin_tablet="0 0 45px 0">{m.title}</H3>
+                  <Div padding="25px" flexDirection="column">
+                    <H3 textAlign="left" margin_tablet="0 0 45px 0" margin="0 0 30px 0">{m.title}</H3>
                     <H4 textAlign="left" fontSize="15px" fontWeight="700" textTransform="uppercase" lineHeight="22px" >{dayjs(m.starting_at).add(5, "hour").locale("en").format("ddd, DD MMM YYYY")}</H4>
-                    <H4 textAlign="left" fontSize="15px" textTransform="uppercase" lineHeight="22px" margin_tablet="0 0 25px 0">
+                    <H4 textAlign="left" fontSize="15px" textTransform="uppercase" lineHeight="22px" margin_tablet="0 0 25px 0" margin="0 0 15px 0">
                       {m.online_event ? "Online" : m.academy.city ? m.academy.city.name : m.academy.name}
                     </H4>
                     <Anchor to={m.url}>
@@ -293,7 +293,7 @@ const Calendar = (props) => {
           />
         </Row>
       </Wrapper> */}
-      <Wrapper border="top">
+      {/* <Wrapper border="top">
         <Row display="flex">
           {
             filterType.value === "cohorts" ?
@@ -345,7 +345,7 @@ const Calendar = (props) => {
           }
         </Row>
       </Wrapper>
-      <Divider height="50px" />
+      <Divider height="50px" /> */}
     </>
   )
 };
