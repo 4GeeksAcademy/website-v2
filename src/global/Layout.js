@@ -84,6 +84,7 @@ const Layout = ({children, seo, context}) => {
                 link
               }
               button {
+                apply_button_text
                 button_link
                 button_type
                 button_color_text
