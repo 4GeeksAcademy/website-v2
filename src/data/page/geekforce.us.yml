@@ -11,7 +11,7 @@ header:
   title: ""
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "Texto que explique que GeekPal es una membresía con beneficios de apoyo profesional, que el estudiante obtiene al inscribirse en un programa con La Academia. Aún despues de haberte graduado continuarás teniendo el apoyo profesional ilimitado."
+  paragraph: "Text explaining that GeekForce is a membership with professional support benefits, which the student obtains by enrolling in a program with The Academy. <span style='font-weight: 700;'> Even after graduation we continue to have unlimited professional support.</span>"
   image_logo: "/images/geekforce.png"
   
 # Introduction Video here

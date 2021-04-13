@@ -5,11 +5,13 @@ meta_info:
   image: null
   keywords: ""
   redirects: ["/geekpal"]
-tagline: NEVER BE STUCK AGAIN
-sub_heading: "Text that explains that GeekPal is a membership with accompanying benefits, which the student obtains by enrolling in a program with The Academy. 
-<span style='font-weight: bold'> Even after you graduate, you will continue to have personalized mentoring.</span>"
-image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekpal.png"
+
+header:
+  title: ""
+  image: "../../../static/images/bg/companies-bg.jpg"
+  image_alt: ""
+  paragraph: "Text that explains that GeekPal is a membership with accompanying benefits, which the student obtains by enrolling in a program with The Academy. <span style='font-weight: bold'> Even after you graduate, you will continue to have personalized mentoring.</span>"
+  image_logo: "/images/geekpal.png"
 
 # Introduction Video here
 geekPal:

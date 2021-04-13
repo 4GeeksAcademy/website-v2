@@ -1,21 +1,71 @@
 navbar:
   - name: "Home"
     link: "/es/inicio"
+    sub_menu:
+      icon: ""
+      title: "Programs"
+      paragraph: "Academia
+Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+          sub_links: 
+            - title: "Part Time"
+              link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+            - title: "Full Time"
+              link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+        - title: "Campuses"
   - name: "La Academia"
     link: "/sobre-la-academia"
+    sub_menu:
+      icon: ""
+      title: "Programs"
+      paragraph: "Academia
+Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+        - title: "Campuses"
   - name: "Programas"
     link: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
-    links:
-      - name: "Full Stack Development"
-      - link: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
-      - name: "Senior Software Engineering"
-      - link: "/es/course/ingenieria-de-software-programacion"
+    sub_menu:
+      icon: ""
+      title: "Programs"
+      paragraph: "Academia
+Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+        - title: "Campuses"
+    # links:
+    #   - name: "Full Stack Development"
+    #   - link: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+    #   - name: "Senior Software Engineering"
+    #   - link: "/es/course/ingenieria-de-software-programacion"
   # - name: "Precios"
   #   link: "/precios"
   - name: "Aliados"
     link: "/aliados"
+    sub_menu:
+      icon: ""
+      title: "Programs"
+      paragraph: "Academia
+Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+        - title: "Campuses"
   - name: "Próximas Fechas"
     link: "/calendario"
+    sub_menu:
+      icon: ""
+      title: "Programs"
+      paragraph: "Academia
+Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+        - title: "Campuses"
+        
+        
+language_button:
+  text: "ENG / <span class='lang'>ESP</span>"
+  link: "/?lang=en#home"
 button:
   button_link: "/aplica"
   button_type: "" ## YOU CAN LEAVE IT EMPTY FOR A FULL BACKGROUND COLOR OR 'outline' FOR A WHITE BACKGROUND WITH A BORDER
