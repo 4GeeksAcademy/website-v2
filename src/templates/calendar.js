@@ -177,11 +177,11 @@ const Calendar = (props) => {
           <H3 textAlign="left">{yml.events.title}</H3>
         </GridContainer>
       }
-      <GridContainer columns_tablet="3" margin="0 0 73px 0" margin_tablet="0 0 84px 0">
+      <GridContainer columns_tablet="3" margin="0 0 73px 0" margin_tablet="0 0 30px 0">
         <>
           {
             data.events.filtered.map((m, i) => {
-              const limits = limit == true ? 3 : 100
+              const limits = limit == true ? 6 : 100
               return i < limits && (
                 <Div
                   display="flex"
@@ -218,9 +218,16 @@ const Calendar = (props) => {
           }
         </>
       </GridContainer>
-      {data.events.filtered.length > 3 ? <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
-        <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show more</Paragraph>
-      </GridContainer> : null}
+      {limit && data.events.filtered.length > 5 &&
+        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
+          <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show more</Paragraph>
+        </GridContainer>
+      }{!limit && data.events.filtered.length > 5 &&
+        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
+          <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show less</Paragraph>
+        </GridContainer>
+
+      }
 
       {/* <WrapperImage
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
