@@ -60,7 +60,7 @@ const Program = ({data, pageContext, yml}) => {
       paragraph={yml.header.paragraph}
       padding_tablet="72px 0 40px 0"
     >
-      <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
+      <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center" margin_tablet="0 0 50px 0">
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
