@@ -56,6 +56,7 @@ const Title_Paragraph = (props) =>{
   )
 }
 
+
 //Funcion que muestra las imagenes dentro de un slider
 const Images_With_Slider = (props) => {
   return (
@@ -76,6 +77,7 @@ const Images_With_Slider = (props) => {
     </>
   )
 }
+
 
 //Funcion que muestra las imagenes en columna y centradas
 const Images_Centered = (props) => {
@@ -106,6 +108,7 @@ const Images_Centered = (props) => {
   )
 }
 
+
 //Imagenes con propiedad featured==true
 const Images_Featured = (props) =>{
   return (
@@ -132,6 +135,7 @@ const Images_Featured = (props) =>{
   )
 }
 
+//Punto de entrada al componente
 const OurPartners = ({ title, paragraph, background, link, showFeatured, images, slider, ...rest }) => {
 
   return (
