@@ -25,8 +25,7 @@ const Partners = (props) => {
   };
   const partnersData = data.allPartnerYaml.edges[0].node;
   return (
-    <>
-
+    <>      
       <Header
         seo_title={yml.seo_title}
         title={yml.header.title}
@@ -41,6 +40,7 @@ const Partners = (props) => {
           </Link>
         </Div>
       </Header>
+
       <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
         <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
@@ -53,7 +53,9 @@ const Partners = (props) => {
       </Grid>
 
       <Badges lang={pageContext.lang} link />
+
       <Div height="5px" display="none" margin_tablet="73px 0" display_md="flex" background={Colors.lightGray}></Div>
+    
       <OurPartners
         images={partnersData.partners.images}
         title={partnersData.partners.tagline}
@@ -61,6 +63,7 @@ const Partners = (props) => {
         showFeatured={true}
         props={partnersData.partners}
       />
+
       <GridContainer fluid background={Colors.verylightGray} padding="36px 17px 80px 17px" padding_tablet="75px 0 133px 0" margin_tablet="115px 0 100px 0">
         <GridContainer columns_tablet="12" margin_tablet="0 0 50px 0">
           <Div
@@ -73,15 +76,16 @@ const Partners = (props) => {
             <Paragraph>{partnersData.coding.sub_heading}</Paragraph>
           </Div>
         </GridContainer>
+       
         <GridContainer backgroundChild={Colors.white} padding_tablet="42px 0 80px 0">
-          <OurPartners
+          <OurPartners            
             images={partnersData.coding.images}
             showFeatured={true}
-            props={partnersData.partners}
-
+            props={partnersData.partners}                               
           />
         </GridContainer>
       </GridContainer>
+
       <GridContainer columns_tablet="12" padding="99px  17px 80px 17px" padding_tablet="0" margin_tablet="0 0 81px 0">
         <Div gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
           <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
@@ -94,8 +98,8 @@ const Partners = (props) => {
         <Div justifyContent="center" gridColumn_tablet="8 / 13" gridRow_tablet="2 / 2" margin="0 0 81px 0">
           <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} />
         </Div>
-
       </GridContainer>
+
     </>
   )
 };
