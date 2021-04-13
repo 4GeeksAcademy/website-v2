@@ -6,10 +6,15 @@ meta_info:
     keywords: "4Geeks Academy Events, 4Geeks Academy Workshops, 4Geeks Academy Events, Workshops, Events, Upcoming Cohorts, Upcoming Dates"
     redirects: ["/upcoming", "/dates"]
 
+seo_title: "Coding Bootcamp"
 header:
-    tagline: UPCOMING COURSES AND EVENTS AT 4GEEKS ACADEMY
-    sub_heading: "Filter the events or cohorts based what you are interested on"
-    image: "../../../static/images/bg/4Geeks-events-bg.jpg"
+    title: Upcoming Courses
+    paragraph: "Filter the events or cohorts based what you are interested on"
+    image: ""
+    image_alt: ""
+events:
+    title: "Upcoming Events"
+    paragraph: ""
 button:
     apply_button_text: "APPLY"
     apply_button_link: "/apply"
