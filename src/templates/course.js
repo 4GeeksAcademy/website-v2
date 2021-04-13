@@ -60,13 +60,13 @@ const Program = ({data, pageContext, yml}) => {
       paragraph={yml.header.paragraph}
       padding_tablet="72px 0 40px 0"
     >
-      <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+      <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
-          <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+          <Button width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button outline width="200px" color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button outline width="200px" width_tablet="fit-content" color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
       <Badges lang={pageContext.lang} margin="0 0 40px 0" />
     </Header>

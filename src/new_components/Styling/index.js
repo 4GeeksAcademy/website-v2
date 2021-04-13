@@ -285,6 +285,7 @@ export const Button = styled(SmartButton)`
     }
     @media  ${Devices.tablet}{
         width: ${props => props.width_tablet};
+        margin: ${props => props.margin_tablet};
     }
     @media  ${Devices.md}{
         width: ${props => props.width_md};
