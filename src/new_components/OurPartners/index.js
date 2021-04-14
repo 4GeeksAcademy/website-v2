@@ -6,6 +6,7 @@ import { H2, H3, H4, Title, Paragraph } from '../Heading'
 import Link from 'gatsby-link'
 import Card from '../Card';
 import Fragment from "../Fragment"
+import styles from './partners.marquee.module.css'
 
 // Funcion que muestra TITULO + PARAGRAFO centrados
 const Title_Paragraph = (props) =>{
@@ -78,6 +79,33 @@ const Images_With_Slider = (props) => {
   )
 }
 
+//Funcion que muestra las imagenes tipo marquesina con loop infinito
+const Images_With_Marquee = (props) => {
+  return (
+    <>
+      <Div className={styles.marquee} margin="0 0 50px 0" >
+        <Div className={styles.marqueeContent}>
+          {props.images.map((l, i) => {
+            return (
+              <Div>
+                K
+                {/*
+                <Img
+                  key={i}
+                  style={{ height: "80px", minWidth: "120px", margin: "0 5px"}}
+                  imgStyle={{ objectFit: "contain" }}
+                  alt={l.name}
+                  fluid={l.image.childImageSharp.fluid}
+                />
+                */}
+              </Div>              
+            )
+          })}
+        </Div>
+      </Div>
+    </>
+  )
+}
 
 //Funcion que muestra las imagenes en columna y centradas
 const Images_Centered = (props) => {
@@ -148,10 +176,10 @@ const OurPartners = ({ title, paragraph, background, link, showFeatured, images,
       }
       {
         slider ? 
-              <Images_With_Slider images={images} /> 
+              <Images_With_Slider images={images} />
               : 
               <Images_Centered images={images} />          
-      }
+      }      
       {
         link &&
         <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">

@@ -1,0 +1,61 @@
+/*
+  Marquee Structure:
+    
+    .marquee
+      .marqueeContent        
+          .marqueeContent div (img)
+*/
+
+
+/* global variables */
+:root{
+  --marquee-height: 15vh;
+  --marquee-width: 80vw; 
+  --marquee-elements: 9;
+  --marquee-elements-displayed: 8;
+  --marquee-element-width: calc( var(--marquee-width) / var(--marquee-elements-displayed) );
+  --marquee-animation-duration: calc( var(--marquee-elements) * 1)
+}
+
+/* marquee (wrapper)*/
+.marquee{
+  background: #ffffff;  
+  color: white;
+  height: var(--marquee-height);
+  width: var(--marquee-width);
+  overflow: hidden;  
+}
+
+/* items container */
+.marqueeContent{
+  animation: scrollImages calc(var(--marquee-animation-duration)*1s) linear infinite;
+  list-style: none;
+  height: 100%;
+
+  display: flex;
+  /*align-items: center;  */ 
+}
+
+/* image div */
+.marqueeContent div{  
+  width: var(--marquee-element-width);
+  flex-shrink: 0;
+  font-size: 5rem;
+  white-space: nowrap; 
+  
+  padding: 0 0 0 0;
+  background-color: red;
+  margin: 0 5px;
+}
+
+/* to scroll images */
+@keyframes scrollImages{
+  0%{ transform: translate(25vw); }
+  100%{ transform: translate(-50vw); }
+}
+
+
+/* pause scroll on hover */
+.marqueeContent:hover{
+  animation-play-state: paused;
+}
