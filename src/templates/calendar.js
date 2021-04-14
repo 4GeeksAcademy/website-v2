@@ -4,6 +4,7 @@ import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../new_components/Hea
 import {Colors, Button, Img, Anchor} from '../new_components/Styling'
 import Icon from '../new_components/Icon'
 import Select from '../new_components/Select'
+import UpcomingDates from '../new_components/UpcomingDates'
 import Card from '../components/Card'
 import BaseRender from './_baseLayout'
 import dayjs from "dayjs"
@@ -226,9 +227,8 @@ const Calendar = (props) => {
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
           <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show less</Paragraph>
         </GridContainer>
-
       }
-
+      <UpcomingDates lang={pageContext.lang} />
       {/* <WrapperImage
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         border="bottom"

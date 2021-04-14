@@ -11,7 +11,7 @@ import UpcomingDates from '../new_components/UpcomingDates'
 import Staff from '../new_components/Staff';
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
-import {Div, Row, Column, Wrapper, Container, Divider, Grid} from '../new_components/Sections'
+import {Div, Row, Column, Wrapper, Container, GridContainerWithImage, Grid} from '../new_components/Sections'
 import {Title, H1, H2, H4, H3, Span, Paragraph, Separator} from '../new_components/Heading'
 import {Button, Colors, Small, Img, StyledBackgroundSection} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
@@ -58,10 +58,10 @@ const Location = ({data, pageContext, yml}) => {
     {/* github={`/location`} */}
     {/* <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px"> */}
     {/* <Grid height="375px" height_md="219px" columns="2" rows="2" columns_md="12" rows_md="1" background={Colors.verylightGray}> */}
-    <Grid columns_md="12" height_md="395px" margin_md="0 0 57px 0">
-      <Div flexDirection="column" justifyContent_md="center" gridArea_md="1/3/1/7">
+    <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 0 54px 0" columns_tablet="14" margin="120px 0 24px 0" margin_tablet="0">
+      <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
         <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
-        <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`</ ${yml.header.tagline}`}</H2>
+        <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
         <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
         <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
         <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph>
@@ -76,7 +76,9 @@ const Location = ({data, pageContext, yml}) => {
           closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
         />
       </Div>
-      <Div gridArea_md="1/7/1/13">
+      <Div display="none" display_tablet="flex" height="auto" width="100%" gridColumn_tablet="9 / 15" style={{position: "relative"}}>
+        {/* <Div style={{position: "absolute", background: "#C7F3FD", width: "71%", height: "192px", top: "-24px", left: "97px", borderRadius: "3px"}}></Div>
+        <Div style={{position: "absolute", background: "#FFB718", width: "256px", height: "174px", bottom: "-25px", right: "18px", borderRadius: "3px"}}></Div> */}
         <StyledBackgroundSection
           height={`395px`}
           image={yml.header.image.childImageSharp.fluid}
@@ -84,8 +86,8 @@ const Location = ({data, pageContext, yml}) => {
           alt={yml.header.alt}
         />
       </Div>
-    </Grid>
-    {/* </Container> */}
+    </GridContainerWithImage>
+
     <Container variant="fluid" background={Colors.verylightGray} padding="63px 81px">
       <Badges lang={pageContext.lang} />
       {/* <News location={yml.breathecode_location_slug} lang={lang} /> */}
