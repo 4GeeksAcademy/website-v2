@@ -6,10 +6,16 @@ meta_info:
     keywords: "4Geeks Academy Eventos, 4Geeks Academy Proximas Fechas, 4Geeks Academy Talleres, 4Geeks Academy Cursos"
     redirects: ["/calendario"]
 
+seo_title: "Coding Bootcamp"
 header:
-    tagline: Próximos programas y Eventos de 4GEEKS ACADEMY
-    sub_heading: "Ajusta los filtros a los eventos of cursos que más te interesan"
-    image: "../../../static/images/bg/4Geeks-events-bg.jpg"
+    title: Próximos programas y Eventos de 4GEEKS ACADEMY
+    paragraph: "Ajusta los filtros a los eventos of cursos que más te interesan"
+    image: ""
+    image_alt: ""
+
+events:
+    title: "Próxima Fechas"
+    paragraph: ""
 button:
     apply_button_text: "APLICAR"
     apply_button_link: "/aplica"

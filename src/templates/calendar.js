@@ -1,10 +1,11 @@
 import React, {useState, useEffect, useContext} from 'react';
-import {Row, Column, Wrapper, WrapperImage, Divider, Div} from '../components/Sections'
-import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, Img, Anchor} from '../components/Styling'
+import {Row, Column, Wrapper, Header, Divider, Div, GridContainer} from '../new_components/Sections'
+import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../new_components/Heading'
+import {Colors, Button, Img, Anchor} from '../new_components/Styling'
+import Icon from '../new_components/Icon'
+import Select from '../new_components/Select'
+import UpcomingDates from '../new_components/UpcomingDates'
 import Card from '../components/Card'
-import Icon from '../components/Icon'
-import Select from '../components/Select'
 import BaseRender from './_baseLayout'
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
@@ -119,11 +120,13 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
 </Column>;
 const Calendar = (props) => {
   const {pageContext, yml} = props;
+  const [limit, setLimit] = useState(true);
   const {session} = useContext(SessionContext);
   const [data, setData] = useState({
     events: {catalog: [], all: [], filtered: []},
     cohorts: {catalog: [], all: [], filtered: []}
   });
+  // console.log("calendar: ", yml)
   const [academy, setAcademy] = useState(null)
   const [filterType, setFilterType] = useState({label: "Upcoming Courses and Events", value: "cohorts"});
   useEffect(() => {
@@ -164,7 +167,69 @@ const Calendar = (props) => {
   }, [session]);
   return (
     <>
-      <WrapperImage
+      <Header
+        seo_title={yml.seo_title}
+        title={yml.header.title}
+        padding_tablet="72px 0 40px 0"
+        background={Colors.veryLightBlue}
+      />
+      {yml.events.title &&
+        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
+          <H3 textAlign="left">{yml.events.title}</H3>
+        </GridContainer>
+      }
+      <GridContainer columns_tablet="3" margin="0 0 73px 0" margin_tablet="0 0 30px 0">
+        <>
+          {
+            data.events.filtered.map((m, i) => {
+              const limits = limit == true ? 6 : 100
+              return i < limits && (
+                <Div
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="between"
+                  borderBottom={`1px solid ${Colors.lightGray}`}
+                  border={`1px solid ${Colors.lightGray}`}
+                  key={i}
+                  style={{borderRadius: `3px`}}>
+                  <LazyLoad scroll={true} height={230}>
+                    <Img
+                      src={m.banner}
+                      bsize="cover"
+                      mb="10px"
+                      position="center center"
+                      height="180px"
+
+                    />
+                  </LazyLoad>
+                  <Div padding="25px" flexDirection="column">
+                    <H3 textAlign="left" margin_tablet="0 0 45px 0" margin="0 0 30px 0">{m.title}</H3>
+                    <H4 textAlign="left" fontSize="15px" fontWeight="700" textTransform="uppercase" lineHeight="22px" >{dayjs(m.starting_at).add(5, "hour").locale("en").format("ddd, DD MMM YYYY")}</H4>
+                    <H4 textAlign="left" fontSize="15px" textTransform="uppercase" lineHeight="22px" margin_tablet="0 0 25px 0" margin="0 0 15px 0">
+                      {m.online_event ? "Online" : m.academy.city ? m.academy.city.name : m.academy.name}
+                    </H4>
+                    <Anchor to={m.url}>
+                      <Button outline color={Colors.black} padding="10px 17px" textColor={Colors.white}>{yml.button.event_register_button_link}</Button>
+                    </Anchor>
+
+                  </Div>
+                </Div>
+              )
+            })
+          }
+        </>
+      </GridContainer>
+      {limit && data.events.filtered.length > 5 &&
+        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
+          <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show more</Paragraph>
+        </GridContainer>
+      }{!limit && data.events.filtered.length > 5 &&
+        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
+          <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show less</Paragraph>
+        </GridContainer>
+      }
+      <UpcomingDates lang={pageContext.lang} />
+      {/* <WrapperImage
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         border="bottom"
         bgSize="cover"
@@ -180,8 +245,8 @@ const Calendar = (props) => {
           color={Colors.white}
           textAlign="center"
         />
-      </WrapperImage>
-      <Wrapper border="top" color={Colors.white}>
+      </WrapperImage> */}
+      {/* <Wrapper border="top" color={Colors.white}>
         <Divider height="50px" />
         <Row marginBottom={`10px`} justifyContent={`end`} display="flex">
           <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer">
@@ -239,8 +304,8 @@ const Calendar = (props) => {
             onSelect={(opt) => setFilterType(opt)}
           />
         </Row>
-      </Wrapper>
-      <Wrapper border="top">
+      </Wrapper> */}
+      {/* <Wrapper border="top">
         <Row display="flex">
           {
             filterType.value === "cohorts" ?
@@ -285,14 +350,14 @@ const Calendar = (props) => {
                     eventText={yml.button.event_register_button_link}
                     context={pageContext.lang}
                     onMouseOver={() => setBackgroundSize("contain")}
-                    // bg_size={backgroundSize}
+                  // bg_size={backgroundSize}
 
                   />
                 )
           }
         </Row>
       </Wrapper>
-      <Divider height="50px" />
+      <Divider height="50px" /> */}
     </>
   )
 };
@@ -309,22 +374,21 @@ export const query = graphql`
             image
             keywords
           }
+          events{
+            title
+            paragraph
+          }
           button{
             apply_button_text
             apply_button_link
             cohort_more_details_text
             event_register_button_link
           }
+          seo_title
           header{
-            tagline
-            sub_heading
-            image{
-              childImageSharp {
-                fluid(maxWidth: 2400, quality: 100){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            } 
+            title
+            paragraph
+            
           }
           
         }

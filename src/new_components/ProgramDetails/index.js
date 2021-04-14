@@ -50,7 +50,7 @@ const ProgramDetails = (props) => {
     return (
         <>
 
-            <GridContainer columns_tablet="2" background={props.background || Colors.verylightGray} padding_tablet="76px 0" gridGap="100px">
+            <GridContainer columns_tablet="2" background={props.background || Colors.verylightGray} padding_tablet="76px 0" padding="50px 17px" gridGap="100px">
                 <Div flexDirection="column" >
                     <H3 textAlign="left" margin="0 0 20px 0">{props.details.about.title}</H3>
                     {props.details.about.sub_title.split("\n").map((m, i) =>
