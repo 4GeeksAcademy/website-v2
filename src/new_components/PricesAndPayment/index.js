@@ -170,7 +170,7 @@ useEffect(() => {
       </GridContainer>
 
       {!prices  ?
-        <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label} {modality.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+        <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error}</Paragraph>
         :
         <GridContainer padding="4.5rem 16px" containerColumns_md={`2fr repeat(12, 1fr) 2fr`} containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`} background={Colors.white} columns_tablet="1" gridGap_tablet="0" padding_tablet="4.5rem 16px" >
           
