@@ -8,6 +8,7 @@ import {NavbarMobile} from '../new_components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
 import UpcomingProgram from '../components/UpcomingProgram';
 import Footer from '../new_components/Footer';
+import CookieBot from "react-cookiebot";
 
 
 import GlobalStyle from './GlobalStyle';
@@ -97,7 +98,12 @@ const Layout = ({children, seo, context}) => {
               }
             }
           }
-        }
+        }  
+          cookiebotYaml {
+            domain_ID {
+              id
+            }
+          }
       }
     `}
       render={(data) => {
@@ -120,6 +126,7 @@ const Layout = ({children, seo, context}) => {
             <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
             <NavbarMobile onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
             <GlobalStyle />
+            <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} />
             <>
               {children}
             </>

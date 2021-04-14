@@ -1,5 +1,6 @@
 meta_info:
   slug: index
+  canonical: "/"
   title: "Miami Coding Bootcamp, Madrid España, Santiago de Chile"
   description: "The #1 Top coding bootcamp with over 1,000 graduates and life-long career support. USA, Spain, Chile, Venezuela and Costa Rica Coding Bootcamp."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"

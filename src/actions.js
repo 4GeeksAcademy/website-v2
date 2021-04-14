@@ -149,10 +149,10 @@ export const apply = async (data, session) => {
         else body[key] = data[key];
     });
 
-    const automation = data.automation || 'website-lead';
-    const tag = data.tag || 'strong';
+    const tag = body.tag || 'website-lead';
+    const automation = body.automation || 'strong';
     //                                                                                      tag           automation
-    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [automation], [tag], session);
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [tag.value || tag], [automation.value || automation], session);
     return true;
 }
 
@@ -160,12 +160,13 @@ export const requestSyllabus = async (data,session) => {
     console.log("Succesfully requested Syllabus", data)
     tagManager('request_more_info');
     let body = {};
-    for (let key in data) body[key] = data[key].value;
+    Object.keys(data).forEach((key) => body[key] = data[key].value);
 
-    const automation = data.automation || 'request_more_info';
-    const tag = data.tag || 'soft';
+    const tag = body.tag || 'request_more_info';
+    const automation = body.automation || 'soft';
+
     //                                                                                      tag                automation
-    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [automation], [tag], session);
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [tag.value || tag], [automation.value || automation], session);
     return true;
 }
 export const openGuidebook = (url) => {

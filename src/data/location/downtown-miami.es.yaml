@@ -1,11 +1,11 @@
 meta_info:
-  slug: "downtown-miami-usa"
+  slug: "bootcamp-programacion-miami"
   position: 1
   title: "4Geeks Academy Miami - Bootcamp de programación en Miami, aprende a programar en Miami"
   description: "null"
   image: ""
   keywords: "null"
-  redirects: []
+  redirects: ["/es/location/downtown-miami-usa"]
 
 seo_title: "Bootcamp de Programación en Miami"
 header:
@@ -62,7 +62,7 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PAGA SÓLO DESPUÉS"
+        heading_one: "PAGAS SÓLO DESPUÉS"
         heading_two: "DE CONSEGUIR TRABAJO"
         sub_heading: "y hablemos del Income Share Agreement"
       content:
@@ -137,7 +137,7 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PAGA SÓLO DESPUÉS"
+        heading_one: "PAGAS SÓLO DESPUÉS"
         heading_two: "DE CONSEGUIR TRABAJO"
         sub_heading: "y hablemos del Income Share Agreement"
       content:
@@ -206,7 +206,7 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PASA SÓLO DESPUÉS"
+        heading_one: "PAGAS SÓLO DESPUÉS"
         heading_two: "DE CONSEGUIR TRABAJO"
         sub_heading: "y solamente mientras tengas trabajo"
       content:
@@ -264,7 +264,77 @@ prices:
         heading_two: "(OUT OF POCKET)"
         sub_heading: "el mejor precio de la ciudad"
       content:
-        price: "$13,499.00"
+        price: "$11,499.00"
+        price_info: "un sólo pago"
+
+
+  machine_learning:
+    slug: "machine-learning"
+    duration: "18 Weeks"
+
+    ## LEFT BOX SECTION PART-TIME
+    ## CHANGE HERE THE INFO IN THE LEFT BOX
+    left_section:
+      header:
+        heading_one: "PAGAS SÓLO DESPUÉS"
+        heading_two: "DE CONSEGUIR TRABAJO"
+        sub_heading: "y solamente mientras tengas trabajo"
+      content:
+        price: "9% de tu salario"
+        price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
+
+    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+    center_section:
+      header:
+        heading_one: "EXTENDED"
+        heading_two: "PAYMENT PLAN"
+        sub_heading: "paga en cuotas financiadas"
+      plans:
+        - months: "60 mo"
+          payment: "$269.53"
+          paymentInfo: "mensual + $0 deposito"
+          provider: "Skill Fund - Climb"
+          logo: "/images/skill-logo.png"
+          message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
+        - months: "42 mo"
+          payment: "$384.10"
+          paymentInfo: "mensual + $0 deposito"
+          provider: "Climb"
+          logo: "/images/climb-logo-white.png"
+          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+        - months: "36 mo"
+          payment: "$447.97"
+          paymentInfo: "mensual + $0 deposito"
+          provider: "Skill Fund"
+          logo: "/images/skill-logo.png"
+          message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
+        - months: "24 mo"
+          payment: "$612.04"
+          paymentInfo: "mensual + 1,500 deposito"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+        - months: "12 mo"
+          payment: "$1277.43"
+          paymentInfo: "mensual + 1,500 deposito"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+        - months: "6 mo"
+          payment: "$2,508.58"
+          paymentInfo: "mensual + 1,500 deposito"
+          provider: "Quotanda"
+          logo: "/images/quotanda-logo.png"
+          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+    ## RIGHT BOX SECTION
+    ## CHANGE HERE THE INFO IN THE RIGHT BOX
+    right_section:
+      header:
+        heading_one: "DE CONTADO"
+        heading_two: "(OUT OF POCKET)"
+        sub_heading: "el mejor precio de la ciudad"
+      content:
+        price: "$11,499.00"
         price_info: "un sólo pago"
 
 active_campaign_location_slug: "downtown-miami"

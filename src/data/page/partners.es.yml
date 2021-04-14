@@ -1,10 +1,10 @@
 meta_info:
-  slug: aliados
+  slug: alianzas
   title: "Sobre la Academia"
   description: "Acerca de 4Geeks Academy"
   image: ""
   keywords: ""
-  redirects: ["/aliados"]
+  redirects: ["/aliados", "/es/aliados"]
 
 
 seo_title: "Cooding Bootcamp"
