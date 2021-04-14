@@ -60,128 +60,27 @@ const Program = ({data, pageContext, yml}) => {
       paragraph={yml.header.paragraph}
       padding_tablet="72px 0 40px 0"
     >
-      <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+      <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center" margin_tablet="0 0 50px 0">
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
-          <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+          <Button width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button outline width="200px" color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button outline width="200px" width_tablet="fit-content" color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
-      <Badges lang={pageContext.lang} />
+      <Badges lang={pageContext.lang} margin="0 0 40px 0" />
     </Header>
-    {/* <Container
-      variant="fluid"
-      margin="100px auto 0 auto">
-      <Div
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-      >
-        <H1
-          fontSize="13px"
-          lineHeight="16px"
-          fontWeight="700"
-          letterSpacing="0.05em"
-          color="#606060"
-        >Coding Bootcamp</H1>
-        <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{`< Full Stack Developer >`}</H2>
-        <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="470px">Aprende desde cero hasta tener tu primer trabajo como programador. Recibe mentoría ilimitada, soporte de por vida
-        y consigue un trabajo como programador en 16 semanas después de empezar.</Paragraph>
-        <Div flexDirection_md="row" flexDirection="column">
-          <Link to={yml.button.apply_button_link}
-            state={{course: yml.meta_info.bc_slug}}
-          >
-            <Button width_md="120px" width="208px" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
-          </Link>
-          <Button outline width="200px" onClick={handleOpen} color={Colors.black} margin="10px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
-        </Div>
-      </Div>
-      <Container variant="fixed">
-        <Badges lang={pageContext.lang} />
-      </Container>
-    </Container> */}
-
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <TechsWeTeach lang={pageContext.lang} />
     <GeeksInfo lang={pageContext.lang} />
+    <GridContainer padding_tablet="0" margin_tablet="90px 0 62px 0" margin="57px 0">
+      <Div height="5px" background="#EBEBEB"></Div>
+    </GridContainer>
     <UpcomingDates lang={pageContext.lang} />
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
-
-    {/* <WrapperImage
-      github="/course"
-      filter="brightness(0.4)"
-      imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
-      className={`img-header`}
-      bgSize={`cover`}
-      alt={yml.header.alt}
-      paddingRight={`0`}
-      customBorderRadius="0 0 0 1.25rem"
-    >
-      <ProgramSelector lang={pageContext.lang} week={week} context={pageContext} marginTop="70px" />
-      <Title
-        type="h1"
-        size="5"
-        marginTop="40px"
-        title={yml.header.tagline}
-        variant="main"
-        color={Colors.white}
-        paragraph={yml.header.paragraph}
-        paragraphColor={Colors.white}
-        fontSize="46px"
-        fs_xs="40px"
-        textAlign="center"
-      />
-      <Row display="flex" justifyContent="center" marginBottom="50px">
-        <Column align="right" size="6" align_sm="center" m_sm="0px 0px 15px 0px" size_sm="12" align="right">
-          <Link to={yml.button.apply_button_link}
-            state={{course: yml.meta_info.bc_slug}}
-          >
-            <Button width="200px" color="red" margin="0" textColor="white">{apply_button_text}</Button></Link>
-        </Column>
-        <Column align="left" size="6" align_sm="center" size_sm="12" align="left">
-          <Button width="200px" onClick={handleOpen} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
-        </Column>
-      </Row>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={handleClose}
-      >
-        <LeadForm
-          style={{marginTop: "50px"}}
-          heading={yml.button.syllabus_heading}
-          motivation={yml.button.syllabus_motivation}
-          sendLabel={syllabus_button_text}
-          formHandler={requestSyllabus}
-          handleClose={handleClose}
-          lang={pageContext.lang}
-          data={{
-            course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
-          }}
-        />
-      </Modal>
-      <Divider height="100px" md="0px" />
-    </WrapperImage> */}
-
-    {/* PROGRAM DETAILS */}
-    {/* <Wrapper >
-      <Title
-        size="10"
-        marginTop="40px"
-        title={yml.details.heading}
-        paragraph={yml.details.sub_heading}
-        variant="primary"
-      />
-      <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
-      <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
-    </Wrapper> */}
-
-
     <PricesAndPayment
       type={pageContext.slug}
       lang={pageContext.lang}
@@ -191,60 +90,9 @@ const Program = ({data, pageContext, yml}) => {
       title={yml.prices.heading}
       paragraph={yml.prices.sub_heading}
     />
-
-
-    {/* <Container variant="fixed" margin="50px auto" style={{position: "relative"}}>
-      <H2>{yml.prices.heading}</H2>
-      <Paragraph margin="0 0 50px 0">{yml.prices.sub_heading}</Paragraph>
-
-      <PricesAndPayment
-        type={pageContext.slug}
-        lang={pageContext.lang}
-        session={session}
-        locations={data.allLocationYaml.edges}
-        course={program_type}
-      />
-    </Container> */}
     <AlumniProjects title={yml.alumni.heading} paragraph={yml.alumni.sub_heading} lang={data.allAlumniProjectsYaml.edges} limit={2} />
-    {/* <Container variant="fluid">
-      <H2>{yml.alumni.heading}</H2>
-      <Paragraph margin="0 0 50px 0">{yml.alumni.sub_heading}</Paragraph>
-    </Container>
-    <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0"> */}
-
     <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" />
-    {/* </Container> */}
-
-    {/* <Container
-      variant="fluid"
-    > */}
     <OurPartners images={hiring.partners.images} slider></OurPartners>
-    {/* </Container> */}
-
-
-    {/* PRICING */}
-    {/* <Wrapper
-      margin="50px 0"
-      github="/course"
-    >
-    </Wrapper> */}
-
-    {/* {program_type === "full_time" && <TypicalDay data={yml.typical} />} */}
-
-    {/* ALUMNI PROJECTS */}
-    {/* <Wrapper
-      margin="75px 0"
-    >
-      <Title
-        size="10"
-        title={yml.alumni.heading}
-        paragraph={yml.alumni.sub_heading}
-        maxWidth="80%"
-        margin="auto"
-        variant="primary"
-      />
-    </Wrapper> */}
-    {/* </div> */}
   </>
   )
 };

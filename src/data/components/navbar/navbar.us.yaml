@@ -1,6 +1,6 @@
 navbar:
   - name: "Programs"
-    link: "/#home"
+    link: "/us/coding-bootcamps/part-time-full-stack-developer"
     sub_menu:
       icon: ""
       title: "Programs"
@@ -15,9 +15,9 @@ navbar:
           paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
           buttons:
             - text: "Part Time"
-              link: ""
-            - text: "Part Time"
-              link: ""
+              link: "/us/coding-bootcamps/part-time-full-stack-developer"
+            - text: "Full Time"
+              link: "/us/coding-bootcamps/part-time-full-stack-developer"
           
         - title: "Software Engineer"
           level: "Level 2"
@@ -25,7 +25,7 @@ navbar:
           paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
           buttons:
             - text: "View Program"
-              link: ""
+              link: "/us/coding-bootcamps/software-engineer-bootcamp"
          
         - title: "AI/Machine Learning Engineering"
           level: "Online"
@@ -47,21 +47,21 @@ navbar:
         - title: "Accompaniment"
           sub_links: 
             - title: "GeekPal"
-              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+              link_to: "/us/geekpal-support"
             - title: "GeekForce"
-              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+              link_to: "/us/geekforce-career-support"
         - title: "Validation"
           sub_links: 
             - title: "Awards"
-              link_to: ""
+              link_to: "/us/awards"
             - title: "Outcomes"
-              link_to: ""
+              link_to: "/us/outcomes"
             - title: "Geeks Vs Others"
-              link_to: ""
+              link_to: "/us/geeks-vs-others"
         - title: "Prices"
           sub_links: 
             - title: "Financials"
-              link_to: ""
+              link_to: "/us/financials"
             - title: "Prices"
               link_to: ""
             - title: "Scholarships"
@@ -84,13 +84,13 @@ navbar:
         - title: ""
           sub_links: 
             - title: "Who we are"
-              link_to: ""
+              link_to: "/us/the-academy"
             - title: "Press"
-              link_to: ""
+              link_to: "/us/press"
             - title: "Blog"
-              link_to: ""
+              link_to: "/us/blog"
             - title: "Partners"
-              link_to: ""
+              link_to: "/us/partners"
 # links:
 #       - name: "Desarrollador Full Stack"
 #       - link: "/course/full-stack-web-development-bootcamp-part-time"
@@ -133,6 +133,7 @@ language_button:
   link: "/es/inicio?lang=es"
 button:
   button_link: "/apply"
+  apply_button_text: "Apply Now"
   button_type: ""
   button_color_text: ""
   button_background_color: ""
