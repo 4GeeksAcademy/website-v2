@@ -11,7 +11,7 @@ import UpcomingDates from '../new_components/UpcomingDates'
 import Staff from '../new_components/Staff';
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
-import {Div, Row, Column, Wrapper, Container, GridContainerWithImage, Grid} from '../new_components/Sections'
+import {Div, Row, Column, Wrapper, Container, GridContainerWithImage, Grid, GridContainer} from '../new_components/Sections'
 import {Title, H1, H2, H4, H3, Span, Paragraph, Separator} from '../new_components/Heading'
 import {Button, Colors, Small, Img, StyledBackgroundSection} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
@@ -25,10 +25,10 @@ import Why4Geeks from '../components/Why4Geeks';
 
 const imagePositions = {
   "1": "1/1/3/7",
-  "2": "1/7/3/10",
+  "2": "1/7/3/13",
   "3": "3/1/4/4",
   "4": "4/1/5/4",
-  "5": "3/4/5/10"
+  "5": "3/4/5/13"
 }
 const Location = ({data, pageContext, yml}) => {
   console.log("ymllll:", data)
@@ -58,7 +58,7 @@ const Location = ({data, pageContext, yml}) => {
     {/* github={`/location`} */}
     {/* <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px"> */}
     {/* <Grid height="375px" height_md="219px" columns="2" rows="2" columns_md="12" rows_md="1" background={Colors.verylightGray}> */}
-    <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 0 54px 0" columns_tablet="14" margin="120px 0 24px 0" margin_tablet="0">
+    <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 0 54px 0" columns_tablet="14" margin="67px 0" margin_tablet="0">
       <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
         <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
@@ -88,58 +88,48 @@ const Location = ({data, pageContext, yml}) => {
       </Div>
     </GridContainerWithImage>
 
-    <Container variant="fluid" background={Colors.verylightGray} padding="63px 81px">
-      <Badges lang={pageContext.lang} />
-      {/* <News location={yml.breathecode_location_slug} lang={lang} /> */}
-    </Container>
-    <Container variant="fixed" margin="88px auto 96px auto">
-      <Div margin="0 0 77px 0">
-        <H2 textAlign_tablet="left">{images.images_box.heading}</H2>
-        <Div flexDirection="column" padding="0 85px 0 0">
-          {images.images_box.content.split("\n").map((m, i) =>
-            <Paragraph
-              textAlign_tablet="left"
-              margin="0 0 20px 0"
-              fontSize="15px"
-              lineHeight="26px"
-            >
-              {m}
-            </Paragraph>
-          )}
-        </Div>
+    <Badges lang={pageContext.lang} background={Colors.lightGray} margin="0 0 57px 0" padding="27px 17px 50px 17px" padding_tablet="80px 0 100px 0" paragraph={yml.badges.paragraph} />
+    <GridContainer columns_tablet="12">
+      <Div gridColumn_tablet="1 / 4" ><H2 textAlign="left">{images.images_box.heading}</H2></Div>
+      <Div flexDirection="column" gridColumn_tablet="5 / 13">
+        {images.images_box.content.split("\n").map((m, i) =>
+          <Paragraph
+            textAlign="left"
+            margin="0 0 20px 0"
+            fontSize="15px"
+            lineHeight="26px"
+          >
+            {m}
+          </Paragraph>
+        )}
       </Div>
-      <Grid columns="9" rows="4" gridGap="11px" height_md="813px" height="304px">
-
-        {yml.images_box.images.map((m, i) => {
-          return (
-            <Div
-              key={i}
+    </GridContainer>
+    <GridContainer columns_tablet="12" gridTemplateRows_tablet="4, 1fr" height_tablet="813px" height="304px">
+      {yml.images_box.images.map((m, i) => {
+        return (
+          <Div
+            key={i}
+            borderRadius="3px"
+            gridArea={imagePositions[`${i + 1}`]}
+          >
+            <StyledBackgroundSection
+              height="auto"
+              margin="0"
               borderRadius="3px"
-              gridArea={imagePositions[`${i + 1}`]}
-            >
-              <StyledBackgroundSection
-                height="auto"
-                margin="0"
-                borderRadius="3px"
-                image={m.path.childImageSharp.fluid}
-                bgSize={`cover`}
-                alt={m.alt}
-              />
-            </Div>)
-        })}
-
-
-      </Grid>
-    </Container>
-    <Container
-      variant="fluid"
-      margin="100px 0"
-    >
-      <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{hiring.partners.tagline}</H2>
-      <Paragraph margin="0 auto 50px auto" width="700px">{hiring.partners.sub_heading}</Paragraph>
-      <OurPartners images={hiring.partners.images}></OurPartners>
-    </Container>
-    <Container
+              image={m.path.childImageSharp.fluid}
+              bgSize={`cover`}
+              alt={m.alt}
+            />
+          </Div>)
+      })}
+    </GridContainer>
+    <OurPartners images={hiring.partners.images} title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
+    <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
+    <UpcomingDates lang={pageContext.lang} />
+    <Loc lang={pageContext.lang} locations={data.test.edges} />
+    <Staff lang={pageContext.lang} />
+    {/* <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} /> */}
+    {/* <Container
       variant="fluid"
       background={Colors.verylightGray}
       height_md="300px"
@@ -157,7 +147,6 @@ const Location = ({data, pageContext, yml}) => {
         <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
       </Container>
     </Container>
-    <UpcomingDates lang={pageContext.lang} />
     <Container variant="fluid" background={Colors.lightYellow} margin="0 0 67px 0" padding="0 0 86px 0">
       <Container
         variant="fixed"
@@ -167,8 +156,7 @@ const Location = ({data, pageContext, yml}) => {
         <Paragraph margin="0 0 50px 0" >Sub Title</Paragraph>
         <Loc lang={pageContext.lang} locations={data.test.edges} />
       </Container>
-    </Container>
-    <Staff lang={pageContext.lang} />
+    </Container> */}
     {/* {
             yml.breathecode_location_slug !== "online" &&
             <Wrapper >
@@ -353,6 +341,10 @@ export const query = graphql`
                 cohort_more_details_text
                 syllabus_button_text
                 syllabus_submit_text
+            }
+            badges{
+              title
+              paragraph
             }
             news{
                 title
