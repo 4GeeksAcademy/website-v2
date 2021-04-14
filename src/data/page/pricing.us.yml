@@ -38,10 +38,17 @@ prices:
   closed_label: "Select a program"
   opened_label: "Close"
 
+
 label:
-  program: "Program"
-  modality: "Modality"
-  campus: "Campus"
+  program: 
+    title: "Program"
+    closedLabel: "Select a program"
+  modality:
+    title: "Modality"
+    closedLabel: "Select a modality"
+  campus:
+    title: "Campus"
+    closedLabel: "Select a campus"
 
 syllabus_button_text: "Search"
 

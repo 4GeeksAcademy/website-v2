@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {Column, Row, Container, Divider, Wrapper, Div} from "../components/Sections";
 import {Title, H2, H5, Paragraph} from '../components/Heading';
-import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
+import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling';
 import WhoIsHiring from '../components/WhoIsHiring';
 import Img from "gatsby-image"
 import BaseRender from './_baseLayout';
@@ -24,33 +24,39 @@ const Pricing = (props) => {
     location = data.allLocationYaml.edges.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
     if (location) location = location.node;
   }
+  console.log(yml)
 
   return (
     <>
       {/* HEADER SECTION */}
       <Header
           background={Colors.lightBlue2}
+          fontSize="40px"
           seo_title={yml.seo_title}
           title={yml.header.title}
           paragraph={yml.header.paragraph}
-          padding_tablet="72px 0 40px 0"
-          padding="66px 17px 85px 0"
+          padding_tablet="72px 0 15px 0"
+          padding="72px 0 15px 0"  
       >
-
-        <PricesAndPayment
+      </Header>
+      <PricesAndPayment
           // shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
+          
           button_text={yml.syllabus_button_text}
-          program={yml.label.program}
-          modality={yml.label.modality}
-          campus={yml.label.campus}
-          openedLabel={yml.prices.opened_label}
+          program={yml.label.program.title}
+          programClosedLabel={yml.label.program.closedLabel}
+          modality={yml.label.modality.title}
+          modalityClosedLabel={yml.label.modality.closedLabel}
+          campus={yml.label.campus.title}
+          campusClosedLabel={yml.label.campus.closedLabel}
+
+          // openedLabel={yml.prices.opened_label}
           session={session}
-          closedLabel={yml.prices.closed_label}
+          // closedLabel={yml.prices.closed_label}
           type={pageContext.slug}
           lang={pageContext.lang}
           locations={data.allLocationYaml.edges}
         />
-      </Header>
     </>
   )
 };
@@ -65,6 +71,7 @@ export const query = graphql`
                 image
                 keywords
             }
+            seo_title
             header{
                 title
                 paragraph
@@ -101,9 +108,18 @@ export const query = graphql`
                 heading
             }
             label{
-                program
-                modality
-                campus
+                program{
+                  title
+                  closedLabel
+                }
+                modality{
+                  title
+                  closedLabel
+                }
+                campus{
+                  title
+                  closedLabel
+                }
             }
             syllabus_button_text
             prices{
@@ -185,6 +201,7 @@ export const query = graphql`
                   }
                   plans {
                     months
+                    monthsInfo
                     payment
                     paymentInfo
                     provider
@@ -233,6 +250,7 @@ export const query = graphql`
                   }
                   plans {
                     months
+                    monthsInfo
                     payment
                     paymentInfo
                     provider

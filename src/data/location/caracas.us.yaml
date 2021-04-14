@@ -74,6 +74,8 @@ prices:
       content:
         price: "9% of Salary"
         price_info: "until fully paid, and only if you get the job"
+      button:
+        button_text: "APPLY NOW"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
@@ -85,6 +87,8 @@ prices:
       content:
         price: " "
         price_info: " "
+      button:
+        button_text: "APPLY NOW"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -102,6 +106,8 @@ prices:
       content:
         price: "9% of Salary"
         price_info: "until fully paid, and only if you get the job"
+      button:
+        button_text: "APPLY NOW"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
@@ -113,6 +119,8 @@ prices:
       content:
         price: "?"
         price_info: "please contact us for more information about prices, scolarships and financing options."
+      button:
+        button_text: "APPLY NOW"
 
 active_campaign_location_slug: "caracas-venezuela"
 breathecode_location_slug: "caracas-venezuela"

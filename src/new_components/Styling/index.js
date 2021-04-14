@@ -10,6 +10,7 @@ import {Location} from '@reach/router'
 export const Colors = {
     blue: "#00A0DA",
     lightBlue: "#BBEAFC",
+    lightBlue2: "rgba(199, 243, 253, 0.5)",
     veryLightBlue: "#C7F3FD",
     gray: "#898a8b",
     verylightGray: "#F5F5F5",
@@ -250,7 +251,7 @@ export const Button = styled(SmartButton)`
     font-size: ${props => props.fontSize};
     font-family: 'Lato', sans-serif;
     text-transform: ${props => props.textTransform || "uppercase"};
-    font-weight: 700;
+    font-weight: ${props => props.fontWeight || "700"};
     margin: ${props => props.margin};
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position};

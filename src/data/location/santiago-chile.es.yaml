@@ -62,6 +62,8 @@ prices:
       content:
         price: "16% de tu sueldo"
         price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+      button:
+        button_text: "APLICAR AHORA"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -82,7 +84,7 @@ prices:
           logo: "/images/quotanda-logo.png"
           message: ""
       button:
-        button_text: "SOLICITA TU PLAZA"
+        button_text: "APLICAR AHORA"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -93,6 +95,8 @@ prices:
       content:
         price: "2.760.000 CLP"
         price_info: "una sola cuota"
+      button:
+        button_text: "APLICAR AHORA"
 
   ## *****************
   ## PART-TIME SECTION
@@ -111,6 +115,8 @@ prices:
       content:
         price: "Válido sólo para modalidad full time"
         price_info: "hasta pagarlo todo, pero sólo si consigues trabajo en tech"
+      button:
+        button_text: "APLICAR AHORA"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -130,6 +136,8 @@ prices:
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
+      button:
+        button_text: "APLICAR AHORA"
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
@@ -140,6 +148,8 @@ prices:
       content:
         price: "2.415.000 CLP"
         price_info: "una sola cuota"
+      button:
+        button_text: "APLICAR AHORA"
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"

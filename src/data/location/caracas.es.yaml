@@ -73,6 +73,8 @@ prices:
       content:
         price: "9% de tu sueldo"
         price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+      button:
+        button_text: "APLICAR AHORA"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
@@ -84,6 +86,8 @@ prices:
       content:
         price: "?"
         price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becase."
+      button:
+        button_text: "APLICAR AHORA"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -101,6 +105,8 @@ prices:
       content:
         price: "9% de tu sueldo"
         price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+      button:
+        button_text: "APLICAR AHORA"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
@@ -112,6 +118,8 @@ prices:
       content:
         price: "?"
         price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becase."
+      button:
+        button_text: "APLICAR AHORA"
 
 active_campaign_location_slug: "caracas-venezuela"
 breathecode_location_slug: "caracas-venezuela"

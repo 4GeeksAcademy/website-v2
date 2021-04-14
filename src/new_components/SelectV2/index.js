@@ -9,9 +9,12 @@ import styled from 'styled-components';
 
 export const ChooseWrap = styled.div`
     position: relative;
+    width: 100%;
     text-align: center;
     cursor: pointer;
     margin: ${props => props.margin};
+    padding: 10px 0
+    
 `;
 const Label = styled.div`
     position: absolute;
@@ -29,11 +32,14 @@ const Label = styled.div`
 const SmartSelect = (props) => {
     const [status, setStatus] = useState({toggle: false, hovered: false})
     const _Selector = (_p) => <Div
-        margin_tablet="0 28px 0 0"
+
+        // margin="10px 0"
+        // margin_tablet="0 28px 0 0"
         padding="7px"
         alignItems="center"
         // maxWidth="314px"
-        width="314px"
+        width="auto"
+        // width_tablet="auto"
         minWidth={props.minWidth}
         onClick={() => _p.setStatus({toggle: !_p.status.toggle})}
         color={Colors.white}
@@ -83,10 +89,19 @@ const SmartSelect = (props) => {
                 <Div
                     flexDirection="column"
                     zIndex="1"
+                    position="absolute"
+                    width="100%"
+                    // padding_tablet="0 28px 0 0"
+                    border="1px solid black"
+                    // border_tablet="0"
+                    // background = ""
                 >
                     {Array.isArray(props.options) && props.options.map((item, index) => {
                         return (
                             <Button
+                                background={Colors.white}
+                                fontWeight="400"
+                                width="100%"
                                 key={index}
                                 font={"Lato, sans-serif"}
                                 colorHover={Colors.lightBlue}
@@ -94,9 +109,10 @@ const SmartSelect = (props) => {
                                     setStatus({toggle: false, hovered: false});
                                     if (props.onSelect) props.onSelect(item);
                                 }}
-                                textColor={Colors.gray}
-                                fontSize={"16px"}
-                                borderRadius=".75rem" padding="10px"
+                                textColor={Colors.black}
+                                fontSize={"15px"}
+                                // borderRadius=".75rem" 
+                                // padding="10px"
                             >
                                 {item.label}
                             </Button>
