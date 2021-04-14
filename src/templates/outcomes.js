@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
-import {Grid, Div, Header} from '../new_components/Sections'
+import {Grid, Div, Header, GridContainer} from '../new_components/Sections'
 import {H1, H2, H3, H4, Title, Separator, Paragraph} from '../new_components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
 import Icon from '../new_components/Icon'
@@ -52,7 +52,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                 background={Colors.lightYellow}
             />
 
-            <Grid columns_md="12" padding="0 17px" padding_md="0 65px 0 0 " gridGap="0" gridGap_md="11px">
+            <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 " >
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
                     {yml.sections.map((section, i) => {
                         return (
@@ -93,7 +93,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                     fluid={m.image && m.image.childImageSharp.fluid}
                                                                 />
                                                                 <Paragraph textAlign="left">{m.image_paragraph}</Paragraph>
-                                                                <Grid columns_md="3">
+                                                                <Grid gridTemplateColumns_tablet="3">
                                                                     {m.chart &&
                                                                         yml.charts.chart_list.map((c, i) => {
                                                                             return (
@@ -119,7 +119,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                 <Div gridArea="1/9/1/13" display="none" display_md="flex" style={{position: "relative"}}>
                     <Div style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">right</Div>
                 </Div>
-            </Grid>
+            </GridContainer>
             {/* <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph> */}
             {/* </Container> */}
         </>

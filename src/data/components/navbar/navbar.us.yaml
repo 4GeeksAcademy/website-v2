@@ -84,13 +84,13 @@ navbar:
         - title: ""
           sub_links: 
             - title: "Who we are"
-              link_to: ""
+              link_to: "/us/the-academy"
             - title: "Press"
-              link_to: ""
+              link_to: "/us/press"
             - title: "Blog"
-              link_to: ""
+              link_to: "/us/blog"
             - title: "Partners"
-              link_to: ""
+              link_to: "/us/partners"
 # links:
 #       - name: "Desarrollador Full Stack"
 #       - link: "/course/full-stack-web-development-bootcamp-part-time"
