@@ -1,9 +1,9 @@
 meta_info:
   slug: blog-en-espanol
-  title: ""
-  description: null
+  title: "4geeks Academy Blog"
+  description: "Encuentra recursos y noticias para desarrolladores de software actuales y potenciales. Conocimientos básicos, tendencias, asesoramiento profesional y mucho más en el blog de 4geeks Academy."
   image: null
-  keywords: ""
+  keywords: "4geeks Academy Blog"
   redirects: ['/es/blog']
 
 banner:
