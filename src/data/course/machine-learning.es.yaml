@@ -30,6 +30,23 @@ credentials:
   heading: "Nuestros números hablan por sí solos"
   paragraph: ""
 
+description:
+  heading: "About this course"
+  sub_heading: "Prepare yourself for the Age of A.I."
+  content: >
+    Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
+    Practice with real-life business scenarios typical in business and review some of the tools used in the industry. \n
+    Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+
+teacher:
+  greeting: Meet your teacher
+  full_name: Sayyed H. Nezhadi
+  picture: ../../../static/images/staff/sayyed.jpeg
+  linkedin: https://www.linkedin.com/in/sayyednezhadi/
+  bio: >
+    His focus is on guiding some of the biggest companies in the world adopting Artificial Intelligence (Enterprise AI) through deep understanding of both digital architecture and AI. Successfully carried out over 1200 big-scale projects servicing over 350 clients around the globe.
+
+
 ## PROGRAM DETAILS
 details:
   heading: DETALLES DEL PROGRAMA

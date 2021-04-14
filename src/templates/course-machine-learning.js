@@ -2,16 +2,15 @@ import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
 import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
-import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
-import {Button, Colors} from '../components/Styling'
+import {H1, H2, Title, Paragraph, H3, H4, H5} from '../components/Heading'
+import {Anchor, Button, Colors, StyledBackgroundSection} from '../components/Styling'
+import {BackgroundDrawing} from '../components/BackgroundDrawing'
 import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
-import Icon from '../components/Icon'
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
-import WhoIsHiring from '../components/WhoIsHiring';
 import PricesAndPayment from '../components/PricesAndPayment';
 import LeadForm from '../components/LeadForm';
 import Modal from '../components/Modal';
@@ -28,23 +27,16 @@ const Program = ({data, pageContext, yml}) => {
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   return (<>
-    <WrapperImage
+    <BackgroundDrawing
       github="/course"
-      imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
-      backgroundPosition={yml.header.image_position}
-      className={`img-header`}
-      bgSize={`cover`}
-      alt={yml.header.alt}
-      paddingRight={`0`}
-      customBorderRadius="0 0 0 1.25rem"
-
     >
       <H1
         size="5"
         variant="main"
         marginTop="100px"
+        textShadow="none"
         m_sm="50px 0 0 0"
-        color={Colors.white}
+        color={Colors.black}
         fontSize="46px"
         align="center"
 
@@ -53,15 +45,16 @@ const Program = ({data, pageContext, yml}) => {
         size="5"
         title={yml.header.tagline}
         variant="main"
+        textShadow="none"
         marginTop="0"
-        color={Colors.white}
+        color={Colors.black}
         fontSize="46px"
         textAlign="center"
         paragraph={yml.header.sub_heading}
-        paragraphColor={Colors.white}
+        paragraphColor={Colors.grey}
         margin="0"
       />
-      <H5 color={Colors.white} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
+      <H5 color={Colors.gray} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
       <Row display="flex" justifyContent="center" marginTop="20px" marginBottom="50px">
         <Column align="right" size="6" size_xs="12" align_sm="center" m_sm="0px 0px 15px 0px">
           <Link to={yml.button.apply_button_link}
@@ -94,7 +87,7 @@ const Program = ({data, pageContext, yml}) => {
         />
       </Modal>
       <Divider height="100px" md="0px" />
-    </WrapperImage>
+    </BackgroundDrawing>
 
 
     <Wrapper
@@ -103,13 +96,46 @@ const Program = ({data, pageContext, yml}) => {
       <Title
         size="10"
         marginTop="40px"
-        title={yml.potential_companies.tagline}
-        paragraph={yml.potential_companies.sub_heading}
+        title={yml.description.heading}
+        paragraph={yml.description.sub_heading}
         variant="primary"
       />
-      <WhoIsHiring
-        images={yml.potential_companies.companies}
-      />
+        {yml.description.content.split("\\n").map(text => 
+          <Paragraph
+            margin="0px 0px 20px 0px"
+            fontSize="20px"
+            lineHeight="20px"
+          >
+            {text}
+          </Paragraph>
+        )}
+
+        <Row display="flex" marginTop="50px" marginLeft="10%"  marginRight="10%">
+          <Column size="3" size_sm="12" pl_lg="0">
+            <StyledBackgroundSection
+              backgroundPosition="top center"
+              height="200px"
+              width="200px"
+              image={yml.teacher.picture.childImageSharp.fluid}
+              bgSize={`cover`}
+              // alt={yml.about.about_image.alt}
+              borderRadius={`50%`}
+            />
+          </Column>
+          <Column size="8" size_sm="12" >
+              <H4 align="left" margin="0px 0px 30px 0px">{`${yml.teacher.greeting} ${yml.teacher.full_name}`}</H4>
+              {yml.teacher.bio.split("\\n").map(text => 
+              <Paragraph
+                margin="0px 0px 20px 0px"
+                fontSize="20px"
+                lineHeight="20px"
+              >
+                {text}
+              </Paragraph>
+            )}
+            <Anchor cursor="pointer" color={Colors.blue} to={yml.teacher.linkedin}>Go to LinkedIn</Anchor>
+          </Column>
+        </Row>
     </Wrapper>
 
     <Wrapper margin="50px 0 0 0">
@@ -202,7 +228,7 @@ const Program = ({data, pageContext, yml}) => {
         session={session}
         type={pageContext.slug}
         locations={data.allLocationYaml.edges}
-        course="software_engineering"
+        course="machine_learning"
       />
     </Wrapper>
 
@@ -275,6 +301,19 @@ export const query = graphql`
               heading
               button_label
             }
+            teacher{
+              picture{
+                childImageSharp {
+                  fluid(maxWidth: 400){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              greeting
+              linkedin
+              full_name
+              bio
+            }
             potential_companies{
               tagline
               sub_heading
@@ -298,15 +337,10 @@ export const query = graphql`
               heading
               sub_heading
             }
-            typical{
+            description{
               heading
               sub_heading
-              schedule{
-                title
-                time
-                icon
-                content
-              }
+              content
             }
             alumni{
               heading
@@ -406,7 +440,7 @@ export const query = graphql`
           }
           
           prices {
-            software_engineering {
+            machine_learning {
               center_section {
 
                 header {

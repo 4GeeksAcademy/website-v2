@@ -205,7 +205,7 @@ export const Title = props => {
         fontSize={props.fontSize}
         fs_xs={props.fs_xs}
         align={props.textAlign}
-        textShadow={theme.shadow}
+        textShadow={props.textShadow || theme.shadow}
       >
         {props.title}
       </HeadingType>
@@ -220,7 +220,7 @@ export const Title = props => {
           fontSize={theme.fontSize}
           fontWeight={theme.fontWeight}
           margin={props.margin}
-          textShadow={theme.shadow}
+          textShadow={props.textShadow || theme.shadow}
         >
           {content}
         </Paragraph>
