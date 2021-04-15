@@ -27,7 +27,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
         'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
         'TestimonialsYaml', 'GeeksVsOthersYaml', 'JobsStatisticsYaml',
         'Why4GeeksYaml', 'AlumniProjectsYaml', 'StaffYaml', 'ProgramSvgYaml', 'PricesAndPaymentYaml',
-        'WhyPythonYaml', 'ChooseYourProgramYaml', 'About4GeeksYaml', 'GeeksInfoYaml', 'TechsWeTeachYaml', 'With4GeeksYaml',
+        'WhyPythonYaml', 'ChooseYourProgramYaml', 'About4GeeksYaml', 'UpcomingDatesYaml', 'GeeksInfoYaml', 'TechsWeTeachYaml', 'With4GeeksYaml',
     ].includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});
@@ -123,7 +123,7 @@ const createBlog = async ({actions, graphql}) => {
     }
     `)
     if (result.errors) throw new Error(result.errors);
-    
+
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({node}) => {
@@ -167,8 +167,8 @@ const createBlog = async ({actions, graphql}) => {
     let tagsEs = [];
     // Iterate through each post, putting all found tags into `tags`
     posts.forEach(({node}) => {
-        if(node.frontmatter.tags){
-            if(node.fields.lang === "us"){
+        if (node.frontmatter.tags) {
+            if (node.fields.lang === "us") {
                 tagsUs = tagsUs.concat(node.frontmatter.tags);
             } else {
                 tagsEs = tagsEs.concat(node.frontmatter.tags);
@@ -403,7 +403,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                 }
                 path = path[0] !== '/' ? '/' + path : path;
                 const exists = redirects.find(p => p === `Redirect from ${path} to ${_targetPath}`);
-                if(!exists || exists === undefined)
+                if (!exists || exists === undefined)
                     _createRedirect({
                         fromPath: path,
                         toPath: _targetPath,

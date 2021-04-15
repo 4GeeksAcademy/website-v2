@@ -1,14 +1,45 @@
 import React, {useState, useEffect, useContext} from 'react';
+import {useStaticQuery, graphql, Link} from 'gatsby';
 import {GridContainer, Div, Grid} from '../Sections'
 import {H2, H3, H4, H5, Paragraph} from '../Heading'
 import {Colors, Button, Img, Anchor} from '../Styling'
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
 import LazyLoad from 'react-lazyload';
-import {Link} from 'gatsby'
 import {SessionContext} from '../../session'
 
 const UpcomingDates = ({lang}) => {
+    const dataQuery = useStaticQuery(graphql`
+    {
+      allUpcomingDatesYaml {
+        edges {
+          node {
+            title
+            paragraph
+            button {
+              text
+              top_label
+            }
+            info {
+              button_link
+              button_text
+              duration_label
+              duration_weeks
+              location_label
+            }
+            footer {
+              button_text_close
+              button_text_open
+            }
+            fields {
+                lang
+              }
+          }
+        }
+      }
+    }
+  `)
+
     const {session} = useContext(SessionContext);
 
     const [data, setData] = useState({
@@ -16,7 +47,9 @@ const UpcomingDates = ({lang}) => {
     });
     const [academy, setAcademy] = useState(null)
     const [filterType, setFilterType] = useState({label: "Upcoming Courses and Events", value: "cohorts"});
-
+    let content = dataQuery.allUpcomingDatesYaml.edges.find(({node}) => node.fields.lang === lang);
+    if (content) content = content.node;
+    else return null;
     useEffect(() => {
         const getData = async () => {
             let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
@@ -59,21 +92,21 @@ const UpcomingDates = ({lang}) => {
                                 <Paragraph textAlign="left" fontWeight="700">09/01 al 13/03</Paragraph>
                             </Div>
                             <Div flexDirection="column" display="none" display_tablet="flex" >
-                                <H4 textAlign="left">LOCATION</H4>
+                                <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>
                                 <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
                             </Div>
                             <Div flexDirection="column" display="none" display_tablet="flex">
-                                <H4 textAlign="left">DURATION</H4>
-                                <Paragraph textAlign="left">16 weeks</Paragraph>
+                                <H4 textAlign="left" textTransform="uppercase">{content.info.duration_label}</H4>
+                                <Paragraph textAlign="left">{content.info.duration_weeks}</Paragraph>
                             </Div>
                             <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                                 <Div flexDirection="column" width="50%">
-                                    <H4 textAlign="left">LOCATION</H4>
+                                    <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>
                                     <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
                                 </Div>
                                 <Div flexDirection="column" width="50%">
-                                    <H4 textAlign="left">DURATION</H4>
-                                    <Paragraph textAlign="left">16 weeks</Paragraph>
+                                    <H4 textAlign="left" textTransform="uppercase">{content.info.duration_label}</H4>
+                                    <Paragraph textAlign="left">{content.info.duration_weeks}</Paragraph>
                                 </Div>
                             </Div>
                             <Div flexDirection="column">
