@@ -137,6 +137,7 @@ export const Column = styled(Div)`
     padding-right: ${props => props.paddingRight};
     padding-left: ${props => props.paddingLeft};
     flex-direction: ${props => props.flexDirection};
+    height: ${props => props.height}
     
     flex: 0 0 ${props => (props.size / 12) * 100}%;
     max-width: ${props => (props.size / 12) * 100}%;

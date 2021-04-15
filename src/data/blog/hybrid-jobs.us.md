@@ -65,7 +65,7 @@ Burning Glass ensures that the necessary skills for any professional who wants t
   * Evolving Compliance and Regulatory Landscape
 
 
-![](/wp-content/uploads/2019/10/BLOG-5KEYAREAS-1024x524.jpg)
+![picture of 5 coding skill areas](/wp-content/uploads/2019/10/BLOG-5KEYAREAS-1024x524.jpg)
 
 So, what does this mean? We are told: education starts with school and ends with your university degree. Wrong! Maybe that works for some but the truth is, if you want to succeed, given the outlook of careers in the future, you should be a lifelong learner. What do you need? A lot of motivation. Be willing to [learn every day](https://www.sciencedirect.com/science/article/pii/S1877042812019416) because you recognize that knowledge enhances the understanding of everything and will provide you better opportunities and also, will improve your quality of life.
 

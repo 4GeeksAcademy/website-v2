@@ -34,6 +34,26 @@ partners:
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/evernote.png"
       featured: true
+    - name: "Ticjob"
+      # locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/new_logo_ticjob.png"
+      featured: true
+    - name: "Unono"
+      # locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/unono.png"
+      featured: true
+    - name: "Optiva-Media"
+      # locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/optiva-media.png"
+      featured: true
+    - name: "Neo9"
+      # locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/Neo9.png"
+      featured: true
+    - name: "KPMG"
+      # locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/kpmg-logo1.png"
+      featured: true        
     - name: "Ultimate Software"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ultimate.png"
