@@ -52,7 +52,10 @@ const Footer = ({yml}) => {
 
     return (
         <>
-            <GridContainer github="/components/footer" gridTemplateRows_tablet="2" columns_tablet="12" padding="0 17px" margin="0 0 60px 0">
+            <GridContainer margin="44px 0" margin_tablet="0 0 40px 0">
+                <Div background="#EBEBEB" height="1px" />
+            </GridContainer>
+            <GridContainer github="/components/footer" gridTemplateRows_tablet="2" columns_tablet="12" padding="0 17px" margin="0 0 60px 0" >
                 <Div
                     justifyContent="center"
                     alignItems="center"
@@ -98,7 +101,7 @@ const Footer = ({yml}) => {
                     gridArea_tablet="1/3/2/10"
                     borderRight_tablet={`1px solid ${Colors.lightGray}`}
                 >
-                    <H4 margin="0 0 10px 0" display="none" display_tablet="block">{yml.newsletter.heading}</H4>
+                    <H4 margin="0 0 10px 0" textAlign="left" display="none" display_tablet="block">{yml.newsletter.heading}</H4>
                     <Div justifyContent="center" width="100%">
                         <Form onSubmit={(e) => {
                             e.preventDefault();
