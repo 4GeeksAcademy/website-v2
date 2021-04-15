@@ -53,23 +53,31 @@ const UpcomingDates = ({lang}) => {
                 {Array.isArray(data.cohorts.all) && data.cohorts.all.map((m, i) => {
                     return (
                         i < 4 &&
-                        <Div key={i} flexDirection="column" flexDirection_md="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
-                            <Div flexDirection_md="column" alignItems="center" alignItems_md="start">
+                        <Div key={i} flexDirection="column" flexDirection_tablet="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
+                            <Div flexDirection_tablet="column" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
                                 <H4 textAlign="left" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">ENERO</H4>
                                 <Paragraph textAlign="left" fontWeight="700">09/01 al 13/03</Paragraph>
                             </Div>
-                            {/* <Div > */}
-                            <Div flexDirection="column">
+                            <Div flexDirection="column" display="none" display_tablet="flex" >
                                 <H4 textAlign="left">LOCATION</H4>
                                 <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
                             </Div>
-                            <Div flexDirection="column">
+                            <Div flexDirection="column" display="none" display_tablet="flex">
                                 <H4 textAlign="left">DURATION</H4>
-                                <Paragraph>16 weeks</Paragraph>
+                                <Paragraph textAlign="left">16 weeks</Paragraph>
                             </Div>
-                            {/* </Div> */}
+                            <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
+                                <Div flexDirection="column" width="50%">
+                                    <H4 textAlign="left">LOCATION</H4>
+                                    <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                                </Div>
+                                <Div flexDirection="column" width="50%">
+                                    <H4 textAlign="left">DURATION</H4>
+                                    <Paragraph textAlign="left">16 weeks</Paragraph>
+                                </Div>
+                            </Div>
                             <Div flexDirection="column">
-                                <Button width="200px" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
+                                <Button width="fit-content" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
                             </Div>
                         </Div>
                     )
