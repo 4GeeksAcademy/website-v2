@@ -17,16 +17,19 @@ walk(`${__dirname}/../data/blog/`, async function (err, files) {
 
     const vercelPath = `${__dirname}/../../now.json`;
     const content = fs.readFileSync(vercelPath, 'utf8');
+
     if(!content) fail("Error loading vercel configuration file for redirects: "+vercelPath);
     
     let vercel = JSON.parse(content);
     if(!vercel) fail("Error parsing vercel configuration JSON for redirects: "+vercelPath);
+
 
     for (let i = 0; i < files.length; i++) {
         const _path = files[i];
         const doc = loadMD(_path);
         if (!doc) fail("Invalid Markdown syntax for " + _path);
         if (!doc.lang) fail("Missing language on .md file name for " + _path);
+
 
         const hasRedirect = vercel.routes.find(r => r.source === "/"+doc.name);
         if(!hasRedirect) vercel.routes.push({
@@ -36,12 +39,12 @@ walk(`${__dirname}/../data/blog/`, async function (err, files) {
         })
     }
 
+    const fileContent = JSON.stringify(vercel, null, 2);
     try{
-        fs.writeFileSync(vercelPath, JSON.stringify(vercel));
-        success("All redirects have been added to the now.json");
+        fs.writeFileSync(vercelPath, fileContent, 'utf8');
+        success("All redirects have been created")
     }
-    catch(e){
-        fail("Error writing redirects on vercel file: "+vercelPath);
-        console.error(e);
+    catch(err){
+        fail("Error writing redirects on vercel file: " + err);
     }
 });     

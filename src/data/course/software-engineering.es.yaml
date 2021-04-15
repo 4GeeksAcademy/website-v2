@@ -6,7 +6,7 @@ meta_info:
   image: ""
   template: "course-engineering"
   keywords: ""
-  redirects: ["ingenieria-software"]
+  redirects: ["ingenieria-software", "/es/course/ingenieria-software"]
 
 seo_title: "Cooding Bootcamp"
 header:
@@ -50,6 +50,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA
+  weeks: 16
   sub_heading: "Part Time"
   left_labels:
     description: "DESCRIPCION:"

@@ -1,5 +1,5 @@
 meta_info:
-  slug: desarrollo-web-full-stack-bootcamp-part-time
+  slug: full-stack-part-time
   title: ""
   description: ""
   bc_slug: "full-stack"
@@ -16,6 +16,7 @@ meta_info:
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
       "/es/course/bootcamp-desarrollo-web-full-stack-part-time",
       "/es/course/introduccion-programacion",
+      "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
       "/introduccion-programacion-codigo",
     ]
 seo_title: "Cooding Bootcamp"
@@ -57,6 +58,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA PART-TIME
+  weeks: 16
   sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
     description: "DESCRIPCION:"

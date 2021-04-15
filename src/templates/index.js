@@ -21,7 +21,7 @@ import About4Geeks from '../new_components/About4Geeks';
 import OurPartners from '../new_components/OurPartners';
 import ChooseYourProgram from '../new_components/ChooseYourProgram';
 import Testimonials from '../new_components/Testimonials';
-import Carousel from '../new_components/Carousel';
+// import Carousel from '../new_components/Carousel';
 // import {MegaMenu} from '../new_components/NavbarDesktop';
 import Card from '../components/Card';
 import GeeksVsOthers from '../components/GeeksVsOthers';
@@ -234,6 +234,7 @@ export const query = graphql`
                 footer_link
                 images {
                   name
+                  locations
                   image {
                     childImageSharp {
                       fluid(maxWidth: 150){
