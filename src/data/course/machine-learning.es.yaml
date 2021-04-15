@@ -9,16 +9,14 @@ meta_info:
   redirects: ["machine-learning"]
 
 header:
-  tagline_top: "CONVIERTETE EN"
-  tagline: "INGENIERO EN INTELIGENCIA ARTIFICIAL"
-  sub_heading: "Únete a la revolución I.A. y obtén uno de los trabajos profesionales mejor pagados del mundo"
-  subsub_heading: "(Ninguna experiencia de código requerida)"
-  alt: ""
-
-  # The background image position can be cnotroled by device size
-  # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
+  title: "Convertiete en ingenier en inteligencia artificial"
+  paragraph: "
+  Únete a la revolución I.A. y obtén uno de los trabajos profesionales mejor pagados del mundo
+  
+  (Ninguna experiencia de código requerida)
+  "
   image: "../../../static/images/bg/apple-building.jpg"
+  image_alt: ""
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
@@ -49,6 +47,21 @@ teacher:
 
 ## PROGRAM DETAILS
 details:
+  about:
+      title: "About this course"
+      sub_title: "Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
+      Practice with real-life business scenarios typical in business and review some of the tools used in the industry. 
+      Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+      "
+      list:
+        - label: "Duration"
+          content:  "16 Weeks"
+        - label: "Classes"
+          content: "3 Classes weekly"
+        - label: "Certificate"
+          content: ""
+        - label: "Requisites"
+          content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA
   weeks: 16
   sub_heading: "Part Time"
