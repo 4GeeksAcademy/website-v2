@@ -23,6 +23,7 @@ const UpcomingDates = ({lang}) => {
             info {
               button_link
               button_text
+              program_label
               duration_label
               duration_weeks
               location_label
@@ -90,6 +91,10 @@ const UpcomingDates = ({lang}) => {
                             <Div flexDirection_tablet="column" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
                                 <H4 textAlign="left" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">ENERO</H4>
                                 <Paragraph textAlign="left" fontWeight="700">09/01 al 13/03</Paragraph>
+                            </Div>
+                            <Div flexDirection="column" margin="0 0 20px 0">
+                                <H4 textAlign="left" textTransform="uppercase">{content.info.program_label}</H4>
+                                <Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph>
                             </Div>
                             <Div flexDirection="column" display="none" display_tablet="flex" >
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>

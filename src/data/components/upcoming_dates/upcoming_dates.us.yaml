@@ -5,6 +5,7 @@ button:
   top_label: Location / Mode
 info:
   date:
+  program_label: program
   location_label: location
   duration_label: duration
   duration_weeks: 16 weeks

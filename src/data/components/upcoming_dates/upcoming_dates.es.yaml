@@ -5,6 +5,7 @@ button:
   top_label: Sede / Modalidad
 info:
   date:
+  program_label: programas
   location_label: sede
   duration_label: duracion
   duration_weeks: 16 semanas
