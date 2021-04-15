@@ -11,6 +11,7 @@ partners:
   images:
     - name: "Microsoft"
       #locations: ["miami-downtown"]
+      #courses: ["machine-learning"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
     - name: "Boats Group"
@@ -55,7 +56,33 @@ partners:
       featured: true
     - name: "Coinet"
       # locations: ["miami-downtown"]
+      course: ["machine-learning"]
       image: "../../../../static/images/partner/coinet.jpg"
+      featured: true
+    - name: "Strata.ai"
+      # locations: ["miami-downtown"]
+      courses: ["machine-learning"]
+      image: "../../../../static/images/partner/strata.png"
+      featured: true
+    - name: "MDC"
+      # locations: ["miami-downtown"]
+      image: "../../../../static/images/partner/mdc_ce.png"
+      courses: ["machine-learning"]
+      featured: true
+    - name: "Beacon Council"
+      # locations: ["miami-downtown"]
+      image: "../../../../static/images/partner/beacon_council.jpg"
+      courses: ["machine-learning"]
+      featured: true
+    - name: "Blackstone"
+      # locations: ["miami-downtown"]
+      image: "../../../../static/images/partner/blackstone.png"
+      courses: ["machine-learning"]
+      featured: true
+    - name: "CEMEX"
+      # locations: ["miami-downtown"]
+      courses: ["machine-learning"]
+      image: "../../../../static/images/partner/cemex.png"
       featured: true
       
 coding:

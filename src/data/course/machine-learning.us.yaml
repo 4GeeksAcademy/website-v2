@@ -12,7 +12,7 @@ header:
   tagline_top: "BECOME A"
   tagline: "MACHINE LEARNING ENGINEER"
   sub_heading: "Become one of the highest paid professionals in the world"
-  subsub_heading: "(no coding experience required)"
+  subsub_heading: "(some math, coding or statistical experience is required)"
 
   # The background image position can be controled by device size
   # devices:        imac         laptop     ipad        phone     small phone
@@ -37,7 +37,21 @@ button:
 ## PROGRAM DETAILS
 details:
   heading: Machine Learning Engineering Syllabus
-  weeks: 16
+  weeks: 18
+  weeks_label: "weeks"
+  facts:
+    - label: "Duration"
+      value: "weeks"
+    - label: "Classes"
+      value: "20 hrs (Lun - Mie - Vie)"
+    - label: "Certificate"
+      value: "Machine Learning Engineer"
+    - label: Delivery
+      value: "Online / Remote"
+    - label: Classroom Size
+      value: "12 People Max"
+    - label: Total Hours
+      value: "360"
   sub_heading: "Start with Python and Data Science, Machine Learning, Deep Learning and maintaining a production environment in A.I."
   left_labels:
     description: "DESCRIPTION:"
@@ -51,7 +65,7 @@ details:
         Starting from a Prework (2 weeks before), get introduced into the world of coding and learn Python and Algorithms' basics; this module will help you prepare to code and develop the different A.I. model training and evaluations for the next step.
       projects: "Peer to Peer video chat application (using WebRTC no backend required for communication)"
       slug: "python-intro"
-      duration: "1 week"
+      duration: "2 wks"
       step: 2
     - module_name: "Data"
       title: "Data Science for AI"
@@ -59,8 +73,8 @@ details:
         We don’t simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Algebra with Statistical Inference and Modeling. You’ll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets.
       projects: "Peer to Peer video chat application (using WebRTC no backend required for communication)"
       slug: "data-science"
-      duration: "2 weeks"
-      step: 2
+      duration: "3 wks"
+      step: 3
     - module_name: "Machine L."
       title: "Practical Machine Learning"
       description: "On a nearly weekly basis, you will be taking a deep dive into all the major subjects of Machine Learning. We start you with Machine Learning with Python, then take you through Supervised Learning, Training & Evaluation of ML Models, Unsupervised Learning, in addition to Ensemble Learning. To wrap up the module, you’ll be developing an end-to-end project that compares different Machine Learning models on a real-world dataset"
@@ -74,8 +88,8 @@ details:
         Within deep learning, you’ll be able to wield some of the most powerful technologies that truly scale intelligence for business. Explore the fundamentals of Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Generative Models, Reinforcement Learning, and finally; we jump into Graph Convolutional Neural Networks. Your end-to-end project is to apply one of the neural network types on a real-world scenario use case.
       projects: ""
       slug: "deep-learning"
-      duration: "2.5 wks"
-      step: 3
+      duration: "4 wks"
+      step: 4
     - module_name: "A.I."
       title: "Practical Topics in A.I."
       description: "This is where we prepare you for the most common use cases and business scenarios you’ll engage in. We also review some of the tools that are powerful for deep data analysis, such as Natural Langue Processing (NLP)and Machine Vision (object recognition, deep fakes, etc.). Lastly, we train you on the explainability and visualization of your solutions so you can properly engage with executives and business decision-makers. Your final project will include applying NLP or Machine Vision techniques to a real-world and complex challenge."
@@ -88,7 +102,7 @@ details:
       description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your AI solution into production."
       projects: "You will be given a real life application challenge with legacy code. You will need to understand the code and build a continued deployment in an integration system that guarantees quality."
       slug: "quality-deploy"
-      duration: "2 wks"
+      duration: "3 wks"
       step: 2.9
     - module_name: "LIFELONG"
       title: "Lifelong Support"
@@ -174,3 +188,8 @@ sidebar:
   geeks_vs_other: "4GEEKS vs OTHERS"
   pricing: "PRICING"
   alumni: "THE ALUMNI"
+
+faq:
+  title: "Frequently Asked Questions"
+  read_more: "Contact us for more questions"
+  link: "/faq"

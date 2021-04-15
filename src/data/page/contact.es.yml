@@ -4,7 +4,7 @@ meta_info:
   description: null
   image: null
   keywords: ""
-  redirects: ["/contactanos", "/contacto", "/es/contÃ¡ctanos"]
+  redirects: ["/contactanos", "/contacto", "/es/contÃ¡ctanos", "/es/contact"]
 
 ## CONTACT-US HEADING
 tagline: CONTACTA A 4GEEKS ACADEMY

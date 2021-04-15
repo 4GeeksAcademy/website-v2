@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
+import {navigate} from "gatsby";
 import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
 import {H1, H2, Title, Paragraph, H3, H4, H5} from '../components/Heading'
@@ -8,6 +9,7 @@ import {BackgroundDrawing} from '../components/BackgroundDrawing'
 import BaseRender from './_baseLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
+import WhoIsHiring from '../components/WhoIsHiring'
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
@@ -25,6 +27,9 @@ const Program = ({data, pageContext, yml}) => {
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
+
+  console.log("pageContext....", pageContext)
+  const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a,b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
 
   return (<>
     <BackgroundDrawing
@@ -89,6 +94,20 @@ const Program = ({data, pageContext, yml}) => {
       <Divider height="100px" md="0px" />
     </BackgroundDrawing>
 
+    <Container
+      color={Colors.lightGray}
+    >
+      <Wrapper>
+        <Row display="flex">
+          {yml.details.facts && yml.details.facts.map(f => 
+            <Column size="4" size_sm="6" align="center" >
+              <H5 margin="10px 0 0 0">{f.label}</H5>
+              <Paragraph>{f.value}</Paragraph>
+            </Column>
+          )}
+        </Row>
+      </Wrapper>
+    </Container>
 
     <Wrapper
       margin="100px"
@@ -111,19 +130,20 @@ const Program = ({data, pageContext, yml}) => {
         )}
 
         <Row display="flex" marginTop="50px" marginLeft="10%"  marginRight="10%">
-          <Column size="3" size_sm="12" pl_lg="0">
+          <Column size="4" size_lg="12" pl_lg="0" align_lg="center" >
             <StyledBackgroundSection
               backgroundPosition="top center"
               height="200px"
               width="200px"
+
               image={yml.teacher.picture.childImageSharp.fluid}
               bgSize={`cover`}
               // alt={yml.about.about_image.alt}
               borderRadius={`50%`}
             />
           </Column>
-          <Column size="8" size_sm="12" >
-              <H4 align="left" margin="0px 0px 30px 0px">{`${yml.teacher.greeting} ${yml.teacher.full_name}`}</H4>
+          <Column size="8" size_lg="12" align_lg="center" >
+              <H4 align="left" align="center" margin="0px 0px 30px 0px"  m_lg="10px 0 30px 0">{`${yml.teacher.greeting} ${yml.teacher.full_name}`}</H4>
               {yml.teacher.bio.split("\\n").map(text => 
               <Paragraph
                 margin="0px 0px 20px 0px"
@@ -213,6 +233,24 @@ const Program = ({data, pageContext, yml}) => {
       <GeeksVsOthers lang={pageContext.lang} limit={5} />
     </Wrapper>
 
+    {/* <Wrapper
+        right
+        background={Colors.lightGray}
+        border="top"
+      >
+        <Title
+          size="10"
+          marginTop="40px"
+          title={hiring.partners.tagline}
+          paragraph={hiring.partners.sub_heading}
+          paragraphColor={Colors.black}
+          variant="primary"
+        />
+        <WhoIsHiring
+          images={partners}
+        />
+    </Wrapper> */}
+
     <Wrapper
 
       github="/course"
@@ -230,6 +268,45 @@ const Program = ({data, pageContext, yml}) => {
         locations={data.allLocationYaml.edges}
         course="machine_learning"
       />
+    </Wrapper>
+
+    {/* <Wrapper
+      github="/course"
+    >
+      <Title
+        size="10"
+        title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
+        variant="primary"
+      />
+      <PricesAndPayment
+        lang={pageContext.lang}
+        session={session}
+        type={pageContext.slug}
+        locations={data.allLocationYaml.edges}
+        course="machine_learning"
+      />
+    </Wrapper> */}
+
+
+    <Wrapper
+      github="/course"
+      >
+      <Title
+        size="10"
+        title={yml.faq.title}
+        variant="primary"
+      />
+      { data.faqs.edges[0].node.faq.slice(0,3).map(f => <ul>
+        <li>
+          <H5 margin="15px 0px">{f.question}</H5>
+          <Paragraph>{f.answer}</Paragraph>
+        </li>
+      </ul>)
+      }
+      <Paragraph align="center" margin="10px 0">
+        <Button width="400px" onClick={() => navigate(`/${pageContext.lang}/contact`)} color={Colors.blue} margin="0" textColor="white">{yml.faq.read_more}</Button>
+      </Paragraph>
     </Wrapper>
 
   </>
@@ -281,6 +358,10 @@ export const query = graphql`
             details {
               heading
               sub_heading
+              facts{
+                value
+                label
+              }
               left_labels{
                 description
                 projects
@@ -304,7 +385,7 @@ export const query = graphql`
             teacher{
               picture{
                 childImageSharp {
-                  fluid(maxWidth: 400){
+                  fluid(maxWidth: 500){
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -352,6 +433,11 @@ export const query = graphql`
               geeks_vs_other
               pricing
               alumni
+            }
+            faq{
+              title
+              link
+              read_more
             }
         }
       }
@@ -487,6 +573,84 @@ export const query = graphql`
         }
       }
     }
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+          node {
+            partners {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 150){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                courses
+                featured
+              }
+              tagline
+              sub_heading
+            }
+            coding {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 150){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                featured
+              }
+              tagline
+              sub_heading
+            }
+            influencers {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 150){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                featured
+              }
+              tagline
+              sub_heading
+            }
+            financials {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 150){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                featured
+              }
+              tagline
+              sub_heading
+            }
+          }
+        }
+      }
+      faqs: allPageYaml(filter: { fields: { file_name: {regex: "/faq\\./"}, lang: { eq: $lang }}}, limit: 3) {
+        edges{
+          node{
+            faq{
+                question
+                answer
+            }
+        
+          }
+        }
+      }
   }
 `;
 export default BaseRender(Program);

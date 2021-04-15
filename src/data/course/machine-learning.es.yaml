@@ -51,6 +51,19 @@ teacher:
 details:
   heading: DETALLES DEL PROGRAMA
   weeks: 16
+  facts:
+    - label: "Duration"
+      value: "weeks"
+    - label: "Classes"
+      value: "20 hrs (Lun - Mie - Vie)"
+    - label: "Certificate"
+      value: "Machine Learning Engineer"
+    - label: Delivery
+      value: "Online / Remote"
+    - label: Classroom Size
+      value: "12 People Max"
+    - label: Total Hours
+      value: "360"
   sub_heading: "Part Time"
   left_labels:
     description: "DESCRIPCION:"
@@ -66,14 +79,14 @@ details:
       projects: "Aplicación de video llamadas Peer-to-Peer utilizando WebRTC y no se requiere un backend para la comunicación"
       slug: "advanced-front-end"
       duration: "2 weeks"
-      step: 1
+      step: 2
     - module_name: "ALGORITMOS"
       title: "Algoritmos Avanzados"
       description: "Todas las entrevistas de trabajo en empresas del Fortune 500 requieren que sepas algoritmos avanzados: Big O, Medicion de Tiempo y Espacio, Estructuras Avanzadas, Patrones de Diseño, Árboles, DFS/BFS."
       projects: "Vas a pasar todo el rato perfeccionando tus habilidades de algoritmos y te presentaremos retos sacados de entrevistas reals."
       slug: "advanced-algorithms"
-      duration: "2 wks"
-      step: 2
+      duration: "3 wks"
+      step: 3
     - module_name: "STORAGE"
       title: "Almacenado y Búsqueda de Información"
       description: >
@@ -81,7 +94,7 @@ details:
         Hay demasiadas formas diferentes de almacenar y buscar información, aqui aprenderás las más populares y resolveras problemas típicos de escalamiento con Big Data, Data-Mining, Almacenamiento Distribuido, Redis/Memcache, SQL, NoSQL, GraphQL, et.
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
       slug: "info-retrival"
-      duration: "2.5 wks"
+      duration: "3 wks"
       step: 3
     - module_name: "DISTRIBUIDO"
       title: "Aplicaciones Distribuidas"
@@ -188,3 +201,8 @@ sidebar:
   geeks_vs_other: "4GEEKS vs OTHERS"
   pricing: "PRICING"
   alumni: "THE ALUMNI"
+
+faq:
+  title: "Frequently Asked Questions"
+  read_more: "Contact us for more questions"
+  link: "/faq"

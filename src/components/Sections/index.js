@@ -148,6 +148,7 @@ export const Column = styled(Div)`
         flex: 0 0 ${props => (props.size_lg / 12) * 100}%;
         max-width: ${props => (props.size_lg / 12) * 100}%;
         padding-left: ${props => props.pl_lg};
+        margin: ${props => props.m_lg};
         display: ${props => props.disp_lg};
     }
     @media ${Break.md}{
@@ -156,6 +157,7 @@ export const Column = styled(Div)`
         text-align: ${props => props.align};
         margin-bottom: ${props => props.respSizeMargin};
         border-radius: ${props => props.br_md};
+        text-align: ${props => props.align_lg};
         margin: ${props => props.m_md};
         padding: ${props => props.p_md};
         padding-left: ${props => props.pl_md};
