@@ -6,7 +6,13 @@ meta_info:
   image: ""
   template: "course-machine-learning"
   keywords: ""
-  redirects: []
+  redirects:
+    [
+      "/software-engineering",
+      "/us/course/machine-learning-engineering-coding-bootcamp",
+      "/course/machine-learning-engineering-coding-bootcamp",
+      "/coding-bootcamps/machine-learning-engineering-bootcamp",
+    ]
 
 header:
   tagline_top: "BECOME A"
@@ -155,7 +161,6 @@ geek_data:
     - Helping you land a job in a 500 Fortune company.
     - Profile, portfolio, interviews, workshops, talks, software community, network, active projects collaboration.
     - It’s about getting your career to the next level.
-    
 
 ## PRICES AND PAYMENTS SECTION
 prices:
