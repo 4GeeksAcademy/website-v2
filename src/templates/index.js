@@ -98,13 +98,6 @@ const Home = (props) => {
           scale="0.5"
         />
         <Circle
-          color="black"
-          width="30px"
-          height="30px"
-          top="140px"
-          left="5%"
-        />
-        <Circle
           color="grey"
           width="30px"
           height="30px"
@@ -141,51 +134,7 @@ const Home = (props) => {
           right="-5%"
           opacity="0.2"
         />
-        <Circle
-          color="yellow"
-          width="30px"
-          height="30px"
-          top="60px"
-          left="5%"
-          opacity="0.2"
-        />
-        <Circle
-          color="black"
-          width="30px"
-          height="30px"
-          top="140px"
-          left="5%"
-        />
-        <Circle
-          color="grey"
-          width="30px"
-          height="30px"
-          top="180px"
-          left="5%"
-        />
-        <Circle
-          color="grey"
-          width="30px"
-          height="30px"
-          top="240px"
-          left="5%"
-        />
-        <Circle
-          color="blue"
-          width="30px"
-          height="30px"
-          top="280px"
-          left="5%"
-        />
-        <Circle
-          color="yellow"
-          width="100px"
-          height="100px"
-          top="250px"
-          left="-5%"
-        />
-        <Circle color="blue" width="50px" height="50px" top="20px" left="15%" />
-        <Circle color="red" width="50px" height="50px" top="200px" left="20%" opacity="0.3" />
+
         <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
