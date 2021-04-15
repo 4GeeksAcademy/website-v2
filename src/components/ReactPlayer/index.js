@@ -38,7 +38,7 @@ const Player = ({ id, onPlay, onPause, onEnd, onError, onStateChange, onPlayback
     function yt_parser(url){
       let regExpUrl = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
       let match = url.match(regExpUrl);
-      return (match&&match[7].length==11)? match[7] : false;
+      return (match&&match[7].length==11)? match[7] : url;
     }
 
     const validImageSizes = [
