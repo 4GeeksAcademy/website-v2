@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Div, Grid, GridContainer } from '../Sections'
 import { Colors, StyledBackgroundSection } from '../Styling';
 import Img from "gatsby-image"
@@ -79,33 +79,37 @@ const Images_With_Slider = (props) => {
   )
 }
 
-//Funcion que muestra las imagenes tipo marquesina con loop infinito
 const Images_With_Marquee = (props) => {
+  
   return (
-    <>
-      <Div className={styles.marquee} margin="0 0 50px 0" >
-        <Div className={styles.marqueeContent}>
-          {props.images.map((l, i) => {
-            return (
-              <Div>
-                K
-                {/*
-                <Img
-                  key={i}
-                  style={{ height: "80px", minWidth: "120px", margin: "0 5px"}}
-                  imgStyle={{ objectFit: "contain" }}
-                  alt={l.name}
-                  fluid={l.image.childImageSharp.fluid}
-                />
-                */}
-              </Div>              
-            )
-          })}
-        </Div>
-      </Div>
+    <>      
+      <div className={styles.marquee} style={{margin: "0 0 40px 0"}}>
+        <ul id="lista" className={styles.marqueeContent}>
+          {
+            //load images in marquee container
+            props.images.map((l, i) => {
+              return (
+                <li>
+                  <Img
+                    key={i}
+                    style={{ minWidth: "120px", border: 0 }} 
+                    height= "80px"
+                    objectFit="contain"
+                    alt={l.name}                    
+                    fluid={l.image.childImageSharp.fluid}
+                  />
+                </li>
+              )
+            })
+
+          }
+        </ul>
+      </div>
+
     </>
   )
 }
+
 
 //Funcion que muestra las imagenes en columna y centradas
 const Images_Centered = (props) => {
@@ -164,8 +168,37 @@ const Images_Featured = (props) =>{
 }
 
 //Punto de entrada al componente
-const OurPartners = ({ title, paragraph, background, link, showFeatured, images, slider, ...rest }) => {
+const OurPartners = ({ title, paragraph, background, link, showFeatured, images, slider, displayedImages=9 , ...rest }) => {
 
+  // Hook == to componentDidMount (Modify items list DOM)
+  useEffect(() => {
+  
+    //inputs for cs - REQUIRED -
+    let marqueeElementsDisplayed = displayedImages;     //displayedImages es input DEFAULT = 8
+    let marqueeElements = images.length;    
+    //
+
+    const root = document.documentElement
+    let listaItems = document.getElementById("lista");
+
+    //extra images for infinite loop
+    //let i = 1;    
+    //while (i < marqueeElementsDisplayed+1) {      
+      //listaItems.appendChild(listaItems.children[i].cloneNode(false));
+      //i++;
+    //}
+
+    //recalculate count marquee elements
+    //marqueeElements = images.length + i;
+    
+    //set values for css .root prop.
+    root.style.setProperty("--marquee-elements", marqueeElements);
+    root.style.setProperty("--marquee-elements-displayed", marqueeElementsDisplayed);
+
+  });
+
+
+  //Renderized...
   return (
     <Fragment github="/components/partner" >      
       {        
@@ -173,10 +206,10 @@ const OurPartners = ({ title, paragraph, background, link, showFeatured, images,
       }      
       {
         showFeatured && <Images_Featured images={images}/>          
-      }
-      {
+      }      
+      {        
         slider ? 
-              <Images_With_Slider images={images} />
+              <Images_With_Marquee images={images} />
               : 
               <Images_Centered images={images} />          
       }      
