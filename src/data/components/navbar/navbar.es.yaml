@@ -203,3 +203,24 @@ button:
   button_background_color: ""
   next_cohort: "Próxima cohorte:"
   other_dates: "ver otras fechas"
+
+
+# - name: "Home"
+#     link: "/es/inicio"
+#   - name: "La Academia"
+#     link: "/es/la-academia"
+#   - name: "Programas"
+#     link: "/es/coding-bootcamps/full-stack-part-time"
+#     links:
+#       - name: "Full Stack Development"
+#       - link: "/es/coding-bootcamps/full-stack-part-time"
+#       - name: "Senior Software Engineering"
+#       - link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+#   # - name: "Precios"
+#   #   link: "/precios"
+#   - name: "Alianzas"
+#     link: "/es/alianzas"
+#   - name: "Próximas Fechas"
+#     link: "/es/proximas-fechas"
+# button:
+#   button_link: "/es/aplica"

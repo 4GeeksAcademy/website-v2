@@ -139,3 +139,21 @@ button:
   button_background_color: ""
   next_cohort: "Next cohort starts on"
   other_dates: "or review other dates"
+
+
+# link: "/us/the-academy"
+#   - name: "The Programs"
+#     link: "/us/coding-bootcamps/part-time-full-stack-developer"
+#     links:
+#       - name: "Full Stack Developer"
+#       - link: "/us/coding-bootcamps/part-time-full-stack-developer"
+#       - name: "Software Engineer"
+#       - link: "/us/coding-bootcamps/software-engineer-bootcamp"
+#   # - name: "Pricing"
+#   #   link: "/pricing"
+#   - name: "for companies"
+#     link: "/us/partners"
+#   - name: "Upcoming Dates"
+#     link: "/us/next-dates"
+# button:
+#   button_link: "/us/apply"

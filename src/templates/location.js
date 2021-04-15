@@ -222,13 +222,13 @@ const Location = ({data, pageContext, yml}) => {
                             margin_sm={"20px auto"}
                             margin_xs={"20px auto"}
                         >
-                            <Link to={`/${pageContext.lang}/${cohort.certificate.slug}`}><Img
-                                src={cohort.certificate.logo}
+                            <Link to={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}><Img
+                                src={cohort.syllabus.certificate.logo}
                                 className="pointer"
                                 height="120px"
                                 borderRadius="1rem 1rem 0 0"
                             /></Link>
-                            <H4 padding="10px">{cohort.certificate.name}</H4>
+                            <H4 padding="10px">{cohort.syllabus.certificate.name}</H4>
                             <Div padding="10px">
                                 <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
                                 {pageContext.lang == "us" ?
@@ -257,7 +257,7 @@ const Location = ({data, pageContext, yml}) => {
                             <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center">
                                 <Link to={yml.button.apply_button_link}><Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
                                 &nbsp;
-                                <Link to={`/${pageContext.lang}/${cohort.certificate.slug}`}><Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{yml.button.cohort_more_details_text}</Button></Link>
+                                <Link to={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}><Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{yml.button.cohort_more_details_text}</Button></Link>
                             </Div>
                         </Card>
                     </Column>

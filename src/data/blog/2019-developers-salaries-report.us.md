@@ -24,7 +24,7 @@ tags:
 # BOOTCAMP GRADUATES SALARIES 2019 EDITION
 
 
-It’s been some time since we gathered an updated trend and data related to the [developer’s estimated wages](https://www.4geeksacademy.co/wages-report-2018-1/). If you’re considering a career path in technology, especially as a software developer, the first question that normally comes to your mind is: How much money developers make? There is a bunch of data to answer that question. 
+It’s been some time since we gathered an updated trend and data related to the [developer’s estimated wages](/wages-report-2018-1/). If you’re considering a career path in technology, especially as a software developer, the first question that normally comes to your mind is: How much money developers make? There is a bunch of data to answer that question. 
 
 [According to Payscale](https://www.payscale.com/research/US/Job=Front_End_Developer_%2F_Engineer/Salary/f9729119/Miami-FL), a Web Developer in Miami earns an average of $64k per year, and an entry-level developer earns an average of $51k in the same period. 
 
@@ -36,7 +36,7 @@ Web developers are one in a million right now. Sure, we know a lot of them, but 
 
 It’s not only about quantity but about quality. Software developers are capable of building apps, platforms, websites, programs, etc. The work environment, the organization culture, the field where you belong. There are several ways to achieve that status. Signing up for a coding Bootcamp can be a tough decision if you’re not well informed. The majority believes that college degrees are exactly what you need to get a professional job and earn six figures.
 
-If you check back [our 2017 report](https://www.4geeksacademy.co/web-salaries-2017-coding-bootcamp/), we’ve been gathering data on web developer’s salaries, just to help our students realize what they’re really worth in the job market. A well-rounded web developer that completes our Bootcamp has higher chances of getting a great job down the road. 
+If you check back [our 2017 report](/web-salaries-2017-coding-bootcamp/), we’ve been gathering data on web developer’s salaries, just to help our students realize what they’re really worth in the job market. A well-rounded web developer that completes our Bootcamp has higher chances of getting a great job down the road. 
 
 
 ## A look at what developers have said
@@ -105,7 +105,7 @@ All workplaces are looking for developers that not only meet with high coding sk
 
 In today’s job market, tech skills are no longer just coding and building cool stuff: You need to find your place in a team. To be able to deliver a standing project, no developer can do it by themselves. Usually, there’s a lot of people involved in the same project to ensure its success. That’s the reason people skills, management skills, and soft skills, in general, are in demand.
 
-[According to the LinkedIn Business Blog](https://business.linkedin.com/talent-solutions/blog/trends-and-research/2018/the-most-in-demand-hard-and-soft-skills-of-2018), the most in-demand soft skills for 2019 are 
+[According to the LinkedIn Business Blog](https://business.linkedin.com/talent-solutions/blog/trends-and-research/2018/the-most-in-demand-hard-and-soft-skills-of-2018), the most in-demand soft skills for 2019 are: 
 
 
 
