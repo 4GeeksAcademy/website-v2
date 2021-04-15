@@ -1,9 +1,11 @@
 import React from 'react';
+import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
 import {Row, Column, GridContainerWithImage, Container, Grid, Div, GridContainer} from '../new_components/Sections'
 import {RoundImage, Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Img from 'gatsby-image'
+import {Circle} from '../new_components/BackgroundDrawing'
 import News from '../new_components/News'
 import Icon from '../new_components/Icon'
 import Credentials from '../new_components/Credentials'
@@ -70,6 +72,7 @@ const CityWrapper2 = ({yml}) => {
   />
 }
 
+
 const Home = (props) => {
 
   const {data, pageContext, yml} = props;
@@ -78,7 +81,111 @@ const Home = (props) => {
   return (
     <>
       {/* <MegaMenu /> */}
-      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="0 0 108px 0">
+      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="0 0 108px 0" position="relative">
+        <Circle
+          color="blue"
+          width="50px"
+          height="50px"
+          bottom="20px"
+          right="10%"
+        />
+        <Circle
+          color="black"
+          width="50px"
+          height="50px"
+          top="170px"
+          right="120px"
+          scale="0.5"
+        />
+        <Circle
+          color="black"
+          width="30px"
+          height="30px"
+          top="140px"
+          left="5%"
+        />
+        <Circle
+          color="grey"
+          width="30px"
+          height="30px"
+          top="100px"
+          right="9%"
+        />
+        <Circle
+          color="black"
+          width="30px"
+          height="30px"
+          top="100px"
+          right="12%"
+        />
+        <Circle
+          color="grey"
+          width="30px"
+          height="30px"
+          top="100px"
+          right="15%"
+        />
+        <Circle
+          color="yellow"
+          width="20px"
+          height="20px"
+          top="0px"
+          right="30%"
+          scale="2"
+        />
+        <Circle
+          color="yellow"
+          width="200px"
+          height="200px"
+          top="150px"
+          right="-5%"
+          opacity="0.2"
+        />
+        <Circle
+          color="yellow"
+          width="30px"
+          height="30px"
+          top="60px"
+          left="5%"
+          opacity="0.2"
+        />
+        <Circle
+          color="black"
+          width="30px"
+          height="30px"
+          top="140px"
+          left="5%"
+        />
+        <Circle
+          color="grey"
+          width="30px"
+          height="30px"
+          top="180px"
+          left="5%"
+        />
+        <Circle
+          color="grey"
+          width="30px"
+          height="30px"
+          top="240px"
+          left="5%"
+        />
+        <Circle
+          color="blue"
+          width="30px"
+          height="30px"
+          top="280px"
+          left="5%"
+        />
+        <Circle
+          color="yellow"
+          width="100px"
+          height="100px"
+          top="250px"
+          left="-5%"
+        />
+        <Circle color="blue" width="50px" height="50px" top="20px" left="15%" />
+        <Circle color="red" width="50px" height="50px" top="200px" left="20%" opacity="0.3" />
         <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
