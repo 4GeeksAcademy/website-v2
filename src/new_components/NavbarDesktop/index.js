@@ -202,19 +202,21 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                                                 <Div>
                                                     {Array.isArray(m.buttons) && m.buttons.map((m, i) => {
                                                         return (
-                                                            <Button
-                                                                outline
-                                                                color="black"
-                                                                font='"Lato", sans-serif'
-                                                                width="fit-content"
-                                                                margin="20px 10px 0 0"
-                                                                pointer
-                                                                textColor={Colors.black}
-                                                                fontSize={"13px"}
-                                                                borderRadius="3px" padding="10px"
-                                                            >
-                                                                {m.text}
-                                                            </Button>
+                                                            <Link to={m.link} key={i}>
+                                                                <Button
+                                                                    outline
+                                                                    color="black"
+                                                                    font='"Lato", sans-serif'
+                                                                    width="fit-content"
+                                                                    margin="20px 10px 0 0"
+                                                                    pointer
+                                                                    textColor={Colors.black}
+                                                                    fontSize={"13px"}
+                                                                    borderRadius="3px" padding="10px"
+                                                                >
+                                                                    {m.text}
+                                                                </Button>
+                                                            </Link>
                                                         )
                                                     })}
                                                 </Div>

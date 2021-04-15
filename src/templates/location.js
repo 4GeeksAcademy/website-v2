@@ -386,7 +386,7 @@ export const query = graphql`
                         }
                       } 
                     alt
-                    position
+
                 }
                 
             }
