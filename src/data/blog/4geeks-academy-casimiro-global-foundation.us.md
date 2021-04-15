@@ -12,7 +12,7 @@ link: https://www.4geeksacademy.co/4geeks-academy-casimiro-global-foundation/
 slug: 4geeks-academy-casimiro-global-foundation
 title: 4Geeks Academy + Casimiro Global Foundation
 avatar: "/4geeks-logo.png"
-image: "https://4geeksacademy.co/wp-content/uploads/2016/02/CGF-INFOGRAPHIC-232x300-1.jpg"
+image: "/wp-content/uploads/2016/02/CGF-INFOGRAPHIC-232x300-1.jpg"
 categories:
 - Sin categoría
 - Why learn to code?
@@ -41,7 +41,7 @@ Our partnership with Casimiro Global Foundation seeks to empower young entrepren
 
 
 
-[![CGF INFOGRAPHIC](https://4geeksacademy.co/wp-content/uploads/2016/02/CGF-INFOGRAPHIC-232x300-1.jpg)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/02/CGF-INFOGRAPHIC.jpg)
+[![CGF INFOGRAPHIC](//wp-content/uploads/2016/02/CGF-INFOGRAPHIC-232x300-1.jpg)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/02/CGF-INFOGRAPHIC.jpg)
 
 
 

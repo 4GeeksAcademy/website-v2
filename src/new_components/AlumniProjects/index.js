@@ -5,8 +5,8 @@ import {H2, H3, H4, H5, Paragraph} from '../Heading';
 import {Colors, Anchor, Button, StyledBackgroundSection, Span} from '../Styling';
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import {Carousel} from 'react-responsive-carousel';
-import Carousel, {Dots} from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
+// import Carousel, {Dots} from "@brainhubeu/react-carousel";
+// import "@brainhubeu/react-carousel/lib/style.css";
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import Icon from "../Icon"
@@ -32,7 +32,24 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
                     <Paragraph>{paragraph}</Paragraph>
                 </Div>
             </GridContainer>
-            <Carousel value={value} onChange={onChange} dots={true}>
+
+            {/* <Dots value={value} onChange={onChange} /> */}
+        </>
+    )
+};
+AlumniProjects.propTypes = {
+    limit: PropTypes.number
+}
+AlumniProjects.defaultProps = {
+    limit: 0,
+    playerHeight: "100%"
+}
+export default AlumniProjects;
+
+
+
+
+{/* <Carousel value={value} onChange={onChange} dots={true}>
                 {projects.map((item, index) => {
                     return (
                         <GridContainerWithImage imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
@@ -109,16 +126,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
                                     textAlign="left"
                                 >{item.project_content}
                                 </Paragraph>
-                                {/* <Div display="flex">
-                                    {item.project_video && <Anchor to={`${item.project_video}`} target="_blank" rel="noopener noreferrer nofollow">
-                                        <Paragraph margin={`10px 5px 0 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Video Demo •</Paragraph>
-                                    </Anchor>
-                                    }
-                                    {item.live_link && <Anchor to={`${item.live_link}`} target="_blank" rel="noopener noreferrer nofollow">
-                                        <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link </Paragraph>
-                                    </Anchor>
-                                    }
-                                </Div> */}
+                                
                             </Div>
 
                         </GridContainerWithImage>
@@ -126,26 +134,5 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
                     )
                 })
                 }
-                {/* <Div display="block" align="center" padding="150px 0">
-                    <H2 width="100%">{lang[0].node.button_section.button_text}</H2>
-                    <Link to={lang[0].node.button_section.button_link}>
-                        <Button outline width="200px" color={Colors.blue} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>
-                    </Link>
-                </Div> */}
-            </Carousel>
-            <Dots value={value} onChange={onChange} />
-        </>
-    )
-};
-AlumniProjects.propTypes = {
-    limit: PropTypes.number
-}
-AlumniProjects.defaultProps = {
-    limit: 0,
-    playerHeight: "100%"
-}
-export default AlumniProjects;
-
-
-
-
+                
+            </Carousel> */}

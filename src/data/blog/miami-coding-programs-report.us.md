@@ -28,9 +28,9 @@ Coding Bootcamps are the solution to traditional education institutions’ lack 
 
 According to a [recent report](https://www.payscale.com/research/US/Job=Web_Developer/Salary), a junior web developer annual wage is around $58k. Senior developers are around six figures. But what also matters is Location, just like in Real Estate. Big tech cities are paying way more than that; although the costs of living are also pretty expensive. 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/avg-salary.jpg)
+![](/wp-content/uploads/2018/11/avg-salary.jpg)
 
-We understand how important the conversation is about Return of Investment. [Here](https://www.4geeksacademy.co/choosing-coding-bootcamp/) is a ROI report where we address the pros and cons of joining (financially speaking) a Coding Bootcamp. 
+We understand how important the conversation is about Return of Investment. [Here](/choosing-coding-bootcamp/) is a ROI report where we address the pros and cons of joining (financially speaking) a Coding Bootcamp. 
 
 **LET'S TALK ABOUT BOOTCAMPS**
 
@@ -54,12 +54,12 @@ Despite the regulatory issues, Coding Bootcamps are delivering great results if 
 
 There is a[ long list](https://www.coursereport.com/schools?track=&subject=&type=&cost=&start_date=&location=miami) of many institutions offering web development programs in Miami. Not all of them are actually a Coding Bootcamp, but we are all clear that a better and improved education is being required.  According to the data, we can see that all have been launched recently (compared to traditional institutions), but they are growing pretty fast.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/operation-first.png)
+![](/wp-content/uploads/2018/11/operation-first.png)
 
 If you are interested in getting more involved in the world of programming, and you are in Florida, these are the academies you have to consider:
 
 
-### [**4Geeks Academy**](https://www.4geeksacademy.co/)
+### [**4Geeks Academy**](/)
 
 
 Coding Bootcamp focused on Full Stack Software, Web or Front-End development. These programs enable you to face many different coding challenges. Coding is not only about developing websites but also about being capable of working in the fields of Machine Learning, Data Analytics, Artificial Intelligence, Virtual Reality, and so on. You will sure very likely land a job afterward (91% Placement).  
@@ -67,10 +67,10 @@ Coding Bootcamp focused on Full Stack Software, Web or Front-End development. Th
 A major benefit of 4Geeks Academy is that students don't have to quit their current job to learn code. The Academy expects a 24-hour per week commitment. You will find senior mentors, staff ready to help you throughout the program, and an Academic Platform where you will find hundreds of hours of tutorials, videos, exercise, projects, and content specially designed for our students.
 
 
-## ![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/Graficas-03.png)
+## ![](/wp-content/uploads/2018/11/Graficas-03.png)
 
 
-[4Geeks](https://www.4geeksacademy.co/course/full-stack-web-development-bootcamp-full-time/) is also launching a Full-Time program that will be added to their current offer. 
+[4Geeks](/course/full-stack-web-development-bootcamp-full-time/) is also launching a Full-Time program that will be added to their current offer. 
 
 
 ### **Wyncode**
@@ -80,7 +80,7 @@ Wyncode is famous because of their location and entrepreneurial approach. The fu
 
 The course consists of 10 weeks of coding, and 2 weeks of career development. Wyncode is interested in giving back to the community, as well as assist businesses with creative tech solutions. 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/Graficas-04.png)
+![](/wp-content/uploads/2018/11/Graficas-04.png)
 
 
 ### **IronHack**
@@ -92,7 +92,7 @@ The Web Development Bootcamp is an immersive course that goes with –mainly- HT
 
 IronHack has a career support service that assists students with job search strategies and in practicing with real-world coding tests. It conducts mock interviews and provides access to a network of partner firms that are actively seeking developer talent. 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/Graficas-06.png)
+![](/wp-content/uploads/2018/11/Graficas-06.png)
 
 **OTHER ****OPTIONS**
 
@@ -104,17 +104,17 @@ In Miami (and related areas), there are currently around 15 institutions in oper
 
 Below are some additional courses in Miami:
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/Screen-Shot-2018-11-06-at-3.53.12-PM.png)
+![](/wp-content/uploads/2018/11/Screen-Shot-2018-11-06-at-3.53.12-PM.png)
 
 Now that you know a little more about these Bootcamps, here are some additional facts that will help you choose the best option:
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/Graficas-07.png)
+![](/wp-content/uploads/2018/11/Graficas-07.png)
 
 **BOOTCAMP METHODOLOGY**
 
 Let’s talk about the importance of the methodology when delivering a coding program. Coding Bootcamps can be divided into three main segments: Full-Time, Part-Time or Online programs. Recently, Thinkful made Miami one of their targets, probably because they have seen how the city has been answering to Coding Bootcamps.  Therefore, now Miami is officially a city where multiple options are available for potential coders.
 
-Not everyone learns in the same way, not everyone delivers the same program. There are several options, although Part-time programs are probably the most underestimated yet most valuable options for those who want to launch their career but does not have the chance to quit everything in the meanwhile. Part-time programs are required to build a strong methodology with a mixture of in-person classes, together with a great Academic Platform.[ Here is why part-time programs](https://www.4geeksacademy.co/part-time-bootcamps/) are a great option.
+Not everyone learns in the same way, not everyone delivers the same program. There are several options, although Part-time programs are probably the most underestimated yet most valuable options for those who want to launch their career but does not have the chance to quit everything in the meanwhile. Part-time programs are required to build a strong methodology with a mixture of in-person classes, together with a great Academic Platform.[ Here is why part-time programs](/part-time-bootcamps/) are a great option.
 
 Having a proprietary and tailor-made Academic platform actually plays a very important role in the learning process of every student. Technology has to be involved. Projects, content and hundreds of exercises are mandatory.
 
@@ -129,7 +129,7 @@ On the other hand, **4Geeks** has developed Breathe Code, a platform aimed to tr
 It is also important to understand what alumni say about their experience, and how experts are providing insights on the role of Coding Bootcamps within the new education trends.
 
 
-## ![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/Testimonials.png)
+## ![](/wp-content/uploads/2018/11/Testimonials.png)
 
 
 We see how students in their impressions of the Bootcamps are oriented by the promptness, and effectiveness in the learning. Besides, it is not necessary to have a vast experience to start programming because the idea of these programs (be it full-time or part-time) is to train non-coders and make developers out of them. 
@@ -138,7 +138,7 @@ We see how students in their impressions of the Bootcamps are oriented by the pr
 
 Placement is the end goal. To get the students hired by a company. It’s actually everybody’s goal. Here some facts to illustrate how important this is: 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/Placement.png)
+![](/wp-content/uploads/2018/11/Placement.png)
 
 
 

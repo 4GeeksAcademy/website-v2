@@ -67,7 +67,7 @@ navbar:
     link: "/es/coding-bootcamps/full-stack-part-time"
     sub_menu:
       icon: ""
-      title: "Programs"
+      title: "Programas"
       paragraph: "Lorem ipsum dolor sit amet, consectetur 
       
       adscing elit, sed do eiusmod tempor incidi.
@@ -88,7 +88,7 @@ navbar:
           icon: "fullstack"
           paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
           buttons:
-            - text: "View Program"
+            - text: "Ver Programa"
               link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
          
         - title: "AI/Machine Learning Engineering"
@@ -96,8 +96,8 @@ navbar:
           icon: "fullstack"
           paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
           buttons:
-            - text: "View program"
-              link: ""
+            - text: "Ver Programa"
+              link: "/es/coding-bootcamps/curso-inteligencia-artificial"
           
   - name: "Porqué 4Geeks"
     link: "/es/porque-4geeks"
@@ -108,13 +108,13 @@ navbar:
       
       adscing elit, sed do eiusmod tempor incidi."
       links:
-        - title: "Accompaniment"
+        - title: "Acompañamiento"
           sub_links: 
             - title: "GeekPal"
               link_to: "/us/coding-campuses/coding-bootcamp-caracas"
             - title: "GeekForce"
               link_to: "/us/coding-campuses/coding-bootcamp-caracas"
-        - title: "Validation"
+        - title: "Validaciones"
           sub_links: 
             - title: "Premios"
               link_to: "/es/premios"
@@ -122,38 +122,38 @@ navbar:
               link_to: "/es/resultados"
             - title: "Compara 4Geeks"
               link_to: "/es/compara-4geeks"
-        - title: "Prices"
+        - title: "Costos"
           sub_links: 
-            - title: "Financiacion"
+            - title: "Financiaciones"
               link_to: "/es/financiacion"
             - title: "Precios"
               link_to: "/es/precios"
             - title: "Becas"
               link_to: "/es/becas"
-        - title: "Our Students"
+        - title: "Nuestros Alumnos"
           sub_links: 
-            - title: "Alumni & Projects"
+            - title: "Alumnos y Proyectos"
               link_to: "/es/alumni-y-proyectos"
-            - title: "Testimonials"
+            - title: "Testimonios"
               link_to: "/es/testimonios"
   - name: "Academia"
     link: "/es/sobre-la-academia"
     sub_menu:
       icon: "hat"
-      title: "The Academy"
+      title: "Academia"
       paragraph: "Lorem ipsum dolor sit amet, consectetur 
       
       adscing elit, sed do eiusmod tempor incidi."
       links:
         - title: ""
           sub_links: 
-            - title: "Who we are"
+            - title: "Quienes Somos"
               link_to: "/es/sobre-la-academia"
             - title: "Prensa"
               link_to: "/es/prensa"
             - title: "Blog"
               link_to: "/es/blog-en-espanol"
-            - title: "Partnership"
+            - title: "Partners"
               link_to: "/es/alianzas"
 # links:
 #       - name: "Desarrollador Full Stack"
@@ -203,3 +203,24 @@ button:
   button_background_color: ""
   next_cohort: "Próxima cohorte:"
   other_dates: "ver otras fechas"
+
+
+# - name: "Home"
+#     link: "/es/inicio"
+#   - name: "La Academia"
+#     link: "/es/la-academia"
+#   - name: "Programas"
+#     link: "/es/coding-bootcamps/full-stack-part-time"
+#     links:
+#       - name: "Full Stack Development"
+#       - link: "/es/coding-bootcamps/full-stack-part-time"
+#       - name: "Senior Software Engineering"
+#       - link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+#   # - name: "Precios"
+#   #   link: "/precios"
+#   - name: "Alianzas"
+#     link: "/es/alianzas"
+#   - name: "Próximas Fechas"
+#     link: "/es/proximas-fechas"
+# button:
+#   button_link: "/es/aplica"

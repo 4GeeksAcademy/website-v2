@@ -39,16 +39,6 @@ const Program = ({data, pageContext, yml}) => {
     setOpen(false);
   };
 
-  let week = "";
-  {
-    pageContext.slug === "full-stack-web-development-bootcamp-full-time" || pageContext.slug === "desarrollo-web-full-stack-bootcamp-full-time"
-      ? week = 9
-      : pageContext.slug === "full-stack-web-development-bootcamp-part-time" || pageContext.slug === "desarrollo-web-full-stack-bootcamp-part-time"
-        ? week = 16
-        : pageContext.slug === "coding-introduction" || pageContext.slug === "introduccion-programacion"
-        && null
-  }
-
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
@@ -145,6 +135,7 @@ export const query = graphql`
                 }
               }
               heading
+              weeks
               sub_heading
               left_labels{
                 description

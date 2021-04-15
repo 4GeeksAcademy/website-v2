@@ -1,9 +1,9 @@
 meta_info:
   slug: aplica
-  title: ""
-  description: null
+  title: "Aplicación 4geeks Academy"
+  description: "Aplica a 4geeks Academy"
   image: null
-  keywords: ""
+  keywords: "Aplicación 4geeks Academy"
   redirects: ["/aplica","/es/apply"]
 
 ## APPLY HEADING
@@ -24,7 +24,7 @@ left:
     close: "Selecciona un programa"
   referral_section:
     placeholder: "Código de invitación"
-    content: "Si te ha referido alguien que estudia o ha estudiado en 4Geeks, tendrás un beneficio adicional usando su código de invitación."
+    content: "Si tienes un códido, o te ha referido alguien que estudia o ha estudiado en 4Geeks, tendrás un beneficio adicional usando su código de invitación."
   button:
     button_text: "APLICA"
     button_link: ""

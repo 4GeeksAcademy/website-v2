@@ -22,7 +22,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Get a Partial Scholarship"
-  motivation: "If you ENROLL before October 30th, 2020."
+  motivation: "If you ENROLL before March 31st, 2021."
   button_label: Get more information 
   redirect: null #you can redirect to another url or entirely diffrent website
 
