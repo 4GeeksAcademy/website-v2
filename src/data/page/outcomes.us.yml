@@ -61,7 +61,8 @@ sections:
       - title: "QTY OF STUDENTS"
         content: "This report states the results for the last 24 months of operation in the US Campus. 200 students considered" 
         image_section:
-          - image: "../../../static/images/outcomes/outcomes.png"
+          # - image: "../../../static/images/outcomes/outcomes.png"
+          - image: 
             image_paragraph: "There are many things to know about our students. Where they come from, their age, gender, etc. Here are some of them."
             chart: true
   - title: "Job Placement"

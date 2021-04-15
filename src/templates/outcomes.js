@@ -153,7 +153,7 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                     title
                     content
                     image_section{
-                        image
+
                         image_paragraph  
                         chart
                     }
