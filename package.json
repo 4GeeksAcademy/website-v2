@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "14": "^3.1.6",
-    "@brainhubeu/react-carousel": "^1.19.26",
+    "@brainhubeu/react-carousel": "^2.0.3",
     "@loadable/component": "^5.13.2",
     "dayjs": "^1.8.29",
     "gatsby": "^2.24.2",

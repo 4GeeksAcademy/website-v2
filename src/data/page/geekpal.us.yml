@@ -4,7 +4,7 @@ meta_info:
   description: "Learn about our comprehensive support system for 4Geeks Academy graduates"
   image: null
   keywords: ""
-  redirects: ["/geekpal"]
+  redirects: ["/geekpal", "/us/career-support"]
 
 header:
   title: ""

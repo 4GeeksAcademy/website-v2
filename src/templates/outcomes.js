@@ -83,15 +83,15 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                     Array.isArray(m.image_section) && m.image_section.map((m, i) => {
                                                         return (
                                                             <React.Fragment key={i}>
-                                                                <Img
+                                                                {/* <Img
                                                                     style={{height: "100%"}}
                                                                     imgStyle={{objectFit: "contain"}}
                                                                     loading="eager"
                                                                     style={{margin: "38px 0"}}
                                                                     fadeIn={false}
                                                                     // alt={l.name}
-                                                                    fluid={m.image && m.image.childImageSharp.fluid}
-                                                                />
+                                                                    fluid={m.image != undefined && m.image.childImageSharp.fluid}
+                                                                /> */}
                                                                 <Paragraph textAlign="left">{m.image_paragraph}</Paragraph>
                                                                 <Grid gridTemplateColumns_tablet="3">
                                                                     {m.chart &&
@@ -140,13 +140,6 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
             header{
                 title
                 paragraph
-                image{
-                    childImageSharp {
-                      fluid(maxWidth: 800){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  } 
                 
             }
             sections{
@@ -160,13 +153,7 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                     title
                     content
                     image_section{
-                        image{
-                            childImageSharp {
-                              fluid(maxWidth: 800){
-                                ...GatsbyImageSharpFluid_withWebp
-                              }
-                            }
-                          } 
+                        image
                         image_paragraph  
                         chart
                     }
