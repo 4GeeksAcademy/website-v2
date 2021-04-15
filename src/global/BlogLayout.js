@@ -142,7 +142,7 @@ const BlogLayout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            { showUpcoming && myCustomBar && <CustomBar button={myCustomBar.node.bar_content} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
+            {/* { showUpcoming && myCustomBar && <CustomBar button={myCustomBar.node.bar_content} lang={context.lang} position="bottom" showOnScrollPosition={400} />} */}
             {myFooter && <Footer yml={myFooter.node} />}
           </>
         )
