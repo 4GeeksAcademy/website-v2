@@ -9,7 +9,7 @@ const Color = {
   yellow: "#FFB718"
 };
 const Figure = styled.div`
-  z-index: 1;
+  z-index: -1;
   position: absolute;
   background-color: ${(props) => Color[props.color]};
   width: ${(props) => props.width};

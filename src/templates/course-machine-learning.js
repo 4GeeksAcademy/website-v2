@@ -15,6 +15,7 @@ import {SessionContext} from '../session'
 import Testimonials from '../new_components/Testimonials';
 import Badges from '../new_components/Badges';
 import PricesAndPayment from '../new_components/PricesAndPayment';
+import {Circle} from '../new_components/BackgroundDrawing'
 import LeadForm from '../new_components/LeadForm';
 import Modal from '../components/Modal';
 
@@ -36,7 +37,91 @@ const Program = ({data, pageContext, yml}) => {
       title={yml.header.title}
       paragraph={yml.header.paragraph}
       padding_tablet="72px 0 40px 0"
-    >
+      position="relative"
+    ><Circle
+        color="blue"
+        width="50px"
+        height="50px"
+        top="20px"
+        right="10%"
+      />
+      <Circle
+        color="black"
+        width="50px"
+        height="50px"
+        top="170px"
+        right="120px"
+        scale="0.5"
+      />
+      <Circle
+        color="black"
+        width="30px"
+        height="30px"
+        top="140px"
+        left="5%"
+      />
+
+      <Circle
+        color="yellow"
+        width="20px"
+        height="20px"
+        top="0px"
+        right="30%"
+        scale="2"
+      />
+      <Circle
+        color="yellow"
+        width="200px"
+        height="200px"
+        top="150px"
+        right="-5%"
+        opacity="0.2"
+      />
+      <Circle
+        color="yellow"
+        width="30px"
+        height="30px"
+        top="60px"
+        left="5%"
+        opacity="0.2"
+      />
+      <Circle
+        color="black"
+        width="30px"
+        height="30px"
+        top="140px"
+        left="5%"
+      />
+      <Circle
+        color="grey"
+        width="30px"
+        height="30px"
+        top="180px"
+        left="5%"
+      />
+      <Circle
+        color="grey"
+        width="30px"
+        height="30px"
+        top="240px"
+        left="5%"
+      />
+      <Circle
+        color="blue"
+        width="30px"
+        height="30px"
+        top="280px"
+        left="5%"
+      />
+      <Circle
+        color="yellow"
+        width="100px"
+        height="100px"
+        top="250px"
+        left="-5%"
+      />
+      <Circle color="blue" width="50px" height="50px" top="20px" left="15%" />
+      <Circle color="red" width="50px" height="50px" top="200px" left="20%" opacity="0.3" />
       <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}

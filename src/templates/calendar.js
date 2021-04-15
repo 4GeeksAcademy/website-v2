@@ -229,11 +229,11 @@ const Calendar = (props) => {
           }
         </>
       </GridContainer>
-      {limit && data.events.filtered.length > 5 &&
+      {limit && data.events.filtered.length > 6 &&
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
           <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show more</Paragraph>
         </GridContainer>
-      }{!limit && data.events.filtered.length > 5 &&
+      }{!limit && data.events.filtered.length > 6 &&
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
           <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show less</Paragraph>
         </GridContainer>
