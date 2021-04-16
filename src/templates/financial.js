@@ -1,11 +1,6 @@
 import React, {useState, useContext} from 'react';
-import {Column, Row, Container, Divider, Wrapper, Div} from "../components/Sections";
-import {Title, H2, H5, Paragraph} from '../components/Heading';
-import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling';
-import WhoIsHiring from '../components/WhoIsHiring';
-import Img from "gatsby-image"
+import { Colors} from '../new_components/Styling';
 import BaseRender from './_baseLayout';
-import {openGuidebook} from "../actions";
 import {SessionContext} from '../session.js'
 
 // new_components
@@ -28,7 +23,6 @@ const Financial = (props) => {
 
   return (
     <>
-      {/* HEADER SECTION */}
       <Header
           background={Colors.lightBlue2}
           fontSize="40px"
@@ -40,8 +34,6 @@ const Financial = (props) => {
       >
       </Header>
       <PricesAndPayment
-          // shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-          
           button_text={yml.syllabus_button_text}
           program={yml.label.program.title}
           programClosedLabel={yml.label.program.closedLabel}
