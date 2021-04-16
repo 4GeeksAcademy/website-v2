@@ -5,20 +5,26 @@ programs:
     Developer
     "
     sub_title: "Level 1"
-    description: "Master the basics of machine learning
+    description: "Master the basics 
+    
+    of machine learning
     "
-    link: "/us/course/full-stack-web-development-bootcamp-part-time"
+    link: "/es/coding-bootcamps/full-stack-part-time"
   - title: "Software Engineer"
     sub_title: "Level 2"
-    description: "Master the basics of machine learning
+    description: "Master the basics 
+    
+    of machine learning
     "
-    link: "/us/course/software-engineering-coding-bootcamp"
+    link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
   - title: "AI/Machine Learning
   
     Engineering
     "
     sub_title: "Online"
-    description: "Master the basics of machine learning
+    description: "Master the basics 
+    
+    of machine learning
     "
-    link: "/us/course/full-stack-web-development-bootcamp-part-time"
+    link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 

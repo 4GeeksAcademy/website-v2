@@ -16,13 +16,14 @@ news:
   heading: "Read about this coding bootcamp in the news..."
   limit: 4
 
-## BADGES SECTION
+## BADGES SECTION /new_components/Badges
 badges:
   paragraph: "Lorem ipsum dolor sit amet, <span class='badge'>consectetur</span> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-##WITH 4GEEKS
-with:
-  heading: "Choose your program"
-  sub_heading: "Contamos con programas que combinan clases prácticas dictadas por expertos"
+
+## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
+choose_program:
+  title: Choose your program
+  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

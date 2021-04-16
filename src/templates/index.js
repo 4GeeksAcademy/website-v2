@@ -169,8 +169,8 @@ const Home = (props) => {
       <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="0 0 108px 0" />
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-      <With4Geeks lang={pageContext.lang} playerHeight="82px" />
-      <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
+      <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
+      <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
@@ -207,9 +207,9 @@ export const query = graphql`
             badges{
               paragraph
             }
-            with{
-              heading
-              sub_heading
+            choose_program{
+              title
+              paragraph
             }
             geeks_vs_others{
                 heading
