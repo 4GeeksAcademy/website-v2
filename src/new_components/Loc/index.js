@@ -7,7 +7,24 @@ import Icon from "../Icon"
 import {SessionContext} from '../../session.js'
 import Link from 'gatsby-link'
 
-const Loc = ({locations, title, paragraph}) => {
+const Loc = ({locations, title, paragraph, lang}) => {
+  const data = useStaticQuery(graphql`
+    {
+      allLocYaml {
+        edges {
+          node {
+            label
+            fields {
+              lang
+            }
+          }
+        }
+      }
+    }
+  `)
+  let content = data.allLocYaml.edges.find(({node}) => node.fields.lang === lang);
+  if (content) content = content.node;
+  else return null;
   const {session} = useContext(SessionContext);
   useEffect(() => {
     const getData = async () => {
@@ -65,8 +82,8 @@ const Loc = ({locations, title, paragraph}) => {
                   display_tablet="block"
                 >
                   <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
-                    Next Cohort in this location
-                </Paragraph >
+                    {content.label}
+                  </Paragraph >
                   <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
                     Full Stack Developer
                 </Paragraph>
