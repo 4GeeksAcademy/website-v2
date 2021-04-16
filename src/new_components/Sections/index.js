@@ -193,6 +193,7 @@ export const Div = styled.div`
     }
     @media  ${Devices.tablet}{
         align-self: ${props => props.alignSelf_tablet};
+        background: ${props => props.background_tablet};
         display: ${props => props.display_tablet};
         flex-direction: ${props => props.flexDirection_tablet};
         height: ${props => props.height_tablet};
@@ -279,6 +280,7 @@ export const Grid = styled(Div)`
         grid-template-columns: ${props => props.gridTemplateColumns_tablet || "2fr repeat(12, 1fr) 2fr"};
         grid-template-rows: repeat(${props => props.gridTemplateRows_tablet});
         grid-gap: ${props => props.gridGap_tablet};
+        grid-auto-rows: ${props => props.gridAutoRows_tablet};
     }
     @media  ${Devices.md}{
         // grid-template-columns: ${props => props.gridTemplateColumns_md || "2fr repeat(12, 1fr) 2fr"};

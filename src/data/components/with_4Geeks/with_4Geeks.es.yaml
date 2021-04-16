@@ -2,12 +2,14 @@
 ## THIS COMPONENT IS USED IN "/home"
 
 ## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
-
+header:
+  title: Con 4Geeks
+  paragraph: ""
 with:
   - name: "PABLO PÉrez"
     title: "Consegui trabajo ..."
-    description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
-    image: ../../../../static/images/why3.jpg
+    description: "Pablo te cuenta como consiguió trabajo trás certificarse el 4Geeks"
+    image: ../../../../static/images/pablo-perez.png
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -19,23 +21,23 @@ with:
       text: ""
       text_link: ""
   - name: "Marco Rojas"
-    title: "They financed my career ..."
-    description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
-    image: ../../../../static/images/why3.jpg
+    title: "“Financiaron mi carrera...”"
+    description: "Marcos te cuenta cómo 4Geeks financió su carrera"
+    image: ../../../../static/images/marco-rojas.png
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
-      is_image: true
+      is_image: false
       image: ""
       image_link: ""
-      text: ""
-      text_link: ""
+      text: "Ver Finaciamientos"
+      text_link: "/es/financiacion"
   - name: "Luisa Barrios"
-    title: "They financed my career ..."
-    description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
-    image: ../../../../static/images/why3.jpg
+    title: "“Nunca programé solo otra vez...”"
+    description: "Luisa te cuenta sobre el proceso de mentorias de 4 geeks"
+    image: ../../../../static/images/luisa-barrios.png
     alt: ""
     video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL

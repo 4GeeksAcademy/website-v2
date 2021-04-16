@@ -2,7 +2,9 @@
 ## THIS COMPONENT IS USED IN "/home"
 
 ## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
-
+header:
+  title: With 4Geeks
+  paragraph: ""
 with:
   - name: "PABLO PÉrez"
     title: "I got a job ..."
@@ -31,7 +33,7 @@ with:
       image: ""
       image_link: ""
       text: "Check Financials Options"
-      text_link: ""
+      text_link: "/us/financials"
   - name: "Luisa Barrios"
     title: "They financed my career ..."
     description: "Join hundreds of graduates working at top tech companies: Profile Building, Personal Branding, Mock Interviews, etc."
