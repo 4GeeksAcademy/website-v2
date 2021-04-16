@@ -10,8 +10,8 @@ import styled from 'styled-components';
 import Icon from "../Icon"
 import {SessionContext} from '../../session.js'
 
-const About4Geeks = (props) => {
-    const about = props.lang[0].node
+const About4Geeks = ({lang}) => {
+    const about = lang[0].node
     console.log("about", about)
     return (
         <GridContainerWithImage columns_tablet="2" margin_tablet="0 0 108px 0" margin="0 0 64px 0">

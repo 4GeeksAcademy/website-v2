@@ -22,6 +22,7 @@ const Loc = ({locations, title, paragraph}) => {
     getData();
   }, []);
   let loc = locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
+  console.log("LOC:", loc)
   return (
     // <GridContainer height="375px" height_tablet="219px" background={Colors.verylightGray} columns="2" columns_tablet="4" margin_tablet="0 0 57px 0"></GridContainer>
     <>
