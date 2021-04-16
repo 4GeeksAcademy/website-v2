@@ -126,7 +126,7 @@ navbar:
             - title: "Santiago de Chile"
               link_to: "/us/coding-campuses/coding-bootcamp-santiago"
   - name: "Upcoming Dates"
-    link: "/us/calendar"
+    link: "/us/next-dates"
 
 language_button:
   text: "<span class='lang'>ENG</span> / ESP"

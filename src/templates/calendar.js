@@ -12,6 +12,7 @@ import dayjs from "dayjs"
 import 'dayjs/locale/de'
 import LazyLoad from 'react-lazyload';
 import {Link} from 'gatsby'
+import {Circle} from '../new_components/BackgroundDrawing'
 import {SessionContext} from '../session'
 
 const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText, context, bg_size}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
@@ -177,12 +178,101 @@ const Calendar = (props) => {
   }, [session]);
   return (
     <>
+      {/* <Div position="absolute" top="0" zIndex="1" width="100%" height_tablet="240px">
+        <Circle
+          color="blue"
+          width="50px"
+          height="50px"
+          top="20px"
+          right="10%"
+        />
+        <Circle
+          color="black"
+          width="50px"
+          height="50px"
+          top="170px"
+          right="120px"
+          scale="0.5"
+        />
+        <Circle
+          color="black"
+          width="30px"
+          height="30px"
+          top="140px"
+          left="5%"
+        />
+
+        <Circle
+          color="yellow"
+          width="20px"
+          height="20px"
+          top="0px"
+          right="30%"
+          scale="2"
+        />
+        <Circle
+          color="yellow"
+          width="200px"
+          height="200px"
+          top="50%"
+          right="-5%"
+          opacity="0.2"
+        />
+        <Circle
+          color="yellow"
+          width="30px"
+          height="30px"
+          top="5%"
+          left="5%"
+          opacity="0.2"
+        />
+        <Circle
+          color="black"
+          width="30px"
+          height="30px"
+          top="140px"
+          left="5%"
+        />
+        <Circle
+          color="grey"
+          width="30px"
+          height="30px"
+          top="180px"
+          left="5%"
+        />
+        <Circle
+          color="grey"
+          width="30px"
+          height="30px"
+          top="140px"
+          left="10%"
+        />
+        <Circle
+          color="blue"
+          width="30px"
+          height="30px"
+          top="180px"
+          left="10%"
+        />
+        <Circle
+          color="yellow"
+          width="100px"
+          height="100px"
+          top="120px"
+          left="15%"
+        />
+        <Circle color="blue" width="50px" height="50px" top="20px" left="15%" />
+        <Circle color="red" width="50px" height="50px" top="160px" left="20%" opacity="0.3" />
+      </Div> */}
       <Header
         seo_title={yml.seo_title}
         title={yml.header.title}
         padding_tablet="72px 0 40px 0"
         background={Colors.veryLightBlue}
-      />
+        position="relative"
+        height="240px"
+      >
+      </Header>
       {yml.events.title &&
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
           <H3 textAlign="left">{yml.events.title}</H3>
@@ -229,11 +319,11 @@ const Calendar = (props) => {
           }
         </>
       </GridContainer>
-      {limit && data.events.filtered.length > 5 &&
+      {limit && data.events.filtered.length > 6 &&
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
           <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show more</Paragraph>
         </GridContainer>
-      }{!limit && data.events.filtered.length > 5 &&
+      }{!limit && data.events.filtered.length > 6 &&
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
           <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show less</Paragraph>
         </GridContainer>

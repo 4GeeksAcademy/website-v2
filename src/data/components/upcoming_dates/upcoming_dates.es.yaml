@@ -1,0 +1,16 @@
+title: "Próximas Fechas"
+paragraph: ""
+button:
+  text: Buscar por sede o modalidad
+  top_label: Sede / Modalidad
+info:
+  date:
+  program_label: programas
+  location_label: sede
+  duration_label: duracion
+  duration_weeks: 16 semanas
+  button_text: aplicar
+  button_link: ""
+footer:
+  button_text_open: Ver más Fechas
+  button_text_close:
