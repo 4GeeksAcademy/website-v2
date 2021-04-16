@@ -1,15 +1,12 @@
-import React, {useState, useContext, useEffect, useRef} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import {useStaticQuery, graphql} from "gatsby"
 import styled from 'styled-components';
-import Icon from '../Icon';
 import {Link} from '../Styling/index';
 import {GridContainer, Grid, Div} from '../Sections';
-import Card from '../Card';
 import Select from '../SelectV2';
-import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
-import {Button, Colors, Circle, RoundImage} from '../Styling';
+import {H2, Paragraph} from '../Heading';
+import {Button, Colors} from '../Styling';
 import {SessionContext} from '../../session'
-import Fragment from "../Fragment"
 
 
 const Label = styled.div`
