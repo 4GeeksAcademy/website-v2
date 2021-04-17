@@ -1,7 +1,7 @@
 import React from 'react';
 import {H2, H3, H4} from '../Heading'
 import {Colors} from '../Styling'
-import { Div } from "../Sections"
+import {Div} from "../Sections"
 import Icon from "../Icon"
 
 const positions = [{
@@ -22,12 +22,11 @@ const positions = [{
 
 export default props => {
   let index = props.index
-  console.log(props)
   return (
-    <Div key={props.index} gridArea_md={positions[index].position} width="150px" width_md="auto" gridGap="0" alignItems="center" justifySelf="center" justifyContent="center" flexDirection="column" flexDirection_md="row">
-      <Div flexDirection="column" width="150px" width_md="auto" alignItems="center">
-        <Icon icon={props.icon} width="94" height="98"/>
-        <H2 type="h2" fontSize="15px" width="140px" width_md="auto" textTransform="uppercase" lineHeight="19px" padding="20px 0" padding_md="20px 15%">{props.title}</H2>
+    <Div key={props.index} gridGap="0" alignItems="center" justifyContent="center" justifyContent_tablet="start" flexDirection="column" flexDirection_tablet="row">
+      <Div flexDirection="column" alignItems="center">
+        <Icon icon={props.icon} width="94" height="98" />
+        <H2 type="h2" fontSize="15px" width="140px" width_md="auto" textTransform="uppercase" lineHeight="19px" padding="20px 0" padding_tablet="20px 15%">{props.title}</H2>
       </Div>
     </Div>
   )

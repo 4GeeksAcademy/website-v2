@@ -5,10 +5,14 @@ meta_info:
   image: null
   keywords: ""
   redirects: ["/es/geekforce"]
-tagline: GEEKPAL
-sub_heading: ""
-image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekforce.png"
+
+seo_title: "geekforce"
+header:
+  title: ""
+  image: "../../../static/images/bg/companies-bg.jpg"
+  image_alt: ""
+  paragraph: "Texto que explique que GeekForce es una membresía con beneficios de apoyo profesional, que el estudiante obtiene al inscribirse en un programa con La Academia. Aún despues de haberte graduado continuarás teniendo el apoyo profesional ilimitado."
+  image_logo: "/images/geekforce.png"
 
 geekForce:
   - videoId: "cKcZD0_1IKk"

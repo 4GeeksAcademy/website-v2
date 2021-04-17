@@ -6,11 +6,14 @@ meta_info:
   keywords: ""
   redirects: ["/career-support", "/geekforce", "/us/geekforce"]
 
-tagline: FIND A GREAT JOB
-sub_heading: "Job hunting will never be a problem again"
-image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekforce.png"
-
+seo_title: "geekforce"
+header:
+  title: ""
+  image: "../../../static/images/bg/companies-bg.jpg"
+  image_alt: ""
+  paragraph: "Text explaining that GeekForce is a membership with professional support benefits, which the student obtains by enrolling in a program with The Academy. <span style='font-weight: 700;'> Even after graduation we continue to have unlimited professional support.</span>"
+  image_logo: "/images/geekforce.png"
+  
 # Introduction Video here
 geekForce:
   - videoId: "cKcZD0_1IKk"
