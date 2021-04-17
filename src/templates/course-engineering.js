@@ -538,49 +538,57 @@ export const query = graphql`
           
           prices {
             software_engineering {
-              center_section {
-
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+              part_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    heading_two
+                    sub_heading
+                    heading_one
+                  }
+                  plans {
+                    months
+                    monthsInfo
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
                 }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
-              }
-              left_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  heading_two
-                  sub_heading
-                }
-              }
-              right_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
               }
             }
           }
-          
         }
       }
     }

@@ -41,14 +41,9 @@ const PricingCard = ({data, lang, children, price, color, background, transform_
 
 const courseArray = [
   {
-    // value: "part_time",
-    value: "full_stack_development",
+    value: "full_stack",
     label: "Full Stack Developer"
   },
-  // {
-  //   value: "full_time",
-  //   label: "Full Stack Development (Full-Time)"
-  // },
   {
     value: "software_engineering",
     label: "Software Engineering"
@@ -63,10 +58,10 @@ const modalityArray = [
     value: "full_time",
     label: "Full Time"
   },
-  {
-    value: "flexible",
-    label: "Flexible"
-  }
+  // {
+  //   value: "flexible",
+  //   label: "Flexible"
+  // }
 ]
 
 
@@ -111,10 +106,15 @@ useEffect(() => {
   if (!currentLocation || !currentLocation.prices)
     return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
 
-    // const prices = !course ? {} : currentLocation.prices[course.value];
-  const prices = !course ? {} : currentLocation.prices[modality.value];
 
-  const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
+  // toSOLVE: when the user selects Software Engineering on a campus 
+  // that does not have it enabled, it returns an error
+
+  // const checkoModality = !modality && course ? null : modality.value 
+  const prices = !course ? {} : currentLocation.prices[course?.value][checkoModality];
+
+  // console.log("prices =!", currentLocation.prices)
+  console.log("course array =!", currentLocation.prices[course?.value])
 
   return (
     <Div background={Colors.lightBlue2} margin="0 0 5rem 0" display="block"  github="/location">

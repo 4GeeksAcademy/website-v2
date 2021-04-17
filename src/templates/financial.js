@@ -181,101 +181,157 @@ export const query = graphql`
               } 
             }
             prices {
-              full_time {
-                center_section {
-                  button {
-                    button_text
+              full_stack {
+                full_time {
+                  slug
+                  center_section {
+                    button {
+                      button_text
+                    }
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
+                    plans {
+                      months
+                      monthsInfo
+                      payment
+                      paymentInfo
+                      provider
+                      logo
+                      message
+                    }
                   }
-                  header {
-                    sub_heading
-                    heading_one
-                    heading_two
+                  left_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      heading_two
+                      sub_heading
+                    }
                   }
-                  plans {
-                    months
-                    monthsInfo
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
+                  right_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
                   }
                 }
-                left_section {
-                  button {
-                    button_text
+                part_time {
+                  slug
+                  center_section {
+                    button {
+                      button_text
+                    }
+                    header {
+                      heading_two
+                      sub_heading
+                      heading_one
+                    }
+                    plans {
+                      months
+                      monthsInfo
+                      payment
+                      paymentInfo
+                      provider
+                      logo
+                      message
+                    }
                   }
-                  content {
-                    price
-                    price_info
+                  left_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
                   }
-                  header {
-                    heading_one
-                    heading_two
-                    sub_heading
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    sub_heading
-                    heading_one
-                    heading_two
+                  right_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
                   }
                 }
               }
-              part_time {
-                center_section {
-                  button {
-                    button_text
+              software_engineering {
+                part_time {
+                  slug
+                  center_section {
+                    button {
+                      button_text
+                    }
+                    header {
+                      heading_two
+                      sub_heading
+                      heading_one
+                    }
+                    plans {
+                      months
+                      monthsInfo
+                      payment
+                      paymentInfo
+                      provider
+                      logo
+                      message
+                    }
                   }
-                  header {
-                    heading_two
-                    sub_heading
-                    heading_one
+                  left_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
                   }
-                  plans {
-                    months
-                    monthsInfo
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                }
-                left_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
+                  right_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
                   }
                 }
               }
