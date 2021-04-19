@@ -64,7 +64,7 @@
         
 navbar:
   - name: "Programas"
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    link: "/es/coding-bootcamp/full-stack-part-time"
     sub_menu:
       icon: ""
       title: "Programas"
@@ -79,7 +79,7 @@ navbar:
           paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
           buttons:
             - text: "Part Time"
-              link: "/es/coding-bootcamps/full-stack-part-time"
+              link: "/es/coding-bootcamp/full-stack-part-time"
             - text: "Full Time"
               link: ""
           
@@ -89,7 +89,7 @@ navbar:
           paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
           buttons:
             - text: "Ver Programa"
-              link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+              link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
          
         - title: "AI/Machine Learning Engineering"
           level: "Online"
@@ -97,7 +97,7 @@ navbar:
           paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
           buttons:
             - text: "Ver Programa"
-              link: "/es/coding-bootcamps/curso-inteligencia-artificial"
+              link: "/es/coding-bootcamp/curso-inteligencia-artificial"
           
   - name: "Porqué 4Geeks"
     link: "/es/porque-4geeks"
@@ -111,9 +111,9 @@ navbar:
         - title: "Acompañamiento"
           sub_links: 
             - title: "GeekPal"
-              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+              link_to: "/us/coding-campus/coding-bootcamp-caracas"
             - title: "GeekForce"
-              link_to: "/us/coding-campuses/coding-bootcamp-caracas"
+              link_to: "/us/coding-campus/coding-bootcamp-caracas"
         - title: "Validaciones"
           sub_links: 
             - title: "Premios"
@@ -180,15 +180,15 @@ navbar:
         - title: "Campuses"
           sub_links: 
             - title: "Caracas"
-              link_to: "/es/coding-campuses/bootcamp-programacion-caracas"
+              link_to: "/es/coding-campus/bootcamp-programacion-caracas"
             - title: "Madrid"
-              link_to: "/es/coding-campuses/bootcamp-programacion-madrid"
+              link_to: "/es/coding-campus/bootcamp-programacion-madrid"
             - title: "Miami"
-              link_to: "/es/coding-campuses/bootcamp-programacion-miami"
+              link_to: "/es/coding-campus/bootcamp-programacion-miami"
             - title: "San José"
-              link_to: "/es/coding-campuses/bootcamp-programacion-costa-rica"
+              link_to: "/es/coding-campus/bootcamp-programacion-costa-rica"
             - title: "Santiago de Chile"
-              link_to: "/es/coding-campuses/bootcamp-programacion-santiago"
+              link_to: "/es/coding-campus/bootcamp-programacion-santiago"
   - name: "Próxima Fechas"
     link: "/es/proximas-fechas"        
 
@@ -210,12 +210,12 @@ button:
 #   - name: "La Academia"
 #     link: "/es/la-academia"
 #   - name: "Programas"
-#     link: "/es/coding-bootcamps/full-stack-part-time"
+#     link: "/es/coding-bootcamp/full-stack-part-time"
 #     links:
 #       - name: "Full Stack Development"
-#       - link: "/es/coding-bootcamps/full-stack-part-time"
+#       - link: "/es/coding-bootcamp/full-stack-part-time"
 #       - name: "Senior Software Engineering"
-#       - link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+#       - link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
 #   # - name: "Precios"
 #   #   link: "/precios"
 #   - name: "Alianzas"
