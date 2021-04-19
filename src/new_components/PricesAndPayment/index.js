@@ -65,6 +65,11 @@ const PricesAndPayments = (props) => {
             pricing_error_contact
             pricing_error
             get_notified
+            top_label
+            button{
+              button_text
+              button_link
+            }
           }
         }
       }
@@ -136,10 +141,11 @@ const PricesAndPayments = (props) => {
               openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
               closeLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
               onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}
+              topLabel={info.top_label}
             />
             // </GridContainer>
           }
-          <Button width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>"syllabus_button_text"</Button>
+          <Link to={info.button.button_link}><Button width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>{info.button.button_text}</Button></Link>
         </Div>
       </GridContainer>
 

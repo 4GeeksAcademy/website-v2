@@ -250,7 +250,7 @@ export const Button = styled(SmartButton)`
     font-size: ${props => props.fontSize};
     font-family: 'Lato', sans-serif;
     text-transform: ${props => props.textTransform || "uppercase"};
-    font-weight: 700;
+    font-weight: ${props => props.fontWeight || "700"};
     margin: ${props => props.margin};
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position};
@@ -262,9 +262,9 @@ export const Button = styled(SmartButton)`
     border: ${props => props.border};
     height: ${props => props.height};
     cursor: pointer;
-    text-align: center;
+    text-align: ${props => props.textAlign || "center"};
     letter-spacing: 0px;
-    line-height: 1.5;
+    line-height: ${props => props.lineHeight};
     vertical-align: middle;
     width: ${props => props.width};
     max-width: ${props => props.maxWidth};
