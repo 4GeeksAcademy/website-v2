@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
@@ -77,6 +77,17 @@ const Home = (props) => {
 
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
+  const chooseProgramRef = useRef(null)
+
+  const goToChooseProgram = (e) => {
+    e.preventDefault();
+    console.log("heeey", chooseProgramRef)
+    // chooseProgramRef.current.scrollIntoView()
+    // window.scrollTo({
+    //   top: chooseProgramRef.current?.offsetTop,
+    //   behavior: "smooth"
+    // })
+  }
 
   return (
     <>
@@ -143,13 +154,14 @@ const Home = (props) => {
           {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
                     <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
           <ChooseProgram
+            goTo={goToChooseProgram}
             right="15px"
             top="40px"
             // margin="40px 0"
             textAlign="center"
             textAlign_tablet="left"
-            programs={data.allChooseProgramYaml.edges[0].node.programs}
-            openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
+            // programs={data.allChooseProgramYaml.edges[0].node.programs}
+            openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
             closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
           />
           <News lang={pageContext.lang} limit={yml.news.limit} height="40px" width="90px" justifyContent="center" />
@@ -170,7 +182,9 @@ const Home = (props) => {
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
-      <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
+
+      {/* useRef */}
+      <ChooseYourProgram ref={chooseProgramRef} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
