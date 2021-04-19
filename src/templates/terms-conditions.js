@@ -4,22 +4,22 @@ import React, {useState} from 'react';
 import BaseRender from './_baseLayout';
 
 // new_components
-import {Div, Grid} from "../new_components/Sections";
+import {Div, GridContainer} from "../new_components/Sections";
 import {H1, H2, H4, Paragraph} from '../new_components/Heading'
 
 
 const Terms = (props) => {
-    const {data, pageContext, yml} = props;
-    return (
+  const {data, pageContext, yml} = props;
+  return (
     <>
-    <Grid
-        // github="/components/privacy"
-        margin="64px 0 0 0"
-        padding="0 4%"
-        gridGap="0px"
-        padding_tablet="0 20%"
-        padding_lg="0 26%"
-    >
+      <GridContainer
+        github="/components/privacy"
+        columns_tablet="12"
+        margin_tablet="50px 0 0 0"
+        margin="25px 0 0 0"
+
+      >
+        <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
           <H1
             type="h1"
             fontSize="13px"
@@ -27,26 +27,27 @@ const Terms = (props) => {
             fontWeight="700"
             letterSpacing="0.05em"
             color="#606060"
-        >4GEEKS ACADEMY</H1>
+          >4GEEKS ACADEMY</H1>
 
-        <H2 type="h2" zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">
-          {yml.header.tagline}
-        </H2>
-        <Div flexDirection="column">
-          {yml.sections.map((section, i) => {
-            return (
-              <>
-                      <H4 type="h3" fontSize="22px" key={i} fontWeight="bold" borderBottom="1px solid #C4C4C4" margin="0 0 15px 0" padding="74px 0 20px 0">{section.title}</H4>
-                      {section.text.split("\n").map((m, i) =>
-                          <Paragraph letterSpacing="0.05em" textAlign="left" key={i} align="left" align_sm="left" margin="15px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
-                          )}
-                  </>)
-          })}
+          <H2 type="h2" zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">
+            {yml.header.tagline}
+          </H2>
+          <Div flexDirection="column">
+            {yml.sections.map((section, i) => {
+              return (
+                <>
+                  <H4 type="h3" fontSize="22px" key={i} fontWeight="bold" borderBottom="1px solid #C4C4C4" margin="0 0 15px 0" padding="74px 0 20px 0">{section.title}</H4>
+                  {section.text.split("\n").map((m, i) =>
+                    <Paragraph letterSpacing="0.05em" textAlign="left" key={i} align="left" align_sm="left" margin="15px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+                  )}
+                </>)
+            })}
+          </Div>
+          <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph>
         </Div>
-        <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph>
-    </Grid>
+      </GridContainer>
     </>
-    )
+  )
 };
 export const query = graphql`
     query TermsQuery($file_name: String!, $lang: String!) {
@@ -59,6 +60,7 @@ export const query = graphql`
                   image
                   keywords
               }
+              seo_title
               header{
                   tagline
                   sub_heading
