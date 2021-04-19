@@ -5,32 +5,6 @@ newsletter:
   thankyou: "¡Excelente! Te haz suscrito con éxito, está pendiente que pronto haremos nuevos anuncios 😁"
 
 footer:
-  # - column_one:
-  #   width: 3
-  #   heading: "COMPANY"
-  #   items:
-  #     - name: "Program"
-  #       link: "/us/coding-bootcamp/part-time-full-stack-developer"
-  #     - name: "Academy"
-  #       link: "/us/the-academy"
-  #     - name: "Partners"
-  #       link: "/us/partners"
-  #     - name: "Pricing"
-  #       link: "/us/pricing"
-  #     - name: "Events"
-  #       link: "/us/next-dates"
-  #     - name: "Upcoming Dates"
-  #       link: "/us/next-dates"
-  #     - name: "Blog"
-  #       link: "/us/blog"
-  #     - name: "Careers"
-  #       link: "/us/jobs"
-  #     - name: "Privacy"
-  #       link: "/us/privacy-policy"
-  #     - name: "FAQ"
-  #       link: "/us/faq"
-  #     - name: "Contact Us"
-  #       link: "/us/contact"
   - column_one:
     heading: "COMPAÑÍA"
     width: 3
