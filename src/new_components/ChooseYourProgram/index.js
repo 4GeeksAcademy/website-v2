@@ -9,10 +9,10 @@ import styled from 'styled-components';
 import Icon from "../Icon"
 import {SessionContext} from '../../session.js'
 
-const ChooseYourProgram = ({programs, title, paragraph}) => {
+const ChooseYourProgram = ({programs, title, paragraph, chooseProgramRef}) => {
     return (
-        <>
             <Grid
+                ref={chooseProgramRef}
                 gridTemplateColumns_tablet="2fr repeat(12, 1fr) 2fr"
                 gridAutoRows_tablet="minmax(100px, auto)"
                 background={Colors.verylightGray}
@@ -106,8 +106,6 @@ const ChooseYourProgram = ({programs, title, paragraph}) => {
                 </Grid>
                 <Div display="none" display_tablet="flex" padding_tablet="75px 0 0 0" background={Colors.verylightGray} zIndex="-1" gridColumn_tablet="1 / 15" gridRow_tablet="1 / 3" gridRow="1 / 4" />
             </Grid>
-
-        </>
     )
 };
 

@@ -78,16 +78,14 @@ const Home = (props) => {
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
   const chooseProgramRef = useRef(null)
-
+  
   const goToChooseProgram = (e) => {
     e.preventDefault();
-    console.log("heeey", chooseProgramRef)
-    // chooseProgramRef.current.scrollIntoView()
-    // window.scrollTo({
-    //   top: chooseProgramRef.current?.offsetTop,
-    //   behavior: "smooth"
-    // })
-  }
+    window.scrollTo({
+        top: chooseProgramRef.current?.offsetTop,
+        behavior: "smooth"
+      })
+    }
 
   return (
     <>
@@ -183,8 +181,8 @@ const Home = (props) => {
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
 
-      {/* useRef */}
-      <ChooseYourProgram ref={chooseProgramRef} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
+      {/* Choose Program */}
+      <ChooseYourProgram chooseProgramRef={chooseProgramRef} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
