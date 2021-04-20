@@ -62,16 +62,16 @@ navbar:
           sub_links: 
             - title: "Financials"
               link_to: "/us/financials"
-            - title: "Prices"
-              link_to: ""
-            - title: "Scholarships"
-              link_to: ""
+            # - title: "Prices"
+            #   link_to: ""
+            # - title: "Scholarships"
+            #   link_to: ""
         - title: "Our Students"
           sub_links: 
             - title: "Alumni & Projects"
-              link_to: ""
+              link_to: "/us/students-and-projects"
             - title: "Testimonials"
-              link_to: ""
+              link_to: "/us/testimonials"
   - name: "The Academy"
     link: "/course/full-stack-web-development-bootcamp-part-time"
     sub_menu:
@@ -132,7 +132,7 @@ language_button:
   text: "<span class='lang'>ENG</span> / ESP"
   link: "/es/inicio?lang=es"
 button:
-  button_link: "/apply"
+  button_link: "/us/apply"
   apply_button_text: "Apply Now"
   button_type: ""
   button_color_text: ""

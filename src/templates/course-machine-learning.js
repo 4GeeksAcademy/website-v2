@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
+import {navigate} from "gatsby";
 import {GeekCard} from '../components/Card'
 import {Container, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
 import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
@@ -30,6 +31,9 @@ const Program = ({data, pageContext, yml}) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
+
+  console.log("pageContext....", pageContext)
+  const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a, b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
 
   return (<>
     <Header
@@ -152,6 +156,45 @@ const Program = ({data, pageContext, yml}) => {
 
     <OurPartners images={hiring.partners.images} slider></OurPartners>
 
+    {/* <Wrapper
+      github="/course"
+    >
+      <Title
+        size="10"
+        title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
+        variant="primary"
+      />
+      <PricesAndPayment
+        lang={pageContext.lang}
+        session={session}
+        type={pageContext.slug}
+        locations={data.allLocationYaml.edges}
+        course="machine_learning"
+      />
+    </Wrapper> */}
+
+
+    <Wrapper
+      github="/course"
+    >
+      <Title
+        size="10"
+        title={yml.faq.title}
+        variant="primary"
+      />
+      {data.faqs.edges[0].node.faq.slice(0, 3).map(f => <ul>
+        <li>
+          <H5 margin="15px 0px">{f.question}</H5>
+          <Paragraph>{f.answer}</Paragraph>
+        </li>
+      </ul>)
+      }
+      <Paragraph align="center" margin="10px 0">
+        <Button width="400px" onClick={() => navigate(`/${pageContext.lang}/contact`)} color={Colors.blue} margin="0" textColor="white">{yml.faq.read_more}</Button>
+      </Paragraph>
+    </Wrapper>
+
   </>
   )
 };
@@ -208,6 +251,10 @@ export const query = graphql`
               }
               heading
               sub_heading
+              facts{
+                value
+                label
+              }
               left_labels{
                 description
                 projects
@@ -227,6 +274,19 @@ export const query = graphql`
             syllabus{
               heading
               button_label
+            }
+            teacher{
+              picture{
+                childImageSharp {
+                  fluid(maxWidth: 500){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              greeting
+              linkedin
+              full_name
+              bio
             }
             potential_companies{
               tagline
@@ -271,6 +331,11 @@ export const query = graphql`
               geeks_vs_other
               pricing
               alumni
+            }
+            faq{
+              title
+              link
+              read_more
             }
         }
       }
@@ -509,6 +574,18 @@ export const query = graphql`
         }
       }
     }
+    
+      faqs: allPageYaml(filter: { fields: { file_name: {regex: "/faq\\./"}, lang: { eq: $lang }}}, limit: 3) {
+        edges{
+          node{
+            faq{
+                question
+                answer
+            }
+        
+          }
+        }
+      }
   }
 `;
 export default BaseRender(Program);

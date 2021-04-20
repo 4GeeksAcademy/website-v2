@@ -16,8 +16,8 @@ with:
     icon: address
     footer:
       is_image: true
-      image: ""
-      image_link: ""
+      image: "/images/geekforce.png"
+      image_link: "/es/geekforce"
       text: ""
       text_link: ""
   - name: "Marco Rojas"
@@ -44,8 +44,8 @@ with:
     icon: address
     footer:
       is_image: true
-      image: ""
-      image_link: ""
+      image: "/images/geekpal.png"
+      image_link: "/es/geekpal"
       text: ""
       text_link: ""
 ## ***************************

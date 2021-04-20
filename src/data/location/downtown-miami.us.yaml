@@ -13,6 +13,7 @@ meta_info:
       "/location/downtown-miami",
       "/us/coding-campus/downtown-miami",
       "/coding-campus/coding-bootcamp-miami",
+      "/us/coding-bootcamp-miami",
     ]
 
 seo_title: "Coding Bootcamp in Miami"
@@ -299,37 +300,37 @@ prices:
         sub_heading: "and enjoy the best pricing in town"
       plans:
         - months: "60 mo"
-          payment: "$269.53"
+          payment: "$339.53"
           paymentInfo: "per month + $0 deposit"
           provider: "Skills Fund - Climb"
           logo: "/images/skill-logo.png"
           message: "We have partened with Skills Fund and Climb in order to offer you the best payment options in town"
         - months: "42 mo"
-          payment: "$384.10"
+          payment: "$549.10"
           paymentInfo: "per month + $0 deposit"
           provider: "Climb"
           logo: "/images/climb-logo-white.png"
           message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "36 mo"
-          payment: "$447.97"
+          payment: "$649.9"
           paymentInfo: "per month + $0 deposit"
           provider: "Skills Fund"
           logo: "/images/skill-logo.png"
           message: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
         - months: "24 mo"
-          payment: "$612.04"
+          payment: "$912.04"
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "12 mo"
-          payment: "$1277.43"
+          payment: "$1377.43"
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
         - months: "6 mo"
-          payment: "$2,508.58"
+          payment: "$2,908.58"
           paymentInfo: "per month + 1,500 deposit"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
@@ -340,7 +341,7 @@ prices:
       header:
         heading_one: "PAY UPFRONT"
         heading_two: "(OUT OF POCKET)"
-        sub_heading: "and enjoy the best pricing in town"
+        sub_heading: "And enjoy the best pricing in town. Member of 4Geeks? Ask for Member DISCOUNTS!"
       content:
         price: "$13,499.00"
         price_info: "single payment"
