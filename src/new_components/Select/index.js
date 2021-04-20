@@ -29,7 +29,7 @@ const Label = styled.div`
 const SmartSelect = (props) => {
     const [status, setStatus] = useState({toggle: false, hovered: false})
     const _Selector = (_p) => <Div
-        margin_tablet="0 28px 0 0"
+        // margin_tablet="0 28px 0 0"
         padding="7px"
         alignItems="center"
         width="314px"
