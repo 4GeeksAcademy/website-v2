@@ -145,65 +145,66 @@ const PricesAndPayments = (props) => {
             />
             // </GridContainer>
           }
-          <Link to={info.button.button_link}><Button width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>{info.button.button_text}</Button></Link>
+          <Link to={info.button.button_link}><Button width="fit-content" padding="13px" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link>
         </Div>
       </GridContainer>
 
-      {!prices ?
-        <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
-        :
-        <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0" >
-          {prices.left_section &&
-            <PricingCard lang={props.lang}
-              background={Colors.white}
-              transform_tablet="translateY(10%)"
-              price={prices.left_section.content.price}
-              priceInfo={prices.left_section.content.price_info}
-              data={prices.left_section}
-              applyLabel={apply_button_text}
-              border="1px solid black"
-              borderRight_tablet="none"
-            />
-          }
-          {prices.center_section && Array.isArray(prices.center_section.plans) &&
-            <PricingCard lang={props.lang} color="white" background='black'
-              price={prices.center_section.plans[activeStep].payment}
-              priceInfo={prices.center_section.plans[activeStep].paymentInfo}
-              applyLabel={apply_button_text}
-              data={prices.center_section}
-            >
-              <StepperContainer>
-                <StepConnector>
-                  <FillerStyles completed={((activeStep) * 100) / (prices.center_section.plans.length - 1)} />
-                </StepConnector>
-                {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map(p => p.months).map((label, index) => (
-                  <StepperCircle
-                    key={label}
-                    onMouseOver={() => setActiveStep(index)}
-                    background={index <= activeStep ? Colors.yellow : Colors.black}
-                  >
-                    <StepLabel color={index == activeStep ? Colors.yellow : Colors.white}>{label}</StepLabel>
-                  </StepperCircle >
-                ))}
-              </StepperContainer>
-              <Div margin="0 0 40px 0" display="flex">
-                <img style={{margin: "auto", height: "20px"}} src={prices.center_section.plans[activeStep].logo} />
-              </Div>
-            </PricingCard>
-          }
-          {prices.right_section &&
-            <PricingCard lang={props.lang}
-              background={Colors.white}
-              transform_tablet="translateY(10%)"
-              price={prices.right_section.content.price}
-              priceInfo={prices.right_section.content.price_info}
-              applyLabel={apply_button_text}
-              data={prices.right_section}
-              border="1px solid black"
-              borderLeft_tablet="none"
-            />
-          }
-        </GridContainer>
+      {
+        !prices ?
+          <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+          :
+          <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0" >
+            {prices.left_section &&
+              <PricingCard lang={props.lang}
+                background={Colors.white}
+                transform_tablet="translateY(10%)"
+                price={prices.left_section.content.price}
+                priceInfo={prices.left_section.content.price_info}
+                data={prices.left_section}
+                applyLabel={apply_button_text}
+                border="1px solid black"
+                borderRight_tablet="none"
+              />
+            }
+            {prices.center_section && Array.isArray(prices.center_section.plans) &&
+              <PricingCard lang={props.lang} color="white" background='black'
+                price={prices.center_section.plans[activeStep].payment}
+                priceInfo={prices.center_section.plans[activeStep].paymentInfo}
+                applyLabel={apply_button_text}
+                data={prices.center_section}
+              >
+                <StepperContainer>
+                  <StepConnector>
+                    <FillerStyles completed={((activeStep) * 100) / (prices.center_section.plans.length - 1)} />
+                  </StepConnector>
+                  {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map(p => p.months).map((label, index) => (
+                    <StepperCircle
+                      key={label}
+                      onMouseOver={() => setActiveStep(index)}
+                      background={index <= activeStep ? Colors.yellow : Colors.black}
+                    >
+                      <StepLabel color={index == activeStep ? Colors.yellow : Colors.white}>{label}</StepLabel>
+                    </StepperCircle >
+                  ))}
+                </StepperContainer>
+                <Div margin="0 0 40px 0" display="flex">
+                  <img style={{margin: "auto", height: "20px"}} src={prices.center_section.plans[activeStep].logo} />
+                </Div>
+              </PricingCard>
+            }
+            {prices.right_section &&
+              <PricingCard lang={props.lang}
+                background={Colors.white}
+                transform_tablet="translateY(10%)"
+                price={prices.right_section.content.price}
+                priceInfo={prices.right_section.content.price_info}
+                applyLabel={apply_button_text}
+                data={prices.right_section}
+                border="1px solid black"
+                borderLeft_tablet="none"
+              />
+            }
+          </GridContainer>
       }
       <GridContainer columns_tablet="12" gridGap="0" margin_tablet="0 0 37px 0" >
         <Div gridArea_tablet="1/5/1/9" justifyContent="center" alignItems="center">
@@ -214,7 +215,7 @@ const PricesAndPayments = (props) => {
       </GridContainer>
       <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
-    </Fragment>
+    </Fragment >
   )
 }
 export default (PricesAndPayments)
