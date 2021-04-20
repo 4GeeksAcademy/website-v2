@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {Break} from "../Responsive";
 
 const Colors = {
   blue: "#0097CD",
@@ -29,6 +30,10 @@ const Figure = styled.div`
   right: ${(props) => props.right};
   transform: scale(${(props) => props.scale}, ${(props) => props.scale});
   opacity: ${(props) => props.opacity};
+
+  @media  ${Break.sm}{
+    display: ${props => props.d_sm};
+  }
 `;
 const Circle = styled(Figure)`
   border-radius: 50%;
@@ -42,9 +47,9 @@ export const BackgroundDrawing = ({children}) => {
         width="50px"
         height="50px"
         top="20px"
-        right="10%"
+        right="3%"
       />
-      <Circle
+      <Circle d_sm="none"
         color="black"
         width="50px"
         height="50px"
@@ -52,35 +57,35 @@ export const BackgroundDrawing = ({children}) => {
         right="120px"
         scale="0.5"
       />
-      <Circle
+      <Circle d_sm="none"
         color="black"
         width="30px"
         height="30px"
         top="140px"
         left="5%"
       />
-      <Circle
+      <Circle d_sm="none"
         color="grey"
         width="30px"
         height="30px"
         top="100px"
         right="9%"
       />
-      <Circle
+      <Circle d_sm="none"
         color="black"
         width="30px"
         height="30px"
         top="100px"
         right="12%"
       />
-      <Circle
+      <Circle d_sm="none"
         color="grey"
         width="30px"
         height="30px"
         top="100px"
         right="15%"
       />
-      <Circle
+      <Circle d_sm="none"
         color="yellow"
         width="20px"
         height="20px"
@@ -96,7 +101,7 @@ export const BackgroundDrawing = ({children}) => {
         right="-5%"
         opacity="0.2"
       />
-      <Circle
+      <Circle d_sm="none"
         color="yellow"
         width="30px"
         height="30px"
@@ -104,21 +109,21 @@ export const BackgroundDrawing = ({children}) => {
         left="5%"
         opacity="0.2"
       />
-      <Circle
+      <Circle d_sm="none"
         color="black"
         width="30px"
         height="30px"
         top="140px"
         left="5%"
       />
-      <Circle
+      <Circle d_sm="none"
         color="grey"
         width="30px"
         height="30px"
         top="180px"
         left="5%"
       />
-      <Circle
+      <Circle d_sm="none"
         color="grey"
         width="30px"
         height="30px"
@@ -130,7 +135,7 @@ export const BackgroundDrawing = ({children}) => {
         width="30px"
         height="30px"
         top="280px"
-        left="5%"
+        left="1%"
       />
       <Circle
         color="yellow"
@@ -139,8 +144,8 @@ export const BackgroundDrawing = ({children}) => {
         top="250px"
         left="-5%"
       />
-      <Circle color="blue" width="50px" height="50px" top="20px" left="15%" />
-      <Circle color="red" width="50px" height="50px" top="200px" left="20%" opacity="0.3" />
+      <Circle d_sm="none" color="blue" width="50px" height="50px" top="20px" left="15%" />
+      <Circle d_sm="none" color="red" width="50px" height="50px" top="200px" left="20%" opacity="0.3" />
       <Content>
         {children}
       </Content>

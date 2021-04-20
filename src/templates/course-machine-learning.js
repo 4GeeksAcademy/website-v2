@@ -43,6 +43,7 @@ const Program = ({data, pageContext, yml}) => {
         m_sm="50px 0 0 0"
         color={Colors.black}
         fontSize="46px"
+        fs_md="38px"
         align="center"
 
       >{yml.header.tagline_top}</H1>
@@ -54,6 +55,8 @@ const Program = ({data, pageContext, yml}) => {
         marginTop="0"
         color={Colors.black}
         fontSize="46px"
+        fs_md="38px"
+        fs_xs="35px"
         textAlign="center"
         paragraph={yml.header.sub_heading}
         paragraphColor={Colors.grey}
