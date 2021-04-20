@@ -29,10 +29,9 @@ const Label = styled.div`
 const SmartSelect = (props) => {
     const [status, setStatus] = useState({toggle: false, hovered: false})
     const _Selector = (_p) => <Div
-        margin_tablet="0 28px 0 0"
+        // margin_tablet="0 28px 0 0"
         padding="7px"
         alignItems="center"
-        // maxWidth="314px"
         width="314px"
         minWidth={props.minWidth}
         onClick={() => _p.setStatus({toggle: !_p.status.toggle})}
@@ -41,8 +40,8 @@ const SmartSelect = (props) => {
         borderRadius="3px"
         position="relative"
 
-    ><Label>test</Label>
-        <H4 lineHeight="22px" color={Colors.darkGray} margin="0 20px 0 0">
+    ><Label>{props.topLabel}</Label>
+        <H4 lineHeight="22px" textAlign="left" color={Colors.darkGray} margin="0 20px 0 0">
             {_p.status.toggle ? props.openLabel : props.closeLabel}
         </H4>
         <Icon icon="arrowdown" />
@@ -62,41 +61,32 @@ const SmartSelect = (props) => {
         >
             <Selector status={status} setStatus={setStatus} options={props.options} />
             {status.toggle &&
-                // <Row
-                //     margin={props.margin}
-                //     width={props.width || "250px"}
-                //     width_xs="100%"
-                //     width_sm="100%"
-                //     display="flex"
-                //     justifyContent="center"
-                //     position="absolute"
-                //     right={props.right}
-                //     top={props.top}
-                //     left={props.left}
-                //     zIndex="2"
-                //     marginRight="0"
-                //     marginLeft="0"
-                //     background={Colors.white}
-                //     borderRadius={props.borderRadius}
-                //     shadow={props.shadow}
-                // >
                 <Div
                     flexDirection="column"
                     zIndex="1"
+                    position="absolute"
+                    border="1px solid #EBEBEB"
+                    boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+                    background={Colors.white}
+                    width="100%"
                 >
                     {Array.isArray(props.options) && props.options.map((item, index) => {
                         return (
                             <Button
                                 key={index}
                                 font={"Lato, sans-serif"}
-                                colorHover={Colors.lightBlue}
+                                colorHover="#F5F5F5"
                                 onClick={() => {
                                     setStatus({toggle: false, hovered: false});
                                     if (props.onSelect) props.onSelect(item);
                                 }}
                                 textColor={Colors.gray}
-                                fontSize={"16px"}
-                                borderRadius=".75rem" padding="10px"
+                                fontSize="15px"
+                                lineHeight="22px"
+                                fontWeight="400"
+                                width="100%"
+                                textAlign="left"
+                                textTransform="capitalize"
                             >
                                 {item.label}
                             </Button>
