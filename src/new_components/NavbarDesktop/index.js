@@ -58,7 +58,11 @@ const MegaMenuPositions = [
 const Nav = styled.nav`
     height: 71px;
     display: ${props => props.display};
-    position: relative;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 10;
+    top: 0;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
