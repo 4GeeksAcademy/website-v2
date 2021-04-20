@@ -81,7 +81,7 @@ const Home = (props) => {
   return (
     <>
       {/* <MegaMenu /> */}
-      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="0 0 108px 0" position="relative">
+      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" position="relative">
         <Circle
           color="blue"
           width="50px"
