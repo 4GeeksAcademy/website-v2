@@ -7,7 +7,7 @@ meta_info:
   template: "course-machine-learning"
   keywords: ""
   redirects: ["machine-learning"]
-
+seo_title: "Cooding Bootcamp"
 header:
   title: "Convertiete en ingenier en inteligencia artificial"
   paragraph: "
@@ -29,20 +29,20 @@ credentials:
   paragraph: ""
 
 description:
-  heading: "About this course"
-  sub_heading: "Prepare yourself for the Age of A.I."
+  heading: "Sobre este curso"
+  sub_heading: "Prepara Age of A.I."
   content: >
-    Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
-    Practice with real-life business scenarios typical in business and review some of the tools used in the industry. \n
-    Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+    Entrénate con un experto reconocido de Inteligencia Artificial; Explora los fundamentos de Machine Learning y Deep Learning con algunas de las tecnologías más poderosas que realmente pueden escalar I.A. en las empresas.\n
+    Practica con escenarios típicos en empresas de la vida real y revisa algunas de las herramientas utilizadas en la industria. \n
+    Construye estrategias y desarrolla tu inteligencia artificial siguiendo el ciclo de vida de desarrollo, incluyendo la publicación a producción y mantenimiento con privacidad, seguridad y ética.
 
 teacher:
-  greeting: Meet your teacher
-  full_name: Sayyed H. Nezhadi
+  greeting: "Conoce a tu profesor"
+  full_name: "Sayyed H. Nezhadi"
   picture: ../../../static/images/staff/sayyed.jpeg
   linkedin: https://www.linkedin.com/in/sayyednezhadi/
   bio: >
-    His focus is on guiding some of the biggest companies in the world adopting Artificial Intelligence (Enterprise AI) through deep understanding of both digital architecture and AI. Successfully carried out over 1200 big-scale projects servicing over 350 clients around the globe.
+    Enfocado en guidar algunas de las empresas más grandes del mundo hacia la adopción de la inteligencia artificial (Enterprise AI). Estrategia y ejecución exitosa de más de 1200 proyectos a gran escala, sirviendo más de 350 clientes alrededor del mundo.
 
 
 ## PROGRAM DETAILS
@@ -64,65 +64,60 @@ details:
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA
   weeks: 16
+  facts:
+    - label: "Duración"
+      value: "15 semanas"
+    - label: "Compromiso"
+      value: "20 hrs/sem. (Lun - Mie - Vie)"
+    - label: "Certificado"
+      value: "Machine Learning Engineer"
+    - label: "Horario"
+      value: "Online / Remoto"
+    - label: "Tamaño Clase"
+      value: "Sólo 12 personas"
+    - label: "Horas totales"
+      value: "300"
   sub_heading: "Part Time"
   left_labels:
-    description: "DESCRIPCION:"
+    description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
     duration: "DURACIÓN:"
-    skills: "Skills / Weeks:"
+    skills: "Habilidades / Semanas:"
   details_modules:
-    - module_name: "FRONT"
-      title: "Front-End Avanzado"
-      description: >
-        Asumiendo que ya tienes experiencia con frameworks de componentes (React.js, Angular, etc). Vamos a adentrarnos en optimización de React con Suspense, Code-spliting, Transpilación y arquitecturas de front-end como Redux 
-        Este modulo tambien sirve como un complemento perfecto para los siguientes ya que todos los proyectos van a requerir algun tipo de interfaz de usuario.
-      projects: "Aplicación de video llamadas Peer-to-Peer utilizando WebRTC y no se requiere un backend para la comunicación"
-      slug: "advanced-front-end"
+    - module_name: "Python"
+      title: "Introducción a Python"
+      description: "Empezando por un prework de 2 semánas, entra en el mundo de la programación con Python & Algoritmos; Este modulo te ayudará a preparate a programar y desarrollar diferentes modelos de entrenamiento de Inteligencias Artificials y evaluaciones para próximos pasos. "
+      projects: "Recolecta, almacena y mide con Numpy, Pandas, Mstplotlib, etc."
+      slug: "python-intro"
       duration: "2 weeks"
-      step: 1
-    - module_name: "ALGORITMOS"
-      title: "Algoritmos Avanzados"
-      description: "Todas las entrevistas de trabajo en empresas del Fortune 500 requieren que sepas algoritmos avanzados: Big O, Medicion de Tiempo y Espacio, Estructuras Avanzadas, Patrones de Diseño, Árboles, DFS/BFS."
-      projects: "Vas a pasar todo el rato perfeccionando tus habilidades de algoritmos y te presentaremos retos sacados de entrevistas reals."
+      step: 2
+    - module_name: "Data"
+      title: "Data Science para AI"
+      description: "No solamente vamos a entrenarte en Data Science, te vamos a preparar para Data Science en la era de la inteligencia artificial apalancandote de Python; Análisis de Datos & Visualizaciones, Manejos de Bases de datos y Workflows, Aplicaciónes de Algebra Lineal con Inferencia estadística y modelado. Terminarás este modulo entregando un proyecto completo donde tengas que aplicar limpieza, análisis y modelos de predicción en sets de datos reales."
+      projects: "Cargado de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files), explorado y limpieza de datos, visualizacion de datos, pruebas estadísticas, etc."
       slug: "advanced-algorithms"
-      duration: "2 wks"
-      step: 2
-    - module_name: "STORAGE"
-      title: "Almacenado y Búsqueda de Información"
-      description: >
-        Java es el lenguaje más utilizado del mundo (por mucho). En este modulos aprenderás los patrones de diseño más importantes para escalar aplicaciones, retos de optimización: DAO, Maven, O.O.P, Singleton, Factory, Strategy, Observer, Builder, etc. 
-        Hay demasiadas formas diferentes de almacenar y buscar información, aqui aprenderás las más populares y resolveras problemas típicos de escalamiento con Big Data, Data-Mining, Almacenamiento Distribuido, Redis/Memcache, SQL, NoSQL, GraphQL, et.
-      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
-      slug: "info-retrival"
-      duration: "2.5 wks"
-      step: 3
-    - module_name: "DISTRIBUIDO"
-      title: "Aplicaciones Distribuidas"
-      description: "Una aplicación lista para tener millones de usuarios require de fuertes conocimientos de arquitectura, aquí aprenderas las estrategias más importantes: Concurrencia, Sockets, Compresion de Datos, Almacenamiento Distribuido, Mensajeria, Colas, etc."
-      projects: "Construye una aplicación con multiples hilos, compresion de datos, microservicios y otras ventajas"
-      slug: "scale"
-      duration: "3 wks"
-      step: 3
-    - module_name: "CALIDAD"
-      title: "Control de la Calidad"
-      description: "Cuando construlles software para una empresa grande tu código debe ser a prueba de balas, aquí aprenderas a configurar un sistema de integración continua que garantice un deploy rápido y libre de errores, especialmente en aplicaciónes que tienen mucho tiempo funcionando (legacy) y tienen mucha deuda técnica."
-      projects: "Te entregaremos un reto de la vida real de una aplicación que ya esta en funcionamiento, deberás entenderla y construir un sistema de integración continua que asegure la calidad."
-      slug: "quality-deploy"
-      duration: "2 wks"
-      step: 2
-    - module_name: "FINAL PROJECT"
-      title: "The Final Project"
-      description: "Durante el proyecto final deberas elegir que tipo de proyecto quieres realizar: Inteligencia Artificial, Blockchain o desarrollo web. Sin recibir ninguna materia nuevo nos enfocaremos en apoyarte en la realicación de una idea desde cero hasta su publicación y escalamiento exitoso."
-      projects: "Desarrollarás tu aplicación desde cero y la publicarás en Amazon Web Services."
-      slug: "quality-deploy"
       duration: "4 wks"
-      step: 3.9
+      step: 4
+    - module_name: "Machine L."
+      title: "Machine Learning Prático"
+      description: "Uno de los aspectos más importantes del desarrollo de inteligencia artificial es entender como preparar, publicar y manejar las soluciones en un ambiente de producción. Vamos a llevarte de la mano desarrollando una estrategia para seguir el ciclo de desarrollo y publicación completo (Machine Learning Ops) asi como su privacidad, seguridad y etica. Tu proyecto final sera publicar una Inteligencia Artificial en producción."
+      projects: "Construye estructuras de datos, publica modelos de Inteligencia Artificial localmente y en AWS"
+      slug: "machine-learning"
+      duration: "6 wks"
+      step: 6
+    - module_name: "Despliegue"
+      title: "I.A. en producción"
+      description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de produccíon. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar una Inteligencia en producción."
+      projects: "Construyendo arquitecturas de datos, desplegando I.A. en produccion localmente y en la nube, monitoreando y manteniendo los modelos."
+      slug: "quality-deploy"
+      duration: "3 wks"
+      step: 2.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
       description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
-      projects: "Consegurás tu primer trabajo, empezarás a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganár muy bien y disfrutar de la vida de un programador."
+      projects: "Consegurás trabajo, empezarás a ganar más dinero pero continuarás aprendiendo hasta convertirte en Ingeniero Senior en Inteligencia Artificial."
       slug: "lifelong-learning"
-      duration: "1+ sem"
+      duration: "para siempre"
       step: 0.1
 
 syllabus:
@@ -130,7 +125,7 @@ syllabus:
   button_label: Descargar
 
 potential_companies:
-  tagline: "Entrénate para destacar en las compañías mas exigentes"
+  tagline: "Entrénate para destacar en las compañías más exigentes"
   sub_heading: "Dá un salto a tu carrera y trabaja en las mejores empresas"
   companies:
     - name: "Facebook"
@@ -192,12 +187,9 @@ prices:
 ## ALUMNI SECTION
 alumni:
   heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum mássa justo sit amet risus. Donec sed odio dui."
 
-## SIDEBAR
-sidebar:
-  membership: "MEMBERSHIPS"
-  program: "PROGRAM"
-  geeks_vs_other: "4GEEKS vs OTHERS"
-  pricing: "PRICING"
-  alumni: "THE ALUMNI"
+faq:
+  title: "Preguntas Frecuentes"
+  read_more: "Ver más preguntas"
+  link: "/faq"
