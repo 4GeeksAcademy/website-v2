@@ -126,10 +126,10 @@ navbar:
           sub_links: 
             - title: "Financiaciones"
               link_to: "/es/financiacion"
-            - title: "Precios"
-              link_to: "/es/precios"
-            - title: "Becas"
-              link_to: "/es/becas"
+            # - title: "Precios"
+            #   link_to: "/es/precios"
+            # - title: "Becas"
+            #   link_to: "/es/becas"
         - title: "Nuestros Alumnos"
           sub_links: 
             - title: "Alumnos y Proyectos"

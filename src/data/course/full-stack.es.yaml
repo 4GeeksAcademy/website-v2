@@ -30,7 +30,7 @@ button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
-  apply_button_link: "/aplica"
+  apply_button_link: "/es/aplica"
 
 credentials:
   heading: "RESULTADOS"
