@@ -5,7 +5,7 @@ meta_info:
   title: "Impulsa tu carrera profesional, ¡aprende a programar con 4Geeks Academy y el Carne Joven!"
   description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy."
   image: "/images/bg/remote.jpeg"
-  keywords: "Aprende a programar, 4geeks academy, aprende programacion, aprende ingenieria informatica"
+  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
   
   template: "landing_nonav" # <--- choose your landing template
   redirects: ["/landing/impulsa-tu-carrera-carne-joven"] # <--- URL redirections to avoid 404 errors
@@ -146,7 +146,21 @@ components:
     content: 
       text: " "
       font_size: ["16px"]
-
+  - name: some_other_id
+    position: 2
+    layout: single_column 
+    image: 
+      style: '{"height": ["500px", "500px", "400px", "300px", "200px"], "background-size": "contain"  }'
+      src: "https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/landing/CarneJovenBanner.png?raw=true"
+      #link: # take uses somewhere when they click on the image
+    # video: #youtube id
+    heading:  
+      text: "Aplica a una beca del 50%"
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    content: 
+      text: " "
+      font_size: ["16px"]
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

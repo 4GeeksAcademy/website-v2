@@ -295,6 +295,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields 
                 if (typeof (path) !== "string") throw new Error(`The path in ${node.meta_info.slug} is not a string: ${path}`);
                 if (path === "") return;
                 path = path[0] !== '/' ? '/' + path : path; //and forward slash at the beginning of path
+                console.log(`Additional redirect ${path} => ${node.fields.pagePath}`)
                 _createRedirect({
                     fromPath: path,
                     toPath: node.fields.pagePath,

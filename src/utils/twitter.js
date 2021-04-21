@@ -14,7 +14,7 @@ export default {
     "Jimena_y_yo": {
         "bio": "Mentor Leader en @4geeksacademyes",
         "name": "Jimena Escobar",
-        "avatar": "/images/staff/jimena.png",
+        "avatar": "/images/staff/jimena.jpg",
         "username": "Jimena_y_yo"
     },
     "4GeeksAcademy": {

@@ -1,10 +1,10 @@
 meta_info:
-  slug: aliados
-  title: "Sobre la Academia"
-  description: "Acerca de 4Geeks Academy"
+  slug: alianzas
+  title: "Aliados 4Geeks Academy"
+  description: "Conoce los aliados de 4Geeks Academy, empresas locales y globales que confían en nosotros y contratan a nuestros estudiantes"
   image: ""
-  keywords: ""
-  redirects: ["/aliados"]
+  keywords: "Aliados 4Geeks, Academy"
+  redirects: ["/aliados", "/es/aliados"]
 
 header_data:
   tagline: COMPAÑÍAS QUE CONFIAN EN NOSOTROS Y CONTRATAN A NUESTROS ESTUDIANTES
