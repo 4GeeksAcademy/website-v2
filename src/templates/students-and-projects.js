@@ -5,57 +5,96 @@ import BaseRender from './_baseLayout';
 import Img from 'gatsby-image';
 import News from '../new_components/News';
 import Icon from '../new_components/Icon';
-import {Colors, StyledBackgroundSection, Anchor} from '../new_components/Styling'
+import {Colors, StyledBackgroundSection, Anchor, Span} from '../new_components/Styling'
 import {GridContainer, Div, Header} from "../new_components/Sections";
+import ReactPlayer from '../new_components/ReactPlayer'
 
 
 
 const Press = (props) => {
     const {data, pageContext, yml} = props;
-    console.log("YAML", yml)
-    console.log("DATA", data)
-    let content = data.allPageYaml.edges[0].node.content
-    console.log(yml.news)
+    let projects = data.allAlumniProjectsYaml.edges[0].node.projects
+
     return (
         <Div margin="90px 0 75px 0" flexDirection="column">
             <Header
                 padding="0 10px"
-                padding_tablet="0 18%"
+                padding_tablet="0 18% 2% 18%"
                 seo_title={yml.seo_title}
                 title={yml.header.title}
                 paragraph={yml.header.paragraph}
             />
-            <News lang={pageContext.lang} limit={content.limit} height="50px" width="120px" justifyContent="flex-start" padding="50px 10px" padding_tablet="20px 22%  70px 22%" />
-            {/* <Div  flexDirection="column"> */}
-            {Array.isArray(content.news) && content.news.slice(0, content.limit).map((l, i) => {
+            {Array.isArray(projects) && projects.map((l, i) => {
                 return (
                     <>
-                        {<GridContainer columns_tablet="12" background={i % 2 == 0 && Colors.lightYellow2} padding_tablet="83px 0">
-                            <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}>
-                                <Img
-                                    key={i}
-                                    style={{height: "50px", width: "100%", minWidth: "60px", margin: "22px 0"}}
-                                    imgStyle={{objectPosition: "left", width: "120px", objectFit: "contain"}}
-                                    alt={l.name}
-                                    fluid={l.logo != null && l.logo.childImageSharp.fluid}
-                                />
-                                <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.title}</H3>
-                                <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
+                        {<GridContainer key={i} paddingChild="25px 0px 40px 0" padding_tabletChild="0" columns_tablet="12" padding_tablet="50px 0">
+                            <Div boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`} borderRadius="3px" border="1px solid #EBEBEB" padding="20px" flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}>
+                                <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.project_name}</H3>
+                                {l.alumni.map((alumni, index) => {
+                                    return (
+                                        <Div flexDirection="column" key={index} margin={`10px 0 5px 0`}>
+                                            <Div flexDirection="row"  >
+                                                <H4
+                                                    width="auto"
+                                                    type="h4"
+                                                    textAlign="left"
+                                                    fontWeight={`700`}
+                                                    >{`${alumni.first_name} ${alumni.last_name}`}
+                                                </H4>
+                                                {alumni.github != "" &&
+                                                <Div margin="0 0 0 auto" margin_tablet="0 0 0 15px">
+                                                    <a target="_blank" href={alumni.github} rel="noopener noreferrer nofollow">
+                                                        <Icon icon="github" width="22" />
+                                                    </a>
+                                                </Div>
+                                                }
+                                                {alumni.linkedin != "" &&
+                                                <Div margin="0 0 0 10px" margin_tablet="0 0 0 10px">
+                                                    <a target="_blank" href={alumni.linkedin} rel="noopener noreferrer nofollow">
+                                                        <Icon icon="linkedin" width="22" fill="#0e76a8" />
+                                                    </a>
+                                                </Div>
+                                                }
+                                            </Div>
+                                                <Paragraph
+                                                    primary
+                                                    lineHeight="22px"
+                                                    textAlign="left" >
+                                                    {alumni.job_title}
+                                                </Paragraph>
+                                        </Div>
+                                    )
+                                })}
+                                <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.project_content}</Paragraph>
                                 <Paragraph style={{alignItems: "center"}} padding="15px 0px" display="flex" fontWeight="700" letterSpacing="0.05em" lineHeight="16px" textAlign="left" fontSize="13px" color={Colors.blue}>
                                     <Anchor cursor="pointer"
-                                        to={l.url}>
-                                        {l.textUrl}
+                                        to={l.live_link}>
+                                        {l.project_name}
                                         <Icon style={{margin: '0 0 0 10px', placeSelf: 'center'}} icon="arrow-right" width="10" height="12px" color={Colors.blue} />
                                     </Anchor>
                                 </Paragraph>
                             </Div>
                             <Div height="auto" width="100%" gridArea_tablet={i % 2 != 0 ? "1/7/1/13" : "1/1/1/6"}>
-                                <StyledBackgroundSection
-                                    height={`389px`}
-                                    image={l.image != null && l.image.childImageSharp.fluid}
-                                    bgSize={`cover`}
-                                    alt={l.name}
-                                />
+                            {
+                                l.project_video === "" ?
+                                    <StyledBackgroundSection
+                                        borderRadius="3px"
+                                        height={`389px`}
+                                        image={l.project_image.childImageSharp.fluid}
+                                        bgSize={`cover`}
+                                        alt={l.project_name}
+                                    />
+                                :
+                                    <ReactPlayer
+                                        id={l.project_video}
+                                        thumb={l.project_image}
+                                        imageSize="maxresdefault"
+                                        style={{
+                                            width: "100%",
+                                            height: "389px",
+                                        }}
+                                    />
+                            }
                             </Div>
                         </GridContainer>
                         }
@@ -68,21 +107,19 @@ const Press = (props) => {
 export const query = graphql`
 query AlumniProjectQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-            edges{
-                edges {
-                    node {
-                      meta_info {
-                        title
-                        slug
-                    }
-                      seo_title
-                      header {
-                        title
-                        paragraph
-                    }
-                }
-            }
-        }
+      edges{
+        node {
+          meta_info {
+            title
+            slug
+          }
+          seo_title
+          header {
+            title
+            paragraph
+          }
+        } 
+      }
     }
     allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
         edges {
