@@ -102,7 +102,7 @@ const Program = ({data, pageContext, yml}) => {
     />
     <AlumniProjects title={yml.alumni.heading} paragraph={yml.alumni.sub_heading} lang={data.allAlumniProjectsYaml.edges} limit={2} />
     <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" />
-    <OurPartners images={hiring.partners.images} slider></OurPartners>
+    <OurPartners images={hiring.partners.images} marquee></OurPartners>
   </>
   )
 };

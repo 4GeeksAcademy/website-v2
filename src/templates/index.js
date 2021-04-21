@@ -171,7 +171,7 @@ const Home = (props) => {
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
       <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
-      <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
+      <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
   )

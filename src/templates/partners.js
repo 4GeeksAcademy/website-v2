@@ -78,7 +78,6 @@ const Partners = (props) => {
             images={partnersData.coding.images}
             showFeatured={true}
             props={partnersData.partners}
-
           />
         </GridContainer>
       </GridContainer>

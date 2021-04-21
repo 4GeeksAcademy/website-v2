@@ -136,7 +136,7 @@ const Program = ({data, pageContext, yml}) => {
       </Div>
       <Badges lang={pageContext.lang} />
     </Header>
-    <OurPartners background={Colors.verylightGray} images={hiring.partners.images} slider></OurPartners>
+    <OurPartners background={Colors.verylightGray} images={hiring.partners.images} marquee></OurPartners>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} background={Colors.white} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <TechsWeTeach lang={pageContext.lang} />
@@ -154,7 +154,7 @@ const Program = ({data, pageContext, yml}) => {
       <Testimonials lang={data.allTestimonialsYaml.edges} />
     </Container>
 
-    <OurPartners images={hiring.partners.images} slider></OurPartners>
+    <OurPartners images={hiring.partners.images} marquee></OurPartners>
 
     {/* <Wrapper
       github="/course"
