@@ -1,11 +1,17 @@
 meta_info:
-  slug: "caracas-venezuela"
-  title: 4Geeks Academy Caracas
-  description: null
+  slug: "bootcamp-programacion-caracas"
+  title: "Coding Bootcamp Caracas"
+  description: "Coding Bootcamp Campus Caracas, Venezuela"
   position: 20
   image: "https://storage.googleapis.com/4geeks-academy-website/caracas-es.png"
-  keywords: ""
-  redirects: ["/venezuela", "/caracas"]
+  keywords: "Coding Bootcamp Caracas"
+  redirects:
+    [
+      "/venezuela",
+      "/caracas",
+      "/es/location/impact-hub-caracas",
+      "/es/location/caracas-venezuela",
+    ]
 
 seo_title: "4Geeks Academy Caracas"
 header:
@@ -13,7 +19,9 @@ header:
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
   alt: ""
-
+button_header:
+  button_text: Ver Programas
+  button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR PÉNSUM" # <-- this will show everywhere in the website
   apply_button_text: "APLICAR" # <-- this will show everywhere in the website
@@ -21,7 +29,9 @@ button:
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
   cohort_more_details_text: "DETALLES"
-
+badges:
+  title: ""
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 news:
   title: "4Geeks Academy Caracas en las noticias..."
 upcoming:
@@ -67,23 +77,23 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "NO PAGUES HASTA"
-        heading_two: "QUE ENCUENTRES PEGA"
-        sub_heading: "Acuerdo de Ingresos Compartidos"
+        heading_one: "PAGO DE CONTADO"
+        heading_two: "ELEGIBLE PARA DESCUENTOS"
+        sub_heading: "Recibe descuento si pagas upfront"
       content:
-        price: "9% de tu sueldo"
-        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+        price: "Según modalidad"
+        price_info: "La modalidad Full-Time está disponible en otras sedes, contáctanos para más info"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAGO DE CONTADO"
-        heading_two: "CON FINANCIAMIENTO"
+        heading_one: "PAGO FRACCIONADO"
+        heading_two: "A CONVENIR"
         sub_heading: "pregunta por nuestras becase, financiamientos y precios"
       content:
         price: "?"
-        price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becase."
+        price_info: "Por favor contáctanos para más información acerca de precios, descuentos y becas."
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -95,23 +105,23 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "NO PAGUES HASTA"
-        heading_two: "QUE ENCUENTRES PEGA"
-        sub_heading: "Acuerdo de Ingresos Compartidos"
+        heading_one: "PAGO DE CONTADO"
+        heading_two: "ELEGIBLE PARA DESCUENTOS"
+        sub_heading: "Recibe descuento si pagas upfront"
       content:
-        price: "9% de tu sueldo"
-        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+        price: "Según modalidad"
+        price_info: "Pregunta por facilidades de pago para la próxima cohorte"
 
     ## RIGHT BOX SECTION
     ## CHANGE HERE THE INFO IN THE RIGHT BOX
     right_section:
       header:
-        heading_one: "PAGO DE CONTADO"
-        heading_two: "CON FINANCIAMIENTO"
+        heading_one: "PAGO FRACCIONADO"
+        heading_two: "A CONVENIR"
         sub_heading: "pregunta por nuestras becase, financiamientos y precios"
       content:
         price: "?"
-        price_info: "Por vafor contactanos para más información acerca de precios, descuentos y becase."
+        price_info: "Por favor contáctanos para más información acerca de precios, descuentos y becas."
 
 active_campaign_location_slug: "caracas-venezuela"
 breathecode_location_slug: "caracas-venezuela"

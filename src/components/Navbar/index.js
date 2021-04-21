@@ -31,6 +31,7 @@ export const Nav = styled.ul`
 export const NavItem = styled.li`
     text-transform: uppercase;
     margin: 0 .5rem;
+    padding: 10px;
     text-align: center;
     font-family: lato, sans-serif;
     font-size: 12px;

@@ -1,15 +1,33 @@
 meta_info:
   slug: blog-en-espanol
   title: "4geeks Academy Blog"
-  description: "Encuentra recursos y noticias para desarrolladores de software actuales y potenciales. Conocimientos básicos, tendencias, asesoramiento profesional y mucho más en el blog de 4geeks Academy."
+  description: "Encuentra recursos y noticias para desarrolladores actuales y potenciales. Conocimientos básicos, tendencias, asesoramiento profesional y más en nuestro blog."
   image: null
   keywords: "4geeks Academy Blog"
-  redirects: []
+  redirects: ['/es/blog']
 
 banner:
   tagline: "4GEEKS ACADEMY BLOG"
   sub_heading: "Recursos y novedades principalmente escritas para nuestra comunidad o personas interesadas en la industria Tech, de las startups y del crecimiento profesional a traves del Coding."
   image: "../../../static/images/bg/pricing-bg.jpg"
+
+seo_title: "4GEEKS ACADEMY BLOG"
+header:
+  title: "Blog"
+  paragraph: "Recursos y novedades principalmente escritas para nuestra comunidad o personas interesadas en la industria Tech, de las startups y del crecimiento profesional a traves del Coding."
+  image: "../../../static/images/bg/pricing-bg.jpg"
+  image_alt: ""
+
+question: "¿Que te interesa?"
+topics:
+  - Full Stack
+  - Software Engineer
+  - Machine Learning
+  - Learn To Program
+  - Career Growth
+  - Coding Bootcamps
+  - Trends & Tech 
+
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."

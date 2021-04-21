@@ -59,7 +59,6 @@ const NotFoundPage = () =>
       let footer = data.allFooterYaml.edges.find(({node}) => node.fields.lang === "us");
       if (footer && footer.node) {
         footer = [].concat.apply([], footer.node.footer.map((f,i) => i === 0 ? [] : f.items));
-        console.log("footer", footer)
       }
       return <Layout
         seo={{

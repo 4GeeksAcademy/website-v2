@@ -3,7 +3,7 @@ meta_info:
   title: "Privacy Policy at 4Geeks Academy"
   description: "Privacy is our priority. This policy document contains the types of information collected and recorded by 4Geeks Academy and how we use it."
   image: null
-  keywords: ""
+  keywords: "Privacy Policy, 4Geeks Academy"
   redirects: []
 ## BANNER - HEADER
 # banner:
@@ -17,7 +17,7 @@ consent:
   url: /us/privacy-policy
 
 header:
-  tagline: Privacy Policy for 4Geeks Academy
+  tagline: < Privacy Policy for 4Geeks Academy >
   sub_heading: At 4Geeks Academy, accessible from https://www.4geeksacademy.co , one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by 4Geeks Academy and how we use it.If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
   image: ../../../static/images/bg/companies-bg.jpg
   alt: ""
