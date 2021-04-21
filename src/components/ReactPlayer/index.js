@@ -30,10 +30,16 @@ const Image = styled.div`
 `
 
 const Player = ({ id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
-    onPlaybackQualityChange, imageSize, playerVars, noCookies, style, 
+    onPlaybackQualityChange, imageSize, playerHeight, playerVars, noCookies, style, 
     thumb, ...rest}) => {
 
     const [ showVideo, setShowVideo ] = React.useState(false)
+
+    function yt_parser(url){
+      let regExpUrl = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+      let match = url.match(regExpUrl);
+      return (match&&match[7].length==11)? match[7] : url;
+    }
 
     const validImageSizes = [
         "default",
@@ -48,7 +54,7 @@ const Player = ({ id, onPlay, onPause, onEnd, onError, onStateChange, onPlayback
     return <VideoWrapper {...rest} style={style}>
         {showVideo ? (
         <Iframe
-            videoId={id}
+            videoId={yt_parser(id)}
             id={`a-${id} do-not-delete-this-hack`}
             onReady={e => e.target.playVideo()}
             onPlay={onPlay}
@@ -60,6 +66,7 @@ const Player = ({ id, onPlay, onPause, onEnd, onError, onStateChange, onPlayback
             onPlaybackQualityChange={onPlaybackQualityChange}
             opts={{
             width: "100%",
+            height:`${style.height}`,
             host: noCookies
                 ? "https://www.youtube-nocookie.com"
                 : "https://www.youtube.com",

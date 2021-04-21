@@ -47,7 +47,13 @@ const Mentors = props => {
                         linkdin
                         twitter
                         website
-                        image
+                        image{
+                            childImageSharp {
+                                fluid(maxWidth: 800){
+                                  ...GatsbyImageSharpFluid_withWebp
+                                }
+                              }
+                        }
                         age
                         location
                         interests
