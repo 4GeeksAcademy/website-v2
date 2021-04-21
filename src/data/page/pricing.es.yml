@@ -1,12 +1,13 @@
 meta_info:
   slug: precio
-  title: ""
-  description: null
+  title: "Precios de los Bootcamps de 4Geeks Academy"
+  description: "Nunca dejamos de intentarlo hasta que creamos un programa premium pero asequible. Nuestra filosofía se basa en hacer que la educación esté disponible para todos"
   image: null
-  keywords: ""
+  keywords: "Precios, Bootcamps, 4Geeks Academy"
   redirects: ["/precio"]
 
 ## BANNER - HEADER
+seo_title: 4Geeks Academy
 header_data:
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.

@@ -3,24 +3,15 @@
 
 meta_info:
   slug: jobs
-  title: ""
-  description: null
+  title: "Job opportunities in 4Geeks Academy"
+  description: "Find the job opportunity you are looking for, work with us at 4Geeks Academy"
   image: null
-  keywords: ""
+  keywords: "job, work, 4geeks Academy"
   redirects: []
 
+seo_title: Coding Bootcamp
 header:
-  tagline: "OPEN JOBS AT 4GEEKS ACADEMY"
-  sub_heading: ""
+  title: "OPEN JOBS AT 4GEEKS ACADEMY"
+  paragraph: ""
   image: "../../../static/images/bg/pricing-bg.jpg"
   alt: ""
-
-about:
-  heading: "MORE ABOUT 4GEEKS ACADEMY"
-  sub_heading: "Curabitur blandit tempus porttitor."
-  about_image:
-    image: ../../../static/images/our-story.png
-    alt: ""
-  content: "4Geeks Academy was founded in 2015. What started as an internal project to train more developers has now become our full-time passion. 4Geeks is today a USA based Coding Bootcamp pursuing to build a new framework for Coding Education, because coding is becoming an essentials part of our society. 4Geeks Academy has now Locations in 4 cities, 6 on-going campuses, and more than 600 graduates."
-  button: "Read More >"
-  button_link: "/us/post/4geeks-academy-history"
