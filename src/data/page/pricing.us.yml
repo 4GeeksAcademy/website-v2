@@ -7,6 +7,7 @@ meta_info:
   redirects: []
 
 ## BANNER - HEADER
+seo_title: 4Geeks Academy
 header_data:
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
@@ -22,11 +23,11 @@ intro:
   heading_second: "What you need to know"
   content_second: "We are with you throughout the process. If you have any question, please get in contact with your Admissions Advisor here. Now, let's break it down:"
   bullets:
-   - "You need to choose a program."
-   - "You need to choose a city/Campus."
-   - "Each campus offers you different options. For example: Miami (Skills Fund, Climb), Madrid (Quotanda or Stuent Finance), Chile (Quotanda)."
-   - "Ask for Income Sharing Agreements (only available for Full-Time students), Scholarships available (we are always finding new ways to lower the final price), and/or partnerships with special offers."
-   - "Apply, go through the admissions process or call us now. We are here to help. Your Coding Career at 4Geeks is about to start." 
+    - "You need to choose a program."
+    - "You need to choose a city/Campus."
+    - "Each campus offers you different options. For example: Miami (Skills Fund, Climb), Madrid (Quotanda or Stuent Finance), Chile (Quotanda)."
+    - "Ask for Income Sharing Agreements (only available for Full-Time students), Scholarships available (we are always finding new ways to lower the final price), and/or partnerships with special offers."
+    - "Apply, go through the admissions process or call us now. We are here to help. Your Coding Career at 4Geeks is about to start."
 
 ## TUITION AND PAYMENTS SECTION
 prices:
@@ -40,9 +41,9 @@ payment_guide:
   heading: "PAYMENT GUIDE"
   sub_heading: "Do you have any questions about our financial options? or about our extended payment plans?"
   button_text: "REVIEW GUIDEBOOK"
-  button_link: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/4GA-Payment-Guidebook-2.pdf"
+  button_link: "https://storage.googleapis.com/4geeks-academy-website/Material%20(PDF%20and%20Images)%20website/4GA%20Financial%20Guidebook.pdf"
   submit_button_text: "Submit"
-  submit_button_link: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/4GA-Payment-Guidebook-2.pdf"
+  submit_button_link: "https://storage.googleapis.com/4geeks-academy-website/Material%20(PDF%20and%20Images)%20website/4GA%20Financial%20Guidebook.pdf"
 
 ## IMMERSED IN ECOSYSTEM SECTION
 ecosystem:

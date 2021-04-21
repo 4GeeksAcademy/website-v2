@@ -6,12 +6,11 @@ meta_info:
   description: "With our income share agreement you can become a software developer and build your new Career without upfront investment."
   image: "/images/bg/main-bg.jpg"
   keywords: "Income Share Agreement, Coding Classes, Learn to code, 4Geeks Academy"
-  
+
   template: "landing_a" # <--- choose your landing template
-  redirects: [ # <--- URL redirections to avoid 404 errors
-    "/landing/income-sharing-agreement"
-  ] 
-  
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/income-sharing-agreement"]
+
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: software-engineering
@@ -23,7 +22,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Get more information"
   motivation: "Sent to you inbox in 5 min."
-  button_label: Get more information 
+  button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
@@ -42,7 +41,7 @@ features:
     - Our  Graduates are making $50k (avg) per year;
     - Focus on your education and success first before making any investments;
     - Training on everything needed to become a successful software developer;
-    - Get lifetime job support, education and our community of developers around the world. 
+    - Get lifetime job support, education and our community of developers around the world.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -58,7 +57,7 @@ follow_bar:
     text: "Call "
 
 #
-# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
 in_the_news:
@@ -96,89 +95,90 @@ components:
   - name: isa_explanation
     position: 2
     layout: columns
-    proportions: [3,2]
-    heading: 
+    proportions: [3, 2]
+    heading:
       text: "How it Works"
     columns:
-      - size: [4,4,6,6]
-        content: 
+      - size: [4, 4, 6, 6]
+        content:
           text: "Coding First: Focus on your education and not in the cost of the program."
-          font_size: ["40px","34px","34px","25px", "20px"]
-        image: 
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
           style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
           src: "/images/isa/isa1.png"
-      - size: [4,4,6,6]
-        content: 
+      - size: [4, 4, 6, 6]
+        content:
           text: "Lowest Rate in USA: 9% of your future Income will be shared with 4Geeks"
-          font_size: ["40px","34px","34px","25px", "20px"]
-        image: 
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
           style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
           src: "/images/isa/isa2.png"
-      - size: [4,4,6,6]
-        content: 
+      - size: [4, 4, 6, 6]
+        content:
           text: "Time Frame: You will have -at least- 48 months to meet the revenue cap"
-          font_size: ["40px","34px","34px","25px", "20px"]
-        image: 
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
           style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
           src: "/images/isa/isa3.png"
-      - size: [4,4,6,6]
-        content: 
+      - size: [4, 4, 6, 6]
+        content:
           text: "Revenue Cap: 4Geeks  caps total payment at 1.5x the tuition cost."
-          font_size: ["40px","34px","34px","25px", "20px"]
-        image: 
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
           style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
           src: "/images/isa/isa4.jpg"
-      - size: [4,4,6,6]
-        content: 
+      - size: [4, 4, 6, 6]
+        content:
           text: "Minimum Wage: You will start paying once you hit the $35k a year wage. Get ready for more!"
-          font_size: ["40px","34px","34px","25px", "20px"]
-        image: 
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
           style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
           src: "/images/isa/isa5.png"
-      - size: [4,4,6,6]
-        content: 
+      - size: [4, 4, 6, 6]
+        content:
           text: "Admissions Requirements: You have to be fully committed, agree to a Full Disclosure and get ready for an amazing career."
-          font_size: ["40px","34px","34px","25px", "20px"]
-        image: 
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
           style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
           src: "/images/isa/isa6.png"
 
   - name: first_syllabus_form
     position: 4
-    layout: syllabus 
-    button: 
+    layout: syllabus
+    button:
       text: "Instant Download"
-    heading: 
+    heading:
       text: "Download the course syllabus"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: top_coding_bootcamp
     position: 4
-    layout: two_column_left 
-    proportions: [4,8]
-    image: 
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamps"
-    button: 
+      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+    button:
       text: "Read testimonials"
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
-    heading: 
-      text: "We have been named one of the TOP coding bootcamps in the World"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
+    heading:
+      text:
+        "We have been named one of the TOP coding bootcamps in the World"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: working_as_software_developers
     position: 7
-    proportions: [4,8]
-    layout: two_column_left 
-    image: 
+    proportions: [4, 8]
+    layout: two_column_left
+    image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    content: 
-      text: "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","34px","34px","25px", "20px"]
-
+    content:
+      text:
+        "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

@@ -4,7 +4,7 @@ const {walk, loadYML, empty, fail, success} = require("./_utils")
 const metas = [ 
     { key: "slug", type: "string", mandatory: true }, 
     { key: "title", type: "string", mandatory: true }, 
-    { key: "description", type: "string", length: 155}, 
+    { key: "description", type: "string", length: 160}, 
     { key: "image",  type: "string"}, 
     { key: "keywords",  type: "string"},
     { key: "redirects",  type: "array"}

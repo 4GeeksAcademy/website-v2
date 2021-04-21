@@ -1,4 +1,6 @@
 ## STAFF MEMEBERS INFO
+heading: "Staff"
+sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
 staff:
   - name: "Alejandro"
     last_name: "Sanchez"
@@ -10,7 +12,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
     twitter: "https://twitter.com/alesanchezr"
     website: "https://alesanchezr.com"
-    image: "/images/staff/alejandro.png"
+    image: "../../../../static/images/staff/alejandro.png"
     age: 34
     interests:
       - Soccer
@@ -27,7 +29,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
     twitter: "https://twitter.com/MRiciglianoC"
     website: ""
-    image: "/images/staff/marcelo.png"
+    image: "../../../../static/images/staff/marcelo.png"
     age: 33
     interests:
       - Soccer
@@ -45,7 +47,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/james-walters-mba-pmp-a109492/"
     twitter: ""
     website: ""
-    image: "/images/staff/james.png"
+    image: "../../../../static/images/staff/james.png"
     age: 33
     interests:
       - Soccer
@@ -63,7 +65,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/daniel-chang-7a8b5870/"
     twitter: ""
     website: ""
-    image: "/images/staff/daniel-chang.jpeg"
+    image: "../../../../static/images/staff/daniel-chang.jpeg"
     age: 42
     interests:
       - Robotics
@@ -83,7 +85,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/ayusopatricia/"
     twitter: "https://twitter.com/ayusopatricia"
     website: ""
-    image: "/images/staff/patricia.jpg"
+    image: "../../../../static/images/staff/patricia.jpg"
     age: 33
     interests:
       - Music
@@ -100,7 +102,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/paolo-lucano/"
     twitter: ""
     website: ""
-    image: "/images/staff/paolo.jpeg"
+    image: "../../../../static/images/staff/paolo.jpeg"
     age: 42
     interests:
       - Soccer
@@ -120,7 +122,7 @@ staff:
     linkdin: "https://linkedin.com/in/bridget-schraeder-625657195"
     twitter: "https://twitter.com/BridgetAlexys"
     website: ""
-    image: "/images/staff/bridget.jpg"
+    image: "../../../../static/images/staff/bridget.jpg"
     age: 33
     interests:
       - Music
@@ -137,7 +139,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/mafecasvi/"
     twitter: "https://twitter.com/mafecasvi"
     website: ""
-    image: "/images/staff/mafe.jpg"
+    image: "../../../../static/images/staff/mafe.jpg"
     age: 35
     interests:
       - Fashion Design
@@ -154,7 +156,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/nachovz/en-us/"
     twitter: ""
     website: ""
-    image: "/images/staff/nacho.jpg"
+    image: "../../../../static/images/staff/nacho.jpg"
     age: 42
     interests:
       - Board Games
