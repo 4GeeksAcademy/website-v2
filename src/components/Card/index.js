@@ -24,7 +24,7 @@ const Card = styled(Fragment)`
     z-index: ${props => props.index};
     text-align: ${props => props.align || "initial"};
     flex-direction: column;
-    min-height: ${props => props.minHeight}
+    min-height: ${props => props.minHeight};
     width: ${props => props.width};
     max-width: ${props => props.maxWidth};
     height: ${props => props.height};

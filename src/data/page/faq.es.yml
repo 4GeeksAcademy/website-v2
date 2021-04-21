@@ -1,6 +1,6 @@
 meta_info:
   slug: preguntas-frecuentes
-  title: "Preguntas frecuentes bootcamps y 4Geeks Academy"
+  title: "Preguntas frecuentes Bootcamps y 4Geeks Academy"
   description: "Conoce las preguntas frecuentes en torno a bootcamps y 4Geeks Academy"
   image: ""
   keywords: "Preguntas frecuentes bootcamps y 4Geeks Academy"
@@ -19,6 +19,7 @@ faq:
     answer: |-
       Para convertirte en el mejor developer posible debes dedicar tiempo, no hay otra manera, en nuestro programa “part-time” tendrás clases 3 horas 3 días a la semana, y debes dedicar en total unas 20-24 horas de estudio semanal. En el caso del programa a tiempo completo, que son 8 horas de clases al día, con dedicar en total unas 48 horas a la semana es suficiente."
   - question: "¿Por qué Javascript?"
+    only_for: ["full-stack"]
     answer: |-
       "JavaScript "es dueño" de la web; es el único lenguaje que todos los navegadores web entienden,es el lenguaje de programación más utilizado en el mundo; todos los sitios web lo necesitan, y es el más demandado por las empresas en diez veces el siguiente."
   - question: "¿Por qué Python?"
@@ -26,9 +27,10 @@ faq:
       "Python es el lenguaje de más rápido crecimiento en los países más ricos. Se usa ampliamente en prácticamente todas las industrias y tiene bibliotecas de alta calidad para todos los campos que crecen para ser 'el futuro': Web, IA, Robótica, Big Data, etc. Según profesores del MIT, es el lenguaje de programación esencial para aprender. Adelante, échale un vistazo <a class="faq-link" target="a_blank" rel="noopener noreferrer nofollow" href="https://www.python.org/">aquí</a>. 
       Tiene que ser Python. Encontrarás más oportunidades laborales, aprenderás a programar y te ayudará con otros lenguajes y frameworks. ¡Incluso Google aprobó Python y lo ha incorporado en todas partes!"
   - question: "¿Por qué no Node JS?"
+    only_for: ["full-stack"]
     answer: |-
       "Node es asombroso. Desafía la forma en que se crea la web. Sin embargo, solo el 0,3% de la web ha adoptado Node JS y su crecimiento se ha ralentizado aún más en los últimos meses. Python, Java, PHP y otros lenguajes similares todavía gobiernan el mundo (y eso no va a cambiar en el corto plazo). 
-       Funcionan de una manera muy diferente a como lo hace Node; nuestro propósito es prepararte para el "mundo real". Capacitamos a nuestros desarrolladores Full-Stack usando / enseñando sólo las tecnologías más estándar y profesionales. <a class="faq-link" href="https://4geeksacademy.co/us/post/dont-teach-nodejs-full-stack-development-program">Aquí</a> puedes encontrar un gran argumento de por qué no estamos enseñando Node JS."
+       Funcionan de una manera muy diferente a como lo hace Node; nuestro propósito es prepararte para el "mundo real". Capacitamos a nuestros desarrolladores Full-Stack usando / enseñando sólo las tecnologías más estándar y profesionales. <a class="faq-link" href="/us/post/dont-teach-nodejs-full-stack-development-program">Aquí</a> puedes encontrar un gran argumento de por qué no estamos enseñando Node JS."
   - question: "¿Por qué 4Geeks Academy?"
     answer: |-
       "Bueno, es un poco extraño hablar mucho sobre uno mismo ... pero, está bien, ¡ya que lo preguntaste! 
@@ -42,6 +44,7 @@ faq:
       Proporción de mentor-estudiante 1: 6 (en promedio): Un entorno cercano y personalizado  brinda a nuestra academia la oportunidad de adaptarse al ritmo particular de cada estudiante. 
       Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica."
   - question: "¿Por qué “Full-time?” ¿Cómo funciona?"
+    only_for: ["full-stack"]
     answer: |-
       "También ofrecemos formación a tiempo completo, entendemos que si buscas un curso full-time es porque no tienes que renunciar a tu empleo y que lejos de frenarte profesionalmente, ¡impulsará tu carrera!. La metodología, que además de ser super inmersiva, tiene una combinación de los siguientes cuatro pilares: 
       Aula invertida: la teoría se imparte a través de videos, animación, imágenes e infografías. El tiempo de clase se usa para debatir, crear y construir proyectos, y ser mentorizado para resolver muchos ejercicios prácticos. 
@@ -56,6 +59,7 @@ faq:
       Si te encuentras en Chile o en España, también tenemos a Quotanda como nuestro partner que ofrece varias opciones para hacer posible tu educación.
       Si necesitas más información no dudes en enviarnos un correo electrónico a: info@4geeksacademy.com "
   - question: "¿Cuál es la diferencia entre el programa Full Stack Development y otros programas más junior como los Website Developer?"
+    only_for: ["full-stack"]
     answer: |-
       "En el caso de Website Developer, el plan de estudios incluye: HTML, CSS, PHP, JavaScript, WordPress, API y más.
       Ahora bien, el programa Full Stack Software Development está diseñado en cuatro etapas:
@@ -75,6 +79,7 @@ faq:
       Puedes solicitar un plan de pago extendido de 6, 12, 18 o 24 meses. Sólo debes pagar un depósito o inicial y firmar el contrato correspondiente para las cuotas que mejor se adapten a tu situación.
       Si deseas obtener más información sobre este plan, haz clic <a class="faq-link" target="a_blank" rel="noopener noreferrer nofollow"href="https://quotanda.com/es/4geeks/">aquí</a>."
   - question: "¿Me gradúo como 'Senior Developer?'"
+    only_for: ["full-stack"]
     answer: |-
       "No. Por favor, no corras antes de aprender a caminar. La programación es como la vida: si eres bueno en eso, aprenderás más rápido, pero no al instante. Obtendrás la experiencia de ver todos los detalles una vez hayas dominado el arte.
       Hacer nuestro programa Full Stack significa que tu vida tendrá una nueva habilidad, pero también desarrollará una nueva forma de "pensar". Te gradúas como “Desarrollador Junior”, pero como un “Desarrollador Junior” REALMENTE BUENO, ¡no como uno más en el grupo!"
@@ -89,7 +94,7 @@ faq:
       De lunes a viernes de 9:00 a 18:00 hrs."
   - question: "¿Cómo me inscribo?"
     answer: |-
-      "Para comenzar tu carrera como Desarrollador, solo necesitas hacer clic <a  class="faq-link" href="https://4geeksacademy.co/es/aplica">aquí</a> y completar un formulario muy simple. Nosotros nos encargaremos del resto".
+      "Para comenzar tu carrera como Desarrollador, solo necesitas hacer clic <a  class="faq-link" href="/es/aplica">aquí</a> y completar un formulario muy simple. Nosotros nos encargaremos del resto".
   - question: "¿Cuál es el proceso de admisión?"
     answer: |-
       "Una vez que comiences el proceso de solicitud, recibirás un correo electrónico de uno de nuestros Consejeros Estudiantiles. Te guiaremos durante todo el proceso. Simplemente responde a nuestro correo electrónico y te llamaremos a tu conveniencia. 

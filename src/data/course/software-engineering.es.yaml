@@ -6,24 +6,22 @@ meta_info:
   image: ""
   template: "course-engineering"
   keywords: ""
-  redirects: ["ingenieria-software"]
-header:
-  tagline_top: "CONVIERTETE EN"
-  tagline: "INGENIERO DE SOFTWARE"
-  sub_heading: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro."
-  subsub_heading: "(Previous coding experience required)"
-  alt: ""
+  redirects: ["ingenieria-software", "/es/course/ingenieria-software"]
 
-  # The background image position can be cnotroled by device size
-  # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
+seo_title: "Cooding Bootcamp"
+header:
+  title: "Ingeniero de Software Senior"
   image: "../../../static/images/bg/apple-building.jpg"
+  image_alt: ""
+  paragraph: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro.
+  "
+
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
-  apply_button_link: "/aplica"
+  apply_button_link: "/es/aplica"
 
 credentials:
   heading: "Nuestros números hablan por sí solos"
@@ -52,6 +50,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA
+  weeks: 16
   sub_heading: "Part Time"
   left_labels:
     description: "DESCRIPCION:"
@@ -176,7 +175,12 @@ geek_data:
 prices:
   heading: "PRECIOS Y PAGOS"
   sub_heading: ""
-
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
 ## ALUMNI SECTION
 alumni:
   heading: "MEET THE ALUMNI AND PROJECTS"
