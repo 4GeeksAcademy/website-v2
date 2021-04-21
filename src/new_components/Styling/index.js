@@ -255,12 +255,14 @@ export const Button = styled(SmartButton)`
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position};
     display: ${props => props.display};
-    padding: ${props => props.padding};
+    // padding: ${props => props.padding || "12px 24px"};
+    padding: 12px 24px;
     transform: ${props => props.transform};
     color: ${props => props.color};
     background: ${props => props.background};
     border: ${props => props.border};
-    height: ${props => props.height};
+    // height: ${props => props.height};
+    height: 40px;
     cursor: pointer;
     text-align: ${props => props.textAlign || "center"};
     letter-spacing: 0px;
@@ -298,7 +300,6 @@ export const Button = styled(SmartButton)`
     }
 `;
 Button.defaultProps = {
-    padding: '10px 30px',
     fontSize: '12px',
     width: 'fit-content',
     type: 'button',
