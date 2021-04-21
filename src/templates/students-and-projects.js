@@ -92,6 +92,7 @@ const Press = (props) => {
                                         style={{
                                             width: "100%",
                                             height: "389px",
+                                            borderRadius: "3px"
                                         }}
                                     />
                             }

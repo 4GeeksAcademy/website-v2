@@ -40,6 +40,7 @@ const VideoWrapper = styled.section`
 
 const Iframe = styled(YouTube)`
   padding: 0;
+  border-radius: ${props => props.borderRadius || "auto"};
 `
 
 const Thumbnail = styled.img`
@@ -108,6 +109,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
   return <VideoWrapper {...rest} style={style}>
     {showVideo ? (
       <Iframe
+        borderRadius={style.borderRadius}
         videoId={yt_parser(id)}
         id={`a-${id} do-not-delete-this-hack`}
         onReady={e => e.target.playVideo()}
@@ -140,7 +142,8 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
             alt="Video"
             style={{
               height: `${style.height}` || "100%",
-              width: `${style.width}` || "100%"
+              width: `${style.width}` || "100%",
+              borderRadius: `${style.borderRadius}` || "auto",
             }}
           />
           :
@@ -151,7 +154,8 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
             alt="Video"
             style={{
               height: `${style.height}` || "100%",
-              width: `${style.width}` || "100%"
+              width: `${style.width}` || "100%",
+              borderRadius: `${style.borderRadius}` || "auto",
             }}
           />
         }
