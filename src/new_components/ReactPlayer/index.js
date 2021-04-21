@@ -53,7 +53,7 @@ const Image = styled.div`
   margin: auto;
   height: ${props => props.height || "auto"};
   width: ${props => props.width || "100%"};
-  overflow: hidden;
+  // overflow: hidden;
   box-shadow: ${props => props.shadow};
   border-radius: ${props => props.borderRadius || "1.25rem"};
   @media ${Devices.xxs}{
@@ -86,7 +86,7 @@ const Image = styled.div`
 
 const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
   onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className,
-  thumb, ...rest}) => {
+  thumb, left_tablet, right_tablet, ...rest}) => {
 
   const [showVideo, setShowVideo] = React.useState(false)
 
@@ -123,9 +123,9 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
       />
     ) : (
       <Image
-        borderRadius="0"
+        borderRadius="3px"
       >
-        {id && <Play onClick={() => setShowVideo(true)} aria-label="Play Video" />}
+        {id && <Play onClick={() => setShowVideo(true)} right_tablet={right_tablet} left_tablet={left_tablet} aria-label="Play Video" />}
         {thumb && thumb.childImageSharp ?
           <GImage
             className={className}
@@ -227,7 +227,7 @@ const Play = styled.button`
     background: black;
   }
   &:before {
-    background: inherit;
+    // background: inherit;
     border-radius: 5% / 50%;
     bottom: 9%;
     content: "";
@@ -247,5 +247,23 @@ const Play = styled.button`
     top: 50%;
     position: absolute;
     width: 0;
+  }
+  @media ${Devices.xxs}{
+  }
+  @media ${Devices.xs}{
+  }
+  @media  ${Devices.sm}{
+  }
+  @media  ${Devices.tablet}{
+    right: ${props => props.right_tablet};
+    left: ${props => props.left_tablet};
+  }
+  @media  ${Devices.md}{
+  }
+  @media  ${Devices.lg}{
+  }
+  @media  ${Devices.xl}{
+  }
+  @media  ${Devices.xxl}{
   }
 `

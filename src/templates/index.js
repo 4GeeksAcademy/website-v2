@@ -1,9 +1,11 @@
 import React from 'react';
+import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
 import {Row, Column, GridContainerWithImage, Container, Grid, Div, GridContainer} from '../new_components/Sections'
 import {RoundImage, Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Img from 'gatsby-image'
+import {Circle} from '../new_components/BackgroundDrawing'
 import News from '../new_components/News'
 import Icon from '../new_components/Icon'
 import Credentials from '../new_components/Credentials'
@@ -21,7 +23,8 @@ import About4Geeks from '../new_components/About4Geeks';
 import OurPartners from '../new_components/OurPartners';
 import ChooseYourProgram from '../new_components/ChooseYourProgram';
 import Testimonials from '../new_components/Testimonials';
-import Carousel from '../new_components/Carousel';
+// import Carousel from '../new_components/Carousel';
+// import {MegaMenu} from '../new_components/NavbarDesktop';
 import Card from '../components/Card';
 import GeeksVsOthers from '../components/GeeksVsOthers';
 import {WrapperCustom} from '../new_components/Sections';
@@ -69,6 +72,7 @@ const CityWrapper2 = ({yml}) => {
   />
 }
 
+
 const Home = (props) => {
 
   const {data, pageContext, yml} = props;
@@ -76,7 +80,61 @@ const Home = (props) => {
 
   return (
     <>
-      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="0 0 108px 0">
+      {/* <MegaMenu /> */}
+      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="0 0 108px 0" position="relative">
+        <Circle
+          color="blue"
+          width="50px"
+          height="50px"
+          bottom="20px"
+          right="10%"
+        />
+        <Circle
+          color="black"
+          width="50px"
+          height="50px"
+          top="170px"
+          right="120px"
+          scale="0.5"
+        />
+        <Circle
+          color="grey"
+          width="30px"
+          height="30px"
+          top="100px"
+          right="9%"
+        />
+        <Circle
+          color="black"
+          width="30px"
+          height="30px"
+          top="100px"
+          right="12%"
+        />
+        <Circle
+          color="grey"
+          width="30px"
+          height="30px"
+          top="100px"
+          right="15%"
+        />
+        <Circle
+          color="yellow"
+          width="20px"
+          height="20px"
+          top="0px"
+          right="30%"
+          scale="2"
+        />
+        <Circle
+          color="yellow"
+          width="200px"
+          height="200px"
+          top="150px"
+          right="-5%"
+          opacity="0.2"
+        />
+
         <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
@@ -94,7 +152,7 @@ const Home = (props) => {
             openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
             closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
           />
-          <News lang={pageContext.lang} limit={yml.news.limit} />
+          <News lang={pageContext.lang} limit={yml.news.limit} height="40px" width="90px" justifyContent="center" />
         </Div>
         <Div display="none" display_tablet="flex" height="auto" width="100%">
           <StyledBackgroundSection
@@ -111,8 +169,8 @@ const Home = (props) => {
       <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="0 0 108px 0" />
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-      <With4Geeks lang={pageContext.lang} playerHeight="82px" />
-      <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
+      <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
+      <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
@@ -149,9 +207,9 @@ export const query = graphql`
             badges{
               paragraph
             }
-            with{
-              heading
-              sub_heading
+            choose_program{
+              title
+              paragraph
             }
             geeks_vs_others{
                 heading
@@ -232,6 +290,7 @@ export const query = graphql`
                 footer_link
                 images {
                   name
+                  locations
                   image {
                     childImageSharp {
                       fluid(maxWidth: 150){

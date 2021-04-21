@@ -189,7 +189,7 @@ a {
 }
 .card-columns{
     display: inline-block;
-    width: 300px;
+    width: 33%;
 }
 @media (max-width: 768px) {
     .card-columns{
@@ -438,4 +438,18 @@ a.faq-link:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.BrainhubCarousel__dots .BrainhubCarousel__dot:before {
+    content: '';
+    display: block;
+    width: 11px !important;
+    height: 11px !important;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    background: #0097CD!important;
+}
+
+.lang{
+    font-weight: 700;
 }

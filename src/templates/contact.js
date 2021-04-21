@@ -2,7 +2,7 @@ import React, {useState, useContext, useEffect} from 'react';
 import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
-import Icon from '../components/Icon';
+import Icon from '../new_components/Icon';
 import Link from 'gatsby-link'
 
 // New components
@@ -60,14 +60,14 @@ const Contact = (props) => {
             }
         }}>
             <Div className="circles-left" display="none" display_tablet="inherit">
-                <Icon icon="landingCircles/smCircle-red" style={{zIndex: 2, position: "absolute", left: "218px", top: "225px"}}/>
-                <Icon icon="landingCircles/mdCircle-lightBlue" style={{zIndex: 2, position: "absolute", left: "53px", top: "97px"}}/>
-                <Icon icon="landingCircles/bigCircle-yellow" style={{zIndex: 2, position:"absolute", left: "0px", top: "250px"}}/>
+                <Icon icon="landingCircles/smCircle-red" width="23px" height="23px" style={{zIndex: 2, position: "absolute", left: "218px", top: "225px"}} />
+                <Icon icon="landingCircles/mdCircle-lightBlue" style={{zIndex: 2, position: "absolute", left: "53px", top: "97px"}} />
+                <Icon icon="landingCircles/bigCircle-yellowLight" width="115px" height="329px" style={{zIndex: 2, position: "absolute", left: "0px", top: "250px"}} />
             </Div>
             <Div className="circles-right" display="none" display_tablet="inherit">
-                <Icon icon="landingCircles/lgCircle-mustard" style={{zIndex: 2, position: "absolute", right: "0px", top: "269px"}}/>
-                <Icon icon="landingCircles/mdCircle-blue" style={{zIndex: 2, position: "absolute", right: "116px", top: "169px"}}/>
-                <Icon icon="landingCircles/smCircle-mustard" style={{zIndex: 2, position: "absolute", right: "299px", top: "122px"}}/>
+                <Icon icon="landingCircles/lgCircle-mustard" style={{zIndex: 2, position: "absolute", right: "0px", top: "269px"}} />
+                <Icon icon="landingCircles/mdCircle-blue" width="67px" height="67px" style={{zIndex: 2, position: "absolute", right: "116px", top: "169px"}} />
+                <Icon icon="landingCircles/smCircle-mustard" style={{zIndex: 2, position: "absolute", right: "299px", top: "122px"}} />
             </Div>
             <Div margin="64px 0" justifyContent="center" variant="fluid" padding_md="17px 8px 40px 8px">
             <Div

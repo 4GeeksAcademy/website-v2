@@ -20,6 +20,7 @@ export const Colors = {
     borderGray: '#ececec',
     yellow: "#FFC718",
     lightYellow: "rgba(255, 183, 24, 0.1)",
+    lightYellow2: "rgba(255, 183, 24, 0.2)",
     darkYellow: "#FFECBF",
     black: "#000000",
     white: "#FFFFFF",
@@ -249,38 +250,35 @@ export const Button = styled(SmartButton)`
     font-size: ${props => props.fontSize};
     font-family: 'Lato', sans-serif;
     text-transform: ${props => props.textTransform || "uppercase"};
-    font-weight: 700;
+    font-weight: ${props => props.fontWeight || "700"};
     margin: ${props => props.margin};
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position};
     display: ${props => props.display};
     padding: ${props => props.padding};
     transform: ${props => props.transform};
-
-    color: ${props => props.border};
+    color: ${props => props.color};
     background: ${props => props.background};
-    border: ${props => props.color};
+    border: ${props => props.border};
     height: ${props => props.height};
     cursor: pointer;
-    text-align: center;
+    text-align: ${props => props.textAlign || "center"};
     letter-spacing: 0px;
-    line-height: 1.5;
+    line-height: ${props => props.lineHeight};
     vertical-align: middle;
     width: ${props => props.width};
     max-width: ${props => props.maxWidth};
     min-width: ${props => props.minWidth};
     align-items: ${props => props.alignItems};
     justify-content: ${props => props.justifyContent};
-    box-shadow: ${props => props.shadow};
+    box-shadow: ${props => props.boxShadow};
 
     &:hover {
         background-color: ${props => props.colorHover || props.color};
     }
     @media ${Devices.xxs}{
-
     }
     @media ${Devices.xs}{
-            
     }
     @media  ${Devices.sm}{
         width: ${props => props.width_sm};
@@ -289,23 +287,19 @@ export const Button = styled(SmartButton)`
     }
     @media  ${Devices.tablet}{
         width: ${props => props.width_tablet};
-        
+        margin: ${props => props.margin_tablet};
     }
     @media  ${Devices.md}{
         width: ${props => props.width_md};
         font-size: ${props => props.fontSize_md};
         margin: ${props => props.margin_md};
-
     }
     @media  ${Devices.lg}{
         font-size: ${props => props.fontSize_lg};
-
     }
     @media  ${Devices.xl}{
-
     }
     @media  ${Devices.xxl}{
-
     }
 `;
 

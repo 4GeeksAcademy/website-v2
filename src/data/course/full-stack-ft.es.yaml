@@ -1,5 +1,5 @@
 meta_info:
-  slug: desarrollo-web-full-stack-bootcamp-full-time
+  slug: full-stack-full-time
   title: ""
   description: ""
   image: ""
@@ -15,6 +15,7 @@ meta_info:
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time",
       "/es/course/bootcamp-desarrollo-web-full-stack-full-time",
+      "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
     ]
 seo_title: "Cooding Bootcamp"
 header:
@@ -55,6 +56,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA FULL-TIME
+  weeks: 9
   sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"
@@ -133,7 +135,12 @@ geek_data:
 prices:
   heading: "PRECIOS Y PAGOS"
   sub_heading: ""
-
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
 # TYPICAL DAY SECTION
 typical:
   heading: "Un día típico en la academia"

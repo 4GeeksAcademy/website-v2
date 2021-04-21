@@ -57,6 +57,7 @@ const BaseHeading = styled(Heading)`
     font-size: ${props => props.fontSize_tablet};
     lineHeight: ${props => props.lineHeight_tablet};
     margin: ${props => props.margin_tablet};
+    padding: ${props => props.padding_tablet};
     display: ${props => props.display_tablet};
   }
   @media  ${Devices.md}{
@@ -65,6 +66,8 @@ const BaseHeading = styled(Heading)`
     lineHeight: ${props => props.lineHeight_md};
     display: ${props => props.display_md};
     margin: ${props => props.margin_md};
+    width: ${props => props.width_md};
+    padding: ${props => props.padding_md};
   }
   @media  ${Devices.lg}{
 
@@ -155,12 +158,13 @@ Separator.defaultProps = {
 
 export const Paragraph = styled.p`
   display: ${props => props.display};
+  direction: ${props => props.direction};
   width: ${props => props.width || "100%"};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin || "0"};
   font-size: ${props => props.fontSize};
   font-family: ${props => props.fontFamily};
-  font-weight: ${props => props.fontWeight};
+  font-weight: ${props => props.fontWeight || "400"};
   max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
   padding-right: ${props => props.paddingRight || "innitial"};
@@ -184,6 +188,7 @@ export const Paragraph = styled.p`
   }
   @media  ${Devices.tablet}{
       display: ${props => props.display_tablet};
+      justify-content: ${props => props.justifyContent};
       width: ${props => props.width_tablet};
       font-size: ${props => props.fontSize_tablet};
       text-align: ${props => props.textAlign_tablet};
@@ -193,7 +198,7 @@ export const Paragraph = styled.p`
     @media  ${Devices.md}{
       text-align: ${props => props.textAlign_md};
       margin: ${props => props.margin_md};
-      padding: ${props => props.padding_md}
+      padding: ${props => props.padding_md};
   }
   @media  ${Devices.lg}{
 
@@ -292,7 +297,6 @@ Paragraph.defaultProps = {
   fontFamily: "Lato, sans-serif",
   fontSize: "15px",
   lineHeight: "22px",
-  fontWeight: "400",
   textAlign: "center",
   color: `${Colors.darkGray}`,
 };

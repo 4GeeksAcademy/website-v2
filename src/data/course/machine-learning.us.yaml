@@ -1,0 +1,187 @@
+meta_info:
+  slug: machine-learning-engineering
+  title: "Become a AI Machine Learning Engineer at 4Geeks Academy"
+  description: "Our new course: Machine Learning Engineering, will help you master advanced coding techniques and get hired by the biggest tech companies"
+  bc_slug: "machine-learning"
+  image: ""
+  template: "course-machine-learning"
+  keywords: ""
+  redirects:
+    [
+      "/software-engineering",
+      "/us/course/machine-learning-engineering-coding-bootcamp",
+      "/course/machine-learning-engineering-coding-bootcamp",
+      "/coding-bootcamp/machine-learning-engineering-bootcamp",
+    ]
+seo_title: "Cooding Bootcamp"
+header:
+  title: "Become a Machine Learning Engineer"
+  paragraph: "Become one of the highest paid professionals in the world 
+  
+  (no coding experience required)
+  "
+  image: "../../../static/images/bg/circles.jpg"
+  image_alt: ""
+
+button:
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
+  apply_button_link: "/apply"
+  
+
+
+## PROGRAM DETAILS
+details:
+  about:
+      title: "About this course"
+      sub_title: "Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
+      Practice with real-life business scenarios typical in business and review some of the tools used in the industry. 
+      Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+      "
+      list:
+        - label: "Duration"
+          content:  "16 Weeks"
+        - label: "Classes"
+          content: "3 Classes weekly"
+        - label: "Certificate"
+          content: ""
+        - label: "Requisites"
+          content: "Check Requisites"
+  heading: Machine Learning Engineering Syllabus
+  weeks: 16
+  sub_heading: "Start with Python and Data Science, Machine Learning, Deep Learning and maintaining a production environment in A.I."
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "Python"
+      title: "Introduction to Python"
+      description: >
+        Starting from a Prework (2 weeks before), get introduced into the world of coding and learn Python and Algorithms' basics; this module will help you prepare to code and develop the different A.I. model training and evaluations for the next step.
+      projects: "Peer to Peer video chat application (using WebRTC no backend required for communication)"
+      slug: "python-intro"
+      duration: "1 week"
+      step: 2
+    - module_name: "Data"
+      title: "Data Science for AI"
+      description: >
+        We don’t simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Algebra with Statistical Inference and Modeling. You’ll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets.
+      projects: "Peer to Peer video chat application (using WebRTC no backend required for communication)"
+      slug: "data-science"
+      duration: "2 weeks"
+      step: 2
+    - module_name: "Machine L."
+      title: "Practical Machine Learning"
+      description: "On a nearly weekly basis, you will be taking a deep dive into all the major subjects of Machine Learning. We start you with Machine Learning with Python, then take you through Supervised Learning, Training & Evaluation of ML Models, Unsupervised Learning, in addition to Ensemble Learning. To wrap up the module, you’ll be developing an end-to-end project that compares different Machine Learning models on a real-world dataset"
+      projects: "You will solve several real life optimization algorithm challenges"
+      slug: "machine-learning"
+      duration: "3 wks"
+      step: 3
+    - module_name: "Deep L."
+      title: "Practical Deep Learning"
+      description: >
+        Within deep learning, you’ll be able to wield some of the most powerful technologies that truly scale intelligence for business. Explore the fundamentals of Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Generative Models, Reinforcement Learning, and finally; we jump into Graph Convolutional Neural Networks. Your end-to-end project is to apply one of the neural network types on a real-world scenario use case.
+      projects: ""
+      slug: "deep-learning"
+      duration: "2.5 wks"
+      step: 3
+    - module_name: "A.I."
+      title: "Practical Topics in A.I."
+      description: "This is where we prepare you for the most common use cases and business scenarios you’ll engage in. We also review some of the tools that are powerful for deep data analysis, such as Natural Langue Processing (NLP)and Machine Vision (object recognition, deep fakes, etc.). Lastly, we train you on the explainability and visualization of your solutions so you can properly engage with executives and business decision-makers. Your final project will include applying NLP or Machine Vision techniques to a real-world and complex challenge."
+      projects: ""
+      slug: "ai"
+      duration: "3 wks"
+      step: 3
+    - module_name: "Deploy & Maint."
+      title: "A.I. In Produciton"
+      description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your AI solution into production."
+      projects: "You will be given a real life application challenge with legacy code. You will need to understand the code and build a continued deployment in an integration system that guarantees quality."
+      slug: "quality-deploy"
+      duration: "2 wks"
+      step: 2.9
+    - module_name: "LIFELONG"
+      title: "Lifelong Support"
+      description: "Keep practicing with the academy's help - we will be coaching you for life, help build your Resume, Github, LinkedIn.  We will help you apply for jobs and continue to support you once you find a job"
+      projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer.  Enjoy and build software for life."
+      slug: "lifelong-learning"
+      duration: "forever"
+      step: 0.1
+
+teacher:
+  greeting: Meet your teacher
+  full_name: Sayyed H. Nezhadi
+  picture: ../../../static/images/staff/sayyed.jpeg
+  linkedin: https://www.linkedin.com/in/sayyednezhadi/
+  bio: >
+    His focus is on guiding some of the biggest companies in the world adopting Artificial Intelligence (Enterprise AI) through deep understanding of both digital architecture and AI. Successfully carried out over 1200 big-scale projects servicing over 350 clients around the globe.
+
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
+
+potential_companies:
+  tagline: "Get trained to thrive at major companies"
+  sub_heading: "Get ready to apply to the best companies in the world: the next level in your career as Software Engineer"
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "WHAT MAKES US SO SUCCESSFULL?"
+  sub_heading: "Compare 4Geeks with other coding schools"
+  sub_heading_link: ""
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: And Fortune 500 companies will hire you!
+  geek_pal:
+    - Unlimited Senior mentorship.
+    - Lifetime access to the software community.
+    - Worldwide access and support.
+  geek_force:
+    - Helping you land a job in a 500 Fortune company.
+    - Profile, portfolio, interviews, workshops, talks, software community, network, active projects collaboration.
+    - It’s about getting your career to the next level.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRICES AND PAYMENTS"
+  sub_heading: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Get to know our graduates and some of the projects you will be building during the program"
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBERSHIPS"
+  program: "PROGRAM"
+  geeks_vs_other: "4GEEKS vs OTHERS"
+  pricing: "PRICING"
+  alumni: "THE ALUMNI"

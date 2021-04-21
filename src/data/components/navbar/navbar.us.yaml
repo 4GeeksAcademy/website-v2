@@ -1,25 +1,159 @@
 navbar:
-  - name: "Home"
-    link: "/#home"
+  - name: "Programs"
+    link: "/us/coding-bootcamp/part-time-full-stack-developer"
+    sub_menu:
+      icon: ""
+      title: "Programs"
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi.
+      "
+      links:
+        - title: "Full Stack Developer"
+          level: "Level 1"
+          icon: "fullstack"
+          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          buttons:
+            - text: "Part Time"
+              link: "/us/coding-bootcamp/part-time-full-stack-developer"
+            - text: "Full Time"
+              link: "/us/coding-bootcamp/part-time-full-stack-developer"
+          
+        - title: "Software Engineer"
+          level: "Level 2"
+          icon: "fullstack"
+          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          buttons:
+            - text: "View Program"
+              link: "/us/coding-bootcamp/software-engineer-bootcamp"
+         
+        - title: "AI/Machine Learning Engineering"
+          level: "Online"
+          icon: "fullstack"
+          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          buttons:
+            - text: "View program"
+              link: "/us/coding-bootcamp/machine-learning-engineering"
+          
   - name: "Why 4Geeks"
     link: "/why-4geeks"
-  - name: "The Programs"
+    sub_menu:
+      icon: "awards"
+      title: "Why 4Geeks Academy"
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Accompaniment"
+          sub_links: 
+            - title: "GeekPal"
+              link_to: "/us/geekpal-support"
+            - title: "GeekForce"
+              link_to: "/us/geekforce-career-support"
+        - title: "Validation"
+          sub_links: 
+            - title: "Awards"
+              link_to: "/us/awards"
+            - title: "Outcomes"
+              link_to: "/us/outcomes"
+            - title: "Geeks Vs Others"
+              link_to: "/us/geeks-vs-others"
+        - title: "Prices"
+          sub_links: 
+            - title: "Financials"
+              link_to: "/us/financials"
+            - title: "Prices"
+              link_to: ""
+            - title: "Scholarships"
+              link_to: ""
+        - title: "Our Students"
+          sub_links: 
+            - title: "Alumni & Projects"
+              link_to: ""
+            - title: "Testimonials"
+              link_to: ""
+  - name: "The Academy"
     link: "/course/full-stack-web-development-bootcamp-part-time"
-    links:
-      - name: "Desarrollador Full Stack"
-      - link: "/course/full-stack-web-development-bootcamp-part-time"
-      - name: "Ingeniero de Software"
-      - link: "/course/software-engineering-coding-bootcamp"
+    sub_menu:
+      icon: "hat"
+      title: "The Academy"
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: ""
+          sub_links: 
+            - title: "Who we are"
+              link_to: "/us/the-academy"
+            - title: "Press"
+              link_to: "/us/press"
+            - title: "Blog"
+              link_to: "/us/blog"
+            - title: "Partners"
+              link_to: "/us/partners"
+# links:
+#       - name: "Desarrollador Full Stack"
+#       - link: "/course/full-stack-web-development-bootcamp-part-time"
+#       - name: "Ingeniero de Software"
+#       - link: "/course/software-engineering-coding-bootcamp"
   # - name: "Pricing"
   #   link: "/pricing"
-  - name: "for companies"
+  - name: "Campuses"
     link: "/partners"
+    sub_menu:
+      icon: "campuses"
+      title: "Our Campuses"
+      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      
+      adscing elit, sed do eiusmod tempor incidi."
+      links:
+        - title: "Online"
+          sub_links: 
+            - title: "Part Time"
+              link_to: "/us/coding-bootcamp/part-time-full-stack-developer"
+            - title: "Full Time"
+              link_to: "/us/coding-bootcamp/part-time-full-stack-developer"
+        - title: "Campuses"
+          sub_links: 
+            - title: "Caracas"
+              link_to: "/us/coding-campus/coding-bootcamp-caracas"
+            - title: "Madrid"
+              link_to: "/us/coding-campus/coding-bootcamp-madrid"
+            - title: "Miami"
+              link_to: "/us/coding-campus/coding-bootcamp-miami"
+            - title: "San José"
+              link_to: "/us/coding-campus/coding-bootcamp-costa-rica"
+            - title: "Santiago de Chile"
+              link_to: "/us/coding-campus/coding-bootcamp-santiago"
   - name: "Upcoming Dates"
-    link: "/calendar"
+    link: "/us/next-dates"
+
+language_button:
+  text: "<span class='lang'>ENG</span> / ESP"
+  link: "/es/inicio?lang=es"
 button:
   button_link: "/apply"
+  apply_button_text: "Apply Now"
   button_type: ""
   button_color_text: ""
   button_background_color: ""
   next_cohort: "Next cohort starts on"
   other_dates: "or review other dates"
+
+
+# link: "/us/the-academy"
+#   - name: "The Programs"
+#     link: "/us/coding-bootcamp/part-time-full-stack-developer"
+#     links:
+#       - name: "Full Stack Developer"
+#       - link: "/us/coding-bootcamp/part-time-full-stack-developer"
+#       - name: "Software Engineer"
+#       - link: "/us/coding-bootcamp/software-engineer-bootcamp"
+#   # - name: "Pricing"
+#   #   link: "/pricing"
+#   - name: "for companies"
+#     link: "/us/partners"
+#   - name: "Upcoming Dates"
+#     link: "/us/next-dates"
+# button:
+#   button_link: "/us/apply"

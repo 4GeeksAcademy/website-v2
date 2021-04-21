@@ -28,7 +28,7 @@ featured: false
 ### **What to believe when speaking about coding programs in Miami.**
 
 
-People are talking and taking Coding programs.  More and more.  It looks like a trend.  Like a cultural bubble of recent years.  There are hundreds of coding Schools all around the U.S.  Every major city in the U.S. has at least three to five (3-5) Bootcamps (aside from Online Bootcamps).
+People are talking and taking Coding programs.  More and more.  It looks like a trend.  Like a cultural bubble of recent years.  There are hundreds of coding Schools all around the U.S.  Every major city in the U.S. has at least three to five (3-5) Bootcamps (aside from Online Bootcamps)..
 
 
 

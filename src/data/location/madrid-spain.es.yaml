@@ -1,11 +1,11 @@
 meta_info:
-  slug: "madrid-espana"
+  slug: "bootcamp-programacion-madrid"
   position: 2
   title: 4Geeks Academy Madrid
   description: null
   image: "https://storage.googleapis.com/4geeks-academy-website/madrid-es.png"
   keywords: ""
-  redirects: ["madrid", "/es/location/madrid-spain/"]
+  redirects: ["madrid", "/es/location/madrid-spain/", "/es/location/madrid-espana"]
 
 seo_title: "4Geeks Academy Madrid, España"
 header:
@@ -31,7 +31,9 @@ info_box:
   image: "../../../static/images/locations/madrid-map.png"
   map_url: "https://www.google.com/maps/place/4Geeks+Academy/@40.4396216,-3.6808932,15z/data=!4m2!3m1!1s0x0:0xb1a742c609c68c4b?sa=X&ved=2ahUKEwjspv__4-zrAhXEY98KHa3RBpYQ_BIwCnoECBkQCA"
   alt: ""
-
+badges:
+  title: ""
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 news:
   title: "4Geeks Academy Madrid en los medios..."
 

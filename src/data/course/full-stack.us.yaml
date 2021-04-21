@@ -1,5 +1,5 @@
 meta_info:
-  slug: full-stack-web-development-bootcamp-part-time
+  slug: part-time-full-stack-developer
   title: "Become a developer, learn to code and get a job in tech with 4Geeks Academy"
   bc_slug: "full-stack"
   description: "Master the coding fundamentals and develop real life applications, career support and mentoring for life."
@@ -16,6 +16,8 @@ meta_info:
       "/course/web-development-parttime",
       "/coding-introduction-programming",
       "/us/course/coding-introduction",
+      "/course/coding-introduction",
+      "/us/course/full-stack-web-development-bootcamp-part-time",
     ]
 seo_title: "Cooding Bootcamp"
 header:
@@ -58,6 +60,7 @@ details:
           content: "Check Requisites"
          
   heading: Program Details Part-Time
+  weeks: 16
   sub_heading: Real life projects and exactly what companies are looking for
   left_labels:
     description: "DESCRIPTION:"
@@ -141,6 +144,12 @@ geek_data:
 prices:
   heading: "Prices and Payments"
   sub_heading: "Selecciona la sede o modalidad de tu curso para ver los precios y planes de pago"
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
 
 typical:
   heading: ""

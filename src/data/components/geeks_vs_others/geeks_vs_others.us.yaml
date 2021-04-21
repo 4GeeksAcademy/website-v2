@@ -99,5 +99,5 @@ info:
     icon: ""
 
 button:
-  button_text: "COMPARE 4GEEKS WITH OTHER SCHOOLS"
-  button_link: "/geeks-vs-others"
+  button_text: "Compare 4Geeks with other schools"
+  button_link: "/us/geeks-vs-others"

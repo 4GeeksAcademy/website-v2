@@ -65,6 +65,11 @@ const PricesAndPayments = (props) => {
             pricing_error_contact
             pricing_error
             get_notified
+            top_label
+            button{
+              button_text
+              button_link
+            }
           }
         }
       }
@@ -99,10 +104,55 @@ const PricesAndPayments = (props) => {
 
   return (
     <Fragment github="/location">
+      <GridContainer margin_tablet="0 0 25px 0">
+        <Div
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <H2 margin="0 0 15px 0" fontWeight="900">{props.title}</H2>
+          <Paragraph>{props.paragraph}</Paragraph>
+        </Div>
+      </GridContainer>
+      <GridContainer margin_tablet="0 0 73px 0">
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
+
+          {/* <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">"apply_button_text"</Button> */}
+          {!props.course &&
+            <Select
+              top="40px"
+              left="20px"
+              width="fit-content"
+              options={courseArray}
+              openLabel={course ? course.label : props.openedLabel}
+              closeLabel={course ? course.label : props.closedLabel}
+              onSelect={(opt) => setCourse(opt)}
+            />
+            // </GridContainer>
+          }
+        &nbsp;
+      {course &&
+            // <GridContainer>
+            <Select
+              top="40px"
+              left="20px"
+              width="fit-content"
+              options={locations.map(l => ({label: l.node.city + ", " + l.node.country, value: l.node.active_campaign_location_slug}))}
+              openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
+              closeLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
+              onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}
+              topLabel={info.top_label}
+            />
+            // </GridContainer>
+          }
+          <Link to={info.button.button_link}><Button width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>{info.button.button_text}</Button></Link>
+        </Div>
+      </GridContainer>
+
       {!prices ?
         <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
         :
-        <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0">
+        <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0" >
           {prices.left_section &&
             <PricingCard lang={props.lang}
               background={Colors.white}
@@ -155,13 +205,13 @@ const PricesAndPayments = (props) => {
           }
         </GridContainer>
       }
-      <Grid columns_md="12" rows_md="1" gridGap="0" margin="47px 0 37px 0">
-        <Div gridArea_md="1/5/1/9" justifyContent="center" alignItems="center">
+      <GridContainer columns_tablet="12" gridGap="0" margin_tablet="0 0 37px 0" >
+        <Div gridArea_tablet="1/5/1/9" justifyContent="center" alignItems="center">
           <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >We accept: </H4>
           <RoundImage url="/images/bitcoin.png" height="10px" width="65px" bsize="contain" margin="0 15px" />
           <RoundImage url="/images/ethereum.png" height="20px" width="65px" bsize="contain" />
         </Div>
-      </Grid>
+      </GridContainer>
       <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Fragment>

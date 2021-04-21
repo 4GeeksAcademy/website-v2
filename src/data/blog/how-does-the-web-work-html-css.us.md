@@ -65,6 +65,6 @@ Remember that one of the most common mistakes a web developer makes is to forget
 
 You can access codepen.io at any time to continue sharpening those coding skills and feel free to contact us if you have any questions.
 
-See you at our [next event](https://4geeksacademy.co/events/).
+See you at our [next event](//events/).
 
 

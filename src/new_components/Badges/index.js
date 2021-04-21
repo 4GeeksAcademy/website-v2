@@ -77,7 +77,9 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
           <Div justifyContent="center" margin="50px 0 0 0">
             <Link to={content.link_to}><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>
           </Div>}
+
       </GridContainer>
+
     </Fragment>
   )
 }

@@ -18,7 +18,7 @@ const View = (props) => {
         padding="66px 17px 85px 0"
       >
       </Header>
-      <GeeksVsOthers lang={pageContext.lang} />
+      <GeeksVsOthers lang={pageContext.lang} link={false} />
     </>
   )
 };

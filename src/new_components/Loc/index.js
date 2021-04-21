@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../Heading';
 import {GridContainer, Grid, Div} from '../Sections'
@@ -7,8 +7,27 @@ import Icon from "../Icon"
 import {SessionContext} from '../../session.js'
 import Link from 'gatsby-link'
 
-const Loc = ({locations, title, paragraph}) => {
+const Loc = ({locations, title, paragraph, lang}) => {
+  const data = useStaticQuery(graphql`
+    {
+      allLocYaml {
+        edges {
+          node {
+            label
+            fields {
+              lang
+            }
+          }
+        }
+      }
+    }
+  `)
+  let content = data.allLocYaml.edges.find(({node}) => node.fields.lang === lang);
+  if (content) content = content.node;
+  else return null;
   const {session} = useContext(SessionContext);
+  const [index, setIndex] = useState(null);
+  const [status, setStatus] = useState({toggle: false, hovered: false})
   useEffect(() => {
     const getData = async () => {
       let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
@@ -41,18 +60,30 @@ const Loc = ({locations, title, paragraph}) => {
             <Paragraph>{paragraph}</Paragraph>
           </Div>
         </GridContainer>}
-      <GridContainer columns="2" columns_tablet="3" gridGap="0" margin_tablet="0 0 70px 0">
+      <GridContainer
+
+        columns="2" columns_tablet="3" gridGap="0" margin_tablet="0 0 70px 0">
         {loc != null &&
-          loc.map((item, index) => {
+          loc.map((item, i) => {
             return (
               <Div
+                // onMouseLeave={() => {
+                //   // setStatus({...status, hovered: false});
+
+                //   setTimeout(() => {
+                //     setIndex(index != null && null);
+                //   }, 1000)
+                // }}
+                // onMouseEnter={() => setStatus({...status, hovered: true})}
+                onMouseOver={() => setIndex(i)}
+                key={i}
                 style={{border: `1px solid ${Colors.black}`, position: "relative"}}
                 display="flex"
                 flexDirection="column"
                 justifyContent="between"
                 height="207px"
                 padding="24px"
-                background={Colors.white}
+                background={index == i ? Colors.yellow : Colors.white}
               >
                 <H3
                   textAlign="left"
@@ -64,8 +95,8 @@ const Loc = ({locations, title, paragraph}) => {
                   display_tablet="block"
                 >
                   <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
-                    Next Cohort in this location
-                </Paragraph >
+                    {content.label}
+                  </Paragraph >
                   <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
                     Full Stack Developer
                 </Paragraph>

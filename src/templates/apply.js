@@ -73,14 +73,12 @@ const Apply = (props) => {
 
     return (
         <form onSubmit={(e) => {
-            console.log("Submit..")
             e.preventDefault();
             if (formStatus.status === "error") setFormStatus({status: "idle", msg: "Resquest"})
 
             const valid = formIsValid(formData);
             if (valid !== true) {
                 setFormStatus({status: "error", msg: "There are some errors in your form: " + valid});
-                console.log("formData", formData)
             }
             else {
                 setFormStatus({status: "loading", msg: "Loading..."});

@@ -1,12 +1,12 @@
 meta_info:
   slug: sobre-la-academia
-  title: ""
-  description: "Acerca de 4Geeks Academy"
+  title: "Sobre 4Geeks Academy"
+  description: "Conoce los resultados, demografía, piedras angulares, equipo e historia de 4Geeks Academy"
   image: ""
-  keywords: ""
+  keywords: "Sobre 4Geeks Academy"
   redirects: ["/la-academia", "/es/academia"]
 
-seo_title: "sobre la academia"
+seo_title: "Sobre 4Geeks Academy"
 header:
   title: "Empoderamos Talentos, impulsando sus carreras profesionales con programación"
   paragraph: ""

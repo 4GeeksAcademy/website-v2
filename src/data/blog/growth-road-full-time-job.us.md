@@ -48,7 +48,7 @@ The ability to prioritize and plan will be more important than ever before. The 
 
 **Practical learning**
 
-An important advantage of our part-time Bootcamp is that we focus on practicing the skills you’re learning. Unlike a traditional tertiary education format, which tends to focus on knowledge because skills, we use the 22-hour weekly time commitment to arm you with real, useful skills that you’ll be able to put into practice in the workplace as soon as you graduate. We’re not afraid to [flip tradition on its head](https://www.4geeksacademy.co/turnaround-education-traditions-4geeks-academy/), in order to keep up with the evolving needs of our students.
+An important advantage of our part-time Bootcamp is that we focus on practicing the skills you’re learning. Unlike a traditional tertiary education format, which tends to focus on knowledge because skills, we use the 22-hour weekly time commitment to arm you with real, useful skills that you’ll be able to put into practice in the workplace as soon as you graduate. We’re not afraid to [flip tradition on its head](/turnaround-education-traditions-4geeks-academy/), in order to keep up with the evolving needs of our students.
 
 **Lifelong support**
 
@@ -58,12 +58,12 @@ Naila, one of our students, explains this: “I love 4Geeks Academy's approach t
 
 Previous students agree that taking on a part-time Bootcamp is difficult, but worth it if you’re willing to put in the work. “It's hard as hell, and the burn-out is super easy… If the majority of your day is taken up by your day job then you're going to need to make major sacrifices. It's just the nature of the beast, but a necessary step if you're looking to change careers.”
 
-The nature of coding, like any area of technology, is that it’s constantly changing, and by adapting your daily life to include the additional responsibility of part-time study, you’ll prepare yourself for the need to be constantly on the ball and ready for any changes that come up. For this reason, we are constantly working to maintain an up-to-date [syllabus that fits in with our students’ expectations](https://www.4geeksacademy.co/coding-bootcamp-syllabus-matters/).
+The nature of coding, like any area of technology, is that it’s constantly changing, and by adapting your daily life to include the additional responsibility of part-time study, you’ll prepare yourself for the need to be constantly on the ball and ready for any changes that come up. For this reason, we are constantly working to maintain an up-to-date [syllabus that fits in with our students’ expectations](/coding-bootcamp-syllabus-matters/).
 
 **Real results**
 
-Of course, by doing all of this, you’ll be looking for a result - that by the end you’ll be [employable as a web developer](https://www.4geeksacademy.co/7-hacks-to-land-a-job/). Not only will you become a [Full-Stack Software Developer](https://www.4geeksacademy.co/course/full-stack-web-development-bootcamp-part-time/), but you’ll also have a competitive advantage through being self-driven enough to have achieved this qualification in an intensive part-time format, on top of your existing commitments.
+Of course, by doing all of this, you’ll be looking for a result - that by the end you’ll be [employable as a web developer](/7-hacks-to-land-a-job/). Not only will you become a [Full-Stack Software Developer](/course/full-stack-web-development-bootcamp-part-time/), but you’ll also have a competitive advantage through being self-driven enough to have achieved this qualification in an intensive part-time format, on top of your existing commitments.
 
 You’ll have had no choice but to maintain the momentum you built when you first committed to a Bootcamp, and over the course of the program, this fire that you’ve been burning will have ignited a passion in you that employers will go to great lengths to seek out.
 
-To get started and apply for your part-time coding Bootcamp, [contact us today](https://www.4geeksacademy.co/contact/).
+To get started and apply for your part-time coding Bootcamp, [contact us today](/contact/).

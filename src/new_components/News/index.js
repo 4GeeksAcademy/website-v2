@@ -12,7 +12,7 @@ const Helper = styled.span`
   height: 100%;
   vertical-align: middle;
 `
-export default ({location, lang, limit, filter}) => {
+export default ({location, lang, limit, filter, padding, padding_tablet, height, width, justifyContent, imgPadding}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryNews{
       allNewsYaml{
@@ -52,13 +52,13 @@ export default ({location, lang, limit, filter}) => {
   }
   return (
     <Fragment github="/components/news" >
-      <Div margin="40px 0 0 0" className="badge-slider" display="flex" height="auto" justifyContent="center" justifyContent_md="between">
+      <Div margin="35px 0" margin_tablet="40px 0 0 0" className="badge-slider" padding={padding} padding_tablet={padding_tablet} display="flex" height="auto" justifyContent={justifyContent} justifyContent_md="between">
         {Array.isArray(locationNews) && locationNews.map((l, i) => {
           return (
             // <Div key={i} background={Colors.blue}>test</Div>
             <Img
               key={i}
-              style={{height: "60px", minWidth: "60px", margin: "0 20px"}}
+              style={{height: `${height}`, width: `${width}`, minWidth: "60px", margin: "0"}}
               imgStyle={{objectFit: "contain"}}
               alt={l.name}
               fluid={l.image != null && l.image.childImageSharp.fluid}
