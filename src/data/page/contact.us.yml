@@ -4,7 +4,7 @@ meta_info:
   description: "Contact 4Geeks Academy here"
   image: null
   keywords: "Contact, 4Geeks Academy"
-  redirects: []
+  redirects: ["/es/contactanos"]
 
 ## CONTACT-US HEADING
 tagline: CONTACT 4GEEKS ACADEMY

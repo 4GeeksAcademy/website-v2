@@ -42,6 +42,7 @@ const BaseHeading = styled(Heading)`
   @media ${Break.lg}{
     text-align: ${props => props.align};
     font-size: ${props => props.fs_lg};
+    margin: ${props => props.m_lg};
   }
   @media ${Break.md}{
     text-align: ${props => props.align};

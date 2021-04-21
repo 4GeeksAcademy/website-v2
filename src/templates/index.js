@@ -237,6 +237,8 @@ const Home = (props) => {
         />
       </Wrapper>
 
+      {/* AlumniProjects */}
+
       <Wrapper
         margin="100px">
         <Title
