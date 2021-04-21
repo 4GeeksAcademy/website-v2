@@ -6,12 +6,11 @@ meta_info:
   description: "La programación es escencial para tu éxito profesional, únete a 4Geeks Academy, el bootcamp de programación número uno de Chile."
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp de Codigo, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
-  
+
   template: "landing_a" # <--- choose your landing template
-  redirects: [ # <--- URL redirections to avoid 404 errors
-    "/landing/bootcamp-de-programacion-santiago",
-  ] 
-  
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/bootcamp-de-programacion-santiago"]
+
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: full-stack
@@ -23,13 +22,13 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
   motivation: "Llena el formulario y te enviaremos la info en menos de 5 min"
-  button_label: Obtener malla y más información 
+  button_label: Obtener malla y más información
   redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Bootcamp de programación
-  sub_heading: "Aprende a programar y consige trabajo como desarrollador"
+  sub_heading: "Aprende a programar y consigue trabajo como desarrollador"
   image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.3)
 
@@ -39,16 +38,16 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No se requiere experiencia previa.
-    - Horarios part-time y full-time. Online o Presencial.
-    - Mentorias y career support de por vida.
-    - Un desarrollador jr. hace $900.000 CLP al mes
+    - No se requiere experiencia previa
+    - Horarios part-time y full-time. Online o Presencial
+    - Mentorias y career support de por vida
+    - Un desarrollador junior hace $900.000 CLP al mes
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No tienes que pagar nada hasta \n conseguir trabajo. Desde 184.311/mes."
-    text_mobile: "Desde 184.311 al mes. \n No pages nada hasta conseguir trabajo."
+    text: "Desde 184.311 CLP al mes."
+    text_mobile: "Desde 184.311 CLP al mes."
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -58,13 +57,13 @@ follow_bar:
     text: "Llama "
 
 #
-# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
 in_the_news:
   position: 1
   heading: "Lee sobre 4Geeks en los medios..."
-  filter: ["CNN Español","La Tercera","Las Ultimas Noticias","Emol"] 
+  filter: ["CNN Español", "La Tercera", "Las Ultimas Noticias", "Emol"]
 
 badges:
   position: 2
@@ -77,7 +76,7 @@ program_details:
 
 why_python:
   position: 4
-  heading: "¿Porqué Python y React.js?" # optional or set to white space to hide
+  heading: "¿Por qué Python y React.js?" # optional or set to white space to hide
   sub_heading: "Javascript es 26 veces más buscado que Ruby On Rails. Python es 10 veces más buscado que Node.js" # optional or set to white space to hide
 
 geeks_vs_others:
@@ -88,7 +87,7 @@ geeks_vs_others:
 
 why_4geeks:
   position: 7
-  heading: "Porqué 4Geeks"
+  heading: "Por qué 4Geeks"
   sub_heading: " "
 
 who_is_hiring:
@@ -106,41 +105,42 @@ alumni_projects:
 components:
   - name: top_coding_bootcamp
     position: 5
-    layout: two_column_left 
-    proportions: [4,8]
-    image: 
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamps"
-    button: 
+      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+    button:
       text: "Leer testimoniales"
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
-    heading: 
-      text: "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
+    heading:
+      text:
+        "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: first_syllabus_form
     position: 4
-    layout: syllabus 
-    button: 
-      text: "Descarga Instántanea"
-    heading: 
+    layout: syllabus
+    button:
+      text: "Descarga Instantánea"
+    heading:
       text: "Descarga la Malla Educativa"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: working_as_software_developers
     position: 8
-    proportions: [4,8]
-    layout: two_column_left 
-    image: 
+    proportions: [4, 8]
+    layout: two_column_left
+    image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    content: 
-      text: "89% de nuestros graduados ya trabajan como desarrolladores de software."
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","34px","34px","25px", "20px"]
-
+    content:
+      text:
+        "89% de nuestros graduados ya trabajan como desarrolladores de software."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
 # why_python:
 #   position: 7
-#   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
+#   heading: "¿Por qué enseñamos Python?" # optional or set to white space to hide
 #   sub_heading: " " # optional or set to white space to hide

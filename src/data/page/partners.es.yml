@@ -1,16 +1,29 @@
 meta_info:
-  slug: aliados
+  slug: alianzas
   title: "Sobre la Academia"
   description: "Acerca de 4Geeks Academy"
   image: ""
   keywords: ""
-  redirects: ["/aliados"]
+  redirects: ["/aliados", "/es/aliados"]
 
-header_data:
-  tagline: COMPAÑÍAS QUE CONFIAN EN NOSOTROS Y CONTRATAN A NUESTROS ESTUDIANTES
-  sub_heading: "Estoy impresionada con el nivel de comprensión que las estudiantes de 4Geeks tienen, mi contratación evolucionó a lider del equipo de la Agencia de Marketing Cueva Social."
+
+seo_title: "Cooding Bootcamp"
+header:
+  title: "COMPAÑÍAS QUE CONFIAN EN NOSOTROS Y CONTRATAN A NUESTROS ESTUDIANTES"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: ""
+  paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
   button: HAZTE HIRING PARTNER
-  image: "../../../static/images/bg/companies-bg.jpg"
+
+form:
+  title: "Join our partnership network"
+  paragraph: "
+  Nuestros aliados forman una parte fundamental en la Academia y nos ayudan a impulsar la carrera profesional de nuestros alumnos. 
+
+Si tienes una empresa de tecnología y quieres contratar jovenes talentos, ser socio y impulsos de código y desarrollo, etc. Te invitamos a formar parte de esta gran familia. Llena el siguiente formulario y te contactaremos!
+  "
+footer_data:
+  image: "../../../static/images/partner/partnership.png"
   alt: ""
 button_section:
   button_text: "Se Parte de nuestros Aliados"
