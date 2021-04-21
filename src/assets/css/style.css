@@ -1,3 +1,6 @@
+/* He importado este font para probar el font Lato, sans serif correcto - Ariel C */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap');
+
 *{
     user-select: initial !important;
 }
@@ -107,7 +110,6 @@ a.nav-item.nav-link.side {
 .carousel {
     position: relative;
     width: 100%;
-    border-radius: 1.25rem;
     /* box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .carousel .control-dots .dot {
@@ -187,7 +189,7 @@ a {
 }
 .card-columns{
     display: inline-block;
-    width: 300px;
+    width: 33%;
 }
 @media (max-width: 768px) {
     .card-columns{
@@ -227,6 +229,9 @@ a {
     @media (min-width: 992px) { ... }
     @media (min-width: 1200px) { ... } */
 }
+.react-player{
+    height: 82px;
+}
 @media (min-width: 320px) {
     .mobile{
         display: none;
@@ -242,12 +247,31 @@ a {
     }
 }
 @media (min-width: 768px) {
+    
     .choose-your-program-icon{
         width: 120px;
         height: auto;
     }
+    .react-player-with4geeks{
+        height: 158px;
+    }
+    .react-player-testimonials-big{
+        height: 310px;
+    }
+    .react-player-testimonials-small{
+        height: 182px;
+    }
 }
-@media (min-width: 992px) {
+@media (min-width: 994px) {
+    .react-player-with4geeks{
+        height: 158px;
+    }
+    .react-player-testimonials-big{
+        height: 310px;
+    }
+    .react-player-testimonials-small{
+        height: 182px;
+    }
     .trend{
         right: -35px;
     }
@@ -274,6 +298,20 @@ a.faq-link:hover {
     padding-left: 15px;
     list-style: none;
     margin: 10px 0;
+}
+.ul-outcomes{
+    /* padding-left: 15px; */
+    list-style: none;
+    margin: 15px 0;
+}
+
+.ul-outcomes .li-outcomes-link{
+    margin: 20px 0;
+}
+.ul-outcomes .li-outcomes-link::before{
+    content: "\2022";
+    color:#0097CE;
+    margin-right: 10px;
 }
 .ul-privacy .li-privacy-link::before{
     content: "\2022";
@@ -387,6 +425,9 @@ a.faq-link:hover {
 .testimonial-slider::-webkit-scrollbar {
     height: 5px;
   }
+  .staff-slider::-webkit-scrollbar {
+    display: none;
+}
 
 /****** React Select ******/
 .react-select-wrapper{
@@ -397,4 +438,18 @@ a.faq-link:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.BrainhubCarousel__dots .BrainhubCarousel__dot:before {
+    content: '';
+    display: block;
+    width: 11px !important;
+    height: 11px !important;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    background: #0097CD!important;
+}
+
+.lang{
+    font-weight: 700;
 }

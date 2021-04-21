@@ -21,7 +21,7 @@ const BaseHeading = styled(Heading)`
   display: block;
   float: ${props => props.float || "none"};
   width: ${props => props.width || "100%"};
-  font-family: 'Futura', sans-serif;
+  font-family: 'Lato', sans-serif;
   letter-spacing: 0px;
   font-weight: ${props => props.fontWeight};
   font-size: ${props => props.fontSize};
@@ -42,6 +42,7 @@ const BaseHeading = styled(Heading)`
   @media ${Break.lg}{
     text-align: ${props => props.align};
     font-size: ${props => props.fs_lg};
+    margin: ${props => props.m_lg};
   }
   @media ${Break.md}{
     text-align: ${props => props.align};
@@ -102,7 +103,6 @@ const StyledSeparator = styled.div`
     margin-right: auto;
     width: ${props => props.width_xs};
   }
-};
 `
 export const Separator = ({variant, children, ...rest}) => {
   let variants = {
@@ -205,9 +205,11 @@ export const Title = props => {
         fontSize={props.fontSize}
         fs_xs={props.fs_xs}
         align={props.textAlign}
-        textShadow={theme.shadow}
+        // textShadow={theme.shadow}
+        padding={props.padding}
+        textShadow={props.textShadow || theme.shadow}
       >
-        {props.title}
+        {props.greetings} <br /> {props.title}
       </HeadingType>
       <Separator align="center" variant={props.variant} />
       {props.paragraph && props.paragraph.split('\\n').map((content, i) =>
@@ -220,7 +222,7 @@ export const Title = props => {
           fontSize={theme.fontSize}
           fontWeight={theme.fontWeight}
           margin={props.margin}
-          textShadow={theme.shadow}
+          textShadow={props.textShadow || theme.shadow}
         >
           {content}
         </Paragraph>

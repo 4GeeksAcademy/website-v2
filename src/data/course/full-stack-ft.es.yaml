@@ -1,5 +1,5 @@
 meta_info:
-  slug: desarrollo-web-full-stack-bootcamp-full-time
+  slug: full-stack-full-time
   title: ""
   description: ""
   image: ""
@@ -15,18 +15,19 @@ meta_info:
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time",
       "/es/course/bootcamp-desarrollo-web-full-stack-full-time",
+      "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
     ]
+seo_title: "Cooding Bootcamp"
 header:
-  tagline: "FULL STACK DEVELOPER"
+  title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
+  image_alt: ""
   paragraph: "De cero a tener tu primer trabajo como programador, aprende todos los necesario, recibe soporte de por vida y consigue un trabajo como programador 16+ semanas despues de empezar."
-  alt: ""
-
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
-  apply_button_link: "/aplica"
+  apply_button_link: "/es/aplica"
 
 credentials:
   heading: "RESULTADOS"
@@ -55,6 +56,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA FULL-TIME
+  weeks: 9
   sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"
@@ -133,7 +135,12 @@ geek_data:
 prices:
   heading: "PRECIOS Y PAGOS"
   sub_heading: ""
-
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
 # TYPICAL DAY SECTION
 typical:
   heading: "Un día típico en la academia"

@@ -1,30 +1,35 @@
 meta_info:
-  slug: software-engineering-coding-bootcamp
+  slug: software-engineer-bootcamp
   title: "Become a Software Engineer at 4Geeks Academy"
   description: "Our new course: Software Engineer, will help you master advanced coding techniques and get hired by the biggest tech companies"
   bc_slug: "software-engineering"
   image: ""
   template: "course-engineering"
   keywords: ""
-  redirects: ["/software-engineering"]
+  redirects: [
+    "/software-engineering", 
+    "/us/course/software-engineering-coding-bootcamp", 
+    "/course/software-engineering-coding-bootcamp", 
+    "/coding-bootcamp/software-engineer-bootcamp"
+  ]
+
+seo_title: "Cooding Bootcamp"
 header:
-  tagline_top: "BECOME A"
-  tagline: "SENIOR SOFTWARE ENGINEER"
-  sub_heading: "Work at a great company, make a great living and help build tomorrow's software."
-  subsub_heading: "(Previous coding experience is required)"
-
-  # The background image position can be cnotroled by device size
-  # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
+  title: "Senior Software Engineer"
   image: "../../../static/images/bg/apple-building.jpg"
-
-  alt: ""
+  image_alt: ""
+  paragraph: "Get the skills to meet the global demand for problem solvers and logical 
+    thinkers who
+    drive the world to real change and impact.
+    Learn ”Modern Web Applications” or “Cloud Based Applications”used only by Forbes 500. Land
+    yourself a real software engineering job or create the next tech unicorn…
+  "
 
 button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
-  apply_button_link: "/apply"
+  apply_button_link: "/us/apply"
 ## PROGRAM DETAILS
 details:
   about:
@@ -48,6 +53,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: Software Engineering Syllabus
+  weeks: 16
   sub_heading: "Master exactly what is required to be a real Software Engineer."
   left_labels:
     description: "DESCRIPTION:"
@@ -163,6 +169,12 @@ geek_data:
 prices:
   heading: "PRICES AND PAYMENTS"
   sub_heading: ""
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
 
 ## TYPICAL DAY SECTION
 typical:
