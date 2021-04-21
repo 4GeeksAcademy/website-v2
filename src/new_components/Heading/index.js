@@ -36,6 +36,7 @@ const BaseHeading = styled(Heading)`
   text-transform: ${props => props.textTransform};
   text-align: ${props => props.textAlign || "center"};
   padding: ${props => props.padding};
+  border-bottom: ${props => props.borderBottom};
 
   &:hover{
     background-color: ${props => props.bgHover || props.bg};
@@ -56,6 +57,7 @@ const BaseHeading = styled(Heading)`
     font-size: ${props => props.fontSize_tablet};
     lineHeight: ${props => props.lineHeight_tablet};
     margin: ${props => props.margin_tablet};
+    padding: ${props => props.padding_tablet};
     display: ${props => props.display_tablet};
   }
   @media  ${Devices.md}{
@@ -63,6 +65,9 @@ const BaseHeading = styled(Heading)`
     text-align: ${props => props.textAlign_md};
     lineHeight: ${props => props.lineHeight_md};
     display: ${props => props.display_md};
+    margin: ${props => props.margin_md};
+    width: ${props => props.width_md};
+    padding: ${props => props.padding_md};
   }
   @media  ${Devices.lg}{
 
@@ -75,18 +80,23 @@ const BaseHeading = styled(Heading)`
   }
 `
 
-export const H1 = styled(BaseHeading)``;
+export const H1 = styled(BaseHeading)`
+  z-index: ${props => props.zIndex};
+`;
 
 export const H2 = styled(BaseHeading)`
+  z-index: ${props => props.zIndex};
   letter-spacing: 0.05em;
 `;
 export const H3 = styled(BaseHeading)`
   font-weight: ${props => props.fontWeight || "700"};
+  font-size: ${props => props.fonSize};
+  text-align: ${props => props.textAlign};
   letter-spacing: 0.05em;
 `;
 export const H4 = styled(BaseHeading)`
+font-weight: ${props => props.fontWeight || "400"};
   letter-spacing: 0.05em;
-
 
 `;
 export const H5 = styled(BaseHeading)`
@@ -119,7 +129,6 @@ const StyledSeparator = styled.div`
     margin-right: auto;
     width: ${props => props.width_xs};
   }
-};
 `
 export const Separator = ({variant, children, ...rest}) => {
   let variants = {
@@ -148,12 +157,13 @@ Separator.defaultProps = {
 
 export const Paragraph = styled.p`
   display: ${props => props.display};
+  direction: ${props => props.direction};
   width: ${props => props.width || "100%"};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin || "0"};
   font-size: ${props => props.fontSize};
   font-family: ${props => props.fontFamily};
-  font-weight: ${props => props.fontWeight};
+  font-weight: ${props => props.fontWeight || "400"};
   max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
   padding-right: ${props => props.paddingRight || "innitial"};
@@ -163,17 +173,20 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   height: ${props => props.height};
+  border-left: ${props => props.borderLeft};
 
   @media ${Devices.xxs}{
   }
   @media ${Devices.xs}{
-      
+      padding: ${props => props.padding_xs}
   }
   @media  ${Devices.sm}{
       width: ${props => props.width_sm};
+      padding: ${props => props.padding_sm};
   }
   @media  ${Devices.tablet}{
       display: ${props => props.display_tablet};
+      justify-content: ${props => props.justifyContent};
       width: ${props => props.width_tablet};
       font-size: ${props => props.fontSize_tablet};
       text-align: ${props => props.textAlign_tablet};
@@ -183,6 +196,7 @@ export const Paragraph = styled.p`
     @media  ${Devices.md}{
       text-align: ${props => props.textAlign_md};
       margin: ${props => props.margin_md};
+      padding: ${props => props.padding_md};
   }
   @media  ${Devices.lg}{
 
@@ -281,7 +295,6 @@ Paragraph.defaultProps = {
   fontFamily: "Lato, sans-serif",
   fontSize: "15px",
   lineHeight: "22px",
-  fontWeight: "400",
   textAlign: "center",
   color: `${Colors.darkGray}`,
 };
@@ -308,7 +321,6 @@ H3.defaultProps = {
 };
 H4.defaultProps = {
   fontSize: '15px',
-  fontWeight: '400',
   lineHeight: '26px',
   letterSpacing: '0.05em'
 };

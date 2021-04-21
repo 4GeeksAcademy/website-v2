@@ -128,6 +128,9 @@ const StyledImage = styled.div`
     background-color: ${props => props.backgroundColor};
     width: ${props => props.width};
     height: ${props => props.height};
+    :hover {
+        background-size: ${props => props.bg_hover};
+    }
     @media ${Break.sm}{
         height: ${props => props.h_sm};
         width: ${props => props.w_sm};
@@ -297,7 +300,7 @@ const SmartLink = ({children, state, ...rest}) => (
     <Location>
         {({location}) => (
             //make sure user's state is not overwritten
-            <Link {...rest} state={{prevUrl: location.href, ...state}}>
+            <Link {...rest} crossOrigin state={{prevUrl: location.href, ...state}}>
                 { children}
             </Link>
         )}

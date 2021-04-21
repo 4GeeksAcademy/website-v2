@@ -5,12 +5,13 @@ meta_info:
   template: "job" # js component that will be handling the rendering
   image: null
   keywords: ""
-  redirects: [ "senior-mentor"]
+  redirects: ["senior-mentor"]
 
 ## BANNER INFO
 banner_heading: "Lead Instructor"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/coding-jobs"
 cities:
   - Miami
   - Santiago de Chile
