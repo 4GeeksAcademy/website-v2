@@ -1,9 +1,9 @@
 meta_info:
   slug: thank-you
   title: "General Thank You - 4Geeks Academy"
-  description: ""
+  description: "Thank you, We have received your application.  Our Geeky Advisor is going to contact you shortly.  Sit tight!"
   image: ""
-  keywords: "codign bootcamp"
+  keywords: "thank you page, coding bootcamp"
   redirects: ["/thank", "/thank-you/apply", "/thank-you/more-info"]
 banner:
   tagline: "Thank You"

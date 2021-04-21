@@ -10,6 +10,7 @@ import {Location} from '@reach/router'
 export const Colors = {
     blue: "#00A0DA",
     lightBlue: "#BBEAFC",
+    veryLightBlue: "#C7F3FD",
     gray: "#898a8b",
     verylightGray: "#F5F5F5",
     lightGray: "#ebebeb",
@@ -19,6 +20,7 @@ export const Colors = {
     borderGray: '#ececec',
     yellow: "#FFC718",
     lightYellow: "rgba(255, 183, 24, 0.1)",
+    lightYellow2: "rgba(255, 183, 24, 0.2)",
     darkYellow: "#FFECBF",
     black: "#000000",
     white: "#FFFFFF",
@@ -157,6 +159,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     width: ${props => props.width || "100%"};
     padding: ${props => props.padding};
     text-align: ${props => props.align};
+    border-radius: ${props => props.borderRadius};
     background-repeat: no-repeat;
     margin: ${props => props.margin || "auto"};
     opacity: 1;
@@ -171,31 +174,56 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
         background-color: ${props => props.backgroundColor};
         background-position: ${props => props.backgroundPosition} !important;
     }
-    @media ${Break.lg}{
-        &:before, &:after {
-            background-position: ${props => props.bp_lg} !important;
-        }
+    @media ${Devices.xxs}{
+
     }
-    @media ${Break.md}{
-        &:before, &:after {
-            background-position: ${props => props.bp_md} !important;
-        }
+    @media ${Devices.xs}{
+        
+        
     }
-    @media ${Break.sm}{
-        height: ${props => props.h_sm};
-        width: ${props => props.w_sm};
-        &:before, &:after {
-            border-radius: ${props => props.borderRadius_sm};
-            background-position: ${props => props.bp_sm} !important;
-        }
+    @media  ${Devices.sm}{
+        
     }
-    @media ${Break.xs}{
-        width: ${props => props.w_xs};
-        &:before, &:after {
-            background-position: ${props => props.bp_xs} !important;
-        }
+    @media  ${Devices.tablet}{
+        
     }
-  `
+    @media  ${Devices.md}{
+
+    }
+    @media  ${Devices.lg}{
+
+    }
+    @media  ${Devices.xl}{
+
+    }
+    @media  ${Devices.xxl}{
+
+    }
+    `
+// @media ${Break.lg}{
+//     &:before, &:after {
+//         background-position: ${props => props.bp_lg} !important;
+//     }
+// }
+// @media ${Break.md}{
+//     &:before, &:after {
+//         background-position: ${props => props.bp_md} !important;
+//     }
+// }
+// @media ${Break.sm}{
+//     height: ${props => props.h_sm};
+//     width: ${props => props.w_sm};
+//     &:before, &:after {
+//         border-radius: ${props => props.borderRadius_sm};
+//         background-position: ${props => props.bp_sm} !important;
+//     }
+// }
+// @media ${Break.xs}{
+//     width: ${props => props.w_xs};
+//     &:before, &:after {
+//         background-position: ${props => props.bp_xs} !important;
+//     }
+// }
 
 
 export const Small = styled.small`
@@ -219,49 +247,59 @@ const SmartButton = ({children, onClick, type, ...rest}) => {
     return <button type={type || "button"} onClick={(e) => onClick && onClick(e)} className={rest.className} style={{...rest.style, ...styles}} >{children}</button>;
 }
 export const Button = styled(SmartButton)`
-    font-size: ${props => props.fontSize || '14rem'};
-    font-family: ${props => props.font || "'Lato', sans-serif"};
+    font-size: ${props => props.fontSize};
+    font-family: 'Lato', sans-serif;
     text-transform: ${props => props.textTransform || "uppercase"};
-    font-weight: 700;
+    font-weight: ${props => props.fontWeight || "700"};
     margin: ${props => props.margin};
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position};
     display: ${props => props.display};
-    padding: ${props => props.padding};
+    // padding: ${props => props.padding || "12px 24px"};
+    padding: 12px 24px;
     transform: ${props => props.transform};
-
-    color: ${props => props.border};
+    color: ${props => props.color};
     background: ${props => props.background};
-    border: ${props => props.color};
-    height: ${props => props.height};
+    border: ${props => props.border};
+    // height: ${props => props.height};
+    height: 40px;
     cursor: pointer;
-    text-align: center;
+    text-align: ${props => props.textAlign || "center"};
     letter-spacing: 0px;
-    line-height: 1.5;
+    line-height: ${props => props.lineHeight};
     vertical-align: middle;
     width: ${props => props.width};
     max-width: ${props => props.maxWidth};
     min-width: ${props => props.minWidth};
     align-items: ${props => props.alignItems};
     justify-content: ${props => props.justifyContent};
-    box-shadow: ${props => props.shadow};
+    box-shadow: ${props => props.boxShadow};
 
     &:hover {
         background-color: ${props => props.colorHover || props.color};
     }
-    @media ${Break.lg}{
-        font-size: ${props => props.fs_lg};
+    @media ${Devices.xxs}{
     }
-    @media ${Break.md}{
-        font-size: ${props => props.fs_md};
+    @media ${Devices.xs}{
     }
-    @media ${Break.sm}{
-        margin: ${props => props.m_sm};
-        font-size: ${props => props.fs_sm};
+    @media  ${Devices.sm}{
+        width: ${props => props.width_sm};
+    }
+    @media  ${Devices.tablet}{
+        width: ${props => props.width_tablet};
+        margin: ${props => props.margin_tablet};
+    }
+    @media  ${Devices.md}{
+        width: ${props => props.width_md};
+    }
+    @media  ${Devices.lg}{
+    }
+    @media  ${Devices.xl}{
+    }
+    @media  ${Devices.xxl}{
     }
 `;
 Button.defaultProps = {
-    padding: '10px 30px',
     fontSize: '12px',
     width: 'fit-content',
     type: 'button',
@@ -286,8 +324,7 @@ export const Toggle = styled.div`
 `
 
 RoundImage.defaultProps = {
-    width: '100%',
-    backgroundColor: Colors.white
+    width: '100%'
 };
 Select.defaultProps = {
     background: Colors.white,

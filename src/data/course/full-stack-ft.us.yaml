@@ -1,5 +1,5 @@
 meta_info:
-  slug: full-stack-web-development-bootcamp-full-time
+  slug: full-time-full-stack-developer
   title: ""
   description: ""
   bc_slug: "full-stack-ft"
@@ -12,19 +12,20 @@ meta_info:
       "/us/full-time",
       "/us/course/full-time",
       "/the-program",
-      "/us/full-stack-ft",
+      "/us/full-stack-ft
+      /us/course/full-stack-web-development-bootcamp-full-time",
     ]
+seo_title: "Cooding Bootcamp"
 header:
-  tagline: "FULL STACK DEVELOPER"
+  title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
+  image_alt: ""
   paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
-  alt: ""
-
 button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
-  apply_button_link: "/apply"
+  apply_button_link: "/us/apply"
 
 credentials:
   heading: "This Program By The Numbers"
@@ -53,6 +54,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: PROGRAM DETAILS FULL-TIME
+  weeks: 9
   sub_heading: Real life projects and exactly what companies are looking for
   left_labels:
     description: "DESCRIPTION:"
@@ -127,7 +129,13 @@ geek_data:
 ## PRICES AND PAYMENTS SECTION
 prices:
   heading: "PRICES AND PAYMENTS"
-
+  sub_heading: ""
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
 ## TYPICAL DAY SECTION
 typical:
   heading: "TYPICAL DAY AT THE ACADEMY"
