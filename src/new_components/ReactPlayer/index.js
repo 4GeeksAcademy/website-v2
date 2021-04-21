@@ -10,6 +10,32 @@ const VideoWrapper = styled.section`
   width: ${props => props.width || "640px"};
   height: ${props => props.height || "auto"};
   margin: auto;
+  @media ${Devices.xxs}{
+
+  }
+  @media ${Devices.xs}{
+
+  }
+  @media  ${Devices.sm}{
+
+  }
+  @media  ${Devices.tablet}{
+    width: ${props => props.width_tablet};
+    height: ${props => props.height_tablet};
+  }
+  @media  ${Devices.md}{
+    width: ${props => props.width_md};
+    height: ${props => props.height_md};
+  }
+  @media  ${Devices.lg}{
+
+  }
+  @media  ${Devices.xl}{
+
+  }
+  @media  ${Devices.xxl}{
+
+  }
 `
 
 const Iframe = styled(YouTube)`
@@ -27,9 +53,9 @@ const Image = styled.div`
   margin: auto;
   height: ${props => props.height || "auto"};
   width: ${props => props.width || "100%"};
-  overflow: hidden;
+  // overflow: hidden;
   box-shadow: ${props => props.shadow};
-  // border-radius: ${props => props.borderRadius || "1.25rem"};
+  border-radius: ${props => props.borderRadius || "1.25rem"};
   @media ${Devices.xxs}{
 
   }
@@ -40,10 +66,12 @@ const Image = styled.div`
 
   }
   @media  ${Devices.tablet}{
-
+    width: ${props => props.width_tablet};
+    height: ${props => props.height_tablet};
   }
   @media  ${Devices.md}{
     width: ${props => props.width_md};
+    height: ${props => props.height_md};
   }
   @media  ${Devices.lg}{
 
@@ -57,8 +85,8 @@ const Image = styled.div`
 `
 
 const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
-  onPlaybackQualityChange, imageSize, playerVars, noCookies, style,
-  thumb, ...rest}) => {
+  onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className,
+  thumb, left_tablet, right_tablet, ...rest}) => {
 
   const [showVideo, setShowVideo] = React.useState(false)
 
@@ -94,33 +122,35 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
         }}
       />
     ) : (
-        <Image
-          borderRadius="0"
-        >
-          {id && <Play onClick={() => setShowVideo(true)} aria-label="Play Video" />}
-          {thumb && thumb.childImageSharp ?
-            <GImage
-              onClick={() => setShowVideo(true)}
-              fluid={thumb.childImageSharp.fluid}
-              alt="Video"
-              style={{
-                height: style.height || "100%",
-                width: style.width || "100%"
-              }}
-            />
-            :
-            <Thumbnail
-              onClick={() => setShowVideo(true)}
-              src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
-              alt="Video"
-              style={{
-                height: style.height || "100%",
-                width: style.width || "100%"
-              }}
-            />
-          }
-        </Image>
-      )}
+      <Image
+        borderRadius="3px"
+      >
+        {id && <Play onClick={() => setShowVideo(true)} right_tablet={right_tablet} left_tablet={left_tablet} aria-label="Play Video" />}
+        {thumb && thumb.childImageSharp ?
+          <GImage
+            className={className}
+            onClick={() => setShowVideo(true)}
+            fluid={thumb.childImageSharp.fluid}
+            alt="Video"
+          // style={{
+          //   height: style.height || "100%",
+          //   width: style.width || "100%"
+          // }}
+          />
+          :
+          <Thumbnail
+            className={className}
+            onClick={() => setShowVideo(true)}
+            src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
+            alt="Video"
+          // style={{
+          //   height: style.height || "100%",
+          //   width: style.width || "100%"
+          // }}
+          />
+        }
+      </Image>
+    )}
   </VideoWrapper>
 }
 
@@ -175,16 +205,16 @@ Player.propTypes = {
 }
 
 const Play = styled.button`
-  background: #282828;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
   color: ${props => props.white};
   font-size: 1em;
-  height: 3em;
+  height: 44px;
   padding: 0;
   text-align: center;
   text-indent: 0.1em;
   transition: all 150ms ease-out;
-  width: 4em;
+  width: 44px;
   position: absolute !important;
   top: 50%;
   left: 50%;
@@ -194,10 +224,10 @@ const Play = styled.button`
   cursor: pointer;
   z-index: 9;
   &:hover {
-    background: #ff0000;
+    background: black;
   }
   &:before {
-    background: inherit;
+    // background: inherit;
     border-radius: 5% / 50%;
     bottom: 9%;
     content: "";
@@ -209,7 +239,7 @@ const Play = styled.button`
   &:after {
     border-style: solid;
     border-width: 1em 0 1em 1.732em;
-    border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
+    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
     content: " ";
     font-size: 0.75em;
     height: 0;
@@ -217,5 +247,23 @@ const Play = styled.button`
     top: 50%;
     position: absolute;
     width: 0;
+  }
+  @media ${Devices.xxs}{
+  }
+  @media ${Devices.xs}{
+  }
+  @media  ${Devices.sm}{
+  }
+  @media  ${Devices.tablet}{
+    right: ${props => props.right_tablet};
+    left: ${props => props.left_tablet};
+  }
+  @media  ${Devices.md}{
+  }
+  @media  ${Devices.lg}{
+  }
+  @media  ${Devices.xl}{
+  }
+  @media  ${Devices.xxl}{
   }
 `

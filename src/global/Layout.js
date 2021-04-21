@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/Navbar';
+import {Navbar} from '../new_components/NavbarDesktop';
+import {NavbarMobile} from '../new_components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
 import UpcomingProgram from '../components/UpcomingProgram';
 import Footer from '../new_components/Footer';
+import CookieBot from "react-cookiebot";
 
 
 import GlobalStyle from './GlobalStyle';
@@ -57,8 +60,32 @@ const Layout = ({children, seo, context}) => {
               navbar {
                 name
                 link
+                sub_menu{
+                  icon
+                  title
+                  paragraph
+                  links{
+                    title
+                    level
+                    paragraph
+                    icon
+                    buttons{
+                      text
+                      link
+                    }
+                    sub_links{
+                      title
+                      link_to
+                    }
+                  }
+                }
+              }
+              language_button{
+                text
+                link
               }
               button {
+                apply_button_text
                 button_link
                 button_type
                 button_color_text
@@ -71,7 +98,12 @@ const Layout = ({children, seo, context}) => {
               }
             }
           }
-        }
+        }  
+          cookiebotYaml {
+            domain_ID {
+              id
+            }
+          }
       }
     `}
       render={(data) => {
@@ -91,8 +123,10 @@ const Layout = ({children, seo, context}) => {
               > ❌ Clear edit mode</button>
             </div>}
             <SEO {...seo} context={context} />
-            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
+            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+            <NavbarMobile onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
             <GlobalStyle />
+            <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} />
             <>
               {children}
             </>

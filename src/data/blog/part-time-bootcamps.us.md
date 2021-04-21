@@ -9,7 +9,7 @@ link: https://www.4geeksacademy.co/part-time-bootcamps/
 slug: part-time-bootcamps
 title: Why is a Part-Time Coding Bootcamp  Best for You
 avatar: "/images/staff/marcelo.jpeg"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2018/10/Part-time-coding-bootcamps-1.png"
+image: "https://www.4geeksacademy.co/wp-content/uploads/2018/10/Part-time-coding-bootcamp-1.png"
 wordpress_id: 3156
 categories:
 - Learning to code
@@ -27,10 +27,10 @@ featured: false
 
 As we’ve stated before, at 4Geeks Academy we offer Part-Time coding programs. If you’re thinking about enrolling in a coding Bootcamp, there are many options you need to consider.
 
-[In our blog we said](https://www.4geeksacademy.co/truth-behind-part-time-education/) that “_We choose Part-time because we are sure that we are able to make software developers out of our students if we took care of the methodology._”
+[In our blog we said](/truth-behind-part-time-education/) that “_We choose Part-time because we are sure that we are able to make software developers out of our students if we took care of the methodology._”
 
 
-## ![](https://www.4geeksacademy.co/wp-content/uploads/2018/10/imagen.png)
+## ![](/wp-content/uploads/2018/10/imagen.png)
 
 
 Even though Part-time is our favorite way of teaching code, it is the learner who needs to choose the best option. But first, if you think you really need coding, let’s talk about it.
@@ -51,7 +51,7 @@ That’s why we don’t really need to market the importance of coding, we don�
 
 We have news for you: College is not about learning a specific skill but rather an experience. Traditional education is about a career path design in which the students decide their own subject, what they think they can excel at.  In college, you will learn a lot about the processes and solutions engineers need to think about. In a coding camp, you learn exactly what to do to solve those problems. 
 
-Coding Bootcamps are a whole new era of learning, [as we've stated before.](https://www.4geeksacademy.co/turnaround-education-traditions-4geeks-academy/) Coding is not to be learned by contemplation, but rather by practice. Part-Time programs let you digest the information with enough time to think about the processes and/or solutions for a project. A bootcamp methodology, like the one we offer in 4Geeks Academy, provides a hands-on experience with the great advantage of having students and mentors around you to help you learn teamwork—a valuable skill in tech jobs around the world.
+Coding Bootcamps are a whole new era of learning, [as we've stated before.](/turnaround-education-traditions-4geeks-academy/) Coding is not to be learned by contemplation, but rather by practice. Part-Time programs let you digest the information with enough time to think about the processes and/or solutions for a project. A bootcamp methodology, like the one we offer in 4Geeks Academy, provides a hands-on experience with the great advantage of having students and mentors around you to help you learn teamwork—a valuable skill in tech jobs around the world.
 
 
 # 4Geeks speaks from experience
@@ -59,7 +59,7 @@ Coding Bootcamps are a whole new era of learning, [as we've stated before.](http
 
 4Geeks has had enough experience with this Part-Time program to assure every student that 16 weeks is exactly what’s needed to become a Full Stack Developer. You will learn exactly what you need alongside your peers with direct mentoring (and peace of mind).
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/10/IMG-20180818-WA0019-300x225.jpg)
+![](/wp-content/uploads/2018/10/IMG-20180818-WA0019-300x225.jpg)
 
 A **Full-Time **program is an option for those with the time and capacity to take in all the information from a full day of classes.
 

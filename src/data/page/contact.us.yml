@@ -4,15 +4,17 @@ meta_info:
   description: "Contact with us, we respond every question or comment."
   image: null
   keywords: "Contact 4geeks Academy"
-  redirects: []
 
 ## CONTACT-US HEADING
-tagline: CONTACT 4GEEKS ACADEMY
-sub_heading: "If you are interested in partnerships, sponsorships, or more information, don't hesitate to contact us!"
+greetings: < Hello >
+tagline: Contact 4Geeks Academy
+sub_heading: "Do you have any questions? We will be happy to respond as soon as possible. We also invite you to review our"
+sub_headingFAQ: "Frequently Asked Questions page"
+pathFAQ: "faq"
 
 ## CONTACT-US LEFT SECTION
 left:
-  heading: "TELL US ABOUT YOU"
+  heading: "Tell us about you"
   thankyou: "We received your message, give us a couple of hours and we will get back to you ASAP!"
   form_section:
     first_name: "First Name"
@@ -24,31 +26,44 @@ left:
     placeholder: "Your Message here"
     note: "If you were referred by any current or past student, use your referral code for extra credit or discount."
   button:
-    button_text: "SEND"
+    button_text: "Send"
     button_link: ""
 
 right:
   heading: "We are available Monday to Friday \n 09:00am - 06:30pm"
   content_section:
-    - "🇺🇸 USA"
-    - "1801 SW 3rd Av, Miami, FL 33129."
-    - "P: +1 (786) 416-6640"
-    - "info@4GeeksAcademy.com"
-    - "۪"
-    - "🇪🇸 Madrid"
-    - "Calle Edison, 3."
-    - "28006 Madrid, Spain."
-    - "P: +34 (910) 86 69 83"
-    - "madrid@4GeeksAcademy.com"
-    - "۪"
-    - "🇨🇱 Chile"
-    - "Santiago Av. Manquehue Sur 350."
-    - "Las Condes Región Metropolitana."
-    - "P: +56 (9) 7284 8039"
-    - "chile@4GeeksAcademy.com"
-    - "۪"
-    - "🇨🇷 Costa Rica"
-    - "puravida@4GeeksAcademy.com"
-    - "۪"
-    - "🇻🇪 Venezuela"
-    - "venezuela@4GeeksAcademy.com"
+    - "<li style='padding-right: 20px; list-style: none;'>🇺🇸</li>
+      <p>
+        USA<br/>
+        1801 SW 3rd Av, Miami, FL 33129.<br/>
+        P: +1 (786) 416-6640<br/>
+        info@4GeeksAcademy.com<br/>
+      </p>"
+    - ""
+    - "<li style='padding-right: 20px; list-style: none;'>🇪🇸</li> 
+      <p>
+        Madrid<br/>
+        Calle Edison, 3. 28006 Madrid, Spain.<br/>
+        P: +34 (910) 86 69 83<br/>
+        madrid@4GeeksAcademy.com<br/>
+      </p>"
+    - ""
+    - "<li style='padding-right: 20px; list-style: none;'>🇨🇱</li> 
+      <p>
+        Chile<br/>
+        Santiago Av. Manquehue Sur 350. Las Condes R.M.<br/>
+        P: +56 (9) 7284 8039<br/>
+        chile@4GeeksAcademy.com<br/>
+      </p>"
+    - ""
+    - "<li style='padding-right: 20px; list-style: none;'>🇨🇷</li> 
+      <p>
+        Costa Rica<br/>
+        puravida@4GeeksAcademy.com<br/>
+      </p>"
+    - ""
+    - "<li style='padding-right: 20px; list-style: none;'>🇻🇪</li> 
+      <p>
+        Venezuela<br/>
+        venezuela@4GeeksAcademy.com<br/>
+      </p>"
