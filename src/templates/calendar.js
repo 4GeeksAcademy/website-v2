@@ -274,9 +274,11 @@ const Calendar = (props) => {
         seo_title={yml.seo_title}
         title={yml.header.title}
         padding_tablet="72px 0 40px 0"
+        padding="50px 17px"
         background={Colors.veryLightBlue}
         position="relative"
         height="240px"
+        margin="120px 0 0 0 "
       >
       </Header>
       {yml.events.title &&
