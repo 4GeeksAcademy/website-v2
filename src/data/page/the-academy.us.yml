@@ -1,20 +1,35 @@
 meta_info:
   slug: the-academy
-  title: ""
-  description: "About 4Geeks Academy"
+  title: "About  4Geeks Academy"
+  description: "Get to know the outcomes, demographics, cornerstones, team and story of 4Geeks Academy"
   image: ""
-  keywords: ""
+  keywords: "About, 4Geeks Academy"
   redirects: []
 
-## BANNER - HEADER
-header_data:
-  #Empowering talent with code by providing flexible educational experiences
-  tagline: EMPOWERING TALENT WITH CODING CAREERS
-  sub_heading: "We are specialists of code. 4Geeks is the place were developers grow and thrive."
+seo_title: "coding bootcamp"
+header:
+  title: "Empowering Talent with coding careers"
+  paragraph: "We are specialists of code. 4Geeks is the place were developers grow and thrive."
   image: "../../../static/images/bg/the-academy-bg.jpg"
-  alt: ""
+  image_alt: ""
 
-## CREDENTIALS SECTION
+## BADGES SECTION
+badges:
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+
+what_is_4geeks:
+  title: "What is 4Geeks?"
+  paragraph: "
+  4Geeks es una escuela internacional de código con campuses en Caracas, Madrid, Santiago de Chile, Miami, Costa Rica y Online. 
+
+  Fue fundada en 2015. En 2016 logró finalmente estar al aire en 3 sedes: Miami Dade College, Miami y Caracas. Todo comenzó como un proyecto interno para entrenar a más desarrolladores, y de a poco se convirtió en nuestra pasión a tiempo completo. Alejandro y Marcelo, amigos de muchos años, no habían trabajado en un mismo Proyecto hasta que 4Geeks unió ambas visiones. 
+
+  La Academia además fue además una pasión sobrevenida para ambos. Por un lado la pasión por la educación y el software (Alejandro) y por el otro la pasión por las Tech startups (Marcelo). Hoy 4Geeks tiene +7 campus repartidos entre Estados Unidos, Latinoamérica y Europa. +1000 Graduados y un montón de cosas por las que sentirnos orgullosos. El camino sigue siendo muy retador porque estamos en el camino a construir un símbolo de la educación en Tecnología.
+  "
+  image: "../../../static/images/the-academy/what-is-4geeks.jpg"
+  image_alt: ""
+
+  ## CREDENTIALS SECTION
 education:
   left_box:
     heading: "LICENSED BY"
@@ -28,7 +43,7 @@ education:
     heading: "As Reviewed in"
     image: "../../../static/images/Group.png"
     alt: "CNN and BCC Logo"
-    
+
 ## 4GEEKS OUTCOMES
 outcomes:
   heading: "4GEEKS OUTCOMES"
@@ -67,21 +82,21 @@ outcomes:
 
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:
-  heading: OUR FOUR CORNERSTONES
-  sub_heading: ""
+  title: Our Cornerstones
+  paragraph: ""
   cornerstones_list:
-    - title: FLIPPED CLASSROOM
+    - title: Flipped Classroom
       content: Theory is delivered trough video, animation, images and infographics. Class time is then used to debate, create and build projects, and mentor over practical exercises.
-      icon: book
-    - title: 1:7 MENTOR-STUDENT RATIO
+      icon: laptop_new
+    - title: 1:7 Mentor-Student Ratio
       content: An intimate setting provides the faculty with the opportunity to adapt to each student's particular pace.
-      icon: teacher
-    - title: 1:1 MENTORSHIP
+      icon: teacher_new
+    - title: 1:1 Mentorship
       content: Every student has the opportunity to have regular conversations with a mentor.
-      icon: users
-    - title: PART-TIME
+      icon: chat
+    - title: Part-Time
       content: We have mastered our programs to be a Premium Education Experience through a part-time schedule.
-      icon: sitemap
+      icon: notes
 
 ## STAFF SECTION
 staff:

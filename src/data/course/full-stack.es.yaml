@@ -1,10 +1,10 @@
 meta_info:
-  slug: desarrollo-web-full-stack-bootcamp-part-time
-  title: ""
-  description: ""
+  slug: full-stack-part-time
+  title: "Bootcamp Full Stack part time de 4Geeks Academy"
+  description: "Full stack part time es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, no tienes que dejar tu trabajo para aprender"
   bc_slug: "full-stack"
   image: ""
-  keywords: ""
+  keywords: "Bootcamp, Full Stack, part time"
   redirects:
     [
       "/part-time",
@@ -16,19 +16,21 @@ meta_info:
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
       "/es/course/bootcamp-desarrollo-web-full-stack-part-time",
       "/es/course/introduccion-programacion",
+      "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
       "/introduccion-programacion-codigo",
     ]
+seo_title: "Cooding Bootcamp"
 header:
-  tagline: "FULL STACK DEVELOPER"
-  image: "../../../static/images/bg/bg-pr.jpg"
-  paragraph: "Aprende desde cero hasta tener tu primer trabajo como programador. Recibe mentoría ilimitada, soporte de por vida y consigue un trabajo como programador en 9+ o 16+ semanas despues de empezar."
-  alt: ""
+  title: "Full Stack Developer"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: ""
+  paragraph: "De cero a tener tu primer trabajo como programador, aprende todos los necesario, recibe soporte de por vida y consigue un trabajo como programador 16+ semanas despues de empezar."
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
-  apply_button_link: "/aplica"
+  apply_button_link: "/es/aplica"
 
 credentials:
   heading: "RESULTADOS"
@@ -56,6 +58,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA PART-TIME
+  weeks: 16
   sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
     description: "DESCRIPCION:"
@@ -148,7 +151,12 @@ geek_data:
 prices:
   heading: "Planes y Precios"
   sub_heading: "Selecciona la sede o modalidad de tu curso para ver los precios y planes de pago"
-
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
 ## ALUMNI SECTION
 alumni:
   heading: "CONOCE A LOS ALUMNOS Y PROYECTOS"

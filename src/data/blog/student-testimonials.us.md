@@ -27,7 +27,7 @@ featured: false
 Coding is a unique experience for everyone involved. “Software is eating the world,” shares a Quora contributor[ on the Forbes website](https://www.forbes.com/sites/quora/2017/01/20/will-the-demand-for-developers-continue-to-increase/#7090450433ee). Even if dated for internet standards, the article remains current. Companies are doing the same things and users are still relying on apps to make their lives easier. More and more people are joining the internet world daily and the need for more robust technology is imperative.
 
 
-## ![](https://www.4geeksacademy.co/wp-content/uploads/2018/11/Students.png)
+## ![](/wp-content/uploads/2018/11/Students.png)
 
 
 Some of our students. Faces that we will remember and active members of our community. 
@@ -102,4 +102,4 @@ Either way, both kinds of students feel what they learn in 4Geeks will help them
 ## **Learn to code at 4Geeks Academy**
 
 
-Learning to code with the help of 4Geeks Academy is not for the faint of heart. It takes dedication, as many things in life do. It is a universal truth that coding changes the life of everyone involved so why not yours? Enroll in a 4Geeks Academy program and learn coding skills that change your life.[ Find out more here](https://4geeksacademy.co/).
+Learning to code with the help of 4Geeks Academy is not for the faint of heart. It takes dedication, as many things in life do. It is a universal truth that coding changes the life of everyone involved so why not yours? Enroll in a 4Geeks Academy program and learn coding skills that change your life.[ Find out more here](//).
