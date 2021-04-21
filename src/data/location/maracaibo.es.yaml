@@ -1,13 +1,13 @@
 meta_info:
-  slug: "maracaibo-venezuela"
-  title: ""
-  description: null
+  slug: "coding-bootcamp-maracaibo"
+  title: "Coding Bootcamp Maracaibo"
+  description: "Conoce el coding bootcamp in Maracaibo, Venezuela at 4Geeks Academy"
   image: ""
   # it will not show up on the applications forms
   unlisted: true
   position: 21
-  keywords: ""
-  redirects: []
+  keywords: "Coding bootcamp Maracaibo"
+  redirects: ["/es/location/maracaibo-venezuela"]
 
 seo_title: "4Geeks Academy Maracaibo"
 header:

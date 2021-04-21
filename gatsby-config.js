@@ -2,6 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const robots = process.env.GATSBY_ROBOTS || "show";
 module.exports = {
   siteMetadata: {
     defaultTitle: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
@@ -34,6 +35,31 @@ module.exports = {
 
   },
   plugins: [
+    'gatsby-transformer-yaml',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+            {
+                resolve: `gatsby-remark-images`,
+                options: {
+                maxWidth: 800,
+                loading: 'lazy'
+                },
+            },
+            `gatsby-remark-lazy-load`,
+            {
+                resolve: "gatsby-remark-external-links",
+                options: {
+                target: "_self",
+                rel: "nofollow"
+                }
+            },
+        ]
+      }
+    },
     // 'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-loadable-components-ssr',
     {
@@ -96,32 +122,7 @@ module.exports = {
     'gatsby-plugin-root-import',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-            {
-                resolve: `gatsby-remark-images`,
-                options: {
-                maxWidth: 800,
-                loading: 'lazy'
-                },
-            },
-            `gatsby-remark-lazy-load`,
-            {
-                resolve: "gatsby-remark-external-links",
-                options: {
-                target: "_self",
-                rel: "nofollow"
-                }
-            },
-        ]
-      }
-    },
-    'gatsby-transformer-yaml',
     'gatsby-plugin-zeit-now',
     'gatsby-remark-reading-time',
     // 'gatsby-plugin-meta-redirect',
@@ -158,7 +159,7 @@ module.exports = {
       options: {
         env: {
           production: {
-            policy: [{ userAgent: '*' }]
+            policy: robots !== "hidden" ? [{ userAgent: '*' }] : [{ userAgent: '*', disallow: ['/'] }]
           },
           development: {
             policy: [{ userAgent: '*', disallow: ['/'] }]

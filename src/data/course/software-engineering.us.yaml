@@ -6,7 +6,12 @@ meta_info:
   image: ""
   template: "course-engineering"
   keywords: ""
-  redirects: ["/software-engineering", "/us/course/sofware-engineering-coding-bootcamp", "/course/software-engineering-coding-bootcamp"]
+  redirects: [
+    "/software-engineering", 
+    "/us/course/software-engineering-coding-bootcamp", 
+    "/course/software-engineering-coding-bootcamp", 
+    "/coding-bootcamps/software-engineer-bootcamp"
+  ]
 
 header:
   tagline_top: "BECOME A"
@@ -29,6 +34,7 @@ button:
 ## PROGRAM DETAILS
 details:
   heading: Software Engineering Syllabus
+  weeks: 16
   sub_heading: "Master exactly what is required to be a real Software Engineer."
   left_labels:
     description: "DESCRIPTION:"

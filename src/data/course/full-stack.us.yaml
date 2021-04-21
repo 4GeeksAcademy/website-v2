@@ -39,6 +39,7 @@ credentials:
 ## PROGRAM DETAILS
 details:
   heading: PROGRAM DETAILS PART-TIME
+  weeks: 16
   sub_heading: Real life projects and exactly what companies are looking for
   left_labels:
     description: "DESCRIPTION:"
