@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
 import {Row, Column, GridContainerWithImage, Container, Grid, Div, GridContainer} from '../new_components/Sections'
-import {RoundImage, Colors, StyledBackgroundSection} from '../new_components/Styling'
+import {Button, Colors, StyledBackgroundSection, Anchor} from '../new_components/Styling'
 import Img from 'gatsby-image'
 import {Circle} from '../new_components/BackgroundDrawing'
 import News from '../new_components/News'
@@ -81,7 +81,7 @@ const Home = (props) => {
   return (
     <>
       {/* <MegaMenu /> */}
-      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="0 0 108px 0" position="relative">
+      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" position="relative">
         <Circle
           color="blue"
           width="50px"
@@ -142,16 +142,7 @@ const Home = (props) => {
           <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
           {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
                     <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
-          <ChooseProgram
-            right="15px"
-            top="40px"
-            // margin="40px 0"
-            textAlign="center"
-            textAlign_tablet="left"
-            programs={data.allChooseProgramYaml.edges[0].node.programs}
-            openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-            closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-          />
+          <a target="_self" href={yml.button.button_link}><Button color={Colors.blue}>{yml.button.button_text}</Button></a>
           <News lang={pageContext.lang} limit={yml.news.limit} height="40px" width="90px" justifyContent="center" />
         </Div>
         <Div display="none" display_tablet="flex" height="auto" width="100%">
@@ -170,8 +161,16 @@ const Home = (props) => {
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
+
       <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
+
+      {/*
+        this generated a conflict with upper line upper, leave here case review or revert
+        <div id="programs"></div>
+        <ChooseYourProgram lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
+      */}
+
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
   )
@@ -203,6 +202,10 @@ export const query = graphql`
             news{
               limit
               heading
+            }
+            button{
+              button_text
+              button_link
             }
             badges{
               paragraph
