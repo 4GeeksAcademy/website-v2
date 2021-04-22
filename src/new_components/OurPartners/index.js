@@ -14,7 +14,7 @@ const Title_Paragraph = (props) => {
 
   return (
     <>
-      <GridContainer margin="0 0 40px 0" background={props.background} >
+      <GridContainer margin="0 0 20px 0" background={props.background} >
 
         <Div
           display="flex"
@@ -98,14 +98,8 @@ const Images_With_Marquee = (props) => {
     );
   });
 
-  return (
-    <>
-      <Marquee config={{
-        marquee: { ltr: 1, durationSec: 20, },
-        item: { widthPx: 120, margin: "0 40px 0 0", rightMarginPx: 40 },
-        images: imgs
-      }} />
-    </>
+  return (    
+      <Marquee config={{ duration: 30, imgwthpx: 150, images: imgs, }} />
   )
 }
 
@@ -171,7 +165,7 @@ const OurPartners = ({ title, paragraph, background, link, showFeatured, images,
 
   //Renderized...
   return (
-    <Fragment github="/components/partner" >
+    <Fragment github="/components/partner" style={{margin: "93px 0 50px 0"}}>
       {
         title && <Title_Paragraph title={title} paragraph={paragraph} background={background} />
       }
