@@ -28,7 +28,7 @@ const Press = (props) => {
                 return (
                     <>
                         {<GridContainer key={i} paddingChild="25px 0px 40px 0" padding_tabletChild="0" columns_tablet="12" padding_tablet="50px 0">
-                            <Div boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`} borderRadius="3px" border="1px solid #EBEBEB" padding="20px" flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}>
+                            <Div boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`} boxShadow_tablet="none" borderRadius="3px" border="1px solid #EBEBEB" border_tablet="none" padding="20px" flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}>
                                 <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.project_name}</H3>
                                 {l.alumni.map((alumni, index) => {
                                     return (
