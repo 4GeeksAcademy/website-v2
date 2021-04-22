@@ -173,7 +173,7 @@ export const query = graphql`
                 paragraph
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                      fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }
