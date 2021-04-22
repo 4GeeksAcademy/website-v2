@@ -7,6 +7,7 @@ import Badges from '../new_components/Badges'
 import OurPartners from '../new_components/OurPartners'
 import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
+import {Circle} from '../new_components/BackgroundDrawing'
 import LeadForm from "../new_components/LeadForm/index.js";
 
 function rand () {
@@ -31,9 +32,85 @@ const Partners = (props) => {
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
-        padding_tablet="72px 0 40px 0"
+        padding_tablet="0 0 40px 0"
+        padding="0 17px 30px 17px"
+        position="relative"
       >
-        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center">
+        <Circle
+          color="lightBlue"
+          width="53px"
+          height="53px"
+          top="0"
+          left="30px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="250px"
+          height="250px"
+          bottom="-50px"
+          right="-125px"
+          opacity="0.2"
+          zIndex="1"
+        />
+        <Circle
+          color="black"
+          width="119px"
+          height="11px"
+          border="10px"
+          bottom="150px"
+          right="20px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="77px"
+          height="11px"
+          border="10px"
+          bottom="150px"
+          right="159px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="116px"
+          height="116px"
+          bottom="-58px"
+          left="-58px"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="21px"
+          height="21px"
+          top="10px"
+          right="320px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="blue"
+          width="9px"
+          height="9px"
+          top="100px"
+          left="10%"
+        />
+
+        <Circle
+          color="blue"
+          width="57px"
+          height="57px"
+          top="40px"
+          right="10%"
+        />
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
           <Link to={yml.button_section.button_link}
             state={{course: yml.meta_info.bc_slug}}
           >
@@ -119,7 +196,7 @@ query PartnersQuery($file_name: String!, $lang: String!) {
               button
               image{
                   childImageSharp {
-                    fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                    fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
