@@ -324,11 +324,13 @@ export const Grid = styled(Div)`
 // }
 export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background, margin, margin_tablet, padding, padding_tablet, position}) => {
     return (
-        <Grid background={background} height={height} height_tablet={height_tablet} position={position} margin={margin} margin_tablet={margin_tablet} padding={padding || "0 17px"} padding_tablet={padding_tablet || "0"}>
+        <Grid background={background} height={height} height_tablet={height_tablet} position={position} margin={margin || "120px 0 0 0"} margin_tablet={margin_tablet} padding={padding || "60px 17px"} padding_tablet={padding_tablet || "60px 0"}>
             <Grid gridTemplateColumns_tablet={`repeat(12, 1fr)`} gridArea_tablet="1/2/1/14">
-                <Div flexDirection="column" gridColumn_tablet="3 / 10">
+                <Div flexDirection="column" gridColumn_tablet="1 / 13">
                     <H1 type="h1" margin="0 0 11px 0" color="#606060">{seo_title}</H1>
                     <H2 type="h2" fontSize="50px" lineHeight="60px">{`< ${title} >`}</H2>
+                </Div>
+                <Div flexDirection="column" gridColumn_tablet="4 / 10">
                     <Paragraph margin="26px 0" >{paragraph}</Paragraph>
                     {children}
                 </Div>
