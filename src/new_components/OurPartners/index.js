@@ -99,7 +99,7 @@ const Images_With_Marquee = (props) => {
   });
 
   return (    
-      <Marquee config={{ duration: 30, imgwthpx: 150, images: imgs, }} />
+      <Marquee config={{ duration: 30, images: imgs, }} />
   )
 }
 

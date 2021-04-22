@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-import cloneDeep from 'lodash';
 import { window } from 'browser-monads'
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Break, Devices } from '../Responsive'
-
-import PropTypes from 'prop-types';
-import { Colors, StyledBackgroundSection } from '../Styling';
+import { Colors } from '../Styling';
 import { Div} from '../Sections'
 
 let datos = {};

@@ -69,7 +69,7 @@ const Program = ({data, pageContext, yml}) => {
       <Testimonials lang={data.allTestimonialsYaml.edges} />
     </Container>
 
-    <OurPartners images={hiring.partners.images} slider></OurPartners>
+    <OurPartners images={hiring.partners.images} marquee></OurPartners>
 
     {/* <WrapperImage
       github="/course"
