@@ -8,6 +8,7 @@ import OurPartners from '../new_components/OurPartners'
 import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
 import {Circle} from '../new_components/BackgroundDrawing'
+import Modal from '../new_components/Modal';
 import LeadForm from "../new_components/LeadForm/index.js";
 
 function rand () {
@@ -114,10 +115,18 @@ const Partners = (props) => {
           <Link to={yml.button_section.button_link}
             state={{course: yml.meta_info.bc_slug}}
           >
-            <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
+            <Button width="fit-content" onClick={handleOpen} color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
           </Link>
         </Div>
       </Header>
+      <Modal
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        open={open}
+        onClose={handleClose}
+      >
+        <LeadForm heading="BE A HIRING PARTNER" formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
+      </Modal>
       <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
         <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
