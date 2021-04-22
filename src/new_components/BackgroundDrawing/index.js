@@ -6,7 +6,8 @@ const Color = {
   grey: "#F5F5F5",
   black: "#000000",
   red: "#CD0000",
-  yellow: "#FFB718"
+  yellow: "#FFB718",
+  lightBlue: "#C7F3FD"
 };
 const Figure = styled.div`
   z-index: ${props => props.zIndex || "-1"};

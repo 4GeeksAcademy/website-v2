@@ -10,6 +10,7 @@ import Staff from '../new_components/Staff';
 import BlogPosts from '../components/BlogPosts'
 import {Link} from 'gatsby'
 import Icon from '../new_components/Icon'
+import {Circle} from '../new_components/BackgroundDrawing'
 import Img from "gatsby-image"
 
 const Why = (props) => {
@@ -24,11 +25,60 @@ const Why = (props) => {
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         image={yml.header.image.childImageSharp.fluid}
-        margin_tablet="70px 0 0 0"
-        margin="120px 0 0 0"
         padding="0 0 60px 0"
         padding_tablet="0 0 60px 0"
-      />
+        position="relative"
+      >
+        <Circle
+          color="lightBlue"
+          width="53px"
+          height="53px"
+          top="0"
+          left="30px"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="250px"
+          height="250px"
+          bottom="-50px"
+          right="-125px"
+          opacity="0.2"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="116px"
+          height="116px"
+          bottom="-58px"
+          left="-58px"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="21px"
+          height="21px"
+          top="160px"
+          right="120px"
+          zIndex="1"
+        />
+        <Circle
+          color="blue"
+          width="9px"
+          height="9px"
+          top="100px"
+          left="10%"
+        />
+
+        <Circle
+          color="blue"
+          width="57px"
+          height="57px"
+          top="40px"
+          right="10%"
+          opacity="0.4"
+        />
+      </Header>
       <Grid gridTemplateColumns_tablet="14">
         <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
