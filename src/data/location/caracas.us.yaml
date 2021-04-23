@@ -12,7 +12,7 @@ seo_title: "4Geeks Academy Caracas"
 header:
   tagline: "4GEEKS ACADEMY IN CARACAS"
   paragraph: "Come and learn code in one of the biggest coding schools and communities in the world, and receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
-  image: "../../../static/images/locations/caracas-loc-2.jpeg"
+  image: "../../../static/images/locations/caracas-home.png"
   alt: ""
 button_header:
   button_text: See Programs

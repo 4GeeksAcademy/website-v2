@@ -141,7 +141,7 @@ const Home = (props) => {
           opacity="0.2"
         />
 
-        <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" alignItems="center">
+        <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" alignItems="center" alignItems_tablet="start">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
           <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>

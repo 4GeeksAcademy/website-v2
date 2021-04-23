@@ -17,7 +17,7 @@ seo_title: "4Geeks Academy Caracas"
 header:
   tagline: "4GEEKS ACADEMY en CARACAS"
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/caracas-loc-2.jpeg"
+  image: "../../../static/images/locations/caracas-home.png"
   alt: ""
 button_header:
   button_text: Ver Programas
