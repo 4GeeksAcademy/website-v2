@@ -160,12 +160,21 @@ const Images_Featured = (props) => {
   )
 }
 
+
 //Punto de entrada al componente
 const OurPartners = ({ title, paragraph, background, link, showFeatured, images, slider, marquee, ...rest }) => {
 
+
+  let FragmentStyle = {
+    background: background,
+    margin: "40px 0 0px 0",    
+    padding: "75px 0 75px 0",
+  }
+
+
   //Renderized...
   return (
-    <Fragment github="/components/partner" style={{margin: "93px 0 50px 0"}}>
+    <Fragment github="/components/partner" style={FragmentStyle}  >
       {
         title && <Title_Paragraph title={title} paragraph={paragraph} background={background} />
       }

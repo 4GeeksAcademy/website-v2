@@ -42,10 +42,10 @@ const Marquee = ( props ) => {
   let M = styled(Div)`
     overflow: hidden;  
     width: 100vw;
-    height: 15vh;
+    height: 12vh;
     background: transparent;
     position: relative;
-    margin: 0 0 40px 0;
+    margin: "0 0 0 0";
   `;
 
   let MC = styled(Div)`
@@ -54,7 +54,7 @@ const Marquee = ( props ) => {
     width: auto;  
     display: flex;
     background-color: transparent;
-    padding: 10px 0 0 0;
+    padding: 0 0 0 0;
     animation: ${scrolling} ${(props.config.duration )}s linear infinite;
   `;
 
@@ -96,7 +96,7 @@ const Marquee = ( props ) => {
     align-items: center;
     flex-shrink: 0;
     width: datos.pxTOvw(150);
-    margin: 0 .5rem;
+    margin-right: 3.5rem;
     max-height:100%;
     font-size: 0rem;
     white-space: nowrap;
