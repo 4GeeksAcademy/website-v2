@@ -40,6 +40,7 @@ const VideoWrapper = styled.section`
 
 const Iframe = styled(YouTube)`
   padding: 0;
+  border-radius: ${props => props.borderRadius || "auto"};
 `
 
 const Thumbnail = styled.img`
@@ -53,7 +54,6 @@ const Image = styled.div`
   margin: auto;
   height: ${props => props.height || "auto"};
   width: ${props => props.width || "100%"};
-  // overflow: hidden;
   box-shadow: ${props => props.shadow};
   border-radius: ${props => props.borderRadius || "1.25rem"};
   @media ${Devices.xxs}{
@@ -90,6 +90,12 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
 
   const [showVideo, setShowVideo] = React.useState(false)
 
+  function yt_parser(url){
+    let regExpUrl = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    let match = url.match(regExpUrl);
+    return (match&&match[7].length==11)? match[7] : url;
+  }
+
   const validImageSizes = [
     "default",
     "hqdefault",
@@ -103,7 +109,8 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
   return <VideoWrapper {...rest} style={style}>
     {showVideo ? (
       <Iframe
-        videoId={id}
+        borderRadius={style.borderRadius}
+        videoId={yt_parser(id)}
         id={`a-${id} do-not-delete-this-hack`}
         onReady={e => e.target.playVideo()}
         onPlay={onPlay}
@@ -115,6 +122,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
         onPlaybackQualityChange={onPlaybackQualityChange}
         opts={{
           width: "100%",
+          height:`${style.height}`,
           host: noCookies
             ? "https://www.youtube-nocookie.com"
             : "https://www.youtube.com",
@@ -132,10 +140,11 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
             onClick={() => setShowVideo(true)}
             fluid={thumb.childImageSharp.fluid}
             alt="Video"
-          // style={{
-          //   height: style.height || "100%",
-          //   width: style.width || "100%"
-          // }}
+            style={{
+              height: `${style.height}` || "100%",
+              width: `${style.width}` || "100%",
+              borderRadius: `${style.borderRadius}` || "auto",
+            }}
           />
           :
           <Thumbnail
@@ -143,10 +152,11 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
             onClick={() => setShowVideo(true)}
             src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
             alt="Video"
-          // style={{
-          //   height: style.height || "100%",
-          //   width: style.width || "100%"
-          // }}
+            style={{
+              height: `${style.height}` || "100%",
+              width: `${style.width}` || "100%",
+              borderRadius: `${style.borderRadius}` || "auto",
+            }}
           />
         }
       </Image>
@@ -227,7 +237,6 @@ const Play = styled.button`
     background: black;
   }
   &:before {
-    // background: inherit;
     border-radius: 5% / 50%;
     bottom: 9%;
     content: "";
