@@ -1,12 +1,12 @@
 # Habilidades de un Desarrollador Full-Stack
 
-![Habilidades%20de%20un%20Desarrollador%20Full-Stack%20c13301ae697c4ebf96f8a0c49dcea481/Untitled.png](Habilidades%20de%20un%20Desarrollador%20Full-Stack%20c13301ae697c4ebf96f8a0c49dcea481/Untitled.png)
+![sketch de un joven aprendiendo código](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/hfl-01.png?raw=true)
 
 En nuestra publicación anterior hablábamos sobre lo que significa ser programador o programadora *full-stack* **(poner link)** (te recomiendo que le des un vistazo porque es muy interesante). Por resumir: un perfil *full-stack* básicamente es esa persona que trabaja tanto del lado del cliente (*frontend*) como del lado del servidor (*backend*), y es capaz de ofrecer soluciones en cualquier parte de la aplicación. Es un rol muy versátil dentro de los equipos tecnológicos y puede asumir diferentes responsabilidades en los proyectos.
 
 Pero hoy la pregunta, o mejor dicho las preguntas son... ¿cuáles son las habilidades que debería tener una persona “todo terreno”, que trabaja o quiere trabajar en el rol de *Full-Stack*? ¿Debe tener conocimientos en todas las tecnologías y lenguajes? ¿Bastaría con conocer solo un lenguaje en el *front* y uno en el *back*? ¿En qué tecnologías debería enfocarse? ¿React, Vue o Angular?, ¿Python, PHP o NodeJS? ¿Cuáles son las principales habilidades *Full-Stack*? Acompáñame a descubrir juntos las respuestas.
 
-[https://lh4.googleusercontent.com/Rh7sDY94GngsiNPZWkQbFpk-p2k_N6dGeN5fEsN42Ko0VPRXc-kUSxxsgALTm13Akh02ZY2JDoGbpdeBRWJzN5BFxniS2HN4nWqCOXS6Womw3FhyjrR40r7mTvIkHPWahcXLqU7M](https://lh4.googleusercontent.com/Rh7sDY94GngsiNPZWkQbFpk-p2k_N6dGeN5fEsN42Ko0VPRXc-kUSxxsgALTm13Akh02ZY2JDoGbpdeBRWJzN5BFxniS2HN4nWqCOXS6Womw3FhyjrR40r7mTvIkHPWahcXLqU7M)
+![íconos de lenguajes de programación](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/hfl-02.png?raw=true)
 
 Las habilidades técnicas que te convierten en un gran *Full-Stack Developer* siempre tendrán mucho espacio para debates y cada quien tendrá su opinión, desde reclutadores IT hasta programadores seniors y CTO’s, todos tendrán una visión que seguramente estará basada en sus experiencias y stack tecnológicos que utilizan las empresas donde trabajan. Aquí te dejo las que consideramos mi equipo y yo en nuestra escuela de programación.
 
@@ -30,7 +30,7 @@ Toda persona que quiera trabajar como *full-stack*, además, tiene que saber có
 
 Para considerarte programador *full-stack*, es necesario que conozcas al menos un *framework* de JavaScript, en este punto te encontrarás muchísimos debates, pero los tres más utilizados en el mundo son: [React](https://es.reactjs.org/), [Vue](https://vuejs.org/) y [Angular](https://angular.io/). Cada academia de programación ha  decidido enseñar un *framework* diferente, cuestión de preferencias. En **[4Geeks Academy](https://4geeksacademy.com/)** nos inclinamos por React, pero te dejaré a ti tomar esa decisión con números.
 
-[https://lh3.googleusercontent.com/H0daM7zp6BkXXu-1e1fIlZAb4W1YhWwA3pGvyeuj5wAhkWNqSm87k3b0txzzr3OC32ryvRKEgHqHQ-MMAi3Gk-kl_mRV8XNcWABWnhx_FYcj6H39oVspMCuXhgUrBBG2nkd3myRP](https://lh3.googleusercontent.com/H0daM7zp6BkXXu-1e1fIlZAb4W1YhWwA3pGvyeuj5wAhkWNqSm87k3b0txzzr3OC32ryvRKEgHqHQ-MMAi3Gk-kl_mRV8XNcWABWnhx_FYcj6H39oVspMCuXhgUrBBG2nkd3myRP)
+![imagen de google trends sobre el aumento de interés de ciertos lenguajes de programación](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/hfl-03.png?raw=true)
 
 # *Full-Stack Skills* en *Backend 🤖*
 
