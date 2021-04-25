@@ -10,7 +10,7 @@ import SEO from './SEO';
 
 const Layout = ({children, seo, context, withNavbar}) => {
   const { session } = React.useContext(SessionContext);
-  console.log("withnavbar", withNavbar)
+
   return (
     <StaticQuery
       query={graphql`

@@ -29,8 +29,8 @@ const Financial = (props) => {
           seo_title={yml.seo_title}
           title={yml.header.title}
           paragraph={yml.header.paragraph}
-          padding_tablet="72px 0 15px 0"
-          padding="72px 0 15px 0"  
+          padding_tablet="142px 0 15px 0"
+          padding="142px 0 15px 0"  
       >
       </Header>
       <PricesAndPayment
@@ -52,6 +52,8 @@ const Financial = (props) => {
     </>
   )
 };
+
+// REMOVED: payment_guide[...] ecosystem{...}
 export const query = graphql`
   query FinancialQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
@@ -120,18 +122,8 @@ export const query = graphql`
                 opened_label
                 closed_label
             }
-            payment_guide{
-                heading
-                sub_heading
-                button_text
-                button_link
-                submit_button_text
-                submit_button_link
-            }
-            ecosystem{
-                heading
-                sub_heading
-            }
+
+
         }
       }
     }
@@ -331,6 +323,93 @@ export const query = graphql`
                       heading_one
                       sub_heading
                       heading_two
+                    }
+                  }
+                }
+                full_time {
+                  slug
+                  left_section {
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    button {
+                      button_text
+                    }
+                  }
+                }
+              }
+              machine_learning {
+                part_time{
+                  slug
+                  duration
+                  left_section {
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    button {
+                      button_text
+                    }
+                  }
+                  center_section {
+                    header {
+                      heading_two
+                      sub_heading
+                      heading_one
+                    }
+                    plans {
+                      months
+                      monthsInfo
+                      payment
+                      paymentInfo
+                      provider
+                      logo
+                      message
+                    }
+                    button {
+                      button_text
+                    }
+                  }
+                  right_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
+                  }
+                }
+                full_time {
+                  slug
+                  left_section {
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    button {
+                      button_text
                     }
                   }
                 }

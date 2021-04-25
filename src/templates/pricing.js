@@ -17,7 +17,7 @@ const Pricing = (props) => {
   const {data, pageContext, yml} = props;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
-  console.log("yml", yml);
+
   let location = null;
   if (session && session.location) {
 
@@ -60,6 +60,7 @@ const Pricing = (props) => {
     </>
   )
 };
+// REMOED: payment_guide{ ... }
 export const query = graphql`
   query PricingQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
@@ -128,18 +129,8 @@ export const query = graphql`
                 opened_label
                 closed_label
             }
-            payment_guide{
-                heading
-                sub_heading
-                button_text
-                button_link
-                submit_button_text
-                submit_button_link
-            }
-            ecosystem{
-                heading
-                sub_heading
-            }
+
+
         }
       }
     }

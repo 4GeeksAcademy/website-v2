@@ -1,5 +1,5 @@
 meta_info:
-  slug: desarrollo-web-full-stack-bootcamp-full-time
+  slug: full-stack-full-time
   title: ""
   description: ""
   image: ""
@@ -15,6 +15,7 @@ meta_info:
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time",
       "/es/course/bootcamp-desarrollo-web-full-stack-full-time",
+      "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
     ]
 seo_title: "Cooding Bootcamp"
 header:
@@ -26,7 +27,7 @@ button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
-  apply_button_link: "/aplica"
+  apply_button_link: "/es/aplica"
 
 credentials:
   heading: "RESULTADOS"
@@ -55,6 +56,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA FULL-TIME
+  weeks: 9
   sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"

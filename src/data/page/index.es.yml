@@ -4,7 +4,7 @@ meta_info:
   description: "El #1 part-time coding bootcamp, 1000+ graduados y soporte de por vida. Coding Bootcamp en Miami, España, Chile y Venezuela."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp, Coding Bootcamp Miami, Coding Bootcamp España, Coding Bootcamp Chile, Aprende a programar, aprender programación, aprende computación"
-  redirects: ["/home", "/es/home", /es/inicio", "/es/"]
+  redirects: ["/es/home", /es/inicio", "/es/"]
 
 header_data:
   tagline: Coding Bootcamp
@@ -19,14 +19,17 @@ why_4geeks:
 news:
   heading: "Lee sobre nosotros en las noticias..."
   limit: 4
-
+button:
+  button_text: Ver Programas
+  button_link: "#programs"
 ## BADGES SECTION
 badges:
   paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-##WITH 4GEEKS
-with:
-  heading: "Choose your program"
-  sub_heading: "Contamos con programas que combinan clases prácticas dictadas por expertos"
+
+## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
+choose_program:
+  title: Elige tu programa
+  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

@@ -1,10 +1,10 @@
 meta_info:
   slug: geekpal-support
-  title: ""
-  description: null
+  title: "Geekpal of 4Geeks Academy"
+  description: "Learn about our comprehensive support system for 4Geeks Academy graduates"
   image: null
   keywords: ""
-  redirects: ["/geekpal"]
+  redirects: ["/geekpal", "/us/career-support"]
 
 header:
   title: ""
@@ -59,6 +59,50 @@ list:
         text: "Our international community of more than 
         <span style='font-weight: bold'> 1100 people</span>, who will provide you with all the support you need."
 
+# benefits:
+#   - p:
+#     heading: "Personal"
+#     items:
+#       - title: Exclusive classes
+#         sub_title: (up to 8 students per class)
+#       - title: 1:4 teacher-student-ratio
+#         sub_title: (one mentor for every 8 students)
+#       - title: Mentoring 1-1
+#         sub_title: (unlimited sessions)
+#       - title: Tailored career
+#         sub_title: (based on each job opportunity)
+#   - a:
+#     heading: "Anywhere & time"
+#     items:
+#       - title: Adjusted to your schedule
+#         sub_title: (on demand session w/appointment)
+#       - title: Permanent mentor schedule
+#         sub_title: (Always on mentorship & chat support)
+#       - title: Online or in-person
+#         sub_title: (Locations around the world)
+#       - title: Tailored career support
+#         sub_title: (based on each job opportunity)
+#   - l:
+#     heading: "Limitless"
+#     items:
+#       - title: All the mentoring you need
+#         sub_title: (on demand session w/appointment)
+#       - title: Mentoring after you graduate
+#         sub_title: (even after you get the job so that you can keep the job)
+#       - title: Mentoring for life
+#         sub_title: (Keep coming back, scheduling or attending)
+#       - title: Tailored career
+#         sub_title: (based on each job opportunity)
+
+
+
+
+###### OLD ONE
+#   redirects: ["/geekpal", "/us/career-support"]
+# tagline: NEVER BE STUCK AGAIN
+# sub_heading: "LEARN FASTER THAN ANYONE ON EARTH"
+# image: "../../../static/images/bg/companies-bg.jpg"
+# image_logo: "/images/geekpal.png"
 # benefits:
 #   - p:
 #     heading: "Personal"

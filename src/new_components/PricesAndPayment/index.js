@@ -47,6 +47,10 @@ const courseArray = [
   {
     value: "software_engineering",
     label: "Software Engineering"
+  },
+  {
+    value: "machine_learning",
+    label: "Machine Learning"
   }
 ];
 const modalityArray = [
@@ -57,11 +61,7 @@ const modalityArray = [
   {
     value: "full_time",
     label: "Full Time"
-  },
-  // {
-  //   value: "flexible",
-  //   label: "Flexible"
-  // }
+  }
 ]
 
 
@@ -77,6 +77,11 @@ const PricesAndPayments = (props) => {
             pricing_error_contact
             pricing_error
             get_notified
+            top_label
+            button{
+              button_text
+              button_link
+            }
           }
         }
       }
@@ -91,6 +96,8 @@ const PricesAndPayments = (props) => {
   const [course, setCourse] = useState(false);
   const [locations, setLocations] = useState(false);
   const [modality, setModality] = useState(false);
+  // paolo edit
+  const [prices, setPrices] = useState();
 
 useEffect(() => {
     setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
@@ -100,21 +107,27 @@ useEffect(() => {
     }
   }, [session, props.locations])
   
+  
   // sync property course
-  useEffect(() => setCourse(courseArray.find(c => c.value === props.course)), [props.course]);
+  useEffect(()=>{
 
-  if (!currentLocation || !currentLocation.prices)
-    return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+    if(!modality ){
+      console.log("modality", modality)
+    } else 
+    {setPrices(currentLocation.prices[course?.value][modality?.value])}
+  }, [modality])
 
+    if (!currentLocation || !currentLocation.prices)
+      return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+    
 
-  // toSOLVE: when the user selects Software Engineering on a campus 
-  // that does not have it enabled, it returns an error
-
-  // const checkoModality = !modality && course ? null : modality.value 
-  const prices = !course ? {} : currentLocation.prices[course?.value][checkoModality];
-
-  // console.log("prices =!", currentLocation.prices)
-  console.log("course array =!", currentLocation.prices[course?.value])
+// Necesary to avoid error when selecting modality first
+// TODO: Crear nuevo componente para esta funcionaliad
+    if(course === false && modality === false){
+      setCourse({ value: "full_stack", label: "Full Stack Developer"})
+      setModality({ value: "part_time", label: "Part Time"})
+    }
+    
 
   return (
     <Div background={Colors.lightBlue2} margin="0 0 5rem 0" display="block"  github="/location">
@@ -156,8 +169,11 @@ useEffect(() => {
               openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
               closeLabel={!currentLocation ? props.campusClosedLabel : currentLocation.city + ". " + currentLocation.country}
               onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}
+              topLabel={info.top_label}
             />
           }
+
+          {/* <Link to={info.button.button_link}><Button width="fit-content" padding="13px" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link> */}
           
           {/* 
           SEARCH_BUTTON Maybe not necesary
@@ -166,8 +182,13 @@ useEffect(() => {
         </Grid>
       </GridContainer>
 
-      {!prices  ?
-        <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error}</Paragraph>
+      {!prices ?
+        <>
+        {!prices 
+          ? <Paragraph margin="10px 0px" align="center" fontSize="18px" > Please select a course to see more information</Paragraph> 
+          : <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course?.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+}
+        </>
         :
         <GridContainer padding="4.5rem 16px" containerColumns_md={`2fr repeat(12, 1fr) 2fr`} containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`} background={Colors.white} columns_tablet="1" gridGap_tablet="0" padding_tablet="4.5rem 16px" >
           
@@ -178,7 +199,7 @@ useEffect(() => {
               data={prices.center_section}
             >
               {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map((label, index) => (
-                <GridContainer key={index} containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0"  shadow="0px 0px 16px rgba(0, 0, 0, 0.15)" padding="20px" height="100%" height_tablet="122px" columns_tablet="4">
+                <GridContainer key={index} containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0"  shadow={Colors.shadow} shadow_tablet={Colors.shadow} padding="20px" height="100%" height_tablet="122px" columns_tablet="4">
                   <Div margin="10px 0px" justifyContent="center" placeItems="center" display="flex">
                     <img style={{margin: "auto", height: "25px"}} src={label.logo} />
                   </Div>
@@ -195,7 +216,7 @@ useEffect(() => {
                     <Label>{label.paymentInfo}</Label>
                   </Div>
                   <Div margin="10px 0px" justifyContent="center" placeItems="center" image="no"  >
-                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" fs_lg="14px" fs_sm="16px">{prices?.center_section?.button?.button_text || "APPLY"}</Button></Link>
+                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.center_section?.button?.button_text || "APPLY"}</Button></Link>
                   </Div>
                   
                 </GridContainer>
@@ -217,7 +238,7 @@ useEffect(() => {
                     <Label style={{alignSelf: "end"}}>{prices.left_section.content.price_info}</Label>
                   </Div>
                   <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto "  placeItems="center" image="no"  >
-                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" fs_lg="14px" fs_sm="16px">{prices?.left_section?.button?.button_text || "APPLY"}</Button></Link>
+                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.left_section?.button?.button_text || "APPLY"}</Button></Link>
                   </Div>
                   
                 </GridContainer>
@@ -239,7 +260,7 @@ useEffect(() => {
                     <Label style={{alignSelf: "end"}}>{prices.right_section.content.price_info}</Label>
                   </Div>
                   <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto "  placeItems="center" image="no"  >
-                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" fs_lg="14px" fs_sm="16px">{prices.right_section.button?.button_text || "APPLY" }</Button></Link>
+                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices.right_section.button?.button_text || "APPLY" }</Button></Link>
                   </Div>
                   
                 </GridContainer>
@@ -250,6 +271,7 @@ useEffect(() => {
         </GridContainer>
       }
     </Div>
+
   )
 }
 export default (PricesAndPayments)

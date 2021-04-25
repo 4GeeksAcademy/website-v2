@@ -14,3 +14,20 @@ export const FadeIn = keyframes`
     opacity: 1;
     }
 `
+export const ZoomOut = keyframes`
+    0% {
+    background-size: 100%;
+    }
+    25% {
+    background-size: 115%;
+    }
+    50% {
+    background-size: 130%;
+    }
+    75% {
+    background-size: 140%;
+    }
+    100% {
+    background-size: 150%;
+    }
+`

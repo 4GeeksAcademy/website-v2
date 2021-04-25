@@ -38,7 +38,7 @@ const SEO = (props) => (
         <>
             <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
                 <html lang={langCountries[lang]} />
-                <link rel="canonical" href={`${siteUrl}${pagePath}`} />
+                {/* <link rel="canonical" href={`${siteUrl}${pagePath}`} /> */}
                 <meta name="description" content={description || defaultDescription[lang]} />
                 <meta name="keywords" content={_keywords} />
                 { unlisted === true && <meta name="robots" content="noindex" /> }

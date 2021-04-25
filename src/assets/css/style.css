@@ -189,7 +189,7 @@ a {
 }
 .card-columns{
     display: inline-block;
-    width: 300px;
+    width: 33%;
 }
 @media (max-width: 768px) {
     .card-columns{
@@ -448,4 +448,8 @@ a.faq-link:hover {
     padding: 0;
     border: none;
     background: #0097CD!important;
+}
+
+.lang{
+    font-weight: 700;
 }

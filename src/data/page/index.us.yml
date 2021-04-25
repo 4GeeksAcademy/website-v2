@@ -1,5 +1,6 @@
 meta_info:
   slug: index
+  canonical: "/"
   title: "Miami Coding Bootcamp, Madrid España, Santiago de Chile"
   description: "The #1 Top coding bootcamp with over 1,000 graduates and life-long career support. USA, Spain, Chile, Venezuela and Costa Rica Coding Bootcamp."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
@@ -14,14 +15,17 @@ header_data:
 news:
   heading: "Read about this coding bootcamp in the news..."
   limit: 4
-
-## BADGES SECTION
+button:
+  button_text: See Programs
+  button_link: "#programs"
+## BADGES SECTION /new_components/Badges
 badges:
   paragraph: "Lorem ipsum dolor sit amet, <span class='badge'>consectetur</span> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-##WITH 4GEEKS
-with:
-  heading: "Choose your program"
-  sub_heading: "Contamos con programas que combinan clases prácticas dictadas por expertos"
+
+## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
+choose_program:
+  title: Choose your program
+  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

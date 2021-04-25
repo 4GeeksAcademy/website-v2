@@ -1,10 +1,10 @@
 meta_info:
-  slug: desarrollo-web-full-stack-bootcamp-part-time
-  title: ""
-  description: ""
+  slug: full-stack-part-time
+  title: "Bootcamp Full Stack part time de 4Geeks Academy"
+  description: "Full stack part time es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, no tienes que dejar tu trabajo para aprender"
   bc_slug: "full-stack"
   image: ""
-  keywords: ""
+  keywords: "Bootcamp, Full Stack, part time"
   redirects:
     [
       "/part-time",
@@ -16,6 +16,7 @@ meta_info:
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
       "/es/course/bootcamp-desarrollo-web-full-stack-part-time",
       "/es/course/introduccion-programacion",
+      "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
       "/introduccion-programacion-codigo",
     ]
 seo_title: "Cooding Bootcamp"
@@ -29,7 +30,7 @@ button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
-  apply_button_link: "/aplica"
+  apply_button_link: "/es/aplica"
 
 credentials:
   heading: "RESULTADOS"
@@ -57,6 +58,7 @@ details:
         - label: "Requisites"
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA PART-TIME
+  weeks: 16
   sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
     description: "DESCRIPCION:"

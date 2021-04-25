@@ -1,19 +1,22 @@
 meta_info:
-  slug: "madrid-espana"
+  slug: "bootcamp-programacion-madrid"
   position: 2
-  title: 4Geeks Academy Madrid
-  description: null
+  title: "Coding bootcamp Madrid"
+  description: "Conoce el coding bootcamp en Madrid, España de 4Geeks Academy"
   image: "https://storage.googleapis.com/4geeks-academy-website/madrid-es.png"
   keywords: ""
-  redirects: ["madrid", "/es/location/madrid-spain/"]
+  redirects:
+    ["madrid", "/es/location/madrid-spain/", "/es/location/madrid-espana"]
 
 seo_title: "4Geeks Academy Madrid, España"
 header:
   tagline: "4GEEKS ACADEMY MADRID"
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/madrid-loc.jpg"
+  image: "../../../static/images/locations/madrid-home.png"
   alt: ""
-
+button_header:
+  button_text: Ver Programas
+  button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR CURRÍCULO" # <-- this will show everywhere in the website
   apply_button_text: "SOLICITA TU PLAZA" # <-- this will show everywhere in the website
@@ -31,7 +34,9 @@ info_box:
   image: "../../../static/images/locations/madrid-map.png"
   map_url: "https://www.google.com/maps/place/4Geeks+Academy/@40.4396216,-3.6808932,15z/data=!4m2!3m1!1s0x0:0xb1a742c609c68c4b?sa=X&ved=2ahUKEwjspv__4-zrAhXEY98KHa3RBpYQ_BIwCnoECBkQCA"
   alt: ""
-
+badges:
+  title: ""
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 news:
   title: "4Geeks Academy Madrid en los medios..."
 
@@ -198,6 +203,69 @@ prices:
           price_info: "3 cuotas de 1.833€"
         button:
           button_text: "APLICAR AHORA"
+
+  software_engineering:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "No disponible"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Por el momento el curso Software Engineering Part-Time no esta disponible"
+          price_info: "Madrid - España"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "No disponible"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Por el momento el curso Software Engineering Full-Time no esta disponible"
+          price_info: "Madrid - España"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "No disponible"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Por el momento el curso Machine Learning Part-Time no esta disponible"
+          price_info: "Madrid - España"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "No disponible"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Por el momento el curso Machine Learning Full-Time no esta disponible"
+          price_info: "Madrid - España"
+        button:
+          button_text: "Aplicar a otros cursos"
+
 
 active_campaign_location_slug: "madrid-spain"
 breathecode_location_slug: "madrid-spain"

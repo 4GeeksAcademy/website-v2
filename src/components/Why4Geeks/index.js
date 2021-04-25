@@ -47,7 +47,8 @@ export default ({lang, playerHeight}) => {
             style={{height: playerHeight}}
             id={i.video}
             width='100%'
-            height='250px'
+            // height='250px'
+            
           />
           <Div position="relative" marginTop="20px" padding="10px 0" display={`flex`}>
             <Icon width="32" icon={i.icon}
