@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
-import {GeekCard} from '../components/Card'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
-import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
+// import {GeekCard} from '../components/Card'
+import {Container, GridContainer, Header, Div} from '../new_components/Sections'
+// import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'
 import ProgramDetails from '../new_components/ProgramDetails';
 import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
@@ -10,14 +10,14 @@ import TechsWeTeach from '../new_components/TechsWeTeach';
 import GeeksInfo from '../new_components/GeeksInfo';
 import OurPartners from '../new_components/OurPartners';
 import BaseRender from './_baseLayout'
-import {requestSyllabus} from "../actions";
+// import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
-import Icon from '../components/Icon'
+// import Icon from '../components/Icon'
 import Testimonials from '../new_components/Testimonials';
 import Badges from '../new_components/Badges';
 import PricesAndPayment from '../new_components/PricesAndPayment';
-import LeadForm from '../new_components/LeadForm';
-import Modal from '../components/Modal';
+// import LeadForm from '../new_components/LeadForm';
+// import Modal from '../components/Modal';
 
 
 const Program = ({data, pageContext, yml}) => {
@@ -60,6 +60,10 @@ const Program = ({data, pageContext, yml}) => {
     <TechsWeTeach lang={pageContext.lang} />
     <GeeksInfo lang={pageContext.lang} />
 
+    <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
+      <Div height="1px" background="#EBEBEB"></Div>
+    </GridContainer>
+
     <PricesAndPayment
       type={pageContext.slug}
       lang={pageContext.lang}
@@ -67,6 +71,8 @@ const Program = ({data, pageContext, yml}) => {
       locations={data.allLocationYaml.edges}
       programType={program_type}
       courseType={course_type}
+      title={yml.prices.heading}
+      paragraph={yml.prices.sub_heading}
     />
 
     <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">

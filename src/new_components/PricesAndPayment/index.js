@@ -113,9 +113,6 @@ const PricesAndPayments = (props) => {
   if (!currentLocation || !currentLocation.prices)
   return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
   
-
-  console.log("PRICES:::::", prices)
-  console.log("CURLOC", currentLocation)
   let prices = !course && !modality ? {} : currentLocation.prices[course?.value][modality?.value];
   
 
