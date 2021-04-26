@@ -15,6 +15,9 @@ import {Link} from 'gatsby'
 import {Circle} from '../new_components/BackgroundDrawing'
 import {SessionContext} from '../session'
 
+
+
+
 const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText, context, bg_size}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
   <Anchor to={link}>
     <Card
@@ -122,14 +125,16 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
   </Anchor>
 </Column>;
 const Calendar = (props) => {
-  const {pageContext, yml} = props;
+  const {pageContext, yml, data} = props;
   const [limit, setLimit] = useState(true);
   const {session} = useContext(SessionContext);
   const [backgroundSize, setBackgroundSize] = useState("100%");
-  const [data, setData] = useState({
+  const [datas, setData] = useState({
     events: {catalog: [], all: [], filtered: []},
     cohorts: {catalog: [], all: [], filtered: []}
   });
+  let content = data.allPageYaml.edges[0].node
+  console.log("DATA:", data)
   // console.log("calendar: ", yml)
   const [academy, setAcademy] = useState(null)
   // const [filterType, setFilterType] = useState({label: "Upcoming Courses and Events", value: "cohorts"});
@@ -165,9 +170,9 @@ const Calendar = (props) => {
   useEffect(() => {
     if (session && Array.isArray(session.locations)) {
       const _data = {
-        ...data,
+        ...datas,
         cohorts: {
-          ...data.cohorts,
+          ...datas.cohorts,
           catalog: [{label: 'All Locations', value: null}].concat(
             session.locations.map(l => ({label: l.city, value: l.breathecode_location_slug}))
           )
@@ -176,6 +181,7 @@ const Calendar = (props) => {
       setData(_data);
     }
   }, [session]);
+
   return (
     <>
       {/* <Div position="absolute" top="0" zIndex="1" width="100%" height_tablet="240px">
@@ -268,9 +274,11 @@ const Calendar = (props) => {
         seo_title={yml.seo_title}
         title={yml.header.title}
         padding_tablet="72px 0 40px 0"
+        padding="50px 17px"
         background={Colors.veryLightBlue}
         position="relative"
         height="240px"
+        margin="120px 0 0 0 "
       >
       </Header>
       {yml.events.title &&
@@ -281,7 +289,7 @@ const Calendar = (props) => {
       <GridContainer columns_tablet="3" margin="0 0 73px 0" margin_tablet="0 0 30px 0">
         <>
           {
-            data.events.filtered.map((m, i) => {
+            datas.events.filtered.map((m, i) => {
               const limits = limit == true ? 6 : 100
               return i < limits && (
                 <Div
@@ -319,16 +327,84 @@ const Calendar = (props) => {
           }
         </>
       </GridContainer>
-      {limit && data.events.filtered.length > 6 &&
+      {limit && datas.events.filtered.length > 6 &&
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
           <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show more</Paragraph>
         </GridContainer>
-      }{!limit && data.events.filtered.length > 6 &&
+      }{!limit && datas.events.filtered.length > 6 &&
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
           <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show less</Paragraph>
         </GridContainer>
       }
-      <UpcomingDates lang={pageContext.lang} />
+
+      <GridContainer padding_tablet="0" margin_tablet="0 0 48px 0">
+        <Div flexDirection="column">
+          <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
+            <H3 textAlign="left" width="188px">Next Dates</H3>
+            {/* <Button outline width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button> */}
+            <Select
+              // margin="0 10px 0 0"
+              top="40px"
+              left="20px"
+              width="300px"
+              maxWidth="100%"
+              shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
+              options={console.log("catalog", datas.cohorts.catalog) || datas.cohorts.catalog}
+              openLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
+              closeLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
+              onSelect={(opt) => {
+                setAcademy(opt)
+                setData({
+                  ...datas,
+                  [filterType.value]: {
+                    ...datas[filterType.value],
+                    filtered: opt.label !== 'All Locations' ? datas[filterType.value].all.filter(elm => elm.academy.slug === opt.value) : datas[filterType.value].all
+                  }
+                });
+              }}
+            />
+          </Div>
+          {Array.isArray(datas.cohorts.filtered) && datas.cohorts.filtered.map((m, i) => {
+            return (
+              i < 4 &&
+              <Div key={i} flexDirection="column" flexDirection_tablet="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
+                <Div flexDirection_tablet="column" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
+                  <H4 textAlign="left" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">ENERO</H4>
+                  <Paragraph textAlign="left" fontWeight="700">09/01 al 13/03</Paragraph>
+                </Div>
+                <Div flexDirection="column" margin="0 0 20px 0">
+                  <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.program_label}</H4>
+                  <Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph>
+                </Div>
+                <Div flexDirection="column" display="none" display_tablet="flex" >
+                  <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
+                  <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                </Div>
+                <Div flexDirection="column" display="none" display_tablet="flex">
+                  <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
+                  <Paragraph textAlign="left">{content.cohorts.info.duration_weeks}</Paragraph>
+                </Div>
+                <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
+                  <Div flexDirection="column" width="50%">
+                    <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
+                    <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                  </Div>
+                  <Div flexDirection="column" width="50%">
+                    <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
+                    <Paragraph textAlign="left">{content.cohorts.info.duration_weeks}</Paragraph>
+                  </Div>
+                </Div>
+                <Div flexDirection="column">
+                  <Button width="fit-content" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
+                </Div>
+              </Div>
+            )
+          })}
+          {/* <Paragraph margin="20px 0" color={Colors.blue}>See more dates</Paragraph> */}
+        </Div>
+      </GridContainer >
+
+      {/* <UpcomingDates lang={pageContext.lang} /> */}
       {/* <WrapperImage
         imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
         border="bottom"
@@ -374,16 +450,16 @@ const Calendar = (props) => {
             m_sm="5px"
             maxWidth="100%"
             shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-            options={console.log("catalog", data.cohorts.catalog) || data.cohorts.catalog}
+            options={console.log("catalog", datas.cohorts.catalog) || datas.cohorts.catalog}
             openLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
             closeLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
             onSelect={(opt) => {
               setAcademy(opt)
               setData({
-                ...data,
+                ...datas,
                 [filterType.value]: {
-                  ...data[filterType.value],
-                  filtered: opt.label !== 'All Locations' ? data[filterType.value].all.filter(elm => elm.academy.slug === opt.value) : data[filterType.value].all
+                  ...datas[filterType.value],
+                  filtered: opt.label !== 'All Locations' ? datas[filterType.value].all.filter(elm => elm.academy.slug === opt.value) : datas[filterType.value].all
                 }
               });
             }}
@@ -410,12 +486,12 @@ const Calendar = (props) => {
         <Row display="flex">
           {
             filterType.value === "cohorts" ?
-              data.cohorts.filtered.length == 0 ?
+              datas.cohorts.filtered.length == 0 ?
                 <Paragraph margin={`0 0 0 10px`} fontSize="18px">
                   {pageContext.lang == "us" ? academy != null ? "It seems we could not found any result." : "Loading..." : academy != null ? "Parece que no pudimos conseguir ningún resultado." : "Cargando..."}
                 </Paragraph>
                 :
-                data.cohorts.filtered.map((cohort, index) =>
+                datas.cohorts.filtered.map((cohort, index) =>
                   <ListCard
                     key={index}
                     title={cohort.syllabus ? cohort.syllabus.certificate.name : ""}
@@ -433,12 +509,12 @@ const Calendar = (props) => {
                   />
                 )
               :
-              data.events.filtered.length === 0 ?
+              datas.events.filtered.length === 0 ?
                 <Paragraph margin={`0 0 0 10px`} fontSize="18px">
                   {pageContext.lang == "us" ? academy != null ? "It seems we could not found any result." : "Loading..." : academy != null ? "Parece que no pudimos conseguir ningún resultado." : "Cargando..."}
                 </Paragraph>
                 :
-                data.events.filtered.map((event, index) =>
+                datas.events.filtered.map((event, index) =>
                   <ListCard
                     key={index}
                     title={event.title}
@@ -490,6 +566,20 @@ export const query = graphql`
             title
             paragraph
             
+          }
+          cohorts{
+            info {
+              button_link
+              button_text
+              program_label
+              duration_label
+              duration_weeks
+              location_label
+            }
+            footer {
+              button_text_close
+              button_text_open
+            }
           }
           
         }

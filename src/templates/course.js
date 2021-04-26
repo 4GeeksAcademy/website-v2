@@ -12,6 +12,7 @@ import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
 import PricesAndPayment from '../new_components/PricesAndPayment';
 import Modal from '../components/Modal';
 import TypicalDay from '../components/TypicalDay';
+import LeadForm from '../new_components/LeadForm';
 import AlumniProjects from '../new_components/AlumniProjects';
 import ProgramSelector from '../components/ProgramSelector';
 import Badges from '../new_components/Badges';
@@ -56,8 +57,27 @@ const Program = ({data, pageContext, yml}) => {
         >
           <Button width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button outline width="200px" width_tablet="fit-content" color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button onClick={handleOpen} outline width="200px" width_tablet="fit-content" color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
+      <Modal
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        open={open}
+        onClose={handleClose}
+      >
+        <LeadForm
+          style={{marginTop: "50px"}}
+          heading={yml.button.syllabus_heading}
+          motivation={yml.button.syllabus_motivation}
+          sendLabel={syllabus_button_text}
+          formHandler={requestSyllabus}
+          handleClose={handleClose}
+          lang={pageContext.lang}
+          data={{
+            course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
+          }}
+        />
+      </Modal>
       <Badges lang={pageContext.lang} margin="0 0 40px 0" />
     </Header>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />

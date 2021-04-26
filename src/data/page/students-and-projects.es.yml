@@ -1,0 +1,13 @@
+meta_info:
+  slug: alumnos-y-proyectos
+  title: ""
+  description: null
+  image: null
+  keywords: ""
+  redirects: ["/alumnos"]
+
+seo_title: "Alumnos y Proyectos"
+header:
+  title: "Alumnos y Proyectos"
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  # image: "../../../static/images/outcomes/outcomes.png"

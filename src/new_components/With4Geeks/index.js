@@ -138,7 +138,7 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
                 </Paragraph>
 
                 {i.footer.is_image ?
-                  <RoundImage url={i.footer.image} bsize="contain" height="20px" position="left" />
+                  <Link to={i.footer.image_link}><RoundImage url={i.footer.image} bsize="contain" height="20px" position="left" /></Link>
                   :
                   <Link to={i.footer.text_link}>
                     <H4

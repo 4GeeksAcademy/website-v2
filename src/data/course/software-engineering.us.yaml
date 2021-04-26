@@ -10,7 +10,7 @@ meta_info:
     "/software-engineering", 
     "/us/course/software-engineering-coding-bootcamp", 
     "/course/software-engineering-coding-bootcamp", 
-    "/coding-bootcamps/software-engineer-bootcamp"
+    "/coding-bootcamp/software-engineer-bootcamp"
   ]
 
 seo_title: "Cooding Bootcamp"
@@ -29,7 +29,7 @@ button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
-  apply_button_link: "/apply"
+  apply_button_link: "/us/apply"
 ## PROGRAM DETAILS
 details:
   about:

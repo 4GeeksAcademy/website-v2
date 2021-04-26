@@ -12,5 +12,7 @@ info:
   button_text: apply now
   button_link: ""
 footer:
+  button_text: See more dates
   button_text_open: See more dates
   button_text_close: See less dates
+  button_link: "/us/next-dates"

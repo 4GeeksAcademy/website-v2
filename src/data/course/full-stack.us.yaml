@@ -30,7 +30,7 @@ button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
-  apply_button_link: "/apply"
+  apply_button_link: "/us/apply"
 
 credentials:
   heading: "This Program By The Numbers"

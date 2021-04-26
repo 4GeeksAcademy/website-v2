@@ -450,8 +450,8 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
     let slugigy = (entity) => {
         let slugMap = {
-            location: "coding-campuses",
-            course: "coding-bootcamps",
+            location: "coding-campus",
+            course: "coding-bootcamp",
         }
         return slugMap[entity] || entity
     }

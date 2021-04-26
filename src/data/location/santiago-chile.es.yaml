@@ -5,18 +5,22 @@ meta_info:
   description: "Coding Bootcamp en Santiago de Chile, aprende a programar, aprende código."
   image: "https://storage.googleapis.com/4geeks-academy-website/santiago-es.png"
   keywords: "Coding Bootcamp Santiago"
-  redirects: ["/chile", "/es/inicio/santiago-de-chile", "/es/location/santiago-chile-es"]
+  redirects:
+    ["/chile", "/es/inicio/santiago-de-chile", "/es/location/santiago-chile-es"]
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:
   tagline: "4GEEKS ACADEMY en SANTIAGO DE CHILE"
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/santiago-loc.png"
+  image: "../../../static/images/locations/santiago-home.png"
   alt: ""
+
+button_header:
+  button_text: Ver Programas
+  button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGA MALLA" # <-- this will show everywhere in the website
   apply_button_text: "POSTÚLATE" # <-- this will show everywhere in the website
-
   syllabus_submit_text: "DESCARGAR"
   cohort_more_details_text: "DETALLES"
   apply_button_link: "/aplica"
