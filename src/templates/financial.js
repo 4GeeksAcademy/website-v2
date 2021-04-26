@@ -4,7 +4,7 @@ import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js'
 
 // new_components
-import PricesAndPayment from '../new_components/PricesAndPayment';
+import FinancialFilter from '../new_components/FinancialFilter';
 import { Header } from '../new_components/Sections'
 
 const Financial = (props) => {
@@ -29,7 +29,7 @@ const Financial = (props) => {
           padding="142px 0 15px 0"  
       >
       </Header>
-      <PricesAndPayment
+      <FinancialFilter
           button_text={yml.syllabus_button_text}
           program={yml.label.program.title}
           programClosedLabel={yml.label.program.closedLabel}

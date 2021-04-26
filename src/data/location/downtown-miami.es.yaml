@@ -322,7 +322,7 @@ prices:
 
   machine_learning:
     part_time:
-      slug: "machine-learning"
+      slug: "part_time"
       duration: "18 Weeks"
 
       ## LEFT BOX SECTION PART-TIME

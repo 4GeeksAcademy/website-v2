@@ -30,6 +30,7 @@ const Program = ({data, pageContext, yml}) => {
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
 
+  const course_type = "full_stack"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
 
   const handleOpen = () => {
@@ -96,7 +97,8 @@ const Program = ({data, pageContext, yml}) => {
       lang={pageContext.lang}
       session={session}
       locations={data.allLocationYaml.edges}
-      course={program_type}
+      programType={program_type}
+      courseType={course_type}
       title={yml.prices.heading}
       paragraph={yml.prices.sub_heading}
     />

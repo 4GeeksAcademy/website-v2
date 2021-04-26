@@ -1,42 +1,40 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext, useEffect, useRef} from 'react';
 import {useStaticQuery, graphql} from "gatsby"
 import styled from 'styled-components';
+import Icon from '../Icon';
 import {Link} from '../Styling/index';
 import {GridContainer, Grid, Div} from '../Sections';
-import Select from '../SelectV2';
-import {H2, H3, Paragraph} from '../Heading';
-import {Button, Colors} from '../Styling';
+import Card from '../Card';
+import Select from '../Select';
+import {H2, H3, H4, H5, Paragraph, Title} from '../Heading';
+import {Button, Colors, Circle, RoundImage} from '../Styling';
 import {SessionContext} from '../../session'
-
-
-const Label = styled.div`
-    font-family: 'Lato', sans-serif;
-    font-size: 15px;
-    letter-spacing: 0.05em;
-    line-height: 24px;
-    font-weight: 400;
-    color: #A4A4A4;
-    top: -13px;
-    left: 4px;
-    background: white;
-    width: fit-content;
-    padding: 0 5px;
-`
+import Fragment from "../Fragment"
 
 const PricingCard = ({data, lang, children, price, color, background, transform_tablet, priceInfo, applyLabel, border, borderLeft, borderRight, borderRight_tablet, borderLeft_tablet}) => {
   const {header, button} = data;
-  return <Div flexDirection="column" padding="0 0 30px 0" margin="5px 0" height="fit-content" background={background} transform_tablet={transform_tablet} border={border} borderLeft={borderLeft} borderRight={borderRight} borderLeft_tablet={borderLeft_tablet} borderRight_tablet={borderRight_tablet}>
+  return <Div flexDirection="column" padding="30px" margin="5px 0" height="fit-content" background={background} transform_tablet={transform_tablet} border={border} borderLeft={borderLeft} borderRight={borderRight} borderLeft_tablet={borderLeft_tablet} borderRight_tablet={borderRight_tablet}>
     <H2
-      type="h2"
-      margin="0 0 30px 0"
-      fontSize="22px"
       color={color}
       lineHeight="30px"
-      textAlign="left"
     >
-      {header.heading_one} {header.heading_two}
+      {header.heading_one}
     </H2>
+    <H3 color={color} lineHeight="30px">
+      {header.heading_two}
+    </H3>
+    <Paragraph padding="20px" color={color || Colors.gray}>{header.sub_heading}</Paragraph>
+    <H3 margin="20px 0 0"
+      fontSize="25px"
+      fs_lg="20px"
+      color={color}
+      textAlign="center" >{price}</H3>
+    <Paragraph align="center" margin="5px 0 10px 0" fontSize="12px" color={color || Colors.gray}>{priceInfo}</Paragraph>
+    {/* <Div display="block" margin="0 -35px">{children}</Div> */}
     <Div display="block" >{children}</Div>
+    <Div margin="40px 0 0 0" justifyContent="center" image="no"  >
+      <Link to={`/${lang}/apply`}><Button width="100%" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="16px" fs_lg="14px" fs_sm="16px">{applyLabel}</Button></Link>
+    </Div>
   </Div>;
 }
 
@@ -65,7 +63,6 @@ const modalityArray = [
   }
 ]
 
-
 const PricesAndPayments = (props) => {
   const data = useStaticQuery(graphql`
     query NewPricesAndPayments{
@@ -77,7 +74,6 @@ const PricesAndPayments = (props) => {
             }
             pricing_error_contact
             pricing_error
-            loading
             get_notified
             top_label
             button{
@@ -96,199 +92,188 @@ const PricesAndPayments = (props) => {
   const [activeStep, setActiveStep] = useState(0);
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
+  const [modality, setModality] = useState(false)
   const [locations, setLocations] = useState(false);
-  const [modality, setModality] = useState(false);
-  // paolo edit
-  const [prices, setPrices] = useState();
 
-useEffect(() => {
+  // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
+  useEffect(() => {
     setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
     if (session && session.location) {
       const _loc = props.locations.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug);
       setCurrentLocation(_loc ? _loc.node : null)
     }
   }, [session, props.locations])
-  
-  
-  console.log("PRICES:::::::", prices)
-  console.log("CurrentLOCATION:::::::", currentLocation)
-  /*
-  * SOLO comprende los cambios de la modalidad
-    Necesito que cambie independeinte de los demas selections
-  */
-
-
   // sync property course
-  useEffect(()=>{
-    modality && course && currentLocation? 
-    setPrices(currentLocation.prices[course.value][modality.value])
-    : console.log("modality", modality)
-    
-  }, [modality, course, currentLocation])
+  useEffect(() => (
+    setCourse(courseArray.find(c => c.value === props.courseType)),
+    setModality(modalityArray.find(d => d.value === props.programType))
 
-    if (!currentLocation || !currentLocation.prices)
-      return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.loading}</Paragraph>
+  ), [props.courseType, props.programType]);
 
-    if(course === false && modality === false){
-      setCourse({ value: "full_stack", label: "Full Stack Developer"})
-      setModality({ value: "part_time", label: "Part Time"})
-    }
-    
+  if (!currentLocation || !currentLocation.prices)
+  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+  
+
+  console.log("PRICES:::::", prices)
+  console.log("CURLOC", currentLocation)
+  let prices = !course && !modality ? {} : currentLocation.prices[course?.value][modality?.value];
+  
+
+  const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
 
   return (
-    <Div background={Colors.lightBlue2} margin="0 0 5rem 0" display="block"  github="/location">
-      <GridContainer shadow="0px 0px 16px rgba(0, 0, 0, 0.25)" padding="15px 0" margin="0 10px 3em 10px"  margin_tablet="0 5rem 4em 5rem" containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`} containerGridGap="20px"  margin_md="0 20% 4em 20%" background={Colors.white} height="100%" height_tablet="122px" borderRadius="3px" >
-        <Grid gridTemplateColumns_tablet="repeat(3, 1fr)"
-            gridGap_tablet="20px" gridGap="8px" justifySelf="center" justifySelf_tablet="inherit" flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
-
-          {!props.course &&
+    <Fragment github="/location">
+      <GridContainer margin_tablet="0 0 25px 0">
+        <Div
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <H2 margin="0 0 15px 0" fontWeight="900">{props.title}</H2>
+          <Paragraph>{props.paragraph}</Paragraph>
+        </Div>
+      </GridContainer>
+      <GridContainer margin_tablet="0 0 73px 0">
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
+          {props.course &&
             <Select
-              label={props.program}
               top="40px"
               left="20px"
               width="fit-content"
               options={courseArray}
-              openLabel={course ? course.label : props.programClosedLabel}
-              closeLabel={course ? course.label : props.programClosedLabel}
+              openLabel={course ? course.label : props.openedLabel}
+              closeLabel={course ? course.label : props.closedLabel}
               onSelect={(opt) => setCourse(opt)}
             />
+            // </GridContainer>
           }
-          {props.modality &&
+          &nbsp;
+          {course &&
+            // <GridContainer>
             <Select
-              label={props.modality}
-              top="40px"
-              left="20px"
-              width="fit-content"
-              options={modalityArray}
-              openLabel={modality ? modality.label : props.modalityClosedLabel}
-              closeLabel={modality ? modality.label : props.modalityClosedLabel}
-              onSelect={(opt) => setModality(opt)}
-            />
-          }
-          {!props.course &&
-            <Select
-              label={props.campus}
               top="40px"
               left="20px"
               width="fit-content"
               options={locations.map(l => ({label: l.node.city + ", " + l.node.country, value: l.node.active_campaign_location_slug}))}
               openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
-              closeLabel={!currentLocation ? props.campusClosedLabel : currentLocation.city + ". " + currentLocation.country}
+              closeLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
               onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}
               topLabel={info.top_label}
             />
+            // </GridContainer>
           }
-
-          {/* <Link to={info.button.button_link}><Button width="fit-content" padding="13px" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link> */}
-          
-          {/* 
-          SEARCH_BUTTON Maybe not necesary
-          <Button onClick={() => {}} width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>{props.button_text}</Button> 
-          */}
-        </Grid>
+          <Link to={info.button.button_link}><Button width="fit-content" padding="13px" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link>
+        </Div>
       </GridContainer>
 
-      {!prices ?
-        <>
-        {!prices 
-          ? <Paragraph margin="10px 0px" align="center" fontSize="18px" > Please select a course to see more information</Paragraph> 
-          : <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course?.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
-}
-        </>
-        :
-        <GridContainer padding="4.5rem 16px" containerColumns_md={`2fr repeat(12, 1fr) 2fr`} containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`} background={Colors.white} columns_tablet="1" gridGap_tablet="0" padding_tablet="4.5rem 16px" >
-          
-          {prices?.center_section && Array.isArray(prices?.center_section.plans) &&
-            <PricingCard color="black" background={Colors.white}
-              price={prices.center_section.plans[activeStep].payment}
-              priceInfo={prices.center_section.plans[activeStep].paymentInfo}
-              data={prices.center_section}
-            >
-              {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map((label, index) => (
-                <GridContainer key={index} containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0"  shadow={Colors.shadow} shadow_tablet={Colors.shadow} padding="20px" height="100%" height_tablet="122px" columns_tablet="4">
-                  <Div margin="10px 0px" justifyContent="center" placeItems="center" display="flex">
-                    <img style={{margin: "auto", height: "25px"}} src={label.logo} />
-                  </Div>
-                  <Div margin="10px 0px" justifyContent="center" placeItems="center" flexDirection="column" display="flex">
-                    <Paragraph fontWeight="700" lineHeight="36px" fontSize="30px">
-                      {label.months}
-                    </Paragraph>
-                    <H3 type="h3" fontWeight="400" color="#A4A4A4" width="fit-content" padding="0 5px" fontSize="15px" lineHeight="24px" letterSpacing="0.05em">
-                      {label.monthsInfo}
-                    </H3>
-
-                  </Div>
-                  <Div margin="10px 0px" justifyContent="center" placeItems="center" flexDirection="column" display="flex">
-                    <Paragraph fontWeight="700" lineHeight="36px" fontSize="30px">
-                      {label.payment}
-                    </Paragraph>
-                    <H3 type="h3" fontWeight="400" color="#A4A4A4" width="fit-content" padding="0 5px" fontSize="15px" lineHeight="24px" letterSpacing="0.05em">
-                      {label.paymentInfo}
-                    </H3>
-                  </Div>
-                  <Div margin="10px 0px" justifyContent="center" placeItems="center" image="no"  >
-                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.center_section?.button?.button_text || "APPLY"}</Button></Link>
-                  </Div>
-                  
-                </GridContainer>
-                
-                ))}
-            </PricingCard>
-          }
-
-          {prices.left_section &&
-           <PricingCard color="black" background={Colors.white}
-              data={prices.left_section}
-            >
-              {prices.left_section.content && (
-                <GridContainer containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0"  shadow="0px 0px 16px rgba(0, 0, 0, 0.15)" padding="20px" height="100%" height_tablet="122px" columns_tablet="2">
-                  <Div margin="10px 0px" margin_tablet="10px 30px" width="100%"  justifyContent="center" placeItems="center" flexDirection="column" display="flex">
-                    <Paragraph textAlign_tablet="left" fontWeight="700" lineHeight="36px" fontSize="30px">
-                      {prices.left_section.content.price}
-                    </Paragraph>
-
-                    <H3 type="h3" alignSelf_tablet="end" alignSelf="center" fontWeight="400" color="#A4A4A4" width="fit-content" padding="0 5px" fontSize="15px" lineHeight="24px" letterSpacing="0.05em" >
-                      {prices.left_section.content.price_info}
-                    </H3>
-                  </Div>
-                  <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto "  placeItems="center" image="no"  >
-                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.left_section?.button?.button_text || "APPLY"}</Button></Link>
-                  </Div>
-                  
-                </GridContainer>
-                
-                )}
-            </PricingCard>
-          }
-          
-          {prices.right_section &&
-            <PricingCard color="black" background={Colors.white}
-              data={prices.right_section}
-            >
-              {prices.right_section.content && (
-                <GridContainer containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0"  shadow="0px 0px 16px rgba(0, 0, 0, 0.15)" padding="20px" height="100%" height_tablet="122px" columns_tablet="2">
-                  <Div margin="10px 0px" margin_tablet="10px 30px" width="100%"  justifyContent="center" placeItems="center" flexDirection="column" display="flex">
-                    <Paragraph textAlign_tablet="left" fontWeight="700" lineHeight="36px" fontSize="30px">
-                      {prices.right_section.content.price}
-                    </Paragraph>
-                    
-                    <H3 type="h3" alignSelf_tablet="end" alignSelf="center" fontWeight="400" color="#A4A4A4" width="fit-content" padding="0 5px" fontSize="15px" lineHeight="24px" letterSpacing="0.05em" >
-                      {prices.right_section.content.price_info}
-                    </H3>
-                  </Div>
-                  <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto "  placeItems="center" image="no"  >
-                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices.right_section.button?.button_text || "APPLY" }</Button></Link>
-                  </Div>
-                  
-                </GridContainer>
-                
-                )}
-            </PricingCard>
-          }
-        </GridContainer>
+      {
+        !prices ?
+          <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+          :
+          <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0" >
+            {prices.left_section &&
+              <PricingCard lang={props.lang}
+                background={Colors.white}
+                transform_tablet="translateY(10%)"
+                price={prices.left_section.content.price}
+                priceInfo={prices.left_section.content.price_info}
+                data={prices.left_section}
+                applyLabel={apply_button_text}
+                border="1px solid black"
+                borderRight_tablet="none"
+              />
+            }
+            {prices.center_section && Array.isArray(prices.center_section.plans) &&
+              <PricingCard lang={props.lang} color="white" background='black'
+                price={prices.center_section.plans[activeStep]?.payment}
+                priceInfo={prices.center_section.plans[activeStep]?.paymentInfo}
+                applyLabel={apply_button_text}
+                data={prices.center_section}
+              >
+                <StepperContainer>
+                  <StepConnector>
+                    <FillerStyles completed={((activeStep) * 100) / (prices.center_section.plans.length - 1)} />
+                  </StepConnector>
+                  {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map(p => p.months).map((label, index) => (
+                    <StepperCircle
+                      key={label}
+                      onMouseOver={() => setActiveStep(index)}
+                      background={index <= activeStep ? Colors.yellow : Colors.black}
+                    >
+                      <StepLabel color={index == activeStep ? Colors.yellow : Colors.white}>{label}</StepLabel>
+                    </StepperCircle >
+                  ))}
+                </StepperContainer>
+                <Div margin="0 0 40px 0" display="flex">
+                  <img style={{margin: "auto", height: "20px"}} src={prices.center_section.plans[activeStep].logo} />
+                </Div>
+              </PricingCard>
+            }
+            {prices.right_section &&
+              <PricingCard lang={props.lang}
+                background={Colors.white}
+                transform_tablet="translateY(10%)"
+                price={prices.right_section.content.price}
+                priceInfo={prices.right_section.content.price_info}
+                applyLabel={apply_button_text}
+                data={prices.right_section}
+                border="1px solid black"
+                borderLeft_tablet="none"
+              />
+            }
+          </GridContainer>
       }
-    </Div>
-
+      <GridContainer columns_tablet="12" gridGap="0" margin_tablet="0 0 37px 0" >
+        <Div gridArea_tablet="1/5/1/9" justifyContent="center" alignItems="center">
+          <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >We accept: </H4>
+          <RoundImage url="/images/bitcoin.png" height="10px" width="65px" bsize="contain" margin="0 15px" />
+          <RoundImage url="/images/ethereum.png" height="20px" width="65px" bsize="contain" />
+        </Div>
+      </GridContainer>
+      <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
+      {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
+    </Fragment >
   )
 }
 export default (PricesAndPayments)
+const StepperContainer = styled.div`
+  width: 100%;
+  padding: 25px 0 ;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 0 0 20px 0;
+`
+const StepLabel = styled.div`
+  color: ${props => props.color};
+  width: 100px;
+  font-family: 'Lato', sans-serif;
+  font-size: 8px;
+  position: absolute;
+  top: 20px;
+`
+const StepConnector = styled.div`
+  position: absolute;
+  top:32px;
+  height: 1px;
+  width: 100%;
+  background-color: ${Colors.yellow};
+`
+const FillerStyles = styled.div`
+  height: 2px;
+  width: ${props => props.completed}%;
+  background-color: ${Colors.yellow};
+  border-radius: inherit;
+  text-align: right;
+  transform: translateY(-50%);
+`
+const StepperCircle = styled.div`
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: ${props => props.background};
+  border: 1px solid ${Colors.yellow};
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+`

@@ -26,7 +26,11 @@ const Program = ({data, pageContext, yml}) => {
   const courseDetails = data.allCourseYaml.edges[0].node;
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+
+  const course_type = "software_engineering"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
+
+
   const hiring = data.allPartnerYaml.edges[0].node;
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
@@ -61,7 +65,8 @@ const Program = ({data, pageContext, yml}) => {
       lang={pageContext.lang}
       session={session}
       locations={data.allLocationYaml.edges}
-      course={program_type}
+      programType={program_type}
+      courseType={course_type}
     />
 
     <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">

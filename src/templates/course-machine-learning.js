@@ -27,12 +27,14 @@ const Program = ({data, pageContext, yml}) => {
   const courseDetails = data.allCourseYaml.edges[0].node;
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+
+  const course_type = "machine_learning"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
+  
   const hiring = data.allPartnerYaml.edges[0].node;
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
-  console.log("pageContext....", pageContext)
   const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a, b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
 
   return (<>
@@ -147,7 +149,12 @@ const Program = ({data, pageContext, yml}) => {
       lang={pageContext.lang}
       session={session}
       locations={data.allLocationYaml.edges}
-      course={program_type}
+      programType={program_type}
+      courseType={course_type}
+
+
+      // title={yml.prices.heading}
+      // paragraph={yml.prices.sub_heading}
     />
 
     <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
@@ -527,46 +534,72 @@ export const query = graphql`
           }
           
           prices {
-            software_engineering {
-              part_time {
-                center_section {
-
+            machine_learning {
+              part_time{
+                slug
+                duration
+                left_section {
                   header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  button {
+                    button_text
+                  }
+                }
+                center_section {
+                  header {
+                    heading_two
                     sub_heading
                     heading_one
-                    heading_two
                   }
                   plans {
                     months
+                    monthsInfo
                     payment
                     paymentInfo
                     provider
                     logo
                     message
                   }
-                }
-                left_section {
-  
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    heading_two
-                    sub_heading
+                  button {
+                    button_text
                   }
                 }
                 right_section {
-  
+                  button {
+                    button_text
+                  }
                   content {
                     price
                     price_info
                   }
                   header {
-                    sub_heading
                     heading_one
+                    sub_heading
                     heading_two
+                  }
+                }
+              }
+              full_time {
+                slug
+                left_section {
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  button {
+                    button_text
                   }
                 }
               }
