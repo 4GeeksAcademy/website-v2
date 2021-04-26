@@ -91,8 +91,8 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "ask for our financing and scollarships"
         content:
-          price: " "
-          price_info: " "
+          price: "?"
+          price_info: "please contact us for more information about prices, scolarships and financing options."
         button:
           button_text: "APPLY NOW"
     ## *****************
@@ -135,14 +135,14 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not avaible"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Software Engineering Part-Time course is not available"
+          price: "Part-Time modality is not available"
           price_info: "Caracas - Venezuela"
         button:
-          button_text: "Aplly to another courses"
+          button_text: "Apply another courses"
 
     full_time:
       slug: "full_time"
@@ -150,11 +150,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not available"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Software Engineering Full-Time course is not available"
+          price: "Full-Time modality is not available"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Apply another courses"
@@ -166,14 +166,14 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not avaible"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Machine Learning Part-Time course is not available"
+          price: "Part-Time modality is not available"
           price_info: "Caracas - Venezuela"
         button:
-          button_text: "Aplly to another courses"
+          button_text: "Apply another courses"
 
     full_time:
       slug: "full_time"
@@ -181,11 +181,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not available"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Machine Learning Full-Time course is not available"
+          price: "Full-Time modality is not available"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Apply another courses"

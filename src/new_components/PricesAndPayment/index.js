@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {Link} from '../Styling/index';
 import {GridContainer, Grid, Div} from '../Sections';
 import Select from '../SelectV2';
-import {H2, Paragraph} from '../Heading';
+import {H2, H3, Paragraph} from '../Heading';
 import {Button, Colors} from '../Styling';
 import {SessionContext} from '../../session'
 
@@ -27,6 +27,7 @@ const PricingCard = ({data, lang, children, price, color, background, transform_
   const {header, button} = data;
   return <Div flexDirection="column" padding="0 0 30px 0" margin="5px 0" height="fit-content" background={background} transform_tablet={transform_tablet} border={border} borderLeft={borderLeft} borderRight={borderRight} borderLeft_tablet={borderLeft_tablet} borderRight_tablet={borderRight_tablet}>
     <H2
+      type="h2"
       margin="0 0 30px 0"
       fontSize="22px"
       color={color}
@@ -76,6 +77,7 @@ const PricesAndPayments = (props) => {
             }
             pricing_error_contact
             pricing_error
+            loading
             get_notified
             top_label
             button{
@@ -108,21 +110,25 @@ useEffect(() => {
   }, [session, props.locations])
   
   
+  console.log("PRICES:::::::", prices)
+  console.log("CurrentLOCATION:::::::", currentLocation)
+  /*
+  * SOLO comprende los cambios de la modalidad
+    Necesito que cambie independeinte de los demas selections
+  */
+
+
   // sync property course
   useEffect(()=>{
-
-    if(!modality ){
-      console.log("modality", modality)
-    } else 
-    {setPrices(currentLocation.prices[course?.value][modality?.value])}
-  }, [modality])
+    modality && course && currentLocation? 
+    setPrices(currentLocation.prices[course.value][modality.value])
+    : console.log("modality", modality)
+    
+  }, [modality, course, currentLocation])
 
     if (!currentLocation || !currentLocation.prices)
-      return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
-    
+      return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.loading}</Paragraph>
 
-// Necesary to avoid error when selecting modality first
-// TODO: Crear nuevo componente para esta funcionaliad
     if(course === false && modality === false){
       setCourse({ value: "full_stack", label: "Full Stack Developer"})
       setModality({ value: "part_time", label: "Part Time"})
@@ -207,13 +213,18 @@ useEffect(() => {
                     <Paragraph fontWeight="700" lineHeight="36px" fontSize="30px">
                       {label.months}
                     </Paragraph>
-                    <Label>{label.monthsInfo}</Label>
+                    <H3 type="h3" fontWeight="400" color="#A4A4A4" width="fit-content" padding="0 5px" fontSize="15px" lineHeight="24px" letterSpacing="0.05em">
+                      {label.monthsInfo}
+                    </H3>
+
                   </Div>
                   <Div margin="10px 0px" justifyContent="center" placeItems="center" flexDirection="column" display="flex">
                     <Paragraph fontWeight="700" lineHeight="36px" fontSize="30px">
                       {label.payment}
                     </Paragraph>
-                    <Label>{label.paymentInfo}</Label>
+                    <H3 type="h3" fontWeight="400" color="#A4A4A4" width="fit-content" padding="0 5px" fontSize="15px" lineHeight="24px" letterSpacing="0.05em">
+                      {label.paymentInfo}
+                    </H3>
                   </Div>
                   <Div margin="10px 0px" justifyContent="center" placeItems="center" image="no"  >
                     <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.center_section?.button?.button_text || "APPLY"}</Button></Link>
@@ -235,7 +246,10 @@ useEffect(() => {
                     <Paragraph textAlign_tablet="left" fontWeight="700" lineHeight="36px" fontSize="30px">
                       {prices.left_section.content.price}
                     </Paragraph>
-                    <Label style={{alignSelf: "end"}}>{prices.left_section.content.price_info}</Label>
+
+                    <H3 type="h3" alignSelf_tablet="end" alignSelf="center" fontWeight="400" color="#A4A4A4" width="fit-content" padding="0 5px" fontSize="15px" lineHeight="24px" letterSpacing="0.05em" >
+                      {prices.left_section.content.price_info}
+                    </H3>
                   </Div>
                   <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto "  placeItems="center" image="no"  >
                     <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.left_section?.button?.button_text || "APPLY"}</Button></Link>
@@ -257,7 +271,10 @@ useEffect(() => {
                     <Paragraph textAlign_tablet="left" fontWeight="700" lineHeight="36px" fontSize="30px">
                       {prices.right_section.content.price}
                     </Paragraph>
-                    <Label style={{alignSelf: "end"}}>{prices.right_section.content.price_info}</Label>
+                    
+                    <H3 type="h3" alignSelf_tablet="end" alignSelf="center" fontWeight="400" color="#A4A4A4" width="fit-content" padding="0 5px" fontSize="15px" lineHeight="24px" letterSpacing="0.05em" >
+                      {prices.right_section.content.price_info}
+                    </H3>
                   </Div>
                   <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto "  placeItems="center" image="no"  >
                     <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices.right_section.button?.button_text || "APPLY" }</Button></Link>

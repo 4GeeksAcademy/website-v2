@@ -178,36 +178,42 @@ prices:
           sub_heading: "and enjoy the Best Price in town"
         plans:
           - months: "60 mo"
+            monthsInfo: "Financed"
             payment: "$169.53"
             paymentInfo: "per month + $0 deposit"
             provider: "Skills Fund - Climb"
             logo: "/images/skill-logo.png"
             message: "We have partnered with Skills Fund and Climb in order to offer you the best payment options in town"
           - months: "42 mo"
+            monthsInfo: "Financed"
             payment: "$314.10"
             paymentInfo: "per month + $0 deposit"
             provider: "Climb"
             logo: "/images/climb-logo.png"
             message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
           - months: "36 mo"
+            monthsInfo: "Financed"
             payment: "$247.97"
             paymentInfo: "per month + $0 deposit"
             provider: "Skills Fund"
             logo: "/images/skill-logo.png"
             message: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
           - months: "24 mo"
+            monthsInfo: "Financed"
             payment: "$312.04"
             paymentInfo: "per month + 1,500 deposit"
             provider: "Quotanda"
             logo: "/images/quotanda-logo.png"
             message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
           - months: "12 mo"
+            monthsInfo: "Financed"
             payment: "$577.43"
             paymentInfo: "per month + 1,500 deposit"
             provider: "Quotanda"
             logo: "/images/quotanda-logo.png"
             message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
           - months: "6 mo"
+            monthsInfo: "Financed"
             payment: "$1,108.58"
             paymentInfo: "per month + 1,500 deposit"
             provider: "Quotanda"
@@ -318,11 +324,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not available"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Software Engineering Full-Time course is not available"
+          price: "Full-Time modality is not available"
           price_info: "Downtown - Miami"
         button:
           button_text: "Apply another courses"
@@ -415,11 +421,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not available"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Machine Learning Full-Time course is not available"
+          price: "Full-Time modality is not available"
           price_info: "Downtown - Miami"
         button:
           button_text: "Apply another courses"

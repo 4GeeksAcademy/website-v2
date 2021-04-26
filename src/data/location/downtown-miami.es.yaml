@@ -311,14 +311,14 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Software Engineering Full-Time no esta disponible"
+          price: "La modaliad Full-Time no esta disponible"
           price_info: "Santiago - Chile"
         button:
-          button_text: "Aplicar otros cursos"
+          button_text: "Aplicar a otros cursos"
 
   machine_learning:
     part_time:
@@ -408,14 +408,14 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Machine Learning Full-Time no esta disponible"
+          price: "La modalidad Full-Time no esta disponible"
           price_info: "Santiago - Chile"
         button:
-          button_text: "Aplicar otros cursos"
+          button_text: "Aplicar a otros cursos"
 
 active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"

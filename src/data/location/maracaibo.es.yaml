@@ -75,11 +75,11 @@ prices:
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "PART-TIME"
+          heading_one: "FULL-TIME"
           sub_heading: ""
         content:
-          price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
-          price_info: ""
+          price: "Pay upfront and get a discount "
+          price_info: "or ask for a 3 - 4 payment options"
         button:
           button_text: "APLICAR AHORA"
     ## *****************
@@ -93,11 +93,11 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "FULL-TIME"
+          heading_one: "PART-TIME"
           sub_heading: ""
         content:
-          price: "Pay upfront and get a discount or ask for a 2 payment options"
-          price_info: ""
+          price: "Pay upfront and get a discount "
+          price_info: "or ask for a 2 payment options"
         button:
           button_text: "APLICAR AHORA"
 
@@ -108,8 +108,8 @@ prices:
           heading_one: "PART-TIME"
           sub_heading: ""
         content:
-          price: "ay upfront and get a discount or ask for a 3 - 4 payment options"
-          price_info: ""
+          price: "ay upfront and get a discount "
+          price_info: "or ask for a 3 - 4 payment options"
         button:
           button_text: "APLICAR AHORA"
 
@@ -120,11 +120,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Software Engineering Part-Time no esta disponible"
+          price: "La modalidad Part-Time no esta disponible"
           price_info: "Maracaibo - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -135,11 +135,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Software Engineering Full-Time no esta disponible"
+          price: "La modalidad Full-Time no esta disponible"
           price_info: "Maracaibo - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -151,11 +151,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Machine Learning Part-Time no esta disponible"
+          price: "La modalidad Part-Time no esta disponible"
           price_info: "Maracaibo - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -166,11 +166,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Machine Learning Full-Time no esta disponible"
+          price: "La modalidad Full-Time no esta disponible"
           price_info: "Maracaibo - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"

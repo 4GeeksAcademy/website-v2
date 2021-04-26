@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React from 'react';
 import { Colors} from '../new_components/Styling';
 import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js'
@@ -10,16 +10,12 @@ import { Header } from '../new_components/Sections'
 const Financial = (props) => {
   const {session} = React.useContext(SessionContext);
   const {data, pageContext, yml} = props;
-  const [open, setOpen] = React.useState(false);
-  const hiring = data.allPartnerYaml.edges[0].node;
-  console.log("yml", yml);
   let location = null;
   if (session && session.location) {
 
     location = data.allLocationYaml.edges.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
     if (location) location = location.node;
   }
-  console.log(yml)
 
   return (
     <>
@@ -41,7 +37,6 @@ const Financial = (props) => {
           modalityClosedLabel={yml.label.modality.closedLabel}
           campus={yml.label.campus.title}
           campusClosedLabel={yml.label.campus.closedLabel}
-
           // openedLabel={yml.prices.opened_label}
           session={session}
           // closedLabel={yml.prices.closed_label}

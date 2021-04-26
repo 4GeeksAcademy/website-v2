@@ -83,7 +83,8 @@ prices:
       ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
       center_section:
         header:
-          heading: "FINANCED"
+          heading_one: "Extended"
+          heading_two: "Payment Plan"
           sub_heading: "Get the best price in Spain"
         plans:
           - months: "24 mo"
@@ -158,7 +159,8 @@ prices:
       ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
       center_section:
         header:
-          heading: "FINANCED"
+          heading_one: "Extended"
+          heading_two: "Payment Plan"
           sub_heading: "Get the best prices in Spain"
         plans:
           - months: "24 mo"
@@ -207,14 +209,14 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not avaible"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Software Engineering Part-Time course is not available"
+          price: "Part-Time modality is not available"
           price_info: "Madrid - Spain"
         button:
-          button_text: "Aplly to another courses"
+          button_text: "Aplly another courses"
 
     full_time:
       slug: "full_time"
@@ -222,11 +224,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not available"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Software Engineering Full-Time course is not available"
+          price: "Full-Time modality is not available"
           price_info: "Madrid - Spain"
         button:
           button_text: "Apply another courses"
@@ -238,14 +240,14 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not avaible"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Machine Learning Part-Time course is not available"
+          price: "Part-Time modality is not available"
           price_info: "Madrid - Spain"
         button:
-          button_text: "Aplly to another courses"
+          button_text: "Aplly another courses"
 
     full_time:
       slug: "full_time"
@@ -253,11 +255,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "Not available"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "At the moment the Machine Learning Full-Time course is not available"
+          price: "Full-Time modality is not available"
           price_info: "Madrid - Spain"
         button:
           button_text: "Apply another courses"

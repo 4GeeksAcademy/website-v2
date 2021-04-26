@@ -226,11 +226,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Software Engineering Part-Time no esta disponible"
+          price: "La modalidad Part-Time no esta disponible"
           price_info: "Online"
         button:
           button_text: "Aplicar a otros cursos"
@@ -241,11 +241,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Software Engineering"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Software Engineering Full-Time no esta disponible"
+          price: "La modalidad Full-Time no esta disponible"
           price_info: "Online"
         button:
           button_text: "Aplicar a otros cursos"
@@ -257,11 +257,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Machine Learning Part-Time no esta disponible"
+          price: "La modalidad Part-Time no esta disponible"
           price_info: "Online"
         button:
           button_text: "Aplicar a otros cursos"
@@ -272,11 +272,11 @@ prices:
 
       left_section:
         header:
-          heading_one: "No disponible"
+          heading_one: "Machine Learning"
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Por el momento el curso Machine Learning Full-Time no esta disponible"
+          price: "La modalidad Full-Time no esta disponible"
           price_info: "Online"
         button:
           button_text: "Aplicar a otros cursos"

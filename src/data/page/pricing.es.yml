@@ -7,15 +7,10 @@ meta_info:
   redirects: ["/precio"]
 
 ## BANNER - HEADER
-<<<<<<< HEAD
 seo_title: "Precios de Bootcamp"
 header:
   title: Financiación
   paragraph: Indicanos los siguientes datos para mostrarte tus opciones de financiación
-=======
-seo_title: 4Geeks Academy
-header_data:
->>>>>>> upstream/next
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
   image: "../../../static/images/bg/pricing-bg.jpg"

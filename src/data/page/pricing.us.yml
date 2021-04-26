@@ -7,15 +7,10 @@ meta_info:
   redirects: []
 
 ## BANNER - HEADER
-<<<<<<< HEAD
 seo_title: "Bootcamp Pricing"
 header:
   title: Financing
   paragraph: Indicate the following information to show you the financing options
-=======
-seo_title: 4Geeks Academy
-header_data:
->>>>>>> upstream/next
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
   image: "../../../static/images/bg/pricing-bg.jpg"
