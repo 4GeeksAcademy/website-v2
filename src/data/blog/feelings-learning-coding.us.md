@@ -2,8 +2,7 @@
 author: MRiciglianoC
 comments: true
 date: 2018-06-22 03:51:55+00:00
-excerpt: Our most recent cohort begun with 60% of women enrollment. Women in Miami
-  are choosing 4Geeks to build their software careers.
+excerpt: Feelings when learning and working as a developer.
 layout: post
 link: https://www.4geeksacademy.co/feelings-learning-coding/
 slug: feelings-learning-coding

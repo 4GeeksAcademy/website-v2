@@ -1,12 +1,12 @@
 ---
-comments: true
 date: 2021-02-24 05:29:14 +0000
 excerpt: Find the key opportunities that internships and bootcamps are have to prepare your company for challenging market demands in a post-pandemic world
 layout: post
-link: 
 slug: internships-bootcamps-2021
 title: Internships and bootcamps: the keys to prepare tech companies for 2021 demands
-avatar: /images/staff/giovanna.jpg
+image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/internship.jpg?raw=true"
+image_alt: "estudiantes aprendiendo código en un bootcamp"
+author: giovanna
 ---
 In this article you will find post-pandemic challenges tech companies are facing, how internships and bootcamps are key opportunities to prepare your company for challenging market demands, and successfully lead your workforce into a post-pandemic tech revolution. 
 

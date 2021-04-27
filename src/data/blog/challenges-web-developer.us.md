@@ -2,6 +2,7 @@
 author: alesanchezr
 comments: true
 date: 2015-12-17 17:30:43+00:00
+excerpt: "know the challenges of a web developer and how to overcome them"
 layout: post
 link: https://www.4geeksacademy.co/challenges-web-developer/
 slug: challenges-web-developer

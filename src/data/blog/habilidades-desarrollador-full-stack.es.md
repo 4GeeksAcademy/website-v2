@@ -1,12 +1,9 @@
 ---
-author: @VictorManuelG
-comments: true
+author: VictorManuelG
 date: 2021-04-26 20:44:51+00:00
 excerpt: Conoce aquí las habilidades a desarrollar para un desarrollador full stack
-layout: post
 slug: habilidades-desarrollador-full-stack
 title: Habilidades de un Desarrollador Full-Stack
-avatar: "/images/staff/victor.png"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/hfl-01.png?raw=true"
 image_alt: "sketch de un joven aprendiendo código"
 status: "published"
