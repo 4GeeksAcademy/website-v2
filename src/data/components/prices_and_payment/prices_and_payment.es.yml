@@ -5,3 +5,4 @@ top_label: sede
 button:
   button_text: See plans and prices
   button_link: "/es/financiacion"
+loading: Cargando Recursos...

@@ -65,52 +65,116 @@ heading_section:
 ## CARACAS AT THE MOMENT HAS NO FINANCIAL OPTIONS SET
 hasFinancialsOption: false
 prices:
-  full_time:
-    ## GENERAL INFO
-    slug: "full-time"
-    duration: "9 Weeks"
+  full_stack:
+    full_time:
+      ## GENERAL INFO
+      slug: "full-time"
+      duration: "9 Weeks"
 
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PART-TIME"
-        sub_heading: ""
-      content:
-        price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
-        price_info: ""
-      button:
-        button_text: "APLICA"
-  ## *****************
-  ## PART-TIME SECTION
-  ## *****************
-  part_time:
-    slug: "part-time"
-    duration: "16 Weeks"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "FULL-TIME"
+          sub_heading: ""
+        content:
+          price: "Pay upfront and get a discount "
+          price_info: "or ask for a 3 - 4 payment options"
+        button:
+          button_text: "APLICAR AHORA"
+    ## *****************
+    ## PART-TIME SECTION
+    ## *****************
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
 
-    ## LEFT BOX SECTION PART-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "FULL-TIME"
-        sub_heading: ""
-      content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
-        price_info: ""
-      button:
-        button_text: "APLICA"
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PART-TIME"
+          sub_heading: ""
+        content:
+          price: "Pay upfront and get a discount "
+          price_info: "or ask for a 2 payment options"
+        button:
+          button_text: "APLICAR AHORA"
 
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PART-TIME"
-        sub_heading: ""
-      content:
-        price: "ay upfront and get a discount or ask for a 3 - 4 payment options"
-        price_info: ""
-      button:
-        button_text: "APLICA"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PART-TIME"
+          sub_heading: ""
+        content:
+          price: "ay upfront and get a discount "
+          price_info: "or ask for a 3 - 4 payment options"
+        button:
+          button_text: "APLICAR AHORA"
+
+  software_engineering:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Part-Time no esta disponible"
+          price_info: "Maracaibo - Venezuela"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Full-Time no esta disponible"
+          price_info: "Maracaibo - Venezuela"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Part-Time no esta disponible"
+          price_info: "Maracaibo - Venezuela"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Full-Time no esta disponible"
+          price_info: "Maracaibo - Venezuela"
+        button:
+          button_text: "Aplicar a otros cursos"
+
 
 active_campaign_location_slug: "maracaibo-venezuela"
 breathecode_location_slug: "maracaibo"

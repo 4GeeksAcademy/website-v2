@@ -5,3 +5,4 @@ top_label: location
 button:
   button_text: See plans and prices
   button_link: "/us/financials"
+loading: Loading Resources...
