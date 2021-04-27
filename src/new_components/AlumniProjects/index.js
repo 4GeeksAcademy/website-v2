@@ -49,8 +49,12 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // Disabled arrows becouse it's have a GrabAndSlide Functions
-        // And it works with the kewboard arrows (left/right) when the component is clicked
+
+        /* OPTIONAL
+            Disabled arrows becouse it's have a GrabAndSlide Functions
+            And it works with the kewboard arrows (left/right) when the 
+            component is clicked 
+        */
         arrows: false,
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />
@@ -167,94 +171,3 @@ AlumniProjects.defaultProps = {
     playerHeight: "100%"
 }
 export default AlumniProjects;
-
-
-
-
-{/* <Carousel value={value} onChange={onChange} dots={true}>
-                {projects.map((item, index) => {
-                    return (
-                        <GridContainerWithImage imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
-                            <Div background={Colors.lightGray} height_tablet="auto" padding="17px 51px" gridColumn_tablet="1 / 9">
-                                {item.project_video === "" ?
-
-                                    <StyledBackgroundSection
-                                        // height={`166px`}
-                                        image={item.project_image.childImageSharp.fluid}
-                                        bgSize={`cover`}
-                                        alt="Cnn Logo"
-                                    />
-                                    :
-                                    <ReactPlayer
-                                        id={item.project_video}
-                                        thumb={item.project_image}
-                                        imageSize="maxresdefault"
-                                        right_tablet="-93px"
-                                        left_tablet="unset"
-                                        style={{
-                                            width: "100%",
-                                        }}
-                                    />
-                                }
-                            </Div>
-                            <Div flexDirection="column" gridColumn_tablet="10 / 15 " >
-                                <H3
-                                    textAlign="left"
-                                    margin={`10px 0`}
-                                >Project: {`${item.project_name}`}
-                                </H3>
-                                <H4
-                                    textAlign="left"
-                                    fontWeight="900"
-                                    margin={`24px 0 9px 0`}
-                                > {`> MADE BY:`}
-                                </H4>
-                                {item.alumni.map((alumni, i) => {
-                                    return (
-                                        <Div key={i} justifyContent="start" margin={`0 0 20px 0`} display="flex" >
-                                            <H4
-                                                textAlign="left"
-                                                fontWeight={`400`}
-                                                width="fit-content"
-                                                margin="0 20px 0 0"
-                                            >{`${alumni.first_name} ${alumni.last_name}`}
-                                            </H4>
-                                            {alumni.github != "" &&
-                                                <>
-                                                    <a target="_blank" href={alumni.github} rel="noopener noreferrer nofollow">
-                                                        <Icon icon="github" width="22" color={Colors.black} fill={Colors.black} />
-                                                    </a>
-                                                </>
-                                            }
-                                            {alumni.linkedin != "" &&
-                                                <>
-                                                    <a target="_blank" href={alumni.linkedin} rel="noopener noreferrer nofollow">
-                                                        <Icon icon="linkedin" width="22" color={Colors.blue} fill={Colors.blue} />
-                                                    </a>
-                                                </>
-                                            }
-                                        </Div>
-                                    )
-                                })}
-                                <H4
-                                    textAlign="left"
-                                    fontWeight="900"
-                                    margin={`20px 0 6px 0`}
-                                    style={{borderTop: "1px solid #ebebeb"}}
-                                > {`> DESCRIPTION:`}
-                                </H4>
-                                <Paragraph
-                                    color={Colors.gray}
-                                    textAlign="left"
-                                >{item.project_content}
-                                </Paragraph>
-                                
-                            </Div>
-
-                        </GridContainerWithImage>
-
-                    )
-                })
-                }
-                
-            </Carousel> */}
