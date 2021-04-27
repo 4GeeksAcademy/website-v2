@@ -149,7 +149,7 @@ const Why = (props) => {
         paragraph={partnersData.partners.sub_heading}
         showFeatured={true}
         props={partnersData.partners}
-        slider
+        marquee
       />
       <Staff lang={pageContext.lang} />
     </>
