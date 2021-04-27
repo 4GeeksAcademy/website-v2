@@ -2,62 +2,86 @@ import React, {useState, useEffect} from 'react';
 import {GridContainer, GridContainerWithImage, Div, Grid} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
-import {Colors, Anchor, Button, StyledBackgroundSection, Span} from '../Styling';
+import {Colors, StyledBackgroundSection, Span} from '../Styling';
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import {Carousel} from 'react-responsive-carousel';
 // import Carousel, {Dots} from "@brainhubeu/react-carousel";
 // import "@brainhubeu/react-carousel/lib/style.css";
+// import SliderCarousel from '../SliderCarousel'
+// import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import Icon from "../Icon"
 import ReactPlayer from '../ReactPlayer';
-
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
     const [value, setValue] = useState(0);
 
-    const onChange = e => setValue(e);
+    // console.log(projects.map(i => i.project_name))
+    const CustomNextArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", fontSize:"30px", background: "black", right: "120px", zIndex:99, borderRadius: "50%"}}
+            onClick={onClick}
+          />
+        );
+      }
+      const CustomPrevArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", fontSize:"30px", background: "black", left: "120px", zIndex:99, borderRadius: "50%"}}
+            onClick={onClick}
+          />
+        );
+      }
+    const settings= {
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+        /* OPTIONAL
+            Disabled arrows becouse it's have a GrabAndSlide Functions
+            And it works with the kewboard arrows (left/right) when the 
+            component is clicked 
+        */
+        arrows: false,
+        nextArrow: <CustomNextArrow />,
+        prevArrow: <CustomPrevArrow />
+    }
     return (
         // <Fragment github="/components/alumni_projects">
         <>
-            <GridContainer margin="73px 0 60px 0"
+        <GridContainer margin="73px 0 60px 0">
+            <Div
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
             >
-                <Div
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                >
-                    <H2 margin="0 0 15px 0" fontWeight="900">{title}</H2>
-                    <Paragraph>{paragraph}</Paragraph>
-                </Div>
-            </GridContainer>
+                <H2 margin="0 0 15px 0" fontWeight="900">{title}</H2>
+                <Paragraph>{paragraph}</Paragraph>
+            </Div>
+        </GridContainer>
 
-            {/* <Dots value={value} onChange={onChange} /> */}
-        </>
-    )
-};
-AlumniProjects.propTypes = {
-    limit: PropTypes.number
-}
-AlumniProjects.defaultProps = {
-    limit: 0,
-    playerHeight: "100%"
-}
-export default AlumniProjects;
-
-
-
-
-{/* <Carousel value={value} onChange={onChange} dots={true}>
-                {projects.map((item, index) => {
+            <Slider {...settings}>
+                {projects?.map((item, index) => {
                     return (
                         <GridContainerWithImage imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
-                            <Div background={Colors.lightGray} height_tablet="auto" padding="17px 51px" gridColumn_tablet="1 / 9">
+                            <Div background={Colors.lightGray} height_tablet="auto" padding="0" padding_tablet="17px 51px" gridColumn_tablet="1 / 9">
                                 {item.project_video === "" ?
 
                                     <StyledBackgroundSection
-                                        // height={`166px`}
+                                        height={`500px`}
                                         image={item.project_image.childImageSharp.fluid}
                                         bgSize={`cover`}
                                         alt="Cnn Logo"
@@ -71,6 +95,7 @@ export default AlumniProjects;
                                         left_tablet="unset"
                                         style={{
                                             width: "100%",
+                                            height: "500px",
                                         }}
                                     />
                                 }
@@ -118,7 +143,7 @@ export default AlumniProjects;
                                     textAlign="left"
                                     fontWeight="900"
                                     margin={`20px 0 6px 0`}
-                                    style={{borderTop: "1px solid #ebebeb"}}
+                                    style={{ borderTop: "1px solid #ebebeb" }}
                                 > {`> DESCRIPTION:`}
                                 </H4>
                                 <Paragraph
@@ -126,7 +151,7 @@ export default AlumniProjects;
                                     textAlign="left"
                                 >{item.project_content}
                                 </Paragraph>
-                                
+
                             </Div>
 
                         </GridContainerWithImage>
@@ -134,5 +159,15 @@ export default AlumniProjects;
                     )
                 })
                 }
-                
-            </Carousel> */}
+            </Slider>
+        </>
+    )
+};
+AlumniProjects.propTypes = {
+    limit: PropTypes.number
+}
+AlumniProjects.defaultProps = {
+    limit: 0,
+    playerHeight: "100%"
+}
+export default AlumniProjects;
