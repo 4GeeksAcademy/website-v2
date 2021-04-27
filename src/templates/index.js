@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
@@ -78,14 +78,14 @@ const Home = (props) => {
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
   const chooseProgramRef = useRef(null)
-  
+
   const goToChooseProgram = (e) => {
     e.preventDefault();
     window.scrollTo({
-        top: chooseProgramRef.current?.offsetTop,
-        behavior: "smooth"
-      })
-    }
+      top: chooseProgramRef.current?.offsetTop,
+      behavior: "smooth"
+    })
+  }
 
   return (
     <>
@@ -193,7 +193,6 @@ const Home = (props) => {
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
-      <div id="programs"></div>
       <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
