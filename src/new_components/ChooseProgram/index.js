@@ -65,6 +65,7 @@ const ChooseProgram = (props) => {
     const Selector = props.selector || _Selector;
     return (
         <ChooseWrap
+            onClick={ props.goTo ? props.goTo : undefined}
             centered={props.centered}
             margin={props.margin}
             m_sm={props.m_sm}

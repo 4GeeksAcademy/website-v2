@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
 import {navigate} from "gatsby";
 import {GeekCard} from '../components/Card'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
+import {Container, GridContainer, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
 import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'
 import ProgramDetails from '../new_components/ProgramDetails';
@@ -27,14 +27,18 @@ const Program = ({data, pageContext, yml}) => {
   const courseDetails = data.allCourseYaml.edges[0].node;
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+
+  const course_type = "machine_learning"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
+  
   const hiring = data.allPartnerYaml.edges[0].node;
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
-  console.log("pageContext....", pageContext)
   const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a, b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
 
+console.log("TITLE MACHINE::", yml.prices)
+console.log("TITLE MACHINE::", data)
   return (<>
     <Header
       seo_title={yml.seo_title}
@@ -142,12 +146,19 @@ const Program = ({data, pageContext, yml}) => {
     <TechsWeTeach lang={pageContext.lang} />
     <GeeksInfo lang={pageContext.lang} />
 
+    <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
+      <Div height="1px" background="#EBEBEB"></Div>
+    </GridContainer>
+
     <PricesAndPayment
       type={pageContext.slug}
       lang={pageContext.lang}
       session={session}
       locations={data.allLocationYaml.edges}
-      course={program_type}
+      programType={program_type}
+      courseType={course_type}
+      title={yml.prices.heading}
+      paragraph={yml.prices.sub_heading}
     />
 
     <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
@@ -306,7 +317,7 @@ export const query = graphql`
               heading
               sub_heading
               sub_heading_link
-          }
+            }
             prices{
               heading
               sub_heading
@@ -527,45 +538,73 @@ export const query = graphql`
           }
           
           prices {
-            software_engineering {
-              center_section {
-
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+            machine_learning {
+              part_time{
+                slug
+                duration
+                left_section {
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  button {
+                    button_text
+                  }
                 }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
+                center_section {
+                  header {
+                    heading_two
+                    sub_heading
+                    heading_one
+                  }
+                  plans {
+                    months
+                    monthsInfo
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
+                  button {
+                    button_text
+                  }
+                }
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
               }
-              left_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  heading_two
-                  sub_heading
-                }
-              }
-              right_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+              full_time {
+                slug
+                left_section {
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  button {
+                    button_text
+                  }
                 }
               }
             }

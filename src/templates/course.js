@@ -30,6 +30,7 @@ const Program = ({data, pageContext, yml}) => {
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
 
+  const course_type = "full_stack"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
 
   const handleOpen = () => {
@@ -96,7 +97,8 @@ const Program = ({data, pageContext, yml}) => {
       lang={pageContext.lang}
       session={session}
       locations={data.allLocationYaml.edges}
-      course={program_type}
+      programType={program_type}
+      courseType={course_type}
       title={yml.prices.heading}
       paragraph={yml.prices.sub_heading}
     />
@@ -411,89 +413,107 @@ export const query = graphql`
           }
           
           prices {
-            full_time {
-              center_section {
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+            full_stack {
+              full_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    sub_heading
+                    heading_one
+                    heading_two
+                  }
+                  plans {
+                    months
+                    monthsInfo
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
                 }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    heading_two
+                    sub_heading
+                  }
                 }
-              }
-              left_section {
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  heading_two
-                  sub_heading
-                }
-              }
-              right_section {
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
-                }
-              }
-            }
-            part_time {
-              center_section {
-
-                header {
-                  heading_two
-                  sub_heading
-                  heading_one
-                }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    sub_heading
+                    heading_one
+                    heading_two
+                  }
                 }
               }
-              left_section {
-
-                content {
-                  price
-                  price_info
+              part_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    heading_two
+                    sub_heading
+                    heading_one
+                  }
+                  plans {
+                    months
+                    monthsInfo
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
                 }
-                header {
-                  heading_one
-                  sub_heading
-                  heading_two
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
-              }
-              right_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  sub_heading
-                  heading_two
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
               }
             }
           }
-          
         }
       }
     }
