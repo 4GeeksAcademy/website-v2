@@ -1,13 +1,13 @@
 meta_info:
-  slug: precio
-  title: "Precios de los Bootcamps de 4Geeks Academy"
-  description: "Nunca dejamos de intentarlo hasta que creamos un programa premium pero asequible. Nuestra filosofía se basa en hacer que la educación esté disponible para todos"
+  slug: financiacion
+  title: ""
+  description: null
   image: null
-  keywords: "Precios, Bootcamps, 4Geeks Academy"
-  redirects: ["/precio"]
+  keywords: ""
+  redirects: ["/financiacion"]
 
 ## BANNER - HEADER
-seo_title: "Precios de Bootcamp"
+seo_title: "Financiación de Bootcamp"
 header:
   title: Financiación
   paragraph: Indicanos los siguientes datos para mostrarte tus opciones de financiación
@@ -54,15 +54,15 @@ label:
 syllabus_button_text: Buscar
 
 ## PAYMENT GUIDE SECTION
-payment_guide:
-  heading: "GUÍA DE PAGOS"
-  sub_heading: "¿Tienes preguntas sobre la financiación o planes de pago extendido?"
-  button_text: "VER LA GUÍA"
-  button_link: ""
-  submit_button_text: "Enviar"
-  submit_button_link: ""
+# payment_guide:
+#   heading: "GUÍA DE PAGOS"
+#   sub_heading: "¿Tienes preguntas sobre la financiación o planes de pago extendido?"
+#   button_text: "VER LA GUÍA"
+#   button_link: ""
+#   submit_button_text: "Enviar"
+#   submit_button_link: ""
 
 ## IMMERSED IN ECOSYSTEM SECTION
-ecosystem:
-  heading: "ALIADOS FINANCIEROS"
-  sub_heading: "Estamos orgullosos de tener una amplia gama de planes financieros, de los mejores alrededor del mundo, gracias a nuestros aliados"
+# ecosystem:
+#   heading: "ALIADOS FINANCIEROS"
+#   sub_heading: "Estamos orgullosos de tener una amplia gama de planes financieros, de los mejores alrededor del mundo, gracias a nuestros aliados"

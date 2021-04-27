@@ -464,11 +464,13 @@ export const query = graphql`
               } 
             }
             prices {
-                full_time {
-                  slug
-                }
-                part_time {
-                  slug
+                full_stack {
+                  full_time {
+                    slug
+                  }
+                  part_time {
+                    slug
+                  }
                 }
               }
             info_box {

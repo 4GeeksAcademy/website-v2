@@ -40,18 +40,28 @@ const PricingCard = ({data, lang, children, price, color, background, transform_
 
 const courseArray = [
   {
-    value: "part_time",
-    label: "Full Stack Development (Part-Time)"
-  },
-  {
-    value: "full_time",
-    label: "Full Stack Development (Full-Time)"
+    value: "full_stack",
+    label: "Full Stack Developer"
   },
   {
     value: "software_engineering",
     label: "Software Engineering"
+  },
+  {
+    value: "machine_learning",
+    label: "Machine Learning"
   }
 ];
+const modalityArray = [
+  {
+    value: "part_time",
+    label: "Part Time"
+  },
+  {
+    value: "full_time",
+    label: "Full Time"
+  }
+]
 
 const PricesAndPayments = (props) => {
   const data = useStaticQuery(graphql`
@@ -82,7 +92,9 @@ const PricesAndPayments = (props) => {
   const [activeStep, setActiveStep] = useState(0);
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
+  const [modality, setModality] = useState(false)
   const [locations, setLocations] = useState(false);
+
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
     setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
@@ -91,14 +103,18 @@ const PricesAndPayments = (props) => {
       setCurrentLocation(_loc ? _loc.node : null)
     }
   }, [session, props.locations])
-
   // sync property course
-  useEffect(() => setCourse(courseArray.find(c => c.value === props.course)), [props.course]);
+  useEffect(() => (
+    setCourse(courseArray.find(c => c.value === props.courseType)),
+    setModality(modalityArray.find(d => d.value === props.programType))
+
+  ), [props.courseType, props.programType]);
 
   if (!currentLocation || !currentLocation.prices)
-    return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
-
-  const prices = !course ? {} : currentLocation.prices[course.value];
+  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+  
+  let prices = !course && !modality ? {} : currentLocation.prices[course?.value][modality?.value];
+  
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
 
@@ -116,9 +132,7 @@ const PricesAndPayments = (props) => {
       </GridContainer>
       <GridContainer margin_tablet="0 0 73px 0">
         <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
-
-          {/* <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">"apply_button_text"</Button> */}
-          {!props.course &&
+          {props.course &&
             <Select
               top="40px"
               left="20px"
@@ -130,8 +144,8 @@ const PricesAndPayments = (props) => {
             />
             // </GridContainer>
           }
-        &nbsp;
-      {course &&
+          &nbsp;
+          {course &&
             // <GridContainer>
             <Select
               top="40px"
@@ -168,8 +182,8 @@ const PricesAndPayments = (props) => {
             }
             {prices.center_section && Array.isArray(prices.center_section.plans) &&
               <PricingCard lang={props.lang} color="white" background='black'
-                price={prices.center_section.plans[activeStep].payment}
-                priceInfo={prices.center_section.plans[activeStep].paymentInfo}
+                price={prices.center_section.plans[activeStep]?.payment}
+                priceInfo={prices.center_section.plans[activeStep]?.paymentInfo}
                 applyLabel={apply_button_text}
                 data={prices.center_section}
               >
