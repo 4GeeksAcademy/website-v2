@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
@@ -77,6 +77,15 @@ const Home = (props) => {
 
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
+  const chooseProgramRef = useRef(null)
+  
+  const goToChooseProgram = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: chooseProgramRef.current?.offsetTop,
+        behavior: "smooth"
+      })
+    }
 
   return (
     <>
@@ -148,7 +157,24 @@ const Home = (props) => {
           <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
           {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
                     <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
-          <a target="_self" href={yml.button.button_link}><Button color={Colors.blue}>{yml.button.button_text}</Button></a>
+
+
+          <ChooseProgram
+            goTo={goToChooseProgram}
+            right="15px"
+            top="40px"
+            // margin="40px 0"
+            textAlign="center"
+            textAlign_tablet="left"
+            // programs={data.allChooseProgramYaml.edges[0].node.programs}
+            openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+            closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+          />
+
+          {/* 
+          Comented because is not necesary
+          <a target="_self" href={yml.button.button_link}><Button color={Colors.blue}>{yml.button.button_text}</Button></a> 
+          */}
           <News lang={pageContext.lang} limit={yml.news.limit} height="40px" width="90px" justifyContent="center" />
         </Div>
         <Div display="none" display_tablet="flex" height="auto" width="100%">
@@ -168,7 +194,7 @@ const Home = (props) => {
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
       <div id="programs"></div>
-      <ChooseYourProgram lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
+      <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
