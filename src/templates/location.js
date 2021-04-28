@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect, useContext, useRef} from 'react';
 import {Link, Anchor} from "../components/Styling/index"
 import Card from '../components/Card'
 import ChooseProgram from '../new_components/ChooseProgram'
@@ -40,6 +40,7 @@ const Location = ({data, pageContext, yml}) => {
   const handleOpen = () => {
     setOpen(true);
   };
+  const chooseProgramRef = useRef(null)
 
   const handleClose = () => {
     setOpen(false);
@@ -54,21 +55,40 @@ const Location = ({data, pageContext, yml}) => {
     loadCohorts();
   }, []);
 
+  const goToChooseProgram = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: chooseProgramRef.current?.offsetTop,
+      behavior: "smooth"
+    })
+  }
   return (<>
     {/* github={`/location`} */}
     {/* <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px"> */}
     {/* <Grid height="375px" height_md="219px" columns="2" rows="2" columns_md="12" rows_md="1" background={Colors.verylightGray}> */}
-    <GridContainerWithImage padding="24px 0 " padding_tablet="36px 0 54px 0" columns_tablet="14" margin="67px 0" margin_tablet="0">
+    <GridContainerWithImage padding="24px 17px " padding_tablet="54px 0 54px 0" columns_tablet="14" margin="67px 0" margin_tablet="0">
       <Div flexDirection="column" alignItems="center" alignItems_tablet="start" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
         <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
         <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
         <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
         <Paragraph textAlign_tablet="left" margin="0 0 30px 0">{yml.info_box.email} </Paragraph>
-        <a target="_self" href="#program"><Button color={Colors.blue}>{yml.button_header.button_text}</Button></a>
+        {/* <Button goTo={goToChooseProgram} color={Colors.blue}>{yml.button_header.button_text}</Button> */}
+        <ChooseProgram
+          goTo={goToChooseProgram}
+          right="15px"
+          top="40px"
+          // margin="40px 0"
+          textAlign="center"
+          textAlign_tablet="left"
+          // programs={data.allChooseProgramYaml.edges[0].node.programs}
+          openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+          closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+        />
+
       </Div>
-      <Div height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
-        <Circle
+      <Div height="auto" width="100%" gridColumn_tablet="7 / 15" style={{position: "relative"}}>
+        {/* <Circle
           color="blue"
           width="53px"
           height="53px"
@@ -114,13 +134,13 @@ const Location = ({data, pageContext, yml}) => {
           top="40px"
           right="10%"
           opacity="0.4"
-        />
+        /> */}
         {/* <Div style={{position: "absolute", background: "#C7F3FD", width: "71%", height: "192px", top: "-24px", left: "97px", borderRadius: "3px"}}></Div>
         <Div style={{position: "absolute", background: "#FFB718", width: "256px", height: "174px", bottom: "-25px", right: "18px", borderRadius: "3px"}}></Div> */}
         <StyledBackgroundSection
-          height={`395px`}
+          height={`495px`}
           image={yml.header.image.childImageSharp.fluid}
-          bgSize={`cover`}
+          bgSize={`contain`}
           alt={yml.header.alt}
         />
       </Div>
@@ -162,8 +182,7 @@ const Location = ({data, pageContext, yml}) => {
       })}
     </GridContainer>
     <OurPartners images={hiring.partners.images} title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
-    <div id="program"></div>
-    <ChooseYourProgram lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
+    <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
     <UpcomingDates lang={pageContext.lang} />
     <Loc lang={pageContext.lang} locations={data.test.edges} />
     <Staff lang={pageContext.lang} />

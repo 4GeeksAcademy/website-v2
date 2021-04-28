@@ -10,6 +10,7 @@ import Staff from '../new_components/Staff';
 import BlogPosts from '../components/BlogPosts'
 import {Link} from 'gatsby'
 import Icon from '../new_components/Icon'
+import {Circle} from '../new_components/BackgroundDrawing'
 import Img from "gatsby-image"
 
 const Why = (props) => {
@@ -24,11 +25,60 @@ const Why = (props) => {
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         image={yml.header.image.childImageSharp.fluid}
-        margin_tablet="70px 0 0 0"
-        margin="120px 0 0 0"
         padding="0 0 60px 0"
         padding_tablet="0 0 60px 0"
-      />
+        position="relative"
+      >
+        <Circle
+          color="lightBlue"
+          width="53px"
+          height="53px"
+          top="0"
+          left="30px"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="250px"
+          height="250px"
+          bottom="-50px"
+          right="-125px"
+          opacity="0.2"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="116px"
+          height="116px"
+          bottom="-58px"
+          left="-58px"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="21px"
+          height="21px"
+          top="160px"
+          right="120px"
+          zIndex="1"
+        />
+        <Circle
+          color="blue"
+          width="9px"
+          height="9px"
+          top="100px"
+          left="10%"
+        />
+
+        <Circle
+          color="blue"
+          width="57px"
+          height="57px"
+          top="40px"
+          right="10%"
+          opacity="0.4"
+        />
+      </Header>
       <Grid gridTemplateColumns_tablet="14">
         <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
@@ -61,12 +111,12 @@ const Why = (props) => {
         </Div>
       </GridContainer >
       <Credentials lang={data.allCredentialsYaml.edges} />
-      <GridContainer margin="0 0 30px 0" padding="0">
+      <GridContainer margin="0 0 40px 0" padding="0">
         <Div flexDirection="column" >
           <H2 >{cornerstones.title}</H2>
         </Div>
       </GridContainer>
-      <GridContainer padding="0" height="auto" columns_tablet="2" margin_tablet="0 0 51px 0" margin="0 0 20px 0">
+      <GridContainer padding="0 17px" height="auto" columns_tablet="2" margin_tablet="0 0 51px 0" margin="0 0 20px 0">
 
         {
           Array.isArray(cornerstones.cornerstones_list) && cornerstones.cornerstones_list.map((m, i) => {
@@ -123,7 +173,7 @@ export const query = graphql`
                 paragraph
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                      fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }

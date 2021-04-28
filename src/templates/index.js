@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
@@ -78,14 +78,14 @@ const Home = (props) => {
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
   const chooseProgramRef = useRef(null)
-  
+
   const goToChooseProgram = (e) => {
     e.preventDefault();
     window.scrollTo({
-        top: chooseProgramRef.current?.offsetTop,
-        behavior: "smooth"
-      })
-    }
+      top: chooseProgramRef.current?.offsetTop,
+      behavior: "smooth"
+    })
+  }
 
   return (
     <>
@@ -105,6 +105,8 @@ const Home = (props) => {
           top="170px"
           right="120px"
           scale="0.5"
+          display="none"
+          display_tablet="inline"
         />
         <Circle
           color="grey"
@@ -112,6 +114,8 @@ const Home = (props) => {
           height="30px"
           top="100px"
           right="9%"
+          display="none"
+          display_tablet="inline"
         />
         <Circle
           color="black"
@@ -119,6 +123,8 @@ const Home = (props) => {
           height="30px"
           top="100px"
           right="12%"
+          display="none"
+          display_tablet="inline"
         />
         <Circle
           color="grey"
@@ -144,7 +150,7 @@ const Home = (props) => {
           opacity="0.2"
         />
 
-        <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
+        <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" alignItems="center" alignItems_tablet="start">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
           <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
@@ -183,14 +189,12 @@ const Home = (props) => {
       </GridContainerWithImage>
 
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="104px 0 104px 0"/>
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="104px 0 104px 0" />
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
-
-      <div id="programs"></div>
       <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
-      <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
+      <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
 
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
