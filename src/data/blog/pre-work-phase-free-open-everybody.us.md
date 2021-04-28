@@ -55,4 +55,4 @@ In the pre-work you will learn: HTML5, CSS and some Javascript. There will be so
 All that said, we encourage you to take the 2 weeks pre-work of our course for free, we ask for a very small (US $160) deposit and you can get it back if you finish the pre-work and you don't want to continue to the next phase.
 
 
-[Sign up for the free 2 weeks pre-work](https://4geeksacademy.co/course/web-development-parttime/)
+[Sign up for the free 2 weeks pre-work](//course/web-development-parttime/)

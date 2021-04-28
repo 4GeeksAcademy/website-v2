@@ -24,7 +24,7 @@ testimonials:
       to create my career as a graphic designer more powerful without having to stop what I was doing 
       within a perfect part-time cohort. 
       I now have all kinds of new tools I learned there along the way, 
-      and there is a new comfort in knowing that I can always go back and keep growing at 4geeks.
+      and there is a new comfort in knowing that I can always go back and keep growing at 4Geeks.
   - student_name: "Naila Kaliyeva"
     featured: false
     highlighted: false
@@ -62,7 +62,7 @@ testimonials:
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
   - student_name: "Charles Fabricius"
     featured: true
-    highlighted: false
+    highlighted: true
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/charles-fabricius.jpg"

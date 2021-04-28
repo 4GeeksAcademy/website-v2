@@ -1,16 +1,16 @@
 meta_info:
   slug: sobre-la-academia
-  title: ""
-  description: "Acerca de 4Geeks Academy"
+  title: "Sobre 4Geeks Academy"
+  description: "Conoce los resultados, demografía, piedras angulares, equipo e historia de 4Geeks Academy"
   image: ""
-  keywords: ""
+  keywords: "Sobre 4Geeks Academy"
   redirects: ["/la-academia", "/es/academia"]
 
-seo_title: "sobre la academia"
+seo_title: "Sobre 4Geeks Academy"
 header:
   title: "Empoderamos Talentos, impulsando sus carreras profesionales con programación"
   paragraph: ""
-  image: "../../../static/images/bg/the-academy-bg.jpg"
+  image: "../../../static/images/the-academy/the-academy-header.jpg"
   image_alt: ""
 
 ## BADGES SECTION
@@ -82,21 +82,21 @@ outcomes:
 
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:
-  heading: NUESTRAS PIEDRAS ANGULARES
-  sub_heading: ""
+  title: Nuestras Piedras Angulares
+  paragraph: ""
   cornerstones_list:
     - title: SALÓN DE CLASES INVERTIDO
       content: La teoría se entrega a través de vídeos, animación, imágenes e infografías. El tiempo en clase se utiliza para debatir, crear y construir proyectos, y orientar sobre ejercicios prácticos.
-      icon: book
+      icon: laptop_new
     - title: 1 MENTOR POR CADA 7 ESTUDIANTES
       content: Un ambiente cercano proporciona la oportunidad de adaptarse al ritmo particular de cada estudiante.
-      icon: teacher
+      icon: teacher_new
     - title: MENTORÍA 1:1
       content: Cada estudiante tiene la oportunidad de tener conversaciones regulares con un mentor.
-      icon: users
+      icon: chat
     - title: ÁRBOL DE TALENTOS
       content: El programa de estudios establece 44 habilidades; los estudiantes ganan puntos por cada una de ellas de forma lúdica.
-      icon: sitemap
+      icon: notes
 
 ## STAFF SECTION
 staff:

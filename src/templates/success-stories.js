@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Column, Row, Container, Div, Grid} from "../new_components/Sections";
+import {Header, GridContainer, Container, Div, Grid} from "../new_components/Sections";
 import {Title, H1, H2, H3, H4, H5, Paragraph} from '../new_components/Heading';
 import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling';
 import ReactPlayer from '../new_components/ReactPlayer'
@@ -26,10 +26,10 @@ const TestimonialCard = ({highlighted, featured, height, height_md, studentRatin
             flexDirection="column"
             position="relative"
             height={height}
-            height_md={height_md}
+            height_tablet={height_md}
             background={background}
             borderRadius="3px"
-            gridArea_md={gridAreaPosition}
+            gridColumn_tablet={gridAreaPosition}
             padding="20px 20px 0 20px"
             border={`1px solid ${Colors.lightGray}`}
             boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
@@ -86,14 +86,14 @@ const TestimonialCard = ({highlighted, featured, height, height_md, studentRatin
     )
 }
 const featuredPositions = [{
-    position: "1/1/6/5",
+    position: "1 / 5",
     height: "378px",
     height_md: "",
     size: "small",
     className: "react-player-testimonials-small"
 },
 {
-    position: "1/5/6/13",
+    position: "5 / 13",
     height: "378px",
     height_md: "",
     size: "big",
@@ -102,21 +102,21 @@ const featuredPositions = [{
 
 const defaultPositions = [
     {
-        position: "1/1/4/5",
+        position: "1 / 5",
         height: "378px",
         height_md: "",
         size: "small",
         className: "react-player-testimonials-small"
     },
     {
-        position: "1/5/4/9",
+        position: "5 / 9",
         height: "378px",
         height_md: "",
         size: "small",
         className: "react-player-testimonials-small"
     },
     {
-        position: "1/9/6/13",
+        position: "9 / 13",
         height: "636px",
         height_md: "",
         size: "big",
@@ -142,82 +142,66 @@ const SuccessStories = (props) => {
     let testimonials = data.allTestimonialsYaml.edges[0].node
     return (
         <>
-            <Container
-                variant="fluid"
-                margin="120px auto">
-                <Div
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                >
-                    <H1
-                        fontSize="13px"
-                        lineHeight="16px"
-                        fontWeight="700"
-                        letterSpacing="0.05em"
-                        color="#606060"
-                    >{yml.seo_title}</H1>
-                    <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{yml.header.tagline}</H2>
-                    <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">Aprende desde cero hasta tener tu primer trabajo como programador. Recibe mentoría ilimitada, soporte de por vida
-        y consigue un trabajo como programador en 16 semanas después de empezar.</Paragraph>
-
-                </Div>
-                <Container variant="fixed">
-                    {/* <Badges lang={pageContext.lang} /> */}
-                </Container>
-            </Container>
-            <Container variant="fixed">
-                <Grid height="auto" columns="1" rows="1" columns_md="12" gridGap="11px">
-                    {
-                        Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.featured == true && f.hidden == false).map((m, i) => {
-                            return (
-                                i < 2 &&
-                                <TestimonialCard
-                                    key={i}
-                                    height="507px"
-                                    studentRating={m.rating}
-                                    className={featuredPositions[i]['className']}
-                                    image={m.student_thumb}
-                                    background={m.highlighted && Colors.darkYellow}
-                                    name={m.student_name}
-                                    short_content={m.short_content}
-                                    description={featuredPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
-                                    video={m.student_video}
-                                    gridAreaPosition={featuredPositions[i]['position']}
-                                />
-                            )
-                        })
-                    }
-                </Grid>
-            </Container>
-            <Container variant="fixed">
+            <Header
+                seo_title={yml.seo_title}
+                title={yml.header.title}
+                paragraph={yml.header.paragraph}
+                padding_tablet="72px 0 40px 0"
+                padding="66px 17px 85px 0"
+            >
+            </Header>
+            <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
+                {/* <Grid height="auto" columns="1" rows="1" columns_md="12" gridGap="11px"> */}
+                {
+                    Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.featured == true && f.hidden == false).map((m, i) => {
+                        return (
+                            i < 2 &&
+                            <TestimonialCard
+                                key={i}
+                                height="507px"
+                                studentRating={m.rating}
+                                className={featuredPositions[i]['className']}
+                                image={m.student_thumb}
+                                background={m.highlighted && Colors.darkYellow}
+                                name={m.student_name}
+                                short_content={m.short_content}
+                                description={featuredPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
+                                video={m.student_video}
+                                gridAreaPosition={featuredPositions[i]['position']}
+                            />
+                        )
+                    })
+                }
+                {/* </Grid> */}
+            </GridContainer >
+            <GridContainer variant="fixed" margin_tablet="30px 0" margin="30px 0" padding_tablet="0">
                 <Div height="7px" background={Colors.lightGray} />
-            </Container>
-            <Container variant="fixed">
-                <Grid height="auto" columns_md="12" rows_md="10" gridGap="11px">
-                    {
-                        Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
-                            return (
-                                i < 5 &&
-                                <TestimonialCard
-                                    key={i}
-                                    className={defaultPositions[i]['className']}
-                                    studentRating={m.rating}
-                                    image={m.student_thumb}
-                                    height={defaultPositions[i]['height']}
-                                    height_md={defaultPositions[i]['height_md']}
-                                    background={m.highlighted && Colors.darkYellow}
-                                    name={m.student_name}
-                                    short_content={m.short_content}
-                                    description={defaultPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
-                                    video={m.student_video}
-                                    gridAreaPosition={defaultPositions[i]['position']}
-                                />
-                            )
-                        })
-                    }
-                </Grid>
-            </Container>
+            </GridContainer>
+            <GridContainer variant="fixed" padding_tablet="0">
+                {/* <Grid height="auto" columns_md="12" rows_md="10" gridGap="11px"> */}
+                {
+                    Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
+                        return (
+                            i < 5 &&
+                            <TestimonialCard
+                                key={i}
+                                className={defaultPositions[i]['className']}
+                                studentRating={m.rating}
+                                image={m.student_thumb}
+                                height={defaultPositions[i]['height']}
+                                height_md={defaultPositions[i]['height_md']}
+                                background={m.highlighted && Colors.darkYellow}
+                                name={m.student_name}
+                                short_content={m.short_content}
+                                description={defaultPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
+                                video={m.student_video}
+                                gridAreaPosition={defaultPositions[i]['position']}
+                            />
+                        )
+                    })
+                }
+                {/* </Grid> */}
+            </GridContainer>
         </>
     )
 };
@@ -234,7 +218,7 @@ query SuccessQuery($file_name: String!, $lang: String!) {
                 }
                 seo_title
                 header{
-                    tagline
+                    title
                     paragraph   
                 }
             }

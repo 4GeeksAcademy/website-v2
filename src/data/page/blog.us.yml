@@ -1,15 +1,33 @@
 meta_info:
   slug: blog
-  title: ""
-  description: null
+  title: "4geeks Academy Blog"
+  description: "Find resources and news for both potential and current software builders. Basic knowledge, trends, career advice and much more in 4geeks Academy blog."
   image: null
-  keywords: ""
+  keywords: "4geeks Academy Blog"
   redirects: []
 
 banner:
   tagline: "4GEEKS ACADEMY BLOG"
   sub_heading: "Resources and news for both potential and current software builders."
   image: "../../../static/images/bg/pricing-bg.jpg"
+
+seo_title: "4GEEKS ACADEMY BLOG"
+header:
+  title: "Blog"
+  paragraph: "Resources and news for both potential and current software builders."
+  image: "../../../static/images/bg/pricing-bg.jpg"
+  image_alt: ""
+
+question: "¿Que te interesa?"
+topics:
+  - Full Stack
+  - Software Engineer
+  - Machine Learning
+  - Learn To Program
+  - Career Growth
+  - Coding Bootcamps
+  - Trends & Tech  
+
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."

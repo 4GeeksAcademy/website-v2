@@ -1,39 +1,87 @@
 import React, {useState, useEffect} from 'react';
-import {Row, Column, Div, Grid} from '../Sections'
+import {GridContainer, GridContainerWithImage, Div, Grid} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
-import {Colors, Anchor, Button, StyledBackgroundSection, Span} from '../Styling';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
+import {Colors, StyledBackgroundSection, Span} from '../Styling';
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import Carousel, {Dots} from "@brainhubeu/react-carousel";
+// import "@brainhubeu/react-carousel/lib/style.css";
+// import SliderCarousel from '../SliderCarousel'
+// import {Carousel} from 'react-responsive-carousel';
 import {Link} from 'gatsby';
 import Fragment from "../Fragment"
 import Icon from "../Icon"
 import ReactPlayer from '../ReactPlayer';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-
-const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
+const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
+    const [value, setValue] = useState(0);
 
+    // console.log(projects.map(i => i.project_name))
+    const CustomNextArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", fontSize:"30px", background: "black", right: "120px", zIndex:99, borderRadius: "50%"}}
+            onClick={onClick}
+          />
+        );
+      }
+      const CustomPrevArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", fontSize:"30px", background: "black", left: "120px", zIndex:99, borderRadius: "50%"}}
+            onClick={onClick}
+          />
+        );
+      }
+    const settings= {
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+        /* OPTIONAL
+            Disabled arrows becouse it's have a GrabAndSlide Functions
+            And it works with the kewboard arrows (left/right) when the 
+            component is clicked 
+        */
+        arrows: false,
+        nextArrow: <CustomNextArrow />,
+        prevArrow: <CustomPrevArrow />
+    }
     return (
-        <Fragment github="/components/alumni_projects">
-            <Carousel
-                showIndicators={false}
-                showThumbs={false}
-                showStatus={false}
-                autoPlay={false}
-                infiniteLoop={true}
-                showArrows={true}
-                interval={5000}
-                transitionTime={1000}
+        // <Fragment github="/components/alumni_projects">
+        <>
+        <GridContainer margin="73px 0 60px 0">
+            <Div
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
             >
-                {projects.map((item, index) => {
+                <H2 margin="0 0 15px 0" fontWeight="900">{title}</H2>
+                <Paragraph>{paragraph}</Paragraph>
+            </Div>
+        </GridContainer>
+
+            <Slider {...settings}>
+                {projects?.map((item, index) => {
                     return (
-                        <Grid columns_tablet="2" gridGap="0">
-                            <Div background={Colors.lightGray} padding="37px 107px">
+                        <GridContainerWithImage imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
+                            <Div background={Colors.lightGray} height_tablet="auto" padding="0" padding_tablet="17px 51px" gridColumn_tablet="1 / 9">
                                 {item.project_video === "" ?
 
                                     <StyledBackgroundSection
-                                        height={`350px`}
+                                        height={`500px`}
                                         image={item.project_image.childImageSharp.fluid}
                                         bgSize={`cover`}
                                         alt="Cnn Logo"
@@ -43,14 +91,16 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                         id={item.project_video}
                                         thumb={item.project_image}
                                         imageSize="maxresdefault"
+                                        right_tablet="-93px"
+                                        left_tablet="unset"
                                         style={{
                                             width: "100%",
-                                            height: "350px"
+                                            height: "500px",
                                         }}
                                     />
                                 }
                             </Div>
-                            <Div flexDirection="column" padding="0 40px">
+                            <Div flexDirection="column" gridColumn_tablet="10 / 15 " >
                                 <H3
                                     textAlign="left"
                                     margin={`10px 0`}
@@ -93,40 +143,25 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                     textAlign="left"
                                     fontWeight="900"
                                     margin={`20px 0 6px 0`}
-                                    style={{borderTop: "1px solid #ebebeb"}}
+                                    style={{ borderTop: "1px solid #ebebeb" }}
                                 > {`> DESCRIPTION:`}
                                 </H4>
                                 <Paragraph
                                     color={Colors.gray}
                                     textAlign="left"
-                                    padding_tablet="0 175px 0 0"
                                 >{item.project_content}
                                 </Paragraph>
-                                {/* <Div display="flex">
-                                    {item.project_video && <Anchor to={`${item.project_video}`} target="_blank" rel="noopener noreferrer nofollow">
-                                        <Paragraph margin={`10px 5px 0 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Video Demo •</Paragraph>
-                                    </Anchor>
-                                    }
-                                    {item.live_link && <Anchor to={`${item.live_link}`} target="_blank" rel="noopener noreferrer nofollow">
-                                        <Paragraph margin={`10px 0`} height={`20px`} fontSize={`18px`} align_sm={`left`}>Live Link </Paragraph>
-                                    </Anchor>
-                                    }
-                                </Div> */}
+
                             </Div>
 
-                        </Grid>
+                        </GridContainerWithImage>
 
                     )
                 })
                 }
-                {/* <Div display="block" align="center" padding="150px 0">
-                    <H2 width="100%">{lang[0].node.button_section.button_text}</H2>
-                    <Link to={lang[0].node.button_section.button_link}>
-                        <Button outline width="200px" color={Colors.blue} textColor={Colors.black} margin="2rem 0" padding=".35rem.85rem">{lang[0].node.button_section.button_text}</Button>
-                    </Link>
-                </Div> */}
-            </Carousel>
-        </Fragment>)
+            </Slider>
+        </>
+    )
 };
 AlumniProjects.propTypes = {
     limit: PropTypes.number
@@ -136,7 +171,3 @@ AlumniProjects.defaultProps = {
     playerHeight: "100%"
 }
 export default AlumniProjects;
-
-
-
-

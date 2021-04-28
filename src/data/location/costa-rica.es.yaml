@@ -1,21 +1,24 @@
 meta_info:
-  slug: "costa-rica-san-jose"
-  title: "4Geeks Academy Coding Bootcamp - Costa Rica, San Jose"
+  slug: "bootcamp-programacion-costa-rica"
+  title: "Coding Bootcamp Campus Costa Rica"
   position: 5
-  description: null
+  description: "Coding Bootcamp Campus de Costa Rica, San Jose"
   image: ""
   # it will not show up on the applications forms
   unlisted: false
-  keywords: ""
-  redirects: []
+  keywords: "Coding Bootcamp Campus Costa Rica"
+  redirects: ["/es/location/costa-rica-san-jose"]
 
 seo_title: "Aprende a programar en Costa Rica"
 header:
   tagline: "4GEEKS ACADEMY EN COSTA RICA"
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/mcbo-loc-2.png"
+  image: "../../../static/images/locations/costarica-home.png"
   alt: ""
 
+button_header:
+  button_text: Ver Programas
+  button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR PROGRAMA" # <-- this will show everywhere in the website
   apply_button_text: "APLICAR" # <-- this will show everywhere in the website
@@ -23,7 +26,9 @@ button:
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
   cohort_more_details_text: "DETALLES"
-
+badges:
+  title: ""
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 news:
   title: "4Geeks Academy Costa Rica en las noticias..."
 upcoming:
@@ -62,64 +67,127 @@ heading_section:
 hasFinancialsOption: false
 financials_max_months:
 prices:
-  full_time:
-    ## GENERAL INFO
-    slug: "full-time"
-    duration: "9 Weeks"
+  full_stack:
+    full_time:
+      ## GENERAL INFO
+      slug: "full-time"
+      duration: "9 Weeks"
 
-    ## LEFT BOX SECTION FULL-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "FULL-TIME"
-        sub_heading: ""
-      content:
-        price: "Pregunta por las becas o Paga por adelantado y recibe un plan de pagos de 3-4 meses"
-        price_info:
-      button:
-        button_text: "APLICA"
+      ## LEFT BOX SECTION FULL-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "FULL-TIME"
+          sub_heading: ""
+        content:
+          price: "Pregunta por las becas o Paga por adelantado y recibe un plan de pagos de 3-4 meses"
+          price_info:
+        button:
+          button_text: "APLICAR AHORA"
 
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PART-TIME"
-        sub_heading: ""
-      content:
-        price: "Pregunta por las becas o Paga por adelantado y recibe un plan de pagos de 3-4 meses"
-        price_info: ""
-      button:
-        button_text: "APLICA"
-  ## *****************
-  ## PART-TIME SECTION
-  ## *****************
-  part_time:
-    slug: "part-time"
-    duration: "16 Weeks"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PART-TIME"
+          sub_heading: ""
+        content:
+          price: "Pregunta por las becas o Paga por adelantado y recibe un plan de pagos de 3-4 meses"
+          price_info: ""
+        button:
+          button_text: "APLICAR AHORA"
+    ## *****************
+    ## PART-TIME SECTION
+    ## *****************
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
 
-    ## LEFT BOX SECTION PART-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "FULL-TIME"
-        sub_heading: ""
-      content:
-        price: "Pay upfront and get a discount or ask for a 2 payment options"
-        price_info: ""
-      button:
-        button_text: "APLICA"
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "FULL-TIME"
+          sub_heading: ""
+        content:
+          price: "Pay upfront and get a discount or ask for a 2 payment options"
+          price_info: ""
+        button:
+          button_text: "APLICAR AHORA"
 
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PART-TIME"
-        sub_heading: ""
-      content:
-        price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
-        price_info: ""
-      button:
-        button_text: "APLICA"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PART-TIME"
+          sub_heading: ""
+        content:
+          price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
+          price_info: ""
+        button:
+          button_text: "APLICAR AHORA"
+
+  software_engineering:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modaliad Part-Time no esta disponible"
+          price_info: "San José - Costa Rica"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modaliad Full-Time no esta disponible"
+          price_info: "San José - Costa Rica"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modaliad Part-Time no esta disponible"
+          price_info: "San José - Costa Rica"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modaliad Full-Time no esta disponible"
+          price_info: "San José - Costa Rica"
+        button:
+          button_text: "Aplicar a otros cursos"
 
 active_campaign_location_slug: "costa-rica"
 breathecode_location_slug: "costa-rica"

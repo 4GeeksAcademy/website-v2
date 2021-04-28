@@ -1,27 +1,31 @@
 meta_info:
-  slug: "downtown-miami-usa"
+  slug: "bootcamp-programacion-miami"
   position: 1
   title: "4Geeks Academy Miami - Bootcamp de programación en Miami, aprende a programar en Miami"
   description: "null"
   image: ""
   keywords: "null"
-  redirects: []
+  redirects: ["/es/location/downtown-miami-usa"]
 
 seo_title: "Bootcamp de Programación en Miami"
 header:
-  tagline: "4GEEKS ACADEMY IN MIAMI"
+  tagline: "Miami"
   paragraph: "Miami is una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \\n El Career Support y Student Support es de por vida."
-  image: "../../../static/images/locations/miami-loc.jpg"
+  image: "../../../static/images/locations/miami-home.png"
   alt: ""
-
+button_header:
+  button_text: Ver Programas
+  button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR SYLLABUS" # <-- this will show everywhere in the website
   apply_button_text: "APLICAR" # <-- this will show everywhere in the website
-
   syllabus_submit_text: "DESCARGAR"
   cohort_more_details_text: "DETALLES"
   apply_button_link: "/aplica"
 
+badges:
+  title: ""
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 news:
   title: "4Geeks Academy Miami en las noticias..."
 upcoming:
@@ -51,219 +55,367 @@ hasFinancialsOption: true
 # financials_max_months: ["6 mo", "12 mo", "24 mo", "36 mo", "42 mo", "60 mo"]
 financials_max_months: ["60 mo", "42 mo", "36 mo", "24 mo", "12 mo", "6 mo"]
 prices:
-  full_time:
-    ## GENERAL INFO
-    slug: "full-time"
-    duration: "9 Weeks"
+  full_stack:
+    full_time:
+      ## GENERAL INFO
+      slug: "full-time"
+      duration: "9 Weeks"
+      schedule: "full-time"
+      ## LEFT BOX SECTION FULL-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAGAS SÓLO DESPUÉS"
+          heading_two: "DE CONSEGUIR TRABAJO"
+          sub_heading: "y hablemos del Income Share Agreement"
+        content:
+          price: "9% del salario"
+          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
+        button:
+          button_text: "APLICA"
 
-    ## LEFT BOX SECTION FULL-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "PAGA SÓLO DESPUÉS"
-        heading_two: "DE CONSEGUIR TRABAJO"
-        sub_heading: "y hablemos del Income Share Agreement"
-      content:
-        price: "9% del salario"
-        price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
+        ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+      center_section:
+        header:
+          heading_one: "Plan de Pagos Extendidos"
+          # heading_two: "PAYMENT PLAN"
+          sub_heading: "y disfruta el mejor precio de la ciudad"
+        plans:
+          - months: "60 months"
+            monthsInfo: "Financiados"
+            payment: "$214.74"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Skill Fund - Climb"
+            logo: "/images/climb-and-skillfund.png"
+            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
+          - months: "42 months"
+            monthsInfo: "Financiados"
+            payment: "$314.10"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Thanks to our partnership with Climb we have managed to create the most flexible placement plan in town"
+          - months: "36 months"
+            monthsInfo: "Financiados"
+            payment: "$314.10"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Skill Fund"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
+          - months: "24 months"
+            monthsInfo: "Financiados"
+            payment: "$408.06"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "12 months"
+            monthsInfo: "Financiados"
+            payment: "$755.13"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "6 months"
+            monthsInfo: "Financiados"
+            payment: "$1,449.73"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+        button:
+          button_text: "APLICA"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: DE CONTADO
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "y disfruta el mejor precio de la ciudad"
+        content:
+          price: "$9,499.00"
+          price_info: "una sola quota"
+        button:
+          button_text: "APLICA"
+    ## *****************
+    ## PART-TIME SECTION
+    ## *****************
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
 
-    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
-    center_section:
-      header:
-        heading_one: "EXTENDED"
-        heading_two: "PAYMENT PLAN"
-        sub_heading: "y disfruta el mejor precio de la ciudad"
-      plans:
-        - months: "60"
-          payment: "$214.74"
-          paymentInfo: "mensual + $0 deposit"
-          provider: "Skill Fund - Climb"
-          logo: "/images/climb-and-skillfund.png"
-          message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
-        - months: "42"
-          payment: "$314.10"
-          paymentInfo: "mensual + $0 deposit"
-          provider: "Climb"
-          logo: "/images/climb-logo-white.png"
-          message: "Thanks to our partnership with Climb we have managed to create the most flexible placement plan in town"
-        - months: "36"
-          payment: "$314.10"
-          paymentInfo: "mensual + $0 deposit"
-          provider: "Skill Fund"
-          logo: "/images/skill-logo.png"
-          message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
-        - months: "24"
-          payment: "$408.06"
-          paymentInfo: "mensual + 1,500 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-        - months: "12"
-          payment: "$755.13"
-          paymentInfo: "mensual + 1,500 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-        - months: "6"
-          payment: "$1,449.73"
-          paymentInfo: "mensual + 1,500 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-      button:
-        button_text: "APLICA"
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: DE CONTADO
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "y disfruta el mejor precio de la ciudad"
-      content:
-        price: "$9,499.00"
-        price_info: "una sola quota"
-      button:
-        button_text: "APLICA"
-  ## *****************
-  ## PART-TIME SECTION
-  ## *****************
-  part_time:
-    slug: "part-time"
-    duration: "16 Weeks"
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAGAS SÓLO DESPUÉS"
+          heading_two: "DE CONSEGUIR TRABAJO"
+          sub_heading: "y hablemos del Income Share Agreement"
+        content:
+          price: "9% del salario"
+          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
+        button:
+          button_text: "APLICA"
 
-    ## LEFT BOX SECTION PART-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "PAGA SÓLO DESPUÉS"
-        heading_two: "DE CONSEGUIR TRABAJO"
-        sub_heading: "y hablemos del Income Share Agreement"
-      content:
-        price: "9% del salario"
-        price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
-
-    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
-    center_section:
-      header:
-        heading_one: "EXTENDED"
-        heading_two: "PAYMENT PLAN"
-        sub_heading: "y disfruta el mejor precio de la ciudad"
-      plans:
-        - months: "60 mo"
-          payment: "$169.53"
-          paymentInfo: "mensual + $0 deposit"
-          provider: "Skill Fund - Climb"
-          logo: "/images/skill-logo.png"
-          message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
-        - months: "42 mo"
-          payment: "$314.10"
-          paymentInfo: "mensual + $0 deposit"
-          provider: "Climb"
-          logo: "/images/climb-logo-white.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-        - months: "36 mo"
-          payment: "$247.97"
-          paymentInfo: "mensual + $0 deposit"
-          provider: "Skill Fund"
-          logo: "/images/skill-logo.png"
-          message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
-        - months: "24 mo"
-          payment: "$312.04"
-          paymentInfo: "mensual + 1,500 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-        - months: "12 mo"
-          payment: "$577.43"
-          paymentInfo: "mensual + 1,500 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-        - months: "6 mo"
-          payment: "$1,108.58"
-          paymentInfo: "mensual + 1,500 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: DE CONTADO
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "y disfruta el mejor precio de la ciudad"
-      content:
-        price: "$7,499.00"
-        price_info: "una sola quota"
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "Plan de Pagos Extendidos"
+          # heading_two: "PAYMENT PLAN"
+          sub_heading: "y disfruta el mejor precio de la ciudad"
+        plans:
+          - months: "60 meses"
+            monthsInfo: "Financiados"
+            payment: "$169.53"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Skill Fund - Climb"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
+          - months: "42 meses"
+            monthsInfo: "Financiados"
+            payment: "$314.10"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "36 meses"
+            monthsInfo: "Financiados"
+            payment: "$247.97"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Skill Fund"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
+          - months: "24 meses"
+            monthsInfo: "Financiados"
+            payment: "$312.04"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "12 meses"
+            monthsInfo: "Financiados"
+            payment: "$577.43"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "6 meses"
+            monthsInfo: "Financiados"
+            payment: "$1,108.58"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+        button:
+          button_text: "Aplicar Ahora"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: DE CONTADO
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "y disfruta el mejor precio de la ciudad"
+        content:
+          price: "$7,499.00"
+          price_info: "una sola quota"
+        button:
+          button_text: "Aplicar Ahora"
 
   software_engineering:
-    slug: "software-engineering"
-    duration: "16 Weeks"
+    # slug: "software-engineering"
+    # duration: "16 Weeks"
+    part_time:
+      slug: "part_time"
+      duration: "16 Weeks"
 
-    ## LEFT BOX SECTION PART-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "PASA SÓLO DESPUÉS"
-        heading_two: "DE CONSEGUIR TRABAJO"
-        sub_heading: "y solamente mientras tengas trabajo"
-      content:
-        price: "9% de tu salario"
-        price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAGA SÓLO DESPUÉS"
+          heading_two: "DE CONSEGUIR TRABAJO"
+          sub_heading: "y solamente mientras tengas trabajo"
+        content:
+          price: "9% de tu salario"
+          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
+        button:
+          button_text: "Aplicar Ahora"
 
-    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
-    center_section:
-      header:
-        heading_one: "EXTENDED"
-        heading_two: "PAYMENT PLAN"
-        sub_heading: "paga en cuotas financiadas"
-      plans:
-        - months: "60 mo"
-          payment: "$269.53"
-          paymentInfo: "mensual + $0 deposito"
-          provider: "Skill Fund - Climb"
-          logo: "/images/skill-logo.png"
-          message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
-        - months: "42 mo"
-          payment: "$384.10"
-          paymentInfo: "mensual + $0 deposito"
-          provider: "Climb"
-          logo: "/images/climb-logo-white.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-        - months: "36 mo"
-          payment: "$447.97"
-          paymentInfo: "mensual + $0 deposito"
-          provider: "Skill Fund"
-          logo: "/images/skill-logo.png"
-          message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
-        - months: "24 mo"
-          payment: "$612.04"
-          paymentInfo: "mensual + 1,500 deposito"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-        - months: "12 mo"
-          payment: "$1277.43"
-          paymentInfo: "mensual + 1,500 deposito"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-        - months: "6 mo"
-          payment: "$2,508.58"
-          paymentInfo: "mensual + 1,500 deposito"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "DE CONTADO"
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "el mejor precio de la ciudad"
-      content:
-        price: "$13,499.00"
-        price_info: "un sólo pago"
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "Plan de Pagos Extendidos"
+          # heading_two: "PAYMENT PLAN"
+          sub_heading: "paga en cuotas financiadas"
+        plans:
+          - months: "60 meses"
+            monthsInfo: "Financiados"
+            payment: "$269.53"
+            paymentInfo: "por mes + $0 deposito"
+            provider: "Skill Fund - Climb"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
+          - months: "42 meses"
+            monthsInfo: "Financiados"
+            payment: "$384.10"
+            paymentInfo: "por mes + $0 deposito"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "36 meses"
+            monthsInfo: "Financiados"
+            payment: "$447.97"
+            paymentInfo: "por mes + $0 deposito"
+            provider: "Skill Fund"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
+          - months: "24 meses"
+            monthsInfo: "Financiados"
+            payment: "$612.04"
+            paymentInfo: "por mes + 1,500 deposito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "12 meses"
+            monthsInfo: "Financiados"
+            payment: "$1277.43"
+            paymentInfo: "por mes + 1,500 deposito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "6 meses"
+            monthsInfo: "Financiados"
+            payment: "$2,508.58"
+            paymentInfo: "por mes + 1,500 deposito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+        button:
+          button_text: "Aplicar Ahora"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "DE CONTADO"
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "el mejor precio de la ciudad"
+        content:
+          price: "$13,499.00"
+          price_info: "un sólo pago"
+        button:
+          button_text: "Aplicar Ahora"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modaliad Full-Time no esta disponible"
+          price_info: "Santiago - Chile"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "18 Weeks"
+
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAGAS SÓLO DESPUÉS"
+          heading_two: "DE CONSEGUIR TRABAJO"
+          sub_heading: "y solamente mientras tengas trabajo"
+        content:
+          price: "9% de tu salario"
+          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
+        button:
+          button_text: "Aplicar Ahora"
+
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "EXTENDED"
+          heading_two: "PAYMENT PLAN"
+          sub_heading: "paga en cuotas financiadas"
+        plans:
+          - months: "60 mo"
+            monthsInfo: "Financiados"
+            payment: "$269.53"
+            paymentInfo: "mensual + $0 deposito"
+            provider: "Skill Fund - Climb"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
+          - months: "42 mo"
+            monthsInfo: "Financiados"
+            payment: "$384.10"
+            paymentInfo: "mensual + $0 deposito"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "36 mo"
+            monthsInfo: "Financiados"
+            payment: "$447.97"
+            paymentInfo: "mensual + $0 deposito"
+            provider: "Skill Fund"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
+          - months: "24 mo"
+            monthsInfo: "Financiados"
+            payment: "$612.04"
+            paymentInfo: "mensual + 1,500 deposito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "12 mo"
+            monthsInfo: "Financiados"
+            payment: "$1277.43"
+            paymentInfo: "mensual + 1,500 deposito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "6 mo"
+            monthsInfo: "Financiados"
+            payment: "$2,508.58"
+            paymentInfo: "mensual + 1,500 deposito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+        button:
+          button_text: "Aplicar Ahora"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "DE CONTADO"
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "el mejor precio de la ciudad"
+        content:
+          price: "$11,499.00"
+          price_info: "un sólo pago"
+        button:
+          button_text: "Aplicar Ahora"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Full-Time no esta disponible"
+          price_info: "Santiago - Chile"
+        button:
+          button_text: "Aplicar a otros cursos"
 
 active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"

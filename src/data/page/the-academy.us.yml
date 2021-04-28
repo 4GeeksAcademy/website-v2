@@ -1,16 +1,16 @@
 meta_info:
-  slug: why-4geeks
-  title: ""
-  description: "About 4Geeks Academy"
+  slug: the-academy
+  title: "About  4Geeks Academy"
+  description: "Get to know the outcomes, demographics, cornerstones, team and story of 4Geeks Academy"
   image: ""
-  keywords: ""
+  keywords: "About, 4Geeks Academy"
   redirects: []
 
-seo_title: "why 4Geeks"
+seo_title: "coding bootcamp"
 header:
   title: "Empowering Talent with coding careers"
   paragraph: "We are specialists of code. 4Geeks is the place were developers grow and thrive."
-  image: "../../../static/images/bg/the-academy-bg.jpg"
+  image: "../../../static/images/the-academy/the-academy-header.jpg"
   image_alt: ""
 
 ## BADGES SECTION
@@ -82,21 +82,21 @@ outcomes:
 
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:
-  heading: OUR FOUR CORNERSTONES
-  sub_heading: ""
+  title: Our Cornerstones
+  paragraph: ""
   cornerstones_list:
-    - title: FLIPPED CLASSROOM
+    - title: Flipped Classroom
       content: Theory is delivered trough video, animation, images and infographics. Class time is then used to debate, create and build projects, and mentor over practical exercises.
-      icon: book
-    - title: 1:7 MENTOR-STUDENT RATIO
+      icon: laptop_new
+    - title: 1:7 Mentor-Student Ratio
       content: An intimate setting provides the faculty with the opportunity to adapt to each student's particular pace.
-      icon: teacher
-    - title: 1:1 MENTORSHIP
+      icon: teacher_new
+    - title: 1:1 Mentorship
       content: Every student has the opportunity to have regular conversations with a mentor.
-      icon: users
-    - title: PART-TIME
+      icon: chat
+    - title: Part-Time
       content: We have mastered our programs to be a Premium Education Experience through a part-time schedule.
-      icon: sitemap
+      icon: notes
 
 ## STAFF SECTION
 staff:

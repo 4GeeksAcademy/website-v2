@@ -1,120 +1,197 @@
-import React from 'react';
-import {Div, Grid} from '../Sections'
-import {Colors, StyledBackgroundSection} from '../Styling';
+import React, { useEffect } from 'react';
+import { Div, Grid, GridContainer } from '../Sections'
+import { Colors, StyledBackgroundSection } from '../Styling';
 import Img from "gatsby-image"
-import {H2, H3, H4, Title, Paragraph} from '../Heading'
+import { H2, H3, H4, Title, Paragraph } from '../Heading'
 import Link from 'gatsby-link'
 import Card from '../Card';
 import Fragment from "../Fragment"
+import Marquee from '../Marquee';
 
-const OurPartners = ({title, paragraph, link, showFeatured, images, slider, ...rest}) => {
+
+// Display centered TITLE + PARAGRAPH
+const Title_Paragraph = (props) => {
+
   return (
-    <Fragment padding="20px 0" github="/components/partner" >
-      {title && <Grid columns_md="12" margin="67px 0" padding="0 17px"
-      >
+    <>
+      <GridContainer margin="0 0 20px 0" background={props.background} >
+
         <Div
-          gridArea_tablet="1/4/1/10"
           display="flex"
           flexDirection="column"
           alignItems="center"
+          padding_tablet="0 4em"
+          padding="0 2em"
         >
-          <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>
-          <Paragraph>{paragraph}</Paragraph>
+          {/*<H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>*/}
+          <H2 fontFamily="Lato"
+            fontWeight="900"
+            fontSize="15px"
+            lineHeight="19px"
+            letterSpacing="0.05em"
+            color="#3A3A3A"
+            width="100%"
+            margin="0 0 15px 0"
+            style={{ fontStyle: "normal", textTransform: "uppercase" }}
+          >
+            {props.title}
+          </H2>
+
+          {/*<Paragraph>{paragraph}</Paragraph>*/}
+          <Paragraph fontFamily="Lato"
+            fontWeight="normal"
+            fontSize="15px"
+            lineHeight="22px"
+            letterSpacing="0.05em"
+            color="#3A3A3A"
+            width="100%"
+            margin="0 0 15px 0"
+            style={{ fontStyle: "normal" }}
+          >
+            {props.paragraph}
+          </Paragraph>
+
         </Div>
 
-      </Grid>}
-      {showFeatured &&
-        <>
-          <Div justifyContent="center" flexDirection="column" flexDirection_md="row">
-            {images.filter(f => f.featured == true).map((m, i) => {
-              return (
-                <Img
-                  key={i}
-                  style={{height: "55px", minWidth: "220px", margin: "23px 15px"}}
-                  imgStyle={{objectFit: "contain"}}
-                  alt={m.name}
-                  fluid={m.image.childImageSharp.fluid}
-                />
-              )
-            })}
-          </Div>
-          <Div height="1px" background={Colors.lightGray} margin="88px 0 79px 0" />
-        </>
-      }
-      {slider ? <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0">
-        {images.map((l, i) => {
+      </GridContainer>
+    </>
+  )
+}
+
+
+//Images in slider
+const Images_With_Slider = (props) => {
+  return (
+    <>
+      <Div className="badge-slider" justifyContent="between" margin="0 0 50px 0" >
+        {props.images.map((l, i) => {
           return (
             <Img
               key={i}
-              style={{height: "80px", minWidth: "120px", margin: "0 15px"}}
-              imgStyle={{objectFit: "contain"}}
+              style={{ height: "80px", minWidth: "120px", margin: "0 15px" }}
+              imgStyle={{ objectFit: "contain" }}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}
             />
           )
         })}
       </Div>
-        :
-        <>
-          <Div className="badge-slider" justifyContent="between" margin="0 0 60px 0" display_md="none">
-            {images.map((l, i) => {
-              return (
-                <Img
-                  key={i}
-                  style={{height: "80px", minWidth: "120px", margin: "0 15px"}}
-                  imgStyle={{objectFit: "contain"}}
-                  alt={l.name}
-                  fluid={l.image.childImageSharp.fluid}
-                />
-              )
-            })}
-          </Div>
-          <Grid columns="4" rows="1" margin_md="0 200px" display="none" display_md="grid">
-            {images.map((l, i) => {
-              return (
-                i < 4 &&
-                <Img
-                  key={i}
-                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
-                  imgStyle={{objectFit: "contain"}}
-                  alt={l.name}
-                  fluid={l.image.childImageSharp.fluid}
-                />
-              )
-            })}
-          </Grid>
-          <Grid columns="5" rows="1" margin_md="44px 150px" display="none" display_md="grid">
-            {images.map((l, i) => {
-              return (
-                i > 3 && i < 9 &&
-                <Img
-                  key={i}
-                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
-                  imgStyle={{objectFit: "contain"}}
-                  alt={l.name}
-                  fluid={l.image.childImageSharp.fluid}
-                />
-              )
-            })}
-          </Grid>
-          <Grid columns="2" rows="1" margin_md="0 200px" display="none" display_md="grid">
-            {images.map((l, i) => {
-              return (
-                i > 8 &&
-                <Img
-                  key={i}
-                  style={{height: "40px", minWidth: "120px", margin: "0 15px"}}
-                  imgStyle={{objectFit: "contain"}}
-                  alt={l.name}
-                  fluid={l.image.childImageSharp.fluid}
-                />
-              )
-            })}
-          </Grid>
-        </>
-      }
+    </>
+  )
+}
 
-      {link &&
+//Images in marquee
+const Images_With_Marquee = (props) => {
+
+  let imgs = [];
+
+  props.images.map((l, i) => {
+    imgs.push(
+      <Img
+        key={i}
+        style={{ minWidth: "120px", border: 0 }}
+        height="80px"
+        objectFit="contain"
+        alt={l.name}
+        fluid={l.image.childImageSharp.fluid}
+      />
+    );
+  });
+
+  return (    
+      <Marquee config={{ duration: 30, images: imgs, }} />
+  )
+}
+
+
+//Funcion que muestra las imagenes en columna y centradas
+const Images_Centered = (props) => {
+  return (
+    <Div
+      display="flex"
+      flexDirection="row"
+      style={{ flexWrap: "wrap" }}
+      justifyContent="center"
+      background={Colors.white}
+      padding="50px 20px 0px 20px"
+      margin="0 25px 50px 25px" >
+
+      {props.images.map((l, i) => {
+        return (
+          <Div margin="0 61px 40px 0">
+            <Img
+              key={i}
+              style={{ height: "80px", minWidth: "120px" }}
+              imgStyle={{ objectFit: "contain" }}
+              alt={l.name}
+              fluid={l.image.childImageSharp.fluid}
+            />
+          </Div>
+        )
+      })}
+    </Div>
+  )
+}
+
+
+//Imagenes con propiedad featured==true
+const Images_Featured = (props) => {
+  return (
+    <>
+      <GridContainer columns_tablet="3">
+        {/* <Div justifyContent="center" flexDirection="column" flexDirection_md="row"> */}
+        {props.images.filter(f => f.featured == true).map((m, i) => {
+          return (
+            <Img
+              key={i}
+              style={{ height: "55px", minWidth: "100px", margin: "23px 15px" }}
+              imgStyle={{ objectFit: "contain" }}
+              alt={m.name}
+              fluid={m.image.childImageSharp.fluid}
+            />
+          )
+        })}
+        {/* </Div> */}
+      </GridContainer>
+      <GridContainer>
+        <Div height="1px" background={Colors.lightGray} margin="30px 0" margin_tablet="80px 0" />
+      </GridContainer>
+    </>
+  )
+}
+
+
+//Punto de entrada al componente
+const OurPartners = ({ title, paragraph, background, link, showFeatured, images, slider, marquee, ...rest }) => {
+
+
+  let FragmentStyle = {
+    background: background,
+    margin: "40px 0 0px 0",    
+    padding: "75px 0 75px 0",
+  }
+
+
+  //Renderized...
+  return (
+    <Fragment github="/components/partner" style={FragmentStyle}  >
+      {
+        title && <Title_Paragraph title={title} paragraph={paragraph} background={background} />
+      }
+      {
+        showFeatured && <Images_Featured images={images} />
+      }
+      {
+        slider ?
+          <Images_With_Slider images={images} />
+        :
+          marquee ?
+            <Images_With_Marquee images={images} />
+          :
+            <Images_Centered images={images} />
+      }
+      {
+        link &&
         <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">
           <Link to={rest.props.footer_link}><Paragraph color={Colors.blue}>{rest.props.footer_button}</Paragraph></Link>
         </Div>

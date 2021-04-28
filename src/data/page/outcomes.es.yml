@@ -13,7 +13,7 @@ seo_title: "resultados"
 header:
   title: "4Geeks Informe de resultados de la academia"
   paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar."
-  image: "../../../static/images/bg/outcomes.png"
+  image: 
   image_alt: ""
 sections:
   - title: "Our Statement"
@@ -36,7 +36,8 @@ Since 2017 we have been growing really fast. We have graduated over 700 students
       - title: ""
         content: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better." 
         image_section:
-          - image: "../../../static/images/outcomes/outcomes.png"
+          # - image: "../../../static/images/outcomes/outcomes.png"
+          - image: 
             image_paragraph: "test"
   - title: "Student Facts"
     paragraph: "THere are the results of 4GA operations (excluding programs launched together with Miami Dade College) from March 2018 to March 2020.
@@ -55,12 +56,12 @@ Full-Time program."
       - title: "PART - TIME"
         content: "We were founded under a PT vision and we keep showing our main strength with Part- time Education; the new way of learning and achieving (upskill) a new career." 
         image_section:
-          - image: ""
+          - image: 
             image_paragraph: ""
       - title: "QTY OF STUDENTS"
         content: "This report states the results for the last 24 months of operation in the US Campus. 200 students considered" 
         image_section:
-          - image: ""
+          - image: 
             image_paragraph: ""
   - title: "Job Placement"
     paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days.
@@ -76,5 +77,5 @@ Full-Time program."
       - title: ""
         content: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better." 
         image_section:
-          - image: ""
+          - image: 
             image_paragraph: ""

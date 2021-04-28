@@ -25,7 +25,7 @@ const ProgramDetailsMobile = (props) => {
     }
     return (
         <>
-            <Grid padding="0 17px" gridGap="0">
+            <Grid padding="50px 17px" gridGap="0">
                 {props.details.details_modules.map((item, index) => {
                     return (
                         <React.Fragment key={index}>
@@ -38,7 +38,7 @@ const ProgramDetailsMobile = (props) => {
                                 borderRadius="3px"
                                 borderLeft={`6px solid ${Colors.black}`}
                                 margin={`7px 0`}
-                                display_md="none"
+                                display_tablet="none"
                                 cursor={`pointer`}
                                 onClick={() => selected.index === index ? setSelected({index: null, manual: true}) : setSelected({index: index, manual: true})}
                                 justifyContent={`between`}

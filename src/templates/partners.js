@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
-import {Column, Row, Container, Divider, Div, Grid} from "../new_components/Sections"
+import Link from 'gatsby-link'
+import {Column, Row, GridContainer, Header, Div, Grid} from "../new_components/Sections"
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
 import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling'
 import Badges from '../new_components/Badges'
 import OurPartners from '../new_components/OurPartners'
 import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
+import {Circle} from '../new_components/BackgroundDrawing'
+import Modal from '../new_components/Modal';
 import LeadForm from "../new_components/LeadForm/index.js";
 
 function rand () {
@@ -19,46 +22,134 @@ const Partners = (props) => {
     setOpen(true);
   };
 
+
+  
+  // variable properties #e06c75
+  // Keywords #c678dd
+  // numbers #d19a66
+  // classes, constants #e5c07b
+  // function, methods #61afef
+  // string #98c379
+  // operator special function #56b6c2
+
   const handleClose = () => {
     setOpen(false);
   };
   const partnersData = data.allPartnerYaml.edges[0].node;
   return (
     <>
-      <Grid columns_md="12" margin="67px 0"
-      >
-        <Div
-          gridArea_md="1/4/1/10"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-        >
-          <H1
-            fontSize="13px"
-            lineHeight="16px"
-            fontWeight="700"
-            letterSpacing="0.05em"
-            color="#606060"
-          >{yml.seo_title}</H1>
-          <H2 fontSize="50px" lineHeight="60px" margin="16px 17px 19px 17px">{`< ${yml.header_data.tagline} >`}</H2>
-          <Paragraph margin="0 17px 19px 17px" width_sm="70%" width_tablet="50%">{yml.header_data.sub_heading}</Paragraph>
-          <Button width="300px" color={Colors.blue} textColor="white">{yml.button_section.button_text}</Button>
-        </Div>
 
-      </Grid>
-      <Grid columns_md="12">
-        <Div gridArea_md="1/1/1/13">
+      <Header
+        seo_title={yml.seo_title}
+        title={yml.header.title}
+        paragraph={yml.header.paragraph}
+        padding_tablet="0 0 40px 0"
+        padding="0 17px 30px 17px"
+        position="relative"
+      >
+        <Circle
+          color="lightBlue"
+          width="53px"
+          height="53px"
+          top="0"
+          left="30px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="250px"
+          height="250px"
+          bottom="-50px"
+          right="-125px"
+          opacity="0.2"
+          zIndex="1"
+        />
+        <Circle
+          color="black"
+          width="119px"
+          height="11px"
+          border="10px"
+          bottom="150px"
+          right="20px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="77px"
+          height="11px"
+          border="10px"
+          bottom="150px"
+          right="159px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="116px"
+          height="116px"
+          bottom="-58px"
+          left="-58px"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="21px"
+          height="21px"
+          top="10px"
+          right="320px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="blue"
+          width="9px"
+          height="9px"
+          top="100px"
+          left="10%"
+        />
+
+        <Circle
+          color="blue"
+          width="57px"
+          height="57px"
+          top="40px"
+          right="10%"
+        />
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
+          <Link to={yml.button_section.button_link}
+            state={{course: yml.meta_info.bc_slug}}
+          >
+            <Button width="fit-content" onClick={handleOpen} color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
+          </Link>
+        </Div>
+      </Header>
+      <Modal
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        open={open}
+        onClose={handleClose}
+      >
+        <LeadForm heading="BE A HIRING PARTNER" formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
+      </Modal>
+      <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
+        <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
             height={`389px`}
-            image={yml.header_data.image.childImageSharp.fluid}
+            image={yml.header.image.childImageSharp.fluid}
             bgSize={`cover`}
-            alt={yml.header_data.alt}
+            alt={yml.header.image_alt}
           />
         </Div>
       </Grid>
 
       <Badges lang={pageContext.lang} link />
-      <Div height="5px" display="none" display_md="flex" background={Colors.lightGray}></Div>
+      <Div height="5px" display="none" margin_tablet="73px 0" display_md="flex" background={Colors.lightGray}></Div>
       <OurPartners
         images={partnersData.partners.images}
         title={partnersData.partners.tagline}
@@ -66,35 +157,40 @@ const Partners = (props) => {
         showFeatured={true}
         props={partnersData.partners}
       />
-      <OurPartners
-        title={partnersData.coding.tagline}
-        paragraph={partnersData.coding.sub_heading}
-        images={partnersData.coding.images}
-        showFeatured={true}
-        props={partnersData.partners}
-      />
-      <Grid columns_md="12" gridGap_md="0" margin_md="90px 0 104px 0">
-        <Div gridArea_md="1/3/1/7" flexDirection="column" padding_md="0 90px 0 0" padding="0 17px">
+      <GridContainer fluid background={Colors.verylightGray} padding="36px 17px 80px 17px" padding_tablet="75px 0 133px 0" margin_tablet="115px 0 100px 0">
+        <GridContainer columns_tablet="12" margin_tablet="0 0 50px 0">
+          <Div
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            gridColumn_tablet="3 /11"
+          >
+            <H2 margin="0 0 15px 0">{partnersData.coding.tagline}</H2>
+            <Paragraph>{partnersData.coding.sub_heading}</Paragraph>
+          </Div>
+        </GridContainer>
+        <GridContainer backgroundChild={Colors.white} padding_tablet="42px 0 80px 0">
+          <OurPartners
+            images={partnersData.coding.images}
+            showFeatured={true}
+            props={partnersData.partners}
+          />
+        </GridContainer>
+      </GridContainer>
+      <GridContainer columns_tablet="12" padding="99px  17px 80px 17px" padding_tablet="0" margin_tablet="0 0 81px 0">
+        <Div gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
           <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
+        </Div>
+        <Div gridColumn_tablet="1 / 7" gridRow_tablet="2 / 2" flexDirection="column" >
           {yml.form.paragraph.split("\n").map((m, i) =>
             <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
           )}
         </Div>
-        <Div gridArea_md="1/7/1/11" justifyContent="center" >
-          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
+        <Div justifyContent="center" gridColumn_tablet="8 / 13" gridRow_tablet="2 / 2" margin="0 0 81px 0">
+          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} />
         </Div>
 
-      </Grid>
-      <Grid columns_md="12">
-        <Div gridArea_md="1/1/1/13">
-          <StyledBackgroundSection
-            height={`389px`}
-            image={yml.footer_data.image.childImageSharp.fluid}
-            bgSize={`cover`}
-            alt={yml.footer_data.alt}
-          />
-        </Div>
-      </Grid>
+      </GridContainer>
     </>
   )
 };
@@ -111,18 +207,20 @@ query PartnersQuery($file_name: String!, $lang: String!) {
           keywords
         }
         seo_title
-        header_data{
-          tagline
-          sub_heading
-          image{
-            childImageSharp {
-              fluid(maxWidth: 1600, quality: 100){
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
+          header{
+              title
+              paragraph
+              image_alt
+              button
+              image{
+                  childImageSharp {
+                    fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+              
           }
-          alt
-        }
         form{
           title
           paragraph

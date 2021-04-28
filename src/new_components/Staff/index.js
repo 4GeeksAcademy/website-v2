@@ -2,32 +2,12 @@ import React, {useState} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {RoundImage, Colors} from '../Styling';
-import {Row, Column, Div} from '../Sections'
+import {Row, GridContainer, Div} from '../Sections'
 import Fragment from "../Fragment"
 import Img from 'gatsby-image';
 import styled from "styled-components";
 import Icon from "../Icon";
 
-const Over = styled.div`
-    position: absolute;
-    height: 280px;
-    width: 100%;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: #f1f1f1;
-    border-radius: 10px;
-    transition: .5s ease;
-    padding: 15px;
-    color: white;
-    font-size: 10px;
-    text-align: center;
-    opacity: 0;
-    &:hover{
-        opacity: 1;
-    }
-`
 
 const Staff = props => {
     const data = useStaticQuery(graphql`
@@ -70,44 +50,44 @@ const Staff = props => {
     `)
     let staff = data.allStaffYaml.edges.find(({node}) => node.fields.lang === props.lang);
     if (staff) staff = staff.node;
-    console.log("Staff: ", staff)
     return (
         <Fragment github="/components/staff">
-            <Div alignItems="center" flexDirection="column"  >
-                <H4 fontSize="15px" lineHeight="19px" fontWeight="900">{props.heading || staff.heading}</H4>
-                <Paragraph width="331px" textAlign="center" margin="14px 0 50px 0">{props.paragraph || staff.sub_heading}</Paragraph>
-            </Div>
-            <Div className="testimonial-slider" height="auto" padding="0 17px 59px 17px">
-                {staff.staff.map((item, index) => {
-                    console.log(`${item.name}: ${item.bio && item.bio.length}`)
-                    return (
-                        <Div key={index} flexDirection="column" alignItems="center">
-                            <Div minWidth="184px" height="184px" margin="0 10px 0 0" alignItems="center">
-                                <Img
-                                    fluid={item.image.childImageSharp.fluid}
-                                    style={{height: "100%", minWidth: "100%", backgroundSize: `cover`}}
-                                />
-                            </Div>
-                            <H3
-                                fontSize="15px"
-                                lineHeight="19px"
-                                margin="14px 0 0 0"
+            <GridContainer columns_tablet="12" padding_tablet="0" margin_tablet="0 0 72px 0" margin="0 0 36px 0">
+                <Div alignItems="center" flexDirection="column" gridColumn_tablet="3 /11">
+                    <H4 fontSize="15px" textTransform="uppercase" lineHeight="19px" fontWeight="900">{props.heading || staff.heading}</H4>
+                    <Paragraph textAlign="center" margin="14px 0 50px 0">{props.paragraph || staff.sub_heading}</Paragraph>
+                </Div>
+                <Div gridColumn_tablet="1/span 12" className="testimonial-slider" height="auto" padding="0 17px 59px 17px">
+                    {staff.staff.map((item, index) => {
+                        return (
+                            <Div key={index} flexDirection="column" alignItems="center">
+                                <Div minWidth="184px" height="184px" margin="0 10px 0 0" alignItems="center">
+                                    <Img
+                                        fluid={item.image.childImageSharp.fluid}
+                                        style={{height: "100%", minWidth: "100%", backgroundSize: `cover`}}
+                                    />
+                                </Div>
+                                <H3
+                                    fontSize="15px"
+                                    lineHeight="19px"
+                                    margin="14px 0 0 0"
 
-                            >
-                                {item.name}
-                            </H3>
-                            <H4
-                                fontSize="14px"
-                                lineHeight="22px"
-                                margin="0 0 6px 0"
-                            >
-                                {item.job_title}
-                            </H4>
-                            <Icon icon="linkedin" width="14px" fill="#2867b2" stroke="#2867b2" />
-                        </Div>
-                    )
-                })}
-            </Div>
+                                >
+                                    {item.name}
+                                </H3>
+                                <H4
+                                    fontSize="14px"
+                                    lineHeight="22px"
+                                    margin="0 0 6px 0"
+                                >
+                                    {item.job_title}
+                                </H4>
+                                <Icon icon="linkedin" width="14px" fill="#2867b2" stroke="#2867b2" />
+                            </Div>
+                        )
+                    })}
+                </Div>
+            </GridContainer>
         </Fragment>
     )
 }

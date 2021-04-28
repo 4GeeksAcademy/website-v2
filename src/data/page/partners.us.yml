@@ -1,18 +1,19 @@
 meta_info:
   slug: partners
-  title: "About The Academy"
-  description: "About 4Geeks Academy"
+  title: "Aliados 4geeks Academy"
+  description: "Conoce los aliados de 4Geeks Academy"
   image: ""
-  keywords: ""
+  keywords: "Aliados 4geeks Academy"
   redirects: []
 
 seo_title: "partnerships"
-header_data:
-  tagline: Companies trust us and hire our students
-  sub_heading: I'm impressed with the level of understanding 4Geeks students have, my hire ended becoming team leader - CodeNinjas
-  button: BE OUR PARTNER
+header:
+  title: "Companies trust us and hire our students"
   image: "../../../static/images/partner/partners-heading.png"
-  alt: ""
+  image_alt: ""
+  paragraph: "I'm impressed with the level of understanding 4Geeks students have, my hire ended becoming team leader - CodeNinjas"
+  button: HAZTE HIRING PARTNER
+
 form:
   title: "Join our partnership network"
   paragraph: "
