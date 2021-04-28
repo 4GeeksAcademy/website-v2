@@ -187,7 +187,6 @@ const Home = (props) => {
           />
         </Div>
       </GridContainerWithImage>
-        //TODO: revisar FAQ PR
 
       <Testimonials lang={data.allTestimonialsYaml.edges} />
       <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="104px 0 104px 0" />
