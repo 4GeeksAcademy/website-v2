@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { Div, Grid, GridContainer } from '../Sections'
-import { Colors, StyledBackgroundSection } from '../Styling';
+import React, {useEffect} from 'react';
+import {Div, Grid, GridContainer} from '../Sections'
+import {Colors, StyledBackgroundSection} from '../Styling';
 import Img from "gatsby-image"
-import { H2, H3, H4, Title, Paragraph } from '../Heading'
+import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
 import Card from '../Card';
 import Fragment from "../Fragment"
@@ -32,7 +32,7 @@ const Title_Paragraph = (props) => {
             color="#3A3A3A"
             width="100%"
             margin="0 0 15px 0"
-            style={{ fontStyle: "normal", textTransform: "uppercase" }}
+            style={{fontStyle: "normal", textTransform: "uppercase"}}
           >
             {props.title}
           </H2>
@@ -46,7 +46,7 @@ const Title_Paragraph = (props) => {
             color="#3A3A3A"
             width="100%"
             margin="0 0 15px 0"
-            style={{ fontStyle: "normal" }}
+            style={{fontStyle: "normal"}}
           >
             {props.paragraph}
           </Paragraph>
@@ -68,8 +68,8 @@ const Images_With_Slider = (props) => {
           return (
             <Img
               key={i}
-              style={{ height: "80px", minWidth: "120px", margin: "0 15px" }}
-              imgStyle={{ objectFit: "contain" }}
+              style={{height: "80px", minWidth: "120px", margin: "0 15px"}}
+              imgStyle={{objectFit: "contain"}}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}
             />
@@ -89,7 +89,7 @@ const Images_With_Marquee = (props) => {
     imgs.push(
       <Img
         key={i}
-        style={{ minWidth: "120px", border: 0 }}
+        style={{minWidth: "120px", border: 0}}
         height="80px"
         objectFit="contain"
         alt={l.name}
@@ -98,8 +98,8 @@ const Images_With_Marquee = (props) => {
     );
   });
 
-  return (    
-      <Marquee config={{ duration: 30, images: imgs, }} />
+  return (
+    <Marquee config={{duration: 40, images: imgs, }} />
   )
 }
 
@@ -110,7 +110,7 @@ const Images_Centered = (props) => {
     <Div
       display="flex"
       flexDirection="row"
-      style={{ flexWrap: "wrap" }}
+      style={{flexWrap: "wrap"}}
       justifyContent="center"
       background={Colors.white}
       padding="50px 20px 0px 20px"
@@ -121,8 +121,8 @@ const Images_Centered = (props) => {
           <Div margin="0 61px 40px 0">
             <Img
               key={i}
-              style={{ height: "80px", minWidth: "120px" }}
-              imgStyle={{ objectFit: "contain" }}
+              style={{height: "80px", minWidth: "120px"}}
+              imgStyle={{objectFit: "contain"}}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}
             />
@@ -144,8 +144,8 @@ const Images_Featured = (props) => {
           return (
             <Img
               key={i}
-              style={{ height: "55px", minWidth: "100px", margin: "23px 15px" }}
-              imgStyle={{ objectFit: "contain" }}
+              style={{height: "55px", minWidth: "100px", margin: "23px 15px"}}
+              imgStyle={{objectFit: "contain"}}
               alt={m.name}
               fluid={m.image.childImageSharp.fluid}
             />
@@ -162,12 +162,12 @@ const Images_Featured = (props) => {
 
 
 //Punto de entrada al componente
-const OurPartners = ({ title, paragraph, background, link, showFeatured, images, slider, marquee, ...rest }) => {
+const OurPartners = ({title, paragraph, background, link, showFeatured, images, slider, marquee, ...rest}) => {
 
 
   let FragmentStyle = {
     background: background,
-    margin: "40px 0 0px 0",    
+    margin: "40px 0 0px 0",
     padding: "75px 0 75px 0",
   }
 
@@ -184,10 +184,10 @@ const OurPartners = ({ title, paragraph, background, link, showFeatured, images,
       {
         slider ?
           <Images_With_Slider images={images} />
-        :
+          :
           marquee ?
             <Images_With_Marquee images={images} />
-          :
+            :
             <Images_Centered images={images} />
       }
       {
