@@ -41,7 +41,7 @@ const SVGImage = () =>
 
 const Awards = ({data, pageContext, yml}) => {
     return (
-        <>
+        <>            
             <GridContainer columns_tablet="12" padding_tablet="48px 0" background="rgba(199, 243, 253, 0.5)">
                 <Div gridColumn_tablet="1 / 7" flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
                     {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
@@ -61,9 +61,9 @@ const Awards = ({data, pageContext, yml}) => {
                     /> */}
                 </Div>
             </GridContainer>
-            {/* <Grid background={Colors.lightYellow} margin="0 0 58px 0" margin_md="0 0 78px 0"> */}
+            {/* <Grid background={Colors.lightYellow} margin="0 0 58px 0" margin_md="0 0 78px 0"> */}            
             <Badges lang={pageContext.lang} background={Colors.lightYellow} padding="60px 0" padding_tablet="68px 0" margin="0 0 58px 0" margin_tablet="0 0 78px 0" />
-            {/* </Grid> */}
+            {/* </Grid> */}            
             <GridContainer padding="17px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0">
                 <Div gridArea_md="1/3/1/11" flexDirection="column"  >
                     {Array.isArray(yml.awards_list) && yml.awards_list.map((m, i) => {

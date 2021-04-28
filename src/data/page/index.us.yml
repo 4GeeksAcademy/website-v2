@@ -15,7 +15,9 @@ header_data:
 news:
   heading: "Read about this coding bootcamp in the news..."
   limit: 4
-
+button:
+  button_text: See Programs
+  button_link: "#programs"
 ## BADGES SECTION /new_components/Badges
 badges:
   paragraph: "Lorem ipsum dolor sit amet, <span class='badge'>consectetur</span> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."

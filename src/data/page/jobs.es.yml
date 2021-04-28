@@ -2,11 +2,11 @@
 ## YOU CAN CHANGE THE MAIN HEADER AND THE MORE ABOUT 4GEEKS SECTION
 
 meta_info:
-  slug: empleo-programacion
-  title: ""
-  description: null
+  slug: empleo
+  title: "Empleos en 4Geeks Academy"
+  description: "Encuentra la oportunidad laboral que buscas, trabaja con nosotros en 4Geeks Academy"
   image: null
-  keywords: ""
+  keywords: "empleo, trabajo, 4geeks academy"
   redirects: ["/empleo"]
 
 seo_title: Coding Bootcamp

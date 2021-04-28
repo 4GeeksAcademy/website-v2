@@ -149,10 +149,9 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
-      //   ${process.env.GATSBY_BREATHECODE_HOST}
+      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
       let cohorts = await resp.json();
-      let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
+      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
@@ -274,9 +273,11 @@ const Calendar = (props) => {
         seo_title={yml.seo_title}
         title={yml.header.title}
         padding_tablet="72px 0 40px 0"
+        padding="50px 17px"
         background={Colors.veryLightBlue}
         position="relative"
         height="240px"
+        margin="120px 0 0 0 "
       >
       </Header>
       {yml.events.title &&

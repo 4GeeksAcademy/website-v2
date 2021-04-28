@@ -40,18 +40,28 @@ const PricingCard = ({data, lang, children, price, color, background, transform_
 
 const courseArray = [
   {
-    value: "part_time",
-    label: "Full Stack Development (Part-Time)"
-  },
-  {
-    value: "full_time",
-    label: "Full Stack Development (Full-Time)"
+    value: "full_stack",
+    label: "Full Stack Developer"
   },
   {
     value: "software_engineering",
     label: "Software Engineering"
+  },
+  {
+    value: "machine_learning",
+    label: "Machine Learning"
   }
 ];
+const modalityArray = [
+  {
+    value: "part_time",
+    label: "Part Time"
+  },
+  {
+    value: "full_time",
+    label: "Full Time"
+  }
+]
 
 const PricesAndPayments = (props) => {
   const data = useStaticQuery(graphql`
@@ -82,7 +92,9 @@ const PricesAndPayments = (props) => {
   const [activeStep, setActiveStep] = useState(0);
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
+  const [modality, setModality] = useState(false)
   const [locations, setLocations] = useState(false);
+
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
     setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
@@ -91,14 +103,18 @@ const PricesAndPayments = (props) => {
       setCurrentLocation(_loc ? _loc.node : null)
     }
   }, [session, props.locations])
-
   // sync property course
-  useEffect(() => setCourse(courseArray.find(c => c.value === props.course)), [props.course]);
+  useEffect(() => (
+    setCourse(courseArray.find(c => c.value === props.courseType)),
+    setModality(modalityArray.find(d => d.value === props.programType))
+
+  ), [props.courseType, props.programType]);
 
   if (!currentLocation || !currentLocation.prices)
-    return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
-
-  const prices = !course ? {} : currentLocation.prices[course.value];
+  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+  
+  let prices = !course && !modality ? {} : currentLocation.prices[course?.value][modality?.value];
+  
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
 
@@ -116,9 +132,7 @@ const PricesAndPayments = (props) => {
       </GridContainer>
       <GridContainer margin_tablet="0 0 73px 0">
         <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
-
-          {/* <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">"apply_button_text"</Button> */}
-          {!props.course &&
+          {props.course &&
             <Select
               top="40px"
               left="20px"
@@ -130,8 +144,8 @@ const PricesAndPayments = (props) => {
             />
             // </GridContainer>
           }
-        &nbsp;
-      {course &&
+          &nbsp;
+          {course &&
             // <GridContainer>
             <Select
               top="40px"
@@ -145,65 +159,66 @@ const PricesAndPayments = (props) => {
             />
             // </GridContainer>
           }
-          <Link to={info.button.button_link}><Button width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>{info.button.button_text}</Button></Link>
+          <Link to={info.button.button_link}><Button width="fit-content" padding="13px" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link>
         </Div>
       </GridContainer>
 
-      {!prices ?
-        <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
-        :
-        <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0" >
-          {prices.left_section &&
-            <PricingCard lang={props.lang}
-              background={Colors.white}
-              transform_tablet="translateY(10%)"
-              price={prices.left_section.content.price}
-              priceInfo={prices.left_section.content.price_info}
-              data={prices.left_section}
-              applyLabel={apply_button_text}
-              border="1px solid black"
-              borderRight_tablet="none"
-            />
-          }
-          {prices.center_section && Array.isArray(prices.center_section.plans) &&
-            <PricingCard lang={props.lang} color="white" background='black'
-              price={prices.center_section.plans[activeStep].payment}
-              priceInfo={prices.center_section.plans[activeStep].paymentInfo}
-              applyLabel={apply_button_text}
-              data={prices.center_section}
-            >
-              <StepperContainer>
-                <StepConnector>
-                  <FillerStyles completed={((activeStep) * 100) / (prices.center_section.plans.length - 1)} />
-                </StepConnector>
-                {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map(p => p.months).map((label, index) => (
-                  <StepperCircle
-                    key={label}
-                    onMouseOver={() => setActiveStep(index)}
-                    background={index <= activeStep ? Colors.yellow : Colors.black}
-                  >
-                    <StepLabel color={index == activeStep ? Colors.yellow : Colors.white}>{label}</StepLabel>
-                  </StepperCircle >
-                ))}
-              </StepperContainer>
-              <Div margin="0 0 40px 0" display="flex">
-                <img style={{margin: "auto", height: "20px"}} src={prices.center_section.plans[activeStep].logo} />
-              </Div>
-            </PricingCard>
-          }
-          {prices.right_section &&
-            <PricingCard lang={props.lang}
-              background={Colors.white}
-              transform_tablet="translateY(10%)"
-              price={prices.right_section.content.price}
-              priceInfo={prices.right_section.content.price_info}
-              applyLabel={apply_button_text}
-              data={prices.right_section}
-              border="1px solid black"
-              borderLeft_tablet="none"
-            />
-          }
-        </GridContainer>
+      {
+        !prices ?
+          <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+          :
+          <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0" >
+            {prices.left_section &&
+              <PricingCard lang={props.lang}
+                background={Colors.white}
+                transform_tablet="translateY(10%)"
+                price={prices.left_section.content.price}
+                priceInfo={prices.left_section.content.price_info}
+                data={prices.left_section}
+                applyLabel={apply_button_text}
+                border="1px solid black"
+                borderRight_tablet="none"
+              />
+            }
+            {prices.center_section && Array.isArray(prices.center_section.plans) &&
+              <PricingCard lang={props.lang} color="white" background='black'
+                price={prices.center_section.plans[activeStep]?.payment}
+                priceInfo={prices.center_section.plans[activeStep]?.paymentInfo}
+                applyLabel={apply_button_text}
+                data={prices.center_section}
+              >
+                <StepperContainer>
+                  <StepConnector>
+                    <FillerStyles completed={((activeStep) * 100) / (prices.center_section.plans.length - 1)} />
+                  </StepConnector>
+                  {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map(p => p.months).map((label, index) => (
+                    <StepperCircle
+                      key={label}
+                      onMouseOver={() => setActiveStep(index)}
+                      background={index <= activeStep ? Colors.yellow : Colors.black}
+                    >
+                      <StepLabel color={index == activeStep ? Colors.yellow : Colors.white}>{label}</StepLabel>
+                    </StepperCircle >
+                  ))}
+                </StepperContainer>
+                <Div margin="0 0 40px 0" display="flex">
+                  <img style={{margin: "auto", height: "20px"}} src={prices.center_section.plans[activeStep].logo} />
+                </Div>
+              </PricingCard>
+            }
+            {prices.right_section &&
+              <PricingCard lang={props.lang}
+                background={Colors.white}
+                transform_tablet="translateY(10%)"
+                price={prices.right_section.content.price}
+                priceInfo={prices.right_section.content.price_info}
+                applyLabel={apply_button_text}
+                data={prices.right_section}
+                border="1px solid black"
+                borderLeft_tablet="none"
+              />
+            }
+          </GridContainer>
       }
       <GridContainer columns_tablet="12" gridGap="0" margin_tablet="0 0 37px 0" >
         <Div gridArea_tablet="1/5/1/9" justifyContent="center" alignItems="center">
@@ -214,7 +229,7 @@ const PricesAndPayments = (props) => {
       </GridContainer>
       <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
-    </Fragment>
+    </Fragment >
   )
 }
 export default (PricesAndPayments)

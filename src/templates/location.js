@@ -15,6 +15,7 @@ import {Div, Row, Column, Wrapper, Container, GridContainerWithImage, Grid, Grid
 import {Title, H1, H2, H4, H3, Span, Paragraph, Separator} from '../new_components/Heading'
 import {Button, Colors, Small, Img, StyledBackgroundSection} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
+import {Circle} from '../new_components/BackgroundDrawing'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {requestSyllabus} from "../actions";
@@ -31,7 +32,6 @@ const imagePositions = {
   "5": "3/4/5/13"
 }
 const Location = ({data, pageContext, yml}) => {
-  console.log("ymllll:", data)
   const {lang} = pageContext;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
@@ -58,25 +58,63 @@ const Location = ({data, pageContext, yml}) => {
     {/* github={`/location`} */}
     {/* <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px"> */}
     {/* <Grid height="375px" height_md="219px" columns="2" rows="2" columns_md="12" rows_md="1" background={Colors.verylightGray}> */}
-    <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 0 54px 0" columns_tablet="14" margin="67px 0" margin_tablet="0">
-      <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
+    <GridContainerWithImage padding="24px 0 " padding_tablet="36px 0 54px 0" columns_tablet="14" margin="67px 0" margin_tablet="0">
+      <Div flexDirection="column" alignItems="center" alignItems_tablet="start" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
         <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
         <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
         <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
-        <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph>
-        <ChooseProgram
-          right="15px"
-          top="40px"
-          margin="40px 0"
-          textAlign="center"
-          textAlign_md="left"
-          programs={data.allChooseProgramYaml.edges[0].node.programs}
-          openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-          closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-        />
+        <Paragraph textAlign_tablet="left" margin="0 0 30px 0">{yml.info_box.email} </Paragraph>
+        <a target="_self" href="#program"><Button color={Colors.blue}>{yml.button_header.button_text}</Button></a>
       </Div>
-      <Div display="none" display_tablet="flex" height="auto" width="100%" gridColumn_tablet="9 / 15" style={{position: "relative"}}>
+      <Div height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
+        <Circle
+          color="blue"
+          width="53px"
+          height="53px"
+          bottom="30px"
+          left="0"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="200px"
+          height="200px"
+          top="50px"
+          left="-5%"
+          opacity="0.2"
+        />
+        <Circle
+          color="yellow"
+          width="21px"
+          height="21px"
+          top="60px"
+          left="220px"
+        />
+        <Circle
+          color="yellow"
+          width="21px"
+          height="21px"
+          top="160px"
+          right="120px"
+          zIndex="1"
+        />
+        <Circle
+          color="blue"
+          width="9px"
+          height="9px"
+          top="100px"
+          left="10%"
+        />
+
+        <Circle
+          color="blue"
+          width="57px"
+          height="57px"
+          top="40px"
+          right="10%"
+          opacity="0.4"
+        />
         {/* <Div style={{position: "absolute", background: "#C7F3FD", width: "71%", height: "192px", top: "-24px", left: "97px", borderRadius: "3px"}}></Div>
         <Div style={{position: "absolute", background: "#FFB718", width: "256px", height: "174px", bottom: "-25px", right: "18px", borderRadius: "3px"}}></Div> */}
         <StyledBackgroundSection
@@ -89,7 +127,7 @@ const Location = ({data, pageContext, yml}) => {
     </GridContainerWithImage>
 
     <Badges lang={pageContext.lang} background={Colors.lightGray} margin="0 0 57px 0" padding="27px 17px 50px 17px" padding_tablet="80px 0 100px 0" paragraph={yml.badges.paragraph} />
-    <GridContainer columns_tablet="12">
+    <GridContainer columns_tablet="12" padding_tablet="60px 0 77px 0" padding="40px 17px">
       <Div gridColumn_tablet="1 / 4" ><H2 textAlign="left">{images.images_box.heading}</H2></Div>
       <Div flexDirection="column" gridColumn_tablet="5 / 13">
         {images.images_box.content.split("\n").map((m, i) =>
@@ -124,7 +162,8 @@ const Location = ({data, pageContext, yml}) => {
       })}
     </GridContainer>
     <OurPartners images={hiring.partners.images} title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
-    <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
+    <div id="program"></div>
+    <ChooseYourProgram lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
     <UpcomingDates lang={pageContext.lang} />
     <Loc lang={pageContext.lang} locations={data.test.edges} />
     <Staff lang={pageContext.lang} />
@@ -335,6 +374,10 @@ export const query = graphql`
                 } 
                 alt
             }
+            button_header{
+              button_text
+              button_link
+            }
             button{
                 apply_button_link
                 apply_button_text
@@ -421,11 +464,13 @@ export const query = graphql`
               } 
             }
             prices {
-                full_time {
-                  slug
-                }
-                part_time {
-                  slug
+                full_stack {
+                  full_time {
+                    slug
+                  }
+                  part_time {
+                    slug
+                  }
                 }
               }
             info_box {

@@ -27,7 +27,7 @@ const BaseHeading = styled(Heading)`
   font-weight: ${props => props.fontWeight};
   font-size: ${props => props.fontSize};
   line-height: ${props => props.lineHeight};
-  font-style: normal;
+  font-style: ${props => props.fontStyle || "normal"};
   color: ${props => props.color};
   margin: ${props => props.margin};
   text-shadow: ${props => props.textShadow}; 
@@ -35,6 +35,7 @@ const BaseHeading = styled(Heading)`
   margin-top: ${props => props.marginTop}; 
   text-transform: ${props => props.textTransform};
   text-align: ${props => props.textAlign || "center"};
+  align-self: ${props => props.alignSelf};
   padding: ${props => props.padding};
   border-bottom: ${props => props.borderBottom};
 
@@ -59,6 +60,7 @@ const BaseHeading = styled(Heading)`
     margin: ${props => props.margin_tablet};
     padding: ${props => props.padding_tablet};
     display: ${props => props.display_tablet};
+    align-self: ${props => props.alignSelf_tablet};
   }
   @media  ${Devices.md}{
     font-size: ${props => props.fontSize_md};

@@ -7,8 +7,10 @@ meta_info:
   redirects: []
 
 ## BANNER - HEADER
-seo_title: 4Geeks Academy
-header_data:
+seo_title: "Bootcamp Pricing"
+header:
+  title: Financing
+  paragraph: Indicate the following information to show you the financing options
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
   image: "../../../static/images/bg/pricing-bg.jpg"
@@ -33,8 +35,22 @@ intro:
 prices:
   heading: "SELECT A PROGRAM"
   paragraph: "Start by choosing a program and location"
-  closed_label: "Click to select a program"
+  closed_label: "Select a program"
   opened_label: "Close"
+
+
+label:
+  program: 
+    title: "Program"
+    closedLabel: "Select a program"
+  modality:
+    title: "Modality"
+    closedLabel: "Select a modality"
+  campus:
+    title: "Campus"
+    closedLabel: "Select a campus"
+
+syllabus_button_text: "Search"
 
 ## PAYMENT GUIDE SECTION
 payment_guide:

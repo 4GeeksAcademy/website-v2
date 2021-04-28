@@ -10,6 +10,7 @@ import {Location} from '@reach/router'
 export const Colors = {
     blue: "#00A0DA",
     lightBlue: "#BBEAFC",
+    lightBlue2: "rgba(199, 243, 253, 0.5)",
     veryLightBlue: "#C7F3FD",
     gray: "#898a8b",
     verylightGray: "#F5F5F5",
@@ -17,6 +18,7 @@ export const Colors = {
     lightGreen: "#c4f7b7",
     green: "#20630d",
     darkGray: '#3A3A3A;',
+    darkGray2: '#606060;',
     borderGray: '#ececec',
     yellow: "#FFC718",
     lightYellow: "rgba(255, 183, 24, 0.1)",
@@ -26,6 +28,7 @@ export const Colors = {
     white: "#FFFFFF",
     red: "red",
     lightRed: "#ffcdc9",
+    shadow:"0px 0px 16px rgba(0, 0, 0, 0.15)"
 
 }
 
@@ -255,12 +258,14 @@ export const Button = styled(SmartButton)`
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position};
     display: ${props => props.display};
-    padding: ${props => props.padding};
+    padding: ${props => props.padding || "12px 24px"};
+    // padding: 12px 24px;
     transform: ${props => props.transform};
     color: ${props => props.color};
     background: ${props => props.background};
     border: ${props => props.border};
-    height: ${props => props.height};
+    // height: ${props => props.height};
+    height: 40px;
     cursor: pointer;
     text-align: ${props => props.textAlign || "center"};
     letter-spacing: 0px;
@@ -305,7 +310,6 @@ export const Button = styled(SmartButton)`
 
 
 Button.defaultProps = {
-    padding: '10px 30px',
     fontSize: '12px',
     width: 'fit-content',
     type: 'button',

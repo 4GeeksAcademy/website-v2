@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
+import {navigate} from "gatsby";
 import {GeekCard} from '../components/Card'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
+import {Container, GridContainer, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
 import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'
 import ProgramDetails from '../new_components/ProgramDetails';
@@ -26,11 +27,18 @@ const Program = ({data, pageContext, yml}) => {
   const courseDetails = data.allCourseYaml.edges[0].node;
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+
+  const course_type = "machine_learning"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
+  
   const hiring = data.allPartnerYaml.edges[0].node;
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
+  const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a, b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
+
+console.log("TITLE MACHINE::", yml.prices)
+console.log("TITLE MACHINE::", data)
   return (<>
     <Header
       seo_title={yml.seo_title}
@@ -132,25 +140,71 @@ const Program = ({data, pageContext, yml}) => {
       </Div>
       <Badges lang={pageContext.lang} />
     </Header>
-    <OurPartners background={Colors.verylightGray} images={hiring.partners.images} slider></OurPartners>
+    <OurPartners background={Colors.verylightGray} images={hiring.partners.images} marquee></OurPartners>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} background={Colors.white} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <TechsWeTeach lang={pageContext.lang} />
     <GeeksInfo lang={pageContext.lang} />
+
+    <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
+      <Div height="1px" background="#EBEBEB"></Div>
+    </GridContainer>
 
     <PricesAndPayment
       type={pageContext.slug}
       lang={pageContext.lang}
       session={session}
       locations={data.allLocationYaml.edges}
-      course={program_type}
+      programType={program_type}
+      courseType={course_type}
+      title={yml.prices.heading}
+      paragraph={yml.prices.sub_heading}
     />
 
     <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
       <Testimonials lang={data.allTestimonialsYaml.edges} />
     </Container>
 
-    <OurPartners images={hiring.partners.images} slider></OurPartners>
+    <OurPartners images={hiring.partners.images} marquee></OurPartners>
+
+    {/* <Wrapper
+      github="/course"
+    >
+      <Title
+        size="10"
+        title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
+        variant="primary"
+      />
+      <PricesAndPayment
+        lang={pageContext.lang}
+        session={session}
+        type={pageContext.slug}
+        locations={data.allLocationYaml.edges}
+        course="machine_learning"
+      />
+    </Wrapper> */}
+
+
+    <Wrapper
+      github="/course"
+    >
+      <Title
+        size="10"
+        title={yml.faq.title}
+        variant="primary"
+      />
+      {data.faqs.edges[0].node.faq.slice(0, 3).map(f => <ul>
+        <li>
+          <H5 margin="15px 0px">{f.question}</H5>
+          <Paragraph>{f.answer}</Paragraph>
+        </li>
+      </ul>)
+      }
+      <Paragraph align="center" margin="10px 0">
+        <Button width="400px" onClick={() => navigate(`/${pageContext.lang}/contact`)} color={Colors.blue} margin="0" textColor="white">{yml.faq.read_more}</Button>
+      </Paragraph>
+    </Wrapper>
 
   </>
   )
@@ -208,6 +262,10 @@ export const query = graphql`
               }
               heading
               sub_heading
+              facts{
+                value
+                label
+              }
               left_labels{
                 description
                 projects
@@ -228,6 +286,19 @@ export const query = graphql`
               heading
               button_label
             }
+            teacher{
+              picture{
+                childImageSharp {
+                  fluid(maxWidth: 500){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              greeting
+              linkedin
+              full_name
+              bio
+            }
             potential_companies{
               tagline
               sub_heading
@@ -246,7 +317,7 @@ export const query = graphql`
               heading
               sub_heading
               sub_heading_link
-          }
+            }
             prices{
               heading
               sub_heading
@@ -271,6 +342,11 @@ export const query = graphql`
               geeks_vs_other
               pricing
               alumni
+            }
+            faq{
+              title
+              link
+              read_more
             }
         }
       }
@@ -462,45 +538,73 @@ export const query = graphql`
           }
           
           prices {
-            software_engineering {
-              center_section {
-
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+            machine_learning {
+              part_time{
+                slug
+                duration
+                left_section {
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  button {
+                    button_text
+                  }
                 }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
+                center_section {
+                  header {
+                    heading_two
+                    sub_heading
+                    heading_one
+                  }
+                  plans {
+                    months
+                    monthsInfo
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
+                  button {
+                    button_text
+                  }
+                }
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
               }
-              left_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  heading_two
-                  sub_heading
-                }
-              }
-              right_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+              full_time {
+                slug
+                left_section {
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  button {
+                    button_text
+                  }
                 }
               }
             }
@@ -509,6 +613,18 @@ export const query = graphql`
         }
       }
     }
+    
+      faqs: allPageYaml(filter: { fields: { file_name: {regex: "/faq\\./"}, lang: { eq: $lang }}}, limit: 3) {
+        edges{
+          node{
+            faq{
+                question
+                answer
+            }
+        
+          }
+        }
+      }
   }
 `;
 export default BaseRender(Program);
