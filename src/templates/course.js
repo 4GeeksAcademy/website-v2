@@ -12,6 +12,7 @@ import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
 import PricesAndPayment from '../new_components/PricesAndPayment';
 import Modal from '../components/Modal';
 import TypicalDay from '../components/TypicalDay';
+import LeadForm from '../new_components/LeadForm';
 import AlumniProjects from '../new_components/AlumniProjects';
 import ProgramSelector from '../components/ProgramSelector';
 import Badges from '../new_components/Badges';
@@ -29,6 +30,7 @@ const Program = ({data, pageContext, yml}) => {
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
 
+  const course_type = "full_stack"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
 
   const handleOpen = () => {
@@ -56,8 +58,27 @@ const Program = ({data, pageContext, yml}) => {
         >
           <Button width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button outline width="200px" width_tablet="fit-content" color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button onClick={handleOpen} outline width="200px" width_tablet="fit-content" color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
+      <Modal
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        open={open}
+        onClose={handleClose}
+      >
+        <LeadForm
+          style={{marginTop: "50px"}}
+          heading={yml.button.syllabus_heading}
+          motivation={yml.button.syllabus_motivation}
+          sendLabel={syllabus_button_text}
+          formHandler={requestSyllabus}
+          handleClose={handleClose}
+          lang={pageContext.lang}
+          data={{
+            course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
+          }}
+        />
+      </Modal>
       <Badges lang={pageContext.lang} margin="0 0 40px 0" />
     </Header>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
@@ -76,13 +97,14 @@ const Program = ({data, pageContext, yml}) => {
       lang={pageContext.lang}
       session={session}
       locations={data.allLocationYaml.edges}
-      course={program_type}
+      programType={program_type}
+      courseType={course_type}
       title={yml.prices.heading}
       paragraph={yml.prices.sub_heading}
     />
     <AlumniProjects title={yml.alumni.heading} paragraph={yml.alumni.sub_heading} lang={data.allAlumniProjectsYaml.edges} limit={2} />
     <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" />
-    <OurPartners images={hiring.partners.images} slider></OurPartners>
+    <OurPartners images={hiring.partners.images} marquee></OurPartners>
   </>
   )
 };
@@ -391,89 +413,107 @@ export const query = graphql`
           }
           
           prices {
-            full_time {
-              center_section {
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+            full_stack {
+              full_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    sub_heading
+                    heading_one
+                    heading_two
+                  }
+                  plans {
+                    months
+                    monthsInfo
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
                 }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    heading_two
+                    sub_heading
+                  }
                 }
-              }
-              left_section {
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  heading_two
-                  sub_heading
-                }
-              }
-              right_section {
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
-                }
-              }
-            }
-            part_time {
-              center_section {
-
-                header {
-                  heading_two
-                  sub_heading
-                  heading_one
-                }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    sub_heading
+                    heading_one
+                    heading_two
+                  }
                 }
               }
-              left_section {
-
-                content {
-                  price
-                  price_info
+              part_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    heading_two
+                    sub_heading
+                    heading_one
+                  }
+                  plans {
+                    months
+                    monthsInfo
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
                 }
-                header {
-                  heading_one
-                  sub_heading
-                  heading_two
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
-              }
-              right_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  sub_heading
-                  heading_two
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
               }
             }
           }
-          
         }
       }
     }

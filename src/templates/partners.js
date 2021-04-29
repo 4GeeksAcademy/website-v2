@@ -7,6 +7,8 @@ import Badges from '../new_components/Badges'
 import OurPartners from '../new_components/OurPartners'
 import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
+import {Circle} from '../new_components/BackgroundDrawing'
+import Modal from '../new_components/Modal';
 import LeadForm from "../new_components/LeadForm/index.js";
 
 function rand () {
@@ -20,6 +22,16 @@ const Partners = (props) => {
     setOpen(true);
   };
 
+
+  
+  // variable properties #e06c75
+  // Keywords #c678dd
+  // numbers #d19a66
+  // classes, constants #e5c07b
+  // function, methods #61afef
+  // string #98c379
+  // operator special function #56b6c2
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -31,16 +43,100 @@ const Partners = (props) => {
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
-        padding_tablet="72px 0 40px 0"
+        padding_tablet="0 0 40px 0"
+        padding="0 17px 30px 17px"
+        position="relative"
       >
-        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center">
+        <Circle
+          color="lightBlue"
+          width="53px"
+          height="53px"
+          top="0"
+          left="30px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="250px"
+          height="250px"
+          bottom="-50px"
+          right="-125px"
+          opacity="0.2"
+          zIndex="1"
+        />
+        <Circle
+          color="black"
+          width="119px"
+          height="11px"
+          border="10px"
+          bottom="150px"
+          right="20px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="77px"
+          height="11px"
+          border="10px"
+          bottom="150px"
+          right="159px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="116px"
+          height="116px"
+          bottom="-58px"
+          left="-58px"
+          zIndex="1"
+        />
+        <Circle
+          color="yellow"
+          width="21px"
+          height="21px"
+          top="10px"
+          right="320px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="blue"
+          width="9px"
+          height="9px"
+          top="100px"
+          left="10%"
+        />
+
+        <Circle
+          color="blue"
+          width="57px"
+          height="57px"
+          top="40px"
+          right="10%"
+        />
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
           <Link to={yml.button_section.button_link}
             state={{course: yml.meta_info.bc_slug}}
           >
-            <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
+            <Button width="fit-content" onClick={handleOpen} color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
           </Link>
         </Div>
       </Header>
+      <Modal
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        open={open}
+        onClose={handleClose}
+      >
+        <LeadForm heading="BE A HIRING PARTNER" formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
+      </Modal>
       <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
         <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
@@ -78,7 +174,6 @@ const Partners = (props) => {
             images={partnersData.coding.images}
             showFeatured={true}
             props={partnersData.partners}
-
           />
         </GridContainer>
       </GridContainer>
@@ -119,7 +214,7 @@ query PartnersQuery($file_name: String!, $lang: String!) {
               button
               image{
                   childImageSharp {
-                    fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                    fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }

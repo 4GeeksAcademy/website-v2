@@ -12,5 +12,7 @@ info:
   button_text: aplicar
   button_link: ""
 footer:
+  button_text: Ver más Fechas
   button_text_open: Ver más Fechas
   button_text_close:
+  button_link: "/es/proximas-fechas"

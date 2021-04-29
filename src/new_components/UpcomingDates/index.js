@@ -29,8 +29,10 @@ const UpcomingDates = ({lang}) => {
               location_label
             }
             footer {
+              button_text
               button_text_close
               button_text_open
+              button_link
             }
             fields {
                 lang
@@ -120,7 +122,7 @@ const UpcomingDates = ({lang}) => {
                         </Div>
                     )
                 })}
-                <Paragraph margin="20px 0" color={Colors.blue}>See more dates</Paragraph>
+                <Link to={content.footer.button_link}><Paragraph margin="20px 0" color={Colors.blue}>{content.footer.button_text}</Paragraph></Link>
             </Div>
         </GridContainer >
     )

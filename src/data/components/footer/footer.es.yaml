@@ -6,27 +6,13 @@ newsletter:
 
 footer:
   - column_one:
-    width: 2
-    heading: "CONTACTO"
-    items:
-      - name: "✉️ Envíanos un email"
-        link: "/es/contactanos"
-      - name: "۪"
-        link: ""
-      - name: "Estamos abiertos de Lunes a Viernes"
-        link: ""
-      - name: "9:00am - 8:00pm"
-        link: ""
-      - name: "🇺🇸 English Version"
-        link: "/?lang=en#home"
-  - column_two:
     heading: "COMPAÑÍA"
     width: 3
     items:
       - name: "Programa"
-        link: "/es/coding-bootcamps/full-stack-part-time"
+        link: "/es/coding-bootcamp/full-stack-part-time"
       - name: "La Academia"
-        link: "/es/la-academia"
+        link: "/es/sobre-la-academia"
       - name: "Aliados"
         link: "/es/alianzas"
       - name: "Precio"
@@ -38,7 +24,7 @@ footer:
       - name: "Blog"
         link: "/es/blog-en-espanol"
       - name: "Empleo"
-        link: "/es/empleo"
+        link: "/es/empleo-programacion"
       - name: "Privacidad"
         link: "/es/privacidad"
       - name: "Terminos"
@@ -49,35 +35,37 @@ footer:
         link: "/es/preguntas-frecuentes"
       - name: "Contacto"
         link: "/es/contactanos"
+  - column_two:
+    width: 3
+    heading: "PROGRAMS"
+    items:
+      - name: "Full Stack Developer"
+        link: "/es/coding-bootcamp/full-stack-part-time"
+      - name: "Ingeniero de software"
+        link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
+      - name: "AI Machine Learning Engineering"
+        link: "/es/coding-bootcamp/curso-inteligencia-artificial"
   - column_four:
     heading: "SEDES"
     width: 3
     items:
       - name: "Online"
-        link: "/es/coding-campuses/online-bootcamp-programacion"
+        link: "/es/coding-campus/online-bootcamp-programacion"
       - name: "Miami"
-        link: "/es/coding-campuses/bootcamp-programacion-miami"
+        link: "/es/coding-campus/bootcamp-programacion-miami"
       - name: "Madrid"
-        link: "/es/coding-campuses/bootcamp-programacion-madrid"
+        link: "/es/coding-campus/bootcamp-programacion-madrid"
       - name: "Santiago de Chile"
-        link: "/es/coding-campuses/bootcamp-programacion-santiago"
+        link: "/es/coding-campus/bootcamp-programacion-santiago"
       - name: "Costa Rica"
-        link: "/es/coding-campuses/bootcamp-programacion-costa-rica"
+        link: "/es/coding-campus/bootcamp-programacion-costa-rica"
       - name: "Caracas"
-        link: "/es/coding-campuses/bootcamp-programacion-caracas"
+        link: "/es/coding-campus/bootcamp-programacion-caracas"
       - name: "Maracaibo"
-        link: "/es/coding-campuses/bootcamp-programacion-maracaibo"
+        link: "/es/coding-campus/bootcamp-programacion-maracaibo"
   - column_five:
     width: 2
-    heading: "SÍGUENOS"
+    heading: "PARA EMPRESAS"
     items:
-      - name: "Github"
-        link: "https://www.github.com/4GeeksAcademy"
-      - name: "Facebook"
-        link: "https://www.facebook.com/4GeeksAcademy"
-      - name: "Twitter"
-        link: "https://www.twitter.com/4GeeksAcademy"
-      - name: "Instagram"
-        link: "https://www.instagram.com/4GeeksAcademy"
-      - name: "Youtube"
-        link: "https://www.youtube.com/4GeeksAcademy"
+      - name: "4GEEKS PARA EMPRESAS"
+        link: "/es/alianzas"

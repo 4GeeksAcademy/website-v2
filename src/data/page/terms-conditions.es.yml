@@ -1,10 +1,11 @@
 meta_info:
   slug: terminos
   title: "AVISO LEGAL Y CONDICIONES DE USO"
-  description: "Conoce el aviso legal y las condiciones de uso de 4Geeks Academy"
+  description: "Conoce los términos y condiciones de 4Geeks Academy"
   image: null
-  keywords: "AVISO LEGAL, CONDICIONES DE USO, 4geeks academy"
+  keywords: "términos y condiciones, 4Geeks Academy"
   redirects: []
+seo_title: 4Geeks Academy
 header:
   tagline: < Aviso Legal 4Geeks Academy >
   sub_heading: ""

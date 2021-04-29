@@ -5,15 +5,23 @@ meta_info:
   position: 20
   image: "https://storage.googleapis.com/4geeks-academy-website/caracas-es.png"
   keywords: "Coding Bootcamp Caracas"
-  redirects: ["/venezuela", "/caracas", "/es/location/impact-hub-caracas", "/es/location/caracas-venezuela"]
+  redirects:
+    [
+      "/venezuela",
+      "/caracas",
+      "/es/location/impact-hub-caracas",
+      "/es/location/caracas-venezuela",
+    ]
 
 seo_title: "4Geeks Academy Caracas"
 header:
   tagline: "4GEEKS ACADEMY en CARACAS"
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/caracas-loc-2.jpeg"
+  image: "../../../static/images/locations/caracas-home.png"
   alt: ""
-
+button_header:
+  button_text: Ver Programas
+  button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR PÉNSUM" # <-- this will show everywhere in the website
   apply_button_text: "APLICAR" # <-- this will show everywhere in the website
@@ -60,60 +68,132 @@ heading_section:
 hasFinancialsOption: false
 financials_max_months:
 prices:
-  full_time:
-    ## GENERAL INFO
-    slug: "full-time"
-    duration: "9 Weeks"
+  full_stack:
+    full_time:
+      ## GENERAL INFO
+      slug: "full-time"
+      duration: "9 Weeks"
 
-    ## LEFT BOX SECTION FULL-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "PAGO DE CONTADO"
-        heading_two: "ELEGIBLE PARA DESCUENTOS"
-        sub_heading: "Recibe descuento si pagas upfront"
-      content:
-        price: "Según modalidad"
-        price_info: "La modalidad Full-Time está disponible en otras sedes, contáctanos para más info"
+      ## LEFT BOX SECTION FULL-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAGO DE CONTADO"
+          heading_two: "ELEGIBLE PARA DESCUENTOS"
+          sub_heading: "Recibe descuento si pagas upfront"
+        content:
+          price: "Según modalidad"
+          price_info: "Pregunta por facilidades de pago para la próxima cohorte"
+        button:
+          button_text: "APLICAR AHORA"
 
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PAGO FRACCIONADO"
-        heading_two: "A CONVENIR"
-        sub_heading: "pregunta por nuestras becase, financiamientos y precios"
-      content:
-        price: "?"
-        price_info: "Por favor contáctanos para más información acerca de precios, descuentos y becas."
-  ## *****************
-  ## PART-TIME SECTION
-  ## *****************
-  part_time:
-    slug: "part-time"
-    duration: "16 Weeks"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAGO FRACCIONADO"
+          heading_two: "A CONVENIR"
+          sub_heading: "pregunta por nuestras becase, financiamientos y precios"
+        content:
+          price: "?"
+          price_info: "Por favor contáctanos para más información acerca de precios, descuentos y becas."
+        button:
+          button_text: "APLICAR AHORA"
+    ## *****************
+    ## PART-TIME SECTION
+    ## *****************
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
 
-    ## LEFT BOX SECTION PART-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "PAGO DE CONTADO"
-        heading_two: "ELEGIBLE PARA DESCUENTOS"
-        sub_heading: "Recibe descuento si pagas upfront"
-      content:
-        price: "Según modalidad"
-        price_info: "Pregunta por facilidades de pago para la próxima cohorte"
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAGO DE CONTADO"
+          heading_two: "ELEGIBLE PARA DESCUENTOS"
+          sub_heading: "Recibe descuento si pagas upfront"
+        content:
+          price: "Según modalidad"
+          price_info: "Pregunta por facilidades de pago para la próxima cohorte"
+        button:
+          button_text: "APLICAR AHORA"
 
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PAGO FRACCIONADO"
-        heading_two: "A CONVENIR"
-        sub_heading: "pregunta por nuestras becase, financiamientos y precios"
-      content:
-        price: "?"
-        price_info: "Por favor contáctanos para más información acerca de precios, descuentos y becas."
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAGO FRACCIONADO"
+          heading_two: "A CONVENIR"
+          sub_heading: "pregunta por nuestras becase, financiamientos y precios"
+        content:
+          price: "?"
+          price_info: "Por favor contáctanos para más información acerca de precios, descuentos y becas."
+        button:
+          button_text: "APLICAR AHORA"
+
+  software_engineering:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Part-Time no esta disponible"
+          price_info: "Caracas - Venezuela"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Full-Time no esta disponible"
+          price_info: "Caracas - Venezuela"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Part-Time no esta disponible"
+          price_info: "Caracas - Venezuela"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Full-Time no esta disponible"
+          price_info: "Caracas - Venezuela"
+        button:
+          button_text: "Aplicar a otros cursos"
+
 
 active_campaign_location_slug: "caracas-venezuela"
 breathecode_location_slug: "caracas-venezuela"

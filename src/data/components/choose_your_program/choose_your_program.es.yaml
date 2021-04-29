@@ -1,3 +1,5 @@
+title: Choose your program
+paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
 
 programs:
   - title: "Full-Stack 
@@ -9,14 +11,14 @@ programs:
     
     of machine learning
     "
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    link: "/es/coding-bootcamp/full-stack-part-time"
   - title: "Software Engineer"
     sub_title: "Level 2"
     description: "Master the basics 
     
     of machine learning
     "
-    link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+    link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
   - title: "AI/Machine Learning
   
     Engineering
@@ -26,5 +28,5 @@ programs:
     
     of machine learning
     "
-    link: "/es/coding-bootcamps/curso-inteligencia-artificial"
+    link: "/es/coding-bootcamp/curso-inteligencia-artificial"
 

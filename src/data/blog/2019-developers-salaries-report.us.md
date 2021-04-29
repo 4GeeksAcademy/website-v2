@@ -46,7 +46,7 @@ StackOverflow is a holy grail for developers. Every year they make a survey abou
 
 Enrolling in a Bootcamp is a tricky decision. As they state, 82.7% of the developers surveyed learn to code asking questions and reading answers on the web. Seems illogical but keep in mind that many as 46.1% of them already have a degree. 
 
-We truly believe [coding Bootcamps are totally worth it](https://www.coursereport.com/blog/are-coding-bootcamps-worth-it). But it is a fact that many of them are self-taught. However, the time has come and Coding Bootcamps are still a recent upgrade to traditional education. If you want to learn in an effective, mentored, and coding environment, you have to join a Coding Bootcamp. 
+We truly believe [coding Bootcamps are totally worth it](https://www.coursereport.com/blog/are-coding-bootcamp-worth-it). But it is a fact that many of them are self-taught. However, the time has come and Coding Bootcamps are still a recent upgrade to traditional education. If you want to learn in an effective, mentored, and coding environment, you have to join a Coding Bootcamp. 
 
 
 ## What can make you scale up in the developer’s game 

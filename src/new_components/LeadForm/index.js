@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
 import {Alert, Input} from "../Form/index";
-import {Row, Column, Div} from "../Sections";
+import {Row, Column, Div, GridContainer} from "../Sections";
 import {H4, Paragraph} from "../Heading";
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -155,39 +155,40 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
             <Paragraph align="center" margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
             :
             <>
-                {motivation && <Paragraph align="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
-                <Row display="flex" marginLeft="0" marginRight="0">
-                    <Column display={layout} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
-                        {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
-                            const _field = formData[f]
-                            return <Input
-                                key={i}
-                                bgColor={inputBgColor}
-                                borderRadius={i === 0 && layout === "flex" ? "10px 0px 0px 10px" : "0"}
-                                type={_field.type} className="form-control" placeholder={_field.place_holder}
-                                onChange={(value, valid) => {
-                                    setVal({...formData, [f]: {..._field, value, valid}});
-                                    if (formStatus.status === "error") {
-                                        setFormStatus({status: "idle", msg: "Request"})
-                                    }
-                                }}
-                                value={_field.value}
-                                errorMsg={_field.error}
-                                required={_field.required}
-                                on
-                            />
-                        })}
-                        {layout === "flex" &&
-                            <Button width="100%" padding=".7rem .45rem"
-                                type="submit"
-                                margin="10px 0"
-                                borderRadius="0px 10px 10px 0px"
-                                color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
-                                textColor={Colors.white}
-                                disabled={formStatus.status === "loading" ? true : false}
-                            >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
-                        }
-                    </Column>
+                {motivation && <Paragraph textAlign="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
+                {/* <Row display="flex" marginLeft="0" marginRight="0"> */}
+                <GridContainer display={layout} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
+                    {/* <Column display={layout} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0"> */}
+                    {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
+                        const _field = formData[f]
+                        return <Input
+                            key={i}
+                            bgColor={inputBgColor}
+                            borderRadius={i === 0 && layout === "flex" ? "10px 0px 0px 10px" : "0"}
+                            type={_field.type} className="form-control" placeholder={_field.place_holder}
+                            onChange={(value, valid) => {
+                                setVal({...formData, [f]: {..._field, value, valid}});
+                                if (formStatus.status === "error") {
+                                    setFormStatus({status: "idle", msg: "Request"})
+                                }
+                            }}
+                            value={_field.value}
+                            errorMsg={_field.error}
+                            required={_field.required}
+                            on
+                        />
+                    })}
+                    {layout === "flex" &&
+                        <Button width="100%" padding=".7rem .45rem"
+                            type="submit"
+                            margin="10px 0"
+                            borderRadius="0px 10px 10px 0px"
+                            color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
+                            textColor={Colors.white}
+                            disabled={formStatus.status === "loading" ? true : false}
+                        >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
+                    }
+                    {/* </Div> */}
                     {session && session.location && session.location.gdpr_compliant &&
                         <Paragraph fontSize="11px" margin="5px 0 0 0">
                             <input
@@ -200,26 +201,29 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
                         </Paragraph>
                     }
                     {formStatus.status === "error" && <Alert color="red" margin="0 15px" padding="5px 0 0 0">{formStatus.msg}</Alert>}
-                </Row>
+                    {/* </Row> */}
+                </GridContainer>
                 {layout === "block" &&
-                    <Div display="flex" padding="5px 0 0 0" justifyContent="end">
-                        {/* {handleClose && <Column size="6" padding="10px 20px">
+                    <GridContainer>
+                        <Div display="flex" padding="5px 0 0 0" justifyContent="end">
+                            {/* {handleClose && <Column size="6" padding="10px 20px">
                             <Button width="100%" padding=".7rem .45rem" color={Colors.gray} textColor={Colors.white} onClick={handleClose}>Close</Button>
                         </Column>} */}
-                        {/* <Column size={handleClose ? "6" : "12"} padding="10px 20px" margin="auto"> */}
+                            {/* <Column size={handleClose ? "6" : "12"} padding="10px 20px" margin="auto"> */}
 
-                        <Button width="fit-content" padding=".7rem .45rem"
-                            type="submit"
-                            color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
-                            textColor={Colors.white}
-                            disabled={formStatus.status === "loading" ? true : false}
-                        >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
-                        {/* </Column> */}
-                    </Div>
+                            <Button width="fit-content" padding=".7rem .45rem"
+                                type="submit"
+                                color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
+                                textColor={Colors.white}
+                                disabled={formStatus.status === "loading" ? true : false}
+                            >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
+                            {/* </Column> */}
+                        </Div>
+                    </GridContainer>
                 }
             </>
         }
-    </Form>
+    </Form >
 }
 
 LeadForm.propTypes = {

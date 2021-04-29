@@ -42,9 +42,9 @@ const SVGImage = () =>
 const Awards = ({data, pageContext, yml}) => {
     return (
         <>
-            <GridContainer columns_tablet="12" padding_tablet="48px 0" background="rgba(199, 243, 253, 0.5)">
-                <Div gridColumn_tablet="1 / 7" flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
-                    {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
+            <GridContainer columns_tablet="12" padding_tablet="80px 0" padding="40px 17px 80px 17px" background="rgba(199, 243, 253, 0.5)" margin="120px 0 0 0">
+                <Div gridColumn_tablet="1 / 6" flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
+                    <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
                     <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header.paragraph} </Paragraph>
                     {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
