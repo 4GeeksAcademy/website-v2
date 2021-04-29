@@ -172,7 +172,7 @@ export default function Template (props) {
 
                   width_tablet="390px"
                   width_md="520px"
-                  width_lg="725px"
+                  width_lg="760px"
 
                   bsize="cover"
                   position="center"
