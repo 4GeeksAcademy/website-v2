@@ -7,7 +7,7 @@ const {walk, loadMD, empty, fail, success} = require("./_utils")
 const front_matter_fields = [
     {key: "slug", type: "string", mandatory: true},
     {key: "title", type: "string", mandatory: true},
-    {key: "description", type: "string", length: 155},
+    {key: "excerpt", type: "string", length: 156},
     {key: "image", type: "string"},
     {key: "author", type: "string"},
 ]
@@ -24,11 +24,11 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
         try {
             const content = loadMD(_path)
             console.log("cadasdasdasdasdadadadsads", content)
-            const frontmatter = content.frontmatter
+            const frontmatter = content.attributes
             // if (!doc.yaml) fail("Invalid YML syntax for " + _path)
             // if (!doc.lang) fail("Missing language on yml file name for " + _path)
 
-            const meta_keys = Object.keys(content.frontmatter)
+            const meta_keys = Object.keys(frontmatter)
             front_matter_fields.forEach(m => {
                 if(!meta_keys.includes(m["key"])) fail(`Missing prop ${m["key"]} on frontmatter on ${_path}`)
                 else{
