@@ -78,7 +78,7 @@ export default function Template (props) {
       <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
 
         {/* Container */}
-        <GridContainer columns_tablet="1" columns="1" margin="90px 0 0 0">
+        <GridContainer columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin="90px 0 0 0">
 
           {/* Top Tags */}
           <Div justifyContent="center">
@@ -167,9 +167,14 @@ export default function Template (props) {
             <Div justifyContent="center" margin="0 0 0 0" position="absolute" transform="translate(0%, 10%)" style={{zIndex: "0"}}>
               <LazyLoad scroll={true} height={100} once={true} >
                 <RoundImage border="0rem"
-                  width="676px"
-                  height="366px"
-                  bsize="contain"
+                  width="300px"
+                  height="320px"
+
+                  width_tablet="390px"
+                  width_md="520px"
+                  width_lg="725px"
+
+                  bsize="cover"
                   position="center"
                   url={post.frontmatter.image} />
               </LazyLoad>
@@ -177,7 +182,7 @@ export default function Template (props) {
 
           </Div>
 
-          <Div height="250px"></Div>
+          <Div height="180px" height_tablet="250px"></Div>
 
           {/* Post Content */}
           <Div margin="100px 0 0 0" background={Colors.white}>
