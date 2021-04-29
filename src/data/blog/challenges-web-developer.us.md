@@ -6,12 +6,12 @@ excerpt: "know the challenges of a web developer and how to overcome them"
 layout: post
 link: https://www.4geeksacademy.co/challenges-web-developer/
 slug: challenges-web-developer
-title: The Challenges of a Web Developer
+title: The Challenges of a Web Developer, Living and working as a developer
 avatar: "/images/staff/alejandro.png"
 image: null
 wordpress_id: 315
 categories:
-- Living and working as a developer
+- Learning to code
 
 tags:
 - career path
