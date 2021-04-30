@@ -74,6 +74,7 @@ const Awards = ({data, pageContext, yml}) => {
                                     imgStyle={{objectFit: "contain"}}
                                     loading="eager"
                                     fadeIn={false}
+                                    durationFadeIn={0}
                                     // alt={l.name}
                                     fluid={m.image.childImageSharp.fluid}
                                 />
@@ -190,7 +191,8 @@ query AwardsQuery($file_name: String!, $lang: String!) {
                 image{
                     childImageSharp {
                       fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                        ...GatsbyImageSharpFluid_withWebp
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
+                        # ...GatsbyImageSharpFluid_withWebp
                       }
                     }
                   }
