@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import Link from 'gatsby-link'
 import {Column, Row, GridContainer, Header, Div, Grid} from "../new_components/Sections"
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
@@ -18,20 +18,16 @@ function rand () {
 const Partners = (props) => {
   const {data, pageContext, yml} = props;
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  const joinPartnersRef = useRef(null)
+  console.log("REF: ", joinPartnersRef)
 
-
-
-  // variable properties #e06c75
-  // Keywords #c678dd
-  // numbers #d19a66
-  // classes, constants #e5c07b
-  // function, methods #61afef
-  // string #98c379
-  // operator special function #56b6c2
-
+  const goToForm = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: joinPartnersRef.current?.offsetTop - "100",
+      behavior: "smooth"
+    })
+  }
   const handleClose = () => {
     setOpen(false);
   };
@@ -73,18 +69,11 @@ const Partners = (props) => {
           <Link to={yml.button_section.button_link}
             state={{course: yml.meta_info.bc_slug}}
           >
-            <Button width="fit-content" onClick={handleOpen} color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
+            <Button onClick={goToForm} width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
           </Link>
         </Div>
       </Header>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={handleClose}
-      >
-        <LeadForm heading="BE A HIRING PARTNER" formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} />
-      </Modal>
+
       <Grid gridTemplateColumns_tablet="14" margin_tablet="0 0 73px 0" margin="0 0 36px 0">
         <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
@@ -126,7 +115,7 @@ const Partners = (props) => {
         </GridContainer>
       </GridContainer>
       <GridContainer columns_tablet="12" padding="99px  17px 80px 17px" padding_tablet="0" margin_tablet="0 0 81px 0">
-        <Div gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
+        <Div ref={joinPartnersRef} gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
           <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
         </Div>
         <Div gridColumn_tablet="1 / 7" gridRow_tablet="2 / 2" flexDirection="column" >
