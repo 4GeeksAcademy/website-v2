@@ -23,7 +23,6 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
         const _path = _files[i];
         try {
             const content = loadMD(_path)
-            console.log("cadasdasdasdasdadadadsads", content)
             const frontmatter = content.attributes
             // if (!doc.yaml) fail("Invalid YML syntax for " + _path)
             // if (!doc.lang) fail("Missing language on yml file name for " + _path)
@@ -47,7 +46,7 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             });
         }
         catch (error) {
-            console.log(`Error on file: ${_path}`.red)
+            console.error(`Error on file: ${_path}`.red)
             fail(error.message || error)
         }
     }
