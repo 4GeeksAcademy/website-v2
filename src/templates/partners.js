@@ -23,7 +23,7 @@ const Partners = (props) => {
   };
 
 
-  
+
   // variable properties #e06c75
   // Keywords #c678dd
   // numbers #d19a66
@@ -43,84 +43,32 @@ const Partners = (props) => {
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
-        padding_tablet="0 0 40px 0"
+        padding_tablet="60px 0 40px 0"
         padding="0 17px 30px 17px"
         position="relative"
+      // height_tablet="350px"
       >
-        <Circle
-          color="lightBlue"
-          width="53px"
-          height="53px"
-          top="0"
-          left="30px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="250px"
-          height="250px"
-          bottom="-50px"
-          right="-125px"
-          opacity="0.2"
-          zIndex="1"
-        />
-        <Circle
-          color="black"
-          width="119px"
-          height="11px"
-          border="10px"
-          bottom="150px"
-          right="20px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="77px"
-          height="11px"
-          border="10px"
-          bottom="150px"
-          right="159px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="116px"
-          height="116px"
-          bottom="-58px"
-          left="-58px"
-          zIndex="1"
-        />
-        <Circle
-          color="yellow"
-          width="21px"
-          height="21px"
-          top="10px"
-          right="320px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="9px"
-          height="9px"
-          top="100px"
-          left="10%"
-        />
+        <Circle color="grey" width="17px" height="17px" top="0" left="90px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="black" width="17px" height="17px" top="0" left="125px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="0" left="168px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="0" left="205px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="0" left="304px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="yellow" width="17px" height="17px" top="32px" left="35px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
+        <Circle color="black" width="17px" height="17px" top="32px" left="70px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="32px" left="125px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="32px" left="168px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="blue" width="17px" height="17px" top="32px" left="249px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="red" width="27px" height="27px" top="183px" left="125px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="yellow" width="250px" height="250px" bottom="-100px" right="-68px" opacity="0.2" zIndex="1" />
+        <Circle color="grey" width="17px" height="17px" top="120px" right="50px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="black" width="17px" height="17px" top="120px" right="89px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="120px" right="128px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="black" width="119px" height="11px" border="10px" bottom="115px" right="40px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="black" width="77px" height="11px" border="10px" bottom="115px" right="175px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="yellow" width="116px" height="116px" bottom="-58px" left="-58px" zIndex="1" />
+        <Circle color="yellow" width="21px" height="21px" top="10px" right="320px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="blue" width="57px" height="57px" top="32px" right="61px" />
 
-        <Circle
-          color="blue"
-          width="57px"
-          height="57px"
-          top="40px"
-          right="10%"
-        />
         <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
           <Link to={yml.button_section.button_link}
             state={{course: yml.meta_info.bc_slug}}
