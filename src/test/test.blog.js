@@ -20,10 +20,39 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
     )
 
     let slugs = {};
+    
     for (let i = 0; i < _files.length; i++) {
         const _path = _files[i];
+        const content = loadMD(_path)
+        const attrib = content.attributes
+        
+        // 1
+        if(!content.frontmatter) fail("Post must have a frontmatter in", _path)
+
+        // 2
+        if(!attrib.image || !attrib.image_alt) fail(`Post must have image and image_alt in`, _path)
+        // console.log(`POST_SLUG: ${attrib.slug}, \nIMAGE_PATH: ${attrib.image}, \nIMAGE_ALT: ${attrib.image_alt} \n\n`)
+
+        // 3
+        if(!attrib.author) fail("Author is necessary in", _path)
+        // console.log(`POST_SLUG: ${attrib.slug}, \nAUTHOR: ${attrib.author} \n\n`)
+        
+        
+        // 4
+        if(attrib.avatar) fail("Avatar property is obsolete, must be removed", _path)
+        // console.log(`\nAVATAR: ${attrib.avatar}, \nPOST_SLUG: ${attrib.slug} \n\n`)
+
+        // 5
+        if(!attrib.slug) fail("Post needs a slug in", _path)
+        // console.log(`POST_SLUG: ${attrib.slug}\n\n`)
+
+        // 6
+        // Falta Informacion
+        // blog no debe tener un h1 encabezado porque ya se creará automáticamente.
+
         try {
-            const content = loadMD(_path)
+            content
+
             // if (!doc.yaml) fail("Invalid YML syntax for " + _path)
             // if (!doc.lang) fail("Missing language on yml file name for " + _path)
         }
