@@ -18,8 +18,9 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
               url
               image{
                 childImageSharp {
-                  fluid(maxHeight: 120){
-                    ...GatsbyImageSharpFluid_withWebp
+                  fluid(maxHeight: 120, quality: 100){
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                    ...GatsbyImageSharpFluidLimitPresentationSize # It avoid stretched images
                   }
                 }
               }
@@ -66,6 +67,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
                 style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
                 imgStyle={{objectFit: "contain"}}
                 loading="eager"
+                draggable={false}
                 fadeIn={false}
                 alt={l.name}
                 fluid={l.image.childImageSharp.fluid}
