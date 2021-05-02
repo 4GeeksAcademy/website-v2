@@ -92,7 +92,7 @@ export const initSession = async (locationsArray, storedSession, seed={}) => {
         if(storedSession) language = storedSession.language;
         else language = browserLang.substring(0, 2);
     }
-    if(language === "en") language = "us";
+    if(language != "es") language = "us";
     
     //cleanup the locations array and add all the data I need for locations
     let languageToFilter = language || "us";

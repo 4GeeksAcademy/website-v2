@@ -1,11 +1,11 @@
 meta_info:
-  slug: "online-remote"
-  title: "4Geeks Academy Online"
+  slug: "online-coding-bootcamp"
+  title: "Online Coding Bootcamps"
   position: 0
-  description: "null"
+  description: "Discover here all the online coding bootcamps taught by 4geeks Academy. Sign up today!"
   image: ""
   keywords: "null"
-  redirects: ["/location/online", "/location/remote","/online"]
+  redirects: ["/location/online", "/location/remote","/online", "/us/location/online-remote"]
 
 seo_title: "Online Coding Bootcamp"
 header:

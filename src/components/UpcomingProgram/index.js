@@ -109,10 +109,10 @@ const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, button, 
     return (<ShadowedRow width="100%" position={position} hide={!show}>
         <Centered>
             <Left>
-                <CalendarIcon month={dayjs(date).format('MMM')} day={dayjs(date).format('D')} height="60px" />
+                <CalendarIcon month={lang == "us" ? dayjs(date).add(1, "day").locale("en").format('MMM') : dayjs(date).add(1, "day").locale("es").format('MMM')} day={lang == "us" ? dayjs(date).add(1, "day").locale("en").format("D") : dayjs(date).add(1, "day").locale("es").format("D")} height="60px" />
             </Left>
             <Center>
-                <P1 fontSize="30px">{button.next_cohort}{" "}{dayjs(date).format('MMM D, YYYY')}</P1>
+                <P1 fontSize="30px">{button.next_cohort}{" "}{lang == "us" ? dayjs(date).add(1, "day").locale("en").format('MMM D, YYYY') : dayjs(date).add(1, "day").locale("es").format('MMM D, YYYY')}</P1>
                 <P2 fontSize="18px">{title}</P2>
             </Center>
             <Right>
