@@ -36,28 +36,28 @@ const Program = ({data, pageContext, yml}) => {
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
-  return (<>    
+  return (<>
     <Header
       seo_title={yml.seo_title}
       title={yml.header.title}
       paragraph={yml.header.paragraph}
       padding_tablet="72px 0 40px 0"
-    >      
+    >
       <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
-          <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+          <Button variant="full" width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button outline width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
-      <Badges lang={pageContext.lang} />      
+      <Badges lang={pageContext.lang} />
     </Header>
 
     {/* 
     this is the one used in home
     <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
-    */}  
+    */}
     <OurPartners background={Colors.verylightGray} images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} background={Colors.white} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />

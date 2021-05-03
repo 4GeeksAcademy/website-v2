@@ -56,9 +56,9 @@ const Program = ({data, pageContext, yml}) => {
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
-          <Button width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+          <Button variant="full" width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button onClick={handleOpen} outline width="200px" width_tablet="fit-content" color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button onClick={handleOpen} variant="outline" width="200px" width_tablet="fit-content" color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
       <Modal
         aria-labelledby="simple-modal-title"

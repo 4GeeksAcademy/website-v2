@@ -53,6 +53,7 @@ const ChooseProgram = (props) => {
     const {setLocation} = React.useContext(SessionContext);
     const [status, setStatus] = useState({toggle: false, hovered: false})
     const _Selector = (_p) => <Button
+        variant="full"
         shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
         padding="10px 30px"
         maxWidth="250px"
@@ -65,7 +66,7 @@ const ChooseProgram = (props) => {
     const Selector = props.selector || _Selector;
     return (
         <ChooseWrap
-            onClick={ props.goTo ? props.goTo : undefined}
+            onClick={props.goTo ? props.goTo : undefined}
             centered={props.centered}
             margin={props.margin}
             m_sm={props.m_sm}

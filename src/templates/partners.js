@@ -70,7 +70,7 @@ const Partners = (props) => {
           <Link to={yml.button_section.button_link}
             state={{course: yml.meta_info.bc_slug}}
           >
-            <Button onClick={goToForm} width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
+            <Button onClick={goToForm} variant="full" color={Colors.blue} margin="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
           </Link>
         </Div>
       </Header>

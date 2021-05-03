@@ -73,6 +73,7 @@ const SmartSelect = (props) => {
                     {Array.isArray(props.options) && props.options.map((item, index) => {
                         return (
                             <Button
+                                variant="full"
                                 key={index}
                                 font={"Lato, sans-serif"}
                                 colorHover="#F5F5F5"

@@ -84,7 +84,7 @@ const UpcomingDates = ({lang}) => {
             <Div flexDirection="column">
                 <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
                     <H3 textAlign="left" width="188px">Next Dates</H3>
-                    <Button outline width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button>
+                    <Button variant="outline" width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button>
                 </Div>
                 {Array.isArray(data.cohorts.all) && data.cohorts.all.map((m, i) => {
                     return (
@@ -117,7 +117,7 @@ const UpcomingDates = ({lang}) => {
                                 </Div>
                             </Div>
                             <Div flexDirection="column">
-                                <Button width="fit-content" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
+                                <Button variant="full" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
                             </Div>
                         </Div>
                     )

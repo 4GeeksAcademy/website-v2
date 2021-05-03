@@ -124,7 +124,7 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
                 </Div>
                 <MegaMenu status={status} setStatus={setStatus} menu={menu} languageButton={languageButton} />
                 <Div alignItems="center" justifyContent="between">
-                    <Link onClick={onToggle} to={button.button_link || "#"}><Button minWidth="130px" width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" minWidth="130px" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
             </Nav>
         </>

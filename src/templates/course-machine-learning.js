@@ -30,15 +30,15 @@ const Program = ({data, pageContext, yml}) => {
 
   const course_type = "machine_learning"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
-  
+
   const hiring = data.allPartnerYaml.edges[0].node;
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a, b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
 
-console.log("TITLE MACHINE::", yml.prices)
-console.log("TITLE MACHINE::", data)
+  console.log("TITLE MACHINE::", yml.prices)
+  console.log("TITLE MACHINE::", data)
   return (<>
     <Header
       seo_title={yml.seo_title}
@@ -134,9 +134,9 @@ console.log("TITLE MACHINE::", data)
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
-          <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+          <Button variant="full" width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button outline width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
       <Badges lang={pageContext.lang} />
     </Header>
@@ -202,7 +202,7 @@ console.log("TITLE MACHINE::", data)
       </ul>)
       }
       <Paragraph align="center" margin="10px 0">
-        <Button width="400px" onClick={() => navigate(`/${pageContext.lang}/contact`)} color={Colors.blue} margin="0" textColor="white">{yml.faq.read_more}</Button>
+        <Button variant="full" width="400px" onClick={() => navigate(`/${pageContext.lang}/contact`)} color={Colors.blue} margin="0" textColor="white">{yml.faq.read_more}</Button>
       </Paragraph>
     </Wrapper>
 

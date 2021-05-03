@@ -63,6 +63,7 @@ const About4Geeks = ({lang}) => {
                 {<Link to={about.button_link}>
                     <Div display="flex" justifyContent_lg="flex-start">
                         <Button
+                            variant="full"
                             font='"Lato", sans-serif'
                             width="fit-content"
                             colorHover={Colors.black}
