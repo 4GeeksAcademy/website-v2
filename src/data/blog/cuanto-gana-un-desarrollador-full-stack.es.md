@@ -1,6 +1,5 @@
 ---
 author: MRiciglianoC
-comments: true
 date: 2021-02-24 05:29:14 +0000
 excerpt: Conoce cuánto gana un desarrollador full stack en Chile en el año 2021
 layout: post

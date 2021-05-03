@@ -2,6 +2,7 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-05-11 14:52:45+00:00
+excerpt: Conoce porque la programación esta entre las profesiones con mayor demanda
 layout: post
 link: https://www.4geeksacademy.co/es/ser-programador-entre-las-profesiones-con-mayor-demanda/
 slug: ser-programador-entre-las-profesiones-con-mayor-demanda
