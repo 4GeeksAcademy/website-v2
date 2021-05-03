@@ -51,7 +51,7 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
 
         // 6
         // Falta Informacion
-        // blog no debe tener un h1 encabezado porque ya se creará automáticamente.
+        // "blog no debe tener un h1 encabezado porque ya se creará automáticamente."
 
         try {
             content
