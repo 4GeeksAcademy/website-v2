@@ -8,8 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/truth-behind-part-time-education/
 slug: truth-behind-part-time-education
 title: The truth behind our Part-time education
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/12/The-Truth-02-768x384.jpg"
+image_alt: ""
 wordpress_id: 2642
 categories:
 - Learning to code

@@ -4,8 +4,8 @@ date: 2020-04-29 05:31:23+00:00
 link: https://www.4geeksacademy.co/geekpal
 slug: geekpal
 title: Never Code Alone Again
-avatar: "/images/staff/alejandro.png"
 image: "/images/why2.jpg"
+image_alt: ""
 categories:
 - Learning to code
 tags:

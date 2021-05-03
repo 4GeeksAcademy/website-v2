@@ -6,8 +6,8 @@ layout: post
 link: https://www.4geeksacademy.co/4geeks-academy-history/
 slug: 4geeks-academy-history
 title: 4Geeks Academy Story
-avatar: "/images/staff/marcelo.jpeg"
 image: "/images/why2.jpg"
+image_alt: ""
 wordpress_id: 431
 categories:
 - Learning to code

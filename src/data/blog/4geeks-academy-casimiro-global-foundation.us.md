@@ -11,8 +11,8 @@ layout: post
 link: https://www.4geeksacademy.co/4geeks-academy-casimiro-global-foundation/
 slug: 4geeks-academy-casimiro-global-foundation
 title: 4Geeks Academy + Casimiro Global Foundation
-avatar: "/4geeks-logo.png"
 image: "/wp-content/uploads/2016/02/CGF-INFOGRAPHIC-232x300-1.jpg"
+image_alt: ""
 categories:
 - Sin categoría
 - Why learn to code?

@@ -4,6 +4,7 @@ date: 2021-03-08 05:31:23+00:00
 slug: ticjob-se-une-a-nuestros-partners
 title: "Ticjob se une a nuestros partners"
 image: "/images/blog/Blog_post.png"
+image_alt: ""
 categories:
 - Partnerships
 tags:

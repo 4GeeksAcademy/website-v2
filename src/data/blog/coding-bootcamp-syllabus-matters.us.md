@@ -8,8 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/coding-bootcamp-syllabus-matters/
 slug: coding-bootcamp-syllabus-matters
 title: The coding bootcamp syllabus matters
-avatar: "/images/staff/alejandro.png"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/11/POST-TECNOLOGIA-01.jpg"
+image_alt: ""
 wordpress_id: 2600
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED

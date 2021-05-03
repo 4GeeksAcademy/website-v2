@@ -8,8 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/empowering-women-tech/
 slug: empowering-women-tech
 title: 4Geeks Academy empowering Women in Tech
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/04/Women-Powering-01-1-1024x645.png"
+image_alt: ""
 wordpress_id: 2849
 categories:
 - Living and working as a developer
