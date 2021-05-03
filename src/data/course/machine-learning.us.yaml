@@ -53,9 +53,9 @@ details:
   weeks_label: "weeks"
   facts:
     - label: "Duration"
-      value: "15 weeks"
+      value: "18 weeks"
     - label: "Classes"
-      value: "20 hrs (Lun - Mie - Vie)"
+      value: "20 hrs (Mon - Wed - Fri)"
     - label: "Certificate"
       value: "Machine Learning Engineer"
     - label: Delivery
