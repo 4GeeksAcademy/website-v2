@@ -44,7 +44,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
   return (
 
     <Fragment github="/new_components/badges">
-      <GridContainer containerColumns={`1.5fr repeat(12, 1fr) 1.5fr`} background={background} padding={padding} padding_tablet={padding_tablet} rows={paragraph && `3`} margin={margin}>
+      <GridContainer containerColumns_tablet={`1.8fr repeat(12, 1fr) 1.8fr`} background={background} padding={padding} padding_tablet={padding_tablet} rows={paragraph && `3`} margin={margin}>
         {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
         {paragraph && <Div className="badge-slider" justifyContent="between" >
           <Paragraph
