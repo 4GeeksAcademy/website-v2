@@ -2,6 +2,7 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-04-13 20:36:02+00:00
+excerpt: Conoce la historia en profundidad de 4Geeks Academy
 layout: post
 link: https://www.4geeksacademy.co/es/historia-de-4geeks-academy/
 slug: historia-de-4geeks-academy

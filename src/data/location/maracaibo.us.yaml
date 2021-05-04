@@ -1,7 +1,7 @@
 meta_info:
   slug: "coding-bootcamp-maracaibo"
-  title: ""
-  description: null
+  title: "Coding bootcamp Maracaibo"
+  description: "Know here all about our coding bootcamp campus in Maracaibo, Venezuela"
   image: ""
   template: "location" # js component that will be handling the rendering
   keywords: ""

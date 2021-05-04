@@ -2,6 +2,7 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-07-25 16:19:57+00:00
+excerpt: El instructor ideal, conoce los atributos y habilidades de un buen profesor cuándo estás aprendiendo a programar
 layout: post
 link: https://www.4geeksacademy.co/es/el-instructor-ideal/
 published: false

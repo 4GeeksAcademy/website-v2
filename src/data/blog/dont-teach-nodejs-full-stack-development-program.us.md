@@ -2,9 +2,8 @@
 author: alesanchezr
 comments: true
 date: 2017-09-25 18:07:08+00:00
-excerpt: We love NodeJS, we even use it in some of 4Geeks experiments, it is super
-  cool and hot and it was growing a lot last year (2016). All that said, 4Geeks decided
-  to leave it out from the Full-Stack Development program, click here to learn why.
+excerpt: 4Geeks decided
+  to leave nodejs out from the Full-Stack Development program, click here to learn why.
 layout: post
 link: https://www.4geeksacademy.co/dont-teach-nodejs-full-stack-development-program/
 slug: dont-teach-nodejs-full-stack-development-program
