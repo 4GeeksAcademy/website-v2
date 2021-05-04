@@ -65,14 +65,13 @@ const About4Geeks = ({lang}) => {
                         <Button
                             variant="full"
                             font='"Lato", sans-serif'
-                            width="fit-content"
                             colorHover={Colors.black}
                             background={Colors.black}
                             margin="20px 0"
                             pointer
                             textColor={Colors.white}
                             fontSize={"13px"}
-                            borderRadius="3px" padding="10px"
+                            borderRadius="3px"
                         >
                             {about.button_text}
                         </Button>
