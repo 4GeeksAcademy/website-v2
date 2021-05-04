@@ -8,6 +8,7 @@ import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling
 import Icon from '../new_components/Icon'
 import {Charts} from '../new_components/Chart'
 import BaseRender from './_baseLayout'
+import ChooseProgram from '../new_components/ChooseProgram'
 import Img from "gatsby-image"
 
 const SVGImage = () =>
@@ -118,8 +119,35 @@ const Outcomes = ({data, pageContext, yml}) => {
                             </>)
                     })}
                 </Div>
-                <Div gridArea="1/9/1/13" display="none" display_md="flex" style={{position: "relative"}}>
-                    <Div style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">right</Div>
+                <Div gridArea="1/9/1/13" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
+                    <Div flexDirection="column" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", position: "sticky", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">
+                    {
+                        yml.sections.filter(i => i.title !== "").map((m, i) => {
+                            return (
+                                <Div
+                                padding="25px 25px 0"
+                                key={i}
+                                // goTo={goToChooseProgram}
+                                // margin="40px 0"
+                                textAlign="center"
+                                textAlign_tablet="left"
+                                >
+                                 {m.title}
+                             </Div>
+                         )
+                        })
+                    }
+                    <ChooseProgram
+                        width="80%"
+                        padding="28px 0"
+                        textAlign={`center`}
+                        // left="15px"
+                        // marginTop="-3px"
+                        borderRadius="0 .75rem .75rem .75rem"
+                        openLabel={`DOWNLOAD REPORT`}
+                        closeLabel={`DOWNLOAD REPORT`}
+                    />
+                    </Div>
                 </Div>
             </GridContainer>
             {/* <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph> */}
