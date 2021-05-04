@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { window } from 'browser-monads'
-import styled, { keyframes } from 'styled-components';
-import { Break, Devices } from '../Responsive'
-import { Colors } from '../Styling';
-import { Div} from '../Sections'
+import React, {useEffect} from 'react';
+import {window} from 'browser-monads'
+import styled, {keyframes} from 'styled-components';
+import {Break, Devices} from '../Responsive'
+import {Colors} from '../Styling';
+import {Div} from '../Sections'
 
 let datos = {};
 
@@ -19,14 +19,14 @@ const pxTOvh = (valuePx) => {
   return result;
 }
 
-const Marquee = ( props ) => {
+const Marquee = (props) => {
 
   //Images to display
-  let images= props.config.images;
+  let images = props.config.images;
 
   //transition duration in seconds
-  let duration= props.config.duration.toString() + "s";
-  
+  let duration = props.config.duration.toString() + "s";
+
   /*Keyframes
     ** goes ok **
     let scrolling = keyframes`
@@ -35,10 +35,10 @@ const Marquee = ( props ) => {
     `;
     */
   let scrolling = keyframes`
-     0% { transform: translateX(40%); }
+     0% { transform: translateX(5%); }
     100%{ transform: translateX( -95%); }
   `;
-  
+
   let M = styled(Div)`
     overflow: hidden;  
     width: 100vw;
@@ -55,7 +55,7 @@ const Marquee = ( props ) => {
     display: flex;
     background-color: transparent;
     padding: 0 0 0 0;
-    animation: ${scrolling} ${(props.config.duration )}s linear infinite;
+    animation: ${scrolling} ${(props.config.duration)}s linear infinite;
   `;
 
   let UL = styled.ul`    
@@ -114,21 +114,21 @@ const Marquee = ( props ) => {
       font-size: 16px;
     }
   `;
-  
+
   return (
     <>
-      {/* margin o margin_tablet */}      
+      {/* margin o margin_tablet */}
       <M>
-        <MC>          
+        <MC>
           <UL>
             {
               //add images to display to ul.
-              images.map((image, i) => {                
+              images.map((image, i) => {
                 return (
                   <LI key={i}>
                     {image}
                   </LI>
-                )                
+                )
               })
             }
           </UL>
