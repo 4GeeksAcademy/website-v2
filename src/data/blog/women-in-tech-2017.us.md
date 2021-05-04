@@ -3,8 +3,8 @@ author: MRiciglianoC
 comments: true
 date: 2018-01-17 04:01:12+00:00
 excerpt: Among the tech community, women are only taking 31% of the total workspace,
-  but what it's most disturbing is that  today women occupy 18% of proportion in computer
-  science degrees compare to 37% that we had in 1984.
+  but today women occupy only 18% of proportion in computer
+  science degrees
 layout: post
 link: https://www.4geeksacademy.co/women-in-tech-2017/
 slug: women-in-tech-2017
