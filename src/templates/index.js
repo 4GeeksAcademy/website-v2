@@ -322,7 +322,9 @@ export const query = graphql`
                   image {
                     childImageSharp {
                       fluid(maxWidth: 150){
-                        ...GatsbyImageSharpFluid_withWebp
+                        # ...GatsbyImageSharpFluid_withWebp  #(with blur effect)
+                        ...GatsbyImageSharpFluid_withWebp_noBase64 # Without Blur effect
+                        ...GatsbyImageSharpFluidLimitPresentationSize # It avoid stretched images
                       }
                     }
                   }
