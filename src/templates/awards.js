@@ -3,11 +3,9 @@ import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
 import {Grid, Div, GridContainerWithImage, GridContainer} from '../new_components/Sections'
-import {H1, H2, H3, H4, Title, Separator, Paragraph} from '../new_components/Heading'
+import {H1, H2, H3, Paragraph} from '../new_components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
-import Icon from '../new_components/Icon'
 import Badges from '../new_components/Badges'
-import {Charts} from '../new_components/Chart'
 import BaseRender from './_baseLayout'
 import Img from "gatsby-image"
 
@@ -42,7 +40,7 @@ const SVGImage = () =>
 const Awards = ({data, pageContext, yml}) => {
     return (
         <>
-            <GridContainer columns_tablet="12" padding_tablet="80px 0" padding="40px 17px 80px 17px" background="rgba(199, 243, 253, 0.5)" margin="120px 0 0 0">
+            <GridContainer columns_tablet="12" padding_tablet="80px 0" padding="40px 17px 80px 17px" background="rgba(199, 243, 253, 0.5)" margin="60px 0 0 0">
                 <Div gridColumn_tablet="1 / 6" flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
                     <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
@@ -51,7 +49,7 @@ const Awards = ({data, pageContext, yml}) => {
                     <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
 
                 </Div>
-                <Div gridColumn_tablet="8 / 13" display="none" justifyContent="center" display_tablet="flex" height="auto" width="100%">
+                <Div gridColumn_tablet="8 / 13" display="none" alignItems="center" justifyContent="center" display_tablet="flex" height="auto" width="100%">
                     <SVGImage />
                     {/* <StyledBackgroundSection
                         height={`623px`}
@@ -74,6 +72,7 @@ const Awards = ({data, pageContext, yml}) => {
                                     imgStyle={{objectFit: "contain"}}
                                     loading="eager"
                                     fadeIn={false}
+                                    durationFadeIn={0}
                                     // alt={l.name}
                                     fluid={m.image.childImageSharp.fluid}
                                 />
@@ -190,20 +189,22 @@ query AwardsQuery($file_name: String!, $lang: String!) {
                 image{
                     childImageSharp {
                       fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                        ...GatsbyImageSharpFluid_withWebp_noBase64 # Without Blur effect
+                        # ...GatsbyImageSharpFluid_withWebp  (with blur effect)
                     }
-                  }
-                title
-                paragraph
+                }
             }
-            
-            
-           
-            
+            title
+            paragraph
         }
-      }
+        
+        
+        
+        
     }
 }
+}
+}
 `;
+// ...GatsbyImageSharpFluidLimitPresentationSize # It avoid stretched images
 export default BaseRender(Awards);

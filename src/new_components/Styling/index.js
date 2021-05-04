@@ -112,6 +112,16 @@ export const RoundImage = styled.div`
         border-radius: ${props => props.br_xs};
         
     }
+    
+    @media ${Devices.tablet} {
+        width: ${props => props.width_tablet};
+    }
+    @media ${Devices.md} {
+        width: ${props => props.width_md};
+    }
+    @media ${Devices.lg} {
+        width: ${props => props.width_lg};
+    }
 `
 export const Span = styled.div`
     color: ${props => props.color};
