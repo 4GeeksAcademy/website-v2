@@ -76,7 +76,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
           })}
 
           {short_link &&
-            <Link to={content.link_to}><Paragraph color={Colors.blue}>{`${content.short_link_text} >`}</Paragraph></Link>
+            <Link to={content.link_to}><Paragraph width="150px" color={Colors.blue}>{`${content.short_link_text} >`}</Paragraph></Link>
           }
 
         </Div>

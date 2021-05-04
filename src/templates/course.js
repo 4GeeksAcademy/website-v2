@@ -23,6 +23,7 @@ import UpcomingDates from '../new_components/UpcomingDates';
 import GeeksInfo from '../new_components/GeeksInfo';
 import Testimonials from '../new_components/Testimonials';
 import OurPartners from '../new_components/OurPartners';
+import Icon from '../new_components/Icon';
 
 
 const Program = ({data, pageContext, yml}) => {
@@ -83,7 +84,7 @@ const Program = ({data, pageContext, yml}) => {
         >
           <Button variant="full" width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button onClick={handleOpen} variant="outline" width="200px" width_tablet="fit-content" color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button onClick={handleOpen} variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
       <Modal
         aria-labelledby="simple-modal-title"
@@ -104,7 +105,7 @@ const Program = ({data, pageContext, yml}) => {
           }}
         />
       </Modal>
-      <Badges lang={pageContext.lang} margin="0 0 40px 0" />
+      <Badges lang={pageContext.lang} short_link margin="0 0 40px 0" />
     </Header>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
