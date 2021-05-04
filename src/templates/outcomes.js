@@ -51,6 +51,8 @@ const Outcomes = ({data, pageContext, yml}) => {
                 svg_image={<SVGImage />}
                 background={Colors.lightYellow}
             />
+{/*TODO: remover overflow hiddedn en html !important */}
+
 
             <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 " >
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
