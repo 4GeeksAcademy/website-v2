@@ -104,6 +104,7 @@ navbar:
     sub_menu:
       icon: "awards"
       title: "Porqué 4Geeks Academy"
+      link: "/es/porque-4geeks"
       paragraph: "Lorem ipsum dolor sit amet, consectetur 
       
       adscing elit, sed do eiusmod tempor incidi."

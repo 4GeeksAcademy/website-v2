@@ -63,6 +63,7 @@ const Layout = ({children, seo, context}) => {
                 sub_menu{
                   icon
                   title
+                  link
                   paragraph
                   links{
                     title
