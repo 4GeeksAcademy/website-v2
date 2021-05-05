@@ -61,16 +61,16 @@ const GeeksInfo = ({lang}) => {
           {content.heading}
         </H2>
       </GridContainer>
-      <GridContainerWithImage imageSide="left" columns_tablet="12" >
+      <GridContainerWithImage imageSide="left" columns_tablet="2" >
         {/* <Grid columns_md="2" gridGap_md="50px"> */}
         <Div style={{position: "relative"}} height="468px" padding="0 38px 23px 25px" gridColumn_tablet="1 / 8">
-          <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "0", left: "0", borderRadius: "3px"}}></Div>
-          <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "256px", height: "256px", bottom: "18px", right: "18px", borderRadius: "3px"}}></Div>
+          <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "0", left: "-60px", borderRadius: "3px"}}></Div>
+          <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "256px", height: "256px", bottom: "18px", right: "75px", borderRadius: "3px"}}></Div>
           <StyledBackgroundSection
             className={`image`}
             height={`412px`}
             image={content.image1.childImageSharp.fluid}
-            bgSize={`cover`}
+            bgSize={`contain`}
             alt="Cnn Logo"
             borderRadius={`0 0 0 3px`}
           />

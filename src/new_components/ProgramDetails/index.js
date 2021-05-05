@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby';
 import {GridContainer, Container, Column, Divider, Grid, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors} from '../Styling';
+import {Colors, Button} from '../Styling';
 import Card from '../Card';
 import Icon from '../Icon';
 
@@ -75,7 +75,7 @@ const ProgramDetails = (props) => {
                 </Div>
 
             </GridContainer>
-            <GridContainer padding_tablet="0" margin_tablet="0 0 83px 0">
+            <GridContainer padding_tablet="0" margin_tablet="0 0 83px 0" justifyItems="center">
                 <Div
                     flexDirection="column"
                     display="none"
@@ -83,6 +83,7 @@ const ProgramDetails = (props) => {
                     margin="50px 0 0 0"
                     minHeight="475px"
                     height="auto"
+                    borderBottom_tablet="1px solid black"
                 >
                     <H2>{props.details.heading}</H2>
                     <Paragraph>{props.details.sub_heading}</Paragraph>
@@ -156,8 +157,8 @@ const ProgramDetails = (props) => {
                             </Div>
                         </Div>
                         <Div >
-                            <Div>
-                                <Icon icon="clock" width="38px" height="48px" />
+                            <Div >
+                                <Icon icon="clock" width="46px" height="46px" />
                             </Div>
                             <Div flexDirection="column" margin="0 0 0 15px">
                                 <H3 textAlign="left">{props.details.details_modules[selected.index].title}</H3>
@@ -173,6 +174,7 @@ const ProgramDetails = (props) => {
                         </Div>
                     </Div>
                 </Div>
+                {/* <Button variant="empty" color={Colors.blue} icon={<Icon icon="download" style={{marginRight: "10px"}} width="46px" height="46px" />}>Text</Button> */}
             </GridContainer>
         </>
     )

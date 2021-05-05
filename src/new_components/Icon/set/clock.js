@@ -15,3 +15,4 @@ export default props => <svg style={props.style} width={props.width} height={pro
     </defs>
 </svg >
 
+

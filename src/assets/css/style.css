@@ -414,13 +414,17 @@ a.faq-link:hover {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(0,150,205,0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);           /* height of horizontal scrollbar ← You're missing this */              /* width of vertical scrollbar */
+    /* background: rgba(0,150,205,0.8);  */
+    background: #0097CD;
+
+    /* -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.5);*/        /* height of horizontal scrollbar ← You're missing this */              /* width of vertical scrollbar */
 }
 .testimonial-slider::-webkit-scrollbar-track, .badge-slider::-webkit-scrollbar-track  {
     margin-top: 10px;
     border-radius: 5px;
     background: #E5E5E5;
+    margin-left: 20em;
+    margin-right: 20em;
   }
 .testimonial-slider::-webkit-scrollbar {
     height: 5px;

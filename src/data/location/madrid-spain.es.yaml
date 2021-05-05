@@ -77,7 +77,7 @@ prices:
           heading_two: "QUE ENCUENTRES TRABAJO"
           sub_heading: "Acuerdo de Ingresos Compartidos"
         content:
-          price: "9% de tu sueldo"
+          price: "10% de tu sueldo"
           price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
         button:
           button_text: "APLICAR AHORA"
@@ -154,7 +154,7 @@ prices:
           heading_two: "QUE ENCUENTRES TRABAJO"
           sub_heading: "Acuerdo de Ingresos Compartidos"
         content:
-          price: "9% de tu sueldo"
+          price: "10% de tu sueldo"
           price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
         button:
           button_text: "APLICAR AHORA"

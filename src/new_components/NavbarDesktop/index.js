@@ -159,7 +159,7 @@ export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLo
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
                     <Link to={languageButton.link}><Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph></Link>
-                    <Link onClick={onToggle} to={button.button_link || "#"}><Button width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
             </Nav>
         </>
@@ -184,7 +184,8 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                         <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0" margin="0 0 50px 0">
                             {menu[status.itemIndex].sub_menu.icon && <Div margin="0 15px 0 0"><Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" /></Div>}
                             <Div flexDirection="column" >
-                                <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3>
+                                {status.itemIndex != null && <Link to={menu[status.itemIndex].sub_menu.link && menu[status.itemIndex].sub_menu.link} ><Div alignItems="baseline" margin="5px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">{menu[status.itemIndex].sub_menu.title}</H3>{menu[status.itemIndex].sub_menu.link && <Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" />}</Div></Link>}
+                                {/* <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3> */}
                                 {menu[status.itemIndex].sub_menu.paragraph.split('\n').map((d, i) =>
                                     <Paragraph
                                         textAlign="left"
@@ -210,7 +211,7 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                                                         return (
                                                             <Link to={m.link} key={i}>
                                                                 <Button
-                                                                    outline
+                                                                    variant="outline"
                                                                     color="black"
                                                                     font='"Lato", sans-serif'
                                                                     width="fit-content"

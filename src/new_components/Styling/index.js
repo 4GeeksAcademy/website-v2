@@ -28,7 +28,7 @@ export const Colors = {
     white: "#FFFFFF",
     red: "red",
     lightRed: "#ffcdc9",
-    shadow:"0px 0px 16px rgba(0, 0, 0, 0.15)"
+    shadow: "0px 0px 16px rgba(0, 0, 0, 0.15)"
 
 }
 
@@ -111,6 +111,16 @@ export const RoundImage = styled.div`
         width: ${props => props.w_xs};
         border-radius: ${props => props.br_xs};
         
+    }
+    
+    @media ${Devices.tablet} {
+        width: ${props => props.width_tablet};
+    }
+    @media ${Devices.md} {
+        width: ${props => props.width_md};
+    }
+    @media ${Devices.lg} {
+        width: ${props => props.width_lg};
     }
 `
 export const Span = styled.div`
@@ -234,20 +244,26 @@ export const Small = styled.small`
 `
 
 const getVariant = (props) => ({
-    "true": {
+    "outline": {
         border: `1px solid ${props.color}`,
         background: "initial",
-        color: props.color,
+        color: props.color
     },
-    "false": {
+    "full": {
         border: "none",
         background: props.color,
         color: props.textColor || "white"
+    },
+    "empty": {
+        border: "none",
+        background: "none",
+        color: "#0097CD",
+        textTransform: "capitalize"
     }
 })
-const SmartButton = ({children, onClick, type, ...rest}) => {
-    const styles = getVariant(rest)[rest.outline];
-    return <button type={type || "button"} onClick={(e) => onClick && onClick(e)} className={rest.className} style={{...rest.style, ...styles}} >{children}</button>;
+const SmartButton = ({children, onClick, type, icon, ...rest}) => {
+    const styles = getVariant(rest)[rest.variant];
+    return <button type={type || "button"} onClick={(e) => onClick && onClick(e)} className={rest.className} style={{...rest.style, ...styles}} >{icon}{children}</button>;
 }
 export const Button = styled(SmartButton)`
     font-size: ${props => props.fontSize};
@@ -310,7 +326,8 @@ Button.defaultProps = {
     borderRadius: '3px',
     outline: false,
     onClick: null,
-    display: 'inline-block'
+    display: 'flex',
+    alignItems: "center"
 };
 
 export const Toggle = styled.div`

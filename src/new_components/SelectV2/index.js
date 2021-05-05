@@ -93,12 +93,13 @@ const SmartSelect = (props) => {
                     width="100%"
                     // padding_tablet="0 28px 0 0"
                     border="1px solid black"
-                    // border_tablet="0"
-                    // background = ""
+                // border_tablet="0"
+                // background = ""
                 >
                     {Array.isArray(props.options) && props.options.map((item, index) => {
                         return (
                             <Button
+                                variant="full"
                                 background={Colors.white}
                                 fontWeight="400"
                                 width="100%"
@@ -111,8 +112,8 @@ const SmartSelect = (props) => {
                                 }}
                                 textColor={Colors.black}
                                 fontSize={"15px"}
-                                // borderRadius=".75rem" 
-                                // padding="10px"
+                            // borderRadius=".75rem" 
+                            // padding="10px"
                             >
                                 {item.label}
                             </Button>
