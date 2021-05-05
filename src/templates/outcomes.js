@@ -12,47 +12,64 @@ import ChooseProgram from '../new_components/ChooseProgram'
 import Img from "gatsby-image"
 
 const SVGImage = () =>
-    <svg width="100%" height="412px" viewBox="0 0 360 229" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M49 219L120.64 121.903L152.066 156.291L264.932 42L319 105.046" stroke="#0097CD" stroke-width="2" stroke-linecap="round" />
-        <path d="M21 58V228H344" stroke="#A4A4A4" stroke-linecap="round" />
-        <ellipse cx="38.5" cy="160" rx="39.5" ry="39" fill="#FFB718" />
-        <circle cx="153.5" cy="115.5" r="9.5" fill="#FFB718" />
-        <ellipse cx="120" cy="66.5" rx="18" ry="18.5" fill="#0097CD" />
-        <ellipse cx="213.5" cy="35" rx="6.5" ry="6" fill="#FFB718" fill-opacity="0.2" />
-        <circle cx="235" cy="72" r="6" fill="#FFB718" fill-opacity="0.2" />
-        <ellipse cx="287.5" cy="48.5" rx="5.5" ry="5.5" transform="rotate(90 287.5 48.5)" fill="#FFB718" fill-opacity="0.2" />
-        <ellipse cx="213.5" cy="58.5" rx="6.5" ry="5.5" fill="black" />
-        <ellipse cx="235" cy="95.5" rx="6" ry="6.5" fill="black" />
-        <ellipse cx="337.5" cy="216" rx="6" ry="6.5" transform="rotate(90 337.5 216)" fill="black" />
-        <circle cx="213.5" cy="95.5" r="6.5" fill="#FFB718" fill-opacity="0.2" />
-        <ellipse cx="235" cy="124.5" rx="6" ry="5.5" fill="#FFB718" fill-opacity="0.2" />
-        <ellipse cx="235" cy="48.5" rx="5.5" ry="6" transform="rotate(90 235 48.5)" fill="#FFB718" fill-opacity="0.2" />
-        <ellipse cx="213.5" cy="124.5" rx="6.5" ry="5.5" fill="#FFB718" fill-opacity="0.2" />
-        <circle cx="235" cy="150" r="6" fill="#FFB718" fill-opacity="0.2" />
-        <ellipse cx="213.5" cy="193.5" rx="6.5" ry="5.5" fill="#0097CD" />
-        <circle cx="235" cy="216" r="6" fill="#FFB718" fill-opacity="0.2" />
-        <rect x="268" y="81" width="52" height="7" rx="3.5" transform="rotate(90 268 81)" fill="black" />
-        <rect x="186" y="170" width="52" height="6" rx="3" transform="rotate(90 186 170)" fill="black" />
-        <rect x="122" y="170" width="52" height="7" rx="3.5" transform="rotate(90 122 170)" fill="black" />
-        <rect x="268" y="142" width="80" height="7" rx="3.5" transform="rotate(90 268 142)" fill="black" />
-        <rect x="292" y="142" width="80" height="7" rx="3.5" transform="rotate(90 292 142)" fill="black" />
-        <rect x="317" y="178" width="44" height="8" rx="4" transform="rotate(90 317 178)" fill="black" />
-        <circle cx="398.5" cy="96.5" r="96.5" fill="#FFB718" fill-opacity="0.2" />
-        <ellipse cx="264" cy="41.5" rx="9" ry="9.5" fill="#CD0000" />
-    </svg>
+<svg width="510" height="295" viewBox="0 0 510 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M73.5 280L179.5 136L226 187L393 17.5L473 111" stroke="#0097CD" stroke-width="2" stroke-linecap="round"/>
+<path d="M33 44V294H509" stroke="#A4A4A4" stroke-linecap="round"/>
+<circle cx="58" cy="194" r="58" fill="#FFB718"/>
+<circle cx="228" cy="128" r="14" fill="#FFB718"/>
+<circle cx="177.5" cy="55.5" r="26.5" fill="#0097CD"/>
+<circle cx="316.5" cy="8.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="348.5" cy="63.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="426.5" cy="27.5" r="8.5" transform="rotate(90 426.5 27.5)" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="316.5" cy="43.5" r="8.5" fill="black"/>
+<circle cx="348.5" cy="98.5" r="8.5" fill="black"/>
+<circle cx="500.5" cy="276.5" r="8.5" transform="rotate(90 500.5 276.5)" fill="black"/>
+<circle cx="316.5" cy="98.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="348.5" cy="141.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="348.5" cy="27.5" r="8.5" transform="rotate(90 348.5 27.5)" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="316.5" cy="141.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="348.5" cy="178.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="316.5" cy="243.5" r="8.5" fill="#0097CD"/>
+<circle cx="348.5" cy="277.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<rect x="398" y="76" width="77" height="11" rx="5.5" transform="rotate(90 398 76)" fill="black"/>
+<rect x="278" y="209" width="77" height="11" rx="5.5" transform="rotate(90 278 209)" fill="black"/>
+<rect x="183" y="209" width="77" height="11" rx="5.5" transform="rotate(90 183 209)" fill="black"/>
+<rect x="398" y="167" width="119" height="11" rx="5.5" transform="rotate(90 398 167)" fill="black"/>
+<rect x="433" y="167" width="119" height="11" rx="5.5" transform="rotate(90 433 167)" fill="black"/>
+<rect x="470" y="220" width="66" height="11" rx="5.5" transform="rotate(90 470 220)" fill="black"/>
+<circle cx="392.5" cy="17.5" r="13.5" fill="#CD0000"/>
+</svg>
 
 const Outcomes = ({data, pageContext, yml}) => {
     return (
         <>
-            {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" > */}
             <Header
+                hideArrowKey 
+                paddingParagraph="0px 14% 0px 0"   
+                textAlign="left"        
                 seo_title={yml.seo_title}
                 title={yml.header.title}
                 paragraph={yml.header.paragraph}
                 svg_image={<SVGImage />}
                 background={Colors.lightYellow}
-            />
-{/*TODO: remover overflow hiddedn en html !important */}
+            >
+            </Header>
+            {/* <GridContainer columns_tablet="12" background={Colors.lightYellow2} padding_tablet="83px 0">
+                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet="1/7/1/13">
+                    <H1 type="h1" textAlign="left" fontSize="22px" lineHeight="26.4px">{yml.seo_title}</H1>
+                    <H2>{yml.header.title}</H2>
+                    <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{yml.header.paragraph}</Paragraph>
+                </Div>
+                
+                <Div height="auto" width="100%" gridArea_tablet="1/1/1/6">
+
+                    <Icon icon="landingChart/chart"/>
+                </Div>
+            </GridContainer> */}
+            
+            {/* {i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"} */}
+            {/* {i % 2 != 0 ? "1/7/1/13" : "1/1/1/6"} */}
+
 
 
             <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 " >

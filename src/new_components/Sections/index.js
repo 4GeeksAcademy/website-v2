@@ -317,23 +317,28 @@ export const Grid = styled(Div)`
 //         />
 //     </Div>
 //     :
-//     <Div width="100%" gridArea_md="1/7/1/13" >
-//         {svg_image}
-//     </Div>
+    // <Div width="100%" gridArea_md="1/7/1/13" >
+    //     {svg_image}
+    // </Div>
 // }
 //         </Grid>)
 // }
 
-export const Header = ({children, fontSize, fontSize_tablet, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background, margin, margin_tablet, padding, padding_tablet, position}) => {
+export const Header = ({hideArrowKey, children, fontSize, fontSize_tablet, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background, margin, margin_tablet, padding, padding_tablet, position, textAlign_tablet, paddingParagraph_tablet}) => {
     return (
         <Grid background={background} height={height} height_tablet={height_tablet} position={position} margin={margin || "120px 0 0 0"} margin_tablet={margin_tablet} padding={padding || "60px 17px"} padding_tablet={padding_tablet || "60px 0"}>
             <Grid gridTemplateColumns_tablet={`repeat(12, 1fr)`} gridArea_tablet="1/2/1/14">
-                <Div flexDirection="column" gridColumn_tablet="1 / 13">
-                    <H1 type="h1" margin="0 0 11px 0" color="#606060">{seo_title}</H1>
-                    <H2 type="h2" fontSize={fontSize || "50px"} fontSize_tablet={fontSize_tablet || "50px"} lineHeight="60px">{`< ${title} >`}</H2>
-                    <Paragraph margin="26px 0" >{paragraph}</Paragraph>
+                {/* hacer cambios aqui ... remover svg en mobile */}
+                <Div flexDirection="column" gridColumn_tablet={svg_image ? null : "1 / 13"} gridArea_tablet={svg_image ? "1/1/1/7" : null}>
+                    <H1 type="h1" textAlign_tablet={textAlign_tablet} margin="0 0 11px 0" color="#606060">{seo_title}</H1>
+                    <H2 type="h2" textAlign_tablet={textAlign_tablet} fontSize={fontSize || "50px"} fontSize_tablet={fontSize_tablet || "50px"} lineHeight="60px">{hideArrowKey ? title : `< ${title} >`}</H2>
+                    <Paragraph padding_tablet={paddingParagraph_tablet} textAlign_tablet={textAlign_tablet} margin="26px 0" >{paragraph}</Paragraph>
                     {children}
                 </Div>
+                {svg_image ? 
+                <Div width="100%" gridArea_tablet="1/8/1/17" >
+                    {svg_image}
+                </Div> : null}
             </Grid>
         </Grid>
     )
