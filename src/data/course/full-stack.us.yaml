@@ -40,15 +40,10 @@ credentials:
 details:
   about:
       title: "About the program"
-      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
-      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
-      diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
-      sólida base de front end, back end, base de datos, manejo de procesos       
-      distribuidos y despliegue a distantas plataformas web.
-
-      Al finalizar este programa, contarás con los conocimientos para       
-      desempeñarte como Full Stack Developer. 
-    "
+      sub_title: "Learn the most wanted and highest paid technologies that will help you create amazing websites. /n The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2021. 
+      /n Start coding in a web development language and algorithm scripting. Build awesome apps using a front-end library. Use an API so you can consume data to fill your app.
+      /n The program will end with the presentation of your final project that will help you get ready for  more web development experiences
+      /n You will re-shape your mind to embrace new logical, developmental and researching skills."
       list:
         - label: "Duration"
           content:  "16 Weeks"
@@ -61,7 +56,7 @@ details:
          
   heading: Program Details Part-Time
   weeks: 16
-  sub_heading: Real life projects and exactly what companies are looking for
+  sub_heading: "Hands-on learning through real-life projects. /n Master the 3 most used languages in the world: Master Python, JS and React."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -101,12 +96,12 @@ details:
       description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
       slug: "advanced-application"
-      duration: "6 wks"
+      duration: "6 weeks"
       step: 6
     - module_name: "LIFELONG SUPPORT"
       title: "Lifelong Support"
       description: "Keep practicing with the academy's help - we will be coaching you for life.  Build your Resume, Github, LinkedIn.  We will help you apply for jobs and continue to support you once you have found a job"
-      projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer.  Enjoy and build software for life."
+      projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer. Enjoy and build software for life."
       slug: "lifelong-learning"
       duration: "forever"
       step: 0.1
