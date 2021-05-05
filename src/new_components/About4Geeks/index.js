@@ -14,9 +14,10 @@ const About4Geeks = ({lang}) => {
     const about = lang[0].node
     console.log("about", about)
     return (
-        <GridContainerWithImage columns_tablet="2" margin_tablet="0 0 108px 0" margin="0 0 64px 0">
+        <GridContainerWithImage columns_tablet="12" margin_tablet="0 0 108px 0" margin="0 0 64px 0">
             <Div
                 flexDirection="column"
+                gridColumn_tablet="1 / 6"
             >
                 <H2
                     textAlign="left"
@@ -63,15 +64,15 @@ const About4Geeks = ({lang}) => {
                 {<Link to={about.button_link}>
                     <Div display="flex" justifyContent_lg="flex-start">
                         <Button
+                            variant="full"
                             font='"Lato", sans-serif'
-                            width="fit-content"
                             colorHover={Colors.black}
                             background={Colors.black}
                             margin="20px 0"
                             pointer
                             textColor={Colors.white}
                             fontSize={"13px"}
-                            borderRadius="3px" padding="10px"
+                            borderRadius="3px"
                         >
                             {about.button_text}
                         </Button>
@@ -79,7 +80,7 @@ const About4Geeks = ({lang}) => {
                 </Link>
                 }
             </Div>
-            <Div style={{position: "relative"}} height="468px">
+            <Div style={{position: "relative"}} height="468px" gridColumn_tablet="7 / 14">
                 <Div style={{position: "absolute", background: "#00A0DA", width: "101%", height: "216px", top: "-10px", left: "-10px", borderRadius: "3px"}}></Div>
                 <Div style={{position: "absolute", background: "#FFB718", width: "50%", height: "216px", bottom: "-10px", right: "-10px", borderRadius: "3px"}}></Div>
                 <StyledBackgroundSection

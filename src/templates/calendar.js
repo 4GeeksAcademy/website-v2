@@ -104,18 +104,18 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
           {applyButtonLink && detailsButtonLink && <Row justifyContent={`center`} display="flex">
             <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center" display="flex">
               <Link to={applyButtonLink}>
-                <Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{applyButtonText}</Button>
+                <Button variant="outline" color={Colors.red} padding="10px 12px" textColor={Colors.white}>{applyButtonText}</Button>
               </Link>
               &nbsp;
               <Link to={detailsButtonLink}>
-                <Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{detailsButtonText}</Button>
+                <Button variant="outline" color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{detailsButtonText}</Button>
               </Link>
             </Div>
           </Row>}
           {eventLink && eventText && <Row justifyContent={`end`} display="flex">
             <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center" display="flex">
               <Anchor to={eventLink}>
-                <Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{eventText}</Button>
+                <Button variant="outline" color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{eventText}</Button>
               </Anchor>
             </Div>
           </Row>}
@@ -316,7 +316,7 @@ const Calendar = (props) => {
                       {m.online_event ? "Online" : m.academy.city ? m.academy.city.name : m.academy.name}
                     </H4>
                     <Anchor to={m.url}>
-                      <Button outline color={Colors.black} padding="10px 17px" textColor={Colors.white}>{yml.button.event_register_button_link}</Button>
+                      <Button variant="outline" color={Colors.black} padding="10px 17px" textColor={Colors.white}>{yml.button.event_register_button_link}</Button>
                     </Anchor>
 
                   </Div>
@@ -394,7 +394,7 @@ const Calendar = (props) => {
                   </Div>
                 </Div>
                 <Div flexDirection="column">
-                  <Button width="fit-content" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
+                  <Button variant="full" width="fit-content" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
                 </Div>
               </Div>
             )

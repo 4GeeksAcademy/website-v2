@@ -30,15 +30,15 @@ const Program = ({data, pageContext, yml}) => {
 
   const course_type = "machine_learning"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
-  
+
   const hiring = data.allPartnerYaml.edges[0].node;
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
 
   const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a, b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
 
-console.log("TITLE MACHINE::", yml.prices)
-console.log("TITLE MACHINE::", data)
+  console.log("TITLE MACHINE::", yml.prices)
+  console.log("TITLE MACHINE::", data)
   return (<>
     <Header
       seo_title={yml.seo_title}
@@ -46,97 +46,38 @@ console.log("TITLE MACHINE::", data)
       paragraph={yml.header.paragraph}
       padding_tablet="72px 0 40px 0"
       position="relative"
-    ><Circle
-        color="blue"
-        width="50px"
-        height="50px"
-        top="20px"
-        right="10%"
-      />
-      <Circle
-        color="black"
-        width="50px"
-        height="50px"
-        top="170px"
-        right="120px"
-        scale="0.5"
-      />
-      <Circle
-        color="black"
-        width="30px"
-        height="30px"
-        top="140px"
-        left="5%"
-      />
-
-      <Circle
-        color="yellow"
-        width="20px"
-        height="20px"
-        top="0px"
-        right="30%"
-        scale="2"
-      />
-      <Circle
-        color="yellow"
-        width="200px"
-        height="200px"
-        top="150px"
-        right="-5%"
-        opacity="0.2"
-      />
-      <Circle
-        color="yellow"
-        width="30px"
-        height="30px"
-        top="60px"
-        left="5%"
-        opacity="0.2"
-      />
-      <Circle
-        color="black"
-        width="30px"
-        height="30px"
-        top="140px"
-        left="5%"
-      />
-      <Circle
-        color="grey"
-        width="30px"
-        height="30px"
-        top="180px"
-        left="5%"
-      />
-      <Circle
-        color="grey"
-        width="30px"
-        height="30px"
-        top="240px"
-        left="5%"
-      />
-      <Circle
-        color="blue"
-        width="30px"
-        height="30px"
-        top="280px"
-        left="5%"
-      />
-      <Circle
-        color="yellow"
-        width="100px"
-        height="100px"
-        top="250px"
-        left="-5%"
-      />
-      <Circle color="blue" width="50px" height="50px" top="20px" left="15%" />
-      <Circle color="red" width="50px" height="50px" top="200px" left="20%" opacity="0.3" />
+    >
+      <Circle color="yellow" width="17px" height="17px" top="0" left="74px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
+      <Circle color="grey" width="17px" height="17px" top="0" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="17px" height="17px" top="32px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="17px" height="17px" top="32px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="67px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="102px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="137px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="172px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="blue" width="17px" height="17px" top="216px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="271px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="red" width="27px" height="27px" top="222px" left="278px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="yellow" width="250px" height="250px" bottom="20px" right="-68px" opacity="0.2" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="120px" right="50px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="17px" height="17px" top="120px" right="89px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="120px" right="128px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="119px" height="11px" border="10px" bottom="115px" right="40px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="77px" height="11px" border="10px" bottom="115px" right="175px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="yellow" width="116px" height="116px" bottom="50px" left="-58px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="yellow" width="116px" height="116px" bottom="200px" left="-90px" zIndex="1" display="inline" display_tablet="none" />
+      <Circle color="yellow" width="21px" height="21px" top="10px" right="320px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
+      <Circle color="yellow" width="160px" height="160px" top="0" right="-120px" opacity="0.2" display="inline" display_tablet="none" />
+      <Circle color="red" width="25px" height="25px" top="60px" right="30px" display="inline" display_tablet="none" />
       <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
-          <Button width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+          <Button variant="full" width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button outline width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        {/* <Button variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
+        <Button onClick={handleOpen} variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
       <Badges lang={pageContext.lang} />
     </Header>
@@ -202,7 +143,7 @@ console.log("TITLE MACHINE::", data)
       </ul>)
       }
       <Paragraph align="center" margin="10px 0">
-        <Button width="400px" onClick={() => navigate(`/${pageContext.lang}/contact`)} color={Colors.blue} margin="0" textColor="white">{yml.faq.read_more}</Button>
+        <Button variant="full" width="400px" onClick={() => navigate(`/${pageContext.lang}/contact`)} color={Colors.blue} margin="0" textColor="white">{yml.faq.read_more}</Button>
       </Paragraph>
     </Wrapper>
 

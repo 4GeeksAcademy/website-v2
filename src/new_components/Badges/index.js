@@ -20,7 +20,6 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
                 childImageSharp {
                   fluid(maxHeight: 120, quality: 100){
                     ...GatsbyImageSharpFluid_withWebp_noBase64
-                    ...GatsbyImageSharpFluidLimitPresentationSize # It avoid stretched images
                   }
                 }
               }
@@ -36,6 +35,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
       }
     }
     `)
+  // ...GatsbyImageSharpFluidLimitPresentationSize 
 
   let content = data.allBadgesYaml.edges.find(({node}) => node.fields.lang === lang);
   if (content) content = content.node;
@@ -53,14 +53,14 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
             fontSize_tablet="22px"
             lineHeight="38px"
             fontWeight="300"
-            color={Colors.black}            
+            color={Colors.black}
             dangerouslySetInnerHTML={{__html: paragraph}}
             margin="0 0 55px 0"
           />
         </Div>}
-        
+
         <Div className="badge-slider" justifyContent="between" alignItems="center">
-        
+
           {content.badges.map((l, i) => {
             return (
               <Img
@@ -74,13 +74,13 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
               />
             )
           })}
-        
+
           {short_link &&
-            <Link to={content.link_to}><Paragraph color={Colors.blue}>{`${content.short_link_text} >`}</Paragraph></Link>
+            <Link to={content.link_to}><Paragraph width="150px" color={Colors.blue}>{`${content.short_link_text} >`}</Paragraph></Link>
           }
 
         </Div>
-        
+
         {link &&
           <Div justifyContent="center" margin="50px 0 0 0">
             <Link to={content.link_to}><Paragraph color={Colors.blue}>{content.link_text}</Paragraph></Link>

@@ -145,7 +145,7 @@ const Footer = ({yml}) => {
                         </Form>
                         <Button width="40px" height="40px" type="submit"
                             fontSize="22px"
-                            padding="0"
+                            variant="full"
                             borderRadius="3px"
                             color={formStatus.status === "loading" ? Colors.darkGray : Colors.black}
                             textColor={Colors.white}

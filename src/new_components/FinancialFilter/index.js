@@ -85,35 +85,35 @@ const FinancialFilter = (props) => {
   const [modality, setModality] = useState(false);
   const [prices, setPrices] = useState();
 
-useEffect(() => {
+  useEffect(() => {
     setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
     if (session && session.location) {
       const _loc = props.locations.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug);
       setCurrentLocation(_loc ? _loc.node : null)
     }
   }, [session, props.locations])
-  
-  useEffect(()=>{
-    modality && course && currentLocation? 
-    setPrices(currentLocation.prices[course.value][modality.value])
-    : console.log("modality", modality)
-    
+
+  useEffect(() => {
+    modality && course && currentLocation ?
+      setPrices(currentLocation.prices[course.value][modality.value])
+      : console.log("modality", modality)
+
   }, [modality, course, currentLocation])
 
-    if (!currentLocation || !currentLocation.prices)
-      return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.loading}</Paragraph>
+  if (!currentLocation || !currentLocation.prices)
+    return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.loading}</Paragraph>
 
-    if(course === false && modality === false){
-      setCourse({ value: "full_stack", label: "Full Stack Developer"})
-      setModality({ value: "part_time", label: "Part Time"})
-    }
-    
+  if (course === false && modality === false) {
+    setCourse({value: "full_stack", label: "Full Stack Developer"})
+    setModality({value: "part_time", label: "Part Time"})
+  }
+
 
   return (
-    <Div background={Colors.lightBlue2} margin="0 0 5rem 0" display="block"  github="/location">
-      <GridContainer shadow="0px 0px 16px rgba(0, 0, 0, 0.25)" padding="15px 0" margin="0 10px 3em 10px"  margin_tablet="0 5rem 4em 5rem" containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`} containerGridGap="20px"  margin_md="0 20% 4em 20%" background={Colors.white} height="100%" height_tablet="122px" borderRadius="3px" >
+    <Div background={Colors.lightBlue2} margin="0 0 5rem 0" display="block" github="/location">
+      <GridContainer shadow="0px 0px 16px rgba(0, 0, 0, 0.25)" padding="15px 0" margin="0 10px 3em 10px" margin_tablet="0 5rem 4em 5rem" containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`} containerGridGap="20px" margin_md="0 20% 4em 20%" background={Colors.white} height="100%" height_tablet="122px" borderRadius="3px" >
         <Grid gridTemplateColumns_tablet="repeat(3, 1fr)"
-            gridGap_tablet="20px" gridGap="8px" justifySelf="center" justifySelf_tablet="inherit" flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
+          gridGap_tablet="20px" gridGap="8px" justifySelf="center" justifySelf_tablet="inherit" flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
 
           {!props.course &&
             <Select
@@ -154,7 +154,7 @@ useEffect(() => {
           }
 
           {/* <Link to={info.button.button_link}><Button width="fit-content" padding="13px" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link> */}
-          
+
           {/* 
           SEARCH_BUTTON Maybe not necesary
           <Button onClick={() => {}} width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>{props.button_text}</Button> 
@@ -164,14 +164,14 @@ useEffect(() => {
 
       {!prices ?
         <>
-        {!prices 
-          ? <Paragraph margin="10px 0px" align="center" fontSize="18px" > Please select a course to see more information</Paragraph> 
-          : <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course?.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
-}
+          {!prices
+            ? <Paragraph margin="10px 0px" align="center" fontSize="18px" > Please select a course to see more information</Paragraph>
+            : <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course?.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+          }
         </>
         :
         <GridContainer padding="4.5rem 16px" containerColumns_md={`2fr repeat(12, 1fr) 2fr`} containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`} background={Colors.white} columns_tablet="1" gridGap_tablet="0" padding_tablet="4.5rem 16px" >
-          
+
           {prices?.center_section && Array.isArray(prices?.center_section.plans) &&
             <PricingCard color="black" background={Colors.white}
               price={prices.center_section.plans[activeStep].payment}
@@ -179,7 +179,7 @@ useEffect(() => {
               data={prices.center_section}
             >
               {Array.isArray(prices.center_section.plans) && prices.center_section.plans.map((label, index) => (
-                <GridContainer key={index} containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0"  shadow={Colors.shadow} shadow_tablet={Colors.shadow} padding="20px" height="100%" height_tablet="122px" columns_tablet="4">
+                <GridContainer key={index} containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0" shadow={Colors.shadow} shadow_tablet={Colors.shadow} padding="20px" height="100%" height_tablet="122px" columns_tablet="4">
                   <Div margin="10px 0px" justifyContent="center" placeItems="center" display="flex">
                     <img style={{margin: "auto", height: "25px"}} src={label.logo} />
                   </Div>
@@ -201,22 +201,22 @@ useEffect(() => {
                     </H3>
                   </Div>
                   <Div margin="10px 0px" justifyContent="center" placeItems="center" image="no"  >
-                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.center_section?.button?.button_text || "APPLY"}</Button></Link>
+                    <Link to={`/${props.lang}/apply`}><Button variant="full" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.center_section?.button?.button_text || "APPLY"}</Button></Link>
                   </Div>
-                  
+
                 </GridContainer>
-                
-                ))}
+
+              ))}
             </PricingCard>
           }
 
           {prices.left_section &&
-           <PricingCard color="black" background={Colors.white}
+            <PricingCard color="black" background={Colors.white}
               data={prices.left_section}
             >
               {prices.left_section.content && (
-                <GridContainer containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0"  shadow="0px 0px 16px rgba(0, 0, 0, 0.15)" padding="20px" height="100%" height_tablet="122px" columns_tablet="2">
-                  <Div margin="10px 0px" margin_tablet="10px 30px" width="100%"  justifyContent="center" placeItems="center" flexDirection="column" display="flex">
+                <GridContainer containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0" shadow="0px 0px 16px rgba(0, 0, 0, 0.15)" padding="20px" height="100%" height_tablet="122px" columns_tablet="2">
+                  <Div margin="10px 0px" margin_tablet="10px 30px" width="100%" justifyContent="center" placeItems="center" flexDirection="column" display="flex">
                     <Paragraph textAlign_tablet="left" fontWeight="700" lineHeight="36px" fontSize="30px">
                       {prices.left_section.content.price}
                     </Paragraph>
@@ -225,38 +225,38 @@ useEffect(() => {
                       {prices.left_section.content.price_info}
                     </H3>
                   </Div>
-                  <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto "  placeItems="center" image="no"  >
-                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.left_section?.button?.button_text || "APPLY"}</Button></Link>
+                  <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto " placeItems="center" image="no"  >
+                    <Link to={`/${props.lang}/apply`}><Button variant="full" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices?.left_section?.button?.button_text || "APPLY"}</Button></Link>
                   </Div>
-                  
+
                 </GridContainer>
-                
-                )}
+
+              )}
             </PricingCard>
           }
-          
+
           {prices.right_section &&
             <PricingCard color="black" background={Colors.white}
               data={prices.right_section}
             >
               {prices.right_section.content && (
-                <GridContainer containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0"  shadow="0px 0px 16px rgba(0, 0, 0, 0.15)" padding="20px" height="100%" height_tablet="122px" columns_tablet="2">
-                  <Div margin="10px 0px" margin_tablet="10px 30px" width="100%"  justifyContent="center" placeItems="center" flexDirection="column" display="flex">
+                <GridContainer containerColumns_tablet="0fr repeat(12, 1fr) 0fr" margin="0 0 20px 0" shadow="0px 0px 16px rgba(0, 0, 0, 0.15)" padding="20px" height="100%" height_tablet="122px" columns_tablet="2">
+                  <Div margin="10px 0px" margin_tablet="10px 30px" width="100%" justifyContent="center" placeItems="center" flexDirection="column" display="flex">
                     <Paragraph textAlign_tablet="left" fontWeight="700" lineHeight="36px" fontSize="30px">
                       {prices.right_section.content.price}
                     </Paragraph>
-                    
+
                     <H3 type="h3" alignSelf_tablet="end" alignSelf="center" fontWeight="400" color="#A4A4A4" width="fit-content" padding="0 5px" fontSize="15px" lineHeight="24px" letterSpacing="0.05em" >
                       {prices.right_section.content.price_info}
                     </H3>
                   </Div>
-                  <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto "  placeItems="center" image="no"  >
-                    <Link to={`/${props.lang}/apply`}><Button width="100%" padding="0" width="152px" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices.right_section.button?.button_text || "APPLY" }</Button></Link>
+                  <Div margin="10px 0px" justifyContent="center" margin_tablet=" 0 10% 0 auto " placeItems="center" image="no"  >
+                    <Link to={`/${props.lang}/apply`}><Button variant="full" height="40px" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{prices.right_section.button?.button_text || "APPLY"}</Button></Link>
                   </Div>
-                  
+
                 </GridContainer>
-                
-                )}
+
+              )}
             </PricingCard>
           }
         </GridContainer>
