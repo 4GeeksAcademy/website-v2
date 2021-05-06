@@ -130,7 +130,7 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
         "/es/coding-campus/bootcamp-programacion-caracas": "/us/coding-campus/coding-bootcamp-caracas",
         "/es/coding-bootcamp/full-stack-part-time": "/us/coding-bootcamp/part-time-full-stack-developer",
         "/es/coding-bootcamp/full-stack-part-time": "/us/coding-bootcamp/part-time-full-stack-developer",
-        "/es/alianza": "/us/partners",
+        "/es/alianzas": "/us/partners",
         "/es/aplica": "/us/apply",
         "/es/premios": "/us/awards",
         "/es/blog-en-espanol": "/us/blog",
