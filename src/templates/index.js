@@ -45,6 +45,7 @@ const CityH1 = ({yml}) => {
   const city = session && session.location ? "" : "Miami";
 
   React.useEffect(() => {
+    console.log("HASH: ", window.location)
     if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
   }, [session])
 
