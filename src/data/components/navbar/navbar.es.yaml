@@ -112,9 +112,9 @@ navbar:
         - title: "Acompañamiento"
           sub_links: 
             - title: "GeekPal"
-              link_to: "/us/coding-campus/coding-bootcamp-caracas"
+              link_to: "/es/geekpal"
             - title: "GeekForce"
-              link_to: "/us/coding-campus/coding-bootcamp-caracas"
+              link_to: "/es/geekforce"
         - title: "Validaciones"
           sub_links: 
             - title: "Premios"
@@ -122,7 +122,7 @@ navbar:
             - title: "Resultados"
               link_to: "/es/resultados"
             - title: "Compara 4Geeks"
-              link_to: "/es/compara-4geeks"
+              link_to: "/es/geeks-vs-otros"
         - title: "Costos"
           sub_links: 
             - title: "Financiaciones"
@@ -134,7 +134,7 @@ navbar:
         - title: "Nuestros Alumnos"
           sub_links: 
             - title: "Alumnos y Proyectos"
-              link_to: "/es/alumni-y-proyectos"
+              link_to: "/es/alumnos-y-proyectos"
             - title: "Testimonios"
               link_to: "/es/testimonios"
   - name: "Academia"
@@ -175,9 +175,9 @@ navbar:
         - title: "Online"
           sub_links: 
             - title: "Part Time"
-              link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+              link_to: "/es/coding-bootcamp/full-stack-part-time"
             - title: "Full Time"
-              link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
+              link_to: "/es/coding-bootcamp/full-stack-part-time"
         - title: "Campuses"
           sub_links: 
             - title: "Caracas"
@@ -195,7 +195,7 @@ navbar:
 
 language_button:
   text: "ENG / <span class='lang'>ESP</span>"
-  link: "/?lang=en#home"
+  link: "/?lang=en"
 button:
   button_link: "/es/aplica"
   apply_button_text: "Aplica"

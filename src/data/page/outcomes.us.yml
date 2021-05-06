@@ -7,7 +7,7 @@ meta_info:
   description: null
   image: null
   keywords: ""
-  redirects: []
+  redirects: ["/us/outcomes"]
 
 seo_title: "outcomes"
 header:

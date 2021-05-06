@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import styled, {css} from 'styled-components';
 import Img from "gatsby-image"
 import {useStaticQuery, graphql} from 'gatsby';
@@ -74,7 +74,8 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton, onLocationChange}) => {
+export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton, onLocationChange, currentURL}) => {
+    const {session, setSession} = useContext(SessionContext);
     const [status, setStatus] = useState(
         {
             toggle: false,
@@ -132,7 +133,7 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
 }
 
 
-export const MegaMenu = ({status, setStatus, menu, languageButton}) => {
+export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, session}) => {
     return (
         <>
             {status.toggle &&
@@ -168,7 +169,7 @@ export const MegaMenu = ({status, setStatus, menu, languageButton}) => {
                                 <Icon icon="cross" color="#000000" width="12px" height="12px" style={{cursor: "pointer"}} onClick={() => setStatus({...status, toggle: false, itemIndex: null})} />
                             </>
                             :
-                            <Link to={languageButton.link}><Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" fontWeight="400" lineHeight="16px"></Paragraph></Link>
+                            <Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}><Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" fontWeight="400" lineHeight="16px"></Paragraph></Link>
                         }
                         {/* {
                             

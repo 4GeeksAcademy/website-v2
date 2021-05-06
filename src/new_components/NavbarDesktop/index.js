@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import styled, {css} from 'styled-components';
 import Img from "gatsby-image"
 import {useStaticQuery, graphql} from 'gatsby';
@@ -98,7 +98,8 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLocationChange}) => {
+export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange}) => {
+    const {session, setSession} = useContext(SessionContext);
     const [status, setStatus] = useState(
         {
             toggle: false,
@@ -136,7 +137,7 @@ export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLo
     return (
         <>
             <Nav display_md="flex" display="none">
-                <Link to={'/'}>
+                <Link to={lang == "es" ? "/es/inicio" : "/"}>
                     <Img
                         fadeIn={false}
                         loading="eager"
@@ -158,7 +159,9 @@ export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLo
                     <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
-                    <Link to={languageButton.link}><Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph></Link>
+                    <Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
+                        <Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph>
+                    </Link>
                     <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
             </Nav>

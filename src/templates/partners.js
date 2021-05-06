@@ -1,5 +1,6 @@
 import React, {useState, useRef} from 'react';
 import Link from 'gatsby-link'
+import {navigate} from 'gatsby';
 import {Column, Row, GridContainer, Header, Div, Grid} from "../new_components/Sections"
 import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
 import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling'
@@ -9,6 +10,7 @@ import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
 import {Circle} from '../new_components/BackgroundDrawing'
 import Modal from '../new_components/Modal';
+import {SessionContext} from '../session'
 import LeadForm from "../new_components/LeadForm/index.js";
 
 function rand () {
@@ -16,10 +18,13 @@ function rand () {
 }
 
 const Partners = (props) => {
-  const {data, pageContext, yml} = props;
+  const {session} = React.useContext(SessionContext);
+  const {data, pageContext, yml, path} = props;
   const [open, setOpen] = React.useState(false);
   const joinPartnersRef = useRef(null)
-  console.log("REF: ", joinPartnersRef)
+  // console.log("SESSION: ", session)
+  // session.pathsDictionary && console.log("slug: ", session.pathsDictionary[`${window.location?.pathname}`])
+  // session.pathsDictionary && console.log("slug: ", session.pathsDictionary[path])
 
   const goToForm = (e) => {
     e.preventDefault();
@@ -32,6 +37,10 @@ const Partners = (props) => {
     setOpen(false);
   };
   const partnersData = data.allPartnerYaml.edges[0].node;
+  // React.useEffect(() => {
+  //   console.log("HASHcourse: ", window.location)
+  //   if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/alianzas').test(window.location.href)) navigate("/es/alianzas")
+  // }, [session])
   return (
     <>
 
