@@ -54,6 +54,7 @@ const ChooseProgram = (props) => {
     const {setLocation} = React.useContext(SessionContext);
     const [status, setStatus] = useState({toggle: false, hovered: false})
     const _Selector = (_p) => <Button
+        display={props.displayButton}
         variant="full"
         shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
         textAlign={props.textAlign || "inherit"}
@@ -89,7 +90,8 @@ const ChooseProgram = (props) => {
             <Selector status={status} setStatus={setStatus} />
             {status.toggle &&
                 <Row display="flex"
-                    margin={props.margin}
+                    // margin={props.margin}
+                    margin="0 auto"
                     m_sm={props.m_sm}
                     m_xs={props.m_xs}
                     width="250px"

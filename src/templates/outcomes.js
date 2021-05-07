@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {createRef, useEffect, useRef, useState} from 'react';
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
 import {Grid, Div, Header, GridContainer} from '../new_components/Sections'
-import {H1, H2, H3, H4, Title, Separator, Paragraph} from '../new_components/Heading'
+import {H2, H3, H4, Paragraph} from '../new_components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
 import Icon from '../new_components/Icon'
 import {Charts} from '../new_components/Chart'
@@ -40,13 +40,58 @@ const SVGImage = () =>
 <circle cx="392.5" cy="17.5" r="13.5" fill="#CD0000"/>
 </svg>
 
+
 const Outcomes = ({data, pageContext, yml}) => {
+
+    let refs = useRef([React.createRef(), React.createRef(), React.createRef()]);
+    useEffect(() => {
+        console.log("refsCurrent[0]", refs.current[0])
+      }, []);
+
+    
+    let items = yml.sections.reduce((acc, section) =>{
+        // const mapedSection = section.filter(i => i.title ==="")
+        console.log(acc[section.title]) // x3 {current: null} :c
+        acc[section.title] = React.createRef();
+        return acc;
+    }, {});
+
+    let executeScroll=(e, ref) =>{
+        e.preventDefault();
+        console.log(ref)
+        window.scrollTo({
+          top: ref.current?.offsetTop,
+          behavior: "smooth"
+        })
+    }
+    // const ExecuteScroll = React.forwardRef((props, ref) => {
+    //     // console.log(items[item])
+    //     return (
+    //         // <Div ref={props.referencia}>
+
+    //         <Paragraph
+    //             padding="25px 25px 0"
+    //             // key={i}
+    //             onClick={e => executeScroll(e, props.referencia)}
+    //             // margin="40px 0"
+    //             textAlign="center"
+    //             textAlign_tablet="left"
+    //             >
+    //             {props.title}
+    //         </Paragraph>
+
+    //         // </Div>
+    //     )
+        
+    //   })
+
+    
     return (
         <>
             <Header
                 hideArrowKey 
                 paddingParagraph="0px 14% 0px 0"   
-                textAlign="left"        
+                textAlign_tablet="left"        
                 seo_title={yml.seo_title}
                 title={yml.header.title}
                 paragraph={yml.header.paragraph}
@@ -54,31 +99,21 @@ const Outcomes = ({data, pageContext, yml}) => {
                 background={Colors.lightYellow}
             >
             </Header>
-            {/* <GridContainer columns_tablet="12" background={Colors.lightYellow2} padding_tablet="83px 0">
-                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet="1/7/1/13">
-                    <H1 type="h1" textAlign="left" fontSize="22px" lineHeight="26.4px">{yml.seo_title}</H1>
-                    <H2>{yml.header.title}</H2>
-                    <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{yml.header.paragraph}</Paragraph>
-                </Div>
-                
-                <Div height="auto" width="100%" gridArea_tablet="1/1/1/6">
-
-                    <Icon icon="landingChart/chart"/>
-                </Div>
-            </GridContainer> */}
-            
-            {/* {i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"} */}
-            {/* {i % 2 != 0 ? "1/7/1/13" : "1/1/1/6"} */}
 
 
-
+{/* SUCCESSSSS::: logramos obtener ref
+                  Ahora necesito hacer pequeñas modificaciones
+                  y por ultimo adaptar el react.forwardRef para quitar el error en consola
+    APRENDIMOS::: que h2 no puede tener un ref, la razon aun la debo de estudiar, pero 
+                  al parecer con div no ocurre ningun problema
+*/}
             <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 " >
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
                     {yml.sections.map((section, i) => {
                         return (
                             <>
-                                <H3 margin="54px 0 0 0 " textAlign="left" >{section.title}</H3>
-                                <Div style={{margin: "40px 0", height: "1px", background: "#c4c4c4"}} />
+                                <H2 key={i}  type="h2" margin="54px 0 0 0 " textAlign="left" >{section.title}</H2>
+                                <Div ref={items[section.title]} style={{margin: "40px 0", height: "1px", background: "#c4c4c4"}} />
                                 {section.paragraph.split("\n").map((m, i) =>
                                     <Paragraph key={i} textAlign="left" margin="10px 0" >{m}</Paragraph>
                                 )}
@@ -86,8 +121,8 @@ const Outcomes = ({data, pageContext, yml}) => {
                                     {section.stats.map((m, i) => {
                                         return (
                                             <Div key={i} flexDirection="column" margin="0 0 38px 0">
-                                                <H2 textAlign_md="left" color={Colors.blue}>{m.stat}</H2>
-                                                <H3 textAlign_md="left" >{m.content}</H3>
+                                                <H2 type="h2" textAlign_md="left" color={Colors.blue}>{m.stat}</H2>
+                                                <H3 type="h3" textAlign_md="left" >{m.content}</H3>
                                             </Div>
                                         )
                                     })}
@@ -97,7 +132,7 @@ const Outcomes = ({data, pageContext, yml}) => {
 
                                         return (
                                             <React.Fragment key={i}>
-                                                <H4 textAlign="left" textTransform="uppercase" fontWeight="700" margin="42px 0 13px 0">{m.title}</H4>
+                                                <H4 type="h4" textAlign="left" textTransform="uppercase" fontWeight="700" margin="42px 0 13px 0">{m.title}</H4>
                                                 <Paragraph textAlign="left" margin_md="10px 0" dangerouslySetInnerHTML={{__html: m.content}}></Paragraph>
                                                 {
                                                     Array.isArray(m.image_section) && m.image_section.map((m, i) => {
@@ -119,7 +154,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                             return (
                                                                                 <Div flexDirection="column" key={i}>
                                                                                     <Charts dataArray={c.data} />
-                                                                                    <H4 textTransform="uppercase" fontSize="15px" LineHeight="19px" fontWeight="900">{c.title}</H4>
+                                                                                    <H4 textTransform="uppercase" fontSize="15px" lineHeight="19px" fontWeight="900">{c.title}</H4>
                                                                                 </Div>
                                                                             )
                                                                         })
@@ -141,23 +176,38 @@ const Outcomes = ({data, pageContext, yml}) => {
                     {
                         yml.sections.filter(i => i.title !== "").map((m, i) => {
                             return (
-                                <Div
-                                padding="25px 25px 0"
-                                key={i}
-                                // goTo={goToChooseProgram}
-                                // margin="40px 0"
-                                textAlign="center"
-                                textAlign_tablet="left"
-                                >
-                                 {m.title}
-                             </Div>
+
+
+                                <Paragraph
+                                    key={i}
+                                    padding="25px 25px 0"
+                                    // key={i}
+                                    onClick={e => executeScroll(e, items[m.title])}
+                                    // margin="40px 0"
+                                    textAlign="center"
+                                    textAlign_tablet="left"
+                                    >
+                                    {m.title}
+                                </Paragraph>
+                                // <ExecuteScroll title={m.title} referencia={items[m.title]}/>
+                                // <Paragraph
+                                //     padding="25px 25px 0"
+                                //     key={i}
+                                //     onClick={e => executeScroll(e, m.ref)}
+                                //     // margin="40px 0"
+                                //     textAlign="center"
+                                //     textAlign_tablet="left"
+                                //     >
+                                //     {m.title}
+                                // </Paragraph>
                          )
                         })
                     }
                     <ChooseProgram
                         width="80%"
-                        padding="28px 0"
-                        textAlign={`center`}
+                        padding="20px 0"
+                        textAlign={`-webkit-center`}
+                        displayButton="block"
                         // left="15px"
                         // marginTop="-3px"
                         borderRadius="0 .75rem .75rem .75rem"
@@ -191,6 +241,7 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
             }
             sections{
                 title
+                ref
                 paragraph
                 stats{
                     stat

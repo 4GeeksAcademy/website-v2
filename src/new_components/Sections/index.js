@@ -338,7 +338,7 @@ export const Header = ({hideArrowKey, children, fontSize, fontSize_tablet, image
                     {children}
                 </Div>
                 {svg_image ? 
-                <Div width="100%" gridArea_tablet="1/8/1/17" >
+                <Div width="100%" display="none" display_tablet="flex" gridArea_tablet="1/8/1/17" >
                     {svg_image}
                 </Div> : null}
             </Grid>
