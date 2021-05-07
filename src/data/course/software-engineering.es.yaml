@@ -6,7 +6,7 @@ meta_info:
   image: ""
   template: "course-engineering"
   keywords: ""
-  redirects: ["ingenieria-software", "/es/course/ingenieria-software"]
+  redirects: ["/ingenieria-software", "/es/software-engineering", "/es/course/ingenieria-software"]
 
 header:
   tagline_top: "CONVIERTETE EN"

@@ -6,7 +6,7 @@ meta_info:
   image: ""
   template: "course-machine-learning"
   keywords: ""
-  redirects: []
+  redirects: ["/us/machine-learning"]
 
 header:
   tagline_top: "BECOME A"
