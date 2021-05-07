@@ -1,13 +1,13 @@
 meta_info:
-  slug: "costa-rica"
+  slug: "coding-bootcamp-costa-rica"
   title: "4Geeks Academy Costa Rica"
   position: 5
-  description: null
+  description: "Know here all about our coding bootcamp campus in Costa Rica, San José of 4Geeks Academy"
   image: ""
   keywords: ""
   # it will not show up on the applications forms
   unlisted: false
-  redirects: []
+  redirects: ["/us/location/costa-rica", "/location/costa-rica"]
 
 seo_title: "Coding Bootcamp Costa Rica"
 header:

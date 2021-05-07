@@ -1,12 +1,12 @@
 meta_info:
   slug: cookie
-  title: "Cookies 4Geeks Academy"
-  description: ""
+  title: "Cookies de 4Geeks Academy"
+  description: "Política de cookies de 4Geeks Academy"
   image: null
-  keywords: ""
+  keywords: "Cookies 4Geeks Academy"
   redirects: []
 header:
-  tagline: "COOKIES: Política de cookies (PLANTILLA)"
+  tagline: "COOKIES: Política de cookies"
   sub_heading: ""
   image: ../../../static/images/bg/companies-bg.jpg
   alt: ""

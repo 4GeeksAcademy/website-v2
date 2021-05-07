@@ -29,7 +29,7 @@ const SEO = (props) => (
         },
       },
     }) => {
-      const { title, description, image, article, social, author, context, keywords, unlisted } = props;
+      const { title, description, excerpt, image, article, social, author, context, keywords, unlisted } = props;
       const { lang, type, pagePath } = context;
       const url = `${siteUrl}${pagePath || "/"}`;
       const _keywords = keywords ? (keywords + [].join(",")) : defaultKeywords[lang].join(",");
@@ -38,8 +38,8 @@ const SEO = (props) => (
         <>
             <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
                 <html lang={langCountries[lang]} />
-                <link rel="canonical" href={`${siteUrl}${pagePath}`} />
-                <meta name="description" content={description || defaultDescription[lang]} />
+                {/* <link rel="canonical" href={`${siteUrl}${pagePath}`} /> */}
+                <meta name="description" content={description || excerpt || defaultDescription[lang]} />
                 <meta name="keywords" content={_keywords} />
                 { unlisted === true && <meta name="robots" content="noindex" /> }
                 <meta name="image" content={previewImage} />

@@ -2,6 +2,7 @@
 author: MRiciglianoC
 comments: true
 date: "2015-12-23 05:31:23+00:00"
+excerpt: "Know in depth the history of 4Geeks Academy"
 layout: post
 link: https://www.4geeksacademy.co/4geeks-academy-history/
 slug: 4geeks-academy-history
@@ -69,4 +70,4 @@ Learning from our experience with HACK, we decided to do all of 4Geeks Academy 
 Now we have a solid Syllabus and over 300 graduates.  We have been funded, we have established amazing alliances and partnerships, we have opened 4 Locations at the same time (Miami, Caracas and Maracaibo), we have the structure, and the appropriate team and we are working really hard in order to become leaders in Coding Education in Florida and South America.
 
 
-[Learn more about our program](https://www.4geeksacademy.co/calendar/?)
+[Learn more about our program](/calendar/?)

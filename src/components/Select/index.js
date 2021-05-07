@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import {Button, Colors} from '../Styling';
 import {Break} from '../Responsive'
 import {Row, Column} from '../Sections'
+import Select from "react-select";
 import styled from 'styled-components';
 
 export const ChooseWrap = styled.div`
@@ -19,7 +20,7 @@ export const ChooseWrap = styled.div`
         margin: ${props => props.m_xs};
     }
 `;
-const Select = (props) => {
+const SmartSelect = (props) => {
     const [status, setStatus] = useState({toggle: false, hovered: false})
     const _Selector = (_p) => <Button
         shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
@@ -48,7 +49,7 @@ const Select = (props) => {
             }}
             onMouseEnter={() => setStatus({...status, hovered: true})}
         >
-            <Selector status={status} setStatus={setStatus} />
+            <Selector status={status} setStatus={setStatus} options={props.options} />
             {status.toggle &&
                 <Row
                     margin={props.margin}
@@ -93,7 +94,7 @@ const Select = (props) => {
         </ChooseWrap >
     )
 };
-Select.propTypes = {
+SmartSelect.propTypes = {
     selector: PropTypes.func,
     marginTop: PropTypes.string,
     marginLeft: PropTypes.string,
@@ -103,11 +104,55 @@ Select.propTypes = {
         PropTypes.string
     ])
 };
-Select.defaultProps = {
+SmartSelect.defaultProps = {
     selector: null,
     shadow: true,
     marginTop: "5px",
     marginLeft: "0",
     borderRadius: ".75rem",
 }
-export default Select;
+export default SmartSelect;
+
+
+const customStyles = {
+    input: (styles) => ({
+        ...styles,
+        width: "100%"
+    }),
+    control: (styles) => ({
+        ...styles,
+        fontFamily: "lato, sans-serif",
+        background: "#ededed",
+        border: 0,
+        marginTop: "5px",
+        width: "100%",
+        
+        ":hover": { boxShadow: "0 0 0 1px black", },
+        ":active": { boxShadow: "0 0 0 1px black", borderColor: "black", }
+    }),
+    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+        return {
+          ...styles,
+          fontFamily: "lato, sans-serif",
+        };
+      }
+  }
+
+export const SelectRaw = ({ onChange, ...rest }) => {
+    return <Select
+        className="react-select-wrapper"
+        styles={customStyles}
+        {...rest}
+        onChange={(opt) => {
+            if(onChange) onChange(opt, true);
+        }}
+    />
+}
+SelectRaw.propTypes = {
+    onChange: PropTypes.func.isRequired,
+    options: PropTypes.array.isRequired,
+};
+SelectRaw.defaultProps = {
+    onChange: null,
+    options: [],
+}

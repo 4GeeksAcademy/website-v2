@@ -5,6 +5,7 @@ const {createFilePath} = require(`gatsby-source-filesystem`)
 
 var redirects = [];
 var ymls = [];
+
 const saveRedirectLogs = () => {
 
     console.log('Saving redirect log');
@@ -32,7 +33,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
         const meta = getMetaFromPath({url, ...node});
 
         // add properties to the graph
-        if (node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
+        // if (node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
         if (meta) {
             createNodeField({node, name: `lang`, value: meta.lang});
             createNodeField({node, name: `slug`, value: meta.slug});
@@ -48,7 +49,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     }
 };
 
-// Create all the apges needed
+// Create all the pages needed
 exports.createPages = async (params) =>
     await createEditPage(params) &&
     await createBlog(params) &&
@@ -89,6 +90,7 @@ const createBlog = async ({actions, graphql}) => {
         createRedirect(args);
     }
     const postTemplate = path.resolve('src/templates/post.js');
+    const tagTemplate = path.resolve("src/templates/tags.js");
     const result = await graphql(`
     {
         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}){
@@ -104,7 +106,6 @@ const createBlog = async ({actions, graphql}) => {
                         status
                         featured
                         tags
-                        
                     }
                     excerpt,
                     fields{
@@ -122,8 +123,10 @@ const createBlog = async ({actions, graphql}) => {
     }
     `)
     if (result.errors) throw new Error(result.errors);
+    
+    const posts = result.data.allMarkdownRemark.edges;
 
-    result.data.allMarkdownRemark.edges.forEach(({node}) => {
+    posts.forEach(({node}) => {
 
         console.log(`Creating post ${node.fields.pagePath}`);
         createPage({
@@ -159,6 +162,53 @@ const createBlog = async ({actions, graphql}) => {
         });
     });
 
+    // Tag pages:
+    let tagsUs = [];
+    let tagsEs = [];
+    // Iterate through each post, putting all found tags into `tags`
+    posts.forEach(({node}) => {
+        if(node.frontmatter.tags){
+            if(node.fields.lang === "us"){
+                tagsUs = tagsUs.concat(node.frontmatter.tags);
+            } else {
+                tagsEs = tagsEs.concat(node.frontmatter.tags);
+            }
+        }
+    });
+    // Eliminate duplicate tags
+    tagsUs = tagsUs.filter((value, index) => tagsUs.indexOf(value) === index)
+    tagsEs = tagsEs.filter((value, index) => tagsEs.indexOf(value) === index)
+    // Make tag pages
+    tagsUs.forEach(tag => {
+        let file_name = `tags.us`
+        let lang = "us";
+        let type = "page";
+        createPage({
+            path: `/us/blog/tag/${tag}/`,
+            component: tagTemplate,
+            context: {
+                tag,
+                file_name,
+                lang,
+                type
+            },
+        });
+    });
+    tagsEs.forEach(tag => {
+        let file_name = `tags.es`;
+        let lang = "es";
+        let type = "page";
+        createPage({
+            path: `/es/blog/tag/${tag}/`,
+            component: tagTemplate,
+            context: {
+                tag,
+                file_name,
+                lang,
+                type
+            },
+        });
+    });
     return true;
 }
 const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields = [], extraContext = null) => {
@@ -245,6 +295,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields 
                 if (typeof (path) !== "string") throw new Error(`The path in ${node.meta_info.slug} is not a string: ${path}`);
                 if (path === "") return;
                 path = path[0] !== '/' ? '/' + path : path; //and forward slash at the beginning of path
+                console.log(`Additional redirect ${path} => ${node.fields.pagePath}`)
                 _createRedirect({
                     fromPath: path,
                     toPath: node.fields.pagePath,
@@ -262,6 +313,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
     const {createPage, createRedirect} = actions;
     const _createRedirect = (args) => {
         redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
+        console.log(`Redirect from ${args.fromPath} to ${args.toPath}`);
         createRedirect(args);
     }
     const result = await graphql(`
@@ -294,7 +346,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
     //for each page found on the YML
     result.data[`allPageYaml`].edges.forEach(({node}) => {
         const _targetPath = node.fields.slug === "index" ? "/" : node.fields.pagePath;
-        console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath}`);
+        console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} in ${node.fields.lang}`);
         createPage({
             path: _targetPath,
             component: path.resolve(`./src/templates/${node.fields.defaultTemplate}.js`),
@@ -308,14 +360,14 @@ const createPagesfromYml = async ({graphql, actions}) => {
             _createRedirect({
                 fromPath: "/" + node.fields.slug,
                 toPath: _targetPath,
-                redirectInBrowser: true,
+                // redirectInBrowser: true,
                 isPermanent: true
             });
 
             _createRedirect({
                 fromPath: "/en/" + node.fields.slug,
                 toPath: _targetPath,
-                redirectInBrowser: true,
+                // redirectInBrowser: true,
                 isPermanent: true
             });
 
@@ -323,7 +375,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                 _createRedirect({
                     fromPath: "/en",
                     toPath: _targetPath,
-                    redirectInBrowser: true,
+                    // redirectInBrowser: true,
                     isPermanent: true
                 });
             }
@@ -332,9 +384,15 @@ const createPagesfromYml = async ({graphql, actions}) => {
             _createRedirect({
                 fromPath: "/" + node.fields.slug,
                 toPath: _targetPath,
-                redirectInBrowser: true,
+                // redirectInBrowser: true,
                 isPermanent: true
             });
+            // _createRedirect({
+            //     fromPath: "/es/" + node.fields.slug,
+            //     toPath: _targetPath,
+            //     // redirectInBrowser: true,
+            //     isPermanent: true
+            // });
 
         }
 
@@ -344,12 +402,14 @@ const createPagesfromYml = async ({graphql, actions}) => {
                     throw new Error(`The path in ${node.meta_info.slug} its not a string: ${path}`);
                 }
                 path = path[0] !== '/' ? '/' + path : path;
-                _createRedirect({
-                    fromPath: path,
-                    toPath: _targetPath,
-                    redirectInBrowser: true,
-                    isPermanent: true
-                });
+                const exists = redirects.find(p => p === `Redirect from ${path} to ${_targetPath}`);
+                if(!exists || exists === undefined)
+                    _createRedirect({
+                        fromPath: path,
+                        toPath: _targetPath,
+                        // redirectInBrowser: true,
+                        isPermanent: true
+                    });
             })
         }
     });
@@ -388,6 +448,14 @@ const addAdditionalRedirects = ({graphql, actions}) => {
 
 const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
+    let slugigy = (entity) => {
+        let slugMap = {
+            location: "coding-campuses",
+            course: "coding-bootcamps",
+        }
+        return slugMap[entity] || entity
+    }
+
     //if its a blog post the meta_info comes from the front-matter
     if (typeof (meta_info) == 'undefined') meta_info = frontmatter;
 
@@ -397,13 +465,13 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
     const type = frontmatter ? "post" : m[1];
 
-    const lang = m[3] || "en";
+    const lang = m[3] || "us";
     const customSlug = (meta_info !== undefined && typeof meta_info.slug === "string");
     const file_name = m[2];// + (lang == "es" ? "-es": "");
     const slug = (customSlug) ? meta_info.slug : file_name;
     const template = type === "page" ? file_name : type;
 
-    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${template}/${slug}`;
+    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${slugigy(template)}/${slug}`;
 
     const meta = {lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath};
     //   console.log("meta: ", meta);

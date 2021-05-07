@@ -13,6 +13,8 @@ meta_info:
   # this UTM fields will be included in the CRM
   utm_course: full-stack
   utm_location: madrid-spain
+  automation: request_more_info #optional, this is the default value
+  tag: soft #optional, this is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -122,6 +124,21 @@ components:
     layout: two_column_right 
     image: 
       style: "{}"
+      src: "../../../static/images/projects/ims.jpg"
+      link: "https://google.com" # take uses somewhere when they click on the image
+    video: "plwPwyrxX84" #youtube id
+    heading: 
+      text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    content: 
+      text: " "
+      font_size: ["16px"]
+  - name: some_other_id
+    position: 10
+    layout: single_column 
+    image: 
+      style: '{"height": ["400px", "400px", "400px", "300px", "200px"], "background-size": "contain"  }'
       src: "../../../static/images/projects/ims.jpg"
       link: "https://google.com" # take uses somewhere when they click on the image
     video: "plwPwyrxX84" #youtube id
