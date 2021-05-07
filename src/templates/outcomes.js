@@ -1,4 +1,4 @@
-import React, {createRef, useEffect, useRef, useState} from 'react';
+import React, {createRef, useCallback, useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
@@ -43,47 +43,52 @@ const SVGImage = () =>
 
 const Outcomes = ({data, pageContext, yml}) => {
 
-    let refs = useRef([React.createRef(), React.createRef(), React.createRef()]);
-    useEffect(() => {
-        console.log("refsCurrent[0]", refs.current[0])
-      }, []);
+    const [active, setActive] = useState(null);
 
+    let buttonSideBar = yml.sections.reduce((acc, section) =>{
+        acc[section.title] = React.createRef();
+        return acc;
+    }, {});
     
     let items = yml.sections.reduce((acc, section) =>{
-        // const mapedSection = section.filter(i => i.title ==="")
-        console.log(acc[section.title]) // x3 {current: null} :c
         acc[section.title] = React.createRef();
         return acc;
     }, {});
 
-    let executeScroll=(e, ref) =>{
-        e.preventDefault();
-        console.log(ref)
-        window.scrollTo({
-          top: ref.current?.offsetTop,
-          behavior: "smooth"
-        })
-    }
-    // const ExecuteScroll = React.forwardRef((props, ref) => {
-    //     // console.log(items[item])
-    //     return (
-    //         // <Div ref={props.referencia}>
+    const ExecuteScroll = React.forwardRef((props, ref) => {
 
-    //         <Paragraph
-    //             padding="25px 25px 0"
-    //             // key={i}
-    //             onClick={e => executeScroll(e, props.referencia)}
-    //             // margin="40px 0"
-    //             textAlign="center"
-    //             textAlign_tablet="left"
-    //             >
-    //             {props.title}
-    //         </Paragraph>
-
-    //         // </Div>
-    //     )
+        let selectedButton = useCallback(() => props.onSelectedClick(props.keyScroll), [props.keyScroll])
         
-    //   })
+        let executeScroll= (e, ref) =>{
+            e.preventDefault();
+            window.scrollTo({
+              top: ref.current?.offsetTop - 30,
+              behavior: "smooth"
+            })
+        }
+
+        let executeFunctions = (e, ref) => {
+            executeScroll(e, ref)
+            selectedButton()
+        }
+
+        return (
+            <Paragraph
+                // borderLeft= "1px solid"
+                ref={props.buttonSideBar}
+                cursor="pointer"
+                padding="25px 25px 0"
+                key={props.keyScroll}
+                onClick={(e) => executeFunctions(e, props.actionRef)}
+                className={`ButtonSELECT ${props.isActive ? 'active' : ''}`}
+                textAlign="center"
+                textAlign_tablet="left"
+                >
+                {props.title}
+            </Paragraph>
+        )
+        
+      })
 
     
     return (
@@ -97,13 +102,11 @@ const Outcomes = ({data, pageContext, yml}) => {
                 paragraph={yml.header.paragraph}
                 svg_image={<SVGImage />}
                 background={Colors.lightYellow}
-            >
-            </Header>
+            />
 
 
 {/* SUCCESSSSS::: logramos obtener ref
-                  Ahora necesito hacer pequeñas modificaciones
-                  y por ultimo adaptar el react.forwardRef para quitar el error en consola
+                  solo queda ajustar grid a tablet
     APRENDIMOS::: que h2 no puede tener un ref, la razon aun la debo de estudiar, pero 
                   al parecer con div no ocurre ningun problema
 */}
@@ -112,8 +115,10 @@ const Outcomes = ({data, pageContext, yml}) => {
                     {yml.sections.map((section, i) => {
                         return (
                             <>
-                                <H2 key={i}  type="h2" margin="54px 0 0 0 " textAlign="left" >{section.title}</H2>
-                                <Div ref={items[section.title]} style={{margin: "40px 0", height: "1px", background: "#c4c4c4"}} />
+                                <Div key={i}  ref={items[section.title]}>
+                                    <H2 type="h2" margin="54px 0 0 0 " textAlign="left" >{section.title}</H2>
+                                </Div>
+                                <Div style={{margin: "40px 0", height: "1px", background: "#c4c4c4"}} />
                                 {section.paragraph.split("\n").map((m, i) =>
                                     <Paragraph key={i} textAlign="left" margin="10px 0" >{m}</Paragraph>
                                 )}
@@ -176,31 +181,15 @@ const Outcomes = ({data, pageContext, yml}) => {
                     {
                         yml.sections.filter(i => i.title !== "").map((m, i) => {
                             return (
-
-
-                                <Paragraph
-                                    key={i}
-                                    padding="25px 25px 0"
-                                    // key={i}
-                                    onClick={e => executeScroll(e, items[m.title])}
-                                    // margin="40px 0"
-                                    textAlign="center"
-                                    textAlign_tablet="left"
-                                    >
-                                    {m.title}
-                                </Paragraph>
-                                // <ExecuteScroll title={m.title} referencia={items[m.title]}/>
-                                // <Paragraph
-                                //     padding="25px 25px 0"
-                                //     key={i}
-                                //     onClick={e => executeScroll(e, m.ref)}
-                                //     // margin="40px 0"
-                                //     textAlign="center"
-                                //     textAlign_tablet="left"
-                                //     >
-                                //     {m.title}
-                                // </Paragraph>
-                         )
+                                <ExecuteScroll 
+                                    buttonSideBar={buttonSideBar[m.title]} 
+                                    keyScroll={i} 
+                                    title={m.title} 
+                                    actionRef={items[m.title]}
+                                    onSelectedClick={setActive} 
+                                    isActive={active === i}
+                                />
+                            )
                         })
                     }
                     <ChooseProgram
@@ -208,8 +197,6 @@ const Outcomes = ({data, pageContext, yml}) => {
                         padding="20px 0"
                         textAlign={`-webkit-center`}
                         displayButton="block"
-                        // left="15px"
-                        // marginTop="-3px"
                         borderRadius="0 .75rem .75rem .75rem"
                         openLabel={`DOWNLOAD REPORT`}
                         closeLabel={`DOWNLOAD REPORT`}
@@ -217,8 +204,6 @@ const Outcomes = ({data, pageContext, yml}) => {
                     </Div>
                 </Div>
             </GridContainer>
-            {/* <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph> */}
-            {/* </Container> */}
         </>
     )
 };

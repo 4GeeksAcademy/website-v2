@@ -14,6 +14,12 @@ html, body
     padding: 0px!important;
     overflow-x: clip!important; 
 }
+.ButtonSELECT.active {
+    border: inset;
+}
+.ButtonSELECT {
+    border: outset;
+}
 
 /* adds three dots to text when reaches the end of line */
 
