@@ -96,11 +96,6 @@ const Outcomes = ({data, pageContext, yml}) => {
                 background={Colors.lightYellow}
             />
 
-
-{/* SUCCESSSSS::: logramos obtener ref
-                  solo queda ajustar grid a tablet
-
-*/}
             <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 " >
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
                     {yml.sections.filter(section => section.title !== "").map((section, i) => {
