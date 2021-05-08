@@ -1,15 +1,12 @@
-import React, {createRef, useCallback, useEffect, useLayoutEffect, useRef, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {graphql} from 'gatsby'
-import Link from 'gatsby-link'
-import Layout from '../global/Layout';
 import {Grid, Div, Header, GridContainer} from '../new_components/Sections'
 import {H2, H3, H4, Paragraph} from '../new_components/Heading'
-import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
+import {Colors} from '../new_components/Styling'
 import Icon from '../new_components/Icon'
 import {Charts} from '../new_components/Chart'
 import BaseRender from './_baseLayout'
 import ChooseProgram from '../new_components/ChooseProgram'
-import Img from "gatsby-image"
 
 const SVGImage = () =>
 <svg width="510" height="295" viewBox="0 0 510 295" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,22 +40,20 @@ const SVGImage = () =>
 
 const Outcomes = ({data, pageContext, yml}) => {
 
-    const [active, setActive] = useState(null);
+    const [active, setActive] = useState(false);
 
-    let buttonSideBar = yml.sections.reduce((acc, section) =>{
-        acc[section.title] = React.createRef();
-        return acc;
-    }, {});
-    
-    let items = yml.sections.reduce((acc, section) =>{
+    // Create and Gets Ref for each property by title
+    let findMappedRef = yml.sections.reduce((acc, section) =>{
         acc[section.title] = React.createRef();
         return acc;
     }, {});
 
     const ExecuteScroll = React.forwardRef((props, ref) => {
 
-        let selectedButton = useCallback(() => props.onSelectedClick(props.keyScroll), [props.keyScroll])
+        // selectedButton for each Ref properties from Button
+        let selectedButton = useCallback(() => props.onSelectedRef(props.keyScroll), [props.keyScroll])
         
+        // Gets the container title reference to Enable autoScroll <Div ref={findMappedRef[section.title]}>
         let executeScroll= (e, ref) =>{
             e.preventDefault();
             window.scrollTo({
@@ -71,28 +66,25 @@ const Outcomes = ({data, pageContext, yml}) => {
             executeScroll(e, ref)
             selectedButton()
         }
-
         return (
             <Paragraph
-                // borderLeft= "1px solid"
-                ref={props.buttonSideBar}
                 cursor="pointer"
-                padding="25px 25px 0"
                 key={props.keyScroll}
+                fontSize="13"
                 onClick={(e) => executeFunctions(e, props.actionRef)}
-                className={`ButtonSELECT ${props.isActive ? 'active' : ''}`}
+                transitionSec="3"
+                isActive={props.isActive}
                 textAlign="center"
                 textAlign_tablet="left"
                 >
-                {props.title}
+                {props.title.toUpperCase()}
             </Paragraph>
-        )
-        
+        ) 
       })
 
-    
+
     return (
-        <>
+        <Div padding="0 0 50px 0" flexDirection="column">
             <Header
                 hideArrowKey 
                 paddingParagraph="0px 14% 0px 0"   
@@ -107,33 +99,33 @@ const Outcomes = ({data, pageContext, yml}) => {
 
 {/* SUCCESSSSS::: logramos obtener ref
                   solo queda ajustar grid a tablet
-    APRENDIMOS::: que h2 no puede tener un ref, la razon aun la debo de estudiar, pero 
-                  al parecer con div no ocurre ningun problema
+
 */}
             <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 " >
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
-                    {yml.sections.map((section, i) => {
+                    {yml.sections.filter(section => section.title !== "").map((section, i) => {
+                        console.log(section.stats)
                         return (
                             <>
-                                <Div key={i}  ref={items[section.title]}>
-                                    <H2 type="h2" margin="54px 0 0 0 " textAlign="left" >{section.title}</H2>
+                                <Div key={i}  ref={findMappedRef[section.title]}>
+                                    <H2 type="h2" padding="10px 0" margin="54px 0 0 0 " textAlign="left" >{section.title}</H2>
                                 </Div>
-                                <Div style={{margin: "40px 0", height: "1px", background: "#c4c4c4"}} />
+                                <Div style={{margin: "20px 0", height: "1px", background: "#c4c4c4"}} />
                                 {section.paragraph.split("\n").map((m, i) =>
                                     <Paragraph key={i} textAlign="left" margin="10px 0" >{m}</Paragraph>
                                 )}
-                                <Grid justifyContent="between" columns_md={Array.isArray(section.stats) && section.stats.length} margin="41px 0 0 0">
+                                <GridContainer justifyContent="between" gridGap_tablet="30px" containerColumns_tablet={`0fr repeat(12, 1fr) 1fr`} columns_tablet={Array.isArray(section.stats) && section.stats.length} margin="41px 0 0 0">
                                     {section.stats.map((m, i) => {
                                         return (
-                                            <Div key={i} flexDirection="column" margin="0 0 38px 0">
-                                                <H2 type="h2" textAlign_md="left" color={Colors.blue}>{m.stat}</H2>
-                                                <H3 type="h3" textAlign_md="left" >{m.content}</H3>
+                                            <Div key={i} gap="0" gridColumnGap="40px" flexDirection="column" margin="0 0 38px 0">
+                                                <H2 type="h2" textAlign_tablet="left" color={Colors.blue}>{m.stat}</H2>
+                                                <H3 type="h3" textAlign_tablet="left" >{m.content}</H3>
                                             </Div>
                                         )
                                     })}
-                                </Grid>
+                                </GridContainer>
                                 {
-                                    Array.isArray(section.sub_sections) && section.sub_sections.map((m, i) => {
+                                    Array.isArray(section.sub_sections) && section.sub_sections.filter(section => section.title !== "").map((m, i) => {
 
                                         return (
                                             <React.Fragment key={i}>
@@ -152,8 +144,8 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                     // alt={l.name}
                                                                     fluid={m.image != undefined && m.image.childImageSharp.fluid}
                                                                 /> */}
-                                                                <Paragraph textAlign="left">{m.image_paragraph}</Paragraph>
-                                                                <Grid gridTemplateColumns_tablet="3">
+                                                                <Paragraph justifyContent="center" padding="50px 0 0" display="none" display_tablet="flex" textAlign="left">{m.image_paragraph}</Paragraph>
+                                                                <GridContainer display="none" justifyContent="center" justifyContent_tablet="center" display_tablet="flex" gridTemplateColumns_tablet="3">
                                                                     {m.chart &&
                                                                         yml.charts.chart_list.map((c, i) => {
                                                                             return (
@@ -164,7 +156,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                             )
                                                                         })
                                                                     }
-                                                                </Grid>
+                                                                </GridContainer>
                                                             </React.Fragment>
                                                         )
                                                     })
@@ -176,35 +168,36 @@ const Outcomes = ({data, pageContext, yml}) => {
                             </>)
                     })}
                 </Div>
-                <Div gridArea="1/9/1/13" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
+                <Div gridArea="1/9/1/13" gridColumn_tablet="12 ​/ span 12" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
                     <Div flexDirection="column" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", position: "sticky", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">
-                    {
-                        yml.sections.filter(i => i.title !== "").map((m, i) => {
-                            return (
-                                <ExecuteScroll 
-                                    buttonSideBar={buttonSideBar[m.title]} 
+                        <Div margin="25px 28px 0" flexDirection="column" justifyContent="space-around" gap="20px">
+                        {
+                            yml.sections.filter(i => i.title !== "").map((m, i) => {
+                                return (
+                                    <ExecuteScroll 
                                     keyScroll={i} 
                                     title={m.title} 
-                                    actionRef={items[m.title]}
-                                    onSelectedClick={setActive} 
+                                    actionRef={findMappedRef[m.title]}
+                                    onSelectedRef={setActive} 
                                     isActive={active === i}
-                                />
-                            )
-                        })
-                    }
-                    <ChooseProgram
-                        width="80%"
-                        padding="20px 0"
-                        textAlign={`-webkit-center`}
-                        displayButton="block"
-                        borderRadius="0 .75rem .75rem .75rem"
-                        openLabel={`DOWNLOAD REPORT`}
-                        closeLabel={`DOWNLOAD REPORT`}
-                    />
+                                    />
+                                    )
+                                })
+                            }
+                        </Div>
+                        <ChooseProgram
+                            width="80%"
+                            padding="25px 0"
+                            textAlign={`-webkit-center`}
+                            displayButton="block"
+                            borderRadius="0 .75rem .75rem .75rem"
+                            openLabel={`DOWNLOAD REPORT`}
+                            closeLabel={`DOWNLOAD REPORT`}
+                        />
                     </Div>
                 </Div>
             </GridContainer>
-        </>
+        </Div>
     )
 };
 export const query = graphql`

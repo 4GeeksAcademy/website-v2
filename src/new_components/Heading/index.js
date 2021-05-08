@@ -160,12 +160,13 @@ Separator.defaultProps = {
 export const Paragraph = styled.p`
   display: ${props => props.display};
   direction: ${props => props.direction};
+  justify-content: ${props => props.justifyContent};
   width: ${props => props.width || "100%"};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin || "0"};
   font-size: ${props => props.fontSize};
   font-family: ${props => props.fontFamily};
-  font-weight: ${props => props.fontWeight || "400"};
+  font-weight: ${props => props.isActive ? "bold" : props.fontWeight || "400"};
   max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
   padding-right: ${props => props.paddingRight || "innitial"};
@@ -176,6 +177,7 @@ export const Paragraph = styled.p`
   text-align: ${props => props.textAlign || "center"};
   height: ${props => props.height};
   border-left: ${props => props.borderLeft};
+  opacity: ${props => props.isActive ? 1 : 0.8};
 
   @media ${Devices.xxs}{
   }
