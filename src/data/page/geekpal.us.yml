@@ -1,7 +1,7 @@
 meta_info:
   slug: geekpal-support
   title: "Geekpal of 4Geeks Academy"
-  description: "Learn about our comprehensive support system for 4Geeks Academy graduates"
+  description: "Learn about our comprehensive support system for 4Geeks Academy students and graduates"
   image: null
   keywords: ""
   redirects: ["/geekpal", "/us/career-support"]
@@ -10,7 +10,7 @@ header:
   title: ""
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "Text that explains that GeekPal is a membership with accompanying benefits, which the student obtains by enrolling in a program with The Academy. <span style='font-weight: bold'> Even after you graduate, you will continue to have personalized mentoring.</span>"
+  paragraph: "GeekPAL is an instant membership you get when you become a student at 4Geeks Academy. It guarantees you will not code alone ever again. With GeekPAL you will count with A PAL for the rest of your life -yes, even after graduation. <span style='font-weight: bold'>If you get stuck, there will always be a mentor available so you can get help with your code.</span>"
   image_logo: "/images/geekpal.png"
 
 # Introduction Video here
@@ -25,21 +25,21 @@ icons:
   - icon: "ratio"
     title: "1:5 RATIO teacher student"
   - icon: "talk"
-    title: "50 MENTORIES PER STUDENT"
+    title: "Avg. 50 tutorships PER STUDENT"
   - icon: "timer"
     title: "RESPONSE TIME OF 15 MINUTES"
 
 list:
-  - title: "Unlimited Professional Support"
+  - title: "Unlimited Coding Support"
     image: "../../../static/images/final-project.png"
     position: "right"
     sub:
       - title: "✔ EXCLUSIVE CLASSES"
         text: "At 4Geeks we believe that the personalized process gives better results, that is why our classes are designed for a maximum of 8 students and we have a ratio of <span style='font-weight: bold'> 1 teacher for every 5 students.</span>"
-      - title: "✔ MENTORIES 1:1"
+      - title: "✔ 1:1 MENTORSHIPS"
         text: "We have a network of mentors who are willing to give you 
         <span style='font-weight: bold'> 1:1 support</span> in person or remotely, unlimitedly. These 
-        <span style='font-weight: bold'> unlimited mentoring continue</span> even after you finish your studies at 4geeks."
+        <span style='font-weight: bold'> unlimited mentoring continues</span> even after you finish your studies at 4Geeks."
 
   - title: "Wherever and whenever"
     image: "../../../static/images/bg/main-bg.jpg"
@@ -53,11 +53,11 @@ list:
     image: "../../../static/images/comunity-support.png"
     position: "right"
     sub:
-      - title: "✔ Breath Code"
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      - title: "✔ Slack community"
+      - title: "✔ BreatheCode"
+        text: "Is a community created to accelerate the way junior developers learn and evolve using technology. BreatheCode gives you access to many resources to improve your skills, but also you can contribute to help others with their code."
+      - title: "✔ Slack Community"
         text: "Our international community of more than 
-        <span style='font-weight: bold'> 1100 people</span>, who will provide you with all the support you need."
+        <span style='font-weight: bold'> 2100 people</span>, who will provide you with all the support you need."
 
 # benefits:
 #   - p:
