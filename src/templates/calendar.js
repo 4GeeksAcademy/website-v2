@@ -15,6 +15,34 @@ import {Link} from 'gatsby'
 import {Circle} from '../new_components/BackgroundDrawing'
 import {SessionContext} from '../session'
 
+
+const info = {
+  us: {
+    "full-stack": "/us/coding-bootcamp/part-time-full-stack-developer",
+    "software-engineering": "/us/coding-bootcamp/software-engineer-bootcamp",
+    "machine-learning-pt-16w": "/us/coding-bootcamp/machine-learning-engineering",
+    "full-stack-ft": "/us/coding-bootcamp/full-time-full-stack-developer"
+  },
+  es: {
+    "full-stack": "/es/coding-bootcamp/full-stack-part-time",
+    "software-engineering": "/es/coding-bootcamp/ingenieria-de-software-programacion",
+    "machine-learning-pt-16w": "/es/coding-bootcamp/curso-inteligencia-artificial",
+    "full-stack-ft": "/es/coding-bootcamp/full-stack-full-time"
+  }
+}
+const locations = {
+  us: {
+    "santiago-chile": "/us/coding-campus/coding-bootcamp-santiago",
+    "downtown-miami": "/us/coding-campus/coding-bootcamp-miami",
+    "madrid-spain": "/us/coding-campus/coding-bootcamp-madrid",
+  },
+  es: {
+    "downtown-miami": "/es/coding-campus/bootcamp-programacion-miami",
+    "santiago-chile": "/es/coding-campus/bootcamp-programacion-santiago",
+    "madrid-spain": "/es/coding-campus/bootcamp-programacion-madrid",
+  }
+}
+
 const Calendar = (props) => {
   const {pageContext, yml, data} = props;
   const [limit, setLimit] = useState(true);
@@ -30,9 +58,11 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      // let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
       let cohorts = await resp.json();
-      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      // let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
@@ -184,11 +214,11 @@ const Calendar = (props) => {
                 </Div>
                 <Div flexDirection="column" width_tablet="35%" margin="0 0 20px 0">
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.program_label}</H4>
-                  <Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph>
+                  <Link to={info[pageContext.lang][m.syllabus.certificate.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph></Link>
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex" >
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
-                  <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                  <Link to={locations[pageContext.lang][m.academy.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph></Link>
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex">
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
@@ -197,7 +227,7 @@ const Calendar = (props) => {
                 <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
-                    <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                    <Link to=""><Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph></Link>
                   </Div>
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
@@ -205,7 +235,9 @@ const Calendar = (props) => {
                   </Div>
                 </Div>
                 <Div flexDirection="column">
-                  <Button variant="full" width="fit-content" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
+                  <Link to={content.cohorts.info.button_link}>
+                    <Button variant="full" width="fit-content" color={Colors.black} margin="10px 0" textColor="white">{content.cohorts.info.button_text}</Button>
+                  </Link>
                 </Div>
               </Div>
             )
