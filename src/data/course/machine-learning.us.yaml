@@ -6,14 +6,8 @@ meta_info:
   image: ""
   template: "course-machine-learning"
   keywords: ""
-  redirects:
-    [
-      "/software-engineering",
-      "/us/course/machine-learning-engineering-coding-bootcamp",
-      "/course/machine-learning-engineering-coding-bootcamp",
-      "/coding-bootcamp/machine-learning-engineering-bootcamp",
-    ]
-seo_title: "Cooding Bootcamp"
+  redirects: ["/us/machine-learning"]
+
 header:
   title: "Become a Machine Learning Engineer"
   paragraph: "Become one of the highest paid professionals in the world 
