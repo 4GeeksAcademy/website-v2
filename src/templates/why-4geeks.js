@@ -74,7 +74,7 @@ const Why4Geeks = (props) => {
                         height="500px"
                         width="100%"
                         image={yml.community_banner.image && yml.community_banner.image.childImageSharp.fluid}
-                        bgSize={`cover`}
+                        bgSize={`contain`}
                         alt={yml.community_banner.image_alt}
                     />
                 </Div>
