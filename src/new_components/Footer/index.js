@@ -88,6 +88,7 @@ const Footer = ({yml}) => {
                         <Icon icon="github" style={{margin: "0 15px 0 0"}} height="32px" width="32px" />
                     </Div>
                 </Div>
+
                 <Div
                     flexDirection="column"
                     justifyContent="center"
@@ -101,58 +102,64 @@ const Footer = ({yml}) => {
                     gridArea_tablet="1/3/2/10"
                     borderRight_tablet={`1px solid ${Colors.lightGray}`}
                 >
-                    <H4 margin="0 0 10px 0" textAlign="left" display="none" display_tablet="block">{yml.newsletter.heading}</H4>
-                    <Div justifyContent="center" width="100%">
-                        <Form onSubmit={(e) => {
-                            e.preventDefault();
-                            if (formStatus.status === "error") {
-                                setFormStatus({status: "idle", msg: "Resquest"})
-                            }
-                            if (!formIsValid(formData)) {
-                                setFormStatus({status: "error", msg: "There are some errors in your form"});
-                            }
-                            else {
-                                setFormStatus({status: "loading", msg: "Loading..."});
-                                newsletterSignup(formData, session)
-                                    .then(data => {
-                                        if (data.error !== false && data.error !== undefined) {
-                                            setFormStatus({status: "error", msg: "Fix errors"});
-                                        }
-                                        else {
-                                            setFormStatus({status: "thank-you", msg: "Thank you"});
-                                        }
-                                    })
-                                    .catch(error => {
-                                        console.log("error", error);
-                                        setFormStatus({status: "error", msg: error.message || error});
-                                    })
-                            }
-                        }}>
-                            <Input type="email" className="form-control" width="100%" placeholder="Email *"
-                                borderRadius="3px"
-                                bgColor={Colors.white}
-                                margin="0"
-                                onChange={(value, valid) => {
-                                    setVal({...formData, email: {value, valid}})
+                    {formStatus.status === "thank-you" ?
+                        <H4 fontSize="18px" margin="10px 0" color={Colors.lightGreen} align="center">{yml.newsletter.thankyou}</H4>
+                        : <>
+                            <H4 margin="0 0 10px 0" textAlign="left" display="none" display_tablet="block">{yml.newsletter.heading}</H4>
+                            <Div justifyContent="center" width="100%">
+                                <Form onSubmit={(e) => {
+                                    console.log("E:", e)
+                                    e.preventDefault();
                                     if (formStatus.status === "error") {
                                         setFormStatus({status: "idle", msg: "Resquest"})
                                     }
-                                }}
-                                value={formData.email.value}
-                                errorMsg="Please specify a valid email"
-                                required
-                            />
-                        </Form>
-                        <Button width="40px" height="40px" type="submit"
-                            fontSize="22px"
-                            variant="full"
-                            borderRadius="3px"
-                            color={formStatus.status === "loading" ? Colors.darkGray : Colors.black}
-                            textColor={Colors.white}
-                            disabled={formStatus.status === "loading" ? true : false}
-                        >{formStatus.status === "loading" ? "Loading..." : <Icon icon="email" height="16px" width="16px" color={Colors.white} fill={Colors.white} />}
-                        </Button>
-                    </Div>
+                                    if (!formIsValid(formData)) {
+                                        setFormStatus({status: "error", msg: "There are some errors in your form"});
+                                    }
+                                    else {
+                                        setFormStatus({status: "loading", msg: "Loading..."});
+                                        newsletterSignup(formData, session)
+                                            .then(data => {
+                                                if (data.error !== false && data.error !== undefined) {
+                                                    setFormStatus({status: "error", msg: "Fix errors"});
+                                                }
+                                                else {
+                                                    setFormStatus({status: "thank-you", msg: "Thank you"});
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.log("error", error);
+                                                setFormStatus({status: "error", msg: error.message || error});
+                                            })
+                                    }
+                                }}>
+                                    <Input type="email" className="form-control" width="100%" placeholder="Email *"
+                                        borderRadius="3px"
+                                        bgColor={Colors.white}
+                                        margin="0"
+                                        onChange={(value, valid) => {
+                                            setVal({...formData, email: {value, valid}})
+                                            if (formStatus.status === "error") {
+                                                setFormStatus({status: "idle", msg: "Resquest"})
+                                            }
+                                        }}
+                                        value={formData.email.value}
+                                        errorMsg="Please specify a valid email"
+                                        required
+                                    />
+                                    {/* <button type="submit">{formStatus.status === "loading" ? "Loading..." : "text"}</button> */}
+                                    <Button height="40px"
+                                        type="submit"
+                                        fontSize="22px"
+                                        variant="full"
+                                        borderRadius="3px"
+                                        color={formStatus.status === "loading" ? Colors.darkGray : Colors.black}
+                                        textColor={Colors.white}
+                                        disabled={formStatus.status === "loading" ? true : false}
+                                    >{formStatus.status === "loading" ? "Loading..." : <Icon icon="email" height="16px" width="16px" color={Colors.white} fill={Colors.white} />}
+                                    </Button>
+                                </Form>
+                            </Div></>}
                 </Div>
                 {yml.footer.map((item, i) => {
                     return (
@@ -187,21 +194,15 @@ const Footer = ({yml}) => {
                         </Div>
                     )
                 })}
-
             </GridContainer>
-
             <GridContainer columns_tablet="12" margin_tablet="27px 0 60px 0" display="none" display_tablet="grid">
                 <Div gridArea_tablet="1/7/1/13" justifyContent="end" alignItems="center">
                     <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >We accept: </H4>
                     <RoundImage url="/images/bitcoin.png" height="10px" width="65px" bsize="contain" margin="0 15px" />
                     <RoundImage url="/images/ethereum.png" height="20px" width="65px" bsize="contain" />
                 </Div>
-
             </GridContainer>
-            {/* <Grid columns_md="12" rows_md="1" gridGap="0" display="none" display_md="grid" padding_md="23px 0">
-            </Grid> */}
             <GridContainer columns_tablet="12" background={Colors.lightGray} padding="11px 17px 29px 17px" padding_tablet="31px 0">
-                {/* <Grid columns_md="12" rows_md="1" gridGap="0" height="140px" height_md="81px" background={Colors.verylightGray} > */}
                 <Div gridArea_tablet="1/6/1/13" justifyContent="end"
                     alignItems="center"
                     flexDirection="column"
@@ -223,7 +224,6 @@ const Footer = ({yml}) => {
                     <H4 fontSize="13px" lineHeight="22px" textAlign_tablet="left" color={Colors.darkGray}>@ 4Geeks Academy LLC 2019</H4>
                 </Div>
             </GridContainer>
-            {/* </Grid> */}
         </>
     )
 };
