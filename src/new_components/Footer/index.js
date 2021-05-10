@@ -103,7 +103,7 @@ const Footer = ({yml}) => {
                     borderRight_tablet={`1px solid ${Colors.lightGray}`}
                 >
                     {formStatus.status === "thank-you" ?
-                        <H4 fontSize="18px" margin="10px 0" color={Colors.lightGreen} align="center">{yml.newsletter.thankyou}</H4>
+                        <Div alignItems="center"><Icon icon="success" /> <H4 fontSize="15px" lineHeight="22px" margin="10px 0 10px 10px" align="center">{yml.newsletter.thankyou}</H4></Div>
                         : <>
                             <H4 margin="0 0 10px 0" textAlign="left" display="none" display_tablet="block">{yml.newsletter.heading}</H4>
                             <Div justifyContent="center" width="100%">
