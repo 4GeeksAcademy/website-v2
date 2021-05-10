@@ -108,7 +108,7 @@ const Why4Geeks = (props) => {
             <With4Geeks lang={pageContext.lang} playerHeight="82px" />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
             <GeeksVsOthers lang={pageContext.lang} link={true} limit={4} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
-            <GridContainerWithImage height_tablet="503px" background={Colors.lightBlue} padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
+            <GridContainerWithImage height_tablet="503px" background="#E3F9FE" padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
                 <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.python_banner.title}`}</H2>
                     {/* <Paragraph textAlign_tablet="left" margin="26px 0">{yml.python_banner.paragraph} </Paragraph> */}
@@ -117,7 +117,13 @@ const Why4Geeks = (props) => {
                     )}
                 </Div>
                 <Div height="auto" width="100%" gridColumn_tablet="9 / 15">
-                    <SVGImage />
+                    <StyledBackgroundSection
+                        height="300px"
+                        width="100%"
+                        image={yml.python_banner.image && yml.python_banner.image.childImageSharp.fluid}
+                        bgSize={`contain`}
+                        alt={yml.python_banner.image_alt}
+                    />
                 </Div>
             </GridContainerWithImage>
             <Staff lang={pageContext.lang} />
@@ -175,6 +181,14 @@ export const query = graphql`
             python_banner{
                 title
                 paragraph
+                image{
+                    childImageSharp {
+                      fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                image_alt
             }
         }
       }
