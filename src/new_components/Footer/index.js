@@ -149,6 +149,7 @@ const Footer = ({yml}) => {
                                     />
                                     {/* <button type="submit">{formStatus.status === "loading" ? "Loading..." : "text"}</button> */}
                                     <Button height="40px"
+                                        margin="0 0 0 10px"
                                         type="submit"
                                         fontSize="22px"
                                         variant="full"
