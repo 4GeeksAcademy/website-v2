@@ -1,18 +1,12 @@
-import React, {useEffect, useState, useContext} from 'react';
-import PropTypes from "prop-types";
+import React from 'react';
 import {Button, Colors, StyledBackgroundSection} from '../Styling';
-import {Break} from '../Responsive'
-import {Devices} from '../Responsive'
-import {GridContainer, GridContainerWithImage, Grid, Div} from '../Sections'
-import {H2, H4, H3, Paragraph} from '../Heading'
-import {useStaticQuery, navigate, Link} from "gatsby"
-import styled from 'styled-components';
+import {GridContainerWithImage, Div} from '../Sections'
+import {H2, H4, Paragraph} from '../Heading'
+import {Link} from "gatsby"
 import Icon from "../Icon"
-import {SessionContext} from '../../session.js'
 
 const About4Geeks = ({lang}) => {
     const about = lang[0].node
-    console.log("about", about)
     return (
         <GridContainerWithImage columns_tablet="12" margin_tablet="0 0 108px 0" margin="0 0 64px 0">
             <Div
@@ -53,14 +47,18 @@ const About4Geeks = ({lang}) => {
                         </Div>
                     )
                 })}
-                <Paragraph
-                    dangerouslySetInnerHTML={{__html: about.paragraph}}
-                    margin="22px 0 0 0"
-                    color={Colors.darkGray}
-                    textAlign="left"
-                    fontSize="15px"
-                    lineHeight="22px"
-                ></Paragraph>
+                {about.paragraph.split("\n").map((m, i) =>
+                    <Paragraph
+                        key={i}
+                        dangerouslySetInnerHTML={{__html: m}}
+                        margin="22px 0 0 0"
+                        color={Colors.darkGray}
+                        textAlign="left"
+                        fontSize="15px"
+                        lineHeight="22px"
+                    />
+                )}
+
                 {<Link to={about.button_link}>
                     <Div display="flex" justifyContent_lg="flex-start">
                         <Button

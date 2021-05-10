@@ -6,8 +6,8 @@ meta_info:
   image: ""
   template: "course-machine-learning"
   keywords: ""
-  redirects: ["machine-learning"]
-seo_title: "Cooding Bootcamp"
+  redirects: ["/es/machine-learning"]
+
 header:
   title: "Convertiete en ingenier en inteligencia artificial"
   paragraph: "
