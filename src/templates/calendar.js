@@ -183,102 +183,34 @@ const Calendar = (props) => {
 
   return (
     <>
-      {/* <Div position="absolute" top="0" zIndex="1" width="100%" height_tablet="240px">
-        <Circle
-          color="blue"
-          width="50px"
-          height="50px"
-          top="20px"
-          right="10%"
-        />
-        <Circle
-          color="black"
-          width="50px"
-          height="50px"
-          top="170px"
-          right="120px"
-          scale="0.5"
-        />
-        <Circle
-          color="black"
-          width="30px"
-          height="30px"
-          top="140px"
-          left="5%"
-        />
-
-        <Circle
-          color="yellow"
-          width="20px"
-          height="20px"
-          top="0px"
-          right="30%"
-          scale="2"
-        />
-        <Circle
-          color="yellow"
-          width="200px"
-          height="200px"
-          top="50%"
-          right="-5%"
-          opacity="0.2"
-        />
-        <Circle
-          color="yellow"
-          width="30px"
-          height="30px"
-          top="5%"
-          left="5%"
-          opacity="0.2"
-        />
-        <Circle
-          color="black"
-          width="30px"
-          height="30px"
-          top="140px"
-          left="5%"
-        />
-        <Circle
-          color="grey"
-          width="30px"
-          height="30px"
-          top="180px"
-          left="5%"
-        />
-        <Circle
-          color="grey"
-          width="30px"
-          height="30px"
-          top="140px"
-          left="10%"
-        />
-        <Circle
-          color="blue"
-          width="30px"
-          height="30px"
-          top="180px"
-          left="10%"
-        />
-        <Circle
-          color="yellow"
-          width="100px"
-          height="100px"
-          top="120px"
-          left="15%"
-        />
-        <Circle color="blue" width="50px" height="50px" top="20px" left="15%" />
-        <Circle color="red" width="50px" height="50px" top="160px" left="20%" opacity="0.3" />
-      </Div> */}
       <Header
         seo_title={yml.seo_title}
         title={yml.header.title}
-        padding_tablet="72px 0 40px 0"
-        padding="50px 17px"
+        // padding_tablet="72px 0 40px 0"
+        // padding="50px 17px"
         background={Colors.veryLightBlue}
         position="relative"
         height="240px"
         margin="120px 0 0 0 "
+
       >
+        <Circle color="yellow" width="17px" height="17px" top="30px" left="74px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
+        <Circle color="black" width="17px" height="17px" top="122px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="black" width="17px" height="17px" top="65px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="87px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="122px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="165px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="165px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="blue" width="53px" height="53px" top="63px" right="61px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="200px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="red" width="27px" height="27px" top="27px" left="252px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" bottom="56px" right="37px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="black" width="17px" height="17px" bottom="56px" right="76px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" bottom="56px" right="115px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="yellow" width="21px" height="21px" top="44px" right="287px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
+        <Circle color="red" width="25px" height="25px" top="60px" right="30px" display="inline" display_tablet="none" />
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center" margin_tablet="0 0 50px 0"></Div>
       </Header>
       {yml.events.title &&
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
