@@ -148,14 +148,14 @@ export const Div = styled.div`
     margin: ${props => props.margin};
     border: ${props => props.border};
     border-radius: ${props => props.borderRadius};
-    background: ${props => props.background};
-    border-left: ${props => props.borderLeft};
+    background: ${props => props.isActive ? props.backgroundActive : props.background};
+    border-left: ${props => props.isActive ? props.borderLeftActive : props.borderLeft};
     border-top: ${props => props.borderTop};
     border-bottom: ${props => props.borderBottom};
     border-right: ${props => props.borderRight};
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
     justify-self: ${props => props.justifySelf};
-    box-shadow: ${props => props.boxShadow};
+    box-shadow: ${props => props.isActive ? props.boxShadowActive : props.boxShadow};
     flex-wrap: nowrap; 
     align-content: ${props => props.alignContent};
     align: ${props => props.align};

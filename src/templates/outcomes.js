@@ -51,7 +51,7 @@ const Outcomes = ({data, pageContext, yml}) => {
     const ExecuteScroll = React.forwardRef((props, ref) => {
 
         // selectedButton for each Ref properties from Button
-        let selectedButton = useCallback(() => props.onSelectedRef(props.keyScroll), [props.keyScroll])
+        let selectedButton = useCallback(() => props.onSelectedRef(props.keyToScroll), [props.keyToScroll])
         
         // Gets the container title reference to Enable autoScroll <Div ref={findMappedRef[section.title]}>
         let executeScroll= (e, ref) =>{
@@ -67,18 +67,27 @@ const Outcomes = ({data, pageContext, yml}) => {
             selectedButton()
         }
         return (
-            <Paragraph
-                cursor="pointer"
-                key={props.keyScroll}
-                fontSize="13"
-                onClick={(e) => executeFunctions(e, props.actionRef)}
-                transitionSec="3"
+            <Div 
+                flexDirection="column"
                 isActive={props.isActive}
-                textAlign="center"
-                textAlign_tablet="left"
-                >
-                {props.title.toUpperCase()}
-            </Paragraph>
+                borderLeftActive="5px solid black"
+                backgroundActive="#F5F5F5"
+                borderLeft="5px solid white" 
+                padding_tablet="5px 10px 5px 20px"
+            >
+                <Paragraph
+                    cursor="pointer"
+                    key={props.keyToScroll}
+                    fontSize="13"
+                    onClick={(e) => executeFunctions(e, props.actionRef)}
+                    transitionSec="3"
+                    isActive={props.isActive}
+                    textAlign="center"
+                    textAlign_tablet="left"
+                    >
+                    {props.title.toUpperCase()}
+                </Paragraph>
+            </Div>
         ) 
       })
 
@@ -99,7 +108,6 @@ const Outcomes = ({data, pageContext, yml}) => {
             <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 " >
                 <Div gridArea="1/2/1/9" flexDirection="column"  >
                     {yml.sections.filter(section => section.title !== "").map((section, i) => {
-                        console.log(section.stats)
                         return (
                             <>
                                 <Div key={i}  ref={findMappedRef[section.title]}>
@@ -140,7 +148,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                     fluid={m.image != undefined && m.image.childImageSharp.fluid}
                                                                 /> */}
                                                                 <Paragraph justifyContent="center" padding="50px 0 0" display="none" display_tablet="flex" textAlign="left">{m.image_paragraph}</Paragraph>
-                                                                <GridContainer display="none" justifyContent="center" justifyContent_tablet="center" display_tablet="flex" gridTemplateColumns_tablet="3">
+                                                                <GridContainer columns_tablet="3" justifyContent="center" justifyContent_tablet="center" gridTemplateColumns_tablet="3">
                                                                     {m.chart &&
                                                                         yml.charts.chart_list.map((c, i) => {
                                                                             return (
@@ -165,16 +173,16 @@ const Outcomes = ({data, pageContext, yml}) => {
                 </Div>
                 <Div gridArea="1/9/1/13" gridColumn_tablet="12 ​/ span 12" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
                     <Div flexDirection="column" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", position: "sticky", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">
-                        <Div margin="25px 28px 0" flexDirection="column" justifyContent="space-around" gap="20px">
+                        <Div margin="25px 0px 0" flexDirection="column" justifyContent="space-around" gap="8px">
                         {
                             yml.sections.filter(i => i.title !== "").map((m, i) => {
                                 return (
                                     <ExecuteScroll 
-                                    keyScroll={i} 
-                                    title={m.title} 
-                                    actionRef={findMappedRef[m.title]}
-                                    onSelectedRef={setActive} 
-                                    isActive={active === i}
+                                        keyToScroll={i} 
+                                        title={m.title} 
+                                        actionRef={findMappedRef[m.title]}
+                                        onSelectedRef={setActive} 
+                                        isActive={active === i}
                                     />
                                     )
                                 })
@@ -182,7 +190,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                         </Div>
                         <ChooseProgram
                             width="80%"
-                            padding="25px 0"
+                            padding="20px 0"
                             textAlign={`-webkit-center`}
                             displayButton="block"
                             borderRadius="0 .75rem .75rem .75rem"
