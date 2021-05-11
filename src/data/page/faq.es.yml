@@ -5,14 +5,13 @@ meta_info:
   image: ""
   keywords: "Preguntas frecuentes bootcamps y 4Geeks Academy"
   redirects: ["/es/preguntas-frecuentes"]
-
+seo_title: 4Geeks Academy
 banner:
-  tagline: < Preguntas Frecuentes >
+  tagline: Preguntas Frecuentes
   sub_heading: "¿Tienes alguna consulta? Es posible que ya la hayamos respondido en esta sección. Si tu pregunta no está, te invitamos a "
   sub_heading_contact: Contáctanos
   pathContact: "contáctanos"
   image: "../../../static/images/bg/4Geeks-events-bg.jpg"
-
 
 # - topic: "Tema de la pregunta"
 # topic: "Preguntas Frecuentes sobre 4Geeks"
@@ -32,7 +31,6 @@ faq:
       - question: "¿Quien es esa cara en el logo?"
         answer: |-
           "Oh, ¿te refieres a Rigoberto? Él es el corazón y el espíritu de todos los que trabajan para la Academia."
-
 
   - topic: "Preguntas Frecuentes sobre Inscripciones"
     questions:
@@ -57,7 +55,6 @@ faq:
           "El Plan de pago extendido ha sido diseñado específicamente para NUESTROS estudiantes.
           Puedes solicitar un plan de pago extendido de 6, 12, 18 o 24 meses. Sólo debes pagar un depósito o inicial y firmar el contrato correspondiente para las cuotas que mejor se adapten a tu situación.
           Si deseas obtener más información sobre este plan, haz clic <a class="faq-link" target="a_blank" rel="noopener noreferrer nofollow"href="https://quotanda.com/es/4geeks/">aquí</a>."
-
 
   - topic: "Preguntas Frecuentes sobre Programas"
     questions:
@@ -101,7 +98,6 @@ faq:
         answer: |-
           "Esta es la parte en la que todos prestan atención ... no podemos garantizar que obtendrás un trabajo después de completar nuestro curso. Nadie puede, en realidad. Sin embargo, al inscribirte en nuestro programa, tendrás acceso a nuestros asesores y partners. Serás parte de una nueva red y te ayudaremos y guiaremos a lo largo del proceso de búsqueda de empleo, trabajaremos en tu CV, Linkedin, GitHub y haremos todo lo necesario para que consigas trabajo ".
 
-  
   - topic: "Preguntas Frecuentes sobre Experiencia"
     questions:
       - question: "¿Por qué Javascript?"

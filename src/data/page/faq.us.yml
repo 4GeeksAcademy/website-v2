@@ -5,14 +5,13 @@ meta_info:
   image: ""
   keywords: "frequently asked questions Bootcamps and 4Geeks Academy"
   redirects: [/us/faq]
-
+seo_title: 4Geeks Academy
 banner:
-  tagline: < Frequently Asked Questions >
+  tagline: Frequently Asked Questions
   sub_heading: "Do you have any questions? We may have already answered it in this section. If your question is not there, we invite you to "
   sub_heading_contact: Contact us
   pathContact: "contact"
   image: "../../../static/images/bg/4Geeks-events-bg.jpg"
-
 
 # - topic: "Question topic"
 # topic: "Frequently Asked Questions about 4Geeks"
@@ -32,7 +31,6 @@ faq:
       - question: "Who is that face in the logo?"
         answer: |-
           "Oh, you mean Rigoberto? He is the heart and spirit of everyone working for the Academy"
-
 
   - topic: "Frequently Asked Questions about Enrollment"
     questions:
@@ -57,9 +55,6 @@ faq:
           You can apply for an extended payment plan for either a 6,12, 18 or 24 months. You just need to pay the deposit and sign a contract that will take about the payments and what fits best your lifestyle.
           If you want to have more information about the plan, click <a href="http://quotanda.com/en/4geeks/">here</a>."
 
-
-
-  
   - topic: "Frequently Asked Questions about Programs"
     questions:
       - question: "¿How many hours do I need to have available?"
@@ -102,8 +97,6 @@ faq:
       - question: "Do I get a job after completing the program?"
         answer: |-
           "This is the part where everyone pays attention… we cannot guarantee that you will get a job after the completion of the course. Nobody can. However by enrolling in our program you will have access to our advisors and partners. You will become part of a new network and we will be helping you and guiding you through the process, we will work on your resume, LinkedIn, Github and we will do the necessary to help you land a job."
-
-
 
   - topic: "Frequently Asked Questions about Experience"
     questions:

@@ -555,17 +555,7 @@ export const query = graphql`
       }
     }
     
-      faqs: allPageYaml(filter: { fields: { file_name: {regex: "/faq\\./"}, lang: { eq: $lang }}}, limit: 3) {
-        edges{
-          node{
-            faq{
-                question
-                answer
-            }
-        
-          }
-        }
-      }
+      
   }
 `;
 export default BaseRender(Program);
