@@ -10,7 +10,7 @@ seo_title: "coding bootcamp"
 header:
   title: "Empowering Talent with coding careers"
   paragraph: "We are specialists of code. 4Geeks is the place were developers grow and thrive."
-  image: "../../../static/images/bg/the-academy-bg.jpg"
+  image: "../../../static/images/why-4geeks/why-4geeks-header.png"
   image_alt: ""
 
 badges:
@@ -33,4 +33,9 @@ geeksvsothers:
 
 python_banner:
   title: "Python & Javascript"
-  paragraph: "Learn Python, JavaScript and more. Python and JavaScript are among the best-paid career positions in the US. There are more 26X job opportunities in Javascript vs. Ruby on Rails, and 10X jobs in Python vs. node.js."
+  paragraph: "Learn Python, JavaScript and more. Python and JavaScript are among the best-paid career positions in the US. 
+  
+  There are more 26X job opportunities in Javascript vs. Ruby on Rails, and 10X jobs in Python vs. node.js."
+  image: "../../../static/images/why-4geeks/python-image.png"
+  image_alt: "python-image"
+

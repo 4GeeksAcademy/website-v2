@@ -11,7 +11,7 @@ header:
   title: ""
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "Text explaining that GeekForce is a membership with professional support benefits, which the student obtains by enrolling in a program with The Academy. <span style='font-weight: 700;'> Even after graduation we continue to have unlimited professional support.</span>"
+  paragraph: "GeekForce is the collective process of Career Support at the Academy. The “force” stands For Career Empowerment and it is a lifetime membership. It provides you job placement assistance so you get ready to get a job in tech."
   image_logo: "/images/geekforce.png"
   
 # Introduction Video here
@@ -28,7 +28,7 @@ icons:
   - icon: "talk"
     title: "PREPARING FOR INTERVIEWS"
   - icon: "worker-portrait"
-    title: "XX LIFE SHEETS CREATED"
+    title: "+1500 LIFE SHEETS CREATED"
 
 list:
   - title: "Unlimited Professional Support"
@@ -36,23 +36,23 @@ list:
     position: "right"
     sub:
       - title: "✔ Advice and creation of professional profile"
-        text: "At 4Geeks we will help you perfect your professional profile. You will have personalized advice with our experts to improve your CV, Linkedin, GitHub and Portfolio."
+        text: "At 4Geeks we will help you perfect your professional profile. You will have personalized advice with our experts to improve your CV, LinkedIn, GitHub and Portfolio."
 
 
   - title: "Interview Simulation"
     image: "../../../static/images/entrevista-tecnica.png"
     position: "left"
-    text: "In 4Geeks we not only adjust the sessions 
-    <span style='font-weight: bold'> according to your calendar</span>, but we also give you the opportunity to see them 
-    <span style='font-weight: bold'> online or in person</span>, this because we have campuses in many different cities and therefore time zones.<br/>
-    <br/>In any case, we assure you that you have the opportunity for constant mentoring whenever you need it."
+    text: "We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
+    We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want."
 
-  - title: "Lifetime mentoring"
+  - title: "Lifetime Mentoring"
     image: "../../../static/images/bg/main-bg.jpg"
     position: "right"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/> 
-    <br/>.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    text: "Launching a career in tech involves assessing your current situation and making informed decisions about the future.
+    It requires assessment of yourself, your context, and ACTION. You can do this alone; or you can rely on a mentor's experience which can give you
+    perspective, information and access to the right resources. In 4Geeks we adjust the sessions according to your calendar,
+    we also give you the opportunity to have them online or in-person.
+    In any case, we assure you that you have the opportunity for constant mentoring whenever you need it. "
 
 # benefits:
 #   - p:
