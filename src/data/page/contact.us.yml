@@ -1,4 +1,4 @@
-280meta_info:
+meta_info:
   slug: contact
   title: "Contact 4Geeks Academy"
   description: "Contact 4Geeks Academy here"
@@ -35,36 +35,36 @@ right:
   content_section:
     - "<li style='padding-right: 20px; list-style: none;'>🇺🇸</li>
       <p>
-        USA<br/>
-        1801 SW 3rd Ave. Miami, FL 33129.<br/>
-        P: +1 (786) 416-6640<br/>
-        info@4GeeksAcademy.com<br/>
+      USA<br/>
+      1801 SW 3rd Ave. Miami, FL 33129.<br/>
+      P: +1 (786) 416-6640<br/>
+      info@4GeeksAcademy.com<br/>
       </p>"
     - ""
-    - "<li style='padding-right: 20px; list-style: none;'>🇪🇸</li> 
+    - "<li style='padding-right: 20px; list-style: none;'>🇪🇸</li>
       <p>
-        Madrid<br/>
-        Calle Edison, 3. 28006, Madrid. Spain.<br/>
-        P: +34 (910) 86 69 83<br/>
-        es@4GeeksAcademy.com<br/>
+      Madrid<br/>
+      Calle Edison, 3. 28006, Madrid. Spain.<br/>
+      P: +34 (910) 86 69 83<br/>
+      es@4GeeksAcademy.com<br/>
       </p>"
     - ""
-    - "<li style='padding-right: 20px; list-style: none;'>🇨🇱</li> 
+    - "<li style='padding-right: 20px; list-style: none;'>🇨🇱</li>
       <p>
-        Chile<br/>
-        Av. Manquehue Sur 350, oficina 110, Las Condes Región Metropolitana, Chile.<br/>
-        P: +56 (9) 7284 8039<br/>
-        chile@4GeeksAcademy.com<br/>
+      Chile<br/>
+      Av. Manquehue Sur 350, oficina 110, Las Condes Región Metropolitana, Chile.<br/>
+      P: +56 (9) 7284 8039<br/>
+      chile@4GeeksAcademy.com<br/>
       </p>"
     - ""
-    - "<li style='padding-right: 20px; list-style: none;'>🇨🇷</li> 
+    - "<li style='padding-right: 20px; list-style: none;'>🇨🇷</li>
       <p>
-        Costa Rica<br/>
-        puravida@4GeeksAcademy.com<br/>
+      Costa Rica<br/>
+      puravida@4GeeksAcademy.com<br/>
       </p>"
     - ""
-    - "<li style='padding-right: 20px; list-style: none;'>🇻🇪</li> 
+    - "<li style='padding-right: 20px; list-style: none;'>🇻🇪</li>
       <p>
-        Venezuela<br/>
-        venezuela@4GeeksAcademy.com<br/>
+      Venezuela<br/>
+      venezuela@4GeeksAcademy.com<br/>
       </p>"
