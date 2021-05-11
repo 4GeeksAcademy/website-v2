@@ -17,6 +17,7 @@ header:
   image_alt: ""
 sections:
   - title: "Our Statement"
+    ref: "our_statement"
     paragraph: "The Coding Bootcamp industry has been growing tremendously in the last few years. Big cities are gathering the majority of the numbers, and also new tech hubs (such as Miami) are rising
 the occasion and growing to meet the challenge.
 
@@ -40,6 +41,7 @@ Since 2017 we have been growing really fast. We have graduated over 700 students
           - image: 
             image_paragraph: "test"
   - title: "Student Facts"
+    ref: "student_facts"
     paragraph: "THere are the results of 4GA operations (excluding programs launched together with Miami Dade College) from March 2018 to March 2020.
 
 The programs included are the Full-Stack Software Development Program taught through Part-time and Full-Time methodologies.
@@ -64,6 +66,7 @@ Full-Time program."
           - image: 
             image_paragraph: ""
   - title: "Job Placement"
+    ref: "job_placement"
     paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days.
     "
     stats: 
