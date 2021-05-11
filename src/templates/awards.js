@@ -191,20 +191,20 @@ query AwardsQuery($file_name: String!, $lang: String!) {
                       fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
                         ...GatsbyImageSharpFluid_withWebp_noBase64 # Without Blur effect
                         # ...GatsbyImageSharpFluid_withWebp  (with blur effect)
-                        ...GatsbyImageSharpFluidLimitPresentationSize # It avoid stretched images
-                      }
                     }
-                  }
-                title
-                paragraph
+                }
             }
-            
-            
-           
-            
+            title
+            paragraph
         }
-      }
+        
+        
+        
+        
     }
 }
+}
+}
 `;
+// ...GatsbyImageSharpFluidLimitPresentationSize # It avoid stretched images
 export default BaseRender(Awards);

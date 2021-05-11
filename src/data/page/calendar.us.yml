@@ -17,7 +17,7 @@ events:
     paragraph: ""
 button:
     apply_button_text: "APPLY"
-    apply_button_link: "/apply"
+    apply_button_link: "/us/apply"
     cohort_more_details_text: "DETAILS"
     event_register_button_link: "DETAILS"
 cohorts:
@@ -33,7 +33,7 @@ cohorts:
         duration_label: duration
         duration_weeks: 16 weeks
         button_text: apply now
-        button_link: ""
+        button_link: "/us/apply"
     footer:
         button_text_open: See more dates
         button_text_close: See less dates

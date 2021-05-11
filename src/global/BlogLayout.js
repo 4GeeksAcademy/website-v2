@@ -134,8 +134,8 @@ const BlogLayout = ({children, seo, context}) => {
             <SEO {...seo} context={context} />
             {myNavbar &&
               <>
-                <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
-                <NavbarMobile onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+                <Navbar currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+                <NavbarMobile currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
               </>
             }
             <GlobalStyle />

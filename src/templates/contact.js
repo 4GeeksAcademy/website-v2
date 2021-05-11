@@ -206,6 +206,7 @@ const Contact = (props) => {
                                     <Row display="flex" justifyContent="flex-end" alignResp="flex-end">
                                         {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
                                         <Button
+                                            variant="full"
                                             width="96px"
                                             m_md="17px 0px"
                                             color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue} textColor={Colors.white}

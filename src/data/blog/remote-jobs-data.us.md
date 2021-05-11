@@ -8,8 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/2019-developers-salaries-report/
 slug: 2019-developers-salaries-report
 title: BOOTCAMP GRADUATES SALARIES 2019 EDITION
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/MAIN-BLOG-1024x270.jpg"
+image_alt: ""
 wordpress_id: 3481
 categories:
 - Sin categoría

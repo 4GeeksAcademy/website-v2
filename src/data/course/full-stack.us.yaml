@@ -2,7 +2,7 @@ meta_info:
   slug: part-time-full-stack-developer
   title: "Become a developer, learn to code and get a job in tech with 4Geeks Academy"
   bc_slug: "full-stack"
-  description: "Master the coding fundamentals and develop real life applications, career support and mentoring for life."
+  description: "Master the coding fundamentals and develop real life applications. Get career support and mentoring for life."
   image: ""
   keywords: ""
   redirects:
@@ -40,28 +40,28 @@ credentials:
 details:
   about:
       title: "About the program"
-      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
-      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
-      diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
-      sólida base de front end, back end, base de datos, manejo de procesos       
-      distribuidos y despliegue a distantas plataformas web.
-
-      Al finalizar este programa, contarás con los conocimientos para       
-      desempeñarte como Full Stack Developer. 
-    "
+      sub_title: "Learn the most wanted and highest paid technologies that will help you create amazing websites.
+      
+      The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2021. 
+      
+      Start coding in a web development language and algorithm scripting. Build awesome apps using a front-end library. Use an API so you can consume data to fill your app.
+      
+      The program will end with the presentation of your final project that will help you get ready for  more web development experiences
+      
+      You will re-shape your mind to embrace new logical, developmental and researching skills."
       list:
         - label: "Duration"
           content:  "16 Weeks"
         - label: "Classes"
-          content: "3 Classes weekly"
+          content: "3 classes weekly"
         - label: "Certificate"
-          content: ""
+          content: "Full-Stack Developer"
         - label: "Requisites"
-          content: "Check Requisites"
+          content: "No previous coding skills required, no advanced Math required, logical thinking recommended."
          
   heading: Program Details Part-Time
   weeks: 16
-  sub_heading: Real life projects and exactly what companies are looking for
+  sub_heading: "Hands-on learning through real-life projects. Master the 3 most used languages in the world: Master Python, JS and React."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -80,21 +80,21 @@ details:
       description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
       projects: "Instagram Application, Memory Card Game, Tic Tac Toe, Flappy Bird, etc."
       slug: "foundations"
-      duration: "2 weeks"
+      duration: "2 wks"
       step: 2
     - module_name: "THE WEB"
       title: "Web Development"
       description: "Create your first React.js application, MVC Pattern, JS Modules, Bunding, Babel JS, The DOM, Events"
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."
       slug: "web-development"
-      duration: "6 weeks"
+      duration: "6 wks"
       step: 5.9
     - module_name: "API'S"
       title: "API Development"
       description: "Mainly focused on Python, get ready to build your own API and interact with 3rd party applications like Twillio, Stripe and many more."
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."
       slug: "web-development"
-      duration: "2 weeks"
+      duration: "2 wks"
       step: 2
     - module_name: "ADVANCED APPS"
       title: "Advanced Application"
@@ -182,8 +182,8 @@ typical:
 
 ## ALUMNI SECTION
 alumni:
-  heading: "Meet the Alumni and Projects"
-  sub_heading: "Get to know our graduates and some of the projects you will be building during the program"
+  heading: "Meet Our Alumni and Their Projects"
+  sub_heading: "Get to know our graduates and some of the projects they built during the program"
 
 ## SIDEBAR
 sidebar:

@@ -12,8 +12,8 @@ meta_info:
       "/us/full-time",
       "/us/course/full-time",
       "/the-program",
-      "/us/full-stack-ft
-      /us/course/full-stack-web-development-bootcamp-full-time",
+      "/us/full-stack-ft",
+      "/us/course/full-stack-web-development-bootcamp-full-time",
     ]
 seo_title: "Cooding Bootcamp"
 header:
@@ -47,16 +47,16 @@ details:
     "
       list:
         - label: "Duration"
-          content:  "16 Weeks"
+          content:  "9 Weeks"
         - label: "Classes"
-          content: "3 Classes weekly"
+          content: "4 Classes weekly"
         - label: "Certificate"
-          content: ""
+          content: "Full-Stack Developer"
         - label: "Requisites"
-          content: "Check Requisites"
+          content: "No previous coding skills required, no advanced Math required, logical thinking recommended."
   heading: PROGRAM DETAILS FULL-TIME
   weeks: 9
-  sub_heading: Real life projects and exactly what companies are looking for
+  sub_heading: "Hands-on learning through real-life projects. Master the 3 most used languages in the world: Master Python, JS and React."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -75,14 +75,14 @@ details:
       description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
       projects: "Instagram Application, Memory Card Game, Tic Tac Toe, Flappy Bird, etc."
       slug: "foundations"
-      duration: "3.5 weeks"
+      duration: "3.5 wks"
       step: 3.5
     - module_name: "THE WEB"
       title: "Web Development"
       description: "Create your first React.js application, MVC Pattern, JS Modules, Bunding, Babel JS, The DOM, Events"
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."
       slug: "web-development"
-      duration: "3.5 weeks"
+      duration: "3.5 wks"
       step: 3.5
     - module_name: "PROJECTS"
       title: "Projects"
@@ -96,7 +96,7 @@ details:
       description: "Keep practicing with the academy's help - we will be coaching you for life. Build your Resume, Github, LinkedIn.  We help you apply for jobs and provide support for you once you find a job."
       projects: "Get paid to keep learning. Raise your income gradually as you grow into a Senior Developer. Enjoy and build software for life."
       slug: "lifelong-learning"
-      duration: "1+ week"
+      duration: "forever"
       step: 1
 
 syllabus:
@@ -180,8 +180,8 @@ typical:
 
 ## ALUMNI SECTION
 alumni:
-  heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Get to know our graduates and some of the projects you will be building during the program"
+  heading: "Meet Our Alumni and Their Projects"
+  sub_heading: "Get to know our graduates and some of the projects they built during the program"
 
 ## SIDEBAR
 sidebar:

@@ -48,7 +48,7 @@ const EditPage = (props) => {
             </Row>
             :
             <Row display="flex" justifyContent="center">
-                <Button type="button" width="100px" onClick={() => {
+                <Button variant="full" type="button" width="100px" onClick={() => {
                     const success = load(content);
                     if (success !== true) setStatus({state: 'error', message: success})
                     else setStatus({state: 'success', message: "Everything is amazing 🤣!"})

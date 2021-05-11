@@ -38,6 +38,7 @@ navbar:
       icon: "awards"
       title: "Why 4Geeks Academy"
       paragraph: "This is the place to boost your career by learning to code. Think differently, become more self-confident, bring your ideas to life and make more money."
+      link: "/us/why-4geeks"
       links:
         - title: "Accompaniment"
           sub_links: 
@@ -121,7 +122,8 @@ navbar:
 
 language_button:
   text: "<span class='lang'>ENG</span> / ESP"
-  link: "/es/inicio?lang=es"
+  # link: "/es/inicio?lang=es"
+  link: "?lang=es"
 button:
   button_link: "/us/apply"
   apply_button_text: "Apply Now"

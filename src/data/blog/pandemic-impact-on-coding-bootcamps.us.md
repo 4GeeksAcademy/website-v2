@@ -6,7 +6,6 @@ excerpt: Pandemic changes in coding. In the midst of Covid-19, 4Geeks has found 
 layout: post
 slug: pandemic-impact-on-coding-bootcamp
 title: PANDEMIC IMPACT ON CODING BOOTCAMPS 
-avatar: /images/staff/marcelo.jpeg
 image: https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/student-coding.jpg?raw=true
 image_alt: "student typing how the pandemic has changed the coding industry"
 categories:

@@ -16,114 +16,33 @@ import {Circle} from '../new_components/BackgroundDrawing'
 import {SessionContext} from '../session'
 
 
+const info = {
+  us: {
+    "full-stack": "/us/coding-bootcamp/part-time-full-stack-developer",
+    "software-engineering": "/us/coding-bootcamp/software-engineer-bootcamp",
+    "machine-learning-pt-16w": "/us/coding-bootcamp/machine-learning-engineering",
+    "full-stack-ft": "/us/coding-bootcamp/full-time-full-stack-developer"
+  },
+  es: {
+    "full-stack": "/es/coding-bootcamp/full-stack-part-time",
+    "software-engineering": "/es/coding-bootcamp/ingenieria-de-software-programacion",
+    "machine-learning-pt-16w": "/es/coding-bootcamp/curso-inteligencia-artificial",
+    "full-stack-ft": "/es/coding-bootcamp/full-stack-full-time"
+  }
+}
+const locations = {
+  us: {
+    "santiago-chile": "/us/coding-campus/coding-bootcamp-santiago",
+    "downtown-miami": "/us/coding-campus/coding-bootcamp-miami",
+    "madrid-spain": "/us/coding-campus/coding-bootcamp-madrid",
+  },
+  es: {
+    "downtown-miami": "/es/coding-campus/bootcamp-programacion-miami",
+    "santiago-chile": "/es/coding-campus/bootcamp-programacion-santiago",
+    "madrid-spain": "/es/coding-campus/bootcamp-programacion-madrid",
+  }
+}
 
-
-const ListCard = ({image, title, date, address, link, slug, applyButtonLink, detailsButtonLink, applyButtonText, detailsButtonText, eventLink, eventText, context, bg_size}) => <Column size="4" size_sm="12" margin="0 0 1rem 0">
-  <Anchor to={link}>
-    <Card
-      overflow={`hidden`}
-      height="auto"
-      shadow
-    >
-      <LazyLoad scroll={true} height={230}>
-
-        <Img
-          src={image}
-          bsize="cover"
-          mb="10px"
-          border="1.25rem 1.25rem 0 0"
-          position="center center"
-          height="180px"
-          h_lg="120px"
-          h_md="140px"
-          h_sm="220px"
-          bg_hover={bg_size}
-        />
-      </LazyLoad>
-      <Row
-        display="flex"
-        marginLeft="0"
-        marginRight="0"
-        padding={`15px`}>
-        <Column size="12">
-          <Row marginBottom="1rem" display="flex">
-            <H4
-              fs_xs="18px"
-              fs_sm="18px"
-              fs_md="16px"
-              fs_lg="16px"
-              fontSize="20px"
-            >{title}
-            </H4>
-          </Row>
-          <Row marginBottom=".2rem" alignItems={`center`} display="flex">
-            <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
-            {context == "us" ? <Paragraph
-              margin={`0 0 0 10px`}
-              fs_xs="18px"
-              fs_sm="18px"
-              fs_md="9px"
-              fs_lg="11px"
-              fs_xl="14px">
-              {dayjs(date).add(5, "hour").locale("en").format("ddd, DD MMM YYYY")}
-            </Paragraph>
-              : <Paragraph
-                margin={`0 0 0 10px`}
-                fs_xs="18px"
-                fs_sm="18px"
-                fs_md="9px"
-                fs_lg="11px"
-                fs_xl="14px">
-                {dayjs(date).add(5, "hour").locale("es").format("ddd, DD MMM YYYY")}
-              </Paragraph>}
-          </Row>
-          <Row marginBottom=".2rem" alignItems={`center`} display="flex">
-            <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
-            <Paragraph
-              margin={`0 0 0 10px`}
-              fs_xs="18px"
-              fs_sm="18px"
-              fs_md="9px"
-              fs_lg="11px"
-              fs_xl="14px">
-              {address}
-            </Paragraph>
-          </Row>
-          {slug && <Row marginBottom=".2rem" alignItems={`center`} display="flex">
-            <Icon icon="laptop" width="24" color={Colors.blue} fill={Colors.blue} />
-            <Paragraph
-              margin={`0 0 0 10px`}
-              fs_xs="18px"
-              fs_sm="18px"
-              fs_md="9px"
-              fs_lg="11px"
-              fs_xl="14px">
-              {slug.includes("-ft") ? "Full Time" : "Part Time"}
-            </Paragraph>
-          </Row>}
-          {applyButtonLink && detailsButtonLink && <Row justifyContent={`center`} display="flex">
-            <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center" display="flex">
-              <Link to={applyButtonLink}>
-                <Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{applyButtonText}</Button>
-              </Link>
-              &nbsp;
-              <Link to={detailsButtonLink}>
-                <Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{detailsButtonText}</Button>
-              </Link>
-            </Div>
-          </Row>}
-          {eventLink && eventText && <Row justifyContent={`end`} display="flex">
-            <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center" display="flex">
-              <Anchor to={eventLink}>
-                <Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{eventText}</Button>
-              </Anchor>
-            </Div>
-          </Row>}
-        </Column>
-      </Row>
-    </Card>
-  </Anchor>
-</Column>;
 const Calendar = (props) => {
   const {pageContext, yml, data} = props;
   const [limit, setLimit] = useState(true);
@@ -134,24 +53,16 @@ const Calendar = (props) => {
     cohorts: {catalog: [], all: [], filtered: []}
   });
   let content = data.allPageYaml.edges[0].node
-  console.log("DATA:", data)
-  // console.log("calendar: ", yml)
   const [academy, setAcademy] = useState(null)
-  // const [filterType, setFilterType] = useState({label: "Upcoming Courses and Events", value: "cohorts"});
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     // let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
-  //     let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
-  //     let cohorts = await resp.json();
-  //     console.log("RESP: ", cohorts)
-  // let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
   const [filterType, setFilterType] = useState(pageContext.lang == "us" ? {label: "Upcoming Courses and Events", value: "cohorts"} : {label: "Próximos Cursos y Eventos", value: "cohorts"});
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      // let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
       let cohorts = await resp.json();
-      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      // let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+      let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
@@ -183,102 +94,32 @@ const Calendar = (props) => {
 
   return (
     <>
-      {/* <Div position="absolute" top="0" zIndex="1" width="100%" height_tablet="240px">
-        <Circle
-          color="blue"
-          width="50px"
-          height="50px"
-          top="20px"
-          right="10%"
-        />
-        <Circle
-          color="black"
-          width="50px"
-          height="50px"
-          top="170px"
-          right="120px"
-          scale="0.5"
-        />
-        <Circle
-          color="black"
-          width="30px"
-          height="30px"
-          top="140px"
-          left="5%"
-        />
-
-        <Circle
-          color="yellow"
-          width="20px"
-          height="20px"
-          top="0px"
-          right="30%"
-          scale="2"
-        />
-        <Circle
-          color="yellow"
-          width="200px"
-          height="200px"
-          top="50%"
-          right="-5%"
-          opacity="0.2"
-        />
-        <Circle
-          color="yellow"
-          width="30px"
-          height="30px"
-          top="5%"
-          left="5%"
-          opacity="0.2"
-        />
-        <Circle
-          color="black"
-          width="30px"
-          height="30px"
-          top="140px"
-          left="5%"
-        />
-        <Circle
-          color="grey"
-          width="30px"
-          height="30px"
-          top="180px"
-          left="5%"
-        />
-        <Circle
-          color="grey"
-          width="30px"
-          height="30px"
-          top="140px"
-          left="10%"
-        />
-        <Circle
-          color="blue"
-          width="30px"
-          height="30px"
-          top="180px"
-          left="10%"
-        />
-        <Circle
-          color="yellow"
-          width="100px"
-          height="100px"
-          top="120px"
-          left="15%"
-        />
-        <Circle color="blue" width="50px" height="50px" top="20px" left="15%" />
-        <Circle color="red" width="50px" height="50px" top="160px" left="20%" opacity="0.3" />
-      </Div> */}
       <Header
         seo_title={yml.seo_title}
         title={yml.header.title}
-        padding_tablet="72px 0 40px 0"
-        padding="50px 17px"
         background={Colors.veryLightBlue}
         position="relative"
         height="240px"
         margin="120px 0 0 0 "
+
       >
+        <Circle color="yellow" width="17px" height="17px" top="30px" left="74px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
+        <Circle color="black" width="17px" height="17px" top="122px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="black" width="17px" height="17px" top="65px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="87px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="122px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="165px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="165px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="blue" width="53px" height="53px" top="63px" right="61px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="200px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="red" width="27px" height="27px" top="27px" left="252px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" bottom="56px" right="37px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="black" width="17px" height="17px" bottom="56px" right="76px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" bottom="56px" right="115px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="yellow" width="21px" height="21px" top="44px" right="287px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
+        <Circle color="red" width="25px" height="25px" top="60px" right="30px" display="inline" display_tablet="none" />
+        <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center" margin_tablet="0 0 50px 0"></Div>
       </Header>
       {yml.events.title &&
         <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
@@ -316,7 +157,7 @@ const Calendar = (props) => {
                       {m.online_event ? "Online" : m.academy.city ? m.academy.city.name : m.academy.name}
                     </H4>
                     <Anchor to={m.url}>
-                      <Button outline color={Colors.black} padding="10px 17px" textColor={Colors.white}>{yml.button.event_register_button_link}</Button>
+                      <Button variant="outline" color={Colors.black} padding="10px 17px" textColor={Colors.white}>{yml.button.event_register_button_link}</Button>
                     </Anchor>
 
                   </Div>
@@ -339,7 +180,7 @@ const Calendar = (props) => {
       <GridContainer padding_tablet="0" margin_tablet="0 0 48px 0">
         <Div flexDirection="column">
           <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
-            <H3 textAlign="left" width="188px">Next Dates</H3>
+            <H3 textAlign="left" width="188px">{yml.cohorts.title}</H3>
             {/* <Button outline width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button> */}
             <Select
               // margin="0 10px 0 0"
@@ -367,17 +208,17 @@ const Calendar = (props) => {
             return (
               i < 4 &&
               <Div key={i} flexDirection="column" flexDirection_tablet="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
-                <Div flexDirection_tablet="column" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
-                  <H4 textAlign="left" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">ENERO</H4>
-                  <Paragraph textAlign="left" fontWeight="700">09/01 al 13/03</Paragraph>
+                <Div flexDirection_tablet="column" width_tablet="15%" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
+                  <H4 textAlign="left" textTransform="uppercase" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">{dayjs(m.kickoff_date).format("MMM")}</H4>
+                  <Paragraph textAlign="left" fontWeight="700">{`${dayjs(m.kickoff_date).add(5, "hour").locale("en").format("MM/DD")} - ${dayjs(m.ending_date).add(5, "hour").locale("en").format("MM/DD")}`}</Paragraph>
                 </Div>
-                <Div flexDirection="column" margin="0 0 20px 0">
+                <Div flexDirection="column" width_tablet="35%" margin="0 0 20px 0">
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.program_label}</H4>
-                  <Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph>
+                  <Link to={info[pageContext.lang][m.syllabus.certificate.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph></Link>
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex" >
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
-                  <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                  <Link to={locations[pageContext.lang][m.academy.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph></Link>
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex">
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
@@ -386,7 +227,7 @@ const Calendar = (props) => {
                 <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
-                    <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                    <Link to=""><Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph></Link>
                   </Div>
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
@@ -394,146 +235,15 @@ const Calendar = (props) => {
                   </Div>
                 </Div>
                 <Div flexDirection="column">
-                  <Button width="fit-content" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
+                  <Link to={content.cohorts.info.button_link}>
+                    <Button variant="full" width="fit-content" color={Colors.black} margin="10px 0" textColor="white">{content.cohorts.info.button_text}</Button>
+                  </Link>
                 </Div>
               </Div>
             )
           })}
-          {/* <Paragraph margin="20px 0" color={Colors.blue}>See more dates</Paragraph> */}
         </Div>
       </GridContainer >
-
-      {/* <UpcomingDates lang={pageContext.lang} /> */}
-      {/* <WrapperImage
-        imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
-        border="bottom"
-        bgSize="cover"
-        paddingRight={`0`}
-        customBorderRadius="0 0 0 1.25rem"
-      >
-        <Divider height="100px" />
-        <Title
-          size="5"
-          type="h1"
-          title={yml.header.tagline}
-          variant="main"
-          color={Colors.white}
-          textAlign="center"
-        />
-      </WrapperImage> */}
-      {/* <Wrapper border="top" color={Colors.white}>
-        <Divider height="50px" />
-        <Row marginBottom={`10px`} justifyContent={`end`} display="flex">
-          <a href={`https://www.meetup.com/4Geeks-Academy/`} target="_blank" rel="noopener noreferrer">
-            <Button width="100%" outline color={Colors.blue} textColor={Colors.blue} margin="1rem 0 .2rem 0" padding=".35rem.85rem">
-              {pageContext.lang == "us" ? "Join Our Meetup" : "Únete a nuestro Meetup"}
-            </Button>
-          </a>
-          <H4 margin="20px 0 0 0" align="left" a_sm="left">{pageContext.lang == "us" ? "Filter courses and events:" : "Filtra por cursos y eventos:"}</H4>
-        </Row>
-        <Row
-          padding={`10px 20px`}
-          background={Colors.lightGray}
-          borderRadius={`.5rem`}
-          alignItems={`center`}
-          customRespSize
-          alignResp={`space-between`}
-          flexDirection_sm={`column`}
-          display="flex"
-        >
-          <Select
-            margin="0 10px 0 0"
-            top="40px"
-            left="20px"
-            width="300px"
-            m_sm="5px"
-            maxWidth="100%"
-            shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-            options={console.log("catalog", datas.cohorts.catalog) || datas.cohorts.catalog}
-            openLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
-            closeLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
-            onSelect={(opt) => {
-              setAcademy(opt)
-              setData({
-                ...datas,
-                [filterType.value]: {
-                  ...datas[filterType.value],
-                  filtered: opt.label !== 'All Locations' ? datas[filterType.value].all.filter(elm => elm.academy.slug === opt.value) : datas[filterType.value].all
-                }
-              });
-            }}
-          />
-          <Select
-            top="40px"
-            left="20px"
-            width="300px"
-            maxWidth="100%"
-            m_sm="5px"
-            shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-            options={pageContext.lang == "us" ? [
-                {label: "Courses", value: "cohorts"},
-                {label: "Events", value: "events"}] : 
-                [{label: "Cursos", value: "cohorts"},
-                {label: "Eventos", value: "events"}]}
-            openLabel={filterType.label}
-            closeLabel={filterType.label}
-            onSelect={(opt) => setFilterType(opt)}
-          />
-        </Row>
-      </Wrapper> */}
-      {/* <Wrapper border="top">
-        <Row display="flex">
-          {
-            filterType.value === "cohorts" ?
-              datas.cohorts.filtered.length == 0 ?
-                <Paragraph margin={`0 0 0 10px`} fontSize="18px">
-                  {pageContext.lang == "us" ? academy != null ? "It seems we could not found any result." : "Loading..." : academy != null ? "Parece que no pudimos conseguir ningún resultado." : "Cargando..."}
-                </Paragraph>
-                :
-                datas.cohorts.filtered.map((cohort, index) =>
-                  <ListCard
-                    key={index}
-                    title={cohort.syllabus ? cohort.syllabus.certificate.name : ""}
-                    address={`${cohort.academy.city.name}, ${cohort.academy.country.name}`}
-                    image={cohort.academy.logo_url}
-                    link={`/${session ? session.language : "us"}/${cohort.syllabus ? cohort.syllabus.certificate.slug : ""}`}
-                    date={cohort.kickoff_date}
-                    slug={cohort.slug}
-                    applyButtonText={yml.button.apply_button_text}
-                    applyButtonLink={yml.button.apply_button_link}
-                    detailsButtonText={yml.button.cohort_more_details_text}
-                    detailsButtonLink={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}
-                    context={pageContext.lang}
-                    bg_size="cover"
-                  />
-                )
-              :
-              datas.events.filtered.length === 0 ?
-                <Paragraph margin={`0 0 0 10px`} fontSize="18px">
-                  {pageContext.lang == "us" ? academy != null ? "It seems we could not found any result." : "Loading..." : academy != null ? "Parece que no pudimos conseguir ningún resultado." : "Cargando..."}
-                </Paragraph>
-                :
-                datas.events.filtered.map((event, index) =>
-                  <ListCard
-                    key={index}
-                    title={event.title}
-                    address={event.online_event ? "Online" : event.academy.city ? event.academy.city.name : event.academy.name}
-                    image={event.banner}
-                    link={event.url}
-                    date={event.starting_at}
-                    exerpt={event.excerpt}
-                    eventLink={event.url}
-                    eventText={yml.button.event_register_button_link}
-                    context={pageContext.lang}
-                    onMouseOver={() => setBackgroundSize("contain")}
-                  // bg_size={backgroundSize}
-
-                  />
-                )
-          }
-        </Row>
-      </Wrapper>
-      <Divider height="50px" /> */}
     </>
   )
 };
@@ -567,6 +277,12 @@ export const query = graphql`
             
           }
           cohorts{
+            title
+            paragraph
+            button{
+              text
+              top_label
+            }
             info {
               button_link
               button_text
