@@ -33,7 +33,7 @@ const PricingCard = ({data, lang, children, price, color, background, transform_
     {/* <Div display="block" margin="0 -35px">{children}</Div> */}
     <Div display="block" >{children}</Div>
     <Div margin="40px 0 0 0" justifyContent="center" image="no"  >
-      <Link to={`/${lang}/apply`}><Button width="100%" padding=".3rem 1.5rem" color={Colors.blue} textColor={Colors.white} fontSize="16px" fs_lg="14px" fs_sm="16px">{applyLabel}</Button></Link>
+      <Link to={`/${lang}/apply`}><Button variant="full" width="100%" color={Colors.blue} textColor={Colors.white} fontSize="16px" >{applyLabel}</Button></Link>
     </Div>
   </Div>;
 }
@@ -111,10 +111,10 @@ const PricesAndPayments = (props) => {
   ), [props.courseType, props.programType]);
 
   if (!currentLocation || !currentLocation.prices)
-  return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
-  
+    return <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {currentLocation && currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
+
   let prices = !course && !modality ? {} : currentLocation.prices[course?.value][modality?.value];
-  
+
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
 
@@ -159,7 +159,7 @@ const PricesAndPayments = (props) => {
             />
             // </GridContainer>
           }
-          <Link to={info.button.button_link}><Button width="fit-content" padding="13px" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link>
+          <Link to={info.button.button_link}><Button variant="full" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link>
         </Div>
       </GridContainer>
 

@@ -44,7 +44,7 @@ const Job = ({data, pageContext, yml}) => {
                         <H1 type="h1" textAlign="left" zIndex="5" fontSize="30px" lineHeight="36px" fontWeight="700" margin="16px 0px 19px 0px">
                             {yml.banner_heading}
                         </H1>
-                        <Button width="fit-content" minWidth="150px" padding="12px 24px" color={Colors.blue} textColor={Colors.white}>{yml.button_text}</Button>
+                        <Button variant="full" color={Colors.blue} textColor={Colors.white}>{yml.button_text}</Button>
                         {/* <Button onClick={() => {setForm(!form), setButtonToggle(!buttonToggle)}} width="200px" color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button> */}
                     </Div>
                     <Div flexDirection="column">

@@ -4,15 +4,12 @@ navbar:
     sub_menu:
       icon: ""
       title: "Programs"
-      paragraph: "Lorem ipsum dolor sit amet, consectetur 
-      
-      adscing elit, sed do eiusmod tempor incidi.
-      "
+      paragraph: "Make the career change you’ve always wanted. Whereas you are looking to pivot, find a better job or advance in your current one. Learn to Code at 4Geeks Academy."
       links:
         - title: "Full Stack Developer"
           level: "Level 1"
           icon: "fullstack"
-          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          paragraph: "Learn the most in-demand skills and find a job as a Jr. Developer."
           buttons:
             - text: "Part Time"
               link: "/us/coding-bootcamp/part-time-full-stack-developer"
@@ -22,7 +19,7 @@ navbar:
         - title: "Software Engineer"
           level: "Level 2"
           icon: "fullstack"
-          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          paragraph: "Dive deep into Computer Science and Cloud Native Applications."
           buttons:
             - text: "View Program"
               link: "/us/coding-bootcamp/software-engineer-bootcamp"
@@ -30,7 +27,7 @@ navbar:
         - title: "AI/Machine Learning Engineering"
           level: "Online"
           icon: "fullstack"
-          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          paragraph: "Develop the necessary tools to upskill for the future of AI work."
           buttons:
             - text: "View program"
               link: "/us/coding-bootcamp/machine-learning-engineering"
@@ -40,9 +37,8 @@ navbar:
     sub_menu:
       icon: "awards"
       title: "Why 4Geeks Academy"
-      paragraph: "Lorem ipsum dolor sit amet, consectetur 
-      
-      adscing elit, sed do eiusmod tempor incidi."
+      paragraph: "This is the place to boost your career by learning to code. Think differently, become more self-confident, bring your ideas to life and make more money."
+      link: "/us/why-4geeks"
       links:
         - title: "Accompaniment"
           sub_links: 
@@ -77,9 +73,7 @@ navbar:
     sub_menu:
       icon: "hat"
       title: "The Academy"
-      paragraph: "Lorem ipsum dolor sit amet, consectetur 
-      
-      adscing elit, sed do eiusmod tempor incidi."
+      paragraph: "We are constantly strengthening our ecosystem to learn and evolve together, using technology, using code."
       links:
         - title: ""
           sub_links: 
@@ -103,9 +97,7 @@ navbar:
     sub_menu:
       icon: "campuses"
       title: "Our Campuses"
-      paragraph: "Lorem ipsum dolor sit amet, consectetur 
-      
-      adscing elit, sed do eiusmod tempor incidi."
+      paragraph: "Learn in-person or choose a fully-remote program. Enroll and become part of a global coding community."
       links:
         - title: "Online"
           sub_links: 
@@ -130,7 +122,8 @@ navbar:
 
 language_button:
   text: "<span class='lang'>ENG</span> / ESP"
-  link: "/es/inicio?lang=es"
+  # link: "/es/inicio?lang=es"
+  link: "?lang=es"
 button:
   button_link: "/us/apply"
   apply_button_text: "Apply Now"

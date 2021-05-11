@@ -8,8 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/hybrid-jobs/
 slug: hybrid-jobs
 title: 'Hybrid Jobs: An Unstoppable Movement'
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/10/BLOG-HYBRID-1-1024x524.jpg"
+image_alt: ""
 wordpress_id: 3675
 categories:
 - Sin categoría

@@ -1,15 +1,24 @@
 ---
-author: jimena_y_yo
+author: https://twitter.com/jimena_y_yo
 comments: true
-date: 2021-04-14 20:44:51+00:00
-excerpt: ¿Qué es full stack? Te explicamos que significa ser full stack en el siguiente artículo de 4geeks Academy
+date: 2021-02-24 05:29:14 +0000
+excerpt: ¿Qué significa ser Full Stack? ¿Cuántas cosas son necesarias conocer para ser Full Stack? Te invito a seguir leyendo para conocer la respuesta.
 layout: post
-slug: que-es-full-stack
-title: ¿Qué significa ser Full Stack?
-image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/learn-to-code.jpg?raw=true"
-image_alt: "dos estudiantes aprendiendo que es full stack"
-status: "published"
+link: 
+image: "https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/learning-to-code.jpg"
+image_alt: "two students learning to code"
+slug: que-significa-ser-full-stack
+title: ¿Qué significa ser Full Stack? 
 ---
+
+
+<!-- 
+REMOVED FOR FRONTMATTER
+¿Qué significa ser Full Stack?
+
+![two students learning to code](https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/learning-to-code.jpg) -->
+
+Cuántas cosas son necesarias conocer para ser Full Stack
 
 Si nos paramos un segundo a pensar en la traducción de Full Stack sería algo así como “Todas las agrupaciones de tecnologías”, es decir, que ser Full Stack implicaría conocer todas las agrupaciones de tecnologías ¿Es esto posible?
 
@@ -21,7 +30,7 @@ Te invito a seguir leyendo para conocer la respuesta.
 
 ---
 
-## Cómo funcionan las webs
+Cómo funcionan las webs
 
 Para darte la respuesta larga primero debes entender cómo funcionan las webs.
 
@@ -65,7 +74,7 @@ Tenemos proveedores de servidores muy famosos como Google, Amazon o [Heroku](htt
 
 Ahora que conoces cómo funcionan las webs, podemos volver a la pregunta principal.
 
-### ¿Qué significa ser Full Stack? (respuesta larga)
+# ¿Qué significa ser Full Stack? (respuesta larga)
 
 Significa conocer en cada una de las áreas anteriores alguna tecnología para llevarla a cabo.
 
