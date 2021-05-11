@@ -1,12 +1,10 @@
 title: "Learn Python, Javascript and more"
-sub_title: "The Tech industry consistently requires Python developers.
-Python and JavaScript are among the best-paid career positions in the US.
-Both earn more than $110k a year. 
-Revisar 26X de JavaScript y Python 10X (tenemos que poner fuente)
-
-Al finalizar este programa, contarás con los conocimientos para       
-desempeñarte como Full Stack Developer. 
-"
+sub_title: "Python and JavaScript are among the best-paid career positions in the US.
+\n
+There are more 26X job opportunities in Javascript vs. Ruby on Rails, and 
+10X jobs in Python vs. node.js. 
+\n
+According to Indeed, the average salary for Python or JavaScript developers exceeds $110k"
 image: "../../../../static/images/techs/python-js.png"
 tech_list: 
   - image: "../../../../static/images/techs/bootstrap.png"
