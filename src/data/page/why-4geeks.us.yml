@@ -10,7 +10,7 @@ seo_title: "coding bootcamp"
 header:
   title: "Empowering Talent with coding careers"
   paragraph: "We are specialists of code. 4Geeks is the place were developers grow and thrive."
-  image: "../../../static/images/bg/the-academy-bg.jpg"
+  image: "../../../static/images/why-4geeks/why-4geeks-header.png"
   image_alt: ""
 
 badges:
@@ -34,6 +34,8 @@ geeksvsothers:
 
 python_banner:
   title: "Python & Javascript"
-  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js.
+  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js.
 
   Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+  image: "../../../static/images/why-4geeks/python-image.png"
+  image_alt: "python-image"

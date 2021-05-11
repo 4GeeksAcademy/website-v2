@@ -2,9 +2,8 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-03-18 00:00:00+00:00
-excerpt: Companies are looking for people with coding skills. Not just because they
-  need more developers (which they need), but also because they need people capable
-  of understanding how a tech-related company works.
+excerpt: Companies are looking for people with coding skills. Because they need people capable
+  of understanding how a tech-related company works
 layout: post
 link: https://www.4geeksacademy.co/what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2/
 slug: what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2

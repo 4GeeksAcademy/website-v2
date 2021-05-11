@@ -1,6 +1,7 @@
 ---
 author: alesanchezr
 date: 2020-04-29 05:31:23+00:00
+excerpt: More information about the Geekpal system of 4Geeks Academy
 link: https://www.4geeksacademy.co/geekpal
 slug: geekpal
 title: Never Code Alone Again

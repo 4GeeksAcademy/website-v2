@@ -4,13 +4,13 @@ const fs = require('fs')
 const fm = require('front-matter')
 const {walk, loadMD, empty, fail, success} = require("./_utils")
 
-const metas = [
+const front_matter_fields = [
     {key: "slug", type: "string", mandatory: true},
     {key: "title", type: "string", mandatory: true},
-    {key: "description", type: "string", length: 155},
+    {key: "excerpt", type: "string", length: 160},
     {key: "image", type: "string"},
-    {key: "keywords", type: "string"},
-    {key: "redirects", type: "array"}
+    {key: "image_alt", type: "string"},
+    {key: "author", type: "string"},
 ]
 
 walk(`${__dirname}/../data/blog`, async function (err, files) {
@@ -23,44 +23,33 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
     
     for (let i = 0; i < _files.length; i++) {
         const _path = _files[i];
-        const content = loadMD(_path)
-        const attrib = content.attributes
-        
-        // 1
-        if(!content.frontmatter) fail("Post must have a frontmatter in", _path)
-
-        // 2
-        // It takes care that image and alt_image exist (even without returning something)
-        if(attrib.image === void 0) fail(`Post must have image in`, _path)
-        if(attrib.image_alt === void 0) fail(`Post must have image_alt in`, _path)
-        // console.log(`POST_SLUG: ${attrib.slug}, \nIMAGE_PATH: ${attrib.image}, \nIMAGE_ALT: ${attrib.image_alt} \n\n`)
-        
-
-        // 3
-        if(!attrib.author) fail("Author is necessary in", _path)
-        // // console.log(`POST_SLUG: ${attrib.slug}, \nAUTHOR: ${attrib.author} \n\n`)
-        
-        
-        // // 4
-        if(attrib.avatar || attrib.avatar !== void 0) fail("Avatar property is obsolete, must be removed", _path)
-        // console.log(`${attrib?.avatar ? `__must be removed ❌__ \nAVATAR: ${attrib?.avatar}` : "AVATAR: removed ✅"}, \nPOST_SLUG: ${attrib.slug} \n\n`)
-
-        // // 5
-        if(!attrib.slug) fail("Post needs a slug in", _path)
-        // console.log(`POST_SLUG: ${attrib.slug}\n\n`)
-
-        // 6
-        // Falta Informacion
-        // "blog no debe tener un h1 encabezado porque ya se creará automáticamente."
 
         try {
-            content
-
+            const content = loadMD(_path)
+            const frontmatter = content.attributes
             // if (!doc.yaml) fail("Invalid YML syntax for " + _path)
             // if (!doc.lang) fail("Missing language on yml file name for " + _path)
+
+            const meta_keys = Object.keys(frontmatter)
+            front_matter_fields.forEach(m => {
+                if(!meta_keys.includes(m["key"])) fail(`Missing prop ${m["key"]} on frontmatter on ${_path}`)
+                else{
+                    if(m["type"] === "array"){
+                        if(m["mandatory"] === true && (!frontmatter[m["key"]] || frontmatter[m["key"]] === "null")) fail(`Invalid mandatory prop ${m["key"]} on ${_path} expected ${m["type"]} got ${frontmatter[m["key"]]}`)
+                        else if(m["mandatory"] !== true && frontmatter[m["key"]] !== null && frontmatter[m["key"]] !== "null" && !Array.isArray(frontmatter[m["key"]])) fail(`Invalid array ${m["key"]} got "${frontmatter[m["key"]]}" on ${_path} `)
+                    } 
+                    else if(typeof frontmatter[m["key"]] !== m["type"]){
+                        if(typeof m["mandatory"] !== "undefined") fail(`Invalid mandatory prop ${m["key"]} on ${_path} expected ${m["type"]} got ${frontmatter[m["key"]]}`) 
+                        else if(frontmatter[m["key"]] && frontmatter[m["key"]] !== "null") fail(`Invalid optional prop ${m["key"]} on ${_path} expected ${m["type"]} got ${frontmatter[m["key"]]}`)
+                    } 
+                    else{
+                        if(typeof m["length"] !== "undefined" && frontmatter[m["key"]].length > m["length"]) fail(`Length of ${m["key"]} should be no more than ${m["length"]} (${frontmatter[m["key"]].length}) in ${_path}`)
+                    }
+                } 
+            });
         }
         catch (error) {
-            console.log(`Error on file: ${_path}`.red)
+            console.error(`Error on file: ${_path}`.red)
             fail(error.message || error)
         }
     }

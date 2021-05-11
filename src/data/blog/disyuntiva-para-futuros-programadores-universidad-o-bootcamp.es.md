@@ -2,6 +2,7 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-05-04 14:39:10+00:00
+excerpt: ¿Universidad o Bootcamp? Decide informado aquí
 layout: post
 link: https://www.4geeksacademy.co/es/disyuntiva-para-futuros-programadores-universidad-o-bootcamp/
 slug: disyuntiva-para-futuros-programadores-universidad-o-bootcamp

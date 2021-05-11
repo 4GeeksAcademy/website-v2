@@ -2,6 +2,7 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-07-25 18:52:57+00:00
+excerpt: The ideal instructor, know the attributes and skills of a good teacher when you are learning to code
 layout: post
 link: https://www.4geeksacademy.co/the-ideal-instructor/
 slug: the-ideal-instructor

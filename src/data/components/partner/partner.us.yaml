@@ -29,31 +29,31 @@ partners:
     - name: "National Geographic"
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/natgeo.png"
-      featured: true
+      featured: false
     - name: "Evernote"
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/evernote.png"
-      featured: true
+      featured: false
     - name: "Ticjob"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/new_logo_ticjob.png"
-      featured: true
+      featured: false
     - name: "Unono"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/unono.png"
-      featured: true
+      featured: false
     - name: "Optiva-Media"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/optiva-media.png"
-      featured: true
+      featured: false
     - name: "Neo9"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/Neo9.png"
-      featured: true
+      featured: false
     - name: "KPMG"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/kpmg-logo1.png"
-      featured: true
+      featured: false
     - name: "Ultimate Software"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ultimate.png"
@@ -78,32 +78,32 @@ partners:
       # locations: ["miami-downtown"]
       course: ["machine-learning"]
       image: "../../../../static/images/partner/coinet.jpg"
-      featured: true
+      featured: false
     - name: "Strata.ai"
       # locations: ["miami-downtown"]
       courses: ["machine-learning"]
       image: "../../../../static/images/partner/strata.png"
-      featured: true
+      featured: false
     - name: "MDC"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/mdc_ce.png"
       courses: ["machine-learning"]
-      featured: true
+      featured: false
     - name: "Beacon Council"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/beacon_council.jpg"
       courses: ["machine-learning"]
-      featured: true
+      featured: false
     - name: "Blackstone"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/blackstone.png"
       courses: ["machine-learning"]
-      featured: true
+      featured: false
     - name: "CEMEX"
       # locations: ["miami-downtown"]
       courses: ["machine-learning"]
       image: "../../../../static/images/partner/cemex.png"
-      featured: true
+      featured: false
 
 coding:
   tagline: "IMMERSED IN THE CODING ECOSYSTEM"
@@ -111,11 +111,11 @@ coding:
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
-      featured: false
+      featured: true
       #locations: ["miami-downtown"]
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
-      featured: false
+      featured: true
       #locations: ["miami-downtown"]
     - name: "Bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
@@ -131,7 +131,7 @@ coding:
       #locations: ["miami-downtown"]
     - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
-      featured: false
+      featured: true
       #locations: ["miami-downtown"]
     - name: "Worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"

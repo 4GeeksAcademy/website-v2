@@ -6,20 +6,11 @@ meta_info:
   image: ""
   template: "course-machine-learning"
   keywords: ""
-  redirects:
-    [
-      "/software-engineering",
-      "/us/course/machine-learning-engineering-coding-bootcamp",
-      "/course/machine-learning-engineering-coding-bootcamp",
-      "/coding-bootcamp/machine-learning-engineering-bootcamp",
-    ]
-seo_title: "Cooding Bootcamp"
+  redirects: ["/us/machine-learning"]
+
 header:
   title: "Become a Machine Learning Engineer"
-  paragraph: "Become one of the highest paid professionals in the world 
-  
-  (no coding experience required)
-  "
+  paragraph: "Become one of the highest paid professionals in the world"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: ""
 
@@ -37,17 +28,16 @@ details:
       title: "About this course"
       sub_title: "Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
       Practice with real-life business scenarios typical in business and review some of the tools used in the industry. 
-      Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
-      "
+      Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics."
       list:
         - label: "Duration"
-          content:  "16 Weeks"
+          content:  "15 Weeks"
         - label: "Classes"
-          content: "3 Classes weekly"
+          content: "3 classes weekly"
         - label: "Certificate"
           content: ""
         - label: "Requisites"
-          content: "Check Requisites"
+          content: "Have a background in math, data, statistics or programming"
   heading: Machine Learning Engineering Syllabus
   weeks: 15
   weeks_label: "weeks"
@@ -55,7 +45,7 @@ details:
     - label: "Duration"
       value: "15 weeks"
     - label: "Classes"
-      value: "20 hrs (Lun - Mie - Vie)"
+      value: "20 hrs (Mon - Wed - Fri)"
     - label: "Certificate"
       value: "Machine Learning Engineer"
     - label: Delivery
@@ -102,8 +92,8 @@ details:
       step: 2.9
     - module_name: "LIFELONG"
       title: "Lifelong Support"
-      description: "Keep practicing with the academy's help - we will be coaching you for life, help build your Resume, Github, LinkedIn.  We will help you apply for jobs and continue to support you once you find a job in A.I."
-      projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer.  Enjoy and build software for life."
+      description: "Keep practicing with the academy's help - we will be coaching you for life. We will help you apply for jobs and continue to support you once you find a job in A.I."
+      projects: "Get paid to keep learning and raise your income gradually as you become a Machine Learning Engineer. Lead a successful career in AI and Machine Learning development, management, and leadership."
       slug: "lifelong-learning"
       duration: "forever"
       step: 0.1
@@ -122,7 +112,7 @@ syllabus:
 
 potential_companies:
   tagline: "Get trained to thrive at major companies"
-  sub_heading: "Get ready to apply to the best companies in the world: the next level in your career as Software Engineer"
+  sub_heading: "Get ready to apply to the best companies in the world: Develop the tools to upskill for the future of AI work."
   companies:
     - name: "Facebook"
       image: "../../../static/images/partner/facebook.png"
@@ -164,7 +154,7 @@ geek_data:
   geek_force:
     - Helping you land a job in a 500 Fortune company.
     - Profile, portfolio, interviews, workshops, talks, software community, network, active projects collaboration.
-    - It’s about getting your career to the next level.
+    - It's about getting your career to the next level.
 
 ## PRICES AND PAYMENTS SECTION
 prices:

@@ -40,6 +40,7 @@ navbar:
     sub_menu:
       icon: "awards"
       title: "Why 4Geeks Academy"
+      link: "/us/why-4geeks"
       paragraph: "Lorem ipsum dolor sit amet, consectetur 
       
       adscing elit, sed do eiusmod tempor incidi."
@@ -130,7 +131,8 @@ navbar:
 
 language_button:
   text: "<span class='lang'>ENG</span> / ESP"
-  link: "/es/inicio?lang=es"
+  # link: "/es/inicio?lang=es"
+  link: "?lang=es"
 button:
   button_link: "/us/apply"
   apply_button_text: "Apply Now"

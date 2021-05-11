@@ -2,6 +2,7 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-01-08 11:19:14+00:00
+excerpt:  We are proud to say that we have partnered with LaunchCode.org
 layout: post
 link: https://www.4geeksacademy.co/launchcode-and-4geeks-academy/
 slug: launchcode-and-4geeks-academy

@@ -2,6 +2,7 @@
 author: MRiciglianoC
 comments: true
 date: "2015-12-23 05:31:23+00:00"
+excerpt: "Know in depth the history of 4Geeks Academy"
 layout: post
 link: https://www.4geeksacademy.co/4geeks-academy-history/
 slug: 4geeks-academy-history

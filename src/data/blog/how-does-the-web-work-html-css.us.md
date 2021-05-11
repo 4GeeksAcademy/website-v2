@@ -2,10 +2,8 @@
 author: alesanchezr
 comments: true
 date: 2015-12-28 15:53:55+00:00
-excerpt: 'The #IntroToCoding Workshop Level 2 sponsored by Facilcloud and lead by
-  our instructor Ignacio Cordoba was held on December 17th at WeWork Lincoln Road.
-  The topic of the workshop was: How Does The Web Work? HTML + CSS and everyone who
-  attended received USD1400 to use in the cloud.'
+excerpt: 'The #IntroToCoding Workshop was held on December 17th at WeWork Lincoln Road.
+  The topic of the workshop was: How Does The Web Work?'
 layout: post
 link: https://www.4geeksacademy.co/how-does-the-web-work-html-css/
 slug: how-does-the-web-work-html-css
