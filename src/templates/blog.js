@@ -460,7 +460,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
             node {
                 frontmatter {
                 author
-                avatar
                 date
                 image
                 slug
@@ -489,7 +488,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
             node {
                 frontmatter {
                     author
-                    avatar
                     date
                     image
                     title

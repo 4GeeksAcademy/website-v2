@@ -314,7 +314,6 @@ query BlogPostBySlug($slug: String!){
             title
             author
             date
-            avatar
             excerpt
             unlisted
             image
