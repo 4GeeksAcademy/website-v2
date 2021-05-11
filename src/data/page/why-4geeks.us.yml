@@ -14,28 +14,28 @@ header:
   image_alt: ""
 
 badges:
-  paragraph: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+  paragraph: "We are licensed by the Florida Department of Education, and we have been chosen as one of the top 35 coding bootcamps of the world."
 
 community_banner:
-  title: "A community build for developers "
-  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  title: "A community built for developers "
+  paragraph: "At 4Geeks Academy there will always be someone to navigate your path to grow in tech: mentors, instructors, peers, business partners. We are constantly strengthening our ecosystem to learn and evolve together, using technology, using code."
   image: "../../../static/images/why-4geeks/why-4geeks-world.png"
   image_alt: ""
-  image_paragraph: "Sedes de 4Geeks presenciales donde puedes asistir clases y eventos"
+  image_paragraph: "We know no frontiers, our community is strong in English and in Spanish, in America and Europe and growing!"
   list:
-    - title: "comunidad global de + 2100 personas"
-    - title: "escribir acá dato del alcance"
-    - title: "CANALES ACTIVOS DE SLACK"
-    - title: "FUERTE PRESENCIA DE COMUNIDAD LOCAL"
+    - title: "A global community of more than 2100 people"
+    - title: "More than 15 active Slack channels"
+    - title: "Strong local presence and access to local events"
+    
 geeksvsothers:
   title: "Compare 4Geeks with other bootcamps"
-  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  paragraph: "This is the place to boost your career by learning to code. We are very proud of our programs and methodology to train developers in just a few months and help them boost their professional careers."
 
 python_banner:
   title: "Python & Javascript"
-  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js.
-
-  Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+  paragraph: "Learn Python, JavaScript and more. Python and JavaScript are among the best-paid career positions in the US. 
+  
+  There are more 26X job opportunities in Javascript vs. Ruby on Rails, and 10X jobs in Python vs. node.js."
   image: "../../../static/images/why-4geeks/python-image.png"
   image_alt: "python-image"
+
