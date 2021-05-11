@@ -7,8 +7,8 @@ excerpt: Why do I feel so nervous when I plan to go to a job interview?  The tr
 link: https://www.4geeksacademy.co/how-to-prepare-for-a-typical-interview-for-web-development-position/
 slug: how-to-prepare-for-a-typical-interview-for-web-development-position
 title: My Job Interview
-avatar: "/4geeks-logo.png"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/jobinterview.jpeg"
+image_alt: ""
 wordpress_id: 697
 categories:
 - Living and working as a developer
