@@ -26,23 +26,6 @@ const Faq = (props) => {
       // padding="142px 0 15px 0"
       />
 
-      {/* <H1
-        type="h1"
-        zIndex="5"
-        fontSize="13px"
-        lineHeight="16px"
-        fontWeight="700"
-        letterSpacing="0.05em"
-        color="#606060"
-      >4GEEKS ACADEMY</H1>
-
-      <H2 type="h2" zIndex="5" fontSize="50px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.banner.tagline}</H2>
-      <Paragraph padding_sm="0 35px" padding_tablet="0 12em" padding_md="0 30%" padding_xs="0 5%" >{yml.banner.sub_heading}
-        <Link to={`/${yml.fields.lang}/${yml.banner.pathContact}`} style={{color: "#52a6d1"}}
-        >
-          {yml.banner.sub_heading_contact}
-        </Link>
-      </Paragraph> */}
       <GridContainer
         padding="0 4%"
         gridGap="0px"
@@ -50,11 +33,10 @@ const Faq = (props) => {
         padding_lg="0 26%"
         github={`/page/faq.${pageContext.lang}.yml`}
       >
-        {yml.faq.map((item, i) => {
+        {yml && yml.faq.map((item, i) => {
           return (
             <>
               <H3 type="h3" key={i} borderBottom="1px solid" borderColor="#C4C4C4" padding="80px 30px 30px 30px" >{item.topic}</H3>
-
               {item.questions.map((faq, index) => {
                 return (
                   <Card
@@ -80,7 +62,6 @@ const Faq = (props) => {
                           textTransform="uppercase"
                           fontWeight="700"
                         >{faq.question}</H4>
-
                         {buttonToggle === false ?
                           toggleIndex != faq.question &&
                           <Icon icon="plus"
@@ -97,11 +78,9 @@ const Faq = (props) => {
                             />
                         }
                       </Div>
-
                       <Div size="12" size_sm="12" alignSelf="center">
                         {buttonToggle === true && toggleIndex === faq.question &&
                           <Paragraph
-
                             textAlign="left"
                             letterSpacing="0.05em"
                             lineHeight="22px"

@@ -86,11 +86,9 @@ const Program = ({data, pageContext, yml}) => {
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <TechsWeTeach lang={pageContext.lang} />
     <GeeksInfo lang={pageContext.lang} />
-
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
-
     <PricesAndPayment
       type={pageContext.slug}
       lang={pageContext.lang}
@@ -101,52 +99,10 @@ const Program = ({data, pageContext, yml}) => {
       title={yml.prices.heading}
       paragraph={yml.prices.sub_heading}
     />
-
     <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
       <Testimonials lang={data.allTestimonialsYaml.edges} />
     </Container>
-
     <OurPartners images={hiring.partners.images} marquee></OurPartners>
-
-    {/* <Wrapper
-      github="/course"
-    >
-      <Title
-        size="10"
-        title={yml.prices.heading}
-        paragraph={yml.prices.sub_heading}
-        variant="primary"
-      />
-      <PricesAndPayment
-        lang={pageContext.lang}
-        session={session}
-        type={pageContext.slug}
-        locations={data.allLocationYaml.edges}
-        course="machine_learning"
-      />
-    </Wrapper> */}
-
-
-    <Wrapper
-      github="/course"
-    >
-      <Title
-        size="10"
-        title={yml.faq.title}
-        variant="primary"
-      />
-      {data.faqs.edges[0].node.faq.slice(0, 3).map(f => <ul>
-        <li>
-          <H5 margin="15px 0px">{f.question}</H5>
-          <Paragraph>{f.answer}</Paragraph>
-        </li>
-      </ul>)
-      }
-      <Paragraph align="center" margin="10px 0">
-        <Button variant="full" width="400px" onClick={() => navigate(`/${pageContext.lang}/contact`)} color={Colors.blue} margin="0" textColor="white">{yml.faq.read_more}</Button>
-      </Paragraph>
-    </Wrapper>
-
   </>
   )
 };
