@@ -5,7 +5,6 @@ excerpt: Conoce cuánto gana un desarrollador full stack en Chile en el año 202
 layout: post
 slug: cuanto-gana-un-desarrollador-full-stack
 title: ¿Cuánto gana un Desarrollador Web Full-Stack en Chile?
-avatar: /images/staff/marcelo.jpeg
 image: https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/desarrollador-full-stack-chileno.jpg?raw=true
 image_alt: "desarrollador full stack chileno programando"
 

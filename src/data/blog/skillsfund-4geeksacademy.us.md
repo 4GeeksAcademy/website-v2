@@ -8,8 +8,8 @@ layout: post
 link: https://www.4geeksacademy.co/skillsfund-4geeksacademy/
 slug: skillsfund-4geeksacademy
 title: Skills Fund & 4Geeks Academy finally together
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/02/Skill-Fund-04-1-1-768x433.jpg"
+image_alt: ""
 wordpress_id: 2752
 categories:
 - Living and working as a developer
