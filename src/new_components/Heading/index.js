@@ -30,6 +30,8 @@ const BaseHeading = styled(Heading)`
   font-style: ${props => props.fontStyle || "normal"};
   color: ${props => props.color};
   margin: ${props => props.margin};
+  border-bottom: ${props => props.borderBottom};
+  border-color: ${props => props.borderColor};
   text-shadow: ${props => props.textShadow}; 
   background-color: ${props => props.background};
   margin-top: ${props => props.marginTop}; 
@@ -99,7 +101,7 @@ export const H3 = styled(BaseHeading)`
 export const H4 = styled(BaseHeading)`
 font-weight: ${props => props.fontWeight || "400"};
   letter-spacing: 0.05em;
-
+  padding-right: ${props => props.paddingRight};
 `;
 export const H5 = styled(BaseHeading)`
   font-weight: 700;
@@ -203,13 +205,10 @@ export const Paragraph = styled.p`
       padding: ${props => props.padding_md};
   }
   @media  ${Devices.lg}{
-
   }
   @media  ${Devices.xl}{
-
   }
   @media  ${Devices.xxl}{
-
   }
 `
 
