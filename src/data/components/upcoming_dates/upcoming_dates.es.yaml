@@ -10,7 +10,7 @@ info:
   duration_label: duracion
   duration_weeks: 16 semanas
   button_text: aplicar
-  button_link: ""
+  button_link: "/es/aplica"
 footer:
   button_text: Ver más Fechas
   button_text_open: Ver más Fechas

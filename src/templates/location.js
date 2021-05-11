@@ -48,7 +48,9 @@ const Location = ({data, pageContext, yml}) => {
 
   useEffect(() => {
     const loadCohorts = async () => {
-      const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
+      // https://breathecode.herokuapp.com/v1
+      const resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
+      // const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
       const data = await resp.json();
       setCohorts(data.slice(0, 3))
     }
@@ -183,7 +185,7 @@ const Location = ({data, pageContext, yml}) => {
     </GridContainer>
     <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
-    <UpcomingDates lang={pageContext.lang} />
+    <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} />
     <Loc lang={pageContext.lang} locations={data.test.edges} />
     <Staff lang={pageContext.lang} />
     {/* <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} /> */}
