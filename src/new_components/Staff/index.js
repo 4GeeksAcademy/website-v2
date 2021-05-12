@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
-import {RoundImage, Colors} from '../Styling';
+import {Anchor, Colors} from '../Styling';
 import {Row, GridContainer, Div} from '../Sections'
 import Fragment from "../Fragment"
 import Img from 'gatsby-image';
@@ -82,7 +82,7 @@ const Staff = props => {
                                 >
                                     {item.job_title}
                                 </H4>
-                                <Icon icon="linkedin" width="14px" fill="#2867b2" stroke="#2867b2" />
+                                <Anchor to={item.linkdin} target="_blank" rel="noopener noreferrer"><Icon icon="linkedin" width="14px" fill="#2867b2" stroke="#2867b2" /></Anchor>
                             </Div>
                         )
                     })}

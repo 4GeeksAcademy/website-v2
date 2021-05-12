@@ -293,7 +293,7 @@ export const Grid = styled(Div)`
         margin: ${props => props.margin_md};
         grid-template-columns: ${props => props.gridTemplateColumns_md};
         grid-template-rows: repeat(${props => props.gridTemplateRows_md});
-        grid-gap: ${props => props.gridGap_md_md};
+        grid-gap: ${props => props.gridGap_md};
         grid-column: ${props => props.gridColumn_md};
     }
     @media  ${Devices.lg}{
