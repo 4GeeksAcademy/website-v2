@@ -9,9 +9,17 @@ import {Link} from 'gatsby';
 import Img from 'gatsby-image';
 import Fragment from "../Fragment"
 import DragScrollProvider from '../DragScrollProvider'
+import Slider from 'react-slick'
 
 const Testimonials = (props) => {
     let testimonialsArray = props.lang[0].node;
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
     return (        
         
         <Fragment github="/components/testimonials">
@@ -23,8 +31,9 @@ const Testimonials = (props) => {
                 
                 <Link to="/us/success-stories"><Paragraph margin="25px 0 36px 0" color={Colors.blue}>{testimonialsArray.button_text}</Paragraph></Link>
                 
+                {/* remove slider */}
                 <Div className="testimonial-slider" display="flex" height="auto" background="linear-gradient(#f5f5f5, white)" padding="0 0 59px 0">
-                
+                {/* <Slider {...settings}> */}
                     {testimonialsArray.testimonials.filter(item => item.hidden !== true).map((item, i) => {
                 
                         return (
@@ -66,6 +75,7 @@ const Testimonials = (props) => {
                             </Div>
                         )
                     })}
+                {/* </Slider> */}
                 </Div>
             </GridContainer>
         </Fragment>
