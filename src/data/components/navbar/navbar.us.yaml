@@ -18,7 +18,7 @@ navbar:
 
         - title: "Software Engineer"
           level: "Level 2"
-          icon: "fullstack"
+          icon: "software"
           paragraph: "Dive deep into Computer Science and Cloud Native Applications."
           buttons:
             - text: "View Program"
@@ -26,7 +26,7 @@ navbar:
 
         - title: "AI/Machine Learning Engineering"
           level: "Online"
-          icon: "fullstack"
+          icon: "machine"
           paragraph: "Develop the necessary tools to upskill for the future of AI work."
           buttons:
             - text: "View program"

@@ -76,7 +76,7 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
                                 display="flex"
                                 justifyContent="end"
                             >
-                                <Icon className="choose-your-program-icon" icon="fullstack" height="40px" width="52px" />
+                                <Icon className="choose-your-program-icon" icon={program.icon} height="40px" width="52px" />
                             </Div>
                             <Div
                                 display="flex"
