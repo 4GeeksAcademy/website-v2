@@ -425,6 +425,8 @@ a.faq-link:hover {
   }
 .testimonial-slider::-webkit-scrollbar {
     height: 5px;
+    display: none;
+
   }
   .staff-slider::-webkit-scrollbar {
     display: none;
