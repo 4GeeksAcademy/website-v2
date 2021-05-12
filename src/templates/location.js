@@ -68,7 +68,7 @@ const Location = ({data, pageContext, yml}) => {
     {/* github={`/location`} */}
     {/* <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px"> */}
     {/* <Grid height="375px" height_md="219px" columns="2" rows="2" columns_md="12" rows_md="1" background={Colors.verylightGray}> */}
-    <GridContainerWithImage padding="24px 17px " padding_tablet="54px 0 54px 0" columns_tablet="14" margin="67px 0" margin_tablet="0">
+    <GridContainerWithImage padding="24px 17px " padding_tablet="54px 0" columns_tablet="14" margin="67px 0" margin_tablet="100px 0 0 0">
       <Div flexDirection="column" alignItems="center" alignItems_tablet="start" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
         <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
