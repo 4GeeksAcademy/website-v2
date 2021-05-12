@@ -92,7 +92,7 @@ export default function Template (props) {
                     padding="5px 8px"
                     borders=".2rem"
                   >
-                    <Link to={"/us/blog/tag/" + tag}>{tag}</Link>
+                    {/* <Link to={"/us/blog/tag/" + tag}>{tag}</Link> */}
                   </Card>
                 )
               })
