@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {graphql} from 'gatsby';
 import {H1, H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../new_components/Heading';
-import {Container, Row, Column, Div, GridContainerWithImage, WrapperImage} from '../new_components/Sections';
+import {Container, Row, Grid, Div, GridContainerWithImage, GridContainer} from '../new_components/Sections';
 import {StyledBackgroundSection, Colors} from '../new_components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseBlogRender from './_baseBlogLayout';
@@ -57,6 +57,33 @@ const Tags = ({pageContext, data, yml}) => {
                     />
                 </Div>
             </GridContainerWithImage>
+            <GridContainer columns_tablet="3">
+                <Grid gridColumn_tablet="1/3" gridTemplateColumns_tablet="repeat(2, 1fr)">
+                    {
+                        Array.isArray(edges) && edges.map((m, i) => {
+                            return (
+                                <Div key={i}>{i}</Div>
+                            )
+                        })
+                    }
+                </Grid>
+                <Div background={Colors.verylightGray} flexDirection_tablet="column" padding_tablet="20px">
+                    {
+                        <>
+                            <H3 textAlign="left">{yml.sidebar.title}</H3>
+                            {Array.isArray(edges) && edges.map((m, i) => {
+                                return (
+                                    <Link to={`/${pageContext.lang}/${m.node.frontmatter.cluster}/${m.node.frontmatter.slug}`}>
+                                        <H4 borderBottom="1px solid #ebebeb" padding="20px 0" margin="20px 0" textAlign="left" lineHeight="19px" fontWeight="700" color={Colors.darkGray} key={i}>
+                                            {m.node.frontmatter.title}
+                                        </H4>
+                                    </Link>
+                                )
+                            })}
+                        </>
+                    }
+                </Div>
+            </GridContainer>
         </>
     )
 }
@@ -85,7 +112,10 @@ export const pageQuery = graphql`
                 }
               }
             image_alt
-          }          
+          }  
+          sidebar{
+            title
+          }        
           about{
             heading
           }

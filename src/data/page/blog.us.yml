@@ -15,7 +15,7 @@ seo_title: "4GEEKS ACADEMY BLOG"
 header:
   title: "Blog"
   paragraph: "Resources and news for both potential and current software builders."
-  image: "../../../static/images/bg/pricing-bg.jpg"
+  image: "../../../static/images/blog/Blog-header.png"
   image_alt: ""
 
 question: "What are you looking for?"
