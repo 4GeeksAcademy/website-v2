@@ -154,6 +154,7 @@ export const Div = styled.div`
     border-bottom: ${props => props.borderBottom};
     border-right: ${props => props.borderRight};
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
+    text-align: ${props => props.textAlign};
     justify-self: ${props => props.justifySelf};
     box-shadow: ${props => props.isActive ? props.boxShadowActive : props.boxShadow};
     flex-wrap: nowrap; 
@@ -184,11 +185,12 @@ export const Div = styled.div`
 
     }
     @media ${Devices.xs}{
-        
+        padding: ${props => props.padding_xs};
         
     }
     @media  ${Devices.sm}{
         padding: ${props => props.padding_sm};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_sm]};
         height: ${props => props.height_sm};
         
     }
@@ -227,10 +229,12 @@ export const Div = styled.div`
     @media  ${Devices.md}{
         flex: 0 0 ${props => (props.size_md / 12) * 100}%;
         max-width: ${props => (props.size_md / 12) * 100}%;
+        min-width: ${props => props.minWidth_lg};
         grid-area: ${props => props.gridArea_md};
         display: ${props => props.display_md};
         flex-direction: ${props => props.flexDirection_md};
         justify-content: ${props => justifyContentOptions[props.justifyContent_md]};
+        text-align: ${props => props.textAlign_md};
         align-items: ${props => props.alignItems_md};
         margin: ${props => props.margin_md};
         padding: ${props => props.padding_md};
@@ -302,7 +306,56 @@ export const Grid = styled(Div)`
     }
     @media  ${Devices.xxl}{
     }
-    `
+`
+
+export const Old_Grid = styled.div`
+    display: ${props => props.display || "grid"};
+    grid-template-columns: repeat(${props => props.columns}, 1fr);
+    grid-template-rows: repeat(${props => props.rows || "auto"});
+    grid-gap: ${props => props.gridGap || "15px"};
+    width: ${props => props.width};
+    justify-self: ${props => props.justifySelf};
+    height: ${props => props.height};
+    background: ${props => props.background};
+    padding: ${props => props.padding};
+    margin: ${props => props.margin};
+
+    @media ${Devices.xxs}{
+        grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
+    }
+    @media ${Devices.xs}{
+        grid-template-columns: repeat(${props => props.columns_xs}, 1fr);
+    }
+    @media  ${Devices.sm}{
+        grid-template-columns: repeat(${props => props.columns_sm}, 1fr);
+    }
+    @media  ${Devices.tablet}{
+        grid-template-columns: repeat(${props => props.columns_tablet}, 1fr);
+        grid-template-rows: repeat(${props => props.rows_tablet}, 5vw);
+        padding: ${props => props.padding_tablet};
+    }
+    // CHANGES: removed repeat({...} ,1fr) for contact page
+    @media  ${Devices.md}{
+        grid-template-columns: repeat(${props => props.columns_md});
+        grid-template-rows: repeat(${props => props.rows_md});
+        grid-gap: ${props => props.gridGap_md};
+        height: ${props => props.height_md};
+        padding: ${props => props.padding_md};
+        display: ${props => props.display_md};
+        margin: ${props => props.margin_md};
+    }
+    @media  ${Devices.lg}{
+        grid-template-columns: repeat(${props => props.columns_lg}, 1fr);
+        padding: ${props => props.padding_lg};
+    }
+    @media  ${Devices.xl}{
+        grid-template-columns: repeat(${props => props.columns_xl}, 1fr);
+    }
+    @media  ${Devices.xxl}{
+        grid-template-columns: repeat(${props => props.columns_xxl}, 1fr);
+    }
+`
+
 // export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background}) => {
 //     return (
 //         <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md={`12`} gridGap_md="11px" gridGap="0" background={background}>

@@ -305,6 +305,8 @@ export const Button = styled(SmartButton)`
     }
     @media  ${Devices.sm}{
         width: ${props => props.width_sm};
+        margin: ${props => props.margin_sm};
+        font-size: ${props => props.fontSize_sm};
     }
     @media  ${Devices.tablet}{
         width: ${props => props.width_tablet};
@@ -312,14 +314,19 @@ export const Button = styled(SmartButton)`
     }
     @media  ${Devices.md}{
         width: ${props => props.width_md};
+        font-size: ${props => props.fontSize_md};
+        margin: ${props => props.margin_md};
     }
     @media  ${Devices.lg}{
+        font-size: ${props => props.fontSize_lg};
     }
     @media  ${Devices.xl}{
     }
     @media  ${Devices.xxl}{
     }
 `;
+
+
 Button.defaultProps = {
     fontSize: '12px',
     width: 'fit-content',
