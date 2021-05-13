@@ -2,15 +2,17 @@
 author: 4GeeksAcademy
 comments: true
 date: 2017-07-18 20:38:51+00:00
+excerpt: Conoce las becas entregadas a 4 emprendedores del TechCamp Caracas 2017
 layout: post
 link: https://www.4geeksacademy.co/es/techcamp-2017-beca/
 slug: techcamp-2017-beca
 title: ¡4Geeks Academy becó a 4 emprendedores del TechCamp Caracas 2017!
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/07/ISA-Blog-Cover.png"
+image_alt: ""
 wordpress_id: 2061
 categories:
 - Aprendiendo a desarrollar
+cluster: "aprendiendo-a-desarrollar"
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true

@@ -38,22 +38,20 @@ const Why4Geeks = (props) => {
     const {data, pageContext, yml} = props;
     return (
         <>
-            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 0 54px 0" columns_tablet="14" margin="120px 0 24px 0" margin_tablet="0">
-                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
+            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 24px 0">
+                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
                     <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
                     <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header.paragraph} </Paragraph>
                 </Div>
-                <Div display="none" display_tablet="flex" height="auto" width="100%" gridColumn_tablet="9 / 15" style={{position: "relative"}}>
-                    <Div style={{position: "absolute", background: "#C7F3FD", width: "71%", height: "192px", top: "-24px", left: "97px", borderRadius: "3px"}}></Div>
-                    <Div style={{position: "absolute", background: "#FFB718", width: "256px", height: "174px", bottom: "-25px", right: "18px", borderRadius: "3px"}}></Div>
-                    {/* <StyledBackgroundSection
-                        height="287px"
+                <Div display="none" display_tablet="flex" height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
+                    <StyledBackgroundSection
+                        height="450px"
                         width="100%"
                         image={yml.header.image && yml.header.image.childImageSharp.fluid}
                         bgSize={`contain`}
                         alt={yml.header.alt}
-                    /> */}
+                    />
                 </Div>
             </GridContainerWithImage>
             <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} link padding="58px 17px" padding_tablet="70px 0" />
@@ -74,7 +72,7 @@ const Why4Geeks = (props) => {
                         height="500px"
                         width="100%"
                         image={yml.community_banner.image && yml.community_banner.image.childImageSharp.fluid}
-                        bgSize={`cover`}
+                        bgSize={`contain`}
                         alt={yml.community_banner.image_alt}
                     />
                 </Div>
@@ -108,7 +106,7 @@ const Why4Geeks = (props) => {
             <With4Geeks lang={pageContext.lang} playerHeight="82px" />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
             <GeeksVsOthers lang={pageContext.lang} link={true} limit={4} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
-            <GridContainerWithImage height_tablet="503px" background={Colors.lightBlue} padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
+            <GridContainerWithImage height_tablet="503px" background="#E3F9FE" padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
                 <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.python_banner.title}`}</H2>
                     {/* <Paragraph textAlign_tablet="left" margin="26px 0">{yml.python_banner.paragraph} </Paragraph> */}
@@ -117,7 +115,13 @@ const Why4Geeks = (props) => {
                     )}
                 </Div>
                 <Div height="auto" width="100%" gridColumn_tablet="9 / 15">
-                    <SVGImage />
+                    <StyledBackgroundSection
+                        height="300px"
+                        width="100%"
+                        image={yml.python_banner.image && yml.python_banner.image.childImageSharp.fluid}
+                        bgSize={`contain`}
+                        alt={yml.python_banner.image_alt}
+                    />
                 </Div>
             </GridContainerWithImage>
             <Staff lang={pageContext.lang} />
@@ -175,6 +179,14 @@ export const query = graphql`
             python_banner{
                 title
                 paragraph
+                image{
+                    childImageSharp {
+                      fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                image_alt
             }
         }
       }

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import styled, {css} from 'styled-components';
 import Img from "gatsby-image"
 import {useStaticQuery, graphql} from 'gatsby';
@@ -98,7 +98,8 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLocationChange}) => {
+export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange}) => {
+    const {session, setSession} = useContext(SessionContext);
     const [status, setStatus] = useState(
         {
             toggle: false,
@@ -136,7 +137,7 @@ export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLo
     return (
         <>
             <Nav display_md="flex" display="none">
-                <Link to={'/'}>
+                <Link to={lang == "es" ? "/es/inicio" : "/"}>
                     <Img
                         fadeIn={false}
                         loading="eager"
@@ -158,8 +159,10 @@ export const Navbar = ({lang, menu, open, button, onToggle, languageButton, onLo
                     <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
-                    <Link to={languageButton.link}><Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph></Link>
-                    <Link onClick={onToggle} to={button.button_link || "#"}><Button width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+                    <Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
+                        <Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph>
+                    </Link>
+                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
             </Nav>
         </>
@@ -178,13 +181,14 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                             setStatus(_status => ({..._status, toggle: _status.hovered}));
                         }, 300)
                     }}
-                    background="white" transform={MegaMenuPositions[status.itemIndex].transform} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+                    background="white" transform={MegaMenuPositions[status.itemIndex].transform} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow_tablet="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
                     <Triangle left={MegaMenuPositions[status.itemIndex].leftTriangle} />
                     <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
                         <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0" margin="0 0 50px 0">
                             {menu[status.itemIndex].sub_menu.icon && <Div margin="0 15px 0 0"><Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" /></Div>}
                             <Div flexDirection="column" >
-                                <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3>
+                                {status.itemIndex != null && <Link to={menu[status.itemIndex].sub_menu.link && menu[status.itemIndex].sub_menu.link} ><Div alignItems="baseline" margin="5px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">{menu[status.itemIndex].sub_menu.title}</H3>{menu[status.itemIndex].sub_menu.link && <Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" />}</Div></Link>}
+                                {/* <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3> */}
                                 {menu[status.itemIndex].sub_menu.paragraph.split('\n').map((d, i) =>
                                     <Paragraph
                                         textAlign="left"
@@ -210,7 +214,7 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                                                         return (
                                                             <Link to={m.link} key={i}>
                                                                 <Button
-                                                                    outline
+                                                                    variant="outline"
                                                                     color="black"
                                                                     font='"Lato", sans-serif'
                                                                     width="fit-content"

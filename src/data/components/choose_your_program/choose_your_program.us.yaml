@@ -1,33 +1,18 @@
 title: Choose your program
-paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
-
+paragraph: Follow the path towards a life-changing experience. Become the developer that builds the next culture-shifting web app.
 programs:
-  - title: "Full-Stack 
-  
-  Developer"
+  - title: "Full-Stack Developer"
     sub_title: "Level 1"
-    description: "Master the 
-    
-    basics of machine"
+    description: "Learn the most in-demand skills with passionate instructors and a hands-on syllabus to help you find a coding job as a Jr. Developer."
     icon: "fullstack"
     link: "/us/course/full-stack-web-development-bootcamp-part-time"
-  - title: "Software 
-  
-  Engineer"
+  - title: "Software Engineering"
     sub_title: "Level 2"
-    description: "Master the 
-    
-    basics of machine"
-    icon: "fullstack"
+    description: "Dive deep into Computer Science and Cloud Native Applications. Learn the skills that 90% of the Fortune 500 are looking for."
+    icon: "software"
     link: "/us/course/software-engineering-coding-bootcamp"
-  - title: "AI/Machine Learning
-  
-    Engineering
-    "
-    sub_title: "Online"
-    description: "Master the 
-    
-    basics of machine"
-    icon: "fullstack"
-    link: "/us/course/full-stack-web-development-bootcamp-part-time"
-
+  - title: "AI/Machine Learning Engineering"
+    sub_title: "Specialized Track"
+    description: "Develop the necessary tools to upskill for the future of AI work."
+    icon: "machine"
+    link: "/us/coding-bootcamps/machine-learning-engineering"

@@ -3,17 +3,17 @@ author: 4GeeksAcademy
 comments: true
 date: 2016-03-11 04:00:00+00:00
 excerpt: Web designers and software developers respond to different skills. The requirements
-  of education and experience are different and so are the opportunities they offer.
+  of education are different and so are the opportunities they offer.
 layout: post
 link: https://www.4geeksacademy.co/webdevelopmentversuswebdesign/
-slug: webdevelopmentversuswebdesign
+slug: web-development-versus-web-design
 title: Web Development Vs. Web Design
-avatar: "/4geeks-logo.png"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/development-vs-design-1024x622.png"
+image_alt: ""
 wordpress_id: 701
 categories:
 - Why learn to code?
-
+cluster: "learn-to-code"
 tags:
 - challenges of a web developer
 - Web Design

@@ -4,14 +4,13 @@ comments: true
 date: 2021-02-24 05:29:14 +0000
 excerpt: Should I learn to Code? Benefits of learning to code. 
 layout: post
-link: https://4geeksacademy.com/shoul-i-learn-code/
-slug: shoul-i-learn-code
+slug: should-i-learn-code
 title: Should I learn to Code?
-avatar: /images/staff/marcelo.jpeg
-image: 
-
-![student coding in a notebook](https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/student-coding.jpg)
-
+# avatar: /images/staff/marcelo.jpeg
+image: https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/student-coding.jpg
+image_alt: "student coding in a notebook"
+cluster: "learn-to-code"
+---
 Should I learn to Code? 
 Facts about a growing Career
 

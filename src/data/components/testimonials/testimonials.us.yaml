@@ -1,6 +1,6 @@
 heading: "86% of our graduates got hired"
 button_text: See all testimonials
-button_link: ""
+button_link: "/us/testimonials"
 testimonials:
   - student_name: "Azul Botaya"
     featured: false

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
@@ -45,6 +45,7 @@ const CityH1 = ({yml}) => {
   const city = session && session.location ? "" : "Miami";
 
   React.useEffect(() => {
+    console.log("HASH: ", window.location)
     if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
   }, [session])
 
@@ -78,14 +79,14 @@ const Home = (props) => {
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
   const chooseProgramRef = useRef(null)
-  
+
   const goToChooseProgram = (e) => {
     e.preventDefault();
     window.scrollTo({
-        top: chooseProgramRef.current?.offsetTop,
-        behavior: "smooth"
-      })
-    }
+      top: chooseProgramRef.current?.offsetTop,
+      behavior: "smooth"
+    })
+  }
 
   return (
     <>
@@ -105,6 +106,8 @@ const Home = (props) => {
           top="170px"
           right="120px"
           scale="0.5"
+          display="none"
+          display_tablet="inline"
         />
         <Circle
           color="grey"
@@ -112,6 +115,8 @@ const Home = (props) => {
           height="30px"
           top="100px"
           right="9%"
+          display="none"
+          display_tablet="inline"
         />
         <Circle
           color="black"
@@ -119,6 +124,8 @@ const Home = (props) => {
           height="30px"
           top="100px"
           right="12%"
+          display="none"
+          display_tablet="inline"
         />
         <Circle
           color="grey"
@@ -144,7 +151,7 @@ const Home = (props) => {
           opacity="0.2"
         />
 
-        <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0">
+        <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" alignItems="center" alignItems_tablet="start">
           <CityH1 yml={yml} />
           {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
           <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
@@ -183,14 +190,12 @@ const Home = (props) => {
       </GridContainerWithImage>
 
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="104px 0 104px 0"/>
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="104px 0 104px 0" />
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
-
-      <div id="programs"></div>
       <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
-      <OurPartners images={hiring.partners.images} slider title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
+      <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
 
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
@@ -318,7 +323,8 @@ export const query = graphql`
                   image {
                     childImageSharp {
                       fluid(maxWidth: 150){
-                        ...GatsbyImageSharpFluid_withWebp
+                        # ...GatsbyImageSharpFluid_withWebp  #(with blur effect)
+                        ...GatsbyImageSharpFluid_withWebp_noBase64 # Without Blur effect
                       }
                     }
                   }
@@ -374,175 +380,24 @@ export const query = graphql`
           }
         }
         allLocationYaml(filter: {fields: { lang: {eq: $lang}}}) {
-            edges {
-              node {
-                city
-                meta_info {
-                  slug
-                  title
-                  description
-                  unlisted
-                  position
-                  image
-                  keywords
-                }
-                seo_title
-                header{
-                  sub_heading
-                  tagline
-                  alt
-                  image {
-                    childImageSharp {
-                      fluid(maxWidth: 800){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  } 
-                }
-                prices {
-                    full_stack {
-                      full_time {
-                        slug
-                      }
-                      part_time {
-                        slug
-                      }
-                    }
-                  }
-                info_box {
-                  heading
-                  address
-                  contact_heading
-                  phone
-                  email
-                  image {
-                    childImageSharp {
-                      fluid(maxWidth: 800){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  } 
-                }
-                images_box {
-                  images {
-                    path{
-                      childImageSharp {
-                        fluid(maxWidth: 100){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                      }
-                    } 
-                    alt
-                  }
-                  content
-                  heading
-                }
+          edges {
+            node {
+              city
+              meta_info {
+                slug
+                title
+                description
+                unlisted
+                position
+                image
+                keywords
               }
-            }
-          }
-          allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
-            edges {
-              node {
-                heading
-          button_text
-          button_link
-                testimonials {
-                  student_name
-                  testimonial_date
-                  hidden
-                  linkedin_url
-                  linkedin_text
-                  linkedin_image{
-                    childImageSharp {
-                      fluid(maxHeight: 14){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  }
-                  student_thumb{
-                    childImageSharp {
-                      fluid(maxHeight: 200){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  }
-                  short_content
-                  content
-                  source_url
-                  source_url_text
-                }
-              }
-            }
-          }
-          allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
-            edges {
-              node {
-                header{
-                  tagline
-                  sub_heading
-                }
-                projects {
-                    project_name
-                    slug
-                    project_image {
-                      childImageSharp {
-                        fluid(maxWidth: 800){
-                          ...GatsbyImageSharpFluid_withWebp
-                        }
-                      }
-                    } 
-                    project_content
-                    project_video
-                    live_link
-                    github_repo
-                    alumni {
-                      first_name
-                      last_name
-                      job_title
-                      github
-                      linkedin
-                      twitter
-                    }
-                  }
-                button_section{
-                  button_text
-                  button_link
-                }
-              }
-            }
-          }
-          allChooseYourProgramYaml (filter: { fields: { lang: { eq: $lang }}}){
-            edges {
-              node {
-                programs {
-                  link
-                  sub_title
-                  title
-                  description
-                  icon
-                }
-              }
-            }
-          }
-          allAbout4GeeksYaml (filter: { fields: { lang: { eq: $lang }}}){
-            edges {
-              node {
-                heading
+              seo_title
+              header{
                 sub_heading
-                list{
-                  title
-                }
-                paragraph
-                button_text
-                button_link
+                tagline
+                alt
                 image {
-                  childImageSharp {
-                    fluid(maxWidth: 1200){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
-                  }
-                } 
-                image_mobile {
                   childImageSharp {
                     fluid(maxWidth: 800){
                       ...GatsbyImageSharpFluid_withWebp
@@ -550,35 +405,187 @@ export const query = graphql`
                   }
                 } 
               }
-            }
-          }
-          allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
-            edges {
-              node {
-                programs{
-                    text
-                    location_bc_slug
-                    link
-                    schedule
+              prices {
+                full_stack {
+                  full_time {
+                    slug
+                  }
+                  part_time {
+                    slug
+                  }
                 }
-                open_button_text
-                close_button_text
+              }
+              info_box {
+                heading
+                address
+                contact_heading
+                phone
+                email
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 800){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                } 
+              }
+              images_box {
+                images {
+                  path{
+                    childImageSharp {
+                      fluid(maxWidth: 100){
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  } 
+                  alt
+                }
+                content
+                heading
               }
             }
           }
-  }
-`;
+        }
+        allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+          edges {
+            node {
+              heading
+              button_text
+              button_link
+              testimonials {
+                student_name
+                testimonial_date
+                hidden
+                linkedin_url
+                linkedin_text
+                linkedin_image{
+                  childImageSharp {
+                    fluid(maxHeight: 14){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                student_thumb{
+                  childImageSharp {
+                    fluid(maxHeight: 200){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                short_content
+                content
+                source_url
+                source_url_text
+              }
+            }
+          }
+        }
+        allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
+          edges {
+            node {
+              header{
+                tagline
+                sub_heading
+              }
+              projects {
+                project_name
+                slug
+                project_image {
+                  childImageSharp {
+                    fluid(maxWidth: 800){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                } 
+                project_content
+                project_video
+                live_link
+                github_repo
+                alumni {
+                  first_name
+                  last_name
+                  job_title
+                  github
+                  linkedin
+                  twitter
+                }
+              }
+              button_section{
+                button_text
+                button_link
+              }
+            }
+          }
+        }
+        allChooseYourProgramYaml (filter: { fields: { lang: { eq: $lang }}}){
+          edges {
+            node {
+              programs {
+                link
+                sub_title
+                title
+                description
+                icon
+              }
+            }
+          }
+        }
+        allAbout4GeeksYaml (filter: { fields: { lang: { eq: $lang }}}){
+          edges {
+            node {
+              heading
+              sub_heading
+              list{
+                title
+              }
+              paragraph
+              button_text
+              button_link
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 1200){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              } 
+              image_mobile {
+                childImageSharp {
+                  fluid(maxWidth: 800){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              } 
+            }
+          }
+        }
+        allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
+          edges {
+            node {
+              programs{
+                text
+                location_bc_slug
+                link
+                schedule
+              }
+              open_button_text
+              close_button_text
+            }
+          }
+        }
+      }
+      `;
+// ...GatsbyImageSharpFluidLimitPresentationSize # It avoid stretched images
 
 export default BaseRender(Home);
 
-// {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" >
-//         <Grid columns_md="2" >
-//           <Div gridArea_md="1/2/1/7" flexDirection="column" justifyContent_md="start" padding_md="70px 0 0 0">
-//             <CityH1 yml={yml} />
-//             {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
-//             <H2 textAlign_md="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
-//             <Paragraph textAlign_md="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
-//             {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
+      // {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" >
+      //         <Grid columns_md="2" >
+      //           <Div gridArea_md="1/2/1/7" flexDirection="column" justifyContent_md="start" padding_md="70px 0 0 0">
+      //             <CityH1 yml={yml} />
+      //             {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
+      //             <H2 textAlign_md="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
+      //             <Paragraph textAlign_md="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
+      //             {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
 //                     <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
 //             <ChooseProgram
 //               right="15px"

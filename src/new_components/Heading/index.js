@@ -30,6 +30,8 @@ const BaseHeading = styled(Heading)`
   font-style: ${props => props.fontStyle || "normal"};
   color: ${props => props.color};
   margin: ${props => props.margin};
+  border-bottom: ${props => props.borderBottom};
+  border-color: ${props => props.borderColor};
   text-shadow: ${props => props.textShadow}; 
   background-color: ${props => props.background};
   margin-top: ${props => props.marginTop}; 
@@ -100,7 +102,7 @@ export const H3 = styled(BaseHeading)`
 export const H4 = styled(BaseHeading)`
 font-weight: ${props => props.fontWeight || "400"};
   letter-spacing: 0.05em;
-
+  padding-right: ${props => props.paddingRight};
 `;
 export const H5 = styled(BaseHeading)`
   font-weight: 700;
@@ -161,12 +163,13 @@ Separator.defaultProps = {
 export const Paragraph = styled.p`
   display: ${props => props.display};
   direction: ${props => props.direction};
+  justify-content: ${props => props.justifyContent};
   width: ${props => props.width || "100%"};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin || "0"};
   font-size: ${props => props.fontSize};
   font-family: ${props => props.fontFamily};
-  font-weight: ${props => props.fontWeight || "400"};
+  font-weight: ${props => props.isActive ? "bold" : props.fontWeight || "400"};
   max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
   padding-right: ${props => props.paddingRight || "innitial"};
@@ -178,6 +181,7 @@ export const Paragraph = styled.p`
   height: ${props => props.height};
   z-index: ${props => props.zIndex};
   border-left: ${props => props.borderLeft};
+  opacity: ${props => props.isActive ? 1 : 0.8};
 
   @media ${Devices.xxs}{
   }
@@ -203,13 +207,10 @@ export const Paragraph = styled.p`
       padding: ${props => props.padding_md};
   }
   @media  ${Devices.lg}{
-
   }
   @media  ${Devices.xl}{
-
   }
   @media  ${Devices.xxl}{
-
   }
 `
 

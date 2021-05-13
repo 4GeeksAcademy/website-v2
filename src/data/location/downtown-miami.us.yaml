@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-miami"
   title: "Miami Coding Bootcamp"
   position: 1
-  description: "Learn & evolve your coding skills. Miami Coding Bootcamp with thousands of Graduates & ~89% hiring rate. The #1 part-time coding bootcamp in the world."
+  description: "Know here all about our coding bootcamp campus in Miami, Florida of 4Geeks Academy"
   image: ""
   keywords: "null"
   redirects:
@@ -50,7 +50,7 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: "Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos “Findes de Programación”, donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!"
+  content: "Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "miami-sunset"
@@ -58,6 +58,10 @@ images_box:
       alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
+    - path: "../../../static/images/locations/miami-dia.jpg"
+      alt: "4Geeeks miami day"
+    - path: "../../../static/images/locations/miami-room.jpg"
+      alt: "4Geeeks miami room"
 
 ## HEADING SECTION
 
@@ -414,7 +418,7 @@ prices:
           price_info: "single payment"
         button:
           button_text: "Apply Now"
-    
+
     full_time:
       slug: "full_time"
       duration: "?"

@@ -8,12 +8,12 @@ layout: post
 link: https://www.4geeksacademy.co/growth-road-full-time-job/
 slug: growth-road-full-time-job
 title: The Growth Road
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/08/BLOG-01.jpg"
+image_alt: ""
 wordpress_id: 3628
 categories:
 - Sin categoría
-
+cluster: "no-category"
 tags:
 - 4geeks
 - coding

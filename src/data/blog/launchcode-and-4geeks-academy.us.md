@@ -2,15 +2,17 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-01-08 11:19:14+00:00
+excerpt:  We are proud to say that we have partnered with LaunchCode.org
 layout: post
 link: https://www.4geeksacademy.co/launchcode-and-4geeks-academy/
 slug: launchcode-and-4geeks-academy
 title: 4Geeks Academy and LaunchCode.org
-avatar: "/4geeks-logo.png"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/launchcode-button-300x89.png"
+image_alt: ""
 wordpress_id: 471
 categories:
 - Learning to code
+cluster: "learn-to-code"
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false

@@ -179,7 +179,8 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
                         />
                     })}
                     {layout === "flex" &&
-                        <Button width="100%" padding=".7rem .45rem"
+                        <Button width="100%"
+                            variant="full"
                             type="submit"
                             margin="10px 0"
                             borderRadius="0px 10px 10px 0px"
@@ -211,7 +212,9 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
                         </Column>} */}
                             {/* <Column size={handleClose ? "6" : "12"} padding="10px 20px" margin="auto"> */}
 
-                            <Button width="fit-content" padding=".7rem .45rem"
+                            <Button
+                                // width="fit-content"
+                                variant="full"
                                 type="submit"
                                 color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
                                 textColor={Colors.white}

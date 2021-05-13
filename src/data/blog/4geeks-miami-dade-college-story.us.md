@@ -2,18 +2,18 @@
 author: MRiciglianoC
 comments: true
 date: 2018-11-14 03:22:14+00:00
-excerpt: MDC and 4Geeks Academy have been working together for more than 2 years already.
+excerpt: MDC and 4Geeks Academy have been working together for more than 2 years already. Know our history here
 layout: post
 link: https://www.4geeksacademy.co/4geeks-miami-dade-college-story/
 slug: 4geeks-miami-dade-college-story
 title: 4Geeks Academy & Miami Dade College |  A Story of Success
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2018/11/Massive-Cyber-Monday-Sale-1.png"
+image_alt: ""
 wordpress_id: 3315
 categories:
 - Learning to code
 - Why learn to code?
-
+cluster: "learn-to-code"
 tags:
 - coding
 - coding bootcamps

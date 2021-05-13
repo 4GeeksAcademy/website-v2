@@ -14,6 +14,18 @@ const metas = [
 
 walk(`${__dirname}/../data/`, async function (err, files) {
     if (err) fail("Error reding the YML files: ", err)
+
+
+    files
+        .filter(f => 
+            f.indexOf('additional-redirects.yml') > -1 
+            //|| f.indexOf('call-to-actions.yml') > -1
+        )
+        .forEach(_path => {
+            const doc = loadYML(_path);
+            if (!doc || !doc.yaml) fail("Invalid YML syntax for " + _path)
+        })
+
     const _files = files.filter(f =>
         (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1) &&
         f.indexOf('additional-redirects.yml') === -1 &&
@@ -35,7 +47,7 @@ walk(`${__dirname}/../data/`, async function (err, files) {
                 test(doc)
             }
             catch (error) {
-                console.log(`Error on file: ${_path}`.red)
+                console.error(`Error on file: ${_path}`.red)
                 fail(error.message || error)
             }
         }

@@ -9,7 +9,7 @@ import Link from 'gatsby-link'
 import {Colors, Button} from '../new_components/Styling'
 import {Input, Alert, TextArea} from '../new_components/Form';
 import {H1, H2, H3, Paragraph} from '../new_components/Heading'
-import { HR, Grid, Div, SavedGrid} from '../new_components/Sections'
+import { HR, Grid, Div, Old_Grid} from '../new_components/Sections'
 
 
 const Contact = (props) => {
@@ -93,7 +93,7 @@ const Contact = (props) => {
                 </Paragraph>
 
                 <Div justifyContent_sm="center" margin="64px 0 0 0" padding_xs="0 10px" padding="0 10px">
-                    <SavedGrid 
+                    <Old_Grid 
                         height="100%"
                         columns_md="3, 0fr"
                         justifyContent="center"
@@ -102,7 +102,7 @@ const Contact = (props) => {
                         
                     >
                         {formStatus.status === "thank-you" ?
-                            <SavedGrid
+                            <Old_Grid
                                 data-cy="thankfulness"
                                 width= "300px"
                                 justifySelf= "center"
@@ -113,7 +113,7 @@ const Contact = (props) => {
                             >
                                 <H3 type="h3" placeSelf="end" textAlign="center" fontSize="30px" color={Colors.green}>{formStatus.msg}</H3>
                                 <Paragraph padding="20px 10%" padding_sm="20px 20%" fontSize="20px" >{yml.left.thankyou}</Paragraph>
-                            </SavedGrid>
+                            </Old_Grid>
                             :
                             // Padding top m_xs="35px 0" m_sm="35px 0" m_md="35px 0" removed
                             <Div id="contact-form" minWidth_lg="max-content" flex_tablet="1" flexDirection="column" size="12" padding_md="0px" alignSelf="center"  height="100%" borderRadius="0 0 0 1.25rem" background="white">
@@ -204,13 +204,15 @@ const Contact = (props) => {
                                         required
                                     />
                                 </Div>
-                                <Div textAlign="center" textAlign_md="right" display="block" justifyContent="flex-end" alignResp="flex-end">
+                                <Div direction="rtl" textAlign={`-webkit-center`} textAlign_md="right" display="block" justifyContent="flex-end" alignResp="flex-end">
                                     {formStatus.status === "error" && <Alert data-action="alert-message" color="red">{formStatus.msg}</Alert>}
                                     <Button
                                         width="50%"
                                         width_md="96px"
                                         margin_md="17px 0px"
-                                        color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue} textColor={Colors.white}
+                                        justifyContent="center"
+                                        color={formStatus.status === "loading" ? Colors.darkGray : Colors.white} textColor={Colors.white}
+                                        background={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
                                         margin="23px 0px 0px 0px" padding="12px 24px"
                                         borderRadius="3px"
                                         disabled={formStatus.status === "loading" ? true : false}
@@ -221,7 +223,7 @@ const Contact = (props) => {
                         }
 
                         <HR background="#F5F5F5" height="7px" width="100%" width_md="7px" height_md="auto" margin="28px 0" margin_md="0px 82px" />
-                        <SavedGrid gridGap="0" columns="1" size="12" height="100%" minWidth="fit-content" flexDirection="column"  paddingLeft="0" paddingRight="0" >
+                        <Old_Grid gridGap="0" columns="1" size="12" height="100%" minWidth="fit-content" flexDirection="column"  paddingLeft="0" paddingRight="0" >
                             
                             {yml.right.content_section.map((item, i) => {
                                 return <Paragraph
@@ -238,8 +240,8 @@ const Contact = (props) => {
                                 >
                                 </Paragraph>;
                             })}
-                        </SavedGrid>
-                    </SavedGrid>
+                        </Old_Grid>
+                    </Old_Grid>
                 </Div>
                 </Div>
             </Div>

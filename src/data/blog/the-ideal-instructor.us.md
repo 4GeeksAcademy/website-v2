@@ -2,15 +2,17 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-07-25 18:52:57+00:00
+excerpt: The ideal instructor, know the attributes and skills of a good teacher when you are learning to code
 layout: post
 link: https://www.4geeksacademy.co/the-ideal-instructor/
 slug: the-ideal-instructor
 title: THE IDEAL INSTRUCTOR
-avatar: "/4geeks-logo.png"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/admin-ajax-1.jpeg"
+image_alt: ""
 wordpress_id: 1226
 categories:
 - Learning to code
+cluster: "learn-to-code"
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false

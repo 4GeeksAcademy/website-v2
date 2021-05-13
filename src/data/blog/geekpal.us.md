@@ -1,13 +1,15 @@
 ---
 author: alesanchezr
 date: 2020-04-29 05:31:23+00:00
+excerpt: More information about the Geekpal system of 4Geeks Academy
 link: https://www.4geeksacademy.co/geekpal
 slug: geekpal
 title: Never Code Alone Again
-avatar: "/images/staff/alejandro.png"
 image: "/images/why2.jpg"
+image_alt: ""
 categories:
 - Learning to code
+cluster: "learn-to-code"
 tags:
 - 4geeks
 lang: "us"

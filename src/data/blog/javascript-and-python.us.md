@@ -8,12 +8,12 @@ layout: post
 link: https://www.4geeksacademy.co/javascript-and-python/
 slug: javascript-and-python
 title: 'JavaScript and Python: A-must for any coder'
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/JSandPython-768x552.jpg"
+image_alt: ""
 wordpress_id: 3755
 categories:
 - Sin categoría
-
+cluster: "learn-to-code"
 tags:
 - 4geeks
 - coding

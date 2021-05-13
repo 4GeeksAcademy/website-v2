@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import {H1, H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../components/Heading';
 import {Container, Row, Column, Divider, Wrapper, WrapperImage} from '../components/Sections';
 import Icon from '../components/Icon'
@@ -10,7 +10,7 @@ import BaseBlogRender from './_baseBlogLayout';
 import Link from "gatsby-link";
 
 const Tags = ({pageContext, data, yml}) => {
-    const { edges, totalCount } = data.allMarkdownRemark;
+    const {edges, totalCount} = data.allMarkdownRemark;
     function GetFormattedDate (date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -24,22 +24,22 @@ const Tags = ({pageContext, data, yml}) => {
 
         return [year, month, day].join('-');
     }
-    function OrganizeColumns(arr){
-        let posts = [[],[],[]];
-        for(let i = 0; i < arr.length; i += 3){
+    function OrganizeColumns (arr) {
+        let posts = [[], [], []];
+        for (let i = 0; i < arr.length; i += 3) {
             posts[0].push(arr[i])
         }
-        for(let i = 1; i < arr.length; i += 3){
+        for (let i = 1; i < arr.length; i += 3) {
             posts[1].push(arr[i])
         }
-        for(let i = 2; i < arr.length; i += 3){
+        for (let i = 2; i < arr.length; i += 3) {
             posts[2].push(arr[i])
         }
         return posts;
     }
     const blog_posts = OrganizeColumns(edges);
     const tagHeader = `${yml.about.heading} "${pageContext.tag}" (${totalCount})`;
-    return(
+    return (
         <>
             <Container>
                 <Wrapper>
@@ -263,7 +263,7 @@ const Tags = ({pageContext, data, yml}) => {
                         </div>
                     </Row>
                 </Wrapper>
-            {/* This links to a page that does not yet exist.
+                {/* This links to a page that does not yet exist.
             We'll come back to it!
             <Link to="/tags">All tags</Link> */}
             </Container>
@@ -303,7 +303,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             author
-            avatar
             date
             image
             slug

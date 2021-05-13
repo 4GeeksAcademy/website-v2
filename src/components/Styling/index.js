@@ -162,6 +162,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     opacity: 1;
     background-size: ${props => props.bgSize || "cover"};
     height: ${props => props.height};
+    min-height: ${props => props.minHeight};
     max-width: ${props => props.maxWidth};
     &:before, &:after {
         border-radius: ${props => props.borderRadius};

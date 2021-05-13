@@ -3,16 +3,16 @@ author: 4GeeksAcademy
 comments: true
 date: 2015-12-09 20:18:46+00:00
 excerpt: Day by day companies are adapting to the increasingly digital world we live
-  in. This means they have to navigate fast and efficiently in a language that few
-  understand but everyone “speaks”, the language of web. This is why web developers
+  in. This is why web developers
   are becoming increasingly needed […]
 layout: post
 link: https://www.4geeksacademy.co/web-developer-earn-the-salary-you-deserve/
 slug: web-developer-earn-the-salary-you-deserve
 title: 'Web Developer: Earn the Salary You Deserve'
-avatar: "/4geeks-logo.png"
 image: null
+image_alt: ""
 wordpress_id: 316
+cluster: "learn-to-code"
 categories:
 - Living and working as a developer
 

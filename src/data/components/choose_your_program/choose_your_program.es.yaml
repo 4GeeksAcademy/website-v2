@@ -7,6 +7,7 @@ programs:
     Developer
     "
     sub_title: "Level 1"
+    icon: "fullstack"
     description: "Master the basics 
     
     of machine learning
@@ -14,6 +15,7 @@ programs:
     link: "/es/coding-bootcamp/full-stack-part-time"
   - title: "Software Engineer"
     sub_title: "Level 2"
+    icon: "software"
     description: "Master the basics 
     
     of machine learning
@@ -24,6 +26,7 @@ programs:
     Engineering
     "
     sub_title: "Online"
+    icon: "machine"
     description: "Master the basics 
     
     of machine learning

@@ -7,13 +7,13 @@ layout: post
 link: https://www.4geeksacademy.co/miami-coding-programs-report/
 slug: miami-coding-programs-report
 title: Miami Coding Bootcamps | 2018 Report
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/MIAMI-CODING-04-768x768.jpg"
+image_alt: ""
 wordpress_id: 3293
 categories:
 - Learning to code
 - Why learn to code?
-
+cluster: "learn-to-code"
 tags:
 - coding
 - coding bootcamps

@@ -2,15 +2,15 @@
 author: MRiciglianoC
 comments: true
 date: 2018-06-22 03:51:55+00:00
-excerpt: Our most recent cohort begun with 60% of women enrollment. Women in Miami
-  are choosing 4Geeks to build their software careers.
+excerpt: Feelings when learning and working as a developer.
 layout: post
 link: https://www.4geeksacademy.co/feelings-learning-coding/
 slug: feelings-learning-coding
 title: The feelings when Learning to Code
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/06/feelings.jpg"
+image_alt: ""
 wordpress_id: 3112
+cluster: "learn-to-code"
 categories:
 - Living and working as a developer
 - Why learn to code?
