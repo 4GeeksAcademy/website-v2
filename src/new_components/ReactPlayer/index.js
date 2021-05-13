@@ -91,10 +91,10 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
 
   const [showVideo, setShowVideo] = React.useState(false)
 
-  function yt_parser(url){
+  function yt_parser (url) {
     let regExpUrl = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     let match = url.match(regExpUrl);
-    return (match&&match[7].length==11)? match[7] : url;
+    return (match && match[7].length == 11) ? match[7] : url;
   }
 
   const validImageSizes = [
@@ -123,7 +123,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
         onPlaybackQualityChange={onPlaybackQualityChange}
         opts={{
           width: "100%",
-          height:`${style.height}`,
+          height: `${style.height}`,
           host: noCookies
             ? "https://www.youtube-nocookie.com"
             : "https://www.youtube.com",
@@ -151,7 +151,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
           <Thumbnail
             className={className}
             onClick={() => setShowVideo(true)}
-            src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
+            src={thumb && thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
             alt="Video"
             style={{
               height: `${style.height}` || "100%",
