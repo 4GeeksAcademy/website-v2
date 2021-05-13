@@ -16,7 +16,7 @@ banner:
 
 about:
   heading: "MORE ABOUT 4GEEKS ACADEMY"
-  sub_heading:""
+  sub_heading: ""
   about_image:
     image: ../../../static/images/our-story.png
     alt: ""

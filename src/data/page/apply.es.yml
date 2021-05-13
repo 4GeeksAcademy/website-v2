@@ -4,11 +4,16 @@ meta_info:
   description: "Aplica a uno de los mejores bootcamps de código del mundo, online o en una de nuestras sedes: Miami, Santiago de Chile, Madrid, Costa Rica, Maracaibo y Caracas"
   image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
   keywords: "Aplica a 4Geeks Academy Bootcamp"
-  redirects: ["/aplica","/es/apply"]
+  redirects: ["/aplica", "/es/apply"]
 
 ## APPLY HEADING
-tagline: APLICA A 4GEEKS
-sub_heading: ""
+seo_title: "coding bootcamp"
+header:
+  title: "Aplica a 4Geeks"
+  image:
+  image_alt: ""
+  paragraph: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+  button:
 
 ## APPLY LEFT SECTION
 left:
@@ -19,7 +24,7 @@ left:
     email: "Email"
     phone: "Móvil"
   locations_title: "Selecciona una sede"
-  course_title: 
+  course_title:
     open: "¿Qué programa quisieras estudiar?"
     close: "Selecciona un programa"
   referral_section:

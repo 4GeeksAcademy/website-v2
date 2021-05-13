@@ -19,14 +19,13 @@ const StyledInput = styled.input`
     width: ${props => props.width || "100%"};
     padding: 5px 10px;
     margin: ${props => props.margin || "5px 0px"};
-    border-radius: ${props => props.borderRadius};
-    border: 1px solid #A4A4A4;
+    border-radius: ${props => props.borderRadius || "3px"};
+    border: ${props => props.border || "1px solid #A4A4A4"};
     font-family: 'Lato', sans-serif;
-    
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
-    fontWeight: 300;
-    font-color: ${Colors.black};
+    fontWeight: 400;
+    font-color: ${props => props.color || "#606060"};
     user-select: initial;
     opacity: 0.7;
     :focus {
@@ -116,7 +115,7 @@ const StyledTextArea = styled.textarea`
     padding: 5px 10px;
     border: none;
     font-family: 'Lato', sans-serif;
-    border: ${props => props.border || "none"};
+    border: ${props => props.border || "1px solid #606060"};
     opacity: 0.7;
     font-size: 16px;
     font-color: ${Colors.black};
