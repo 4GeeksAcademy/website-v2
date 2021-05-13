@@ -15,23 +15,23 @@ navbar:
               link: "/us/coding-bootcamp/part-time-full-stack-developer"
             - text: "Full Time"
               link: "/us/coding-bootcamp/part-time-full-stack-developer"
-          
+
         - title: "Software Engineer"
           level: "Level 2"
-          icon: "fullstack"
+          icon: "software"
           paragraph: "Dive deep into Computer Science and Cloud Native Applications."
           buttons:
             - text: "View Program"
               link: "/us/coding-bootcamp/software-engineer-bootcamp"
-         
+
         - title: "AI/Machine Learning Engineering"
           level: "Online"
-          icon: "fullstack"
+          icon: "machine"
           paragraph: "Develop the necessary tools to upskill for the future of AI work."
           buttons:
             - text: "View program"
               link: "/us/coding-bootcamp/machine-learning-engineering"
-          
+
   - name: "Why 4Geeks"
     link: "/why-4geeks"
     sub_menu:
@@ -41,13 +41,13 @@ navbar:
       link: "/us/why-4geeks"
       links:
         - title: "Accompaniment"
-          sub_links: 
+          sub_links:
             - title: "GeekPal"
               link_to: "/us/geekpal-support"
             - title: "GeekForce"
               link_to: "/us/geekforce-career-support"
         - title: "Validation"
-          sub_links: 
+          sub_links:
             - title: "Awards"
               link_to: "/us/awards"
             - title: "Outcomes"
@@ -55,7 +55,7 @@ navbar:
             - title: "Geeks Vs Others"
               link_to: "/us/geeks-vs-others"
         - title: "Prices"
-          sub_links: 
+          sub_links:
             - title: "Financials"
               link_to: "/us/financials"
             # - title: "Prices"
@@ -63,7 +63,7 @@ navbar:
             # - title: "Scholarships"
             #   link_to: ""
         - title: "Our Students"
-          sub_links: 
+          sub_links:
             - title: "Alumni & Projects"
               link_to: "/us/students-and-projects"
             - title: "Testimonials"
@@ -76,7 +76,7 @@ navbar:
       paragraph: "We are constantly strengthening our ecosystem to learn and evolve together, using technology, using code."
       links:
         - title: ""
-          sub_links: 
+          sub_links:
             - title: "Who we are"
               link_to: "/us/the-academy"
             - title: "Press"
@@ -85,11 +85,11 @@ navbar:
               link_to: "/us/blog"
             - title: "Partners"
               link_to: "/us/partners"
-# links:
-#       - name: "Desarrollador Full Stack"
-#       - link: "/course/full-stack-web-development-bootcamp-part-time"
-#       - name: "Ingeniero de Software"
-#       - link: "/course/software-engineering-coding-bootcamp"
+  # links:
+  #       - name: "Desarrollador Full Stack"
+  #       - link: "/course/full-stack-web-development-bootcamp-part-time"
+  #       - name: "Ingeniero de Software"
+  #       - link: "/course/software-engineering-coding-bootcamp"
   # - name: "Pricing"
   #   link: "/pricing"
   - name: "Campuses"
@@ -100,13 +100,13 @@ navbar:
       paragraph: "Learn in-person or choose a fully-remote program. Enroll and become part of a global coding community."
       links:
         - title: "Online"
-          sub_links: 
+          sub_links:
             - title: "Part Time"
-              link_to: "/us/coding-bootcamp/part-time-full-stack-developer"
+              link_to: "/us/coding-campus/online-coding-bootcamp"
             - title: "Full Time"
-              link_to: "/us/coding-bootcamp/part-time-full-stack-developer"
+              link_to: "/us/coding-campus/online-coding-bootcamp"
         - title: "Campuses"
-          sub_links: 
+          sub_links:
             - title: "Caracas"
               link_to: "/us/coding-campus/coding-bootcamp-caracas"
             - title: "Madrid"
@@ -132,8 +132,6 @@ button:
   button_background_color: ""
   next_cohort: "Next cohort starts on"
   other_dates: "or review other dates"
-
-
 # link: "/us/the-academy"
 #   - name: "The Programs"
 #     link: "/us/coding-bootcamp/part-time-full-stack-developer"

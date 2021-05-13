@@ -44,6 +44,7 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
             padding="59px 17px 83px 17px"
             padding_tablet=" 0 "
             margin="0 0 50px 0"
+            margin_tablet="0 0 100px 0"
 
         >
             <Div margin_tablet="0 0 45px 0" margin="0 0 35px 0" padding_tablet="75px 0 0 0" gridColumn_tablet="5 / 11" gridRow_tablet="1 / 1" flexDirection="column">
@@ -76,7 +77,7 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
                                 display="flex"
                                 justifyContent="end"
                             >
-                                <Icon className="choose-your-program-icon" icon="fullstack" height="40px" width="52px" />
+                                <Icon className="choose-your-program-icon" icon={program.icon} height="40px" width="52px" />
                             </Div>
                             <Div
                                 display="flex"

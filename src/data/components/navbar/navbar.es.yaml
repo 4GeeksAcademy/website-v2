@@ -175,9 +175,9 @@ navbar:
         - title: "Online"
           sub_links: 
             - title: "Part Time"
-              link_to: "/es/coding-bootcamp/full-stack-part-time"
+              link_to: "/es/coding-campus/online-bootcamp-programacion"
             - title: "Full Time"
-              link_to: "/es/coding-bootcamp/full-stack-part-time"
+              link_to: "/es/coding-campus/online-bootcamp-programacion"
         - title: "Campuses"
           sub_links: 
             - title: "Caracas"
