@@ -6,12 +6,12 @@ header:
   title: Con 4Geeks
   paragraph: ""
 with:
-  - name: "PABLO PÉrez"
-    title: "Consegui trabajo ..."
-    description: "Pablo te cuenta como consiguió trabajo trás certificarse el 4Geeks"
+  - name: "Hernan García"
+    title: "Recibí ofertas de empresas que nunca me lo esperé"
+    description: "Hernán tardó un mes en conseguir un trabajo en tecnología una vez que comenzó a aplicar."
     image: ../../../../static/images/pablo-perez.png
     alt: ""
-    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -20,12 +20,12 @@ with:
       image_link: "/es/geekforce"
       text: ""
       text_link: ""
-  - name: "Marco Rojas"
-    title: "“Financiaron mi carrera...”"
-    description: "Marcos te cuenta cómo 4Geeks financió su carrera"
-    image: ../../../../static/images/marco-rojas.png
+  - name: "Luisa Glum"
+    title: "La Academia estaba tan comprometida como yo”"
+    description: "Luisa pago el programa después que se graduo y encontro trabajo, ella aplico al ISA (Income Share Agreement"
+    image: ../../../../static/images/luisa-glum.png
     alt: ""
-    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -34,12 +34,12 @@ with:
       image_link: ""
       text: "Ver Finaciamientos"
       text_link: "/es/financiacion"
-  - name: "Luisa Barrios"
-    title: "“Nunca programé solo otra vez...”"
-    description: "Luisa te cuenta sobre el proceso de mentorias de 4 geeks"
+  - name: "Joao Henrique"
+    title: "Siempre tendras apoyo por parte de la Academia"
+    description: "Joao cuenta su experiencia obteniendo mentores de codificación mientras estudiaba, después de graduarse e incluso en sus trabajos."
     image: ../../../../static/images/luisa-barrios.png
     alt: ""
-    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:

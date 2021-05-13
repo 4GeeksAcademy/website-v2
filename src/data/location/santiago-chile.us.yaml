@@ -16,8 +16,8 @@ meta_info:
 
 seo_title: "Coding Bootcamp Santiago de Chile"
 header:
-  tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
-  paragraph: "Come and learn code in the biggest coding school and community in Santiago de Chile! Receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
+  tagline: "4Geeks Academy in Santiago de Chile"
+  paragraph: "Chile is positioned as one of the countries with the highest digital growth in the coming years, and particularly in Santiago the trend of bootcamps has been fostered in recent years, among them is 4Geeks Academy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development."
   image: "../../../static/images/locations/santiago-home.png"
   alt: ""
 button_header:
@@ -35,6 +35,7 @@ info_box:
   heading: "Find us in Santiago de Chile"
   address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
   contact_heading: "Contacts"
+  whatsapp: "+56 9 7284 8039"
   phone: "+56 9 7284 8039"
   email: "chile@4GeeksAcademy.com"
   image: "../../../static/images/locations/santiago-map.png"
@@ -42,7 +43,17 @@ info_box:
   alt: ""
 badges:
   title: ""
-  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  paragraph: "4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the Florida Department of Education.
+  
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Miami according to SwitchUp.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+
+A community built for developers."
+
 news:
   title: "4Geeks Academy Chile in the news..."
 upcoming:
