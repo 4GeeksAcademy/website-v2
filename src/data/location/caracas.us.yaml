@@ -46,7 +46,7 @@ info_box:
   heading: "Find us in Caracas"
   address: "Urb Altamira, Av Avila cruce con Av Felix Sosa Edificio Don Camilo, PB, Local 1"
   contact_heading: "Contacts"
-  whatsapp: +58 424-244-3542"
+  whatsapp: "+58 424-244-3542"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/caracas-map.png"
