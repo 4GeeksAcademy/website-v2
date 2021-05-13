@@ -6,5 +6,12 @@ meta_info:
   keywords: ""
   redirects: []
 
+seo_title: "blog"
+header:
+  title: "Blog"
+  paragraph: "Resources and news for both potential and current software builders."
+  image: "../../../static/images/bg/pricing-bg.jpg"
+  image_alt: ""
+
 about:
   heading: "Publicaciones etiquetadas con"

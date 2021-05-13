@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {graphql} from 'gatsby';
-import {H1, H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../components/Heading';
-import {Container, Row, Column, Divider, Wrapper, WrapperImage} from '../components/Sections';
-import Icon from '../components/Icon'
-import {RoundImage, Colors} from '../components/Styling'
+import {H1, H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../new_components/Heading';
+import {Container, Row, Column, Div, GridContainerWithImage, WrapperImage} from '../new_components/Sections';
+import {StyledBackgroundSection, Colors} from '../new_components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseBlogRender from './_baseBlogLayout';
 import Link from "gatsby-link";
@@ -39,9 +38,94 @@ const Tags = ({pageContext, data, yml}) => {
     }
     const blog_posts = OrganizeColumns(edges);
     const tagHeader = `${yml.about.heading} "${pageContext.tag}" (${totalCount})`;
+    const clusterTitle = pageContext && pageContext.cluster.replace("-", " ")
     return (
         <>
-            <Container>
+            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 24px 0">
+                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
+                    <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
+                    <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px" textTransform="capitalize">{`${clusterTitle}`}</H2>
+                    <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header.paragraph} </Paragraph>
+                </Div>
+                <Div display="none" display_tablet="flex" height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
+                    <StyledBackgroundSection
+                        height="450px"
+                        width="100%"
+                        image={yml.header.image && yml.header.image.childImageSharp.fluid}
+                        bgSize={`contain`}
+                        alt={yml.header.alt}
+                    />
+                </Div>
+            </GridContainerWithImage>
+        </>
+    )
+}
+
+export const pageQuery = graphql`
+  query clusterPage($cluster: String, $file_name: String, $lang: String) {
+      allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+      edges{
+        node{
+          meta_info{
+            slug
+            title
+            description
+            image
+            keywords
+          }
+          seo_title 
+          header {
+            title
+            paragraph
+            image{
+                childImageSharp {
+                  fluid(maxWidth: 1500, quality: 100){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            image_alt
+          }          
+          about{
+            heading
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { cluster: { in: [$cluster] } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+            type
+          }
+          frontmatter {
+            author
+            date
+            image
+            slug
+            title
+            excerpt
+            lang
+            featured
+            status
+            cluster
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default BaseBlogRender(Tags);
+
+
+{/* <Container>
                 <Wrapper>
                     <Row display="flex" justifyContent="left">
                         <Column size="12">
@@ -263,60 +347,7 @@ const Tags = ({pageContext, data, yml}) => {
                         </div>
                     </Row>
                 </Wrapper>
-                {/* This links to a page that does not yet exist.
+                This links to a page that does not yet exist.
             We'll come back to it!
-            <Link to="/tags">All tags</Link> */}
-            </Container>
-        </>
-    )
-}
-
-export const pageQuery = graphql`
-  query clusterPage($cluster: String, $file_name: String, $lang: String) {
-      allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
-          meta_info{
-            slug
-            title
-            description
-            image
-            keywords
-          }
-          about{
-            heading
-          }
-        }
-      }
-    }
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { cluster: { in: [$cluster] } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          fields {
-            slug
-            type
-          }
-          frontmatter {
-            author
-            date
-            image
-            slug
-            title
-            excerpt
-            lang
-            featured
-            status
-            cluster
-          }
-        }
-      }
-    }
-  }
-`;
-
-export default BaseBlogRender(Tags);
+            <Link to="/tags">All tags</Link>
+            </Container> */}

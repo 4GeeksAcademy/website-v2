@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import Link from 'gatsby-link'
 import {navigate} from 'gatsby'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
-import {Button, RoundImage, Colors} from '../new_components/Styling'
+import {Button, RoundImage, Colors, StyledBackgroundSection} from '../new_components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseBlogRender from './_baseBlogLayout'
 import twitterUser from '../utils/twitter'
-import {GridContainer, Div, Header} from '../new_components/Sections'
+import {GridContainer, Div, GridContainerWithImage} from '../new_components/Sections'
 
 //Functional Component: Blog
 const Blog = ({data, pageContext, yml}) => {
@@ -14,14 +14,22 @@ const Blog = ({data, pageContext, yml}) => {
     //Banner (Info+ Image)
     const Banner = () => {
         return (
-            <Header
-                seo_title={yml.seo_title}
-                title={yml.header.title}
-                paragraph={yml.header.paragraph}
-                image={yml.header.image.childImageSharp.fluid}
-                background="Colors.white"
-                padding="0 0 0 175px;"
-            />
+            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 24px 0">
+                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
+                    <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
+                    <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
+                    <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header.paragraph} </Paragraph>
+                </Div>
+                <Div display="none" display_tablet="flex" height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
+                    <StyledBackgroundSection
+                        height="450px"
+                        width="100%"
+                        image={yml.header.image && yml.header.image.childImageSharp.fluid}
+                        bgSize={`contain`}
+                        alt={yml.header.alt}
+                    />
+                </Div>
+            </GridContainerWithImage>
         )
     }
 
