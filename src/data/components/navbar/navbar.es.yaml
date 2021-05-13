@@ -3,9 +3,8 @@
 #     link: "/es/inicio"
 #     sub_menu:
 #       icon: ""
-#       title: "Programs"
-#       paragraph: "Academia
-# Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
+#       title: "Programass"
+#       paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras que usted busca pivotar, encontrar un trabajo mejor o avanzar en el actual. Aprenda a codificar en 4Geeks Academy."
 #       links:
 #         - title: "Online"
 #           sub_links: 
@@ -68,15 +67,14 @@ navbar:
     sub_menu:
       icon: ""
       title: "Programas"
-      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras que usted busca pivotar, encontrar un trabajo mejor o avanzar en el actual. Aprenda a codificar en 4Geeks Academy."
+ 
       
-      adscing elit, sed do eiusmod tempor incidi.
-      "
       links:
         - title: "Full Stack Developer"
           level: "Level 1"
           icon: "fullstack"
-          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          paragraph: "Aprenda las habilidades más solicitadas y encuentre un trabajo como desarrollador Jr."
           buttons:
             - text: "Part Time"
               link: "/es/coding-bootcamp/full-stack-part-time"
@@ -86,7 +84,7 @@ navbar:
         - title: "Software Engineer"
           level: "Level 2"
           icon: "fullstack"
-          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          paragraph: "Desarolle habilidades nuevas y aprenda sobre aplicaciones nativas de la nube y computacion."
           buttons:
             - text: "Ver Programa"
               link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
@@ -94,7 +92,7 @@ navbar:
         - title: "AI/Machine Learning Engineering"
           level: "Online"
           icon: "fullstack"
-          paragraph: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          paragraph: "Desarrolle las herramientas necesarias para mejorar las habilidades para ser parte del futuro de la Inteligencia Artificial."
           buttons:
             - text: "Ver Programa"
               link: "/es/coding-bootcamp/curso-inteligencia-artificial"
@@ -105,9 +103,7 @@ navbar:
       icon: "awards"
       title: "Porqué 4Geeks Academy"
       link: "/es/porque-4geeks"
-      paragraph: "Lorem ipsum dolor sit amet, consectetur 
-      
-      adscing elit, sed do eiusmod tempor incidi."
+      paragraph: "Este es el lugar para impulsar su carrera aprendiendo a codificar. Piense de manera diferente, tenga más confianza en sí mismo, dé vida a sus ideas y gane más dinero."
       links:
         - title: "Acompañamiento"
           sub_links: 
@@ -142,9 +138,8 @@ navbar:
     sub_menu:
       icon: "hat"
       title: "Academia"
-      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      paragraph: "Estamos constantemente fortaleciendo nuestro ecosistema para aprender y evolucionar juntos, usando tecnología y usando código."
       
-      adscing elit, sed do eiusmod tempor incidi."
       links:
         - title: ""
           sub_links: 
@@ -168,9 +163,8 @@ navbar:
     sub_menu:
       icon: "campuses"
       title: "Our Campuses"
-      paragraph: "Lorem ipsum dolor sit amet, consectetur 
+      paragraph: "Aprenda en persona o elija un programa completamente remoto. Inscríbase y forme parte de una comunidad de programacion global."
       
-      adscing elit, sed do eiusmod tempor incidi."
       links:
         - title: "Online"
           sub_links: 
