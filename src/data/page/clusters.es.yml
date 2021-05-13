@@ -10,8 +10,11 @@ seo_title: "blog"
 header:
   title: "Blog"
   paragraph: "Resources and news for both potential and current software builders."
-  image: "../../../static/images/bg/pricing-bg.jpg"
+  image: "../../../static/images/blog/Blog-header.png"
   image_alt: ""
+
+sidebar:
+  title: "Artículos Destacados"
 
 about:
   heading: "Publicaciones etiquetadas con"

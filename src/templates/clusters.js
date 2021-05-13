@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import {graphql} from 'gatsby';
 import {H1, H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../new_components/Heading';
-import {Container, Row, Column, Div, GridContainerWithImage, WrapperImage} from '../new_components/Sections';
-import {StyledBackgroundSection, Colors} from '../new_components/Styling'
+import {Container, Row, Grid, Div, GridContainerWithImage, GridContainer} from '../new_components/Sections';
+import {StyledBackgroundSection, RoundImage, Colors, Button} from '../new_components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseBlogRender from './_baseBlogLayout';
 import Link from "gatsby-link";
@@ -38,10 +38,10 @@ const Tags = ({pageContext, data, yml}) => {
     }
     const blog_posts = OrganizeColumns(edges);
     const tagHeader = `${yml.about.heading} "${pageContext.tag}" (${totalCount})`;
-    const clusterTitle = pageContext && pageContext.cluster.replace("-", " ")
+    const clusterTitle = pageContext.cluster && pageContext.cluster.replace("-", " ")
     return (
         <>
-            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 24px 0">
+            <GridContainerWithImage padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 24px 0">
                 <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
                     <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px" textTransform="capitalize">{`${clusterTitle}`}</H2>
@@ -57,6 +57,116 @@ const Tags = ({pageContext, data, yml}) => {
                     />
                 </Div>
             </GridContainerWithImage>
+            <GridContainer columns_tablet="3">
+                <Grid gridColumn_tablet="1/3" gridTemplateColumns_tablet="repeat(2, 1fr)" gridGap="15px">
+                    {
+                        Array.isArray(edges) && edges.map((item, i) => {
+                            return (
+                                <Div key={i} flexDirection="Column" margin="0 0 87px 0">
+                                    {
+                                        item.node.frontmatter.image &&
+                                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                                            <LazyLoad height={10} scroll={true} once={true}>
+                                                <RoundImage
+                                                    url={item.node.frontmatter.image}
+                                                    bsize="cover"
+                                                    border="0px"
+                                                    position="center"
+
+                                                    width="100%"
+                                                    height="329px"
+                                                    margin="0 0 25px 0"
+                                                    h_lg="140px"
+                                                    h_md="120px"
+                                                    h_sm="200px"
+                                                    h_xs="150px"
+                                                />
+                                            </LazyLoad>
+                                        </Link>
+                                    }
+
+                                    {/* Boton */}
+                                    <Div flexDirection_md="row" flexDirection="column" justifyContent="left">
+                                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                                            <Button width="fit-content"
+                                                style={{outlineStyle: "solid", outlineColor: Colors.gray, outlineWidth: "thin"}}
+                                                background={Colors.white}
+                                                fontSize="13px"
+                                                fontWeight="700"
+                                                height="16px"
+                                                lineHeight="16px"
+                                                padding="2px 15px 2px 15px"
+                                                letterSpacing="0.05em"
+                                                margin="0 0 25px 0"
+                                                textColor="#3A3A3A">
+                                                {item.node.frontmatter.cluster || "4Geeks"}
+                                            </Button>
+                                        </Link>
+                                    </Div>
+
+                                    {/* Titulo */}
+                                    <Div>
+                                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                                            <H4
+                                                textAlign="left"
+                                                align_sm="left"
+                                                margin="0 0 30px 0"
+                                                fs_xs="20px"
+                                                fs_sm="24px"
+                                                fs_md="16px"
+                                                fs_lg="20px"
+                                                fontSize="22px"
+                                            >
+                                                {item.node.frontmatter.title}
+                                            </H4>
+                                        </Link>
+                                    </Div>
+
+                                    {/* Comentario acerca del post */}
+                                    <Div>
+                                        <Paragraph fontWeight="300"
+                                            fontSize="15px"
+                                            color="#3A3A3A"
+                                            textAlign="left"
+                                            margin="0 0 15px 0">
+                                            {item.node.frontmatter.excerpt}
+                                        </Paragraph>
+                                    </Div>
+
+                                    {/* Link de leer articulo */}
+                                    <Div>
+                                        <Paragraph fontSize="13px"
+                                            color="#0097cd"
+                                            margin="0 0 0 0"
+                                            textAlign="left">
+                                            <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                                                {`Read more >`}
+                                            </Link>
+                                        </Paragraph>
+                                    </Div>
+
+                                </Div>
+                            )
+                        })
+                    }
+                </Grid>
+                <Div background={Colors.verylightGray} flexDirection_tablet="column" padding_tablet="20px" height="fit-content" borderRadius="3px">
+                    {
+                        <>
+                            <H3 textAlign="left">{yml.sidebar.title}</H3>
+                            {Array.isArray(edges) && edges.map((m, i) => {
+                                return (
+                                    <Link to={`/${pageContext.lang}/${m.node.frontmatter.cluster}/${m.node.frontmatter.slug}`}>
+                                        <H4 borderBottom="1px solid #ebebeb" padding="20px 0" margin="20px 0" textAlign="left" lineHeight="19px" fontWeight="700" color={Colors.darkGray} key={i}>
+                                            {m.node.frontmatter.title}
+                                        </H4>
+                                    </Link>
+                                )
+                            })}
+                        </>
+                    }
+                </Div>
+            </GridContainer>
         </>
     )
 }
@@ -85,7 +195,10 @@ export const pageQuery = graphql`
                 }
               }
             image_alt
-          }          
+          }  
+          sidebar{
+            title
+          }        
           about{
             heading
           }
