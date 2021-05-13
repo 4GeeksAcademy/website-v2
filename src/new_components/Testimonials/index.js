@@ -2,23 +2,16 @@ import React, {useState} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import Card from "../Card"
-import {H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
-import {Row, Column, GridContainer, Div} from '../Sections'
+import {H2, H3, H4, Paragraph} from '../Heading'
+import { GridContainer, Div} from '../Sections'
 import {Colors} from '../Styling'
 import {Link} from 'gatsby';
 import Img from 'gatsby-image';
 import Fragment from "../Fragment"
-import DragScrollProvider from '../DragScrollProvider'  
+import Marquee_v2 from '../Marquee_CSAV'
 
 const Testimonials = (props) => {
     let testimonialsArray = props.lang[0].node;
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
 
       let testimonialsFiltered = testimonialsArray.testimonials.filter(item => item.hidden !== true)
     return (        
@@ -32,11 +25,11 @@ const Testimonials = (props) => {
                     
                     <Link to="/us/success-stories"><Paragraph margin="25px 0 36px 0" color={Colors.blue}>{testimonialsArray.button_text}</Paragraph></Link>
                     
-                    {/* remove slider */}
-                    {/* <Div className="testimonial-slider" display="flex" height="auto" background="linear-gradient(#f5f5f5, white)" padding="0 0 59px 0"> */}
 
-                    <DragScrollProvider className="testimonial-slider">
-
+                    {/* TODO: adjust time with lenght of content and change the css */}
+                    {/* CREATED: MARQUEE with hooks*/}
+                    <Marquee_v2 containerStyle={{height: "215px"}} >
+                    <Div className="testimonial-slider" display="flex" height="auto" background="linear-gradient(#f5f5f5, white)" padding="0 0 40px 0">
                         {testimonialsFiltered.map((item, i) => {
                     
                             return (
@@ -78,8 +71,8 @@ const Testimonials = (props) => {
                                 </Div>
                             )
                         })}
-                    </DragScrollProvider>
-                    {/* </Div> */}
+                    </Div>
+                    </Marquee_v2>
                 </GridContainer>
         </Fragment>
     )
