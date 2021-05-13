@@ -1,35 +1,22 @@
-title: Choose your program
+title: Elige tu programa 
 paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
 
 programs:
-  - title: "Full-Stack 
-    
-    Developer
-    "
+  - title: "Full-Stack Developer"
     sub_title: "Level 1"
     icon: "fullstack"
-    description: "Master the basics 
-    
-    of machine learning
-    "
+    description: "Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarlo a encontrar un trabajo de codificación como desarrollador Jr."
     link: "/es/coding-bootcamp/full-stack-part-time"
+    
   - title: "Software Engineer"
     sub_title: "Level 2"
     icon: "software"
-    description: "Master the basics 
-    
-    of machine learning
-    "
+    description: " Desarrolla más habilidades adentrandote en el mundo de computacion y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando."
     link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
-  - title: "AI/Machine Learning
-  
-    Engineering
-    "
+    
+  - title: "AI/Machine Learning Engineering"
     sub_title: "Online"
     icon: "machine"
-    description: "Master the basics 
-    
-    of machine learning
-    "
+    description: "Conoce las herramientas necesarias para mejorar tus habilidades y ser part del futuro de la Inteligencia Artificial."
     link: "/es/coding-bootcamp/curso-inteligencia-artificial"
 
