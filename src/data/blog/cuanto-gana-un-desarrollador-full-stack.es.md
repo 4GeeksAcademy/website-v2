@@ -7,7 +7,7 @@ slug: cuanto-gana-un-desarrollador-full-stack
 title: ¿Cuánto gana un Desarrollador Web Full-Stack en Chile?
 image: https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/desarrollador-full-stack-chileno.jpg?raw=true
 image_alt: "desarrollador full stack chileno programando"
-
+cluster: "coding-bootcamps"
 categories:
 - coding bootcamps
 lang: us

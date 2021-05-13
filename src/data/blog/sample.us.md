@@ -10,6 +10,7 @@ intro: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sag
 status: "published" # published, draft, unassigned
 featured: true
 unlisted: true
+cluster: "learn-to-code"
 tags: 
 - Javascript
 - php

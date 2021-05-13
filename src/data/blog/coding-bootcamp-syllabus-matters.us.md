@@ -14,6 +14,7 @@ wordpress_id: 2600
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
+cluster: "full-stack-developer"
 tags:
 - 4geeks
 ---

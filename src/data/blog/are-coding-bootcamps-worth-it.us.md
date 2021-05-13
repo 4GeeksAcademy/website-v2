@@ -11,6 +11,7 @@ image_alt: "students learning code in a bootcamp"
 
 categories:
 - coding bootcamps
+cluster: "coding-bootcamps"
 lang: us
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
