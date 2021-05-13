@@ -1,6 +1,6 @@
 meta_info:
   slug: alianzas
-  title: "Aliados 4Geeks Academy"
+  title: "Aliados de 4Geeks Academy"
   description: "Conoce los aliados de 4Geeks Academy, empresas locales y globales que confían en nosotros y contratan a nuestros estudiantes"
   image: ""
   keywords: "Aliados 4Geeks, Academy"
@@ -12,16 +12,15 @@ header:
   title: "COMPAÑÍAS QUE CONFIAN EN NOSOTROS Y CONTRATAN A NUESTROS ESTUDIANTES"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: ""
-  paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
+  paragraph: "Estoy impresionado con el nivel de comprensión que tienen los estudiantes de 4Geeks, mi contratación terminó convirtiéndose en líder de equipo - CodeNinjas."
   button: HAZTE HIRING PARTNER
 
 form:
-  title: "Join our partnership network"
-  paragraph: "
-  Nuestros aliados forman una parte fundamental en la Academia y nos ayudan a impulsar la carrera profesional de nuestros alumnos. 
-
-Si tienes una empresa de tecnología y quieres contratar jovenes talentos, ser socio y impulsos de código y desarrollo, etc. Te invitamos a formar parte de esta gran familia. Llena el siguiente formulario y te contactaremos!
-  "
+  title: "Contáctanos y encuentra al talento adecuado para tu empresa"
+  paragraph: "Contáctenos y lo conectaremos directamente con los candidatos adecuados que se gradúan de 4Geeks Academy todos los días.
+  Nuestros graduados tienen éxito en sus propios negocios, startups y grandes empresas por igual.
+  Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y con visión de futuro."
+  
 footer_data:
   image: "../../../static/images/partner/partnership.png"
   alt: ""
