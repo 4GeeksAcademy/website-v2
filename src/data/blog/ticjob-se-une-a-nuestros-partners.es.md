@@ -8,6 +8,7 @@ image: "/images/blog/Blog_post.png"
 image_alt: ""
 categories:
 - Partnerships
+cluster: "partnerships"
 tags:
 - 4geeks
 - ticjob

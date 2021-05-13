@@ -10,6 +10,7 @@ image: https://github.com/marcelovaldebenito/website-v2/blob/master/static/image
 image_alt: "student typing how the pandemic has changed the coding industry"
 categories:
 - coding bootcamps
+cluster: "coding-bootcamps"
 lang: us
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true

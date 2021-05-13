@@ -90,55 +90,7 @@ const Location = ({data, pageContext, yml}) => {
 
       </Div>
       <Div height="auto" width="100%" gridColumn_tablet="7 / 15" style={{position: "relative"}}>
-        {/* <Circle
-          color="blue"
-          width="53px"
-          height="53px"
-          bottom="30px"
-          left="0"
-          zIndex="1"
-        />
-        <Circle
-          color="yellow"
-          width="200px"
-          height="200px"
-          top="50px"
-          left="-5%"
-          opacity="0.2"
-        />
-        <Circle
-          color="yellow"
-          width="21px"
-          height="21px"
-          top="60px"
-          left="220px"
-        />
-        <Circle
-          color="yellow"
-          width="21px"
-          height="21px"
-          top="160px"
-          right="120px"
-          zIndex="1"
-        />
-        <Circle
-          color="blue"
-          width="9px"
-          height="9px"
-          top="100px"
-          left="10%"
-        />
 
-        <Circle
-          color="blue"
-          width="57px"
-          height="57px"
-          top="40px"
-          right="10%"
-          opacity="0.4"
-        /> */}
-        {/* <Div style={{position: "absolute", background: "#C7F3FD", width: "71%", height: "192px", top: "-24px", left: "97px", borderRadius: "3px"}}></Div>
-        <Div style={{position: "absolute", background: "#FFB718", width: "256px", height: "174px", bottom: "-25px", right: "18px", borderRadius: "3px"}}></Div> */}
         <StyledBackgroundSection
           height={`495px`}
           image={yml.header.image.childImageSharp.fluid}

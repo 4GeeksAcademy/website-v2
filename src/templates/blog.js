@@ -34,7 +34,7 @@ const Blog = ({data, pageContext, yml}) => {
                 <Div flexDirection="Column" margin="0 0 87px 0">
                     {
                         item.node.frontmatter.image &&
-                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
                             <LazyLoad height={10} scroll={true} once={true}>
                                 <RoundImage
                                     url={item.node.frontmatter.image}
@@ -56,7 +56,7 @@ const Blog = ({data, pageContext, yml}) => {
 
                     {/* Boton */}
                     <Div flexDirection_md="row" flexDirection="column" justifyContent="left">
-                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
                             <Button width="fit-content"
                                 style={{outlineStyle: "solid", outlineColor: Colors.gray, outlineWidth: "thin"}}
                                 background={Colors.white}
@@ -68,14 +68,14 @@ const Blog = ({data, pageContext, yml}) => {
                                 letterSpacing="0.05em"
                                 margin="0 0 25px 0"
                                 textColor="#3A3A3A">
-                                full stack
-                </Button>
+                                {item.node.frontmatter.cluster || "4Geeks"}
+                            </Button>
                         </Link>
                     </Div>
 
                     {/* Titulo */}
                     <Div>
-                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
                             <H4
                                 textAlign="left"
                                 align_sm="left"
@@ -108,9 +108,9 @@ const Blog = ({data, pageContext, yml}) => {
                             color="#0097cd"
                             margin="0 0 0 0"
                             textAlign="left">
-                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
-                                Leer artículo &gt;
-                </Link>
+                            <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                                {`Read more >`}
+                            </Link>
                         </Paragraph>
                     </Div>
 
@@ -175,7 +175,8 @@ const Blog = ({data, pageContext, yml}) => {
 
                                         colorHover={Colors.blue}
 
-                                        onClick={() => getPostsByTag(topic)}>
+                                    // onClick={() => getPostsByTag(topic)}
+                                    >
                                         {topic}
                                     </Button>
                                 </>
@@ -191,12 +192,12 @@ const Blog = ({data, pageContext, yml}) => {
     //---------------------------------------------------
 
     //Navigate to UI Posts by Tag 
-    const getPostsByTag = (tag) => {
+    const getPostsByCluster = (cluster) => {
 
         // 'es' or 'us'
         let lang = pageContext.lang;
 
-        navigate('/' + lang + '/blog/tag/' + tag);
+        navigate('/' + lang + '//' + tag);
 
     }
 
@@ -468,7 +469,7 @@ query BlogQuery($file_name: String!, $lang: String!) {
                 lang
                 featured
                 status
-                
+                cluster
                 }
             }
         }
@@ -494,6 +495,7 @@ query BlogQuery($file_name: String!, $lang: String!) {
                     excerpt
                     featured
                     status
+                    cluster
                 }
                 fields{
                     lang

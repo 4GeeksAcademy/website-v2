@@ -11,7 +11,7 @@ title: Learn to Code at Miami Dade College
 image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/Miami-Dade.jpg"
 image_alt: ""
 wordpress_id: 1996
-
+cluster: "learn-to-code"
 post_translations:
 - pll_5703862f49f64
 tags:

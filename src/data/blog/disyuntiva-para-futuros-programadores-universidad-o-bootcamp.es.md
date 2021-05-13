@@ -13,6 +13,7 @@ wordpress_id: 1159
 categories:
 - Aprendiendo a desarrollar
 - Por qué aprender a programar
+cluster: "aprender-a-programar"
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false

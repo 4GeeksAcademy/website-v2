@@ -9,6 +9,8 @@ image: "https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/bl
 image_alt: "two students learning to code"
 slug: que-significa-ser-full-stack
 title: ¿Qué significa ser Full Stack? 
+cluster: "learn-to-code"
+lang: "es"
 ---
 
 
