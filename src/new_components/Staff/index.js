@@ -63,7 +63,7 @@ const Staff = props => {
                             <Div key={index} flexDirection="column" alignItems="center">
                                 <Div minWidth="184px" height="184px" margin="0 10px 0 0" alignItems="center">
                                     <Img
-                                        fluid={item.image.childImageSharp.fluid}
+                                        fluid={item.image && item.image.childImageSharp.fluid}
                                         style={{height: "100%", minWidth: "100%", backgroundSize: `cover`}}
                                     />
                                 </Div>
