@@ -124,14 +124,14 @@ staff:
     linkdin: "https://www.linkedin.com/in/anabelensalas/"
     twitter: "https://twitter.com/anabelensalas"
     website: ""
-    image: "../../../../static/images/staff/ana.jpg"
+    image: "../../../../static/images/staff/ana.png"
     age: 28
     interests:
       - Music
     coding_skills:
       - Excel
     location: ""
-    name: "Mafe"
+  - name: "Mafe"
     last_name: "Castro"
     nick_name: ""
     slug: "mafe-castrp"
@@ -167,4 +167,3 @@ staff:
     coding_skills:
       - Javascript and Python
     location: ""
-
