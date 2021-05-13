@@ -38,7 +38,7 @@ const Tags = ({pageContext, data, yml}) => {
     }
     const blog_posts = OrganizeColumns(edges);
     const tagHeader = `${yml.about.heading} "${pageContext.tag}" (${totalCount})`;
-    const clusterTitle = pageContext && pageContext.cluster.replace("-", " ")
+    const clusterTitle = pageContext.cluster && pageContext.cluster.replace("-", " ")
     return (
         <>
             <GridContainerWithImage padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 24px 0">
