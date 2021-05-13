@@ -11,6 +11,7 @@ import TechsWeTeach from '../new_components/TechsWeTeach';
 import GeeksInfo from '../new_components/GeeksInfo';
 import OurPartners from '../new_components/OurPartners';
 import BaseRender from './_baseLayout'
+import Icon from '../new_components/Icon'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
 import Testimonials from '../new_components/Testimonials';
@@ -18,7 +19,7 @@ import Badges from '../new_components/Badges';
 import PricesAndPayment from '../new_components/PricesAndPayment';
 import {Circle} from '../new_components/BackgroundDrawing'
 import LeadForm from '../new_components/LeadForm';
-import Modal from '../components/Modal';
+import Modal from '../new_components/Modal';
 
 
 const Program = ({data, pageContext, yml}) => {
@@ -30,7 +31,13 @@ const Program = ({data, pageContext, yml}) => {
 
   const course_type = "machine_learning"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
   const hiring = data.allPartnerYaml.edges[0].node;
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
@@ -70,15 +77,35 @@ const Program = ({data, pageContext, yml}) => {
       <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
       <Circle color="yellow" width="160px" height="160px" top="0" right="-120px" opacity="0.2" display="inline" display_tablet="none" />
       <Circle color="red" width="25px" height="25px" top="60px" right="30px" display="inline" display_tablet="none" />
-      <Div flexDirection_md="row" flexDirection="column" justifyContent="center">
+      <Div flexDirection_tablet="row" alignItems="center" flexDirection="column" justifyContent="center" margin_tablet="0 0 50px 0">
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
           <Button variant="full" width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button onClick={handleOpen} variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        {/* <Button onClick={handleOpen} variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
         {/* <Button variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
       </Div>
+      <Modal
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        open={open}
+        onClose={handleClose}
+      >
+        <LeadForm
+          style={{marginTop: "50px"}}
+          heading={yml.button.syllabus_heading}
+          motivation={yml.button.syllabus_motivation}
+          sendLabel={syllabus_button_text}
+          formHandler={requestSyllabus}
+          handleClose={handleClose}
+          lang={pageContext.lang}
+          data={{
+            course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
+          }}
+        />
+      </Modal>
       <Badges lang={pageContext.lang} />
     </Header>
     <OurPartners background={Colors.verylightGray} images={hiring.partners.images} marquee></OurPartners>

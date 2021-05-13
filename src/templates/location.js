@@ -100,7 +100,7 @@ const Location = ({data, pageContext, yml}) => {
       </Div>
     </GridContainerWithImage>
 
-    <Badges lang={pageContext.lang} background={Colors.lightGray} margin="0 0 57px 0" padding="27px 17px 50px 17px" padding_tablet="80px 0 100px 0" paragraph={yml.badges.paragraph} />
+    <Badges lang={pageContext.lang} background={Colors.lightGray} margin="0 0 57px 0" padding="27px 17px 50px 17px" padding_tablet="80px 0 100px 0" />
     <GridContainer columns_tablet="12" padding_tablet="60px 0 77px 0" padding="40px 17px">
       <Div gridColumn_tablet="1 / 4" ><H2 textAlign="left">{images.images_box.heading}</H2></Div>
       <Div flexDirection="column" gridColumn_tablet="5 / 13">
