@@ -37,8 +37,8 @@ Since 2017 we have been growing really fast. We have graduated over 700 students
       - title: ""
         content: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better." 
         image_section:
-          # - image: "../../../static/images/outcomes/outcomes.png"
-          - image: 
+          # - image: 
+          - image: "../../../static/images/outcomes/outcomes.png"
             image_paragraph: "test"
   - title: "Student Facts"
     ref: "student_facts"

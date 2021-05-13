@@ -7,6 +7,7 @@ import Icon from '../new_components/Icon'
 import {Charts} from '../new_components/Chart'
 import BaseRender from './_baseLayout'
 import ChooseProgram from '../new_components/ChooseProgram'
+import { StyledBackgroundSection } from '../components/Styling';
 
 const SVGImage = () =>
 <svg width="510" height="295" viewBox="0 0 510 295" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +107,7 @@ const Outcomes = ({data, pageContext, yml}) => {
             />
 
             <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 " >
-                <Div gridArea="1/2/1/9" flexDirection="column"  >
+                <Div gridArea="1/2/1/12" flexDirection="column"  >
                     {yml.sections.filter(section => section.title !== "").map((section, i) => {
                         return (
                             <>
@@ -138,15 +139,28 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                     Array.isArray(m.image_section) && m.image_section.map((m, i) => {
                                                         return (
                                                             <React.Fragment key={i}>
-                                                                {/* <Img
+                                                                {/*
+                                                                // probably it's not necesary, it returns warning on SSR
+                                                                
+                                                                <Img
                                                                     style={{height: "100%"}}
                                                                     imgStyle={{objectFit: "contain"}}
-                                                                    loading="eager"
+                                                                    // loading="eager"
                                                                     style={{margin: "38px 0"}}
-                                                                    fadeIn={false}
-                                                                    // alt={l.name}
-                                                                    fluid={m.image != undefined && m.image.childImageSharp.fluid}
+                                                                    // fadeIn={false}
+                                                                    alt={section.title}
+                                                                    fluid={m.image.childImageSharp.fluid}
                                                                 /> */}
+                                                                <StyledBackgroundSection
+                                                                    margin="30px 0"
+                                                                    minHeight={`100px`}
+                                                                    height={`255px`}
+                                                                    width="100%"
+                                                                    image={m.image && m.image.childImageSharp.fluid}
+                                                                    bgSize={`contain`}
+                                                                />
+
+
                                                                 <Paragraph justifyContent="center" padding="50px 0 0" display="none" display_tablet="flex" textAlign="left">{m.image_paragraph}</Paragraph>
                                                                 <GridContainer columns_tablet="3" justifyContent="center" justifyContent_tablet="center" gridTemplateColumns_tablet="3">
                                                                     {m.chart &&
@@ -171,7 +185,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                             </>)
                     })}
                 </Div>
-                <Div gridArea="1/9/1/13" gridColumn_tablet="12 ​/ span 12" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
+                <Div gridArea="1/9/1/13" gridColumn_tablet="1 ​/ span 1" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
                     <Div flexDirection="column" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", position: "sticky", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">
                         <Div margin="25px 0px 0" flexDirection="column" justifyContent="space-around" gap="8px">
                         {
@@ -232,7 +246,13 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                     title
                     content
                     image_section{
-
+                        image{
+                            childImageSharp {
+                                fluid(maxWidth: 500, quality: 100){
+                                    ...GatsbyImageSharpFluid_withWebp
+                                }
+                            }
+                        }
                         image_paragraph  
                         chart
                     }
