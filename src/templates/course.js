@@ -10,7 +10,7 @@ import {SessionContext} from '../session'
 import ProgramDetails from '../new_components/ProgramDetails';
 import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
 import PricesAndPayment from '../new_components/PricesAndPayment';
-import Modal from '../components/Modal';
+import Modal from '../new_components/Modal';
 import TypicalDay from '../components/TypicalDay';
 import LeadForm from '../new_components/LeadForm';
 import AlumniProjects from '../new_components/AlumniProjects';
