@@ -112,6 +112,26 @@ staff:
     coding_skills:
       - Javascript
     location: ""
+  - name: "Steven"
+    last_name: "Granger"
+    nick_name: ""
+    slug: "steven-granger"
+    job_title: "Head of partnership & Career Support"
+    bio: "Over 12 years of recruiting experience with 20 years of career coaching/ leadership development."
+    github: ""
+    linkdin: "https://www.linkedin.com/in/steven-granger-4geeks-academy-miami/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/steven.jpg"
+    age:
+    interests:
+      - Soccer
+      - Music
+      - Movies
+      - Travel
+    coding_skills:
+      - Javascript
+    location: ""
   - name: "Ana Belen"
     last_name: "Salas"
     nick_name: ""
@@ -122,7 +142,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/anabelensalas/"
     twitter: "https://twitter.com/anabelensalas"
     website: ""
-    image: "../../../../static/images/staff/ana.jpg"
+    image: "../../../../static/images/staff/ana.png"
     age: 33
     interests:
       - Music
