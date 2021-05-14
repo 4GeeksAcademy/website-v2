@@ -10,11 +10,14 @@ import {GridContainer, Div, GridContainerWithImage} from '../new_components/Sect
 
 //Functional Component: Blog
 const Blog = ({data, pageContext, yml}) => {
-
+    const langSwitcher = {
+        es: "blog-en-espanol",
+        us: "blog"
+    }
     //Banner (Info+ Image)
     const Banner = () => {
         return (
-            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 24px 0">
+            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 0 0">
                 <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
                     <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
@@ -37,7 +40,6 @@ const Blog = ({data, pageContext, yml}) => {
     const Post = (item, i) => {
         return (
             <>
-
                 {/* Imagen */}
                 <Div flexDirection="Column" margin="0 0 87px 0">
                     {
@@ -49,14 +51,8 @@ const Blog = ({data, pageContext, yml}) => {
                                     bsize="cover"
                                     border="0px"
                                     position="center"
-
                                     width="100%"
                                     height="329px"
-                                    margin="0 0 25px 0"
-                                    h_lg="140px"
-                                    h_md="120px"
-                                    h_sm="200px"
-                                    h_xs="150px"
                                 />
                             </LazyLoad>
                         </Link>
@@ -65,18 +61,16 @@ const Blog = ({data, pageContext, yml}) => {
                     {/* Boton */}
                     <Div flexDirection_md="row" flexDirection="column" justifyContent="left">
                         <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                            <Button width="fit-content"
-                                style={{outlineStyle: "solid", outlineColor: Colors.gray, outlineWidth: "thin"}}
-                                background={Colors.white}
-                                fontSize="13px"
-                                fontWeight="700"
-                                height="16px"
-                                lineHeight="16px"
-                                padding="2px 15px 2px 15px"
-                                letterSpacing="0.05em"
-                                margin="0 0 25px 0"
-                                textColor="#3A3A3A">
-                                {item.node.frontmatter.cluster || "4Geeks"}
+                            <Button
+                                variant="outline"
+                                border={`1px solid ${Colors.darkGray}`}
+                                color={Colors.darkGray}
+                                font='"Lato", sans-serif'
+                                margin="20px 10px 20px 0"
+                                pointer
+                                textColor={Colors.darkGray}
+                                fontSize={"13px"}>
+                                {item.node.frontmatter.cluster.replace("-", " ") || "4Geeks"}
                             </Button>
                         </Link>
                     </Div>
@@ -158,35 +152,20 @@ const Blog = ({data, pageContext, yml}) => {
                             yml.topics.map((topic, i) => {
 
                                 return <>
-                                    <Button width="fit-content"
-                                        style={{
-                                            outlineStyle: "solid",
-                                            outlineColor: Colors.gray,
-                                            outlineWidth: "thin",
-                                            borderRadius: "0%",
-                                        }}
-                                        textColor="#3A3A3A"
-                                        background={Colors.lightGray}
-
-                                        fontSize="13px"
-                                        fontWeight="700"
-                                        height="40px"
-                                        cursor="pointer"
-                                        letterSpacing="0.05em"
-                                        margin="0px 10px 25px 10px"
-                                        display="inline-block"
-                                        font-family="Lato"
-
-                                        lineHeight="16px"
-                                        padding="0 10px 0 10px"
-                                        textTransform="uppercase"
-
-                                        colorHover={Colors.blue}
-
-                                    // onClick={() => getPostsByTag(topic)}
-                                    >
-                                        {topic}
-                                    </Button>
+                                    <Link to={`/${pageContext.lang}/${langSwitcher[pageContext.lang]}/${topic}`}>
+                                        <Button
+                                            variant="outline"
+                                            border={`1px solid ${Colors.darkGray}`}
+                                            color={Colors.darkGray}
+                                            font='"Lato", sans-serif'
+                                            margin="20px 10px 0 0"
+                                            pointer
+                                            textColor={Colors.darkGray}
+                                            fontSize={"13px"}
+                                        >
+                                            {topic.replace("-", " ")}
+                                        </Button>
+                                    </Link>
                                 </>
                             })
                         }

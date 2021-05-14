@@ -20,13 +20,9 @@ header:
 
 question: "¿Que te interesa?"
 topics:
-  - Full Stack
-  - Software Engineer
-  - Machine Learning
-  - Learn To Program
-  - Career Growth
-  - Coding Bootcamps
-  - Trends & Tech
+  - full-stack-developer
+  - learn-to-code
+  - coding-bootcamps
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."
