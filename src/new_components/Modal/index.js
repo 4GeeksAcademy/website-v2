@@ -15,6 +15,7 @@ const Close = styled.div`
 
 const ModalBox = styled.div`
     position: fixed;
+    padding: ${props => props.padding};
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -28,7 +29,7 @@ const ModalBox = styled.div`
 //display: ${props => props.open === true ? "inline-block" : "none"};
 const Modal = (props) => {
     return (
-        <ModalBox open={props.open}>
+        <ModalBox padding={props.boxPadding} open={props.open}>
             <Close onClick={props.onClose}>&#xd7;</Close>
             {props.children}
         </ModalBox>
