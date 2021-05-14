@@ -42,6 +42,7 @@ news:
 info_box:
   heading: "Find us in Madrid, Spain."
   address: "Calle Edison, 3, 28006 Madrid, Spain"
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1247.1075965710384!2d-3.6808452145265083!3d40.43988879999685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb1a742c609c68c4b!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621006660711!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   phone: "+34 910 86 69 83"
   email: "madrid@4GeeksAcademy.com"

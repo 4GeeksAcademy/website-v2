@@ -1,8 +1,5 @@
-import React, {useState, useEffect, useContext, useRef} from 'react';
-import {Link, Anchor} from "../components/Styling/index"
-import Card from '../components/Card'
+import React, {useState, useEffect, useContext, useRef, Suspense, lazy} from 'react';
 import ChooseProgram from '../new_components/ChooseProgram'
-import News from '../new_components/News'
 import Badges from '../new_components/Badges'
 import Loc from '../new_components/Loc'
 import OurPartners from '../new_components/OurPartners'
@@ -15,14 +12,12 @@ import {Div, Row, Column, Wrapper, Container, GridContainerWithImage, Grid, Grid
 import {Title, H1, H2, H4, H3, Span, Paragraph, Separator} from '../new_components/Heading'
 import {Button, Colors, Small, Img, StyledBackgroundSection} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
-import {Circle} from '../new_components/BackgroundDrawing'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
-import {requestSyllabus} from "../actions";
-// import Icon from '../components/Icon'
-import LeadForm from '../components/LeadForm';
-import Modal from '../components/Modal';
-import Why4Geeks from '../components/Why4Geeks';
+
+// const MapFrame = loadable(() => import('../new_components/MapFrame'), {
+//   fallback: <div>Loading...</div>
+// })
+
 
 const imagePositions = {
   "1": "1/1/3/7",
@@ -31,12 +26,27 @@ const imagePositions = {
   "4": "4/1/5/4",
   "5": "3/4/5/13"
 }
+
+const MapFrame = lazy(() => import('../new_components/MapFrame'));
+
 const Location = ({data, pageContext, yml}) => {
   const {lang} = pageContext;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
   const images = data.allLocationYaml.edges[0].node;
   const [cohorts, setCohorts] = React.useState([]);
+  const [ready, setReady] = useState(false)
+
+
+  useEffect(() => {
+    process.nextTick(() => {
+      if(globalThis.window ?? false) {
+        setReady(true)
+      }
+    })
+    // setTimeout(() => { setReady(true) }, 3000)
+  }, [])
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -141,6 +151,19 @@ const Location = ({data, pageContext, yml}) => {
     <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} />
     <Loc lang={pageContext.lang} locations={data.test.edges} />
     <Staff lang={pageContext.lang} />
+
+{/* IFRAME map */}
+    <Div>
+      {
+        !ready ? null : (
+          // <div>Loading...</div>
+          <Suspense fallback={() => 'loading'}>
+              <MapFrame src={ready ? yml.info_box.iframeMapUrl : "about:blank"} width="100%" height="492px"/>
+          </Suspense>
+        ) 
+      }
+    </Div>
+
     {/* <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} /> */}
     {/* <Container
       variant="fluid"
@@ -373,6 +396,7 @@ export const query = graphql`
                 heading
                 map_url
                 address
+                iframeMapUrl
                 phone
                 email
                 contact_heading
