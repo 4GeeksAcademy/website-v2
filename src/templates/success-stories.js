@@ -66,7 +66,7 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                     <Div
                         // padding="19px 0 0 25px"
                         padding_tablet="0"
-                        width_tablet="100%"
+                        width="100%"
                         // height_tablet="310px"
                         alignSelf="baseline"
                     >
@@ -77,6 +77,7 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                             id={video && video}
                             width='100%'
                             width_tablet="100%"
+                            height={"82px"}
 
                         />
                     </Div>
@@ -92,14 +93,14 @@ const featuredPositions = [{
     height: "378px",
     height_tablet: "",
     size: "small",
-    className: "react-player-testimonials-small"
+    className: "react-player-testimonials-small "
 },
 {
     position: "5 / 13",
     height: "378px",
     height_tablet: "",
     size: "big",
-    className: "react-player-testimonials-big"
+    className: "react-player-testimonials-big "
 }]
 
 const defaultPositions = [
@@ -109,7 +110,7 @@ const defaultPositions = [
         height: "378px",
         height_tablet: "100%",
         size: "small",
-        className: "react-player-testimonials-small"
+        className: "react-player-testimonials-small "
     },
     {
         position: "5 / 9",
@@ -125,7 +126,7 @@ const defaultPositions = [
         height: "auto",
         height_tablet: "",
         size: "big",
-        className: "react-player-testimonials-big"
+        className: "react-player-testimonials-big "
     },
     {
         position: "1 / 9",
@@ -139,7 +140,7 @@ const defaultPositions = [
         position: "9 / 13",
         row_position: "6 / 9",
         height: "378px",
-        height_tablet: "",
+        height_tablet: "auto",
         size: "small",
         className: "react-player-testimonials-small"
     },
