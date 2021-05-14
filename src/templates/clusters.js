@@ -88,18 +88,17 @@ const Tags = ({pageContext, data, yml}) => {
                                     {/* Boton */}
                                     <Div flexDirection_md="row" flexDirection="column" justifyContent="left">
                                         <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                                            <Button width="fit-content"
-                                                style={{outlineStyle: "solid", outlineColor: Colors.gray, outlineWidth: "thin"}}
-                                                background={Colors.white}
-                                                fontSize="13px"
-                                                fontWeight="700"
-                                                height="16px"
-                                                lineHeight="16px"
-                                                padding="2px 15px 2px 15px"
-                                                letterSpacing="0.05em"
-                                                margin="0 0 25px 0"
-                                                textColor="#3A3A3A">
-                                                {item.node.frontmatter.cluster || "4Geeks"}
+                                            <Button
+                                                variant="outline"
+                                                border={`1px solid ${Colors.darkGray}`}
+                                                color={Colors.darkGray}
+                                                font='"Lato", sans-serif'
+                                                margin="20px 10px 20px 0"
+                                                pointer
+                                                textColor={Colors.darkGray}
+                                                fontSize={"13px"}>
+                                                {item.node.frontmatter.cluster && item.node.frontmatter.cluster.replace("-", " ") || "4Geeks"}
+
                                             </Button>
                                         </Link>
                                     </Div>
