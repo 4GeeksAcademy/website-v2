@@ -9,7 +9,7 @@ with:
   - name: "Hernán García"
     title: "I got offers from companies I wasn't expecting"
     description: "It took Hernan one month to get a job in tech once he started applying."
-    image: ../../../../static/images/pablo-perez.png
+    image: ../../../../static/images/staff/hernan.png
     alt: ""
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -23,7 +23,7 @@ with:
   - name: "Luisa Glum"
     title: "The school was as invested as I was"
     description: "Luisa paid the program after graduation, she applied to ISA (Income Sharing Agreement)."
-    image: ../../../../static/images/marco-rojas.png
+    image: ../../../../static/images/staff/luisa.png
     alt: ""
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -37,7 +37,7 @@ with:
   - name: "Joao Henrique"
     title: "You'll always have support from the  Academy"
     description: "Joao tells his experience getting coding mentorships while studying, after graduation and even at his jobs."
-    image: ../../../../static/images/luisa-barrios.png
+    image: ../../../../static/images/staff/joao.png
     alt: ""
     video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
