@@ -59,14 +59,14 @@ const Awards = ({data, pageContext, yml}) => {
                     /> */}
                 </Div>
             </GridContainer>
-            {/* <Grid background={Colors.lightYellow} margin="0 0 58px 0" margin_md="0 0 78px 0"> */}
+            {/* <Grid background={Colors.lightYellow} margin="0 0 58px 0" margin_tablet="0 0 78px 0"> */}
             <Badges lang={pageContext.lang} background={Colors.lightYellow} paragraph={yml.badges.paragraph} padding="60px 0" padding_tablet="68px 0" margin="0 0 58px 0" margin_tablet="0 0 78px 0" />
             {/* </Grid> */}
-            <GridContainer padding="17px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0">
-                <Div gridArea_md="1/3/1/11" flexDirection="column"  >
+            <GridContainer padding="17px" columns="1" rows="1" columns_tablet="12" gridGap_tablet="11px" gridGap="0">
+                <Div gridArea_tablet="1/1/1/13" flexDirection="column"  >
                     {Array.isArray(yml.awards_list) && yml.awards_list.map((m, i) => {
                         return (
-                            <Div key={i} flexDirection="column" flexDirection_md="row" margin="0 0 75px 0" >
+                            <Div key={i} flexDirection="column" flexDirection_tablet="row" margin="0 0 75px 0" >
                                 <Img
                                     style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
                                     imgStyle={{objectFit: "contain"}}
@@ -76,11 +76,11 @@ const Awards = ({data, pageContext, yml}) => {
                                     // alt={l.name}
                                     fluid={m.image.childImageSharp.fluid}
                                 />
-                                <Div flexDirection="column">
-                                    <H3 textAlign_md="left" margin="49px 0 0 " margin_md="0">{m.title}</H3>
-                                    <Div background="#c4c4c4" height=".5px" margin="35px 0 25px 0" />
+                                <Div flexDirection="column" width="100%">
+                                    <H3 textAlign_tablet="left" margin="49px 0 0 " margin_tablet="0">{m.title}</H3>
+                                    <Div background="#c4c4c4" height=".5px" margin="35px 0 25px 0" width="100%" />
                                     {m.paragraph.split('\n').map((p, i) =>
-                                        <Paragraph textAlign_md="left" margin="10px 0" key={i}>{p}</Paragraph>
+                                        <Paragraph textAlign_tablet="left" margin="10px 0" key={i}>{p}</Paragraph>
                                     )}
                                 </Div>
                             </Div>
