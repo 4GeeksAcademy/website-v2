@@ -8,8 +8,8 @@ meta_info:
 
 header_data:
   tagline: Coding Bootcamp
-  title: IMPULSA TU CARRERA GRACIAS A LA PROGRAMACIÓN
-  sub_heading: Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo.
+  title: "Impulsa tu carrera gracias a la programación"
+  sub_heading: "Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo."
   image: "../../../static/images/bg/main-bg.jpg"
 
 why_4geeks:
@@ -24,7 +24,7 @@ button:
   button_link: "#programs"
 ## BADGES SECTION
 badges:
-  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
 
 ## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
 choose_program:
@@ -33,9 +33,9 @@ choose_program:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "¿QUÉ HACE QUE ESTE PROGRAMA DESTAQUE?"
+  heading: "¿Qué have que este programa destaque?"
   sub_heading: "En pocas palabras, la forma más simple de comparar coding bootcamps"
-  sub_heading_link: ""
+  sub_heading_link: "geeks-vs-others"
 
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:
