@@ -11,74 +11,73 @@ meta_info:
 
 seo_title: "resultados"
 header:
-  title: "4Geeks Informe de resultados de la academia"
+  title: "4Geeks Informe de resultados de la Academia"
   paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar."
   image: 
   image_alt: ""
 sections:
-  - title: "Our Statement"
+  - title: "Nuestra Declaración"
     ref: "our_statement"
-    paragraph: "The Coding Bootcamp industry has been growing tremendously in the last few years. Big cities are gathering the majority of the numbers, and also new tech hubs (such as Miami) are rising
-the occasion and growing to meet the challenge.
+    paragraph: "La industria de los Bootcamp de codificación ha crecido enormemente en los últimos años. Las grandes ciudades están reuniendo la mayoría de los números, y también están aumentando los nuevos centros tecnológicos (como Miami).
+la ocasión y creciendo para afrontar el desafío.
 
-4Geeks Academy is Licensed by the Florida Department of Education; we also have a long lasting business relationship with Miami Dade College, and we have been awarded and
-recognized many times for our Syllabus, methodologies and outcomes. 
+4Geeks Academy está autorizada por el Departamento de Educación de Florida; también tenemos una relación comercial duradera con Miami Dade College, y hemos sido galardonados y
+reconocidos muchas veces por nuestro plan de estudios, metodologías y resultados.
 
-Since 2017 we have been growing really fast. We have graduated over 700 students across 6 different campuses and more than 15 on going programs.
-    "
+Desde 2017 hemos estado creciendo muy rápido. Hemos graduado a más de 700 estudiantes en 6 campus diferentes y más de 15 programas en curso."
+
     stats: 
       - stat: "+ 700"
-        content: "Graduates"
-      - stat: "2 Languages"
-        content: "Syllabus and Programs"
-      - stat: "5 Cities"
-        content: "Miami, Madrid, Santiago de Chile, Caracas and more to come"
+        content: "Graduados"
+      - stat: "2 Idiomas"
+        content: "Syllabus y Programas"
+      - stat: "5 Ciudades"
+        content: "Miami, Madrid, Santiago de Chile, Caracas y mas por venir."
     sub_sections:
       - title: ""
-        content: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better." 
+        content: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar." 
         image_section:
           # - image: 
           - image: "../../../static/images/outcomes/outcomes.png"
             image_paragraph: "test"
-  - title: "Student Facts"
+  - title: "Datos de los Estudiantes"
     ref: "student_facts"
-    paragraph: "THere are the results of 4GA operations (excluding programs launched together with Miami Dade College) from March 2018 to March 2020.
+    paragraph: "Estos son los resultados de las operaciones 4GA (excluidos los programas lanzados junto con Miami Dade College) desde marzo de 2018 hasta marzo de 2020.
 
-The programs included are the Full-Stack Software Development Program taught through Part-time and Full-Time methodologies.
-"
+Los programas incluidos son el Programa de desarrollo de software Full-Stack que se imparte a través de metodologías de medio tiempo y tiempo completo."
+
     stats: 
       - stat: "210"
-        content: "Students considered for
-the purpose of this Report"
+        content: "Estudiantes fueron considerados para este reporte"
       - stat: "80%"
-        content: "Our students choose Part-time
-Programs. Ony 20% pursue a
-Full-Time program."
+        content: "Nuestros estudiantes eligen un 
+programa Part-Time. Solo el 20% persigue una
+Programa de tiempo completo."
     sub_sections:
       - title: "PART - TIME"
-        content: "We were founded under a PT vision and we keep showing our main strength with Part- time Education; the new way of learning and achieving (upskill) a new career." 
+        content: "Fuimos fundados bajo una visión de PT y seguimos mostrando nuestra principal fortaleza con la Educación a tiempo parcial; la nueva forma de aprender y lograr (mejorar) una nueva carrera." 
         image_section:
           - image: 
             image_paragraph: ""
-      - title: "QTY OF STUDENTS"
-        content: "This report states the results for the last 24 months of operation in the US Campus. 200 students considered" 
+      - title: "Cantidad de Estudiantes"
+        content: "Este informe presenta los resultados de los últimos 24 meses de funcionamiento en el campus de EE. UU. 200 estudiantes considerados" 
         image_section:
           - image: 
             image_paragraph: ""
   - title: "Job Placement"
     ref: "job_placement"
-    paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days.
-    "
+    paragraph: "Nuestros estudiantes normalmente necesitan alrededor de 100 días después de la graduación para conseguir un trabajo en el campo. Hemos tenido estudiantes que consiguen un trabajo incluso antes de terminar el programa, o dentro de los próximos 15 días a partir del Día de lanzamiento. El promedio es de 94 días."
+    
     stats: 
       - stat: "+ 700"
-        content: "Graduates"
-      - stat: "2 Languages"
-        content: "Syllabus and Programs"
+        content: "Graduados"
+      - stat: "2 Idiomas"
+        content: "Syllabus y Programas"
       - stat: "5 Cities"
-        content: "Miami, Madrid, Santiago de Chile, Caracas and more to come"
+        content: "Miami, Madrid, Santiago de Chile, Caracas y más por venir"
     sub_sections:
       - title: ""
-        content: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better." 
+        content: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar." 
         image_section:
           - image: 
             image_paragraph: ""
