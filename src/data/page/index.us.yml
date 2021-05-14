@@ -10,7 +10,7 @@ header_data:
   tagline: Coding Bootcamp
   title: Empower Your Life With Coding Skills
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
-  image: "../../../static/images/bg/main.png"
+  image: "../../../static/images/bg/main-home-bg.png"
 
 news:
   heading: "Read about this coding bootcamp in the news..."

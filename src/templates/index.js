@@ -91,8 +91,8 @@ const Home = (props) => {
   return (
     <>
       {/* <MegaMenu /> */}
-      <GridContainerWithImage columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" position="relative">
-        <Circle
+      <GridContainerWithImage padding_tablet="0" columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" position="relative">
+        {/* <Circle
           color="blue"
           width="50px"
           height="50px"
@@ -149,7 +149,7 @@ const Home = (props) => {
           top="150px"
           right="-5%"
           opacity="0.2"
-        />
+        /> */}
 
         <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" alignItems="center" alignItems_tablet="start">
           <CityH1 yml={yml} />
@@ -180,7 +180,7 @@ const Home = (props) => {
         </Div>
         <Div display="none" display_tablet="flex" height="auto" width="100%">
           <StyledBackgroundSection
-            height={`623px`}
+            height={`723px`}
             width="100%"
             image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
             bgSize={`contain`}
