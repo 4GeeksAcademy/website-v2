@@ -51,23 +51,23 @@ export default ({location, lang, limit, filter, padding, padding_tablet, height,
     return null;
   }
   return (
-    <Fragment github="/components/news" >
-      <Div margin="35px 0" margin_tablet="40px 0 0 0" className="badge-slider" padding={padding} padding_tablet={padding_tablet} display="flex" height="auto" justifyContent={justifyContent} justifyContent_md="between">
-        {Array.isArray(locationNews) && locationNews.map((l, i) => {
-          return (
-            // <Div key={i} background={Colors.blue}>test</Div>
-            <Img
-              key={i}
-              style={{height: `${height}`, width: `${width}`, minWidth: "60px", margin: "0"}}
-              imgStyle={{objectFit: "contain"}}
-              alt={l.name}
-              fluid={l.image != null && l.image.childImageSharp.fluid}
-            />
-          )
-        })}
 
-      </Div>
-    </Fragment>
+    <Div width="100%" margin="35px 0" margin_tablet="40px 0 0 0" className="badge-slider" padding={padding} padding_tablet={padding_tablet} display="flex" height="auto" justifyContent={justifyContent} justifyContent_tablet="between">
+      {Array.isArray(locationNews) && locationNews.map((l, i) => {
+        return (
+          // <Div key={i} background={Colors.blue}>test</Div>
+          <Img
+            key={i}
+            style={{height: `${height}`, width: `${width}`, minWidth: "60px", margin: "0"}}
+            imgStyle={{objectFit: "contain"}}
+            alt={l.name}
+            fluid={l.image != null && l.image.childImageSharp.fluid}
+          />
+        )
+      })}
+
+    </Div>
+    // </Fragment>
   )
 }
 

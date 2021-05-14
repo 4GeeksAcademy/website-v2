@@ -90,95 +90,25 @@ const Home = (props) => {
 
   return (
     <>
-      {/* <MegaMenu /> */}
       <GridContainerWithImage padding_tablet="0" columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" position="relative">
-        {/* <Circle
-          color="blue"
-          width="50px"
-          height="50px"
-          bottom="20px"
-          right="10%"
-        />
-        <Circle
-          color="black"
-          width="50px"
-          height="50px"
-          top="170px"
-          right="120px"
-          scale="0.5"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="30px"
-          height="30px"
-          top="100px"
-          right="9%"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="30px"
-          height="30px"
-          top="100px"
-          right="12%"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="30px"
-          height="30px"
-          top="100px"
-          right="15%"
-        />
-        <Circle
-          color="yellow"
-          width="20px"
-          height="20px"
-          top="0px"
-          right="30%"
-          scale="2"
-        />
-        <Circle
-          color="yellow"
-          width="200px"
-          height="200px"
-          top="150px"
-          right="-5%"
-          opacity="0.2"
-        /> */}
-
-        <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" alignItems="center" alignItems_tablet="start">
-          <CityH1 yml={yml} />
-          {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
-          <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
-          <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
-          {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
-                    <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
-
-
-          <ChooseProgram
-            goTo={goToChooseProgram}
-            right="15px"
-            top="40px"
-            // margin="40px 0"
-            textAlign="center"
-            textAlign_tablet="left"
-            // programs={data.allChooseProgramYaml.edges[0].node.programs}
-            openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-            closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-          />
-
-          {/* 
-          Comented because is not necesary
-          <a target="_self" href={yml.button.button_link}><Button color={Colors.blue}>{yml.button.button_text}</Button></a> 
-          */}
-          <News lang={pageContext.lang} limit={yml.news.limit} height="40px" width="90px" justifyContent="center" />
+        <Div flexDirection="column" justifyContent_tablet="evenly" alignItems="center" alignItems_tablet="start">
+          <Div flexDirection="column" alignItems="center" alignItems_tablet="start">
+            <CityH1 yml={yml} />
+            <H2 textAlign_tablet="left" fontSize="50px" margin="20px 0 0 0" lineHeight="60px">{`${yml.header_data.title}`}</H2>
+            <Paragraph textAlign_tablet="left" margin="26px 0 35px 0">{yml.header_data.sub_heading} </Paragraph>
+            <ChooseProgram
+              goTo={goToChooseProgram}
+              right="15px"
+              top="40px"
+              textAlign="center"
+              textAlign_tablet="left"
+              openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+              closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+            />
+          </Div>
+          <News lang={pageContext.lang} limit={yml.news.limit} height="40px" width="120px" justifyContent="center" />
         </Div>
-        <Div display="none" display_tablet="flex" height="auto" width="100%">
+        <Div display="none" display_md="flex" height="auto" width="100%">
           <StyledBackgroundSection
             height={`723px`}
             width="100%"
