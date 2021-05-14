@@ -105,7 +105,7 @@ const Program = ({data, pageContext, yml}) => {
           }}
         />
       </Modal>
-      <Badges lang={pageContext.lang} short_link margin="0 0 40px 0" />
+      <Badges lang={pageContext.lang} short_link={true} margin="0 0 40px 0" paragraph={yml.badges.paragraph} />
     </Header>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
@@ -204,6 +204,9 @@ export const query = graphql`
             syllabus{
               heading
               button_label
+            }
+            badges{
+              paragraph
             }
             credentials{
               heading

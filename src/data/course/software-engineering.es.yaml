@@ -15,7 +15,8 @@ header:
   image_alt: ""
   paragraph: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro.
   "
-
+badges:
+  paragraph: "Vestibulum id ligula porta felis euismod semper."
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"

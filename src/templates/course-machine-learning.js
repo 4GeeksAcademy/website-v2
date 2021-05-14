@@ -41,11 +41,7 @@ const Program = ({data, pageContext, yml}) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
-
   const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a, b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
-
-  console.log("TITLE MACHINE::", yml.prices)
-  console.log("TITLE MACHINE::", data)
   return (<>
     <Header
       seo_title={yml.seo_title}
@@ -106,7 +102,7 @@ const Program = ({data, pageContext, yml}) => {
           }}
         />
       </Modal>
-      <Badges lang={pageContext.lang} />
+      <Badges lang={pageContext.lang} short_link={true} paragraph={yml.badges.paragraph && yml.badges.paragraph} />
     </Header>
     <OurPartners background={Colors.verylightGray} images={hiring.partners.images} marquee></OurPartners>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} background={Colors.white} />
@@ -170,6 +166,9 @@ export const query = graphql`
               heading
               geek_force
               geek_pal
+            }
+            badges{
+              paragraph
             }
             credentials{
               heading

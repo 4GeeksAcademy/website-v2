@@ -49,22 +49,23 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
         {paragraph && <Div className="badge-slider" justifyContent="between" >
           <Paragraph
             fontFamily="Lato-Light"
-            fontSize="22px"
-            fontSize_tablet="22px"
-            lineHeight="38px"
+            fontSize={short_link ? "15px" : "22px"}
+            fontSize_tablet={short_link ? "15px" : "22px"}
+            lineHeight={short_link ? "22px" : "38px"}
             fontWeight="300"
             color={Colors.black}
             dangerouslySetInnerHTML={{__html: paragraph}}
-            margin="0 0 55px 0"
+            margin="15px 0 0 0"
           />
         </Div>}
 
-        <Div className="badge-slider" justifyContent="between" alignItems="center">
+        <Div className="badge-slider" justifyContent="center" alignItems="center">
 
-          {content.badges.map((l, i) => {
+          {short_link ? content.badges.map((l, i) => {
             return (
+              i < 4 &&
               <Img
-                style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
+                style={{height: "65px", minWidth: "80px", margin: "0 20px"}}
                 imgStyle={{objectFit: "contain"}}
                 loading="eager"
                 draggable={false}
@@ -73,7 +74,20 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
                 fluid={l.image.childImageSharp.fluid}
               />
             )
-          })}
+          }) :
+            content.badges.map((l, i) => {
+              return (
+                <Img
+                  style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
+                  imgStyle={{objectFit: "contain"}}
+                  loading="eager"
+                  draggable={false}
+                  fadeIn={false}
+                  alt={l.name}
+                  fluid={l.image.childImageSharp.fluid}
+                />
+              )
+            })}
 
           {short_link &&
             <Link to={content.link_to}><Paragraph width="150px" color={Colors.blue}>{`${content.short_link_text} >`}</Paragraph></Link>

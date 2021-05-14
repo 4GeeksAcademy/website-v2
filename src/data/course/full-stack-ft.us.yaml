@@ -27,6 +27,8 @@ button:
   syllabus_motivation: "Get it in just a few seconds"
   apply_button_link: "/us/apply"
 
+badges:
+  paragraph: "Vestibulum id ligula porta felis euismod semper."
 credentials:
   heading: "This Program By The Numbers"
   paragraph: "Our results speak for themselves"

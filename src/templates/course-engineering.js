@@ -104,7 +104,7 @@ const Program = ({data, pageContext, yml}) => {
           }}
         />
       </Modal>
-      <Badges lang={pageContext.lang} />
+      <Badges lang={pageContext.lang} short_link={true} paragraph={yml.badges.paragraph && yml.badges.paragraph} />
     </Header>
 
     {/* 
@@ -137,164 +137,6 @@ const Program = ({data, pageContext, yml}) => {
     </Container>
 
     <OurPartners images={hiring.partners.images} marquee></OurPartners>
-
-    {/* <WrapperImage
-      github="/course"
-      imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
-      backgroundPosition={yml.header.image_position}
-      className={`img-header`}
-      bgSize={`cover`}
-      alt={yml.header.alt}
-      paddingRight={`0`}
-      customBorderRadius="0 0 0 1.25rem"
-
-    >
-      <H1
-        size="5"
-        variant="main"
-        marginTop="100px"
-        m_sm="50px 0 0 0"
-        color={Colors.white}
-        fontSize="46px"
-        align="center"
-
-      >{yml.header.tagline_top}</H1>
-      <Title
-        size="5"
-        title={yml.header.tagline}
-        variant="main"
-        marginTop="0"
-        color={Colors.white}
-        fontSize="46px"
-        textAlign="center"
-        paragraph={yml.header.sub_heading}
-        paragraphColor={Colors.white}
-        margin="0"
-      />
-      <H5 color={Colors.white} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
-      <Row display="flex" justifyContent="center" marginTop="20px" marginBottom="50px">
-        <Column align="right" size="6" size_xs="12" align_sm="center" m_sm="0px 0px 15px 0px">
-          <Link to={yml.button.apply_button_link}
-            state={{course: yml.meta_info.bc_slug}}
-          >
-            <Button width="200px" color="red" margin="0" textColor=" white">{apply_button_text}</Button>
-          </Link>
-        </Column>
-        <Column align="left" size="6" size_xs="12" align_sm="center">
-          <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
-        </Column>
-      </Row>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={() => setOpen(false)}
-      >
-        <LeadForm
-          style={{marginTop: "50px"}}
-          heading={yml.button.syllabus_heading}
-          motivation={yml.button.syllabus_motivation}
-          sendLabel={yml.button.syllabus_btn_label}
-          formHandler={requestSyllabus}
-          handleClose={() => setOpen(false)}
-          lang={pageContext.lang}
-          data={{
-            course: {value: yml.meta_info.bc_slug, valid: true}
-          }}
-        />
-      </Modal>
-      <Divider height="100px" md="0px" />
-    </WrapperImage> */}
-
-
-    {/* <Wrapper
-      margin="100px"
-      border="top">
-      <Title
-        size="10"
-        marginTop="40px"
-        title={yml.potential_companies.tagline}
-        paragraph={yml.potential_companies.sub_heading}
-        variant="primary"
-      />
-      <WhoIsHiring
-        images={yml.potential_companies.companies}
-      />
-    </Wrapper> */}
-
-    {/* <Wrapper margin="50px 0 0 0">
-      <Title
-        size="10"
-        type="h2"
-        marginTop="40px"
-        title={yml.details.heading}
-        paragraph={yml.details.sub_heading}
-        variant="primary"
-      />
-      <ProgramDetails details={yml.details} lang={pageContext.lang} />
-      <ProgramDetailsMobile details={yml.details} lang={pageContext.lang} />
-    </Wrapper> */}
-
-
-    {/* GEEKPAL && GEEKFORCE SECTION */}
-    {/* ---------------------------- */}
-    {/* <Wrapper
-      margin="50px"
-    >
-      <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
-        <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
-        <Row display="flex" padding="0px 40px" p_md="0 10px">
-          <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">
-            <GeekCard
-              icon="arrowright"
-              to={`/${pageContext.lang}/geekforce`}
-              image="/images/geekforce.png"
-              heading={geek.geek_data.geek_force_heading}
-              bullets={geek.geek_data.geek_force}
-            />
-          </Column>
-          <Column size="6" size_sm="12" paddingRight={`0`} p_sm="0">
-            <GeekCard
-              icon="arrowright"
-              to={`/${pageContext.lang}/geekforce`}
-              image="/images/geekpal.png"
-              heading={geek.geek_data.geek_pal_heading}
-              bullets={geek.geek_data.geek_pal}
-            />
-          </Column>
-        </Row>
-      </Column>
-    </Wrapper> */}
-
-    {/* <Wrapper margin="50px 0">
-      <Title
-        size="10"
-        title={yml.geeks_vs_others.heading}
-        paragraph={yml.geeks_vs_others.sub_heading}
-        variant="primary"
-      />
-      <GeeksVsOthers lang={pageContext.lang} limit={5} />
-    </Wrapper> */}
-
-    {/* <Wrapper
-
-      github="/course"
-    >
-      <Title
-        size="10"
-        title={yml.prices.heading}
-        paragraph={yml.prices.sub_heading}
-        variant="primary"
-      />
-      <PricesAndPayment
-        lang={pageContext.lang}
-        session={session}
-        type={pageContext.slug}
-        locations={data.allLocationYaml.edges}
-        course="software_engineering"
-      />
-    </Wrapper> */}
-
   </>
   )
 };
@@ -335,6 +177,9 @@ export const query = graphql`
               heading
               geek_force
               geek_pal
+            }
+            badges{
+              paragraph
             }
             credentials{
               heading
