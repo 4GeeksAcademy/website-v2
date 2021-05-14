@@ -21,6 +21,9 @@ header:
   image_alt: ""
   paragraph: "Get the skills to meet the global demand for problem solvers and logical thinkers who drive the world to real change and impact. Learn ”Modern Web Applications” or “Cloud Based Applications” used only by Fortune 500. Land yourself a real software engineering job or create the next tech unicorn."
 
+badges:
+  paragraph: "Vestibulum id ligula porta felis euismod semper."
+
 button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"

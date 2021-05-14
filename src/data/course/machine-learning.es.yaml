@@ -20,6 +20,9 @@ button:
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
   apply_button_link: "/es/aplica"
 
+badges:
+  paragraph: "Vestibulum id ligula porta felis euismod semper."
+
 credentials:
   heading: "Nuestros números hablan por sí solos"
   paragraph: ""

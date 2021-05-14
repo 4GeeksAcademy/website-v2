@@ -3,4 +3,9 @@
   font-display: swap;
   src: url("./lato/Lato-Regular.woff");
 }
+@font-face {
+  font-family: "Lato-Light";
+  font-display: swap;
+  src: url("./lato/Lato-Light.woff");
+}
 
