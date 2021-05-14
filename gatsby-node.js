@@ -215,7 +215,7 @@ const createBlog = async ({actions, graphql}) => {
         let lang = "es";
         let type = "page";
         createPage({
-            path: `/es/blog/${cluster}/`,
+            path: `/es/blog-en-espanol/${cluster}/`,
             component: clusterTemplate,
             context: {
                 cluster,
