@@ -48,7 +48,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
         {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
         {paragraph && <Div className="badge-slider" justifyContent="between" >
           <Paragraph
-            fontFamily="Lato"
+            fontFamily="Lato-Light"
             fontSize="22px"
             fontSize_tablet="22px"
             lineHeight="38px"

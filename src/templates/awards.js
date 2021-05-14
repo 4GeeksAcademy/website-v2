@@ -60,7 +60,7 @@ const Awards = ({data, pageContext, yml}) => {
                 </Div>
             </GridContainer>
             {/* <Grid background={Colors.lightYellow} margin="0 0 58px 0" margin_md="0 0 78px 0"> */}
-            <Badges lang={pageContext.lang} background={Colors.lightYellow} padding="60px 0" padding_tablet="68px 0" margin="0 0 58px 0" margin_tablet="0 0 78px 0" />
+            <Badges lang={pageContext.lang} background={Colors.lightYellow} paragraph={yml.badges.paragraph} padding="60px 0" padding_tablet="68px 0" margin="0 0 58px 0" margin_tablet="0 0 78px 0" />
             {/* </Grid> */}
             <GridContainer padding="17px" columns="1" rows="1" columns_md="12" gridGap_md="11px" gridGap="0">
                 <Div gridArea_md="1/3/1/11" flexDirection="column"  >
@@ -88,76 +88,7 @@ const Awards = ({data, pageContext, yml}) => {
                     })}
                 </Div>
             </GridContainer>
-            {/* <Grid columns_md="12" padding="0 17px" padding_md="0 65px 0 0 " gridGap="0" gridGap_md="11px">
-                <Div gridArea="1/2/1/9" flexDirection="column"  >
-                    {yml.sections.map((section, i) => {
-                        return (
-                            <>
-                                <H3 margin="54px 0 0 0 " textAlign="left" >{section.title}</H3>
-                                <Div style={{margin: "40px 0", height: "1px", background: "#c4c4c4"}} />
-                                {section.paragraph.split("\n").map((m, i) =>
-                                    <Paragraph key={i} textAlign="left" margin="10px 0" >{m}</Paragraph>
-                                )}
-                                <Grid justifyContent="between" columns_md={Array.isArray(section.stats) && section.stats.length} margin="41px 0 0 0">
-                                    {section.stats.map((m, i) => {
-                                        return (
-                                            <Div key={i} flexDirection="column" margin="0 0 38px 0">
-                                                <H2 textAlign_md="left" color={Colors.blue}>{m.stat}</H2>
-                                                <H3 textAlign_md="left" >{m.content}</H3>
-                                            </Div>
-                                        )
-                                    })}
-                                </Grid>
-                                {
-                                    Array.isArray(section.sub_sections) && section.sub_sections.map((m, i) => {
 
-                                        return (
-                                            <React.Fragment key={i}>
-                                                <H4 textAlign="left" textTransform="uppercase" fontWeight="700" margin="42px 0 13px 0">{m.title}</H4>
-                                                <Paragraph textAlign="left" margin_md="10px 0" dangerouslySetInnerHTML={{__html: m.content}}></Paragraph>
-                                                {
-                                                    Array.isArray(m.image_section) && m.image_section.map((m, i) => {
-                                                        return (
-                                                            <React.Fragment key={i}>
-                                                                <Img
-                                                                    style={{height: "100%"}}
-                                                                    imgStyle={{objectFit: "contain"}}
-                                                                    loading="eager"
-                                                                    style={{margin: "38px 0"}}
-                                                                    fadeIn={false}
-                                                                    // alt={l.name}
-                                                                    fluid={m.image && m.image.childImageSharp.fluid}
-                                                                />
-                                                                <Paragraph textAlign="left">{m.image_paragraph}</Paragraph>
-                                                                <Grid columns_md="3">
-                                                                    {m.chart &&
-                                                                        yml.charts.chart_list.map((c, i) => {
-                                                                            return (
-                                                                                <Div flexDirection="column" key={i}>
-                                                                                    <Charts dataArray={c.data} />
-                                                                                    <H4 textTransform="uppercase" fontSize="15px" LineHeight="19px" fontWeight="900">{c.title}</H4>
-                                                                                </Div>
-                                                                            )
-                                                                        })
-                                                                    }
-                                                                </Grid>
-                                                            </React.Fragment>
-                                                        )
-                                                    })
-                                                }
-                                            </React.Fragment>
-                                        )
-                                    })
-                                }
-                            </>)
-                    })}
-                </Div>
-                <Div gridArea="1/9/1/13" display="none" display_md="flex" style={{position: "relative"}}>
-                    <Div style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">right</Div>
-                </Div>
-            </Grid> */}
-            {/* <Paragraph dangerouslySetInnerHTML={{__html: yml.date_release}} margin="20px 0"></Paragraph> */}
-            {/* </Container> */}
         </>
     )
 };
@@ -184,6 +115,9 @@ query AwardsQuery($file_name: String!, $lang: String!) {
                     }
                   }
                 
+            }
+            badges{
+                paragraph
             }
             awards_list{
                 image{
