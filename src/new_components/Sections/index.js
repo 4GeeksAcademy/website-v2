@@ -219,7 +219,7 @@ export const Div = styled.div`
         grid-column: ${props => props.gridColumn_tablet};
         grid-row: ${props => props.gridRow_tablet};
         justify-self: ${props => props.justifySelf_tablet};
-        justify-content: ${props => props.justifyContent_tablet};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_tablet]};
         z-index: ${props => props.zIndex_tablet};
         &:after {
             display: ${props => props.displayAfter_tablet};
