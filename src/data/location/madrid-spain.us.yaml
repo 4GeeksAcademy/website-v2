@@ -51,7 +51,7 @@ info_box:
   alt: ""
 
 upcoming:
-  title: "Upcoming programs in Madrid, Spain"
+  no_dates_message: "There are currently no upcoming dates for this campus"
 
 images_box:
   heading: "What you should know about this location: "

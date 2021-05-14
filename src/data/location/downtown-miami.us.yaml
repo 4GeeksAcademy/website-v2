@@ -38,7 +38,7 @@ A community built for developers."
 news:
   title: "4Geeks Academy Miami has been reviewed in:"
 upcoming:
-  title: "Upcoming programs in Miami, USA"
+  no_dates_message: "There are currently no upcoming dates for this campus"
 button_header:
   button_text: See Programs
   button_link: "#programs"

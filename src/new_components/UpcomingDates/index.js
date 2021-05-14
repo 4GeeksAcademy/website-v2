@@ -6,6 +6,7 @@ import {Colors, Button, Img, Anchor} from '../Styling'
 import dayjs from "dayjs"
 import Select from '../Select'
 import 'dayjs/locale/de'
+import Icon from '../Icon';
 import LazyLoad from 'react-lazyload';
 import {SessionContext} from '../../session'
 
@@ -35,7 +36,7 @@ const locations = {
         "madrid-spain": "/es/coding-campus/bootcamp-programacion-madrid",
     }
 }
-const UpcomingDates = ({lang, location}) => {
+const UpcomingDates = ({lang, location, message}) => {
     const dataQuery = useStaticQuery(graphql`
     {
       allUpcomingDatesYaml {
@@ -55,6 +56,7 @@ const UpcomingDates = ({lang, location}) => {
               duration_weeks
               location_label
             }
+            no_course_message
             footer {
               button_text
               button_text_close
@@ -118,28 +120,6 @@ const UpcomingDates = ({lang, location}) => {
                 <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
                     <H3 textAlign="left" width="188px">Next Dates</H3>
                     {!location &&
-                        // <Button variant="outline" width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button> :
-                        // <Select
-                        //     top="40px"
-                        //     left="20px"
-                        //     width="300px"
-                        //     maxWidth="100%"
-                        //     shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-                        //     options={console.log("catalog", data.cohorts.catalog) || data.cohorts.catalog}
-                        //     openLabel={lang == "us" ? academy ? "Campus: " + academy.label : "Select the program" : academy ? "Campus: " + academy.label : "Buscar por programa"}
-                        //     closeLabel={lang == "us" ? academy ? "Campus: " + academy.label : "Select the  program" : academy ? "Campus: " + academy.label : "Buscar por programa"}
-                        //     onSelect={(opt) => {
-                        //         setAcademy(opt)
-                        //         setData({
-                        //             ...data,
-                        //             [filterType.value]: {
-                        //                 ...data[filterType.value],
-                        //                 filtered: opt.label !== 'All Locations' ? data[filterType.value].all.filter(elm => elm.academy.slug === opt.value) : data[filterType.value].all
-                        //             }
-                        //         });
-                        //     }}
-                        // />
-
                         <Select
                             // margin="0 10px 0 0"
                             top="40px"
@@ -162,7 +142,7 @@ const UpcomingDates = ({lang, location}) => {
                             }}
                         />}
                 </Div>
-                {Array.isArray(data.cohorts.filtered) && data.cohorts.filtered.map((m, i) => {
+                {Array.isArray(data.cohorts.filtered) && data.cohorts.filtered.length > 0 ? data.cohorts.filtered.map((m, i) => {
                     return (
                         i < 4 &&
                         <Div key={i} flexDirection="column" flexDirection_tablet="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
@@ -198,41 +178,15 @@ const UpcomingDates = ({lang, location}) => {
                                 </Link>
                             </Div>
                         </Div>
-
-                        // <Div key={i} flexDirection="column" flexDirection_tablet="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
-                        //     <Div flexDirection_tablet="column" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
-                        //         <H4 textAlign="left" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">ENERO</H4>
-                        //         <Paragraph textAlign="left" fontWeight="700">09/01 al 13/03</Paragraph>
-                        //     </Div>
-                        //     <Div flexDirection="column" margin="0 0 20px 0">
-                        //         <H4 textAlign="left" textTransform="uppercase">{content.info.program_label}</H4>
-                        //         <Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph>
-                        //     </Div>
-                        //     <Div flexDirection="column" display="none" display_tablet="flex" >
-                        //         <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>
-                        //         <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
-                        //     </Div>
-                        //     <Div flexDirection="column" display="none" display_tablet="flex">
-                        //         <H4 textAlign="left" textTransform="uppercase">{content.info.duration_label}</H4>
-                        //         <Paragraph textAlign="left">{content.info.duration_weeks}</Paragraph>
-                        //     </Div>
-                        //     <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
-                        //         <Div flexDirection="column" width="50%">
-                        //             <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>
-                        //             <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
-                        //         </Div>
-                        //         <Div flexDirection="column" width="50%">
-                        //             <H4 textAlign="left" textTransform="uppercase">{content.info.duration_label}</H4>
-                        //             <Paragraph textAlign="left">{content.info.duration_weeks}</Paragraph>
-                        //         </Div>
-                        //     </Div>
-                        //     <Div flexDirection="column">
-                        //         <Button variant="full" color={Colors.black} margin="10px 0" textColor="white">APPLY NOW</Button>
-                        //     </Div>
-                        // </Div>
                     )
-                })}
-                <Link to={content.footer.button_link}><Paragraph margin="20px 0" color={Colors.blue}>{content.footer.button_text}</Paragraph></Link>
+                })
+                    :
+                    <Div flexDirection="column" justifyContent="center" alignItems="center" padding_tablet="90px 0">
+                        <Icon icon="agenda" />
+                        {message && <Paragraph margin="25px 0 0 0">{message}</Paragraph>}
+                    </Div>
+                }
+                {Array.isArray(data.cohorts.filtered) && data.cohorts.filtered.length > 0 && <Link to={content.footer.button_link}><Paragraph margin="20px 0" color={Colors.blue}>{content.footer.button_text}</Paragraph></Link>}
             </Div>
         </GridContainer >
     )

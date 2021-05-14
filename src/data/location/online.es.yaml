@@ -29,7 +29,7 @@ badges:
 news:
   title: "4Geeks Academy Online en las noticias..."
 upcoming:
-  title: "Próximos programas para aprender a programar online"
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
 info_box:
   heading: ""

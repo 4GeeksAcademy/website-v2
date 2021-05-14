@@ -49,7 +49,7 @@ news:
   title: "4Geeks Academy Chile en las noticias..."
 
 upcoming:
-  title: "Próximas fechas en Santiago de Chile"
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
 images_box:
   heading: "Lo que debes saber de nuestra sede en Santiago de Chile: "

@@ -21,6 +21,7 @@ header:
   image: "../../../static/images/bg/program-bg.png"
   image_alt: ""
   paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
+
 button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
@@ -29,6 +30,10 @@ button:
 
 badges:
   paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the Florida Department of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"  
+
 credentials:
   heading: "This Program By The Numbers"
   paragraph: "Our results speak for themselves"

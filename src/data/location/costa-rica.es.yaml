@@ -40,7 +40,7 @@ Una comunidad construida para desarrolladores."
 news:
   title: "4Geeks Academy Costa Rica en las noticias..."
 upcoming:
-  title: "Próximos programas en 4Geeks Costa Rica"
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
 info_box:
   heading: "Encuentranos en Costa Rica"

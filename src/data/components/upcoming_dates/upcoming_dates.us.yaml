@@ -16,3 +16,4 @@ footer:
   button_text_open: See more dates
   button_text_close: See less dates
   button_link: "/us/next-dates"
+no_course_message: "At the moment there are no dates available in this location!"

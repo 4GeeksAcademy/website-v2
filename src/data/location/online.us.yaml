@@ -35,7 +35,7 @@ badges:
 news:
   title: "4Geeks Academy in the news..."
 upcoming:
-  title: "Upcoming online cohorts at 4Geeks Academy"
+  no_dates_message: "There are currently no upcoming dates for this campus"
 
 info_box:
   heading: "Find us Online"

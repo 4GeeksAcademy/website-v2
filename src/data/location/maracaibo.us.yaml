@@ -33,7 +33,7 @@ news:
   title: "4Geeks Academy Maracaibo in the news..."
 
 upcoming:
-  title: "Upcoming programs in Maracaibo, Venezuela"
+  no_dates_message: "There are currently no upcoming dates for this campus"
 
 info_box:
   heading: "Find us in Maracaibo"
@@ -189,7 +189,6 @@ prices:
           price_info: "Maracaibo - Venezuela"
         button:
           button_text: "Apply another courses"
-
 
 active_campaign_location_slug: "maracaibo-venezuela"
 breathecode_location_slug: "maracaibo"

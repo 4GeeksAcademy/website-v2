@@ -58,7 +58,7 @@ A community built for developers."
 news:
   title: "4Geeks Academy Chile in the news..."
 upcoming:
-  title: "Upcoming programs in Santiago de Chile"
+  no_dates_message: "There are currently no upcoming dates for this campus"
 
 images_box:
   heading: "What you should know about this location: "

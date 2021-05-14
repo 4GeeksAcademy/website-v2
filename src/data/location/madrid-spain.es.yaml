@@ -49,7 +49,7 @@ news:
   title: "4Geeks Academy Madrid en los medios..."
 
 upcoming:
-  title: "Próximas fechas en Madrid, España"
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
 images_box:
   heading: "Qué deberías saber sobre esta ubicación: "

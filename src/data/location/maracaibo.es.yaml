@@ -31,7 +31,7 @@ badges:
 news:
   title: "4Geeks Academy Maracaibo en las noticias..."
 upcoming:
-  title: "Próximos programas para aprender a programar en Maracaibo, Venezuela"
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
 info_box:
   heading: "Find us in Caracas"
@@ -175,7 +175,6 @@ prices:
           price_info: "Maracaibo - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
-
 
 active_campaign_location_slug: "maracaibo-venezuela"
 breathecode_location_slug: "maracaibo"

@@ -40,7 +40,7 @@ A community built for developers ."
 news:
   title: "4Geeks Academy Costa Rica in the news..."
 upcoming:
-  title: "Upcoming programs 4Geeks Costa Rica"
+  no_dates_message: "There are currently no upcoming dates for this campus"
 
 info_box:
   heading: "Find us in Costa Rica"
