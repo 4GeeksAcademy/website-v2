@@ -103,7 +103,7 @@ const Why4Geeks = (props) => {
                     })}
                 </GridContainer>
             </GridContainer>
-            <With4Geeks lang={pageContext.lang} playerHeight="82px" />
+            <With4Geeks lang={pageContext.lang} playerHeight="125px" />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
             <GeeksVsOthers lang={pageContext.lang} link={true} limit={4} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
             <GridContainerWithImage height_tablet="503px" background="#E3F9FE" padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
