@@ -249,7 +249,8 @@ const getVariant = (props) => ({
     "outline": {
         border: `1px solid ${props.color}`,
         background: "initial",
-        color: props.color
+        color: props.color,
+        borderRadius: "3px"
     },
     "full": {
         border: "none",
