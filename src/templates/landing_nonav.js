@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 import {graphql, navigate} from 'gatsby';
-import {landingSections} from '../components/Landing';
-import FollowBar from "../components/FollowBar"
-import LeadForm from "../components/LeadForm";
-import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
-import {Row, Column, Divider, Div} from '../components/Sections'
-import {Colors, StyledBackgroundSection} from '../components/Styling'
+import {landingSections} from '../new_components/Landing';
+import FollowBar from "../new_components/FollowBar"
+import LeadForm from "../new_components/LeadForm";
+import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading'
+import {Row, Column, Divider, Div} from '../new_components/Sections'
+import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 
 import BaseRender from './_baseLandingLayout'
 import {requestSyllabus} from "../actions";
