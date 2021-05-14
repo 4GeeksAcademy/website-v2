@@ -40,8 +40,7 @@ news:
   title: "4Geeks Academy Caracas in the news..."
 
 upcoming:
-  title: "Upcoming programs in Caracas, Venezuela"
-
+  no_dates_message: "There are currently no upcoming dates for this campus"
 info_box:
   heading: "Find us in Caracas"
   address: "Urb Altamira, Av Avila cruce con Av Felix Sosa Edificio Don Camilo, PB, Local 1"

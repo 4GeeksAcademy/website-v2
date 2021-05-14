@@ -114,7 +114,7 @@ const Program = ({data, pageContext, yml}) => {
     <GridContainer padding_tablet="0" margin_tablet="90px 0 62px 0" margin="57px 0">
       <Div height="5px" background="#EBEBEB"></Div>
     </GridContainer>
-    <UpcomingDates lang={pageContext.lang} />
+    <UpcomingDates lang={pageContext.lang} message={courseDetails.upcoming.no_dates_message} />
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
@@ -207,6 +207,9 @@ export const query = graphql`
             }
             badges{
               paragraph
+            }
+            upcoming{
+              no_dates_message
             }
             credentials{
               heading

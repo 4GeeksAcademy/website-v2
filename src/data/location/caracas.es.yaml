@@ -44,7 +44,7 @@ Una comunidad construida para desarrolladores."
 news:
   title: "4Geeks Academy Caracas en las noticias..."
 upcoming:
-  title: "Próximos programas para aprender a programar en Caracas, Venezuela"
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
 info_box:
   heading: "Encuentranos en Caracas"

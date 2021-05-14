@@ -40,7 +40,7 @@ const Location = ({data, pageContext, yml}) => {
 
   useEffect(() => {
     process.nextTick(() => {
-      if(globalThis.window ?? false) {
+      if (globalThis.window ?? false) {
         setReady(true)
       }
     })
@@ -148,19 +148,19 @@ const Location = ({data, pageContext, yml}) => {
     </GridContainer>
     <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
-    <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} />
+    <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} message={yml.upcoming.no_dates_message} />
     <Loc lang={pageContext.lang} locations={data.test.edges} />
     <Staff lang={pageContext.lang} />
 
-{/* IFRAME map */}
+    {/* IFRAME map */}
     <Div>
       {
         !ready ? null : (
           // <div>Loading...</div>
           <Suspense fallback={() => 'loading'}>
-              <MapFrame src={ready ? yml.info_box.iframeMapUrl : "about:blank"} width="100%" height="492px"/>
+            <MapFrame src={ready ? yml.info_box.iframeMapUrl : "about:blank"} width="100%" height="492px" />
           </Suspense>
-        ) 
+        )
       }
     </Div>
 
@@ -390,7 +390,7 @@ export const query = graphql`
                 title
             }
             upcoming{
-                title
+              no_dates_message
             }
             info_box{
                 heading

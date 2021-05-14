@@ -31,8 +31,12 @@ button:
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
   apply_button_link: "/us/apply"
+  
 badges:
   paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the Florida Department of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek.."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"  
 
 credentials:
   heading: "This Program By The Numbers"
