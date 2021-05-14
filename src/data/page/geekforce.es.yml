@@ -1,7 +1,7 @@
 meta_info:
   slug: geekforce
-  title: "geekforce"
-  description: "geekforce, soporte a tu carrera de 4geeks Academy"
+  title: "Geekforce, una membresía de 4Geeks Academy"
+  description: "Soporte de por vida a tu carrera profesional, mantenimiento y generación de nuevas oportunidades laborales."
   image: null
   keywords: ""
   redirects: ["/es/geekforce"]
@@ -11,7 +11,7 @@ header:
   title: ""
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "Texto que explique que GeekForce es una membresía con beneficios de apoyo profesional, que el estudiante obtiene al inscribirse en un programa con La Academia. Aún despues de haberte graduado continuarás teniendo el apoyo profesional ilimitado."
+  paragraph: "GeekForce es el proceso colectivo de apoyo profesional en la Academia. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología."
   image_logo: "/images/geekforce.png"
 
 geekForce:
@@ -26,7 +26,7 @@ icons:
   - icon: "talk"
     title: "PREPARACIÓN A ENTREVISTAS"
   - icon: "worker-portrait"
-    title: "XX HOJAS DE VIDA CREADAS"
+    title: "1500 HOJAS DE VIDA CREADAS"
 
 list:
   - title: "Apoyo Profesional Ilimitado"
@@ -39,18 +39,15 @@ list:
   - title: "Simulación de Entrevistas"
     image: "../../../static/images/entrevista-tecnica.png"
     position: "left"
-    text: "En 4Geeks no solo ajustamos las sesiones 
-    <span style='font-weight: bold'> acordes tu calendario</span>, sino que también te damos la oportunidad de verlas de forma 
-    <span style='font-weight: bold'> online o presencial</span>, esto debido a que contamos con campuses en muchas diversas ciudades y por ende husos horarios.<br/>
-    <br/>En cualquier sea el caso, te aseguramos tener la oportunidad de mentorias constantes y siempre que las necesites."
+    text: "Realizaremos simulacros de entrevistas para evaluar sus fortalezas y debilidades para crear un perfil más fuerte antes de las entrevistas reales. Cada vez que tenga una entrevista, practicaremos el uso de diferentes tecnologías. Tenemos nuestro propio grupo de ejercicios autocalificados, por lo que puede practicar hasta que domine las habilidades para obtener el trabajo que desea."
+    
 
-  - title: "Mentoría de por vida"
+  - title: "Mentorías de por vida"
     image: "../../../static/images/bg/main-bg.jpg"
     position: "right"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/> 
-    <br/>.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-
+    text: "Iniciar una carrera en tecnología implica evaluar su situación actual y tomar decisiones informadas sobre el futuro. Requiere evaluación de usted mismo, su contexto y ACCIÓN. Puede hacer esto solo; o puede confiar en la experiencia de un mentor que puede brindarle
+    perspectiva, información y acceso a los recursos adecuados. En 4Geeks ajustamos las sesiones según tu calendario, también le damos la oportunidad de tenerlos en línea o en persona. En cualquier caso, te aseguramos que tienes la oportunidad de una mentoría constante siempre que la necesites." 
+   
 # benefits:
 #   - p:
 #     heading: "Personal"

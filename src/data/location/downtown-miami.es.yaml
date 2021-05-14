@@ -25,14 +25,22 @@ button:
 
 badges:
   title: ""
-  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
+ 
+Estamos autorizados por el Departamento de Educación de Florida.
+  
+Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Miami según SwitchUp.
+
+4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
+
+Una comunidad construida para desarrolladores."
 news:
   title: "4Geeks Academy Miami en las noticias..."
 upcoming:
   title: "Próximos programas en 4Geeks Miami"
 
 info_box:
-  heading: "Find us in Miami"
+  heading: "Encuéntranos en Miami"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
@@ -40,7 +48,7 @@ info_box:
   image: "../../../static/images/locations/miami-map.png"
   alt: ""
 images_box:
-  heading: "What you should know about this location: "
+  heading: "Qué deberías saber acerca de esta locacion: "
   content: "Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos “Findes de Programación”, donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!"
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"

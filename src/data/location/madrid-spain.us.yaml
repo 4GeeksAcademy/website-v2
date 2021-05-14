@@ -9,9 +9,9 @@ meta_info:
 
 seo_title: "Coding Bootcamp Madrid"
 header:
-  tagline: "4GEEKS ACADEMY IN MADRID"
+  tagline: "4Geeks Academy in Madrid" 
   sub_heading: ""
-  paragraph: "Come and learn code in one of the biggest coding schools and communities in the world! Receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
+  paragraph: "Madrid is the city that attracts the most capital for the technological and innovative ecosystem. Learn programming and be part of the best Coding Bootcamp in Spain."
   image: "../../../static/images/locations/madrid-home.png"
   alt: ""
 button_header:
@@ -26,9 +26,18 @@ button:
   cohort_more_details_text: "DETAILS"
 badges:
   title: ""
-  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  paragraph: "4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the Florida Department of Education.
+  
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Spain according to Premios Excelencia Educativa.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+A community built for developers ."
+
 news:
-  title: "4Geeks Academy Madrid in the news..."
+  title: "4Geeks Academy Madrid on the news..."
 
 info_box:
   heading: "Find us in Madrid, Spain."

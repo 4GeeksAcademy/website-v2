@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-miami"
   title: "Miami Coding Bootcamp"
   position: 1
-  description: "Know here all about our coding bootcamp campus in Miami, Florida of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Miami, Florida of 4Geeks Academy"
   image: ""
   keywords: "null"
   redirects:
@@ -18,14 +18,23 @@ meta_info:
 
 seo_title: "Coding Bootcamp in Miami"
 header:
-  tagline: "Miami"
+  tagline: "4Geeks Academy in Miami"
   paragraph: "Miami is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Miami and become part of the best place to learn to code in Florida. \\n Career Support and Mentorship for our students is for life."
   image: "../../../static/images/locations/miami-home.png"
   alt: ""
 
 badges:
   title: ""
-  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  paragraph: "4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the Florida Department of Education.
+  
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Miami according to SwitchUp.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+
+A community built for developers."
 news:
   title: "4Geeks Academy Miami has been reviewed in:"
 upcoming:
