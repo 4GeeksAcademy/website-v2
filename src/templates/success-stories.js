@@ -8,7 +8,7 @@ import BaseRender from './_baseLayout';
 import Img from 'gatsby-image';
 
 
-const TestimonialCard = ({highlighted, featured, height, height_md, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition}) => {
+const TestimonialCard = ({highlighted, featured, height, height_tablet, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition, gridRowPosition}) => {
 
     const StarRating = ({totalStars}) => {
         return (
@@ -26,10 +26,11 @@ const TestimonialCard = ({highlighted, featured, height, height_md, studentRatin
             flexDirection="column"
             position="relative"
             height={height}
-            height_tablet={height_md}
+            height_tablet={height_tablet}
             background={background}
             borderRadius="3px"
             gridColumn_tablet={gridAreaPosition}
+            gridRow_tablet={gridRowPosition}
             padding="20px 20px 0 20px"
             border={`1px solid ${Colors.lightGray}`}
             boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
@@ -64,17 +65,18 @@ const TestimonialCard = ({highlighted, featured, height, height_md, studentRatin
                 <>
                     <Div
                         // padding="19px 0 0 25px"
-                        padding_md="0"
-                        width_md="100%"
-                        // height_md="310px"
+                        padding_tablet="0"
+                        width_tablet="100%"
+                        // height_tablet="310px"
                         alignSelf="baseline"
                     >
                         <ReactPlayer
+                            With_Modal={true}
                             className={className}
                             thumb={image}
                             id={video && video}
                             width='100%'
-                            width_md="100%"
+                            width_tablet="100%"
 
                         />
                     </Div>
@@ -88,14 +90,14 @@ const TestimonialCard = ({highlighted, featured, height, height_md, studentRatin
 const featuredPositions = [{
     position: "1 / 5",
     height: "378px",
-    height_md: "",
+    height_tablet: "",
     size: "small",
     className: "react-player-testimonials-small"
 },
 {
     position: "5 / 13",
     height: "378px",
-    height_md: "",
+    height_tablet: "",
     size: "big",
     className: "react-player-testimonials-big"
 }]
@@ -103,36 +105,41 @@ const featuredPositions = [{
 const defaultPositions = [
     {
         position: "1 / 5",
+        row_position: "1 / 4",
         height: "378px",
-        height_md: "",
+        height_tablet: "100%",
         size: "small",
         className: "react-player-testimonials-small"
     },
     {
         position: "5 / 9",
+        row_position: "1 / 4",
         height: "378px",
-        height_md: "",
+        height_tablet: "100%",
         size: "small",
         className: "react-player-testimonials-small"
     },
     {
         position: "9 / 13",
-        height: "636px",
-        height_md: "",
+        row_position: "1 / 6",
+        height: "auto",
+        height_tablet: "",
         size: "big",
         className: "react-player-testimonials-big"
     },
     {
-        position: "4/1/8/9",
+        position: "1 / 9",
+        row_position: "4 / 7",
         height: "378px",
-        height_md: "507px",
+        height_tablet: "507px",
         size: "big",
         className: "react-player-testimonials-big"
     },
     {
-        position: "6/9/9/13",
+        position: "9 / 13",
+        row_position: "6 / 9",
         height: "378px",
-        height_md: "",
+        height_tablet: "",
         size: "small",
         className: "react-player-testimonials-small"
     },
@@ -151,7 +158,7 @@ const SuccessStories = (props) => {
             >
             </Header>
             <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
-                {/* <Grid height="auto" columns="1" rows="1" columns_md="12" gridGap="11px"> */}
+                {/* <Grid height="auto" columns="1" rows="1" columns_tablet="12" gridGap="11px"> */}
                 {
                     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.featured == true && f.hidden == false).map((m, i) => {
                         return (
@@ -177,8 +184,7 @@ const SuccessStories = (props) => {
             <GridContainer variant="fixed" margin_tablet="30px 0" margin="30px 0" padding_tablet="0">
                 <Div height="7px" background={Colors.lightGray} />
             </GridContainer>
-            <GridContainer variant="fixed" padding_tablet="0">
-                {/* <Grid height="auto" columns_md="12" rows_md="10" gridGap="11px"> */}
+            <GridContainer columns_tablet="12" gridTemplateRows_tablet="9, 1fr" height_tablet="auto" height="auto">
                 {
                     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
                         return (
@@ -188,20 +194,28 @@ const SuccessStories = (props) => {
                                 className={defaultPositions[i]['className']}
                                 studentRating={m.rating}
                                 image={m.student_thumb}
+
                                 height={defaultPositions[i]['height']}
-                                height_md={defaultPositions[i]['height_md']}
+                                height_tablet={defaultPositions[i]['height_tablet']}
                                 background={m.highlighted && Colors.darkYellow}
                                 name={m.student_name}
                                 short_content={m.short_content}
                                 description={defaultPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
                                 video={m.student_video}
                                 gridAreaPosition={defaultPositions[i]['position']}
+                                gridRowPosition={defaultPositions[i]['row_position']}
                             />
                         )
                     })
                 }
-                {/* </Grid> */}
+
+                {/* <Div gridColumn_tablet="1 / 5" gridRow_tablet="1 / 4" background={Colors.lightGray}>test</Div>
+                <Div gridColumn_tablet="5 / 9" gridRow_tablet="1 / 4" background={Colors.lightGray}>test</Div>
+                <Div gridColumn_tablet="9 / 13" gridRow_tablet="1 / 6" background={Colors.lightGray}>test</Div>
+                <Div gridColumn_tablet="1 / 9" gridRow_tablet="4 / 7" background={Colors.lightGray}>test</Div>
+                <Div gridColumn_tablet="9 / 13" gridRow_tablet="6 / 9" background={Colors.lightGray}>test</Div> */}
             </GridContainer>
+
         </>
     )
 };
@@ -266,3 +280,28 @@ query SuccessQuery($file_name: String!, $lang: String!) {
 }
 `;
 export default BaseRender(SuccessStories);
+// {/* <GridContainer fixed padding_tablet="0" columns_tablet="12" gridTemplateRows_tablet="4, 1fr" height_tablet="813px" height="304px">
+//                 {/* <Grid height="auto" columns_tablet="12" rows_tablet="10" gridGap="11px"> */}
+                // {
+                //     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
+                //         return (
+                //             i < 5 &&
+                //             <TestimonialCard
+                //                 key={i}
+                //                 className={defaultPositions[i]['className']}
+                //                 studentRating={m.rating}
+                //                 image={m.student_thumb}
+                //                 height={defaultPositions[i]['height']}
+                //                 height_tablet={defaultPositions[i]['height_tablet']}
+                //                 background={m.highlighted && Colors.darkYellow}
+                //                 name={m.student_name}
+                //                 short_content={m.short_content}
+                //                 description={defaultPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
+                //                 video={m.student_video}
+                //                 gridAreaPosition={defaultPositions[i]['position']}
+                //             />
+                //         )
+                //     })
+                // }
+//                 {/* </Grid> */}
+//             </GridContainer> */}
