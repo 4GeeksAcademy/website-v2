@@ -121,63 +121,8 @@ const Calendar = (props) => {
         <Circle color="red" width="25px" height="25px" top="60px" right="30px" display="inline" display_tablet="none" />
         <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center" margin_tablet="0 0 50px 0"></Div>
       </Header>
-      {yml.events.title &&
-        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
-          <H3 textAlign="left">{yml.events.title}</H3>
-        </GridContainer>
-      }
-      <GridContainer columns_tablet="3" margin="0 0 73px 0" margin_tablet="0 0 30px 0">
-        <>
-          {
-            datas.events.filtered.map((m, i) => {
-              const limits = limit == true ? 6 : 100
-              return i < limits && (
-                <Div
-                  display="flex"
-                  flexDirection="column"
-                  justifyContent="between"
-                  borderBottom={`1px solid ${Colors.lightGray}`}
-                  border={`1px solid ${Colors.lightGray}`}
-                  key={i}
-                  style={{borderRadius: `3px`}}>
-                  <LazyLoad scroll={true} height={230}>
-                    <Img
-                      src={m.banner}
-                      bsize="cover"
-                      mb="10px"
-                      position="center center"
-                      height="180px"
 
-                    />
-                  </LazyLoad>
-                  <Div padding="25px" flexDirection="column">
-                    <H3 textAlign="left" margin_tablet="0 0 45px 0" margin="0 0 30px 0">{m.title}</H3>
-                    <H4 textAlign="left" fontSize="15px" fontWeight="700" textTransform="uppercase" lineHeight="22px" >{dayjs(m.starting_at).add(5, "hour").locale("en").format("ddd, DD MMM YYYY")}</H4>
-                    <H4 textAlign="left" fontSize="15px" textTransform="uppercase" lineHeight="22px" margin_tablet="0 0 25px 0" margin="0 0 15px 0">
-                      {m.online_event ? "Online" : m.academy.city ? m.academy.city.name : m.academy.name}
-                    </H4>
-                    <Anchor to={m.url}>
-                      <Button variant="outline" color={Colors.black} padding="10px 17px" textColor={Colors.white}>{yml.button.event_register_button_link}</Button>
-                    </Anchor>
-
-                  </Div>
-                </Div>
-              )
-            })
-          }
-        </>
-      </GridContainer>
-      {limit && datas.events.filtered.length > 6 &&
-        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
-          <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show more</Paragraph>
-        </GridContainer>
-      }{!limit && datas.events.filtered.length > 6 &&
-        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
-          <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show less</Paragraph>
-        </GridContainer>
-      }
-
-      <GridContainer padding_tablet="0" margin_tablet="0 0 48px 0">
+      <GridContainer padding_tablet="0" margin="65px 0 65px 0" margin_tablet="65px 0 65px 0">
         <Div flexDirection="column">
           <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
             <H3 textAlign="left" width="188px">{yml.cohorts.title}</H3>
@@ -244,6 +189,64 @@ const Calendar = (props) => {
           })}
         </Div>
       </GridContainer >
+      {limit && datas.events.filtered.length > 6 &&
+        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
+          <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show more</Paragraph>
+        </GridContainer>
+      }{!limit && datas.events.filtered.length > 6 &&
+        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
+          <Paragraph color={Colors.blue} cursor="pointer" onClick={() => setLimit(!limit)}>Show less</Paragraph>
+        </GridContainer>
+      }
+
+
+      {yml.events.title &&
+        <GridContainer columns_tablet="1" margin="30px 0" margin_tablet="48px 0 38px 0">
+          <H3 textAlign="left">{yml.events.title}</H3>
+        </GridContainer>
+      }
+      <GridContainer columns_tablet="3" margin="0 0 73px 0" margin_tablet="0 0 65px 0">
+        <>
+          {
+            datas.events.filtered.map((m, i) => {
+              const limits = limit == true ? 6 : 100
+              return i < limits && (
+                <Div
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="between"
+                  borderBottom={`1px solid ${Colors.lightGray}`}
+                  border={`1px solid ${Colors.lightGray}`}
+                  key={i}
+                  style={{borderRadius: `3px`}}>
+                  <LazyLoad scroll={true} height={230}>
+                    <Img
+                      src={m.banner}
+                      bsize="cover"
+                      mb="10px"
+                      position="center center"
+                      height="180px"
+
+                    />
+                  </LazyLoad>
+                  <Div padding="25px" flexDirection="column">
+                    <H3 textAlign="left" margin_tablet="0 0 45px 0" margin="0 0 30px 0">{m.title}</H3>
+                    <H4 textAlign="left" fontSize="15px" fontWeight="700" textTransform="uppercase" lineHeight="22px" >{dayjs(m.starting_at).add(5, "hour").locale("en").format("ddd, DD MMM YYYY")}</H4>
+                    <H4 textAlign="left" fontSize="15px" textTransform="uppercase" lineHeight="22px" margin_tablet="0 0 25px 0" margin="0 0 15px 0">
+                      {m.online_event ? "Online" : m.academy.city ? m.academy.city.name : m.academy.name}
+                    </H4>
+                    <Anchor to={m.url}>
+                      <Button variant="outline" color={Colors.black} padding="10px 17px" textColor={Colors.white}>{yml.button.event_register_button_link}</Button>
+                    </Anchor>
+
+                  </Div>
+                </Div>
+              )
+            })
+          }
+        </>
+      </GridContainer>
+      
     </>
   )
 };
