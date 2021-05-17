@@ -29,5 +29,11 @@ export default {
         "avatar": "/4geeks-logo.png",
         "username": "4GeeksAcademyES"
     }
+    "VictorManuelG": {
+        "bio": "Country Manager and co-owner @ 4Geeks Academy Madrid",
+        "name": "Victor Gomez",
+        "avatar": "/images/staff/victor.png",
+        "username": "VictorManuelG"
+    }
 
 }
