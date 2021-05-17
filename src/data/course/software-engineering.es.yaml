@@ -15,7 +15,11 @@ header:
   image_alt: ""
   paragraph: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro.
   "
+badges:
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
 
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
@@ -30,16 +34,10 @@ credentials:
 ## PROGRAM DETAILS
 details:
   about:
-      title: "About the program"
-      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
-      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
-      diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
-      sólida base de front end, back end, base de datos, manejo de procesos       
-      distribuidos y despliegue a distantas plataformas web.
-
-      Al finalizar este programa, contarás con los conocimientos para       
-      desempeñarte como Full Stack Developer. 
-    "
+      title: "Sobre el  programa"
+      sub_title: "Obtenga las habilidades para satisfacer la demanda global de solucionadores de problemas y pensadores lógicos que conducen al mundo a un cambio e impacto reales.
+      Desarrolle aplicaciones distribuidas en la nube altamente escalables utilizadas solo por Fortune 500. Consiga un trabajo de ingeniería de software real o cree el próximo unicornio tecnológico."
+    
       list:
         - label: "Duration"
           content:  "16 Weeks"
@@ -147,8 +145,9 @@ potential_companies:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "EN NÚMEROS: 4 GEEKS VS OTROS"
-  sub_heading: ""
+  heading: "¿Qué nos hace ser tanexitosos?
+  
+  sub_heading: Compara a 4Geeks con otros coding bootcamps"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
@@ -183,8 +182,8 @@ prices:
     link: ""
 ## ALUMNI SECTION
 alumni:
-  heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+  heading: "CONOCE A NUESTROS EX-ALUMNOS Y SUS PROYECTOS"
+  sub_heading: "Conoce a nuestros graduados y algunos de los proyectos que estarás construyendo durante el programa."
 
 ## SIDEBAR
 sidebar:

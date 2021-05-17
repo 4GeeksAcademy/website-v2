@@ -27,15 +27,18 @@ button:
   apply_button_link: "/aplica"
 badges:
   title: ""
-  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o 
+  
+  aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
 news:
   title: "4Geeks Academy Maracaibo en las noticias..."
 upcoming:
-  title: "Próximos programas para aprender a programar en Maracaibo, Venezuela"
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
 info_box:
   heading: "Find us in Caracas"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2313.274407295168!2d-71.61931957533544!3d10.664284079244604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd29bf2de2e9189a!2s4geeks%20Mcbo!5e0!3m2!1ses-419!2scl!4v1621011070775!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "ve@4GeeksAcademy.com"
@@ -174,7 +177,6 @@ prices:
           price_info: "Maracaibo - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
-
 
 active_campaign_location_slug: "maracaibo-venezuela"
 breathecode_location_slug: "maracaibo"

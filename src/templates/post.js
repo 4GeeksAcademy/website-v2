@@ -1,9 +1,8 @@
 import React, {useContext} from 'react'
 import {Link} from 'gatsby'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
-import {RoundImage, Colors} from '../new_components/Styling'
+import {RoundImage, Colors, Button} from '../new_components/Styling'
 import Layout from '../global/Layout'
-import Card from '../new_components/Card'
 import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
 import Icon from '../new_components/Icon'
@@ -81,22 +80,11 @@ export default function Template (props) {
         <GridContainer columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin="90px 0 0 0">
 
           {/* Top Tags */}
+          {/* <Link to={"/us/blog/tag/" + tag}>{tag}</Link> */}
           <Div justifyContent="center">
-            {
-              post.frontmatter.tags != null && post.frontmatter.tags.map((tag, i) => {
-                return (
-                  <Card
-                    style={{fontFamily: "Lato", fontWeight: "700", color: "#3A3A3A", fontSize: "13px", lineHeight: "15.6px", lineSpacing: "0.05em"}}
-                    key={i}
-                    display="inline-block"
-                    padding="5px 8px"
-                    borders=".2rem"
-                  >
-                    <Link to={"/us/blog/tag/" + tag}>{tag}</Link>
-                  </Card>
-                )
-              })
-            }
+            <Link to={`/us/blog/${post.frontmatter.cluster}`}>
+              <Button variant="outline" color="black" fontSize="13px" lineHeight="15px" fontWeight="700">{post.frontmatter.cluster && post.frontmatter.cluster}</Button>
+            </Link>
           </Div>
 
           {/* Title */}
@@ -314,11 +302,11 @@ query BlogPostBySlug($slug: String!){
             title
             author
             date
-            avatar
             excerpt
             unlisted
             image
             tags
+            cluster
         }
         fields{
             readingTime {
@@ -331,3 +319,20 @@ query BlogPostBySlug($slug: String!){
 
 
 `
+
+
+// {
+//   post.frontmatter.tags != null && post.frontmatter.tags.map((tag, i) => {
+//     return (
+//       <Card
+//         style={{fontFamily: "Lato", fontWeight: "700", color: "#3A3A3A", fontSize: "13px", lineHeight: "15.6px", lineSpacing: "0.05em"}}
+//         key={i}
+//         display="inline-block"
+//         padding="5px 8px"
+//         borders=".2rem"
+//       >
+//         {/* <Link to={"/us/blog/tag/" + tag}>{tag}</Link> */}
+//       </Card>
+//     )
+//   })
+// }

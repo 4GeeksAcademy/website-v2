@@ -12,10 +12,7 @@ import {GridContainer, Div, Header} from "../new_components/Sections";
 
 const Press = (props) => {
     const {data, pageContext, yml} = props;
-    console.log("YAML", yml)
-    console.log("DATA", data)
     let content = data.allPageYaml.edges[0].node.content
-    console.log(yml.news)
     return (
         <Div margin="90px 0 75px 0" flexDirection="column">
             <Div id="circles-left" display="none" display_tablet="inherit">

@@ -9,42 +9,27 @@ meta_info:
 seo_title: "premios"
 header:
   title: "Premios y Recocimientos"
-  paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
+  paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerles saber que cada vez trabajamos más duro para mejorar."
   image: "../../../static/images/awards/awards.png"
-
+badges:
+  paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
 awards_list:
   - image: "../../../static/images/badges/licensed.png"
-    title:  "Florida Department of Education"
-    paragraph: "
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    title: "Florida Department of Education"
+    paragraph: "Licenciados por el Departamento de Educación de la Florida."
 
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    "
-  - image: "../../../static/images/badges/newsweek.png"
-    title: "Best Bootcamp for Switchup 2021"
-    paragraph: "
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    "
-  - image: "../../../static/images/badges/reviews.png"
-    title: "Top Coding School for Newsweek"
-    paragraph: "
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    "
-  - image: "../../../static/images/badges/syllabus.png"
-    title: "4.9 on all reviews"
-    paragraph: "
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    "
   - image: "../../../static/images/badges/switchup.png"
-    title: "Award Winning Syllabus"
-    paragraph: "
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    title: "Best Bootcamp for Switchup 2021"
+    paragraph: "Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Miami según SwitchUp."
 
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    "
+  - image: "../../../static/images/badges/newsweek.png"
+    title: "Top Coding School for Newsweek"
+    paragraph: "4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
+
+  - image: "../../../static/images/badges/reviews.png"
+    title: "4.9 on all reviews"
+    paragraph: "Contamos con una puntuación de 4.9 en todos los reviews de las plataformas de CourseReport y SwitchUp."
+
+  - image: "../../../static/images/badges/syllabus.png"
+    title: "Award Winning Syllabus"
+    paragraph: "Obtuvimos un premio por la calidad de nuestro syllabus"

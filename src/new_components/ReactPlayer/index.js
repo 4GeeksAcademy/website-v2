@@ -4,6 +4,7 @@ import YouTube from "react-youtube"
 import PropTypes from "prop-types"
 import GImage from "gatsby-image"
 import {Devices} from '../Responsive'
+import Modal from '../Modal'
 
 const VideoWrapper = styled.section`
   position: relative;
@@ -87,14 +88,14 @@ const Image = styled.div`
 
 const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
   onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className,
-  thumb, left_tablet, right_tablet, ...rest}) => {
+  thumb, left_tablet, right_tablet, With_Modal, ...rest}) => {
 
   const [showVideo, setShowVideo] = React.useState(false)
 
-  function yt_parser(url){
+  function yt_parser (url) {
     let regExpUrl = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     let match = url.match(regExpUrl);
-    return (match&&match[7].length==11)? match[7] : url;
+    return (match && match[7].length == 11) ? match[7] : url;
   }
 
   const validImageSizes = [
@@ -107,29 +108,61 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
 
   const image = () => validImageSizes.includes(imageSize) ? imageSize : "default"
 
+  // With_Modal
+
   return <VideoWrapper {...rest} style={style}>
     {showVideo ? (
-      <Iframe
-        borderRadius={style.borderRadius}
-        videoId={yt_parser(id)}
-        id={`a-${id} do-not-delete-this-hack`}
-        onReady={e => e.target.playVideo()}
-        onPlay={onPlay}
-        onPause={onPause}
-        onEnd={onEnd}
-        onError={onError}
-        onStateChange={onStateChange}
-        onPlaybackRateChange={onPlaybackRateChange}
-        onPlaybackQualityChange={onPlaybackQualityChange}
-        opts={{
-          width: "100%",
-          height:`${style.height}`,
-          host: noCookies
-            ? "https://www.youtube-nocookie.com"
-            : "https://www.youtube.com",
-          ...playerVars
-        }}
-      />
+      <>
+        {With_Modal ? (
+        
+          <Modal boxPadding="80px 5%" open={showVideo} onClose={() => setShowVideo(false)}>
+              <Iframe
+                borderRadius={style.borderRadius}
+                videoId={yt_parser(id)}
+                id={`a-${id} do-not-delete-this-hack`}
+                onReady={e => e.target.playVideo()}
+                onPlay={onPlay}
+                onPause={onPause}
+                onEnd={onEnd}
+                onError={onError}
+                onStateChange={onStateChange}
+                onPlaybackRateChange={onPlaybackRateChange}
+                onPlaybackQualityChange={onPlaybackQualityChange}
+                opts={{
+                  // padding: "125px 0 0",
+                  width: "100%",
+                  height:`675px`,
+                  host: noCookies
+                    ? "https://www.youtube-nocookie.com"
+                    : "https://www.youtube.com",
+                  ...playerVars
+                }}
+              />
+          </Modal>
+        
+      ) : (<Iframe
+          borderRadius={style.borderRadius}
+          videoId={yt_parser(id)}
+          id={`a-${id} do-not-delete-this-hack`}
+          onReady={e => e.target.playVideo()}
+          onPlay={onPlay}
+          onPause={onPause}
+          onEnd={onEnd}
+          onError={onError}
+          onStateChange={onStateChange}
+          onPlaybackRateChange={onPlaybackRateChange}
+          onPlaybackQualityChange={onPlaybackQualityChange}
+          opts={{
+            width: "100%",
+            height:`${style.height}`,
+            host: noCookies
+              ? "https://www.youtube-nocookie.com"
+              : "https://www.youtube.com",
+            ...playerVars
+          }}
+        />)
+      }
+      </>
     ) : (
       <Image
         borderRadius="3px"
@@ -151,7 +184,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
           <Thumbnail
             className={className}
             onClick={() => setShowVideo(true)}
-            src={thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
+            src={thumb && thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
             alt="Video"
             style={{
               height: `${style.height}` || "100%",

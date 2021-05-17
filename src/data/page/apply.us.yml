@@ -7,8 +7,13 @@ meta_info:
   redirects: ["/apply"]
 
 ## APPLY HEADING
-tagline: APPLY TO 4GEEKS
-sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+seo_title: "coding bootcamp"
+header:
+  title: "Apply to 4Geeks"
+  image:
+  image_alt: ""
+  paragraph: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+  button:
 
 ## APPLY LEFT SECTION
 left:
@@ -19,7 +24,7 @@ left:
     email: "Email"
     phone: "Phone"
   locations_title: "Select a location"
-  course_title: 
+  course_title:
     open: "Please select one program"
     close: "What program would you like to attend?"
   referral_section:
@@ -32,7 +37,7 @@ left:
 ## APPLY RIGHT SECTION
 
 right:
-  heading: "ONCE YOU CLICK ON APPLY, YOU WILL"
+  heading: "Once you click on apply, you will"
   content_section:
     - "1- Receive an email from your City Advisor"
     - "2- Get Info and details about the programs, people, community, outcomes, campus and more."

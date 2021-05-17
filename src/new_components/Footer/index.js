@@ -81,11 +81,25 @@ const Footer = ({yml}) => {
                 >
                     <H4 margin="0 0 10px 0" display="none" display_md="block">{yml.newsletter.heading}</H4>
                     <Div>
-                        <Icon icon="twitter" style={{margin: "0 15px 0 0"}} height="32px" width="32px" />
-                        <Icon icon="facebook" style={{margin: "0 15px 0 0"}} color={Colors.black} fill={Colors.black} height="32px" width="32px" />
-                        <Icon icon="instagram" style={{margin: "0 15px 0 0"}} height="32px" width="32px" />
-                        {/* <Icon icon="youtube" style={{margin: "0 15px 0 0"}} height="32px" width="32px" /> */}
-                        <Icon icon="github" style={{margin: "0 15px 0 0"}} height="32px" width="32px" />
+                        {yml.socials && yml.socials.map((ln, i) => {
+
+                            return (
+                                <Anchor
+                                    key={i}
+                                    cursor="pointer"
+                                    to={ln.link}
+                                    textAlign="left"
+                                    margin="0 0 5px 0"
+                                    fontSize="13px"
+                                    lineHeight="22px"
+                                    fontWeight="400"
+                                    textTransform="uppercase"
+                                    color={Colors.black}
+                                >
+                                    {ln.icon && <Icon icon={ln.icon} style={{margin: "0 15px 0 0"}} color={Colors.black} fill={Colors.black} height="32px" width="32px" />}
+                                </Anchor>
+                            )
+                        })}
                     </Div>
                 </Div>
 

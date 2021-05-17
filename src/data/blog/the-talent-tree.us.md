@@ -8,12 +8,12 @@ layout: post
 link: https://www.4geeksacademy.co/the-talent-tree/
 slug: the-talent-tree
 title: The Talent Tree
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Talents_for_Paladins.jpg"
+image_alt: ""
 wordpress_id: 2539
 categories:
 - Learning to code
-
+cluster: "learn-to-code"
 tags:
 - 4geeks academy
 - challenges of a web developer

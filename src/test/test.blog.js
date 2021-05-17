@@ -9,6 +9,7 @@ const front_matter_fields = [
     {key: "title", type: "string", mandatory: true},
     {key: "excerpt", type: "string", length: 160},
     {key: "image", type: "string"},
+    {key: "image_alt", type: "string"},
     {key: "author", type: "string"},
 ]
 
@@ -19,8 +20,10 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
     )
 
     let slugs = {};
+    
     for (let i = 0; i < _files.length; i++) {
         const _path = _files[i];
+
         try {
             const content = loadMD(_path)
             const frontmatter = content.attributes

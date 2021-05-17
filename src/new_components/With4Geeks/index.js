@@ -72,21 +72,23 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
               display="flex"
               flexDirection_tablet="column"
               justifyContent="between"
-              borderBottom_tablet={`1px solid ${Colors.lightGray}`}
-              border_tablet={`1px solid ${Colors.lightGray}`}
+              // justifySelf={`center`}
+              borderBottom={`1px solid ${Colors.lightGray}`}
+              // border_tablet={`1px solid ${Colors.lightGray}`}
               // justifyContent="spece-between"
               key={index}
               // margin_md="0 6px"
               style={{borderRadius: `3px`}}
             >
               <Div
-                padding="19px 0 0 25px"
+
                 padding_tablet="0"
                 width_tablet="100%"
                 height_tablet="158px"
-                alignSelf="baseline"
+                alignSelf={`baseline`}
               >
                 <ReactPlayer
+                  With_Modal={true}
                   className="react-player-with4geeks"
                   thumb={i.image}
                   // style={{height: playerHeight}}
@@ -99,7 +101,7 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
               </Div>
               <Div
                 marginTop="20px"
-                padding="19px 25px"
+                padding="0 25px 19px 25px"
                 display={`flex`}
                 flexDirection="column">
                 {/* <Icon width="32" icon={i.icon}

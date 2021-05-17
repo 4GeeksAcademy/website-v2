@@ -97,6 +97,7 @@ export const H3 = styled(BaseHeading)`
   font-size: ${props => props.fonSize};
   text-align: ${props => props.textAlign};
   letter-spacing: 0.05em;
+  place-self: ${props => props.placeSelf};
 `;
 export const H4 = styled(BaseHeading)`
 font-weight: ${props => props.fontWeight || "400"};
@@ -178,6 +179,7 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   height: ${props => props.height};
+  z-index: ${props => props.zIndex};
   border-left: ${props => props.borderLeft};
   opacity: ${props => props.isActive ? 1 : 0.8};
 

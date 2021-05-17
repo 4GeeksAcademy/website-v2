@@ -1,6 +1,6 @@
 ## STAFF MEMEBERS INFO
 heading: "Staff"
-sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+sub_heading: "Passionate, committed and experienced staff. They bring a glad-to-help attitude and provide all the support you need to learn how to learn how to code and gain confidence while you do it."
 staff:
   - name: "Alejandro"
     last_name: "Sanchez"
@@ -24,7 +24,7 @@ staff:
     nick_name: "MRicigliano"
     slug: marcelo-ricigliano
     bio: "Named by Forbes and Newsweek for his Startup achievements. Tech Startup Mentor of Founder Institute, Startup Chile and Impaqto. Sold 2 companies. 4 startup fails. Law and Master degree from Stockholm Universitet."
-    job_title: "CEO - co-founder"
+    job_title: "CEO - Co-Founder"
     github: ""
     linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
     twitter: "https://twitter.com/MRiciglianoC"
@@ -41,7 +41,7 @@ staff:
     last_name: "Walters"
     nick_name: ""
     slug: james-walters
-    job_title: "Lead Instrutor"
+    job_title: "Lead Instructor"
     github: ""
     bio: "Executive level director, 14 yrs coding experience. S.W. Development (SDLC) and B.I. Analytics."
     linkdin: "https://www.linkedin.com/in/james-walters-mba-pmp-a109492/"
@@ -96,7 +96,7 @@ staff:
     last_name: "Lucano"
     nick_name: "Pluco"
     slug: "paolo-lucano"
-    job_title: "Lead of Instructors"
+    job_title: "Lead Instructor"
     bio: "One of 4Geeks first Graduates, the most loved mentor in the community."
     github: "https://github.com/plucodev"
     linkdin: "https://www.linkedin.com/in/paolo-lucano/"
@@ -112,17 +112,37 @@ staff:
     coding_skills:
       - Javascript
     location: ""
-  - name: "Bridget"
-    last_name: "Schraeder"
+  - name: "Steven"
+    last_name: "Granger"
     nick_name: ""
-    slug: "bridget-schraeder"
-    job_title: "Head of Partnerships & Career Support"
-    bio: "Over four years of Recruitment Experience"
+    slug: "steven-granger"
+    job_title: "Head of partnership & Career Support"
+    bio: "Over 12 years of recruiting experience with 20 years of career coaching/ leadership development."
     github: ""
-    linkdin: "https://linkedin.com/in/bridget-schraeder-625657195"
-    twitter: "https://twitter.com/BridgetAlexys"
+    linkdin: "https://www.linkedin.com/in/steven-granger-4geeks-academy-miami/"
+    twitter: ""
     website: ""
-    image: "../../../../static/images/staff/bridget.jpg"
+    image: "../../../../static/images/staff/steven.jpg"
+    age:
+    interests:
+      - Soccer
+      - Music
+      - Movies
+      - Travel
+    coding_skills:
+      - Javascript
+    location: ""
+  - name: "Ana Belen"
+    last_name: "Salas"
+    nick_name: ""
+    slug: "anabelen-salas"
+    job_title: "Marketing Operations Manager"
+    bio: "Innovating and finding ways to grow the 4Geeks community"
+    github: ""
+    linkdin: "https://www.linkedin.com/in/anabelensalas/"
+    twitter: "https://twitter.com/anabelensalas"
+    website: ""
+    image: "../../../../static/images/staff/ana.png"
     age: 33
     interests:
       - Music
@@ -133,7 +153,7 @@ staff:
     last_name: "Castro"
     nick_name: ""
     slug: "mafe-castrp"
-    job_title: "Growth and Marketing"
+    job_title: "Growth Manager"
     bio: "Leading the efforts of our growth Department for our HP operations."
     github: ""
     linkdin: "https://www.linkedin.com/in/mafecasvi/"

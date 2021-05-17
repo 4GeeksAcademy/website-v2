@@ -2,26 +2,37 @@ import React, {useState} from 'react'
 import Link from 'gatsby-link'
 import {navigate} from 'gatsby'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
-import {Button, RoundImage, Colors} from '../new_components/Styling'
+import {Button, RoundImage, Colors, StyledBackgroundSection} from '../new_components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseBlogRender from './_baseBlogLayout'
 import twitterUser from '../utils/twitter'
-import {GridContainer, Div, Header} from '../new_components/Sections'
+import {GridContainer, Div, GridContainerWithImage} from '../new_components/Sections'
 
 //Functional Component: Blog
 const Blog = ({data, pageContext, yml}) => {
-
+    const langSwitcher = {
+        es: "blog-en-espanol",
+        us: "blog"
+    }
     //Banner (Info+ Image)
     const Banner = () => {
         return (
-            <Header
-                seo_title={yml.seo_title}
-                title={yml.header.title}
-                paragraph={yml.header.paragraph}
-                image={yml.header.image.childImageSharp.fluid}
-                background="Colors.white"
-                padding="0 0 0 175px;"
-            />
+            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 0 0">
+                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
+                    <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
+                    <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
+                    <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header.paragraph} </Paragraph>
+                </Div>
+                <Div display="none" display_tablet="flex" height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
+                    <StyledBackgroundSection
+                        height="450px"
+                        width="100%"
+                        image={yml.header.image && yml.header.image.childImageSharp.fluid}
+                        bgSize={`contain`}
+                        alt={yml.header.alt}
+                    />
+                </Div>
+            </GridContainerWithImage>
         )
     }
 
@@ -29,26 +40,19 @@ const Blog = ({data, pageContext, yml}) => {
     const Post = (item, i) => {
         return (
             <>
-
                 {/* Imagen */}
                 <Div flexDirection="Column" margin="0 0 87px 0">
                     {
                         item.node.frontmatter.image &&
-                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
                             <LazyLoad height={10} scroll={true} once={true}>
                                 <RoundImage
                                     url={item.node.frontmatter.image}
                                     bsize="cover"
                                     border="0px"
                                     position="center"
-
                                     width="100%"
                                     height="329px"
-                                    margin="0 0 25px 0"
-                                    h_lg="140px"
-                                    h_md="120px"
-                                    h_sm="200px"
-                                    h_xs="150px"
                                 />
                             </LazyLoad>
                         </Link>
@@ -56,26 +60,24 @@ const Blog = ({data, pageContext, yml}) => {
 
                     {/* Boton */}
                     <Div flexDirection_md="row" flexDirection="column" justifyContent="left">
-                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
-                            <Button width="fit-content"
-                                style={{outlineStyle: "solid", outlineColor: Colors.gray, outlineWidth: "thin"}}
-                                background={Colors.white}
-                                fontSize="13px"
-                                fontWeight="700"
-                                height="16px"
-                                lineHeight="16px"
-                                padding="2px 15px 2px 15px"
-                                letterSpacing="0.05em"
-                                margin="0 0 25px 0"
-                                textColor="#3A3A3A">
-                                full stack
-                </Button>
+                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                            <Button
+                                variant="outline"
+                                border={`1px solid ${Colors.darkGray}`}
+                                color={Colors.darkGray}
+                                font='"Lato", sans-serif'
+                                margin="20px 10px 20px 0"
+                                pointer
+                                textColor={Colors.darkGray}
+                                fontSize={"13px"}>
+                                {item.node.frontmatter.cluster.replace("-", " ") || "4Geeks"}
+                            </Button>
                         </Link>
                     </Div>
 
                     {/* Titulo */}
                     <Div>
-                        <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
+                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
                             <H4
                                 textAlign="left"
                                 align_sm="left"
@@ -108,9 +110,9 @@ const Blog = ({data, pageContext, yml}) => {
                             color="#0097cd"
                             margin="0 0 0 0"
                             textAlign="left">
-                            <Link to={`/${pageContext.lang}/post/${item.node.frontmatter.slug}`}>
-                                Leer artículo &gt;
-                </Link>
+                            <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                                {`Read more >`}
+                            </Link>
                         </Paragraph>
                     </Div>
 
@@ -150,34 +152,20 @@ const Blog = ({data, pageContext, yml}) => {
                             yml.topics.map((topic, i) => {
 
                                 return <>
-                                    <Button width="fit-content"
-                                        style={{
-                                            outlineStyle: "solid",
-                                            outlineColor: Colors.gray,
-                                            outlineWidth: "thin",
-                                            borderRadius: "0%",
-                                        }}
-                                        textColor="#3A3A3A"
-                                        background={Colors.lightGray}
-
-                                        fontSize="13px"
-                                        fontWeight="700"
-                                        height="40px"
-                                        cursor="pointer"
-                                        letterSpacing="0.05em"
-                                        margin="0px 10px 25px 10px"
-                                        display="inline-block"
-                                        font-family="Lato"
-
-                                        lineHeight="16px"
-                                        padding="0 10px 0 10px"
-                                        textTransform="uppercase"
-
-                                        colorHover={Colors.blue}
-
-                                        onClick={() => getPostsByTag(topic)}>
-                                        {topic}
-                                    </Button>
+                                    <Link to={`/${pageContext.lang}/${langSwitcher[pageContext.lang]}/${topic}`}>
+                                        <Button
+                                            variant="outline"
+                                            border={`1px solid ${Colors.darkGray}`}
+                                            color={Colors.darkGray}
+                                            font='"Lato", sans-serif'
+                                            margin="20px 10px 0 0"
+                                            pointer
+                                            textColor={Colors.darkGray}
+                                            fontSize={"13px"}
+                                        >
+                                            {topic.replace("-", " ")}
+                                        </Button>
+                                    </Link>
                                 </>
                             })
                         }
@@ -191,12 +179,12 @@ const Blog = ({data, pageContext, yml}) => {
     //---------------------------------------------------
 
     //Navigate to UI Posts by Tag 
-    const getPostsByTag = (tag) => {
+    const getPostsByCluster = (cluster) => {
 
         // 'es' or 'us'
         let lang = pageContext.lang;
 
-        navigate('/' + lang + '/blog/tag/' + tag);
+        navigate('/' + lang + '//' + tag);
 
     }
 
@@ -460,7 +448,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
             node {
                 frontmatter {
                 author
-                avatar
                 date
                 image
                 slug
@@ -469,7 +456,7 @@ query BlogQuery($file_name: String!, $lang: String!) {
                 lang
                 featured
                 status
-                
+                cluster
                 }
             }
         }
@@ -489,13 +476,13 @@ query BlogQuery($file_name: String!, $lang: String!) {
             node {
                 frontmatter {
                     author
-                    avatar
                     date
                     image
                     title
                     excerpt
                     featured
                     status
+                    cluster
                 }
                 fields{
                     lang

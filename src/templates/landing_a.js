@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 import {graphql, navigate} from 'gatsby';
-import {landingSections} from '../components/Landing';
-import FollowBar from "../components/FollowBar"
-import LeadForm from "../components/LeadForm";
-import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
-import {Row, Column, Divider, Div} from '../components/Sections'
-import {Colors, StyledBackgroundSection} from '../components/Styling'
+import {landingSections} from '../new_components/Landing';
+import FollowBar from "../new_components/FollowBar"
+import LeadForm from "../new_components/LeadForm";
+import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading'
+import {Row, Column, Divider, Div, GridContainer} from '../new_components/Sections'
+import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 
 import BaseRender from './_baseLandingLayout'
 import {requestSyllabus} from "../actions";
@@ -71,6 +71,10 @@ const Landing = (props) => {
           {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span key={i} className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
+      {/* <GridContainer columns="12">
+        <Div>Tets</Div>
+
+      </GridContainer> */}
       <Row display="flex" className="d-sm-none">
         <StyledBackgroundSection
           className={`image`}
@@ -205,7 +209,7 @@ const Landing = (props) => {
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
           .map((name, i) => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, index: i, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location })
+            return landingSections[layout]({...props, index: i, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location})
           })
       }
     </>

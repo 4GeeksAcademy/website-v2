@@ -10,7 +10,7 @@ import {SessionContext} from '../session'
 import ProgramDetails from '../new_components/ProgramDetails';
 import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
 import PricesAndPayment from '../new_components/PricesAndPayment';
-import Modal from '../components/Modal';
+import Modal from '../new_components/Modal';
 import TypicalDay from '../components/TypicalDay';
 import LeadForm from '../new_components/LeadForm';
 import AlumniProjects from '../new_components/AlumniProjects';
@@ -105,7 +105,7 @@ const Program = ({data, pageContext, yml}) => {
           }}
         />
       </Modal>
-      <Badges lang={pageContext.lang} short_link margin="0 0 40px 0" />
+      <Badges lang={pageContext.lang} short_link={true} margin="0 0 40px 0" paragraph={yml.badges.paragraph} />
     </Header>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
@@ -114,7 +114,7 @@ const Program = ({data, pageContext, yml}) => {
     <GridContainer padding_tablet="0" margin_tablet="90px 0 62px 0" margin="57px 0">
       <Div height="5px" background="#EBEBEB"></Div>
     </GridContainer>
-    <UpcomingDates lang={pageContext.lang} />
+    <UpcomingDates lang={pageContext.lang} message={courseDetails.upcoming.no_dates_message} />
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
@@ -204,6 +204,12 @@ export const query = graphql`
             syllabus{
               heading
               button_label
+            }
+            badges{
+              paragraph
+            }
+            upcoming{
+              no_dates_message
             }
             credentials{
               heading

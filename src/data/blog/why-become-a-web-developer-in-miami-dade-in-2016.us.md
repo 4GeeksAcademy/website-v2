@@ -8,13 +8,13 @@ layout: post
 link: https://www.4geeksacademy.co/why-become-a-web-developer-in-miami-dade-in-2016/
 slug: why-become-a-web-developer-in-miami-dade-in-2016
 title: Why Become A Web Developer In Miami Dade In 2016
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Martes-1.png"
+image_alt: ""
 wordpress_id: 626
 categories:
 - Sin categoría
 - Why learn to code?
-
+cluster: "learn-to-code"
 tags:
 - career path
 - Jobs in Miami

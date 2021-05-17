@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-miami"
   title: "Miami Coding Bootcamp"
   position: 1
-  description: "Know here all about our coding bootcamp campus in Miami, Florida of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Miami, Florida of 4Geeks Academy"
   image: ""
   keywords: "null"
   redirects:
@@ -18,18 +18,27 @@ meta_info:
 
 seo_title: "Coding Bootcamp in Miami"
 header:
-  tagline: "Miami"
+  tagline: "4Geeks Academy in Miami"
   paragraph: "Miami is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Miami and become part of the best place to learn to code in Florida. \\n Career Support and Mentorship for our students is for life."
   image: "../../../static/images/locations/miami-home.png"
   alt: ""
 
 badges:
   title: ""
-  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  paragraph: "4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the Florida Department of Education.
+  
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Miami according to SwitchUp.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+
+A community built for developers."
 news:
   title: "4Geeks Academy Miami has been reviewed in:"
 upcoming:
-  title: "Upcoming programs in Miami, USA"
+  no_dates_message: "There are currently no upcoming dates for this campus"
 button_header:
   button_text: See Programs
   button_link: "#programs"
@@ -43,6 +52,7 @@ button:
 info_box:
   heading: "Find us in Miami"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
@@ -50,7 +60,7 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: "Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos “Findes de Programación”, donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!"
+  content: "Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "miami-sunset"
@@ -58,6 +68,10 @@ images_box:
       alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
+    - path: "../../../static/images/locations/miami-dia.jpg"
+      alt: "4Geeeks miami day"
+    - path: "../../../static/images/locations/miami-room.jpg"
+      alt: "4Geeeks miami room"
 
 ## HEADING SECTION
 
@@ -414,7 +428,7 @@ prices:
           price_info: "single payment"
         button:
           button_text: "Apply Now"
-    
+
     full_time:
       slug: "full_time"
       duration: "?"

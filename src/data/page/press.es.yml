@@ -9,11 +9,11 @@ meta_info:
 seo_title: "prensa"
 header:
   title: "Prensa"
-  paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
+  paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que trabajamos más duro cada vez para mejorar.."
   image: "../../../static/images/outcomes/outcomes.png"
 
 content:
-  heading: "Read about this coding bootcamp in the news..."
+  heading: "Lea sobre este bootcamp de codificación en las noticias..."
   limit: 4
   news:
     - name: "Newsweek"

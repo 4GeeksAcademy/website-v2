@@ -1,8 +1,5 @@
-import React, {useState, useEffect, useContext, useRef} from 'react';
-import {Link, Anchor} from "../components/Styling/index"
-import Card from '../components/Card'
+import React, {useState, useEffect, useContext, useRef, Suspense, lazy} from 'react';
 import ChooseProgram from '../new_components/ChooseProgram'
-import News from '../new_components/News'
 import Badges from '../new_components/Badges'
 import Loc from '../new_components/Loc'
 import OurPartners from '../new_components/OurPartners'
@@ -15,14 +12,12 @@ import {Div, Row, Column, Wrapper, Container, GridContainerWithImage, Grid, Grid
 import {Title, H1, H2, H4, H3, Span, Paragraph, Separator} from '../new_components/Heading'
 import {Button, Colors, Small, Img, StyledBackgroundSection} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
-import {Circle} from '../new_components/BackgroundDrawing'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
-import {requestSyllabus} from "../actions";
-// import Icon from '../components/Icon'
-import LeadForm from '../components/LeadForm';
-import Modal from '../components/Modal';
-import Why4Geeks from '../components/Why4Geeks';
+
+// const MapFrame = loadable(() => import('../new_components/MapFrame'), {
+//   fallback: <div>Loading...</div>
+// })
+
 
 const imagePositions = {
   "1": "1/1/3/7",
@@ -31,12 +26,27 @@ const imagePositions = {
   "4": "4/1/5/4",
   "5": "3/4/5/13"
 }
+
+const MapFrame = lazy(() => import('../new_components/MapFrame'));
+
 const Location = ({data, pageContext, yml}) => {
   const {lang} = pageContext;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
   const images = data.allLocationYaml.edges[0].node;
   const [cohorts, setCohorts] = React.useState([]);
+  const [ready, setReady] = useState(false)
+
+
+  useEffect(() => {
+    process.nextTick(() => {
+      if (globalThis.window ?? false) {
+        setReady(true)
+      }
+    })
+    // setTimeout(() => { setReady(true) }, 3000)
+  }, [])
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -48,6 +58,8 @@ const Location = ({data, pageContext, yml}) => {
 
   useEffect(() => {
     const loadCohorts = async () => {
+      // https://breathecode.herokuapp.com/v1
+      // const resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
       const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
       const data = await resp.json();
       setCohorts(data.slice(0, 3))
@@ -66,12 +78,13 @@ const Location = ({data, pageContext, yml}) => {
     {/* github={`/location`} */}
     {/* <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px"> */}
     {/* <Grid height="375px" height_md="219px" columns="2" rows="2" columns_md="12" rows_md="1" background={Colors.verylightGray}> */}
-    <GridContainerWithImage padding="24px 17px " padding_tablet="54px 0 54px 0" columns_tablet="14" margin="67px 0" margin_tablet="0">
+    <GridContainerWithImage padding="24px 17px " padding_tablet="54px 0" columns_tablet="14" margin="67px 0" margin_tablet="100px 0 0 0">
       <Div flexDirection="column" alignItems="center" alignItems_tablet="start" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
         <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
         <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
         <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
+        {yml.info_box.whatsapp && <Paragraph textAlign_tablet="left" >Whatsapp: {yml.info_box.whatsapp} </Paragraph>}
         <Paragraph textAlign_tablet="left" margin="0 0 30px 0">{yml.info_box.email} </Paragraph>
         {/* <Button goTo={goToChooseProgram} color={Colors.blue}>{yml.button_header.button_text}</Button> */}
         <ChooseProgram
@@ -88,55 +101,7 @@ const Location = ({data, pageContext, yml}) => {
 
       </Div>
       <Div height="auto" width="100%" gridColumn_tablet="7 / 15" style={{position: "relative"}}>
-        {/* <Circle
-          color="blue"
-          width="53px"
-          height="53px"
-          bottom="30px"
-          left="0"
-          zIndex="1"
-        />
-        <Circle
-          color="yellow"
-          width="200px"
-          height="200px"
-          top="50px"
-          left="-5%"
-          opacity="0.2"
-        />
-        <Circle
-          color="yellow"
-          width="21px"
-          height="21px"
-          top="60px"
-          left="220px"
-        />
-        <Circle
-          color="yellow"
-          width="21px"
-          height="21px"
-          top="160px"
-          right="120px"
-          zIndex="1"
-        />
-        <Circle
-          color="blue"
-          width="9px"
-          height="9px"
-          top="100px"
-          left="10%"
-        />
 
-        <Circle
-          color="blue"
-          width="57px"
-          height="57px"
-          top="40px"
-          right="10%"
-          opacity="0.4"
-        /> */}
-        {/* <Div style={{position: "absolute", background: "#C7F3FD", width: "71%", height: "192px", top: "-24px", left: "97px", borderRadius: "3px"}}></Div>
-        <Div style={{position: "absolute", background: "#FFB718", width: "256px", height: "174px", bottom: "-25px", right: "18px", borderRadius: "3px"}}></Div> */}
         <StyledBackgroundSection
           height={`495px`}
           image={yml.header.image.childImageSharp.fluid}
@@ -146,7 +111,7 @@ const Location = ({data, pageContext, yml}) => {
       </Div>
     </GridContainerWithImage>
 
-    <Badges lang={pageContext.lang} background={Colors.lightGray} margin="0 0 57px 0" padding="27px 17px 50px 17px" padding_tablet="80px 0 100px 0" paragraph={yml.badges.paragraph} />
+    <Badges lang={pageContext.lang} background={Colors.lightGray} paragraph={yml.badges.paragraph} margin="0 0 57px 0" padding="27px 17px 50px 17px" padding_tablet="80px 0 100px 0" />
     <GridContainer columns_tablet="12" padding_tablet="60px 0 77px 0" padding="40px 17px">
       <Div gridColumn_tablet="1 / 4" ><H2 textAlign="left">{images.images_box.heading}</H2></Div>
       <Div flexDirection="column" gridColumn_tablet="5 / 13">
@@ -183,9 +148,22 @@ const Location = ({data, pageContext, yml}) => {
     </GridContainer>
     <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
-    <UpcomingDates lang={pageContext.lang} />
+    <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} message={yml.upcoming.no_dates_message} />
     <Loc lang={pageContext.lang} locations={data.test.edges} />
     <Staff lang={pageContext.lang} />
+
+    {/* IFRAME map */}
+    <Div>
+      {
+        !ready ? null : (
+          // <div>Loading...</div>
+          <Suspense fallback={() => 'loading'}>
+            <MapFrame src={ready ? yml.info_box.iframeMapUrl : "about:blank"} width="100%" height="492px" />
+          </Suspense>
+        )
+      }
+    </Div>
+
     {/* <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} /> */}
     {/* <Container
       variant="fluid"
@@ -412,15 +390,17 @@ export const query = graphql`
                 title
             }
             upcoming{
-                title
+              no_dates_message
             }
             info_box{
                 heading
                 map_url
                 address
+                iframeMapUrl
                 phone
                 email
                 contact_heading
+                whatsapp
                 image {
                     childImageSharp {
                       fluid(maxWidth: 800, quality: 100){

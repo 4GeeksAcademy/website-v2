@@ -125,19 +125,22 @@ const customStyles = {
     }),
     control: (styles) => ({
         ...styles,
-        fontFamily: "lato, sans-serif",
-        background: "#ededed",
-        border: 0,
+        fontFamily: "Lato, sans-serif",
+        background: "#ffffff",
+        border: "1px solid #606060",
         marginTop: "5px",
         width: "100%",
+        fontSize: "15px",
+        fontWeight: "400",
+        lineHeight: "22px"
 
-        ":hover": {boxShadow: "0 0 0 1px black", },
-        ":active": {boxShadow: "0 0 0 1px black", borderColor: "black", }
+        // ":hover": {boxShadow: "0 0 0 1px black", },
+        // ":active": {boxShadow: "0 0 0 1px black", borderColor: "black", }
     }),
     option: (styles, {data, isDisabled, isFocused, isSelected}) => {
         return {
             ...styles,
-            fontFamily: "lato, sans-serif",
+            fontFamily: "Lato, sans-serif",
         };
     }
 }

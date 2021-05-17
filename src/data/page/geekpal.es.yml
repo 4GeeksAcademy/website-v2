@@ -10,7 +10,7 @@ header:
   title: ""
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "Texto que explique que GeekPal es una membresía con beneficios de acompañamiento, que el estudiante obtiene al inscribirse en un programa con La Academia. <span style='font-weight: bold'> Aún despues de haberte graduado continuarás teniendo mentoría personalizada.</span>"
+  paragraph: "GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Le garantiza que no volverá a codificar solo. Con GeekPAL contará con A PAL por el resto de su vida, sí, incluso después de graduarse. <span style = 'font-weight: bold'> Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código. </span>"
   image_logo: "/images/geekpal.png"
 
 geekPal:
@@ -23,7 +23,7 @@ icons:
   - icon: "ratio"
     title: "1:5 RATIO profesor estudiante"
   - icon: "talk"
-    title: "50 MENTORIAS POR ALUMNO"
+    title: "En promedio, cada alumno tiene 50 MENTORIAS"
   - icon: "timer"
     title: "TIEMPO DE RESPUESTA DE 15 MINUTOS"
     
@@ -51,11 +51,11 @@ list:
     image: "../../../static/images/comunity-support.png"
     position: "right"
     sub:
-      - title: "✔ Breath Code"
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      - title: "✔ Breathe Code"
+        text: "Es una comunidad creada para acelerar la forma en que los desarrolladores junior aprenden y evolucionan utilizando la tecnología. BreatheCode te da acceso a muchos recursos para mejorar tus habilidades, pero también puedes contribuir para ayudar a otros con su código. "
       - title: "✔ Comunidad Slack"
         text: "Nuestra comunidad internacional de más de 
-        <span style='font-weight: bold'> 1100 personas</span>, que te brindará todo el apoyo que necesites."
+        <span style='font-weight: bold'> 2100 personas</span>, que te brindará todo el apoyo que necesites."
 
 # benefits:
 #   - p:

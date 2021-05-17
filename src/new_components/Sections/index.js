@@ -154,6 +154,7 @@ export const Div = styled.div`
     border-bottom: ${props => props.borderBottom};
     border-right: ${props => props.borderRight};
     justify-content: ${props => justifyContentOptions[props.justifyContent]};
+    text-align: ${props => props.textAlign};
     justify-self: ${props => props.justifySelf};
     box-shadow: ${props => props.isActive ? props.boxShadowActive : props.boxShadow};
     flex-wrap: nowrap; 
@@ -184,11 +185,12 @@ export const Div = styled.div`
 
     }
     @media ${Devices.xs}{
-        
+        padding: ${props => props.padding_xs};
         
     }
     @media  ${Devices.sm}{
         padding: ${props => props.padding_sm};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_sm]};
         height: ${props => props.height_sm};
         
     }
@@ -217,7 +219,7 @@ export const Div = styled.div`
         grid-column: ${props => props.gridColumn_tablet};
         grid-row: ${props => props.gridRow_tablet};
         justify-self: ${props => props.justifySelf_tablet};
-        justify-content: ${props => props.justifyContent_tablet};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_tablet]};
         z-index: ${props => props.zIndex_tablet};
         &:after {
             display: ${props => props.displayAfter_tablet};
@@ -227,10 +229,12 @@ export const Div = styled.div`
     @media  ${Devices.md}{
         flex: 0 0 ${props => (props.size_md / 12) * 100}%;
         max-width: ${props => (props.size_md / 12) * 100}%;
+        min-width: ${props => props.minWidth_lg};
         grid-area: ${props => props.gridArea_md};
         display: ${props => props.display_md};
         flex-direction: ${props => props.flexDirection_md};
         justify-content: ${props => justifyContentOptions[props.justifyContent_md]};
+        text-align: ${props => props.textAlign_md};
         align-items: ${props => props.alignItems_md};
         margin: ${props => props.margin_md};
         padding: ${props => props.padding_md};
@@ -292,8 +296,8 @@ export const Grid = styled(Div)`
     @media  ${Devices.md}{
         margin: ${props => props.margin_md};
         grid-template-columns: ${props => props.gridTemplateColumns_md};
-        grid-template-rows: repeat(${props => props.gridTemplateRowsUndefined});
-        grid-gap: ${props => props.gridGap_mdUndefined};
+        grid-template-rows: repeat(${props => props.gridTemplateRows_md});
+        grid-gap: ${props => props.gridGap_md};
         grid-column: ${props => props.gridColumn_md};
     }
     @media  ${Devices.lg}{
@@ -302,7 +306,56 @@ export const Grid = styled(Div)`
     }
     @media  ${Devices.xxl}{
     }
-    `
+`
+
+export const Old_Grid = styled.div`
+    display: ${props => props.display || "grid"};
+    grid-template-columns: repeat(${props => props.columns}, 1fr);
+    grid-template-rows: repeat(${props => props.rows || "auto"});
+    grid-gap: ${props => props.gridGap || "15px"};
+    width: ${props => props.width};
+    justify-self: ${props => props.justifySelf};
+    height: ${props => props.height};
+    background: ${props => props.background};
+    padding: ${props => props.padding};
+    margin: ${props => props.margin};
+
+    @media ${Devices.xxs}{
+        grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
+    }
+    @media ${Devices.xs}{
+        grid-template-columns: repeat(${props => props.columns_xs}, 1fr);
+    }
+    @media  ${Devices.sm}{
+        grid-template-columns: repeat(${props => props.columns_sm}, 1fr);
+    }
+    @media  ${Devices.tablet}{
+        grid-template-columns: repeat(${props => props.columns_tablet}, 1fr);
+        grid-template-rows: repeat(${props => props.rows_tablet}, 5vw);
+        padding: ${props => props.padding_tablet};
+    }
+    // CHANGES: removed repeat({...} ,1fr) for contact page
+    @media  ${Devices.md}{
+        grid-template-columns: repeat(${props => props.columns_md});
+        grid-template-rows: repeat(${props => props.rows_md});
+        grid-gap: ${props => props.gridGap_md};
+        height: ${props => props.height_md};
+        padding: ${props => props.padding_md};
+        display: ${props => props.display_md};
+        margin: ${props => props.margin_md};
+    }
+    @media  ${Devices.lg}{
+        grid-template-columns: repeat(${props => props.columns_lg}, 1fr);
+        padding: ${props => props.padding_lg};
+    }
+    @media  ${Devices.xl}{
+        grid-template-columns: repeat(${props => props.columns_xl}, 1fr);
+    }
+    @media  ${Devices.xxl}{
+        grid-template-columns: repeat(${props => props.columns_xxl}, 1fr);
+    }
+`
+
 // export const Header = ({children, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background}) => {
 //     return (
 //         <Grid height={height} height_md={height_md} height_tablet={height_tablet} columns="1" rows="1" columns_md={`12`} gridGap_md="11px" gridGap="0" background={background}>
@@ -323,9 +376,9 @@ export const Grid = styled(Div)`
 //         />
 //     </Div>
 //     :
-    // <Div width="100%" gridArea_md="1/7/1/13" >
-    //     {svg_image}
-    // </Div>
+// <Div width="100%" gridArea_md="1/7/1/13" >
+//     {svg_image}
+// </Div>
 // }
 //         </Grid>)
 // }
@@ -341,10 +394,10 @@ export const Header = ({hideArrowKey, children, fontSize, fontSize_tablet, image
                     <Paragraph padding_tablet={paddingParagraph_tablet} textAlign_tablet={textAlign_tablet} margin="26px 0" >{paragraph}</Paragraph>
                     {children}
                 </Div>
-                {svg_image ? 
-                <Div width="100%" display="none" display_tablet="flex" gridArea_tablet="1/8/1/17" >
-                    {svg_image}
-                </Div> : null}
+                {svg_image ?
+                    <Div width="100%" display="none" display_tablet="flex" gridArea_tablet="1/8/1/17" >
+                        {svg_image}
+                    </Div> : null}
             </Grid>
         </Grid>
     )
@@ -357,7 +410,7 @@ export const Header = ({hideArrowKey, children, fontSize, fontSize_tablet, image
 export const GridContainer = ({fluid, justifyContent, justifyContent_tablet, shadow, shadow_tablet, containerColumns, containerColumns_tablet, containerColumns_md, children, display, display_tablet, background, borderRadius, backgroundChild, containerGridGap, gridGap, gridGap_tablet, gridTemplateRows, gridTemplateRows_tablet, height, height_tablet, columns, columns_tablet, margin, margin_tablet, margin_md, padding, padding_tablet, paddingChild, borderTop, padding_tabletChild, position, GridColumn, gridColumn_tablet}) => {
     return (
         <Grid background={background} gridGap={containerGridGap} gridTemplateColumns={containerColumns} gridTemplateColumns_tablet={containerColumns_tablet} gridTemplateColumns_md={containerColumns_md} boxShadow={shadow} boxShadow_tablet={shadow_tablet} borderRadius={borderRadius} display={display} display_tablet={display_tablet} justifyContent={justifyContent} justifyContent_tablet={justifyContent_tablet} position={position} borderTop={borderTop} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} margin_md={margin_md} padding={padding || "0 17px"} padding_tablet={padding_tablet || "0"}>
-            <Grid background={backgroundChild} gridGap={gridGap} gridGap_tablet={gridGap_tablet} gridTemplateRows={gridTemplateRows} gridTemplateRows_tablet={gridTemplateRows_tablet} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${12 / columns_tablet}fr)`} padding={paddingChild} padding_tablet={padding_tabletChild} gridTemplateColumns={columns} gridColumn={GridColumn} gridColumn_tablet={gridColumn_tablet ? gridColumn_tablet : fluid ? "1 / span 14" : "2 / span 12"}
+            <Grid background={backgroundChild} gridGap={gridGap} gridGap_tablet={gridGap_tablet} gridTemplateRows={gridTemplateRows} gridTemplateRows_tablet={gridTemplateRows_tablet} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${12 / columns_tablet}fr)`} padding={paddingChild} padding_tablet={padding_tabletChild} gridTemplateColumns={`${columns}, 1fr`} gridColumn={GridColumn} gridColumn_tablet={gridColumn_tablet ? gridColumn_tablet : fluid ? "1 / span 14" : "2 / span 12"}
             >
                 {children}
             </Grid>

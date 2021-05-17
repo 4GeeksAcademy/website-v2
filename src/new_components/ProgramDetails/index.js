@@ -129,7 +129,7 @@ const ProgramDetails = (props) => {
                         <Icon icon="laptop" width="52px" height="39px" />
                         <Div flexDirection="column" margin="0 0 0 15px">
                             <H3 textAlign="left">{props.details.details_modules[selected.index].title}</H3>
-                            {props.details.details_modules[selected.index].description.split('\\n').map((d, i) =>
+                            {props.details.details_modules[selected.index].projects.split('\\n').map((d, i) =>
                                 <Paragraph
                                     textAlign="left"
                                     color={Colors.darkGray}
@@ -139,13 +139,13 @@ const ProgramDetails = (props) => {
                             )}
                         </Div>
                     </Div>
-                    <Div margin="20px 0" justifyContent="between">
-                        <Div margin="0 10px 0 0">
+                    <Div margin="20px 0" >
+                        <Div margin="0 10px 0 0" width="50%">
                             <Div>
                                 <Icon icon="rocket" width="46px" height="46px" />
                             </Div>
                             <Div flexDirection="column" margin="0 0 0 15px">
-                                <H3 textAlign="left">{props.details.details_modules[selected.index].title}</H3>
+                                <H3 textAlign="left">{strings[lang]["Projects"]}</H3>
                                 {props.details.details_modules[selected.index].description.split('\\n').map((d, i) =>
                                     <Paragraph
                                         textAlign="left"
@@ -161,15 +161,12 @@ const ProgramDetails = (props) => {
                                 <Icon icon="clock" width="46px" height="46px" />
                             </Div>
                             <Div flexDirection="column" margin="0 0 0 15px">
-                                <H3 textAlign="left">{props.details.details_modules[selected.index].title}</H3>
-                                {props.details.details_modules[selected.index].description.split('\\n').map((d, i) =>
-                                    <Paragraph
-                                        textAlign="left"
-                                        color={Colors.darkGray}
-                                        key={i}                        >
-                                        {d}
-                                    </Paragraph>
-                                )}
+                                <H3 textAlign="left">{strings[lang]["Duration"]}</H3>
+                                <Paragraph
+                                    textAlign="left"
+                                    color={Colors.darkGray}                     >
+                                    {props.details.details_modules[selected.index].duration}
+                                </Paragraph>
                             </Div>
                         </Div>
                     </Div>

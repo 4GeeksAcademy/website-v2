@@ -8,9 +8,9 @@ meta_info:
   redirects: ["/home", "/us/home", "/us/index"]
 header_data:
   tagline: Coding Bootcamp
-  title: Empower your life with coding skills
+  title: Empower Your Life With Coding Skills
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
-  image: "../../../static/images/bg/main.png"
+  image: "../../../static/images/bg/main-home-bg.png"
 
 news:
   heading: "Read about this coding bootcamp in the news..."
@@ -20,12 +20,12 @@ button:
   button_link: "#programs"
 ## BADGES SECTION /new_components/Badges
 badges:
-  paragraph: "Lorem ipsum dolor sit amet, <span class='badge'>consectetur</span> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  paragraph: "This is the place to boost your career by learning to code. We are very proud of our programs and methodology to train developers in just a few months and help them boost their professional careers."
 
 ## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
 choose_program:
   title: Choose your program
-  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
+  paragraph: Follow the path towards a life-changing experience. Become the developer that builds the next culture-shifting web app.
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
@@ -54,15 +54,15 @@ join_geeks:
 ## LOCATIONS SECTION
 locations:
   heading: "OUR LOCATIONS"
-  sub_heading: "We have carefully chosen our Locations and Campus. We are bringing you an experience that you will never forget"
+  sub_heading: "We have carefully chosen our Locations and Campuses. We are bringing you an experience that you will never forget."
 
 ## ALUMNI SECTION
 alumni_header:
-  heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Projects and experiences from our graduates and alumni. People that decided to boost their careers with coding at 4Geeks."
+  heading: "MEET OUR ALUMNI AND THEIR PROJECTS"
+  sub_heading: "Get to know our graduates and some of the projects they built during the program."
 
 ## TESTIMONIAL SECTION
 testimonial_header:
-  heading: "86% of our graduates got hired"
+  heading: "86% got hired in tech jobs after graduation."
   button_text: "See all testimonials"
   button_link: ""

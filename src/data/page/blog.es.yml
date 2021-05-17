@@ -4,7 +4,7 @@ meta_info:
   description: "Encuentra recursos y noticias para desarrolladores actuales y potenciales. Conocimientos básicos, tendencias, asesoramiento profesional y más en nuestro blog"
   image: null
   keywords: "4geeks Academy Blog"
-  redirects: ['/es/blog']
+  redirects: ["/es/blog"]
 
 banner:
   tagline: "4GEEKS ACADEMY BLOG"
@@ -15,19 +15,14 @@ seo_title: "4GEEKS ACADEMY BLOG"
 header:
   title: "Blog"
   paragraph: "Recursos y novedades principalmente escritas para nuestra comunidad o personas interesadas en la industria Tech, de las startups y del crecimiento profesional a traves del Coding."
-  image: "../../../static/images/bg/pricing-bg.jpg"
+  image: "../../../static/images/blog/Blog-header.png"
   image_alt: ""
 
 question: "¿Que te interesa?"
 topics:
-  - Full Stack
-  - Software Engineer
-  - Machine Learning
-  - Learn To Program
-  - Career Growth
-  - Coding Bootcamps
-  - Trends & Tech 
-
+  - full-stack-developer
+  - learn-to-code
+  - coding-bootcamp
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."

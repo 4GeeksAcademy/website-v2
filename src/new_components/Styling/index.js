@@ -179,7 +179,9 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     background-size: ${props => props.bgSize || "cover"};
     height: ${props => props.height};
     max-width: ${props => props.maxWidth};
+    min-height: ${props => props.minHeight};
     &:before, &:after {
+        min-height: ${props => props.minHeight};
         border-radius: ${props => props.borderRadius};
         filter: ${props => props.filter};
         height: ${props => props.h_sm};
@@ -247,7 +249,8 @@ const getVariant = (props) => ({
     "outline": {
         border: `1px solid ${props.color}`,
         background: "initial",
-        color: props.color
+        color: props.color,
+        borderRadius: "3px"
     },
     "full": {
         border: "none",
@@ -303,6 +306,8 @@ export const Button = styled(SmartButton)`
     }
     @media  ${Devices.sm}{
         width: ${props => props.width_sm};
+        margin: ${props => props.margin_sm};
+        font-size: ${props => props.fontSize_sm};
     }
     @media  ${Devices.tablet}{
         width: ${props => props.width_tablet};
@@ -310,14 +315,19 @@ export const Button = styled(SmartButton)`
     }
     @media  ${Devices.md}{
         width: ${props => props.width_md};
+        font-size: ${props => props.fontSize_md};
+        margin: ${props => props.margin_md};
     }
     @media  ${Devices.lg}{
+        font-size: ${props => props.fontSize_lg};
     }
     @media  ${Devices.xl}{
     }
     @media  ${Devices.xxl}{
     }
 `;
+
+
 Button.defaultProps = {
     fontSize: '12px',
     width: 'fit-content',

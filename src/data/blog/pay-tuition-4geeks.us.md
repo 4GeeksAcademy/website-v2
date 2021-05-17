@@ -8,12 +8,12 @@ layout: post
 link: https://www.4geeksacademy.co/pay-tuition-4geeks/
 slug: pay-tuition-4geeks
 title: How to Pay your tuition at 4Geeks
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2017/10/Henry-Adams-said-.jpg"
+image_alt: ""
 wordpress_id: 2573
 categories:
 - Learning to code
-
+cluster: "learn-to-code"
 tags:
 - 4geeks academy
 - challenges of a web developer

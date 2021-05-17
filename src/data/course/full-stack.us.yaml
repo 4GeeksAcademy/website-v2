@@ -31,6 +31,12 @@ button:
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
   apply_button_link: "/us/apply"
+  
+badges:
+  paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the Florida Department of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek.."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"  
 
 credentials:
   heading: "This Program By The Numbers"
@@ -40,7 +46,7 @@ credentials:
 details:
   about:
       title: "About the program"
-      sub_title: "Learn the most wanted and highest paid technologies that will help you create amazing websites.
+      sub_title: "Learn the most wanted and highest paid technologies that will help you create amazing websites. 
       
       The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2021. 
       
@@ -61,7 +67,7 @@ details:
          
   heading: Program Details Part-Time
   weeks: 16
-  sub_heading: "Hands-on learning through real-life projects. Master the 3 most used languages in the world: Master Python, JS and React."
+  sub_heading: "Hands-on learning through real-life projects. /n Master the 3 most used languages in the world: Master Python, JS and React."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -101,12 +107,12 @@ details:
       description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
       slug: "advanced-application"
-      duration: "6 wks"
+      duration: "6 weeks"
       step: 6
     - module_name: "LIFELONG SUPPORT"
       title: "Lifelong Support"
       description: "Keep practicing with the academy's help - we will be coaching you for life.  Build your Resume, Github, LinkedIn.  We will help you apply for jobs and continue to support you once you have found a job"
-      projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer.  Enjoy and build software for life."
+      projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer. Enjoy and build software for life."
       slug: "lifelong-learning"
       duration: "forever"
       step: 0.1

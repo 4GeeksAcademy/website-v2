@@ -42,6 +42,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
             createNodeField({node, name: `type`, value: meta.type});
             createNodeField({node, name: `pagePath`, value: meta.pagePath});
             createNodeField({node, name: `filePath`, value: url});
+            // createNodeField({node, name: `cluster`, value: meta.cluster});
             ymls.push(meta)
 
             //   createNodeField({ node, name: `ctas`, value: ctas });
@@ -71,7 +72,6 @@ exports.createPages = async (params) =>
 
 const createEditPage = async ({actions, graphql}) => {
     const {createPage, createRedirect} = actions;
-
     createPage({
         path: "/edit",
         component: path.resolve('src/templates/edit.js'),
@@ -90,6 +90,7 @@ const createBlog = async ({actions, graphql}) => {
         createRedirect(args);
     }
     const postTemplate = path.resolve('src/templates/post.js');
+    const clusterTemplate = path.resolve("src/templates/clusters.js");
     const tagTemplate = path.resolve("src/templates/tags.js");
     const result = await graphql(`
     {
@@ -106,6 +107,7 @@ const createBlog = async ({actions, graphql}) => {
                         status
                         featured
                         tags
+                        cluster
                     }
                     excerpt,
                     fields{
@@ -127,7 +129,7 @@ const createBlog = async ({actions, graphql}) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({node}) => {
-
+        // console.log(`*** : ${node.fields.cluster}`)
         console.log(`Creating post ${node.fields.pagePath}`);
         createPage({
             path: node.fields.pagePath,
@@ -161,7 +163,70 @@ const createBlog = async ({actions, graphql}) => {
             isPermanent: true
         });
     });
+    // CLUSTERS:
 
+    // let clusterUs = null;
+    // let clusterEs = null;
+
+    // posts.forEach(({node}) => {
+    //     if (node.frontmatter.cluster) {
+    //         if (node.fields.lang === "us") {
+    //             clusterUs = node.frontmatter.cluster;
+    //         } else {
+    //             clusterEs = node.frontmatter.cluster;
+    //         }
+    //     }
+    // })
+
+    // Tag pages:
+    let clusterUs = [];
+    let clusterEs = [];
+    // Iterate through each post, putting all found tags into `tags`
+    posts.forEach(({node}) => {
+        if (node.frontmatter.cluster) {
+            if (node.fields.lang === "us") {
+                clusterUs = clusterUs.concat(node.frontmatter.cluster);
+            } else {
+                clusterEs = clusterEs.concat(node.frontmatter.cluster);
+            }
+        }
+    });
+    // Eliminate duplicate tags
+    clusterUs = clusterUs.filter((value, index) => clusterUs.indexOf(value) === index)
+    clusterEs = clusterEs.filter((value, index) => clusterEs.indexOf(value) === index)
+    // Make tag pages
+    clusterUs.forEach(cluster => {
+        let file_name = `clusters.us`
+        let lang = "us";
+        let type = "page";
+        createPage({
+            path: `/us/blog/${cluster}/`,
+            component: clusterTemplate,
+            context: {
+                cluster,
+                file_name,
+                lang,
+                type
+            },
+        });
+    });
+    clusterEs.forEach(cluster => {
+        let file_name = `clusters.es`;
+        let lang = "es";
+        let type = "page";
+        createPage({
+            path: `/es/blog-en-espanol/${cluster}/`,
+            component: clusterTemplate,
+            context: {
+                cluster,
+                file_name,
+                lang,
+                type
+            },
+        });
+    });
+    //     return true;
+    // }
     // Tag pages:
     let tagsUs = [];
     let tagsEs = [];
@@ -451,7 +516,7 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
     let slugigy = (entity) => {
         let slugMap = {
             location: "coding-campus",
-            course: "coding-bootcamp",
+            course: "coding-bootcamp"
         }
         return slugMap[entity] || entity
     }
@@ -462,8 +527,8 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
     const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
     let m = regex.exec(url);
     if (!m) return false;
-
-    const type = frontmatter ? "post" : m[1];
+    const _cluster = meta_info !== undefined && typeof meta_info.cluster === "string" ? meta_info.cluster : "post";
+    const type = frontmatter ? _cluster : m[1];
 
     const lang = m[3] || "us";
     const customSlug = (meta_info !== undefined && typeof meta_info.slug === "string");

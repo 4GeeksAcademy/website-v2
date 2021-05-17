@@ -34,6 +34,13 @@
   overflow: hidden;
   display: flex;
 }
+
+
+
+/* 
+
+Moved to Styled Components
+
 .marquee__elements {
   display: flex;
   overflow: visible;
@@ -49,7 +56,8 @@
 }
 .marquee__elements:hover {
   animation-play-state: paused;
-}
+  
+} */
 .marquee.reversed .marquee__elements, .marquee.reversed .marquee__overflow {
   justify-content: flex-end;
 }

@@ -2,17 +2,54 @@ import React, { useRef, useState, useEffect } from 'react'
 import cx from 'classnames'
 import styles from '../../assets/css/marquee-v2.module.css'
 import DragScrollProvider from '../DragScrollProvider'
+import styled, {css, keyframes} from 'styled-components';
 
-//provided by xdmorgan https://gist.github.com/xdmorgan/7b5e10493d87d8f4fe18d55d76d79ac6
-export default function Marquee({
+const marquee_default = keyframes`
+  100% { transform: translate3d(-100%, 0, 0) }
+`
+const marquee_reverse = keyframes`
+  100% { transform: translate3d(100%, 0, 0) }
+`
+
+const Marquee_elements = styled.div`
+  width: ${props => props.width};
+  display: flex;
+  overflow: visible;
+  opacity: ${props => props.animated ? 1 : 0};
+  transition: opacity 500ms ease;
+  justify-content: ${props => props.reversed ? "flex-end" : "flex-start"};
+
+  animation-name: ${props => props.reversed ? marquee_reverse : marquee_default};
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--marquee-loop-duration, ${props => props.numberSpeed ? Math.round(props.childCount * 12 / props.numberSpeed) : props.childCount * 12}s);
+
+
+  &:hover {
+    animation-play-state: paused;
+  }
+`
+
+
+
+{/* 
+  CREATED: MARQUEE_V2
+  The modifiable properties for this component are :
+    speed: number
+    reversed: boolean
+    containerStyle: object css
+
+*/}
+
+export default function Marquee_v2({
   children,
   className = undefined,
-  reverse = false,
   ...props
 }) {
   const [count, ref, width] = useMarquee()
   React.Children.only(children)
   const [child] = React.Children.toArray(children)
+
   return (
     <div
     {...props}
@@ -20,8 +57,7 @@ export default function Marquee({
       className={cx(
         styles.marquee,
         {
-          [styles.animated]: count !== null,
-          [styles.reversed]: !!reverse,
+          [styles.reversed]: props.reversed,
         },
         className
       )}
@@ -29,9 +65,15 @@ export default function Marquee({
       <div ref={ref} className={styles.marquee__measure} aria-hidden>
         {children}
       </div>
-      {/* <div className={styles.marquee__spacer}>{children}</div> */}
       <DragScrollProvider className={`${styles.marquee__overflow} testimonial-slider`}>
-        <div className={styles.marquee__elements} style={{ width }} aria-hidden>
+        <Marquee_elements 
+          reversed={props.reversed} 
+          animated={count !== null} 
+          width={width} 
+          numberSpeed={props.speed}
+          childCount={child.props.children.length}
+          aria-hidden>
+
           {Array.from({ length: count }).map((_, idx) =>
             React.cloneElement(child, {
               ...child.props,
@@ -39,7 +81,7 @@ export default function Marquee({
               style: { ...child.props.style, flex: '0 0 auto' },
             })
           )}
-        </div>
+        </Marquee_elements>
       </DragScrollProvider>
     </div>
   )
@@ -56,7 +98,7 @@ function fillContainer(el) {
   // FillGaps: add one so there is never an empty space left out by the
   // inFullView calculation e.g. 100px card in 150px contaienr. There
   // would be 1 in full view but then a 50px gap
-  const fillGaps = 1
+  const fillGaps = 2
   // accountForAnimation: The animation pans the container of the repeated
   // elements across the X access equal to the width of a single element
   // in order to make sure there are no gaps whilst animating we'll need

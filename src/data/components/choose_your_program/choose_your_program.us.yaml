@@ -9,11 +9,10 @@ programs:
   - title: "Software Engineering"
     sub_title: "Level 2"
     description: "Dive deep into Computer Science and Cloud Native Applications. Learn the skills that 90% of the Fortune 500 are looking for."
-    icon: "fullstack"
+    icon: "software"
     link: "/us/course/software-engineering-coding-bootcamp"
   - title: "AI/Machine Learning Engineering"
     sub_title: "Specialized Track"
     description: "Develop the necessary tools to upskill for the future of AI work."
-    icon: "fullstack"
+    icon: "machine"
     link: "/us/coding-bootcamps/machine-learning-engineering"
-
