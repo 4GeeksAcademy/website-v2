@@ -59,6 +59,11 @@ const BlogLayout = ({children, seo, context}) => {
                   link
                 }
               }
+              socials{
+                name
+                icon
+                link
+              }
               fields {
                 lang
               }

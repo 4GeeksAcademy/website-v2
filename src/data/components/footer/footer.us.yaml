@@ -5,20 +5,6 @@ newsletter:
   thankyou: "Amazing! You have successfully joined, stay tuned for upcoming information soon 😁"
 
 footer:
-  # - column_one:
-  #   width: 2
-  #   heading: "CONTACT"
-  #   items:
-  #     - name: "✉️ Email Us"
-  #       link: "/contact"
-  #     - name: "۪"
-  #       link: ""
-  #     - name: "Our offices are open Monday to Friday"
-  #       link: ""
-  #     - name: "9:00am - 9:00pm"
-  #       link: ""
-  #     - name: "🇪🇸 Cambiar al Español"
-  #       link: "/es/inicio?lang=es"
   - column_one:
     width: 3
     heading: "COMPANY"
@@ -79,13 +65,19 @@ footer:
     items:
       - name: "4GEEKS FOR COMPANIES"
         link: "/us/partners"
-      # - name: "Github"
-      #   link: "https://www.github.com/4GeeksAcademy"
-      # - name: "Facebook"
-      #   link: "https://www.facebook.com/4GeeksAcademy"
-      # - name: "Twitter"
-      #   link: "https://www.twitter.com/4GeeksAcademy"
-      # - name: "Instagram"
-      #   link: "https://www.instagram.com/4GeeksAcademy"
-      # - name: "Youtube"
-      #   link: "https://www.youtube.com/4GeeksAcademy"
+
+socials:
+  - name: "Github"
+    icon: "github"
+    link: "https://www.github.com/4GeeksAcademy"
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4GeeksAcademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4GeeksAcademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4GeeksAcademy"
+  # - name: "Youtube"
+  #   link: "https://www.youtube.com/4GeeksAcademy"
