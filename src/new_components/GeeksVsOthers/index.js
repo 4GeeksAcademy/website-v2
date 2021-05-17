@@ -64,24 +64,19 @@ const GeeksVsOthers = props => {
           </Div>
         </GridContainer>
       }
-      <GridContainer columns_tablet="12" columns="3" backgroundChild="#FFF1D1" gridGap="0" padding_tabletChild="11px 11px 0 44px">
-        {/* <Div justifyContent="between" background={Colors.lightYellow}> */}
-        <Div gridColumn_tablet="1 / 7" height="74px" alignItems="center" padding="0 5px 0 40px" padding_tablet="0 5px 0 10px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.featured}</H3></Div>
-        <Div gridColumn_tablet="7 / 10" height="74px" alignItems="center" background={Colors.veryLightBlue} padding="0 5px 0 40px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.at_geeks}</H3></Div>
-        <Div gridColumn_tablet="10 / 13" height="74px" alignItems="center" background={Colors.white} padding="0 5px 0 40px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.average}</H3></Div>
-        {/* </Div> */}
-      </GridContainer>
 
-      <GridContainer columns_tablet="12" columns="3" gridGap="0" backgroundChild="#FFF1D1" padding_tabletChild="0 11px 11px 44px">
+{/* 3 / span 10 */}
+      <GridContainer overflowChild="auto" containerColumns_tablet={`2fr repeat(10, 1fr) 2fr`} gridColumn_tablet="2 / span 10" columns_tablet="9" columns="3" backgroundChild="#FFF1D1" gridGap="0" padding_tabletChild="11px 11px 11px 44px">
+        <Div gridColumn_tablet="1 / 4" height="74px" alignItems="center" padding="0 5px 0 20px" padding_tablet="0 5px 0 10px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.featured}</H3></Div>
+        <Div gridColumn_tablet="4 / 7" height="74px" alignItems="center" background={Colors.veryLightBlue} padding="0 25px 0 20px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.at_geeks}</H3></Div>
+        <Div gridColumn_tablet="7 / 10" height="74px" alignItems="center" background={Colors.white} padding="0 25px 0 20px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.average}</H3></Div>
+
         {geeks.info.slice(0, props.limit || geeks.info.length).map((m, i) => {
           return (
             <React.Fragment key={i}>
-              {/* // <Div display="grid" key={i} gridColumn_tablet="12" height="74px" alignItems="center" background={Colors.lightYellow}> */}
-              {/* <Div display="grid" key={i} gridArea_tablet={`${i + 1}/1/${i + 1}/13`} height="74px" alignItems="center" background={Colors.lightYellow}> */}
-              <Div gridColumn_tablet="1 / 7" borderBottom={i < geeks.info.length - 1 && "1px solid rgba(164, 164, 164, 0.4)"} height="74px" alignItems="center" padding="0 10px"><H3 textAlign="left" fontSize="15px" fontWeight="400" lineHeight="22px" textTransform="uppercase">{m.features}</H3></Div>
-              <Div gridColumn_tablet="7 / 10" borderBottom={i < geeks.info.length - 1 && "1px solid rgba(164, 164, 164, 0.4)"} height="74px" alignItems="center" background={Colors.veryLightBlue} padding="0 5px 0 40px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="400" lineHeight="22px" textTransform="uppercase">{m.at4_Geeks}</H3></Div>
-              <Div gridColumn_tablet="10 / 13" borderBottom={i < geeks.info.length - 1 && "1px solid rgba(164, 164, 164, 0.4)"} height="74px" alignItems="center" background={Colors.white} padding="0 5px 0 40px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="400" lineHeight="22px" textTransform="uppercase">{m.industry_average}</H3></Div>
-              {/* // </Div> */}
+              <Div gridColumn_tablet="1 / 4" borderBottom={i < geeks.info.length - 1 && "1px solid rgba(164, 164, 164, 0.4)"} height="74px" alignItems="center" padding="0 5px 0 20px" padding_tablet="0 5px 0 10px"><H3 textAlign="left" fontSize="15px" fontWeight="400" lineHeight="22px" textTransform="uppercase">{m.features}</H3></Div>
+              <Div gridColumn_tablet="4 / 7" borderBottom={i < geeks.info.length - 1 && "1px solid rgba(164, 164, 164, 0.4)"} height="74px" alignItems="center" background={Colors.veryLightBlue} padding="0 25px 0 20px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="400" lineHeight="22px" textTransform="uppercase">{m.at4_Geeks}</H3></Div>
+              <Div gridColumn_tablet="7 / 10" borderBottom={i < geeks.info.length - 1 && "1px solid rgba(164, 164, 164, 0.4)"} height="74px" alignItems="center" background={Colors.white} padding="0 25px 0 20px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="400" lineHeight="22px" textTransform="uppercase">{m.industry_average}</H3></Div>
             </React.Fragment>
           )
         })}
