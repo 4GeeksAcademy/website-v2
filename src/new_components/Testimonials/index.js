@@ -29,7 +29,7 @@ const Testimonials = (props) => {
                             containerStyle
                     */}
                     <Marquee_v2 
-                        speed={1} 
+                        speed={1.5}
                         reversed={false} 
                         containerStyle={{height: "215px"}} 
                     >

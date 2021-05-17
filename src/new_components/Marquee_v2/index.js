@@ -22,7 +22,7 @@ const Marquee_elements = styled.div`
   animation-name: ${props => props.reversed ? marquee_reverse : marquee_default};
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: var(--marquee-loop-duration, ${props => props.numberSpeed ? Math.round(props.childCount * 12 / props.numberSpeed) : props.childCount * 12}s);
+  animation-duration: var(--marquee-loop-duration, ${props => props.numberSpeed ? Math.round(props.childCount * 22 / props.numberSpeed) : props.childCount * 22}s);
 
 
   &:hover {
