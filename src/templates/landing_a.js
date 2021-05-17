@@ -59,8 +59,7 @@ const Landing = (props) => {
           margin="0"
           fontWeight="800"
           color={Colors.black}
-          align_sm="left"
-          align="left"
+          textAlign="left"
           fontSize={yml.follow_bar.content.font_size[0]}
           fs_lg={yml.follow_bar.content.font_size[1]}
           fs_md={yml.follow_bar.content.font_size[2]}
@@ -75,7 +74,7 @@ const Landing = (props) => {
         <Div>Tets</Div>
 
       </GridContainer> */}
-      <Row display="flex" className="d-sm-none">
+      {/* <Row display="flex" className="d-sm-none">
         <StyledBackgroundSection
           className={`image`}
           image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
@@ -201,7 +200,7 @@ const Landing = (props) => {
           fields={yml.form.fields}
           data={preData}
         />
-      </Div>
+      </Div> */}
 
       {
         Object.keys(components)
