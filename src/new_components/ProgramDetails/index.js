@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
-import {useStaticQuery, graphql} from 'gatsby';
+import {useStaticQuery, graphql, Link} from 'gatsby';
 import {GridContainer, Container, Column, Divider, Grid, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, Button} from '../Styling';
+import {Colors, Button, Anchor} from '../Styling';
 import Card from '../Card';
 import Icon from '../Icon';
 
@@ -66,9 +66,14 @@ const ProgramDetails = (props) => {
                 <Div flexDirection="column" justifyContent="between" >
                     {Array.isArray(props.details.about.list) && props.details.about.list.map((m, i) => {
                         return (
-                            <Div key={i} borderBottom="1px solid #ebebeb" >
+                            <Div key={i} borderBottom="1px solid #ebebeb" padding="15px 0">
                                 <H4 fontWeight="700" textAlign="left" width="122px">{`${m.label}:`}</H4>
-                                <Paragraph textAlign="left">{m.content}</Paragraph>
+                                <Div flexDirection="column" margin="0 0 0 15px">
+                                    <Paragraph textAlign="left">{m.content}</Paragraph>
+                                    {m.link &&
+                                        <Anchor to={m.link} cursor="pointer"><Paragraph textAlign="left" width="150px" color={Colors.blue}>{`${m.link_text}`}</Paragraph></Anchor>
+                                    }
+                                </Div>
                             </Div>
                         )
                     })}

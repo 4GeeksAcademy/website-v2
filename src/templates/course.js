@@ -180,6 +180,8 @@ export const query = graphql`
                 list{
                   label
                   content
+                  link
+                  link_text
                 }
               }
               heading

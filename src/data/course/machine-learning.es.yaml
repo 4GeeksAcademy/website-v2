@@ -56,14 +56,14 @@ details:
       Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética.
       "
       list:
-        - label: "Duration"
-          content:  "15 Weeks"
-        - label: "Classes"
-          content: "3 Classes weekly"
-        - label: "Certificate"
+        - label: "Duración"
+          content:  "15 semanas"
+        - label: "Clases"
+          content: "3 Clases semanales"
+        - label: "Certificados"
           content: ""
-        - label: "Requisites"
-          content: "Check Requisites"
+        - label: "Requisitos"
+          content: "Ver Requisitos"
   heading: DETALLES DEL PROGRAMA
   weeks: 15
   facts:
