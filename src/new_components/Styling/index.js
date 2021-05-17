@@ -294,6 +294,7 @@ export const Button = styled(SmartButton)`
     max-width: ${props => props.maxWidth};
     min-width: ${props => props.minWidth};
     align-items: ${props => props.alignItems};
+    align-self: ${props => props.alignSelf};
     justify-content: ${props => props.justifyContent};
     box-shadow: ${props => props.boxShadow};
 
