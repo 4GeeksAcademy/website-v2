@@ -62,6 +62,8 @@ details:
           content: "3 classes weekly"
         - label: "Certificate"
           content: "Full-Stack Developer"
+          link_text: "See example"
+          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
         - label: "Requisites"
           content: "No previous coding skills required, no advanced Math required, logical thinking recommended."
          

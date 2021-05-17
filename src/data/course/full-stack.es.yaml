@@ -44,7 +44,7 @@ credentials:
 ## PROGRAM DETAILS
 details:
   about:
-      title: "About the program"
+      title: "Acerca del programa"
       sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
       Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
       diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
@@ -55,13 +55,15 @@ details:
       desempeñarte como Full Stack Developer. 
     "
       list:
-        - label: "Duration"
-          content:  "16 Weeks"
-        - label: "Classes"
-          content: "3 Classes weekly"
-        - label: "Certificate"
-          content: ""
-        - label: "Requisites"
+        - label: "Duración"
+          content:  "16 semanas"
+        - label: "Clases"
+          content: "3 Clases semanales"
+        - label: "Certificado"
+          content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
+          link_text: "Ver ejemplo"
+          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+        - label: "Requisitos"
           content: "Check Requisites"
   heading: DETALLES DEL PROGRAMA PART-TIME
   weeks: 16
