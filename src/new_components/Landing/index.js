@@ -1,5 +1,5 @@
 import React from "react"
-import {Row, Column, Wrapper, Divider, Div} from '../Sections'
+import {Row, Column, Wrapper, Divider, Div, GridContainer} from '../Sections'
 import {H2, H5, H4, Title, Paragraph} from '../Heading'
 import {Colors, Img, Button} from '../Styling'
 // import WhoIsHiring from '../WhoIsHiring';
@@ -153,7 +153,7 @@ export const landingSections = {
         />
     </Wrapper>,
     badges: ({session, data, pageContext, yml, course, index}) =>
-        <Wrapper key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></Wrapper>,
+        <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
     syllabus: ({session, data, pageContext, yml, course, location, index}) => <Div
         key={index}
         display="block"
@@ -161,7 +161,7 @@ export const landingSections = {
         m_sm="50px 0px"
         background={Colors.lightGray}
     >
-        <Wrapper>
+        <GridContainer>
             <H5 fontSize="20px">{yml.heading.text}</H5>
             <LeadForm
                 style={{padding: "10px 0px", maxWidth: "100%"}}
@@ -175,34 +175,19 @@ export const landingSections = {
                     utm_location: {type: "hidden", value: location, valid: true}
                 }}
             />
-        </Wrapper>
+        </GridContainer>
     </Div>,
     geeks_vs_others: ({session, pageContext, yml, course, index}) =>
-        <Wrapper key={index} margin="100px" m_sm="50px 0" p_sm="0" p_xs="0">
-            <Title
-                type="h2"
-                title={yml.heading}
-                paragraph={yml.sub_heading}
-                paragraphColor={Colors.blue}
-                variant="primary"
-                size="10"
-            />
-            <GeeksVsOthers lang={pageContext.lang} limit={yml.total_rows} />
-        </Wrapper>,
+        <GeeksVsOthers key={index} lang={pageContext.lang} limit={yml.total_rows} title={yml.heading} paragraph={yml.sub_heading} />,
+
     program_details: ({session, pageContext, yml, data, index}) => {
         const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
-        return <Wrapper key={index} p_xs="0">
-            <Title
-                size="10"
-                marginTop="40px"
-                title={yml.heading}
-                paragraph={yml.sub_heading}
-                paragraphColor={Colors.gray}
-                variant="primary"
-            />
-            {/* <ProgramDetails details={course && course.details} lang={pageContext.lang} /> */}
-            <ProgramDetailsMobile details={course && course.details} />
-        </Wrapper>
+        return (
+            <React.Fragment key={index}>
+                <ProgramDetails details={course && course.details} lang={pageContext.lang} />
+                <ProgramDetailsMobile details={course && course.details} />
+            </React.Fragment>
+        )
     },
     why_python: ({session, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0" p_sm="0">
         {/* <WhyPython heading={yml.heading} subheading={yml.sub_heading} lang={pageContext.lang} /> */}

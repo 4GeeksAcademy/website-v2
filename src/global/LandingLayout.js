@@ -34,6 +34,11 @@ const Layout = ({children, seo, context, withNavbar}) => {
                   link
                 }
               }
+              socials{
+                name
+                icon
+                link
+              }
               fields {
                 lang
               }
