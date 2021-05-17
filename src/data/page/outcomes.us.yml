@@ -142,4 +142,5 @@ charts:
         - [Europe, "5"]
         - [Lat.Am., "34"]
         
-        
+download_button_text: "Download Report"
+download_slug: "outcomes"

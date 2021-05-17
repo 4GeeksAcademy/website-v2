@@ -2,12 +2,14 @@ import React, {useCallback, useState} from 'react';
 import {graphql} from 'gatsby'
 import {Grid, Div, Header, GridContainer} from '../new_components/Sections'
 import {H2, H3, H4, Paragraph} from '../new_components/Heading'
-import {Colors} from '../new_components/Styling'
-import Icon from '../new_components/Icon'
+import {Colors, Button} from '../new_components/Styling'
 import {Charts} from '../new_components/Chart'
 import BaseRender from './_baseLayout'
 import ChooseProgram from '../new_components/ChooseProgram'
 import { StyledBackgroundSection } from '../components/Styling';
+import Modal from '../new_components/Modal';
+import LeadForm from '../new_components/LeadForm';
+import {requestSyllabus} from "../actions";
 
 const SVGImage = () =>
 <svg width="510" height="295" viewBox="0 0 510 295" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,8 +42,16 @@ const SVGImage = () =>
 
 
 const Outcomes = ({data, pageContext, yml}) => {
-
+    const [open, setOpen] = useState(false);
     const [active, setActive] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+      };
+    
+    const handleClose = () => {
+    setOpen(false);
+    };
 
     // Create and Gets Ref for each property by title
     let findMappedRef = yml.sections.reduce((acc, section) =>{
@@ -116,7 +126,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                                 </Div>
                                 <Div style={{margin: "20px 0", height: "1px", background: "#c4c4c4"}} />
                                 {section.paragraph.split("\n").map((m, i) =>
-                                    <Paragraph key={i} textAlign="left" margin="10px 0" >{m}</Paragraph>
+                                    <Paragraph letterSpacing="0.05em" key={i} textAlign="left" margin="10px 0" >{m}</Paragraph>
                                 )}
                                 <GridContainer justifyContent="between" gridGap_tablet="30px" containerColumns_tablet={`0fr repeat(12, 1fr) 1fr`} columns_tablet={Array.isArray(section.stats) && section.stats.length} margin="41px 0 0 0">
                                     {section.stats.map((m, i) => {
@@ -134,7 +144,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                                         return (
                                             <React.Fragment key={i}>
                                                 <H4 type="h4" textAlign="left" textTransform="uppercase" fontWeight="700" margin="42px 0 13px 0">{m.title}</H4>
-                                                <Paragraph textAlign="left" margin_md="10px 0" dangerouslySetInnerHTML={{__html: m.content}}></Paragraph>
+                                                <Paragraph letterSpacing="0.05em" textAlign="left" margin_md="10px 0" dangerouslySetInnerHTML={{__html: m.content}}></Paragraph>
                                                 {
                                                     Array.isArray(m.image_section) && m.image_section.map((m, i) => {
                                                         return (
@@ -186,7 +196,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                     })}
                 </Div>
                 <Div gridArea="1/9/1/13" gridColumn_tablet="1 ​/ span 1" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
-                    <Div flexDirection="column" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", position: "sticky", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="219px">
+                    <Div flexDirection="column" position={!open ? "sticky" : "inherit"} style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="fit-content">
                         <Div margin="25px 0px 0" flexDirection="column" justifyContent="space-around" gap="8px">
                         {
                             yml.sections.filter(i => i.title !== "").map((m, i) => {
@@ -202,15 +212,28 @@ const Outcomes = ({data, pageContext, yml}) => {
                                 })
                             }
                         </Div>
-                        <ChooseProgram
-                            width="80%"
-                            padding="20px 0"
-                            textAlign={`-webkit-center`}
-                            displayButton="block"
-                            borderRadius="0 .75rem .75rem .75rem"
-                            openLabel={`DOWNLOAD REPORT`}
-                            closeLabel={`DOWNLOAD REPORT`}
-                        />
+
+                        <Button alignSelf="center" onClick={handleOpen} variant="full" width="80%" width_tablet="fit-content" color={Colors.blue} padding="0 16%" margin="20px 0 25px 0" textColor="white">{yml.download_button_text}</Button>
+                        <Modal
+                            // top="58%"
+                            aria-labelledby="simple-modal-title"
+                            aria-describedby="simple-modal-description"
+                            open={open}
+                            onClose={handleClose}
+                        >
+                            <LeadForm
+                            style={{marginTop: "50px"}}
+                            heading={yml.download_button_text}
+                            // motivation={yml.button.syllabus_motivation}
+                            // sendLabel={syllabus_button_text}
+                            formHandler={requestSyllabus}
+                            handleClose={handleClose}
+                            lang={pageContext.lang}
+                            data={{
+                                course: {type: "hidden", value: yml.download_slug, valid: true}
+                            }}
+                            />
+                        </Modal>
                     </Div>
                 </Div>
             </GridContainer>
@@ -259,15 +282,13 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                 }
             }
             charts{
-                    chart_list{
-                        title
-                        data
-                    }
-                    
-                    
+                chart_list{
+                    title
+                    data
+                }      
             }
-           
-            
+            download_button_text
+            download_slug
         }
       }
     }
