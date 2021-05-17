@@ -10,7 +10,7 @@ header_data:
   tagline: Coding Bootcamp
   title: "Impulsa tu carrera gracias a la programación"
   sub_heading: "Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo."
-  image: "../../../static/images/bg/main-bg.jpg"
+  image: "../../../static/images/bg/main-home-bg.png"
 
 why_4geeks:
   heading: Por qué 4Geeks
