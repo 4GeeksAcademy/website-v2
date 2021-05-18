@@ -389,13 +389,15 @@ export const query = graphql`
               sub_heading
             }
             details {
-              heading
-              sub_heading
-              left_labels{
-                description
-                projects
-                duration
-                skills
+              about{
+                title
+                sub_title
+                list{
+                  label
+                  content
+                  link
+                  link_text
+                }
               }
               details_modules {
                 title

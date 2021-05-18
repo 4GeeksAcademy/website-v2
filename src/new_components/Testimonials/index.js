@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import Card from "../Card"
 import {H2, H3, H4, Paragraph} from '../Heading'
-import { GridContainer, Div} from '../Sections'
+import {GridContainer, Div} from '../Sections'
 import {Colors} from '../Styling'
 import {Link} from 'gatsby';
 import Img from 'gatsby-image';
@@ -13,29 +13,29 @@ import Marquee_v2 from '../Marquee_v2'
 const Testimonials = (props) => {
     let testimonialsArray = props.lang[0].node;
 
-      let testimonialsFiltered = testimonialsArray.testimonials.filter(item => item.hidden !== true)
-    return (        
-        
-        <Fragment github="/components/testimonials">
-                <GridContainer fluid background="linear-gradient(#f5f5f5, white)" height="425px" margin={props.margin} margin_tablet={props.margin_tablet} padding="30px 17px 60px 17px" padding_tablet="48px 0 36px 0">
-                    <H2>{testimonialsArray.heading}</H2>
-                    <Link to="/us/success-stories"><Paragraph margin="25px 0 36px 0" color={Colors.blue}>{testimonialsArray.button_text}</Paragraph></Link>
-                    
-                    {/* MARQUEE_V2 
+    let testimonialsFiltered = testimonialsArray.testimonials.filter(item => item.hidden !== true)
+    return (
+
+        <Fragment github="/new_components/testimonials">
+            <GridContainer fluid background="linear-gradient(#f5f5f5, white)" height="425px" margin={props.margin} margin_tablet={props.margin_tablet} padding="30px 17px 60px 17px" padding_tablet="48px 0 36px 0">
+                <H2>{testimonialsArray.heading}</H2>
+                <Link to={testimonialsArray.button_link}><Paragraph margin="25px 0 36px 0" color={Colors.blue}>{testimonialsArray.button_text}</Paragraph></Link>
+
+                {/* MARQUEE_V2 
 
                         you can modify:
                             speed: number <int | dec>
                             reversed: boolean
                             containerStyle
                     */}
-                    <Marquee_v2 
-                        speed={1.5}
-                        reversed={false} 
-                        containerStyle={{height: "215px"}} 
-                    >
+                <Marquee_v2
+                    speed={1.5}
+                    reversed={false}
+                    containerStyle={{height: "215px"}}
+                >
                     <Div className="testimonial-slider" display="flex" height="auto" background="linear-gradient(#f5f5f5, white)" padding="0 0 40px 0">
                         {testimonialsFiltered.map((item, i) => {
-                    
+
                             return (
                                 <Div display="flex" background="#ffffff" minWidth="245px" height="150px" margin="0 12px 0 0" padding="20px 24px 30px 20px" border="1px solid #EBEBEB" alignItems="flex-start">
                                     <Img
@@ -76,8 +76,8 @@ const Testimonials = (props) => {
                             )
                         })}
                     </Div>
-                    </Marquee_v2>
-                </GridContainer>
+                </Marquee_v2>
+            </GridContainer>
         </Fragment>
     )
 };
