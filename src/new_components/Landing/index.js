@@ -1,6 +1,6 @@
 import React from "react"
 import {Row, Column, Wrapper, Divider, Div, GridContainer} from '../Sections'
-import {H2, H5, H4, Title, Paragraph} from '../Heading'
+import {H2, H5, H4, Paragraph} from '../Heading'
 import {Colors, Img, Button} from '../Styling'
 // import WhoIsHiring from '../WhoIsHiring';
 import Badges from '../Badges';
@@ -16,6 +16,16 @@ import GeeksVsOthers from '../GeeksVsOthers';
 import ProgramDetails from '../ProgramDetails';
 import ProgramDetailsMobile from '../ProgramDetailsMobile';
 import LeadForm from '../LeadForm';
+
+
+const Title = ({title, paragraph}) => {
+    return (
+        <GridContainer margin="40px 0 0 0">
+            <H2 type="h2">{title}</H2>
+            <Paragraph margin="26px 0" >{paragraph}</Paragraph>
+        </GridContainer>
+    )
+}
 
 const Side = ({video, image, heading, content, button, bullets}) => {
 
@@ -138,82 +148,95 @@ Columns.defaultProps = {
 }
 
 export const landingSections = {
-    in_the_news: ({session, pageContext, yml, course, location, index}) => <Wrapper key={index} p_sm="0" p_xs="30 0 0 0">
+    in_the_news: ({session, pageContext, yml, course, location, index}) => <GridContainer key={index} p_sm="0" p_xs="30 0 0 0">
         <H4 align="center" fontSize="18px" color={Colors.darkGray}
             margin="20px 0px 10px 0px"
             m_sm="20px auto"
             maxWidth="350px"
         >{yml.heading}
         </H4>
+
         <News
             limit={yml.limit || 3}
             location={location ? location : session && session.location && session.location.breathecode_location_slug}
             lang={pageContext.lang}
             filter={!Array.isArray(yml.filter) ? null : (n) => yml.filter.includes(n.name)}
         />
-    </Wrapper>,
+    </GridContainer>,
     badges: ({session, data, pageContext, yml, course, index}) =>
         <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
-    syllabus: ({session, data, pageContext, yml, course, location, index}) => <Div
-        key={index}
-        display="block"
-        margin="50px 0px 0px 0px"
-        m_sm="50px 0px"
-        background={Colors.lightGray}
-    >
-        <GridContainer>
-            <H5 fontSize="20px">{yml.heading.text}</H5>
-            <LeadForm
-                style={{padding: "10px 0px", maxWidth: "100%"}}
-                inputBgColor={Colors.white}
-                layout="flex"
-                lang={pageContext.lang}
-                sendLabel={yml.button ? yml.button.text : "SEND"}
-                formHandler={requestSyllabus}
-                data={{
-                    course: {type: "hidden", value: course, valid: true},
-                    utm_location: {type: "hidden", value: location, valid: true}
-                }}
-            />
-        </GridContainer>
-    </Div>,
-    geeks_vs_others: ({session, pageContext, yml, course, index}) =>
-        <GeeksVsOthers key={index} lang={pageContext.lang} limit={yml.total_rows} title={yml.heading} paragraph={yml.sub_heading} />,
+    // syllabus: ({session, data, pageContext, yml, course, location, index}) =>
+    //     <GridContainer key={index} margin="50px 0px 0px 0px" background={Colors.lightGray}>
+    //         <Div
+    //             key={index}
+    //             display="block"
+    //             margin="50px 0px 0px 0px"
+    //             m_sm="50px 0px"
+    //             background={Colors.lightGray}
+    //         >
+    //             <H5 fontSize="20px">{yml.heading.text}</H5>
+    //             <LeadForm
+    //                 style={{padding: "10px 0px", maxWidth: "100%"}}
+    //                 inputBgColor={Colors.white}
+    //                 layout="flex"
+    //                 lang={pageContext.lang}
+    //                 sendLabel={yml.button ? yml.button.text : "SEND"}
+    //                 formHandler={requestSyllabus}
+    //                 data={{
+    //                     course: {type: "hidden", value: course, valid: true},
+    //                     utm_location: {type: "hidden", value: location, valid: true}
+    //                 }}
+    //             />
+    //         </Div>
+    //     </GridContainer>
+    // ,
+    geeks_vs_others: ({session, pageContext, yml, course, index}) => {
+        return (
+            <React.Fragment key={index}>
+                <Title title={yml.heading} paragraph={yml.sub_heading} />
+                <GeeksVsOthers key={index} lang={pageContext.lang} limit={yml.total_rows} title={yml.heading} paragraph={yml.sub_heading} />,
+            </React.Fragment>
+
+        )
+    },
+
+
+
 
     program_details: ({session, pageContext, yml, data, index}) => {
         const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
+        console.log("Course: ", course)
         return (
             <React.Fragment key={index}>
+                <Title title={yml.heading} paragraph={yml.sub_heading} />
                 <ProgramDetails details={course && course.details} lang={pageContext.lang} />
                 <ProgramDetailsMobile details={course && course.details} />
             </React.Fragment>
         )
     },
-    why_python: ({session, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0" p_sm="0">
-        {/* <WhyPython heading={yml.heading} subheading={yml.sub_heading} lang={pageContext.lang} /> */}
-    </Wrapper>,
+
     testimonials: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="100px" m_sm="0" p_xs="0">
-        <Title
+        {/* <Title
             variant="primary"
             title={yml.testimonial.heading}
             paragraph={yml.testimonial.sub_heading}
             paragraphColor={Colors.gray}
             maxWidth="66%"
-        // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
-        />
+        paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+        /> */}
         <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
     </Wrapper>,
     why_4geeks: ({session, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0" p_xs="0">
-        <Title
+        {/* <Title
             title={yml.heading}
             paragraph={yml.sub_heading}
             paragraphColor={Colors.gray}
             variant="primary"
-        />
+        /> */}
         {/* <Why4Geeks lang={pageContext.lang} playerHeight="250px" /> */}
     </Wrapper>,
     alumni_projects: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="100px" m_sm="0" p_xs="0">
-        <Title
+        {/* <Title
             size="10"
             title={yml.heading}
             paragraph={yml.sub_heading}
@@ -221,21 +244,21 @@ export const landingSections = {
             maxWidth="66%"
             margin="auto"
             variant="primary"
-        />
+        /> */}
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
     </Wrapper>,
     who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
         const hiring = data.allPartnerYaml.edges[0].node;
         return <Wrapper key={index} margin="100px" m_sm="0" p_xs="0">
-            <Title
-                size="10"
-                title={hiring.partners.tagline}
-                paragraph={hiring.partners.sub_heading}
-                paragraphColor={Colors.darkGray}
-                maxWidth="800px"
-                margin="auto"
-                variant="primary"
-            />
+            {/* <Title */}
+            {/* //     size="10"
+            //     title={hiring.partners.tagline}
+            //     paragraph={hiring.partners.sub_heading}
+            //     paragraphColor={Colors.darkGray}
+            //     maxWidth="800px"
+            //     margin="auto"
+            //     variant="primary"
+            // /> */}
             {/* <WhoIsHiring
                 images={hiring.partners.images.filter(p => !p.locations || p.locations === "all" || p.locations.includes(location))}
             /> */}
@@ -274,7 +297,7 @@ export const landingSections = {
         />
     </Wrapper>,
     columns: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0">
-        <Title
+        {/* <Title
             size="10"
             title={yml.heading.text}
             paragraph={yml.sub_heading}
@@ -282,7 +305,7 @@ export const landingSections = {
             maxWidth="800px"
             margin="auto"
             variant="primary"
-        />
+        /> */}
         <Columns columns={yml.columns} proportions={yml.proportions} />
     </Wrapper>
 }
