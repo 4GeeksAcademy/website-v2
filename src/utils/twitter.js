@@ -34,5 +34,11 @@ export default {
         "name": "Victor Gomez",
         "avatar": "/images/staff/victor.png",
         "username": "VictorManuelG"
+    },   
+    "anzolagi": {
+        "bio": "Content Creator @ 4Geeks Academy",
+        "name": "Giovanna Anzola",
+        "avatar": "/images/staff/giovanna.jpg",
+        "username": "anzolagi"
     },
 }
