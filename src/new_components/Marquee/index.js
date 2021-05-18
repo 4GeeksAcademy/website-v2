@@ -4,6 +4,7 @@ import styled, {keyframes} from 'styled-components';
 import {Break, Devices} from '../Responsive'
 import {Colors} from '../Styling';
 import {Div} from '../Sections'
+import DragScrollProvider from '../DragScrollProvider';
 
 let datos = {};
 
@@ -56,6 +57,9 @@ const Marquee = (props) => {
     background-color: transparent;
     padding: 0 0 0 0;
     animation: ${scrolling} ${(props.config.duration)}s linear infinite;
+    &:hover{
+      animation-play-state: paused;
+    }
   `;
 
   let UL = styled.ul`    
@@ -119,6 +123,8 @@ const Marquee = (props) => {
     <>
       {/* margin o margin_tablet */}
       <M>
+      {/* <DragScrollProvider className="testimonial-slider"> */}
+
         <MC>
           <UL>
             {
@@ -133,6 +139,7 @@ const Marquee = (props) => {
             }
           </UL>
         </MC>
+      {/* </DragScrollProvider> */}
       </M>
     </>
   );
