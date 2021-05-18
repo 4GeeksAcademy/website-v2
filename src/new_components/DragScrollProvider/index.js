@@ -39,12 +39,14 @@ const DragScrollProvider = (props) => {
   const styles = useMemo(
     () => ({
       cursor: isGrabbing ? "-webkit-grabbing" : "-webkit-grab",
+      overflowX: "auto",
     }),
     [isGrabbing]
   );
 
   return (
     <Div
+      ref={props.referenceIT}
       style={styles}
       className={className}
       display={display}
