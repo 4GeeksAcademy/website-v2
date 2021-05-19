@@ -1,4 +1,5 @@
 ---
+author: anzolagi
 date: 2021-02-24 05:29:14 +0000
 excerpt: Find the key opportunities that internships and bootcamps are have to prepare your company for challenging market demands in a post-pandemic world
 layout: post
@@ -6,9 +7,9 @@ slug: internships-bootcamps-2021
 title: "Internships and bootcamps: the keys to prepare tech companies for 2021 demands"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/internship.jpg?raw=true"
 image_alt: "estudiantes aprendiendo código en un bootcamp"
-author: giovanna
 cluster: "learn-to-code"
 ---
+
 In this article you will find post-pandemic challenges tech companies are facing, how internships and bootcamps are key opportunities to prepare your company for challenging market demands, and successfully lead your workforce into a post-pandemic tech revolution. 
 
 New set-skills and roles are required to keep-up with disruptive technologies that are massively growing and transforming economies, changing forever the way we work, school, consume, entertain and live. 
@@ -22,7 +23,7 @@ About 85 million jobs worldwide will be displaced and 97 million new roles will 
 
 "By 2025 companies expect 1 in 2 workers will need reskilling, and those remaining in their current roles will need to update 40% of their skill-set to adapt to the changing labor market." World Economic Forum 
 
-The technology industry has been on the frontline of this scenario, facing many challenges, adapting to disruptive trends and growing at a speed level rarely seen before, some might call this crisis the beginning of "the fourth industrial revolution" according to Pluralsight reports](https://www.pluralsight.com/blog/career/tech-in-2025?__cf_chl_captcha_tk__=1621f5c1ee99d500b0e38142beab4208fdc08623-1617048574-0-Aa3vzWjD1_S3izHRbmeZFk60rJUDGgAx7cM5rjhxDIRHTDKyG9FEBG8yWEH4p75HvtNnTubadscWWd4l8vVcKRwoHh-v97AQi9Zj9f0kxYUJBEcSalb2x90Z-wWVsVzTNtahnaqe8fMloYYe19v9mI3b-1d0xkMsWIfWk5UxWMn7G-Hj_aQA4DzDuI2pxFNL2E5YSurVUFCf_xPAV8ZaXCw9ExBuAx1ckZJSmEfCySrv4tCp-8qyhIffP3djifTjHUds7gVToKy5OkRVuFtwiej3CZZdWnz9MDSpgm2LgVaal31nq_cyuI85LUOWV1JxLRtjhaadWIcNWONMhPuURIjI5zIC_disp1Rbsavjh54V8oR_uuH069uG39uCHzPaUnyO4AIq33hToxm1q8CcZaZLbp-EEbAd-sVJafUMSkpvHTGR7bumsnZ7i7dj891_trcZsVclAAyxmdDjr3Z1UxFZs72VrY-APknfeB-WtjKqypRNzFIQD3Yw9fSJcQBDiehVmbwT0L9uXZIVoi_r6KnbioKr6-FfNTRNKVCVWKTtd3XXjMk_pr3WlUg1-DxEzSdprTQLQuY2SlZ7bw6j0xY).
+The technology industry has been on the frontline of this scenario, facing many challenges, adapting to disruptive trends and growing at a speed level rarely seen before, some might call this crisis the beginning of "the fourth industrial revolution" according to [Pluralsight reports](https://www.pluralsight.com/blog/career/tech-in-2025?__cf_chl_captcha_tk__=1621f5c1ee99d500b0e38142beab4208fdc08623-1617048574-0-Aa3vzWjD1_S3izHRbmeZFk60rJUDGgAx7cM5rjhxDIRHTDKyG9FEBG8yWEH4p75HvtNnTubadscWWd4l8vVcKRwoHh-v97AQi9Zj9f0kxYUJBEcSalb2x90Z-wWVsVzTNtahnaqe8fMloYYe19v9mI3b-1d0xkMsWIfWk5UxWMn7G-Hj_aQA4DzDuI2pxFNL2E5YSurVUFCf_xPAV8ZaXCw9ExBuAx1ckZJSmEfCySrv4tCp-8qyhIffP3djifTjHUds7gVToKy5OkRVuFtwiej3CZZdWnz9MDSpgm2LgVaal31nq_cyuI85LUOWV1JxLRtjhaadWIcNWONMhPuURIjI5zIC_disp1Rbsavjh54V8oR_uuH069uG39uCHzPaUnyO4AIq33hToxm1q8CcZaZLbp-EEbAd-sVJafUMSkpvHTGR7bumsnZ7i7dj891_trcZsVclAAyxmdDjr3Z1UxFZs72VrY-APknfeB-WtjKqypRNzFIQD3Yw9fSJcQBDiehVmbwT0L9uXZIVoi_r6KnbioKr6-FfNTRNKVCVWKTtd3XXjMk_pr3WlUg1-DxEzSdprTQLQuY2SlZ7bw6j0xY).
 
 So in the midst of these challenges, how will companies transition? Focusing on developing their talents through learning programs. 
 
