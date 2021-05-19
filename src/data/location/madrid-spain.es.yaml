@@ -11,7 +11,7 @@ meta_info:
 seo_title: "4Geeks Academy Madrid, España"
 header:
   tagline: "4Geeks Academy en Madrid"
-  paragraph: "Madrid es la ciudad que más capital atrae para el ecosistema tecnológico e innovador. Aprende programación y forma parte del mejor Coding Bootcamp de España."
+  paragraph: "
   image: "../../../static/images/locations/madrid-home.png"
   alt: ""
 button_header:
@@ -49,7 +49,7 @@ upcoming:
 
 images_box:
   heading: "Qué deberías saber sobre esta ubicación: "
-  content: "A 2 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
+  content: "Madrid es la ciudad que más capital atrae para el ecosistema tecnológico e innovador. Aprende programación y forma parte del mejor Coding Bootcamp de España. A 2 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
   images:
     - path: "../../../static/images/locations/madrid-loc.jpg"
       alt: "miami-sunset"
