@@ -9,7 +9,7 @@ import ChooseProgram from '../new_components/ChooseProgram'
 import { StyledBackgroundSection } from '../components/Styling';
 import Modal from '../new_components/Modal';
 import LeadForm from '../new_components/LeadForm';
-import {requestSyllabus} from "../actions";
+import {outcomesReport} from "../actions";
 
 const SVGImage = () =>
 <svg width="510" height="295" viewBox="0 0 510 295" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -213,7 +213,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                             }
                         </Div>
 
-                        <Button alignSelf="center" onClick={handleOpen} variant="full" width="80%" width_tablet="fit-content" color={Colors.blue} padding="0 16%" margin="20px 0 25px 0" textColor="white">{yml.download_button_text}</Button>
+                        <Button alignSelf="center" onClick={handleOpen} variant="full" width="80%" width_tablet="fit-content" color={Colors.blue} padding="0 16%" margin="20px 0 25px 0" textColor="white">{yml.download.button_text}</Button>
                         <Modal
                             // top="58%"
                             aria-labelledby="simple-modal-title"
@@ -223,10 +223,10 @@ const Outcomes = ({data, pageContext, yml}) => {
                         >
                             <LeadForm
                             style={{marginTop: "50px"}}
-                            heading={yml.download_button_text}
-                            // motivation={yml.button.syllabus_motivation}
-                            // sendLabel={syllabus_button_text}
-                            formHandler={requestSyllabus}
+                            heading={yml.download.button_text}
+                            motivation={yml.download.motivation}
+                            sendLabel={yml.download.label}
+                            formHandler={outcomesReport}
                             handleClose={handleClose}
                             lang={pageContext.lang}
                             data={{
@@ -287,8 +287,11 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                     data
                 }      
             }
-            download_button_text
-            download_slug
+            download {
+                button_text
+                label
+                motivation
+            }
         }
       }
     }
