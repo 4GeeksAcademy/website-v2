@@ -72,7 +72,7 @@ navbar:
       
       links:
         - title: "Full Stack Developer"
-          level: "Level 1"
+          level: "Nivel 1"
           icon: "fullstack"
           paragraph: "Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr. "
           buttons:
@@ -82,7 +82,7 @@ navbar:
               link: ""
           
         - title: "Software Engineer"
-          level: "Level 2"
+          level: "Nivel 2"
           icon: "fullstack"
           paragraph: "Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube."
           buttons:
@@ -92,7 +92,7 @@ navbar:
         - title: "AI/Machine Learning Engineering"
           level: "Online"
           icon: "fullstack"
-          paragraph: "Conoce las herramientas necesarias para mejorar tus habilidades y ser parte del futuro de la Inteligencia Artificial."
+          paragraph: "Conoce las herramientas necesarias para mejorar tus habilidades y ser parte del futuro de la Inteligencia Artificial"
           buttons:
             - text: "Ver Programa"
               link: "/es/coding-bootcamp/curso-inteligencia-artificial"
@@ -162,7 +162,7 @@ navbar:
     link: "/partners"
     sub_menu:
       icon: "campuses"
-      title: "Our Campuses"
+      title: "Nuestros Campuses"
       paragraph: "Aprenda en persona o elija un programa completamente remoto. Inscríbase y forme parte de una comunidad de programacion global."
       
       links:
