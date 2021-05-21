@@ -19,12 +19,12 @@ meta_info:
       "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
       "/introduccion-programacion-codigo",
     ]
-seo_title: "Cooding Bootcamp"
+seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: ""
-  paragraph: "De cero a tener tu primer trabajo como programador, aprende todos los necesario, recibe soporte de por vida y consigue un trabajo como programador 16+ semanas despues de empezar."
+  paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 16 semanas de estudio."
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
@@ -33,7 +33,7 @@ button:
   apply_button_link: "/es/aplica"
   
 badges:
-  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.."
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"  
@@ -49,7 +49,7 @@ details:
       Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
       diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
       sólida base de front end, back end, base de datos, manejo de procesos       
-      distribuidos y despliegue a distantas plataformas web.
+      distribuidos y despliegue a distintas plataformas web.
 
       Al finalizar este programa, contarás con los conocimientos para       
       desempeñarte como Full Stack Developer. 
@@ -64,10 +64,10 @@ details:
           link_text: "Ver ejemplo"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
         - label: "Requisitos"
-          content: "Check Requisites"
+          content: "Ver los requisitos"
   heading: DETALLES DEL PROGRAMA PART-TIME
   weeks: 16
-  sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
+  sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCION:"
     projects: "PROYECTOS:"
@@ -113,7 +113,7 @@ details:
       step: 5.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
-      description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
+      description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
       projects: "Conseguirás tu primer trabajo, empezarás a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganar muy bien y disfrutar de la vida de un programador."
       slug: "lifelong-learning"
       duration: "Para siempre"
@@ -167,8 +167,8 @@ prices:
     link: ""
 ## ALUMNI SECTION
 alumni:
-  heading: "CONOCE A LOS ALUMNOS Y PROYECTOS"
-  sub_heading: "Conoce a nuestros graduados y algunos de los proyectos que estarás construyendo durante el programa."
+  heading: "Conoce a los graduados y sus proyectos"
+  sub_heading: "Tú también podrás hacer proyectos como estos cuando seas programador"
 
 ## SIDEBAR
 sidebar:
