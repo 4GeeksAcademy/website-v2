@@ -1,10 +1,13 @@
-# Career Growth: Plataformas para encontrar trabajo como freelance
-
-Creators: Gonzalo Fdez.-Victorio
-Stage: pending_publish
-Target Date: May 19, 2021
-
-# Plataformas para encontrar trabajo como freelance
+---
+author: 
+date: 2021-05-19 20:44:51+00:00
+excerpt: Conoce aquí cómo encontrar trabajo freelance desde España o el mundo
+slug: freelance-espana
+title: Plataformas para encontrar trabajo Freelance
+image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-0.png?raw=true"
+image_alt: "imagen con el texto: Freelance España"
+status: "published"
+---
 
 Entre los muchos cambios que están ocurriendo últimamente, el concepto y la forma de trabajar también están dando un giro de casi 360º.
 
@@ -20,13 +23,13 @@ Algunas de las mejores son:
 
 ## Malt
 
-![Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-1.svg](Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-1.svg)
+![Logo Malt](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-1.svg?raw=true)
 
 Su misión y por lo que se mueven es para crear un mundo en el que cada uno tenga el poder de elegir cómo y con quién trabaja. Malt es un lugar de oportunidades para descubrir personas y proyectos increíbles. Gracias, entre otras cosas, a un algoritmo que ayuda a conectar freelancers y empresas de forma directa . A través de su plataforma puedes realizar toda la gestión administrativa de forma rápida con presupuestos y facturas 100% digitales y certificados. Cuenta con miles de perfiles. Actualmente está creciendo un montón y es una de las plataformas TOP en Europa.
 
 ## Remoters
 
-![Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-2.png](Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-2.png)
+![Logo Remoters](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-2.png)
 
 Su visión es un poco diferente al resto, buscan dar soporte a todas las personas que quieran trabajar como freelancers o de forma remota para empresas que tienen sus equipos distribuidos. Y ser de ayuda a los que ya trabajan de ese modo.
 
@@ -34,19 +37,19 @@ Para ello dejan a disponibilidad de los freelancers cientos de recursos, el más
 
 ## Shakers
 
-![Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-3.png](Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-3.png)
+![Logo Shakers](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-3.png)
 
 Su objetivo es agitar la forma en la que concebimos el trabajo. Su plataforma pone el foco en la motivación del talento por encima de sus capacidades profesionales. Creen que, si los equipos trabajan motivados, con compañeros afines a ellos y encajan con los propósitos de las empresas, el éxito de los proyectos llega solo. Lograr el match perfecto entre la vida personal y profesional de las personas es su finalidad, y reinventar el futuro del trabajo su meta más ambiciosa.
 
 ## Twago
 
-![Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-4.png](Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-4.png)
+![Logo Twago](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-4.png)
 
 Tienen dos servicios principales: Por un lado un lugar donde se agrupa todo el talento: atraen, contratan y retienen a los mejores. Por otro lado, otro lugar donde publicar los proyectos. A partir de aquí, ambas partes conectan, unos reciben su pago y otros hacen crecer sus negocios, Twago ayuda a que este proceso sea sencillo y seguro y promueve el trabajo en equipo a través de todo el mundo.
 
 ## Workana
 
-![Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-5.png](Career%20Growth%20Plataformas%20para%20encontrar%20trabajo%20c%20a2ea8a76d70645828267676871f43391/fe-5.png)
+![logo Workana](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-5.png)
 
 Quieren que los freelancers tengan un sentido de comunidad dentro de Workana, además les ayudan en el desarrollo de su talento y promueven la autonomía e igualdad de oportunidades.
 
