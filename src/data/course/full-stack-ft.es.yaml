@@ -17,12 +17,12 @@ meta_info:
       "/es/course/bootcamp-desarrollo-web-full-stack-full-time",
       "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
     ]
-seo_title: "Cooding Bootcamp"
+seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: ""
-  paragraph: "De cero a tener tu primer trabajo como programador, aprende todos los necesario, recibe soporte de por vida y consigue un trabajo como programador 16+ semanas despues de empezar."
+  paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 16 semanas de estudio."
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
@@ -47,7 +47,7 @@ details:
       Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
       diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
       sólida base de front end, back end, base de datos, manejo de procesos       
-      distribuidos y despliegue a distantas plataformas web.
+      distribuidos y despliegue a distintas plataformas web.
 
       Al finalizar este programa, contarás con los conocimientos para       
       desempeñarte como Full Stack Developer. 
@@ -65,7 +65,7 @@ details:
           content: "Ver requisitos"
   heading: DETALLES DEL PROGRAMA FULL-TIME
   weeks: 9
-  sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
+  sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
@@ -102,8 +102,8 @@ details:
       step: 2
     - module_name: "DE POR VIDA"
       title: "Soporte de por vida"
-      description: "Sigue practicando y recibiendo apoyo no sólo hasta conseguir un trabajo sino de por vida. Sabemos lo importante que es contar con ayuda incluso después de conseguir trabajo."
-      projects: "Tambien recibirás un intenso entrenamiento y seguimiento para desarrollar tu Hoja de Vida, Perfil de LinkedIn, Github y redes sociales. Te realizaremos una entrevista de trabajo ficticia y recibirás coaching semanal para el mejoramiento de tus habilidades."
+      description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
+      projects: "Conseguirás tu primer trabajo, empezarás a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganar muy bien y disfrutar de la vida de un programador."
       slug: "lifelong-learning"
       duration: "1+ week"
       step: 0.1

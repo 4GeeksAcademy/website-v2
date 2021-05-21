@@ -2,14 +2,14 @@
 ## YOU CAN CHANGE THE MAIN HEADER AND THE MORE ABOUT 4GEEKS SECTION
 
 meta_info:
-  slug: resultados
+  slug: Resultados
   title: ""
   description: null
   image: null
   keywords: ""
   redirects: ["/es/resultados"]
 
-seo_title: "resultados"
+seo_title: "Resultados"
 header:
   title: "4Geeks Informe de resultados de la Academia"
   paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar."
@@ -74,7 +74,7 @@ Programa de tiempo completo."
       - stat: "2 Idiomas"
         content: "Syllabus y Programas"
       - stat: "5 Cities"
-        content: "Miami, Madrid, Santiago de Chile, Caracas y más por venir"
+        content: "Miami, Madrid, Santiago de Chile, Caracas,y más por venir"
     sub_sections:
       - title: ""
         content: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar." 
