@@ -11,7 +11,7 @@ meta_info:
 seo_title: "4Geeks Academy Caracas"
 header:
   tagline: "4Geeks Academy in Caracas"
-  paragraph: "Caracas is one of the cities with the greatest technological entrepreneurship, with great opportunities to grow both inside and outside the country. It has become an opportunity for SMEs to move forward quickly"
+  paragraph: ""
   image: "../../../static/images/locations/caracas-home.png"
   alt: ""
 button_header:
@@ -53,7 +53,7 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: "A few meters from the metro, in Chacao, the best municipality in the city and in one of the most emblematic towers. You will have high speed internet access and a first class office."
+  content: "Caracas is one of the cities with the greatest technological entrepreneurship, with great opportunities to grow both inside and outside the country. It has become an opportunity for SMEs to move forward quickly A few meters from the metro, in Chacao, the best municipality in the city and in one of the most emblematic towers. You will have high speed internet access and a first class office."
   images:
     - path: "../../../static/images/locations/caracas-loc.jpg"
       alt: "miami-sunset"
