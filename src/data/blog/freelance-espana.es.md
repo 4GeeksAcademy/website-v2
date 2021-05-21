@@ -29,7 +29,7 @@ Su misión y por lo que se mueven es para crear un mundo en el que cada uno teng
 
 ## Remoters
 
-![Logo Remoters](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-2.png)
+![Logo Remoters](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-2.png?raw=true)
 
 Su visión es un poco diferente al resto, buscan dar soporte a todas las personas que quieran trabajar como freelancers o de forma remota para empresas que tienen sus equipos distribuidos. Y ser de ayuda a los que ya trabajan de ese modo.
 
@@ -37,19 +37,19 @@ Para ello dejan a disponibilidad de los freelancers cientos de recursos, el más
 
 ## Shakers
 
-![Logo Shakers](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-3.png)
+![Logo Shakers](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-3.png?raw=true)
 
 Su objetivo es agitar la forma en la que concebimos el trabajo. Su plataforma pone el foco en la motivación del talento por encima de sus capacidades profesionales. Creen que, si los equipos trabajan motivados, con compañeros afines a ellos y encajan con los propósitos de las empresas, el éxito de los proyectos llega solo. Lograr el match perfecto entre la vida personal y profesional de las personas es su finalidad, y reinventar el futuro del trabajo su meta más ambiciosa.
 
 ## Twago
 
-![Logo Twago](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-4.png)
+![Logo Twago](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-4.png?raw=true)
 
 Tienen dos servicios principales: Por un lado un lugar donde se agrupa todo el talento: atraen, contratan y retienen a los mejores. Por otro lado, otro lugar donde publicar los proyectos. A partir de aquí, ambas partes conectan, unos reciben su pago y otros hacen crecer sus negocios, Twago ayuda a que este proceso sea sencillo y seguro y promueve el trabajo en equipo a través de todo el mundo.
 
 ## Workana
 
-![logo Workana](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-5.png)
+![logo Workana](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-5.png?raw=true)
 
 Quieren que los freelancers tengan un sentido de comunidad dentro de Workana, además les ayudan en el desarrollo de su talento y promueven la autonomía e igualdad de oportunidades.
 
