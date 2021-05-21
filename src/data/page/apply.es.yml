@@ -7,7 +7,7 @@ meta_info:
   redirects: ["/aplica", "/es/apply"]
 
 ## APPLY HEADING
-seo_title: "coding bootcamp"
+seo_title: "Coding Bootcamp"
 header:
   title: "Aplica a 4Geeks"
   image:
@@ -42,7 +42,7 @@ right:
     - "1- Un correo electrónico de nuestro equipo local."
     - "2- Info y detalles sobre cómo funciona el programa y datos sobre nuestras sedes."
     - "3- Información sobre las opciones de financiación de tu matrícula."
-    - "4- El syllabus del programa y la asistencia de nuestros asesores para ayudarte a tomar la mejor decisión para tu carrera."
+    - "4- El contenido del programa y la asistencia de nuestros asesores para ayudarte a tomar la mejor decisión para tu carrera."
 
   ## TESTIMONIAL SECTION
 testimonial_header:
