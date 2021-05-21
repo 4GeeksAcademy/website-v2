@@ -11,7 +11,7 @@ seo_title: "Coding Bootcamp Madrid"
 header:
   tagline: "4Geeks Academy in Madrid" 
   sub_heading: ""
-  paragraph: "Madrid is the city that attracts the most capital for the technological and innovative ecosystem. Learn programming and be part of the best Coding Bootcamp in Spain."
+  paragraph: ""
   image: "../../../static/images/locations/madrid-home.png"
   alt: ""
 button_header:
@@ -55,7 +55,7 @@ upcoming:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "Just 2 min. away from the subway, the office is located in one of Madrid's most active areas. Open to students 12 hrs a day and with our famous 'Coding Weekends' on Saturdays where students come to receive senior coaching, hang out and eat pizza!"
+  content: "Madrid is the city that attracts the most capital for the technological and innovative ecosystem. Learn programming and be part of the best Coding Bootcamp in Spain. Just 2 min. away from the subway, the office is located in one of Madrid's most active areas. Open to students 12 hrs a day and with our famous 'Coding Weekends' on Saturdays where students come to receive senior coaching, hang out and eat pizza!"
   images:
     - path: "../../../static/images/locations/madrid-loc.jpg"
       alt: "miami-sunset"
