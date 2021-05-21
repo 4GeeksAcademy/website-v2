@@ -2,14 +2,14 @@
 ## YOU CAN CHANGE THE MAIN HEADER AND THE MORE ABOUT 4GEEKS SECTION
 
 meta_info:
-  slug: outcomes
+  slug: Outcomes
   title: ""
   description: null
   image: null
   keywords: ""
   redirects: ["/us/outcomes"]
 
-seo_title: "outcomes"
+seo_title: "Outcomes"
 header:
   title: "4Geeks Academy Outcomes Report"
   paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
@@ -60,7 +60,7 @@ sections:
         image_section:
           - image: 
             image_paragraph: ""
-      - title: "QTY OF STUDENTS"
+      - title: "Quantity of students"
         content: "This report states the results for the last 24 months of operation in the US Campus. 200 students considered" 
         image_section:
           # - image: 
@@ -72,7 +72,7 @@ sections:
     paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days.
     "
     stats: 
-      - stat: "85.2%"
+      - stat: "86%"
         content: "Job Placement Ratio
         onsidering those with more than 90 days since graduation"
       - stat: "11%"
