@@ -211,3 +211,14 @@ export const newsletterSignup = async (data,session) => {
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['newsletter'], ['newsletter'], session);
     return true;
 }
+
+
+export const outcomesReport = async (data,session) => {
+    console.log("Succesfully requested outcomes report", data);
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    //                                                                                      tag                automation
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['download_outcome'], ['download_outcome'], session);
+    return true;
+}

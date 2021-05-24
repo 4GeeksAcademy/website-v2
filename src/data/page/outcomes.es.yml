@@ -82,5 +82,7 @@ Programa de tiempo completo."
           - image: 
             image_paragraph: ""
 
-download_button_text: "Descargar Informe"
-download_slug: "outcomes"
+download:
+  button_text: "Descargar Informe"
+  label: "Obtener Resultados"
+  motivation: "En 2 min. Recibirás el informe en tu correo"

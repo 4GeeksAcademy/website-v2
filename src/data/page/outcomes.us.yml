@@ -142,5 +142,7 @@ charts:
         - [Europe, "5"]
         - [Lat.Am., "34"]
         
-download_button_text: "Download Report"
-download_slug: "outcomes"
+download:
+  button_text: "Download Report"
+  label: "Get result"
+  motivation: "In 2 min. You will receive the outcomes in your mailbox"

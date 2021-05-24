@@ -197,7 +197,7 @@ prices:
           price: "Part-Time modality is not available"
           price_info: "Santiago - Chile"
         button:
-          button_text: "Aplly to another courses"
+          button_text: "Apply another courses"
 
     full_time:
       slug: "full_time"
