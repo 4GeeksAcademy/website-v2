@@ -90,7 +90,7 @@ const Home = (props) => {
 
   return (
     <>
-      <GridContainerWithImage padding_tablet="0" columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" >
+      {/* <GridContainerWithImage padding_tablet="0" columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" >
         <Div flexDirection="column" justifyContent_tablet="evenly" alignItems="center" alignItems_tablet="start">
           <Div flexDirection="column" alignItems="center" alignItems_tablet="start">
             <CityH1 yml={yml} />
@@ -106,7 +106,7 @@ const Home = (props) => {
               closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
             />
           </Div>
-          {/* <News lang={pageContext.lang} limit={yml.news.limit} height="40px" justifyContent="center" /> */}
+          <News lang={pageContext.lang} limit={yml.news.limit} height="40px" justifyContent="center" />
         </Div>
         <Div display="none" display_md="flex" height="auto" width="100%">
           <StyledBackgroundSection
@@ -114,10 +114,9 @@ const Home = (props) => {
             width="100%"
             image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
             bgSize={`contain`}
-          // alt={yml.header.alt}
           />
         </Div>
-      </GridContainerWithImage>
+      </GridContainerWithImage> */}
 
       <Testimonials lang={data.allTestimonialsYaml.edges} />
       <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="104px 0 104px 0" />
