@@ -106,7 +106,7 @@ const Home = (props) => {
               closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
             />
           </Div>
-          <News lang={pageContext.lang} limit={yml.news.limit} height="40px" justifyContent="center" />
+          {/* <News lang={pageContext.lang} limit={yml.news.limit} height="40px" justifyContent="center" /> */}
         </Div>
         <Div display="none" display_md="flex" height="auto" width="100%">
           <StyledBackgroundSection
