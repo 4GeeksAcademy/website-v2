@@ -52,7 +52,16 @@ export default ({location, lang, limit, filter, padding, padding_tablet, height,
   }
   return (
 
-    <Div width="100%" margin="35px 0" margin_tablet="40px 0 0 0" className="badge-slider" padding={padding} padding_tablet={padding_tablet} display="flex" height="auto" justifyContent={justifyContent} justifyContent_tablet="between">
+    <Div width="100%"
+      margin="35px 0"
+      margin_tablet="40px 0 0 0"
+      padding={padding}
+      padding_tablet={padding_tablet}
+      display="flex"
+      height="auto"
+      justifyContent="between"
+      justifyContent_tablet="between"
+    >
       {Array.isArray(locationNews) && locationNews.map((l, i) => {
         return (
           // <Div key={i} background={Colors.blue}>test</Div>
