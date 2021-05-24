@@ -1,15 +1,10 @@
 import React from 'react';
+// export default props => <svg style={props.style} width={props.width} height={props.height} viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 export default props => <svg style={props.style} width={props.width} height={props.height} viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0)">
-        <path d="M22.94 6.74001L24.85 10.56H28.68L25.59 12.93L26.77 17.26L22.94 14.39L19.12 17.26L20.6399 12.93L17.2 10.56H21.03L22.94 6.74001Z" stroke="#A4A4A4" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round" />
-        <path d="M9.8499 20.13C0.289897 20.13 1.0099 7.47 1.0099 4.83H5.8599" stroke="#A4A4A4" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M36.0999 20.13C45.6599 20.13 44.9999 7.47 44.9999 4.83H40.0999" stroke="#A4A4A4" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M40.2198 1H5.78979C5.78979 30.52 21.0198 22.14 21.0198 32.56C20.8998 39.25 17.7598 41.17 12.4798 41.17V45H33.5198V41.17C28.2398 41.17 24.8498 39.26 24.8498 32.56C24.8498 22.13 40.2198 30.4 40.2198 1Z" stroke="#A4A4A4" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-    </g>
-    <defs>
-        <clipPath id="clip0">
-            <rect width="46" height="45.99" fill="white" />
-        </clipPath>
-    </defs>
+    <path d="M22.9397 6.73999L24.8497 10.56H28.6797L25.5897 12.93L26.7697 17.26L22.9397 14.39L19.1197 17.26L20.6397 12.93L17.1997 10.56H21.0297L22.9397 6.73999Z" stroke="#A4A4A4" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round" />
+    <path d="M9.8499 20.13C0.289897 20.13 1.0099 7.46996 1.0099 4.82996H5.8599" stroke="#A4A4A4" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M36.1001 20.13C45.6601 20.13 45.0001 7.46996 45.0001 4.82996H40.1001" stroke="#A4A4A4" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M40.22 1H5.79004C5.79004 30.52 21.02 22.14 21.02 32.56C20.9 39.25 17.76 41.17 12.48 41.17V45H33.52V41.17C28.24 41.17 24.85 39.26 24.85 32.56C24.85 22.13 40.22 30.4 40.22 1Z" stroke="#A4A4A4" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
 </svg>
+
 
