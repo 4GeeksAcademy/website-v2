@@ -90,7 +90,7 @@ const Home = (props) => {
 
   return (
     <>
-      {/* <GridContainerWithImage padding_tablet="0" columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" >
+      <GridContainerWithImage padding_tablet="0" columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" >
         <Div flexDirection="column" justifyContent_tablet="evenly" alignItems="center" alignItems_tablet="start">
           <Div flexDirection="column" alignItems="center" alignItems_tablet="start">
             <CityH1 yml={yml} />
@@ -116,15 +116,15 @@ const Home = (props) => {
             bgSize={`contain`}
           />
         </Div>
-      </GridContainerWithImage> */}
+      </GridContainerWithImage>
 
-      <Testimonials lang={data.allTestimonialsYaml.edges} />
+      {/* <Testimonials lang={data.allTestimonialsYaml.edges} /> */}
       <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="104px 0 104px 0" />
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
       <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
-      <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
+      {/* <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} /> */}
 
       <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
     </>
