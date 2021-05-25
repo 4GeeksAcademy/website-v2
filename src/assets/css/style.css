@@ -217,7 +217,9 @@ a {
     outline-style: auto;
     outline-width: 3px;
     } */
-
+.react-player-with4geeks img{
+    object-position: top center!important;
+}
 .trend{
     position: absolute;
     top: 40px;
