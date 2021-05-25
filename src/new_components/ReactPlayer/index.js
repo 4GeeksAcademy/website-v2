@@ -48,7 +48,6 @@ const Iframe = styled(YouTube)`
 const Thumbnail = styled.img`
   display: block;
   object-fit: cover;
-
 `
 
 const Image = styled.div`
@@ -114,33 +113,33 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
     {showVideo ? (
       <>
         {With_Modal ? (
-        
+
           <Modal boxPadding="80px 5%" open={showVideo} onClose={() => setShowVideo(false)}>
-              <Iframe
-                borderRadius={style.borderRadius}
-                videoId={yt_parser(id)}
-                id={`a-${id} do-not-delete-this-hack`}
-                onReady={e => e.target.playVideo()}
-                onPlay={onPlay}
-                onPause={onPause}
-                onEnd={onEnd}
-                onError={onError}
-                onStateChange={onStateChange}
-                onPlaybackRateChange={onPlaybackRateChange}
-                onPlaybackQualityChange={onPlaybackQualityChange}
-                opts={{
-                  // padding: "125px 0 0",
-                  width: "100%",
-                  height:`675px`,
-                  host: noCookies
-                    ? "https://www.youtube-nocookie.com"
-                    : "https://www.youtube.com",
-                  ...playerVars
-                }}
-              />
+            <Iframe
+              borderRadius={style.borderRadius}
+              videoId={yt_parser(id)}
+              id={`a-${id} do-not-delete-this-hack`}
+              onReady={e => e.target.playVideo()}
+              onPlay={onPlay}
+              onPause={onPause}
+              onEnd={onEnd}
+              onError={onError}
+              onStateChange={onStateChange}
+              onPlaybackRateChange={onPlaybackRateChange}
+              onPlaybackQualityChange={onPlaybackQualityChange}
+              opts={{
+                // padding: "125px 0 0",
+                width: "100%",
+                height: `675px`,
+                host: noCookies
+                  ? "https://www.youtube-nocookie.com"
+                  : "https://www.youtube.com",
+                ...playerVars
+              }}
+            />
           </Modal>
-        
-      ) : (<Iframe
+
+        ) : (<Iframe
           borderRadius={style.borderRadius}
           videoId={yt_parser(id)}
           id={`a-${id} do-not-delete-this-hack`}
@@ -154,14 +153,14 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
           onPlaybackQualityChange={onPlaybackQualityChange}
           opts={{
             width: "100%",
-            height:`${style.height}`,
+            height: `${style.height}`,
             host: noCookies
               ? "https://www.youtube-nocookie.com"
               : "https://www.youtube.com",
             ...playerVars
           }}
         />)
-      }
+        }
       </>
     ) : (
       <Image

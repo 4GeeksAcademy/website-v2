@@ -91,7 +91,6 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
                   With_Modal={true}
                   className="react-player-with4geeks"
                   thumb={i.image}
-                  // style={{height: playerHeight}}
                   id={i.video}
                   width='82px'
                   width_tablet="100%"
