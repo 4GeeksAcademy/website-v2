@@ -204,9 +204,38 @@ export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, s
                                             <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="15px 0 5px 0">{m.title}</H3>
                                             {m.sub_links != undefined && Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
                                                 return (
-                                                    <Link to={m.link_to} key={i}><Div alignItems="baseline" margin="10px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="22px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3></Div></Link>
+
+                                                    <Link to={m.link_to} key={i}>
+                                                        <Div alignItems="baseline" margin="10px 0 ">
+                                                            <H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="22px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3>
+                                                        </Div>
+                                                    </Link>
                                                 )
                                             })}
+                                            {m.buttons != undefined &&
+                                                <Div flexDirection="column">
+                                                    {Array.isArray(m.buttons) && m.buttons.map((m, i) => {
+                                                        return (
+                                                            <Link to={m.link} key={i}>
+                                                                <H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="22px" fontWeight="400" margin="10px 5px 0 0">{m.text}</H3>
+                                                                {/* <Button
+                                                                    variant="outline"
+                                                                    color="black"
+                                                                    font='"Lato", sans-serif'
+                                                                    width="fit-content"
+                                                                    margin="20px 10px 0 0"
+                                                                    pointer
+                                                                    textColor={Colors.black}
+                                                                    fontSize={"13px"}
+                                                                    borderRadius="3px" padding="10px"
+                                                                >
+                                                                    {m.text}
+                                                                </Button> */}
+                                                            </Link>
+                                                        )
+                                                    })}
+                                                </Div>
+                                            }
                                         </>
                                     )
                                 })}
