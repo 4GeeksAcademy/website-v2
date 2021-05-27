@@ -75,13 +75,13 @@ const Program = ({data, pageContext, yml}) => {
       <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
       <Circle color="yellow" width="160px" height="160px" top="0" right="-120px" opacity="0.2" display="inline" display_tablet="none" />
       <Circle color="red" width="25px" height="25px" top="60px" right="30px" display="inline" display_tablet="none" />
-      <Div flexDirection_md="row" flexDirection="column" alignItems="center" justifyContent="center" margin_tablet="0 0 50px 0">
+      <Div flexDirection_tablet="row" flexDirection="column" alignItems="center" justifyContent="center" margin_tablet="0 0 50px 0">
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
-          <Button variant="full" width="fit-content" color={Colors.blue} padding="13px 24px" margin="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+          <Button variant="full" justifyContent="center" width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
         </Link>
-        <Button onClick={handleOpen} variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        <Button onClick={handleOpen} width="200px" width_tablet="fit-content" variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
         {/* <Button onClick={handleOpen} variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
         {/* <Button onClick={handleOpen} variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
       </Div>
