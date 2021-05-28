@@ -35,14 +35,23 @@ const locations = {
     "santiago-chile": "/us/coding-campus/coding-bootcamp-santiago",
     "downtown-miami": "/us/coding-campus/coding-bootcamp-miami",
     "madrid-spain": "/us/coding-campus/coding-bootcamp-madrid",
+    "online": "/us/coding-campus/online-coding-bootcamp",
+    "caracas-venezuela": "/us/coding-campus/coding-bootcamp-caracas",
+    "costa-rica": "/us/coding-campus/coding-bootcamp-costa-rica"
   },
   es: {
     "downtown-miami": "/es/coding-campus/bootcamp-programacion-miami",
     "santiago-chile": "/es/coding-campus/bootcamp-programacion-santiago",
     "madrid-spain": "/es/coding-campus/bootcamp-programacion-madrid",
+    "online": "/es/coding-campus/online-bootcamp-programacion",
+    "caracas-venezuela": "/es/coding-campus/bootcamp-programacion-caracas",
+    "costa-rica": "/es/coding-campus/bootcamp-programacion-costa-rica"
   }
 }
-
+const locationText = {
+  us: "or",
+  es: "o"
+}
 const Calendar = (props) => {
   const {pageContext, yml, data} = props;
   const [limit, setLimit] = useState(true);
@@ -154,7 +163,7 @@ const Calendar = (props) => {
               i < 4 &&
               <Div key={i} flexDirection="column" flexDirection_tablet="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
                 <Div flexDirection_tablet="column" width_tablet="15%" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
-                  <H4 textAlign="left" textTransform="uppercase" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">{ dayjs(m.kickoff_date).locale(`${pageContext.lang === "us" ? "en" : "es"}`).format("MMM") }</H4>
+                  <H4 textAlign="left" textTransform="uppercase" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">{dayjs(m.kickoff_date).locale(`${pageContext.lang === "us" ? "en" : "es"}`).format("MMM")}</H4>
                   <Paragraph textAlign="left" fontWeight="700">{`
                       ${pageContext.lang === "us" ? dayjs(m.kickoff_date).add(5, "hour").locale("en").format("MM/DD") : dayjs(m.kickoff_date).add(5, "hour").locale("es").format("DD/MM")} 
                       - 
@@ -167,7 +176,14 @@ const Calendar = (props) => {
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex" >
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
-                  <Link to={locations[pageContext.lang][m.academy.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph></Link>
+                  <Div>
+                    <Link to={locations[pageContext.lang][m.academy.slug] || ""}>
+                      <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                    </Link>
+                    {m.academy.slug != "online" && <Link to={locations[pageContext.lang]['online'] || ""}>
+                      <Paragraph textAlign="left" margin="0 0 0 3px" color={Colors.blue}>{`${locationText[pageContext.lang]} Online`}</Paragraph>
+                    </Link>}
+                  </Div>
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex">
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
@@ -176,7 +192,14 @@ const Calendar = (props) => {
                 <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
-                    <Link to=""><Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph></Link>
+                    <Div>
+                      <Link to="">
+                        <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                      </Link>
+                      {m.academy.slug != "online" && <Link to={locations[pageContext.lang]['online'] || ""}>
+                        <Paragraph textAlign="left" margin="0 0 0 3px" color={Colors.blue}>{`${locationText[pageContext.lang]} Online`}</Paragraph>
+                      </Link>}
+                    </Div>
                   </Div>
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
@@ -250,7 +273,7 @@ const Calendar = (props) => {
           }
         </>
       </GridContainer>
-      
+
     </>
   )
 };
