@@ -29,12 +29,22 @@ const locations = {
         "santiago-chile": "/us/coding-campus/coding-bootcamp-santiago",
         "downtown-miami": "/us/coding-campus/coding-bootcamp-miami",
         "madrid-spain": "/us/coding-campus/coding-bootcamp-madrid",
+        "online": "/us/coding-campus/online-coding-bootcamp",
+        "caracas-venezuela": "/us/coding-campus/coding-bootcamp-caracas",
+        "costa-rica": "/us/coding-campus/coding-bootcamp-costa-rica"
     },
     es: {
         "downtown-miami": "/es/coding-campus/bootcamp-programacion-miami",
         "santiago-chile": "/es/coding-campus/bootcamp-programacion-santiago",
         "madrid-spain": "/es/coding-campus/bootcamp-programacion-madrid",
+        "online": "/es/coding-campus/online-bootcamp-programacion",
+        "caracas-venezuela": "/es/coding-campus/bootcamp-programacion-caracas",
+        "costa-rica": "/es/coding-campus/bootcamp-programacion-costa-rica"
     }
+}
+const locationText = {
+    us: "or",
+    es: "o"
 }
 const UpcomingDates = ({lang, location, message}) => {
     const dataQuery = useStaticQuery(graphql`
@@ -86,10 +96,11 @@ const UpcomingDates = ({lang, location, message}) => {
         const getData = async () => {
             var resp = null;
             if (location) {
-                resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${location}`)
+                // resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${location}`)
+                resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${location}`)
             }
             else {
-                resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
+                resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
             }
             // let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
             let cohorts = await resp.json();
@@ -161,7 +172,14 @@ const UpcomingDates = ({lang, location, message}) => {
                             </Div>
                             <Div flexDirection="column" display="none" display_tablet="flex" >
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>
-                                <Link to={locations[lang][m.academy.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph></Link>
+                                <Div>
+                                    <Link to={locations[lang][m.academy.slug] || ""}>
+                                        <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                                    </Link>
+                                    {m.academy.slug != "online" && <Link to={locations[lang]['online'] || ""}>
+                                        <Paragraph textAlign="left" margin="0 0 0 3px" color={Colors.blue}>{`${locationText[lang]} Online`}</Paragraph>
+                                    </Link>}
+                                </Div>
                             </Div>
                             <Div flexDirection="column" display="none" display_tablet="flex">
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.duration_label}</H4>
@@ -170,7 +188,14 @@ const UpcomingDates = ({lang, location, message}) => {
                             <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                                 <Div flexDirection="column" width="50%">
                                     <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>
-                                    <Link to=""><Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph></Link>
+                                    <Div>
+                                        <Link to={locations[lang][m.academy.slug] || ""}>
+                                            <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                                        </Link>
+                                        {m.academy.slug != "online" && <Link to={locations[lang]['online'] || ""}>
+                                            <Paragraph textAlign="left" margin="0 0 0 3px" color={Colors.blue}>{`${locationText[lang]} Online`}</Paragraph>
+                                        </Link>}
+                                    </Div>
                                 </Div>
                                 <Div flexDirection="column" width="50%">
                                     <H4 textAlign="left" textTransform="uppercase">{content.info.duration_label}</H4>
