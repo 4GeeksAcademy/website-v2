@@ -37,7 +37,6 @@ const Location = ({data, pageContext, yml}) => {
   const [cohorts, setCohorts] = React.useState([]);
   const [ready, setReady] = useState(false)
 
-
   useEffect(() => {
     process.nextTick(() => {
       if (globalThis.window ?? false) {
@@ -127,8 +126,9 @@ const Location = ({data, pageContext, yml}) => {
         )}
       </Div>
     </GridContainer>
-    <GridContainer columns_tablet="12" gridTemplateRows_tablet="4, 1fr" height_tablet="813px" height="304px">
+    <GridContainer columns_tablet="12" gridTemplateRows_tablet={yml.images_box.images.length < 4 ? "3, 1fr" : "4, 1fr"} height_tablet="813px" height="304px">
       {yml.images_box.images.map((m, i) => {
+
         return (
           <Div
             key={i}
