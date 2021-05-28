@@ -156,9 +156,15 @@ const Location = ({data, pageContext, yml}) => {
     <Div>
       {
         !ready ? null : (
-          // <div>Loading...</div>
           <Suspense fallback={() => 'loading'}>
-            <MapFrame src={ready ? yml.info_box.iframeMapUrl : "about:blank"} width="100%" height="492px" />
+            {yml.info_box.iframeMapUrl === "" ? null 
+            : (
+              <MapFrame 
+                src={ready ? yml.info_box.iframeMapUrl : "about:blank"} 
+                width="100%" 
+                height="492px" /
+              >
+            )}
           </Suspense>
         )
       }

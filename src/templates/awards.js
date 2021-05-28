@@ -107,13 +107,15 @@ query AwardsQuery($file_name: String!, $lang: String!) {
             header{
                 title
                 paragraph
-                image{
-                    childImageSharp {
-                      fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  }
+                # image
+                # IMAGE is a string to static img file
+                #  {
+                #     childImageSharp {
+                #       fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                #         ...GatsbyImageSharpFluid_withWebp
+                #       }
+                #     }
+                #   }
                 
             }
             badges{
