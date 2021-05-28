@@ -7,7 +7,7 @@
 #       paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras que usted busca pivotar, encontrar un trabajo mejor o avanzar en el actual. Aprenda a codificar en 4Geeks Academy."
 #       links:
 #         - title: "Online"
-#           sub_links: 
+#           sub_links:
 #             - title: "Part Time"
 #               link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
 #             - title: "Full Time"
@@ -60,7 +60,7 @@
 #       links:
 #         - title: "Online"
 #         - title: "Campuses"
-        
+
 navbar:
   - name: "Programas"
     link: "/es/coding-bootcamp/full-stack-part-time"
@@ -68,8 +68,7 @@ navbar:
       icon: ""
       title: "Programas"
       paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras que usted busca pivotar, encontrar un trabajo mejor o avanzar en el actual. Aprenda a codificar en 4Geeks Academy."
- 
-      
+
       links:
         - title: "Full Stack Developer"
           level: "Nivel 1"
@@ -80,7 +79,7 @@ navbar:
               link: "/es/coding-bootcamp/full-stack-part-time"
             - text: "Full Time"
               link: ""
-          
+
         - title: "Software Engineer"
           level: "Nivel 2"
           icon: "fullstack"
@@ -88,7 +87,7 @@ navbar:
           buttons:
             - text: "Ver Programa"
               link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
-         
+
         - title: "AI/Machine Learning Engineering"
           level: "Online"
           icon: "fullstack"
@@ -96,7 +95,7 @@ navbar:
           buttons:
             - text: "Ver Programa"
               link: "/es/coding-bootcamp/curso-inteligencia-artificial"
-          
+
   - name: "Porqué 4Geeks"
     link: "/es/porque-4geeks"
     sub_menu:
@@ -106,13 +105,13 @@ navbar:
       paragraph: "Este es el lugar para impulsar su carrera aprendiendo a codificar. Piense de manera diferente, tenga más confianza en sí mismo, dé vida a sus ideas y gane más dinero."
       links:
         - title: "Acompañamiento"
-          sub_links: 
+          sub_links:
             - title: "GeekPal"
               link_to: "/es/geekpal"
             - title: "GeekForce"
               link_to: "/es/geekforce"
         - title: "Validaciones"
-          sub_links: 
+          sub_links:
             - title: "Premios"
               link_to: "/es/premios"
             - title: "Resultados"
@@ -120,7 +119,7 @@ navbar:
             - title: "Compara 4Geeks"
               link_to: "/es/geeks-vs-otros"
         - title: "Costos"
-          sub_links: 
+          sub_links:
             - title: "Financiaciones"
               link_to: "/es/financiacion"
             # - title: "Precios"
@@ -128,7 +127,7 @@ navbar:
             # - title: "Becas"
             #   link_to: "/es/becas"
         - title: "Nuestros Alumnos"
-          sub_links: 
+          sub_links:
             - title: "Alumnos y Proyectos"
               link_to: "/es/alumnos-y-proyectos"
             - title: "Testimonios"
@@ -139,10 +138,10 @@ navbar:
       icon: "hat"
       title: "Academia"
       paragraph: "Estamos constantemente fortaleciendo nuestro ecosistema para aprender y evolucionar juntos, usando tecnología y usando código."
-      
+
       links:
         - title: ""
-          sub_links: 
+          sub_links:
             - title: "Quienes Somos"
               link_to: "/es/sobre-la-academia"
             - title: "Prensa"
@@ -151,11 +150,11 @@ navbar:
               link_to: "/es/blog-en-espanol"
             - title: "Partners"
               link_to: "/es/alianzas"
-# links:
-#       - name: "Desarrollador Full Stack"
-#       - link: "/course/full-stack-web-development-bootcamp-part-time"
-#       - name: "Ingeniero de Software"
-#       - link: "/course/software-engineering-coding-bootcamp"
+  # links:
+  #       - name: "Desarrollador Full Stack"
+  #       - link: "/course/full-stack-web-development-bootcamp-part-time"
+  #       - name: "Ingeniero de Software"
+  #       - link: "/course/software-engineering-coding-bootcamp"
   # - name: "Pricing"
   #   link: "/pricing"
   - name: "Campuses"
@@ -164,28 +163,28 @@ navbar:
       icon: "campuses"
       title: "Nuestros Campuses"
       paragraph: "Aprenda en persona o elija un programa completamente remoto. Inscríbase y forme parte de una comunidad de programacion global."
-      
+
       links:
         - title: "Online"
-          sub_links: 
+          sub_links:
             - title: "Part Time"
               link_to: "/es/coding-campus/online-bootcamp-programacion"
             - title: "Full Time"
               link_to: "/es/coding-campus/online-bootcamp-programacion"
         - title: "Campuses"
-          sub_links: 
-            - title: "Caracas"
-              link_to: "/es/coding-campus/bootcamp-programacion-caracas"
-            - title: "Madrid"
-              link_to: "/es/coding-campus/bootcamp-programacion-madrid"
+          sub_links:
             - title: "Miami"
               link_to: "/es/coding-campus/bootcamp-programacion-miami"
-            - title: "San José"
-              link_to: "/es/coding-campus/bootcamp-programacion-costa-rica"
+            - title: "Madrid"
+              link_to: "/es/coding-campus/bootcamp-programacion-madrid"
             - title: "Santiago de Chile"
               link_to: "/es/coding-campus/bootcamp-programacion-santiago"
+            - title: "San José"
+              link_to: "/es/coding-campus/bootcamp-programacion-costa-rica"
+            - title: "Caracas"
+              link_to: "/es/coding-campus/bootcamp-programacion-caracas"
   - name: "Próxima Fechas"
-    link: "/es/proximas-fechas"        
+    link: "/es/proximas-fechas"
 
 language_button:
   text: "ENG / <span class='lang'>ESP</span>"
@@ -198,8 +197,6 @@ button:
   button_background_color: ""
   next_cohort: "Próxima cohorte:"
   other_dates: "ver otras fechas"
-
-
 # - name: "Home"
 #     link: "/es/inicio"
 #   - name: "La Academia"

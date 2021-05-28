@@ -121,13 +121,16 @@ export default SmartSelect;
 const customStyles = {
     input: (styles) => ({
         ...styles,
-        width: "100%"
+        width: "100%",
+
+
     }),
     control: (styles) => ({
         ...styles,
         fontFamily: "Lato, sans-serif",
         background: "#ffffff",
-        border: "1px solid #606060",
+
+        marginBottom: "5px",
         marginTop: "5px",
         width: "100%",
         fontSize: "15px",

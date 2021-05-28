@@ -143,7 +143,7 @@ const Apply = (props) => {
                         <Div margin_tablet="0 0 23px 0">
                             <Input
                                 data-cy="first_name"
-                                border="1px solid #606060"
+                                border="1px solid hsl(0,0%,80%)"
                                 borderRadius="3px"
                                 bgColor={Colors.white}
                                 type="text" className="form-control" placeholder={yml.left.form_section.first_name}
@@ -158,11 +158,11 @@ const Apply = (props) => {
                                 value={formData.first_name.value}
                             />
                         </Div>
-                        <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" margin_tablet="0 0 23px 0">
+                        <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" margin_tablet="0 0 23px 0" gridGap="0" gridGap_tablet="15px">
                             <Div gridColumn_tablet="1 / 7">
                                 <Input
                                     data-cy="email"
-                                    border="1px solid #606060"
+                                    border="1px solid hsl(0,0%,80%)"
                                     bgColor={Colors.white}
                                     type="email" className="form-control" placeholder={yml.left.form_section.email}
                                     errorMsg="Please specify a valid email"
@@ -179,7 +179,7 @@ const Apply = (props) => {
                             <Div gridColumn_tablet="7 / 13">
                                 <Input
                                     data-cy="phone"
-                                    border="1px solid #606060"
+                                    border="1px solid hsl(0,0%,80%)"
                                     bgColor={Colors.white}
                                     type="phone" className="form-control" placeholder={yml.left.form_section.phone}
                                     errorMsg="Please specify a valid phone number"
@@ -214,7 +214,7 @@ const Apply = (props) => {
                                 onChange={(value, valid) => setVal({...formData, location: {value: value.active_campaign_location_slug, valid}})}
                             />
                         </Div>
-                        <Input border="1px solid #606060" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
+                        <Input border="1px solid hsl(0,0%,80%)" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
                             value={formData.referral_key.value}
                             onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
                         />

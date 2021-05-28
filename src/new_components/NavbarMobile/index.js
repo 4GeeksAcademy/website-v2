@@ -123,9 +123,9 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
                         />
                     </Link>
                 </Div>
-                <MegaMenu status={status} setStatus={setStatus} menu={menu} languageButton={languageButton} />
+                <MegaMenu status={status} setStatus={setStatus} menu={menu} session={session} currentURL={currentURL} languageButton={languageButton} />
                 <Div alignItems="center" justifyContent="between">
-                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" minWidth="130px" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>
             </Nav>
         </>
@@ -159,7 +159,7 @@ export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, s
                     <Div background={Colors.lightGray} height="61px" alignItems="center" padding="24px 17px" justifyContent="between">
                         {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 ?
                             <>
-                                <Icon icon="arrowleft" color="#000000" width="12px" height="12px" style={{cursor: "pointer"}} onClick={() => setStatus({...status, itemIndex: null})} />
+                                <Icon icon="arrowleft" color="#000000" width="16px" height="16px" style={{cursor: "pointer"}} onClick={() => setStatus({...status, itemIndex: null})} />
                                 <Div alignItems="center">
                                     {menu[status.itemIndex].sub_menu.icon && <Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" />}
                                     <H3 textAlign="center" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">
