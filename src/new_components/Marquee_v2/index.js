@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import cx from 'classnames'
 import styles from '../../assets/css/marquee-v2.module.css'
 import DragScrollProvider from '../DragScrollProvider'
-import styled, {css, keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const marquee_default = keyframes`
   100% { transform: translate3d(-100%, 0, 0) }

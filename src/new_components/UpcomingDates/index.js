@@ -148,7 +148,12 @@ const UpcomingDates = ({lang, location, message}) => {
                         <Div key={i} flexDirection="column" flexDirection_tablet="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
                             <Div flexDirection_tablet="column" width_tablet="15%" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
                                 <H4 textAlign="left" textTransform="uppercase" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">{dayjs(m.kickoff_date).format("MMM")}</H4>
-                                <Paragraph textAlign="left" fontWeight="700">{`${dayjs(m.kickoff_date).add(5, "hour").locale("en").format("MM/DD")} - ${dayjs(m.ending_date).add(5, "hour").locale("en").format("MM/DD")}`}</Paragraph>
+                                <Paragraph textAlign="left" fontWeight="700">{`
+                                ${lang === "us" ? dayjs(m.kickoff_date).add(5, "hour").locale("en").format("MM/DD") : dayjs(m.kickoff_date).add(5, "hour").locale("es").format("dd/MM")} 
+                                - 
+                                ${lang === "us" ? dayjs(m.ending_date).add(5, "hour").locale("en").format("MM/DD") : dayjs(m.ending_date).add(5, "hour").locale("es").format("dd/MM")}
+                                `}
+                                </Paragraph>
                             </Div>
                             <Div flexDirection="column" width_tablet="35%" margin="0 0 20px 0">
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.program_label}</H4>
