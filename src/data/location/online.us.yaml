@@ -48,6 +48,7 @@ upcoming:
 info_box:
   heading: "Find us Online"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129"
+  iframeMapUrl: ""
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
