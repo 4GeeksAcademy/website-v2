@@ -208,6 +208,7 @@ export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, s
                                                     <Link to={m.link_to} key={i}>
                                                         <Div alignItems="baseline" margin="10px 0 ">
                                                             <H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="22px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3>
+                                                            <Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" />
                                                         </Div>
                                                     </Link>
                                                 )
@@ -217,7 +218,10 @@ export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, s
                                                     {Array.isArray(m.buttons) && m.buttons.map((m, i) => {
                                                         return (
                                                             <Link to={m.link} key={i}>
-                                                                <H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="22px" fontWeight="400" margin="10px 5px 0 0">{m.text}</H3>
+                                                                <Div alignItems="baseline">
+                                                                    <H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="22px" fontWeight="400" margin="10px 5px 0 0">{m.text}</H3>
+                                                                    <Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" />
+                                                                </Div>
                                                             </Link>
                                                         )
                                                     })}
