@@ -15,8 +15,8 @@ header:
 
 # Introduction Video here
 geekPal:
-  - videoId: "cKcZD0_1IKk"
-    image: "../../../static/images/projects/re-mindful.jpg"
+  - videoId: "MBXqEnhodx0"
+    image: ../../../static/images/staff/joao.png
 
 # Banner of icons 
 icons:

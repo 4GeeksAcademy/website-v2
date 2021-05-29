@@ -64,14 +64,14 @@ images_box:
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "miami-sunset"
+    - path: "../../../static/images/locations/miami-room.jpg"
+      alt: "4Geeeks miami room"
+    - path: "../../../static/images/locations/miami-dia.jpg"
+      alt: "4Geeeks miami day"
     - path: "../../../static/images/locations/miami-old.jpg"
       alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
-    - path: "../../../static/images/locations/miami-dia.jpg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-room.jpg"
-      alt: "4Geeeks miami room"
 
 ## HEADING SECTION
 

@@ -15,8 +15,8 @@ header:
   image_logo: "/images/geekforce.png"
 
 geekForce:
-  - videoId: "cKcZD0_1IKk"
-    image: "../../../static/images/projects/re-mindful.jpg"
+  - videoId: "ln3bQsV1BaQ"
+    image: ../../../static/images/staff/hernan.png
 
 icons:
   - icon: "contract"

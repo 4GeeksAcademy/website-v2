@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
-import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
+import {H1, H2, H3, H4, Title, Separator, Paragraph} from '../Heading'
 import {Anchor, Colors} from '../Styling';
 import {Row, GridContainer, Div} from '../Sections'
 import Fragment from "../Fragment"
@@ -82,6 +82,13 @@ const Staff = props => {
                                 >
                                     {item.job_title}
                                 </H4>
+                                {/* <Paragraph
+                                    fontSize="14px"
+                                    lineHeight="22px"
+                                    margin="0 0 6px 0"
+                                >
+                                    {item.bio}
+                                </Paragraph> */}
                                 <Anchor to={item.linkdin} target="_blank" rel="noopener noreferrer"><Icon icon="linkedin" width="14px" fill="#2867b2" stroke="#2867b2" /></Anchor>
                             </Div>
                         )

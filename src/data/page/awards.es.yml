@@ -9,18 +9,18 @@ meta_info:
 seo_title: "Premios"
 header:
   title: "Premios y Recocimientos"
-  paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerles saber que cada vez trabajamos más duro para mejorar."
+  paragraph: "Es fanstástico ser reconocido por tus logros educativos y tecnológicos después de tantos años de trabajo y esfuerzo para lograr ser uno de los mejores bootcamps del mundo."
   image: "../../../static/images/awards/awards.png"
 badges:
   paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
 awards_list:
   - image: "../../../static/images/badges/licensed.png"
-    title: "Florida Department of Education"
-    paragraph: "Licenciados por el Departamento de Educación de la Florida."
+    title: "Departamento de Education de EEUU"
+    paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
 
   - image: "../../../static/images/badges/switchup.png"
     title: "Best Bootcamp for Switchup 2021"
-    paragraph: "Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Miami según SwitchUp."
+    paragraph: "No solo en Florida, sino tambien en todos nuestros campus 4Geeks estamos constantemente recibiendo reconocimientos de nuestros alumnos permitiendonos posicionarnos como uno de los top bootcamps a nivel mundial."
 
   - image: "../../../static/images/badges/newsweek.png"
     title: "Top Coding School for Newsweek"

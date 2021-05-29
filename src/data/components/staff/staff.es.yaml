@@ -7,7 +7,7 @@ staff:
     last_name: "Sánchez"
     nick_name: "alesanchezr"
     slug: "alejandro-sanchez"
-    job_title: "Director de Educación"
+    job_title: "Co-fundador - Director"
     bio: "20 enseñando, Ingeniero de SW y Google Embasador"
     github: "https://github.com/alesanchezr"
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
@@ -24,7 +24,7 @@ staff:
     last_name: "Ricigliano"
     nick_name: ""
     slug: marcelo-ricigliano
-    job_title: "CEO - Co-Fundador"
+    job_title: "Co-Fundador - Director"
     bio: "Reconocido por Forbes, Newsweek, Switchup, entre otros por los éxitos en las Startups que ha co-fundado. Tech Startup Mentor de Founder Institute, Startup Chile y de Impaqto. Ha vendido 2 Startups. Ha fracasado en 4. Abogado con Postgrdo de la Stockholm Universitet."
     github: ""
     linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
@@ -77,23 +77,23 @@ staff:
       - Javascript
       - Python
     location: ""
-  - name: "Patricia"
-    last_name: "Ayuso"
-    nick_name: ""
-    slug: "patricia-ayuso"
-    job_title: "Senior Mentor"
-    bio: "15 años programando, Ing. de Software con Master en M.I.S."
-    github: "https://github.com/ayusopatricia"
-    linkdin: "https://www.linkedin.com/in/ayusopatricia/"
-    twitter: "https://twitter.com/ayusopatricia"
-    website: ""
-    image: "../../../../static/images/staff/patricia.jpg"
-    age: 33
-    interests:
-      - Music
-    coding_skills:
-      - Excel
-    location: ""
+  # - name: "Patricia"
+  #   last_name: "Ayuso"
+  #   nick_name: ""
+  #   slug: "patricia-ayuso"
+  #   job_title: "Senior Mentor"
+  #   bio: "15 años programando, Ing. de Software con Master en M.I.S."
+  #   github: "https://github.com/ayusopatricia"
+  #   linkdin: "https://www.linkedin.com/in/ayusopatricia/"
+  #   twitter: "https://twitter.com/ayusopatricia"
+  #   website: ""
+  #   image: "../../../../static/images/staff/patricia.jpg"
+  #   age: 33
+  #   interests:
+  #     - Music
+  #   coding_skills:
+  #     - Excel
+  #   location: ""
   - name: "Paolo"
     last_name: "Lucano"
     nick_name: "Pluco"

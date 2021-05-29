@@ -3,13 +3,13 @@
 
 ## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
 header:
-  title: Con 4Geeks
+  title: 4Geeks Academy in tres historias
   paragraph: ""
 with:
   - name: "Hernan García"
     title: "Recibí ofertas de empresas que nunca me lo esperé"
     description: "Hernán tardó un mes en conseguir un trabajo en tecnología una vez que comenzó a aplicar."
-    image: ../../../../static/images/pablo-perez.png
+    image: ../../../../static/images/staff/hernan.png
     alt: ""
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -23,9 +23,9 @@ with:
   - name: "Luisa Glum"
     title: "La Academia estaba tan comprometida como yo”"
     description: "Luisa pagó el programa después de que se graduó y encontró trabajo, ella aplicó al ISA (Income Share Agreement)"
-    image: ../../../../static/images/luisa-glum.png
+    image: ../../../../static/images/staff/luisa.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -37,9 +37,9 @@ with:
   - name: "Joao Henrique"
     title: "Siempre tendrás apoyo por parte de la Academia"
     description: "Joao cuenta su experiencia obteniendo mentores de codificación mientras estudiaba, después de graduarse e incluso en sus trabajos."
-    image: ../../../../static/images/luisa-barrios.png
+    image: ../../../../static/images/staff/joao.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:

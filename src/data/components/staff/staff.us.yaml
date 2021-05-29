@@ -6,8 +6,8 @@ staff:
     last_name: "Sanchez"
     nick_name: "Alesanchezr"
     slug: "alejandro-sanchez"
-    job_title: "Director of Education"
-    bio: "20 years coding, Software Engineer and Google Ambassador20 years coding"
+    job_title: "Co-funder - Director"
+    bio: "22 yrs coding, Software Engineer."
     github: "https://github.com/alesanchezr"
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
     twitter: "https://twitter.com/alesanchezr"
@@ -24,7 +24,7 @@ staff:
     nick_name: "MRicigliano"
     slug: marcelo-ricigliano
     bio: "Named by Forbes and Newsweek for his Startup achievements. Tech Startup Mentor of Founder Institute, Startup Chile and Impaqto. Sold 2 companies. 4 startup fails. Law and Master degree from Stockholm Universitet."
-    job_title: "CEO - Co-Founder"
+    job_title: "Co-Founder - Director"
     github: ""
     linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
     twitter: "https://twitter.com/MRiciglianoC"
@@ -76,27 +76,28 @@ staff:
       - Javascript
       - Python
     location: ""
-  - name: "Patricia"
-    last_name: "Ayuso"
-    nick_name: ""
-    slug: "patricia-ayuso"
-    job_title: "15 years coding, Software Engineer with Master’s degree in M.I.S."
-    github: "https://github.com/ayusopatricia"
-    linkdin: "https://www.linkedin.com/in/ayusopatricia/"
-    twitter: "https://twitter.com/ayusopatricia"
-    website: ""
-    image: "../../../../static/images/staff/patricia.jpg"
-    age: 33
-    interests:
-      - Music
-    coding_skills:
-      - Excel
-    location: ""
+  # - name: "Patricia"
+  #   last_name: "Ayuso"
+  #   nick_name: ""
+  #   slug: "patricia-ayuso"
+  #   job_title: "Program Manager Data Science"
+  #   bio: "15 years coding, Software Engineer with Master’s degree in M.I.S."
+  #   github: "https://github.com/ayusopatricia"
+  #   linkdin: "https://www.linkedin.com/in/ayusopatricia/"
+  #   twitter: "https://twitter.com/ayusopatricia"
+  #   website: ""
+  #   image: "../../../../static/images/staff/patricia.jpg"
+  #   age: 33
+  #   interests:
+  #     - Music
+  #   coding_skills:
+  #     - Excel
+  #   location: ""
   - name: "Paolo"
     last_name: "Lucano"
     nick_name: "Pluco"
     slug: "paolo-lucano"
-    job_title: "Lead Instructor"
+    job_title: "Mentor in Residence"
     bio: "One of 4Geeks first Graduates, the most loved mentor in the community."
     github: "https://github.com/plucodev"
     linkdin: "https://www.linkedin.com/in/paolo-lucano/"
@@ -153,7 +154,7 @@ staff:
     last_name: "Castro"
     nick_name: ""
     slug: "mafe-castrp"
-    job_title: "Growth Manager"
+    job_title: "VP of Growth"
     bio: "Leading the efforts of our growth Department for our HP operations."
     github: ""
     linkdin: "https://www.linkedin.com/in/mafecasvi/"
