@@ -37,7 +37,6 @@ const Location = ({data, pageContext, yml}) => {
   const [cohorts, setCohorts] = React.useState([]);
   const [ready, setReady] = useState(false)
 
-
   useEffect(() => {
     process.nextTick(() => {
       if (globalThis.window ?? false) {
@@ -127,8 +126,9 @@ const Location = ({data, pageContext, yml}) => {
         )}
       </Div>
     </GridContainer>
-    <GridContainer columns_tablet="12" gridTemplateRows_tablet="4, 1fr" height_tablet="813px" height="304px">
+    <GridContainer columns_tablet="12" gridTemplateRows_tablet={yml.images_box.images.length < 4 ? "3, 1fr" : "4, 1fr"} height_tablet="813px" height="304px">
       {yml.images_box.images.map((m, i) => {
+
         return (
           <Div
             key={i}
@@ -156,9 +156,15 @@ const Location = ({data, pageContext, yml}) => {
     <Div>
       {
         !ready ? null : (
-          // <div>Loading...</div>
           <Suspense fallback={() => 'loading'}>
-            <MapFrame src={ready ? yml.info_box.iframeMapUrl : "about:blank"} width="100%" height="492px" />
+            {yml.info_box.iframeMapUrl === "" ? null 
+            : (
+              <MapFrame 
+                src={ready ? yml.info_box.iframeMapUrl : "about:blank"} 
+                width="100%" 
+                height="492px" /
+              >
+            )}
           </Suspense>
         )
       }

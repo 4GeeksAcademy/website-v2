@@ -32,7 +32,7 @@ icons:
 
 list:
   - title: "Unlimited Professional Support"
-    image: "../../../static/images/perfil-profesional.png"
+    image: "../../../static/images/professional-profile.png"
     position: "right"
     sub:
       - title: "✔ Advice and creation of professional profile"
@@ -40,7 +40,7 @@ list:
 
 
   - title: "Interview Simulation"
-    image: "../../../static/images/entrevista-tecnica.png"
+    image: "../../../static/images/tech-interview.png"
     position: "left"
     text: "We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
     We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want."

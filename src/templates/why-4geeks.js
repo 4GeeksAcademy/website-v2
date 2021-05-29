@@ -86,7 +86,7 @@ const Why4Geeks = (props) => {
                         <Paragraph ><RedPin style={{margin: "0 10px 0 0 "}} />{yml.community_banner.image_paragraph}</Paragraph>
                     </Div>
                 </GridContainer>
-                <GridContainer columns_tablet="4"  >
+                <GridContainer columns_tablet={yml.community_banner.list.length}  >
                     {yml.community_banner.list.map((m, i) => {
                         return (
                             <Div
