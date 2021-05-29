@@ -183,6 +183,8 @@ export const Paragraph = styled.p`
   border-left: ${props => props.borderLeft};
   opacity: ${props => props.isActive ? 1 : 0.8};
 
+  a{color: ${Colors.blue};}
+
   @media ${Devices.xxs}{
   }
   @media ${Devices.xs}{

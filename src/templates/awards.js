@@ -80,7 +80,7 @@ const Awards = ({data, pageContext, yml}) => {
                                     <H3 textAlign_tablet="left" margin="49px 0 0 " margin_tablet="0">{m.title}</H3>
                                     <Div background="#c4c4c4" height=".5px" margin="35px 0 25px 0" width="100%" />
                                     {m.paragraph.split('\n').map((p, i) =>
-                                        <Paragraph textAlign_tablet="left" margin="10px 0" key={i}>{p}</Paragraph>
+                                        <Paragraph textAlign_tablet="left" margin="10px 0" key={i} dangerouslySetInnerHTML={{__html: p}}></Paragraph>
                                     )}
                                 </Div>
                             </Div>

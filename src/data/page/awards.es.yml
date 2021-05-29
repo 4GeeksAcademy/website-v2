@@ -22,6 +22,18 @@ awards_list:
     title: "Best Bootcamp for Switchup 2021"
     paragraph: "No solo en Florida, sino tambien en todos nuestros campus 4Geeks estamos constantemente recibiendo reconocimientos de nuestros alumnos permitiendonos posicionarnos como uno de los top bootcamps a nivel mundial."
 
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Mejor Programa Educativo para la Inserción Profesional"
+    paragraph: 'Premio Excelencia Educativa 2021 al Mejor Programa Educativo para la Inserción Profesional Especializado en Coding Bootcamp, más información en el <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">palmares 2021 de los premios excelencia educativa</a>'
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Mejor Innovación"
+    paragraph: 'Premio Excelencia Educativa 2021 a la Mejor Innovación en Escuela de Coding Bootcamp, más información en el <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">palmares 2021 de los premios excelencia educativa</a>'
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Mejor Trayectoria Internacional"
+    paragraph: 'Premio Excelencia Educativa 2021 a la Mejor Trayectoria Internacional en Escuela de Desarrollo de Software, más información en el <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">palmares 2021 de los premios excelencia educativa</a>'
+
   - image: "../../../static/images/badges/newsweek.png"
     title: "Top Coding School for Newsweek"
     paragraph: "4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."

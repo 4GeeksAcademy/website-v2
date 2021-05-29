@@ -27,6 +27,19 @@ awards_list:
     title: "Top Coding School according to Newsweek"
     paragraph: "4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek."
 
+  - image: "../../../static/images/badges/exelencia-educativa.png"
+    title: "Best Career Oriented Educational Program"
+    paragraph: 'Educational Excelence Awards 2021 to the Best Career Oriented Educational Program specialized in Coding Bootcamps, more information found on the palmares <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
+
+  - image: "../../../static/images/badges/exelencia-educativa.png"
+    title: "Most Innovative Program"
+    paragraph: 'Educational Excelence Awards 2021 to the most innovative coding bootcamp school, more information found on the palmares <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
+
+  - image: "../../../static/images/badges/exelencia-educativa.png"
+    title: "Best International Trajectory"
+    paragraph: 'Educational Excelence Awards 2021 to the best international trajectory school, more information found on the palmares <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
+
+
   - image: "../../../static/images/badges/reviews.png"
     title: "4.9 on all reviews"
     paragraph: "4.9 in all Course Report, Switchup and Google reviews."

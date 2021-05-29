@@ -67,7 +67,7 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
+      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&online=true`);
       // let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
       let cohorts = await resp.json();
       let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
@@ -180,9 +180,9 @@ const Calendar = (props) => {
                     <Link to={locations[pageContext.lang][m.academy.slug] || ""}>
                       <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
                     </Link>
-                    {m.academy.slug != "online" && <Link to={locations[pageContext.lang]['online'] || ""}>
-                      <Paragraph textAlign="left" margin="0 0 0 3px" color={Colors.blue}>{`${locationText[pageContext.lang]} Online`}</Paragraph>
-                    </Link>}
+                    {m.academy.slug != "online" && <Paragraph textAlign="left" margin="0 0 0 3px">
+                      {locationText[pageContext.lang]} <Link color={Colors.blue} to={locations[pageContext.lang]['online'] || ""}>{`Online`}</Link>
+                    </Paragraph>}
                   </Div>
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex">
