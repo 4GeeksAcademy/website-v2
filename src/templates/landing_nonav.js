@@ -33,9 +33,6 @@ const Landing = (props) => {
     if (_inLoc && _inLoc != "") setInLocation(_inLoc.replace(/^\w/, c => c.toUpperCase()) + " ");
   }, []);
 
-  console.log("IN_LOCATION", inLocation)
-  console.log("COMPONENTTTS", components)
-
   // data sent to the form already prefilled
   const preData = {
     course: {type: "hidden", value: yml.meta_info.utm_course, valid: true},

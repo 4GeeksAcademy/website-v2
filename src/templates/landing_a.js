@@ -19,7 +19,6 @@ const Landing = (props) => {
   const [inLocation, setInLocation] = React.useState("");
 {/* <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} link padding="58px 17px" padding_tablet="70px 0" /> */}
 
-console.log("CONTAINERS", components)
   useEffect(() => {
     let _components = {};
     if (yml.components) yml.components.forEach(({name, ...rest}) => {

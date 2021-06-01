@@ -62,7 +62,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({margin, margin_tablet, justifyContentButton, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor}) => {
+const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tablet, justifySelf, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -153,7 +153,7 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, d_sm, fields, th
                 })
         }
     }}>
-        {heading && <H4 fontSize="25px" margin="20px 0px 0px 0px">{heading}</H4>}
+        {heading && <H4 type="h4" fontSize="25px" margin="20px 0px 0px 0px">{heading}</H4>}
         {formStatus.status === "thank-you" ?
             <Paragraph align="center" margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
             :
@@ -182,11 +182,14 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, d_sm, fields, th
                         />
                     })}
                     {layout === "flex" &&
-                        <Button width="100%"
+                        <Button 
+                            width="100%"
+                            width_tablet={buttonWidth_tablet}
+                            justifySelf={justifySelf}
                             variant="full"
                             type="submit"
                             margin="10px 0"
-                            borderRadius="0px 10px 10px 0px"
+                            borderRadius={buttonBorderRadius || "0px 10px 10px 0px"}
                             color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
                             textColor={Colors.white}
                             disabled={formStatus.status === "loading" ? true : false}
