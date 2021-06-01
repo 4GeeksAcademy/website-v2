@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {SessionContext} from '../../session';
 import {Button, Colors} from "../Styling";
-import {Break} from "../Responsive";
+import {Break, Devices} from "../Responsive";
 import {useStaticQuery, graphql, navigate} from 'gatsby';
 
 const formIsValid = (formData = null) => {
@@ -19,11 +19,14 @@ const formIsValid = (formData = null) => {
 }
 
 const Form = styled.form`
-    // margin: auto;
+    margin: ${props => props.margin};
     // padding: 20px;
     width: 100%;
     @media  ${Break.sm}{
         display: ${props => props.d_sm};
+    }
+    @media ${Devices.tablet} {
+        margin: ${props => props.margin_tablet};
     }
 `;
 
@@ -59,7 +62,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor}) => {
+const LeadForm = ({margin, margin_tablet, justifyContentButton, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -120,7 +123,7 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
         })
     }, [data])
     // console.log("formData", formData)
-    return <Form d_sm={d_sm} style={style} onSubmit={(e) => {
+    return <Form margin={margin} margin_tablet={margin_tablet} d_sm={d_sm} style={style} onSubmit={(e) => {
         e.preventDefault();
 
         if (formStatus.status === "error") setFormStatus({status: "idle", msg: ""})
@@ -206,7 +209,7 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
                 </GridContainer>
                 {layout === "block" &&
                     <GridContainer>
-                        <Div display="flex" padding="5px 0 0 0" justifyContent="end">
+                        <Div justifyContent={justifyContentButton ? justifyContentButton : "end" } display="flex" padding="5px 0 0 0">
                             {/* {handleClose && <Column size="6" padding="10px 20px">
                             <Button width="100%" padding=".7rem .45rem" color={Colors.gray} textColor={Colors.white} onClick={handleClose}>Close</Button>
                         </Column>} */}

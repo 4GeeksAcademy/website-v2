@@ -9,7 +9,7 @@ import {navigate} from "gatsby"
 import {requestSyllabus} from "../../actions"
 import ReactPlayer from '../ReactPlayer';
 import TestimonialsCarrousel from '../Testimonials';
-// import Why4Geeks from '../Why4Geeks';
+import Why4Geeks from '../With4Geeks';
 // import WhyPython from '../WhyPython';
 import AlumniProjects from '../AlumniProjects';
 import GeeksVsOthers from '../GeeksVsOthers';
@@ -90,26 +90,28 @@ const Side = ({video, image, heading, content, button, bullets}) => {
 export const TwoColumn = ({left, right, proportions}) => {
     const [left_size, right_size] = proportions ? proportions : [];
 
-    return <Row display="flex" m_sm="0px 0px 100px 0">
-        <Column size={left_size || 6} size_sm="12" maxHeight="300px" align_sm="center">
+    return <Div flexDirection="column" flexDirection_tablet="row"  m_sm="0px 0px 100px 0">
+        <Div flexDirection="column" size_tablet={left_size || 6} size="12" maxHeight="300px" textAlign="center">
             <Side {...left} />
-        </Column>
-        <Column size={right_size || 6} size_sm="12" align_sm="center">
+        </Div>
+        <Div flexDirection="column" size_tablet={right_size || 6} size="12" textAlign="center">
             <Side {...right} />
-        </Column>
-    </Row>
+        </Div>
+    </Div>
 }
 TwoColumn.defaultProps = {
     proportions: [],
     left: null,
     right: null,
 }
+
+// TODO: cambios aca tambien
 export const SingleColumn = ({column}) => {
-    return <Row display="flex" m_sm="0px 0px 100px 0">
-        <Column size={12} size_sm="12" align_sm="center">
+    return <Div flexDirection="row" m_sm="0px 0px 100px 0">
+        <Div flexDirection="column" size={12} size_sm="12" align_sm="center">
             <Side {...column} />
-        </Column>
-    </Row>
+        </Div>
+    </Div>
 }
 TwoColumn.defaultProps = {
     column: null,
@@ -148,6 +150,7 @@ Columns.defaultProps = {
 }
 
 export const landingSections = {
+    
     in_the_news: ({session, pageContext, yml, course, location, index}) => <GridContainer key={index} p_sm="0" p_xs="30 0 0 0">
         <H4 align="center" fontSize="18px" color={Colors.darkGray}
             margin="20px 0px 10px 0px"
@@ -163,33 +166,33 @@ export const landingSections = {
             filter={!Array.isArray(yml.filter) ? null : (n) => yml.filter.includes(n.name)}
         />
     </GridContainer>,
-    badges: ({session, data, pageContext, yml, course, index}) =>
-        <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
-    // syllabus: ({session, data, pageContext, yml, course, location, index}) =>
-    //     <GridContainer key={index} margin="50px 0px 0px 0px" background={Colors.lightGray}>
-    //         <Div
-    //             key={index}
-    //             display="block"
-    //             margin="50px 0px 0px 0px"
-    //             m_sm="50px 0px"
-    //             background={Colors.lightGray}
-    //         >
-    //             <H5 fontSize="20px">{yml.heading.text}</H5>
-    //             <LeadForm
-    //                 style={{padding: "10px 0px", maxWidth: "100%"}}
-    //                 inputBgColor={Colors.white}
-    //                 layout="flex"
-    //                 lang={pageContext.lang}
-    //                 sendLabel={yml.button ? yml.button.text : "SEND"}
-    //                 formHandler={requestSyllabus}
-    //                 data={{
-    //                     course: {type: "hidden", value: course, valid: true},
-    //                     utm_location: {type: "hidden", value: location, valid: true}
-    //                 }}
-    //             />
-    //         </Div>
-    //     </GridContainer>
-    // ,
+    // badges: ({session, data, pageContext, yml, course, index}) =>
+    //     <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
+    syllabus: ({session, data, pageContext, yml, course, location, index}) =>
+        <GridContainer key={index} margin="50px 0px 0px 0px" background={Colors.lightGray}>
+            <Div
+                key={index}
+                display="block"
+                margin="50px 0px 0px 0px"
+                m_sm="50px 0px"
+                background={Colors.lightGray}
+            >
+                <H5 fontSize="20px">{yml.heading.text}</H5>
+                <LeadForm
+                    style={{padding: "10px 0px", maxWidth: "100%"}}
+                    inputBgColor={Colors.white}
+                    layout="flex"
+                    lang={pageContext.lang}
+                    sendLabel={yml.button ? yml.button.text : "SEND"}
+                    formHandler={requestSyllabus}
+                    data={{
+                        course: {type: "hidden", value: course, valid: true},
+                        utm_location: {type: "hidden", value: location, valid: true}
+                    }}
+                />
+            </Div>
+        </GridContainer>
+    ,
     geeks_vs_others: ({session, pageContext, yml, course, index}) => {
         return (
             <React.Fragment key={index}>
@@ -200,16 +203,13 @@ export const landingSections = {
         )
     },
 
-
-
-
     program_details: ({session, pageContext, yml, data, index}) => {
         const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
         console.log("Course: ", course)
         return (
             <React.Fragment key={index}>
-                <Title title={yml.heading} paragraph={yml.sub_heading} />
-                <ProgramDetails details={course && course.details} lang={pageContext.lang} />
+                {/* <Title title={yml.heading} paragraph={yml.sub_heading} /> */}
+                <ProgramDetails details={course?.details} lang={pageContext.lang} />
                 <ProgramDetailsMobile details={course && course.details} />
             </React.Fragment>
         )
@@ -226,16 +226,16 @@ export const landingSections = {
         /> */}
         <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
     </Wrapper>,
-    why_4geeks: ({session, pageContext, yml, index}) => <Wrapper key={index} margin="50px 0" p_xs="0">
-        {/* <Title
+    why_4geeks: ({session, pageContext, yml, index}) => <Div key={index} flexDirection="column" margin="50px 0" padding="0">
+        <Title
             title={yml.heading}
             paragraph={yml.sub_heading}
             paragraphColor={Colors.gray}
             variant="primary"
-        /> */}
-        {/* <Why4Geeks lang={pageContext.lang} playerHeight="250px" /> */}
-    </Wrapper>,
-    alumni_projects: ({session, data, pageContext, yml, index}) => <Wrapper key={index} margin="100px" m_sm="0" p_xs="0">
+        />
+        <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
+    </Div>,
+    alumni_projects: ({session, data, pageContext, yml, index}) => <Div key={index} flexDirection="column" margin="100px" padding="0">
         {/* <Title
             size="10"
             title={yml.heading}
@@ -246,7 +246,7 @@ export const landingSections = {
             variant="primary"
         /> */}
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
-    </Wrapper>,
+    </Div>,
     who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
         const hiring = data.allPartnerYaml.edges[0].node;
         return <Wrapper key={index} margin="100px" m_sm="0" p_xs="0">
