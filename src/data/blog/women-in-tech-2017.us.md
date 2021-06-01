@@ -3,8 +3,8 @@ author: MRiciglianoC
 comments: true
 date: 2018-01-17 04:01:12+00:00
 excerpt: Among the tech community, women are only taking 31% of the total workspace,
-  but what it's most disturbing is that  today women occupy 18% of proportion in computer
-  science degrees compare to 37% that we had in 1984.
+  but today women occupy only 18% of proportion in computer
+  science degrees
 layout: post
 link: https://www.4geeksacademy.co/women-in-tech-2017/
 slug: women-in-tech-2017
@@ -24,9 +24,9 @@ tags:
 
 Women in tech still represent a small share of the workforce.  Not only are gender gaps a concern, but also the roles they have in the industry.  According to the [World Bank](https://data.worldbank.org/indicator/SL.TLF.TOTL.FE.ZS), women are 40% workforce in the world, and in some countries that number can go up to 59%. However, [Payscale reports](https://www.payscale.com/data-packages/gender-pay-gap/women-in-tech) that the industry is mostly occupied by men at all levels[.](https://www.payscale.com/data-packages/gender-pay-gap/women-in-tech)
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/01/Picture12.png)
+![](/wp-content/uploads/2018/01/Picture12.png)
 
-A global technology revolution is taking place, and if women are not part of it, the future for women’s rights is desolate.  [4Geeks Academy](https://www.4geeksacademy.co/) **and** [Bridges Unite](https://www.bridgesunite.com/)
+A global technology revolution is taking place, and if women are not part of it, the future for women’s rights is desolate.  [4Geeks Academy](/) **and** [Bridges Unite](https://www.bridgesunite.com/)
 
 acknowledge the importance of bringing women into tech and have decided to partner in a relationship that will bring coding education opportunities to women in Florida.
 
@@ -40,13 +40,13 @@ A preconceived myth still exists when we talk about equity gender in technology.
 
 The biggest career challenges for women in tech is not about finding a good job or solving coding bugs, but in finding a healthy and fair work environment to feel part of a team and to be valued by male coworkers.  It actually gets worse as women move into more Senior roles.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/01/Picture1-1.png)
+![](/wp-content/uploads/2018/01/Picture1-1.png)
 
 **A Lack of Mentors & Female Role Models**
 
 Based on the results of [ISACA´s](http://www.isaca.org/info/2017-women-in-technology-survey/index.html) survey, the biggest barriers women face in the tech field is a 48% lack of female mentorship and a 42% lack of female role models.  Women desire to learn and to be trained from the perspective of other women in tech, but the barriers that we found in the ISACA results are “limited networking opportunities” and “lack of a strong professional network.”
 
-**![](https://www.4geeksacademy.co/wp-content/uploads/2018/01/Picture1.png) ****Education & Right Tools**
+**![](/wp-content/uploads/2018/01/Picture1.png) ****Education & Right Tools**
 
 According to a [Girls Who Code](https://girlswhocode.com/2016report/) report, today women occupy an 18% of computer science degrees compared to 37% in 1984.  In the United States, by 2020 there will exist 1.4 million jobs in the tech field, but they won´t be filled equally by both women and men.  29% of the jobs will be filled and only 3% of those by women.  Tech evolution and innovation remains in our hands.  We need to gain ground in these numbers.
 

@@ -6,7 +6,7 @@ excerpt: The key to being a great coder is having the disposition to improve eve
   day and apply strategies that will make you more productive and efficient.
 layout: post
 link: https://www.4geeksacademy.co/hacks-lear-to-code/
-slug: hacks-lear-to-code
+slug: hacks-learn-to-code
 title: 'Hacks for learning to code: Read Less and Learn Better'
 avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/09/Study-Hacks-03-1024x523.jpg"
@@ -29,7 +29,7 @@ featured: false
 
 Learning to code requires a lot of focus, patience, practice, and self-confidence. You need to learn to deal with your frustration, ask for help and let us do our Job.  4Geeks Academy is all about giving you the mentorship, the exercises, the coaching, the projects and the tools to process easier, faster and better. Offering coding classes that not only provide the necessary information but also, skills that will help anyone to improve their life.
 
-A large part of these techniques aims to read less, but learn better and more efficiently. For example, in our part-time [coding Bootcamps](https://www.4geeksacademy.co/choosing-coding-bootcamp/), the key is to manage time. Apart from the knowledge, the key to being a great coder is having the disposition to improve every day and apply strategies that will make you more productive and efficient.
+A large part of these techniques aims to read less, but learn better and more efficiently. For example, in our part-time [coding Bootcamps](/choosing-coding-bootcamp/), the key is to manage time. Apart from the knowledge, the key to being a great coder is having the disposition to improve every day and apply strategies that will make you more productive and efficient.
 
 
 ## **The Pomodoro Technique**
@@ -100,4 +100,4 @@ Here is a list of what we think it could work: 
 
 This list is not something that we created out of nowhere. It’s a common understanding and what a lot of people believes it works. We support it, work following it, and we will be with you along the way until the goal is being reached. 
 
-To get started and apply for your part-time coding Bootcamp, [contact us today](https://www.4geeksacademy.co/contact/).
+To get started and apply for your part-time coding Bootcamp, [contact us today](/contact/).

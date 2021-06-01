@@ -6,7 +6,7 @@ meta_info:
   image: ""
   template: "course-engineering"
   keywords: ""
-  redirects: ["ingenieria-software"]
+  redirects: ["/ingenieria-software", "/es/software-engineering", "/es/course/ingenieria-software"]
 
 header:
   tagline_top: "CONVIERTETE EN"
@@ -33,6 +33,7 @@ credentials:
 ## PROGRAM DETAILS
 details:
   heading: DETALLES DEL PROGRAMA
+  weeks: 16
   sub_heading: "Part Time"
   left_labels:
     description: "DESCRIPCION:"

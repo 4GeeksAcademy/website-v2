@@ -15,9 +15,9 @@ import "../assets/css/single-post.css"
 export default function Template (props) {
     const {data, pageContext} = props;
     const post = props.data.markdownRemark;
-    const allowed = [`${post.frontmatter.author}`];
+    const allowed = [`${post.frontmatter.author ? post.frontmatter.author.toLowerCase() : ""}`];
     const filtered = Object.keys(twitterUser)
-        .filter(key => allowed.includes(key))
+        .filter(key => allowed.includes(key.toLowerCase()))
         .reduce((obj, key) => {
             obj = twitterUser[key];
             return obj;
@@ -67,7 +67,7 @@ export default function Template (props) {
                                 borders=".2rem"
                                 margin="7px"
                             >
-                                <Link to={"/us/blog/tag/" + tag}>{tag}</Link>
+                                <Link to={`/${pageContext.lang}/blog/tag/${tag}`}>{tag}</Link>
                             </Card>
                         )
                     })}

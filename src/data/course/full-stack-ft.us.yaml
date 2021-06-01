@@ -1,5 +1,5 @@
 meta_info:
-  slug: full-stack-web-development-bootcamp-full-time
+  slug: full-time-full-stack-developer
   title: ""
   description: ""
   bc_slug: "full-stack-ft"
@@ -13,6 +13,7 @@ meta_info:
       "/us/course/full-time",
       "/the-program",
       "/us/full-stack-ft",
+      "/us/course/full-stack-web-development-bootcamp-full-time",
     ]
 
 header:
@@ -34,6 +35,7 @@ credentials:
 ## PROGRAM DETAILS
 details:
   heading: PROGRAM DETAILS FULL-TIME
+  weeks: 9
   sub_heading: Real life projects and exactly what companies are looking for
   left_labels:
     description: "DESCRIPTION:"

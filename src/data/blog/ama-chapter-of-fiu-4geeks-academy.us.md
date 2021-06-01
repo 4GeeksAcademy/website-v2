@@ -2,6 +2,7 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-02-11 15:28:28+00:00
+excerpt: "Getting Students Closer To A Coding Education"
 layout: post
 link: https://www.4geeksacademy.co/ama-chapter-of-fiu-4geeks-academy/
 slug: ama-chapter-of-fiu-4geeks-academy

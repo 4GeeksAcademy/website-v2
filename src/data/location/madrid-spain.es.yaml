@@ -1,11 +1,11 @@
 meta_info:
-  slug: "madrid-espana"
+  slug: "bootcamp-programacion-madrid"
   position: 2
-  title: 4Geeks Academy Madrid
-  description: null
+  title: "Boootcamp Programación Madrid"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Madrid, España de 4Geeks Academy aquí"
   image: "https://storage.googleapis.com/4geeks-academy-website/madrid-es.png"
-  keywords: ""
-  redirects: ["madrid", "/es/location/madrid-spain/"]
+  keywords: "Coding bootcamp Madrid"
+  redirects: ["madrid", "/es/location/madrid-spain/", "/es/location/madrid-espana"]
 
 seo_title: "4Geeks Academy Madrid, España"
 header:
@@ -69,10 +69,10 @@ prices:
       header:
         heading_one: "NO PAGUES HASTA"
         heading_two: "QUE ENCUENTRES TRABAJO"
-        sub_heading: "Acuerdo de Ingresos Compartidos"
+        sub_heading: "Acuerdo de Ingresos Compartidos con Student Finance"
       content:
-        price: "9% de tu sueldo"
-        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+        price: "10% de tu sueldo"
+        price_info: "hasta pagarlo todo, sólo cuando consigas trabajo"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
     center_section:
@@ -122,11 +122,11 @@ prices:
     right_section:
       header:
         heading_one: "PAGO DE CONTADO"
-        heading_two: "(OUT OF POCKET)"
+        heading_two: "(BECAS DISPONIBLES)"
         sub_heading: "Pregunta por nuestros descuentos y obtén el mejor precio de España"
       content:
         price: "5.999,00 €"
-        price_info: "un solo pago"
+        price_info: "3 cuotas de 1.999€ sin intereses"
   ## *****************
   ## PART-TIME SECTION
   ## *****************
@@ -140,10 +140,10 @@ prices:
       header:
         heading_one: "NO PAGUES HASTA"
         heading_two: "QUE ENCUENTRES TRABAJO"
-        sub_heading: "Acuerdo de Ingresos Compartidos"
+        sub_heading: "Acuerdo de Ingresos Compartidos con Student Finance"
       content:
-        price: "9% de tu sueldo"
-        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+        price: "10% de tu sueldo"
+        price_info: "hasta pagarlo todo, sólo cuando consigas trabajo"
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
@@ -182,7 +182,7 @@ prices:
     right_section:
       header:
         heading_one: "PAGO DE CONTADO"
-        heading_two: ""
+        heading_two: "O FRACCIONADO"
         sub_heading: "Financia sin intereses ¡becas disponibles!"
       content:
         price: "5.499,00 €"

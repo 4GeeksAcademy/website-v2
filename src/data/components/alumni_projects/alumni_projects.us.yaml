@@ -8,30 +8,6 @@ button_section:
   button_link: "/graduates"
 
 projects:
-  - project_name: "reMindful"
-    slug: "re-mindful"
-    project_image: "../../../../static/images/projects/re-mindful.jpg"
-    project_content: |
-      Generating awareness about recycling and considering all the steps that need to be covered. 
-      They have created an application that integrates both software and hardware that allows to weigh 
-      the amount of plastic, glass or garbage there is within a container and how much it will 
-      affect both the recycling process as well as the environment.
-    project_video: "cKcZD0_1IKk"
-    github_repo: "https://github.com/gabsssrod/ReduceReuseRecycle-frontEnd"
-    live_link: "https://re-mindful.vercel.app/"
-    alumni:
-      - first_name: "Jordan"
-        last_name: "Aguiriano"
-        job_title: "Web Developer"
-        github: "https://github.com/JordanAguiriano"
-        linkedin: "https://www.linkedin.com/in/jordan-aguiriano/"
-        twitter: ""
-      - first_name: "Gabriela"
-        last_name: "Rodriguez"
-        job_title: "Web Developer"
-        github: "https://github.com/gabsssrod"
-        linkedin: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
-        twitter: ""
   - project_name: "Raspberry Sky"
     slug: "raspberry-sky"
     project_image: "../../../../static/images/projects/rocket-app.jpg"
@@ -139,4 +115,28 @@ projects:
         job_title: "Web Developer"
         github: ""
         linkedin: ""
+        twitter: ""
+  - project_name: "reMindful"
+    slug: "re-mindful"
+    project_image: "../../../../static/images/projects/re-mindful.jpg"
+    project_content: |
+      Generating awareness about recycling and considering all the steps that need to be covered. 
+      They have created an application that integrates both software and hardware that allows to weigh 
+      the amount of plastic, glass or garbage there is within a container and how much it will 
+      affect both the recycling process as well as the environment.
+    project_video: "cKcZD0_1IKk"
+    github_repo: "https://github.com/gabsssrod/ReduceReuseRecycle-frontEnd"
+    live_link: "https://re-mindful.vercel.app/"
+    alumni:
+      - first_name: "Jordan"
+        last_name: "Aguiriano"
+        job_title: "Web Developer"
+        github: "https://github.com/JordanAguiriano"
+        linkedin: "https://www.linkedin.com/in/jordan-aguiriano/"
+        twitter: ""
+      - first_name: "Gabriela"
+        last_name: "Rodriguez"
+        job_title: "Web Developer"
+        github: "https://github.com/gabsssrod"
+        linkedin: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
         twitter: ""

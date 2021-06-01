@@ -1,11 +1,11 @@
 meta_info:
-  slug: "caracas-venezuela-en"
-  title: 4Geeks Academy Caracas
+  slug: "coding-bootcamp-caracas"
+  title: "Coding Bootcamp Caracas"
   position: 20
-  description: null
+  description: "Know here all about our coding bootcamp campus in Caracas, Venezuela of 4Geeks Academy"
   image: ""
   keywords: ""
-  redirects: ["/impact-hub"]
+  redirects: ["/impact-hub", "/location/impact-hub", "/us/location/caracas-venezuela-en"]
 
 seo_title: "4Geeks Academy Caracas"
 header:

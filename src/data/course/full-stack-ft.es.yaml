@@ -1,5 +1,5 @@
 meta_info:
-  slug: desarrollo-web-full-stack-bootcamp-full-time
+  slug: full-stack-full-time
   title: ""
   description: ""
   image: ""
@@ -8,13 +8,14 @@ meta_info:
   redirects:
     [
       "/curso/full-time",
-      "full-time",
+      "/full-time",
       "/es/full-time",
       "/es/course/full-time",
-      "es/full-stack-ft",
+      "/es/full-stack-ft",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-full-time",
       "/es/course/bootcamp-desarrollo-web-full-stack-full-time",
+      "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
     ]
 
 header:
@@ -36,6 +37,7 @@ credentials:
 ## PROGRAM DETAILS
 details:
   heading: DETALLES DEL PROGRAMA FULL-TIME
+  weeks: 9
   sub_heading: "Proyectos de la vida real y exactamente lo que búscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"

@@ -2,10 +2,12 @@
 author: 4GeeksAcademy
 comments: true
 date: 2016-05-04 14:32:02+00:00
+excerpt: "4Geeks Academy llega a Venezuela! Conoce los detalles aquí"
 layout: post
 link: https://www.4geeksacademy.co/es/4geeks-academy-llega-a-venezuela/
 slug: 4geeks-academy-llega-a-venezuela
 title: ¡4Geeks Academy llega a Venezuela!
+description: "Conoce los detalles de la llegada de 4Geeks Academy a Venezuela"
 avatar: "/images/staff/marcelo.jpeg"
 image: "https://www.4geeksacademy.co/images/4geeks-main.jpg"
 wordpress_id: 1156

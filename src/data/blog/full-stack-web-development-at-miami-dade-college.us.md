@@ -2,7 +2,7 @@
 author: MRiciglianoC
 comments: true
 date: 2017-05-08 21:08:07+00:00
-excerpt: A Miami Dade College Web Development program. Only 14 week’s and for just
+excerpt: A Full Stack Miami Dade College Web Development program. Only 14 week’s and for just
   $3405. No other fees are charged to the student.
 layout: post
 link: https://www.4geeksacademy.co/full-stack-web-development-at-miami-dade-college/
@@ -28,7 +28,7 @@ featured: false
 ### **What to believe when speaking about coding programs in Miami.**
 
 
-People are talking and taking Coding programs.  More and more.  It looks like a trend.  Like a cultural bubble of recent years.  There are hundreds of coding Schools all around the U.S.  Every major city in the U.S. has at least three to five (3-5) Bootcamps (aside from Online Bootcamps).
+People are talking and taking Coding programs.  More and more.  It looks like a trend.  Like a cultural bubble of recent years.  There are hundreds of coding Schools all around the U.S.  Every major city in the U.S. has at least three to five (3-5) Bootcamps (aside from Online Bootcamps)..
 
 
 

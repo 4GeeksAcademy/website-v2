@@ -1,11 +1,11 @@
 meta_info:
-  slug: "madrid-spain"
-  title: 4Geeks Academy Madrid - Coding Bootcamp Madrid Spain
+  slug: "coding-bootcamp-madrid"
+  title: "Coding Bootcamp Madrid, Spain of 4Geeks Academy"
   position: 2
-  description: null
+  description: "Know here all about our coding bootcamp campus in Madrid, Spain of 4Geeks Academy"
   image: ""
-  keywords: ""
-  redirects: ["/location/madrid"]
+  keywords: "Coding Bootcamp, Madrid"
+  redirects: ["/location/madrid", "/us/location/madrid-spain"]
 
 seo_title: "Coding Bootcamp Madrid"
 header:
@@ -123,7 +123,7 @@ prices:
       header:
         heading_one: "PAY ONLY"
         heading_two: "WHEN YOU GET A JOB"
-        sub_heading: "Income Share Agreement (ISA)"
+        sub_heading: "Income Share Agreement (ISA) with Student Finance"
       content:
         price: "120€"
         price_info: "from 120€ per month"

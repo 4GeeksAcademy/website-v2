@@ -164,14 +164,11 @@ const Contact = (props) => {
                         <Column size="5" size_sm="12" background={Colors.black} br_xs="1.25rem" br_sm="1.25rem" br_md="1.25rem" h_xs="auto" h_sm="auto" h_md="auto" m_xs="35px 0" m_sm="35px 0" m_md="35px 0" alignSelf="unset" height="100%"  >
                             <Row display="flex" justifyContent="center" height="100%" borderRadius="0 1.25rem 1.25rem 1.25rem">
                                 <Column size="10" height="100%" padding="30px 0px 50px 0px" paddingLeft="0" paddingRight="0" p_md="10px 0px">
-                                    <Row display="flex" height="60px" padding="0 20px" margin="0 0 40px 0">
+                                    <Row display="block" height="60px" padding="0 20px" margin="0 0 40px 0">
                                         {yml.right.heading.split("\n").map(text =>
                                             <H3
                                                 key={text}
-                                                fs_sm="20px"
-                                                fs_md="20px"
-                                                fs_lg="22px"
-                                                fs_xl="25px"
+                                                fontSize={`22px`}
                                                 align="left"
                                                 width="100%"
                                                 color={Colors.yellow}
