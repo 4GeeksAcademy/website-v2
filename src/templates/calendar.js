@@ -62,6 +62,7 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
               fs_xl="14px">
               {dayjs(date).add(5, "hour").locale("en").format("ddd, DD MMM YYYY")}
             </Paragraph>
+
             : <Paragraph
               margin={`0 0 0 10px`}
               fs_xs="18px"
@@ -71,6 +72,7 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
               fs_xl="14px">
               {dayjs(date).add(5, "hour").locale("es").format("ddd, DD MMM YYYY")}
             </Paragraph>}
+
           </Row>
           <Row marginBottom=".2rem" alignItems={`center`} display="flex">
             <Icon icon="marker" width="24" color={Colors.blue} fill={Colors.blue} />
@@ -93,7 +95,7 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
               fs_md="9px"
               fs_lg="11px"
               fs_xl="14px">
-              {slug.includes("-ft") ? "Full Time" : "Part Time"}
+              {slug.includes("ft") ? "Full Time" : "Part Time"}
             </Paragraph>
           </Row>}
           {applyButtonLink && detailsButtonLink && <Row justifyContent={`center`} display="flex">
@@ -119,11 +121,10 @@ const ListCard = ({image, title, date, address, link, slug, applyButtonLink, det
     </Card>
   </Anchor>
 </Column>;
-
 const Calendar = (props) => {
   const {pageContext, yml} = props;
   const {session} = useContext(SessionContext);
-const [backgroundSize, setBackgroundSize] = useState("100%");
+  const [backgroundSize, setBackgroundSize] = useState("100%");
   const [data, setData] = useState({
     events: {catalog: [], all: [], filtered: []},
     cohorts: {catalog: [], all: [], filtered: []}
@@ -136,7 +137,8 @@ const [backgroundSize, setBackgroundSize] = useState("100%");
       let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
     //   ${process.env.GATSBY_BREATHECODE_HOST}
       let cohorts = await resp.json();
-      let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
+      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
+
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
@@ -151,7 +153,6 @@ const [backgroundSize, setBackgroundSize] = useState("100%");
     }
     getData();
   }, []);
-
   useEffect(() => {
     if (session && Array.isArray(session.locations)) {
       const _data = {
@@ -166,7 +167,6 @@ const [backgroundSize, setBackgroundSize] = useState("100%");
       setData(_data);
     }
   }, [session]);
-
   return (
     <>
       <WrapperImage
@@ -196,7 +196,6 @@ const [backgroundSize, setBackgroundSize] = useState("100%");
           </a>
           <H4 margin="20px 0 0 0" align="left" a_sm="left">{pageContext.lang == "us" ? "Filter courses and events:" : "Filtra por cursos y eventos:"}</H4>
         </Row>
-
         <Row
           padding={`10px 20px`}
           background={Colors.lightGray}
@@ -298,9 +297,7 @@ const [backgroundSize, setBackgroundSize] = useState("100%");
           }
         </Row>
       </Wrapper>
-
       <Divider height="50px" />
-
     </>
   )
 };
