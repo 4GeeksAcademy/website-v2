@@ -200,10 +200,14 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
         
     }
     @media  ${Devices.tablet}{
+        border-radius: ${props => props.borderRadius_tablet};
+        &:before, &:after {
+            border-radius: ${props => props.borderRadius_tablet};
+        }
         
     }
     @media  ${Devices.md}{
-
+        width: ${props => props.width_md};
     }
     @media  ${Devices.lg}{
 
@@ -295,11 +299,13 @@ export const Button = styled(SmartButton)`
     min-width: ${props => props.minWidth};
     align-items: ${props => props.alignItems};
     align-self: ${props => props.alignSelf};
+    justify-self: ${props => props.justifySelf};
     justify-content: ${props => props.justifyContent};
     box-shadow: ${props => props.boxShadow};
 
     &:hover {
         background-color: ${props => props.colorHover || props.color};
+        color: ${props => props.colorHoverText};
     }
     @media ${Devices.xxs}{
     }

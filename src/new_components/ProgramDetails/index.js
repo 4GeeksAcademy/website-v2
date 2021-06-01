@@ -51,8 +51,8 @@ const ProgramDetails = (props) => {
         <>
             <GridContainer columns_tablet="2" background={props.background || Colors.verylightGray} padding_tablet="76px 0" padding="50px 17px" gridGap="50px">
                 <Div flexDirection="column" >
-                    <H3 textAlign="left" margin="0 0 20px 0">{props.details.about.title && props.details.about.title}</H3>
-                    {props.details.about.sub_title.split("\n").map((m, i) =>
+                    <H3 textAlign="left" margin="0 0 20px 0">{props.details.about?.title && props.details.about?.title}</H3>
+                    {props.details.about?.sub_title.split("\n").map((m, i) =>
                         <Paragraph
                             textAlign="left"
                             margin="10px 0 "
@@ -64,7 +64,7 @@ const ProgramDetails = (props) => {
                     )}
                 </Div>
                 <Div flexDirection="column" justifyContent="between" >
-                    {Array.isArray(props.details.about.list) && props.details.about.list.map((m, i) => {
+                    {Array.isArray(props.details.about?.list) && props.details.about?.list.map((m, i) => {
                         return (
                             <Div key={i} borderBottom="1px solid #ebebeb" padding="15px 0" >
                                 <Div minWidth="25%" minWidth_tablet="32%"><H4 fontWeight="700" textAlign="left" >{`${m.label}:`}</H4></Div>

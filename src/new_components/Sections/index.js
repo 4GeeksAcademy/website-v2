@@ -195,6 +195,8 @@ export const Div = styled.div`
         
     }
     @media  ${Devices.tablet}{
+        flex: 0 0 ${props => (props.size_tablet / 12) * 100}%;
+        max-width: ${props => (props.size_tablet / 12) * 100}%;
         align-self: ${props => props.alignSelf_tablet};
         background: ${props => props.background_tablet};
         display: ${props => props.display_tablet};
