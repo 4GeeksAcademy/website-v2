@@ -58,7 +58,7 @@ const BaseHeading = styled(Heading)`
   @media  ${Devices.tablet}{
     text-align: ${props => props.textAlign_tablet};
     font-size: ${props => props.fontSize_tablet};
-    lineHeight: ${props => props.lineHeight_tablet};
+    line-height: ${props => props.lineHeight_tablet};
     margin: ${props => props.margin_tablet};
     padding: ${props => props.padding_tablet};
     display: ${props => props.display_tablet};
@@ -67,7 +67,7 @@ const BaseHeading = styled(Heading)`
   @media  ${Devices.md}{
     font-size: ${props => props.fontSize_md};
     text-align: ${props => props.textAlign_md};
-    lineHeight: ${props => props.lineHeight_md};
+    line-height: ${props => props.lineHeight_md};
     display: ${props => props.display_md};
     margin: ${props => props.margin_md};
     width: ${props => props.width_md};
