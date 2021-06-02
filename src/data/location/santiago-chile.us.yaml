@@ -108,17 +108,17 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "PAY ONLY AFTER"
-        heading_two: "YOU GET A JOB"
-        sub_heading: "with the Income Sharing Agreement (ISA)"
+        heading_one: "FINANCING"
+        heading_two: "WITHOUT INTEREST"
       content:
-        price: "16% of Salary"
-        price_info: "until fully paid, and only full-time program"
+        price: "Up to 12 installments without interest"
+        price_info: ""
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
       header:
         heading_one: "EXTENDED"
+        heading_two: "PAYMENT PLAN"
         sub_heading: "and enjoy the best pricing in town"
       plans:
         - months: "12 mo"

@@ -105,18 +105,17 @@ prices:
     ## CHANGE HERE THE INFO IN THE LEFT BOX
     left_section:
       header:
-        heading_one: "NO PAGUES HASTA"
-        heading_two: "QUE ENCUENTRES PEGA"
-        sub_heading: "Acuerdo de Ingresos Compartidos"
+        heading_one: "FINANCIAMIENTO"
+        heading_two: "SIN INTERES"
       content:
-        price: "Válido sólo para modalidad full time"
-        price_info: "hasta pagarlo todo, pero sólo si consigues trabajo en tech"
+        price: "Hasta 12 cuotas sin interés"
+        price_info: ""
 
     ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
     center_section:
       header:
-        heading_one: "EXTENDED"
-        sub_heading: "y disfruta de mejores precios"
+        heading_one: "PLAN DE PAGOS"
+        heading_two: "EXTENDIDO"
       plans:
         - months: "12 m"
           payment: "184.311 CLP"
@@ -126,7 +125,7 @@ prices:
           message: ""
         - months: "6 m"
           payment: "356.231 CLP"
-          paymentInfo: "mensual + 362.250 deposito"
+          paymentInfo: "mensual + 362.250 depósito"
           provider: "Quotanda"
           logo: "/images/quotanda-logo.png"
           message: ""
@@ -136,7 +135,7 @@ prices:
       header:
         heading_one: "PAGO DE CONTADO"
         heading_two: "DESDE EL DíA 1"
-        sub_heading: "y disfruta de mejores precios de chile"
+        sub_heading: "y disfruta de mejores precios de Chile"
       content:
         price: "2.415.000 CLP"
         price_info: "una sola cuota"
