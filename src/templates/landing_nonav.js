@@ -61,11 +61,11 @@ const Landing = (props) => {
           color={Colors.black}
           align_sm="left"
           align="left"
-          fontSize={yml.follow_bar.content.font_size[0]}
-          fs_lg={yml.follow_bar.content.font_size[1]}
-          fs_md={yml.follow_bar.content.font_size[2]}
-          fs_sm={yml.follow_bar.content.font_size[3]}
-          fs_xs={yml.follow_bar.content.font_size[4]}
+          fontSize_tablet={yml.follow_bar.content.font_size[0]}
+          // fs_lg={yml.follow_bar.content.font_size[1]}
+          // fs_md={yml.follow_bar.content.font_size[2]}
+          // fs_sm={yml.follow_bar.content.font_size[3]}
+          fontSize={yml.follow_bar.content.font_size[4]}
         >
           {yml.follow_bar.content.text.split("\n").map((c, i) => <span className="d-block d-xs-none w-100">{c}</span>)}
           {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
