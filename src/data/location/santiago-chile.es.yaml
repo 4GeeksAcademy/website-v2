@@ -107,6 +107,7 @@ prices:
       header:
         heading_one: "FINANCIAMIENTO"
         heading_two: "SIN INTERES"
+        sub_heading: ""
       content:
         price: "Hasta 12 cuotas sin interés"
         price_info: ""
@@ -116,6 +117,7 @@ prices:
       header:
         heading_one: "PLAN DE PAGOS"
         heading_two: "EXTENDIDO"
+        sub_heading: ""
       plans:
         - months: "12 m"
           payment: "184.311 CLP"

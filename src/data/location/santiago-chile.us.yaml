@@ -110,6 +110,7 @@ prices:
       header:
         heading_one: "FINANCING"
         heading_two: "WITHOUT INTEREST"
+        sub_heading: ""
       content:
         price: "Up to 12 installments without interest"
         price_info: ""
