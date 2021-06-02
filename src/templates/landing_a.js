@@ -97,8 +97,7 @@ const Landing = (props) => {
           align="center"
           alt="4Geeks Academy"
           borderRadius_tablet={`0 0 1.25rem 0`}
-          // borderRadius="0"
-          borderRadius="0 0 1.25rem 0"
+          borderRadius="0"
         >
           <Div
             // display="none"
