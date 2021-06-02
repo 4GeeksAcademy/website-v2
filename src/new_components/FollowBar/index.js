@@ -96,7 +96,7 @@ const FollowBar = ({children, showOnScrollPosition, position, buttonText, phone,
                 {children}
             </Center>
             <Right>
-                <Button onClick={() => onClick && onClick()} background={Colors.blue} color={Colors.white} colorHover={Colors.blue} fs_sm="11px" >{buttonText}</Button>
+                <Button onClick={() => onClick && onClick()} background={Colors.blue} color={Colors.white} colorHover={Colors.blue} margin="0 auto" >{buttonText}</Button>
                 <p style={{textAlign: "center", marginTop: "3px", fontSize: "15px"}}><a className="decorated d-sm-none" display="inline" href={`tel:${phone}`}>{phoneText}{phone}</a></p>
                 <p style={{textAlign: "right", marginTop: "3px", marginRight: "10px", fontSize: "15px"}}><a className="decorated d-none d-sm-block" display="inline" href={`tel:${phone}`}>{phoneText}{phone}</a></p>
             </Right>
