@@ -173,7 +173,7 @@ export const landingSections = {
     // badges: ({session, data, pageContext, yml, course, index}) =>
     //     <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
     syllabus: ({session, data, pageContext, yml, course, location, index}) =>
-        <GridContainer key={index} margin="50px 0px 0px 0px" background={Colors.lightGray}>
+        <GridContainer id="Syllabus" key={index} margin="50px 0px 0px 0px" background={Colors.lightGray}>
             <Div
                 key={index}
                 display="block"
@@ -203,7 +203,7 @@ export const landingSections = {
     ,
     geeks_vs_others: ({session, pageContext, yml, course, index}) => {
         return (
-            <React.Fragment key={index}>
+            <React.Fragment id="Geeks_vs_others" key={index}>
                 <Title title={yml.heading} paragraph={yml.sub_heading} />
                 <GeeksVsOthers key={index} lang={pageContext.lang} limit={yml.total_rows} title={yml.heading} paragraph={yml.sub_heading} />,
             </React.Fragment>
@@ -215,7 +215,7 @@ export const landingSections = {
         const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
         console.log("Course: ", course)
         return (
-            <React.Fragment key={index}>
+            <React.Fragment id="Program_details" key={index}>
                 {/* <Title title={yml.heading} paragraph={yml.sub_heading} /> */}
                 <ProgramDetails details={course?.details} lang={pageContext.lang} />
                 <ProgramDetailsMobile details={course && course.details} />
@@ -223,7 +223,7 @@ export const landingSections = {
         )
     },
 
-    testimonials: ({session, data, pageContext, yml, index}) => <Div key={index} flexDirection="column" margin="50px" margin_tablet="100px" m_sm="0" p_xs="0">
+    testimonials: ({session, data, pageContext, yml, index}) => <Div id="Testimonials" key={index} flexDirection="column" margin="50px" margin_tablet="100px" m_sm="0" p_xs="0">
         {/* <Title
             variant="primary"
             title={yml.testimonial.heading}
@@ -234,7 +234,7 @@ export const landingSections = {
         /> */}
         <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
     </Div>,
-    why_4geeks: ({session, pageContext, yml, index}) => <Div key={index} flexDirection="column" margin="50px 0" padding="0">
+    why_4geeks: ({session, pageContext, yml, index}) => <Div id="Why_4Geeks" key={index} flexDirection="column" margin="50px 0" padding="0">
         <Title
             title={yml.heading}
             paragraph={yml.sub_heading}
@@ -243,7 +243,7 @@ export const landingSections = {
         />
         <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
     </Div>,
-    alumni_projects: ({session, data, pageContext, yml, index}) => <Div key={index} flexDirection="column" margin="0" margin_tablet="100px" padding="0">
+    alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="Alumni_Projects" key={index} flexDirection="column" margin="0" margin_tablet="100px" padding="0">
         {/* <Title
             size="10"
             title={yml.heading}
@@ -257,7 +257,7 @@ export const landingSections = {
     </Div>,
     who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
         const hiring = data.allPartnerYaml.edges[0].node;
-        return <Div key={index} flexDirection="column" margin="0px" margin_tablet="100px" m_sm="0" p_xs="0">
+        return <Div id="Who_is_hiring" key={index} flexDirection="column" margin="0px" margin_tablet="100px" m_sm="0" p_xs="0">
             {/* <Title */}
             {/* //     size="10"
             //     title={hiring.partners.tagline}
