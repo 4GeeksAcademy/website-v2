@@ -60,8 +60,7 @@ const Landing = (props) => {
           fontWeight="800"
           alignSelf="center"
           color={Colors.black}
-          align_sm="left"
-          align="left"
+          textAlign="left"
           fontSize_tablet={yml.follow_bar.content.font_size[0]}
           // fs_lg={yml.follow_bar.content.font_size[1]}
           // fs_md={yml.follow_bar.content.font_size[2]}
