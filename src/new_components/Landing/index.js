@@ -163,11 +163,7 @@ export const landingSections = {
 
         <News
             margin="40px 0 40px"
-            height="80px"
-            width="180px"
-            flexDirection="column"
-            flexDirection_tablet="row"
-            alignItems={`center`}
+
             limit={yml.limit || 3}
             location={location ? location : session && session.location && session.location.breathecode_location_slug}
             lang={pageContext.lang}

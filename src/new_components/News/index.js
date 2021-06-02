@@ -12,7 +12,7 @@ const Helper = styled.span`
   height: 100%;
   vertical-align: middle;
 `
-export default ({location, margin, flexDirection, flexDirection_tablet, alignItems, lang, limit, filter, padding, padding_tablet, height, width, justifyContent, imgPadding}) => {
+export default ({location, margin, lang, limit, filter, padding, padding_tablet, height, width, justifyContent, imgPadding}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryNews{
       allNewsYaml{
@@ -59,9 +59,6 @@ export default ({location, margin, flexDirection, flexDirection_tablet, alignIte
       padding_tablet={padding_tablet}
       display="flex"
       height="auto"
-      flexDirection={flexDirection}
-      flexDirection_tablet={flexDirection_tablet}
-      alignItems={alignItems}
       justifyContent="between"
       justifyContent_tablet="between"
     >
