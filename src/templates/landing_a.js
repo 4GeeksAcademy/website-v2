@@ -59,6 +59,7 @@ const Landing = (props) => {
       >
         <Paragraph
           margin="0"
+          alignSelf="center"
           fontWeight="800"
           color={Colors.black}
           textAlign="left"

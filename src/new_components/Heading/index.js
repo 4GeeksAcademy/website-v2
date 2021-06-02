@@ -178,6 +178,7 @@ export const Paragraph = styled.p`
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
+  align-self: ${props => props.alignSelf};
   height: ${props => props.height};
   z-index: ${props => props.zIndex};
   border-left: ${props => props.borderLeft};

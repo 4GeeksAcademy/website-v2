@@ -58,6 +58,7 @@ const Landing = (props) => {
         <Paragraph
           margin="0"
           fontWeight="800"
+          alignSelf="center"
           color={Colors.black}
           align_sm="left"
           align="left"
