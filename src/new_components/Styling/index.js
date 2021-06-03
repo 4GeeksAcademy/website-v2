@@ -5,7 +5,34 @@ import {Devices} from '../Responsive';
 import BackgroundImage from 'gatsby-background-image'
 import {Link} from 'gatsby'
 import {Location} from '@reach/router'
-// COLORS SET
+import { getImage } from "gatsby-plugin-image"
+
+const getBgImageType = imageData => imageData.layout === 'fixed' ? 'fixed' : 'fluid'
+const getAspectRatio = imageData => imageData.width / imageData.height
+const getPlaceholder = imageData => {
+  if (imageData.placeholder) {
+    return imageData.placeholder.fallback.includes(`base64`) ?
+      { base64: imageData.placeholder.fallback }
+      : { tracedSvg: imageData.placeholder.fallback }
+  }
+  return {}
+}
+
+const convertToBgImage = imageData => {
+  if (imageData && imageData.layout) {
+    const returnBgObject = {}
+    const bgType = getBgImageType(imageData)
+    const aspectRatio = getAspectRatio(imageData)
+    const placeholder = getPlaceholder(imageData)
+    returnBgObject[bgType] = {
+      ...imageData.images.fallback,
+      ...placeholder,
+      aspectRatio,
+    }
+    return returnBgObject
+  }
+  return {}
+}
 
 export const Colors = {
     blue: "#00A0DA",
@@ -154,14 +181,22 @@ const StyledImage = styled.div`
 export const Img = React.memo(StyledImage);
 
 export const BackgroundSection = ({children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
+
+    const thisImage = getImage(image)
+
+    // Use like this:
+    const bgImage = convertToBgImage(thisImage)
+
     return (
         <BackgroundImage
             Tag="section"
             loading="eager"
-            fadeIn={false}
+            // fadeIn={false}
             className={className}
             borderRadius={borderRadius}
-            fluid={image}
+            // fluid={image}
+            {...bgImage}
+            preserveStackingContext
         >
             {children}
         </BackgroundImage>
@@ -175,6 +210,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     border-radius: ${props => props.borderRadius};
     background-repeat: no-repeat;
     margin: ${props => props.margin || "auto"};
+    z-index: ${props => props.zIndex || 1};
     opacity: 1;
     background-size: ${props => props.bgSize || "cover"};
     height: ${props => props.height};

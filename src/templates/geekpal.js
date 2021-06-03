@@ -52,7 +52,7 @@ const GeekPal = (props) => {
                     height={`350px`}
                     // width={`85%`}
                     borderRadius={`3px`}
-                    image={item.image.childImageSharp.fluid}
+                    image={item.image.childImageSharp.gatsbyImageData}
                     bgSize={`contain`}
                     alt="geekforce image"
                   />
@@ -136,7 +136,7 @@ const GeekPal = (props) => {
                   height={`350px`}
                   // width={`85%`}
                   borderRadius={`3px`}
-                  image={m.image.childImageSharp.fluid}
+                  image={m.image.childImageSharp.gatsbyImageData}
                   bgSize={`contain`}
                   alt="geekforce image"
                 />
@@ -166,9 +166,15 @@ export const query = graphql`
             paragraph
             image{
               childImageSharp {
-                fluid(maxWidth: 800, quality: 100){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                )
+                # fluid(maxWidth: 800, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }
             image_alt
@@ -185,9 +191,15 @@ export const query = graphql`
             }
             image {
               childImageSharp {
-                fluid(maxWidth: 800, quality: 100){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                )
+                # fluid(maxWidth: 800, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }
             position
@@ -200,9 +212,15 @@ export const query = graphql`
             videoId
             image {
               childImageSharp {
-                fluid(maxWidth: 800, quality: 100){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                )
+                # fluid(maxWidth: 800, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }
           }
@@ -220,12 +238,19 @@ export const query = graphql`
             linkedin_text
             student_thumb{
               childImageSharp {
-                fluid(maxWidth: 200){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-                fixed(width: 200, height: 200) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(
+                  layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 200
+                  height: 200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+
+                # fluid(maxWidth: 200){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+                # fixed(width: 200, height: 200) {
+                #   ...GatsbyImageSharpFixed
+                # }
               }
             }
             content
@@ -243,9 +268,14 @@ export const query = graphql`
               name
               image {
                 childImageSharp {
-                  fluid(maxWidth: 150){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 150
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 150){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               featured

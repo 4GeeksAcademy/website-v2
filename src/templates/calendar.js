@@ -332,9 +332,14 @@ export const query = graphql`
     }
     cohort_img: file(relativePath: { eq: "images/events-alt.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 400) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(
+          layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+          width: 400
+          placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+        )
+        # fluid(maxWidth: 400) {
+        #   ...GatsbyImageSharpFluid_withWebp
+        # }
       }
     }
   }

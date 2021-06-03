@@ -1,6 +1,5 @@
 import React, {useEffect, useState, useContext} from 'react';
 import styled, {css} from 'styled-components';
-import Img from "gatsby-image"
 import {useStaticQuery, graphql} from 'gatsby';
 import {Devices} from '../Responsive'
 import {SessionContext} from '../../session';
@@ -10,6 +9,7 @@ import {Colors, Button, Anchor, Link} from '../Styling';
 import {Div, Grid} from '../Sections';
 import Icon from "../Icon"
 import {NavItem} from '../Navbar';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const MegaMenuContainer = styled(Div)`
@@ -127,9 +127,15 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
       }
       file(relativePath: { eq: "images/logoweb.png" }) {
         childImageSharp {
-          fixed(width: 125) {
-            ...GatsbyImageSharpFixed
-          } 
+          gatsbyImageData(
+            layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
+            width: 125
+            placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+          )
+
+        #   fixed(width: 125) {
+        #     ...GatsbyImageSharpFixed
+        #   } 
         }
       }
     }
@@ -138,10 +144,12 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
         <>
             <Nav display_md="flex" display="none">
                 <Link to={lang == "es" ? "/es/inicio" : "/"}>
-                    <Img
-                        fadeIn={false}
+                    <GatsbyImage
+                        // fadeIn={false}
                         loading="eager"
-                        fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo"
+                        image={getImage(data.file.childImageSharp.gatsbyImageData)}
+                        // fixed={data.file.childImageSharp.fixed} 
+                        alt="4Geeks Logo"
                     />
                 </Link>
                 <Menu>

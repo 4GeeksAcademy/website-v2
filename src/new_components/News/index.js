@@ -4,8 +4,8 @@ import styled from "styled-components"
 import {Row, Div} from '../Sections'
 import {Colors} from '../Styling'
 import graphic from "../../assets/images/graphic.png"
-import Img from "gatsby-image"
 import Fragment from "../Fragment"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Helper = styled.span`
   display: inline-block;
@@ -23,9 +23,15 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
               url
               image{
                 childImageSharp {
-                  fluid(maxHeight: 60,){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    height: 60
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+
+                  # fluid(maxHeight: 60,){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               location
@@ -65,12 +71,13 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
       {Array.isArray(locationNews) && locationNews.map((l, i) => {
         return (
           // <Div key={i} background={Colors.blue}>test</Div>
-          <Img
+          <GatsbyImage
             key={i}
             style={{height: `${height}`, width: `${width}`, minWidth: "60px", margin: "0"}}
             imgStyle={{objectFit: "contain"}}
             alt={l.name}
-            fluid={l.image != null && l.image.childImageSharp.fluid}
+            image={getImage(l.image != null && l.image.childImageSharp.gatsbyImageData)}
+            // fluid={l.image != null && l.image.childImageSharp.fluid}
           />
         )
       })}

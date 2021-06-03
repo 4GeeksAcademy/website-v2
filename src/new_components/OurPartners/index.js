@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import {Div, Grid, GridContainer} from '../Sections'
 import {Colors, StyledBackgroundSection} from '../Styling';
-import Img from "gatsby-image"
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
 import Card from '../Card';
 import Fragment from "../Fragment"
 import Marquee from '../Marquee';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 // Display centered TITLE + PARAGRAPH
@@ -66,12 +66,13 @@ const Images_With_Slider = (props) => {
       <Div className="badge-slider" justifyContent="between" margin="0 0 50px 0" >
         {props.images.map((l, i) => {
           return (
-            <Img
+            <GatsbyImage
               key={i}
               style={{height: "80px", minWidth: "120px", margin: "0 15px"}}
               imgStyle={{objectFit: "contain"}}
               alt={l.name}
-              fluid={l.image.childImageSharp.fluid}
+              image={getImage(l.image.childImageSharp.gatsbyImageData)}
+              // fluid={l.image.childImageSharp.fluid}
             />
           )
         })}
@@ -87,13 +88,14 @@ const Images_With_Marquee = (props) => {
 
   props.images.map((l, i) => {
     imgs.push(
-      <Img
+      <GatsbyImage
         key={i}
         style={{minWidth: "120px", border: 0}}
         height="80px"
         objectFit="contain"
         alt={l.name}
-        fluid={l.image.childImageSharp.fluid}
+        image={getImage(l.image.childImageSharp.gatsbyImageData)}
+        // fluid={l.image.childImageSharp.fluid}
       />
     );
   });
@@ -119,12 +121,13 @@ const Images_Centered = (props) => {
       {props.images.map((l, i) => {
         return (
           <Div margin="0 61px 40px 0">
-            <Img
+            <GatsbyImage
               key={i}
               style={{height: "80px", minWidth: "120px"}}
               imgStyle={{objectFit: "contain"}}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}
+              image={getImage(l.image.childImageSharp.gatsbyImageData)}
             />
           </Div>
         )
@@ -142,12 +145,13 @@ const Images_Featured = (props) => {
         {/* <Div justifyContent="center" flexDirection="column" flexDirection_md="row"> */}
         {props.images.filter(f => f.featured == true).map((m, i) => {
           return (
-            <Img
+            <GatsbyImage
               key={i}
               style={{height: "55px", minWidth: "100px", margin: "23px 15px"}}
               imgStyle={{objectFit: "contain"}}
               alt={m.name}
-              fluid={m.image.childImageSharp.fluid}
+              image={getImage(m.image.childImageSharp.gatsbyImageData)}
+              // fluid={m.image.childImageSharp.fluid}
             />
           )
         })}

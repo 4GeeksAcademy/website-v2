@@ -49,10 +49,15 @@ const Mentors = props => {
                         website
                         image{
                             childImageSharp {
-                                fluid(maxWidth: 800){
-                                  ...GatsbyImageSharpFluid_withWebp
-                                }
-                              }
+                                gatsbyImageData(
+                                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                    width: 800
+                                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                                )
+                                # fluid(maxWidth: 800){
+                                #   ...GatsbyImageSharpFluid_withWebp
+                                # }
+                            }
                         }
                         age
                         location

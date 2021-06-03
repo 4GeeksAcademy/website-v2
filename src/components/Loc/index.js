@@ -56,7 +56,7 @@ const Loc = (props) => {
                           className={`image`}
                           height={`500px`}
                           h_sm={`120px`}
-                          image={item.node.header.image && item.node.header.image.childImageSharp.fluid}
+                          image={item.node.header.image && item.node.header.image.childImageSharp.gatsbyImageData}
                           bgSize={`cover`}
                           alt="Cnn Logo"
                         />
@@ -96,7 +96,7 @@ const Loc = (props) => {
                 <StyledBackgroundSection
                   className={`img-thumbs`}
                   height={`60px`}
-                  image={pic.node.carousel_box.images[randLocImgIndex].path && pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
+                  image={pic.node.carousel_box.images[randLocImgIndex].path && pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.gatsbyImageData}
                   bgSize={`cover`}
                   alt={pic.node.carousel_box.images[randLocImgIndex].alt}
                 >

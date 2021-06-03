@@ -11,7 +11,6 @@ import Staff from '../new_components/Staff';
 import BlogPosts from '../components/BlogPosts'
 import {Link} from 'gatsby'
 import Icon from '../new_components/Icon'
-import Img from "gatsby-image"
 
 const SVGImage = () =>
     <svg width="550" height="335" viewBox="0 0 550 335" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +47,7 @@ const Why4Geeks = (props) => {
                     <StyledBackgroundSection
                         height="450px"
                         width="100%"
-                        image={yml.header.image && yml.header.image.childImageSharp.fluid}
+                        image={yml.header.image && yml.header.image.childImageSharp.gatsbyImageData}
                         bgSize={`contain`}
                         alt={yml.header.alt}
                     />
@@ -71,7 +70,7 @@ const Why4Geeks = (props) => {
                     <StyledBackgroundSection
                         height="500px"
                         width="100%"
-                        image={yml.community_banner.image && yml.community_banner.image.childImageSharp.fluid}
+                        image={yml.community_banner.image && yml.community_banner.image.childImageSharp.gatsbyImageData}
                         bgSize={`contain`}
                         alt={yml.community_banner.image_alt}
                     />
@@ -118,7 +117,7 @@ const Why4Geeks = (props) => {
                     <StyledBackgroundSection
                         height="300px"
                         width="100%"
-                        image={yml.python_banner.image && yml.python_banner.image.childImageSharp.fluid}
+                        image={yml.python_banner.image && yml.python_banner.image.childImageSharp.gatsbyImageData}
                         bgSize={`contain`}
                         alt={yml.python_banner.image_alt}
                     />
@@ -147,9 +146,16 @@ export const query = graphql`
                 paragraph
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                        gatsbyImageData(
+                            layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                            width: 500
+                            quality: 100
+                            placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                            breakpoints:	[200, 340, 520, 890]
+                        )
+                    #   fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                    #     ...GatsbyImageSharpFluid_withWebp
+                    #   }
                     }
                   }
             }
@@ -161,9 +167,16 @@ export const query = graphql`
                 paragraph
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                        gatsbyImageData(
+                            layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                            width: 1200
+                            quality: 100
+                            placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                            breakpoints:	[200, 340, 520, 890]
+                        )
+                    #   fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                    #     ...GatsbyImageSharpFluid_withWebp
+                    #   }
                     }
                   }
                 image_alt
@@ -181,9 +194,16 @@ export const query = graphql`
                 paragraph
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                        gatsbyImageData(
+                            layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                            width: 1200
+                            quality: 100
+                            placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                            breakpoints:	[200, 340, 520, 890]
+                        )
+                    #   fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                    #     ...GatsbyImageSharpFluid_withWebp
+                    #   }
                     }
                   }
                 image_alt
