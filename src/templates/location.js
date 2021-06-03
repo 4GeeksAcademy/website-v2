@@ -58,8 +58,7 @@ const Location = ({data, pageContext, yml}) => {
   useEffect(() => {
     const loadCohorts = async () => {
       // https://breathecode.herokuapp.com/v1
-      // const resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
-      const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
+      const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=online,${yml.breathecode_location_slug}`)
       const data = await resp.json();
       setCohorts(data.slice(0, 3))
     }
@@ -126,26 +125,28 @@ const Location = ({data, pageContext, yml}) => {
         )}
       </Div>
     </GridContainer>
-    <GridContainer columns_tablet="12" gridTemplateRows_tablet={yml.images_box.images.length < 4 ? "3, 1fr" : "4, 1fr"} height_tablet="813px" height="304px">
-      {yml.images_box.images.map((m, i) => {
+    {yml.images_box.images && 
+      <GridContainer columns_tablet="12" gridTemplateRows_tablet={yml.images_box.images.length < 4 ? "3, 1fr" : "4, 1fr"} height_tablet="813px" height="304px">
+        {yml.images_box.images.map((m, i) => {
 
-        return (
-          <Div
-            key={i}
-            borderRadius="3px"
-            gridArea={imagePositions[`${i + 1}`]}
-          >
-            <StyledBackgroundSection
-              height="auto"
-              margin="0"
+          return (
+            <Div
+              key={i}
               borderRadius="3px"
-              image={m.path.childImageSharp.fluid}
-              bgSize={`cover`}
-              alt={m.alt}
-            />
-          </Div>)
-      })}
-    </GridContainer>
+              gridArea={imagePositions[`${i + 1}`]}
+            >
+              <StyledBackgroundSection
+                height="auto"
+                margin="0"
+                borderRadius="3px"
+                image={m.path.childImageSharp.fluid}
+                bgSize={`cover`}
+                alt={m.alt}
+              />
+            </Div>)
+        })}
+      </GridContainer>
+    }
     <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
     <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} message={yml.upcoming.no_dates_message} />

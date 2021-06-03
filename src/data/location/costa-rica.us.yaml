@@ -53,14 +53,12 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Office is Located at the epicenter of San Jose, next to the metro station and at walking distance to the most prominent restaurants, coffee shops and business centers. 140 meters of innovation, curious people and an awesome vibe to learn."
-  images:
-    - path: "../../../static/images/locations/mcbo-chinita.jpeg"
-      alt: "mcbo-chinita"
-    - path: "../../../static/images/locations/mcbo-loc.jpg"
-      alt: "4Geeeks Maracaibo Location"
-    - path: "../../../static/images/locations/mcbo-loc-2.png"
-      alt: "4Geeeks Maracaibo lab"
+  content: "4Geeks Academy classes in Costa Rica are only being taught online until further notice; Any 4Geeks in-person campus is always located in very centric locations with nearby subway or public transportation systems at the most popular areas of the city."
+  images: null
+    # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
+    #   alt: "mcbo-chinita"
+    # - path: "../../../static/images/locations/mcbo-loc.jpg"
+    #   alt: "4Geeeks Maracaibo Location"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

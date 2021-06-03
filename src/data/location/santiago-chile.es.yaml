@@ -51,9 +51,15 @@ images_box:
   heading: "Lo que debes saber de nuestra sede en Santiago de Chile: "
   content: "Chile se posiciona como uno de los países con mayor crecimiento digital en los próximos años, y particularmente en Santiago se ha fomentado la tendencia de los bootcamps en estos últimos años, entre ellos se encuentra 4Geeks Academy. Nos hemos convertido en una gran oportunidad de estudio para muchos chilenos y extranjeros que quieren cambiar su vida y aprender acerca del desarrollo web.A 10 min camindando desde la estación del metro y ubicada en la zona oriente de la ciudad, esta oficina es ideal para todos los Santiaguinos que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
   images:
-    - path: "../../../static/images/locations/santiago-loc-2.jpg"
+    - path: "../../../static/images/locations/santiago-office-1.jpeg"
+      alt: "Santiago Location Image"
+    - path: "../../../static/images/locations/santiago-event.jpeg"
+      alt: "Santiago Location Image"
+    - path: "../../../static/images/locations/santiago-office-2.jpeg"
       alt: "Santiago Location Image"
     - path: "../../../static/images/locations/santiago-loc.png"
+      alt: "Santiago Location Image"
+    - path: "../../../static/images/locations/santiago-1.png"
       alt: "Santiago Location Image"
 
 prices:

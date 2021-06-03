@@ -72,7 +72,7 @@ images_box:
       alt: "Santiago Location Image"
     - path: "../../../static/images/locations/santiago-loc.png"
       alt: "Santiago Location Image"
-    - path: "../../../static/images/locations/santiago-office-2.jpeg"
+    - path: "../../../static/images/locations/santiago-1.png"
       alt: "Santiago Location Image"
 
 hasFinancialsOption: true

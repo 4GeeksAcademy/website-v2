@@ -52,11 +52,15 @@ images_box:
   content: "Madrid es la ciudad que más capital atrae para el ecosistema tecnológico e innovador. Aprende programación y forma parte del mejor Coding Bootcamp de España. A 2 minutos del Metro de Avenida de América (líneas 4, 6, 7 y 9) y con servicios de bus en López de Hoyos 42 (9) y Francisco Silvela (C1 y C2). Con opciones gastronómicas en la entrada del edificio y en las cercanías."
   images:
     - path: "../../../static/images/locations/madrid-loc.jpg"
-      alt: "miami-sunset"
-    - path: "../../../static/images/locations/madrid-loc-2.jpg"
-      alt: "4Geeeks miami location"
-    - path: "../../../static/images/locations/madrid-loc-4.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "españa madrid"
+    - path: "../../../static/images/locations/madrid-2.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/madrid-1.jpeg"
+      alt: "4Geeeks España location"
+    - path: "../../../static/images/locations/madrid-3.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/madrid-4.jpeg"
+      alt: "4Geeeks España lab"
 
 ## PRICES SECTION
 ## MADRID HAS 3 BOXES:

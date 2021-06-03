@@ -117,6 +117,18 @@ navbar:
               link_to: "/us/coding-campus/coding-bootcamp-costa-rica"
             - title: "Caracas"
               link_to: "/us/coding-campus/coding-bootcamp-caracas"
+            - title: "Argentina"
+              link_to: "/us/coding-campus/coding-bootcamp-argentina"
+        - title: "-"
+          sub_links:
+            - title: "Colombia"
+              link_to: "/us/coding-campus/coding-bootcamp-colombia"
+            - title: "Ecuador"
+              link_to: "/us/coding-campus/coding-bootcamp-ecuador"
+            - title: "Bolivia"
+              link_to: "/us/coding-campus/coding-bootcamp-bolivia"
+            - title: "Panama"
+              link_to: "/us/coding-campus/coding-bootcamp-panama"
   - name: "Upcoming Dates"
     link: "/us/next-dates"
 

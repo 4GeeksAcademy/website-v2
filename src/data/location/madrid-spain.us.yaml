@@ -59,10 +59,12 @@ images_box:
   images:
     - path: "../../../static/images/locations/madrid-loc.jpg"
       alt: "miami-sunset"
-    - path: "../../../static/images/locations/madrid-loc-2.jpg"
-      alt: "4Geeeks miami location"
-    - path: "../../../static/images/locations/madrid-loc-4.jpg"
-      alt: "4Geeeks miami lab"
+    - path: "../../../static/images/locations/madrid-1.jpeg"
+      alt: "4Geeeks madrid location"
+    - path: "../../../static/images/locations/madrid-2.png"
+      alt: "4Geeeks madrid lab"
+    - path: "../../../static/images/locations/madrid-3.jpeg"
+      alt: "4Geeeks madrid lab"
 
 ## PRICES SECTION
 ## MADRID HAS 3 BOXES:

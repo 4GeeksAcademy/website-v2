@@ -82,7 +82,7 @@ const UpcomingProgram = ({upcomingPath, position, showOnScrollPosition, button, 
     const [cohorts, setCohorts] = useState([])
 
     React.useEffect(() => {
-        if(location) fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${location.breathecode_location_slug}`)
+        if(location) fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=online,${location.breathecode_location_slug}`)
             .then(resp => resp.json())
             .then(upcoming => setCohorts(upcoming))
             .catch(error => console.error("Error loading cohorts", error))
