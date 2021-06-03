@@ -2,12 +2,11 @@ import React, {useState} from 'react';
 import {Title, H1, H2, H3, H4, H5, Paragraph} from '../new_components/Heading';
 import BaseRender from './_baseLayout';
 // new_components
-import Img from 'gatsby-image';
 import News from '../new_components/News';
 import Icon from '../new_components/Icon';
 import {Colors, StyledBackgroundSection, Anchor} from '../new_components/Styling'
 import {GridContainer, Div, Header} from "../new_components/Sections";
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const Press = (props) => {
@@ -54,12 +53,13 @@ const Press = (props) => {
                     <>
                         {<GridContainer columns_tablet="12" background={i % 2 == 0 && Colors.lightYellow2} padding_tablet="83px 0">
                             <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}>
-                                <Img
+                                <GatsbyImage
                                     key={i}
                                     style={{height: "50px", width: "100%", minWidth: "60px", margin: "22px 0"}}
                                     imgStyle={{objectPosition: "left", width: "120px", objectFit: "contain"}}
                                     alt={l.name}
-                                    fluid={l.logo != null && l.logo.childImageSharp.fluid}
+                                    image={getImage(l.logo != null && l.logo.childImageSharp.gatsbyImageData)}
+                                    // fluid={l.logo != null && l.logo.childImageSharp.gatsbyImageData}
                                 />
                                 <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.title}</H3>
                                 <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
@@ -74,7 +74,7 @@ const Press = (props) => {
                             <Div height="auto" width="100%" gridArea_tablet={i % 2 != 0 ? "1/7/1/13" : "1/1/1/6"}>
                                 <StyledBackgroundSection
                                     height={`389px`}
-                                    image={l.image != null && l.image.childImageSharp.fluid}
+                                    image={l.image != null && l.image.childImageSharp.gatsbyImageData}
                                     bgSize={`cover`}
                                     alt={l.name}
                                 />
@@ -111,17 +111,27 @@ query PressQuery($file_name: String!, $lang: String!) {
                         name
                         logo {
                             childImageSharp{
-                                fluid(maxHeight:60){
-                                    ...GatsbyImageSharpFluid_withWebp
-                                }
+                                gatsbyImageData(
+                                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                    height: 60
+                                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                                )
+                                # fluid(maxHeight:60){
+                                #     ...GatsbyImageSharpFluid_withWebp
+                                # }
                             }
                         }
                         location
                         image {
                             childImageSharp{
-                                fluid(maxHeight:277){
-                                    ...GatsbyImageSharpFluid_withWebp
-                                }
+                                gatsbyImageData(
+                                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                    height: 277
+                                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                                )
+                                # fluid(maxHeight:277){
+                                #     ...GatsbyImageSharpFluid_withWebp
+                                # }
                             }
                         }
                         title
@@ -141,9 +151,14 @@ query PressQuery($file_name: String!, $lang: String!) {
           url
           image{
             childImageSharp {
-                fluid(maxHeight: 60,){
-                ...GatsbyImageSharpFluid_withWebp
-              }
+                gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    height: 60
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+            #     fluid(maxHeight: 60,){
+            #     ...GatsbyImageSharpFluid_withWebp
+            #   }
             }
           }
           location

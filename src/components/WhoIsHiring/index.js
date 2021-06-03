@@ -25,7 +25,7 @@ const WhoIsHiring = props => {
           <Column key={index} size="3" size_sm="4" margin="5px 0">
             <Card width="100%" padding="20px" p_xs="3px">
               <StyledBackgroundSection
-                image={item.image ? item.image.childImageSharp.fluid : null}
+                image={item.image ? item.image.childImageSharp.gatsbyImageData : null}
                 alt={item.alt}
                 margin="auto"
                 height="60px"

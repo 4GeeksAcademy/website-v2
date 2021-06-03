@@ -1,6 +1,5 @@
 import React, {useEffect, useState, useContext} from 'react';
 import styled, {css} from 'styled-components';
-import Img from "gatsby-image"
 import {useStaticQuery, graphql} from 'gatsby';
 import {Devices} from '../Responsive'
 import {SessionContext} from '../../session';

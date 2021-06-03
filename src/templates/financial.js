@@ -67,9 +67,15 @@ export const query = graphql`
                 tagline
                 image{
                   childImageSharp {
-                    fluid(maxWidth: 1600, quality: 100){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 1600
+                      quality: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 1600, quality: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
                 alt
@@ -78,16 +84,27 @@ export const query = graphql`
             intro{
                 image {
                   childImageSharp {
-                    fixed(width: 300, height: 300) {
-                      ...GatsbyImageSharpFixed
-                    }
+                    gatsbyImageData(
+                      layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 300
+                      height: 300
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fixed(width: 300, height: 300) {
+                    #   ...GatsbyImageSharpFixed
+                    # }
                   }
                 }
                 image_second {
                   childImageSharp {
-                    fluid(maxWidth: 450){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 450
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 450){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
                 content
@@ -161,9 +178,15 @@ export const query = graphql`
               alt
               image {
                 childImageSharp {
-                  fluid(maxWidth: 1200, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1200
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 1200, quality: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               } 
             }
@@ -426,9 +449,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
@@ -441,9 +469,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
@@ -456,9 +489,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
@@ -471,9 +509,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 200){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 200
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 200){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured

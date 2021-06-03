@@ -4,7 +4,6 @@ import {useStaticQuery, graphql} from 'gatsby';
 import {GridContainerWithImage, Grid, Div, GridContainer} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors, RoundImage, StyledBackgroundSection} from '../Styling';
-import Img from "gatsby-image"
 import Icon from '../Icon';
 
 
@@ -27,16 +26,28 @@ const GeeksInfo = ({lang}) => {
             paragraph
             image1 {
                 childImageSharp {
-                  fluid(maxWidth: 800, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800, quality: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
             image2 {
                 childImageSharp {
-                  fluid(maxWidth: 800, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800, quality: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               fields {
@@ -69,7 +80,7 @@ const GeeksInfo = ({lang}) => {
           <StyledBackgroundSection
             className={`image`}
             height={`412px`}
-            image={content.image1.childImageSharp.fluid}
+            image={content.image1.childImageSharp.gatsbyImageData}
             bgSize={`contain`}
             alt="Cnn Logo"
             borderRadius={`0 0 0 3px`}

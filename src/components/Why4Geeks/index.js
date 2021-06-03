@@ -21,9 +21,15 @@ export default ({lang, playerHeight}) => {
               description
               image {
                 childImageSharp {
-                  fluid(maxWidth: 800, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800, quality: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               alt

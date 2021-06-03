@@ -4,9 +4,9 @@ import {H1, H2, H3, H4, Title, Separator, Paragraph} from '../Heading'
 import {Anchor, Colors} from '../Styling';
 import {Row, GridContainer, Div} from '../Sections'
 import Fragment from "../Fragment"
-import Img from 'gatsby-image';
 import styled from "styled-components";
 import Icon from "../Icon";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const Staff = props => {
@@ -33,9 +33,14 @@ const Staff = props => {
                         website
                         image{
                             childImageSharp {
-                                fluid(maxWidth: 800){
-                                  ...GatsbyImageSharpFluid_withWebp
-                                }
+                                gatsbyImageData(
+                                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                    width: 800
+                                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                                )
+                                # fluid(maxWidth: 800){
+                                #   ...GatsbyImageSharpFluid_withWebp
+                                # }
                               }
                         }
                         age
@@ -62,8 +67,9 @@ const Staff = props => {
                         return (
                             <Div key={index} flexDirection="column" alignItems="center">
                                 <Div minWidth="184px" height="184px" margin="0 10px 0 0" alignItems="center">
-                                    <Img
-                                        fluid={item.image && item.image.childImageSharp.fluid}
+                                    <GatsbyImage
+                                        image={getImage(item.image && item.image.childImageSharp.fluid)}
+                                        // fluid={item.image && item.image.childImageSharp.fluid}
                                         style={{height: "100%", minWidth: "100%", backgroundSize: `cover`}}
                                     />
                                 </Div>

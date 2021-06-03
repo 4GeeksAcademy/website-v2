@@ -51,7 +51,7 @@ const Tags = ({pageContext, data, yml}) => {
                     <StyledBackgroundSection
                         height="450px"
                         width="100%"
-                        image={yml.header.image && yml.header.image.childImageSharp.fluid}
+                        image={yml.header.image && yml.header.image.childImageSharp.gatsbyImageData}
                         bgSize={`contain`}
                         alt={yml.header.alt}
                     />
@@ -188,9 +188,15 @@ export const pageQuery = graphql`
             paragraph
             image{
                 childImageSharp {
-                  fluid(maxWidth: 1500, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                    gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 1500
+                        quality: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                #   fluid(maxWidth: 1500, quality: 100){
+                #     ...GatsbyImageSharpFluid_withWebp
+                #   }
                 }
               }
             image_alt

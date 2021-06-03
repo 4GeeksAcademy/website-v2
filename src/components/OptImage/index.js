@@ -1,6 +1,6 @@
 import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // Hackish component to get a dynamic image specified by prop filename
 
@@ -13,9 +13,14 @@ const OptImage = ({alt, filename}) => {
             relativePath
             name
             childImageSharp {
-              fluid(maxWidth: 700) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(
+                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                width: 700
+                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+              )
+              # fluid(maxWidth: 700) {
+              #   ...GatsbyImageSharpFluid
+              # }
             }
           }
         }
@@ -30,7 +35,11 @@ const OptImage = ({alt, filename}) => {
         return null;
     }
 
-    return <Img alt={alt} fluid={image.node.childImageSharp.fluid} />;
+    return <Img 
+      alt={alt} 
+      // fluid={image.node.childImageSharp.fluid} 
+      image={getImage(image.node.childImageSharp.gatsbyImageData)}  
+    />;
 };
 
 export default OptImage;

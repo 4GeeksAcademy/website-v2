@@ -4,7 +4,37 @@ import {Break} from '../Responsive';
 import BackgroundImage from 'gatsby-background-image'
 import {Link} from 'gatsby'
 import {Location} from '@reach/router'
-// COLORS SET
+import { getImage } from "gatsby-plugin-image"
+
+
+// Function to adapt gatsbyImageData (graphql query image) to gatsby-background-image --->
+const getBgImageType = imageData => imageData.layout === 'fixed' ? 'fixed' : 'fluid'
+const getAspectRatio = imageData => imageData.width / imageData.height
+const getPlaceholder = imageData => {
+  if (imageData.placeholder) {
+    return imageData.placeholder.fallback.includes(`base64`) ?
+      { base64: imageData.placeholder.fallback }
+      : { tracedSvg: imageData.placeholder.fallback }
+  }
+  return {}
+}
+
+const convertToBgImage = imageData => {
+  if (imageData && imageData.layout) {
+    const returnBgObject = {}
+    const bgType = getBgImageType(imageData)
+    const aspectRatio = getAspectRatio(imageData)
+    const placeholder = getPlaceholder(imageData)
+    returnBgObject[bgType] = {
+      ...imageData.images.fallback,
+      ...placeholder,
+      aspectRatio,
+    }
+    return returnBgObject
+  }
+  return {}
+}
+//  ---------------------------->
 
 export const Colors = {
     blue: "#0097CE",
@@ -139,6 +169,12 @@ const StyledImage = styled.div`
 export const Img = React.memo(StyledImage);
 
 export const BackgroundSection = ({children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
+
+    const thisImage = getImage(image)
+
+    // Use like this:
+    const bgImage = convertToBgImage(thisImage)
+
     return (
         <BackgroundImage
             Tag="section"
@@ -146,7 +182,9 @@ export const BackgroundSection = ({children, className, image, height, width, bg
             fadeIn={false}
             className={className}
             borderRadius={borderRadius}
-            fluid={image}
+            // fluid={image}
+            {...bgImage}
+            preserveStackingContext
         >
             {children}
         </BackgroundImage>

@@ -140,7 +140,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight}) => {
                                     <StyledBackgroundSection
                                         className={`image`}
                                         height={`350px`}
-                                        image={item.project_image.childImageSharp.fluid}
+                                        image={item.project_image.childImageSharp.gatsbyImageData}
                                         bgSize={`cover`}
                                         alt="Cnn Logo"
                                         borderRadius={`0 0 0 1.25rem`}

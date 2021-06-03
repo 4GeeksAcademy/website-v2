@@ -1,6 +1,5 @@
 import React, {useEffect, useState, useContext} from 'react';
 import styled, {css} from 'styled-components';
-import Img from "gatsby-image"
 import {useStaticQuery, graphql} from 'gatsby';
 import {Devices} from '../Responsive'
 import {SessionContext} from '../../session';
@@ -10,6 +9,7 @@ import {Colors, Button, Anchor, Link} from '../Styling';
 import {Div, Grid} from '../Sections';
 import Icon from "../Icon"
 import {NavItem} from '../Navbar';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const BurgerIcon = (props) => <svg width="28" height="23" style={props.style} onClick={props.onClick} viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,9 +103,15 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
       }
       file(relativePath: { eq: "images/logoweb.png" }) {
         childImageSharp {
-          fixed(width: 125) {
-            ...GatsbyImageSharpFixed
-          } 
+          gatsbyImageData(
+            layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
+            width: 125
+            placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+          )
+
+        #   fixed(width: 125) {
+        #     ...GatsbyImageSharpFixed
+        #   } 
         }
       }
     }
@@ -116,10 +122,11 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
                 <Div alignItems="center">
                     <BurgerIcon style={{marginRight: "16px", cursor: "pointer"}} onClick={() => setStatus({...status, toggle: !status.toggle})} />
                     <Link to={'/'}>
-                        <Img
-                            fadeIn={false}
+                        <GatsbyImage
+                            // fadeIn={false}
                             loading="eager"
-                            fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo"
+                            image={getImage(data.file.childImageSharp.gatsbyImageData)}
+                            alt="4Geeks Logo"
                         />
                     </Link>
                 </Div>

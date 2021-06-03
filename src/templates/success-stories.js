@@ -5,7 +5,7 @@ import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling
 import ReactPlayer from '../new_components/ReactPlayer'
 import Icon from '../new_components/Icon'
 import BaseRender from './_baseLayout';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const TestimonialCard = ({highlighted, featured, height, height_tablet, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition, gridRowPosition}) => {
@@ -36,8 +36,9 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
             boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
         >
             <Div>
-                <Img
-                    fluid={image && image.childImageSharp.fluid}
+                <GatsbyImage
+                    // fluid={image && image.childImageSharp.fluid}
+                    image={getImage(image && image.childImageSharp.gatsbyImageData)}
                     style={{height: "39px", minWidth: "39px", backgroundSize: `cover`}}
                 />
                 <Div flexDirection="column" margin="0 0 0 9px">
@@ -256,16 +257,26 @@ query SuccessQuery($file_name: String!, $lang: String!) {
                     linkedin_text
                     linkedin_image{
                         childImageSharp {
-                            fluid(maxHeight: 14){
-                                ...GatsbyImageSharpFluid_withWebp
-                            }
+                            gatsbyImageData(
+                                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                height: 14
+                                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                            )
+                            # fluid(maxHeight: 14){
+                            #     ...GatsbyImageSharpFluid_withWebp
+                            # }
                         }
                     }
                     student_thumb{
                         childImageSharp {
-                            fluid(maxHeight: 200){
-                                ...GatsbyImageSharpFluid_withWebp
-                            }
+                            gatsbyImageData(
+                                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                width: 200
+                                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                            )
+                            # fluid(maxHeight: 200){
+                            #     ...GatsbyImageSharpFluid_withWebp
+                            # }
                         }
                     }
                     student_video
