@@ -22,11 +22,13 @@ const Form = styled.form`
     margin: ${props => props.margin};
     // padding: 20px;
     width: 100%;
+    display: block;
     @media  ${Break.sm}{
         display: ${props => props.d_sm};
     }
     @media ${Devices.tablet} {
         margin: ${props => props.margin_tablet};
+        width: 100%;
     }
 `;
 
@@ -160,14 +162,14 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
             <>
                 {motivation && <Paragraph textAlign="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
                 {/* <Row display="flex" marginLeft="0" marginRight="0"> */}
-                <GridContainer display={layout} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
+                <GridContainer display="block" className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
                     {/* <Column display={layout} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0"> */}
                     {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
                         const _field = formData[f]
                         return <Input
                             key={i}
                             bgColor={inputBgColor}
-                            borderRadius={i === 0 && layout === "flex" ? "10px 0px 0px 10px" : "0"}
+                            // borderRadius={i === 0 && layout === "flex" ? "10px 0px 0px 10px" : "0"}
                             type={_field.type} className="form-control" placeholder={_field.place_holder}
                             onChange={(value, valid) => {
                                 setVal({...formData, [f]: {..._field, value, valid}});
@@ -184,6 +186,7 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                     {layout === "flex" &&
                         <Button 
                             width="100%"
+                            justifyContent="center"
                             width_tablet={buttonWidth_tablet}
                             justifySelf={justifySelf}
                             variant="full"
