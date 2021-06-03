@@ -3,7 +3,7 @@ import {useStaticQuery, graphql, Link} from 'gatsby';
 import {Grid, Div, GridContainer} from '../Sections'
 import {Paragraph} from '../Heading'
 import {Colors} from '../Styling'
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Fragment from "../Fragment"
 
 export default ({location, lang, loading, link, short_link, paragraph, background, padding, padding_tablet, margin}) => {
@@ -18,9 +18,18 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
               url
               image{
                 childImageSharp {
-                  fluid(maxHeight: 120, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp_noBase64
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    height: 100 # --> maxHeight
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    transformOptions: {fit: COVER}
+                    # More Options
+                    # https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#image-options
+                  )
+
+                  # fluid(maxHeight: 120, quality: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp_noBase64
+                  # }
                 }
               }
             }
@@ -59,32 +68,41 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
           />
         </Div>}
 
-        <Div className="badge-slider" justifyContent="center" alignItems="center">
+        <Div 
+          className="badge-slider" 
+          // justifyContent="center" 
+          // alignItems="center"
+          >
 
           {short_link ? content.badges.map((l, i) => {
             return (
               i < 4 &&
-              <Img
+              <GatsbyImage
                 style={{height: "65px", minWidth: "80px", margin: "0 20px"}}
-                imgStyle={{objectFit: "contain"}}
+                // imgStyle={{objectFit: "contain"}}
                 loading="eager"
-                draggable={false}
-                fadeIn={false}
+                // draggable={false}
+                // fadeIn={false}
                 alt={l.name}
-                fluid={l.image.childImageSharp.fluid}
+                image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                // fluid={l.image.childImageSharp.fluid}
               />
             )
           }) :
             content.badges.map((l, i) => {
               return (
-                <Img
-                  style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
-                  imgStyle={{objectFit: "contain"}}
+                <GatsbyImage
+                  style={{
+                    height: "85px", 
+                    minWidth: "200px", 
+                    margin: "0 24px"}}
+                  // imgStyle={{objectFit: "contain"}}
                   loading="eager"
                   draggable={false}
-                  fadeIn={false}
+                  // fadeIn={false}
                   alt={l.name}
-                  fluid={l.image.childImageSharp.fluid}
+                  image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                  // fluid={l.image.childImageSharp.fluid}
                 />
               )
             })}
