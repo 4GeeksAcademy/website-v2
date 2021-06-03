@@ -20,9 +20,11 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    height: 100 # --> maxHeight
+                    height: 120 # --> maxHeight
+                    quality: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    transformOptions: {fit: COVER}
+                    # transformOptions: {fit: COVER}
+
                     # More Options
                     # https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#image-options
                   )
@@ -79,7 +81,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
               i < 4 &&
               <GatsbyImage
                 style={{height: "65px", minWidth: "80px", margin: "0 20px"}}
-                // imgStyle={{objectFit: "contain"}}
+                imgStyle={{objectFit: "contain"}}
                 loading="eager"
                 // draggable={false}
                 // fadeIn={false}
@@ -94,9 +96,10 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
                 <GatsbyImage
                   style={{
                     height: "85px", 
-                    minWidth: "200px", 
+                    // minWidth: "200px",
+                    minWidth: "150px", 
                     margin: "0 24px"}}
-                  // imgStyle={{objectFit: "contain"}}
+                  imgStyle={{objectFit: "contain"}}
                   loading="eager"
                   draggable={false}
                   // fadeIn={false}
