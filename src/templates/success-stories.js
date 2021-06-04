@@ -39,7 +39,7 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                 <GatsbyImage
                     // fluid={image && image.childImageSharp.fluid}
                     image={getImage(image && image.childImageSharp.gatsbyImageData)}
-                    style={{height: "39px", minWidth: "39px", backgroundSize: `cover`}}
+                    style={{height: "39px", maxWidth: "39px", backgroundSize: `cover`}}
                 />
                 <Div flexDirection="column" margin="0 0 0 9px">
                     <H3

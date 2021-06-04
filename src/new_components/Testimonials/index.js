@@ -29,7 +29,7 @@ const Testimonials = (props) => {
                             containerStyle
                     */}
                 <Marquee_v2
-                    speed={1.5}
+                    speed={0.7}
                     reversed={false}
                     containerStyle={{height: "215px"}}
                 >
@@ -37,12 +37,12 @@ const Testimonials = (props) => {
                         {testimonialsFiltered.map((item, i) => {
 
                             return (
-                                <Div display="flex" background="#ffffff" minWidth="245px" width="400px" height="150px" margin="0 12px 0 0" padding="20px 24px 30px 20px" border="1px solid #EBEBEB" alignItems="flex-start">
+                                <Div display="flex" background="#ffffff" minWidth="245px" width="320px" height="150px" margin="0 12px 0 0" padding="20px 24px 30px 20px" border="1px solid #EBEBEB" alignItems="flex-start">
                                     <GatsbyImage
                                         // fluid={item.student_thumb.childImageSharp.fluid}
                                         image={getImage(item.student_thumb.childImageSharp.gatsbyImageData)}
                                         alt={item.alt}
-                                        style={{height: "100%", minWidth: "39px", backgroundSize: `cover`}}
+                                        style={{height: "39px", minWidth: "39px", width: "39px", backgroundSize: `cover`}}
                                     />
                                     <Div display="flex" flexDirection="column" alignItems="flex-start" width="100%" height="100%" padding="0 9px 0 9px" style={{position: "relative"}}>
 
