@@ -13,6 +13,7 @@ import {Title, H1, H2, H4, H3, Span, Paragraph, Separator} from '../new_componen
 import {Button, Colors, Small, Img, StyledBackgroundSection} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 // const MapFrame = loadable(() => import('../new_components/MapFrame'), {
 //   fallback: <div>Loading...</div>
@@ -126,19 +127,26 @@ const Location = ({data, pageContext, yml}) => {
       </Div>
     </GridContainer>
     {yml.images_box.images && 
-      <GridContainer columns_tablet="12" gridTemplateRows_tablet={yml.images_box.images.length < 4 ? "3, 1fr" : "4, 1fr"} height_tablet="813px" height="304px">
+      <GridContainer 
+        // columns_tablet="12" 
+        columns_tablet={yml.images_box.images.length < 4 ? "2" : "3"} 
+        height_tablet="813px" 
+        height="304px"
+      >
         {yml.images_box.images.map((m, i) => {
-
           return (
-            <Div
+            <GatsbyImage
               key={i}
               borderRadius="3px"
-              image={m.path.childImageSharp.gatsbyImageData}
+              // image={m.path.childImageSharp.fluid}
+              image={getImage(m.path.childImageSharp.gatsbyImageData)}
               bgSize={`cover`}
               alt={m.alt}
             />)
-          })}
+        })}
       </GridContainer>
+
+
     }
     <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
@@ -164,188 +172,6 @@ const Location = ({data, pageContext, yml}) => {
       }
     </Div>
 
-    {/* <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} /> */}
-    {/* <Container
-      variant="fluid"
-      background={Colors.verylightGray}
-      height_md="300px"
-      margin_md="0 0 215px 0"
-      margin="0 0 76px 0"
-      padding="59px 17px 83px 17px"
-      padding_md="17px"
-    >
-      <Container
-        variant="fixed"
-        transform_md="translateY(15%)"
-      >
-        <H2 fontSize="15px" lineHeight="19px" fontWeight="900">CHOOSE YOUR PROGRAM</H2>
-        <Paragraph margin="0 0 36px 0">Contamos con programas que combinan clases prácticas dictadas por expertos</Paragraph>
-        <ChooseYourProgram programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
-      </Container>
-    </Container>
-    <Container variant="fluid" background={Colors.lightYellow} margin="0 0 67px 0" padding="0 0 86px 0">
-      <Container
-        variant="fixed"
-        margin="0 auto"
-      >
-        <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">Title</H2>
-        <Paragraph margin="0 0 50px 0" >Sub Title</Paragraph>
-        <Loc lang={pageContext.lang} locations={data.test.edges} />
-      </Container>
-    </Container> */}
-    {/* {
-            yml.breathecode_location_slug !== "online" &&
-            <Wrapper >
-                <Card shadow borders="1.25rem" >
-                    <Row display="flex"
-                        height="100%"
-                        marginLeft="0"
-                        marginRight="0"
-                        customRespSize
-                    >
-                        <Column size="6" size_sm="12" padding="20px" alignSelf="center" borderRadius="0 0 0 1.25rem">
-                            <H3 align="left" >{yml.info_box.heading}</H3>
-                            <Separator variant="primary" left />
-                            <Paragraph align="left">{yml.info_box.address}</Paragraph>
-                            <H3 margin='10px 0' align="left" >{yml.info_box.contact_heading}</H3>
-                            <Paragraph align="left"><a href={`tel:${yml.info_box.phone}`}>{yml.info_box.phone}</a></Paragraph>
-                            <Paragraph margin="10px 0 0 0" align="left">{yml.info_box.email}</Paragraph>
-                        </Column>
-                        <Column
-                            size="6" size_sm="12"
-                            paddingRight={`0`}
-                            paddingLeft={`0`}
-                            border="custom"
-                            borderRadius="0 1.25rem 1.25rem 0"
-                        >
-                            <Anchor to={yml.info_box.map_url}>
-                                <StyledBackgroundSection
-                                    className={`img-right`}
-                                    height={`426px`}
-                                    h_sm={`326px`}
-                                    image={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
-                                    bgSize={`cover`}
-                                    alt="Cnn Logo"
-                                    borderRadius="1.25rem"
-                                />
-                            </Anchor>
-                        </Column>
-                    </Row>
-                </Card>
-            </Wrapper>
-        } */}
-    {/* <Wrapper>
-            <Title
-                size="10"
-                title={yml.upcoming.title}
-                margin="left"
-                variant="primary"
-            />
-            <Row display="flex">
-                {cohorts && cohorts.map((cohort, key) =>
-                    <Column
-                        key={key}
-                        size="4"
-                        size_md="4"
-                        size_sm="6"
-                        size_xs="12"
-                        borderRadius="0 0 0 1.25rem"
-                    >
-                        <Card
-                            color={`grey`}
-                            borders={`.5rem`}
-                            margin={`0 20px 0 0`}
-                            margin_sm={"20px auto"}
-                            margin_xs={"20px auto"}
-                        >
-                            <Link to={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}><Img
-                                src={cohort.syllabus.certificate.logo}
-                                className="pointer"
-                                height="120px"
-                                borderRadius="1rem 1rem 0 0"
-                            /></Link>
-                            <H4 padding="10px">{cohort.syllabus.certificate.name}</H4>
-                            <Div padding="10px">
-                                <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
-                                {pageContext.lang == "us" ?
-                                    <Paragraph
-                                        margin={`0 0 0 10px`}
-                                        fs_xs="18px"
-                                        fs_sm="18px"
-                                        fs_md="9px"
-                                        fs_lg="11px"
-                                        fontSize="14px">
-                                        <Small display="block">Starting on:</Small>
-                                        {dayjs(cohort.kickoff_date).locale("us").add(5, "hour").format("ddd, D MMM YYYY")}
-                                    </Paragraph>
-                                    : <Paragraph
-                                        margin={`0 0 0 10px`}
-                                        fs_xs="18px"
-                                        fs_sm="18px"
-                                        fs_md="9px"
-                                        fs_lg="11px"
-                                        fontSize="14px">
-                                        <Small display="block">Empezando el:</Small>
-                                        {dayjs(cohort.kickoff_date).locale("es").add(5, "hour").format("ddd, D MMM YYYY")}
-                                    </Paragraph>}
-
-                            </Div>
-                            <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center">
-                                <Link to={yml.button.apply_button_link}><Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
-                                &nbsp;
-                                <Link to={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}><Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{yml.button.cohort_more_details_text}</Button></Link>
-                            </Div>
-                        </Card>
-                    </Column>
-                )}
-            </Row>
-        </Wrapper> */}
-    {/* <Wrapper >
-            <Row display="flex">
-                <Column
-                    size="12"
-                    borderRadius="0 0 0 1.25rem"
-
-                >
-                    <Card shadow borders="1.25rem" >
-                        <Row display="flex"
-                            height="100%"
-                            marginLeft="0"
-                            marginRight="0"
-                            customRespSize
-                        >
-                            <Column size="6" size_sm="12" paddingLeft="0" paddingRight="0" alignSelf="center" height="100%" backgroundSize="cover" border="custom" borderRadius="1.25rem 0 0 1.25rem" >
-                                <Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
-
-                                    {yml.carousel_box.images.map((item, index) => {
-                                        return (
-                                            <StyledBackgroundSection
-                                                key={index}
-                                                className={`img-left`}
-                                                height={`426px`}
-                                                h_sm={`326px`}
-                                                image={item.path.childImageSharp.fluid}
-                                                bgSize={`cover`}
-                                                alt="Cnn Logo"
-                                                borderRadius="1.25rem"
-                                            />
-                                        )
-                                    })}
-                                </Carousel>
-                            </Column>
-                            <Column size="6" size_sm="12" padding="20px" alignSelf="center" borderRadius="0 0 0 1.25rem">
-                                <H3 align="left">{yml.carousel_box.heading}</H3>
-                                <Paragraph margin="5px 0" align="left" ></Paragraph>
-                                <Separator variant="primary" />
-                                <Paragraph color={Colors.gray} align="left">
-                                    {yml.carousel_box.content}
-                                </Paragraph>
-                            </Column>
-                        </Row>
-                    </Card>
-                </Column>
-            </Row>
-        </Wrapper> */}
   </>
   )
 };
@@ -415,9 +241,9 @@ export const query = graphql`
                       quality: 100
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                    # fluid(maxWidth: 800, quality: 100){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
+                    fluid(maxWidth: 800, quality: 100){
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
                   }
                 }
               alt 

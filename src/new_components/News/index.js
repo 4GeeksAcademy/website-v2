@@ -64,6 +64,7 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
       padding={padding}
       padding_tablet={padding_tablet}
       display="flex"
+      gap="20px"
       height="auto"
       justifyContent="between"
       justifyContent_tablet="between"
