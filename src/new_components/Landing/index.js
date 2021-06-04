@@ -163,7 +163,6 @@ export const landingSections = {
 
         <News
             margin="40px 0 40px"
-
             limit={yml.limit || 3}
             location={location ? location : session && session.location && session.location.breathecode_location_slug}
             lang={pageContext.lang}

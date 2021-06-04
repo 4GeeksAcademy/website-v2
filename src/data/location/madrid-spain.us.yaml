@@ -63,8 +63,8 @@ images_box:
       alt: "4Geeeks madrid location"
     - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks madrid lab"
-    - path: "../../../static/images/locations/madrid-3.jpeg"
-      alt: "4Geeeks madrid lab"
+    - path: "../../../static/images/locations/madrid-3.png"
+      alt: "4Geeeks madrid lab2"
 
 ## PRICES SECTION
 ## MADRID HAS 3 BOXES:
