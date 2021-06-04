@@ -117,7 +117,6 @@ const PricesAndPayments = (props) => {
 
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
-
   return (
     <Fragment github="/location">
       <GridContainer margin_tablet="0 0 25px 0">
@@ -167,7 +166,7 @@ const PricesAndPayments = (props) => {
         !prices ?
           <Paragraph margin="10px 0px" align="center" fontSize="18px" >{info.pricing_error} {course.label}, {currentLocation.city}. <br /> {info.pricing_error_contact}</Paragraph>
           :
-          <GridContainer columns_tablet="3" gridGap_tablet="0" padding_tablet="0" >
+          <GridContainer columns_tablet={Boolean(prices.left_section) + Boolean(prices.center_section) + Boolean(prices.right_section)} gridGap_tablet="0" padding_tablet="0" >
             {prices.left_section &&
               <PricingCard lang={props.lang}
                 background={Colors.white}

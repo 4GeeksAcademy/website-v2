@@ -20,7 +20,7 @@ const ShadowedRow = styled.div`
     bottom: ${props => props.position == "bottom" ? "0" : 'inherit'};
     display: ${props => props.hide ? "none" : 'block'};
     @media ${Break.sm}{
-        height: 90px;
+        height: auto;
         top: inherit;
         bottom: 0;
     }
@@ -41,6 +41,9 @@ const Center = styled.div`
     font-weight: 900;
     @media ${Break.xs}{
         text-align: left;
+    }
+    @media ${Break.sm}{
+        font-size: 20px
     }
 `;
 const P1 = styled.p`
@@ -93,11 +96,28 @@ const FollowBar = ({children, showOnScrollPosition, position, buttonText, phone,
                 {children}
             </Center>
             <Right>
-                <Button onClick={() => onClick && onClick()} color={Colors.red} fs_sm="11px" textColor={Colors.white}>{buttonText}</Button>
-                <p style={{textAlign: "center", marginTop: "3px", fontSize: "15px"}}><a className="decorated d-sm-none" display="inline" href={`tel:${phone}`}>{phoneText}{phone}</a></p>
+                <Button onClick={() => onClick && onClick()} background={Colors.blue} color={Colors.white} colorHover={Colors.blue} margin="0 auto" >{buttonText}</Button>
+                <p style={{textDecoration: "none", textAlign: "center", marginTop: "3px", fontSize: "15px"}}>
+                    <a 
+                      className="d-sm-none" 
+                      display="inline" 
+                      href={`tel:${phone}`}
+                    >
+                        {phoneText}{phone}
+                    </a>
+                </p>
+                <p style={{textDecoration: "none", textAlign: "right", marginTop: "3px", marginRight: "10px", fontSize: "15px"}}>
+                    <a 
+                      className="d-none d-sm-block" 
+                      display="inline" 
+                      href={`tel:${phone}`}
+                    >
+                        {phoneText}{phone}
+                    </a>
+                </p>
             </Right>
         </Centered>
-        <p style={{textAlign: "right", marginTop: "3px", marginRight: "10px", fontSize: "15px"}}><a className="decorated d-none d-sm-block" display="inline" href={`tel:${phone}`}>{phoneText}{phone}</a></p>
+        
     </ShadowedRow>
     )
 };

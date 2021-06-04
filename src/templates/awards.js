@@ -7,7 +7,7 @@ import {H1, H2, H3, Paragraph} from '../new_components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
 import Badges from '../new_components/Badges'
 import BaseRender from './_baseLayout'
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const SVGImage = () =>
     <svg width="419" height="284" viewBox="0 0 419 284" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,14 +67,15 @@ const Awards = ({data, pageContext, yml}) => {
                     {Array.isArray(yml.awards_list) && yml.awards_list.map((m, i) => {
                         return (
                             <Div key={i} flexDirection="column" flexDirection_tablet="row" margin="0 0 75px 0" >
-                                <Img
+                                <GatsbyImage
                                     style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
                                     imgStyle={{objectFit: "contain"}}
                                     loading="eager"
-                                    fadeIn={false}
-                                    durationFadeIn={0}
+                                    // fadeIn={false}
+                                    // durationFadeIn={0}
                                     // alt={l.name}
-                                    fluid={m.image.childImageSharp.fluid}
+                                    // fluid={m.image.childImageSharp.fluid}
+                                    image={getImage(m.image.childImageSharp.fluid)}
                                 />
                                 <Div flexDirection="column" width="100%">
                                     <H3 textAlign_tablet="left" margin="49px 0 0 " margin_tablet="0">{m.title}</H3>
@@ -124,10 +125,16 @@ query AwardsQuery($file_name: String!, $lang: String!) {
             awards_list{
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                        ...GatsbyImageSharpFluid_withWebp_noBase64 # Without Blur effect
-                        # ...GatsbyImageSharpFluid_withWebp  (with blur effect)
-                    }
+                        gatsbyImageData(
+                            layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                            width: 500
+                            quality: 100
+                            placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                            breakpoints:	[200, 340, 520, 890]
+                        )
+                    #   fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                    #     ...GatsbyImageSharpFluid_withWebp_noBase64 # Without Blur effect
+                    # }
                 }
             }
             title

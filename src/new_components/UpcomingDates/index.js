@@ -12,16 +12,16 @@ import {SessionContext} from '../../session'
 
 const info = {
     us: {
-        "full-stack": "/us/coding-bootcamp/part-time-full-stack-developer",
-        "software-engineering": "/us/coding-bootcamp/software-engineer-bootcamp",
-        "machine-learning-pt-16w": "/us/coding-bootcamp/machine-learning-engineering",
-        "full-stack-ft": "/us/coding-bootcamp/full-time-full-stack-developer"
+        "full-stack": "/us/coding-bootcamps/part-time-full-stack-developer",
+        "software-engineering": "/us/coding-bootcamps/software-engineer-bootcamp",
+        "machine-learning-pt-16w": "/us/coding-bootcamps/machine-learning-engineering",
+        "full-stack-ft": "/us/coding-bootcamps/full-time-full-stack-developer"
     },
     es: {
-        "full-stack": "/es/coding-bootcamp/full-stack-part-time",
-        "software-engineering": "/es/coding-bootcamp/ingenieria-de-software-programacion",
-        "machine-learning-pt-16w": "/es/coding-bootcamp/curso-inteligencia-artificial",
-        "full-stack-ft": "/es/coding-bootcamp/full-stack-full-time"
+        "full-stack": "/es/coding-bootcamps/full-stack-part-time",
+        "software-engineering": "/es/coding-bootcamps/ingenieria-de-software-programacion",
+        "machine-learning-pt-16w": "/es/coding-bootcamps/curso-inteligencia-artificial",
+        "full-stack-ft": "/es/coding-bootcamps/full-stack-full-time"
     }
 }
 const locations = {

@@ -10,7 +10,7 @@ footer:
     heading: "COMPANY"
     items:
       - name: "Program"
-        link: "/us/coding-bootcamp/part-time-full-stack-developer"
+        link: "/us/coding-bootcamps/part-time-full-stack-developer"
       - name: "Academy"
         link: "/us/the-academy"
       - name: "Partners"

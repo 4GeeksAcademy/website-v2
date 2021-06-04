@@ -10,7 +10,7 @@ footer:
     width: 3
     items:
       - name: "Programa"
-        link: "/es/coding-bootcamp/full-stack-part-time"
+        link: "/es/coding-bootcamps/full-stack-part-time"
       - name: "La Academia"
         link: "/es/sobre-la-academia"
       - name: "Aliados"
@@ -40,11 +40,11 @@ footer:
     heading: "PROGRAMS"
     items:
       - name: "Full Stack Developer"
-        link: "/es/coding-bootcamp/full-stack-part-time"
+        link: "/es/coding-bootcamps/full-stack-part-time"
       - name: "Ingeniero de software"
-        link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
+        link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
       - name: "AI Machine Learning Engineering"
-        link: "/es/coding-bootcamp/curso-inteligencia-artificial"
+        link: "/es/coding-bootcamps/curso-inteligencia-artificial"
   - column_four:
     heading: "SEDES"
     width: 3

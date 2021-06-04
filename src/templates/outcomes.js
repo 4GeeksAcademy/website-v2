@@ -166,7 +166,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                                     minHeight={`100px`}
                                                                     height={`255px`}
                                                                     width="100%"
-                                                                    image={m.image && m.image.childImageSharp.fluid}
+                                                                    image={m.image && m.image.childImageSharp.gatsbyImageData}
                                                                     bgSize={`contain`}
                                                                 />
 
@@ -271,9 +271,15 @@ query OutcomesQuery($file_name: String!, $lang: String!) {
                     image_section{
                         image{
                             childImageSharp {
-                                fluid(maxWidth: 500, quality: 100){
-                                    ...GatsbyImageSharpFluid_withWebp
-                                }
+                                gatsbyImageData(
+                                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                    width: 500
+                                    quality: 100
+                                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                                )
+                                # fluid(maxWidth: 500, quality: 100){
+                                #     ...GatsbyImageSharpFluid_withWebp
+                                # }
                             }
                         }
                         image_paragraph  

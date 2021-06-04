@@ -4,8 +4,8 @@ import {useStaticQuery, graphql} from 'gatsby';
 import {GridContainer, GridContainerWithImage, Column, Divider, Grid, Div} from '../Sections'
 import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors, StyledBackgroundSection} from '../Styling';
-import Img from "gatsby-image"
 import Icon from '../Icon';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const TechsWeTeach = ({lang}) => {
@@ -18,17 +18,29 @@ const TechsWeTeach = ({lang}) => {
             sub_title
             image{
                 childImageSharp {
-                  fluid(maxHeight: 289, maxWidth: 390){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 390
+                    height: 289
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxHeight: 289, maxWidth: 390){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
             }
             tech_list {
               image{
                 childImageSharp {
-                  fluid(maxHeight: 100, maxWidth: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 100
+                    height: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxHeight: 100, maxWidth: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               alt
@@ -66,7 +78,7 @@ const TechsWeTeach = ({lang}) => {
           <StyledBackgroundSection
             // className={`image`}
             height={`289px`}
-            image={content.image.childImageSharp.fluid}
+            image={content.image.childImageSharp.gatsbyImageData}
             bgSize={`contain`}
             alt="Cnn Logo"
             borderRadius={`0 0 0 3px`}
@@ -79,11 +91,12 @@ const TechsWeTeach = ({lang}) => {
         <Div className="badge-slider" justifyContent="center" padding="44px 0" style={{borderTop: `1px solid ${Colors.lightGray}`}}>
           {Array.isArray(content.tech_list) && content.tech_list.map((l, i) => {
             return (
-              <Img
+              <GatsbyImage
                 style={{height: "40px", minWidth: "40px", margin: "0 25px"}}
                 imgStyle={{objectFit: "contain"}}
                 alt={l.name}
-                fluid={l.image != null && l.image.childImageSharp.fluid}
+                // fluid={l.image != null && l.image.childImageSharp.fluid}
+                image={getImage(l.image != null && l.image.childImageSharp.gatsbyImageData)}
               />
             )
           })}

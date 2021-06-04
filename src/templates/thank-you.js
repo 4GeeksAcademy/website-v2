@@ -39,7 +39,7 @@ const ThankYou = (props) => {
       <WrapperImage
         margin="50px 0 0 0"
         height="250px"
-        imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
+        imageData={yml.banner.image && yml.banner.image.childImageSharp.gatsbyImageData}
         border="bottom"
         bgSize="cover"
         paddingRight={`0`}
@@ -117,9 +117,15 @@ export const query = graphql`
                 sub_heading
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 1800, quality: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 1800
+                        quality: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 1800, quality: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   } 
             }

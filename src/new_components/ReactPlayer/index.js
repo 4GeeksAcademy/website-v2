@@ -2,9 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import YouTube from "react-youtube"
 import PropTypes from "prop-types"
-import GImage from "gatsby-image"
+// import GImage from "gatsby-image"
 import {Devices} from '../Responsive'
 import Modal from '../Modal'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const VideoWrapper = styled.section`
   position: relative;
@@ -168,10 +169,11 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
       >
         {id && <Play onClick={() => setShowVideo(true)} right_tablet={right_tablet} left_tablet={left_tablet} aria-label="Play Video" />}
         {thumb && thumb.childImageSharp ?
-          <GImage
+          <GatsbyImage
             className={className}
             onClick={() => setShowVideo(true)}
-            fluid={thumb.childImageSharp.fluid}
+            // fluid={thumb.childImageSharp.fluid}
+            image={getImage(thumb.childImageSharp.gatsbyImageData)}
             alt="Video"
             style={{
               height: `${style.height}` || "100%",

@@ -27,7 +27,7 @@ const Blog = ({data, pageContext, yml}) => {
                     <StyledBackgroundSection
                         height="450px"
                         width="100%"
-                        image={yml.header.image && yml.header.image.childImageSharp.fluid}
+                        image={yml.header.image && yml.header.image.childImageSharp.gatsbyImageData}
                         bgSize={`contain`}
                         alt={yml.header.alt}
                     />
@@ -362,7 +362,6 @@ const Blog = ({data, pageContext, yml}) => {
             <GridContainer columns_tablet="3">
                 {
                     blog_posts[0].map((item, i) => {
-                        //COMPLETED: ahora no se necesita importar avatar en cada markdown
                         const allowed = [`${item.node.frontmatter.author}`];
                         const filtered = Object.keys(twitterUser)
                             .filter(key => allowed.includes(key))
@@ -407,9 +406,15 @@ query BlogQuery($file_name: String!, $lang: String!) {
             sub_heading
             image{
                 childImageSharp {
-                  fluid( maxWidth: 400, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                    gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 400
+                        quality: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                #   fluid( maxWidth: 400, quality: 100){
+                #     ...GatsbyImageSharpFluid_withWebp
+                #   }
                 }
               }  
           }
@@ -421,9 +426,15 @@ query BlogQuery($file_name: String!, $lang: String!) {
             paragraph
             image{
                 childImageSharp {
-                  fluid(maxWidth: 1500, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                    gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 1500
+                        quality: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                #   fluid(maxWidth: 1500, quality: 100){
+                #     ...GatsbyImageSharpFluid_withWebp
+                #   }
                 }
               }
             image_alt

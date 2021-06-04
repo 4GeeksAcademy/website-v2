@@ -59,14 +59,15 @@ const Landing = (props) => {
       >
         <Paragraph
           margin="0"
+          alignSelf="center"
           fontWeight="800"
           color={Colors.black}
           textAlign="left"
-          fontSize={yml.follow_bar.content.font_size[0]}
-          fs_lg={yml.follow_bar.content.font_size[1]}
-          fs_md={yml.follow_bar.content.font_size[2]}
-          fs_sm={yml.follow_bar.content.font_size[3]}
-          fs_xs={yml.follow_bar.content.font_size[4]}
+          fontSize_tablet={yml.follow_bar.content.font_size[0]}
+          // fs_lg={yml.follow_bar.content.font_size[1]}
+          // fs_md={yml.follow_bar.content.font_size[2]}
+          // fs_sm={yml.follow_bar.content.font_size[3]}
+          fontSize={yml.follow_bar.content.font_size[4]}
         >
           {yml.follow_bar.content.text.split("\n").map((c, i) => <span key={i} className="d-block d-xs-none w-100">{c}</span>)}
           {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span key={i} className="d-none d-xs-block w-100">{c}</span>)}
@@ -85,7 +86,7 @@ const Landing = (props) => {
       >
         <StyledBackgroundSection
           className={`image`}
-          image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
+          image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
           bgSize={`cover`}
           // width="58%"
           width_tablet="58%"
@@ -96,8 +97,7 @@ const Landing = (props) => {
           align="center"
           alt="4Geeks Academy"
           borderRadius_tablet={`0 0 1.25rem 0`}
-          // borderRadius="0"
-          borderRadius="0 0 1.25rem 0"
+          borderRadius="0"
         >
           <Div
             // display="none"
@@ -435,9 +435,14 @@ export const query = graphql`
               image_filter
               image{
                 childImageSharp {
-                  fluid(maxWidth: 1000){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1000
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 1000){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
             }
@@ -523,12 +528,17 @@ export const query = graphql`
             hidden
             student_thumb{
               childImageSharp {
-                fluid(maxHeight: 200){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-                fixed(width: 250, height: 250) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxHeight: 200){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+                # fixed(width: 250, height: 250) {
+                #   ...GatsbyImageSharpFixed
+                # }
               }
             }
             content
@@ -550,9 +560,14 @@ export const query = graphql`
               slug
               project_image {
                 childImageSharp {
-                  fluid(maxWidth: 800){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               } 
               project_content
@@ -588,9 +603,14 @@ export const query = graphql`
               name
               image {
                 childImageSharp {
-                  fluid(maxWidth: 150){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 150
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 150){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               featured

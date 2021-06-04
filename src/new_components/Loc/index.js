@@ -49,7 +49,8 @@ const Loc = ({locations, title, paragraph, lang}) => {
   const nextDate = (location) => {
     let city = location.node.city.split(' ')
     let cohort = datas.cohorts.all.find(item => item.name.includes(city[0]))
-    return cohort
+    let onlineCohort = datas.cohorts.all.find(item => item.name.includes("online"))
+    return cohort || onlineCohort
 
   }
   return (
@@ -75,6 +76,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
         columns="2" columns_tablet="3" gridGap="0" margin_tablet="0 0 70px 0">
         {loc != null &&
           loc.map((item, i) => {
+            const next = nextDate(item);
             return (
               <Div
                 // onMouseLeave={() => {
@@ -107,11 +109,11 @@ const Loc = ({locations, title, paragraph, lang}) => {
                   <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
                     {content.label}
                   </Paragraph >
-                  {nextDate(item) != undefined && <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
-                    {nextDate(item).syllabus.certificate.name}
-                  </Paragraph>}
-                  {nextDate(item) != undefined && nextDate(item).kickoff_date && <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
-                    {dayjs(nextDate(item).kickoff_date != undefined && nextDate(item).kickoff_date).add(5, "hour").locale(lang).format("ddd, DD MMM YYYY")}
+                  <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
+                    {next != undefined ? next.syllabus.certificate.name : "No upcoming dates at this location"}
+                  </Paragraph>
+                  {next != undefined && next.kickoff_date && <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
+                    {dayjs(next.kickoff_date != undefined && next.kickoff_date).add(5, "hour").locale(lang).format("ddd, DD MMM YYYY")}
                   </Paragraph>}
                 </Div>
                 <Link to={`/${lang}/coding-campus/${item.node.meta_info.slug}`}><Icon style={{position: "absolute", bottom: "18px", right: "18px"}} icon="arrowright" height="32px" width="32px" /></Link>

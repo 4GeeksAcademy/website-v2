@@ -79,12 +79,12 @@ const About4Geeks = ({lang}) => {
                 }
             </Div>
             <Div style={{position: "relative"}} height="468px" gridColumn_tablet="7 / 14">
-                <Div style={{position: "absolute", background: "#00A0DA", width: "101%", height: "216px", top: "-10px", left: "-10px", borderRadius: "3px"}}></Div>
-                <Div style={{position: "absolute", background: "#FFB718", width: "50%", height: "216px", bottom: "-10px", right: "-10px", borderRadius: "3px"}}></Div>
+                <Div style={{position: "absolute", background: "#00A0DA", width: "101%", height: "216px", top: "-10px", left: "-10px", borderRadius: "3px", zIndex: -1}}></Div>
+                <Div style={{position: "absolute", background: "#FFB718", width: "50%", height: "216px", bottom: "-10px", right: "-10px", borderRadius: "3px", zIndex: -1}}></Div>
                 <StyledBackgroundSection
                     className={`image`}
                     height={`468px`}
-                    image={about.image.childImageSharp.fluid}
+                    image={about.image.childImageSharp.gatsbyImageData}
                     bgSize={`cover`}
                     alt="Cnn Logo"
                     borderRadius={`0 0 0 3px`}

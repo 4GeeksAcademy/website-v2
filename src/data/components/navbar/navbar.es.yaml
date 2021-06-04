@@ -63,7 +63,7 @@
 
 navbar:
   - name: "Programas"
-    link: "/es/coding-bootcamp/full-stack-part-time"
+    link: "/es/coding-bootcamps/full-stack-part-time"
     sub_menu:
       icon: ""
       title: "Programas"
@@ -76,7 +76,7 @@ navbar:
           paragraph: "Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr. "
           buttons:
             - text: "Part Time"
-              link: "/es/coding-bootcamp/full-stack-part-time"
+              link: "/es/coding-bootcamps/full-stack-part-time"
             - text: "Full Time"
               link: ""
 
@@ -86,7 +86,7 @@ navbar:
           paragraph: "Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube."
           buttons:
             - text: "Ver Programa"
-              link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
+              link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
 
         - title: "AI/Machine Learning Engineering"
           level: "Online"
@@ -94,7 +94,7 @@ navbar:
           paragraph: "Conoce las herramientas necesarias para mejorar tus habilidades y ser parte del futuro de la Inteligencia Artificial"
           buttons:
             - text: "Ver Programa"
-              link: "/es/coding-bootcamp/curso-inteligencia-artificial"
+              link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 
   - name: "Porqué 4Geeks"
     link: "/es/porque-4geeks"
@@ -173,16 +173,32 @@ navbar:
               link_to: "/es/coding-campus/online-bootcamp-programacion"
         - title: "Campuses"
           sub_links:
-            - title: "Miami"
+            - title: "Miami, USA"
               link_to: "/es/coding-campus/bootcamp-programacion-miami"
-            - title: "Madrid"
+            - title: "Madrid, España"
               link_to: "/es/coding-campus/bootcamp-programacion-madrid"
-            - title: "Santiago de Chile"
+            - title: "Chile"
               link_to: "/es/coding-campus/bootcamp-programacion-santiago"
-            - title: "San José"
+            - title: "Argentina"
+              link_to: "/es/coding-campus/bootcamp-programacion-argentina"
+            - title: "Bolivia"
+              link_to: "/es/coding-campus/bootcamp-programacion-bolivia"
+            - title: "Costa Rica"
               link_to: "/es/coding-campus/bootcamp-programacion-costa-rica"
-            - title: "Caracas"
-              link_to: "/es/coding-campus/bootcamp-programacion-caracas"
+        - title: "-"
+          sub_links:
+            - title: "Colombia"
+              link_to: "/es/coding-campus/bootcamp-programacion-colombia"
+            - title: "Ecuador"
+              link_to: "/es/coding-campus/bootcamp-programacion-ecuador"
+            - title: "México"
+              link_to: "/es/coding-campus/bootcamp-programacion-mexico"
+            - title: "Panamá"
+              link_to: "/es/coding-campus/bootcamp-programacion-panama"
+            - title: "Uruguay"
+              link_to: "/es/coding-campus/bootcamp-programacion-uruguay"
+            - title: "Venezuela"
+              link_to: "/es/coding-campus/bootcamp-programacion-venezuela"
   - name: "Próxima Fechas"
     link: "/es/proximas-fechas"
 
@@ -202,12 +218,12 @@ button:
 #   - name: "La Academia"
 #     link: "/es/la-academia"
 #   - name: "Programas"
-#     link: "/es/coding-bootcamp/full-stack-part-time"
+#     link: "/es/coding-bootcamps/full-stack-part-time"
 #     links:
 #       - name: "Full Stack Development"
-#       - link: "/es/coding-bootcamp/full-stack-part-time"
+#       - link: "/es/coding-bootcamps/full-stack-part-time"
 #       - name: "Senior Software Engineering"
-#       - link: "/es/coding-bootcamp/ingenieria-de-software-programacion"
+#       - link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
 #   # - name: "Precios"
 #   #   link: "/precios"
 #   - name: "Alianzas"

@@ -6,8 +6,8 @@ import {H2, H3, H4, Title, Separator, Paragraph, Span} from '../Heading'
 import {Row, Column, Wrapper, Divider} from '../Sections'
 import {Colors} from '../Styling'
 import {Link} from 'gatsby';
-import Img from 'gatsby-image';
 import Fragment from "../Fragment"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const TestimonialsCarrousel = (props) => {
     let testimonialsArray = props.lang[0].node.testimonials;
@@ -24,8 +24,9 @@ const TestimonialsCarrousel = (props) => {
             >
                 {testimonialsArray.filter(item => item.hidden !== true).map((item, i) => {
                     return (<Card key={i} padding="20px 30px 30px 30px" height="460px" >
-                        <Img
-                            fluid={item.student_thumb.childImageSharp.fluid}
+                        <GatsbyImage
+                            // fluid={item.student_thumb.childImageSharp.fluid}
+                            image={getImage(item.student_thumb.childImageSharp.gatsbyImageData)}
                             alt={item.alt}
                             style={{ height: "180px", width: "180px", margin:"auto", backgroundSize: `cover` }}
                             className={`b-corner-50`}

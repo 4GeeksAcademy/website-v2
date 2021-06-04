@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {Title, H1, H2, H3, H4, H5, Paragraph} from '../new_components/Heading';
 import BaseRender from './_baseLayout';
 // new_components
-import Img from 'gatsby-image';
 import News from '../new_components/News';
 import Icon from '../new_components/Icon';
 import {Colors, StyledBackgroundSection, Anchor, Span} from '../new_components/Styling'
@@ -80,7 +79,7 @@ const Press = (props) => {
                                         <StyledBackgroundSection
                                             borderRadius="3px"
                                             height={`389px`}
-                                            image={l.project_image.childImageSharp.fluid}
+                                            image={l.project_image.childImageSharp.gatsbyImageData}
                                             bgSize={`cover`}
                                             alt={l.project_name}
                                         />
@@ -134,9 +133,14 @@ query AlumniProjectQuery($file_name: String!, $lang: String!) {
                 slug
                 project_image {
                   childImageSharp {
-                    fluid(maxWidth: 800){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 800
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 800){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 } 
                 project_content

@@ -138,17 +138,24 @@ export const query = graphql`
         node{
           seo_title
           header{
-              title
-              paragraph
-              image_alt
-              image{
-                  childImageSharp {
-                    fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
-                  }
-                }
-              
+            title
+            paragraph
+            image_alt
+            image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 500
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                  breakpoints:	[200, 340, 520, 890]
+                )
+
+                # fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            }    
           }
             button{
               syllabus_heading
@@ -213,9 +220,15 @@ export const query = graphql`
             teacher{
               picture{
                 childImageSharp {
-                  fluid(maxWidth: 500){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 500
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  
+                  # fluid(maxWidth: 500){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               greeting
@@ -230,9 +243,15 @@ export const query = graphql`
                 name
                 image{
                   childImageSharp {
-                    fluid(maxWidth: 100){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
               }
@@ -288,9 +307,15 @@ export const query = graphql`
                 name
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 150){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 150
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                    # fluid(maxWidth: 150){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
                 featured
@@ -301,9 +326,15 @@ export const query = graphql`
                 name
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 100){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
                 featured
@@ -316,9 +347,15 @@ export const query = graphql`
                 name
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 100){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
                 featured
@@ -331,9 +368,15 @@ export const query = graphql`
                 name
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 100){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
                 featured
@@ -358,16 +401,27 @@ export const query = graphql`
             linkedin_text
             linkedin_image{
               childImageSharp {
-                fluid(maxHeight: 14){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  height: 14
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxHeight: 14){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }
             student_thumb{
               childImageSharp {
-                fluid(maxHeight: 200){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  height: 200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+
+                # fluid(maxHeight: 200){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }
             short_content
@@ -390,11 +444,17 @@ export const query = graphql`
               slug
               project_image {
                 childImageSharp {
-                  fluid(maxWidth: 800){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
-              } 
+              }
               project_content
               project_video
               live_link
@@ -454,9 +514,15 @@ export const query = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 800){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+
+                # fluid(maxWidth: 800){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             } 
           }

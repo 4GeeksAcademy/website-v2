@@ -102,7 +102,7 @@ const Location = ({data, pageContext, yml}) => {
 
         <StyledBackgroundSection
           height={`495px`}
-          image={yml.header.image.childImageSharp.fluid}
+          image={yml.header.image.childImageSharp.gatsbyImageData}
           bgSize={`contain`}
           alt={yml.header.alt}
         />
@@ -133,18 +133,11 @@ const Location = ({data, pageContext, yml}) => {
             <Div
               key={i}
               borderRadius="3px"
-              gridArea={imagePositions[`${i + 1}`]}
-            >
-              <StyledBackgroundSection
-                height="auto"
-                margin="0"
-                borderRadius="3px"
-                image={m.path.childImageSharp.fluid}
-                bgSize={`cover`}
-                alt={m.alt}
-              />
-            </Div>)
-        })}
+              image={m.path.childImageSharp.gatsbyImageData}
+              bgSize={`cover`}
+              alt={m.alt}
+            />)
+          })}
       </GridContainer>
     }
     <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
@@ -362,84 +355,99 @@ export const query = graphql`
     allLocationYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            seo_title
-            active_campaign_location_slug
-            breathecode_location_slug
-            header{
-                tagline
-                paragraph
-                sub_heading
-                image {
-                    childImageSharp {
-                    fluid(maxWidth: 1200, quality: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                    }
-                    }
-                } 
-                alt
+          seo_title
+          active_campaign_location_slug
+          breathecode_location_slug
+          header{
+            tagline
+            paragraph
+            sub_heading
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1200
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 1200, quality: 100){
+                #     ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
             }
-            button_header{
-              button_text
-              button_link
-            }
-            button{
-                apply_button_link
-                apply_button_text
-                cohort_more_details_text
-                syllabus_button_text
-                syllabus_submit_text
-            }
-            badges{
+            alt
+          }
+          button_header{
+            button_text
+            button_link
+          }
+          button{
+              apply_button_link
+              apply_button_text
+              cohort_more_details_text
+              syllabus_button_text
+              syllabus_submit_text
+          }
+          badges{
+            title
+            paragraph
+          }
+          news{
               title
-              paragraph
-            }
-            news{
-                title
-            }
-            upcoming{
-              no_dates_message
-            }
-            info_box{
-                heading
-                map_url
-                address
-                iframeMapUrl
-                phone
-                email
-                contact_heading
-                whatsapp
-                image {
-                    childImageSharp {
-                      fluid(maxWidth: 800, quality: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
+          }
+          upcoming{
+            no_dates_message
+          }
+          info_box{
+              heading
+              map_url
+              address
+              iframeMapUrl
+              phone
+              email
+              contact_heading
+              whatsapp
+              image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 800
+                      quality: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 800, quality: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
-                alt 
-            }
-            meta_info{
-                title
-                description
-                image
-                keywords
-            }
-            images_box{
-                heading
-                content
-                images{
-                    path{
-                        childImageSharp {
-                          fluid(maxWidth: 800, quality: 100){
-                            ...GatsbyImageSharpFluid_withWebp
-                          }
-                        }
-                      } 
-                    alt
-
                 }
-                
-            }
-            
+              alt 
+          }
+          meta_info{
+              title
+              description
+              image
+              keywords
+          }
+          images_box{
+            heading
+            content
+            images{
+              path{
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800, quality: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                }
+              }
+              alt
+            } 
+          } 
         }
       }
     }
@@ -463,9 +471,15 @@ export const query = graphql`
               alt
               image {
                 childImageSharp {
-                  fluid(maxWidth: 800){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               } 
             }
@@ -487,9 +501,14 @@ export const query = graphql`
               email
               image {
                 childImageSharp {
-                  fluid(maxWidth: 800){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               } 
             }
@@ -497,9 +516,14 @@ export const query = graphql`
               images {
                 path{
                   childImageSharp {
-                    fluid(maxWidth: 100){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 } 
                 alt
@@ -536,9 +560,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 150){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 150
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 150){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
@@ -549,9 +578,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
@@ -564,9 +598,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
@@ -579,9 +618,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured

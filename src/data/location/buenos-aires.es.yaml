@@ -1,19 +1,19 @@
 meta_info:
-  slug: "bootcamp-programacion-argentina"
+  slug: "bootcamp-programacion-argentina-buenos-aires"
   title: "Bootcamp Programación Argentina"
   position: 5
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Argentina, San Jose de 4Geeks Academy aquí"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Argentina, Buenos Aires de 4Geeks Academy aquí"
   image: ""
   # it will not show up on the applications forms
   unlisted: false
   keywords: "Coding Bootcamp Campus Argentina"
-  redirects: []
+  redirects: ["/es/coding-campus/bootcamp-programacion-argentina"]
 
 seo_title: "Aprende a programar en Argentina"
 header:
   tagline: "4Geeks Academy en Argentina"
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/costarica-home.png"
+  image: "../../../static/images/locations/online-home.png"
   alt: ""
 
 button_header:
@@ -142,7 +142,7 @@ prices:
           sub_heading: ""
         content:
           price: "La modaliad Part-Time no esta disponible"
-          price_info: "San José - Argentina"
+          price_info: "Buenos Aires - Argentina"
         button:
           button_text: "Aplicar a otros cursos"
 
@@ -196,10 +196,10 @@ active_campaign_location_slug: "buenos-aires"
 breathecode_location_slug: "buenos-aires"
 gdpr_compliant: false # do we need to ask for permision?
 
-city: "San Jose"
+city: "Buenos Aires"
 name: "Argentina"
-latitude: "10.664500"
-longitude: "-71.617705"
+latitude: "-34.608535"
+longitude: "-58.435355"
 address: ""
 zip_code: ""
 state: ""

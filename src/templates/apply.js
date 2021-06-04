@@ -357,12 +357,18 @@ export const query = graphql`
               linkedin_text
               student_thumb{
                 childImageSharp {
-                  fluid(maxWidth: 200){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                  fixed(width: 200, height: 200) {
-                    ...GatsbyImageSharpFixed
-                  }
+                    gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 200
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                #   fluid(maxWidth: 200){
+                #     ...GatsbyImageSharpFluid_withWebp
+                #   }
+                #   fixed(width: 200, height: 200) {
+                #     ...GatsbyImageSharpFixed
+                #   }
                 }
               }
               content

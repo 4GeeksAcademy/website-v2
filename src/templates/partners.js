@@ -88,7 +88,7 @@ const Partners = (props) => {
         <Div grid_column_tablet="1 / span 14">
           <StyledBackgroundSection
             height={`389px`}
-            image={yml.header.image.childImageSharp.fluid}
+            image={yml.header.image.childImageSharp.gatsbyImageData}
             bgSize={`cover`}
             alt={yml.header.image_alt}
           />
@@ -154,20 +154,26 @@ query PartnersQuery($file_name: String!, $lang: String!) {
           keywords
         }
         seo_title
-          header{
-              title
-              paragraph
-              image_alt
-              button
-              image{
-                  childImageSharp {
-                    fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
-                  }
-                }
-              
+        header{
+          title
+          paragraph
+          image_alt
+          button
+          image{
+            childImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                width: 1200
+                quality: 100
+                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                breakpoints:	[200, 340, 520, 890]
+              )
+              # fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+              #   ...GatsbyImageSharpFluid_withWebp
+              # }
+            }
           }
+        }
         form{
           title
           paragraph
@@ -176,9 +182,15 @@ query PartnersQuery($file_name: String!, $lang: String!) {
           alt
           image{
             childImageSharp {
-              fluid(maxWidth: 1600, quality: 100){
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData(
+                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                width: 1600
+                quality: 100
+                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+              )
+              # fluid(maxWidth: 1600, quality: 100){
+              #   ...GatsbyImageSharpFluid_withWebp
+              # }
             }
           }
         }
@@ -207,9 +219,14 @@ query PartnersQuery($file_name: String!, $lang: String!) {
             name
             image {
               childImageSharp {
-                fluid(maxWidth: 150){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 150
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 150){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }
             featured
@@ -224,9 +241,14 @@ query PartnersQuery($file_name: String!, $lang: String!) {
             name
             image {
               childImageSharp {
-                fluid(maxWidth: 150){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 150
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 150){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }
             featured
@@ -239,9 +261,15 @@ query PartnersQuery($file_name: String!, $lang: String!) {
             name
             image {
               childImageSharp {
-                fluid(maxWidth: 150){
-                  ...GatsbyImageSharpFluid_withWebp
-                      }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 150
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+
+                # fluid(maxWidth: 150){
+                #   ...GatsbyImageSharpFluid_withWebp
+                #       }
                     }
                   }
                   featured
@@ -254,9 +282,14 @@ query PartnersQuery($file_name: String!, $lang: String!) {
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 150){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 150
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 150){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
