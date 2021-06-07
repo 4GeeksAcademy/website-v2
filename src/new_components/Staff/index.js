@@ -11,48 +11,48 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Staff = props => {
     const data = useStaticQuery(graphql`
-    query myNewStaffQuery{
+      query myNewStaffQuery {
         allStaffYaml {
-            edges {
-                node {
-                    fields {
-              lang
-            }
-            heading
-            sub_heading
-                    staff {
-                        name
-                        last_name
-                        nick_name
-                        bio
-                        slug
-                        job_title
-                        github
-                        linkdin
-                        twitter
-                        website
-                        image{
-                            childImageSharp {
-                                gatsbyImageData(
-                                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                                    width: 800
-                                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                                )
-                                # fluid(maxWidth: 800){
-                                #   ...GatsbyImageSharpFluid_withWebp
-                                # }
-                              }
-                        }
-                        age
-                        location
-                        interests
-                        coding_skills
-                    }
+          edges {
+            node {
+              fields {
+                lang
+              }
+              heading
+              sub_heading
+              staff {
+                name
+                last_name
+                nick_name
+                bio
+                slug
+                job_title
+                github
+                linkdin
+                twitter
+                website
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 800
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 800){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
                 }
+                age
+                location
+                interests
+                coding_skills
+              }
             }
+          }
         }
-    }
-    `)
+      }
+    `);
     let staff = data.allStaffYaml.edges.find(({node}) => node.fields.lang === props.lang);
     if (staff) staff = staff.node;
     return (
@@ -68,9 +68,10 @@ const Staff = props => {
                             <Div key={index} flexDirection="column" alignItems="center">
                                 <Div minWidth="184px" height="184px" margin="0 10px 0 0" alignItems="center">
                                     <GatsbyImage
-                                        image={getImage(item.image && item.image.childImageSharp.fluid)}
+                                        image={getImage(item.image && item.image.childImageSharp.gatsbyImageData)}
                                         // fluid={item.image && item.image.childImageSharp.fluid}
                                         style={{height: "100%", minWidth: "100%", backgroundSize: `cover`}}
+                                        alt={item.name}
                                     />
                                 </Div>
                                 <H3

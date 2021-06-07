@@ -80,6 +80,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
             return (
               i < 4 &&
               <GatsbyImage
+                key={i}
                 style={{height: "65px", minWidth: "80px", margin: "0 20px"}}
                 imgStyle={{objectFit: "contain"}}
                 loading="eager"
@@ -94,6 +95,7 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
             content.badges.map((l, i) => {
               return (
                 <GatsbyImage
+                  key={i}
                   style={{
                     height: "85px", 
                     // minWidth: "200px",

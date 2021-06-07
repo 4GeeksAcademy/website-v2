@@ -276,6 +276,7 @@ export const Grid = styled(Div)`
     grid-column: ${props => props.gridColumn};
     justify-items: ${props => props.justifyItems};
     justify-content: ${props => props.justifyContent};
+    grid-template-areas: ${props => props.gridTemplateAreas};
     
     @media ${Devices.xxs}{
         grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
@@ -294,7 +295,9 @@ export const Grid = styled(Div)`
         grid-gap: ${props => props.gridGap_tablet};
         grid-auto-rows: ${props => props.gridAutoRows_tablet};
         grid-column: ${props => props.gridColumn_tablet};
+        grid-row: ${props => props.gridRow_tablet};
         justify-content: ${props => props.justifyContent_tablet};
+        grid-template-areas: ${props => props.gridTemplateAreas_tablet};
     }
     @media  ${Devices.md}{
         margin: ${props => props.margin_md};
@@ -410,10 +413,10 @@ export const Header = ({hideArrowKey, children, fontSize, fontSize_tablet, image
 //     return (
 //         <Grid background={background} gridGap={containerGridGap} gridTemplateColumns_tablet={containerColumns_tablet} gridTemplateColumns_md={containerColumns_md} boxShadow={shadow} boxShadow_tablet={shadow_tablet} borderRadius={borderRadius} display={display} display_tablet={display_tablet} position={position} borderTop={borderTop} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} margin_md={margin_md} padding={padding || "0 17px"} padding_tablet={padding_tablet || "0"}>
 //             <Grid background={backgroundChild} justifyItems={justifyItems} gridGap={gridGap} gridGap_tablet={gridGap_tablet} gridTemplateRows={gridTemplateRows} gridTemplateRows_tablet={gridTemplateRows_tablet} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${12 / columns_tablet}fr)`} padding={paddingChild} padding_tablet={padding_tabletChild} gridTemplateColumns={columns} gridColumn_tablet={fluid ? "1 / span 14" : "2 / span 12"}>
-export const GridContainer = ({fluid, overflowChild, justifyContent, justifyContent_tablet, shadow, shadow_tablet, containerColumns, containerColumns_tablet, containerColumns_md, children, display, display_tablet, background, borderRadius, backgroundChild, containerGridGap, gridGap, gridGap_tablet, gridTemplateRows, gridTemplateRows_tablet, height, height_tablet, columns, columns_tablet, margin, margin_tablet, margin_md, padding, padding_tablet, paddingChild, borderTop, padding_tabletChild, position, GridColumn, gridColumn_tablet}) => {
+export const GridContainer = ({fluid, overflowChild, justifyContent, justifyContent_tablet, shadow, shadow_tablet, containerColumns, containerColumns_tablet, containerColumns_md, children, display, display_tablet, background, borderRadius, backgroundChild, containerGridGap, gridGap, gridGap_tablet, gridTemplateRows, gridTemplateRows_tablet, height, height_tablet, columns, columns_tablet, margin, margin_tablet, margin_md, padding, padding_tablet, paddingChild, borderTop, padding_tabletChild, position, GridColumn, gridColumn_tablet, gridRow_tablet, gridTemplateAreas, gridTemplateAreas_tablet, childHeight}) => {
     return (
         <Grid background={background} gridGap={containerGridGap} gridTemplateColumns={containerColumns} gridTemplateColumns_tablet={containerColumns_tablet} gridTemplateColumns_md={containerColumns_md} boxShadow={shadow} boxShadow_tablet={shadow_tablet} borderRadius={borderRadius} display={display} display_tablet={display_tablet} justifyContent={justifyContent} justifyContent_tablet={justifyContent_tablet} position={position} borderTop={borderTop} height={height} height_tablet={height_tablet} margin={margin} margin_tablet={margin_tablet} margin_md={margin_md} padding={padding || "0 17px"} padding_tablet={padding_tablet || "0"}>
-            <Grid overflow={overflowChild} background={backgroundChild} gridGap={gridGap} gridGap_tablet={gridGap_tablet} gridTemplateRows={gridTemplateRows} gridTemplateRows_tablet={gridTemplateRows_tablet} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${12 / columns_tablet}fr)`} padding={paddingChild} padding_tablet={padding_tabletChild} gridTemplateColumns={`${columns}, 1fr`} gridColumn={GridColumn} gridColumn_tablet={gridColumn_tablet ? gridColumn_tablet : fluid ? "1 / span 14" : "2 / span 12"}
+            <Grid overflow={overflowChild} background={backgroundChild} gridGap={gridGap} gridGap_tablet={gridGap_tablet} gridTemplateRows={gridTemplateRows} gridTemplateRows_tablet={gridTemplateRows_tablet} gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${12 / columns_tablet}fr)`} padding={paddingChild} padding_tablet={padding_tabletChild} gridTemplateColumns={`${columns}, 1fr`} gridColumn={GridColumn} gridRow_tablet={gridRow_tablet} gridColumn_tablet={gridColumn_tablet ? gridColumn_tablet : fluid ? "1 / span 14" : "2 / span 12"} gridTemplateAreas={gridTemplateAreas} gridTemplateAreas_tablet={gridTemplateAreas_tablet} height={childHeight}
             >
                 {children}
             </Grid>

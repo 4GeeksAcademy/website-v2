@@ -103,13 +103,12 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
                                 {/* // } */}
                                 {program.title.split("\n").map((m, i) =>
 
-                                    <Link to={program.link}><H3
-                                        key={i}
-                                        textAlign="left"
-                                        fontSize="22px"
-                                        lineHeight="26px"
-
-                                    >
+                                    <Link key={i} to={program.link}>
+                                        <H3
+                                            textAlign="left"
+                                            fontSize="22px"
+                                            lineHeight="26px"
+                                        >
                                         {m}
                                     </H3></Link>
                                 )}
