@@ -15,18 +15,27 @@ import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-// const MapFrame = loadable(() => import('../new_components/MapFrame'), {
-//   fallback: <div>Loading...</div>
-// })
-
-
-const imagePositions = {
-  "1": "1/1/3/7",
-  "2": "1/7/3/13",
-  "3": "3/1/4/4",
-  "4": "4/1/5/4",
-  "5": "3/4/5/13"
+const positions = [{
+  colPosition: "1 / 6",
+  rowPosition: "1/3"
+},
+{
+  colPosition: "6 / 9",
+  rowPosition: "1/3"
+},
+{
+  colPosition: "1 / 4",
+  rowPosition: "3/4"
+},
+{
+  colPosition: "1 / 4",
+  rowPosition: "5/4"
+},
+{
+  colPosition: "4/9",
+  rowPosition: "3/4"
 }
+]
 
 const MapFrame = lazy(() => import('../new_components/MapFrame'));
 
@@ -116,6 +125,7 @@ const Location = ({data, pageContext, yml}) => {
       <Div flexDirection="column" gridColumn_tablet="5 / 13">
         {images.images_box.content.split("\n").map((m, i) =>
           <Paragraph
+            key={i}
             textAlign="left"
             margin="0 0 20px 0"
             fontSize="15px"
@@ -127,15 +137,35 @@ const Location = ({data, pageContext, yml}) => {
       </Div>
     </GridContainer>
     {yml.images_box.images && 
-      <GridContainer 
-        // columns_tablet="12" 
-        columns_tablet={yml.images_box.images.length < 4 ? "2" : "3"} 
+      <GridContainer
+        columns_tablet="10"
+        gridTemplateRows_tablet="repeat(4, 1fr)"
+        // gridColumn_tablet={}
+        // columns_tablet={yml.images_box.images.length < 4 ? "2" : "3"} 
+        // gridAutoRows_tablet="minmax(100px, auto)"
+        gridTemplateAreas={`
+        'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
+        'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
+        'image3 image3 image3 image3 image5 image5 image5 image5 image5 image5'
+        'image4 image4 image4 image4 image5 image5 image5 image5 image5 image5'
+        `}
+        gridTemplateAreas_tablet={`
+          'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
+          'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
+          'image3 image3 image3 image3 image5 image5 image5 image5 image5 image5'
+          'image4 image4 image4 image4 image5 image5 image5 image5 image5 image5'
+          `}
         height_tablet="813px" 
         height="304px"
+        childHeight="inherit"
+
       >
+      {/* <GridContainer columns_tablet="12" gridTemplateRows_tablet={yml.images_box.images.length < 4 ? "3, 1fr" : "4, 1fr"} height_tablet="813px" height="304px"> */}
         {yml.images_box.images.map((m, i) => {
           return (
             <GatsbyImage
+              style={{gridArea: `image${i+1}`}}
+              
               key={i}
               borderRadius="3px"
               // image={m.path.childImageSharp.fluid}
@@ -241,9 +271,9 @@ export const query = graphql`
                       quality: 100
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                    fluid(maxWidth: 800, quality: 100){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    # fluid(maxWidth: 800, quality: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
               alt 

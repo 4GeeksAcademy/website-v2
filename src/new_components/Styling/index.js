@@ -82,7 +82,6 @@ export const Tooltip = styled.div`
     z-index: 1;
     width: 300px;
     opacity: 1;
-    // right: -277px;
     border-radius: .25rem;
     margin-bottom: 1em;
     padding: 1em;
@@ -318,12 +317,10 @@ export const Button = styled(SmartButton)`
     position: ${props => props.position};
     display: ${props => props.display};
     padding: ${props => props.padding || "12px 24px"};
-    // padding: 12px 24px;
     transform: ${props => props.transform};
     color: ${props => props.color};
     background: ${props => props.background};
     border: ${props => props.border};
-    // height: ${props => props.height};
     height: 40px;
     cursor: pointer;
     text-align: ${props => props.textAlign || "center"};
