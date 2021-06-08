@@ -30,7 +30,7 @@ badges:
   title: ""
   paragraph: "4Geeks Academy is the place where developers grow and thrive.
  
-We are licensed by the Florida Department of Education.
+We are licensed by the USA F. Dep. of Education.
   
 Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Spain according to Premios Excelencia Educativa.
 
@@ -48,10 +48,9 @@ info_box:
   address: "Av. 5 de julio. Maracaibo, Venezuela."
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2313.274407295168!2d-71.61931957533544!3d10.664284079244604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd29bf2de2e9189a!2s4geeks%20Mcbo!5e0!3m2!1ses-419!2scl!4v1621011070775!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
-  phone: "+58 412-7372341"
+  phone: "(506) 8692 8372"
   email: "ve@4GeeksAcademy.com"
-  image: "../../../static/images/locations/maracaibo-map.png"
-  alt: ""
+
 images_box:
   heading: "What you should know about this location: "
   content: "4Geeks Office is Located at the epicenter of the most beautiful city in Venezuela, at the Avenida 4 de Mayo, next to the metro station and within walking distance of the most prominent restaurants, coffee shops and business centers. 140 meters of innovation, curious people and an amazing vibe to learn."
@@ -202,6 +201,7 @@ active_campaign_location_slug: "maracaibo-venezuela"
 breathecode_location_slug: "maracaibo"
 defaultLanguage: "es" # All lead marketing communications will arrive on this language
 gdpr_compliant: false # do we need to ask for permision?
+in_person_available: false # important to accept in-person applicants
 
 city: "Maracaibo"
 name: "Maracaibo"

@@ -86,7 +86,7 @@ const FinancialFilter = (props) => {
   const [prices, setPrices] = useState();
 
   useEffect(() => {
-    setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
+    setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true && !l.node.meta_info.slug.includes("online")).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
     if (session && session.location) {
       const _loc = props.locations.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug);
       setCurrentLocation(_loc ? _loc.node : null)

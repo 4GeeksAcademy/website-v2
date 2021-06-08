@@ -97,7 +97,7 @@ const PricesAndPayments = (props) => {
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
-    setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
+    setLocations(props.locations.filter(l => l.node.meta_info.unlisted != true && !l.node.meta_info.slug.includes("online")).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1))
     if (session && session.location) {
       const _loc = props.locations.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug);
       setCurrentLocation(_loc ? _loc.node : null)
@@ -150,9 +150,9 @@ const PricesAndPayments = (props) => {
               top="40px"
               left="20px"
               width="fit-content"
-              options={locations.map(l => ({label: l.node.city + ", " + l.node.country, value: l.node.active_campaign_location_slug}))}
-              openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
-              closeLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
+              options={locations.map(l => ({label: l.node.name, value: l.node.active_campaign_location_slug}))}
+              openLabel={!currentLocation ? "Pick a campus" : currentLocation.name}
+              closeLabel={!currentLocation ? "Pick a campus" : currentLocation.name}
               onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}
               topLabel={info.top_label}
             />

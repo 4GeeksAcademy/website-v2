@@ -292,9 +292,10 @@ prices:
 active_campaign_location_slug: "online"
 breathecode_location_slug: "online"
 gdpr_compliant: true # do we need to ask for permision?
+in_person_available: false # important to accept in-person applicants
 
 city: "Online"
-name: "Online Remoto"
+name: "Online/Remoto"
 latitude: "10000.760158"
 longitude: "-800000.200154"
 address: "1801 SW 18th Road"

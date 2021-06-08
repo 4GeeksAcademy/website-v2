@@ -477,6 +477,7 @@ export const query = graphql`
           id
           city
           country
+          name
           hasFinancialsOption
           financials_max_months
           active_campaign_location_slug

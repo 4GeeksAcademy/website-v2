@@ -92,11 +92,11 @@ navbar:
   #       - link: "/course/software-engineering-coding-bootcamp"
   # - name: "Pricing"
   #   link: "/pricing"
-  - name: "Campuses"
+  - name: "Campus"
     link: "/partners"
     sub_menu:
-      icon: "campuses"
-      title: "Our Campuses"
+      icon: "campus"
+      title: "Our Campus"
       paragraph: "Learn in-person or choose a fully-remote program. Enroll and become part of a global coding community."
       links:
         - title: "Online"
@@ -105,7 +105,7 @@ navbar:
               link_to: "/us/coding-campus/online-coding-bootcamp"
             - title: "Full Time"
               link_to: "/us/coding-campus/online-coding-bootcamp"
-        - title: "Campuses"
+        - title: "Campus"
           sub_links:
             - title: "Miami, USA"
               link_to: "/us/coding-campus/coding-bootcamp-miami"

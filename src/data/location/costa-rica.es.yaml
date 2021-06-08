@@ -37,14 +37,13 @@ upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
 info_box:
-  heading: "Encuentranos en Costa Rica"
+  heading: "Encuéntranos en Costa Rica"
   address: ""
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1113.9468207368486!2d-84.05324642641304!3d9.926577771692926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e47a42cec70b%3A0x63f6a801c5a73b61!2s4Geeks%20Costa%20Rica!5e0!3m2!1ses-419!2scl!4v1621010232303!5m2!1ses-419!2scl"
   contact_heading: "Escríbenos al Whatsapp"
   phone: "(506) 8692 8372"
   email: "puravida@4GeeksAcademy.com"
-  image: "../../../static/images/locations/maracaibo-map.png"
-  alt: ""
+
 images_box:
   heading: "What you should know about this location: "
   content: "4Geeks Costa Rica es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
@@ -195,6 +194,7 @@ prices:
 active_campaign_location_slug: "costa-rica"
 breathecode_location_slug: "costa-rica"
 gdpr_compliant: false # do we need to ask for permision?
+in_person_available: false # important to accept in-person applicants
 
 city: "San Jose"
 name: "Costa Rica"

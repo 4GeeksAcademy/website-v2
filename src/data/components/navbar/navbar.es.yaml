@@ -160,8 +160,8 @@ navbar:
   - name: "Campuses"
     link: "/partners"
     sub_menu:
-      icon: "campuses"
-      title: "Nuestros Campuses"
+      icon: "campus"
+      title: "Nuestros Campus"
       paragraph: "Aprenda en persona o elija un programa completamente remoto. Inscríbase y forme parte de una comunidad de programacion global."
 
       links:
@@ -171,7 +171,7 @@ navbar:
               link_to: "/es/coding-campus/online-bootcamp-programacion"
             - title: "Full Time"
               link_to: "/es/coding-campus/online-bootcamp-programacion"
-        - title: "Campuses"
+        - title: "Campus"
           sub_links:
             - title: "Miami, USA"
               link_to: "/es/coding-campus/bootcamp-programacion-miami"

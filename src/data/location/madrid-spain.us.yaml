@@ -28,7 +28,7 @@ badges:
   title: ""
   paragraph: "4Geeks Academy is the place where developers grow and thrive.
  
-We are licensed by the Florida Department of Education.
+We are licensed by the USA F. Dep. of Education.
   
 Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Spain according to Premios Excelencia Educativa.
 
@@ -280,9 +280,9 @@ prices:
 active_campaign_location_slug: "madrid-spain"
 breathecode_location_slug: "madrid-spain"
 gdpr_compliant: true # do we need to ask for permision?
-
+in_person_available: true # important to accept in-person applicants
 city: "Madrid"
-name: "Madrid"
+name: "Madrid, Spain"
 latitude: "40.439769"
 longitude: "-3.680207"
 phone: "+34 910 86 69 83"

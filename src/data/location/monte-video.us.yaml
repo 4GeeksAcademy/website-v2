@@ -1,19 +1,19 @@
 meta_info:
-  slug: "coding-bootcamp-costa-rica"
-  title: "4Geeks Academy Costa Rica"
+  slug: "coding-bootcamp-uruguay"
+  title: "4Geeks Academy in Uruguay, Monte Video"
   position: 5
-  description: "Get to know here all about our coding bootcamp campus in Costa Rica, San José of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Uruguay, Monte Video of 4Geeks Academy"
   image: ""
   keywords: ""
   # it will not show up on the applications forms
   unlisted: false
-  redirects: ["/us/location/costa-rica", "/location/costa-rica"]
+  redirects: ["/us/uruguay", "/uruguay"]
 
-seo_title: "Coding Bootcamp Costa Rica"
+seo_title: "Coding Bootcamp Uruguay"
 header:
-  tagline: "4Geeks Academy in Costa Rica"
-  paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Costa Rica with over 1,000 graduates"
-  image: "../../../static/images/locations/costarica-home.png"
+  tagline: "4Geeks Academy in Uruguay"
+  paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Uruguay with over 1,000 graduates"
+  image: "../../../static/images/locations/online-home.png"
   alt: ""
 button_header:
   button_text: See Programs
@@ -38,21 +38,21 @@ Chosen as one of the top 35 coding bootcamps of the world and the top coding boo
 
 A community built for developers ."
 news:
-  title: "4Geeks Academy Costa Rica in the news..."
+  title: "4Geeks Academy Uruguay in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
 
 info_box:
-  heading: "Find us in Costa Rica"
-  address: "Only remotely in Costa Rica"
-  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1113.9468207368486!2d-84.05324642641304!3d9.926577771692926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e47a42cec70b%3A0x63f6a801c5a73b61!2s4Geeks%20Costa%20Rica!5e0!3m2!1ses-419!2scl!4v1621010232303!5m2!1ses-419!2scl"
+  heading: "Find us in Uruguay"
+  address: "Only remotely in Uruguay"
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   phone: "(506) 8692 8372"
   email: "info@4GeeksAcademy.com"
 
 images_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Academy classes in Costa Rica are only being taught online until further notice; Any 4Geeks in-person campus is always located in very centric locations with nearby subway or public transportation systems at the most popular areas of the city."
+  content: "4Geeks Academy classes in Uruguay are only being taught online until further notice; Any 4Geeks in-person campus is always located in very centric locations with nearby subway or public transportation systems at the most popular areas of the city."
   images: null
     # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
     #   alt: "mcbo-chinita"
@@ -71,7 +71,7 @@ heading_section:
 ## RIGHT BOX => FULL-TIME
 ## CARACAS AT THE MOMENT HAS NO FINANCIAL OPTIONS SET
 hasFinancialsOption: false
-financials_max_months:
+financials_max_months: ["1 mo", "2 mo", "3 mo", "4 mo"]
 prices:
   full_stack:
     full_time:
@@ -86,7 +86,7 @@ prices:
           heading_one: "FULL-TIME"
           sub_heading: ""
         content:
-          price: "Pay upfront and get a discount or ask for additional financing options"
+          price: "Only part-time programs are being offered at the moment"
           price_info: ""
         button:
           button_text: "APPLY NOW"
@@ -95,10 +95,11 @@ prices:
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "PART-TIME"
-          sub_heading: ""
+          heading_one: "PAY ONLY"
+          heading_two: "WHEN YOU GET A JOB"
+          sub_heading: "Income Share Agreement (ISA) with Student Finance"
         content:
-          price: "Pay upfront and get a discount or ask for additional financing options"
+          price: "Only part-time programs are being offered at the moment"
           price_info: ""
         button:
           button_text: "APPLY NOW"
@@ -113,11 +114,11 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "FULL-TIME"
-          sub_heading: ""
+          heading_one: "PART-TIME"
+          sub_heading: "Ask about scholarships and discounts"
         content:
-          price: "Pay upfront and get a discount or ask for additional financing options"
-          price_info: ""
+          price: "US $4,000"
+          price_info: "single payment"
         button:
           button_text: "APPLY NOW"
 
@@ -125,11 +126,11 @@ prices:
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "PART-TIME"
-          sub_heading: ""
+          heading_one: "Extended"
+          sub_heading: "Payment Plan"
         content:
-          price: "Pay upfront and get a discount or ask for additional financing options"
-          price_info: ""
+          price: "US $800"
+          price_info: "4 months"
         button:
           button_text: "APPLY NOW"
 
@@ -145,7 +146,7 @@ prices:
           sub_heading: ""
         content:
           price: "Part-Time modality is not available"
-          price_info: "San José - Costa Rica"
+          price_info: "Monte Video - Uruguay"
         button:
           button_text: "Apply another courses"
 
@@ -160,7 +161,7 @@ prices:
           sub_heading: ""
         content:
           price: "Full-Time modality is not available"
-          price_info: "San José - Costa Rica"
+          price_info: "Monte Video - Uruguay"
         button:
           button_text: "Apply another courses"
 
@@ -176,7 +177,7 @@ prices:
           sub_heading: ""
         content:
           price: "Part-Time modality is not available"
-          price_info: "San José - Costa Rica"
+          price_info: "Monte Video - Uruguay"
         button:
           button_text: "Apply another courses"
 
@@ -191,30 +192,30 @@ prices:
           sub_heading: ""
         content:
           price: "Full-Time modality is not available"
-          price_info: "San José - Costa Rica"
+          price_info: "Monte Video - Uruguay"
         button:
           button_text: "Apply another courses"
 
-active_campaign_location_slug: "costa-rica"
-breathecode_location_slug: "costa-rica"
+active_campaign_location_slug: "monte-video"
+breathecode_location_slug: "monte-video"
 gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "San Jose"
-name: "Costa Rica"
-latitude: "10.664500"
-longitude: "-71.617705"
+city: "Monte Video"
+name: "Uruguay"
+latitude: "-34.098799"
+longitude: "-56.216998"
 address: ""
 zip_code: ""
 state: ""
-country: "Costa Rica"
+country: "Uruguay"
 socials:
   - social_name: "Facebook"
-    social_link: "https://www.facebook.com/4geeksacademycr"
+    social_link: "https://www.facebook.com/4geeksacademy"
   - social_name: "Twitter"
-    social_link: "https://www.twitter.com/4geeksacademycr"
+    social_link: "https://www.twitter.com/4geeksacademy"
   - social_name: "Instagram"
-    social_link: "https://www.instagram.com/4geeksacademycr"
+    social_link: "https://www.instagram.com/4geeksacademy"
 courses:
   - "Full-Time"
   - "Part-Time"
@@ -226,5 +227,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Costa Rica"
+value: "Uruguay"
 defaultLanguage: "es" # All lead marketing communications will arrive on this language

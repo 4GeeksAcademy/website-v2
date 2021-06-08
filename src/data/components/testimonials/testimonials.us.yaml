@@ -6,7 +6,7 @@ testimonials:
     featured: false
     highlighted: true
     testimonial_date: ""
-    rating: 4
+    rating: 5
     student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -84,7 +84,7 @@ testimonials:
       even after completing the Bootcamp.
 
   - student_name: "Fernando Funez"
-    featured: true
+    featured: false
     highlighted: false
     testimonial_date: ""
     rating: 5
@@ -143,7 +143,7 @@ testimonials:
       everyone.
 
   - student_name: "Fidel Rosell"
-    featured: true
+    featured: false
     highlighted: false
     testimonial_date: ""
     rating: 5
@@ -197,17 +197,17 @@ testimonials:
     short_content: "Full Stack Developer in Facebook"
     content: ""
   - student_name: "Guensie Grecy"
-    featured: false
+    featured: true
     highlighted: false
     testimonial_date: ""
     rating: 5
-    student_thumb: ""
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    student_thumb: "../../../../static/images/testimonials/guensie-grecy.jpg"
+    student_video: "https://www.youtube.com/watch?v=LvnxLyqaQDo" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     linkedin_url: "https://www.linkedin.com/in/guensiegrecy/"
     linkedin_text: "Linkedin Profile"
     linkedin_image: "../../../../static/images/linkedin.png"
-    hidden: true
+    hidden: false
     source_url: ""
     video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
     source_url_text: ""

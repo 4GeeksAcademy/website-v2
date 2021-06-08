@@ -194,8 +194,8 @@ const Location = ({data, pageContext, yml}) => {
               <MapFrame 
                 src={ready ? yml.info_box.iframeMapUrl : "about:blank"} 
                 width="100%" 
-                height="492px" /
-              >
+                height="492px" 
+              />
             )}
           </Suspense>
         )
@@ -213,6 +213,7 @@ export const query = graphql`
         node{
           seo_title
           active_campaign_location_slug
+          name
           breathecode_location_slug
           header{
             tagline
@@ -311,6 +312,7 @@ export const query = graphql`
         edges {
           node {
             city
+            name
             meta_info {
               slug
               title

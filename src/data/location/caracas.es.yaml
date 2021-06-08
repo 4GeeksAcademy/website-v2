@@ -201,9 +201,10 @@ prices:
 active_campaign_location_slug: "caracas-venezuela"
 breathecode_location_slug: "caracas-venezuela"
 gdpr_compliant: false # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
 
 city: "Caracas"
-name: "Impact Hub"
+name: "Venezuela"
 latitude: "10.484845"
 longitude: "-66.826593"
 address: "Sede Principal de El Nacional."

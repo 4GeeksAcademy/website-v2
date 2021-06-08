@@ -262,9 +262,6 @@ query SuccessQuery($file_name: String!, $lang: String!) {
                                 height: 14
                                 placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                             )
-                            # fluid(maxHeight: 14){
-                            #     ...GatsbyImageSharpFluid_withWebp
-                            # }
                         }
                     }
                     student_thumb{
@@ -274,9 +271,6 @@ query SuccessQuery($file_name: String!, $lang: String!) {
                                 width: 200
                                 placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                             )
-                            # fluid(maxHeight: 200){
-                            #     ...GatsbyImageSharpFluid_withWebp
-                            # }
                         }
                     }
                     student_video
@@ -292,28 +286,3 @@ query SuccessQuery($file_name: String!, $lang: String!) {
 }
 `;
 export default BaseRender(SuccessStories);
-// {/* <GridContainer fixed padding_tablet="0" columns_tablet="12" gridTemplateRows_tablet="4, 1fr" height_tablet="813px" height="304px">
-//                 {/* <Grid height="auto" columns_tablet="12" rows_tablet="10" gridGap="11px"> */}
-                // {
-                //     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
-                //         return (
-                //             i < 5 &&
-                //             <TestimonialCard
-                //                 key={i}
-                //                 className={defaultPositions[i]['className']}
-                //                 studentRating={m.rating}
-                //                 image={m.student_thumb}
-                //                 height={defaultPositions[i]['height']}
-                //                 height_tablet={defaultPositions[i]['height_tablet']}
-                //                 background={m.highlighted && Colors.darkYellow}
-                //                 name={m.student_name}
-                //                 short_content={m.short_content}
-                //                 description={defaultPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
-                //                 video={m.student_video}
-                //                 gridAreaPosition={defaultPositions[i]['position']}
-                //             />
-                //         )
-                //     })
-                // }
-//                 {/* </Grid> */}
-//             </GridContainer> */}

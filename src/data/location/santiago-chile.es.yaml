@@ -26,7 +26,7 @@ button:
   apply_button_link: "/aplica"
 
 info_box:
-  heading: "Encuentranos en Santiago de Chile"
+  heading: "Encuéntranos en Santiago de Chile"
   address: "Av. Manquehue Sur 350, Oficina 110, Las Condes, Región Metropolitana, Chile"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.1601939813802!2d-70.56719882328042!3d-33.41054249403315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfff900b7a6b%3A0x37af5bee84731bcc!2s4Geeks%20Academy%20Chile!5e0!3m2!1ses-419!2scl!4v1621011176304!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
@@ -239,12 +239,13 @@ prices:
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
 gdpr_compliant: false # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
 
 city: "Santiago de Chile"
 hasFinancialsOption: true
 # financials_max_months: ["6 mo", "12 mo"]
 financials_max_months: ["12 mo", "6 mo"]
-name: "Santiago"
+name: "Chile"
 latitude: "-33.408837"
 longitude: "-70.567958"
 phone: "+56 (9) 7284 8039"

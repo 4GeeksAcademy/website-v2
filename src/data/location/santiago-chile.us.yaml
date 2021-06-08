@@ -46,7 +46,7 @@ badges:
   title: ""
   paragraph: "4Geeks Academy is the place where developers grow and thrive.
  
-We are licensed by the Florida Department of Education.
+We are licensed by the USA F. Dep. of Education.
   
 Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Miami according to SwitchUp.
 
@@ -255,9 +255,10 @@ prices:
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
 gdpr_compliant: false # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
 
 city: "Santiago de Chile"
-name: "Santiago"
+name: "Chile"
 latitude: "-33.408837"
 longitude: "-70.567958"
 phone: "+56 (9) 7284 8039"

@@ -10,7 +10,15 @@ import {SessionContext} from '../session.js'
 import {Circle} from '../new_components/BackgroundDrawing'
 import {apply, tagManager} from "../actions"
 
-
+const us = {
+    "(In-person and from home available)": "(In-person and from home available)",
+    "(From home until further notice)": "(From home until further notice)"
+}
+const es = {
+    "(In-person and from home available)": "(Presencial o desde casa)",
+    "(From home until further notice)": "(Desde casa hasta nuevo aviso)"
+}
+const trans = { us, es }
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -21,7 +29,6 @@ const formIsValid = (formData = null) => {
 }
 const Apply = (props) => {
     const {data, pageContext, yml} = props;
-    const [datas, setDatas] = useState()
     const {session} = useContext(SessionContext);
     const [formStatus, setFormStatus] = useState({status: "idle", msg: "Apply"});
     const [formData, setVal] = useState({
@@ -38,10 +45,13 @@ const Apply = (props) => {
         label: p.text,
         value: p.bc_slug
     }))
-    const locations = session && session.locations && session.locations.map(m => ({
-        label: m.city,
-        value: m.active_campaign_location_slug
-    }))
+    const locations = session && session.locations && session.locations
+        .filter(l => !l.active_campaign_location_slug.includes("online"))
+        .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
+        .map(m => ({
+            label: m.name + " " + (m.in_person_available == true ? trans[pageContext.lang]["(In-person and from home available)"] : trans[pageContext.lang]["(From home until further notice)"]),
+            value: m.active_campaign_location_slug
+        }))
 
     React.useEffect(() => {
         tagManager("application_rendered")
@@ -195,7 +205,6 @@ const Apply = (props) => {
                             </Div>
                         </Grid>
                         <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
-                            {console.log("default", formData.course.value)}
                             <SelectRaw
                                 bgColor={Colors.white}
                                 options={programs}
