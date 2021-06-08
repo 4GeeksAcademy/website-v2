@@ -268,7 +268,7 @@ query SuccessQuery($file_name: String!, $lang: String!) {
                         childImageSharp {
                             gatsbyImageData(
                                 layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                                width: 200
+                                width: 800
                                 placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                             )
                         }
