@@ -9,8 +9,8 @@ footer:
     width: 3
     heading: "COMPANY"
     items:
-      - name: "Program"
-        link: "/us/coding-bootcamps/part-time-full-stack-developer"
+      - name: "Why 4Geeks"
+        link: "/us/why-4geeks"
       - name: "Academy"
         link: "/us/the-academy"
       - name: "Partners"
@@ -23,8 +23,8 @@ footer:
         link: "/us/next-dates"
       - name: "Blog"
         link: "/us/blog"
-      - name: "Careers"
-        link: "/us/jobs"
+      # - name: "Careers"
+      #   link: "/us/jobs"
       - name: "Privacy"
         link: "/us/privacy-policy"
       - name: "FAQ"
