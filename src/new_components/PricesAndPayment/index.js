@@ -13,7 +13,7 @@ import Fragment from "../Fragment"
 
 const PricingCard = ({data, lang, children, price, color, background, transform_tablet, priceInfo, applyLabel, border, borderLeft, borderRight, borderRight_tablet, borderLeft_tablet}) => {
   const {header, button} = data;
-  return <Div flexDirection="column" padding="30px" margin="5px 0" height="fit-content" background={background} transform_tablet={transform_tablet} border={border} borderLeft={borderLeft} borderRight={borderRight} borderLeft_tablet={borderLeft_tablet} borderRight_tablet={borderRight_tablet}>
+  return <Div flexDirection="column" padding="30px" margin="5px 0" height="fit-content" background={background} transform_tablet={transform_tablet} style={{border: "1px solid"}} borderLeft={borderLeft} borderRight={borderRight} borderLeft_tablet={borderLeft_tablet} borderRight_tablet={borderRight_tablet}>
     <H2
       color={color}
       lineHeight="30px"
@@ -219,7 +219,7 @@ const PricesAndPayments = (props) => {
             }
           </GridContainer>
       }
-      <GridContainer columns_tablet="12" gridGap="0" margin_tablet="0 0 37px 0" >
+      <GridContainer columns_tablet="12" gridGap="0" margin_tablet="55px 0 37px 0" >
         <Div gridArea_tablet="1/5/1/9" justifyContent="center" alignItems="center">
           <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >We accept: </H4>
           <RoundImage url="/images/bitcoin.png" height="10px" width="65px" bsize="contain" margin="0 15px" />
