@@ -1,0 +1,21 @@
+
+seo_title: "Instructores"
+
+header:
+  title: "Conoce a nuestroS instructores"
+  paragraph: ""
+
+instructors:
+  - name: "Roldolfo Campos"
+    sub_title: "Co fundador de 4geeks y director de educación"
+    image: "../../../../static/images/instructors/example.png"
+    bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+    github: ""
+    linkedin: "https://www.linkedin.com/"
+
+  - name: "Gabriel Salinas"
+    sub_title: "Sophisticated Software Systems Engineer"
+    image: "../../../../static/images/instructors/example.png"
+    bio: "Currently working as a Senior Solutions Architect at VMware"
+    github: ""
+    linkedin: "https://www.linkedin.com/"
