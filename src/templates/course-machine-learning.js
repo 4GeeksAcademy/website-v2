@@ -42,6 +42,7 @@ const Program = ({data, pageContext, yml}) => {
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
   const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a, b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
+  console.log("data.allTestimonialsYaml.edges", data.allTestimonialsYaml.edges)
   return (<>
     <Header
       seo_title={yml.seo_title}
@@ -123,9 +124,9 @@ const Program = ({data, pageContext, yml}) => {
       title={yml.prices.heading}
       paragraph={yml.prices.sub_heading}
     />
-    <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
+    {/* <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-    </Container>
+    </Container> */}
     <OurPartners images={hiring.partners.images} marquee></OurPartners>
   </>
   )
@@ -391,8 +392,8 @@ export const query = graphql`
       edges {
         node {
           heading
-    button_text
-    button_link
+          button_text
+          button_link
           testimonials {
             student_name
             testimonial_date
@@ -406,9 +407,6 @@ export const query = graphql`
                   height: 14
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxHeight: 14){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             student_thumb{
@@ -418,10 +416,6 @@ export const query = graphql`
                   height: 200
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-
-                # fluid(maxHeight: 200){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             short_content
@@ -449,10 +443,6 @@ export const query = graphql`
                     width: 800
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-
-                  # fluid(maxWidth: 800){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               project_content
@@ -520,10 +510,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             } 
           }

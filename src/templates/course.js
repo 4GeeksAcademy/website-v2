@@ -129,7 +129,7 @@ const Program = ({data, pageContext, yml}) => {
       paragraph={yml.prices.sub_heading}
     />
     <AlumniProjects title={yml.alumni.heading} paragraph={yml.alumni.sub_heading} lang={data.allAlumniProjectsYaml.edges} limit={2} />
-    <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" />
+    {/* <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" /> */}
     <OurPartners images={hiring.partners.images} marquee></OurPartners>
   </>
   )
@@ -329,9 +329,6 @@ export const query = graphql`
                   height: 14
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxHeight: 14){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             student_thumb{
@@ -341,9 +338,6 @@ export const query = graphql`
                   width: 200
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxHeight: 200){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             short_content
@@ -383,10 +377,6 @@ export const query = graphql`
                       width: 150
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-
-                    # fluid(maxWidth: 150){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 }
                 featured
@@ -403,10 +393,6 @@ export const query = graphql`
                       width: 100
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-
-                    # fluid(maxWidth: 100){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 }
                 featured
@@ -424,9 +410,6 @@ export const query = graphql`
                       width: 100
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                    # fluid(maxWidth: 100){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 }
                 featured
@@ -445,9 +428,6 @@ export const query = graphql`
                       width: 100
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                    # fluid(maxWidth: 100){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 }
                 featured
@@ -492,9 +472,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             } 
           }

@@ -102,6 +102,7 @@ const GeeksInfo = ({lang}) => {
                 <H4 textAlign="left" margin="0" fontWeight="900" textTransform="uppercase">{m.title}</H4>
                 {m.sub_title.split("\n").map((m, i) =>
                   <Paragraph
+                    key={i}
                     textAlign="left"
                     margin="0 0 20px 0"
                     fontSize="15px"

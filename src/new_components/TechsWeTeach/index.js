@@ -65,6 +65,7 @@ const TechsWeTeach = ({lang}) => {
           <H3 textAlign="left" margin="0 0 20px 0">{content.title}</H3>
           {content.sub_title.split("\n").map((m, i) =>
             <Paragraph
+              key={i}
               textAlign="left"
               margin="10px 0 "
               fontSize="15px"
@@ -92,6 +93,7 @@ const TechsWeTeach = ({lang}) => {
           {Array.isArray(content.tech_list) && content.tech_list.map((l, i) => {
             return (
               <GatsbyImage
+                key={i}
                 style={{height: "40px", minWidth: "40px", margin: "0 25px"}}
                 imgStyle={{objectFit: "contain"}}
                 alt={l.name}

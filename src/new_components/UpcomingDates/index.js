@@ -138,7 +138,7 @@ const UpcomingDates = ({lang, location, message}) => {
                             width="300px"
                             maxWidth="100%"
                             shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-                            options={console.log("catalog", data.cohorts.catalog) || data.cohorts.catalog}
+                            options={data.cohorts.catalog}
                             openLabel={lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
                             closeLabel={lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
                             onSelect={(opt) => {

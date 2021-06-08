@@ -31,7 +31,7 @@ const ProgramSVG = ({lang}) => {
     return (
         <svg className="d-sm-none w-100" width="fit-content" height="700" viewBox="0 0 1750 1183" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="1750" height="1183" fill="white" />
-            <g clip-path="url(#clip0)">
+            <g clipPath="url(#clip0)">
                 <rect width="1750" height="1183" fill="white" />
 
 

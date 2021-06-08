@@ -132,9 +132,9 @@ const Program = ({data, pageContext, yml}) => {
       paragraph={yml.prices.sub_heading}
     />
 
-    <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
+    {/* <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-    </Container>
+    </Container> */}
 
     <OurPartners images={hiring.partners.images} marquee></OurPartners>
   </>

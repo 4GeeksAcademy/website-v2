@@ -142,7 +142,7 @@ const Calendar = (props) => {
               width="300px"
               maxWidth="100%"
               shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-              options={console.log("catalog", datas.cohorts.catalog) || datas.cohorts.catalog}
+              options={datas.cohorts.catalog}
               openLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
               closeLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
               onSelect={(opt) => {

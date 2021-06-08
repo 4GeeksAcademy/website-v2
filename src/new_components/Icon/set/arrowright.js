@@ -3,8 +3,8 @@ import React from 'react';
 export default props =>
     <svg className={props.className} style={props.style} width={props.width} height={props.height} viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="32" height="30.8213" fill="black" />
-        <g clip-path="url(#clip0)">
-            <path d="M13 9.63164L19.35 15.7477L13 21.8638" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <g clipPath="url(#clip0)">
+            <path d="M13 9.63164L19.35 15.7477L13 21.8638" stroke="white" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
         </g>
         <defs>
             <clipPath id="clip0">

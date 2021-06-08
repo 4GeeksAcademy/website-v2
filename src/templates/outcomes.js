@@ -13,8 +13,8 @@ import {outcomesReport} from "../actions";
 
 const SVGImage = () =>
 <svg width="510" height="295" viewBox="0 0 510 295" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M73.5 280L179.5 136L226 187L393 17.5L473 111" stroke="#0097CD" stroke-width="2" stroke-linecap="round"/>
-<path d="M33 44V294H509" stroke="#A4A4A4" stroke-linecap="round"/>
+<path d="M73.5 280L179.5 136L226 187L393 17.5L473 111" stroke="#0097CD" strokeWidth="2" strokeLinecap="round"/>
+<path d="M33 44V294H509" stroke="#A4A4A4" strokeLinecap="round"/>
 <circle cx="58" cy="194" r="58" fill="#FFB718"/>
 <circle cx="228" cy="128" r="14" fill="#FFB718"/>
 <circle cx="177.5" cy="55.5" r="26.5" fill="#0097CD"/>

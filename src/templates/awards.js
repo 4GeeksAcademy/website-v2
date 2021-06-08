@@ -33,8 +33,8 @@ const SVGImage = () =>
         <rect x="74" y="119" width="77" height="11" rx="5.5" transform="rotate(90 74 119)" fill="black" />
         <circle cx="53.5" cy="67.5" r="13.5" fill="#CD0000" />
         <path d="M206.902 129.5C208.057 127.5 210.943 127.5 212.098 129.5L232.45 164.75C233.604 166.75 232.161 169.25 229.852 169.25H189.148C186.839 169.25 185.396 166.75 186.55 164.75L206.902 129.5Z" fill="#CD0000" />
-        <path d="M184.5 147.5L156.5 153.5V132.5L134 121.5L142 104.5L124 85.5L138.5 68.5L124 54.5L148.5 41" stroke="#FFB718" stroke-width="4" stroke-linecap="round" />
-        <path d="M236 148.027L263.769 154V133.093L286.083 122.142L278.149 105.218L296 86.3022L281.62 69.3778L296 55.44L271.702 42" stroke="#FFB718" stroke-width="4" stroke-linecap="round" />
+        <path d="M184.5 147.5L156.5 153.5V132.5L134 121.5L142 104.5L124 85.5L138.5 68.5L124 54.5L148.5 41" stroke="#FFB718" strokeWidth="4" strokeLinecap="round" />
+        <path d="M236 148.027L263.769 154V133.093L286.083 122.142L278.149 105.218L296 86.3022L281.62 69.3778L296 55.44L271.702 42" stroke="#FFB718" strokeWidth="4" strokeLinecap="round" />
     </svg>
 
 const Awards = ({data, pageContext, yml}) => {
