@@ -10,7 +10,6 @@ import UpcomingProgram from '../components/UpcomingProgram';
 import Footer from '../new_components/Footer';
 import CookieBot from "react-cookiebot";
 
-
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
@@ -105,11 +104,11 @@ const Layout = ({children, seo, context}) => {
             }
           }
         }  
-          cookiebotYaml {
-            domain_ID {
-              id
-            }
+        cookiebotYaml {
+          domain_ID {
+            id
           }
+        }
       }
     `}
       render={(data) => {

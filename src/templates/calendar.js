@@ -100,7 +100,6 @@ const Calendar = (props) => {
       setData(_data);
     }
   }, [session]);
-
   return (
     <>
       <Header
