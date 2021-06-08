@@ -62,12 +62,6 @@ module.exports = {
       }
     },
     // 'gatsby-plugin-force-trailing-slashes',
-    {
-      resolve:'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
     'gatsby-plugin-loadable-components-ssr',
     {
       resolve: "gatsby-plugin-rollbar",
