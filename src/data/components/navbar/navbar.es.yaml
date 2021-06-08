@@ -1,66 +1,3 @@
-# navbar:
-#   - name: "Home"
-#     link: "/es/inicio"
-#     sub_menu:
-#       icon: ""
-#       title: "Programass"
-#       paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras que usted busca pivotar, encontrar un trabajo mejor o avanzar en el actual. Aprenda a codificar en 4Geeks Academy."
-#       links:
-#         - title: "Online"
-#           sub_links:
-#             - title: "Part Time"
-#               link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
-#             - title: "Full Time"
-#               link_to: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
-#         - title: "Campuses"
-#   - name: "La Academia"
-#     link: "/sobre-la-academia"
-#     sub_menu:
-#       icon: ""
-#       title: "Programs"
-#       paragraph: "Academia
-# Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
-#       links:
-#         - title: "Online"
-#         - title: "Campuses"
-#   - name: "Programas"
-#     link: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
-#     sub_menu:
-#       icon: ""
-#       title: "Programs"
-#       paragraph: "Academia
-# Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
-#       links:
-#         - title: "Online"
-#         - title: "Campuses"
-#     # links:
-#     #   - name: "Full Stack Development"
-#     #   - link: "/es/curso/desarrollo-web-full-stack-bootcamp-part-time"
-#     #   - name: "Senior Software Engineering"
-#     #   - link: "/es/course/ingenieria-de-software-programacion"
-#   # - name: "Precios"
-#   #   link: "/precios"
-#   - name: "Aliados"
-#     link: "/aliados"
-#     sub_menu:
-#       icon: ""
-#       title: "Programs"
-#       paragraph: "Academia
-# Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
-#       links:
-#         - title: "Online"
-#         - title: "Campuses"
-#   - name: "Próximas Fechas"
-#     link: "/calendario"
-#     sub_menu:
-#       icon: ""
-#       title: "Programs"
-#       paragraph: "Academia
-# Lorem ipsum dolor sit amet, consectetur adscing elit, sed do eiusmod tempor incidi."
-#       links:
-#         - title: "Online"
-#         - title: "Campuses"
-
 navbar:
   - name: "Programas"
     link: "/es/coding-bootcamps/full-stack-part-time"
@@ -130,8 +67,8 @@ navbar:
           sub_links:
             - title: "Alumnos y Proyectos"
               link_to: "/es/alumnos-y-proyectos"
-            - title: "Testimonios"
-              link_to: "/es/testimonios"
+            # - title: "Testimonios"
+            #   link_to: "/es/testimonios"
   - name: "Academia"
     link: "/es/sobre-la-academia"
     sub_menu:
