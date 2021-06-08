@@ -340,6 +340,7 @@ export const query = graphql`
           edges {
             node {
               city
+              name
               meta_info {
                 slug
                 title
@@ -429,6 +430,7 @@ export const query = graphql`
               testimonials {
                 student_name
                 testimonial_date
+                include_in_marquee
                 hidden
                 linkedin_url
                 linkedin_text
@@ -439,9 +441,6 @@ export const query = graphql`
                       height: 14
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                    # fluid(maxHeight: 14){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 }
                 student_thumb{
@@ -451,9 +450,6 @@ export const query = graphql`
                       height: 200
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                    # fluid(maxHeight: 200){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 }
                 short_content
@@ -481,9 +477,6 @@ export const query = graphql`
                       width: 800
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                    # fluid(maxWidth: 800){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 } 
                 project_content
