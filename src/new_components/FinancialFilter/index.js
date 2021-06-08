@@ -153,12 +153,6 @@ const FinancialFilter = (props) => {
             />
           }
 
-          {/* <Link to={info.button.button_link}><Button width="fit-content" padding="13px" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link> */}
-
-          {/* 
-          SEARCH_BUTTON Maybe not necesary
-          <Button onClick={() => {}} width="fit-content" color={Colors.black} margin="10px 0" textColor={Colors.white}>{props.button_text}</Button> 
-          */}
         </Grid>
       </GridContainer>
 
