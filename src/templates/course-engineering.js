@@ -19,6 +19,7 @@ import Icon from '../new_components/Icon'
 import Testimonials from '../new_components/Testimonials';
 import Badges from '../new_components/Badges';
 import PricesAndPayment from '../new_components/PricesAndPayment';
+import Instructors from '../new_components/Instructors';
 
 
 
@@ -120,7 +121,8 @@ const Program = ({data, pageContext, yml}) => {
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
-
+    
+    <Instructors lang={courseDetails.course_instructors}/>
     <PricesAndPayment
       type={pageContext.slug}
       lang={pageContext.lang}
@@ -132,14 +134,11 @@ const Program = ({data, pageContext, yml}) => {
       paragraph={yml.prices.sub_heading}
     />
 
-    {/* <Container variant="fluid" background="linear-gradient(#f5f5f5, white)" height="425px" padding="48px 0 36px 0" margin="50px 0">
-      <Testimonials lang={data.allTestimonialsYaml.edges} />
-    </Container> */}
-
+    <Testimonials lang={data.allTestimonialsYaml.edges} />
     <OurPartners images={hiring.partners.images} marquee></OurPartners>
   </>
   )
-};
+};  
 
 export const query = graphql`
   query CourseEngineeringQuery($file_name: String!, $lang: String!) {
@@ -147,6 +146,24 @@ export const query = graphql`
       edges{
         node{
           seo_title
+          course_instructors {
+            header {
+              title
+              paragraph
+            }
+            instructors {
+              name
+              bio
+              github
+              linkedin
+              sub_title
+              image {
+                childImageSharp {
+                  gatsbyImageData(layout: CONSTRAINED width: 500 placeholder: NONE quality: 100 breakpoints:	[200, 340, 420, 490])
+                }
+              }
+            }
+          }
           header{
               title
               paragraph
@@ -280,6 +297,7 @@ export const query = graphql`
         }
       }
     }
+
     allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
       edges {
           node {
@@ -376,11 +394,12 @@ export const query = graphql`
       edges {
         node {
           heading
-    button_text
-    button_link
+          button_text
+          button_link
           testimonials {
             student_name
             testimonial_date
+            include_in_marquee
             hidden
             linkedin_url
             linkedin_text

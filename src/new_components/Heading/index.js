@@ -201,6 +201,7 @@ export const Paragraph = styled.p`
       width: ${props => props.width_tablet};
       font-size: ${props => props.fontSize_tablet};
       text-align: ${props => props.textAlign_tablet};
+      align-self: ${props => props.alignSelf_tablet};
       padding: ${props => props.padding_tablet};
       margin: ${props => props.margin_tablet};
     }

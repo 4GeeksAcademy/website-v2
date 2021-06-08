@@ -129,7 +129,7 @@ const Program = ({data, pageContext, yml}) => {
       paragraph={yml.prices.sub_heading}
     />
     <AlumniProjects title={yml.alumni.heading} paragraph={yml.alumni.sub_heading} lang={data.allAlumniProjectsYaml.edges} limit={2} />
-    {/* <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" /> */}
+    <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" />
     <OurPartners images={hiring.partners.images} marquee></OurPartners>
   </>
   )
@@ -319,6 +319,7 @@ export const query = graphql`
           testimonials {
             student_name
             testimonial_date
+            include_in_marquee
             hidden
             linkedin_url
             linkedin_text
