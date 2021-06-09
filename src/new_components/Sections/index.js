@@ -128,8 +128,8 @@ export const HR = styled.hr`
 `
 
 export const Div = styled.div`
-    flex: 0 0 ${props => (props.size / 12) * 100}%;
-    max-width: ${props => (props.size / 12) * 100}%;
+    flex: ${props => props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
+    max-width: ${props => props.size ? `${(props.size / 12) * 100}%` : null};
     grid-area: ${props => props.gridArea};
     grid-column: ${props => props.gridColumn};
     grid-row: ${props => props.gridRow};
@@ -195,8 +195,8 @@ export const Div = styled.div`
         
     }
     @media  ${Devices.tablet}{
-        flex: 0 0 ${props => (props.size_tablet / 12) * 100}%;
-        max-width: ${props => (props.size_tablet / 12) * 100}%;
+        flex: ${props => props.size_tablet ? `0 0 ${(props.size_tablet / 12) * 100}%` : null};
+        max-width: ${props => props.size_tablet ? `${(props.size_tablet / 12) * 100}%` : null};
         align-self: ${props => props.alignSelf_tablet};
         background: ${props => props.background_tablet};
         display: ${props => props.display_tablet};
@@ -229,8 +229,8 @@ export const Div = styled.div`
         
     }
     @media  ${Devices.md}{
-        flex: 0 0 ${props => (props.size_md / 12) * 100}%;
-        max-width: ${props => (props.size_md / 12) * 100}%;
+        flex: ${props => props.size_md ? `0 0 ${(props.size_md / 12) * 100}%` : null};
+        max-width: ${props => props.size_md ? `${(props.size_md / 12) * 100}%` : null};
         min-width: ${props => props.minWidth_lg};
         grid-area: ${props => props.gridArea_md};
         display: ${props => props.display_md};
@@ -268,27 +268,28 @@ export const Grid = styled(Div)`
     display: ${props => props.display || "grid"};
     direction: ${props => props.direction};
     
-    grid-template-columns: ${props => props.gridTemplateColumns ? `repeat(${props.gridTemplateColumns || "1, 1fr"})` : null};
-    grid-template-rows: repeat(${props => props.gridTemplateRows});
+    grid-template-columns: ${props => props.gridTemplateColumns ? `repeat(${props.gridTemplateColumns})` : `repeat(1, 1fr)`};
+    grid-template-rows: ${props => props.gridTemplateRows ? `repeat(${props.gridTemplateRows})` : null};
     grid-gap: ${props => props.gridGap || "15px"};
     grid-auto-rows: ${props => props.gridAutoRows};
     grid-column: ${props => props.gridColumn};
     justify-items: ${props => props.justifyItems};
+    
     justify-content: ${props => props.justifyContent};
     grid-template-areas: ${props => props.gridTemplateAreas};
     @media ${Devices.xxs}{
         grid-template-columns: ${props => props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     }
     @media ${Devices.xs}{
-        grid-template-columns: ${props => props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null };
+        grid-template-columns: ${props => props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
     }
     @media  ${Devices.sm}{
-        grid-template-columns: ${props => props.columns_sm ? `repeat(${props.columns_sm}, 1fr)` : null});
+        grid-template-columns: ${props => props.columns_sm ? `repeat(${props.columns_sm}, 1fr)` : null};
     }
     @media  ${Devices.tablet}{
         margin: ${props => props.margin_tablet};
         display: ${props => props.display_tablet || "grid"};
-        grid-template-columns: ${props => props.gridTemplateColumns_tablet ? `${props.gridTemplateColumns_tablet || "2fr repeat(12, 1fr) 2fr"}` : null};
+        grid-template-columns: ${props => props.gridTemplateColumns_tablet ? `${props.gridTemplateColumns_tablet}` : "2fr repeat(12, 1fr) 2fr"};
         grid-template-rows: ${props => props.gridTemplateRows_tablet ? `repeat(${props.gridTemplateRows_tablet})` : null};
         grid-gap: ${props => props.gridGap_tablet};
         grid-auto-rows: ${props => props.gridAutoRows_tablet};
@@ -315,7 +316,7 @@ export const Grid = styled(Div)`
 export const Old_Grid = styled.div`
     display: ${props => props.display || "grid"};
     grid-template-columns: ${props => props.columns ? `repeat(${props.columns}, 1fr)` : null};
-    grid-template-rows: ${props => props.rows ? `repeat(${props.rows || "auto"})` : null};
+    grid-template-rows: ${props => props.rows ? `repeat(${props.rows || "auto"})` : `repeat(auto)`};
     grid-gap: ${props => props.gridGap || "15px"};
     width: ${props => props.width};
     justify-self: ${props => props.justifySelf};
