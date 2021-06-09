@@ -122,7 +122,7 @@ const Program = ({data, pageContext, yml}) => {
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
     
-    <Instructors lang={courseDetails.course_instructors}/>
+    {/* <Instructors lang={courseDetails.course_instructors}/> */}
     <PricesAndPayment
       type={pageContext.slug}
       lang={pageContext.lang}
