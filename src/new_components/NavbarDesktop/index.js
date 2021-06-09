@@ -156,7 +156,7 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                     {menu && menu.map((item, index) => {
                         return (
                             <MenuItem key={index} onClick={() => setStatus({...status, toggle: !status.toggle, itemIndex: index})}>
-                                <H3 margin="0 5px 0 0" fontSize="13px" lineHeight="16px" fontWeight="400">
+                                <H3 type="h3" margin="0 5px 0 0" fontSize="13px" lineHeight="16px" fontWeight="400">
                                     {index == menu.length - 1 ? <Link to={item.link}>{item.name}</Link> : item.name}
                                 </H3>
                                 {index != menu.length - 1 && <Icon icon="arrowdown" />}

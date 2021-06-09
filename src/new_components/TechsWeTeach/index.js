@@ -100,6 +100,7 @@ const TechsWeTeach = ({lang}) => {
               return (
                 <GatsbyImage
                   key={i}
+                  draggable={false}
                   style={{height: "40px", minWidth: "40px", margin: "0 25px"}}
                   imgStyle={{objectFit: "contain"}}
                   alt={l.name}
