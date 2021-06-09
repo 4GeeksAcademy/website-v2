@@ -118,7 +118,7 @@ const PricesAndPayments = (props) => {
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   return (
-    <Fragment github="/location">
+    <Div github="/location" flexDirection="column" margin="50px 0" margin_tablet="70px 0">
       <GridContainer margin_tablet="0 0 25px 0">
         <Div
           display="flex"
@@ -228,7 +228,7 @@ const PricesAndPayments = (props) => {
       </GridContainer>
       <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
-    </Fragment >
+    </Div >
   )
 }
 export default (PricesAndPayments)

@@ -12,6 +12,7 @@ meta_info:
       "/es/part-time",
       "/es/course/part-time",
       "/es/full-stack",
+      "/es/coding-bootcamps/desarrollo-web-full-stack-bootcamp-full-time",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
       "/es/course/bootcamp-desarrollo-web-full-stack-part-time",
@@ -32,6 +33,26 @@ button:
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
   apply_button_link: "/es/aplica"
   
+course_instructors: 
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    - name: "Roldolfo Campos"
+      sub_title: "Co fundador de 4geeks y director de educación"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+    - name: "Gabriel Salinas"
+      sub_title: "Sophisticated Software Systems Engineer"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware"
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
 badges:
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
 

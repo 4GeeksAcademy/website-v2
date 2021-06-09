@@ -7,6 +7,7 @@ import Select from '../new_components/Select'
 import UpcomingDates from '../new_components/UpcomingDates'
 import Card from '../components/Card'
 import {ZoomOut} from "../components/Animations"
+import {getCohorts, getEvents} from "../actions"
 import BaseRender from './_baseLayout'
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
@@ -72,10 +73,9 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
-      let cohorts = await resp.json();
-      let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
-      let events = await resp2.json();
+      let cohorts = await getCohorts();
+      let events = await getEvents();
+
       let _types = []
       for (let i = 0; i < events.length; i++) {
         if (events[i].event_type && !_types.includes(events[i].event_type.name)) {

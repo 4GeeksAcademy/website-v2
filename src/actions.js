@@ -222,3 +222,26 @@ export const outcomesReport = async (data,session) => {
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['download_outcome'], ['download_outcome'], session);
     return true;
 }
+
+export const getCohorts = async (_query = {}) => {
+    let query = {
+        upcoming: true,
+        sort: 'kickoff_date',
+        academy: _query.academy ? `online,${_query.academy}` : undefined,
+        ..._query
+    }
+    query = Object.keys(query).filter(key => query[key] && query[key] != undefined).map(key => key + "=" + query[key]).join("&")
+    console.log("query", query)
+    var resp = resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?${query}`)
+    return await resp.json();
+}
+
+export const getEvents = async (_query = {}) => {
+    let query = {
+        // sort: 'kickoff_date',
+        ..._query
+    }
+    query = Object.keys(query).filter(key => query[key] && query[key] != undefined).map(key => key + "=" + query[key]).join("&")
+    const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all?${query}`);
+    return await resp.json();
+}

@@ -1,18 +1,18 @@
 meta_info:
-  slug: "coding-bootcamp-mexico"
-  title: "4Geeks Academy in Mexico, Mexico City"
+  slug: "coding-bootcamp-bolivia"
+  title: "4Geeks Academy in Bolivia, La Paz"
   position: 5
-  description: "Get to know here all about our coding bootcamp campus in Mexico, Mexico City of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Bolivia, La Paz of 4Geeks Academy"
   image: ""
   keywords: ""
   # it will not show up on the applications forms
   unlisted: false
-  redirects: ["/us/mexico", "/mexico"]
+  redirects: ["/us/bolivia", "/bolivia"]
 
-seo_title: "Coding Bootcamp Mexico"
+seo_title: "Coding Bootcamp Bolivia"
 header:
-  tagline: "4Geeks Academy in Mexico"
-  paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Mexico with over 1,000 graduates"
+  tagline: "4Geeks Academy in Bolivia"
+  paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Bolivia with over 1,000 graduates"
   image: "../../../static/images/locations/online-home.png"
   alt: ""
 button_header:
@@ -38,13 +38,13 @@ Chosen as one of the top 35 coding bootcamps of the world and the top coding boo
 
 A community built for developers ."
 news:
-  title: "4Geeks Academy Mexico in the news..."
+  title: "4Geeks Academy Bolivia in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
 
 info_box:
-  heading: "Find us in Mexico"
-  address: "Only remotely in Mexico"
+  heading: "Find us in Bolivia"
+  address: "Only remotely in Bolivia"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   phone: "(506) 8692 8372"
@@ -52,7 +52,7 @@ info_box:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Academy classes in Mexico are only being taught online until further notice; Any 4Geeks in-person campus is always located in very centric locations with nearby subway or public transportation systems at the most popular areas of the city."
+  content: "4Geeks Academy classes in Bolivia are only being taught online until further notice; Any 4Geeks in-person campus is always located in very centric locations with nearby subway or public transportation systems at the most popular areas of the city."
   images: null
     # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
     #   alt: "mcbo-chinita"
@@ -146,7 +146,7 @@ prices:
           sub_heading: ""
         content:
           price: "Part-Time modality is not available"
-          price_info: "Mexico City - Mexico"
+          price_info: "La Paz - Bolivia"
         button:
           button_text: "Apply another courses"
 
@@ -161,7 +161,7 @@ prices:
           sub_heading: ""
         content:
           price: "Full-Time modality is not available"
-          price_info: "Mexico City - Mexico"
+          price_info: "La Paz - Bolivia"
         button:
           button_text: "Apply another courses"
 
@@ -177,7 +177,7 @@ prices:
           sub_heading: ""
         content:
           price: "Part-Time modality is not available"
-          price_info: "Mexico City - Mexico"
+          price_info: "La Paz - Bolivia"
         button:
           button_text: "Apply another courses"
 
@@ -192,23 +192,23 @@ prices:
           sub_heading: ""
         content:
           price: "Full-Time modality is not available"
-          price_info: "Mexico City - Mexico"
+          price_info: "La Paz - Bolivia"
         button:
           button_text: "Apply another courses"
 
-active_campaign_location_slug: "mexico-city"
-breathecode_location_slug: "mexico-city"
+active_campaign_location_slug: "lapaz-bolivia"
+breathecode_location_slug: "lapaz-bolivia"
 gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Mexico City"
-name: "Mexico"
-latitude: "21.295452"
-longitude: "-100.810747"
+city: "La Paz"
+name: "Bolivia"
+latitude: "-34.098799"
+longitude: "-56.216998"
 address: ""
 zip_code: ""
 state: ""
-country: "Mexico"
+country: "Bolivia"
 socials:
   - social_name: "Facebook"
     social_link: "https://www.facebook.com/4geeksacademy"
@@ -227,5 +227,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Mexico"
+value: "Bolivia"
 defaultLanguage: "es" # All lead marketing communications will arrive on this language
