@@ -15,28 +15,6 @@ import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const positions = [{
-  colPosition: "1 / 6",
-  rowPosition: "1/3"
-},
-{
-  colPosition: "6 / 9",
-  rowPosition: "1/3"
-},
-{
-  colPosition: "1 / 4",
-  rowPosition: "3/4"
-},
-{
-  colPosition: "1 / 4",
-  rowPosition: "5/4"
-},
-{
-  colPosition: "4/9",
-  rowPosition: "3/4"
-}
-]
-
 const MapFrame = lazy(() => import('../new_components/MapFrame'));
 
 const Location = ({data, pageContext, yml}) => {
