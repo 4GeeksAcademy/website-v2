@@ -132,7 +132,7 @@ const Apply = (props) => {
                         }
                         else {
                             setFormStatus({status: "loading", msg: "Loading..."});
-                            apply({...formData, course: formData.course.value}, session)
+                            apply({...formData, course: formData.course.value, location: formData.location.value }, session)
                                 .then(data => {
                                     if (typeof (data.error) !== "undefined") {
                                         setFormStatus({status: "error", msg: "Fix errors"});
@@ -220,7 +220,9 @@ const Apply = (props) => {
                                 options={locations && locations}
                                 value={formData.location.value}
                                 placeholder={yml.locations_title}
-                                onChange={(value, valid) => setVal({...formData, location: {value: value.active_campaign_location_slug, valid}})}
+                                onChange={(value, valid) => {
+                                    setVal({...formData, location: {value, valid}})
+                                }}
                             />
                         </Div>
                         <Input border="1px solid hsl(0,0%,80%)" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}

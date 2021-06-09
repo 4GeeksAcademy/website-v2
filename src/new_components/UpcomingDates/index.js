@@ -8,6 +8,7 @@ import Select from '../Select'
 import 'dayjs/locale/de'
 import Icon from '../Icon';
 import LazyLoad from 'react-lazyload';
+import { getCohorts } from "../../actions"
 import {SessionContext} from '../../session'
 
 const info = {
@@ -92,18 +93,10 @@ const UpcomingDates = ({lang, location, message}) => {
     let content = dataQuery.allUpcomingDatesYaml.edges.find(({node}) => node.fields.lang === lang);
     if (content) content = content.node;
     else return null;
+
     useEffect(() => {
         const getData = async () => {
-            var resp = null;
-            if (location) {
-                // resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true&academy=${location}`)
-                resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=online,${location}`)
-            }
-            else {
-                resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
-            }
-            // let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
-            let cohorts = await resp.json();
+            const cohorts = await getCohorts({ academy: location });
             setData(oldData => ({
                 cohorts: {catalog: oldData.cohorts.catalog, all: cohorts, filtered: cohorts}
             }))
