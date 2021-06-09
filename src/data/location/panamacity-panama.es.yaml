@@ -7,7 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   unlisted: false
   keywords: "Coding Bootcamp Campus Panamá"
-  redirects: ["/es/coding-campus/bootcamp-programacion-panama"]
+  redirects: ["/coding-campus/bootcamp-programacion-panama"]
 
 seo_title: "Aprende a programar en Panamá"
 header:
