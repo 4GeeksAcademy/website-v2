@@ -269,7 +269,8 @@ export const Grid = styled(Div)`
     overflow: ${props => props.overflow};
     display: ${props => props.display || "grid"};
     direction: ${props => props.direction};
-    grid-template-columns: repeat(${props => props.gridTemplateColumns || "1, 1fr"});
+    
+    grid-template-columns: ${props => props.gridTemplateColumns ? `repeat(${props.gridTemplateColumns || "1, 1fr"})` : null};
     grid-template-rows: repeat(${props => props.gridTemplateRows});
     grid-gap: ${props => props.gridGap || "15px"};
     grid-auto-rows: ${props => props.gridAutoRows};
@@ -277,21 +278,20 @@ export const Grid = styled(Div)`
     justify-items: ${props => props.justifyItems};
     justify-content: ${props => props.justifyContent};
     grid-template-areas: ${props => props.gridTemplateAreas};
-    
     @media ${Devices.xxs}{
-        grid-template-columns: repeat(${props => props.columns_xxs}, 1fr);
+        grid-template-columns: ${props => props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     }
     @media ${Devices.xs}{
-        grid-template-columns: repeat(${props => props.columns_xs}, 1fr);
+        grid-template-columns: ${props => props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null };
     }
     @media  ${Devices.sm}{
-        grid-template-columns: repeat(${props => props.columns_sm}, 1fr);
+        grid-template-columns: ${props => props.columns_sm ? `repeat(${props.columns_sm}, 1fr)` : null});
     }
     @media  ${Devices.tablet}{
         margin: ${props => props.margin_tablet};
         display: ${props => props.display_tablet || "grid"};
-        grid-template-columns: ${props => props.gridTemplateColumns_tablet || "2fr repeat(12, 1fr) 2fr"};
-        grid-template-rows: repeat(${props => props.gridTemplateRows_tablet});
+        grid-template-columns: ${props => props.gridTemplateColumns_tablet ? `${props.gridTemplateColumns_tablet || "2fr repeat(12, 1fr) 2fr"}` : null};
+        grid-template-rows: ${props => props.gridTemplateRows_tablet ? `repeat(${props.gridTemplateRows_tablet})` : null};
         grid-gap: ${props => props.gridGap_tablet};
         grid-auto-rows: ${props => props.gridAutoRows_tablet};
         grid-column: ${props => props.gridColumn_tablet};
@@ -302,7 +302,7 @@ export const Grid = styled(Div)`
     @media  ${Devices.md}{
         margin: ${props => props.margin_md};
         grid-template-columns: ${props => props.gridTemplateColumns_md};
-        grid-template-rows: repeat(${props => props.gridTemplateRows_md});
+        grid-template-rows: ${props => props.gridTemplateRows_md ? `repeat(${props.gridTemplateRows_md})` : null};
         grid-gap: ${props => props.gridGap_md};
         grid-column: ${props => props.gridColumn_md};
     }
