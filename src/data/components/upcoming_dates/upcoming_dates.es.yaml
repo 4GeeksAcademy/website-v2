@@ -7,7 +7,7 @@ info:
   date:
   program_label: programas
   location_label: sede
-  duration_label: duracion
+  duration_label: duración
   duration_weeks: 16 semanas
   button_text: aplicar
   button_link: "/es/aplica"
