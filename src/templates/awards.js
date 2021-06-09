@@ -75,7 +75,7 @@ const Awards = ({data, pageContext, yml}) => {
                                     // durationFadeIn={0}
                                     // alt={l.name}
                                     // fluid={m.image.childImageSharp.fluid}
-                                    image={getImage(m.image.childImageSharp.fluid)}
+                                    image={getImage(m.image.childImageSharp.gatsbyImageData)}
                                 />
                                 <Div flexDirection="column" width="100%">
                                     <H3 textAlign_tablet="left" margin="49px 0 0 " margin_tablet="0">{m.title}</H3>
