@@ -153,10 +153,6 @@ export const query = graphql`
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     breakpoints:	[200, 340, 520, 890]
                   )
-
-                  # fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
            
@@ -264,10 +260,6 @@ export const query = graphql`
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                       )
 
-                      # fluid(maxWidth: 150){
-                      #   # ...GatsbyImageSharpFluid_withWebp  #(with blur effect)
-                      #   ...GatsbyImageSharpFluid_withWebp_noBase64 # Without Blur effect
-                      # }
                     }
                   }
                   featured
@@ -283,9 +275,6 @@ export const query = graphql`
                         width: 100
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                       )
-                      # fluid(maxWidth: 100){
-                      #   ...GatsbyImageSharpFluid_withWebp
-                      # }
                     }
                   }
                   featured
@@ -323,9 +312,6 @@ export const query = graphql`
                         width: 100
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                       )
-                      # fluid(maxWidth: 100){
-                      #   ...GatsbyImageSharpFluid_withWebp
-                      # }
                     }
                   }
                   featured
@@ -362,10 +348,6 @@ export const query = graphql`
                       width: 800
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-
-                    # fluid(maxWidth: 800){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 } 
               }
@@ -408,9 +390,6 @@ export const query = graphql`
                         width: 100
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                       )
-                      # fluid(maxWidth: 100){
-                      #   ...GatsbyImageSharpFluid_withWebp
-                      # }
                     }
                   } 
                   alt
@@ -566,50 +545,5 @@ export const query = graphql`
         }
       }
       `;
-// ...GatsbyImageSharpFluidLimitPresentationSize # It avoid stretched images
 
 export default BaseRender(Home);
-
-      // {/* <Container variant="fluid" margin="28px 0" padding_md="0 0 0 171px" >
-      //         <Grid columns_md="2" >
-      //           <Div gridArea_md="1/2/1/7" flexDirection="column" justifyContent_md="start" padding_md="70px 0 0 0">
-      //             <CityH1 yml={yml} />
-      //             {/* <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1> */}
-      //             <H2 textAlign_md="left" fontSize="50px" lineHeight="60px">{`${yml.header_data.title}`}</H2>
-      //             <Paragraph textAlign_md="left" margin="26px 0">{yml.header_data.sub_heading} </Paragraph>
-      //             {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
-//                     <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
-//             <ChooseProgram
-//               right="15px"
-//               top="40px"
-//               // margin="40px 0"
-//               textAlign="center"
-//               textAlign_md="left"
-//               programs={data.allChooseProgramYaml.edges[0].node.programs}
-//               openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-//               closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-//             />
-//             <News lang={pageContext.lang} limit={yml.news.limit} />
-//           </Div>
-//           {/* <Div>
-//             <Img
-//               style={{height: "623px"}}
-//               imgStyle={{objectFit: "contain"}}
-//               alt="4Geeks Academy"
-//               loading="eager"
-//               fadeIn={false}
-//               fluid={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-//               backgroundSize={`cover`}
-//             />
-//           </Div> */}
-//           <Div gridArea_md="1/7/1/13" display="none" display_md="flex" height="auto" width="100%">
-//             <StyledBackgroundSection
-//               height={`623px`}
-//               width="100%"
-//               image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-//               bgSize={`contain`}
-//             // alt={yml.header.alt}
-//             />
-//           </Div>
-//         </Grid>
-//       </Container> */}

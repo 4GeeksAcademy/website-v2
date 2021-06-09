@@ -97,6 +97,7 @@ const UpcomingDates = ({lang, location, message}) => {
     useEffect(() => {
         const getData = async () => {
             const cohorts = await getCohorts({ academy: location });
+            console.log("cohorts upcoming", cohorts)
             setData(oldData => ({
                 cohorts: {catalog: oldData.cohorts.catalog, all: cohorts, filtered: cohorts}
             }))
@@ -153,9 +154,9 @@ const UpcomingDates = ({lang, location, message}) => {
                             <Div flexDirection_tablet="column" width_tablet="15%" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
                                 <H4 textAlign="left" textTransform="uppercase" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">{dayjs(m.kickoff_date).format("MMMM")}</H4>
                                 <Paragraph textAlign="left" fontWeight="700">{`
-                                ${lang === "us" ? dayjs(m.kickoff_date).add(5, "hour").locale("en").format("MM/DD") : dayjs(m.kickoff_date).add(5, "hour").locale("es").format("DD/MM")} 
+                                ${lang === "us" ? dayjs(m.kickoff_date).locale("en").format("MM/DD") : dayjs(m.kickoff_date).locale("es").format("DD/MM")} 
                                 ${lang === "us" ? " to ": " al "} 
-                                ${lang === "us" ? dayjs(m.ending_date).add(5, "hour").locale("en").format("MM/DD") : dayjs(m.ending_date).add(5, "hour").locale("es").format("DD/MM")}
+                                ${lang === "us" ? dayjs(m.ending_date).locale("en").format("MM/DD") : dayjs(m.ending_date).locale("es").format("DD/MM")}
                                 `}
                                 </Paragraph>
                             </Div>
