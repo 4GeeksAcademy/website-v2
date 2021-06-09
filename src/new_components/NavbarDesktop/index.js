@@ -39,19 +39,19 @@ const MegaMenuPositions = [
     {
         top: "",
         left: "50%",
-        leftTriangle: "40%",
+        leftTriangle: "35%",
         transform: "translateX(-480px)"
     },
     {
         top: "",
         left: "50%",
-        leftTriangle: "50%",
+        leftTriangle: "32%",
         transform: "translateX(-280px)"
     },
     {
         top: "",
         left: "50%",
-        leftTriangle: "50%",
+        leftTriangle: "26%",
         transform: "translateX(-150px)"
     },
 ]
@@ -99,6 +99,7 @@ const MenuItem = styled.li`
 `
 
 export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange}) => {
+    console.log("CURRENT_URL", currentURL)
     const {session, setSession} = useContext(SessionContext);
     const [status, setStatus] = useState(
         {
@@ -106,6 +107,12 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
             hovered: false,
             itemIndex: null
         })
+
+    console.log("SESSION_PATH", session?.pathsDictionary)
+
+    console.log("CURRENT_PATH-URL:::", session?.pathsDictionary ? session?.pathsDictionary[currentURL] : "que pasa?")
+
+    console.log("Language_Button", languageButton.link)
     const data = useStaticQuery(graphql`
     query {
       allChooseProgramYaml {
@@ -167,6 +174,7 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                     <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
+                    {/* TODO: Issue here bug when change language in home */}
                     <Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
                         <Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph>
                     </Link>

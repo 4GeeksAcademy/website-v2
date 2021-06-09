@@ -87,8 +87,9 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
     var longitude = null;
     var langDestination = null;
     var pathsDictionary = {
-        "/": "/es/inicio",
+        
         "/us/index": "/es/inicio",
+        // "/es/inicio": "/us/index",
         "/us/partners": "/es/alianzas",
         "/us/apply": "/es/aplica",
         "/us/awards": "/es/premios",
@@ -112,7 +113,7 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
         "/us/terms-conditions": "/es/terminos",
         "/us/the-academy": "/es/sobre-la-academia",
         "/us/why-4geeks": "/es/porque-4geeks",
-        "/us/coding-bootcamps/part-time-full-stack-developer": "/es/coding-bootcamps/full-stack-part-time",
+        "/us/coding-bootcamps/full-time-full-stack-developer": "/es/coding-bootcamps/full-stack-full-time",
         "/us/coding-bootcamps/part-time-full-stack-developer": "/es/coding-bootcamps/full-stack-part-time",
         "/us/coding-campus/coding-bootcamp-caracas": "/es/coding-campus/bootcamp-programacion-caracas",
         "/us/coding-campus/coding-bootcamp-madrid": "/es/coding-campus/bootcamp-programacion-madrid",
@@ -129,8 +130,9 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
         "/es/coding-campus/bootcamp-programacion-madrid": "/us/coding-campus/coding-bootcamp-madrid",
         "/es/coding-campus/bootcamp-programacion-caracas": "/us/coding-campus/coding-bootcamp-caracas",
         "/es/coding-bootcamps/full-stack-part-time": "/us/coding-bootcamps/part-time-full-stack-developer",
-        "/es/coding-bootcamps/full-stack-part-time": "/us/coding-bootcamps/part-time-full-stack-developer",
+        "/es/coding-bootcamps/full-stack-full-time": "/us/coding-bootcamps/full-time-full-stack-developer",
         "/es/alianzas": "/us/partners",
+        "/": "/es/inicio",
         "/es/aplica": "/us/apply",
         "/es/premios": "/us/awards",
         "/es/blog-en-espanol": "/us/blog",

@@ -121,7 +121,7 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
             <Nav display_md="none" display="flex">
                 <Div alignItems="center">
                     <BurgerIcon style={{marginRight: "16px", cursor: "pointer"}} onClick={() => setStatus({...status, toggle: !status.toggle})} />
-                    <Link to={'/'}>
+                    <Link to={lang == "es" ? "/es/inicio" : "/"}>
                         <GatsbyImage
                             // fadeIn={false}
                             loading="eager"
