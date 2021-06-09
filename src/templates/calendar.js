@@ -167,9 +167,9 @@ const Calendar = (props) => {
                 <Div flexDirection_tablet="column" width_tablet="15%" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
                   <H4 textAlign="left" textTransform="uppercase" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">{dayjs(m.kickoff_date).locale(`${pageContext.lang === "us" ? "en" : "es"}`).format("MMMM")}</H4>
                   <Paragraph textAlign="left" fontWeight="700">{`
-                      ${pageContext.lang === "us" ? dayjs(m.kickoff_date).add(5, "hour").locale("en").format("MM/DD") : dayjs(m.kickoff_date).add(5, "hour").locale("es").format("DD/MM")} 
+                      ${pageContext.lang === "us" ? dayjs(m.kickoff_date).locale("en").format("MM/DD") : dayjs(m.kickoff_date).locale("es").format("DD/MM")} 
                       ${dateText[pageContext.lang]}
-                      ${pageContext.lang === "us" ? dayjs(m.ending_date).add(5, "hour").locale("en").format("MM/DD") : dayjs(m.ending_date).add(5, "hour").locale("es").format("DD/MM")}
+                      ${pageContext.lang === "us" ? dayjs(m.ending_date).locale("en").format("MM/DD") : dayjs(m.ending_date).locale("es").format("DD/MM")}
                   `}</Paragraph>
                 </Div>
                 <Div flexDirection="column" width_tablet="35%" margin="0 0 20px 0">
@@ -260,7 +260,7 @@ const Calendar = (props) => {
                   </LazyLoad>
                   <Div padding="25px" flexDirection="column">
                     <H3 textAlign="left" margin_tablet="0 0 45px 0" margin="0 0 30px 0">{m.title}</H3>
-                    <H4 textAlign="left" fontSize="15px" fontWeight="700" textTransform="uppercase" lineHeight="22px" >{dayjs(m.starting_at).add(5, "hour").locale("en").format("ddd, DD MMM YYYY")}</H4>
+                    <H4 textAlign="left" fontSize="15px" fontWeight="700" textTransform="uppercase" lineHeight="22px" >{dayjs(m.starting_at).locale(pageContext.lang == "es" ? "es" : "en").format("ddd, DD MMM YYYY")}</H4>
                     <H4 textAlign="left" fontSize="15px" textTransform="uppercase" lineHeight="22px" margin_tablet="0 0 25px 0" margin="0 0 15px 0">
                       {m.online_event ? "Online" : m.academy.city ? m.academy.city.name : m.academy.name}
                     </H4>
