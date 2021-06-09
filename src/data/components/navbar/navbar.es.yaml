@@ -15,7 +15,7 @@ navbar:
             - text: "Part Time"
               link: "/es/coding-bootcamps/full-stack-part-time"
             - text: "Full Time"
-              link: ""
+              link: "/es/coding-bootcamps/full-stack-full-time"
 
         - title: "Software Engineer"
           level: "Nivel 2"
