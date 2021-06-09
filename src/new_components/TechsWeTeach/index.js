@@ -6,7 +6,7 @@ import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading'
 import {Colors, StyledBackgroundSection} from '../Styling';
 import Icon from '../Icon';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
+import Marquee_v2 from '../Marquee_v2';
 
 const TechsWeTeach = ({lang}) => {
   const data = useStaticQuery(graphql`
@@ -89,20 +89,28 @@ const TechsWeTeach = ({lang}) => {
         {/* ?icons */}
       </GridContainerWithImage >
       <GridContainer fluid background={Colors.lightYellow} margin_tablet="0 0 68px 0" margin="0 0 35px 0">
-        <Div className="badge-slider" justifyContent="center" padding="44px 0" style={{borderTop: `1px solid ${Colors.lightGray}`}}>
-          {Array.isArray(content.tech_list) && content.tech_list.map((l, i) => {
-            return (
-              <GatsbyImage
-                key={i}
-                style={{height: "40px", minWidth: "40px", margin: "0 25px"}}
-                imgStyle={{objectFit: "contain"}}
-                alt={l.name}
-                // fluid={l.image != null && l.image.childImageSharp.fluid}
-                image={getImage(l.image != null && l.image.childImageSharp.gatsbyImageData)}
-              />
-            )
-          })}
-        </Div>
+        <Marquee_v2
+          speed={1.5}
+          reverse={false}
+          containerStyle={{height: "160px"}}
+        >
+          <Div className="badge-slider" justifyContent="center" padding="44px 0" style={{borderTop: `1px solid ${Colors.lightGray}`}}>
+          {/* <> */}
+            {Array.isArray(content.tech_list) && content.tech_list.map((l, i) => {
+              return (
+                <GatsbyImage
+                  key={i}
+                  style={{height: "40px", minWidth: "40px", margin: "0 25px"}}
+                  imgStyle={{objectFit: "contain"}}
+                  alt={l.name}
+                  // fluid={l.image != null && l.image.childImageSharp.fluid}
+                  image={getImage(l.image != null && l.image.childImageSharp.gatsbyImageData)}
+                />
+              )
+            })}
+          {/* </> */}
+          </Div>
+        </Marquee_v2>
       </GridContainer>
 
     </>
