@@ -73,10 +73,8 @@ const Calendar = (props) => {
   useEffect(() => {
     const getData = async () => {
       let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
-      // let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
       let cohorts = await resp.json();
       let resp2 = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all`);
-      // let resp2 = await fetch(`https://breathecode.herokuapp.com/v1/events/all`);
       let events = await resp2.json();
       let _types = []
       for (let i = 0; i < events.length; i++) {
