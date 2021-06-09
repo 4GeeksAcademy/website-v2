@@ -171,6 +171,7 @@ export const query = graphql`
               description
               image
               keywords
+              position
               redirects
             }
             header{
