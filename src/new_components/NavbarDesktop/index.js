@@ -108,11 +108,6 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
             itemIndex: null
         })
 
-    console.log("SESSION_PATH", session?.pathsDictionary)
-
-    console.log("CURRENT_PATH-URL:::", session?.pathsDictionary ? session?.pathsDictionary[currentURL] : "que pasa?")
-
-    console.log("Language_Button", languageButton.link)
     const data = useStaticQuery(graphql`
     query {
       allChooseProgramYaml {
