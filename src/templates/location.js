@@ -175,8 +175,6 @@ const Location = ({data, pageContext, yml}) => {
             />)
         })}
       </GridContainer>
-
-
     }
     <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />

@@ -52,6 +52,11 @@ const locationText = {
   us: "or",
   es: "o"
 }
+
+const dateText = {
+  us: "to",
+  es: "al"
+}
 const Calendar = (props) => {
   const {pageContext, yml, data} = props;
   const [limit, setLimit] = useState(true);
@@ -165,7 +170,7 @@ const Calendar = (props) => {
                   <H4 textAlign="left" textTransform="uppercase" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">{dayjs(m.kickoff_date).locale(`${pageContext.lang === "us" ? "en" : "es"}`).format("MMMM")}</H4>
                   <Paragraph textAlign="left" fontWeight="700">{`
                       ${pageContext.lang === "us" ? dayjs(m.kickoff_date).add(5, "hour").locale("en").format("MM/DD") : dayjs(m.kickoff_date).add(5, "hour").locale("es").format("DD/MM")} 
-                      ${pageContext.lang === "us" ? " to ": " al "} 
+                      ${dateText[pageContext.lang]}
                       ${pageContext.lang === "us" ? dayjs(m.ending_date).add(5, "hour").locale("en").format("MM/DD") : dayjs(m.ending_date).add(5, "hour").locale("es").format("DD/MM")}
                   `}</Paragraph>
                 </Div>

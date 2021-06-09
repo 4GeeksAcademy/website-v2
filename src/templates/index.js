@@ -89,7 +89,7 @@ const Home = (props) => {
 
   return (
     <>
-      <GridContainerWithImage padding_tablet="0" columns_tablet="2" margin="120px 0 71px 0" margin_tablet="120px 0 108px 0" >
+      <GridContainerWithImage padding_tablet="0" columns_tablet="2" margin="72px 0 71px 0" margin_tablet="72px 0 108px 0" >
         <Div flexDirection="column" justifyContent_tablet="evenly" alignItems="center" alignItems_tablet="start">
           <Div flexDirection="column" alignItems="center" alignItems_tablet="start">
             <CityH1 yml={yml} />

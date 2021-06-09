@@ -168,6 +168,7 @@ const UpcomingDates = ({lang, location, message}) => {
                             </Div>
                             <Div flexDirection="column" width_tablet="35%" margin="0 0 20px 0">
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.program_label}</H4>
+                                
                                 <Link to={info[lang][m.syllabus.certificate.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph></Link>
                             </Div>
                             <Div flexDirection="column" display="none" display_tablet="flex" >
@@ -176,9 +177,10 @@ const UpcomingDates = ({lang, location, message}) => {
                                     <Link to={locations[lang][m.academy.slug] || ""}>
                                         <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
                                     </Link>
-                                    {m.academy.slug != "online" && <Link to={locations[lang]['online'] || ""}>
-                                        <Paragraph textAlign="left" margin="0 0 0 3px" color={Colors.blue}>{`${locationText[lang]} Online`}</Paragraph>
-                                    </Link>}
+
+                                    {m.academy.slug != "online" && <Paragraph textAlign="left" margin="0 0 0 3px">
+                                       {locationText[lang]} <Link color={Colors.blue} to={locations[lang]['online'] || ""}>{`Online`}</Link>
+                                    </Paragraph>}
                                 </Div>
                             </Div>
                             <Div flexDirection="column" display="none" display_tablet="flex">
