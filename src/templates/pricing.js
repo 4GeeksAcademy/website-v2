@@ -25,9 +25,6 @@ const Pricing = (props) => {
     location = data.allLocationYaml.edges.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
     if (location) location = location.node;
   }
-
-  console.log("YML::::::", yml)
-  console.log("HEADERDATA::::::", yml.header)
   return (
     <>
       {/* HEADER SECTION */}
