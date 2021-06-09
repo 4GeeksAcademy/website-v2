@@ -97,6 +97,7 @@ const UpcomingDates = ({lang, location, message}) => {
     useEffect(() => {
         const getData = async () => {
             const cohorts = await getCohorts({ academy: location });
+            console.log("cohorts upcoming", cohorts)
             setData(oldData => ({
                 cohorts: {catalog: oldData.cohorts.catalog, all: cohorts, filtered: cohorts}
             }))

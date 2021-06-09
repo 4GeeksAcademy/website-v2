@@ -6,6 +6,7 @@ import {Button, Colors, RoundImage, StyledBackgroundSection} from '../Styling'
 import Icon from "../Icon"
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
+import { getCohorts } from "../../actions"
 import {SessionContext} from '../../session.js'
 import Link from 'gatsby-link'
 
@@ -35,9 +36,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
   });
   useEffect(() => {
     const getData = async () => {
-      let resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true`);
-      // let resp = await fetch(`https://breathecode.herokuapp.com/v1/admissions/cohort/all?upcoming=true`);
-      let cohorts = await resp.json();
+      const cohorts = await getCohorts();
       let _types = []
       setData(oldData => ({
         cohorts: {catalog: oldData.cohorts.catalog, all: cohorts, filtered: cohorts}

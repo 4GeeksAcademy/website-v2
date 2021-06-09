@@ -227,8 +227,8 @@ export const getCohorts = async (_query = {}) => {
     let query = {
         upcoming: true,
         sort: 'kickoff_date',
+        ..._query,
         academy: _query.academy ? `online,${_query.academy}` : undefined,
-        ..._query
     }
     query = Object.keys(query).filter(key => query[key] && query[key] != undefined).map(key => key + "=" + query[key]).join("&")
     console.log("query", query)
