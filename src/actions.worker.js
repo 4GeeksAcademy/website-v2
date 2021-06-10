@@ -1,4 +1,5 @@
 import {defaultSession, locByLanguage} from "./actions"
+const langSwitcherDictionary = require("./utils/langSwitcherData.json")
 
 const GOOGLE_KEY = "AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c"
 
@@ -82,37 +83,13 @@ const getClosestLoc = (locations, lat, lon) => {
 }
 
 export const initSession = async (locationsArray, storedSession, seed = {}) => {
+    console.log("DICTIONARY JSON:::", pathsDictionary)
     var v4 = null;
     var latitude = null;
     var longitude = null;
     var langDestination = null;
     var pathsDictionary = {
-        
-        "/us/index": "/es/inicio",
-        // "/es/inicio": "/us/index",
-        "/us/partners": "/es/alianzas",
-        "/us/apply": "/es/aplica",
-        "/us/awards": "/es/premios",
-        "/us/blog": "/es/blog-en-espanol",
-        "/us/next-dates": "/es/proximas-fechas",
-        "/us/contact": "/es/contacto",
-        "/us/cookies": "/es/cookie",
-        "/us/faq": "/es/preguntas-frecuentes",
-        "/us/financials": "/es/financiacion",
-        "/us/geekforce-career-support": "/es/geekforce",
-        "/us/geekpal-support": "/es/geekpal",
-        "/us/geeks-vs-others": "/es/geeks-vs-otros",
-        "/us/graduates": "/es/graduados",
-        "/us/jobs": "/es/empleo",
-        "/us/outcomes": "/es/resultados",
-        "/us/press": "/es/prensa",
-        "/us/pricing": "/es/precio",
-        "/us/privacy-policy": "/es/privacidad",
-        "/us/students-and-projects": "/es/alumnos-y-proyectos",
-        "/us/testimonials": "/es/testimonios",
-        "/us/terms-conditions": "/es/terminos",
-        "/us/the-academy": "/es/sobre-la-academia",
-        "/us/why-4geeks": "/es/porque-4geeks",
+        ...langSwitcherDictionary,
         "/us/coding-campus/online-coding-bootcamp": "/es/coding-campus/online-bootcamp-programacion",
         "/us/coding-bootcamps/full-time-full-stack-developer": "/es/coding-bootcamps/full-stack-full-time",
         "/us/coding-bootcamps/part-time-full-stack-developer": "/es/coding-bootcamps/full-stack-part-time",
@@ -133,34 +110,6 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
         "/es/coding-bootcamps/full-stack-part-time": "/us/coding-bootcamps/part-time-full-stack-developer",
         "/es/coding-bootcamps/full-stack-full-time": "/us/coding-bootcamps/full-time-full-stack-developer",
         "/es/coding-campus/online-bootcamp-programacion": "/us/coding-campus/online-coding-bootcamp",
-        "/es/alianzas": "/us/partners",
-        "/": "/es/inicio",
-        "/es/aplica": "/us/apply",
-        "/es/premios": "/us/awards",
-        "/es/blog-en-espanol": "/us/blog",
-        "/es/proximas-fechas": "/us/next-dates",
-        "/es/contacto": "/us/contact",
-        "/es/cookie": "/us/cookies",
-        "/es/preguntas-frecuentes": "/us/faq",
-        "/es/financiacion": "/us/financials",
-        "/es/geekforce": "/us/geekforce-career-support",
-        "/es/geekpal": "/us/geekpal-support",
-        "/es/geeks-vs-otros": "/us/geeks-vs-others",
-        "/es/graduados": "/us/graduates",
-        "/es/empleo": "/us/jobs",
-        "/es/resultados": "/us/outcomes",
-        "/es/prensa": "/us/press",
-        "/es/precio": "/us/pricing",
-        "/es/privacidad": "/us/privacy-policy",
-        "/es/alumnos-y-proyectos": "/us/students-and-projects",
-        "/es/testimonios": "/us/testimonials",
-        "/es/terminos": "/us/terms-conditions",
-        "/es/sobre-la-academia": "/us/the-academy",
-        "/es/porque-4geeks": "/us/why-4geeks",
-
-
-
-
     }
     // session.pathDictionary[`${window.location?.pathname}`]
     // langDestination = pathsDictionary
