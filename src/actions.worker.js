@@ -83,7 +83,6 @@ const getClosestLoc = (locations, lat, lon) => {
 }
 
 export const initSession = async (locationsArray, storedSession, seed = {}) => {
-    console.log("DICTIONARY JSON:::", pathsDictionary)
     var v4 = null;
     var latitude = null;
     var longitude = null;
