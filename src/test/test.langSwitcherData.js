@@ -38,14 +38,16 @@ const onCreateLangSwitcherData = () => {
       
       SWITCHER_LANG_ES_US.push(...SWITCHER_LANG_US_ES)
       let parsedToKeyValue = Object.fromEntries(SWITCHER_LANG_ES_US)
-
       // console.log("SWITCHER::", parsedToKeyValue)
-      //TODO esto esta listo ok!!!
 
-      fs.writeFile(`${__dirname}/../utils/langSwitcherData.json`, JSON.stringify(parsedToKeyValue), (err) => {
-        if (err) return console.log(err);
-        console.log(`\nlangSwitcherData => /src/utils/langSwitcherData.json\n`);
-      });
+
+      // WARN: to avoid the disorder of the dictionary this fragment has been commented
+      // WARN: uncoment only if there are no pathsDictionary file created
+
+      // fs.writeFile(`${__dirname}/../utils/langSwitcherData2.json`, JSON.stringify(parsedToKeyValue), (err) => {
+      //   if (err) return console.log(err);
+      //   console.log(`\nlangSwitcherData => /src/utils/langSwitcherData.json\n`);
+      // });
   });
 
 };
