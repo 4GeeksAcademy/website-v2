@@ -99,7 +99,6 @@ const MenuItem = styled.li`
 `
 
 export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange}) => {
-    console.log("CURRENT_URL", currentURL)
     const {session, setSession} = useContext(SessionContext);
     const [status, setStatus] = useState(
         {
