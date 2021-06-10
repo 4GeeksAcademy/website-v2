@@ -4,7 +4,7 @@ navbar:
     sub_menu:
       icon: ""
       title: "Programas"
-      paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras que usted busca pivotar, encontrar un trabajo mejor o avanzar en el actual. Aprenda a codificar en 4Geeks Academy."
+      paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras buscas cambiar, encontrar un trabajo mejor o avanzar en el actual. Aprende a codificar en 4Geeks Academy."
 
       links:
         - title: "Full Stack Developer"
@@ -39,7 +39,7 @@ navbar:
       icon: "awards"
       title: "Porqué 4Geeks Academy"
       link: "/es/porque-4geeks"
-      paragraph: "Este es el lugar para impulsar su carrera aprendiendo a codificar. Piense de manera diferente, tenga más confianza en sí mismo, dé vida a sus ideas y gane más dinero."
+      paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a codificar. Piensa de manera diferente, ten más confianza en ti mismo, da vida a tus ideas y gana más dinero."
       links:
         - title: "Acompañamiento"
           sub_links:
@@ -94,12 +94,12 @@ navbar:
   #       - link: "/course/software-engineering-coding-bootcamp"
   # - name: "Pricing"
   #   link: "/pricing"
-  - name: "Campuses"
+  - name: "Campus"
     link: "/partners"
     sub_menu:
       icon: "campus"
       title: "Nuestros Campus"
-      paragraph: "Aprenda en persona o elija un programa completamente remoto. Inscríbase y forme parte de una comunidad de programacion global."
+      paragraph: "Aprende en persona o elije un programa completamente remoto. Inscríbete y forma parte de una comunidad de programación global."
 
       links:
         - title: "Online"
@@ -136,7 +136,7 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-uruguay"
             - title: "Venezuela"
               link_to: "/es/coding-campus/bootcamp-programacion-venezuela"
-  - name: "Próxima Fechas"
+  - name: "Próximas Fechas"
     link: "/es/proximas-fechas"
 
 language_button:

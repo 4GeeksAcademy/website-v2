@@ -27,7 +27,7 @@ footer:
       #   link: "/es/empleo-programacion"
       - name: "Privacidad"
         link: "/es/privacidad"
-      - name: "Terminos"
+      - name: "Términos"
         link: "/es/terminos"
       - name: "Cookies"
         link: "/es/cookie"
@@ -37,7 +37,7 @@ footer:
         link: "/es/contactanos"
   - column_two:
     width: 3
-    heading: "PROGRAMS"
+    heading: "PROGRAMAS"
     items:
       - name: "Full Stack Developer"
         link: "/es/coding-bootcamps/full-stack-part-time"
