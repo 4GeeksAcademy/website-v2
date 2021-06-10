@@ -45,7 +45,7 @@ const CityH1 = ({yml}) => {
 
   React.useEffect(() => {
     console.log("HASH: ", window.location)
-    if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
+    if (session.language === "es" && window.location.pathname === "/" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
   }, [session])
 
   return <H1 type="h1" textAlign_md="left" textShadow="none" fontSize="13px" color="#606060" >{city}{" "}{yml.header_data.tagline}</H1>
