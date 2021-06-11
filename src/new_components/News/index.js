@@ -66,7 +66,7 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
       display="flex"
       gap="20px"
       height="auto"
-      justifyContent="between"
+      justifyContent="center"
       justifyContent_tablet="between"
     >
       {Array.isArray(locationNews) && locationNews.map((l, i) => {

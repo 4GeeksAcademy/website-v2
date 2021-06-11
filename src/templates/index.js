@@ -86,6 +86,10 @@ const Home = (props) => {
       behavior: "smooth"
     })
   }
+  const buttonProgram = {
+    es: "VER PROGRAMAS",
+    en: "CHOOSE PROGRAM"
+  }
 
   return (
     <>
@@ -93,21 +97,24 @@ const Home = (props) => {
         <Div flexDirection="column" justifyContent_tablet="evenly" alignItems="center" alignItems_tablet="start">
           <Div flexDirection="column" alignItems="center" alignItems_tablet="start">
             <CityH1 yml={yml} />
-            <H2 textAlign_tablet="left" fontSize="50px" margin="20px 0 0 0" lineHeight="60px">{`${yml.header_data.title}`}</H2>
-            <Paragraph textAlign_tablet="left" margin="26px 0 35px 0">{yml.header_data.sub_heading} </Paragraph>
+            <H2 type="h2" textAlign_tablet="left" padding="0" padding_md="0px 34% 0 0" fontSize="40px" fontSize_tablet="50px" margin="20px 0 0 0" lineHeight="60px">{`${yml.header_data.title}`}</H2>
+            <Paragraph textAlign_tablet="left" margin="26px 0 35px 0" padding="0" padding_tablet="0 34% 0 0">{yml.header_data.sub_heading} </Paragraph>
             <ChooseProgram
+              buttonJustifyContent="center"
+              buttonPadding="10px 35px"
+              width="175px"
               goTo={goToChooseProgram}
               right="15px"
               top="40px"
               textAlign="center"
               textAlign_tablet="left"
-              openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-              closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+              openLabel={pageContext.lang === "es" ? buttonProgram["es"]: buttonProgram["en"]}
+              closeLabel={pageContext.lang === "es" ? buttonProgram["es"]: buttonProgram["en"]}
             />
           </Div>
-          <News lang={pageContext.lang} limit={yml.news.limit} height="40px" justifyContent="center" />
+          <News lang={pageContext.lang} limit={yml.news.limit} width={`17%`} height="40px" justifyContent="center" />
         </Div>
-        <Div display="none" display_md="flex" height="auto" width="100%">
+        <Div display="none" display_tablet="flex" height="auto" width="100%">
           <StyledBackgroundSection
             height={`723px`}
             width="100%"
