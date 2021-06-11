@@ -160,7 +160,7 @@ export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, s
                     left="0"
                     bottom="0"
                     height="100vh"
-                    zIndex="1"
+                    zIndex="100"
                     boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
                 >
                     <Div background={Colors.lightGray} height="61px" alignItems="center" padding="24px 17px" justifyContent="between">

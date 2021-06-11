@@ -9,7 +9,7 @@ import styled from 'styled-components';
 
 export const ChooseWrap = styled.div`
     position: relative;
-    z-index: 10;
+    z-index: 9;
     text-align: center;
     cursor: pointer;
     margin: ${props => props.margin};
@@ -32,7 +32,7 @@ const SmartSelect = (props) => {
     const _Selector = (_p) => <Div
         // margin_tablet="0 28px 0 0"
         padding="7px"
-        zIndex="10"
+        zIndex="9"
         alignItems="center"
         width="314px"
         minWidth={props.minWidth}
