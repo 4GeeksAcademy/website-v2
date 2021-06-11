@@ -56,6 +56,7 @@ const CityH1 = ({yml}) => {
 
   return <H1 type="h1" textAlign_md="left" textShadow="none" fontSize="13px" color="#606060" >{city}{" "}{yml.header_data.tagline}</H1>
 }
+// Unused functions
 // const CityWrapper = ({yml}) => {
 //   const {session} = React.useContext(SessionContext);
 //   const city = session && session.location ? "" : "Miami";
