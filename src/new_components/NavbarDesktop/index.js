@@ -34,25 +34,33 @@ const MegaMenuPositions = [
     {
         top: "",
         left: "",
-        leftTriangle: "28%"
+        leftTriangle: "30%",
+        width: "100%",
+        margin: "0 0 50px 0"
     },
     {
         top: "",
         left: "50%",
-        leftTriangle: "35%",
-        transform: "translateX(-480px)"
+        leftTriangle: "36%",
+        transform: "translateX(-480px)",
+        width: "815px",
+        margin: "10px"
     },
     {
         top: "",
         left: "50%",
         leftTriangle: "32%",
-        transform: "translateX(-280px)"
+        transform: "translateX(-200px)",
+        width:"377px",
+        margin: "0"
     },
     {
         top: "",
         left: "50%",
-        leftTriangle: "26%",
-        transform: "translateX(-150px)"
+        leftTriangle: "32%",
+        transform: "translateX(-150px)",
+        width: "610px",
+        margin: "10px"
     },
 ]
 const Nav = styled.nav`
@@ -168,7 +176,6 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                     <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
                 <Div alignItems="center" justifyContent="between">
-                    {/* TODO: Issue here bug when change language in home */}
                     <Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
                         <Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph>
                     </Link>
@@ -191,10 +198,10 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                             setStatus(_status => ({..._status, toggle: _status.hovered}));
                         }, 300)
                     }}
-                    background="white" transform={MegaMenuPositions[status.itemIndex].transform} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow_tablet="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+                    background="white" transform={MegaMenuPositions[status.itemIndex].transform} width={MegaMenuPositions[status.itemIndex].width} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow_tablet="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
                     <Triangle left={MegaMenuPositions[status.itemIndex].leftTriangle} />
                     <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
-                        <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0" margin="0 0 50px 0">
+                        <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0" margin={MegaMenuPositions[status.itemIndex].margin}>
                             {menu[status.itemIndex].sub_menu.icon && <Div margin="0 15px 0 0"><Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" /></Div>}
                             <Div flexDirection="column" >
                                 {status.itemIndex != null && <Link to={menu[status.itemIndex].sub_menu.link && menu[status.itemIndex].sub_menu.link} ><Div alignItems="baseline" margin="5px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">{menu[status.itemIndex].sub_menu.title}</H3>{menu[status.itemIndex].sub_menu.link && <Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" />}</Div></Link>}
@@ -243,7 +250,18 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                                             }
                                             {m.sub_links != undefined && Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
                                                 return (
-                                                    <Link to={m.link_to} key={i}><Div alignItems="baseline" margin="5px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3><Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" /></Div></Link>
+                                                    <Link to={m.link_to} key={i}>
+                                                    <Div 
+                                                        margin="2px 0"
+                                                        padding="10px 0 10px 18px"
+                                                        backgroundHover={`#E6F5FB`}
+                                                        borderRadius="3px"
+                                                        alignItems="baseline">
+                                                        <H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">
+                                                            {m.title}
+                                                        </H3>
+                                                        <Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" />
+                                                    </Div></Link>
                                                 )
                                             })}
 

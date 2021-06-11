@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
@@ -41,36 +41,43 @@ const imageSvg = props => <svg style={props.style} width="587" height="514" view
 
 const CityH1 = ({yml}) => {
   const {session} = React.useContext(SessionContext);
-  const city = session && session.location ? "" : "Miami";
+  const [city, setCity] = useState("")
+  
+  // const city = session && session.location ? "" : "Miami";
 
   React.useEffect(() => {
     console.log("HASH: ", window.location)
+    
     if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
+
+    // It returns the 4Geeks Academy campus closest to the user's country
+    setCity(session.location ? session.location.city : "");
   }, [session])
 
   return <H1 type="h1" textAlign_md="left" textShadow="none" fontSize="13px" color="#606060" >{city}{" "}{yml.header_data.tagline}</H1>
 }
-const CityWrapper = ({yml}) => {
-  const {session} = React.useContext(SessionContext);
-  const city = session && session.location ? "" : "Miami";
-  return <Title
-    title={yml.why_4geeks.heading + " " + city}
-    variant="primary"
-  />
-}
-const CityWrapper2 = ({yml}) => {
-  const {session} = React.useContext(SessionContext);
-  const city = session && session.location ? "" : "Miami";
-  return <Title
-    type="h2"
-    title={yml.join_geeks.heading + " " + city}
-    paragraph={yml.join_geeks.sub_heading}
-    paragraphColor={Colors.darkGray}
-    maxWidth="66%"
-    margin="auto"
-    variant="primary"
-  />
-}
+// Unused functions
+// const CityWrapper = ({yml}) => {
+//   const {session} = React.useContext(SessionContext);
+//   const city = session && session.location ? "" : "Miami";
+//   return <Title
+//     title={yml.why_4geeks.heading + " " + city}
+//     variant="primary"
+//   />
+// }
+// const CityWrapper2 = ({yml}) => {
+//   const {session} = React.useContext(SessionContext);
+//   const city = session && session.location ? "" : "Miami";
+//   return <Title
+//     type="h2"
+//     title={yml.join_geeks.heading + " " + city}
+//     paragraph={yml.join_geeks.sub_heading}
+//     paragraphColor={Colors.darkGray}
+//     maxWidth="66%"
+//     margin="auto"
+//     variant="primary"
+//   />
+// }
 
 
 const Home = (props) => {
@@ -101,7 +108,7 @@ const Home = (props) => {
             <Paragraph textAlign_tablet="left" margin="26px 0 35px 0" padding="0" padding_tablet="0 34% 0 0">{yml.header_data.sub_heading} </Paragraph>
             <ChooseProgram
               buttonJustifyContent="center"
-              buttonPadding="10px 35px"
+              buttonPadding="10px 0"
               width="175px"
               goTo={goToChooseProgram}
               right="15px"
