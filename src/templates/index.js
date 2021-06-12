@@ -133,7 +133,7 @@ const Home = (props) => {
       </GridContainerWithImage>
 
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="30px 0 65px 0"  paddingText="0 5% 0.5em 5%" paddingText_tablet="0 12% 1.6em 12%"/>
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="10px 0 65px 0"  paddingText="0 5% 0.5em 5%" paddingText_tablet="0 12% 1.6em 12%"/>
       
       <GridContainer margin="44px 0" padding="50px 0" padding_tablet="40px 0" margin_tablet="0 0 40px 0">
           <Div background="#EBEBEB" height="1px" />
