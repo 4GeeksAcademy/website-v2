@@ -63,8 +63,8 @@ const Financial = (props) => {
           seo_title={yml.seo_title}
           title={yml.header.title}
           paragraph={yml.header.paragraph}
-          padding_tablet="142px 0 15px 0"
-          padding="142px 0 15px 0"  
+          padding_tablet="72px 0 15px 0"
+          padding="72px 0 15px 0"  
       >
       </Header>
       <FinancialFilter
