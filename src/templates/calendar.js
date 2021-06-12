@@ -172,11 +172,11 @@ const Calendar = (props) => {
                       ${pageContext.lang === "us" ? dayjs(m.ending_date).locale("en").format("MM/DD") : dayjs(m.ending_date).locale("es").format("DD/MM")}
                   `}</Paragraph>
                 </Div>
-                <Div flexDirection="column" width_tablet="35%" margin="0 0 20px 0">
+                <Div flexDirection="column" width_tablet="calc(35% - 15%)" margin="0 0 20px 0">
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.program_label}</H4>
                   <Link to={info[pageContext.lang][m.syllabus.certificate.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph></Link>
                 </Div>
-                <Div flexDirection="column" display="none" display_tablet="flex" >
+                <Div flexDirection="column" display="none" display_tablet="flex" minWidth="120px" >
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
                   <Div>
                     <Link to={locations[pageContext.lang][m.academy.slug] || ""}>
