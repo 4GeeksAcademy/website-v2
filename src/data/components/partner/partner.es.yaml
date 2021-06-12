@@ -79,11 +79,11 @@ coding:
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
-      featured: false
+      featured: true
       #locations: ["madrid-spain"]
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
-      featured: false
+      featured: true
       #locations: ["madrid-spain"]
     - name: "Bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
@@ -99,7 +99,7 @@ coding:
       #locations: ["madrid-spain"]
     - name: "Womans Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
-      featured: false
+      featured: true
       #locations: ["madrid-spain"]
     - name: "Worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"

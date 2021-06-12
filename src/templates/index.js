@@ -119,6 +119,7 @@ const Home = (props) => {
               closeLabel={pageContext.lang === "es" ? buttonProgram["es"]: buttonProgram["en"]}
             />
           </Div>
+          
           <News lang={pageContext.lang} limit={yml.news.limit} width={`17%`} height="40px" justifyContent="center" />
         </Div>
         <Div display="none" display_tablet="flex" height="auto" width="100%">
@@ -132,7 +133,12 @@ const Home = (props) => {
       </GridContainerWithImage>
 
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="104px 0 104px 0" />
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="10px 0 65px 0"  paddingText="0 5% 0.5em 5%" paddingText_tablet="0 12% 1.6em 12%"/>
+      
+      <GridContainer margin="44px 0" padding="50px 0" padding_tablet="40px 0" margin_tablet="0 0 40px 0">
+          <Div background="#EBEBEB" height="1px" />
+      </GridContainer>
+
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />

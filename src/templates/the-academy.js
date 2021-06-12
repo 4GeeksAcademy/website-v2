@@ -24,8 +24,8 @@ const Why = (props) => {
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         image={yml.header.image.childImageSharp.fluid}
-        padding="0 0 60px 0"
-        padding_tablet="0 0 60px 0"
+        padding="70px 0 70px 0"
+        padding_tablet="70px 0 70px 0"
         position="relative"
       >
         <Circle
@@ -43,7 +43,7 @@ const Why = (props) => {
           bottom="-50px"
           right="-125px"
           opacity="0.2"
-          zIndex="1"
+          zIndex="10"
         />
         <Circle
           color="yellow"
@@ -51,7 +51,7 @@ const Why = (props) => {
           height="116px"
           bottom="-58px"
           left="-58px"
-          zIndex="1"
+          zIndex="10"
         />
         <Circle
           color="yellow"
@@ -59,7 +59,7 @@ const Why = (props) => {
           height="21px"
           top="160px"
           right="120px"
-          zIndex="1"
+          zIndex="-1"
         />
         <Circle
           color="blue"
@@ -89,8 +89,14 @@ const Why = (props) => {
         </Div>
       </Grid>
 
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} background={Colors.lightYellow} link padding="58px 17px" padding_tablet="70px 0" />
-
+      <Badges 
+      lang={pageContext.lang} paragraph={yml.badges.paragraph} 
+      background={Colors.lightYellow} 
+      link padding="58px 17px" padding_tablet="70px 0" 
+      paddingText="0 0 0.5em 0" paddingText_tablet="0 0 1.6em 0"
+      />
+      
+      
       <GridContainer height="auto" columns_tablet="2" padding="0" margin_tablet="0 0 88px 0">
         <Div flexDirection="column" justifyContent_tablet="start" padding="41px 17px 0 17px" padding_tablet="56px 0 0 0" >
           <H2 textAlign="left" margin="0 0 15px 0">{yml.what_is_4geeks.title}</H2>
