@@ -6,6 +6,34 @@ import {SessionContext} from '../session.js'
 // new_components
 import FinancialFilter from '../new_components/FinancialFilter';
 import { Header } from '../new_components/Sections'
+import {Div} from '../new_components/Sections'
+
+
+const SVGBubblesLeft = () => 
+    <svg style={{top: "75px", left: "75px", position: "absolute"}} width="205" height="286" viewBox="0 0 205 286" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="191.5" cy="59.5" r="13.5" fill="#CD0000"/>
+      <circle cx="8.5" cy="8.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+      <circle cx="40.5" cy="63.5" r="8.5" fill="white"/>
+      <circle cx="8.5" cy="43.5" r="8.5" fill="black"/>
+      <circle cx="40.5" cy="98.5" r="8.5" fill="black"/>
+      <circle cx="8.5" cy="98.5" r="8.5" fill="white"/>
+      <circle cx="40.5" cy="141.5" r="8.5" fill="white"/>
+      <circle cx="8.5" cy="141.5" r="8.5" fill="white"/>
+      <circle cx="40.5" cy="178.5" r="8.5" fill="white"/>
+      <circle cx="8.5" cy="222.5" r="8.5" fill="#0097CD"/>
+      <circle cx="40.5" cy="277.5" r="8.5" fill="white"/>
+    </svg>
+
+const SVGBubblesRight = () => 
+  <>
+    <svg style={{right: "65px", position: "absolute", top: "110px"}} width="278" height="140" viewBox="0 0 278 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="14" cy="14" r="14" fill="#FFB718"/>
+      <circle cx="227.5" cy="45.5" r="26.5" fill="#0097CD"/>
+      <circle cx="269.5" cy="131.5" r="8.5" transform="rotate(90 269.5 131.5)" fill="white"/>
+      <circle cx="230.5" cy="131.5" r="8.5" transform="rotate(90 230.5 131.5)" fill="black"/>
+      <circle cx="191.5" cy="131.5" r="8.5" transform="rotate(90 191.5 131.5)" fill="white"/>
+    </svg>
+  </>
 
 const Financial = (props) => {
   const {session} = React.useContext(SessionContext);
@@ -19,6 +47,16 @@ const Financial = (props) => {
 
   return (
     <>
+      <Div 
+      display="none" 
+      position="absolute"
+      width="100%"
+      zIndex="0"
+      display_tablet="flex"
+      >
+          <SVGBubblesLeft />
+          <SVGBubblesRight />
+      </Div>
       <Header
           background={Colors.lightBlue2}
           fontSize="40px"
