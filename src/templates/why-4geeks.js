@@ -105,15 +105,26 @@ const Why4Geeks = (props) => {
             <With4Geeks lang={pageContext.lang} playerHeight="125px" />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
             <GeeksVsOthers lang={pageContext.lang} link={true} limit={4} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
-            <GridContainerWithImage height_tablet="503px" background="#E3F9FE" padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
-                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 8">
+            {/* TODO: Python side */}
+            <GridContainerWithImage height_tablet="100%" background="#E3F9FE" padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
+                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="2 / 8">
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.python_banner.title}`}</H2>
                     {/* <Paragraph textAlign_tablet="left" margin="26px 0">{yml.python_banner.paragraph} </Paragraph> */}
                     {yml.python_banner.paragraph.split('\n').map((p, i) =>
                         <Paragraph textAlign_tablet="left" margin="26px 0" key={i}>{p}</Paragraph>
                     )}
                 </Div>
-                <Div height="auto" width="100%" gridColumn_tablet="9 / 15">
+                <Div display_tablet="flex" height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
+                    <StyledBackgroundSection
+                        height_tablet="450px"
+                        height="200px"
+                        width="100%"
+                        image={yml.python_banner.image && yml.python_banner.image.childImageSharp.gatsbyImageData}
+                        bgSize={`contain`}
+                        alt={yml.python_banner.image_alt}
+                    />
+                </Div>
+                {/* <Div height="auto" width="100%" gridColumn_tablet="9 / 15">
                     <StyledBackgroundSection
                         height="300px"
                         width="100%"
@@ -121,7 +132,7 @@ const Why4Geeks = (props) => {
                         bgSize={`contain`}
                         alt={yml.python_banner.image_alt}
                     />
-                </Div>
+                </Div> */}
             </GridContainerWithImage>
             <Staff lang={pageContext.lang} />
 
