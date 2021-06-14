@@ -21,7 +21,7 @@ with:
       text: ""
       text_link: ""
   - name: "Luisa Glum"
-    title: "La Academia estaba tan comprometida como yo”"
+    title: "La Academia estaba tan comprometida como yo"
     description: "Luisa pagó el programa después de que se graduó y encontró trabajo, ella aplicó al ISA (Income Share Agreement)"
     image: ../../../../static/images/staff/luisa.png
     alt: ""
