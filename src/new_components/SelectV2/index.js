@@ -48,7 +48,7 @@ const SmartSelect = (props) => {
         position="relative"
 
     ><Label>{props.label}</Label>
-        <H4 lineHeight="22px" fontSize="15px" color={Colors.darkGray2} margin="0 20px 0 0">
+        <H4 lineHeight="22px" fontSize="15px" color={Colors.darkGray2} textAlign={props.textAlign} margin={props.margin || "0 20px 0 0"}>
             {_p.status.toggle ? props.openLabel : props.closeLabel}
         </H4>
         <Icon icon="arrowdown" />

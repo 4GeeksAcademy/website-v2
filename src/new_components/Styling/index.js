@@ -236,6 +236,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     }
     @media  ${Devices.tablet}{
         border-radius: ${props => props.borderRadius_tablet};
+        height: ${props => props.height_tablet};
         &:before, &:after {
             border-radius: ${props => props.borderRadius_tablet};
         }

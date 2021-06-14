@@ -112,6 +112,7 @@ const Images_Centered = (props) => {
     <Div
       display="flex"
       flexDirection="row"
+      borderRadius="3px"
       style={{flexWrap: "wrap"}}
       justifyContent="center"
       background={Colors.white}
@@ -120,10 +121,14 @@ const Images_Centered = (props) => {
 
       {props.images.map((l, i) => {
         return (
-          <Div margin="0 61px 40px 0">
+          <Div margin="0 20px 40px 20px" 
+
+          margin_tablet={`0 calc(${i % 2 === 1 ? `${120}px`: "30px"}) 30px calc(${i % 2 === 1 ? `${120}px`: "30px"})`}
+          // margin_tablet="0 61px 40px 0"
+          >
             <GatsbyImage
               key={i}
-              style={{height: "80px", minWidth: "120px"}}
+              style={{height: "80px", minWidth: "110px"}}
               imgStyle={{objectFit: "contain"}}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}

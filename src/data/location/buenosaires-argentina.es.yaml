@@ -7,7 +7,11 @@ meta_info:
   # it will not show up on the applications forms
   unlisted: false
   keywords: "Coding Bootcamp Campus Argentina"
-  redirects: ["/es/coding-campus/bootcamp-programacion-argentina"]
+  redirects: [
+    # WARN: This specific slug, does not allow to change language
+    # "/es/coding-campus/bootcamp-programacion-argentina"
+    /es/coding-campus/bootcamp-programacion-argentina
+    ]
 
 seo_title: "Aprende a programar en Argentina"
 header:

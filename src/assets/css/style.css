@@ -9,7 +9,7 @@ html, body
     width: 100%!important;
     margin: 0px!important;
     padding: 0px!important;
-    overflow-x: hidden!important; 
+    overflow-x: clip!important; 
 }
 
 /* adds three dots to text when reaches the end of line */
@@ -460,4 +460,10 @@ a.faq-link:hover {
 
 .lang{
     font-weight: 700;
+}
+
+/* HINT: it hide the scrollbal default, and works in mobile size*/
+.hideOverflowX__::-webkit-scrollbar {
+    width: 0!important;
+    height: 0!important;
 }

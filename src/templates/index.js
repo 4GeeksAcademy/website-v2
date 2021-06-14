@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
@@ -41,36 +41,43 @@ const imageSvg = props => <svg style={props.style} width="587" height="514" view
 
 const CityH1 = ({yml}) => {
   const {session} = React.useContext(SessionContext);
-  const city = session && session.location ? "" : "Miami";
+  const [city, setCity] = useState("")
+  
+  // const city = session && session.location ? "" : "Miami";
 
   React.useEffect(() => {
     console.log("HASH: ", window.location)
-    if (session.language === "es" && window.location.pathname === "/" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
+    
+    if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
+
+    // It returns the 4Geeks Academy campus closest to the user's country
+    setCity(session.location ? session.location.city : "");
   }, [session])
 
   return <H1 type="h1" textAlign_md="left" textShadow="none" fontSize="13px" color="#606060" >{city}{" "}{yml.header_data.tagline}</H1>
 }
-const CityWrapper = ({yml}) => {
-  const {session} = React.useContext(SessionContext);
-  const city = session && session.location ? "" : "Miami";
-  return <Title
-    title={yml.why_4geeks.heading + " " + city}
-    variant="primary"
-  />
-}
-const CityWrapper2 = ({yml}) => {
-  const {session} = React.useContext(SessionContext);
-  const city = session && session.location ? "" : "Miami";
-  return <Title
-    type="h2"
-    title={yml.join_geeks.heading + " " + city}
-    paragraph={yml.join_geeks.sub_heading}
-    paragraphColor={Colors.darkGray}
-    maxWidth="66%"
-    margin="auto"
-    variant="primary"
-  />
-}
+// Unused functions
+// const CityWrapper = ({yml}) => {
+//   const {session} = React.useContext(SessionContext);
+//   const city = session && session.location ? "" : "Miami";
+//   return <Title
+//     title={yml.why_4geeks.heading + " " + city}
+//     variant="primary"
+//   />
+// }
+// const CityWrapper2 = ({yml}) => {
+//   const {session} = React.useContext(SessionContext);
+//   const city = session && session.location ? "" : "Miami";
+//   return <Title
+//     type="h2"
+//     title={yml.join_geeks.heading + " " + city}
+//     paragraph={yml.join_geeks.sub_heading}
+//     paragraphColor={Colors.darkGray}
+//     maxWidth="66%"
+//     margin="auto"
+//     variant="primary"
+//   />
+// }
 
 
 const Home = (props) => {
@@ -86,6 +93,10 @@ const Home = (props) => {
       behavior: "smooth"
     })
   }
+  const buttonProgram = {
+    es: "VER PROGRAMAS",
+    en: "CHOOSE PROGRAM"
+  }
 
   return (
     <>
@@ -93,21 +104,25 @@ const Home = (props) => {
         <Div flexDirection="column" justifyContent_tablet="evenly" alignItems="center" alignItems_tablet="start">
           <Div flexDirection="column" alignItems="center" alignItems_tablet="start">
             <CityH1 yml={yml} />
-            <H2 textAlign_tablet="left" fontSize="50px" margin="20px 0 0 0" lineHeight="60px">{`${yml.header_data.title}`}</H2>
-            <Paragraph textAlign_tablet="left" margin="26px 0 35px 0">{yml.header_data.sub_heading} </Paragraph>
+            <H2 type="h2" textAlign_tablet="left" padding="0" padding_md="0px 34% 0 0" fontSize="40px" fontSize_tablet="50px" margin="20px 0 0 0" lineHeight="60px">{`${yml.header_data.title}`}</H2>
+            <Paragraph textAlign_tablet="left" margin="26px 0 35px 0" padding="0" padding_tablet="0 34% 0 0">{yml.header_data.sub_heading} </Paragraph>
             <ChooseProgram
+              buttonJustifyContent="center"
+              buttonPadding="10px 0"
+              width="175px"
               goTo={goToChooseProgram}
               right="15px"
               top="40px"
               textAlign="center"
               textAlign_tablet="left"
-              openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-              closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+              openLabel={pageContext.lang === "es" ? buttonProgram["es"]: buttonProgram["en"]}
+              closeLabel={pageContext.lang === "es" ? buttonProgram["es"]: buttonProgram["en"]}
             />
           </Div>
-          <News lang={pageContext.lang} limit={yml.news.limit} height="40px" justifyContent="center" />
+          
+          <News lang={pageContext.lang} limit={yml.news.limit} width={`17%`} height="40px" justifyContent="center" />
         </Div>
-        <Div display="none" display_md="flex" height="auto" width="100%">
+        <Div display="none" display_tablet="flex" height="auto" width="100%">
           <StyledBackgroundSection
             height={`723px`}
             width="100%"
@@ -118,7 +133,12 @@ const Home = (props) => {
       </GridContainerWithImage>
 
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="104px 0 104px 0" />
+      <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} margin="10px 0 65px 0"  paddingText="0 5% 0.5em 5%" paddingText_tablet="0 12% 1.6em 12%"/>
+      
+      <GridContainer margin="44px 0" padding="50px 0" padding_tablet="40px 0" margin_tablet="0 0 40px 0">
+          <Div background="#EBEBEB" height="1px" />
+      </GridContainer>
+
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />

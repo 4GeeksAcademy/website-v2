@@ -48,9 +48,12 @@ const Partners = (props) => {
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
-        padding_tablet="60px 0 40px 0"
+        padding_tablet="65px 0 60px 0"
         padding="0 17px 30px 17px"
         position="relative"
+        paddingTitle_tablet="0 15%"
+        paddingParagraph_tablet="0 16%"
+        
       // height_tablet="350px"
       >
         <Circle color="grey" width="17px" height="17px" top="0" left="90px" zIndex="1" display="none" display_tablet="inline" />
@@ -64,13 +67,13 @@ const Partners = (props) => {
         <Circle color="grey" width="17px" height="17px" top="32px" left="168px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="blue" width="17px" height="17px" top="32px" left="249px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="red" width="27px" height="27px" top="183px" left="125px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="yellow" width="250px" height="250px" bottom="-100px" right="-68px" opacity="0.2" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="yellow" width="250px" height="250px" bottom="-100px" right="-68px" opacity="0.2" zIndex="10" display="none" display_tablet="inline" />
         <Circle color="grey" width="17px" height="17px" top="120px" right="50px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="black" width="17px" height="17px" top="120px" right="89px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="grey" width="17px" height="17px" top="120px" right="128px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="black" width="119px" height="11px" border="10px" bottom="115px" right="40px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="black" width="77px" height="11px" border="10px" bottom="115px" right="175px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="yellow" width="116px" height="116px" bottom="-58px" left="-58px" zIndex="1" />
+        <Circle color="yellow" width="116px" height="116px" bottom="-58px" left="-58px" zIndex="10" />
         <Circle color="yellow" width="21px" height="21px" top="10px" right="320px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
         <Circle color="lightBlue" width="57px" height="57px" top="32px" left="-28px" display="inline" display_tablet="none" />
@@ -95,8 +98,8 @@ const Partners = (props) => {
         </Div>
       </Grid>
 
-      <Badges lang={pageContext.lang} link />
-      <Div height="5px" display="none" margin_tablet="73px 0" display_md="flex" background={Colors.lightGray}></Div>
+      <Badges lang={pageContext.lang} link padding="10px 0 60px 0" padding_tablet="10px 0 60px 0" />
+      <Div height="5px" display="none" margin_tablet="40px 0" display_md="flex" background={Colors.lightGray}></Div>
       <OurPartners
         images={partnersData.partners.images}
         title={partnersData.partners.tagline}

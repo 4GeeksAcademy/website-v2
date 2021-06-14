@@ -112,11 +112,13 @@ const FinancialFilter = (props) => {
   return (
     <Div background={Colors.lightBlue2} margin="0 0 5rem 0" display="block" github="/location">
       <GridContainer shadow="0px 0px 16px rgba(0, 0, 0, 0.25)" padding="15px 0" margin="0 10px 3em 10px" margin_tablet="0 5rem 4em 5rem" containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`} containerGridGap="20px" margin_md="0 20% 4em 20%" background={Colors.white} height="100%" height_tablet="122px" borderRadius="3px" >
-        <Grid gridTemplateColumns_tablet="repeat(3, 1fr)"
+        <Grid gridTemplateColumns_tablet="repeat(3, 1fr)" display="inline-flex"
           gridGap_tablet="20px" gridGap="8px" justifySelf="center" justifySelf_tablet="inherit" flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
 
           {!props.course &&
             <Select
+              margin="0 20px 0 10px"
+              textAlign="left"
               label={props.program}
               top="40px"
               left="20px"
@@ -129,6 +131,8 @@ const FinancialFilter = (props) => {
           }
           {props.modality &&
             <Select
+              margin="0 20px 0 10px"
+              textAlign="left"
               label={props.modality}
               top="40px"
               left="20px"
@@ -141,6 +145,8 @@ const FinancialFilter = (props) => {
           }
           {!props.course &&
             <Select
+              margin="0 20px 0 10px"
+              textAlign="left"
               label={props.campus}
               top="40px"
               left="20px"

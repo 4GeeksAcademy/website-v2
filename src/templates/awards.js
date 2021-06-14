@@ -45,23 +45,13 @@ const Awards = ({data, pageContext, yml}) => {
                     <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
                     <Paragraph textAlign_tablet="left" margin="26px 0">{yml.header.paragraph} </Paragraph>
-                    {/* <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
-                    <Paragraph textAlign_tablet="left" >{yml.info_box.email} </Paragraph> */}
 
                 </Div>
                 <Div gridColumn_tablet="8 / 13" display="none" alignItems="center" justifyContent="center" display_tablet="flex" height="auto" width="100%">
                     <SVGImage />
-                    {/* <StyledBackgroundSection
-                        height={`623px`}
-                        width="100%"
-                        image={yml.header.image && yml.header.image.childImageSharp.fluid}
-                        bgSize={`contain`}
-                    /> */}
                 </Div>
             </GridContainer>
-            {/* <Grid background={Colors.lightYellow} margin="0 0 58px 0" margin_tablet="0 0 78px 0"> */}
             <Badges lang={pageContext.lang} background={Colors.lightYellow} paragraph={yml.badges.paragraph} padding="60px 0" padding_tablet="68px 0" margin="0 0 58px 0" margin_tablet="0 0 78px 0" />
-            {/* </Grid> */}
             <GridContainer padding="17px" columns="1" rows="1" columns_tablet="12" gridGap_tablet="11px" gridGap="0">
                 <Div gridArea_tablet="1/1/1/13" flexDirection="column"  >
                     {Array.isArray(yml.awards_list) && yml.awards_list.map((m, i) => {
@@ -71,11 +61,7 @@ const Awards = ({data, pageContext, yml}) => {
                                     style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
                                     imgStyle={{objectFit: "contain"}}
                                     loading="eager"
-                                    // fadeIn={false}
-                                    // durationFadeIn={0}
-                                    // alt={l.name}
-                                    // fluid={m.image.childImageSharp.fluid}
-                                    image={getImage(m.image.childImageSharp.fluid)}
+                                    image={getImage(m.image.childImageSharp.gatsbyImageData)}
                                 />
                                 <Div flexDirection="column" width="100%">
                                     <H3 textAlign_tablet="left" margin="49px 0 0 " margin_tablet="0">{m.title}</H3>
@@ -108,16 +94,6 @@ query AwardsQuery($file_name: String!, $lang: String!) {
             header{
                 title
                 paragraph
-                # image
-                # IMAGE is a string to static img file
-                #  {
-                #     childImageSharp {
-                #       fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                #         ...GatsbyImageSharpFluid_withWebp
-                #       }
-                #     }
-                #   }
-                
             }
             badges{
                 paragraph
@@ -149,5 +125,4 @@ query AwardsQuery($file_name: String!, $lang: String!) {
 }
 }
 `;
-// ...GatsbyImageSharpFluidLimitPresentationSize # It avoid stretched images
 export default BaseRender(Awards);

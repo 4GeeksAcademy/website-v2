@@ -139,7 +139,7 @@ navbar:
 language_button:
   text: "<span class='lang'>ENG</span> / ESP"
   # link: "/es/inicio?lang=es"
-  link: "?lang=es"
+  link: "/?lang=es"
 button:
   button_link: "/us/apply"
   apply_button_text: "Apply Now"

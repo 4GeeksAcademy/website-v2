@@ -55,10 +55,11 @@ const ChooseProgram = (props) => {
     const [status, setStatus] = useState({toggle: false, hovered: false})
     const _Selector = (_p) => <Button
         display={props.displayButton}
+        justifyContent={props.buttonJustifyContent}
         variant="full"
         shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
         textAlign={props.textAlign || "inherit"}
-        padding="10px 30px"
+        padding={props.buttonPadding || "10px 30px"}
         width={props.width}
         maxWidth={props.width ? props.width : "250px"}
         onClick={() => _p.setStatus({toggle: !_p.status.toggle})}
@@ -112,6 +113,7 @@ const ChooseProgram = (props) => {
                     {Array.isArray(props.programs) && props.programs.map((item, index) => {
                         return (
                             <Button
+                                width={props.width}
                                 key={index}
                                 font='"Lato", sans-serif'
                                 colorHover={Colors.lightBlue}

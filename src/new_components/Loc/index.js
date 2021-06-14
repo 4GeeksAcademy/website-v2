@@ -72,7 +72,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
         </GridContainer>}
       <GridContainer
 
-        columns="2" columns_tablet="3" gridGap="0" margin_tablet="0 0 70px 0">
+        columns="1" columns_sm="2" columns_tablet="3" gridGap="0" margin_tablet="0 0 70px 0">
         {loc != null &&
           loc.map((item, i) => {
             const next = nextDate(item);
@@ -107,7 +107,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
                   <Span animated color={Colors.yellow}>_</Span>
                 </H3>
                 <Div
-                  display="none"
+                  display="block"
                   display_tablet="block"
                 >
                   <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>

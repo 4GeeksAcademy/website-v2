@@ -66,7 +66,7 @@ const GeeksVsOthers = props => {
       }
 
 {/* 3 / span 10 */}
-      <GridContainer overflowChild="auto" containerColumns_tablet={`2fr repeat(10, 1fr) 2fr`} gridColumn_tablet="2 / span 10" columns_tablet="9" columns="3" backgroundChild="#FFF1D1" gridGap="0" padding_tabletChild="11px 11px 11px 44px">
+      <GridContainer borderRadiusChild="3px" borderRadiusChild_tablet="3px" overflowChild="auto" containerColumns_tablet={`2fr repeat(10, 1fr) 2fr`} gridColumn_tablet="2 / span 10" columns_tablet="9" columns="3" backgroundChild="#FFF1D1" gridGap="0" padding_tabletChild="11px 11px 11px 44px">
         <Div gridColumn_tablet="1 / 4" height="74px" alignItems="center" padding="0 5px 0 20px" padding_tablet="0 5px 0 10px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.featured}</H3></Div>
         <Div gridColumn_tablet="4 / 7" height="74px" alignItems="center" background={Colors.veryLightBlue} padding="0 25px 0 20px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.at_geeks}</H3></Div>
         <Div gridColumn_tablet="7 / 10" height="74px" alignItems="center" background={Colors.white} padding="0 25px 0 20px" padding_tablet="0 5px 0 40px"><H3 textAlign="left" fontSize="15px" fontWeight="900" lineHeight="19px">{geeks.titles.average}</H3></Div>
