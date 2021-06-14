@@ -44,7 +44,7 @@ partners:
       featured: false
     - name: "Optiva-Media"
       # locations: ["madrid-spain"]
-      image: "../../../../static/images/partner/optiva-media.png"
+      image: "../../../../static/images/partner/optiva.jpeg"
       featured: false
     - name: "Neo9"
       # locations: ["madrid-spain"]
