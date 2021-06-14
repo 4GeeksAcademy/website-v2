@@ -38,7 +38,7 @@ info_box:
   alt: ""
 badges:
   title: ""
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o 
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
   
   aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
 news:
@@ -91,7 +91,7 @@ prices:
           - months: "12"
             monthsInfo: "Financiados"
             payment: "210.641 CLP"
-            paymentInfo: "mensual + 410.000 deposito"
+            paymentInfo: "mensual + 410.000 depósito"
             provider: "Quotanda"
             logo: "/images/quotanda-logo.png"
             message: ""
@@ -128,12 +128,12 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "NO PAGUES HASTA"
-          heading_two: "QUE ENCUENTRES PEGA"
-          sub_heading: "Acuerdo de Ingresos Compartidos"
+          heading_one: "FINANCIAMIENTO"
+          heading_two: "SIN INTERES"
+          sub_heading: "y disfruta de mejores precios"
         content:
-          price: "Válido sólo para modalidad full time"
-          price_info: "hasta pagarlo todo, pero sólo si consigues trabajo en tech"
+          price: "Hasta 12 cuotas sin interés"
+          price_info: ""
         button:
           button_text: "APLICAR AHORA"
 
@@ -153,7 +153,7 @@ prices:
           - months: "6 m"
             monthsInfo: "Financiados"
             payment: "356.231 CLP"
-            paymentInfo: "mensual + 362.250 deposito"
+            paymentInfo: "mensual + 362.250 depósito"
             provider: "Quotanda"
             logo: "/images/quotanda-logo.png"
             message: ""
@@ -165,7 +165,7 @@ prices:
         header:
           heading_one: "PAGO DE CONTADO"
           heading_two: "DESDE EL DíA 1"
-          sub_heading: "y disfruta de mejores precios de chile"
+          sub_heading: "y disfruta de mejores precios de Chile"
         content:
           price: "2.415.000 CLP"
           price_info: "una sola cuota"
