@@ -130,6 +130,7 @@ export const HR = styled.hr`
 export const Div = styled.div`
     flex: ${props => props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
     max-width: ${props => props.size ? `${(props.size / 12) * 100}%` : null};
+    overflow-x:${props => props.overflowX};
     grid-area: ${props => props.gridArea};
     grid-column: ${props => props.gridColumn};
     grid-row: ${props => props.gridRow};

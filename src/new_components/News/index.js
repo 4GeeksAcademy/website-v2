@@ -12,7 +12,7 @@ const Helper = styled.span`
   height: 100%;
   vertical-align: middle;
 `
-export default ({location, margin, lang, limit, filter, padding, padding_tablet, height, width, justifyContent, imgPadding}) => {
+export default ({location, margin, lang, limit, filter, padding, padding_tablet, height, width, overflowX, justifyContent, imgPadding}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryNews{
       allNewsYaml{
@@ -58,7 +58,7 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
   }
   return (
 
-    <Div width="100%"
+    <Div width="calc(100% - 70px)"
       margin={margin ? margin : "35px 0"}
       margin_tablet={margin ? margin : "40px 0 0 0"}
       padding={padding}
@@ -66,7 +66,8 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
       display="flex"
       gap="20px"
       height="auto"
-      justifyContent="center"
+      overflowX={overflowX || "auto"}
+      justifyContent="between"
       justifyContent_tablet="between"
     >
       {Array.isArray(locationNews) && locationNews.map((l, i) => {
