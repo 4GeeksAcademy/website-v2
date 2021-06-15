@@ -44,7 +44,7 @@ content:
       logo: "../../../static/images/news/larazon.png"
       location: ["madrid-spain"]
       image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
-      title: "Entrevista / 4Geeks Academy en CNN Chile"
-      text: "Gracias a nuestros amigos de CNN Chile por haber estado presentes en nuestro evento y publicar tan buen material sobre el futuro en educación que ofrecemos a la comunidad de Santiago a través de nuestro programa de #Bootcamp de #Programación."
+      title: "Movimiento solidario para enseñar programación"
+      text: "Durante la crisis de COVID-19, una de las peores de los ultimos años, decidimos aumentar nuestros programas de becas en españa exponencialmente, logrando becar a más de 60 alumnos durante el año mas difícil de la pandemia; Recibiendo el reconocimiento de la prensa local."
       textUrl: "Ver Entrevista"
       url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"
