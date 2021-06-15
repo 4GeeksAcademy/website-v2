@@ -177,7 +177,11 @@ const PricesAndPayments = (props) => {
                 applyLabel={apply_button_text}
                 border="1px solid black"
                 borderRight_tablet="none"
-              />
+              >
+                <Div margin="10px 0 0 0" display="flex">
+                  <img style={{ margin: "auto", height: "20px" }} src={prices.center_section?.plans[activeStep]?.logo} />
+                </Div>
+              </PricingCard>
             }
             {prices.center_section && Array.isArray(prices.center_section.plans) &&
               <PricingCard lang={props.lang} color="white" background='black'
@@ -215,7 +219,11 @@ const PricesAndPayments = (props) => {
                 data={prices.right_section}
                 border="1px solid black"
                 borderLeft_tablet="none"
-              />
+              >
+                <Div margin="10px 0 0 0" display="flex">
+                  <img style={{ margin: "auto", height: "20px" }} src={prices.center_section?.plans[activeStep]?.logo} />
+                </Div>
+              </PricingCard>
             }
           </GridContainer>
       }
