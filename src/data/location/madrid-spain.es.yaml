@@ -55,11 +55,11 @@ images_box:
       alt: "españa madrid"
     - path: "../../../static/images/locations/madrid-1.jpeg"
       alt: "4Geeeks España location"
-    - path: "../../../static/images/locations/madrid-2.png"
+    - path: "../../../static/images/locations/madrid-5.jpeg"
       alt: "4Geeeks España lab"
     - path: "../../../static/images/locations/madrid-3.png"
       alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-4.jpeg"
+    - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks España lab"
 
 ## PRICES SECTION
