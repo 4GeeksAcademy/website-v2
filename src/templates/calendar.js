@@ -58,6 +58,12 @@ const dateText = {
   us: "to",
   es: "al"
 }
+
+let modality = {
+  full_time: "Full Stack Developer - Full Time",
+  part_time: "Full Stack Developer - Part Time"
+};
+
 const Calendar = (props) => {
   const {pageContext, yml, data} = props;
   const [limit, setLimit] = useState(true);
@@ -79,9 +85,9 @@ const Calendar = (props) => {
       let syllabus = []
       for(let i in cohorts) {
         let name = cohorts[i].syllabus?.certificate?.name
-        name === "Full-Stack Software Developer FT" ? name = "Full Stack Developer - Full Time" : name
+        name === "Full-Stack Software Developer FT" ? name = modality["full_time"] : name
 
-        name === "Full-Stack Software Developer" ? name = "Full Stack Developer - Part Time" : name      
+        name === "Full-Stack Software Developer" ? name = modality["part_time"] : name      
         // console.log("NAME:", name)
         syllabus.push(name) 
       }
@@ -205,7 +211,15 @@ const Calendar = (props) => {
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex">
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
-                  <Paragraph textAlign="left">{content.cohorts.info.duration_weeks}</Paragraph>
+                  <Paragraph textAlign="left">
+                    {
+                      m.syllabus.certificate.name === modality["full_time"] 
+                        ? content.cohorts.info.duration_full_time
+                        : m.syllabus.certificate.name === modality["part_time"] 
+                        ? content.cohorts.info.duration_part_time
+                        : content.cohorts.info.duration_weeks
+                    }
+                  </Paragraph>
                 </Div>
                 <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                   <Div flexDirection="column" width="50%">
@@ -337,6 +351,8 @@ export const query = graphql`
               program_label
               duration_label
               duration_weeks
+              duration_part_time
+              duration_full_time
               location_label
             }
             footer {

@@ -15,7 +15,7 @@ news:
   - name: "La Razón"
     location: ["madrid-spain"]
     image: "../../../../static/images/news/larazon_grey.png"
-    url: "https://www.elespanol.com/invertia/disruptores-innovadores/innovadores/20200317/movimiento-solidario-ensenar-programacion-crisis-covid-19/475454655_0.html",
+    url: "https://www.elespanol.com/invertia/disruptores-innovadores/innovadores/20200317/movimiento-solidario-ensenar-programacion-crisis-covid-19/475454655_0.html"
     #url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"
   - name: "El Economista"
     location: ["madrid-spain"]
