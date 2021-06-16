@@ -15,6 +15,6 @@ list:
     sub_title: "You will find more teachers at 4Geeks than the industry average."
   - title: ">  TAILORED MADE CAREER SUPPORT"
     sub_title: "Based on each job opportunity"
-paragraph: "<a href='/'><span class='span-blue'>Compare 4Geeks</span></a> with other bootcamps."
+paragraph: "<a href='/us/geeks-vs-others'><span class='span-blue'>Compare 4Geeks</span></a> with other bootcamps."
 image1: "../../../../static/images/geeksinfo/geeksinfo.png"
 image2: "../../../../static/images/bg/community.png"

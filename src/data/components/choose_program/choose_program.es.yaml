@@ -9,10 +9,10 @@ programs:
     location_bc_slug: null
     schedule: "Horario Part-Time únicamente"
     link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
-  - text: "Desde Casa (Online)"
-    bc_slug: full-stack
+  - text: "Machine Learning Engineering"
+    bc_slug: "machine-learning-engineering"
     location_bc_slug: online
-    schedule: "Horario Part-Time and Full-Time"
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    schedule: "Part-Time - Online"
+    link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 open_button_text: "SELECCIONAR PROGRAMA"
 close_button_text: "Close"

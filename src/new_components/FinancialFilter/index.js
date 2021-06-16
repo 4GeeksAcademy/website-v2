@@ -151,7 +151,7 @@ const FinancialFilter = (props) => {
               top="40px"
               left="20px"
               width="fit-content"
-              options={locations.map(l => ({label: l.node.city + ", " + l.node.country, value: l.node.active_campaign_location_slug}))}
+              options={locations.map(l => ({label: l.node.name, value: l.node.active_campaign_location_slug}))}
               openLabel={!currentLocation ? "Pick a city" : currentLocation.city + ". " + currentLocation.country}
               closeLabel={!currentLocation ? props.campusClosedLabel : currentLocation.city + ". " + currentLocation.country}
               onSelect={(opt) => setCurrentLocation(locations.find(l => l.node.active_campaign_location_slug === opt.value).node)}

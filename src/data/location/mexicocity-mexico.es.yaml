@@ -7,10 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   unlisted: false
   keywords: "Coding Bootcamp Campus Mexico"
-  redirects: [
-    # WARN: This specific slug, does not allow to change language
-    # "/es/coding-campus/bootcamp-programacion-mexico"
-    ]
+  redirects: ["/coding-campus/bootcamp-programacion-mexico"]
 
 seo_title: "Aprende a programar en Mexico"
 header:

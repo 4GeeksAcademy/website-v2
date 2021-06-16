@@ -76,6 +76,11 @@ const Loc = ({locations, title, paragraph, lang}) => {
         {loc != null &&
           loc.map((item, i) => {
             const next = nextDate(item);
+            let stringDate = "";
+            if(next != undefined && next.kickoff_date){
+              stringDate = dayjs(next.kickoff_date).locale(lang).format("ddd DD MMM YYYY");
+              stringDate = stringDate[0].toUpperCase() + stringDate.substr(1,2) + "." + stringDate.substr(3);
+            }
             return (
               <Div
                 // onMouseLeave={() => {
@@ -112,7 +117,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
                     {next != undefined ? next.syllabus.certificate.name : "No upcoming dates at this location"}
                   </Paragraph>
                   {next != undefined && next.kickoff_date && <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
-                    {dayjs(next.kickoff_date != undefined && next.kickoff_date).locale(lang).format("ddd, DD MMM YYYY")}
+                    <span className="capitalize">{stringDate}</span>
                   </Paragraph>}
                 </Div>
                 <Link to={`/${lang}/coding-campus/${item.node.meta_info.slug}`}><Icon style={{position: "absolute", bottom: "18px", right: "18px"}} icon="arrowright" height="32px" width="32px" /></Link>

@@ -4,7 +4,7 @@ meta_info:
     description: "Learn about 4Geeks Academy's upcoming cohorts and also our exciting workshops and events tailred for the local software development community"
     image: ""
     keywords: "4Geeks Academy Events, 4Geeks Academy Workshops, 4Geeks Academy Events, Workshops, Events, Upcoming Cohorts, Upcoming Dates"
-    redirects: ["/upcoming", "/dates", "/calendar"]
+    redirects: ["/upcoming", "/dates", "/calendar", "/us/calendar"]
 
 seo_title: "Coding Bootcamp"
 header:

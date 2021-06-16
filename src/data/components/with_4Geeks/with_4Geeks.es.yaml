@@ -3,7 +3,7 @@
 
 ## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
 header:
-  title: 4Geeks Academy in tres historias
+  title: 4Geeks Academy en tres historias
   paragraph: ""
 with:
   - name: "Hernan García"
@@ -21,7 +21,7 @@ with:
       text: ""
       text_link: ""
   - name: "Luisa Glum"
-    title: "La Academia estaba tan comprometida como yo”"
+    title: "La Academia estaba tan comprometida como yo"
     description: "Luisa pagó el programa después de que se graduó y encontró trabajo, ella aplicó al ISA (Income Share Agreement)"
     image: ../../../../static/images/staff/luisa.png
     alt: ""

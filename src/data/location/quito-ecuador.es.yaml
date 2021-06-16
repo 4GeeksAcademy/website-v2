@@ -7,10 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   unlisted: false
   keywords: "Coding Bootcamp Campus Ecuador"
-  redirects: [
-    # WARN: This specific slug, does not allow to change language
-    # "/es/coding-campus/bootcamp-programacion-ecuador"
-    ]
+  redirects: ["/coding-campus/bootcamp-programacion-ecuador"]
 
 seo_title: "Aprende a programar en Ecuador"
 header:
