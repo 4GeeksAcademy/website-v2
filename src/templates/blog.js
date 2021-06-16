@@ -41,21 +41,23 @@ const Blog = ({data, pageContext, yml}) => {
         return (
             <>
                 {/* Imagen */}
-                <Div flexDirection="Column" margin="0 0 87px 0">
+                <Div key={i} flexDirection="Column" margin="0 0 87px 0">
                     {
-                        item.node.frontmatter.image &&
+                        item.node.frontmatter.image !== "" && (
                         <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
                             <LazyLoad height={10} scroll={true} once={true}>
-                                <RoundImage
-                                    url={item.node.frontmatter.image}
-                                    bsize="cover"
-                                    border="0px"
-                                    position="center"
-                                    width="100%"
-                                    height="329px"
-                                />
+
+                            <RoundImage
+                                url={item.node.frontmatter.image !== null ? item.node.frontmatter.image :  yml.banner.no_image}
+                                bsize="cover"
+                                border="0px"
+                                position="center"
+                                width="100%"
+                                height="329px"
+                            />
                             </LazyLoad>
                         </Link>
+                        )
                     }
 
                     {/* Boton */}
@@ -70,7 +72,7 @@ const Blog = ({data, pageContext, yml}) => {
                                 pointer
                                 textColor={Colors.darkGray}
                                 fontSize={"13px"}>
-                                {item.node.frontmatter.cluster.replace("-", " ") || "4Geeks"}
+                                {item.node.frontmatter.cluster?.replace("-", " ") || "4Geeks"}
                             </Button>
                         </Link>
                     </Div>
@@ -417,6 +419,7 @@ query BlogQuery($file_name: String!, $lang: String!) {
                 #   }
                 }
               }  
+            no_image  
           }
           question
           topics
@@ -446,14 +449,14 @@ query BlogQuery($file_name: String!, $lang: String!) {
         sort: {fields: frontmatter___date, order: DESC},
         filter: {
             frontmatter: {
-                featured: {eq: true}, 
+                # featured: {eq: true}, 
                 status: {eq: "published"}
             }
             fields: {
                 lang: {eq: $lang}
             }
-        },
-        limit: 10
+        }
+        # limit: 10
     ){
         edges {
             node {
