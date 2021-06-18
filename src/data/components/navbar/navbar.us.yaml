@@ -40,7 +40,7 @@ navbar:
       paragraph: "This is the place to boost your career by learning to code. Think differently, become more self-confident, bring your ideas to life and make more money."
       link: "/us/why-4geeks"
       links:
-        - title: "Accompaniment"
+        - title: "Support"
           sub_links:
             - title: "GeekPal"
               link_to: "/us/geekpal-support"

@@ -130,6 +130,7 @@ export const HR = styled.hr`
 export const Div = styled.div`
     flex: ${props => props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
     max-width: ${props => props.size ? `${(props.size / 12) * 100}%` : null};
+    overflow-x:${props => props.overflowX};
     grid-area: ${props => props.gridArea};
     grid-column: ${props => props.gridColumn};
     grid-row: ${props => props.gridRow};
@@ -368,7 +369,7 @@ export const Header = ({hideArrowKey, children, fontSize, fontSize_tablet, image
                 {/* hacer cambios aqui ... remover svg en mobile */}
                 <Div flexDirection="column" gridColumn_tablet={svg_image ? null : "1 / 13"} gridArea_tablet={svg_image ? "1/1/1/7" : null}>
                     <H1 type="h1" textAlign_tablet={textAlign_tablet} margin="0 0 11px 0" color="#606060">{seo_title}</H1>
-                    <H2 type="h2" textAlign_tablet={textAlign_tablet} padding="0" padding_tablet={paddingTitle_tablet} fontSize={fontSize || "50px"} fontSize_tablet={fontSize_tablet || "50px"} lineHeight="60px">{hideArrowKey ? title : `< ${title} >`}</H2>
+                    <H2 type="h2" textAlign_tablet={textAlign_tablet} padding="0" padding_tablet={paddingTitle_tablet} fontSize={fontSize || "40px"} fontSize_tablet={fontSize_tablet || "50px"} lineHeight="60px">{hideArrowKey ? title : `< ${title} >`}</H2>
                     <Paragraph padding="0" padding_tablet={paddingParagraph_tablet} textAlign_tablet={textAlign_tablet} margin="26px 0" >{paragraph}</Paragraph>
                     {children}
                 </Div>
