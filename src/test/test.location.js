@@ -44,14 +44,14 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       const meta_keys = Object.keys(location)
       front_matter_fields.forEach(obj => {
         let slugMatch = academySlug.some(el=> el === location[obj["key"]])
-        if(!meta_keys.includes(obj["key"])) fail(`Missing prop ${obj["key"]} on location on ${_path}`)
+        if(!meta_keys.includes(obj["key"])) fail(`Missing prop ${obj["key"]} from location on ${_path}`)
         
         else{
           if(obj["type"] === "string"){
             // TODO: 1.- [x] las ubicaciones tienen que coincidir con cualquier yml en ./src/data/location.yml específicamente la propiedad breathecode_location_slugdentro del yml.
-            // TODO: 5.- []Las ubicaciones en ./src/data/location, la propiedad breathecode_location_slugtiene que coincidir con una de las ubicaciones de breathecode.
+            // TODO: 5.- [x]Las ubicaciones en ./src/data/location, la propiedad breathecode_location_slugtiene que coincidir con una de las ubicaciones de breathecode.
             // TODO: 4.5hrs from now
-            if(obj["mandatory"] === true && slugMatch !== true && (location[obj["key"]] !== _slug)) fail(`Invalid mandatory prop ${obj["key"]} on ${_path} expected ${_slug.green} ${"doesn't match with".red} ${location[obj["key"]].yellow}`)
+            if(obj["mandatory"] === true && slugMatch !== true && (location[obj["key"]] !== _slug)) fail(`\n\nInvalid mandatory prop ${obj["key"]} on ${_path} expected: ${location[obj["key"]].yellow} ${"match with".red} ${_slug.green}\n\n`)
           }
         }
       })
@@ -60,5 +60,5 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       fail(error.message || error);
     }
   }
-  success("All Locations have correct slug with");
+  success("All Locations have correct slug");
 });
