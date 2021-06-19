@@ -9,7 +9,7 @@ const front_matter_fields = [
 
 walk(`${__dirname}/../data/location`, async (err, files) => {
   const academySlug = []
-  err && fail('Error reading the Markdown files: ', err);
+  err && fail('Error reading the YAML files: ', err);
   files.forEach((_path) => {
       const doc = loadYML(_path);
       if (!doc || !doc.yaml) fail('Invalid YML syntax for ' + _path);

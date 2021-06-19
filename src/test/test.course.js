@@ -1,5 +1,3 @@
-var colors = require('colors');
-const fetch = require('node-fetch');
 const { walk, loadYML, empty, fail, success } = require('./_utils');
 
 const front_matter_fields = [
@@ -7,7 +5,7 @@ const front_matter_fields = [
 ];
 
 walk(`${__dirname}/../data/course`, async (err, files) => {
-  err && fail('Error reading the Markdown files: ', err);
+  err && fail('Error reading the YAML files: ', err);
   files.forEach((_path) => {
       const doc = loadYML(_path);
       if (!doc || !doc.yaml) fail('Invalid YML syntax for ' + _path);
@@ -27,7 +25,6 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
     if (!doc.yaml) fail('Invalid YML syntax for ' + _path);
     if (!doc.lang) fail('Missing language on yml file name for ' + _path);
 
-    // console.log("SLUUUUUUG:::", _slug)
     try {
       const course = doc.yaml
       const meta_keys = Object.keys(course.meta_info)
