@@ -23,7 +23,7 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
   })
   const academyData = await res.json()
   academyData.map(el => academySlug.push(el.slug))
-  console.log("DATAACADMY", academySlug)
+  console.log("academia disponible", academySlug)
 
   const _files = files.filter(
     (f) =>
