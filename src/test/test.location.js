@@ -2,11 +2,10 @@ var colors = require('colors');
 const fetch = require('node-fetch');
 const { walk, loadYML, empty, fail, success } = require('./_utils');
 
+let limit_images = 5;
 const front_matter_fields = [
   { key: 'breathecode_location_slug', type: 'string', mandatory: true },
-  //     {key: "title", type: "string", mandatory: true},
 ];
-let limit_images = 5;
 
 walk(`${__dirname}/../data/location`, async (err, files) => {
   const academySlug = []
@@ -47,8 +46,6 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       console.log("\nImages count:", location.images_box.images?.length, "\npath: ", _path, "\n")
       console.log("location need images for next tests".yellow, "\n")
 
-
-
       front_matter_fields.forEach(obj => {
         let slugMatch = academySlug.some(el=> el === location[obj["key"]])
 
@@ -70,6 +67,3 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
   }
   success("All Locations test passed");
 });
-
-
-// TODO: 2.- [] utm_course tiene que coincidir con cualquiera de los nombres de archivo dentro de los nombres de archivo ./src/data/course/ (ignorando el idioma). Por ejemplo: pila completa
