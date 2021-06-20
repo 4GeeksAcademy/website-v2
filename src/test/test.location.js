@@ -6,6 +6,7 @@ const front_matter_fields = [
   { key: 'breathecode_location_slug', type: 'string', mandatory: true },
   //     {key: "title", type: "string", mandatory: true},
 ];
+let limit_images = 5;
 
 walk(`${__dirname}/../data/location`, async (err, files) => {
   const academySlug = []
@@ -15,7 +16,7 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
     if (!doc || !doc.yaml) fail('Invalid YML syntax for ' + _path);
   });
   
-  console.log("verifying location slugs with api...")
+  console.log("verifying location slugs...")
   const res = await fetch("https://breathecode.herokuapp.com/v1/admissions/academy", {
     headers: {
       'Authorization': `Token ${process.env.DEV_TOKEN}`,
@@ -43,8 +44,17 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
     try {
       const location = doc.yaml
       const meta_keys = Object.keys(location)
+      console.log("\nImages count:", location.images_box.images?.length, "\npath: ", _path, "\n")
+      console.log("location need images for next tests".yellow, "\n")
+
+
+
       front_matter_fields.forEach(obj => {
         let slugMatch = academySlug.some(el=> el === location[obj["key"]])
+
+        // TODO: Uncoment when all location have correct images
+        // if(location.images_box.images?.length <= limit_images) fail(`The images in locations yml should have exactly 5 images.\n\nConflict: found ${location.images_box.images?.length} of ${limit_images} images in:\n${_path}\n\n`)
+        
         if(!meta_keys.includes(obj["key"])) fail(`Missing prop ${obj["key"]} from location on ${_path}`)
         
         else{
@@ -58,5 +68,8 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       fail(error.message || error);
     }
   }
-  success("All Locations have correct slug");
+  success("All Locations test passed");
 });
+
+
+// TODO: 2.- [] utm_course tiene que coincidir con cualquiera de los nombres de archivo dentro de los nombres de archivo ./src/data/course/ (ignorando el idioma). Por ejemplo: pila completa

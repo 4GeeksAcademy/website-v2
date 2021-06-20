@@ -31,7 +31,7 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
                 if(!meta_keys.includes(m["key"])) fail(`Missing prop ${m["key"]} on frontmatter on ${_path}`)
                 
                 // Pretty log
-                if(authors_verifying === undefined) fail(`${`\nProblem found in: ${_path}`.red}\n\n${`The author ${authors_verifying} not match with the user list:`.red} \n\n${autor_keys.map(el => `${el.green}\n`)} \n`)
+                if(authors_verifying === undefined) fail(`${`\nProblem found in: ${_path}`.red}\n\n${`The author ${authors_verifying} not match with the username list:`.red} \n\n${autor_keys.map(el => `${el.green}\n`)} \n`)
 
                 else{
                     if(m["type"] === "array"){
@@ -57,7 +57,7 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
 });     
 
 // TODO: 1.- [x] locations have to match with any yml in the ./src/data/location.yml specifically the property breathecode_location_slug inside the yml.
-// TODO: 2.- [ ] utm_course has to match with any of the file names inside the ./src/data/course/ file names (ignoring language). For example: full-stack
+// TODO: 2.- [x] utm_course has to match with any of the file names inside the ./src/data/course/ file names (ignoring language). For example: full-stack
 // TODO: 3.- [x] Los nombres de archivo ./src/data/course deben coincidir con la propiedad bc_slug dentro de ellos
 
 // TODO: 5.- [x]Las ubicaciones en ./src/data/location, la propiedad breathecode_location_slugtiene que coincidir con una de las ubicaciones de breathecode.
@@ -66,7 +66,7 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
 
 // TODO: 7.- [ ] Any YML must have a Spanish and English version unless is called "example.yml".
 // TODO: 8.- [ ] Any relative image on any YML or Markdown (md) should match from its respective image file inside the static folder.
-// TODO: 9.- [ ] The image gallery for each location should have exactly 5 images.
+// TODO: 9.- [x] The image gallery for each location should have exactly 5 images.
 
 //TODO: can't understand task 4
 //TODO: 4.- [] Automations and tags have to match with their respective tags or automation coming from the API:
