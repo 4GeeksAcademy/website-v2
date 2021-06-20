@@ -11,10 +11,11 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
   const academySlug = []
   err && fail('Error reading the YAML files: ', err);
   files.forEach((_path) => {
-      const doc = loadYML(_path);
-      if (!doc || !doc.yaml) fail('Invalid YML syntax for ' + _path);
-    });
-
+    const doc = loadYML(_path);
+    if (!doc || !doc.yaml) fail('Invalid YML syntax for ' + _path);
+  });
+  
+  console.log("verifying location slugs with api...")
   const res = await fetch("https://breathecode.herokuapp.com/v1/admissions/academy", {
     headers: {
       'Authorization': `Token ${process.env.DEV_TOKEN}`,
@@ -48,9 +49,6 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
         
         else{
           if(obj["type"] === "string"){
-            // TODO: 1.- [x] las ubicaciones tienen que coincidir con cualquier yml en ./src/data/location.yml específicamente la propiedad breathecode_location_slugdentro del yml.
-            // TODO: 5.- [x]Las ubicaciones en ./src/data/location, la propiedad breathecode_location_slugtiene que coincidir con una de las ubicaciones de breathecode.
-            // TODO: 4.5hrs from now
             if(obj["mandatory"] === true && slugMatch !== true && (location[obj["key"]] !== _slug)) fail(`\n\nInvalid mandatory prop ${obj["key"]} on ${_path} expected: ${location[obj["key"]].yellow} ${"match with".red} ${_slug.green}\n\n`)
           }
         }

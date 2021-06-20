@@ -1,5 +1,5 @@
 ---
-author: https://twitter.com/jimena_y_yo
+author: jimena_y_yo
 comments: true
 date: 2021-02-24 05:29:14 +0000
 excerpt: ¿Qué significa ser Full Stack? ¿Cuántas cosas son necesarias conocer para ser Full Stack? Te invito a seguir leyendo para conocer la respuesta.

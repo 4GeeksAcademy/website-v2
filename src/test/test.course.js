@@ -32,7 +32,6 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
         if(!meta_keys.includes(obj["key"])) fail(`Missing prop ${obj["key"]} from course on ${_path}`)
         else{
           if(obj["type"] === "string"){
-            //TODO: 3.- [x] Los nombres de archivo ./src/data/course deben coincidir con la propiedad bc_slug dentro de ellos
             if(obj["mandatory"] === true && (course.meta_info[obj["key"]] !== _slug)) fail(`\n\nInvalid mandatory prop ${obj["key"]} on ${_path} expected: ${course.meta_info[obj["key"]].yellow} ${"match with".red} ${_slug.green} \n\n`)
           }
         }
