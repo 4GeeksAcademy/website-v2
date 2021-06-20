@@ -71,4 +71,4 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
 //TODO: can't understand task 4
 //TODO: 4.- [] Automations and tags have to match with their respective tags or automation coming from the API:
 
-// TODO: 6.5hrs from now
+// TODO: 7.5hrs from now
