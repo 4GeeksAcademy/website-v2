@@ -63,11 +63,10 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       const location = doc.yaml
       const meta_keys = Object.keys(location)
 
-      //TODO: uncoment when finish test
-      // if(location.images_box.images?.length < 5 || location.images_box.images?.length === undefined){
-      //   console.log("\nlocation needs images as soon as possible".yellow)
-      //   console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
-      // }
+      if(location.images_box.images?.length < 5 || location.images_box.images?.length === undefined){
+        console.log("\nlocation needs images as soon as possible".yellow)
+        console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
+      }
 
       front_matter_fields.forEach(obj => {
         let slugMatch = academySlug.some(el=> el === location[obj["key"]])
