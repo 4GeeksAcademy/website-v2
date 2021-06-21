@@ -1,5 +1,5 @@
+const fs = require('fs');
 const { walk, loadYML, empty, fail, success } = require('./_utils');
-
 const front_matter_fields = [
   { key: 'bc_slug', type: 'string', mandatory: true },
 ];
@@ -18,10 +18,27 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
       f.indexOf('call-to-actions.yml') === -1
   );
 
+  let slugs = []
   for (let i = 0; i < _files.length; i++) {
     const _path = _files[i];
     const doc = loadYML(_path);
-    const _slug = await _path.split(".")[0].substr(_path.lastIndexOf("/") +1)
+
+    let _slug = await _path.split(".")[0].substr(_path.lastIndexOf("/") +1)
+    slugs.push(_slug)
+
+    if(slugs.length === _files.length){
+      let uniq_slug = slugs.filter((curr, prev, self) => self.indexOf(curr) === prev)
+
+      for (let i = 0; i < uniq_slug.length; i++) {
+        let slug_es = `${__dirname}/../data/course/${uniq_slug[i]}.es.yaml`
+        let slug_us = `${__dirname}/../data/course/${uniq_slug[i]}.us.yaml`
+
+        !fs.existsSync(slug_es) ? fail("File language does not exist, expected as", slug_es.green)
+        : !fs.existsSync(slug_us) ? fail("File language does not exist, expected as", slug_us.green) 
+        : null
+      }
+    }
+    
     if (!doc.yaml) fail('Invalid YML syntax for ' + _path);
     if (!doc.lang) fail('Missing language on yml file name for ' + _path);
 

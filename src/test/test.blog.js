@@ -63,12 +63,15 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
 // TODO: 5.- [x]Las ubicaciones en ./src/data/location, la propiedad breathecode_location_slugtiene que coincidir con una de las ubicaciones de breathecode.
 // TODO: 6.- [x] The author property in the blog post frontmatter has to match any of the ./src/utils/twitter.js usernames.
 
+// Only course and location have .us and .es
+// TODO: 7.- [x] Any YML must have a Spanish and English version unless is called "example.yml".
 
-// TODO: 7.- [ ] Any YML must have a Spanish and English version unless is called "example.yml".
 // TODO: 8.- [ ] Any relative image on any YML or Markdown (md) should match from its respective image file inside the static folder.
+
+
 // TODO: 9.- [x] The image gallery for each location should have exactly 5 images.
 
 //TODO: can't understand task 4
 //TODO: 4.- [] Automations and tags have to match with their respective tags or automation coming from the API:
 
-// TODO: 7.5hrs from now
+// TODO: 9hrs from now
