@@ -48,3 +48,6 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
   }
   success("All Landing yml have correct utm_course");
 });
+
+
+//TODO: validar en landings que utm_course y utm_location tengan sentido con el api

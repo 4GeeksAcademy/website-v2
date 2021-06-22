@@ -64,7 +64,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "miami-sunset"
-    - path: "../../../static/images/locations/miami-people2.jpeg"
+    - path: "../../../static/images/locations/miami-people2.jpegz"
       alt: "4Geeeks miami room"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks miami day"

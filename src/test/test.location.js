@@ -1,7 +1,7 @@
 const fs = require('fs');
 var colors = require('colors');
 const fetch = require('node-fetch');
-const { walk, loadYML, empty, fail, success } = require('./_utils');
+const { walk, loadYML, empty, fail, success, localizeImage } = require('./_utils');
 
 let limit_images = 5;
 const front_matter_fields = [
@@ -62,11 +62,32 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
     try {
       const location = doc.yaml
       const meta_keys = Object.keys(location)
+      let type = [
+        'relative_images',
+        'external_images',
+        'url'
+      ]
+      let extensions = [
+          'png',
+          'jpg',
+          'jpeg'
+      ]
 
-      if(location.images_box.images?.length < 5 || location.images_box.images?.length === undefined){
-        console.log("\nlocation needs images as soon as possible".yellow)
-        console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
+      if(location.images_box.images !== null ){
+        for(let i = 0; i < location.images_box.images.length; i++){
+
+          let image_path = location.images_box.images[i].path
+          // console.log("\nLOCATION IMAGE", image_path)
+
+          localizeImage(image_path, 'relative_images', extensions, _path, 'locations')
+        }
       }
+
+      //TODO: remove when make a commit
+      // if(location.images_box.images?.length < 5 || location.images_box.images?.length === undefined){
+      //   console.log("\nlocation needs images as soon as possible".yellow)
+      //   console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
+      // }
 
       front_matter_fields.forEach(obj => {
         let slugMatch = academySlug.some(el=> el === location[obj["key"]])

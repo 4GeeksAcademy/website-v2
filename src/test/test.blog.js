@@ -1,6 +1,6 @@
 
 var colors = require('colors')
-const {walk, loadMD, empty, fail, success} = require("./_utils")
+const {walk, loadMD, empty, fail, success, findInFile, localizeImage} = require("./_utils")
 const twitterUser = require('../utils/twitter')
 
 const front_matter_fields = [
@@ -17,7 +17,7 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
     const _files = files.filter(f =>
         (f.indexOf('.md') > 1 || f.indexOf('.md') > 1)
     )
-    
+
     for (let i = 0; i < _files.length; i++) {
         const _path = _files[i];
 
@@ -25,7 +25,18 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             const content = loadMD(_path)
             const frontmatter = content.attributes
             const meta_keys = Object.keys(frontmatter)
-            const autor_keys = Object.keys(twitterUser)            
+            const autor_keys = Object.keys(twitterUser)
+            let extensions = [
+                'png',
+                'jpg',
+            ]
+
+            // let type_path = [
+            //     'relative_images',
+            //     'url'
+            // ]
+            localizeImage(frontmatter.image, 'relative_images', extensions, _path, 'blog')
+
             front_matter_fields.forEach((m) => {
                 let authors_verifying = autor_keys.find(el => el === frontmatter["author"])
                 if(!meta_keys.includes(m["key"])) fail(`Missing prop ${m["key"]} on frontmatter on ${_path}`)
@@ -54,24 +65,7 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
         }
     }
     success("All Markdown's have correct syntax")
-});     
-
-// TODO: 1.- [x] locations have to match with any yml in the ./src/data/location.yml specifically the property breathecode_location_slug inside the yml.
-// TODO: 2.- [x] utm_course has to match with any of the file names inside the ./src/data/course/ file names (ignoring language). For example: full-stack
-// TODO: 3.- [x] Los nombres de archivo ./src/data/course deben coincidir con la propiedad bc_slug dentro de ellos
-
-// TODO: 5.- [x]Las ubicaciones en ./src/data/location, la propiedad breathecode_location_slugtiene que coincidir con una de las ubicaciones de breathecode.
-// TODO: 6.- [x] The author property in the blog post frontmatter has to match any of the ./src/utils/twitter.js usernames.
-
-// Only course and location have .us and .es
-// TODO: 7.- [x] Any YML must have a Spanish and English version unless is called "example.yml".
-
+});
 // TODO: 8.- [ ] Any relative image on any YML or Markdown (md) should match from its respective image file inside the static folder.
 
-
-// TODO: 9.- [x] The image gallery for each location should have exactly 5 images.
-
-//TODO: can't understand task 4
 //TODO: 4.- [] Automations and tags have to match with their respective tags or automation coming from the API:
-
-// TODO: 9hrs from now

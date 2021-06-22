@@ -81,4 +81,91 @@ const success = (msg, ...params) => {
     process.exit(0);
 }
 
-module.exports = { walk, loadYML, loadMD, empty, fail, success }
+const regex = {
+  // (:file:\/)?[\/]|[.]+(\/[\w\.\-]+)+\/?
+
+
+  // last___ /(:file:\/)?[.\/]+[\w\]|[.]+(\/[\w\.\-]+)+\/?/gm
+
+  // new____ (:file:\/)?(^(?!http:))+[.\/]+[\w\]|[.]+(\/[\w\.\-]+)+\/?
+  relative_images: /(:file:\/)?(^(?!http:))+[.\/]+[\w\]|[.]+(\/[\w\.\-]+)+\/?/gm, 
+  external_images: /!\[.*\]\(https?:\/(\/{1}[^/)]+)+\/?\)/gm,
+  url: /(https?:\/\/[a-zA-Z_\-.\/0-9]+)/gm,
+  uploadcare: /https:\/\/ucarecdn.com\/(?:.*\/)*([a-zA-Z_\-.\/0-9]+)/gm
+}
+
+const findInFile = (types, content) => {
+  const validTypes = Object.keys(regex);
+  if(!Array.isArray(types)) types = [types];
+  // console.log(`CONTET_______ ${content}\n\n`)
+  let findings = {}
+  types.forEach(type => {
+    if(!validTypes.includes(type)) throw Error("Invalid type: "+type)
+    else findings[type] = {};
+  });
+
+  types.forEach(type => {
+
+    let count = 0;
+    while ((m = regex[type].exec(content)) !== null) {
+      console.log("EMEM::", m[3])
+      // This is necessary to avoid infinite loops with zero-width matches
+      let checkIsRelative = types[0] === 'relative_images' ? m[3] : m[1]
+      // console.log("VALID TYPE", isRelative)
+
+      if (m.index === regex.lastIndex) {
+          regex.lastIndex++;
+      }
+      
+      // The result can be accessed through the `m`-variable.
+      // m.forEach((match, groupIndex) => values.push(match));
+      const txt = m[0];
+      count++;
+      findings[type][m[0]] = checkIsRelative;
+    }
+  })
+  return findings;
+}
+
+const localizeImage = async (content, type, extensions, _path, folder_of_images) => {
+
+  const findings = findInFile(type, content);
+  const dirPath = path.join(__dirname, `/../../static/images/${folder_of_images}`);
+
+  const regex_matchFiles = {
+    relative_images: /(:file:\/)?[.\/]+[\w\]|[.]+(\/[\w\.\-]+)+\/?/gm, 
+    external_images: /.*!\[.*\]\(https?:\/(\/{1}[^/)]+)+\/?\).*/gm,
+    url: /.*(https?:\/\/[a-zA-Z_\-.\/0-9]+).*/gm,
+    uploadcare: /.*https:\/\/ucarecdn.com\/(?:.*\/)*([a-zA-Z_\-.\/0-9]+).*/gm
+  }
+  //TODO: HERE COMENTED
+  // console.log("FILE:::", findings[type])
+
+  for(expression in findings[type]){
+      
+      let matches = regex_matchFiles[type].exec(expression);
+
+      if(matches){
+          let match = type === 'relative_images' ? matches[2] : matches[1];
+          let fileName = findings[type][expression].replace("/","");
+          console.log("MATCHESS", findings[type])
+          if(fileName.indexOf(".") === -1){
+              if(extensions[fileName]) fileName = fileName + "." + extensions[fileName];
+              else console.log("Extension not found for "+fileName)
+          } 
+          let imagePath = dirPath + "/" + fileName;
+
+          // console.log("PATH_IMAGE FOUND", imagePath)
+
+          if(fs.existsSync(imagePath)){
+              // console.log(`\n\nImage ${match} in ${_path} was found\n\n`)
+              // return null
+          }else{
+            // TODO:Cambiar y usar fail func
+              console.log(`\n${match.yellow} ${`not found in ${folder_of_images}`.red} \n${`no relation to static folder found at: ${_path}`.red}\n`)
+          }
+      }
+  }
+}
+
+module.exports = { walk, loadYML, loadMD, empty, fail, success, findInFile, localizeImage }
