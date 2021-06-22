@@ -20,7 +20,7 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
   
   const res = await fetch("https://breathecode.herokuapp.com/v1/admissions/academy", {
     headers: {
-      'Authorization': `Token ${process.env.DEV_TOKEN}`,
+      'Authorization': `Token c6fe193405438832e2790dfb1d6253200fe16775`,
       'Academy': 4
     }
   })
