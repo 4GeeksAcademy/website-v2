@@ -1,4 +1,4 @@
-const { walk, loadYML, empty, fail, success } = require('./_utils');
+const { walk, loadYML, empty, fail, success, localizeImage } = require('./_utils');
 const front_matter_fields = [
   { key: 'utm_course', type: 'string', mandatory: true },
 ];
@@ -30,6 +30,17 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
     if (!doc.yaml) fail('Invalid YML syntax for ' + _path);
     if (!doc.lang) fail('Missing language on yml file name for ' + _path);
 
+    let extensions = [
+      'png',
+      'jpg',
+      'jpeg'
+    ]
+    let meta_info_image = doc.yaml.meta_info.image
+    let header_image = doc.yaml.header_data.image
+
+    localizeImage(header_image, 'relative_images', extensions, _path, '.')
+    localizeImage(meta_info_image, 'relative_images', extensions, _path, 'bg')
+
     try {
       const course = doc.yaml
       const meta_keys = Object.keys(course.meta_info)
@@ -48,6 +59,3 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
   }
   success("All Landing yml have correct utm_course");
 });
-
-
-//TODO: validar en landings que utm_course y utm_location tengan sentido con el api

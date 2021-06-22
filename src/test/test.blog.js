@@ -29,12 +29,9 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             let extensions = [
                 'png',
                 'jpg',
+                'jpeg'
             ]
 
-            // let type_path = [
-            //     'relative_images',
-            //     'url'
-            // ]
             localizeImage(frontmatter.image, 'relative_images', extensions, _path, 'blog')
 
             front_matter_fields.forEach((m) => {
@@ -66,6 +63,3 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
     }
     success("All Markdown's have correct syntax")
 });
-// TODO: 8.- [ ] Any relative image on any YML or Markdown (md) should match from its respective image file inside the static folder.
-
-//TODO: 4.- [] Automations and tags have to match with their respective tags or automation coming from the API:

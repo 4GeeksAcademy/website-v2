@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { walk, loadYML, empty, fail, success } = require('./_utils');
+const { walk, loadYML, empty, fail, success, localizeImage } = require('./_utils');
 const front_matter_fields = [
   { key: 'bc_slug', type: 'string', mandatory: true },
 ];
@@ -22,6 +22,14 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
   for (let i = 0; i < _files.length; i++) {
     const _path = _files[i];
     const doc = loadYML(_path);
+
+    let extensions = [
+      'png',
+      'jpg',
+      'jpeg'
+    ]
+    let header_image = doc.yaml.header.image
+    localizeImage(header_image, 'relative_images', extensions, _path, 'bg')
 
     let _slug = await _path.split(".")[0].substr(_path.lastIndexOf("/") +1)
     slugs.push(_slug)

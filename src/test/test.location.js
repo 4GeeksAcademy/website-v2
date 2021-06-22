@@ -62,11 +62,7 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
     try {
       const location = doc.yaml
       const meta_keys = Object.keys(location)
-      let type = [
-        'relative_images',
-        'external_images',
-        'url'
-      ]
+
       let extensions = [
           'png',
           'jpg',
@@ -76,18 +72,21 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       if(location.images_box.images !== null ){
         for(let i = 0; i < location.images_box.images.length; i++){
 
-          let image_path = location.images_box.images[i].path
-          // console.log("\nLOCATION IMAGE", image_path)
+          let images_box = location.images_box.images[i].path
+          let header_image = location.header.image
+          let info_box = location.info_box.image
 
-          localizeImage(image_path, 'relative_images', extensions, _path, 'locations')
+          localizeImage(info_box, 'relative_images', extensions, _path, 'locations')
+          localizeImage(header_image, 'relative_images', extensions, _path, 'locations')
+          localizeImage(images_box, 'relative_images', extensions, _path, 'locations')
         }
       }
 
-      //TODO: remove when make a commit
-      // if(location.images_box.images?.length < 5 || location.images_box.images?.length === undefined){
-      //   console.log("\nlocation needs images as soon as possible".yellow)
-      //   console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
-      // }
+      //TODO: warn if location not have any image
+      if(location.images_box.images?.length < 5 || location.images_box.images?.length === undefined){
+        console.log("\nlocation needs images as soon as possible".yellow)
+        console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
+      }
 
       front_matter_fields.forEach(obj => {
         let slugMatch = academySlug.some(el=> el === location[obj["key"]])
