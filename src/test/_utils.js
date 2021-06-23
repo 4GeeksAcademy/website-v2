@@ -101,14 +101,11 @@ const parsePathImage = (types, content) => {
     while ((m = regex[type].exec(content)) !== null) {
       // This is necessary to avoid infinite loops with zero-width matches
       let checkIsRelative = types[0] === 'relative_images' ? m[3] : m[1]
-      // console.log("File to find:", checkIsRelative)
-
       if (m.index === regex.lastIndex) {
           regex.lastIndex++;
       }
       
       // The result can be accessed through the `m`-variable.
-      // console.log("verifying", checkIsRelative)
       findings[type][m[0]] = checkIsRelative;
     }
   })
@@ -147,17 +144,13 @@ const localizeImage = async (content, type, _path, folder_of_images) => {
           let match = type === 'relative_images' ? matches[2] : matches[1];
           let fileName = findings[type][expression].replace("/","");
 
-          // console.log("MATCHESS", findings[type], '\n')
-
           if(fileName.indexOf(".") === -1){
               if(extensions[fileName]) fileName = fileName + "." + extensions[fileName];
               else console.log("Extension not found for "+fileName)
           } 
           let imagePath = dirPath + "/" + fileName;
-          // console.log("PATH_IMAGE FOUND", imagePath)
 
           if(fs.existsSync(imagePath)){
-              // console.log(`Image ${match} in ${_path} was found\n`)
               continue
           }else{
               fail(`\n${match.yellow} ${`not found in /static/images/${folder_of_images}`.red} \n${`no relation to static folder found at: ${_path}`.red}\n`)

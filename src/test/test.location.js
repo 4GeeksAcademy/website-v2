@@ -77,16 +77,16 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
         }
       }
 
-      //TODO: warn if location not have any image
+      //NOTE: warn if location not have any image
       if(location.images_box.images?.length < 5 || location.images_box.images?.length === undefined){
         console.log("\nlocation needs images as soon as possible".yellow)
         console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
       }
 
       front_matter_fields.forEach(obj => {
-        let slugMatch = academySlug.some(el=> el === location[obj["key"]])
+        let slugMatch = academySlug.some(el=> el === location.breathecode_location_slug)
 
-        // TODO: Uncoment when all location have correct images
+        // NOTE: Uncoment when all location have correct images
         // if(!location.images_box.images?.length === limit_images) fail(`The images in locations yml should have exactly 5 images.\n\nConflict: found ${location.images_box.images?.length} of ${limit_images} images in:\n${_path}\n\n`)
         
         if(!meta_keys.includes(obj["key"])) fail(`Missing prop ${obj["key"]} from location on ${_path}`)
