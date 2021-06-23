@@ -1,6 +1,6 @@
 
 var colors = require('colors')
-const {walk, loadMD, empty, fail, success, findInFile, localizeImage} = require("./_utils")
+const {walk, loadMD, empty, fail, success, localizeImage} = require("./_utils")
 const twitterUser = require('../utils/twitter')
 
 const front_matter_fields = [
@@ -26,13 +26,8 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             const frontmatter = content.attributes
             const meta_keys = Object.keys(frontmatter)
             const autor_keys = Object.keys(twitterUser)
-            let extensions = [
-                'png',
-                'jpg',
-                'jpeg'
-            ]
 
-            localizeImage(frontmatter.image, 'relative_images', extensions, _path, 'blog')
+            localizeImage(frontmatter.image, 'relative_images', _path, 'blog')
 
             front_matter_fields.forEach((m) => {
                 let authors_verifying = autor_keys.find(el => el === frontmatter["author"])

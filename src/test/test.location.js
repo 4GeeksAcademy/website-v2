@@ -63,11 +63,6 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       const location = doc.yaml
       const meta_keys = Object.keys(location)
 
-      let extensions = [
-          'png',
-          'jpg',
-          'jpeg'
-      ]
 
       if(location.images_box.images !== null ){
         for(let i = 0; i < location.images_box.images.length; i++){
@@ -76,9 +71,9 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
           let header_image = location.header.image
           let info_box = location.info_box.image
 
-          localizeImage(info_box, 'relative_images', extensions, _path, 'locations')
-          localizeImage(header_image, 'relative_images', extensions, _path, 'locations')
-          localizeImage(images_box, 'relative_images', extensions, _path, 'locations')
+          localizeImage(info_box, 'relative_images', _path, 'locations')
+          localizeImage(header_image, 'relative_images', _path, 'locations')
+          localizeImage(images_box, 'relative_images', _path, 'locations')
         }
       }
 

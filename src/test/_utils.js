@@ -88,7 +88,7 @@ const regex = {
   uploadcare: /https:\/\/ucarecdn.com\/(?:.*\/)*([a-zA-Z_\-.\/0-9]+)/gm
 }
 
-const findInFile = (types, content) => {
+const parsePathImage = (types, content) => {
   const validTypes = Object.keys(regex);
   if(!Array.isArray(types)) types = [types];
   let findings = {}
@@ -98,10 +98,7 @@ const findInFile = (types, content) => {
   });
 
   types.forEach(type => {
-
-    let count = 0;
     while ((m = regex[type].exec(content)) !== null) {
-
       // This is necessary to avoid infinite loops with zero-width matches
       let checkIsRelative = types[0] === 'relative_images' ? m[3] : m[1]
       // console.log("File to find:", checkIsRelative)
@@ -111,18 +108,28 @@ const findInFile = (types, content) => {
       }
       
       // The result can be accessed through the `m`-variable.
-      // m.forEach((match, groupIndex) => values.push(match));
-      const txt = m[0];
-      count++;
+      // console.log("verifying", checkIsRelative)
       findings[type][m[0]] = checkIsRelative;
     }
   })
   return findings;
 }
 
-const localizeImage = async (content, type, extensions, _path, folder_of_images) => {
+/*
+  LocalizeImage parameters
 
-  const findings = findInFile(type, content);
+  content= /path/of/image.png
+  type= "relative_images" || "url"
+  _path= necesary for warning and logs in case of error
+  folder_of_images= folder name /static/images/('.' || 'bg' || 'locations' || 'etc/more')
+*/
+const localizeImage = async (content, type, _path, folder_of_images) => {
+  let extensions = [
+    'png',
+    'jpg',
+    'jpeg'
+  ]
+  const findings = parsePathImage(type, content);
   const dirPath = path.join(__dirname, `/../../static/images/${folder_of_images}`);
 
   const regex_matchFiles = {
@@ -159,4 +166,4 @@ const localizeImage = async (content, type, extensions, _path, folder_of_images)
   }
 }
 
-module.exports = { walk, loadYML, loadMD, empty, fail, success, findInFile, localizeImage }
+module.exports = { walk, loadYML, loadMD, empty, fail, success, parsePathImage, localizeImage }

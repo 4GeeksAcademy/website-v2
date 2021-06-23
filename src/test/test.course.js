@@ -23,13 +23,8 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
     const _path = _files[i];
     const doc = loadYML(_path);
 
-    let extensions = [
-      'png',
-      'jpg',
-      'jpeg'
-    ]
     let header_image = doc.yaml.header.image
-    localizeImage(header_image, 'relative_images', extensions, _path, 'bg')
+    localizeImage(header_image, 'relative_images', _path, 'bg')
 
     let _slug = await _path.split(".")[0].substr(_path.lastIndexOf("/") +1)
     slugs.push(_slug)
