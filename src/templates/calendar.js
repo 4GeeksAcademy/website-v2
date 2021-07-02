@@ -51,7 +51,7 @@ const locations = {
 }
 const locationText = {
   us: "or",
-  es: "o"
+  es: "u"
 }
 
 const dateText = {
