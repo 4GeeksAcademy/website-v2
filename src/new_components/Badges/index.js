@@ -6,7 +6,7 @@ import {Colors} from '../Styling'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Fragment from "../Fragment"
 
-export default ({location, lang, loading, link, short_link, paragraph, background, padding, paddingText, paddingText_tablet, padding_tablet, margin}) => {
+export default ({location, lang, loading, link, short_link, short_text, paragraph, background, padding, paddingText, paddingText_tablet, padding_tablet, margin}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges{
       allBadgesYaml{
@@ -60,11 +60,11 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
         {paragraph && <Div className="badge-slider" justifyContent="between" >
           <Paragraph
             fontFamily="Lato-Light"
-            padding={paddingText}
-            padding_tablet={paddingText_tablet}
-            fontSize={short_link ? "15px" : "22px"}
-            fontSize_tablet={short_link ? "15px" : "22px"}
-            lineHeight={short_link ? "22px" : "38px"}
+            padding={paddingText || "0 10px 45px 10px"}
+            padding_tablet={paddingText_tablet || "0 10px 55px 10px"}
+            fontSize={short_link || short_text ? "15px" : "22px"}
+            fontSize_tablet={short_link || short_text ? "15px" : "22px"}
+            lineHeight={short_link || short_text ? "22px" : "38px"}
             fontWeight="300"
             color={Colors.black}
             dangerouslySetInnerHTML={{__html: paragraph}}

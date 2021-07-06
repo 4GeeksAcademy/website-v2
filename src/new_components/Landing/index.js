@@ -196,11 +196,13 @@ export const landingSections = {
     },
 
     badges: ({session, data, pageContext, yml, course, index}) =>{
+        let badges = data.allLandingYaml.edges[0].node.badges
         return(
             <Badges
                 lang={pageContext.lang}
                 background={Colors.verylightGray}
-                // paragraph={yml.badges.paragraph}
+                paragraph={badges.heading}
+                short_text
                 padding="60px 0"
                 padding_tablet="68px 0"
                 margin="0 0 58px 0"
@@ -295,23 +297,19 @@ export const landingSections = {
     </Div>,
     who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
         const hiring = data.allPartnerYaml.edges[0].node;
+        let landingHiriging = data.allLandingYaml.edges[0].node?.who_is_hiring
+
         return <Div id="Who_is_hiring" key={index} flexDirection="column" margin="0px" margin_tablet="100px" m_sm="0" p_xs="0">
-            {/* <Title */}
-            {/* //     size="10"
-            //     title={hiring.partners.tagline}
-            //     paragraph={hiring.partners.sub_heading}
-            //     paragraphColor={Colors.darkGray}
-            //     maxWidth="800px"
-            //     margin="auto"
-            //     variant="primary"
-            // /> */}
-            {/* <WhoIsHiring
-                images={hiring.partners.images.filter(p => !p.locations || p.locations === "all" || p.locations.includes(location))}
-            /> */}
             <OurPartners
                 images={hiring.partners.images} 
-                marquee title={hiring.partners.tagline} 
-                paragraph={hiring.partners.sub_heading} 
+                margin="0"
+                padding="0 ​0 75px 0"
+                marquee
+                paddingFeatured="0 0 70px 0"
+                showFeatured
+                withoutLine
+                title={landingHiriging ? landingHiriging.heading : hiring.partners.tagline} 
+                paragraph={landingHiriging ? landingHiriging.sub_heading : hiring.partners.sub_heading} 
             />
 
         </Div>

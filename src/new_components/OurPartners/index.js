@@ -24,7 +24,9 @@ const Title_Paragraph = (props) => {
           padding="0 2em"
         >
           {/*<H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>*/}
-          <H2 fontFamily="Lato"
+          <H2 
+            type="h2"
+            fontFamily="Lato"
             fontWeight="900"
             fontSize="15px"
             lineHeight="19px"
@@ -146,7 +148,7 @@ const Images_Centered = (props) => {
 const Images_Featured = (props) => {
   return (
     <>
-      <GridContainer columns_tablet="3">
+      <GridContainer columns_tablet="3" padding_tablet={props.paddingFeatured || "0"}>
         {/* <Div justifyContent="center" flexDirection="column" flexDirection_md="row"> */}
         {props.images.filter(f => f.featured == true).map((m, i) => {
           return (
@@ -162,22 +164,25 @@ const Images_Featured = (props) => {
         })}
         {/* </Div> */}
       </GridContainer>
-      <GridContainer>
-        <Div height="1px" background={Colors.lightGray} margin="30px 0" margin_tablet="80px 0" />
-      </GridContainer>
+      {
+        !props.withoutLine 
+        && <GridContainer>
+            <Div height="1px" background={Colors.lightGray} margin="30px 0" margin_tablet="80px 0" />
+          </GridContainer>
+      }
     </>
   )
 }
 
 
 //Punto de entrada al componente
-const OurPartners = ({title, paragraph, background, link, showFeatured, images, slider, marquee, ...rest}) => {
+const OurPartners = ({title, paragraph, margin, padding, paddingFeatured, background, link, showFeatured, images, withoutLine, slider, marquee, ...rest}) => {
 
 
   let FragmentStyle = {
     background: background,
-    margin: "40px 0 0px 0",
-    padding: "75px 0 75px 0",
+    margin: `${margin ? margin : "40px 0 0px 0"}`,
+    padding: `${padding ? padding : "75px 0 75px 0"}`,
   }
 
 
@@ -188,7 +193,7 @@ const OurPartners = ({title, paragraph, background, link, showFeatured, images, 
         title && <Title_Paragraph title={title} paragraph={paragraph} background={background} />
       }
       {
-        showFeatured && <Images_Featured images={images} />
+        showFeatured && <Images_Featured images={images} withoutLine={withoutLine} paddingFeatured={paddingFeatured} />
       }
       {
         slider ?

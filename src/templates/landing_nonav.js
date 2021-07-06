@@ -156,6 +156,7 @@ const Landing = (props) => {
             {/* <Divider height={yml.features.marginTop} /> */}
             {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) =>
               <Paragraph key={i}
+                isActive
                 style={JSON.parse(yml.features.styles)}
                 margin="7px 0"
                 padding="0px 20px"
