@@ -21,7 +21,6 @@ const positions = [{
 ]
 
 export default props => {
-  let index = props.index
   return (
     <Div key={props.index} gridGap="0" alignItems="center" justifyContent="center" justifyContent_tablet="start" flexDirection="column" flexDirection_tablet="row">
       <Div flexDirection="column" alignItems="center">

@@ -20,9 +20,10 @@ const formIsValid = (formData = null) => {
 
 const Form = styled.form`
     margin: ${props => props.margin};
-    // padding: 20px;
     width: 100%;
     display: block;
+    background: #FFFFFF;
+    border-radius: 3px;
     @media  ${Break.sm}{
         display: ${props => props.d_sm};
     }
@@ -64,7 +65,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tablet, justifySelf, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor}) => {
+const LeadForm = ({marginButton, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, justifySelf, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -155,7 +156,7 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                 })
         }
     }}>
-        {heading && <H4 type="h4" fontSize="25px" margin="20px 0px 0px 0px">{heading}</H4>}
+        {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet="left" margin="20px 0px 15px 40px">{heading}</H4>}
         {formStatus.status === "thank-you" ?
             <Paragraph align="center" margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
             :
@@ -168,7 +169,7 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                         const _field = formData[f]
                         return <Input
                             key={i}
-                            bgColor={inputBgColor}
+                            bgColor="#FFFFFF"
                             // borderRadius={i === 0 && layout === "flex" ? "10px 0px 0px 10px" : "0"}
                             type={_field.type} className="form-control" placeholder={_field.place_holder}
                             onChange={(value, valid) => {
@@ -177,6 +178,7 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                                     setFormStatus({status: "idle", msg: "Request"})
                                 }
                             }}
+                            valid={true}
                             value={_field.value}
                             errorMsg={_field.error}
                             required={_field.required}
@@ -188,7 +190,6 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                             width="100%"
                             justifyContent="center"
                             width_tablet={buttonWidth_tablet}
-                            justifySelf={justifySelf}
                             variant="full"
                             type="submit"
                             margin="10px 0"
@@ -200,7 +201,7 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                     }
                     {/* </Div> */}
                     {session && session.location && session.location.gdpr_compliant &&
-                        <Paragraph fontSize="11px" margin="5px 0 0 0">
+                        <Paragraph fontSize="11px" margin="5px 0 0 0" textAlign="left" >
                             <input
                                 name="isGoing"
                                 type="checkbox"
@@ -224,7 +225,8 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                             <Button
                                 // width="fit-content"
                                 variant="full"
-                                type="submit"
+                                type={`submit ${layout}`}
+                                margin={marginButton}
                                 color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
                                 textColor={Colors.white}
                                 disabled={formStatus.status === "loading" ? true : false}

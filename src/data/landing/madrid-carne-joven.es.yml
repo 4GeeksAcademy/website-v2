@@ -26,7 +26,8 @@ form:
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Aprende a programar con Carné Joven
-  sub_heading: " "
+  sub_heading: ""
+  scholarship: "../../../static/images/partner/microsoft_white.png"
   image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
@@ -56,36 +57,63 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
-
-in_the_news:
-  position: 1
-  heading: "4Geeks en los medios"
-
 badges:
-  position: 6
-  heading: " "
+  position: 1 # It's the position of the component that will be rendered first
+  heading: ""
 
-program_details:
-  position: 3
-  heading: "Lo que aprenderás"
-  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
-
-geeks_vs_others:
-  position: 4
-  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
+about4Geeks:
+  position: 2
+  # heading: "About4Geeks"
+  heading: Sumate a nuestro Sistema de Becas
+  sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y BreatheCode (nuestra plataforma educacional)"
+  list:
+    - title: "Apoyo Profesional para siempre"
+    - title: "Financiamos tu carrera"
+    - title: "Mentorias 1:1 ilimitadas"
+    - title: "Preparación para Entrevistas customizada"
   paragraph: ""
-  total_rows: 5
+  button_text: "Postula a una beca"
+  button_link: "/es/aplica"
+  image: "../../../static/images/bg/community.png"
+  image_mobile: "../../../static/images/bg/community.png"
 
-why_4geeks:
-  position: 5
-  heading: "Porqué 4Geeks"
-  sub_heading: ""
+iconogram:
+  position: 3
+  icons:
+  - icon: "touch"
+    title: Aplica a la beca
+  - icon: "receive_mail"
+    title: Obten un correo electrónico con la información
+  - icon: "talk"
+    title: Haz una entrevista con nuestro equipo
+  - icon: "terminal"
+    title: Aprende a programar con nosotros
 
-who_is_hiring:
-  position: 6
-  limit: 4
-  heading: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
+# in_the_news:
+#   position: 1
+#   heading: "4Geeks en los medios"
+
+# program_details:
+#   position: 3
+#   heading: "Lo que aprenderás"
+#   sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
+
+# geeks_vs_others:
+#   position: 4
+#   heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
+#   paragraph: ""
+#   total_rows: 5
+
+# why_4geeks:
+#   position: 5
+#   heading: "Porqué 4Geeks"
+#   sub_heading: ""
+
+# who_is_hiring:
+#   position: 6
+#   limit: 4
+#   heading: "¿Quién contrata a nuestros alumnos?"
+#   sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
 
 #alumni_projects:
 # position: 7
@@ -93,76 +121,83 @@ who_is_hiring:
 #sub_heading: "Proyectos de antiguos estudiantes"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
-components:
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Descarga Instantánea"
-    heading:
-      text: "Descarga el Programa de Estudios"
-  - name: top_coding_bootcamp
-    position: 5
-    layout: two_column_left
-    proportions: [4, 8]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
-    heading:
-      text:
-        "Hemos sido seleccionados como uno de los mejores bootcamps del mundo"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: more_testimonials
-    position: 9
-    layout: two_column_left
-    image:
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    heading:
-      text: "Escúchalo de nuestros alumnos"
-      #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
-    button:
-      text: "Más testimoniales"
-      color: null
-      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
-    content:
-      text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
-      font_size: ["16px"]
-  - name: divider_one
-    position: 9
-    layout: divider
-    height: ["50px", "50px", "50px", "0px", "0px"]
-  - name: some_id
-    position: 7
-    layout: two_column_right
-    image:
-      src: "/images/bg/people_happy.jpg"
-    video: "B01-eTfgqqc"
-    heading:
-      text:
-        "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
-    content:
-      text: " "
-      font_size: ["16px"]
-  - name: some_other_id
-    position: 2
-    layout: single_column
-    image:
-      style: '{"height": ["500px", "500px", "400px", "300px", "200px"], "background-size": "contain"  }'
-      src: "https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/landing/CarneJovenBanner.png?raw=true"
-      #link: # take uses somewhere when they click on the image
-    # video: #youtube id
-    heading:
-      text: "Aplica a una beca del 50%"
-      #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
-    content:
-      text: " "
-      font_size: ["16px"]
+
+# components:
+  # - name: first_syllabus_form
+  #   position: 4
+  #   layout: syllabus
+  #   button:
+  #     text: "Descarga Instantánea"
+  #   heading:
+  #     text: "Descarga el Programa de Estudios"
+
+  # - name: top_coding_bootcamp
+  #   position: 5
+  #   layout: two_column_left
+  #   proportions: [4, 8]
+  #   image:
+  #     style: '{ "backgroundSize": "contain" }'
+  #     src: "/images/badges/switchup.png"
+  #     link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+  #   heading:
+  #     text:
+  #       "Hemos sido seleccionados como uno de los mejores bootcamps del mundo"
+  #       #xl      lg     md     sm    xs
+  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
+
+  # - name: more_testimonials
+  #   position: 9
+  #   layout: two_column_left
+  #   image:
+  #     src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+  #   heading:
+  #     text: "Escúchalo de nuestros alumnos"
+  #     #xl      lg     md     sm    xs
+  #     font_size: ["40px", "34px", "34px", "25px", "20px"]
+  #   button:
+  #     text: "Más testimoniales"
+  #     color: null
+  #     path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+  #   content:
+  #     text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
+  #     font_size: ["16px"]
+
+  # - name: divider_one
+  #   position: 9
+  #   layout: divider
+  #   height: ["50px", "50px", "50px", "0px", "0px"]
+
+  # - name: some_id
+  #   position: 7
+  #   layout: two_column_right
+  #   image:
+  #     src: "/images/bg/people_happy.jpg"
+  #   video: "B01-eTfgqqc"
+  #   heading:
+  #     text:
+  #       "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+  #       #xl      lg     md     sm    xs
+  #     font_size: ["40px", "34px", "34px", "25px", "20px"]
+  #   content:
+  #     text: " "
+  #     font_size: ["16px"]
+
+  # - name: some_other_id
+  #   position: 2
+  #   layout: single_column
+  #   image:
+  #     style: '{"height": ["500px", "500px", "400px", "300px", "200px"], "background-size": "contain"  }'
+  #     src: "https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/landing/CarneJovenBanner.png?raw=true"
+  #     #link: # take uses somewhere when they click on the image
+  #   # video: #youtube id
+  #   heading:
+  #     text: "Aplica a una beca del 50%"
+  #     #xl      lg     md     sm    xs
+  #     font_size: ["40px", "34px", "34px", "25px", "20px"]
+  #   content:
+  #     text: " "
+  #     font_size: ["16px"]
+
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

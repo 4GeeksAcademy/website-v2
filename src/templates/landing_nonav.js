@@ -6,6 +6,7 @@ import LeadForm from "../new_components/LeadForm";
 import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading'
 import {Row, Column, Divider, Div, GridContainer} from '../new_components/Sections'
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 import BaseRender from './_baseLandingLayout'
@@ -40,6 +41,8 @@ const Landing = (props) => {
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
   };
+
+  console.log("YAML LOG", yml.header_data)
   return (
     <>
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
@@ -62,42 +65,40 @@ const Landing = (props) => {
           color={Colors.black}
           textAlign="left"
           fontSize_tablet={yml.follow_bar.content.font_size[0]}
-          // fs_lg={yml.follow_bar.content.font_size[1]}
-          // fs_md={yml.follow_bar.content.font_size[2]}
-          // fs_sm={yml.follow_bar.content.font_size[3]}
           fontSize={yml.follow_bar.content.font_size[4]}
         >
           {yml.follow_bar.content.text.split("\n").map((c, i) => <span className="d-block d-xs-none w-100">{c}</span>)}
           {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
-
-      <GridContainer
-        padding="0"
-        containerGridGap="0"
-        // display_md="flex" 
-        containerColumns_tablet="repeat(1,0fr)"
-        // padding="72px 0 0 0" 
-        // padding_tablet="72px 0 0 0"
-        columns_tablet="2"
-        // display="none"
+      <StyledBackgroundSection
+        className={`image`}
+        image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
+        bgSize={`cover`}
+        // width="58%"
+        width_tablet="100%"
+        height="auto"
+        // w_xs="100%"
+        margin="0 0 auto 0"
+        filter={yml.header_data.image_filter}
+        backgroundColor={Colors.lightGray}
+        align="center"
+        alt="4Geeks Academy"
+        // borderRadius="0"
+        borderRadius="0"
       >
-        <StyledBackgroundSection
-          className={`image`}
-          image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
-          bgSize={`cover`}
-          // width="58%"
-          width_tablet="58%"
-          // w_xs="100%"
-          margin="0 0 auto 0"
-          filter={yml.header_data.image_filter}
-          backgroundColor={Colors.lightGray}
-          align="center"
-          alt="4Geeks Academy"
-          borderRadius_tablet={`0 0 1.25rem 0`}
-          // borderRadius="0"
-          borderRadius="0"
+        <GridContainer
+          padding="0"
+          containerGridGap="0"
+          // display_md="flex" 
+          containerColumns_tablet="repeat(1,0fr)"
+          // padding="72px 0 0 0" 
+          // padding_tablet="72px 0 0 0"
+          columns_tablet="2"
+          // padding_tabletChild="0 0 35px 0"
+          // display="none"
         >
+
           <Div
             // display="none"
             display_tablet="flex"
@@ -106,33 +107,53 @@ const Landing = (props) => {
             size_tablet="10"
             size="12"
             // borderRadius="0 0 0 1.25rem"
-            margin="0 0 10px auto"
+            margin="0 0 35px auto"
             padding={`80px 0 0 0`}
             height="auto"
             padding_tablet={`80px 0 40px 20px`}
           >
+            {
+              yml.header_data.scholarship && 
+              <>
+                <Div width="242px" flexDirection_tablet="column" height="auto" padding="0 0 25px 0">
+                  <GatsbyImage 
+                    loading="eager"
+                    imgStyle={{ objectFit: 'contain' }}
+                    image={getImage(yml.header_data.scholarship.childImageSharp.gatsbyImageData)}
+                    alt="4Geeks Logo" 
+                  />
+                </Div>
+
+                <Div display="none" display_tablet="flex" background="#FFFFFF" width="calc(50% - 30px)" height="2px" margin="7px 0"/>
+              </>
+            }
             <H1
               type="h1"
               variant="main"
               lineHeight="40px"
+              margin="20px 0"
               padding="0 10px 0 0px"
               color={Colors.white}
               fontSize="38px"
               fontSize_tablet="42px"
               fontWeight="bolder"
               textAlign="center"
-              textAlign_tablet="left" >{inLocation}{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
+              textAlign_tablet="left" >{inLocation}{yml.header_data.tagline}
+              {/* <Span animated color={Colors.yellow}>_</Span> */}
             </H1>
-            <H4 textAlign="left" fontSize="18px" color={Colors.white}
-              variant="main"
-              margin_tablet="20px 0px 40px 0px"
-              margin="20px 0 20px 10px"
-              maxWidth="350px"
-              textShadow="0px 0px 4px black"
-            >
-              {yml.header_data.sub_heading}
-            </H4>
-            <Divider height={yml.features.marginTop} />
+            {
+              yml.header_data.sub_heading !== "" && 
+              <H2 type="h2" textAlign="left" fontSize="18px" color={Colors.white}
+                variant="main"
+                margin_tablet="20px 0px 40px 0px"
+                margin="20px 0 20px 10px"
+                maxWidth="350px"
+                textShadow="0px 0px 4px black"
+              >
+                {yml.header_data.sub_heading}
+              </H2>
+            }
+            {/* <Divider height={yml.features.marginTop} /> */}
             {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) =>
               <Paragraph key={i}
                 style={JSON.parse(yml.features.styles)}
@@ -144,80 +165,44 @@ const Landing = (props) => {
                 color={Colors.white}>{'• '}{f}</Paragraph>
             )}
           </Div>
-        </StyledBackgroundSection>
-        <Div
-          flexDirection="column"
-          size="12"
-          size_tablet="10"
-          width="100%"
-          // size_lg="4"
-          // size_sm="6"
-          // size_xs="12"
-          margin="0"
-          textAlign_sm="center"
-          margin_md="0 auto 0 0"
-        >
-          <LeadForm margin_tablet="50px 0 0 0" margin="0" style={{ marginTop: "50px" }} heading="Request More Info."
-            formHandler={requestSyllabus}
-            heading={yml.form.heading}
-            motivation={yml.form.motivation}
-            sendLabel={yml.form.button_label}
-            redirect={yml.form.redirect}
-            lang={pageContext.lang}
-            fields={yml.form.fields}
-            data={preData}
-            justifyContentButton="center"
-          />
-        </Div>
-      </GridContainer>
-      {/* <StyledBackgroundSection
-        className={`image d-none d-sm-block`}
-        image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-        bgSize={`cover`}
-        margin="0 0 auto 0"
-        filter={yml.header_data.image_filter}
-        backgroundColor={Colors.lightGray}
-        align="center"
-        alt="4Geeks Academy"
-      >
-        <H2
-          type="h1"
-          padding="50px 10px 0 0px"
-          color={Colors.white}
-          fs_sm="38px"
-          fs_md="30px"
-          fs_lg="32px"
-          fs_xl="38px"
-          align="center" >{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
-        </H2>
-        <H4 align="center" fontSize="18px" color={Colors.white}
-          margin="20px 0px 40px 0px"
-          m_sm="20px auto"
-          maxWidth="350px"
-        >
-          {yml.header_data.sub_heading}
-        </H4>
-        {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) =>
-          <Paragraph align_sm="left" padding="0 20px" margin="4px 0"
-            color={Colors.white}
-            textShadow="0px 0px 4px black"
-            fontWeight="800"
-            key={i}
-            style={JSON.parse(yml.features.styles)}
-          >{'• '}{f}</Paragraph>
-        )}
-        <Divider height="20px" />
+          <Div
+            flexDirection="column"
+            size="12"
+            size_tablet="10"
+            width="100%"
+            width_tablet="65%"
+            // size_lg="4"
+            // size_sm="6"
+            // size_xs="12"
+            margin="0"
+            textAlign_sm="center"
+            margin_md="0 auto 0 70px"
+          >
+            <LeadForm
+              background={Colors.white}
+              margin_tablet="50px 0 0 0" 
+              margin="0" 
+              style={{ marginTop: "50px" }}
+              // heading="Request More Info."
+              formHandler={requestSyllabus}
+              heading={yml.form.heading}
+              motivation={yml.form.motivation}
+              sendLabel={yml.form.button_label}
+              redirect={yml.form.redirect}
+              inputBgColor="#FFFFFF"
+              layout="block"
+              lang={pageContext.lang}
+              fields={yml.form.fields}
+              data={preData}
+              justifyContentButton="center"
+              marginButton={`15px 0 30px auto`}
+            />
+          </Div>
+        </GridContainer>
       </StyledBackgroundSection>
-      <Div background={Colors.black} display="none" d_sm="block">
-        <LeadForm formHandler={requestSyllabus}
-          lang={pageContext.lang}
-          motivation={pageContext.motivation}
-          sendLabel={yml.form.button_label}
-          redirect={yml.form.redirect}
-          fields={yml.form.fields}
-          data={preData}
-        />
-      </Div> */}
+
+      {/* <Badges lang={pageContext.lang} background={Colors.lightYellow} paragraph={yml.badges.paragraph} padding="60px 0" padding_tablet="68px 0" margin="0 0 58px 0" margin_tablet="0 0 78px 0" /> */}
+
 
       {
         Object.keys(components)
@@ -276,6 +261,42 @@ export const query = graphql`
             badges{
               position
               heading
+            }
+            about4Geeks{
+              position
+              heading
+              sub_heading
+              list{
+                title
+              }
+              paragraph
+              button_text
+              button_link
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1200
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              image_mobile {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+            }
+            iconogram {
+              position
+              icons {
+                icon
+                title
+              }
             }
             in_the_news{
               heading
@@ -337,6 +358,18 @@ export const query = graphql`
               tagline
               sub_heading
               image_filter
+              scholarship {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 500
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 1000){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                }
+              }
               image{
                 childImageSharp {
                   gatsbyImageData(

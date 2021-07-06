@@ -164,10 +164,13 @@ const Landing = (props) => {
             motivation={yml.form.motivation}
             sendLabel={yml.form.button_label}
             redirect={yml.form.redirect}
+            inputBgColor="#FFFFFF"
+            layout="block"
             lang={pageContext.lang}
             fields={yml.form.fields}
             data={preData}
             justifyContentButton="center"
+            marginButton={`0 0 0 auto`}
           />
         </Div>
       </GridContainer>

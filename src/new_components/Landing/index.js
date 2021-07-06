@@ -17,6 +17,8 @@ import ProgramDetails from '../ProgramDetails';
 import ProgramDetailsMobile from '../ProgramDetailsMobile';
 import LeadForm from '../LeadForm';
 import OurPartners from "../OurPartners";
+import About4Geeks from '../About4Geeks';
+import IconsBanner from '../IconsBanner';
 
 
 const Title = ({title, paragraph}) => {
@@ -169,8 +171,45 @@ export const landingSections = {
             filter={!Array.isArray(yml.filter) ? null : (n) => yml.filter.includes(n.name)}
         />
     </GridContainer>,
-    // badges: ({session, data, pageContext, yml, course, index}) =>
-    //     <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
+
+    about4Geeks: ({session, data, pageContext, yml, index}) => {
+       console.log("ABOUT4_DATA", data)
+    // about4Geeks
+        return(
+            <About4Geeks 
+                lang={data.allLandingYaml.edges[0].node.about4Geeks}
+            />
+        )
+    },
+
+    iconogram: ({session, data, pageContext, yml, index}) => {
+        let content = data.allLandingYaml.edges[0].node.iconogram
+        return(
+            <GridContainer background={Colors.lightYellow} columns="2" rows="2" columns_tablet="4" margin="0 0 58px 0" height="470px" height_tablet="320px" margin_tablet="0 0 78px 0">
+            {Array.isArray(content.icons) && content.icons?.map((item, i) => {
+              return (
+                <IconsBanner icon={item.icon} index={i} title={item.title} />
+              )
+            })}
+          </GridContainer>
+        )
+    },
+
+    badges: ({session, data, pageContext, yml, course, index}) =>{
+        return(
+            <Badges
+                lang={pageContext.lang}
+                background={Colors.verylightGray}
+                // paragraph={yml.badges.paragraph}
+                padding="60px 0"
+                padding_tablet="68px 0"
+                margin="0 0 58px 0"
+                margin_tablet="0 0 78px 0"
+            />
+        )
+    },
+        // <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
+
     syllabus: ({session, data, pageContext, yml, course, location, index}) =>
         <GridContainer id="Syllabus" key={index} margin="50px 0px 0px 0px" background={Colors.lightGray}>
             <Div
