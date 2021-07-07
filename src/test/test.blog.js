@@ -53,5 +53,5 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             fail(error.message || error)
         }
     }
-    success("All Markdown's have correct syntax")
+    success("All Blog's Markdown's have correct syntax")
 });     

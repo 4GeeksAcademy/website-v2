@@ -51,5 +51,5 @@ walk(`${__dirname}/../data/`, function (err, files) {
             });
         }
     });
-    success("All content is OK!")
+    success("All SEO Content is OK!")
 });
