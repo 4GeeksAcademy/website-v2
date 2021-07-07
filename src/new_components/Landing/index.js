@@ -269,7 +269,10 @@ export const landingSections = {
         return (
             <React.Fragment id="choose_your_programs" key={index}>
                 <ChooseYourProgram 
-                    // chooseProgramRef={chooseProgramRef} 
+                    // chooseProgramRef={chooseProgramRef}
+                    landingTemplate
+                    title={chooseYourProgram.title}
+                    paragraph={chooseYourProgram.paragraph}
                     lang={pageContext.lang}
                     programs={chooseYourProgram.programs} />
 

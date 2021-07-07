@@ -182,7 +182,7 @@ export const Paragraph = styled.p`
   height: ${props => props.height};
   z-index: ${props => props.zIndex};
   border-left: ${props => props.borderLeft};
-  opacity: ${props => props.isActive ? 1 : 0.8};
+  opacity: ${props => props.isActive ? 1 : props.opacity ? props.opacity : 0.8};
 
   a{color: ${Colors.blue};}
 
