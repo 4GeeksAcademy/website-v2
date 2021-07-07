@@ -14,7 +14,7 @@ wordpress_id: 2600
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
-cluster: "full-stack-developer"
+cluster: "coding-bootcamps"
 tags:
 - 4geeks
 ---

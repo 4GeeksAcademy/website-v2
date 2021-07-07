@@ -13,7 +13,7 @@ wordpress_id: 3288
 categories:
 - Learning to code
 - Why learn to code?
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 tags:
 - coding
 - coding bootcamps

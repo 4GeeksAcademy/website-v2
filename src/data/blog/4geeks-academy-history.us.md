@@ -12,7 +12,7 @@ image_alt: ""
 wordpress_id: 431
 categories:
 - Learning to code
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 tags:
 - 4geeks
 lang: "us"

@@ -12,7 +12,7 @@ image_alt: ""
 wordpress_id: 471
 categories:
 - Learning to code
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false

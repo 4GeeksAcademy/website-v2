@@ -13,7 +13,7 @@ image_alt: ""
 wordpress_id: 3796
 categories:
 - Sin categoría
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 tags:
 - 4geeks
 - coding

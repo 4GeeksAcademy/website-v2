@@ -14,7 +14,7 @@ image_alt: ""
 wordpress_id: 501
 categories:
 - Learning to code
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 tags:
 - coding bootcamps
 - learn to code

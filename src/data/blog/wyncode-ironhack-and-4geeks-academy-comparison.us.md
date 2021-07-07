@@ -12,7 +12,7 @@ image_alt: ""
 wordpress_id: 476
 categories:
 - Learning to code
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 tags:
 - 4geeks
 - coding bootcamp

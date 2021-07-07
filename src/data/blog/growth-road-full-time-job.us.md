@@ -13,7 +13,7 @@ image_alt: ""
 wordpress_id: 3628
 categories:
 - Sin categoría
-cluster: "no-category"
+cluster: "coding-bootcamps"
 tags:
 - 4geeks
 - coding

@@ -14,7 +14,7 @@ image_alt: ""
 wordpress_id: 3509
 categories:
 - Sin categoría
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 tags:
 - 4geeks
 - coding

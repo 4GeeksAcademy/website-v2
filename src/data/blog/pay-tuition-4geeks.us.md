@@ -13,7 +13,7 @@ image_alt: ""
 wordpress_id: 2573
 categories:
 - Learning to code
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 tags:
 - 4geeks academy
 - challenges of a web developer

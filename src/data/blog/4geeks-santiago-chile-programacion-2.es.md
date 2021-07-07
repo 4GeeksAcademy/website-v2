@@ -14,7 +14,7 @@ image_alt: ""
 wordpress_id: 3333
 categories:
 - Sin categoría
-cluster: "learn-to-code"
+cluster: "bootcamps-programacion"
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true

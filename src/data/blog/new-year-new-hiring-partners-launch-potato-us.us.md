@@ -14,7 +14,7 @@ wordpress_id: 2656
 categories:
 - Living and working as a developer
 - Why learn to code?
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false

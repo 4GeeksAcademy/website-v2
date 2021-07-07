@@ -13,7 +13,7 @@ image_alt: ""
 wordpress_id: 708
 categories:
 - Living and working as a developer
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 tags:
 - coding bootcamps
 - coding education

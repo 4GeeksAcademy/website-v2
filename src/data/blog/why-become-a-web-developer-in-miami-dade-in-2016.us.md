@@ -14,7 +14,7 @@ wordpress_id: 626
 categories:
 - Sin categoría
 - Why learn to code?
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 tags:
 - career path
 - Jobs in Miami

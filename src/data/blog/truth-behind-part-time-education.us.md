@@ -11,7 +11,7 @@ title: The truth behind our Part-time education
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/12/The-Truth-02-768x384.jpg"
 image_alt: ""
 wordpress_id: 2642
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 categories:
 - Learning to code
 - Living and working as a developer

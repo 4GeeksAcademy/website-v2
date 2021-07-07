@@ -13,7 +13,7 @@ image_alt: ""
 wordpress_id: 1217
 categories:
 - Aprendiendo a desarrollar
-cluster: "aprendiendo-a-desarrollar"
+cluster: "aprender-a-programar"
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false

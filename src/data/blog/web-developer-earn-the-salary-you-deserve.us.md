@@ -12,7 +12,7 @@ title: 'Web Developer: Earn the Salary You Deserve'
 image: null
 image_alt: ""
 wordpress_id: 316
-cluster: "learn-to-code"
+cluster: "career-growth"
 categories:
 - Living and working as a developer
 

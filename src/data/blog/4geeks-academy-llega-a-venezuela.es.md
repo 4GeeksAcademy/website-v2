@@ -17,7 +17,7 @@ categories:
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 tags:
 - 4geeks
 ---

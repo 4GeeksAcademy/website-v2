@@ -20,7 +20,7 @@ image_alt: ""
 categories:
 - Sin categoría
 - Why learn to code?
-cluster: "full-stack-developer"
+cluster: "trends-and-tech"
 tags:
 - Casimiro Global Foundation
 - Education

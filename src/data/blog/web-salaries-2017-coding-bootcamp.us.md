@@ -11,7 +11,7 @@ title: 'Web development Bootcamp graduates salary: 2017 edition'
 wordpress_id: 2055
 image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/PORTADA-Salary.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 categories:
 - Learning to code
 

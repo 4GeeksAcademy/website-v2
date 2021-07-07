@@ -9,7 +9,7 @@ title: ¿Qué significa ser Full Stack?
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/learn-to-code.jpg?raw=true"
 image_alt: "dos estudiantes aprendiendo que es full stack"
 status: "published"
-cluster: "learn-to-code"
+cluster: "full-stack"
 lang: "es"
 ---
 

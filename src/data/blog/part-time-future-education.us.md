@@ -14,7 +14,7 @@ wordpress_id: 491
 categories:
 - Sin categoría
 - Why learn to code?
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 tags:
 - 4geeks
 - learn to code

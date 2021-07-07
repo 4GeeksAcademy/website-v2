@@ -12,7 +12,7 @@ image_alt: ""
 wordpress_id: 1124
 categories:
 - Aprendiendo a desarrollar
-cluster: "aprendiendo-a-desarrollar"
+cluster: "tendencias-y-tech"
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
