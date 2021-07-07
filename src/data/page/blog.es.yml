@@ -20,9 +20,11 @@ header:
 
 question: "¿Que te interesa?"
 topics:
-  - full-stack-developer
+  - full-stack
   - learn-to-code
   - coding-bootcamp
+  - desarrollo-profesional
+
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."
