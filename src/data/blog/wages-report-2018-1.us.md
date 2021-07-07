@@ -10,7 +10,7 @@ slug: wages-report-2018-1
 title: Bootcamp Graduates Salary 2018
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/BOOTCAMP2018-01-768x505.png"
 image_alt: ""
-wordpress_id: 2807
+
 cluster: "learn-to-code"
 categories:
 - Living and working as a developer

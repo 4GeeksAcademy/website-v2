@@ -9,7 +9,7 @@ slug: the-ideal-instructor
 title: THE IDEAL INSTRUCTOR
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/admin-ajax-1.jpeg"
 image_alt: ""
-wordpress_id: 1226
+
 categories:
 - Learning to code
 cluster: "learn-to-code"

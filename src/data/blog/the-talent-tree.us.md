@@ -10,7 +10,7 @@ slug: the-talent-tree
 title: The Talent Tree
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Talents_for_Paladins.jpg"
 image_alt: ""
-wordpress_id: 2539
+
 categories:
 - Learning to code
 cluster: "learn-to-code"

@@ -10,11 +10,6 @@ image_alt: ""
 categories:
 - Sin categoría
 cluster: "learn-to-code"
-tags:
-- 4geeks
-- coding
-- Jobs in Miami
-- Python
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
 ---

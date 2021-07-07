@@ -4,22 +4,12 @@ comments: true
 date: 2019-08-27 14:37:28+00:00
 excerpt: Working Full-Time During a Part-Time Bootcamp might be hard, but we have
   many students telling you that it's totally possible.
-layout: post
-link: https://www.4geeksacademy.co/growth-road-full-time-job/
 slug: growth-road-full-time-job
 title: The Growth Road
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/08/BLOG-01.jpg"
 image_alt: ""
-wordpress_id: 3628
-categories:
-- Sin categoría
+
 cluster: "no-category"
-tags:
-- 4geeks
-- coding
-- Jobs in Miami
-- Python
-lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
 ---

@@ -12,14 +12,9 @@ image_alt: "students learning code in a bootcamp"
 categories:
 - coding bootcamps
 cluster: "coding-bootcamps"
-lang: us
+
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
-tags: 
-- report
-- pandemic 
-- coding bootcamps 
-- COVID-19
 ---
 
 Since we started 4Geeks, I have always been in charge of admissions in the US and elsewhere. I have interviewed or met -at least - more than 3400 people right in the moment where they are about to decide whether joining a coding bootcamp is the right choice for learning to code. 

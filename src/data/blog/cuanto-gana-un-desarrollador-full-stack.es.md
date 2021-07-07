@@ -10,14 +10,9 @@ image_alt: "desarrollador full stack chileno programando"
 cluster: "coding-bootcamp"
 categories:
 - coding bootcamps
-lang: us
+
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
-tags: 
-- report
-- pandemic 
-- coding bootcamps 
-- COVID-19
 ---
 
 En las últimas dos décadas hemos presenciado la mayor aceleración tecnológica a nivel computacional. Pero el 2020 fue el año con nitro en la carrera, ya que la emergencia sanitaria mundial llevó a miles de emprendedores, empresas, negocios e industrias a moverse a lo digital. 

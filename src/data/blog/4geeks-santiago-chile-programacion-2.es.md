@@ -11,15 +11,12 @@ title: 4Geeks en Santiago de Chile
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/12/BANNER-CHILE-copia-3APRENDE-A-PROGRAMAR-CHL-3-1024x540.png"
 image_alt: ""
 
-wordpress_id: 3333
+
 categories:
 - Sin categoría
 cluster: "learn-to-code"
-lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true
-tags:
-- 4geeks
 ---
 # **Uno de los Top 10 Bootcamp de Programación llega a Chile**
 

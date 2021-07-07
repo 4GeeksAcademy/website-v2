@@ -11,9 +11,4 @@ status: "published" # published, draft, unassigned
 featured: true
 unlisted: true
 cluster: "learn-to-code"
-tags: 
-- Javascript
-- php
-- ruby
-- Web Developer
 ---

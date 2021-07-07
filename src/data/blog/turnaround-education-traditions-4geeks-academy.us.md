@@ -10,7 +10,7 @@ slug: turnaround-education-traditions-4geeks-academy
 title: Turnaround on Education Traditions | Part I
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/04/ISA-Blog-Cover.png"
 image_alt: ""
-wordpress_id: 1889
+
 cluster: "learn-to-code"
 post_translations:
 - pll_5703862f49f64

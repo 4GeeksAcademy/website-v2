@@ -11,7 +11,7 @@ slug: web-developer-earn-the-salary-you-deserve
 title: 'Web Developer: Earn the Salary You Deserve'
 image: null
 image_alt: ""
-wordpress_id: 316
+
 cluster: "learn-to-code"
 categories:
 - Living and working as a developer

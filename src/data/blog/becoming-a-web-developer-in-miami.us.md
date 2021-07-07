@@ -5,21 +5,12 @@ date: 2016-02-03 05:34:01+00:00
 excerpt: Is it possible to be a software developer working in Miami? That would be
   like going to heaven without having to die.
 layout: post
-link: https://www.4geeksacademy.co/becoming-a-web-developer-in-miami/
 slug: becoming-a-web-developer-in-miami
 title: Learning to code in Miami
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/02/admin-ajax-4.10.10-PM.jpeg"
 image_alt: ""
 
-wordpress_id: 501
-categories:
-- Learning to code
 cluster: "learn-to-code"
-tags:
-- coding bootcamps
-- learn to code
-- miami
-lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
 ---

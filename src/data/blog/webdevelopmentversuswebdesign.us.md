@@ -10,7 +10,7 @@ slug: web-development-versus-web-design
 title: Web Development Vs. Web Design
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/development-vs-design-1024x622.png"
 image_alt: ""
-wordpress_id: 701
+
 categories:
 - Why learn to code?
 cluster: "learn-to-code"

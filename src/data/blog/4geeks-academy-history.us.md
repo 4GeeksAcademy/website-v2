@@ -9,7 +9,7 @@ slug: 4geeks-academy-history
 title: 4Geeks Academy Story
 image: "/images/why2.jpg"
 image_alt: ""
-wordpress_id: 431
+
 categories:
 - Learning to code
 cluster: "learn-to-code"

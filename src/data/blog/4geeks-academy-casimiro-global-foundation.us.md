@@ -21,13 +21,6 @@ categories:
 - Sin categoría
 - Why learn to code?
 cluster: "full-stack-developer"
-tags:
-- Casimiro Global Foundation
-- Education
-- learn to code
-- miami
-- young entrepreneurs
-lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
 ---

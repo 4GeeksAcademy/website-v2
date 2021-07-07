@@ -10,7 +10,7 @@ slug: el-instructor-ideal
 title: EL INSTRUCTOR IDEAL...
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/admin-ajax-1.jpeg"
 image_alt: ""
-wordpress_id: 1217
+
 categories:
 - Aprendiendo a desarrollar
 cluster: "aprendiendo-a-desarrollar"

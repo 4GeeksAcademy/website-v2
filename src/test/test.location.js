@@ -3,6 +3,8 @@ var colors = require('colors');
 const fetch = require('node-fetch');
 const { walk, loadYML, empty, fail, success, localizeImage } = require('./_utils');
 
+require('dotenv').config()
+
 let limit_images = 5;
 const front_matter_fields = [
   { key: 'breathecode_location_slug', type: 'string', mandatory: true },
@@ -24,7 +26,11 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       'Academy': 4
     }
   })
+
+  if(res.status != 200) fail(res.status + ': Unable to retreive academy API location Information: ', await res.json());
+
   const academyData = await res.json()
+
   academyData.map(el => academySlug.push(el.slug))
   console.log("academy available", academySlug)
 

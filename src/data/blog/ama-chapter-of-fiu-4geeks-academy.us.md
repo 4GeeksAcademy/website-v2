@@ -9,18 +9,7 @@ slug: ama-chapter-of-fiu-4geeks-academy
 title: AMA Chapter of FIU + 4Geeks Academy - Getting Students Closer To A Coding Education
 image: null
 image_alt: ""
-wordpress_id: 792
-categories:
-- Sin categoría
-- Why learn to code?
 cluster: "learn-to-code"
-tags:
-- AMA FIU
-- American Marketing Association Chapter of Florida International University
-- coding education
-- FIU
-- Florida International University
-lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
 ---

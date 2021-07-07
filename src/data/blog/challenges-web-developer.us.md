@@ -9,19 +9,7 @@ slug: challenges-web-developer
 title: The Challenges of a Web Developer, Living and working as a developer
 image: null
 image_alt: ""
-wordpress_id: 315
-categories:
-- Learning to code
 cluster: "learn-to-code"
-tags:
-- career path
-- challenges of a web developer
-- Jobs in Miami
-- learn to code
-- salary
-- Web Developer
-- web developer salary
-lang: "us"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false
 ---

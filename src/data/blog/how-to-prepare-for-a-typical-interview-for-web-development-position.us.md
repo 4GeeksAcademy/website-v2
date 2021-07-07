@@ -9,7 +9,7 @@ slug: how-to-prepare-for-a-typical-interview-for-web-development-position
 title: My Job Interview
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/jobinterview.jpeg"
 image_alt: ""
-wordpress_id: 697
+
 categories:
 - Living and working as a developer
 cluster: "learn-to-code"

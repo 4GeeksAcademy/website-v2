@@ -10,7 +10,7 @@ slug: javascript-and-python
 title: 'JavaScript and Python: A-must for any coder'
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/JSandPython-768x552.jpg"
 image_alt: ""
-wordpress_id: 3755
+
 categories:
 - Sin categoría
 cluster: "learn-to-code"

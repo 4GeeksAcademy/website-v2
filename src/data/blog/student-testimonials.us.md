@@ -9,7 +9,7 @@ slug: student-testimonials
 title: Learn to code at 4Geeks| Voices to be heard
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/Jennifer-768x768.png"
 image_alt: ""
-wordpress_id: 3288
+
 categories:
 - Learning to code
 - Why learn to code?
