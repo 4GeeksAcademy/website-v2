@@ -1,23 +1,25 @@
 import React, {useState} from 'react';
-import {Row, Column, Wrapper, Divider, Div} from '../components/Sections'
+import {Header, Column, Wrapper, Divider, Div} from '../new_components/Sections'
 import {Title} from '../components/Heading'
 import {Colors} from '../components/Styling'
-import GeeksVsOthers from '../components/GeeksVsOthers'
+import GeeksVsOthers from '../new_components/GeeksVsOthers'
 import BaseRender from './_baseLayout'
 import {graphql} from 'gatsby'
 
 const View = (props) => {
   const {data, pageContext, yml} = props;
   return (
-      <Wrapper margin="50px">
-        <Title
-          title={yml.tagline}
-          paragraph={yml.sub_heading}
-          paragraphColor={Colors.darkGray}
-          variant="primary"
-        />
-        <GeeksVsOthers lang={pageContext.lang} />
-      </Wrapper>
+    <>
+      <Header
+        seo_title={yml.seo_title}
+        title={yml.header.title}
+        paragraph={yml.header.paragraph}
+        padding_tablet="72px 0 40px 0"
+        padding="66px 17px 85px 0"
+      >
+      </Header>
+      <GeeksVsOthers lang={pageContext.lang} link={false} />
+    </>
   )
 };
 export const query = graphql`
@@ -31,8 +33,12 @@ export const query = graphql`
                 image
                 keywords
             }
-            tagline
-            sub_heading
+            seo_title
+          header{
+              title
+              paragraph
+              
+          }
         }
       }
     }

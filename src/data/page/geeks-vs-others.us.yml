@@ -5,8 +5,9 @@ meta_info:
   image: null
   keywords: "4geeks Academy vs other bootcamps"
   redirects: ["/geeks"]
-  
+
 ## 4GEEKS VS OTHERS  HEADING
-tagline: 4GEEKS vs OTHERS
-sub_heading: "We teach coding (We know how to do it). We don't teach UX Design, marketing or Graphic design (we just don't want to)"
-    
+seo_title: "success stories"
+header:
+  title: 4GEEKS vs OTHERS
+  paragraph: "We teach coding (We know how to do it). We don't teach UX Design, marketing or Graphic design (we just don't want to)"

@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
 import {graphql, navigate} from 'gatsby';
-import {landingSections} from '../components/Landing';
-import FollowBar from "../components/FollowBar"
-import LeadForm from "../components/LeadForm";
-import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
-import {Row, Column, Divider, Div} from '../components/Sections'
-import {Colors, StyledBackgroundSection} from '../components/Styling'
+import {landingSections} from '../new_components/Landing';
+import FollowBar from "../new_components/FollowBar"
+import LeadForm from "../new_components/LeadForm";
+import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading'
+import {Row, Column, Divider, Div, GridContainer} from '../new_components/Sections'
+import {Colors, StyledBackgroundSection} from '../new_components/Styling'
+
 
 import BaseRender from './_baseLandingLayout'
 import {requestSyllabus} from "../actions";
@@ -57,61 +58,75 @@ const Landing = (props) => {
         <Paragraph
           margin="0"
           fontWeight="800"
+          alignSelf="center"
           color={Colors.black}
-          align_sm="left"
-          align="left"
-          fontSize={yml.follow_bar.content.font_size[0]}
-          fs_lg={yml.follow_bar.content.font_size[1]}
-          fs_md={yml.follow_bar.content.font_size[2]}
-          fs_sm={yml.follow_bar.content.font_size[3]}
-          fs_xs={yml.follow_bar.content.font_size[4]}
+          textAlign="left"
+          fontSize_tablet={yml.follow_bar.content.font_size[0]}
+          // fs_lg={yml.follow_bar.content.font_size[1]}
+          // fs_md={yml.follow_bar.content.font_size[2]}
+          // fs_sm={yml.follow_bar.content.font_size[3]}
+          fontSize={yml.follow_bar.content.font_size[4]}
         >
           {yml.follow_bar.content.text.split("\n").map((c, i) => <span className="d-block d-xs-none w-100">{c}</span>)}
           {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
-      <Row display="flex" className="d-sm-none">
+
+      <GridContainer
+        padding="0"
+        containerGridGap="0"
+        // display_md="flex" 
+        containerColumns_tablet="repeat(1,0fr)"
+        // padding="72px 0 0 0" 
+        // padding_tablet="72px 0 0 0"
+        columns_tablet="2"
+        // display="none"
+      >
         <StyledBackgroundSection
           className={`image`}
-          image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
+          image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
           bgSize={`cover`}
-          width="58%"
-          w_xs="100%"
+          // width="58%"
+          width_tablet="58%"
+          // w_xs="100%"
           margin="0 0 auto 0"
           filter={yml.header_data.image_filter}
           backgroundColor={Colors.lightGray}
           align="center"
           alt="4Geeks Academy"
-          borderRadius={`0 0 1.25rem 0`}
+          borderRadius_tablet={`0 0 1.25rem 0`}
+          // borderRadius="0"
+          borderRadius="0"
         >
-          <Column
-            size="8"
-            size_lg="9"
-            size_md="10"
-            size_xs="12"
-            borderRadius="0 0 0 1.25rem"
-            height="500px"
+          <Div
+            // display="none"
+            display_tablet="flex"
+            flexDirection="column"
+            width="100%"
+            size_tablet="10"
+            size="12"
+            // borderRadius="0 0 0 1.25rem"
             margin="0 0 10px auto"
-            customRespSize
-            disp_sm={"none"}
-            disp_xs={"none"}
             padding={`80px 0 0 0`}
+            height="auto"
+            padding_tablet={`80px 0 40px 20px`}
           >
             <H1
               type="h1"
               variant="main"
+              lineHeight="40px"
               padding="0 10px 0 0px"
               color={Colors.white}
-              fs_sm="38px"
-              fs_md="30px"
-              fs_lg="32px"
-              fs_xl="38px"
-              align="left" >{inLocation}{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
+              fontSize="38px"
+              fontSize_tablet="42px"
+              fontWeight="bolder"
+              textAlign="center"
+              textAlign_tablet="left" >{inLocation}{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
             </H1>
-            <H4 align="left" fontSize="18px" color={Colors.white}
+            <H4 textAlign="left" fontSize="18px" color={Colors.white}
               variant="main"
-              margin="20px 0px 40px 0px"
-              m_sm="20px auto"
+              margin_tablet="20px 0px 40px 0px"
+              margin="20px 0 20px 10px"
               maxWidth="350px"
               textShadow="0px 0px 4px black"
             >
@@ -122,22 +137,27 @@ const Landing = (props) => {
               <Paragraph key={i}
                 style={JSON.parse(yml.features.styles)}
                 margin="7px 0"
+                padding="0px 20px"
                 textShadow="0px 0px 4px black"
-                align_sm="left"
-                mw_sm="300px"
+                textAlign="left"
+                // maxWidth="300px"
                 color={Colors.white}>{'• '}{f}</Paragraph>
             )}
-          </Column>
+          </Div>
         </StyledBackgroundSection>
-        <Column
-          size="3"
-          size_lg="4"
-          size_sm="6"
-          size_xs="12"
-          align_sm="center"
-          margin="0 auto 0 0"
+        <Div
+          flexDirection="column"
+          size="12"
+          size_tablet="10"
+          width="100%"
+          // size_lg="4"
+          // size_sm="6"
+          // size_xs="12"
+          margin="0"
+          textAlign_sm="center"
+          margin_md="0 auto 0 0"
         >
-          <LeadForm style={{marginTop: "50px"}} heading="Request More Info."
+          <LeadForm margin_tablet="50px 0 0 0" margin="0" style={{ marginTop: "50px" }} heading="Request More Info."
             formHandler={requestSyllabus}
             heading={yml.form.heading}
             motivation={yml.form.motivation}
@@ -146,10 +166,11 @@ const Landing = (props) => {
             lang={pageContext.lang}
             fields={yml.form.fields}
             data={preData}
+            justifyContentButton="center"
           />
-        </Column>
-      </Row>
-      <StyledBackgroundSection
+        </Div>
+      </GridContainer>
+      {/* <StyledBackgroundSection
         className={`image d-none d-sm-block`}
         image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
         bgSize={`cover`}
@@ -196,7 +217,7 @@ const Landing = (props) => {
           fields={yml.form.fields}
           data={preData}
         />
-      </Div>
+      </Div> */}
 
       {
         Object.keys(components)
@@ -318,9 +339,14 @@ export const query = graphql`
               image_filter
               image{
                 childImageSharp {
-                  fluid(maxWidth: 1000){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1000
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 1000){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
             }
@@ -404,12 +430,17 @@ export const query = graphql`
             hidden
             student_thumb{
               childImageSharp {
-                fluid(maxHeight: 200){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-                fixed(width: 250, height: 250) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  height: 200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxHeight: 200){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+                # fixed(width: 250, height: 250) {
+                #   ...GatsbyImageSharpFixed
+                # }
               }
             }
             content
@@ -431,9 +462,14 @@ export const query = graphql`
               slug
               project_image {
                 childImageSharp {
-                  fluid(maxWidth: 800){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               } 
               project_content
@@ -469,9 +505,14 @@ export const query = graphql`
               name
               image {
                 childImageSharp {
-                  fluid(maxWidth: 150){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 150
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 150){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               featured

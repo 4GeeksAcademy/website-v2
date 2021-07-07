@@ -7,7 +7,10 @@ meta_info:
   redirects: ["/precio"]
 
 ## BANNER - HEADER
-header_data:
+seo_title: "Precios de Bootcamp"
+header:
+  title: Financiación
+  paragraph: Indicanos los siguientes datos para mostrarte tus opciones de financiación
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
   image: "../../../static/images/bg/pricing-bg.jpg"
@@ -33,8 +36,22 @@ intro:
 prices:
   heading: "PRECIOS Y PAGOS"
   paragraph: "Empieza seleccionando un programa y ciudad para revisar los precios"
-  closed_label: "Haz Clic Aquí Para Seleccionar un Programa"
+  closed_label: "Selecciona un Programa"
   opened_label: "Cerrar"
+
+label:
+  program: 
+    title: "Programa"
+    closedLabel: "Selecciona un Programa"
+  modality:
+    title: "Modalidad"
+    closedLabel: "Selecciona una modalidad"
+  campus:
+    title: "Campus"
+    closedLabel: "Selecciona un campus"
+
+
+syllabus_button_text: Buscar
 
 ## PAYMENT GUIDE SECTION
 payment_guide:

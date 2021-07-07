@@ -1,45 +1,139 @@
 meta_info:
   slug: geekpal-support
   title: "Geekpal of 4Geeks Academy"
-  description: "Learn about our comprehensive support system for 4Geeks Academy graduates"
+  description: "Learn about our comprehensive support system for 4Geeks Academy students and graduates"
   image: null
   keywords: ""
   redirects: ["/geekpal", "/us/career-support"]
-tagline: NEVER BE STUCK AGAIN
-sub_heading: "LEARN FASTER THAN ANYONE ON EARTH"
-image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekpal.png"
-benefits:
-  - p:
-    heading: "Personal"
-    items:
-      - title: Exclusive classes
-        sub_title: (up to 8 students per class)
-      - title: 1:4 teacher-student-ratio
-        sub_title: (one mentor for every 8 students)
-      - title: Mentoring 1-1
-        sub_title: (unlimited sessions)
-      - title: Tailored career
-        sub_title: (based on each job opportunity)
-  - a:
-    heading: "Anywhere & time"
-    items:
-      - title: Adjusted to your schedule
-        sub_title: (on demand session w/appointment)
-      - title: Permanent mentor schedule
-        sub_title: (Always on mentorship & chat support)
-      - title: Online or in-person
-        sub_title: (Locations around the world)
-      - title: Tailored career support
-        sub_title: (based on each job opportunity)
-  - l:
-    heading: "Limitless"
-    items:
-      - title: All the mentoring you need
-        sub_title: (on demand session w/appointment)
-      - title: Mentoring after you graduate
-        sub_title: (even after you get the job so that you can keep the job)
-      - title: Mentoring for life
-        sub_title: (Keep coming back, scheduling or attending)
-      - title: Tailored career
-        sub_title: (based on each job opportunity)
+
+header:
+  title: ""
+  image: "../../../static/images/bg/companies-bg.jpg"
+  image_alt: ""
+  paragraph: "GeekPAL is an instant membership you get when you become a student at 4Geeks Academy. It guarantees you will not code alone ever again. With GeekPAL you will count with A PAL for the rest of your life -yes, even after graduation. <span style='font-weight: bold'>If you get stuck, there will always be a mentor available so you can get help with your code.</span>"
+  image_logo: "/images/geekpal.png"
+
+# Introduction Video here
+geekPal:
+  - videoId: "MBXqEnhodx0"
+    image: ../../../static/images/staff/joao.png
+
+# Banner of icons 
+icons:
+  - icon: "capacity"
+    title: "Maximum 8 students per class"
+  - icon: "ratio"
+    title: "1:5 RATIO teacher student"
+  - icon: "talk"
+    title: "Avg. 50 tutorships PER STUDENT"
+  - icon: "timer"
+    title: "RESPONSE TIME OF 15 MINUTES"
+
+list:
+  - title: "Unlimited Coding Support"
+    image: "../../../static/images/final-project.png"
+    position: "right"
+    sub:
+      - title: "✔ EXCLUSIVE CLASSES"
+        text: "At 4Geeks we believe that the personalized process gives better results, that is why our classes are designed for a maximum of 8 students and we have a ratio of <span style='font-weight: bold'> 1 teacher for every 5 students.</span>"
+      - title: "✔ 1:1 MENTORSHIPS"
+        text: "We have a network of mentors who are willing to give you 
+        <span style='font-weight: bold'> 1:1 support</span> in person or remotely, unlimitedly. These 
+        <span style='font-weight: bold'> unlimited mentoring continues</span> even after you finish your studies at 4Geeks."
+
+  - title: "Wherever and whenever"
+    image: "../../../static/images/bg/main-bg.jpg"
+    position: "left"
+    text: "In 4Geeks we not only adjust the sessions 
+    <span style='font-weight: bold'> according to your calendar</span>, but we also give you the opportunity to see them 
+    <span style='font-weight: bold'> online or in person</span>, this because we have campus in many different cities and therefore time zones.<br/>
+    <br/>In any case, we assure you that you have the opportunity for constant mentoring whenever you need it."
+
+  - title: "Community Support"
+    image: "../../../static/images/comunity-support.png"
+    position: "right"
+    sub:
+      - title: "✔ BreatheCode"
+        text: "Is a community created to accelerate the way junior developers learn and evolve using technology. BreatheCode gives you access to many resources to improve your skills, but also you can contribute to help others with their code."
+      - title: "✔ Slack Community"
+        text: "Our international community of more than 
+        <span style='font-weight: bold'> 2100 people</span>, who will provide you with all the support you need."
+
+# benefits:
+#   - p:
+#     heading: "Personal"
+#     items:
+#       - title: Exclusive classes
+#         sub_title: (up to 8 students per class)
+#       - title: 1:4 teacher-student-ratio
+#         sub_title: (one mentor for every 8 students)
+#       - title: Mentoring 1-1
+#         sub_title: (unlimited sessions)
+#       - title: Tailored career
+#         sub_title: (based on each job opportunity)
+#   - a:
+#     heading: "Anywhere & time"
+#     items:
+#       - title: Adjusted to your schedule
+#         sub_title: (on demand session w/appointment)
+#       - title: Permanent mentor schedule
+#         sub_title: (Always on mentorship & chat support)
+#       - title: Online or in-person
+#         sub_title: (Locations around the world)
+#       - title: Tailored career support
+#         sub_title: (based on each job opportunity)
+#   - l:
+#     heading: "Limitless"
+#     items:
+#       - title: All the mentoring you need
+#         sub_title: (on demand session w/appointment)
+#       - title: Mentoring after you graduate
+#         sub_title: (even after you get the job so that you can keep the job)
+#       - title: Mentoring for life
+#         sub_title: (Keep coming back, scheduling or attending)
+#       - title: Tailored career
+#         sub_title: (based on each job opportunity)
+
+
+
+
+###### OLD ONE
+#   redirects: ["/geekpal", "/us/career-support"]
+# tagline: NEVER BE STUCK AGAIN
+# sub_heading: "LEARN FASTER THAN ANYONE ON EARTH"
+# image: "../../../static/images/bg/companies-bg.jpg"
+# image_logo: "/images/geekpal.png"
+# benefits:
+#   - p:
+#     heading: "Personal"
+#     items:
+#       - title: Exclusive classes
+#         sub_title: (up to 8 students per class)
+#       - title: 1:4 teacher-student-ratio
+#         sub_title: (one mentor for every 8 students)
+#       - title: Mentoring 1-1
+#         sub_title: (unlimited sessions)
+#       - title: Tailored career
+#         sub_title: (based on each job opportunity)
+#   - a:
+#     heading: "Anywhere & time"
+#     items:
+#       - title: Adjusted to your schedule
+#         sub_title: (on demand session w/appointment)
+#       - title: Permanent mentor schedule
+#         sub_title: (Always on mentorship & chat support)
+#       - title: Online or in-person
+#         sub_title: (Locations around the world)
+#       - title: Tailored career support
+#         sub_title: (based on each job opportunity)
+#   - l:
+#     heading: "Limitless"
+#     items:
+#       - title: All the mentoring you need
+#         sub_title: (on demand session w/appointment)
+#       - title: Mentoring after you graduate
+#         sub_title: (even after you get the job so that you can keep the job)
+#       - title: Mentoring for life
+#         sub_title: (Keep coming back, scheduling or attending)
+#       - title: Tailored career
+#         sub_title: (based on each job opportunity)

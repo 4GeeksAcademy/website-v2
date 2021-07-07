@@ -1,0 +1,39 @@
+meta_info:
+  slug: porque-4geeks
+  title: ""
+  description: "Acerca de 4Geeks Academy"
+  image: ""
+  keywords: ""
+  redirects: ["/porque-4geeks", "/es/porque-4geeks"]
+
+seo_title: "coding bootcamp"
+header:
+  title: "Empoderamos Talentos, impulsando sus carreras profesionales con programación"
+  paragraph: ""
+  image: "../../../static/images/why-4geeks/why-4geeks-header.png"
+  image_alt: ""
+
+badges:
+  paragraph: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+
+community_banner:
+  title: "Una comunidad hecha para programadores "
+  paragraph: "En 4Geeks Academy siempre habrá alguien con el que podrás navegar en tu  camino para crecer en la industria tecnologica: mentores, instructores, compañeros, socios comerciales. Estamos constantemente fortaleciendo nuestro ecosistema para aprender y evolucionar juntos, usando tecnología, usando código."
+  image: "../../../static/images/why-4geeks/why-4geeks-world.png"
+  image_alt: ""
+  image_paragraph: "¡No conocemos fronteras, nuestra comunidad es fuerte en inglés y en español, en América y Europa y sigue creciendo!"
+  list:
+    - title: "Comunidad global de + 2100 personas"
+    - title: "Más de 15 canales activos en Slack"
+    - title: "Fuerte presencia local, y acceso a eventos locales"
+geeksvsothers:
+  title: "Compara 4geeks con otros bootcamps"
+  paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a codificar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
+
+python_banner:
+  title: "Phyton y Javascript"
+  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
+
+  Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+  image: "../../../static/images/why-4geeks/python-image.png"
+  image_alt: "python-image"

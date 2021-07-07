@@ -4,7 +4,7 @@ import styled from "styled-components"
 import {Row, Column} from '../Sections'
 import { getStorage } from "../../actions"
 import graphic from "../../assets/images/graphic.png"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Helper = styled.span`
   display: inline-block;
@@ -23,9 +23,14 @@ export default ({location, lang, limit, filter, autoTagLocation }) => {
               url
               image{
                 childImageSharp {
-                  fluid(maxHeight: 60){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    height: 60
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxHeight: 60){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               location
@@ -66,11 +71,12 @@ export default ({location, lang, limit, filter, autoTagLocation }) => {
       {news.slice(0, limit).map((l, i) => (
         <Column margin="auto" style={{whiteSpace: "nowrap", height: "60px"}} key={i} size="2" size_md="3">
           <a href={l.url} target="_blank" rel="noopener noreferrer nofollow">
-            <Img
+            <GatsbyImage
               style={{height: "100%"}}
               imgStyle={{objectFit: "contain"}}
               alt={l.name}
-              fluid={l.image.childImageSharp.fluid}
+              image={getImage(l.image.childImageSharp.gatsbyImageData)}
+              // fluid={l.image.childImageSharp.fluid}
             />
           </a>
         </Column>

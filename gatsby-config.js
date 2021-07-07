@@ -36,6 +36,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-transformer-yaml',
+    `gatsby-plugin-image`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -90,7 +91,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Futura, Lato"],
+          families: ["Lato"],
           urls: ["/fonts/fonts.css"],
         },
       },
@@ -162,7 +163,7 @@ module.exports = {
             policy: robots !== "hidden" ? [{ userAgent: '*' }] : [{ userAgent: '*', disallow: ['/'] }]
           },
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+            policy: [{userAgent: '*', disallow: ['/']}]
           },
         }
       }

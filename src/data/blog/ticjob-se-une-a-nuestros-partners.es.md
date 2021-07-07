@@ -5,8 +5,10 @@ excerpt: Conoce el nuevo partnership con Ticjob
 slug: ticjob-se-une-a-nuestros-partners
 title: "Ticjob se une a nuestros partners"
 image: "/images/blog/Blog_post.png"
+image_alt: ""
 categories:
 - Partnerships
+cluster: "trends-and-tech"
 tags:
 - 4geeks
 - ticjob

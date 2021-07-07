@@ -80,7 +80,7 @@ const Graduates = ({data, pageContext, yml}) => {
               <StyledBackgroundSection
                 className={`img-right`}
                 height={`426px`}
-                image={yml.about.about_image.image.childImageSharp.fluid}
+                image={yml.about.about_image.image.childImageSharp.gatsbyImageData}
                 bgSize={`cover`}
                 alt={yml.about.about_image.alt}
                 borderRadius={`0 1.25rem 1.25rem 0`}
@@ -111,9 +111,14 @@ export const query = graphql`
             sub_heading
             image{
               childImageSharp {
-                fluid(maxWidth: 1200){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 1200){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }  
           }
@@ -123,9 +128,14 @@ export const query = graphql`
             about_image{
               image {
                 childImageSharp {
-                  fluid(maxWidth: 800){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               } 
               alt
@@ -149,9 +159,14 @@ export const query = graphql`
                 slug
                 project_image {
                   childImageSharp {
-                    fluid(maxWidth: 800){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 800
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 800){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 } 
                 project_content

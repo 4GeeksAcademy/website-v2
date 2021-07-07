@@ -1,0 +1,88 @@
+## CAREERS - JOBS TEMPLATE
+## YOU CAN CHANGE THE MAIN HEADER AND THE MORE ABOUT 4GEEKS SECTION
+
+meta_info:
+  slug: resultados
+  title: ""
+  description: null
+  image: null
+  keywords: ""
+  redirects: ["/es/resultados"]
+
+seo_title: "Resultados"
+header:
+  title: "4Geeks Informe de resultados de la Academia"
+  paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar."
+  image: 
+  image_alt: ""
+sections:
+  - title: "Nuestra Declaración"
+    ref: "our_statement"
+    paragraph: "La industria de los Bootcamp de codificación ha crecido enormemente en los últimos años. Las grandes ciudades están reuniendo la mayoría de los números, y también están aumentando los nuevos centros tecnológicos (como Miami).
+la ocasión y creciendo para afrontar el desafío.
+
+4Geeks Academy está autorizada por el Departamento de Educación de Florida; también tenemos una relación comercial duradera con Miami Dade College, y hemos sido galardonados y
+reconocidos muchas veces por nuestro plan de estudios, metodologías y resultados.
+
+Desde 2017 hemos estado creciendo muy rápido. Hemos graduado a más de 700 estudiantes en 6 campus diferentes y más de 15 programas en curso."
+
+    stats: 
+      - stat: "+ 700"
+        content: "Graduados"
+      - stat: "2 Idiomas"
+        content: "Syllabus y Programas"
+      - stat: "5 Ciudades"
+        content: "Miami, Madrid, Santiago de Chile, Caracas y mas por venir."
+    sub_sections:
+      - title: ""
+        content: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar." 
+        image_section:
+          # - image: 
+          - image: "../../../static/images/outcomes/outcomes.png"
+            image_paragraph: "test"
+  - title: "Datos de los Estudiantes"
+    ref: "student_facts"
+    paragraph: "Estos son los resultados de las operaciones 4GA (excluidos los programas lanzados junto con Miami Dade College) desde marzo de 2018 hasta marzo de 2020.
+
+Los programas incluidos son el Programa de desarrollo de software Full-Stack que se imparte a través de metodologías de medio tiempo y tiempo completo."
+
+    stats: 
+      - stat: "210"
+        content: "Estudiantes fueron considerados para este reporte"
+      - stat: "80%"
+        content: "Nuestros estudiantes eligen un 
+programa Part-Time. Solo el 20% persigue una
+Programa de tiempo completo."
+    sub_sections:
+      - title: "PART - TIME"
+        content: "Fuimos fundados bajo una visión de PT y seguimos mostrando nuestra principal fortaleza con la Educación a tiempo parcial; la nueva forma de aprender y lograr (mejorar) una nueva carrera." 
+        image_section:
+          - image: 
+            image_paragraph: ""
+      - title: "Cantidad de Estudiantes"
+        content: "Este informe presenta los resultados de los últimos 24 meses de funcionamiento en el campus de EE. UU. 200 estudiantes considerados" 
+        image_section:
+          - image: 
+            image_paragraph: ""
+  - title: "Job Placement"
+    ref: "job_placement"
+    paragraph: "Nuestros estudiantes normalmente necesitan alrededor de 100 días después de la graduación para conseguir un trabajo en el campo. Hemos tenido estudiantes que consiguen un trabajo incluso antes de terminar el programa, o dentro de los próximos 15 días a partir del Día de lanzamiento. El promedio es de 94 días."
+    
+    stats: 
+      - stat: "+ 700"
+        content: "Graduados"
+      - stat: "2 Idiomas"
+        content: "Syllabus y Programas"
+      - stat: "5 Cities"
+        content: "Miami, Madrid, Santiago de Chile, Caracas,y más por venir"
+    sub_sections:
+      - title: ""
+        content: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar." 
+        image_section:
+          - image: 
+            image_paragraph: ""
+
+download:
+  button_text: "Descargar Informe"
+  label: "Obtener Resultados"
+  motivation: "En 2 min. Recibirás el informe en tu correo"

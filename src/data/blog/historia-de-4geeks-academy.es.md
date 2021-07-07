@@ -7,11 +7,12 @@ layout: post
 link: https://www.4geeksacademy.co/es/historia-de-4geeks-academy/
 slug: historia-de-4geeks-academy
 title: Historia de 4Geeks Academy
-avatar: "/images/staff/marcelo.jpeg"
 image: ""
+image_alt: ""
 wordpress_id: 1124
 categories:
 - Aprendiendo a desarrollar
+cluster: "tendencias-y-tech"
 lang: "es"
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: false

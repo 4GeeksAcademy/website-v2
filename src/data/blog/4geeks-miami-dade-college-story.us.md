@@ -7,13 +7,13 @@ layout: post
 link: https://www.4geeksacademy.co/4geeks-miami-dade-college-story/
 slug: 4geeks-miami-dade-college-story
 title: 4Geeks Academy & Miami Dade College |  A Story of Success
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2018/11/Massive-Cyber-Monday-Sale-1.png"
+image_alt: ""
 wordpress_id: 3315
 categories:
 - Learning to code
 - Why learn to code?
-
+cluster: "trends-and-tech"
 tags:
 - coding
 - coding bootcamps

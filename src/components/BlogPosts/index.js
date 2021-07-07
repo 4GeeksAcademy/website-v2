@@ -18,7 +18,6 @@ const BlogPosts = ({filter, limit, featured}) => {
                       date
                       author
                       image
-                      avatar
                       excerpt
                       featured
                     }

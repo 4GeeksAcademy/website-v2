@@ -8,23 +8,45 @@ meta_info:
   keywords: ""
   redirects: ["/ingenieria-software", "/es/software-engineering", "/es/course/ingenieria-software"]
 
+seo_title: "Cooding Bootcamp"
 header:
-  tagline_top: "CONVIERTETE EN"
-  tagline: "INGENIERO DE SOFTWARE"
-  sub_heading: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro."
-  subsub_heading: "(Previous coding experience required)"
-  alt: ""
-
-  # The background image position can be cnotroled by device size
-  # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
+  title: "Ingeniero de Software Senior"
   image: "../../../static/images/bg/apple-building.jpg"
+  image_alt: ""
+  paragraph: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro.
+  "
+
+course_instructors: 
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    - name: "Roldolfo Campos"
+      sub_title: "Co fundador de 4geeks y director de educación"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+    - name: "Gabriel Salinas"
+      sub_title: "Sophisticated Software Systems Engineer"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware"
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+badges:
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
-  apply_button_link: "/aplica"
+  apply_button_link: "/es/aplica"
 
 credentials:
   heading: "Nuestros números hablan por sí solos"
@@ -32,6 +54,20 @@ credentials:
 
 ## PROGRAM DETAILS
 details:
+  about:
+      title: "Sobre el  programa"
+      sub_title: "Obtenga las habilidades para satisfacer la demanda global de solucionadores de problemas y pensadores lógicos que conducen al mundo a un cambio e impacto reales.
+      Desarrolle aplicaciones distribuidas en la nube altamente escalables utilizadas solo por Fortune 500. Consiga un trabajo de ingeniería de software real o cree el próximo unicornio tecnológico."
+    
+      list:
+        - label: "Duración"
+          content:  "16 semanas"
+        - label: "Clases"
+          content: "3 Clases semanales"
+        - label: "Certificado"
+          content: ""
+        - label: "Requisitos"
+          content: "ver Requisitos"
   heading: DETALLES DEL PROGRAMA
   weeks: 16
   sub_heading: "Part Time"
@@ -130,8 +166,9 @@ potential_companies:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "EN NÚMEROS: 4 GEEKS VS OTROS"
-  sub_heading: ""
+  heading: "¿Qué nos hace ser tanexitosos?
+  
+  sub_heading: Compara a 4Geeks con otros coding bootcamps"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
@@ -158,11 +195,16 @@ geek_data:
 prices:
   heading: "PRECIOS Y PAGOS"
   sub_heading: ""
-
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
 ## ALUMNI SECTION
 alumni:
-  heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui."
+  heading: "CONOCE A NUESTROS EX-ALUMNOS Y SUS PROYECTOS"
+  sub_heading: "Conoce a nuestros graduados y algunos de los proyectos que estarás construyendo durante el programa."
 
 ## SIDEBAR
 sidebar:

@@ -2,29 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
-import Navbar from '../components/Navbar';
+import {Navbar} from '../new_components/NavbarDesktop';
+import {NavbarMobile} from '../new_components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
 import CustomBar from '../components/CustomBar';
-import Footer from '../components/Footer';
+import Footer from '../new_components/Footer';
 
 
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
 const BlogLayout = ({children, seo, context}) => {
-    // const {slug, title, description, image, keywords} = seo;
-    const [editMode, setEditMode] = React.useState()
-    const [showUpcoming, setShowUpcoming] = React.useState(true)
+  // const {slug, title, description, image, keywords} = seo;
+  const [editMode, setEditMode] = React.useState()
+  const [showUpcoming, setShowUpcoming] = React.useState(true)
 
-    React.useEffect(() => {
-        if (localStorage.getItem("edit-mode") === "true") setEditMode(true);
-        if (RegExp('\/app?l(?:y|ica)').test(window.location.href)) {
-            setShowUpcoming(false);
-        }
-    }, []);
-    return (
-        <StaticQuery
-            query={graphql`
+  React.useEffect(() => {
+    if (localStorage.getItem("edit-mode") === "true") setEditMode(true);
+    if (RegExp('\/app?l(?:y|ica)').test(window.location.href)) {
+      setShowUpcoming(false);
+    }
+  }, []);
+  return (
+    <StaticQuery
+      query={graphql`
       query SiteTitleBlogQuery {
         allCustomBarYaml {
             edges {
@@ -58,6 +59,11 @@ const BlogLayout = ({children, seo, context}) => {
                   link
                 }
               }
+              socials{
+                name
+                icon
+                link
+              }
               fields {
                 lang
               }
@@ -71,8 +77,32 @@ const BlogLayout = ({children, seo, context}) => {
               navbar {
                 name
                 link
+                sub_menu{
+                  icon
+                  title
+                  paragraph
+                  links{
+                    title
+                    level
+                    paragraph
+                    icon
+                    buttons{
+                      text
+                      link
+                    }
+                    sub_links{
+                      title
+                      link_to
+                    }
+                  }
+                }
+              }
+              language_button{
+                text
+                link
               }
               button {
+                apply_button_text
                 button_link
                 button_type
                 button_color_text
@@ -85,46 +115,51 @@ const BlogLayout = ({children, seo, context}) => {
               }
             }
           }
-        }
+        }  
       }
     `}
-            render={(data) => {
+      render={(data) => {
 
-                let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
-                let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
-                let myCustomBar = data.allCustomBarYaml.edges.find(item => item.node.fields.lang === context.lang)
+        let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
+        let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
+        let myCustomBar = data.allCustomBarYaml.edges.find(item => item.node.fields.lang === context.lang)
 
-                return (
-                    <>
-                        {editMode && <div style={{background: "yellow", padding: "15px"}}>
-                            <span>You are reviewing the website on edit mode</span>
-                            <button
-                                style={{border: "1px solid black", float: "right", padding: "5px"}}
-                                onClick={() => {
-                                    localStorage.setItem("edit-mode", "false");
-                                    setEditMode(false);
-                                }}
-                            > ❌ Clear edit mode</button>
-                        </div>}
-                        <SEO {...seo} context={context} />
-                        {myNavbar && <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />}
-                        <GlobalStyle />
-                        <>
-                            {children}
-                        </>
-                        { showUpcoming && myCustomBar && <CustomBar button={myCustomBar.node.bar_content} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
-                        {myFooter && <Footer yml={myFooter.node} />}
-                    </>
-                )
-            }}
-        />
-    )
+        return (
+          <>
+            {editMode && <div style={{background: "yellow", padding: "15px"}}>
+              <span>You are reviewing the website on edit mode</span>
+              <button
+                style={{border: "1px solid black", float: "right", padding: "5px"}}
+                onClick={() => {
+                  localStorage.setItem("edit-mode", "false");
+                  setEditMode(false);
+                }}
+              > ❌ Clear edit mode</button>
+            </div>}
+            <SEO {...seo} context={context} />
+            {myNavbar &&
+              <>
+                <Navbar currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+                <NavbarMobile currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+              </>
+            }
+            <GlobalStyle />
+            <>
+              {children}
+            </>
+            {/* { showUpcoming && myCustomBar && <CustomBar button={myCustomBar.node.bar_content} lang={context.lang} position="bottom" showOnScrollPosition={400} />} */}
+            {myFooter && <Footer yml={myFooter.node} />}
+          </>
+        )
+      }}
+    />
+  )
 };
 
 
 BlogLayout.propTypes = {
-    children: PropTypes.node.isRequired,
-    seo: PropTypes.object
+  children: PropTypes.node.isRequired,
+  seo: PropTypes.object
 };
 
 export default BlogLayout;

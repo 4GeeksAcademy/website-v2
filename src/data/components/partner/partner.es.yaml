@@ -16,7 +16,7 @@ partners:
     - name: "Evernote"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/evernote.png"
-      featured: true
+      featured: false
     - name: "Facebook"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/facebook.png"
@@ -28,62 +28,62 @@ partners:
     - name: "National Geographic"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/natgeo.png"
-      featured: true
+      featured: false
     - name: "Ticjob"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/new_logo_ticjob.png"
-      featured: true
+      featured: false
     - name: "Unono"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/unono.png"
-      featured: true
+      featured: false
     - name: "Optiva-Media"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/optiva-media.png"
-      featured: true
+      featured: false
     - name: "Neo9"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/Neo9.png"
-      featured: true
+      featured: false
     - name: "KPMG"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/kpmg-logo1.png"
-      featured: true                        
+      featured: false                        
     - name: "Ultimate Software"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ultimate.png"
-      featured: true
+      featured: false
     - name: "TCG Group"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/tcg.png"
-      featured: true
+      featured: false
     - name: "Razz"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/razz.png"
-      featured: true
+      featured: false
     - name: "Overseas"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/overseas.png"
-      featured: true
+      featured: false
     - name: "DS9"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/ds9.png"
-      featured: true
+      featured: false
     - name: "Coinet"
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/coinet.jpg"
-      featured: true
+      featured: false
 coding:
   tagline: "LAS COMPAÑÍAS CONFÍAN Y CONTRATAN A NUESTROS ESTUDIANTES"
   sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
-      featured: false
+      featured: true
       #locations: ["madrid-spain"]
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles.png"
-      featured: false
+      featured: true
       #locations: ["madrid-spain"]
     - name: "Bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
@@ -99,7 +99,7 @@ coding:
       #locations: ["madrid-spain"]
     - name: "Womans Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
-      featured: false
+      featured: true
       #locations: ["madrid-spain"]
     - name: "Worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"

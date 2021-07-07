@@ -5,8 +5,9 @@ meta_info:
   image: null
   keywords: "4geeks Academy vs otros bootcamps"
   redirects: ["/otros"]
-  
-  
+
 ## 4GEEKS VS OTHERS HEADING
-tagline: 4GEEKS vs OTROS
-sub_heading: "Tabla Comparativa Completa"
+seo_title: "4Geeks vs Otros Bootcamps "
+header:
+  title: 4GEEKS vs OTROS
+  paragraph: "Tabla Comparativa Completa"

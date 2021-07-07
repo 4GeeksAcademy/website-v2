@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-inteligencia-artificial
   title: "Estudia Machine Learning en 4Geeks Academy"
-  description: "Conviérte en un Ingeniero de Inteligencia Artificial y obtén un trabajo de clase mundial"
+  description: "Nuestro nuevo curso de Inteligencia Artificial y Machine Learning, te ayudará a dominar las técnicas de codificación."
   bc_slug: "machine-learning"
   image: ""
   template: "course-machine-learning"
@@ -9,22 +9,42 @@ meta_info:
   redirects: ["/es/machine-learning"]
 
 header:
-  tagline_top: "CONVIERTETE EN"
-  tagline: "INGENIERO EN INTELIGENCIA ARTIFICIAL"
-  sub_heading: "Únete a la revolución I.A. y obtén uno de los trabajos profesionales mejor pagados del mundo"
-  subsub_heading: "Cierta experiencia en matematicas, codigo o estadistica es requerida"
-  alt: ""
-
-  # The background image position can be cnotroled by device size
-  # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
+  title: "Conviertete en un Ingeniero de Inteligencia Artificial"
+  paragraph: "Conviértete en uno de los profesionales mejor pagados del mundo."
   image: "../../../static/images/bg/apple-building.jpg"
+  image_alt: ""
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
-  apply_button_link: "/aplica"
+  apply_button_link: "/es/aplica"
+
+course_instructors: 
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    # - name: "Roldolfo Campos"
+    #   sub_title: "Co fundador de 4geeks y director de educación"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+    # - name: "Gabriel Salinas"
+    #   sub_title: "Sophisticated Software Systems Engineer"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware"
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+badges:
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.."
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
 
 credentials:
   heading: "Nuestros números hablan por sí solos"
@@ -32,7 +52,7 @@ credentials:
 
 description:
   heading: "Sobre este curso"
-  sub_heading: "Prepara Age of A.I."
+  sub_heading: "Preparate para la era de I.A."
   content: >
     Entrénate con un experto reconocido de Inteligencia Artificial; Explora los fundamentos de Machine Learning y Deep Learning con algunas de las tecnologías más poderosas que realmente pueden escalar I.A. en las empresas.\n
     Practica con escenarios típicos en empresas de la vida real y revisa algunas de las herramientas utilizadas en la industria. \n
@@ -49,8 +69,23 @@ teacher:
 
 ## PROGRAM DETAILS
 details:
+  about:
+      title: "Sobre este programa"
+      sub_title: "Reciba entrenamiento por un reconocido experto en I.A; explora los fundamentos del aprendizaje automático y el aprendizaje profundo con algunas de las tecnologías más poderosas que realmente escalan la inteligencia para los negocios.
+      Practique con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
+      Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética.
+      "
+      list:
+        - label: "Duración"
+          content:  "15 semanas"
+        - label: "Clases"
+          content: "3 Clases semanales"
+        - label: "Certificados"
+          content: ""
+        - label: "Requisitos"
+          content: "Ver Requisitos"
   heading: DETALLES DEL PROGRAMA
-  weeks: 16
+  weeks: 15
   facts:
     - label: "Duración"
       value: "15 semanas"
@@ -63,8 +98,8 @@ details:
     - label: "Tamaño Clase"
       value: "Sólo 12 personas"
     - label: "Horas totales"
-      value: "300"
-  sub_heading: "Part Time"
+      value: "360"
+  sub_heading: "Comienza con Python y Data Science, Machine Learning, Deep Learning y mantenga un entorno de producción en I.A."
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
@@ -74,20 +109,20 @@ details:
     - module_name: "Python"
       title: "Introducción a Python"
       description: "Empezando por un prework de 2 semánas, entra en el mundo de la programación con Python & Algoritmos; Este modulo te ayudará a preparate a programar y desarrollar diferentes modelos de entrenamiento de Inteligencias Artificials y evaluaciones para próximos pasos. "
-      projects: "Recolecta, almacena y mide con Numpy, Pandas, Mstplotlib, etc."
+      projects: "Recolecta, almacena y mide con Numpy, Pandas, Matplotlib, etc."
       slug: "python-intro"
       duration: "2 weeks"
       step: 2
     - module_name: "Data"
-      title: "Data Science para AI"
+      title: "Data Science para IA"
       description: "No solamente vamos a entrenarte en Data Science, te vamos a preparar para Data Science en la era de la inteligencia artificial apalancandote de Python; Análisis de Datos & Visualizaciones, Manejos de Bases de datos y Workflows, Aplicaciónes de Algebra Lineal con Inferencia estadística y modelado. Terminarás este modulo entregando un proyecto completo donde tengas que aplicar limpieza, análisis y modelos de predicción en sets de datos reales."
       projects: "Cargado de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files), explorado y limpieza de datos, visualizacion de datos, pruebas estadísticas, etc."
       slug: "advanced-algorithms"
       duration: "4 wks"
       step: 4
     - module_name: "Machine L."
-      title: "Machine Learning Prático"
-      description: "Uno de los aspectos más importantes del desarrollo de inteligencia artificial es entender como preparar, publicar y manejar las soluciones en un ambiente de producción. Vamos a llevarte de la mano desarrollando una estrategia para seguir el ciclo de desarrollo y publicación completo (Machine Learning Ops) asi como su privacidad, seguridad y etica. Tu proyecto final sera publicar una Inteligencia Artificial en producción."
+      title: "Machine Learning Práctico"
+      description: "Uno de los aspectos más importantes del desarrollo de inteligencia artificial es entender cómo preparar, publicar y manejar las soluciones en un ambiente de producción. Vamos a llevarte de la mano desarrollando una estrategia para seguir el ciclo de desarrollo y publicación completo (Machine Learning Ops) asi como su privacidad, seguridad y etica. Tu proyecto final sera publicar una Inteligencia Artificial en producción."
       projects: "Construye estructuras de datos, publica modelos de Inteligencia Artificial localmente y en AWS"
       slug: "machine-learning"
       duration: "6 wks"
@@ -142,7 +177,7 @@ potential_companies:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "EN NÚMEROS: 4 GEEKS VS OTROS"
+  heading: "¿Qué nos hace tan exitosos?"
   sub_heading: ""
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
@@ -173,8 +208,8 @@ prices:
 
 ## ALUMNI SECTION
 alumni:
-  heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum mássa justo sit amet risus. Donec sed odio dui."
+  heading: "Conoce a los ex-alumnos y sus proyectos"
+  sub_heading: "Conoce a nuestros graduados y algunos de los proyectos que estarás construyendo durante el programa"
 
 faq:
   title: "Preguntas Frecuentes"

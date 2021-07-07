@@ -1,16 +1,28 @@
 meta_info:
   slug: partners
   title: "4Geeks Academy Partners"
-  description: "Meet the 4Geeks Academy partners, local and global companies that trust in us and hire our students"
+  description: "Meet the 4Geeks Academy partners, local and global companies trust in us and hire our students"
   image: ""
   keywords: "4Geeks Academy, Partners"
   redirects: []
 
-header_data:
-  tagline: COMPANIES TRUST US AND HIRE OUR STUDENTS
-  sub_heading: I'm impressed with the level of understanding 4Geeks students have, my hire ended becoming team leader - CodeNinjas
-  button: BE OUR PARTNER
-  image: "../../../static/images/bg/companies-bg.jpg"
+seo_title: "Partnerships"
+header:
+  title: "Companies trust us and hire our students"
+  image: "../../../static/images/partner/partners-heading.png"
+  image_alt: ""
+  paragraph: "I'm impressed with the level of understanding 4Geeks students have, my hire ended becoming team leader - CodeNinjas"
+  button: HAZTE HIRING PARTNER
+
+form:
+  title: "Get in Touch and Find the Right Talent"
+  paragraph: "
+  Contact us and we'll connect you directly to the right candidates who are graduating from 4Geeks Academy every day.
+  Our graduates succeed at their own businesses, startups and big companies alike. 
+  Our programs prepare students to work and thrive at any tech and forward-thinking organization.
+  "
+footer_data:
+  image: "../../../static/images/partner/partnership.png"
   alt: ""
 button_section:
   button_text: "JOIN OUR PARTNERSHIP NETWORK"

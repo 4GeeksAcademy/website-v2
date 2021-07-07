@@ -1,15 +1,24 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import {navigate} from 'gatsby';
-import {Row, Column, Wrapper, Divider} from '../components/Sections'
-import {H3, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button} from '../components/Styling'
-import {Input, Alert} from '../components/Form'
-import {SelectRaw} from '../components/Select'
+import {Div, GridContainer, Header, Grid} from '../new_components/Sections'
+import {H1, H3, Paragraph} from '../new_components/Heading'
+import {Colors, Button} from '../new_components/Styling'
+import {Input, Alert} from '../new_components/Form'
+import {SelectRaw} from '../new_components/Select'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
+import {Circle} from '../new_components/BackgroundDrawing'
 import {apply, tagManager} from "../actions"
-import TestimonialsCarrousel from '../components/Testimonials'
 
+const us = {
+    "(In-person and from home available)": "(In-person and from home available)",
+    "(From home until further notice)": "(From home until further notice)"
+}
+const es = {
+    "(In-person and from home available)": "(Presencial o desde casa)",
+    "(From home until further notice)": "(Desde casa hasta nuevo aviso)"
+}
+const trans = { us, es }
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -24,18 +33,26 @@ const Apply = (props) => {
     const [formStatus, setFormStatus] = useState({status: "idle", msg: "Apply"});
     const [formData, setVal] = useState({
         first_name: {value: '', valid: false},
-        last_name: {value: '', valid: false},
+        // last_name: {value: '', valid: false},
         phone: {value: '', valid: false},
         email: {value: '', valid: false},
         location: {value: '', valid: false},
         consent: {value: true, valid: true},
         referral_key: {value: '', valid: true},
-        course: { value: null, valid: false }
+        course: {value: null, valid: false}
     });
     const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
         label: p.text,
         value: p.bc_slug
     }))
+    const locations = session && session.locations && session.locations
+        .filter(l => !l.active_campaign_location_slug.includes("online"))
+        .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
+        .map(m => ({
+            label: m.name + " " + (m.in_person_available == true ? trans[pageContext.lang]["(In-person and from home available)"] : trans[pageContext.lang]["(From home until further notice)"]),
+            value: m.active_campaign_location_slug
+        }))
+
     React.useEffect(() => {
         tagManager("application_rendered")
     }, [])
@@ -53,7 +70,7 @@ const Apply = (props) => {
         // Pre-fill the course
         let _course = urlParams.get('course');
         if (!_course && props.location.state) _course = props.location.state.course;
-        
+
         if (typeof (_course) === "string") _course = programs.find(p => p.value === _course);
 
         // Pre-fill the utm_url
@@ -64,7 +81,7 @@ const Apply = (props) => {
             ..._val,
             utm_url: _utm_url,
             location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
-            course: { value: _course || null, valid: _course && _course.value ? true : false },
+            course: {value: _course || null, valid: _course && _course.value ? true : false},
         }));
     }, [session])
 
@@ -72,35 +89,325 @@ const Apply = (props) => {
     if (privacy) privacy = privacy.node;
 
     return (
-        <form onSubmit={(e) => {
-            e.preventDefault();
-            if (formStatus.status === "error") setFormStatus({status: "idle", msg: "Resquest"})
+        <>
+            <Header
+                padding="0 10px"
+                padding_tablet="64px 0 "
+                seo_title={yml.seo_title}
+                title={yml.header.title}
+                margin_tablet="100px 0"
+                position="relative"
+            >
+                <Circle color="grey" width="17px" height="17px" top="0" left="90px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="black" width="17px" height="17px" top="0" left="125px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="grey" width="17px" height="17px" top="0" left="168px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="grey" width="17px" height="17px" top="0" left="205px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="grey" width="17px" height="17px" top="0" left="304px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="yellow" width="17px" height="17px" top="32px" left="35px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
+                <Circle color="black" width="17px" height="17px" top="32px" left="70px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="grey" width="17px" height="17px" top="32px" left="125px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="grey" width="17px" height="17px" top="32px" left="168px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="blue" width="17px" height="17px" top="32px" left="249px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="red" width="27px" height="27px" top="183px" left="125px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="yellow" width="250px" height="250px" bottom="-100px" right="-68px" opacity="0.2" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="grey" width="17px" height="17px" top="120px" right="50px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="black" width="17px" height="17px" top="120px" right="89px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="grey" width="17px" height="17px" top="120px" right="128px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="black" width="119px" height="11px" border="10px" bottom="115px" right="40px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="black" width="77px" height="11px" border="10px" bottom="115px" right="175px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="yellow" width="116px" height="116px" bottom="-58px" left="-58px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="yellow" width="21px" height="21px" top="10px" right="320px" zIndex="1" display="none" display_tablet="inline" />
+                <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
+                <Circle color="lightBlue" width="57px" height="57px" top="32px" left="-28px" display="inline" display_tablet="none" />
+            </Header>
+            <GridContainer columns_tablet="12" margin="0 0 82px 0">
+                <Div gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        if (formStatus.status === "error") setFormStatus({status: "idle", msg: "Resquest"})
 
-            const valid = formIsValid(formData);
-            if (valid !== true) {
-                setFormStatus({status: "error", msg: "There are some errors in your form: " + valid});
-            }
-            else {
-                setFormStatus({status: "loading", msg: "Loading..."});
-                apply({ ...formData, course: formData.course.value}, session)
-                    .then(data => {
-                        if (typeof (data.error) !== "undefined") {
-                            setFormStatus({status: "error", msg: "Fix errors"});
+                        const valid = formIsValid(formData);
+                        if (valid !== true) {
+                            setFormStatus({status: "error", msg: "There are some errors in your form: " + valid});
                         }
                         else {
-                            setFormStatus({status: "thank-you", msg: "Thank you"});
-                            // console.log("Thank you");
-                            if (!session || !session.utm || !session.utm.utm_test) navigate('/thank-you/apply');
-                            else console.log("Lead success, but no redirection because of testing purposes")
+                            setFormStatus({status: "loading", msg: "Loading..."});
+                            apply({...formData, course: formData.course.value, location: formData.location.value }, session)
+                                .then(data => {
+                                    if (typeof (data.error) !== "undefined") {
+                                        setFormStatus({status: "error", msg: "Fix errors"});
+                                    }
+                                    else {
+                                        setFormStatus({status: "thank-you", msg: "Thank you"});
+                                        // console.log("Thank you");
+                                        if (!session || !session.utm || !session.utm.utm_test) navigate('/thank-you/apply');
+                                        else console.log("Lead success, but no redirection because of testing purposes")
+                                    }
+                                })
+                                .catch(error => {
+                                    console.log("error", error);
+                                    setFormStatus({status: "error", msg: error.message || error});
+                                })
                         }
-                    })
-                    .catch(error => {
-                        console.log("error", error);
-                        setFormStatus({status: "error", msg: error.message || error});
-                    })
+                    }}>
+                        <Div margin_tablet="0 0 23px 0">
+                            <Input
+                                data-cy="first_name"
+                                border="1px solid hsl(0,0%,80%)"
+                                borderRadius="3px"
+                                bgColor={Colors.white}
+                                type="text" className="form-control" placeholder={yml.left.form_section.first_name}
+                                errorMsg="Please specify a valid first name"
+                                required
+                                onChange={(value, valid) => {
+                                    setVal({...formData, first_name: {value, valid}})
+                                    if (formStatus.status === "error") {
+                                        setFormStatus({status: "idle", msg: "Resquest"})
+                                    }
+                                }}
+                                value={formData.first_name.value}
+                            />
+                        </Div>
+                        <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" margin_tablet="0 0 23px 0" gridGap="0" gridGap_tablet="15px">
+                            <Div gridColumn_tablet="1 / 7">
+                                <Input
+                                    data-cy="email"
+                                    border="1px solid hsl(0,0%,80%)"
+                                    bgColor={Colors.white}
+                                    type="email" className="form-control" placeholder={yml.left.form_section.email}
+                                    errorMsg="Please specify a valid email"
+                                    required
+                                    onChange={(value, valid) => {
+                                        setVal({...formData, email: {value, valid}})
+                                        if (formStatus.status === "error") {
+                                            setFormStatus({status: "idle", msg: "Resquest"})
+                                        }
+                                    }}
+                                    value={formData.email.value}
+                                />
+                            </Div>
+                            <Div gridColumn_tablet="7 / 13">
+                                <Input
+                                    data-cy="phone"
+                                    border="1px solid hsl(0,0%,80%)"
+                                    bgColor={Colors.white}
+                                    type="phone" className="form-control" placeholder={yml.left.form_section.phone}
+                                    errorMsg="Please specify a valid phone number"
+                                    required
+                                    onChange={(value, valid) => {
+                                        setVal({...formData, phone: {value, valid}})
+                                        if (formStatus.status === "error") {
+                                            setFormStatus({status: "idle", msg: "Resquest"})
+                                        }
+                                    }}
+                                    value={formData.phone.value}
+                                />
+                            </Div>
+                        </Grid>
+                        <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
+                            <SelectRaw
+                                bgColor={Colors.white}
+                                options={programs}
+                                value={formData.course.value}
+                                placeholder={yml.left.course_title.open}
+                                onChange={(value, valid) => setVal({...formData, course: {value, valid}})}
+                            />
+                        </Div>
+                        {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
+                        <Div margin_tablet="0 0 23px 0">
+                            <SelectRaw
+                                bgColor={Colors.black}
+                                options={locations && locations}
+                                value={formData.location.value}
+                                placeholder={yml.locations_title}
+                                onChange={(value, valid) => {
+                                    setVal({...formData, location: {value, valid}})
+                                }}
+                            />
+                        </Div>
+                        <Input border="1px solid hsl(0,0%,80%)" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
+                            value={formData.referral_key.value}
+                            onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
+                        />
+                        {session && session.location && location.gdpr_compliant &&
+                            <Div>
+                                <Paragraph fontSize="14px" margin="5px 0 0 0">
+                                    <input
+                                        type="checkbox"
+                                        checked={formData.consent.valid}
+                                        onChange={() => setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})} />
+                                    {privacy.consent.message}
+                                    <a target="_blank" rel="noopener noreferrer" className="decorated" href={privacy.consent.url}>{privacy.consent.link_label}</a>
+                                </Paragraph>
+                            </Div>
+                        }
+                        <Div justifyContent="end">
+                            {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
+                            <Button
+                                variant="full"
+                                type="submit"
+                                transform="translateY(-15px)" color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue} textColor={Colors.white}
+                                margin="2rem 0" padding=".45rem 3rem"
+                                disabled={formStatus.status === "loading" ? true : false}
+                            >{formStatus.status === "loading" ? "Loading..." : yml.left.button.button_text}</Button>
+                        </Div>
+                    </form>
+                </Div>
+
+                <Div gridColumn_tablet="8 / 13" gridRow_tablet="1 / 1" background={Colors.lightGray} padding="46px 40px" flexDirection="column" borderRadius="3px">
+                    <H3 textAlign="left" textTransform="capitalize">{yml.right.heading}</H3>
+                    {yml.right.content_section.map((m, i) => {
+                        return (
+
+                            <Paragraph
+                                textAlign="left"
+                                margin="20px 0"
+                                key={i}
+                                fontSize="15px"
+                                lineHeight="19px"
+                                fontWeight="400"
+
+                            >{m}
+                            </Paragraph>
+                        )
+                    })}
+                </Div>
+            </GridContainer>
+            {/* <GridContainer columns_tablet="12" padding="99px  17px 80px 17px" padding_tablet="0" margin_tablet="0 0 81px 0">
+        <Div ref={joinPartnersRef} gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
+          <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
+        </Div>
+        <Div gridColumn_tablet="1 / 7" gridRow_tablet="2 / 2" flexDirection="column" >
+          {yml.form.paragraph.split("\n").map((m, i) =>
+            <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+          )}
+        </Div>
+        <Div justifyContent="center" gridColumn_tablet="8 / 13" gridRow_tablet="2 / 2" margin="0 0 81px 0">
+          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} />
+        </Div>
+
+      </GridContainer> */}
+        </>
+    )
+};
+export const query = graphql`
+  query ApplyQuery($file_name: String!, $lang: String!) {
+    privacy: allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
+        edges{
+              node{
+                  fields{
+                      lang
+                  }
+                  consent{
+                      message
+                      link_label
+                      url
+                  }
+              }
+          }
+      }
+    allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+      edges{
+        node{
+            seo_title
+          header{
+              title
+              paragraph
+              image_alt
+              button
+              
+              
+          }
+            meta_info{
+                title
+                description
+                image
+                keywords
             }
-        }}>
-            <Wrapper
+            left {
+                heading
+                locations_title
+                course_title{
+                    open
+                    close
+                }
+                button {
+                  button_text
+                  button_link
+                }
+                form_section {
+                    first_name
+                    last_name
+                    email
+                    phone
+                }
+                referral_section {
+                  placeholder
+                  content
+                }
+              }
+            right{
+                heading
+                content_section
+            }
+            testimonial_header{
+                heading
+                sub_heading
+            }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+        edges {
+          node {
+            testimonials {
+              student_name
+              testimonial_date
+              hidden
+              linkedin_url
+              linkedin_text
+              student_thumb{
+                childImageSharp {
+                    gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 200
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                #   fluid(maxWidth: 200){
+                #     ...GatsbyImageSharpFluid_withWebp
+                #   }
+                #   fixed(width: 200, height: 200) {
+                #     ...GatsbyImageSharpFixed
+                #   }
+                }
+              }
+              content
+              source_url
+              source_url_text
+            }
+          }
+        }
+    }
+    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
+        edges {
+          node {
+            programs{
+                text
+                link
+                bc_slug
+                location_bc_slug
+                schedule
+            }
+          }
+        }
+    }
+  }
+`;
+export default BaseRender(Apply);
+
+
+{/* <Wrapper
                 github={`/page/apply.${pageContext.lang}.yml`}
             >
                 <Title
@@ -154,6 +461,7 @@ const Apply = (props) => {
                                 <Row display="flex">
                                     <Column size="6" size_sm="12" paddingRight="10px" p_sm="0"  paddingLeft="0">
                                         <Input
+                                            data-cy="first_name"
                                             type="text" className="form-control" placeholder={yml.left.form_section.first_name}
                                             errorMsg="Please specify a valid first name"
                                             required
@@ -167,7 +475,9 @@ const Apply = (props) => {
                                         />
                                     </Column>
                                     <Column size="6" size_sm="12" paddingRight="0"  paddingLeft="0">
-                                        <Input type="text" className="form-control" placeholder={yml.left.form_section.last_name}
+                                        <Input
+                                            data-cy="last_name" 
+                                            type="text" className="form-control" placeholder={yml.left.form_section.last_name}
                                             errorMsg="Please specify a valid last name"
                                             required
                                             onChange={(value, valid) => {
@@ -181,7 +491,9 @@ const Apply = (props) => {
                                     </Column>
                                 </Row>
                                 <Row display="flex" height="50px">
-                                    <Input type="email" className="form-control" placeholder={yml.left.form_section.email}
+                                    <Input 
+                                        data-cy="email"
+                                        type="email" className="form-control" placeholder={yml.left.form_section.email}
                                         errorMsg="Please specify a valid email"
                                         required
                                         onChange={(value, valid) => {
@@ -195,6 +507,7 @@ const Apply = (props) => {
                                 </Row>
                                 <Row display="flex" height="50px">
                                     <Input
+                                        data-cy="phone"
                                         type="phone" className="form-control" placeholder={yml.left.form_section.phone}
                                         errorMsg="Please specify a valid phone number"
                                         required
@@ -207,7 +520,9 @@ const Apply = (props) => {
                                         value={formData.phone.value}
                                     />
                                 </Row>
-                                <Row display="flex" height="50px">
+                                <Row 
+                                data-cy="dropdown_program_selector"
+                                display="flex" height="50px">
                                     {console.log("default", formData.course.value)}
                                     <SelectRaw 
                                         options={programs}
@@ -256,7 +571,8 @@ const Apply = (props) => {
                                 }
                                 <Row display="flex">
                                     {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
-                                    <Button type="submit"
+                                    <Button 
+                                        type="submit"
                                         width="150px"
                                         transform="translateY(-15px)" color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue} textColor={Colors.white}
                                         margin="2rem 0" padding=".45rem 3rem"
@@ -278,109 +594,4 @@ const Apply = (props) => {
                 />
                 <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
             </Wrapper>
-            <Divider height="100px" />
-        </form>
-    )
-};
-export const query = graphql`
-  query ApplyQuery($file_name: String!, $lang: String!) {
-    privacy: allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
-        edges{
-              node{
-                  fields{
-                      lang
-                  }
-                  consent{
-                      message
-                      link_label
-                      url
-                  }
-              }
-          }
-      }
-    allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
-            tagline
-            sub_heading
-            meta_info{
-                title
-                description
-                image
-                keywords
-            }
-            left {
-                heading
-                locations_title
-                course_title{
-                    open
-                    close
-                }
-                button {
-                  button_text
-                  button_link
-                }
-                form_section {
-                    first_name
-                    last_name
-                    email
-                    phone
-                }
-                referral_section {
-                  placeholder
-                  content
-                }
-              }
-            right{
-                heading
-                content_section
-            }
-            testimonial_header{
-                heading
-                sub_heading
-            }
-        }
-      }
-    }
-    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
-        edges {
-          node {
-            testimonials {
-              student_name
-              testimonial_date
-              hidden
-              linkedin_url
-              linkedin_text
-              student_thumb{
-                childImageSharp {
-                  fluid(maxWidth: 200){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                  fixed(width: 200, height: 200) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-              }
-              content
-              source_url
-              source_url_text
-            }
-          }
-        }
-    }
-    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
-        edges {
-          node {
-            programs{
-                text
-                link
-                bc_slug
-                location_bc_slug
-                schedule
-            }
-          }
-        }
-    }
-  }
-`;
-export default BaseRender(Apply);
+            <Divider height="100px" /> */}

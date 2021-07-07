@@ -1,0 +1,50 @@
+meta_info:
+  slug: prensa
+  title: ""
+  description: null
+  image: null
+  keywords: ""
+  redirects: []
+
+seo_title: "Prensa"
+header:
+  title: "Prensa"
+  paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que trabajamos más duro cada vez para mejorar.."
+  image: "../../../static/images/outcomes/outcomes.png"
+
+content:
+  heading: "Lea sobre este bootcamp de codificación en las noticias..."
+  limit: 4
+  news:
+    - name: "Newsweek"
+      logo: "../../../static/images/news/newsweek.png"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
+      title: "A Coding Career and You  - Top Coding Schools 2017"
+      text: "Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel."
+      textUrl: "Leer Artículo"
+      url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
+    - name: "CNN Español"
+      logo: "../../../static/images/news/cnn-chile.png"
+      location: ["santiago-chile", "online", "downtown-miami"]
+      image: "../../../static/images/news/4GA-CNN-Chile.png"
+      title: "Entrevista / 4Geeks Academy en CNN Chile"
+      text: "Gracias a nuestros amigos de CNN Chile por haber estado presentes en nuestro evento y publicar tan buen material sobre el futuro en educación que ofrecemos a la comunidad de Santiago a través de nuestro programa de #Bootcamp de #Programación."
+      textUrl: "Ver Entrevista"
+      url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
+    - name: "NBC"
+      logo: "../../../static/images/news/nbc.png"
+      location: ["downtown-miami"]
+      image: "../../../static/images/news/4GA-NBC-student-autism.png"
+      title: "Student With Autism Learns to Code"
+      text: "Victor Fitchhorn, que tiene autismo, está aprendiendo a codificar en 4Geeks Academy, un campo de entrenamiento de codificación con sede en Miami. Ari Odzer de NBC 6 informa."
+      textUrl: "Ver Video"
+      url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
+    - name: "La Razón"
+      logo: "../../../static/images/news/larazon.png"
+      location: ["madrid-spain"]
+      image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
+      title: "Movimiento solidario para enseñar programación"
+      text: "Durante la crisis de COVID-19, una de las peores de los ultimos años, decidimos aumentar nuestros programas de becas en españa exponencialmente, logrando becar a más de 60 alumnos durante el año mas difícil de la pandemia; Recibiendo el reconocimiento de la prensa local."
+      textUrl: "Ver Entrevista"
+      url: "https://www.elespanol.com/invertia/disruptores-innovadores/innovadores/20200317/movimiento-solidario-ensenar-programacion-crisis-covid-19/475454655_0.html"

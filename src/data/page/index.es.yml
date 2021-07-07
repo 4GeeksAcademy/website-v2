@@ -4,13 +4,13 @@ meta_info:
   description: "El #1 part-time coding bootcamp, 1000+ graduados y soporte de por vida. Coding Bootcamp en Miami, España, Chile y Venezuela."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp, Coding Bootcamp Miami, Coding Bootcamp España, Coding Bootcamp Chile, Aprende a programar, aprender programación, aprende computación"
-  redirects: ["/home", "/es/home", /inicio", "/es/"]
+  redirects: ["/es/home", /es/inicio", "/es/"]
 
 header_data:
   tagline: Coding Bootcamp
-  title: IMPULSA TU CARRERA GRACIAS A LA PROGRAMACIÓN
-  sub_heading: Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo.
-  image: "../../../static/images/bg/main-bg.jpg"
+  title: "Impulsa tu carrera gracias a la programación"
+  sub_heading: "Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo."
+  image: "../../../static/images/bg/main-home-bg.png"
 
 why_4geeks:
   heading: Por qué 4Geeks
@@ -19,12 +19,23 @@ why_4geeks:
 news:
   heading: "Lee sobre nosotros en las noticias..."
   limit: 4
+button:
+  button_text: Ver Programas
+  button_link: "#programs"
+## BADGES SECTION
+badges:
+  paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
+
+## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
+choose_program:
+  title: Elige tu programa
+  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "¿QUÉ HACE QUE ESTE PROGRAMA DESTAQUE?"
+  heading: "¿Qué have que este programa destaque?"
   sub_heading: "En pocas palabras, la forma más simple de comparar coding bootcamps"
-  sub_heading_link: ""
+  sub_heading_link: "geeks-vs-others"
 
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:

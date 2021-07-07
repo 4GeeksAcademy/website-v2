@@ -4,10 +4,14 @@ import {Title, H2, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
 import PricesAndPayment from '../components/PricesAndPayment';
 import WhoIsHiring from '../components/WhoIsHiring';
-import Img from "gatsby-image"
 import BaseRender from './_baseLayout';
 import {openGuidebook} from "../actions";
 import {SessionContext} from '../session.js'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+// new_components
+// import PricesAndPayment from '../new_components/PricesAndPayment';
+import { Header } from '../new_components/Sections'
 
 const Pricing = (props) => {
   const {session} = React.useContext(SessionContext);
@@ -21,16 +25,15 @@ const Pricing = (props) => {
     location = data.allLocationYaml.edges.find(l => l.node.active_campaign_location_slug === session.location.active_campaign_location_slug)
     if (location) location = location.node;
   }
-
   return (
     <>
       {/* HEADER SECTION */}
       <WrapperImage
-        imageData={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
+        imageData={yml.header.image && yml.header.image.childImageSharp.gatsbyImageData}
         className={`img-header`}
         height={`500px`}
         bgSize={`cover`}
-        alt={yml.header_data.alt}
+        alt={yml.header.alt}
         paddingRight={`0`}
         customBorderRadius="0 0 0 1.25rem"
         margin="0 0 50px 0"
@@ -40,8 +43,8 @@ const Pricing = (props) => {
           type="h1"
           size="5"
           color={Colors.white}
-          title={yml.header_data.tagline}
-          paragraph={yml.header_data.sub_heading}
+          title={yml.header.tagline}
+          paragraph={yml.header.sub_heading}
           variant="main"
           paragraphColor={Colors.white}
           fontSize="46px"
@@ -52,8 +55,9 @@ const Pricing = (props) => {
       <Wrapper>
         <Row m_sm="0px 0px 100px 0" display="flex">
           <Column size="5" size_sm="12" height="300px" align_sm="center">
-            <Img
-              fixed={yml.intro.image.childImageSharp.fixed}
+            <GatsbyImage
+              // fixed={yml.intro.image.childImageSharp.gatsbyImageData}
+              image={getImage(yml.intro.image.childImageSharp.gatsbyImageData)}
               objectFit="cover"
               objectPosition="50% 50%"
               margin="auto"
@@ -76,7 +80,7 @@ const Pricing = (props) => {
             <StyledBackgroundSection
               className={`image`}
               height={`250px`}
-              image={yml.intro.image_second.childImageSharp.fluid}
+              image={yml.intro.image_second.childImageSharp.gatsbyImageData}
               bgSize={`cover`}
               backgroundColor={Colors.lightGray}
               alt="4Geeks Academy"
@@ -107,7 +111,7 @@ const Pricing = (props) => {
           locations={data.allLocationYaml.edges}
         />
       </Wrapper >
-      { location && location.documents && location.documents.payment_guidebook && location.documents.payment_guidebook.url && location.documents.payment_guidebook.url != "" &&
+      {/* { location && location.documents && location.documents.payment_guidebook && location.documents.payment_guidebook.url && location.documents.payment_guidebook.url != "" &&
         <Wrapper margin="50px 0px">
           <Title
             size="10"
@@ -121,15 +125,15 @@ const Pricing = (props) => {
             <Button outline position="relative" width="300px" onClick={() => openGuidebook(location.documents.payment_guidebook.url)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
           </Row>
         </Wrapper>
-      }
+      } */}
       <Wrapper right margin="50px 0px"
         background={Colors.lightGray}
         border="top"
       >
         <Title
           size="10"
-          title={yml.ecosystem.heading}
-          paragraph={yml.ecosystem.sub_heading}
+          title={yml.ecosystem?.heading}
+          paragraph={yml.ecosystem?.sub_heading}
           paragraphColor="black"
           variant="primary"
         />
@@ -146,6 +150,7 @@ const Pricing = (props) => {
     </ >
   )
 };
+// REMOED: payment_guide{ ... }
 export const query = graphql`
   query PricingQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
@@ -157,31 +162,55 @@ export const query = graphql`
                 image
                 keywords
             }
-            header_data{
+            seo_title
+            header{
+                title
+                paragraph
                 tagline
                 image{
                   childImageSharp {
-                    fluid(maxWidth: 1600, quality: 100){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 1600
+                      quality: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 1600, quality: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
                 alt
                 sub_heading
             }
+            ecosystem {
+              heading
+              sub_heading
+            }
             intro{
                 image {
                   childImageSharp {
-                    fixed(width: 300, height: 300) {
-                      ...GatsbyImageSharpFixed
-                    }
+                    gatsbyImageData(
+                      layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 300
+                      height: 300
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fixed(width: 300, height: 300) {
+                    #   ...GatsbyImageSharpFixed
+                    # }
                   }
                 }
                 image_second {
                   childImageSharp {
-                    fluid(maxWidth: 450){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 450
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 450){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
                 content
@@ -190,24 +219,29 @@ export const query = graphql`
                 bullets
                 heading
             }
+            label{
+                program{
+                  title
+                  closedLabel
+                }
+                modality{
+                  title
+                  closedLabel
+                }
+                campus{
+                  title
+                  closedLabel
+                }
+            }
+            syllabus_button_text
             prices{
                 heading
                 paragraph
                 opened_label
                 closed_label
             }
-            payment_guide{
-                heading
-                sub_heading
-                button_text
-                button_link
-                submit_button_text
-                submit_button_link
-            }
-            ecosystem{
-                heading
-                sub_heading
-            }
+
+
         }
       }
     }
@@ -250,106 +284,170 @@ export const query = graphql`
               alt
               image {
                 childImageSharp {
-                  fluid(maxWidth: 1200, quality: 100){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1200
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 1200, quality: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               } 
             }
             prices {
-              full_time {
-                center_section {
-                  button {
-                    button_text
+              full_stack {
+                full_time {
+                  slug
+                  center_section {
+                    button {
+                      button_text
+                    }
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
+                    plans {
+                      months
+                      monthsInfo
+                      payment
+                      paymentInfo
+                      provider
+                      logo
+                      message
+                    }
                   }
-                  header {
-                    sub_heading
-                    heading_one
-                    heading_two
+                  left_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      heading_two
+                      sub_heading
+                    }
                   }
-                  plans {
-                    months
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
+                  right_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
                   }
                 }
-                left_section {
-                  button {
-                    button_text
+                part_time {
+                  slug
+                  center_section {
+                    button {
+                      button_text
+                    }
+                    header {
+                      heading_two
+                      sub_heading
+                      heading_one
+                    }
+                    plans {
+                      months
+                      monthsInfo
+                      payment
+                      paymentInfo
+                      provider
+                      logo
+                      message
+                    }
                   }
-                  content {
-                    price
-                    price_info
+                  left_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
                   }
-                  header {
-                    heading_one
-                    heading_two
-                    sub_heading
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    sub_heading
-                    heading_one
-                    heading_two
+                  right_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
                   }
                 }
               }
-              part_time {
-                center_section {
-                  button {
-                    button_text
+              software_engineering {
+                part_time {
+                  slug
+                  center_section {
+                    button {
+                      button_text
+                    }
+                    header {
+                      heading_two
+                      sub_heading
+                      heading_one
+                    }
+                    plans {
+                      months
+                      monthsInfo
+                      payment
+                      paymentInfo
+                      provider
+                      logo
+                      message
+                    }
                   }
-                  header {
-                    heading_two
-                    sub_heading
-                    heading_one
+                  left_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
                   }
-                  plans {
-                    months
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                }
-                left_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
+                  right_section {
+                    button {
+                      button_text
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    header {
+                      heading_one
+                      sub_heading
+                      heading_two
+                    }
                   }
                 }
               }
@@ -370,9 +468,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
@@ -385,9 +488,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
@@ -400,9 +508,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured
@@ -415,9 +528,14 @@ export const query = graphql`
                   name
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 200){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 200
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 200){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   }
                   featured

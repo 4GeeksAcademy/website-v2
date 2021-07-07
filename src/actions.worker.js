@@ -1,4 +1,5 @@
-import { defaultSession, locByLanguage } from "./actions"
+import {defaultSession, locByLanguage} from "./actions"
+const pathDictionary = require("./utils/pathDictionary.json")
 
 const GOOGLE_KEY = "AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c"
 
@@ -68,9 +69,9 @@ const getClosestLoc = (locations, lat, lon) => {
     let tempLocation = 0;
     let location = null;
     for (var i = 0; i < locations.length; i++) {
-        
+
         // ignore unlisted locations on the ymls
-        if(locations[i].meta_info.unlisted === true) continue;
+        if (locations[i].meta_info.unlisted === true) continue;
 
         tempLocation = distance(locations[i].latitude, locations[i].longitude, lat, lon)
         if (tempLocation <= lowerDistance) {
@@ -81,19 +82,26 @@ const getClosestLoc = (locations, lat, lon) => {
     return location;
 }
 
-export const initSession = async (locationsArray, storedSession, seed={}) => {
+export const initSession = async (locationsArray, storedSession, seed = {}) => {
     var v4 = null;
     var latitude = null;
     var longitude = null;
-    let { location, language, navigator, ...utm } = seed;
+    var langDestination = null;
+    var pathsDictionary = {
+        ...pathDictionary,
+    }
+    // session.pathDictionary[`${window.location?.pathname}`]
+    // langDestination = pathsDictionary
+    // const params = new URLSearchParams(window.location.pathname);
 
+    let {location, language, navigator, ...utm} = seed;
     const browserLang = getFirstBrowserLanguage(navigator);
-    if(!language){
-        if(storedSession) language = storedSession.language;
+    if (!language) {
+        if (storedSession) language = storedSession.language;
         else language = browserLang.substring(0, 2);
     }
-    if(language != "es") language = "us";
-    
+    if (language != "es") language = "us";
+
     //cleanup the locations array and add all the data I need for locations
     let languageToFilter = language || "us";
     const locations = locByLanguage(locationsArray, languageToFilter);
@@ -101,20 +109,20 @@ export const initSession = async (locationsArray, storedSession, seed={}) => {
     // remove undefineds from the seed utm's to avoid overriding the originals with undefined
     Object.keys(utm).forEach(key => utm[key] === undefined && delete utm[key])
 
-    if(location){
+    if (location) {
         location = locations.find(l => l.breathecode_location_slug === location)
-        if(!location) location = null;
+        if (!location) location = null;
         console.log("Hardcoded location", location)
-    } 
-    else if(storedSession && storedSession.location != null){
+    }
+    else if (storedSession && storedSession.location != null) {
         location = locations.find(l => l.breathecode_location_slug === storedSession.location.breathecode_location_slug);
         latitude = location.latitude;
         longitude = location.longitude;
-    } 
-    
-    if(location === null){
+    }
+
+    if (location === null) {
         console.log("Calculating nearest location because it was null...")
-        try{
+        try {
             const response = await fetch(`https://www.googleapis.com/geolocation/v1/geolocate?key=${GOOGLE_KEY}`, {
                 headers: {
                     'Content-Type': 'application/json'
@@ -122,42 +130,42 @@ export const initSession = async (locationsArray, storedSession, seed={}) => {
                 method: 'POST'
             });
             let data = await response.json() || null;
-            if(data && data.location){
+            if (data && data.location) {
                 latitude = data.location.lat;
                 longitude = data.location.lng;
                 location = getClosestLoc(locations, data.location.lat, data.location.lng)
-            }else throw Error("Error when connecting to Google Geolocation API")
-        }catch(e){
+            } else throw Error("Error when connecting to Google Geolocation API")
+        } catch (e) {
             console.log("Error retrieving IP information: ", e)
         }
     }
-    
+
     // get the language
-    if (location){
+    if (location) {
         location.reliable = true;
-    } 
+    }
     else {
         location = locations.find(l => l.breathecode_location_slug == "downtown-miami");
         console.log("Location could not be loaded, using miami as default location", location);
-        if(location){
+        if (location) {
             location.reliable = false;
-        } 
+        }
     }
-    
-    if(!language) language = location.defaultLanguage;
+
+    if (!language) language = location.defaultLanguage;
     const _session = {
         ...defaultSession,
-        ...storedSession, v4, location, browserLang, language, latitude, longitude,
-        
+        ...storedSession, v4, location, browserLang, language, latitude, longitude, pathsDictionary,
+
         // marketing utm info
-        utm: { ...storedSession.utm, ...utm },
+        utm: {...storedSession.utm, ...utm},
 
         locations: locations.filter(l => {
             // filter inlisted locations
-            if(l.meta_info.unlisted) return false;
+            if (l.meta_info.unlisted) return false;
             return true;
         })
-        .sort((a,b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
+            .sort((a, b) => a.meta_info.position > b.meta_info.position ? 1 : -1)
     };
     return _session
 

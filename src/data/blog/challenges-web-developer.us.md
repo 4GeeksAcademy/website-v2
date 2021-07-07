@@ -7,12 +7,12 @@ layout: post
 link: https://www.4geeksacademy.co/challenges-web-developer/
 slug: challenges-web-developer
 title: The Challenges of a Web Developer, Living and working as a developer
-avatar: "/images/staff/alejandro.png"
 image: null
+image_alt: ""
 wordpress_id: 315
 categories:
 - Learning to code
-
+cluster: "full-stack-developer"
 tags:
 - career path
 - challenges of a web developer

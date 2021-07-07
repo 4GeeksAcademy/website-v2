@@ -9,39 +9,65 @@ meta_info:
   redirects: ["/us/machine-learning"]
 
 header:
-  tagline_top: "BECOME A"
-  tagline: "MACHINE LEARNING ENGINEER"
-  sub_heading: "Become one of the highest paid professionals in the world"
-  subsub_heading: "(some math, coding or statistical experience is required)"
-
-  # The background image position can be controled by device size
-  # devices:        imac         laptop     ipad        phone     small phone
-  image_position: ["0px -100px", "0px -50px", "0px -20px", "0px 0px", "0px 0px"]
+  title: "Become a Machine Learning Engineer"
+  paragraph: "Become one of the highest paid professionals in the world"
   image: "../../../static/images/bg/circles.jpg"
-
-  alt: ""
-
-description:
-  heading: "About this course"
-  sub_heading: "Prepare yourself for the Age of A.I."
-  content: >
-    Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
-    Practice with real-life business scenarios typical in business and review some of the tools used in the industry. \n
-    Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+  image_alt: ""
 
 button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
-  apply_button_link: "/apply"
+  apply_button_link: "/us/apply"
+
+course_instructors: 
+  header:
+    title: "Meet our instructors"
+    paragraph: ""
+
+  instructors:
+    # - name: "Roldolfo Campos"
+    #   sub_title: "Co fundador de 4geeks y director de educación"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+    # - name: "Gabriel Salinas"
+    #   sub_title: "Sophisticated Software Systems Engineer"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware"
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+badges:
+  paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"  
+
 ## PROGRAM DETAILS
 details:
+  about:
+      title: "About this course"
+      sub_title: "Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
+      Practice with real-life business scenarios typical in business and review some of the tools used in the industry. 
+      Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics."
+      list:
+        - label: "Duration"
+          content:  "15 Weeks"
+        - label: "Classes"
+          content: "3 classes weekly"
+        - label: "Certificate"
+          content: ""
+        - label: "Requisites"
+          content: "Have a background in math, data, statistics or programming"
   heading: Machine Learning Engineering Syllabus
   weeks: 15
   weeks_label: "weeks"
   facts:
     - label: "Duration"
-      value: "18 weeks"
+      value: "15 weeks"
     - label: "Classes"
       value: "20 hrs (Mon - Wed - Fri)"
     - label: "Certificate"
@@ -90,8 +116,8 @@ details:
       step: 2.9
     - module_name: "LIFELONG"
       title: "Lifelong Support"
-      description: "Keep practicing with the academy's help - we will be coaching you for life, help build your Resume, Github, LinkedIn.  We will help you apply for jobs and continue to support you once you find a job in A.I."
-      projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer.  Enjoy and build software for life."
+      description: "Keep practicing with the academy's help - we will be coaching you for life. We will help you apply for jobs and continue to support you once you find a job in A.I."
+      projects: "Get paid to keep learning and raise your income gradually as you become a Machine Learning Engineer. Lead a successful career in AI and Machine Learning development, management, and leadership."
       slug: "lifelong-learning"
       duration: "forever"
       step: 0.1
@@ -110,7 +136,7 @@ syllabus:
 
 potential_companies:
   tagline: "Get trained to thrive at major companies"
-  sub_heading: "Get ready to apply to the best companies in the world: the next level in your career as Software Engineer"
+  sub_heading: "Get ready to apply to the best companies in the world: Develop the tools to upskill for the future of AI work."
   companies:
     - name: "Facebook"
       image: "../../../static/images/partner/facebook.png"
@@ -152,8 +178,7 @@ geek_data:
   geek_force:
     - Helping you land a job in a 500 Fortune company.
     - Profile, portfolio, interviews, workshops, talks, software community, network, active projects collaboration.
-    - It’s about getting your career to the next level.
-    
+    - It's about getting your career to the next level.
 
 ## PRICES AND PAYMENTS SECTION
 prices:

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     "alesanchezr": {
         "bio": "Software Developer and Coding teacher with 20 years of experience.",
         "name": "Alejandro Sanchez",
@@ -11,7 +11,7 @@ export default {
         "avatar": "/images/staff/marcelo.png",
         "username": "MRiciglianoC"
     },
-    "Jimena_y_yo": {
+    "jimena_y_yo": {
         "bio": "Mentor Leader en @4geeksacademyes",
         "name": "Jimena Escobar",
         "avatar": "/images/staff/jimena.jpg",
@@ -40,5 +40,13 @@ export default {
         "name": "Giovanna Anzola",
         "avatar": "/images/staff/giovanna.jpg",
         "username": "anzolagi"
+    },
+
+    // Added in data to avoid test conflict
+    "vsegnini": {
+        "bio": "",
+        "name": "",
+        "avatar": "",
+        "username": ""
     },
 }

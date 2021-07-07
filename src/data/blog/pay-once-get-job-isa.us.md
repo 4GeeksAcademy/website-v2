@@ -8,12 +8,12 @@ layout: post
 link: https://www.4geeksacademy.co/pay-once-get-job-isa/
 slug: pay-once-get-job-isa
 title: Pay once you get a Job
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/04/ISA-Blog-Cover.png"
+image_alt: ""
 wordpress_id: 3519
 categories:
 - Sin categoría
-
+cluster: "coding-bootcamps"
 tags:
 - 4geeks
 - coding

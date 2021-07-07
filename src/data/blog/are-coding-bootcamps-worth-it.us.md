@@ -4,14 +4,14 @@ comments: true
 date: 2021-04-09 05:29:14 +0000
 excerpt: Short analysis about leads and interviews to know if coding bootcamps are worth it
 layout: post
-slug: are-coding-bootcamps-worth-it
+slug: are-coding-bootcamp-worth-it
 title: Are Coding Bootcamps worth it? My take after interviewing more than +3000 leads
-avatar: /images/staff/marcelo.jpeg
 image: https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/coding-in-bootcamp.jpg?raw=true
 image_alt: "students learning code in a bootcamp"
 
 categories:
 - coding bootcamps
+cluster: "coding-bootcamps"
 lang: us
 status: "published" # PUBLISHED, DRAFT, UNASSIGNED
 featured: true

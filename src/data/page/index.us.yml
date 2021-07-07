@@ -5,16 +5,27 @@ meta_info:
   description: "The #1 Top coding bootcamp with over 1,000 graduates and life-long career support. USA, Spain, Chile, Venezuela and Costa Rica Coding Bootcamp."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp Miami, Learn to code miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa"
-  redirects: ["/home", "/us/home"]
+  redirects: ["/home", "/us/home", "/us/index"]
 header_data:
   tagline: Coding Bootcamp
-  title: EMPOWER YOUR LIFE WITH CODING SKILLS
+  title: Empower Your Life With Coding Skills
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
-  image: "../../../static/images/bg/main-bg.jpg"
+  image: "../../../static/images/bg/main-home-bg.png"
 
 news:
   heading: "Read about this coding bootcamp in the news..."
   limit: 4
+button:
+  button_text: See Programs
+  button_link: "#programs"
+## BADGES SECTION /new_components/Badges
+badges:
+  paragraph: "This is the place to boost your career by learning to code. We are very proud of our programs and methodology to train developers in just a few months and help them boost their professional careers."
+
+## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
+choose_program:
+  title: Choose your program
+  paragraph: Follow the path towards a life-changing experience. Become the developer that builds the next culture-shifting web app.
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
@@ -43,14 +54,15 @@ join_geeks:
 ## LOCATIONS SECTION
 locations:
   heading: "OUR LOCATIONS"
-  sub_heading: "We have carefully chosen our Locations and Campus. We are bringing you an experience that you will never forget"
+  sub_heading: "We have carefully chosen our Locations and Campuses. We are bringing you an experience that you will never forget."
 
 ## ALUMNI SECTION
 alumni_header:
-  heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Projects and experiences from our graduates and alumni. People that decided to boost their careers with coding at 4Geeks."
+  heading: "MEET OUR ALUMNI AND THEIR PROJECTS"
+  sub_heading: "Get to know our graduates and some of the projects they built during the program."
 
 ## TESTIMONIAL SECTION
 testimonial_header:
-  heading: "TESTIMONIALS"
-  sub_heading: ""
+  heading: "86% get hired in tech jobs after graduation."
+  button_text: "See all testimonials"
+  button_link: ""

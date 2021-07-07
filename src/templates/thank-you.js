@@ -39,7 +39,7 @@ const ThankYou = (props) => {
       <WrapperImage
         margin="50px 0 0 0"
         height="250px"
-        imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
+        imageData={yml.banner.image && yml.banner.image.childImageSharp.gatsbyImageData}
         border="bottom"
         bgSize="cover"
         paddingRight={`0`}
@@ -84,7 +84,7 @@ const ThankYou = (props) => {
                 </label>
                 {checkStatus[index].status &&
                   <Anchor to={`${item.social_link}`}>
-                    <Button style={{position: "absolute", right: "0", top: "0"}} width="200px" color={Colors.blue} textColor={Colors.white}>
+                    <Button variant="full" style={{position: "absolute", right: "0", top: "0"}} width="200px" color={Colors.blue} textColor={Colors.white}>
                       {`${yml.social.button_text} ${item.social_name}`}
                     </Button>
                   </Anchor>
@@ -94,7 +94,7 @@ const ThankYou = (props) => {
           )
         })}
         <Column margin="50px 0 0 0" size="12" align="center">
-          <Link to="/blog"><Button outline width="150px" color={Colors.blue} textColor={Colors.white}>{yml.content.button}</Button></Link>
+          <Link to="/blog"><Button variant="outline" width="150px" color={Colors.blue} textColor={Colors.white}>{yml.content.button}</Button></Link>
         </Column>
       </Wrapper>
 
@@ -117,9 +117,15 @@ export const query = graphql`
                 sub_heading
                 image{
                     childImageSharp {
-                      fluid(maxWidth: 1800, quality: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 1800
+                        quality: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 1800, quality: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
                     }
                   } 
             }

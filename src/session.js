@@ -27,6 +27,7 @@ export default ({children}) => {
                 breathecode_location_slug
                 active_campaign_location_slug
                 gdpr_compliant
+                in_person_available
                 meta_info{
                     slug
                     unlisted

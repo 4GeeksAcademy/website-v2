@@ -1,7 +1,7 @@
 
 header:
-  tagline: "¿QUE TIPO DE PROJECTOS CONSTRUIRÁS?"
-  sub_heading: "El último dia del cursos los alumnos presentan sus proyectos ante expertos de la industria y posibles hiring partners"
+  tagline: "¿QUÉ TIPO DE PROYECTOS CONSTRUIRÁS?"
+  sub_heading: "El último día del curso los alumnos presentarán sus proyectos ante expertos de la industria y posibles hiring partners"
 
 button_section:
   button_text: "VER MÁS PROYECTOS"
@@ -32,7 +32,7 @@ projects:
     hidden: false
     slug: "ims"
     project_image: "../../../../static/images/projects/ims.jpg"
-    project_content: "IMS is a Pharmacy Inventory and logistics tracking system built using Python, Javascript, React, and integration with Barcode Readers, SMS, the Twillio API, and GPS Tracking Systems. IMS holds stock quantities of all products stored and sold by the Drug Store and then tracks the vehicles that deliver those sells."
+    project_content: "IMS es un sistema de seguimiento de logística e inventario de farmacia construido con Python, Javascript, React y tiene una integración con lectores de códigos de barras, SMS, la API de Twillio y sistemas de seguimiento GPS. IMS mantiene la existencia de todos los productos almacenados y vendidos por la farmacia y luego rastrea los vehículos que entregan esas ventas.."
     project_video: "TTjSZ2Lud2E"
     live_link: "https://ims-frontend.vercel.app/react-hello-webapp/private/dashboard"
     github_repo: "https://github.com/sebastianpd1/IMS-FRONTEND"
@@ -45,13 +45,13 @@ projects:
         twitter: ""
       - first_name: "Sebastian"
         last_name: "Pinto"
-        job_title: "Pharmacy Owner"
+        job_title: "Dueño de Farmacia"
         github: "https://github.com/sebastianpd1"
         linkedin: ""
         twitter: ""
       - first_name: "Paola"
         last_name: "Castro"
-        job_title: "Fuel Industry"
+        job_title: "Industria Petrolera"
         github: "https://github.com/paocastrob"
         linkedin: ""
         twitter: ""
@@ -79,7 +79,7 @@ projects:
   - project_name: "WonderTracker"
     slug: "wondertracker"
     project_image: "../../../../static/images/projects/fernando-funez.jpg"
-    project_content: "A platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track places where you have been, and gather information that you thought was important to save for as long as you want - all in just one place."
+    project_content: "Una plataforma capaz de mantener la información y los documentos de viaje guardados en un sistema absolutamente seguro. También le permite realizar un seguimiento de los lugares en los que ha estado y recopilar información que consideró importante guardar durante el tiempo que desee, todo en un solo lugar."
     project_video: ""
     github_repo: "https://github.com/gmihov001/Wandertracker_front-end"
     live_link: "https://wandertrackerfront-end.gmihov001.now.sh"
@@ -92,14 +92,14 @@ projects:
         twitter: ""
       - first_name: "George"
         last_name: "Mihov"
-        job_title: "Web Developer and Mentor"
+        job_title: "Web Developer y Mentor"
         github: "https://github.com/gmihov001"
         linkedin: "https://www.linkedin.com/in/gmihov/"
         twitter: ""
   - project_name: "iWash"
     slug: "i-wash"
     project_image: "../../../../static/images/projects/i-wash.jpg"
-    project_content: "iWash is an application integrating hardware and software towards building a platform capable of setting and launching Smart Laundry machines from your mobile device.  You can pay the cost of the service as well as set time, speed, type of laundry process, and receive notifications about the status of your laundry."
+    project_content: "iWash es una aplicación que integra hardware y software para construir una plataforma capaz de configurar y lanzar máquinas Smart Laundry desde su dispositivo móvil. Puede pagar el costo del servicio, así como establecer el tiempo, la velocidad, el tipo de proceso de lavado y recibir notificaciones sobre el estado de su lavandería.."
     project_video: ""
     live_link: "https://iwash-react.herokuapp.com/"
     github_repo: "https://github.com/samirbenzada/Iwash"
@@ -119,9 +119,7 @@ projects:
   - project_name: "reMindful"
     slug: "re-mindful"
     project_image: "../../../../static/images/projects/re-mindful.jpg"
-    project_content: |
-      Este proyecto quiere generar mayor conciencia sobre el reciclaje, considerando todos los pasos que deben de ser cubiertos. 
-      Han creado una aplicación donde se integra software y hardware que permite pesar la cantidad del plástico, vidrio o basura dentro de un contenedor y cómo estos van a afectar al proceso del reciclaje y el medio ambiente.
+    project_content: "Este proyecto quiere generar mayor conciencia sobre el reciclaje, considerando todos los pasos que deben de ser cubiertos.Han creado una aplicación donde se integra software y hardware que permite pesar la cantidad del plástico, vidrio o basura dentro de un contenedor y cómo estos van a afectar al proceso del reciclaje y el medio ambiente."
     project_video: "cKcZD0_1IKk"
     github_repo: "https://github.com/gabsssrod/ReduceReuseRecycle-frontEnd"
     live_link: "https://re-mindful.vercel.app/"

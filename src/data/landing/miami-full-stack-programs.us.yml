@@ -6,12 +6,10 @@ meta_info:
   description: "Coding has become an essencial knowledge for every career, take coding classes and learn to code and have a better life."
   image: "/images/bg/main-bg.jpg"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
-  
+
   template: "landing_a" # <--- choose your landing template
-  redirects: [
-    "/landing/full-stack-programs"
-  ] 
-  
+  redirects: ["/landing/full-stack-programs"]
+
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: full-stack
@@ -23,7 +21,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Get a Partial Scholarship"
   motivation: "If you ENROLL before March 31st, 2021."
-  button_label: Get more information 
+  button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
@@ -58,7 +56,7 @@ follow_bar:
     text: "Call "
 
 #
-# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
 in_the_news:
@@ -100,51 +98,52 @@ alumni_projects:
 components:
   - name: first_syllabus_form
     position: 4
-    layout: syllabus 
-    button: 
+    layout: syllabus
+    button:
       text: "Instant Download"
-    heading: 
+    heading:
       text: "Download the course syllabus"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: passion
     position: 6
-    layout: two_column_right 
-    proportions: [6,6]
-    image: 
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamps"
+      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
     video: "SixRm6R8rc0"
-    heading: 
+    heading:
       text: "Our passion is your future"
-      font_size: ["40px","40px","40px","40px", "40px"]
-    content: 
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
       text: "Hear it from our graduates"
       font_size: ["16px"]
   - name: top_coding_bootcamp
     position: 4
-    layout: two_column_left 
-    proportions: [4,8]
-    image: 
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamps"
-    heading: 
-      text: "We have been named one of the TOP coding bootcamps in the World"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
+      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+    heading:
+      text:
+        "We have been named one of the TOP coding bootcamps in the World"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: working_as_software_developers
     position: 7
-    proportions: [4,8]
-    layout: two_column_left 
-    image: 
+    proportions: [4, 8]
+    layout: two_column_left
+    image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    content: 
-      text: "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","34px","34px","25px", "20px"]
-
+    content:
+      text:
+        "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

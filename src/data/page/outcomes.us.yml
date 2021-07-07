@@ -1,0 +1,148 @@
+## CAREERS - JOBS TEMPLATE
+## YOU CAN CHANGE THE MAIN HEADER AND THE MORE ABOUT 4GEEKS SECTION
+
+meta_info:
+  slug: outcomes
+  title: ""
+  description: null
+  image: null
+  keywords: ""
+  redirects: ["/us/outcomes"]
+
+seo_title: "Outcomes"
+header:
+  title: "4Geeks Academy Outcomes Report"
+  paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
+  image: ""
+  image_alt: ""
+sections:
+  - title: "Our Statement"
+    ref: "our_statement"
+    paragraph: "The Coding Bootcamp industry has been growing tremendously in the last few years. Big cities are gathering the majority of the numbers, and also new tech hubs (such as Miami) are rising
+    the occasion and growing to meet the challenge.
+
+    4Geeks Academy is Licensed by the Florida Department of Education; we also have a long lasting business relationship with Miami Dade College, and we have been awarded and
+    recognized many times for our Syllabus, methodologies and outcomes. 
+
+    Since 2017 we have been growing really fast. We have graduated over 700 students across 6 different campus and more than 15 on going programs.
+    "
+    stats: 
+      - stat: "+ 700"
+        content: "Graduates"
+      - stat: "2 Languages"
+        content: "Syllabus and Programs"
+      - stat: "5 Cities"
+        content: "Miami, Madrid, Santiago de Chile, Caracas and more to come"
+    sub_sections:
+      - title: ""
+        content: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better." 
+        image_section:
+          - image: 
+            image_paragraph: ""
+            
+  - title: "Student Facts"
+    ref: "student_facts"
+    paragraph: "Here are the results of 4GA operations (excluding programs launched together with Miami Dade College) from March 2018 to March 2020.
+
+    The programs included are the Full-Stack Software Development Program taught through Part-time and Full-Time methodologies.
+    "
+    stats: 
+      - stat: "210"
+        content: "Students considered for
+        the purpose of this Report"
+      - stat: "80%"
+        content: "Our students choose Part-time
+        Programs. Ony 20% pursue a
+        Full-Time program."
+    sub_sections:
+      - title: "PART - TIME"
+        content: "We were founded under a PT vision and we keep showing our main strength with Part- time Education; the new way of learning and achieving (upskill) a new career." 
+        image_section:
+          - image: 
+            image_paragraph: ""
+      - title: "Quantity of students"
+        content: "This report states the results for the last 24 months of operation in the US Campus. 200 students considered" 
+        image_section:
+          # - image: 
+          - image: "../../../static/images/outcomes/outcomes.png"
+            image_paragraph: "There are many things to know about our students. Where they come from, their age, gender, etc. Here are some of them."
+            chart: true
+  - title: "Job Placement"
+    ref: "job_placement"
+    paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days.
+    "
+    stats: 
+      - stat: "86%"
+        content: "Job Placement Ratio
+        onsidering those with more than 90 days since graduation"
+      - stat: "11%"
+        content: "Students that have decided to
+        drop out before graduating."
+    sub_sections:
+      - title: " Info to consider"
+        content: "
+        In order to publish the referred data and information, we have considered the following facts:
+        <ul class='ul-outcomes'>
+          <li class='li-outcomes-link' > Part-time programs are considered: other Bootcamps only consider Full-Time programs.</li>
+          <li class='li-outcomes-link' > Our Placement Ratio considers only students actually looking for a job and completing the career support process at 4GA.</li>
+          <li class='li-outcomes-link' > We have considered In-Person Students. Remote programs were launched due to Covid-19, and were not considered in this report because those cohorts were still open by the time this report was published.</li>
+        </ul>
+        " 
+        image_section:
+          - image: 
+            image_paragraph: "You should plan to spend -at least- a 100 days after graduation to get your first Job. In order to land a Job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days."
+            
+  - title: ""
+    ref: ""
+    paragraph: ""
+    stats: 
+      - stat: "72 Days"
+        content: "The average amount of time that our students needed to get their first job"
+      - stat: "$42K"
+        content: "Average income of 4GA Graduates"
+      - stat: "22% Salary Increase"
+        content: "After taking the program at 4Geeks Academy."
+    sub_sections:
+      - title: "HOW TO FIND A JOB"
+        content: "
+        There are a few recommendations that we make in order to speed up the process:
+        <ul class='ul-outcomes'>
+          <li class='li-outcomes-link' > Spend as much time as you can with our mentors, or with Developer friends, or with people who know about coding and are willing to help you out.</li>
+          <li class='li-outcomes-link' > Keep practicing, there is no magical touch. If you put in the time, you will find a job.</li>
+          <li class='li-outcomes-link' > Get into internships even if they don't pay you well. If you can spend at least 3
+months working for someone or joining an internship, do it.</li>
+          <li class='li-outcomes-link' > Your first Job is the most important part of your Application Process. Everything will
+be different after you land your first Job;</li>
+        </ul>
+        " 
+        image_section:
+          - image: 
+            image_paragraph: "You should plan to spend -at least- a 100 days after graduation to get your first Job. In order to land a Job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days."
+            
+charts:
+  chart_list:
+    ## EACH DONUTCHART NEEDS AN ARRAY OF ARRAYS WITH  LABEL AND VALUE
+    ## THE VALUE NEED TO BE A STRING, NOT A NUMBER
+    - title: "ages"
+      data:
+        - [Task, Ages]
+        - [26-32, "44"] ## EACH ARRAY NEEDS LABEL AND VALUE
+        - [22-25, "30"]
+        - [33-42, "26"]
+    - title: "gender"
+      data:
+        - [Task, Gender]
+        - [Female, "21"]
+        - [Male, "79"]
+    - title: "nationality"
+      data:
+        - [Task, Nationality]
+        - [North America, "60"]
+        - [Asia, "1"]
+        - [Europe, "5"]
+        - [Lat.Am., "34"]
+        
+download:
+  button_text: "Download Report"
+  label: "Get result"
+  motivation: "In 2 min. You will receive the outcomes in your mailbox"

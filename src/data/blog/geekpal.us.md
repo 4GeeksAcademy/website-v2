@@ -5,10 +5,11 @@ excerpt: More information about the Geekpal system of 4Geeks Academy
 link: https://www.4geeksacademy.co/geekpal
 slug: geekpal
 title: Never Code Alone Again
-avatar: "/images/staff/alejandro.png"
 image: "/images/why2.jpg"
+image_alt: ""
 categories:
 - Learning to code
+cluster: "trends-and-tech"
 tags:
 - 4geeks
 lang: "us"

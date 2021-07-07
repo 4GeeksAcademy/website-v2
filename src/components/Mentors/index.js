@@ -47,7 +47,18 @@ const Mentors = props => {
                         linkdin
                         twitter
                         website
-                        image
+                        image{
+                            childImageSharp {
+                                gatsbyImageData(
+                                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                    width: 800
+                                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                                )
+                                # fluid(maxWidth: 800){
+                                #   ...GatsbyImageSharpFluid_withWebp
+                                # }
+                            }
+                        }
                         age
                         location
                         interests
