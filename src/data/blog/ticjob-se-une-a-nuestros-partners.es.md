@@ -6,7 +6,7 @@ slug: "ticjob-se-une-a-nuestros-partners"
 title: "Ticjob se une a nuestros partners"
 image: "/images/blog/Blog_post.png"
 image_alt: ""
-cluster: "partnerships"
+cluster: "tendencias-y-tecnologia"
 status: "published"
 featured: "true"
 

@@ -7,7 +7,7 @@ title: "Plataformas para encontrar trabajo Freelance"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-0.png?raw=true"
 image_alt: "imagen con el texto: Freelance España"
 status: "published"
-cluster: "coding-bootcamp"
+cluster: "desarrollo-profesional"
 
 ---
 

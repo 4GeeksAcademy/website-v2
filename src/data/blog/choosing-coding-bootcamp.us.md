@@ -6,7 +6,7 @@ slug: "choosing-coding-bootcamp"
 title: "How to choose the best coding Bootcamp?"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2018/07/Picture-Post-1.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 status: "published"
 featured: "true"
 

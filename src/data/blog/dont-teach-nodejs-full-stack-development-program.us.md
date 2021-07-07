@@ -6,7 +6,7 @@ slug: "dont-teach-nodejs-full-stack-development-program"
 title: "Why we don't teach NodeJS in our Full-Stack Development program"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/09/Screen-Shot-2017-09-25-at-10.54.52-PM.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "true"
 

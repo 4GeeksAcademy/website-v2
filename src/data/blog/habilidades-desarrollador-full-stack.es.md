@@ -7,7 +7,7 @@ title: "Habilidades de un Desarrollador Full-Stack"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/hfl-01.png?raw=true"
 image_alt: "sketch de un joven aprendiendo código"
 status: "published"
-cluster: "learn-to-code"
+cluster: "full-stack"
 
 ---
 

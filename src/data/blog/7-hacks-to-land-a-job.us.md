@@ -6,7 +6,7 @@ slug: "7-hacks-to-land-a-job"
 title: "7 tips to land a job as a Software Developer ASAP"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/06/GUENSE-01-1024x513.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "career-growth"
 status: "published"
 featured: "true"
 

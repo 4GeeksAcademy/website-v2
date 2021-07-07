@@ -8,7 +8,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/11/POST-
 image_alt: ""
 status: "published"
 featured: "false"
-cluster: "full-stack-developer"
+cluster: "coding-bootcamps"
 
 ---
 

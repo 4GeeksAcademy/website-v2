@@ -6,7 +6,7 @@ slug: "hybrid-jobs"
 title: "Hybrid Jobs: An Unstoppable Movement"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/10/BLOG-HYBRID-1-1024x524.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "career-growth"
 status: "published"
 featured: "false"
 

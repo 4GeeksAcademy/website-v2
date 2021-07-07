@@ -6,7 +6,7 @@ slug: "what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2"
 title: "What kinds of jobs do coding bootcamp graduates find?"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/you-are-hired-1024x465.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 status: "published"
 featured: "false"
 

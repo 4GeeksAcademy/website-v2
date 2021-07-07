@@ -6,7 +6,7 @@ slug: "internships-bootcamps-2021"
 title: "Internships and bootcamps: the keys to prepare tech companies for 2021 demands"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/internship.jpg?raw=true"
 image_alt: "estudiantes aprendiendo código en un bootcamp"
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 status: "published"
 
 ---

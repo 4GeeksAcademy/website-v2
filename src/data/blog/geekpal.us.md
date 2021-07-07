@@ -6,7 +6,7 @@ slug: "geekpal"
 title: "Never Code Alone Again"
 image: "/images/why2.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "true"
 

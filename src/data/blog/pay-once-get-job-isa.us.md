@@ -6,7 +6,7 @@ slug: "pay-once-get-job-isa"
 title: "Pay once you get a Job"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/04/ISA-Blog-Cover.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 status: "published"
 featured: "true"
 

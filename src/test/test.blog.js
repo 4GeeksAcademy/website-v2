@@ -1,7 +1,7 @@
 
 var colors = require('colors')
 const path = require("path")
-const {walk, loadMD, empty, fail, success, localizeImage} = require("./_utils")
+const {walk, loadMD, loadYML, fail, success, localizeImage} = require("./_utils")
 const twitterUser = require('../utils/twitter')
 
 const front_matter_fields = [
@@ -21,6 +21,15 @@ const getLang = (fileAbsolutePath) => {
     return m[2];
   };
 
+const getClusters = () => {
+    const ymlUS = loadYML(path.resolve(`${__dirname}/../data/page/blog.us.yml`))
+    const ymlES = loadYML(path.resolve(`${__dirname}/../data/page/blog.es.yml`))
+    return {
+        "us": ymlUS.yaml.topics,
+        "es": ymlES.yaml.topics
+    }
+};
+
 walk(`${__dirname}/../data/blog`, async function (err, files) {
     if (err) fail("Error reading the Markdown files: ", err)
     const _files = files.filter(f => {
@@ -30,6 +39,8 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
     if(_files.length != files.length) fail("Only markdown files should be inside the ./data/blog directory, please fix the following: \n\n", files.filter(f => {
         return path.extname(f) != ".md"
     }).join("\n").red + "\n")
+
+    const global_clusters = getClusters();
 
 
     for (let i = 0; i < _files.length; i++) {
@@ -42,10 +53,16 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             const autor_keys = Object.keys(twitterUser)
 
             if(_path.includes(" ")) throw Error("File name cannot have white spaces only letters, numbers and -")
+            if(_path.toLowerCase() !== _path) throw Error("File name must be all lowecase")
 
             const lang = getLang(_path);
             if(!lang) throw Error("Missing language information on file name, make sure it has the language info before the extension; For example: my-file.es.md")
             else if(lang === "en") throw Error(`Please use "us" instead of "en" for english language information on the file name; For example: my-file.us.md`)
+
+            if(frontmatter["cluster"] === undefined) throw Error("Missing post cluster")
+            else if(global_clusters === undefined || global_clusters.length === 0) throw Error(`Empty or missing global clusters, check the topics property on the ./src/data/page/blog.[lang].md YML files`);
+            else if(global_clusters[lang] === undefined) throw Error(`Missing clusters for lang "${lang}", these are the clusters we found: ${JSON.stringify(global_clusters)}`);
+            else if(!global_clusters[lang].includes(frontmatter["cluster"])) throw Error(`Invalid post cluster "${frontmatter["cluster"]}", it should be one of the following: ${global_clusters[lang].join(",")}. To manage topis go to ./src/data/page/blog.[lang].md file and look for the "topics" property list`)
 
             localizeImage(frontmatter.image, 'relative_images', _path, 'blog')
 

@@ -6,7 +6,7 @@ slug: "4geeks-academy-history"
 title: "4Geeks Academy Story"
 image: "/images/why2.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "true"
 

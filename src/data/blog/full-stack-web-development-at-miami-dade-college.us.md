@@ -6,7 +6,7 @@ slug: "full-stack-web-development-at-miami-dade-college"
 title: "Learn to Code at Miami Dade College"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/Miami-Dade.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "full-stack-developer"
 status: "published"
 featured: "false"
 

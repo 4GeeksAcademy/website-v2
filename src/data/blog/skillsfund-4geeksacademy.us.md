@@ -6,7 +6,7 @@ slug: "skillsfund-4geeksacademy"
 title: "Skills Fund & 4Geeks Academy finally together"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/02/Skill-Fund-04-1-1-768x433.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "false"
 

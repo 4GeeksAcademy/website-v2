@@ -6,7 +6,7 @@ slug: "women-in-tech-2017"
 title: "Women in Tech 2017"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/01/Screen-Shot-2018-01-16-at-11.58.32-PM.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "false"
 

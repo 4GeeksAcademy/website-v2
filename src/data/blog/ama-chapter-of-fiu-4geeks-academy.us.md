@@ -6,7 +6,7 @@ slug: "ama-chapter-of-fiu-4geeks-academy"
 title: "AMA Chapter of FIU + 4Geeks Academy - Getting Students Closer To A Coding Education"
 image: "https://github.com/4geeksacademy/website-v2/blob/master/static/images/blog/ama_logo.jpeg?raw=true"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "false"
 

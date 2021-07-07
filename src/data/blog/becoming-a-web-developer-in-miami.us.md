@@ -6,7 +6,7 @@ slug: "becoming-a-web-developer-in-miami"
 title: "Learning to code in Miami"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/02/admin-ajax-4.10.10-PM.jpeg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "false"
 

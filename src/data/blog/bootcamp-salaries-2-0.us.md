@@ -6,7 +6,7 @@ slug: "bootcamp-salaries-2-0"
 title: "Bootcamp Graduates Salary 2017: 2.0 edition"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/portada-bootcamp-02-1-1024x674.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 status: "published"
 featured: "false"
 

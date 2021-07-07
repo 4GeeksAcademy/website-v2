@@ -6,7 +6,7 @@ slug: "rip-ruby-on-rails"
 title: "R.I.P. Ruby on Rails. Thanks for everything!"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/ruby.png"
 image_alt: ""
-cluster: "full-stack-developer"
+cluster: "learn-to-code"
 status: "published"
 featured: "true"
 

@@ -6,7 +6,7 @@ slug: "miami-coding-programs-report"
 title: "Miami Coding Bootcamps | 2018 Report"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/MIAMI-CODING-04-768x768.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "true"
 

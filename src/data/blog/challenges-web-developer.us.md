@@ -6,7 +6,7 @@ slug: "challenges-web-developer"
 title: "The Challenges of a Web Developer, Living and working as a developer"
 image: "https://github.com/4geeksacademy/website-v2/blob/master/static/images/blog/web-developer.jpeg?raw=true"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "full-stack-developer"
 status: "published"
 featured: "false"
 

@@ -6,7 +6,7 @@ slug: "part-time-future-education"
 title: "Part-time is the future of education"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/part-timevsfull-1.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "false"
 

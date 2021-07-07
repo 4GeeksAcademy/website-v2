@@ -6,7 +6,7 @@ slug: "4geeks-santiago-chile-programacion-2"
 title: "4Geeks en Santiago de Chile"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/12/BANNER-CHILE-copia-3APRENDE-A-PROGRAMAR-CHL-3-1024x540.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "bootcamps-programacion"
 status: "published"
 featured: "true"
 

@@ -6,7 +6,7 @@ slug: "launchcode-and-4geeks-academy"
 title: "4Geeks Academy and LaunchCode.org"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/launchcode-button-300x89.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "false"
 

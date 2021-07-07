@@ -6,7 +6,7 @@ slug: "historia-de-4geeks-academy"
 title: "Historia de 4Geeks Academy"
 image: ""
 image_alt: ""
-cluster: "aprendiendo-a-desarrollar"
+cluster: "tendencias-y-tecnologia"
 status: "published"
 featured: "false"
 

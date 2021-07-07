@@ -9,7 +9,7 @@ image: "https://www.4geeksacademy.co/images/4geeks-main.jpg"
 image_alt: ""
 status: "published"
 featured: "true"
-cluster: "learn-to-code"
+cluster: "tendencias-y-tecnologia"
 
 ---
 

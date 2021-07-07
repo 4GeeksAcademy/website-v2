@@ -6,7 +6,7 @@ slug: "digital-marketing-in-the-coding-world"
 title: "Digital Marketing in the Coding World"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2020/01/BLOG-04-1-scaled.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "false"
 

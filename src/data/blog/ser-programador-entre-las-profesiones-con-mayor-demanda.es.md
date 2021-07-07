@@ -6,7 +6,7 @@ slug: "ser-programador-entre-las-profesiones-con-mayor-demanda"
 title: "Ser Programador… Entre las profesiones con mayor demanda"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/1-1.jpg"
 image_alt: ""
-cluster: "aprendiendo-a-desarrollar"
+cluster: "desarrollo-profesional"
 status: "published"
 featured: "true"
 

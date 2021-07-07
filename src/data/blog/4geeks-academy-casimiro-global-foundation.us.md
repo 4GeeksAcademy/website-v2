@@ -6,7 +6,7 @@ slug: "4geeks-academy-casimiro-global-foundation"
 title: "4Geeks Academy + Casimiro Global Foundation"
 image: "/wp-content/uploads/2016/02/CGF-INFOGRAPHIC-232x300-1.jpg"
 image_alt: ""
-cluster: "full-stack-developer"
+cluster: "trends-and-tech"
 status: "published"
 featured: "false"
 

@@ -6,7 +6,7 @@ slug: "part-time-bootcamps"
 title: "Why is a Part-Time Coding Bootcamp  Best for You"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2018/10/Part-time-coding-bootcamp-1.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 status: "published"
 featured: "false"
 

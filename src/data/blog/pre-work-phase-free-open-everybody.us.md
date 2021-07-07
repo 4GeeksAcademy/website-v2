@@ -7,7 +7,7 @@ slug: "pre-work-phase-free-open-everybody"
 title: "Why our pre-work phase is free and open for everybody"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/welcome-1.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "coding-bootcamps"
 status: "published"
 featured: "false"
 

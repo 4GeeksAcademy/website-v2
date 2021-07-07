@@ -6,7 +6,7 @@ slug: "growth-road-full-time-job"
 title: "The Growth Road"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/08/BLOG-01.jpg"
 image_alt: ""
-cluster: "no-category"
+cluster: "coding-bootcamps"
 status: "published"
 featured: "false"
 

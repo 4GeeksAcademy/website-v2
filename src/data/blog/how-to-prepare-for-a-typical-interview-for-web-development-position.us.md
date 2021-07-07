@@ -6,7 +6,7 @@ slug: "how-to-prepare-for-a-typical-interview-for-web-development-position"
 title: "My Job Interview"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/jobinterview.jpeg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "career-growth"
 status: "published"
 featured: "false"
 

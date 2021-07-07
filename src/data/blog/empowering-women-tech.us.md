@@ -6,7 +6,7 @@ slug: "empowering-women-tech"
 title: "4Geeks Academy empowering Women in Tech"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/04/Women-Powering-01-1-1024x645.png"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: "false"
 
