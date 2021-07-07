@@ -1,27 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-03-18 00:00:00+00:00
-excerpt: Companies are looking for people with coding skills. Because they need people capable
-  of understanding how a tech-related company works
-layout: post
-link: https://www.4geeksacademy.co/what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2/
-slug: what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2
-title: What kinds of jobs do coding bootcamp graduates find?
+author: "4GeeksAcademy"
+date: "2016-03-18T00:00:00+00:00"
+excerpt: "Companies are looking for people with coding skills. Because they need people capable of understanding how a tech-related company works"
+slug: "what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2"
+title: "What kinds of jobs do coding bootcamp graduates find?"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/you-are-hired-1024x465.png"
 image_alt: ""
-
-categories:
-- Living and working as a developer
 cluster: "learn-to-code"
-tags:
-- coding bootcamps
-- coding education
-- Jobs in Miami
-- Web Developer
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 It seems that companies today need more people who know coding faster than a college or university can put out into the professional market.  The real world has been seeking experts in areas where the business climate is constantly changing and the formal traditional education is lagging.

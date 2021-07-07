@@ -1,19 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-07-16 20:43:46+00:00
-excerpt: 'There are many important elements to consider when you are choosing the
-  best coding Bootcamp for you. We believe that you should address these four questions.'
-layout: post
-link: https://www.4geeksacademy.co/choosing-coding-bootcamp/
-slug: choosing-coding-bootcamp
-title: How to choose the best coding Bootcamp?
+author: "MRiciglianoC"
+date: "2018-07-16T20:43:46+00:00"
+excerpt: "There are many important elements to consider when you are choosing the best coding Bootcamp for you. We believe that you should address these four questions."
+slug: "choosing-coding-bootcamp"
+title: "How to choose the best coding Bootcamp?"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2018/07/Picture-Post-1.png"
 image_alt: ""
-
 cluster: "learn-to-code"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 Coding Bootcamps are a great option to launching a new career, land in a new job and get great benefits afterward; but there are many factors and options to take into consideration when you are choosing the best coding Bootcamp for you.

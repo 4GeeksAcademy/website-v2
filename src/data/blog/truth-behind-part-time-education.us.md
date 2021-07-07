@@ -1,25 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2017-12-11 23:15:20+00:00
-excerpt: 'Students shall start to ask: Do you need me all day every day? Or can I
-  actually have a life and also become a developer?'
-layout: post
-link: https://www.4geeksacademy.co/truth-behind-part-time-education/
-slug: truth-behind-part-time-education
-title: The truth behind our Part-time education
+author: "MRiciglianoC"
+date: "2017-12-11T23:15:20+00:00"
+excerpt: "Students shall start to ask: Do you need me all day every day? Or can I actually have a life and also become a developer?"
+slug: "truth-behind-part-time-education"
+title: "The truth behind our Part-time education"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/12/The-Truth-02-768x384.jpg"
 image_alt: ""
-
 cluster: "learn-to-code"
-categories:
-- Learning to code
-- Living and working as a developer
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+status: "published"
+featured: "false"
+
 ---
 
 At 4Geeks we take very seriously the whole deal about how to become a software developer.  There are plenty of options, I know, and there are plenty of opinions, I know. But we have found a lack of argument when talking about the schedule and the methodology brought by the coding program.

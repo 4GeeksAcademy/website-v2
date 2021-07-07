@@ -1,27 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-11-06 20:24:41+00:00
-excerpt: Everything you need to know about Miami Coding Programs
-layout: post
-link: https://www.4geeksacademy.co/miami-coding-programs-report/
-slug: miami-coding-programs-report
-title: Miami Coding Bootcamps | 2018 Report
+author: "MRiciglianoC"
+date: "2018-11-06T20:24:41+00:00"
+excerpt: "Everything you need to know about Miami Coding Programs"
+slug: "miami-coding-programs-report"
+title: "Miami Coding Bootcamps | 2018 Report"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/MIAMI-CODING-04-768x768.jpg"
 image_alt: ""
-
-categories:
-- Learning to code
-- Why learn to code?
 cluster: "learn-to-code"
-tags:
-- coding
-- coding bootcamps
-- investment
-- Jobs in Miami
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 Coding Bootcamps are the solution to traditional education institutions’ lack of perspective. Tech talent is needed and Coding Bootcamps are graduating skillful students to address complex software challenges. 

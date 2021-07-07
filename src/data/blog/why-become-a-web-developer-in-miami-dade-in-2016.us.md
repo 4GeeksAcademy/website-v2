@@ -1,29 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2016-01-18 00:38:18+00:00
-excerpt: 'Choosing a career is like getting married: you have to be sure you’re making
-  the right choice.'
-layout: post
-link: https://www.4geeksacademy.co/why-become-a-web-developer-in-miami-dade-in-2016/
-slug: why-become-a-web-developer-in-miami-dade-in-2016
-title: Why Become A Web Developer In Miami Dade In 2016
+author: "alesanchezr"
+date: "2016-01-18T00:38:18+00:00"
+excerpt: "Choosing a career is like getting married: you have to be sure you’re making the right choice."
+slug: "why-become-a-web-developer-in-miami-dade-in-2016"
+title: "Why Become A Web Developer In Miami Dade In 2016"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Martes-1.png"
 image_alt: ""
-
-categories:
-- Sin categoría
-- Why learn to code?
 cluster: "learn-to-code"
-tags:
-- career path
-- Jobs in Miami
-- miami
-- salary
-- web developer salary
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 ## **Why Become A Web Developer In Miami Dade?**

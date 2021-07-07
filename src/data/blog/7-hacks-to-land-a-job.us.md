@@ -1,17 +1,15 @@
 ---
-author: MRiciglianoC
-date: 2019-06-24 20:44:51+00:00
-excerpt: Why exactly are you putting yourself through all of this mental toil and
-  relentless sacrifice and inevitable frustration for many weeks or months?
-slug: 7-hacks-to-land-a-job
-title: 7 tips to land a job as a Software Developer ASAP
+author: "MRiciglianoC"
+date: "2019-06-24T20:44:51+00:00"
+excerpt: "Why exactly are you putting yourself through all of this mental toil and relentless sacrifice and inevitable frustration for many weeks or months?"
+slug: "7-hacks-to-land-a-job"
+title: "7 tips to land a job as a Software Developer ASAP"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/06/GUENSE-01-1024x513.jpg"
 image_alt: ""
-categories:
-- Sin categoría
 cluster: "learn-to-code"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 # 7 tips to land a job as a Software Developer ASAP

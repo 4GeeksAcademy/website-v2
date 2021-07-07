@@ -1,31 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2015-12-09 20:18:46+00:00
-excerpt: Day by day companies are adapting to the increasingly digital world we live
-  in. This is why web developers
-  are becoming increasingly needed […]
-layout: post
-link: https://www.4geeksacademy.co/web-developer-earn-the-salary-you-deserve/
-slug: web-developer-earn-the-salary-you-deserve
-title: 'Web Developer: Earn the Salary You Deserve'
-image: null
+author: "4GeeksAcademy"
+date: "2015-12-09T20:18:46+00:00"
+excerpt: "Day by day companies are adapting to the increasingly digital world we live in. This is why web developers are becoming increasingly needed […]"
+slug: "web-developer-earn-the-salary-you-deserve"
+title: "Web Developer: Earn the Salary You Deserve"
+image: "https://github.com/4geeksacademy/website-v2/blob/master/static/images/blog/web-developer.jpeg?raw=true"
 image_alt: ""
-
 cluster: "learn-to-code"
-categories:
-- Living and working as a developer
+status: "published"
+featured: "false"
 
-tags:
-- career path
-- Jobs in Miami
-- learn to code
-- miami
-- Web Developer
-- web developer salary
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
 ---
 
 ### Web Developer: Earn the Salary You Deserve

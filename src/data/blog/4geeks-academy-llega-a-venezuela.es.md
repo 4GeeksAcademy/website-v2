@@ -1,23 +1,16 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-05-04 14:32:02+00:00
+author: "4GeeksAcademy"
+date: "2016-05-04T14:32:02+00:00"
 excerpt: "4Geeks Academy llega a Venezuela! Conoce los detalles aquí"
-layout: post
-link: https://www.4geeksacademy.co/es/4geeks-academy-llega-a-venezuela/
-slug: 4geeks-academy-llega-a-venezuela
-title: ¡4Geeks Academy llega a Venezuela!
+slug: "4geeks-academy-llega-a-venezuela"
+title: "¡4Geeks Academy llega a Venezuela!"
 description: "Conoce los detalles de la llegada de 4Geeks Academy a Venezuela"
 image: "https://www.4geeksacademy.co/images/4geeks-main.jpg"
 image_alt: ""
-
-categories:
-- Aprendiendo a desarrollar
-- Por qué aprender a programar
-lang: "es"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
 cluster: "learn-to-code"
+
 ---
 
 _Entrenamos a futuros súper desarrolladores con los conocimientos más avanzados para convertirse en excelentes programadores._

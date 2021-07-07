@@ -1,24 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-05-11 14:52:45+00:00
-excerpt: Conoce porque la programación esta entre las profesiones con mayor demanda
-layout: post
-link: https://www.4geeksacademy.co/es/ser-programador-entre-las-profesiones-con-mayor-demanda/
-slug: ser-programador-entre-las-profesiones-con-mayor-demanda
-title: Ser Programador… Entre las profesiones con mayor demanda
+author: "4GeeksAcademy"
+date: "2016-05-11T14:52:45+00:00"
+excerpt: "Conoce porque la programación esta entre las profesiones con mayor demanda"
+slug: "ser-programador-entre-las-profesiones-con-mayor-demanda"
+title: "Ser Programador… Entre las profesiones con mayor demanda"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/1-1.jpg"
 image_alt: ""
-
-categories:
-- Aprendiendo a desarrollar
-- Por qué aprender a programar
 cluster: "aprendiendo-a-desarrollar"
-lang: "es"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
-tags:
-- 4geeks
+status: "published"
+featured: "true"
+
 ---
 
 No hay una sola manera de definir a los **desarrolladores**. Podríamos decir a modo general, que son personas que aplican la lógica de programación y, por medio de lenguajes y códigos, crean sitios o aplicaciones web.

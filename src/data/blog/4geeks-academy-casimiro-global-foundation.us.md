@@ -1,34 +1,16 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-02-08 17:18:12+00:00
-
-# (it should not exceed 160 in length - actual lenght +360) '
-# excerpt: 'As passionate educators, we aim to impact the educational ecosystem of Miami
-  # by teaching coding to young professionals who understand its importance in the constantly
-  # changing market nowadays. What a better way to do so than to collaborate with the
-  # organization that is the leader among the Miami community of young entrepreneurs:
-  # Casimiro Global Foundation.'
-
-excerpt: 'Organization leader among the Miami community of young entrepreneurs: Casimiro Global Foundation.'
-layout: post
-link: https://www.4geeksacademy.co/4geeks-academy-casimiro-global-foundation/
-slug: 4geeks-academy-casimiro-global-foundation
-title: 4Geeks Academy + Casimiro Global Foundation
+author: "4GeeksAcademy"
+date: "2016-02-08T17:18:12+00:00"
+excerpt: "Organization leader among the Miami community of young entrepreneurs: Casimiro Global Foundation."
+slug: "4geeks-academy-casimiro-global-foundation"
+title: "4Geeks Academy + Casimiro Global Foundation"
 image: "/wp-content/uploads/2016/02/CGF-INFOGRAPHIC-232x300-1.jpg"
 image_alt: ""
-categories:
-- Sin categoría
-- Why learn to code?
 cluster: "full-stack-developer"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
-
-
-
-
-
 
 As passionate educators, we aim to impact the educational ecosystem of Miami by teaching coding to young professionals who understand its importance in the constantly changing market.  What better way to do so than to collaborate with the organization that is the leader among the Miami community of young entrepreneurs: Casimiro Global Foundation. 
 

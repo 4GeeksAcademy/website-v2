@@ -1,29 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2016-01-11 03:15:12+00:00
-excerpt: This post is not about what programming language is better (it's impossible
-  to answer that), this post is about choosing the best language to learn how to code.
-layout: post
-link: https://www.4geeksacademy.co/4geeks-academy-teaches-php-backend-language/
-slug: 4geeks-academy-teaches-php-backend-language
-title: Why 4Geeks Academy teaches PHP as Backend Language
+author: "alesanchezr"
+date: "2016-01-11T03:15:12+00:00"
+excerpt: "This post is not about what programming language is better (it's impossible to answer that), this post is about choosing the best language to learn how to code."
+slug: "4geeks-academy-teaches-php-backend-language"
+title: "Why 4Geeks Academy teaches PHP as Backend Language"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/language.jpeg"
 image_alt: ""
+cluster: "full-stack-developer"
+status: "published"
+featured: "false"
 
-categories:
-- Sin categoría
-- Why learn to code?
-cluster: full-stack-developer
-tags:
-- learn to code
-- php
-- ruby
-- salary
-- web developer salary
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
 ---
 
 If you want to learn how to swim, you use baby floats, not neoprene wet-suits (witch are obviously better for professional swimming).  This post is not about what programming language is better (it is impossible to answer that), this post is about choosing the best language to learn how to code - the language that gives the most opportunities to our students in Miami.

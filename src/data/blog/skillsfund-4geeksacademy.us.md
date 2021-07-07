@@ -1,25 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-02-28 20:41:26+00:00
-excerpt: 4Geeks Academy has partnered with Skills Fund to remove all barriers to enrolling
-  in our transformative skills training program.
-layout: post
-link: https://www.4geeksacademy.co/skillsfund-4geeksacademy/
-slug: skillsfund-4geeksacademy
-title: Skills Fund & 4Geeks Academy finally together
+author: "MRiciglianoC"
+date: "2018-02-28T20:41:26+00:00"
+excerpt: "4Geeks Academy has partnered with Skills Fund to remove all barriers to enrolling in our transformative skills training program."
+slug: "skillsfund-4geeksacademy"
+title: "Skills Fund & 4Geeks Academy finally together"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/02/Skill-Fund-04-1-1-768x433.jpg"
 image_alt: ""
-
-categories:
-- Living and working as a developer
-- Why learn to code?
 cluster: "learn-to-code"
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+status: "published"
+featured: "false"
+
 ---
 
 ## Great news! Skills Fund & 4Geeks Academy are finally together

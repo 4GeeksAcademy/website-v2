@@ -1,27 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2019-10-15 20:53:47+00:00
-excerpt: The key to being a great coder is having the disposition to improve every
-  day and apply strategies that will make you more productive and efficient.
-layout: post
-link: https://www.4geeksacademy.co/hybrid-jobs/
-slug: hybrid-jobs
-title: 'Hybrid Jobs: An Unstoppable Movement'
+author: "MRiciglianoC"
+date: "2019-10-15T20:53:47+00:00"
+excerpt: "The key to being a great coder is having the disposition to improve every day and apply strategies that will make you more productive and efficient."
+slug: "hybrid-jobs"
+title: "Hybrid Jobs: An Unstoppable Movement"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/10/BLOG-HYBRID-1-1024x524.jpg"
 image_alt: ""
-
-categories:
-- Sin categoría
 cluster: "learn-to-code"
-tags:
-- 4geeks
-- coding
-- Jobs in Miami
-- Python
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 # **Hybrid Jobs: An Unstoppable Movement**

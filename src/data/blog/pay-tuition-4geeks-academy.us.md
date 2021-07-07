@@ -1,30 +1,17 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2017-01-21 00:38:45+00:00
-excerpt: 'The Miami Dade College tuition fee for the Full Stack program is already
-  a bargain: $3,405!!'
-layout: post
-link: https://www.4geeksacademy.co/pay-tuition-4geeks-academy/
-slug: pay-tuition-4geeks-academy
-title: 'Miami Dade College Coding Program: How To Pay Your Tuition?'
+author: "MRiciglianoC"
+date: "2017-01-21T00:38:45+00:00"
+excerpt: "The Miami Dade College tuition fee for the Full Stack program is already a bargain: $3,405!!"
+slug: "pay-tuition-4geeks-academy"
+title: "Miami Dade College Coding Program: How To Pay Your Tuition?"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/01/Screen-Shot-2017-05-08-at-11.59.52-PM.png"
 image_alt: ""
-
-categories:
-- Learning to code
 cluster: "learn-to-code"
-post_format:
-- Image
-post_translations:
-- pll_5703862f49f64
-tags:
-- 4geeks academy
-- financing education
-- Miami Dade College
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+post_format: ["Image"]
+post_translations: ["pll_5703862f49f64"]
+status: "published"
+featured: "false"
+
 ---
 
 One of the main concerns for those trying to join a Coding Program is how to pay the tuition costs.  The answer to this question may vary, but we have a simple path to recommend.

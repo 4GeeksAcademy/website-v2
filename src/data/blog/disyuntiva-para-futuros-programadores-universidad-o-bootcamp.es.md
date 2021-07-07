@@ -1,24 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-05-04 14:39:10+00:00
-excerpt: ¿Universidad o Bootcamp? Decide informado aquí
-layout: post
-link: https://www.4geeksacademy.co/es/disyuntiva-para-futuros-programadores-universidad-o-bootcamp/
-slug: disyuntiva-para-futuros-programadores-universidad-o-bootcamp
-title: 'Disyuntiva para futuros programadores:  ¿Universidad o Bootcamp?'
+author: "4GeeksAcademy"
+date: "2016-05-04T14:39:10+00:00"
+excerpt: "¿Universidad o Bootcamp? Decide informado aquí"
+slug: "disyuntiva-para-futuros-programadores-universidad-o-bootcamp"
+title: "Disyuntiva para futuros programadores:  ¿Universidad o Bootcamp?"
 image: "https://camo.githubusercontent.com/78510e7fca5ea47b77a49f114843ede99c5f7fbb2b666370c570fa41934df3f1/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f346765656b732d61636164656d792d776562736974652f626c6f672f323031362f30352f417274652d626c6f672d344765656b732d41636164656d792d312e706e67"
 image_alt: ""
-
-categories:
-- Aprendiendo a desarrollar
-- Por qué aprender a programar
 cluster: "aprender-a-programar"
-lang: "es"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+status: "published"
+featured: "false"
+
 ---
 
 En la toma de decisión sobre qué profesión escoger o cuándo se piensa mejorar un área de nuestra carrera, miramos las ofertas de diversas instituciones educativas y de acuerdo a nuestra actitud y las oportunidades que brinden, seleccionamos la que mejor nos convenga.

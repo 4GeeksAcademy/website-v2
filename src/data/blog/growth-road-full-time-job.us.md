@@ -1,17 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2019-08-27 14:37:28+00:00
-excerpt: Working Full-Time During a Part-Time Bootcamp might be hard, but we have
-  many students telling you that it's totally possible.
-slug: growth-road-full-time-job
-title: The Growth Road
+author: "MRiciglianoC"
+date: "2019-08-27T14:37:28+00:00"
+excerpt: "Working Full-Time During a Part-Time Bootcamp might be hard, but we have many students telling you that it's totally possible."
+slug: "growth-road-full-time-job"
+title: "The Growth Road"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/08/BLOG-01.jpg"
 image_alt: ""
-
 cluster: "no-category"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 # **The Growth Road**

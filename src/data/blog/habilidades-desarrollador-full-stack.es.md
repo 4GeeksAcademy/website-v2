@@ -1,13 +1,14 @@
 ---
-author: VictorManuelG
-date: 2021-04-26 20:44:51+00:00
-excerpt: Conoce aquí las habilidades a desarrollar para un desarrollador full stack
-slug: habilidades-desarrollador-full-stack
-title: Habilidades de un Desarrollador Full-Stack
+author: "VictorManuelG"
+date: "2021-04-26T20:44:51+00:00"
+excerpt: "Conoce aquí las habilidades a desarrollar para un desarrollador full stack"
+slug: "habilidades-desarrollador-full-stack"
+title: "Habilidades de un Desarrollador Full-Stack"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/hfl-01.png?raw=true"
 image_alt: "sketch de un joven aprendiendo código"
 status: "published"
 cluster: "learn-to-code"
+
 ---
 
 En nuestra publicación anterior hablábamos sobre lo [que significa ser programador o programadora *full-stack*](https://4geeksacademy.com/es/post/que-es-full-stack) (te recomiendo que le des un vistazo porque es muy interesante). Por resumir: un perfil *full-stack* básicamente es esa persona que trabaja tanto del lado del cliente (*frontend*) como del lado del servidor (*backend*), y es capaz de ofrecer soluciones en cualquier parte de la aplicación. Es un rol muy versátil dentro de los equipos tecnológicos y puede asumir diferentes responsabilidades en los proyectos.

@@ -1,18 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-02-03 05:34:01+00:00
-excerpt: Is it possible to be a software developer working in Miami? That would be
-  like going to heaven without having to die.
-layout: post
-slug: becoming-a-web-developer-in-miami
-title: Learning to code in Miami
+author: "4GeeksAcademy"
+date: "2016-02-03T05:34:01+00:00"
+excerpt: "Is it possible to be a software developer working in Miami? That would be like going to heaven without having to die."
+slug: "becoming-a-web-developer-in-miami"
+title: "Learning to code in Miami"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/02/admin-ajax-4.10.10-PM.jpeg"
 image_alt: ""
-
 cluster: "learn-to-code"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 According to a Careerbliss study published in Forbes, [Miami is the happiest city to live](http://www.forbes.com/sites/jacquelynsmith/2012/01/17/the-happiest-and-unhappiest-cities-to-work-in/), and according to CNN, software development is the [best profession in America](http://money.cnn.com/gallery/pf/2015/01/27/best-jobs-2015/index.html).  Can you imagine having both?  That would be like going to heaven without having to die.  If you are interested in a ticket to heaven, read this guide on** how to become a software developer in Miami.**

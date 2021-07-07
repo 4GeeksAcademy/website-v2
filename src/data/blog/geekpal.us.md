@@ -1,16 +1,15 @@
 ---
-author: alesanchezr
-date: 2020-04-29 05:31:23+00:00
-excerpt: More information about the Geekpal system of 4Geeks Academy
-slug: geekpal
-title: Never Code Alone Again
+author: "alesanchezr"
+date: "2020-04-29T05:31:23+00:00"
+excerpt: "More information about the Geekpal system of 4Geeks Academy"
+slug: "geekpal"
+title: "Never Code Alone Again"
 image: "/images/why2.jpg"
 image_alt: ""
-categories:
-- Learning to code
 cluster: "learn-to-code"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 Today I'm very happy to announce GeekPAL.

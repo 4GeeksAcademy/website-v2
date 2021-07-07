@@ -1,27 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2017-10-24 16:29:31+00:00
-excerpt: Education has always been a matter of “How to Pay?”, “Do I qualify?”, Am
-  I going to be accepted?”, and then, again “How do I Pay that tuition?”.
-layout: post
-link: https://www.4geeksacademy.co/pay-tuition-4geeks/
-slug: pay-tuition-4geeks
-title: How to Pay your tuition at 4Geeks
+author: "MRiciglianoC"
+date: "2017-10-24T16:29:31+00:00"
+excerpt: "Education has always been a matter of “How to Pay?”, “Do I qualify?”, Am I going to be accepted?”, and then, again “How do I Pay that tuition?”."
+slug: "pay-tuition-4geeks"
+title: "How to Pay your tuition at 4Geeks"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2017/10/Henry-Adams-said-.jpg"
 image_alt: ""
-
-categories:
-- Learning to code
 cluster: "learn-to-code"
-tags:
-- 4geeks academy
-- challenges of a web developer
-- coding bootcamp
-- coding education
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 Education has always been a matter of “How to Pay?”, “Do I qualify?”, “Am I going to be accepted?”, and then, again, “How do I Pay that tuition?”

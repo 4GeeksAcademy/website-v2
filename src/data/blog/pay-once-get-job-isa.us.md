@@ -1,26 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2019-04-10 17:57:47+00:00
-excerpt: 4Geeks is now offering an ISA (Income Sharing Agreement) for anyone looking
-  to enroll in our Full-time programs.
-layout: post
-link: https://www.4geeksacademy.co/pay-once-get-job-isa/
-slug: pay-once-get-job-isa
-title: Pay once you get a Job
+author: "MRiciglianoC"
+date: "2019-04-10T17:57:47+00:00"
+excerpt: "4Geeks is now offering an ISA (Income Sharing Agreement) for anyone looking to enroll in our Full-time programs."
+slug: "pay-once-get-job-isa"
+title: "Pay once you get a Job"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/04/ISA-Blog-Cover.png"
 image_alt: ""
-
-categories:
-- Sin categoría
 cluster: "learn-to-code"
-tags:
-- 4geeks
-- coding
-- Python
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 # **Pay once you get a Job**

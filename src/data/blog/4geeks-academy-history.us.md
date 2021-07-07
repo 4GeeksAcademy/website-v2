@@ -1,23 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: "2015-12-23 05:31:23+00:00"
+author: "MRiciglianoC"
+date: "2015-12-23T05:31:23+00:00"
 excerpt: "Know in depth the history of 4Geeks Academy"
-layout: post
-link: https://www.4geeksacademy.co/4geeks-academy-history/
-slug: 4geeks-academy-history
-title: 4Geeks Academy Story
+slug: "4geeks-academy-history"
+title: "4Geeks Academy Story"
 image: "/images/why2.jpg"
 image_alt: ""
-
-categories:
-- Learning to code
 cluster: "learn-to-code"
-tags:
-- 4geeks
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 In 2009, together with two friends, we started a small software company with very big ambitions.  Just like any other startup story, we had no money (we didn't raise any funding), and our main office was our garage.

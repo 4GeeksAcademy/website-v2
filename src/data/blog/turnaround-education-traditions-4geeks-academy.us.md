@@ -1,27 +1,16 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2017-04-07 17:34:13+00:00
-excerpt: Education needs a change. There are more than 500.000 computer science open
-  jobs nationwide. And it will increase up to 1.4 million by 2020.
-layout: post
-link: https://www.4geeksacademy.co/turnaround-education-traditions-4geeks-academy/
-slug: turnaround-education-traditions-4geeks-academy
-title: Turnaround on Education Traditions | Part I
+author: "MRiciglianoC"
+date: "2017-04-07T17:34:13+00:00"
+excerpt: "Education needs a change. There are more than 500.000 computer science open jobs nationwide. And it will increase up to 1.4 million by 2020."
+slug: "turnaround-education-traditions-4geeks-academy"
+title: "Turnaround on Education Traditions | Part I"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/04/ISA-Blog-Cover.png"
 image_alt: ""
-
 cluster: "learn-to-code"
-post_translations:
-- pll_5703862f49f64
-tags:
-- 4geeks
-- 4geeks academy
-- coding education
-- Education
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+post_translations: ["pll_5703862f49f64"]
+status: "published"
+featured: "false"
+
 ---
 
 Education needs a change. It’s been changing, but probably not enough. Why? There are, in STEM at least, more open jobs than postulations. Either the Economy is saying that working as an employee is bad, or the education methods and standards are way behind the real needs. Let’s just focus on the educational problem and forget -for a bit- about the economic trend of becoming an entrepreneur.

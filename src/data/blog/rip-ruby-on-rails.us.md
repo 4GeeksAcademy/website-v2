@@ -1,28 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2016-01-18 15:02:43+00:00
-excerpt: Rails framework gave us a lot, it changed the way web products were made,
-  but now Ruby is behind the rest. Is not even in the top 10 already.
-layout: post
-link: https://www.4geeksacademy.co/rip-ruby-on-rails/
-slug: rip-ruby-on-rails
-title: R.I.P. Ruby on Rails. Thanks for everything!
+author: "alesanchezr"
+date: "2016-01-18T15:02:43+00:00"
+excerpt: "Rails framework gave us a lot, it changed the way web products were made, but now Ruby is behind the rest. Is not even in the top 10 already."
+slug: "rip-ruby-on-rails"
+title: "R.I.P. Ruby on Rails. Thanks for everything!"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/ruby.png"
 image_alt: ""
-
-categories:
-- Learning to code
-- Why learn to code?
 cluster: "full-stack-developer"
-tags:
-- Javascript
-- php
-- ruby
-- Web Developer
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 I’ve been a developer since I was 13 years old.  I’ve used almost every web framework out there, from PHP 3.1 to Node.js, React, etc.  People around me know that I’m not one of those people that starts endless fights like: Mac vs PC, Metallica vs Megadeth, etc.

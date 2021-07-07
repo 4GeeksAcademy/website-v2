@@ -1,27 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2017-10-11 20:30:18+00:00
-excerpt: Have you ever played The Sims or League of Legends? If you have, you familiar
-  with the concept of “earning skills”
-layout: post
-link: https://www.4geeksacademy.co/the-talent-tree/
-slug: the-talent-tree
-title: The Talent Tree
+author: "alesanchezr"
+date: "2017-10-11T20:30:18+00:00"
+excerpt: "Have you ever played The Sims or League of Legends? If you have, you familiar with the concept of “earning skills”"
+slug: "the-talent-tree"
+title: "The Talent Tree"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Talents_for_Paladins.jpg"
 image_alt: ""
-
-categories:
-- Learning to code
 cluster: "learn-to-code"
-tags:
-- 4geeks academy
-- challenges of a web developer
-- coding bootcamp
-- coding education
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 Have you ever played Sims, League Of Legends, Zelda or Civilization?  If you have, you are very familiar with the concept of “earning skills.”  The** Talent Tree ®** is one of the things that makes us very proud – it is the foundation on which the entire academic experience is built on.  Here is why:

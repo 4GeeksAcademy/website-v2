@@ -1,21 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-11-14 03:22:14+00:00
-excerpt: MDC and 4Geeks Academy have been working together for more than 2 years already. Know our history here
-layout: post
-link: https://www.4geeksacademy.co/4geeks-miami-dade-college-story/
-slug: 4geeks-miami-dade-college-story
-title: 4Geeks Academy & Miami Dade College |  A Story of Success
+author: "MRiciglianoC"
+date: "2018-11-14T03:22:14+00:00"
+excerpt: "MDC and 4Geeks Academy have been working together for more than 2 years already. Know our history here"
+slug: "4geeks-miami-dade-college-story"
+title: "4Geeks Academy & Miami Dade College |  A Story of Success"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2018/11/Massive-Cyber-Monday-Sale-1.png"
 image_alt: ""
-
-categories:
-- Learning to code
-- Why learn to code?
 cluster: "learn-to-code"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 Long are the days since we had to enroll in higher education just to have the chance to get access to the best job positions in the market. Coding and the activities around it are in dire need of talent. Miami Dade College has always looked further and offered students the best choices in career paths, that’s why MDC and 4Geeks Academy have been working together for more than 2 years already, in order to take students on a coding journey that won’t make them break the bank and will take them to excellent jobs.

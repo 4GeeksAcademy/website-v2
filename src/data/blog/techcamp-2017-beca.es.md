@@ -1,23 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2017-07-18 20:38:51+00:00
-excerpt: Conoce las becas entregadas a 4 emprendedores del TechCamp Caracas 2017
-layout: post
-link: https://www.4geeksacademy.co/es/techcamp-2017-beca/
-slug: techcamp-2017-beca
-title: ¡4Geeks Academy becó a 4 emprendedores del TechCamp Caracas 2017!
+author: "4GeeksAcademy"
+date: "2017-07-18T20:38:51+00:00"
+excerpt: "Conoce las becas entregadas a 4 emprendedores del TechCamp Caracas 2017"
+slug: "techcamp-2017-beca"
+title: "¡4Geeks Academy becó a 4 emprendedores del TechCamp Caracas 2017!"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/07/ISA-Blog-Cover.png"
 image_alt: ""
-
-categories:
-- Aprendiendo a desarrollar
 cluster: "aprendiendo-a-desarrollar"
-lang: "es"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
-tags:
-- 4geeks
+status: "published"
+featured: "true"
+
 ---
 
 El pasado mes de junio se celebró la tercera edición del [**TechCamp**](https://techcamp.america.gov/)** Caracas**. El evento contó con 60 proyectos de emprendedores sociales y líderes de Organizaciones No Gubernamentales (ONG’s), que se fueron a casa con herramientas tecnológicas innovadoras que facilitarán el cumplimiento de sus desafíos.

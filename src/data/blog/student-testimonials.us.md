@@ -1,27 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-11-05 22:22:21+00:00
-excerpt: We want to share our student’s stories, motivations and reasons.
-layout: post
-link: https://www.4geeksacademy.co/student-testimonials/
-slug: student-testimonials
-title: Learn to code at 4Geeks| Voices to be heard
+author: "MRiciglianoC"
+date: "2018-11-05T22:22:21+00:00"
+excerpt: "We want to share our student’s stories, motivations and reasons."
+slug: "student-testimonials"
+title: "Learn to code at 4Geeks| Voices to be heard"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/Jennifer-768x768.png"
 image_alt: ""
-
-categories:
-- Learning to code
-- Why learn to code?
 cluster: "learn-to-code"
-tags:
-- coding
-- coding bootcamps
-- investment
-- Jobs in Miami
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 Coding is a unique experience for everyone involved. “Software is eating the world,” shares a Quora contributor[ on the Forbes website](https://www.forbes.com/sites/quora/2017/01/20/will-the-demand-for-developers-continue-to-increase/#7090450433ee). Even if dated for internet standards, the article remains current. Companies are doing the same things and users are still relying on apps to make their lives easier. More and more people are joining the internet world daily and the need for more robust technology is imperative.

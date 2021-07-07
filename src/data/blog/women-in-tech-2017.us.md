@@ -1,26 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-01-17 04:01:12+00:00
-excerpt: Among the tech community, women are only taking 31% of the total workspace,
-  but today women occupy only 18% of proportion in computer
-  science degrees
-layout: post
-link: https://www.4geeksacademy.co/women-in-tech-2017/
-slug: women-in-tech-2017
-title: Women in Tech 2017
+author: "MRiciglianoC"
+date: "2018-01-17T04:01:12+00:00"
+excerpt: "Among the tech community, women are only taking 31% of the total workspace, but today women occupy only 18% of proportion in computer science degrees"
+slug: "women-in-tech-2017"
+title: "Women in Tech 2017"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/01/Screen-Shot-2018-01-16-at-11.58.32-PM.png"
 image_alt: ""
-
 cluster: "learn-to-code"
-categories:
-- Living and working as a developer
-- Why learn to code?
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+status: "published"
+featured: "false"
+
 ---
 
 Women in tech still represent a small share of the workforce.  Not only are gender gaps a concern, but also the roles they have in the industry.  According to the [World Bank](https://data.worldbank.org/indicator/SL.TLF.TOTL.FE.ZS), women are 40% workforce in the world, and in some countries that number can go up to 59%. However, [Payscale reports](https://www.payscale.com/data-packages/gender-pay-gap/women-in-tech) that the industry is mostly occupied by men at all levels[.](https://www.payscale.com/data-packages/gender-pay-gap/women-in-tech)

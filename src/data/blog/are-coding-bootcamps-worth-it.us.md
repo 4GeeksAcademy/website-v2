@@ -1,20 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2021-04-09 05:29:14 +0000
-excerpt: Short analysis about leads and interviews to know if coding bootcamps are worth it
-layout: post
-slug: are-coding-bootcamp-worth-it
-title: Are Coding Bootcamps worth it? My take after interviewing more than +3000 leads
-image: https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/coding-in-bootcamp.jpg?raw=true
+author: "MRiciglianoC"
+date: "2021-04-09T05:29:14+00:00"
+excerpt: "Short analysis about leads and interviews to know if coding bootcamps are worth it"
+slug: "are-coding-bootcamp-worth-it"
+title: "Are Coding Bootcamps worth it? My take after interviewing more than +3000 leads"
+image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/coding-in-bootcamp.jpg?raw=true"
 image_alt: "students learning code in a bootcamp"
-
-categories:
-- coding bootcamps
 cluster: "coding-bootcamps"
+status: "published"
+featured: "true"
 
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
 ---
 
 Since we started 4Geeks, I have always been in charge of admissions in the US and elsewhere. I have interviewed or met -at least - more than 3400 people right in the moment where they are about to decide whether joining a coding bootcamp is the right choice for learning to code. 

@@ -1,25 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-03-19 22:36:42+00:00
-excerpt: It’s time to update our numbers. The annual average salary in the US has
-  grown up 1% in February 2018.
-layout: post
-link: https://www.4geeksacademy.co/wages-report-2018-1/
-slug: wages-report-2018-1
-title: Bootcamp Graduates Salary 2018
+author: "MRiciglianoC"
+date: "2018-03-19T22:36:42+00:00"
+excerpt: "It’s time to update our numbers. The annual average salary in the US has grown up 1% in February 2018."
+slug: "wages-report-2018-1"
+title: "Bootcamp Graduates Salary 2018"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/BOOTCAMP2018-01-768x505.png"
 image_alt: ""
-
 cluster: "learn-to-code"
-categories:
-- Living and working as a developer
-- Why learn to code?
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+status: "published"
+featured: "false"
+
 ---
 
 It’s time to update our numbers.  Every 6 months we take the task to update the current trends and data related to Developer’s wages.  The question we want to answer with updated data remains the same: What is the average wage for a Software or Web Developer in the US?

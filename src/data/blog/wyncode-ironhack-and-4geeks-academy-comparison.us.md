@@ -1,27 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-01-08 11:14:46+00:00
-excerpt: A straightforward analysis of your main Coding Bootcamps options in Miami.
-layout: post
-link: https://www.4geeksacademy.co/wyncode-ironhack-and-4geeks-academy-comparison/
-slug: wyncode-ironhack-and-4geeks-academy-comparison
-title: Wyncode, Ironhack and 4Geeks Academy comparison
+author: "4GeeksAcademy"
+date: "2016-01-08T11:14:46+00:00"
+excerpt: "A straightforward analysis of your main Coding Bootcamps options in Miami."
+slug: "wyncode-ironhack-and-4geeks-academy-comparison"
+title: "Wyncode, Ironhack and 4Geeks Academy comparison"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/wyncode4geeksironhack.jpeg"
 image_alt: ""
-
-categories:
-- Learning to code
 cluster: "learn-to-code"
-tags:
-- 4geeks
-- coding bootcamp
-- ironhack
-- learn to code
-- wyncode
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 We are sure that every potential student is asking the same question:  Which is the best coding academy (development bootcamp) in Miami?

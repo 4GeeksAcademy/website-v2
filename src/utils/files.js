@@ -174,15 +174,17 @@ const updateFrontMatter = (post, data, conditions={}, test=false) => {
   if(typeof(front_matter.attributes.status)==="undefined" || front_matter.attributes.status === null) 
     front_matter.attributes.status = "published";
   
-  delete front_matter.lang
-  delete front_matter.link
-  delete front_matter.categories
-  delete front_matter.tags
-  
   // WARNING! clean up UNDEFINED data, if its null it well not be cleaned, only undefined
   Object.keys(data).forEach(key => data[key] === undefined && delete data[key] )
   
   let attributes = { ...front_matter.attributes, ...data };
+
+  delete attributes.lang
+  delete attributes.link
+  delete attributes.categories
+  delete attributes.tags
+  delete attributes.layout
+  delete attributes.comments
   
   // deleting null attributes on front-matters
   Object.keys(attributes).forEach(key => attributes[key] === null && delete attributes[key] )
