@@ -42,7 +42,7 @@ follow_bar:
 header_data:
   tagline: Aprende a programar
   sub_heading: in only 16 weeks (part-time)
-  image: "../../../static/images/bg/main-bg.jpg"
+  image: "../../../static/images/bg/4geeks-main.jpg"
   image_filter: brightness(0.4) #0 is dark, 1 is bright
 
 features:

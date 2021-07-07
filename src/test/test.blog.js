@@ -1,8 +1,7 @@
 
 var colors = require('colors')
-const fs = require('fs')
-const fm = require('front-matter')
-const {walk, loadMD, empty, fail, success} = require("./_utils")
+const {walk, loadMD, empty, fail, success, localizeImage} = require("./_utils")
+const twitterUser = require('../utils/twitter')
 
 const front_matter_fields = [
     {key: "slug", type: "string", mandatory: true},
@@ -10,7 +9,7 @@ const front_matter_fields = [
     {key: "excerpt", type: "string", length: 160},
     {key: "image", type: "string"},
     {key: "image_alt", type: "string"},
-    {key: "author", type: "string"},
+    {key: "author", type: "string", mandatory: true},
 ]
 
 walk(`${__dirname}/../data/blog`, async function (err, files) {
@@ -19,20 +18,24 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
         (f.indexOf('.md') > 1 || f.indexOf('.md') > 1)
     )
 
-    let slugs = {};
-    
     for (let i = 0; i < _files.length; i++) {
         const _path = _files[i];
 
         try {
             const content = loadMD(_path)
             const frontmatter = content.attributes
-            // if (!doc.yaml) fail("Invalid YML syntax for " + _path)
-            // if (!doc.lang) fail("Missing language on yml file name for " + _path)
-
             const meta_keys = Object.keys(frontmatter)
-            front_matter_fields.forEach(m => {
+            const autor_keys = Object.keys(twitterUser)
+
+            localizeImage(frontmatter.image, 'relative_images', _path, 'blog')
+
+            front_matter_fields.forEach((m) => {
+                let authors_verifying = autor_keys.find(el => el === frontmatter["author"])
                 if(!meta_keys.includes(m["key"])) fail(`Missing prop ${m["key"]} on frontmatter on ${_path}`)
+                
+                // Pretty log
+                if(authors_verifying === undefined) fail(`${`\nProblem found in: ${_path}`.red}\n\n${`The author ${authors_verifying} not match with the username list:`.red} \n\n${autor_keys.map(el => `${el.green}\n`)} \n`)
+
                 else{
                     if(m["type"] === "array"){
                         if(m["mandatory"] === true && (!frontmatter[m["key"]] || frontmatter[m["key"]] === "null")) fail(`Invalid mandatory prop ${m["key"]} on ${_path} expected ${m["type"]} got ${frontmatter[m["key"]]}`)
@@ -54,4 +57,4 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
         }
     }
     success("All Markdown's have correct syntax")
-});     
+});
