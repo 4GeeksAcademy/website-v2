@@ -14,7 +14,7 @@ header:
     image_alt: ""
 
 events:
-    title: "Próxima Fechas"
+    title: "Próximos Eventos"
     paragraph: ""
 button:
     apply_button_text: "APLICAR"
@@ -22,7 +22,7 @@ button:
     cohort_more_details_text: "DETALLES"
     event_register_button_link: "DETALLES"
 cohorts:
-    title: "Próximas Fechas"
+    title: "Próximos Cohortes"
     paragraph: ""
     button:
         text: Buscar por sede o modalidad
@@ -33,6 +33,8 @@ cohorts:
         location_label: sede
         duration_label: duracion
         duration_weeks: 16 semanas
+        duration_part_time: 16 semanas
+        duration_full_time: 9 semanas
         button_text: aplicar
         button_link: "/es/aplica"
     footer:

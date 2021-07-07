@@ -1,5 +1,5 @@
 ---
-author: 
+author: "4GeeksAcademyES"
 date: 2021-05-19 20:44:51+00:00
 excerpt: Conoce aquí cómo encontrar trabajo freelance desde España o el mundo
 slug: freelance-espana

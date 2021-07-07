@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { walk, loadYML, empty, fail, success } = require("./_utils");
+const { walk, loadYML, empty, fail, success } = require("../test/_utils");
 
 let toKeyValue = (array) => {
   return Object.fromEntries(array);
@@ -111,12 +111,12 @@ const onCreateLangSwitcherData = () => {
         // WARN: to avoid the disorder of the dictionary this fragment has been commented
         // WARN: uncoment only if there are no pathsDictionary file created
 
-        // fs.writeFile(`${__dirname}/../utils/langSwitcherData.json`,
-        //   JSON.stringify(...All_dictionary),
-        //   (err) => {
-        //     if (err) return console.log(err);
-        //     console.log(`\nlangSwitcherData => /src/utils/langSwitcherData.json\n`);
-        // });
+        fs.writeFile(`${__dirname}/pathDictionary.json`,
+          JSON.stringify(...All_dictionary),
+          (err) => {
+            if (err) return console.log(err);
+            success(`\npathDictionary => /src/utils/pathDictionary.json\n`);
+        });
 
       });
     });

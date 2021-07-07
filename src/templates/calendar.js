@@ -51,13 +51,19 @@ const locations = {
 }
 const locationText = {
   us: "or",
-  es: "o"
+  es: "u"
 }
 
 const dateText = {
   us: "to",
   es: "al"
 }
+
+let modality = {
+  full_time: "Full Stack Developer - Full Time",
+  part_time: "Full Stack Developer - Part Time"
+};
+
 const Calendar = (props) => {
   const {pageContext, yml, data} = props;
   const [limit, setLimit] = useState(true);
@@ -70,12 +76,26 @@ const Calendar = (props) => {
   let content = data.allPageYaml.edges[0].node
   const [academy, setAcademy] = useState(null)
   const [filterType, setFilterType] = useState(pageContext.lang == "us" ? {label: "Upcoming Courses and Events", value: "cohorts"} : {label: "Próximos Cursos y Eventos", value: "cohorts"});
+  
 
   useEffect(() => {
     const getData = async () => {
       let cohorts = await getCohorts();
       let events = await getEvents();
+      let syllabus = []
+      for(let i in cohorts) {
+        let name = cohorts[i].syllabus?.certificate?.name
+        name === "Full-Stack Software Developer FT" ? name = modality["full_time"] : name
 
+        name === "Full-Stack Software Developer" ? name = modality["part_time"] : name      
+        // console.log("NAME:", name)
+        syllabus.push(name) 
+      }
+
+      for(let zx in cohorts){
+        cohorts[zx].syllabus.certificate.name = syllabus[zx]
+        // console.log("COHORTS - modified", cohorts[zx].syllabus.certificate.name)
+      }
       let _types = []
       for (let i = 0; i < events.length; i++) {
         if (events[i].event_type && !_types.includes(events[i].event_type.name)) {
@@ -135,8 +155,10 @@ const Calendar = (props) => {
 
       <GridContainer padding_tablet="0" margin="65px 0 65px 0" margin_tablet="65px 0 65px 0">
         <Div flexDirection="column">
-          <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
-            <H3 textAlign="left" width="188px">{yml.cohorts.title}</H3>
+          <Div padding="0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
+            <H3 type="h3" textAlign="left" width="100%" padding="25px 0" width="300px">
+              {yml.cohorts.title}
+            </H3>
             {/* <Button outline width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button> */}
             <Select
               // margin="0 10px 0 0"
@@ -189,7 +211,15 @@ const Calendar = (props) => {
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex">
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
-                  <Paragraph textAlign="left">{content.cohorts.info.duration_weeks}</Paragraph>
+                  <Paragraph textAlign="left">
+                    {
+                      m.syllabus.certificate.name === modality["full_time"] 
+                        ? content.cohorts.info.duration_full_time
+                        : m.syllabus.certificate.name === modality["part_time"] 
+                        ? content.cohorts.info.duration_part_time
+                        : content.cohorts.info.duration_weeks
+                    }
+                  </Paragraph>
                 </Div>
                 <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                   <Div flexDirection="column" width="50%">
@@ -321,6 +351,8 @@ export const query = graphql`
               program_label
               duration_label
               duration_weeks
+              duration_part_time
+              duration_full_time
               location_label
             }
             footer {

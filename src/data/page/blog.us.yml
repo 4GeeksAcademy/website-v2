@@ -10,6 +10,7 @@ banner:
   tagline: "4Geeks Academy Blog"
   sub_heading: "Resources and news for both potential and current software builders."
   image: "../../../static/images/bg/pricing-bg.jpg"
+  no_image: "https://i.imgur.com/n3V1Rqq.jpeg"
 
 seo_title: "4Geeks Academy Blog"
 header:
@@ -24,6 +25,7 @@ topics:
   - learn-to-code
   - coding-bootcamps
   - career-growth
+  
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."
