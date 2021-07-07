@@ -93,7 +93,7 @@ const Landing = (props) => {
           // display_md="flex" 
           containerColumns_tablet="repeat(1,0fr)"
           // padding="72px 0 0 0" 
-          // padding_tablet="72px 0 0 0"
+          padding_tablet="0 0 40px 0"
           columns_tablet="2"
           // padding_tabletChild="0 0 35px 0"
           // display="none"
@@ -110,7 +110,7 @@ const Landing = (props) => {
             margin="0 0 35px auto"
             padding={`80px 0 0 0`}
             height="auto"
-            padding_tablet={`80px 0 40px 20px`}
+            padding_tablet={`80px 0 0 20px`}
           >
             {
               yml.header_data.scholarship && 
@@ -323,7 +323,33 @@ export const query = graphql`
               position
               heading
               sub_heading
+              featured {
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 150
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 150){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
+                }
+                # featured
+              }
             }
+            choose_your_program{
+              position
+              programs {
+                link
+                sub_title
+                title
+                description
+                icon
+              }
+            }
+
             why_python{
               position
               heading

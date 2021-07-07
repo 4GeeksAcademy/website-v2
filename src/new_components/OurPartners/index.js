@@ -149,8 +149,7 @@ const Images_Featured = (props) => {
   return (
     <>
       <GridContainer columns_tablet="3" padding_tablet={props.paddingFeatured || "0"}>
-        {/* <Div justifyContent="center" flexDirection="column" flexDirection_md="row"> */}
-        {props.images.filter(f => f.featured == true).map((m, i) => {
+        {(props.featuredImages ? props.featuredImages : props.images.filter(f => f.featured == true)).map((m, i) => {
           return (
             <GatsbyImage
               key={i}
@@ -176,7 +175,7 @@ const Images_Featured = (props) => {
 
 
 //Punto de entrada al componente
-const OurPartners = ({title, paragraph, margin, padding, paddingFeatured, background, link, showFeatured, images, withoutLine, slider, marquee, ...rest}) => {
+const OurPartners = ({title, paragraph, margin, padding, paddingFeatured, background, link, showFeatured, featuredImages, images, withoutLine, slider, marquee, ...rest}) => {
 
 
   let FragmentStyle = {
@@ -193,7 +192,7 @@ const OurPartners = ({title, paragraph, margin, padding, paddingFeatured, backgr
         title && <Title_Paragraph title={title} paragraph={paragraph} background={background} />
       }
       {
-        showFeatured && <Images_Featured images={images} withoutLine={withoutLine} paddingFeatured={paddingFeatured} />
+        showFeatured && <Images_Featured images={images} featuredImages={featuredImages} withoutLine={withoutLine} paddingFeatured={paddingFeatured} />
       }
       {
         slider ?

@@ -29,7 +29,7 @@ header_data:
   sub_heading: ""
   scholarship: "../../../static/images/partner/microsoft_white.png"
   image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
-  image_filter: brightness(0.48)
+  image_filter: brightness(0.4)
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
@@ -91,9 +91,37 @@ iconogram:
 
 who_is_hiring:
   position: 4
-  limit: 3
+  # limit: 3
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
   sub_heading: "Gracias a nuestra creciente red de Aliados podemos contar con ofertas constantes a nivel nacional e internacional"
+  featured:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+
+choose_your_program:
+  position: 5
+  programs:
+  - title: "Full-Stack Developer"
+    sub_title: "Level 1"
+    icon: "fullstack"
+    description: "Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr."
+    link: "/es/coding-bootcamps/full-stack-part-time"
+    
+  - title: "Software Engineer"
+    sub_title: "Level 2"
+    icon: "software"
+    description: " Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando."
+    link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+    
+  # - title: "AI/Machine Learning Engineering"
+  #   sub_title: "Online"
+  #   icon: "machine"
+  #   description: "Conoce las herramientas necesarias para mejorar tus habilidades y ser parte del futuro de la Inteligencia Artificial."
+  #   link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 
 
 # in_the_news:

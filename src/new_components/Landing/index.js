@@ -19,6 +19,7 @@ import LeadForm from '../LeadForm';
 import OurPartners from "../OurPartners";
 import About4Geeks from '../About4Geeks';
 import IconsBanner from '../IconsBanner';
+import ChooseYourProgram from '../ChooseYourProgram';
 
 
 const Title = ({title, paragraph}) => {
@@ -253,12 +254,25 @@ export const landingSections = {
 
     program_details: ({session, pageContext, yml, data, index}) => {
         const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
-        console.log("Course: ", course)
         return (
             <React.Fragment id="Program_details" key={index}>
                 {/* <Title title={yml.heading} paragraph={yml.sub_heading} /> */}
                 <ProgramDetails details={course?.details} lang={pageContext.lang} />
                 <ProgramDetailsMobile details={course && course.details} />
+            </React.Fragment>
+        )
+    },
+
+    choose_your_program: ({session, pageContext, yml, data, index}) => {
+        // const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
+        let chooseYourProgram = data.allLandingYaml.edges[0].node?.choose_your_program
+        return (
+            <React.Fragment id="choose_your_programs" key={index}>
+                <ChooseYourProgram 
+                    // chooseProgramRef={chooseProgramRef} 
+                    lang={pageContext.lang}
+                    programs={chooseYourProgram.programs} />
+
             </React.Fragment>
         )
     },
@@ -306,6 +320,7 @@ export const landingSections = {
                 padding="0 ​0 75px 0"
                 marquee
                 paddingFeatured="0 0 70px 0"
+                featuredImages={landingHiriging?.featured}
                 showFeatured
                 withoutLine
                 title={landingHiriging ? landingHiriging.heading : hiring.partners.tagline} 
