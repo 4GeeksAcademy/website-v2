@@ -1,29 +1,15 @@
 ---
-author: vsegnini
-comments: true
-date: 2020-01-20 21:09:10+00:00
-excerpt: We actually do not understand why only a few coding schools are teaching
-  JS and Python combined into just one program.
-layout: post
-link: https://www.4geeksacademy.co/digital-marketing-in-the-coding-world/
-slug: digital-marketing-in-the-coding-world
-title: Digital Marketing in the Coding World
+author: "vsegnini"
+date: "2020-01-20T21:09:10+00:00"
+excerpt: "We actually do not understand why only a few coding schools are teaching JS and Python combined into just one program."
+slug: "digital-marketing-in-the-coding-world"
+title: "Digital Marketing in the Coding World"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2020/01/BLOG-04-1-scaled.jpg"
 image_alt: ""
-wordpress_id: 3796
-categories:
-- Sin categoría
 cluster: "trends-and-tech"
-tags:
-- 4geeks
-- coding
-- learn to code
-- marketing
-- miami
-- programmers
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 # **Digital marketing in the coding world**

@@ -1,23 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-07-25 18:52:57+00:00
-excerpt: The ideal instructor, know the attributes and skills of a good teacher when you are learning to code
-layout: post
-link: https://www.4geeksacademy.co/the-ideal-instructor/
-slug: the-ideal-instructor
-title: THE IDEAL INSTRUCTOR
+author: "4GeeksAcademy"
+date: "2016-07-25T18:52:57+00:00"
+excerpt: "The ideal instructor, know the attributes and skills of a good teacher when you are learning to code"
+slug: "the-ideal-instructor"
+title: "THE IDEAL INSTRUCTOR"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/admin-ajax-1.jpeg"
 image_alt: ""
-wordpress_id: 1226
-categories:
-- Learning to code
 cluster: "learn-to-code"
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+status: "published"
+featured: "false"
+
 ---
 
 I recall that when I was about to start a new course, I asked myself if the new instructor would be an easy-going person or a conversely one; If s/he would be able to teach all the information that is required to become a good professional.  It makes me think about how important the person is whom can transform clay into a beautiful sculpture.

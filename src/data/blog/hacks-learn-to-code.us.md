@@ -1,27 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2019-09-18 23:16:33+00:00
-excerpt: The key to being a great coder is having the disposition to improve every
-  day and apply strategies that will make you more productive and efficient.
-layout: post
-link: https://www.4geeksacademy.co/hacks-lear-to-code/
-slug: hacks-learn-to-code
-title: 'Hacks for learning to code: Read Less and Learn Better'
+author: "MRiciglianoC"
+date: "2019-09-18T23:16:33+00:00"
+excerpt: "The key to being a great coder is having the disposition to improve every day and apply strategies that will make you more productive and efficient."
+slug: "hacks-learn-to-code"
+title: "Hacks for learning to code: Read Less and Learn Better"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/09/Study-Hacks-03-1024x523.jpg"
 image_alt: ""
-wordpress_id: 3651
-categories:
-- Sin categoría
 cluster: "learn-to-code"
-tags:
-- 4geeks
-- coding
-- Jobs in Miami
-- Python
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 # **Hacks for learning to code: Read Less and Learn Better**

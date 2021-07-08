@@ -1,21 +1,16 @@
 ---
-author: 4GeeksAcademyES
-date: 2021-03-08 05:31:23+00:00
-excerpt: Conoce el nuevo partnership con Ticjob
-slug: ticjob-se-une-a-nuestros-partners
+author: "4GeeksAcademyES"
+date: "2021-03-08T05:31:23+00:00"
+excerpt: "Conoce el nuevo partnership con Ticjob"
+slug: "ticjob-se-une-a-nuestros-partners"
 title: "Ticjob se une a nuestros partners"
 image: "/images/blog/Blog_post.png"
 image_alt: ""
-categories:
-- Partnerships
-cluster: "trends-and-tech"
-tags:
-- 4geeks
-- ticjob
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
----
+cluster: "tendencias-y-tecnologia"
+status: "published"
+featured: "true"
 
+---
 
 # Ticjob se uno a nuestros partners
 
@@ -23,7 +18,7 @@ Qué mejor manera de continuar el mes de Marzo que presentando a nuestro nuevo p
 
 El principal objetivo de **[4Geeks Academy](/)** es **lanzar la carrera tecnológica** de nuestros alumnos para que consigan un trabajo en programación lo más rápido posible tras completar nuestra formación premium en **desarrollo de software**. Para mejorar sus opciones e impulsar su empleabilidad, hemos desarrollado esta **alianza estratégica con TicJob**.
 
-[TicJob.es](http://ticjob.es/) es uno de los mayores portales de empleo en España especializado en perfiles TIC. Cuenta con un **motor de búsqueda patentado y un sistema de comunicación innovador** que permite que se produzca el match perfecto entre empresas y candidatos, basándose en las necesidades de las empresas y las competencias y objetivos profesionales de los candidatos.
+[TicJob.es](https://ticjob.es/) es uno de los mayores portales de empleo en España especializado en perfiles TIC. Cuenta con un **motor de búsqueda patentado y un sistema de comunicación innovador** que permite que se produzca el match perfecto entre empresas y candidatos, basándose en las necesidades de las empresas y las competencias y objetivos profesionales de los candidatos.
 
 ![Ticjob se uno a nuestros partners](https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/ARTE_BLOG.png?raw=true)
 

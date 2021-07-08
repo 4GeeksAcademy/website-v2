@@ -1,28 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-02-11 15:28:28+00:00
+author: "4GeeksAcademy"
+date: "2016-02-11T15:28:28+00:00"
 excerpt: "Getting Students Closer To A Coding Education"
-layout: post
-link: https://www.4geeksacademy.co/ama-chapter-of-fiu-4geeks-academy/
-slug: ama-chapter-of-fiu-4geeks-academy
-title: AMA Chapter of FIU + 4Geeks Academy - Getting Students Closer To A Coding Education
-image: null
+slug: "ama-chapter-of-fiu-4geeks-academy"
+title: "AMA Chapter of FIU + 4Geeks Academy - Getting Students Closer To A Coding Education"
+image: "https://github.com/4geeksacademy/website-v2/blob/master/static/images/blog/ama_logo.jpeg?raw=true"
 image_alt: ""
-wordpress_id: 792
-categories:
-- Sin categoría
-- Why learn to code?
 cluster: "trends-and-tech"
-tags:
-- AMA FIU
-- American Marketing Association Chapter of Florida International University
-- coding education
-- FIU
-- Florida International University
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 # AMA Chapter of FIU + 4Geeks Academy - Getting Students Closer To A Coding Education

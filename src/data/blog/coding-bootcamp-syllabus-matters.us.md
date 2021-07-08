@@ -1,22 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2017-11-04 00:33:50+00:00
-excerpt: The stack of technologies included in a Syllabus actually matters. It does,
-  sorry. We all know that.
-layout: post
-link: https://www.4geeksacademy.co/coding-bootcamp-syllabus-matters/
-slug: coding-bootcamp-syllabus-matters
-title: The coding bootcamp syllabus matters
+author: "alesanchezr"
+date: "2017-11-04T00:33:50+00:00"
+excerpt: "The stack of technologies included in a Syllabus actually matters. It does, sorry. We all know that."
+slug: "coding-bootcamp-syllabus-matters"
+title: "The coding bootcamp syllabus matters"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/11/POST-TECNOLOGIA-01.jpg"
 image_alt: ""
-wordpress_id: 2600
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
 cluster: "coding-bootcamps"
-tags:
-- 4geeks
+
 ---
 
 If you look at the Full-Stack Web Development Bootcamp industry, you rapidly realize that they have been teaching the same programming languages since the beginning.  When potential students ask about that, the academies quickly start undermining the role of the language by saying that it does not really matter - that you can switch fast from one to the other.

@@ -1,25 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-04-12 18:18:16+00:00
-excerpt: Our most recent cohort begun with 60% of women enrollment. Women in Miami
-  are choosing 4Geeks to build their software careers.
-layout: post
-link: https://www.4geeksacademy.co/empowering-women-tech/
-slug: empowering-women-tech
-title: 4Geeks Academy empowering Women in Tech
+author: "MRiciglianoC"
+date: "2018-04-12T18:18:16+00:00"
+excerpt: "Our most recent cohort begun with 60% of women enrollment. Women in Miami are choosing 4Geeks to build their software careers."
+slug: "empowering-women-tech"
+title: "4Geeks Academy empowering Women in Tech"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/04/Women-Powering-01-1-1024x645.png"
 image_alt: ""
-wordpress_id: 2849
 cluster: "trends-and-tech"
-categories:
-- Living and working as a developer
-- Why learn to code?
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+status: "published"
+featured: "false"
+
 ---
 
 We’ve all seen the statistics about [women in tech](/women-in-tech-2017).  Gender gaps is a reality, but we are not going to talk about those gaps anymore; we are celebrating gender diversity at 4Geeks Academy.  That’s why we are so proud and happy to announce that our Cohort III at Downtown Miami has a **60% female enrollment**!

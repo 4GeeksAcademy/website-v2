@@ -1,6 +1,7 @@
 
 var colors = require('colors')
-const {walk, loadMD, empty, fail, success, localizeImage} = require("./_utils")
+const path = require("path")
+const {walk, loadMD, loadYML, fail, success, localizeImage} = require("./_utils")
 const twitterUser = require('../utils/twitter')
 
 const front_matter_fields = [
@@ -12,11 +13,35 @@ const front_matter_fields = [
     {key: "author", type: "string", mandatory: true},
 ]
 
+const getLang = (fileAbsolutePath) => {
+    const regex = /[\w-]*\/([\w-\]\[]*)\.?(\w{1,2})?\.md/gm;
+    let m = regex.exec(fileAbsolutePath);
+    if(!m) return false;
+  
+    return m[2];
+  };
+
+const getClusters = () => {
+    const ymlUS = loadYML(path.resolve(`${__dirname}/../data/page/blog.us.yml`))
+    const ymlES = loadYML(path.resolve(`${__dirname}/../data/page/blog.es.yml`))
+    return {
+        "us": ymlUS.yaml.topics,
+        "es": ymlES.yaml.topics
+    }
+};
+
 walk(`${__dirname}/../data/blog`, async function (err, files) {
     if (err) fail("Error reading the Markdown files: ", err)
-    const _files = files.filter(f =>
-        (f.indexOf('.md') > 1 || f.indexOf('.md') > 1)
-    )
+    const _files = files.filter(f => {
+        return path.extname(f) == ".md"
+    })
+
+    if(_files.length != files.length) fail("Only markdown files should be inside the ./data/blog directory, please fix the following: \n\n", files.filter(f => {
+        return path.extname(f) != ".md"
+    }).join("\n").red + "\n")
+
+    const global_clusters = getClusters();
+
 
     for (let i = 0; i < _files.length; i++) {
         const _path = _files[i];
@@ -26,6 +51,23 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             const frontmatter = content.attributes
             const meta_keys = Object.keys(frontmatter)
             const autor_keys = Object.keys(twitterUser)
+            let _slug = await _path.split(".")[0].substr(_path.lastIndexOf("/") +1)
+            
+            if(_path.includes(" ")) throw Error("File name cannot have white spaces only letters, numbers and -")
+            /*
+                changed _path to _slug because it compares with relative local path
+                like /Documents/work/... with /documents/work/... and the test fails
+            */ 
+            if(_slug.toLowerCase() !== _slug) throw Error("File name must be all lowecase")
+
+            const lang = getLang(_path);
+            if(!lang) throw Error("Missing language information on file name, make sure it has the language info before the extension; For example: my-file.es.md")
+            else if(lang === "en") throw Error(`Please use "us" instead of "en" for english language information on the file name; For example: my-file.us.md`)
+
+            if(frontmatter["cluster"] === undefined) throw Error("Missing post cluster")
+            else if(global_clusters === undefined || global_clusters.length === 0) throw Error(`Empty or missing global clusters, check the topics property on the ./src/data/page/blog.[lang].md YML files`);
+            else if(global_clusters[lang] === undefined) throw Error(`Missing clusters for lang "${lang}", these are the clusters we found: ${JSON.stringify(global_clusters)}`);
+            else if(!global_clusters[lang].includes(frontmatter["cluster"])) throw Error(`Invalid post cluster "${frontmatter["cluster"]}", it should be one of the following: ${global_clusters[lang].join(",")}. To manage topis go to ./src/data/page/blog.[lang].md file and look for the "topics" property list`)
 
             localizeImage(frontmatter.image, 'relative_images', _path, 'blog')
 
@@ -34,7 +76,7 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
                 if(!meta_keys.includes(m["key"])) fail(`Missing prop ${m["key"]} on frontmatter on ${_path}`)
                 
                 // Pretty log
-                if(authors_verifying === undefined) fail(`${`\nProblem found in: ${_path}`.red}\n\n${`The author ${authors_verifying} not match with the username list:`.red} \n\n${autor_keys.map(el => `${el.green}\n`)} \n`)
+                if(authors_verifying === undefined) throw Error(`${`\nProblem found in: ${_path}`.red}\n\n${`Missing author on file, please make if match from this list:`.red} \n\n${autor_keys.map(el => `${el.green}\n`)} \n`)
 
                 else{
                     if(m["type"] === "array"){
@@ -56,5 +98,5 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             fail(error.message || error)
         }
     }
-    success("All Blog's Markdown's have correct syntax")
-});     
+    success("All Blog Markdown's have correct syntax")
+});

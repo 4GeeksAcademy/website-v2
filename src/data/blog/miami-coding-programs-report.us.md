@@ -1,27 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-11-06 20:24:41+00:00
-excerpt: Everything you need to know about Miami Coding Programs
-layout: post
-link: https://www.4geeksacademy.co/miami-coding-programs-report/
-slug: miami-coding-programs-report
-title: Miami Coding Bootcamps | 2018 Report
+author: "MRiciglianoC"
+date: "2018-11-06T20:24:41+00:00"
+excerpt: "Everything you need to know about Miami Coding Programs"
+slug: "miami-coding-programs-report"
+title: "Miami Coding Bootcamps | 2018 Report"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/MIAMI-CODING-04-768x768.jpg"
 image_alt: ""
-wordpress_id: 3293
-categories:
-- Learning to code
-- Why learn to code?
 cluster: "trends-and-tech"
-tags:
-- coding
-- coding bootcamps
-- investment
-- Jobs in Miami
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 Coding Bootcamps are the solution to traditional education institutions’ lack of perspective. Tech talent is needed and Coding Bootcamps are graduating skillful students to address complex software challenges. 
@@ -36,9 +24,9 @@ We understand how important the conversation is about Return of Investment. [Her
 
 [Everything began in 2011](https://www.theatlantic.com/technology/archive/2012/01/what-hacker-apprenticeships-tell-us-about-the-future-of-education/251039/). A new methodology of coding education was being required. Waiting for 4 years in order to get your first College Diploma was just too long. Companies need tech talent and they can’t wait forever to fill the gap. But having a Diploma is also important, regardless of whether it comes from a college or a Bootcamp. 
 
-According to a recent report made by Indeed, 84% of employers are satisfied with [Bootcamp graduates](http://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/). Graduating from a Bootcamp will give you the tools to find a job. There are some reports establishing -as criticism- that only 75% of graduates (from a Coding School) actually find a job after graduation. It would look as if the criticism has some ground, however, if we compare that with the percentage of college graduates finding a job, it still looks like Coding Bootcamps add more value to the labor market than traditional institutions. 
+According to a recent report made by Indeed, 84% of employers are satisfied with [Bootcamp graduates](https://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/). Graduating from a Bootcamp will give you the tools to find a job. There are some reports establishing -as criticism- that only 75% of graduates (from a Coding School) actually find a job after graduation. It would look as if the criticism has some ground, however, if we compare that with the percentage of college graduates finding a job, it still looks like Coding Bootcamps add more value to the labor market than traditional institutions. 
 
-Coding Bootcamps are now in at least [80 US cities](https://www.coursereport.com/reports/2018-coding-bootcamp-market-size-research). There are several reasons behind that. First, there is a (i) [need of talent](http://noticias.universia.com.ar/practicas-empleo/noticia/2017/01/04/1148089/10-habilidades-demandadas-2017-mercado-laboral-global.html): more open positions than graduates per year; and (ii) Coding Programs are really hands-on, mainly focused on skills and technologies. 
+Coding Bootcamps are now in at least [80 US cities](https://www.coursereport.com/reports/2018-coding-bootcamp-market-size-research). There are several reasons behind that. First, there is a (i) [need of talent](https://noticias.universia.com.ar/practicas-empleo/noticia/2017/01/04/1148089/10-habilidades-demandadas-2017-mercado-laboral-global.html): more open positions than graduates per year; and (ii) Coding Programs are really hands-on, mainly focused on skills and technologies. 
 
 The importance of a Coding Bootcamps relies on the fact that they are efficient and effective. According to a LinkedIn report (published in 2017), programming was the most demanded skill of the year. Bootcamps are growing everywhere. Le Wagon, for example, has locations in already 4 different continents. General Assembly is across the US territory, Ironhack is opening a new location every now and then, 4Geeks has already 3 cities and is opening 2 more cities in the next few months, etc.
 
@@ -124,7 +112,7 @@ On the other hand, **4Geeks** has developed Breathe Code, a platform aimed to tr
 
 **HOW RELIABLE IS A BOOTCAMP?**
 
-[**A report**](http://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/) from 2017 says that 84% of employers think that bootcamps graduates are more or as prepared as a college graduate. That’s why this is a real discussion. College graduates and Bootcamp graduates are ready to face the same coding challenges and able to earn the same amount of money.
+[**A report**](https://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/) from 2017 says that 84% of employers think that bootcamps graduates are more or as prepared as a college graduate. That’s why this is a real discussion. College graduates and Bootcamp graduates are ready to face the same coding challenges and able to earn the same amount of money.
 
 It is also important to understand what alumni say about their experience, and how experts are providing insights on the role of Coding Bootcamps within the new education trends.
 

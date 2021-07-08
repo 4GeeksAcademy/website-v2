@@ -1,23 +1,15 @@
 ---
-author: MRiciglianoC
-date: 2021-02-24 05:29:14 +0000
-excerpt: Conoce cuánto gana un desarrollador full stack en Chile en el año 2021
-layout: post
-slug: cuanto-gana-un-desarrollador-full-stack
-title: ¿Cuánto gana un Desarrollador Web Full-Stack en Chile?
-image: https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/desarrollador-full-stack-chileno.jpg?raw=true
+author: "MRiciglianoC"
+date: "2021-02-24T05:29:14+00:00"
+excerpt: "Conoce cuánto gana un desarrollador full stack en Chile en el año 2021"
+slug: "cuanto-gana-un-desarrollador-full-stack"
+title: "¿Cuánto gana un Desarrollador Web Full-Stack en Chile?"
+image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/desarrollador-full-stack-chileno.jpg?raw=true"
 image_alt: "desarrollador full stack chileno programando"
 cluster: "full-stack"
-categories:
-- coding bootcamps
-lang: us
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
-tags: 
-- report
-- pandemic 
-- coding bootcamps 
-- COVID-19
+status: "published"
+featured: "true"
+
 ---
 
 En las últimas dos décadas hemos presenciado la mayor aceleración tecnológica a nivel computacional. Pero el 2020 fue el año con nitro en la carrera, ya que la emergencia sanitaria mundial llevó a miles de emprendedores, empresas, negocios e industrias a moverse a lo digital. 

@@ -13,7 +13,7 @@ import {Link} from 'gatsby'
 import Icon from '../new_components/Icon'
 
 const SVGImage = () =>
-    <svg width="550" height="335" viewBox="0 0 550 335" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="550" height="335" viewBox="0 0 550 335" fill="none" xmlns="https:://www.w3.org/2000/svg">
         <circle cx="222" cy="37" r="37" fill="#FFB718" fill-opacity="0.2" />
         <circle cx="330" cy="5" r="5" fill="#CD0000" />
         <circle cx="43.5" cy="291.5" r="43.5" fill="#0097CD" />
@@ -24,7 +24,7 @@ const SVGImage = () =>
     </svg>
 
 const RedPin = ({style}) =>
-    <svg width="8" height="16" style={style} viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="8" height="16" style={style} viewBox="0 0 8 16" fill="none" xmlns="https:://www.w3.org/2000/svg">
         <circle cx="4" cy="12" r="4" fill="#CD0000" />
         <path d="M7 3.04545L4 1V5.09091L7 3.04545Z" fill="#CD0000" />
         <path d="M4 10V5.09091M4 5.09091V1L7 3.04545L4 5.09091Z" stroke="#CD0000" />

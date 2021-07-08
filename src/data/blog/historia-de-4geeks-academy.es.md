@@ -1,23 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-04-13 20:36:02+00:00
-excerpt: Conoce la historia en profundidad de 4Geeks Academy
-layout: post
-link: https://www.4geeksacademy.co/es/historia-de-4geeks-academy/
-slug: historia-de-4geeks-academy
-title: Historia de 4Geeks Academy
+author: "4GeeksAcademy"
+date: "2016-04-13T20:36:02+00:00"
+excerpt: "Conoce la historia en profundidad de 4Geeks Academy"
+slug: "historia-de-4geeks-academy"
+title: "Historia de 4Geeks Academy"
 image: ""
 image_alt: ""
-wordpress_id: 1124
-categories:
-- Aprendiendo a desarrollar
-cluster: "tendencias-y-tech"
-lang: "es"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+cluster: "tendencias-y-tecnologia"
+status: "published"
+featured: "false"
+
 ---
 
 En el año 2009, junto con dos amigos, comenzamos una pequeña empresa de desarrollo de Software con grandes ambiciones. Como cualquier otra StartUp, no teníamos dinero y nuestra oficina era la casa de Gustavo.

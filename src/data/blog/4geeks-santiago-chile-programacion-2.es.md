@@ -1,26 +1,17 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-12-17 15:09:53+00:00
-excerpt: La sexta sede de 4Geeks ya es una realidad. En WeWork, en Santiago, ya se
-  empieza a sentir el código de la mano de 4Geeks Academy.
-layout: post
-link: https://www.4geeksacademy.co/4geeks-santiago-chile-programacion-2/
-slug: 4geeks-santiago-chile-programacion-2
-title: 4Geeks en Santiago de Chile
+author: "MRiciglianoC"
+date: "2018-12-17T15:09:53+00:00"
+excerpt: "La sexta sede de 4Geeks ya es una realidad. En WeWork, en Santiago, ya se empieza a sentir el código de la mano de 4Geeks Academy."
+slug: "4geeks-santiago-chile-programacion-2"
+title: "4Geeks en Santiago de Chile"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/12/BANNER-CHILE-copia-3APRENDE-A-PROGRAMAR-CHL-3-1024x540.png"
 image_alt: ""
-
-wordpress_id: 3333
-categories:
-- Sin categoría
 cluster: "bootcamps-programacion"
-lang: "es"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
-tags:
-- 4geeks
+status: "published"
+featured: "true"
+
 ---
+
 # **Uno de los Top 10 Bootcamp de Programación llega a Chile**
 
 

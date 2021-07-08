@@ -194,9 +194,6 @@ export const pageQuery = graphql`
                         quality: 100
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                #   fluid(maxWidth: 1500, quality: 100){
-                #     ...GatsbyImageSharpFluid_withWebp
-                #   }
                 }
               }
             image_alt
@@ -229,7 +226,6 @@ export const pageQuery = graphql`
             slug
             title
             excerpt
-            lang
             featured
             status
             cluster

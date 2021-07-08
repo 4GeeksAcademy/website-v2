@@ -1,28 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-10-04 15:33:22+00:00
-excerpt: There are many options to choose from but Part-Time is best for whoever wants
-  to learn to code
-layout: post
-link: https://www.4geeksacademy.co/part-time-bootcamps/
-slug: part-time-bootcamps
-title: Why is a Part-Time Coding Bootcamp  Best for You
+author: "MRiciglianoC"
+date: "2018-10-04T15:33:22+00:00"
+excerpt: "There are many options to choose from but Part-Time is best for whoever wants to learn to code"
+slug: "part-time-bootcamps"
+title: "Why is a Part-Time Coding Bootcamp  Best for You"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2018/10/Part-time-coding-bootcamp-1.png"
 image_alt: ""
-wordpress_id: 3156
-categories:
-- Learning to code
-- Why learn to code?
 cluster: "coding-bootcamps"
-tags:
-- coding
-- coding bootcamps
-- investment
-- Jobs in Miami
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 As we’ve stated before, at 4Geeks Academy we offer Part-Time coding programs. If you’re thinking about enrolling in a coding Bootcamp, there are many options you need to consider.

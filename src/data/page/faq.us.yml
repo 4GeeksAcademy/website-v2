@@ -53,7 +53,7 @@ faq:
         answer: |-
           "The Extended Payment Plan has been designed specifically for our students.
           You can apply for an extended payment plan for either a 6,12, 18 or 24 months. You just need to pay the deposit and sign a contract that will take about the payments and what fits best your lifestyle.
-          If you want to have more information about the plan, click <a href="http://quotanda.com/en/4geeks/">here</a>."
+          If you want to have more information about the plan, click <a rel="noopener noreferrer nofollow" href="https://quotanda.com/en/4geeks/">here</a>."
 
   - topic: "Frequently Asked Questions about Programs"
     questions:

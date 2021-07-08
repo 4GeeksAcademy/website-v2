@@ -1,6 +1,6 @@
 import React from 'react';
 export default props =>
-    <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="https://www.w3.org/2000/svg">
         <path d="M35.0298 13.01H13.0098V35.03H35.0298V13.01Z" stroke="#00A0DA" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
         <path d="M35.0298 35.03H13.0098V47.04H35.0298V35.03Z" stroke="#00A0DA" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
         <path d="M1 35.03H47" stroke="#00A0DA" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />

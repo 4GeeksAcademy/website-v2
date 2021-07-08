@@ -1,28 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2017-09-25 18:07:08+00:00
-excerpt: 4Geeks decided
-  to leave nodejs out from the Full-Stack Development program, click here to learn why.
-layout: post
-link: https://www.4geeksacademy.co/dont-teach-nodejs-full-stack-development-program/
-slug: dont-teach-nodejs-full-stack-development-program
-title: Why we don't teach NodeJS in our Full-Stack Development program
+author: "alesanchezr"
+date: "2017-09-25T18:07:08+00:00"
+excerpt: "4Geeks decided to leave nodejs out from the Full-Stack Development program, click here to learn why."
+slug: "dont-teach-nodejs-full-stack-development-program"
+title: "Why we don't teach NodeJS in our Full-Stack Development program"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/09/Screen-Shot-2017-09-25-at-10.54.52-PM.png"
 image_alt: ""
-wordpress_id: 2436
-categories:
-- Learning to code
 cluster: "trends-and-tech"
-tags:
-- 4geeks academy
-- django
-- learn to code
-- nodejs
-- Python
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 We love NodeJS.  We even work with it in some of our 4Geeks experiments.  Node challenges the way the web is made - making it super fast and unifying it into a single language (which is amazing for the community because developers are able to specialize).  Node is super hot in the software development world and it was growing so much last year (2016) that it seemed unstoppable.  All that said, I’m sure you are asking yourself, why is it that 4Geeks decided to leave it out from its Full-Stack Development program?

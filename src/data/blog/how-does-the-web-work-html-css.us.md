@@ -1,28 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2015-12-28 15:53:55+00:00
-excerpt: 'The #IntroToCoding Workshop was held on December 17th at WeWork Lincoln Road.
-  The topic of the workshop was: How Does The Web Work?'
-layout: post
-link: https://www.4geeksacademy.co/how-does-the-web-work-html-css/
-slug: how-does-the-web-work-html-css
-title: HTML + CSS - Understanding How The Web Works
+author: "alesanchezr"
+date: "2015-12-28T15:53:55+00:00"
+excerpt: "The #IntroToCoding Workshop was held on December 17th at WeWork Lincoln Road. The topic of the workshop was: How Does The Web Work?"
+slug: "how-does-the-web-work-html-css"
+title: "HTML + CSS - Understanding How The Web Works"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2015/12/htmlcss.png"
 image_alt: ""
-wordpress_id: 402
-categories:
-- Learning to code
 cluster: "learn-to-code"
-tags:
-- '#IntroToCoding'
-- CSS
-- Facilcloud
-- HTML
-- Web Developer
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 The #IntroToCoding Workshop Level 2 sponsored by Facilcloud and lead by our instructor Jose Cirigliano was held on December 17th at WeWork Lincoln Road.

@@ -1,25 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-03-19 22:36:42+00:00
-excerpt: It’s time to update our numbers. The annual average salary in the US has
-  grown up 1% in February 2018.
-layout: post
-link: https://www.4geeksacademy.co/wages-report-2018-1/
-slug: wages-report-2018-1
-title: Bootcamp Graduates Salary 2018
+author: "MRiciglianoC"
+date: "2018-03-19T22:36:42+00:00"
+excerpt: "It’s time to update our numbers. The annual average salary in the US has grown up 1% in February 2018."
+slug: "wages-report-2018-1"
+title: "Bootcamp Graduates Salary 2018"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/BOOTCAMP2018-01-768x505.png"
 image_alt: ""
-wordpress_id: 2807
 cluster: "career-growth"
-categories:
-- Living and working as a developer
-- Why learn to code?
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+status: "published"
+featured: "false"
+
 ---
 
 It’s time to update our numbers.  Every 6 months we take the task to update the current trends and data related to Developer’s wages.  The question we want to answer with updated data remains the same: What is the average wage for a Software or Web Developer in the US?
@@ -168,7 +158,7 @@ But, even if you’re satisfied with your current position, chances are you can 
 
 Labor market differences among the race and ethnicity groups are associated with many factors, not all of which are measurable but the salary factor does.
 
-The average pay for women in 2017 was $12,000, compared with $21,000 for men per year according to with the World Economic Forum’s wide-reaching [Global Gender Gap Report 2017](http://reports.weforum.org/global-gender-gap-report-2017/global-gender-gap-index-2017/).
+The average pay for women in 2017 was $12,000, compared with $21,000 for men per year according to with the World Economic Forum’s wide-reaching [Global Gender Gap Report 2017](https://reports.weforum.org/global-gender-gap-report-2017/global-gender-gap-index-2017/).
 
 Coding Bootcamps don’t escape from disparity.  Course Report [research](https://www.coursereport.com/blog/salaries-after-coding-bootcamp) found that men earned an average of $73,228 after coding Bootcamp, whereas women earned $68,578 after coding Bootcamp:
 <table width="600" style="height: 138px;" class="table table-striped" >

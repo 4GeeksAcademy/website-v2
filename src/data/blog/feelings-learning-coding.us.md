@@ -1,24 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-06-22 03:51:55+00:00
-excerpt: Feelings when learning and working as a developer.
-layout: post
-link: https://www.4geeksacademy.co/feelings-learning-coding/
-slug: feelings-learning-coding
-title: The feelings when Learning to Code
+author: "MRiciglianoC"
+date: "2018-06-22T03:51:55+00:00"
+excerpt: "Feelings when learning and working as a developer."
+slug: "feelings-learning-coding"
+title: "The feelings when Learning to Code"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/06/feelings.jpg"
 image_alt: ""
-wordpress_id: 3112
 cluster: "learn-to-code"
-categories:
-- Living and working as a developer
-- Why learn to code?
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+status: "published"
+featured: "false"
+
 ---
 
 Have you decided to learn to code? Great! But that’s just the beginning. Whether you already had some experience or have never typed a line of code before, the feelings when learning to code are normally the same: a mixture of nervousness and frustration with a very strong motivation pushing you to overcome all barriers in your path.

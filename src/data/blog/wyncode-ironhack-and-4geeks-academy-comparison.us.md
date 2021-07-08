@@ -1,27 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-01-08 11:14:46+00:00
-excerpt: A straightforward analysis of your main Coding Bootcamps options in Miami.
-layout: post
-link: https://www.4geeksacademy.co/wyncode-ironhack-and-4geeks-academy-comparison/
-slug: wyncode-ironhack-and-4geeks-academy-comparison
-title: Wyncode, Ironhack and 4Geeks Academy comparison
+author: "4GeeksAcademy"
+date: "2016-01-08T11:14:46+00:00"
+excerpt: "A straightforward analysis of your main Coding Bootcamps options in Miami."
+slug: "wyncode-ironhack-and-4geeks-academy-comparison"
+title: "Wyncode, Ironhack and 4Geeks Academy comparison"
 image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/wyncode4geeksironhack.jpeg"
 image_alt: ""
-wordpress_id: 476
-categories:
-- Learning to code
 cluster: "coding-bootcamps"
-tags:
-- 4geeks
-- coding bootcamp
-- ironhack
-- learn to code
-- wyncode
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 We are sure that every potential student is asking the same question:  Which is the best coding academy (development bootcamp) in Miami?
@@ -62,7 +50,7 @@ As you can see, the bootcamps in Miami vary a lot depending on your needs.  At 
 
 Here you can read more about: [Why we think part-time studies are the future.](//one-on-one-mentorship-program-of-4geeks-academy/)
 
-Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](http://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
+Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](https://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
 
 If you want to get more into detail, you can read our [comparison between 4Geeks Academy and other industry coding bootcamps.](//us/geeks-vs-others)
 

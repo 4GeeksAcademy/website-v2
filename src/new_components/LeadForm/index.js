@@ -208,7 +208,7 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                                 checked={formData.consent.valid}
                                 onChange={() => setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})} />
                             {yml.consent.message}
-                            <a target="_blank" rel="noopener noreferrer" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
+                            <a target="_blank" rel="noopener noreferrer nofollow" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
                         </Paragraph>
                     }
                     {formStatus.status === "error" && <Alert color="red" margin="0 15px" padding="5px 0 0 0">{formStatus.msg}</Alert>}

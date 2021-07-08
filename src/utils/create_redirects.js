@@ -32,12 +32,12 @@ walk(`${__dirname}/../data/blog/`, async function (err, files) {
         
         const hasRedirect = vercel.redirects.find(r => r.source === "/"+doc.name);
         if(!hasRedirect){
+            //console.log(`/${doc.lang}/post/${doc.name} => /${doc.lang}/${doc.attributes.cluster}/${doc.name}`);
             vercel.redirects.push({
                 "source": `/${doc.lang}/post/${doc.name}`,
                 "destination": `/${doc.lang}/${doc.attributes.cluster}/${doc.name}`,
                 "statusCode": 301
             })
-            // console.log(`/${doc.lang}/post/${doc.name} => /${doc.lang}/${doc.attributes.cluster}/${doc.name}`);
         }
         else{
             hasRedirect.source = `/${doc.lang}/post/${doc.name}`

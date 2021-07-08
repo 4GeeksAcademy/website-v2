@@ -1,22 +1,15 @@
 ---
-author: MRiciglianoC
-date: 2019-06-24 20:44:51+00:00
-excerpt: Why exactly are you putting yourself through all of this mental toil and
-  relentless sacrifice and inevitable frustration for many weeks or months?
-slug: 7-hacks-to-land-a-job
-title: 7 tips to land a job as a Software Developer ASAP
+author: "MRiciglianoC"
+date: "2019-06-24T20:44:51+00:00"
+excerpt: "Why exactly are you putting yourself through all of this mental toil and relentless sacrifice and inevitable frustration for many weeks or months?"
+slug: "7-hacks-to-land-a-job"
+title: "7 tips to land a job as a Software Developer ASAP"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/06/GUENSE-01-1024x513.jpg"
 image_alt: ""
-categories:
-- Sin categoría
 cluster: "career-growth"
-tags:
-- 4geeks
-- coding
-- Jobs in Miami
-- Python
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+status: "published"
+featured: "true"
+
 ---
 
 # 7 tips to land a job as a Software Developer ASAP
@@ -32,7 +25,7 @@ Currently, Guensie has landed a Job at Ultimate Software and she is also a mento
 
 “If you don’t know what your goals are you can get lost in all the information that’s out there” 
 
-Knowing your goals will boost your productivity as a developer because all your energy will lead you towards it. Start asking yourself the right questions before investing your time into learning programming, so [**why do I want to learn to code?**](https://medium.com/elium-academy/learn-to-code-setting-your-goals-and-the-golden-circle-rule-33139cd107fe) The right answer to this question will lead you to your true purpose and will motivate you every day:
+Knowing your goals will boost your productivity as a developer because all your energy will lead you towards it. Start asking yourself the right questions before investing your time into learning programming, so [why do I want to learn to code?](https://medium.com/elium-academy/learn-to-code-setting-your-goals-and-the-golden-circle-rule-33139cd107fe) The right answer to this question will lead you to your true purpose and will motivate you every day:
 
 
 
@@ -50,7 +43,7 @@ Knowing your goals will boost your productivity as a developer because all your 
 
 What do you want to learn? “We live in the information age, there are so many resources, probably if you search ‘How to become a Web Developer’ right now on Google you will have millions and millions of results (...) So one really good way of knowing is to do some research in terms of jobs and figuring out what the most popular languages are” because numbers don’t lie: ![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/06/Screen-Shot-2019-06-24-at-4.30.38-PM.png)
 
-Python and Javascript are -by far- controlling the programming world. We know it and that’s why we align [our curriculum](/GEEKS-ACADEMY-FULL.pdf) with the most popular languages and frameworks. We recognize that the stack of technologies included in a Syllabus [actually matters](https://www.4geeksacademy.c(/ters/), and having an up-to-date Syllabus increase our student’s success and put us ahead of the competition at the same time.
+Python and Javascript are -by far- controlling the programming world. We know it and that’s why we align [our curriculum](https://storage.googleapis.com/4geeks-academy-website/syllabus/downtown-miami/SYLLABUS%20ONLINE%20II.pdf) with the most popular languages and frameworks. We recognize that the stack of technologies included in a Syllabus [actually matters](https://www.4geeksacademy.com), and having an up-to-date Syllabus increase our student’s success and put us ahead of the competition at the same time.
 
 Our better advice? Think about the tools and functionalities the languages will provide in the long term, and the industries and companies that gravitate around them; start learning about the technologies you’ve decided are our best advice for you.
 
@@ -137,7 +130,7 @@ The key is getting a career planner and let your actions be guided by a clear ro
 ## Final thoughts
 
 
-The decision of learning to code and landing a job afterward is huge! Start with a question: why exactly are you putting yourself through all of this [mental toil and relentless sacrifice and inevitable frustration](/feelings-learning-coding/) for many weeks or months? Don’t be scared, this is the right path (even if you don’t know anything about coding). [Just find the reasons](http://javascriptissexy.com/your-goal-and-purpose-for-learning-programming-will-determine-which-programming-career-path-to-pursue-and-whether-you-will-succeed/) and put your hands on it. [Apply now!](/apply/)
+The decision of learning to code and landing a job afterward is huge! Start with a question: why exactly are you putting yourself through all of this [mental toil and relentless sacrifice and inevitable frustration](/feelings-learning-coding/) for many weeks or months? Don’t be scared, this is the right path (even if you don’t know anything about coding). [Just find the reasons](https://javascriptissexy.com/your-goal-and-purpose-for-learning-programming-will-determine-which-programming-career-path-to-pursue-and-whether-you-will-succeed/) and put your hands on it. [Apply now!](/apply/)
 
 
 
@@ -145,4 +138,4 @@ The decision of learning to code and landing a job afterward is huge! Start with
 
 [admission@4geeksacademy.com](mailto:admission@4geeksacademy.com)
 
-+1 786 808 5655
++1 786 416 6640

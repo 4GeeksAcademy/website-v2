@@ -10,7 +10,7 @@ import BaseRender from './_baseLayout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const SVGImage = () =>
-    <svg width="419" height="284" viewBox="0 0 419 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="419" height="284" viewBox="0 0 419 284" fill="none" xmlns="https:://www.w3.org/2000/svg">
         <rect x="419" y="284" width="419" height="11" rx="5.49998" transform="rotate(-180 419 284)" fill="#A4A4A4" />
         <rect x="133" y="257" width="133" height="11" rx="5.49999" transform="rotate(-180 133 257)" fill="#A4A4A4" />
         <rect x="276" y="257" width="133" height="11" rx="5.49999" transform="rotate(-180 276 257)" fill="#A4A4A4" />

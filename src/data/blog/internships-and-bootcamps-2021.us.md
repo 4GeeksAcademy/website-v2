@@ -1,13 +1,14 @@
 ---
-author: anzolagi
-date: 2021-02-24 05:29:14 +0000
-excerpt: Find the key opportunities that internships and bootcamps are have to prepare your company for challenging market demands in a post-pandemic world
-layout: post
-slug: internships-bootcamps-2021
+author: "anzolagi"
+date: "2021-02-24T05:29:14+00:00"
+excerpt: "Find the key opportunities that internships and bootcamps are have to prepare your company for challenging market demands in a post-pandemic world"
+slug: "internships-bootcamps-2021"
 title: "Internships and bootcamps: the keys to prepare tech companies for 2021 demands"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/internship.jpg?raw=true"
 image_alt: "estudiantes aprendiendo código en un bootcamp"
 cluster: "coding-bootcamps"
+status: "published"
+
 ---
 
 In this article you will find post-pandemic challenges tech companies are facing, how internships and bootcamps are key opportunities to prepare your company for challenging market demands, and successfully lead your workforce into a post-pandemic tech revolution. 
@@ -19,7 +20,7 @@ Source: [World Economic Forum](https://www.weforum.org/agenda/2020/10/x-charts-s
 
 Covid-19 is considered the biggest crisis of our era, impacting millions of companies around the world, cracking the social system as we know it and disrupting every sector of the global economy. Work automation and global recession are the primary outcomes of the 2020 breakout pandemic, leaving millions of people without jobs and companies facing challenges to reinvent their products and workforce. 
 
-About 85 million jobs worldwide will be displaced and 97 million new roles will be adapted to new skill-sets in the next 5 years according to the [World Economic Forum future jobs 2020 report.](http://www3.weforum.org/docs/WEF_Future_of_Jobs_2020.pdf)
+About 85 million jobs worldwide will be displaced and 97 million new roles will be adapted to new skill-sets in the next 5 years according to the [World Economic Forum future jobs 2020 report.](https://www3.weforum.org/docs/WEF_Future_of_Jobs_2020.pdf)
 
 "By 2025 companies expect 1 in 2 workers will need reskilling, and those remaining in their current roles will need to update 40% of their skill-set to adapt to the changing labor market." World Economic Forum 
 
@@ -54,7 +55,7 @@ So what should tech companies focus on 2021? New positions and skills
 
 ![increasing demand in informatic roles chart](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/graficas-01.jpg?raw=true)
 
-Top 20 job roles in increasing demand across industries according to [Future Jobs Survey 2020](http://www3.weforum.org/docs/WEF_Future_of_Jobs_2020.pdf), World Economic Forum.
+Top 20 job roles in increasing demand across industries according to [Future Jobs Survey 2020](https://www3.weforum.org/docs/WEF_Future_of_Jobs_2020.pdf), World Economic Forum.
 
 With "Software and Applications Developers" heading the #9 on the list, the following chart run [by Statista](https://www.statista.com/statistics/627312/worldwide-developer-population/) shows the global software developer population is expected to reach 28.7 million people by 2024, an increase of 4.8 million from the number seen in 2019.
 
@@ -124,7 +125,7 @@ Skills include:
 - Scientific computing 
 
 
-Source: [World Economic Forum](http://www3.weforum.org/docs/WEF_Future_of_Jobs_2020.pdf)
+Source: [World Economic Forum](https://www3.weforum.org/docs/WEF_Future_of_Jobs_2020.pdf)
 
 Relative importance of different skills groups:
 
@@ -165,7 +166,7 @@ Internships program support
 
 Tech companies around the globe are investing in learning programs, new talent acquisition, and upskilling their teams. Some organizations affirm that by 2025 70% of their workforce will keep training to ensure a smooth transition into the jobs of tomorrow. 
 
-Contact us to know more about our internship programs and talents at [4geeksacademy.com](https://4geeksacademy.com) and [marcelo@4geeksacademy.com](mailto:marcelo@4geeksacademy.com)
+Contact us to know more about our internship programs and talents at [4GeeksAcademy.com](/) and [marcelo@4geeksacademy.com](mailto:marcelo@4geeksacademy.com)
 
 
 

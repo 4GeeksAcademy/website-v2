@@ -36,7 +36,7 @@ footer:
     heading: "PROGRAMS"
     items:
       - name: "Full Stack Developer"
-        link: "/course/full-stack-web-development-bootcamp-part-time"
+        link: "/us/coding-bootcamps/part-time-full-stack-developer"
       - name: "Software Engineer"
         link: ""
       - name: "Online"

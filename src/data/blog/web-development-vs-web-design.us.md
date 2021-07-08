@@ -1,26 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-03-11 04:00:00+00:00
-excerpt: Web designers and software developers respond to different skills. The requirements
-  of education are different and so are the opportunities they offer.
-layout: post
-link: https://www.4geeksacademy.co/webdevelopmentversuswebdesign/
-slug: web-development-versus-web-design
-title: Web Development Vs. Web Design
+author: "4GeeksAcademy"
+date: "2016-03-11T04:00:00+00:00"
+excerpt: "Web designers and software developers respond to different skills. The requirements of education are different and so are the opportunities they offer."
+slug: "web-development-versus-web-design"
+title: "Web Development Vs. Web Design"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/development-vs-design-1024x622.png"
 image_alt: ""
-wordpress_id: 701
-categories:
-- Why learn to code?
 cluster: "learn-to-code"
-tags:
-- challenges of a web developer
-- Web Design
-- Web Developer
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 It has been said that designers work on front-end (what users interact with) and developers with back-end (writing code to make the site function).  While this is a known approach, we think this is not that simple.  Both of them need to be familiar with languages and code.  The point relies on what the purpose of programming is and what would be the final result.

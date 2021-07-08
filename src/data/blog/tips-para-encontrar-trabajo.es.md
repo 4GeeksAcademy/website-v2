@@ -1,15 +1,14 @@
 ---
-author: 4GeeksAcademyES
-comments: true
-date: 2021-07-07 00:00:00 +0000 
+author: "4GeeksAcademyES"
+date: "2021-07-07T00:00:00+00:00"
 excerpt: "Conoce estos 5 tips para encontrar trabajo en programación y aterriza el trabajo que buscas"
-slug: tips-para-encontrar-trabajo
-layout: post
-title: 5 tips para encontrar tu próximo empleo en programación
+slug: "tips-para-encontrar-trabajo"
+title: "5 tips para encontrar tu próximo empleo en programación"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/tptpe_1.jpg?raw=true"
 image_alt: "imagen con tips para encontrar trabajo en programación"
 cluster: "desarrollo-profesional"
 status: "published"
+
 ---
 
 ¿Cuántas veces ya has enviado tu CV? Si son más veces de las que puedes recordar, quédate porque esta entrada es para ti. Según una estadística de [Glassdoor](https://zety.com/blog/hr-statistics), una oferta laboral atrae 250 aplicantes, solo cuatro o seis candidatos serán llamados y solo uno obtendrá el empleo.
@@ -30,7 +29,7 @@ Behance
 Github
 LinkedIn Pages
 
-En [4Geeks Academy](https://4geeksacademy.com/es/inicio), la plataforma que más usamos para ayudar a nuestros estudiantes de programación a crear su portafolio es Github. De hecho, parte de nuestra metodología es, no solo enseñar programación, sino también capacitar a nuestros estudiantes para la búsqueda de empleo. Conoce más aplicando [aquí](https://4geeksacademy.com/es/aplica).
+En [4Geeks Academy](/es/inicio), la plataforma que más usamos para ayudar a nuestros estudiantes de programación a crear su portafolio es Github. De hecho, parte de nuestra metodología es, no solo enseñar programación, sino también capacitar a nuestros estudiantes para la búsqueda de empleo. Conoce más aplicando [aquí](/es/aplica).
 
 ¿Qué debes tener en cuenta para armar tu portafolio?
 Evita incluir proyectos solo porque sí, a veces menos es más.
@@ -51,7 +50,7 @@ El tiempo aproximado para encontrar un empleo es de 9 semanas, según [What to b
 Participa en las comunidades de programadores
 El famoso networking es algo que puedes lograr si te unes a comunidades de programadores, en plataformas como Slack, Github, grupos de Facebook y LinkedIn y Reddit. Siempre puedes encontrar información relevante tanto para las búsquedas de empleo como para mantenerte actualizado.
 
-En [4Geeks Academy](https://4geeksacademy.com/es/inicio), contamos con dos membresías útiles para estos casos. La primera GeekPAL, en la que nuestros estudiantes pueden tener mentorías personalizadas, durante y después de finalizar nuestro bootcamp, son mentorías de por vida, para que nunca vuelvan a programar solos. La segunda es GeekFORCE, donde nuestros estudiantes acceden a entrevistas laborales con partners de 4Geeks para tener más oportunidades laborales.
+En [4Geeks Academy](/es/inicio), contamos con dos membresías útiles para estos casos. La primera GeekPAL, en la que nuestros estudiantes pueden tener mentorías personalizadas, durante y después de finalizar nuestro bootcamp, son mentorías de por vida, para que nunca vuelvan a programar solos. La segunda es GeekFORCE, donde nuestros estudiantes acceden a entrevistas laborales con partners de 4Geeks para tener más oportunidades laborales.
 
 Participa en proyectos Open Source
 Desde la década de los 80 el software Open Source ha significado una solución. Un gran ejemplo de esto, es el sistema Android que permite el desarrollo de todo tipo de aplicaciones, al igual que WordPress con su adaptación de plug ins.
