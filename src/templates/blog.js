@@ -72,7 +72,7 @@ const Blog = ({data, pageContext, yml}) => {
                                 pointer
                                 textColor={Colors.darkGray}
                                 fontSize={"13px"}>
-                                {item.node.frontmatter.cluster?.replace("-", " ") || "4Geeks"}
+                                {item.node.frontmatter.cluster?.replace(/-|_/g,' ') || "4Geeks"}
                             </Button>
                         </Link>
                     </Div>
@@ -165,7 +165,7 @@ const Blog = ({data, pageContext, yml}) => {
                                             textColor={Colors.darkGray}
                                             fontSize={"13px"}
                                         >
-                                            {topic.replace("-", " ")}
+                                            {topic.replace(/-|_/g,' ')}
                                         </Button>
                                     </Link>
                                 </>
@@ -186,7 +186,7 @@ const Blog = ({data, pageContext, yml}) => {
         // 'es' or 'us'
         let lang = pageContext.lang;
 
-        navigate('/' + lang + '//' + tag);
+        navigate('/' + lang + '//' + cluster);
 
     }
 
@@ -414,9 +414,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
                         quality: 100
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                #   fluid( maxWidth: 400, quality: 100){
-                #     ...GatsbyImageSharpFluid_withWebp
-                #   }
                 }
               }  
             no_image  
@@ -435,9 +432,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
                         quality: 100
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                #   fluid(maxWidth: 1500, quality: 100){
-                #     ...GatsbyImageSharpFluid_withWebp
-                #   }
                 }
               }
             image_alt
@@ -449,14 +443,12 @@ query BlogQuery($file_name: String!, $lang: String!) {
         sort: {fields: frontmatter___date, order: DESC},
         filter: {
             frontmatter: {
-                # featured: {eq: true}, 
                 status: {eq: "published"}
             }
             fields: {
                 lang: {eq: $lang}
             }
         }
-        # limit: 10
     ){
         edges {
             node {
@@ -467,7 +459,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
                 slug
                 title
                 excerpt
-                lang
                 featured
                 status
                 cluster

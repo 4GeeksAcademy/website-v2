@@ -91,7 +91,6 @@ const createBlog = async ({actions, graphql}) => {
     }
     const postTemplate = path.resolve('src/templates/post.js');
     const clusterTemplate = path.resolve("src/templates/clusters.js");
-    const tagTemplate = path.resolve("src/templates/tags.js");
     const result = await graphql(`
     {
         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}){
@@ -106,7 +105,6 @@ const createBlog = async ({actions, graphql}) => {
                         date
                         status
                         featured
-                        tags
                         cluster
                     }
                     excerpt,
@@ -165,20 +163,6 @@ const createBlog = async ({actions, graphql}) => {
     });
     // CLUSTERS:
 
-    // let clusterUs = null;
-    // let clusterEs = null;
-
-    // posts.forEach(({node}) => {
-    //     if (node.frontmatter.cluster) {
-    //         if (node.fields.lang === "us") {
-    //             clusterUs = node.frontmatter.cluster;
-    //         } else {
-    //             clusterEs = node.frontmatter.cluster;
-    //         }
-    //     }
-    // })
-
-    // Tag pages:
     let clusterUs = [];
     let clusterEs = [];
     // Iterate through each post, putting all found tags into `tags`
@@ -191,10 +175,10 @@ const createBlog = async ({actions, graphql}) => {
             }
         }
     });
-    // Eliminate duplicate tags
+    // Eliminate duplicate clusters
     clusterUs = clusterUs.filter((value, index) => clusterUs.indexOf(value) === index)
     clusterEs = clusterEs.filter((value, index) => clusterEs.indexOf(value) === index)
-    // Make tag pages
+    // Make clusters pages
     clusterUs.forEach(cluster => {
         let file_name = `clusters.us`
         let lang = "us";
@@ -227,53 +211,6 @@ const createBlog = async ({actions, graphql}) => {
     });
     //     return true;
     // }
-    // Tag pages:
-    let tagsUs = [];
-    let tagsEs = [];
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(({node}) => {
-        if (node.frontmatter.tags) {
-            if (node.fields.lang === "us") {
-                tagsUs = tagsUs.concat(node.frontmatter.tags);
-            } else {
-                tagsEs = tagsEs.concat(node.frontmatter.tags);
-            }
-        }
-    });
-    // Eliminate duplicate tags
-    tagsUs = tagsUs.filter((value, index) => tagsUs.indexOf(value) === index)
-    tagsEs = tagsEs.filter((value, index) => tagsEs.indexOf(value) === index)
-    // Make tag pages
-    tagsUs.forEach(tag => {
-        let file_name = `tags.us`
-        let lang = "us";
-        let type = "page";
-        createPage({
-            path: `/us/blog/tag/${tag}/`,
-            component: tagTemplate,
-            context: {
-                tag,
-                file_name,
-                lang,
-                type
-            },
-        });
-    });
-    tagsEs.forEach(tag => {
-        let file_name = `tags.es`;
-        let lang = "es";
-        let type = "page";
-        createPage({
-            path: `/es/blog/tag/${tag}/`,
-            component: tagTemplate,
-            context: {
-                tag,
-                file_name,
-                lang,
-                type
-            },
-        });
-    });
     return true;
 }
 const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields = [], extraContext = null) => {
