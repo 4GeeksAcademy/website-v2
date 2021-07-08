@@ -4,7 +4,7 @@ import {landingSections} from '../new_components/Landing';
 import FollowBar from "../new_components/FollowBar"
 import LeadForm from "../new_components/LeadForm";
 import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading'
-import {Row, Column, Divider, Div, GridContainer} from '../new_components/Sections'
+import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sections'
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
@@ -18,6 +18,8 @@ const Landing = (props) => {
   const {data, pageContext, yml} = props;
   const [components, setComponents] = React.useState({});
   const [inLocation, setInLocation] = React.useState("");
+
+  const applySchollarship = data.allLandingYaml.edges[0].node.apply_schollarship
 
   useEffect(() => {
     let _components = {};
@@ -42,7 +44,6 @@ const Landing = (props) => {
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
   };
 
-  console.log("YAML LOG", yml.header_data)
   return (
     <>
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
@@ -106,6 +107,8 @@ const Landing = (props) => {
             width="100%"
             size_tablet="10"
             size="12"
+            alignItems="center"
+            alignItems_tablet="flex-start"
             // borderRadius="0 0 0 1.25rem"
             margin="0 0 35px auto"
             padding={`80px 0 0 0`}
@@ -214,6 +217,68 @@ const Landing = (props) => {
             return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location})
           })
       }
+
+      <GridContainerWithImage background={Colors.verylightGray} imageSide={applySchollarship.imageSide} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
+        <Div flexDirection="column" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
+        gridArea_tablet={applySchollarship.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"}
+        // gridArea_tablet="1/1/1/6"
+        >
+          <Div
+            flexDirection="column"
+            size="12"
+            size_tablet="12"
+            width="100%"
+            width_tablet="100%"
+            // size_lg="4"
+            // size_sm="6"
+            // size_xs="12"
+            margin="0"
+            textAlign_sm="center"
+            // margin_md="0 auto 0 70px"
+          >
+            <LeadForm
+              landingTemplate
+              layout="block"
+              background={Colors.verylightGray}
+              margin="0"
+              formHandler={requestSyllabus}
+              heading={yml.form.heading}
+              motivation={yml.form.motivation}
+              sendLabel={yml.form.button_label}
+              redirect={yml.form.redirect}
+              inputBgColor="#F9F9F9"
+              lang={pageContext.lang}
+              fields={yml.form.fields}
+              data={preData}
+              justifyContentButton="center"
+              marginButton={`15px 0 30px auto`}
+            />
+          </Div>
+        </Div>
+        <Div height="auto" width="100%" gridArea_tablet={applySchollarship.imageSide === "right" ? "1/7/1/13" : "1/1/1/6"} style={{position: "relative"}}>
+          {
+            applySchollarship.imageSide === "right" ? (
+              <>
+                {/* <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/> */}
+                <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "280px", height: "446px", bottom: "-10px", right: "-16px", borderRadius: "3px"}}/>
+              </>
+            ) : (
+                <>
+                  <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "30px", borderRadius: "3px"}}/>
+                </>
+            )
+          }
+          <StyledBackgroundSection
+            height={`100%`}
+            // width={`85%`}
+            borderRadius={`3px`}
+            image={applySchollarship.image.childImageSharp.gatsbyImageData}
+            bgSize={`contain`}
+            alt="geekforce image"
+          />
+        </Div>
+      </GridContainerWithImage>
+
     </>
   )
 };
@@ -357,6 +422,36 @@ export const query = graphql`
               position
               heading
               sub_heading
+            }
+            language_banner{
+              position
+              title
+              paragraph
+              image{
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 1200
+                    quality: 100
+                    placeholder: NONE
+                    breakpoints:	[200, 340, 520, 890]
+                  )
+                }
+              }
+              image_alt
+            }
+            apply_schollarship{
+              imageSide
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 800
+                    placeholder: NONE
+                    quality: 100
+                  )
+                }
+              }
             }
             components{
               name

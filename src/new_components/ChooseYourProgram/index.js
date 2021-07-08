@@ -37,11 +37,11 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
     return (
         <Grid
             ref={chooseProgramRef}
-            gridTemplateColumns_md={landingTemplate && "5fr repeat(12,1fr) 5fr"}
+            gridTemplateColumns_md={landingTemplate && "4fr repeat(12,1fr) 4fr"}
             gridTemplateColumns_tablet={landingTemplate ? "1fr repeat(12,1fr) 1fr" : "2fr repeat(12, 1fr) 2fr"}
             gridAutoRows_tablet="minmax(100px, auto)"
-            background={Colors.verylightGray}
-            background_tablet="transparent"
+            background={landingTemplate ? Colors.white : Colors.verylightGray}
+            background_tablet={landingTemplate ? Colors.white : "transparent"}
             padding="59px 17px 83px 17px"
             padding_tablet=" 0 "
             margin="0 0 50px 0"

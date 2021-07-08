@@ -1,7 +1,7 @@
 import React from "react"
-import {Row, Column, Wrapper, Divider, Div, GridContainer} from '../Sections'
+import {GridContainerWithImage, Div, GridContainer} from '../Sections'
 import {H2, H5, H4, Paragraph} from '../Heading'
-import {Colors, Img, Button} from '../Styling'
+import {Colors, Img, Button, StyledBackgroundSection} from '../Styling'
 // import WhoIsHiring from '../../components/WhoIsHiring';
 import Badges from '../Badges';
 import News from '../News'
@@ -174,8 +174,6 @@ export const landingSections = {
     </GridContainer>,
 
     about4Geeks: ({session, data, pageContext, yml, index}) => {
-       console.log("ABOUT4_DATA", data)
-    // about4Geeks
         return(
             <About4Geeks 
                 lang={data.allLandingYaml.edges[0].node.about4Geeks}
@@ -206,7 +204,7 @@ export const landingSections = {
                 short_text
                 padding="60px 0"
                 padding_tablet="68px 0"
-                margin="0 0 58px 0"
+                margin="0"
                 margin_tablet="0 0 78px 0"
             />
         )
@@ -214,21 +212,32 @@ export const landingSections = {
         // <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
 
     syllabus: ({session, data, pageContext, yml, course, location, index}) =>
-        <GridContainer id="Syllabus" key={index} margin="50px 0px 0px 0px" background={Colors.lightGray}>
+        <GridContainer padding_tabletChild="0 8em" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
             <Div
                 key={index}
-                display="block"
-                margin="50px 0px 0px 0px"
-                m_sm="50px 0px"
-                background={Colors.lightGray}
+                flexDirection="column"
+                size="12"
+                size_tablet="12"
+                width="100%"
+                width_tablet="100%"
+                // size_lg="4"
+                // size_sm="6"
+                // size_xs="12"
+                margin="0"
+                textAlign_sm="center"
+                // margin_md="0 auto 0 70px"
             >
-                <H5 type="h5" fontSize="20px">{yml.heading.text}</H5>
+                <H5 type="h5" fontSize="20px" padding="0 0 35px 0">{yml.heading.text}</H5>
                 <LeadForm
-                    justifySelf="center"
-                    buttonWidth_tablet="20%"
-                    buttonBorderRadius="10px"
-                    
-                    style={{padding: "10px 0px", maxWidth: "100%"}}
+                    landingTemplate
+                    layout="block"
+                    background={Colors.lightGray}
+                    margin="0"
+                    marginButton={`15px 0 30px auto`}
+                    buttonBorderRadius="3px"
+                    justifyContentButton="center"
+                    inputBgColor="#F9F9F9"
+                    // style={{padding: "10px 0px", maxWidth: "100%"}}
                     inputBgColor={Colors.white}
                     layout="flex"
                     lang={pageContext.lang}
@@ -239,6 +248,24 @@ export const landingSections = {
                         utm_location: {type: "hidden", value: location, valid: true}
                     }}
                 />
+
+            {/* <LeadForm
+              landingTemplate
+              layout="block"
+              background={Colors.verylightGray}
+              margin="0"
+              formHandler={requestSyllabus}
+              heading={yml.form.heading}
+              motivation={yml.form.motivation}
+              sendLabel={yml.form.button_label}
+              redirect={yml.form.redirect}
+              inputBgColor="#F9F9F9"
+              lang={pageContext.lang}
+              fields={yml.form.fields}
+              data={preData}
+              justifyContentButton="center"
+              marginButton={`15px 0 30px auto`}
+            /> */}
             </Div>
         </GridContainer>
     ,
@@ -268,6 +295,9 @@ export const landingSections = {
         let chooseYourProgram = data.allLandingYaml.edges[0].node?.choose_your_program
         return (
             <React.Fragment id="choose_your_programs" key={index}>
+                <Div width="100%" flexDirection="column">
+                    <Div background={Colors.lightGray} alignSelf="center" height="2px" width="94%" width_tablet="63.4%"/>
+                </Div>
                 <ChooseYourProgram 
                     // chooseProgramRef={chooseProgramRef}
                     landingTemplate
@@ -280,25 +310,44 @@ export const landingSections = {
         )
     },
 
+    language_banner: ({session, pageContext, yml, data, index}) => {
+
+        const banner = data.allLandingYaml.edges[0].node?.language_banner
+        return(
+            <GridContainerWithImage height_tablet="100%" background="#E3F9FE" padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
+                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="2 / 8">
+                    <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${banner.title}`}</H2>
+                    {/* <Paragraph textAlign_tablet="left" margin="26px 0">{banner.paragraph} </Paragraph> */}
+                    {banner.paragraph.split('\n').map((p, i) =>
+                        <Paragraph textAlign_tablet="left" margin="26px 0" key={i}>{p}</Paragraph>
+                    )}
+                </Div>
+                <Div display_tablet="flex" height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
+                    <StyledBackgroundSection
+                        height_tablet="450px"
+                        height="200px"
+                        width="100%"
+                        image={banner.image && banner.image.childImageSharp.gatsbyImageData}
+                        bgSize={`contain`}
+                        alt={banner.image_alt}
+                    />
+                </Div>
+            </GridContainerWithImage>
+        )
+    },
+
     testimonials: ({session, data, pageContext, yml, index}) => <Div id="Testimonials" key={index} flexDirection="column" margin="50px" margin_tablet="100px" m_sm="0" p_xs="0">
-        {/* <Title
-            variant="primary"
-            title={yml.testimonial.heading}
-            paragraph={yml.testimonial.sub_heading}
-            paragraphColor={Colors.gray}
-            maxWidth="66%"
-        paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
-        /> */}
         <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
     </Div>,
-    why_4geeks: ({session, pageContext, yml, index}) => <Div id="Why_4Geeks" key={index} flexDirection="column" margin="50px 0" padding="0">
+
+    why_4geeks: ({session, pageContext, yml, index}) => <Div id="Why_4Geeks" key={index} flexDirection="column" margin="0" padding="0">
         <Title
             title={yml.heading}
             paragraph={yml.sub_heading}
             paragraphColor={Colors.gray}
             variant="primary"
         />
-        <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
+        <Why4Geeks landingTemplate lang={pageContext.lang} playerHeight="auto" />
     </Div>,
     alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="Alumni_Projects" key={index} flexDirection="column" margin="0" margin_tablet="100px" padding="0">
         {/* <Title
@@ -316,7 +365,7 @@ export const landingSections = {
         const hiring = data.allPartnerYaml.edges[0].node;
         let landingHiriging = data.allLandingYaml.edges[0].node?.who_is_hiring
 
-        return <Div id="Who_is_hiring" key={index} flexDirection="column" margin="0px" margin_tablet="100px" m_sm="0" p_xs="0">
+        return <Div id="Who_is_hiring" key={index} flexDirection="column" margin="100px 0" margin_tablet="100px" m_sm="0" p_xs="0">
             <OurPartners
                 images={hiring.partners.images} 
                 margin="0"

@@ -63,7 +63,6 @@ badges:
 
 about4Geeks:
   position: 2
-  # heading: "About4Geeks"
   heading: Sumate a nuestro Sistema de Becas
   sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y BreatheCode (nuestra plataforma educacional)"
   list:
@@ -91,7 +90,6 @@ iconogram:
 
 who_is_hiring:
   position: 4
-  # limit: 3
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
   sub_heading: "Gracias a nuestra creciente red de Aliados podemos contar con ofertas constantes a nivel nacional e internacional"
   featured:
@@ -129,7 +127,28 @@ choose_your_program:
     
     text_link: Aplica a una beca
     link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+
+language_banner:
+  position: 6
+  title: "Phyton y Javascript"
+  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
+
+  Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+  image: "../../../static/images/why-4geeks/python-image.png"
+  image_alt: "python-image"
+
+why_4geeks:
+  position: 7
+  heading: "Escuchalo de nuestros alumnos"
+  sub_heading: ""
+
+apply_schollarship:
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
     
+
+
   # - title: "AI/Machine Learning Engineering"
   #   sub_title: "Online"
   #   icon: "machine"

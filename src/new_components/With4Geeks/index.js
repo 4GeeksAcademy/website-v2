@@ -7,7 +7,7 @@ import ReactPlayer from '../../new_components/ReactPlayer'
 import Fragment from "../../components/Fragment"
 import Icon from "../../components/Icon"
 
-export default ({lang, playerHeight, title, paragraph, background}) => {
+export default ({lang, playerHeight, title, paragraph, background, landingTemplate}) => {
   const data = useStaticQuery(graphql`
     query With4Geeks{
       allWith4GeeksYaml{
@@ -76,6 +76,7 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
           return (
             <Div
               display="flex"
+              flexDirection="column"
               flexDirection_tablet="column"
               justifyContent="between"
               // justifySelf={`center`}
@@ -89,6 +90,7 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
               <Div
 
                 padding_tablet="0"
+                padding="0 0 20px 0"
                 width_tablet="100%"
                 height_tablet="158px"
                 alignSelf={`baseline`}
@@ -98,10 +100,10 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
                   className="react-player-with4geeks"
                   thumb={i.image}
                   id={i.video}
-                  width='82px'
+                  width="85%"
                   width_tablet="100%"
                   height_tablet='158px'
-                  height={playerHeight}
+                  height={playerHeight || "auto"}
                 />
               </Div>
               <Div
