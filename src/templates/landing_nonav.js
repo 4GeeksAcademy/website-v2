@@ -218,9 +218,9 @@ const Landing = (props) => {
           })
       }
 
-      <GridContainerWithImage background={Colors.verylightGray} imageSide={applySchollarship.imageSide} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
+      <GridContainerWithImage background={Colors.verylightGray} imageSide={applySchollarship?.imageSide} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
         <Div flexDirection="column" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
-        gridArea_tablet={applySchollarship.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"}
+        gridArea_tablet={applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
         >
           <Div
@@ -255,9 +255,9 @@ const Landing = (props) => {
             />
           </Div>
         </Div>
-        <Div height="auto" width="100%" gridArea_tablet={applySchollarship.imageSide === "right" ? "1/7/1/13" : "1/1/1/6"} style={{position: "relative"}}>
+        <Div height="auto" width="100%" gridArea_tablet={applySchollarship?.imageSide === "right" ? "1/7/1/13" : "1/1/1/6"} style={{position: "relative"}}>
           {
-            applySchollarship.imageSide === "right" ? (
+            applySchollarship?.imageSide === "right" ? (
               <>
                 {/* <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/> */}
                 <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "280px", height: "446px", bottom: "-10px", right: "-16px", borderRadius: "3px"}}/>
@@ -272,7 +272,7 @@ const Landing = (props) => {
             height={`100%`}
             // width={`85%`}
             borderRadius={`3px`}
-            image={applySchollarship.image.childImageSharp.gatsbyImageData}
+            image={applySchollarship?.image.childImageSharp.gatsbyImageData}
             bgSize={`contain`}
             alt="geekforce image"
           />
