@@ -50,7 +50,7 @@ We have addressed before that employment is expected to grow.  Don’t be afrai
 
 
 
-Generally, the more you learn, the more you earn.  But nowadays, more than ever, time is priceless, and, most importantly, experience and practice are further valuable than theoretical knowledge (as we said in our post: [Turnaround on Education Traditions](/turnaround-education-traditions-4geeks-academy/)).
+Generally, the more you learn, the more you earn.  But nowadays, more than ever, time is priceless, and, most importantly, experience and practice are further valuable than theoretical knowledge (as we said in our post: [Turnaround on Education Traditions](/us/learn-to-code/turnaround-education-traditions-4geeks-academy)).
 
 
 

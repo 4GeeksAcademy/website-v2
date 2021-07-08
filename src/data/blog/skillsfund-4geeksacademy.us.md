@@ -86,4 +86,4 @@ It’s quite simple, you may follow four (4) simple steps for applying:
 
 We enhance our financing options to help you pay for your education because our commitment is to provide you with a [Premium Coding Program](/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf) that has multiple financing options and gives you the opportunity of reaching your goal and becoming a developer.
 
-[Apply here](/apply/) to our program and you'll receive a link to our Skills Fund & 4Geeks Academy website to learn more about all the loan terms and conditions.
+[Apply here](/us/apply) to our program and you'll receive a link to our Skills Fund & 4Geeks Academy website to learn more about all the loan terms and conditions.

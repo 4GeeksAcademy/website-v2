@@ -38,6 +38,11 @@ export default function Template (props) {
     return mes;
   }
 
+  const langSwitcher = {
+    es: "blog-en-espanol",
+    us: "blog"
+}
+
   //Date Formatter
   function GetFormattedDate (date) {
 
@@ -81,7 +86,7 @@ export default function Template (props) {
 
           {/* Top cluster */}
           <Div justifyContent="center">
-            <Link to={`/us/blog/${post.frontmatter.cluster}`}>
+            <Link to={`/${pageContext.lang}/${langSwitcher[pageContext.lang]}/${post.frontmatter.cluster}`}>
               <Button variant="outline" color="black" fontSize="13px" lineHeight="15px" fontWeight="700">{post.frontmatter.cluster && post.frontmatter.cluster}</Button>
             </Link>
           </Div>

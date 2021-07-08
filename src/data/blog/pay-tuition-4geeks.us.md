@@ -32,7 +32,7 @@ However, we have designed a customized financial payment option just for this pr
 
 We lowered the cost, and, yes, it was a big challenge, but we found a way to offer you a Premium Education with an unbeatable price.
 
-[Apply to our program and get the chance to pay your education from only $240 per month](/apply/)
+[Apply to our program and get the chance to pay your education from only $240 per month](/us/apply)
 
 Now there’s more: We do not only offer the best price in the city but also the best payment plan.  Others will follow, but we know _**we are the first**_ to offer you the Extended Payment Plan.
 

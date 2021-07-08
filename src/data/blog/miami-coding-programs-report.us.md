@@ -18,7 +18,7 @@ According to a [recent report](https://www.payscale.com/research/US/Job=Web_Deve
 
 ![](/wp-content/uploads/2018/11/avg-salary.jpg)
 
-We understand how important the conversation is about Return of Investment. [Here](/choosing-coding-bootcamp/) is a ROI report where we address the pros and cons of joining (financially speaking) a Coding Bootcamp. 
+We understand how important the conversation is about Return of Investment. [Here](/us/coding-bootcamps/choosing-coding-bootcamp) is a ROI report where we address the pros and cons of joining (financially speaking) a Coding Bootcamp. 
 
 **LET'S TALK ABOUT BOOTCAMPS**
 
@@ -58,7 +58,7 @@ A major benefit of 4Geeks Academy is that students don't have to quit their curr
 ## ![](/wp-content/uploads/2018/11/Graficas-03.png)
 
 
-[4Geeks](/course/full-stack-web-development-bootcamp-full-time/) is also launching a Full-Time program that will be added to their current offer. 
+[4Geeks](/us/coding-bootcamps/full-time-full-stack-developer) is also launching a Full-Time program that will be added to their current offer. 
 
 
 ### **Wyncode**
@@ -102,7 +102,7 @@ Now that you know a little more about these Bootcamps, here are some additional 
 
 Let’s talk about the importance of the methodology when delivering a coding program. Coding Bootcamps can be divided into three main segments: Full-Time, Part-Time or Online programs. Recently, Thinkful made Miami one of their targets, probably because they have seen how the city has been answering to Coding Bootcamps.  Therefore, now Miami is officially a city where multiple options are available for potential coders.
 
-Not everyone learns in the same way, not everyone delivers the same program. There are several options, although Part-time programs are probably the most underestimated yet most valuable options for those who want to launch their career but does not have the chance to quit everything in the meanwhile. Part-time programs are required to build a strong methodology with a mixture of in-person classes, together with a great Academic Platform.[ Here is why part-time programs](/part-time-bootcamps/) are a great option.
+Not everyone learns in the same way, not everyone delivers the same program. There are several options, although Part-time programs are probably the most underestimated yet most valuable options for those who want to launch their career but does not have the chance to quit everything in the meanwhile. Part-time programs are required to build a strong methodology with a mixture of in-person classes, together with a great Academic Platform.[ Here is why part-time programs](/us/coding-bootcamps/part-time-bootcamps) are a great option.
 
 Having a proprietary and tailor-made Academic platform actually plays a very important role in the learning process of every student. Technology has to be involved. Projects, content and hundreds of exercises are mandatory.
 

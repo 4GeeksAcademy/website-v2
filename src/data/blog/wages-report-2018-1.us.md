@@ -219,7 +219,7 @@ Source: Course Report 2017 Coding Bootcamp Outcomes +Demographics Report
 
 Much is being done to try to close the gap.  If you are a woman trying to get the tech education you want, look at our partnership with [Bridges Unite](https://www.bridgesunite.com/).  Together we are bringing coding education opportunities to women in Florida by supporting/sponsoring one candidate to take one of our Full Stack Development programs at no cost.  Much more is needed, and we are aware.  Feel free to [contact us if you have a great idea on how to improve that](mailto:info@4geeksacademy.com). 
 
-We have said it: the biggest career challenges for [women in tech](/women-in-tech-2017/) is not about finding a good job or solving coding bugs, but by finding a healthy and fair work environment so that they can feel part of a team and be valued by male coworkers.
+We have said it: the biggest career challenges for [women in tech](/us/trends-and-tech/women-in-tech-2017) is not about finding a good job or solving coding bugs, but by finding a healthy and fair work environment so that they can feel part of a team and be valued by male coworkers.
 
 But what about the racial gap?  A [latest study of the Institute for Women Policy](https://iwpr.org/publications/gender-wage-gap-2017-race-ethnicity/) reflects that women of all major racial and ethnic groups earn less than men of the same group, and also earn less than white men:
 
@@ -238,4 +238,4 @@ What should you do from the beginning?  Tailor your resume with your collection
 
 _By enrolling in our program you will work in a 99% practical environment, Part-Time focused, with REAL “Senior” mentors and with a stack of top notch technologies._
 
-[_Join us_](/apply/)_ and become a Software Developer._
+[_Join us_](/us/apply)_ and become a Software Developer._

@@ -71,4 +71,4 @@ We’ll be left behind if we don’t start to jump into this race. We must keep 
 
 As technology continues evolving rapidly, teaching coding is part of lifelong learning and will be fundamental for any professional. That is why our academy guarantees the necessary skills to be successful.
 
-To get started and apply for your part-time coding Bootcamp, [contact us today](/contact/).
+To get started and apply for your part-time coding Bootcamp, [contact us today](/us/contact).

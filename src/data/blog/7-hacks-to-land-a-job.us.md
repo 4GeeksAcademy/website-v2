@@ -68,7 +68,7 @@ Guensie provides great tips about networking (we added the last one):
 
 
  	
-  * **Participate in hackathons**: a lot of people at the beginning of their coding journey are afraid to do a hackathon, but I really encourage you to dare. Once you know a little of HTML, CSS, and JavaScript, try to join a hackathon. Not only you're going to meet potential employers, but also you're going to meet your peers, other people that are in the industry that are trying to learn as well. You never know what kind of connections you can make.
+  * **Participate in hackathons**: a lot of [people](/us/coding-bootcamps/choosing-coding-bootcamp) at the beginning of their coding journey are afraid to do a hackathon, but I really encourage you to dare. Once you know a little of HTML, CSS, and JavaScript, try to join a hackathon. Not only you're going to meet potential employers, but also you're going to meet your peers, other people that are in the industry that are trying to learn as well. You never know what kind of connections you can make.
 
  	
   * **Attend meetups:** you get to meet people with all different levels of experience at meetups. They are also a good option to find career opportunities, there are people who have got jobs from someone they've met at a meetup.
@@ -130,7 +130,7 @@ The key is getting a career planner and let your actions be guided by a clear ro
 ## Final thoughts
 
 
-The decision of learning to code and landing a job afterward is huge! Start with a question: why exactly are you putting yourself through all of this [mental toil and relentless sacrifice and inevitable frustration](/feelings-learning-coding/) for many weeks or months? Don’t be scared, this is the right path (even if you don’t know anything about coding). [Just find the reasons](https://javascriptissexy.com/your-goal-and-purpose-for-learning-programming-will-determine-which-programming-career-path-to-pursue-and-whether-you-will-succeed/) and put your hands on it. [Apply now!](/apply/)
+The decision of learning to code and landing a job afterward is huge! Start with a question: why exactly are you putting yourself through all of this [mental toil and relentless sacrifice and inevitable frustration](/us/learn-to-code/feelings-learning-coding) for many weeks or months? Don’t be scared, this is the right path (even if you don’t know anything about coding). [Just find the reasons](https://javascriptissexy.com/your-goal-and-purpose-for-learning-programming-will-determine-which-programming-career-path-to-pursue-and-whether-you-will-succeed/) and put your hands on it. [Apply now!](/us/apply)
 
 
 

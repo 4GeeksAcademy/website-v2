@@ -71,9 +71,8 @@ La sede de El Nacional, en Caracas, será el lugar donde se impartirán las clas
 
 **Para más información y registro:**
 
-**Correo**: [venezuela@4geeksacademy.c](mailto:venezuela@breathco.de)o
-**Web**: www.breathco.de
-**Facebook**: [/4geeksacademy
-](https://www.facebook.com/4geeksacademy)**Twitter e Instagram**: @4GeeksAcademy
+**Correo**: [venezuela@4geeksacademy.com](mailto:venezuela@4geeks.co). 
+**Web**: www.4GeeksAcademy.com/venezuela. 
+**Facebook**: [/4geeksacademy](https://www.facebook.com/4geeksacademy). 
+**Twitter e Instagram**: @4GeeksAcademy. 
 
-[gallery columns="2" size="medium" ids="1182,1166,1167,1168"]
