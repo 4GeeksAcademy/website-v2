@@ -21,9 +21,6 @@ const Landing = (props) => {
 
   const applySchollarship = data.allLandingYaml.edges[0].node?.apply_schollarship
 
-console.log("YAML:A:::", yml)
-console.log("DATA:A:::", data)
-
   useEffect(() => {
     let _components = {};
     if (yml.components) yml.components.forEach(({name, ...rest}) => {
