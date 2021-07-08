@@ -19,7 +19,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Solicita más información"
+  heading: "Solicita tu Beca"
   button_label: Enviar
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -27,6 +27,7 @@ form:
 header_data:
   tagline: Aprende a programar
   sub_heading: " "
+  # scholarship: "../../../static/images/partner/microsoft.png"
   image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 

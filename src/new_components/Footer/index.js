@@ -7,6 +7,7 @@ import Icon from '../Icon'
 import {newsletterSignup} from "../../actions"
 import {SessionContext} from '../../session';
 import {Input} from "../Form"
+import {Link} from 'gatsby';
 import styled from 'styled-components';
 
 const formIsValid = (formData = null) => {
@@ -42,7 +43,8 @@ const Form = styled.form`
     }
 `;
 
-const Footer = ({yml}) => {
+const Footer = ({ yml }) => {
+
     const {session} = React.useContext(SessionContext);
     const [formStatus, setFormStatus] = useState({status: "idle", msg: "Resquest"});
     const [formData, setVal] = useState({
@@ -171,7 +173,7 @@ const Footer = ({yml}) => {
                                         color={formStatus.status === "loading" ? Colors.darkGray : Colors.black}
                                         textColor={Colors.white}
                                         disabled={formStatus.status === "loading" ? true : false}
-                                    >{formStatus.status === "loading" ? "Loading..." : <Icon icon="email" height="16px" width="16px" color={Colors.white} fill={Colors.white} />}
+                                    >{formStatus.status === "loading" ? "Loading..." : <Icon icon="email" height="16px" width="16px" color={Colors.white} fill={Colors.white} />}   
                                     </Button>
                                 </Form>
                             </Div></>}
@@ -226,11 +228,37 @@ const Footer = ({yml}) => {
                     width_tablet="100%"
                     height_tablet="100%"
                 >
-                    <Div>
-                        <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} >Políticas de Privacidad</H4>
-                        <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray} margin="0 30px">Políticas de Cookies</H4>
-                    </Div>
-                    <H4 fontSize="13px" lineHeight="22px" width="fit-content" color={Colors.darkGray}>Términos y Condiciones</H4>
+                    {
+                        yml.policy 
+                        ? yml.policy.map((item, i) => (
+                        <Link key={i} to={item.link}>
+                            <H4
+                            border={i % 2 == 1 && "1px solid"}
+                            borderWidth={i % 2 == 1 && "0px 1px 0px 1px"}
+                            key={item.name}
+                            fontSize="13px"
+                            lineHeight="16px"
+                            width="fit-content"
+                            color={Colors.darkGray}
+                            padding="0 15px"
+                            >
+                            {item.name}
+                            </H4>
+                        </Link>
+                        )) : (
+                            <>
+                                <Link to="/us/privacy-policy">
+                                    <H4 fontSize="13px" padding="0 15px" lineHeight="16px" width="fit-content" color={Colors.darkGray} >Privacy Policy</H4>
+                                </Link>
+                                <Link to="/us/cookies">
+                                    <H4 border="1px solid" padding="0 15px" borderWidth="0px 1px 0px 1px" fontSize="13px" lineHeight="16px" width="fit-content" color={Colors.darkGray} >Cookies</H4>
+                                </Link>
+                                <Link to="/us/terms-conditions">
+                                <H4 fontSize="13px" padding="0 15px" lineHeight="16px" width="fit-content" color={Colors.darkGray}>Terms and Conditions</H4>
+                                </Link>
+                            </>
+                        )
+                    }
                 </Div>
                 <Div gridArea_tablet="1/1/1/6" justifyContent="center"
                     alignItems="center"
