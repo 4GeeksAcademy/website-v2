@@ -25,6 +25,10 @@
       "destination": "/$1/coding-bootcamps/$2"
     },
     {
+      "source": "/(\\w{2})/tag/(.*)",
+      "destination": "/$1/blog"
+    },
+    {
       "source": "/(\\w{2})/blog/tag/(.*)",
       "destination": "/$1/blog"
     },

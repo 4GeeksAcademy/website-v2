@@ -476,7 +476,7 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
     const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${slugigy(template)}/${slug}`;
 
     const meta = {lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath};
-    //   console.log("meta: ", meta);
+
     return meta;
 };
 
