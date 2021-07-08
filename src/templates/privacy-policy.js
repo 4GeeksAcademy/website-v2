@@ -15,8 +15,8 @@ const Privacy = (props) => {
       <GridContainer
         github="/components/privacy"
         columns_tablet="12"
-        margin_tablet="50px 0 0 0"
-        margin="25px 0 0 0"
+        margin_tablet="120px 0 0 0"
+        margin="35px 0 0 0"
 
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">

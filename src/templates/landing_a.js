@@ -725,5 +725,6 @@ export const query = graphql`
 `;
 
 export default BaseRender(Landing, {
-  navbar: true
+  navbar: true,
+  landingLayout: true,
 });
