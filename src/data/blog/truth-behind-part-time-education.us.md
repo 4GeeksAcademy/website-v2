@@ -167,7 +167,7 @@ If you are likely to spend your time (every day for several weeks) in a Coding B
 
 [Click here to download our syllabus and program details. ](/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf)
 
-The program schedule makes the difference.  Of course, Part-time could not imply only 100 hours of practice.  If so, you are not becoming a developer.  But Part-time, at least in our case, does not refer to that.  Taking a program with a blended education, focusing on a flipped around classroom, with a Mentor/student ratio of 1:7, and based on a Mastery learning process, will enable you to achieve the skills you need to get a job in Tech or to launch your startup.  And that is a Part-time program - [our program](/the-program/).
+The program schedule makes the difference.  Of course, Part-time could not imply only 100 hours of practice.  If so, you are not becoming a developer.  But Part-time, at least in our case, does not refer to that.  Taking a program with a blended education, focusing on a flipped around classroom, with a Mentor/student ratio of 1:7, and based on a Mastery learning process, will enable you to achieve the skills you need to get a job in Tech or to launch your startup.  And that is a Part-time program - [our program](/us/coding-bootcamps/part-time-full-stack-developer).
 
 In order to become a developer, you need to commit to - at least - 300 hours of hard work. And, as previously stated, a part-time program does not equate to delivering less or poor content (you are still committing to more than 300 hours of work).  It actually requires a strong product, a well-designed methodology, and the support of technology (Build your own academic platform -LMS-) to achieve the quality expected from the student.
 

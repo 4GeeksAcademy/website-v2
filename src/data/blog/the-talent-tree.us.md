@@ -50,7 +50,7 @@ You officially have a skill when you earn all of its badges by completing challe
 
 Another thing we love about The** Talent Tree ®** is its capacity to empower the student, making them self-aware of their real-time progress throughout the course.
 
-[Click here if you want to learn more about our syllabus, program details, and methodology.](/the-program/)
+[Click here if you want to learn more about our syllabus, program details, and methodology.](/us/coding-bootcamps/part-time-full-stack-developer)
 
 
 ### Constant Evolution

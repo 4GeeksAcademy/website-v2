@@ -49,7 +49,7 @@ In 4Geeks, we teach Python as a backend language given that we consider it to be
 
 Instagram, one of the most important social networks, is developed with this Python framework, like Pinterest too. Platforms that offer a simple and easy backend by any user, besides the fact that handles large amounts of databases.
 
-If you are thinking about [learning your first programming language](/coding-bootcamp-syllabus-matters/), you should be motivated to prepare completely and not only pick one programming language, you can be great at both! however, to begin with, you can start with the one that you consider more comfortable to work with, the one that feels right, and the one that fulfills your expectations. 
+If you are thinking about [learning your first programming language](/us/coding-bootcamps/coding-bootcamp-syllabus-matters/), you should be motivated to prepare completely and not only pick one programming language, you can be great at both! however, to begin with, you can start with the one that you consider more comfortable to work with, the one that feels right, and the one that fulfills your expectations. 
 
 Our co-founder and Head of the Academic Dpt., Alejandro Sánchez, believes that as technology continues evolving, students need to avoid sitting in the comfort zone. To be a successful coder, you must be eager for knowledge and be willing to be at the forefront of new paths, technologies, languages, and more.
 

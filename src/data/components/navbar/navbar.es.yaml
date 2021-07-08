@@ -87,13 +87,6 @@ navbar:
               link_to: "/es/blog-en-espanol"
             - title: "Partners"
               link_to: "/es/alianzas"
-  # links:
-  #       - name: "Desarrollador Full Stack"
-  #       - link: "/course/full-stack-web-development-bootcamp-part-time"
-  #       - name: "Ingeniero de Software"
-  #       - link: "/course/software-engineering-coding-bootcamp"
-  # - name: "Pricing"
-  #   link: "/pricing"
   - name: "Campus"
     link: "/partners"
     sub_menu:

@@ -270,7 +270,7 @@ Check out your options on the chart below:
 ****Upfront Payment**: You can either pay in (1) one down payment; or, (2) split the upfront amount into thirds.  If you choose “Pay in thirds”, the first 1/3 is due 15 days before the start date.  The next 1/3 is due the very same day of the start date, and last 1/3 is due 15 days after start date.
 
 
-[Click here if you want to learn more about our syllabus, program details, and methodology.](/the-program/)
+[Click here if you want to learn more about our syllabus, program details, and methodology.](/us/coding-bootcamps/part-time-full-stack-developer)
 
 
 This program has been built for everyone. Miami is a city full of different backgrounds and nationalities.  Therefore, the Extended Payment Plan is available to everyone.  Once you apply to the program, we will take care of everything.  The process of getting your tuition paid will not be affected by your background.  There are only a few steps you have to complete in order to become a Full Stack developer.

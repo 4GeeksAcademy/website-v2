@@ -19,7 +19,7 @@ redirects:
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results
   - fromPath: "/us/post/webdevelopmentversuswebdesign"
-    toPath: "/us/post/web-development-versus-web-design"
+    toPath: "/us/learn-to-code/web-development-versus-web-design"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results
     

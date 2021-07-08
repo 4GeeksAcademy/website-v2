@@ -62,7 +62,7 @@ It all has pros and cons but when we talk about a high impact methodology we mea
 ## 4. What about the content?
 
 
-It is fundamental that if you are going to spend your time and money on a coding program, be sure that the skills you will obtain will be useful. [Syllabus matters](/coding-bootcamp-syllabus-matters/) because the languages and technologies that are included in the program, should be: updated, relevant and in line with job demand.?
+It is fundamental that if you are going to spend your time and money on a coding program, be sure that the skills you will obtain will be useful. [Syllabus matters](/us/coding-bootcamps/coding-bootcamp-syllabus-matters) because the languages and technologies that are included in the program, should be: updated, relevant and in line with job demand.?
 
 ![](/wp-content/uploads/2018/07/Screen-Shot-2018-07-16-at-3.57.15-PM-300x209.png)
 
