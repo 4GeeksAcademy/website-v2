@@ -5,32 +5,14 @@ import { Colors, RoundImage, Anchor } from '../Styling';
 import { H4 } from '../Heading';
 import {Link} from 'gatsby';
 import { Devices } from '../Responsive';
+import {SessionContext} from '../../session';
 import Icon from '../Icon';
-
-// const formIsValid = (formData = null) => {
-//   if (!formData) return null;
-//   for (const key in formData) {
-//     if (!formData[key].valid) return false;
-//   }
-//   return true;
-// };
-// const positions = [
-//   {
-//     position: '1 / 5',
-//   },
-//   {
-//     position: '5 / 8',
-//   },
-//   {
-//     position: '8 / 11',
-//   },
-//   {
-//     position: '11 / 13',
-//   },
-// ];
 
 const LandingFooter = ({ yml }) => {
 
+  let session = window.localStorage.getItem('academy_session');
+  let socials = JSON.parse(session).location.socials
+ 
   return (
     <>
       <GridContainer margin="44px 0" margin_tablet="0 0 40px 0">
@@ -79,32 +61,33 @@ const LandingFooter = ({ yml }) => {
             {yml.newsletter.heading}
           </H4>
           <Div>
-            {yml.socials
-              && yml.socials.map((ln, i) => (
-                  <Anchor
-                    key={i}
-                    cursor="pointer"
-                    to={ln.link}
-                    textAlign="left"
-                    margin="0 0 5px 0"
-                    fontSize="13px"
-                    lineHeight="22px"
-                    fontWeight="400"
-                    textTransform="uppercase"
-                    color={Colors.black}
-                  >
-                    {ln.icon && (
-                      <Icon
-                        icon={ln.icon}
-                        style={{ margin: '0 15px 0 0' }}
-                        color={Colors.black}
-                        fill={Colors.black}
-                        height="32px"
-                        width="32px"
-                      />
-                    )}
-                  </Anchor>
-                ))}
+            {   
+              socials?.map((ln, i) => (
+                <Anchor
+                  key={i}
+                  cursor="pointer"
+                  to={ln.social_link}
+                  textAlign="left"
+                  margin="0 0 5px 0"
+                  fontSize="13px"
+                  lineHeight="22px"
+                  fontWeight="400"
+                  textTransform="uppercase"
+                  color={Colors.black}
+                >
+                  {ln.social_name && (
+                    <Icon
+                      icon={ln.social_name.toLowerCase()}
+                      style={{ margin: '0 15px 0 0' }}
+                      color={Colors.black}
+                      fill={Colors.black}
+                      height="32px"
+                      width="32px"
+                    />
+                  )}
+                </Anchor>
+              )
+            )}
           </Div>
         </Div>
 

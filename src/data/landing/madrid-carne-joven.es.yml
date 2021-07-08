@@ -148,7 +148,6 @@ apply_schollarship:
   image: "../../../static/images/comunity-support.png"
     
 
-
   # - title: "AI/Machine Learning Engineering"
   #   sub_title: "Online"
   #   icon: "machine"
