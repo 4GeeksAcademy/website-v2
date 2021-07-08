@@ -237,7 +237,7 @@ const Apply = (props) => {
                                         checked={formData.consent.valid}
                                         onChange={() => setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})} />
                                     {privacy.consent.message}
-                                    <a target="_blank" rel="noopener noreferrer" className="decorated" href={privacy.consent.url}>{privacy.consent.link_label}</a>
+                                    <a target="_blank" rel="noopener noreferrer nofollow" className="decorated" href={privacy.consent.url}>{privacy.consent.link_label}</a>
                                 </Paragraph>
                             </Div>
                         }
@@ -565,7 +565,7 @@ export default BaseRender(Apply);
                                                 checked={formData.consent.valid}
                                                 onChange={() => setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})} />
                                             {privacy.consent.message}
-                                            <a target="_blank" rel="noopener noreferrer" className="decorated" href={privacy.consent.url}>{privacy.consent.link_label}</a>
+                                            <a target="_blank" rel="noopener noreferrer nofollow" className="decorated" href={privacy.consent.url}>{privacy.consent.link_label}</a>
                                         </Paragraph>
                                     </Row>
                                 }

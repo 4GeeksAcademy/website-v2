@@ -43,7 +43,7 @@ If null of these options are appealing to you, and, you have either a private lo
 
 info@4geeksacademy.com
 
-Finally, if you are considering our own 4Geeks Academy program (the Full Stack Software Program in Downtown Miami), please [click here](http://4geeksacademy.skills.fund/) for financing options.
+Finally, if you are considering our own 4Geeks Academy program (the Full Stack Software Program in Downtown Miami), please [click here](https://4geeksacademy.skills.fund/) for financing options.
 
 
 

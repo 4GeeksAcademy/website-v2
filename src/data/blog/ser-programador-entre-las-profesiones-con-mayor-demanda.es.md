@@ -26,7 +26,7 @@ Si le sumamos a esto que el mundo globalizado, interconectado ha cambiado la man
 
 En algunos estudios realizados sobre los oficios más demandados durante 2015, varios coinciden en el **top ten**, es decir, los 10 más buscados. El de desarrollador ocupó el segundo y el tercer lugar.
 
-El Centro de Estudios CEAC, un centro de enseñanza privada español, elaboró un [**ranking**](http://infobae.com/ranking-a5860) de los 10 empleos más demandados en todo el mundo en 2015:
+El Centro de Estudios CEAC, un centro de enseñanza privada español, elaboró un [**ranking**](https://infobae.com/ranking-a5860) de los 10 empleos más demandados en todo el mundo en 2015:
 
 
 
@@ -61,7 +61,7 @@ El Centro de Estudios CEAC, un centro de enseñanza privada español, elaboró u
   19. Ejecutivos de Marketing.
 
 
-El Departamento de Trabajo de Estados Unidos, realizó también [**un ránking de las carreras**](http://noticias.universia.es/practicas-empleo/noticia/2014/02/12/1081179/20-carreras-mayor-futuro-laboral.html) con mayor proyección hasta el 2022. El desarrollador también se ubica de 3ro:
+El Departamento de Trabajo de Estados Unidos, realizó también [**un ránking de las carreras**](https://noticias.universia.es/practicas-empleo/noticia/2014/02/12/1081179/20-carreras-mayor-futuro-laboral.html) con mayor proyección hasta el 2022. El desarrollador también se ubica de 3ro:
 
 
 
@@ -105,7 +105,7 @@ En función del rol que desempeña (área)
 Fuente de la imagen: Funders & Founders
 
 
-Un trabajo más reciente sobre cómo se cotizan los _developers_ en [Silicon Valley](http://www.bloomberg.com/news/articles/2016-04-27/do-you-earn-less-than-a-silicon-valley-intern), se calcula que para verano de 2016 el promedio de ingresos se ubique alrededor de 6.000$ mensuales. Esta realidad pareciera confirmar la idea de que un buen desarrollador tiene un mundo de posibilidades fuera de nuestras fronteras.
+Un trabajo más reciente sobre cómo se cotizan los _developers_ en [Silicon Valley](https://www.bloomberg.com/news/articles/2016-04-27/do-you-earn-less-than-a-silicon-valley-intern), se calcula que para verano de 2016 el promedio de ingresos se ubique alrededor de 6.000$ mensuales. Esta realidad pareciera confirmar la idea de que un buen desarrollador tiene un mundo de posibilidades fuera de nuestras fronteras.
 
 En Venezuela, Alejandro Sánchez, CEO de 4Geeks, comentó que según los últimos proyectos y empresas con las que ha mantenido contacto, el promedio de ingresos mensuales de un desarrollador va desde los Bs. 100.000 hasta lo Bs. 500.000 mensuales según el nivel, experiencia y tipo de proyecto.
 

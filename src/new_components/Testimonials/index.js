@@ -62,7 +62,7 @@ const Testimonials = (props) => {
                                         </H4>
                                         {
                                             item.linkedin_url != "" && item.linkedin_image != null &&
-                                            <a href={item.linkedin_url} target="_blank" rel="noopener noreferrer">
+                                            <a href={item.linkedin_url} target="_blank" rel="noopener noreferrer nofollow">
                                                 <GatsbyImage
                                                     // fluid={item.linkedin_image.childImageSharp.fluid}
                                                     image={getImage(item.linkedin_image.childImageSharp.gatsbyImageData)}

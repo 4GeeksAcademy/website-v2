@@ -36,7 +36,7 @@ Java is the most used back-end language by far, especially because it is the la
 ### **Python is everywhere, and rising!**
 
 
-If PHP is the king of the web, Python is the prince of everywhere…it’s a very mature language; you can do almost whatever you want with it.  And it will never die.  A lot of websites are made in Python: Google, YouTube, Dropbox, Quora, Yahoo, Pinterest, Instagram, Spotify, etc. [Check the full list here.](https://www.shoop.io/en/blog/25-of-the-most-popular-python-and-django-websites/) They have a Rails copycat called [Django](https://www.djangoproject.com/), and many other great frameworks like [Pylons](http://www.pylonsproject.org/), [Web2Py](http://www.web2py.com/), etc.  Python was implemented in 1989 and it is still growing in popularity today!
+If PHP is the king of the web, Python is the prince of everywhere…it’s a very mature language; you can do almost whatever you want with it.  And it will never die.  A lot of websites are made in Python: Google, YouTube, Dropbox, Quora, Yahoo, Pinterest, Instagram, Spotify, etc. [Check the full list here.](https://www.shoop.io/en/blog/25-of-the-most-popular-python-and-django-websites/) They have a Rails copycat called [Django](https://www.djangoproject.com/), and many other great frameworks like [Pylons](https://www.pylonsproject.org/), [Web2Py](https://www.web2py.com/), etc.  Python was implemented in 1989 and it is still growing in popularity today!
 
 
 ### You need to learn JavaScript (JS)

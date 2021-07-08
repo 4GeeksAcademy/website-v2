@@ -29,7 +29,7 @@ import GeeksVsOthers from '../components/GeeksVsOthers';
 import {WrapperCustom} from '../new_components/Sections';
 
 
-const imageSvg = props => <svg style={props.style} width="587" height="514" viewBox="0 0 587 514" fill="none" xmlns="http://www.w3.org/2000/svg">
+const imageSvg = props => <svg style={props.style} width="587" height="514" viewBox="0 0 587 514" fill="none" xmlns="https://www.w3.org/2000/svg">
   <circle cx="416.5" cy="487.5" r="26.5" fill="#0097CD" />
   <circle cx="516" cy="100" r="14" fill="#FFB718" />
   <circle cx="546" cy="290" r="119" fill="#FFB718" fill-opacity="0.2" />
@@ -80,13 +80,13 @@ const CityH1 = ({yml}) => {
 // }
 
 const SVGBubblesLeft = () => 
-  <svg style={{top: "62px", left: "0", position: "absolute", zIndex: -1}} width="26" height="362" viewBox="0 0 26 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg style={{top: "62px", left: "0", position: "absolute", zIndex: -1}} width="26" height="362" viewBox="0 0 26 362" fill="none" xmlns="https://www.w3.org/2000/svg">
     <circle cx="-2.5" cy="333.5" r="28.5" fill="#FFB718" fill-opacity="0.2"/>
     <circle cx="-10.5" cy="26.5" r="26.5" fill="#0097CD"/>
   </svg>
 
 const SVGBubblesRight = () =>
-  <svg style={{top: "10px", right: "0", position: "absolute", zIndex: -1}} width="50" height="160" viewBox="0 0 50 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg style={{top: "10px", right: "0", position: "absolute", zIndex: -1}} width="50" height="160" viewBox="0 0 50 160" fill="none" xmlns="https://www.w3.org/2000/svg">
     <circle cx="12.5" cy="73.5" r="12.5" fill="#CD0000"/>
     <circle cx="89" cy="80" r="80" fill="#FFB718" fill-opacity="0.2"/>
   </svg>

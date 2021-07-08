@@ -149,4 +149,4 @@ Price
 </table>
 It is a 14-week program and it’s only $3,405.  No other fees are charged to the student.  This is a Miami Dade College program and you will become a Miami Dade College student.  It’s not just a Bootcamp, it’s the experience, reputation and history of one of the largest Colleges in the U.S. focused on getting you trained with the skills of a Full Stack Web Developer.
 
-Please find more details about the Miami Dade College Full Stack program [here](http://mdc.4geeksacademy.com/).
+Please find more details about the Miami Dade College Full Stack program [here](https://mdc.4geeksacademy.com/).

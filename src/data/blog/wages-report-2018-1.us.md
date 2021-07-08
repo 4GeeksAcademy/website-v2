@@ -158,7 +158,7 @@ But, even if you’re satisfied with your current position, chances are you can 
 
 Labor market differences among the race and ethnicity groups are associated with many factors, not all of which are measurable but the salary factor does.
 
-The average pay for women in 2017 was $12,000, compared with $21,000 for men per year according to with the World Economic Forum’s wide-reaching [Global Gender Gap Report 2017](http://reports.weforum.org/global-gender-gap-report-2017/global-gender-gap-index-2017/).
+The average pay for women in 2017 was $12,000, compared with $21,000 for men per year according to with the World Economic Forum’s wide-reaching [Global Gender Gap Report 2017](https://reports.weforum.org/global-gender-gap-report-2017/global-gender-gap-index-2017/).
 
 Coding Bootcamps don’t escape from disparity.  Course Report [research](https://www.coursereport.com/blog/salaries-after-coding-bootcamp) found that men earned an average of $73,228 after coding Bootcamp, whereas women earned $68,578 after coding Bootcamp:
 <table width="600" style="height: 138px;" class="table table-striped" >

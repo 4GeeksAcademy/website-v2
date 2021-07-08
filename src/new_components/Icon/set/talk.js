@@ -1,5 +1,5 @@
 import React from 'react';
-export default props => <svg style={props.style} width={props.width} height={props.height} viewBox="0 0 79 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+export default props => <svg style={props.style} width={props.width} height={props.height} viewBox="0 0 79 94" fill="none" xmlns="https://www.w3.org/2000/svg">
 <path d="M67 4H22V30H67V4Z" fill="#FFCF18"/>
 <path d="M1.97461 56.7915V66.5832C1.97461 69.7948 2.64611 72.4582 5.92461 72.4582V92.0415H17.7746V72.4582C21.0136 72.4582 21.7246 69.7948 21.7246 66.5832V56.7915H1.97461Z" stroke="black" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round"/>
 <path d="M11.8488 48.9582C15.1211 48.9582 17.7738 46.3279 17.7738 43.0832C17.7738 39.8386 15.1211 37.2083 11.8488 37.2083C8.57654 37.2083 5.92383 39.8386 5.92383 43.0832C5.92383 46.3279 8.57654 48.9582 11.8488 48.9582Z" stroke="black" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round"/>

@@ -21,7 +21,7 @@ Do you know that bus drivers in Toronto can make up to $70k a year?  Or that co
 
 Choosing a career is like getting married: you have to be sure you’re making the right choice.  Steve Jobs used to say: “Your time is limited, so don’t waste it living someone else’s life.”  Ideally, then, you should make a living out of doing something you’re truly passionate about.  For many of us, that passion is technology.  The technological field is a growing economic sector and web developers are the ones who get to ride that wave, creating sites and apps that get everyone else on the web.  The **city of Miami Dade** is becoming one the hottest locations for tech companies to operate from and invest in.  Actually, Florida is the 3rd state with most IT firms in America.  VC investments for the tech industry has tripled in the past 2 years, and companies such as Google, Twitter, Facebook, Uber, Lyft, and Vice have moved to **Miami** as well.
 
-Web developing has become one of the most sought-out **jobs** in the world.  In a **job** posting site like Indeed, for example, on any given day you can see over 300 **job** offers available for web developers living in the **city of Miami Dade**.  Among the most relevant ones, for example, is a job offer by [SherlockTech](http://webconnect3.sendouts.com/CN_Frame.aspx?ID=ccs&SiteID=webconnect&Group=webconnect&Key=CN&CNTrackID=15&MTTrackID=2&PostId=4e11efbc-641f-41b5-af90-1a234b1f23c5&CnId=&applynewcan=1)[ promising an annual salary between $110,000 and $120,000 a year](http://webconnect3.sendouts.com/CN_Frame.aspx?ID=ccs&SiteID=webconnect&Group=webconnect&Key=CN&CNTrackID=15&MTTrackID=2&PostId=4e11efbc-641f-41b5-af90-1a234b1f23c5&CnId=&applynewcan=1).  If these numbers by themselves don’t impress you, then the next table surely will.
+Web developing has become one of the most sought-out **jobs** in the world.  In a **job** posting site like Indeed, for example, on any given day you can see over 300 **job** offers available for web developers living in the **city of Miami Dade**.  Among the most relevant ones, for example, is a job offer by [SherlockTech](https://webconnect3.sendouts.com/CN_Frame.aspx?ID=ccs&SiteID=webconnect&Group=webconnect&Key=CN&CNTrackID=15&MTTrackID=2&PostId=4e11efbc-641f-41b5-af90-1a234b1f23c5&CnId=&applynewcan=1)[ promising an annual salary between $110,000 and $120,000 a year](https://webconnect3.sendouts.com/CN_Frame.aspx?ID=ccs&SiteID=webconnect&Group=webconnect&Key=CN&CNTrackID=15&MTTrackID=2&PostId=4e11efbc-641f-41b5-af90-1a234b1f23c5&CnId=&applynewcan=1).  If these numbers by themselves don’t impress you, then the next table surely will.
 
 Salaries across Miami’s iOS Job Market*:
 <table width="411" style="height: 307px;" class="table table-striped" >
@@ -83,7 +83,7 @@ Salaries across Miami’s iOS Job Market*:
 </tr>
 </tbody>
 </table>
-*Info from http://www.sherlocktalent.com/browse-open-jobs/miami/ios-developer/
+*Info from https://www.sherlocktalent.com/browse-open-jobs/miami/ios-developer/
 
 Certainly, to be able to make that much, you’d need to have specific training as a web developer and get a few years of working experience on your resume.  And these are only the numbers today.  The Ibero-American Development Bank names "software developer" as one the most desirable** jobs** and with the highest demand both now and in the future.
 

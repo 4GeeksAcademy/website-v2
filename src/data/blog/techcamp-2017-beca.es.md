@@ -43,7 +43,7 @@ El TechCamp Caracas 2017 contó con la participación de expertos nacionales e i
 
 **_¡Programa tu historia con 4Geeks Academy!_**
 
-Para conocer más sobre la academia y los cursos que tenemos para ti, puedes ingresar a [http://mdc.4geeksacademy.com/](http://mdc.4geeksacademy.com/)
+Para conocer más sobre la academia y los cursos que tenemos para ti, puedes ingresar a [https://mdc.4geeksacademy.com/](https://mdc.4geeksacademy.com/)
 
 _Giuliana Rivero Meré._
 

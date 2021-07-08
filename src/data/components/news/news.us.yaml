@@ -35,10 +35,10 @@ news:
   - name: "RRHH Digital"
     location: ["madrid-spain"]
     image: "../../../../static/images/news/rrhhdigital_grey.png"
-    url: "http://www.rrhhdigital.com/secciones/mercado-laboral/140492/Diez-requisitos-imprescindibles-que-todo-programador-debe-cumplir-en-la-actualidad"
+    url: "https://www.rrhhdigital.com/secciones/mercado-laboral/140492/Diez-requisitos-imprescindibles-que-todo-programador-debe-cumplir-en-la-actualidad"
   - name: "Las Ultimas Noticias"
     location: ["santiago-chile"]
-    url: "http://www.lun.com/Pages/NewsDetail.aspx?dt=2019-02-16&NewsID=420792&BodyID=0&PaginaId=16"
+    url: "https://www.lun.com/Pages/NewsDetail.aspx?dt=2019-02-16&NewsID=420792&BodyID=0&PaginaId=16"
     image: "../../../../static/images/news/lun_grey.png"
   - name: "Emol"
     location: ["santiago-chile"]

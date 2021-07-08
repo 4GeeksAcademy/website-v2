@@ -34,7 +34,7 @@ The biggest career challenges for women in tech is not about finding a good job 
 
 **A Lack of Mentors & Female Role Models**
 
-Based on the results of [ISACA´s](http://www.isaca.org/info/2017-women-in-technology-survey/index.html) survey, the biggest barriers women face in the tech field is a 48% lack of female mentorship and a 42% lack of female role models.  Women desire to learn and to be trained from the perspective of other women in tech, but the barriers that we found in the ISACA results are “limited networking opportunities” and “lack of a strong professional network.”
+Based on the results of [ISACA´s](https://www.isaca.org/info/2017-women-in-technology-survey/index.html) survey, the biggest barriers women face in the tech field is a 48% lack of female mentorship and a 42% lack of female role models.  Women desire to learn and to be trained from the perspective of other women in tech, but the barriers that we found in the ISACA results are “limited networking opportunities” and “lack of a strong professional network.”
 
 **![](/wp-content/uploads/2018/01/Picture1.png) ****Education & Right Tools**
 

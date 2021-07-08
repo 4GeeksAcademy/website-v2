@@ -130,7 +130,7 @@ The key is getting a career planner and let your actions be guided by a clear ro
 ## Final thoughts
 
 
-The decision of learning to code and landing a job afterward is huge! Start with a question: why exactly are you putting yourself through all of this [mental toil and relentless sacrifice and inevitable frustration](/feelings-learning-coding/) for many weeks or months? Don’t be scared, this is the right path (even if you don’t know anything about coding). [Just find the reasons](http://javascriptissexy.com/your-goal-and-purpose-for-learning-programming-will-determine-which-programming-career-path-to-pursue-and-whether-you-will-succeed/) and put your hands on it. [Apply now!](/apply/)
+The decision of learning to code and landing a job afterward is huge! Start with a question: why exactly are you putting yourself through all of this [mental toil and relentless sacrifice and inevitable frustration](/feelings-learning-coding/) for many weeks or months? Don’t be scared, this is the right path (even if you don’t know anything about coding). [Just find the reasons](https://javascriptissexy.com/your-goal-and-purpose-for-learning-programming-will-determine-which-programming-career-path-to-pursue-and-whether-you-will-succeed/) and put your hands on it. [Apply now!](/apply/)
 
 
 

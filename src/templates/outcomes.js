@@ -12,7 +12,7 @@ import LeadForm from '../new_components/LeadForm';
 import {outcomesReport} from "../actions";
 
 const SVGImage = () =>
-<svg width="510" height="295" viewBox="0 0 510 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="510" height="295" viewBox="0 0 510 295" fill="none" xmlns="https:://www.w3.org/2000/svg">
 <path d="M73.5 280L179.5 136L226 187L393 17.5L473 111" stroke="#0097CD" strokeWidth="2" strokeLinecap="round"/>
 <path d="M33 44V294H509" stroke="#A4A4A4" strokeLinecap="round"/>
 <circle cx="58" cy="194" r="58" fill="#FFB718"/>

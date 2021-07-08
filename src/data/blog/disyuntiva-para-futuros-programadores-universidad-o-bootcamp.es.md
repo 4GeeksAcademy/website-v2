@@ -20,15 +20,15 @@ Sin embargo, la realidad plantea otra necesidad… Y es que el entorno organizac
 
 **Oferta Vs. Demanda**
 
-Según The Guardian Globe los siguientes países tienen dificultades para llenar la necesidad de desarrolladores: Perú (67%), Argentina (63%), Panamá (58%), Colombia (57%). En el caso de [Colombia](http://www.eltiempo.com/estilo-de-vida/educacion/panorama-de-los-ingenieros-en-colombia/16402298), por ejemplo, se presenta una necesidad de 15.000,00 desarrolladores, y se espera un aumento de 90.000,00 para el 2018. Esto debido al incesante aumento de ventas de software de 17 millones de pesos para ese año.
+Según The Guardian Globe los siguientes países tienen dificultades para llenar la necesidad de desarrolladores: Perú (67%), Argentina (63%), Panamá (58%), Colombia (57%). En el caso de [Colombia](https://www.eltiempo.com/estilo-de-vida/educacion/panorama-de-los-ingenieros-en-colombia/16402298), por ejemplo, se presenta una necesidad de 15.000,00 desarrolladores, y se espera un aumento de 90.000,00 para el 2018. Esto debido al incesante aumento de ventas de software de 17 millones de pesos para ese año.
 
 Hay países como Chile, que han tenido que contratar personal en el exterior, para intentar cubrir las necesidades del sector informático.
 
-Jaime Soto, presidente de la Asociación Chilena de Empresas de tecnologías de la Información (ACTI), en entrevista para [La Tercera de Chile](http://www.latercera.com/noticia/negocios/2013/03/655-515593-9-falta-de-profesionales-informaticos-baja-competitividad-de-chile.shtml), explica que en el país cada año egresan 7 mil profesionales menos de los necesarios para el área informática.
+Jaime Soto, presidente de la Asociación Chilena de Empresas de tecnologías de la Información (ACTI), en entrevista para [La Tercera de Chile](https://www.latercera.com/noticia/negocios/2013/03/655-515593-9-falta-de-profesionales-informaticos-baja-competitividad-de-chile.shtml), explica que en el país cada año egresan 7 mil profesionales menos de los necesarios para el área informática.
 
 “Según los datos de la entidad, anualmente terminan sus estudios 5 mil estudiantes de áreas relacionadas con la informática en Chile, mientras que el país requiere 12 mil”, destaca la publicación.
 
-En ese mismo [reportaje](http://www.latercera.com/noticia/negocios/2013/03/655-515593-9-falta-de-profesionales-informaticos-baja-competitividad-de-chile.shtml), Benjamín Tosseli, socio de IT Hunter, y ex director de la GECHS (Asociación de Desarrolladores de Software), indica que “la escasez de profesionales presiona el salario de los informáticos hacia arriba. Entre el año 2011 y 2012, dice, las rentas “subieron entre un 15% y un 25%”, recalcando que “es el año que más subieron”.
+En ese mismo [reportaje](https://www.latercera.com/noticia/negocios/2013/03/655-515593-9-falta-de-profesionales-informaticos-baja-competitividad-de-chile.shtml), Benjamín Tosseli, socio de IT Hunter, y ex director de la GECHS (Asociación de Desarrolladores de Software), indica que “la escasez de profesionales presiona el salario de los informáticos hacia arriba. Entre el año 2011 y 2012, dice, las rentas “subieron entre un 15% y un 25%”, recalcando que “es el año que más subieron”.
 
 ¿Datos más contundentes? Un estudio realizado por el Instituto Global McKinsey, destaca que para el año 2020 habrá una carencia de 45 millones de profesionales medios en países en vías de desarrollo.
 
@@ -38,7 +38,7 @@ Las Universidades pueden proveer graduados con una fuerte base computacional per
 
 En respuesta a esta situación, han surgido diversas academias, _bootcamps_ que pueden proveer en menor tiempo estos profesionales quienes estarán más que capacitados para insertarse en el campo laboral.
 
-De acuerdo a un artículo publicado por [La Nación de Argentina](http://www.lanacion.com.ar/1293995-la-argentina-con-deficit-de-ingenieros), Raffaella Temporitti, gerente de Recursos Humanos de IBM, detalla: "También puede observarse que las nuevas generaciones quieren insertarse más rápido en el mercado laboral, ganar un buen salario y hacer una carrera profesional, y por eso comienzan a optar por carreras más cortas y sin tanto requerimiento de estudios".
+De acuerdo a un artículo publicado por [La Nación de Argentina](https://www.lanacion.com.ar/1293995-la-argentina-con-deficit-de-ingenieros), Raffaella Temporitti, gerente de Recursos Humanos de IBM, detalla: "También puede observarse que las nuevas generaciones quieren insertarse más rápido en el mercado laboral, ganar un buen salario y hacer una carrera profesional, y por eso comienzan a optar por carreras más cortas y sin tanto requerimiento de estudios".
 
 Según el documento desarrollado por la CAF; en el 2013 “Hacia La Trasformación Digital de América Latina”, existe una recomendación para los países de la región de desarrollar toda una plataforma tecnológica para el desarrollo cultural, social, económico, donde se entiende como una piedra estratégica fundamental el desarrollo de capital humano para hacer crecer la región, lo que esto se traduce en un impacto en línea general Latinoamérica y la **aparici****ó****n de necesidades de desarrolladores para el uso de la tecnolog****í****a** no solamente en el ámbito de empresas privadas sino en el ámbito gubernamental.
 

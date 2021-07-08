@@ -31,7 +31,7 @@ We all need to move around on the web and we need to do it in the most adequate 
 </tr>
 <tr >
 
-<td >[**2012 Median Pay**](http://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-wage)
+<td >[**2012 Median Pay**](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-wage)
 </td>
 
 <td >$62,500 per year
@@ -40,7 +40,7 @@ $30.05 per hour
 </tr>
 <tr >
 
-<td >[**Entry-Level Education**](http://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-education)
+<td >[**Entry-Level Education**](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-education)
 </td>
 
 <td >Associate’s degree
@@ -48,7 +48,7 @@ $30.05 per hour
 </tr>
 <tr >
 
-<td >[**Work Experience in a Related Occupation**](http://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-experience)
+<td >[**Work Experience in a Related Occupation**](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-experience)
 </td>
 
 <td >None
@@ -56,7 +56,7 @@ $30.05 per hour
 </tr>
 <tr >
 
-<td >[**On-the-job Training**](http://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-training)
+<td >[**On-the-job Training**](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-training)
 </td>
 
 <td >None
@@ -64,7 +64,7 @@ $30.05 per hour
 </tr>
 <tr >
 
-<td >[**Number of Jobs, 2012**](http://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-number-jobs)
+<td >[**Number of Jobs, 2012**](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-number-jobs)
 </td>
 
 <td >141,400
@@ -72,7 +72,7 @@ $30.05 per hour
 </tr>
 <tr >
 
-<td >[**Job Outlook, 2012-22**](http://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-outlook)
+<td >[**Job Outlook, 2012-22**](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-outlook)
 </td>
 
 <td >20% (Faster than average)
@@ -80,7 +80,7 @@ $30.05 per hour
 </tr>
 <tr >
 
-<td >[**Employment Change, 2012-22**](http://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-emp-change)
+<td >[**Employment Change, 2012-22**](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#TB_inline?height=325&width=325&inlineId=qf-emp-change)
 </td>
 
 <td >28,500
@@ -88,7 +88,7 @@ $30.05 per hour
 </tr>
 </tbody>
 </table>
-Source:[http://www.bls.gov/ooh/computer-and-information-technology/web-developers.html](http://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm)
+Source:[https://www.bls.gov/ooh/computer-and-information-technology/web-developers.html](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm)
 
 The reality shows that there is an ever-growing demand for web developers as more and more systems and processes are digitized and web platforms are chosen as spaces for direct business exchange.  A good web platform will allow better and further client reach.  This sums up the role of web developers in the business world.  They are the ones who will enable companies to have an attractive and efficient web presence, whether it is through a website, a service app, or any other web tool.
 

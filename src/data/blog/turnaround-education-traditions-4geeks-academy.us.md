@@ -51,8 +51,8 @@ For those who say that Education is not important, and support that theory, we b
 
 [1] [https://code.org/promote](https://code.org/promote)
 
-[2] [http://econdataus.com/claim400k.htm](http://econdataus.com/claim400k.htm)
+[2] [https://econdataus.com/claim400k.htm](https://econdataus.com/claim400k.htm)
 
-[3] Just to point out a few articles: [http://edtechreview.in/data-statistics/2457-flipped-learning-classroom-statistics](http://edtechreview.in/data-statistics/2457-flipped-learning-classroom-statistics)  - [https://www.learndash.com/interesting-flipped-classroom-statistics/](https://www.learndash.com/interesting-flipped-classroom-statistics/)  - [http://www.asee.org/file_server/papers/attachment/file/0003/3259/6219.pdf](http://www.asee.org/file_server/papers/attachment/file/0003/3259/6219.pdf)  - [http://www.ascd.org/publications/educational-leadership/mar13/vol70/num06/Evidence-on-Flipped-Classrooms-Is-Still-Coming-In.aspx](http://www.ascd.org/publications/educational-leadership/mar13/vol70/num06/Evidence-on-Flipped-Classrooms-Is-Still-Coming-In.aspx)
+[3] Just to point out a few articles: [https://edtechreview.in/data-statistics/2457-flipped-learning-classroom-statistics](https://edtechreview.in/data-statistics/2457-flipped-learning-classroom-statistics)  - [https://www.learndash.com/interesting-flipped-classroom-statistics/](https://www.learndash.com/interesting-flipped-classroom-statistics/)  - [https://www.asee.org/file_server/papers/attachment/file/0003/3259/6219.pdf](https://www.asee.org/file_server/papers/attachment/file/0003/3259/6219.pdf)  - [https://www.ascd.org/publications/educational-leadership/mar13/vol70/num06/Evidence-on-Flipped-Classrooms-Is-Still-Coming-In.aspx](https://www.ascd.org/publications/educational-leadership/mar13/vol70/num06/Evidence-on-Flipped-Classrooms-Is-Still-Coming-In.aspx)
 
 

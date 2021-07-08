@@ -45,7 +45,7 @@ const TestimonialsCarrousel = (props) => {
                             </Link>
                         }
                         {item.linkedin_url != "" && item.linkedin_text != null &&
-                            <a href={item.linkedin_url} target="_blank" rel="noopener noreferrer">
+                            <a href={item.linkedin_url} target="_blank" rel="noopener noreferrer nofollow">
                                 <Paragraph
                                     align="center"
                                     margin="10px 0 0 0"

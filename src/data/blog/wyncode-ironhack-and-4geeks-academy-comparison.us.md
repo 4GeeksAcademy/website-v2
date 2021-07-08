@@ -50,7 +50,7 @@ As you can see, the bootcamps in Miami vary a lot depending on your needs.  At 
 
 Here you can read more about: [Why we think part-time studies are the future.](//one-on-one-mentorship-program-of-4geeks-academy/)
 
-Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](http://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
+Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](https://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
 
 If you want to get more into detail, you can read our [comparison between 4Geeks Academy and other industry coding bootcamps.](//us/geeks-vs-others)
 
