@@ -31,7 +31,6 @@ import Icon from '../Icon';
 
 const LandingFooter = ({ yml }) => {
 
-  console.log("YAML:::", yml.policy)
   return (
     <>
       <GridContainer margin="44px 0" margin_tablet="0 0 40px 0">
@@ -137,7 +136,7 @@ const LandingFooter = ({ yml }) => {
                   borderWidth={i % 2 == 1 && "0px 1px 0px 1px"}
                   key={item.name}
                   fontSize="13px"
-                  lineHeight="22px"
+                  lineHeight="16px"
                   width="fit-content"
                   color={Colors.darkGray}
                   padding="0 15px"
@@ -147,46 +146,6 @@ const LandingFooter = ({ yml }) => {
               </Link>
             ))
           }
-
-          {/* <Div>
-
-            <H4
-              fontSize="13px"
-              lineHeight="22px"
-              width="fit-content"
-              color={Colors.darkGray}
-              margin="0 30px"
-            >
-              Políticas de Cookies
-            </H4>
-          </Div> */}
-          {/* <Div>
-            <H4
-              fontSize="13px"
-              lineHeight="22px"
-              width="fit-content"
-              color={Colors.darkGray}
-            >
-              Políticas de Privacidad
-            </H4>
-            <H4
-              fontSize="13px"
-              lineHeight="22px"
-              width="fit-content"
-              color={Colors.darkGray}
-              margin="0 30px"
-            >
-              Políticas de Cookies
-            </H4>
-          </Div>
-          <H4
-            fontSize="13px"
-            lineHeight="22px"
-            width="fit-content"
-            color={Colors.darkGray}
-          >
-            Términos y Condiciones
-          </H4> */}
         </Div>
 
         <Div

@@ -88,10 +88,10 @@ socials:
 policy:
   - name: "Políticas de Privacidad"
     link: "/es/privacidad"
-  - name: "Términos y Condiciones"
-    link: "/es/terminos"
   - name: "Políticas de Cookies"
     link: "/es/cookie"
+  - name: "Términos y Condiciones"
+    link: "/es/terminos"
   # - name: "FAQ"
   #   link: "/es/preguntas-frecuentes"
   # - name: "Contacto"

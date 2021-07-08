@@ -85,10 +85,10 @@ socials:
 policy:
   - name: "Privacy Policy"
     link: "/us/privacy-policy"
-  - name: "Terms and Conditions"
-    link: "/us/terms-conditions"
   - name: "Cookies"
     link: "/us/cookies"
+  - name: "Terms and Conditions"
+    link: "/us/terms-conditions"
   # - name: "FAQ"
   #   link: "/es/preguntas-frecuentes"
   # - name: "Contacto"
