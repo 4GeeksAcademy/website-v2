@@ -5,7 +5,7 @@ header:
 
 button_section:
   button_text: "VIEW ALL PROJECTS"
-  button_link: "/graduates"
+  button_link: "/us/graduates"
 
 projects:
   - project_name: "Raspberry Sky"

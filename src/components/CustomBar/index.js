@@ -112,8 +112,8 @@ CustomBar.propTypes = {
 }
 CustomBar.defaultProps = {
     title: "",
-    upcomingPath: "/calendar",
-    applyPath: "/apply",
+    upcomingPath: "/us/next-dates",
+    applyPath: "/us/apply",
     position: "static",
     showOnScrollPosition: null
 };

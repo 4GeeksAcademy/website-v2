@@ -5,7 +5,7 @@ header:
 
 button_section:
   button_text: "VER MÁS PROYECTOS"
-  button_link: "/graduados"
+  button_link: "/es/graduados"
 
 projects:
   - project_name: "Raspberry Sky"

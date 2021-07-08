@@ -4,7 +4,7 @@ date: "2018-07-16T20:43:46+00:00"
 excerpt: "There are many important elements to consider when you are choosing the best coding Bootcamp for you. We believe that you should address these four questions."
 slug: "choosing-coding-bootcamp"
 title: "How to choose the best coding Bootcamp?"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2018/07/Picture-Post-1.png"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2018/07/Picture-Post-1.png"
 image_alt: ""
 cluster: "coding-bootcamps"
 status: "published"
@@ -56,7 +56,7 @@ Some people believe that a high impact methodology has a lot to do with a Part-
 
 It all has pros and cons but when we talk about a high impact methodology we mean that it must be designed towards enabling students to become developers, and it requires a compound of at least 300+ hours of hard work (hands-on mainly) while provides a well-designed product supported by technology (an academic platform -LMS-) to achieve the quality expected.
 
-[We believe in Part-Time education](/truth-behind-part-time-education/), and we are proud of [the program](/the-program/) we have in Miami. You will become a software developer, within a part-time structure, in 16 weeks, paying only $6k, because we have managed to lower the cost of your education.
+[We believe in Part-Time education](/truth-behind-part-time-education/), and we are proud of [the program](/us/coding-bootcamps/part-time-full-stack-developer) we have in Miami. You will become a software developer, within a part-time structure, in 16 weeks, paying only $6k, because we have managed to lower the cost of your education.
 
 
 ## 4. What about the content?
