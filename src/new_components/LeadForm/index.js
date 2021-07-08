@@ -20,9 +20,10 @@ const formIsValid = (formData = null) => {
 
 const Form = styled.form`
     margin: ${props => props.margin};
-    // padding: 20px;
     width: 100%;
     display: block;
+    background: ${props => props.background ? props.background : "#FFFFFF"};
+    border-radius: 3px;
     @media  ${Break.sm}{
         display: ${props => props.d_sm};
     }
@@ -64,7 +65,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tablet, justifySelf, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor}) => {
+const LeadForm = ({marginButton, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, justifySelf, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -125,7 +126,7 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
         })
     }, [data])
     // console.log("formData", formData)
-    return <Form margin={margin} margin_tablet={margin_tablet} d_sm={d_sm} style={style} onSubmit={(e) => {
+    return <Form margin={margin} background={background} margin_tablet={margin_tablet} d_sm={d_sm} style={style} onSubmit={(e) => {
         e.preventDefault();
 
         if (formStatus.status === "error") setFormStatus({status: "idle", msg: ""})
@@ -155,20 +156,20 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                 })
         }
     }}>
-        {heading && <H4 type="h4" fontSize="25px" margin="20px 0px 0px 0px">{heading}</H4>}
+        {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet="left" margin={landingTemplate ? "15px 0px 30px 0" : "20px 0px 15px 40px"}>{heading}</H4>}
         {formStatus.status === "thank-you" ?
             <Paragraph align="center" margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
             :
             <>
                 {motivation && <Paragraph textAlign="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
                 {/* <Row display="flex" marginLeft="0" marginRight="0"> */}
-                <GridContainer display="block" className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
+                <GridContainer display="block" containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
                     {/* <Column display={layout} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0"> */}
                     {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
                         const _field = formData[f]
                         return <Input
                             key={i}
-                            bgColor={inputBgColor}
+                            bgColor={inputBgColor || "#FFFFFF"}
                             // borderRadius={i === 0 && layout === "flex" ? "10px 0px 0px 10px" : "0"}
                             type={_field.type} className="form-control" placeholder={_field.place_holder}
                             onChange={(value, valid) => {
@@ -177,6 +178,7 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                                     setFormStatus({status: "idle", msg: "Request"})
                                 }
                             }}
+                            valid={true}
                             value={_field.value}
                             errorMsg={_field.error}
                             required={_field.required}
@@ -188,7 +190,6 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                             width="100%"
                             justifyContent="center"
                             width_tablet={buttonWidth_tablet}
-                            justifySelf={justifySelf}
                             variant="full"
                             type="submit"
                             margin="10px 0"
@@ -200,7 +201,7 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                     }
                     {/* </Div> */}
                     {session && session.location && session.location.gdpr_compliant &&
-                        <Paragraph fontSize="11px" margin="5px 0 0 0">
+                        <Paragraph fontSize="11px" margin="5px 0 0 0" textAlign="left" >
                             <input
                                 name="isGoing"
                                 type="checkbox"
@@ -214,17 +215,13 @@ const LeadForm = ({margin, margin_tablet, justifyContentButton, buttonWidth_tabl
                     {/* </Row> */}
                 </GridContainer>
                 {layout === "block" &&
-                    <GridContainer>
+                    <GridContainer containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} >
                         <Div justifyContent={justifyContentButton ? justifyContentButton : "end" } display="flex" padding="5px 0 0 0">
-                            {/* {handleClose && <Column size="6" padding="10px 20px">
-                            <Button width="100%" padding=".7rem .45rem" color={Colors.gray} textColor={Colors.white} onClick={handleClose}>Close</Button>
-                        </Column>} */}
-                            {/* <Column size={handleClose ? "6" : "12"} padding="10px 20px" margin="auto"> */}
-
                             <Button
                                 // width="fit-content"
                                 variant="full"
-                                type="submit"
+                                type={`submit ${layout}`}
+                                margin={marginButton}
                                 color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
                                 textColor={Colors.white}
                                 disabled={formStatus.status === "loading" ? true : false}

@@ -6,9 +6,9 @@ import {Link} from "gatsby"
 import Icon from "../Icon"
 
 const About4Geeks = ({lang}) => {
-    const about = lang[0].node
+    const about = lang[0]?.node || lang
     return (
-        <GridContainerWithImage columns_tablet="12" margin_tablet="0 0 108px 0" margin="0 0 64px 0">
+        <GridContainerWithImage columns_tablet="12" margin_tablet="100px 0 108px 0" margin="80px 0 64px 0">
             <Div
                 flexDirection="column"
                 gridColumn_tablet="1 / 6"
