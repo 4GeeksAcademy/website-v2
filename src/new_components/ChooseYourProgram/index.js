@@ -126,8 +126,8 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
                                         fontWeight="400"
                                         opacity="1"
                                         margin={i == 0 && "10px 0px 25px 0"}
-                                    // margin_tablet="0 0 5px 0"
-                                    >{m}</Paragraph>
+                                        dangerouslySetInnerHTML={{__html: m}}
+                                    />
                                 )}
                             </Div>
                             <Link to={program.link}>

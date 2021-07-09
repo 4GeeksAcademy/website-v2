@@ -21,6 +21,11 @@ const Landing = (props) => {
 
   const applySchollarship = data.allLandingYaml.edges[0].node.apply_schollarship
 
+  const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
+    label: p.text,
+    value: p.bc_slug
+}))
+
   useEffect(() => {
     let _components = {};
     if (yml.components) yml.components.forEach(({name, ...rest}) => {
@@ -187,7 +192,7 @@ const Landing = (props) => {
               margin_tablet="50px 0 0 0" 
               margin="0" 
               style={{ marginTop: "50px" }}
-              // heading="Request More Info."
+              selectProgram={programs}
               formHandler={requestSyllabus}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -204,9 +209,6 @@ const Landing = (props) => {
           </Div>
         </GridContainer>
       </StyledBackgroundSection>
-
-      {/* <Badges lang={pageContext.lang} background={Colors.lightYellow} paragraph={yml.badges.paragraph} padding="60px 0" padding_tablet="68px 0" margin="0 0 58px 0" margin_tablet="0 0 78px 0" /> */}
-
 
       {
         Object.keys(components)
@@ -238,6 +240,7 @@ const Landing = (props) => {
           >
             <LeadForm
               landingTemplate
+              selectProgram={programs}
               layout="block"
               background={Colors.verylightGray}
               margin="0"
@@ -246,7 +249,7 @@ const Landing = (props) => {
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
               redirect={yml.form.redirect}
-              inputBgColor="#F9F9F9"
+              inputBgColor="#FFFFFF"
               lang={pageContext.lang}
               fields={yml.form.fields}
               data={preData}
@@ -474,6 +477,7 @@ export const query = graphql`
                 text
                 font_size
               }
+              background
               content{
                 text
                 font_size
@@ -675,6 +679,19 @@ export const query = graphql`
               }
               featured
             }
+          }
+        }
+      }
+    }
+    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          programs{
+            text
+            link
+            bc_slug
+            location_bc_slug
+            schedule
           }
         }
       }

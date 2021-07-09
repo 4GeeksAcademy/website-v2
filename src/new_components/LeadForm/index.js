@@ -8,6 +8,7 @@ import {SessionContext} from '../../session';
 import {Button, Colors} from "../Styling";
 import {Break, Devices} from "../Responsive";
 import {useStaticQuery, graphql, navigate} from 'gatsby';
+import {SelectRaw} from '../Select'
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -40,6 +41,7 @@ const _fields = {
     email: {value: '', valid: false, required: true, type: 'email', place_holder: "Your email *", error: "Please specify a valid email"},
     phone: {value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone"},
     consent: {value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms"},
+    course: {value: null, valid: false, required: true, type: 'text', place_holder: "Select a program"}
 }
 
 const clean = (fields, data) => {
@@ -65,7 +67,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({marginButton, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, justifySelf, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate}) => {
+const LeadForm = ({marginButton, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, justifySelf, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -113,6 +115,7 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
     const [formStatus, setFormStatus] = useState({status: "idle", msg: ""});
     const [formData, setVal] = useState(_fields);
     const {session} = useContext(SessionContext);
+    const courseSelector = yml.form_fields.find(f => f.name === "course")
     React.useEffect(() => {
         setVal(_data => {
             const _ = Object.keys(_data).reduce((total, key) => {
@@ -125,7 +128,6 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
             return ({..._, ...data, utm_url: {type: "hidden", value: window.location.href, valid: true}})
         })
     }, [data])
-    // console.log("formData", formData)
     return <Form margin={margin} background={background} margin_tablet={margin_tablet} d_sm={d_sm} style={style} onSubmit={(e) => {
         e.preventDefault();
 
@@ -164,13 +166,11 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                 {motivation && <Paragraph textAlign="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
                 {/* <Row display="flex" marginLeft="0" marginRight="0"> */}
                 <GridContainer display="block" containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
-                    {/* <Column display={layout} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0"> */}
                     {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
                         const _field = formData[f]
                         return <Input
                             key={i}
                             bgColor={inputBgColor || "#FFFFFF"}
-                            // borderRadius={i === 0 && layout === "flex" ? "10px 0px 0px 10px" : "0"}
                             type={_field.type} className="form-control" placeholder={_field.place_holder}
                             onChange={(value, valid) => {
                                 setVal({...formData, [f]: {..._field, value, valid}});
@@ -185,6 +185,21 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                             on
                         />
                     })}
+                    {
+                        selectProgram &&                         
+                        <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
+                            <SelectRaw
+                                style={{
+                                    background: '#FFFFFF',
+                                }}
+                                options={selectProgram}
+                                value={selectProgram.value}
+                                placeholder={courseSelector.place_holder}
+                                onChange={(value, valid) => setVal({...formData, course: {value, valid}})}
+                            />
+                        </Div>
+                    }
+
                     {layout === "flex" &&
                         <Button 
                             width="100%"

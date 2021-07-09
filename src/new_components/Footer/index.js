@@ -45,6 +45,9 @@ const Form = styled.form`
 
 const Footer = ({ yml }) => {
 
+    let sessionStorage = window.localStorage.getItem('academy_session');
+    let socials = JSON.parse(sessionStorage).location.socials
+
     const {session} = React.useContext(SessionContext);
     const [formStatus, setFormStatus] = useState({status: "idle", msg: "Resquest"});
     const [formData, setVal] = useState({
@@ -83,13 +86,13 @@ const Footer = ({ yml }) => {
                 >
                     <H4 margin="0 0 10px 0" display="none" display_md="block">{yml.newsletter.heading}</H4>
                     <Div>
-                        {yml.socials && yml.socials.map((ln, i) => {
+                        {(socials ? socials : yml.socials && yml.socials).map((ln, i) => {
 
                             return (
                                 <Anchor
                                     key={i}
                                     cursor="pointer"
-                                    to={ln.link}
+                                    to={ln.social_link || ln.link}
                                     textAlign="left"
                                     margin="0 0 5px 0"
                                     fontSize="13px"
@@ -98,7 +101,7 @@ const Footer = ({ yml }) => {
                                     textTransform="uppercase"
                                     color={Colors.black}
                                 >
-                                    {ln.icon && <Icon icon={ln.icon} style={{margin: "0 15px 0 0"}} color={Colors.black} fill={Colors.black} height="32px" width="32px" />}
+                                    {(ln.social_name || ln.icon) && <Icon icon={ln.social_name.toLowerCase() || ln.icon} style={{margin: "0 15px 0 0"}} color={Colors.black} fill={Colors.black} height="32px" width="32px" />}
                                 </Anchor>
                             )
                         })}

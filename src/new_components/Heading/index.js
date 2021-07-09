@@ -212,6 +212,7 @@ export const Paragraph = styled.p`
       padding: ${props => props.padding_md};
   }
   @media  ${Devices.lg}{
+    font-size: ${props => props.fontSize_lg};
   }
   @media  ${Devices.xl}{
   }
