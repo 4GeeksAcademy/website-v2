@@ -6,7 +6,7 @@ slug: "javascript-and-python"
 title: "JavaScript y Python: Imprescindibles para cualquier programador"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/JSandPython-768x552.jpg"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "aprender-a-programar"
 status: "published"
 featured: "false"
 
