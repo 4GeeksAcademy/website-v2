@@ -17,7 +17,8 @@ En una entrevista de la [BBC](https://www.bbc.com/mundo/noticias-56247281), Rami
 
 Sin embargo, a menudo nos encontramos programadores junior sin portafolio, que no interactúan a través del networking o que tienen una hoja de vida que necesita mejoras. Es por eso que a continuación te damos 5 tips imperdibles para que seas el candidato o la candidata que se quede con el trabajo.
 
-LinkedIn y portafolio: Tan importantes como el CV
+## LinkedIn y portafolio: Tan importantes como el CV
+
 El CV no basta, sobre todo cuando se trata de un programador. LinkedIn es una red social para profesionales que se lanzó en el año 2003, pero en la última década ha cobrado tanta relevancia que ya tiene 722 millones de usuarios en su plataforma y 3 personas son contratadas a través de LinkedIn cada minuto [Hubspot](https://blog.hootsuite.com/linkedin-statistics-business/).
 
 Como programador o programadora, en LinkedIn podrás construir un perfil profesional que aumentará las oportunidades de ser visible ante los reclutadores o servirá para verificar tus antecedentes laborales, lo cual le dará más credibilidad a tu imagen profesional. Además en LinkedIn podrás mantenerte en interacción constante con otros profesionales, agentes de recursos humanos, ofertas de empleo e incluso podrás obtener recomendaciones de empleo en tu perfil.
@@ -25,9 +26,9 @@ Como programador o programadora, en LinkedIn podrás construir un perfil profesi
 Incluso si ya encontraste tu primer empleo, es positivo que tengas tu perfil de LinkedIn en forma, ya que se te pueden presentar nuevas oportunidades laborales o simplemente mantenerte actualizado de la industria tecnológica.
 
 ¿Entonces aún necesitas un portafolio? ¡Sí! Porque es la carpeta o contenedor donde mostrarás todos tus trabajos y proyectos realizados. Incluso cuando no tienes experiencia laboral, puedes armar tu portafolio con ejercicios, prácticas o proyectos que hayas hecho por tu cuenta. Las plataformas más comunes para crear tu portafolio online son:
-Behance
-Github
-LinkedIn Pages
+- Behance
+- Github
+- LinkedIn Pages
 
 En [4Geeks Academy](/es/inicio), la plataforma que más usamos para ayudar a nuestros estudiantes de programación a crear su portafolio es Github. De hecho, parte de nuestra metodología es, no solo enseñar programación, sino también capacitar a nuestros estudiantes para la búsqueda de empleo. Conoce más aplicando [aquí](/es/aplica).
 
@@ -40,26 +41,30 @@ Mantente activo actualizando tu código constantemente.
 
 ![imagen con tips para armar un portafolio](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/tptpe_2.jpg?raw=true)
 
-Buscar trabajo es un trabajo a tiempo completo
+## Buscar trabajo es un trabajo a tiempo completo
+
 Algunas personas piensan que con enviar un par de Hojas de Vida, es suficiente. Sin embargo, es mucho más que eso. El portal [Mvorganizing](https://www.mvorganizing.org/how-many-hours-a-day-should-you-spend-looking-for-a-job-2/) recomienda invertir de 10 a 15 horas semanales en la búsqueda de empleo. Por otro lado, procura no distraerte por mucho tiempo con otras tareas para que la búsqueda sea más efectiva y productiva.
 
 Es fundamental organizar tu día y tus búsquedas, lleva un control de las postulaciones que realizas, los nombres de las empresas y la fecha en la que enviaste tu CV. 
 
 El tiempo aproximado para encontrar un empleo es de 9 semanas, según [What to become](https://whattobecome.com/blog/job-searching-statistics/#:~:text=The%20average%20time%20an%20individual,three%20months%20of%20active%20searching.), sin embargo, puede tomar un tiempo distinto, dependiendo de otros factores. Por eso debes tener paciencia y entender que buscar empleo ya es un trabajo que requiere de tu tiempo y esfuerzo.
 
-Participa en las comunidades de programadores
+## Participa en las comunidades de programadores
+
 El famoso networking es algo que puedes lograr si te unes a comunidades de programadores, en plataformas como Slack, Github, grupos de Facebook y LinkedIn y Reddit. Siempre puedes encontrar información relevante tanto para las búsquedas de empleo como para mantenerte actualizado.
 
 En [4Geeks Academy](/es/inicio), contamos con dos membresías útiles para estos casos. La primera GeekPAL, en la que nuestros estudiantes pueden tener mentorías personalizadas, durante y después de finalizar nuestro bootcamp, son mentorías de por vida, para que nunca vuelvan a programar solos. La segunda es GeekFORCE, donde nuestros estudiantes acceden a entrevistas laborales con partners de 4Geeks para tener más oportunidades laborales.
 
-Participa en proyectos Open Source
+## Participa en proyectos Open Source
+
 Desde la década de los 80 el software Open Source ha significado una solución. Un gran ejemplo de esto, es el sistema Android que permite el desarrollo de todo tipo de aplicaciones, al igual que WordPress con su adaptación de plug ins.
 
 No solo es una ventaja para mantener el sistema funcionando y resolver fallas a la brevedad posible, sino que como Programador te ayudarán a demostrar tus capacidades, aún cuando no tengas experiencia laboral previa en el sector. ¡Además! Te da autonomía como Developer para adaptar tu sitio web.
 
 Según la plataforma [New Relic](https://newrelic.com/blog/best-practices/keeping-up-with-open-source-trends), algunas de las tendencias que seguirán creciendo en cuanto a Open Source es la implementación de la nube, big data y refuerzo de la seguridad de los sistemas, así que puede que este sea el mejor momento de la historia para que demuestres tu talento.
 
-Prepara tus entrevistas
+## Prepara tus entrevistas
+
 ¡Finalmente llegó tu momento de lucirte!, así que lo mejor al momento de asistir a una entrevista es:
 Revisar bien lo que te piden, antes de comenzar: Si te piden tener tu CV o portafolio a la mano, por ejemplo. Por otro lado, ten claro la descripción del puesto y piensa cómo tu perfil puede aportar a lo que busca la empresa.
 Practica tus respuestas: Evita hablar como si se tratara de un guión que debes seguir, pero ten en cuenta que la práctica siempre ayuda. En 4Geeks Academy, hacemos una simulación de entrevista laboral con nuestros estudiantes para fortalecer sus skills.
