@@ -127,20 +127,21 @@ const customStyles = {
 
 
     }),
-    control: (styles) => ({
+    control: (styles, state) => ({
         ...styles,
         fontFamily: "Lato, sans-serif",
-        background: "#ffffff",
+        // background: "#ffffff",
+        border: state.isFocused ? '1px solid #000000' : '1px solid #A4A4A4',
+        boxShadow: 'none',
 
         marginBottom: "5px",
         marginTop: "5px",
         width: "100%",
         fontSize: "15px",
         fontWeight: "400",
-        lineHeight: "22px"
-
-        // ":hover": {boxShadow: "0 0 0 1px black", },
-        // ":active": {boxShadow: "0 0 0 1px black", borderColor: "black", }
+        lineHeight: "22px",
+        "&:hover": {boxShadow: "0 0 0 1px black", },
+        "&:focus": {boxShadow: "0 0 0 1px black", border: '1px solid #000000', }
     }),
     option: (styles, {data, isDisabled, isFocused, isSelected}) => {
         return {

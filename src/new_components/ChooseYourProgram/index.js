@@ -9,7 +9,7 @@ import styled from 'styled-components';
 import Icon from "../Icon"
 import {SessionContext} from '../../session.js'
 
-const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef}) => {
+const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, landingTemplate}) => {
     const data = useStaticQuery(graphql`
     {
       allChooseYourProgramYaml {
@@ -37,10 +37,11 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
     return (
         <Grid
             ref={chooseProgramRef}
-            gridTemplateColumns_tablet="2fr repeat(12, 1fr) 2fr"
+            gridTemplateColumns_md={landingTemplate && "4fr repeat(12,1fr) 4fr"}
+            gridTemplateColumns_tablet={landingTemplate ? "1fr repeat(12,1fr) 1fr" : "2fr repeat(12, 1fr) 2fr"}
             gridAutoRows_tablet="minmax(100px, auto)"
-            background={Colors.verylightGray}
-            background_tablet="transparent"
+            background={landingTemplate ? Colors.white : Colors.verylightGray}
+            background_tablet={landingTemplate ? Colors.white : "transparent"}
             padding="59px 17px 83px 17px"
             padding_tablet=" 0 "
             margin="0 0 50px 0"
@@ -49,9 +50,9 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
         >
             <Div margin_tablet="0 0 45px 0" margin="0 0 35px 0" padding_tablet="75px 0 0 0" gridColumn_tablet="5 / 11" gridRow_tablet="1 / 1" flexDirection="column">
                 <H2 margin="0 0 10px 0" fontWeight="700">{title || info.title}</H2>
-                <Paragraph>{paragraph || info.paragraph}</Paragraph>
+                <Paragraph margin="10px 0">{paragraph || info.paragraph}</Paragraph>
             </Div>
-            <Grid gridColumn_tablet="2 / 14" gridRow_tablet="2 / 4" zIndex="1" gridTemplateColumns_tablet="repeat(3, 4fr)" >
+            <Grid gridColumn_tablet="2 / 14" gridRow_tablet="2 / 4" zIndex="1" gridTemplateColumns_tablet={landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"} >
                 {Array.isArray(programs) && programs.map((program, i) => {
                     return (
                         <Div
@@ -60,13 +61,14 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
                             // height="145px"
                             // minHeight_tablet="285px"
                             borderRadius="3px"
-                            padding="1rem"
+                            padding={landingTemplate ? "1rem 2.5rem 1rem 2rem" : "1rem"}
                             border="1px solid black"
                             borderLeft="6px solid black"
                             borderTop="1px solid black"
                             borderLeft_tablet="1px solid black"
                             borderTop_tablet="6px solid black"
                             flexDirection_tablet="column"
+                            flexDirection="column"
                             alignItems="center"
                             justifyContent="space-between"
                             alignItems_tablet="flex-end"
@@ -74,6 +76,7 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
                             style={{position: "relative"}}
                         >
                             <Div
+                                placeSelf_tablet={landingTemplate && "flex-start"}
                                 display="flex"
                                 justifyContent="end"
                             >
@@ -85,7 +88,7 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
                                 width="100%"
                                 alignContent="flex-start"
                                 margin="10px 0 0 0"
-                                padding="0 0 0 15px"
+                                padding={landingTemplate ? "0 0 100px 15px" : "0 0 30px 15px"}
                             >
                                 {/* {program.sub_title.toLowerCase() != "online" &&  */}
                                 <H4
@@ -115,16 +118,35 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef})
                                 {program.description.split("\n").map((m, i) =>
                                     <Paragraph
                                         key={i}
+                                        letterSpacing="0.05em"
+                                        lineHeight="22px"
                                         textAlign="left"
                                         fontSize="15px"
                                         lineHeight="19px"
                                         fontWeight="400"
-                                        margin={i == 0 && "10px 0 0 0"}
-                                    // margin_tablet="0 0 5px 0"
-                                    >{m}</Paragraph>
+                                        opacity="1"
+                                        margin={i == 0 && "10px 0px 25px 0"}
+                                        dangerouslySetInnerHTML={{__html: m}}
+                                    />
                                 )}
                             </Div>
-                            <Link to={program.link}><Icon className="mobile " style={{position: "absolute", bottom: "10px", right: "10px"}} icon="arrowright" height="32px" width="32px" /></Link>
+                            <Link to={program.link}>
+                                {landingTemplate ?
+                                    <Button
+                                        background={Colors.black}
+                                        colorHover={Colors.black}
+                                        color={Colors.white}
+                                        className="mobile"
+                                        style={{position: "absolute", bottom: "40px", left: "46px"}}
+                                        // backgroundColor="#000" width="184" height="40"
+                                    >
+                                        {program.text_link}
+                                    </Button>
+                                    :
+                                    <Icon className="mobile" style={{position: "absolute", bottom: "10px", right: "10px"}} icon="arrowright" height="32px" width="32px" />
+                            
+                                }
+                            </Link>
                         </Div>
                     )
                 })}

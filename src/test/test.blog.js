@@ -51,9 +51,14 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             const frontmatter = content.attributes
             const meta_keys = Object.keys(frontmatter)
             const autor_keys = Object.keys(twitterUser)
-
+            let _slug = await _path.split(".")[0].substr(_path.lastIndexOf("/") +1)
+            
             if(_path.includes(" ")) throw Error("File name cannot have white spaces only letters, numbers and -")
-            if(_path.toLowerCase() !== _path) throw Error("File name must be all lowecase")
+            /*
+                changed _path to _slug because it compares with relative local path
+                like /Documents/work/... with /documents/work/... and the test fails
+            */ 
+            if(_slug.toLowerCase() !== _slug) throw Error("File name must be all lowecase")
 
             const lang = getLang(_path);
             if(!lang) throw Error("Missing language information on file name, make sure it has the language info before the extension; For example: my-file.es.md")
