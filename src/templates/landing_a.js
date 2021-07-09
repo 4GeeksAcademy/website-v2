@@ -20,6 +20,10 @@ const Landing = (props) => {
   const [inLocation, setInLocation] = React.useState("");
 
   const applySchollarship = data.allLandingYaml.edges[0].node?.apply_schollarship
+  const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
+    label: p.text,
+    value: p.bc_slug
+}))
 
   useEffect(() => {
     let _components = {};
@@ -85,19 +89,14 @@ const Landing = (props) => {
         backgroundColor={Colors.lightGray}
         align="center"
         alt="4Geeks Academy"
-        // borderRadius="0"
         borderRadius="0"
       >
         <GridContainer
           padding="72px 0 0 0"
           containerGridGap="0"
-          // display_md="flex" 
           containerColumns_tablet="repeat(1,0fr)"
-          // padding="72px 0 0 0" 
-          padding_tablet="72px 0 15px 0"
+          padding_tablet="72px 0 35px 0"
           columns_tablet="2"
-          // padding_tabletChild="0 0 35px 0"
-          // display="none"
         >
 
           <Div
@@ -185,9 +184,9 @@ const Landing = (props) => {
             <LeadForm
               background={Colors.white}
               margin_tablet="50px 0 0 0" 
+              selectProgram={programs}
               margin="0" 
               style={{ marginTop: "50px" }}
-              // heading="Request More Info."
               formHandler={requestSyllabus}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -238,6 +237,7 @@ const Landing = (props) => {
           >
             <LeadForm
               landingTemplate
+              selectProgram={programs}
               layout="block"
               background={Colors.verylightGray}
               margin="0"
@@ -246,7 +246,7 @@ const Landing = (props) => {
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
               redirect={yml.form.redirect}
-              inputBgColor="#F9F9F9"
+              inputBgColor="#FFFFFF"
               layout="block"
               lang={pageContext.lang}
               fields={yml.form.fields}
@@ -443,23 +443,6 @@ export const query = graphql`
               position
               heading
               sub_heading
-            }
-            language_banner{
-              position
-              title
-              paragraph
-              image{
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 1200
-                    quality: 100
-                    placeholder: NONE
-                    breakpoints:	[200, 340, 520, 890]
-                  )
-                }
-              }
-              image_alt
             }
             apply_schollarship{
               imageSide
@@ -717,6 +700,19 @@ export const query = graphql`
               }
               featured
             }
+          }
+        }
+      }
+    }
+    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          programs{
+            text
+            link
+            bc_slug
+            location_bc_slug
+            schedule
           }
         }
       }

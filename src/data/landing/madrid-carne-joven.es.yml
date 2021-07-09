@@ -122,23 +122,14 @@ choose_your_program:
     description: |
       Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
       
-      Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un link para poder descargar el PDF con el detalle del programa.
+      Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
       Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
     
     text_link: Aplica a una beca
     link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
 
-language_banner:
-  position: 6
-  title: "Phyton y Javascript"
-  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-
-  Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
-  image: "../../../static/images/why-4geeks/python-image.png"
-  image_alt: "python-image"
-
 why_4geeks:
-  position: 7
+  position: 8
   heading: "Escuchalo de nuestros alumnos"
   sub_heading: ""
 
@@ -147,7 +138,6 @@ apply_schollarship:
   imageSide: "right"
   image: "../../../static/images/comunity-support.png"
     
-
 
   # - title: "AI/Machine Learning Engineering"
   #   sub_title: "Online"
@@ -183,7 +173,7 @@ apply_schollarship:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 
-# components:
+components:
   # - name: first_syllabus_form
   #   position: 4
   #   layout: syllabus
@@ -228,20 +218,24 @@ apply_schollarship:
   #   layout: divider
   #   height: ["50px", "50px", "50px", "0px", "0px"]
 
-  # - name: some_id
-  #   position: 7
-  #   layout: two_column_right
-  #   image:
-  #     src: "/images/bg/people_happy.jpg"
-  #   video: "B01-eTfgqqc"
-  #   heading:
-  #     text:
-  #       "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
-  #       #xl      lg     md     sm    xs
-  #     font_size: ["40px", "34px", "34px", "25px", "20px"]
-  #   content:
-  #     text: " "
-  #     font_size: ["16px"]
+  - name: phyton_y_javascript
+    position: 7
+    layout: two_column_right
+    background: "veryLightBlue2" # Name of the color(from new_components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+      # /static/images/why-4geeks/python-image.png
+    # video: "B01-eTfgqqc"
+    heading:
+      text:
+        "Phyton y Javascript"
+        #           xl      lg     md     sm    xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
+      
+      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+      font_size: ["16px"]
 
   # - name: some_other_id
   #   position: 2

@@ -55,29 +55,40 @@ const Side = ({video, image, heading, content, button, bullets}) => {
                 }
             }}
             style={imgStyles}
-            borderRadius={"1.25rem"}
+            // borderRadius={"1.25rem"}
+            borderRadius={"3px"}
             className="pointer"
             alt={"4Geeks Academy Section"}
             margin="auto"
             height={img_h_xl}
             width={imgStyles ? imgStyles.width || "100%" : "100%"}
             h_sm={img_h_sm || "250px"}
-            backgroundSize={`cover`}
-        ></Img>
+            backgroundSize={`contain`}
+        />
     }
 
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
     const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
-    return <>
-        {heading && <H2 textAlign_tablet="left"
-            fontSize={h_xl || "20px"} fs_xl={h_xl} fs_md={h_md} fs_sm={h_sm} fs_xs={h_xs}
+    return <Div flexDirection_tablet="column" flexDirection="column" padding="36px 17px">
+        {heading && <H2 
+            textAlign_tablet="left"
+            lineHeight="60px"
+            fontSize={h_xs || "50px"} fs_xl={h_xl} fontSize_md={h_md} fontSize_sm={h_sm}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
         }
-        {content && <Paragraph textAlign_tablet="left"
-            padding={heading ? "0" : "20px"}
-            fontSize={c_xl || "16px"} fs_sm={c_sm} fs_md={c_md} fs_sm={c_sm} fs_xs={c_xs}
-            fontHeight="30px" lineHeight="42px">{content.text}</Paragraph>
-        }
+        {content && 
+        content.text.split('\n').map((p, i) =>
+            <Paragraph 
+                key={i}
+                textAlign_tablet="left"
+                padding={heading ? "0" : "20px"}
+                margin="26px 0" 
+                fontSize={c_xl || "16px"} fontSize_sm={c_sm} fonSize_md={c_md} fontSize_sm={c_sm} fontSize_xs={c_xs}
+                fontHeight="30px">
+                    {p}
+            </Paragraph>
+        )}
+
         {button && <Button outline width="200px"
             colorHoverText={Colors.white}
             color={button.color || Colors.blue}
@@ -90,13 +101,13 @@ const Side = ({video, image, heading, content, button, bullets}) => {
         >
             {button.text}
         </Button>}
-    </>
+    </Div>
 }
 
 export const TwoColumn = ({left, right, proportions}) => {
     const [left_size, right_size] = proportions ? proportions : [];
 
-    return <Div flexDirection="column" gap="40px" flexDirection_tablet="row"  m_sm="0px 0px 100px 0">
+    return <Div flexDirection="column" gap="0px" flexDirection_tablet="row"  m_sm="0px 0px 100px 0">
         <Div flexDirection="column" size_tablet={left_size || 6} size="12" maxHeight="300px" textAlign="center">
             <Side {...left} />
         </Div>
@@ -310,32 +321,6 @@ export const landingSections = {
         )
     },
 
-    language_banner: ({session, pageContext, yml, data, index}) => {
-
-        const banner = data.allLandingYaml.edges[0].node?.language_banner
-        return(
-            <GridContainerWithImage height_tablet="100%" background="#E3F9FE" padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
-                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="2 / 8">
-                    <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${banner.title}`}</H2>
-                    {/* <Paragraph textAlign_tablet="left" margin="26px 0">{banner.paragraph} </Paragraph> */}
-                    {banner.paragraph.split('\n').map((p, i) =>
-                        <Paragraph textAlign_tablet="left" margin="26px 0" key={i}>{p}</Paragraph>
-                    )}
-                </Div>
-                <Div display_tablet="flex" height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
-                    <StyledBackgroundSection
-                        height_tablet="450px"
-                        height="200px"
-                        width="100%"
-                        image={banner.image && banner.image.childImageSharp.gatsbyImageData}
-                        bgSize={`contain`}
-                        alt={banner.image_alt}
-                    />
-                </Div>
-            </GridContainerWithImage>
-        )
-    },
-
     testimonials: ({session, data, pageContext, yml, index}) => <Div id="Testimonials" key={index} flexDirection="column" margin="50px" margin_tablet="100px" m_sm="0" p_xs="0">
         <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
     </Div>,
@@ -390,21 +375,21 @@ export const landingSections = {
         sm={yml.height[3]}
         xs={yml.height[4]}
     />,
-    two_column_left: ({session, data, pageContext, yml, index}) => <Div key={index} flexDirection="column" margin="50px 0" margin_tablet="50px 14%">
+    two_column_left: ({session, data, pageContext, yml, index}) => <Div key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0 0 75px 0">
         <TwoColumn
             left={{image: yml.image, video: yml.video}}
-            right={{heading: yml.heading, content: yml.content, button: yml.button}}
+            right={{heading: yml.heading, content: yml.content, button: yml.button,}}
             proportions={yml.proportions}
         />
     </Div>,
-    two_column_right: ({session, data, pageContext, yml, index}) => <Div key={index} flexDirection="column" margin="0px 0" margin_tablet="50px 14%">
+    two_column_right: ({session, data, pageContext, yml, index}) => <Div key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0 0 75px 0">
         <TwoColumn
             left={{heading: yml.heading, content: yml.content, button: yml.button}}
-            right={{image: yml.image, video: yml.video}}
+            right={{image: yml.image, video: yml.video,}}
             proportions={yml.proportions}
         />
     </Div>,
-    single_column: ({session, data, pageContext, yml, index}) => <Div key={index} flexDirection="column" margin="0px 0" margin_tablet="50px 14%">
+    single_column: ({session, data, pageContext, yml, index}) => <Div key={index} flexDirection="column" padding="0px 0" padding_tablet="50px 14%">
         <SingleColumn
             column={{
                 heading: yml.heading,

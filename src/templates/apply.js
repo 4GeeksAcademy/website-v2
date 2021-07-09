@@ -95,7 +95,7 @@ const Apply = (props) => {
                 padding_tablet="64px 0 "
                 seo_title={yml.seo_title}
                 title={yml.header.title}
-                margin_tablet="100px 0"
+                margin_tablet="90px 0 0 0"
                 position="relative"
             >
                 <Circle color="grey" width="17px" height="17px" top="0" left="90px" zIndex="1" display="none" display_tablet="inline" />
