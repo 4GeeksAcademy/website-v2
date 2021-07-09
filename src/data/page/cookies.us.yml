@@ -2,6 +2,7 @@ meta_info:
   slug: cookies
   title: "Cookies at 4Geeks Academy"
   description: ""
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: null
   keywords: ""
   redirects: []

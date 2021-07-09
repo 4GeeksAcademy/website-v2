@@ -28,7 +28,7 @@ According to studies made by [W3Techs](https://w3techs.com/technologies/details
 
 If you learn Python/Django, you will be comfortable working with Ruby/Rails or PHP/Laravel, but Node is extremely different from the rest of the back-end technologies.  We have to make sure that you understand how to build websites that are similar to the other 99.7% of the web.
 
-Node: If you are wondering why we discarded Ruby on Rails read this article: [R.I.P Ruby On Rails, Thanks for everything.](/rip-ruby-on-rails/)
+Node: If you are wondering why we discarded Ruby on Rails read this article: [R.I.P Ruby On Rails, Thanks for everything.](/us/learn-to-code/rip-ruby-on-rails)
 
 
 ## Node has less structure
@@ -67,6 +67,6 @@ Node grew like crazy in 2015-2016, but if you keep reading about Node you will s
 ## In conclusion
 
 
-We love Node!  It deserves a spot in [some of our Workshops](/calendar/?type=events), but it's not the moment to include it as part of our main Full-Stack Development program.
+We love Node!  It deserves a spot in [some of our Workshops](/us/next-dates?type=events), but it's not the moment to include it as part of our main Full-Stack Development program.
 
 

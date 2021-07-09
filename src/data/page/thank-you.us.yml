@@ -3,6 +3,7 @@ meta_info:
   title: "General Thank You - 4Geeks Academy"
   description: "Thank you, We have received your application.  Our Geeky Advisor is going to contact you shortly.  Sit tight!"
   image: ""
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "thank you page, coding bootcamp"
   redirects: ["/thank", "/thank-you/apply", "/thank-you/more-info"]
 banner:

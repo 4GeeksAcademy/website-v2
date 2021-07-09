@@ -36,7 +36,7 @@ The ability to prioritize and plan will be more important than ever before. The 
 
 **Practical learning**
 
-An important advantage of our part-time Bootcamp is that we focus on practicing the skills you’re learning. Unlike a traditional tertiary education format, which tends to focus on knowledge because skills, we use the 22-hour weekly time commitment to arm you with real, useful skills that you’ll be able to put into practice in the workplace as soon as you graduate. We’re not afraid to [flip tradition on its head](/turnaround-education-traditions-4geeks-academy/), in order to keep up with the evolving needs of our students.
+An important advantage of our part-time Bootcamp is that we focus on practicing the skills you’re learning. Unlike a traditional tertiary education format, which tends to focus on knowledge because skills, we use the 22-hour weekly time commitment to arm you with real, useful skills that you’ll be able to put into practice in the workplace as soon as you graduate. We’re not afraid to [flip tradition on its head](/us/learn-to-code/turnaround-education-traditions-4geeks-academy), in order to keep up with the evolving needs of our students.
 
 **Lifelong support**
 
@@ -50,8 +50,8 @@ The nature of coding, like any area of technology, is that it’s constantly cha
 
 **Real results**
 
-Of course, by doing all of this, you’ll be looking for a result - that by the end you’ll be [employable as a web developer](/7-hacks-to-land-a-job/). Not only will you become a [Full-Stack Software Developer](/us/coding-bootcamps/part-time-full-stack-developer), but you’ll also have a competitive advantage through being self-driven enough to have achieved this qualification in an intensive part-time format, on top of your existing commitments.
+Of course, by doing all of this, you’ll be looking for a result - that by the end you’ll be [employable as a web developer](/us/career-growth/7-hacks-to-land-a-job). Not only will you become a [Full-Stack Software Developer](/us/coding-bootcamps/part-time-full-stack-developer), but you’ll also have a competitive advantage through being self-driven enough to have achieved this qualification in an intensive part-time format, on top of your existing commitments.
 
 You’ll have had no choice but to maintain the momentum you built when you first committed to a Bootcamp, and over the course of the program, this fire that you’ve been burning will have ignited a passion in you that employers will go to great lengths to seek out.
 
-To get started and apply for your part-time coding Bootcamp, [contact us today](/contact/).
+To get started and apply for your part-time coding Bootcamp, [contact us today](/us/contact).

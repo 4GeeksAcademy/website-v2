@@ -11,7 +11,7 @@ cluster: "full-stack"
 
 ---
 
-En nuestra publicación anterior hablábamos sobre lo [que significa ser programador o programadora *full-stack*](/es/post/que-es-full-stack) (te recomiendo que le des un vistazo porque es muy interesante). Por resumir: un perfil *full-stack* básicamente es esa persona que trabaja tanto del lado del cliente (*frontend*) como del lado del servidor (*backend*), y es capaz de ofrecer soluciones en cualquier parte de la aplicación. Es un rol muy versátil dentro de los equipos tecnológicos y puede asumir diferentes responsabilidades en los proyectos.
+En nuestra publicación anterior hablábamos sobre lo [que significa ser programador o programadora *full-stack*](/es/full-stack/que-es-full-stack) (te recomiendo que le des un vistazo porque es muy interesante). Por resumir: un perfil *full-stack* básicamente es esa persona que trabaja tanto del lado del cliente (*frontend*) como del lado del servidor (*backend*), y es capaz de ofrecer soluciones en cualquier parte de la aplicación. Es un rol muy versátil dentro de los equipos tecnológicos y puede asumir diferentes responsabilidades en los proyectos.
 
 Pero hoy la pregunta, o mejor dicho las preguntas son... ¿cuáles son las habilidades que debería tener una persona “todo terreno”, que trabaja o quiere trabajar en el rol de *Full-Stack*? ¿Debe tener conocimientos en todas las tecnologías y lenguajes? ¿Bastaría con conocer solo un lenguaje en el *front* y uno en el *back*? ¿En qué tecnologías debería enfocarse? ¿React, Vue o Angular?, ¿Python, PHP o NodeJS? ¿Cuáles son las principales habilidades *Full-Stack*? Acompáñame a descubrir juntos las respuestas.
 

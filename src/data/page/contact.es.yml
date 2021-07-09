@@ -1,6 +1,7 @@
 meta_info:
   slug: contactanos
   title: "Contacto 4geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Contacta con nosotros, respondemos cada pregunta o comentario."
   image: null
   keywords: "Contacto 4geeks Academy"

@@ -1,5 +1,6 @@
 meta_info:
   slug: index
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   canonical: "/"
   title: "Miami Coding Bootcamp, Madrid España, Santiago de Chile"
   description: "The #1 Top coding bootcamp with over 1,000 graduates and life-long career support. USA, Spain, Chile, Venezuela and Costa Rica Coding Bootcamp."

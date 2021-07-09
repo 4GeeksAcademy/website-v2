@@ -5,7 +5,7 @@ excerpt: "4Geeks Academy llega a Venezuela! Conoce los detalles aquí"
 slug: "4geeks-academy-llega-a-venezuela"
 title: "¡4Geeks Academy llega a Venezuela!"
 description: "Conoce los detalles de la llegada de 4Geeks Academy a Venezuela"
-image: "https://www.4geeksacademy.co/images/4geeks-main.jpg"
+image: "https://4GeeksAcademy.com/images/4geeks-main.jpg"
 image_alt: ""
 status: "published"
 featured: "true"
@@ -71,9 +71,8 @@ La sede de El Nacional, en Caracas, será el lugar donde se impartirán las clas
 
 **Para más información y registro:**
 
-**Correo**: [venezuela@4geeksacademy.c](mailto:venezuela@breathco.de)o
-**Web**: www.breathco.de
-**Facebook**: [/4geeksacademy
-](https://www.facebook.com/4geeksacademy)**Twitter e Instagram**: @4GeeksAcademy
+**Correo**: [venezuela@4geeksacademy.com](mailto:venezuela@4geeks.co). 
+**Web**: www.4GeeksAcademy.com/venezuela. 
+**Facebook**: [/4geeksacademy](https://www.facebook.com/4geeksacademy). 
+**Twitter e Instagram**: @4GeeksAcademy. 
 
-[gallery columns="2" size="medium" ids="1182,1166,1167,1168"]

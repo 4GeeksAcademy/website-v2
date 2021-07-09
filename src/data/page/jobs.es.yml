@@ -3,6 +3,7 @@
 
 meta_info:
   slug: empleo
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   title: "Empleos en 4Geeks Academy"
   description: "Encuentra la oportunidad laboral que buscas, trabaja con nosotros en 4Geeks Academy"
   image: null

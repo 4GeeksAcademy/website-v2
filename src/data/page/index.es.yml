@@ -1,5 +1,6 @@
 meta_info:
   slug: inicio
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   title: "4Geeks Academy - Coding Bootcamp Miami, España, Chile y Venezuela"
   description: "El #1 part-time coding bootcamp, 1000+ graduados y soporte de por vida. Coding Bootcamp en Miami, España, Chile y Venezuela."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"

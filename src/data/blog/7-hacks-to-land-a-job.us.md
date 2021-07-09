@@ -43,7 +43,7 @@ Knowing your goals will boost your productivity as a developer because all your 
 
 What do you want to learn? “We live in the information age, there are so many resources, probably if you search ‘How to become a Web Developer’ right now on Google you will have millions and millions of results (...) So one really good way of knowing is to do some research in terms of jobs and figuring out what the most popular languages are” because numbers don’t lie: ![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/06/Screen-Shot-2019-06-24-at-4.30.38-PM.png)
 
-Python and Javascript are -by far- controlling the programming world. We know it and that’s why we align [our curriculum](https://storage.googleapis.com/4geeks-academy-website/syllabus/downtown-miami/SYLLABUS%20ONLINE%20II.pdf) with the most popular languages and frameworks. We recognize that the stack of technologies included in a Syllabus [actually matters](https://www.4geeksacademy.com), and having an up-to-date Syllabus increase our student’s success and put us ahead of the competition at the same time.
+Python and Javascript are -by far- controlling the programming world. We know it and that’s why we align [our curriculum](https://storage.googleapis.com/4geeks-academy-website/syllabus/downtown-miami/SYLLABUS%20ONLINE%20II.pdf) with the most popular languages and frameworks. We recognize that the stack of technologies included in a Syllabus [actually matters](https://4geeksacademy.com), and having an up-to-date Syllabus increase our student’s success and put us ahead of the competition at the same time.
 
 Our better advice? Think about the tools and functionalities the languages will provide in the long term, and the industries and companies that gravitate around them; start learning about the technologies you’ve decided are our best advice for you.
 
@@ -68,7 +68,7 @@ Guensie provides great tips about networking (we added the last one):
 
 
  	
-  * **Participate in hackathons**: a lot of people at the beginning of their coding journey are afraid to do a hackathon, but I really encourage you to dare. Once you know a little of HTML, CSS, and JavaScript, try to join a hackathon. Not only you're going to meet potential employers, but also you're going to meet your peers, other people that are in the industry that are trying to learn as well. You never know what kind of connections you can make.
+  * **Participate in hackathons**: a lot of [people](/us/coding-bootcamps/choosing-coding-bootcamp) at the beginning of their coding journey are afraid to do a hackathon, but I really encourage you to dare. Once you know a little of HTML, CSS, and JavaScript, try to join a hackathon. Not only you're going to meet potential employers, but also you're going to meet your peers, other people that are in the industry that are trying to learn as well. You never know what kind of connections you can make.
 
  	
   * **Attend meetups:** you get to meet people with all different levels of experience at meetups. They are also a good option to find career opportunities, there are people who have got jobs from someone they've met at a meetup.
@@ -130,7 +130,7 @@ The key is getting a career planner and let your actions be guided by a clear ro
 ## Final thoughts
 
 
-The decision of learning to code and landing a job afterward is huge! Start with a question: why exactly are you putting yourself through all of this [mental toil and relentless sacrifice and inevitable frustration](/feelings-learning-coding/) for many weeks or months? Don’t be scared, this is the right path (even if you don’t know anything about coding). [Just find the reasons](https://javascriptissexy.com/your-goal-and-purpose-for-learning-programming-will-determine-which-programming-career-path-to-pursue-and-whether-you-will-succeed/) and put your hands on it. [Apply now!](/apply/)
+The decision of learning to code and landing a job afterward is huge! Start with a question: why exactly are you putting yourself through all of this [mental toil and relentless sacrifice and inevitable frustration](/us/learn-to-code/feelings-learning-coding) for many weeks or months? Don’t be scared, this is the right path (even if you don’t know anything about coding). [Just find the reasons](https://javascriptissexy.com/your-goal-and-purpose-for-learning-programming-will-determine-which-programming-career-path-to-pursue-and-whether-you-will-succeed/) and put your hands on it. [Apply now!](/us/apply)
 
 
 

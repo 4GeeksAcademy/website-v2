@@ -4,6 +4,7 @@
 meta_info:
   slug: outcomes
   title: ""
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: null
   image: null
   keywords: ""

@@ -3,6 +3,7 @@ meta_info:
   title: "AVISO LEGAL Y CONDICIONES DE USO"
   description: "Conoce los términos y condiciones de 4Geeks Academy"
   image: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "términos y condiciones, 4Geeks Academy"
   redirects: []
 seo_title: 4Geeks Academy

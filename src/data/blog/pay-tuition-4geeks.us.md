@@ -4,7 +4,7 @@ date: "2017-10-24T16:29:31+00:00"
 excerpt: "Education has always been a matter of “How to Pay?”, “Do I qualify?”, Am I going to be accepted?”, and then, again “How do I Pay that tuition?”."
 slug: "pay-tuition-4geeks"
 title: "How to Pay your tuition at 4Geeks"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2017/10/Henry-Adams-said-.jpg"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2017/10/Henry-Adams-said-.jpg"
 image_alt: ""
 cluster: "coding-bootcamps"
 status: "published"
@@ -32,7 +32,7 @@ However, we have designed a customized financial payment option just for this pr
 
 We lowered the cost, and, yes, it was a big challenge, but we found a way to offer you a Premium Education with an unbeatable price.
 
-[Apply to our program and get the chance to pay your education from only $240 per month](/apply/)
+[Apply to our program and get the chance to pay your education from only $240 per month](/us/apply)
 
 Now there’s more: We do not only offer the best price in the city but also the best payment plan.  Others will follow, but we know _**we are the first**_ to offer you the Extended Payment Plan.
 

@@ -3,6 +3,7 @@ meta_info:
   title: "Política de Privacidad y Protección de datos de 4Geeks Academy"
   description: "Tu privacidad es nuestra prioridad. Conoce los tipos de información que recolectamos y almacenamos en 4Geeks Academy y cómo utilizamos esa info."
   image: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Política de Privacidad, Protección de datos, 4Geeks Academy"
   redirects: ["/politicas-de-privacidad"]
 ## BANNER - HEADER
@@ -18,7 +19,7 @@ consent:
 
 header:
   tagline: < Política de Privacidad 4Geeks Academy >
-  sub_heading: "En 4Geeks Academy, accesible desde https://www.4geeksacademy.co, una de nuestras principales prioridades es la privacidad de nuestros visitantes. Este documento de Política de privacidad contiene tipos de información recopilada y registrada por 4Geeks Academy y cómo la usamos. Si tiene preguntas adicionales o necesita más información sobre nuestra Política de privacidad, no dude en contactarnos."
+  sub_heading: "En 4Geeks Academy, accesible desde https://4GeeksAcademy.com, una de nuestras principales prioridades es la privacidad de nuestros visitantes. Este documento de Política de privacidad contiene tipos de información recopilada y registrada por 4Geeks Academy y cómo la usamos. Si tiene preguntas adicionales o necesita más información sobre nuestra Política de privacidad, no dude en contactarnos."
   image: ../../../static/images/bg/companies-bg.jpg
   alt: ""
 # header:

@@ -3,6 +3,7 @@ meta_info:
   title: "Contact 4Geeks Academy"
   description: "Contact 4Geeks Academy here"
   image: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Contact, 4Geeks Academy"
   redirects: ["/es/contactanos"]
 

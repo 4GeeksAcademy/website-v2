@@ -20,13 +20,10 @@ Since 4Geeks Academy is delivering programs through an alliance with Miami Dade 
 
 However, the Department of Education of MDC has come with payments options, such as:
 
-
-
- 	
   1. If you are an early bird (enrolling at least 6 weeks before each program), you will be paying only $2,995.
 
  	
-  2. If you want to split the payment, you can try and request a two-installment option. You will need to [contact us](admissions@4geeksacademy.com) in order to get the offer from the system.
+  2. If you want to split the payment, you can try and request a two-installment option. You will need to [contact us](mailto:admissions@4geeksacademy.com) in order to get the offer from the system.
 
 
 Of course, you can still apply for a bank loan.  There are plenty of third-party options to help you out.  If you are concerned about some of them, ask us and we will try to help you!

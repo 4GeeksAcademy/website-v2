@@ -15,7 +15,7 @@ featured: "false"
 # **JavaScript and Python: A-must for any coder**
 
 
-Within the coding ecosystem, new languages appear constantly to cover all the demands of the tech world. Python and JavaScript ensure that everything works effectively so the user feels completely satisfied with the information, services, etc. If you’re starting in the code world aiming to be a Full-Stack programmer, you may wonder which languages you should be able to manage completely. Well, let us help you with that! [Every beginning is overwhelming and stressful](/feelings-learning-coding/) but at 4Geeks Academy, you can feel safe knowing that you’ll have wonderful mentors to be by your side, and teaching you everything you need to adapt to the real world.
+Within the coding ecosystem, new languages appear constantly to cover all the demands of the tech world. Python and JavaScript ensure that everything works effectively so the user feels completely satisfied with the information, services, etc. If you’re starting in the code world aiming to be a Full-Stack programmer, you may wonder which languages you should be able to manage completely. Well, let us help you with that! [Every beginning is overwhelming and stressful](/us/learn-to-code/feelings-learning-coding) but at 4Geeks Academy, you can feel safe knowing that you’ll have wonderful mentors to be by your side, and teaching you everything you need to adapt to the real world.
 
 JavaScript and Python are meant to work together for web applications, and more.  We actually do not understand why not everyone is teaching JS and Python. Although if that happens, then another technology will be even more popular (that’s the way we -humans- are meant to be :) ). 
 
@@ -45,7 +45,7 @@ Another of its greatest advantages is the readability of the code, unlike other 
 
 ![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/js22-300x153.jpg)
 
-In 4Geeks, we teach Python as a backend language given that we consider it to be one of the most readable and clean programming languages at the present, making it easier for programmers to work with. For us, there is no doubt that [teaching Python is vital](/why-we-teach-python-4geeks/) for the students in order to be fully prepared and triumph at the first job position that will guide them to continue achieving their goals. 
+In 4Geeks, we teach Python as a backend language given that we consider it to be one of the most readable and clean programming languages at the present, making it easier for programmers to work with. For us, there is no doubt that [teaching Python is vital](/us/coding-bootcamps/why-we-teach-python-4geeks) for the students in order to be fully prepared and triumph at the first job position that will guide them to continue achieving their goals. 
 
 Instagram, one of the most important social networks, is developed with this Python framework, like Pinterest too. Platforms that offer a simple and easy backend by any user, besides the fact that handles large amounts of databases.
 
@@ -55,4 +55,4 @@ Our co-founder and Head of the Academic Dpt., Alejandro Sánchez, believes that 
 
 “We encourage our team to rethink our syllabus constantly, adding or removing whatever is needed to have the best product possible. We think having an up-to-date syllabus will increase our student’s success and put us ahead of the competition at the same time”, mentions Sánchez. JavaScript and Python are excellent languages, and in our Coding Bootcamp, you can learn both and you will leave with all the skills to be successful. 
 
-To get started and apply [our next coding Bootcamp](/apply/).
+To get started and apply [our next coding Bootcamp](/us/apply).

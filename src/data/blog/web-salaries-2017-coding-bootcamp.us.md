@@ -4,7 +4,7 @@ date: "2017-07-18T20:20:19+00:00"
 excerpt: "According to several reports, web developers made a median salary of $64,970. Graduates from a Bootcamp are earning around $50k-$55k per year."
 slug: "web-salaries-2017-coding-bootcamp"
 title: "Web development Bootcamp graduates salary: 2017 edition"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/PORTADA-Salary.jpg"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2017/08/PORTADA-Salary.jpg"
 image_alt: ""
 cluster: "coding-bootcamps"
 post_translations: ["pll_5703862f49f64"]

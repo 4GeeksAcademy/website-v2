@@ -62,4 +62,4 @@ Learning from our experience with HACK, we decided to do all of 4Geeks Academy 
 Now we have a solid Syllabus and over 300 graduates.  We have been funded, we have established amazing alliances and partnerships, we have opened 4 Locations at the same time (Miami, Caracas and Maracaibo), we have the structure, and the appropriate team and we are working really hard in order to become leaders in Coding Education in Florida and South America.
 
 
-[Learn more about our program](/calendar/?)
+[Learn more about our program](/us/next-dates?)
