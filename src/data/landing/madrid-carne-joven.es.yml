@@ -128,15 +128,6 @@ choose_your_program:
     text_link: Aplica a una beca
     link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
 
-language_banner:
-  position: 6
-  title: "Phyton y Javascript"
-  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-
-  Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
-  image: "../../../static/images/why-4geeks/python-image.png"
-  image_alt: "python-image"
-
 why_4geeks:
   position: 8
   heading: "Escuchalo de nuestros alumnos"

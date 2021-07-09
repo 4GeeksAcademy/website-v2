@@ -106,9 +106,6 @@ const Side = ({video, image, heading, content, button, bullets}) => {
 
 export const TwoColumn = ({left, right, proportions}) => {
     const [left_size, right_size] = proportions ? proportions : [];
-    console.log("LEFT:::", left)
-    console.log("RIGHT:::", right)
-    // background: yml.background
 
     return <Div flexDirection="column" gap="0px" flexDirection_tablet="row"  m_sm="0px 0px 100px 0">
         <Div flexDirection="column" size_tablet={left_size || 6} size="12" maxHeight="300px" textAlign="center">
@@ -321,32 +318,6 @@ export const landingSections = {
                     programs={chooseYourProgram.programs} />
 
             </React.Fragment>
-        )
-    },
-
-    language_banner: ({session, pageContext, yml, data, index}) => {
-
-        const banner = data.allLandingYaml.edges[0].node?.language_banner
-        return(
-            <GridContainerWithImage height_tablet="100%" background="#E3F9FE" padding="36px 17px" padding_tablet="36px 0 54px 0" columns_tablet="14" margin="0 0 36px 0" margin_tablet="0 0 75px 0" >
-                <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="2 / 8">
-                    <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${banner.title}`}</H2>
-                    {/* <Paragraph textAlign_tablet="left" margin="26px 0">{banner.paragraph} </Paragraph> */}
-                    {banner.paragraph.split('\n').map((p, i) =>
-                        <Paragraph textAlign_tablet="left" margin="26px 0" key={i}>{p}</Paragraph>
-                    )}
-                </Div>
-                <Div display_tablet="flex" height="auto" width="100%" gridColumn_tablet="8 / 15" style={{position: "relative"}}>
-                    <StyledBackgroundSection
-                        height_tablet="450px"
-                        height="200px"
-                        width="100%"
-                        image={banner.image && banner.image.childImageSharp.gatsbyImageData}
-                        bgSize={`contain`}
-                        alt={banner.image_alt}
-                    />
-                </Div>
-            </GridContainerWithImage>
         )
     },
 

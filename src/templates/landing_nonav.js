@@ -426,23 +426,6 @@ export const query = graphql`
               heading
               sub_heading
             }
-            language_banner{
-              position
-              title
-              paragraph
-              image{
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 1200
-                    quality: 100
-                    placeholder: NONE
-                    breakpoints:	[200, 340, 520, 890]
-                  )
-                }
-              }
-              image_alt
-            }
             apply_schollarship{
               imageSide
               image {
