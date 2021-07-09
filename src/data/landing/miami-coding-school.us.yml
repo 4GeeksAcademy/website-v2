@@ -36,7 +36,7 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - No previous experience or coding skills required.
     - Part-Time or Full-Time Schedules Available. Online or in our beautiful campus in Miami.
@@ -66,7 +66,7 @@ in_the_news:
 
 badges:
   position: 2
-  heading: " "
+  # heading: ""
 
 program_details:
   position: 3
@@ -87,7 +87,7 @@ geeks_vs_others:
 why_4geeks:
   position: 6
   heading: "Why choosing 4Geeks Academy"
-  sub_heading: " "
+  sub_heading: ""
 
 who_is_hiring:
   position: 7

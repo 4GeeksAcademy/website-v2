@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import {Navbar} from '../new_components/NavbarDesktop';
 import {NavbarMobile} from '../new_components/NavbarMobile';
 import Footer from '../new_components/Footer';
+import LandingFooter from '../new_components/Footer/landing';
 import {SessionContext} from '../session';
 import '../assets/css/style.css';
 import {StaticQuery, graphql} from 'gatsby';
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
-const Layout = ({children, seo, context, withNavbar}) => {
+const Layout = ({children, seo, context, withNavbar, landingLayout}) => {
   const {session} = React.useContext(SessionContext);
 
   return (
@@ -37,6 +38,10 @@ const Layout = ({children, seo, context, withNavbar}) => {
               socials{
                 name
                 icon
+                link
+              }
+              policy{
+                name
                 link
               }
               fields {
@@ -120,7 +125,12 @@ const Layout = ({children, seo, context, withNavbar}) => {
             <>
               {children}
             </>
-            <Footer yml={myFooter.node} session={session} />
+
+            {
+              landingLayout === true
+              ? <LandingFooter contenxt={context} yml={myFooter.node} session={session} />
+              : <Footer yml={myFooter.node} session={session} />
+            }
           </>
         )
       }}
