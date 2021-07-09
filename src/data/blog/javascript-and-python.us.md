@@ -31,9 +31,9 @@ If you ask any programmer about JavaScript, probably he would tell you that it i
 
 ![](https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/js2-300x153.jpg)
 
-For any coding student, launching your coding experience with JavaScript is the way to go. Simplicity, popularity, speed, interoperability, versatility, rich interfaces, popular frameworks, among many others, are only a few of the benefits of managing this programming language. JavaScript works perfectly in different platforms and devices; you can be able to create your idea and design astonishing visual effects, interactions, games, and more. 
+For any coding student, launching your coding experience with JavaScript is the way to go. Simplicity, popularity, speed, interoperability, versatility, rich interfaces, popular frameworks, among many others, are only a few of the benefits of managing this programming language. JavaScript works perfectly in different platforms and devices; you can be able to create your idea and design astonishing visual effects, interactions, games, and much more. 
 
-Are you looking to become a[ Front-End Develope](https://www.techopedia.com/definition/29569/front-end-developer)r? Knowing your career goals can make it easier at the moment you are choosing your favorite programming language. For example, if you like being on the client-side and designing, JavaScript is an indisputable option to achieve your goals. 
+Are you looking to become a[ Front-End Developer](https://www.techopedia.com/definition/29569/front-end-developer)? Knowing your career goals can make it easier at the moment you are choosing your favorite programming language. For example, if you like being on the client-side and designing, JavaScript is an indisputable option to achieve your goals. 
 
 
 ## **Python leads among the favorites**
