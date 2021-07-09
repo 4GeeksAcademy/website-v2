@@ -18,7 +18,7 @@ As a coding Bootcamp co-founder and head of the Academic and Technologies Depart
 
 I became obsessed: reading everywhere, asking colleagues and CTO’s that I knew had demonstrated great vision when picking their company’s stack of technologies, and I quickly started experimenting with different technologies to be taught and included in our syllabus.
 
-![](/icture1-1.png)
+![4Geeks Academy Syllabus in Python and Javascript](https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/JSandPython-768x552.jpg)
 
 **Why Do Coding Bootcamps say that the language is not “that important”?**
 

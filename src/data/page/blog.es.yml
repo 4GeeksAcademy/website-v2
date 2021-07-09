@@ -1,6 +1,7 @@
 meta_info:
   slug: blog-en-espanol
   title: "4Geeks Academy Blog"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Encuentra recursos y noticias para desarrolladores actuales y potenciales. Conocimientos básicos, tendencias, asesoramiento profesional y más en nuestro blog"
   image: null
   keywords: "4Geeks Academy Blog"

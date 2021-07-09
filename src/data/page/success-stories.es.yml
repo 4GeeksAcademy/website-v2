@@ -1,6 +1,6 @@
 meta_info:
   slug: testimonios
-
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   title: "Testimonios e historias de éxito de 4Geeks Academy"
   description: "Descubre nuestras historias de éxito y lo que dicen nuestros estudiantes sobre los Bootcamps de 4Geeks Academy"
   image: null

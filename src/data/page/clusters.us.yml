@@ -2,6 +2,7 @@ meta_info:
   slug: cluster
   title: ""
   description: null
+  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: null
   keywords: ""
   redirects: []

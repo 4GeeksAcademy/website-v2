@@ -1,6 +1,7 @@
 meta_info:
   slug: geekforce-career-support
   title: "GeekForce, a 4Geeks Academy system"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "GeekForce system from 4Geeks Academy. Lifelong support for your professional career, maintenance and generation of new job opportunities."
   image: null
   keywords: "Geekforce, a 4Geeks Academy system"

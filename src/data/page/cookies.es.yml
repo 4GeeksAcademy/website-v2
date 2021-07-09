@@ -3,6 +3,7 @@ meta_info:
   title: "Política Cookies 4Geeks Academy"
   description: "Política de cookies de 4Geeks Academy"
   image: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Cookies 4Geeks Academy"
   redirects: []
   

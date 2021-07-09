@@ -3,6 +3,7 @@ meta_info:
   title: "Testimonials and success stories of 4Geeks Academy"
   description: "Find out our success stories and what our students say about 4Geeks Academy Bootcamps"
   image: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Testimonials, success stories, 4Geeks Academy"
   redirects: []
 

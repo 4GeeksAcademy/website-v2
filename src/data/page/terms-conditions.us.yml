@@ -3,6 +3,7 @@ meta_info:
   title: "Terms of conditions at 4Geeks Academy"
   description: "Know the terms of conditions of use of 4Geeks Academy"
   image: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Terms of conditions, 4Geeks Academy"
   redirects: []
 seo_title: 4Geeks Academy

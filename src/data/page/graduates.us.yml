@@ -4,6 +4,7 @@
 meta_info:
   slug: graduates
   title: "4Geeks Academy graduates"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Meet our 4Geeks Academy graduates"
   image: null
   keywords: "4Geeks Academy graduates"

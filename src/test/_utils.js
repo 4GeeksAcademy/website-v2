@@ -36,7 +36,14 @@ const loadYML = (pathToFile) => {
         if(typeof yaml == 'undefined' || !yaml) throw new Error(`The file ${fileName}.yml was impossible to parse`.red);
 
         const [name, lang] = fileName.split(".");
-        return {yaml,name, lang}
+
+        const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
+        let m = regex.exec(pathToFile);
+        if (!m) return false;
+
+        const type = m[1] === "data" ? m[2] : m[1];
+
+        return {yaml,name, lang, type, path}
     }
     catch(error){
         console.error(error);

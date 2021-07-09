@@ -46,4 +46,4 @@ If we asked some typical students "What would be the qualities of an ideal instr
 
 ![Arte-blog-4G-Julio-32-672x1024-1](https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/Arte-blog-4G-Julio-32-672x1024-1-197x300.png)
 
-At [4Geeks Academy](breathco.de), the instructor is not your typical teacher.  We mentor you, we are always close, and we also have a  student/instructor ratio that allows us to help you and not leave you behind.
+At [4Geeks Academy](/), the instructor is not your typical teacher.  We mentor you, we are always close, and we also have a  student/instructor ratio that allows us to help you and not leave you behind.

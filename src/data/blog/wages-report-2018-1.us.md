@@ -24,7 +24,7 @@ The annual average salary in the US has grown up by 1% in February 2018.  Yes, 
 
 Whereas [PayScale](https://www.payscale.com/research/US/Job=Web_Developer/Salary) estimates a **median salary of $58,005 per year** for a Junior Web Developer,  [Indeed](https://www.indeed.com/salaries/Web-Developer-Salaries) places it at **$60,597 per year**, and the most recent StackOverflow survey places the median salary for a _Full-Stack Web Developer_ in the U.S. at **$100,000 per year.**
 
-If we compare this data to our last report (October 2017) [Bootcamp Graduates Salary in 2017](/pay-tuition-4geeks-2/), you will find the following results:
+If we compare this data to our last report (October 2017) [Bootcamp Graduates Salary in 2017](/us/coding-bootcamps/pay-tuition-4geeks), you will find the following results:
 
 ![](https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/Screen-Shot-2018-03-19-at-6.32.14-PM.png)
 

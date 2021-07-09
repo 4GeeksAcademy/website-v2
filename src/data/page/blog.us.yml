@@ -1,6 +1,7 @@
 meta_info:
   slug: blog
   title: "4Geeks Academy Blog"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Find resources and news for both potential and current software builders. Basic knowledge, trends, career advice and much more in 4geeks Academy blog."
   image: null
   keywords: "4Geeks Academy Blog"

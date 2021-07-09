@@ -3,6 +3,7 @@ meta_info:
   title: ""
   description: "Acerca de 4Geeks Academy"
   image: ""
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: ""
   redirects: ["/porque-4geeks", "/es/porque-4geeks"]
 

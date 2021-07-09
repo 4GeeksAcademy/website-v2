@@ -3,6 +3,7 @@ meta_info:
   title: "Precios de los Bootcamps de 4Geeks Academy"
   description: "Nunca dejamos de intentarlo hasta que creamos un programa premium pero asequible. Nuestra filosofía se basa en hacer que la educación esté disponible para todos"
   image: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Precios, Bootcamps, 4Geeks Academy"
   redirects: ["/precio"]
 

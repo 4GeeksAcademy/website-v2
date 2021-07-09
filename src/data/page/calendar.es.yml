@@ -1,6 +1,7 @@
 meta_info:
     slug: proximas-fechas
     title: "Próximas fechas de programs, cohortes, talleres y eventos en 4Geeks Academy"
+    visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
     description: "Conoce las próximas fechas: Cursos, Programas, Talleres y Eventos. Todos enfocado especificamente para la comunidad de desarrolladores."
     image: "/images/seo/calendar-es.png"
     keywords: "4Geeks Academy Eventos, 4Geeks Academy Proximas Fechas, 4Geeks Academy Talleres, 4Geeks Academy Cursos"

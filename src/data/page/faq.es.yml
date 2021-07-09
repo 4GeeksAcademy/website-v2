@@ -2,6 +2,7 @@ meta_info:
   slug: preguntas-frecuentes
   title: "Preguntas frecuentes Bootcamps y 4Geeks Academy"
   description: "Conoce las preguntas frecuentes en torno a bootcamps y 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: ""
   keywords: "Preguntas frecuentes bootcamps y 4Geeks Academy"
   redirects: ["/es/preguntas-frecuentes"]

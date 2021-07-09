@@ -132,19 +132,21 @@ module.exports = {
       options: {
         exclude: [`/admin`, `/tags`, `/edit`, `/landings`],
         // output: `/some-other-sitemap.xml`,
-        // query: `
-        // {
-        //     site {
-        //         siteMetadata {
-        //             siteUrl
-        //         }
-        //     }
-        //     allSitePage {
-        //         nodes {
-        //             path
-        //         }
-        //     }
-        // }`,
+        query: `
+        {
+            site {
+                siteMetadata {
+                    siteUrl
+                }
+            }
+            allSitePage(
+              filter: {context: {visibility: {nin: ["hidden", "unlisted"]}}}
+            ) {
+                nodes {
+                    path
+                }
+            }
+        }`,
         // serialize: ({ site, allSitePage }) =>
         //     allSitePage.nodes.map(node => {
         //         return {

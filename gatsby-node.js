@@ -42,10 +42,8 @@ exports.onCreateNode = ({node, getNode, actions}) => {
             createNodeField({node, name: `type`, value: meta.type});
             createNodeField({node, name: `pagePath`, value: meta.pagePath});
             createNodeField({node, name: `filePath`, value: url});
-            // createNodeField({node, name: `cluster`, value: meta.cluster});
             ymls.push(meta)
 
-            //   createNodeField({ node, name: `ctas`, value: ctas });
         }
     }
 };
@@ -127,7 +125,6 @@ const createBlog = async ({actions, graphql}) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({node}) => {
-        // console.log(`*** : ${node.fields.cluster}`)
         console.log(`Creating post ${node.fields.pagePath}`);
         createPage({
             path: node.fields.pagePath,
@@ -325,6 +322,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
               node {
                 meta_info {
                     slug
+                    visibility
                     redirects
                 }
                 fields{
@@ -346,7 +344,13 @@ const createPagesfromYml = async ({graphql, actions}) => {
     const translations = buildTranslations(result.data[`allPageYaml`]);
 
     //for each page found on the YML
-    result.data[`allPageYaml`].edges.forEach(({node}) => {
+    for(let i = 0; i < result.data[`allPageYaml`].edges.length; i++){
+        
+        const { node } = result.data[`allPageYaml`].edges[i];
+
+        // ignore pages with visibility hidden
+        if(node.fields.visibility == "hidden") continue;
+
         const _targetPath = node.fields.slug === "index" ? "/" : node.fields.pagePath;
         console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} in ${node.fields.lang}`);
         createPage({
@@ -354,6 +358,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
             component: path.resolve(`./src/templates/${node.fields.defaultTemplate}.js`),
             context: {
                 ...node.fields,
+                ...node.meta_info,
                 translations: translations[node.fields.defaultTemplate]
             }
         });
@@ -414,7 +419,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                     });
             })
         }
-    });
+    }
 
     return true;
 };
