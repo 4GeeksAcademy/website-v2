@@ -73,7 +73,7 @@ Algunas de las empresas que han contratado a los egresados de 4Geeks:
 ![logo ebay](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/ebay.PNG?raw=true)
 ![logo evernote](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/en.PNG?raw=true)
 ![logo razz](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/razz.PNG?raw=true)
-![logo national geographic]https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/national-geographic.PNG?raw=true)
+![logo national geographic](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/national-geographic.PNG?raw=true)
 ![logo kpmg](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/kpmg.PNG?raw=true)
 ![logo facebook](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/facebook.PNG?raw=true)
 ![logo ticjob](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/ticjob.PNG?raw=true)
