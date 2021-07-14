@@ -137,7 +137,7 @@ language_button:
   link: "/?lang=en"
 button:
   button_link: "/es/aplica"
-  apply_button_text: "Aplica"
+  apply_button_text: "Aplicar"
   button_type: "" ## YOU CAN LEAVE IT EMPTY FOR A FULL BACKGROUND COLOR OR 'outline' FOR A WHITE BACKGROUND WITH A BORDER
   button_color_text: ""
   button_background_color: ""
