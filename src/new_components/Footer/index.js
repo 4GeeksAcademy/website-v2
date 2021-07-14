@@ -45,10 +45,9 @@ const Form = styled.form`
 
 const Footer = ({ yml }) => {
 
-    let sessionStorage = window.localStorage.getItem('academy_session');
-    let socials = JSON.parse(sessionStorage).location.socials
-
     const {session} = React.useContext(SessionContext);
+    let socials = session && session.location ? session.location.socials : []
+
     const [formStatus, setFormStatus] = useState({status: "idle", msg: "Resquest"});
     const [formData, setVal] = useState({
         email: {value: '', valid: false},
