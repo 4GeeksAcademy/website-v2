@@ -141,9 +141,23 @@ const Layout = ({children, seo, context}) => {
             </div>}
             <SEO {...seo} context={context} />
             <Navbar 
-            locationCity={myLocations} 
-            currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
-            <NavbarMobile currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+              locationCity={myLocations}
+              currentURL={context.pagePath}
+              onLocationChange={(slug) => setLocation(slug)}
+              menu={myNavbar.node.navbar}
+              languageButton={myNavbar.node.language_button}
+              button={myNavbar.node.button}
+              lang={context.lang}
+            />
+            <NavbarMobile 
+              locationCity={myLocations}
+              currentURL={context.pagePath}
+              onLocationChange={(slug) => setLocation(slug)}
+              menu={myNavbar.node.navbar}
+              languageButton={myNavbar.node.language_button}
+              button={myNavbar.node.button}
+              lang={context.lang}
+            />
             <GlobalStyle />
             <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} />
             <>
