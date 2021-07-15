@@ -263,11 +263,11 @@ const Landing = (props) => {
             applySchollarship?.imageSide === "right" ? (
               <>
                 {/* <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/> */}
-                <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "280px", height: "446px", bottom: "-10px", right: "-16px", borderRadius: "3px"}}/>
+                <Div display="none" display_md="flex" style={{position: "absolute", background: Colors.yellow, width: "280px", height: "446px", bottom: "-10px", right: "-16px", borderRadius: "3px"}}/>
               </>
             ) : (
                 <>
-                  <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "30px", borderRadius: "3px"}}/>
+                  <Div display="none" display_md="flex" style={{position: "absolute", background: Colors.lightBlue, width: "101%", height: "282px", top: "40px", left: "-30px", borderRadius: "3px"}}/>
                 </>
             )
           }
