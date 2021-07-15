@@ -275,7 +275,9 @@ const Landing = (props) => {
             height={`100%`}
             // width={`85%`}
             borderRadius={`3px`}
-            image={applySchollarship?.image.childImageSharp.gatsbyImageData}
+            image={applySchollarship 
+              ? applySchollarship?.image.childImageSharp.gatsbyImageData 
+              : data.allPageYaml.edges[0].node.list[0].image.childImageSharp.gatsbyImageData}
             bgSize={`contain`}
             alt="geekforce image"
           />
@@ -287,6 +289,24 @@ const Landing = (props) => {
 };
 export const query = graphql`
   query LandingNonavQuery($file_name: String!, $lang: String!, $utm_course: String!) {
+    allPageYaml(filter: { fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang }}}) {
+      edges {
+        node {
+          list {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  width: 800
+                  placeholder: NONE
+                  quality: 100
+                )
+              }
+            }
+          }
+        }
+      }
+    }
     allLandingYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
