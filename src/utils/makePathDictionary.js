@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { walk, loadYML, empty, fail, success } = require("../test/_utils");
+const { walk, loadYML, fail, success } = require("../test/_utils");
 
 let toKeyValue = (array) => {
   return Object.fromEntries(array);
@@ -17,11 +17,18 @@ const onCreateLangSwitcherData = () => {
 
   // ----------------- PAGE DICTIONARY -----------------
   walk(`${__dirname}/../data/page`, (err, files) => {
+    
     let page_ES_US = [];
     let page_US_ES = [];
     if (err) fail("Error reding the Page files: ", err);
-    for (let i = 0; i < files.length; i++) {
-      const _path = files[i];
+    const _files = files.filter(
+      (f) =>
+        (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1) &&
+        f.indexOf('test.us.yml') === -1
+    );
+
+    for (let i = 0; i < _files.length; i++) {
+      const _path = _files[i];
       const doc = loadYML(_path);
       const lang = doc.lang;
       const slug = doc.yaml.meta_info.slug;
@@ -107,9 +114,6 @@ const onCreateLangSwitcherData = () => {
 
         Location_ES_US.push(...Location_US_ES);
         All_dictionary.push(toKeyValue(Location_ES_US));
-
-        // WARN: to avoid the disorder of the dictionary this fragment has been commented
-        // WARN: uncoment only if there are no pathsDictionary file created
 
         fs.writeFile(`${__dirname}/pathDictionary.json`,
           JSON.stringify(...All_dictionary),
