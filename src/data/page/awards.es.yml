@@ -39,7 +39,7 @@ awards_list:
     title: "Top Coding School for Newsweek"
     paragraph: "4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
 
-  - image: "../../../static/images/badges/reviews.png"
+  - image: "../../../static/images/badges/reviews-es.png"
     title: "4.9 on all reviews"
     paragraph: "Contamos con una puntuación de 4.9 en todos los reviews de las plataformas de CourseReport y SwitchUp."
 
