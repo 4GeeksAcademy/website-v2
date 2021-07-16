@@ -26,7 +26,20 @@ const BlogLayout = ({children, seo, context}) => {
   return (
     <StaticQuery
       query={graphql`
-      query SiteTitleBlogQuery {
+      query SiteTitleBlogQuery($lang: String) {
+        allLocationYaml(filter: { fields: {lang: { eq: $lang }}}) {
+          edges{
+            node{
+              city
+              fields {
+                lang
+              }
+              button {
+                apply_button_text
+              }
+            }
+          }
+        }
         allCustomBarYaml {
             edges {
               node {
@@ -123,7 +136,7 @@ const BlogLayout = ({children, seo, context}) => {
         let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
         let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
         let myCustomBar = data.allCustomBarYaml.edges.find(item => item.node.fields.lang === context.lang)
-
+        let myLocations = data.allLocationYaml.edges.filter(item => item.node.fields.lang === context.lang)
         return (
           <>
             {editMode && <div style={{background: "yellow", padding: "15px"}}>
@@ -139,8 +152,24 @@ const BlogLayout = ({children, seo, context}) => {
             <SEO {...seo} context={context} />
             {myNavbar &&
               <>
-                <Navbar currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
-                <NavbarMobile currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+                <Navbar
+                  locationCity={myLocations}
+                  currentURL={context.pagePath}
+                  onLocationChange={(slug) => setLocation(slug)}
+                  menu={myNavbar.node.navbar}
+                  languageButton={myNavbar.node.language_button}
+                  button={myNavbar.node.button}
+                  lang={context.lang}
+                />
+                <NavbarMobile
+                  locationCity={myLocations}
+                  currentURL={context.pagePath}
+                  onLocationChange={(slug) => setLocation(slug)}
+                  menu={myNavbar.node.navbar}
+                  languageButton={myNavbar.node.language_button}
+                  button={myNavbar.node.button}
+                  lang={context.lang}
+                />
               </>
             }
             <GlobalStyle />

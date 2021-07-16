@@ -74,14 +74,25 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton, onLocationChange, currentURL}) => {
+export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton, onLocationChange, currentURL, locationCity}) => {
     const {session, setSession} = useContext(SessionContext);
-    const [status, setStatus] = useState(
-        {
-            toggle: false,
-            hovered: false,
-            itemIndex: null
-        })
+    let city = session && session.location ? session.location.city : [];
+    let currentLocation = locationCity ? locationCity : [];
+    const [status, setStatus] = useState({
+        toggle: false,
+        hovered: false,
+        itemIndex: null
+    })
+    const [buttonText, setButtonText] = useState("")
+    /* In case of want change the Button text "Aplica" search the key 
+       "apply_button_text" in /src/data/location/locationfile.yaml
+    */
+    let findCity = currentLocation.find(loc => loc.node?.city === city)
+    useEffect(() => {
+        if(findCity !== undefined) 
+        setButtonText(findCity.node.button.apply_button_text)
+    }, [findCity])
+
     const data = useStaticQuery(graphql`
     query {
       allChooseProgramYaml {
@@ -132,7 +143,7 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
                 </Div>
                 <MegaMenu status={status} setStatus={setStatus} menu={menu} session={session} currentURL={currentURL} languageButton={languageButton} />
                 <Div alignItems="center" justifyContent="between">
-                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" color={Colors.black} textColor={Colors.white}>{buttonText || button.apply_button_text}</Button></Link>
                 </Div>
             </Nav>
         </>

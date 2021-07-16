@@ -106,14 +106,24 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange}) => {
-    const {session, setSession} = useContext(SessionContext);
-    const [status, setStatus] = useState(
-        {
-            toggle: false,
-            hovered: false,
-            itemIndex: null
-        })
+export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange, locationCity}) => {
+    const {session} = useContext(SessionContext);
+    let city = session && session.location ? session.location.city : [];
+    let currentLocation = locationCity ? locationCity : [];
+    const [status, setStatus] = useState({
+        toggle: false,
+        hovered: false,
+        itemIndex: null
+    })
+    const [buttonText, setButtonText] = useState("")
+    /* In case of want change the Button text "Aplica" search the key 
+       "apply_button_text" in /src/data/location/locationfile.yaml
+    */
+    let findCity = currentLocation.find(loc => loc.node?.city === city)
+    useEffect(() => {
+        if(findCity !== undefined) 
+        setButtonText(findCity.node.button.apply_button_text)
+    }, [findCity])
 
     const data = useStaticQuery(graphql`
     query {
@@ -166,9 +176,9 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                         return (
                             <MenuItem key={index} onClick={() => setStatus({...status, toggle: !status.toggle, itemIndex: index})}>
                                 <H3 type="h3" margin="0 5px 0 0" fontSize="13px" lineHeight="16px" fontWeight="400">
-                                    {index == menu.length - 1 ? <Link to={item.link}>{item.name}</Link> : item.name}
+                                    {index === menu.length - 1 ? <Link to={item.link}>{item.name}</Link> : item.name}
                                 </H3>
-                                {index != menu.length - 1 && <Icon icon="arrowdown" />}
+                                {index !== menu.length - 1 && <Icon icon="arrowdown" />}
                             </MenuItem>
                         )
                     }
@@ -179,7 +189,7 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                     <Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
                         <Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph>
                     </Link>
-                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" width="fit-content" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" width="fit-content" color={Colors.black} textColor={Colors.white}>{buttonText || button.apply_button_text}</Button></Link>
                 </Div>
             </Nav>
         </>
@@ -190,7 +200,7 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
 export const MegaMenu = ({status, setStatus, menu}) => {
     return (
         <>
-            {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 &&
+            {status.toggle && status.itemIndex !== null && status.itemIndex !== menu.length - 1 &&
                 <MegaMenuContainer
                     onMouseLeave={() => {
                         setStatus({...status, hovered: false});

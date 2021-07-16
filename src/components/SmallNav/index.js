@@ -149,7 +149,6 @@ const Div = styled.div`
     display:${({open}) => open ? '' : 'none'};
     flex-flow: column nowrap;
     background-color: white;
-    // background-color: #0D2538;
     position: sticky;
     z-index: 19;
     transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -166,7 +165,6 @@ const Div = styled.div`
     display:${({open}) => open ? '' : 'none'};
     flex-flow: column nowrap;
     background-color: white;
-    // background-color: #0D2538;
     position: sticky;
     z-index: 19;
     transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
