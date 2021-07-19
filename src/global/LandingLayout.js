@@ -10,7 +10,7 @@ import {StaticQuery, graphql} from 'gatsby';
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
-const Layout = ({children, seo, context, withNavbar, landingLayout}) => {
+const Layout = ({children, seo, context, landingFooter, emptyNavbar}) => {
   const {session} = React.useContext(SessionContext);
 
   return (
@@ -115,19 +115,15 @@ const Layout = ({children, seo, context, withNavbar, landingLayout}) => {
         return (
           <>
             <SEO {...seo} context={context} />
-            {withNavbar &&
-              <>
-                <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
-                <NavbarMobile onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
-              </>
-            }
+              <Navbar emptyNavbar={emptyNavbar} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+              <NavbarMobile emptyNavbar={emptyNavbar} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
             <GlobalStyle />
             <>
               {children}
             </>
 
             {
-              landingLayout === true
+              landingFooter === true
               ? <LandingFooter contenxt={context} yml={myFooter.node} session={session} />
               : <Footer yml={myFooter.node} session={session} />
             }

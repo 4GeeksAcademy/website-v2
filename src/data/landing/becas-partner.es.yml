@@ -13,12 +13,12 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: full-stack
-  utm_location: santiago-chile
+  utm_location: madrid-spain
 
 form:
-  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email", "programSelector"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email"]
+  fields: ["full_name", "phone", "email", "programSelector"]
   heading: "Solicita una beca"
   button_label: Enviar
   redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website

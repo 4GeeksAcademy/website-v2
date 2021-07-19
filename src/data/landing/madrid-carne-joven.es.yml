@@ -15,7 +15,7 @@ meta_info:
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email", "programSelector"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email", "programSelector"]
+  fields: ["full_name", "phone", "email"]
   heading: "Solicita una beca"
   button_label: Enviar
   redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website

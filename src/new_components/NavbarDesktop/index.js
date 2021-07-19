@@ -106,7 +106,7 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange}) => {
+export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange, emptyNavbar}) => {
     const {session, setSession} = useContext(SessionContext);
     const [status, setStatus] = useState(
         {
@@ -161,6 +161,7 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                         alt="4Geeks Logo"
                     />
                 </Link>
+                {!emptyNavbar &&
                 <Menu>
                     {menu && menu.map((item, index) => {
                         return (
@@ -175,6 +176,7 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                     )}
                     <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
+                }
                 <Div alignItems="center" justifyContent="between">
                     <Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
                         <Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph>

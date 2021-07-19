@@ -74,7 +74,7 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton, onLocationChange, currentURL}) => {
+export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton, onLocationChange, currentURL, emptyNavbar}) => {
     const {session, setSession} = useContext(SessionContext);
     const [status, setStatus] = useState(
         {
@@ -120,7 +120,9 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
         <>
             <Nav display_md="none" display="flex">
                 <Div alignItems="center">
+                    {!emptyNavbar && 
                     <BurgerIcon style={{marginRight: "16px", cursor: "pointer"}} onClick={() => setStatus({...status, toggle: !status.toggle})} />
+                    }
                     <Link to={lang == "es" ? "/es/inicio" : "/"}>
                         <GatsbyImage
                             // fadeIn={false}
@@ -130,7 +132,9 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
                         />
                     </Link>
                 </Div>
-                <MegaMenu status={status} setStatus={setStatus} menu={menu} session={session} currentURL={currentURL} languageButton={languageButton} />
+                {!emptyNavbar && 
+                    <MegaMenu status={status} setStatus={setStatus} menu={menu} session={session} currentURL={currentURL} languageButton={languageButton} />
+                }
                 <Div alignItems="center" justifyContent="between">
                     <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
                 </Div>

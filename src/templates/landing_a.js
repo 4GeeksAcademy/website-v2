@@ -92,7 +92,7 @@ const Landing = (props) => {
         borderRadius="0"
       >
         <GridContainer
-          padding="72px 0 0 0"
+          padding="72px 0 35px 0"
           containerGridGap="0"
           containerColumns_tablet="repeat(1,0fr)"
           padding_tablet="72px 0 35px 0"
@@ -721,6 +721,6 @@ export const query = graphql`
 `;
 
 export default BaseRender(Landing, {
-  navbar: true,
-  landingLayout: true,
+  // navbar: true,
+  landingFooter: true,
 });
