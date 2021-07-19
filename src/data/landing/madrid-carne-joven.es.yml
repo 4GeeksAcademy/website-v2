@@ -13,7 +13,7 @@ meta_info:
   utm_location: madrid-spain
 
 form:
-  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email", "programSelector"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Solicita una beca"
