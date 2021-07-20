@@ -92,7 +92,7 @@ const Landing = (props) => {
         borderRadius="0"
       >
         <GridContainer
-          padding="72px 0 0 0"
+          padding="72px 0 35px 0"
           containerGridGap="0"
           containerColumns_tablet="repeat(1,0fr)"
           padding_tablet="72px 0 35px 0"
@@ -218,7 +218,7 @@ const Landing = (props) => {
       }
 
       <GridContainerWithImage background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
-        <Div flexDirection="column" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
+        <Div flexDirection="column" margin="0" margin_tablet="0 50px" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
         gridArea_tablet={(applySchollarship?.imageSide) === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
         >
@@ -721,6 +721,6 @@ export const query = graphql`
 `;
 
 export default BaseRender(Landing, {
-  navbar: true,
-  landingLayout: true,
+  // navbar: true,
+  landingFooter: true,
 });

@@ -10,14 +10,26 @@ import {StaticQuery, graphql} from 'gatsby';
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
-const Layout = ({children, seo, context, withNavbar, landingLayout}) => {
+const Layout = ({children, seo, context, landingFooter, emptyNavbar}) => {
   const {session} = React.useContext(SessionContext);
 
   return (
     <StaticQuery
       query={graphql`
-      query LandingLayoutQuery {
-        
+      query LandingLayoutQuery($lang: String) {
+        allLocationYaml(filter: { fields: {lang: { eq: $lang }}}) {
+          edges{
+            node{
+              city
+              fields {
+                lang
+              }
+              button {
+                apply_button_text
+              }
+            }
+          }
+        }
         allFooterYaml {
           edges {
             node {
@@ -107,6 +119,7 @@ const Layout = ({children, seo, context, withNavbar, landingLayout}) => {
       render={(data) => {
         let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
         let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
+        let myLocations = data.allLocationYaml.edges.filter(item => item.node.fields.lang === context.lang)
 
         if (!myNavbar || myNavbar == undefined) throw Error("Navbar not found, yml is missing language information?")
         let _btnInfo = myNavbar.node.button;
@@ -115,19 +128,31 @@ const Layout = ({children, seo, context, withNavbar, landingLayout}) => {
         return (
           <>
             <SEO {...seo} context={context} />
-            {withNavbar &&
-              <>
-                <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
-                <NavbarMobile onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
-              </>
-            }
+              <Navbar
+                emptyNavbar={emptyNavbar}
+                locationCity={myLocations}
+                onLocationChange={(slug) => setLocation(slug)}
+                menu={myNavbar.node.navbar}
+                languageButton={myNavbar.node.language_button}
+                button={myNavbar.node.button}
+                lang={context.lang}
+              />
+              <NavbarMobile
+                emptyNavbar={emptyNavbar}
+                locationCity={myLocations}
+                onLocationChange={(slug) => setLocation(slug)}
+                menu={myNavbar.node.navbar}
+                languageButton={myNavbar.node.language_button}
+                button={myNavbar.node.button}
+                lang={context.lang}
+              />
             <GlobalStyle />
             <>
               {children}
             </>
 
             {
-              landingLayout === true
+              landingFooter === true
               ? <LandingFooter contenxt={context} yml={myFooter.node} session={session} />
               : <Footer yml={myFooter.node} session={session} />
             }
