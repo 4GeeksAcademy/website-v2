@@ -1,4 +1,10 @@
 context("Test Apply page with correct data", () => {
+  
+  beforeEach(() => {
+    cy.request('POST', '')
+  })
+  // https://breathecode-cypress.herokuapp.com/v1/marketing/lead
+
   it('Visit the Apply page with path "/us/apply"', () => {
     cy.visit("/apply").wait(500);
     cy.location().should((location) => {
@@ -22,9 +28,9 @@ context("Test Apply page with correct data", () => {
       cy.get("[data-cy=dropdown_program_selector]").click().wait(500); // Gets Drowpdown of Courses
       cy.get("#react-select-2-option-0").click(); // Selects Level 1 with position 0
     });
-  });
+  // });
 
-  it("Fill the input fields with correct values", () => {
+  // it("Fill the input fields with correct values", () => {
     cy.fixture("/apply/form_values/right.json").each((right) => {
       cy.get("[data-cy=email]")
         .should("have.css", "border-color", "rgb(0, 0, 0)").wait(200)
