@@ -19,8 +19,7 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
     const doc = loadYML(_path);
     if (!doc || !doc.yaml) fail('Invalid YML syntax for ' + _path);
   });
-  // process.env.GATSBY_BREATHECODE_HOST
-  // https://breathecode.herokuapp.com/v1
+
   const res = fetch('https://breathecode.herokuapp.com/v1/admissions/academy', {
     headers: {
       'Authorization': `Token ${process.env.WEBSITE_BC_API_TOKEN}`,
