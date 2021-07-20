@@ -116,7 +116,6 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
     const [formData, setVal] = useState(_fields);
     const {session} = useContext(SessionContext);
     const courseSelector = yml.form_fields.find(f => f.name === "programSelector")
-    console.log("FORM_DATA:::", formData)
     React.useEffect(() => {
         setVal(_data => {
             const _ = Object.keys(_data).reduce((total, key) => {
