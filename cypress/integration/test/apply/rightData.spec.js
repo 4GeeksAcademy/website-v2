@@ -1,9 +1,4 @@
 context("Test Apply page with correct data", () => {
-  
-  beforeEach(() => {
-    cy.request('POST', '')
-  })
-  // https://breathecode-cypress.herokuapp.com/v1/marketing/lead
 
   it('Visit the Apply page with path "/us/apply"', () => {
     cy.visit("/apply").wait(500);
