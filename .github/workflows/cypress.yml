@@ -9,9 +9,9 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
+    # strategy:
+    #   matrix:
+    #     node-version: [14.x]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -24,6 +24,5 @@ jobs:
           wait-on: 'http://localhost:8000'
           browser: chrome
           spec: cypress/integration/tests/*
-          # wait-on: 'http://localhost:8000'
           # wait-on-timeout: 120
-          # env: stage=LOCAL
+          env: stage=LOCAL
