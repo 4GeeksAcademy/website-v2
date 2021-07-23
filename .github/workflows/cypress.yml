@@ -20,8 +20,9 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          browser: chrome
           start: npm start
+          browser: chrome
+          ci: npm ci
           # wait-on: 'http://localhost:8000'
           # wait-on-timeout: 120
           # env: stage=LOCAL
