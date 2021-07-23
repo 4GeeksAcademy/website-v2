@@ -41,7 +41,7 @@ const _fields = {
     email: {value: '', valid: false, required: true, type: 'email', place_holder: "Your email *", error: "Please specify a valid email"},
     phone: {value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone"},
     consent: {value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms"},
-    programSelector: {value: null, valid: false, required: true, type: 'selector', place_holder: "Select a program"}
+    programSelector: {value: '', valid: false, required: true, type: 'selector', place_holder: "Select a program"}
 }
 
 const clean = (fields, data) => {
@@ -177,7 +177,7 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                                         options={selectProgram}
                                         value={selectProgram.value}
                                         placeholder={courseSelector.place_holder}
-                                        onChange={(value, valid) => setVal({...formData, course: {value, valid}})}
+                                        onChange={(value, valid) => setVal({...formData, programSelector: {value, valid}})}
                                     />
                                 </Div>
                                 ) : (
