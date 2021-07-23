@@ -7,14 +7,13 @@ meta_info:
   image: ""
   keywords: ""
   
-  template: "landing_a" # <--- choose your landing template [landing_a, landing_nonav]
+  template: "landing_a" # <--- choose your landing template
   redirects: [""] # <--- URL redirections to avoid 404 errors
   
   # this UTM fields will be included in the CRM
-
   utm_course: full-stack
-  utm_location: madrid-spain   # original location coming from latitude,longitude will be ignored and replaced with this one
-  automation: request_more_info # optional, this is the default value
+  utm_location: madrid-spain
+  automation: request_more_info #optional, this is the default value
   tag: soft #optional, this is the default value
 
 form:
@@ -101,12 +100,12 @@ components:
   - name: more_testimonials
     position: 8
     layout: two_column_left 
-    ps://google.com" # take uses somewhere when they click on the image
-    heading: 
-      text: "image: 
+    image: 
       style: "{}"
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-      link: "httEscúchalo de nuestros alumnos"
+      link: "https://google.com" # take uses somewhere when they click on the image
+    heading: 
+      text: "Escúchalo de nuestros alumnos"
                   #xl      lg     md     sm    xs
       font_size: ["40px","34px","34px","25px", "20px"]
     button: 
