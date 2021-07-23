@@ -1,5 +1,4 @@
 context("Test Apply page with correct data", () => {
-
   it('Visit the Apply page with path "/us/apply"', () => {
     cy.visit("/us/apply").wait(500);
     cy.location().should((location) => {
@@ -19,7 +18,6 @@ context("Test Apply page with correct data", () => {
       cy.get("[data-cy=dropdown_program_selector]").click().wait(1500); // Gets Drowpdown of Courses
       cy.get("#react-select-2-option-1").click(); // Selects Level 1 with position 0
     });
-
     cy.fixture("/apply/form_values/right.json").each((right) => {
       cy.get("[data-cy=email]").click()
         .should("have.css", "border-color", "rgb(0, 0, 0)").wait(200)
