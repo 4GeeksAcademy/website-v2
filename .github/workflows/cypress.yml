@@ -7,18 +7,46 @@ on:
     branches: [ development ]
 
 jobs:
-  cypress-run:
+  install: 
+
+  ui-chrome-tests:
     runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    needs: install
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [14.x]
+        # run copies of the current job in parallel
+        containers: [1, 2, 3, 4, 5]
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: 'UI Tests - Chrome'
         uses: cypress-io/github-action@v2
         with:
-          build: npm run build
+          # we have already installed all dependencies above
           start: npm start
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120
+          browser: chrome
+          group: 'UI - Chrome'
+  # cypress-run:
+  #   runs-on: ubuntu-latest
+    # strategy:
+    #   matrix:
+    #     node-version: [14.x]
+    # steps:
+    #   - name: Checkout
+    #     uses: actions/checkout@v2
+
+      # - name: Cypress run
+        # uses: cypress-io/github-action@v2
+        # with:
+        #   browser: chrome
+        #   start: npm start
+        #   wait-on: 'http://localhost:8080'
+        #   env: stage=LOCAL
