@@ -31,7 +31,7 @@
     "serve": "gatsby serve -o -p 8080",
     "clean": "gatsby clean",
     "cy:run": "cypress run",
-    "cy:dev": "cypress open"
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "14": "^3.1.6",
@@ -68,7 +68,7 @@
     "gatsby-transformer-sharp": "^2.12.1",
     "gatsby-transformer-yaml": "^2.2.15",
     "lazysizes": "^5.2.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "prismjs": "^1.21.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

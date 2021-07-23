@@ -1,8 +1,8 @@
 context("Test Apply page with wrong data", () => {
   it('Visit the Apply page with path "/us/apply"', () => {
-    cy.visit("/apply").wait(500);
+    cy.visit("/us/apply").wait(500);
     cy.location().should((location) => {
-      expect(location.pathname).to.eq("/us/apply");
+      expect(location.pathname).to.eq("/us/apply/");
     });
   });
 
@@ -12,8 +12,6 @@ context("Test Apply page with wrong data", () => {
       const { firstName, lastName } = data.robot;
 
       cy.get("[data-cy=first_name]").type(firstName);
-
-      cy.get("[data-cy=last_name]").type(lastName);
     });    
   });
 
@@ -39,6 +37,6 @@ context("Test Apply page with wrong data", () => {
   })
   it("Shouldn't submit the form", () => {
     cy.get('Button[type="submit"]').contains("APPLY").click().wait(500);
-    cy.get(":nth-child(2) > .Form__Alert-iZcfNU") // Alert after submit
+    cy.get(".Form__Alert-gbvxik") // Alert after submit
   })
 });

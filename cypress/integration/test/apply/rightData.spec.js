@@ -1,14 +1,9 @@
 context("Test Apply page with correct data", () => {
-  
-  beforeEach(() => {
-    cy.request('POST', '')
-  })
-  // https://breathecode-cypress.herokuapp.com/v1/marketing/lead
 
   it('Visit the Apply page with path "/us/apply"', () => {
-    cy.visit("/apply").wait(500);
+    cy.visit("/us/apply").wait(500);
     cy.location().should((location) => {
-      expect(location.pathname).to.eq("/us/apply");
+      expect(location.pathname).to.eq("/us/apply/");
     });
   });
 
@@ -17,27 +12,21 @@ context("Test Apply page with correct data", () => {
     cy.fixture("/apply/names.json").then((data) => {
       const { firstName, lastName } = data.user;
 
-      cy.get("[data-cy=first_name]")
+      cy.get("[data-cy=first_name]").click()
         .should("have.css", "border-color", "rgb(0, 0, 0)") // focus the form
         .type(firstName);
 
-      cy.get("[data-cy=last_name]")
-        .should("have.css", "border-color", "rgb(0, 0, 0)")
-        .type(lastName);
-
-      cy.get("[data-cy=dropdown_program_selector]").click().wait(500); // Gets Drowpdown of Courses
-      cy.get("#react-select-2-option-0").click(); // Selects Level 1 with position 0
+      cy.get("[data-cy=dropdown_program_selector]").click().wait(1500); // Gets Drowpdown of Courses
+      cy.get("#react-select-2-option-1").click(); // Selects Level 1 with position 0
     });
-  // });
 
-  // it("Fill the input fields with correct values", () => {
     cy.fixture("/apply/form_values/right.json").each((right) => {
-      cy.get("[data-cy=email]")
+      cy.get("[data-cy=email]").click()
         .should("have.css", "border-color", "rgb(0, 0, 0)").wait(200)
         .clear()
         .type(right.email);
 
-      cy.get("[data-cy=phone]")
+      cy.get("[data-cy=phone]").click()
         .should("have.css", "border-color", "rgb(0, 0, 0)").wait(500)
         .clear()
         .type(right.phone);
@@ -45,7 +34,8 @@ context("Test Apply page with correct data", () => {
   })
   
   it("Should submit the form and redirect to thank-you page", () => {
-    cy.get('Button[type="submit"]').contains("APPLY").click().wait(500);
+    cy.log(Cypress.env('GATSBY_BREATHECODE_HOST'))
+    cy.get('Button[type="submit"]').contains("APPLY").click();
     cy.location().should((location) => {
       expect(location.pathname).to.eq("/us/thank-you");
     });

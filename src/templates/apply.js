@@ -140,7 +140,7 @@ const Apply = (props) => {
                                     else {
                                         setFormStatus({status: "thank-you", msg: "Thank you"});
                                         // console.log("Thank you");
-                                        if (!session || !session.utm || !session.utm.utm_test) navigate('/thank-you/apply');
+                                        if (!session || !session.utm || !session.utm.utm_test) navigate(`${pageContext.lang === 'us' ? '/us/thank-you' : '/es/gracias'}`);
                                         else console.log("Lead success, but no redirection because of testing purposes")
                                     }
                                 })
