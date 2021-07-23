@@ -34,7 +34,6 @@
     "cy:dev": "cypress open"
   },
   "dependencies": {
-    "14": "^3.1.6",
     "@loadable/component": "^5.13.2",
     "browser-monads": "^1.0.0",
     "dayjs": "^1.8.29",
@@ -103,7 +102,7 @@
     "@storybook/react": "^5.1.11",
     "babel-plugin-styled-components": "^1.10.6",
     "colors": "^1.4.0",
-    "cypress": "^6.8.0",
+    "cypress": "^8.0.0",
     "dotenv": "^8.2.0",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
