@@ -21,7 +21,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm start
-          wait-on: 'http://localhost:3000'
+          wait-on: 'http://localhost:8000'
           browser: chrome
           spec: cypress/integration/tests/*
           # wait-on: 'http://localhost:8000'
