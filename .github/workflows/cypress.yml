@@ -2,22 +2,40 @@ name: Cypress CI
 
 on:
   push:
-    branches: [ development ]
+    branches: development
   pull_request:
-    branches: [ development ]
+    branches: development
 
 jobs:
-  install: 
+  install:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # - name: Save build folder
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: build
+      #     if-no-files-found: error
+      #     path: build
+
+      # - name: Cypress install
+      #   uses: cypress-io/github-action@v2
+      #   with:
+      #     # Disable running of tests within install job
+      #     runTests: false
+      #     build: yarn build
 
   ui-chrome-tests:
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
     needs: install
-    strategy:
-      fail-fast: false
-      matrix:
-        # run copies of the current job in parallel
-        containers: [1, 2, 3, 4, 5]
+    # strategy:
+    #   fail-fast: false
+    #   matrix:
+    #     node-version: [14.x]
 
     steps:
       # Install NPM dependencies, cache them correctly
