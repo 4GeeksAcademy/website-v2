@@ -1,18 +1,11 @@
 context("Test Apply page with wrong data", () => {
 
-  before(function () {
-    // run this once before all code
-    return window.caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          return window.caches.delete(cacheName);
-        })
-      );
-    })
-  })
+  it('Start Website', () => {
+    cy.visit('/').wait(1500);
+  });
 
   it('Visit the Apply page with path "/us/apply"', () => {
-    cy.visit("/us/apply").wait(500);
+    cy.visit("/us/apply").wait(3500);
     cy.location().should((location) => {
       expect(location.pathname).to.eq("/us/apply");
     });

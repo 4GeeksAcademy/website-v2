@@ -1,15 +1,4 @@
 context('Test Apply page with correct data', () => {
-  
-  before(function () {
-    // run this once before all code
-    return window.caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          return window.caches.delete(cacheName);
-        })
-      );
-    })
-  })
 
   it('Start Website', () => {
     cy.visit('/').wait(1500);

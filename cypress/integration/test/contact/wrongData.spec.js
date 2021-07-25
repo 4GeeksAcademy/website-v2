@@ -1,4 +1,5 @@
 context("Test Contact page with wrong data", () => {
+
   it('Visit the Contact page with path "/us/contact"', () => {
     cy.visit("/us/contact").wait(500);
     cy.location().should((location) => {
