@@ -9,7 +9,7 @@ on:
 
 jobs:
   cypress-test:
-    name: Runs on Ubuntu
+    name: Running Cypress Tests with Server
     runs-on: ubuntu-latest
     # strategy:
     #   matrix:
@@ -19,11 +19,11 @@ jobs:
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Running Cypress Tests
+      - name: Running Server and Tests
         uses: cypress-io/github-action@v2.9.7
         with:
-          start: npm run start:gatsby
-          browser: chrome
-          wait-on: http://localhost:8000
+          start: gatsby develop --port=8000
+          # browser: chrome
+          # wait-on: http://localhost:8000
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8000
           # spec: cypress/integration/tests/*
