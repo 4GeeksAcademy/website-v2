@@ -17,13 +17,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
       - name: Setup npm package
         run: npm install
       - name: Run Server
         run: npm run start:gatsby
+        if: ${{ success() }}
       - name: Running Tests
+        # Install NPM dependencies, cache them correctly
+        # and run all Cypress tests
         uses: cypress-io/github-action@v2.9.7
         with:
           # start: npm run start:gatsby
