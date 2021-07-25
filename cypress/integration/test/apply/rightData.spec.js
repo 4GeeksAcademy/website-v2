@@ -49,6 +49,7 @@ context('Test Apply page with correct data', () => {
     cy.get('Button[type="submit"]')
       .contains('APPLY')
       .click().wait(3500);
+      // Por alguna razon location no funciona en github actions
     cy.location().should((location) => {
       expect(location.pathname).to.eq('/us/thank-you');
     });
