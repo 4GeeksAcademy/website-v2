@@ -19,18 +19,16 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup npm package
         run: npm install
-      - name: Run Server
-        with:
-          start: npm run start:gatsby
-          wait-on: http://localhost:8000
-        # if: ${{ success() }}
+      # - name: Run Server
+      #   run: npm run start:gatsby
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
         # and run all Cypress tests
         uses: cypress-io/github-action@v2.9.7
         with:
-          # start: npm run start:gatsby
-          # browser: chrome
+          start: npm run start:gatsby
+          browser: chrome
           # wait-on: http://localhost:8000
+          wait-on-timeout: 50000
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8000
           # spec: cypress/integration/tests/*
