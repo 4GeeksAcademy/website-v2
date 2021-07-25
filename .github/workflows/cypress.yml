@@ -9,7 +9,7 @@ on:
 
 jobs:
   cypress-test:
-    name: Running Cypress Tests with Server
+    name: Cypress Tests with Server
     runs-on: ubuntu-latest
     # strategy:
     #   matrix:
@@ -26,10 +26,10 @@ jobs:
         # and run all Cypress tests
         uses: cypress-io/github-action@v2.9.7
         with:
-          # build: npm run build
-          build: npm start
-          # start: npm run serve
-          start: npm run test:e2e
+          build: npm run build
+          # build: npm start
+          start: npm run serve
+          # start: npm run test:e2e
           browser: electron
           # wait-on: http://localhost:8000
           wait-on-timeout: 1000
