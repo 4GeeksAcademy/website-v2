@@ -49,6 +49,7 @@ context("Test Apply page with wrong data", () => {
   })
   it("Shouldn't submit the form", () => {
     cy.get('Button[type="submit"]').contains("APPLY").click().wait(500);
-    cy.get(".Form__Alert-gbvxik") // Alert after submit
+    cy.get('data-cy=alertText') // Alert after submit
+    // cy.get(".Form__Alert-gbvxik") // Alert after submit
   })
 });
