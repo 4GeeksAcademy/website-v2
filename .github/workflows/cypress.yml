@@ -28,8 +28,8 @@ jobs:
         with:
           build: npm run build
           start: npm run serve
-          browser: chrome
+          browser: electron
           # wait-on: http://localhost:8000
-          wait-on-timeout: 50000
+          wait-on-timeout: 1000
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
           # spec: cypress/integration/tests/*

@@ -214,7 +214,7 @@ const Apply = (props) => {
                             />
                         </Div>
                         {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
-                        <Div margin_tablet="0 0 23px 0">
+                        <Div data-cy="dropdown_academy_selector" margin_tablet="0 0 23px 0">
                             <SelectRaw
                                 bgColor={Colors.black}
                                 options={locations && locations}
