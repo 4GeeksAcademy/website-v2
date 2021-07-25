@@ -1,9 +1,5 @@
 context("Test Apply page with wrong data", () => {
 
-  it('Start Website', () => {
-    cy.visit('/').wait(1500);
-  });
-
   it('Visit the Apply page with path "/us/apply"', () => {
     cy.visit("/us/apply").wait(3500);
     cy.location().should((location) => {

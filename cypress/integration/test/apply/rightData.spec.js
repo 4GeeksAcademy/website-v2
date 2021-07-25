@@ -1,8 +1,5 @@
 context('Test Apply page with correct data', () => {
 
-  it('Start Website', () => {
-    cy.visit('/').wait(1500);
-  });
   it('Visit the Apply page with path "/us/apply"', () => {
     cy.visit('/us/apply').wait(3500);
     cy.location().should((location) => {
@@ -51,7 +48,7 @@ context('Test Apply page with correct data', () => {
     // cy.log(Cypress.env('GATSBY_BREATHECODE_HOST'))
     cy.get('Button[type="submit"]')
       .contains('APPLY')
-      .click().wait(1500);
+      .click().wait(3500);
     cy.location().should((location) => {
       expect(location.pathname).to.eq('/us/thank-you');
     });

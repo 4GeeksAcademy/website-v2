@@ -26,8 +26,10 @@ jobs:
         # and run all Cypress tests
         uses: cypress-io/github-action@v2.9.7
         with:
-          build: npm run build
-          start: npm run serve
+          # build: npm run build
+          build: npm start
+          # start: npm run serve
+          start: npm run test:e2e
           browser: electron
           # wait-on: http://localhost:8000
           wait-on-timeout: 1000
