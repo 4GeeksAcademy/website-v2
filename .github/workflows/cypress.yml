@@ -20,8 +20,10 @@ jobs:
       - name: Setup npm package
         run: npm install
       - name: Run Server
-        run: npm run start:gatsby
-        if: ${{ success() }}
+        with:
+          start: npm run start:gatsby
+          wait-on: http://localhost:8000
+        # if: ${{ success() }}
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
         # and run all Cypress tests
