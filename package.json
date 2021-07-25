@@ -30,7 +30,7 @@
     "build:gatsby": "gatsby build",
     "serve": "gatsby serve -o -p 8080",
     "clean": "gatsby clean",
-    "cy:run": "cypress run",
+    "test:e2e": "cypress run",
     "cy:open": "cypress open"
   },
   "dependencies": {
