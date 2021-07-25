@@ -20,10 +20,10 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Running Cypress Tests
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v2.9.7
         with:
           start: npm start
           browser: chrome
-          # wait-on: http://localhost:8000
+          wait-on: http://localhost:8000
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8000
           # spec: cypress/integration/tests/*
