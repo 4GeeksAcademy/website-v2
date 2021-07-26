@@ -18,3 +18,5 @@ yarn-error.log
 public
 .now
 .vercel
+cypress/videos
+cypress/screenshots

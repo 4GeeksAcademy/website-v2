@@ -10,8 +10,8 @@ import Icon from '../Icon';
 
 const LandingFooter = ({ yml }) => {
 
-  let session = window.localStorage.getItem('academy_session');
-  let socials = JSON.parse(session).location.socials
+  const {session} = React.useContext(SessionContext);
+  let socials = session && session.location ? session.location.socials : []
  
   return (
     <>

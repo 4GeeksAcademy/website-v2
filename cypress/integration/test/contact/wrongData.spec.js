@@ -1,6 +1,7 @@
 context("Test Contact page with wrong data", () => {
-  it('Visit the Contact page with path "/us/apply"', () => {
-    cy.visit("/contact").wait(500);
+
+  it('Visit the Contact page with path "/us/contact"', () => {
+    cy.visit("/us/contact").wait(500);
     cy.location().should((location) => {
       expect(location.pathname).to.eq("/us/contact");
     });
@@ -14,14 +15,10 @@ context("Test Contact page with wrong data", () => {
       cy.get("[data-cy=first_name]")
         .clear()
         .type(firstName)
-      //   .should("have.css", "background-color", "rgb(255, 205, 201)");
-      // cy.get("span").contains("Please specify a valid first name");
 
       cy.get("[data-cy=last_name]")
         .clear()
         .type(lastName)
-      //   .should("have.css", "background-color", "rgb(255, 205, 201)");
-      // cy.get("span").contains("Please specify a valid last name");
 
       cy.get("[data-cy=email]")
         .clear()

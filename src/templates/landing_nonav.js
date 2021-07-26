@@ -96,13 +96,10 @@ const Landing = (props) => {
         <GridContainer
           padding="0"
           containerGridGap="0"
-          // display_md="flex" 
           containerColumns_tablet="repeat(1,0fr)"
-          // padding="72px 0 0 0" 
-          padding_tablet="0 0 40px 0"
+          padding="70px 0 40px 0" 
+          padding_tablet="70px 0 40px 0"
           columns_tablet="2"
-          // padding_tabletChild="0 0 35px 0"
-          // display="none"
         >
 
           <Div
@@ -221,7 +218,7 @@ const Landing = (props) => {
       }
 
       <GridContainerWithImage background={Colors.verylightGray} imageSide={applySchollarship?.imageSide} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
-        <Div flexDirection="column" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
+        <Div flexDirection="column" margin="0" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
         gridArea_tablet={applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
         >
@@ -263,11 +260,11 @@ const Landing = (props) => {
             applySchollarship?.imageSide === "right" ? (
               <>
                 {/* <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/> */}
-                <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "280px", height: "446px", bottom: "-10px", right: "-16px", borderRadius: "3px"}}/>
+                <Div display="none" display_md="flex" style={{position: "absolute", background: Colors.yellow, width: "280px", height: "446px", bottom: "-10px", right: "-16px", borderRadius: "3px"}}/>
               </>
             ) : (
                 <>
-                  <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "30px", borderRadius: "3px"}}/>
+                  <Div display="none" display_md="flex" style={{position: "absolute", background: Colors.lightBlue, width: "101%", height: "282px", top: "40px", left: "-30px", borderRadius: "3px"}}/>
                 </>
             )
           }
@@ -275,7 +272,9 @@ const Landing = (props) => {
             height={`100%`}
             // width={`85%`}
             borderRadius={`3px`}
-            image={applySchollarship?.image.childImageSharp.gatsbyImageData}
+            image={applySchollarship 
+              ? applySchollarship?.image.childImageSharp.gatsbyImageData 
+              : data.allPageYaml.edges[0].node.list[0].image.childImageSharp.gatsbyImageData}
             bgSize={`contain`}
             alt="geekforce image"
           />
@@ -287,6 +286,24 @@ const Landing = (props) => {
 };
 export const query = graphql`
   query LandingNonavQuery($file_name: String!, $lang: String!, $utm_course: String!) {
+    allPageYaml(filter: { fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang }}}) {
+      edges {
+        node {
+          list {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  width: 800
+                  placeholder: NONE
+                  quality: 100
+                )
+              }
+            }
+          }
+        }
+      }
+    }
     allLandingYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
@@ -683,6 +700,7 @@ export const query = graphql`
 `;
 
 export default BaseRender(Landing, {
-  navbar: false,
-  landingLayout: true,
+  // navbar: false,
+  landingFooter: true,
+  landingNavbar: true,
 });

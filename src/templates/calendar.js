@@ -130,9 +130,11 @@ const Calendar = (props) => {
         title={yml.header.title}
         background={Colors.veryLightBlue}
         position="relative"
-        height="240px"
-        margin="120px 0 0 0 "
-
+        height="auto"
+        // height_tablet="auto"
+        margin="95px 0 0 0"
+        padding_tablet="70px 0 0 0"
+        padding="70px 0 0 0"
       >
         <Circle color="yellow" width="17px" height="17px" top="30px" left="74px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
         <Circle color="black" width="17px" height="17px" top="122px" left="106px" zIndex="1" display="none" display_tablet="inline" />
