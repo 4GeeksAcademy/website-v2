@@ -15,14 +15,10 @@ context("Test Contact page with wrong data", () => {
       cy.get("[data-cy=first_name]")
         .clear()
         .type(firstName)
-      //   .should("have.css", "background-color", "rgb(255, 205, 201)");
-      // cy.get("span").contains("Please specify a valid first name");
 
       cy.get("[data-cy=last_name]")
         .clear()
         .type(lastName)
-      //   .should("have.css", "background-color", "rgb(255, 205, 201)");
-      // cy.get("span").contains("Please specify a valid last name");
 
       cy.get("[data-cy=email]")
         .clear()

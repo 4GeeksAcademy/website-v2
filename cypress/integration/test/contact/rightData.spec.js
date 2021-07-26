@@ -1,4 +1,3 @@
-
 context("Test Contact page with correct data", () => {
 
   it('Visit the Contact page with path "/us/contact"', () => {

@@ -31,7 +31,8 @@
     "serve": "gatsby serve -o -p 8080",
     "clean": "gatsby clean",
     "test:e2e": "cypress run",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:clean": "cypress cache clear"
   },
   "dependencies": {
     "14": "^3.1.6",
@@ -104,6 +105,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "colors": "^1.4.0",
     "cypress": "^8.0.0",
+    "cypress-terminal-report": "^3.2.2",
     "dotenv": "^8.2.0",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
