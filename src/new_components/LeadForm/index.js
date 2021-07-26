@@ -182,6 +182,7 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                                 </Div>
                                 ) : (
                                 <Input
+                                    data-cy={f}
                                     key={i}
                                     bgColor={inputBgColor || "#FFFFFF"}
                                     type={_field.type} className="form-control" placeholder={_field.place_holder}

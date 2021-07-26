@@ -42,7 +42,7 @@ context('Test Apply page with correct data', () => {
     });
   });
 
-  it('Should submit the form', () => {
+  it('Should request the api and submit the form', () => {
       cy.get('Button[type="submit"]')
         .contains('APPLY')
 
@@ -68,6 +68,12 @@ context('Test Apply page with correct data', () => {
         utm_language: 'us',
         utm_url: 'http://localhost:8080/us/apply',
       },
+    }).then((response) => {
+      // cy.log(...response)
+      expect(response.body).to.have.property('first_name', 'Tomas');
+      expect(response.body).to.have.property('course', 'software-engineering');
+      expect(response.body).to.have.property('email', 'mark@outlook.com');
+      expect(response.body).to.have.property('phone', '1234567890');
     });
     
   });
