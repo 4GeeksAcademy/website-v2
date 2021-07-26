@@ -21,8 +21,8 @@ jobs:
         # Install NPM dependencies, cache them correctly
         uses: cypress-io/github-action@v2.9.7
         with:
-          env: # Or as an environment variable
-            WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
+          # env: # Or as an environment variable
+          #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
           build: npm run build
           # build: npm start
           start: npm run serve
