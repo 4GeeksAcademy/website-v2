@@ -28,7 +28,7 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
         'Authorization': `Token ${process.env.WEBSITE_BC_API_TOKEN}`,
         'Academy': 4
       }
-    }) 
+    })
     if(res.status !== 200) fail(res.status + ': Unable to retreive academy API location Information: ', await res.json());
     else academyData = await res.json()
 
