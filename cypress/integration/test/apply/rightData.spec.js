@@ -46,8 +46,6 @@ context('Test Apply page with correct data', () => {
       cy.get('Button[type="submit"]')
         .contains('APPLY')
 
-    //   // maybe a better idea
-
     cy.request({
       url: `https://breathecode-cypress.herokuapp.com/v1/marketing/lead`,
       method: 'POST',

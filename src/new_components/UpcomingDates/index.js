@@ -45,8 +45,13 @@ const locations = {
 }
 const locationText = {
     us: "or",
-    es: "o"
+    es: "u"
 }
+let modality = {
+    full_time: "Full Stack Developer - Full Time",
+    part_time: "Full Stack Developer - Part Time"
+};
+
 const UpcomingDates = ({lang, location, message}) => {
     const dataQuery = useStaticQuery(graphql`
     {
@@ -98,6 +103,21 @@ const UpcomingDates = ({lang, location, message}) => {
         const getData = async () => {
             const cohorts = await getCohorts({ academy: location });
             console.log("cohorts upcoming", cohorts)
+            let syllabus = []
+            for(let i in cohorts) {
+              let name = cohorts[i].syllabus?.certificate?.name
+              name === "Full-Stack Software Developer FT" ? name = modality["full_time"] : name
+      
+              name === "Full-Stack Software Developer" ? name = modality["part_time"] : name      
+              // console.log("NAME:", name)
+              syllabus.push(name) 
+            }
+      
+            for(let zx in cohorts){
+              cohorts[zx].syllabus.certificate.name = syllabus[zx]
+              // console.log("COHORTS - modified", cohorts[zx].syllabus.certificate.name)
+            }
+            
             setData(oldData => ({
                 cohorts: {catalog: oldData.cohorts.catalog, all: cohorts, filtered: cohorts}
             }))
@@ -152,7 +172,7 @@ const UpcomingDates = ({lang, location, message}) => {
                         i < 4 &&
                         <Div key={i} flexDirection="column" flexDirection_tablet="row" style={{borderBottom: "1px solid black"}} padding="30px 0" justifyContent="between" >
                             <Div flexDirection_tablet="column" width_tablet="15%" alignItems="center" alignItems_tablet="start" margin="0 0 10px 0">
-                                <H4 textAlign="left" textTransform="uppercase" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">{dayjs(m.kickoff_date).format("MMMM")}</H4>
+                                <H4 textAlign="left" textTransform="uppercase" width="fit-content" margin="0 10px 0 0" fontWeight="700" lineHeight="22px">{dayjs(m.kickoff_date).locale(`${lang === "us" ? "en" : "es"}`).format("MMMM")}</H4>
                                 <Paragraph textAlign="left" fontWeight="700">{`
                                 ${lang === "us" ? dayjs(m.kickoff_date).locale("en").format("MM/DD") : dayjs(m.kickoff_date).locale("es").format("DD/MM")} 
                                 ${lang === "us" ? " to ": " al "} 
@@ -160,12 +180,12 @@ const UpcomingDates = ({lang, location, message}) => {
                                 `}
                                 </Paragraph>
                             </Div>
-                            <Div flexDirection="column" width_tablet="35%" margin="0 0 20px 0">
+                            <Div flexDirection="column" width_tablet="calc(35% - 15%)" margin="0 0 20px 0">
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.program_label}</H4>
                                 
                                 <Link to={info[lang][m.syllabus.certificate.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph></Link>
                             </Div>
-                            <Div flexDirection="column" display="none" display_tablet="flex" >
+                            <Div flexDirection="column" display="none" display_tablet="flex" minWidth="120px" >
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>
                                 <Div>
                                     <Link to={locations[lang][m.academy.slug] || ""}>
