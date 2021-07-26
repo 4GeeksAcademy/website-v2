@@ -1,10 +1,7 @@
 context("Test Apply page with wrong data", () => {
 
-  it('Visit the Apply page with path "/us/apply"', () => {
-    cy.visit("/us/apply").wait(3500);
-  });
-
   it("Call the form and fill with wrong values", () => {
+    cy.visit("/us/apply").wait(4000);
     // It gets data in fixtures folder to fill form
     cy.fixture("/apply/names.json").then((data) => {
       const { firstName, lastName } = data.robot;

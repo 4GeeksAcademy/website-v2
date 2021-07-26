@@ -1,10 +1,7 @@
 context('Test Apply page with correct data', () => {
 
-  it('Visit the Apply page with path "/us/apply"', () => {
-    cy.visit('/us/apply').wait(4000);
-  });
-
   it('Call the form and fill with right values', () => {
+    cy.visit('/us/apply').wait(4000);
     // It gets data in fixtures folder to fill form
     cy.fixture('/apply/names.json').then((data) => {
       const { firstName } = data.user;
@@ -45,7 +42,7 @@ context('Test Apply page with correct data', () => {
     });
   });
 
-  it('Should submit the form cy.visit', () => {
+  it('Should submit the form', () => {
       cy.get('Button[type="submit"]')
         .contains('APPLY')
 

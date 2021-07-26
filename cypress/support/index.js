@@ -15,16 +15,12 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-
+// const options = {
+//   // Log console output only
+//   collectTypes: ["cons:log", "cons:info", "cons:warn", "cons:error"],
+// };
+require('cypress-terminal-report/src/installLogsCollector')();
 Cypress.on('uncaught:exception', (err, runnable) => {
-  // returning false here prevents Cypress from
-  // failing the test
-  // Options for log collector
-  const options = {
-    // Log console output only
-    collectTypes: ["cons:log", "cons:info", "cons:warn", "cons:error"],
-  };
-  require('cypress-terminal-report/src/installLogsCollector')(options);
 
   return false
 })
