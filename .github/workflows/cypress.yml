@@ -25,6 +25,8 @@ jobs:
         # Install NPM dependencies, cache them correctly
         # and run all Cypress tests
         uses: cypress-io/github-action@v2.9.7
+        env: # Or as an environment variable
+          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
         with:
           build: npm run build
           # build: npm start
