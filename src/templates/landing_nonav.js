@@ -158,18 +158,27 @@ const Landing = (props) => {
                 {yml.header_data.sub_heading}
               </H2>
             }
-            {/* <Divider height={yml.features.marginTop} /> */}
-            {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) =>
-              <Paragraph key={i}
-                isActive
-                style={JSON.parse(yml.features.styles)}
-                margin="7px 0"
-                padding="0px 20px"
-                textShadow="0px 0px 4px black"
-                textAlign="left"
-                // maxWidth="300px"
-                color={Colors.white}>{'• '}{f}</Paragraph>
-            )}
+            {Array.isArray(yml.features.bullets) && 
+              yml.features.bullets.map((f, i) =>
+                <Paragraph key={i}
+                  isActive
+                  style={JSON.parse(yml.features.styles)}
+                  margin="7px 0"
+                  padding="0px 20px"
+                  textShadow="0px 0px 4px black"
+                  textAlign="left"
+                  color={Colors.white}>{'• '}{f}</Paragraph>
+              )}
+            {yml.features.text && 
+              <Paragraph
+                  isActive
+                  style={JSON.parse(yml.features.styles)}
+                  margin="7px 0"
+                  padding="0px 0px"
+                  textShadow="0px 0px 4px black"
+                  textAlign="left"
+                  color={Colors.white}>{yml.features.text}</Paragraph>
+            }
           </Div>
           <Div
             flexDirection="column"
@@ -341,6 +350,7 @@ export const query = graphql`
             }
             features{
               marginTop
+              text
               bullets
               styles
             }

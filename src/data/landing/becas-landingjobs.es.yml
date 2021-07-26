@@ -1,8 +1,8 @@
 meta_info:
-  slug: becas-partner # <--- URL 4geeksacademy.com/us/landing/example
+  slug: becas-landing_jobs # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Obtén tu beca!"
+  title: "¡Obtén tu beca!"
   description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy."
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
@@ -19,15 +19,15 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email", "programSelector"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email", "programSelector"]
-  heading: "Solicita una beca"
+  heading: "Solicita tu beca ya"
   button_label: Enviar
   redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Impulsa tu carrera profesional, Obtén tu beca!
+  tagline: Tu futuro está en tech
   sub_heading: ""
-  scholarship: "../../../static/images/partner/microsoft_white.png"
+  scholarship: "../../../static/images/partner/landing-jobs.png"
   image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
@@ -36,13 +36,17 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Hay más vacantes que en cualquier otra industria ¡Impulsa tu Carrera! y hazte programador de software
+  text: Landing Jobs ofrece más de 1.000.000€ en Becas para estudiar Desarrollo Web en 4Geeks. La beca mínima es de un 30% y se otorgarán en función del resultado del proceso de selección. Si quieres empezar tu carrera como programador junior o impulsarla y convertirte en un desarrollador senior, no dejes pasar esta oportunidad.
+  bullets:
+    - 300 becas en total, la mayoría superiores al 50% 
+    - Cursos Fullstack (iniciación) y Software Engineering (avanzado)
+    - Formato full-time y part-time
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita una beca de del 50%. \n Planes de pago de hasta 24 meses."
-    text_mobile: "Becas de 50% . \n Plan de pago de 24 m."
+    text: "Solicita tu beca Landing Jobs ya. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de Landing Jobs . \n Plan de pago de 24 m."
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
@@ -60,15 +64,15 @@ badges:
 
 about4Geeks:
   position: 2
-  heading: Sumate a nuestro Sistema de Becas
-  sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y BreatheCode (nuestra plataforma educacional)"
+  heading: Educación flexible e intensiva
+  sub_heading: "Más de 400 horas de aprendizaje práctico (ejercicios, proyectos). Mejoraras tus habilidades para poder afrontar procesos de selección y encontrar un trabajo como desarrollador junior o senior."
   list:
-    - title: "Apoyo Profesional para siempre"
-    - title: "Financiamos tu carrera"
-    - title: "Mentorias 1:1 ilimitadas"
-    - title: "Preparación para Entrevistas customizada"
+    - title: "Apoyo Profesional de por vida"
+    - title: "Opciones de financiación para complementar tu beca"
+    - title: "Ratio 1:5 profesor alumno. Mentorías 1:1 ilimitadas "
+    - title: "Preparación para entrevistas y procesos de selección"
   paragraph: ""
-  button_text: "Postula a una beca"
+  button_text: "Aplica a una beca"
   button_link: "/es/aplica"
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
@@ -76,19 +80,19 @@ about4Geeks:
 iconogram:
   position: 3
   icons:
-  - icon: "touch" 
-    title: Aplica a la beca
+  - icon: "touch"
+    title: Solicita tu beca antes del 30 de septiembre
   - icon: "receive_mail"
-    title: Obten un correo electrónico con la información
+    title: Recibirás un correo electrónico con toda la información y un test de lógica
   - icon: "talk"
-    title: Haz una entrevista con nuestro equipo
+    title: Haz una entrevista online con nuestro equipo de admisiones
   - icon: "terminal"
-    title: Aprende a programar con nosotros
+    title: Recibe los resultados, reserva tu plaza y empieza a PROGRAMAr
 
 who_is_hiring:
   position: 4
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
-  sub_heading: "Gracias a nuestra creciente red de Aliados podemos contar con ofertas constantes a nivel nacional e internacional"
+  sub_heading: "Consigue un trabajo en menos de 3 meses gracias a nuestra creciente red de más de 500 empresas tecnológicas. Accede a ofertas nacionales e internacionales y a una comunidad de más de 2000 graduados"
   featured:
     - name: "Facebook"
       image: "../../../static/images/partner/facebook.png"
@@ -100,7 +104,7 @@ who_is_hiring:
 choose_your_program:
   position: 5
   title: Nuestros Programas
-  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
+  paragraph: Programas en formato full-time o part-time con clases en vivo dictadas por expertos
   programs:
   - title: "Full Stack Developer"
     sub_title: "Nivel 1"
@@ -108,7 +112,11 @@ choose_your_program:
     description: |
       Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
       
-      Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+      Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado.
+
+
+      Disponible en modalidad part time y full time. 
+      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf>"programa de estudios"</a>.
     
     text_link: Aplica a una beca
     link: "/es/coding-bootcamps/full-stack-part-time"
@@ -117,10 +125,14 @@ choose_your_program:
     sub_title: "Nivel 2"
     icon: "software"
     description: |
-      Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
+      Profundiza a un nivel avanzado en principios específicos de computación y algoritmia. Desarrolla más habilidades adentrándote en el mundo de las aplicaciones altamente escalables, nativas y distribuidas en la nube.
+
+      ¡Lleva tu carrera al siguiente nivel!, crea tecnlogía con un impacto real en el mundo (quizás el próximo unicornio), trabaja en empresas Fortune 500 y mejora tu salario. 
       
-      Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
-      Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+      Disponible sólo en modalidad part-time.
+      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf>"programa de estudios"</a>.
+
+      
     
     text_link: Aplica a una beca
     link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
@@ -147,11 +159,11 @@ components:
     # video: "B01-eTfgqqc"
     heading:
       text:
-        "Phyton y Javascript"
+        "Python, Java y Javascript"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
+      text: "Nuestros programa están basado en el uso de Phyton, Java y Javascript. ¿La razón? Java es el lenguaje más utilizado del mundo (por mucho). En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. 
       
-      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+      Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, Redux, Amazon Web Services, etc."
       font_size: ["16px"]

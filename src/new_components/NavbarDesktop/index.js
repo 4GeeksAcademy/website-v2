@@ -189,9 +189,9 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                 </Menu>
                 }
                 <Div alignItems="center" justifyContent="between">
-                    <Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
+                    {!emptyNavbar &&<Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
                         <Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph>
-                    </Link>
+                    </Link>}
                     <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" width="fit-content" color={Colors.black} textColor={Colors.white}>{buttonText || button.apply_button_text}</Button></Link>
                 </Div>
             </Nav>
