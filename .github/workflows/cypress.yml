@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Set env
-        run: echo "echo "WEBSITE_BC_API_TOKEN=${{ secrets.WEBSITE_BC_API_TOKEN }}" >> $GITHUB_ENV
+        run: echo "WEBSITE_BC_API_TOKEN=${{ secrets.WEBSITE_BC_API_TOKEN }}" >> $GITHUB_ENV
       # - name: Setup npm package
       #   run: npm install
       # - name: Run Server
