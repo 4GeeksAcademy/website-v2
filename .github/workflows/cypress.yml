@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Set env
+        run: echo "echo "WEBSITE_BC_API_TOKEN=${{ secrets.WEBSITE_BC_API_TOKEN }}" >> $GITHUB_ENV
       # - name: Setup npm package
       #   run: npm install
       # - name: Run Server
@@ -25,13 +27,11 @@ jobs:
         # Install NPM dependencies, cache them correctly
         # and run all Cypress tests
         uses: cypress-io/github-action@v2.9.7
+        # env: # Or as an environment variable
+        #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
         with:
           build: npm run build
-          # build: npm start
           start: npm run serve
-          # start: npm run test:e2e
           browser: electron
-          # wait-on: http://localhost:8000
           wait-on-timeout: 1000
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
-          # spec: cypress/integration/tests/*
