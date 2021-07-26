@@ -34,7 +34,28 @@ context("Test Contact page with correct data", () => {
   });
 
   it("Submit the form with correct values", () => {
-    cy.get('Button[type="submit"]').contains("Send").click().wait(4500)
-    cy.get("[data-cy=thankfulness]").contains("Thank you 🤣 Gracias").log("success");
+    cy.get('Button[type="submit"]').contains("Send").wait(2500)
+    // cy.get("[data-cy=thankfulness]").contains("Thank you 🤣 Gracias");
+    cy.request({
+      url: `https://breathecode-cypress.herokuapp.com/v1/marketing/lead`,
+      method: 'POST',
+      body: {
+        automations: "soft",
+        browser_lang: null,
+        city: "Miami",
+        client_comments: "Im Rowan Dash",
+        country: "USA",
+        email: "rodash@outlook.com",
+        first_name: "Rowan",
+        language: "us",
+        last_name: "Dash",
+        latitude: null,
+        location: "downtown-miami",
+        longitude: null,
+        tags: "contact-us",
+        utm_language: "us",
+        utm_url: "http://localhost:8080/us/contact",
+      }
+    });
   });
 });
