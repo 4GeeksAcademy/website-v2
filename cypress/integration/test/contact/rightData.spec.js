@@ -34,7 +34,7 @@ context("Test Contact page with correct data", () => {
   });
 
   it("Submit the form with correct values", () => {
-    cy.get('Button[type="submit"]').contains("Send").click().wait(1500)
+    cy.get('Button[type="submit"]').contains("Send").click().wait(4500)
     cy.get("[data-cy=thankfulness]").contains("Thank you 🤣 Gracias").log("success");
   });
 });
