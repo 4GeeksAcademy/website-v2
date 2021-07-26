@@ -17,11 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: set env variable
-        with:
-          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
-        env: # Or as an environment variable
-          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
       # - name: Setup npm package
       #   run: npm install
       # - name: Run Server
@@ -30,6 +25,9 @@ jobs:
         # Install NPM dependencies, cache them correctly
         uses: cypress-io/github-action@v2.9.7
         with:
+          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
+          env: # Or as an environment variable
+            WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
           build: npm run build
           start: npm run serve
           browser: electron
