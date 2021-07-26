@@ -21,6 +21,7 @@ jobs:
         # Install NPM dependencies, cache them correctly
         uses: cypress-io/github-action@v2.9.7
         with:
+          config: pageLoadTimeout=100000,baseUrl=http://localhost:8080,WEBSITE_BC_API_TOKEN=${{ secrets.WEBSITE_BC_API_TOKEN }}
           # env: # Or as an environment variable
           #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
           build: npm run build
@@ -30,5 +31,4 @@ jobs:
           browser: electron
           # wait-on: http://localhost:8000
           wait-on-timeout: 1000
-          config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
           # spec: cypress/integration/tests/*
