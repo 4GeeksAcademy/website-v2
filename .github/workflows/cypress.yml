@@ -17,15 +17,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Set env
-        run: echo "WEBSITE_BC_API_TOKEN=${{ secrets.WEBSITE_BC_API_TOKEN }}" >> $GITHUB_ENV
+      - shell: bash
+        env:
+          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
+        run: |
+          example-command "$WEBSITE_BC_API_TOKEN"
       # - name: Setup npm package
       #   run: npm install
       # - name: Run Server
       #   run: npm run start:gatsby
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
-        # and run all Cypress tests
         uses: cypress-io/github-action@v2.9.7
         # env: # Or as an environment variable
         #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
