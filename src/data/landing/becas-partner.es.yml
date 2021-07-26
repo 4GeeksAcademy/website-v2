@@ -78,7 +78,7 @@ about4Geeks:
 iconogram:
   position: 3
   icons:
-  - icon: "touch"
+  - icon: "touch" 
     title: Aplica a la beca
   - icon: "receive_mail"
     title: Obten un correo electrónico con la información
