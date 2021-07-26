@@ -17,15 +17,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # - name: Setup npm package
-      #   run: npm install
-      # - name: Run Server
-      #   run: npm run start:gatsby
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
         uses: cypress-io/github-action@v2.9.7
         with:
-          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
+          # WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
           env: # Or as an environment variable
             WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
           build: npm run build
