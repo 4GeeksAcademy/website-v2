@@ -11,6 +11,8 @@ jobs:
   cypress-test:
     name: Test with Server
     runs-on: ubuntu-latest
+    env:
+      WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
     # strategy:
     #   matrix:
     #     node-version: [14.x]
@@ -31,6 +33,6 @@ jobs:
           # wait-on: http://localhost:8000
           wait-on-timeout: 1000
           # spec: cypress/integration/tests/*
-          env:
-            WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
+          # env:
+          #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
