@@ -35,7 +35,6 @@
     "cy:clean": "cypress cache clear"
   },
   "dependencies": {
-    "14": "^3.1.6",
     "@loadable/component": "^5.13.2",
     "browser-monads": "^1.0.0",
     "dayjs": "^1.8.29",
