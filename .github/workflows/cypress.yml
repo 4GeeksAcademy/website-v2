@@ -9,7 +9,7 @@ on:
 
 jobs:
   cypress-test:
-    name: Cypress Tests with Server
+    name: Test with Server
     runs-on: ubuntu-latest
     # strategy:
     #   matrix:
