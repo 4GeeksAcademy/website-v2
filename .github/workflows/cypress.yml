@@ -10,15 +10,13 @@ jobs:
   cypress-test:
     name: Test with Server
     runs-on: ubuntu-latest
+    environment: test-secret
     # strategy:
     #   matrix:
     #     node-version: [14.x]
     env: # environment variable
-      WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
+      WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN_CSAV}}
     steps:
-      # - name: "test env"
-
-
       - name: Checkout
         uses: actions/checkout@v2
       - name: Running Tests
