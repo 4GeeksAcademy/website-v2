@@ -6,7 +6,6 @@ on:
   pull_request_target:
     branches: 
       - development
-
 jobs:
   cypress-test:
     name: Test with Server
