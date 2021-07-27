@@ -13,7 +13,7 @@ jobs:
     # strategy:
     #   matrix:
     #     node-version: [14.x]
-    environment: # environment variable
+    env: # environment variable
       WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
     steps:
       # - name: "test env"
