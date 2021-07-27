@@ -11,13 +11,15 @@ jobs:
   cypress-test:
     name: Test with Server
     runs-on: ubuntu-latest
-    environment: WEBSITE_BC_API_TOKEN
-    # env: # environment variable
-    #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN_CSAV}}
+    environment: Production
     # strategy:
     #   matrix:
     #     node-version: [14.x]
     steps:
+      - name: "test env"
+        env: # environment variable
+          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN_CSAV}}
+        run: echo "${WEBSITE_BC_API_TOKEN}"
       # - name: Dump steps context
       #   env:
       #     WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
