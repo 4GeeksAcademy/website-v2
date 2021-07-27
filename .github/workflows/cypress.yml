@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Dump steps context
         env:
-          WEBSITE_BC_API_TOKEN: ${{ toJson(WEBSITE_BC_API_TOKEN) }}
+          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
         run: echo "$WEBSITE_BC_API_TOKEN"
       - name: Checkout
         uses: actions/checkout@v2
