@@ -9,9 +9,10 @@ on:
 jobs:
   cypress-test:
     name: Test with Server
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env: # environment variable
       WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
+      TEST: secret123
     # strategy:
     #   matrix:
     #     node-version: [14.x]
