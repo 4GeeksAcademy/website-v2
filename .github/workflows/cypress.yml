@@ -11,20 +11,14 @@ jobs:
   cypress-test:
     name: Test with Server
     runs-on: ubuntu-latest
-    # environment: Production
     # strategy:
     #   matrix:
     #     node-version: [14.x]
     steps:
       - name: "test env"
-        uses: secrethub/actions/env-export@v0.2.1
         env: # environment variable
-          WEBSITE_BC_API_TOKEN: ${{ secrets.GATSBY_BREATHECODE_TEST}}
-        # run: echo "$WEBSITE_BC_API_TOKEN"
-      # - name: Dump steps context
-      #   env:
-      #     WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
-        # run: echo "$WEBSITE_BC_API_TOKEN"
+          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN_CSAV}}
+
       - name: Checkout
         uses: actions/checkout@v2
       - name: Running Tests
@@ -36,5 +30,5 @@ jobs:
           browser: electron
           # wait-on: http://localhost:8000
           wait-on-timeout: 1000
-          config: pageLoadTimeout=100000,baseUrl=http://localhost:8080,WEBSITE_BC_API_TOKEN=${{ secrets.GATSBY_BREATHECODE_TEST}}
+          config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
           # spec: cypress/integration/tests/*
