@@ -14,8 +14,6 @@ jobs:
     # strategy:
     #   matrix:
     #     node-version: [14.x]
-    env: # environment variable
-      WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN_CSAV}}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -30,3 +28,5 @@ jobs:
           wait-on-timeout: 1000
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
           # spec: cypress/integration/tests/*
+        env: # environment variable
+          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN_CSAV}}
