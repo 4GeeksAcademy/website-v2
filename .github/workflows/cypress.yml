@@ -10,22 +10,24 @@ jobs:
   cypress-test:
     name: Test with Server
     runs-on: ubuntu-latest
+    env: # environment variable
+      WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
     # strategy:
     #   matrix:
     #     node-version: [14.x]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Running Tests
-        # Install NPM dependencies, cache them correctly
-        uses: cypress-io/github-action@v2.9.7
-        with:
-          build: npm run build
-          start: npm run serve
-          browser: electron
-          # wait-on: http://localhost:8000
-          wait-on-timeout: 1000
-          config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
-          # spec: cypress/integration/tests/*
-        env: # environment variable
-          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
+    # steps:
+    #   - name: Checkout
+    #     uses: actions/checkout@v2
+    #   - name: Running Tests
+    #     # Install NPM dependencies, cache them correctly
+    #     uses: cypress-io/github-action@v2.9.7
+    #     with:
+    #       build: npm run build
+    #       start: npm run serve
+    #       browser: electron
+    #       # wait-on: http://localhost:8000
+    #       wait-on-timeout: 1000
+    #       config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
+    #       # spec: cypress/integration/tests/*
+    #     env: # environment variable
+    #       WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
