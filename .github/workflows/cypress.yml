@@ -1,8 +1,8 @@
 name: Cypress Test
 on:
-  # push:
-  #   branches:
-  #     - development
+  push:
+    branches:
+      - development
   pull_request:
     branches: 
       - development
@@ -13,7 +13,7 @@ jobs:
     # strategy:
     #   matrix:
     #     node-version: [14.x]
-    env: # environment variable
+    environment: # environment variable
       WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
     steps:
       # - name: "test env"
@@ -21,8 +21,6 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
         uses: cypress-io/github-action@v2.9.7
