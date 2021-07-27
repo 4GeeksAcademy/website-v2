@@ -17,6 +17,7 @@ jobs:
     #     node-version: [14.x]
     steps:
       - name: "test env"
+        uses: secrethub/actions/env-export@v0.2.1
         env: # environment variable
           WEBSITE_BC_API_TOKEN: ${{ secrets.GATSBY_BREATHECODE_TEST}}
         run: echo "$WEBSITE_BC_API_TOKEN"
