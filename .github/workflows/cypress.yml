@@ -10,7 +10,6 @@ jobs:
   cypress-test:
     name: Test with Server
     runs-on: ubuntu-latest
-    environment: test-secret
     # strategy:
     #   matrix:
     #     node-version: [14.x]
@@ -29,4 +28,4 @@ jobs:
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
           # spec: cypress/integration/tests/*
         env: # environment variable
-          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN_CSAV}}
+          WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
