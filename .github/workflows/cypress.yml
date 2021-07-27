@@ -15,9 +15,9 @@ jobs:
     # strategy:
     #   matrix:
     #     node-version: [14.x]
-    # steps:
-    #   - name: Checkout
-    #     uses: actions/checkout@v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
     #   - name: Running Tests
     #     # Install NPM dependencies, cache them correctly
     #     uses: cypress-io/github-action@v2.9.7
