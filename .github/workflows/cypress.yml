@@ -12,7 +12,7 @@ jobs:
     name: Test with Server
     runs-on: ubuntu-latest
     env: # environment variable
-      WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
+      WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN_CSAV}}
     # strategy:
     #   matrix:
     #     node-version: [14.x]
