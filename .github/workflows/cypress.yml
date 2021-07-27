@@ -1,9 +1,9 @@
 name: Cypress Test
 on:
-  push:
-    branches:
-      - development
-  pull_request:
+  # push:
+  #   branches:
+  #     - development
+  pull_request_target:
     branches: 
       - development
 
