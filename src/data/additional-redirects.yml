@@ -10,16 +10,32 @@
 # 3. If none of your redirects apply to entities or pages you can put them here:
 
 redirects:
-  - fromPath: "/landing/weekend-program-santiago/"
+  - 
+    fromPath: "/landing/weekend-program-santiago/"
+    isPermanent: true # if permanent google will erase the original url from its results
     toPath: "/"
     #redirectInBrowser: true
+  - 
+    fromPath: "/us/blog/shoul-i-learn-code"
     isPermanent: true # if permanent google will erase the original url from its results
-  - fromPath: "/us/blog/shoul-i-learn-code"
     toPath: "/us/blog/should-i-learn-code"
     #redirectInBrowser: true
+  - 
+    fromPath: "/us/post/webdevelopmentversuswebdesign"
     isPermanent: true # if permanent google will erase the original url from its results
-  - fromPath: "/us/post/webdevelopmentversuswebdesign"
     toPath: "/us/learn-to-code/web-development-versus-web-design"
     #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results
     
+# redirects:
+#   - fromPath: "/landing/weekend-program-santiago/"
+#     toPath: "/"
+#     #redirectInBrowser: true
+#     isPermanent: true # if permanent google will erase the original url from its results
+#   - fromPath: "/us/blog/shoul-i-learn-code"
+#     toPath: "/us/blog/should-i-learn-code"
+#     #redirectInBrowser: true
+#     isPermanent: true # if permanent google will erase the original url from its results
+#   - fromPath: "/us/post/webdevelopmentversuswebdesign"
+#     toPath: "/us/learn-to-code/web-development-versus-web-design"
+#     #redirectInBrowser: true
+#     isPermanent: true # if permanent google will erase the original url from its results
