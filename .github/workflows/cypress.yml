@@ -11,28 +11,26 @@ jobs:
   cypress-test:
     name: Test with Server
     runs-on: ubuntu-latest
-    env:
-      WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
+    # env: # environment variable
+    #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
     # strategy:
     #   matrix:
     #     node-version: [14.x]
     steps:
+      - name: Dump steps context
+        env:
+          WEBSITE_BC_API_TOKEN: ${{ toJson(WEBSITE_BC_API_TOKEN) }}
+        run: echo "$WEBSITE_BC_API_TOKEN"
       - name: Checkout
         uses: actions/checkout@v2
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
         uses: cypress-io/github-action@v2.9.7
         with:
-          # env: # Or as an environment variable
-          #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
           build: npm run build
-          # build: npm start
           start: npm run serve
-          # start: npm run test:e2e
           browser: electron
           # wait-on: http://localhost:8000
           wait-on-timeout: 1000
-          # spec: cypress/integration/tests/*
-          # env:
-          #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
+          # spec: cypress/integration/tests/*
