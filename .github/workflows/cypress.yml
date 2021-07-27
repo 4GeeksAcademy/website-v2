@@ -19,7 +19,7 @@ jobs:
       - name: "test env"
         env: # environment variable
           WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN_CSAV}}
-        run: echo "${WEBSITE_BC_API_TOKEN}"
+        run: echo "$WEBSITE_BC_API_TOKEN"
       # - name: Dump steps context
       #   env:
       #     WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN }}
