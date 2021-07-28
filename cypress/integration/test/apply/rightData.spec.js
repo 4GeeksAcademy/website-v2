@@ -1,74 +1,64 @@
-context('Test Apply page with correct data', () => {
+context("Test Contact page with correct data", () => {
 
-  it('Call the form and fill with right values', () => {
-    cy.visit('/us/apply').wait(4000);
-    // It gets data in fixtures folder to fill form
-    cy.fixture('/apply/names.json').then((data) => {
-      const { firstName } = data.user;
+  it('Visit the Contact page with path "/us/contact"', () => {
+    cy.visit("/us/contact").wait(500);
+  });
 
-      cy.get('[data-cy=first_name]')
-        .click()
-        .wait(200)
-        .should('have.css', 'border-color', 'rgb(0, 0, 0)') // focus the form
-        .type(firstName);
-    });
+  it("Call the form and fill with right values", () => {
+    cy.fixture("/contact/right.json").each((right) => {
+      const { firstName, lastName, email, comment } = right;
 
-    cy.get('[data-cy=dropdown_program_selector]')
-      .click()
-      .wait(1200); // Gets Drowpdown of Courses
-    cy.get('#react-select-2-option-1').click(); // Selects Level 1 with position 0
-
-    cy.get('[data-cy=dropdown_academy_selector]')
-      .click()
-      .wait(1200);
-    cy.get('#react-select-3-option-0').click();
-
-    cy.fixture('/apply/form_values/right.json').each((right) => {
-      cy.get('[data-cy=email]')
-        .click()
-        .wait(200)
-        .should('have.css', 'border-color', 'rgb(0, 0, 0)')
-        .wait(200)
+      cy.get("[data-cy=first_name]")
         .clear()
-        .type(right.email);
+        .type(firstName)
+        .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
 
-      cy.get('[data-cy=phone]')
-        .click()
-        .wait(200)
-        .should('have.css', 'border-color', 'rgb(0, 0, 0)')
-        .wait(500)
+      cy.get("[data-cy=last_name]")
         .clear()
-        .type(right.phone);
+        .type(lastName)
+        .should("have.css", "border-color", "rgb(0, 0, 0)");
+
+      cy.get("[data-cy=email]")
+        .clear()
+        .type(email)
+        .should("have.css", "border-color", "rgb(0, 0, 0)");
+
+      cy.get("[data-cy=comment]")
+        .clear()
+        .type(comment)
+        .should("have.css", "border-color", "rgb(0, 0, 0)");
     });
   });
 
-  it('Should submit the form', () => {
-      cy.get('Button[type="submit"]')
-        .contains('APPLY')
-
+  it("Submit and request to api", () => {
+    cy.get('Button[type="submit"]').contains("Send")
+    // cy.get("[data-cy=thankfulness]").contains("Thank you 🤣 Gracias");
     cy.request({
       url: `https://breathecode-cypress.herokuapp.com/v1/marketing/lead`,
       method: 'POST',
       body: {
-        automations: 'strong',
+        automations: "soft",
         browser_lang: null,
-        city: 'Miami',
-        consent: true,
-        country: 'USA',
-        course: 'software-engineering',
-        email: 'mark@outlook.com',
-        first_name: 'Tomas',
-        language: 'us',
+        city: "Miami",
+        client_comments: "Im Rowan Dash",
+        country: "USA",
+        email: "rodash@outlook.com",
+        first_name: "Rowan",
+        language: "us",
+        last_name: "Dash",
         latitude: null,
-        location: 'downtown-miami',
+        location: "downtown-miami",
         longitude: null,
-        phone: '1234567890',
-        referral_key: '',
-        tags: 'website-lead',
-        utm_language: 'us',
-        utm_url: 'http://localhost:8080/us/apply',
-      },
+        tags: "contact-us",
+        utm_language: "us",
+        utm_url: "http://localhost:8080/us/contact",
+      }
+    }).then((response) => {
+      // cy.log(...response)
+      expect(response.body).to.have.property('first_name', 'Rowan');
+      expect(response.body).to.have.property('last_name', 'Dash');
+      expect(response.body).to.have.property('email', 'rodash@outlook.com');
+      expect(response.body).to.have.property('city', 'Miami');
     });
-    
   });
 });
