@@ -14,6 +14,7 @@ import {Button, Colors, Small, Img, StyledBackgroundSection} from '../new_compon
 import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Icon from '../new_components/Icon'
 
 const MapFrame = lazy(() => import('../new_components/MapFrame'));
 
@@ -70,7 +71,20 @@ const Location = ({data, pageContext, yml}) => {
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
         <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
         <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
-        {yml.info_box.whatsapp && <Paragraph textAlign_tablet="left" >Whatsapp: {yml.info_box.whatsapp} </Paragraph>}
+        {yml.info_box.whatsapp && <Paragraph textAlign_tablet="left" display="flex" alignItems="center" >
+          { yml.info_box.whatsapp_link ? (
+            <>
+              <Div width="22px" height="22px" alignItems="center" margin="0 8px 0 0">
+                <Icon icon="whatsapp"/>
+              </Div>
+              Whatsapp:
+              <a href={yml.info_box.whatsapp_link} target="_blank" rel="noopener noreferrer nofollow">
+                {yml.info_box.whatsapp}
+              </a>
+            </>
+          ) : `Whatsapp: ${yml.info_box.whatsapp}`
+          }
+          </Paragraph>}
         <Paragraph textAlign_tablet="left" margin="0 0 30px 0">{yml.info_box.email} </Paragraph>
         {/* <Button goTo={goToChooseProgram} color={Colors.blue}>{yml.button_header.button_text}</Button> */}
         <ChooseProgram
@@ -240,6 +254,7 @@ export const query = graphql`
               email
               contact_heading
               whatsapp
+              whatsapp_link
               image {
                   childImageSharp {
                     gatsbyImageData(

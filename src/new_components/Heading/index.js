@@ -180,6 +180,7 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   align-self: ${props => props.alignSelf};
+  align-items: ${props => props.alignItems};
   height: ${props => props.height};
   z-index: ${props => props.zIndex};
   border-left: ${props => props.borderLeft};
