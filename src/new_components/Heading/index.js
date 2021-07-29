@@ -199,7 +199,7 @@ export const Paragraph = styled.p`
   }
   @media  ${Devices.tablet}{
       display: ${props => props.display_tablet};
-      justify-content: ${props => props.justifyContent};
+      justify-content: ${props => props.justifyContent_tablet};
       width: ${props => props.width_tablet};
       font-size: ${props => props.fontSize_tablet};
       text-align: ${props => props.textAlign_tablet};
