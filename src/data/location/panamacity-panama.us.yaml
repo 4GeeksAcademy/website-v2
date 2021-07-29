@@ -13,7 +13,7 @@ seo_title: "Coding Bootcamp Panama"
 header:
   tagline: "4Geeks Academy in Panama"
   paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Panama with over 1,000 graduates"
-  image: "../../../static/images/locations/online-home.png"
+  image: "../../../static/images/locations/panama-header.png"
   alt: ""
 button_header:
   button_text: See Programs
