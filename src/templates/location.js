@@ -71,7 +71,7 @@ const Location = ({data, pageContext, yml}) => {
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
         <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
         <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
-        {yml.info_box.whatsapp && <Paragraph justifyContent="center" textAlign_tablet="left" display="flex" alignItems="center" >
+        {yml.info_box.whatsapp && <Paragraph justifyContent="center" justifyContent_tablet="start" textAlign_tablet="left" display="flex" alignItems="center" >
           { yml.info_box.whatsapp_link ? (
             <>
               <Div width="22px" height="22px" alignItems="center" margin="0 8px 0 0">
