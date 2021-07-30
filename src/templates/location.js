@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext, useRef, Suspense, lazy} from 'react';
+import React, {useState, useEffect, useRef, Suspense, lazy} from 'react';
 import ChooseProgram from '../new_components/ChooseProgram'
 import Badges from '../new_components/Badges'
 import Loc from '../new_components/Loc'
@@ -6,11 +6,10 @@ import OurPartners from '../new_components/OurPartners'
 import ChooseYourProgram from '../new_components/ChooseYourProgram'
 import UpcomingDates from '../new_components/UpcomingDates'
 import Staff from '../new_components/Staff';
-import dayjs from "dayjs"
 import 'dayjs/locale/de'
-import {Div, Row, Column, Wrapper, Container, GridContainerWithImage, Grid, GridContainer} from '../new_components/Sections'
-import {Title, H1, H2, H4, H3, Span, Paragraph, Separator} from '../new_components/Heading'
-import {Button, Colors, Small, Img, StyledBackgroundSection} from '../new_components/Styling'
+import {Div, GridContainerWithImage, GridContainer} from '../new_components/Sections'
+import {H1, H2, Paragraph} from '../new_components/Heading'
+import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -20,7 +19,6 @@ const MapFrame = lazy(() => import('../new_components/MapFrame'));
 
 const Location = ({data, pageContext, yml}) => {
   const {lang} = pageContext;
-  const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
   const images = data.allLocationYaml.edges[0].node;
   const [cohorts, setCohorts] = React.useState([]);
@@ -34,19 +32,10 @@ const Location = ({data, pageContext, yml}) => {
     })
     // setTimeout(() => { setReady(true) }, 3000)
   }, [])
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
   const chooseProgramRef = useRef(null)
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   useEffect(() => {
     const loadCohorts = async () => {
-      // https://breathecode.herokuapp.com/v1
       const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=online,${yml.breathecode_location_slug}`)
       const data = await resp.json();
       setCohorts(data.slice(0, 3))
@@ -62,10 +51,7 @@ const Location = ({data, pageContext, yml}) => {
     })
   }
   return (<>
-    {/* github={`/location`} */}
-    {/* <Container variant="fluid" margin="28px 0" padding_md="72px 0 90px 171px"> */}
-    {/* <Grid height="375px" height_md="219px" columns="2" rows="2" columns_md="12" rows_md="1" background={Colors.verylightGray}> */}
-    <GridContainerWithImage padding="24px 17px " padding_tablet="54px 0" columns_tablet="14" margin="67px 0" margin_tablet="100px 0 0 0">
+    <GridContainerWithImage padding="75px 0 0 0" padding_tablet="0 0 20px 0" columns_tablet="14" margin="70px 0 0 0" margin_tablet="100px 0 0 0">
       <Div flexDirection="column" alignItems="center" alignItems_tablet="start" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
         <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
@@ -86,15 +72,12 @@ const Location = ({data, pageContext, yml}) => {
           }
           </Paragraph>}
         <Paragraph textAlign_tablet="left" margin="0 0 30px 0">{yml.info_box.email} </Paragraph>
-        {/* <Button goTo={goToChooseProgram} color={Colors.blue}>{yml.button_header.button_text}</Button> */}
         <ChooseProgram
           goTo={goToChooseProgram}
           right="15px"
           top="40px"
-          // margin="40px 0"
           textAlign="center"
           textAlign_tablet="left"
-          // programs={data.allChooseProgramYaml.edges[0].node.programs}
           openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
           closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
         />
@@ -111,7 +94,7 @@ const Location = ({data, pageContext, yml}) => {
       </Div>
     </GridContainerWithImage>
 
-    <Badges lang={pageContext.lang} background={Colors.lightGray} paragraph={yml.badges.paragraph} margin="0 0 57px 0" padding="27px 17px 50px 17px" padding_tablet="80px 0 100px 0" />
+    <Badges lang={pageContext.lang} background={Colors.verylightGray} paragraph={yml.badges.paragraph} margin="0 0 57px 0" padding="27px 17px 50px 17px" padding_tablet="80px 0 100px 0" />
     <GridContainer columns_tablet="12" padding_tablet="60px 0 77px 0" padding="40px 17px">
       <Div gridColumn_tablet="1 / 4" ><H2 textAlign="left">{images.images_box.heading}</H2></Div>
       <Div flexDirection="column" gridColumn_tablet="5 / 13">
@@ -132,9 +115,6 @@ const Location = ({data, pageContext, yml}) => {
       <GridContainer
         columns_tablet="10"
         gridTemplateRows_tablet="repeat(4, 1fr)"
-        // gridColumn_tablet={}
-        // columns_tablet={yml.images_box.images.length < 4 ? "2" : "3"} 
-        // gridAutoRows_tablet="minmax(100px, auto)"
         gridTemplateAreas={`
         'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
         'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
@@ -152,7 +132,6 @@ const Location = ({data, pageContext, yml}) => {
         childHeight="inherit"
 
       >
-      {/* <GridContainer columns_tablet="12" gridTemplateRows_tablet={yml.images_box.images.length < 4 ? "3, 1fr" : "4, 1fr"} height_tablet="813px" height="304px"> */}
         {yml.images_box.images.map((m, i) => {
           return (
             <GatsbyImage
@@ -160,7 +139,6 @@ const Location = ({data, pageContext, yml}) => {
               
               key={i}
               borderRadius="3px"
-              // image={m.path.childImageSharp.fluid}
               image={getImage(m.path.childImageSharp.gatsbyImageData)}
               bgSize={`cover`}
               alt={m.alt}
