@@ -78,9 +78,9 @@ export default ({lang, playerHeight, title, paragraph, background, landingTempla
               display="flex"
               flexDirection="column"
               flexDirection_tablet="column"
-              justifyContent="between"
+              justifyContent="start"
               // justifySelf={`center`}
-              borderBottom={`1px solid ${Colors.lightGray}`}
+              border={`1px solid ${Colors.lightGray}`}
               // border_tablet={`1px solid ${Colors.lightGray}`}
               // justifyContent="spece-between"
               key={index}
@@ -90,7 +90,7 @@ export default ({lang, playerHeight, title, paragraph, background, landingTempla
               <Div
 
                 padding_tablet="0"
-                padding="0 0 20px 0"
+                padding="20px 0"
                 width_tablet="100%"
                 height_tablet="158px"
                 alignSelf={`baseline`}
@@ -110,6 +110,7 @@ export default ({lang, playerHeight, title, paragraph, background, landingTempla
                 marginTop="20px"
                 padding="0 25px 19px 25px"
                 display={`flex`}
+                height="100%"
                 flexDirection="column">
                 {/* <Icon width="32" icon={i.icon}
               style={{position: "absolute"}}
