@@ -36,9 +36,7 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  bullets:
-    - Hay más vacantes que en cualquier otra industria
-    - ¡Impulsa tu Carrera! y hazte programador de software
+  text: Hay más vacantes que en cualquier otra industria ¡Impulsa tu Carrera! y hazte programador de software
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -78,7 +76,7 @@ about4Geeks:
 iconogram:
   position: 3
   icons:
-  - icon: "touch"
+  - icon: "touch" 
     title: Aplica a la beca
   - icon: "receive_mail"
     title: Obten un correo electrónico con la información

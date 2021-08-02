@@ -140,7 +140,7 @@ const Apply = (props) => {
                                     else {
                                         setFormStatus({status: "thank-you", msg: "Thank you"});
                                         // console.log("Thank you");
-                                        if (!session || !session.utm || !session.utm.utm_test) navigate('/thank-you/apply');
+                                        if (!session || !session.utm || !session.utm.utm_test) navigate(`${pageContext.lang === 'us' ? '/us/thank-you' : '/es/gracias'}`);
                                         else console.log("Lead success, but no redirection because of testing purposes")
                                     }
                                 })
@@ -214,7 +214,7 @@ const Apply = (props) => {
                             />
                         </Div>
                         {formStatus.status === "error" && !formData.location.valid && <Alert color="red">Please pick a location</Alert>}
-                        <Div margin_tablet="0 0 23px 0">
+                        <Div data-cy="dropdown_academy_selector" margin_tablet="0 0 23px 0">
                             <SelectRaw
                                 bgColor={Colors.black}
                                 options={locations && locations}
@@ -241,11 +241,12 @@ const Apply = (props) => {
                                 </Paragraph>
                             </Div>
                         }
-                        <Div justifyContent="end">
-                            {formStatus.status === "error" && <Alert color="red">{formStatus.msg}</Alert>}
+                        <Div flexDirection_tablet="column" flexDirection="column" justifyContent="end">
+                            {formStatus.status === "error" && <Alert data-cy="alertText" color="red">{formStatus.msg}</Alert>}
                             <Button
                                 variant="full"
                                 type="submit"
+                                margin_tablet="2rem 0 2rem auto"
                                 transform="translateY(-15px)" color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue} textColor={Colors.white}
                                 margin="2rem 0" padding=".45rem 3rem"
                                 disabled={formStatus.status === "loading" ? true : false}
