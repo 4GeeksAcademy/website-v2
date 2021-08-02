@@ -88,6 +88,7 @@ prices:
         content:
           price: "9% of Salary"
           price_info: "until fully paid, and only if you get the job"
+          logo: null
 
       ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
       center_section:
@@ -150,6 +151,7 @@ prices:
         content:
           price: "$9,499.00"
           price_info: "single payment"
+          logo: null
         button:
           button_text: "Apply Now"
 
@@ -170,6 +172,7 @@ prices:
         content:
           price: "Upfront, financed"
           price_info: "or pay after you get a job in tech"
+          logo: null
         button:
           button_text: "Apply Now"
 
@@ -186,6 +189,7 @@ prices:
         content:
           price: "Part-Time modality is not available"
           price_info: "Online"
+          logo: null
         button:
           button_text: "Aplly another courses"
 
@@ -201,6 +205,7 @@ prices:
         content:
           price: "Full-Time modality is not available"
           price_info: "Online"
+          logo: null
         button:
           button_text: "Apply another courses"
 
@@ -217,6 +222,7 @@ prices:
         content:
           price: "Part-Time modality is not available"
           price_info: "Online"
+          logo: null
         button:
           button_text: "Aplly another courses"
 
@@ -232,6 +238,7 @@ prices:
         content:
           price: "Full-Time modality is not available"
           price_info: "Online"
+          logo: null
         button:
           button_text: "Apply another courses"
 
