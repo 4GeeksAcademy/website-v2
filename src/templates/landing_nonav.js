@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {graphql, navigate} from 'gatsby';
 import {landingSections} from '../new_components/Landing';
 import FollowBar from "../new_components/FollowBar"
@@ -7,11 +7,10 @@ import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading'
 import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sections'
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
-
 import BaseRender from './_baseLandingLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session.js'
+import LandingNavbar from '../new_components/NavbarDesktop/landing';
 
 const Landing = (props) => {
   const {session, setLocation} = React.useContext(SessionContext);
@@ -49,8 +48,18 @@ const Landing = (props) => {
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
   };
 
+  console.log("Button", yml?.navbar?.url)
+  console.log("BUTTON_TEXT:::", yml?.navbar?.buttonText)
+  console.log("PAGE_CONTEXT", pageContext)
+  console.log("DATA:::", data)
+
   return (
     <>
+      <LandingNavbar
+        buttonText={yml.navbar ? yml.navbar.buttonText : pageContext.lang === "us" ? "Apply" : "Aplicar"}
+        link={yml.navbar?.url || ''}
+        lang={pageContext.lang}
+      />
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
         buttonText={yml.follow_bar.button.text}
         phone={session && session.location && session.location.phone}
@@ -226,7 +235,7 @@ const Landing = (props) => {
           })
       }
 
-      <GridContainerWithImage background={Colors.verylightGray} imageSide={applySchollarship?.imageSide} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
+      <GridContainerWithImage id="apply_schollarship" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
         <Div flexDirection="column" margin="0" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
         gridArea_tablet={applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
@@ -340,6 +349,10 @@ export const query = graphql`
               phone{
                 text
               }
+            }
+            navbar{
+              buttonText
+              url
             }
             form{
               heading
@@ -710,7 +723,6 @@ export const query = graphql`
 `;
 
 export default BaseRender(Landing, {
-  // navbar: false,
-  landingFooter: true,
   landingNavbar: true,
+  landingFooter: true,
 });

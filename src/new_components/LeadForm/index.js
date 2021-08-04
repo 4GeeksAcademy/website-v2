@@ -67,7 +67,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({marginButton, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, justifySelf, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram}) => {
+const LeadForm = ({marginButton, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -158,7 +158,7 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                 })
         }
     }}>
-        {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet="left" margin={landingTemplate ? "15px 0px 30px 0" : "20px 0px 15px 40px"}>{heading}</H4>}
+        {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "15px 0px 30px 0" : "20px 0px 15px 40px"}>{heading}</H4>}
         {formStatus.status === "thank-you" ?
             <Paragraph align="center" margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
             :
