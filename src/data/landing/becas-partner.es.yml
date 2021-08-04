@@ -15,6 +15,11 @@ meta_info:
   utm_course: full-stack
   utm_location: madrid-spain
 
+navbar:
+  buttonText: "Solicitar"
+  # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  url: "#apply_schollarship"
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email", "programSelector"
   # always the first_name, email and phone will be mandatory if added.
