@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect} from 'react';
 import {graphql, navigate} from 'gatsby';
 import {landingSections} from '../new_components/Landing';
 import FollowBar from "../new_components/FollowBar"
