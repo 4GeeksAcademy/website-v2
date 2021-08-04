@@ -49,11 +49,6 @@ const Landing = (props) => {
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
   };
 
-  console.log("Button", yml?.navbar?.url)
-  console.log("BUTTON_TEXT:::", yml?.navbar?.buttonText)
-  console.log("PAGE_CONTEXT", pageContext)
-  console.log("DATA:::", data)
-
   return (
     <>
       <LandingNavbar
