@@ -23,7 +23,8 @@ jobs:
         # Install NPM dependencies, cache them correctly
         uses: cypress-io/github-action@v2
         with:
-          start: npm run run:e2e
+          build: npm run build
+          start: npm start
           browser: chrome
           wait-on-timeout: 1000
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8000
