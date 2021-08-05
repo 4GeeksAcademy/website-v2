@@ -30,8 +30,10 @@
     "build:gatsby": "gatsby build",
     "serve": "gatsby serve -o -p 8080",
     "clean": "gatsby clean",
-    "test:e2e": "cypress run",
     "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "open:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:open",
+    "run:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:run",
     "cy:clean": "cypress cache clear"
   },
   "dependencies": {
@@ -117,6 +119,7 @@
     "js-yaml": "^3.13.1",
     "pre-commit": "^1.2.2",
     "simple-git": "^2.2.0",
+    "start-server-and-test": "^1.13.1",
     "yaml": "^1.7.2",
     "yarn-run-all": "^3.1.1"
   }

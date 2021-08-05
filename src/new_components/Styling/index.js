@@ -339,7 +339,7 @@ export const Button = styled(SmartButton)`
     box-shadow: ${props => props.boxShadow};
 
     &:hover {
-        background-color: ${props => props.colorHover || props.color};
+        background-color: ${props => props.colorHover};
         color: ${props => props.colorHoverText};
     }
     @media ${Devices.xxs}{

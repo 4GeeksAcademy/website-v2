@@ -246,9 +246,10 @@ const Apply = (props) => {
                             <Button
                                 variant="full"
                                 type="submit"
+                                margin="2rem auto"
                                 margin_tablet="2rem 0 2rem auto"
                                 transform="translateY(-15px)" color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue} textColor={Colors.white}
-                                margin="2rem 0" padding=".45rem 3rem"
+                                padding=".45rem 3rem"
                                 disabled={formStatus.status === "loading" ? true : false}
                             >{formStatus.status === "loading" ? "Loading..." : yml.left.button.button_text}</Button>
                         </Div>

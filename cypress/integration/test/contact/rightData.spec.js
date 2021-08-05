@@ -2,12 +2,21 @@ context("Test Contact page with correct data", () => {
 
   it('Visit the Contact page with path "/us/contact"', () => {
     cy.visit("/us/contact").wait(500);
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq("/us/contact");
-    });
   });
 
   it("Call the form and fill with right values", () => {
+
+    cy.log('**_____ Start intercept _____**')
+    cy.intercept('POST', '**/marketing/lead', (req) => {
+      console.log("REQUIRE", req)
+      req.body.first_name = "jhon"
+      req.body.last_name = "doe"
+      req.body.email = "jdoe@gmail.com"
+      req.body.comment = "api succesfully intercepted"
+    }).as('postContact').wait(5000)
+
+
+    cy.log('**_____ Filling form data _____**')
     cy.fixture("/contact/right.json").each((right) => {
       const { firstName, lastName, email, comment } = right;
 
@@ -31,31 +40,21 @@ context("Test Contact page with correct data", () => {
         .type(comment)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
     });
-  });
 
-  it("Submit the form with correct values", () => {
-    cy.get('Button[type="submit"]').contains("Send").wait(2500)
+    cy.log("**_____ Submit Form _____**")
+    cy.get('Button[type="submit"]').contains("Send").wait(2500).click();
     // cy.get("[data-cy=thankfulness]").contains("Thank you 🤣 Gracias");
-    cy.request({
-      url: `https://breathecode-cypress.herokuapp.com/v1/marketing/lead`,
-      method: 'POST',
-      body: {
-        automations: "soft",
-        browser_lang: null,
-        city: "Miami",
-        client_comments: "Im Rowan Dash",
-        country: "USA",
-        email: "rodash@outlook.com",
-        first_name: "Rowan",
-        language: "us",
-        last_name: "Dash",
-        latitude: null,
-        location: "downtown-miami",
-        longitude: null,
-        tags: "contact-us",
-        utm_language: "us",
-        utm_url: "http://localhost:8080/us/contact",
-      }
-    });
+
+    cy.log("**_____ Verifying Interception API _____**")
+    cy.wait('@postContact');
+    cy.get('@postContact').then(xhr => {
+      console.log("Response Intercepted:::",xhr)
+      expect(xhr.response.statusCode).to.equal(201)
+      expect(xhr.request.body.first_name).to.equal('jhon')
+      expect(xhr.request.body.last_name).to.equal('doe')
+      expect(xhr.request.body.email).to.equal('jdoe@gmail.com')
+      expect(xhr.request.body.comment).to.equal('api succesfully intercepted')
+    })
+
   });
 });
