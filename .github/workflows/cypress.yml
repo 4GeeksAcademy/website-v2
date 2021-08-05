@@ -20,6 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Running Tests
+        run: npm run run:e2e
         # Install NPM dependencies, cache them correctly
         # uses: cypress-io/github-action@v2.9.7
         # with:
@@ -27,6 +28,5 @@ jobs:
         #   browser: electron
         #   wait-on-timeout: 1000
         #   config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
-      - run: npm run run:e2e
         # env: # environment variable
         #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
