@@ -25,8 +25,8 @@ jobs:
         with:
           build: npm run build
           start: npm start
-          browser: chrome
-          wait-on-timeout: 1000
+          # browser: chrome
+          wait-on-timeout: 400
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8000
         # env: # environment variable
         #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
