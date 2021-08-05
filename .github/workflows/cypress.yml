@@ -21,10 +21,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
-        uses: cypress-io/github-action@v2.9.7
+        uses: cypress-io/github-action@v2
         with:
-          build: npm run build
           start: npm run run:e2e
+          wait-on: 'http://localhost:8000'
           browser: electron
           wait-on-timeout: 1000
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8000
