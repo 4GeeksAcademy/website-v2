@@ -24,7 +24,6 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm run run:e2e
-          wait-on: 'http://localhost:8000'
           browser: electron
           wait-on-timeout: 1000
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8000
