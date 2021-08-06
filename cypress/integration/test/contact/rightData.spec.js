@@ -7,7 +7,7 @@ context("Test Contact page with correct data", () => {
   it("Call the form and fill with right values", () => {
 
     cy.log('**_____ Start intercept _____**')
-    cy.intercept('POST', 'https://breathecode-cypress.herokuapp.com/v1/marketing/lead', (req) => {
+    cy.intercept('POST', '**/marketing/lead', (req) => {
       console.log("REQUIRE", req)
       req.body.first_name = "jhon"
       req.body.last_name = "doe"
