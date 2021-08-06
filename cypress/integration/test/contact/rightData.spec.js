@@ -47,7 +47,7 @@ context("Test Contact page with correct data", () => {
     cy.log("**_____ Verifying Interception API _____**")
     cy.wait('@postContact');
     cy.get('@postContact').then(xhr => {
-      console.log("Response Intercepted:::",xhr)
+      console.log("Response Intercepted:::", xhr)
       // expect(xhr.response.statusCode).to.equal(201)
       expect(xhr.request.body.first_name).to.equal('jhon')
       expect(xhr.request.body.last_name).to.equal('doe')
