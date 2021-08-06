@@ -21,7 +21,7 @@ jobs:
         with:
           group: merge
           # build: npm run build
-          # start: npm run serve
+          start: run:e2e
           browser: chrome
           # wait-on: 'http://localhost:8080'
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
