@@ -12,10 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     env: # environment variable
       WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
-      TEST: secret12345
-    # strategy:
-    #   matrix:
-    #     node-version: [14.x]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -26,7 +22,7 @@ jobs:
           build: npm run build
           start: npm run serve
           browser: electron
-          wait-on-timeout: 1000
+          wait-on: 'http://localhost:8080'
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
         # env: # environment variable
         #   WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}

@@ -48,7 +48,7 @@ context("Test Apply page with correct data", () => {
 
     });
 
-    cy.get('Button[type="submit"]').contains('APPLY').wait(2000).click()
+    cy.get('Button[type="submit"]').contains('APPLY').click().wait(2500)
 
     cy.log("**_____ Verifying Interception _____**")
     cy.wait('@postForm');
