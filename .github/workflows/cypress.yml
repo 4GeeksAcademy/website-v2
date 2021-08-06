@@ -24,7 +24,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
-          start: npm start
+          start: npm run serve
           # browser: chrome
           wait-on-timeout: 400
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8000
