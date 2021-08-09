@@ -6,17 +6,15 @@ context("Test Apply page with correct data", () => {
 
   it("Call the form and fill with right values", () => {
 
-    cy.log('**_____ Start intercept _____**')
-    cy.intercept('POST', '**/marketing/lead', (req) => {
-      console.log("REQUIRE", req)
-      req.body.first_name = "intercepted Name"
-      req.body.email = "example@email.com"
-      req.body.phone = "+56123474332"
-    }).as('postForm').wait(5000)
-
     cy.log('**_____ Filling form data _____**')
     cy.fixture("/contact/right.json").each((right) => {
       const { firstName } = right;
+
+      cy.log('**_____ Start intercept _____**')
+      cy.intercept('POST', '**/marketing/lead', (req) => {
+        req.body.first_name = firstName
+      }).as('postForm').wait(5000)
+  
 
       cy.get("[data-cy=first_name]")
         .clear().click()
@@ -27,6 +25,12 @@ context("Test Apply page with correct data", () => {
     cy.fixture("/apply/form_values/right.json").each((right) => {
 
       const { email, phone } = right;
+
+      cy.log('**_____ Start intercept _____**')
+      cy.intercept('POST', '**/marketing/lead', (req) => {
+        req.body.email = email
+        req.body.phone = phone
+      }).as('postForm').wait(5000)
 
       cy.get("[data-cy=email]")
         .clear().click()
@@ -56,9 +60,9 @@ context("Test Apply page with correct data", () => {
     cy.get('@postForm').then(xhr => {
       console.log("Response Intercepted:::",xhr)
       // expect(xhr.response.statusCode).to.equal(201)
-      expect(xhr.request.body.first_name).to.equal('intercepted Name')
-      expect(xhr.request.body.email).to.equal('example@email.com')
-      expect(xhr.request.body.phone).to.equal('+56123474332')
+      expect(xhr.request.body.first_name).to.equal('Rowan')
+      expect(xhr.request.body.email).to.equal('mark@outlook.com')
+      expect(xhr.request.body.phone).to.equal('1234567890')
     })
   })
 
