@@ -9,11 +9,11 @@ meta_info:
   redirects: ["/landing/impulsa-tu-carrera-carne-joven"] # <--- URL redirections to avoid 404 errors
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: full-stack
+  utm_course: ["full-stack"]
   utm_location: madrid-spain
 
 form:
-  # posible fields: "first_name", "last_name", "full_name", "phone", "email", "programSelector"
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email", "program_selector"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Solicita una beca"

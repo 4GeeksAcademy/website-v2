@@ -34,7 +34,7 @@ form_fields:
     type: 'text'
     place_holder: ""
     error: "You need to accept the privacy terms"
-  - name: programSelector
+  - name: program_selector
     required: true
     type: 'selector'
     place_holder: "Select a program *"

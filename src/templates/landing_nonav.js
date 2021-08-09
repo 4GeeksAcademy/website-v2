@@ -19,8 +19,18 @@ const Landing = (props) => {
   const [inLocation, setInLocation] = React.useState("");
 
   const applySchollarship = data.allLandingYaml.edges[0].node.apply_schollarship
+  const landing_utm_course = yml.meta_info.utm_course
 
-  const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
+// buscar forma de filtrar choosePrograms con utm_course
+  const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+    return landing_utm_course.filter((array_el) => {
+      return course_el.bc_slug === array_el;
+    }).length !== 0;
+  });
+  
+  console.log("FILTERED DATA", filteredPrograms)
+
+  const programs = filteredPrograms.map(p => ({
     label: p.text,
     value: p.bc_slug
 }))
