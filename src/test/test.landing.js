@@ -43,7 +43,7 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
       
       front_matter_fields.forEach(obj => {
         let utm_course = course.meta_info.utm_course
-        let verifying = courses.some(el => el === utm_course)
+        let verifying = courses.some(el => utm_course.includes(el))
 
         if(!meta_keys.includes(obj["key"])) fail(`Missing prop ${obj["key"]} from course on ${_path}`)
         if( verifying === false ) fail(`${`\nProblem found in: ${_path}`.red}\n\n${`UTM_COURSE ${`${utm_course}`.yellow} ${`not match with the utm_course list:`.red}`.red} \n\n${courses.map(el => `${el.green}\n`)} \n`)
