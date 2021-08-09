@@ -13,7 +13,7 @@ context("Test Apply page with correct data", () => {
       cy.log('**_____ Start intercept _____**')
       cy.intercept('POST', '**/marketing/lead', (req) => {
         req.body.first_name = firstName
-      }).as('postForm').wait(5000)
+      }).as('postForm')
   
 
       cy.get("[data-cy=first_name]")
@@ -30,7 +30,7 @@ context("Test Apply page with correct data", () => {
       cy.intercept('POST', '**/marketing/lead', (req) => {
         req.body.email = email
         req.body.phone = phone
-      }).as('postForm').wait(5000)
+      }).as('postForm')
 
       cy.get("[data-cy=email]")
         .clear().click()
@@ -59,7 +59,7 @@ context("Test Apply page with correct data", () => {
     // it verify if the response has been intercepted and changed
     cy.get('@postForm').then(xhr => {
       console.log("Response Intercepted:::",xhr)
-      // expect(xhr.response.statusCode).to.equal(201)
+      expect(xhr.response.statusCode).to.equal(201)
       expect(xhr.response.body.first_name).to.equal('Rowan')
       expect(xhr.response.body.email).to.equal('mark@outlook.com')
       expect(xhr.response.body.phone).to.equal('1234567890')

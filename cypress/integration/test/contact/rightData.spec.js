@@ -10,7 +10,7 @@ context("Test Contact page with correct data", () => {
     cy.fixture("/contact/right.json").then((right) => {
       const { firstName, lastName, email, comment } = right;
 
-      cy.log('**_____ Intercepting... _____**').wait(4000)
+      cy.log('**_____ Intercepting... _____**')
       cy.intercept('POST', '**/marketing/lead', (req) => {
         console.log("REQUIRE:::::", req)
         req.body.first_name = firstName
