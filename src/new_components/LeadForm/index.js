@@ -22,6 +22,7 @@ const formIsValid = (formData = null) => {
 const Form = styled.form`
     margin: ${props => props.margin};
     width: 100%;
+    height: 100%;
     display: block;
     background: ${props => props.background ? props.background : "#FFFFFF"};
     border-radius: 3px;
@@ -41,7 +42,6 @@ const _fields = {
     email: {value: '', valid: false, required: true, type: 'email', place_holder: "Your email *", error: "Please specify a valid email"},
     phone: {value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone"},
     consent: {value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms"},
-    program_selector: {value: '', valid: false, required: true, type: 'selector', place_holder: "Select a program"}
 }
 
 const clean = (fields, data) => {
@@ -115,7 +115,7 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
     const [formStatus, setFormStatus] = useState({status: "idle", msg: ""});
     const [formData, setVal] = useState(_fields);
     const {session} = useContext(SessionContext);
-    const courseSelector = yml.form_fields.find(f => f.name === "program_selector")
+    const courseSelector = yml.form_fields.find(f => f.name === "course")
     React.useEffect(() => {
         setVal(_data => {
             const _ = Object.keys(_data).reduce((total, key) => {
@@ -128,14 +128,13 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
             return ({..._, ...data, utm_url: {type: "hidden", value: window.location.href, valid: true}})
         })
     }, [data])
+
     return <Form margin={margin} background={background} margin_tablet={margin_tablet} d_sm={d_sm} style={style} onSubmit={(e) => {
         e.preventDefault();
 
         if (formStatus.status === "error") setFormStatus({status: "idle", msg: ""})
 
         const cleanedData = clean(fields, formData);
-        console.log("FIELDS:::", fields)
-        console.log("FormData:::", formData)
         if (!formIsValid(cleanedData)) {
             setFormStatus({status: "error", msg: yml.messages.error});
         }
@@ -170,19 +169,6 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                     {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
                         const _field = formData[f]
                         return <>
-                            {f === "program_selector" ? (
-                                <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
-                                    <SelectRaw
-                                        style={{
-                                            background: '#FFFFFF',
-                                        }}
-                                        options={selectProgram}
-                                        value={selectProgram.value}
-                                        placeholder={courseSelector.place_holder}
-                                        onChange={(value, valid) => setVal({...formData, program_selector: {value, valid}})}
-                                    />
-                                </Div>
-                                ) : (
                                 <Input
                                     key={i}
                                     bgColor={inputBgColor || "#FFFFFF"}
@@ -199,10 +185,26 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                                     required={_field.required}
                                     on
                                 />
-                            )}
                         </>
                     })}
 
+                    {
+                        selectProgram?.length > 1 
+                            ? (
+                                <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
+                                    <SelectRaw
+                                        style={{
+                                            background: '#FFFFFF',
+                                        }}
+                                        options={selectProgram}
+                                        value={selectProgram?.value}
+                                        placeholder={courseSelector.place_holder}
+                                        onChange={(selected, valid) => setVal({...formData, course: {value: selected["value"], valid}})}
+                                    />
+                                </Div>
+                            )
+                            : null
+                    }
                     {layout === "flex" &&
                         <Button 
                             width="100%"

@@ -16,9 +16,9 @@ meta_info:
   utm_location: madrid-spain
 
 form:
-  # posible fields: "first_name", "last_name", "full_name", "phone", "email", "program_selector"
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email", "program_selector"]
+  fields: ["full_name", "phone", "email"]
   heading: "Solicita tu beca ya"
   button_label: Enviar
   redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website
