@@ -7,7 +7,7 @@ context("Test Apply page with correct data", () => {
   it("Call the form and fill with right values", () => {
 
     cy.log('**_____ Filling form data _____**')
-    cy.fixture("/contact/right.json").each((right) => {
+    cy.fixture("/contact/right.json").then((right) => {
       const { firstName } = right;
 
       cy.log('**_____ Start intercept _____**')
@@ -22,7 +22,7 @@ context("Test Apply page with correct data", () => {
         .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
     });
         
-    cy.fixture("/apply/form_values/right.json").each((right) => {
+    cy.fixture("/apply/form_values/right.json").then((right) => {
 
       const { email, phone } = right;
 
@@ -60,9 +60,9 @@ context("Test Apply page with correct data", () => {
     cy.get('@postForm').then(xhr => {
       console.log("Response Intercepted:::",xhr)
       // expect(xhr.response.statusCode).to.equal(201)
-      expect(xhr.request.body.first_name).to.equal('Rowan')
-      expect(xhr.request.body.email).to.equal('mark@outlook.com')
-      expect(xhr.request.body.phone).to.equal('1234567890')
+      expect(xhr.response.body.first_name).to.equal('Rowan')
+      expect(xhr.response.body.email).to.equal('mark@outlook.com')
+      expect(xhr.response.body.phone).to.equal('1234567890')
     })
   })
 
