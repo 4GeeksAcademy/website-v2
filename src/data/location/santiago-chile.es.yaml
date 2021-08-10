@@ -80,7 +80,7 @@ prices:
         content:
           price: "16% de tu sueldo"
           price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
-          logo: "/images/quotanda-logo.png"
+          logo: ""
         button:
           button_text: "APLICAR AHORA"
 
@@ -116,7 +116,7 @@ prices:
         content:
           price: "2.760.000 CLP"
           price_info: "una sola cuota"
-          logo: "/images/quotanda-logo.png"
+          logo: ""
         button:
           button_text: "APLICAR AHORA"
 
@@ -173,7 +173,7 @@ prices:
         content:
           price: "2.415.000 CLP"
           price_info: "una sola cuota"
-          logo: "/images/quotanda-logo.png"
+          logo: ""
         button:
           button_text: "APLICAR AHORA"
   
