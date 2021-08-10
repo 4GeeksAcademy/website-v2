@@ -137,7 +137,7 @@ prices:
         content:
           price: "Hasta 12 cuotas sin interés"
           price_info: ""
-          logo: "/images/quotanda-logo.png"
+          logo: "/images/flevo.png"
         button:
           button_text: "APLICAR AHORA"
 
