@@ -419,6 +419,10 @@ export const query = graphql`
               position
               heading
               sub_heading
+              footer {
+                text
+                text_link
+              }
             }
             alumni_projects{
               position
