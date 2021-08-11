@@ -68,6 +68,9 @@ why_4geeks:
   position: 2
   heading: "Porqué 4Geeks"
   sub_heading: "Porque somos los mejores"
+  footer:
+    text: "Ver opciones de financiación"
+    text_link: "/"
 
 geeks_vs_others:
   position: 3
@@ -94,6 +97,12 @@ who_is_hiring:
 badges:
   position: 3
   heading: " "
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
+
 
 # Possible layours: [two_column_left, two_column_right]
 components:
