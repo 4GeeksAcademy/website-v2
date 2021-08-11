@@ -1,5 +1,5 @@
 meta_info:
-  slug: becas-landing_jobs # <--- URL 4geeksacademy.com/us/landing/example
+  slug: becas-landing-jobs # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
   title: "¡Obtén tu beca!"
@@ -20,7 +20,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email", "programSelector"]
   heading: "Solicita tu beca ya"
-  button_label: Enviar
+  button_label: Solicita tu beca ya
   redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
@@ -50,7 +50,7 @@ follow_bar:
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Solicitar"
+    text: "Solicita tu beca"
     path: "#top"
   phone:
     text: "Llama "
@@ -72,7 +72,7 @@ about4Geeks:
     - title: "Ratio 1:5 profesor alumno. Mentorías 1:1 ilimitadas "
     - title: "Preparación para entrevistas y procesos de selección"
   paragraph: ""
-  button_text: "Aplica a una beca"
+  button_text: "Solicita tu beca"
   button_link: "/es/aplica"
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
@@ -87,7 +87,7 @@ iconogram:
   - icon: "talk"
     title: Haz una entrevista online con nuestro equipo de admisiones
   - icon: "terminal"
-    title: Recibe los resultados, reserva tu plaza y empieza a PROGRAMAr
+    title: Recibe los resultados, reserva tu plaza y empieza a PROGRAMAR
 
 who_is_hiring:
   position: 4
@@ -112,14 +112,12 @@ choose_your_program:
     description: |
       Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
       
-      Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado.
-
-
-      Disponible en modalidad part time y full time. 
-      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf>"programa de estudios"</a>.
+      Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado. 
+      Disponible en modalidad part time y full time.
+      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
     
-    text_link: Aplica a una beca
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    text_link: Solicita tu beca
+    link: "#" # moves to start position
     
   - title: "Ingeniero de Software"
     sub_title: "Nivel 2"
@@ -130,19 +128,20 @@ choose_your_program:
       ¡Lleva tu carrera al siguiente nivel!, crea tecnlogía con un impacto real en el mundo (quizás el próximo unicornio), trabaja en empresas Fortune 500 y mejora tu salario. 
       
       Disponible sólo en modalidad part-time.
-      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf>"programa de estudios"</a>.
+      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
 
-      
-    
-    text_link: Aplica a una beca
-    link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+    text_link: Solicita tu beca
+    link: "#"
 
 why_4geeks:
-  position: 8
-  heading: "Escuchalo de nuestros alumnos"
+  position: 7
+  heading: "Escúchalo de nuestros alumnos"
   sub_heading: ""
+  footer:
+    text: "Ver opciones de financiación"
+    text_link: "/"
 
-apply_schollarship:
+apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
   image: "../../../static/images/comunity-support.png"
@@ -150,7 +149,7 @@ apply_schollarship:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: phyton_y_javascript
-    position: 7
+    position: 6
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from new_components/Styling/index.js) or color code ex: #C9F9F9
     image:
@@ -163,7 +162,6 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa están basado en el uso de Phyton, Java y Javascript. ¿La razón? Java es el lenguaje más utilizado del mundo (por mucho). En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. 
-      
-      Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, Redux, Amazon Web Services, etc."
+      text: "Nuestros programa están basados en el uso de Phyton, Java y Javascript. ¿La razón? Java es el lenguaje más utilizado del mundo (por mucho). En el mercado laboral JavaScript tiene 26 veces más puestos de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que Node.js. 
+        Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, Redux, Amazon Web Services, etc."
       font_size: ["16px"]
