@@ -70,7 +70,7 @@ why_4geeks:
   sub_heading: "Porque somos los mejores"
   footer:
     text: "Ver opciones de financiación"
-    text_link: "/"
+    text_link: "#"
 
 geeks_vs_others:
   position: 3

@@ -335,8 +335,8 @@ export const landingSections = {
             variant="primary"
         />
         <Why4Geeks
-            text={yml.footer.text}
-            text_link={yml.footer.text_link}
+            text={yml.footer?.text}
+            text_link={yml.footer?.text_link}
             lang={pageContext.lang}
             playerHeight="auto" />
     </Div>,

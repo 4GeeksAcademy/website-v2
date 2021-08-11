@@ -117,7 +117,7 @@ choose_your_program:
       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
     
     text_link: Solicita tu beca
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    link: "#" # moves to start position
     
   - title: "Ingeniero de Software"
     sub_title: "Nivel 2"
@@ -130,10 +130,8 @@ choose_your_program:
       Disponible sólo en modalidad part-time.
       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
 
-      
-    
     text_link: Solicita tu beca
-    link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+    link: "#"
 
 why_4geeks:
   position: 7
@@ -141,7 +139,7 @@ why_4geeks:
   sub_heading: ""
   footer:
     text: "Ver opciones de financiación"
-    text_link: "https://google.com"
+    text_link: "/"
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
