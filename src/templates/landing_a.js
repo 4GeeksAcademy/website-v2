@@ -21,10 +21,22 @@ const Landing = (props) => {
   const [inLocation, setInLocation] = React.useState("");
 
   const applySchollarship = data.allLandingYaml.edges[0].node?.apply_schollarship
-  const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
+  const landing_utm_course = yml.meta_info.utm_course
+
+  const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+    return landing_utm_course.filter((array_el) => {
+      return course_el.bc_slug === array_el;
+    }).length !== 0;
+  });
+//   const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
+//     label: p.text,
+//     value: p.bc_slug
+// }))
+  console.log("FILTERED COURSES", filteredPrograms)
+  const programs = filteredPrograms.map(p => ({
     label: p.text,
     value: p.bc_slug
-}))
+  }))
 
   useEffect(() => {
     let _components = {};
@@ -43,7 +55,7 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: yml.meta_info.utm_course, valid: true},
+    course: {type: "hidden", value: `${programs <=1 ? (programs[0].value) : (yml.meta_info.utm_course)}`, valid: true},
     utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
@@ -285,7 +297,7 @@ const Landing = (props) => {
             )
           }
           <StyledBackgroundSection
-            height={`100%`}
+            height={`350px`}
             // width={`85%`}
             borderRadius={`3px`}
             image={applySchollarship 
