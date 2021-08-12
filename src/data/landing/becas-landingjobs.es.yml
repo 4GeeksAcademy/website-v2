@@ -133,6 +133,7 @@ choose_your_program:
     text_link: Solicita tu beca
     link: "#"
 
+
 why_4geeks:
   position: 7
   heading: "Escúchalo de nuestros alumnos"
