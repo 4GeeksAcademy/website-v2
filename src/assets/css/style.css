@@ -10,6 +10,8 @@ html, body
     margin: 0px!important;
     padding: 0px!important;
     overflow-x: clip!important; 
+    scroll-behavior: smooth;
+    scroll-padding: 10%;
 }
 
 /* adds three dots to text when reaches the end of line */

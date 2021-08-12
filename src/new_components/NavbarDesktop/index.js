@@ -106,7 +106,7 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange, locationCity, emptyNavbar}) => {
+export const Navbar = ({lang, currentURL, menu, open, button, onToggle, languageButton, onLocationChange, locationCity}) => {
     const {session, setSession} = useContext(SessionContext);
     const [status, setStatus] = useState({
         toggle: false,
@@ -172,7 +172,6 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                         alt="4Geeks Logo"
                     />
                 </Link>
-                {!emptyNavbar &&
                 <Menu>
                     {menu && menu.map((item, index) => {
                         return (
@@ -187,11 +186,10 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
                     )}
                     <MegaMenu status={status} setStatus={setStatus} menu={menu} />
                 </Menu>
-                }
                 <Div alignItems="center" justifyContent="between">
-                    {!emptyNavbar &&<Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
+                    <Link to={session && session.pathsDictionary && currentURL ? `${session.pathsDictionary[currentURL] || ""}${languageButton.link}` : "/?lang=en#home"}>
                         <Paragraph dangerouslySetInnerHTML={{__html: languageButton.text}} fontSize="13px" margin="0 50px 0 0" fontWeight="400" lineHeight="16px"></Paragraph>
-                    </Link>}
+                    </Link>
                     <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" width="fit-content" color={Colors.black} textColor={Colors.white}>{buttonText || button.apply_button_text}</Button></Link>
                 </Div>
             </Nav>

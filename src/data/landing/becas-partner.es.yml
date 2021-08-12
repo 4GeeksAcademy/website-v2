@@ -15,6 +15,11 @@ meta_info:
   utm_course: full-stack
   utm_location: madrid-spain
 
+navbar:
+  buttonText: "Solicitar"
+  # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  url: "#apply_schollarship"
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email", "programSelector"
   # always the first_name, email and phone will be mandatory if added.
@@ -111,7 +116,7 @@ choose_your_program:
       Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
     
     text_link: Aplica a una beca
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    link: "#"
     
   - title: "Ingeniero de Software"
     sub_title: "Nivel 2"
@@ -123,7 +128,7 @@ choose_your_program:
       Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
     
     text_link: Aplica a una beca
-    link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+    link: "#"
 
 why_4geeks:
   position: 8
