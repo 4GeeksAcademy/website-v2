@@ -13,7 +13,7 @@ seo_title: "Aprende a programar en Uruguay"
 header:
   tagline: "4Geeks Academy en Uruguay"
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/online-home.png"
+  image: "../../../static/images/locations/uruguay-header.png"
   alt: ""
 
 button_header:

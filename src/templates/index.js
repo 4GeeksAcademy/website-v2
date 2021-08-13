@@ -164,7 +164,7 @@ const Home = (props) => {
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-      <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
+      <With4Geeks lang={pageContext.lang} playerHeight="auto" title={true} />
       <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
 

@@ -506,6 +506,7 @@ export const query = graphql`
                   content {
                     price
                     price_info
+                    logo
                   }
                   header {
                     heading_one
@@ -520,6 +521,7 @@ export const query = graphql`
                   content {
                     price
                     price_info
+                    logo
                   }
                   header {
                     sub_heading
@@ -555,6 +557,7 @@ export const query = graphql`
                   content {
                     price
                     price_info
+                    logo
                   }
                   header {
                     heading_one
@@ -569,6 +572,7 @@ export const query = graphql`
                   content {
                     price
                     price_info
+                    logo
                   }
                   header {
                     heading_one
