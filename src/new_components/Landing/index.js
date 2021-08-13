@@ -334,7 +334,11 @@ export const landingSections = {
             paragraphColor={Colors.gray}
             variant="primary"
         />
-        <Why4Geeks landingTemplate lang={pageContext.lang} playerHeight="auto" />
+        <Why4Geeks
+            text={yml.footer?.text}
+            text_link={yml.footer?.text_link}
+            lang={pageContext.lang}
+            playerHeight="auto" />
     </Div>,
     alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="alumni_projects" key={index} flexDirection="column" margin="0" margin_tablet="100px" padding="0">
         {/* <Title

@@ -80,6 +80,7 @@ prices:
         content:
           price: "16% de tu sueldo"
           price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+          logo: ""
         button:
           button_text: "APLICAR AHORA"
 
@@ -115,6 +116,7 @@ prices:
         content:
           price: "2.760.000 CLP"
           price_info: "una sola cuota"
+          logo: ""
         button:
           button_text: "APLICAR AHORA"
 
@@ -135,6 +137,7 @@ prices:
         content:
           price: "Hasta 12 cuotas sin interés"
           price_info: ""
+          logo: "/images/flevo.png"
         button:
           button_text: "APLICAR AHORA"
 
@@ -170,6 +173,7 @@ prices:
         content:
           price: "2.415.000 CLP"
           price_info: "una sola cuota"
+          logo: ""
         button:
           button_text: "APLICAR AHORA"
   
@@ -186,6 +190,7 @@ prices:
         content:
           price: "La modalidad Part-Time no esta disponible"
           price_info: "Santiago - Chile"
+          logo: null
         button:
           button_text: "Aplicar a otros cursos"
 
@@ -201,6 +206,7 @@ prices:
         content:
           price: "La modalidad Full-Time no esta disponible"
           price_info: "Santiago - Chile"
+          logo: null
         button:
           button_text: "Aplicar a otros cursos"
 
@@ -217,6 +223,7 @@ prices:
         content:
           price: "la modalidad Part-Time no esta disponible"
           price_info: "Santiago - Chile"
+          logo: null
         button:
           button_text: "Aplicar a otros cursos"
 
@@ -232,6 +239,7 @@ prices:
         content:
           price: "la modalidad Full-Time no esta disponible"
           price_info: "Santiago - Chile"
+          logo: null
         button:
           button_text: "Aplicar a otros cursos"
 

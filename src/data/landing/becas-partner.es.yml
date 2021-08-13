@@ -12,7 +12,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: full-stack
+  utm_course: ["full-stack", "software-engineering"]
   utm_location: madrid-spain
 
 navbar:
@@ -21,9 +21,9 @@ navbar:
   url: "#apply_schollarship"
 
 form:
-  # posible fields: "first_name", "last_name", "full_name", "phone", "email", "programSelector"
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email", "programSelector"]
+  fields: ["full_name", "phone", "email"]
   heading: "Solicita una beca"
   button_label: Enviar
   redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website
@@ -116,7 +116,7 @@ choose_your_program:
       Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
     
     text_link: Aplica a una beca
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    link: "#"
     
   - title: "Ingeniero de Software"
     sub_title: "Nivel 2"
@@ -128,7 +128,7 @@ choose_your_program:
       Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
     
     text_link: Aplica a una beca
-    link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+    link: "#"
 
 why_4geeks:
   position: 8
