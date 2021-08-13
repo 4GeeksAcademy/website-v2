@@ -48,10 +48,10 @@ context("Test Contact page with correct data", () => {
     cy.get('@postContact').then(xhr => {
       console.log("Response Intercepted:::", xhr)
       // expect(xhr.response.statusCode).to.equal(201)
-      expect(xhr.request.body.first_name).to.equal('Rowan')
-      expect(xhr.request.body.last_name).to.equal('Dash')
-      expect(xhr.request.body.email).to.equal('rodash@outlook.com')
-      expect(xhr.request.body.client_comments).to.equal('Im Rowan Dash')
+      expect(xhr.response.body.first_name).to.equal('Rowan')
+      expect(xhr.response.body.last_name).to.equal('Dash')
+      expect(xhr.response.body.email).to.equal('rodash@outlook.com')
+      expect(xhr.response.body.client_comments).to.equal('Im Rowan Dash')
     })
 
   });
