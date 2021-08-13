@@ -61,7 +61,7 @@ context("Test Apply page with correct data", () => {
       console.log("Response Intercepted:::",xhr)
       // expect(xhr.response.statusCode).to.equal(201)
       expect(xhr.request.body.first_name).to.equal('Rowan')
-      expect(xhr.request.body.email).to.equal('mark@outlook.com')
+      expect(xhr.response.body.email).to.equal('mark@outlook.com')
       expect(xhr.request.body.phone).to.equal('1234567890')
     })
   })
