@@ -44,7 +44,7 @@ partners:
       featured: false
     - name: "Uber"
       # locations: ["madrid-spain"]
-      image: "../../../../static/images/partner/uber.jpeg"
+      image: "../../../../static/images/partner/uber.png"
       featured: false
     - name: "Neo9"
       # locations: ["madrid-spain"]
