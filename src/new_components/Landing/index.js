@@ -69,11 +69,12 @@ const Side = ({video, image, heading, content, button, bullets}) => {
 
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
     const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
-    return <Div flexDirection_tablet="column" flexDirection="column" padding="36px 17px">
-        {heading && <H2 
+    return <Div flexDirection_tablet="column" flexDirection="column" padding="40px 20px" padding_tablet="36px 72px">
+        {heading && <H2 type="h2"
             textAlign_tablet="left"
-            lineHeight="60px"
-            fontSize={h_xs || "50px"} fs_xl={h_xl} fontSize_md={h_md} fontSize_sm={h_sm}
+            lineHeight="45px"
+            lineHeight_tablet="60px"
+            fontSize={h_xs || "30px"} fs_xl={h_xl} fontSize_md={h_md || "50px"} fontSize_sm={h_sm}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
         }
         {content && 
@@ -90,8 +91,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
         )}
 
         {button && <Button outline width="200px"
-            colorHoverText={Colors.white}
-            color={button.color || Colors.blue}
+            colorHoverText={Colors.blue}
             textColor={Colors.black}
             margin="2rem 0" padding=".35rem.85rem"
             onClick={() => {
@@ -167,7 +167,7 @@ Columns.defaultProps = {
 
 export const landingSections = {
     
-    in_the_news: ({session, pageContext, yml, course, location, index}) => <GridContainer id="in_the_news" key={index} p_sm="0" p_xs="30 0 0 0">
+    in_the_news: ({session, pageContext, yml, course, location, index}) => <GridContainer id="in_the_news" key={index} padding="40px 0" padding_tablet="50px 0">
         <H4 align="center" fontSize="18px" color={Colors.darkGray}
             margin="20px 0px 10px 0px"
             m_sm="20px auto"
@@ -176,6 +176,8 @@ export const landingSections = {
         </H4>
 
         <News
+            maxWidth="100px"
+            justifySelf="center"
             margin="40px 0 40px"
             limit={yml.limit || 3}
             location={location ? location : session && session.location && session.location.breathecode_location_slug}
@@ -225,7 +227,7 @@ export const landingSections = {
         // <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
 
     syllabus: ({session, data, pageContext, yml, course, location, index}) =>
-        <GridContainer id="syllabus" padding_tabletChild="0 8em" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
+        <GridContainer id="syllabus" padding_tabletChild="0 8em" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.verylightGray}>
             <Div
                 key={index}
                 flexDirection="column"
@@ -233,18 +235,14 @@ export const landingSections = {
                 size_tablet="12"
                 width="100%"
                 width_tablet="100%"
-                // size_lg="4"
-                // size_sm="6"
-                // size_xs="12"
                 margin="0"
                 textAlign_sm="center"
-                // margin_md="0 auto 0 70px"
             >
                 <H5 type="h5" fontSize="20px" padding="0 0 35px 0">{yml.heading.text}</H5>
                 <LeadForm
                     landingTemplate
                     layout="block"
-                    background={Colors.lightGray}
+                    background={Colors.verylightGray}
                     margin="0"
                     marginButton={`15px 0 30px auto`}
                     buttonBorderRadius="3px"
@@ -261,24 +259,6 @@ export const landingSections = {
                         utm_location: {type: "hidden", value: location, valid: true}
                     }}
                 />
-
-            {/* <LeadForm
-              landingTemplate
-              layout="block"
-              background={Colors.verylightGray}
-              margin="0"
-              formHandler={requestSyllabus}
-              heading={yml.form.heading}
-              motivation={yml.form.motivation}
-              sendLabel={yml.form.button_label}
-              redirect={yml.form.redirect}
-              inputBgColor="#F9F9F9"
-              lang={pageContext.lang}
-              fields={yml.form.fields}
-              data={preData}
-              justifyContentButton="center"
-              marginButton={`15px 0 30px auto`}
-            /> */}
             </Div>
         </GridContainer>
     ,
@@ -340,7 +320,7 @@ export const landingSections = {
             lang={pageContext.lang}
             playerHeight="auto" />
     </Div>,
-    alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="alumni_projects" key={index} flexDirection="column" margin="0" margin_tablet="100px" padding="0">
+    alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="alumni_projects" key={index} flexDirection="column" margin="0" margin_tablet="100px" padding="0 0 60px 0" padding_tablet="0">
         {/* <Title
             size="10"
             title={yml.heading}
@@ -381,14 +361,14 @@ export const landingSections = {
         sm={yml.height[3]}
         xs={yml.height[4]}
     />,
-    two_column_left: ({session, data, pageContext, yml, index}) => <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0 0 75px 0">
+    two_column_left: ({session, data, pageContext, yml, index}) => <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 14%" margin="0">
         <TwoColumn
             left={{image: yml.image, video: yml.video}}
             right={{heading: yml.heading, content: yml.content, button: yml.button,}}
             proportions={yml.proportions}
         />
     </Div>,
-    two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0 0 75px 0">
+    two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0">
         <TwoColumn
             left={{heading: yml.heading, content: yml.content, button: yml.button}}
             right={{image: yml.image, video: yml.video,}}

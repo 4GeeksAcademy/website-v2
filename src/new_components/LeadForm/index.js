@@ -22,7 +22,7 @@ const formIsValid = (formData = null) => {
 const Form = styled.form`
     margin: ${props => props.margin};
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
     background: ${props => props.background ? props.background : "#FFFFFF"};
     border-radius: 3px;
