@@ -2,9 +2,6 @@ context("Test Contact page with wrong data", () => {
 
   it('Visit the Contact page with path "/us/contact"', () => {
     cy.visit("/us/contact").wait(500);
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq("/us/contact");
-    });
   });
 
   it("Call the form and fill with wrong values", () => {
