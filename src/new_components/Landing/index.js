@@ -225,7 +225,7 @@ export const landingSections = {
         // <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
 
     syllabus: ({session, data, pageContext, yml, course, location, index}) =>
-        <GridContainer id="syllabus" padding_tabletChild="0 8em" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
+        <GridContainer id="syllabus" padding_tabletChild="0px calc(55% - 30%)" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
             <Div
                 key={index}
                 flexDirection="column"
