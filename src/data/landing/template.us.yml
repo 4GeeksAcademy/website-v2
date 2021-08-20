@@ -97,7 +97,7 @@ who_is_hiring:
 
 badges:
   position: 3
-  heading: " "
+  heading: ""
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"

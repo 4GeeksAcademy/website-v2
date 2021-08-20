@@ -199,6 +199,7 @@ export const Div = styled.div`
         flex: ${props => props.size_tablet ? `0 0 ${(props.size_tablet / 12) * 100}%` : null};
         max-width: ${props => props.size_tablet ? `${(props.size_tablet / 12) * 100}%` : null};
         align-self: ${props => props.alignSelf_tablet};
+        gap: ${props => props => props.gap_tablet};
         place-self: ${props => props.placeSelf_tablet};
         background: ${props => props.background_tablet};
         display: ${props => props.display_tablet};
