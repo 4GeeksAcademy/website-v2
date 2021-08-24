@@ -14,9 +14,8 @@ content:
   title: "Revisa tu correo electrónico! :)"
   message: "Hemos recibido tu solicitud. Nuestro Geeky Advisor se pondrá en contacto contigo en breve. ¡Espera Atento!
 
-Mientras tanto, lea nuestro blog. Está lleno de información importante que estamos seguros de que le resultará útil. :)
-
-Algunos artículos que te pueden interesar:"
+Mientras tanto, lea nuestro blog. Está lleno de información importante que estamos seguros de que le resultará útil. :)"
+  articles_title: "Algunos artículos que te pueden interesar:"
   button: "Lea nuestro blog"
 social: 
   title: "Siguenos en nuestras redes"

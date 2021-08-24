@@ -1,11 +1,12 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext} from 'react';
 import BaseRender from './_baseLayout'
-import {Column, Wrapper, WrapperImage, Divider, Div, Row} from '../components/Sections'
-import {Title, H1, H2, H3, H4, H5, Paragraph} from '../components/Heading'
-import {Button, Colors, Anchor} from '../components/Styling'
-import Icon from '../components/Icon';
+import {Column, Wrapper, WrapperImage, Divider, Div, Row, GridContainer, HR} from '../new_components/Sections'
+import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
+import {Button, Colors, Anchor, RoundImage} from '../new_components/Styling'
+import Icon from '../new_components/Icon';
 import {SessionContext} from '../session.js'
 import Link from 'gatsby-link'
+import LazyLoad from 'react-lazyload';
 
 
 const ThankYou = (props) => {
@@ -17,6 +18,7 @@ const ThankYou = (props) => {
     {label: "instagram", status: false, iconColor: "#8a3ab9"},
     {label: "meetup", status: false, iconColor: "#f65858"},
   ])
+  let socials = session && session.location ? session.location.socials : []
 
   const updateStatus = (index, newvalue) => {
     let g = checkStatus[index]
@@ -33,71 +35,170 @@ const ThankYou = (props) => {
       ]
       );
   }
+  console.log("DATA:::", data)
+  console.log("YML:::", yml)
 
+  const blog_posts = data.featured.edges
   return (
     <>
-      <WrapperImage
-        margin="50px 0 0 0"
-        height="250px"
-        imageData={yml.banner.image && yml.banner.image.childImageSharp.gatsbyImageData}
-        border="bottom"
-        bgSize="cover"
-        paddingRight={`0`}
-        customBorderRadius="0 0 0 1.25rem"
-      >
-        <Divider height="100px" />
-        <Title
-          size="5"
-          color={Colors.white}
-          title={yml.banner.tagline}
-          paragraph={yml.banner.sub_heading}
-          variant="main"
-          paragraphColor={Colors.white}
-          fontSize="46px"
-          textAlign="center"
+      <Div className="circles-left" display="none" display_tablet="inherit">
+        <Icon icon="landingCircles/smCircle-red" width="23px" height="23px" style={{zIndex: 2, position: "absolute", left: "218px", top: "225px"}} />
+        <Icon icon="landingCircles/mdCircle-lightBlue" style={{zIndex: 2, position: "absolute", left: "53px", top: "97px"}} />
+        <Icon icon="landingCircles/bigCircle-yellowLight" width="115px" height="329px" style={{zIndex: 2, position: "absolute", left: "0px", top: "250px"}} />
+      </Div>
+      <Div className="circles-right" display="none" display_tablet="inherit">
+        <Icon icon="landingCircles/lgCircle-mustard" style={{zIndex: 2, position: "absolute", right: "0px", top: "269px"}} />
+        <Icon icon="landingCircles/mdCircle-blue" width="67px" height="67px" style={{zIndex: 2, position: "absolute", right: "116px", top: "169px"}} />
+        <Icon icon="landingCircles/smCircle-mustard" style={{zIndex: 2, position: "absolute", right: "299px", top: "122px"}} />
+      </Div>
+      
+      <Div flexDirection="column" background={Colors.lightYellow} padding="68px 0" height="auto" margin="80px 0 0 0">
+        <H1
+          type="h1"
+          zIndex="5"
+          fontSize="13px"
+          lineHeight="16px"
+          fontWeight="700"
+          letterSpacing="0.05em"
+          color="#606060"
+        >Coding Bootcamp</H1>
 
-        />
+        <H2 type="h2" zIndex="5" fontSize="48px" lineHeight="60px" margin="16px 0px 19px 0px">
+          {`< ${yml.banner.tagline} >`}
+        </H2>
 
-      </WrapperImage>
-      <Wrapper margin="0 0 10px 0">
-        <H2 margin="5px 0">{yml.content.title}</H2>
+        <H3 type="h3" fontSize="22px" lineHeight="26px" margin="5px 0">{yml.content.title}</H3>
         {yml.content.message.split("\n").map((m, i) =>
           <Paragraph key={i} align="center">{m}</Paragraph>
         )}
+      </Div>
 
-      </Wrapper>
-      <Wrapper margin="0 0 50px 0">
-        <H2 margin="10px 0" fontSize="24px">{yml.social.title}</H2>
-        {session != undefined && session.location != null && Array.isArray(session.location.socials) && session.location.socials.map((item, index) => {
-          return (
-            <Row justifyContent="center" key={index} display="flex" >
-              <Column size="8" size_sm="12" size_md="10" style={{position: "relative"}} >
-                <label className="checkbox-container">
-                  <input onChange={() => updateStatus(index, !checkStatus[index].status)} type="checkbox" id="scales" name="scales"
-                    checked={checkStatus[index].status} />
-                  <span className="checkmark" ></span>
-                  <H4 align="left" align_sm="left">
-                    <span style={{margin: "0 10px 0 0"}}>
-                      <Icon icon={checkStatus[index].label} width="24" height="24" color={checkStatus[index].iconColor} fill={checkStatus[index].iconColor} />
-                    </span>{item.social_name}
-                  </H4>
-                </label>
-                {checkStatus[index].status &&
-                  <Anchor to={`${item.social_link}`}>
-                    <Button variant="full" style={{position: "absolute", right: "0", top: "0"}} width="200px" color={Colors.blue} textColor={Colors.white}>
-                      {`${yml.social.button_text} ${item.social_name}`}
-                    </Button>
-                  </Anchor>
-                }
-              </Column>
-            </Row>
-          )
-        })}
-        <Column margin="50px 0 0 0" size="12" align="center">
-          <Link to="/blog"><Button variant="outline" width="150px" color={Colors.blue} textColor={Colors.white}>{yml.content.button}</Button></Link>
-        </Column>
-      </Wrapper>
+      <GridContainer flexDirection="column" gridColumn_tablet="3 / span 10" margin="58px 0 0 0">
+        <H3 type="h3" margin="10px 0" fontSize="15px" lineHeight="22px" fontWeight="400" letterSpacing="0.05em">
+          {yml.social.title}
+        </H3>
+        <Div margin="15px auto" gap="40px">
+          {   
+            socials?.map((ln, i) => (
+              <Anchor
+                key={i}
+                cursor="pointer"
+                to={ln.social_link}
+                textAlign="left"
+                fontSize="13px"
+                lineHeight="22px"
+                fontWeight="400"
+                textTransform="uppercase"
+                color={Colors.black}
+              >
+                {ln.social_name && (
+                  <Icon
+                    icon={ln.social_name.toLowerCase()}
+                    // style={{ margin: '0 15px 0 0' }}
+                    color={Colors.black}
+                    fill={Colors.black}
+                    height="42px"
+                    width="42px"
+                  />
+                )}
+              </Anchor>
+            )
+          )}
+        </Div>
+        <HR background="none" border="1px solid #EBEBEB" height="0px" margin="30px 0"/>
 
+        <H3 type="h3" margin="20px 0 40px 0" fontSize="15px" lineHeight="22px" fontWeight="400" letterSpacing="0.05em">
+          {yml.content.articles_title}
+        </H3>
+
+        <GridContainer containerColumns_tablet="0fr repeat(12, 1fr) 0fr" columns_tablet="3">
+        {
+          blog_posts.map((item, i) => {
+            return (
+            <>
+              <Div key={i} flexDirection="Column" margin="0 0 87px 0">
+                  {
+                      item.node.frontmatter.image !== "" && (
+                      <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                          <LazyLoad height={10} scroll={true} once={true}>
+
+                          <RoundImage
+                              url={item.node.frontmatter.image !== null ? item.node.frontmatter.image :  yml.banner.no_image}
+                              bsize="cover"
+                              border="0px"
+                              position="center"
+                              width="100%"
+                              height="329px"
+                          />
+                          </LazyLoad>
+                      </Link>
+                      )
+                  }
+
+                  {/* Boton */}
+                  <Div flexDirection_md="row" flexDirection="column" justifyContent="left">
+                      <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                          <Button
+                              variant="outline"
+                              border={`1px solid ${Colors.darkGray}`}
+                              color={Colors.darkGray}
+                              font='"Lato", sans-serif'
+                              margin="20px 10px 20px 0"
+                              pointer
+                              textColor={Colors.darkGray}
+                              fontSize={"13px"}>
+                              {item.node.frontmatter.cluster?.replace(/-|_/g,' ') || "4Geeks"}
+                          </Button>
+                      </Link>
+                  </Div>
+
+                  {/* Titulo */}
+                  <Div>
+                      <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                          <H4
+                              textAlign="left"
+                              align_sm="left"
+                              margin="0 0 30px 0"
+                              fs_xs="20px"
+                              fs_sm="24px"
+                              fs_md="16px"
+                              fs_lg="20px"
+                              fontSize="22px"
+                          >
+                              {item.node.frontmatter.title}
+                          </H4>
+                      </Link>
+                  </Div>
+
+                  {/* Comentario acerca del post */}
+                  <Div>
+                      <Paragraph fontWeight="300"
+                          fontSize="15px"
+                          color="#3A3A3A"
+                          textAlign="left"
+                          margin="0 0 15px 0">
+                          {item.node.frontmatter.excerpt}
+                      </Paragraph>
+                  </Div>
+
+                  {/* Link de leer articulo */}
+                  <Div>
+                      <Paragraph fontSize="13px"
+                          color="#0097cd"
+                          margin="0 0 0 0"
+                          textAlign="left">
+                          <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                              {`Read more >`}
+                          </Link>
+                      </Paragraph>
+                  </Div>
+
+              </Div>
+              </>
+          )}
+          )}
+          </GridContainer>
+      </GridContainer>
     </>
   )
 };
@@ -106,41 +207,100 @@ export const query = graphql`
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            meta_info{
-                title
-                description
-                image
-                keywords
-            }
-            banner{
-                tagline
-                sub_heading
-                image{
-                    childImageSharp {
-                      gatsbyImageData(
-                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                        width: 1800
-                        quality: 100
-                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                      )
-                      # fluid(maxWidth: 1800, quality: 100){
-                      #   ...GatsbyImageSharpFluid_withWebp
-                      # }
-                    }
-                  } 
-            }
-            content{
-                title
-                message
-                button
-            }
-            social{
+          meta_info{
               title
-              message
-              button_text
-            }
-            
+              description
+              image
+              keywords
+          }
+          banner{
+            tagline
+            sub_heading
+            image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1800
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 1800, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            } 
+          }
+          content{
+            title
+            message
+            button
+            articles_title
+          }
+          social{
+            title
+            message
+            button_text
+          }         
         }
+      }
+    }
+    featured: allMarkdownRemark (
+        limit: 3
+        sort: {fields: frontmatter___date, order: DESC},
+        filter: {
+            frontmatter: {
+                status: {eq: "published"}
+            }
+            fields: {
+                lang: {eq: $lang}
+            }
+        }
+    ){
+      edges {
+          node {
+              frontmatter {
+              author
+              date
+              image
+              slug
+              title
+              excerpt
+              featured
+              status
+              cluster
+              }
+          }
+      }
+    }
+    posts: allMarkdownRemark (
+        limit: 3
+        sort: {fields: frontmatter___date, order: DESC},
+        filter: {
+            frontmatter: {
+                status: {eq: "published"}
+            }
+            fields: {
+                lang: {eq: $lang}
+            }
+        }
+    ){
+      edges {
+          node {
+              frontmatter {
+                  author
+                  date
+                  image
+                  title
+                  excerpt
+                  featured
+                  status
+                  cluster
+              }
+              fields{
+                  lang
+                  slug
+              }
+          }
       }
     }
   }
