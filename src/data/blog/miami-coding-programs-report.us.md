@@ -47,7 +47,7 @@ There is a[ long list](https://www.coursereport.com/schools?track=&subject=&type
 If you are interested in getting more involved in the world of programming, and you are in Florida, these are the academies you have to consider:
 
 
-### [**4Geeks Academy**](/)
+### [**4Geeks Academy**](/us)
 
 
 Coding Bootcamp focused on Full Stack Software, Web or Front-End development. These programs enable you to face many different coding challenges. Coding is not only about developing websites but also about being capable of working in the fields of Machine Learning, Data Analytics, Artificial Intelligence, Virtual Reality, and so on. You will sure very likely land a job afterward (91% Placement).  

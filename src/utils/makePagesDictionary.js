@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { walk, loadYML, fail, success } = require("../test/_utils");
+const file = require('./dictionaries/pages.json');
 
 let toKeyValue = (array) => {
   return Object.fromEntries(array);
@@ -114,12 +115,13 @@ const onCreateLangSwitcherData = () => {
 
         Location_ES_US.push(...Location_US_ES);
         All_dictionary.push(toKeyValue(Location_ES_US));
-
-        fs.writeFile(`${__dirname}/pathDictionary.json`,
-          JSON.stringify(...All_dictionary),
+        
+        file.yml = All_dictionary;
+        fs.writeFile(`${__dirname}/dictionaries/pages.json`,
+          JSON.stringify(file),
           (err) => {
             if (err) return console.log(err);
-            success(`\npathDictionary => /src/utils/pathDictionary.json\n`);
+            success(`\✅ DICTIONARY: Pages created => ${__dirname}/dictionaries/pages.json\n`);
         });
 
       });

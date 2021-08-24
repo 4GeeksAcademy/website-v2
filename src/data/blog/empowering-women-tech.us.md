@@ -12,7 +12,7 @@ featured: "false"
 
 ---
 
-We’ve all seen the statistics about [women in tech](/women-in-tech-2017).  Gender gaps is a reality, but we are not going to talk about those gaps anymore; we are celebrating gender diversity at 4Geeks Academy.  That’s why we are so proud and happy to announce that our Cohort III at Downtown Miami has a **60% female enrollment**!
+We’ve all seen the statistics about [women in tech](/us/trends-and-tech/women-in-tech-2017).  Gender gaps is a reality, but we are not going to talk about those gaps anymore; we are celebrating gender diversity at 4Geeks Academy.  That’s why we are so proud and happy to announce that our Cohort III at Downtown Miami has a **60% female enrollment**!
 
 ![](https://storage.googleapis.com/4geeks-academy-website/blog/2018/04/Screen-Shot-2018-04-11-at-9.35.05-PM-1.png)
 

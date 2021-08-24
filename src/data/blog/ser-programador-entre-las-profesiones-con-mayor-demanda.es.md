@@ -111,7 +111,7 @@ En Venezuela, Alejandro Sánchez, CEO de 4Geeks, comentó que según los último
 
 Siendo la carrera del programador de las más demandas actualmente, que se perfila entre las profesiones con mayor auge en los próximos años, y considerando que se presta para trabajar de manera remota; lo ideal sería prepararse con los mejores y en el menor tiempo posible.
 
-De esta premisa es que surgen los _bootcamps_ como [4Geeks Academy](/), donde en tan solo 14 semanas, te puedes formar con los mejores instructores, garantizando que en un promedio de 3 meses puedas recuperar la inversión realizada, ya que las probabilidades de ser contratado es superior a otras profesiones.
+De esta premisa es que surgen los _bootcamps_ como [4Geeks Academy](/es), donde en tan solo 14 semanas, te puedes formar con los mejores instructores, garantizando que en un promedio de 3 meses puedas recuperar la inversión realizada, ya que las probabilidades de ser contratado es superior a otras profesiones.
 
 
 

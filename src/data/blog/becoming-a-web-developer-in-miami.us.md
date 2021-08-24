@@ -47,7 +47,7 @@ Here is a list of  [the top sites to learn online.](https://www.hongkiat.com/b
 
 Learning online can be dificult.  You need to have discipline, have people around to ask questions, and, it can take a lot more time than learning in a classroom environment.  That's one of the reasons coding bootcamps make sense.
 
-In the past 10 months, 3 coding bootcamps have arrived to Miami: Wyncode, IronHack and 4Geeks Academy.  All of them are great choices for learning to code.  Here you can [learn the main differences between each of them.](//wyncode-ironhack-and-4geeks-academy-comparison/)
+In the past 10 months, 3 coding bootcamps have arrived to Miami: Wyncode, IronHack and 4Geeks Academy.  All of them are great choices for learning to code.  Here you can [learn the main differences between each of them.](/us/coding-bootcamps/wyncode-ironhack-and-4geeks-academy-comparison)
 
 **Part-time options**
 

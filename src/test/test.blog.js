@@ -3,6 +3,9 @@ var colors = require('colors')
 const path = require("path")
 const {walk, loadMD, loadYML, fail, success, localizeImage} = require("./_utils")
 const twitterUser = require('../utils/twitter')
+const markdownLinkExtractor = require('markdown-link-extractor');
+const dictionaryOf = require('../utils/dictionaries/pages.json')
+const dictionaryOfRedirects = require('../utils/dictionaries/redirects.json')
 
 const front_matter_fields = [
     {key: "slug", type: "string", mandatory: true},
@@ -41,13 +44,31 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
     }).join("\n").red + "\n")
 
     const global_clusters = getClusters();
-
-
     for (let i = 0; i < _files.length; i++) {
         const _path = _files[i];
 
         try {
             const content = loadMD(_path)
+            const regxUrl = /(?:https?|ftp|mailto):[\n\S]+/g;
+            const regxExtension = /^[^.]+$|\.(?!(png|jpg|pdf)$)([^.]+$)/
+            
+            const links = markdownLinkExtractor(content.body, false);
+            links.forEach(link => {
+                let webLinks = link.match(regxUrl)
+                let filteredExtensions = link.match(regxExtension)
+
+                if(!webLinks && filteredExtensions)
+                {
+                    const arrOfMDDictionary = Object.keys(dictionaryOf.md[0])
+                    const arrOfYMLDictionary = Object.keys(dictionaryOf.yml[0])
+
+                    arrOfMDDictionary.includes(`${link}`) !== true 
+                    && arrOfYMLDictionary.includes(`${link}`) !== true
+                    && dictionaryOfRedirects.includes(`${link}`) !== true
+                    && fail(`Non-existent link found: "${link}"\nPATH: ${_path}\n`)
+                }
+            });
+
             const frontmatter = content.attributes
             const meta_keys = Object.keys(frontmatter)
             const autor_keys = Object.keys(twitterUser)
@@ -98,5 +119,5 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             fail(error.message || error)
         }
     }
-    success("All Blog Markdown's have correct syntax")
+    success("All Blog Markdown's have correct syntax and absolute links matched successfully")
 });
