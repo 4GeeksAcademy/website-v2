@@ -147,8 +147,8 @@ prices:
           heading_two: "WHEN YOU GET A JOB"
           sub_heading: "Income Share Agreement (ISA) with Student Finance"
         content:
-          price: "120€"
-          price_info: "from 120€ per month"
+          price: "160€"
+          price_info: "from 160€ per month"
         button:
           button_text: "APPLY NOW"
     ## *****************

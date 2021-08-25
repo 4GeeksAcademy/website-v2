@@ -10,7 +10,7 @@ import {StaticQuery, graphql} from 'gatsby';
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
 
-const Layout = ({children, seo, context, landingFooter, emptyNavbar}) => {
+const Layout = ({children, seo, context, landingFooter, landingNavbar}) => {
   const {session} = React.useContext(SessionContext);
 
   return (
@@ -128,24 +128,28 @@ const Layout = ({children, seo, context, landingFooter, emptyNavbar}) => {
         return (
           <>
             <SEO {...seo} context={context} />
-              <Navbar
-                emptyNavbar={emptyNavbar}
-                locationCity={myLocations}
-                onLocationChange={(slug) => setLocation(slug)}
-                menu={myNavbar.node.navbar}
-                languageButton={myNavbar.node.language_button}
-                button={myNavbar.node.button}
-                lang={context.lang}
-              />
-              <NavbarMobile
-                emptyNavbar={emptyNavbar}
-                locationCity={myLocations}
-                onLocationChange={(slug) => setLocation(slug)}
-                menu={myNavbar.node.navbar}
-                languageButton={myNavbar.node.language_button}
-                button={myNavbar.node.button}
-                lang={context.lang}
-              />
+          {
+            landingNavbar === true 
+            ? null
+            : <>    
+                <Navbar
+                  locationCity={myLocations}
+                  onLocationChange={(slug) => setLocation(slug)}
+                  menu={myNavbar.node.navbar}
+                  languageButton={myNavbar.node.language_button}
+                  button={myNavbar.node.button}
+                  lang={context.lang}
+                />
+                <NavbarMobile
+                  locationCity={myLocations}
+                  onLocationChange={(slug) => setLocation(slug)}
+                  menu={myNavbar.node.navbar}
+                  languageButton={myNavbar.node.language_button}
+                  button={myNavbar.node.button}
+                  lang={context.lang}
+                />
+              </>
+          }
             <GlobalStyle />
             <>
               {children}

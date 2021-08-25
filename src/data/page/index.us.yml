@@ -6,7 +6,7 @@ meta_info:
   description: "The #1 Top coding bootcamp with over 1,000 graduates and life-long career support. USA, Spain, Chile, Venezuela and Costa Rica Coding Bootcamp."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp Miami, Learn to code miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa"
-  redirects: ["/home", "/us/home", "/us/index", "/en/home"]
+  redirects: ["/home", "/us/home", "/us/index", "/en/home", "/us"]
 header_data:
   tagline: Coding Bootcamp
   title: Empower Your Life With Coding Skills

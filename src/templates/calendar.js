@@ -209,9 +209,9 @@ const Calendar = (props) => {
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
                   <Div>
                     <Link to={locations[pageContext.lang][m.academy.slug] || ""}>
-                      <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
+                      <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name} {m.academy.slug === 'online' && '(online)'}</Paragraph>
                     </Link>
-                    {m.academy.slug != "online" && <Paragraph textAlign="left" margin="0 0 0 3px">
+                    {m.academy.slug !== "online" && m.academy.slug !== "online-pt-1" && <Paragraph textAlign="left" margin="0 0 0 3px">
                       {locationText[pageContext.lang]} <Link color={Colors.blue} to={locations[pageContext.lang]['online'] || ""}>{`Online`}</Link>
                     </Paragraph>}
                   </Div>

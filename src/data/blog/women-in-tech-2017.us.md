@@ -16,7 +16,7 @@ Women in tech still represent a small share of the workforce.  Not only are gen
 
 ![](/wp-content/uploads/2018/01/Picture12.png)
 
-A global technology revolution is taking place, and if women are not part of it, the future for women’s rights is desolate.  [4Geeks Academy](/) **and** [Bridges Unite](https://www.bridgesunite.com/)
+A global technology revolution is taking place, and if women are not part of it, the future for women’s rights is desolate.  [4Geeks Academy](/us) **and** [Bridges Unite](https://www.bridgesunite.com/)
 
 acknowledge the importance of bringing women into tech and have decided to partner in a relationship that will bring coding education opportunities to women in Florida.
 

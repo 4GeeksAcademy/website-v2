@@ -11,7 +11,8 @@ meta_info:
   redirects: [""] # <--- URL redirections to avoid 404 errors
   
   # this UTM fields will be included in the CRM
-  utm_course: full-stack
+  # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
+  utm_course: ["full-stack"] 
   utm_location: madrid-spain
   automation: request_more_info #optional, this is the default value
   tag: soft #optional, this is the default value
@@ -68,6 +69,9 @@ why_4geeks:
   position: 2
   heading: "Porqué 4Geeks"
   sub_heading: "Porque somos los mejores"
+  footer:
+    text: "Ver opciones de financiación"
+    text_link: "#"
 
 geeks_vs_others:
   position: 3
@@ -93,10 +97,25 @@ who_is_hiring:
 
 badges:
   position: 3
-  heading: " "
+  heading: ""
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
+
 
 # Possible layours: [two_column_left, two_column_right]
 components:
+  - name: first_syllabus_form
+    position: 4
+    layout: syllabus
+    button:
+      text: "Instant Download"
+    heading:
+      text: "Download the course syllabus"
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: more_testimonials
     position: 8
     layout: two_column_left 

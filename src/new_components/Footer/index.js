@@ -175,7 +175,7 @@ const Footer = ({ yml }) => {
                                         color={formStatus.status === "loading" ? Colors.darkGray : Colors.black}
                                         textColor={Colors.white}
                                         disabled={formStatus.status === "loading" ? true : false}
-                                    >{formStatus.status === "loading" ? "Loading..." : <Icon icon="email" height="16px" width="16px" color={Colors.white} fill={Colors.white} />}   
+                                    >{formStatus.status === "loading" ? "Loading..." : <Icon icon="send" height="16px" width="16px" color={Colors.white} fill={Colors.white} />}   
                                     </Button>
                                 </Form>
                             </Div></>}

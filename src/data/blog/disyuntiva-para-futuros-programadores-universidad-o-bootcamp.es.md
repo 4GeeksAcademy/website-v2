@@ -48,7 +48,7 @@ Además, según el estudio, la matrícula de estudiantes en carrera de informát
 
 **Costos de estudiar en Venezuela…**
 
-Una universidad en Venezuela, para una carrera de 5 años, puede estar en el orden de los **Bs****.** **1.200.000**. Por un monto significativamente menor, una persona puede prepararse con los mejores en programación, y recuperar su inversión en un promedio de tres meses trabajando después de graduarse de una instituciónón como [**4Geeks Academy.**](//es/inicio/)
+Una universidad en Venezuela, para una carrera de 5 años, puede estar en el orden de los **Bs****.** **1.200.000**. Por un monto significativamente menor, una persona puede prepararse con los mejores en programación, y recuperar su inversión en un promedio de tres meses trabajando después de graduarse de una instituciónón como [**4Geeks Academy.**](/es/inicio)
 
 ¿Otra ventaja? Estos profesionales se pueden mercadear internacionalmente, no teniendo fronteras para desarrollarse. El campo laboral se expande fuera de Venezuela. E incluso, estando en el país, pueden ser un excelente candidato para compañías y transnacionales que buscan contratar _developers_ de alto nivel.
 

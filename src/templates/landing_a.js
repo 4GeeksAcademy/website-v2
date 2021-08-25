@@ -3,10 +3,11 @@ import {graphql, navigate} from 'gatsby';
 import {landingSections} from '../new_components/Landing';
 import FollowBar from "../new_components/FollowBar"
 import LeadForm from "../new_components/LeadForm";
-import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading'
-import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sections'
-import {Colors, StyledBackgroundSection} from '../new_components/Styling'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading';
+import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sections';
+import {Colors, StyledBackgroundSection} from '../new_components/Styling';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import LandingNavbar from '../new_components/NavbarDesktop/landing';
 
 
 import BaseRender from './_baseLandingLayout'
@@ -20,10 +21,22 @@ const Landing = (props) => {
   const [inLocation, setInLocation] = React.useState("");
 
   const applySchollarship = data.allLandingYaml.edges[0].node?.apply_schollarship
-  const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
+  const landing_utm_course = yml.meta_info.utm_course
+
+  const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+    return landing_utm_course.filter((array_el) => {
+      return course_el.bc_slug === array_el;
+    }).length !== 0;
+  });
+//   const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
+//     label: p.text,
+//     value: p.bc_slug
+// }))
+  console.log("FILTERED COURSES", filteredPrograms)
+  const programs = filteredPrograms.map(p => ({
     label: p.text,
     value: p.bc_slug
-}))
+  }))
 
   useEffect(() => {
     let _components = {};
@@ -42,7 +55,7 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: yml.meta_info.utm_course, valid: true},
+    course: {type: "hidden", value: `${programs <=1 ? (programs[0].value) : (yml.meta_info.utm_course)}`, valid: true},
     utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
@@ -50,6 +63,11 @@ const Landing = (props) => {
 
   return (
     <>
+      <LandingNavbar
+        buttonText={yml.navbar?.buttonText || pageContext.lang === "us" ? "Apply" : "Aplicar"}
+        link={yml?.navbar?.url || ''}
+        lang={pageContext.lang}
+      />
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
         buttonText={yml.follow_bar.button.text}
         phone={session && session.location && session.location.phone}
@@ -226,7 +244,7 @@ const Landing = (props) => {
           })
       }
 
-      <GridContainerWithImage background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
+      <GridContainerWithImage id="apply_schollarship" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
         <Div flexDirection="column" margin="0" margin_tablet="0 50px" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
         gridArea_tablet={(applySchollarship?.imageSide) === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
@@ -279,7 +297,7 @@ const Landing = (props) => {
             )
           }
           <StyledBackgroundSection
-            height={`100%`}
+            height={`350px`}
             // width={`85%`}
             borderRadius={`3px`}
             image={applySchollarship 
@@ -341,6 +359,10 @@ export const query = graphql`
               phone{
                 text
               }
+            }
+            navbar {
+              buttonText
+              url
             }
             form{
               heading
@@ -409,6 +431,10 @@ export const query = graphql`
               position
               heading
               sub_heading
+              footer {
+                text
+                text_link
+              }
             }
             alumni_projects{
               position
@@ -731,6 +757,6 @@ export const query = graphql`
 `;
 
 export default BaseRender(Landing, {
-  // navbar: true,
+  landingNavbar: true,
   landingFooter: true,
 });

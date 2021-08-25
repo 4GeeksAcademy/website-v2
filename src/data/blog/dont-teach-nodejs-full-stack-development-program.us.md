@@ -67,6 +67,6 @@ Node grew like crazy in 2015-2016, but if you keep reading about Node you will s
 ## In conclusion
 
 
-We love Node!  It deserves a spot in [some of our Workshops](/us/next-dates?type=events), but it's not the moment to include it as part of our main Full-Stack Development program.
+We love Node!  It deserves a spot in [some of our Workshops](/us/next-dates), but it's not the moment to include it as part of our main Full-Stack Development program.
 
 
