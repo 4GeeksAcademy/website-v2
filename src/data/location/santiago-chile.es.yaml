@@ -6,7 +6,12 @@ meta_info:
   image: "https://storage.googleapis.com/4geeks-academy-website/santiago-es.png"
   keywords: "Coding Bootcamp Santiago"
   redirects:
-    ["/chile", "/es/inicio/santiago-de-chile", "/es/location/santiago-chile-es"]
+    [
+      "/chile", 
+      "/es/inicio/santiago-de-chile", 
+      "/es/location/santiago-chile-es",
+      "/es/location/santiago-de-chile-es"
+    ]
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:

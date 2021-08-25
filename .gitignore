@@ -2,6 +2,7 @@
 .cache
 node_modules
 yarn-error.log
+build-log.log
 
 # Build directory
 /public

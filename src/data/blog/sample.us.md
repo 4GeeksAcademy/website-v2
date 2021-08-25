@@ -11,6 +11,8 @@ status: "published"
 featured: "true"
 unlisted: "true"
 cluster: "learn-to-code"
-
+redirects: [
+    "/some/blog/path"
+]
 ---
 
