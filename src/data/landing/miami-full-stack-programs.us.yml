@@ -2,8 +2,8 @@ meta_info:
   slug: full-stack-programs # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Coding Classes Online and in person, learn to code and get a better professional career"
-  description: "Coding has become an essencial knowledge for every career, take coding classes and learn to code and have a better life."
+  title: "Coding Classes Online and in person, learn to code and get a better career"
+  description: "Coding has become an essencial skill for every career, take coding classes, learn to code and have a better life."
   image: "/images/bg/main-bg.jpg"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
 
@@ -20,7 +20,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Get a Partial Scholarship"
-  motivation: "If you ENROLL before March 31st, 2021."
+  motivation: "If you ENROLL before the end of the month."
   button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -37,16 +37,16 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No previous experience or coding skills required.
-    - Part-Time or Full-Time Schedules Available.
+    - Developers make (entry level avg) $55k per year in Florida.
+    - Part-Time focused. No need to stop your life.
     - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
-    - Junior developers make avg $55k per year in Florida.
+    - No previous experience or coding skills required.
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Get a Partial Scholarship if you ENROLL before October 30th, 2020."
-    text_mobile: "Get a Partial Scholarship if you ENROLL before October 30th, 2020."
+    text: "Get a Partial Scholarship if you ENROLL before the end of the month"
+    text_mobile: "Get a Partial Scholarship if you ENROLL before the end of the month."
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -91,8 +91,8 @@ who_is_hiring:
 
 alumni_projects:
   position: 9
-  heading: "Projects you will be able to make"
-  sub_heading: "Take a look at our previous student projects"
+  heading: "Projects you will be able to develop"
+  sub_heading: "Take a look at some of our alumni projects"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
@@ -141,7 +141,7 @@ components:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     content:
       text:
-        "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
+        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
 # why_python:
