@@ -38,10 +38,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
+    - Developers make $55k (Entry level avg) p/year in Florida.
     - No previous experience or coding skills required.
     - Part-Time focused. No need to stop your life. Online or in our beautiful campus in Miami.
-    - Lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
-    - Jr. Developers make $55k (avg) per year in Florida.
+    - Lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal.
 
 follow_bar:
   position: "top" # top, bottom, hidden
