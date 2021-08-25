@@ -209,6 +209,7 @@ const Apply = (props) => {
                                 bgColor={Colors.white}
                                 options={programs}
                                 value={formData.course.value}
+                                defaultValue={formData.course.value}
                                 placeholder={yml.left.course_title.open}
                                 onChange={(value, valid) => setVal({...formData, course: {value, valid}})}
                             />
@@ -219,6 +220,7 @@ const Apply = (props) => {
                                 bgColor={Colors.black}
                                 options={locations && locations}
                                 value={formData.location.value}
+                                defaultValue={formData.location.value}
                                 placeholder={yml.locations_title}
                                 onChange={(value, valid) => {
                                     setVal({...formData, location: {value, valid}})

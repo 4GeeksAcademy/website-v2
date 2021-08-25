@@ -1,5 +1,5 @@
 var colors = require('colors')
-const {walk, loadYML, empty, fail, success} = require("./_utils")
+const {walk, loadYML, empty, fail, warn, success, validateObjectProperties} = require("./_utils")
 
 const metas = [
     {key: "slug", type: "string", mandatory: true},
@@ -10,6 +10,7 @@ const metas = [
     {key: "redirects", type: "array"}
 ]
 
+let duplicateDescriptions = {}
 walk(`${__dirname}/../data/`, function (err, files) {
     if (err) fail("Error reding the YML files: ", err)
     const _files = files.filter(f =>
@@ -49,6 +50,23 @@ walk(`${__dirname}/../data/`, function (err, files) {
                     }
                 }
             });
+
+            if(doc.yaml.meta_info.description === undefined || !doc.yaml.meta_info.description) warn("YML is missing description: " + _path)
+            else{
+                if(duplicateDescriptions[doc.yaml.meta_info.description] !== undefined)  warn(`Duplicate yml description between these two: \n ${_path.red} \n ${duplicateDescriptions[doc.yaml.meta_info.description].red}`)
+                else duplicateDescriptions[doc.yaml.meta_info.description] = _path
+            }
+
+            try{
+                validateObjectProperties(doc.yaml, {
+                    alt: (val) => {
+                        if(!val || val === "") throw Error("Missing image alt")
+                    }
+                })
+            }
+            catch(error){
+                warn(`${error.message} in ${error.path} for file: \n ${_path}`)
+            }
         }
     });
     success("All SEO Content is OK!")
