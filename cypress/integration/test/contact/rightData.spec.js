@@ -2,9 +2,6 @@ context("Test Contact page with correct data", () => {
 
   it('Visit the Contact page with path "/us/contact"', () => {
     cy.visit("/us/contact").wait(500);
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq("/us/contact");
-    });
   });
 
   it("Call the form and fill with right values", () => {
@@ -33,8 +30,8 @@ context("Test Contact page with correct data", () => {
     });
   });
 
-  it("Submit the form with correct values", () => {
-    cy.get('Button[type="submit"]').contains("Send").wait(2500)
+  it("Submit and request to api", () => {
+    cy.get('Button[type="submit"]').contains("Send")
     // cy.get("[data-cy=thankfulness]").contains("Thank you 🤣 Gracias");
     cy.request({
       url: `https://breathecode-cypress.herokuapp.com/v1/marketing/lead`,
@@ -56,6 +53,12 @@ context("Test Contact page with correct data", () => {
         utm_language: "us",
         utm_url: "http://localhost:8080/us/contact",
       }
+    }).then((response) => {
+      // cy.log(...response)
+      expect(response.body).to.have.property('first_name', 'Rowan');
+      expect(response.body).to.have.property('last_name', 'Dash');
+      expect(response.body).to.have.property('email', 'rodash@outlook.com');
+      expect(response.body).to.have.property('city', 'Miami');
     });
   });
 });

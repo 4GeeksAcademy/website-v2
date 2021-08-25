@@ -12,13 +12,13 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: full-stack
+  utm_course: ["full-stack"]
   utm_location: madrid-spain
 
 form:
-  # posible fields: "first_name", "last_name", "full_name", "phone", "email", "programSelector"
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email", "programSelector"]
+  fields: ["full_name", "phone", "email"]
   heading: "Solicita tu beca ya"
   button_label: Solicita tu beca ya
   redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website
@@ -117,7 +117,7 @@ choose_your_program:
       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
     
     text_link: Solicita tu beca
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    link: "#" # moves to start position
     
   - title: "Ingeniero de Software"
     sub_title: "Nivel 2"
@@ -130,17 +130,19 @@ choose_your_program:
       Disponible sólo en modalidad part-time.
       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
 
-      
-    
     text_link: Solicita tu beca
-    link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+    link: "#"
+
 
 why_4geeks:
-  position: 8
-  heading: "Escuchalo de nuestros alumnos"
+  position: 7
+  heading: "Escúchalo de nuestros alumnos"
   sub_heading: ""
+  footer:
+    text: "Ver opciones de financiación"
+    text_link: "/"
 
-apply_schollarship:
+apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
   image: "../../../static/images/comunity-support.png"
@@ -148,7 +150,7 @@ apply_schollarship:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: phyton_y_javascript
-    position: 7
+    position: 6
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from new_components/Styling/index.js) or color code ex: #C9F9F9
     image:

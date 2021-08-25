@@ -1,5 +1,5 @@
 import {defaultSession, locByLanguage} from "./actions"
-const pathDictionary = require("./utils/pathDictionary.json")
+const dictionaryOf = require("./utils/dictionaries/pages.json")
 
 const GOOGLE_KEY = "AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c"
 
@@ -88,7 +88,8 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
     var longitude = null;
     var langDestination = null;
     var pathsDictionary = {
-        ...pathDictionary,
+        ...dictionaryOf.yml[0],
+        ...dictionaryOf.md[0]
     }
     // session.pathDictionary[`${window.location?.pathname}`]
     // langDestination = pathsDictionary

@@ -37,7 +37,7 @@ Toda persona que quiera trabajar como *full-stack*, además, tiene que saber có
 
 ## *Frameworks* de JavaScript
 
-Para considerarte programador *full-stack*, es necesario que conozcas al menos un *framework* de JavaScript, en este punto te encontrarás muchísimos debates, pero los tres más utilizados en el mundo son: [React](https://es.reactjs.org/), [Vue](https://vuejs.org/) y [Angular](https://angular.io/). Cada academia de programación ha  decidido enseñar un *framework* diferente, cuestión de preferencias. En **[4Geeks Academy](/)** nos inclinamos por React, pero te dejaré a ti tomar esa decisión con números.
+Para considerarte programador *full-stack*, es necesario que conozcas al menos un *framework* de JavaScript, en este punto te encontrarás muchísimos debates, pero los tres más utilizados en el mundo son: [React](https://es.reactjs.org/), [Vue](https://vuejs.org/) y [Angular](https://angular.io/). Cada academia de programación ha  decidido enseñar un *framework* diferente, cuestión de preferencias. En **[4Geeks Academy](/es)** nos inclinamos por React, pero te dejaré a ti tomar esa decisión con números.
 
 ![imagen de google trends sobre el aumento de interés de ciertos lenguajes de programación](https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/hfl-03.png?raw=true)
 

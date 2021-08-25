@@ -69,11 +69,12 @@ const Side = ({video, image, heading, content, button, bullets}) => {
 
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
     const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
-    return <Div flexDirection_tablet="column" flexDirection="column" padding="36px 17px">
-        {heading && <H2 
+    return <Div flexDirection_tablet="column" flexDirection="column" padding="40px 20px" padding_tablet="36px 72px">
+        {heading && <H2 type="h2"
             textAlign_tablet="left"
-            lineHeight="60px"
-            fontSize={h_xs || "50px"} fs_xl={h_xl} fontSize_md={h_md} fontSize_sm={h_sm}
+            lineHeight="45px"
+            lineHeight_tablet="60px"
+            fontSize={h_xs || "30px"} fs_xl={h_xl} fontSize_md={h_md || "50px"} fontSize_sm={h_sm}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
         }
         {content && 
@@ -90,8 +91,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
         )}
 
         {button && <Button outline width="200px"
-            colorHoverText={Colors.white}
-            color={button.color || Colors.blue}
+            colorHoverText={Colors.blue}
             textColor={Colors.black}
             margin="2rem 0" padding=".35rem.85rem"
             onClick={() => {
@@ -167,7 +167,7 @@ Columns.defaultProps = {
 
 export const landingSections = {
     
-    in_the_news: ({session, pageContext, yml, course, location, index}) => <GridContainer key={index} p_sm="0" p_xs="30 0 0 0">
+    in_the_news: ({session, pageContext, yml, course, location, index}) => <GridContainer id="in_the_news" key={index} padding="40px 0" padding_tablet="50px 0">
         <H4 align="center" fontSize="18px" color={Colors.darkGray}
             margin="20px 0px 10px 0px"
             m_sm="20px auto"
@@ -176,6 +176,8 @@ export const landingSections = {
         </H4>
 
         <News
+            maxWidth="100px"
+            justifySelf="center"
             margin="40px 0 40px"
             limit={yml.limit || 3}
             location={location ? location : session && session.location && session.location.breathecode_location_slug}
@@ -187,6 +189,7 @@ export const landingSections = {
     about4Geeks: ({session, data, pageContext, yml, index}) => {
         return(
             <About4Geeks 
+                id="about4Geeks"
                 lang={data.allLandingYaml.edges[0].node.about4Geeks}
             />
         )
@@ -195,7 +198,7 @@ export const landingSections = {
     iconogram: ({session, data, pageContext, yml, index}) => {
         let content = data.allLandingYaml.edges[0].node.iconogram
         return(
-            <GridContainer background={Colors.lightYellow} columns="2" rows="2" columns_tablet="4" margin="0 0 58px 0" height="470px" height_tablet="320px" margin_tablet="0 0 78px 0">
+            <GridContainer id="iconogram" background={Colors.lightYellow} columns="2" rows="2" columns_tablet="4" margin="0 0 58px 0" height="470px" height_tablet="320px" margin_tablet="0 0 78px 0">
             {Array.isArray(content.icons) && content.icons?.map((item, i) => {
               return (
                 <IconsBanner icon={item.icon} index={i} title={item.title} />
@@ -209,6 +212,7 @@ export const landingSections = {
         let badges = data.allLandingYaml.edges[0].node.badges
         return(
             <Badges
+                id="badges"
                 lang={pageContext.lang}
                 background={Colors.verylightGray}
                 paragraph={badges.heading}
@@ -223,7 +227,7 @@ export const landingSections = {
         // <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
 
     syllabus: ({session, data, pageContext, yml, course, location, index}) =>
-        <GridContainer padding_tabletChild="0 8em" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
+        <GridContainer id="syllabus" padding_tabletChild="0px calc(55% - 30%)" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
             <Div
                 key={index}
                 flexDirection="column"
@@ -231,18 +235,14 @@ export const landingSections = {
                 size_tablet="12"
                 width="100%"
                 width_tablet="100%"
-                // size_lg="4"
-                // size_sm="6"
-                // size_xs="12"
                 margin="0"
                 textAlign_sm="center"
-                // margin_md="0 auto 0 70px"
             >
                 <H5 type="h5" fontSize="20px" padding="0 0 35px 0">{yml.heading.text}</H5>
                 <LeadForm
                     landingTemplate
                     layout="block"
-                    background={Colors.lightGray}
+                    background={Colors.verylightGray}
                     margin="0"
                     marginButton={`15px 0 30px auto`}
                     buttonBorderRadius="3px"
@@ -259,30 +259,12 @@ export const landingSections = {
                         utm_location: {type: "hidden", value: location, valid: true}
                     }}
                 />
-
-            {/* <LeadForm
-              landingTemplate
-              layout="block"
-              background={Colors.verylightGray}
-              margin="0"
-              formHandler={requestSyllabus}
-              heading={yml.form.heading}
-              motivation={yml.form.motivation}
-              sendLabel={yml.form.button_label}
-              redirect={yml.form.redirect}
-              inputBgColor="#F9F9F9"
-              lang={pageContext.lang}
-              fields={yml.form.fields}
-              data={preData}
-              justifyContentButton="center"
-              marginButton={`15px 0 30px auto`}
-            /> */}
             </Div>
         </GridContainer>
     ,
     geeks_vs_others: ({session, pageContext, yml, course, index}) => {
         return (
-            <React.Fragment id="Geeks_vs_others" key={index}>
+            <React.Fragment id="geeks_vs_others" key={index}>
                 <Title title={yml.heading} paragraph={yml.sub_heading} />
                 <GeeksVsOthers key={index} lang={pageContext.lang} limit={yml.total_rows} title={yml.heading} paragraph={yml.sub_heading} />,
             </React.Fragment>
@@ -293,7 +275,7 @@ export const landingSections = {
     program_details: ({session, pageContext, yml, data, index}) => {
         const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
         return (
-            <React.Fragment id="Program_details" key={index}>
+            <React.Fragment id="program_details" key={index}>
                 {/* <Title title={yml.heading} paragraph={yml.sub_heading} /> */}
                 <ProgramDetails details={course?.details} lang={pageContext.lang} />
                 <ProgramDetailsMobile details={course && course.details} />
@@ -305,7 +287,7 @@ export const landingSections = {
         // const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
         let chooseYourProgram = data.allLandingYaml.edges[0].node?.choose_your_program
         return (
-            <React.Fragment id="choose_your_programs" key={index}>
+            <React.Fragment id="choose_your_program" key={index}>
                 <Div width="100%" flexDirection="column">
                     <Div background={Colors.lightGray} alignSelf="center" height="2px" width="94%" width_tablet="63.4%"/>
                 </Div>
@@ -321,20 +303,24 @@ export const landingSections = {
         )
     },
 
-    testimonials: ({session, data, pageContext, yml, index}) => <Div id="Testimonials" key={index} flexDirection="column" margin="50px" margin_tablet="100px" m_sm="0" p_xs="0">
+    testimonials: ({session, data, pageContext, yml, index}) => <Div id="testimonials" key={index} flexDirection="column" margin="50px" margin_tablet="100px" m_sm="0" p_xs="0">
         <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
     </Div>,
 
-    why_4geeks: ({session, pageContext, yml, index}) => <Div id="Why_4Geeks" key={index} flexDirection="column" margin="0" padding="0">
+    why_4geeks: ({session, pageContext, yml, index}) => <Div id="why_4geeks" key={index} flexDirection="column" margin="0" padding="0">
         <Title
             title={yml.heading}
             paragraph={yml.sub_heading}
             paragraphColor={Colors.gray}
             variant="primary"
         />
-        <Why4Geeks landingTemplate lang={pageContext.lang} playerHeight="auto" />
+        <Why4Geeks
+            text={yml.footer?.text}
+            text_link={yml.footer?.text_link}
+            lang={pageContext.lang}
+            playerHeight="auto" />
     </Div>,
-    alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="Alumni_Projects" key={index} flexDirection="column" margin="0" margin_tablet="100px" padding="0">
+    alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="alumni_projects" key={index} flexDirection="column" margin="0" margin_tablet="100px" padding="0 0 60px 0" padding_tablet="0">
         {/* <Title
             size="10"
             title={yml.heading}
@@ -350,7 +336,7 @@ export const landingSections = {
         const hiring = data.allPartnerYaml.edges[0].node;
         let landingHiriging = data.allLandingYaml.edges[0].node?.who_is_hiring
 
-        return <Div id="Who_is_hiring" key={index} flexDirection="column" margin="100px 0" margin_tablet="100px" m_sm="0" p_xs="0">
+        return <Div id="who_is_hiring" key={index} flexDirection="column" margin="100px 0" margin_tablet="100px" m_sm="0" p_xs="0">
             <OurPartners
                 images={hiring.partners.images} 
                 margin="0"
@@ -368,28 +354,28 @@ export const landingSections = {
     },
 
 
-    divider: ({session, data, pageContext, yml, index}) => <Div flexDirection="column" key={index}
+    divider: ({session, data, pageContext, yml, index}) => <Div id="divider" flexDirection="column" key={index}
         height={yml.height[0]}
         lg={yml.height[1]}
         md={yml.height[2]}
         sm={yml.height[3]}
         xs={yml.height[4]}
     />,
-    two_column_left: ({session, data, pageContext, yml, index}) => <Div key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0 0 75px 0">
+    two_column_left: ({session, data, pageContext, yml, index}) => <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 14%" margin="0">
         <TwoColumn
             left={{image: yml.image, video: yml.video}}
             right={{heading: yml.heading, content: yml.content, button: yml.button,}}
             proportions={yml.proportions}
         />
     </Div>,
-    two_column_right: ({session, data, pageContext, yml, index}) => <Div key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0 0 75px 0">
+    two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0">
         <TwoColumn
             left={{heading: yml.heading, content: yml.content, button: yml.button}}
             right={{image: yml.image, video: yml.video,}}
             proportions={yml.proportions}
         />
     </Div>,
-    single_column: ({session, data, pageContext, yml, index}) => <Div key={index} flexDirection="column" padding="0px 0" padding_tablet="50px 14%">
+    single_column: ({session, data, pageContext, yml, index}) => <Div id="single_column" key={index} flexDirection="column" padding="0px 0" padding_tablet="50px 14%">
         <SingleColumn
             column={{
                 heading: yml.heading,
@@ -400,7 +386,7 @@ export const landingSections = {
             }}
         />
     </Div>,
-    columns: ({session, data, pageContext, yml, index}) => <Div key={index} flexDirection="column" margin="50px 0">
+    columns: ({session, data, pageContext, yml, index}) => <Div id="columns" key={index} flexDirection="column" margin="50px 0">
         {/* <Title
             size="10"
             title={yml.heading.text}

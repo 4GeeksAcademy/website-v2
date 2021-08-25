@@ -53,6 +53,6 @@ En resumen, podríamos decir que un instructor es: Una persona que domina teóri
 
 [![Arte-blog-4G-Julio-2](https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/Arte-blog-4G-Julio-21-672x1024-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/Arte-blog-4G-Julio-21-672x1024-1.png)
 
-En [4Geeks Academy](/), nuestros instructores no son el típico docente de universidades o tecnológicos. Debido al corto tiempo en que un estudiante debe aprender, el facilitador es un profesional de alto nivel, con excelente conocimiento de la materia y altamente eficaz en la comunicación, pues el tiempo requiere que la relación se establezca a corto plazo y de manera sumamente didáctica, que conecte con los estudiantes.
+En [4Geeks Academy](/es), nuestros instructores no son el típico docente de universidades o tecnológicos. Debido al corto tiempo en que un estudiante debe aprender, el facilitador es un profesional de alto nivel, con excelente conocimiento de la materia y altamente eficaz en la comunicación, pues el tiempo requiere que la relación se establezca a corto plazo y de manera sumamente didáctica, que conecte con los estudiantes.
 
 Nuestros instructores trabajan con el lado vocacional del aprendiz asegurándose que éste se pueda insertar en la industria. Siendo también que están actualizándose constantemente porque las tecnologías así lo exigen.

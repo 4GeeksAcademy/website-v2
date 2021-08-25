@@ -13,7 +13,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: full-stack
+  utm_course: ["full-stack"]
   utm_location: downtown-miami
 
 form:
@@ -118,7 +118,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+      link: "https://www.switchup.org/rankings/best-coding-bootcamps"
     button:
       text: "Read testimonials"
       color: null
@@ -137,9 +137,12 @@ components:
     layout: two_column_left
     image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    content:
+    heading:
       text:
         "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
+    # content:
+    #   text:
+    #     "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
 # why_python:

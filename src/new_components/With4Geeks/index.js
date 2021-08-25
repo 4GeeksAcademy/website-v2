@@ -7,7 +7,7 @@ import ReactPlayer from '../../new_components/ReactPlayer'
 import Fragment from "../../components/Fragment"
 import Icon from "../../components/Icon"
 
-export default ({lang, playerHeight, title, paragraph, background, landingTemplate}) => {
+export default ({lang, playerHeight, title, text, text_link, paragraph, background}) => {
   const data = useStaticQuery(graphql`
     query With4Geeks{
       allWith4GeeksYaml{
@@ -150,7 +150,7 @@ export default ({lang, playerHeight, title, paragraph, background, landingTempla
                 {i.footer.is_image ?
                   <Link to={i.footer.image_link}><RoundImage url={i.footer.image} bsize="contain" height="20px" position="left" /></Link>
                   :
-                  <Link to={i.footer.text_link}>
+                  <Link to={text_link || i.footer.text_link}>
                     <H4
                       textAlign="left"
                       width="100%"
@@ -158,7 +158,7 @@ export default ({lang, playerHeight, title, paragraph, background, landingTempla
                       lineHeight="15px"
                       fontWeight="400"
                       color={Colors.blue}
-                    >{i.footer.text}
+                    >{text || i.footer.text}
                     </H4>
                   </Link>
                 }

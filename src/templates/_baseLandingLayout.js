@@ -15,7 +15,7 @@ const BaseRender = (Page, options={}) => (props) => {
         return <div className="alert alert-danger">There was a problem loading the data</div>
     }
 
-    return <Layout emptyNavbar={options.landingNavbar} landingFooter={options.landingFooter} seo={yml.meta_info} context={pageContext}>
+    return <Layout landingNavbar={options.landingNavbar} landingFooter={options.landingFooter} seo={yml.meta_info} context={pageContext}>
         {/* <StickyBar /> */}
         <Page {...props} yml={yml} />
     </Layout>

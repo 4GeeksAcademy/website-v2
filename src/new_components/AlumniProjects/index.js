@@ -114,7 +114,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
                                 </H4>
                                 {item.alumni.map((alumni, i) => {
                                     return (
-                                        <Div key={i} justifyContent="start" margin={`0 0 20px 0`} display="flex" >
+                                        <Div key={i} justifyContent="start" margin={`0 0 20px 0`} gap="10px" display="flex" >
                                             <H4
                                                 textAlign="left"
                                                 fontWeight={`400`}

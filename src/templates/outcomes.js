@@ -222,6 +222,7 @@ const Outcomes = ({data, pageContext, yml}) => {
                             onClose={handleClose}
                         >
                             <LeadForm
+                            titleTextAlign="center"
                             style={{marginTop: "50px"}}
                             heading={yml.download.button_text}
                             motivation={yml.download.motivation}
