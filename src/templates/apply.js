@@ -77,6 +77,8 @@ const Apply = (props) => {
         let _utm_url = undefined;
         if (props.location.state) _utm_url = {value: props.location.state.prevUrl, valid: true};
 
+        console.log("_LOCATION:::", _location)
+
         setVal(_val => ({
             ..._val,
             utm_url: _utm_url,
@@ -87,6 +89,10 @@ const Apply = (props) => {
 
     let privacy = data.privacy.edges.find(({node}) => node.fields.lang === pageContext.lang);
     if (privacy) privacy = privacy.node;
+
+    console.log("LOCATIONS_&&:::", locations?.find(el => el.value === formData.location.value))
+    console.log("LOCATION_VALUE", formData.location.value)
+    // console.log("FormData:::", formData)
 
     return (
         <>
@@ -218,7 +224,7 @@ const Apply = (props) => {
                             <SelectRaw
                                 bgColor={Colors.black}
                                 options={locations && locations}
-                                value={formData.location.value}
+                                value={locations?.find(el => el.value === formData.location.value)}
                                 placeholder={yml.locations_title}
                                 onChange={(value, valid) => {
                                     setVal({...formData, location: {value, valid}})

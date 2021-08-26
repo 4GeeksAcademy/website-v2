@@ -35,8 +35,6 @@ const ThankYou = (props) => {
       ]
       );
   }
-  console.log("DATA:::", data)
-  console.log("YML:::", yml)
 
   const blog_posts = data.featured.edges
   return (
