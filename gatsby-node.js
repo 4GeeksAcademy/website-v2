@@ -58,10 +58,11 @@ exports.createPages = async (params) =>
     await createEntityPagesfromYml('Course', params) &&
     await createEntityPagesfromYml('Location', params) &&
     await createEntityPagesfromYml('Job', params) &&
-    await createEntityPagesfromYml('Landing', params, extraFields = ['utm_course', 'utm_location'],
+    await createEntityPagesfromYml('Landing', params, extraFields = ['utm_course', 'utm_location', 'visibility'],
         extraContext = (node) => {
             return {
-                utm_course: node.meta_info.utm_course + "." + node.fields.lang
+                utm_course: node.meta_info.utm_course + "." + node.fields.lang,
+                visibility: node.meta_info.visibility
             }
         }
     ) &&

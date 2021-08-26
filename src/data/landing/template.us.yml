@@ -17,6 +17,11 @@ meta_info:
   automation: request_more_info #optional, this is the default value
   tag: soft #optional, this is the default value
 
+navbar:
+  buttonText: "Solicitar" # this modifies the button text in the navbar
+  url: "#bottom"
+# └── url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
@@ -35,7 +40,9 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Más información"
-    path: "#top"
+    path: "#bottom" # #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
     text: "Llama "
 
