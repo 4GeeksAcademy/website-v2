@@ -180,7 +180,7 @@ const StyledImage = styled.div`
 `
 export const Img = React.memo(StyledImage);
 
-export const BackgroundSection = ({children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
+export const BackgroundSection = ({id, children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
 
     const thisImage = getImage(image)
 
@@ -189,6 +189,7 @@ export const BackgroundSection = ({children, className, image, height, width, bg
 
     return (
         <BackgroundImage
+            id={id}
             Tag="section"
             loading="eager"
             // fadeIn={false}

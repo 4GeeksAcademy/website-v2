@@ -9,13 +9,13 @@ const Heading = styled.h1`
   
   text-align: center;
   font-size: 30px;
-  margin: 10px 0;
+  margin: 0 0 50px 0;
   `;
 const Div = styled.div`
   font-family: 'Lato-Bold', sans-serif;
   
   text-align: center;
-  margin: 50px 0;
+  margin: 130px 0 40px 0;
   `;
 const Heading2 = styled.h2`
   font-family: 'Lato-Bold', sans-serif;

@@ -78,7 +78,7 @@ const Right = styled.div`
     width: 300px;
 `;
 
-const FollowBar = ({children, showOnScrollPosition, position, buttonText, phone, phoneText, onClick}) => {
+const FollowBar = ({children, showOnScrollPosition, position, buttonText, phone, phoneText, link}) => {
     const [show, setShow] = useState(showOnScrollPosition == null)
 
     useScrollPosition(({prevPos, currPos}) => {
@@ -96,7 +96,16 @@ const FollowBar = ({children, showOnScrollPosition, position, buttonText, phone,
                 {children}
             </Center>
             <Right>
-                <Button onClick={() => onClick && onClick()} background={Colors.blue} color={Colors.white} colorHover={Colors.blue} margin="0 auto" >{buttonText}</Button>
+                <Link to={link || "#"}>                
+                    <Button
+                        background={Colors.blue}
+                        color={Colors.white}
+                        colorHover={Colors.blue}
+                        margin="0 auto"
+                    >
+                        {buttonText}
+                    </Button>
+                </Link >
                 <p style={{textDecoration: "none", textAlign: "center", marginTop: "3px", fontSize: "15px"}}>
                     <a 
                       className="d-sm-none" 

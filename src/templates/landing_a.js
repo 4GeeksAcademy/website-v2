@@ -28,11 +28,7 @@ const Landing = (props) => {
       return course_el.bc_slug === array_el;
     }).length !== 0;
   });
-//   const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
-//     label: p.text,
-//     value: p.bc_slug
-// }))
-  console.log("FILTERED COURSES", filteredPrograms)
+
   const programs = filteredPrograms.map(p => ({
     label: p.text,
     value: p.bc_slug
@@ -68,18 +64,11 @@ const Landing = (props) => {
         link={yml?.navbar?.url || ''}
         lang={pageContext.lang}
       />
-      <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
+      <FollowBar position={yml.follow_bar.position} showOnScrollPosition={12400}
         buttonText={yml.follow_bar.button.text}
         phone={session && session.location && session.location.phone}
         phoneText={yml.follow_bar.phone.text}
-        onClick={() => {
-          if (yml.follow_bar.button.path === "#top") {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            });
-          }
-        }}
+        link={yml.follow_bar.button.path}
       >
         <Paragraph
           margin="0"
@@ -95,6 +84,7 @@ const Landing = (props) => {
         </Paragraph>
       </FollowBar>
       <StyledBackgroundSection
+        id="top"
         className={`image`}
         image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
         bgSize={`cover`}
@@ -244,7 +234,7 @@ const Landing = (props) => {
           })
       }
 
-      <GridContainerWithImage id="apply_schollarship" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
+      <GridContainerWithImage id="bottom" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
         <Div flexDirection="column" margin="0" margin_tablet="0 50px" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
         gridArea_tablet={(applySchollarship?.imageSide) === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
