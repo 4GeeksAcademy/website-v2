@@ -16,7 +16,7 @@ featured: "true"
 
 Qué mejor manera de continuar el mes de Marzo que presentando a nuestro nuevo partner, !Ticjob!
 
-El principal objetivo de **[4Geeks Academy](/)** es **lanzar la carrera tecnológica** de nuestros alumnos para que consigan un trabajo en programación lo más rápido posible tras completar nuestra formación premium en **desarrollo de software**. Para mejorar sus opciones e impulsar su empleabilidad, hemos desarrollado esta **alianza estratégica con TicJob**.
+El principal objetivo de **[4Geeks Academy](/es)** es **lanzar la carrera tecnológica** de nuestros alumnos para que consigan un trabajo en programación lo más rápido posible tras completar nuestra formación premium en **desarrollo de software**. Para mejorar sus opciones e impulsar su empleabilidad, hemos desarrollado esta **alianza estratégica con TicJob**.
 
 [TicJob.es](https://ticjob.es/) es uno de los mayores portales de empleo en España especializado en perfiles TIC. Cuenta con un **motor de búsqueda patentado y un sistema de comunicación innovador** que permite que se produzca el match perfecto entre empresas y candidatos, basándose en las necesidades de las empresas y las competencias y objetivos profesionales de los candidatos.
 

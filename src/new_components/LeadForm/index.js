@@ -22,7 +22,7 @@ const formIsValid = (formData = null) => {
 const Form = styled.form`
     margin: ${props => props.margin};
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
     background: ${props => props.background ? props.background : "#FFFFFF"};
     border-radius: 3px;
@@ -170,6 +170,7 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                         const _field = formData[f]
                         return <>
                                 <Input
+                                    data-cy={f}
                                     key={i}
                                     bgColor={inputBgColor || "#FFFFFF"}
                                     type={_field.type} className="form-control" placeholder={_field.place_holder}

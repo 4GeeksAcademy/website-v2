@@ -66,8 +66,8 @@ const ProgramDetails = (props) => {
                 <Div flexDirection="column" justifyContent="between" >
                     {Array.isArray(props.details.about?.list) && props.details.about?.list.map((m, i) => {
                         return (
-                            <Div key={i} borderBottom="1px solid #ebebeb" padding="15px 0" >
-                                <Div minWidth="25%" minWidth_tablet="32%"><H4 fontWeight="700" textAlign="left" >{`${m.label}:`}</H4></Div>
+                            <Div key={i} borderBottom="1px solid #ebebeb" gap_tablet="0" gap="20px" padding="15px 0" >
+                                <Div minWidth="25%" minWidth_tablet="32%"><H4 type="h4" fontWeight="700" textAlign="left" >{`${m.label}:`}</H4></Div>
                                 <Div flexDirection={m.link && "column"} >
                                     <Paragraph textAlign="left" >{m.content}</Paragraph>
                                     {m.link &&

@@ -46,7 +46,7 @@ Naila, one of our students, explains this: “I love 4Geeks Academy's approach t
 
 Previous students agree that taking on a part-time Bootcamp is difficult, but worth it if you’re willing to put in the work. “It's hard as hell, and the burn-out is super easy… If the majority of your day is taken up by your day job then you're going to need to make major sacrifices. It's just the nature of the beast, but a necessary step if you're looking to change careers.”
 
-The nature of coding, like any area of technology, is that it’s constantly changing, and by adapting your daily life to include the additional responsibility of part-time study, you’ll prepare yourself for the need to be constantly on the ball and ready for any changes that come up. For this reason, we are constantly working to maintain an up-to-date [syllabus that fits in with our students’ expectations](/us/coding-bootcamps/coding-bootcamp-syllabus-matters/).
+The nature of coding, like any area of technology, is that it’s constantly changing, and by adapting your daily life to include the additional responsibility of part-time study, you’ll prepare yourself for the need to be constantly on the ball and ready for any changes that come up. For this reason, we are constantly working to maintain an up-to-date [syllabus that fits in with our students’ expectations](/us/coding-bootcamps/coding-bootcamp-syllabus-matters).
 
 **Real results**
 

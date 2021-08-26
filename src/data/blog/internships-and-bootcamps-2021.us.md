@@ -166,7 +166,7 @@ Internships program support
 
 Tech companies around the globe are investing in learning programs, new talent acquisition, and upskilling their teams. Some organizations affirm that by 2025 70% of their workforce will keep training to ensure a smooth transition into the jobs of tomorrow. 
 
-Contact us to know more about our internship programs and talents at [4GeeksAcademy.com](/) and [marcelo@4geeksacademy.com](mailto:marcelo@4geeksacademy.com)
+Contact us to know more about our internship programs and talents at [4GeeksAcademy.com](/us) and [marcelo@4geeksacademy.com](mailto:marcelo@4geeksacademy.com)
 
 
 
