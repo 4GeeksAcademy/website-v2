@@ -41,7 +41,7 @@ const SEO = (props) => (
                 {/* <link rel="canonical" href={`${siteUrl}${pagePath}`} /> */}
                 <meta name="description" content={description || excerpt || defaultDescription[lang]} />
                 <meta name="keywords" content={_keywords} />
-                { (unlisted === true || ["hidden", "unlisted"].includes(visibility)) && <meta name="robots" content="noindex" /> }
+                { (unlisted === true || ["hidden", "unlisted"].includes(context.visibility || visibility)) && <meta name="robots" content="noindex" /> }
                 <meta name="image" content={previewImage} />
                 {(type === "blog" ) ? <meta property="og:type" content="article" />
                     : <meta property="og:type" content="website" />
