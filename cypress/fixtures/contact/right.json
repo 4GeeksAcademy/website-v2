@@ -1,14 +1,6 @@
-[
-  {
-    "firstName": "Brake",
-    "lastName": "Mahony",
-    "email": "brakemah@gmail.com",
-    "comment": "hello"
-  },
-  {
-    "firstName": "Rowan",
-    "lastName": "Dash",
-    "email": "rodash@outlook.com",
-    "comment": "Im Rowan Dash"
-  }
-]
+{
+  "firstName": "Rowan",
+  "lastName": "Dash",
+  "email": "rodash@outlook.com",
+  "comment": "Im Rowan Dash"
+}

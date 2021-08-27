@@ -1,6 +1,7 @@
 meta_info:
   slug: becas-landing-jobs # <--- URL 4geeksacademy.com/us/landing/example
 
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "¡Obtén tu beca!"
   description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy."
@@ -14,6 +15,11 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "software-engineering"]
   utm_location: madrid-spain
+
+navbar:
+  buttonText: "Solicita tu beca"
+  # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  url: "#top"
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -51,7 +57,9 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Solicita tu beca"
-    path: "#top"
+    path: "#top" #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default ("#" -> points to top)
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
     text: "Llama "
 
