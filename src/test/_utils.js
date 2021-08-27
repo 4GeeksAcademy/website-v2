@@ -4,6 +4,33 @@ const jsyaml = require("js-yaml");
 const fm = require('front-matter');
 var colors = require('colors');
 
+function isFunction(functionToCheck) {
+  return functionToCheck && {}.toString.call(functionToCheck) === '[object Function]';
+ }
+
+let breadcrumb = []
+const validateObjectProperties = (obj, validations) => {
+  for(prop in obj) {
+    breadcrumb.push(prop)
+    if(typeof(obj[prop]) == "object"){
+      validateObjectProperties(obj[prop], validations);
+    } else {
+      const breadcrumbPath = breadcrumb.join(".")
+      try{
+        if(validations[prop] && !isFunction(validations[prop])){
+          breadcrumb = []
+          throw Error(`Object property validation for prop ${breadcrumbPath} should be a funcion`)
+        }
+        else if(validations[prop]) validations[prop](obj[prop])
+      }catch(error){
+        breadcrumb = []
+        throw { message: error.message, path: breadcrumbPath }
+      }
+    }
+   breadcrumb.pop()
+ }
+}
+
 const walk = function(dir, done) {
   var results = [];
   fs.readdir(dir, function(err, list) {
@@ -81,6 +108,10 @@ const empty = (data) => {
 const fail = (msg, ...params) => {
     console.log(msg.red, ...params);
     process.exit(1);
+}
+
+const warn = (msg, ...params) => {
+    console.log(msg.yellow, ...params);
 }
 
 const success = (msg, ...params) => {
@@ -166,4 +197,4 @@ const localizeImage = async (content, type, _path, folder_of_images) => {
   }
 }
 
-module.exports = { walk, loadYML, loadMD, empty, fail, success, parsePathImage, localizeImage }
+module.exports = { walk, loadYML, loadMD, empty, fail, warn, success, parsePathImage, localizeImage, validateObjectProperties }

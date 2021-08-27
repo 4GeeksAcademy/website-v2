@@ -34,17 +34,17 @@ partners:
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/evernote.png"
       featured: false
-    - name: "Ticjob"
+    - name: "Telefonica"
       # locations: ["madrid-spain"]
-      image: "../../../../static/images/partner/new_logo_ticjob.png"
+      image: "../../../../static/images/partner/telefonica.png"
       featured: false
-    - name: "Unono"
+    - name: "Twilio"
       # locations: ["madrid-spain"]
-      image: "../../../../static/images/partner/unono.png"
+      image: "../../../../static/images/partner/twilio.png"
       featured: false
-    - name: "Optiva-Media"
+    - name: "Uber"
       # locations: ["madrid-spain"]
-      image: "../../../../static/images/partner/optiva.jpeg"
+      image: "../../../../static/images/partner/uber.png"
       featured: false
     - name: "Neo9"
       # locations: ["madrid-spain"]

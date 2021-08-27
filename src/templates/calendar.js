@@ -174,11 +174,16 @@ const Calendar = (props) => {
               closeLabel={pageContext.lang == "us" ? academy ? "Campus: " + academy.label : "Select one academy" : academy ? "Campus: " + academy.label : "Escoge una academia"}
               onSelect={(opt) => {
                 setAcademy(opt)
+
+                let filtered = opt.label !== 'All Locations' ? datas[filterType.value].all.filter(elm => elm.academy.slug === opt.value) : datas[filterType.value].all;
+                // if no cohorts on location, try to include online
+                if(filtered.length === 0) filtered = datas[filterType.value].all.filter(elm => elm.academy.slug === "online");
+                
                 setData({
                   ...datas,
                   [filterType.value]: {
                     ...datas[filterType.value],
-                    filtered: opt.label !== 'All Locations' ? datas[filterType.value].all.filter(elm => elm.academy.slug === opt.value) : datas[filterType.value].all
+                    filtered
                   }
                 });
               }}

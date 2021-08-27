@@ -13,10 +13,6 @@
   ],
   "redirects": [
     {
-      "source": "/(\\w{2})/location/(.*)",
-      "destination": "/$1/coding-campus/$2"
-    },
-    {
       "source": "/(\\w{2})/coding-campuses/(.*)",
       "destination": "/$1/coding-campus/$2"
     },

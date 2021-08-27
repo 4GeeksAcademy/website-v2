@@ -368,6 +368,7 @@ export const query = graphql`
         allLocationYaml(filter: {fields: { lang: {eq: $lang}}}) {
           edges {
             node {
+              breathecode_location_slug
               city
               name
               meta_info {

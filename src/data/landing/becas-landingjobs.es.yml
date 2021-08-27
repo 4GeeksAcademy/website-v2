@@ -13,7 +13,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack"]
+  utm_course: ["full-stack", "software-engineering"]
   utm_location: madrid-spain
 
 navbar:
@@ -157,7 +157,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: phyton_y_javascript
+  - name: python_y_javascript
     position: 6
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from new_components/Styling/index.js) or color code ex: #C9F9F9
@@ -171,6 +171,6 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa están basados en el uso de Phyton, Java y Javascript. ¿La razón? Java es el lenguaje más utilizado del mundo (por mucho). En el mercado laboral JavaScript tiene 26 veces más puestos de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que Node.js. 
+      text: "Nuestros programa están basados en el uso de Python, Java y Javascript. ¿La razón? Java es el lenguaje más utilizado del mundo (por mucho). En el mercado laboral JavaScript tiene 26 veces más puestos de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que Node.js. 
         Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, Redux, Amazon Web Services, etc."
       font_size: ["16px"]

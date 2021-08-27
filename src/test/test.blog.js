@@ -1,7 +1,7 @@
 
 var colors = require('colors')
 const path = require("path")
-const {walk, loadMD, loadYML, fail, success, localizeImage} = require("./_utils")
+const {walk, loadMD, loadYML, fail, success, warn, localizeImage} = require("./_utils")
 const twitterUser = require('../utils/twitter')
 const markdownLinkExtractor = require('markdown-link-extractor');
 const dictionaryOf = require('../utils/dictionaries/pages.json')
@@ -33,6 +33,7 @@ const getClusters = () => {
     }
 };
 
+let duplicateDescriptions = {}
 walk(`${__dirname}/../data/blog`, async function (err, files) {
     if (err) fail("Error reading the Markdown files: ", err)
     const _files = files.filter(f => {
@@ -113,6 +114,12 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
                     }
                 } 
             });
+
+            if(frontmatter["excerpt"] === undefined || frontmatter["excerpt"] === null || frontmatter["excerpt"] === "") warn("Blog post is missing excerpt: " + _path)
+            else{
+                if(duplicateDescriptions[frontmatter["excerpt"]] !== undefined)  warn(`Duplicate post excerpt between these two: \n ${_path.red} \n ${duplicateDescriptions[frontmatter["excerpt"]].red}`)
+                else duplicateDescriptions[frontmatter["excerpt"]] = _path
+            }
         }
         catch (error) {
             console.error(`Error on file: ${_path}`.red)

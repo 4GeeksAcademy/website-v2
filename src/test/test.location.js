@@ -33,7 +33,6 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
 
   if(!academyData || !Array.isArray(academyData)) fail("Invalid academy data", academyData)
   academyData.map(el => academySlug.push(el.slug))
-  console.log("academy available", academySlug)
 
   const _files = files.filter(
     (f) =>
