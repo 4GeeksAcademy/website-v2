@@ -12,7 +12,7 @@ header:
   title: "Become a Machine Learning Engineer"
   paragraph: "Become one of the highest paid professionals in the world"
   image: "../../../static/images/bg/circles.jpg"
-  image_alt: ""
+  image_alt: "circles"
 
 button:
   syllabus_heading: "Download Syllabus"
