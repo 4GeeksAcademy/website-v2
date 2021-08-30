@@ -72,7 +72,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
     return <Div flexDirection_tablet="column" flexDirection="column" padding="40px 20px" padding_tablet="36px 72px">
         {heading && <H2 type="h2"
             textAlign_tablet="left"
-            lineHeight="45px"
+            lineHeight="40px"
             lineHeight_tablet="60px"
             fontSize={h_xs || "30px"} fs_xl={h_xl} fontSize_md={h_md || "50px"} fontSize_sm={h_sm}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
@@ -231,6 +231,11 @@ export const landingSections = {
             <Div
                 key={index}
                 flexDirection="column"
+                background={Colors.verylightGray}
+                padding="20px 0"
+                borderRadius="3px"
+                borderRadius_tablet="10px"
+                padding_tablet="60px 40px"
                 size="12"
                 size_tablet="12"
                 width="100%"
