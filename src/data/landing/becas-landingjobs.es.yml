@@ -14,7 +14,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "software-engineering"]
-  utm_location: madrid-spain
+  utm_location: europe
 
 navbar:
   buttonText: "Solicita tu beca"
