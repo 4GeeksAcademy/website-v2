@@ -19,7 +19,7 @@ meta_info:
 navbar:
   buttonText: "Solicita tu beca"
   # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
-  url: "#top"
+  url: "#bottom"
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
