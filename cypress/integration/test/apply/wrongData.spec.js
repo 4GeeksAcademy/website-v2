@@ -7,7 +7,7 @@ context("Test Apply page with wrong data", () => {
   it("Call the form and fill with wrong values", () => {
     // It gets data in fixtures folder to fill form
     cy.fixture("/contact/wrong.json").each((wrong) => {
-      const { firstName, lastName, email, comment } = wrong;
+      const { firstName } = wrong;
 
       cy.get("[data-cy=first_name]")
         .clear()
