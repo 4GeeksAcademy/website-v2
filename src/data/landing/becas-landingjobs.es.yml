@@ -89,7 +89,7 @@ iconogram:
   position: 3
   icons:
   - icon: "touch"
-    title: Solicita tu beca antes del 30 de septiembre
+    title: Solicita tu beca antes del 8 de octubre
   - icon: "receive_mail"
     title: Recibirás un correo electrónico con toda la información y un test de lógica
   - icon: "talk"
@@ -118,8 +118,6 @@ choose_your_program:
     sub_title: "Nivel 1"
     icon: "fullstack"
     description: |
-      Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
-      
       Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado. 
       Disponible en modalidad part time y full time.
       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
@@ -133,7 +131,7 @@ choose_your_program:
     description: |
       Profundiza a un nivel avanzado en principios específicos de computación y algoritmia. Desarrolla más habilidades adentrándote en el mundo de las aplicaciones altamente escalables, nativas y distribuidas en la nube.
 
-      ¡Lleva tu carrera al siguiente nivel!, crea tecnlogía con un impacto real en el mundo (quizás el próximo unicornio), trabaja en empresas Fortune 500 y mejora tu salario. 
+      ¡Lleva tu carrera al siguiente nivel!, crea tecnología con un impacto real en el mundo (quizás el próximo unicornio), trabaja en empresas Fortune 500 y mejora tu salario. 
       
       Disponible sólo en modalidad part-time.
       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
