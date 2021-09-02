@@ -50,6 +50,7 @@ const clean = (fields, data) => {
 
     Object.keys(cleanedData).forEach(key =>
         // i also make sure I don't delete the hidden fields
+        key !== 'course' &&
         cleanedData[key].type !== 'hidden' &&
         //clean all the rest of the fields that are no supposed to be sent 
         //according to the landing YML data
@@ -63,7 +64,6 @@ const clean = (fields, data) => {
         delete cleanedData.full_name;
     }
 
-    // BUG: It is assumed that here it is receiving the course data (string), but when submitting course it ends up as null
     console.log("FormData Before sending", cleanedData, data, fields)
     return cleanedData;
 }
@@ -118,7 +118,6 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
     const {session} = useContext(SessionContext);
     const courseSelector = yml.form_fields.find(f => f.name === "course")
     React.useEffect(() => {
-        console.log("PREDATA_:::", data)
         setVal(_data => {
             const _ = Object.keys(_data).reduce((total, key) => {
                 if (_data[key] !== undefined) {
@@ -139,14 +138,12 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
         const cleanedData = clean(fields, formData);
         if (!formIsValid(cleanedData)) {
             setFormStatus({status: "error", msg: yml.messages.error});
-        } else if (Array.isArray(formData.course?.value) && formData.course?.value > 1){
-            alert(`Oops! ${courseSelector.error}`);
+        } else if (Array.isArray(formData.course.value) && formData.course.value.length > 1){
+            setFormStatus({status: "error", msg: courseSelector.error});
         } else {
             setFormStatus({status: "loading", msg: yml.messages.loading});
             formHandler(cleanedData, session)
                 .then(data => {
-                    // BUG: The data of course not loads whe submit the form
-                    console.log("DATA_FORM_HANDLER:::", data)
                     if (data && data.error !== false && data.error !== undefined) {
                         setFormStatus({status: "error", msg: data.error});
                     }
@@ -196,21 +193,19 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
 
                     {
                         selectProgram?.length > 1 
-                            ? (
+                            && (
                                 <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
                                     <SelectRaw
                                         style={{
                                             background: '#FFFFFF',
                                         }}
                                         options={selectProgram}
-                                        // value={selectProgram.value}
                                         placeholder={courseSelector.place_holder}
                                         valid={true}
                                         onChange={(selected, valid) => setVal({...formData, course: { value: selected.value, valid }})}
                                     />
                                 </Div>
                             )
-                            : null
                     }
                     {layout === "flex" &&
                         <Button 
@@ -226,7 +221,6 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                             disabled={formStatus.status === "loading" ? true : false}
                         >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
                     }
-                    {/* </Div> */}
                     {session && session.location && session.location.gdpr_compliant &&
                         <Paragraph fontSize="11px" margin="5px 0 0 0" textAlign="left" >
                             <input
@@ -239,13 +233,11 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                         </Paragraph>
                     }
                     {formStatus.status === "error" && <Alert color="red" margin="0 15px" padding="5px 0 0 0">{formStatus.msg}</Alert>}
-                    {/* </Row> */}
                 </GridContainer>
                 {layout === "block" &&
                     <GridContainer containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} >
                         <Div justifyContent={justifyContentButton ? justifyContentButton : "end" } display="flex" padding="5px 0 0 0">
                             <Button
-                                // width="fit-content"
                                 variant="full"
                                 type={`submit ${layout}`}
                                 margin={marginButton}
@@ -253,7 +245,6 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                                 textColor={Colors.white}
                                 disabled={formStatus.status === "loading" ? true : false}
                             >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
-                            {/* </Column> */}
                         </Div>
                     </GridContainer>
                 }

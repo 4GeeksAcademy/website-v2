@@ -8,8 +8,6 @@ import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sect
 import {Colors, StyledBackgroundSection} from '../new_components/Styling';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LandingNavbar from '../new_components/NavbarDesktop/landing';
-
-
 import BaseRender from './_baseLandingLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session.js'
@@ -51,7 +49,7 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: `${programs <=1 ? (programs[0].value) : (yml.meta_info.utm_course)}`, valid: true},
+    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info.utm_course), valid: true},
     utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
@@ -61,7 +59,8 @@ const Landing = (props) => {
     <>
       <LandingNavbar
         buttonText={yml.navbar?.buttonText || pageContext.lang === "us" ? "Apply" : "Aplicar"}
-        link={yml?.navbar?.url || ''}
+        buttonUrl={yml.navbar?.buttonUrl}
+        logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}
       />
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={12400}
@@ -100,6 +99,7 @@ const Landing = (props) => {
         borderRadius="0"
       >
         <GridContainer
+          padding="0"
           padding="72px 0 35px 0"
           containerGridGap="0"
           containerColumns_tablet="repeat(1,0fr)"
@@ -203,7 +203,7 @@ const Landing = (props) => {
               margin_tablet="50px 0 0 0" 
               selectProgram={programs}
               margin="0" 
-              style={{ marginTop: "50px" }}
+              style={{ marginTop: "50px", minHeight: "350px" }}
               formHandler={requestSyllabus}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -220,9 +220,6 @@ const Landing = (props) => {
           </Div>
         </GridContainer>
       </StyledBackgroundSection>
-
-      {/* <Badges lang={pageContext.lang} background={Colors.lightYellow} paragraph={yml.badges.paragraph} padding="60px 0" padding_tablet="68px 0" margin="0 0 58px 0" margin_tablet="0 0 78px 0" /> */}
-
 
       {
         Object.keys(components)
@@ -258,6 +255,7 @@ const Landing = (props) => {
               layout="block"
               background={Colors.verylightGray}
               margin="0"
+              style={{ minHeight: "350px" }}
               formHandler={requestSyllabus}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -351,8 +349,9 @@ export const query = graphql`
               }
             }
             navbar {
+              logoUrl
               buttonText
-              url
+              buttonUrl
             }
             form{
               heading

@@ -18,7 +18,7 @@ meta_info:
 navbar:
   buttonText: "Solicitar"
   # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
-  url: "#top" # [#top, #bottom or another #componentId]
+  buttonUrl: "#top" # [#top, #bottom or another #componentId]
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"

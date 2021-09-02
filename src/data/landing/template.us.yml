@@ -18,8 +18,9 @@ meta_info:
   tag: soft #optional, this is the default value
 
 navbar:
+  logoUrl: "#"
   buttonText: "Solicitar" # this modifies the button text in the navbar
-  url: "#bottom"
+  buttonUrl: "#bottom"
 # └── url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
 
 form:
