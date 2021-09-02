@@ -18,7 +18,7 @@ header:
   tagline: "4Geeks Academy en Caracas"
   paragraph: ""
   image: "../../../static/images/locations/caracas-home.png"
-  alt: ""
+  alt: "4Geeks Academy modalidad online y presencial en Caracas, Venezuela"
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
@@ -31,7 +31,7 @@ button:
   cohort_more_details_text: "DETALLES"
 badges:
   title: ""
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o 
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
   
   aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
 news:
