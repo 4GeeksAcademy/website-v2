@@ -12,9 +12,9 @@ meta_info:
 seo_title: "Aprende a programar en Bolivia"
 header:
   tagline: "4Geeks Academy en Bolivia"
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/bolivia-header.png"
-  alt: ""
+  alt: "4Geeks Academy, aprende a programar en modalidad online en Bolivia"
 
 button_header:
   button_text: Ver Programas
@@ -28,7 +28,7 @@ button:
   cohort_more_details_text: "DETALLES"
 badges:
   title: ""
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o 
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
   
   aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
 news:
@@ -140,7 +140,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Part-Time no esta disponible"
+          price: "La modaliad Part-Time no está disponible"
           price_info: "La Paz - Bolivia"
         button:
           button_text: "Aplicar a otros cursos"
@@ -171,7 +171,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Part-Time no esta disponible"
+          price: "La modaliad Part-Time no está disponible"
           price_info: "La Paz - Bolivia"
         button:
           button_text: "Aplicar a otros cursos"
@@ -186,7 +186,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Full-Time no esta disponible"
+          price: "La modaliad Full-Time no está disponible"
           price_info: "La Paz - Bolivia"
         button:
           button_text: "Aplicar a otros cursos"
