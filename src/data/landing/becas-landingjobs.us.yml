@@ -6,7 +6,7 @@ meta_info:
   title: "Get your scholarship!"
   description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy"
   image: "/images/bg/remote.jpeg"
-  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
+  keywords: "Learn to program, 4Geeks academy, Learn programming, learn computer engineering"
 
   template: "landing_nonav" # <--- choose your landing template
   redirects: ["/landing/becas-partner"] # <--- URL redirections to avoid 404 errors
