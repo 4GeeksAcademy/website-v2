@@ -14,7 +14,7 @@ header:
   tagline: "4Geeks Academy in Costa Rica"
   paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Costa Rica with over 1,000 graduates"
   image: "../../../static/images/locations/costarica-home.png"
-  alt: ""
+  alt: "4Geeks Academy online coding bootcamp in Costa Rica"
 button_header:
   button_text: See Programs
   button_link: "#programs"
