@@ -6,16 +6,17 @@ meta_info:
   description: "La programación es escencial para tu éxito profesional, únete a 4Geeks Academy, el bootcamp de programación número uno de Chile."
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp de Codigo, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
-  
+
   template: "landing_a" # <--- choose your landing template
-  redirects: [ # <--- URL redirections to avoid 404 errors
-    "/landing/bootcamp-de-programacion-santiago",
-  ] 
-  
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/bootcamp-de-programacion-santiago"]
+
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: full-stack
+  utm_course: ["full-stack"]
   utm_location: santiago-chile
+  automation: request_more_info #optional, this is the default value
+  tag: soft #optional, this is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -23,7 +24,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
   motivation: "Llena el formulario y te enviaremos la info en menos de 5 min"
-  button_label: Obtener malla y más información 
+  button_label: Obtener malla y más información
   redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
@@ -58,13 +59,13 @@ follow_bar:
     text: "Llama "
 
 #
-# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
 in_the_news:
   position: 1
   heading: "Lee sobre 4Geeks en los medios..."
-  filter: ["CNN Español","La Tercera","Las Ultimas Noticias","Emol"] 
+  filter: ["CNN Español", "La Tercera", "Las Ultimas Noticias", "Emol"]
 
 badges:
   position: 2
@@ -106,40 +107,41 @@ alumni_projects:
 components:
   - name: top_coding_bootcamp
     position: 5
-    layout: two_column_left 
-    proportions: [4,8]
-    image: 
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamps"
-    button: 
+      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+    button:
       text: "Leer testimoniales"
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
-    heading: 
-      text: "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
+    heading:
+      text:
+        "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: first_syllabus_form
     position: 4
-    layout: syllabus 
-    button: 
+    layout: syllabus
+    button:
       text: "Descarga Instantánea"
-    heading: 
+    heading:
       text: "Descarga la Malla Educativa"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: working_as_software_developers
     position: 8
-    proportions: [4,8]
-    layout: two_column_left 
-    image: 
+    proportions: [4, 8]
+    layout: two_column_left
+    image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    content: 
-      text: "89% de nuestros graduados ya trabajan como desarrolladores de software."
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","34px","34px","25px", "20px"]
-
+    content:
+      text:
+        "89% de nuestros graduados ya trabajan como desarrolladores de software."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
 # why_python:
 #   position: 7
 #   heading: "¿Por qué enseñamos Python?" # optional or set to white space to hide

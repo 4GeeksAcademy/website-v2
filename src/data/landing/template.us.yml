@@ -11,10 +11,16 @@ meta_info:
   redirects: [""] # <--- URL redirections to avoid 404 errors
   
   # this UTM fields will be included in the CRM
-  utm_course: full-stack
+  # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
+  utm_course: ["full-stack"] 
   utm_location: madrid-spain
   automation: request_more_info #optional, this is the default value
   tag: soft #optional, this is the default value
+
+navbar:
+  buttonText: "Solicitar" # this modifies the button text in the navbar
+  url: "#bottom"
+# └── url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -34,7 +40,9 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Más información"
-    path: "#top"
+    path: "#bottom" # #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
     text: "Llama "
 
@@ -42,7 +50,7 @@ follow_bar:
 header_data:
   tagline: Aprende a programar
   sub_heading: in only 16 weeks (part-time)
-  image: "../../../static/images/bg/main-bg.jpg"
+  image: "../../../static/images/bg/4geeks-main.jpg"
   image_filter: brightness(0.4) #0 is dark, 1 is bright
 
 features:
@@ -68,6 +76,9 @@ why_4geeks:
   position: 2
   heading: "Porqué 4Geeks"
   sub_heading: "Porque somos los mejores"
+  footer:
+    text: "Ver opciones de financiación"
+    text_link: "#"
 
 geeks_vs_others:
   position: 3
@@ -93,10 +104,25 @@ who_is_hiring:
 
 badges:
   position: 3
-  heading: " "
+  heading: ""
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
+
 
 # Possible layours: [two_column_left, two_column_right]
 components:
+  - name: first_syllabus_form
+    position: 4
+    layout: syllabus
+    button:
+      text: "Instant Download"
+    heading:
+      text: "Download the course syllabus"
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: more_testimonials
     position: 8
     layout: two_column_left 

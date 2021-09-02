@@ -22,22 +22,30 @@ walk(`${__dirname}/../data/blog/`, async function (err, files) {
     
     let vercel = JSON.parse(content);
     if(!vercel) fail("Error parsing vercel configuration JSON for redirects: "+vercelPath);
-
-
+    
+    
     for (let i = 0; i < files.length; i++) {
         const _path = files[i];
         const doc = loadMD(_path);
         if (!doc) fail("Invalid Markdown syntax for " + _path);
         if (!doc.lang) fail("Missing language on .md file name for " + _path);
-
-
-        const hasRedirect = vercel.routes.find(r => r.source === "/"+doc.name);
-        if(!hasRedirect) vercel.routes.push({
-            "source": "/"+doc.name,
-            "destination": "/"+doc.lang+"/post/"+doc.name,
-            "statusCode": 301
-        })
+        
+        const hasRedirect = vercel.redirects.find(r => r.source === "/"+doc.name);
+        if(!hasRedirect){
+            //console.log(`/${doc.lang}/post/${doc.name} => /${doc.lang}/${doc.attributes.cluster}/${doc.name}`);
+            vercel.redirects.push({
+                "source": `/${doc.lang}/post/${doc.name}`,
+                "destination": `/${doc.lang}/${doc.attributes.cluster}/${doc.name}`,
+                "statusCode": 301
+            })
+        }
+        else{
+            hasRedirect.source = `/${doc.lang}/post/${doc.name}`
+            hasRedirect.destination = `/${doc.lang}/${doc.attributes.cluster}/${doc.name}`
+        }
+        
     }
+    console.log(vercel)
 
     const fileContent = JSON.stringify(vercel, null, 2);
     try{

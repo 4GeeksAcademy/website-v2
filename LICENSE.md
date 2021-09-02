@@ -11,4 +11,4 @@ You must not:
 *   Reproduce, duplicate or copy material from Breathe Code
 *   Redistribute content from Breathe Code
 
-You can read the full version of Breathe Code's terms and conditions here: [Terms and Conditions](http://breatheco.de/terms-and-conditions)
+You can read the full version of Breathe Code's terms and conditions here: [Terms and Conditions](https://breatheco.de/terms-and-conditions)

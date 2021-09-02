@@ -1,19 +1,29 @@
 meta_info:
   slug: "coding-bootcamp-santiago"
-  title: "4Geeks Academy Chile"
+  title: "Coding Bootcamp Santiago, Chile"
   position: 4
-  description: null
+  description: "Know here all about our coding bootcamp campus in Santiago, Chile"
+
   image: ""
   keywords: ""
-  redirects: ["/location/santiago", "/location/santiago-de-chile", "/us/location/santiago-chile", "/location/santiago-chile"]
+  redirects:
+    [
+      "/location/santiago",
+      "/location/santiago-de-chile",
+      "/us/location/santiago-chile",
+      "/us/coding-campus/santiago-chile",
+      "/location/santiago-chile",
+    ]
 
 seo_title: "Coding Bootcamp Santiago de Chile"
 header:
-  tagline: "4GEEKS ACADEMY IN SANTIAGO DE CHILE"
-  paragraph: "Come and learn code in the biggest coding school and community in Santiago de Chile! Receive technical and career support for life while you make a living as a developer in one of the best cities in the world."
-  image: "../../../static/images/locations/santiago-loc.png"
+  tagline: "4Geeks Academy in Santiago de Chile"
+  paragraph: "Chile is positioned as one of the countries with the highest digital growth in the coming years, and particularly in Santiago the trend of bootcamps has been fostered in recent years, among them is 4Geeks Academy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development."
+  image: "../../../static/images/locations/santiago-home.png"
   alt: ""
-
+button_header:
+  button_text: See Programs
+  button_link: "#programs"
 button:
   syllabus_button_text: "REQUEST SYLLABUS" # <-- this will show everywhere in the website
   apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
@@ -25,129 +35,232 @@ button:
 info_box:
   heading: "Find us in Santiago de Chile"
   address: "Av. Manquehue Sur 350, Oficina 110, Las Condes"
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.1601939813802!2d-70.56719882328042!3d-33.41054249403315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfff900b7a6b%3A0x37af5bee84731bcc!2s4Geeks%20Academy%20Chile!5e0!3m2!1ses-419!2scl!4v1621011176304!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
+  whatsapp: "+56 9 7284 8039"
+  whatsapp_link: "https://api.whatsapp.com/send/?phone=5697284%208039&text&app_absent=0"
   phone: "+56 9 7284 8039"
   email: "chile@4GeeksAcademy.com"
   image: "../../../static/images/locations/santiago-map.png"
   map_url: https://www.google.com/maps/place/4Geeks+Academy+Chile/@-33.4104594,-70.5662933,15z/data=!4m2!3m1!1s0x0:0x37af5bee84731bcc?sa=X&ved=2ahUKEwj35Kmp_-zrAhUFTd8KHeaZDHMQ_BIwE3oECBYQCA
   alt: ""
+badges:
+  title: ""
+  paragraph: "4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the USA F. Dep. of Education.
+  
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Miami according to SwitchUp.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+
+A community built for developers."
 
 news:
   title: "4Geeks Academy Chile in the news..."
 upcoming:
-  title: "Upcoming programs in Santiago de Chile"
+  no_dates_message: "There are currently no upcoming dates for this campus"
 
-carousel_box:
+images_box:
   heading: "What you should know about this location: "
   content: "Located in one the best areas of the city - the Financial District. Walking distance from the subway station. The office is open to the students 24/7 every day of the week. On Saturdays we have the famous 'Coding Weekends' where students gather to practice and code during the entire day with mentors available. Pizzas and drinks are on the house!"
   images:
-    - path: "../../../static/images/locations/santiago-loc-2.jpg"
+    - path: "../../../static/images/locations/santiago-office-1.jpeg"
+      alt: "Santiago Location Image"
+    - path: "../../../static/images/locations/santiago-event.jpeg"
+      alt: "Santiago Location Image"
+    - path: "../../../static/images/locations/santiago-office-2.jpeg"
       alt: "Santiago Location Image"
     - path: "../../../static/images/locations/santiago-loc.png"
+      alt: "Santiago Location Image"
+    - path: "../../../static/images/locations/santiago-1.png"
       alt: "Santiago Location Image"
 
 hasFinancialsOption: true
 # financials_max_months: ["6 mo", "12 mo"]
 financials_max_months: ["12 mo", "6 mo"]
 prices:
-  full_time:
-    ## GENERAL INFO
-    slug: "full-time"
-    duration: "9 Weeks"
+  full_stack:
+    full_time:
+      ## GENERAL INFO
+      slug: "full-time"
+      duration: "9 Weeks"
 
-    ## LEFT BOX SECTION FULL-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "PAY ONLY AFTER"
-        heading_two: "YOU GET A JOB"
-        sub_heading: "with the Income Sharing Agreement (ISA)"
-      content:
-        price: "16% of Salary"
-        price_info: "until fully paid, and only if you get the job"
+      ## LEFT BOX SECTION FULL-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAY ONLY AFTER"
+          heading_two: "YOU GET A JOB"
+          sub_heading: "with the Income Sharing Agreement (ISA)"
+        content:
+          price: "16% of Salary"
+          price_info: "until fully paid, and only if you get the job"
+        button:
+          button_text: "APPLY NOW"
 
-    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
-    center_section:
-      header:
-        heading_one: "EXTENDED"
-        heading_two: "PAYMENT PLAN"
-        sub_heading: "and enjoy the best pricing in town"
-      plans:
-        - months: "12"
-          payment: "210.641 CLP"
-          paymentInfo: "per month + 414.000 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: ""
-        - months: "6"
-          payment: "407.121 CLP"
-          paymentInfo: "per month + 410.000 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: ""
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PAY UPFRONT"
-        heading_two: "(OUT OF POCKET)"
-        sub_heading: "and enjoy the best pricing in town"
-      content:
-        price: "2.760.000 CLP"
-        price_info: "single payment"
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+      center_section:
+        header:
+          heading_one: "EXTENDED"
+          heading_two: "PAYMENT PLAN"
+          sub_heading: "and enjoy the best pricing in town"
+        plans:
+          - months: "12"
+            monthsInfo: "Financed"
+            payment: "210.641 CLP"
+            paymentInfo: "per month + 414.000 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: ""
+          - months: "6"
+            monthsInfo: "Financed"
+            payment: "407.121 CLP"
+            paymentInfo: "per month + 410.000 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: ""
+        button:
+          button_text: "APPLY NOW"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAY UPFRONT"
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "and enjoy the best pricing in town"
+        content:
+          price: "2.760.000 CLP"
+          price_info: "single payment"
+        button:
+          button_text: "APPLY NOW"
 
-  ## *****************
-  ## PART-TIME SECTION
-  ## *****************
-  part_time:
-    slug: "part-time"
-    duration: "16 Weeks"
+    ## *****************
+    ## PART-TIME SECTION
+    ## *****************
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
 
-    ## LEFT BOX SECTION PART-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "PAY ONLY AFTER"
-        heading_two: "YOU GET A JOB"
-        sub_heading: "with the Income Sharing Agreement (ISA)"
-      content:
-        price: "16% of Salary"
-        price_info: "until fully paid, and only full-time program"
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "FINACING"
+          heading_two: "WITHOUT INTEREST"
+          sub_heading: ""
+        content:
+          price: "Up to 12 months"
+          price_info: ""
+        button:
+          button_text: "APPLY NOW"
 
-    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
-    center_section:
-      header:
-        heading_one: "EXTENDED"
-        sub_heading: "and enjoy the best pricing in town"
-      plans:
-        - months: "12 mo"
-          payment: "184.311 CLP"
-          paymentInfo: "per month + 362.250 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: ""
-        - months: "6 mo"
-          payment: "356.231 CLP"
-          paymentInfo: "per month + 362.250 deposit"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: ""
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PART TIME"
-        sub_heading: "and enjoy the best pricing in town"
-      content:
-        price: "2.415.000 CLP"
-        price_info: "single payment"
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "EXTENDED"
+          heading_two: "PAYMENT PLAN"
+          sub_heading: "and enjoy the best pricing in town"
+        plans:
+          - months: "12 mo"
+            monthsInfo: "Financed"
+            payment: "184.311 CLP"
+            paymentInfo: "per month + 362.250 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: ""
+          - months: "6 mo"
+            monthsInfo: "Financed"
+            payment: "356.231 CLP"
+            paymentInfo: "per month + 362.250 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: ""
+        button:
+          button_text: "APPLY NOW"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PART TIME"
+          sub_heading: "and enjoy the best pricing in town"
+        content:
+          price: "2.415.000 CLP"
+          price_info: "single payment"
+        button:
+          button_text: "APPLY NOW"
+
+  software_engineering:
+    part_time:
+      slug: "part_time"
+      duration: "16 Weeks"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Part-Time modality is not available"
+          price_info: "Santiago - Chile"
+        button:
+          button_text: "Apply another courses"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Full-Time modality is not available"
+          price_info: "Santiago - Chile"
+        button:
+          button_text: "Apply another courses"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Part-Time modality is not available"
+          price_info: "Santiago - Chile"
+        button:
+          button_text: "Apply another courses"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Full-Time modality is not available"
+          price_info: "Santiago - Chile"
+        button:
+          button_text: "Apply another courses"
+
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
 gdpr_compliant: false # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
 
 city: "Santiago de Chile"
-name: "Santiago"
+name: "Chile"
 latitude: "-33.408837"
 longitude: "-70.567958"
 phone: "+56 (9) 7284 8039"

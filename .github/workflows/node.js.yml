@@ -13,10 +13,12 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env: # environment variable to pass build
+      WEBSITE_BC_API_TOKEN: ${{ secrets.WEBSITE_BC_API_TOKEN}}
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v2

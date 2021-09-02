@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import styled, {css} from 'styled-components';
-import Img from "gatsby-image"
 import { useStaticQuery, graphql} from 'gatsby';
 import {Break} from '../Responsive';
 import {SessionContext} from '../../session';
 import ChooseProgram from '../ChooseProgram'
 import Card from '../Card'
 import {Colors, Button, Anchor, Link} from '../Styling';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export const NavBar = styled.nav`
     background-color: ${props => props.open ? "white" : null};
@@ -149,7 +149,6 @@ const Div = styled.div`
     display:${({open}) => open ? '' : 'none'};
     flex-flow: column nowrap;
     background-color: white;
-    // background-color: #0D2538;
     position: sticky;
     z-index: 19;
     transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -166,7 +165,6 @@ const Div = styled.div`
     display:${({open}) => open ? '' : 'none'};
     flex-flow: column nowrap;
     background-color: white;
-    // background-color: #0D2538;
     position: sticky;
     z-index: 19;
     transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -210,15 +208,27 @@ const Ul = styled.ul`
     align-items: center;
   }
 `;
+// gatsbyImageData(
+//   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+//   width: 500
+//   quality: 100
+//   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+//   breakpoints:	[200, 340, 520, 890]
+// )
 
 export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange}) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "images/4G_logo_negro.png" }) {
         childImageSharp {
-          fixed(width: 75) {
-            ...GatsbyImageSharpFixed
-          } 
+          gatsbyImageData(
+            layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
+            width: 75
+            placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+          )
+          # fixed(width: 75) {
+          #   ...GatsbyImageSharpFixed
+          # } 
         }
       }
     }
@@ -226,10 +236,12 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
   return (
       <Div open={open}>
         <Link to={'/'}>
-          <Img 
-            fadeIn={false}
+          <GatsbyImage 
+            // fadeIn={false}
             loading="eager"
-            fixed={data.file.childImageSharp.fixed} alt="4Geeks Logo" 
+            // fixed={data.file.childImageSharp.fixed}
+            image={getImage(data.file.childImageSharp.fixed)}
+            alt="4Geeks Logo" 
           />
         </Link>
         <Ul open={open}>

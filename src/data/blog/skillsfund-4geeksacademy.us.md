@@ -1,24 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-02-28 20:41:26+00:00
-excerpt: 4Geeks Academy has partnered with Skills Fund to remove all barriers to enrolling
-  in our transformative skills training program.
-layout: post
-link: https://www.4geeksacademy.co/skillsfund-4geeksacademy/
-slug: skillsfund-4geeksacademy
-title: Skills Fund & 4Geeks Academy finally together
-avatar: "/images/staff/marcelo.jpeg"
+author: "MRiciglianoC"
+date: "2018-02-28T20:41:26+00:00"
+excerpt: "4Geeks Academy has partnered with Skills Fund to remove all barriers to enrolling in our transformative skills training program."
+slug: "skillsfund-4geeksacademy"
+title: "Skills Fund & 4Geeks Academy finally together"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/02/Skill-Fund-04-1-1-768x433.jpg"
-wordpress_id: 2752
-categories:
-- Living and working as a developer
-- Why learn to code?
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+image_alt: ""
+cluster: "trends-and-tech"
+status: "published"
+featured: "false"
+
 ---
 
 ## Great news! Skills Fund & 4Geeks Academy are finally together
@@ -95,4 +86,4 @@ It’s quite simple, you may follow four (4) simple steps for applying:
 
 We enhance our financing options to help you pay for your education because our commitment is to provide you with a [Premium Coding Program](/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf) that has multiple financing options and gives you the opportunity of reaching your goal and becoming a developer.
 
-[Apply here](/apply/) to our program and you'll receive a link to our Skills Fund & 4Geeks Academy website to learn more about all the loan terms and conditions.
+[Apply here](/us/apply) to our program and you'll receive a link to our Skills Fund & 4Geeks Academy website to learn more about all the loan terms and conditions.

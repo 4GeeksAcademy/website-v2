@@ -1,155 +1,260 @@
 meta_info:
   slug: "bootcamp-programacion-santiago"
   position: 4
-  title: "Coding Bootcamp Santiago"
-  description: "Coding Bootcamp en Santiago de Chile, aprende a programar, aprende código."
+  title: "Bootcamp Progamación Santiago de Chile"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Santiago de Chile de 4Geeks Academy aquí"
   image: "https://storage.googleapis.com/4geeks-academy-website/santiago-es.png"
   keywords: "Coding Bootcamp Santiago"
-  redirects: ["/chile", "/es/inicio/santiago-de-chile", "/es/location/santiago-chile-es"]
+  redirects:
+    ["/chile", "/es/inicio/santiago-de-chile", "/es/location/santiago-chile-es"]
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:
-  tagline: "4GEEKS ACADEMY en SANTIAGO DE CHILE"
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/santiago-loc.png"
+  tagline: "4Geeks Academy en Chile"
+  paragraph: ""
+  image: "../../../static/images/locations/santiago-home.png"
   alt: ""
+
+button_header:
+  button_text: Ver Programas
+  button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGA MALLA" # <-- this will show everywhere in the website
   apply_button_text: "POSTÚLATE" # <-- this will show everywhere in the website
-
   syllabus_submit_text: "DESCARGAR"
   cohort_more_details_text: "DETALLES"
   apply_button_link: "/aplica"
 
 info_box:
-  heading: "Encuentranos en Santiago de Chile"
+  heading: "Encuéntranos en Santiago de Chile"
   address: "Av. Manquehue Sur 350, Oficina 110, Las Condes, Región Metropolitana, Chile"
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.1601939813802!2d-70.56719882328042!3d-33.41054249403315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfff900b7a6b%3A0x37af5bee84731bcc!2s4Geeks%20Academy%20Chile!5e0!3m2!1ses-419!2scl!4v1621011176304!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
+  whatsapp: "+56 9 7284 8039"
+  whatsapp_link: "https://api.whatsapp.com/send/?phone=5697284%208039&text&app_absent=0"
   phone: "+56 9 7284 8039"
   email: "chile@4GeeksAcademy.com"
   image: "../../../static/images/locations/santiago-map.png"
   map_url: https://www.google.com/maps/place/4Geeks+Academy+Chile/@-33.4104594,-70.5662933,15z/data=!4m2!3m1!1s0x0:0x37af5bee84731bcc?sa=X&ved=2ahUKEwj35Kmp_-zrAhUFTd8KHeaZDHMQ_BIwE3oECBYQCA
   alt: ""
-
+badges:
+  title: ""
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
+  
+  aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
 news:
   title: "4Geeks Academy Chile en las noticias..."
 
 upcoming:
-  title: "Próximas fechas en Santiago de Chile"
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
-carousel_box:
+images_box:
   heading: "Lo que debes saber de nuestra sede en Santiago de Chile: "
-  content: "A 10 min camindando desde la estación del metro y ubicada en la zona oriente de la ciudad, esta oficina es ideal para todos los Santiaguinos que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
+  content: "Chile se posiciona como uno de los países con mayor crecimiento digital en los próximos años, y particularmente en Santiago se ha fomentado la tendencia de los bootcamps en estos últimos años, entre ellos se encuentra 4Geeks Academy. Nos hemos convertido en una gran oportunidad de estudio para muchos chilenos y extranjeros que quieren cambiar su vida y aprender acerca del desarrollo web.A 10 min camindando desde la estación del metro y ubicada en la zona oriente de la ciudad, esta oficina es ideal para todos los Santiaguinos que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
   images:
-    - path: "../../../static/images/locations/santiago-loc-2.jpg"
+    - path: "../../../static/images/locations/santiago-office-1.jpeg"
+      alt: "Santiago Location Image"
+    - path: "../../../static/images/locations/santiago-event.jpeg"
+      alt: "Santiago Location Image"
+    - path: "../../../static/images/locations/santiago-office-2.jpeg"
       alt: "Santiago Location Image"
     - path: "../../../static/images/locations/santiago-loc.png"
       alt: "Santiago Location Image"
+    - path: "../../../static/images/locations/santiago-1.png"
+      alt: "Santiago Location Image"
 
 prices:
-  full_time:
-    ## GENERAL INFO
-    slug: "full-time"
-    duration: "9 Weeks"
+  full_stack:
+    full_time:
+      ## GENERAL INFO
+      slug: "full-time"
+      duration: "9 Weeks"
 
-    ## LEFT BOX SECTION FULL-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "NO PAGUES HASTA"
-        heading_two: "QUE ENCUENTRES PEGA"
-        sub_heading: "Acuerdo de Ingresos Compartidos"
-      content:
-        price: "16% de tu sueldo"
-        price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+      ## LEFT BOX SECTION FULL-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "NO PAGUES HASTA"
+          heading_two: "QUE ENCUENTRES PEGA"
+          sub_heading: "Acuerdo de Ingresos Compartidos"
+        content:
+          price: "16% de tu sueldo"
+          price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
+          logo: ""
+        button:
+          button_text: "APLICAR AHORA"
 
-    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
-    center_section:
-      header:
-        heading_one: "EXTENDED"
-        sub_heading: "el mejor precio de la ciudad"
-      plans:
-        - months: "12"
-          payment: "210.641 CLP"
-          paymentInfo: "mensual + 410.000 deposito"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: ""
-        - months: "6"
-          payment: "407.121 CLP"
-          paymentInfo: "mensual + 414.000 depósito"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: ""
-      button:
-        button_text: "SOLICITA TU PLAZA"
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PAGO DE CONTADO"
-        heading_two: "DESDE EL DíA 1"
-        sub_heading: "el mejor precio de la ciudad"
-      content:
-        price: "2.760.000 CLP"
-        price_info: "una sola cuota"
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+      center_section:
+        header:
+          heading_one: "Plan de Pagos Extendido"
+          sub_heading: "el mejor precio de la ciudad"
+        plans:
+          - months: "12"
+            monthsInfo: "Financiados"
+            payment: "210.641 CLP"
+            paymentInfo: "mensual + 410.000 depósito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: ""
+          - months: "6"
+            monthsInfo: "Financiados"
+            payment: "407.121 CLP"
+            paymentInfo: "mensual + 414.000 depósito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: ""
+        button:
+          button_text: "APLICAR AHORA"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAGO DE CONTADO"
+          heading_two: "DESDE EL DíA 1"
+          sub_heading: "el mejor precio de la ciudad"
+        content:
+          price: "2.760.000 CLP"
+          price_info: "una sola cuota"
+          logo: ""
+        button:
+          button_text: "APLICAR AHORA"
 
-  ## *****************
-  ## PART-TIME SECTION
-  ## *****************
-  part_time:
-    slug: "part-time"
-    duration: "16 Weeks"
+    ## *****************
+    ## PART-TIME SECTION
+    ## *****************
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
 
-    ## LEFT BOX SECTION PART-TIME
-    ## CHANGE HERE THE INFO IN THE LEFT BOX
-    left_section:
-      header:
-        heading_one: "NO PAGUES HASTA"
-        heading_two: "QUE ENCUENTRES PEGA"
-        sub_heading: "Acuerdo de Ingresos Compartidos"
-      content:
-        price: "Válido sólo para modalidad full time"
-        price_info: "hasta pagarlo todo, pero sólo si consigues trabajo en tech"
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "FINANCIAMIENTO"
+          heading_two: "SIN INTERES"
+          sub_heading: "y disfruta de mejores precios"
+        content:
+          price: "Hasta 12 cuotas sin interés"
+          price_info: ""
+          logo: "/images/flevo.png"
+        button:
+          button_text: "APLICAR AHORA"
 
-    ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
-    center_section:
-      header:
-        heading_one: "EXTENDED"
-        sub_heading: "y disfruta de mejores precios"
-      plans:
-        - months: "12 m"
-          payment: "184.311 CLP"
-          paymentInfo: "mensual + 362.250 depósito"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: ""
-        - months: "6 m"
-          payment: "356.231 CLP"
-          paymentInfo: "mensual + 362.250 deposito"
-          provider: "Quotanda"
-          logo: "/images/quotanda-logo.png"
-          message: ""
-    ## RIGHT BOX SECTION
-    ## CHANGE HERE THE INFO IN THE RIGHT BOX
-    right_section:
-      header:
-        heading_one: "PAGO DE CONTADO"
-        heading_two: "DESDE EL DíA 1"
-        sub_heading: "y disfruta de mejores precios de chile"
-      content:
-        price: "2.415.000 CLP"
-        price_info: "una sola cuota"
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "Plan de Pagos Extendido"
+          sub_heading: "y disfruta de mejores precios"
+        plans:
+          - months: "12 m"
+            monthsInfo: "Financiados"
+            payment: "184.311 CLP"
+            paymentInfo: "mensual + 362.250 depósito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: ""
+          - months: "6 m"
+            monthsInfo: "Financiados"
+            payment: "356.231 CLP"
+            paymentInfo: "mensual + 362.250 depósito"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: ""
+        button:
+          button_text: "APLICAR AHORA"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAGO DE CONTADO"
+          heading_two: "DESDE EL DíA 1"
+          sub_heading: "y disfruta de mejores precios de Chile"
+        content:
+          price: "2.415.000 CLP"
+          price_info: "una sola cuota"
+          logo: ""
+        button:
+          button_text: "APLICAR AHORA"
+  
+  software_engineering:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Part-Time no esta disponible"
+          price_info: "Santiago - Chile"
+          logo: null
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Full-Time no esta disponible"
+          price_info: "Santiago - Chile"
+          logo: null
+        button:
+          button_text: "Aplicar a otros cursos"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "la modalidad Part-Time no esta disponible"
+          price_info: "Santiago - Chile"
+          logo: null
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "la modalidad Full-Time no esta disponible"
+          price_info: "Santiago - Chile"
+          logo: null
+        button:
+          button_text: "Aplicar a otros cursos"
+
+
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
 gdpr_compliant: false # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
 
 city: "Santiago de Chile"
 hasFinancialsOption: true
 # financials_max_months: ["6 mo", "12 mo"]
 financials_max_months: ["12 mo", "6 mo"]
-name: "Santiago"
+name: "Chile"
 latitude: "-33.408837"
 longitude: "-70.567958"
 phone: "+56 (9) 7284 8039"

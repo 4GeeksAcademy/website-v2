@@ -14,3 +14,12 @@ redirects:
     toPath: "/"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results
+  - fromPath: "/us/blog/shoul-i-learn-code"
+    toPath: "/us/blog/should-i-learn-code"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results
+  - fromPath: "/us/post/webdevelopmentversuswebdesign"
+    toPath: "/us/learn-to-code/web-development-versus-web-design"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results
+    

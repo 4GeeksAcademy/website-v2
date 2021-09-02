@@ -29,9 +29,9 @@ const ProgramSVG = ({lang}) => {
     if (svg) svg = svg.node;
 
     return (
-        <svg className="d-sm-none w-100" width="fit-content" height="700" viewBox="0 0 1750 1183" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="d-sm-none w-100" width="fit-content" height="700" viewBox="0 0 1750 1183" fill="none" xmlns="https://www.w3.org/2000/svg">
             <rect width="1750" height="1183" fill="white" />
-            <g clip-path="url(#clip0)">
+            <g clipPath="url(#clip0)">
                 <rect width="1750" height="1183" fill="white" />
 
 
@@ -51,32 +51,32 @@ const ProgramSVG = ({lang}) => {
                     <tspan x="433" y="167.675">{svg.main_headings[0].title.toUpperCase()}</tspan>
                 </text>
                 <foreignObject x="425.932" y="180.805" width="250" height="250">
-                    <p xmlns="http://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[0].paragraph}</p>
+                    <p xmlns="https://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[0].paragraph}</p>
                 </foreignObject>
                 <rect x="1014" y="234" width="4" height="50" transform="rotate(89.798 1014 234)" fill="#E6BA1F" />
                 <rect x="991" y="238" width="4" height="142" fill="#E6BA1F" />
                 <text fill="black" white-space="preserve" font-family="Lato, sans-serif" font-size="25" font-weight="bold" letter-spacing="0em"><tspan x="861" y="184.675">{svg.main_headings[1].title.toUpperCase()}</tspan></text>
                 <foreignObject x="882.242" y="195.805" width="250" height="250">
-                    <p xmlns="http://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[1].paragraph}</p>
+                    <p xmlns="https://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[1].paragraph}</p>
                 </foreignObject>
                 <rect x="1473" y="234" width="4" height="50" transform="rotate(89.798 1473 234)" fill="#E6BA1F" />
                 <rect x="1450" y="238" width="4" height="142" fill="#E6BA1F" />
                 <foreignObject x="1330.89" y="169.805" width="270" height="250">
-                    <p xmlns="http://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[2].paragraph}</p>
+                    <p xmlns="https://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[2].paragraph}</p>
                 </foreignObject>
                 <text fill="black" white-space="preserve" font-family="Lato, sans-serif" font-size="25" font-weight="bold" letter-spacing="0em"><tspan x="1357" y="154.675">{svg.main_headings[2].title.toUpperCase()}</tspan></text>
                 <rect x="792" y="944" width="4" height="50" transform="rotate(89.798 792 944)" fill="#E6BA1F" />
                 <rect x="763" y="802" width="4" height="142" fill="#E6BA1F" />
                 <text fill="black" white-space="preserve" font-family="Lato, sans-serif" font-size="25" font-weight="bold" letter-spacing="0em"><tspan x="662.158" y="981.675">{svg.main_headings[4].title.toUpperCase()}</tspan></text>
                 <foreignObject x="657.893" y="995.81" width="270" height="250">
-                    <p xmlns="http://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[4].paragraph}</p>
+                    <p xmlns="https://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[4].paragraph}</p>
                 </foreignObject>
                 <rect x="1252" y="944" width="4" height="50" transform="rotate(89.798 1252 944)" fill="#E6BA1F" />
                 <rect x="1223" y="802" width="4" height="142" fill="#E6BA1F" />
                 {/* <text fill="black" white-space="preserve" style={{fontFamily: "Lato, sans-serif", fontSize: "25", fontWeight: "bold", letterSpacing: "0em"}}><tspan x="1151.16" y="981.675">BUILD API&#xb4;S</tspan></text> */}
                 <text fill="black" white-space="preserve" font-family="Lato, sans-serif" font-size="25" font-weight="bold" letter-spacing="0em"><tspan x="1151.16" y="981.675">{svg.main_headings[5].title.toUpperCase()}</tspan></text>
                 <foreignObject x="1094.64" y="995.81" width="270" height="250">
-                    <p xmlns="http://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[5].paragraph}</p>
+                    <p xmlns="https://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[5].paragraph}</p>
                 </foreignObject>
                 <g filter="url(#filter1_d)">
                     <circle cx="296" cy="592" r="75" fill="white" />
@@ -90,7 +90,7 @@ const ProgramSVG = ({lang}) => {
                 <rect x="290" y="802" width="4" height="142" fill="#E6BA1F" />
                 <rect x="319" y="944" width="4" height="50" transform="rotate(89.798 319 944)" fill="#E6BA1F" />
                 <foreignObject x="217.012" y="995.81" width="230" height="250">
-                    <p xmlns="http://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[3].paragraph}</p>
+                    <p xmlns="https://www.w3.org/1999/xhtml" style={{margin: "0", fontFamily: "Lato, sans-serif"}}>{svg.main_headings[3].paragraph}</p>
                 </foreignObject>
                 <text fill="black" white-space="preserve" font-family="Lato, sans-serif" font-size="19" font-weight="bold" letter-spacing="0em"><tspan x="249.417" y="597.853">{svg.circles[0].title.toUpperCase()}</tspan></text>
                 <text fill="black" white-space="preserve" font-family="Lato, sans-serif" font-size="19" font-weight="bold" letter-spacing="0em"><tspan x="460.057" y="583.853">{svg.circles[1].title.toUpperCase()} &#10;</tspan><tspan x="460.057" y="606.853">{svg.circles[1].title_second_line.toUpperCase()}</tspan></text>

@@ -1,21 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-07-25 18:52:57+00:00
-layout: post
-link: https://www.4geeksacademy.co/the-ideal-instructor/
-slug: the-ideal-instructor
-title: THE IDEAL INSTRUCTOR
-avatar: "/4geeks-logo.png"
+author: "4GeeksAcademy"
+date: "2016-07-25T18:52:57+00:00"
+excerpt: "The ideal instructor, know the attributes and skills of a good teacher when you are learning to code"
+slug: "the-ideal-instructor"
+title: "THE IDEAL INSTRUCTOR"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/admin-ajax-1.jpeg"
-wordpress_id: 1226
-categories:
-- Learning to code
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+image_alt: ""
+cluster: "learn-to-code"
+status: "published"
+featured: "false"
+
 ---
 
 I recall that when I was about to start a new course, I asked myself if the new instructor would be an easy-going person or a conversely one; If s/he would be able to teach all the information that is required to become a good professional.  It makes me think about how important the person is whom can transform clay into a beautiful sculpture.
@@ -52,4 +46,4 @@ If we asked some typical students "What would be the qualities of an ideal instr
 
 ![Arte-blog-4G-Julio-32-672x1024-1](https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/Arte-blog-4G-Julio-32-672x1024-1-197x300.png)
 
-At [4Geeks Academy](breathco.de), the instructor is not your typical teacher.  We mentor you, we are always close, and we also have a  student/instructor ratio that allows us to help you and not leave you behind.
+At [4Geeks Academy](/us), the instructor is not your typical teacher.  We mentor you, we are always close, and we also have a  student/instructor ratio that allows us to help you and not leave you behind.

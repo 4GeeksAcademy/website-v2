@@ -1,34 +1,17 @@
 ---
-author: alesanchezr
-comments: true
-date: 2016-01-10 09:21:18+00:00
-excerpt: 'Do you want to become a developer? You have 3 choices: College, bootcamps
-  or learn by yourself. But how to decide? You don''t even know if you are going to
-  be a good developer, maybe is not for you. Is only fair that we let you test it
-  out first.'
-layout: post
-link: https://www.4geeksacademy.co/pre-work-phase-free-open-everybody/
-published: false
-slug: pre-work-phase-free-open-everybody
-title: Why our pre-work phase is free and open for everybody
-avatar: "/images/staff/marcelo.jpeg"
+author: "alesanchezr"
+date: "2016-01-10T09:21:18+00:00"
+excerpt: "Do you want to become a developer? You have 3 choices: College, bootcamps or learn by yourself. Is only fair that we let you test it out first."
+published: "false"
+slug: "pre-work-phase-free-open-everybody"
+title: "Why our pre-work phase is free and open for everybody"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/welcome-1.jpg"
-wordpress_id: 516
-categories:
-- Sin categoría
-- Why learn to code?
+image_alt: ""
+cluster: "coding-bootcamps"
+status: "published"
+featured: "false"
 
-tags:
-- 4geeks
-- learn to code
-- part-time studies
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
 ---
-
-
-
 
 Do you want to become a developer? You have 3 choices: College, bootcamps or learn by yourself. But how to decide? You don't even know if you are going to be a good developer, maybe is not for you. Is only fair that we let you test it out first.
 
@@ -55,4 +38,4 @@ In the pre-work you will learn: HTML5, CSS and some Javascript. There will be so
 All that said, we encourage you to take the 2 weeks pre-work of our course for free, we ask for a very small (US $160) deposit and you can get it back if you finish the pre-work and you don't want to continue to the next phase.
 
 
-[Sign up for the free 2 weeks pre-work](//course/web-development-parttime/)
+[Sign up for the free 2 weeks pre-work](/course/web-development-parttime)

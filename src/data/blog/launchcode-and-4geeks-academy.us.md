@@ -1,21 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-01-08 11:19:14+00:00
-layout: post
-link: https://www.4geeksacademy.co/launchcode-and-4geeks-academy/
-slug: launchcode-and-4geeks-academy
-title: 4Geeks Academy and LaunchCode.org
-avatar: "/4geeks-logo.png"
+author: "4GeeksAcademy"
+date: "2016-01-08T11:19:14+00:00"
+excerpt: "We are proud to say that we have partnered with LaunchCode.org"
+slug: "launchcode-and-4geeks-academy"
+title: "4Geeks Academy and LaunchCode.org"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/launchcode-button-300x89.png"
-wordpress_id: 471
-categories:
-- Learning to code
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+image_alt: ""
+cluster: "trends-and-tech"
+status: "published"
+featured: "false"
+
 ---
 
 Yes, we are exited!  We are proud to say that we have partnered with LaunchCode.org

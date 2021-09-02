@@ -1,116 +1,117 @@
-import React, {useState, useEffect, useContext} from 'react';
-import Layout from '../global/Layout';
-import styled, {css, keyframes} from 'styled-components';
-import {Row, Column, Wrapper, Divider, WrapperImage} from '../components/Sections'
-import {H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../components/Heading'
-import {Colors, Button, RoundImage} from '../components/Styling'
-import Card from '../components/Card'
-import Icon from '../components/Icon'
+import React, {useState, useContext} from 'react';
+import {Colors} from '../new_components/Styling'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session'
 
-const Faq = (props) => {
-    const {data, pageContext, yml} = props;
-    const [buttonToggle, setButtonToggle] = useState(false);
-    const [toggleIndex, setToggleIndex] = useState();
-    const {session, setSession} = useContext(SessionContext);
+import Link from 'gatsby-link'
+import Icon from '../new_components/Icon'
+import Card from '../new_components/Card'
+import {Divider, Div, GridContainer, Header} from '../new_components/Sections'
+import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
 
-    return (
-        <>
-            <WrapperImage
-                imageData={yml.banner.image && yml.banner.image.childImageSharp.fluid}
-                border="bottom"
-                height="300px"
-                backgroundSize="cover"
-                paddingRight={`0`}
-                customBorderRadius="0 0 0 1.25rem"
-            >
-                <Divider height="100px" />
-                <Title
-                    size="5"
-                    title={yml.banner.tagline}
-                    variant="main"
-                    color={Colors.white}
-                    fontSize="46px"
-                    textAlign="center"
-                />
-            </WrapperImage>
-            <Divider height="50px" />
-            <Wrapper
-                github={`/page/faq.${pageContext.lang}.yml`}
-            >
-                {yml.faq.map((item, index) => {
-                    return (
-                        <Row key={index} display="flex">
-                            <Column
-                            >
-                                <Card
-                                    color={buttonToggle && index == toggleIndex && "grey"}
-                                    height="auto"
-                                    width="100%"
-                                    shadow
-                                    padding="20px "
-                                    margin="5px 0 10px 0"
-                                    onClick={() => toggleIndex === index ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(index), setButtonToggle(true))}
-                                >
-                                    <Row display="flex" height="100%">
-                                        <Column onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : index)}} size="1" size_sm="2" align={`center`} alignSelf="center">
-                                            {buttonToggle === false ?
-                                                toggleIndex != index &&
-                                                <Icon icon="plus"
-                                                    width="32"
-                                                    color={Colors.blue}
-                                                    fill={Colors.blue}
-                                                />
-                                                :
-                                                buttonToggle === true && toggleIndex === index ?
-                                                    <Icon icon="minus"
-                                                        width="32"
-                                                        color={Colors.blue}
-                                                        fill={Colors.blue}
-                                                    />
-                                                    :
-                                                    <Icon icon="plus"
-                                                        width="32"
-                                                        color={Colors.blue}
-                                                        fill={Colors.blue}
-                                                    />
-                                            }
-                                        </Column>
-                                        <Column size="11" size_sm="10" alignSelf="center">
-                                            <H4
-                                                align={`left`}
-                                                align_sm={`left`}
-                                                color={Colors.black}>{item.question}
-                                            </H4>
-                                            {buttonToggle === true && toggleIndex === index &&
-                                                <Paragraph
-                                                    dangerouslySetInnerHTML={{__html: item.answer}}
-                                                    margin={`10px 0 0 0`}
-                                                    align_sm="left"
-                                                    fontFamily="Lato-bold, sans-serif"
-                                                    lineHeight="1rem">
-                                                </Paragraph>
-                                            }
-                                        </Column>
-                                    </Row>
-                                </Card>
-                            </Column >
-                        </Row >
-                    )
-                })
-                }
-            </Wrapper >
-            <Divider height="50px" />
-        </>
-    )
+const Faq = (props) => {
+  const {data, pageContext, yml} = props;
+  const [buttonToggle, setButtonToggle] = useState(false);
+  const [toggleIndex, setToggleIndex] = useState();
+  const {session, setSession} = useContext(SessionContext);
+
+  return (
+    <>
+      <Header
+        fontSize="40px"
+        seo_title={yml.seo_title}
+        title={yml.banner.tagline}
+        paragraph={yml.banner.sub_heading}
+      // padding_tablet="142px 0 15px 0"
+      // padding="142px 0 15px 0"
+      />
+
+      <GridContainer
+        padding="0 4%"
+        gridGap="0px"
+        padding_tablet="0 20%"
+        padding_lg="0 26%"
+        github={`/page/faq.${pageContext.lang}.yml`}
+      >
+        {yml && yml.faq.map((item, i) => {
+          return (
+            <>
+              <H3 type="h3" key={i} borderBottom="1px solid" borderColor="#C4C4C4" padding="80px 30px 30px 30px" >{item.topic}</H3>
+              {item.questions.map((faq, index) => {
+                return (
+                  <Card
+                    color={buttonToggle && faq.question == toggleIndex}
+                    height="auto"
+                    width="100%"
+                    borders="0"
+                    borderBottom="1px solid"
+                    borderColor=" #C4C4C4"
+                    padding="20px"
+                    onClick={() => toggleIndex === faq.question ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(faq.question), setButtonToggle(true))}
+                  >
+                    <Div key={faq.question} display="block" height="100%">
+                      <Div onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : faq.question)}} display="flex" width="100%" align={`center`} alignSelf="center">
+                        <H4
+                          type="h4"
+                          textAlign="left"
+                          fontSize="13px"
+                          align={`left`}
+                          align_sm={`left`}
+                          color={Colors.black}
+                          paddingRight="5%"
+                          textTransform="uppercase"
+                          fontWeight="700"
+                        >{faq.question}</H4>
+                        {buttonToggle === false ?
+                          toggleIndex != faq.question &&
+                          <Icon icon="plus"
+                            width="24"
+                          />
+                          :
+                          buttonToggle === true && toggleIndex === faq.question ?
+                            <Icon icon="minus"
+                              width="24"
+                            />
+                            :
+                            <Icon icon="plus"
+                              width="24"
+                            />
+                        }
+                      </Div>
+                      <Div size="12" size_sm="12" alignSelf="center">
+                        {buttonToggle === true && toggleIndex === faq.question &&
+                          <Paragraph
+                            textAlign="left"
+                            letterSpacing="0.05em"
+                            lineHeight="22px"
+                            fontWeight="normal"
+                            dangerouslySetInnerHTML={{__html: faq.answer}}
+                            margin={`20px 0 0 0`}
+                            align_sm="left"
+                            fontFamily="Lato, sans-serif">
+                          </Paragraph>
+                        }
+                      </Div>
+
+                    </Div>
+                  </Card>
+                )
+              }
+              )}
+            </>
+          )
+        })
+        }
+      </GridContainer >
+      <Divider height="50px" />
+    </>
+  )
 }
 export const query = graphql`
   query FaqsQuery($file_name: String!, $lang: String!) {
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-          
           meta_info{
             slug
             title
@@ -118,20 +119,34 @@ export const query = graphql`
             image
             keywords
           }
+          seo_title
           banner{
             tagline
             sub_heading
+            sub_heading_contact
+            pathContact
             image{
-                childImageSharp {
-                  fluid(maxWidth: 1200){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }  
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 1200){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            }  
           }
-          faq{
-              question
-              answer
+          faq {
+            topic
+            questions{
+                question
+                answer
+            }
+          }
+          fields {
+            lang
           }
       
         }

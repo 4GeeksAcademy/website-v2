@@ -1,7 +1,15 @@
 # This section is mean for badges, awards and recognitions
 # For example:
-
+paragraph: "Este curso cuenta con premios y reconocimientos de validan su excelencia"
 badges:
+  - name: "Premios Exelencia Educativa"
+    url: ""
+    image: "../../../../static/images/badges/exelencia-educativa.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Switchup"
+    url: ""
+    image: "../../../../static/images/badges/switchup.png"
+    alt: "Best cooding bootcamp switchup 2021"
   - name: "FDOE"
     url: ""
     image: "../../../../static/images/badges/licensed.png"
@@ -18,3 +26,6 @@ badges:
     url: ""
     image: "../../../../static/images/badges/syllabus.png"
     alt: "Award winning syllabus"
+link_text: "See all Awards and Recognitions"
+link_to: "/us/awards"
+short_link_text: "See all"

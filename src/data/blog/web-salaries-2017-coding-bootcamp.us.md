@@ -1,30 +1,16 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2017-07-18 20:20:19+00:00
-excerpt: According to several reports, web developers made a median salary of $64,970.
-  Graduates from a Bootcamp are earning around $50k-$55k per year.
-layout: post
-link: https://www.4geeksacademy.co/web-salaries-2017-coding-bootcamp/
-slug: web-salaries-2017-coding-bootcamp
-title: 'Web development Bootcamp graduates salary: 2017 edition'
-wordpress_id: 2055
-avatar: "/images/staff/marcelo.jpeg"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/PORTADA-Salary.jpg"
-categories:
-- Learning to code
+author: "MRiciglianoC"
+date: "2017-07-18T20:20:19+00:00"
+excerpt: "According to several reports, web developers made a median salary of $64,970. Graduates from a Bootcamp are earning around $50k-$55k per year."
+slug: "web-salaries-2017-coding-bootcamp"
+title: "Web development Bootcamp graduates salary: 2017 edition"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2017/08/PORTADA-Salary.jpg"
+image_alt: ""
+cluster: "coding-bootcamps"
+post_translations: ["pll_5703862f49f64"]
+status: "published"
+featured: "false"
 
-post_translations:
-- pll_5703862f49f64
-tags:
-- coding education
-- income
-- miami
-- Miami Dade College
-- wages
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
 ---
 
 ## **Real data addressing real questions.**
@@ -44,7 +30,7 @@ developers made a median salary of $64,970 and one of the highest-paid in the pr
 
 Then you are probably thinking: are these salaries for newly formed web developers?  YES!   Wages for junior web developers (which, by the way, is the training you can get in only 16 weeks of study at 4Geeks Academy 🙂 ) are around $60,000 per year.
 
-According to [PayScale](http://www.payscale.com/research/US/Skill=Web_Development/Salary), a web developer (with 2 years of experience) can make an average salary of $85,860 dollars a year in Miami, New York or California.  A junior one could begin with $55,000 per year.  Not bad for a junior position.
+According to [PayScale](https://www.payscale.com/research/US/Skill=Web_Development/Salary), a web developer (with 2 years of experience) can make an average salary of $85,860 dollars a year in Miami, New York or California.  A junior one could begin with $55,000 per year.  Not bad for a junior position.
 
 
 ## Economically speaking, in the end, is it a good idea to be a web developer?
@@ -69,9 +55,9 @@ This trend does not look like it will stop; The Bureau of Labor Statistics estim
 
 Coding Bootcamps are not only an alternative to the regular education system; they are the innovative educational model that allows achieving quality training in a short time.  Former President Barack Obama affirmed that this methodology is the direct passage to scale social classes; it is, actually, a matter of social impact and economic growth.  It’s not just the individual impact of becoming a developer - we have to look at the big picture as well.
 
-He also said that “_the most important thing is that these jobs do not require a four-year degree in computer science, they do not require you to be an engineer_". [Obama](http://Https://www.youtube.com/watch?v=wGFsNA5Hw2s) also emphasizes that “_you can train for these jobs in newer streamlined faster training programs and these jobs have wages 50% higher than average wages._“  He ended by saying that “_no matter where you learned the code, it only matters how good you are at writing the code._“
+He also said that “_the most important thing is that these jobs do not require a four-year degree in computer science, they do not require you to be an engineer_". [Obama](https://Https://www.youtube.com/watch?v=wGFsNA5Hw2s) also emphasizes that “_you can train for these jobs in newer streamlined faster training programs and these jobs have wages 50% higher than average wages._“  He ended by saying that “_no matter where you learned the code, it only matters how good you are at writing the code._“
 
-In a recent survey conducted by [Indeed](http://Http://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/), among over 1000 professional recruiting managers in the United States, 72% of them feel that those that graduated from Coding Bootcamps are “as prepared” as college-bound professionals.
+In a recent survey conducted by [Indeed](https://https://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/), among over 1000 professional recruiting managers in the United States, 72% of them feel that those that graduated from Coding Bootcamps are “as prepared” as college-bound professionals.
 
 
 ## Wages: computer science degrees vs coding bootcamps

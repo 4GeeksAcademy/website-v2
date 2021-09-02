@@ -14,7 +14,7 @@ const SchemaOrg = ({
   }) => {
     const baseSchema = [
       {
-        '@context': 'http://schema.org',
+        '@context': 'https://schema.org',
         '@type': 'WebSite',
         url,
         name: title,
@@ -24,7 +24,7 @@ const SchemaOrg = ({
     const blog = [
         ...baseSchema,
         {
-            '@context': 'http://schema.org',
+            '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
               {
@@ -39,7 +39,7 @@ const SchemaOrg = ({
             ],
           },
           {
-            '@context': 'http://schema.org',
+            '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             url,
             name: title,

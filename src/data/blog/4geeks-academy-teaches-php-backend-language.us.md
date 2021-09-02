@@ -1,29 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2016-01-11 03:15:12+00:00
-excerpt: This post is not about what programming language is better (it's impossible
-  to answer that), this post is about choosing the best language to learn how to code.
-layout: post
-link: https://www.4geeksacademy.co/4geeks-academy-teaches-php-backend-language/
-slug: 4geeks-academy-teaches-php-backend-language
-title: Why 4Geeks Academy teaches PHP as Backend Language
-avatar: "/images/staff/alejandro.png"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/language.jpeg"
-wordpress_id: 508
-categories:
-- Sin categoría
-- Why learn to code?
+author: "alesanchezr"
+date: "2016-01-11T03:15:12+00:00"
+excerpt: "This post is not about what programming language is better (it's impossible to answer that), this post is about choosing the best language to learn how to code."
+slug: "4geeks-academy-teaches-php-backend-language"
+title: "Why 4Geeks Academy teaches PHP as Backend Language"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2016/01/language.jpeg"
+image_alt: ""
+cluster: "full-stack-developer"
+status: "published"
+featured: "false"
 
-tags:
-- learn to code
-- php
-- ruby
-- salary
-- web developer salary
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
 ---
 
 If you want to learn how to swim, you use baby floats, not neoprene wet-suits (witch are obviously better for professional swimming).  This post is not about what programming language is better (it is impossible to answer that), this post is about choosing the best language to learn how to code - the language that gives the most opportunities to our students in Miami.
@@ -54,7 +40,7 @@ Learning the PHP language is not about the syntax - that is easy.  The challen
 </tr>
 </tbody>
 </table>
-The community is the gasoline behind the programming language; they give the feedback needed to evolve the language, discuss problems, share the solutions, and create new frameworks and tools, etc.  In a [stack-overflow 2015 developer survey](http://stackoverflow.com/research/developer-survey-2015), PHP was the most popular language between PHP, Ruby, Nodejs and Python.  Also, by doing a simple query in Google trends, you can see that PHP has generated 8 times more interest than Ruby **(even in Miami)**.  Take a look at the charts on the right:
+The community is the gasoline behind the programming language; they give the feedback needed to evolve the language, discuss problems, share the solutions, and create new frameworks and tools, etc.  In a [stack-overflow 2015 developer survey](https://stackoverflow.com/research/developer-survey-2015), PHP was the most popular language between PHP, Ruby, Nodejs and Python.  Also, by doing a simple query in Google trends, you can see that PHP has generated 8 times more interest than Ruby **(even in Miami)**.  Take a look at the charts on the right:
 
 
 ### Documentation
@@ -134,7 +120,7 @@ Indeed.com
 
 
 66 jobs
-[Click here and search for yourself](http://www.indeed.com/jobs?q=Ruby&l=Miami%2C+FL)
+[Click here and search for yourself](https://www.indeed.com/jobs?q=Ruby&l=Miami%2C+FL)
 
 
 
@@ -144,7 +130,7 @@ Indeed.com
 
 
 168 jobs
-[Click here and search for yourself](http://www.indeed.com/jobs?q=PHP&l=Miami%2C+FL)
+[Click here and search for yourself](https://www.indeed.com/jobs?q=PHP&l=Miami%2C+FL)
 
 
 
@@ -212,7 +198,7 @@ This information is based on the results we had when using the search engines of
 ### Salary for a PHP developer in Miami
 
 
-PHP developers make an average salary of $80,000 nationwide and Miami is not the exception.  It takes 5 minutes to search at indeed.com:  [look for PHP jobs that pay more than $75,000 a year](http://www.indeed.com/q-Web-Developer-PHP-$75,000-l-Miami,-FL-jobs.html) **in Miami,** and you will find more than 70 job vacancies.  Here are some of them:
+PHP developers make an average salary of $80,000 nationwide and Miami is not the exception.  It takes 5 minutes to search at indeed.com:  [look for PHP jobs that pay more than $75,000 a year](https://www.indeed.com/q-Web-Developer-PHP-$75,000-l-Miami,-FL-jobs.html) **in Miami,** and you will find more than 70 job vacancies.  Here are some of them:
 <table class="table table-striped" >
 <tbody >
 <tr >
@@ -220,7 +206,7 @@ PHP developers make an average salary of $80,000 nationwide and Miami is not th
 <td >Ascendo Resources
 </td>
 
-<td >[Senior PHP Developer](http://www.indeed.com/cmp/Ascendo-Resources/jobs/Senior-PHP-Developer-3bbcde11b7f47ea0?r=1)
+<td >[Senior PHP Developer](https://www.indeed.com/cmp/Ascendo-Resources/jobs/Senior-PHP-Developer-3bbcde11b7f47ea0?r=1)
 </td>
 
 <td >$100,000 a year
@@ -231,7 +217,7 @@ PHP developers make an average salary of $80,000 nationwide and Miami is not th
 <td >World NetMedia
 </td>
 
-<td >[Lead Software Developer - LAMP](http://www.indeed.com/rc/clk?jk=ce19d277c156a3d4)
+<td >[Lead Software Developer - LAMP](https://www.indeed.com/rc/clk?jk=ce19d277c156a3d4)
 </td>
 
 <td >$100,000 a year
@@ -242,7 +228,7 @@ PHP developers make an average salary of $80,000 nationwide and Miami is not th
 <td >Cutting Edge Recruiting
 </td>
 
-<td >[FULL STACK PHP DEVELOPER](http://www.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0DUnwefsF7K5sI9KMOiuTab93Tl5aV87o5poBYEvjEbgIqlL4VjFWz5O4bJmyHdj-IjLD2PGVIsu0emvbicVdi0mPULCCrb6XYGFE-rRk22MtwgwsA0MgdqGnP4Y_uP6IwDgMAbjFB57dI7EGvF27kwvORKrpdxmLa_J6Wh47ripbm75EK_zA0HgAFrxy36umE-f7IayzNL6RScrDTO9ncLIvZ4hNw4VmoEOFM226lgvKRd4gzidhSUvk5M3XfQc4GNoMUmMWnFPqXCFjL9yKjDGtNTj8eJnkv9zeJIl3-SAfccsZSmcc3fw7FUBEJtfYYHjPJ2ce120_LtkWSKoxsetAINNSobVPzFIu3tcTa0l8nSFG5CRIYhb4dFNkzKGIAY4-PB-SMXWvOUsS8cBkWQ98e4gZHXMAW3uk-BXhvirriYvHLLtEftZeaz9DcOoGFf3yJy1jGV_iGjYAj8X9D4GaiSOJDgsaD7f8UvlUnZfBPgD7FADSMVT8LAo5oFKQ8I7e3xeFQj_KM4pOWpdHZndISkmy6tt3ihngqk7JDmeSGFUwKhu0fkQ6Z2tIg_BJbCOstRQG8tXrcx2QQYFlR1v9pLF2weivvw6JJAcx-KFzO6ZgW15WX8oCbyjZgVlV5u7KkwrnBzEhBBTifkCQhujqamgTl-Vil4sAgxoisM_EAtFWvvNk9n1dEk1LBUCD8HL4nYOlr_fd55Ut-pxV-dqlvlSwYPRnCa9NPDbFUVpwoUaMjjdzSMSuv2imacd0VUdEcuB3Np9SVUGLPWKVUi1xPptKp6lE41ybrGSM9vcEiNqjKrbxeqc2l7SwqE2O4=&p=4&sk=9a6ab4c649a730e8&fvj=0)
+<td >[FULL STACK PHP DEVELOPER](https://www.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0DUnwefsF7K5sI9KMOiuTab93Tl5aV87o5poBYEvjEbgIqlL4VjFWz5O4bJmyHdj-IjLD2PGVIsu0emvbicVdi0mPULCCrb6XYGFE-rRk22MtwgwsA0MgdqGnP4Y_uP6IwDgMAbjFB57dI7EGvF27kwvORKrpdxmLa_J6Wh47ripbm75EK_zA0HgAFrxy36umE-f7IayzNL6RScrDTO9ncLIvZ4hNw4VmoEOFM226lgvKRd4gzidhSUvk5M3XfQc4GNoMUmMWnFPqXCFjL9yKjDGtNTj8eJnkv9zeJIl3-SAfccsZSmcc3fw7FUBEJtfYYHjPJ2ce120_LtkWSKoxsetAINNSobVPzFIu3tcTa0l8nSFG5CRIYhb4dFNkzKGIAY4-PB-SMXWvOUsS8cBkWQ98e4gZHXMAW3uk-BXhvirriYvHLLtEftZeaz9DcOoGFf3yJy1jGV_iGjYAj8X9D4GaiSOJDgsaD7f8UvlUnZfBPgD7FADSMVT8LAo5oFKQ8I7e3xeFQj_KM4pOWpdHZndISkmy6tt3ihngqk7JDmeSGFUwKhu0fkQ6Z2tIg_BJbCOstRQG8tXrcx2QQYFlR1v9pLF2weivvw6JJAcx-KFzO6ZgW15WX8oCbyjZgVlV5u7KkwrnBzEhBBTifkCQhujqamgTl-Vil4sAgxoisM_EAtFWvvNk9n1dEk1LBUCD8HL4nYOlr_fd55Ut-pxV-dqlvlSwYPRnCa9NPDbFUVpwoUaMjjdzSMSuv2imacd0VUdEcuB3Np9SVUGLPWKVUi1xPptKp6lE41ybrGSM9vcEiNqjKrbxeqc2l7SwqE2O4=&p=4&sk=9a6ab4c649a730e8&fvj=0)
 </td>
 
 <td >$85,000 - $120,000 a year
@@ -253,7 +239,7 @@ PHP developers make an average salary of $80,000 nationwide and Miami is not th
 <td >Tal Group
 </td>
 
-<td >[Web Developer PHP](http://www.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0DUnwefsF7K5sI9KMOiuTab93Tl5aV87o5poBYEvjEbgIqlL4VjFWz5O4bJmyHdj-KO9erzvIxvlVA9f2oDebmhawH3uo0bb15lxQhEYo4URKiHyAhVqgW20PmNMiLg3jwAiNnsC-t8J5hx8R4xoiZgfBqRErX-B5mKIDeRjwweBWFoDEHjVu4Nypxo9ADaHDk5YVrfJKoz1ZyNFxUMTfTGoHT38q60fg34Div5G_L3gaC1s8rkh7UeeB3-fWGFfiLhWK_4EomEIcL1Rh8rTdSTaEDtPJQ4KspiAlENT_P4V02GqXZDbEYK6olYtuVYxT-hntXL63Ev6m6P1HyBVyuIc_FvQfzMBo9xwPWiHZsHBeAtCIgJTKP1AkWFH3jEyR33qQzGkVtDkP4QWVBMYVPKw0qX19TVobc5X5wkkFG0Za_V_tDbeHSJ2R74T1wnj323HHvOut9iNQDYoAuUy6HKDkTwN_8DwiznEEjDuZuyCwz9dduREDXxtJjyH7YzUiOQEAaAlFIXlvrmQK6VuwF0B1jbCnfaWSyldUH4n7gSYjboitsJePsotyZhaaHQ8yILuc4H85_uq74QO0tno2qnmO788kmUMp4E2-57Ura3rAZ5TdkxsSKrH4GNM9XEqPUv3owHeF1uFUYtWLlLQL6XZo4nhne3jTdn_pxmbhGUYmkIxNZKRelU6hUVqvzxFG5slkzvsTYydSdEwhV5fl8yTu55psWFckpi_Sqd3sKj1jXGPVVLwvSwfhofyb9b1Uxe9UE_F0-NBs6C6uy4BvIqfJV6pJGODUB1IuMZfWDseWG8Z_WdJBwZ0Q8WhSVNsfE=&p=2&sk=4ce7d012be8f6dbf&fvj=0)
+<td >[Web Developer PHP](https://www.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0DUnwefsF7K5sI9KMOiuTab93Tl5aV87o5poBYEvjEbgIqlL4VjFWz5O4bJmyHdj-KO9erzvIxvlVA9f2oDebmhawH3uo0bb15lxQhEYo4URKiHyAhVqgW20PmNMiLg3jwAiNnsC-t8J5hx8R4xoiZgfBqRErX-B5mKIDeRjwweBWFoDEHjVu4Nypxo9ADaHDk5YVrfJKoz1ZyNFxUMTfTGoHT38q60fg34Div5G_L3gaC1s8rkh7UeeB3-fWGFfiLhWK_4EomEIcL1Rh8rTdSTaEDtPJQ4KspiAlENT_P4V02GqXZDbEYK6olYtuVYxT-hntXL63Ev6m6P1HyBVyuIc_FvQfzMBo9xwPWiHZsHBeAtCIgJTKP1AkWFH3jEyR33qQzGkVtDkP4QWVBMYVPKw0qX19TVobc5X5wkkFG0Za_V_tDbeHSJ2R74T1wnj323HHvOut9iNQDYoAuUy6HKDkTwN_8DwiznEEjDuZuyCwz9dduREDXxtJjyH7YzUiOQEAaAlFIXlvrmQK6VuwF0B1jbCnfaWSyldUH4n7gSYjboitsJePsotyZhaaHQ8yILuc4H85_uq74QO0tno2qnmO788kmUMp4E2-57Ura3rAZ5TdkxsSKrH4GNM9XEqPUv3owHeF1uFUYtWLlLQL6XZo4nhne3jTdn_pxmbhGUYmkIxNZKRelU6hUVqvzxFG5slkzvsTYydSdEwhV5fl8yTu55psWFckpi_Sqd3sKj1jXGPVVLwvSwfhofyb9b1Uxe9UE_F0-NBs6C6uy4BvIqfJV6pJGODUB1IuMZfWDseWG8Z_WdJBwZ0Q8WhSVNsfE=&p=2&sk=4ce7d012be8f6dbf&fvj=0)
 </td>
 
 <td >$80,000 a year

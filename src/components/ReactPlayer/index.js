@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import YouTube from "react-youtube"
 import PropTypes from "prop-types"
-import GImage from "gatsby-image"
+// import GImage from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const VideoWrapper = styled.section`
   position: relative;
@@ -77,9 +78,10 @@ const Player = ({ id, onPlay, onPause, onEnd, onError, onStateChange, onPlayback
         <Image>
             {id && <Play onClick={() => setShowVideo(true)} aria-label="Play Video" />}
             {thumb && thumb.childImageSharp ? 
-                <GImage
+                <GatsbyImage
                     onClick={() => setShowVideo(true)}
-                    fluid={thumb.childImageSharp.fluid}
+                    // fluid={thumb.childImageSharp.fluid}
+                    image={getImage(thumb.childImageSharp.gatsbyImageData)}
                     alt="Video"
                     style={{
                         height: style.height || "100%",

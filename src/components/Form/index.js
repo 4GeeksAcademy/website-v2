@@ -5,11 +5,13 @@ import {Colors, Button} from '../Styling';
 import {Break} from "../Responsive"
 
 const regex = {
-    email: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
+    // OLD: email: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
+    email: /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!mailinator|leonvero|ichkoch|naymeo|naymio)[a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])+$/,
     text: /^.+$/,
     textarea: /^.+$/,
     number: /^\d+$/,
-    phone: /(\+\d{1,3})?(\d{9,10})$/, // +17834565748 or 7834565748
+    // OLD: phone: /(\+\d{1,3})?(\d{9,10})$/, // +17834565748 or 7834565748
+    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,10})$/
 }
 
 
@@ -20,7 +22,7 @@ const StyledInput = styled.input`
     padding: 5px 10px;
     margin: ${props => props.margin || "5px 0px"};
     border-radius: ${props => props.borderRadius};
-    border: none;
+    border: ${props => props.border || "none"};
     font-family: 'Lato', sans-serif;
     
     font-size: 16px;
@@ -114,9 +116,17 @@ const StyledTextArea = styled.textarea`
     padding: 5px 10px;
     border: none;
     font-family: 'Lato', sans-serif;
-    
     font-size: 16px;
     font-color: ${Colors.black};
+    border: ${props => props.border || "none"};
+    border-radius: ${props => props.borderRadius};
+    background-color: ${props => props.valid ? props.bgColor : Colors.lightRed};
+    opacity: 0.7;
+    :focus {
+        opacity: 1;
+        border: 1px solid ${props => props.valid ? props.lightGray : Colors.lightRed};
+    }
+    
 `
 
 export const TextArea = ({ onChange, type,errorMsg, required, validate, ...rest}) => {

@@ -1,9 +1,9 @@
 meta_info:
     slug: "coordinador-career-support"
-    title: ""
-    description: ""
+    title: "Coordinador career support en 4Geeks Academy"
+    description: "Conoce los requisitos de coordinador de career support en 4Geeks Academy"
     image: ""
-    keywords: ""
+    keywords: "coordinador, career, support"
     redirects: ["/career"]
 
 seo_title: ""
@@ -14,6 +14,7 @@ sub_heading: ""
 banner_heading: "Coordinador de Career Support"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/"
 cities:
     - Miami
     - Santiago de Chile

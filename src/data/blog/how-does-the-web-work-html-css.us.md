@@ -1,30 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2015-12-28 15:53:55+00:00
-excerpt: 'The #IntroToCoding Workshop Level 2 sponsored by Facilcloud and lead by
-  our instructor Ignacio Cordoba was held on December 17th at WeWork Lincoln Road.
-  The topic of the workshop was: How Does The Web Work? HTML + CSS and everyone who
-  attended received USD1400 to use in the cloud.'
-layout: post
-link: https://www.4geeksacademy.co/how-does-the-web-work-html-css/
-slug: how-does-the-web-work-html-css
-title: HTML + CSS - Understanding How The Web Works
-avatar: "/images/staff/alejandro.png"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2015/12/htmlcss.png"
-wordpress_id: 402
-categories:
-- Learning to code
+author: "alesanchezr"
+date: "2015-12-28T15:53:55+00:00"
+excerpt: "The #IntroToCoding Workshop was held on December 17th at WeWork Lincoln Road. The topic of the workshop was: How Does The Web Work?"
+slug: "how-does-the-web-work-html-css"
+title: "HTML + CSS - Understanding How The Web Works"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2015/12/htmlcss.png"
+image_alt: ""
+cluster: "learn-to-code"
+status: "published"
+featured: "true"
 
-tags:
-- '#IntroToCoding'
-- CSS
-- Facilcloud
-- HTML
-- Web Developer
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
 ---
 
 The #IntroToCoding Workshop Level 2 sponsored by Facilcloud and lead by our instructor Jose Cirigliano was held on December 17th at WeWork Lincoln Road.
@@ -65,6 +50,6 @@ Remember that one of the most common mistakes a web developer makes is to forget
 
 You can access codepen.io at any time to continue sharpening those coding skills and feel free to contact us if you have any questions.
 
-See you at our [next event](//events/).
+See you at our [next event](/us/next-dates).
 
 

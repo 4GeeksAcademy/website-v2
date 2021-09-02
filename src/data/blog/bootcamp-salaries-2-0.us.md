@@ -1,27 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2017-10-27 23:10:20+00:00
-excerpt: According to the Bureau of Labor Statistic, web developers made an annual
-  wage of $72,890 ?.
-layout: post
-link: https://www.4geeksacademy.co/bootcamp-salaries-2-0/
-slug: bootcamp-salaries-2-0
+author: "MRiciglianoC"
+date: "2017-10-27T23:10:20+00:00"
+excerpt: "According to the Bureau of Labor Statistic, web developers made an annual wage of $72,890 ?."
+slug: "bootcamp-salaries-2-0"
 title: "Bootcamp Graduates Salary 2017: 2.0 edition"
-avatar: "/images/staff/marcelo.jpeg"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/portada-bootcamp-02-1-1024x674.jpg"
-wordpress_id: 2580
-categories:
-- Learning to code
+image_alt: ""
+cluster: "coding-bootcamps"
+status: "published"
+featured: "false"
 
-tags:
-- 4geeks academy
-- challenges of a web developer
-- coding bootcamp
-- coding education
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
 ---
 
 When someone takes the decision to enroll into a Coding Bootcamp, they are doing it because of three – among others - main reasons: (1) higher income; (2) more job opportunities than other careers; (3) launching a Startup.  We have the commitment of analyzing - based on current data - these reasons twice a year.  Here is the recent outcome.
@@ -62,7 +50,7 @@ We have addressed before that employment is expected to grow.  Don’t be afrai
 
 
 
-Generally, the more you learn, the more you earn.  But nowadays, more than ever, time is priceless, and, most importantly, experience and practice are further valuable than theoretical knowledge (as we said in our post: [Turnaround on Education Traditions](/turnaround-education-traditions-4geeks-academy/)).
+Generally, the more you learn, the more you earn.  But nowadays, more than ever, time is priceless, and, most importantly, experience and practice are further valuable than theoretical knowledge (as we said in our post: [Turnaround on Education Traditions](/us/learn-to-code/turnaround-education-traditions-4geeks-academy)).
 
 
 

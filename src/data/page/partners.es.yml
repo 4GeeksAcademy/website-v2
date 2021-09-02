@@ -1,16 +1,29 @@
 meta_info:
   slug: alianzas
-  title: "Sobre la Academia"
-  description: "Acerca de 4Geeks Academy"
+  title: "Aliados de 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Conoce los aliados de 4Geeks Academy, empresas locales y globales que confían en nosotros y contratan a nuestros estudiantes"
   image: ""
-  keywords: ""
+  keywords: "Aliados 4Geeks, Academy"
   redirects: ["/aliados", "/es/aliados"]
 
-header_data:
-  tagline: COMPAÑÍAS QUE CONFIAN EN NOSOTROS Y CONTRATAN A NUESTROS ESTUDIANTES
-  sub_heading: "Estoy impresionada con el nivel de comprensión que las estudiantes de 4Geeks tienen, mi contratación evolucionó a lider del equipo de la Agencia de Marketing Cueva Social."
+
+seo_title: "Cooding Bootcamp"
+header:
+  title: "COMPAÑÍAS QUE CONFIAN EN NOSOTROS Y CONTRATAN A NUESTROS ESTUDIANTES"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: ""
+  paragraph: "Estoy impresionado con el nivel de comprensión que tienen los estudiantes de 4Geeks, mi contratación terminó convirtiéndose en líder de equipo - CodeNinjas."
   button: HAZTE HIRING PARTNER
-  image: "../../../static/images/bg/companies-bg.jpg"
+
+form:
+  title: "Contáctanos y encuentra al talento adecuado para tu empresa"
+  paragraph: "Contáctenos y lo conectaremos directamente con los candidatos adecuados que se gradúan de 4Geeks Academy todos los días.
+  Nuestros graduados tienen éxito en sus propios negocios, startups y grandes empresas por igual.
+  Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y con visión de futuro."
+  
+footer_data:
+  image: "../../../static/images/partner/partnership.png"
   alt: ""
 button_section:
   button_text: "Se Parte de nuestros Aliados"

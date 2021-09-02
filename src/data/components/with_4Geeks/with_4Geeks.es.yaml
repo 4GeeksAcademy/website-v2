@@ -1,0 +1,77 @@
+## WHY 4GEEKS SECTION
+## THIS COMPONENT IS USED IN "/home"
+
+## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
+header:
+  title: 4Geeks Academy en tres historias
+  paragraph: ""
+with:
+  - name: "Hernan García"
+    title: "Recibí ofertas de empresas que nunca me lo esperé"
+    description: "Hernán tardó un mes en conseguir un trabajo en tecnología una vez que comenzó a aplicar."
+    image: ../../../../static/images/staff/hernan.png
+    alt: ""
+    video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekforce.png"
+      image_link: "/es/geekforce"
+      text: ""
+      text_link: ""
+  - name: "Luisa Glum"
+    title: "La Academia estaba tan comprometida como yo"
+    description: "Luisa pagó el programa después de que se graduó y encontró trabajo, ella aplicó al ISA (Income Share Agreement)"
+    image: ../../../../static/images/staff/luisa.png
+    alt: ""
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    icon: address
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: "Ver Finaciamientos"
+      text_link: "/es/financiacion"
+  - name: "Joao Henrique"
+    title: "Siempre tendrás apoyo por parte de la Academia"
+    description: "Joao cuenta su experiencia obteniendo mentores de codificación mientras estudiaba, después de graduarse e incluso en sus trabajos."
+    image: ../../../../static/images/staff/joao.png
+    alt: ""
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekpal.png"
+      image_link: "/es/geekpal"
+      text: ""
+      text_link: ""
+## ***************************
+## BELOW SOME AVAILABLE VIDEOS
+## ***************************
+
+# A mix of different students talking and recommending 4GA.
+# Here is the URL: https://www.youtube.com/watch?v=sJrH4f7Df8g      # CURRENT 2ST BOX
+
+# Jonathan Ferragut. 2018
+# Here is the URL: https://www.youtube.com/watch?v=oeX_ocy6zv4
+
+# Olson Dimanche
+# Here is the URL: https://www.youtube.com/watch?v=mYgJ6cOxgJs      # 3rd box
+
+# Carlos Ávila
+# Here is the URL: https://www.youtube.com/watch?v=plwPwyrxX84
+# Finding a Job after the Program
+
+# Guensie Grecy. 2019
+# Here is the URL: https://www.youtube.com/watch?v=_rtJgxuY4i4      # CURRENT 1ND BOX
+
+# Olson Dimanche
+# Here is the URL: https://www.youtube.com/watch?v=dQrMEb8iiyM
+
+# Switch Career
+
+# Guensie Grecy
+# Here is the URL: https://www.youtube.com/watch?v=z_YORvcJHqA

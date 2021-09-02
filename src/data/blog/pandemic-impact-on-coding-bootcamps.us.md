@@ -1,24 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2021-02-24 05:29:14 +0000
-excerpt: Pandemic changes in coding. In the midst of Covid-19, 4Geeks has found its way to grow. 
-layout: post
-slug: pandemic-impact-on-coding-bootcamps
-title: PANDEMIC IMPACT ON CODING BOOTCAMPS 
-avatar: /images/staff/marcelo.jpeg
-image: https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/student-coding.jpg?raw=true
+author: "MRiciglianoC"
+date: "2021-02-24T05:29:14+00:00"
+excerpt: "Pandemic changes in coding. In the midst of Covid-19, 4Geeks has found its way to grow."
+slug: "pandemic-impact-on-coding-bootcamp"
+title: "PANDEMIC IMPACT ON CODING BOOTCAMPS"
+image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/student-coding.jpg?raw=true"
 image_alt: "student typing how the pandemic has changed the coding industry"
-categories:
-- coding bootcamps
-lang: us
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
-tags: 
-- report
-- pandemic 
-- coding bootcamps 
-- COVID-19
+cluster: "coding-bootcamps"
+status: "published"
+featured: "true"
+
 ---
 
 In the midst of Covid-19, 4Geeks has found its way to grow. We have always mentioned that everything that we have done has been bootstrapping our efforts, talent, investment, and capabilities. 

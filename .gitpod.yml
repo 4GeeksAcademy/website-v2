@@ -8,5 +8,8 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: npm install # runs during prebuild
+  - init: 
+      (cp -n .env.example .env.development || true) && 
+      npm install &&
+      npm i cypress -g && cypress install
     command: npm run start

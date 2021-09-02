@@ -1,9 +1,8 @@
 meta_info:
-    slug: test
-    title: "Just a dummy test, do not delete it!!!"
-    description: "Do not delete me"
-    image: "https://do_not_delete_me.png"
-    keywords: "codign bootcamp"
-    redirects: [
-        "/testing"
-    ]
+  slug: test
+  title: 'Just a dummy test, do not delete it!!!'
+  visibility: 'hidden' # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: 'Do not delete me'
+  image: 'https://do_not_delete_me.png'
+  keywords: 'codign bootcamp'
+  redirects: ['/testing']

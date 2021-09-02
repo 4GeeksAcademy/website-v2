@@ -1,32 +1,16 @@
 ---
-author: alesanchezr
-comments: true
-date: 2016-01-08 12:00:40+00:00
-excerpt: Part-time education could only be effective within a methodology focused
-  on offering a premium education in a part-time schedule.
-layout: post
-link: https://www.4geeksacademy.co/part-time-future-education/
-slug: part-time-future-education
-title: Part-time is the future of education
-avatar: "/images/staff/alejandro.png"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/part-timevsfull-1.png"
-wordpress_id: 491
-categories:
-- Sin categoría
-- Why learn to code?
+author: "alesanchezr"
+date: "2016-01-08T12:00:40+00:00"
+excerpt: "Part-time education could only be effective within a methodology focused on offering a premium education in a part-time schedule."
+slug: "part-time-future-education"
+title: "Part-time is the future of education"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2016/01/part-timevsfull-1.png"
+image_alt: ""
+cluster: "trends-and-tech"
+status: "published"
+featured: "false"
 
-tags:
-- 4geeks
-- learn to code
-- miami
-- part-time studies
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
 ---
-
-
-
 
 ### Yes! We are a Miami Dade part-time web development bootcamp
 

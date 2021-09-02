@@ -1,28 +1,15 @@
 ---
-author: alesanchezr
-comments: true
-date: 2015-12-17 17:30:43+00:00
-layout: post
-link: https://www.4geeksacademy.co/challenges-web-developer/
-slug: challenges-web-developer
-title: The Challenges of a Web Developer
-avatar: "/images/staff/alejandro.png"
-image: null
-wordpress_id: 315
-categories:
-- Living and working as a developer
+author: "alesanchezr"
+date: "2015-12-17T17:30:43+00:00"
+excerpt: "know the challenges of a web developer and how to overcome them"
+slug: "challenges-web-developer"
+title: "The Challenges of a Web Developer, Living and working as a developer"
+image: "https://github.com/4geeksacademy/website-v2/blob/master/static/images/blog/web-developer.jpeg?raw=true"
+image_alt: ""
+cluster: "full-stack-developer"
+status: "published"
+featured: "false"
 
-tags:
-- career path
-- challenges of a web developer
-- Jobs in Miami
-- learn to code
-- salary
-- Web Developer
-- web developer salary
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
 ---
 
 To be a web developer, we must be able to handle the language perfectly, and that means always staying up to date.  Let’s not forget that technology moves in giant paces and we have to be both fit and agile in order to keep up with all the novelties.

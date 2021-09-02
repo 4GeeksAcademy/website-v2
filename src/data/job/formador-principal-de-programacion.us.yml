@@ -10,6 +10,7 @@ meta_info:
 banner_heading: "Formador Principal de Programacion"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
 cities:
   - Miami
   - Santiago de Chile

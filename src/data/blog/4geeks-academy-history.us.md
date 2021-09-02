@@ -1,22 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: "2015-12-23 05:31:23+00:00"
-layout: post
-link: https://www.4geeksacademy.co/4geeks-academy-history/
-slug: 4geeks-academy-history
-title: 4Geeks Academy Story
-avatar: "/images/staff/marcelo.jpeg"
+author: "MRiciglianoC"
+date: "2015-12-23T05:31:23+00:00"
+excerpt: "Know in depth the history of 4Geeks Academy"
+slug: "4geeks-academy-history"
+title: "4Geeks Academy Story"
 image: "/images/why2.jpg"
-wordpress_id: 431
-categories:
-- Learning to code
+image_alt: ""
+cluster: "trends-and-tech"
+status: "published"
+featured: "true"
 
-tags:
-- 4geeks
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
 ---
 
 In 2009, together with two friends, we started a small software company with very big ambitions.  Just like any other startup story, we had no money (we didn't raise any funding), and our main office was our garage.
@@ -69,4 +62,4 @@ Learning from our experience with HACK, we decided to do all of 4Geeks Academy 
 Now we have a solid Syllabus and over 300 graduates.  We have been funded, we have established amazing alliances and partnerships, we have opened 4 Locations at the same time (Miami, Caracas and Maracaibo), we have the structure, and the appropriate team and we are working really hard in order to become leaders in Coding Education in Florida and South America.
 
 
-[Learn more about our program](/calendar/?)
+[Learn more about our program](/us/next-dates)

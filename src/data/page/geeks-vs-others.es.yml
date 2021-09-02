@@ -1,12 +1,14 @@
 meta_info:
   slug: geeks-vs-otros
-  title: ""
-  description: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  title: "4geeks Academy vs otros bootcamps"
+  description: "Compara 4geeks Academy versus otros bootcamps"
   image: null
-  keywords: ""
+  keywords: "4geeks Academy vs otros bootcamps"
   redirects: ["/otros"]
-  
-  
+
 ## 4GEEKS VS OTHERS HEADING
-tagline: 4GEEKS vs OTROS
-sub_heading: "Tabla Comparativa Completa"
+seo_title: "4Geeks vs Otros Bootcamps "
+header:
+  title: 4GEEKS vs OTROS
+  paragraph: "Tabla Comparativa Completa"

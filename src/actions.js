@@ -116,9 +116,9 @@ export const setTagManaerVisitorInfo = (session) => {
             longitude: session.longitude,
         }
         dataLayer.push(info);
-        // THIS BELOW DOEST NOT WORK RIGHT NOW, NEEDS MORE WORK
+        // TODO: THIS BELOW DOEST NOT WORK RIGHT NOW, NEEDS MORE WORK
         // if(session.latitude && session.longitude){
-        //     const resp = fetch(`http://maps.googleapis.com/maps/api/geocode/json?latlng=${session.latitude},${session.longitude}&sensor=false&key=${GOOGLE_KEY}`)
+        //     const resp = fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${session.latitude},${session.longitude}&sensor=false&key=${GOOGLE_KEY}`)
         //     const data = await resp.json()
         //     if(data && data.results) data.results.address_components.forEach(comp => {
         //         if(comp.types.includes("country")) dataLayer.push({  country_name: comp.short_name.toLowerCase() })
@@ -210,4 +210,38 @@ export const newsletterSignup = async (data,session) => {
     //                                                                                      tag          automation
     if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['newsletter'], ['newsletter'], session);
     return true;
+}
+
+
+export const outcomesReport = async (data,session) => {
+    console.log("Succesfully requested outcomes report", data);
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+
+    //                                                                                      tag                automation
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['download_outcome'], ['download_outcome'], session);
+    return true;
+}
+
+export const getCohorts = async (_query = {}) => {
+    let query = {
+        upcoming: true,
+        sort: 'kickoff_date',
+        ..._query,
+        academy: _query.academy ? `online,${_query.academy}` : undefined,
+    }
+    query = Object.keys(query).filter(key => query[key] && query[key] != undefined).map(key => key + "=" + query[key]).join("&")
+    console.log("query", query)
+    var resp = resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?${query}`)
+    return await resp.json();
+}
+
+export const getEvents = async (_query = {}) => {
+    let query = {
+        // sort: 'kickoff_date',
+        ..._query
+    }
+    query = Object.keys(query).filter(key => query[key] && query[key] != undefined).map(key => key + "=" + query[key]).join("&")
+    const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all?${query}`);
+    return await resp.json();
 }

@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     defaultTitle: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
     titleTemplate: "%s · 4Geeks Academy",
-    siteUrl: `https://www.4geeksacademy.com`,
+    siteUrl: `https://4geeksacademy.com`,
     defaultDescription: {
       "us": "4Geeks Academy is a world-wide leading coding school focused specially in part-time studies, you don't have to quite your job to become a web developer. Career support for life, coding mentoring for life. We have Miami Coding bootcamps; in Madrid, Spain; Santiago de Chile and Caracas, Venezuela. ",
       "es": "4Geeks Academy es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, en estudios principalmente part-time donde no tienes que dejar tu trabajo para aprender a programar.",
@@ -35,6 +35,32 @@ module.exports = {
 
   },
   plugins: [
+    'gatsby-transformer-yaml',
+    `gatsby-plugin-image`,
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+            {
+                resolve: `gatsby-remark-images`,
+                options: {
+                maxWidth: 800,
+                loading: 'lazy'
+                },
+            },
+            `gatsby-remark-lazy-load`,
+            {
+                resolve: "gatsby-remark-external-links",
+                options: {
+                target: "_self",
+                rel: "nofollow"
+                }
+            },
+        ]
+      }
+    },
     // 'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-loadable-components-ssr',
     {
@@ -65,7 +91,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Futura, Lato"],
+          families: ["Lato"],
           urls: ["/fonts/fonts.css"],
         },
       },
@@ -97,53 +123,30 @@ module.exports = {
     'gatsby-plugin-root-import',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-            {
-                resolve: `gatsby-remark-images`,
-                options: {
-                maxWidth: 800,
-                loading: 'lazy'
-                },
-            },
-            `gatsby-remark-lazy-load`,
-            {
-                resolve: "gatsby-remark-external-links",
-                options: {
-                target: "_self",
-                rel: "nofollow"
-                }
-            },
-        ]
-      }
-    },
-    'gatsby-transformer-yaml',
     'gatsby-plugin-zeit-now',
     'gatsby-remark-reading-time',
     // 'gatsby-plugin-meta-redirect',
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags/links`, `/edit`, `/landings`],
+        exclude: [`/admin`, `/tags`, `/edit`, `/landings`],
         // output: `/some-other-sitemap.xml`,
-        // query: `
-        // {
-        //     site {
-        //         siteMetadata {
-        //             siteUrl
-        //         }
-        //     }
-        //     allSitePage {
-        //         nodes {
-        //             path
-        //         }
-        //     }
-        // }`,
+        query: `
+        {
+            site {
+                siteMetadata {
+                    siteUrl
+                }
+            }
+            allSitePage(
+              filter: {context: {visibility: {nin: ["hidden", "unlisted"]}}}
+            ) {
+                nodes {
+                    path
+                }
+            }
+        }`,
         // serialize: ({ site, allSitePage }) =>
         //     allSitePage.nodes.map(node => {
         //         return {
@@ -162,7 +165,7 @@ module.exports = {
             policy: robots !== "hidden" ? [{ userAgent: '*' }] : [{ userAgent: '*', disallow: ['/'] }]
           },
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+            policy: [{userAgent: '*', disallow: ['/']}]
           },
         }
       }

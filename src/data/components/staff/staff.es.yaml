@@ -1,16 +1,19 @@
 ## STAFF MEMEBERS INFO
+heading: "Staff"
+sub_heading: "Personal apasionado, comprometido. Aportan una actitud alegre de ayudar y brindan todo el apoyo que necesitas para aprender a programar y ganar confianza mientras lo haces."
+
 staff:
   - name: "Alejandro"
     last_name: "Sánchez"
     nick_name: "alesanchezr"
     slug: "alejandro-sanchez"
-    job_title: "Director de Educación"
+    job_title: "Co-fundador - Director"
     bio: "20 enseñando, Ingeniero de SW y Google Embasador"
     github: "https://github.com/alesanchezr"
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
     twitter: "https://twitter.com/alesanchezr"
     website: "https://alesanchezr.com"
-    image: "/images/staff/alejandro.png"
+    image: "../../../../static/images/staff/alejandro.png"
     age: 34
     interests:
       - Soccer
@@ -21,13 +24,13 @@ staff:
     last_name: "Ricigliano"
     nick_name: ""
     slug: marcelo-ricigliano
-    job_title: "CEO - co-fundador"
-    bio: "Reconocido por Forbes, Newsweek, Switchup, entre otros por los éxitos en las Startups que ha co-fundado. Tech Startup Mentor de Founder Institute, Startup Chile y de Impaqto. Ha vendido 2 Startups. Ha fracasado en 4. Abogado con Postgrdo de la Stockholm Universitet."
+    job_title: "Co-Fundador - Director"
+    bio: "Reconocido por Forbes, Newsweek, Switchup, entre otros por los éxitos en las Startups que ha co-fundado. Tech Startup Mentor de Founder Institute, Startup Chile y de Impaqto. Ha vendido 2 Startups. Ha fracasado en 4. Abogado con Postgrado de la Stockholm Universitet."
     github: ""
     linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
     twitter: "https://twitter.com/MRiciglianoC"
     website: ""
-    image: "/images/staff/marcelo.png"
+    image: "../../../../static/images/staff/marcelo.png"
     age: 33
     interests:
       - Soccer
@@ -45,7 +48,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/james-walters-mba-pmp-a109492/"
     twitter: ""
     website: ""
-    image: "/images/staff/james.png"
+    image: "../../../../static/images/staff/james.png"
     age: 33
     interests:
       - Soccer
@@ -63,7 +66,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/daniel-chang-7a8b5870/"
     twitter: ""
     website: ""
-    image: "/images/staff/daniel-chang.jpeg"
+    image: "../../../../static/images/staff/daniel-chang.jpeg"
     age: 42
     interests:
       - Robotics
@@ -74,34 +77,34 @@ staff:
       - Javascript
       - Python
     location: ""
-  - name: "Patricia"
-    last_name: "Ayuso"
-    nick_name: ""
-    slug: "patricia-ayuso"
-    job_title: "Senior Mentor"
-    bio: "15 años programando, Ing. de Software con Master en M.I.S."
-    github: "https://github.com/ayusopatricia"
-    linkdin: "https://www.linkedin.com/in/ayusopatricia/"
-    twitter: "https://twitter.com/ayusopatricia"
-    website: ""
-    image: "/images/staff/patricia.jpg"
-    age: 33
-    interests:
-      - Music
-    coding_skills:
-      - Excel
-    location: ""
+  # - name: "Patricia"
+  #   last_name: "Ayuso"
+  #   nick_name: ""
+  #   slug: "patricia-ayuso"
+  #   job_title: "Senior Mentor"
+  #   bio: "15 años programando, Ing. de Software con Master en M.I.S."
+  #   github: "https://github.com/ayusopatricia"
+  #   linkdin: "https://www.linkedin.com/in/ayusopatricia/"
+  #   twitter: "https://twitter.com/ayusopatricia"
+  #   website: ""
+  #   image: "../../../../static/images/staff/patricia.jpg"
+  #   age: 33
+  #   interests:
+  #     - Music
+  #   coding_skills:
+  #     - Excel
+  #   location: ""
   - name: "Paolo"
     last_name: "Lucano"
     nick_name: "Pluco"
     slug: "paolo-lucano"
     bio: "¡Uno de nuestros graduados! 3 años programando y el mentor más carismatico"
-    job_title: "Jefe de instructores"
+    job_title: "Jefe de Instructores"
     github: "https://github.com/plucodev"
     linkdin: "https://www.linkedin.com/in/paolo-lucano/"
     twitter: ""
     website: ""
-    image: "/images/staff/paolo.jpeg"
+    image: "../../../../static/images/staff/paolo.jpeg"
     age: 42
     interests:
       - Soccer
@@ -111,20 +114,56 @@ staff:
     coding_skills:
       - Javascript
     location: ""
-  - name: "Bridget"
-    last_name: "Schraeder"
+  - name: "Ana Belen "
+    last_name: "Salas"
     nick_name: ""
-    slug: "bridget-schraeder"
-    bio: "Over four years of Recruitment Experience"
-    job_title: "Head of Partnerships & Career Support"
+    slug: "anabelen-salas"
+    bio: "Buscando maneras de innovar y hacer crecer la comunidad de 4Geeks."
+    job_title: "Marketing Operations Manager"
     github: ""
-    linkdin: "https://linkedin.com/in/bridget-schraeder-625657195"
-    twitter: "https://twitter.com/BridgetAlexys"
+    linkdin: "https://www.linkedin.com/in/anabelensalas/"
+    twitter: "https://twitter.com/anabelensalas"
     website: ""
-    image: "/images/staff/bridget.jpg"
-    age: 33
+    image: "../../../../static/images/staff/ana.png"
+    age: 28
     interests:
       - Music
     coding_skills:
       - Excel
+    location: ""
+  - name: "Mafe"
+    last_name: "Castro"
+    nick_name: ""
+    slug: "mafe-castrp"
+    job_title: "Growth Manager"
+    bio: "Liderando los esfuerzos de crecimiento de toda la academia."
+    github: ""
+    linkdin: "https://www.linkedin.com/in/mafecasvi/"
+    twitter: "https://twitter.com/mafecasvi"
+    website: ""
+    image: "../../../../static/images/staff/mafe.jpg"
+    age: 35
+    interests:
+      - Fashion Design
+    coding_skills:
+      - Bootstrap
+    location: ""
+  - name: "Nacho"
+    last_name: "Cordoba"
+    nick_name: "Nacho"
+    slug: "nacho-cordoba"
+    job_title: "Lead Mentor"
+    bio: "Más de 12 años de experiencia en programacion, y más de 4 enseñando en el campus de Miami."
+    github: "https://github.com/nachovz"
+    linkdin: "https://www.linkedin.com/in/nachovz/en-us/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/nacho.jpg"
+    age: 42
+    interests:
+      - Board Games
+      - Soccer
+      - Music
+    coding_skills:
+      - Javascript and Python
     location: ""
