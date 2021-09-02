@@ -15,6 +15,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "software-engineering"]
   utm_location: europe
+  automation: request_more_info #optional, this is the default value
+  tag: soft #optional, this is the default value
 
 navbar:
   buttonText: "Apply now"
@@ -81,7 +83,7 @@ about4Geeks:
     - title: "Preparation for interviews and selection processes"
   paragraph: ""
   button_text: "Apply for a scholarship"
-  button_link: "/es/aplica"
+  button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 

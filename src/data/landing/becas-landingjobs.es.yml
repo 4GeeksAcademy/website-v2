@@ -15,11 +15,12 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "software-engineering"]
   utm_location: europe
+  automation: request_more_info #optional, this is the default value
+  tag: soft #optional, this is the default value
 
 navbar:
   buttonText: "Solicita tu beca"
-  # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
-  url: "#bottom"
+  url: "#bottom" # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
