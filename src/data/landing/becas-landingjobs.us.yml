@@ -4,7 +4,7 @@ meta_info:
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Get your scholarship!"
-  description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy"
+  description: "Programming has become an essential knowledge for your professional success, learn to program with 4Geeks Academy"
   image: "/images/bg/remote.jpeg"
   keywords: "Learn to program, 4Geeks academy, Learn programming, learn computer engineering"
 
