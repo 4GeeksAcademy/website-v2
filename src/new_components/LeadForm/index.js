@@ -63,6 +63,7 @@ const clean = (fields, data) => {
         delete cleanedData.full_name;
     }
 
+    // BUG: It is assumed that here it is receiving the course data (string), but when submitting course it ends up as null
     console.log("FormData Before sending", cleanedData, data, fields)
     return cleanedData;
 }
@@ -117,6 +118,7 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
     const {session} = useContext(SessionContext);
     const courseSelector = yml.form_fields.find(f => f.name === "course")
     React.useEffect(() => {
+        console.log("PREDATA_:::", data)
         setVal(_data => {
             const _ = Object.keys(_data).reduce((total, key) => {
                 if (_data[key] !== undefined) {
@@ -137,11 +139,14 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
         const cleanedData = clean(fields, formData);
         if (!formIsValid(cleanedData)) {
             setFormStatus({status: "error", msg: yml.messages.error});
-        }
-        else {
+        } else if (Array.isArray(formData.course?.value) && formData.course?.value > 1){
+            alert(`Oops! ${courseSelector.error}`);
+        } else {
             setFormStatus({status: "loading", msg: yml.messages.loading});
             formHandler(cleanedData, session)
                 .then(data => {
+                    // BUG: The data of course not loads whe submit the form
+                    console.log("DATA_FORM_HANDLER:::", data)
                     if (data && data.error !== false && data.error !== undefined) {
                         setFormStatus({status: "error", msg: data.error});
                     }
@@ -198,9 +203,10 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                                             background: '#FFFFFF',
                                         }}
                                         options={selectProgram}
-                                        value={selectProgram?.value}
+                                        // value={selectProgram.value}
                                         placeholder={courseSelector.place_holder}
-                                        onChange={(selected, valid) => setVal({...formData, course: {value: selected["value"], valid}})}
+                                        valid={true}
+                                        onChange={(selected, valid) => setVal({...formData, course: { value: selected.value, valid }})}
                                     />
                                 </Div>
                             )

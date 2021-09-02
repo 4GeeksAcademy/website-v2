@@ -48,8 +48,9 @@ const Landing = (props) => {
   }, []);
 
   // data sent to the form already prefilled
+  console.log("COURSE:::", yml.meta_info.utm_course)
   const preData = {
-    course: {type: "hidden", value: `${programs <=1 ? (programs[0].value) : (yml.meta_info.utm_course)}`, valid: true},
+    course: {type: "hidden", value: programs <=1 ? (programs[0].value) : (yml.meta_info.utm_course), valid: true},
     utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
@@ -227,7 +228,7 @@ const Landing = (props) => {
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
           .map(name => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location})
+            return landingSections[layout]({...props, yml: components[name], session, course: 'yml.meta_info.utm_course', location: components.meta_info.utm_location})
           })
       }
 
