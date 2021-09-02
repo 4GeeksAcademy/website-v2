@@ -12,7 +12,7 @@ header:
   tagline: "4Geeks Academy en Miami"
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
-  alt: ""
+  alt: "4Geeks Academy modalidad online y presencial en Miami, Florida"
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
