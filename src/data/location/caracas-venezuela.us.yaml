@@ -13,7 +13,7 @@ header:
   tagline: "4Geeks Academy in Caracas"
   paragraph: ""
   image: "../../../static/images/locations/caracas-home.png"
-  alt: ""
+  alt: "4Geeks Academy online and in-person coding bootcamp in Caracas, Venezuela"
 button_header:
   button_text: See Programs
   button_link: "#programs"
