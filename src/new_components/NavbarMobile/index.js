@@ -12,7 +12,7 @@ import {NavItem} from '../Navbar';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
-const BurgerIcon = (props) => <svg width="28" height="23" style={props.style} onClick={props.onClick} viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+const BurgerIcon = (props) => <svg width="28" height="23" style={props.style} onClick={props.onClick} viewBox="0 0 28 23" fill="none" xmlns="https:://www.w3.org/2000/svg">
     <line x1="1" y1="1" x2="27" y2="1" stroke="black" strokeWidth="2" strokeLinecap="round" />
     <line x1="1" y1="11.5" x2="17.0645" y2="11.5" stroke="black" strokeWidth="2" strokeLinecap="round" />
     <line x1="1" y1="22" x2="27" y2="22" stroke="black" strokeWidth="2" strokeLinecap="round" />
@@ -74,14 +74,27 @@ const MenuItem = styled.li`
     font-family: lato, sans-serif;
 `
 
-export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton, onLocationChange, currentURL}) => {
+export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton, onLocationChange, currentURL, locationCity}) => {
     const {session, setSession} = useContext(SessionContext);
-    const [status, setStatus] = useState(
-        {
-            toggle: false,
-            hovered: false,
-            itemIndex: null
-        })
+    const [status, setStatus] = useState({
+        toggle: false,
+        hovered: false,
+        itemIndex: null
+    })
+    // let buttonText = session.location ? session.location.button.apply_button_text : button.apply_button_text
+
+    let city = session && session.location ? session.location.city : [];
+    let currentLocation = locationCity ? locationCity : [];
+    const [buttonText, setButtonText] = useState("")
+    /* In case of want change the Button text "Aplica" search the key 
+        "apply_button_text" in /src/data/location/locationfile.yaml
+    */
+    let findCity = currentLocation.find(loc => loc.node?.city === city)
+    useEffect(() => {
+        if(findCity !== undefined) 
+        setButtonText(findCity.node.button.apply_button_text)
+    }, [findCity])
+
     const data = useStaticQuery(graphql`
     query {
       allChooseProgramYaml {
@@ -130,9 +143,9 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
                         />
                     </Link>
                 </Div>
-                <MegaMenu status={status} setStatus={setStatus} menu={menu} session={session} currentURL={currentURL} languageButton={languageButton} />
+                    <MegaMenu status={status} setStatus={setStatus} menu={menu} session={session} currentURL={currentURL} languageButton={languageButton} />
                 <Div alignItems="center" justifyContent="between">
-                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" color={Colors.black} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+                    <Link onClick={onToggle} to={button.button_link || "#"}><Button variant="full" color={Colors.black} textColor={Colors.white}>{buttonText || button.apply_button_text}</Button></Link>
                 </Div>
             </Nav>
         </>

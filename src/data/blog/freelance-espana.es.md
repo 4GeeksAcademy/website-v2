@@ -1,12 +1,14 @@
 ---
-author: 
-date: 2021-05-19 20:44:51+00:00
-excerpt: Conoce aquí cómo encontrar trabajo freelance desde España o el mundo
-slug: freelance-espana
-title: Plataformas para encontrar trabajo Freelance
+author: "4GeeksAcademyES"
+date: "2021-05-19T20:44:51+00:00"
+excerpt: "Conoce aquí cómo encontrar trabajo freelance desde España o el mundo"
+slug: "freelance-espana"
+title: "Plataformas para encontrar trabajo Freelance"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-0.png?raw=true"
 image_alt: "imagen con el texto: Freelance España"
 status: "published"
+cluster: "desarrollo-profesional"
+
 ---
 
 Entre los muchos cambios que están ocurriendo últimamente, el concepto y la forma de trabajar también están dando un giro de casi 360º.

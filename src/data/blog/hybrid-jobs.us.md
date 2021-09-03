@@ -1,27 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2019-10-15 20:53:47+00:00
-excerpt: The key to being a great coder is having the disposition to improve every
-  day and apply strategies that will make you more productive and efficient.
-layout: post
-link: https://www.4geeksacademy.co/hybrid-jobs/
-slug: hybrid-jobs
-title: 'Hybrid Jobs: An Unstoppable Movement'
+author: "MRiciglianoC"
+date: "2019-10-15T20:53:47+00:00"
+excerpt: "The key to being a great coder is having the disposition to improve every day and apply strategies that will make you more productive and efficient."
+slug: "hybrid-jobs"
+title: "Hybrid Jobs: An Unstoppable Movement"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/10/BLOG-HYBRID-1-1024x524.jpg"
 image_alt: ""
-wordpress_id: 3675
-categories:
-- Sin categoría
-cluster: "learn-to-code"
-tags:
-- 4geeks
-- coding
-- Jobs in Miami
-- Python
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+cluster: "career-growth"
+status: "published"
+featured: "false"
+
 ---
 
 # **Hybrid Jobs: An Unstoppable Movement**
@@ -77,10 +65,10 @@ Coding is a vital skill that any purple squirrel should have. In a digitizing li
 ## **How to be ready for a hybrid tech job?**
 
 
-It is a fact that the rise of hybrid jobs is increasing daily. To face this reality, you have to prepare yourself in [different disciplines](https://www.getsmarter.com/blog/employee-development/skills-of-the-future-workforce-upskilling-for-hybrid-jobs/) that go beyond your professional area. Having technological and digital skills is fundamental if you want to succeed in that hybrid position. [Learning to code](/hacks-lear-to-code/) is no longer a limited task only for programming students. Having basic knowledge about programming, coding and web development is essential in today's world for getting new jobs, even if it is not your main work area. 
+It is a fact that the rise of hybrid jobs is increasing daily. To face this reality, you have to prepare yourself in [different disciplines](https://www.getsmarter.com/blog/employee-development/skills-of-the-future-workforce-upskilling-for-hybrid-jobs/) that go beyond your professional area. Having technological and digital skills is fundamental if you want to succeed in that hybrid position. [Learning to code](/us/learn-to-code/hacks-learn-to-code) is no longer a limited task only for programming students. Having basic knowledge about programming, coding and web development is essential in today's world for getting new jobs, even if it is not your main work area. 
 
 We’ll be left behind if we don’t start to jump into this race. We must keep our skills up to date so we’ll be ready to manage any job position. 4Geeks Academy believes in the current relevance of [hybrid jobs](https://www.thebalancecareers.com/hybrid-jobs-and-the-hybrid-skills-candidates-need-most-4586497) and also, in the proper preparation of the new hybrid professionals to conquer the challenges that they’re facing today at the companies. 
 
 As technology continues evolving rapidly, teaching coding is part of lifelong learning and will be fundamental for any professional. That is why our academy guarantees the necessary skills to be successful.
 
-To get started and apply for your part-time coding Bootcamp, [contact us today](/contact/).
+To get started and apply for your part-time coding Bootcamp, [contact us today](/us/contact).

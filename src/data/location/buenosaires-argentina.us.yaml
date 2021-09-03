@@ -13,8 +13,8 @@ seo_title: "Coding Bootcamp Argentina"
 header:
   tagline: "4Geeks Academy in Argentina"
   paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Argentina with over 1,000 graduates"
-  image: "../../../static/images/locations/online-home.png"
-  alt: ""
+  image: "../../../static/images/locations/argentina-header.png"
+  alt: "4Geeks Academy online coding bootcamp in Argentina"
 button_header:
   button_text: See Programs
   button_link: "#programs"

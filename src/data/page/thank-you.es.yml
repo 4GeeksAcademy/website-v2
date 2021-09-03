@@ -1,0 +1,23 @@
+meta_info:
+  slug: gracias
+  title: "Muchas Gracias - 4Geeks Academy"
+  description: "Gracias, hemos recibido su solicitud. Nuestro Geeky Advisor se pondrá en contacto contigo en breve. ¡Espera Atento!"
+  image: ""
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  keywords: "thank you page, coding bootcamp"
+  redirects: ["/gracias", "/gracias/apply"]
+banner:
+  tagline: "Gracias!"
+  sub_heading: ""
+  image: "../../../static/images/bg/the-academy-bg.jpg"
+content:
+  title: "Revisa tu correo electrónico! :)"
+  message: "Hemos recibido tu solicitud. Nuestro Geeky Advisor se pondrá en contacto contigo en breve. ¡Espera Atento!
+
+Mientras tanto, lea nuestro blog. Está lleno de información importante que estamos seguros de que le resultará útil. :)"
+  articles_title: "Algunos artículos que te pueden interesar:"
+  button: "Lea nuestro blog"
+social: 
+  title: "Siguenos en nuestras redes"
+  message: "Elige donde te gustaría seguirnos"
+  button_text: "Llévame a..."

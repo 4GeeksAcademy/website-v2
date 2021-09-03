@@ -1,48 +1,69 @@
 context("Test Apply page with correct data", () => {
+
   it('Visit the Apply page with path "/us/apply"', () => {
-    cy.visit("/apply").wait(500);
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq("/us/apply");
-    });
+    cy.visit("/us/apply").wait(3500);
   });
 
   it("Call the form and fill with right values", () => {
-    // It gets data in fixtures folder to fill form
-    cy.fixture("/apply/names.json").then((data) => {
-      const { firstName, lastName } = data.user;
+
+    cy.log('**_____ Filling form data _____**')
+    cy.fixture("/contact/right.json").then((right) => {
+      const { firstName } = right;
+
+      cy.log('**_____ Start intercept _____**')
+      cy.intercept('POST', '**/marketing/lead', (req) => {
+        req.body.first_name = firstName
+      }).as('postForm')
+  
 
       cy.get("[data-cy=first_name]")
-        .should("have.css", "border-color", "rgb(0, 0, 0)") // focus the form
-        .type(firstName);
-
-      cy.get("[data-cy=last_name]")
-        .should("have.css", "border-color", "rgb(0, 0, 0)")
-        .type(lastName);
-
-      cy.get("[data-cy=dropdown_program_selector]").click().wait(500); // Gets Drowpdown of Courses
-      cy.get("#react-select-2-option-0").click(); // Selects Level 1 with position 0
+        .clear().click()
+        .type(firstName)
+        .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
     });
-  });
+        
+    cy.fixture("/apply/form_values/right.json").then((right) => {
 
-  it("Fill the input fields with correct values", () => {
-    cy.fixture("/apply/form_values/right.json").each((right) => {
+      const { email, phone } = right;
+
+      cy.log('**_____ Start intercept _____**')
+      cy.intercept('POST', '**/marketing/lead', (req) => {
+        req.body.email = email
+        req.body.phone = phone
+      }).as('postForm')
+
       cy.get("[data-cy=email]")
-        .should("have.css", "border-color", "rgb(0, 0, 0)").wait(200)
-        .clear()
-        .type(right.email);
+        .clear().click()
+        .type(email)
+        .should("have.css", "border-color", "rgb(0, 0, 0)");
 
       cy.get("[data-cy=phone]")
-        .should("have.css", "border-color", "rgb(0, 0, 0)").wait(500)
-        .clear()
-        .type(right.phone);
+        .clear().click()
+        .type(phone)
+        .should("have.css", "border-color", "rgb(0, 0, 0)");
+
+      cy.get("[data-cy=dropdown_program_selector]")
+        .click().wait(500)
+        .get("#react-select-2-option-0").click()
+
+      cy.get("[data-cy=dropdown_academy_selector]")
+        .click().wait(2500)
+        .get("#react-select-3-option-1").click()
+
     });
-  })
-  
-  it("Should submit the form and redirect to thank-you page", () => {
-    cy.get('Button[type="submit"]').contains("APPLY").click().wait(500);
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq("/us/thank-you");
-    });
+
+    cy.get('Button[type="submit"]').contains('APPLY').click().wait(2500)
+
+    cy.log("**_____ Verifying Interception _____**")
+    cy.wait('@postForm');
+    // it verify if the response has been intercepted and changed
+    cy.get('@postForm').then(xhr => {
+      console.log("Response Intercepted:::",xhr)
+      // expect(xhr.response.statusCode).to.equal(201)
+      expect(xhr.response.body.first_name).to.equal('Rowan')
+      expect(xhr.response.body.email).to.equal('mark@outlook.com')
+      expect(xhr.response.body.phone).to.equal('1234567890')
+    })
   })
 
 });

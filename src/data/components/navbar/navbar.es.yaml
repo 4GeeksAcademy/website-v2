@@ -87,13 +87,6 @@ navbar:
               link_to: "/es/blog-en-espanol"
             - title: "Partners"
               link_to: "/es/alianzas"
-  # links:
-  #       - name: "Desarrollador Full Stack"
-  #       - link: "/course/full-stack-web-development-bootcamp-part-time"
-  #       - name: "Ingeniero de Software"
-  #       - link: "/course/software-engineering-coding-bootcamp"
-  # - name: "Pricing"
-  #   link: "/pricing"
   - name: "Campus"
     link: "/partners"
     sub_menu:
@@ -120,16 +113,18 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-argentina"
             - title: "Bolivia"
               link_to: "/es/coding-campus/bootcamp-programacion-bolivia"
+            - title: "Europa"
+              link_to: "/es/coding-campus/bootcamp-programacion-europa-online"
             - title: "Costa Rica"
               link_to: "/es/coding-campus/bootcamp-programacion-costa-rica"
         - title: "-"
           sub_links:
             - title: "Colombia"
               link_to: "/es/coding-campus/bootcamp-programacion-colombia"
-            - title: "Ecuador"
-              link_to: "/es/coding-campus/bootcamp-programacion-ecuador"
             - title: "México"
               link_to: "/es/coding-campus/bootcamp-programacion-mexico"
+            - title: "Ecuador"
+              link_to: "/es/coding-campus/bootcamp-programacion-ecuador"
             - title: "Panamá"
               link_to: "/es/coding-campus/bootcamp-programacion-panama"
             - title: "Uruguay"
@@ -144,7 +139,7 @@ language_button:
   link: "/?lang=en"
 button:
   button_link: "/es/aplica"
-  apply_button_text: "Aplica"
+  apply_button_text: "Aplicar"
   button_type: "" ## YOU CAN LEAVE IT EMPTY FOR A FULL BACKGROUND COLOR OR 'outline' FOR A WHITE BACKGROUND WITH A BORDER
   button_color_text: ""
   button_background_color: ""

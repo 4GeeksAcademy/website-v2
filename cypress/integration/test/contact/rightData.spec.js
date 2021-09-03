@@ -1,15 +1,23 @@
-
 context("Test Contact page with correct data", () => {
+
   it('Visit the Contact page with path "/us/contact"', () => {
-    cy.visit("/contact").wait(500);
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq("/us/contact");
-    });
+    cy.visit("/us/contact").wait(500);
   });
 
   it("Call the form and fill with right values", () => {
-    cy.fixture("/contact/right.json").each((right) => {
+
+    cy.log('**_____ Filling form data _____**')
+    cy.fixture("/contact/right.json").then((right) => {
       const { firstName, lastName, email, comment } = right;
+
+      cy.log('**_____ Intercepting... _____**')
+      cy.intercept('POST', '**/marketing/lead', (req) => {
+        console.log("REQUIRE:::::", req)
+        req.body.first_name = firstName
+        req.body.last_name = lastName
+        req.body.email = email
+        req.body.comment = comment
+      }).as('postContact')
 
       cy.get("[data-cy=first_name]")
         .clear()
@@ -31,10 +39,20 @@ context("Test Contact page with correct data", () => {
         .type(comment)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
     });
-  });
 
-  it("Submit the form with correct values", () => {
-    cy.get('Button[type="submit"]').contains("Send").click()
-    cy.get("[data-cy=thankfulness]").contains("Thank you 🤣 Gracias").log("success");
+    cy.log("**_____ Submit Form _____**")
+    cy.get('Button[type="submit"]').contains("Send").click().wait(2500);
+
+    cy.log("**_____ Verifying Interception API _____**")
+    cy.wait('@postContact');
+    cy.get('@postContact').then(xhr => {
+      console.log("Response Intercepted:::", xhr)
+      // expect(xhr.response.statusCode).to.equal(201)
+      expect(xhr.response.body.first_name).to.equal('Rowan')
+      expect(xhr.response.body.last_name).to.equal('Dash')
+      expect(xhr.response.body.email).to.equal('rodash@outlook.com')
+      expect(xhr.response.body.client_comments).to.equal('Im Rowan Dash')
+    })
+
   });
 });

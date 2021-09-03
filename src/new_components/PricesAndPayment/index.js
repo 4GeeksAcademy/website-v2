@@ -115,7 +115,6 @@ const PricesAndPayments = (props) => {
 
   let prices = !course && !modality ? {} : currentLocation.prices[course?.value][modality?.value];
 
-
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   return (
     <Div github="/location" flexDirection="column" margin="50px 0" margin_tablet="70px 0">
@@ -177,7 +176,11 @@ const PricesAndPayments = (props) => {
                 applyLabel={apply_button_text}
                 border="1px solid black"
                 borderRight_tablet="none"
-              />
+              >
+                {prices.left_section?.content?.logo && <Div margin="10px 0 0 0" display="flex">
+                  <img style={{ margin: "auto", height: "20px" }} src={prices.left_section?.content?.logo} />
+                </Div>}
+              </PricingCard>
             }
             {prices.center_section && Array.isArray(prices.center_section.plans) &&
               <PricingCard lang={props.lang} color="white" background='black'
@@ -215,7 +218,11 @@ const PricesAndPayments = (props) => {
                 data={prices.right_section}
                 border="1px solid black"
                 borderLeft_tablet="none"
-              />
+              >
+                {prices.right_section?.content?.logo && <Div margin="10px 0 0 0" display="flex">
+                  <img style={{ margin: "auto", height: "20px" }} src={prices.right_section?.content?.logo} />
+                </Div>}
+              </PricingCard>
             }
           </GridContainer>
       }

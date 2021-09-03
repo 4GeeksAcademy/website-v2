@@ -7,7 +7,7 @@ import ReactPlayer from '../../new_components/ReactPlayer'
 import Fragment from "../../components/Fragment"
 import Icon from "../../components/Icon"
 
-export default ({lang, playerHeight, title, paragraph, background}) => {
+export default ({lang, playerHeight, title, text, text_link, paragraph, background}) => {
   const data = useStaticQuery(graphql`
     query With4Geeks{
       allWith4GeeksYaml{
@@ -76,10 +76,11 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
           return (
             <Div
               display="flex"
+              flexDirection="column"
               flexDirection_tablet="column"
-              justifyContent="between"
+              justifyContent="start"
               // justifySelf={`center`}
-              borderBottom={`1px solid ${Colors.lightGray}`}
+              border={`1px solid ${Colors.lightGray}`}
               // border_tablet={`1px solid ${Colors.lightGray}`}
               // justifyContent="spece-between"
               key={index}
@@ -89,6 +90,7 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
               <Div
 
                 padding_tablet="0"
+                padding="20px 0"
                 width_tablet="100%"
                 height_tablet="158px"
                 alignSelf={`baseline`}
@@ -98,16 +100,17 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
                   className="react-player-with4geeks"
                   thumb={i.image}
                   id={i.video}
-                  width='82px'
+                  width="85%"
                   width_tablet="100%"
                   height_tablet='158px'
-                  height={playerHeight}
+                  height={playerHeight || "auto"}
                 />
               </Div>
               <Div
                 marginTop="20px"
                 padding="0 25px 19px 25px"
                 display={`flex`}
+                height="100%"
                 flexDirection="column">
                 {/* <Icon width="32" icon={i.icon}
               style={{position: "absolute"}}
@@ -147,7 +150,7 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
                 {i.footer.is_image ?
                   <Link to={i.footer.image_link}><RoundImage url={i.footer.image} bsize="contain" height="20px" position="left" /></Link>
                   :
-                  <Link to={i.footer.text_link}>
+                  <Link to={text_link || i.footer.text_link}>
                     <H4
                       textAlign="left"
                       width="100%"
@@ -155,7 +158,7 @@ export default ({lang, playerHeight, title, paragraph, background}) => {
                       lineHeight="15px"
                       fontWeight="400"
                       color={Colors.blue}
-                    >{i.footer.text}
+                    >{text || i.footer.text}
                     </H4>
                   </Link>
                 }

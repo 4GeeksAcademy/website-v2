@@ -1,5 +1,6 @@
 meta_info:
   slug: geeks-vs-others
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   title: "4geeks Academy vs other bootcamps"
   description: "Compare 4geeks Academy versus other bootcamps"
   image: null

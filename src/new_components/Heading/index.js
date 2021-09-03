@@ -30,7 +30,8 @@ const BaseHeading = styled(Heading)`
   font-style: ${props => props.fontStyle || "normal"};
   color: ${props => props.color};
   margin: ${props => props.margin};
-  border-bottom: ${props => props.borderBottom};
+  border: ${props => props.border};
+  border-width: ${props => props.borderWidth};
   border-color: ${props => props.borderColor};
   text-shadow: ${props => props.textShadow}; 
   background-color: ${props => props.background};
@@ -179,10 +180,11 @@ export const Paragraph = styled.p`
   color: ${props => props.color};
   text-align: ${props => props.textAlign || "center"};
   align-self: ${props => props.alignSelf};
+  align-items: ${props => props.alignItems};
   height: ${props => props.height};
   z-index: ${props => props.zIndex};
   border-left: ${props => props.borderLeft};
-  opacity: ${props => props.isActive ? 1 : 0.8};
+  opacity: ${props => props.isActive ? 1 : props.opacity ? props.opacity : 0.8};
 
   a{color: ${Colors.blue};}
 
@@ -197,7 +199,7 @@ export const Paragraph = styled.p`
   }
   @media  ${Devices.tablet}{
       display: ${props => props.display_tablet};
-      justify-content: ${props => props.justifyContent};
+      justify-content: ${props => props.justifyContent_tablet};
       width: ${props => props.width_tablet};
       font-size: ${props => props.fontSize_tablet};
       text-align: ${props => props.textAlign_tablet};
@@ -211,6 +213,7 @@ export const Paragraph = styled.p`
       padding: ${props => props.padding_md};
   }
   @media  ${Devices.lg}{
+    font-size: ${props => props.fontSize_lg};
   }
   @media  ${Devices.xl}{
   }

@@ -1,6 +1,7 @@
 meta_info:
   slug: alianzas
   title: "Aliados de 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Conoce los aliados de 4Geeks Academy, empresas locales y globales que confían en nosotros y contratan a nuestros estudiantes"
   image: ""
   keywords: "Aliados 4Geeks, Academy"

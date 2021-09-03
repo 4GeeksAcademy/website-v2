@@ -1,6 +1,7 @@
 meta_info:
   slug: press
   title: ""
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: null
   image: null
   keywords: ""
@@ -44,7 +45,7 @@ content:
       logo: "../../../static/images/news/larazon.png"
       location: ["madrid-spain"]
       image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
-      title: "Interview / 4Geeks Academy on CNN Chile"
-      text: "Thanks to our friends at CNN Chile for being present at our event and publishing such good material about the future in education that we offer to the Santiago community through our #Bootcamp de #Programming program."
-      textUrl: "See Interview"
-      url: "https://innovadores.larazon.es/es/movimiento-solidario-para-ensenar-programacion-durante-la-crisis-del-covid-19/"
+      title: "Supporting each other when learning how to code"
+      text: "In the middle of the COVID-19 crisis, we decided to increase our scholarship programs in Spain exponentially, receiving great recognition from the local and international press."
+      textUrl: "Read more"
+      url: "https://www.elespanol.com/invertia/disruptores-innovadores/innovadores/20200317/movimiento-solidario-ensenar-programacion-crisis-covid-19/475454655_0.html"

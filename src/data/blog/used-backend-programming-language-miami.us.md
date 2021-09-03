@@ -1,30 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-05-29 18:16:20+00:00
-excerpt: Python, Ruby on Rails or PHP? Let's take a look at what's the best option
-  for you.
-layout: post
-link: https://www.4geeksacademy.co/used-backend-programming-language-miami/
-slug: used-backend-programming-language-miami
-title: What is the most used back-end programming language in Miami?
-image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/Python.jpg"
+author: "4GeeksAcademy"
+date: "2016-05-29T18:16:20+00:00"
+excerpt: "Python, Ruby on Rails or PHP? Let's take a look at what's the best option for you."
+slug: "used-backend-programming-language-miami"
+title: "What is the most used back-end programming language in Miami?"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2017/08/Python.jpg"
 image_alt: ""
-wordpress_id: 571
-categories:
-- Learning to code
 cluster: "learn-to-code"
-tags:
-- 4geeks academy
-- coding
-- miami
-- php
-- programming language
-- Python
-- ruby
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+status: "published"
+featured: "false"
+
 ---
 
 To begin, we need to know in what area we are going to specialize in, or what the language is being used by the business or organization.  In this article we are going to talk about the three most used languages in the last two years, which are: PHP, Python and Ruby.

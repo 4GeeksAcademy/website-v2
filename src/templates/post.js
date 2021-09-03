@@ -38,6 +38,11 @@ export default function Template (props) {
     return mes;
   }
 
+  const langSwitcher = {
+    es: "blog-en-espanol",
+    us: "blog"
+}
+
   //Date Formatter
   function GetFormattedDate (date) {
 
@@ -79,10 +84,9 @@ export default function Template (props) {
         {/* Container */}
         <GridContainer columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin="90px 0 0 0">
 
-          {/* Top Tags */}
-          {/* <Link to={"/us/blog/tag/" + tag}>{tag}</Link> */}
+          {/* Top cluster */}
           <Div justifyContent="center">
-            <Link to={`/us/blog/${post.frontmatter.cluster}`}>
+            <Link to={`/${pageContext.lang}/${langSwitcher[pageContext.lang]}/${post.frontmatter.cluster}`}>
               <Button variant="outline" color="black" fontSize="13px" lineHeight="15px" fontWeight="700">{post.frontmatter.cluster && post.frontmatter.cluster}</Button>
             </Link>
           </Div>
@@ -224,74 +228,6 @@ export default function Template (props) {
       </Layout>
     </>
   )
-  // <BlogLayout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
-  //     <Column size="10" margin="50px auto 0px auto">
-  //         <Column size="12" margin="auto">
-  //             <Div height="100%" align="around" justifyContent="center" display="flex">
-  //                 <LazyLoad scroll={true} height={100} once={true}>
-  //                     <RoundImage border="100%" width="75px" height="75px" bsize="contain" url={filtered.avatar} />
-  //                 </LazyLoad>
-  //                 <Div width="400px" w_sm="200px" margin="0 0 0 20px" display="block" align="left" alignSelf="center">
-  //                     <Paragraph color={Colors.gray} fontWeight="900" fs_sm="12px" align="left" align_sm="left" fontSize="16px" lineHeight="20px"><a href={`https://twitter.com/${filtered.name || "4GeeksAcademy"}`} rel="author noopener noreferrer nofollow">{`${filtered.name || '4Geeks Academy'} on ${postDate}`}</a></Paragraph>
-  //                     <Paragraph color={Colors.gray} align="left" fs_sm="10px" align_sm="left" fontSize="14px" lineHeight="14px">{`${filtered.bio}`}</Paragraph>
-  //                     <Paragraph color={Colors.gray} margin="0 0 10px 0" fs_sm="10px" fontWeight="900" align="left" align_sm="left" fontSize="14px" lineHeight="14px">{`${post.fields.readingTime.text}`}</Paragraph>
-  //                 </Div>
-  //             </Div>
-  //             {filtered.username &&
-  //                 <Div width="400px" w_sm="100%" margin="auto" align="center" padding="0 0 0 50px" p_sm="0" display="block" align="left" alignSelf="center">
-  //                     <TwitterFollowButton screenName={filtered.username} />
-  //                 </Div>
-  //             }
-  //         </Column>
-  //         <Column size="12" align="center" margin="30px 0px">
-  //             {post.frontmatter.tags != null && post.frontmatter.tags.map((tag, i) => {
-  //                 return (
-  //                     <Card
-  //                         key={i}
-  //                         color="darkGray"
-  //                         display="inline-block"
-  //                         padding="5px 8px"
-  //                         borders=".2rem"
-  //                         margin="7px"
-  //                     >
-  //                         <Link to={`/${pageContext.lang}/blog/tag/${tag}`}>{tag}</Link>
-  //                     </Card>
-  //                 )
-  //             })}
-  //         </Column>
-  //         <Column size="12" align="center">
-  //             <H1
-  //                 type="h1"
-  //                 fontSize="36px"
-  //                 fs_lg="30px"
-  //                 textShadow="none">{post.frontmatter.title}</H1>
-  //         </Column>
-  //         <Column size="12" margin="10px 0px">
-  //             <LazyLoad scroll={true} height={100} once={true} >
-  //                 <RoundImage border="1.25rem" width="100%" height="300px" bsize="contain" position="center" url={post.frontmatter.image} />
-  //             </LazyLoad>
-  //         </Column>
-  //         <Column size="12" margin="10px 0px" >
-  //             <div className="single-post" dangerouslySetInnerHTML={{__html: post.html.replace(/<h1>.*<\/h1>/gm, "")}}></div>
-  //         </Column>
-  //         <Column size="12" margin="10px 0px 50px 0px" align="left">
-  //             {post.frontmatter.tags && post.frontmatter.tags.map((tag, i) => {
-  //                 return (
-  //                     <Card
-  //                         key={i}
-  //                         color="darkGray"
-  //                         cursor="pointer"
-  //                         padding="5px 8px"
-  //                         display="inline-block"
-  //                         borders=".2rem"
-  //                         margin="7px">
-  //                         {tag}
-  //                     </Card>
-  //                 )
-  //             })}
-  //         </Column>
-  //     </Column>
-  // </BlogLayout>)
 }
 export const postQuery = graphql`
 query BlogPostBySlug($slug: String!){
@@ -305,7 +241,6 @@ query BlogPostBySlug($slug: String!){
             excerpt
             unlisted
             image
-            tags
             cluster
         }
         fields{
@@ -319,20 +254,3 @@ query BlogPostBySlug($slug: String!){
 
 
 `
-
-
-// {
-//   post.frontmatter.tags != null && post.frontmatter.tags.map((tag, i) => {
-//     return (
-//       <Card
-//         style={{fontFamily: "Lato", fontWeight: "700", color: "#3A3A3A", fontSize: "13px", lineHeight: "15.6px", lineSpacing: "0.05em"}}
-//         key={i}
-//         display="inline-block"
-//         padding="5px 8px"
-//         borders=".2rem"
-//       >
-//         {/* <Link to={"/us/blog/tag/" + tag}>{tag}</Link> */}
-//       </Card>
-//     )
-//   })
-// }

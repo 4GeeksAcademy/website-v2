@@ -9,15 +9,19 @@ meta_info:
     [
       "/part-time",
       "/program",
+      "/the-program",
       "/us/part-time",
       "/us/course/part-time",
       "/us/full-stack",
+      "/en/course/full-stack-web-development/",
+      "/en/coding-bootcamps/full-stack-web-development",
       "/landing/coding-classes-part-time",
       "/course/web-development-parttime",
       "/coding-introduction-programming",
       "/us/course/coding-introduction",
       "/course/coding-introduction",
       "/us/coding-bootcamps/full-stack-web-development-bootcamp-part-time",
+      "/course/full-stack-web-development-bootcamp-part-time",
       "/us/course/full-stack-web-development-bootcamp-part-time",
     ]
 seo_title: "Cooding Bootcamp"

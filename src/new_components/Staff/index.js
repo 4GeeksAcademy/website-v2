@@ -96,7 +96,7 @@ const Staff = props => {
                                 >
                                     {item.bio}
                                 </Paragraph> */}
-                                <Anchor to={item.linkdin} target="_blank" rel="noopener noreferrer"><Icon icon="linkedin" width="14px" fill="#2867b2" stroke="#2867b2" /></Anchor>
+                                <Anchor to={item.linkdin} target="_blank" rel="noopener noreferrer nofollow"><Icon icon="linkedin" width="14px" fill="#2867b2" stroke="#2867b2" /></Anchor>
                             </Div>
                         )
                     })}
@@ -173,7 +173,7 @@ export default Staff;
         //                         </H4>
         //                         {
         //                             item.linkedin_url != "" && item.linkedin_image != null &&
-        //                             <a href={item.linkedin_url} target="_blank" rel="noopener noreferrer">
+        //                             <a href={item.linkedin_url} target="_blank" rel="noopener noreferrer nofollow">
         //                                 <Img
         //                                     fluid={item.linkedin_image.childImageSharp.fluid}
         //                                     alt={item.alt}

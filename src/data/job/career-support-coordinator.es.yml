@@ -14,7 +14,7 @@ sub_heading: ""
 banner_heading: "Coordinador de Career Support"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
-link_back: "/es/empleo-programacion"
+link_back: "/"
 cities:
     - Miami
     - Santiago de Chile

@@ -1,26 +1,6 @@
-[
-  {
-    "firstName": "Brake",
-    "lastName": "Mahony",
-    "email": "brakemah@gmail.com",
-    "comment": "hello"
-  },
-  {
-    "firstName": "Rowan",
-    "lastName": "Dash",
-    "email": "rodash@outlook.com",
-    "comment": "Im Rowan Dash"
-  },
-  {
-    "firstName": "Bucky",
-    "lastName": "Forest",
-    "email": "bforest@hotmail.com",
-    "comment": "im testing"
-  },
-  {
-    "firstName": "Rocky",
-    "lastName": "Mohawk",
-    "email": "mohawk@gmail.com",
-    "comment": "testing form with cypress"
-  }
-]
+{
+  "firstName": "Rowan",
+  "lastName": "Dash",
+  "email": "rodash@outlook.com",
+  "comment": "Im Rowan Dash"
+}

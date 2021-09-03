@@ -1,6 +1,7 @@
 meta_info:
     slug: next-dates
     title: "Upcoming dates, cohorts, workshops and events at 4Geeks Academy"
+    visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
     description: "Learn about 4Geeks Academy's upcoming cohorts and also our exciting workshops and events tailred for the local software development community"
     image: ""
     keywords: "4Geeks Academy Events, 4Geeks Academy Workshops, 4Geeks Academy Events, Workshops, Events, Upcoming Cohorts, Upcoming Dates"
@@ -32,6 +33,8 @@ cohorts:
         location_label: location
         duration_label: duration
         duration_weeks: 16 weeks
+        duration_part_time: 16 weeks
+        duration_full_time: 9 weeks
         button_text: apply now
         button_link: "/us/apply"
     footer:

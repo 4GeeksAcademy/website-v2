@@ -17,7 +17,7 @@ const Blog = ({data, pageContext, yml}) => {
     //Banner (Info+ Image)
     const Banner = () => {
         return (
-            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="120px 0 0 0">
+            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="70px 0 0 0">
                 <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
                     <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
@@ -41,21 +41,23 @@ const Blog = ({data, pageContext, yml}) => {
         return (
             <>
                 {/* Imagen */}
-                <Div flexDirection="Column" margin="0 0 87px 0">
+                <Div key={i} flexDirection="Column" margin="0 0 87px 0">
                     {
-                        item.node.frontmatter.image &&
+                        item.node.frontmatter.image !== "" && (
                         <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
                             <LazyLoad height={10} scroll={true} once={true}>
-                                <RoundImage
-                                    url={item.node.frontmatter.image}
-                                    bsize="cover"
-                                    border="0px"
-                                    position="center"
-                                    width="100%"
-                                    height="329px"
-                                />
+
+                            <RoundImage
+                                url={item.node.frontmatter.image !== null ? item.node.frontmatter.image :  yml.banner.no_image}
+                                bsize="cover"
+                                border="0px"
+                                position="center"
+                                width="100%"
+                                height="329px"
+                            />
                             </LazyLoad>
                         </Link>
+                        )
                     }
 
                     {/* Boton */}
@@ -70,7 +72,7 @@ const Blog = ({data, pageContext, yml}) => {
                                 pointer
                                 textColor={Colors.darkGray}
                                 fontSize={"13px"}>
-                                {item.node.frontmatter.cluster.replace("-", " ") || "4Geeks"}
+                                {item.node.frontmatter.cluster?.replace(/-|_/g,' ') || "4Geeks"}
                             </Button>
                         </Link>
                     </Div>
@@ -163,7 +165,7 @@ const Blog = ({data, pageContext, yml}) => {
                                             textColor={Colors.darkGray}
                                             fontSize={"13px"}
                                         >
-                                            {topic.replace("-", " ")}
+                                            {topic.replace(/-|_/g,' ')}
                                         </Button>
                                     </Link>
                                 </>
@@ -184,7 +186,7 @@ const Blog = ({data, pageContext, yml}) => {
         // 'es' or 'us'
         let lang = pageContext.lang;
 
-        navigate('/' + lang + '//' + tag);
+        navigate('/' + lang + '//' + cluster);
 
     }
 
@@ -412,11 +414,9 @@ query BlogQuery($file_name: String!, $lang: String!) {
                         quality: 100
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                #   fluid( maxWidth: 400, quality: 100){
-                #     ...GatsbyImageSharpFluid_withWebp
-                #   }
                 }
               }  
+            no_image  
           }
           question
           topics
@@ -432,9 +432,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
                         quality: 100
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                #   fluid(maxWidth: 1500, quality: 100){
-                #     ...GatsbyImageSharpFluid_withWebp
-                #   }
                 }
               }
             image_alt
@@ -446,14 +443,12 @@ query BlogQuery($file_name: String!, $lang: String!) {
         sort: {fields: frontmatter___date, order: DESC},
         filter: {
             frontmatter: {
-                featured: {eq: true}, 
                 status: {eq: "published"}
             }
             fields: {
                 lang: {eq: $lang}
             }
-        },
-        limit: 10
+        }
     ){
         edges {
             node {
@@ -464,7 +459,6 @@ query BlogQuery($file_name: String!, $lang: String!) {
                 slug
                 title
                 excerpt
-                lang
                 featured
                 status
                 cluster

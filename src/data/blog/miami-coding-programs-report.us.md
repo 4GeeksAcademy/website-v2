@@ -1,27 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-11-06 20:24:41+00:00
-excerpt: Everything you need to know about Miami Coding Programs
-layout: post
-link: https://www.4geeksacademy.co/miami-coding-programs-report/
-slug: miami-coding-programs-report
-title: Miami Coding Bootcamps | 2018 Report
+author: "MRiciglianoC"
+date: "2018-11-06T20:24:41+00:00"
+excerpt: "Everything you need to know about Miami Coding Programs"
+slug: "miami-coding-programs-report"
+title: "Miami Coding Bootcamps | 2018 Report"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/MIAMI-CODING-04-768x768.jpg"
 image_alt: ""
-wordpress_id: 3293
-categories:
-- Learning to code
-- Why learn to code?
-cluster: "learn-to-code"
-tags:
-- coding
-- coding bootcamps
-- investment
-- Jobs in Miami
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+cluster: "trends-and-tech"
+status: "published"
+featured: "true"
+
 ---
 
 Coding Bootcamps are the solution to traditional education institutions’ lack of perspective. Tech talent is needed and Coding Bootcamps are graduating skillful students to address complex software challenges. 
@@ -30,15 +18,15 @@ According to a [recent report](https://www.payscale.com/research/US/Job=Web_Deve
 
 ![](/wp-content/uploads/2018/11/avg-salary.jpg)
 
-We understand how important the conversation is about Return of Investment. [Here](/choosing-coding-bootcamp/) is a ROI report where we address the pros and cons of joining (financially speaking) a Coding Bootcamp. 
+We understand how important the conversation is about Return of Investment. [Here](/us/coding-bootcamps/choosing-coding-bootcamp) is a ROI report where we address the pros and cons of joining (financially speaking) a Coding Bootcamp. 
 
 **LET'S TALK ABOUT BOOTCAMPS**
 
 [Everything began in 2011](https://www.theatlantic.com/technology/archive/2012/01/what-hacker-apprenticeships-tell-us-about-the-future-of-education/251039/). A new methodology of coding education was being required. Waiting for 4 years in order to get your first College Diploma was just too long. Companies need tech talent and they can’t wait forever to fill the gap. But having a Diploma is also important, regardless of whether it comes from a college or a Bootcamp. 
 
-According to a recent report made by Indeed, 84% of employers are satisfied with [Bootcamp graduates](http://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/). Graduating from a Bootcamp will give you the tools to find a job. There are some reports establishing -as criticism- that only 75% of graduates (from a Coding School) actually find a job after graduation. It would look as if the criticism has some ground, however, if we compare that with the percentage of college graduates finding a job, it still looks like Coding Bootcamps add more value to the labor market than traditional institutions. 
+According to a recent report made by Indeed, 84% of employers are satisfied with [Bootcamp graduates](https://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/). Graduating from a Bootcamp will give you the tools to find a job. There are some reports establishing -as criticism- that only 75% of graduates (from a Coding School) actually find a job after graduation. It would look as if the criticism has some ground, however, if we compare that with the percentage of college graduates finding a job, it still looks like Coding Bootcamps add more value to the labor market than traditional institutions. 
 
-Coding Bootcamps are now in at least [80 US cities](https://www.coursereport.com/reports/2018-coding-bootcamp-market-size-research). There are several reasons behind that. First, there is a (i) [need of talent](http://noticias.universia.com.ar/practicas-empleo/noticia/2017/01/04/1148089/10-habilidades-demandadas-2017-mercado-laboral-global.html): more open positions than graduates per year; and (ii) Coding Programs are really hands-on, mainly focused on skills and technologies. 
+Coding Bootcamps are now in at least [80 US cities](https://www.coursereport.com/reports/2018-coding-bootcamp-market-size-research). There are several reasons behind that. First, there is a (i) [need of talent](https://noticias.universia.com.ar/practicas-empleo/noticia/2017/01/04/1148089/10-habilidades-demandadas-2017-mercado-laboral-global.html): more open positions than graduates per year; and (ii) Coding Programs are really hands-on, mainly focused on skills and technologies. 
 
 The importance of a Coding Bootcamps relies on the fact that they are efficient and effective. According to a LinkedIn report (published in 2017), programming was the most demanded skill of the year. Bootcamps are growing everywhere. Le Wagon, for example, has locations in already 4 different continents. General Assembly is across the US territory, Ironhack is opening a new location every now and then, 4Geeks has already 3 cities and is opening 2 more cities in the next few months, etc.
 
@@ -59,7 +47,7 @@ There is a[ long list](https://www.coursereport.com/schools?track=&subject=&type
 If you are interested in getting more involved in the world of programming, and you are in Florida, these are the academies you have to consider:
 
 
-### [**4Geeks Academy**](/)
+### [**4Geeks Academy**](/us)
 
 
 Coding Bootcamp focused on Full Stack Software, Web or Front-End development. These programs enable you to face many different coding challenges. Coding is not only about developing websites but also about being capable of working in the fields of Machine Learning, Data Analytics, Artificial Intelligence, Virtual Reality, and so on. You will sure very likely land a job afterward (91% Placement).  
@@ -70,7 +58,7 @@ A major benefit of 4Geeks Academy is that students don't have to quit their curr
 ## ![](/wp-content/uploads/2018/11/Graficas-03.png)
 
 
-[4Geeks](/course/full-stack-web-development-bootcamp-full-time/) is also launching a Full-Time program that will be added to their current offer. 
+[4Geeks](/us/coding-bootcamps/full-time-full-stack-developer) is also launching a Full-Time program that will be added to their current offer. 
 
 
 ### **Wyncode**
@@ -114,7 +102,7 @@ Now that you know a little more about these Bootcamps, here are some additional 
 
 Let’s talk about the importance of the methodology when delivering a coding program. Coding Bootcamps can be divided into three main segments: Full-Time, Part-Time or Online programs. Recently, Thinkful made Miami one of their targets, probably because they have seen how the city has been answering to Coding Bootcamps.  Therefore, now Miami is officially a city where multiple options are available for potential coders.
 
-Not everyone learns in the same way, not everyone delivers the same program. There are several options, although Part-time programs are probably the most underestimated yet most valuable options for those who want to launch their career but does not have the chance to quit everything in the meanwhile. Part-time programs are required to build a strong methodology with a mixture of in-person classes, together with a great Academic Platform.[ Here is why part-time programs](/part-time-bootcamps/) are a great option.
+Not everyone learns in the same way, not everyone delivers the same program. There are several options, although Part-time programs are probably the most underestimated yet most valuable options for those who want to launch their career but does not have the chance to quit everything in the meanwhile. Part-time programs are required to build a strong methodology with a mixture of in-person classes, together with a great Academic Platform.[ Here is why part-time programs](/us/coding-bootcamps/part-time-bootcamps) are a great option.
 
 Having a proprietary and tailor-made Academic platform actually plays a very important role in the learning process of every student. Technology has to be involved. Projects, content and hundreds of exercises are mandatory.
 
@@ -124,7 +112,7 @@ On the other hand, **4Geeks** has developed Breathe Code, a platform aimed to tr
 
 **HOW RELIABLE IS A BOOTCAMP?**
 
-[**A report**](http://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/) from 2017 says that 84% of employers think that bootcamps graduates are more or as prepared as a college graduate. That’s why this is a real discussion. College graduates and Bootcamp graduates are ready to face the same coding challenges and able to earn the same amount of money.
+[**A report**](https://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/) from 2017 says that 84% of employers think that bootcamps graduates are more or as prepared as a college graduate. That’s why this is a real discussion. College graduates and Bootcamp graduates are ready to face the same coding challenges and able to earn the same amount of money.
 
 It is also important to understand what alumni say about their experience, and how experts are providing insights on the role of Coding Bootcamps within the new education trends.
 

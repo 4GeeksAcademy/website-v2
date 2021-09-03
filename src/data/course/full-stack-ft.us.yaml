@@ -11,10 +11,10 @@ meta_info:
       "full-time",
       "/us/full-time",
       "/us/course/full-time",
-      "/the-program",
       "/us/full-stack-ft",
       "/us/coding-bootcamps/full-stack-web-development-bootcamp-full-time",
       "/us/course/full-stack-web-development-bootcamp-full-time",
+      "/course/full-stack-web-development-bootcamp-full-time",
     ]
 seo_title: "Cooding Bootcamp"
 header:

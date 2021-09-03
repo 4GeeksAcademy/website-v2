@@ -2,6 +2,9 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
+# Install cypress dependencies
+RUN sudo apt-get -q update && sudo apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
 #

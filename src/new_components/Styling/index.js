@@ -39,6 +39,7 @@ export const Colors = {
     lightBlue: "#BBEAFC",
     lightBlue2: "rgba(199, 243, 253, 0.5)",
     veryLightBlue: "#C7F3FD",
+    veryLightBlue2: "#E3F9FE",
     gray: "#898a8b",
     verylightGray: "#F5F5F5",
     lightGray: "#ebebeb",
@@ -179,7 +180,7 @@ const StyledImage = styled.div`
 `
 export const Img = React.memo(StyledImage);
 
-export const BackgroundSection = ({children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
+export const BackgroundSection = ({id, children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
 
     const thisImage = getImage(image)
 
@@ -188,6 +189,7 @@ export const BackgroundSection = ({children, className, image, height, width, bg
 
     return (
         <BackgroundImage
+            id={id}
             Tag="section"
             loading="eager"
             // fadeIn={false}
@@ -338,7 +340,7 @@ export const Button = styled(SmartButton)`
     box-shadow: ${props => props.boxShadow};
 
     &:hover {
-        background-color: ${props => props.colorHover || props.color};
+        background-color: ${props => props.colorHover};
         color: ${props => props.colorHoverText};
     }
     @media ${Devices.xxs}{

@@ -1,28 +1,15 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-07-16 20:43:46+00:00
-excerpt: 'There are many important elements to consider when you are choosing the
-  best coding Bootcamp for you. We believe that you should address these four questions.'
-layout: post
-link: https://www.4geeksacademy.co/choosing-coding-bootcamp/
-slug: choosing-coding-bootcamp
-title: How to choose the best coding Bootcamp?
-image: "https://www.4geeksacademy.co/wp-content/uploads/2018/07/Picture-Post-1.png"
+author: "MRiciglianoC"
+date: "2018-07-16T20:43:46+00:00"
+excerpt: "There are many important elements to consider when you are choosing the best coding Bootcamp for you. We believe that you should address these four questions."
+slug: "choosing-coding-bootcamp"
+title: "How to choose the best coding Bootcamp?"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2018/07/Picture-Post-1.png"
 image_alt: ""
-wordpress_id: 3147
-categories:
-- Learning to code
-- Why learn to code?
-cluster: "learn-to-code"
-tags:
-- coding
-- coding bootcamps
-- investment
-- Jobs in Miami
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
+cluster: "coding-bootcamps"
+status: "published"
+featured: "true"
+
 ---
 
 Coding Bootcamps are a great option to launching a new career, land in a new job and get great benefits afterward; but there are many factors and options to take into consideration when you are choosing the best coding Bootcamp for you.
@@ -35,7 +22,7 @@ We believe that your education decision should address these main four (4) topic
 
 Once you have taken the decision of becoming a developer, you should put in a balance (a) the cost of attending a coding Bootcamp, and (b) your expenses during the program; this will help you determine whether the returns of the expected employment and financial opportunity outweigh the cost of the program.
 
-Speaking specifically about tuition, Coding Bootcamp average fee in the US is around $11K, it normally takes 14 weeks (avg), and the [expected salary](/pay-tuition-4geeks-2/) is around $60k p/year. Must Coding Bootcamps offer financing options (we offer you -at least- three options, starting from $135p/mo: [click here](/wp-content/uploads/2017/10/4GA-Payment-Guidebook-2.pdf) to see more details) and different [payments options](/pay-tuition-4geeks/) (we are already accepting Bitcoins and Ethereum - for example). At a glance, it becomes obvious that in terms of cost, Bootcamps are at the top.
+Speaking specifically about tuition, Coding Bootcamp average fee in the US is around $11K, it normally takes 14 weeks (avg), and the [expected salary](/us/coding-bootcamps/pay-tuition-4geeks) is around $60k p/year. Must Coding Bootcamps offer financing options (we offer you -at least- three options, starting from $135p/mo: [click here](/wp-content/uploads/2017/10/4GA-Payment-Guidebook-2.pdf) to see more details) and different [payments options](/us/coding-bootcamps/pay-tuition-4geeks) (we are already accepting Bitcoins and Ethereum - for example). At a glance, it becomes obvious that in terms of cost, Bootcamps are at the top.
 
 However, you need to first address a major question: Full-time programs or part-time? You may already know what we think about this particular topic (Let’s Part-time | 4Geeks Academy only delivers part-time programs). Now, what it’s really important to consider is that when you are taking a Full-Time program, you have to think about your living expenses. 4 months of no income + a lot of expenses (well, your regular monthly expense).
 
@@ -69,13 +56,13 @@ Some people believe that a high impact methodology has a lot to do with a Part-
 
 It all has pros and cons but when we talk about a high impact methodology we mean that it must be designed towards enabling students to become developers, and it requires a compound of at least 300+ hours of hard work (hands-on mainly) while provides a well-designed product supported by technology (an academic platform -LMS-) to achieve the quality expected.
 
-[We believe in Part-Time education](/truth-behind-part-time-education/), and we are proud of [the program](/the-program/) we have in Miami. You will become a software developer, within a part-time structure, in 16 weeks, paying only $6k, because we have managed to lower the cost of your education.
+[We believe in Part-Time education](/us/trends-and-tech/truth-behind-part-time-education), and we are proud of [the program](/us/coding-bootcamps/part-time-full-stack-developer) we have in Miami. You will become a software developer, within a part-time structure, in 16 weeks, paying only $6k, because we have managed to lower the cost of your education.
 
 
 ## 4. What about the content?
 
 
-It is fundamental that if you are going to spend your time and money on a coding program, be sure that the skills you will obtain will be useful. [Syllabus matters](/coding-bootcamp-syllabus-matters/) because the languages and technologies that are included in the program, should be: updated, relevant and in line with job demand.?
+It is fundamental that if you are going to spend your time and money on a coding program, be sure that the skills you will obtain will be useful. [Syllabus matters](/us/coding-bootcamps/coding-bootcamp-syllabus-matters) because the languages and technologies that are included in the program, should be: updated, relevant and in line with job demand.?
 
 ![](/wp-content/uploads/2018/07/Screen-Shot-2018-07-16-at-3.57.15-PM-300x209.png)
 

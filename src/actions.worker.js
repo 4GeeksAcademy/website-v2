@@ -1,5 +1,5 @@
 import {defaultSession, locByLanguage} from "./actions"
-const langSwitcherDictionary = require("./utils/langSwitcherData.json")
+const dictionaryOf = require("./utils/dictionaries/pages.json")
 
 const GOOGLE_KEY = "AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c"
 
@@ -88,32 +88,12 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
     var longitude = null;
     var langDestination = null;
     var pathsDictionary = {
-        ...langSwitcherDictionary,
-        "/us/coding-campus/online-coding-bootcamp": "/es/coding-campus/online-bootcamp-programacion",
-        "/us/coding-bootcamps/full-time-full-stack-developer": "/es/coding-bootcamps/full-stack-full-time",
-        "/us/coding-bootcamps/part-time-full-stack-developer": "/es/coding-bootcamps/full-stack-part-time",
-        "/us/coding-campus/coding-bootcamp-caracas": "/es/coding-campus/bootcamp-programacion-caracas",
-        "/us/coding-campus/coding-bootcamp-madrid": "/es/coding-campus/bootcamp-programacion-madrid",
-        "/us/coding-campus/coding-bootcamp-miami": "/es/coding-campus/bootcamp-programacion-miami",
-        "/us/coding-campus/coding-bootcamp-costa-rica": "/es/coding-campus/bootcamp-programacion-costa-rica",
-        "/us/coding-campus/coding-bootcamp-santiago": "/es/coding-campus/bootcamp-programacion-santiago",
-        "/us/coding-bootcamps/software-engineer-bootcamp": "/es/coding-bootcamps/ingenieria-de-software-programacion",
-        "/us/coding-bootcamps/machine-learning-engineering": "/es/coding-bootcamps/curso-inteligencia-artificial",
-        "/es/coding-bootcamps/curso-inteligencia-artificial": "/us/coding-bootcamps/machine-learning-engineering",
-        "/es/coding-bootcamps/ingenieria-de-software-programacion": "/us/coding-bootcamps/software-engineer-bootcamp",
-        "/es/coding-campus/bootcamp-programacion-santiago": "/us/coding-campus/coding-bootcamp-santiago",
-        "/es/coding-campus/bootcamp-programacion-costa-rica": "/us/coding-campus/coding-bootcamp-costa-rica",
-        "/es/coding-campus/bootcamp-programacion-miami": "/us/coding-campus/coding-bootcamp-miami",
-        "/es/coding-campus/bootcamp-programacion-madrid": "/us/coding-campus/coding-bootcamp-madrid",
-        "/es/coding-campus/bootcamp-programacion-caracas": "/us/coding-campus/coding-bootcamp-caracas",
-        "/es/coding-bootcamps/full-stack-part-time": "/us/coding-bootcamps/part-time-full-stack-developer",
-        "/es/coding-bootcamps/full-stack-full-time": "/us/coding-bootcamps/full-time-full-stack-developer",
-        "/es/coding-campus/online-bootcamp-programacion": "/us/coding-campus/online-coding-bootcamp",
+        ...dictionaryOf.yml[0],
+        ...dictionaryOf.md[0]
     }
     // session.pathDictionary[`${window.location?.pathname}`]
     // langDestination = pathsDictionary
     // const params = new URLSearchParams(window.location.pathname);
-    // params && console.log("INIT: ", params)
 
     let {location, language, navigator, ...utm} = seed;
     const browserLang = getFirstBrowserLanguage(navigator);

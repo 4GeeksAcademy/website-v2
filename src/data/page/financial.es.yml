@@ -2,6 +2,7 @@ meta_info:
   slug: financiacion
   title: ""
   description: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: null
   keywords: ""
   redirects: ["/financiacion"]

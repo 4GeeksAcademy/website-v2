@@ -1,6 +1,7 @@
 meta_info:
   slug: geekforce
   title: "Geekforce, una membresía de 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Soporte de por vida a tu carrera profesional, mantenimiento y generación de nuevas oportunidades laborales."
   image: null
   keywords: ""

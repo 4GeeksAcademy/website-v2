@@ -1,6 +1,7 @@
 meta_info:
   slug: blog-en-espanol
   title: "4Geeks Academy Blog"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Encuentra recursos y noticias para desarrolladores actuales y potenciales. Conocimientos básicos, tendencias, asesoramiento profesional y más en nuestro blog"
   image: null
   keywords: "4Geeks Academy Blog"
@@ -10,6 +11,7 @@ banner:
   tagline: "4Geeks Academy Blog"
   sub_heading: "Recursos y novedades principalmente escritas para nuestra comunidad o personas interesadas en la industria Tech, de las startups y del crecimiento profesional a traves del Coding."
   image: "../../../static/images/bg/pricing-bg.jpg"
+  no_image: "https://i.imgur.com/n3V1Rqq.jpeg"
 
 seo_title: "4Geeks Academy Blog"
 header:
@@ -20,9 +22,12 @@ header:
 
 question: "¿Que te interesa?"
 topics:
-  - full-stack-developer
-  - learn-to-code
-  - coding-bootcamp
+  - full-stack
+  - aprender-a-programar
+  - bootcamps-programacion
+  - desarrollo-profesional
+  - tendencias-y-tecnologia
+
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."

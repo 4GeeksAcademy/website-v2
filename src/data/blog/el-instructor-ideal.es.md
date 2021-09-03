@@ -1,24 +1,16 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-07-25 16:19:57+00:00
-excerpt: El instructor ideal, conoce los atributos y habilidades de un buen profesor cuándo estás aprendiendo a programar
-layout: post
-link: https://www.4geeksacademy.co/es/el-instructor-ideal/
-published: false
-slug: el-instructor-ideal
-title: EL INSTRUCTOR IDEAL...
+author: "4GeeksAcademy"
+date: "2016-07-25T16:19:57+00:00"
+excerpt: "El instructor ideal, conoce los atributos y habilidades de un buen profesor cuándo estás aprendiendo a programar"
+published: "false"
+slug: "el-instructor-ideal"
+title: "EL INSTRUCTOR IDEAL..."
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/admin-ajax-1.jpeg"
 image_alt: ""
-wordpress_id: 1217
-categories:
-- Aprendiendo a desarrollar
-cluster: "aprendiendo-a-desarrollar"
-lang: "es"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
-tags:
-- 4geeks
+cluster: "aprender-a-programar"
+status: "published"
+featured: "false"
+
 ---
 
 __Recuerdo que cuando estaba por comenzar algún curso, siempre cruzaba por mi mente ¿qué tipo de facilitador voy a tener?, si sería una persona accesible o por el contrario, una persona difícil, ya sea por trato o porque no fuese capaz de trasmitir la información. Esto me lleva a pensar cuán importante es esa persona que va a estar a cargo de transformar un molde en una escultura apreciada.
@@ -59,8 +51,8 @@ Podríamos hacer una encuesta entre varios de nuestros compañeros de estudio y 
 
 En resumen, podríamos decir que un instructor es: Una persona que domina teórica y prácticamente una o varias especialidades, su propósito fundamental es transmitir sus conocimientos y experiencias a otras personas que lo requieran para desempeñarse correctamente en sus puestos de trabajo. Dominando metodologías de enseñanza-aprendizaje.
 
-[![Arte-blog-4G-Julio-2](https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/Arte-blog-4G-Julio-21-672x1024-1.png)](https://4geeksacademy.coapp/uploads/2016/07/Arte-blog-4G-Julio-21.png)
+[![Arte-blog-4G-Julio-2](https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/Arte-blog-4G-Julio-21-672x1024-1.png)](https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/Arte-blog-4G-Julio-21-672x1024-1.png)
 
-En [4Geeks Academy](breathco.de), nuestros instructores no son el típico docente de universidades o tecnológicos. Debido al corto tiempo en que un estudiante debe aprender, el facilitador es un profesional de alto nivel, con excelente conocimiento de la materia y altamente eficaz en la comunicación, pues el tiempo requiere que la relación se establezca a corto plazo y de manera sumamente didáctica, que conecte con los estudiantes.
+En [4Geeks Academy](/es), nuestros instructores no son el típico docente de universidades o tecnológicos. Debido al corto tiempo en que un estudiante debe aprender, el facilitador es un profesional de alto nivel, con excelente conocimiento de la materia y altamente eficaz en la comunicación, pues el tiempo requiere que la relación se establezca a corto plazo y de manera sumamente didáctica, que conecte con los estudiantes.
 
 Nuestros instructores trabajan con el lado vocacional del aprendiz asegurándose que éste se pueda insertar en la industria. Siendo también que están actualizándose constantemente porque las tecnologías así lo exigen.

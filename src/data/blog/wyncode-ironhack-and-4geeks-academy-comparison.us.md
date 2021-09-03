@@ -1,27 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2016-01-08 11:14:46+00:00
-excerpt: A straightforward analysis of your main Coding Bootcamps options in Miami.
-layout: post
-link: https://www.4geeksacademy.co/wyncode-ironhack-and-4geeks-academy-comparison/
-slug: wyncode-ironhack-and-4geeks-academy-comparison
-title: Wyncode, Ironhack and 4Geeks Academy comparison
-image: "https://www.4geeksacademy.co/wp-content/uploads/2016/01/wyncode4geeksironhack.jpeg"
+author: "4GeeksAcademy"
+date: "2016-01-08T11:14:46+00:00"
+excerpt: "A straightforward analysis of your main Coding Bootcamps options in Miami."
+slug: "wyncode-ironhack-and-4geeks-academy-comparison"
+title: "Wyncode, Ironhack and 4Geeks Academy comparison"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2016/01/wyncode4geeksironhack.jpeg"
 image_alt: ""
-wordpress_id: 476
-categories:
-- Learning to code
-cluster: "learn-to-code"
-tags:
-- 4geeks
-- coding bootcamp
-- ironhack
-- learn to code
-- wyncode
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: false
+cluster: "coding-bootcamps"
+status: "published"
+featured: "false"
+
 ---
 
 We are sure that every potential student is asking the same question:  Which is the best coding academy (development bootcamp) in Miami?
@@ -45,7 +33,7 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 
 |                                             | **Wyncode**                                                                                                                                                                                              | **4Geeks Academy**                                                                                                                                                                                                                                                                                                          | **IronHack**                                                                                                                         |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **Background**                              | They are a local initiative launched<br>with the support of the Knight Foundation. <br>They started in Wynwood and they have remained building their market there.<br>Wyncode was launched back in 2015. | Launched in Miami by Alejandro and Marcelo. <br>Now we have over 7 Campuses across the US, Central and South America, and Europe.<br>We have graduated over 1000 students already. <br>We launched the Bootcamp in October 2015. <br>[Learn more about our history here.](//4geeks-academy-history/) | IronHack has a campus in Miami and in other 8 cities. <br>They started the project in late 2014.                                     |
+| **Background**                              | They are a local initiative launched<br>with the support of the Knight Foundation. <br>They started in Wynwood and they have remained building their market there.<br>Wyncode was launched back in 2015. | Launched in Miami by Alejandro and Marcelo. <br>Now we have over 7 Campuses across the US, Central and South America, and Europe.<br>We have graduated over 1000 students already. <br>We launched the Bootcamp in October 2015. <br>[Learn more about our history here.](/us/trends-and-tech/4geeks-academy-history) | IronHack has a campus in Miami and in other 8 cities. <br>They started the project in late 2014.                                     |
 | **Experience**                              | They have good support from the community. <br>Their founders attended a Bootcamp in Canada, and they are part of [NESTA]                                                                                | Alejandro has over 20 years of Coding Experience (Software Engineer) and Marcelo has launched, <br>built and sold (also a couple of failures) over 6 startups in the last 10 years. <br>We are Licensed by the Florida Department of Education, and we also have a strong alliance with Miami Dade College.                 | IronHack has a strong market in Europe. Their outcomes are legit and they have been growing fast, They are also backed by some VC's. |
 | **Hours**                                   | 350+ hours<br>(35+ hours week for 10 weeks)                                                                                                                                                              | 380+ hours<br>(25+ hours per week for 16 weeks) or 400 hours (40+ hours per week for 9 weeks)                                                                                                                                                                                                                               | 360+ hours <br>(40+ hours per week for 8 weeks)                                                                                      |
 | **Methodology**                             | Wyncode trains students with a mix of web development and entrepreneurial lessons. <br>You will also learn full stack web development based in Ruby.                                                     | We focus all our energy in getting the students ready for real life coding jobs in software development. <br>Our Syllabus is based on JS, React, and Python. We are the only one with a Software Engineering Program.                                                                                                       | Their programs are Web dev and UI/UX (recentely launched a Data Course).                                                             |
@@ -55,17 +43,17 @@ There are over 23,000 open jobs NOW in Miami for Software Developers.  So, ther
 | **Hiring rate**                             | 85%                                                                                                                                                                                                      | 86%                                                                                                                                                                                                                                                                                                                         | 87%                                                                                                                                  |
 | **Price**                                   | $12,500 total tuition<br>(special discounts for veterans and women)                                                                                                                                      | $7,499 (PT) or $9,499 (FT)<br>Supporting many women empowerment organizations, minorities Non-Profits and always available scholarships.                                                                                                                                                                                    | $11,500 total tuition<br>(Scholarships may apply)                                                                                    |
 | **Financing**                               | Climb.                                                                                                                                                                                                   | Skills Fund, Climb, and first ISA in Florida. We also have our very own Extended Payment Plan. <br>You apply to a very simple process designed to accommodate your financial possibilities. Skills Funds                                                                                                                    | Financing information available upon request.                                                                                        |
-| **Syllabus**                                | Web Dev: Ruby on Rails.  Also programs in marketing and UI/UX.                                                                                                                                           | Full stack:<br>JavaScript, ReactJS, Context, Flux, Python, API's, SQLAlquemy, and Flask.<br>Software Engineering Program: Java, Algorithms, Data Structures, Machine Learning specializations.<br>([Learn here why we teach Python](//us/post/why-we-teach-python-4geeks/))                          |                                                                                                                                      |
+| **Syllabus**                                | Web Dev: Ruby on Rails.  Also programs in marketing and UI/UX.                                                                                                                                           | Full stack:<br>JavaScript, ReactJS, Context, Flux, Python, API's, SQLAlquemy, and Flask.<br>Software Engineering Program: Java, Algorithms, Data Structures, Machine Learning specializations.<br>([Learn here why we teach Python](/us/coding-bootcamps/why-we-teach-python-4geeks))                          |                                                                                                                                      |
 |                                             |                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                             |                                                                                                                                      |
 
 As you can see, the bootcamps in Miami vary a lot depending on your needs.  At 4Geeks Academy we believe in "part-time education" because it's the best way to keep up your life while you take the time to become a developer.
 
-Here you can read more about: [Why we think part-time studies are the future.](//one-on-one-mentorship-program-of-4geeks-academy/)
+Here you can read more about: [Why we think part-time studies are the future.](/us/trends-and-tech/part-time-future-education)
 
-Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](http://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
+Part-time is only possible as a consequence of our own methodology: Flipped Classroom + 1:7 student/instructor ratio + 1-1 mentorship + [mastery learning](https://www.nyu.edu/classes/keefer/waoe/motamediv.htm).  Having to learn a variety of concepts and technologies in such a short period of time can be extremely overwhelming.  In this way, it can be difficult to process all the information given until you start practicing as much as it is necessary.
 
-If you want to get more into detail, you can read our [comparison between 4Geeks Academy and other industry coding bootcamps.](//us/geeks-vs-others)
+If you want to get more into detail, you can read our [comparison between 4Geeks Academy and other industry coding bootcamps.](/us/geeks-vs-others)
 
-Finally, we want to remain not just the most affordable academy between the three (by far), but we also want to be the most accessible one. This is why we have opened our pre-work free for everybody.  If you want to sign-up, [click here](//course/web-development-parttime/).
+Finally, we want to remain not just the most affordable academy between the three (by far), but we also want to be the most accessible one. This is why we have opened our pre-work free for everybody.  If you want to sign-up, [click here](/course/web-development-parttime).
 
 Contact: info@4geeksacademy.com

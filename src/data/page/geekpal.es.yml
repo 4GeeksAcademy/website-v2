@@ -1,6 +1,7 @@
 meta_info:
   slug: geekpal
   title: "Geekpal de 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Conoce nuestro sistema de apoyo integral a los egresados de 4Geeks Academy"
   image: null
   keywords: ""

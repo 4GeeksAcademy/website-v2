@@ -1,6 +1,7 @@
 meta_info:
   slug: partners
   title: "4Geeks Academy Partners"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Meet the 4Geeks Academy partners, local and global companies trust in us and hire our students"
   image: ""
   keywords: "4Geeks Academy, Partners"

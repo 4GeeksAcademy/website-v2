@@ -42,10 +42,8 @@ exports.onCreateNode = ({node, getNode, actions}) => {
             createNodeField({node, name: `type`, value: meta.type});
             createNodeField({node, name: `pagePath`, value: meta.pagePath});
             createNodeField({node, name: `filePath`, value: url});
-            // createNodeField({node, name: `cluster`, value: meta.cluster});
             ymls.push(meta)
 
-            //   createNodeField({ node, name: `ctas`, value: ctas });
         }
     }
 };
@@ -60,10 +58,11 @@ exports.createPages = async (params) =>
     await createEntityPagesfromYml('Course', params) &&
     await createEntityPagesfromYml('Location', params) &&
     await createEntityPagesfromYml('Job', params) &&
-    await createEntityPagesfromYml('Landing', params, extraFields = ['utm_course', 'utm_location'],
+    await createEntityPagesfromYml('Landing', params, extraFields = ['utm_course', 'utm_location', 'visibility'],
         extraContext = (node) => {
             return {
-                utm_course: node.meta_info.utm_course + "." + node.fields.lang
+                utm_course: node.meta_info.utm_course + "." + node.fields.lang,
+                visibility: node.meta_info.visibility
             }
         }
     ) &&
@@ -91,7 +90,6 @@ const createBlog = async ({actions, graphql}) => {
     }
     const postTemplate = path.resolve('src/templates/post.js');
     const clusterTemplate = path.resolve("src/templates/clusters.js");
-    const tagTemplate = path.resolve("src/templates/tags.js");
     const result = await graphql(`
     {
         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}){
@@ -106,7 +104,6 @@ const createBlog = async ({actions, graphql}) => {
                         date
                         status
                         featured
-                        tags
                         cluster
                     }
                     excerpt,
@@ -129,7 +126,6 @@ const createBlog = async ({actions, graphql}) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({node}) => {
-        // console.log(`*** : ${node.fields.cluster}`)
         console.log(`Creating post ${node.fields.pagePath}`);
         createPage({
             path: node.fields.pagePath,
@@ -165,20 +161,6 @@ const createBlog = async ({actions, graphql}) => {
     });
     // CLUSTERS:
 
-    // let clusterUs = null;
-    // let clusterEs = null;
-
-    // posts.forEach(({node}) => {
-    //     if (node.frontmatter.cluster) {
-    //         if (node.fields.lang === "us") {
-    //             clusterUs = node.frontmatter.cluster;
-    //         } else {
-    //             clusterEs = node.frontmatter.cluster;
-    //         }
-    //     }
-    // })
-
-    // Tag pages:
     let clusterUs = [];
     let clusterEs = [];
     // Iterate through each post, putting all found tags into `tags`
@@ -191,10 +173,10 @@ const createBlog = async ({actions, graphql}) => {
             }
         }
     });
-    // Eliminate duplicate tags
+    // Eliminate duplicate clusters
     clusterUs = clusterUs.filter((value, index) => clusterUs.indexOf(value) === index)
     clusterEs = clusterEs.filter((value, index) => clusterEs.indexOf(value) === index)
-    // Make tag pages
+    // Make clusters pages
     clusterUs.forEach(cluster => {
         let file_name = `clusters.us`
         let lang = "us";
@@ -227,53 +209,6 @@ const createBlog = async ({actions, graphql}) => {
     });
     //     return true;
     // }
-    // Tag pages:
-    let tagsUs = [];
-    let tagsEs = [];
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(({node}) => {
-        if (node.frontmatter.tags) {
-            if (node.fields.lang === "us") {
-                tagsUs = tagsUs.concat(node.frontmatter.tags);
-            } else {
-                tagsEs = tagsEs.concat(node.frontmatter.tags);
-            }
-        }
-    });
-    // Eliminate duplicate tags
-    tagsUs = tagsUs.filter((value, index) => tagsUs.indexOf(value) === index)
-    tagsEs = tagsEs.filter((value, index) => tagsEs.indexOf(value) === index)
-    // Make tag pages
-    tagsUs.forEach(tag => {
-        let file_name = `tags.us`
-        let lang = "us";
-        let type = "page";
-        createPage({
-            path: `/us/blog/tag/${tag}/`,
-            component: tagTemplate,
-            context: {
-                tag,
-                file_name,
-                lang,
-                type
-            },
-        });
-    });
-    tagsEs.forEach(tag => {
-        let file_name = `tags.es`;
-        let lang = "es";
-        let type = "page";
-        createPage({
-            path: `/es/blog/tag/${tag}/`,
-            component: tagTemplate,
-            context: {
-                tag,
-                file_name,
-                lang,
-                type
-            },
-        });
-    });
     return true;
 }
 const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields = [], extraContext = null) => {
@@ -388,6 +323,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
               node {
                 meta_info {
                     slug
+                    visibility
                     redirects
                 }
                 fields{
@@ -409,7 +345,13 @@ const createPagesfromYml = async ({graphql, actions}) => {
     const translations = buildTranslations(result.data[`allPageYaml`]);
 
     //for each page found on the YML
-    result.data[`allPageYaml`].edges.forEach(({node}) => {
+    for(let i = 0; i < result.data[`allPageYaml`].edges.length; i++){
+        
+        const { node } = result.data[`allPageYaml`].edges[i];
+
+        // ignore pages with visibility hidden
+        if(node.fields.visibility == "hidden") continue;
+
         const _targetPath = node.fields.slug === "index" ? "/" : node.fields.pagePath;
         console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} in ${node.fields.lang}`);
         createPage({
@@ -417,6 +359,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
             component: path.resolve(`./src/templates/${node.fields.defaultTemplate}.js`),
             context: {
                 ...node.fields,
+                ...node.meta_info,
                 translations: translations[node.fields.defaultTemplate]
             }
         });
@@ -477,7 +420,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                     });
             })
         }
-    });
+    }
 
     return true;
 };
@@ -539,7 +482,7 @@ const getMetaFromPath = ({url, meta_info, frontmatter}) => {
     const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${slugigy(template)}/${slug}`;
 
     const meta = {lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath};
-    //   console.log("meta: ", meta);
+
     return meta;
 };
 

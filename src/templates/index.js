@@ -29,7 +29,7 @@ import GeeksVsOthers from '../components/GeeksVsOthers';
 import {WrapperCustom} from '../new_components/Sections';
 
 
-const imageSvg = props => <svg style={props.style} width="587" height="514" viewBox="0 0 587 514" fill="none" xmlns="http://www.w3.org/2000/svg">
+const imageSvg = props => <svg style={props.style} width="587" height="514" viewBox="0 0 587 514" fill="none" xmlns="https://www.w3.org/2000/svg">
   <circle cx="416.5" cy="487.5" r="26.5" fill="#0097CD" />
   <circle cx="516" cy="100" r="14" fill="#FFB718" />
   <circle cx="546" cy="290" r="119" fill="#FFB718" fill-opacity="0.2" />
@@ -79,6 +79,19 @@ const CityH1 = ({yml}) => {
 //   />
 // }
 
+const SVGBubblesLeft = () => 
+  <svg style={{top: "62px", left: "0", position: "absolute", zIndex: -1}} width="26" height="362" viewBox="0 0 26 362" fill="none" xmlns="https://www.w3.org/2000/svg">
+    <circle cx="-2.5" cy="333.5" r="28.5" fill="#FFB718" fill-opacity="0.2"/>
+    <circle cx="-10.5" cy="26.5" r="26.5" fill="#0097CD"/>
+  </svg>
+
+const SVGBubblesRight = () =>
+  <svg style={{top: "10px", right: "0", position: "absolute", zIndex: -1}} width="50" height="160" viewBox="0 0 50 160" fill="none" xmlns="https://www.w3.org/2000/svg">
+    <circle cx="12.5" cy="73.5" r="12.5" fill="#CD0000"/>
+    <circle cx="89" cy="80" r="80" fill="#FFB718" fill-opacity="0.2"/>
+  </svg>
+
+
 
 const Home = (props) => {
 
@@ -100,7 +113,17 @@ const Home = (props) => {
 
   return (
     <>
-      <GridContainerWithImage padding_tablet="0" columns_tablet="2" margin="72px 0 71px 0" margin_tablet="72px 0 108px 0" >
+      <Div 
+        display="flex" 
+        position="absolute"
+        width="100%"
+        zIndex="0"
+        display_tablet="none"
+      >
+        <SVGBubblesLeft />
+        <SVGBubblesRight />
+      </Div>
+      <GridContainerWithImage padding="65px 5px 0 5px" padding_tablet="0" columns_tablet="2" margin="72px 0 72px 0" margin_tablet="72px 0 108px 0" >
         <Div flexDirection="column" justifyContent_tablet="evenly" alignItems="center" alignItems_tablet="start">
           <Div flexDirection="column" alignItems="center" alignItems_tablet="start">
             <CityH1 yml={yml} />
@@ -141,7 +164,7 @@ const Home = (props) => {
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-      <With4Geeks lang={pageContext.lang} playerHeight="82px" title={true} />
+      <With4Geeks lang={pageContext.lang} playerHeight="auto" title={true} />
       <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
 
@@ -345,6 +368,7 @@ export const query = graphql`
         allLocationYaml(filter: {fields: { lang: {eq: $lang}}}) {
           edges {
             node {
+              breathecode_location_slug
               city
               name
               meta_info {

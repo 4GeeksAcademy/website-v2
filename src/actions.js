@@ -116,9 +116,9 @@ export const setTagManaerVisitorInfo = (session) => {
             longitude: session.longitude,
         }
         dataLayer.push(info);
-        // THIS BELOW DOEST NOT WORK RIGHT NOW, NEEDS MORE WORK
+        // TODO: THIS BELOW DOEST NOT WORK RIGHT NOW, NEEDS MORE WORK
         // if(session.latitude && session.longitude){
-        //     const resp = fetch(`http://maps.googleapis.com/maps/api/geocode/json?latlng=${session.latitude},${session.longitude}&sensor=false&key=${GOOGLE_KEY}`)
+        //     const resp = fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${session.latitude},${session.longitude}&sensor=false&key=${GOOGLE_KEY}`)
         //     const data = await resp.json()
         //     if(data && data.results) data.results.address_components.forEach(comp => {
         //         if(comp.types.includes("country")) dataLayer.push({  country_name: comp.short_name.toLowerCase() })

@@ -38,6 +38,12 @@ walk(`${__dirname}/../data/`, async function (err, files) {
         const doc = loadYML(_path);
         if (!doc.yaml) fail("Invalid YML syntax for " + _path)
         if (!doc.lang) fail("Missing language on yml file name for " + _path)
+
+        if (doc.type == "page"){
+            if(doc.yaml.meta_info === undefined) fail("Page is missing meta_info: " + _path)
+            if(doc.yaml.meta_info.visibility === undefined) fail("Page is missing meta_info.visibility details, please specify one of: visible (default), hidden (not indexed) or unlisted (listed but not in sitemap)" + _path)
+        } 
+        
         const testPath = __dirname + "/yml/" + doc.name + ".js";
         if (fs.existsSync(testPath)) {
 

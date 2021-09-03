@@ -3,11 +3,11 @@ import {graphql, navigate} from 'gatsby';
 import {landingSections} from '../new_components/Landing';
 import FollowBar from "../new_components/FollowBar"
 import LeadForm from "../new_components/LeadForm";
-import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading'
-import {Row, Column, Divider, Div, GridContainer} from '../new_components/Sections'
-import {Colors, StyledBackgroundSection} from '../new_components/Styling'
-import Badges from '../new_components/Badges';
-
+import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading';
+import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sections';
+import {Colors, StyledBackgroundSection} from '../new_components/Styling';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import LandingNavbar from '../new_components/NavbarDesktop/landing';
 import BaseRender from './_baseLandingLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session.js'
@@ -17,7 +17,20 @@ const Landing = (props) => {
   const {data, pageContext, yml} = props;
   const [components, setComponents] = React.useState({});
   const [inLocation, setInLocation] = React.useState("");
-{/* <Badges lang={pageContext.lang} paragraph={yml.badges.paragraph} link padding="58px 17px" padding_tablet="70px 0" /> */}
+
+  const applySchollarship = data.allLandingYaml.edges[0].node?.apply_schollarship
+  const landing_utm_course = yml.meta_info.utm_course
+
+  const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+    return landing_utm_course.filter((array_el) => {
+      return course_el.bc_slug === array_el;
+    }).length !== 0;
+  });
+
+  const programs = filteredPrograms.map(p => ({
+    label: p.text,
+    value: p.bc_slug
+  }))
 
   useEffect(() => {
     let _components = {};
@@ -36,7 +49,7 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: yml.meta_info.utm_course, valid: true},
+    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info.utm_course), valid: true},
     utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
@@ -44,61 +57,56 @@ const Landing = (props) => {
 
   return (
     <>
-      <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
+      <LandingNavbar
+        buttonText={yml.navbar?.buttonText || pageContext.lang === "us" ? "Apply" : "Aplicar"}
+        buttonUrl={yml.navbar?.buttonUrl}
+        logoUrl={yml.navbar?.logoUrl}
+        lang={pageContext.lang}
+      />
+      <FollowBar position={yml.follow_bar.position} showOnScrollPosition={12400}
         buttonText={yml.follow_bar.button.text}
         phone={session && session.location && session.location.phone}
         phoneText={yml.follow_bar.phone.text}
-        onClick={() => {
-          if (yml.follow_bar.button.path === "#top") {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            });
-          }
-        }}
+        link={yml.follow_bar.button.path}
       >
         <Paragraph
           margin="0"
-          alignSelf="center"
           fontWeight="800"
+          alignSelf="center"
           color={Colors.black}
           textAlign="left"
           fontSize_tablet={yml.follow_bar.content.font_size[0]}
-          // fs_lg={yml.follow_bar.content.font_size[1]}
-          // fs_md={yml.follow_bar.content.font_size[2]}
-          // fs_sm={yml.follow_bar.content.font_size[3]}
           fontSize={yml.follow_bar.content.font_size[4]}
         >
-          {yml.follow_bar.content.text.split("\n").map((c, i) => <span key={i} className="d-block d-xs-none w-100">{c}</span>)}
-          {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span key={i} className="d-none d-xs-block w-100">{c}</span>)}
+          {yml.follow_bar.content.text.split("\n").map((c, i) => <span className="d-block d-xs-none w-100">{c}</span>)}
+          {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
-
-
-      <GridContainer
-        containerGridGap="0"
-        // display_md="flex" 
-        containerColumns_tablet="repeat(1,0fr)"
-        padding="72px 0 0 0" 
-        padding_tablet="72px 0 0 0"
-        columns_tablet="2"
-        // display="none"
+      <StyledBackgroundSection
+        id="top"
+        className={`image`}
+        image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
+        bgSize={`cover`}
+        // width="58%"
+        width_tablet="100%"
+        height="auto"
+        // w_xs="100%"
+        margin="0 0 auto 0"
+        filter={yml.header_data.image_filter}
+        backgroundColor={Colors.lightGray}
+        align="center"
+        alt="4Geeks Academy"
+        borderRadius="0"
       >
-        <StyledBackgroundSection
-          className={`image`}
-          image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
-          bgSize={`cover`}
-          // width="58%"
-          width_tablet="58%"
-          // w_xs="100%"
-          margin="0 0 auto 0"
-          filter={yml.header_data.image_filter}
-          backgroundColor={Colors.lightGray}
-          align="center"
-          alt="4Geeks Academy"
-          borderRadius_tablet={`0 0 1.25rem 0`}
-          borderRadius="0"
+        <GridContainer
+          padding="0"
+          padding="72px 0 35px 0"
+          containerGridGap="0"
+          containerColumns_tablet="repeat(1,0fr)"
+          padding_tablet="72px 0 35px 0"
+          columns_tablet="2"
         >
+
           <Div
             // display="none"
             display_tablet="flex"
@@ -106,218 +114,212 @@ const Landing = (props) => {
             width="100%"
             size_tablet="10"
             size="12"
+            alignItems="center"
+            alignItems_tablet="flex-start"
             // borderRadius="0 0 0 1.25rem"
-            margin="0 0 10px auto"
-            padding={`80px 0 0 0`}
+            margin="0 0 35px auto"
+            padding={`40px 0 0 0`}
             height="auto"
-            padding_tablet={`80px 0 40px 20px`}
+            padding_tablet={`40px 0 0 20px`}
           >
+            {
+              yml.header_data.scholarship && 
+              <>
+                <Div width="242px" flexDirection_tablet="column" height="auto" padding="0 0 25px 0">
+                  <GatsbyImage 
+                    loading="eager"
+                    imgStyle={{ objectFit: 'contain' }}
+                    image={getImage(yml.header_data.scholarship.childImageSharp.gatsbyImageData)}
+                    alt="4Geeks Logo" 
+                  />
+                </Div>
+
+                <Div display="none" display_tablet="flex" background="#FFFFFF" width="calc(50% - 30px)" height="2px" margin="7px 0"/>
+              </>
+            }
             <H1
               type="h1"
               variant="main"
               lineHeight="40px"
+              margin="20px 0"
               padding="0 10px 0 0px"
               color={Colors.white}
               fontSize="38px"
               fontSize_tablet="42px"
               fontWeight="bolder"
               textAlign="center"
-              textAlign_tablet="left" >{inLocation}{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
+              textAlign_tablet="left" >{inLocation}{yml.header_data.tagline}
+              {/* <Span animated color={Colors.yellow}>_</Span> */}
             </H1>
-            <H4 textAlign="left" fontSize="18px" color={Colors.white}
-              variant="main"
-              margin_tablet="20px 0px 40px 0px"
-              margin="20px 0 20px 10px"
-              maxWidth="350px"
-              textShadow="0px 0px 4px black"
-            >
-              {yml.header_data.sub_heading}
-            </H4>
-            <Divider height={yml.features.marginTop} />
-            {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) =>
-              <Paragraph key={i}
-                style={JSON.parse(yml.features.styles)}
-                margin="7px 0"
-                padding="0px 20px"
+            {
+              yml.header_data.sub_heading !== "" && 
+              <H2 type="h2" textAlign="left" fontSize="18px" color={Colors.white}
+                variant="main"
+                margin_tablet="20px 0px 40px 0px"
+                margin="20px 0 20px 10px"
+                maxWidth="350px"
                 textShadow="0px 0px 4px black"
-                textAlign="left"
-                // maxWidth="300px"
-                color={Colors.white}>{'• '}{f}</Paragraph>
-            )}
+              >
+                {yml.header_data.sub_heading}
+              </H2>
+            }
+            {Array.isArray(yml.features.bullets) && 
+              yml.features.bullets.map((f, i) =>
+                <Paragraph key={i}
+                  isActive
+                  style={JSON.parse(yml.features.styles)}
+                  margin="7px 0"
+                  padding="0px 20px"
+                  textShadow="0px 0px 4px black"
+                  textAlign="left"
+                  color={Colors.white}>{'• '}{f}</Paragraph>
+              )}
+            {yml.features.text && 
+              <Paragraph key={i}
+                  isActive
+                  style={JSON.parse(yml.features.styles)}
+                  margin="7px 0"
+                  padding="0px 0px"
+                  textShadow="0px 0px 4px black"
+                  textAlign="left"
+                  color={Colors.white}>{yml.features.text}</Paragraph>
+            }
           </Div>
-        </StyledBackgroundSection>
-        <Div
-          flexDirection="column"
-          size="12"
-          size_tablet="10"
-          width="100%"
-          // size_lg="4"
-          // size_sm="6"
-          // size_xs="12"
-          margin="0"
-          textAlign_sm="center"
-          margin_md="0 auto 0 0"
-        >
-          <LeadForm margin_tablet="50px 0 0 0" margin="0" style={{ marginTop: "50px" }} heading="Request More Info."
-            formHandler={requestSyllabus}
-            heading={yml.form.heading}
-            motivation={yml.form.motivation}
-            sendLabel={yml.form.button_label}
-            redirect={yml.form.redirect}
-            lang={pageContext.lang}
-            fields={yml.form.fields}
-            data={preData}
-            justifyContentButton="center"
-          />
-        </Div>
-      </GridContainer>
-              
-
-
-      {/* <Row
-      // display="flex" className="d-
-      sm-none">
-    <StyledBackgroundSection
-          className={`image`}
-          image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-          bgSize={`cover`}
-          width="58%"
-          w_xs="100%"
-          margin="0 0 auto 0"
-          filter={yml.header_data.image_filter}
-          backgroundColor={Colors.lightGray}
-          align="center"
-          alt="4Geeks Academy"
-          borderRadius={`0 0 1.25rem 0`}
-        >
-          <Column
-            size="8"
-            size_lg="9"
-            size_md="10"
-            size_xs="12"
-            borderRadius="0 0 0 1.25rem"
-            height="500px"
-            margin="0 0 10px auto"
-            customRespSize
-            disp_sm={"none"}
-            disp_xs={"none"}
-            padding={`80px 0 0 0`}
+          <Div
+            flexDirection="column"
+            size="12"
+            size_tablet="10"
+            width="100%"
+            width_tablet="65%"
+            // size_lg="4"
+            // size_sm="6"
+            // size_xs="12"
+            margin="0"
+            textAlign_sm="center"
+            margin_md="0 auto 0 70px"
           >
-            <H1
-              type="h1"
-              variant="main"
-              padding="0 10px 0 0px"
-              color={Colors.white}
-              fs_sm="38px"
-              fs_md="30px"
-              fs_lg="32px"
-              fs_xl="38px"
-              align="left" >{inLocation}{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
-            </H1>
-            <H4 align="left" fontSize="18px" color={Colors.white}
-              variant="main"
-              margin="20px 0px 40px 0px"
-              m_sm="20px auto"
-              maxWidth="350px"
-              textShadow="0px 0px 4px black"
-            >
-              {yml.header_data.sub_heading}
-            </H4>
-            <Divider height={yml.features.marginTop} />
-            {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) =>
-              <Paragraph key={i}
-                style={JSON.parse(yml.features.styles)}
-                margin="7px 0"
-                textShadow="0px 0px 4px black"
-                align_sm="left"
-                mw_sm="300px"
-                color={Colors.white}>{'• '}{f}</Paragraph>
-            )}
-          </Column>
-        </StyledBackgroundSection>
-        <Column
-          size="3"
-          size_lg="4"
-          size_sm="6"
-          size_xs="12"
-          align_sm="center"
-          margin="0 auto 0 0"
-        >
-          <LeadForm style={{marginTop: "50px"}} heading="Request More Info."
-            formHandler={requestSyllabus}
-            heading={yml.form.heading}
-            motivation={yml.form.motivation}
-            sendLabel={yml.form.button_label}
-            redirect={yml.form.redirect}
-            lang={pageContext.lang}
-            fields={yml.form.fields}
-            data={preData}
-          />
-        </Column>
-      </Row>
-      <StyledBackgroundSection
-        className={`image d-none d-sm-block`}
-        image={yml.header_data.image && yml.header_data.image.childImageSharp.fluid}
-        bgSize={`cover`}
-        margin="0 0 auto 0"
-        filter={yml.header_data.image_filter}
-        backgroundColor={Colors.lightGray}
-        align="center"
-        alt="4Geeks Academy"
-      >
-        <H2
-          type="h1"
-          padding="50px 10px 0 0px"
-          color={Colors.white}
-          fs_sm="38px"
-          fs_md="30px"
-          fs_lg="32px"
-          fs_xl="38px"
-          align="center" >{yml.header_data.tagline}<Span animated color={Colors.yellow}>_</Span>
-        </H2>
-        <H4 align="center" fontSize="18px" color={Colors.white}
-          margin="20px 0px 40px 0px"
-          m_sm="20px auto"
-          maxWidth="350px"
-        >
-          {yml.header_data.sub_heading}
-        </H4>
-        {Array.isArray(yml.features.bullets) && yml.features.bullets.map((f, i) =>
-          <Paragraph align_sm="left" padding="0 20px" margin="4px 0"
-            color={Colors.white}
-            textShadow="0px 0px 4px black"
-            fontWeight="800"
-            key={i}
-            style={JSON.parse(yml.features.styles)}
-          >{'• '}{f}</Paragraph>
-        )}
-        <Divider height="20px" />
+            <LeadForm
+              background={Colors.white}
+              margin_tablet="50px 0 0 0" 
+              selectProgram={programs}
+              margin="0" 
+              style={{ marginTop: "50px", minHeight: "350px" }}
+              formHandler={requestSyllabus}
+              heading={yml.form.heading}
+              motivation={yml.form.motivation}
+              sendLabel={yml.form.button_label}
+              redirect={yml.form.redirect}
+              inputBgColor="#FFFFFF"
+              layout="block"
+              lang={pageContext.lang}
+              fields={yml.form.fields}
+              data={preData}
+              justifyContentButton="center"
+              marginButton={`15px 0 30px auto`}
+            />
+          </Div>
+        </GridContainer>
       </StyledBackgroundSection>
-      <Div background={Colors.black} display="none" d_sm="block">
-        <LeadForm formHandler={requestSyllabus}
-          lang={pageContext.lang}
-          motivation={pageContext.motivation}
-          sendLabel={yml.form.button_label}
-          redirect={yml.form.redirect}
-          fields={yml.form.fields}
-          data={preData}
-        />
-      </Div> */}
 
       {
         Object.keys(components)
           .filter(name => components[name] && (landingSections[name] || landingSections[components[name].layout]))
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
-          .map((name, i) => {
+          .map(name => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, index: i, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location})
+            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location})
           })
       }
+
+      <GridContainerWithImage id="bottom" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
+        <Div flexDirection="column" margin="0" margin_tablet="0 50px" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
+        gridArea_tablet={(applySchollarship?.imageSide) === "right" ? "1/1/1/6" : "1/7/1/13"}
+        // gridArea_tablet="1/1/1/6"
+        >
+          <Div
+            flexDirection="column"
+            size="12"
+            size_tablet="12"
+            width="100%"
+            width_tablet="100%"
+            // size_lg="4"
+            // size_sm="6"
+            // size_xs="12"
+            margin="0"
+            textAlign_sm="center"
+            // margin_md="0 auto 0 70px"
+          >
+            <LeadForm
+              landingTemplate
+              selectProgram={programs}
+              layout="block"
+              background={Colors.verylightGray}
+              margin="0"
+              style={{ minHeight: "350px" }}
+              formHandler={requestSyllabus}
+              heading={yml.form.heading}
+              motivation={yml.form.motivation}
+              sendLabel={yml.form.button_label}
+              redirect={yml.form.redirect}
+              inputBgColor="#FFFFFF"
+              layout="block"
+              lang={pageContext.lang}
+              fields={yml.form.fields}
+              data={preData}
+              justifyContentButton="center"
+              marginButton={`15px 0 30px auto`}
+            />
+          </Div>
+        </Div>
+        <Div height="auto" width="100%" gridArea_tablet={applySchollarship?.imageSide === "right" ? "1/7/1/13" : "1/1/1/6"} style={{position: "relative"}}>
+          {
+            applySchollarship?.imageSide === "right" ? (
+              <>
+                {/* <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/> */}
+                <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "280px", height: "446px", bottom: "-10px", right: "-16px", borderRadius: "3px"}}/>
+              </>
+            ) : (
+                <>
+                  <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "30px", borderRadius: "3px"}}/>
+                </>
+            )
+          }
+          <StyledBackgroundSection
+            height={`350px`}
+            // width={`85%`}
+            borderRadius={`3px`}
+            image={applySchollarship 
+              ? applySchollarship?.image.childImageSharp.gatsbyImageData 
+              : data.allPageYaml.edges[0].node.list[0].image.childImageSharp.gatsbyImageData}
+            bgSize={`contain`}
+            alt="geekforce image"
+          />
+        </Div>
+      </GridContainerWithImage>
+
     </>
   )
 };
 export const query = graphql`
   query LandingAQuery($file_name: String!, $lang: String!, $utm_course: String!) {
+    allPageYaml(filter: { fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang }}}) {
+      edges {
+        node {
+          list {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  width: 800
+                  placeholder: NONE
+                  quality: 100
+                )
+              }
+            }
+          }
+        }
+      }
+    }
     allLandingYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
@@ -346,6 +348,11 @@ export const query = graphql`
                 text
               }
             }
+            navbar {
+              logoUrl
+              buttonText
+              buttonUrl
+            }
             form{
               heading
               motivation
@@ -355,12 +362,49 @@ export const query = graphql`
             }
             features{
               marginTop
+              text
               bullets
               styles
             }
             badges{
               position
               heading
+            }
+            about4Geeks{
+              position
+              heading
+              sub_heading
+              list{
+                title
+              }
+              paragraph
+              button_text
+              button_link
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1200
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              image_mobile {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+            }
+            iconogram {
+              position
+              icons {
+                icon
+                title
+              }
             }
             in_the_news{
               heading
@@ -376,6 +420,10 @@ export const query = graphql`
               position
               heading
               sub_heading
+              footer {
+                text
+                text_link
+              }
             }
             alumni_projects{
               position
@@ -386,11 +434,53 @@ export const query = graphql`
               position
               heading
               sub_heading
+              featured {
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 150
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 150){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
+                }
+                # featured
+              }
             }
+            choose_your_program{
+              position
+              title
+              paragraph
+              programs {
+                text_link
+                link
+                sub_title
+                title
+                description
+                icon
+              }
+            }
+
             why_python{
               position
               heading
               sub_heading
+            }
+            apply_schollarship{
+              imageSide
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 800
+                    placeholder: NONE
+                    quality: 100
+                  )
+                }
+              }
             }
             components{
               name
@@ -433,6 +523,18 @@ export const query = graphql`
               tagline
               sub_heading
               image_filter
+              scholarship {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 500
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 1000){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                }
+              }
               image{
                 childImageSharp {
                   gatsbyImageData(
@@ -506,6 +608,13 @@ export const query = graphql`
                   link_text
                 }
               }
+              sub_heading
+              left_labels{
+                description
+                projects
+                duration
+                skills
+              }
               details_modules {
                 title
                 projects
@@ -531,6 +640,7 @@ export const query = graphql`
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
                   width: 200
+                  height: 200
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
                 # fluid(maxHeight: 200){
@@ -619,9 +729,23 @@ export const query = graphql`
         }
       }
     }
+    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          programs{
+            text
+            link
+            bc_slug
+            location_bc_slug
+            schedule
+          }
+        }
+      }
+    }
   }
 `;
 
 export default BaseRender(Landing, {
-  navbar: true
+  landingNavbar: true,
+  landingFooter: true,
 });

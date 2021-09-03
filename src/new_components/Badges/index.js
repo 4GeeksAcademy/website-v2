@@ -6,7 +6,7 @@ import {Colors} from '../Styling'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Fragment from "../Fragment"
 
-export default ({location, lang, loading, link, short_link, paragraph, background, padding, paddingText, paddingText_tablet, padding_tablet, margin}) => {
+export default ({id, lang, loading, link, short_link, short_text, paragraph, background, padding, paddingText, paddingText_tablet, padding_tablet, margin}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges{
       allBadgesYaml{
@@ -55,16 +55,16 @@ export default ({location, lang, loading, link, short_link, paragraph, backgroun
   return (
     <>
     {/* <Fragment github="/new_components/badges"> */}
-      <GridContainer containerColumns_tablet={`1.8fr repeat(12, 1fr) 1.8fr`} background={background} padding={padding} padding_tablet={padding_tablet} rows={paragraph && `3`} margin={margin}>
+      <GridContainer id={id} containerColumns_tablet={`1.8fr repeat(12, 1fr) 1.8fr`} background={background} padding={padding} padding_tablet={padding_tablet} rows={paragraph && `3`} margin={margin}>
         {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
         {paragraph && <Div className="badge-slider" justifyContent="between" >
           <Paragraph
             fontFamily="Lato-Light"
-            padding={paddingText}
-            padding_tablet={paddingText_tablet}
-            fontSize={short_link ? "15px" : "22px"}
-            fontSize_tablet={short_link ? "15px" : "22px"}
-            lineHeight={short_link ? "22px" : "38px"}
+            padding={paddingText || "0 10px 45px 10px"}
+            padding_tablet={paddingText_tablet || "0 10px 55px 10px"}
+            fontSize={short_link || short_text ? "15px" : "22px"}
+            fontSize_tablet={short_link || short_text ? "15px" : "22px"}
+            lineHeight={short_link || short_text ? "22px" : "38px"}
             fontWeight="300"
             color={Colors.black}
             dangerouslySetInnerHTML={{__html: paragraph}}

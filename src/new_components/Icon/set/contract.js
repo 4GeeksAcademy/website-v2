@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default props => <svg style={props.style} width={props.width} height={props.height} viewBox="0 0 85 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+export default props => <svg style={props.style} width={props.width} height={props.height} viewBox="0 0 85 90" fill="none" xmlns="https://www.w3.org/2000/svg">
 <g clipPath="url(#clip0)">
 <path d="M36 27H16V51H36V27Z" fill="#FFCF18"/>
 <path d="M12.377 12.4355H54.3306" stroke="black" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>

@@ -46,9 +46,8 @@ const Loc = ({locations, title, paragraph, lang}) => {
   }, []);
   let loc = locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
   const nextDate = (location) => {
-    let city = location.node.city.split(' ')
-    let cohort = datas.cohorts.all.find(item => item.name.includes(city[0]))
-    let onlineCohort = datas.cohorts.all.find(item => item.name.includes("online"))
+    let cohort = datas.cohorts.all.find(item => item.academy.slug === location.node.breathecode_location_slug)
+    let onlineCohort = datas.cohorts.all.find(item => item.academy.slug === "online")
     return cohort || onlineCohort
 
   }

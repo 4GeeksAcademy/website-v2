@@ -1,6 +1,7 @@
 meta_info:
   slug: blog
   title: "4Geeks Academy Blog"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Find resources and news for both potential and current software builders. Basic knowledge, trends, career advice and much more in 4geeks Academy blog."
   image: null
   keywords: "4Geeks Academy Blog"
@@ -10,6 +11,7 @@ banner:
   tagline: "4Geeks Academy Blog"
   sub_heading: "Resources and news for both potential and current software builders."
   image: "../../../static/images/bg/pricing-bg.jpg"
+  no_image: "https://i.imgur.com/n3V1Rqq.jpeg"
 
 seo_title: "4Geeks Academy Blog"
 header:
@@ -23,6 +25,9 @@ topics:
   - full-stack-developer
   - learn-to-code
   - coding-bootcamps
+  - career-growth
+  - trends-and-tech
+  
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."

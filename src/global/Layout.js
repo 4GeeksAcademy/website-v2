@@ -27,8 +27,20 @@ const Layout = ({children, seo, context}) => {
   return (
     <StaticQuery
       query={graphql`
-      query SiteTitleQuery {
-        
+      query SiteTitleQuery($lang: String) {
+        allLocationYaml(filter: { fields: {lang: { eq: $lang }}}) {
+          edges{
+            node{
+              city
+              fields {
+                lang
+              }
+              button {
+                apply_button_text
+              }
+            }
+          }
+        }
         allFooterYaml {
           edges {
             node {
@@ -103,7 +115,7 @@ const Layout = ({children, seo, context}) => {
               }
             }
           }
-        }  
+        }
         cookiebotYaml {
           domain_ID {
             id
@@ -114,7 +126,7 @@ const Layout = ({children, seo, context}) => {
       render={(data) => {
         let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
         let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
-
+        let myLocations = data.allLocationYaml.edges.filter(item => item.node.fields.lang === context.lang)
         return (
           <>
             {editMode && <div style={{background: "yellow", padding: "15px"}}>
@@ -128,8 +140,24 @@ const Layout = ({children, seo, context}) => {
               > ❌ Clear edit mode</button>
             </div>}
             <SEO {...seo} context={context} />
-            <Navbar currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
-            <NavbarMobile currentURL={context.pagePath} onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} languageButton={myNavbar.node.language_button} button={myNavbar.node.button} lang={context.lang} />
+            <Navbar 
+              locationCity={myLocations}
+              currentURL={context.pagePath}
+              onLocationChange={(slug) => setLocation(slug)}
+              menu={myNavbar.node.navbar}
+              languageButton={myNavbar.node.language_button}
+              button={myNavbar.node.button}
+              lang={context.lang}
+            />
+            <NavbarMobile 
+              locationCity={myLocations}
+              currentURL={context.pagePath}
+              onLocationChange={(slug) => setLocation(slug)}
+              menu={myNavbar.node.navbar}
+              languageButton={myNavbar.node.language_button}
+              button={myNavbar.node.button}
+              lang={context.lang}
+            />
             <GlobalStyle />
             <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} />
             <>

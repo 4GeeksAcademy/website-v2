@@ -5,14 +5,14 @@ header:
 
 button_section:
   button_text: "VER MÁS PROYECTOS"
-  button_link: "/graduados"
+  button_link: "/es/graduados"
 
 projects:
   - project_name: "Raspberry Sky"
     slug: "raspberry-sky"
     project_image: "../../../../static/images/projects/rocket-app.jpg"
     project_content: "Una plataforma capaz de recibir data como velocidad del viento, temperatura, geo, etc. de cohetes que se lanzan al espacio. La plataforma te deja hacer ajustes al dispositivo enviado, al tiempo de enviar y recibir mensajes."
-    project_video: "OZfv9kYl0_o"
+    project_video: "https://www.youtube.com/watch?v=OZfv9kYl0_o"
     github_repo: "https://github.com/Luis846/SatelliteBetaSoftware"
     live_link: "https://sattelite-beta.vercel.app/"
     alumni:
@@ -33,7 +33,7 @@ projects:
     slug: "ims"
     project_image: "../../../../static/images/projects/ims.jpg"
     project_content: "IMS es un sistema de seguimiento de logística e inventario de farmacia construido con Python, Javascript, React y tiene una integración con lectores de códigos de barras, SMS, la API de Twillio y sistemas de seguimiento GPS. IMS mantiene la existencia de todos los productos almacenados y vendidos por la farmacia y luego rastrea los vehículos que entregan esas ventas.."
-    project_video: "TTjSZ2Lud2E"
+    project_video: "https://www.youtube.com/watch?v=TTjSZ2Lud2E"
     live_link: "https://ims-frontend.vercel.app/react-hello-webapp/private/dashboard"
     github_repo: "https://github.com/sebastianpd1/IMS-FRONTEND"
     alumni:
@@ -60,7 +60,7 @@ projects:
     slug: "the-hour"
     project_image: "../../../../static/images/projects/the-hour.png"
     project_content: "¿Qué harás esta noche? The Hour es el app perfecta para darte recomiendaciones de Bares y Locales nocturnos, donde conseguiræas info de Happy Hours, y las cosas que están pasando en la ciudad! Esta aplicación destaca por su componente UI/UX, porque es muy sencilla y porque se pensó para Mobile. Está desarrollada en React.js, Javascript y Wordpress API para un mejor manejo y carga de la info."
-    project_video: "KTeOIU3eVrc"
+    project_video: "https://www.youtube.com/watch?v=KTeOIU3eVrc"
     live_link: ""
     github_repo: "https://github.com/dcbounds/TheHour"
     alumni:
@@ -120,7 +120,7 @@ projects:
     slug: "re-mindful"
     project_image: "../../../../static/images/projects/re-mindful.jpg"
     project_content: "Este proyecto quiere generar mayor conciencia sobre el reciclaje, considerando todos los pasos que deben de ser cubiertos.Han creado una aplicación donde se integra software y hardware que permite pesar la cantidad del plástico, vidrio o basura dentro de un contenedor y cómo estos van a afectar al proceso del reciclaje y el medio ambiente."
-    project_video: "cKcZD0_1IKk"
+    project_video: "https://www.youtube.com/watch?v=cKcZD0_1IKk"
     github_repo: "https://github.com/gabsssrod/ReduceReuseRecycle-frontEnd"
     live_link: "https://re-mindful.vercel.app/"
     alumni:

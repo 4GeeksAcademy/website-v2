@@ -40,7 +40,7 @@ navbar:
       paragraph: "This is the place to boost your career by learning to code. Think differently, become more self-confident, bring your ideas to life and make more money."
       link: "/us/why-4geeks"
       links:
-        - title: "Accompaniment"
+        - title: "Support"
           sub_links:
             - title: "GeekPal"
               link_to: "/us/geekpal-support"
@@ -69,7 +69,7 @@ navbar:
             # - title: "Testimonials"
             #   link_to: "/us/testimonials"
   - name: "The Academy"
-    link: "/course/full-stack-web-development-bootcamp-part-time"
+    link: "/us/the-academy"
     sub_menu:
       icon: "hat"
       title: "The Academy"
@@ -85,13 +85,6 @@ navbar:
               link_to: "/us/blog"
             - title: "Partners"
               link_to: "/us/partners"
-  # links:
-  #       - name: "Desarrollador Full Stack"
-  #       - link: "/course/full-stack-web-development-bootcamp-part-time"
-  #       - name: "Ingeniero de Software"
-  #       - link: "/course/software-engineering-coding-bootcamp"
-  # - name: "Pricing"
-  #   link: "/pricing"
   - name: "Campus"
     link: "/partners"
     sub_menu:
@@ -117,16 +110,18 @@ navbar:
               link_to: "/us/coding-campus/coding-bootcamp-argentina"
             - title: "Bolivia"
               link_to: "/us/coding-campus/coding-bootcamp-bolivia"
+            - title: "Europe"
+              link_to: "/us/coding-campus/europe-online-coding-bootcamp"
             - title: "Costa Rica"
               link_to: "/us/coding-campus/coding-bootcamp-costa-rica"
         - title: "-"
           sub_links:
             - title: "Colombia"
               link_to: "/us/coding-campus/coding-bootcamp-colombia"
-            - title: "Ecuador"
-              link_to: "/us/coding-campus/coding-bootcamp-ecuador"
             - title: "Mexico"
               link_to: "/us/coding-campus/coding-bootcamp-mexico"
+            - title: "Ecuador"
+              link_to: "/us/coding-campus/coding-bootcamp-ecuador"
             - title: "Panama"
               link_to: "/us/coding-campus/coding-bootcamp-panama"
             - title: "Uruguay"

@@ -3,6 +3,7 @@ meta_info:
   title: "Política de Privacidad y Protección de datos de 4Geeks Academy"
   description: "Tu privacidad es nuestra prioridad. Conoce los tipos de información que recolectamos y almacenamos en 4Geeks Academy y cómo utilizamos esa info."
   image: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Política de Privacidad, Protección de datos, 4Geeks Academy"
   redirects: ["/politicas-de-privacidad"]
 ## BANNER - HEADER
@@ -14,11 +15,11 @@ meta_info:
 consent:
   message: Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podria resultar una relación comercial a partir de esto. Revisa nuestra
   link_label: Política de Privacidad
-  url: /es/politica-de-privacidad
+  url: /es/privacidad
 
 header:
   tagline: < Política de Privacidad 4Geeks Academy >
-  sub_heading: "En 4Geeks Academy, accesible desde https://www.4geeksacademy.co, una de nuestras principales prioridades es la privacidad de nuestros visitantes. Este documento de Política de privacidad contiene tipos de información recopilada y registrada por 4Geeks Academy y cómo la usamos. Si tiene preguntas adicionales o necesita más información sobre nuestra Política de privacidad, no dude en contactarnos."
+  sub_heading: "En 4Geeks Academy, accesible desde https://4GeeksAcademy.com, una de nuestras principales prioridades es la privacidad de nuestros visitantes. Este documento de Política de privacidad contiene tipos de información recopilada y registrada por 4Geeks Academy y cómo la usamos. Si tiene preguntas adicionales o necesita más información sobre nuestra Política de privacidad, no dude en contactarnos."
   image: ../../../static/images/bg/companies-bg.jpg
   alt: ""
 # header:
@@ -105,7 +106,7 @@ sections:
       "
 
   - title: "¿Con qué finalidad tratamos sus datos personales?"
-    text: "Cuando te conectas con esta web para solicitar, por ejemplo, información sobre uno de nuestros cursos, está facilitando información de carácter personal, de la que es responsable 4Geeks Academy. Esa información puede incluir datos de carácter personal como pueden ser tu dirección IP, nombre completo, dirección física, dirección de correo electrónico, número de teléfono, y otra información. Al facilitar esta información, das tu consentimiento para que tu información sea recopilada, utilizada, gestionada y almacenada por https://4geeksacademy.com, como se describe en el Aviso Legal y en la presente Política de Privacidad.
+    text: "Cuando te conectas con esta web para solicitar, por ejemplo, información sobre uno de nuestros cursos, está facilitando información de carácter personal, de la que es responsable 4Geeks Academy. Esa información puede incluir datos de carácter personal como pueden ser tu dirección IP, nombre completo, dirección física, dirección de correo electrónico, número de teléfono, y otra información. Al facilitar esta información, das tu consentimiento para que tu información sea recopilada, utilizada, gestionada y almacenada por https://4GeeksAcademy.com, como se describe en el Aviso Legal y en la presente Política de Privacidad.
     
     En 4Geeks Academy existen diferentes sistemas de captura de información personal y trato la información que nos facilitan las personas interesadas con el siguiente fin por cada sistema de captura (formularios):
       
@@ -142,7 +143,7 @@ sections:
     
     También se recogen otros datos no identificativos que se obtienen mediante algunas cookies que se descargan en el ordenador del usuario cuando navega en esta web que detallamos en la política de cookies.
     
-    Para gestionar las redes sociales. 4Geeks Academy puede tener presencia en redes sociales. El tratamiento de los datos que se lleve a cabo de las personas que se hagan seguidoras en las redes sociales de las páginas oficiales de https://4geeksacademy.com, se regirá por este apartado, así como por aquellas condiciones de uso, políticas de privacidad y normativas de acceso que pertenezcan a la red social que proceda en cada caso y aceptadas previamente por cada usuario de 4Geeks Academy. Se tratarán sus datos con las finalidades de administrar correctamente nuestra presencia en la red social, informando de actividades, productos o servicios de 4Geeks Academy, así como para cualquier otra finalidad que las normativas de las redes sociales permitan. En ningún caso utilizaremos los perfiles de seguidores en redes sociales para enviar publicidad de manera individual.
+    Para gestionar las redes sociales. 4Geeks Academy puede tener presencia en redes sociales. El tratamiento de los datos que se lleve a cabo de las personas que se hagan seguidoras en las redes sociales de las páginas oficiales de https://4GeeksAcademy.com, se regirá por este apartado, así como por aquellas condiciones de uso, políticas de privacidad y normativas de acceso que pertenezcan a la red social que proceda en cada caso y aceptadas previamente por cada usuario de 4Geeks Academy. Se tratarán sus datos con las finalidades de administrar correctamente nuestra presencia en la red social, informando de actividades, productos o servicios de 4Geeks Academy, así como para cualquier otra finalidad que las normativas de las redes sociales permitan. En ningún caso utilizaremos los perfiles de seguidores en redes sociales para enviar publicidad de manera individual.
     
     De acuerdo a lo establecido en el reglamento general de protección de datos europeo (RGPD) 2016/679, 4Geeks Academy  (4Geeks Academy España, S.L.) con Oficinas Centrales en Calle Edison, 3, 28006 (Madrid), será responsable del tratamiento de los datos correspondientes a usuarios, clientes, de la web y del blog.
     
@@ -165,9 +166,9 @@ sections:
   - title: "¿Por cuánto tiempo conservará sus datos?"
     text: "Los datos personales proporcionados se conservarán hasta que no se solicite su supresión por el interesado."
   - title: "¿A qué destinatarios se comunicarán tus datos?"
-    text: "Muchas herramientas que utilizamos para gestionar sus datos son contratados por terceros. Para prestar servicios estrictamente necesarios para el desarrollo de la actividad, https://4geeksacademy.com, comparte datos con los siguientes prestadores bajo sus correspondientes condiciones de privacidad:
+    text: "Muchas herramientas que utilizamos para gestionar sus datos son contratados por terceros. Para prestar servicios estrictamente necesarios para el desarrollo de la actividad, https://4GeeksAcademy.com, comparte datos con los siguientes prestadores bajo sus correspondientes condiciones de privacidad:
       
-    <span class='bold-privacy-text'>Analítica web</span>: Google Analytics es un servicio analítico de web prestado por Google, Inc., una compañía de Delaware cuya oficina principal está en 1600 Amphitheatre Parkway, Mountain View (California), CA 94043, Estados Unidos (“Google”). Google Analytics utiliza “cookies”, que son archivos de texto ubicados en tu ordenador, para ayudar a https://4geeksacademy.com a analizar el uso que hacen los usuarios del sitio web. La información que genera la cookie acerca de su uso de https://4geeksacademy.com (incluyendo tu dirección IP) será directamente transmitida y archivada por Google en los servidores de Estados Unidos. 
+    <span class='bold-privacy-text'>Analítica web</span>: Google Analytics es un servicio analítico de web prestado por Google, Inc., una compañía de Delaware cuya oficina principal está en 1600 Amphitheatre Parkway, Mountain View (California), CA 94043, Estados Unidos (“Google”). Google Analytics utiliza “cookies”, que son archivos de texto ubicados en tu ordenador, para ayudar a https://4GeeksAcademy.com a analizar el uso que hacen los usuarios del sitio web. La información que genera la cookie acerca de su uso de https://4GeeksAcademy.com (incluyendo tu dirección IP) será directamente transmitida y archivada por Google en los servidores de Estados Unidos. 
     
     <span class='bold-privacy-text'>Hosting</span>: SiteGround, servicio de renta de servidores y hospedaje web prestado por SiteGround Hosting Ltd, una compañía ubicada en Londres, Reino Unido. SiteGround, almacena datos generados desde el sitio web de 4Geeks Academy con la finalidad de realizar sus servicios de hosting a 4Geeks Academy España, S.L. Más información en: <a class='faq-link' target='a_blank' rel='noopener noreferrer nofollow' href='https://www.siteground.com'>https://www.siteground.com</a>. 
       
@@ -179,13 +180,13 @@ sections:
       
     "
   - title: "Navegación"
-    text: "Al navegar por https://4geeksacademy.com se pueden recoger datos no identificables, que pueden incluir, direcciones IP, ubicación geográfica (aproximadamente), un registro de cómo se utilizan los servicios y sitios, y otros datos que no pueden ser utilizados para identificar al usuario. Entre los datos no identificativos están también los relacionados a tus hábitos de navegación a través de servicios de terceros. Esta web utiliza los siguientes servicios de análisis de terceros “Google analytics”. Utilizamos esta información para analizar tendencias, administrar el sitio, rastrear los movimientos de los usuarios alrededor del sitio y para recopilar información demográfica sobre nuestra base de usuarios en su conjunto."
+    text: "Al navegar por https://4GeeksAcademy.com se pueden recoger datos no identificables, que pueden incluir, direcciones IP, ubicación geográfica (aproximadamente), un registro de cómo se utilizan los servicios y sitios, y otros datos que no pueden ser utilizados para identificar al usuario. Entre los datos no identificativos están también los relacionados a tus hábitos de navegación a través de servicios de terceros. Esta web utiliza los siguientes servicios de análisis de terceros “Google analytics”. Utilizamos esta información para analizar tendencias, administrar el sitio, rastrear los movimientos de los usuarios alrededor del sitio y para recopilar información demográfica sobre nuestra base de usuarios en su conjunto."
   - title: "Secreto y seguridad de los datos"
-    text: "https://4geeksacademy.com se compromete en el uso y tratamiento de los datos incluidos personales de los usuarios, respetando su confidencialidad y a utilizarlos de acuerdo con la finalidad del mismo, así como a dar cumplimiento a su obligación de guardarlos y adaptar todas las medidas para evitar la alteración, pérdida, tratamiento o acceso no autorizado, de conformidad con lo establecido en la normativa vigente de protección de datos.
+    text: "https://4GeeksAcademy.com se compromete en el uso y tratamiento de los datos incluidos personales de los usuarios, respetando su confidencialidad y a utilizarlos de acuerdo con la finalidad del mismo, así como a dar cumplimiento a su obligación de guardarlos y adaptar todas las medidas para evitar la alteración, pérdida, tratamiento o acceso no autorizado, de conformidad con lo establecido en la normativa vigente de protección de datos.
     
     Esta web incluye un certificado SSL. Se trata de un protocolo de seguridad que hace que tus datos viajen de manera íntegra y segura, es decir, la transmisión de los datos entre un servidor y usuario web, y en retroalimentación, es totalmente cifrada o encriptada.
     
-    https://4geeksacademy.com no puede garantizar la absoluta inexpugnabilidad de la red Internet y por tanto la violación de los datos mediante accesos fraudulentos a ellos por parte de terceros.
+    https://4GeeksAcademy.com no puede garantizar la absoluta inexpugnabilidad de la red Internet y por tanto la violación de los datos mediante accesos fraudulentos a ellos por parte de terceros.
     
     Con respecto a la confidencialidad del procesamiento, 4Geeks Academy España S.L., se asegurará de que cualquier persona que esté autorizada por 4Geeks Academy para procesar los datos del cliente (incluido su personal, colaboradores y prestadores), estará bajo la obligación apropiada de confidencialidad (ya sea un deber contractual o legal).
     
@@ -194,7 +195,7 @@ sections:
     
     "
   - title: "Exactitud y veracidad de los datos"
-    text: "Como usuario, eres el único responsable de la veracidad y corrección de los datos que remitas a https://4geeksacademy.com exonerando a 4Geeks Academy España S.L. (4Geeks Academy), de cualquier responsabilidad al respecto.
+    text: "Como usuario, eres el único responsable de la veracidad y corrección de los datos que remitas a https://4GeeksAcademy.com exonerando a 4Geeks Academy España S.L. (4Geeks Academy), de cualquier responsabilidad al respecto.
     
     Los usuarios garantizan y responden, en cualquier caso, de la exactitud, vigencia y autenticidad de los datos personales facilitados, y se comprometen a mantenerlos debidamente actualizados. El usuario acepta proporcionar información completa y correcta en el formulario de contacto o suscripción.
     "
@@ -203,9 +204,9 @@ sections:
   - title: "Revocabilidad"
     text: "El consentimiento prestado, tanto para el tratamiento como para la cesión de los datos de los interesados, es revocable en cualquier momento comunicándolo a 4Geeks Academy España S.L. en los términos establecidos en esta Política para el ejercicio de los derechos ARCO (acceso, rectificación, cancelación y oposición). Esta revocación en ningún caso tendrá carácter retroactivo."
   - title: "Correos comerciales"
-    text: "De acuerdo con la LSSICE, https://4geeksacademy.com no realiza prácticas de SPAM, por lo que no envía correos comerciales por vía electrónica que no hayan sido previamente solicitados o autorizados por el usuario. En consecuencia, en cada uno de los formularios habidos en la web, el usuario tiene la posibilidad de dar su consentimiento expreso para recibir el boletín, con independencia de la información comercial puntualmente solicitada.
+    text: "De acuerdo con la LSSICE, https://4GeeksAcademy.com no realiza prácticas de SPAM, por lo que no envía correos comerciales por vía electrónica que no hayan sido previamente solicitados o autorizados por el usuario. En consecuencia, en cada uno de los formularios habidos en la web, el usuario tiene la posibilidad de dar su consentimiento expreso para recibir el boletín, con independencia de la información comercial puntualmente solicitada.
     
-    Conforme a lo dispuesto en la Ley 34/2002 de Servicios de la Sociedad de la Información y de comercio electrónico, https://4geeksacademy.com se compromete a no enviar comunicaciones de carácter comercial sin identificarlas debidamente.
+    Conforme a lo dispuesto en la Ley 34/2002 de Servicios de la Sociedad de la Información y de comercio electrónico, https://4GeeksAcademy.com se compromete a no enviar comunicaciones de carácter comercial sin identificarlas debidamente.
     "
 date_release: "Última modificación de nuestra política de privacidad: <span class='bold-privacy-text'>03/02/2019</span>"
   
