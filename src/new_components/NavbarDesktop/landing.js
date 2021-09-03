@@ -37,7 +37,7 @@ const Nav = styled.nav`
     }
 `
 
-const LandingNavbar = ({lang, onToggle, link, buttonText}) => {
+const LandingNavbar = ({lang, onToggle, buttonUrl, logoUrl, buttonText}) => {
     /* In case of want change the Button text "Aplica" search the key 
        "apply_button_text" in /src/data/location/locationfile.yaml
     */
@@ -75,7 +75,7 @@ const LandingNavbar = ({lang, onToggle, link, buttonText}) => {
     return (
         <>
             <Nav display="flex">
-                <Link to={lang == "es" ? "/es/inicio" : "/"}>
+                <Link to={logoUrl || "#top"}>
                     <GatsbyImage
                         loading="eager"
                         image={getImage(data.file.childImageSharp.gatsbyImageData)}
@@ -83,7 +83,7 @@ const LandingNavbar = ({lang, onToggle, link, buttonText}) => {
                     />
                 </Link>
                 <Div alignItems="center" justifyContent="between">
-                    <Link onClick={onToggle} to={link || "#"}><Button variant="full" width="fit-content" color={Colors.black} textColor={Colors.white}>{buttonText}</Button></Link>
+                    <Link onClick={onToggle} to={buttonUrl || "#"}><Button variant="full" width="fit-content" color={Colors.black} textColor={Colors.white}>{buttonText}</Button></Link>
                 </Div>
             </Nav>
         </>

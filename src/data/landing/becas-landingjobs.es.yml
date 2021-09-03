@@ -17,9 +17,9 @@ meta_info:
   utm_location: madrid-spain
 
 navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonText: "Solicita tu beca"
-  # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
-  url: "#top"
+  buttonUrl: "#top" # relative(/apply), absolute(https://google.com) or id(#componentName)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -53,7 +53,7 @@ follow_bar:
   content:
     text: "Solicita tu beca Landing Jobs ya. \n Planes de pago de hasta 24 meses."
     text_mobile: "Becas de Landing Jobs . \n Plan de pago de 24 m."
-    # devices:   XL      LG    MD      SM    XS
+    # devices:    XL      LG      MD      SM      XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Solicita tu beca"
@@ -81,7 +81,7 @@ about4Geeks:
     - title: "Preparación para entrevistas y procesos de selección"
   paragraph: ""
   button_text: "Solicita tu beca"
-  button_link: "/es/aplica"
+  button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
